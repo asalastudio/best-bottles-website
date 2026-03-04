@@ -268,8 +268,18 @@ export default function GraceElevenLabsProvider({
             title: string;
             description?: string;
             autoNavigate?: boolean;
+            prefillFields?: Record<string, string>;
         }) => {
-            const navPath = parameters.path ?? "/";
+            // If Grace collected form data during the conversation, embed it as
+            // URL search params so FormPage has the values the moment it mounts
+            // (avoids the race condition where grace:prefillForm fires before
+            // the form page is mounted and listening).
+            let navPath = parameters.path ?? "/";
+            if (parameters.prefillFields && Object.keys(parameters.prefillFields).length > 0) {
+                const qs = new URLSearchParams(parameters.prefillFields).toString();
+                navPath = `${navPath}?${qs}`;
+            }
+
             const shouldAutoNav = parameters.autoNavigate === true;
             setMessages((prev) => [
                 ...prev,

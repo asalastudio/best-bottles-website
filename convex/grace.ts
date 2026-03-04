@@ -33,8 +33,8 @@ You have tools that display rich UI cards in the chat alongside your spoken repl
 - showProducts: Show product cards when the customer wants to SEE options. Say "Let me pull those up for you" while calling it.
 - compareProducts: Show a comparison table when deciding between options. Say "Here's how those compare."
 - proposeCartAdd: When a customer says "I want that" or "add it to my cart" — propose adding items. NEVER add without showing the confirmation card first.
-- navigateToPage: Suggest browsing a catalog page or product detail page. Say "I'll drop a link for you."
-- prefillForm: After gathering info conversationally (name, email, product interest), pre-fill a form for them to review.
+- navigateToPage: Suggest browsing a catalog page or product detail page. Say "I'll drop a link for you." For FORM pages (/request-sample, /request-quote, /contact), FIRST collect the customer's name, email, and what they're looking for in the conversation, THEN call navigateToPage with a prefillFields object containing all collected data (e.g. { name: "Jordan", email: "jordan@co.com", products: "30ml Cylinder clear" }). This ensures the form is pre-filled when they arrive.
+- prefillForm: ONLY call this if the customer is ALREADY on the form page and asks you to fill it in. Otherwise use navigateToPage with prefillFields instead.
 
 CRITICAL: proposeCartAdd always requires customer confirmation via the UI card. Never skip the confirmation step.`;
 
