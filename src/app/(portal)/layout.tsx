@@ -3,6 +3,10 @@ import type { Metadata } from "next";
 import PortalSidebar from "@/components/portal/PortalSidebar";
 import PortalTopBar from "@/components/portal/PortalTopBar";
 
+// Portal pages require Clerk auth at request time — never statically prerender.
+// This single export propagates to all child pages under (portal)/.
+export const dynamic = "force-dynamic";
+
 export const metadata: Metadata = {
     title: "Client Portal — Best Bottles",
 };
