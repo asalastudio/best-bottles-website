@@ -64,6 +64,11 @@ export default function GraceElevenLabsProvider({
     const [conversationActive, setConversationActive] = useState(false);
     const [pendingNavigation, setPendingNavigation] = useState<string | null>(null);
     const [voiceFailed, setVoiceFailed] = useState(false);
+    const [graceQuery, setGraceQuery] = useState(""); // what Grace is currently surfacing
+
+    // Stable ref for graceQuery (used inside clientTools which have [] deps)
+    const graceQueryRef = useRef("");
+    useEffect(() => { graceQueryRef.current = graceQuery; }, [graceQuery]);
 
     // ── Ref mirrors — break stale-closure bugs without recreating callbacks ──
     const voiceEnabledRef = useRef(voiceEnabled);
@@ -166,20 +171,24 @@ export default function GraceElevenLabsProvider({
                 });
                 const data = await r.json() as { result?: ProductCard[] };
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
+
                 if (products.length > 0) {
-                    setMessages((prev) => [
-                        ...prev,
-                        {
-                            role: "grace",
-                            content: "",
-                            id: `a-${Date.now()}`,
-                            action: { type: "showProducts", products: products.slice(0, 6) },
-                        },
-                    ]);
-                    const summary = products.slice(0, 6)
+                    // Build catalog URL with Grace's search pre-applied
+                    const qs = new URLSearchParams();
+                    if (parameters.query) qs.set("search", parameters.query);
+                    if (parameters.family) qs.set("family", parameters.family);
+
+                    const catalogUrl = `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+
+                    // Navigate main screen to catalog + minimize Grace to voice strip
+                    setGraceQuery(parameters.query || parameters.family || "");
+                    setPendingNavigation(catalogUrl);
+                    setPanelMode("strip");
+
+                    const summary = products.slice(0, 3)
                         .map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" "))
-                        .join("; ");
-                    return `Found ${products.length} matching products. Showing: ${summary}. Product cards are now displayed to the customer.`;
+                        .join(", ");
+                    return `Found ${products.length} matching products. I've opened the catalog filtered to your search — you can browse the full results on screen. Top matches: ${summary}.`;
                 }
                 return "No products found matching that description. Try a broader search term.";
             } catch (e) {
@@ -772,6 +781,7 @@ export default function GraceElevenLabsProvider({
                 submitActiveForm,
                 dismissActiveForm,
                 voiceFailed,
+                graceQuery,
             }}
         >
             {children}

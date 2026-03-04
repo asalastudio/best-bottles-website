@@ -609,10 +609,11 @@ export function GraceFloatingTrigger() {
 // ─── Voice Strip (60px desktop / 48px mobile bottom bar) ─────────────────────
 
 function VoiceStrip({ isMobile }: { isMobile: boolean }) {
-    const { openPanel, closePanel, endConversation, status, stopSpeaking, startDictation } = useGrace();
+    const { openPanel, closePanel, endConversation, status, stopSpeaking, startDictation, graceQuery } = useGrace();
 
     const isSpeaking = status === "speaking";
     const isListening = status === "listening";
+    const browsingLabel = graceQuery ? `Browsing: ${graceQuery}` : "Voice active";
 
     if (isMobile) {
         return (
@@ -630,7 +631,7 @@ function VoiceStrip({ isMobile }: { isMobile: boolean }) {
                         </span>
                     </div>
                     <span className="text-xs text-bone/80 font-medium truncate">
-                        {isListening ? "Listening…" : isSpeaking ? "Grace is speaking…" : "Voice active"}
+                        {isListening ? "Listening…" : isSpeaking ? "Grace is speaking…" : browsingLabel}
                     </span>
                 </button>
 
@@ -674,7 +675,7 @@ function VoiceStrip({ isMobile }: { isMobile: boolean }) {
                 </span>
             </div>
 
-            <div className="flex-1 flex flex-col items-center justify-center gap-1">
+            <div className="flex-1 flex flex-col items-center justify-center gap-1.5 overflow-hidden">
                 {isListening && (
                     <span className="w-3 h-3 rounded-full bg-muted-gold animate-grace-pulse" />
                 )}
@@ -685,6 +686,14 @@ function VoiceStrip({ isMobile }: { isMobile: boolean }) {
                 )}
                 {!isListening && !isSpeaking && (
                     <Mic className="w-4 h-4 text-bone/60" />
+                )}
+                {graceQuery && (
+                    <p
+                        className="text-[8px] text-bone/40 font-medium text-center leading-tight"
+                        style={{ writingMode: "vertical-rl", transform: "rotate(180deg)", maxHeight: "120px" }}
+                    >
+                        {graceQuery.length > 16 ? graceQuery.slice(0, 14) + "…" : graceQuery}
+                    </p>
                 )}
             </div>
 

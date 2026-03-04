@@ -114,6 +114,8 @@ export interface GraceContextValue {
     dismissActiveForm: () => void;
     /** True after a voice connection attempt fails — shows UI banner, does not block text mode */
     voiceFailed: boolean;
+    /** Current product search query Grace is surfacing (shown in VoiceStrip while catalog is open) */
+    graceQuery: string;
 }
 
 // ─── Shared context & hook ───────────────────────────────────────────────────
