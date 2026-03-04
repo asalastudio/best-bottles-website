@@ -369,25 +369,40 @@ export const searchCatalog = query({
         }
         let results = await q.take(takeCount);
 
-        // Fallback: if few results and term had roll-on/roller, try broader "roller" search
-        if (results.length < 5 && /\b(roll|roller)\b/i.test(args.searchTerm)) {
+        // Fallback or Expanded search: 
+        // 1. If few results 
+        // 2. OR if user explicitly asked for "30ml roll-on", we want to proactively include the 28ml cylinders too.
+        const isRollOnSearch = /\b(roll|roller|ball)\b/i.test(args.searchTerm);
+        const is30mlSearch = /\b30\s*ml\b/i.test(args.searchTerm);
+
+        if (results.length < 5 || (isRollOnSearch && is30mlSearch)) {
             const fallbackQ = ctx.db
                 .query("products")
                 .withSearchIndex("search_itemName", (q) => q.search("itemName", "roller"));
-            let fallback = await fallbackQ.take(50);
+            let fallback = await fallbackQ.take(80);
+
             if (args.familyLimit) {
                 fallback = fallback.filter((p) => p.family === args.familyLimit);
             }
             if (args.categoryLimit) {
                 fallback = fallback.filter((p) => p.category === args.categoryLimit);
             }
-            // Prefer capacity match if user asked for specific size (e.g. 5ml, 9ml)
-            const capacityMatch = args.searchTerm.match(/\b(5|9)\s*ml\b/i);
+
+            // Intelligent size matching:
+            // If they ask for 30ml roll-on, we also want to surface the 28ml Cylinder variants.
+            const targetCapacities = new Set<number>();
+            const capacityMatch = args.searchTerm.match(/\b(\d+)\s*ml\b/i);
             if (capacityMatch) {
-                const targetMl = capacityMatch[1] === "5" ? 5 : 9;
-                const byCapacity = fallback.filter((p) => p.capacityMl === targetMl);
+                const ml = parseInt(capacityMatch[1]);
+                targetCapacities.add(ml);
+                if (ml === 30 && isRollOnSearch) targetCapacities.add(28); // Proactively include 28ml
+            }
+
+            if (targetCapacities.size > 0) {
+                const byCapacity = fallback.filter((p) => p.capacityMl !== null && targetCapacities.has(p.capacityMl));
                 if (byCapacity.length > 0) fallback = byCapacity;
             }
+
             const seen = new Set(results.map((r) => r.graceSku));
             for (const p of fallback) {
                 if (!seen.has(p.graceSku) && results.length < takeCount) {
