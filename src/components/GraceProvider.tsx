@@ -694,6 +694,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                 updateFormField,
                 submitActiveForm,
                 dismissActiveForm,
+                voiceFailed: false, // OpenAI provider never sets voiceFailed
             }}
         >
             {children}

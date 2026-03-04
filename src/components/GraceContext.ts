@@ -112,6 +112,8 @@ export interface GraceContextValue {
     submitActiveForm: () => Promise<void>;
     /** Customer (or Grace) dismisses / resets the active form */
     dismissActiveForm: () => void;
+    /** True after a voice connection attempt fails — shows UI banner, does not block text mode */
+    voiceFailed: boolean;
 }
 
 // ─── Shared context & hook ───────────────────────────────────────────────────

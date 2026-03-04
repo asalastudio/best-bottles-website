@@ -733,7 +733,11 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
         activeForm,
         submitActiveForm,
         dismissActiveForm,
+        voiceFailed,
     } = useGrace();
+
+    const [voiceBannerDismissed, setVoiceBannerDismissed] = useState(false);
+    const showVoiceBanner = voiceFailed && !voiceBannerDismissed;
 
     const { items: cartItems, itemCount: cartCount, removeItem, checkout, isCheckingOut, checkoutError } = useCart();
     const [showCart, setShowCart] = useState(false);
@@ -999,6 +1003,37 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
                     <div ref={messagesEndRef} />
                 </div>
             </div>
+
+            {/* Voice-failed banner */}
+            <AnimatePresence>
+                {showVoiceBanner && (
+                    <motion.div
+                        key="voice-banner"
+                        initial={{ height: 0, opacity: 0 }}
+                        animate={{ height: "auto", opacity: 1 }}
+                        exit={{ height: 0, opacity: 0 }}
+                        transition={{ duration: 0.2 }}
+                        className="overflow-hidden shrink-0"
+                    >
+                        <div className="mx-3 mb-2 flex items-start gap-2.5 rounded-xl border border-amber-200 bg-amber-50 px-3.5 py-3">
+                            <svg className="w-3.5 h-3.5 text-amber-500 mt-[1px] shrink-0" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1Zm0 11a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5Zm.75-4.25a.75.75 0 0 1-1.5 0V5.25a.75.75 0 0 1 1.5 0v2.5Z" />
+                            </svg>
+                            <p className="flex-1 text-[12px] text-amber-800 leading-snug">
+                                <span className="font-semibold">Voice unavailable right now.</span>{" "}
+                                Just type below — Grace is still here to help.
+                            </p>
+                            <button
+                                onClick={() => setVoiceBannerDismissed(true)}
+                                aria-label="Dismiss"
+                                className="shrink-0 text-amber-400 hover:text-amber-600 transition-colors mt-[1px]"
+                            >
+                                <X className="w-3.5 h-3.5" />
+                            </button>
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
 
             {/* Composer */}
             <div className="px-4 py-3 border-t border-champagne/50 shrink-0 bg-bone/60">

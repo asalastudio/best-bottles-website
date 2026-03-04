@@ -63,6 +63,7 @@ export default function GraceElevenLabsProvider({
     const [errorMessage, setErrorMessage] = useState("");
     const [conversationActive, setConversationActive] = useState(false);
     const [pendingNavigation, setPendingNavigation] = useState<string | null>(null);
+    const [voiceFailed, setVoiceFailed] = useState(false);
 
     // ── Ref mirrors — break stale-closure bugs without recreating callbacks ──
     const voiceEnabledRef = useRef(voiceEnabled);
@@ -453,6 +454,7 @@ export default function GraceElevenLabsProvider({
             setConversationActive(true);
             setStatus("connecting");
             setErrorMessage("");
+            setVoiceFailed(false); // clear previous failure on new attempt
 
             if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
                 const isLocalhost = ["localhost", "127.0.0.1"].includes(window.location.hostname);
@@ -495,7 +497,8 @@ export default function GraceElevenLabsProvider({
             console.error("[Grace EL] Connection failed:", err);
             connectingRef.current = false;
             setConversationActive(false);
-            setStatus("idle"); // don't show error — fall through to text mode
+            setStatus("idle");
+            setVoiceFailed(true); // triggers the banner in GraceSidePanel
 
             // Show a friendly in-chat message instead of a broken error state.
             // Grace continues working in text mode via Convex.
@@ -768,6 +771,7 @@ export default function GraceElevenLabsProvider({
                 updateFormField,
                 submitActiveForm,
                 dismissActiveForm,
+                voiceFailed,
             }}
         >
             {children}
