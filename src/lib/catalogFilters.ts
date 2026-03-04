@@ -1,7 +1,10 @@
 // Option A: UI applicator buckets → product applicator values
+// Each spray sub-type is its own bucket so it gets its own grid card and filter option
 export const APPLICATOR_BUCKETS = [
-    { value: "rollon", label: "Roll-on", productValues: ["Metal Roller", "Plastic Roller"] },
-    { value: "spray", label: "Spray", productValues: ["Fine Mist Sprayer", "Atomizer", "Antique Bulb Sprayer", "Antique Bulb Sprayer with Tassel"] },
+    { value: "rollon", label: "Roll-On", productValues: ["Metal Roller", "Plastic Roller"] },
+    { value: "finemist", label: "Fine Mist Spray", productValues: ["Fine Mist Sprayer", "Perfume Spray Pump", "Atomizer"] },
+    { value: "antiquespray", label: "Antique Bulb Spray", productValues: ["Antique Bulb Sprayer"] },
+    { value: "antiquespray-tassel", label: "Antique Bulb Spray with Tassel", productValues: ["Antique Bulb Sprayer with Tassel"] },
     { value: "reducer", label: "Reducer", productValues: ["Reducer"] },
     { value: "dropper", label: "Dropper", productValues: ["Dropper"] },
     { value: "lotionpump", label: "Lotion Pump", productValues: ["Lotion Pump"] },

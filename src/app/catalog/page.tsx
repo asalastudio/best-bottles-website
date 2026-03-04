@@ -1136,7 +1136,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         let result = [...allGroups];
         const total = result.length;
 
-        // Search (multi-field)
+        // Search (multi-field, including SKU)
         if (filters.search) {
             const term = filters.search.toLowerCase();
             result = result.filter((g) =>
@@ -1146,7 +1146,8 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                 g.capacity?.toLowerCase().includes(term) ||
                 g.neckThreadSize?.toLowerCase().includes(term) ||
                 g.bottleCollection?.toLowerCase().includes(term) ||
-                g.slug.toLowerCase().includes(term),
+                g.slug.toLowerCase().includes(term) ||
+                skuMap.get(g._id)?.toLowerCase().includes(term),
             );
         }
 
@@ -1288,7 +1289,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         }
 
         return { filtered: result, facets: facetData, totalCount: total };
-    }, [allGroups, filters, sortBy]);
+    }, [allGroups, filters, sortBy, skuMap]);
 
     const visibleProducts = filtered.slice(0, visibleCount);
     const hasMore = visibleCount < filtered.length;

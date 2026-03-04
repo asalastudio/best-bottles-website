@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
+import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
-import GraceProvider from "@/components/GraceProvider";
+import GraceProviderSwitch from "@/components/GraceProviderSwitch";
 import GraceSidePanel, { GraceFloatingTrigger } from "@/components/GraceSidePanel";
 import { SanityMegaMenuProvider } from "@/components/SanityMegaMenuProvider";
 import { getMegaMenuPanels } from "@/sanity/lib/queries";
@@ -34,20 +35,22 @@ export default async function RootLayout({
   const megaMenuPanels = await getMegaMenuPanels();
 
   return (
-    <html lang="en">
-      <body className={`${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
-        <ConvexClientProvider>
-          <CartProvider>
-            <GraceProvider>
-              <SanityMegaMenuProvider initialData={megaMenuPanels}>
-                {children}
-                <GraceSidePanel />
-                <GraceFloatingTrigger />
-              </SanityMegaMenuProvider>
-            </GraceProvider>
-          </CartProvider>
-        </ConvexClientProvider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={`${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+          <ConvexClientProvider>
+            <CartProvider>
+              <GraceProviderSwitch>
+                <SanityMegaMenuProvider initialData={megaMenuPanels}>
+                  {children}
+                  <GraceSidePanel />
+                  <GraceFloatingTrigger />
+                </SanityMegaMenuProvider>
+              </GraceProviderSwitch>
+            </CartProvider>
+          </ConvexClientProvider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -16,6 +16,7 @@ import FitmentCarousel from "@/components/FitmentCarousel";
 import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
+import { client, isSanityConfigured } from "@/sanity/lib/client";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -329,6 +330,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const [activeTab, setActiveTab] = useState<"specs" | "components">("specs");
     const [qty, setQty] = useState(1);
     const [addedFlash, setAddedFlash] = useState(false);
+    const [sanityDescription, setSanityDescription] = useState<string | null>(null);
 
     const group = data?.group;
     const variants = useMemo(() => (data?.variants as ProductVariant[] | undefined) ?? [], [data?.variants]);
@@ -648,6 +650,28 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         }
         return () => { document.title = "Best Bottles"; };
     }, [group]);
+
+    // ── Sanity editorial description ─────────────────────────────────────────
+    useEffect(() => {
+        const sku = selectedVariant?.websiteSku;
+        if (!isSanityConfigured || !sku) {
+            setSanityDescription(null);
+            return;
+        }
+        let cancelled = false;
+        client
+            .fetch<string | null>(
+                `*[_type == "product" && websiteSku == $sku][0].description`,
+                { sku }
+            )
+            .then((desc) => {
+                if (!cancelled) setSanityDescription(desc ?? null);
+            })
+            .catch(() => {
+                if (!cancelled) setSanityDescription(null);
+            });
+        return () => { cancelled = true; };
+    }, [selectedVariant?.websiteSku]);
 
     // ── JSON-LD structured data ──────────────────────────────────────────────
     const jsonLd = useMemo(() => {
@@ -1186,6 +1210,18 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 </button>
                             </div>
 
+                            {/* Product Description */}
+                            {(sanityDescription ?? selectedVariant?.itemDescription) && (
+                                <div className="mb-6 pt-5 border-t border-champagne/60">
+                                    <p className="text-[9px] uppercase tracking-[0.18em] font-sans text-muted-gold mb-3">
+                                        About This Product
+                                    </p>
+                                    <p className="font-serif text-[14.5px] text-obsidian leading-[1.75]">
+                                        {sanityDescription ?? selectedVariant?.itemDescription}
+                                    </p>
+                                </div>
+                            )}
+
                             {/* View All Compatible Components CTA */}
                             <button
                                 onClick={() => setFitmentDrawerOpen(true)}
@@ -1341,14 +1377,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             <SpecRow label="Category" value={selectedVariant.category} />
                                             <SpecRow label="Collection" value={selectedVariant.bottleCollection} />
                                         </dl>
-                                        {(selectedVariant.graceDescription || selectedVariant.itemDescription) && (
-                                            <div className="mt-8 pt-8 border-t border-champagne/50">
-                                                <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">Description</p>
-                                                <p className="text-sm text-obsidian/80 leading-relaxed">
-                                                    {selectedVariant.graceDescription ?? selectedVariant.itemDescription}
-                                                </p>
-                                            </div>
-                                        )}
                                         {selectedVariant.productUrl && (
                                             <div className="mt-6 pt-6 border-t border-champagne/50">
                                                 <a

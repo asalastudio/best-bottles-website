@@ -68,10 +68,12 @@ const BOTTLE_CATEGORIES = new Set(["Glass Bottle", "Lotion Bottle", "Aluminum Bo
 const APPLICATOR_BUCKET_MAP: Record<string, string> = {
     "Metal Roller": "rollon",
     "Plastic Roller": "rollon",
-    "Fine Mist Sprayer": "spray",
-    "Atomizer": "spray",
-    "Antique Bulb Sprayer": "spray",
-    "Antique Bulb Sprayer with Tassel": "spray",
+    // Fine mist, antique bulb, antique bulb+tassel are separate product groups
+    "Fine Mist Sprayer": "finemist",
+    "Perfume Spray Pump": "finemist",
+    "Atomizer": "finemist",
+    "Antique Bulb Sprayer": "antiquespray",
+    "Antique Bulb Sprayer with Tassel": "antiquespray-tassel",
     "Dropper": "dropper",
     "Lotion Pump": "lotionpump",
     "Reducer": "reducer",
@@ -84,7 +86,9 @@ const APPLICATOR_BUCKET_MAP: Record<string, string> = {
 
 const APPLICATOR_BUCKET_LABELS: Record<string, string> = {
     rollon: "Roll-On",
-    spray: "Spray",
+    finemist: "Fine Mist Spray",
+    antiquespray: "Antique Bulb Spray",
+    "antiquespray-tassel": "Antique Bulb Spray with Tassel",
     dropper: "Dropper",
     lotionpump: "Lotion Pump",
     reducer: "Reducer",
@@ -96,7 +100,9 @@ const APPLICATOR_BUCKET_LABELS: Record<string, string> = {
 // Customer-facing format nouns for clean product titles.
 const APPLICATOR_BUCKET_TITLE: Record<string, string> = {
     rollon: "Roll-On Bottle",
-    spray: "Spray Bottle",
+    finemist: "Fine Mist Spray Bottle",
+    antiquespray: "Antique Bulb Spray Bottle",
+    "antiquespray-tassel": "Antique Bulb Spray Bottle with Tassel",
     dropper: "Dropper Bottle",
     lotionpump: "Lotion Pump Bottle",
     reducer: "Reducer Bottle",
@@ -1294,8 +1300,8 @@ export const verifyBsrFix = action({
         let cursor: string | null = null;
         let isDone = false;
 
-        const BAD_FOR_30: Set<string> = new Set(["CMP-DRP-WHT-20400-90","CMP-DRP-BKSL-20400-90","CMP-DRP-WTGD-20400-90","CMP-DRP-BKGD-20400-90","CMP-DRP-WTSL-20400-90","CMP-DRP-BLK-20400-90","CMP-CAP-BLK-20-400-2OZ"]);
-        const BAD_FOR_60: Set<string> = new Set(["CMP-DRP-WHT-20400-76","CMP-DRP-BKSL-20400-76","CMP-DRP-WTGD-20400-76","CMP-DRP-BKGD-20400-76","CMP-DRP-WTSL-20400-76","CMP-DRP-BLK-20400-76MM-01","CMP-CAP-BLK-20-400-1OZ"]);
+        const BAD_FOR_30: Set<string> = new Set(["CMP-DRP-WHT-20400-90", "CMP-DRP-BKSL-20400-90", "CMP-DRP-WTGD-20400-90", "CMP-DRP-BKGD-20400-90", "CMP-DRP-WTSL-20400-90", "CMP-DRP-BLK-20400-90", "CMP-CAP-BLK-20-400-2OZ"]);
+        const BAD_FOR_60: Set<string> = new Set(["CMP-DRP-WHT-20400-76", "CMP-DRP-BKSL-20400-76", "CMP-DRP-WTGD-20400-76", "CMP-DRP-BKGD-20400-76", "CMP-DRP-WTSL-20400-76", "CMP-DRP-BLK-20400-76MM-01", "CMP-CAP-BLK-20-400-1OZ"]);
         const BAD_FOR_15: Set<string> = new Set(["CMP-DRP-BLK-18400-90MM"]);
 
         const byCapacity: Record<string, { count: number; compCounts: Set<number>; issues: number }> = {};
@@ -1408,8 +1414,8 @@ export const fixVialTaxonomy = action({
                     const applicatorColor = name.includes("black applicator")
                         ? "Black"
                         : name.includes("white applicator")
-                        ? "White"
-                        : null;
+                            ? "White"
+                            : null;
 
                     const plugComponents = applicatorColor
                         ? [{
@@ -2377,9 +2383,9 @@ CRITICAL RULE: Thread size must match exactly. A 18-415 closure will not fit a 2
  * After running: rebuild product groups to consolidate siblings.
  */
 export const normalizeBlueColorVariants = mutation({
-    args: { 
+    args: {
         cursor: v.optional(v.string()),
-        batchSize: v.optional(v.number()) 
+        batchSize: v.optional(v.number())
     },
     handler: async (ctx, args) => {
         const batchSize = args.batchSize ?? 200;
@@ -2390,7 +2396,7 @@ export const normalizeBlueColorVariants = mutation({
             numItems: batchSize,
         });
         const blueProducts = page.page.filter((p) => p.color === "Blue");
-        
+
         let updated = 0;
         for (const product of blueProducts) {
             await ctx.db.patch(product._id, { color: "Cobalt Blue" });
@@ -2816,5 +2822,183 @@ export const addMissingSwirlLtnBlk = mutation({
             importSource: "addMissingSwirlLtnBlk_2026-02-28",
         });
         return { status: "inserted", id };
+    },
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// ALIGNMENT FIXES — 2026-03-04
+//
+// Two targeted fixes found by alignment_check.mjs:
+//   1. normalizeCollectionNames — collapses "X Collection" duplicates → "X"
+//      Affects products + productGroups for: Royal, Flair, Square,
+//      Plastic Bottle, and Cylinder (one outlier variant).
+//   2. fixComponentMisclassifications — corrects family/collection on 5 specific
+//      component SKUs that were mislabeled "Roll-On Cap" by the enrichment pipeline.
+//
+// Run via: node scripts/run_alignment_fixes.mjs
+// ─────────────────────────────────────────────────────────────────────────────
+
+const COLLECTION_RENAMES: Record<string, string> = {
+    // Product-level duplicates (applied to both products + productGroups)
+    "Royal Collection":          "Royal",
+    "Flair Collection":          "Flair",
+    "Square Collection":         "Square",
+    "Plastic Bottle Collection": "Plastic Bottle",
+    "Cylinder Collection":       "Cylinder",
+    // Group-level only: productGroup records used "X Collection" suffix
+    // while the individual product records already used the plain name.
+    "Tulip Collection":          "Tulip",
+    "Bell Collection":           "Bell",
+    "Vial & Sample Collection":  "Vial",
+    "Pillar Collection":         "Pillar",
+    "Atomizer Collection":       "Atomizer",
+};
+
+/**
+ * Paginated scan of products — fixes bottleCollection where it matches a known
+ * duplicate name. Dry-run (apply=false) just counts without writing.
+ */
+export const normalizeCollectionNames = mutation({
+    args: {
+        cursor:    v.union(v.string(), v.null()),
+        batchSize: v.optional(v.number()),
+        apply:     v.optional(v.boolean()),
+    },
+    handler: async (ctx, args) => {
+        const size  = args.batchSize ?? 200;
+        const apply = args.apply ?? false;
+
+        const result = await ctx.db.query("products").paginate({ cursor: args.cursor as any, numItems: size });
+
+        let scanned = 0;
+        let updated = 0;
+        const examples: string[] = [];
+
+        for (const p of result.page) {
+            scanned++;
+            const correct = COLLECTION_RENAMES[p.bottleCollection ?? ""];
+            if (!correct) continue;
+            if (apply) await ctx.db.patch(p._id, { bottleCollection: correct });
+            updated++;
+            if (examples.length < 5) examples.push(`${p.graceSku}: "${p.bottleCollection}" → "${correct}"`);
+        }
+
+        return { scanned, updated, examples, hasMore: !result.isDone, nextCursor: result.continueCursor };
+    },
+});
+
+/**
+ * Same fix for productGroups — all ~325 groups fit in one pass.
+ */
+export const normalizeGroupCollectionNames = mutation({
+    args: { apply: v.optional(v.boolean()) },
+    handler: async (ctx, args) => {
+        const apply = args.apply ?? false;
+        const groups = await ctx.db.query("productGroups").collect();
+        let updated = 0;
+        const examples: string[] = [];
+
+        for (const g of groups) {
+            const correct = COLLECTION_RENAMES[g.bottleCollection ?? ""];
+            if (!correct) continue;
+            if (apply) await ctx.db.patch(g._id, { bottleCollection: correct });
+            updated++;
+            if (examples.length < 5) examples.push(`${g.slug}: "${g.bottleCollection}" → "${correct}"`);
+        }
+
+        return { updated, examples };
+    },
+});
+
+// Component SKUs that the enrichment pipeline mislabeled as "Roll-On Cap".
+const COMPONENT_FIXES: Array<{ graceSku: string; family: string; bottleCollection: string }> = [
+    // Pink antique bulb sprayer — CMP-CAP-* prefix but item IS a sprayer
+    { graceSku: "CMP-CAP-PNK-18-415",     family: "Sprayer",     bottleCollection: "Sprayer" },
+    // Four lotion pumps assigned Roll-On Cap family/collection during enrichment
+    { graceSku: "CMP-LPM-SGLD-18-415",    family: "Lotion Pump", bottleCollection: "Lotion Pump" },
+    { graceSku: "CMP-LPM-SBLK-18-415",    family: "Lotion Pump", bottleCollection: "Lotion Pump" },
+    { graceSku: "CMP-LPM-MSLV-18-415-02", family: "Lotion Pump", bottleCollection: "Lotion Pump" },
+    { graceSku: "CMP-LPM-SSLV-18-415",    family: "Lotion Pump", bottleCollection: "Lotion Pump" },
+];
+
+/**
+ * Patches family + bottleCollection on the 5 misclassified component SKUs.
+ * Dry-run by default (apply=false).
+ */
+export const fixComponentMisclassifications = mutation({
+    args: { apply: v.optional(v.boolean()) },
+    handler: async (ctx, args) => {
+        const apply = args.apply ?? false;
+        const results: Array<{ graceSku: string; status: "fixed" | "not_found" | "already_correct" }> = [];
+
+        for (const fix of COMPONENT_FIXES) {
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", fix.graceSku))
+                .first();
+
+            if (!product) {
+                results.push({ graceSku: fix.graceSku, status: "not_found" });
+                continue;
+            }
+            if (product.family === fix.family && product.bottleCollection === fix.bottleCollection) {
+                results.push({ graceSku: fix.graceSku, status: "already_correct" });
+                continue;
+            }
+            if (apply) {
+                await ctx.db.patch(product._id, { family: fix.family, bottleCollection: fix.bottleCollection });
+            }
+            results.push({ graceSku: fix.graceSku, status: "fixed" });
+        }
+
+        return { results, applied: apply };
+    },
+});
+
+/**
+ * Two products were linked to wrong productGroups because their category field
+ * was set to "Component" during seeding instead of their real product type:
+ *   BB-ALU250SPRYBL        → category "Aluminum Bottle"
+ *   BB-CREAMJARAMB5MLSLCAP → category "Cream Jar"
+ *
+ * Fixing category and clearing productGroupId lets the next grouping pass
+ * re-assign them to the correct groups.
+ */
+export const fixWrongGroupLinks = mutation({
+    args: { apply: v.optional(v.boolean()) },
+    handler: async (ctx, args) => {
+        const apply = args.apply ?? false;
+
+        const fixes: Array<{ websiteSku: string; category: string }> = [
+            { websiteSku: "BB-ALU250SPRYBL",        category: "Aluminum Bottle" },
+            { websiteSku: "BB-CREAMJARAMB5MLSLCAP", category: "Cream Jar" },
+        ];
+
+        const results: Array<{ websiteSku: string; status: "fixed" | "not_found" | "already_correct" }> = [];
+
+        for (const fix of fixes) {
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", fix.websiteSku))
+                .first();
+
+            if (!product) {
+                results.push({ websiteSku: fix.websiteSku, status: "not_found" });
+                continue;
+            }
+            if (product.category === fix.category && product.productGroupId == null) {
+                results.push({ websiteSku: fix.websiteSku, status: "already_correct" });
+                continue;
+            }
+            if (apply) {
+                await ctx.db.patch(product._id, {
+                    category:       fix.category,
+                    productGroupId: undefined,
+                });
+            }
+            results.push({ websiteSku: fix.websiteSku, status: "fixed" });
+        }
+
+        return { results, applied: apply };
     },
 });

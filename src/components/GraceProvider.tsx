@@ -1,8 +1,6 @@
 "use client";
 
 import {
-    createContext,
-    useContext,
     useState,
     useRef,
     useCallback,
@@ -16,91 +14,15 @@ import {
     fetchEphemeralToken,
 } from "@/lib/graceRealtime";
 import { useCart } from "./CartProvider";
-
-// ─── Types ────────────────────────────────────────────────────────────────────
-
-export type GraceStatus =
-    | "idle"
-    | "connecting"
-    | "listening"
-    | "transcribing"
-    | "thinking"
-    | "speaking"
-    | "error";
-
-// ─── Product / action payload types ──────────────────────────────────────────
-
-export interface ProductCard {
-    graceSku: string;
-    itemName: string;
-    family?: string;
-    capacity?: string;
-    color?: string;
-    applicator?: string;
-    neckThreadSize?: string;
-    webPrice1pc?: number;
-    webPrice12pc?: number;
-    slug?: string;
-}
-
-export interface KitItem {
-    role: "bottle" | "closure" | "applicator";
-    product: ProductCard;
-}
-
-export type GraceAction =
-    | { type: "showProducts"; products: ProductCard[] }
-    | { type: "compareProducts"; products: ProductCard[] }
-    | { type: "buildKit"; items: KitItem[]; totalPrice?: number }
-    | { type: "proposeCartAdd"; products: Array<ProductCard & { quantity: number }>; awaitingConfirmation: boolean }
-    | { type: "navigateToPage"; path: string; title: string; description?: string; autoNavigate?: boolean }
-    | { type: "prefillForm"; formType: "sample" | "quote" | "contact" | "newsletter"; fields: Record<string, string> };
-
-export interface GraceMessage {
-    role: "user" | "grace";
-    content: string;
-    id: string;
-    action?: GraceAction;
-}
-
-export type PanelMode = "closed" | "strip" | "open";
-
-interface GraceContextValue {
-    panelMode: PanelMode;
-    openPanel: () => void;
-    closePanel: () => void;
-    minimizeToStrip: () => void;
-    isOpen: boolean;
-    open: () => void;
-    close: () => void;
-    status: GraceStatus;
-    messages: GraceMessage[];
-    input: string;
-    setInput: (v: string) => void;
-    voiceEnabled: boolean;
-    toggleVoice: () => void;
-    send: (text?: string, fromVoice?: boolean) => Promise<void>;
-    startDictation: () => Promise<void>;
-    stopDictation: () => void;
-    stopSpeaking: () => void;
-    errorMessage: string;
-    conversationActive: boolean;
-    startConversation: () => void;
-    endConversation: () => void;
-    confirmAction: (messageId: string) => void;
-    dismissAction: (messageId: string) => void;
-    onNavigate: (path: string) => void;
-    pendingNavigation: string | null;
-    clearPendingNavigation: () => void;
-}
-
-const GraceContext = createContext<GraceContextValue | null>(null);
-
-export function useGrace() {
-    const ctx = useContext(GraceContext);
-    if (!ctx) throw new Error("useGrace must be used within <GraceProvider>");
-    return ctx;
-}
+import {
+    GraceContext,
+    type GraceStatus,
+    type GraceAction,
+    type GraceMessage,
+    type ProductCard,
+    type KitItem,
+    type PanelMode,
+} from "./GraceContext";
 
 // ─── Strip markdown artifacts from Grace's text responses ────────────────────
 

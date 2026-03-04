@@ -1,4 +1,4 @@
-import { query, action } from "./_generated/server";
+import { query, mutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
 import { normalizeComponentsByType } from "./componentUtils";
@@ -454,6 +454,65 @@ export const getGroupsByFamily = query({
             .query("productGroups")
             .withIndex("by_family", (q) => q.eq("family", args.family))
             .collect();
+    },
+});
+
+/**
+ * Alias used by image upload scripts — same as getGroupsByFamily.
+ */
+export const getProductGroupsByFamily = query({
+    args: { family: v.string() },
+    handler: async (ctx, args) => {
+        return await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+    },
+});
+
+/**
+ * Batch-patch itemDescription for a list of products, looked up by websiteSku.
+ * Called by scripts/push_descriptions.mjs in batches of 50.
+ * Returns { updated, notFound } so the runner can report skipped SKUs.
+ */
+export const patchDescriptions = mutation({
+    args: {
+        patches: v.array(v.object({
+            websiteSku: v.string(),
+            itemDescription: v.string(),
+        })),
+    },
+    handler: async (ctx, args) => {
+        const notFound: string[] = [];
+        let updated = 0;
+        for (const patch of args.patches) {
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", patch.websiteSku))
+                .first();
+            if (!product) {
+                notFound.push(patch.websiteSku);
+                continue;
+            }
+            await ctx.db.patch(product._id, { itemDescription: patch.itemDescription });
+            updated++;
+        }
+        return { updated, notFound };
+    },
+});
+
+/**
+ * Update heroImageUrl on a productGroup — called by the Sanity image upload script
+ * after uploading a grid image and receiving the CDN URL.
+ */
+export const updateProductGroupHeroImage = mutation({
+    args: {
+        id: v.id("productGroups"),
+        heroImageUrl: v.string(),
+    },
+    handler: async (ctx, args) => {
+        await ctx.db.patch(args.id, { heroImageUrl: args.heroImageUrl });
+        return { success: true };
     },
 });
 

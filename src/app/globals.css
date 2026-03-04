@@ -1,6 +1,12 @@
 @import "tailwindcss";
 
+/* ── shadcn/ui radius token (used by shadcn components) ─────────────────── */
+:root {
+  --radius: 0.375rem;
+}
+
 @theme {
+  /* ── Brand palette (defined first — shadcn mappings reference these) ─── */
   --color-obsidian: #1D1D1F;
   --color-bone: #F5F3EF;
   --color-muted-gold: #C5A065;
@@ -10,6 +16,35 @@
   --color-travertine: #EEE6D4;
   --color-dark-teal: #2D4A4A;
 
+  /* Portal palette extensions */
+  --color-ash: #9A9590;
+  --color-ink: #2C2C2E;
+  --color-gold-dim: #8B6F42;
+
+  /* ── shadcn/ui Tailwind v4 color mappings ──────────────────────────────
+     Maps semantic shadcn tokens → Best Bottles brand colors.
+     Enables bg-primary, text-muted-foreground, etc. to use brand palette. */
+  --color-background: var(--color-linen);
+  --color-foreground: var(--color-obsidian);
+  --color-card: var(--color-linen);
+  --color-card-foreground: var(--color-obsidian);
+  --color-primary: var(--color-muted-gold);
+  --color-primary-foreground: var(--color-obsidian);
+  --color-secondary: var(--color-travertine);
+  --color-secondary-foreground: var(--color-obsidian);
+  --color-muted: var(--color-champagne);
+  --color-muted-foreground: var(--color-ash);
+  --color-accent: var(--color-travertine);
+  --color-accent-foreground: var(--color-obsidian);
+  --color-border: var(--color-champagne);
+  --color-input: var(--color-champagne);
+  --color-ring: var(--color-muted-gold);
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-popover: var(--color-linen);
+  --color-popover-foreground: var(--color-obsidian);
+
+  /* ── Typography ───────────────────────────────────────────────────────── */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }

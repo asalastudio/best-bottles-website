@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
 import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -21,8 +21,12 @@ import {
     ChevronDown,
     Maximize2,
     PanelRightClose,
+    Loader2,
+    CheckCircle2,
 } from "lucide-react";
-import { useGrace, type GraceStatus, type GraceAction, type ProductCard } from "./GraceProvider";
+import { useMutation } from "convex/react";
+import { api } from "../../convex/_generated/api";
+import { useGrace, type GraceStatus, type GraceAction, type ProductCard } from "./useGrace";
 import { useCart } from "./CartProvider";
 
 // ─── Hooks ───────────────────────────────────────────────────────────────────
@@ -87,6 +91,143 @@ function ProductCardView({ product }: { product: ProductCard }) {
         </div>
     );
 }
+
+// ─── Inline Grace Form ───────────────────────────────────────────────────────
+
+type FormFieldDef = { name: string; label: string; type: "text" | "email" | "tel" | "textarea"; required?: boolean };
+
+const GRACE_FORM_FIELDS: Record<string, FormFieldDef[]> = {
+    sample: [
+        { name: "name", label: "Full Name", type: "text", required: true },
+        { name: "email", label: "Email", type: "email", required: true },
+        { name: "company", label: "Company / Brand", type: "text" },
+        { name: "phone", label: "Phone", type: "tel" },
+        { name: "products", label: "Products of Interest", type: "textarea", required: true },
+        { name: "quantities", label: "Est. Quantities", type: "text" },
+        { name: "message", label: "Additional Notes", type: "textarea" },
+    ],
+    quote: [
+        { name: "name", label: "Full Name", type: "text", required: true },
+        { name: "email", label: "Email", type: "email", required: true },
+        { name: "company", label: "Company / Brand", type: "text", required: true },
+        { name: "phone", label: "Phone", type: "tel" },
+        { name: "products", label: "Products & Specs", type: "textarea", required: true },
+        { name: "quantities", label: "Quantities per SKU", type: "text" },
+        { name: "message", label: "Project Details", type: "textarea" },
+    ],
+    contact: [
+        { name: "name", label: "Full Name", type: "text", required: true },
+        { name: "email", label: "Email", type: "email", required: true },
+        { name: "company", label: "Company / Brand", type: "text" },
+        { name: "message", label: "Message", type: "textarea", required: true },
+    ],
+    newsletter: [
+        { name: "name", label: "Full Name", type: "text" },
+        { name: "email", label: "Email", type: "email", required: true },
+        { name: "company", label: "Company / Brand", type: "text" },
+    ],
+};
+
+const FORM_TITLES: Record<string, string> = {
+    sample: "Sample Request",
+    quote: "Quote Request",
+    contact: "Contact Form",
+    newsletter: "Newsletter Signup",
+};
+
+function InlineGraceForm({ formType, prefilled }: { formType: string; prefilled: Record<string, string> }) {
+    const submitForm = useMutation(api.forms.submit);
+    const fields = GRACE_FORM_FIELDS[formType] ?? GRACE_FORM_FIELDS.contact;
+    const [values, setValues] = useState<Record<string, string>>(prefilled);
+    const [submitStatus, setSubmitStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+    const [errorMsg, setErrorMsg] = useState("");
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        setSubmitStatus("submitting");
+        setErrorMsg("");
+        try {
+            await submitForm({
+                formType: formType as "sample" | "quote" | "contact" | "newsletter",
+                name: values.name || undefined,
+                email: values.email || "",
+                company: values.company || undefined,
+                phone: values.phone || undefined,
+                message: values.message || undefined,
+                products: values.products || undefined,
+                quantities: values.quantities || undefined,
+                source: "grace",
+            });
+            setSubmitStatus("success");
+        } catch (err) {
+            setErrorMsg(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+            setSubmitStatus("error");
+        }
+    };
+
+    if (submitStatus === "success") {
+        return (
+            <div className="flex flex-col items-center gap-2 py-4 text-center">
+                <CheckCircle2 className="w-8 h-8 text-emerald-500" />
+                <p className="text-xs font-semibold text-obsidian">Submitted!</p>
+                <p className="text-[10px] text-slate leading-relaxed">
+                    {formType === "sample"
+                        ? "We'll review your sample request and be in touch within 1–2 business days."
+                        : formType === "quote"
+                        ? "Our team will prepare your custom quote and reach out shortly."
+                        : "Thanks! We'll get back to you soon."}
+                </p>
+            </div>
+        );
+    }
+
+    return (
+        <form onSubmit={handleSubmit} className="space-y-2.5">
+            {fields.map((field) => (
+                <div key={field.name}>
+                    <label className="block text-[9px] font-bold uppercase tracking-wider text-obsidian/60 mb-1">
+                        {field.label}{field.required && <span className="text-red-500 ml-0.5">*</span>}
+                    </label>
+                    {field.type === "textarea" ? (
+                        <textarea
+                            name={field.name}
+                            required={field.required}
+                            rows={2}
+                            value={values[field.name] ?? ""}
+                            onChange={(e) => setValues((v) => ({ ...v, [field.name]: e.target.value }))}
+                            className="w-full bg-white border border-champagne/60 rounded-lg px-2.5 py-1.5 text-[11px] text-obsidian placeholder-slate/40 focus:outline-none focus:border-muted-gold focus:ring-1 focus:ring-muted-gold/20 transition-all resize-none"
+                        />
+                    ) : (
+                        <input
+                            name={field.name}
+                            type={field.type}
+                            required={field.required}
+                            value={values[field.name] ?? ""}
+                            onChange={(e) => setValues((v) => ({ ...v, [field.name]: e.target.value }))}
+                            className="w-full bg-white border border-champagne/60 rounded-lg px-2.5 py-1.5 text-[11px] text-obsidian placeholder-slate/40 focus:outline-none focus:border-muted-gold focus:ring-1 focus:ring-muted-gold/20 transition-all"
+                        />
+                    )}
+                </div>
+            ))}
+            {submitStatus === "error" && errorMsg && (
+                <p className="text-[10px] text-red-600 bg-red-50 border border-red-200 rounded-lg px-2.5 py-2">{errorMsg}</p>
+            )}
+            <button
+                type="submit"
+                disabled={submitStatus === "submitting"}
+                className="w-full flex items-center justify-center gap-1.5 py-2 rounded-lg bg-obsidian text-bone text-xs font-bold hover:bg-muted-gold transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+            >
+                {submitStatus === "submitting" ? (
+                    <><Loader2 className="w-3.5 h-3.5 animate-spin" /> Submitting…</>
+                ) : (
+                    <><Send className="w-3.5 h-3.5" /> Submit</>
+                )}
+            </button>
+        </form>
+    );
+}
+
+// ─── Action Card Renderer ─────────────────────────────────────────────────────
 
 function ActionCardRenderer({
     action,
@@ -241,36 +382,13 @@ function ActionCardRenderer({
         case "prefillForm":
             return (
                 <div className="mt-2 bg-obsidian/[0.03] border border-champagne/60 rounded-xl p-3">
-                    <div className="flex items-center gap-1.5 mb-2">
+                    <div className="flex items-center gap-1.5 mb-3">
                         <FileText className="w-3.5 h-3.5 text-muted-gold" />
                         <span className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">
-                            {action.formType === "sample" ? "Sample Request" :
-                             action.formType === "quote" ? "Quote Request" :
-                             action.formType === "newsletter" ? "Newsletter Signup" : "Contact Form"}
+                            {FORM_TITLES[action.formType] ?? "Contact Form"}
                         </span>
                     </div>
-                    <div className="space-y-1.5">
-                        {Object.entries(action.fields).map(([key, value]) => (
-                            <div key={key} className="flex items-center gap-2">
-                                <span className="text-[10px] text-slate capitalize w-20 shrink-0">{key.replace(/_/g, " ")}:</span>
-                                <span className="text-[11px] text-obsidian font-medium">{value}</span>
-                            </div>
-                        ))}
-                    </div>
-                    <button
-                        onClick={() => {
-                            const params = new URLSearchParams(action.fields);
-                            const path = action.formType === "sample" ? "/request-sample"
-                                : action.formType === "quote" ? "/request-quote"
-                                : action.formType === "newsletter" ? "/newsletter"
-                                : "/contact";
-                            onNavigate(path);
-                            router.push(`${path}?${params.toString()}`);
-                        }}
-                        className="mt-2.5 flex items-center justify-center gap-1.5 w-full py-2 rounded-lg bg-obsidian text-bone text-xs font-bold hover:bg-muted-gold transition-colors"
-                    >
-                        Review & Submit <ArrowRight className="w-3.5 h-3.5" />
-                    </button>
+                    <InlineGraceForm formType={action.formType} prefilled={action.fields} />
                 </div>
             );
 
@@ -324,11 +442,10 @@ export function GraceFloatingTrigger() {
     return (
         <button
             onClick={openPanel}
-            className={`fixed z-40 bg-obsidian text-bone rounded-full shadow-xl hover:bg-muted-gold transition-all duration-200 cursor-pointer group ${
-                useCompactTrigger
+            className={`fixed z-40 bg-obsidian text-bone rounded-full shadow-xl hover:bg-muted-gold transition-all duration-200 cursor-pointer group ${useCompactTrigger
                     ? `${isProductPage ? "bottom-[104px]" : "bottom-4"} right-4 w-12 h-12 flex items-center justify-center`
                     : "bottom-6 right-6 flex items-center space-x-2.5 px-5 py-3"
-            }`}
+                }`}
             aria-label="Ask Grace"
         >
             <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
@@ -625,12 +742,11 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
                         transition={{ duration: 0.15 }}
                         className="overflow-hidden shrink-0"
                     >
-                        <div className={`flex items-center justify-center gap-2 py-2 text-xs font-medium ${
-                            status === "error" ? "bg-red-50 text-red-600"
-                            : status === "listening" ? "bg-muted-gold/10 text-muted-gold"
-                            : status === "connecting" ? "bg-muted-gold/5 text-muted-gold/80"
-                            : "bg-champagne/20 text-slate"
-                        }`}>
+                        <div className={`flex items-center justify-center gap-2 py-2 text-xs font-medium ${status === "error" ? "bg-red-50 text-red-600"
+                                : status === "listening" ? "bg-muted-gold/10 text-muted-gold"
+                                    : status === "connecting" ? "bg-muted-gold/5 text-muted-gold/80"
+                                        : "bg-champagne/20 text-slate"
+                            }`}>
                             {isListening && <span className="w-2 h-2 rounded-full bg-muted-gold animate-grace-pulse" />}
                             {isProcessing && (
                                 <span className="flex items-center space-x-1">
@@ -684,13 +800,11 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
                                 </span>
                             </div>
                         )}
-                        <div className={`rounded-2xl px-3.5 py-2 text-[13px] leading-relaxed ${
-                            msg.action ? "max-w-[95%]" : "max-w-[85%]"
-                        } ${
-                            msg.role === "user"
+                        <div className={`rounded-2xl px-3.5 py-2 text-[13px] leading-relaxed ${msg.action ? "max-w-[95%]" : "max-w-[85%]"
+                            } ${msg.role === "user"
                                 ? "bg-obsidian text-bone rounded-br-sm"
                                 : "bg-white border border-champagne/60 text-obsidian rounded-bl-sm"
-                        }`}>
+                            }`}>
                             {msg.content && <p>{msg.content}</p>}
                             {msg.action && (
                                 <ActionCardRenderer

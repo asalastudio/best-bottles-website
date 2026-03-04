@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 
-// ─── OpenAI TTS proxy ─────────────────────────────────────────────────────────
+// ─── TTS: ElevenLabs (preferred) or OpenAI fallback ─────────────────────────────
 
 const OPENAI_TTS_URL = "https://api.openai.com/v1/audio/speech";
 
@@ -45,18 +45,49 @@ export async function POST(req: NextRequest) {
         return new Response("Missing text", { status: 400 });
     }
 
-    const apiKey = process.env.OPENAI_API_KEY;
+    const ttsText = prepareTtsText(text);
+    const elevenLabsKey = process.env.ELEVENLABS_API_KEY;
+    const elevenLabsVoiceId = process.env.ELEVENLABS_VOICE_ID;
 
-    if (!apiKey) {
-        return new Response("Voice not configured", { status: 503 });
+    // Prefer ElevenLabs TTS when configured (no convai_write needed for TTS)
+    if (elevenLabsKey && elevenLabsVoiceId) {
+        const upstream = await fetch(
+            `https://api.elevenlabs.io/v1/text-to-speech/${elevenLabsVoiceId}?output_format=mp3_44100_128`,
+            {
+                method: "POST",
+                headers: {
+                    "xi-api-key": elevenLabsKey,
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    text: ttsText,
+                    model_id: "eleven_turbo_v2_5",
+                }),
+            }
+        );
+
+        if (upstream.ok) {
+            return new Response(upstream.body, {
+                headers: {
+                    "Content-Type": "audio/mpeg",
+                    "Cache-Control": "no-store",
+                },
+            });
+        }
+        console.error("[grace/voice] ElevenLabs TTS error:", upstream.status, await upstream.text());
+        // Fall through to OpenAI
     }
 
-    const ttsText = prepareTtsText(text);
+    // Fallback to OpenAI TTS
+    const openaiKey = process.env.OPENAI_API_KEY;
+    if (!openaiKey) {
+        return new Response("Voice not configured (no ElevenLabs or OpenAI key)", { status: 503 });
+    }
 
     const upstream = await fetch(OPENAI_TTS_URL, {
         method: "POST",
         headers: {
-            "Authorization": `Bearer ${apiKey}`,
+            "Authorization": `Bearer ${openaiKey}`,
             "Content-Type": "application/json",
         },
         body: JSON.stringify({

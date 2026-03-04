@@ -272,6 +272,93 @@ export default defineSchema({
     // FORM SUBMISSIONS (sample requests, quotes, contact)
     // -------------------------------------------------------------------------
 
+    // -------------------------------------------------------------------------
+    // PORTAL — B2B CLIENT ACCOUNTS
+    // -------------------------------------------------------------------------
+
+    // One record per wholesale account (Clerk Organization).
+    // Seeded manually from QuickBooks; shopifyCustomerId nullable until Shopify goes live.
+    portalAccounts: defineTable({
+        clerkOrgId: v.string(),
+        accountNumber: v.string(),
+        companyName: v.string(),
+        tier: v.string(),                           // e.g. "The Scaler"
+        accountManager: v.string(),
+        netTerms: v.string(),                       // e.g. "Net 30"
+        taxExempt: v.boolean(),
+        memberSince: v.string(),                    // e.g. "March 2021"
+        shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
+    })
+        .index("by_clerkOrgId", ["clerkOrgId"])
+        .index("by_accountNumber", ["accountNumber"]),
+
+    // Order history — seeded from QuickBooks, later synced from Shopify webhooks.
+    portalOrders: defineTable({
+        clerkOrgId: v.string(),
+        orderId: v.string(),
+        lineItems: v.array(v.object({
+            sku: v.string(),
+            description: v.string(),
+            quantity: v.number(),
+            unitPrice: v.optional(v.number()),
+        })),
+        status: v.union(
+            v.literal("processing"),
+            v.literal("in_transit"),
+            v.literal("delivered"),
+            v.literal("cancelled"),
+        ),
+        orderDate: v.number(),
+        estimatedDelivery: v.optional(v.string()),
+        trackingNumber: v.optional(v.string()),
+        carrier: v.optional(v.string()),
+        shipFrom: v.optional(v.string()),
+        shipTo: v.optional(v.string()),
+        totalAmount: v.optional(v.number()),
+    })
+        .index("by_orgId", ["clerkOrgId"])
+        .index("by_orderId", ["orderId"]),
+
+    // Saved draft orders — native portal data, not synced from any external system.
+    portalDrafts: defineTable({
+        clerkOrgId: v.string(),
+        name: v.string(),
+        status: v.union(
+            v.literal("draft"),
+            v.literal("in_review"),
+            v.literal("submitted"),
+        ),
+        lineItems: v.array(v.object({
+            sku: v.string(),
+            description: v.string(),
+            quantity: v.number(),
+            unitPrice: v.optional(v.number()),
+        })),
+        totalAmount: v.optional(v.number()),
+        createdAt: v.number(),
+        updatedAt: v.number(),
+    })
+        .index("by_orgId", ["clerkOrgId"]),
+
+    // Grace AI workspace projects — collections of saved bottle configs + conversation history.
+    graceProjects: defineTable({
+        clerkOrgId: v.string(),
+        name: v.string(),
+        savedBottles: v.array(v.object({
+            description: v.string(),
+            sku: v.optional(v.string()),
+            notes: v.optional(v.string()),
+        })),
+        convexConversationId: v.optional(v.id("conversations")),
+        createdAt: v.number(),
+        updatedAt: v.number(),
+    })
+        .index("by_orgId", ["clerkOrgId"]),
+
+    // -------------------------------------------------------------------------
+    // FORM SUBMISSIONS (sample requests, quotes, contact)
+    // -------------------------------------------------------------------------
+
     formSubmissions: defineTable({
         formType: v.union(
             v.literal("sample"),
