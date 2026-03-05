@@ -157,7 +157,7 @@ function buildSystemPrompt(
         ? knowledge.map((k) => `### ${k.title}\n${k.content}`).join("\n\n---\n\n") + "\n\n---\n\n"
         : "";
 
-    return `You are Grace — the packaging concierge for Best Bottles, the premium glass packaging house of Nemat International. With over 170 years of fragrance heritage behind every bottle we carry, you are the first point of contact for beauty, fragrance, and wellness brands who demand precision and quality in their packaging.
+    return `You are Grace — the packaging concierge for Best Bottles, the premium glass packaging division of Nemat International, a Bay Area-based fragrance and packaging company. You are the first point of contact for beauty, fragrance, and wellness brands who demand precision and quality in their packaging.
 
 You are not a chatbot. You are a luxury boutique concierge — expert, warm, and deeply organised.
 
@@ -966,6 +966,8 @@ export const askGrace = action({
         ),
         // When true, appends voice-mode brevity rules to the system prompt
         voiceMode: v.optional(v.boolean()),
+        // Pre-formatted page context string injected by the client provider
+        pageContextBlock: v.optional(v.string()),
     },
     handler: async (ctx, args): Promise<string> => {
         const t0 = Date.now();
@@ -989,6 +991,9 @@ export const askGrace = action({
         console.log(`[Grace perf] knowledge load: ${Date.now() - tKnowledge}ms (${knowledge.length} entries, mode=${isVoice ? "voice" : "text"})`);
 
         let systemPrompt = buildSystemPrompt(knowledge);
+        if (args.pageContextBlock) {
+            systemPrompt = args.pageContextBlock + "\n\n" + systemPrompt;
+        }
         if (isVoice) {
             systemPrompt += VOICE_MODE_ADDENDUM;
         }

@@ -1,32 +1,53 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
+import { useAction } from "convex/react";
+import { api } from "../../../convex/_generated/api";
 
-const initialMessages = [
-    {
-        role: "grace" as const,
-        text: "Welcome back to your workspace, Lumière Atelier. Your Spring Serum Launch project is open. Ready to continue?",
-    },
-    {
-        role: "user" as const,
-        text: "Yes — I want to finalize the closure selection for the 30ml Frosted Elegant.",
-    },
-    {
-        role: "grace" as const,
-        text: "You've narrowed it to two options: the Antique Gold Fine Mist Sprayer and the Matte Black Fine Mist Sprayer, both 18-415 compatible. Given your brand positioning — cool-toned minimalism — the Matte Black creates stronger visual contrast with frosted glass and tends to read more premium at retail. The Gold is warmer and more traditional. Which direction feels right for your Spring collection?",
-    },
-];
+type Message = { role: "user" | "grace"; text: string };
+
+const welcomeMessage: Message = {
+    role: "grace",
+    text: "Welcome to your Grace workspace. How can I help you with your packaging project today?",
+};
 
 export default function GraceWorkspaceChat() {
-    const [messages, setMessages] = useState(initialMessages);
+    const [messages, setMessages] = useState<Message[]>([welcomeMessage]);
     const [input, setInput] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
+    const messagesEndRef = useRef<HTMLDivElement>(null);
 
-    const handleSend = () => {
+    const askGrace = useAction(api.grace.askGrace);
+
+    useEffect(() => {
+        messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
+
+    const handleSend = async () => {
         const trimmed = input.trim();
-        if (!trimmed) return;
-        setMessages((prev) => [...prev, { role: "user", text: trimmed }]);
+        if (!trimmed || isLoading) return;
+
+        const userMsg: Message = { role: "user", text: trimmed };
+        setMessages((prev) => [...prev, userMsg]);
         setInput("");
-        // TODO: wire to askGrace Convex action
+        setIsLoading(true);
+
+        const history = [...messages, userMsg].map((m) => ({
+            role: (m.role === "grace" ? "assistant" : "user") as "user" | "assistant",
+            content: m.text,
+        }));
+
+        try {
+            const response = await askGrace({ messages: history, voiceMode: false });
+            setMessages((prev) => [...prev, { role: "grace", text: response }]);
+        } catch {
+            setMessages((prev) => [
+                ...prev,
+                { role: "grace", text: "I had trouble connecting just now. Please try again in a moment." },
+            ]);
+        } finally {
+            setIsLoading(false);
+        }
     };
 
     const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
@@ -69,6 +90,18 @@ export default function GraceWorkspaceChat() {
                         </div>
                     </div>
                 ))}
+                {isLoading && (
+                    <div className="flex gap-3 justify-start">
+                        <div className="w-7 h-7 min-w-7 rounded-full bg-obsidian border border-muted-gold/30 flex items-center justify-center mt-0.5 shrink-0">
+                            <div className="w-1.5 h-1.5 rounded-full bg-muted-gold animate-pulse" />
+                        </div>
+                        <div className="bg-linen border border-champagne rounded-[3px] rounded-tl-none px-4 py-3">
+                            <p className="font-sans text-[8px] tracking-[0.18em] uppercase text-muted-gold mb-1.5">Grace</p>
+                            <p className="font-serif text-[14px] text-ash italic">Thinking…</p>
+                        </div>
+                    </div>
+                )}
+                <div ref={messagesEndRef} />
             </div>
 
             {/* Input */}
@@ -79,11 +112,13 @@ export default function GraceWorkspaceChat() {
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
                     placeholder="Continue the conversation with Grace..."
-                    className="flex-1 font-serif text-[15px] text-obsidian bg-bone border border-champagne rounded-[3px] px-4 py-2.5 outline-none placeholder:text-ash placeholder:italic focus:border-muted-gold/60 transition-colors"
+                    disabled={isLoading}
+                    className="flex-1 font-serif text-[15px] text-obsidian bg-bone border border-champagne rounded-[3px] px-4 py-2.5 outline-none placeholder:text-ash placeholder:italic focus:border-muted-gold/60 transition-colors disabled:opacity-50"
                 />
                 <button
                     onClick={handleSend}
-                    className="font-sans text-[9px] tracking-[0.18em] uppercase bg-muted-gold text-obsidian border border-muted-gold rounded-sm px-5 py-[9px] hover:bg-muted-gold/90 transition-colors shrink-0"
+                    disabled={isLoading || !input.trim()}
+                    className="font-sans text-[9px] tracking-[0.18em] uppercase bg-muted-gold text-obsidian border border-muted-gold rounded-sm px-5 py-[9px] hover:bg-muted-gold/90 transition-colors shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                     Send
                 </button>

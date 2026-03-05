@@ -16,8 +16,9 @@ import {
     useMemo,
     type ReactNode,
 } from "react";
+import { usePathname, useSearchParams } from "next/navigation";
 import { useConversation } from "@elevenlabs/react";
-import { useAction, useMutation } from "convex/react";
+import { useAction, useMutation, useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useCart } from "./CartProvider";
 import {
@@ -28,6 +29,7 @@ import {
     type PanelMode,
     type FormType,
     type ActiveForm,
+    type PageContext,
 } from "./GraceContext";
 
 // ─── Strip markdown ──────────────────────────────────────────────────────────
@@ -45,6 +47,38 @@ function stripMarkdown(text: string): string {
         .trim();
 }
 
+// ─── Page context formatter ───────────────────────────────────────────────────
+
+function formatPageContextForGrace(ctx: PageContext | null): string {
+    if (!ctx) return "";
+    const lines: string[] = ["=== CURRENT SESSION CONTEXT ==="];
+    if (ctx.pageType === "pdp" && ctx.currentProduct) {
+        lines.push(`Page: Product Detail — ${ctx.currentProduct.name}`);
+        lines.push(`Family: ${ctx.currentProduct.family} | Size: ${ctx.currentProduct.capacity} | Colour: ${ctx.currentProduct.color}`);
+        if (ctx.currentProduct.neckThreadSize) lines.push(`Thread: ${ctx.currentProduct.neckThreadSize}`);
+        if (ctx.currentProduct.webPrice1pc) lines.push(`From: $${ctx.currentProduct.webPrice1pc.toFixed(2)}/pc`);
+        lines.push(`GRACE INSTRUCTION: Customer is on this product's page. Open by acknowledging what they're looking at. Ask if they need compatible closures or have questions before surfacing alternatives.`);
+    } else if (ctx.pageType === "catalog") {
+        lines.push(`Page: Product Catalogue`);
+        if (ctx.currentCollection) lines.push(`Active Filter: ${ctx.currentCollection}`);
+        if (ctx.catalogSearch) lines.push(`Search: "${ctx.catalogSearch}"`);
+        lines.push(`GRACE INSTRUCTION: Customer is browsing. Ask what they're building to help narrow their search.`);
+    } else if (ctx.pageType === "home") {
+        lines.push(`Page: Homepage`);
+        lines.push(`GRACE INSTRUCTION: Use standard welcome pattern.`);
+    } else {
+        lines.push(`Page: ${ctx.pathname}`);
+    }
+    if (ctx.cartItems.length > 0) {
+        lines.push(`Cart: ${ctx.cartItems.map((i) => `${i.name} ×${i.quantity}`).join(", ")}`);
+        lines.push(`GRACE INSTRUCTION: Customer has items in cart — suggest compatible components if relevant.`);
+    } else {
+        lines.push(`Cart: Empty`);
+    }
+    lines.push("=== END CONTEXT ===");
+    return lines.join("\n");
+}
+
 // ─── Provider ─────────────────────────────────────────────────────────────────
 
 export default function GraceElevenLabsProvider({
@@ -54,7 +88,65 @@ export default function GraceElevenLabsProvider({
     children: ReactNode;
     forceTextOnly?: boolean;
 }) {
-    const { addItems: addToCart } = useCart();
+    const { addItems: addToCart, items: cartItems } = useCart();
+
+    // ── Page context capture ─────────────────────────────────────────────────
+    const pathname = usePathname();
+    const searchParams = useSearchParams();
+
+    const pageType = useMemo(() => {
+        if (pathname === "/") return "home" as const;
+        if (pathname.startsWith("/catalog")) return "catalog" as const;
+        if (pathname.startsWith("/products/")) return "pdp" as const;
+        return "other" as const;
+    }, [pathname]);
+
+    const productSlug = pageType === "pdp" ? (pathname.split("/products/")[1] ?? null) : null;
+
+    const productGroupResult = useQuery(
+        api.products.getProductGroup,
+        productSlug ? { slug: productSlug } : "skip"
+    );
+
+    const pageContext = useMemo((): PageContext => {
+        const cartSummary = cartItems.map((i) => ({
+            graceSku: i.graceSku,
+            name: i.itemName,
+            quantity: i.quantity,
+        }));
+        if (pageType === "pdp" && productGroupResult?.group) {
+            const g = productGroupResult.group;
+            return {
+                pageType,
+                pathname,
+                cartItems: cartSummary,
+                currentProduct: {
+                    name: g.displayName,
+                    family: g.family ?? "",
+                    capacity: g.capacity ?? "",
+                    color: g.color ?? "",
+                    neckThreadSize: g.neckThreadSize ?? null,
+                    graceSku: g.primaryGraceSku ?? "",
+                    webPrice1pc: g.priceRangeMin ?? null,
+                    webPrice12pc: null,
+                },
+            };
+        }
+        if (pageType === "catalog") {
+            return {
+                pageType,
+                pathname,
+                cartItems: cartSummary,
+                currentCollection: searchParams.get("family") ?? searchParams.get("collection") ?? undefined,
+                catalogSearch: searchParams.get("search") ?? undefined,
+            };
+        }
+        return { pageType, pathname, cartItems: cartSummary };
+    }, [pageType, pathname, productGroupResult, searchParams, cartItems]);
+
+    const pageContextRef = useRef<PageContext | null>(null);
+    useEffect(() => { pageContextRef.current = pageContext; }, [pageContext]);
+
     const [panelMode, setPanelMode] = useState<PanelMode>("closed");
     const [status, setStatus] = useState<GraceStatus>("idle");
     const [messages, setMessages] = useState<GraceMessage[]>([]);
@@ -518,9 +610,15 @@ export default function GraceElevenLabsProvider({
 
             console.log(`[Grace EL] Starting WebRTC session (token fetch took ${Math.round(performance.now() - t0)}ms)`);
 
+            const contextBlock = formatPageContextForGrace(pageContextRef.current);
             await conversationRef.current!.startSession({
                 conversationToken,
                 connectionType: "webrtc",
+                ...(contextBlock ? {
+                    overrides: {
+                        agent: { prompt: { prompt: contextBlock } },
+                    },
+                } : {}),
             });
 
             conversationRef.current?.setVolume({ volume: voiceEnabledRef.current ? 1 : 0 });
@@ -606,10 +704,12 @@ export default function GraceElevenLabsProvider({
                 ];
 
                 const tLlm = performance.now();
+                const contextBlock = formatPageContextForGrace(pageContextRef.current);
                 const response = await Promise.race([
-                    (askGrace as (args: { messages: typeof history; voiceMode?: boolean }) => Promise<string>)({
+                    (askGrace as (args: { messages: typeof history; voiceMode?: boolean; pageContextBlock?: string }) => Promise<string>)({
                         messages: history,
                         voiceMode: fromVoice,
+                        ...(contextBlock ? { pageContextBlock: contextBlock } : {}),
                     }),
                     new Promise<string>((_, reject) =>
                         setTimeout(() => reject(new Error("Grace took too long to respond. Please try again.")), 45000)
@@ -805,6 +905,7 @@ export default function GraceElevenLabsProvider({
                 dismissActiveForm,
                 voiceFailed,
                 graceQuery,
+                pageContext,
             }}
         >
             {children}

@@ -56,6 +56,26 @@ export interface GraceMessage {
 
 export type PanelMode = "closed" | "strip" | "open";
 
+// ─── Page context (what the customer is currently viewing) ───────────────────
+
+export interface PageContext {
+    pageType: "home" | "catalog" | "pdp" | "other";
+    pathname: string;
+    currentProduct?: {
+        name: string;
+        family: string;
+        capacity: string;
+        color: string;
+        neckThreadSize: string | null;
+        graceSku: string;
+        webPrice1pc?: number | null;
+        webPrice12pc?: number | null;
+    };
+    currentCollection?: string;
+    catalogSearch?: string;
+    cartItems: Array<{ graceSku: string; name: string; quantity: number }>;
+}
+
 // ─── Live form state ──────────────────────────────────────────────────────────
 
 export type FormType = "sample" | "quote" | "contact" | "newsletter";
@@ -116,6 +136,8 @@ export interface GraceContextValue {
     voiceFailed: boolean;
     /** Current product search query Grace is surfacing (shown in VoiceStrip while catalog is open) */
     graceQuery: string;
+    /** Current page context — what the customer is viewing right now */
+    pageContext: PageContext | null;
 }
 
 // ─── Shared context & hook ───────────────────────────────────────────────────

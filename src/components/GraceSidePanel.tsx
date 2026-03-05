@@ -947,29 +947,55 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
 
                 <div className="px-4 py-4 space-y-3">
                     {messages.length === 0 && !activeForm && (
-                        <div className="flex flex-col items-center justify-center min-h-[280px] text-center px-2">
-                            <div className="w-12 h-12 rounded-full bg-obsidian flex items-center justify-center mb-4">
-                                <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true" style={{ transform: "scale(1.2)" }}>
-                                    <span /><span /><span /><span />
-                                </span>
-                            </div>
-                            <p className="font-serif text-obsidian text-base font-medium mb-2 leading-snug max-w-[240px]">
+                        <div className="flex flex-col items-center justify-center min-h-[280px] text-center px-2 pt-2">
+                            <p className="font-serif text-obsidian text-base font-medium mb-1.5 leading-snug">
                                 Good to have you here.
                             </p>
-                            <p className="text-slate text-xs leading-relaxed max-w-[240px] mb-6">
-                                I'm Grace — here to help you find the right bottle, pair the right closure, and get your order moving. What can I help you with?
+                            <p className="text-slate text-xs leading-relaxed max-w-[240px] mb-5">
+                                How would you like to connect?
                             </p>
-                            <div className="flex flex-wrap justify-center gap-1.5">
-                                {chips.map((chip) => (
-                                    <button
-                                        key={chip}
-                                        onClick={() => send(chip)}
-                                        className="text-[11px] font-medium text-obsidian/80 border border-champagne rounded-full px-3 py-1.5 hover:border-muted-gold hover:bg-muted-gold/5 transition-all cursor-pointer"
-                                    >
-                                        {chip}
-                                    </button>
-                                ))}
-                            </div>
+
+                            {/* Primary CTA — voice */}
+                            <button
+                                onClick={startConversation}
+                                disabled={isProcessing}
+                                className="w-full flex items-center justify-center gap-2.5 bg-obsidian text-bone rounded-xl px-4 py-3 mb-2.5 hover:bg-muted-gold transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                <span className="grace-voice-bars grace-voice-bars--light shrink-0" aria-hidden="true">
+                                    <span /><span /><span /><span />
+                                </span>
+                                <span className="font-sans text-[12px] font-semibold tracking-[0.08em] uppercase">Talk to Grace</span>
+                            </button>
+
+                            {/* Secondary CTA — text */}
+                            <button
+                                onClick={() => setTimeout(() => inputRef.current?.focus(), 50)}
+                                className="w-full flex items-center justify-center gap-2.5 border border-champagne text-obsidian/80 rounded-xl px-4 py-3 hover:border-muted-gold hover:bg-muted-gold/5 transition-colors duration-200"
+                            >
+                                <span className="font-sans text-[12px] font-semibold tracking-[0.08em] uppercase">Send a message</span>
+                            </button>
+
+                            {/* Chip divider */}
+                            {chips.length > 0 && (
+                                <>
+                                    <div className="flex items-center gap-2 w-full mt-5 mb-3">
+                                        <div className="flex-1 h-px bg-champagne" />
+                                        <span className="text-[10px] font-sans tracking-[0.12em] uppercase text-slate/50">or start with</span>
+                                        <div className="flex-1 h-px bg-champagne" />
+                                    </div>
+                                    <div className="flex flex-wrap justify-center gap-1.5">
+                                        {chips.map((chip) => (
+                                            <button
+                                                key={chip}
+                                                onClick={() => send(chip)}
+                                                className="text-[11px] font-medium text-obsidian/80 border border-champagne rounded-full px-3 py-1.5 hover:border-muted-gold hover:bg-muted-gold/5 transition-all cursor-pointer"
+                                            >
+                                                {chip}
+                                            </button>
+                                        ))}
+                                    </div>
+                                </>
+                            )}
                         </div>
                     )}
                     {messages.map((msg) => (
@@ -1090,16 +1116,6 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
                 )}
 
                 <div className="flex items-center gap-2">
-                    {!conversationActive && (
-                        <button
-                            onClick={startConversation}
-                            disabled={isProcessing}
-                            aria-label="Start voice conversation"
-                            className="w-10 h-10 rounded-full flex items-center justify-center bg-obsidian text-bone hover:bg-muted-gold shadow-md transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 shrink-0"
-                        >
-                            <Mic className="w-4.5 h-4.5" />
-                        </button>
-                    )}
                     <div className="flex-1 flex items-center gap-2 bg-white border border-champagne/80 rounded-xl px-3 py-2 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all">
                         <input
                             ref={inputRef}
