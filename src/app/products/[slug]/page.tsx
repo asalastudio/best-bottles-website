@@ -192,6 +192,28 @@ const GLASS_COLOR_SWATCH: Record<string, string> = {
 };
 const LIGHT_GLASS = new Set(["Clear", "Frosted", "White", "Pink", "Swirl"]);
 
+const ATOMIZER_SHELL_MAP: Record<string, { label: string; hex: string; light: boolean }> = {
+    black:    { label: "Black",    hex: "#1D1D1F", light: false },
+    blue:     { label: "Blue",     hex: "#5B87B5", light: false },
+    gold:     { label: "Gold",     hex: "#D4AF37", light: false },
+    red:      { label: "Red",      hex: "#CC2936", light: false },
+    silver:   { label: "Silver",   hex: "#C8C8C8", light: true },
+    pink:     { label: "Pink",     hex: "#F4A7B9", light: true },
+    green:    { label: "Green",    hex: "#3A7D44", light: false },
+    lavender: { label: "Lavender", hex: "#B57EDC", light: true },
+};
+
+function getAtomizerShellInfo(variant: { itemName?: string | null }): { label: string; hex: string; useDarkCheck: boolean } {
+    const name = (variant.itemName ?? "").toLowerCase();
+    const hasDots = name.includes("with dots") || name.includes("dot pattern");
+    const hasStars = name.includes("star pattern") || name.includes("stars");
+    const pattern = hasDots ? " · Dots" : hasStars ? " · Stars" : "";
+    const shellToken = name.split(/\s+(slim\s+)?atomizer/)[0]?.trim() ?? "";
+    const match = ATOMIZER_SHELL_MAP[shellToken];
+    if (match) return { label: match.label + pattern, hex: match.hex, useDarkCheck: match.light };
+    return { label: "Standard", hex: "#AAAAAA", useDarkCheck: true };
+}
+
 const ROLLON_APPLICATORS = new Set([
     "Metal Roller Ball",
     "Plastic Roller Ball",
@@ -549,8 +571,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     if (data === undefined) {
         return (
             <main className="min-h-screen bg-bone">
-                <Navbar />
-                <div className="pt-[156px] lg:pt-[104px] flex items-center justify-center min-h-screen">
+                <Navbar hideMobileSearch />
+                <div className="pt-[104px] sm:pt-[156px] lg:pt-[104px] flex items-center justify-center min-h-screen">
                     <div className="flex flex-col items-center">
                         <div className="w-10 h-10 rounded-full border-2 border-champagne border-t-muted-gold animate-spin mb-4"></div>
                         <p className="text-xs uppercase tracking-widest font-semibold text-slate">Loading product...</p>
@@ -565,8 +587,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     if (!group) {
         return (
             <main className="min-h-screen bg-bone">
-                <Navbar />
-                <div className="pt-[156px] lg:pt-[104px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
+                <Navbar hideMobileSearch />
+                <div className="pt-[104px] sm:pt-[156px] lg:pt-[104px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
                     <h1 className="font-serif text-4xl text-obsidian mb-4">Product Not Found</h1>
                     <p className="text-slate mb-8 text-sm">This product may have been moved or is no longer available.</p>
                     <Link
@@ -606,7 +628,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
                 />
             )}
-            <Navbar />
+            <Navbar hideMobileSearch />
             {selectedVariant?.graceSku && (
                 <FitmentDrawer
                     isOpen={fitmentDrawerOpen}
@@ -615,10 +637,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 />
             )}
 
-            <div className="pt-[156px] lg:pt-[104px]">
-                {/* ── Breadcrumb (hidden on mobile to maximize product image space) ── */}
-                <div className="hidden sm:block border-b border-champagne/50 bg-bone overflow-x-auto">
-                    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 flex items-center space-x-2 text-xs text-slate whitespace-nowrap">
+            <div className="pt-[104px] sm:pt-[156px] lg:pt-[104px]">
+                {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
+                <div className="border-b border-champagne/50 bg-bone overflow-x-auto">
+                    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-1.5 sm:py-3 flex items-center space-x-2 text-[11px] sm:text-xs text-slate whitespace-nowrap">
                         <Link href="/" className="hover:text-muted-gold transition-colors shrink-0">Home</Link>
                         <ChevronRight className="w-3 h-3 shrink-0" />
                         <Link href="/catalog" className="hover:text-muted-gold transition-colors shrink-0">Catalog</Link>
@@ -646,7 +668,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 </div>
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
-                <section className="max-w-[1440px] mx-auto px-2 sm:px-6 py-2 sm:py-8 lg:py-16">
+                <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start">
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
@@ -662,10 +684,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                     <img
                                         src={selectedVariant.imageUrl}
                                         alt={selectedVariant.itemName}
-                                        className="w-full h-full object-contain p-4 sm:p-12"
+                                        className="w-full h-full object-contain p-6 sm:p-12"
                                     />
                                 ) : (
-                                    <div className="flex flex-col items-center justify-center text-center p-4 sm:p-12">
+                                    <div className="flex flex-col items-center justify-center text-center p-6 sm:p-12">
                                         <Package className="w-20 h-20 text-champagne mb-4" strokeWidth={0.75} />
                                         <p className="text-xs text-slate/60 uppercase tracking-wider font-medium">{group.family}</p>
                                         <p className="text-sm text-slate/80 font-medium mt-1">{group.capacity}</p>
@@ -739,12 +761,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
                         <div className="px-2 sm:px-0">
                             {/* Category · Family */}
-                            <p className="text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-2">
+                            <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-1 sm:mb-2">
                                 {group.category} · {group.family}
                             </p>
 
                             {/* Title */}
-                            <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-3">
+                            <h1 className="font-serif text-xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-2 sm:mb-3">
                                 {group.displayName}
                             </h1>
 
@@ -752,7 +774,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             <PdpInlineBadges blocks={pdpBlocks} />
 
                             {/* Stock badge */}
-                            <div className="flex items-center flex-wrap gap-2 mb-6">
+                            <div className="flex items-center flex-wrap gap-2 mb-3 sm:mb-6">
                                 <span className={`inline-flex items-center px-3 py-1 text-[11px] uppercase tracking-wider font-bold rounded-full ${inStock
                                     ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
                                     : "bg-red-50 text-red-600 border border-red-200"
@@ -763,7 +785,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             </div>
 
                             {/* Price */}
-                            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-8 pb-8 border-b border-champagne/50">
+                            <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-2 sm:gap-3 mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50">
                                 <div>
                                     <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                     <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian">
@@ -960,6 +982,59 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         </div>
                                     )}
                                 </>
+                            )}
+
+                            {/* ── Atomizer Shell Design selector ── */}
+                            {isAtomizer && variantsForApplicator.length > 1 && (
+                                <div className="mb-6">
+                                    <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
+                                        Shell Design
+                                        {selectedVariant && (
+                                            <span className="ml-2 normal-case font-medium text-obsidian">
+                                                {getAtomizerShellInfo(selectedVariant).label}
+                                            </span>
+                                        )}
+                                    </p>
+                                    <div className="flex flex-wrap gap-3">
+                                        {variantsForApplicator.map((v) => {
+                                            const shell = getAtomizerShellInfo(v);
+                                            const isSelected = selectedVariant?._id === v._id;
+                                            return (
+                                                <button
+                                                    key={v._id}
+                                                    onClick={() => setSelectedVariantId(v._id)}
+                                                    title={v.websiteSku}
+                                                    className="flex flex-col items-center gap-1.5 group/variant"
+                                                >
+                                                    <span
+                                                        className={`w-10 h-10 rounded-full border-2 transition-all relative ${isSelected
+                                                            ? "border-obsidian scale-110 shadow-md"
+                                                            : "border-champagne group-hover/variant:border-muted-gold"
+                                                            }`}
+                                                        style={{ backgroundColor: shell.hex }}
+                                                    >
+                                                        {isSelected && (
+                                                            <span className="absolute inset-0 flex items-center justify-center">
+                                                                <Check
+                                                                    className={`w-3.5 h-3.5 ${shell.useDarkCheck ? "text-obsidian" : "text-white"}`}
+                                                                    strokeWidth={2.5}
+                                                                />
+                                                            </span>
+                                                        )}
+                                                    </span>
+                                                    <span
+                                                        className={`text-[10px] leading-tight text-center max-w-[88px] ${isSelected
+                                                            ? "text-obsidian font-semibold"
+                                                            : "text-slate group-hover/variant:text-muted-gold"
+                                                            }`}
+                                                    >
+                                                        {shell.label}
+                                                    </span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
                             )}
 
                             {/* Sanity promo banner (above Add to Cart) */}

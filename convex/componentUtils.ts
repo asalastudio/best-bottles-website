@@ -81,3 +81,132 @@ export function normalizeComponentsByType(
 
     return grouped;
 }
+
+type BottleLike = {
+    family?: string | null;
+    capacityMl?: number | null;
+    capacity?: string | null;
+    itemName?: string | null;
+    color?: string | null;
+    neckThreadSize?: string | null;
+};
+
+type FitmentRuleLike = {
+    threadSize?: string | null;
+    bottleName?: string | null;
+    familyHint?: string | null;
+    capacityMl?: number | null;
+    components?: unknown;
+};
+
+const FITMENT_COMPONENT_MAP: Record<string, string[]> = {
+    Reducer: ["Reducer"],
+    "Short Cap with Liner": ["Short Cap", "Cap"],
+    "Tall Cap with Liner": ["Short Cap", "Cap"],
+    Dropper: ["Dropper"],
+    Sprayer: ["Sprayer"],
+    "Bulb Sprayer": ["Antique Bulb Sprayer"],
+    "Lotion Pump": ["Lotion Pump"],
+    "Roller Plug (Plastic)": ["Plastic Roller"],
+    "Roller Plug (Metal)": ["Metal Roller"],
+    "Roll-On Cap": ["Roll-On Cap"],
+};
+
+function normalizeText(value: string | null | undefined): string {
+    return (value ?? "").trim().toLowerCase();
+}
+
+function parseCapacityMl(bottle: BottleLike): number | null {
+    if (typeof bottle.capacityMl === "number" && Number.isFinite(bottle.capacityMl)) {
+        return bottle.capacityMl;
+    }
+
+    const raw = normalizeText(bottle.capacity);
+    const match = raw.match(/([\d.]+)\s*ml/);
+    return match ? Number(match[1]) : null;
+}
+
+function isFrostedBottle(bottle: BottleLike): boolean {
+    const haystack = `${normalizeText(bottle.itemName)} ${normalizeText(bottle.color)}`;
+    return haystack.includes("frost");
+}
+
+export function selectBestFitmentRule(
+    fitmentRules: unknown,
+    bottle: BottleLike,
+): FitmentRuleLike | null {
+    if (!Array.isArray(fitmentRules)) return null;
+
+    const bottleThread = normalizeText(bottle.neckThreadSize);
+    const bottleFamily = normalizeText(bottle.family);
+    const bottleCapacity = parseCapacityMl(bottle);
+    const bottleFrosted = isFrostedBottle(bottle);
+    const bottleName = normalizeText(bottle.itemName);
+
+    let bestRule: FitmentRuleLike | null = null;
+    let bestScore = Number.NEGATIVE_INFINITY;
+
+    for (const rawRule of fitmentRules) {
+        const rule = asRecord(rawRule);
+        if (!rule) continue;
+
+        const threadSize = normalizeText(toStringOrEmpty(rule.threadSize));
+        if (threadSize !== bottleThread) continue;
+
+        const familyHint = normalizeText(toStringOrEmpty(rule.familyHint));
+        const ruleName = normalizeText(toStringOrEmpty(rule.bottleName));
+        const ruleCapacity = typeof rule.capacityMl === "number" && Number.isFinite(rule.capacityMl)
+            ? rule.capacityMl
+            : null;
+        const ruleFrosted = ruleName.includes("frost");
+
+        let score = 100;
+
+        if (bottleFamily) {
+            if (familyHint === bottleFamily) score += 40;
+            else if (ruleName.startsWith(bottleFamily)) score += 30;
+            else score -= 100;
+        }
+
+        if (bottleCapacity != null) {
+            if (ruleCapacity === bottleCapacity) score += 25;
+            else if (ruleCapacity != null) score -= 25;
+        }
+
+        if (bottleFrosted === ruleFrosted) score += 10;
+        else score -= 10;
+
+        if (bottleName && ruleName && bottleName.includes(ruleName)) score += 10;
+
+        if (score > bestScore) {
+            bestScore = score;
+            bestRule = rule as FitmentRuleLike;
+        }
+    }
+
+    return bestScore >= 100 ? bestRule : null;
+}
+
+export function filterGroupedComponentsByFitmentRule(
+    grouped: Record<string, NormalizedComponent[]>,
+    fitmentRule: FitmentRuleLike | null,
+): Record<string, NormalizedComponent[]> {
+    if (!fitmentRule) return grouped;
+
+    const rawComponents = asRecord(fitmentRule.components);
+    if (!rawComponents) return grouped;
+
+    const allowedTypes = new Set<string>();
+    for (const [fitmentType, marker] of Object.entries(rawComponents)) {
+        if (marker !== "✓") continue;
+        for (const mappedType of FITMENT_COMPONENT_MAP[fitmentType] ?? []) {
+            allowedTypes.add(mappedType);
+        }
+    }
+
+    if (allowedTypes.size === 0) return grouped;
+
+    return Object.fromEntries(
+        Object.entries(grouped).filter(([type]) => allowedTypes.has(type)),
+    );
+}

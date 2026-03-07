@@ -14,6 +14,7 @@ import type * as forms from "../forms.js";
 import type * as grace from "../grace.js";
 import type * as knowledge from "../knowledge.js";
 import type * as migrations from "../migrations.js";
+import type * as portal from "../portal.js";
 import type * as products from "../products.js";
 import type * as seedProducts from "../seedProducts.js";
 
@@ -30,6 +31,7 @@ declare const fullApi: ApiFromModules<{
   grace: typeof grace;
   knowledge: typeof knowledge;
   migrations: typeof migrations;
+  portal: typeof portal;
   products: typeof products;
   seedProducts: typeof seedProducts;
 }>;

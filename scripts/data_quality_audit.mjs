@@ -13,6 +13,26 @@
 
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api.js";
+import { existsSync, readFileSync } from "node:fs";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const envPath = path.resolve(__dirname, "..", ".env.local");
+
+if (existsSync(envPath)) {
+    const envContent = readFileSync(envPath, "utf-8");
+    for (const line of envContent.split("\n")) {
+        const trimmed = line.trim();
+        if (!trimmed || trimmed.startsWith("#")) continue;
+        const eqIdx = trimmed.indexOf("=");
+        if (eqIdx < 0) continue;
+        const key = trimmed.slice(0, eqIdx).trim();
+        let value = trimmed.slice(eqIdx + 1).trim();
+        if (value.includes("#")) value = value.slice(0, value.indexOf("#")).trim();
+        if (!process.env[key]) process.env[key] = value;
+    }
+}
 
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 if (!CONVEX_URL) {
@@ -27,8 +47,8 @@ async function main() {
     console.log("║      DATA QUALITY AUDIT — Best Bottles       ║");
     console.log("╚══════════════════════════════════════════════╝\n");
 
-    // Run the audit query
-    const result = await client.query(api.products.auditDataQuality);
+    // Run the audit action
+    const result = await client.action(api.products.auditDataQuality, {});
 
     console.log(`Total products scanned: ${result.totalProducts}`);
     console.log(`Issues found: ${result.issueCount}`);

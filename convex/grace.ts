@@ -2,13 +2,17 @@ import { query, mutation, action } from "./_generated/server";
 import { v } from "convex/values";
 import { api } from "./_generated/api";
 import Anthropic from "@anthropic-ai/sdk";
-import { normalizeComponentsByType } from "./componentUtils";
+import {
+    filterGroupedComponentsByFitmentRule,
+    normalizeComponentsByType,
+    selectBestFitmentRule,
+} from "./componentUtils";
 
 // ─── Models ───────────────────────────────────────────────────────────────────
 
 const MODEL_TEXT = "claude-sonnet-4-6";
 const MODEL_VOICE = "claude-3-5-haiku-latest";
-const MAX_TOOL_ITERATIONS_TEXT = 5;
+const MAX_TOOL_ITERATIONS_TEXT = 7;
 const MAX_TOOL_ITERATIONS_VOICE = 2;
 
 const APPLICATOR_VALUE_ALIASES: Record<string, string> = {
@@ -134,7 +138,7 @@ const GRACE_TOOLS: Anthropic.Tool[] = [
     {
         name: "getBottleComponents",
         description:
-            "Get the COMPLETE list of compatible components (closures, sprayers, droppers, lotion pumps, reducers, antique bulb sprayers, caps, roll-on applicators) for a specific bottle variant. Returns every compatible component grouped by type with SKU, name, price, and stock status. ALWAYS call this when a customer asks what components, closures, sprayers, pumps, or applicators work with a specific bottle. This is the definitive compatibility source — more complete than checkCompatibility.",
+            "Get the COMPLETE list of compatible components (closures, sprayers, droppers, lotion pumps, reducers, antique bulb sprayers, caps, roll-on applicators) for a specific bottle variant. Returns every compatible component grouped by type with SKU, name, price, and stock status. ALWAYS call this when a customer asks what components, closures, sprayers, pumps, or applicators work with a specific bottle. This is the definitive compatibility source — more complete than checkCompatibility. STRATEGY: For 'what sprayer fits X bottle?' questions, first call searchCatalog with the BOTTLE name (e.g. '30ml Cylinder', categoryLimit 'Glass Bottle') to get the bottle's SKU, then call THIS tool with that SKU. Do NOT search for the sprayer by name.",
         input_schema: {
             type: "object" as const,
             properties: {
@@ -198,6 +202,12 @@ If a customer asks for a size below the minimum (e.g. "10ml Boston Round"), resp
 
 ### Protect the Brand
 Best Bottles is an exclusive, high-end supplier that simplifies complex procurement — never a discount warehouse. Acknowledge the $50 minimum order implicitly through upselling and value framing. Never put up walls.
+
+### Tool Strategy — Efficient Multi-Step Lookups
+For compatibility/fitment questions ("what sprayer fits X bottle?", "what caps work with my 30ml Cylinder?"):
+1. Call searchCatalog with the BOTTLE name and categoryLimit "Glass Bottle" to find the bottle SKU
+2. Call getBottleComponents with that SKU — this returns ALL compatible components
+Do NOT repeatedly search for the component name. Two tool calls is all you need.
 
 ### showProducts / Navigation — Single Search Terms Only
 When you call showProducts or navigateToPage AFTER a comparison question, you MUST use ONE clean product term as the query — NEVER pass a comma-separated or "X and Y" phrase. Wrong: "fine mist sprayer, standard sprayer". Correct: "fine mist sprayer". If the customer wants to see both, call showProducts TWICE (once per type) or offer to show them one at a time.
@@ -775,8 +785,17 @@ export const getBottleComponents = query({
         if (!bottle) return null;
 
         const grouped = normalizeComponentsByType(bottle.components);
+        const bottleThread = (bottle.neckThreadSize ?? "").toString().trim();
+        const fitmentRules = bottleThread
+            ? await ctx.db
+                .query("fitments")
+                .withIndex("by_threadSize", (q) => q.eq("threadSize", bottleThread))
+                .collect()
+            : [];
+        const matchedFitmentRule = selectBestFitmentRule(fitmentRules, bottle);
+        const reconciled = filterGroupedComponentsByFitmentRule(grouped, matchedFitmentRule);
         const summary: Record<string, Array<{ graceSku: string; itemName: string; webPrice1pc: number | null; capColor: string | null; stockStatus: string | null }>> = {};
-        for (const [type, items] of Object.entries(grouped)) {
+        for (const [type, items] of Object.entries(reconciled)) {
             summary[type] = items.map((item) => ({
                 graceSku: item.graceSku,
                 itemName: item.itemName,

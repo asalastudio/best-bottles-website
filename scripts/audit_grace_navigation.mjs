@@ -93,26 +93,47 @@ const TEST_QUERIES = [
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
-function buildUrl(products, query, family) {
-  if (products.length === 0) return null;
+function sanitizeCatalogQuery(rawQuery) {
+  return String(rawQuery ?? "")
+    .split(/,|\s+and\s+/i)[0]
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  if (products.length === 1 && products[0].slug) {
-    return `/products/${products[0].slug}`;
-  }
+function slugToSearchTerm(rawSlug) {
+  return String(rawSlug ?? "")
+    .replace(/[-_]+/g, " ")
+    .replace(/\broll\s*on\b/gi, "roll-on")
+    .replace(/\brollon\b/gi, "roll-on")
+    .replace(/\bfinemist\b/gi, "fine mist")
+    .replace(/\blotionpump\b/gi, "lotion pump")
+    .replace(/\s+/g, " ")
+    .trim();
+}
 
-  // Multiple results — same logic as Grace's showProducts
+function buildCatalogUrl(products, query, family) {
   const qs = new URLSearchParams();
+  const sanitizedQuery = sanitizeCatalogQuery(query);
+
   if (family) {
     qs.set("family", family);
   } else {
     const families = [...new Set(products.map((p) => p.family).filter(Boolean))];
     if (families.length === 1 && families[0]) {
       qs.set("family", families[0]);
-    } else if (query) {
-      qs.set("search", query);
+    } else if (sanitizedQuery) {
+      qs.set("search", sanitizedQuery);
     }
   }
   return `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+}
+
+function buildBrowseUrl(products, query, family) {
+  if (products.length === 0) return null;
+  if (products.length === 1 && products[0].slug) {
+    return `/products/${products[0].slug}`;
+  }
+  return buildCatalogUrl(products, query, family);
 }
 
 const COLORS = {
@@ -164,13 +185,44 @@ async function main() {
       row.url = test._fakeSlug;
       if (test._fakeSlug.startsWith("/products/")) {
         const slug = test._fakeSlug.replace("/products/", "");
-        if (!validSlugs.has(slug)) {
-          row.status = "broken";
-          row.reason = `Slug "${slug}" does not exist in database`;
-          broken++;
-        } else {
+        if (validSlugs.has(slug)) {
           row.status = "pass";
           pass++;
+        } else {
+          const searchTerm = slugToSearchTerm(slug);
+          const hits = await client.query("grace:searchCatalog", {
+            searchTerm,
+          });
+          row.hits = hits.length;
+          const fallbackUrl = hits.length > 0
+            ? buildBrowseUrl(hits, searchTerm)
+            : buildCatalogUrl([], searchTerm);
+          row.url = fallbackUrl;
+
+          if (!fallbackUrl) {
+            row.status = "warn";
+            row.reason = `Invalid slug "${slug}" and no fallback URL could be built`;
+            warn++;
+          } else if (fallbackUrl.startsWith("/products/")) {
+            const fallbackSlug = fallbackUrl.replace("/products/", "");
+            if (!validSlugs.has(fallbackSlug)) {
+              row.status = "broken";
+              row.reason = `Fallback slug "${fallbackSlug}" does not exist in database`;
+              broken++;
+            } else {
+              row.status = "pass";
+              row.reason = `Invalid slug "${slug}" safely resolved to "${fallbackUrl}"`;
+              pass++;
+            }
+          } else if (fallbackUrl.startsWith("/catalog")) {
+            row.status = "pass";
+            row.reason = `Invalid slug "${slug}" safely resolved to "${fallbackUrl}"`;
+            pass++;
+          } else {
+            row.status = "warn";
+            row.reason = `Unexpected fallback URL format: "${fallbackUrl}"`;
+            warn++;
+          }
         }
       }
       results.push(row);
@@ -202,7 +254,7 @@ async function main() {
       continue;
     }
 
-    const url = buildUrl(products, test.query, test.family);
+    const url = buildBrowseUrl(products, test.query, test.family);
     row.url = url;
 
     if (!url) {

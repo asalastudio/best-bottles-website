@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useAction } from "convex/react";
-import { api } from "../../../convex/_generated/api";
 
 type Message = { role: "user" | "grace"; text: string };
 
@@ -11,13 +9,17 @@ const welcomeMessage: Message = {
     text: "Welcome to your Grace workspace. How can I help you with your packaging project today?",
 };
 
-export default function GraceWorkspaceChat() {
-    const [messages, setMessages] = useState<Message[]>([welcomeMessage]);
+export default function GraceWorkspaceChat({
+    projectId,
+    initialMessages,
+}: {
+    projectId: string | null;
+    initialMessages: Message[];
+}) {
+    const [messages, setMessages] = useState<Message[]>(initialMessages.length > 0 ? initialMessages : [welcomeMessage]);
     const [input, setInput] = useState("");
     const [isLoading, setIsLoading] = useState(false);
     const messagesEndRef = useRef<HTMLDivElement>(null);
-
-    const askGrace = useAction(api.grace.askGrace);
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -25,21 +27,32 @@ export default function GraceWorkspaceChat() {
 
     const handleSend = async () => {
         const trimmed = input.trim();
-        if (!trimmed || isLoading) return;
+        if (!trimmed || isLoading || !projectId) return;
 
         const userMsg: Message = { role: "user", text: trimmed };
         setMessages((prev) => [...prev, userMsg]);
         setInput("");
         setIsLoading(true);
 
-        const history = [...messages, userMsg].map((m) => ({
-            role: (m.role === "grace" ? "assistant" : "user") as "user" | "assistant",
-            content: m.text,
-        }));
-
         try {
-            const response = await askGrace({ messages: history, voiceMode: false });
-            setMessages((prev) => [...prev, { role: "grace", text: response }]);
+            const response = await fetch("/api/portal/grace/chat", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    projectId,
+                    message: trimmed,
+                }),
+            });
+
+            const data = (await response.json()) as { assistantMessage?: string; error?: string };
+
+            if (!response.ok || !data.assistantMessage) {
+                throw new Error(data.error ?? "Unable to reach Grace.");
+            }
+
+            setMessages((prev) => [...prev, { role: "grace", text: data.assistantMessage as string }]);
         } catch {
             setMessages((prev) => [
                 ...prev,
@@ -57,32 +70,32 @@ export default function GraceWorkspaceChat() {
     return (
         <div className="flex flex-col flex-1 min-h-0">
             {/* Messages */}
-            <div className="flex-1 overflow-auto px-7 py-6 bg-bone flex flex-col gap-5">
+            <div className="flex-1 overflow-auto px-7 py-6 bg-neutral-50 flex flex-col gap-5">
                 {messages.map((m, i) => (
                     <div
                         key={i}
                         className={`flex gap-3 ${m.role === "user" ? "justify-end" : "justify-start"}`}
                     >
                         {m.role === "grace" && (
-                            <div className="w-7 h-7 min-w-7 rounded-full bg-obsidian border border-muted-gold/30 flex items-center justify-center mt-0.5 shrink-0">
-                                <div className="w-1.5 h-1.5 rounded-full bg-muted-gold" />
+                            <div className="w-7 h-7 min-w-7 rounded-full bg-neutral-900 flex items-center justify-center mt-0.5 shrink-0">
+                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
                             </div>
                         )}
                         <div
-                            className={`max-w-[72%] rounded-[3px] px-4 py-3 border ${
+                            className={`max-w-[72%] rounded-md px-4 py-3 border ${
                                 m.role === "grace"
-                                    ? "bg-linen border-champagne rounded-tl-none"
-                                    : "bg-obsidian border-ink rounded-tr-none"
+                                    ? "bg-white border-neutral-200 rounded-tl-none"
+                                    : "bg-neutral-900 border-neutral-900 rounded-tr-none"
                             }`}
                         >
                             {m.role === "grace" && (
-                                <p className="font-sans text-[8px] tracking-[0.18em] uppercase text-muted-gold mb-1.5">
+                                <p className="font-sans text-[8px] tracking-[0.18em] uppercase text-neutral-400 mb-1.5">
                                     Grace
                                 </p>
                             )}
                             <p
-                                className={`font-serif text-[14px] leading-[1.65] ${
-                                    m.role === "grace" ? "text-obsidian" : "text-bone"
+                                className={`font-sans text-[14px] leading-[1.65] ${
+                                    m.role === "grace" ? "text-neutral-900" : "text-white"
                                 }`}
                             >
                                 {m.text}
@@ -92,12 +105,12 @@ export default function GraceWorkspaceChat() {
                 ))}
                 {isLoading && (
                     <div className="flex gap-3 justify-start">
-                        <div className="w-7 h-7 min-w-7 rounded-full bg-obsidian border border-muted-gold/30 flex items-center justify-center mt-0.5 shrink-0">
-                            <div className="w-1.5 h-1.5 rounded-full bg-muted-gold animate-pulse" />
+                        <div className="w-7 h-7 min-w-7 rounded-full bg-neutral-900 flex items-center justify-center mt-0.5 shrink-0">
+                            <div className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                         </div>
-                        <div className="bg-linen border border-champagne rounded-[3px] rounded-tl-none px-4 py-3">
-                            <p className="font-sans text-[8px] tracking-[0.18em] uppercase text-muted-gold mb-1.5">Grace</p>
-                            <p className="font-serif text-[14px] text-ash italic">Thinking…</p>
+                        <div className="bg-white border border-neutral-200 rounded-md rounded-tl-none px-4 py-3">
+                            <p className="font-sans text-[8px] tracking-[0.18em] uppercase text-neutral-400 mb-1.5">Grace</p>
+                            <p className="font-sans text-[14px] text-neutral-500 italic">Thinking…</p>
                         </div>
                     </div>
                 )}
@@ -105,20 +118,20 @@ export default function GraceWorkspaceChat() {
             </div>
 
             {/* Input */}
-            <div className="px-7 py-4 border-t border-champagne flex gap-3 items-center bg-linen shrink-0">
+            <div className="px-7 py-4 border-t border-neutral-200 flex gap-3 items-center bg-white shrink-0">
                 <input
                     type="text"
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
                     onKeyDown={handleKeyDown}
-                    placeholder="Continue the conversation with Grace..."
-                    disabled={isLoading}
-                    className="flex-1 font-serif text-[15px] text-obsidian bg-bone border border-champagne rounded-[3px] px-4 py-2.5 outline-none placeholder:text-ash placeholder:italic focus:border-muted-gold/60 transition-colors disabled:opacity-50"
+                    placeholder={projectId ? "Continue the conversation with Grace..." : "Create a project to start chatting with Grace"}
+                    disabled={isLoading || !projectId}
+                    className="flex-1 font-sans text-[15px] text-neutral-900 bg-neutral-50 border border-neutral-200 rounded-md px-4 py-2.5 outline-none placeholder:text-neutral-400 focus:border-neutral-300 transition-colors disabled:opacity-50"
                 />
                 <button
                     onClick={handleSend}
-                    disabled={isLoading || !input.trim()}
-                    className="font-sans text-[9px] tracking-[0.18em] uppercase bg-muted-gold text-obsidian border border-muted-gold rounded-sm px-5 py-[9px] hover:bg-muted-gold/90 transition-colors shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
+                    disabled={isLoading || !input.trim() || !projectId}
+                    className="font-sans text-[11px] font-medium bg-neutral-900 text-white border border-neutral-900 rounded-md px-4 py-[9px] hover:bg-neutral-800 transition-colors shrink-0 disabled:opacity-40 disabled:cursor-not-allowed"
                 >
                     Send
                 </button>

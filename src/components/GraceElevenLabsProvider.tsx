@@ -79,6 +79,158 @@ function formatPageContextForGrace(ctx: PageContext | null): string {
     return lines.join("\n");
 }
 
+function sanitizeCatalogQuery(rawQuery: string | undefined): string {
+    return (rawQuery ?? "")
+        .split(/,|\s+and\s+/i)[0]
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function slugToSearchTerm(rawSlug: string): string {
+    return rawSlug
+        .replace(/[-_]+/g, " ")
+        .replace(/\broll\s*on\b/gi, "roll-on")
+        .replace(/\brollon\b/gi, "roll-on")
+        .replace(/\bfinemist\b/gi, "fine mist")
+        .replace(/\blotionpump\b/gi, "lotion pump")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function buildCatalogPath(products: ProductCard[], query?: string, family?: string): string {
+    const qs = new URLSearchParams();
+    const sanitizedQuery = sanitizeCatalogQuery(query);
+
+    if (family) {
+        qs.set("family", family);
+    } else {
+        const families = [...new Set(products.map((p) => p.family).filter(Boolean))];
+        if (families.length === 1 && families[0]) {
+            qs.set("family", families[0]);
+        } else if (sanitizedQuery) {
+            qs.set("search", sanitizedQuery);
+        }
+    }
+
+    return `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+}
+
+function buildBrowsePath(products: ProductCard[], query?: string, family?: string): string {
+    if (products.length === 1 && products[0].slug) {
+        return `/products/${products[0].slug}`;
+    }
+    return buildCatalogPath(products, query, family);
+}
+
+function normalizeSearchText(rawValue: string): string {
+    return rawValue
+        .toLowerCase()
+        .replace(/(\d+)\s*ml\b/g, "$1ml")
+        .replace(/\broll[\s-]?on\b/g, "roll-on")
+        .replace(/[^a-z0-9-]+/g, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function tokenizeSearchText(rawValue: string): string[] {
+    const stopWords = new Set([
+        "a",
+        "an",
+        "and",
+        "bottle",
+        "bottles",
+        "browse",
+        "can",
+        "find",
+        "for",
+        "me",
+        "open",
+        "please",
+        "show",
+        "take",
+        "the",
+        "to",
+        "you",
+    ]);
+
+    return normalizeSearchText(rawValue)
+        .split(" ")
+        .filter((token) => token && !stopWords.has(token));
+}
+
+function selectDirectProductMatch(products: ProductCard[], query?: string): ProductCard | null {
+    const tokens = tokenizeSearchText(query ?? "");
+    if (tokens.length < 3) {
+        return null;
+    }
+
+    const uniqueProducts = Array.from(
+        new Map(
+            products.map((product) => [product.slug || product.graceSku, product] as const)
+        ).values()
+    );
+
+    const scored = uniqueProducts
+        .map((product) => {
+            const primaryItemName = product.itemName.split(/[.!?]/)[0] ?? product.itemName;
+            const haystack = normalizeSearchText([
+                primaryItemName,
+                product.family,
+                product.capacity,
+                product.color,
+                product.applicator,
+                product.neckThreadSize,
+                product.graceSku,
+                product.slug,
+            ]
+                .filter(Boolean)
+                .join(" "));
+            const matches = tokens.filter((token) => haystack.includes(token)).length;
+            return {
+                product,
+                matches,
+                coverage: matches / tokens.length,
+            };
+        })
+        .sort((a, b) => b.coverage - a.coverage || b.matches - a.matches);
+
+    const [best, secondBest] = scored;
+    if (!best?.product.slug || best.coverage < 0.75) {
+        return null;
+    }
+    if (secondBest && secondBest.coverage >= best.coverage - 0.1 && secondBest.matches >= best.matches - 1) {
+        return null;
+    }
+
+    return best.product;
+}
+
+function normalizeTextIntentQuery(rawMessage: string): string {
+    return rawMessage
+        .replace(/^(can you\s+)?(please\s+)?/i, "")
+        .replace(/^(show|find|browse|open)\s+(me\s+)?/i, "")
+        .replace(/^take me to\s+/i, "")
+        .replace(/^i(?:'| a)?m looking for\s+/i, "")
+        .replace(/^looking for\s+/i, "")
+        .replace(/^the\s+/i, "")
+        .replace(/[?.!]+$/g, "")
+        .replace(/\s+/g, " ")
+        .trim();
+}
+
+function isGenericPromptChip(rawMessage: string): boolean {
+    const normalized = rawMessage.trim().toLowerCase();
+    return [
+        "find a bottle",
+        "check compatibility",
+        "volume pricing",
+        "track my order",
+        "pair a cap",
+        "view compatibility",
+        "see bulk pricing",
+    ].includes(normalized);
+}
+
 // ─── Provider ─────────────────────────────────────────────────────────────────
 
 export default function GraceElevenLabsProvider({
@@ -277,45 +429,16 @@ export default function GraceElevenLabsProvider({
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
 
                 if (products.length > 0) {
-                    let redirectUrl = "";
-
-                    if (products.length === 1 && products[0].slug) {
-                        // Single exact match — go straight to the product detail page
-                        redirectUrl = `/products/${products[0].slug}`;
-                    } else {
-                        // Multiple results — go to catalog filtered by family or search
-                        const qs = new URLSearchParams();
-                        // Prefer explicit family param over search term (more reliable)
-                        const families = [...new Set(
-                            products
-                                .map((p) => (p as unknown as Record<string, string>).family)
-                                .filter(Boolean)
-                        )];
-                        if (parameters.family) {
-                            // Grace explicitly named a family — use it directly
-                            qs.set("family", parameters.family);
-                        } else if (families.length === 1 && families[0]) {
-                            qs.set("family", families[0]);
-                        }
-                        if (parameters.query && !qs.has("family")) {
-                            // Sanitize: if Grace passed a compound comparison phrase like
-                            // "fine mist sprayer, standard sprayer" or "X and Y", take only
-                            // the first term — catalog search can't match compound strings.
-                            const rawQuery = parameters.query;
-                            const sanitizedQuery = rawQuery
-                                .split(/,|\s+and\s+/i)[0]  // take first segment
-                                .trim();
-                            qs.set("search", sanitizedQuery);
-                        }
-                        redirectUrl = `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
-                    }
+                    const directProduct = selectDirectProductMatch(products, parameters.query);
+                    const displayProducts = directProduct ? [directProduct] : products;
+                    const redirectUrl = buildBrowsePath(displayProducts, parameters.query, parameters.family);
 
                     // Auto-navigate: take the user straight there, minimize Grace to voice strip
                     setGraceQuery(parameters.query || parameters.family || "");
                     setPendingNavigation(redirectUrl);
                     setPanelMode("strip");
 
-                    const summary = products.slice(0, 3)
+                    const summary = displayProducts.slice(0, 3)
                         .map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" "))
                         .join(", ");
                     return `Taking you there now. Found ${products.length} options — top matches: ${summary}.`;
@@ -422,29 +545,23 @@ export default function GraceElevenLabsProvider({
                     if (!groupExists) {
                         // Slug doesn't exist — search catalog to find the real slug
                         console.warn(`[Grace nav] Slug "${rawSlug}" not found — searching catalog instead`);
-                        const searchTerm = rawSlug.replace(/-/g, " ").replace(/\b(bottle|ml|rollon|finemist|lotionpump|spray|clear|amber|frosted)\b/gi, "").trim();
+                        const searchTerm = slugToSearchTerm(rawSlug);
                         const searchRes = await fetch("/api/elevenlabs/server-tools", {
                             method: "POST",
                             headers: { "Content-Type": "application/json" },
                             body: JSON.stringify({
                                 tool_name: "searchCatalog",
-                                parameters: { searchTerm: searchTerm || rawSlug.replace(/-/g, " ") },
+                                parameters: { searchTerm },
                             }),
                         });
                         const searchData = await searchRes.json() as { result?: ProductCard[] };
                         const hits: ProductCard[] = Array.isArray(searchData.result) ? searchData.result : [];
 
-                        if (hits.length === 1 && hits[0].slug) {
-                            navPath = `/products/${hits[0].slug}`;
-                        } else if (hits.length > 1) {
-                            const families = [...new Set(hits.map((p) => (p as unknown as Record<string, string>).family).filter(Boolean))];
-                            const qs = new URLSearchParams();
-                            if (families.length === 1 && families[0]) qs.set("family", families[0]);
-                            else qs.set("search", searchTerm || rawSlug.replace(/-/g, " "));
-                            navPath = `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+                        if (hits.length > 0) {
+                            navPath = buildBrowsePath(hits, searchTerm);
                         } else {
                             // No matches — fall back to catalog search
-                            navPath = `/catalog?search=${encodeURIComponent(rawSlug.replace(/-/g, " "))}`;
+                            navPath = buildCatalogPath([], searchTerm);
                         }
                     }
                 } catch (e) {
@@ -814,6 +931,97 @@ export default function GraceElevenLabsProvider({
     const messagesRef = useRef(messages);
     useEffect(() => { messagesRef.current = messages; }, [messages]);
 
+    const handleLocalTextIntent = useCallback(
+        async (rawMessage: string): Promise<boolean> => {
+            const page = pageContextRef.current;
+            const normalized = rawMessage.trim().toLowerCase();
+
+            if (
+                page?.pageType === "pdp" &&
+                page.currentProduct &&
+                /(add( this)? to (my )?(order|cart)|add to order)/i.test(normalized)
+            ) {
+                const current = page.currentProduct;
+                setMessages((prev) => [
+                    ...prev,
+                    {
+                        role: "grace",
+                        content: "I can add this bottle to your order. Confirm below and I'll place it in your cart.",
+                        id: `a-${Date.now()}`,
+                        action: {
+                            type: "proposeCartAdd",
+                            products: [{
+                                graceSku: current.graceSku,
+                                itemName: current.name,
+                                quantity: 1,
+                                webPrice1pc: current.webPrice1pc ?? undefined,
+                                family: current.family,
+                                capacity: current.capacity,
+                                color: current.color,
+                            }],
+                            awaitingConfirmation: true,
+                        },
+                    },
+                ]);
+                return true;
+            }
+
+            const isBrowseIntent =
+                !isGenericPromptChip(rawMessage) &&
+                /^(?:can you\s+)?(?:please\s+)?(show|find|browse|open)\b/i.test(rawMessage);
+            const isTakeMeThereIntent = /^(?:can you\s+)?(?:please\s+)?take me to\b/i.test(rawMessage);
+            if (!isBrowseIntent && !isTakeMeThereIntent) {
+                return false;
+            }
+
+            const query = normalizeTextIntentQuery(rawMessage);
+            if (!query) {
+                return false;
+            }
+
+            try {
+                const searchRes = await fetch("/api/elevenlabs/server-tools", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                        tool_name: "searchCatalog",
+                        parameters: { searchTerm: query },
+                    }),
+                });
+                const searchData = await searchRes.json() as { result?: ProductCard[] };
+                const products: ProductCard[] = Array.isArray(searchData.result) ? searchData.result : [];
+                if (products.length === 0) {
+                    return false;
+                }
+
+                const directProduct = selectDirectProductMatch(products, query);
+                const displayProducts = directProduct ? [directProduct] : products;
+                const redirectUrl = buildBrowsePath(displayProducts, query);
+                setGraceQuery(query);
+                setPendingNavigation(redirectUrl);
+                setPanelMode("strip");
+
+                const summary = displayProducts.slice(0, 3)
+                    .map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" "))
+                    .join(", ");
+                const destinationLabel = displayProducts.length === 1 ? "product page" : "catalog results";
+                setMessages((prev) => [
+                    ...prev,
+                    {
+                        role: "grace",
+                        content: `Taking you to the ${destinationLabel} now. Found ${displayProducts.length} option${displayProducts.length === 1 ? "" : "s"}${summary ? `, including ${summary}.` : "."}`,
+                        id: `g-${Date.now()}`,
+                    },
+                ]);
+                return true;
+            } catch (err) {
+                console.error("[Grace EL] local text intent search failed:", err);
+                return false;
+            }
+        },
+        []
+    );
+
     const send = useCallback(
         async (text?: string, fromVoice = false) => {
             const msg = (text ?? input).trim();
@@ -840,6 +1048,11 @@ export default function GraceElevenLabsProvider({
             setMessages((prev) => [...prev, userMsg]);
             setStatus("thinking");
             setErrorMessage("");
+
+            if (await handleLocalTextIntent(msg)) {
+                setStatus("idle");
+                return;
+            }
 
             try {
                 const history: Array<{ role: "user" | "assistant"; content: string }> = [
@@ -883,7 +1096,7 @@ export default function GraceElevenLabsProvider({
                 setTimeout(() => { setStatus("idle"); setErrorMessage(""); }, 4000);
             }
         },
-        [input, askGrace, safeSendUserMessage, safeEndSession]
+        [input, askGrace, safeSendUserMessage, safeEndSession, handleLocalTextIntent]
     );
 
     // ── Legacy dictation stubs ───────────────────────────────────────────────

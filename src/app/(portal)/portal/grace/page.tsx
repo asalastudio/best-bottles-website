@@ -1,107 +1,123 @@
 export const dynamic = "force-dynamic";
-import { GoldRule, PageHeader, PortalButton, PortalCard, SectionLabel } from "@/components/portal/ui";
+import Link from "next/link";
+import { PageHeader, PortalButton } from "@/components/portal/ui";
 import GraceWorkspaceChat from "@/components/portal/GraceWorkspaceChat";
+import { getPortalGraceWorkspace } from "@/lib/portal/server";
+import { createGraceProjectAction } from "../actions";
 
-const projects = [
-    { name: "Spring Serum Launch", items: 6, updated: "Today", active: true },
-    { name: "Holiday Gift Set 2026", items: 3, updated: "Feb 20", active: false },
-    { name: "Sample Exploration", items: 11, updated: "Feb 8", active: false },
-] as const;
+function formatUpdatedAt(value: number) {
+    return new Date(value).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+    });
+}
 
-const savedBottles = [
-    "30ml Frosted Elegant · Matte Black Sprayer",
-    "10ml Cobalt Roller · Gold Cap",
-    "50ml Frosted Diva · Clear Pump",
-] as const;
+export default async function PortalGrace({
+    searchParams,
+}: {
+    searchParams?: Promise<{ project?: string }>;
+}) {
+    const params = searchParams ? await searchParams : undefined;
+    const selectedProjectId = params?.project;
+    const { projects, activeProject, messages } = await getPortalGraceWorkspace(selectedProjectId);
 
-export default function PortalGrace() {
     return (
-        <div className="px-12 py-10 max-w-[1400px]">
+        <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
                 eyebrow="Grace AI"
-                title="Your Private Workspace"
-                subtitle="Brainstorm, build, and save your packaging ideas with Grace."
+                title="Grace Workspace"
+                subtitle="Grace can now keep projects in Convex for your organization."
             />
 
-            <div className="grid grid-cols-[260px_1fr] gap-5 items-start">
+            <div className="grid grid-cols-[240px_1fr] gap-4 items-start">
 
                 {/* Left column */}
-                <div className="flex flex-col gap-4">
-
+                <div className="flex flex-col gap-3">
                     {/* Projects */}
-                    <PortalCard className="!px-5 !py-5">
-                        <SectionLabel>Your Projects</SectionLabel>
-                        <div className="flex flex-col">
-                            {projects.map((project, i) => (
-                                <div key={project.name}>
-                                    <div
-                                        className={`py-3 cursor-pointer ${
-                                            project.active
-                                                ? "border-l-2 border-muted-gold pl-3 -ml-3"
-                                                : ""
-                                        }`}
-                                    >
-                                        <p
-                                            className={`font-serif text-sm mb-0.5 ${
-                                                project.active ? "text-obsidian" : "text-ash"
-                                            }`}
-                                        >
-                                            {project.name}
-                                        </p>
-                                        <p className="font-sans text-xs text-ash">
-                                            {project.items} items · {project.updated}
-                                        </p>
-                                    </div>
-                                    {i < projects.length - 1 && <GoldRule />}
-                                </div>
-                            ))}
+                    <div className="bg-white rounded-lg border border-neutral-200">
+                        <div className="px-4 py-2.5 border-b border-neutral-200">
+                            <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">Projects</p>
                         </div>
-                        <div className="mt-4">
-                            <PortalButton variant="outline" size="sm">New Project</PortalButton>
-                        </div>
-                    </PortalCard>
-
-                    {/* Saved bottles */}
-                    <PortalCard dark className="!px-5 !py-5">
-                        <SectionLabel>Saved Bottles</SectionLabel>
-                        <div className="flex flex-col">
-                            {savedBottles.map((bottle, i) => (
-                                <p
-                                    key={bottle}
-                                    className={`font-serif text-sm text-bone opacity-80 leading-relaxed py-2 ${
-                                        i < savedBottles.length - 1
-                                            ? "border-b border-white/[0.07]"
-                                            : ""
-                                    }`}
-                                >
-                                    {bottle}
+                        {projects.length === 0 ? (
+                            <div className="px-4 py-5">
+                                <p className="font-sans text-[13px] text-neutral-500">
+                                    No Grace projects yet.
                                 </p>
-                            ))}
-                        </div>
-                    </PortalCard>
-
-                </div>
-
-                {/* Chat panel */}
-                <div className="bg-linen border border-champagne rounded-lg flex flex-col overflow-hidden" style={{ height: "calc(100vh - 280px)", minHeight: 500 }}>
-
-                    {/* Chat header */}
-                    <div className="px-7 py-5 border-b border-champagne flex items-center justify-between shrink-0">
-                        <div>
-                            <SectionLabel>Active Session</SectionLabel>
-                            <h2 className="font-serif text-lg text-obsidian font-normal">
-                                Spring Serum Launch
-                            </h2>
-                        </div>
-                        <div className="flex gap-3">
-                            <PortalButton variant="outline" size="sm">Save Session</PortalButton>
-                            <PortalButton size="sm">Open Configurator</PortalButton>
+                            </div>
+                        ) : projects.map((project, i) => (
+                            <Link
+                                key={project._id}
+                                href={`/portal/grace?project=${project._id}`}
+                                className={`block px-4 py-2.5 transition-colors ${
+                                    activeProject?._id === project._id ? "bg-neutral-50 border-l-2 border-l-neutral-900" : "hover:bg-neutral-50"
+                                } ${i < projects.length - 1 ? "border-b border-neutral-100" : ""}`}
+                            >
+                                <p className={`font-sans text-[13px] ${activeProject?._id === project._id ? "text-neutral-900 font-medium" : "text-neutral-500"}`}>
+                                    {project.name}
+                                </p>
+                                <p className="font-sans text-[11px] text-neutral-400">
+                                    {project.savedBottleCount} saved bottles · Updated {formatUpdatedAt(project.updatedAt)}
+                                </p>
+                            </Link>
+                        ))}
+                        <div className="px-4 py-2.5 border-t border-neutral-100">
+                            <form action={createGraceProjectAction}>
+                                <PortalButton variant="outline" size="sm" className="w-full" type="submit">
+                                    New Project
+                                </PortalButton>
+                            </form>
                         </div>
                     </div>
 
-                    {/* Client-side chat (messages + input) */}
-                    <GraceWorkspaceChat />
+                    {/* Saved bottles */}
+                    <div className="bg-neutral-900 rounded-lg border border-neutral-800">
+                        <div className="px-4 py-2.5 border-b border-neutral-800">
+                            <div className="flex items-center gap-1.5">
+                                <div className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+                                <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">Saved Bottles</p>
+                            </div>
+                        </div>
+                        {activeProject?.savedBottles.length ? (
+                            activeProject.savedBottles.map((bottle, i) => (
+                                <p
+                                    key={`${bottle.sku ?? bottle.description}-${i}`}
+                                    className={`px-4 py-2.5 font-sans text-[13px] text-neutral-300 ${
+                                        i < activeProject.savedBottles.length - 1 ? "border-b border-neutral-800" : ""
+                                    }`}
+                                >
+                                    {bottle.description}
+                                </p>
+                            ))
+                        ) : (
+                            <p className="px-4 py-4 font-sans text-[13px] text-neutral-500">
+                                Saved bottles from Grace sessions will appear here.
+                            </p>
+                        )}
+                    </div>
+                </div>
 
+                {/* Chat panel */}
+                <div className="bg-white border border-neutral-200 rounded-lg flex flex-col overflow-hidden" style={{ height: "calc(100vh - 240px)", minHeight: 500 }}>
+                    <div className="px-5 py-3 border-b border-neutral-200 flex items-center justify-between shrink-0">
+                        <div>
+                            <p className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide mb-0.5">Active Session</p>
+                            <h2 className="font-sans text-[14px] font-semibold text-neutral-900">
+                                {activeProject?.name ?? "Create your first project"}
+                            </h2>
+                        </div>
+                        {activeProject && (
+                            <div className="flex gap-2">
+                                <PortalButton variant="outline" size="sm" type="button">Persisting to Convex</PortalButton>
+                            </div>
+                        )}
+                    </div>
+                    <GraceWorkspaceChat
+                        projectId={activeProject?._id ?? null}
+                        initialMessages={messages.map((entry) => ({
+                            role: entry.role === "assistant" ? "grace" : "user",
+                            text: entry.content,
+                        }))}
+                    />
                 </div>
             </div>
         </div>

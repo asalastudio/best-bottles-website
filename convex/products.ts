@@ -1,7 +1,11 @@
 import { query, mutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
-import { normalizeComponentsByType } from "./componentUtils";
+import {
+    filterGroupedComponentsByFitmentRule,
+    normalizeComponentsByType,
+    selectBestFitmentRule,
+} from "./componentUtils";
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PRODUCT QUERIES — Powers the Homepage + Catalog + PDP
@@ -156,6 +160,14 @@ export const getCompatibleFitments = query({
 
         const bottleThread = (bottle.neckThreadSize ?? "").toString().trim();
         const grouped = normalizeComponentsByType(bottle.components);
+        const fitmentRules = bottleThread
+            ? await ctx.db
+                .query("fitments")
+                .withIndex("by_threadSize", (q) => q.eq("threadSize", bottleThread))
+                .collect()
+            : [];
+        const matchedFitmentRule = selectBestFitmentRule(fitmentRules, bottle);
+        const reconciled = filterGroupedComponentsByFitmentRule(grouped, matchedFitmentRule);
         const isPlasticBottlePdp = (bottle.category ?? "") === "Plastic Bottle";
 
         // 2. Filter components by thread — 18-400 caps don't fit 17-415 bottles, etc.
@@ -166,7 +178,7 @@ export const getCompatibleFitments = query({
         };
         const isPlasticBottleComponent = (itemName: string): boolean =>
             /plastic bottle with/i.test(itemName);
-        const filteredEntries = Object.entries(grouped).map(([type, items]) => {
+        const filteredEntries = Object.entries(reconciled).map(([type, items]) => {
             const matching = items.filter((item) => {
                 // Guard: suppress cross-category plastic bottle products from glass-bottle fitment UI
                 // (e.g. "Plastic Bottle with Silver Spray Top ...") unless we're on a plastic bottle PDP.
@@ -695,23 +707,63 @@ export const getApplicatorSiblings = query({
 
 /**
  * Data quality audit — scans for duplicates and misclassified component SKUs.
- * Returns flagged issues for review.
+ * Uses paginated internal reads so the audit still completes as the catalog grows.
  */
-export const auditDataQuality = query({
+export const auditDataQuality = action({
     args: {},
     handler: async (ctx) => {
-        const allProducts = await ctx.db.query("products").collect();
+        type AuditProduct = {
+            graceSku: string;
+            websiteSku: string;
+            itemName: string;
+            category: string;
+            webPrice1pc: number | null;
+        };
 
-        const issues: Array<{
+        type AuditIssue = {
             type: "duplicate_sku" | "duplicate_name" | "sku_mismatch" | "missing_price" | "missing_category";
             severity: "high" | "medium" | "low";
             graceSku: string;
             itemName: string;
             detail: string;
-        }> = [];
+        };
 
-        // 1. Check for duplicate graceSku values
-        const skuMap = new Map<string, typeof allProducts>();
+        const allProducts: AuditProduct[] = [];
+        let cursor: string | null = null;
+
+        while (true) {
+            const result: {
+                page: Array<{
+                    graceSku: string;
+                    websiteSku: string;
+                    itemName: string;
+                    category: string;
+                    webPrice1pc: number | null;
+                }>;
+                isDone: boolean;
+                continueCursor: string;
+            } = await ctx.runQuery(internal.migrations.getProductPage, {
+                cursor,
+                numItems: 200,
+            });
+
+            allProducts.push(
+                ...result.page.map((p) => ({
+                    graceSku: p.graceSku,
+                    websiteSku: p.websiteSku,
+                    itemName: p.itemName,
+                    category: p.category,
+                    webPrice1pc: p.webPrice1pc ?? null,
+                })),
+            );
+
+            if (result.isDone) break;
+            cursor = result.continueCursor;
+        }
+
+        const issues: AuditIssue[] = [];
+
+        const skuMap = new Map<string, AuditProduct[]>();
         for (const p of allProducts) {
             const key = p.graceSku;
             if (!skuMap.has(key)) skuMap.set(key, []);
@@ -724,13 +776,12 @@ export const auditDataQuality = query({
                     severity: "high",
                     graceSku: sku,
                     itemName: products[0].itemName,
-                    detail: `${products.length} products share graceSku "${sku}": ${products.map(p => p.websiteSku).join(", ")}`,
+                    detail: `${products.length} products share graceSku "${sku}": ${products.map((p) => p.websiteSku).join(", ")}`,
                 });
             }
         }
 
-        // 2. Check for near-duplicate item names within same category
-        const nameMap = new Map<string, typeof allProducts>();
+        const nameMap = new Map<string, AuditProduct[]>();
         for (const p of allProducts) {
             const normalizedName = p.itemName.toLowerCase().replace(/[^a-z0-9]/g, "");
             if (!nameMap.has(normalizedName)) nameMap.set(normalizedName, []);
@@ -738,7 +789,7 @@ export const auditDataQuality = query({
         }
         for (const [, products] of nameMap) {
             if (products.length > 1) {
-                const skus = products.map(p => p.graceSku);
+                const skus = products.map((p) => p.graceSku);
                 if (new Set(skus).size === skus.length) {
                     issues.push({
                         type: "duplicate_name",
@@ -751,7 +802,6 @@ export const auditDataQuality = query({
             }
         }
 
-        // 3. Check for SKU prefix vs category mismatches in components
         const skuCategoryChecks: Array<{ prefix: string; expectedKeywords: string[]; wrongLabel: string }> = [
             { prefix: "SPR", expectedKeywords: ["sprayer"], wrongLabel: "not labeled as Sprayer" },
             { prefix: "AST", expectedKeywords: ["sprayer", "atomizer"], wrongLabel: "not labeled as Sprayer/Atomizer" },
@@ -769,7 +819,7 @@ export const auditDataQuality = query({
             for (const check of skuCategoryChecks) {
                 if (sku.includes(`-${check.prefix}-`) || sku.includes(`-${check.prefix}`)) {
                     const name = p.itemName.toLowerCase();
-                    const hasKeyword = check.expectedKeywords.some(kw => name.includes(kw));
+                    const hasKeyword = check.expectedKeywords.some((kw) => name.includes(kw));
                     if (!hasKeyword) {
                         issues.push({
                             type: "sku_mismatch",
@@ -782,7 +832,6 @@ export const auditDataQuality = query({
                 }
             }
 
-            // Check for CAP-prefixed SKUs that are actually sprayers/bulbs
             if (sku.includes("-CAP-")) {
                 const name = p.itemName.toLowerCase();
                 if (name.includes("sprayer") || name.includes("bulb") || name.includes("atomizer")) {
@@ -796,7 +845,6 @@ export const auditDataQuality = query({
                 }
             }
 
-            // 4. Check for missing prices
             if (p.webPrice1pc == null || p.webPrice1pc === 0) {
                 issues.push({
                     type: "missing_price",
@@ -808,16 +856,15 @@ export const auditDataQuality = query({
             }
         }
 
-        // Sort: high severity first, then medium, then low
         const severityOrder = { high: 0, medium: 1, low: 2 };
         issues.sort((a, b) => severityOrder[a.severity] - severityOrder[b.severity]);
 
         return {
             totalProducts: allProducts.length,
             issueCount: issues.length,
-            highSeverity: issues.filter(i => i.severity === "high").length,
-            mediumSeverity: issues.filter(i => i.severity === "medium").length,
-            lowSeverity: issues.filter(i => i.severity === "low").length,
+            highSeverity: issues.filter((i) => i.severity === "high").length,
+            mediumSeverity: issues.filter((i) => i.severity === "medium").length,
+            lowSeverity: issues.filter((i) => i.severity === "low").length,
             issues: issues.slice(0, 100),
         };
     },

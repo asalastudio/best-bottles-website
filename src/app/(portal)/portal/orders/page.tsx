@@ -1,105 +1,105 @@
 export const dynamic = "force-dynamic";
-import { GoldRule, PageHeader, PortalButton, PortalCard, PortalTag } from "@/components/portal/ui";
+import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
+import { getPortalOrdersData } from "@/lib/portal/server";
+import { reorderToDraftAction } from "../actions";
 
-const orders = [
-    {
-        id: "ORD-9841",
-        product: "18-415 Frosted Elegant, 30ml",
-        detail: "Qty 500",
-        date: "Feb 24, 2026",
-        total: "$320.00",
-        status: "In Transit",
-        variant: "gold" as const,
-    },
-    {
-        id: "ORD-9798",
-        product: "Cobalt Roll-On 10ml",
-        detail: "Qty 1,000",
-        date: "Feb 11, 2026",
-        total: "$640.00",
-        status: "Delivered",
-        variant: "green" as const,
-    },
-    {
-        id: "ORD-9762",
-        product: "20-400 Boston Round, Amber",
-        detail: "Qty 250",
-        date: "Jan 28, 2026",
-        total: "$197.50",
-        status: "Delivered",
-        variant: "green" as const,
-    },
-    {
-        id: "ORD-9711",
-        product: "18-415 Fine Mist Sprayer, Gold",
-        detail: "Qty 500",
-        date: "Jan 6, 2026",
-        total: "$445.00",
-        status: "Delivered",
-        variant: "green" as const,
-    },
-    {
-        id: "ORD-9680",
-        product: "Frosted Diva, 50ml",
-        detail: "Qty 250",
-        date: "Dec 14, 2025",
-        total: "$287.50",
-        status: "Delivered",
-        variant: "green" as const,
-    },
-] as const;
+function formatCurrency(value: number | null | undefined) {
+    if (typeof value !== "number") return "—";
+    return value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+}
 
-export default function PortalOrders() {
+function formatDate(value: number) {
+    return new Date(value).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+    });
+}
+
+function statusVariant(status: string): "muted" | "blue" | "green" | "gold" {
+    if (status === "in_transit") return "blue";
+    if (status === "delivered") return "green";
+    if (status === "processing") return "gold";
+    return "muted";
+}
+
+function statusLabel(status: string) {
+    switch (status) {
+        case "in_transit":
+            return "In Transit";
+        case "processing":
+            return "Processing";
+        case "delivered":
+            return "Delivered";
+        default:
+            return "Cancelled";
+    }
+}
+
+const colClass = "grid grid-cols-[100px_1fr_140px_100px_100px_120px] gap-4 items-center";
+
+export default async function PortalOrders() {
+    const { orders } = await getPortalOrdersData();
+
     return (
-        <div className="px-12 py-10 max-w-[1400px]">
+        <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
                 eyebrow="History"
-                title="Order History"
-                subtitle="47 lifetime orders · Smart reorder available on any past purchase."
+                title="Orders"
+                subtitle={orders.length > 0 ? `${orders.length} synced orders · Reorder any previous purchase.` : "Order history will appear here as it syncs into Convex."}
             />
 
-            <PortalCard>
+            <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
                 {/* Table header */}
-                <div className="grid grid-cols-[1fr_2fr_1fr_1fr_1fr_auto] gap-4 mb-3">
-                    {["Order", "Product", "Qty / Date", "Total", "Status", ""].map((h) => (
-                        <p key={h} className="font-sans text-xs tracking-[0.14em] uppercase text-ash">
+                <div className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
+                    {["Order", "Product", "Date", "Total", "Status", ""].map((h) => (
+                        <p key={h} className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">
                             {h}
                         </p>
                     ))}
                 </div>
 
-                <GoldRule className="mb-2" />
-
-                {orders.map((order, i) => (
-                    <div key={order.id}>
-                        <div className="grid grid-cols-[1fr_2fr_1fr_1fr_1fr_auto] gap-4 items-center py-4">
-                            <p className="font-sans text-xs tracking-[0.12em] uppercase text-gold-dim">
-                                {order.id}
-                            </p>
-                            <p className="font-serif text-sm text-obsidian">
-                                {order.product}
-                            </p>
+                {orders.length === 0 ? (
+                    <div className="px-5 py-10">
+                        <p className="font-sans text-[13px] text-neutral-500">
+                            No orders are synced for this organization yet.
+                        </p>
+                    </div>
+                ) : (
+                    orders.map((order, i) => (
+                        <div
+                            key={order._id}
+                            className={`${colClass} px-5 py-3.5 hover:bg-neutral-50 transition-colors ${
+                                i < orders.length - 1 ? "border-b border-neutral-100" : ""
+                            }`}
+                        >
+                            <span className="font-sans text-[13px] font-medium text-neutral-900">
+                                {order.orderId}
+                            </span>
                             <div>
-                                <p className="font-sans text-xs text-obsidian">
-                                    {order.detail}
+                                <p className="font-sans text-[13px] text-neutral-900">
+                                    {order.primaryLineItem?.description ?? "Order items"}
                                 </p>
-                                <p className="font-sans text-xs text-ash mt-0.5">
-                                    {order.date}
+                                <p className="font-sans text-[12px] text-neutral-400">
+                                    {order.itemCount} units
+                                    {order.carrier ? ` · ${order.carrier}` : ""}
                                 </p>
                             </div>
-                            <p className="font-serif text-sm text-obsidian">
-                                {order.total}
-                            </p>
-                            <PortalTag variant={order.variant}>{order.status}</PortalTag>
-                            <div className="flex gap-2">
-                                <PortalButton variant="outline" size="sm">Reorder</PortalButton>
-                                <PortalButton variant="outline" size="sm">Invoice</PortalButton>
+                            <span className="font-sans text-[13px] text-neutral-500">{formatDate(order.orderDate)}</span>
+                            <span className="font-sans text-[13px] font-medium text-neutral-900">{formatCurrency(order.totalAmount)}</span>
+                            <PortalTag variant={statusVariant(order.status)}>{statusLabel(order.status)}</PortalTag>
+                            <div className="flex gap-1.5 justify-end">
+                                <form action={reorderToDraftAction}>
+                                    <input type="hidden" name="orderId" value={order.orderId} />
+                                    <PortalButton variant="outline" size="sm" type="submit">
+                                        Reorder
+                                    </PortalButton>
+                                </form>
                             </div>
                         </div>
-                        {i < orders.length - 1 && <GoldRule />}
-                    </div>
-                ))}
-            </PortalCard>
+                    ))
+                )}
+            </div>
         </div>
     );
 }

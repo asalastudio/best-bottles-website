@@ -1,0 +1,39 @@
+{
+  "generatedAt": "2026-03-06T13:33:35.985224",
+  "count": 2,
+  "skipped": 0,
+  "products": [
+    {
+      "websiteSku": "GB1mlAmbVBlk",
+      "websiteSkuCanonical": "GB1mlAmbVBlk",
+      "websiteSkuNormalized": "GB1MLAMBVBLK",
+      "productUrl": "https://www.bestbottles.com/product/Vial-style-1-ml-amber-glass-bottle-black-applicator",
+      "itemName": "GB1mlAmbVBlk",
+      "itemDescription": "Vial style 1 ml amber glass bottle with black applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giving samples or for promotions. Price each",
+      "capacityRaw": "1 ml (0.03 oz)",
+      "capacityMl": 1.0,
+      "colorDetected": "Amber",
+      "colorEvidencePattern": "\\bamber glass\\b",
+      "colorConfidence": "high",
+      "webPrice1pc": null,
+      "webPrice10pc": null,
+      "webPrice12pc": null
+    },
+    {
+      "websiteSku": "GB1mlVWht",
+      "websiteSkuCanonical": "GB1mlVWht",
+      "websiteSkuNormalized": "GB1MLVWHT",
+      "productUrl": "https://www.bestbottles.com/product/Vial-style-1-ml-glass-bottle-white-applicator",
+      "itemName": "GB1mlVWht",
+      "itemDescription": "Vial style 1 ml clear glass bottle with white applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giving samples or for promotions. Price each",
+      "capacityRaw": "1 ml (0.03 oz)",
+      "capacityMl": 1.0,
+      "colorDetected": "Clear",
+      "colorEvidencePattern": "\\bclear glass\\b",
+      "colorConfidence": "high",
+      "webPrice1pc": null,
+      "webPrice10pc": null,
+      "webPrice12pc": null
+    }
+  ]
+}

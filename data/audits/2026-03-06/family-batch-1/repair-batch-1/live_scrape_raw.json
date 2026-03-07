@@ -1,0 +1,85 @@
+{
+  "generatedAt": "2026-03-06T15:02:47.312202",
+  "source": "bestbottles.com sitemap + product pages",
+  "fetchMode": "browserless",
+  "families": [],
+  "transportCounts": {
+    "browserless": 5,
+    "direct": 0
+  },
+  "count": 5,
+  "errorCount": 0,
+  "products": [
+    {
+      "productUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-plastic-roller-ball-plug-shiny-silver-cap",
+      "fetchTransport": "browserless",
+      "itemType": "Clear and colored glass roll on bottles of capacity range about 1/6oz (from 4ml to 6ml)",
+      "itemName": "GBCylBlu5RollSlSh",
+      "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, Small sized bottle for decants, promotion, samples and trav",
+      "capacity": "5 ml (0.17 oz)",
+      "heightWithCap": "65 \u00b11 mm",
+      "heightWithoutCap": "53 \u00b11 mm",
+      "diameter": "17 \u00b10.5 mm",
+      "neckThreadSize": "13-415",
+      "websiteSku": "GBCylBlu5RollSlSh",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-glass-bottle-matte-copper-minaret-cap",
+      "fetchTransport": "browserless",
+      "itemType": "Classic Glass Bottles With Attractive Caps",
+      "itemName": "GBElg15MinarCu",
+      "itemDescription": "Clear glass square shaped bottle with copper minaret dab on cap for use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Clear glass, square design 15ml. Price Each",
+      "capacity": "15 ml (0.51 oz)",
+      "heightWithCap": "79 \u00b11 mm",
+      "heightWithoutCap": "61 \u00b11 mm",
+      "width": "36 \u00b10.5 mm Item Depth : 18 \u00b10.5 mm",
+      "websiteSku": "GBElg15MinarCu",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/boston-round-design-15-ml-clear-glass-bottle-black-dropper",
+      "fetchTransport": "browserless",
+      "itemName": "GBBstn15BlkDrp",
+      "itemDescription": "Boston round design 15ml, 1/2 oz Clear glass bottle with a black dropper. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizers, and beard oils. Price each",
+      "capacity": "15 ml (0.51 oz)",
+      "heightWithCap": "91 \u00b11 mm",
+      "heightWithoutCap": "68 \u00b11 mm",
+      "diameter": "25 \u00b10.5 mm",
+      "neckThreadSize": "18-400",
+      "websiteSku": "GBBstn15BlkDrp",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-short-shiny-black-cap",
+      "fetchTransport": "browserless",
+      "itemType": "Classic Glass Bottles With Attractive Caps",
+      "itemName": "GBCylBlu5BlkShSht",
+      "itemDescription": "Cylinder design 5ml, 1/6oz Blue glass bottle with short shiny black cap.",
+      "capacity": "5 ml (0.17 oz)",
+      "heightWithCap": "59 \u00b11 mm",
+      "heightWithoutCap": "53 \u00b11 mm",
+      "diameter": "17 \u00b10.5 mm",
+      "neckThreadSize": "13-415",
+      "closureType": "screw cap",
+      "websiteSku": "GBCylBlu5BlkShSht",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-short-shiny-black-cap",
+      "fetchTransport": "browserless",
+      "itemType": "Classic Glass Bottles With Attractive Caps",
+      "itemName": "GBElgFrst15BlkShSht",
+      "itemDescription": "Elegant design 15ml, 1/2oz frosted glass bottle with short shiny black cap.",
+      "capacity": "15 ml (0.51 oz)",
+      "heightWithCap": "66 \u00b11 mm",
+      "heightWithoutCap": "61 \u00b11 mm",
+      "width": "36 \u00b10.5 mm Item Depth : 18 \u00b10.5 mm",
+      "neckThreadSize": "13-415",
+      "closureType": "screw cap",
+      "websiteSku": "GBElgFrst15BlkShSht",
+      "websiteSkuSource": "item_name_label"
+    }
+  ],
+  "errors": []
+}

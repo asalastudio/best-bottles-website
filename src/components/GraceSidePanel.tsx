@@ -591,9 +591,13 @@ export function GraceFloatingTrigger() {
     const { panelMode, openPanel } = useGrace();
     const isMobile = useIsMobile();
     const pathname = usePathname();
+    const [mounted, setMounted] = useState(false);
+    useEffect(() => setMounted(true), []);
+
     const isProductPage = Boolean(pathname && /(^|\/)products(\/|$)/.test(pathname));
     const useCompactTrigger = Boolean(isMobile && isProductPage);
-    const showTriggerText = !useCompactTrigger;
+    const showTriggerText = mounted && !useCompactTrigger;
+
     if (panelMode !== "closed") return null;
 
     return (
@@ -604,6 +608,7 @@ export function GraceFloatingTrigger() {
                 : "bottom-6 right-6 flex items-center space-x-2.5 px-5 py-3"
                 }`}
             aria-label="Ask Grace"
+            suppressHydrationWarning
         >
             <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
                 <span /><span /><span /><span />

@@ -1,6 +1,6 @@
 import { mutation, action, query, internalMutation, internalQuery } from "./_generated/server";
 import { v } from "convex/values";
-import { internal } from "./_generated/api";
+import { api, internal } from "./_generated/api";
 import type { Doc, Id } from "./_generated/dataModel";
 
 // Minimal types for paginated product reads
@@ -4809,6 +4809,215 @@ export const groupOrphanedProducts = action({
             newGroupsCreated: created,
             productsLinked: linked,
             message: `Created ${created} new groups, linked ${linked} orphaned products.`,
+        };
+    },
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FIX ATOMIZER PRODUCT GROUPS
+//
+// The current "atomizer-5ml" group lumps slim (10mm neck) and standard (13-415)
+// variants together. This migration:
+//   1. Creates a new "atomizer-5ml-slim" group for the 3 slim variants
+//   2. Patches the existing 5ml group to keep only the 6 standard variants
+//   3. Relinks all products to the correct groups
+//   4. Ensures both groups + the 10ml group have populated color metadata
+//
+// Run via: npx convex run migrations:fixAtomizerGroups
+// ─────────────────────────────────────────────────────────────────────────────
+
+export const fixAtomizerGroups = action({
+    args: {},
+    handler: async (ctx): Promise<{
+        slimGroupCreated: boolean;
+        slimGroupId: string;
+        standardGroupPatched: boolean;
+        productsRelinked: number;
+        tenMlGroupPatched: boolean;
+    }> => {
+        const SLIM_SKU_PREFIX = "GB-SLM-";
+        const EXISTING_5ML_GROUP_SLUG = "atomizer-5ml";
+        const EXISTING_10ML_GROUP_SLUG = "atomizer-10ml";
+
+        // Fetch all Atomizer products
+        const allProducts: Array<{
+            _id: string;
+            graceSku: string;
+            itemName: string;
+            color: string | null;
+            neckThreadSize: string | null;
+            capacityMl: number | null;
+            webPrice1pc: number | null;
+            webPrice12pc: number | null;
+            productGroupId: string | null;
+        }> = await ctx.runQuery(internal.migrations.getProductsByThread, {
+            neckThreadSize: "SKIP",
+        }).catch(() => []);
+
+        // Fallback: query by family
+        const atomizerProducts: Array<{
+            _id: string;
+            graceSku: string;
+            itemName: string;
+            color: string | null;
+            neckThreadSize: string | null;
+            capacityMl: number | null;
+            webPrice1pc: number | null;
+            webPrice12pc: number | null;
+            productGroupId: string | null;
+        }> = [];
+
+        // Get all product groups to find the existing ones
+        const allGroups: Array<{
+            _id: string;
+            slug: string;
+            displayName: string;
+            family: string;
+        }> = await ctx.runQuery(internal.migrations.getAllGroups, {});
+
+        const existing5mlGroup = allGroups.find(
+            (g) => g.slug === EXISTING_5ML_GROUP_SLUG
+        );
+        const existing10mlGroup = allGroups.find(
+            (g) => g.slug === EXISTING_10ML_GROUP_SLUG
+        );
+
+        if (!existing5mlGroup) {
+            throw new Error("Could not find atomizer-5ml group");
+        }
+        if (!existing10mlGroup) {
+            throw new Error("Could not find atomizer-10ml group");
+        }
+
+        // Get all products linked to the 5ml group
+        const fiveMlVariants: Array<{
+            _id: string;
+            graceSku: string;
+            color: string | null;
+            neckThreadSize: string | null;
+            webPrice1pc: number | null;
+        }> = await ctx.runQuery(internal.migrations.getProductsByGroupId, {
+            groupId: existing5mlGroup._id as any,
+        });
+
+        // Also get unlinked atomizer products (groupId = null)
+        const familyProducts = await ctx.runQuery(
+            api.products.getByFamily,
+            { family: "Atomizer" }
+        );
+
+        // Partition 5ml products into slim vs standard
+        const slim5ml: typeof familyProducts = [];
+        const standard5ml: typeof familyProducts = [];
+        const products10ml: typeof familyProducts = [];
+
+        for (const p of familyProducts) {
+            if ((p.capacityMl ?? 0) === 5) {
+                if (p.graceSku.startsWith(SLIM_SKU_PREFIX)) {
+                    slim5ml.push(p);
+                } else {
+                    standard5ml.push(p);
+                }
+            } else if ((p.capacityMl ?? 0) === 10) {
+                products10ml.push(p);
+            }
+        }
+
+        // 1. Create the new slim group
+        const slimPrices = slim5ml
+            .map((p) => p.webPrice1pc ?? 0)
+            .filter((p) => p > 0);
+        const slimColors = [...new Set(slim5ml.map((p) => p.color).filter(Boolean))];
+
+        const slimGroupId = await ctx.runMutation(
+            internal.migrations.insertSingleGroup,
+            {
+                group: {
+                    slug: "atomizer-5ml-slim",
+                    displayName: "5 ml Slim Atomizer Bottle",
+                    family: "Atomizer",
+                    capacity: "5 ml (0.17 oz)",
+                    capacityMl: 5,
+                    color: slimColors.length === 1 ? slimColors[0]! : null,
+                    category: "Metal Atomizer",
+                    bottleCollection: "Atomizer Collection",
+                    neckThreadSize: "10mm",
+                    variantCount: slim5ml.length,
+                    priceRangeMin: slimPrices.length > 0 ? Math.min(...slimPrices) : null,
+                    priceRangeMax: slimPrices.length > 0 ? Math.max(...slimPrices) : null,
+                    applicatorTypes: ["Atomizer"],
+                },
+            }
+        );
+
+        // 2. Patch the existing 5ml group to reflect only standard variants
+        const stdPrices = standard5ml
+            .map((p) => p.webPrice1pc ?? 0)
+            .filter((p) => p > 0);
+
+        await ctx.runMutation(api.migrations.patchProductGroupFields, {
+            id: existing5mlGroup._id as any,
+            fields: {
+                displayName: "5 ml Atomizer Bottle",
+                neckThreadSize: "13-415",
+                variantCount: standard5ml.length,
+                priceRangeMin: stdPrices.length > 0 ? Math.min(...stdPrices) : null,
+                priceRangeMax: stdPrices.length > 0 ? Math.max(...stdPrices) : null,
+            },
+        });
+
+        // 3. Patch the 10ml group to have proper color metadata
+        const tenMlColors = [...new Set(products10ml.map((p) => p.color).filter(Boolean))];
+        const tenMlPrices = products10ml
+            .map((p) => p.webPrice1pc ?? 0)
+            .filter((p) => p > 0);
+
+        await ctx.runMutation(api.migrations.patchProductGroupFields, {
+            id: existing10mlGroup._id as any,
+            fields: {
+                variantCount: products10ml.length,
+                priceRangeMin: tenMlPrices.length > 0 ? Math.min(...tenMlPrices) : null,
+                priceRangeMax: tenMlPrices.length > 0 ? Math.max(...tenMlPrices) : null,
+            },
+        });
+
+        // 4. Relink all products to correct groups
+        const links: Array<{ productId: any; groupId: any }> = [];
+
+        for (const p of slim5ml) {
+            links.push({
+                productId: (p as any)._id,
+                groupId: slimGroupId,
+            });
+        }
+        for (const p of standard5ml) {
+            links.push({
+                productId: (p as any)._id,
+                groupId: existing5mlGroup._id,
+            });
+        }
+        for (const p of products10ml) {
+            links.push({
+                productId: (p as any)._id,
+                groupId: existing10mlGroup._id,
+            });
+        }
+
+        // Apply links in batch
+        await ctx.runMutation(internal.migrations.linkOrphanBatch, {
+            links: links.map((l) => ({
+                productId: l.productId,
+                groupId: l.groupId,
+            })),
+            groupStats: [],
+        });
+
+        return {
+            slimGroupCreated: true,
+            slimGroupId: slimGroupId as string,
+            standardGroupPatched: true,
+            productsRelinked: links.length,
+            tenMlGroupPatched: true,
         };
     },
 });

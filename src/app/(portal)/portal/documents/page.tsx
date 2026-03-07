@@ -1,5 +1,5 @@
 export const dynamic = "force-dynamic";
-import { GoldRule, PageHeader, PortalButton, PortalCard, SectionLabel } from "@/components/portal/ui";
+import { PageHeader, PortalButton } from "@/components/portal/ui";
 
 const categories = [
     {
@@ -31,42 +31,47 @@ const categories = [
     },
 ] as const;
 
+const colClass = "grid grid-cols-[1fr_180px_80px_100px] gap-4 items-center";
+
 export default function PortalDocuments() {
     return (
-        <div className="px-12 py-10 max-w-[1400px]">
+        <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
                 eyebrow="Document Vault"
-                title="Your Documents"
-                subtitle="Invoices, spec sheets, SDS documents, and custom agreements — all in one place."
+                title="Documents"
+                subtitle="Invoices, spec sheets, SDS documents, and agreements."
             />
 
             <div className="flex flex-col gap-5">
                 {categories.map((category) => (
-                    <PortalCard key={category.label}>
-                        <SectionLabel>{category.label}</SectionLabel>
-                        <GoldRule className="mb-4" />
+                    <div key={category.label} className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
+                        <div className="px-5 py-3 bg-neutral-50 border-b border-neutral-200">
+                            <h2 className="font-sans text-[13px] font-semibold text-neutral-900">{category.label}</h2>
+                        </div>
+                        <div className={`${colClass} px-5 py-2 border-b border-neutral-100`}>
+                            {["Document", "Date", "Size", ""].map((h) => (
+                                <p key={h} className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">{h}</p>
+                            ))}
+                        </div>
                         {category.docs.map((doc, i) => (
-                            <div key={doc.name}>
-                                <div className="flex items-center justify-between py-4">
-                                    <div>
-                                        <p className="font-serif text-sm text-obsidian mb-1">
-                                            {doc.name}
-                                        </p>
-                                        <p className="font-sans text-xs text-ash">
-                                            {doc.desc} · {doc.date}
-                                        </p>
-                                    </div>
-                                    <div className="flex items-center gap-5 shrink-0 pl-6">
-                                        <span className="font-sans text-xs text-ash">
-                                            {doc.size}
-                                        </span>
-                                        <PortalButton variant="outline" size="sm">Download</PortalButton>
-                                    </div>
+                            <div
+                                key={doc.name}
+                                className={`${colClass} px-5 py-3 hover:bg-neutral-50 transition-colors ${
+                                    i < category.docs.length - 1 ? "border-b border-neutral-100" : ""
+                                }`}
+                            >
+                                <div>
+                                    <p className="font-sans text-[13px] font-medium text-neutral-900">{doc.name}</p>
+                                    <p className="font-sans text-[12px] text-neutral-400">{doc.desc}</p>
                                 </div>
-                                {i < category.docs.length - 1 && <GoldRule />}
+                                <span className="font-sans text-[13px] text-neutral-500">{doc.date}</span>
+                                <span className="font-sans text-[12px] text-neutral-400">{doc.size}</span>
+                                <div className="flex justify-end">
+                                    <PortalButton variant="outline" size="sm">Download</PortalButton>
+                                </div>
                             </div>
                         ))}
-                    </PortalCard>
+                    </div>
                 ))}
             </div>
         </div>

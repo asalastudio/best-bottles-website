@@ -1,77 +1,83 @@
 export const dynamic = "force-dynamic";
-import { PageHeader, PortalButton, PortalCard, PortalTag } from "@/components/portal/ui";
+import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
+import { getPortalDraftsData } from "@/lib/portal/server";
+import { createDraftAction } from "../actions";
 
-const drafts = [
-    {
-        name: "Spring Launch 2026",
-        items: 4,
-        total: "$2,840.00",
-        updated: "Feb 26, 2026",
-        status: "In Review",
-        variant: "gold" as const,
-    },
-    {
-        name: "Q2 Restock — Roll-Ons",
-        items: 2,
-        total: "$1,120.00",
-        updated: "Feb 20, 2026",
-        status: "Draft",
-        variant: "muted" as const,
-    },
-    {
-        name: "Holiday Gift Set Packaging",
-        items: 7,
-        total: "$5,460.00",
-        updated: "Feb 8, 2026",
-        status: "Draft",
-        variant: "muted" as const,
-    },
-] as const;
+function formatCurrency(value: number | null | undefined) {
+    if (typeof value !== "number") return "—";
+    return value.toLocaleString("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
+}
 
-export default function PortalDrafts() {
+function formatDate(value: number) {
+    return new Date(value).toLocaleDateString("en-US", {
+        month: "short",
+        day: "numeric",
+        year: "numeric",
+    });
+}
+
+function statusVariant(status: string): "gold" | "muted" {
+    return status === "in_review" ? "gold" : "muted";
+}
+
+function statusLabel(status: string) {
+    return status === "in_review" ? "In Review" : status === "submitted" ? "Submitted" : "Draft";
+}
+
+const colClass = "grid grid-cols-[1fr_80px_100px_130px_100px_160px] gap-4 items-center";
+
+export default async function PortalDrafts() {
+    const { drafts } = await getPortalDraftsData();
+
     return (
-        <div className="px-12 py-10 max-w-[1400px]">
+        <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
                 eyebrow="Saved Orders"
-                title="Draft Orders"
-                subtitle="Return to any saved cart and finalize when you're ready."
+                title="Drafts"
+                subtitle={drafts.length > 0 ? "Saved carts persist in Convex and stay available across sessions." : "Create a draft order to start saving line items for review."}
             />
 
-            <div className="flex flex-col gap-4">
-                {drafts.map((draft) => (
-                    <PortalCard key={draft.name} className="flex items-center justify-between gap-6">
-                        <div>
-                            <h2 className="font-serif text-xl text-obsidian font-normal mb-1.5">
-                                {draft.name}
-                            </h2>
-                            <p className="font-sans text-xs text-ash">
-                                {draft.items} products · Last edited {draft.updated}
-                            </p>
-                        </div>
-
-                        <div className="flex items-center gap-8 shrink-0">
-                            <div className="text-right">
-                                <p className="font-serif text-2xl text-obsidian font-normal mb-1.5">
-                                    {draft.total}
-                                </p>
-                                <PortalTag variant={draft.variant}>{draft.status}</PortalTag>
-                            </div>
-                            <div className="flex flex-col gap-2">
-                                <PortalButton size="sm">Resume Draft</PortalButton>
-                                <PortalButton variant="outline" size="sm">Share Draft</PortalButton>
-                            </div>
-                        </div>
-                    </PortalCard>
-                ))}
-
-                {/* New draft CTA */}
-                <div className="border border-dashed border-champagne rounded-lg px-7 py-6 flex items-center justify-between">
-                    <p className="font-serif text-lg text-ash italic">
-                        Start a new draft order
-                    </p>
-                    <PortalButton size="sm">New Draft</PortalButton>
+            <div className="bg-white rounded-lg border border-neutral-200 overflow-hidden">
+                <div className={`${colClass} px-5 py-3 bg-neutral-50 border-b border-neutral-200`}>
+                    {["Name", "Items", "Total", "Last Edited", "Status", ""].map((h) => (
+                        <p key={h} className="font-sans text-[11px] font-medium text-neutral-400 uppercase tracking-wide">
+                            {h}
+                        </p>
+                    ))}
                 </div>
+
+                {drafts.length === 0 ? (
+                    <div className="px-5 py-10">
+                        <p className="font-sans text-[13px] text-neutral-500">
+                            No drafts yet. Create one to save order ideas before you submit.
+                        </p>
+                    </div>
+                ) : (
+                    drafts.map((draft, i) => (
+                        <div
+                            key={draft._id}
+                            className={`${colClass} px-5 py-3.5 hover:bg-neutral-50 transition-colors ${
+                                i < drafts.length - 1 ? "border-b border-neutral-100" : ""
+                            }`}
+                        >
+                            <span className="font-sans text-[13px] font-medium text-neutral-900">{draft.name}</span>
+                            <span className="font-sans text-[13px] text-neutral-500">{draft.lineItemCount}</span>
+                            <span className="font-sans text-[13px] font-medium text-neutral-900">{formatCurrency(draft.totalAmount)}</span>
+                            <span className="font-sans text-[13px] text-neutral-500">{formatDate(draft.updatedAt)}</span>
+                            <PortalTag variant={statusVariant(draft.status)}>{statusLabel(draft.status)}</PortalTag>
+                            <div className="flex gap-1.5 justify-end">
+                                <PortalButton size="sm" type="button">Resume</PortalButton>
+                            </div>
+                        </div>
+                    ))
+                )}
             </div>
+
+            <form action={createDraftAction}>
+                <PortalButton type="submit" size="md" className="mt-4">
+                    Create Draft
+                </PortalButton>
+            </form>
         </div>
     );
 }

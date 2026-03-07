@@ -1483,20 +1483,20 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         <main className="min-h-screen bg-bone pt-[156px] lg:pt-[104px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
 
-            <div className="max-w-[1440px] mx-auto px-6 py-8">
+            <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
 
                 {/* Catalog Header */}
-                <div className="mb-12 border-b border-champagne/50 pb-8 flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div className="mb-4 sm:mb-12 border-b border-champagne/50 pb-4 sm:pb-8 flex flex-col md:flex-row md:items-end justify-between gap-3 sm:gap-6">
                     <div>
-                        <h1 className="font-serif text-4xl lg:text-5xl text-obsidian font-medium leading-[1.1] mb-2">Master Catalog</h1>
-                        <p className="text-slate text-sm max-w-xl">
+                        <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-obsidian font-medium leading-[1.1] mb-1 sm:mb-2">Master Catalog</h1>
+                        <p className="text-slate text-xs sm:text-sm max-w-xl">
                             {totalCount > 0 ? `${totalCount.toLocaleString()} product groups.` : "Loading catalog..."}
-                            {" "}Need help narrowing options? Ask Grace, your AI Bottling Specialist.
+                            <span className="hidden sm:inline">{" "}Need help narrowing options? Ask Grace, your AI Bottling Specialist.</span>
                         </p>
                     </div>
 
-                    {/* Search Bar */}
-                    <div className="shrink-0">
+                    {/* Search Bar — desktop only (mobile uses navbar search) */}
+                    <div className="shrink-0 hidden md:block">
                         <div className="flex items-center border border-champagne rounded-full px-4 py-2.5 bg-white/80 space-x-2 w-full md:w-80 hover:border-muted-gold transition-colors focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/20">
                             <Search className="w-4 h-4 text-slate shrink-0" />
                             <input
@@ -1522,7 +1522,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                             initial={{ opacity: 0, y: -10 }}
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -10 }}
-                            className="mb-6 flex flex-wrap items-center gap-2"
+                            className="mb-3 sm:mb-6 flex flex-wrap items-center gap-2"
                         >
                             <span className="text-xs uppercase tracking-wider font-semibold text-slate">Active Filters:</span>
                             {chips.map((chip, i) => (
@@ -1549,7 +1549,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                 </AnimatePresence>
 
                 {/* Mobile Filter Toggle */}
-                <div className="lg:hidden mb-4 flex items-center gap-3">
+                <div className="lg:hidden mb-3 flex items-center gap-2">
                     <button
                         onClick={() => setMobileFilterOpen(true)}
                         className="inline-flex items-center gap-2 px-4 py-2.5 bg-white border border-champagne rounded-lg text-sm font-medium text-obsidian hover:border-muted-gold transition-colors"
@@ -1650,17 +1650,17 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                         )}
 
                         {/* Results Header — sticks directly below fixed navbar */}
-                        <div className="sticky top-[136px] lg:top-[100px] z-30 bg-bone pt-5 pb-2 mb-6 sm:mb-8 border-b-2 border-obsidian">
-                            <div className="flex items-end justify-between gap-3">
+                        <div className="sticky top-[136px] lg:top-[100px] z-30 bg-bone pt-2 sm:pt-5 pb-2 mb-4 sm:mb-8 border-b-2 border-obsidian">
+                            <div className="flex items-end justify-between gap-2 sm:gap-3">
                                 <div className="min-w-0">
-                                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-1">
+                                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-0.5 sm:mb-1">
                                         {filters.search
                                             ? "Search Results"
                                             : filters.applicators.length > 0 && filters.families.length === 1
                                                 ? filters.families[0]
                                                 : "Catalog"}
                                     </p>
-                                    <h2 className="font-serif text-xl sm:text-3xl font-medium text-obsidian truncate">
+                                    <h2 className="font-serif text-lg sm:text-3xl font-medium text-obsidian truncate">
                                         {filters.search
                                             ? `"${filters.search}"`
                                             : filters.applicators.length === 1
@@ -1697,12 +1697,12 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                             </div>
                         </div>
 
-                        {/* Quick applicator chips — Option A */}
+                        {/* Quick applicator chips */}
                         {facets && Object.keys(facets.applicators).length > 0 && (
-                            <div className="flex flex-wrap gap-2 mb-6">
+                            <div className="flex gap-2 mb-4 sm:mb-6 overflow-x-auto pb-1 hide-scroll sm:flex-wrap">
                                 <button
                                     onClick={() => handleFilterChange({ applicators: [] })}
-                                    className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
+                                    className={`shrink-0 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
                                         ? "bg-obsidian text-white border-obsidian"
                                         : "bg-white border-champagne text-obsidian hover:border-muted-gold"
                                         }`}
@@ -1720,7 +1720,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                                     : [...filters.applicators, bucket.value],
                                             });
                                         }}
-                                        className={`px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.includes(bucket.value)
+                                        className={`shrink-0 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors whitespace-nowrap ${filters.applicators.includes(bucket.value)
                                             ? "bg-obsidian text-white border-obsidian"
                                             : "bg-white border-champagne text-obsidian hover:border-muted-gold"
                                             }`}
@@ -1842,8 +1842,8 @@ export default function CatalogPage() {
         <Suspense
             fallback={
                 <main className="min-h-screen bg-bone pt-[156px] lg:pt-[104px]">
-                    <div className="max-w-[1440px] mx-auto px-6 py-8">
-                        <div className="mb-12 border-b border-champagne/50 pb-8">
+                    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
+                        <div className="mb-4 sm:mb-12 border-b border-champagne/50 pb-4 sm:pb-8">
                             <div className="h-10 w-64 bg-champagne/30 rounded animate-pulse mb-3" />
                             <div className="h-4 w-96 max-w-full bg-champagne/20 rounded animate-pulse" />
                         </div>

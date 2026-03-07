@@ -1,0 +1,26 @@
+{
+  "generatedAt": "2026-03-06T19:06:27.541720",
+  "families": [
+    "Circle",
+    "Sleek",
+    "Round",
+    "Diva",
+    "Slim"
+  ],
+  "cohortSource": "data/audits/2026-03-06/cohort_urls_batch2.json",
+  "summary": {
+    "liveCount": 877,
+    "reliableLiveCount": 877,
+    "unverifiedLiveSkuCount": 0,
+    "convexCount": 877,
+    "missingInConvex": 0,
+    "missingOnLive": 0,
+    "colorMismatches": 0,
+    "capacityMismatches": 0
+  },
+  "unverifiedLiveSkuCandidates": [],
+  "missingInConvex": [],
+  "missingOnLive": [],
+  "colorMismatches": [],
+  "capacityMismatches": []
+}

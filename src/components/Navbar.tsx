@@ -18,6 +18,7 @@ import { urlFor } from "@/sanity/lib/image";
 interface NavbarProps {
     variant?: "home" | "catalog";
     initialSearchValue?: string;
+    hideMobileSearch?: boolean;
     /** @deprecated cart is now managed internally */
     onCartOpen?: () => void;
 }
@@ -202,7 +203,7 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
     ],
 };
 
-export default function Navbar({ variant = "home", initialSearchValue }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch }: NavbarProps) {
     const router = useRouter();
     const { openPanel, isOpen: graceActive } = useGrace();
     const { itemCount } = useCart();
@@ -230,6 +231,19 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
         }
     }, [initialSearchValue]);
 
+    const showMicError = useCallback((message: string) => {
+        setMicErrorMsg(message);
+        setTimeout(() => setMicErrorMsg(""), 3500);
+    }, []);
+
+    const searchPlaceholder = micErrorMsg
+        ? micErrorMsg
+        : isDictating
+            ? "Listening..."
+            : isTranscribing
+                ? "Transcribing..."
+                : "Search bottles, closures, families...";
+
     const stopDictation = () => {
         if (silenceTimerRef.current) {
             clearTimeout(silenceTimerRef.current);
@@ -248,6 +262,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
 
     const startDictation = async () => {
         try {
+            setMicErrorMsg("");
             const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
             const mimeType = MediaRecorder.isTypeSupported("audio/webm;codecs=opus")
                 ? "audio/webm;codecs=opus"
@@ -266,17 +281,29 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                 const blob = new Blob(audioChunksRef.current, {
                     type: recorder.mimeType || "audio/webm",
                 });
-                if (blob.size < 500) return;
+                if (blob.size < 500) {
+                    showMicError("Recording too short — try again");
+                    return;
+                }
                 setIsTranscribing(true);
                 try {
                     const fd = new FormData();
                     fd.append("audio", blob, "recording.webm");
                     const res = await fetch("/api/voice/transcribe", { method: "POST", body: fd });
-                    if (!res.ok) return;
+                    if (!res.ok) {
+                        const payload = (await res.json().catch(() => null)) as { error?: string } | null;
+                        showMicError(payload?.error || "Voice search failed");
+                        return;
+                    }
                     const { text } = (await res.json()) as { text: string };
-                    if (text?.trim()) setSearchValue(text.trim());
-                } catch {
-                    // silent fail
+                    if (text?.trim()) {
+                        setSearchValue(text.trim());
+                    } else {
+                        showMicError("Couldn't detect speech — try again");
+                    }
+                } catch (error) {
+                    console.error("[Search STT] Transcription failed:", error);
+                    showMicError("Voice search failed");
                 } finally {
                     setIsTranscribing(false);
                 }
@@ -327,8 +354,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                 err instanceof Error && err.name === "NotAllowedError"
                     ? "Mic access denied — check browser settings"
                     : "Could not start microphone";
-            setMicErrorMsg(msg);
-            setTimeout(() => setMicErrorMsg(""), 3500);
+            showMicError(msg);
         }
     };
 
@@ -487,12 +513,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                             type="text"
                             value={searchValue}
                             onChange={(e) => setSearchValue(e.target.value)}
-                            placeholder={
-                                micErrorMsg ? micErrorMsg :
-                                    isDictating ? "Listening…" :
-                                        isTranscribing ? "Transcribing…" :
-                                            "Search bottles, closures, families..."
-                            }
+                            placeholder={searchPlaceholder}
                             className="bg-transparent text-sm focus:outline-none flex-1 placeholder-slate/60 text-obsidian"
                             aria-label="Search products"
                             suppressHydrationWarning
@@ -555,7 +576,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
 
                 <form
                     onSubmit={handleSearchSubmit}
-                    className="lg:hidden px-4 sm:px-6 pb-3"
+                    className={`lg:hidden px-4 sm:px-6 pb-3 ${hideMobileSearch ? "hidden" : ""}`}
                     suppressHydrationWarning
                 >
                     <div className="flex items-center border border-champagne rounded-xl px-3 py-2 bg-white/80 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2">
@@ -564,7 +585,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                             type="text"
                             value={searchValue}
                             onChange={(e) => setSearchValue(e.target.value)}
-                            placeholder="Search bottles, closures, families..."
+                            placeholder={searchPlaceholder}
                             className="bg-transparent text-sm focus:outline-none flex-1 placeholder-slate/60 text-obsidian"
                             aria-label="Search products"
                             suppressHydrationWarning

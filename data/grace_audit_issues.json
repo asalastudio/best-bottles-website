@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "lastUpdated": "2026-03-07T05:07:00.000Z",
+  "issues": [
+    {
+      "id": "GI-0001",
+      "createdAt": "2026-03-06T21:00:00.000Z",
+      "updatedAt": "2026-03-06T21:18:08.473Z",
+      "status": "verified",
+      "severity": "P0",
+      "title": "Roll-on applicator filter mismatch returns zero results",
+      "category": "retrieval",
+      "surface": "convex-search",
+      "source": "manual-audit",
+      "prompt": "9ml cylinder with applicatorFilter Metal Roller,Plastic Roller",
+      "expected": "Roll-on cylinder variants should be returned",
+      "actual": "Legacy and canonical roll-on applicator filters now both return matching Cylinder results",
+      "rootCause": "Schema stores Metal Roller Ball and Plastic Roller Ball while Grace tool guidance still uses Metal Roller and Plastic Roller",
+      "affectedFiles": [
+        "convex/grace.ts",
+        "convex/schema.ts",
+        "convex/migrations.ts",
+        "src/lib/catalogFilters.ts"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0001-normalize-rollon-applicators.mjs",
+      "owner": null,
+      "regressionCase": "S1",
+      "notes": "Verified via direct convex runs for legacy and canonical applicatorFilter values, normalized family overview output, and askGrace conversational smoke test on 2026-03-06."
+    },
+    {
+      "id": "GI-0002",
+      "createdAt": "2026-03-06T21:00:00.000Z",
+      "updatedAt": "2026-03-07T03:10:27.385Z",
+      "status": "verified",
+      "severity": "P0",
+      "title": "Navbar voice-search posts to missing transcribe route",
+      "category": "voice",
+      "surface": "navbar-search",
+      "source": "code-audit",
+      "prompt": "User taps Search by voice in the navbar",
+      "expected": "Recorded audio should be transcribed into the search field",
+      "actual": "Navbar voice search now records audio, posts to /api/voice/transcribe, and receives transcription text through the new ElevenLabs-backed route",
+      "rootCause": "Client path drift between Navbar dictation flow and current app API routes",
+      "affectedFiles": [
+        "src/components/Navbar.tsx",
+        "src/app/api/voice/transcribe/route.ts"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0002-navbar-voice-transcribe-route.mjs",
+      "owner": null,
+      "regressionCase": "V4",
+      "notes": "Verified on 2026-03-07 by posting a locally generated spoken audio sample to http://localhost:3000/api/voice/transcribe and receiving {\"text\":\"Round bottles\"}. Client flow also now surfaces transcription errors instead of failing silently."
+    },
+    {
+      "id": "GI-0003",
+      "createdAt": "2026-03-06T21:00:00.000Z",
+      "updatedAt": "2026-03-07T05:04:00.000Z",
+      "status": "verified",
+      "severity": "P0",
+      "title": "Grace can generate invalid PDP slug targets",
+      "category": "navigation",
+      "surface": "all-grace-surfaces",
+      "source": "navigation-audit",
+      "prompt": "Show me cylinder or Boston Round product pages",
+      "expected": "Grace should navigate only to valid product group slugs or fallback to catalog pages",
+      "actual": "Grace now resolves fabricated PDP targets like /products/cylinder and /products/boston-round to safe catalog URLs or valid PDP slugs instead of sending users to broken pages",
+      "rootCause": "Navigation fallback logic did not preserve enough search context, and the regression audit was not exercising the same slug-recovery path used by the client",
+      "affectedFiles": [
+        "src/components/GraceElevenLabsProvider.tsx",
+        "scripts/audit_grace_navigation.mjs"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0003-slug-safe-navigation.mjs",
+      "owner": null,
+      "regressionCase": "N1",
+      "notes": "Verified on 2026-03-07 by updating the runtime slug fallback to preserve more of the original query intent, then running node scripts/grace-fixes/GI-0003-slug-safe-navigation.mjs. The refreshed navigation audit now passes 32/32 cases with all hallucination-style product slugs redirected safely."
+    },
+    {
+      "id": "GI-0004",
+      "createdAt": "2026-03-06T21:00:00.000Z",
+      "updatedAt": "2026-03-07T04:43:48.221Z",
+      "status": "verified",
+      "severity": "P1",
+      "title": "Grouped applicator values still use old roller terminology",
+      "category": "data-normalization",
+      "surface": "family-overview",
+      "source": "manual-audit",
+      "prompt": "Get family overview for Royal or Square",
+      "expected": "Grouped applicator values should match canonical runtime vocabulary",
+      "actual": "Family overview now returns canonical applicator vocabulary, including Metal Roller Ball and Plastic Roller Ball, rather than the legacy roller terms",
+      "rootCause": "productGroups applicatorTypes were not rebuilt to match the current schema vocabulary",
+      "affectedFiles": [
+        "convex/migrations.ts",
+        "convex/grace.ts"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0004-rebuild-group-applicators.mjs",
+      "owner": null,
+      "regressionCase": "S7",
+      "notes": "Verified on 2026-03-07 by querying api.grace.getFamilyOverview for Royal and confirming applicatorTypes returned Fine Mist Sprayer, Metal Roller Ball, and Plastic Roller Ball after recent group rebuilds."
+    },
+    {
+      "id": "GI-0005",
+      "createdAt": "2026-03-06T21:00:00.000Z",
+      "updatedAt": "2026-03-07T05:07:00.000Z",
+      "status": "verified",
+      "severity": "P1",
+      "title": "products:auditDataQuality exceeds Convex read limit",
+      "category": "audit-tooling",
+      "surface": "qa-tooling",
+      "source": "manual-audit",
+      "prompt": "npx convex run products:auditDataQuality",
+      "expected": "The data quality audit should complete on the current dataset",
+      "actual": "The paginated data quality audit now completes successfully on the full 2318-product dataset and returns a stable issue summary instead of failing",
+      "rootCause": "The audit previously collected the entire products table in one query instead of paging through the dataset with bounded reads",
+      "affectedFiles": [
+        "convex/products.ts",
+        "scripts/data_quality_audit.mjs"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0005-paginate-data-quality-audit.mjs",
+      "owner": null,
+      "regressionCase": "tooling-auditDataQuality",
+      "notes": "Verified on 2026-03-07 by converting products:auditDataQuality into a paginated action backed by internal.migrations.getProductPage, then running node scripts/grace-fixes/GI-0005-paginate-data-quality-audit.mjs and node scripts/data_quality_audit.mjs successfully against the full dataset."
+    },
+    {
+      "id": "GI-0006",
+      "createdAt": "2026-03-07T01:55:05.651Z",
+      "updatedAt": "2026-03-07T04:59:00.000Z",
+      "status": "verified",
+      "severity": "P1",
+      "title": "Bottle components disagree with fitment matrix for 18-415 Circle reducer bottle",
+      "category": "fitment-data",
+      "surface": "pdp-fitment",
+      "source": "manual-audit",
+      "prompt": "What fits this bottle? / parity check for GB-CIR-FRS-100ML-RDC-WHT",
+      "expected": "Grouped bottle components and thread-size fitment matrix should agree on which component types fit the bottle",
+      "actual": "Grace and the PDP fitment drawer now suppress Dropper for GB-CIR-FRS-100ML-RDC-WHT, matching the 18-415 Circle 100ml Frosted fitment rule",
+      "rootCause": "Runtime bottle-component queries trusted stale embedded product components without reconciling them against the bottle-specific fitment rule",
+      "affectedFiles": [
+        "convex/componentUtils.ts",
+        "convex/grace.ts",
+        "convex/products.ts"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0006-fitment-parity-18-415-circle-reducer.mjs",
+      "owner": null,
+      "regressionCase": "F5",
+      "notes": "Verified on 2026-03-07 after reconciling bottle-component queries against the matched fitment rule by thread/family/capacity/frosted state, then running node scripts/grace-fixes/GI-0006-fitment-parity-18-415-circle-reducer.mjs. Live queries now show no Dropper for GB-CIR-FRS-100ML-RDC-WHT in either grace:getBottleComponents or products:getCompatibleFitments."
+    },
+    {
+      "id": "GI-0007",
+      "createdAt": "2026-03-07T02:28:10.130Z",
+      "updatedAt": "2026-03-07T03:06:35.450Z",
+      "status": "verified",
+      "severity": "P1",
+      "title": "Diva 46ml dropper colors drift from website source of truth",
+      "category": "product-data",
+      "surface": "batch2-truth-audit",
+      "source": "browserless-audit",
+      "prompt": "Batch 2 Browserless diff for Circle, Sleek, Round, Diva, Slim families",
+      "expected": "Convex product colors should match the live Best Bottles website for every SKU in the cohort",
+      "actual": "GBDiva46DrpCu and GBDiva46DrpGl now match the live Best Bottles website as Clear in Convex after the targeted color patch and group rebuild",
+      "rootCause": "Two Diva 46ml dropper records retain stale color assignments despite the live SKU pages and item copy indicating clear glass",
+      "affectedFiles": [
+        "convex/products.ts",
+        "convex/migrations.ts",
+        "scripts/fix_glass_colors.mjs"
+      ],
+      "fixScript": "scripts/grace-fixes/GI-0007-diva-46ml-dropper-color-parity.mjs",
+      "owner": null,
+      "regressionCase": "batch2-color-parity",
+      "notes": "Verified on 2026-03-07 by running scripts/grace-fixes/GI-0007-diva-46ml-dropper-color-parity.mjs, exporting a fresh Convex snapshot, and re-running the repaired Batch 2 diff. Final Batch 2 summary: 877 live, 877 Convex, 0 missing, 0 color mismatches, 0 capacity mismatches."
+    }
+  ]
+}

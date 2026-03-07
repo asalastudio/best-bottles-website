@@ -1,0 +1,76 @@
+{
+  "generatedAt": "2026-03-06T18:26:37.845265",
+  "source": "bestbottles.com sitemap + product pages",
+  "fetchMode": "direct",
+  "families": [],
+  "transportCounts": {
+    "browserless": 0,
+    "direct": 4
+  },
+  "count": 4,
+  "errorCount": 0,
+  "processedCount": 4,
+  "remainingCount": 0,
+  "totalUrlCount": 4,
+  "status": "completed",
+  "completed": true,
+  "products": [
+    {
+      "productUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-shiny-black-lotion-pump-and-cap",
+      "fetchTransport": "direct",
+      "itemType": "Lotion Bottles",
+      "itemName": "LBDivaFrst46LtnShnBlk",
+      "itemDescription": "Diva design 46 ml, 1.64oz frosted glass bottle with shiny black lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Our Classic Diva bottle family is available in",
+      "capacity": "46 ml (1.56 oz)",
+      "heightWithCap": "113 &#177;2 mm",
+      "heightWithoutCap": "89 &#177;1 mm",
+      "diameter": "49 &#177;0.5 mm",
+      "neckThreadSize": "18-415",
+      "websiteSku": "LBDivaFrst46LtnShnBlk",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-shiny-black-spray-pump-and-cap",
+      "fetchTransport": "direct",
+      "itemType": "Classic Perfume Spray Glass Bottles",
+      "itemName": "GBDivaFrst46SpryShnBlk",
+      "itemDescription": "Diva design 46 ml, 1.64oz frosted glass bottle with shiny black spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray. Our Classic Diva bottle family is available in 30ml, 46ml and 100ml. Price each",
+      "capacity": "46 ml (1.56 oz)",
+      "heightWithCap": "114 &#177;2 mm",
+      "heightWithoutCap": "89 &#177;1 mm",
+      "diameter": "49 &#177;0.5 mm",
+      "neckThreadSize": "18-415",
+      "websiteSku": "GBDivaFrst46SpryShnBlk",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-shiny-gold-lotion-pump-and-cap",
+      "fetchTransport": "direct",
+      "itemType": "Lotion Bottles",
+      "itemName": "LBDivaFrst46LtnShnGl",
+      "itemDescription": "Diva design 46 ml, 1.64oz frosted glass bottle with shiny gold lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Our Classic Diva bottle family is available in 3",
+      "capacity": "46 ml (1.56 oz)",
+      "heightWithCap": "113 &#177;2 mm",
+      "heightWithoutCap": "89 &#177;1 mm",
+      "diameter": "49 &#177;0.5 mm",
+      "neckThreadSize": "18-415",
+      "websiteSku": "LBDivaFrst46LtnShnGl",
+      "websiteSkuSource": "item_name_label"
+    },
+    {
+      "productUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-shiny-gold-spray-pump-and-cap",
+      "fetchTransport": "direct",
+      "itemType": "Classic Perfume Spray Glass Bottles",
+      "itemName": "GBDivaFrst46SpryShnGl",
+      "itemDescription": "Diva design 46 ml, 1.64oz frosted glass bottle with shiny gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray. Our Classic Diva bottle family is available in 30ml, 46ml and 100ml. Price each",
+      "capacity": "46 ml (1.56 oz)",
+      "heightWithCap": "114 &#177;2 mm",
+      "heightWithoutCap": "89 &#177;1 mm",
+      "diameter": "49 &#177;0.5 mm",
+      "neckThreadSize": "18-415",
+      "websiteSku": "GBDivaFrst46SpryShnGl",
+      "websiteSkuSource": "item_name_label"
+    }
+  ],
+  "errors": []
+}

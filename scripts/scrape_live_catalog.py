@@ -200,6 +200,47 @@ def get_default_audit_dir() -> Path:
     return ROOT / "data" / "audits" / day
 
 
+def build_payload(
+    *,
+    fetch_mode: str,
+    requested_families: list[str],
+    transport_counts: dict[str, int],
+    scraped: list[dict[str, Any]],
+    errors: list[dict[str, Any]],
+    processed_count: int,
+    total_url_count: int,
+    status: str,
+) -> dict[str, Any]:
+    return {
+        "generatedAt": datetime.now().isoformat(),
+        "source": "bestbottles.com sitemap + product pages",
+        "fetchMode": fetch_mode,
+        "families": requested_families,
+        "transportCounts": transport_counts,
+        "count": len(scraped),
+        "errorCount": len(errors),
+        "processedCount": processed_count,
+        "remainingCount": max(total_url_count - processed_count, 0),
+        "totalUrlCount": total_url_count,
+        "status": status,
+        "completed": status == "completed",
+        "products": scraped,
+        "errors": errors,
+    }
+
+
+def save_payload(output_path: Path, payload: dict[str, Any]) -> None:
+    temp_path = output_path.with_suffix(f"{output_path.suffix}.tmp")
+    temp_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    temp_path.replace(output_path)
+
+
+def load_payload(output_path: Path) -> dict[str, Any] | None:
+    if not output_path.exists():
+        return None
+    return json.loads(output_path.read_text(encoding="utf-8"))
+
+
 def main() -> None:
     load_env_local()
     parser = argparse.ArgumentParser()
@@ -224,6 +265,11 @@ def main() -> None:
         default=None,
         help="Path to cohort_urls.json from build_audit_cohort.py (overrides --families)",
     )
+    parser.add_argument(
+        "--resume",
+        action="store_true",
+        help="Resume from an existing live_scrape_raw.json checkpoint in the output directory",
+    )
     args = parser.parse_args()
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
@@ -245,44 +291,142 @@ def main() -> None:
         urls = urls[: args.limit]
     print(f"Will scrape {len(urls)} product URLs")
 
+    total_url_count = len(urls)
     scraped: list[dict[str, Any]] = []
     errors: list[dict[str, Any]] = []
     transport_counts = {"browserless": 0, "direct": 0}
+    processed_count = 0
+    urls_to_process = urls
 
-    for idx, url in enumerate(urls, start=1):
-        try:
-            html, transport = fetch_product_page(url, args.fetch_mode)
-            transport_counts[transport] = transport_counts.get(transport, 0) + 1
-            text = strip_html_to_text(html)
-            entry: dict[str, Any] = {"productUrl": url, "fetchTransport": transport}
-            entry.update(extract_specs(text))
-            entry.update(extract_prices(text))
-            sku, sku_source = extract_website_sku(html, text, url)
-            if sku:
-                entry["websiteSku"] = sku
-                entry["websiteSkuSource"] = sku_source
-            scraped.append(entry)
-        except Exception as exc:  # noqa: BLE001
-            errors.append({"productUrl": url, "error": str(exc)})
-        if idx % 50 == 0 or idx == len(urls):
-            print(
-                f"[{idx}/{len(urls)}] scraped={len(scraped)} errors={len(errors)} "
-                f"browserless={transport_counts.get('browserless', 0)} direct={transport_counts.get('direct', 0)}"
+    if args.resume:
+        existing_payload = load_payload(output_path)
+        if existing_payload is None:
+            print(f"No checkpoint found at {output_path}; starting fresh.")
+        else:
+            existing_total = existing_payload.get("totalUrlCount")
+            if existing_total not in (None, total_url_count):
+                raise RuntimeError(
+                    f"Checkpoint totalUrlCount={existing_total} does not match current URL count={total_url_count}"
+                )
+
+            existing_fetch_mode = existing_payload.get("fetchMode")
+            if existing_fetch_mode and existing_fetch_mode != args.fetch_mode:
+                raise RuntimeError(
+                    f"Checkpoint fetchMode={existing_fetch_mode} does not match requested fetchMode={args.fetch_mode}"
+                )
+
+            scraped = list(existing_payload.get("products", []))
+            errors = list(existing_payload.get("errors", []))
+            existing_transport_counts = existing_payload.get("transportCounts", {})
+            transport_counts = {
+                "browserless": int(existing_transport_counts.get("browserless", 0)),
+                "direct": int(existing_transport_counts.get("direct", 0)),
+            }
+
+            processed_urls = {
+                item.get("productUrl")
+                for item in scraped
+                if isinstance(item, dict) and item.get("productUrl")
+            }
+            processed_urls.update(
+                item.get("productUrl")
+                for item in errors
+                if isinstance(item, dict) and item.get("productUrl")
             )
-        time.sleep(args.delay)
+            urls_to_process = [url for url in urls if url not in processed_urls]
+            processed_count = len(processed_urls)
 
-    payload = {
-        "generatedAt": datetime.now().isoformat(),
-        "source": "bestbottles.com sitemap + product pages",
-        "fetchMode": args.fetch_mode,
-        "families": requested_families,
-        "transportCounts": transport_counts,
-        "count": len(scraped),
-        "errorCount": len(errors),
-        "products": scraped,
-        "errors": errors,
-    }
-    output_path.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+            print(
+                "Resuming from checkpoint: "
+                f"processed={processed_count} scraped={len(scraped)} errors={len(errors)} "
+                f"remaining={len(urls_to_process)}"
+            )
+
+            if processed_count >= total_url_count:
+                save_payload(
+                    output_path,
+                    build_payload(
+                        fetch_mode=args.fetch_mode,
+                        requested_families=requested_families,
+                        transport_counts=transport_counts,
+                        scraped=scraped,
+                        errors=errors,
+                        processed_count=processed_count,
+                        total_url_count=total_url_count,
+                        status="completed",
+                    ),
+                )
+                print(f"Checkpoint already covers all URLs: {output_path}")
+                return
+
+    try:
+        for url in urls_to_process:
+            try:
+                html, transport = fetch_product_page(url, args.fetch_mode)
+                transport_counts[transport] = transport_counts.get(transport, 0) + 1
+                text = strip_html_to_text(html)
+                entry: dict[str, Any] = {"productUrl": url, "fetchTransport": transport}
+                entry.update(extract_specs(text))
+                entry.update(extract_prices(text))
+                sku, sku_source = extract_website_sku(html, text, url)
+                if sku:
+                    entry["websiteSku"] = sku
+                    entry["websiteSkuSource"] = sku_source
+                scraped.append(entry)
+            except Exception as exc:  # noqa: BLE001
+                errors.append({"productUrl": url, "error": str(exc)})
+
+            processed_count += 1
+            if processed_count % 50 == 0 or processed_count == total_url_count:
+                print(
+                    f"[{processed_count}/{total_url_count}] scraped={len(scraped)} errors={len(errors)} "
+                    f"browserless={transport_counts.get('browserless', 0)} direct={transport_counts.get('direct', 0)}"
+                )
+                save_payload(
+                    output_path,
+                    build_payload(
+                        fetch_mode=args.fetch_mode,
+                        requested_families=requested_families,
+                        transport_counts=transport_counts,
+                        scraped=scraped,
+                        errors=errors,
+                        processed_count=processed_count,
+                        total_url_count=total_url_count,
+                        status="in_progress",
+                    ),
+                )
+            time.sleep(args.delay)
+    except KeyboardInterrupt:
+        print("Interrupted; saving partial scrape output before exit...")
+        save_payload(
+            output_path,
+            build_payload(
+                fetch_mode=args.fetch_mode,
+                requested_families=requested_families,
+                transport_counts=transport_counts,
+                scraped=scraped,
+                errors=errors,
+                processed_count=processed_count,
+                total_url_count=total_url_count,
+                status="interrupted",
+            ),
+        )
+        print(f"Saved partial scrape output: {output_path}")
+        return
+
+    save_payload(
+        output_path,
+        build_payload(
+            fetch_mode=args.fetch_mode,
+            requested_families=requested_families,
+            transport_counts=transport_counts,
+            scraped=scraped,
+            errors=errors,
+            processed_count=processed_count,
+            total_url_count=total_url_count,
+            status="completed",
+        ),
+    )
     print(f"Saved scrape output: {output_path}")
 
 
