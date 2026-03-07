@@ -114,15 +114,6 @@ const COMPONENT_CATEGORIES = new Set([
     "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
 ]);
 
-// Applicator values that qualify a glass bottle as an "atomizer/spray" product.
-// When "Atomizer" is selected in the Design Families filter we union-match ALL
-// spray applicator types so fine-mist (< 30 ml) AND perfume-spray (≥ 30 ml)
-// glass bottles surface alongside the metal-shell Atomizer-family groups.
-const FINE_MIST_SPRAY_TYPES = new Set([
-    ...(APPLICATOR_BUCKETS.find((b) => b.value === "finemist")?.productValues ?? []),
-    ...(APPLICATOR_BUCKETS.find((b) => b.value === "perfumespray")?.productValues ?? []),
-]);
-
 // ─── Types ───────────────────────────────────────────────────────────────────
 
 interface CatalogGroup {
@@ -1275,19 +1266,10 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
             });
         }
 
-        // Families (multi-select)
-        // "Atomizer" is a cross-family filter: it also catches any glass bottle whose
-        // applicatorTypes includes a fine-mist spray value (Fine Mist Sprayer, Perfume
-        // Spray Pump, Atomizer) so Cylinder/Sleek/etc. spray bottles appear alongside
-        // the two metal-shell Atomizer-family groups.
+        // Families (multi-select) — strict match only
         if (filters.families.length > 0) {
             const familySet = new Set(filters.families);
-            const includesAtomizer = filters.families.includes("Atomizer");
-            result = result.filter((g) => {
-                if (g.family && familySet.has(g.family)) return true;
-                if (includesAtomizer && (g.applicatorTypes ?? []).some((t) => FINE_MIST_SPRAY_TYPES.has(t as never))) return true;
-                return false;
-            });
+            result = result.filter((g) => g.family != null && familySet.has(g.family));
         }
 
         // Colors (multi-select)
@@ -1341,16 +1323,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
             result.filter((g) => !COMPONENT_CATEGORIES.has(g.category)),
             (g) => g.family,
         );
-        // Augment "Atomizer" to include all fine-mist glass bottles
-        // so the sidebar chip shows the true total (e.g. 25) instead of just the 2
-        // metal-shell Atomizer-family groups.
-        const extraSprayCount = result.filter(
-            (g) => g.family !== "Atomizer" && (g.applicatorTypes ?? []).some((t) => FINE_MIST_SPRAY_TYPES.has(t as never))
-        ).length;
-        if (extraSprayCount > 0 || (familyFacets["Atomizer"] ?? 0) > 0) {
-            familyFacets["Atomizer"] = (familyFacets["Atomizer"] ?? 0) + extraSprayCount;
-        }
-
         const facetData: Facets = {
             categories: countBy(result, (g) => g.category),
             collections: countBy(result, (g) => g.bottleCollection),
