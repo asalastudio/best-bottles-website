@@ -26,6 +26,8 @@ export const insertBatch = internalMutation({
             capacityMl: v.union(v.number(), v.null()),
             capacityOz: v.union(v.number(), v.null()),
             applicator: v.union(
+                v.literal("Metal Roller Ball"),
+                v.literal("Plastic Roller Ball"),
                 v.literal("Metal Roller"),
                 v.literal("Plastic Roller"),
                 v.literal("Fine Mist Sprayer"),

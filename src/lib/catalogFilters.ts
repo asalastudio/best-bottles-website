@@ -1,7 +1,11 @@
 // Option A: UI applicator buckets → product applicator values
 // Each spray sub-type is its own bucket so it gets its own grid card and filter option
 export const APPLICATOR_BUCKETS = [
-    { value: "rollon", label: "Roll-On", productValues: ["Metal Roller", "Plastic Roller"] },
+    {
+        value: "rollon",
+        label: "Roll-On",
+        productValues: ["Metal Roller Ball", "Plastic Roller Ball", "Metal Roller", "Plastic Roller"],
+    },
     // Fine Mist Spray: atomizer-style, typically < 30 ml
     { value: "finemist", label: "Fine Mist Spray", productValues: ["Fine Mist Sprayer", "Atomizer"] },
     // Perfume Spray Pump: classic spray collar, typically ≥ 30 ml

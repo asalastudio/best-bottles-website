@@ -586,9 +586,9 @@ export const updateProductGroupHeroImage = mutation({
 // Applicator bucket suffixes in slugs (e.g. cylinder-5ml-clear-13-415-spray ends with -spray)
 const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
 
-// Cylinder 5ml roll-on: only Clear and Blue (no Amber — 5ml Amber is Tulip-shaped only)
-const CYLINDER_5ML_ROLLON_ALLOWED = new Set(["Clear", "Blue", "Cobalt Blue"]);
-const BLUE_ALIASES = new Set(["Blue", "Cobalt Blue"]);
+// Cylinder 5ml roll-on: only Clear and cobalt-blue glass (no Amber — 5ml Amber is Tulip-shaped only)
+const CYLINDER_5ML_ROLLON_ALLOWED = new Set(["Clear", "Blue", "Cobalt", "Cobalt Blue"]);
+const BLUE_ALIASES = new Set(["Blue", "Cobalt", "Cobalt Blue"]);
 
 /**
  * Returns sibling product groups — same family + capacityMl + neckThreadSize + applicator bucket, different glass color.
@@ -623,18 +623,18 @@ export const getSiblingGroups = query({
                 )
         );
 
-        // Cylinder 5ml roll-on: only Clear and Blue; deduplicate (one per canonical color)
+        // Cylinder 5ml roll-on: only Clear and cobalt-blue glass; deduplicate by canonical color
         const isCylinder5mlRollon =
             args.family === "Cylinder" &&
             args.capacityMl === 5 &&
             bucketSuffix === "-rollon";
         if (isCylinder5mlRollon) {
             filtered = filtered.filter((g) => CYLINDER_5ML_ROLLON_ALLOWED.has(g.color ?? ""));
-            // Deduplicate: one per canonical color (Blue + Cobalt Blue → single "Blue")
+            // Deduplicate: one per canonical color during the migration window.
             const seen = new Set<string>();
             filtered = filtered.filter((g) => {
                 const c = g.color ?? "";
-                const canonical = BLUE_ALIASES.has(c) ? "Blue" : c;
+                const canonical = BLUE_ALIASES.has(c) ? "Cobalt Blue" : c;
                 if (seen.has(canonical)) return false;
                 seen.add(canonical);
                 return true;
@@ -646,7 +646,7 @@ export const getSiblingGroups = query({
         const seenColor = new Set<string>();
         filtered = filtered.filter((g) => {
             const c = g.color ?? "";
-            const canonical = BLUE_ALIASES.has(c) ? "Blue" : c;
+            const canonical = BLUE_ALIASES.has(c) ? "Cobalt Blue" : c;
             if (seenColor.has(canonical)) return false;
             seenColor.add(canonical);
             return true;
@@ -833,6 +833,7 @@ export const auditApplicatorValues = action({
     args: {},
     handler: async (ctx) => {
         const allowed = new Set([
+            "Metal Roller Ball", "Plastic Roller Ball",
             "Metal Roller", "Plastic Roller",
             "Fine Mist Sprayer", "Perfume Spray Pump",
             "Atomizer", "Antique Bulb Sprayer", "Antique Bulb Sprayer with Tassel",

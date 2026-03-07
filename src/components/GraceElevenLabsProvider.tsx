@@ -298,7 +298,14 @@ export default function GraceElevenLabsProvider({
                             qs.set("family", families[0]);
                         }
                         if (parameters.query && !qs.has("family")) {
-                            qs.set("search", parameters.query);
+                            // Sanitize: if Grace passed a compound comparison phrase like
+                            // "fine mist sprayer, standard sprayer" or "X and Y", take only
+                            // the first term — catalog search can't match compound strings.
+                            const rawQuery = parameters.query;
+                            const sanitizedQuery = rawQuery
+                                .split(/,|\s+and\s+/i)[0]  // take first segment
+                                .trim();
+                            qs.set("search", sanitizedQuery);
                         }
                         redirectUrl = `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
                     }

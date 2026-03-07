@@ -2251,12 +2251,12 @@
       "applicatorBucket": "finemist"
     },
     {
-      "slug": "pillar-9ml-clear-size-13-415-nemat-internation",
+      "slug": "pillar-9ml-clear-13-415",
       "displayName": "9 ml Clear Pillar Bottle with Cap",
       "capacityMl": 9,
       "capacity": "9 ml",
       "color": "Clear",
-      "neckThreadSize": "Size: 13-415 Nemat Internation",
+      "neckThreadSize": "13-415",
       "category": "Glass Bottle",
       "applicatorBucket": null
     }
@@ -2293,12 +2293,12 @@
       "applicatorBucket": "rollon"
     },
     {
-      "slug": "bell-10ml-clear-size-13-415-nemat-internation",
+      "slug": "bell-10ml-clear-13-415",
       "displayName": "10.0 ml Clear Bell Bottle with Cap",
       "capacityMl": 10,
       "capacity": "10.0 ml",
       "color": "Clear",
-      "neckThreadSize": "Size: 13-415 Nemat Internation",
+      "neckThreadSize": "13-415",
       "category": "Glass Bottle",
       "applicatorBucket": null
     }

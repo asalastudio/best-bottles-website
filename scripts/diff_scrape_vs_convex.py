@@ -22,6 +22,31 @@ def upper_sku(value: Any) -> str:
     return str(value or "").strip().upper()
 
 
+def slugify_family_name(name: str) -> str:
+    import re
+
+    return re.sub(r"[^a-z0-9]+", "-", name.strip().lower()).strip("-")
+
+
+def filter_live_by_families(products: list[dict[str, Any]], families: list[str]) -> list[dict[str, Any]]:
+    if not families:
+        return products
+    family_slugs = {slugify_family_name(f) for f in families if f.strip()}
+    filtered = []
+    for row in products:
+        product_url = str(row.get("productUrl") or "").lower()
+        if any(f"/product/{slug}" in product_url or f"-{slug}-" in product_url for slug in family_slugs):
+            filtered.append(row)
+    return filtered
+
+
+def filter_convex_by_families(products: list[dict[str, Any]], families: list[str]) -> list[dict[str, Any]]:
+    if not families:
+        return products
+    allowed = {family.strip().lower() for family in families if family.strip()}
+    return [row for row in products if str(row.get("family") or "").strip().lower() in allowed]
+
+
 def float_or_none(value: Any) -> float | None:
     if value is None:
         return None
@@ -38,6 +63,8 @@ def build_markdown_report(diff: dict[str, Any], out_path: Path) -> None:
         "",
         f"- Generated: {diff['generatedAt']}",
         f"- Live normalized products: {summary['liveCount']}",
+        f"- Live products with reliable SKUs: {summary['reliableLiveCount']}",
+        f"- Live products needing SKU recovery: {summary['unverifiedLiveSkuCount']}",
         f"- Convex snapshot products: {summary['convexCount']}",
         f"- Missing in Convex: {summary['missingInConvex']}",
         f"- Missing on Live: {summary['missingOnLive']}",
@@ -64,6 +91,18 @@ def main() -> None:
     parser.add_argument("--audit-dir", type=Path, default=get_default_audit_dir())
     parser.add_argument("--live", type=Path, default=None)
     parser.add_argument("--convex", type=Path, default=None)
+    parser.add_argument(
+        "--families",
+        type=str,
+        default="",
+        help="Comma-separated family names to scope the diff, e.g. 'Cylinder,Boston Round'",
+    )
+    parser.add_argument(
+        "--cohort-urls",
+        type=Path,
+        default=None,
+        help="Path to cohort_urls.json from build_audit_cohort.py; filters live to cohort URLs only",
+    )
     args = parser.parse_args()
 
     live_path = args.live or (args.audit_dir / "live_scrape_normalized.json")
@@ -80,10 +119,43 @@ def main() -> None:
     live_payload = json.loads(live_path.read_text(encoding="utf-8"))
     convex_payload = json.loads(convex_path.read_text(encoding="utf-8"))
 
+    requested_families = [value.strip() for value in args.families.split(",") if value.strip()]
     live_products = live_payload.get("products", [])
-    convex_products = convex_payload.get("products", [])
 
-    live_by_sku = {upper_sku(row.get("websiteSku")): row for row in live_products if row.get("websiteSku")}
+    if args.cohort_urls and args.cohort_urls.exists():
+        cohort = json.loads(args.cohort_urls.read_text(encoding="utf-8"))
+        cohort_url_set = set(cohort.get("urls", []))
+        live_products = [p for p in live_products if (p.get("productUrl") or "").strip() in cohort_url_set]
+        convex_products = [
+            p for p in convex_payload.get("products", [])
+            if (p.get("productUrl") or "").strip() in cohort_url_set
+        ]
+        requested_families = cohort.get("families", requested_families)
+        print(f"Filtered live to {len(live_products)} products in cohort ({len(cohort_url_set)} URLs)")
+    else:
+        live_products = filter_live_by_families(live_products, requested_families)
+        convex_products = filter_convex_by_families(convex_payload.get("products", []), requested_families)
+
+    reliable_live_products = [
+        row for row in live_products if str(row.get("websiteSkuSource") or "").strip().lower() != "url_tail"
+    ]
+    unverified_live_sku_candidates = [
+        {
+            "websiteSku": row.get("websiteSkuCanonical") or row.get("websiteSku"),
+            "websiteSkuNormalized": row.get("websiteSkuNormalized") or upper_sku(row.get("websiteSku")),
+            "websiteSkuSource": row.get("websiteSkuSource"),
+            "productUrl": row.get("productUrl"),
+            "itemName": row.get("itemName"),
+        }
+        for row in live_products
+        if str(row.get("websiteSkuSource") or "").strip().lower() == "url_tail"
+    ]
+
+    live_by_sku = {
+        upper_sku(row.get("websiteSkuNormalized") or row.get("websiteSku")): row
+        for row in reliable_live_products
+        if row.get("websiteSkuNormalized") or row.get("websiteSku")
+    }
     convex_by_sku = {
         upper_sku(row.get("websiteSku")): row for row in convex_products if row.get("websiteSku")
     }
@@ -96,7 +168,11 @@ def main() -> None:
     for sku, live in live_by_sku.items():
         convex = convex_by_sku.get(sku)
         if not convex:
-            missing_in_convex.append({"websiteSku": sku, "productUrl": live.get("productUrl")})
+            missing_in_convex.append({
+                "websiteSku": live.get("websiteSkuCanonical") or live.get("websiteSku") or sku,
+                "websiteSkuNormalized": sku,
+                "productUrl": live.get("productUrl"),
+            })
             continue
 
         live_color = live.get("colorDetected")
@@ -104,7 +180,8 @@ def main() -> None:
         if live_color and convex_color and str(live_color).lower() != str(convex_color).lower():
             color_mismatches.append(
                 {
-                    "websiteSku": sku,
+                    "websiteSku": live.get("websiteSkuCanonical") or live.get("websiteSku") or sku,
+                    "websiteSkuNormalized": sku,
                     "productUrl": live.get("productUrl") or convex.get("productUrl"),
                     "convexColor": convex_color,
                     "liveColor": live_color,
@@ -118,7 +195,8 @@ def main() -> None:
         if live_capacity is not None and convex_capacity is not None and live_capacity != convex_capacity:
             capacity_mismatches.append(
                 {
-                    "websiteSku": sku,
+                    "websiteSku": live.get("websiteSkuCanonical") or live.get("websiteSku") or sku,
+                    "websiteSkuNormalized": sku,
                     "convexCapacityMl": convex_capacity,
                     "liveCapacityMl": live_capacity,
                     "itemName": live.get("itemName") or convex.get("itemName"),
@@ -127,18 +205,27 @@ def main() -> None:
 
     for sku, convex in convex_by_sku.items():
         if sku not in live_by_sku:
-            missing_on_live.append({"websiteSku": sku, "productUrl": convex.get("productUrl")})
+            missing_on_live.append({
+                "websiteSku": convex.get("websiteSku") or sku,
+                "websiteSkuNormalized": sku,
+                "productUrl": convex.get("productUrl"),
+            })
 
     diff = {
         "generatedAt": datetime.now().isoformat(),
+        "families": requested_families,
+        "cohortSource": str(args.cohort_urls) if args.cohort_urls and args.cohort_urls.exists() else None,
         "summary": {
             "liveCount": len(live_by_sku),
+            "reliableLiveCount": len(reliable_live_products),
+            "unverifiedLiveSkuCount": len(unverified_live_sku_candidates),
             "convexCount": len(convex_by_sku),
             "missingInConvex": len(missing_in_convex),
             "missingOnLive": len(missing_on_live),
             "colorMismatches": len(color_mismatches),
             "capacityMismatches": len(capacity_mismatches),
         },
+        "unverifiedLiveSkuCandidates": unverified_live_sku_candidates,
         "missingInConvex": missing_in_convex,
         "missingOnLive": missing_on_live,
         "colorMismatches": color_mismatches,

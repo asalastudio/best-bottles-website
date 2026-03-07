@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Normalize "Blue" → "Cobalt Blue" color values across all products.
+ * Normalize legacy blue-glass color values → "Cobalt Blue" across all products.
  * Grace SKUs remain unchanged (BLU and CBL segments both valid).
  * After running, rebuild product groups to consolidate siblings.
  */
@@ -39,7 +39,7 @@ if (!CONVEX_URL) {
 
 const client = new ConvexHttpClient(CONVEX_URL);
 
-console.log("Running normalizeBlueColorVariants migration...\n");
+console.log('Running normalizeBlueColorVariants migration ("Blue"/"Cobalt" → "Cobalt Blue")...\n');
 
 try {
     let totalUpdated = 0;
@@ -62,7 +62,7 @@ try {
         batchNum++;
     }
 
-    console.log(`\n✅ Complete! Normalized ${totalUpdated} total products from "Blue" → "Cobalt Blue".`);
+    console.log(`\n✅ Complete! Normalized ${totalUpdated} total products from legacy blue color values → "Cobalt Blue".`);
     console.log(`   Scanned ${totalScanned} products across ${batchNum - 1} batches.`);
     console.log("\nNext steps:");
     console.log("1. Run buildProductGroups to consolidate sibling groups");

@@ -54,7 +54,10 @@ def normalize_entry(entry: dict[str, Any]) -> dict[str, Any] | None:
     website_sku_raw = (entry.get("websiteSku") or "").strip()
     if not website_sku_raw:
         return None
-    website_sku = website_sku_raw.upper()
+    website_sku_normalized = website_sku_raw.upper()
+    website_sku_source = entry.get("websiteSkuSource") or (
+        "url_tail" if re.fullmatch(r"[a-z0-9-]+", website_sku_raw) else "unknown"
+    )
 
     item_name = (entry.get("itemName") or "").strip() or None
     item_description = (entry.get("itemDescription") or "").strip() or None
@@ -62,7 +65,10 @@ def normalize_entry(entry: dict[str, Any]) -> dict[str, Any] | None:
     capacity_ml = parse_capacity_ml(entry.get("capacity"), item_name, item_description)
 
     return {
-        "websiteSku": website_sku,
+        "websiteSku": website_sku_raw,
+        "websiteSkuCanonical": website_sku_raw,
+        "websiteSkuNormalized": website_sku_normalized,
+        "websiteSkuSource": website_sku_source,
         "productUrl": entry.get("productUrl"),
         "itemName": item_name,
         "itemDescription": item_description,
