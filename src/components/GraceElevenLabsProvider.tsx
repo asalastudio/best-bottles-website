@@ -886,9 +886,11 @@ export default function GraceElevenLabsProvider({
                 try {
                     await connectOnce();
 
-                    // Brief stability check — verify the socket didn't immediately close
+                    // Brief stability check — verify the socket didn't immediately close.
+                    // We check our own ref (reset to 0 by handleDisconnect) rather than
+                    // the SDK status to avoid TypeScript narrowing issues.
                     await new Promise((r) => setTimeout(r, 500));
-                    if (conversationRef.current?.status !== "connected") {
+                    if (lastConnectTimeRef.current === 0) {
                         throw new Error("Voice connection dropped immediately after establishing.");
                     }
 
