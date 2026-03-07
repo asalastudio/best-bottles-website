@@ -330,6 +330,9 @@ export default function GraceElevenLabsProvider({
     // Timestamp of last endSession — used to delay reconnection so old socket fully closes
     const lastEndSessionRef = useRef<number>(0);
 
+    // Timestamp of last successful connection — used to detect immediate disconnects
+    const lastConnectTimeRef = useRef<number>(0);
+
     // Stable ref to the conversation object — filled after useConversation runs
     const conversationRef = useRef<ReturnType<typeof useConversation> | null>(null);
 
@@ -355,20 +358,34 @@ export default function GraceElevenLabsProvider({
     const handleConnect = useCallback(() => {
         console.log("[Grace EL] Connected — WS live");
         connectingRef.current = false;
+        lastConnectTimeRef.current = Date.now();
         setStatus("listening");
     }, []);
 
     const handleDisconnect = useCallback(() => {
-        console.log("[Grace EL] Disconnected — cleaning up state");
+        const sinceConnect = Date.now() - lastConnectTimeRef.current;
+        const wasImmediateDrop = lastConnectTimeRef.current > 0 && sinceConnect < 3000;
+        console.log(`[Grace EL] Disconnected — cleaning up state (${sinceConnect}ms after connect, immediate=${wasImmediateDrop})`);
         connectingRef.current = false;
         closingRef.current = false;
+        lastConnectTimeRef.current = 0;
         setConversationActive(false);
-        setStatus((prev) => {
-            if (prev === "connecting" || prev === "listening" || prev === "speaking") {
-                return "idle";
-            }
-            return prev;
-        });
+        setStatus("idle");
+
+        if (wasImmediateDrop) {
+            setVoiceFailed(true);
+            setMessages((prev) => [
+                ...prev,
+                {
+                    role: "grace" as const,
+                    content:
+                        "Voice connection dropped — no worries! " +
+                        "Just type your question below and I'll help you in text mode.",
+                    id: `g-${Date.now()}`,
+                },
+            ]);
+            setPanelMode("open");
+        }
     }, []);
 
     const handleMessage = useCallback((message: { source: string; message: string }) => {
@@ -868,6 +885,13 @@ export default function GraceElevenLabsProvider({
             for (let attempt = 1; attempt <= 2; attempt += 1) {
                 try {
                     await connectOnce();
+
+                    // Brief stability check — verify the socket didn't immediately close
+                    await new Promise((r) => setTimeout(r, 500));
+                    if (conversationRef.current?.status !== "connected") {
+                        throw new Error("Voice connection dropped immediately after establishing.");
+                    }
+
                     connectingRef.current = false;
                     safeSetVolume(voiceEnabledRef.current ? 1 : 0);
                     console.log(`[Grace EL] WebSocket session established (attempt ${attempt})`);
