@@ -180,7 +180,9 @@ const GLASS_COLOR_SWATCH: Record<string, string> = {
     "Clear":   "rgba(200, 235, 245, 0.55)",
     "Amber":   "#C8720A",
     "Frosted": "#D8D8D8",
+    "Cobalt Blue": "#5B87B5",
     "Blue":    "#5B87B5",
+    "Cobalt":  "#5B87B5",
     "Green":   "#6B9A6B",
     "Black":   "#1D1D1F",
     "Purple":  "#7B5EA7",
@@ -190,7 +192,12 @@ const GLASS_COLOR_SWATCH: Record<string, string> = {
 };
 const LIGHT_GLASS = new Set(["Clear", "Frosted", "White", "Pink", "Swirl"]);
 
-const ROLLON_APPLICATORS = new Set(["Metal Roller", "Plastic Roller"]);
+const ROLLON_APPLICATORS = new Set([
+    "Metal Roller Ball",
+    "Plastic Roller Ball",
+    "Metal Roller",
+    "Plastic Roller",
+]);
 
 interface ProductComponent {
     grace_sku: string;

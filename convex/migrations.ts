@@ -1,4 +1,4 @@
-import { mutation, action, internalMutation, internalQuery } from "./_generated/server";
+import { mutation, action, query, internalMutation, internalQuery } from "./_generated/server";
 import { v } from "convex/values";
 import { internal } from "./_generated/api";
 import type { Doc, Id } from "./_generated/dataModel";
@@ -66,6 +66,8 @@ const BOTTLE_CATEGORIES = new Set(["Glass Bottle", "Lotion Bottle", "Aluminum Bo
 // entirely and never enter the glass bottle applicator bucket system.
 // Components (caps, sprayers sold standalone) have no applicator and get no bucket.
 const APPLICATOR_BUCKET_MAP: Record<string, string> = {
+    "Metal Roller Ball": "rollon",
+    "Plastic Roller Ball": "rollon",
     "Metal Roller": "rollon",
     "Plastic Roller": "rollon",
     // Fine mist (< 30 ml atomizer-style) and perfume spray (≥ 30 ml collar-style)
@@ -202,6 +204,13 @@ function getApplicatorBucket(applicator: string | null | undefined): string | nu
     return APPLICATOR_BUCKET_MAP[applicator.trim()] ?? null;
 }
 
+/** Extract clean thread size (e.g. "13-415") from values like "Size: 13-415 Nemat Internation" */
+function normalizeThreadForSlug(neckThreadSize: string | null): string | null {
+    if (!neckThreadSize || !neckThreadSize.trim()) return null;
+    const match = neckThreadSize.match(/(\d+-\d+)/);
+    return match ? match[1] : neckThreadSize.trim();
+}
+
 function buildSlug(
     family: string | null,
     capacityMl: number | null,
@@ -222,7 +231,8 @@ function buildSlug(
     }
     if (COMPONENT_CATEGORIES.has(category) && componentSubType) {
         const base = slugify(componentSubType);
-        return neckThreadSize ? `${base}-${slugify(neckThreadSize)}` : base;
+        const thread = normalizeThreadForSlug(neckThreadSize);
+        return thread ? `${base}-${thread}` : base;
     }
 
     const hasDecShape = (family === "Decorative" || family === "Apothecary") && shape;
@@ -231,7 +241,7 @@ function buildSlug(
     const c = capacityMl != null ? `${capacityMl}ml` : "0ml";
     const col = slugify(color || "mixed");
     if (BOTTLE_CATEGORIES.has(category) && neckThreadSize) {
-        const thread = slugify(neckThreadSize);
+        const thread = normalizeThreadForSlug(neckThreadSize) ?? slugify(neckThreadSize);
         let base = `${f}-${c}-${col}-${thread}`;
         if (accessorySlug) base = `${base}-${accessorySlug}`;
         return applicatorBucket ? `${base}-${applicatorBucket}` : base;
@@ -1259,7 +1269,7 @@ export const populateAllBell10mlComponents = action({
             };
         }
 
-        const patches = bell10Products.map((p) => ({ id: p._id, components }));
+        const patches: { id: Id<"products">; components: unknown[] }[] = bell10Products.map((p: Doc<"products">) => ({ id: p._id, components }));
         await ctx.runMutation(internal.migrations.patchProductComponentsBatch, { patches });
 
         return {
@@ -2378,11 +2388,11 @@ CRITICAL RULE: Thread size must match exactly. A 18-415 closure will not fit a 2
 /**
  * normalizeBlueColorVariants
  * 
- * Standardizes all "Blue" color values to "Cobalt Blue" for consistency.
+ * Standardizes all blue-glass color values to "Cobalt Blue" for consistency.
  * Grace SKUs remain unchanged (BLU and CBL segments both valid).
  * 
  * Rationale:
- * - 60 products currently use "Blue", 54 use "Cobalt Blue" — same physical glass
+ * - Some products still use "Blue" or "Cobalt" while the website source of truth uses "Cobalt Blue"
  * - Grace SKU codes mix BLU and CBL for the same cobalt blue glass
  * - Standardizing display color eliminates duplicate sibling swatches
  * - "Cobalt Blue" is more descriptive and matches industry terminology
@@ -2402,7 +2412,9 @@ export const normalizeBlueColorVariants = mutation({
             cursor: args.cursor ?? null,
             numItems: batchSize,
         });
-        const blueProducts = page.page.filter((p) => p.color === "Blue");
+        const blueProducts = page.page.filter((p) =>
+            p.color === "Blue" || p.color === "Cobalt"
+        );
 
         let updated = 0;
         for (const product of blueProducts) {
@@ -2420,8 +2432,8 @@ export const normalizeBlueColorVariants = mutation({
             nextCursor,
             hasMore,
             message: updated > 0
-                ? `Normalized ${updated} products in this batch from "Blue" → "Cobalt Blue". ${hasMore ? "More pages remain." : "Complete! Run buildProductGroups to consolidate sibling groups."}`
-                : hasMore ? "No Blue products in this page, continuing scan." : "Migration complete.",
+                ? `Normalized ${updated} products in this batch from legacy blue color values → "Cobalt Blue". ${hasMore ? "More pages remain." : "Complete! Run buildProductGroups to consolidate sibling groups."}`
+                : hasMore ? "No legacy blue color values in this page, continuing scan." : "Migration complete.",
         };
     },
 });
@@ -3280,7 +3292,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "0.0 ml",
         capacityMl: 0.0,
         color: "Clear",
-        neckThreadSize: "Size: 17-415 Nemat Internation",
+        neckThreadSize: "17-415",
         heightWithCap: "27 ±0.5 mm Item Diameter: 19 ±",
         heightWithoutCap: null,
         webPrice1pc: 0.38,
@@ -3324,7 +3336,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "0.0 ml",
         capacityMl: 0.0,
         color: "Clear",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "17 ±0.5 mm Item Diameter: 17 ±",
         heightWithoutCap: null,
         webPrice1pc: 0.28,
@@ -3346,7 +3358,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "10.0 ml",
         capacityMl: 10.0,
         color: "Clear",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "66 ±1 mm Item Height without C",
         heightWithoutCap: "55 ±1 mm Item Diameter: 27 ±0.",
         webPrice1pc: 0.82,
@@ -3368,7 +3380,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "10.0 ml",
         capacityMl: 10.0,
         color: "Clear",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "66 ±1 mm Item Height without C",
         heightWithoutCap: "55 ±1 mm Item Diameter: 27 ±0.",
         webPrice1pc: 0.74,
@@ -3390,7 +3402,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "15.0 ml",
         capacityMl: 15.0,
         color: "Clear",
-        neckThreadSize: "Size: 18-400 Nemat Internation",
+        neckThreadSize: "18-400",
         heightWithCap: "91 ±1 mm Item Height without C",
         heightWithoutCap: "68 ±1 mm Item Diameter: 25 ±0.",
         webPrice1pc: 0.67,
@@ -3456,7 +3468,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "5.0 ml",
         capacityMl: 5.0,
         color: "Blue",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "59 ±1 mm Item Height without C",
         heightWithoutCap: "53 ±1 mm Item Diameter: 17 ±0.",
         webPrice1pc: 0.5,
@@ -3500,7 +3512,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "15.0 ml",
         capacityMl: 15.0,
         color: "Frosted",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "66 ±1 mm Item Height without C",
         heightWithoutCap: "61 ±1 mm Item Width: 36 ±0.5 m",
         webPrice1pc: 0.8,
@@ -3522,7 +3534,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "9 ml",
         capacityMl: 9.0,
         color: "Clear",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "70 ±1 mm Item Height without C",
         heightWithoutCap: "57 ±1 mm Item Diameter: 21 ±0.",
         webPrice1pc: 0.89,
@@ -3544,7 +3556,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "9 ml",
         capacityMl: 9.0,
         color: "Clear",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "70 ±1 mm Item Height without C",
         heightWithoutCap: "57 ±1 mm Item Diameter: 21 ±0.",
         webPrice1pc: 0.83,
@@ -3588,7 +3600,7 @@ const MISSING_PRODUCTS_20260304 = [
         capacity: "6.0 ml",
         capacityMl: 6.0,
         color: "Clear",
-        neckThreadSize: "Size: 13-415 Nemat Internation",
+        neckThreadSize: "13-415",
         heightWithCap: "47 ±0.5 mm Item Height without",
         heightWithoutCap: "45 ±0.5 mm Item Diameter: 23 ±",
         webPrice1pc: 0.59,
@@ -3690,6 +3702,92 @@ export const fillMissingComponentPrices = mutation({
             updated++;
         }
         return `Price fill: ${updated} updated, ${missing} not found.`;
+    },
+});
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FIX SLUG ANOMALY — "nemat-internation" in product group slugs
+// Root cause: neckThreadSize contained "Size: 13-415 Nemat Internation" (truncated
+// from Master Sheet). buildSlug now uses normalizeThreadForSlug() to extract only
+// the thread pattern. This migration fixes existing groups and products.
+// Run via: npx convex run migrations:fixNematInternationSlugs
+// Then: npx convex run migrations:fixNematInternationNeckThreadSize
+// ─────────────────────────────────────────────────────────────────────────────
+
+/** Diagnostic: list product group slugs containing "nemat" — run: npx convex run migrations:listNematSlugs */
+export const listNematSlugs = query({
+    args: {},
+    handler: async (ctx) => {
+        const groups = await ctx.db.query("productGroups").collect();
+        const bad = groups.filter((g) => g.slug.toLowerCase().includes("nemat"));
+        return bad.map((g) => ({ _id: g._id, slug: g.slug }));
+    },
+});
+
+export const fixNematInternationSlugs = mutation({
+    args: {},
+    handler: async (ctx) => {
+        const groups = await ctx.db.query("productGroups").collect();
+        const bad = groups.filter((g) => g.slug.includes("nemat-internation"));
+        if (bad.length === 0) return "No product groups with nemat-internation slugs found.";
+
+        const slugToId = new Map(groups.map((g) => [g.slug, g._id]));
+        let updated = 0;
+        for (const g of bad) {
+            const newSlug = g.slug.replace(/-?size-\d+-\d+-nemat-internation$/, (m) => {
+                const threadMatch = m.match(/(\d+-\d+)/);
+                return threadMatch ? `-${threadMatch[1]}` : m;
+            });
+            if (newSlug === g.slug) continue;
+            if (slugToId.has(newSlug)) {
+                console.warn(`fixNematInternationSlugs: target slug ${newSlug} already exists, skipping ${g.slug}`);
+                continue;
+            }
+            await ctx.db.patch(g._id, { slug: newSlug });
+            slugToId.delete(g.slug);
+            slugToId.set(newSlug, g._id);
+            updated++;
+        }
+        return `Fixed ${updated} product group slugs (nemat-internation → clean thread).`;
+    },
+});
+
+/** Fix products with bad neckThreadSize (e.g. "Size: 13-415 Nemat Internation") — paginated to avoid 16MB read limit */
+export const fixNematInternationNeckThreadSize = action({
+    args: {},
+    handler: async (ctx) => {
+        const PAGE_SIZE = 100;
+        const BATCH = 50;
+        let cursor: string | null = null;
+        let isDone = false;
+        let totalFixed = 0;
+
+        while (!isDone) {
+            const result = (await ctx.runQuery(internal.migrations.getProductPage, {
+                cursor,
+                numItems: PAGE_SIZE,
+            })) as { page: RawProduct[]; isDone: boolean; continueCursor: string | null };
+            const bad = result.page.filter(
+                (p) => p.neckThreadSize && /nemat\s*internation/i.test(p.neckThreadSize)
+            );
+            const threadRe = /(\d+-\d+)/;
+            const patches: { id: Id<"products">; fields: Record<string, unknown> }[] = [];
+            for (const p of bad) {
+                const match = (p.neckThreadSize || "").match(threadRe);
+                const clean = match ? match[1] : null;
+                if (clean) patches.push({ id: p._id, fields: { neckThreadSize: clean } });
+            }
+            for (let i = 0; i < patches.length; i += BATCH) {
+                const batch = patches.slice(i, i + BATCH);
+                await ctx.runMutation(internal.migrations.patchProductFields, { patches: batch });
+                totalFixed += batch.length;
+            }
+            isDone = result.isDone;
+            cursor = result.continueCursor;
+        }
+        return totalFixed === 0
+            ? "No products with Nemat Internation in neckThreadSize found."
+            : `Fixed neckThreadSize on ${totalFixed} products.`;
     },
 });
 
@@ -4274,6 +4372,73 @@ export const patchBostonRoundDescriptions = mutation({
             }
         }
         return { patched, total: groups.length };
+    },
+});
+
+/**
+ * Generic mutation: patch groupDescription for any family.
+ * Accepts a family name and an array of description entries.
+ *
+ * Each entry can be:
+ * - { capacityMl, description } — applies to ALL applicator types for that capacity
+ * - { capacityMl, applicatorBucket, description } — applies only to groups whose slug ends with applicatorBucket
+ *
+ * Applicator-specific entries take precedence over capacity-only entries.
+ * Applicator buckets: rollon, finemist, perfumespray, antiquespray, antiquespray-tassel, dropper, lotionpump, reducer, glasswand, glassapplicator, capclosure
+ */
+export const patchFamilyDescriptions = mutation({
+    args: {
+        family: v.string(),
+        descriptions: v.array(
+            v.union(
+                v.object({ capacityMl: v.number(), description: v.string() }),
+                v.object({
+                    capacityMl: v.number(),
+                    applicatorBucket: v.string(),
+                    description: v.string(),
+                })
+            )
+        ),
+    },
+    handler: async (ctx, { family, descriptions }) => {
+        const genericMap = new Map<number, string>();
+        const applicatorMap = new Map<string, string>(); // key: "capacityMl|applicatorBucket"
+        for (const d of descriptions) {
+            if ("applicatorBucket" in d && d.applicatorBucket) {
+                applicatorMap.set(`${d.capacityMl}|${d.applicatorBucket}`, d.description);
+            } else {
+                genericMap.set(d.capacityMl, d.description);
+            }
+        }
+        const groups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", family))
+            .collect();
+        const KNOWN_BUCKETS = new Set(["rollon", "finemist", "perfumespray", "antiquespray", "antiquespray-tassel", "dropper", "lotionpump", "reducer", "glasswand", "glassapplicator", "capclosure"]);
+        const getApplicatorFromSlug = (s: string): string | null => {
+            if (s.endsWith("-antiquespray-tassel")) return "antiquespray-tassel";
+            const parts = s.split("-");
+            const last = parts.length > 1 ? (parts.pop() ?? null) : null;
+            return last && KNOWN_BUCKETS.has(last) ? last : null;
+        };
+        let patched = 0;
+        for (const g of groups) {
+            const cap = g.capacityMl ?? 0;
+            const slug = g.slug ?? "";
+            const applicatorBucket = getApplicatorFromSlug(slug);
+            let desc: string | undefined;
+            if (applicatorBucket) {
+                desc = applicatorMap.get(`${cap}|${applicatorBucket}`);
+            }
+            if (!desc) {
+                desc = genericMap.get(cap);
+            }
+            if (desc) {
+                await ctx.db.patch(g._id, { groupDescription: desc });
+                patched++;
+            }
+        }
+        return { patched, total: groups.length, family };
     },
 });
 

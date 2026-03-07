@@ -36,10 +36,12 @@ const client = new ConvexHttpClient(CONVEX_URL);
 try {
     const products = await client.query(api.products.listAll, {});
     const blueCount = products.filter(p => p.color === "Blue").length;
+    const cobaltShortCount = products.filter(p => p.color === "Cobalt").length;
     const cobaltCount = products.filter(p => p.color === "Cobalt Blue").length;
     
     console.log(`Current color distribution:`);
     console.log(`  Blue: ${blueCount}`);
+    console.log(`  Cobalt: ${cobaltShortCount}`);
     console.log(`  Cobalt Blue: ${cobaltCount}`);
     console.log(`  Total products: ${products.length}`);
 } catch (err) {

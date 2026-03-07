@@ -5,10 +5,10 @@
  *
  *   White       → Clear   (white cap on clear glass bottle)
  *   Black       → Clear   (black roll-on cap on clear glass bottle)
- *   Blue        → Cobalt  (single 5ml cylinder; Blue is not a valid glass color)
- *   Cobalt Blue → Cobalt  (normalise to short form to match valid color list)
+ *   Blue        → Cobalt Blue  (legacy shorthand)
+ *   Cobalt      → Cobalt Blue  (legacy shorthand)
  *
- * Valid glass colors after this run: Clear, Frosted, Cobalt, Amber, Green, Swirl
+ * Valid glass colors after this run: Clear, Frosted, Cobalt Blue, Amber, Green, Swirl
  *
  * Run:  node scripts/fix_glass_colors.mjs
  */
@@ -27,8 +27,8 @@ const client = new ConvexHttpClient(CONVEX_URL);
 const REMAP = [
     { from: "White",      to: "Clear"  },
     { from: "Black",      to: "Clear"  },
-    { from: "Blue",       to: "Cobalt" },
-    { from: "Cobalt Blue",to: "Cobalt" },
+    { from: "Blue",       to: "Cobalt Blue" },
+    { from: "Cobalt",     to: "Cobalt Blue" },
 ];
 
 console.log("Fetching catalog groups…");

@@ -298,7 +298,14 @@ export default function GraceElevenLabsProvider({
                             qs.set("family", families[0]);
                         }
                         if (parameters.query && !qs.has("family")) {
-                            qs.set("search", parameters.query);
+                            // Sanitize: if Grace passed a compound comparison phrase like
+                            // "fine mist sprayer, standard sprayer" or "X and Y", take only
+                            // the first term — catalog search can't match compound strings.
+                            const rawQuery = parameters.query;
+                            const sanitizedQuery = rawQuery
+                                .split(/,|\s+and\s+/i)[0]  // take first segment
+                                .trim();
+                            qs.set("search", sanitizedQuery);
                         }
                         redirectUrl = `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
                     }
@@ -722,10 +729,16 @@ export default function GraceElevenLabsProvider({
 
                 console.log(`[Grace EL] Starting WebSocket session (fetch took ${Math.round(performance.now() - t0)}ms)`);
 
+                const contextBlock = formatPageContextForGrace(pageContextRef.current);
                 await Promise.race([
                     conversationRef.current!.startSession({
                         signedUrl,
                         connectionType: "websocket",
+                        ...(contextBlock ? {
+                            overrides: {
+                                agent: { prompt: { prompt: contextBlock } },
+                            },
+                        } : {}),
                     }),
                     new Promise<never>((_, reject) =>
                         setTimeout(() => reject(new Error("Voice connection timed out after 15 seconds.")), 15000)

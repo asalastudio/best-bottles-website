@@ -83,12 +83,13 @@ function FamilyBanner({ family }: { family: string }) {
 
 // Valid glass colors — only these appear in the Glass Color filter.
 const COLOR_SWATCH_MAP: Record<string, string> = {
-    Clear:   "bg-white border border-champagne/60",
+    Clear: "bg-white border border-champagne/60",
     Frosted: "bg-gradient-to-br from-white to-slate-200 border border-champagne/60",
-    Cobalt:  "bg-blue-800",
-    Amber:   "bg-amber-600",
-    Green:   "bg-emerald-600",
-    Swirl:   "bg-gradient-to-br from-sky-100 to-slate-300 border border-champagne/60",
+    "Cobalt Blue": "bg-blue-800",
+    Cobalt: "bg-blue-800",
+    Amber: "bg-amber-600",
+    Green: "bg-emerald-600",
+    Swirl: "bg-gradient-to-br from-sky-100 to-slate-300 border border-champagne/60",
 };
 
 const CATEGORY_ORDER = [
@@ -1295,10 +1296,16 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
             result = result.filter((g) => g.color && set.has(g.color));
         }
 
-        // Capacities (multi-select)
+        // Capacities (multi-select) — match by ml value so normalised labels still filter
         if (filters.capacities.length > 0) {
-            const set = new Set(filters.capacities);
-            result = result.filter((g) => g.capacity && set.has(g.capacity));
+            // filters.capacities now stores canonical labels like "5 ml"; extract ml numbers for matching
+            const selectedMls = new Set(
+                filters.capacities.map((cap) => {
+                    const m = cap.match(/^(\d+(?:\.\d+)?)\s*ml/i);
+                    return m ? parseFloat(m[1]) : null;
+                }).filter((n): n is number => n !== null)
+            );
+            result = result.filter((g) => g.capacityMl !== null && g.capacityMl !== undefined && selectedMls.has(g.capacityMl));
         }
 
         // Neck thread sizes (multi-select)
@@ -1356,19 +1363,30 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
             priceRange: { min: Infinity, max: -Infinity },
         };
 
-        const capMap: Record<string, { ml: number | null; count: number }> = {};
+        // Build capacity facets — normalise all raw strings to a canonical "X ml" label
+        // keyed by ml value so "5 ml (0.17 oz)" and "5.0 ml" merge into one entry "5 ml".
+        const capMap: Record<number, { label: string; count: number }> = {};
         for (const g of result) {
-            if (g.capacity) {
-                if (!capMap[g.capacity]) capMap[g.capacity] = { ml: g.capacityMl ?? null, count: 0 };
-                capMap[g.capacity].count++;
+            const ml = g.capacityMl;
+            if (ml !== null && ml !== undefined && ml > 0) {
+                if (!capMap[ml]) {
+                    // Format: integer if whole number, one decimal if not (e.g. 4.5 ml)
+                    const label = Number.isInteger(ml) ? `${ml} ml` : `${ml} ml`;
+                    capMap[ml] = { label, count: 0 };
+                }
+                capMap[ml].count++;
             }
             if (g.priceRangeMin !== null && g.priceRangeMin !== undefined) {
                 if (g.priceRangeMin < facetData.priceRange.min) facetData.priceRange.min = g.priceRangeMin;
                 if (g.priceRangeMin > facetData.priceRange.max) facetData.priceRange.max = g.priceRangeMin;
             }
         }
+        // Convert to the shape the sidebar expects: Record<label, { label, ml, count }>
         facetData.capacities = Object.fromEntries(
-            Object.entries(capMap).map(([label, data]) => [label, { label, ...data }]),
+            Object.entries(capMap).map(([mlKey, data]) => [
+                data.label,
+                { label: data.label, ml: Number(mlKey), count: data.count },
+            ]),
         );
 
         if (facetData.priceRange.min === Infinity) facetData.priceRange = { min: 0, max: 0 };
