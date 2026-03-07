@@ -355,11 +355,33 @@ export default function GraceElevenLabsProvider({
     // reference on every render. This prevents useConversation from seeing
     // "changed" options and tearing down a live WebSocket.
 
+    // Queued page context to send after connection opens (avoids SDK overrides bug)
+    const pendingContextRef = useRef<string | null>(null);
+
     const handleConnect = useCallback(() => {
         console.log("[Grace EL] Connected — WS live");
         connectingRef.current = false;
         lastConnectTimeRef.current = Date.now();
         setStatus("listening");
+
+        // Inject page context as a silent first message now that the socket is live.
+        // We avoid startSession overrides because @elevenlabs/react <=0.14.1 drops
+        // the WebSocket immediately when overrides are present.
+        const ctx = pendingContextRef.current;
+        if (ctx) {
+            pendingContextRef.current = null;
+            setTimeout(() => {
+                const conv = conversationRef.current;
+                if (conv?.status === "connected") {
+                    try {
+                        conv.sendUserMessage(ctx);
+                        console.log("[Grace EL] Page context injected via sendUserMessage");
+                    } catch (e) {
+                        console.warn("[Grace EL] Failed to inject page context:", e);
+                    }
+                }
+            }, 300);
+        }
     }, []);
 
     const handleDisconnect = useCallback(() => {
@@ -390,6 +412,8 @@ export default function GraceElevenLabsProvider({
 
     const handleMessage = useCallback((message: { source: string; message: string }) => {
         if (message.source === "user" && message.message) {
+            // Suppress the silent page-context injection from appearing in chat
+            if (message.message.startsWith("=== CURRENT SESSION CONTEXT ===")) return;
             setMessages((prev) => [
                 ...prev,
                 { role: "user", content: message.message, id: `u-${Date.now()}` },
@@ -863,16 +887,15 @@ export default function GraceElevenLabsProvider({
 
                 console.log(`[Grace EL] Starting WebSocket session (fetch took ${Math.round(performance.now() - t0)}ms)`);
 
-                const contextBlock = formatPageContextForGrace(pageContextRef.current);
+                // Queue page context to be sent after connection opens (handleConnect).
+                // Do NOT pass overrides to startSession — @elevenlabs/react <=0.14.1
+                // drops the WebSocket immediately when overrides are present.
+                pendingContextRef.current = formatPageContextForGrace(pageContextRef.current);
+
                 await Promise.race([
                     conversationRef.current!.startSession({
                         signedUrl,
                         connectionType: "websocket",
-                        ...(contextBlock ? {
-                            overrides: {
-                                agent: { prompt: { prompt: contextBlock } },
-                            },
-                        } : {}),
                     }),
                     new Promise<never>((_, reject) =>
                         setTimeout(() => reject(new Error("Voice connection timed out after 15 seconds.")), 15000)
