@@ -14,6 +14,9 @@
   --color-champagne: #D4C5A9;
   --color-linen: #FAF8F5;
   --color-travertine: #EEE6D4;
+  /* Secondary contrast tones for product grids */
+  --color-parchment: #ECE5D8;   /* warm amber-beige — grid wrappers, filter sidebar, section contrast */
+  --color-warm-white: #FDFBF8;  /* near-white with warmth — browsing areas, card-friendly backgrounds */
   /* Portal palette extensions */
   --color-ash: #9A9590;
   --color-ink: #2C2C2E;

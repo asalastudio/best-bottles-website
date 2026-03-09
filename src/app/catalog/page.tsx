@@ -1475,7 +1475,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     if (filters.search) chips.push({ label: `"${filters.search}"`, onRemove: () => { handleFilterChange({ search: "" }); setSearchInput(""); } });
 
     return (
-        <main className="min-h-screen bg-bone pt-[160px] lg:pt-[120px]">
+        <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
 
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
@@ -1591,10 +1591,10 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                 animate={{ x: 0 }}
                                 exit={{ x: "-100%" }}
                                 transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                                className="fixed top-0 left-0 bottom-0 z-50 w-[300px] max-w-[85vw] bg-bone overflow-y-auto lg:hidden"
+                                className="fixed top-0 left-0 bottom-0 z-50 w-[300px] max-w-[85vw] bg-warm-white overflow-y-auto lg:hidden"
                                 style={{ boxShadow: "8px 0 40px rgba(29,29,31,0.15)" }}
                             >
-                                <div className="flex items-center justify-between px-5 py-4 border-b border-champagne/50 sticky top-0 bg-bone z-10">
+                                <div className="flex items-center justify-between px-5 py-4 border-b border-champagne/50 sticky top-0 bg-warm-white z-10">
                                     <div className="flex items-center gap-2">
                                         <h3 className="font-serif text-lg text-obsidian font-medium">Filters</h3>
                                         {activeFilterCount(filters) > 0 && (
@@ -1623,7 +1623,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                     />
                                 </div>
                                 {/* Sticky "View results" button at bottom */}
-                                <div className="sticky bottom-0 px-5 py-4 bg-bone border-t border-champagne/50">
+                                <div className="sticky bottom-0 px-5 py-4 bg-warm-white border-t border-champagne/50">
                                     <button
                                         onClick={() => {
                                             setMobileFilterOpen(false);
@@ -1642,7 +1642,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                 <div className="flex flex-col lg:flex-row items-start lg:space-x-12">
 
                     {/* Desktop Sidebar */}
-                    <aside className="hidden lg:block w-72 shrink-0 sticky top-[120px] max-h-[calc(100vh-140px)] overflow-y-auto hide-scroll pb-12">
+                    <aside className="hidden lg:block w-72 shrink-0 sticky top-[120px] max-h-[calc(100vh-140px)] overflow-y-auto hide-scroll pb-12 bg-parchment/30 rounded-xl px-4 pt-4">
                         <FilterSidebarContent
                             facets={facets}
                             taxonomy={taxonomy ?? null}
@@ -1664,7 +1664,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                         )}
 
                         {/* Results Header — sticks directly below fixed navbar */}
-                        <div className="sticky top-[136px] lg:top-[100px] z-30 bg-bone pt-2 sm:pt-5 pb-2 mb-4 sm:mb-8 border-b-2 border-obsidian">
+                        <div className="sticky top-[136px] lg:top-[100px] z-30 bg-warm-white pt-2 sm:pt-5 pb-2 mb-4 sm:mb-8 border-b-2 border-obsidian">
                             <div className="flex items-end justify-between gap-2 sm:gap-3">
                                 <div className="min-w-0">
                                     <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-0.5 sm:mb-1">
@@ -1897,7 +1897,7 @@ export default function CatalogPage() {
     return (
         <Suspense
             fallback={
-                <main className="min-h-screen bg-bone pt-[160px] lg:pt-[120px]">
+                <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
                     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
                         <div className="mb-4 sm:mb-12 border-b border-champagne/50 pb-4 sm:pb-8">
                             <div className="h-10 w-64 bg-champagne/30 rounded animate-pulse mb-3" />

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -65,11 +65,21 @@ const DEFAULT_HERO_SLIDE: Partial<HeroSlide> & { eyebrow: string; headline: stri
 };
 
 function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroSlides"]; mobileHeroMode?: "categories" | "hero" }) {
-    const showOnMobile = mobileHeroMode === "hero";
+    // Default to hero on mobile when not explicitly set to "categories"
+    const showOnMobile = mobileHeroMode !== "categories";
     const slides: HeroSlide[] = heroSlides?.length ? heroSlides : [{ ...DEFAULT_HERO_SLIDE } as HeroSlide];
     const [currentIndex, setCurrentIndex] = React.useState(0);
+    const [isMobile, setIsMobile] = React.useState(false);
     const slide = slides[currentIndex];
     const isMultiSlide = slides.length > 1;
+
+    useEffect(() => {
+        const mq = window.matchMedia("(max-width: 1023px)");
+        const handler = () => setIsMobile(mq.matches);
+        handler();
+        mq.addEventListener("change", handler);
+        return () => mq.removeEventListener("change", handler);
+    }, []);
 
     React.useEffect(() => {
         if (!isMultiSlide) return;
@@ -78,9 +88,19 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     }, [isMultiSlide, slides.length]);
 
     const mediaType = slide?.mediaType ?? "image";
-    const videoUrl = slide?.video?.asset?.url;
-    const imageUrl = slide?.image ? urlFor(slide.image) : "";
-    const posterUrl = slide?.videoPoster ? urlFor(slide.videoPoster) : imageUrl || "/assets/Hero-BB.png";
+    const videoUrl = isMobile && slide?.mobileVideo?.asset?.url
+        ? slide.mobileVideo.asset.url
+        : slide?.video?.asset?.url;
+    const imageUrl = isMobile && slide?.mobileImage
+        ? urlFor(slide.mobileImage)
+        : slide?.image
+            ? urlFor(slide.image)
+            : "";
+    const posterUrl = isMobile && slide?.mobileVideoPoster
+        ? urlFor(slide.mobileVideoPoster)
+        : slide?.videoPoster
+            ? urlFor(slide.videoPoster)
+            : imageUrl || "/assets/Hero-BB.png";
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
@@ -88,16 +108,27 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
-                        const img = s?.image ? urlFor(s.image) : "";
-                        const isVideo = s?.mediaType === "video" && s?.video?.asset?.url;
-                        const vidUrl = s?.video?.asset?.url;
+                        const img = isMobile && s?.mobileImage
+                            ? urlFor(s.mobileImage)
+                            : s?.image
+                                ? urlFor(s.image)
+                                : "";
+                        const vidUrl = isMobile && s?.mobileVideo?.asset?.url
+                            ? s.mobileVideo.asset.url
+                            : s?.video?.asset?.url;
+                        const vidPoster = isMobile && s?.mobileVideoPoster
+                            ? urlFor(s.mobileVideoPoster)
+                            : s?.videoPoster
+                                ? urlFor(s.videoPoster)
+                                : img;
+                        const isVideo = s?.mediaType === "video" && vidUrl;
                         return (
                             <div
                                 key={i}
                                 className={`absolute inset-0 transition-opacity duration-700 ${i === currentIndex ? "opacity-100 z-0" : "opacity-0 z-0 pointer-events-none"}`}
                             >
                                 {isVideo && vidUrl ? (
-                                    <video src={vidUrl} poster={img || "/assets/Hero-BB.png"} autoPlay muted loop playsInline className="w-full h-full object-cover object-center lg:object-right" />
+                                    <video src={vidUrl} poster={vidPoster || "/assets/Hero-BB.png"} autoPlay muted loop playsInline className="w-full h-full object-cover object-center lg:object-right" />
                                 ) : (
                                     <Image src={img || "/assets/Hero-BB.png"} alt="" fill className="object-cover object-center lg:object-right" unoptimized={!!img} />
                                 )}
@@ -174,8 +205,8 @@ const DEFAULT_MOBILE_CATEGORIES = [
 ];
 
 function MobileCategoryGrid({ data }: { data?: HomepageData | null }) {
-    // Hide when Sanity is set to "hero" mode — the full hero shows instead
-    if (data?.mobileHeroMode === "hero") return null;
+    // Only show category grid when Sanity explicitly sets "categories"; otherwise hero shows on mobile
+    if (data?.mobileHeroMode !== "categories") return null;
 
     const tagline = data?.mobileTagline ?? "Premium glass packaging for beauty & wellness brands.";
     const sectionLabel = data?.mobileSectionLabel ?? "Shop by Application";
@@ -590,7 +621,7 @@ function DesignFamilies({ designFamilyCards }: { designFamilyCards?: HomepageDat
         : DEFAULT_FAMILIES;
 
     return (
-        <section className="py-24 bg-bone overflow-hidden">
+        <section className="py-24 bg-warm-white overflow-hidden">
             <div className="pl-6 lg:pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))]">
                 <FadeUp className="mb-12">
                     <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-3">Already Know Your Style?</p>
@@ -640,7 +671,7 @@ function SocialProof() {
     ];
 
     return (
-        <section className="bg-bone py-24 overflow-hidden border-b border-champagne/40">
+        <section className="bg-parchment/20 py-24 overflow-hidden border-b border-champagne/40">
             <div className="max-w-[1440px] mx-auto px-6">
                 <FadeUp className="text-center mb-16">
                     <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-3">Who Trusts Best Bottles</p>

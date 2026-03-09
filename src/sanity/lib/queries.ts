@@ -10,6 +10,13 @@ export const HOMEPAGE_QUERY = `
         }
       },
       videoPoster,
+      mobileImage,
+      mobileVideo {
+        asset-> {
+          url
+        }
+      },
+      mobileVideoPoster,
       headline,
       subheadline,
       eyebrow,
@@ -158,6 +165,9 @@ export type HomepageData = {
         image?: { asset?: { _ref: string }; _type: string };
         video?: { asset?: { url?: string } };
         videoPoster?: { asset?: { _ref: string } };
+        mobileImage?: { asset?: { _ref: string }; _type: string };
+        mobileVideo?: { asset?: { url?: string } };
+        mobileVideoPoster?: { asset?: { _ref: string } };
         headline?: string;
         subheadline?: string;
         eyebrow?: string;

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
     Search, User, ShoppingBag, Mic, ChevronDown, Menu, X,
-    Sparkles, FlaskConical, Gem, ArrowRight,
+    Sparkles, FlaskConical, Gem, ArrowRight, Heart,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { useGrace } from "./useGrace";
@@ -199,7 +199,7 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
     ],
 };
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue }: NavbarProps) {
     const router = useRouter();
     const { openPanel, isOpen: graceActive } = useGrace();
     const { itemCount } = useCart();
@@ -439,8 +439,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                 </div>
 
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | search */}
-                    <div className="h-[56px] lg:h-[72px] flex items-center gap-2 sm:gap-4 lg:gap-6">
+                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | logo (centered) | heart */}
+                    <div className="h-[56px] lg:h-[72px] flex items-center gap-2 sm:gap-4 lg:gap-6 relative">
                         <button
                             aria-label="Open menu"
                             className="lg:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0"
@@ -448,6 +448,14 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         >
                             <Menu className="w-5 h-5" strokeWidth={1.75} />
                         </button>
+                        {/* Mobile logo — centered absolutely so hamburger/heart don't shift it */}
+                        <Link
+                            href="/"
+                            className="lg:hidden absolute left-1/2 -translate-x-1/2 font-display text-2xl font-medium tracking-tight text-obsidian pointer-events-auto"
+                        >
+                            BEST BOTTLES
+                        </Link>
+                        {/* Desktop logo */}
                         <Link
                             href="/"
                             className="hidden lg:flex font-display text-2xl font-medium tracking-tight text-obsidian shrink-0"
@@ -510,7 +518,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         </nav>
                         <form
                             onSubmit={handleSearchSubmit}
-                            className={`flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 ${hideMobileSearch ? "hidden lg:flex lg:min-w-[520px] lg:max-w-[520px]" : "flex-1 lg:flex-initial lg:min-w-[520px] lg:max-w-[520px]"}`}
+                            className="hidden lg:flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 lg:min-w-[520px] lg:max-w-[520px]"
                             suppressHydrationWarning
                         >
                             <Search className="w-4 h-4 text-slate shrink-0" />
@@ -540,50 +548,99 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                             <button type="submit" className="sr-only">Search</button>
                         </form>
                         <div className="hidden lg:flex flex-1" />
-                        <div className="flex items-center justify-end space-x-2 shrink-0">
+                        <div className="flex items-center justify-end space-x-2 shrink-0 ml-auto lg:ml-0">
+                            <button
+                                onClick={openPanel}
+                                aria-label="AI Help"
+                                title="Chat with Grace — AI Bottling Specialist"
+                                className={`hidden sm:flex items-center space-x-2 text-sm font-medium px-3.5 py-2 rounded-xl border transition-all duration-200 cursor-pointer ${graceActive
+                                        ? "bg-obsidian text-bone border-obsidian shadow-md"
+                                        : "bg-white text-obsidian border-champagne hover:border-muted-gold shadow-sm"
+                                    }`}
+                            >
+                                {graceActive ? (
+                                    <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
+                                        <span /><span /><span /><span />
+                                    </span>
+                                ) : (
+                                    <span className="w-2 h-2 rounded-full bg-muted-gold animate-grace-pulse shrink-0" />
+                                )}
+                                <span>AI Help</span>
+                            </button>
+
+                            {/* Wishlist — mobile only */}
+                            <Link href="/wishlist" aria-label="Wishlist" className="lg:hidden p-2 text-obsidian hover:text-muted-gold transition-colors">
+                                <Heart className="w-5 h-5" strokeWidth={1.5} />
+                            </Link>
+
+                            <Link href="/sign-in" aria-label="Account" className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors">
+                                <User className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
+                            </Link>
+
+                            <button
+                                aria-label="Cart"
+                                onClick={() => setCartOpen(true)}
+                                className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
+                            >
+                                <ShoppingBag className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
+                                {itemCount > 0 && (
+                                    <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
+                                        {itemCount > 99 ? "99" : itemCount}
+                                    </span>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Row 2: full-width search bar (mobile only) */}
+                    <div className="flex lg:hidden pb-3 border-t border-champagne/40 pt-2">
+                        <form
+                            onSubmit={handleSearchSubmit}
+                            className="flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
+                            suppressHydrationWarning
+                        >
+                            <Search className="w-4 h-4 text-slate shrink-0" />
+                            <input
+                                type="text"
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                                placeholder={searchPlaceholder}
+                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                aria-label="Search products"
+                                suppressHydrationWarning
+                            />
+                            <button
+                                type="button"
+                                onClick={handleMicClick}
+                                disabled={isTranscribing}
+                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
+                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
+                                        ? "text-muted-gold animate-grace-pulse"
+                                        : isTranscribing
+                                            ? "text-muted-gold animate-bounce"
+                                            : "text-slate/40 hover:text-slate"
+                                    }`}
+                            >
+                                <Mic className="w-4 h-4" />
+                            </button>
+                            <button type="submit" className="sr-only">Search</button>
+                        </form>
+                    </div>
+
+                    {/* Row 3: Grace prompt — mobile only */}
+                    <div className="flex lg:hidden pb-3">
                         <button
                             onClick={openPanel}
-                            aria-label="AI Help"
-                            title="Chat with Grace — AI Bottling Specialist"
-                            className={`hidden sm:flex items-center space-x-2 text-sm font-medium px-3.5 py-2 rounded-xl border transition-all duration-200 cursor-pointer ${graceActive
-                                    ? "bg-obsidian text-bone border-obsidian shadow-md"
-                                    : "bg-white text-obsidian border-champagne hover:border-muted-gold shadow-sm"
-                                }`}
+                            className="flex-1 flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-muted-gold/10 border border-muted-gold/25 hover:bg-muted-gold/15 active:bg-muted-gold/20 transition-colors cursor-pointer"
                         >
-                            {graceActive ? (
-                                <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
-                                    <span /><span /><span /><span />
-                                </span>
-                            ) : (
-                                <span className="w-2 h-2 rounded-full bg-muted-gold animate-grace-pulse shrink-0" />
-                            )}
-                            <span>AI Help</span>
+                            <span className="w-2 h-2 rounded-full bg-muted-gold animate-grace-pulse shrink-0" />
+                            <span className="text-[13px] text-obsidian">
+                                {graceActive ? "Grace is listening…" : "Ask Grace — fitments, sizing, compatibility"}
+                            </span>
+                            <span className="ml-auto text-[11px] font-bold uppercase tracking-wider text-muted-gold shrink-0">
+                                {graceActive ? "Open" : "Ask"}
+                            </span>
                         </button>
-
-                        <Link href="/sign-in" aria-label="Account" className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors">
-                            <User className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
-                        </Link>
-
-                        <button
-                            aria-label="Cart"
-                            onClick={() => setCartOpen(true)}
-                            className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
-                        >
-                            <ShoppingBag className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
-                            {itemCount > 0 && (
-                                <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
-                                    {itemCount > 99 ? "99" : itemCount}
-                                </span>
-                            )}
-                        </button>
-                    </div>
-                    </div>
-
-                    {/* Row 2: logo below search (mobile only) */}
-                    <div className="flex lg:hidden justify-center py-3 border-t border-champagne/40">
-                        <Link href="/" className="font-display text-2xl font-medium tracking-tight text-obsidian">
-                            BEST BOTTLES
-                        </Link>
                     </div>
                 </div>
             </header>
