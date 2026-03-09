@@ -1,0 +1,316 @@
+# BEST BOTTLES — UI/UX EVALUATION REPORT
+
+**Date:** March 9, 2026
+**Auditor:** Senior UX Auditor (AI-Assisted Code Review)
+**Platform:** bestbottles.com (Next.js 16 / Shopify / Convex / Sanity CMS)
+**Methodology:** Full codebase walkthrough of all UI components, pages, providers, and data flows
+
+---
+
+## CRITICAL ISSUES (Fix Immediately — Blocks conversion or breaks brand trust)
+
+### C1. shadcn CSS Variables Use Blue Palette — Brand Color Violation
+**Page:** Site-wide (every shadcn/ui component)
+**Files:** `src/app/globals.css` lines 15-30, `src/components/ui/button.tsx`, `src/components/ui/card.tsx`
+**Problem:** The shadcn/ui CSS variable palette was never customized from its default blue-gray theme. `--primary` resolves to `hsl(222.2, 47.4%, 11.2%)` (dark blue-gray), `--accent` is light blue-gray, `--ring` produces blue focus rings, and `--border` has a blue tint. Every button using `bg-primary`, every focus ring, every card border, and every input outline renders in blue — directly violating the "No blues or teals in UI chrome" brand mandate.
+**User Impact:** The site presents a split personality: custom brand components (hero, trust section, nav) feel premium and on-brand, while all interactive UI elements (buttons, forms, modals, inputs) feel like a generic Next.js starter template. This undermines the "Muted Luxury" positioning at every interaction point.
+**Recommended Fix:** Override all shadcn CSS variables in `globals.css`:
+- `--primary` → Antiqued Gold `#C5A065` (HSL: 37, 42%, 58%)
+- `--primary-foreground` → Obsidian `#1D1D1F`
+- `--accent` → Gold Light `#D4B87A`
+- `--border` → warm gray derived from Bone (e.g., `hsl(37, 10%, 85%)`)
+- `--ring` → Antiqued Gold
+- `--muted` → Bone `#F5F3EF`
+- `--muted-foreground` → Obsidian at 60% opacity
+
+### C2. No Top-Level "Catalog" / "Shop All" Link in Navigation
+**Page:** Global navigation (`src/components/layout/Navbar.tsx`)
+**Problem:** The primary nav has "Bottles", "Closures", "Specialty" — each links to `/catalog` with a pre-filtered category. There is no unfiltered `/catalog` entry point. The "Browser" archetype ("Show me everything") has no single-click path to the full product catalog.
+**User Impact:** A decisive buyer or curious explorer who wants to see the full 230+ product range must click a category and then manually clear filters, or know to type `/catalog` directly. The "All Products" link only exists buried in the footer.
+**Recommended Fix:** Add a "Catalog" or "Shop All" link to the primary nav (between Specialty and Journal), linking to `/catalog` with no filters.
+
+### C3. No Breadcrumbs on Any Interior Page
+**Page:** Site-wide — catalog, PDP, blog, about, resources
+**Problem:** Zero breadcrumb components exist in the codebase. No `<nav aria-label="breadcrumb">` anywhere. Users navigating Home → Bottles → Diva → Diva 30ml Clear have no visual trail and no way to navigate upward in the hierarchy without browser back or re-navigating from the top menu.
+**User Impact:** With 230+ product groups across 40+ families, breadcrumbs are essential for orientation ("Where am I?"), upward navigation ("Back to Diva family"), and SEO (structured data). Their absence creates dead-end navigation on every interior page.
+**Recommended Fix:** Create a `<Breadcrumb>` component using the route structure. Render on catalog (`Home > Catalog > [Category]`), PDP (`Home > Catalog > [Family] > [Product]`), blog, and all interior pages.
+
+### C4. Cart Items Don't Show Variant Details
+**Page:** Cart Drawer (`src/components/cart/CartItem.tsx` ~line 25)
+**Problem:** Cart items display only `itemName` (e.g., "Diva 30ml Clear") without specifying which variant — Spray, Roll-On, Dropper, Cap, etc. The `graceSku` is stored but not rendered in human-readable form.
+**User Impact:** A buyer adding the same bottle with two different closures sees two identical line items in their cart. They cannot distinguish between them without memorizing SKU codes. This directly causes ordering errors and erodes trust.
+**Recommended Fix:** Display variant attributes below the item name: applicator type, cap color, cap style. Parse from the stored `family`, `capacity`, `color` fields already in the CartItem interface, or add an `applicatorType` display field.
+
+### C5. No Tier Pricing Nudge in Cart
+**Page:** Cart Summary (`src/components/cart/CartSummary.tsx`)
+**Problem:** The cart shows subtotal only. No indication of which pricing tier the buyer is in, how close they are to the next tier, or what savings are available at higher quantities. For a B2B site where volume pricing is the core value proposition, this is a critical omission.
+**User Impact:** A buyer with 450 units doesn't know that adding 50 more unlocks Scaler pricing (15% off). Revenue is left on the table, and the buyer feels the site doesn't understand their business context.
+**Recommended Fix:** Add a tier progress indicator to `CartSummary`: "You're at Graduate pricing. Add 50 more units to unlock Scaler pricing and save 15%." Show the current tier, next tier threshold, and potential savings.
+
+### C6. No Shipping or Lead Time Information Anywhere in Cart Flow
+**Page:** Cart, PDP, checkout flow
+**Problem:** Zero shipping estimates, delivery timeframes, or lead time expectations are communicated anywhere before the Shopify checkout redirect. No "Ships in X days", "In stock — ready to ship", or "Made to order — 2-3 week lead time" messaging exists.
+**User Impact:** B2B buyers planning production runs need delivery estimates to make purchasing decisions. The absence of this information forces them to contact sales before ordering, adding friction and reducing conversion.
+**Recommended Fix:** Add stock-status-aware shipping messaging to PDP ("In Stock — Ships in 2-3 business days") and cart ("Estimated delivery: [date range]"). Distinguish between stock and made-to-order items.
+
+---
+
+## HIGH PRIORITY (Fix Before Launch — Significant friction or UX gap)
+
+### H1. Quote Form Doesn't Pre-Populate with Current Product/Cart
+**Page:** `/request-quote` (`src/app/(main)/request-quote/RequestQuotePage.tsx` ~line 65)
+**Problem:** When a user clicks "Request a Quote" from a PDP, the form starts blank. Product details must be re-entered manually. Cart contents are not carried over either.
+**Recommended Fix:** Read URL query params (`?sku=X&product=Y&qty=Z`) and pre-fill product/quantity fields. Add a "Request Quote for Cart" flow that populates with all cart items.
+
+### H2. No "Sort by Capacity" Option — Specifically Requested
+**Page:** Catalog (`src/components/catalog/CatalogToolbar.tsx` ~line 45)
+**Problem:** Sort options include Price, Name, Family, and Most Variants — but no Capacity sort. The `productGroups` data has `capacityMl` available. Abbas specifically requested this.
+**Recommended Fix:** Add "Capacity: Small to Large" and "Capacity: Large to Small" sort options using `capacityMl`.
+
+### H3. No Out-of-Stock Indication on Catalog Cards
+**Page:** Catalog grid (`src/components/catalog/ProductGroupCard.tsx`)
+**Problem:** Stock status is only revealed after clicking into a PDP and selecting a specific variant. Catalog cards show no stock badges. No "In Stock Only" filter exists.
+**Recommended Fix:** Aggregate stock status to the `productGroups` level (e.g., "all in stock", "some limited", "out of stock"). Show badges on cards and add an "In Stock Only" filter to the sidebar.
+
+### H4. Many Product Groups Missing Hero Images — Placeholder Icons Shown
+**Page:** Catalog grid (`ProductGroupCard.tsx` ~line 45)
+**Problem:** Product groups without a `heroImageUrl` render a generic placeholder icon. This makes the catalog grid look incomplete and unprofessional. This is a data issue, not a code bug.
+**Recommended Fix:** Audit all 230 product groups for missing images. As a code fallback, use the `imageUrl` from the group's primary variant (`primaryWebsiteSku` → product → `imageUrl`) when `heroImageUrl` is null.
+
+### H5. Color Selection Navigates to a Different Page
+**Page:** PDP (`src/components/pdp/ColorSwatches.tsx` ~line 65)
+**Problem:** Clicking a color swatch triggers `router.push(/products/${siblingSlug})` — a full page navigation. The user loses scroll position, expanded sections, and mental context. It feels like navigating away rather than selecting a color variant.
+**Recommended Fix:** Implement client-side variant swapping for color changes where possible, preserving the current page state. If groups have different slugs, at minimum use `router.replace()` with `scroll: false` and transition animations.
+
+### H6. PDP Educational Blocks Entirely CMS-Dependent — Most PDPs Are Bare
+**Page:** PDP (`src/components/pdp/PdpBlocks.tsx` ~line 25)
+**Problem:** If no Sanity `productGroupContent` or `productFamilyContent` exists for a product, the PDP shows zero educational content — no FAQ, no feature strip, no trust badges. The PDP is image + specs + price + CTA and nothing else. Most of the 230+ groups likely have bare PDPs.
+**Recommended Fix:** Add hardcoded "default" PDP elements that render on every product regardless of CMS: trust badges ("Fitment Guaranteed", "Free Samples Available", "Ships in 2-3 Days"), a brief explanation of assembly types, and a link to the fitment guide.
+
+### H7. Capacity Filter Shows Raw Values Instead of Grouped Ranges
+**Page:** Catalog sidebar (`src/components/catalog/CatalogSidebar.tsx` ~line 165)
+**Problem:** The sidebar shows individual capacities ("5 ml", "9 ml", "15 ml"...) while the mega menu offers grouped ranges ("Miniature 1-5ml", "Small 6-15ml"). A user wanting "small bottles" must check multiple individual values. Disconnect between mega menu and sidebar creates confusion.
+**Recommended Fix:** Group capacity filter options into ranges matching the mega menu: Miniature (1-5ml), Small (6-15ml), Medium (25-50ml), Large (55-120ml), Bulk (128ml+).
+
+### H8. Multiple Tap Targets Below 44px Minimum on Mobile
+**Page:** Mobile nav, catalog filters, pagination, cart stepper
+**Files:** `MobileNav.tsx` ~line 95 (`py-2` = ~32px), `CatalogSidebar.tsx` (filter checkboxes ~30px), `CatalogPagination.tsx` (`w-8 h-8` = 32px), `CartItem.tsx` (quantity stepper `w-8 h-8` = 32px)
+**Problem:** Apple's HIG and WCAG recommend minimum 44px touch targets. Several interactive elements fall to 30-36px, causing misclicks on mobile.
+**Recommended Fix:** Increase padding on all interactive mobile elements to achieve 44px minimum touch targets. For checkboxes, use `py-3` minimum. For pagination and stepper buttons, use `w-11 h-11`.
+
+### H9. Checkout Redirects to Unbranded Shopify
+**Page:** Cart → Checkout (`src/app/api/shopify/resolve-variants/route.ts`)
+**Problem:** "Proceed to Checkout" constructs a Shopify cart permalink and redirects the user entirely out of the Best Bottles experience. Shopify's default checkout uses its own theme — no Obsidian/Bone/Gold, no EB Garamond, no Grace AI.
+**Recommended Fix:** At minimum, customize the Shopify checkout theme to match BB brand colors and typography (Shopify Plus supports checkout customization). Long-term, consider Shopify's Checkout Extensibility or a custom checkout page.
+
+### H10. Specs Table Below the Fold on PDP
+**Page:** PDP (`src/app/(main)/products/[slug]/ProductPage.tsx` ~line 320)
+**Problem:** Technical specs (dimensions, thread size, weight) are positioned after image, pricing, CTA, and variant selector. B2B buyers who need exact measurements must scroll to find them.
+**Recommended Fix:** Add a compact "Key Specs" summary (capacity, thread size, height, diameter) in the right column near the CTA. Keep the full specs table below for completeness.
+
+### H11. PDP Extremely Long Vertical Scroll on Mobile — No Collapsible Sections
+**Page:** Mobile PDP (`ProductPage.tsx`)
+**Problem:** On mobile, a typical PDP with specs, fitments, and editorial blocks can reach 3000-4000px. Image alone consumes 56% of the viewport. No sticky "Add to Cart" bar exists. Users must scroll back up to purchase.
+**Recommended Fix:** Add collapsible accordion sections for Specs, Fitments, and Editorial on mobile. Implement a sticky bottom "Add to Cart" bar that appears on scroll.
+
+### H12. Grace Widget Overlaps Content and Potential Sticky CTA on Mobile
+**Page:** All mobile pages (`src/components/grace/GraceChatWidget.tsx`)
+**Problem:** The 56px Grace button at `fixed bottom-6 right-6` overlaps product cards in the catalog grid and would overlap a sticky mobile CTA bar if implemented. No safe zone padding exists.
+**Recommended Fix:** Add `pb-20` (80px) bottom padding to catalog grid and PDP content on mobile. If implementing a sticky CTA bar, move the Grace widget above it or to a different position.
+
+---
+
+## MEDIUM PRIORITY (Fix Post-Launch — Polish and optimization)
+
+### M1. Search Only Queries `itemName` — No Multi-Field Search
+**Page:** Nav search (`src/components/layout/NavSearch.tsx`, `convex/products.ts`)
+**Problem:** Searching "30ml amber dropper" requires all words to match within `itemName`. No cross-field search combining capacity + color + applicator.
+**Recommended Fix:** Implement composite search that queries across `itemName`, `color`, `capacity`, `family`, and `applicator` fields.
+
+### M2. Search Results Don't Show Product Images
+**Page:** Nav search (`NavSearch.tsx`)
+**Recommended Fix:** Add thumbnail images to search result items for visual product recognition.
+
+### M3. Price Range Format on Cards is Confusing
+**Page:** Catalog cards (`ProductGroupCard.tsx`)
+**Problem:** "$2.50 – $8.90" doesn't indicate what causes the range (variant vs quantity).
+**Recommended Fix:** Clarify as "From $2.50/unit" or show "1pc: $8.90 | 500+: $2.50".
+
+### M4. Color Variants Not Shown on Catalog Cards
+**Page:** Catalog cards (`ProductGroupCard.tsx`)
+**Recommended Fix:** Add small color dot indicators below the card image showing available color variants.
+
+### M5. No "Request Quote" Button in Cart Drawer
+**Page:** Cart Drawer (`CartDrawer.tsx`)
+**Recommended Fix:** Add a secondary "Request Quote for This Order" CTA below "Proceed to Checkout" for B2B buyers.
+
+### M6. No Compatibility Warnings in Cart
+**Page:** Cart (`CartProvider.tsx`)
+**Problem:** Adding a bottle and an incompatible sprayer (wrong thread size) triggers no warning.
+**Recommended Fix:** Run thread-size compatibility checks when items are added. Show a warning badge on incompatible pairs.
+
+### M7. No Order Review Step Before Shopify Redirect
+**Page:** Cart Drawer (`CartDrawer.tsx`)
+**Recommended Fix:** Add a review step showing final item list, tier pricing summary, and compatibility confirmation before redirecting to Shopify.
+
+### M8. Sample Flow Not Accessible from PDP
+**Page:** PDP
+**Problem:** PDP has "Add to Cart" and "Request a Quote" but no "Order a Sample" link.
+**Recommended Fix:** Add an "Order a Sample" text link near the CTA area, especially for first-time buyers.
+
+### M9. Mega Menu Product Counts Are Hardcoded
+**Page:** Nav (`src/components/layout/Navbar.constants.ts`)
+**Problem:** Counts like "Roll-On Bottles (47)" are static strings that will become stale.
+**Recommended Fix:** Fetch live counts from `productGroups` data or remove counts to avoid stale data.
+
+### M10. Mobile Filter Panel Lacks "Show X Results" Button
+**Page:** Mobile catalog sidebar
+**Recommended Fix:** Add a sticky "Show X Results" button at the bottom of the mobile filter panel that also closes the panel.
+
+### M11. Out-of-Stock Variants Still Clickable on PDP
+**Page:** PDP variant selector (`VariantSelector.tsx`)
+**Recommended Fix:** Gray out and badge out-of-stock variants. Show "Notify Me" instead of allowing selection.
+
+### M12. Variant Selector Lacks Visual Previews for Applicator Types
+**Page:** PDP (`VariantSelector.tsx`)
+**Recommended Fix:** Add small icons or thumbnails for each applicator type (spray icon, roller icon, dropper icon) next to text labels.
+
+### M13. No "Continue Shopping" or Related Products in Cart Drawer
+**Page:** Cart Drawer
+**Recommended Fix:** Add "You might also need..." showing compatible closures for bottles in the cart.
+
+### M14. 404 Page Too Minimal for Premium Brand
+**Page:** `src/app/not-found.tsx`
+**Recommended Fix:** Add branded illustration, "Search our catalog" CTA, "Ask Grace" button, and links to popular categories.
+
+### M15. Loading Skeletons Use Gray Instead of Brand Colors
+**Page:** Various loading states
+**Recommended Fix:** Use Bone-colored skeletons with subtle gold shimmer animation.
+
+### M16. Start Here Section Title is Generic
+**Page:** Homepage (`StartHereSection.tsx`)
+**Recommended Fix:** Change "Start Here" to "Shop by Use Case" or "Solutions for Your Brand."
+
+### M17. No Quantity-Based CTA Swap on PDP
+**Page:** PDP
+**Problem:** When a buyer enters 500+ units, CTA should emphasize "Request a Quote" over "Add to Cart."
+**Recommended Fix:** When quantity exceeds a threshold (e.g., 500), swap primary CTA to "Request a Quote" with "Add to Cart" as secondary.
+
+### M18. Empty Catalog State Doesn't Suggest Alternatives or Grace
+**Page:** Catalog (`EmptyState.tsx`)
+**Recommended Fix:** Add "Ask Grace for help" button and suggest removing specific filters.
+
+### M19. Line View Lacks Sortable Column Headers
+**Page:** Catalog line view (`ProductGroupRow.tsx`)
+**Recommended Fix:** Make column headers clickable for sorting in line/table view.
+
+### M20. About Page Heritage Section May Be Too Long-Form
+**Page:** `/about` (`AboutPage.tsx`)
+**Recommended Fix:** Use progressive disclosure — lead with key metrics, expand to full narrative.
+
+---
+
+## GRACE AI SPECIFIC FINDINGS
+
+### G1. Greeting Appears at 3 Seconds, Not 5 as Specified
+**File:** `GraceChatWidget.tsx` ~line 72
+**Behavior:** `setTimeout` set to 3000ms.
+**Expected:** 5000ms idle trigger as specified in brand requirements.
+**Fix:** Change timeout to 5000ms. Also track real user interaction (scroll, click) — not just chat panel open — before suppressing the greeting.
+
+### G2. Greeting Bubble is Static — Not Page-Contextual
+**File:** `GraceChatWidget.tsx` ~line 85
+**Behavior:** Same generic "Hi! I'm Grace..." message on every page.
+**Expected:** Contextual greetings: Homepage ("Tell me about your project"), Catalog ("I can help you narrow down options"), PDP ("Want help choosing a closure for this bottle?"), Cart ("Ready to check out? I can review compatibility").
+**Fix:** Pass `currentPath` to the greeting logic and render page-specific messages.
+
+### G3. Grace Doesn't Receive Current Product Data on PDP
+**File:** `src/lib/grace/graceContext.tsx`
+**Behavior:** Grace knows the URL (`/products/diva-30ml-clear-18-415`) but must make a `getProductDetails` tool call to get product info — adding latency.
+**Expected:** Current product's key data (name, SKU, price, thread size, applicator) should be injected into Grace's context when on a PDP.
+**Fix:** Extend `graceContext` to include `currentProduct` object when on PDP routes.
+
+### G4. No `compareProducts` Tool
+**File:** `src/lib/grace/graceTools.ts`
+**Behavior:** Grace can't side-by-side compare two products. Must make two `getProductDetails` calls and manually compose a comparison.
+**Expected:** A dedicated `compareProducts` tool that returns a structured comparison table.
+**Fix:** Add `compareProducts` tool accepting two SKUs and returning a diff of specs, pricing, and compatibility.
+
+### G5. `navigateUser` Tool Has No URL Schema Validation
+**File:** `graceTools.ts` ~line 135
+**Behavior:** Grace constructs catalog URLs as raw strings. If URL param format changes, navigation silently breaks.
+**Fix:** Validate URLs against the actual catalog filter schema before executing navigation. Use a URL builder utility.
+
+### G6. `searchCatalog` Limited to 10 Results with No Pagination
+**File:** `graceTools.ts` ~line 52
+**Behavior:** Broad queries return only 10 results. No "show more" capability.
+**Fix:** Increase to 15-20 results and add a `showMore` tool or pagination parameter.
+
+### G7. Grace Doesn't Track Browsing History Within Session
+**File:** `graceContext.tsx`
+**Behavior:** Grace only knows the current page. Can't say "I noticed you were looking at Diva and Sleek — want me to compare?"
+**Fix:** Maintain a rolling array of last 5 pages visited in the Grace context.
+
+### G8. Cart Proposal Doesn't Show Which Bottle It's Compatible With
+**File:** `src/components/grace/GraceCartProposal.tsx`
+**Behavior:** Shows "Add Gold Mist Sprayer?" without context of which cart item it matches.
+**Fix:** Include "Compatible with: Diva 30ml Clear (in your cart)" in the proposal card.
+
+### G9. Grace Doesn't Proactively Check Cart Compatibility
+**Behavior:** Grace waits to be asked about compatibility instead of automatically flagging mismatches when the cart drawer opens.
+**Fix:** Add a cart-open event trigger that prompts Grace to review compatibility and surface any warnings.
+
+### G10. Voice Toggle Only Accessible Inside Expanded Panel
+**File:** `GraceVoiceMode.tsx`
+**Behavior:** Users must open the chat panel first, then find the voice toggle.
+**Fix:** Add a microphone icon on the collapsed widget button or a "Talk to Grace" entry point.
+
+### G11. Grace Doesn't Know User Account Type (Retail vs B2B)
+**File:** `graceContext.tsx`
+**Behavior:** Grace treats all users the same regardless of Clerk organization/role.
+**Fix:** Pass Clerk user type/organization data to Grace context so she can adjust tone and recommendations.
+
+### G12. Grace Doesn't Suggest Sample Orders Alongside MOQ Information
+**File:** `graceSystemPrompt.ts`
+**Behavior:** When discussing minimums, Grace doesn't mention the sample program.
+**Fix:** Add to system prompt: "When a customer asks about MOQs, always mention the sample program as an option for evaluation."
+
+---
+
+## WHAT'S WORKING WELL
+
+### 1. Thread-Based Fitment Matching Engine
+The compatibility system using `neckThreadSize` to match bottles with closures is sophisticated and genuinely useful. The `getCompatibleFitments` query, `selectBestFitmentRule()` logic, and "This Bottle Also Takes" cross-sell section solve real buyer problems. This is a major differentiator that most packaging suppliers don't offer online.
+
+### 2. Sanity Editorial Block System
+The `PdpBlocks` architecture — where content can be customized per-product or inherited from a family template — is well-designed. Feature strips, FAQs, galleries, and trust badges can be composed flexibly. The gap is content population, not architecture.
+
+### 3. Grace AI Conversational Architecture
+The tool-based approach (searchCatalog, getProductDetails, getCompatibleFitments, proposeCartAdd, navigateUser, form tools) gives Grace genuine utility beyond a generic chatbot. The system prompt is remarkably detailed with persona backstory, tone guidelines, and escalation rules. Voice mode via ElevenLabs is a strong differentiator.
+
+### 4. Dual-View Catalog (Visual Grid + Line View)
+Offering both grid and line/table views serves two buyer archetypes: the visual browser and the data-driven comparison shopper. Combined with comprehensive filtering (8+ dimensions) and URL-based deep linking, the catalog is technically strong.
+
+### 5. B2B Portal Infrastructure
+The Clerk-gated portal with account dashboard, order history, draft orders, and Grace Projects demonstrates serious B2B commitment. The tiered account structure (Graduate, Scaler, Professional) with different pricing and features is well-architected for scaling businesses.
+
+---
+
+## OVERALL FLUIDITY SCORES
+
+| Section | Score | Justification |
+|---------|-------|---------------|
+| **Homepage** | 6/10 | Strong brand sections but value prop is entirely CMS-dependent; no fallback hero; no clear "Shop All" CTA |
+| **Navigation** | 5/10 | Mega menus are well-structured but no breadcrumbs, no unfiltered catalog link, and mobile tap targets are undersized |
+| **Collection Pages** | 6/10 | Comprehensive filters and dual view modes, but missing capacity sort, out-of-stock indicators, and grouped capacity ranges |
+| **Product Detail Pages** | 5/10 | Fitment matching is excellent but specs are below fold, color swap navigates away, most PDPs are bare without CMS content |
+| **Grace AI** | 7/10 | Strongest feature — deep tool set, good persona, voice mode. Weakened by static greetings, no page context injection, and missing comparison tool |
+| **Mobile** | 4/10 | Functional but unpolished — tap targets too small, no sticky CTA, Grace overlaps content, PDP scroll is excessive |
+| **Cart & Checkout** | 3/10 | Cart items lack variant details, no tier nudge, no compatibility warnings, no shipping info, checkout abandons brand entirely |
+| **Brand Consistency** | 5/10 | Custom components are premium but shadcn blue palette violation undermines every interaction; 404 and error states are generic |
+
+---
+
+## OVERALL PLATFORM SCORE: 5.1 / 10
+
+Best Bottles has strong architectural foundations — the fitment engine, Grace AI, Sanity editorial system, and B2B portal represent genuine differentiation. However, the platform is undermined by two systemic problems: (1) the shadcn/ui blue palette was never customized, creating a visual split personality between premium brand components and generic UI elements, and (2) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates) before ejecting users to an unbranded Shopify checkout. **The single most important fix is overhauling the CSS variables in `globals.css` to replace the blue shadcn palette with the Obsidian/Bone/Gold brand system** — this is a single-file change that immediately elevates every interactive element across the entire site.
