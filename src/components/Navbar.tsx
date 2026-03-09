@@ -184,7 +184,6 @@ type NavLinkDef =
 
 const NAV_LINKS: Record<string, NavLinkDef[]> = {
     home: [
-        { label: "Shop All", href: "/catalog" },
         { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
         { label: "Closures", href: "/catalog?category=Component", megaId: "closures" as MegaMenuId },
         { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
@@ -192,7 +191,6 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
         { label: "About", href: "/about" },
     ],
     catalog: [
-        { label: "Shop All", href: "/catalog" },
         { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
         { label: "Closures", href: "/catalog?category=Component", megaId: "closures" as MegaMenuId },
         { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
@@ -441,7 +439,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                 </div>
 
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-                    {/* Row 1: hamburger (mobile) | nav + search (desktop) | actions */}
+                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | search */}
                     <div className="h-[56px] lg:h-[72px] flex items-center gap-2 sm:gap-4 lg:gap-6">
                         <button
                             aria-label="Open menu"
@@ -450,39 +448,14 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         >
                             <Menu className="w-5 h-5" strokeWidth={1.75} />
                         </button>
-                        <form
-                            onSubmit={handleSearchSubmit}
-                            className={`flex flex-1 lg:flex-initial lg:max-w-[280px] min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 ${hideMobileSearch ? "hidden lg:flex" : ""}`}
-                            suppressHydrationWarning
+                        <Link
+                            href="/"
+                            className="hidden lg:flex font-display text-2xl font-medium tracking-tight text-obsidian shrink-0"
                         >
-                            <Search className="w-4 h-4 text-slate shrink-0" />
-                            <input
-                                type="text"
-                                value={searchValue}
-                                onChange={(e) => setSearchValue(e.target.value)}
-                                placeholder={searchPlaceholder}
-                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
-                                aria-label="Search products"
-                                suppressHydrationWarning
-                            />
-                            <button
-                                type="button"
-                                onClick={handleMicClick}
-                                disabled={isTranscribing}
-                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
-                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
-                                        ? "text-muted-gold animate-grace-pulse"
-                                        : isTranscribing
-                                            ? "text-muted-gold animate-bounce"
-                                            : "text-slate/40 hover:text-slate"
-                                    }`}
-                            >
-                                <Mic className="w-4 h-4" />
-                            </button>
-                            <button type="submit" className="sr-only">Search</button>
-                        </form>
+                            BEST BOTTLES
+                        </Link>
                         <nav
-                            className="hidden lg:flex items-center space-x-8 text-sm font-medium text-obsidian tracking-wide uppercase shrink-0"
+                            className="hidden lg:flex items-center gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
                             ref={megaRef}
                         >
                             {links.map((link) => {
@@ -535,6 +508,37 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                 );
                             })}
                         </nav>
+                        <form
+                            onSubmit={handleSearchSubmit}
+                            className={`flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 ${hideMobileSearch ? "hidden lg:flex lg:min-w-[520px] lg:max-w-[520px]" : "flex-1 lg:flex-initial lg:min-w-[520px] lg:max-w-[520px]"}`}
+                            suppressHydrationWarning
+                        >
+                            <Search className="w-4 h-4 text-slate shrink-0" />
+                            <input
+                                type="text"
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                                placeholder={searchPlaceholder}
+                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                aria-label="Search products"
+                                suppressHydrationWarning
+                            />
+                            <button
+                                type="button"
+                                onClick={handleMicClick}
+                                disabled={isTranscribing}
+                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
+                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
+                                        ? "text-muted-gold animate-grace-pulse"
+                                        : isTranscribing
+                                            ? "text-muted-gold animate-bounce"
+                                            : "text-slate/40 hover:text-slate"
+                                    }`}
+                            >
+                                <Mic className="w-4 h-4" />
+                            </button>
+                            <button type="submit" className="sr-only">Search</button>
+                        </form>
                         <div className="hidden lg:flex flex-1" />
                         <div className="flex items-center justify-end space-x-2 shrink-0">
                         <button
@@ -575,8 +579,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     </div>
                     </div>
 
-                    {/* Row 2: logo below search */}
-                    <div className="flex justify-center py-3 lg:py-4 border-t border-champagne/40">
+                    {/* Row 2: logo below search (mobile only) */}
+                    <div className="flex lg:hidden justify-center py-3 border-t border-champagne/40">
                         <Link href="/" className="font-display text-2xl font-medium tracking-tight text-obsidian">
                             BEST BOTTLES
                         </Link>
@@ -622,7 +626,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                                 key={link.label}
                                                 href={link.href}
                                                 onClick={() => setMobileMenuOpen(false)}
-                                                className="flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold uppercase tracking-wide text-obsidian border-b border-champagne/40"
+                                                className="flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian border-b border-champagne/40"
                                             >
                                                 {link.label}
                                                 <ArrowRight className="w-4 h-4 text-slate" />
@@ -637,7 +641,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                         <div key={link.label} className="border-b border-champagne/40 pb-2">
                                             <button
                                                 onClick={() => setMobileOpenSection(isExpanded ? null : link.megaId)}
-                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold uppercase tracking-wide text-obsidian"
+                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian"
                                                 aria-expanded={isExpanded}
                                             >
                                                 {link.label}

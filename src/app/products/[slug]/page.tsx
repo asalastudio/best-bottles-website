@@ -13,6 +13,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import FitmentDrawer from "@/components/FitmentDrawer";
+import PdpGraceTrigger from "@/components/PdpGraceTrigger";
 import { useCart } from "@/components/CartProvider";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -837,6 +838,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         )}
                                     </div>
                                 )}
+                            </div>
+
+                            {/* ── Ask Grace (inline, un-intrusive) ───────────────────────────────────────── */}
+                            <div className="mb-6 sm:mb-8">
+                                <PdpGraceTrigger />
                             </div>
 
                             {/* ── Variant Selectors (hidden for atomizers — glass color is the only selection) ── */}

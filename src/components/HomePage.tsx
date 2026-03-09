@@ -4,7 +4,7 @@ import React, { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Zap, ShoppingBag, Search, MessageCircle, Compass, ChevronRight, Check, ShieldCheck } from "lucide-react";
+import { ArrowRight, Zap, ShoppingBag, Search, Compass, ChevronRight, Check, ShieldCheck, MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
@@ -240,7 +240,7 @@ function TrustBar() {
     ];
 
     return (
-        <section className="bg-linen border-y border-champagne/50 py-6 sm:py-8 relative z-20">
+        <section className="hidden sm:block bg-linen border-y border-champagne/50 py-6 sm:py-8 relative z-20 min-h-[112px] mt-0 mb-0">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
                 <div className="grid grid-cols-3 gap-4 sm:gap-6 divide-x divide-champagne/60">
                     {items.map((item, i) => (
@@ -561,7 +561,7 @@ function PathChooser() {
                                 <MessageCircle className="w-6 h-6 text-obsidian/50 group-hover:text-muted-gold transition-colors" />
                             </div>
                             <h3 className="font-serif text-xl text-obsidian font-medium mb-2">Talk to Grace</h3>
-                            <p className="text-xs text-slate leading-relaxed mb-5">Our AI bottling specialist will guide you.</p>
+                            <p className="text-xs text-slate leading-relaxed mb-5">Your AI bottling specialist for fitment and product guidance.</p>
                             <span className="text-xs font-semibold text-muted-gold uppercase tracking-wider flex items-center group-hover:gap-2 transition-all duration-300">
                                 Ask Now <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                             </span>

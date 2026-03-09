@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { Home, LayoutGrid, ShoppingBag, Sparkles, User, X } from "lucide-react";
+import { Home, LayoutGrid, ShoppingBag, Headphones, User, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "../CartProvider";
 import { useGrace } from "../useGrace";
@@ -24,7 +24,7 @@ const TABS: Tab[] = [
     { key: "home", label: "Home", icon: Home, href: "/" },
     { key: "catalog", label: "Catalog", icon: LayoutGrid, href: "/catalog" },
     { key: "cart", label: "Cart", icon: ShoppingBag, action: "cart" },
-    { key: "grace", label: "Grace", icon: Sparkles, action: "grace" },
+    { key: "grace", label: "AI Help", icon: Headphones, action: "grace" },
     { key: "account", label: "Account", icon: User, href: "/account" },
 ];
 
@@ -87,7 +87,7 @@ export default function MobileTabBar() {
 
                     const inner = (
                         <span className="flex flex-col items-center gap-0.5 relative">
-                            <span className="relative">
+                            <span className={`relative ${tab.key === "grace" && showGraceTooltip ? "animate-grace-pulse-subtle" : ""}`}>
                                 <Icon
                                     className={`w-5 h-5 transition-colors duration-150 ${
                                         active
@@ -129,7 +129,7 @@ export default function MobileTabBar() {
                                             className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[200px] z-[60]"
                                         >
                                             <div className="bg-obsidian text-bone text-xs rounded-xl shadow-xl px-3 py-2.5 pr-7 relative">
-                                                <p className="leading-snug">Chat with Grace anytime for fitment, pricing, or product help.</p>
+                                                <p className="leading-snug">Need fitment help? Ask Grace — your bottle & closure expert.</p>
                                                 <button
                                                     onClick={(e) => { e.stopPropagation(); dismissGraceTooltip(); }}
                                                     aria-label="Dismiss"

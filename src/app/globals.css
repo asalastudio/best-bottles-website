@@ -199,6 +199,16 @@ body {
   animation: gracePulse 2s ease-in-out infinite;
 }
 
+/* PDP Grace trigger — softer pulse */
+@keyframes gracePulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.05); }
+}
+
+.animate-grace-pulse-subtle {
+  animation: gracePulseSubtle 2.5s ease-in-out infinite;
+}
+
 /* Grace Atelier — voice amplitude bars */
 @keyframes graceBar {
   0%, 100% { height: 3px; }
