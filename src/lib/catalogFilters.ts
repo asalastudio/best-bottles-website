@@ -61,6 +61,7 @@ export function applicatorBucketMatchesProductValues(bucket: ApplicatorBucket, p
 
 export const SORT_OPTIONS = [
     { value: "featured", label: "By Design Family" },
+    { value: "best-match", label: "Best Match" },
     { value: "price-asc", label: "Price: Low to High" },
     { value: "price-desc", label: "Price: High to Low" },
     { value: "name-asc", label: "Name: A–Z" },

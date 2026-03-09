@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Best Bottles — Technology Stack Overview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+  :root {
+    --obsidian: #1a1a1a;
+    --linen: #FAF8F5;
+    --muted-gold: #B8965A;
+    --champagne: #E8DFD0;
+    --travertine: #F0EBE3;
+    --warm-white: #FDFCFA;
+    --slate: #6B7280;
+    --soft-black: #2D2D2D;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  @page {
+    size: A4;
+    margin: 0;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--linen);
+    color: var(--obsidian);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* ─── COVER PAGE ─── */
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto;
+    background: white;
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+  }
+
+  .cover {
+    background: linear-gradient(145deg, #1a1a1a 0%, #2D2D2D 40%, #3a3530 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 50px;
+  }
+
+  .cover-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(184, 150, 90, 0.15);
+    border: 1px solid rgba(184, 150, 90, 0.3);
+    color: var(--muted-gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 100px;
+    margin-bottom: 50px;
+  }
+
+  .cover h1 {
+    font-size: 52px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -1.5px;
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+
+  .cover h1 span {
+    background: linear-gradient(135deg, var(--muted-gold), #D4B87A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .cover-subtitle {
+    font-size: 18px;
+    color: rgba(255,255,255,0.5);
+    font-weight: 300;
+    letter-spacing: 0.3px;
+    margin-bottom: 60px;
+  }
+
+  .cover-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2px;
+    width: 100%;
+    max-width: 560px;
+    background: rgba(255,255,255,0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 60px;
+  }
+
+  .cover-stat {
+    padding: 24px 12px;
+    text-align: center;
+  }
+
+  .cover-stat .num {
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    display: block;
+  }
+
+  .cover-stat .lbl {
+    font-size: 9px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 4px;
+    display: block;
+  }
+
+  .cover-footer {
+    position: absolute;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    color: rgba(255,255,255,0.25);
+    letter-spacing: 0.5px;
+  }
+
+  /* ─── CONTENT PAGES ─── */
+  .content-page {
+    background: var(--warm-white);
+    padding: 50px;
+  }
+
+  .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--champagne);
+  }
+
+  .page-header h2 {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--muted-gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .page-header .page-num {
+    font-size: 10px;
+    color: var(--slate);
+    font-weight: 500;
+  }
+
+  .section-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--obsidian);
+    letter-spacing: -0.8px;
+    margin-bottom: 8px;
+  }
+
+  .section-desc {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-bottom: 36px;
+    max-width: 480px;
+  }
+
+  /* ─── TECH CARDS ─── */
+  .tech-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+
+  .tech-card {
+    background: white;
+    border: 1px solid var(--champagne);
+    border-radius: 16px;
+    padding: 28px 24px;
+    position: relative;
+    transition: all 0.2s;
+  }
+
+  .tech-card.featured {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: center;
+    background: linear-gradient(135deg, #1a1a1a, #2D2D2D);
+    border-color: transparent;
+    color: white;
+  }
+
+  .tech-card.featured .tech-role { color: var(--muted-gold); }
+  .tech-card.featured .tech-desc { color: rgba(255,255,255,0.6); }
+  .tech-card.featured .tech-name { color: white; }
+
+  .tech-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    flex-shrink: 0;
+  }
+
+  .tech-card.featured .tech-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    font-size: 24px;
+    margin-bottom: 0;
+  }
+
+  .tech-role {
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--muted-gold);
+    margin-bottom: 6px;
+  }
+
+  .tech-name {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--obsidian);
+    margin-bottom: 8px;
+    letter-spacing: -0.3px;
+  }
+
+  .tech-desc {
+    font-size: 12px;
+    color: var(--slate);
+    line-height: 1.55;
+  }
+
+  .tech-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 12px;
+  }
+
+  .tech-tag {
+    font-size: 9px;
+    font-weight: 500;
+    padding: 4px 10px;
+    border-radius: 100px;
+    background: var(--travertine);
+    color: var(--soft-black);
+    letter-spacing: 0.2px;
+  }
+
+  .tech-card.featured .tech-tag {
+    background: rgba(184, 150, 90, 0.15);
+    color: var(--muted-gold);
+  }
+
+  /* ─── ARCHITECTURE DIAGRAM ─── */
+  .arch-diagram {
+    background: white;
+    border: 1px solid var(--champagne);
+    border-radius: 16px;
+    padding: 36px;
+    margin-top: 20px;
+  }
+
+  .arch-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+
+  .arch-box {
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 11px;
+    font-weight: 600;
+    text-align: center;
+    min-width: 110px;
+    letter-spacing: 0.2px;
+  }
+
+  .arch-box.user {
+    background: linear-gradient(135deg, var(--obsidian), #3a3530);
+    color: white;
+    min-width: 180px;
+  }
+
+  .arch-box.frontend {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: white;
+  }
+
+  .arch-box.hosting {
+    background: linear-gradient(135deg, #000000, #333);
+    color: white;
+  }
+
+  .arch-box.cms {
+    background: linear-gradient(135deg, #F36458, #E8534A);
+    color: white;
+  }
+
+  .arch-box.db {
+    background: linear-gradient(135deg, #8B5CF6, #7C3AED);
+    color: white;
+  }
+
+  .arch-box.commerce {
+    background: linear-gradient(135deg, #95BF47, #7AB03B);
+    color: white;
+  }
+
+  .arch-box.auth {
+    background: linear-gradient(135deg, #6C47FF, #5B3FE0);
+    color: white;
+  }
+
+  .arch-box.ai {
+    background: linear-gradient(135deg, var(--muted-gold), #9A7B45);
+    color: white;
+  }
+
+  .arch-box.voice {
+    background: linear-gradient(135deg, #1DB954, #17A44A);
+    color: white;
+  }
+
+  .arch-arrow {
+    font-size: 16px;
+    color: var(--champagne);
+  }
+
+  .arch-arrow-down {
+    text-align: center;
+    font-size: 16px;
+    color: var(--champagne);
+    margin: 4px 0;
+  }
+
+  .arch-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--slate);
+    text-align: center;
+    margin-bottom: 8px;
+    font-weight: 600;
+  }
+
+  /* ─── FLOW DIAGRAM ─── */
+  .flow-section {
+    margin-top: 32px;
+  }
+
+  .flow-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--obsidian);
+  }
+
+  .flow-subtitle {
+    font-size: 12px;
+    color: var(--slate);
+    margin-bottom: 20px;
+  }
+
+  .flow-steps {
+    display: flex;
+    align-items: flex-start;
+    gap: 4px;
+    flex-wrap: nowrap;
+  }
+
+  .flow-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+  }
+
+  .flow-step-dot {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+  }
+
+  .flow-step-label {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--obsidian);
+    margin-bottom: 4px;
+  }
+
+  .flow-step-tech {
+    font-size: 9px;
+    color: var(--slate);
+    line-height: 1.4;
+  }
+
+  .flow-connector {
+    flex: 0 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 8px;
+    color: var(--champagne);
+    font-size: 14px;
+  }
+
+  /* ─── DATA TABLE ─── */
+  .data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-size: 11px;
+  }
+
+  .data-table th {
+    text-align: left;
+    padding: 12px 16px;
+    background: var(--travertine);
+    font-weight: 600;
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--slate);
+    border-bottom: 1px solid var(--champagne);
+  }
+
+  .data-table th:first-child { border-radius: 10px 0 0 0; }
+  .data-table th:last-child { border-radius: 0 10px 0 0; }
+
+  .data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--travertine);
+    vertical-align: top;
+  }
+
+  .data-table td:first-child {
+    font-weight: 600;
+    color: var(--obsidian);
+    white-space: nowrap;
+  }
+
+  .data-table tr:last-child td { border-bottom: none; }
+
+  .inline-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+  }
+
+  .tag-purple { background: #EDE9FE; color: #6D28D9; }
+  .tag-red { background: #FEE2E2; color: #DC2626; }
+  .tag-green { background: #DCFCE7; color: #16A34A; }
+  .tag-blue { background: #DBEAFE; color: #2563EB; }
+  .tag-gold { background: #FEF3C7; color: #92400E; }
+  .tag-gray { background: #F3F4F6; color: #4B5563; }
+
+  /* ─── PRINT STYLES ─── */
+  @media print {
+    body { background: white; }
+    .page {
+      width: 100%;
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+
+  @media screen {
+    body { padding: 30px 0; }
+    .page {
+      box-shadow: 0 4px 40px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PAGE 1: COVER
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="cover-badge">Technology Overview</div>
+  <h1>Best Bottles<br><span>Tech Stack</span></h1>
+  <p class="cover-subtitle">A modern B2B e-commerce platform built for scale</p>
+
+  <div class="cover-stats">
+    <div class="cover-stat">
+      <span class="num">2,354</span>
+      <span class="lbl">Product SKUs</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">230+</span>
+      <span class="lbl">Design Families</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">9</span>
+      <span class="lbl">Integrations</span>
+    </div>
+    <div class="cover-stat">
+      <span class="num">Voice</span>
+      <span class="lbl">AI Assistant</span>
+    </div>
+  </div>
+
+  <div class="cover-footer">bestbottles.com &nbsp;&middot;&nbsp; March 2026 &nbsp;&middot;&nbsp; Confidential</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PAGE 2: CORE INFRASTRUCTURE
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Best Bottles &mdash; Technology Stack</h2>
+    <span class="page-num">01 / Core Infrastructure</span>
+  </div>
+
+  <h3 class="section-title">Core Infrastructure</h3>
+  <p class="section-desc">The foundation powering the storefront, real-time data, and content management.</p>
+
+  <div class="tech-grid">
+
+    <!-- NEXT.JS — Featured -->
+    <div class="tech-card featured">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #000, #333);">N</div>
+      <div>
+        <div class="tech-role">Frontend Framework</div>
+        <div class="tech-name">Next.js 16</div>
+        <div class="tech-desc">React-based framework with App Router, server-side rendering, and static generation. Powers every page from the catalog to the B2B portal with blazing-fast navigation.</div>
+        <div class="tech-features">
+          <span class="tech-tag">App Router</span>
+          <span class="tech-tag">SSR + SSG</span>
+          <span class="tech-tag">API Routes</span>
+          <span class="tech-tag">React 19</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- VERCEL -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #000, #333); color: white;">&#9650;</div>
+      <div class="tech-role">Hosting & Deployment</div>
+      <div class="tech-name">Vercel</div>
+      <div class="tech-desc">Global edge network with automatic CI/CD. Every git push deploys instantly with preview URLs for review before going live.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Edge Network</span>
+        <span class="tech-tag">Auto Deploy</span>
+        <span class="tech-tag">Preview URLs</span>
+      </div>
+    </div>
+
+    <!-- CONVEX -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #8B5CF6, #7C3AED); color: white;">C</div>
+      <div class="tech-role">Real-Time Database & Backend</div>
+      <div class="tech-name">Convex</div>
+      <div class="tech-desc">Serverless database with real-time subscriptions. Powers the product catalog, Grace AI conversations, portal orders, and form submissions &mdash; all updating live.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Real-Time Sync</span>
+        <span class="tech-tag">Serverless Functions</span>
+        <span class="tech-tag">Full-Text Search</span>
+      </div>
+    </div>
+
+    <!-- SANITY -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #F36458, #E8534A); color: white;">S</div>
+      <div class="tech-role">Content Management</div>
+      <div class="tech-name">Sanity.io</div>
+      <div class="tech-desc">Headless CMS for editorial content. The marketing team manages the mega-menu, homepage hero, blog journal, and product family cards &mdash; no developer needed.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Sanity Studio</span>
+        <span class="tech-tag">Mega Menu</span>
+        <span class="tech-tag">Blog / Journal</span>
+      </div>
+    </div>
+
+    <!-- SHOPIFY -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #95BF47, #7AB03B); color: white;">S</div>
+      <div class="tech-role">E-Commerce Engine</div>
+      <div class="tech-name">Shopify</div>
+      <div class="tech-desc">Handles checkout, payment processing, inventory, and order fulfillment. The storefront resolves SKUs to Shopify variants via the Admin API for seamless cart-to-checkout.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Admin API</span>
+        <span class="tech-tag">Checkout</span>
+        <span class="tech-tag">Inventory</span>
+        <span class="tech-tag">Webhooks</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PAGE 3: AI & INTELLIGENCE LAYER
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Best Bottles &mdash; Technology Stack</h2>
+    <span class="page-num">02 / AI & Intelligence</span>
+  </div>
+
+  <h3 class="section-title">AI & Intelligence Layer</h3>
+  <p class="section-desc">Grace, the AI sales assistant, combines conversational AI with deep product knowledge to guide buyers.</p>
+
+  <div class="tech-grid">
+
+    <!-- GRACE AI — Featured -->
+    <div class="tech-card featured">
+      <div class="tech-icon" style="background: linear-gradient(135deg, var(--muted-gold), #9A7B45);">G</div>
+      <div>
+        <div class="tech-role">AI Sales Assistant</div>
+        <div class="tech-name">Grace AI</div>
+        <div class="tech-desc">A conversational assistant trained on the full product catalog, fitment data, packaging trends, and B2B sales strategies. Grace can search 2,354 SKUs, check component compatibility, recommend products by use case, and guide buyers through the ordering process &mdash; via text or voice.</div>
+        <div class="tech-features">
+          <span class="tech-tag">Product Search</span>
+          <span class="tech-tag">Fitment Matching</span>
+          <span class="tech-tag">Voice Conversations</span>
+          <span class="tech-tag">B2B Personas</span>
+          <span class="tech-tag">Trend Intelligence</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- CLAUDE -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #D4A574, #C49560); color: white;">A</div>
+      <div class="tech-role">Language Model</div>
+      <div class="tech-name">Claude (Anthropic)</div>
+      <div class="tech-desc">Claude Sonnet 4 powers Grace's reasoning. It processes product queries, understands packaging context, and generates nuanced recommendations with tool-use capabilities.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Sonnet 4</span>
+        <span class="tech-tag">Tool Use</span>
+        <span class="tech-tag">Structured Output</span>
+      </div>
+    </div>
+
+    <!-- ELEVENLABS -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #1DB954, #17A44A); color: white;">11</div>
+      <div class="tech-role">Voice AI</div>
+      <div class="tech-name">ElevenLabs</div>
+      <div class="tech-desc">Provides natural voice conversations for Grace. Buyers can speak to Grace instead of typing &mdash; ask about products, hear recommendations, and get guided through orders hands-free.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Conversational AI</span>
+        <span class="tech-tag">Voice Streaming</span>
+        <span class="tech-tag">Text Fallback</span>
+      </div>
+    </div>
+
+    <!-- CLERK -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #6C47FF, #5B3FE0); color: white;">C</div>
+      <div class="tech-role">Authentication & Identity</div>
+      <div class="tech-name">Clerk</div>
+      <div class="tech-desc">Manages B2B portal authentication with organization-level accounts. Wholesale buyers sign in to view orders, manage drafts, access Grace workspace, and track shipments.</div>
+      <div class="tech-features">
+        <span class="tech-tag">SSO / OAuth</span>
+        <span class="tech-tag">Organizations</span>
+        <span class="tech-tag">Portal Access</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Grace AI Flow -->
+  <div class="flow-section">
+    <div class="flow-title">Grace AI &mdash; How It Works</div>
+    <div class="flow-subtitle">From buyer question to intelligent recommendation in seconds</div>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-step-dot" style="background: var(--obsidian);">1</div>
+        <div class="flow-step-label">Buyer Asks</div>
+        <div class="flow-step-tech">Text or voice input via ElevenLabs</div>
+      </div>
+      <div class="flow-connector">&rarr;</div>
+      <div class="flow-step">
+        <div class="flow-step-dot" style="background: var(--muted-gold);">2</div>
+        <div class="flow-step-label">Grace Reasons</div>
+        <div class="flow-step-tech">Claude selects tools: search, fitment, trends</div>
+      </div>
+      <div class="flow-connector">&rarr;</div>
+      <div class="flow-step">
+        <div class="flow-step-dot" style="background: #8B5CF6;">3</div>
+        <div class="flow-step-label">Data Retrieved</div>
+        <div class="flow-step-tech">Convex queries 2,354 SKUs in real-time</div>
+      </div>
+      <div class="flow-connector">&rarr;</div>
+      <div class="flow-step">
+        <div class="flow-step-dot" style="background: #16A34A;">4</div>
+        <div class="flow-step-label">Response</div>
+        <div class="flow-step-tech">Personalized recommendation with links</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PAGE 4: ARCHITECTURE & DATA FLOW
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Best Bottles &mdash; Technology Stack</h2>
+    <span class="page-num">03 / Architecture</span>
+  </div>
+
+  <h3 class="section-title">System Architecture</h3>
+  <p class="section-desc">How all the pieces connect &mdash; from the buyer's browser to every backend service.</p>
+
+  <div class="arch-diagram">
+    <div class="arch-label">User Layer</div>
+    <div class="arch-row">
+      <div class="arch-box user">Buyer's Browser</div>
+    </div>
+    <div class="arch-arrow-down">&darr;</div>
+    <div class="arch-label">Application Layer</div>
+    <div class="arch-row">
+      <div class="arch-box frontend">Next.js 16</div>
+      <span class="arch-arrow">&harr;</span>
+      <div class="arch-box hosting">Vercel Edge</div>
+    </div>
+    <div class="arch-arrow-down">&darr;</div>
+    <div class="arch-label">Data & Services Layer</div>
+    <div class="arch-row">
+      <div class="arch-box db">Convex</div>
+      <div class="arch-box cms">Sanity</div>
+      <div class="arch-box commerce">Shopify</div>
+      <div class="arch-box auth">Clerk</div>
+    </div>
+    <div class="arch-arrow-down">&darr;</div>
+    <div class="arch-label">Intelligence Layer</div>
+    <div class="arch-row">
+      <div class="arch-box ai">Claude AI</div>
+      <span class="arch-arrow">&harr;</span>
+      <div class="arch-box voice">ElevenLabs</div>
+    </div>
+  </div>
+
+  <!-- Data responsibilities -->
+  <table class="data-table" style="margin-top: 32px;">
+    <thead>
+      <tr>
+        <th>Service</th>
+        <th>Manages</th>
+        <th>Key Tables / Endpoints</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Convex</td>
+        <td>Product catalog, Grace AI conversations, portal accounts, orders, drafts, form submissions, fitment data</td>
+        <td>
+          <span class="inline-tag tag-purple">productGroups</span>
+          <span class="inline-tag tag-purple">products</span>
+          <span class="inline-tag tag-purple">fitments</span>
+          <span class="inline-tag tag-purple">conversations</span>
+          <span class="inline-tag tag-purple">portalOrders</span>
+          <span class="inline-tag tag-purple">portalDrafts</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Sanity</td>
+        <td>Editorial content, navigation, blog</td>
+        <td>
+          <span class="inline-tag tag-red">megaMenu</span>
+          <span class="inline-tag tag-red">homepagePage</span>
+          <span class="inline-tag tag-red">blogPost</span>
+          <span class="inline-tag tag-red">designFamilyCards</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Shopify</td>
+        <td>Checkout, payments, inventory, fulfillment</td>
+        <td>
+          <span class="inline-tag tag-green">Admin API</span>
+          <span class="inline-tag tag-green">SKU &rarr; Variant</span>
+          <span class="inline-tag tag-green">Cart Permalinks</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Clerk</td>
+        <td>B2B authentication, org management</td>
+        <td>
+          <span class="inline-tag tag-blue">Organizations</span>
+          <span class="inline-tag tag-blue">SSO</span>
+          <span class="inline-tag tag-blue">Portal Guard</span>
+        </td>
+      </tr>
+      <tr>
+        <td>Claude</td>
+        <td>Product reasoning, recommendations</td>
+        <td>
+          <span class="inline-tag tag-gold">askGrace</span>
+          <span class="inline-tag tag-gold">searchCatalog</span>
+          <span class="inline-tag tag-gold">checkCompatibility</span>
+        </td>
+      </tr>
+      <tr>
+        <td>ElevenLabs</td>
+        <td>Voice conversations, speech synthesis</td>
+        <td>
+          <span class="inline-tag tag-gray">Conversational AI</span>
+          <span class="inline-tag tag-gray">Voice Streaming</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PAGE 5: FRONTEND & DX
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page content-page">
+  <div class="page-header">
+    <h2>Best Bottles &mdash; Technology Stack</h2>
+    <span class="page-num">04 / Frontend & Developer Experience</span>
+  </div>
+
+  <h3 class="section-title">Frontend & Design System</h3>
+  <p class="section-desc">The tools that make the storefront feel premium, load fast, and stay maintainable.</p>
+
+  <div class="tech-grid">
+
+    <!-- TAILWIND -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #06B6D4, #0891B2); color: white;">T</div>
+      <div class="tech-role">Styling</div>
+      <div class="tech-name">Tailwind CSS 4</div>
+      <div class="tech-desc">Utility-first CSS framework customized with Best Bottles' brand palette &mdash; Obsidian, Muted Gold, Linen, Champagne, and Travertine tones throughout.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Brand Tokens</span>
+        <span class="tech-tag">Dark Mode</span>
+        <span class="tech-tag">Responsive</span>
+      </div>
+    </div>
+
+    <!-- SHADCN -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #18181B, #27272A); color: white;">ui</div>
+      <div class="tech-role">Component Library</div>
+      <div class="tech-name">shadcn/ui</div>
+      <div class="tech-desc">Pre-built accessible components (buttons, dialogs, selects, sheets) re-themed to match the Best Bottles brand. Consistent UI without reinventing the wheel.</div>
+      <div class="tech-features">
+        <span class="tech-tag">Radix Primitives</span>
+        <span class="tech-tag">Accessible</span>
+        <span class="tech-tag">Customized</span>
+      </div>
+    </div>
+
+    <!-- TYPESCRIPT -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #3178C6, #2563EB); color: white;">TS</div>
+      <div class="tech-role">Language</div>
+      <div class="tech-name">TypeScript</div>
+      <div class="tech-desc">Full type safety across the entire stack &mdash; from Convex schema definitions to React components. Catches errors at build time, not in production.</div>
+      <div class="tech-features">
+        <span class="tech-tag">End-to-End Types</span>
+        <span class="tech-tag">Convex Codegen</span>
+        <span class="tech-tag">Strict Mode</span>
+      </div>
+    </div>
+
+    <!-- VITEST -->
+    <div class="tech-card">
+      <div class="tech-icon" style="background: linear-gradient(135deg, #FCC72B, #E5B525); color: #1a1a1a;">V</div>
+      <div class="tech-role">Testing</div>
+      <div class="tech-name">Vitest</div>
+      <div class="tech-desc">Fast unit testing for catalog filters, checkout URL building, component classification, and UX intuitiveness validation. 112 tests across 4 suites.</div>
+      <div class="tech-features">
+        <span class="tech-tag">112 Tests</span>
+        <span class="tech-tag">UX Validation</span>
+        <span class="tech-tag">Sub-Second Runs</span>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Key Feature Highlights -->
+  <div style="margin-top: 32px;">
+    <div class="flow-title">Key Platform Features</div>
+    <div class="flow-subtitle">What makes bestbottles.com unique for B2B packaging buyers</div>
+
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th>Description</th>
+          <th>Powered By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Smart Catalog</td>
+          <td>Filter 230+ design families by applicator, color, capacity, thread size, price</td>
+          <td><span class="inline-tag tag-purple">Convex</span> <span class="inline-tag tag-gray">Next.js</span></td>
+        </tr>
+        <tr>
+          <td>Fitment Engine</td>
+          <td>Shows which closures, sprayers, and droppers are compatible with each bottle</td>
+          <td><span class="inline-tag tag-purple">Convex</span> <span class="inline-tag tag-gold">Grace AI</span></td>
+        </tr>
+        <tr>
+          <td>Voice Shopping</td>
+          <td>Ask Grace by voice: "Show me 50ml frosted bottles with gold sprayers"</td>
+          <td><span class="inline-tag tag-gray">ElevenLabs</span> <span class="inline-tag tag-gold">Claude</span></td>
+        </tr>
+        <tr>
+          <td>B2B Portal</td>
+          <td>Wholesale accounts with order history, draft orders, Grace workspace, tracking</td>
+          <td><span class="inline-tag tag-blue">Clerk</span> <span class="inline-tag tag-purple">Convex</span></td>
+        </tr>
+        <tr>
+          <td>Tier Pricing</td>
+          <td>Volume-based pricing: Starter, Graduate, Scaler, Enterprise tiers</td>
+          <td><span class="inline-tag tag-green">Shopify</span> <span class="inline-tag tag-purple">Convex</span></td>
+        </tr>
+        <tr>
+          <td>CMS-Managed Nav</td>
+          <td>Marketing team edits mega-menu, homepage, blog without code changes</td>
+          <td><span class="inline-tag tag-red">Sanity</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════════════════════════════
+     PAGE 6: CLOSING
+     ════════════════════════════════════════════════════════════════ -->
+<div class="page cover" style="page-break-after: avoid;">
+  <div class="cover-badge">Summary</div>
+  <h1 style="font-size: 40px; margin-bottom: 40px;">Modern Stack.<br><span>Real Results.</span></h1>
+
+  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 500px; width: 100%; text-align: left;">
+
+    <div style="background: rgba(255,255,255,0.06); border-radius: 14px; padding: 24px;">
+      <div style="font-size: 11px; color: var(--muted-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Frontend</div>
+      <div style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+        Next.js 16<br>Tailwind CSS 4<br>shadcn/ui<br>TypeScript
+      </div>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.06); border-radius: 14px; padding: 24px;">
+      <div style="font-size: 11px; color: var(--muted-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Backend</div>
+      <div style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+        Convex (DB)<br>Sanity (CMS)<br>Vercel (Host)<br>Shopify (Commerce)
+      </div>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.06); border-radius: 14px; padding: 24px;">
+      <div style="font-size: 11px; color: var(--muted-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Intelligence</div>
+      <div style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+        Claude Sonnet 4<br>ElevenLabs Voice<br>Grace AI Assistant<br>Fitment Engine
+      </div>
+    </div>
+
+    <div style="background: rgba(255,255,255,0.06); border-radius: 14px; padding: 24px;">
+      <div style="font-size: 11px; color: var(--muted-gold); font-weight: 600; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 12px;">Quality</div>
+      <div style="font-size: 13px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+        Vitest (112 tests)<br>Clerk Auth<br>Type-Safe E2E<br>CI/CD via Vercel
+      </div>
+    </div>
+
+  </div>
+
+  <div class="cover-footer">bestbottles.com &nbsp;&middot;&nbsp; Built with care &nbsp;&middot;&nbsp; 2026</div>
+</div>
+
+</body>
+</html>

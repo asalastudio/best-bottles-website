@@ -585,6 +585,8 @@ function ActionCardRenderer({
     }
 }
 
+const GRACE_ONBOARDING_KEY = "grace-onboarding-tooltip-seen";
+
 // ─── Floating Trigger Bubble ─────────────────────────────────────────────────
 
 export function GraceFloatingTrigger() {
@@ -592,7 +594,30 @@ export function GraceFloatingTrigger() {
     const isMobile = useIsMobile();
     const pathname = usePathname();
     const [mounted, setMounted] = useState(false);
+    const [showOnboarding, setShowOnboarding] = useState(false);
+
     useEffect(() => setMounted(true), []);
+
+    useEffect(() => {
+        if (!mounted || typeof window === "undefined") return;
+        const seen = localStorage.getItem(GRACE_ONBOARDING_KEY);
+        if (!seen) setShowOnboarding(true);
+    }, [mounted]);
+
+    const dismissOnboarding = () => {
+        setShowOnboarding(false);
+        try {
+            localStorage.setItem(GRACE_ONBOARDING_KEY, "1");
+        } catch {
+            // ignore
+        }
+    };
+
+    useEffect(() => {
+        if (!showOnboarding) return;
+        const t = setTimeout(dismissOnboarding, 5000);
+        return () => clearTimeout(t);
+    }, [showOnboarding]);
 
     const isProductPage = Boolean(pathname && /(^|\/)products(\/|$)/.test(pathname));
     const useCompactTrigger = Boolean(isMobile && isProductPage);
@@ -600,21 +625,56 @@ export function GraceFloatingTrigger() {
 
     if (panelMode !== "closed") return null;
 
+    const wrapperClasses = `fixed z-40 hidden lg:flex flex-col items-end ${useCompactTrigger
+        ? `${isProductPage ? "bottom-[104px]" : "bottom-4"} right-4`
+        : "bottom-6 right-6"
+        }`;
+
+    const triggerClasses = `bg-obsidian text-bone rounded-full shadow-xl hover:bg-muted-gold transition-all duration-200 cursor-pointer group ${useCompactTrigger
+        ? "w-12 h-12 flex items-center justify-center"
+        : "flex items-center space-x-2.5 px-5 py-3"
+        }`;
+
     return (
-        <button
-            onClick={openPanel}
-            className={`fixed z-40 bg-obsidian text-bone rounded-full shadow-xl hover:bg-muted-gold transition-all duration-200 cursor-pointer group hidden lg:flex ${useCompactTrigger
-                ? `${isProductPage ? "bottom-[104px]" : "bottom-4"} right-4 w-12 h-12 items-center justify-center`
-                : "bottom-6 right-6 items-center space-x-2.5 px-5 py-3"
-                }`}
-            aria-label="Ask Grace"
-            suppressHydrationWarning
-        >
-            <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
-                <span /><span /><span /><span />
-            </span>
-            {showTriggerText && <span className="text-sm font-medium tracking-wide">Ask Grace</span>}
-        </button>
+        <div className={wrapperClasses}>
+            <AnimatePresence>
+                {showOnboarding && (
+                    <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 4 }}
+                        transition={{ duration: 0.2 }}
+                        className="absolute bottom-full mb-2 right-0 max-w-[220px]"
+                    >
+                        <div className="bg-obsidian text-bone text-sm rounded-xl shadow-xl px-4 py-3 pr-8 relative">
+                            <p className="leading-snug">Your AI Bottling Specialist — ask about fitment, pricing, or product recommendations.</p>
+                            <button
+                                onClick={dismissOnboarding}
+                                aria-label="Dismiss"
+                                className="absolute top-2 right-2 p-1 rounded hover:bg-white/10 transition-colors"
+                            >
+                                <X className="w-3.5 h-3.5" />
+                            </button>
+                        </div>
+                        <div className="absolute -bottom-1 right-6 w-2 h-2 bg-obsidian rotate-45" />
+                    </motion.div>
+                )}
+            </AnimatePresence>
+            <button
+                onClick={() => {
+                    dismissOnboarding();
+                    openPanel();
+                }}
+                className={triggerClasses}
+                aria-label="Ask Grace"
+                suppressHydrationWarning
+            >
+                <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
+                    <span /><span /><span /><span />
+                </span>
+                {showTriggerText && <span className="text-sm font-medium tracking-wide">Ask Grace</span>}
+            </button>
+        </div>
     );
 }
 

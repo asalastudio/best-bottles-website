@@ -102,17 +102,18 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     const sanitizedQuery = sanitizeCatalogQuery(query);
 
     if (family) {
-        qs.set("family", family);
+        qs.set("families", family);
     } else {
         const families = [...new Set(products.map((p) => p.family).filter(Boolean))];
-        if (families.length === 1 && families[0]) {
-            qs.set("family", families[0]);
+        if (families.length >= 1 && families[0]) {
+            qs.set("families", families.join(","));
         } else if (sanitizedQuery) {
             qs.set("search", sanitizedQuery);
         }
     }
 
-    return `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+    qs.set("grace", "1");
+    return `/catalog?${qs.toString()}`;
 }
 
 function buildBrowsePath(products: ProductCard[], query?: string, family?: string): string {
@@ -285,11 +286,12 @@ export default function GraceElevenLabsProvider({
             };
         }
         if (pageType === "catalog") {
+            const familiesParam = searchParams.get("families") ?? searchParams.get("family");
             return {
                 pageType,
                 pathname,
                 cartItems: cartSummary,
-                currentCollection: searchParams.get("family") ?? searchParams.get("collection") ?? undefined,
+                currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
             };
         }
@@ -585,6 +587,12 @@ export default function GraceElevenLabsProvider({
                     console.error("[Grace nav] Slug validation failed:", e);
                     // Continue with original path on error
                 }
+            }
+
+            // Append grace=1 to catalog paths so the catalog can show the "Grace found these" banner
+            if (navPath.startsWith("/catalog")) {
+                const sep = navPath.includes("?") ? "&" : "?";
+                navPath = `${navPath}${sep}grace=1`;
             }
 
             // Default to auto-navigate — Grace should take users directly to pages
