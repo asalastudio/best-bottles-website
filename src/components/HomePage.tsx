@@ -12,6 +12,8 @@ import Navbar from "@/components/Navbar";
 import { useGrace } from "@/components/useGrace";
 import { urlFor } from "@/sanity/lib/image";
 import type { HomepageData } from "@/sanity/lib/queries";
+import { APPLICATOR_NAV, applicatorNavHref, applicatorNavHrefMulti } from "@/lib/catalogFilters";
+import type { ApplicatorNavValue } from "@/lib/catalogFilters";
 
 const FadeUp = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
     <motion.div
@@ -26,12 +28,12 @@ const FadeUp = ({ children, delay = 0, className = "" }: { children: React.React
 );
 
 const DEFAULT_START_HERE = [
-    { title: "essential oils & roll-ons", subtitle: "Roller-ready bottles for oils, topicals, and fragrance oils.", href: "/catalog?applicators=rollon", img: "/assets/vintage-spray.png", bg: "#DFD6C9" },
-    { title: "skincare & serums", subtitle: "Dropper and pump formats for treatment-focused formulas.", href: "/catalog?applicators=dropper&applicators=lotionpump", img: "/assets/collection_skincare.png", bg: "#EADDD1" },
+    { title: "essential oils & roll-ons", subtitle: "Roller-ready bottles for oils, topicals, and fragrance oils.", href: applicatorNavHref("rollon"), img: "/assets/vintage-spray.png", bg: "#DFD6C9" },
+    { title: "skincare & serums", subtitle: "Dropper and pump formats for treatment-focused formulas.", href: applicatorNavHrefMulti(["dropper", "lotionpump"]), img: "/assets/collection_skincare.png", bg: "#EADDD1" },
     { title: "sample & discovery", subtitle: "Vials and compact formats for trial, travel, and discovery kits.", href: "/catalog?families=Vial", img: "/assets/Hero-BB.png", bg: "#EAE0D5" },
     { title: "gift & retail packaging", subtitle: "Presentation-ready packaging for launches, gifting, and retail shelves.", href: "/catalog?category=Packaging", img: "/assets/collection_amber.png", bg: "#F3E5D8" },
     { title: "components & closures", subtitle: "Caps, droppers, pumps, and fitments matched by thread size.", href: "/catalog?category=Component", img: "/assets/bottle_screwcap.png", bg: "#DCD0C0" },
-    { title: "fine mist & spray bottles", subtitle: "Spray-forward bottle families for fragrance and room scent formats.", href: "/catalog?applicators=spray", img: "/assets/Cylinder-BB.png", bg: "#D5C5B1" },
+    { title: "fine mist & spray bottles", subtitle: "Spray-forward bottle families for fragrance and room scent formats.", href: applicatorNavHref("spray"), img: "/assets/Cylinder-BB.png", bg: "#D5C5B1" },
 ];
 
 const DEFAULT_FAMILIES = [
@@ -242,7 +244,7 @@ const APPLICATOR_ICONS: Record<string, React.ReactNode> = {
 
 /* ─── Guided Selector: 3-step funnel (Use Case → Dispenser → Size) ─── */
 
-const USE_CASES = [
+const USE_CASES: Array<{ id: string; label: string; subtitle: string; icon: string; applicators: ApplicatorNavValue[] }> = [
     { id: "fragrance", label: "Fragrance & Perfume", subtitle: "Spray, rollerball, and splash formats", icon: "🌸", applicators: ["spray", "rollon", "reducer"] },
     { id: "essentials", label: "Essential Oils", subtitle: "Roll-on and dropper bottles for oils", icon: "💧", applicators: ["rollon", "dropper"] },
     { id: "skincare", label: "Skincare & Serums", subtitle: "Dropper and pump formats", icon: "🧴", applicators: ["dropper", "lotionpump"] },
@@ -251,13 +253,12 @@ const USE_CASES = [
     { id: "other", label: "Something Else", subtitle: "Browse the full catalog", icon: "✨", applicators: [] },
 ];
 
-const DISPENSERS = [
-    { value: "spray", label: "Fine Mist Spray", subtitle: "Fragrance, room scent, setting spray" },
-    { value: "rollon", label: "Roll-On", subtitle: "Perfume oils, essential oils, topicals" },
-    { value: "dropper", label: "Dropper", subtitle: "Serums, tinctures, CBD, essential oils" },
-    { value: "lotionpump", label: "Lotion Pump", subtitle: "Skincare, body care, serums" },
-    { value: "reducer", label: "Splash & Reducer", subtitle: "Aftershave, cologne, beard oil" },
-];
+// Derive DISPENSERS from the shared APPLICATOR_NAV config (single source of truth)
+const DISPENSERS = APPLICATOR_NAV.map((nav) => ({
+    value: nav.value,
+    label: nav.label,
+    subtitle: nav.subtitle,
+}));
 
 const SIZE_RANGES = [
     { label: "Miniature", subtitle: "1–5 ml", params: "capacities=1+ml&capacities=2+ml&capacities=3+ml&capacities=5+ml" },
@@ -294,8 +295,10 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
     }, []);
 
     const handleSizeSelect = useCallback((sizeParams: string) => {
+        // Resolve nav-level applicator to actual bucket values via shared config
+        const nav = applicator ? APPLICATOR_NAV.find((n) => n.value === applicator) : null;
         const params = new URLSearchParams();
-        if (applicator) params.set("applicators", applicator);
+        if (nav) params.set("applicators", nav.buckets.join(","));
         const url = `/catalog?${params.toString()}${sizeParams ? `&${sizeParams}` : ""}`;
         router.push(url);
         onClose();

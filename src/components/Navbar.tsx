@@ -14,6 +14,7 @@ import { useCart } from "./CartProvider";
 import CartDrawer from "./CartDrawer";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
+import { APPLICATOR_NAV, applicatorNavHref } from "@/lib/catalogFilters";
 
 interface NavbarProps {
     variant?: "home" | "catalog";
@@ -51,13 +52,10 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
         columns: [
             {
                 heading: "Applicator Type",
-                links: [
-                    { label: "Roll-On", href: "/catalog?applicators=rollon", badge: "28" },
-                    { label: "Dropper", href: "/catalog?applicators=dropper", badge: "19" },
-                    { label: "Fine Mist Spray", href: "/catalog?applicators=spray", badge: "53" },
-                    { label: "Reducer & Orifice", href: "/catalog?applicators=reducer", badge: "28" },
-                    { label: "Lotion & Treatment Pump", href: "/catalog?applicators=lotionpump", badge: "32" },
-                ],
+                links: APPLICATOR_NAV.map((nav) => ({
+                    label: nav.label,
+                    href: applicatorNavHref(nav.value),
+                })),
             },
             {
                 heading: "Design Families",
