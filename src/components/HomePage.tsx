@@ -4,7 +4,7 @@ import React, { useState, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Zap, Star, ShoppingBag, MapPin, Search, MessageCircle, Compass, ChevronRight, Check } from "lucide-react";
+import { ArrowRight, Zap, ShoppingBag, Search, MessageCircle, Compass, ChevronRight, Check, ShieldCheck } from "lucide-react";
 import { motion } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
@@ -60,7 +60,7 @@ const DEFAULT_HERO_SLIDE: Partial<HeroSlide> & { eyebrow: string; headline: stri
     eyebrow: "A Division of Nemat International",
     headline: "Beautifully Contained",
     subheadline: "Premium glass bottles and packaging for brands ready to scale.",
-    ctaText: "Explore Collections",
+    ctaText: "Browse Catalog",
     ctaHref: "/catalog",
 };
 
@@ -176,12 +176,11 @@ function TrustBar() {
     return (
         <section className="bg-linen border-y border-champagne/50 py-8 relative z-20">
             <div className="max-w-[1440px] mx-auto px-6">
-                <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 divide-x-0 lg:divide-x divide-champagne/50">
+                <div className="grid grid-cols-2 lg:grid-cols-3 gap-8 divide-x-0 lg:divide-x divide-champagne/50">
                     {[
-                        { stat: "No Order Minimum", label: "Scale from 1 unit to 10,000+", icon: Zap },
+                        { stat: "$50 Order Minimum", label: "No unit minimum — order what you need", icon: Zap },
                         { stat: productCount, label: "Premium Products", icon: ShoppingBag },
-                        { stat: "Free Sample Kits", label: "Touch & feel before you commit", icon: Star },
-                        { stat: "Made in USA", label: "No Tariff Surprises", icon: MapPin },
+                        { stat: "Fitment Verified", label: "Every closure matched to your bottle", icon: ShieldCheck },
                     ].map((item, i) => (
                         <FadeUp key={i} delay={0.2 + i * 0.1} className="flex items-center space-x-4 lg:pl-8 first:lg:pl-0">
                             <div className="w-10 h-10 rounded-full bg-bone flex items-center justify-center shrink-0 border border-champagne/30">
