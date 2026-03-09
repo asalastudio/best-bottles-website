@@ -102,11 +102,11 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     const sanitizedQuery = sanitizeCatalogQuery(query);
 
     if (family) {
-        qs.set("family", family);
+        qs.set("families", family);
     } else {
         const families = [...new Set(products.map((p) => p.family).filter(Boolean))];
-        if (families.length === 1 && families[0]) {
-            qs.set("family", families[0]);
+        if (families.length >= 1 && families[0]) {
+            qs.set("families", families.join(","));
         } else if (sanitizedQuery) {
             qs.set("search", sanitizedQuery);
         }
@@ -286,11 +286,12 @@ export default function GraceElevenLabsProvider({
             };
         }
         if (pageType === "catalog") {
+            const familiesParam = searchParams.get("families") ?? searchParams.get("family");
             return {
                 pageType,
                 pathname,
                 cartItems: cartSummary,
-                currentCollection: searchParams.get("family") ?? searchParams.get("collection") ?? undefined,
+                currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
             };
         }
