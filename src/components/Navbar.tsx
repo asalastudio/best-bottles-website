@@ -440,15 +440,26 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     </p>
                 </div>
 
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4 sm:gap-6">
-                    <div className="flex items-center space-x-10 shrink-0">
-                        <button
-                            aria-label="Open menu"
-                            className="lg:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors"
-                            onClick={() => setMobileMenuOpen(true)}
-                        >
-                            <Menu className="w-5 h-5" strokeWidth={1.75} />
-                        </button>
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4 sm:gap-6 relative">
+                    {/* Mobile: hamburger left-aligned */}
+                    <button
+                        aria-label="Open menu"
+                        className="lg:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0 z-10"
+                        onClick={() => setMobileMenuOpen(true)}
+                    >
+                        <Menu className="w-5 h-5" strokeWidth={1.75} />
+                    </button>
+
+                    {/* Mobile: centered logo (absolute so it's truly centered) */}
+                    <Link
+                        href="/"
+                        className="lg:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-2xl font-medium tracking-tight text-obsidian"
+                    >
+                        BEST BOTTLES
+                    </Link>
+
+                    {/* Desktop: logo + nav inline */}
+                    <div className="hidden lg:flex items-center space-x-10 shrink-0">
                         <Link href="/" className="font-display text-2xl font-medium tracking-tight text-obsidian">
                             BEST BOTTLES
                         </Link>
@@ -540,7 +551,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         <button type="submit" className="sr-only">Search</button>
                     </form>
 
-                    <div className="flex items-center space-x-2 shrink-0">
+                    <div className="flex items-center space-x-2 shrink-0 z-10">
                         <button
                             onClick={openPanel}
                             aria-label="Ask Grace"
