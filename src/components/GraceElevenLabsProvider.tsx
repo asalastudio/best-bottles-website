@@ -112,7 +112,8 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
         }
     }
 
-    return `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+    qs.set("grace", "1");
+    return `/catalog?${qs.toString()}`;
 }
 
 function buildBrowsePath(products: ProductCard[], query?: string, family?: string): string {
@@ -585,6 +586,12 @@ export default function GraceElevenLabsProvider({
                     console.error("[Grace nav] Slug validation failed:", e);
                     // Continue with original path on error
                 }
+            }
+
+            // Append grace=1 to catalog paths so the catalog can show the "Grace found these" banner
+            if (navPath.startsWith("/catalog")) {
+                const sep = navPath.includes("?") ? "&" : "?";
+                navPath = `${navPath}${sep}grace=1`;
             }
 
             // Default to auto-navigate — Grace should take users directly to pages

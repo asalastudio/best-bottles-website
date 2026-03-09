@@ -443,7 +443,7 @@ function PathChooser() {
                 </FadeUp>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
-                    {/* Path 1: I Know What I Need */}
+                    {/* Path 1: I Know What I Need — search-first */}
                     <FadeUp delay={0.1}>
                         <div className="group flex flex-col items-center text-center p-8 bg-bone border border-champagne/50 rounded-sm hover:border-muted-gold hover:shadow-lg transition-all duration-300">
                             <div className="w-14 h-14 rounded-full bg-white border border-champagne/40 flex items-center justify-center mb-5 group-hover:border-muted-gold transition-colors">
@@ -459,7 +459,7 @@ function PathChooser() {
                                         onChange={(e) => setSearchValue(e.target.value)}
                                         onFocus={() => setSearchFocused(true)}
                                         onBlur={() => setSearchFocused(false)}
-                                        placeholder="e.g. 30ml amber dropper"
+                                        placeholder="e.g. 9ml clear cylinder roll-on"
                                         className="flex-1 px-4 py-2.5 text-sm bg-white focus:outline-none placeholder-slate/50 text-obsidian min-w-0"
                                     />
                                     <button type="submit" className="px-4 bg-obsidian text-white hover:bg-muted-gold transition-colors">
@@ -504,6 +504,16 @@ function PathChooser() {
                         </button>
                     </FadeUp>
                 </div>
+
+                {/* Browse All CTA */}
+                <FadeUp delay={0.4} className="text-center mt-8">
+                    <Link
+                        href="/catalog"
+                        className="inline-flex items-center gap-2 text-sm text-slate hover:text-obsidian transition-colors font-medium underline underline-offset-4 decoration-champagne hover:decoration-muted-gold"
+                    >
+                        Browse All Products <ArrowRight className="w-4 h-4" />
+                    </Link>
+                </FadeUp>
             </div>
         </section>
     );
