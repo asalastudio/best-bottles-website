@@ -55,6 +55,11 @@
   font-family: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
 }
 
+/* Cormorant — logo and display typography */
+.font-cormorant {
+  font-family: var(--font-cormorant), var(--font-eb-garamond), ui-serif, Georgia, serif;
+}
+
 body {
   background-color: var(--color-bone);
   color: var(--color-obsidian);
@@ -277,6 +282,21 @@ body {
 
 .grace-strip-speaking {
   animation: stripGlow 2s ease-in-out infinite;
+}
+
+/* Ask Grace button — stronger glow + wavelength CTA */
+@keyframes graceAskGlow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(197, 160, 101, 0.15), inset 0 0 0 0 rgba(197, 160, 101, 0.05); }
+  50% { box-shadow: 0 0 16px 4px rgba(197, 160, 101, 0.2), inset 0 0 12px 0 rgba(197, 160, 101, 0.08); }
+}
+
+.grace-ask-btn-glow {
+  animation: graceAskGlow 2.2s ease-in-out infinite;
+}
+
+.grace-ask-btn-glow:hover,
+.grace-ask-btn-glow:active {
+  animation: graceAskGlow 1.4s ease-in-out infinite;
 }
 
 /* Floating trigger entrance */

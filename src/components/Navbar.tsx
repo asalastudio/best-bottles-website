@@ -439,7 +439,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                 </div>
 
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
-                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | logo (centered) | heart */}
+                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | actions */}
                     <div className="h-[56px] lg:h-[72px] flex items-center gap-2 sm:gap-4 lg:gap-6 relative">
                         <button
                             aria-label="Open menu"
@@ -448,35 +448,19 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                         >
                             <Menu className="w-5 h-5" strokeWidth={1.75} />
                         </button>
-                        {/* Mobile logo — centered absolutely so hamburger/heart don't shift it */}
+                        {/* Mobile logo — text, Cormorant, centered */}
                         <Link
                             href="/"
-                            className="lg:hidden absolute left-1/2 -translate-x-1/2 pointer-events-auto"
+                            className="lg:hidden absolute left-1/2 -translate-x-1/2 font-cormorant text-lg font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors pointer-events-auto"
                         >
-                            <div className="relative w-[180px] h-[36px]">
-                                <Image
-                                    src="/assets/best-bottles-logo.png"
-                                    alt="Best Bottles"
-                                    fill
-                                    className="object-contain"
-                                    priority
-                                />
-                            </div>
+                            BEST BOTTLES
                         </Link>
-                        {/* Desktop logo */}
+                        {/* Desktop logo — Cormorant font */}
                         <Link
                             href="/"
-                            className="hidden lg:flex shrink-0 mr-4"
+                            className="hidden lg:flex shrink-0 mr-4 font-cormorant text-2xl font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
                         >
-                            <div className="relative w-[240px] h-[48px]">
-                                <Image
-                                    src="/assets/best-bottles-logo.png"
-                                    alt="Best Bottles"
-                                    fill
-                                    className="object-contain object-left"
-                                    priority
-                                />
-                            </div>
+                            BEST BOTTLES
                         </Link>
                         <nav
                             className="hidden lg:flex items-center gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
@@ -647,14 +631,20 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                     <div className="flex lg:hidden pb-3">
                         <button
                             onClick={openPanel}
-                            className="flex-1 flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-muted-gold/10 border border-muted-gold/25 hover:bg-muted-gold/15 active:bg-muted-gold/20 transition-colors cursor-pointer"
+                            className="grace-ask-btn-glow flex-1 flex items-center gap-2.5 px-3.5 py-2.5 rounded-xl bg-muted-gold/10 border border-muted-gold/25 hover:bg-muted-gold/15 active:bg-muted-gold/20 transition-colors cursor-pointer"
                         >
                             <span className="w-2 h-2 rounded-full bg-muted-gold animate-grace-pulse shrink-0" />
                             <span className="text-[13px] text-obsidian">
                                 {graceActive ? "Grace is listening…" : "Ask Grace — fitments, sizing, compatibility"}
                             </span>
-                            <span className="ml-auto text-[11px] font-bold uppercase tracking-wider text-muted-gold shrink-0">
-                                {graceActive ? "Open" : "Ask"}
+                            <span className="ml-auto shrink-0 flex items-center">
+                                {graceActive ? (
+                                    <span className="text-[11px] font-bold uppercase tracking-wider text-muted-gold">Open</span>
+                                ) : (
+                                    <span className="grace-voice-bars inline-block" aria-hidden="true" style={{ transform: "scale(1.15)" }}>
+                                        <span /><span /><span /><span />
+                                    </span>
+                                )}
                             </span>
                         </button>
                     </div>

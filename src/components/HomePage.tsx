@@ -49,10 +49,19 @@ const DEFAULT_FAMILIES = [
 ];
 
 const DEFAULT_ARTICLES = [
-    { title: "Glass vs. Plastic: Why Material Matters for Your Brand", category: "Materials", img: "/assets/collection_perfume.png", slug: "/blog" },
-    { title: "Finding Your Thread: A Complete Neck Size Compatibility Guide", category: "Technical", img: "/assets/family_cylinder.png", slug: "/blog" },
-    { title: "From Etsy to Retail: Scaling Your Packaging Strategy", category: "Growth", img: "/assets/collection_amber.png", slug: "/blog" },
+    { title: "Glass vs. Plastic: Why Material Matters for Your Brand", category: "Materials", excerpt: "Expert insights and strategies to elevate your brand's packaging presence.", img: "/assets/collection_perfume.png", slug: "/blog" },
+    { title: "Finding Your Thread: A Complete Neck Size Compatibility Guide", category: "Technical", excerpt: "Expert insights and strategies to elevate your brand's packaging presence.", img: "/assets/family_cylinder.png", slug: "/blog" },
+    { title: "From Etsy to Retail: Scaling Your Packaging Strategy", category: "Growth", excerpt: "Expert insights and strategies to elevate your brand's packaging presence.", img: "/assets/collection_amber.png", slug: "/blog" },
 ];
+
+const CATEGORY_LABELS: Record<string, string> = {
+    "packaging-101": "Packaging 101",
+    "fragrance-guides": "Fragrance Guides",
+    "brand-stories": "Brand Stories",
+    "ingredient-science": "Ingredient Science",
+    "how-to": "How-To",
+    "industry-news": "Industry News",
+};
 
 type HeroSlide = NonNullable<HomepageData["heroSlides"]>[number];
 
@@ -104,7 +113,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
-        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[100dvh] pt-[160px] lg:pt-[120px] items-center bg-bone overflow-hidden`}>
+        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[100dvh] pt-[160px] lg:pt-[120px] items-end lg:items-center bg-bone overflow-hidden`}>
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
@@ -171,19 +180,68 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                 </>
             )}
 
-            <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16 relative z-10 pt-16 lg:pt-0 pb-16 lg:pb-0">
+            <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16 relative z-10 pt-4 lg:pt-0 pb-20 lg:pb-0">
                 <div className="max-w-[600px]">
                     <FadeUp delay={0.2}>
-                        <p className="text-xs uppercase tracking-[0.25em] text-white/90 font-bold mb-6 drop-shadow-sm">{slide?.eyebrow ?? DEFAULT_HERO_SLIDE.eyebrow}</p>
+                        {(() => {
+                            const eyebrow = slide?.eyebrow ?? DEFAULT_HERO_SLIDE.eyebrow;
+                            const hasOf = eyebrow?.includes(" of ");
+                            const parts = hasOf && eyebrow
+                                ? [eyebrow.split(" of ")[0]?.trim() ?? "", eyebrow.split(" of ")[1]?.trim() ?? ""]
+                                : null;
+                            return (
+                                <div className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-white/90 font-bold mb-4 sm:mb-6 drop-shadow-sm space-y-1">
+                                    {parts ? (
+                                        <>
+                                            {parts[0] && <p className="leading-tight">{parts[0]} OF</p>}
+                                            {parts[1] && <p className="leading-tight">{parts[1]}</p>}
+                                        </>
+                                    ) : (
+                                        <p className="leading-tight">{eyebrow}</p>
+                                    )}
+                                </div>
+                            );
+                        })()}
                     </FadeUp>
                     <FadeUp delay={0.3}>
-                        <h1 className="font-display text-[60px] lg:text-[87px] font-medium text-white leading-[1.05] mb-8 drop-shadow-sm">{slide?.headline ?? DEFAULT_HERO_SLIDE.headline}</h1>
+                        <h1 className="font-display text-[56px] sm:text-[48px] lg:text-[87px] font-medium text-white leading-[1.05] sm:leading-[1.05] mb-6 sm:mb-8 drop-shadow-sm">
+                            {(() => {
+                                const headline = slide?.headline ?? DEFAULT_HERO_SLIDE.headline;
+                                const spaceIdx = headline.indexOf(" ");
+                                if (spaceIdx === -1) return headline;
+                                return (
+                                    <>
+                                        <span className="block sm:inline">{headline.slice(0, spaceIdx)}</span>
+                                        <span className="block sm:inline">{headline.slice(spaceIdx + 1)}</span>
+                                    </>
+                                );
+                            })()}
+                        </h1>
                     </FadeUp>
                     <FadeUp delay={0.4}>
-                        <p className="text-lg lg:text-xl text-white/90 leading-[1.6] max-w-[480px] mb-12">{slide?.subheadline ?? DEFAULT_HERO_SLIDE.subheadline}</p>
+                        {(() => {
+                            const sub = slide?.subheadline ?? DEFAULT_HERO_SLIDE.subheadline;
+                            const toTitleCase = (s: string) =>
+                                s.replace(/\b\w/g, (c) => c.toUpperCase()).replace(/\b(for|to|and)\b/gi, (m) => m.toLowerCase());
+                            const parts = sub?.includes(" and ")
+                                ? [sub.split(" and ")[0]?.trim() ?? "", sub.split(" and ")[1]?.trim().replace(/\.$/, "") ?? ""]
+                                : null;
+                            return (
+                                <div className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.6] max-w-[480px] mb-8 sm:mb-12 space-y-1">
+                                    {parts ? (
+                                        <>
+                                            {parts[0] && <p className="leading-snug">{toTitleCase(parts[0])}</p>}
+                                            {parts[1] && <p className="leading-snug">{toTitleCase(parts[1])}</p>}
+                                        </>
+                                    ) : (
+                                        <p className="leading-snug">{sub}</p>
+                                    )}
+                                </div>
+                            );
+                        })()}
                     </FadeUp>
                     <FadeUp delay={0.5} className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8">
-                        <Link href={slide?.ctaHref || DEFAULT_HERO_SLIDE.ctaHref} className="w-full sm:w-auto px-8 py-4 bg-white text-obsidian uppercase text-sm font-semibold tracking-wider hover:bg-bone transition-colors duration-300 shadow-md text-center">
+                        <Link href={slide?.ctaHref || DEFAULT_HERO_SLIDE.ctaHref} className="w-[200px] sm:w-auto px-8 py-4 bg-white/75 sm:bg-white text-obsidian uppercase text-sm font-semibold tracking-wider hover:bg-bone transition-colors duration-300 shadow-md text-center whitespace-nowrap">
                             {(slide?.ctaText === "Explore Collections" ? "Browse Catalog" : slide?.ctaText) || DEFAULT_HERO_SLIDE.ctaText}
                         </Link>
                     </FadeUp>
@@ -707,7 +765,8 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
     const articles = edu?.featuredArticles?.length
         ? edu.featuredArticles.map((a) => ({
             title: a.title,
-            category: a.category ?? "Insights",
+            category: a.category ? (CATEGORY_LABELS[a.category] ?? a.category) : "Insights",
+            excerpt: a.excerpt ?? "Expert insights and strategies to elevate your brand's packaging presence.",
             img: a.image ? urlFor(a.image) : "/assets/collection_perfume.png",
             slug: a.slug ? `/blog/${a.slug}` : "#",
         }))
@@ -746,7 +805,7 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
                                 </div>
                                 <span className="inline-block mb-4 px-3 py-1 bg-bone text-muted-gold text-[11px] uppercase tracking-wider font-bold rounded-full border border-champagne/50">{article.category}</span>
                                 <h3 className="font-serif text-2xl text-obsidian leading-tight mb-3 group-hover:text-muted-gold transition-colors">{article.title}</h3>
-                                <p className="text-sm text-slate mb-4">Expert insights and strategies to elevate your brand&apos;s packaging presence.</p>
+                                <p className="text-sm text-slate mb-4">{article.excerpt}</p>
                                 <span className="text-sm font-medium text-obsidian flex items-center group-hover:text-muted-gold transition-colors">
                                     Read More <ArrowRight className="w-4 h-4 ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                                 </span>

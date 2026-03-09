@@ -1,12 +1,19 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { EB_Garamond, Inter } from "next/font/google";
+import { Cormorant, EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
 import GraceProviderSwitch from "@/components/GraceProviderSwitch";
 import MegaMenuLayoutWrapper from "@/components/MegaMenuLayoutWrapper";
+
+const cormorant = Cormorant({
+  variable: "--font-cormorant",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+});
 
 const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
@@ -34,7 +41,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+        <body className={`${cormorant.variable} ${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
           <ConvexClientProvider>
             <CartProvider>
               <Suspense fallback={
