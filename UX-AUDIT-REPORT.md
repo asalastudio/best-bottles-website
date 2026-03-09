@@ -9,19 +9,12 @@
 
 ## CRITICAL ISSUES (Fix Immediately — Blocks conversion or breaks brand trust)
 
-### C1. shadcn CSS Variables Use Blue Palette — Brand Color Violation
-**Page:** Site-wide (every shadcn/ui component)
-**Files:** `src/app/globals.css` lines 15-30, `src/components/ui/button.tsx`, `src/components/ui/card.tsx`
-**Problem:** The shadcn/ui CSS variable palette was never customized from its default blue-gray theme. `--primary` resolves to `hsl(222.2, 47.4%, 11.2%)` (dark blue-gray), `--accent` is light blue-gray, `--ring` produces blue focus rings, and `--border` has a blue tint. Every button using `bg-primary`, every focus ring, every card border, and every input outline renders in blue — directly violating the "No blues or teals in UI chrome" brand mandate.
-**User Impact:** The site presents a split personality: custom brand components (hero, trust section, nav) feel premium and on-brand, while all interactive UI elements (buttons, forms, modals, inputs) feel like a generic Next.js starter template. This undermines the "Muted Luxury" positioning at every interaction point.
-**Recommended Fix:** Override all shadcn CSS variables in `globals.css`:
-- `--primary` → Antiqued Gold `#C5A065` (HSL: 37, 42%, 58%)
-- `--primary-foreground` → Obsidian `#1D1D1F`
-- `--accent` → Gold Light `#D4B87A`
-- `--border` → warm gray derived from Bone (e.g., `hsl(37, 10%, 85%)`)
-- `--ring` → Antiqued Gold
-- `--muted` → Bone `#F5F3EF`
-- `--muted-foreground` → Obsidian at 60% opacity
+### ~~C1. RETRACTED — shadcn CSS Variables Are Properly Customized~~
+**Correction:** Initial audit incorrectly reported blue shadcn palette. Verified in `globals.css` lines 24-45: all shadcn semantic tokens are correctly mapped to brand colors (`--color-primary: var(--color-muted-gold)`, `--color-ring: var(--color-muted-gold)`, `--color-border: var(--color-champagne)`, `--color-background: var(--color-linen)`, `--color-accent: var(--color-travertine)`). The brand palette is comprehensive and properly wired. Remaining blue violations are limited to:
+- **Portal UI** (`src/components/portal/ui.tsx` line 59): `PortalTag` blue variant uses `bg-blue-50 text-blue-700 border-blue-200`
+- **TextureButton** (`src/components/ui/texture-button.tsx` lines 15, 45): third-party component with `indigo-300` through `indigo-600`
+- **Dormant token** (`globals.css` line 17): `--color-dark-teal: #2D4A4A` declared but unused — should be removed to prevent accidental future use
+**Recommended Fix:** Replace Portal blue tag with brand-aligned colors. Delete or rebrand TextureButton if used on storefront. Remove dormant `--color-dark-teal` token.
 
 ### C2. No Top-Level "Catalog" / "Shop All" Link in Navigation
 **Page:** Global navigation (`src/components/layout/Navbar.tsx`)
@@ -151,11 +144,11 @@
 **Problem:** The TrustBar shows four strong B2B differentiators ("No Order Minimum", "2,300+ Products", "Free Sample Kits", "Made in USA / No Tariff Surprises"), but the hero is `min-h-[80vh]` (~line 84) which pushes the TrustBar off-screen on most viewports. The most powerful selling points are invisible without scrolling.
 **Recommended Fix:** Either reduce the hero to `min-h-[65vh]` so the TrustBar peeks above the fold, or incorporate 2-3 key trust stats directly into the hero overlay area.
 
-### H15. "170 Years" Heritage Claim Exists Only in Meta Description — Not Visible on Any Page
-**Page:** Homepage, About
-**Problem:** The powerful "170 years of expertise" differentiator appears only in the `<meta name="description">` tag (`layout.tsx` ~line 26) — it is not rendered in any visible page element. The TrustBar, hero, and About page all omit this claim.
-**User Impact:** The strongest credibility signal in the brand's arsenal is invisible to actual visitors, only seen by search engines.
-**Recommended Fix:** Add "170+ Years of Bottling Heritage" to the TrustBar or hero eyebrow. The current hero eyebrow ("A Division of Nemat International") has low recognition value — replace with heritage messaging.
+### H15. ~~"170 Years" Heritage Claim~~ → Heritage Messaging Needs Clarification
+**Page:** Homepage, About, Meta description
+**Update per stakeholder guidance:** The "170 years" claim is not being used — Best Bottles has been in business 20+ years but the founders do not see the 170-year Nemat International lineage as directly interrelated. The `<meta name="description">` tag (`layout.tsx` ~line 26) currently references "170 years of expertise" — this should be updated to reflect the accurate 20+ year timeline or removed.
+**About page** (`about/page.tsx` ~line 11) also references "Over 170 years of fragrance and packaging expertise" and line 57 says "What began as a family fragrance business in the 1850s..." — these need revision.
+**Recommended Fix:** Replace "170 years" references with "20+ years" or "two decades" throughout. Replace the hero eyebrow "A Division of Nemat International" with a more differentiated positioning statement. Update meta description to match.
 
 ### H16. Homepage "Start Here" and "Shop by Application" Sections Create Redundant Navigation
 **Page:** Homepage (`src/components/HomePage.tsx`)
@@ -232,9 +225,10 @@ Both use applicator-centric labels rather than industry/use-case labels. A visit
 **Page:** Cart Drawer
 **Recommended Fix:** Add "You might also need..." showing compatible closures for bottles in the cart.
 
-### M14. 404 Page Too Minimal for Premium Brand
+### M14. 404 Page Functional but Could Be Enhanced
 **Page:** `src/app/not-found.tsx`
-**Recommended Fix:** Add branded illustration, "Search our catalog" CTA, "Ask Grace" button, and links to popular categories.
+**Note:** The 404 page actually uses proper brand palette (bone bg, obsidian text, muted-gold label) with two CTAs ("Go Home" + "Browse Catalog"). An error boundary (`error.tsx`) also exists with on-brand styling and proper `reset()` callback. Both are functional and on-brand — not generic.
+**Recommended Fix:** Consider adding a "Search our catalog" input and "Ask Grace" button for richer recovery paths. The visual foundation is solid.
 
 ### M15. Loading Skeletons Use Gray Instead of Brand Colors
 **Page:** Various loading states
@@ -403,15 +397,15 @@ The navbar includes a full Web Audio API voice search integration with silence d
 | **Grace AI** | 6/10 | Deep tool set, strong persona, voice mode; but greeting bubble is entirely unimplemented (static button only), no page context injection, no comparison tool, no browsing history tracking |
 | **Mobile** | 5/10 | Mobile sticky Add to Cart bar is well-implemented; but tap targets too small across nav/filters/pagination, Grace overlaps content, PDP vertical scroll excessive, "Ask Grace" hint hidden on mobile, mega menu truncates items silently |
 | **Cart & Checkout** | 3/10 | Cart items lack variant details, no tier nudge, no compatibility warnings, no shipping info, checkout abandons brand entirely |
-| **Brand Consistency** | 5/10 | Custom components are premium but shadcn blue palette violation undermines every interaction; 404 and error states are generic |
+| **Brand Consistency** | 8/10 | Strongest area — shadcn CSS properly maps to brand palette, EB Garamond + Inter pairing consistent, Obsidian/Bone/Gold used uniformly across storefront, 404 and error states are on-brand; Portal UI intentionally diverges (SaaS dashboard aesthetic), dormant `--color-dark-teal` token and TextureButton indigo are minor violations |
 
 ---
 
-## OVERALL PLATFORM SCORE: 4.6 / 10
+## OVERALL PLATFORM SCORE: 5.2 / 10
 
-Best Bottles has strong architectural foundations — the fitment engine, Grace AI tool system, Sanity editorial blocks, variant resolution logic, and B2B portal represent genuine differentiation that competitors lack. However, the platform is undermined by four systemic problems: (1) the shadcn/ui blue palette was never customized, creating a visual split personality between premium brand components and generic UI elements across every interactive touchpoint, (2) the platform's most differentiated feature — fitment cross-sell — dead-ends at a `alert('Demo')` stub and the FitmentCarousel isn't even rendered on the PDP, (3) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates) before ejecting users to an unbranded Shopify checkout, and (4) the homepage has multiple unfinished placeholder elements (empty testimonial avatars, broken social icons, non-functional newsletter, dead article links) that signal "beta product" rather than "170-year heritage brand."
+Best Bottles has genuinely strong architectural foundations — the fitment engine, Grace AI tool system, Sanity editorial blocks, variant resolution logic, brand-correct CSS variable system, and B2B portal represent real differentiation that competitors lack. The visual design system (EB Garamond + Inter, Obsidian/Bone/Gold palette, consistent spacing) is premium and well-executed across the storefront. However, the platform is undermined by three categories of unfinished work: (1) the platform's most differentiated feature — fitment cross-sell — dead-ends at an `alert('Demo')` stub and the FitmentCarousel isn't even rendered on the PDP, (2) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates, Request Quote CTA) before ejecting users to an unbranded Shopify checkout, and (3) the homepage has multiple unfinished placeholder elements (empty testimonial avatars, broken social icons, non-functional newsletter, dead article links, dead account button) that signal "beta product" rather than "170-year heritage brand."
 
 **Top 3 fixes by impact:**
-1. **Connect FitmentDrawer "Add" to real cart** and render FitmentCarousel on PDP — this unlocks the platform's #1 differentiator
-2. **Override shadcn CSS variables** in `globals.css` to replace blue palette with Obsidian/Bone/Gold — single-file change, sitewide brand elevation
-3. **Add "Request Quote" CTA to PDP** and extend pricing to 5+ tiers — these are table-stakes for B2B conversion that are currently absent
+1. **Connect FitmentDrawer "Add" to real cart** and render FitmentCarousel on PDP — this unlocks the platform's #1 differentiator and is a straightforward integration
+2. **Add "Request Quote" CTA to PDP** and extend pricing to 5+ tiers — these are table-stakes for B2B conversion that are currently absent from the product page
+3. **Clean up homepage placeholder elements** — remove or complete empty testimonial avatars, broken social icons, non-functional newsletter, dead article links, and dead account button. Incomplete UI is worse than absent UI for a premium brand
