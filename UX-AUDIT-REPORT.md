@@ -170,7 +170,12 @@ Both use applicator-centric labels rather than industry/use-case labels. A visit
 
 ## MEDIUM PRIORITY (Fix Post-Launch — Polish and optimization)
 
-### M1. Search Only Queries `itemName` — No Multi-Field Search
+### M1. Catalog Uses Raw `<img>` Instead of Next.js `<Image>` — No Optimization
+**Page:** Catalog page (`src/app/catalog/page.tsx` line 1, `eslint-disable @next/next/no-img-element`)
+**Problem:** All product images in the catalog grid use raw `<img>` elements instead of Next.js `<Image>`. This means no automatic image optimization, no responsive `srcset`, no blur-up placeholders, and no width/height enforcement to prevent Cumulative Layout Shift (CLS). The standalone `boston-round-30ml` collection page correctly uses `next/image`, showing the pattern was known but not applied to the main catalog.
+**Recommended Fix:** Replace raw `<img>` elements with `next/image` `<Image>` component in the catalog card components. Add appropriate `sizes` prop for responsive loading.
+
+### M2. Search Only Queries `itemName` — No Multi-Field Search
 **Page:** Nav search (`src/components/layout/NavSearch.tsx`, `convex/products.ts`)
 **Problem:** Searching "30ml amber dropper" requires all words to match within `itemName`. No cross-field search combining capacity + color + applicator.
 **Recommended Fix:** Implement composite search that queries across `itemName`, `color`, `capacity`, `family`, and `applicator` fields.
@@ -276,7 +281,22 @@ Both use applicator-centric labels rather than industry/use-case labels. A visit
 **Problem:** The label "Cap Color / Variant (Preview)" contains "(Preview)" — a development label visible to production users.
 **Recommended Fix:** Remove "(Preview)" from the label.
 
-### M25. No Search Autocomplete or Suggestions
+### M25. Grace Receives Partial Catalog Context — Misses Most Active Filters
+**Page:** Catalog, `src/components/GraceElevenLabsProvider.tsx` lines 287-294
+**Problem:** Grace's `PageContext` for the catalog page parses `?family=` and `?search=` from the URL but ignores all other active filters (applicator, color, capacity, thread size, price range). A user who has filtered to "Amber + Dropper + 30ml" and asks Grace "what else do you have like this?" gets no filter context.
+**Recommended Fix:** Parse all URL filter params into the Grace `PageContext.catalogFilters` object so Grace can reference and continue the user's active browsing context.
+
+### M26. "Need Help? Ask Grace" Prompt Hidden on Mobile
+**Page:** Catalog page (`page.tsx` ~line 1494)
+**Problem:** The catalog header text "Need help narrowing options? Ask Grace" uses `hidden sm:inline` — hidden on mobile. Mobile users, who arguably need the most help navigating 230+ products on a small screen, never see this prompt.
+**Recommended Fix:** Show the Grace prompt on mobile, perhaps as a compact banner or floating pill rather than inline text.
+
+### M27. Catalog Pagination Has No URL State — "Load More" Loses Position on Refresh
+**Page:** Catalog (`page.tsx`)
+**Problem:** The catalog uses a "Load More" pattern (24 items per batch via `setVisibleCount`) rather than numbered pagination. If a user clicks "Load More" three times (viewing 72 items) and refreshes the page, they return to the first 24 items. The loaded count is not persisted in the URL.
+**Recommended Fix:** Either add a `?page=` or `?limit=` URL param to preserve scroll position, or implement true pagination with numbered pages for deep catalogs.
+
+### M28. No Search Autocomplete or Suggestions
 **Page:** Search (`src/components/Navbar.tsx` lines 506-536)
 **Problem:** Search is submit-only — no typeahead suggestions, recent searches, or category-level matches. Voice search via Web Audio API exists (a strength), but text search has no preview before submission.
 **Recommended Fix:** Add a search suggestions dropdown showing top 5 matching products/families as the user types. Show recent searches when the input is focused but empty.
@@ -378,10 +398,10 @@ The navbar includes a full Web Audio API voice search integration with silence d
 |---------|-------|---------------|
 | **Homepage** | 5/10 | Poetic hero headline prioritizes aesthetics over clarity; TrustBar with key differentiators pushed below fold by 80vh hero; placeholder testimonials, broken social icons, and non-functional newsletter undermine premium feel; "Start Here" and "Shop by Application" overlap; 170-year heritage claim hidden in meta only |
 | **Navigation** | 5/10 | Mega menus are well-structured, PDP breadcrumbs work well, but catalog/blog lack breadcrumbs, no unfiltered catalog link, mobile silently truncates menu items, and tap targets are undersized |
-| **Collection Pages** | 6/10 | Comprehensive filters and dual view modes, but missing capacity sort, out-of-stock indicators, and grouped capacity ranges |
+| **Collection Pages** | 6/10 | Comprehensive filters with facet counts and color swatches, excellent variant visibility across all views, dual view modes; but missing capacity sort, out-of-stock indicators, grouped capacity ranges, and uses raw `<img>` instead of `next/image` |
 | **Product Detail Pages** | 4/10 | Fitment matching architecture is excellent but the "Add" button is a demo stub (`alert()`), FitmentCarousel not rendered, no Request Quote CTA exists, only 3 of 5+ pricing tiers implemented, single image per variant, specs buried at bottom; mobile sticky CTA is a bright spot |
 | **Grace AI** | 6/10 | Deep tool set, strong persona, voice mode; but greeting bubble is entirely unimplemented (static button only), no page context injection, no comparison tool, no browsing history tracking |
-| **Mobile** | 4/10 | Functional but unpolished — tap targets too small, no sticky CTA, Grace overlaps content, PDP scroll is excessive |
+| **Mobile** | 5/10 | Mobile sticky Add to Cart bar is well-implemented; but tap targets too small across nav/filters/pagination, Grace overlaps content, PDP vertical scroll excessive, "Ask Grace" hint hidden on mobile, mega menu truncates items silently |
 | **Cart & Checkout** | 3/10 | Cart items lack variant details, no tier nudge, no compatibility warnings, no shipping info, checkout abandons brand entirely |
 | **Brand Consistency** | 5/10 | Custom components are premium but shadcn blue palette violation undermines every interaction; 404 and error states are generic |
 
