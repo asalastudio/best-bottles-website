@@ -6,12 +6,13 @@ import Image from "next/image";
 import { useSearchParams, useRouter, usePathname } from "next/navigation";
 import {
     Search, ArrowRight, X, Package, ChevronDown, ChevronUp,
-    SlidersHorizontal, ArrowUpDown, LayoutGrid, List, Plus, Minus, ShoppingCart,
+    SlidersHorizontal, ArrowUpDown, LayoutGrid, List, Plus, Minus, ShoppingCart, MessageCircle, Sparkles,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
+import { useGrace } from "@/components/useGrace";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -252,7 +253,24 @@ function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGro
 
                 <div className="p-5 flex flex-col flex-1">
                     <p className="text-[10px] text-slate uppercase tracking-wider font-bold mb-1">{group.category}</p>
-                    <h4 className="font-serif text-lg text-obsidian font-medium mb-4 flex-1 leading-snug">{group.displayName}</h4>
+                    <h4 className="font-serif text-lg text-obsidian font-medium mb-2 flex-1 leading-snug">{group.displayName}</h4>
+
+                    {/* Category-specific attributes */}
+                    <div className="flex flex-wrap items-center gap-1.5 mb-3 min-h-[22px]">
+                        {BOTTLE_CATEGORIES.has(group.category) && group.neckThreadSize && (
+                            <span className="text-[10px] text-slate bg-travertine px-1.5 py-0.5 rounded border border-champagne/60 font-medium">
+                                {group.neckThreadSize}
+                            </span>
+                        )}
+                        {COMPONENT_CATEGORIES.has(group.category) && (group.applicatorTypes?.[0]) && (
+                            <span className="text-[10px] text-slate bg-travertine px-1.5 py-0.5 rounded border border-champagne/60 font-medium">
+                                {group.applicatorTypes[0]}
+                            </span>
+                        )}
+                        {group.color && COLOR_SWATCH_MAP[group.color] && (
+                            <span className={`w-3.5 h-3.5 rounded-full shrink-0 ${COLOR_SWATCH_MAP[group.color]}`} title={group.color} />
+                        )}
+                    </div>
 
                     <div className="flex items-end justify-between mt-auto">
                         <div className="flex flex-col">
@@ -1133,6 +1151,10 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     const router = useRouter();
     const pathname = usePathname();
     const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
+    const { open: openGrace } = useGrace();
+
+    const isGraceNav = searchParams.get("grace") === "1";
+    const [graceBannerDismissed, setGraceBannerDismissed] = useState(false);
 
     const initialState = paramsToFilters(searchParams);
 
@@ -1372,7 +1394,16 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         if (facetData.priceRange.min === Infinity) facetData.priceRange = { min: 0, max: 0 };
 
         // Sort
-        if (sortBy === "price-asc") {
+        if (sortBy === "best-match" && filters.search) {
+            // Score by how many search tokens appear in the display name (name-priority relevance)
+            const tokens = filters.search.toLowerCase().split(/\s+/).filter(Boolean);
+            const score = (g: typeof result[0]) => {
+                const name = g.displayName.toLowerCase();
+                return tokens.reduce((acc, t) => acc + (name.includes(t) ? 2 : 0), 0)
+                    + (g.family ? tokens.reduce((acc, t) => acc + (g.family!.toLowerCase().includes(t) ? 1 : 0), 0) : 0);
+            };
+            result.sort((a, b) => score(b) - score(a));
+        } else if (sortBy === "price-asc") {
             result.sort((a, b) => (a.priceRangeMin ?? Infinity) - (b.priceRangeMin ?? Infinity));
         } else if (sortBy === "price-desc") {
             result.sort((a, b) => (b.priceRangeMin ?? -Infinity) - (a.priceRangeMin ?? -Infinity));
@@ -1460,10 +1491,13 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
             setSearchInput(term);
             clearTimeout(searchDebounceRef.current);
             searchDebounceRef.current = setTimeout(() => {
+                // Auto-switch to "best-match" when search is typed; restore "featured" when cleared
+                if (term && sortBy === "featured") setSortBy("best-match");
+                if (!term && sortBy === "best-match") setSortBy("featured");
                 handleFilterChange({ search: term || "" });
             }, SEARCH_DEBOUNCE_MS);
         },
-        [handleFilterChange],
+        [handleFilterChange, sortBy],
     );
 
     const toggleCategory = useCallback((cat: string) => {
@@ -1582,7 +1616,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
                             className="w-full appearance-none bg-white border border-champagne rounded-lg px-3 py-2.5 text-sm text-obsidian pr-8 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
                         >
-                            {SORT_OPTIONS.map((opt) => (
+                            {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
                                 <option key={opt.value} value={opt.value}>{opt.label}</option>
                             ))}
                         </select>
@@ -1612,7 +1646,14 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                 style={{ boxShadow: "8px 0 40px rgba(29,29,31,0.15)" }}
                             >
                                 <div className="flex items-center justify-between px-5 py-4 border-b border-champagne/50 sticky top-0 bg-bone z-10">
-                                    <h3 className="font-serif text-lg text-obsidian font-medium">Filters</h3>
+                                    <div className="flex items-center gap-2">
+                                        <h3 className="font-serif text-lg text-obsidian font-medium">Filters</h3>
+                                        {activeFilterCount(filters) > 0 && (
+                                            <span className="w-5 h-5 rounded-full bg-muted-gold text-white text-[10px] flex items-center justify-center font-bold">
+                                                {activeFilterCount(filters)}
+                                            </span>
+                                        )}
+                                    </div>
                                     <button
                                         onClick={() => setMobileFilterOpen(false)}
                                         className="p-1.5 rounded-lg hover:bg-champagne/40 transition-colors"
@@ -1620,7 +1661,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         <X className="w-5 h-5 text-slate" />
                                     </button>
                                 </div>
-                                <div className="px-5 py-4">
+                                <div className="px-5 py-4 pb-28">
                                     <FilterSidebarContent
                                         facets={facets}
                                         taxonomy={taxonomy ?? null}
@@ -1631,6 +1672,18 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         onFilterChange={handleFilterChange}
                                         onClearAll={handleClearAll}
                                     />
+                                </div>
+                                {/* Sticky "View results" button at bottom */}
+                                <div className="sticky bottom-0 px-5 py-4 bg-bone border-t border-champagne/50">
+                                    <button
+                                        onClick={() => {
+                                            setMobileFilterOpen(false);
+                                            window.scrollTo({ top: 0, behavior: "smooth" });
+                                        }}
+                                        className="w-full py-3 bg-obsidian text-white text-sm font-bold uppercase tracking-wider hover:bg-muted-gold transition-colors rounded-sm"
+                                    >
+                                        View {filtered.length} {filtered.length === 1 ? "Result" : "Results"}
+                                    </button>
                                 </div>
                             </motion.div>
                         </>
@@ -1695,7 +1748,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
                                             className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
                                         >
-                                            {SORT_OPTIONS.map((opt) => (
+                                            {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
                                                 <option key={opt.value} value={opt.value}>{opt.label}</option>
                                             ))}
                                         </select>
@@ -1705,6 +1758,14 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                     <span className="hidden sm:inline-flex px-2 sm:px-3 py-1 bg-white border border-champagne text-[10px] sm:text-xs font-semibold text-slate uppercase rounded-full whitespace-nowrap">
                                         {filtered.length} {filtered.length === 1 ? "Product" : "Products"}
                                     </span>
+                                    {chips.length > 0 && (
+                                        <button
+                                            onClick={handleClearAll}
+                                            className="hidden sm:inline-flex items-center gap-1 px-2 py-1 text-[10px] font-semibold text-muted-gold hover:text-obsidian bg-muted-gold/10 border border-muted-gold/30 rounded-full whitespace-nowrap transition-colors"
+                                        >
+                                            {chips.length} filter{chips.length !== 1 ? "s" : ""} · Clear
+                                        </button>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -1757,18 +1818,52 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         : "No products match your current filters."}
                                 </p>
                                 {chips.length > 0 && (
-                                    <p className="text-slate text-xs mb-8">
+                                    <p className="text-slate text-xs mb-6">
                                         Try removing {chips.length === 1 ? "your filter" : "some filters"} to see more results.
                                     </p>
                                 )}
-                                <button
-                                    onClick={handleClearAll}
-                                    className="px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors"
-                                >
-                                    Reset Filters
-                                </button>
+                                <div className="flex flex-col sm:flex-row gap-3 mt-2">
+                                    <button
+                                        onClick={handleClearAll}
+                                        className="px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors rounded-sm"
+                                    >
+                                        Reset Filters
+                                    </button>
+                                    <button
+                                        onClick={openGrace}
+                                        className="px-6 py-3 border border-muted-gold text-muted-gold uppercase text-xs font-bold tracking-wider hover:bg-muted-gold hover:text-white transition-colors rounded-sm flex items-center gap-2"
+                                    >
+                                        <MessageCircle className="w-3.5 h-3.5" />
+                                        Ask Grace
+                                    </button>
+                                </div>
                             </div>
                         )}
+
+                        {/* Grace Navigation Banner */}
+                        <AnimatePresence>
+                            {isGraceNav && !graceBannerDismissed && visibleProducts.length > 0 && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -8 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    exit={{ opacity: 0, y: -8 }}
+                                    className="mb-4 flex items-center justify-between gap-3 px-4 py-3 bg-muted-gold/10 border border-muted-gold/30 rounded-sm"
+                                >
+                                    <div className="flex items-center gap-2">
+                                        <Sparkles className="w-4 h-4 text-muted-gold shrink-0" />
+                                        <p className="text-sm text-muted-gold font-semibold">Grace found these for you</p>
+                                        <span className="text-xs text-slate">— refine with the filters, or ask Grace to narrow it further.</span>
+                                    </div>
+                                    <button
+                                        onClick={() => setGraceBannerDismissed(true)}
+                                        className="shrink-0 p-1 hover:text-obsidian text-muted-gold transition-colors"
+                                        aria-label="Dismiss"
+                                    >
+                                        <X className="w-4 h-4" />
+                                    </button>
+                                </motion.div>
+                            )}
+                        </AnimatePresence>
 
                         {/* Product Display — Visual Grid or Line Items */}
                         {visibleProducts.length > 0 && viewMode === "visual" && (
