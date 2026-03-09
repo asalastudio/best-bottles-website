@@ -53,6 +53,18 @@
 **User Impact:** B2B buyers planning production runs need delivery estimates to make purchasing decisions. The absence of this information forces them to contact sales before ordering, adding friction and reducing conversion.
 **Recommended Fix:** Add stock-status-aware shipping messaging to PDP ("In Stock — Ships in 2-3 business days") and cart ("Estimated delivery: [date range]"). Distinguish between stock and made-to-order items.
 
+### C7. FitmentDrawer "Add to Cart" is a Demo Stub — Cross-Sell Cannot Complete Purchase
+**Page:** PDP Fitment Drawer (`src/components/FitmentDrawer.tsx` ~line 249)
+**Problem:** The FitmentDrawer's 3-step guided flow (Base → Applicator → Trim & Closure) ends with an "Add" button that calls `alert('Added bundle to cart! (Demo)')` — a JavaScript alert, not a real cart integration. The entire fitment cross-sell experience — the platform's most differentiated feature — dead-ends at a browser alert box.
+**User Impact:** A buyer who discovers a compatible closure through the fitment system, completes the 3-step selection, and clicks "Add" gets a browser alert and nothing in their cart. This breaks the most critical conversion path for the #1 differentiating feature.
+**Recommended Fix:** Connect the FitmentDrawer's Add button to `CartProvider.addItems()` with the resolved variant's SKU, name, and price. This is a straightforward integration — the selected variant data is already available in the drawer state.
+
+### C8. No "Request Quote" CTA on Product Detail Page
+**Page:** PDP (`src/app/products/[slug]/page.tsx`)
+**Problem:** The PDP has a prominent "Add to Cart" button but **zero path to requesting a quote**. No link, no button, no text reference to the `/request-quote` page. For B2B packaging customers ordering at production volumes (144+, 576+, 1000+ units), there is no conversion path from the product they're evaluating.
+**User Impact:** A scaling beauty brand evaluating Best Bottles for a 5,000-unit production run has no way to initiate a quote conversation from the product page. They must navigate away, find the quote form separately, and manually re-enter the product details.
+**Recommended Fix:** Add a "Request a Quote" secondary CTA below or alongside "Add to Cart." For quantities above a threshold (e.g., 100+), swap to a primary "Request Quote" CTA. Link to `/request-quote?sku={sku}&product={name}&qty={qty}` with pre-populated fields.
+
 ---
 
 ## HIGH PRIORITY (Fix Before Launch — Significant friction or UX gap)
@@ -103,15 +115,20 @@
 **Problem:** "Proceed to Checkout" constructs a Shopify cart permalink and redirects the user entirely out of the Best Bottles experience. Shopify's default checkout uses its own theme — no Obsidian/Bone/Gold, no EB Garamond, no Grace AI.
 **Recommended Fix:** At minimum, customize the Shopify checkout theme to match BB brand colors and typography (Shopify Plus supports checkout customization). Long-term, consider Shopify's Checkout Extensibility or a custom checkout page.
 
-### H10. Specs Table Below the Fold on PDP
-**Page:** PDP (`src/app/(main)/products/[slug]/ProductPage.tsx` ~line 320)
-**Problem:** Technical specs (dimensions, thread size, weight) are positioned after image, pricing, CTA, and variant selector. B2B buyers who need exact measurements must scroll to find them.
+### H10. Specs Table Buried at Bottom of PDP — Below Editorial and Cross-Sell
+**Page:** PDP (`src/app/products/[slug]/page.tsx` ~line 1186)
+**Problem:** Technical specs (SKU, dimensions, thread size, weight, assembly type, component group — 20+ fields rendered via `SpecRow` component) are positioned at the very bottom of the page, below the editorial zone and cross-sell sections. For a B2B audience buying packaging components, specs like Volume, Neck Finish, and Dimensions should be above the fold or in the right-column config panel.
 **Recommended Fix:** Add a compact "Key Specs" summary (capacity, thread size, height, diameter) in the right column near the CTA. Keep the full specs table below for completeness.
 
-### H11. PDP Extremely Long Vertical Scroll on Mobile — No Collapsible Sections
-**Page:** Mobile PDP (`ProductPage.tsx`)
-**Problem:** On mobile, a typical PDP with specs, fitments, and editorial blocks can reach 3000-4000px. Image alone consumes 56% of the viewport. No sticky "Add to Cart" bar exists. Users must scroll back up to purchase.
-**Recommended Fix:** Add collapsible accordion sections for Specs, Fitments, and Editorial on mobile. Implement a sticky bottom "Add to Cart" bar that appears on scroll.
+### H11. PDP Extremely Long Vertical Scroll on Mobile — Collapsible Sections Needed
+**Page:** Mobile PDP (`page.tsx`)
+**Problem:** On mobile, a typical PDP with specs, fitments, and editorial blocks can reach 3000-4000px. Image alone consumes 56% of the viewport. Note: a mobile sticky "Add to Cart" bar IS implemented (lines 1243-1283 with safe area insets) — however, the page length still creates excessive scrolling for specs and fitment discovery.
+**Recommended Fix:** Add collapsible accordion sections for Specs, Fitments, and Editorial on mobile to reduce vertical scroll distance.
+
+### H12a. Only 3 Pricing Tiers Exist — Missing Production Volume Tiers
+**Page:** PDP volume pricing table (`page.tsx` lines 1097-1130), Database schema (`convex/schema.ts` lines 109-111)
+**Problem:** The database schema defines only 3 price fields: `webPrice1pc`, `webPrice10pc`, `webPrice12pc`. The PDP displays "1+ units", "10+ units", "12+ units". The expected 5-tier B2B pricing (1pc / 12pc / 144pc / 576pc / 1000+) does not exist anywhere — not in the schema, not in the backend, not in the UI. For a B2B packaging supplier where production runs of 500-5000 units are standard, the absence of volume pricing tiers eliminates the primary incentive to order at scale.
+**Recommended Fix:** Extend the Convex schema with `webPrice144pc`, `webPrice576pc`, `webPrice1000pc` fields. Update the PDP pricing table to show all 5+ tiers. Backfill pricing data from wholesale/QuickBooks source.
 
 ### H12. Grace Widget Overlaps Content and Potential Sticky CTA on Mobile
 **Page:** All mobile pages (`src/components/grace/GraceChatWidget.tsx`)
@@ -244,7 +261,22 @@ Both use applicator-centric labels rather than industry/use-case labels. A visit
 **Problem:** Mobile mega menu sections use `slice(0, 6)` to limit items per column. The Bottles > Design Families column has 9 entries but only 6 are shown — with no "View All" link indicating more exist. Users on mobile never discover 3 design families.
 **Recommended Fix:** Remove the `slice(0, 6)` truncation, or add a "View All [N] Families" link at the bottom of each truncated section.
 
-### M22. No Search Autocomplete or Suggestions
+### M22. FitmentCarousel Component Not Rendered on PDP — Only in Demo
+**Page:** PDP, `src/components/FitmentCarousel.tsx`, `src/components/FitmentIntegrationDemo.tsx`
+**Problem:** The `FitmentCarousel` horizontal carousel exists (101 lines) but is NOT imported or rendered on the PDP. It's only used in `FitmentIntegrationDemo.tsx`. Compatible closures require opening the FitmentDrawer to discover. The carousel would give quick at-a-glance visibility to compatible fitments without requiring drawer interaction.
+**Recommended Fix:** Import and render `FitmentCarousel` on the PDP below the variant selector, showing 3-5 compatible fitments as a horizontal scroll with "View All" linking to the FitmentDrawer.
+
+### M23. Fitment Card Images Are All Placeholders
+**Page:** `src/components/FitmentCarousel.tsx` lines 67-70
+**Problem:** Every fitment card shows a gold gradient circle placeholder instead of product photos. Code comment reads: "Images not yet stored in DB, keeping placeholder."
+**Recommended Fix:** Populate `imageUrl` for component/closure products in the database. Use these images in fitment cards.
+
+### M24. Variant Selector Shows "(Preview)" Development Artifact
+**Page:** PDP (`page.tsx` ~line 933)
+**Problem:** The label "Cap Color / Variant (Preview)" contains "(Preview)" — a development label visible to production users.
+**Recommended Fix:** Remove "(Preview)" from the label.
+
+### M25. No Search Autocomplete or Suggestions
 **Page:** Search (`src/components/Navbar.tsx` lines 506-536)
 **Problem:** Search is submit-only — no typeahead suggestions, recent searches, or category-level matches. Voice search via Web Audio API exists (a strength), but text search has no preview before submission.
 **Recommended Fix:** Add a search suggestions dropdown showing top 5 matching products/families as the user types. Show recent searches when the input is focused but empty.
@@ -347,7 +379,7 @@ The navbar includes a full Web Audio API voice search integration with silence d
 | **Homepage** | 5/10 | Poetic hero headline prioritizes aesthetics over clarity; TrustBar with key differentiators pushed below fold by 80vh hero; placeholder testimonials, broken social icons, and non-functional newsletter undermine premium feel; "Start Here" and "Shop by Application" overlap; 170-year heritage claim hidden in meta only |
 | **Navigation** | 5/10 | Mega menus are well-structured, PDP breadcrumbs work well, but catalog/blog lack breadcrumbs, no unfiltered catalog link, mobile silently truncates menu items, and tap targets are undersized |
 | **Collection Pages** | 6/10 | Comprehensive filters and dual view modes, but missing capacity sort, out-of-stock indicators, and grouped capacity ranges |
-| **Product Detail Pages** | 5/10 | Fitment matching is excellent but specs are below fold, color swap navigates away, most PDPs are bare without CMS content |
+| **Product Detail Pages** | 4/10 | Fitment matching architecture is excellent but the "Add" button is a demo stub (`alert()`), FitmentCarousel not rendered, no Request Quote CTA exists, only 3 of 5+ pricing tiers implemented, single image per variant, specs buried at bottom; mobile sticky CTA is a bright spot |
 | **Grace AI** | 6/10 | Deep tool set, strong persona, voice mode; but greeting bubble is entirely unimplemented (static button only), no page context injection, no comparison tool, no browsing history tracking |
 | **Mobile** | 4/10 | Functional but unpolished — tap targets too small, no sticky CTA, Grace overlaps content, PDP scroll is excessive |
 | **Cart & Checkout** | 3/10 | Cart items lack variant details, no tier nudge, no compatibility warnings, no shipping info, checkout abandons brand entirely |
@@ -355,6 +387,11 @@ The navbar includes a full Web Audio API voice search integration with silence d
 
 ---
 
-## OVERALL PLATFORM SCORE: 4.9 / 10
+## OVERALL PLATFORM SCORE: 4.6 / 10
 
-Best Bottles has strong architectural foundations — the fitment engine, Grace AI tool system, Sanity editorial blocks, and B2B portal represent genuine differentiation that competitors lack. However, the platform is undermined by three systemic problems: (1) the shadcn/ui blue palette was never customized, creating a visual split personality between premium brand components and generic UI elements across every interactive touchpoint, (2) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates) before ejecting users to an unbranded Shopify checkout, and (3) the homepage — the most critical conversion page — has multiple unfinished placeholder elements (empty testimonial avatars, broken social icons, non-functional newsletter, dead article links) that signal "beta product" rather than "170-year heritage brand." **The single most important fix is overhauling the CSS variables in `globals.css` to replace the blue shadcn palette with the Obsidian/Bone/Gold brand system** — this is a single-file change that immediately elevates every interactive element across the entire site. The second priority should be cleaning up homepage placeholder elements that damage first impressions.
+Best Bottles has strong architectural foundations — the fitment engine, Grace AI tool system, Sanity editorial blocks, variant resolution logic, and B2B portal represent genuine differentiation that competitors lack. However, the platform is undermined by four systemic problems: (1) the shadcn/ui blue palette was never customized, creating a visual split personality between premium brand components and generic UI elements across every interactive touchpoint, (2) the platform's most differentiated feature — fitment cross-sell — dead-ends at a `alert('Demo')` stub and the FitmentCarousel isn't even rendered on the PDP, (3) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates) before ejecting users to an unbranded Shopify checkout, and (4) the homepage has multiple unfinished placeholder elements (empty testimonial avatars, broken social icons, non-functional newsletter, dead article links) that signal "beta product" rather than "170-year heritage brand."
+
+**Top 3 fixes by impact:**
+1. **Connect FitmentDrawer "Add" to real cart** and render FitmentCarousel on PDP — this unlocks the platform's #1 differentiator
+2. **Override shadcn CSS variables** in `globals.css` to replace blue palette with Obsidian/Bone/Gold — single-file change, sitewide brand elevation
+3. **Add "Request Quote" CTA to PDP** and extend pricing to 5+ tiers — these are table-stakes for B2B conversion that are currently absent
