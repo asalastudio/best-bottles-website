@@ -173,124 +173,124 @@ Both use applicator-centric labels rather than industry/use-case labels. A visit
 **Problem:** Searching "30ml amber dropper" requires all words to match within `itemName`. No cross-field search combining capacity + color + applicator.
 **Recommended Fix:** Implement composite search that queries across `itemName`, `color`, `capacity`, `family`, and `applicator` fields.
 
-### M2. Search Results Don't Show Product Images
+### M3. Search Results Don't Show Product Images
 **Page:** Nav search (`NavSearch.tsx`)
 **Recommended Fix:** Add thumbnail images to search result items for visual product recognition.
 
-### M3. Price Range Format on Cards is Confusing
+### M4. Price Range Format on Cards is Confusing
 **Page:** Catalog cards (`ProductGroupCard.tsx`)
 **Problem:** "$2.50 – $8.90" doesn't indicate what causes the range (variant vs quantity).
 **Recommended Fix:** Clarify as "From $2.50/unit" or show "1pc: $8.90 | 500+: $2.50".
 
-### M4. Color Variants Not Shown on Catalog Cards
+### M5. Color Variants Not Shown on Catalog Cards
 **Page:** Catalog cards (`ProductGroupCard.tsx`)
 **Recommended Fix:** Add small color dot indicators below the card image showing available color variants.
 
-### M5. No "Request Quote" Button in Cart Drawer
+### M6. No "Request Quote" Button in Cart Drawer
 **Page:** Cart Drawer (`CartDrawer.tsx`)
 **Recommended Fix:** Add a secondary "Request Quote for This Order" CTA below "Proceed to Checkout" for B2B buyers.
 
-### M6. No Compatibility Warnings in Cart
+### M7. No Compatibility Warnings in Cart
 **Page:** Cart (`CartProvider.tsx`)
 **Problem:** Adding a bottle and an incompatible sprayer (wrong thread size) triggers no warning.
 **Recommended Fix:** Run thread-size compatibility checks when items are added. Show a warning badge on incompatible pairs.
 
-### M7. No Order Review Step Before Shopify Redirect
+### M8. No Order Review Step Before Shopify Redirect
 **Page:** Cart Drawer (`CartDrawer.tsx`)
 **Recommended Fix:** Add a review step showing final item list, tier pricing summary, and compatibility confirmation before redirecting to Shopify.
 
-### M8. Sample Flow Not Accessible from PDP
+### M9. Sample Flow Not Accessible from PDP
 **Page:** PDP
 **Problem:** PDP has "Add to Cart" and "Request a Quote" but no "Order a Sample" link.
 **Recommended Fix:** Add an "Order a Sample" text link near the CTA area, especially for first-time buyers.
 
-### M9. Mega Menu Product Counts Are Hardcoded
+### M10. Mega Menu Product Counts Are Hardcoded
 **Page:** Nav (`src/components/layout/Navbar.constants.ts`)
 **Problem:** Counts like "Roll-On Bottles (47)" are static strings that will become stale.
 **Recommended Fix:** Fetch live counts from `productGroups` data or remove counts to avoid stale data.
 
-### M10. Mobile Filter Panel Lacks "Show X Results" Button
+### M11. Mobile Filter Panel Lacks "Show X Results" Button
 **Page:** Mobile catalog sidebar
 **Recommended Fix:** Add a sticky "Show X Results" button at the bottom of the mobile filter panel that also closes the panel.
 
-### M11. Out-of-Stock Variants Still Clickable on PDP
+### M12. Out-of-Stock Variants Still Clickable on PDP
 **Page:** PDP variant selector (`VariantSelector.tsx`)
 **Recommended Fix:** Gray out and badge out-of-stock variants. Show "Notify Me" instead of allowing selection.
 
-### M12. Variant Selector Lacks Visual Previews for Applicator Types
+### M13. Variant Selector Lacks Visual Previews for Applicator Types
 **Page:** PDP (`VariantSelector.tsx`)
 **Recommended Fix:** Add small icons or thumbnails for each applicator type (spray icon, roller icon, dropper icon) next to text labels.
 
-### M13. No "Continue Shopping" or Related Products in Cart Drawer
+### M14. No "Continue Shopping" or Related Products in Cart Drawer
 **Page:** Cart Drawer
 **Recommended Fix:** Add "You might also need..." showing compatible closures for bottles in the cart.
 
-### M14. 404 Page Functional but Could Be Enhanced
+### M15. 404 Page Functional but Could Be Enhanced
 **Page:** `src/app/not-found.tsx`
 **Note:** The 404 page actually uses proper brand palette (bone bg, obsidian text, muted-gold label) with two CTAs ("Go Home" + "Browse Catalog"). An error boundary (`error.tsx`) also exists with on-brand styling and proper `reset()` callback. Both are functional and on-brand — not generic.
 **Recommended Fix:** Consider adding a "Search our catalog" input and "Ask Grace" button for richer recovery paths. The visual foundation is solid.
 
-### M15. Loading Skeletons Use Gray Instead of Brand Colors
+### M16. Loading Skeletons Use Gray Instead of Brand Colors
 **Page:** Various loading states
 **Recommended Fix:** Use Bone-colored skeletons with subtle gold shimmer animation.
 
-### M16. Start Here Section Title is Generic
+### M17. Start Here Section Title is Generic
 **Page:** Homepage (`StartHereSection.tsx`)
 **Recommended Fix:** Change "Start Here" to "Shop by Use Case" or "Solutions for Your Brand."
 
-### M17. No Quantity-Based CTA Swap on PDP
+### M18. No Quantity-Based CTA Swap on PDP
 **Page:** PDP
 **Problem:** When a buyer enters 500+ units, CTA should emphasize "Request a Quote" over "Add to Cart."
 **Recommended Fix:** When quantity exceeds a threshold (e.g., 500), swap primary CTA to "Request a Quote" with "Add to Cart" as secondary.
 
-### M18. Empty Catalog State Doesn't Suggest Alternatives or Grace
+### M19. Empty Catalog State Doesn't Suggest Alternatives or Grace
 **Page:** Catalog (`EmptyState.tsx`)
 **Recommended Fix:** Add "Ask Grace for help" button and suggest removing specific filters.
 
-### M19. Line View Lacks Sortable Column Headers
+### M20. Line View Lacks Sortable Column Headers
 **Page:** Catalog line view (`ProductGroupRow.tsx`)
 **Recommended Fix:** Make column headers clickable for sorting in line/table view.
 
-### M20. About Page Heritage Section May Be Too Long-Form
+### M21. About Page Heritage Section May Be Too Long-Form
 **Page:** `/about` (`AboutPage.tsx`)
 **Recommended Fix:** Use progressive disclosure — lead with key metrics, expand to full narrative.
 
-### M21. Mobile Mega Menu Silently Truncates Items
+### M22. Mobile Mega Menu Silently Truncates Items
 **Page:** Mobile nav (`src/components/Navbar.tsx` ~line 678)
 **Problem:** Mobile mega menu sections use `slice(0, 6)` to limit items per column. The Bottles > Design Families column has 9 entries but only 6 are shown — with no "View All" link indicating more exist. Users on mobile never discover 3 design families.
 **Recommended Fix:** Remove the `slice(0, 6)` truncation, or add a "View All [N] Families" link at the bottom of each truncated section.
 
-### M22. FitmentCarousel Component Not Rendered on PDP — Only in Demo
+### M23. FitmentCarousel Component Not Rendered on PDP — Only in Demo
 **Page:** PDP, `src/components/FitmentCarousel.tsx`, `src/components/FitmentIntegrationDemo.tsx`
 **Problem:** The `FitmentCarousel` horizontal carousel exists (101 lines) but is NOT imported or rendered on the PDP. It's only used in `FitmentIntegrationDemo.tsx`. Compatible closures require opening the FitmentDrawer to discover. The carousel would give quick at-a-glance visibility to compatible fitments without requiring drawer interaction.
 **Recommended Fix:** Import and render `FitmentCarousel` on the PDP below the variant selector, showing 3-5 compatible fitments as a horizontal scroll with "View All" linking to the FitmentDrawer.
 
-### M23. Fitment Card Images Are All Placeholders
+### M24. Fitment Card Images Are All Placeholders
 **Page:** `src/components/FitmentCarousel.tsx` lines 67-70
 **Problem:** Every fitment card shows a gold gradient circle placeholder instead of product photos. Code comment reads: "Images not yet stored in DB, keeping placeholder."
 **Recommended Fix:** Populate `imageUrl` for component/closure products in the database. Use these images in fitment cards.
 
-### M24. Variant Selector Shows "(Preview)" Development Artifact
+### M25. Variant Selector Shows "(Preview)" Development Artifact
 **Page:** PDP (`page.tsx` ~line 933)
 **Problem:** The label "Cap Color / Variant (Preview)" contains "(Preview)" — a development label visible to production users.
 **Recommended Fix:** Remove "(Preview)" from the label.
 
-### M25. Grace Receives Partial Catalog Context — Misses Most Active Filters
+### M26. Grace Receives Partial Catalog Context — Misses Most Active Filters
 **Page:** Catalog, `src/components/GraceElevenLabsProvider.tsx` lines 287-294
 **Problem:** Grace's `PageContext` for the catalog page parses `?family=` and `?search=` from the URL but ignores all other active filters (applicator, color, capacity, thread size, price range). A user who has filtered to "Amber + Dropper + 30ml" and asks Grace "what else do you have like this?" gets no filter context.
 **Recommended Fix:** Parse all URL filter params into the Grace `PageContext.catalogFilters` object so Grace can reference and continue the user's active browsing context.
 
-### M26. "Need Help? Ask Grace" Prompt Hidden on Mobile
+### M27. "Need Help? Ask Grace" Prompt Hidden on Mobile
 **Page:** Catalog page (`page.tsx` ~line 1494)
 **Problem:** The catalog header text "Need help narrowing options? Ask Grace" uses `hidden sm:inline` — hidden on mobile. Mobile users, who arguably need the most help navigating 230+ products on a small screen, never see this prompt.
 **Recommended Fix:** Show the Grace prompt on mobile, perhaps as a compact banner or floating pill rather than inline text.
 
-### M27. Catalog Pagination Has No URL State — "Load More" Loses Position on Refresh
+### M28. Catalog Pagination Has No URL State — "Load More" Loses Position on Refresh
 **Page:** Catalog (`page.tsx`)
 **Problem:** The catalog uses a "Load More" pattern (24 items per batch via `setVisibleCount`) rather than numbered pagination. If a user clicks "Load More" three times (viewing 72 items) and refreshes the page, they return to the first 24 items. The loaded count is not persisted in the URL.
 **Recommended Fix:** Either add a `?page=` or `?limit=` URL param to preserve scroll position, or implement true pagination with numbered pages for deep catalogs.
 
-### M28. No Search Autocomplete or Suggestions
+### M29. No Search Autocomplete or Suggestions
 **Page:** Search (`src/components/Navbar.tsx` lines 506-536)
 **Problem:** Search is submit-only — no typeahead suggestions, recent searches, or category-level matches. Voice search via Web Audio API exists (a strength), but text search has no preview before submission.
 **Recommended Fix:** Add a search suggestions dropdown showing top 5 matching products/families as the user types. Show recent searches when the input is focused but empty.
@@ -390,7 +390,7 @@ The navbar includes a full Web Audio API voice search integration with silence d
 
 | Section | Score | Justification |
 |---------|-------|---------------|
-| **Homepage** | 5/10 | Poetic hero headline prioritizes aesthetics over clarity; TrustBar with key differentiators pushed below fold by 80vh hero; placeholder testimonials, broken social icons, and non-functional newsletter undermine premium feel; "Start Here" and "Shop by Application" overlap; 170-year heritage claim hidden in meta only |
+| **Homepage** | 5/10 | Poetic hero headline prioritizes aesthetics over clarity; TrustBar with key differentiators pushed below fold by 80vh hero; placeholder testimonials, broken social icons, and non-functional newsletter undermine premium feel; "Start Here" and "Shop by Application" overlap; inaccurate 170-year heritage claim in meta needs correction to 20+ years |
 | **Navigation** | 5/10 | Mega menus are well-structured, PDP breadcrumbs work well, but catalog/blog lack breadcrumbs, no unfiltered catalog link, mobile silently truncates menu items, and tap targets are undersized |
 | **Collection Pages** | 6/10 | Comprehensive filters with facet counts and color swatches, excellent variant visibility across all views, dual view modes; but missing capacity sort, out-of-stock indicators, grouped capacity ranges, and uses raw `<img>` instead of `next/image` |
 | **Product Detail Pages** | 4/10 | Fitment matching architecture is excellent but the "Add" button is a demo stub (`alert()`), FitmentCarousel not rendered, no Request Quote CTA exists, only 3 of 5+ pricing tiers implemented, single image per variant, specs buried at bottom; mobile sticky CTA is a bright spot |
@@ -403,7 +403,7 @@ The navbar includes a full Web Audio API voice search integration with silence d
 
 ## OVERALL PLATFORM SCORE: 5.2 / 10
 
-Best Bottles has genuinely strong architectural foundations — the fitment engine, Grace AI tool system, Sanity editorial blocks, variant resolution logic, brand-correct CSS variable system, and B2B portal represent real differentiation that competitors lack. The visual design system (EB Garamond + Inter, Obsidian/Bone/Gold palette, consistent spacing) is premium and well-executed across the storefront. However, the platform is undermined by three categories of unfinished work: (1) the platform's most differentiated feature — fitment cross-sell — dead-ends at an `alert('Demo')` stub and the FitmentCarousel isn't even rendered on the PDP, (2) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates, Request Quote CTA) before ejecting users to an unbranded Shopify checkout, and (3) the homepage has multiple unfinished placeholder elements (empty testimonial avatars, broken social icons, non-functional newsletter, dead article links, dead account button) that signal "beta product" rather than "170-year heritage brand."
+Best Bottles has genuinely strong architectural foundations — the fitment engine, Grace AI tool system, Sanity editorial blocks, variant resolution logic, brand-correct CSS variable system, and B2B portal represent real differentiation that competitors lack. The visual design system (EB Garamond + Inter, Obsidian/Bone/Gold palette, consistent spacing) is premium and well-executed across the storefront. However, the platform is undermined by three categories of unfinished work: (1) the platform's most differentiated feature — fitment cross-sell — dead-ends at an `alert('Demo')` stub and the FitmentCarousel isn't even rendered on the PDP, (2) the cart-to-checkout flow lacks critical B2B information (variant details, tier nudges, compatibility warnings, shipping estimates, Request Quote CTA) before ejecting users to an unbranded Shopify checkout, and (3) the homepage has multiple unfinished placeholder elements (empty testimonial avatars, broken social icons, non-functional newsletter, dead article links, dead account button) that signal "beta product" rather than "20+ year premium packaging partner."
 
 **Top 3 fixes by impact:**
 1. **Connect FitmentDrawer "Add" to real cart** and render FitmentCarousel on PDP — this unlocks the platform's #1 differentiator and is a straightforward integration
