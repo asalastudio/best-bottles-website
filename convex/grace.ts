@@ -957,10 +957,27 @@ function buildCatalogPathFromResolution(result: ResolveProductRequestResult): st
         : "/catalog";
 }
 
+const ALLOWED_NAV_PREFIXES = [
+    "/products/",
+    "/catalog",
+    "/contact",
+    "/about",
+    "/portal",
+    "/sample-request",
+    "/quote-request",
+    "/fitment-demo",
+];
+
 async function resolveCanonicalNavigation(
     ctx: ActionCtx,
     path: string
 ): Promise<string> {
+    // Whitelist internal destinations to prevent open redirect
+    const pathWithoutQuery = path.split("?")[0];
+    if (!ALLOWED_NAV_PREFIXES.some((prefix) => pathWithoutQuery.startsWith(prefix)) && pathWithoutQuery !== "/") {
+        return "/";
+    }
+
     if (!path.startsWith("/products/")) return path;
 
     const rawSlug = path.replace(/^\/products\//, "").split("?")[0];

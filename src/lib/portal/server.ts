@@ -150,9 +150,7 @@ export async function askGraceForViewerProject(projectId: string, message: strin
         voiceMode: false,
         channel: "portal",
         sessionMetadata: {
-            sessionId: workspace.activeProject.convexConversationId
-                ? `portal:${viewer.clerkOrgId}:${projectId}`
-                : `portal:${viewer.clerkOrgId}:${projectId}`,
+            sessionId: `portal:${viewer.clerkOrgId}:${projectId}`,
             entrypoint: "grace-workspace",
             pageType: "portal",
         },

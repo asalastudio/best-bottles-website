@@ -28,11 +28,11 @@ async function main() {
   console.log("Grace Retrieval Eval Report");
   console.log(`Report: ${reportPath}`);
   console.log(`Prompts: ${promptCount}`);
-  console.log(`Overall pass rate: ${payload.summary.passCount}/${promptCount} (${percent(payload.summary.passCount, promptCount)})`);
-  console.log(`Top-1 family accuracy: ${payload.summary.top1FamilyAccuracy}/${promptCount} (${percent(payload.summary.top1FamilyAccuracy, promptCount)})`);
-  console.log(`Top-3 family recall: ${payload.summary.top3FamilyRecall}/${promptCount} (${percent(payload.summary.top3FamilyRecall, promptCount)})`);
-  console.log(`Exact slug hits: ${payload.summary.exactSlugHits}`);
-  console.log(`Wrong-family regressions: ${payload.summary.wrongFamilyCount}`);
+  console.log(`Overall pass rate: ${payload.summary?.passCount ?? "?"}/${promptCount} (${percent(payload.summary?.passCount, promptCount)})`);
+  console.log(`Top-1 family accuracy: ${payload.summary?.top1FamilyAccuracy ?? "?"}/${promptCount} (${percent(payload.summary?.top1FamilyAccuracy, promptCount)})`);
+  console.log(`Top-3 family recall: ${payload.summary?.top3FamilyRecall ?? "?"}/${promptCount} (${percent(payload.summary?.top3FamilyRecall, promptCount)})`);
+  console.log(`Exact slug hits: ${payload.summary?.exactSlugHits ?? "?"}`);
+  console.log(`Wrong-family regressions: ${payload.summary?.wrongFamilyCount ?? "?"}`);
 
   if (failing.length > 0) {
     console.log("\nFailing prompts:");

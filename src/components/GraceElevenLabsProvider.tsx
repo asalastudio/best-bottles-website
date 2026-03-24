@@ -385,7 +385,7 @@ export default function GraceElevenLabsProvider({
             void audioContextRef.current.close().catch(() => undefined);
             audioContextRef.current = null;
         }
-        mediaStreamRef.current?.getTracks().forEach((track) => track.stop());
+        mediaStreamRef.current?.getTracks().forEach((track) => { track.stop(); });
         mediaStreamRef.current = null;
         mediaRecorderRef.current = null;
     }, []);
@@ -970,7 +970,14 @@ export default function GraceElevenLabsProvider({
             }
 
             if (action.type === "navigateToPage" && action.autoNavigate !== false) {
-                setPendingNavigation(action.path);
+                // Append prefillFields as query params so the target page receives them
+                let navPath = action.path;
+                if (action.prefillFields && Object.keys(action.prefillFields).length > 0) {
+                    const qs = new URLSearchParams(action.prefillFields).toString();
+                    const sep = navPath.includes("?") ? "&" : "?";
+                    navPath = `${navPath}${sep}${qs}`;
+                }
+                setPendingNavigation(navPath);
                 setPanelMode(conversationActiveRef.current ? "strip" : "closed");
             }
 
@@ -1146,7 +1153,12 @@ export default function GraceElevenLabsProvider({
                 ]);
                 setStatus("error");
                 setTimeout(() => {
-                    setStatus(conversationActiveRef.current ? "listening" : "idle");
+                    if (conversationActiveRef.current) {
+                        setStatus("listening");
+                        void startDictationRef.current();
+                    } else {
+                        setStatus("idle");
+                    }
                     setErrorMessage("");
                 }, 4000);
             }
@@ -1188,7 +1200,7 @@ export default function GraceElevenLabsProvider({
                 cleanupRecording();
 
                 if (!shouldTranscribe) {
-                    setStatus(conversationActiveRef.current ? "idle" : "idle");
+                    setStatus("idle");
                     return;
                 }
 
@@ -1239,7 +1251,12 @@ export default function GraceElevenLabsProvider({
                         error instanceof Error ? error.message : "Voice transcription failed."
                     );
                     setTimeout(() => {
-                        setStatus(conversationActiveRef.current ? "listening" : "idle");
+                        if (conversationActiveRef.current) {
+                            setStatus("listening");
+                            void startDictationRef.current();
+                        } else {
+                            setStatus("idle");
+                        }
                         setErrorMessage("");
                     }, 4000);
                 }

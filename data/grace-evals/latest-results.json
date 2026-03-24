@@ -1,7 +1,7 @@
 {
   "startedAt": "2026-03-08T00:11:58.857Z",
   "convexUrl": "https://helpful-elephant-638.convex.cloud",
-  "promptsPath": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/data/grace-evals/prompts.json",
+  "promptsPath": "data/grace-evals/prompts.json",
   "summary": {
     "promptCount": 12,
     "passCount": 11,
