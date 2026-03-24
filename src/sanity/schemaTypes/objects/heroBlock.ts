@@ -46,6 +46,31 @@ export const heroBlock = defineType({
             hidden: ({ parent }) => parent?.mediaType !== "video",
         }),
         defineField({
+            name: "mobileImage",
+            title: "Mobile Hero Image",
+            type: "image",
+            options: { hotspot: true },
+            description: "Optional. Separate image for mobile viewports. Use portrait or square crop (e.g. 1080×1920). Falls back to desktop image if empty.",
+        }),
+        defineField({
+            name: "mobileVideo",
+            title: "Mobile Hero Video",
+            type: "file",
+            options: {
+                accept: "video/mp4,video/webm",
+            },
+            hidden: ({ parent }) => parent?.mediaType !== "video",
+            description: "Optional. Separate video for mobile. Falls back to desktop video if empty.",
+        }),
+        defineField({
+            name: "mobileVideoPoster",
+            title: "Mobile Video Poster",
+            type: "image",
+            options: { hotspot: true },
+            hidden: ({ parent }) => parent?.mediaType !== "video",
+            description: "Frame shown while mobile video loads. Falls back to desktop poster if empty.",
+        }),
+        defineField({
             name: "headline",
             title: "Headline",
             type: "string",
@@ -67,8 +92,8 @@ export const heroBlock = defineType({
             name: "ctaText",
             title: "Button Text",
             type: "string",
-            description: "Primary CTA button label (e.g. Explore Collections, Shop Black Friday). Leave empty for default.",
-            initialValue: "Explore Collections",
+            description: "Primary CTA button label (e.g. Browse Catalog, Shop Black Friday). Leave empty for default.",
+            initialValue: "Browse Catalog",
         }),
         defineField({
             name: "ctaHref",

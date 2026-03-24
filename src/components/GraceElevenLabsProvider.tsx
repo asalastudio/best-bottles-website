@@ -129,17 +129,18 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     const sanitizedQuery = sanitizeCatalogQuery(query);
 
     if (family) {
-        qs.set("family", family);
+        qs.set("families", family);
     } else {
         const families = [...new Set(products.map((p) => p.family).filter(Boolean))];
-        if (families.length === 1 && families[0]) {
-            qs.set("family", families[0]);
+        if (families.length >= 1 && families[0]) {
+            qs.set("families", families.join(","));
         } else if (sanitizedQuery) {
             qs.set("search", sanitizedQuery);
         }
     }
 
-    return `/catalog${qs.toString() ? `?${qs.toString()}` : ""}`;
+    qs.set("grace", "1");
+    return `/catalog?${qs.toString()}`;
 }
 
 function buildBrowsePath(products: ProductCard[], query?: string, family?: string): string {
@@ -286,11 +287,12 @@ export default function GraceElevenLabsProvider({
             };
         }
         if (pageType === "catalog") {
+            const familiesParam = searchParams.get("families") ?? searchParams.get("family");
             return {
                 pageType,
                 pathname,
                 cartItems: cartSummary,
-                currentCollection: searchParams.get("family") ?? searchParams.get("collection") ?? undefined,
+                currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
             };
         }
@@ -453,10 +455,13 @@ export default function GraceElevenLabsProvider({
         }
     }, []);
 
-    const handleDisconnect = useCallback(() => {
+    const handleDisconnect = useCallback((details?: { reason?: string; message?: string; closeCode?: number; closeReason?: string }) => {
         const sinceConnect = Date.now() - lastConnectTimeRef.current;
         const wasImmediateDrop = lastConnectTimeRef.current > 0 && sinceConnect < 3000;
         console.log(`[Grace EL] Disconnected — cleaning up state (${sinceConnect}ms after connect, immediate=${wasImmediateDrop})`);
+        if (details) {
+            console.log("[Grace EL] Disconnect details:", JSON.stringify(details, null, 2));
+        }
         connectingRef.current = false;
         closingRef.current = false;
         lastConnectTimeRef.current = 0;
@@ -514,6 +519,14 @@ export default function GraceElevenLabsProvider({
             setErrorMessage("");
             setStatus(conversationActiveRef.current ? "listening" : "idle");
         }, 4000);
+    }, []);
+
+    const handleDebug = useCallback((debug: unknown) => {
+        console.log("[Grace EL DEBUG]", debug);
+    }, []);
+
+    const handleStatusChange = useCallback((ev: { status: string }) => {
+        console.log("[Grace EL] SDK status →", ev.status);
     }, []);
 
     // ── Stable clientTools ────────────────────────────────────────────────────
@@ -680,6 +693,12 @@ export default function GraceElevenLabsProvider({
                 }
             }
 
+            // Append grace=1 to catalog paths so the catalog can show the "Grace found these" banner
+            if (navPath.startsWith("/catalog")) {
+                const sep = navPath.includes("?") ? "&" : "?";
+                navPath = `${navPath}${sep}grace=1`;
+            }
+
             // Default to auto-navigate — Grace should take users directly to pages
             const shouldAutoNav = parameters.autoNavigate !== false;
             setMessages((prev) => [
@@ -809,6 +828,8 @@ export default function GraceElevenLabsProvider({
         onMessage: handleMessage,
         onModeChange: handleModeChange,
         onError: handleError,
+        onDebug: handleDebug,
+        onStatusChange: handleStatusChange,
     });
 
     // Keep conversationRef in sync so callbacks above can always access latest

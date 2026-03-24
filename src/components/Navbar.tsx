@@ -5,15 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
-    Search, User, ShoppingBag, Mic, ChevronDown, Menu, X,
-    Sparkles, FlaskConical, Gem, ArrowRight,
-} from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+    MagnifyingGlass, User, ShoppingBag, Microphone, CaretDown, List, X,
+    Sparkle, Flask, Diamond, ArrowRight,
+} from "@/components/icons";
 import { useGrace } from "./useGrace";
 import { useCart } from "./CartProvider";
 import CartDrawer from "./CartDrawer";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
+import { APPLICATOR_NAV, applicatorNavHref } from "@/lib/catalogFilters";
 
 interface NavbarProps {
     variant?: "home" | "catalog";
@@ -32,11 +32,13 @@ interface MenuColumn {
     links: Array<{ label: string; href: string; badge?: string }>;
 }
 
+type IconWeight = "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
+
 interface FeaturedCard {
     title: string;
     subtitle: string;
     href: string;
-    placeholderIcon: LucideIcon;
+    placeholderIcon: React.ComponentType<{ className?: string; size?: number; weight?: IconWeight }>;
     accentColor: string;
 }
 
@@ -51,13 +53,10 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
         columns: [
             {
                 heading: "Applicator Type",
-                links: [
-                    { label: "Roll-On", href: "/catalog?applicators=rollon", badge: "28" },
-                    { label: "Dropper", href: "/catalog?applicators=dropper", badge: "19" },
-                    { label: "Fine Mist Spray", href: "/catalog?applicators=spray", badge: "53" },
-                    { label: "Reducer & Orifice", href: "/catalog?applicators=reducer", badge: "28" },
-                    { label: "Lotion & Treatment Pump", href: "/catalog?applicators=lotionpump", badge: "32" },
-                ],
+                links: APPLICATOR_NAV.map((nav) => ({
+                    label: nav.label,
+                    href: applicatorNavHref(nav.value),
+                })),
             },
             {
                 heading: "Design Families",
@@ -88,7 +87,7 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
             title: "New: Grace Collection",
             subtitle: "Refined 55 ml silhouette with premium spray, reducer, and lotion pump options.",
             href: "/catalog?families=Grace",
-            placeholderIcon: Sparkles,
+            placeholderIcon: Sparkle,
             accentColor: "bg-gradient-to-br from-muted-gold/20 to-champagne/40",
         },
         footerLinks: [
@@ -128,7 +127,7 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
             title: "Find Compatible Parts",
             subtitle: "Every bottle page shows its compatible closures. Or ask Grace to match parts by thread size.",
             href: "/catalog?category=Component",
-            placeholderIcon: FlaskConical,
+            placeholderIcon: Flask,
             accentColor: "bg-gradient-to-br from-slate/10 to-champagne/30",
         },
         footerLinks: [
@@ -170,7 +169,7 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
             title: "Decorative Collection",
             subtitle: "Heart, Tola, Marble, Genie, Eternal Flame, and Pear — exquisite artisan shapes.",
             href: "/catalog?families=Decorative",
-            placeholderIcon: Gem,
+            placeholderIcon: Diamond,
             accentColor: "bg-gradient-to-br from-rose-50 to-champagne/40",
         },
         footerLinks: [
@@ -191,7 +190,6 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
         { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
         { label: "Journal", href: "/blog" },
         { label: "About", href: "/about" },
-        { label: "Resources", href: "/resources" },
     ],
     catalog: [
         { label: "Bottles", href: "/catalog?category=Glass+Bottle", megaId: "bottles" as MegaMenuId },
@@ -199,11 +197,10 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
         { label: "Specialty", href: "/catalog", megaId: "specialty" as MegaMenuId },
         { label: "Journal", href: "/blog" },
         { label: "About", href: "/about" },
-        { label: "Resources", href: "/resources" },
     ],
 };
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue }: NavbarProps) {
     const router = useRouter();
     const { openPanel, isOpen: graceActive } = useGrace();
     const { itemCount } = useCart();
@@ -223,6 +220,13 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
         const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", handleScroll, { passive: true });
         return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
+
+    // Allow other components to open the cart drawer via custom event
+    useEffect(() => {
+        const handler = () => setCartOpen(true);
+        window.addEventListener("open-cart-drawer", handler);
+        return () => window.removeEventListener("open-cart-drawer", handler);
     }, []);
 
     useEffect(() => {
@@ -435,20 +439,32 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     </p>
                 </div>
 
-                <div className="max-w-[1440px] mx-auto px-4 sm:px-6 h-[72px] flex items-center justify-between gap-4 sm:gap-6">
-                    <div className="flex items-center space-x-10 shrink-0">
+                <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
+                    {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | actions */}
+                    <div className="h-[56px] lg:h-[72px] flex items-center gap-2 sm:gap-4 lg:gap-6 relative">
                         <button
                             aria-label="Open menu"
-                            className="lg:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors"
+                            className="lg:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0"
                             onClick={() => setMobileMenuOpen(true)}
                         >
-                            <Menu className="w-5 h-5" strokeWidth={1.75} />
+                            <List size={20} weight="regular" />
                         </button>
-                        <Link href="/" className="font-display text-2xl font-medium tracking-tight text-obsidian">
+                        {/* Mobile logo — text, Cormorant, left-aligned */}
+                        <Link
+                            href="/"
+                            className="lg:hidden ml-1 font-cormorant text-lg font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                        >
+                            BEST BOTTLES
+                        </Link>
+                        {/* Desktop logo — Cormorant font */}
+                        <Link
+                            href="/"
+                            className="hidden lg:flex shrink-0 mr-4 font-cormorant text-2xl font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                        >
                             BEST BOTTLES
                         </Link>
                         <nav
-                            className="hidden lg:flex items-center space-x-8 text-sm font-medium text-obsidian tracking-wide uppercase"
+                            className="hidden lg:flex items-center gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
                             ref={megaRef}
                         >
                             {links.map((link) => {
@@ -469,9 +485,9 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                                 }`}
                                         >
                                             {link.label}
-                                            <ChevronDown
-                                                className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""
-                                                    }`}
+                                            <CaretDown
+                                                className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
+                                                size={14}
                                             />
                                         </button>
 
@@ -501,111 +517,116 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                 );
                             })}
                         </nav>
-                    </div>
-
-                    <form
-                        onSubmit={handleSearchSubmit}
-                        className="hidden lg:flex flex-1 max-w-[460px] items-center border border-champagne rounded-xl px-4 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
-                        suppressHydrationWarning
-                    >
-                        <Search className="w-4 h-4 text-slate shrink-0" />
-                        <input
-                            type="text"
-                            value={searchValue}
-                            onChange={(e) => setSearchValue(e.target.value)}
-                            placeholder={searchPlaceholder}
-                            className="bg-transparent text-sm focus:outline-none flex-1 placeholder-slate/60 text-obsidian"
-                            aria-label="Search products"
+                        <form
+                            onSubmit={handleSearchSubmit}
+                            className="hidden lg:flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 lg:min-w-[520px] lg:max-w-[520px]"
                             suppressHydrationWarning
-                        />
-                        <button
-                            type="button"
-                            onClick={handleMicClick}
-                            disabled={isTranscribing}
-                            aria-label={isDictating ? "Stop recording" : "Search by voice"}
-                            className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
+                        >
+                            <MagnifyingGlass className="text-slate shrink-0" size={16} />
+                            <input
+                                type="text"
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                                placeholder={searchPlaceholder}
+                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                aria-label="Search products"
+                                suppressHydrationWarning
+                            />
+                            <button
+                                type="button"
+                                onClick={handleMicClick}
+                                disabled={isTranscribing}
+                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
+                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
                                     ? "text-muted-gold animate-grace-pulse"
                                     : isTranscribing
-                                        ? "text-muted-gold/60 animate-bounce"
+                                        ? "text-muted-gold animate-bounce"
                                         : "text-slate/40 hover:text-slate"
-                                }`}
-                        >
-                            <Mic className="w-4 h-4" />
-                        </button>
-                        <button type="submit" className="sr-only">Search</button>
-                    </form>
-
-                    <div className="flex items-center space-x-2 shrink-0">
-                        <button
-                            onClick={openPanel}
-                            aria-label="Ask Grace"
-                            title="AI Bottling Specialist"
-                            className={`hidden sm:flex items-center space-x-2 text-sm font-medium px-3.5 py-2 rounded-xl border transition-all duration-200 cursor-pointer ${graceActive
+                                    }`}
+                            >
+                                <Microphone size={16} />
+                            </button>
+                            <button type="submit" className="sr-only">Search</button>
+                        </form>
+                        <div className="hidden lg:flex flex-1" />
+                        <div className="flex items-center justify-end space-x-2 shrink-0 ml-auto lg:ml-0">
+                            <button
+                                onClick={openPanel}
+                                aria-label="Grace AI"
+                                title="Chat with Grace — AI Bottling Specialist"
+                                className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-xl border transition-all duration-200 cursor-pointer ${graceActive
                                     ? "bg-obsidian text-bone border-obsidian shadow-md"
                                     : "bg-white text-obsidian border-champagne hover:border-muted-gold shadow-sm"
-                                }`}
-                        >
-                            {graceActive ? (
-                                <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true">
-                                    <span /><span /><span /><span />
-                                </span>
-                            ) : (
-                                <span className="w-2 h-2 rounded-full bg-muted-gold animate-grace-pulse shrink-0" />
-                            )}
-                            <span>Ask Grace</span>
-                        </button>
+                                    }`}
+                            >
+                                {graceActive ? (
+                                    <span className="grace-voice-bars grace-voice-bars--light shrink-0" aria-hidden="true">
+                                        <span /><span /><span /><span />
+                                    </span>
+                                ) : (
+                                    <span className="grace-voice-bars shrink-0" aria-hidden="true">
+                                        <span /><span /><span /><span />
+                                    </span>
+                                )}
+                                <span className="lg:hidden">Grace AI</span>
+                                <span className="hidden lg:inline">Grace — AI Assistant</span>
+                            </button>
 
-                        <button aria-label="Account" className="p-2 hover:text-muted-gold transition-colors">
-                            <User className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
-                        </button>
+                            <Link href="/sign-in" aria-label="Account" className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors">
+                                <User className="text-obsidian" size={20} />
+                            </Link>
 
-                        <button
-                            aria-label="Cart"
-                            onClick={() => setCartOpen(true)}
-                            className="p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
-                        >
-                            <ShoppingBag className="w-5 h-5 text-obsidian" strokeWidth={1.5} />
-                            {itemCount > 0 && (
-                                <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
-                                    {itemCount > 99 ? "99" : itemCount}
-                                </span>
-                            )}
-                        </button>
+                            <button
+                                aria-label="Cart"
+                                onClick={() => setCartOpen(true)}
+                                className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
+                            >
+                                <ShoppingBag className="text-obsidian" size={20} />
+                                {itemCount > 0 && (
+                                    <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
+                                        {itemCount > 99 ? "99" : itemCount}
+                                    </span>
+                                )}
+                            </button>
+                        </div>
                     </div>
-                </div>
 
-                <form
-                    onSubmit={handleSearchSubmit}
-                    className={`lg:hidden px-4 sm:px-6 pb-3 ${hideMobileSearch ? "hidden" : ""}`}
-                    suppressHydrationWarning
-                >
-                    <div className="flex items-center border border-champagne rounded-xl px-3 py-2 bg-white/80 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2">
-                        <Search className="w-4 h-4 text-slate shrink-0" />
-                        <input
-                            type="text"
-                            value={searchValue}
-                            onChange={(e) => setSearchValue(e.target.value)}
-                            placeholder={searchPlaceholder}
-                            className="bg-transparent text-sm focus:outline-none flex-1 placeholder-slate/60 text-obsidian"
-                            aria-label="Search products"
+                    {/* Row 2: full-width search bar (mobile only) */}
+                    <div className="flex lg:hidden pb-3 border-t border-champagne/40 pt-2">
+                        <form
+                            onSubmit={handleSearchSubmit}
+                            className="flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
                             suppressHydrationWarning
-                        />
-                        <button
-                            type="button"
-                            onClick={handleMicClick}
-                            disabled={isTranscribing}
-                            aria-label={isDictating ? "Stop recording" : "Search by voice"}
-                            className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
+                        >
+                            <MagnifyingGlass className="text-slate shrink-0" size={16} />
+                            <input
+                                type="text"
+                                value={searchValue}
+                                onChange={(e) => setSearchValue(e.target.value)}
+                                placeholder={searchPlaceholder}
+                                className="bg-transparent text-sm focus:outline-none flex-1 min-w-0 placeholder-slate/60 text-obsidian"
+                                aria-label="Search products"
+                                suppressHydrationWarning
+                            />
+                            <button
+                                type="button"
+                                onClick={handleMicClick}
+                                disabled={isTranscribing}
+                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
+                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
                                     ? "text-muted-gold animate-grace-pulse"
                                     : isTranscribing
-                                        ? "text-muted-gold/60 animate-bounce"
+                                        ? "text-muted-gold animate-bounce"
                                         : "text-slate/40 hover:text-slate"
-                                }`}
-                        >
-                            <Mic className="w-4 h-4" />
-                        </button>
+                                    }`}
+                            >
+                                <Microphone size={16} />
+                            </button>
+                            <button type="submit" className="sr-only">Search</button>
+                        </form>
                     </div>
-                </form>
+
+                </div>
             </header>
 
             <CartDrawer isOpen={cartOpen} onClose={() => setCartOpen(false)} />
@@ -627,13 +648,21 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     <div className="fixed top-0 left-0 bottom-0 z-[61] w-[360px] max-w-[88vw] bg-bone border-r border-champagne shadow-2xl lg:hidden flex flex-col">
                         <div className="h-[44px] bg-obsidian" />
                         <div className="h-[72px] px-4 flex items-center justify-between border-b border-champagne">
-                            <span className="font-display text-2xl tracking-tight text-obsidian">BEST BOTTLES</span>
+                            <div className="relative w-[180px] h-[36px]">
+                                <Image
+                                    src="/assets/best-bottles-logo.png"
+                                    alt="Best Bottles"
+                                    fill
+                                    className="object-contain object-left"
+                                    priority
+                                />
+                            </div>
                             <button
                                 aria-label="Close menu"
                                 onClick={() => setMobileMenuOpen(false)}
                                 className="p-2 text-obsidian hover:text-muted-gold transition-colors"
                             >
-                                <X className="w-5 h-5" />
+                                <X size={20} />
                             </button>
                         </div>
 
@@ -646,10 +675,10 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                                 key={link.label}
                                                 href={link.href}
                                                 onClick={() => setMobileMenuOpen(false)}
-                                                className="flex items-center justify-between py-3 text-sm font-semibold uppercase tracking-wide text-obsidian border-b border-champagne/40"
+                                                className="flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian border-b border-champagne/40"
                                             >
                                                 {link.label}
-                                                <ArrowRight className="w-4 h-4 text-slate" />
+                                                <ArrowRight className="text-slate" size={16} />
                                             </Link>
                                         );
                                     }
@@ -661,11 +690,11 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                         <div key={link.label} className="border-b border-champagne/40 pb-2">
                                             <button
                                                 onClick={() => setMobileOpenSection(isExpanded ? null : link.megaId)}
-                                                className="w-full flex items-center justify-between py-3 text-sm font-semibold uppercase tracking-wide text-obsidian"
+                                                className="w-full flex items-center justify-between py-3 min-h-[44px] text-sm font-semibold tracking-wide text-obsidian"
                                                 aria-expanded={isExpanded}
                                             >
                                                 {link.label}
-                                                <ChevronDown className={`w-4 h-4 transition-transform ${isExpanded ? "rotate-180" : ""}`} />
+                                                <CaretDown className={`transition-transform ${isExpanded ? "rotate-180" : ""}`} size={16} />
                                             </button>
                                             {isExpanded && (
                                                 <div className="pb-2 space-y-4">
@@ -675,7 +704,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                                                 {col.heading}
                                                             </p>
                                                             <div className="space-y-1">
-                                                                {col.links.slice(0, 6).map((item) => (
+                                                                {col.links.map((item) => (
                                                                     <Link
                                                                         key={item.label}
                                                                         href={item.href}
@@ -706,7 +735,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                 className="w-full inline-flex items-center justify-center gap-2 py-3 bg-obsidian text-white text-xs uppercase tracking-wider font-bold"
                             >
                                 Browse Full Catalog
-                                <ArrowRight className="w-3.5 h-3.5" />
+                                <ArrowRight size={14} />
                             </Link>
                         </div>
                     </div>
@@ -794,7 +823,7 @@ function MegaMenuPanel({
                                 </div>
                             ) : (
                                 <div className="w-12 h-12 rounded-full bg-white/70 flex items-center justify-center mb-4 shadow-sm">
-                                    <FeaturedIcon className="w-5 h-5 text-muted-gold" strokeWidth={1.5} />
+                                    <FeaturedIcon className="text-muted-gold" size={20} />
                                 </div>
                             )}
                             <h4 className="font-serif text-lg text-obsidian font-medium normal-case mb-2 group-hover:text-muted-gold transition-colors">
@@ -806,7 +835,7 @@ function MegaMenuPanel({
                         </div>
                         <div className="flex items-center gap-1.5 mt-4 text-[11px] font-semibold uppercase tracking-wider text-muted-gold">
                             <span className="normal-case">Explore</span>
-                            <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                            <ArrowRight className="group-hover:translate-x-1 transition-transform" size={14} />
                         </div>
                     </Link>
                 </div>
@@ -821,7 +850,7 @@ function MegaMenuPanel({
                             className="text-[11px] uppercase tracking-wider text-slate hover:text-muted-gold transition-colors font-semibold normal-case flex items-center gap-1"
                         >
                             {fl.label}
-                            <ArrowRight className="w-3 h-3" />
+                            <ArrowRight size={12} />
                         </Link>
                     ))}
                 </div>

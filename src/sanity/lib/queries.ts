@@ -10,11 +10,26 @@ export const HOMEPAGE_QUERY = `
         }
       },
       videoPoster,
+      mobileImage,
+      mobileVideo {
+        asset-> {
+          url
+        }
+      },
+      mobileVideoPoster,
       headline,
       subheadline,
       eyebrow,
       ctaText,
       ctaHref
+    },
+    mobileHeroMode,
+    mobileTagline,
+    mobileSectionLabel,
+    mobileCategoryCards[] {
+      label,
+      href,
+      image
     },
     startHereEyebrow,
     startHereTitle,
@@ -150,11 +165,22 @@ export type HomepageData = {
         image?: { asset?: { _ref: string }; _type: string };
         video?: { asset?: { url?: string } };
         videoPoster?: { asset?: { _ref: string } };
+        mobileImage?: { asset?: { _ref: string }; _type: string };
+        mobileVideo?: { asset?: { url?: string } };
+        mobileVideoPoster?: { asset?: { _ref: string } };
         headline?: string;
         subheadline?: string;
         eyebrow?: string;
         ctaText?: string;
         ctaHref?: string;
+    }>;
+    mobileHeroMode?: "categories" | "hero";
+    mobileTagline?: string;
+    mobileSectionLabel?: string;
+    mobileCategoryCards?: Array<{
+        label: string;
+        href: string;
+        image?: { asset?: { _ref: string } };
     }>;
     startHereEyebrow?: string;
     startHereTitle?: string;

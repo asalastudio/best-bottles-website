@@ -1,18 +1,19 @@
 "use client";
 
-import { useState, useEffect, useMemo, use } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback, use } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
     ShoppingBag, ArrowLeft, ChevronRight, Package,
     Check, ExternalLink,
-} from "lucide-react";
+} from "@/components/icons";
 import { motion } from "framer-motion";
 /* eslint-disable @next/next/no-img-element */
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import FitmentDrawer from "@/components/FitmentDrawer";
+import PdpGraceTrigger from "@/components/PdpGraceTrigger";
 import { useCart } from "@/components/CartProvider";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -318,6 +319,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const [qty, setQty] = useState(qtyParam);
     const [addedFlash, setAddedFlash] = useState(false);
     const [pdpBlocks, setPdpBlocks] = useState<PdpBlock[]>([]);
+    const [stickyBarVisible, setStickyBarVisible] = useState(false);
+    const inlineCartRef = useRef<HTMLDivElement>(null);
 
     const group = data?.group;
     const variants = useMemo(() => (data?.variants as ProductVariant[] | undefined) ?? [], [data?.variants]);
@@ -407,7 +410,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         router.replace(`/products/${slug}`);
     }, [applicatorParam, validApplicatorParam, router, slug]);
 
-    const activeApplicator = selectedApplicator ?? defaultFromUrl ?? applicatorOptions[0] ?? (hasCapClosure ? "Cap/Closure" : null);
+    const activeApplicator = selectedApplicator && applicatorOptions.includes(selectedApplicator)
+        ? selectedApplicator
+        : defaultFromUrl ?? applicatorOptions[0] ?? (hasCapClosure ? "Cap/Closure" : null);
     const variantsForApplicator = useMemo(
         () => variants.filter((v) => v.applicator === activeApplicator),
         [variants, activeApplicator]
@@ -527,6 +532,17 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         return true;
     }, [trimColorOptions]);
 
+    // ── Roller type toggle for roll-on groups ─────────────────────────────────
+    const isRollonGroup = slug.includes("rollon");
+    const rollerTypeOptions = useMemo(() => {
+        if (!isRollonGroup || applicatorOptions.length < 2) return [];
+        // Normalize to "Metal" / "Plastic" labels
+        return applicatorOptions.map((a) => ({
+            value: a,
+            label: /metal/i.test(a) ? "Metal Roller" : /plastic/i.test(a) ? "Plastic Roller" : a,
+        }));
+    }, [isRollonGroup, applicatorOptions]);
+
     // ── Dynamic SEO title ────────────────────────────────────────────────────
     useEffect(() => {
         if (group) {
@@ -562,6 +578,18 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         return () => { cancelled = true; };
     }, [slug, group?.family]);
 
+    // ── Mobile sticky bar: only visible once inline Add to Cart scrolls out of view ──
+    useEffect(() => {
+        const el = inlineCartRef.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+            ([entry]) => setStickyBarVisible(!entry.isIntersecting),
+            { threshold: 0 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
+
     // ── JSON-LD structured data ──────────────────────────────────────────────
     const jsonLd = useMemo(() => {
         if (!group || !selectedVariant) return null;
@@ -594,7 +622,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         return (
             <main className="min-h-screen bg-bone">
                 <Navbar hideMobileSearch />
-                <div className="pt-[104px] sm:pt-[156px] lg:pt-[104px] flex items-center justify-center min-h-screen">
+                <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px] flex items-center justify-center min-h-screen">
                     <div className="flex flex-col items-center">
                         <div className="w-10 h-10 rounded-full border-2 border-champagne border-t-muted-gold animate-spin mb-4"></div>
                         <p className="text-xs uppercase tracking-widest font-semibold text-slate">Loading product...</p>
@@ -610,7 +638,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         return (
             <main className="min-h-screen bg-bone">
                 <Navbar hideMobileSearch />
-                <div className="pt-[104px] sm:pt-[156px] lg:pt-[104px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
+                <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
                     <h1 className="font-serif text-4xl text-obsidian mb-4">Product Not Found</h1>
                     <p className="text-slate mb-8 text-sm">This product may have been moved or is no longer available.</p>
                     <Link
@@ -639,6 +667,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         }]);
         setAddedFlash(true);
         setTimeout(() => setAddedFlash(false), 1800);
+        // Auto-open the cart drawer
+        window.dispatchEvent(new Event("open-cart-drawer"));
     };
 
     return (
@@ -659,7 +689,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 />
             )}
 
-            <div className="pt-[104px] sm:pt-[156px] lg:pt-[104px]">
+            <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]">
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
                 <div className="border-b border-champagne/50 bg-bone overflow-x-auto">
                     <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-1.5 sm:py-3 flex items-center space-x-2 text-[11px] sm:text-xs text-slate whitespace-nowrap">
@@ -831,6 +861,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 )}
                             </div>
 
+                            {/* ── Ask Grace (inline, un-intrusive) ───────────────────────────────────────── */}
+                            <div className="mb-6 sm:mb-8">
+                                <PdpGraceTrigger />
+                            </div>
+
                             {/* ── Variant Selectors (hidden for atomizers — glass color is the only selection) ── */}
 
                             {!isAtomizer && (
@@ -989,7 +1024,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                     {variantsForApplicator.length > 1 && (
                                         <div className="mb-6">
                                             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
-                                                {activeApplicator ? "Cap Color / Variant (Preview)" : "Cap Finish"}
+                                                {activeApplicator ? "Cap Color / Variant" : "Cap Finish"}
                                             </p>
                                             <div className="flex flex-wrap gap-3">
                                                 {capSwatchPreview.map((item) => {
@@ -1100,7 +1135,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             <PdpInlinePromo blocks={pdpBlocks} />
 
                             {/* Quantity + Add to Cart */}
-                            <div className="flex items-stretch space-x-3 mb-6">
+                            <div ref={inlineCartRef} className="flex items-stretch space-x-3 mb-6">
                                 <div className="flex items-center border border-champagne rounded-sm bg-white">
                                     <button
                                         onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -1139,6 +1174,16 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         </>
                                     )}
                                 </button>
+                            </div>
+
+                            {/* Request a Quote CTA */}
+                            <div className="mb-6">
+                                <Link
+                                    href={`/request-quote?products=${encodeURIComponent(`${selectedVariant?.itemName ?? group?.displayName ?? ''} (SKU: ${selectedVariant?.graceSku ?? ''})`)}&quantities=${encodeURIComponent(`${qty} units`)}`}
+                                    className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
+                                >
+                                    <span>Request a Quote</span>
+                                </Link>
                             </div>
 
                             {/* Product Description — group-level copy preferred, then variant, skipped when Sanity rich desc exists */}
@@ -1205,7 +1250,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 </div>
                                 <button
                                     onClick={() => setFitmentDrawerOpen(true)}
-                                    className="text-xs text-muted-gold hover:underline transition-colors hidden sm:block"
+                                    className="text-xs text-muted-gold hover:underline transition-colors"
                                 >
                                     View all components →
                                 </button>
@@ -1299,8 +1344,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 <div className="h-32 bg-linen border-t border-champagne/30"></div>
             </div>
 
-            {/* Mobile sticky purchase bar */}
-            <div className="lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-champagne bg-bone/95 backdrop-blur-md pb-[max(env(safe-area-inset-bottom),8px)]">
+            {/* Mobile sticky purchase bar — only appears once inline Add to Cart scrolls out of view (Baymard best practice) */}
+            <div className={`lg:hidden fixed bottom-0 inset-x-0 z-40 border-t border-champagne bg-bone/95 backdrop-blur-md pb-[max(env(safe-area-inset-bottom),8px)] transition-transform duration-300 ${stickyBarVisible ? "translate-y-0" : "translate-y-full"}`}>
                 <div className="px-4 py-3 flex items-center gap-3">
                     <div className="min-w-0">
                         <p className="text-[10px] uppercase tracking-wider text-slate font-semibold">From</p>
