@@ -11,7 +11,10 @@
     "scrape:apothecary": "node scripts/scrape_apothecary_full.mjs",
     "audit:catalog": "node scripts/export_convex_snapshot.mjs && python3 scripts/scrape_live_catalog.py && python3 scripts/normalize_scrape.py && python3 scripts/diff_scrape_vs_convex.py && python3 scripts/reconcile_patch_plan.py",
     "audit:catalog:apply": "node scripts/apply_safe_patches.mjs --apply --regroup",
-    "audit:catalog:dry": "node scripts/apply_safe_patches.mjs"
+    "audit:catalog:dry": "node scripts/apply_safe_patches.mjs",
+    "eval:grace": "node scripts/eval_grace.mjs",
+    "eval:grace:verbose": "node scripts/eval_grace.mjs --verbose",
+    "eval:grace:loop": "node scripts/eval_grace.mjs --runs 3 --verbose"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.78.0",

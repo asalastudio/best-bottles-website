@@ -1,0 +1,410 @@
+{
+  "version": "2.0",
+  "description": "Grace AI retrieval accuracy eval — product lookup, component matching, hallucination detection, policy, brand guardrails",
+  "cases": [
+    {
+      "id": "exact-boston-30ml",
+      "category": "exact_retrieval",
+      "question": "Do you have a 30ml Boston Round bottle?",
+      "expect": {
+        "mustMention": ["Boston Round", "30ml"],
+        "mustNotMention": ["don't stock", "don't carry", "not available"],
+        "expectedTools": ["searchCatalog"],
+        "expectedFamily": "Boston Round",
+        "expectedCapacityMl": 30
+      }
+    },
+    {
+      "id": "exact-cylinder-100ml",
+      "category": "exact_retrieval",
+      "question": "Show me a 100ml Cylinder bottle.",
+      "expect": {
+        "mustMention": ["Cylinder", "100ml"],
+        "mustNotMention": ["don't stock", "don't carry"],
+        "expectedTools": ["searchCatalog"],
+        "expectedFamily": "Cylinder",
+        "expectedCapacityMl": 100
+      }
+    },
+    {
+      "id": "exact-elegant-60ml-frosted",
+      "category": "exact_retrieval",
+      "question": "I need a 60ml frosted Elegant bottle.",
+      "expect": {
+        "mustMention": ["Elegant"],
+        "mustNotMention": ["don't stock"],
+        "expectedTools": ["searchCatalog"],
+        "expectedFamily": "Elegant",
+        "expectedCapacityMl": 60
+      }
+    },
+    {
+      "id": "exact-diva-30ml",
+      "category": "exact_retrieval",
+      "question": "What do you have in the Diva 30ml?",
+      "expect": {
+        "mustMention": ["Diva", "30ml"],
+        "mustNotMention": ["don't stock"],
+        "expectedTools": ["searchCatalog"],
+        "expectedFamily": "Diva",
+        "expectedCapacityMl": 30
+      }
+    },
+    {
+      "id": "exact-empire-50ml",
+      "category": "exact_retrieval",
+      "question": "Do you carry an Empire bottle in 50ml?",
+      "expect": {
+        "mustMention": ["Empire"],
+        "expectedTools": ["searchCatalog"],
+        "expectedFamily": "Empire"
+      }
+    },
+    {
+      "id": "exact-slim-15ml",
+      "category": "exact_retrieval",
+      "question": "Show me the 15ml Slim bottle.",
+      "expect": {
+        "mustMention": ["Slim", "15ml"],
+        "mustNotMention": ["don't stock"],
+        "expectedTools": ["searchCatalog"],
+        "expectedFamily": "Slim"
+      }
+    },
+    {
+      "id": "pivot-boston-10ml",
+      "category": "pivot_behavior",
+      "question": "Do you have a 10ml Boston Round?",
+      "expect": {
+        "mustMention": ["15ml"],
+        "shouldPivot": true,
+        "pivotReason": "Boston Rounds start at 15ml — no 10ml exists"
+      }
+    },
+    {
+      "id": "pivot-boston-5ml",
+      "category": "pivot_behavior",
+      "question": "I need a 5ml Boston Round bottle.",
+      "expect": {
+        "mustMention": ["15ml"],
+        "shouldPivot": true,
+        "pivotReason": "Boston Rounds start at 15ml — no 5ml exists"
+      }
+    },
+    {
+      "id": "pivot-diva-15ml",
+      "category": "pivot_behavior",
+      "question": "Show me a 15ml Diva.",
+      "expect": {
+        "mustMention": ["30ml"],
+        "shouldPivot": true,
+        "pivotReason": "Diva starts at 30ml — no 15ml exists"
+      }
+    },
+    {
+      "id": "pivot-empire-15ml",
+      "category": "pivot_behavior",
+      "question": "I want a 15ml Empire bottle.",
+      "expect": {
+        "mustMention": ["30ml"],
+        "shouldPivot": true,
+        "pivotReason": "Empire starts at 30ml — no 15ml exists"
+      }
+    },
+    {
+      "id": "component-sprayer-elegant-30ml",
+      "category": "component_accuracy",
+      "question": "What sprayers fit the 30ml Elegant bottle?",
+      "expect": {
+        "mustMentionAny": ["18-415", "18/415", "eighteen"],
+        "mustNotMention": ["20-400"],
+        "expectedTools": ["searchCatalog", "getBottleComponents"],
+        "shouldReturnComponents": true
+      }
+    },
+    {
+      "id": "component-cap-boston-round",
+      "category": "component_accuracy",
+      "question": "What caps work with the 30ml Boston Round?",
+      "expect": {
+        "mustMentionAny": ["20-400", "20/400", "cap"],
+        "expectedTools": ["searchCatalog", "getBottleComponents"],
+        "shouldReturnComponents": true
+      }
+    },
+    {
+      "id": "component-dropper-cylinder-9ml",
+      "category": "component_accuracy",
+      "question": "I need a dropper for my 9ml Cylinder. What fits?",
+      "expect": {
+        "mustMentionAny": ["dropper", "13-415", "13/415"],
+        "expectedTools": ["searchCatalog", "getBottleComponents"],
+        "shouldReturnComponents": true
+      }
+    },
+    {
+      "id": "component-lotion-pump",
+      "category": "component_accuracy",
+      "question": "Do you have lotion pumps that fit a 100ml Cylinder?",
+      "expect": {
+        "mustMentionAny": ["lotion pump", "pump", "18-415"],
+        "expectedTools": ["searchCatalog", "getBottleComponents"],
+        "shouldReturnComponents": true
+      }
+    },
+    {
+      "id": "viscosity-thick-oil-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I have a thick perfume oil, like honey consistency. What roll-on bottles do you recommend?",
+      "expect": {
+        "mustMentionAny": ["Tola", "tola", "dropper", "Dropper", "dab"],
+        "shouldPivot": true,
+        "pivotReason": "Thick oils should not use roll-on — ball won't spin. Recommend Tola or Dropper."
+      }
+    },
+    {
+      "id": "viscosity-edp-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I'm making an eau de parfum. Should I use roll-on bottles?",
+      "expect": {
+        "mustMentionAny": ["spray", "sprayer", "atomizer", "mist", "leak"],
+        "shouldPivot": true,
+        "pivotReason": "Alcohol-based EDPs leak through roll-on applicators. Recommend spray/atomizer."
+      }
+    },
+    {
+      "id": "viscosity-lotion-no-dropper",
+      "category": "viscosity_guard",
+      "question": "I'm packaging a thick body lotion. Would a dropper bottle work?",
+      "expect": {
+        "mustMentionAny": ["pump", "lotion pump"],
+        "shouldPivot": true,
+        "pivotReason": "Thick emulsions need lotion pump, not dropper."
+      }
+    },
+    {
+      "id": "family-overview-boston",
+      "category": "family_overview",
+      "question": "Tell me about your Boston Round collection.",
+      "expect": {
+        "mustMention": ["15ml", "30ml", "60ml"],
+        "expectedTools": ["getFamilyOverview"]
+      }
+    },
+    {
+      "id": "family-overview-cylinder",
+      "category": "family_overview",
+      "question": "What sizes do Cylinders come in?",
+      "expect": {
+        "mustMentionAny": ["5ml", "9ml", "30ml", "100ml"],
+        "expectedTools": ["getFamilyOverview"],
+        "expectedFamily": "Cylinder"
+      }
+    },
+    {
+      "id": "hallucination-fake-family",
+      "category": "hallucination",
+      "question": "Do you carry the Monaco bottle family?",
+      "expect": {
+        "mustNotMention": ["Monaco collection", "our Monaco"],
+        "shouldAdmitNoMatch": true
+      }
+    },
+    {
+      "id": "hallucination-fake-size",
+      "category": "hallucination",
+      "question": "I need a 250ml Elegant bottle.",
+      "expect": {
+        "shouldPivot": true,
+        "pivotReason": "250ml Elegant doesn't exist — Grace should search and pivot to actual sizes"
+      }
+    },
+    {
+      "id": "hallucination-fake-color",
+      "category": "hallucination",
+      "question": "Do you have the Boston Round in pink glass?",
+      "expect": {
+        "shouldAdmitNoMatch": true,
+        "pivotReason": "Pink glass Boston Round doesn't exist — Grace should offer actual colors (clear, amber, cobalt)"
+      }
+    },
+    {
+      "id": "policy-warehouse-pickup",
+      "category": "policy",
+      "question": "Can I pick up my order in person?",
+      "expect": {
+        "mustMention": ["Union City"],
+        "mustMentionAny": ["1-800-936-3628", "800-936-3628", "936-3628"],
+        "mustNotMention": ["don't offer", "not available", "cannot"]
+      }
+    },
+    {
+      "id": "policy-minimum-order",
+      "category": "policy",
+      "question": "I only need 3 bottles. Can I order that?",
+      "expect": {
+        "mustMentionAny": ["$50", "fifty dollar", "50 dollar"],
+        "mustNotMention": ["email sales", "can't help", "minimum 12"]
+      }
+    },
+    {
+      "id": "policy-same-day-shipping",
+      "category": "policy",
+      "question": "Can I get same-day shipping?",
+      "expect": {
+        "mustMentionAny": ["$15", "fifteen", "11:00am", "11am", "before 11"],
+        "mustMentionAny2": ["phone", "call", "800-936-3628"]
+      }
+    },
+    {
+      "id": "policy-returns",
+      "category": "policy",
+      "question": "What is your return policy?",
+      "expect": {
+        "mustMentionAny": ["15 day", "15-day", "fifteen day"],
+        "mustMentionAny2": ["15%", "restocking", "fifteen percent"]
+      }
+    },
+    {
+      "id": "spray-equiv-9ml-spray-bottle",
+      "category": "spray_terminology",
+      "question": "Do you have a 9ml spray bottle?",
+      "expect": {
+        "mustMentionAny": ["9ml", "9 ml"],
+        "mustNotMention": ["don't have", "don't carry", "don't stock", "not available"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "spray-equiv-9ml-fine-mist",
+      "category": "spray_terminology",
+      "question": "Do you have a 9ml fine mist sprayer?",
+      "expect": {
+        "mustMentionAny": ["9ml", "9 ml", "fine mist"],
+        "mustNotMention": ["don't have", "don't carry", "don't stock"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "spray-equiv-30ml-spray",
+      "category": "spray_terminology",
+      "question": "Show me a 30ml spray bottle.",
+      "expect": {
+        "mustMentionAny": ["30ml", "30 ml"],
+        "mustNotMention": ["don't have", "don't carry", "don't stock"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "spray-equiv-5ml-spray",
+      "category": "spray_terminology",
+      "question": "I need a 5ml spray bottle for samples.",
+      "expect": {
+        "mustMentionAny": ["5ml", "5 ml", "5.5"],
+        "mustNotMention": ["don't have", "don't carry", "don't stock"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "brand-identity-no-manufacture",
+      "category": "brand_guard",
+      "question": "Do you manufacture your own glass?",
+      "expect": {
+        "mustMentionAny": ["sourc", "supply", "partner", "curate", "network"],
+        "mustNotMention": ["we manufacture", "our factory", "we blow glass", "our facility"]
+      }
+    },
+    {
+      "id": "brand-no-superlatives",
+      "category": "brand_guard",
+      "question": "Why should I choose Best Bottles over other suppliers?",
+      "expect": {
+        "mustNotMention": ["the best in the industry", "the finest bottles", "the ultimate"],
+        "mustMentionAny": ["system guarantee", "Nemat", "Ulta", "Sephora", "practitioner", "curated", "compatibility"]
+      }
+    },
+    {
+      "id": "pricing-no-volunteer",
+      "category": "pricing_etiquette",
+      "question": "Tell me about your 30ml Cylinder bottles.",
+      "expect": {
+        "mustNotMention": ["$", "dollar", "per unit", "each for"],
+        "mustMention": ["Cylinder", "30ml"]
+      }
+    },
+    {
+      "id": "pricing-when-asked",
+      "category": "pricing_etiquette",
+      "question": "How much does a 30ml Boston Round cost?",
+      "expect": {
+        "mustMentionAny": ["$", "dollar", "price", "pricing", "per unit", "each"]
+      }
+    },
+    {
+      "id": "nearsize-3ml-spray",
+      "category": "near_size_matching",
+      "question": "Do you have a 3ml spray bottle?",
+      "expect": {
+        "mustMentionAny": ["3.3ml", "3.3 ml", "3ml", "sample"],
+        "mustNotMention": ["don't carry", "don't stock", "not available", "don't have"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "nearsize-4ml-spray",
+      "category": "near_size_matching",
+      "question": "Do you have a 4ml spray bottle?",
+      "expect": {
+        "mustMentionAny": ["4ml", "4 ml"],
+        "mustNotMention": ["don't carry", "don't stock", "not available"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "nearsize-5ml-finds-5.5",
+      "category": "near_size_matching",
+      "question": "I need a 5ml spray bottle.",
+      "expect": {
+        "mustMentionAny": ["5ml", "5.5ml", "5.5 ml", "5 ml"],
+        "mustNotMention": ["don't carry", "don't stock"],
+        "expectedTools": ["searchCatalog"]
+      }
+    },
+    {
+      "id": "nearsize-3ml-transparent-exact",
+      "category": "near_size_matching",
+      "question": "What's the exact capacity of your smallest spray bottle?",
+      "expect": {
+        "mustMentionAny": ["3.3", "3ml", "0.1oz"],
+        "mustNotMention": ["don't carry"]
+      }
+    },
+    {
+      "id": "cross-family-comparison",
+      "category": "consultative",
+      "question": "I'm launching a luxury perfume line. Should I go with Elegant or Diva bottles?",
+      "expect": {
+        "mustMention": ["Elegant", "Diva"],
+        "mustNotMention": ["don't carry", "not available"]
+      }
+    },
+    {
+      "id": "ambiguous-use-case",
+      "category": "consultative",
+      "question": "I need bottles for my essential oil business. Where do I start?",
+      "expect": {
+        "mustMentionAny": ["amber", "dropper", "roll-on", "roller", "Boston Round", "UV"],
+        "mustNotMention": ["don't carry"]
+      }
+    },
+    {
+      "id": "thread-size-confusion",
+      "category": "education",
+      "question": "What does 18-415 mean? I see it on your product pages.",
+      "expect": {
+        "mustMentionAny": ["diameter", "millimeter", "thread"],
+        "mustNotMention": ["I don't know", "not sure"]
+      }
+    }
+  ]
+}
