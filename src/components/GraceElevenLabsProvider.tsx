@@ -162,7 +162,7 @@ function tokenizeSearchText(rawValue: string): string[] {
 
 function selectDirectProductMatch(products: ProductCard[], query?: string): ProductCard | null {
     const tokens = tokenizeSearchText(query ?? "");
-    if (tokens.length < 3) {
+    if (tokens.length < 2) {
         return null;
     }
 
