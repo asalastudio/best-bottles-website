@@ -99,8 +99,8 @@ export default function MobileTabBar() {
                                     size={20}
                                     weight={active ? "bold" : "regular"}
                                 />
-                                {/* Cart badge */}
-                                {tab.key === "cart" && itemCount > 0 && (
+                                {/* Cart badge — only after mount to avoid hydration mismatch (cart loads from localStorage) */}
+                                {tab.key === "cart" && mounted && itemCount > 0 && (
                                     <span className="absolute -top-1.5 -right-2.5 min-w-[16px] h-4 flex items-center justify-center rounded-full bg-muted-gold text-[10px] font-semibold text-obsidian px-1 leading-none">
                                         {itemCount > 99 ? "99+" : itemCount}
                                     </span>

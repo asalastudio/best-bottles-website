@@ -161,7 +161,7 @@ function tokenizeSearchText(rawValue: string): string[] {
 
 function selectDirectProductMatch(products: ProductCard[], query?: string): ProductCard | null {
     const tokens = tokenizeSearchText(query ?? "");
-    if (tokens.length < 3) {
+    if (tokens.length < 2) {
         return null;
     }
 
@@ -231,6 +231,13 @@ function isGenericPromptChip(rawMessage: string): boolean {
         "see bulk pricing",
     ].includes(normalized);
 }
+
+const ELEVENLABS_TRANSPORT =
+    process.env.NEXT_PUBLIC_GRACE_ELEVENLABS_TRANSPORT === "webrtc"
+        ? "webrtc"
+        : process.env.NEXT_PUBLIC_GRACE_ELEVENLABS_TRANSPORT === "auto"
+            ? "auto"
+            : "websocket";
 
 // ─── Provider ─────────────────────────────────────────────────────────────────
 
@@ -358,7 +365,7 @@ export default function GraceElevenLabsProvider({
     // "changed" options and tearing down a live WebSocket.
 
     const handleConnect = useCallback(() => {
-        console.log("[Grace EL] Connected — WS live");
+        console.log("[Grace EL] Connected — session live");
         connectingRef.current = false;
         lastConnectTimeRef.current = Date.now();
         setStatus("listening");
@@ -409,7 +416,9 @@ export default function GraceElevenLabsProvider({
 
     const handleModeChange = useCallback((mode: { mode: string }) => {
         if (mode.mode === "speaking") setStatus("speaking");
-        else if (mode.mode === "listening") setStatus("listening");
+        else if (mode.mode === "listening") {
+            setStatus("listening");
+        }
     }, []);
 
     const handleError = useCallback((error: unknown) => {
@@ -434,6 +443,10 @@ export default function GraceElevenLabsProvider({
 
     const handleStatusChange = useCallback((ev: { status: string }) => {
         console.log("[Grace EL] SDK status →", ev.status);
+    }, []);
+
+    const handleInterruption = useCallback(() => {
+        // No-op — ElevenLabs handles interruption natively
     }, []);
 
     // ── Stable clientTools ────────────────────────────────────────────────────
@@ -738,6 +751,7 @@ export default function GraceElevenLabsProvider({
         onError: handleError,
         onDebug: handleDebug,
         onStatusChange: handleStatusChange,
+        onInterruption: handleInterruption,
     });
 
     // Keep conversationRef in sync so callbacks above can always access latest
@@ -869,9 +883,22 @@ export default function GraceElevenLabsProvider({
                 }
             }
 
-            const connectOnce = async () => {
+            const contextBlock = formatPageContextForGrace(pageContextRef.current);
+
+            const buildSessionOverrides = () => (
+                contextBlock
+                    ? {
+                        overrides: {
+                            agent: { prompt: { prompt: contextBlock } },
+                        },
+                    }
+                    : {}
+            );
+
+            const connectViaWebSocket = async () => {
                 const t0 = performance.now();
                 const res = await fetch("/api/elevenlabs/signed-url");
+
                 if (!res.ok) {
                     const err = await res.json().catch(() => ({}));
                     throw new Error(
@@ -884,28 +911,59 @@ export default function GraceElevenLabsProvider({
 
                 console.log(`[Grace EL] Starting WebSocket session (fetch took ${Math.round(performance.now() - t0)}ms)`);
 
-                const contextBlock = formatPageContextForGrace(pageContextRef.current);
-                await Promise.race([
-                    conversationRef.current!.startSession({
-                        signedUrl,
-                        connectionType: "websocket",
-                        ...(contextBlock ? {
-                            overrides: {
-                                agent: { prompt: { prompt: contextBlock } },
-                            },
-                        } : {}),
-                    }),
-                    new Promise<never>((_, reject) =>
-                        setTimeout(() => reject(new Error("Voice connection timed out after 15 seconds.")), 15000)
-                    ),
-                ]);
+                await conversationRef.current!.startSession({
+                    signedUrl,
+                    connectionType: "websocket",
+                    ...buildSessionOverrides(),
+                });
             };
 
-            // One automatic retry with a fresh signed URL handles stale/half-closed sockets.
+            const connectViaWebRTC = async () => {
+                const t0 = performance.now();
+                const res = await fetch("/api/elevenlabs/conversation-token");
+
+                if (!res.ok) {
+                    const err = await res.json().catch(() => ({}));
+                    throw new Error(
+                        (err as { error?: string }).error ??
+                        "Failed to get ElevenLabs conversation token."
+                    );
+                }
+
+                const { token } = (await res.json()) as { token?: string };
+                if (!token) throw new Error("ElevenLabs did not return a valid conversation token.");
+
+                console.log(`[Grace EL] Starting WebRTC session (fetch took ${Math.round(performance.now() - t0)}ms)`);
+
+                await conversationRef.current!.startSession({
+                    conversationToken: token,
+                    connectionType: "webrtc",
+                    ...buildSessionOverrides(),
+                });
+            };
+
+            // WebSocket has been more stable in this app than WebRTC.
+            // WebRTC can still be enabled explicitly for testing, or used as a fallback in auto mode.
             let lastError: unknown;
-            for (let attempt = 1; attempt <= 2; attempt += 1) {
+            const transports: Array<{ label: "WebSocket" | "WebRTC"; connect: () => Promise<void> }> = (
+                ELEVENLABS_TRANSPORT === "webrtc"
+                    ? [{ label: "WebRTC", connect: connectViaWebRTC }]
+                    : ELEVENLABS_TRANSPORT === "auto"
+                        ? [
+                            { label: "WebSocket", connect: connectViaWebSocket },
+                            { label: "WebRTC", connect: connectViaWebRTC },
+                        ]
+                        : [{ label: "WebSocket", connect: connectViaWebSocket }]
+            );
+
+            for (const transport of transports) {
                 try {
-                    await connectOnce();
+                    await Promise.race([
+                        transport.connect(),
+                        new Promise<never>((_, reject) =>
+                            setTimeout(() => reject(new Error(`${transport.label} voice connection timed out after 15 seconds.`)), 15000)
+                        ),
+                    ]);
 
                     // Brief stability check — verify the socket didn't immediately close.
                     // We check our own ref (reset to 0 by handleDisconnect) rather than
@@ -916,16 +974,13 @@ export default function GraceElevenLabsProvider({
                     }
 
                     connectingRef.current = false;
-                    safeSetVolume(voiceEnabledRef.current ? 1 : 0);
-                    console.log(`[Grace EL] WebSocket session established (attempt ${attempt})`);
+                    console.log(`[Grace EL] ${transport.label} session established`);
                     return;
                 } catch (e) {
                     lastError = e;
-                    console.warn(`[Grace EL] startSession attempt ${attempt} failed:`, e);
+                    console.warn(`[Grace EL] ${transport.label} startSession failed:`, e);
                     safeEndSession();
-                    if (attempt < 2) {
-                        await new Promise((r) => setTimeout(r, 500));
-                    }
+                    await new Promise((r) => setTimeout(r, 500));
                 }
             }
 
