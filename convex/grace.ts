@@ -85,7 +85,7 @@ const GRACE_TOOLS: Anthropic.Tool[] = [
                 familyLimit: {
                     type: "string",
                     description:
-                        "Optional: restrict to a bottle family. Valid values: 'Cylinder', 'Elegant', 'Boston Round', 'Circle', 'Diva', 'Empire', 'Slim', 'Diamond', 'Sleek', 'Round', 'Royal', 'Square', 'Footed Rectangle', 'Tall Rectangle', 'Bell', 'Flair', 'Pillar', 'Teardrop', 'Tulip', 'Vial', 'Apothecary', 'Decorative', 'Atomizer', 'Aluminum Bottle', 'Cream Jar', 'Lotion Bottle', 'Plastic Bottle'. Use 'Apothecary' for apothecary-style glass stopper bottles. Use 'Decorative' for marble-crystal-cap, genie, heart, octagonal, and ornate collectible bottles. 'Footed Rectangle' is the squat rectangle with a pedestal foot; 'Tall Rectangle' is the slender, tall rectangle with a heavy base.",
+                        "Optional: restrict to a bottle family. Valid Glass Bottle families: 'Cylinder', 'Elegant', 'Boston Round', 'Circle', 'Diva', 'Empire', 'Slim', 'Diamond', 'Sleek', 'Round', 'Royal', 'Square', 'Rectangle', 'Flair', 'Spray Bottle', 'Teardrop', 'Vial', 'Apothecary', 'Decorative', 'Grace', 'Genie', 'Eternal Flame', 'Green Glass'. Non-glass families: 'Aluminum Bottle', 'Cream Jar', 'Lotion Bottle', 'Plastic Bottle'. Use 'Spray Bottle' for small glass spray bottles (3ml–30ml). Use 'Apothecary' for apothecary-style glass stopper bottles. Use 'Decorative' for marble-crystal-cap, genie, heart, octagonal, and ornate collectible bottles. Use 'Rectangle' for both footed rectangle and tall rectangle shapes.",
                 },
                 applicatorFilter: {
                     type: "string",
@@ -98,6 +98,11 @@ const GRACE_TOOLS: Anthropic.Tool[] = [
                         "'dropper / eye dropper' → 'Dropper'; " +
                         "'lotion pump / pump' → 'Lotion Pump'; " +
                         "'cap / closure / simple cap' → 'Cap/Closure'.",
+                },
+                capacityMl: {
+                    type: "number",
+                    description:
+                        "Optional: filter to products with this exact capacity in millilitres. Use when the customer specifies a size (e.g. 3, 5, 10, 30, 50, 100). This is a structured numeric filter — more precise than including the size in searchTerm.",
                 },
             },
             required: ["searchTerm"],
@@ -113,7 +118,7 @@ const GRACE_TOOLS: Anthropic.Tool[] = [
                 family: {
                     type: "string",
                     description:
-                        "The bottle family name. Must match exactly: 'Cylinder', 'Elegant', 'Boston Round', 'Circle', 'Diva', 'Empire', 'Slim', 'Diamond', 'Sleek', 'Round', 'Royal', 'Square', 'Vial', 'Grace', 'Footed Rectangle', 'Tall Rectangle', 'Flair'",
+                        "The bottle family name. Must match exactly: 'Cylinder', 'Elegant', 'Boston Round', 'Circle', 'Diva', 'Empire', 'Slim', 'Diamond', 'Sleek', 'Round', 'Royal', 'Square', 'Rectangle', 'Flair', 'Spray Bottle', 'Teardrop', 'Vial', 'Grace', 'Apothecary', 'Decorative', 'Genie', 'Eternal Flame', 'Aluminum Bottle', 'Cream Jar', 'Green Glass', 'Lotion Bottle', 'Plastic Bottle'",
                 },
             },
             required: ["family"],
@@ -189,16 +194,30 @@ Never hallucinate product variations, sizes, or colours. If a customer asks abou
 HARD RULE — MINIMUM SIZES PER FAMILY (memorise these; do not contradict them even if a search returns nearby results):
 | Family | Smallest size we stock |
 |---|---|
+| Apothecary | 15ml |
 | Boston Round | **15ml** (there is NO 5ml, 10ml, or 12ml Boston Round) |
-| Cylinder | 5ml |
-| Elegant | 15ml |
-| Diva | 30ml |
-| Empire | 30ml |
-| Slim | 15ml |
 | Circle | 15ml |
+| Cylinder | 5ml |
+| Decorative | 3ml |
+| Diamond | 60ml |
+| Diva | 30ml |
+| Elegant | 15ml |
+| Empire | 50ml |
+| Flair | 15ml |
+| Grace | 55ml |
+| Rectangle | 9ml (includes Footed Rectangle and Tall Rectangle shapes) |
+| Round | 78ml |
+| Royal | 13ml |
+| Sleek | 5ml |
+| Slim | 5ml |
+| Spray Bottle | **3ml** (small glass spray bottles with built-in sprayer — 3ml, 4ml, 30ml) |
+| Square | 15ml |
+| Teardrop | 9ml |
 | Vial / Dram | 1ml |
 
-If a customer asks for a size below the minimum (e.g. "10ml Boston Round"), respond: "We don't stock a 10ml Boston Round — our Boston Rounds start at 15ml. I can show you the 15ml, or if you need a 10ml I can point you to our Cylinder, Footed Rectangle, or Tall Rectangle options instead." Then pivot and search for those alternatives.
+If a customer asks for a size below the minimum (e.g. "10ml Boston Round"), respond: "We don't stock a 10ml Boston Round — our Boston Rounds start at 15ml. I can show you the 15ml, or if you need a 10ml I can point you to our Cylinder, Rectangle, or Slim options instead." Then pivot and search for those alternatives.
+
+CRITICAL — SPRAY BOTTLE vs. SPRAYER: "Spray Bottle" is its own product family (small all-in-one glass spray bottles). Do NOT confuse it with bottles that have a sprayer component attached. When a customer asks for a "3ml spray bottle" or similar small spray, search with familyLimit "Spray Bottle" first.
 
 ### Protect the Brand
 Best Bottles is an exclusive, high-end supplier that simplifies complex procurement — never a discount warehouse. Acknowledge the $50 minimum order implicitly through upselling and value framing. Never put up walls.
@@ -432,18 +451,33 @@ GENERAL RULES:
 function normalizeSearchTerm(term: string): string {
     let t = term.toLowerCase();
 
+    // ─── Phase 0: Protect compound family names from being mangled ────────
+    // "spray bottle" is a family name — don't let Phase 1 rewrite "spray" to "sprayer"
+    const PROTECTED_FAMILIES = [
+        { pattern: /\bspray\s*bottle\b/gi, placeholder: "__SPRAY_BOTTLE__", restore: "spray bottle" },
+    ];
+    for (const pf of PROTECTED_FAMILIES) {
+        t = t.replace(pf.pattern, pf.placeholder);
+    }
+
     // ─── Phase 1: Use Case / Intent Mapping ─────────────────────────────────
     // If they ask for "thick oil", we want to point them to Roll-ons (rollers)
     if (/\b(thick oil|perfume oil|body oil|attar|oud)\b/i.test(t)) {
         t = t.replace(/\b(thick oil|perfume oil|body oil|attar|oud)\b/gi, "roll-on");
     }
     // If they ask for "fine mist", "cologne", or "spray", we want Sprayers
+    // Note: "spray" alone is NOT rewritten — it may refer to the Spray Bottle family
     if (/\b(fine mist|cologne|body spray|fragrance spray)\b/i.test(t)) {
         t = t.replace(/\b(fine mist|cologne|body spray|fragrance spray)\b/gi, "sprayer");
     }
     // "wedding favor" or "sample" -> small vials
     if (/\b(wedding favor|sample|prototype)\b/i.test(t)) {
         t = t.replace(/\b(wedding favor|sample|prototype)\b/gi, "vial");
+    }
+
+    // ─── Phase 2: Restore protected family names ─────────────────────────
+    for (const pf of PROTECTED_FAMILIES) {
+        t = t.replace(new RegExp(pf.placeholder, "g"), pf.restore);
     }
 
     return t
@@ -482,13 +516,14 @@ export const searchCatalog = query({
         categoryLimit: v.optional(v.string()),
         familyLimit: v.optional(v.string()),
         applicatorFilter: v.optional(v.string()),
+        capacityMl: v.optional(v.number()),
     },
     handler: async (ctx, args) => {
         const normalizedTerm = normalizeSearchTerm(args.searchTerm);
         const searchTermToUse = normalizedTerm || args.searchTerm;
 
-        // When an applicator filter is active, take more results before filtering
-        const takeCount = args.applicatorFilter ? 100 : 25;
+        // When an applicator or capacity filter is active, take more results before filtering
+        const takeCount = (args.applicatorFilter || args.capacityMl) ? 100 : 25;
 
         let q = ctx.db.query("products").withSearchIndex("search_itemName", (q) =>
             q.search("itemName", searchTermToUse)
@@ -549,9 +584,13 @@ export const searchCatalog = query({
         // Parse family name and capacity from the search term and cross-check
         // productGroups so we never miss an obvious match.
         const KNOWN_FAMILIES = [
-            "Apothecary", "Atomizer", "Bell", "Boston Round", "Circle", "Cylinder",
-            "Diamond", "Diva", "Elegant", "Empire", "Footed Rectangle", "Grace", "Round",
-            "Sleek", "Slim", "Tall Rectangle", "Tulip", "Vial",
+            // Match longer names first to avoid partial matches (e.g. "Spray Bottle" before "Spray")
+            "Aluminum Bottle", "Boston Round", "Cream Jar", "Eternal Flame",
+            "Footed Rectangle", "Green Glass", "Lotion Bottle", "Plastic Bottle",
+            "Spray Bottle", "Tall Rectangle",
+            "Apothecary", "Circle", "Cylinder", "Decorative", "Diamond", "Diva",
+            "Elegant", "Empire", "Flair", "Genie", "Grace", "Rectangle", "Round",
+            "Royal", "Sleek", "Slim", "Square", "Teardrop", "Vial",
         ];
         const termLower = args.searchTerm.toLowerCase();
         const detectedFamily = args.familyLimit
@@ -613,6 +652,11 @@ export const searchCatalog = query({
             }
         }
 
+        // Apply capacity filter in JS after fetching (structured numeric match)
+        if (args.capacityMl) {
+            results = results.filter((p) => p.capacityMl === args.capacityMl);
+        }
+
         // Apply applicator filter in JS after fetching (Convex search index doesn't support OR filters)
         if (args.applicatorFilter) {
             const allowed = new Set(
@@ -626,9 +670,11 @@ export const searchCatalog = query({
                 .filter((p) => {
                     const normalizedApplicator = normalizeApplicatorValue(p.applicator);
                     return normalizedApplicator ? allowed.has(normalizedApplicator.toLowerCase()) : false;
-                })
-                .slice(0, 25);
+                });
         }
+
+        // Apply final limit after all filters
+        results = results.slice(0, 25);
 
         // Return a trimmed version — components arrays are large and waste tokens.
         // Normalize capacity strings: remove internal spaces ("9 ml" → "9ml")
@@ -1256,12 +1302,14 @@ export const askGrace = action({
                                     categoryLimit?: string;
                                     familyLimit?: string;
                                     applicatorFilter?: string;
+                                    capacityMl?: number;
                                 };
                                 const data = await ctx.runQuery(api.grace.searchCatalog, {
                                     searchTerm: input.searchTerm,
                                     categoryLimit: input.categoryLimit,
                                     familyLimit: input.familyLimit,
                                     applicatorFilter: input.applicatorFilter,
+                                    capacityMl: input.capacityMl,
                                 });
                                 result = data.length > 0
                                     ? JSON.stringify(data, null, 2)
