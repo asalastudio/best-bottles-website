@@ -17,7 +17,6 @@
     "eval:grace:loop": "node scripts/eval_grace.mjs --runs 3 --verbose"
   },
   "dependencies": {
-    "@anam-ai/js-sdk": "^4.10.0",
     "@anthropic-ai/sdk": "^0.78.0",
     "@clerk/nextjs": "^6.39.0",
     "@elevenlabs/react": "^0.14.1",

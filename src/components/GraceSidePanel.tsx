@@ -975,27 +975,7 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
         return () => clearInterval(id);
     }, [conversationActive]);
 
-    // Ref for the hero container to reparent the video element into it
     const heroContainerRef = useRef<HTMLDivElement>(null);
-
-    // Move the single video element into/out of the hero container
-    useEffect(() => {
-        const video = document.getElementById("anam-video") as HTMLVideoElement | null;
-        if (!video) return;
-
-        if (conversationActive && heroContainerRef.current) {
-            // Move video into the hero container
-            heroContainerRef.current.insertBefore(video, heroContainerRef.current.firstChild);
-            video.className = "absolute inset-0 object-cover";
-            // The Anam SDK applies inline styles (left: -9999px, etc.) which hides the avatar.
-            // We MUST use !important to override its inline styles here.
-            video.style.cssText = "width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; object-position: center 20% !important; position: absolute !important;";
-        } else {
-            // Move video back to body / hide it off-screen
-            video.className = "fixed opacity-0 pointer-events-none";
-            video.style.cssText = "left: -9999px !important; width: 1px !important; height: 1px !important;";
-        }
-    }, [conversationActive]);
 
     const panelContent = (
         <>
@@ -1486,13 +1466,6 @@ export default function GraceSidePanel() {
 
     return (
         <>
-            {/* Global hidden video element — always in DOM for Anam SDK & reparenting logic */}
-            <video
-                id="anam-video"
-                autoPlay
-                playsInline
-                className="fixed -left-[9999px] w-0 h-0 opacity-0 pointer-events-none"
-            />
 
             <AnimatePresence mode="wait">
                 {panelMode === "open" && <ChatPanel key="panel" isMobile={isMobile} />}

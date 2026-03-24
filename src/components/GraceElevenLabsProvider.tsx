@@ -18,7 +18,6 @@ import {
 } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useConversation } from "@elevenlabs/react";
-import { createClient, AnamEvent, type AnamClient } from "@anam-ai/js-sdk";
 import { useAction, useMutation, useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useCart } from "./CartProvider";
@@ -353,12 +352,6 @@ export default function GraceElevenLabsProvider({
     const submitFormMutationRef = useRef(submitFormMutation);
     useEffect(() => { submitFormMutationRef.current = submitFormMutation; }, [submitFormMutation]);
 
-    // ── Anam Integration Refs ────────────────────────────────────────────────
-    const anamClientRef = useRef<AnamClient | null>(null);
-    const audioInputStreamRef = useRef<any>(null); // Anam's AudioInput stream
-    const anamReadyRef = useRef<boolean>(false);
-    const audioBufferRef = useRef<string[]>([]);
-
     // ── Active conversational form ────────────────────────────────────────────
     const [activeForm, setActiveForm] = useState<ActiveForm | null>(null);
 
@@ -390,11 +383,6 @@ export default function GraceElevenLabsProvider({
         lastConnectTimeRef.current = 0;
         setConversationActive(false);
         setStatus("idle");
-
-        anamClientRef.current?.stopStreaming().catch(() => { });
-        anamClientRef.current = null;
-        anamReadyRef.current = false;
-        audioBufferRef.current = [];
 
         if (wasImmediateDrop) {
             setVoiceFailed(true);
@@ -429,7 +417,6 @@ export default function GraceElevenLabsProvider({
     const handleModeChange = useCallback((mode: { mode: string }) => {
         if (mode.mode === "speaking") setStatus("speaking");
         else if (mode.mode === "listening") {
-            audioInputStreamRef.current?.endSequence();
             setStatus("listening");
         }
     }, []);
@@ -458,35 +445,8 @@ export default function GraceElevenLabsProvider({
         console.log("[Grace EL] SDK status →", ev.status);
     }, []);
 
-    const handleAudio = useCallback((audioEvent: any) => {
-        // The elevenlabs SDK gives us the base64 or raw Uint8Array audio here.
-        // We'll trust it passes as a string per the cookbook, or handle fallback if needed.
-        const base64Audio = typeof audioEvent.audio_base_64 === 'string'
-            ? audioEvent.audio_base_64
-            : typeof audioEvent === 'string' ? audioEvent : null;
-
-        console.log(`[Grace EL] Received audio chunk, length: ${base64Audio?.length}`);
-
-        if (base64Audio) {
-            if (anamReadyRef.current) {
-                audioInputStreamRef.current?.sendAudioChunk(base64Audio);
-            } else {
-                audioBufferRef.current.push(base64Audio);
-            }
-        }
-    }, []);
-
     const handleInterruption = useCallback(() => {
-        try {
-            anamClientRef.current?.interruptPersona();
-        } catch (e) {
-            console.warn("[Grace EL] interruptPersona skipped (not streaming)", e);
-        }
-        try {
-            audioInputStreamRef.current?.endSequence();
-        } catch (e) {
-            console.warn("[Grace EL] endSequence skipped", e);
-        }
+        // No-op — ElevenLabs handles interruption natively
     }, []);
 
     // ── Stable clientTools ────────────────────────────────────────────────────
@@ -791,7 +751,6 @@ export default function GraceElevenLabsProvider({
         onError: handleError,
         onDebug: handleDebug,
         onStatusChange: handleStatusChange,
-        onAudio: handleAudio,
         onInterruption: handleInterruption,
     });
 
@@ -936,61 +895,9 @@ export default function GraceElevenLabsProvider({
                     : {}
             );
 
-            const initAnam = async () => {
-                if (anamClientRef.current) return;
-                try {
-                    const res = await fetch("/api/anam-session", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({ avatarId: undefined }),
-                    });
-                    if (!res.ok) throw new Error("Failed to start avatar session");
-                    const { sessionToken } = await res.json();
-
-                    const anamClient = createClient(sessionToken, {
-                        disableInputAudio: true,
-                    });
-                    anamClientRef.current = anamClient;
-
-                    // SESSION_READY fires AFTER streamToVideoElement completes the handshake.
-                    // Only then can we create the audio input stream.
-                    anamClient.addListener(AnamEvent.SESSION_READY, () => {
-                        console.log("[Grace EL] Anam SESSION_READY — creating audio input stream");
-                        try {
-                            audioInputStreamRef.current = anamClient.createAgentAudioInputStream({
-                                encoding: "pcm_s16le",
-                                sampleRate: 16000,
-                                channels: 1,
-                            });
-
-                            // Flush any audio chunks that arrived before Anam was ready
-                            for (const chunk of audioBufferRef.current) {
-                                audioInputStreamRef.current?.sendAudioChunk(chunk);
-                            }
-                            audioBufferRef.current = [];
-                            anamReadyRef.current = true;
-                            console.log("[Grace EL] Anam audio stream ready, flushed buffered chunks");
-                        } catch (audioErr) {
-                            console.error("[Grace EL] Failed to create audio input stream", audioErr);
-                        }
-                    });
-
-                    // This initiates the WebRTC/WebSocket connection to Anam servers.
-                    // SESSION_READY fires once the connection is established.
-                    console.log("[Grace EL] Starting Anam streamToVideoElement...");
-                    await anamClient.streamToVideoElement("anam-video");
-                    console.log("[Grace EL] Anam streamToVideoElement resolved");
-                } catch (e) {
-                    console.error("[Grace EL] Failed to initialize Anam avatar", e);
-                }
-            };
-
             const connectViaWebSocket = async () => {
                 const t0 = performance.now();
-                const [res] = await Promise.all([
-                    fetch("/api/elevenlabs/signed-url"),
-                    initAnam()
-                ]);
+                const res = await fetch("/api/elevenlabs/signed-url");
 
                 if (!res.ok) {
                     const err = await res.json().catch(() => ({}));
@@ -1013,10 +920,7 @@ export default function GraceElevenLabsProvider({
 
             const connectViaWebRTC = async () => {
                 const t0 = performance.now();
-                const [res] = await Promise.all([
-                    fetch("/api/elevenlabs/conversation-token"),
-                    initAnam()
-                ]);
+                const res = await fetch("/api/elevenlabs/conversation-token");
 
                 if (!res.ok) {
                     const err = await res.json().catch(() => ({}));
@@ -1070,8 +974,7 @@ export default function GraceElevenLabsProvider({
                     }
 
                     connectingRef.current = false;
-                    safeSetVolume(0); // Mute ElevenLabs speaker internally - audio is handled visually by Anam
-                    console.log(`[Grace EL] ${transport.label} session established (ElevenLabs audio output muted)`);
+                    console.log(`[Grace EL] ${transport.label} session established`);
                     return;
                 } catch (e) {
                     lastError = e;
