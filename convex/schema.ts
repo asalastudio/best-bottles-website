@@ -300,6 +300,11 @@ export default defineSchema({
         taxExempt: v.boolean(),
         memberSince: v.string(),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
+        // Business license / compliance — for B2B resale certificates, tax exemption
+        businessLicenseNumber: v.optional(v.union(v.string(), v.null())),
+        businessLicenseExpiry: v.optional(v.union(v.string(), v.null())),  // ISO date e.g. "2026-12-31"
+        resaleCertificateExpiry: v.optional(v.union(v.string(), v.null())), // ISO date
+        complianceStatus: v.optional(v.union(v.literal("current"), v.literal("expiring_soon"), v.literal("expired"), v.literal("not_on_file"), v.null())),
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
         .index("by_accountNumber", ["accountNumber"]),

@@ -20,7 +20,23 @@ try {
     /* ignore */
 }
 
-const BASE = process.env.BASE_URL || "http://localhost:3000";
+const DEFAULT_BASES = process.env.BASE_URL
+    ? [process.env.BASE_URL]
+    : ["http://localhost:3000", "http://localhost:3001"];
+
+async function pickBaseUrl() {
+    for (const base of DEFAULT_BASES) {
+        try {
+            const response = await fetch(base, { method: "HEAD" });
+            if (response.ok || response.status < 500) {
+                return base;
+            }
+        } catch {
+            /* try next base */
+        }
+    }
+    return DEFAULT_BASES[0];
+}
 
 async function check(name, fn) {
     try {
@@ -32,6 +48,8 @@ async function check(name, fn) {
 }
 
 async function main() {
+    const BASE = await pickBaseUrl();
+
     console.log("Grace AI Diagnostic\n");
     console.log("─".repeat(50));
 

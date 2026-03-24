@@ -105,11 +105,6 @@ export default async function PortalGrace({
                                 {activeProject?.name ?? "Create your first project"}
                             </h2>
                         </div>
-                        {activeProject && (
-                            <div className="flex gap-2">
-                                <PortalButton variant="outline" size="sm" type="button">Persisting to Convex</PortalButton>
-                            </div>
-                        )}
                     </div>
                     <GraceWorkspaceChat
                         projectId={activeProject?._id ?? null}

@@ -32,6 +32,12 @@ function NavIcon({ id }: { id: string }) {
                 <path d="M10 2v3h3" />
             </svg>
         ),
+        priceList: (
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M2 4h12M2 8h12M2 12h8" />
+                <path d="M11 11l2 2 2-2" />
+            </svg>
+        ),
         tools: (
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
                 <circle cx="8" cy="8" r="3" />
@@ -69,8 +75,10 @@ const navSections = [
     {
         items: [
             { href: "/portal", label: "Overview", id: "dashboard" },
+            { href: "/portal/price-list", label: "Price List", id: "priceList" },
             { href: "/portal/orders", label: "Orders", id: "orders" },
             { href: "/portal/drafts", label: "Drafts", id: "drafts" },
+            { href: "/portal/tools", label: "Tools", id: "tools" },
             { href: "/portal/grace", label: "Grace AI", id: "grace" },
         ],
     },

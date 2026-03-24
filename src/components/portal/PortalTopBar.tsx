@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation";
 
 const sectionLabels: Record<string, string> = {
     "/portal": "Overview",
+    "/portal/price-list": "Price List",
     "/portal/orders": "Orders",
     "/portal/tracking": "Tracking",
     "/portal/drafts": "Drafts",

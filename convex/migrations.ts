@@ -4990,3 +4990,97 @@ export const fixAtomizerGroups = action({
         };
     },
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// FIX NECK THREAD SIZES — 2026-03-24
+// Fixes corrupted / non-standard neckThreadSize values:
+//   1. "Size: GBPillar9BlkSht Nemat In" → "13-415" (garbled import data)
+//   2. "PRESS-FIT" → "Press-Fit"  (normalise casing)
+//   3. "SPECIAL" → "Specialty"    (normalise label)
+//   4. "snap" → "Snap-On"        (normalise label)
+//   5. "Ground" stays as-is       (already clean)
+//   6. "Plug" stays as-is         (already clean)
+// Also fixes the product group neckThreadSize for affected groups.
+// ─────────────────────────────────────────────────────────────────────────────
+
+const NECK_THREAD_FIXES: Record<string, string> = {
+    "Size: GBPillar9BlkSht Nemat In": "13-415",
+    "PRESS-FIT": "Press-Fit",
+    "SPECIAL": "Specialty",
+    "snap": "Snap-On",
+};
+
+// Step 1: Fix productGroups (lightweight, fits in one call)
+export const fixNeckThreadSizes_groups = mutation({
+    args: {},
+    handler: async (ctx) => {
+        const groupFixes: { slug: string; oldValue: string; newValue: string }[] = [];
+        const allGroups = await ctx.db.query("productGroups").collect();
+        for (const g of allGroups) {
+            const raw = g.neckThreadSize;
+            if (!raw) continue;
+            const replacement = NECK_THREAD_FIXES[raw];
+            if (!replacement) continue;
+            await ctx.db.patch(g._id, { neckThreadSize: replacement });
+            groupFixes.push({ slug: g.slug, oldValue: raw, newValue: replacement });
+        }
+        return { groupsFixed: groupFixes.length, details: groupFixes };
+    },
+});
+
+// Step 2: Fix products in paginated batches (products table is too large for .collect())
+export const fixNeckThreadSizes_products = action({
+    args: {},
+    handler: async (ctx) => {
+        const PAGE_SIZE = 100;
+        let cursor: string | null = null;
+        let isDone = false;
+        let totalFixed = 0;
+        const details: { sku: string; oldValue: string; newValue: string }[] = [];
+
+        while (!isDone) {
+            const result = (await ctx.runQuery(internal.migrations.getProductPage, {
+                cursor: cursor,
+                numItems: PAGE_SIZE,
+            })) as { page: RawProduct[]; isDone: boolean; continueCursor: string };
+
+            const toFix: { id: string; neckThreadSize: string }[] = [];
+            for (const p of result.page) {
+                const raw = p.neckThreadSize;
+                if (!raw) continue;
+                const replacement = NECK_THREAD_FIXES[raw];
+                if (!replacement) continue;
+                toFix.push({ id: p._id as string, neckThreadSize: replacement });
+                details.push({
+                    sku: p.graceSku ?? p.websiteSku ?? "unknown",
+                    oldValue: raw,
+                    newValue: replacement,
+                });
+            }
+
+            if (toFix.length > 0) {
+                await ctx.runMutation(internal.migrations.patchNeckThreadBatch, { patches: toFix });
+                totalFixed += toFix.length;
+            }
+
+            isDone = result.isDone;
+            cursor = result.continueCursor;
+        }
+
+        return { productsFixed: totalFixed, details };
+    },
+});
+
+export const patchNeckThreadBatch = internalMutation({
+    args: {
+        patches: v.array(v.object({
+            id: v.string(),
+            neckThreadSize: v.string(),
+        })),
+    },
+    handler: async (ctx, args) => {
+        for (const patch of args.patches) {
+            await ctx.db.patch(patch.id as Id<"products">, { neckThreadSize: patch.neckThreadSize });
+        }
+    },
+});

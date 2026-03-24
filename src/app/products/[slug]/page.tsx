@@ -15,6 +15,7 @@ import Navbar from "@/components/Navbar";
 import FitmentDrawer from "@/components/FitmentDrawer";
 import PdpGraceTrigger from "@/components/PdpGraceTrigger";
 import { useCart } from "@/components/CartProvider";
+import { addToPriceListStorage } from "@/lib/priceListStorage";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import {
@@ -1148,14 +1149,30 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 </button>
                             </div>
 
-                            {/* Request a Quote CTA */}
-                            <div className="mb-6">
+                            {/* Request a Quote + Add to Price List */}
+                            <div className="mb-6 flex flex-col sm:flex-row gap-3">
                                 <Link
                                     href={`/request-quote?products=${encodeURIComponent(`${selectedVariant?.itemName ?? group?.displayName ?? ''} (SKU: ${selectedVariant?.graceSku ?? ''})`)}&quantities=${encodeURIComponent(`${qty} units`)}`}
-                                    className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
+                                    className="flex-1 flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
                                 >
                                     <span>Request a Quote</span>
                                 </Link>
+                                {selectedVariant?.graceSku && (
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            addToPriceListStorage([{
+                                                sku: selectedVariant.graceSku,
+                                                description: selectedVariant.itemName ?? group?.displayName ?? "",
+                                                unitPrice: selectedVariant.webPrice1pc ?? 0,
+                                            }]);
+                                            router.push("/portal/price-list");
+                                        }}
+                                        className="flex-1 flex items-center justify-center space-x-2 py-3 border border-champagne text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-travertine hover:border-muted-gold transition-colors"
+                                    >
+                                        <span>Add to Price List</span>
+                                    </button>
+                                )}
                             </div>
 
                             {/* Product Description — group-level copy preferred, then variant, skipped when Sanity rich desc exists */}

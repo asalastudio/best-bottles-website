@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import FitmentDrawer from '@/components/FitmentDrawer';
 import FitmentCarousel from '@/components/FitmentCarousel';
 
@@ -12,6 +13,7 @@ export default function FitmentDemoPage() {
 
     return (
         <main className="min-h-screen bg-[#fdfbf7] flex flex-col items-center">
+            <Link href="/" className="absolute top-6 left-6 font-sans text-[10px] tracking-[0.18em] uppercase text-slate-500 hover:text-slate-900 transition-colors">← Home</Link>
 
             {/* 
         Mock Product Page Layout: 

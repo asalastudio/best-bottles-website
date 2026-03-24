@@ -80,6 +80,24 @@ export default async function PortalDashboard() {
                 <StatCard label="Credit Available" value={formatCurrency(stats.availableCredit)} sub={account ? `${account.netTerms} · ${account.tier}` : "Available after account sync"} />
             </div>
 
+            {/* Quick action: Price List */}
+            <div className="mb-4">
+                <Link
+                    href="/portal/price-list"
+                    className="block p-4 bg-white rounded-lg border border-neutral-200 hover:border-muted-gold/40 hover:shadow-sm transition-all"
+                >
+                    <div className="flex items-center justify-between">
+                        <div>
+                            <h3 className="font-sans text-[14px] font-semibold text-neutral-900">Build a Price List</h3>
+                            <p className="font-sans text-[12px] text-neutral-500 mt-0.5">
+                                Add line items with SKUs, quantities, and pricing. Save to a draft or use for quote requests.
+                            </p>
+                        </div>
+                        <span className="font-sans text-[12px] font-medium text-muted-gold">→ Price List</span>
+                    </div>
+                </Link>
+            </div>
+
             <div className="grid grid-cols-[1.5fr_1fr] gap-4 mb-4">
 
                 {/* Active orders table */}

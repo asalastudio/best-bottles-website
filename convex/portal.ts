@@ -243,6 +243,39 @@ export const createDraft = mutation({
     },
 });
 
+const lineItemValidator = v.object({
+    sku: v.string(),
+    description: v.string(),
+    quantity: v.number(),
+    unitPrice: v.optional(v.number()),
+});
+
+/** Create a draft with pre-filled line items (e.g. from Price List builder) */
+export const createDraftWithLineItems = mutation({
+    args: {
+        clerkOrgId: v.string(),
+        name: v.optional(v.string()),
+        lineItems: v.array(lineItemValidator),
+    },
+    handler: async (ctx, args) => {
+        const now = Date.now();
+        let totalAmount = 0;
+        for (const item of args.lineItems) {
+            totalAmount += (item.unitPrice ?? 0) * item.quantity;
+        }
+        const draftId = await ctx.db.insert("portalDrafts", {
+            clerkOrgId: args.clerkOrgId,
+            name: args.name?.trim() || `Price List ${new Date(now).toLocaleDateString("en-US")}`,
+            status: "draft",
+            lineItems: args.lineItems,
+            totalAmount,
+            createdAt: now,
+            updatedAt: now,
+        });
+        return { draftId };
+    },
+});
+
 export const createDraftFromOrder = mutation({
     args: {
         clerkOrgId: v.string(),
@@ -372,6 +405,99 @@ export const createGraceProject = mutation({
         });
 
         return { projectId };
+    },
+});
+
+/** Seed demo data for portal. Run: npx convex run portal:seedPortalDemoData '{"clerkOrgId": "org_YOUR_ORG_ID"}' */
+export const seedPortalDemoData = mutation({
+    args: { clerkOrgId: v.string() },
+    handler: async (ctx, args) => {
+        const existing = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
+            .unique();
+
+        if (existing) {
+            return { message: "Account already exists for this org. Skipping seed.", accountId: existing._id };
+        }
+
+        const now = Date.now();
+        const oneYearAgo = now - 365 * 24 * 60 * 60 * 1000;
+        const sixMonthsAgo = now - 180 * 24 * 60 * 60 * 1000;
+        const twoWeeksAgo = now - 14 * 24 * 60 * 60 * 1000;
+
+        const accountId = await ctx.db.insert("portalAccounts", {
+            clerkOrgId: args.clerkOrgId,
+            accountNumber: "BB-2021-0847",
+            companyName: "Lumière Atelier",
+            tier: "The Scaler",
+            accountManager: "Sarah Chen",
+            netTerms: "Net 30",
+            taxExempt: true,
+            memberSince: "March 2021",
+            businessLicenseNumber: "CA-12345678",
+            businessLicenseExpiry: "2026-12-31",
+            resaleCertificateExpiry: "2026-06-30",
+            complianceStatus: "current",
+        });
+
+        await ctx.db.insert("portalOrders", {
+            clerkOrgId: args.clerkOrgId,
+            orderId: "BB-2026-0047",
+            status: "in_transit",
+            orderDate: twoWeeksAgo,
+            estimatedDelivery: "Mar 18, 2026",
+            trackingNumber: "1Z999AA10123456784",
+            carrier: "UPS",
+            shipTo: "Los Angeles, CA",
+            totalAmount: 2847,
+            lineItems: [
+                { sku: "GB-ELE-FRS-30ML-RDC-WHT", description: "18-415 Frosted Elegant 30ml Reducer White", quantity: 500, unitPrice: 0.89 },
+                { sku: "GB-ELE-FRS-30ML-CAP-GLD", description: "18-415 Frosted Elegant 30ml Cap Gold", quantity: 500, unitPrice: 0.42 },
+            ],
+        });
+
+        await ctx.db.insert("portalOrders", {
+            clerkOrgId: args.clerkOrgId,
+            orderId: "BB-2026-0038",
+            status: "delivered",
+            orderDate: sixMonthsAgo,
+            totalAmount: 1240,
+            lineItems: [
+                { sku: "GB-CYL-CLR-10ML-MRL-GLD", description: "Cylinder 10ml Clear Metal Roller Gold", quantity: 1000, unitPrice: 0.68 },
+            ],
+        });
+
+        await ctx.db.insert("portalOrders", {
+            clerkOrgId: args.clerkOrgId,
+            orderId: "BB-2026-0029",
+            status: "delivered",
+            orderDate: oneYearAgo,
+            totalAmount: 892,
+            lineItems: [
+                { sku: "GB-BOS-AMB-30ML-RDC-BLK", description: "Boston Round 30ml Amber Reducer Black", quantity: 250, unitPrice: 0.72 },
+            ],
+        });
+
+        const draftId = await ctx.db.insert("portalDrafts", {
+            clerkOrgId: args.clerkOrgId,
+            name: "Q2 Roll-On Restock",
+            status: "draft",
+            lineItems: [
+                { sku: "GB-CYL-CLR-10ML-MRL-GLD", description: "Cylinder 10ml Clear Metal Roller Gold", quantity: 500, unitPrice: 0.65 },
+                { sku: "GB-CYL-FRS-10ML-MRL-SLV", description: "Cylinder 10ml Frosted Metal Roller Silver", quantity: 300, unitPrice: 0.68 },
+            ],
+            totalAmount: 454,
+            createdAt: now,
+            updatedAt: now,
+        });
+
+        return {
+            message: "Demo data seeded successfully.",
+            accountId,
+            orderCount: 3,
+            draftId,
+        };
     },
 });
 

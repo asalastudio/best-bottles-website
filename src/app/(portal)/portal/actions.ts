@@ -6,7 +6,19 @@ import {
     createGraceProjectForViewer,
     createPortalDraftForViewer,
     createPortalDraftFromOrderForViewer,
+    createDraftWithLineItemsForViewer,
 } from "@/lib/portal/server";
+
+export async function savePriceListToDraftAction(
+    lineItems: Array<{ sku: string; description: string; quantity: number; unitPrice?: number }>,
+    name?: string
+) {
+    await createDraftWithLineItemsForViewer(lineItems, name);
+    revalidatePath("/portal");
+    revalidatePath("/portal/drafts");
+    revalidatePath("/portal/price-list");
+    redirect("/portal/drafts");
+}
 
 export async function createDraftAction() {
     await createPortalDraftForViewer();

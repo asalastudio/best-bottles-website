@@ -828,12 +828,12 @@ function VoiceWaveWidget({
     const label = isConnecting
         ? "Connecting…"
         : isListening
-        ? "Listening…"
-        : isSpeaking
-        ? "Grace is speaking…"
-        : isActive
-        ? "Connected"
-        : "Tap to speak with Grace";
+            ? "Listening…"
+            : isSpeaking
+                ? "Grace is speaking…"
+                : isActive
+                    ? "Connected"
+                    : "Tap to speak with Grace";
 
     return (
         <div className="w-full flex flex-col items-center gap-2 py-1">
@@ -867,9 +867,8 @@ function VoiceWaveWidget({
 
             {/* Timer — only shown when a session is live */}
             <span
-                className={`font-mono text-xs tracking-widest transition-all duration-300 ${
-                    isActive ? "text-muted-gold" : "text-obsidian/20"
-                }`}
+                className={`font-mono text-xs tracking-widest transition-all duration-300 ${isActive ? "text-muted-gold" : "text-obsidian/20"
+                    }`}
             >
                 {formatTime(elapsedSeconds)}
             </span>
@@ -879,18 +878,17 @@ function VoiceWaveWidget({
                 {Array.from({ length: BAR_COUNT }).map((_, i) => (
                     <div
                         key={i}
-                        className={`w-[2px] rounded-full transition-all duration-300 ${
-                            isActive
-                                ? "bg-muted-gold/60 animate-pulse"
-                                : "bg-obsidian/10 h-[3px]"
-                        }`}
+                        className={`w-[2px] rounded-full transition-all duration-300 ${isActive
+                            ? "bg-muted-gold/60 animate-pulse"
+                            : "bg-obsidian/10 h-[3px]"
+                            }`}
                         style={
                             isActive && mounted
                                 ? {
-                                      height: `${barHeights[i]}%`,
-                                      animationDelay: `${i * 0.04}s`,
-                                      animationDuration: `${0.8 + (i % 5) * 0.15}s`,
-                                  }
+                                    height: `${barHeights[i]}%`,
+                                    animationDelay: `${i * 0.04}s`,
+                                    animationDuration: `${0.8 + (i % 5) * 0.15}s`,
+                                }
                                 : undefined
                         }
                     />
@@ -898,9 +896,8 @@ function VoiceWaveWidget({
             </div>
 
             {/* Status label */}
-            <p className={`text-[11px] tracking-wide transition-all duration-300 ${
-                isActive ? "text-obsidian/70" : "text-obsidian/35"
-            }`}>
+            <p className={`text-[11px] tracking-wide transition-all duration-300 ${isActive ? "text-obsidian/70" : "text-obsidian/35"
+                }`}>
                 {label}
             </p>
         </div>
@@ -978,72 +975,148 @@ function ChatPanel({ isMobile }: { isMobile: boolean }) {
         return () => clearInterval(id);
     }, [conversationActive]);
 
+    // Ref for the hero container to reparent the video element into it
+    const heroContainerRef = useRef<HTMLDivElement>(null);
+
+    // Move the single video element into/out of the hero container
+    useEffect(() => {
+        const video = document.getElementById("anam-video") as HTMLVideoElement | null;
+        if (!video) return;
+
+        if (conversationActive && heroContainerRef.current) {
+            // Move video into the hero container
+            heroContainerRef.current.insertBefore(video, heroContainerRef.current.firstChild);
+            video.className = "absolute inset-0 object-cover";
+            // The Anam SDK applies inline styles (left: -9999px, etc.) which hides the avatar.
+            // We MUST use !important to override its inline styles here.
+            video.style.cssText = "width: 100% !important; height: 100% !important; top: 0 !important; left: 0 !important; object-position: center 20% !important; position: absolute !important;";
+        } else {
+            // Move video back to body / hide it off-screen
+            video.className = "fixed opacity-0 pointer-events-none";
+            video.style.cssText = "left: -9999px !important; width: 1px !important; height: 1px !important;";
+        }
+    }, [conversationActive]);
+
     const panelContent = (
         <>
-            {/* Header */}
-            <div className="flex items-center justify-between px-4 py-3 border-b border-champagne/50 shrink-0">
-                <div className="flex items-center space-x-2.5">
-                    {!isMobile && (
-                        <button
-                            onClick={minimizeToStrip}
-                            className="group p-1 rounded-lg hover:bg-champagne/40 transition-all"
-                            aria-label="Minimize to sidebar"
-                            title="Minimize to voice strip"
+            {/* Header + Avatar Hero */}
+            <div className="shrink-0">
+                {/* Hero avatar area — expands when conversation is active */}
+                <AnimatePresence>
+                    {conversationActive && (
+                        <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: 176, opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ type: "spring", damping: 28, stiffness: 300 }}
+                            className="relative w-full overflow-hidden bg-obsidian"
+                            ref={heroContainerRef}
                         >
-                            <PanelRightClose className="text-slate transition-all duration-200 group-hover:text-muted-gold group-hover:translate-x-0.5" size={16} />
-                        </button>
+                            {/* Gradient overlay for readability */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/80 via-obsidian/20 to-transparent pointer-events-none z-10" />
+                            {/* Speaking indicator + name overlaid at bottom */}
+                            <div className="absolute bottom-0 left-0 right-0 px-4 pb-3 flex items-end justify-between pointer-events-none">
+                                <div className="flex items-center gap-2.5">
+                                    {isSpeaking && (
+                                        <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true" style={{ transform: "scale(0.85)" }}>
+                                            <span /><span /><span /><span />
+                                        </span>
+                                    )}
+                                    {isListening && (
+                                        <span className="w-2.5 h-2.5 rounded-full bg-muted-gold animate-grace-pulse" />
+                                    )}
+                                    <div>
+                                        <p className="text-sm font-semibold text-bone leading-tight drop-shadow-sm">Grace</p>
+                                        <p className="text-[9px] uppercase tracking-widest text-muted-gold/90 font-semibold">
+                                            {isListening ? "Listening…" : isSpeaking ? "Speaking…" : "Connected"}
+                                        </p>
+                                    </div>
+                                </div>
+                                <div className="text-[10px] text-bone/60 font-mono tabular-nums">
+                                    {String(Math.floor(elapsedSeconds / 60)).padStart(2, "0")}:{String(elapsedSeconds % 60).padStart(2, "0")}
+                                </div>
+                            </div>
+                        </motion.div>
                     )}
-                    <div className="w-8 h-8 rounded-full bg-obsidian flex items-center justify-center shrink-0">
-                        <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true" style={{ transform: "scale(0.75)" }}>
-                            <span /><span /><span /><span />
-                        </span>
+                </AnimatePresence>
+
+                {/* Compact header bar — always visible */}
+                <div className="flex items-center justify-between px-4 py-3 border-b border-champagne/50">
+                    <div className="flex items-center space-x-2.5">
+                        {!isMobile && (
+                            <button
+                                onClick={minimizeToStrip}
+                                className="group p-1 rounded-lg hover:bg-champagne/40 transition-all"
+                                aria-label="Minimize to sidebar"
+                                title="Minimize to voice strip"
+                            >
+                                <PanelRightClose className="text-slate transition-all duration-200 group-hover:text-muted-gold group-hover:translate-x-0.5" size={16} />
+                            </button>
+                        )}
+                        {/* Small avatar fallback when NOT in conversation */}
+                        {!conversationActive && (
+                            <div className="relative w-8 h-8 rounded-full bg-obsidian flex items-center justify-center shrink-0 overflow-hidden">
+                                <span className="grace-voice-bars grace-voice-bars--light" aria-hidden="true" style={{ transform: "scale(0.75)" }}>
+                                    <span /><span /><span /><span />
+                                </span>
+                            </div>
+                        )}
+                        {!conversationActive && (
+                            <div>
+                                <p className="text-sm font-semibold text-obsidian leading-tight">Grace</p>
+                                <p className="text-[9px] uppercase tracking-widest text-muted-gold font-semibold">
+                                    AI Bottling Specialist
+                                </p>
+                            </div>
+                        )}
+                        {conversationActive && (
+                            <div>
+                                <p className="text-xs font-semibold text-obsidian leading-tight">Voice session active</p>
+                            </div>
+                        )}
                     </div>
-                    <div>
-                        <p className="text-sm font-semibold text-obsidian leading-tight">Grace</p>
-                        <p className="text-[9px] uppercase tracking-widest text-muted-gold font-semibold">
-                            AI Bottling Specialist
-                        </p>
-                    </div>
-                </div>
-                <div className="flex items-center space-x-0.5">
-                    {isMobile && (
+                    <div className="flex items-center space-x-0.5">
+                        {isMobile && (
+                            <button
+                                onClick={minimizeToStrip}
+                                aria-label="Minimize to voice strip"
+                                title="Minimize to voice strip"
+                                className="p-1.5 rounded-lg hover:bg-champagne/40 transition-colors"
+                            >
+                                <CaretDown className="text-slate" size={16} />
+                            </button>
+                        )}
                         <button
-                            onClick={minimizeToStrip}
-                            aria-label="Minimize to voice strip"
-                            title="Minimize to voice strip"
+                            onClick={toggleVoice}
+                            aria-label={voiceEnabled ? "Mute" : "Unmute"}
                             className="p-1.5 rounded-lg hover:bg-champagne/40 transition-colors"
                         >
-                            <CaretDown className="text-slate" size={16} />
+                            {voiceEnabled ? <SpeakerHigh className="text-muted-gold" size={14} /> : <SpeakerSlash className="text-slate/40" size={14} />}
                         </button>
-                    )}
-                    <button
-                        onClick={toggleVoice}
-                        aria-label={voiceEnabled ? "Mute" : "Unmute"}
-                        className="p-1.5 rounded-lg hover:bg-champagne/40 transition-colors"
-                    >
-                        {voiceEnabled ? <SpeakerHigh className="text-muted-gold" size={14} /> : <SpeakerSlash className="text-slate/40" size={14} />}
-                    </button>
-                    {cartCount > 0 && (
+                        {cartCount > 0 && (
+                            <button
+                                onClick={() => setShowCart((v) => !v)}
+                                className="relative p-1.5 rounded-lg hover:bg-champagne/40 transition-colors"
+                                aria-label={`Cart — ${cartCount} items`}
+                            >
+                                <ShoppingCart className="w-3.5 h-3.5 text-muted-gold" />
+                                <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-obsidian text-bone text-[8px] font-bold flex items-center justify-center">
+                                    {cartCount}
+                                </span>
+                            </button>
+                        )}
                         <button
-                            onClick={() => setShowCart((v) => !v)}
-                            className="relative p-1.5 rounded-lg hover:bg-champagne/40 transition-colors"
-                            aria-label={`Cart — ${cartCount} items`}
+                            onClick={closePanel}
+                            className="p-1.5 rounded-lg bg-champagne/30 hover:bg-red-100 hover:text-red-600 transition-colors"
+                            aria-label="Close Grace"
                         >
-                            <ShoppingCart className="w-3.5 h-3.5 text-muted-gold" />
-                            <span className="absolute -top-0.5 -right-0.5 w-3.5 h-3.5 rounded-full bg-obsidian text-bone text-[8px] font-bold flex items-center justify-center">
-                                {cartCount}
-                            </span>
+                            <X className="w-4 h-4" />
                         </button>
-                    )}
-                    <button
-                        onClick={closePanel}
-                        className="p-1.5 rounded-lg bg-champagne/30 hover:bg-red-100 hover:text-red-600 transition-colors"
-                        aria-label="Close Grace"
-                    >
-                        <X className="w-4 h-4" />
-                    </button>
+                    </div>
                 </div>
             </div>
+
+
 
             {/* Mini Cart */}
             <AnimatePresence>
@@ -1412,9 +1485,19 @@ export default function GraceSidePanel() {
     }, [pendingNavigation, router, clearPendingNavigation]);
 
     return (
-        <AnimatePresence mode="wait">
-            {panelMode === "open" && <ChatPanel key="panel" isMobile={isMobile} />}
-            {panelMode === "strip" && <VoiceStrip key="strip" isMobile={isMobile} />}
-        </AnimatePresence>
+        <>
+            {/* Global hidden video element — always in DOM for Anam SDK & reparenting logic */}
+            <video
+                id="anam-video"
+                autoPlay
+                playsInline
+                className="fixed -left-[9999px] w-0 h-0 opacity-0 pointer-events-none"
+            />
+
+            <AnimatePresence mode="wait">
+                {panelMode === "open" && <ChatPanel key="panel" isMobile={isMobile} />}
+                {panelMode === "strip" && <VoiceStrip key="strip" isMobile={isMobile} />}
+            </AnimatePresence>
+        </>
     );
 }

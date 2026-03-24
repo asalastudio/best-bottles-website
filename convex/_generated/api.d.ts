@@ -16,6 +16,7 @@ import type * as knowledge from "../knowledge.js";
 import type * as migrations from "../migrations.js";
 import type * as portal from "../portal.js";
 import type * as products from "../products.js";
+import type * as searchNormalization from "../searchNormalization.js";
 import type * as seedProducts from "../seedProducts.js";
 
 import type {
@@ -33,6 +34,7 @@ declare const fullApi: ApiFromModules<{
   migrations: typeof migrations;
   portal: typeof portal;
   products: typeof products;
+  searchNormalization: typeof searchNormalization;
   seedProducts: typeof seedProducts;
 }>;
 

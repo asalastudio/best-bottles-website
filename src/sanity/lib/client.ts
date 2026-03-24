@@ -9,7 +9,7 @@ export const client: SanityClient = isSanityConfigured
     ? createClient({
           projectId: projectId!,
           dataset,
-          apiVersion: "2024-01-01",
+          apiVersion: "2025-02-19",
           useCdn: true,
       })
     : (null as unknown as SanityClient);

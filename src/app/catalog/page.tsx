@@ -15,6 +15,7 @@ import Navbar from "@/components/Navbar";
 import { useGrace } from "@/components/useGrace";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
+import { addToPriceListStorage } from "@/lib/priceListStorage";
 import {
     SORT_OPTIONS,
     APPLICATOR_BUCKETS,
@@ -207,8 +208,30 @@ function SkeletonGrid() {
 
 // ─── Product Group Card ──────────────────────────────────────────────────────
 
-function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGroup; index: number; applicatorParam?: string | null }) {
+function ProductGroupCard({
+    group,
+    index,
+    applicatorParam,
+    primarySku,
+}: {
+    group: CatalogGroup;
+    index: number;
+    applicatorParam?: string | null;
+    primarySku?: string | null;
+}) {
+    const router = useRouter();
     const href = applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
+
+    const handleAddToPriceList = (e: React.MouseEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
+        const sku = primarySku ?? null;
+        const price = group.priceRangeMin ?? 0;
+        if (!sku) return;
+        addToPriceListStorage([{ sku, description: group.displayName, unitPrice: price }]);
+        router.push("/portal/price-list");
+    };
+
     return (
         <Link href={href}>
             <motion.div
@@ -272,16 +295,29 @@ function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGro
                         )}
                     </div>
 
-                    <div className="flex items-end justify-between mt-auto">
-                        <div className="flex flex-col">
+                    <div className="flex items-end justify-between mt-auto gap-2">
+                        <div className="flex flex-col min-w-0">
                             <span className="text-xs text-slate">from</span>
                             <span className="font-semibold text-obsidian text-lg">{formatPrice(group.priceRangeMin)}/ea</span>
                         </div>
-                        {group.priceRangeMax && group.priceRangeMax !== group.priceRangeMin && (
-                            <span className="text-[10px] text-slate uppercase font-medium bg-travertine px-2 py-1 rounded-sm border border-champagne">
-                                to {formatPrice(group.priceRangeMax)}
-                            </span>
-                        )}
+                        <div className="flex items-center gap-2 shrink-0">
+                            {group.priceRangeMax && group.priceRangeMax !== group.priceRangeMin && (
+                                <span className="text-[10px] text-slate uppercase font-medium bg-travertine px-2 py-1 rounded-sm border border-champagne hidden sm:inline">
+                                    to {formatPrice(group.priceRangeMax)}
+                                </span>
+                            )}
+                            {primarySku && (
+                                <button
+                                    type="button"
+                                    onClick={handleAddToPriceList}
+                                    className="sm:opacity-0 sm:group-hover:opacity-100 transition-opacity flex items-center gap-1 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-muted-gold hover:text-obsidian border border-muted-gold/50 hover:border-muted-gold rounded-sm whitespace-nowrap"
+                                    title="Add to Price List"
+                                >
+                                    <Plus className="w-3 h-3" />
+                                    Add
+                                </button>
+                            )}
+                        </div>
                     </div>
                 </div>
             </motion.div>
@@ -499,15 +535,33 @@ function FilterSidebarContent({
         return Object.entries(facets.colors).sort(([, a], [, b]) => b - a);
     }, [facets]);
 
-    const sortedThreads = useMemo(() => {
-        if (!facets) return [];
-        return Object.entries(facets.neckThreadSizes).sort(([a], [b]) => {
+    const NON_STANDARD_FITMENTS = new Set(["Ground", "Plug", "Press-Fit", "Snap-On", "Specialty", "PRESS-FIT", "SPECIAL", "snap"]);
+
+    const { standardThreads, otherFitments } = useMemo(() => {
+        if (!facets) return { standardThreads: [], otherFitments: [] };
+        const standard: [string, number][] = [];
+        const other: [string, number][] = [];
+        for (const [thread, count] of Object.entries(facets.neckThreadSizes)) {
+            if (NON_STANDARD_FITMENTS.has(thread)) {
+                other.push([thread, count]);
+            } else {
+                standard.push([thread, count]);
+            }
+        }
+        standard.sort(([a], [b]) => {
             const na = parseFloat(a);
             const nb = parseFloat(b);
             if (!isNaN(na) && !isNaN(nb)) return na - nb;
             return a.localeCompare(b);
         });
+        other.sort(([a], [b]) => a.localeCompare(b));
+        return { standardThreads: standard, otherFitments: other };
     }, [facets]);
+
+    const sortedThreads = useMemo(
+        () => [...standardThreads, ...otherFitments],
+        [standardThreads, otherFitments]
+    );
 
     const sortedFamilies = useMemo(() => {
         if (!facets) return [];
@@ -664,7 +718,21 @@ function FilterSidebarContent({
             {sortedThreads.length > 0 && (
                 <FilterSection title="Neck Thread Size" defaultOpen={false} hasActiveFilters={filters.neckThreadSizes.length > 0}>
                     <div className="space-y-0.5 max-h-[200px] overflow-y-auto hide-scroll">
-                        {sortedThreads.map(([thread, count]) => (
+                        {standardThreads.map(([thread, count]) => (
+                            <CheckboxItem
+                                key={thread}
+                                label={thread}
+                                count={count}
+                                checked={filters.neckThreadSizes.includes(thread)}
+                                onChange={() => toggleArrayFilter("neckThreadSizes", thread)}
+                            />
+                        ))}
+                        {otherFitments.length > 0 && standardThreads.length > 0 && (
+                            <div className="pt-2 pb-1 mt-1 border-t border-champagne/40">
+                                <p className="text-[9px] uppercase tracking-wider font-bold text-slate/60 mb-1">Other Fitment</p>
+                            </div>
+                        )}
+                        {otherFitments.map(([thread, count]) => (
                             <CheckboxItem
                                 key={thread}
                                 label={thread}
@@ -1823,6 +1891,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         group={group}
                                         index={pIndex}
                                         applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                        primarySku={skuMap.get(group._id) ?? null}
                                     />
                                 ))}
                             </div>

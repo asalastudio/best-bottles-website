@@ -106,6 +106,18 @@ export async function createPortalDraftForViewer(name?: string) {
     });
 }
 
+export async function createDraftWithLineItemsForViewer(
+    lineItems: Array<{ sku: string; description: string; quantity: number; unitPrice?: number }>,
+    name?: string
+) {
+    const viewer = await requirePortalViewer();
+    return await getConvex().mutation(api.portal.createDraftWithLineItems, {
+        clerkOrgId: viewer.clerkOrgId,
+        name,
+        lineItems,
+    });
+}
+
 export async function createPortalDraftFromOrderForViewer(orderId: string) {
     const viewer = await requirePortalViewer();
     return await getConvex().mutation(api.portal.createDraftFromOrder, {

@@ -18,6 +18,7 @@ import {
 } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { useConversation } from "@elevenlabs/react";
+import { createClient, AnamEvent, type AnamClient } from "@anam-ai/js-sdk";
 import { useAction, useMutation, useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import { useCart } from "./CartProvider";
@@ -232,6 +233,13 @@ function isGenericPromptChip(rawMessage: string): boolean {
     ].includes(normalized);
 }
 
+const ELEVENLABS_TRANSPORT =
+    process.env.NEXT_PUBLIC_GRACE_ELEVENLABS_TRANSPORT === "webrtc"
+        ? "webrtc"
+        : process.env.NEXT_PUBLIC_GRACE_ELEVENLABS_TRANSPORT === "auto"
+            ? "auto"
+            : "websocket";
+
 // ─── Provider ─────────────────────────────────────────────────────────────────
 
 export default function GraceElevenLabsProvider({
@@ -345,6 +353,12 @@ export default function GraceElevenLabsProvider({
     const submitFormMutationRef = useRef(submitFormMutation);
     useEffect(() => { submitFormMutationRef.current = submitFormMutation; }, [submitFormMutation]);
 
+    // ── Anam Integration Refs ────────────────────────────────────────────────
+    const anamClientRef = useRef<AnamClient | null>(null);
+    const audioInputStreamRef = useRef<any>(null); // Anam's AudioInput stream
+    const anamReadyRef = useRef<boolean>(false);
+    const audioBufferRef = useRef<string[]>([]);
+
     // ── Active conversational form ────────────────────────────────────────────
     const [activeForm, setActiveForm] = useState<ActiveForm | null>(null);
 
@@ -358,7 +372,7 @@ export default function GraceElevenLabsProvider({
     // "changed" options and tearing down a live WebSocket.
 
     const handleConnect = useCallback(() => {
-        console.log("[Grace EL] Connected — WS live");
+        console.log("[Grace EL] Connected — session live");
         connectingRef.current = false;
         lastConnectTimeRef.current = Date.now();
         setStatus("listening");
@@ -376,6 +390,11 @@ export default function GraceElevenLabsProvider({
         lastConnectTimeRef.current = 0;
         setConversationActive(false);
         setStatus("idle");
+
+        anamClientRef.current?.stopStreaming().catch(() => { });
+        anamClientRef.current = null;
+        anamReadyRef.current = false;
+        audioBufferRef.current = [];
 
         if (wasImmediateDrop) {
             setVoiceFailed(true);
@@ -409,7 +428,10 @@ export default function GraceElevenLabsProvider({
 
     const handleModeChange = useCallback((mode: { mode: string }) => {
         if (mode.mode === "speaking") setStatus("speaking");
-        else if (mode.mode === "listening") setStatus("listening");
+        else if (mode.mode === "listening") {
+            audioInputStreamRef.current?.endSequence();
+            setStatus("listening");
+        }
     }, []);
 
     const handleError = useCallback((error: unknown) => {
@@ -434,6 +456,37 @@ export default function GraceElevenLabsProvider({
 
     const handleStatusChange = useCallback((ev: { status: string }) => {
         console.log("[Grace EL] SDK status →", ev.status);
+    }, []);
+
+    const handleAudio = useCallback((audioEvent: any) => {
+        // The elevenlabs SDK gives us the base64 or raw Uint8Array audio here.
+        // We'll trust it passes as a string per the cookbook, or handle fallback if needed.
+        const base64Audio = typeof audioEvent.audio_base_64 === 'string'
+            ? audioEvent.audio_base_64
+            : typeof audioEvent === 'string' ? audioEvent : null;
+
+        console.log(`[Grace EL] Received audio chunk, length: ${base64Audio?.length}`);
+
+        if (base64Audio) {
+            if (anamReadyRef.current) {
+                audioInputStreamRef.current?.sendAudioChunk(base64Audio);
+            } else {
+                audioBufferRef.current.push(base64Audio);
+            }
+        }
+    }, []);
+
+    const handleInterruption = useCallback(() => {
+        try {
+            anamClientRef.current?.interruptPersona();
+        } catch (e) {
+            console.warn("[Grace EL] interruptPersona skipped (not streaming)", e);
+        }
+        try {
+            audioInputStreamRef.current?.endSequence();
+        } catch (e) {
+            console.warn("[Grace EL] endSequence skipped", e);
+        }
     }, []);
 
     // ── Stable clientTools ────────────────────────────────────────────────────
@@ -738,6 +791,8 @@ export default function GraceElevenLabsProvider({
         onError: handleError,
         onDebug: handleDebug,
         onStatusChange: handleStatusChange,
+        onAudio: handleAudio,
+        onInterruption: handleInterruption,
     });
 
     // Keep conversationRef in sync so callbacks above can always access latest
@@ -869,9 +924,74 @@ export default function GraceElevenLabsProvider({
                 }
             }
 
-            const connectOnce = async () => {
+            const contextBlock = formatPageContextForGrace(pageContextRef.current);
+
+            const buildSessionOverrides = () => (
+                contextBlock
+                    ? {
+                        overrides: {
+                            agent: { prompt: { prompt: contextBlock } },
+                        },
+                    }
+                    : {}
+            );
+
+            const initAnam = async () => {
+                if (anamClientRef.current) return;
+                try {
+                    const res = await fetch("/api/anam-session", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ avatarId: undefined }),
+                    });
+                    if (!res.ok) throw new Error("Failed to start avatar session");
+                    const { sessionToken } = await res.json();
+
+                    const anamClient = createClient(sessionToken, {
+                        disableInputAudio: true,
+                    });
+                    anamClientRef.current = anamClient;
+
+                    // SESSION_READY fires AFTER streamToVideoElement completes the handshake.
+                    // Only then can we create the audio input stream.
+                    anamClient.addListener(AnamEvent.SESSION_READY, () => {
+                        console.log("[Grace EL] Anam SESSION_READY — creating audio input stream");
+                        try {
+                            audioInputStreamRef.current = anamClient.createAgentAudioInputStream({
+                                encoding: "pcm_s16le",
+                                sampleRate: 16000,
+                                channels: 1,
+                            });
+
+                            // Flush any audio chunks that arrived before Anam was ready
+                            for (const chunk of audioBufferRef.current) {
+                                audioInputStreamRef.current?.sendAudioChunk(chunk);
+                            }
+                            audioBufferRef.current = [];
+                            anamReadyRef.current = true;
+                            console.log("[Grace EL] Anam audio stream ready, flushed buffered chunks");
+                        } catch (audioErr) {
+                            console.error("[Grace EL] Failed to create audio input stream", audioErr);
+                        }
+                    });
+
+                    // This initiates the WebRTC/WebSocket connection to Anam servers.
+                    // SESSION_READY fires once the connection is established.
+                    console.log("[Grace EL] Starting Anam streamToVideoElement...");
+                    await anamClient.streamToVideoElement("anam-video");
+                    console.log("[Grace EL] Anam streamToVideoElement resolved");
+                } catch (e) {
+                    console.error("[Grace EL] Failed to initialize Anam avatar", e);
+                }
+            };
+
+            const connectViaWebSocket = async () => {
                 const t0 = performance.now();
-                const res = await fetch("/api/elevenlabs/signed-url");
+                const [res] = await Promise.all([
+                    fetch("/api/elevenlabs/signed-url"),
+                    initAnam()
+                ]);
+
                 if (!res.ok) {
                     const err = await res.json().catch(() => ({}));
                     throw new Error(
@@ -884,28 +1004,62 @@ export default function GraceElevenLabsProvider({
 
                 console.log(`[Grace EL] Starting WebSocket session (fetch took ${Math.round(performance.now() - t0)}ms)`);
 
-                const contextBlock = formatPageContextForGrace(pageContextRef.current);
-                await Promise.race([
-                    conversationRef.current!.startSession({
-                        signedUrl,
-                        connectionType: "websocket",
-                        ...(contextBlock ? {
-                            overrides: {
-                                agent: { prompt: { prompt: contextBlock } },
-                            },
-                        } : {}),
-                    }),
-                    new Promise<never>((_, reject) =>
-                        setTimeout(() => reject(new Error("Voice connection timed out after 15 seconds.")), 15000)
-                    ),
-                ]);
+                await conversationRef.current!.startSession({
+                    signedUrl,
+                    connectionType: "websocket",
+                    ...buildSessionOverrides(),
+                });
             };
 
-            // One automatic retry with a fresh signed URL handles stale/half-closed sockets.
+            const connectViaWebRTC = async () => {
+                const t0 = performance.now();
+                const [res] = await Promise.all([
+                    fetch("/api/elevenlabs/conversation-token"),
+                    initAnam()
+                ]);
+
+                if (!res.ok) {
+                    const err = await res.json().catch(() => ({}));
+                    throw new Error(
+                        (err as { error?: string }).error ??
+                        "Failed to get ElevenLabs conversation token."
+                    );
+                }
+
+                const { token } = (await res.json()) as { token?: string };
+                if (!token) throw new Error("ElevenLabs did not return a valid conversation token.");
+
+                console.log(`[Grace EL] Starting WebRTC session (fetch took ${Math.round(performance.now() - t0)}ms)`);
+
+                await conversationRef.current!.startSession({
+                    conversationToken: token,
+                    connectionType: "webrtc",
+                    ...buildSessionOverrides(),
+                });
+            };
+
+            // WebSocket has been more stable in this app than WebRTC.
+            // WebRTC can still be enabled explicitly for testing, or used as a fallback in auto mode.
             let lastError: unknown;
-            for (let attempt = 1; attempt <= 2; attempt += 1) {
+            const transports: Array<{ label: "WebSocket" | "WebRTC"; connect: () => Promise<void> }> = (
+                ELEVENLABS_TRANSPORT === "webrtc"
+                    ? [{ label: "WebRTC", connect: connectViaWebRTC }]
+                    : ELEVENLABS_TRANSPORT === "auto"
+                        ? [
+                            { label: "WebSocket", connect: connectViaWebSocket },
+                            { label: "WebRTC", connect: connectViaWebRTC },
+                        ]
+                        : [{ label: "WebSocket", connect: connectViaWebSocket }]
+            );
+
+            for (const transport of transports) {
                 try {
-                    await connectOnce();
+                    await Promise.race([
+                        transport.connect(),
+                        new Promise<never>((_, reject) =>
+                            setTimeout(() => reject(new Error(`${transport.label} voice connection timed out after 15 seconds.`)), 15000)
+                        ),
+                    ]);
 
                     // Brief stability check — verify the socket didn't immediately close.
                     // We check our own ref (reset to 0 by handleDisconnect) rather than
@@ -916,16 +1070,14 @@ export default function GraceElevenLabsProvider({
                     }
 
                     connectingRef.current = false;
-                    safeSetVolume(voiceEnabledRef.current ? 1 : 0);
-                    console.log(`[Grace EL] WebSocket session established (attempt ${attempt})`);
+                    safeSetVolume(0); // Mute ElevenLabs speaker internally - audio is handled visually by Anam
+                    console.log(`[Grace EL] ${transport.label} session established (ElevenLabs audio output muted)`);
                     return;
                 } catch (e) {
                     lastError = e;
-                    console.warn(`[Grace EL] startSession attempt ${attempt} failed:`, e);
+                    console.warn(`[Grace EL] ${transport.label} startSession failed:`, e);
                     safeEndSession();
-                    if (attempt < 2) {
-                        await new Promise((r) => setTimeout(r, 500));
-                    }
+                    await new Promise((r) => setTimeout(r, 500));
                 }
             }
 
