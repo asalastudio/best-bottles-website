@@ -490,15 +490,21 @@ export default function GraceElevenLabsProvider({
                     const displayProducts = directProduct ? [directProduct] : products;
                     const redirectUrl = buildBrowsePath(displayProducts, parameters.query, parameters.family);
 
-                    // Auto-navigate: take the user straight there, minimize Grace to voice strip
-                    setGraceQuery(parameters.query || parameters.family || "");
-                    setPendingNavigation(redirectUrl);
-                    setPanelMode("strip");
-
                     const summary = displayProducts.slice(0, 3)
                         .map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" "))
                         .join(", ");
-                    return `Taking you there now. Found ${products.length} options — top matches: ${summary}.`;
+                    const resultMsg = `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
+
+                    // IMPORTANT: Schedule navigation AFTER returning the result to ElevenLabs.
+                    // If we navigate before returning, the component unmounts and the
+                    // WebSocket dies — the LLM never receives the tool result.
+                    setTimeout(() => {
+                        setGraceQuery(parameters.query || parameters.family || "");
+                        setPendingNavigation(redirectUrl);
+                        setPanelMode("strip");
+                    }, 500);
+
+                    return resultMsg;
                 }
                 return "No products found matching that description. Try a broader search term.";
             } catch (e) {
@@ -658,11 +664,16 @@ export default function GraceElevenLabsProvider({
                 },
             ]);
             if (shouldAutoNav) {
-                setPendingNavigation(navPath);
-                setPanelMode(conversationActiveRef.current ? "strip" : "closed");
+                // Schedule navigation AFTER returning result to ElevenLabs.
+                // Navigating immediately unmounts the component and kills the WebSocket
+                // before the LLM receives the tool result.
+                setTimeout(() => {
+                    setPendingNavigation(navPath);
+                    setPanelMode(conversationActiveRef.current ? "strip" : "closed");
+                }, 500);
             }
             return shouldAutoNav
-                ? "Navigating the customer to the page now."
+                ? `Navigating the customer to ${parameters.title ?? "the page"} now.`
                 : "Navigation card shown to customer.";
         },
 
