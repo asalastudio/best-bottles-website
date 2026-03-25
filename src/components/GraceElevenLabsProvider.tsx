@@ -486,6 +486,25 @@ export default function GraceElevenLabsProvider({
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
 
                 if (products.length > 0) {
+                    // Check if the requested capacity actually exists in the results
+                    const requestedCapMatch = parameters.query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
+                    const requestedMl = requestedCapMatch ? parseFloat(requestedCapMatch[1]) : null;
+
+                    let exactSizeFound = true;
+                    let sizeWarning = "";
+                    if (requestedMl) {
+                        // Check if any result matches the requested size (within 1ml tolerance)
+                        const hasExactSize = products.some((p) => {
+                            const pMl = p.capacityMl ?? parseFloat(p.capacity || "0");
+                            return Math.abs(pMl - requestedMl) <= 1;
+                        });
+                        if (!hasExactSize) {
+                            exactSizeFound = false;
+                            const availableSizes = [...new Set(products.map((p) => p.capacity).filter(Boolean))].slice(0, 5).join(", ");
+                            sizeWarning = `WARNING: We do NOT stock a ${requestedMl}ml in this search. Do NOT tell the customer we have it. The closest available sizes are: ${availableSizes}. Suggest these alternatives instead.`;
+                        }
+                    }
+
                     const directProduct = selectDirectProductMatch(products, parameters.query);
                     const displayProducts = directProduct ? [directProduct] : products;
                     const redirectUrl = buildBrowsePath(displayProducts, parameters.query, parameters.family);
@@ -493,20 +512,27 @@ export default function GraceElevenLabsProvider({
                     const summary = displayProducts.slice(0, 3)
                         .map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" "))
                         .join(", ");
-                    const resultMsg = `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
 
-                    // IMPORTANT: Schedule navigation AFTER returning the result to ElevenLabs.
-                    // If we navigate before returning, the component unmounts and the
-                    // WebSocket dies — the LLM never receives the tool result.
-                    setTimeout(() => {
-                        setGraceQuery(parameters.query || parameters.family || "");
-                        setPendingNavigation(redirectUrl);
-                        setPanelMode("strip");
-                    }, 500);
+                    // Build result message — include size warning if requested size doesn't exist
+                    const resultMsg = sizeWarning
+                        ? `${sizeWarning} Search returned ${products.length} nearby products: ${summary}.`
+                        : `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
+
+                    // Only navigate if we found the right size — don't navigate to wrong products
+                    if (exactSizeFound) {
+                        // IMPORTANT: Schedule navigation AFTER returning the result to ElevenLabs.
+                        // If we navigate before returning, the component unmounts and the
+                        // WebSocket dies — the LLM never receives the tool result.
+                        setTimeout(() => {
+                            setGraceQuery(parameters.query || parameters.family || "");
+                            setPendingNavigation(redirectUrl);
+                            setPanelMode("strip");
+                        }, 500);
+                    }
 
                     return resultMsg;
                 }
-                return "No products found matching that description. Try a broader search term.";
+                return "No products found matching that description. The customer should try a different size or family.";
             } catch (e) {
                 console.error("[Grace EL] showProducts error:", e);
                 return "Catalog search failed. Please try again.";
