@@ -493,15 +493,31 @@ export default function GraceElevenLabsProvider({
                     let exactSizeFound = true;
                     let sizeWarning = "";
                     if (requestedMl) {
-                        // Check if any result matches the requested size (within 1ml tolerance)
+                        // Tolerance scales with size: ±1ml for small bottles, ±10% for larger
+                        // 3ml→3.3ml (ok), 5ml→5.5ml (ok), but 70ml≠78ml, 50ml≠60ml
+                        const tolerance = Math.max(1, requestedMl * 0.1);
                         const hasExactSize = products.some((p) => {
                             const pMl = p.capacityMl ?? parseFloat(p.capacity || "0");
-                            return Math.abs(pMl - requestedMl) <= 1;
+                            return pMl > 0 && Math.abs(pMl - requestedMl) <= tolerance;
                         });
                         if (!hasExactSize) {
                             exactSizeFound = false;
-                            const availableSizes = [...new Set(products.map((p) => p.capacity).filter(Boolean))].slice(0, 5).join(", ");
-                            sizeWarning = `WARNING: We do NOT stock a ${requestedMl}ml in this search. Do NOT tell the customer we have it. The closest available sizes are: ${availableSizes}. Suggest these alternatives instead.`;
+                            // Deduplicate and sort available sizes for a clean message
+                            const sizeSet = new Map<number, string>();
+                            for (const p of products) {
+                                const ml = p.capacityMl ?? parseFloat(p.capacity || "0");
+                                if (ml > 0 && p.capacity && !sizeSet.has(ml)) {
+                                    sizeSet.set(ml, p.capacity);
+                                }
+                            }
+                            const sortedSizes = [...sizeSet.entries()]
+                                .sort(([a], [b]) => a - b)
+                                .map(([, label]) => label)
+                                .slice(0, 6);
+                            const availableSizes = sortedSizes.join(", ");
+                            // Also note which families these sizes belong to
+                            const families = [...new Set(products.map((p) => p.family).filter(Boolean))].slice(0, 4).join(", ");
+                            sizeWarning = `WARNING: We do NOT stock a ${requestedMl}ml in this search (families: ${families}). Do NOT tell the customer we have it. The available sizes are: ${availableSizes}. Tell the customer the exact sizes we DO carry and suggest the closest alternative.`;
                         }
                     }
 
