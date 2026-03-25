@@ -513,7 +513,7 @@ export default function GraceElevenLabsProvider({
                         // 3ml→3.3ml (ok), 5ml→5.5ml (ok), but 70ml≠78ml, 50ml≠60ml
                         const tolerance = Math.max(1, requestedMl * 0.1);
                         const hasExactSize = products.some((p) => {
-                            const pMl = p.capacityMl ?? parseFloat(p.capacity || "0");
+                            const pMl = parseFloat(p.capacity || "0");
                             return pMl > 0 && Math.abs(pMl - requestedMl) <= tolerance;
                         });
                         if (!hasExactSize) {
@@ -521,7 +521,7 @@ export default function GraceElevenLabsProvider({
                             // Deduplicate and sort available sizes for a clean message
                             const sizeSet = new Map<number, string>();
                             for (const p of products) {
-                                const ml = p.capacityMl ?? parseFloat(p.capacity || "0");
+                                const ml = parseFloat(p.capacity || "0");
                                 if (ml > 0 && p.capacity && !sizeSet.has(ml)) {
                                     sizeSet.set(ml, p.capacity);
                                 }
