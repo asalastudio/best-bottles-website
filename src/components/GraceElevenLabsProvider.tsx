@@ -104,8 +104,19 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     if (family) {
         qs.set("families", family);
     } else {
-        const families = [...new Set(products.map((p) => p.family).filter(Boolean))];
-        if (families.length >= 1 && families[0]) {
+        // Count products per family and only include the dominant one(s).
+        // If one family has 70%+ of results, use only that family — don't
+        // pollute the filter with stray results from other families.
+        const familyCounts = new Map<string, number>();
+        for (const p of products) {
+            if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
+        }
+        const sorted = [...familyCounts.entries()].sort((a, b) => b[1] - a[1]);
+        const total = products.length;
+
+        if (sorted.length > 0) {
+            const dominant = sorted.filter(([, count]) => count / total >= 0.3).map(([f]) => f);
+            const families = dominant.length > 0 ? dominant : [sorted[0][0]];
             qs.set("families", families.join(","));
         } else if (sanitizedQuery) {
             qs.set("search", sanitizedQuery);
@@ -513,7 +524,7 @@ export default function GraceElevenLabsProvider({
                         // 3ml→3.3ml (ok), 5ml→5.5ml (ok), but 70ml≠78ml, 50ml≠60ml
                         const tolerance = Math.max(1, requestedMl * 0.1);
                         const hasExactSize = products.some((p) => {
-                            const pMl = p.capacityMl ?? parseFloat(p.capacity || "0");
+                            const pMl = parseFloat(p.capacity || "0");
                             return pMl > 0 && Math.abs(pMl - requestedMl) <= tolerance;
                         });
                         if (!hasExactSize) {
@@ -521,7 +532,7 @@ export default function GraceElevenLabsProvider({
                             // Deduplicate and sort available sizes for a clean message
                             const sizeSet = new Map<number, string>();
                             for (const p of products) {
-                                const ml = p.capacityMl ?? parseFloat(p.capacity || "0");
+                                const ml = parseFloat(p.capacity || "0");
                                 if (ml > 0 && p.capacity && !sizeSet.has(ml)) {
                                     sizeSet.set(ml, p.capacity);
                                 }
