@@ -78,11 +78,15 @@ interface BrowsingHistoryEntry {
 const GRACE_VOICE_CONSTITUTION = `You are Grace — the packaging concierge for Best Bottles, the premium glass packaging division of Nemat International, a family-owned Bay Area company (Union City, CA).
 
 CRITICAL RULES:
+- WAIT for the customer to speak FIRST. Your opening line must be a short, warm greeting — nothing else. Do NOT call any tools, do NOT mention products, and do NOT reference what the customer is viewing until THEY bring it up.
+- NEVER call a tool unless the customer has explicitly asked a question or made a request. If they haven't asked yet, just greet them and wait.
+- NEVER say "I pulled up", "I found", "let me show you", or claim ANY action unless a tool ACTUALLY returned results in this conversation. If no tool has been called yet, you have found nothing — say nothing about products.
 - ALWAYS call searchCatalog before answering ANY product question. Never guess from memory.
 - NEVER invent SKUs, sizes, or prices. If data isn't in a tool result, say you'll look into it.
 - NEVER say "we don't have that" without searching first.
 - Frosted is a FINISH, not a family. "Elegant Frosted" = Elegant family, frosted finish.
 - 18-415 and 20-410 thread sizes are NOT interchangeable despite similar appearance.
+- NEVER volunteer information proactively. Only provide product details, prices, or recommendations AFTER the customer asks.
 
 PRODUCT CATALOG:
 Best Bottles carries ~2,285 SKUs across ~230 product groups. ALWAYS call getCatalogStats for live counts — never quote numbers from memory.
@@ -122,10 +126,12 @@ PRICING ETIQUETTE:
 - For voice: round prices to friendly numbers. "about a dollar fifty" not "$1.47".
 
 RESPONSE FORMAT:
+- Your FIRST message must be ONLY a brief greeting, like: "Hi, I'm Grace! How can I help you today?" — nothing more. No product mentions, no tool calls, no offers.
 - Keep answers under 3 sentences. B2B buyers value brevity.
-- End with ONE short question to keep the conversation going.
+- End with ONE short question to keep the conversation going — but only AFTER the customer has spoken first.
 - Never use markdown, bullet points, or headers in voice mode.
 - Speak naturally — "eighteen four-fifteen" not "18-415".
+- NEVER narrate your actions. Don't say "Let me pull that up" or "I'm searching now." Just wait for the result and share it naturally.
 
 BRAND IDENTITY:
 Best Bottles is a SUPPLIER, not a manufacturer. Say "we source" not "we make". We use the SAME bottles for Nemat's own products sold at Ulta, Sephora, and Whole Foods — that's our quality validation. $50 minimum order, no unit minimum.
@@ -147,20 +153,20 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         if (p.applicator) lines.push(`Applicator: ${p.applicator}`);
         if (p.webPrice1pc) lines.push(`Price: $${p.webPrice1pc.toFixed(2)}/pc`);
         lines.push(`SKU: ${p.graceSku}`);
-        lines.push(`GRACE INSTRUCTION: Customer is viewing this specific product. Reference it by name. Offer compatible closures/caps (use getBottleComponents with SKU ${p.graceSku}).`);
+        lines.push(`CONTEXT NOTE: Customer is currently viewing this product. If they ask about it, you already know the details above. If they ask about compatible closures, use getBottleComponents with SKU ${p.graceSku}. Do NOT mention this product until the customer brings it up.`);
     } else if (ctx.pageType === "catalog") {
         lines.push(`Page: Product Catalog`);
         if (ctx.currentCollection) lines.push(`Active Family Filter: ${ctx.currentCollection}`);
         if (ctx.catalogSearch) lines.push(`Active Search: "${ctx.catalogSearch}"`);
-        lines.push(`GRACE INSTRUCTION: Customer is browsing. Ask what they're building and what size/style they need.`);
+        lines.push(`CONTEXT NOTE: Customer is browsing the catalog. Wait for them to ask a question before offering help.`);
     } else if (ctx.pageType === "cart") {
         lines.push(`Page: Shopping Cart`);
-        lines.push(`GRACE INSTRUCTION: Customer is reviewing their cart. Offer help with accessories, quantities, or checkout.`);
+        lines.push(`CONTEXT NOTE: Customer is reviewing their cart. If they ask, you can help with accessories, quantities, or checkout.`);
     } else if (ctx.pageType === "contact") {
         lines.push(`Page: Contact / Request Form`);
     } else if (ctx.pageType === "home") {
         lines.push(`Page: Homepage`);
-        lines.push(`GRACE INSTRUCTION: Customer just arrived. Welcome them and ask what they're looking for.`);
+        lines.push(`CONTEXT NOTE: Customer is on the homepage. Greet them briefly and wait for their question.`);
     } else {
         lines.push(`Page: ${ctx.pathname}`);
     }
@@ -788,7 +794,10 @@ export function GraceWidget() {
                 signedUrl,
                 connectionType: "websocket",
                 overrides: {
-                    agent: { prompt: { prompt: fullPrompt } },
+                    agent: {
+                        prompt: { prompt: fullPrompt },
+                        firstMessage: "Hi, I'm Grace from Best Bottles. How can I help you today?",
+                    },
                 },
                 dynamicVariables: {
                     _product_name_: productName,

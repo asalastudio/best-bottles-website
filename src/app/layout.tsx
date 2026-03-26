@@ -7,6 +7,7 @@ import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
 import MegaMenuLayoutWrapper from "@/components/MegaMenuLayoutWrapper";
 import { GraceWidget } from "@/components/grace/GraceWidget";
+import { MixpanelProvider } from "@/components/MixpanelProvider";
 
 const cormorant = Cormorant({
   variable: "--font-cormorant",
@@ -53,6 +54,7 @@ export default function RootLayout({
                   {children}
                 </MegaMenuLayoutWrapper>
               </Suspense>
+              <MixpanelProvider />
               <Suspense><GraceWidget /></Suspense>
             </CartProvider>
           </ConvexClientProvider>
