@@ -45,6 +45,10 @@ export async function POST(req: NextRequest) {
         return new Response("Missing text", { status: 400 });
     }
 
+    if (text.length > 2000) {
+        return new Response("Text too long (max 2000 characters)", { status: 400 });
+    }
+
     const ttsText = prepareTtsText(text);
     const elevenLabsKey = process.env.ELEVENLABS_API_KEY;
     const elevenLabsVoiceId = process.env.ELEVENLABS_VOICE_ID;

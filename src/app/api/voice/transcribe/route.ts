@@ -40,6 +40,16 @@ export async function POST(req: NextRequest) {
     return Response.json({ error: "Audio upload was empty." }, { status: 400 });
   }
 
+  const MAX_AUDIO_SIZE = 10 * 1024 * 1024; // 10 MB
+  if (audio.size > MAX_AUDIO_SIZE) {
+    return Response.json({ error: "Audio file too large (max 10 MB)." }, { status: 400 });
+  }
+
+  const allowedTypes = ["audio/webm", "audio/wav", "audio/mp3", "audio/mpeg", "audio/ogg", "audio/mp4"];
+  if (audio.type && !allowedTypes.includes(audio.type)) {
+    return Response.json({ error: "Unsupported audio format." }, { status: 400 });
+  }
+
   const upstreamForm = new FormData();
   upstreamForm.append("model_id", "scribe_v2");
   upstreamForm.append("language_code", "en");

@@ -16,7 +16,7 @@ function getConvex(): ConvexHttpClient {
 const WEBHOOK_SECRET = process.env.ELEVENLABS_WEBHOOK_SECRET;
 
 function verifyRequest(req: NextRequest): boolean {
-  if (!WEBHOOK_SECRET) return true;
+  if (!WEBHOOK_SECRET) return false;
   const provided = req.headers.get("x-webhook-secret");
   return provided === WEBHOOK_SECRET;
 }

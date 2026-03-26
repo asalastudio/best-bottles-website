@@ -3,12 +3,13 @@
 import Link from "next/link";
 
 export default function GlobalError({
-    error: _error,
+    error,
     reset,
 }: {
     error: Error & { digest?: string };
     reset: () => void;
 }) {
+    console.error("[GlobalError]", error?.message, error?.digest);
     return (
         <main className="min-h-screen bg-bone flex items-center justify-center px-4">
             <div className="max-w-md text-center">

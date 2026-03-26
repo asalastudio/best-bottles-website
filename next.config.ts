@@ -1,5 +1,18 @@
 import type { NextConfig } from "next";
 
+// ── Validate required environment variables at build time ────────────────
+const requiredEnvVars = [
+    "NEXT_PUBLIC_CONVEX_URL",
+    "ELEVENLABS_API_KEY",
+    "ELEVENLABS_VOICE_ID",
+] as const;
+
+for (const key of requiredEnvVars) {
+    if (!process.env[key]) {
+        console.warn(`⚠ Missing environment variable: ${key}`);
+    }
+}
+
 const nextConfig: NextConfig = {
     reactStrictMode: false,
     images: {
