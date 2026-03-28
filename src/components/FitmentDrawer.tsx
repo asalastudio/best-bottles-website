@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { X, ChevronRight, Droplet, SprayCan, CheckCircle2, Droplets, Sparkles, Check } from "@/components/icons";
 import { useQuery } from 'convex/react';
 import { api } from '../../convex/_generated/api';
-import { useCart } from './CartProvider';
+import { useCart } from "@/components/CartProvider";
 
 interface FitmentDrawerProps {
     isOpen: boolean;

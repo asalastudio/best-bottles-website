@@ -926,7 +926,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 )}
                             </div>
 
-                            {/* ── Ask Grace (inline, un-intrusive) ───────────────────────────────────────── */}
+                            {/* ── Talk with Grace (inline, un-intrusive) ───────────────────────────────────────── */}
                             <div className="mb-6 sm:mb-8">
                                 <PdpGraceTrigger />
                             </div>

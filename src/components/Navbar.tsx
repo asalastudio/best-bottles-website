@@ -8,8 +8,8 @@ import {
     MagnifyingGlass, User, ShoppingBag, Microphone, CaretDown, List, X,
     Sparkle, Flask, Diamond, ArrowRight,
 } from "@/components/icons";
-import { useGrace } from "./useGrace";
-import { useCart } from "./CartProvider";
+import { useGrace } from "@/components/useGrace";
+import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
@@ -132,7 +132,7 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
         },
         footerLinks: [
             { label: "All Components & Closures", href: "/catalog?category=Component" },
-            { label: "Ask Grace for Help", href: "/catalog" },
+            { label: "Talk with Grace for Help", href: "/catalog" },
         ],
     },
     specialty: {
@@ -203,9 +203,10 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
 export default function Navbar({ variant = "home", initialSearchValue }: NavbarProps) {
     const router = useRouter();
     const { openPanel, isOpen: graceActive } = useGrace();
-    const { itemCount } = useCart();
+    const { itemCount, isCartHydrated } = useCart();
     const megaMenuPanels = useMegaMenuPanels();
     const [cartOpen, setCartOpen] = useState(false);
+    const [mounted, setMounted] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [isDictating, setIsDictating] = useState(false);
     const [isTranscribing, setIsTranscribing] = useState(false);
@@ -215,6 +216,10 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
     const audioChunksRef = useRef<Blob[]>([]);
     const audioContextRef = useRef<AudioContext | null>(null);
     const silenceTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -435,7 +440,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                 <div className="bg-obsidian py-1.5 text-center px-4">
                     <p className="text-xs uppercase tracking-[0.15em] text-bone font-medium">
                         <span>Free shipping on orders above $99</span>
-                        <span className="hidden md:inline"> · Need fitment help? Ask Grace, AI Bottling Specialist</span>
+                        <span className="hidden md:inline"> · Need fitment help? Talk with Grace, AI Bottling Specialist</span>
                     </p>
                 </div>
 
@@ -532,20 +537,6 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                                 aria-label="Search products"
                                 suppressHydrationWarning
                             />
-                            <button
-                                type="button"
-                                onClick={handleMicClick}
-                                disabled={isTranscribing}
-                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
-                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
-                                    ? "text-muted-gold animate-grace-pulse"
-                                    : isTranscribing
-                                        ? "text-muted-gold animate-bounce"
-                                        : "text-slate/40 hover:text-slate"
-                                    }`}
-                            >
-                                <Microphone size={16} />
-                            </button>
                             <button type="submit" className="sr-only">Search</button>
                         </form>
                         <div className="hidden lg:flex flex-1" />
@@ -568,7 +559,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                                         <span /><span /><span /><span />
                                     </span>
                                 )}
-                                <span className="lg:hidden">Ask Grace</span>
+                                <span className="lg:hidden">Ask Grace AI</span>
                                 <span className="hidden lg:inline">Ask Grace AI</span>
                             </button>
 
@@ -582,7 +573,7 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                                 className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
                             >
                                 <ShoppingBag className="text-obsidian" size={20} />
-                                {itemCount > 0 && (
+                                {mounted && isCartHydrated && itemCount > 0 && (
                                     <span className="absolute top-0.5 right-0.5 bg-muted-gold text-white text-[10px] w-[16px] h-[16px] flex items-center justify-center rounded-full font-semibold">
                                         {itemCount > 99 ? "99" : itemCount}
                                     </span>
@@ -608,20 +599,6 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
                                 aria-label="Search products"
                                 suppressHydrationWarning
                             />
-                            <button
-                                type="button"
-                                onClick={handleMicClick}
-                                disabled={isTranscribing}
-                                aria-label={isDictating ? "Stop recording" : "Search by voice"}
-                                className={`shrink-0 p-1 rounded-lg transition-all duration-200 disabled:cursor-not-allowed ${isDictating
-                                    ? "text-muted-gold animate-grace-pulse"
-                                    : isTranscribing
-                                        ? "text-muted-gold animate-bounce"
-                                        : "text-slate/40 hover:text-slate"
-                                    }`}
-                            >
-                                <Microphone size={16} />
-                            </button>
                             <button type="submit" className="sr-only">Search</button>
                         </form>
                     </div>

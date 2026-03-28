@@ -136,14 +136,14 @@ export interface GraceContextValue {
     input: string;
     setInput: (v: string) => void;
     voiceEnabled: boolean;
-    toggleVoice: () => void;
+    toggleVoice: () => void | Promise<void>;
     send: (text?: string, fromVoice?: boolean) => Promise<void>;
     startDictation: () => Promise<void>;
     stopDictation: () => void;
     stopSpeaking: () => void;
     errorMessage: string;
     conversationActive: boolean;
-    startConversation: () => void;
+    startConversation: (forceTextOnly?: boolean) => void | Promise<boolean>;
     endConversation: () => void;
     confirmAction: (messageId: string) => void;
     dismissAction: (messageId: string) => void;

@@ -1491,7 +1491,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                         <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-obsidian font-medium leading-[1.1] mb-1 sm:mb-2">Master Catalog</h1>
                         <p className="text-slate text-xs sm:text-sm max-w-xl">
                             {totalCount > 0 ? `${totalCount.toLocaleString()} product groups.` : "Loading catalog..."}
-                            <span>{" "}Need help? Ask Grace, your AI Bottling Specialist.</span>
+                            <span>{" "}Need help? Talk with Grace, your AI Bottling Specialist.</span>
                         </p>
                     </div>
 
@@ -1788,7 +1788,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         className="px-6 py-3 border border-muted-gold text-muted-gold uppercase text-xs font-bold tracking-wider hover:bg-muted-gold hover:text-white transition-colors rounded-sm flex items-center gap-2"
                                     >
                                         <MessageCircle className="w-3.5 h-3.5" />
-                                        Ask Grace
+                                        Talk with Grace
                                     </button>
                                 </div>
                             </div>

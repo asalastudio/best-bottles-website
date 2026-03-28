@@ -5,12 +5,10 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
     X,
     Waveform,
-    PaperPlaneTilt,
-    MagnifyingGlass,
-    SprayBottle,
     Package,
-    Eyedropper,
-    Question,
+    Truck,
+    Compass,
+    Leaf,
 } from "@phosphor-icons/react";
 import { useGrace } from "@/components/useGrace";
 import GraceChatMessage, { StreamingMessage } from "./GraceChatMessage";
@@ -30,12 +28,35 @@ function useIsMobile() {
 }
 
 const QUICK_CHIPS = [
-    { label: "Find a bottle", icon: MagnifyingGlass, query: "Help me find the right bottle for my product" },
-    { label: "What fits this?", icon: SprayBottle, query: "What closures and applicators fit my current bottle?" },
-    { label: "Compare sizes", icon: Package, query: "Compare bottle sizes available in the Cylinder family" },
-    { label: "Dropper options", icon: Eyedropper, query: "Show me dropper bottles for essential oils" },
-    { label: "Thread sizes", icon: Question, query: "How do I know which thread size I need?" },
+    { label: "Shipping & Delivery", icon: Truck, query: "What are your shipping rates and estimated delivery times?" },
+    { label: "Request Samples", icon: Package, query: "How do I request physical samples for my brand?" },
+    { label: "Style Discovery", icon: Compass, query: "Help me find a unique bottling style for a high-end fragrance." },
+    { label: "Eco-Friendly", icon: Leaf, query: "What are your most sustainable or eco-friendly packaging solutions?" },
 ];
+
+/** Five-bar voice waveform — matches reference: tall center, tapering sides, rounded bar caps */
+function VoiceWaveformGlyph({ className }: { className?: string }) {
+    const bars = [
+        { h: "h-[7px]" },
+        { h: "h-[11px]" },
+        { h: "h-[14px]" },
+        { h: "h-[11px]" },
+        { h: "h-[7px]" },
+    ];
+    return (
+        <span
+            className={`inline-flex items-center justify-center gap-[3px] ${className ?? ""}`}
+            aria-hidden
+        >
+            {bars.map((b, i) => (
+                <span
+                    key={i}
+                    className={`w-[3px] ${b.h} rounded-full bg-white shrink-0`}
+                />
+            ))}
+        </span>
+    );
+}
 
 export default function GraceChatDrawer() {
     const {
@@ -48,6 +69,10 @@ export default function GraceChatDrawer() {
         send,
         conversationActive,
         endConversation,
+        errorMessage,
+        toggleVoice,
+        voiceEnabled,
+        status: graceStatus,
     } = useGrace();
 
     const isOpen = panelMode === "open";
@@ -90,11 +115,16 @@ export default function GraceChatDrawer() {
         closePanel();
     };
 
+    const [chipsUsed, setChipsUsed] = useState(false);
+
     const handleChipClick = (query: string) => {
+        setChipsUsed(true);
         send(query);
     };
 
-    const hasMessages = messages.length > 0 || !!streamingText;
+    // Only the initial Grace greeting(s) — user hasn't typed or tapped a chip yet
+    const userHasInteracted = chipsUsed || messages.some((m) => m.role === "user");
+    const showChips = !userHasInteracted;
 
     return (
         <AnimatePresence>
@@ -134,12 +164,23 @@ export default function GraceChatDrawer() {
                     >
                         {/* ── Header ─────────────────────────────────────── */}
                         <div
-                            className="flex items-center justify-between px-5 py-3.5 shrink-0"
+                            className="flex items-center justify-between px-5 py-3.5 shrink-0 relative"
                             style={{ borderBottom: "1px solid rgba(212, 197, 169, 0.25)" }}
                         >
-                            <span className="text-[13px] font-medium text-obsidian/80 tracking-wide font-sans">
-                                New chat
-                            </span>
+                            {isMobile && (
+                                <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 cursor-pointer pb-4 pr-4 pl-4" onClick={handleClose}>
+                                    <div className="w-10 h-1.5 rounded-full bg-white/30 backdrop-blur-md grace-sheet-handle" />
+                                </div>
+                            )}
+
+                            <div className="flex items-center gap-2">
+                                <div className="w-8 h-8 rounded-lg bg-obsidian flex items-center justify-center shadow-sm">
+                                    <Waveform className="text-white" size={18} weight="fill" />
+                                </div>
+                                <span className="text-[14px] font-semibold text-obsidian tracking-tight font-sans">
+                                    Ask Grace AI
+                                </span>
+                            </div>
 
                             <button
                                 onClick={handleClose}
@@ -150,41 +191,44 @@ export default function GraceChatDrawer() {
                             </button>
                         </div>
 
-                        {/* ── Messages / Empty state ─────────────────────── */}
+                        {/* ── Messages ─────────────────────────────────── */}
                         <div className="flex-1 overflow-y-auto px-5 py-4">
-                            {!hasMessages && (
-                                <div className="pt-2 pb-6">
-                                    <p className="text-[15px] text-obsidian/80 leading-relaxed font-sans">
-                                        Hi! How can I help you today?
-                                    </p>
-
-                                    <div className="grid grid-cols-2 gap-2 mt-6">
-                                        {QUICK_CHIPS.map((chip) => (
-                                            <button
-                                                key={chip.label}
-                                                onClick={() => handleChipClick(chip.query)}
-                                                className="flex items-start gap-2.5 p-3 rounded-lg text-left transition-colors duration-150 cursor-pointer hover:bg-obsidian/[0.04] group"
-                                                style={{ border: "1px solid rgba(29, 29, 31, 0.08)" }}
-                                            >
-                                                <chip.icon
-                                                    size={16}
-                                                    className="text-obsidian/40 mt-0.5 shrink-0 group-hover:text-obsidian/60 transition-colors"
-                                                    weight="regular"
-                                                />
-                                                <span className="text-[12.5px] text-obsidian/70 leading-snug font-sans">
-                                                    {chip.label}
-                                                </span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
-
                             {messages.map((msg) => (
                                 <GraceChatMessage key={msg.id} message={msg} />
                             ))}
 
                             <StreamingMessage text={streamingText} />
+
+                            {/* Quick chips — visible until the user sends their first message */}
+                            {showChips && (
+                                <div className="grid grid-cols-2 gap-2 mt-4">
+                                    {QUICK_CHIPS.map((chip) => (
+                                        <button
+                                            key={chip.label}
+                                            onClick={() => handleChipClick(chip.query)}
+                                            className="flex items-start gap-2.5 p-3 rounded-lg text-left transition-colors duration-150 cursor-pointer hover:bg-obsidian/[0.04] group"
+                                            style={{ border: "1px solid rgba(29, 29, 31, 0.08)" }}
+                                        >
+                                            <chip.icon
+                                                size={16}
+                                                className="text-obsidian/40 mt-0.5 shrink-0 group-hover:text-obsidian/60 transition-colors"
+                                                weight="regular"
+                                            />
+                                            <span className="text-[12.5px] text-obsidian/70 leading-snug font-sans">
+                                                {chip.label}
+                                            </span>
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
+
+                            {errorMessage && (
+                                <div className="mt-4 p-3 rounded-lg bg-red-50 border border-red-100/50">
+                                    <p className="text-[12px] text-red-600 font-sans leading-relaxed text-center">
+                                        {errorMessage}
+                                    </p>
+                                </div>
+                            )}
 
                             <div ref={messagesEndRef} />
                         </div>
@@ -203,18 +247,36 @@ export default function GraceChatDrawer() {
                                     onKeyDown={handleKeyDown}
                                     placeholder="Ask anything..."
                                     rows={2}
-                                    className="w-full bg-transparent text-[14px] text-obsidian placeholder:text-obsidian/30 outline-none font-sans resize-none px-3.5 pt-3 pb-10 leading-relaxed"
+                                    className="w-full bg-transparent text-[14px] text-obsidian placeholder:text-obsidian/30 outline-none font-sans resize-none px-3.5 pt-3 pb-12 leading-relaxed"
                                     autoComplete="off"
                                 />
 
-                                <div className="absolute bottom-2.5 right-3 flex items-center">
+                                <div className="absolute bottom-2.5 right-2.5">
                                     <button
-                                        type="submit"
-                                        disabled={!input.trim()}
-                                        className="w-8 h-8 rounded-full flex items-center justify-center transition-all duration-150 cursor-pointer shrink-0 bg-obsidian/90 text-bone disabled:opacity-20 disabled:cursor-default hover:bg-obsidian"
-                                        aria-label="Send message"
+                                        type="button"
+                                        onClick={toggleVoice}
+                                        title={
+                                            voiceEnabled
+                                                ? "Voice on — tap to use text only"
+                                                : "Use voice"
+                                        }
+                                        aria-pressed={voiceEnabled}
+                                        className={`w-10 h-10 flex items-center justify-center transition-all duration-300 ease-out cursor-pointer bg-obsidian text-white shadow-md hover:bg-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian/40 ${
+                                            voiceEnabled
+                                                ? "rounded-lg scale-100"
+                                                : "rounded-full hover:scale-105 active:scale-95"
+                                        }`}
                                     >
-                                        <Waveform size={16} weight="bold" />
+                                        {graceStatus === "connecting" ? (
+                                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                                        ) : voiceEnabled ? (
+                                            <span
+                                                className="w-[11px] h-[11px] rounded-[2.5px] bg-white"
+                                                aria-hidden
+                                            />
+                                        ) : (
+                                            <VoiceWaveformGlyph />
+                                        )}
                                     </button>
                                 </div>
                             </form>

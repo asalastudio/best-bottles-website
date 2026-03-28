@@ -62,7 +62,7 @@ export default async function PortalDashboard() {
                         href="/portal/grace"
                         className="inline-flex items-center justify-center h-8 px-3 text-[13px] font-sans font-medium rounded-md border border-neutral-300 bg-white text-neutral-700 hover:bg-neutral-50 transition-colors"
                     >
-                        Ask Grace
+                        Talk with Grace
                     </Link>
                     <form action={createDraftAction}>
                         <PortalButton size="sm" type="submit">

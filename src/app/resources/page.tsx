@@ -39,8 +39,8 @@ const RESOURCES = [
     },
     {
         icon: ChatCircle,
-        title: "Ask Grace",
-        description: "Our AI Bottling Specialist is available 24/7. Ask Grace about compatibility, pricing, and product recommendations.",
+        title: "Talk with Grace",
+        description: "Our AI Bottling Specialist is available 24/7. Talk with Grace about compatibility, pricing, and product recommendations.",
         cta: "Open Grace",
         href: "/",
     },

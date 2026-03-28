@@ -42,7 +42,7 @@ function Navbar() {
                     </div>
                     <button className="hidden sm:flex items-center space-x-2 text-sm font-medium text-obsidian bg-[#FFF] border border-champagne px-3 py-1.5 rounded-full hover:border-muted-gold transition-colors shadow-sm">
                         <span className="w-2 h-2 rounded-full bg-muted-gold animate-pulse"></span>
-                        <span>Ask Grace</span>
+                        <span>Talk with Grace</span>
                     </button>
                     <div className="flex items-center space-x-4">
                         <button aria-label="Account" className="hover:text-muted-gold transition-colors">

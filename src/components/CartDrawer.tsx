@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
-import { useCart } from "./CartProvider";
+import { useCart } from "@/components/CartProvider";
 
 const FREE_SHIPPING_THRESHOLD = 199;
 

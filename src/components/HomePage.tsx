@@ -655,10 +655,10 @@ function PathChooser() {
                             <div className="w-14 h-14 rounded-full bg-white border border-champagne/40 flex items-center justify-center mb-5 group-hover:border-muted-gold transition-colors">
                                 <ChatCircle className="w-6 h-6 text-obsidian/50 group-hover:text-muted-gold transition-colors" size={24} />
                             </div>
-                            <h3 className="font-serif text-xl text-obsidian font-medium mb-2">Talk to Grace</h3>
+                            <h3 className="font-serif text-xl text-obsidian font-medium mb-2">Talk with Grace</h3>
                             <p className="text-xs text-slate leading-relaxed mb-5">Your AI bottling specialist for fitment and product guidance.</p>
                             <span className="text-xs font-semibold text-muted-gold uppercase tracking-wider flex items-center group-hover:gap-2 transition-all duration-300">
-                                Ask Now <ArrowRight className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={12} />
+                                Talk Now <ArrowRight className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={12} />
                             </span>
                         </button>
                     </FadeUp>
