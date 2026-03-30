@@ -88,6 +88,8 @@ function getFinishFromGraceSku(graceSku: string | null | undefined): { label: st
         PNK: { label: "Pink", swatchName: "Pink" },
         GRN: { label: "Green", swatchName: "Green" },
         BKDT: { label: "Black with Dots", swatchName: "Black" },
+        TRQ: { label: "Turquoise", swatchName: "Turquoise" },
+        RED: { label: "Red", swatchName: "Red" },
     };
     return map[token] ?? null;
 }
@@ -173,6 +175,7 @@ const COLOR_SWATCH: Record<string, string> = {
     "Red": "#C41E3A",
     "Ivory Gold": "#D4AF37",
     "Ivory Silver": "#C8C8C8",
+    "Turquoise": "#40C4AA",
     "Standard": "#AAAAAA",
 };
 
@@ -302,6 +305,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const [selectedCapStyle, setSelectedCapStyle] = useState<string | null>(null);
     const [selectedTrimColor, setSelectedTrimColor] = useState<string | null>(null);
     const [selectedCapComponentSku, setSelectedCapComponentSku] = useState<string | null>(null);
+    // Swatch hint — appears after user closes the cap, dismisses after first cap color click
+    const [capSwatchHint, setCapSwatchHint] = useState(false);
+    const handleCapStateChange = useCallback((lifted: boolean) => {
+        if (!lifted) setCapSwatchHint(true);
+    }, []);
 
     const [qty, setQty] = useState(qtyParam);
     const [addedFlash, setAddedFlash] = useState(false);
@@ -782,11 +790,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
                         <div className="lg:sticky lg:top-[120px]">
                             <motion.div
-                                key={selectedVariant?._id ?? "placeholder"}
+                                key={group.paperDollFamilyKey ? "paper-doll" : (selectedVariant?._id ?? "placeholder")}
                                 initial={{ opacity: 0.6 }}
                                 animate={{ opacity: 1 }}
                                 transition={{ duration: 0.3 }}
-                                className="aspect-square bg-travertine rounded-none sm:rounded-sm border-0 sm:border border-champagne/50 flex items-center justify-center relative overflow-hidden"
+                                className={`${group.paperDollFamilyKey ? "aspect-[4/5]" : "aspect-square"} bg-travertine rounded-none sm:rounded-sm border-0 sm:border border-champagne/50 flex items-center justify-center relative overflow-hidden`}
                             >
                                 {group.paperDollFamilyKey && selectedVariant ? (
                                     <PaperDollImage
@@ -796,6 +804,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         itemName={selectedVariant.itemName}
                                         fallbackImageUrl={selectedVariant.imageUrl}
                                         className="w-full h-full p-6 sm:p-12"
+                                        onCapStateChange={handleCapStateChange}
                                     />
                                 ) : selectedVariant?.imageUrl ? (
                                     <img
@@ -967,13 +976,22 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
                                     {/* Cap color selector */}
                                     {capColorOptions.length > 0 && (
-                                        <div className="mb-6">
+                                        <div className="mb-6 relative">
                                             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                                                 Cap Color
                                                 {activeCapColor && (
                                                     <span className="ml-2 normal-case font-medium text-obsidian">{activeCapColor}</span>
                                                 )}
                                             </p>
+                                            {/* One-time swatch hint for paper doll products */}
+                                            {group.paperDollFamilyKey && capSwatchHint && (
+                                                <div className="mb-3">
+                                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted-gold/10 border border-muted-gold/30 text-[11px] text-muted-gold font-semibold animate-pulse">
+                                                        <span className="w-1.5 h-1.5 rounded-full bg-muted-gold" />
+                                                        Select a cap color to preview on the bottle
+                                                    </span>
+                                                </div>
+                                            )}
                                             <div className="flex flex-wrap gap-2.5">
                                                 {capColorOptions.map((color) => {
                                                     const hex = COLOR_SWATCH[color] ?? GLASS_COLOR_SWATCH[color] ?? "#AAAAAA";
@@ -987,6 +1005,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                                 setSelectedCapColor(color);
                                                                 setSelectedCapStyle(null);
                                                                 setSelectedTrimColor(null);
+                                                                setCapSwatchHint(false);
                                                             }}
                                                             title={color}
                                                             className={`w-9 h-9 rounded-full border-2 transition-all relative ${isSelected
