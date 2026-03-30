@@ -123,9 +123,9 @@ interface PaperDollImageProps {
     itemName: string;
     fallbackImageUrl?: string | null;
     className?: string;
-    /** Start with cap lifted to reveal roller/fitment (default: true for rollon) */
+    /** Start with cap hidden to show fitment (default: true for rollon) */
     initialCapLifted?: boolean;
-    /** Notify parent when cap is lowered (e.g. after user clicks) */
+    /** Notify parent when cap visibility changes */
     onCapStateChange?: (lifted: boolean) => void;
 }
 
@@ -145,41 +145,38 @@ export default function PaperDollImage({
 
     const mode = useMemo(() => getModeFromApplicator(applicator), [applicator]);
 
-    // Cap lift state — defaults to lifted for roll-on mode
-    const [capLifted, setCapLifted] = useState(
-        initialCapLifted ?? (mode === "rollon")
+    // Cap visibility — for rollon mode, default to cap ON (showing the finished product)
+    const [capVisible, setCapVisible] = useState(
+        initialCapLifted != null ? !initialCapLifted : true
     );
 
-    // Reset cap lift ONLY when the applicator mode actually changes (e.g. rollon → spray)
-    // NOT when switching between roller types within the same mode
+    // Reset cap visibility when the applicator mode changes
     const prevModeRef = useRef(mode);
     useEffect(() => {
         if (prevModeRef.current !== mode) {
             prevModeRef.current = mode;
-            const shouldLift = initialCapLifted ?? (mode === "rollon");
-            setCapLifted(shouldLift); // eslint-disable-line react-hooks/set-state-in-effect -- intentional prev-value sync
+            setCapVisible(true); // eslint-disable-line react-hooks/set-state-in-effect -- intentional prev-value sync
         }
-    }, [mode, initialCapLifted]);
+    }, [mode]);
 
     const toggleCap = useCallback(() => {
-        const next = !capLifted;
-        setCapLifted(next);
-        onCapStateChange?.(next);
-    }, [capLifted, onCapStateChange]);
+        const next = !capVisible;
+        setCapVisible(next);
+        onCapStateChange?.(!next); // lifted=true means cap is OFF
+    }, [capVisible, onCapStateChange]);
 
-    // Lower cap only when the CAP variant changes (not roller/applicator changes)
+    // Show cap when user picks a new cap color
     const currentCapKey = useMemo(() => parseCapFromItemName(itemName), [itemName]);
     const [prevCapKey, setPrevCapKey] = useState(currentCapKey);
     useEffect(() => {
         if (currentCapKey !== prevCapKey) {
             setPrevCapKey(currentCapKey); // eslint-disable-line react-hooks/set-state-in-effect -- intentional prev-value sync
-            // User selected a different cap color — lower the cap to show it
-            if (capLifted) {
-                setCapLifted(false);
+            if (!capVisible) {
+                setCapVisible(true);
                 onCapStateChange?.(false);
             }
         }
-    }, [currentCapKey, prevCapKey, capLifted, onCapStateChange]);
+    }, [currentCapKey, prevCapKey, capVisible, onCapStateChange]);
 
     // Fetch family data once (cached)
     useEffect(() => {
@@ -295,63 +292,57 @@ export default function PaperDollImage({
     }
 
     const hasCapLayer = layers.some(l => l.slot === "cap");
-    const showCapLift = mode === "rollon" && hasCapLayer;
+    const showCapToggle = mode === "rollon" && hasCapLayer;
 
     return (
         <div className={`relative ${className}`}>
             {layers.map(({ key, url, zIndex, slot }) => {
                 const isCap = slot === "cap";
+                const hidden = isCap && !capVisible && mode === "rollon";
                 return (
                     <img
                         key={key}
                         src={url}
                         alt=""
                         onLoad={() => onLayerLoad(key)}
-                        className="absolute inset-0 w-full h-full object-contain transition-all duration-500 ease-out"
+                        className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-out"
                         style={{
                             zIndex,
-                            opacity: layersReady.has(key) ? 1 : 0,
-                            objectPosition: "52% 50%",
-                            transform: isCap && capLifted && mode === "rollon" ? "translateY(-18%)" : "translateY(0)",
+                            opacity: hidden ? 0 : (layersReady.has(key) ? 1 : 0),
+                            objectPosition: "50% 50%",
                         }}
                         draggable={false}
                     />
                 );
             })}
 
-            {/* Cap lift toggle — positioned to the right of the cap */}
-            {showCapLift && allLoaded && (
+            {/* Cap on/off toggle — clean pill button anchored at bottom of image */}
+            {showCapToggle && allLoaded && (
                 <button
                     onClick={toggleCap}
-                    className="absolute z-50 group cursor-pointer flex items-center gap-1.5"
+                    className="absolute z-50 left-1/2 -translate-x-1/2 bottom-[1%] flex items-center gap-2 px-4 py-2 rounded-full border backdrop-blur-sm transition-all duration-200 cursor-pointer hover:scale-105 active:scale-95"
                     style={{
-                        right: "8%",
-                        top: capLifted ? "16%" : "20%",
-                        transition: "top 500ms ease-out",
+                        backgroundColor: capVisible ? "rgba(255,255,255,0.85)" : "rgba(30,28,26,0.85)",
+                        borderColor: capVisible ? "rgba(200,190,170,0.5)" : "transparent",
+                        color: capVisible ? "#5c5549" : "#ffffff",
                     }}
-                    aria-label={capLifted ? "Place cap on bottle" : "Lift cap to view components"}
+                    aria-label={capVisible ? "Remove cap to view fitment" : "Put cap back on"}
                 >
-                    {/* Arrow pointing left at the cap */}
-                    <svg
-                        className={`w-3.5 h-3.5 text-muted-gold transition-all duration-300 ${capLifted ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
-                        viewBox="0 0 12 12"
-                        fill="none"
-                    >
-                        <path d="M7 2L3 6L7 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                    {/* Label */}
+                    <span className="text-[11px] uppercase tracking-wider font-semibold">
+                        {capVisible ? "Remove Cap" : "Cap On"}
+                    </span>
                     <span
-                        className={`
-                            whitespace-nowrap px-3 py-1.5 rounded-full
-                            text-[10px] uppercase tracking-wider font-semibold
-                            border transition-all duration-300
-                            ${capLifted
-                                ? "bg-obsidian/80 text-white border-transparent backdrop-blur-sm opacity-100"
-                                : "bg-white/80 text-slate border-champagne/60 backdrop-blur-sm opacity-0 group-hover:opacity-100"
-                            }
-                        `}
+                        className="w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors duration-200"
+                        style={{
+                            borderColor: capVisible ? "#b8a88a" : "#ffffff",
+                            backgroundColor: capVisible ? "transparent" : "#ffffff",
+                        }}
                     >
-                        {capLifted ? "Tap to close" : "Peek inside"}
+                        {!capVisible && (
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
+                                <path d="M2 5L4.5 7.5L8 3" stroke="#1e1c1a" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        )}
                     </span>
                 </button>
             )}
