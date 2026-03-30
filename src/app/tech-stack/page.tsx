@@ -7,13 +7,15 @@ import {
     ShoppingBag,
     PenTool,
     GithubLogo,
-    Server,
+    // Server,
     Users,
 } from "@/components/icons";
 import React from 'react';
 import Link from 'next/link';
 
-const TechNode = ({ icon: Icon, title, description, badge, delay }: any) => (
+type IconWeight = "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
+interface TechNodeProps { icon: React.ComponentType<{ size?: number; weight?: IconWeight; className?: string }>; title: string; description: string; badge: string; delay: number }
+const TechNode = ({ icon: Icon, title, description, badge, delay }: TechNodeProps) => (
     <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -33,7 +35,8 @@ const TechNode = ({ icon: Icon, title, description, badge, delay }: any) => (
     </motion.div>
 );
 
-const ConnectionLine = ({ d, gradientId, delay = 0, reverse = false }: any) => (
+interface ConnectionLineProps { d: string; gradientId: string; delay?: number; reverse?: boolean }
+const ConnectionLine = ({ d, gradientId, delay = 0, reverse = false }: ConnectionLineProps) => (
     <svg className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 overflow-visible">
         <defs>
             <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="0%">

@@ -46,7 +46,7 @@ function useFamilyBannerImage(family: string | null): string | null {
     useEffect(() => {
         if (!family || !isSanityConfigured) return;
         const cached = familyImageCache.get(family);
-        if (cached !== undefined) { setImgUrl(cached || null); return; }
+        if (cached !== undefined) { setImgUrl(cached || null); return; } // eslint-disable-line react-hooks/set-state-in-effect -- early return from cache
         client
             .fetch<{ image?: { asset?: { _ref: string }; _type?: string } } | null>(
                 `*[_type == "homepagePage"][0].designFamilyCards[family == $fam][0] { image }`,

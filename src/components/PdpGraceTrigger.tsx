@@ -12,14 +12,13 @@ const PDP_GRACE_SEEN_KEY = "pdp-grace-trigger-seen";
  */
 export default function PdpGraceTrigger() {
     const { openPanel } = useGrace();
-    const [mounted, setMounted] = useState(false);
     const [showPulse, setShowPulse] = useState(false);
 
-    useEffect(() => setMounted(true), []);
     useEffect(() => {
-        if (!mounted || typeof window === "undefined") return;
-        if (!localStorage.getItem(PDP_GRACE_SEEN_KEY)) setShowPulse(true);
-    }, [mounted]);
+        if (typeof window !== "undefined" && !localStorage.getItem(PDP_GRACE_SEEN_KEY)) {
+            setShowPulse(true); // eslint-disable-line react-hooks/set-state-in-effect -- one-time init from localStorage
+        }
+    }, []);
 
     const handleClick = () => {
         setShowPulse(false);

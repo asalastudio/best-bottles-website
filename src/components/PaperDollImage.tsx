@@ -1,10 +1,59 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { client, isSanityConfigured } from "@/sanity/lib/client";
+/* eslint-disable @next/next/no-img-element */
 
-// ── Mapping: variant attributes → paper doll variant keys ────────────────────
+// ── Types ────────────────────────────────────────────────────────────────────
 
-/** Map glass color (from product group) to body variant key */
+interface LayerAsset {
+    _key: string;
+    slot: string;
+    variantKey: string;
+    imageUrl: string;
+}
+
+interface FamilyData {
+    _id: string;
+    familyKey: string;
+    displayName: string;
+    layerOrderRollon: string[];
+    layerOrderSpray: string[];
+    layerOrderLotion: string[];
+    layerAssets: LayerAsset[];
+}
+
+type ApplicatorMode = "rollon" | "spray" | "lotion";
+
+// ── Sanity query ─────────────────────────────────────────────────────────────
+
+const FAMILY_QUERY = `*[_type == "paperDollFamily" && familyKey == $familyKey][0]{
+    _id, familyKey, displayName,
+    layerOrderRollon, layerOrderSpray, layerOrderLotion,
+    layerAssets[]{
+        _key, slot, variantKey, sourceFilename,
+        "imageUrl": image.asset->url
+    }
+}`;
+
+// ── Cache: fetch once per family, reuse across re-renders ────────────────────
+
+const familyCache = new Map<string, Promise<FamilyData | null>>();
+
+function fetchFamily(familyKey: string): Promise<FamilyData | null> {
+    if (familyCache.has(familyKey)) return familyCache.get(familyKey)!;
+    if (!isSanityConfigured) {
+        const p = Promise.resolve(null);
+        familyCache.set(familyKey, p);
+        return p;
+    }
+    const p = client.fetch<FamilyData | null>(FAMILY_QUERY, { familyKey }).catch(() => null);
+    familyCache.set(familyKey, p);
+    return p;
+}
+
+// ── Mapping helpers ──────────────────────────────────────────────────────────
+
 const BODY_KEY_MAP: Record<string, string> = {
     clear: "CLR",
     amber: "AMB",
@@ -14,7 +63,6 @@ const BODY_KEY_MAP: Record<string, string> = {
     swirl: "SWL",
 };
 
-/** Map cap description (parsed from itemName) to cap variant key */
 const CAP_KEY_MAP: Record<string, string> = {
     "black dot": "BLK-DOT",
     "pink dot": "PNK-DOT",
@@ -29,34 +77,41 @@ const CAP_KEY_MAP: Record<string, string> = {
     transparent: "WHT",
 };
 
-/** Map applicator type to roller variant key */
 const ROLLER_KEY_MAP: Record<string, string> = {
     "Metal Roller Ball": "MTL-ROLL",
     "Plastic Roller Ball": "PLS-ROLL",
 };
 
-/** Parse cap description from itemName, e.g. "...with metal roller ball plug and matte gold cap." */
 function parseCapFromItemName(itemName: string): string | null {
     const match = itemName.toLowerCase().match(/and\s+(.+?)\s+cap/);
     if (!match) return null;
     const desc = match[1].trim();
-    // Direct lookup
     if (CAP_KEY_MAP[desc]) return CAP_KEY_MAP[desc];
-    // Fuzzy match
     for (const [key, value] of Object.entries(CAP_KEY_MAP)) {
         if (desc.includes(key)) return value;
     }
     return null;
 }
 
-/** Determine paper doll mode from applicator */
-function getModeFromApplicator(applicator: string | null): "rollon" | "spray" | "lotion" {
+function getModeFromApplicator(applicator: string | null): ApplicatorMode {
     if (!applicator) return "rollon";
     const a = applicator.toLowerCase();
     if (a.includes("roller") || a.includes("roll-on")) return "rollon";
     if (a.includes("spray") || a.includes("mist") || a.includes("atomizer")) return "spray";
     if (a.includes("lotion") || a.includes("pump")) return "lotion";
     return "rollon";
+}
+
+function groupBySlot(assets: LayerAsset[]): Record<string, LayerAsset[]> {
+    const r: Record<string, LayerAsset[]> = {};
+    for (const a of assets) {
+        (r[a.slot] = r[a.slot] || []).push(a);
+    }
+    return r;
+}
+
+function sanityUrl(url: string): string {
+    return `${url}?w=1000&fm=png&q=90`;
 }
 
 // ── Component ────────────────────────────────────────────────────────────────
@@ -68,6 +123,10 @@ interface PaperDollImageProps {
     itemName: string;
     fallbackImageUrl?: string | null;
     className?: string;
+    /** Start with cap lifted to reveal roller/fitment (default: true for rollon) */
+    initialCapLifted?: boolean;
+    /** Notify parent when cap is lowered (e.g. after user clicks) */
+    onCapStateChange?: (lifted: boolean) => void;
 }
 
 export default function PaperDollImage({
@@ -77,115 +136,224 @@ export default function PaperDollImage({
     itemName,
     fallbackImageUrl,
     className = "",
+    initialCapLifted,
+    onCapStateChange,
 }: PaperDollImageProps) {
-    const [imageUrl, setImageUrl] = useState<string | null>(null);
-    const [loading, setLoading] = useState(true);
+    const [family, setFamily] = useState<FamilyData | null>(null);
+    const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(false);
 
-    const config = useMemo(() => {
-        const mode = getModeFromApplicator(applicator);
-        const body = BODY_KEY_MAP[(glassColor ?? "").toLowerCase()] ?? null;
-        const cap = parseCapFromItemName(itemName);
-        const roller = mode === "rollon" && applicator ? ROLLER_KEY_MAP[applicator] ?? null : undefined;
+    const mode = useMemo(() => getModeFromApplicator(applicator), [applicator]);
 
-        if (!body) return null;
+    // Cap lift state — defaults to lifted for roll-on mode
+    const [capLifted, setCapLifted] = useState(
+        initialCapLifted ?? (mode === "rollon")
+    );
 
-        const payload: Record<string, string | boolean> = {
-            family: familyKey,
-            mode,
-            body,
-            preview: true,
-        };
-
-        if (mode === "rollon") {
-            if (roller) payload.roller = roller;
-            if (cap) payload.cap = cap;
-        } else if (mode === "spray") {
-            // For spray mode, we'd need sprayer key mapping
-            // For now, use a default if available
-        } else if (mode === "lotion") {
-            // Same for lotion/pump
-        }
-
-        return payload;
-    }, [familyKey, glassColor, applicator, itemName]);
-
+    // Reset cap lift ONLY when the applicator mode actually changes (e.g. rollon → spray)
+    // NOT when switching between roller types within the same mode
+    const prevModeRef = useRef(mode);
     useEffect(() => {
-        if (!config) {
-            setLoading(false);
-            setError(true);
-            return;
+        if (prevModeRef.current !== mode) {
+            prevModeRef.current = mode;
+            const shouldLift = initialCapLifted ?? (mode === "rollon");
+            setCapLifted(shouldLift); // eslint-disable-line react-hooks/set-state-in-effect -- intentional prev-value sync
         }
+    }, [mode, initialCapLifted]);
 
+    const toggleCap = useCallback(() => {
+        const next = !capLifted;
+        setCapLifted(next);
+        onCapStateChange?.(next);
+    }, [capLifted, onCapStateChange]);
+
+    // Lower cap only when the CAP variant changes (not roller/applicator changes)
+    const currentCapKey = useMemo(() => parseCapFromItemName(itemName), [itemName]);
+    const [prevCapKey, setPrevCapKey] = useState(currentCapKey);
+    useEffect(() => {
+        if (currentCapKey !== prevCapKey) {
+            setPrevCapKey(currentCapKey); // eslint-disable-line react-hooks/set-state-in-effect -- intentional prev-value sync
+            // User selected a different cap color — lower the cap to show it
+            if (capLifted) {
+                setCapLifted(false);
+                onCapStateChange?.(false);
+            }
+        }
+    }, [currentCapKey, prevCapKey, capLifted, onCapStateChange]);
+
+    // Fetch family data once (cached)
+    useEffect(() => {
         let cancelled = false;
-        setLoading(true);
-        setError(false);
-
-        fetch("/api/paper-doll/render", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(config),
-        })
-            .then(async (res) => {
+        fetchFamily(familyKey)
+            .then((data) => {
                 if (cancelled) return;
-                if (!res.ok) {
-                    setError(true);
-                    setLoading(false);
-                    return;
-                }
-                const blob = await res.blob();
-                if (cancelled) return;
-                const url = URL.createObjectURL(blob);
-                setImageUrl(url);
-                setLoading(false);
+                if (!data) { setError(true); setLoaded(true); return; }
+                setFamily(data);
+                setLoaded(true);
             })
             .catch(() => {
                 if (cancelled) return;
                 setError(true);
-                setLoading(false);
+                setLoaded(true);
             });
+        return () => { cancelled = true; };
+    }, [familyKey]);
 
-        return () => {
-            cancelled = true;
-        };
-    }, [config]);
+    // Derive current selections from product attributes
+    const bodyKey = useMemo(() => BODY_KEY_MAP[(glassColor ?? "").toLowerCase()] ?? null, [glassColor]);
+    const capKey = useMemo(() => parseCapFromItemName(itemName), [itemName]);
+    const rollerKey = useMemo(() => {
+        if (mode !== "rollon" || !applicator) return null;
+        return ROLLER_KEY_MAP[applicator] ?? null;
+    }, [mode, applicator]);
 
-    // Clean up blob URL
-    useEffect(() => {
-        return () => {
-            if (imageUrl) URL.revokeObjectURL(imageUrl);
-        };
-    }, [imageUrl]);
+    const bySlot = useMemo(() => {
+        if (!family) return {};
+        return groupBySlot(family.layerAssets);
+    }, [family]);
 
-    // Fall back to static image if paper doll fails
-    if (error || (!loading && !imageUrl)) {
+    // Build the list of layers to render
+    const layers = useMemo(() => {
+        if (!family || !bodyKey) return [];
+
+        const order = mode === "rollon"
+            ? family.layerOrderRollon
+            : mode === "spray"
+                ? family.layerOrderSpray
+                : family.layerOrderLotion;
+
+        if (!order) return [];
+
+        const result: { key: string; url: string; zIndex: number; slot: string }[] = [];
+
+        order.forEach((slot, i) => {
+            let variantKey: string | null = null;
+            if (slot === "body") variantKey = bodyKey;
+            else if (slot === "cap") variantKey = capKey;
+            else if (slot === "roller") variantKey = rollerKey;
+            else if (slot === "sprayer") {
+                variantKey = bySlot.sprayer?.[0]?.variantKey ?? null;
+            }
+            else if (slot === "pump") {
+                variantKey = bySlot.pump?.[0]?.variantKey ?? null;
+            }
+
+            if (!variantKey) return;
+
+            const asset = bySlot[slot]?.find((a) => a.variantKey === variantKey);
+            if (!asset?.imageUrl) return;
+
+            result.push({
+                key: `${slot}-${variantKey}`,
+                url: sanityUrl(asset.imageUrl),
+                zIndex: i + 1,
+                slot,
+            });
+        });
+
+        return result;
+    }, [family, mode, bodyKey, capKey, rollerKey, bySlot]);
+
+    // Track per-layer load state for smooth appearance
+    const [layersReady, setLayersReady] = useState<Set<string>>(new Set());
+    const onLayerLoad = useCallback((key: string) => {
+        setLayersReady((prev) => {
+            const next = new Set(prev);
+            next.add(key);
+            return next;
+        });
+    }, []);
+
+    // All layers loaded?
+    const allLoaded = layers.length > 0 && layers.every(l => layersReady.has(l.key));
+
+    // Fallback if Sanity fails or family not found
+    if (error || (loaded && !family)) {
         if (fallbackImageUrl) {
-            return (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                    src={fallbackImageUrl}
-                    alt="Product"
-                    className={className}
-                />
-            );
+            return <img src={fallbackImageUrl} alt="Product" className={className} />;
         }
         return null;
     }
 
-    return (
-        <div className={`relative ${className}`}>
-            {loading && (
+    // Initial loading spinner (only before first paint)
+    if (!loaded) {
+        return (
+            <div className={`relative ${className}`}>
                 <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-8 h-8 border-2 border-champagne/40 border-t-muted-gold rounded-full animate-spin" />
                 </div>
-            )}
-            {imageUrl && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                    src={imageUrl}
-                    alt="Product configuration"
-                    className={`w-full h-full object-contain transition-opacity duration-300 ${loading ? "opacity-0" : "opacity-100"}`}
-                />
+            </div>
+        );
+    }
+
+    // No layers resolved (missing body key, etc.)
+    if (layers.length === 0) {
+        if (fallbackImageUrl) {
+            return <img src={fallbackImageUrl} alt="Product" className={className} />;
+        }
+        return null;
+    }
+
+    const hasCapLayer = layers.some(l => l.slot === "cap");
+    const showCapLift = mode === "rollon" && hasCapLayer;
+
+    return (
+        <div className={`relative ${className}`}>
+            {layers.map(({ key, url, zIndex, slot }) => {
+                const isCap = slot === "cap";
+                return (
+                    <img
+                        key={key}
+                        src={url}
+                        alt=""
+                        onLoad={() => onLayerLoad(key)}
+                        className="absolute inset-0 w-full h-full object-contain transition-all duration-500 ease-out"
+                        style={{
+                            zIndex,
+                            opacity: layersReady.has(key) ? 1 : 0,
+                            objectPosition: "52% 50%",
+                            transform: isCap && capLifted && mode === "rollon" ? "translateY(-18%)" : "translateY(0)",
+                        }}
+                        draggable={false}
+                    />
+                );
+            })}
+
+            {/* Cap lift toggle — positioned to the right of the cap */}
+            {showCapLift && allLoaded && (
+                <button
+                    onClick={toggleCap}
+                    className="absolute z-50 group cursor-pointer flex items-center gap-1.5"
+                    style={{
+                        right: "8%",
+                        top: capLifted ? "16%" : "20%",
+                        transition: "top 500ms ease-out",
+                    }}
+                    aria-label={capLifted ? "Place cap on bottle" : "Lift cap to view components"}
+                >
+                    {/* Arrow pointing left at the cap */}
+                    <svg
+                        className={`w-3.5 h-3.5 text-muted-gold transition-all duration-300 ${capLifted ? "opacity-100" : "opacity-0 group-hover:opacity-100"}`}
+                        viewBox="0 0 12 12"
+                        fill="none"
+                    >
+                        <path d="M7 2L3 6L7 10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                    {/* Label */}
+                    <span
+                        className={`
+                            whitespace-nowrap px-3 py-1.5 rounded-full
+                            text-[10px] uppercase tracking-wider font-semibold
+                            border transition-all duration-300
+                            ${capLifted
+                                ? "bg-obsidian/80 text-white border-transparent backdrop-blur-sm opacity-100"
+                                : "bg-white/80 text-slate border-champagne/60 backdrop-blur-sm opacity-0 group-hover:opacity-100"
+                            }
+                        `}
+                    >
+                        {capLifted ? "Tap to close" : "Peek inside"}
+                    </span>
+                </button>
             )}
         </div>
     );

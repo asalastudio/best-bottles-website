@@ -39,12 +39,12 @@ export default function MobileTabBar() {
     const [showGraceTooltip, setShowGraceTooltip] = useState(false);
     const [mounted, setMounted] = useState(false);
 
-    useEffect(() => setMounted(true), []);
-
     useEffect(() => {
-        if (!mounted || typeof window === "undefined") return;
-        if (!localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) setShowGraceTooltip(true);
-    }, [mounted]);
+        setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect -- hydration guard
+        if (typeof window !== "undefined" && !localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) {
+            setShowGraceTooltip(true);
+        }
+    }, []);
 
     const dismissGraceTooltip = () => {
         setShowGraceTooltip(false);

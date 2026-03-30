@@ -30,7 +30,7 @@ const FadeUp = ({ children, delay = 0, className = "" }: { children: React.React
     </motion.div>
 );
 
-const DEFAULT_START_HERE = [
+const _DEFAULT_START_HERE = [
     { title: "essential oils & roll-ons", subtitle: "Roller-ready bottles for oils, topicals, and fragrance oils.", href: applicatorNavHref("rollon"), img: "/assets/vintage-spray.png", bg: "#DFD6C9" },
     { title: "skincare & serums", subtitle: "Dropper and pump formats for treatment-focused formulas.", href: applicatorNavHrefMulti(["dropper", "lotionpump"]), img: "/assets/collection_skincare.png", bg: "#EADDD1" },
     { title: "sample & discovery", subtitle: "Vials and compact formats for trial, travel, and discovery kits.", href: "/catalog?families=Vial", img: "/assets/Hero-BB.png", bg: "#EAE0D5" },

@@ -252,7 +252,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
     const [voiceEnabled, setVoiceEnabled] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
     const [voiceFailed, setVoiceFailed] = useState(false);
-    const [graceQuery, setGraceQuery] = useState("");
+    const [graceQuery] = useState("");
 
     const toggleVoiceRef = useRef<(() => void) | null>(null);
 
@@ -710,7 +710,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             }
         },
 
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }), []);
 
     // ── ElevenLabs callbacks ─────────────────────────────────────────────────
@@ -919,7 +919,6 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         return () => {
             try { conversationRef.current?.endSession(); } catch { /* ignore */ }
         };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     // ── Toggle voice: must be called from a click handler (user gesture) ───
@@ -1012,17 +1011,17 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         input,
         setInput,
         voiceEnabled,
-        toggleVoice: toggleVoiceRef.current ?? (async () => {}),
+        toggleVoice: toggleVoiceRef.current ?? (async () => { }),
         send,
-        startDictation: async () => {},
-        stopDictation: () => {},
-        stopSpeaking: () => {},
+        startDictation: async () => { },
+        stopDictation: () => { },
+        stopSpeaking: () => { },
         errorMessage,
         conversationActive,
         startConversation,
         endConversation,
-        confirmAction: () => {},
-        dismissAction: () => {},
+        confirmAction: () => { },
+        dismissAction: () => { },
         onNavigate,
         pendingNavigation,
         clearPendingNavigation,

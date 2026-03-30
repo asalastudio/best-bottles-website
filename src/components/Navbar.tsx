@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
-    MagnifyingGlass, User, ShoppingBag, Microphone, CaretDown, List, X,
+    MagnifyingGlass, User, ShoppingBag, CaretDown, List, X,
     Sparkle, Flask, Diamond, ArrowRight,
 } from "@/components/icons";
 import { useGrace } from "@/components/useGrace";
@@ -375,11 +375,6 @@ export default function Navbar({ variant = "home", initialSearchValue }: NavbarP
         } else {
             router.push("/catalog");
         }
-    };
-
-    const handleMicClick = () => {
-        if (isDictating) stopDictation();
-        else startDictation();
     };
 
     const links = NAV_LINKS[variant];
