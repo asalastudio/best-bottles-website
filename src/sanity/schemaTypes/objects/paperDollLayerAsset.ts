@@ -46,6 +46,20 @@ export const paperDollLayerAsset = defineType({
             options: { hotspot: false },
             validation: (Rule) => Rule.required(),
         }),
+        defineField({
+            name: "offsetX",
+            title: "Offset X (px)",
+            type: "number",
+            initialValue: 0,
+            description: "Horizontal nudge — positive = right, negative = left",
+        }),
+        defineField({
+            name: "offsetY",
+            title: "Offset Y (px)",
+            type: "number",
+            initialValue: 0,
+            description: "Vertical nudge — positive = down, negative = up",
+        }),
     ],
     preview: {
         select: { slot: "slot", variantKey: "variantKey", media: "image" },

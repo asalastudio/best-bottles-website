@@ -11,6 +11,8 @@ interface LayerAsset {
     slot: string;
     variantKey: string;
     imageUrl: string;
+    offsetX?: number;
+    offsetY?: number;
 }
 
 interface FamilyData {
@@ -32,7 +34,8 @@ const FAMILY_QUERY = `*[_type == "paperDollFamily" && familyKey == $familyKey][0
     layerOrderRollon, layerOrderSpray, layerOrderLotion,
     layerAssets[]{
         _key, slot, variantKey, sourceFilename,
-        "imageUrl": image.asset->url
+        "imageUrl": image.asset->url,
+        offsetX, offsetY
     }
 }`;
 
@@ -243,7 +246,7 @@ export default function PaperDollImage({
 
         if (!order) return [];
 
-        const result: { key: string; url: string; zIndex: number; slot: string }[] = [];
+        const result: { key: string; url: string; zIndex: number; slot: string; offsetX: number; offsetY: number }[] = [];
 
         order.forEach((slot, i) => {
             let variantKey: string | null = null;
@@ -267,6 +270,8 @@ export default function PaperDollImage({
                 url: sanityUrl(asset.imageUrl),
                 zIndex: i + 1,
                 slot,
+                offsetX: asset.offsetX ?? 0,
+                offsetY: asset.offsetY ?? 0,
             });
         });
 
@@ -318,9 +323,10 @@ export default function PaperDollImage({
 
     return (
         <div className={`relative ${className}`}>
-            {layers.map(({ key, url, zIndex, slot }) => {
+            {layers.map(({ key, url, zIndex, slot, offsetX, offsetY }) => {
                 const isCap = slot === "cap";
                 const hidden = isCap && !capVisible && mode === "rollon";
+                const hasOffset = offsetX !== 0 || offsetY !== 0;
                 return (
                     <img
                         key={key}
@@ -332,6 +338,7 @@ export default function PaperDollImage({
                             zIndex,
                             opacity: hidden ? 0 : (layersReady.has(key) ? 1 : 0),
                             objectPosition: "50% 50%",
+                            transform: hasOffset ? `translate(${offsetX}px, ${offsetY}px)` : undefined,
                         }}
                         draggable={false}
                     />

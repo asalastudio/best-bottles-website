@@ -68,7 +68,6 @@ function isPlasticBottleComponent(itemName?: string): boolean {
 
 function getFinishFromGraceSku(graceSku: string | null | undefined): { label: string; swatchName: string } | null {
     if (!graceSku) return null;
-    const token = graceSku.split("-").pop()?.toUpperCase() ?? "";
     const map: Record<string, { label: string; swatchName: string }> = {
         SBLK: { label: "Shiny Black", swatchName: "Shiny Black" },
         MBLK: { label: "Matte Black", swatchName: "Matte Black" },
@@ -91,7 +90,12 @@ function getFinishFromGraceSku(graceSku: string | null | undefined): { label: st
         TRQ: { label: "Turquoise", swatchName: "Turquoise" },
         RED: { label: "Red", swatchName: "Red" },
     };
-    return map[token] ?? null;
+    // Scan all tokens (right to left) — some SKUs have trailing suffixes like "-02"
+    const tokens = graceSku.split("-").map((t) => t.toUpperCase());
+    for (let i = tokens.length - 1; i >= 0; i--) {
+        if (map[tokens[i]]) return map[tokens[i]];
+    }
+    return null;
 }
 
 function getCapFinishFromItemName(itemName: string | null | undefined): { label: string; swatchName: string } | null {
@@ -119,6 +123,28 @@ function getCapFinishFromItemName(itemName: string | null | undefined): { label:
     if (name.includes("with clear overcap")) {
         if (name.startsWith("matte silver")) return { label: "Matte Silver (Clear Overcap)", swatchName: "Matte Silver" };
         if (name.startsWith("matte gold")) return { label: "Matte Gold (Clear Overcap)", swatchName: "Matte Gold" };
+    }
+    // Sprayer/pump "with {color} trim" pattern (e.g. "sprayer with black trim and plastic overcap")
+    const trimMatch = name.match(/(?:sprayer|pump)\s+with\s+([\w\s]+?)\s+trim/);
+    if (trimMatch) {
+        const trim = trimMatch[1].trim();
+        const trimMap: Record<string, { label: string; swatchName: string }> = {
+            "black": { label: "Black", swatchName: "Black" },
+            "shiny black": { label: "Shiny Black", swatchName: "Shiny Black" },
+            "matte black": { label: "Matte Black", swatchName: "Matte Black" },
+            "gold": { label: "Gold", swatchName: "Shiny Gold" },
+            "shiny gold": { label: "Shiny Gold", swatchName: "Shiny Gold" },
+            "matte gold": { label: "Matte Gold", swatchName: "Matte Gold" },
+            "silver": { label: "Silver", swatchName: "Shiny Silver" },
+            "shiny silver": { label: "Shiny Silver", swatchName: "Shiny Silver" },
+            "matte silver": { label: "Matte Silver", swatchName: "Matte Silver" },
+            "matte copper": { label: "Matte Copper", swatchName: "Matte Copper" },
+            "red": { label: "Red", swatchName: "Red" },
+            "turquoise": { label: "Turquoise", swatchName: "Turquoise" },
+            "matte blue": { label: "Matte Blue", swatchName: "Blue" },
+            "white": { label: "White", swatchName: "White" },
+        };
+        if (trimMap[trim]) return trimMap[trim];
     }
     if (name.includes("short black cap")) return { label: "Short Black", swatchName: "Black" };
     if (name.includes("short white cap")) return { label: "Short White", swatchName: "White" };
@@ -198,6 +224,15 @@ const GLASS_COLOR_SWATCH: Record<string, string> = {
     "Swirl":   "#B8D4E3",
 };
 const LIGHT_GLASS = new Set(["Clear", "Frosted", "White", "Pink", "Swirl"]);
+
+// Glass texture swatch images — uploaded to Sanity CDN (200×200 material tiles)
+const GLASS_SWATCH_IMAGE: Record<string, string> = {
+    "Clear": "https://cdn.sanity.io/images/gh97irjh/production/6bfaeda1884020a1b0dd0a2ad8f5cfc6c9d877df-200x200.png",
+    "Frosted": "https://cdn.sanity.io/images/gh97irjh/production/73672075ba7d2697d7acd7918ff28428be2a450d-200x200.png",
+    "Amber": "https://cdn.sanity.io/images/gh97irjh/production/11fef500cbb78b56da83c5fdb3f39039440e9105-200x200.png",
+    "Cobalt Blue": "https://cdn.sanity.io/images/gh97irjh/production/a9203cb246e20bd9996c9aa398a002b9d6825f86-200x200.png",
+    "Swirl": "https://cdn.sanity.io/images/gh97irjh/production/44297e0289c1a81440c7bef879223dfc4e87acce-200x200.png",
+};
 
 const ATOMIZER_SHELL_MAP: Record<string, { label: string; hex: string; light: boolean }> = {
     black:    { label: "Black",    hex: "#1D1D1F", light: false },
@@ -846,8 +881,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         {/* Current (selected) */}
                                         <div className="flex flex-col items-center gap-1">
                                             <span
-                                                className="w-9 h-9 rounded-full border-2 border-obsidian scale-110 shadow-md flex items-center justify-center"
-                                                style={{ backgroundColor: GLASS_COLOR_SWATCH[group.color] ?? "#CCCCCC" }}
+                                                className="w-[72px] h-[72px] rounded-sm ring-2 ring-obsidian scale-110 shadow-md flex items-center justify-center overflow-hidden"
+                                                style={GLASS_SWATCH_IMAGE[group.color]
+                                                    ? { backgroundImage: `url(${GLASS_SWATCH_IMAGE[group.color]})`, backgroundSize: "cover", backgroundPosition: "center" }
+                                                    : { backgroundColor: GLASS_COLOR_SWATCH[group.color] ?? "#CCCCCC" }
+                                                }
                                             >
                                                 <Check
                                                     className={`w-3.5 h-3.5 ${LIGHT_GLASS.has(group.color) ? "text-obsidian" : "text-white"}`}
@@ -869,8 +907,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                 className="flex flex-col items-center gap-1 group/sib"
                                             >
                                                 <span
-                                                    className="w-9 h-9 rounded-full border-2 border-champagne/60 group-hover/sib:border-muted-gold transition-all"
-                                                    style={{ backgroundColor: GLASS_COLOR_SWATCH[s.color ?? ""] ?? "#CCCCCC" }}
+                                                    className="w-[72px] h-[72px] rounded-sm ring-2 ring-champagne/60 group-hover/sib:ring-muted-gold transition-all overflow-hidden"
+                                                    style={GLASS_SWATCH_IMAGE[s.color ?? ""]
+                                                        ? { backgroundImage: `url(${GLASS_SWATCH_IMAGE[s.color ?? ""]})`, backgroundSize: "cover", backgroundPosition: "center" }
+                                                        : { backgroundColor: GLASS_COLOR_SWATCH[s.color ?? ""] ?? "#CCCCCC" }
+                                                    }
                                                 />
                                                 <span className="text-[9px] text-slate group-hover/sib:text-muted-gold transition-colors">
                                                     {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && slug.includes("rollon") && s.color === "Cobalt Blue"
