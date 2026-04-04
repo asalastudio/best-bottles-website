@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
+import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 
 /**
  * Server tools proxy for ElevenLabs Conversational AI.
@@ -42,12 +43,10 @@ export async function POST(req: NextRequest) {
 
         switch (tool_name) {
             case "searchCatalog": {
-                result = await convex.query(api.grace.searchCatalog, {
-                    searchTerm: (parameters.searchTerm as string) ?? "",
-                    applicatorFilter: parameters.applicatorFilter as string | undefined,
-                    categoryLimit: parameters.categoryLimit as string | undefined,
-                    familyLimit: parameters.familyLimit as string | undefined,
-                });
+                result = await convex.query(
+                    api.grace.searchCatalog,
+                    resolveSearchCatalogParameters(parameters)
+                );
                 break;
             }
 

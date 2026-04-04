@@ -45,6 +45,9 @@ export const searchCatalog = query({
     handler: async (ctx, args) => {
         const normalizedTerm = normalizeSearchTerm(args.searchTerm);
         const searchTermToUse = normalizedTerm || args.searchTerm;
+        if (!String(searchTermToUse).trim()) {
+            return [];
+        }
         const termLower = searchTermToUse.toLowerCase();
         const detectedColor = detectCatalogColor(termLower);
         const applicatorIntent = detectApplicatorIntent(searchTermToUse);
@@ -52,15 +55,13 @@ export const searchCatalog = query({
         // When an applicator filter is active, take more results before filtering
         const takeCount = args.applicatorFilter ? 100 : 25;
 
-        let q = ctx.db.query("products").withSearchIndex("search_itemName", (q) =>
-            q.search("itemName", searchTermToUse)
-        );
-        if (args.categoryLimit) {
-            q = q.filter((q) => q.eq(q.field("category"), args.categoryLimit));
-        }
-        if (args.familyLimit) {
-            q = q.filter((q) => q.eq(q.field("family"), args.familyLimit));
-        }
+        // Use search index filter fields (category, family) — faster than post-search .filter()
+        let q = ctx.db.query("products").withSearchIndex("search_itemName", (q) => {
+            let s = q.search("itemName", searchTermToUse);
+            if (args.categoryLimit) s = s.eq("category", args.categoryLimit);
+            if (args.familyLimit) s = s.eq("family", args.familyLimit);
+            return s;
+        });
         let results = await q.take(takeCount);
 
         // Fallback or Expanded search:
@@ -70,17 +71,13 @@ export const searchCatalog = query({
         const is30mlSearch = /\b30\s*ml\b/i.test(args.searchTerm);
 
         if (results.length < 5 || (isRollOnSearch && is30mlSearch)) {
-            const fallbackQ = ctx.db
-                .query("products")
-                .withSearchIndex("search_itemName", (q) => q.search("itemName", "roller"));
+            const fallbackQ = ctx.db.query("products").withSearchIndex("search_itemName", (q) => {
+                let s = q.search("itemName", "roller");
+                if (args.categoryLimit) s = s.eq("category", args.categoryLimit);
+                if (args.familyLimit) s = s.eq("family", args.familyLimit);
+                return s;
+            });
             let fallback = await fallbackQ.take(80);
-
-            if (args.familyLimit) {
-                fallback = fallback.filter((p) => p.family === args.familyLimit);
-            }
-            if (args.categoryLimit) {
-                fallback = fallback.filter((p) => p.category === args.categoryLimit);
-            }
 
             // Intelligent size matching:
             // If they ask for 30ml roll-on, we also want to surface the 28ml Cylinder variants.

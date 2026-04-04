@@ -390,7 +390,11 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                     method: "POST", headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ tool_name: "searchCatalog", parameters: { searchTerm: params.searchTerm ?? "", familyLimit: params.familyLimit, applicatorFilter: params.applicatorFilter } }),
                 });
-                const data = await r.json() as { result?: ProductCard[] };
+                const data = await r.json() as { result?: ProductCard[]; error?: string };
+                if (!r.ok) {
+                    console.error("[Grace] searchCatalog HTTP", r.status, data.error);
+                    return "Search failed. Please try again.";
+                }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
                 sessionMetricsRef.current.toolsCalled++;
                 sessionMetricsRef.current.toolsUsed.add("searchCatalog");

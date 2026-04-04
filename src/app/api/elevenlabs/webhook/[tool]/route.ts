@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../../convex/_generated/api";
+import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 
 let _convex: ConvexHttpClient | null = null;
 
@@ -26,12 +27,7 @@ type ToolHandler = (params: Record<string, unknown>) => Promise<unknown>;
 function buildToolHandlers(convex: ConvexHttpClient): Record<string, ToolHandler> {
   return {
     searchCatalog: (p) =>
-      convex.query(api.grace.searchCatalog, {
-        searchTerm: (p.searchTerm as string) ?? "",
-        applicatorFilter: p.applicatorFilter as string | undefined,
-        categoryLimit: p.categoryLimit as string | undefined,
-        familyLimit: p.familyLimit as string | undefined,
-      }),
+      convex.query(api.grace.searchCatalog, resolveSearchCatalogParameters(p)),
 
     getFamilyOverview: (p) =>
       convex.query(api.grace.getFamilyOverview, {
