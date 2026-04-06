@@ -248,6 +248,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
     // ── Messages & streaming ─────────────────────────────────────────────────
     const [messages, setMessages] = useState<GraceMessage[]>([]);
     const [streamingText, setStreamingText] = useState("");
+    const [isAwaitingReply, setIsAwaitingReply] = useState(false);
     const [input, setInput] = useState("");
     const [voiceEnabled, setVoiceEnabled] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -380,6 +381,9 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
     // ── Stable refs ──────────────────────────────────────────────────────────
     const routerRef = useRef(router);
     useEffect(() => { routerRef.current = router; }, [router]);
+
+    const closePanelRef = useRef(closePanel);
+    useEffect(() => { closePanelRef.current = closePanel; }, [closePanel]);
 
     // ── Client tools ─────────────────────────────────────────────────────────
     const clientTools = useMemo(() => ({
@@ -561,7 +565,12 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                     const redirectUrl = buildBrowsePath(displayProducts, params.query, params.family);
                     sessionMetricsRef.current.navigations++;
                     analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
-                    setTimeout(() => { routerRef.current.push(redirectUrl); }, 500);
+                    setTimeout(() => {
+                        routerRef.current.push(redirectUrl);
+                        if (window.matchMedia("(max-width: 768px)").matches) {
+                            closePanelRef.current();
+                        }
+                    }, 500);
                     return `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
                 }
                 return `${sizeWarning} Search returned ${products.length} nearby products: ${summary}.`;
@@ -656,7 +665,12 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             sessionMetricsRef.current.navigations++;
             analytics.graceToolCalled({ toolName: "navigateToPage", success: true });
             analytics.graceNavigation({ destination: navPath, triggeredBy: "navigateToPage" });
-            setTimeout(() => { routerRef.current.push(navPath); }, 500);
+            setTimeout(() => {
+                routerRef.current.push(navPath);
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    closePanelRef.current();
+                }
+            }, 500);
             return `Navigating the customer to ${params.title ?? "the page"} now.`;
         },
 
@@ -770,6 +784,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         setConversationActive(false);
         setGraceStatus("idle");
         setStreamingText("");
+        setIsAwaitingReply(false);
     }, []);
 
     const handleModeChange = useCallback((mode: { mode: string }) => {
@@ -783,6 +798,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         setGraceStatus("error");
         setErrorMessage(typeof error === "string" ? error : "Connection error");
         setVoiceFailed(true);
+        setIsAwaitingReply(false);
         setTimeout(() => {
             setGraceStatus((prev) => prev === "error" ? "idle" : prev);
         }, 5000);
@@ -793,13 +809,26 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
 
     const handleMessage = useCallback((payload: { message: string; source?: string; role?: string }) => {
         const role = payload.role === "user" ? "user" as const : "grace" as const;
-        // Skip user echoes — send() already adds user messages to state
-        if (role === "user") return;
-        // Mark that onMessage handled finalization (prevents duplicate from stop-event fallback)
-        streamingFinalizedRef.current = true;
-        setStreamingText("");
         const text = payload.message;
         const norm = normalizeGraceMessageText(text);
+
+        if (role === "user") {
+            // Append voice transcripts; skip if send() already inserted an identical line
+            setMessages((prev) => {
+                const lastUser = [...prev].reverse().find((m) => m.role === "user");
+                if (lastUser && normalizeGraceMessageText(lastUser.content) === norm) {
+                    return prev;
+                }
+                return [...prev, { role: "user", content: text, id: nextMsgId() }];
+            });
+            setIsAwaitingReply(true);
+            return;
+        }
+
+        // Assistant message finalization
+        streamingFinalizedRef.current = true;
+        setIsAwaitingReply(false);
+        setStreamingText("");
         setMessages((prev) => {
             const last = prev[prev.length - 1];
             if (
@@ -845,6 +874,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             }, 600);
             return;
         }
+        setIsAwaitingReply(false);
         setStreamingText((prev) => {
             if (prev === "") {
                 streamingFinalizedRef.current = false;
@@ -978,6 +1008,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             ...prev,
             { role: "user", content: msg, id: nextMsgId() },
         ]);
+        setIsAwaitingReply(true);
 
         if (conversationRef.current?.getId?.()) {
             conversationRef.current.sendUserMessage(msg);
@@ -1012,6 +1043,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         status: graceStatus,
         messages,
         streamingText,
+        isAwaitingReply,
         input,
         setInput,
         voiceEnabled,
@@ -1039,7 +1071,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         browsingHistory,
     }), [
         panelMode, openPanel, closePanel, minimizeToStrip, isOpen,
-        graceStatus, messages, streamingText, input, voiceEnabled,
+        graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
         send, errorMessage, conversationActive, startConversation, endConversation,
         onNavigate, pendingNavigation, clearPendingNavigation,
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,

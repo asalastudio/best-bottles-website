@@ -31,6 +31,72 @@ export const FAMILY_MIN_SIZE_ML: Record<string, number> = {
     Slim: 15,
 };
 
+// ─── Shape vocabulary → family mapping ──────────────────────────────────────
+// Maps customer shape language to the families that match visually.
+// "primary" families are the closest match; "also" families are similar shapes
+// the customer may also want to see.
+
+export type ShapeMatch = { primary: string[]; also: string[] };
+
+// Geometric truth is internal. Customers describe what they SEE, not precise
+// cross-sections. "Square" to a buyer = flat sides + angular corners, regardless
+// of whether the depth equals the width. Group by visual impression, not geometry.
+
+export const SHAPE_TO_FAMILIES: Record<string, ShapeMatch> = {
+    // ── Flat-sided / Angular (customer sees flat faces + corners) ────────
+    // Empire is a true square cross-section (~37x37mm) at 50ml and 100ml.
+    square:      { primary: ["Square", "Empire", "Elegant", "Flair", "Rectangle"], also: [] },
+    rectangular: { primary: ["Elegant", "Rectangle", "Flair", "Square", "Empire"], also: ["Grace"] },
+    flat:        { primary: ["Elegant", "Flair", "Rectangle", "Square", "Empire"], also: ["Grace"] },
+    boxy:        { primary: ["Square", "Empire", "Elegant", "Flair", "Rectangle"], also: [] },
+    angular:     { primary: ["Square", "Empire", "Elegant", "Diamond", "Rectangle"], also: ["Flair"] },
+
+    // ── Round cross-section (customer sees a circle from above) ─────────
+    round:       { primary: ["Round", "Circle", "Boston Round", "Diva"], also: [] },
+    circular:    { primary: ["Circle", "Round", "Boston Round", "Diva"], also: [] },
+    globe:       { primary: ["Round", "Diva", "Circle"],                also: [] },
+    spherical:   { primary: ["Round", "Diva"],                          also: ["Circle"] },
+
+    // ── Cylindrical / Tubular (customer sees a tube shape) ──────────────
+    cylindrical: { primary: ["Cylinder", "Slim", "Sleek", "Pillar"],    also: ["Royal"] },
+    tube:        { primary: ["Cylinder", "Slim", "Sleek"],              also: ["Pillar"] },
+    tubular:     { primary: ["Cylinder", "Slim", "Sleek"],              also: ["Pillar"] },
+
+    // ── Height / proportion descriptors ─────────────────────────────────
+    tall:        { primary: ["Sleek", "Slim", "Cylinder"],              also: [] },
+    skinny:      { primary: ["Sleek", "Slim", "Cylinder"],              also: [] },
+    thin:        { primary: ["Sleek", "Slim", "Cylinder"],              also: [] },
+    slim:        { primary: ["Slim", "Sleek", "Cylinder"],              also: [] },
+    slender:     { primary: ["Slim", "Sleek", "Cylinder"],              also: [] },
+    wide:        { primary: ["Round", "Diva", "Circle", "Grace"],       also: [] },
+    squat:       { primary: ["Round", "Diva", "Tulip", "Bell"],         also: ["Circle"] },
+
+    // ── Organic / curved shapes ─────────────────────────────────────────
+    oval:        { primary: ["Grace", "Diva", "Circle"],                also: [] },
+    teardrop:    { primary: ["Teardrop", "Apothecary"],                 also: [] },
+    pear:        { primary: ["Apothecary", "Teardrop"],                 also: [] },
+
+    // ── Geometric / decorative ──────────────────────────────────────────
+    diamond:     { primary: ["Diamond"],                                also: [] },
+    faceted:     { primary: ["Diamond"],                                also: [] },
+    gem:         { primary: ["Diamond"],                                also: [] },
+    bell:        { primary: ["Bell"],                                   also: [] },
+    heart:       { primary: ["Decorative"],                             also: [] },
+    bulb:        { primary: ["Tulip", "Bell"],                          also: [] },
+    tulip:       { primary: ["Tulip", "Bell"],                          also: [] },
+    pillar:      { primary: ["Pillar", "Cylinder", "Royal"],            also: [] },
+    column:      { primary: ["Pillar", "Cylinder"],                     also: [] },
+
+    // ── Style / use-case descriptors ────────────────────────────────────
+    apothecary:  { primary: ["Apothecary", "Boston Round"],             also: [] },
+    pharmacy:    { primary: ["Apothecary", "Boston Round"],             also: [] },
+    lab:         { primary: ["Boston Round", "Apothecary"],             also: [] },
+    laboratory:  { primary: ["Boston Round", "Apothecary"],             also: [] },
+    decorative:  { primary: ["Decorative", "Diamond", "Apothecary", "Teardrop", "Bell"], also: [] },
+    ornate:      { primary: ["Decorative", "Diamond", "Apothecary"],    also: [] },
+    classic:     { primary: ["Empire", "Diva", "Elegant", "Grace", "Diamond"], also: [] },
+};
+
 // ─── Types ──────────────────────────────────────────────────────────────────
 
 export type SearchCandidate = {
@@ -118,6 +184,31 @@ export function detectApplicatorIntent(term: string): "rollon" | "spray" | "drop
     return null;
 }
 
+// ─── Shape detection ─────────────────────────────────────────────────────────
+
+/**
+ * Detects shape vocabulary in a search term and returns the matching families.
+ * Returns null if no shape language is detected.
+ */
+export function detectShapeIntent(term: string): ShapeMatch | null {
+    const t = term.toLowerCase();
+    const shapeWords = Object.keys(SHAPE_TO_FAMILIES);
+    for (const word of shapeWords) {
+        if (new RegExp(`\\b${word}\\b`).test(t)) {
+            return SHAPE_TO_FAMILIES[word];
+        }
+    }
+    // Multi-word shape phrases
+    if (/\blab\s*bottle\b/.test(t)) return SHAPE_TO_FAMILIES.lab;
+    if (/\bclassic\s*(perfume|fragrance)?\s*bottle\b/.test(t)) return SHAPE_TO_FAMILIES.classic;
+    if (/\bheart\s*shape/i.test(t)) return SHAPE_TO_FAMILIES.heart;
+    if (/\bpear\s*shape/i.test(t)) return SHAPE_TO_FAMILIES.pear;
+    if (/\bbell\s*shape/i.test(t)) return SHAPE_TO_FAMILIES.bell;
+    if (/\bglobe\s*shape/i.test(t)) return SHAPE_TO_FAMILIES.globe;
+    if (/\bdiamond\s*shape/i.test(t)) return SHAPE_TO_FAMILIES.diamond;
+    return null;
+}
+
 // ─── Deduplication ──────────────────────────────────────────────────────────
 
 export function dedupeCatalogResults<T extends SearchCandidate>(items: T[]): T[] {
@@ -132,6 +223,51 @@ export function dedupeCatalogResults<T extends SearchCandidate>(items: T[]): T[]
     return out;
 }
 
+/**
+ * Ensures minimum representation from each required family in results.
+ * Reserves N slots per family, then fills remaining slots with highest-scored items.
+ */
+export function diversifyByFamily<T extends SearchCandidate>(
+    sortedItems: T[],
+    requiredFamilies: string[],
+    limit: number,
+    minPerFamily = 3,
+): T[] {
+    if (requiredFamilies.length === 0) return sortedItems.slice(0, limit);
+
+    const reserved: T[] = [];
+    const reservedKeys = new Set<string>();
+    const familyBuckets = new Map<string, T[]>();
+
+    for (const fam of requiredFamilies) {
+        familyBuckets.set(fam, []);
+    }
+
+    for (const item of sortedItems) {
+        const fam = item.family ?? "";
+        if (familyBuckets.has(fam)) {
+            const bucket = familyBuckets.get(fam)!;
+            if (bucket.length < minPerFamily) {
+                bucket.push(item);
+                reserved.push(item);
+                reservedKeys.add(item.graceSku ?? `${item.family}|${item.capacityMl}|${item.color}`);
+            }
+        }
+    }
+
+    const remaining = sortedItems.filter(
+        (item) => !reservedKeys.has(item.graceSku ?? `${item.family}|${item.capacityMl}|${item.color}`)
+    );
+
+    const result = [...reserved];
+    for (const item of remaining) {
+        if (result.length >= limit) break;
+        result.push(item);
+    }
+
+    return result;
+}
+
 // ─── Scoring ────────────────────────────────────────────────────────────────
 
 export function scoreCatalogResult(
@@ -142,6 +278,8 @@ export function scoreCatalogResult(
         detectedCapMl: number | null;
         detectedColor: string | null;
         applicatorIntent: "rollon" | "spray" | "dropper" | "pump" | "reducer" | null;
+        shapePrimaryFamilies?: string[];
+        shapeAlsoFamilies?: string[];
     }
 ): number {
     let score = 0;
@@ -149,6 +287,9 @@ export function scoreCatalogResult(
     if (meta.detectedFamily && result.family === meta.detectedFamily) score += 120;
     if (meta.detectedCapMl !== null && result.capacityMl === meta.detectedCapMl) score += 120;
     if (meta.detectedColor && result.color === meta.detectedColor) score += 140;
+
+    if (meta.shapePrimaryFamilies?.includes(result.family ?? "")) score += 100;
+    else if (meta.shapeAlsoFamilies?.includes(result.family ?? "")) score += 50;
 
     const applicator = (result.applicator ?? "").toLowerCase();
     if (meta.applicatorIntent === "rollon" && /(roller|roll)/.test(applicator)) score += 90;

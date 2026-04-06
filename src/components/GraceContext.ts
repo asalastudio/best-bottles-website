@@ -133,6 +133,8 @@ export interface GraceContextValue {
     messages: GraceMessage[];
     /** Partial agent response being streamed in real-time */
     streamingText: string;
+    /** True from user send until the first assistant token arrives */
+    isAwaitingReply: boolean;
     input: string;
     setInput: (v: string) => void;
     voiceEnabled: boolean;
@@ -178,6 +180,7 @@ const GRACE_NOOP: GraceContextValue = {
     status: "idle",
     messages: [],
     streamingText: "",
+    isAwaitingReply: false,
     input: "",
     setInput: NOOP,
     voiceEnabled: false,

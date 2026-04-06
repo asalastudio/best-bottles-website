@@ -1,0 +1,42 @@
+{
+  "_catalog-clear-9ml.png": {
+    "image_file": "_catalog-clear-9ml.png",
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "source": "catalog-estimated (pending PSD verification)"
+  },
+  "_catalog-amber-9ml.png": {
+    "image_file": "_catalog-amber-9ml.png",
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "source": "catalog-estimated (pending PSD verification)"
+  },
+  "_catalog-cobalt-blue-9ml.png": {
+    "image_file": "_catalog-cobalt-blue-9ml.png",
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "source": "catalog-estimated (pending PSD verification)"
+  },
+  "_catalog-frosted-9ml.png": {
+    "image_file": "_catalog-frosted-9ml.png",
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "source": "catalog-estimated (pending PSD verification)"
+  },
+  "_catalog-swirl-9ml.png": {
+    "image_file": "_catalog-swirl-9ml.png",
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "source": "catalog-estimated (pending PSD verification)"
+  }
+}

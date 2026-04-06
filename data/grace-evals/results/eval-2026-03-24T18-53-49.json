@@ -1,0 +1,420 @@
+{
+  "timestamp": "2026-03-24T18:53:49.883Z",
+  "summary": {
+    "total": 20,
+    "pass": 4,
+    "fail": 16,
+    "error": 0,
+    "accuracy": "20.0%"
+  },
+  "results": [
+    {
+      "id": "exact-boston-30ml",
+      "category": "exact_retrieval",
+      "question": "Do you have a 30ml Boston Round bottle?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"Boston Round\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 857
+    },
+    {
+      "id": "exact-cylinder-100ml",
+      "category": "exact_retrieval",
+      "question": "Show me a 100ml Cylinder bottle.",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"Cylinder\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"100ml\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 199
+    },
+    {
+      "id": "exact-elegant-50ml-frosted",
+      "category": "exact_retrieval",
+      "question": "I need a 50ml frosted Elegant bottle.",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"Elegant\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 336
+    },
+    {
+      "id": "exact-diva-30ml",
+      "category": "exact_retrieval",
+      "question": "What do you have in the Diva 30ml?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"Diva\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 166
+    },
+    {
+      "id": "pivot-boston-10ml",
+      "category": "pivot_behavior",
+      "question": "Do you have a 10ml Boston Round?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"10ml Boston Round\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": false,
+          "detail": "NO pivot language found"
+        }
+      ],
+      "elapsedMs": 185
+    },
+    {
+      "id": "pivot-boston-5ml",
+      "category": "pivot_behavior",
+      "question": "I need a 5ml Boston Round bottle.",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": false
+        },
+        {
+          "check": "shouldPivot",
+          "passed": false,
+          "detail": "NO pivot language found"
+        }
+      ],
+      "elapsedMs": 171
+    },
+    {
+      "id": "pivot-diva-15ml",
+      "category": "pivot_behavior",
+      "question": "Show me a 15ml Diva.",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": false
+        },
+        {
+          "check": "shouldPivot",
+          "passed": false,
+          "detail": "NO pivot language found"
+        }
+      ],
+      "elapsedMs": 203
+    },
+    {
+      "id": "component-sprayer-elegant",
+      "category": "component_accuracy",
+      "question": "What sprayers fit the 50ml Elegant bottle?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"18-415\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"20-400\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 1175
+    },
+    {
+      "id": "component-cap-boston-round",
+      "category": "component_accuracy",
+      "question": "What caps work with the 30ml Boston Round?",
+      "status": "pass",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [],
+      "elapsedMs": 204
+    },
+    {
+      "id": "component-dropper-cylinder",
+      "category": "component_accuracy",
+      "question": "I need a dropper for my 15ml Cylinder. What fits?",
+      "status": "pass",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [],
+      "elapsedMs": 401
+    },
+    {
+      "id": "viscosity-thick-oil-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I have a thick perfume oil, like honey consistency. What roll-on bottles do you recommend?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"Tola\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"dropper\"",
+          "passed": false
+        },
+        {
+          "check": "shouldPivot",
+          "passed": false,
+          "detail": "NO pivot language found"
+        }
+      ],
+      "elapsedMs": 187
+    },
+    {
+      "id": "viscosity-edp-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I'm making an eau de parfum. Should I use roll-on bottles?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "shouldPivot",
+          "passed": false,
+          "detail": "NO pivot language found"
+        }
+      ],
+      "elapsedMs": 174
+    },
+    {
+      "id": "family-overview-boston",
+      "category": "family_overview",
+      "question": "Tell me about your Boston Round collection.",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"60ml\"",
+          "passed": false
+        }
+      ],
+      "elapsedMs": 216
+    },
+    {
+      "id": "family-overview-cylinder",
+      "category": "family_overview",
+      "question": "What sizes do Cylinders come in?",
+      "status": "pass",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [],
+      "elapsedMs": 203
+    },
+    {
+      "id": "hallucination-fake-family",
+      "category": "hallucination",
+      "question": "Do you carry the Monaco bottle family?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustNotMention: \"Monaco collection\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our Monaco\"",
+          "passed": true
+        },
+        {
+          "check": "shouldAdmitNoMatch",
+          "passed": false,
+          "detail": "may have hallucinated"
+        }
+      ],
+      "elapsedMs": 208
+    },
+    {
+      "id": "hallucination-fake-size",
+      "category": "hallucination",
+      "question": "I need a 250ml Elegant bottle.",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "shouldPivot",
+          "passed": false,
+          "detail": "NO pivot language found"
+        }
+      ],
+      "elapsedMs": 165
+    },
+    {
+      "id": "policy-warehouse-pickup",
+      "category": "policy",
+      "question": "Can I pick up my order in person?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"Union City\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"1-800-936-3628\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"don't offer\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"cannot\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 182
+    },
+    {
+      "id": "policy-minimum-order",
+      "category": "policy",
+      "question": "I only need 3 bottles. Can I order that?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"$50\"",
+          "passed": false
+        },
+        {
+          "check": "mustMention: \"no unit minimum\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"email sales\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"can't help\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"minimum 12\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 254
+    },
+    {
+      "id": "brand-identity-no-manufacture",
+      "category": "brand_guard",
+      "question": "Do you manufacture your own glass?",
+      "status": "fail",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustMention: \"source\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"we manufacture\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our factory\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"we blow glass\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our facility\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 173
+    },
+    {
+      "id": "applicator-rollon-search",
+      "category": "exact_retrieval",
+      "question": "Show me your roll-on bottles.",
+      "status": "pass",
+      "response": "I ran into an unexpected issue. Please try again in a moment, or reach out to our team at sales@nematinternational.com if this persists.",
+      "checks": [
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't have roll-on\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 209
+    }
+  ]
+}

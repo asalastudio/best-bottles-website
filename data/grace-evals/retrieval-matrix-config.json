@@ -1,0 +1,78 @@
+{
+  "version": 2,
+  "description": "Representative family × capacity spots for Layer A searchCatalog. Capacities align with typical Convex productGroups; adjust when the master sheet changes.",
+  "capacityMlTolerance": 0,
+  "families": [
+    "Cylinder",
+    "Boston Round",
+    "Elegant",
+    "Circle",
+    "Diva",
+    "Empire",
+    "Slim",
+    "Vial",
+    "Sleek",
+    "Tulip"
+  ],
+  "capacityMlByFamily": {
+    "Cylinder": [5, 9, 28, 30, 100],
+    "Boston Round": [15, 30, 60],
+    "Elegant": [15, 30, 60, 100],
+    "Circle": [15, 30, 50, 100],
+    "Diva": [30, 46, 100],
+    "Empire": [50, 100],
+    "Slim": [30, 50],
+    "Vial": [2, 3, 4],
+    "Sleek": [5, 30, 50],
+    "Tulip": [5, 6]
+  },
+  "applicatorSpots": [
+    {
+      "id": "app-cylinder-rollon",
+      "searchTerm": "30ml cylinder roller",
+      "familyLimit": "Cylinder",
+      "applicatorFilter": "Metal Roller Ball,Plastic Roller Ball",
+      "expectFamily": "Cylinder",
+      "expectCapacityMl": 30,
+      "capacityMlTolerance": 2,
+      "note": "28ml roll-on variants may rank alongside 30ml"
+    },
+    {
+      "id": "app-boston-spray",
+      "searchTerm": "30ml boston round perfume spray bottle",
+      "familyLimit": "Boston Round",
+      "expectFamily": "Boston Round",
+      "expectCapacityMl": 30,
+      "capacityMlTolerance": 0,
+      "note": "Keyword-only (no applicatorFilter) — tests itemName search for spray intent without brittle filter OR"
+    },
+    {
+      "id": "app-elegant-dropper",
+      "searchTerm": "60ml elegant dropper",
+      "familyLimit": "Elegant",
+      "applicatorFilter": "Dropper",
+      "expectFamily": "Elegant",
+      "expectCapacityMl": 60,
+      "capacityMlTolerance": 0
+    },
+    {
+      "id": "app-cylinder-lotion",
+      "searchTerm": "100ml cylinder lotion",
+      "familyLimit": "Cylinder",
+      "applicatorFilter": "Lotion Pump",
+      "expectFamily": "Cylinder",
+      "expectCapacityMl": 100,
+      "capacityMlTolerance": 0
+    },
+    {
+      "id": "app-tulip-rollon",
+      "searchTerm": "5ml tulip roller",
+      "familyLimit": "Tulip",
+      "applicatorFilter": "Metal Roller Ball,Plastic Roller Ball",
+      "expectFamily": "Tulip",
+      "expectCapacityMl": 5,
+      "capacityMlTolerance": 2,
+      "note": "ApplicatorFilter path — 6ml Tulip variants may rank near 5ml"
+    }
+  ]
+}

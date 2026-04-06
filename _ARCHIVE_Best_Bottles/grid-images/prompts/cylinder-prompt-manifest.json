@@ -1,0 +1,122 @@
+[
+  {
+    "file": "cylinder-amber-9ml.txt",
+    "family": "cylinder",
+    "color": "amber",
+    "capacity_ml": 9,
+    "hw_ratio": 4.3,
+    "cap_pct": 30,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-11ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 11,
+    "hw_ratio": 4.1,
+    "cap_pct": 29,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-14ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 14,
+    "hw_ratio": 3.9,
+    "cap_pct": 28,
+    "closure": "shiny-gold-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-25ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 25,
+    "hw_ratio": 3.5,
+    "cap_pct": 25,
+    "closure": "sprayer",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-30ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 30,
+    "hw_ratio": 3.3,
+    "cap_pct": 24,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-50ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 50,
+    "hw_ratio": 3.0,
+    "cap_pct": 22,
+    "closure": "sprayer",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-5ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 5,
+    "hw_ratio": 4.0,
+    "cap_pct": 28,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-clear-9ml.txt",
+    "family": "cylinder",
+    "color": "clear",
+    "capacity_ml": 9,
+    "hw_ratio": 4.3,
+    "cap_pct": 30,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-cobalt-blue-5ml.txt",
+    "family": "cylinder",
+    "color": "cobalt-blue",
+    "capacity_ml": 5,
+    "hw_ratio": 4.0,
+    "cap_pct": 28,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-cobalt-blue-9ml.txt",
+    "family": "cylinder",
+    "color": "cobalt-blue",
+    "capacity_ml": 9,
+    "hw_ratio": 4.3,
+    "cap_pct": 30,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-frosted-9ml.txt",
+    "family": "cylinder",
+    "color": "frosted",
+    "capacity_ml": 9,
+    "hw_ratio": 4.3,
+    "cap_pct": 30,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  },
+  {
+    "file": "cylinder-swirl-9ml.txt",
+    "family": "cylinder",
+    "color": "swirl",
+    "capacity_ml": 9,
+    "hw_ratio": 4.3,
+    "cap_pct": 30,
+    "closure": "matte-silver-rollon",
+    "source": "catalog-estimated"
+  }
+]

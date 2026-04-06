@@ -1,0 +1,967 @@
+{
+  "timestamp": "2026-03-25T04:23:45.405Z",
+  "totalRuns": 3,
+  "summary": {
+    "total": 41,
+    "pass": 37,
+    "fail": 4,
+    "error": 0,
+    "accuracy": "90.2%",
+    "avgConfidence": "93.9%"
+  },
+  "results": [
+    {
+      "id": "exact-boston-30ml",
+      "category": "exact_retrieval",
+      "question": "Do you have a 30ml Boston Round bottle?",
+      "status": "pass",
+      "response": "Yes, we carry the 30ml Boston Round in clear, amber, and cobalt blue glass, with applicator options including a simple cap, dropper, and roller ball. All share a 20-400 neck finish and are in stock. What are you filling it with — that'll help me point you to the right applicator?",
+      "checks": [
+        {
+          "check": "mustMention: \"Boston Round\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 4505
+    },
+    {
+      "id": "exact-cylinder-100ml",
+      "category": "exact_retrieval",
+      "question": "Show me a 100ml Cylinder bottle.",
+      "status": "pass",
+      "response": "We carry the 100ml Cylinder in clear glass, and it comes paired with a range of applicators — spray pumps in shiny or matte silver, reducers with cap options spanning shiny gold, shiny/matte silver, shiny/matte black, white, and faux leather finishes in black, brown, ivory, and pink. The neck finish is 18-415 across all variants, so every closure in our system is guaranteed to fit.\n\nWhat are you filling it with — a spray fragrance, a splash-on cologne, or something else? That'll help me point you to the right applicator pairing.",
+      "checks": [
+        {
+          "check": "mustMention: \"Cylinder\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"100ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 6836
+    },
+    {
+      "id": "exact-elegant-60ml-frosted",
+      "category": "exact_retrieval",
+      "question": "I need a 60ml frosted Elegant bottle.",
+      "status": "pass",
+      "response": "The 60ml frosted Elegant is in stock and comes in two applicator styles — a perfume spray pump (available in shiny black, shiny silver, matte silver, and copper) or a splash-on reducer with a wide range of cap finishes including shiny gold, matte silver, shiny black, white, and several faux leather options in black, brown, ivory, pink, and light brown.\n\nWhat are you filling it with — a spray formula like an EDP, or more of a fragrance oil or cologne?",
+      "checks": [
+        {
+          "check": "mustMention: \"Elegant\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 5902
+    },
+    {
+      "id": "exact-diva-30ml",
+      "category": "exact_retrieval",
+      "question": "What do you have in the Diva 30ml?",
+      "status": "pass",
+      "response": "The Diva 30ml comes in clear glass and is available across three applicator styles: a spray pump (in shiny gold, matte gold, shiny silver, matte silver, and shiny black), a reducer with cap (in a wide range of finishes including standard metals, tall caps in silver and black, and faux leather caps in ivory, pink, and brown), and a lotion pump (in shiny gold, matte gold, shiny silver, matte silver, shiny black, and copper). All variants share an 18-415 neck finish and are in stock.\n\nWhat's the intended formula — a spray fragrance, a splash-on oil, or something more like a serum or lotion?",
+      "checks": [
+        {
+          "check": "mustMention: \"Diva\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7344
+    },
+    {
+      "id": "exact-empire-50ml",
+      "category": "exact_retrieval",
+      "question": "Do you carry an Empire bottle in 50ml?",
+      "status": "pass",
+      "response": "We do — the Empire comes in 50ml, and it's actually the smaller of the two sizes we carry (the other being 100ml). Both are available in clear glass with a range of applicator styles including spray, dropper, lotion pump, and even a vintage bulb sprayer.\n\nIs there a particular applicator or finish you have in mind for the 50ml?",
+      "checks": [
+        {
+          "check": "mustMention: \"Empire\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 5003
+    },
+    {
+      "id": "exact-slim-15ml",
+      "category": "exact_retrieval",
+      "question": "Show me the 15ml Slim bottle.",
+      "status": "pass",
+      "response": "It looks like our Slim family doesn't actually include a 15ml size — the smallest Slim we carry is 30ml, and it's a lovely vessel at that. It comes in clear glass with an 18-415 neck finish, and is available with a dropper, reducer, or lotion pump in a range of cap finishes (gold, silver, black, copper, and even a faux leather option).\n\nIf 15ml is important to you, I can point you toward our Cylinder or Vial families, which go down to 5ml and 1ml respectively. What's the product you're filling — that'll help me steer you to the right size and applicator?",
+      "checks": [
+        {
+          "check": "mustMention: \"Slim\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7021
+    },
+    {
+      "id": "pivot-boston-10ml",
+      "category": "pivot_behavior",
+      "question": "Do you have a 10ml Boston Round?",
+      "status": "pass",
+      "response": "We don't stock a 10ml Boston Round — our Boston Rounds start at 15ml. Would you like to see the 15ml, or would a 10ml Cylinder work for your needs instead?",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 1909
+    },
+    {
+      "id": "pivot-boston-5ml",
+      "category": "pivot_behavior",
+      "question": "I need a 5ml Boston Round bottle.",
+      "status": "pass",
+      "response": "We don't stock a 5ml Boston Round — our Boston Rounds start at 15ml.\n\nIf you need a 5ml vessel, our Cylinder family is a great alternative and does come in 5ml. Would you like me to pull up the 5ml Cylinders, or would you prefer to look at the 15ml Boston Round instead?",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 3000
+    },
+    {
+      "id": "pivot-diva-15ml",
+      "category": "pivot_behavior",
+      "question": "Show me a 15ml Diva.",
+      "status": "pass",
+      "response": "The search returned only 46ml Diva results — our Diva family actually starts at 30ml, so a 15ml isn't something we carry in that silhouette. The smallest Diva we stock is the 30ml.\n\nWould you like me to pull up the 30ml Diva, or if 15ml is the size you need, I can point you toward another family — the Cylinder or Slim both come in 15ml and carry a similarly refined presence?",
+      "checks": [
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 5926
+    },
+    {
+      "id": "pivot-empire-15ml",
+      "category": "pivot_behavior",
+      "question": "I want a 15ml Empire bottle.",
+      "status": "fail",
+      "response": "We don't carry a 15ml Empire — the Empire family comes in 50ml and 100ml. If you need something smaller, our Cylinder or Slim families both start at 15ml and carry a similarly refined silhouette. Would you like to explore one of those, or would the 50ml Empire work for what you have in mind?",
+      "checks": [
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": false
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 0.5,
+      "elapsedMs": 4619
+    },
+    {
+      "id": "component-sprayer-elegant-30ml",
+      "category": "component_accuracy",
+      "question": "What sprayers fit the 30ml Elegant bottle?",
+      "status": "fail",
+      "response": "I ran into an issue processing your request. Please try again in a moment.",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"18-415\", \"18/415\", \"eighteen\"]",
+          "passed": false,
+          "detail": "NONE matched"
+        },
+        {
+          "check": "mustNotMention: \"20-400\"",
+          "passed": true
+        }
+      ],
+      "confidence": 0.5,
+      "elapsedMs": 19418
+    },
+    {
+      "id": "component-cap-boston-round",
+      "category": "component_accuracy",
+      "question": "What caps work with the 30ml Boston Round?",
+      "status": "pass",
+      "response": "The 30ml Boston Round has a 20-400 neck finish, and it's compatible with a few closure types.\n\nFor simple caps, there's a black lid in the 20-400 thread. For roll-on caps, you have six options — tall profile, available in shiny gold, matte gold, shiny silver, matte silver, shiny black, and matte black. And if you need a dropper closure, those come in black or white bulb with plain, shiny gold, or shiny silver collar finishes.\n\nEverything is guaranteed to fit since it all threads onto the same 20-400 neck. Are you pairing a closure with a specific formula type, or is the finish and colour the main consideration for you?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"20-400\", \"20/400\", \"cap\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 9132
+    },
+    {
+      "id": "component-dropper-cylinder-9ml",
+      "category": "component_accuracy",
+      "question": "I need a dropper for my 9ml Cylinder. What fits?",
+      "status": "pass",
+      "response": "Good news — I have clarity on both variants. Here's the honest picture:\n\nThe 9ml Cylinder comes in two neck sizes, and neither currently has a dropper listed as a compatible component. The 13-415 neck version (the taller sprayer-style bottle) is compatible with sprayers, caps, and roll-on caps. The 17-415 neck version (the roller ball style) supports sprayers, roll-on caps, and lotion pumps.\n\nBefore I suggest a workaround, it would help to know a bit more about your formula — what are you filling the bottle with, and what's the viscosity like? That'll tell me whether a different vessel in a similar size might serve you better, or whether one of the existing applicator options could actually work just as well for your needs.",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"dropper\", \"13-415\", \"13/415\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 15413
+    },
+    {
+      "id": "component-lotion-pump",
+      "category": "component_accuracy",
+      "question": "Do you have lotion pumps that fit a 100ml Cylinder?",
+      "status": "pass",
+      "response": "Yes — there are seven lotion pumps that fit the 100ml Cylinder perfectly, all with the matching 18-415 thread. They come in matte gold, shiny gold, shiny black, matte silver, matte silver with a clear overcap, shiny silver, and matte copper. All are guaranteed to seat correctly since they're part of our integrated system.\n\nWhat finish direction are you leaning toward for your product line?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"lotion pump\", \"pump\", \"18-415\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 8462
+    },
+    {
+      "id": "viscosity-thick-oil-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I have a thick perfume oil, like honey consistency. What roll-on bottles do you recommend?",
+      "status": "pass",
+      "response": "I want to make sure you get the best result here — a roll-on applicator relies on the ball spinning freely in its socket, and with a honey-consistency oil, the viscosity is typically too high for that mechanism to work well. The ball won't roll smoothly, and you'll likely get frustrating under-dispensing or no flow at all.\n\nFor a thick perfume oil, I'd actually steer you toward two better options:\n\nA dropper bottle gives you precise, controlled application — perfect for a concentrated oil where a little goes a long way. Or, if your oil is in the attar tradition, a tola bottle is the classic choice — the traditional dabbing vessel used for exactly this style of fragrance. It's elegant, functional, and tells a beautiful story about the product.\n\nWhich direction resonates more with you — the precision of a dropper, or the ritual of a tola-style dabber?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"Tola\", \"tola\", \"dropper\", \"Dropper\", \"dab\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7073
+    },
+    {
+      "id": "viscosity-edp-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I'm making an eau de parfum. Should I use roll-on bottles?",
+      "status": "pass",
+      "response": "Great question — and an important one to get right before ordering.\n\nEau de parfum is alcohol-based, which means roll-on applicators aren't the right fit. The roller ball is engineered for oil-viscosity liquids — thin fragrance oils, serums, beard oils. Alcohol-based formulas like EDP will seep past the ball and leak, which is the last thing you want after labelling and boxing your product.\n\nFor an EDP, a fine mist sprayer is the classic and most effective choice. It delivers a soft, diffuse spray that's ideal for alcohol-based fine fragrance — exactly the kind of experience your customers expect when they pick up a perfume bottle.\n\nAre you thinking of a particular bottle style or size for the line?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"spray\", \"sprayer\", \"atomizer\", \"mist\", \"leak\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 5916
+    },
+    {
+      "id": "viscosity-lotion-no-dropper",
+      "category": "viscosity_guard",
+      "question": "I'm packaging a thick body lotion. Would a dropper bottle work?",
+      "status": "pass",
+      "response": "A dropper isn't the right fit for a thick lotion — the viscosity is too high for a dropper tube to dispense cleanly, and it would be frustrating for your customers to use.\n\nFor thick emulsions like body lotion, a lotion pump is the right applicator — it's engineered for that viscosity and delivers a controlled, satisfying dose every time.\n\nWould you like me to pull up our lotion pump bottle options, or do you have a particular size or style in mind?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"pump\", \"lotion pump\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7012
+    },
+    {
+      "id": "family-overview-boston",
+      "category": "family_overview",
+      "question": "Tell me about your Boston Round collection.",
+      "status": "pass",
+      "response": "The Boston Round is a timeless workhorse of the fragrance and wellness world — that classic, rounded-shoulder silhouette you'll recognise from apothecary shelves and essential oil collections. We carry it in three sizes: 15ml, 30ml, and 60ml, across three glass colours — clear, amber, and cobalt blue.\n\nAmber is particularly popular for essential oils and light-sensitive formulations since it filters UV naturally. The collection pairs with droppers and roll-on applicators (both metal and plastic roller ball), and the neck finishes run 18-400 and 20-400 depending on the size.\n\nAre you working with a specific formula type — an essential oil, a serum, something else — so I can point you toward the right size and applicator combination?",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"60ml\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 6423
+    },
+    {
+      "id": "family-overview-cylinder",
+      "category": "family_overview",
+      "question": "What sizes do Cylinders come in?",
+      "status": "pass",
+      "response": "Cylinders come in 3ml, 4ml, 5ml, 9ml, 25ml, 28ml, 30ml, 50ml, 100ml, 118ml, 227ml, and 454ml. Is there a particular size or use case you have in mind?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"5ml\", \"9ml\", \"30ml\", \"100ml\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 3253
+    },
+    {
+      "id": "hallucination-fake-family",
+      "category": "hallucination",
+      "question": "Do you carry the Monaco bottle family?",
+      "status": "pass",
+      "response": "We don't carry a \"Monaco\" bottle family — that name doesn't appear in our catalog. It's possible you may have seen it under a different name from another supplier, or it could be known by a different style name here.\n\nCould you describe what it looks like — the shape, size, or how you'd be applying the product? I'd be happy to point you to something comparable from our collection.",
+      "checks": [
+        {
+          "check": "mustNotMention: \"Monaco collection\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our Monaco\"",
+          "passed": true
+        },
+        {
+          "check": "shouldAdmitNoMatch",
+          "passed": true,
+          "detail": "correctly admits no match"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 5168
+    },
+    {
+      "id": "hallucination-fake-size",
+      "category": "hallucination",
+      "question": "I need a 250ml Elegant bottle.",
+      "status": "pass",
+      "response": "Unfortunately, we don't carry a 250ml Elegant — the family tops out well below that capacity, with sizes ranging from 15ml up through 60ml or so. If you need something in the 250ml range, I can point you toward our Cylinder or Boston Round families, which are available in larger capacities. Would either of those directions work for what you have in mind?",
+      "checks": [
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7338
+    },
+    {
+      "id": "hallucination-fake-color",
+      "category": "hallucination",
+      "question": "Do you have the Boston Round in pink glass?",
+      "status": "fail",
+      "response": "Unfortunately, pink glass isn't available in our Boston Round collection. The family comes in three glass colours: clear, amber, and cobalt blue. Would any of those work for what you have in mind, or would you like me to check if pink glass is available in another bottle family?",
+      "checks": [
+        {
+          "check": "shouldAdmitNoMatch",
+          "passed": false,
+          "detail": "may have hallucinated"
+        }
+      ],
+      "confidence": 0,
+      "elapsedMs": 3195
+    },
+    {
+      "id": "policy-warehouse-pickup",
+      "category": "policy",
+      "question": "Can I pick up my order in person?",
+      "status": "pass",
+      "response": "Yes — you're welcome to pick up in person at our Union City warehouse. Just call us at 1-800-936-3628 at least one business day ahead to arrange it, and we're open for pickups Monday through Friday, ten-thirty to three.\n\nIs there anything else I can help you with, or shall we get started on finding the right bottles for you?",
+      "checks": [
+        {
+          "check": "mustMention: \"Union City\"",
+          "passed": true
+        },
+        {
+          "check": "mustMentionAny: [\"1-800-936-3628\", \"800-936-3628\", \"936-3628\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't offer\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"cannot\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 3260
+    },
+    {
+      "id": "policy-minimum-order",
+      "category": "policy",
+      "question": "I only need 3 bottles. Can I order that?",
+      "status": "pass",
+      "response": "Absolutely — there's no unit minimum at all, just a $50 order floor.\n\nDepending on the bottle style, three units may or may not reach that threshold on their own, but it's easy to get there by adding matching closures, a second style to sample, or a few extra pieces to build out a proper test kit.\n\nWhat bottle were you looking at?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"$50\", \"fifty dollar\", \"50 dollar\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"email sales\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"can't help\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"minimum 12\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 4270
+    },
+    {
+      "id": "policy-same-day-shipping",
+      "category": "policy",
+      "question": "Can I get same-day shipping?",
+      "status": "pass",
+      "response": "Same-day shipping is available for a $15 fee, as long as you place your order before 11:00am PST and request it by phone at 1-800-936-3628 — it can't be arranged via email or chat. It's not available for international orders, personalised items, or large/oversize shipments.\n\nIs there something specific you're looking to get out the door today?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"$15\", \"fifteen\", \"11:00am\", \"11am\", \"before 11\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustMentionAny(2): [\"phone\", \"call\", \"800-936-3628\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 3351
+    },
+    {
+      "id": "policy-returns",
+      "category": "policy",
+      "question": "What is your return policy?",
+      "status": "pass",
+      "response": "Returns are accepted within 15 days of receipt, with a 15% restocking fee applied. Customers are responsible for return shipping costs, and original shipping and handling charges are non-refundable. Items must be unused and non-personalised, and international orders are not eligible for return.\n\nIs there anything else I can help you with?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"15 day\", \"15-day\", \"fifteen day\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustMentionAny(2): [\"15%\", \"restocking\", \"fifteen percent\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 3029
+    },
+    {
+      "id": "spray-equiv-9ml-spray-bottle",
+      "category": "spray_terminology",
+      "question": "Do you have a 9ml spray bottle?",
+      "status": "pass",
+      "response": "We do — quite a few, actually. The 9ml spray bottle comes in several styles: the slender tall Cylinder in clear, frosted, cobalt blue, or swirl glass with sprayer trim colours ranging from matte black and gold to copper, blue, silver, and more. There's also a Pillar style in clear glass with a matte black sprayer, if you prefer a slightly different silhouette.\n\nIs there a particular look or finish you have in mind — clear glass with a specific trim colour, or something like frosted?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"9ml\", \"9 ml\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't have\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7269
+    },
+    {
+      "id": "spray-equiv-9ml-fine-mist",
+      "category": "spray_terminology",
+      "question": "Do you have a 9ml fine mist sprayer?",
+      "status": "pass",
+      "response": "We do — quite a few, actually. The 9ml fine mist sprayer comes in several Cylinder styles: clear glass, frosted glass, cobalt blue, and a swirl design, with trim colours ranging from gold and silver to black, copper, blue, and more. There's also a clear Pillar style with a matte black sprayer.\n\nIs there a particular glass colour or trim finish you had in mind?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"9ml\", \"9 ml\", \"fine mist\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't have\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 6960
+    },
+    {
+      "id": "spray-equiv-30ml-spray",
+      "category": "spray_terminology",
+      "question": "Show me a 30ml spray bottle.",
+      "status": "pass",
+      "response": "We have a lovely selection of 30ml spray bottles. At that size, two silhouettes stand out right away:\n\nThe Slim — a slender, refined clear glass bottle with a vintage-style bulb sprayer in lavender with a shiny silver collar. Clean lines, very tactile in hand.\n\nThe Sleek — also 30ml in clear glass, available with either a lavender bulb sprayer and silver collar, or a matte silver sprayer with a matte silver collar for a more understated, monochromatic look.\n\nAnd the Diva — a curvier, more sculptural 30ml in clear glass, dressed with a lavender bulb sprayer and silver collar. It has a lot of presence on a vanity.\n\nAll three feature the antique bulb sprayer — that classic squeeze-bulb atomiser with a beautiful, collectible feel. If you were looking for a standard pump sprayer instead, I can pull those up as well.\n\nWhat's the fragrance or product going inside — and do you have a particular aesthetic in mind?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"30ml\", \"30 ml\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't have\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 10733
+    },
+    {
+      "id": "spray-equiv-5ml-spray",
+      "category": "spray_terminology",
+      "question": "I need a 5ml spray bottle for samples.",
+      "status": "pass",
+      "response": "We have a lovely selection of 5ml fine mist sprayer bottles — all in stock and purpose-built for samples, decants, and travel. Three silhouettes stand out: the Cylinder (clean and classic, in clear or cobalt blue), the Sleek (a slightly more refined profile, in clear), and the Tulip (a gently curved form, in amber — great if your formula is light-sensitive). Sprayer collar colours run across matte gold, matte silver, shiny gold, shiny silver, shiny black, matte black, and matte blue depending on the style.\n\nDo you have a glass colour or finish direction in mind — or a particular aesthetic you're working toward for the brand?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"5ml\", \"5 ml\", \"5.5\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't have\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 10221
+    },
+    {
+      "id": "brand-identity-no-manufacture",
+      "category": "brand_guard",
+      "question": "Do you manufacture your own glass?",
+      "status": "pass",
+      "response": "We don't manufacture glass — Best Bottles is a sourcing partner and curated supplier. We work with a global network of artisan glassmakers to bring premium vessels to our collection, and every piece is selected to meet our quality standards for the beauty and fragrance industry.\n\nWhat makes us distinctive is that we use these same bottles for Nemat's own fragrance lines, sold at Sephora, Ulta, and Whole Foods — so every vessel in our catalog has been validated in real retail environments before it reaches your brand.\n\nAre you exploring packaging for a specific product or line?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"sourc\", \"supply\", \"partner\", \"curate\", \"network\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"we manufacture\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our factory\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"we blow glass\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our facility\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 4874
+    },
+    {
+      "id": "brand-no-superlatives",
+      "category": "brand_guard",
+      "question": "Why should I choose Best Bottles over other suppliers?",
+      "status": "pass",
+      "response": "There are a few things that genuinely set us apart, and I'll share them honestly rather than as a sales pitch.\n\nWe use these exact bottles for Nemat International's own fragrance lines — sold at Sephora, Ulta, and Whole Foods. That means every vessel in our collection has been validated in a real retail environment, not just listed in a catalog. When you choose a bottle from us, you're choosing something that has already earned shelf space at major retailers.\n\nThe second thing is our system guarantee. Every bottle, closure, sprayer, dropper, and cap we sell is engineered to work together. The number-one pain point in this industry is sourcing a beautiful bottle and then discovering the cap doesn't seat properly, or the sprayer threads don't match. We eliminate that entirely. Our components are cross-referenced and guaranteed to fit — no guesswork, no costly surprises before a launch.\n\nThird is where we sit in the market. Most suppliers serve either the hobbyist end — small minimums, inconsistent quality — or the enterprise end, where you need to commit to tens of thousands of units before anyone takes your call. We occupy the space between: professional-grade packaging, small-batch flexibility, and the kind of consultative guidance that helps a growing brand make the right decision the first time. There are no unit minimums, just a fifty-dollar order floor, so you can test before you commit.\n\nAnd finally, we're a family-owned Bay Area company with over two decades in the fragrance industry. You're not working with a call center — you're working with people who understand what it takes to bring a fragrance product to market.\n\nWhat kind of product are you developing? I'd love to point you toward the right starting place.",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"system guarantee\", \"Nemat\", \"Ulta\", \"Sephora\", \"practitioner\", \"curated\", \"compatibility\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"the best in the industry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"the finest bottles\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"the ultimate\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 11754
+    },
+    {
+      "id": "pricing-no-volunteer",
+      "category": "pricing_etiquette",
+      "question": "Tell me about your 30ml Cylinder bottles.",
+      "status": "pass",
+      "response": "I should note that the search returned mostly 50ml and 100ml Cylinder results, and only 2 variants exist for the 30ml. Let me give the customer accurate information about what we actually carry at 30ml.\n\nThe 30ml Cylinder is one of our more compact offerings in that family — a clean, straight-sided vessel with an 18-415 neck finish. It comes in just two variants, so it's a focused option rather than a full range. The broader Cylinder family spans from 5ml all the way to 454ml, in glass colours including clear, amber, frosted, cobalt blue, and swirl, with applicator options ranging from fine mist sprayers and reducers to roll-ons, lotion pumps, and even vintage bulb sprayers.\n\nIf the 30ml feels like the right capacity, I'd love to narrow it down — what's the formula you're working with, and how are you envisioning your customer applying it?",
+      "checks": [
+        {
+          "check": "mustMention: \"Cylinder\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"$\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"dollar\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"per unit\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"each for\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 9462
+    },
+    {
+      "id": "pricing-when-asked",
+      "category": "pricing_etiquette",
+      "question": "How much does a 30ml Boston Round cost?",
+      "status": "pass",
+      "response": "Pricing depends on the applicator and configuration, but here's a quick breakdown for the 30ml Boston Round:\n\nThe base bottle with a simple cap runs about $0.47 each, dropping to $0.45 when you order a dozen or more. With a dropper it's around $0.72 each (or $0.68 at twelve-plus), and with a roller ball applicator you're looking at roughly $0.87–$1.07 depending on whether you go plastic or metal ball.\n\nAre you planning to use it for a particular formula — an oil, serum, or something else? That'll help me point you to the right configuration.",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"$\", \"dollar\", \"price\", \"pricing\", \"per unit\", \"each\"]",
+          "passed": true,
+          "detail": "matched"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 6757
+    },
+    {
+      "id": "nearsize-3ml-spray",
+      "category": "near_size_matching",
+      "question": "Do you have a 3ml spray bottle?",
+      "status": "pass",
+      "response": "We do — a 3ml clear glass cylinder with a fine mist sprayer, available with either a white or black pump, both in stock. It's a lovely little sample bottle, perfectly sized for fragrance trials or travel sets. Would you like to know more about quantities, or are you pairing these with any other packaging?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"3.3ml\", \"3.3 ml\", \"3ml\", \"sample\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't have\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 6189
+    },
+    {
+      "id": "nearsize-4ml-spray",
+      "category": "near_size_matching",
+      "question": "Do you have a 4ml spray bottle?",
+      "status": "pass",
+      "response": "Yes — we do carry a 4ml spray bottle. It's a clear glass Cylinder with a fine mist sprayer, available with either a white or black pump, and it's in stock. What are you filling it with — a perfume, a facial mist, something else?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"4ml\", \"4 ml\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 6444
+    },
+    {
+      "id": "nearsize-5ml-finds-5.5",
+      "category": "near_size_matching",
+      "question": "I need a 5ml spray bottle.",
+      "status": "pass",
+      "response": "We have quite a few options in 5ml — three silhouettes, all with fine mist sprayers and all in stock.\n\nThe Cylinder is a clean, straight-walled classic available in clear or cobalt blue glass. The Sleek has a slightly more refined, tapered profile in clear glass. And the Tulip brings a softer, curved shape in amber glass — lovely if you need UV protection for a light-sensitive formula.\n\nSprayer collar colours run across all three: shiny gold, matte gold, shiny silver, matte silver, shiny black, matte black, and matte blue depending on the style.\n\nDo any of those silhouettes or glass colours speak to what you have in mind?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"5ml\", \"5.5ml\", \"5.5 ml\", \"5 ml\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 8633
+    },
+    {
+      "id": "nearsize-3ml-transparent-exact",
+      "category": "near_size_matching",
+      "question": "What's the exact capacity of your smallest spray bottle?",
+      "status": "fail",
+      "response": "Our smallest spray bottle holds exactly 5ml (0.17oz) — available in the Cylinder and Sleek families with fine mist sprayers. Is that size what you had in mind, or are you working with a specific fill volume?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"3.3\", \"3ml\", \"0.1oz\"]",
+          "passed": false,
+          "detail": "NONE matched"
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        }
+      ],
+      "confidence": 0.5,
+      "elapsedMs": 4899
+    },
+    {
+      "id": "cross-family-comparison",
+      "category": "consultative",
+      "question": "I'm launching a luxury perfume line. Should I go with Elegant or Diva bottles?",
+      "status": "pass",
+      "response": "These two families each tell a very different story on shelf, and the right choice really depends on the aesthetic your brand is building. Here's how I'd frame it:\n\nThe Elegant is the more versatile of the two — a clean, elongated silhouette that reads as timeless and apothecary-inspired. It comes in four sizes (15ml through 100ml), clear or frosted glass, and supports the widest range of applicators including fine mist sprayers, vintage bulb sprayers with tassel, droppers, and roll-ons. If your line spans multiple formats or price points, the Elegant gives you room to grow within a cohesive visual language.\n\nThe Diva is a bolder, more sculptural statement — it comes in 30ml, 46ml, and 100ml, with the same clear or frosted glass options, but a more curvaceous, fashion-forward profile. It's a strong choice if your brand identity leans toward femininity and drama. One thing worth noting: the Diva carries a consistent 18-415 neck finish across all sizes, which simplifies sourcing closures across your range.\n\nFor a luxury perfume line, both pair beautifully with fine mist sprayers or vintage bulb sprayers — the two most elevated applicator presentations.\n\nThe question I'd ask you: is your brand's visual identity more quiet and refined, or does it have a more expressive, couture personality?",
+      "checks": [
+        {
+          "check": "mustMention: \"Elegant\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"Diva\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 11044
+    },
+    {
+      "id": "ambiguous-use-case",
+      "category": "consultative",
+      "question": "I need bottles for my essential oil business. Where do I start?",
+      "status": "pass",
+      "response": "Essential oils are a wonderful category to work in — the packaging decisions you make here will directly affect product integrity, customer experience, and shelf life.\n\nA few quick questions to point you in the right direction:\n\nAre your oils light-sensitive? Most essential oils benefit from amber glass, which blocks UV degradation. And how do you want your customers to apply the oil — a dropper for precise dispensing, a roll-on for direct skin application, or an open pour with a reducer?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"amber\", \"dropper\", \"roll-on\", \"roller\", \"Boston Round\", \"UV\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 4413
+    },
+    {
+      "id": "thread-size-confusion",
+      "category": "education",
+      "question": "What does 18-415 mean? I see it on your product pages.",
+      "status": "pass",
+      "response": "Great question — it's a standard industry notation for a bottle's neck finish.\n\nThe first number, 18, is the outer diameter of the bottle's neck opening in millimetres. The second number, 415, refers to the thread pattern — specifically the number of turns and the pitch of the threading that a closure screws onto.\n\nSo an 18-415 neck needs a closure — cap, sprayer, dropper, or roller — that is also labelled 18-415. That match is what guarantees a proper, leak-free seal.\n\nIs there a specific bottle or closure you're trying to pair up?",
+      "checks": [
+        {
+          "check": "mustMentionAny: [\"diameter\", \"millimeter\", \"thread\"]",
+          "passed": true,
+          "detail": "matched"
+        },
+        {
+          "check": "mustNotMention: \"I don't know\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not sure\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 5031
+    }
+  ],
+  "allRunAccuracies": [
+    "87.8%",
+    "87.8%",
+    "90.2%"
+  ]
+}

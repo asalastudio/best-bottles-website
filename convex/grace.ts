@@ -20,7 +20,9 @@ import {
     normalizeApplicatorValue,
     detectCatalogColor,
     detectApplicatorIntent,
+    detectShapeIntent,
     dedupeCatalogResults,
+    diversifyByFamily,
     scoreCatalogResult,
     buildSearchCatalogToolResult,
     buildBottleComponentsToolResult,
@@ -104,44 +106,114 @@ export const searchCatalog = query({
         }
 
         // ── Structured fallback via productGroups ──────────────────────────
-        // Text search on itemName is weak for structured queries like "100ml circle".
-        // Parse family name and capacity from the search term and cross-check
-        // productGroups so we never miss an obvious match.
+        // Text search on itemName is weak for structured queries like "100ml circle"
+        // or shape-based queries like "flat bottle" / "cylindrical 30ml".
+        // Parse family name, capacity, and shape vocabulary from the search term
+        // and cross-check productGroups so we never miss an obvious match.
         const KNOWN_FAMILIES = [
             "Apothecary", "Atomizer", "Bell", "Boston Round", "Circle", "Cylinder",
-            "Diamond", "Diva", "Elegant", "Empire", "Grace", "Rectangle", "Round",
-            "Sleek", "Slim", "Tulip", "Vial",
+            "Diamond", "Diva", "Elegant", "Empire", "Flair", "Grace", "Pillar",
+            "Rectangle", "Round", "Royal", "Sleek", "Slim", "Square", "Teardrop",
+            "Tulip", "Vial",
         ];
         const detectedFamily = args.familyLimit
             ?? KNOWN_FAMILIES.find((f) => termLower.includes(f.toLowerCase()))
             ?? null;
         const capMatch = args.searchTerm.match(/\b(\d+)\s*ml\b/i);
         const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;
-        let structuredResults: typeof results = [];
 
-        if (detectedFamily || detectedCapMl !== null || detectedColor) {
-            let groupHits = detectedFamily
-                ? await ctx.db.query("productGroups").withIndex("by_family", (q) => q.eq("family", detectedFamily)).collect()
-                : await ctx.db.query("productGroups").collect();
+        // Shape detection: "flat bottle" → Elegant, Flair; "square" → Square, Elegant, etc.
+        // Geometric truth is secondary — customer visual impression drives the search.
+        // When a shape word matches a literal family name (e.g., "square" → Square family),
+        // STILL treat it as a shape query so all visually-similar families surface.
+        const shapeMatch = detectShapeIntent(args.searchTerm);
+        const shapeOverridesFamily = shapeMatch && detectedFamily
+            && shapeMatch.primary.some((f) => f.toLowerCase() === detectedFamily!.toLowerCase());
+        const shapeFamilies = shapeMatch
+            ? [...shapeMatch.primary, ...shapeMatch.also]
+            : [];
+
+        let structuredResults: typeof results = [];
+        let didAdjacentExpansion = false;
+
+        if (detectedFamily || detectedCapMl !== null || detectedColor || shapeFamilies.length > 0) {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            let groupHits: any[] = [];
+
+            if (shapeFamilies.length > 0) {
+                for (const fam of shapeFamilies) {
+                    const famGroups = await ctx.db.query("productGroups")
+                        .withIndex("by_family", (q) => q.eq("family", fam))
+                        .collect();
+                    groupHits.push(...famGroups);
+                }
+            } else if (detectedFamily && !shapeOverridesFamily) {
+                groupHits = await ctx.db.query("productGroups")
+                    .withIndex("by_family", (q) => q.eq("family", detectedFamily))
+                    .collect();
+            } else {
+                groupHits = await ctx.db.query("productGroups").collect();
+            }
+
             if (detectedCapMl) {
                 groupHits = groupHits.filter((g) => g.capacityMl === detectedCapMl);
             }
             if (detectedColor) {
                 groupHits = groupHits.filter((g) => g.color === detectedColor);
             }
+
+            // Adjacent-size expansion: when an exact family+capacity match fails,
+            // expand to visually similar families at the requested capacity.
+            // e.g., "square 50ml" → Square has no 50ml → expand to Elegant 60ml.
+            const needsAdjacentExpansion =
+                groupHits.length === 0 && detectedCapMl !== null && (detectedFamily || shapeFamilies.length > 0 || shapeOverridesFamily);
+
+            if (needsAdjacentExpansion && shapeMatch) {
+                didAdjacentExpansion = true;
+                const allRelated = [...shapeMatch.primary, ...shapeMatch.also];
+                const wideGroups = [];
+                for (const fam of allRelated) {
+                    const famGroups = await ctx.db.query("productGroups")
+                        .withIndex("by_family", (q) => q.eq("family", fam))
+                        .collect();
+                    wideGroups.push(...famGroups);
+                }
+                wideGroups.sort((a, b) =>
+                    Math.abs((a.capacityMl ?? 0) - detectedCapMl!) - Math.abs((b.capacityMl ?? 0) - detectedCapMl!)
+                );
+                groupHits = wideGroups.slice(0, 10);
+            } else if (needsAdjacentExpansion && detectedFamily) {
+                didAdjacentExpansion = true;
+                // No shape data, but family was detected — show all sizes in that family
+                groupHits = await ctx.db.query("productGroups")
+                    .withIndex("by_family", (q) => q.eq("family", detectedFamily))
+                    .collect();
+            }
+
             if (groupHits.length > 0) {
-                groupHits = groupHits.sort((a, b) => {
+                const isPrimary = new Set(shapeMatch?.primary ?? []);
+                groupHits.sort((a, b) => {
                     const scoreA =
                         (detectedFamily && a.family === detectedFamily ? 3 : 0) +
+                        (isPrimary.has(a.family) ? 2 : 0) +
                         (detectedCapMl !== null && a.capacityMl === detectedCapMl ? 3 : 0) +
                         (detectedColor && a.color === detectedColor ? 4 : 0);
                     const scoreB =
                         (detectedFamily && b.family === detectedFamily ? 3 : 0) +
+                        (isPrimary.has(b.family) ? 2 : 0) +
                         (detectedCapMl !== null && b.capacityMl === detectedCapMl ? 3 : 0) +
                         (detectedColor && b.color === detectedColor ? 4 : 0);
                     return scoreB - scoreA;
                 });
+
+                // Limit per-family to ensure shape diversity in results
+                const PER_FAMILY_CAP = shapeFamilies.length > 1 || needsAdjacentExpansion ? 6 : 8;
+                const familyCount: Record<string, number> = {};
                 for (const group of groupHits) {
+                    const fam = group.family ?? "";
+                    familyCount[fam] = (familyCount[fam] ?? 0) + 1;
+                    if (familyCount[fam] > PER_FAMILY_CAP) continue;
+
                     let variants = await ctx.db.query("products")
                         .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
                         .take(8);
@@ -210,24 +282,27 @@ export const searchCatalog = query({
                 .slice(0, 25);
         }
 
-        results = dedupeCatalogResults([...structuredResults, ...results])
-            .sort((a, b) =>
-                scoreCatalogResult(b, {
-                    termLower,
-                    detectedFamily,
-                    detectedCapMl,
-                    detectedColor,
-                    applicatorIntent,
-                }) -
-                scoreCatalogResult(a, {
-                    termLower,
-                    detectedFamily,
-                    detectedCapMl,
-                    detectedColor,
-                    applicatorIntent,
-                })
-            )
-            .slice(0, args.applicatorFilter ? 25 : takeCount);
+        // When shape intent overrides the literal family match, or adjacent expansion
+        // triggered, don't boost the detected family in scoring — all shape-group families
+        // should rank equally based on the customer's visual impression.
+        const scoringFamily = (didAdjacentExpansion || shapeOverridesFamily) ? null : detectedFamily;
+
+        const scoreMeta = {
+            termLower,
+            detectedFamily: scoringFamily,
+            detectedCapMl,
+            detectedColor,
+            applicatorIntent,
+            shapePrimaryFamilies: shapeMatch?.primary,
+            shapeAlsoFamilies: shapeMatch?.also,
+        };
+        const sorted = dedupeCatalogResults([...structuredResults, ...results])
+            .sort((a, b) => scoreCatalogResult(b, scoreMeta) - scoreCatalogResult(a, scoreMeta));
+
+        const resultLimit = args.applicatorFilter ? 25 : takeCount;
+        results = shapeFamilies.length > 1
+            ? diversifyByFamily(sorted, shapeMatch?.primary ?? [], resultLimit)
+            : sorted.slice(0, resultLimit);
 
         // Return a trimmed version — components arrays are large and waste tokens.
         // Normalize capacity strings: remove internal spaces ("9 ml" → "9ml")

@@ -1,0 +1,30 @@
+# *
+User-agent: *
+Allow: /
+
+# *
+User-agent: *
+Disallow: /api/
+Disallow: /portal/
+Disallow: /studio/
+Disallow: /sign-in/
+Disallow: /_next/
+
+# GPTBot
+User-agent: GPTBot
+Allow: /
+
+# Google-Extended
+User-agent: Google-Extended
+Allow: /
+
+# anthropic-ai
+User-agent: anthropic-ai
+Allow: /
+
+# Host
+Host: https://www.bestbottles.com
+
+# Sitemaps
+Sitemap: https://www.bestbottles.com/sitemap.xml
+Sitemap: https://www.bestbottles.com/server-sitemap.xml

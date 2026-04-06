@@ -1,0 +1,49 @@
+{
+  "timestamp": "2026-03-26T19:09:41.265Z",
+  "totalRuns": 1,
+  "summary": {
+    "total": 1,
+    "pass": 1,
+    "fail": 0,
+    "error": 0,
+    "accuracy": "100.0%",
+    "avgConfidence": "100.0%"
+  },
+  "results": [
+    {
+      "id": "exact-cylinder-5ml-clear-rollon",
+      "category": "exact_retrieval",
+      "question": "Show me the 5ml clear Cylinder roll-on bottle.",
+      "status": "pass",
+      "response": "We have the 5ml clear Cylinder roll-on in stock and it's quite well appointed — available with either a metal roller ball or a plastic roller ball, and your choice of cap finish: shiny black, shiny gold, matte gold, shiny silver, matte silver, matte copper, or a few playful dot-cap options in pink, silver, and black.\n\nDo you have a cap colour in mind, or would you like a recommendation based on the aesthetic you're going for?",
+      "checks": [
+        {
+          "check": "mustMention: \"Cylinder\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"5ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"Clear\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"Cobalt Blue\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 9958
+    }
+  ]
+}

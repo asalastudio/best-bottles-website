@@ -1,0 +1,18 @@
+{
+  "_catalog-clear-5ml.png": {
+    "image_file": "_catalog-clear-5ml.png",
+    "height_width_ratio": 4.0,
+    "cap_percent": 28,
+    "body_percent": 72,
+    "frame_occupancy_height_pct": 60,
+    "source": "catalog-estimated (pending PSD verification)"
+  },
+  "_catalog-cobalt-blue-5ml.png": {
+    "image_file": "_catalog-cobalt-blue-5ml.png",
+    "height_width_ratio": 4.0,
+    "cap_percent": 28,
+    "body_percent": 72,
+    "frame_occupancy_height_pct": 60,
+    "source": "catalog-estimated (pending PSD verification)"
+  }
+}

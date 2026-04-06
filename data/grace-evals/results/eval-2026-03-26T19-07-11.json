@@ -1,0 +1,34 @@
+{
+  "timestamp": "2026-03-26T19:07:11.923Z",
+  "totalRuns": 1,
+  "summary": {
+    "total": 1,
+    "pass": 1,
+    "fail": 0,
+    "error": 0,
+    "accuracy": "100.0%",
+    "avgConfidence": "100.0%"
+  },
+  "results": [
+    {
+      "id": "pivot-empire-15ml",
+      "category": "pivot_behavior",
+      "question": "I want a 15ml Empire bottle.",
+      "status": "pass",
+      "response": "We don't carry a 15ml Empire — the Empire family starts at 30ml, and the sizes we stock are 50ml and 100ml. If 15ml is important to your project, I could point you toward our Slim or Cylinder families, which go down to 15ml and 5ml respectively. Or if you're open to the 50ml Empire, I'd be happy to walk you through the applicator and cap options — there's a lovely range.\n\nWhat's the product you're packaging?",
+      "checks": [
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "confidence": 1,
+      "elapsedMs": 7970
+    }
+  ]
+}

@@ -16,6 +16,9 @@
     "eval:grace": "node scripts/eval_grace.mjs",
     "eval:grace:verbose": "node scripts/eval_grace.mjs --verbose",
     "eval:grace:loop": "node scripts/eval_grace.mjs --runs 3 --verbose",
+    "test:grace:matrix": "node scripts/grace-retrieval-matrix.mjs",
+    "test:grace:matrix:verbose": "node scripts/grace-retrieval-matrix.mjs --verbose",
+    "test:catalog:integrity": "node scripts/catalog-integrity.mjs",
     "paper-doll:manifest": "node scripts/paper-doll/generate-manifest.mjs",
     "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs"
   },

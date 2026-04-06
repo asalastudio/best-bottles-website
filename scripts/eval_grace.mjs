@@ -1,9 +1,13 @@
 #!/usr/bin/env node
 /**
- * Grace AI Retrieval Accuracy Eval v2
+ * Grace AI — Layer C (behavior) eval v2
  *
- * Runs test cases against the live askGrace action and scores
- * product retrieval accuracy, pivot behavior, and hallucination detection.
+ * Runs `data/grace-evals/test-cases.json` against the live `askGrace` action and scores
+ * retrieval language, pivot behavior, and hallucination guardrails.
+ *
+ * Related:
+ *   - Layer A (deterministic Convex searchCatalog): npm run test:grace:matrix
+ *   - Import integrity (graceSku / productGroupId): npm run test:catalog:integrity
  *
  * Usage:
  *   npm run eval:grace                        # run all cases once
@@ -14,7 +18,10 @@
  *
  * Requires:
  *   - NEXT_PUBLIC_CONVEX_URL in .env.local (or CONVEX_URL env var)
- *   - ANTHROPIC_API_KEY set in Convex dashboard
+ *   - ANTHROPIC_API_KEY on the *Convex deployment* (not only in .env.local).
+ *     Dashboard → Project → Settings → Environment Variables, or:
+ *       npx convex env set ANTHROPIC_API_KEY sk-ant-api03-...
+ *     Must match the deployment URL you use (dev vs prod).
  */
 
 import { readFileSync, writeFileSync, mkdirSync } from "fs";
@@ -189,8 +196,11 @@ function scoreResponse(testCase, responseText) {
 
 // ── Detect infrastructure errors ─────────────────────────────────────────────
 function isInfraError(responseText) {
-    return responseText.includes("I ran into an unexpected issue") ||
-           responseText.includes("not yet configured");
+    return (
+        responseText.includes("I ran into an unexpected issue") ||
+        responseText.includes("not yet configured") ||
+        responseText.includes("Grace is not yet configured")
+    );
 }
 
 // ── Single run ───────────────────────────────────────────────────────────────
@@ -341,7 +351,25 @@ async function main() {
 
         // Abort early if infrastructure error on every case (no point continuing)
         if (result.infraErrorCount === filteredCases.length) {
-            console.error("\nAll cases hit infrastructure errors. Check your ANTHROPIC_API_KEY credits.");
+            const sample = result.results.find((r) => r.status === "infra_error");
+            console.error("\nAll cases hit infrastructure errors (askGrace could not run scored evals).");
+            if (sample?.response) {
+                console.error("\nSample assistant reply (first case):");
+                console.error(`  ${String(sample.response).slice(0, 400).replace(/\n/g, " ")}`);
+            }
+            console.error(`
+This eval calls Convex action grace:askGrace, which uses ANTHROPIC_API_KEY from
+your *Convex deployment*, not from .env.local on this machine.
+
+  • Set the key:  npx convex env set ANTHROPIC_API_KEY <your-key>
+    (or Convex Dashboard → Settings → Environment Variables)
+
+  • Target the same deployment as NEXT_PUBLIC_CONVEX_URL in .env.local
+    (dev vs prod each need the variable if you run evals against both).
+
+  • If the key is already set: open console.anthropic.com → check credits,
+    billing, and that the key is not expired/revoked.
+`);
             process.exit(1);
         }
     }

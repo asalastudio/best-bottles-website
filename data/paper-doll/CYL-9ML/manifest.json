@@ -1,0 +1,331 @@
+{
+  "generated_at": "2026-03-25T07:15:16.722Z",
+  "pipeline_version": "1.0.0",
+  "familyKey": "CYL-9ML",
+  "displayName": "9ml Cylinder",
+  "canvas": {
+    "width": 2000,
+    "height": 2200
+  },
+  "layerOrderRollon": [
+    "body",
+    "roller",
+    "cap"
+  ],
+  "layerOrderSpray": [
+    "body",
+    "sprayer"
+  ],
+  "layerOrderLotion": [
+    "body",
+    "pump"
+  ],
+  "anchors": {
+    "body": {
+      "x": 999,
+      "y": 1368
+    },
+    "cap": {
+      "x": 998,
+      "y": 922
+    },
+    "roller": {
+      "x": 996,
+      "y": 868
+    },
+    "sprayer": {
+      "x": 997,
+      "y": 854
+    },
+    "pump": {
+      "x": 996,
+      "y": 853
+    }
+  },
+  "configurations": {
+    "rollon": {
+      "layers": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "description": "Roll-on: body + roller fitment + cap"
+    },
+    "spray": {
+      "layers": [
+        "body",
+        "sprayer"
+      ],
+      "description": "Spray: body + spray mechanism (includes cap)"
+    },
+    "lotion": {
+      "layers": [
+        "body",
+        "pump"
+      ],
+      "description": "Lotion: body + pump mechanism (includes cap)"
+    }
+  },
+  "layers": [
+    {
+      "slot": "body",
+      "variantKey": "AMB",
+      "sourceFilename": "CYL-AMB-9ML-body.png",
+      "relativePath": "bodies/CYL-AMB-9ML-body.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-5ed2287d03f6135aaba05e1ca3890f6749cbbbba-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/5ed2287d03f6135aaba05e1ca3890f6749cbbbba-2000x2200.png"
+    },
+    {
+      "slot": "body",
+      "variantKey": "BLU",
+      "sourceFilename": "CYL-BLU-9ML-body.png",
+      "relativePath": "bodies/CYL-BLU-9ML-body.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-d4b7732b176a93ea1004eb775d83177ff3ee38a7-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/d4b7732b176a93ea1004eb775d83177ff3ee38a7-2000x2200.png"
+    },
+    {
+      "slot": "body",
+      "variantKey": "CLR",
+      "sourceFilename": "CYL-CLR-9ML-body.png",
+      "relativePath": "bodies/CYL-CLR-9ML-body.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-053a5156e96245106f0f576ec9b62ab78c9d507e-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/053a5156e96245106f0f576ec9b62ab78c9d507e-2000x2200.png"
+    },
+    {
+      "slot": "body",
+      "variantKey": "FRS",
+      "sourceFilename": "CYL-FRS-9ML-body.png",
+      "relativePath": "bodies/CYL-FRS-9ML-body.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-9753c9772c05b724d5070a467bd95ad40f6db739-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/9753c9772c05b724d5070a467bd95ad40f6db739-2000x2200.png"
+    },
+    {
+      "slot": "body",
+      "variantKey": "SWL",
+      "sourceFilename": "CYL-SWL-9ML-body.png",
+      "relativePath": "bodies/CYL-SWL-9ML-body.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-627483598940b6c08d3fce9c679c0477ae002065-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/627483598940b6c08d3fce9c679c0477ae002065-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "BLK-DOT",
+      "sourceFilename": "CYL-9ML-BLK-DOT-cap.png",
+      "relativePath": "caps/CYL-9ML-BLK-DOT-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-0185e9e44d8035ec81c932f0425b373c1ad0fd93-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/0185e9e44d8035ec81c932f0425b373c1ad0fd93-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "MATT-CU",
+      "sourceFilename": "CYL-9ML-MATT-CU-cap.png",
+      "relativePath": "caps/CYL-9ML-MATT-CU-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-85e5e41b4be8eb035d174a649ec0bff65496bd09-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/85e5e41b4be8eb035d174a649ec0bff65496bd09-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "MATT-GL",
+      "sourceFilename": "CYL-9ML-MATT-GL-cap.png",
+      "relativePath": "caps/CYL-9ML-MATT-GL-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-16a310411069a0b0f1d81855333f67f6dc2536aa-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/16a310411069a0b0f1d81855333f67f6dc2536aa-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "MATT-SL",
+      "sourceFilename": "CYL-9ML-MATT-SL-cap.png",
+      "relativePath": "caps/CYL-9ML-MATT-SL-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-2a0d2a5e971753650853ba97a5ec2fe3cd0d84ca-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/2a0d2a5e971753650853ba97a5ec2fe3cd0d84ca-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "PNK-DOT",
+      "sourceFilename": "CYL-9ML-PNK-DOT-cap.png",
+      "relativePath": "caps/CYL-9ML-PNK-DOT-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-78df7af76221b214562a6d00ac2cc03f3965b854-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/78df7af76221b214562a6d00ac2cc03f3965b854-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "SHN-BLK",
+      "sourceFilename": "CYL-9ML-SHN-BLK-cap.png",
+      "relativePath": "caps/CYL-9ML-SHN-BLK-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-8933de442cfc3a5e83e150845069c2c0d37dc259-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/8933de442cfc3a5e83e150845069c2c0d37dc259-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "SHN-GL",
+      "sourceFilename": "CYL-9ML-SHN-GL-cap.png",
+      "relativePath": "caps/CYL-9ML-SHN-GL-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-8d61e8eee3ce0d6f589834dfe4b294a7c7806927-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/8d61e8eee3ce0d6f589834dfe4b294a7c7806927-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "SHN-SL",
+      "sourceFilename": "CYL-9ML-SHN-SL-cap.png",
+      "relativePath": "caps/CYL-9ML-SHN-SL-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-a73051f8b404730bb3eb15d380382a21e6e238e1-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/a73051f8b404730bb3eb15d380382a21e6e238e1-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "SL-DOT",
+      "sourceFilename": "CYL-9ML-SL-DOT-cap.png",
+      "relativePath": "caps/CYL-9ML-SL-DOT-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-a86ed5c96e1463ec52b9405706df75edefcc9acb-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/a86ed5c96e1463ec52b9405706df75edefcc9acb-2000x2200.png"
+    },
+    {
+      "slot": "cap",
+      "variantKey": "WHT",
+      "sourceFilename": "CYL-9ML-WHT-cap.png",
+      "relativePath": "caps/CYL-9ML-WHT-cap.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-8c4e86c560422c60c22b443b4cbc04894d319bb8-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/8c4e86c560422c60c22b443b4cbc04894d319bb8-2000x2200.png"
+    },
+    {
+      "slot": "roller",
+      "variantKey": "MTL-ROLL",
+      "sourceFilename": "CYL-9ML-MTL-ROLL-roller.png",
+      "relativePath": "fitments/CYL-9ML-MTL-ROLL-roller.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-59b96414e1654f910e23a25574b4ff33092214ee-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/59b96414e1654f910e23a25574b4ff33092214ee-2000x2200.png"
+    },
+    {
+      "slot": "roller",
+      "variantKey": "PLS-ROLL",
+      "sourceFilename": "CYL-9ML-PLS-ROLL-roller.png",
+      "relativePath": "fitments/CYL-9ML-PLS-ROLL-roller.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-8893bc437d11591cfc4ccbba2803026e84fc8c4e-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/8893bc437d11591cfc4ccbba2803026e84fc8c4e-2000x2200.png"
+    },
+    {
+      "slot": "sprayer",
+      "variantKey": "BLK",
+      "sourceFilename": "CYL-9ML-SPRAY-BLK-sprayer.png",
+      "relativePath": "spray/CYL-9ML-SPRAY-BLK-sprayer.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-81559096d18cfc42e0ba0af2b13164bd7405f6f3-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/81559096d18cfc42e0ba0af2b13164bd7405f6f3-2000x2200.png"
+    },
+    {
+      "slot": "sprayer",
+      "variantKey": "GL",
+      "sourceFilename": "CYL-9ML-SPRAY-GL-sprayer.png",
+      "relativePath": "spray/CYL-9ML-SPRAY-GL-sprayer.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-55ad2e6a8ef9c06f1199e7a0883a12b3e01fe3cc-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/55ad2e6a8ef9c06f1199e7a0883a12b3e01fe3cc-2000x2200.png"
+    },
+    {
+      "slot": "sprayer",
+      "variantKey": "MATT-SL",
+      "sourceFilename": "CYL-9ML-SPRAY-MATT-SL-sprayer.png",
+      "relativePath": "spray/CYL-9ML-SPRAY-MATT-SL-sprayer.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-5bebae68f9d06020b7e9b8264e88131b9c2b0d3f-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/5bebae68f9d06020b7e9b8264e88131b9c2b0d3f-2000x2200.png"
+    },
+    {
+      "slot": "sprayer",
+      "variantKey": "RD",
+      "sourceFilename": "CYL-9ML-SPRAY-RD-sprayer.png",
+      "relativePath": "spray/CYL-9ML-SPRAY-RD-sprayer.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-bb863364f8c0578e01393c24e407f9b66276f17d-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/bb863364f8c0578e01393c24e407f9b66276f17d-2000x2200.png"
+    },
+    {
+      "slot": "sprayer",
+      "variantKey": "SHN-SL",
+      "sourceFilename": "CYL-9ML-SPRAY-SHN-SL-sprayer.png",
+      "relativePath": "spray/CYL-9ML-SPRAY-SHN-SL-sprayer.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-5057a1568044e899ed1bb938144c7eafc41a906b-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/5057a1568044e899ed1bb938144c7eafc41a906b-2000x2200.png"
+    },
+    {
+      "slot": "sprayer",
+      "variantKey": "TUR",
+      "sourceFilename": "CYL-9ML-SPRAY-TUR-sprayer.png",
+      "relativePath": "spray/CYL-9ML-SPRAY-TUR-sprayer.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-ba86c9eb8b3dae4dc8c6114fb3c43b1ff6059bbb-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/ba86c9eb8b3dae4dc8c6114fb3c43b1ff6059bbb-2000x2200.png"
+    },
+    {
+      "slot": "pump",
+      "variantKey": "BLK",
+      "sourceFilename": "CYL-9ML-LOTION-BLK-pump.png",
+      "relativePath": "lotion/CYL-9ML-LOTION-BLK-pump.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-30139c894b61f63c1e9385ea43b2bb2a48baa9a2-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/30139c894b61f63c1e9385ea43b2bb2a48baa9a2-2000x2200.png"
+    },
+    {
+      "slot": "pump",
+      "variantKey": "GL",
+      "sourceFilename": "CYL-9ML-LOTION-GL-pump.png",
+      "relativePath": "lotion/CYL-9ML-LOTION-GL-pump.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-b8ddaa2006a3504daf4cb350b85b55b3df55d1eb-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/b8ddaa2006a3504daf4cb350b85b55b3df55d1eb-2000x2200.png"
+    },
+    {
+      "slot": "pump",
+      "variantKey": "MATT-SL",
+      "sourceFilename": "CYL-9ML-LOTION-MATT-SL-pump.png",
+      "relativePath": "lotion/CYL-9ML-LOTION-MATT-SL-pump.png",
+      "width": 2000,
+      "height": 2200,
+      "sanityAssetId": "image-e937eb0d408be1fb639af13f55280fe69e342bf0-2000x2200-png",
+      "url": "https://cdn.sanity.io/images/gh97irjh/production/e937eb0d408be1fb639af13f55280fe69e342bf0-2000x2200.png"
+    }
+  ]
+}

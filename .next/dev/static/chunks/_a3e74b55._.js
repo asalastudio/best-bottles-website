@@ -515,6 +515,7 @@ const GRACE_NOOP = {
     status: "idle",
     messages: [],
     streamingText: "",
+    isAwaitingReply: false,
     input: "",
     setInput: NOOP,
     voiceEnabled: false,
@@ -1172,6 +1173,7 @@ function GraceProvider({ children }) {
     // ── Messages & streaming ─────────────────────────────────────────────────
     const [messages, setMessages] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const [streamingText, setStreamingText] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
+    const [isAwaitingReply, setIsAwaitingReply] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [input, setInput] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
     const [voiceEnabled, setVoiceEnabled] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
     const [errorMessage, setErrorMessage] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])("");
@@ -1394,6 +1396,14 @@ function GraceProvider({ children }) {
     }["GraceProvider.useEffect"], [
         router
     ]);
+    const closePanelRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(closePanel);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "GraceProvider.useEffect": ()=>{
+            closePanelRef.current = closePanel;
+        }
+    }["GraceProvider.useEffect"], [
+        closePanel
+    ]);
     // ── Client tools ─────────────────────────────────────────────────────────
     const clientTools = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "GraceProvider.useMemo[clientTools]": ()=>({
@@ -1415,6 +1425,10 @@ function GraceProvider({ children }) {
                                 })
                             });
                             const data = await r.json();
+                            if (!r.ok) {
+                                console.error("[Grace] searchCatalog HTTP", r.status, data.error);
+                                return "Search failed. Please try again.";
+                            }
                             const products = Array.isArray(data.result) ? data.result : [];
                             sessionMetricsRef.current.toolsCalled++;
                             sessionMetricsRef.current.toolsUsed.add("searchCatalog");
@@ -1703,6 +1717,9 @@ function GraceProvider({ children }) {
                                 setTimeout({
                                     "GraceProvider.useMemo[clientTools]": ()=>{
                                         routerRef.current.push(redirectUrl);
+                                        if (window.matchMedia("(max-width: 768px)").matches) {
+                                            closePanelRef.current();
+                                        }
                                     }
                                 }["GraceProvider.useMemo[clientTools]"], 500);
                                 return `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
@@ -1871,6 +1888,9 @@ function GraceProvider({ children }) {
                         setTimeout({
                             "GraceProvider.useMemo[clientTools]": ()=>{
                                 routerRef.current.push(navPath);
+                                if (window.matchMedia("(max-width: 768px)").matches) {
+                                    closePanelRef.current();
+                                }
                             }
                         }["GraceProvider.useMemo[clientTools]"], 500);
                         return `Navigating the customer to ${params.title ?? "the page"} now.`;
@@ -2021,6 +2041,7 @@ function GraceProvider({ children }) {
             setConversationActive(false);
             setGraceStatus("idle");
             setStreamingText("");
+            setIsAwaitingReply(false);
         }
     }["GraceProvider.useCallback[handleDisconnect]"], []);
     const handleModeChange = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
@@ -2036,6 +2057,7 @@ function GraceProvider({ children }) {
             setGraceStatus("error");
             setErrorMessage(typeof error === "string" ? error : "Connection error");
             setVoiceFailed(true);
+            setIsAwaitingReply(false);
             setTimeout({
                 "GraceProvider.useCallback[handleError]": ()=>{
                     setGraceStatus({
@@ -2050,13 +2072,37 @@ function GraceProvider({ children }) {
     const handleMessage = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
         "GraceProvider.useCallback[handleMessage]": (payload)=>{
             const role = payload.role === "user" ? "user" : "grace";
-            // Skip user echoes — send() already adds user messages to state
-            if (role === "user") return;
-            // Mark that onMessage handled finalization (prevents duplicate from stop-event fallback)
-            streamingFinalizedRef.current = true;
-            setStreamingText("");
             const text = payload.message;
             const norm = normalizeGraceMessageText(text);
+            if (role === "user") {
+                // Append voice transcripts; skip if send() already inserted an identical line
+                setMessages({
+                    "GraceProvider.useCallback[handleMessage]": (prev)=>{
+                        const lastUser = [
+                            ...prev
+                        ].reverse().find({
+                            "GraceProvider.useCallback[handleMessage].lastUser": (m)=>m.role === "user"
+                        }["GraceProvider.useCallback[handleMessage].lastUser"]);
+                        if (lastUser && normalizeGraceMessageText(lastUser.content) === norm) {
+                            return prev;
+                        }
+                        return [
+                            ...prev,
+                            {
+                                role: "user",
+                                content: text,
+                                id: nextMsgId()
+                            }
+                        ];
+                    }
+                }["GraceProvider.useCallback[handleMessage]"]);
+                setIsAwaitingReply(true);
+                return;
+            }
+            // Assistant message finalization
+            streamingFinalizedRef.current = true;
+            setIsAwaitingReply(false);
+            setStreamingText("");
             setMessages({
                 "GraceProvider.useCallback[handleMessage]": (prev)=>{
                     const last = prev[prev.length - 1];
@@ -2116,6 +2162,7 @@ function GraceProvider({ children }) {
                 }["GraceProvider.useCallback[handleAgentChatResponsePart]"], 600);
                 return;
             }
+            setIsAwaitingReply(false);
             setStreamingText({
                 "GraceProvider.useCallback[handleAgentChatResponsePart]": (prev)=>{
                     if (prev === "") {
@@ -2277,6 +2324,7 @@ function GraceProvider({ children }) {
                         }
                     ]
             }["GraceProvider.useCallback[send]"]);
+            setIsAwaitingReply(true);
             if (conversationRef.current?.getId?.()) {
                 conversationRef.current.sendUserMessage(msg);
             } else {
@@ -2318,6 +2366,7 @@ function GraceProvider({ children }) {
                 status: graceStatus,
                 messages,
                 streamingText,
+                isAwaitingReply,
                 input,
                 setInput,
                 voiceEnabled,
@@ -2365,6 +2414,7 @@ function GraceProvider({ children }) {
         graceStatus,
         messages,
         streamingText,
+        isAwaitingReply,
         input,
         voiceEnabled,
         send,
@@ -2389,11 +2439,11 @@ function GraceProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/grace/GraceProvider.tsx",
-        lineNumber: 1046,
+        lineNumber: 1082,
         columnNumber: 9
     }, this);
 }
-_s(GraceProvider, "AFmFxnTQH104IxUEnWsR4QwlcM4=", false, function() {
+_s(GraceProvider, "cxY8umoTDLE+HD0Ld4Bk7MRc3Uo=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"],
@@ -2418,6 +2468,8 @@ if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelper
 __turbopack_context__.s([
     "StreamingMessage",
     ()=>StreamingMessage,
+    "ThinkingIndicator",
+    ()=>ThinkingIndicator,
     "default",
     ()=>GraceChatMessage
 ]);
@@ -2495,9 +2547,53 @@ function StreamingMessage({ text }) {
     }, this);
 }
 _c1 = StreamingMessage;
-var _c, _c1;
+function ThinkingIndicator() {
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+        className: "mb-4 flex items-center gap-2",
+        children: [
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "inline-flex gap-[5px]",
+                "aria-label": "Grace is thinking",
+                children: [
+                    0,
+                    1,
+                    2
+                ].map((i)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                        className: "w-[5px] h-[5px] rounded-full bg-obsidian/25 animate-bounce",
+                        style: {
+                            animationDelay: `${i * 150}ms`,
+                            animationDuration: "0.9s"
+                        }
+                    }, i, false, {
+                        fileName: "[project]/src/components/grace/GraceChatMessage.tsx",
+                        lineNumber: 53,
+                        columnNumber: 21
+                    }, this))
+            }, void 0, false, {
+                fileName: "[project]/src/components/grace/GraceChatMessage.tsx",
+                lineNumber: 51,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                className: "text-[12px] text-obsidian/40 font-sans",
+                children: "Grace is thinking…"
+            }, void 0, false, {
+                fileName: "[project]/src/components/grace/GraceChatMessage.tsx",
+                lineNumber: 60,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "[project]/src/components/grace/GraceChatMessage.tsx",
+        lineNumber: 50,
+        columnNumber: 9
+    }, this);
+}
+_c2 = ThinkingIndicator;
+var _c, _c1, _c2;
 __turbopack_context__.k.register(_c, "GraceChatMessage");
 __turbopack_context__.k.register(_c1, "StreamingMessage");
+__turbopack_context__.k.register(_c2, "ThinkingIndicator");
 if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
     __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
 }
@@ -2532,7 +2628,7 @@ var _s = __turbopack_context__.k.signature(), _s1 = __turbopack_context__.k.sign
 ;
 ;
 ;
-const DRAWER_WIDTH = 380;
+/** Desktop drawer width; keep in sync with layout push in `GraceLayoutShell`. */ const DRAWER_WIDTH = 420;
 function useIsMobile() {
     _s();
     const [mobile, setMobile] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(false);
@@ -2599,19 +2695,19 @@ const QUICK_CHIPS = [
                 className: `w-[3px] ${b.h} rounded-full bg-white shrink-0`
             }, i, false, {
                 fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                lineNumber: 52,
+                lineNumber: 53,
                 columnNumber: 17
             }, this))
     }, void 0, false, {
         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-        lineNumber: 47,
+        lineNumber: 48,
         columnNumber: 9
     }, this);
 }
 _c = VoiceWaveformGlyph;
 function GraceChatDrawer() {
     _s1();
-    const { panelMode, closePanel, messages, streamingText, input, setInput, send, conversationActive, endConversation, errorMessage, toggleVoice, voiceEnabled, status: graceStatus } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$GraceContext$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGrace"])();
+    const { panelMode, closePanel, messages, streamingText, isAwaitingReply, input, setInput, send, conversationActive, endConversation, errorMessage, toggleVoice, voiceEnabled, status: graceStatus } = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$GraceContext$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGrace"])();
     const isOpen = panelMode === "open";
     const isMobile = useIsMobile();
     const messagesEndRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
@@ -2624,7 +2720,8 @@ function GraceChatDrawer() {
         }
     }["GraceChatDrawer.useEffect"], [
         messages,
-        streamingText
+        streamingText,
+        isAwaitingReply
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GraceChatDrawer.useEffect": ()=>{
@@ -2700,7 +2797,7 @@ function GraceChatDrawer() {
                     "aria-hidden": "true"
                 }, "grace-backdrop", false, {
                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                    lineNumber: 134,
+                    lineNumber: 136,
                     columnNumber: 25
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$framer$2d$motion$40$12$2e$34$2e$5_$40$emotion$2b$is$2d$prop$2d$valid$40$1$2e$4$2e$0_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$client$5d$__$28$ecmascript$29$__["motion"].aside, {
@@ -2718,9 +2815,10 @@ function GraceChatDrawer() {
                         stiffness: 320,
                         damping: 38
                     },
-                    className: `fixed top-0 right-0 bottom-0 z-[61] flex flex-col ${isMobile ? "w-full" : ""}`,
+                    className: `fixed top-0 right-0 z-[61] flex flex-col ${isMobile ? "w-full" : ""}`,
                     style: {
                         width: isMobile ? "100%" : DRAWER_WIDTH,
+                        height: "100dvh",
                         background: "#faf8f5",
                         borderLeft: "1px solid rgba(212, 197, 169, 0.35)",
                         boxShadow: "-8px 0 40px rgba(29, 29, 31, 0.08)"
@@ -2741,12 +2839,12 @@ function GraceChatDrawer() {
                                         className: "w-10 h-1.5 rounded-full bg-white/30 backdrop-blur-md grace-sheet-handle"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                        lineNumber: 172,
+                                        lineNumber: 175,
                                         columnNumber: 37
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 171,
+                                    lineNumber: 174,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2760,12 +2858,12 @@ function GraceChatDrawer() {
                                                 weight: "fill"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                                lineNumber: 178,
+                                                lineNumber: 181,
                                                 columnNumber: 37
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                            lineNumber: 177,
+                                            lineNumber: 180,
                                             columnNumber: 33
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -2773,13 +2871,13 @@ function GraceChatDrawer() {
                                             children: "Ask Grace AI"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                            lineNumber: 180,
+                                            lineNumber: 183,
                                             columnNumber: 33
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 176,
+                                    lineNumber: 179,
                                     columnNumber: 29
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -2791,18 +2889,18 @@ function GraceChatDrawer() {
                                         size: 15
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                        lineNumber: 190,
+                                        lineNumber: 193,
                                         columnNumber: 33
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 185,
+                                    lineNumber: 188,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                            lineNumber: 166,
+                            lineNumber: 169,
                             columnNumber: 25
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2812,51 +2910,19 @@ function GraceChatDrawer() {
                                         message: msg
                                     }, msg.id, false, {
                                         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                        lineNumber: 197,
+                                        lineNumber: 200,
                                         columnNumber: 33
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$grace$2f$GraceChatMessage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["StreamingMessage"], {
                                     text: streamingText
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 200,
+                                    lineNumber: 203,
                                     columnNumber: 29
                                 }, this),
-                                showChips && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "grid grid-cols-2 gap-2 mt-4",
-                                    children: QUICK_CHIPS.map((chip)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                            onClick: ()=>handleChipClick(chip.query),
-                                            className: "flex items-start gap-2.5 p-3 rounded-lg text-left transition-colors duration-150 cursor-pointer hover:bg-obsidian/[0.04] group",
-                                            style: {
-                                                border: "1px solid rgba(29, 29, 31, 0.08)"
-                                            },
-                                            children: [
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(chip.icon, {
-                                                    size: 16,
-                                                    className: "text-obsidian/40 mt-0.5 shrink-0 group-hover:text-obsidian/60 transition-colors",
-                                                    weight: "regular"
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                                    lineNumber: 212,
-                                                    columnNumber: 45
-                                                }, this),
-                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                                    className: "text-[12.5px] text-obsidian/70 leading-snug font-sans",
-                                                    children: chip.label
-                                                }, void 0, false, {
-                                                    fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                                    lineNumber: 217,
-                                                    columnNumber: 45
-                                                }, this)
-                                            ]
-                                        }, chip.label, true, {
-                                            fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                            lineNumber: 206,
-                                            columnNumber: 41
-                                        }, this))
-                                }, void 0, false, {
+                                isAwaitingReply && !streamingText && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$grace$2f$GraceChatMessage$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["ThinkingIndicator"], {}, void 0, false, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 204,
+                                    lineNumber: 206,
                                     columnNumber: 33
                                 }, this),
                                 errorMessage && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2866,29 +2932,79 @@ function GraceChatDrawer() {
                                         children: errorMessage
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                        lineNumber: 227,
+                                        lineNumber: 211,
                                         columnNumber: 37
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 226,
+                                    lineNumber: 210,
                                     columnNumber: 33
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                                     ref: messagesEndRef
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                    lineNumber: 233,
+                                    lineNumber: 217,
                                     columnNumber: 29
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                            lineNumber: 195,
+                            lineNumber: 198,
                             columnNumber: 25
+                        }, this),
+                        showChips && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "shrink-0 px-4 pb-1.5 pt-2",
+                            style: {
+                                borderTop: "1px solid rgba(212, 197, 169, 0.15)"
+                            },
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                className: "grid grid-cols-2 gap-1.5",
+                                children: QUICK_CHIPS.map((chip)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        onClick: ()=>handleChipClick(chip.query),
+                                        className: "flex items-center gap-2 px-2.5 py-2 rounded-lg text-left transition-colors duration-150 cursor-pointer hover:bg-obsidian/[0.04] group",
+                                        style: {
+                                            border: "1px solid rgba(29, 29, 31, 0.08)"
+                                        },
+                                        children: [
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(chip.icon, {
+                                                size: 14,
+                                                className: "text-obsidian/40 shrink-0 group-hover:text-obsidian/60 transition-colors",
+                                                weight: "regular"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
+                                                lineNumber: 231,
+                                                columnNumber: 45
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                className: "text-[12px] text-obsidian/60 leading-snug font-sans",
+                                                children: chip.label
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
+                                                lineNumber: 236,
+                                                columnNumber: 45
+                                            }, this)
+                                        ]
+                                    }, chip.label, true, {
+                                        fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
+                                        lineNumber: 225,
+                                        columnNumber: 41
+                                    }, this))
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
+                                lineNumber: 223,
+                                columnNumber: 33
+                            }, this)
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
+                            lineNumber: 222,
+                            columnNumber: 29
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                             className: "shrink-0 px-4 py-3",
+                            style: {
+                                paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))"
+                            },
                             children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
                                 onSubmit: handleSubmit,
                                 className: "relative rounded-xl bg-white",
@@ -2907,7 +3023,7 @@ function GraceChatDrawer() {
                                         autoComplete: "off"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                        lineNumber: 243,
+                                        lineNumber: 252,
                                         columnNumber: 33
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -2922,56 +3038,56 @@ function GraceChatDrawer() {
                                                 className: "w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                                lineNumber: 271,
+                                                lineNumber: 280,
                                                 columnNumber: 45
                                             }, this) : voiceEnabled ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
                                                 className: "w-[11px] h-[11px] rounded-[2.5px] bg-white",
                                                 "aria-hidden": true
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                                lineNumber: 273,
+                                                lineNumber: 282,
                                                 columnNumber: 45
                                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(VoiceWaveformGlyph, {}, void 0, false, {
                                                 fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                                lineNumber: 278,
+                                                lineNumber: 287,
                                                 columnNumber: 45
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                            lineNumber: 255,
+                                            lineNumber: 264,
                                             columnNumber: 37
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                        lineNumber: 254,
+                                        lineNumber: 263,
                                         columnNumber: 33
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                                lineNumber: 238,
+                                lineNumber: 247,
                                 columnNumber: 29
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                            lineNumber: 237,
+                            lineNumber: 246,
                             columnNumber: 25
                         }, this)
                     ]
                 }, "grace-drawer", true, {
                     fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-                    lineNumber: 147,
+                    lineNumber: 149,
                     columnNumber: 21
                 }, this)
             ]
         }, void 0, true)
     }, void 0, false, {
         fileName: "[project]/src/components/grace/GraceChatDrawer.tsx",
-        lineNumber: 130,
+        lineNumber: 132,
         columnNumber: 9
     }, this);
 }
-_s1(GraceChatDrawer, "pru5y2MZ5XOAgCRx+tmNdyj7RhE=", false, function() {
+_s1(GraceChatDrawer, "8WWpzARWAmcO7ld2C5KuL7FX8AY=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$components$2f$GraceContext$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useGrace"],
         useIsMobile

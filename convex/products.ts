@@ -989,4 +989,64 @@ export const backfillPrimarySkus = mutation({
     },
 });
 
+/**
+ * Valid productGroup ids (~230) — for integrity scripts that paginate products client-side.
+ */
+export const getProductGroupIdList = query({
+    args: {},
+    handler: async (ctx) => {
+        const groups = await ctx.db.query("productGroups").collect();
+        return groups.map((g) => g._id);
+    },
+});
+
+/**
+ * One page of catalog integrity stats. Convex allows only one `.paginate()` per function;
+ * `scripts/catalog-integrity.mjs` loops and merges batches. Pass `validGroupIds` from
+ * `getProductGroupIdList` once per run (avoids N db.get calls per row).
+ */
+export const getCatalogIntegrityBatch = query({
+    args: {
+        cursor: v.union(v.string(), v.null()),
+        validGroupIds: v.array(v.id("productGroups")),
+    },
+    handler: async (ctx, args) => {
+        const valid = new Set(args.validGroupIds);
+        const result = await ctx.db.query("products").paginate({
+            numItems: 150,
+            cursor: args.cursor as string | null,
+        });
+
+        const skuCounts: Record<string, number> = {};
+        let missingGraceSku = 0;
+        let emptyItemName = 0;
+        let orphanRowCount = 0;
+        const orphanSamples: string[] = [];
+
+        for (const p of result.page) {
+            if (!p.graceSku?.trim()) missingGraceSku++;
+            else {
+                const s = p.graceSku.trim();
+                skuCounts[s] = (skuCounts[s] ?? 0) + 1;
+            }
+            if (!p.itemName?.trim()) emptyItemName++;
+            if (p.productGroupId && !valid.has(p.productGroupId)) {
+                orphanRowCount++;
+                if (orphanSamples.length < 20 && p.graceSku) orphanSamples.push(p.graceSku);
+            }
+        }
+
+        return {
+            pageRowCount: result.page.length,
+            missingGraceSku,
+            emptyItemName,
+            orphanRowCount,
+            skuCounts,
+            orphanSamples,
+            continueCursor: result.continueCursor,
+            isDone: result.isDone,
+        };
+    },
+});
+
 

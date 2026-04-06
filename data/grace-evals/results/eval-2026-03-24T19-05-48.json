@@ -1,0 +1,420 @@
+{
+  "timestamp": "2026-03-24T19:05:48.982Z",
+  "summary": {
+    "total": 20,
+    "pass": 17,
+    "fail": 3,
+    "error": 0,
+    "accuracy": "85.0%"
+  },
+  "results": [
+    {
+      "id": "exact-boston-30ml",
+      "category": "exact_retrieval",
+      "question": "Do you have a 30ml Boston Round bottle?",
+      "status": "pass",
+      "response": "We do — the 30ml Boston Round is well stocked and comes in clear, amber, and cobalt blue glass, with applicator options including a simple cap, dropper, and roller ball in both metal and plastic. All share a 20-400 neck finish.\n\nWhat are you filling it with — a fragrance oil, essential oil, or something else? That'll help me point you to the right applicator and finish.",
+      "checks": [
+        {
+          "check": "mustMention: \"Boston Round\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 8610
+    },
+    {
+      "id": "exact-cylinder-100ml",
+      "category": "exact_retrieval",
+      "question": "Show me a 100ml Cylinder bottle.",
+      "status": "pass",
+      "response": "The 100ml Cylinder is a clean, versatile vessel — clear glass with an 18-415 neck finish, available in quite a few configurations. For the spray pump versions, you have your choice of shiny silver or matte silver. The reducer variants come in a wide range of cap finishes: shiny gold, shiny silver, matte silver, shiny black, tall black, tall silver, white, and faux leather options in black, brown, ivory, and pink — all in stock.\n\nIs there a particular applicator type or cap finish you have in mind for your product?",
+      "checks": [
+        {
+          "check": "mustMention: \"Cylinder\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"100ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 7973
+    },
+    {
+      "id": "exact-elegant-50ml-frosted",
+      "category": "exact_retrieval",
+      "question": "I need a 50ml frosted Elegant bottle.",
+      "status": "pass",
+      "response": "The search returned results for 15ml, 60ml, and 100ml frosted Elegants — but no 50ml. It looks like the frosted Elegant family doesn't include a 50ml size. The closest options we carry are the 60ml (a lovely, generous size for fragrance) and the 30ml, which is a popular travel-friendly format.\n\nWould either of those work for you, or is 50ml a firm requirement? If so, I can point you toward another family that carries that size.",
+      "checks": [
+        {
+          "check": "mustMention: \"Elegant\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 8087
+    },
+    {
+      "id": "exact-diva-30ml",
+      "category": "exact_retrieval",
+      "question": "What do you have in the Diva 30ml?",
+      "status": "pass",
+      "response": "The Diva 30ml is a clear glass vessel with an 18-415 neck finish, and it comes ready-to-go in three application styles: a spray pump (in shiny silver, matte silver, shiny gold, matte gold, or shiny black), a reducer/splash-on configuration (with cap options ranging from standard shiny and matte metals to faux leather finishes in ivory, pink, and brown), and a lotion pump (in shiny/matte gold, shiny/matte silver, shiny black, and copper). Everything is in stock.\n\nWhat's the product you're filling — a fragrance, a serum, something else? That'll help me point you to the right applicator style.",
+      "checks": [
+        {
+          "check": "mustMention: \"Diva\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't stock\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 8763
+    },
+    {
+      "id": "pivot-boston-10ml",
+      "category": "pivot_behavior",
+      "question": "Do you have a 10ml Boston Round?",
+      "status": "fail",
+      "response": "We don't stock a 10ml Boston Round — our Boston Rounds start at 15ml. Would you like to see the 15ml Boston Round, or if 10ml is the right size for your project, I can point you toward our Cylinder or Rectangle options instead?",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"10ml Boston Round\"",
+          "passed": false
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "elapsedMs": 4726
+    },
+    {
+      "id": "pivot-boston-5ml",
+      "category": "pivot_behavior",
+      "question": "I need a 5ml Boston Round bottle.",
+      "status": "pass",
+      "response": "We don't stock a 5ml Boston Round — our Boston Rounds start at 15ml.\n\nIf you need a 5ml, our Cylinder family is a great alternative and does come in that size. Would you like me to pull up the 5ml Cylinders for you?",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "elapsedMs": 3499
+    },
+    {
+      "id": "pivot-diva-15ml",
+      "category": "pivot_behavior",
+      "question": "Show me a 15ml Diva.",
+      "status": "pass",
+      "response": "The search only returned Diva bottles in 46ml — our Diva family actually starts at 30ml, so a 15ml isn't available in that silhouette. If a smaller format is what you're after, I could point you to the 15ml Slim or 15ml Elegant, both of which have a refined, feminine profile similar in spirit to the Diva. Would either of those directions interest you, or were you flexible on the size?",
+      "checks": [
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "elapsedMs": 7260
+    },
+    {
+      "id": "component-sprayer-elegant",
+      "category": "component_accuracy",
+      "question": "What sprayers fit the 50ml Elegant bottle?",
+      "status": "fail",
+      "response": "We don't carry a 50ml Elegant — the family comes in 15ml, 30ml, 60ml, and 100ml. The closest to 50ml would be the 60ml, which has a wide range of sprayer options including fine mist, perfume spray pump, and even a vintage bulb sprayer. Would you like me to pull up the sprayer options for the 60ml Elegant?",
+      "checks": [
+        {
+          "check": "mustMention: \"18-415\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"20-400\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 8634
+    },
+    {
+      "id": "component-cap-boston-round",
+      "category": "component_accuracy",
+      "question": "What caps work with the 30ml Boston Round?",
+      "status": "pass",
+      "response": "The 30ml Boston Round has a 20-400 neck finish, and it's compatible with three types of closures.\n\nFor a simple cap, there's a black lid in the 20-400 thread. If you're using a dropper, the compatible options come in black or white bulb with your choice of plain cap or a shiny gold or shiny silver collar — six dropper variants in total. And if you're pairing with a roller ball plug, there are six tall cap options: matte gold, matte silver, matte black, shiny gold, shiny silver, and shiny black.\n\nAre you looking for a simple closure, or do you have a particular applicator in mind?",
+      "checks": [],
+      "elapsedMs": 10813
+    },
+    {
+      "id": "component-dropper-cylinder",
+      "category": "component_accuracy",
+      "question": "I need a dropper for my 15ml Cylinder. What fits?",
+      "status": "pass",
+      "response": "I now have a clear picture. Let me give the customer an honest and helpful answer.\n\nJust a heads-up — we don't actually carry a 15ml Cylinder. Our Cylinder family jumps from 9ml up to 25ml, so there's no 15ml in that line.\n\nCould you tell me a bit more about your bottle? Specifically, do you know the neck thread size (usually stamped near the base or on the bottle spec sheet)? That's the key detail for finding a compatible dropper. Alternatively, if you're open to it, I can point you to the 9ml Cylinder with a dropper — that's a popular size for serums and essential oils — or if 15ml is the right volume, our Boston Round and Elegant families both carry that size and pair beautifully with droppers.",
+      "checks": [],
+      "elapsedMs": 26025
+    },
+    {
+      "id": "viscosity-thick-oil-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I have a thick perfume oil, like honey consistency. What roll-on bottles do you recommend?",
+      "status": "pass",
+      "response": "A honey-consistency oil is actually too thick for a roll-on — the ball won't spin freely through it, which leads to frustrating under-delivery and often a return. For that viscosity, the right applicator is either a tola bottle (the traditional dabber used for attars, designed for direct application of thick oils) or a dropper bottle (which gives you controlled dispensing without a mechanical part to clog).\n\nWould you like me to pull up our tola and dropper options, or would you like to tell me a bit more about your product — like the volume you're filling and whether you have a bottle style in mind?",
+      "checks": [
+        {
+          "check": "mustMention: \"Tola\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"dropper\"",
+          "passed": true
+        },
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "elapsedMs": 6315
+    },
+    {
+      "id": "viscosity-edp-no-rollon",
+      "category": "viscosity_guard",
+      "question": "I'm making an eau de parfum. Should I use roll-on bottles?",
+      "status": "pass",
+      "response": "For an eau de parfum — which is alcohol-based and quite thin in viscosity — a roll-on isn't the right fit. The liquid would flow too freely past the roller ball and could leak, and the application experience wouldn't suit a fine fragrance.\n\nA fine mist sprayer is the natural choice here: it delivers that elegant, diffuse cloud of scent that eau de parfum is designed for, and it elevates the whole ritual of wearing it.\n\nAre you thinking of a particular bottle style or size for your EDP?",
+      "checks": [
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "elapsedMs": 4758
+    },
+    {
+      "id": "family-overview-boston",
+      "category": "family_overview",
+      "question": "Tell me about your Boston Round collection.",
+      "status": "pass",
+      "response": "The Boston Round is a true workhorse of the fragrance and wellness world — that classic, broad-shouldered silhouette with a gently rounded shoulder and short neck that's been trusted by apothecaries and modern brands alike.\n\nOur collection comes in three sizes — 15ml, 30ml, and 60ml — in clear, amber, and cobalt blue glass. Amber is particularly popular for essential oils and light-sensitive formulas, while cobalt adds a striking, distinctive presence on shelf. Application options span droppers, metal roller balls, and plastic roller balls, making it a natural fit for serums, essential oils, and thin fragrance oils.\n\nIs there a particular size or use case you have in mind — perhaps for an essential oil line, a serum, or something else entirely?",
+      "checks": [
+        {
+          "check": "mustMention: \"15ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"30ml\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"60ml\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 7616
+    },
+    {
+      "id": "family-overview-cylinder",
+      "category": "family_overview",
+      "question": "What sizes do Cylinders come in?",
+      "status": "pass",
+      "response": "Cylinders come in 3ml, 4ml, 5ml, 9ml, 25ml, 28ml, 30ml, 50ml, 100ml, 118ml, 227ml, and 454ml. Is there a particular size — or a fill volume and use case — you have in mind?",
+      "checks": [],
+      "elapsedMs": 4359
+    },
+    {
+      "id": "hallucination-fake-family",
+      "category": "hallucination",
+      "question": "Do you carry the Monaco bottle family?",
+      "status": "pass",
+      "response": "We don't carry a \"Monaco\" bottle family — that name doesn't appear in our catalog. It's possible you may have seen it under a different name, or it may be exclusive to another supplier.\n\nCould you describe what the Monaco looks like — its shape, size, or how you'd like to apply your product? I'd be happy to point you to something comparable from our collection.",
+      "checks": [
+        {
+          "check": "mustNotMention: \"Monaco collection\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our Monaco\"",
+          "passed": true
+        },
+        {
+          "check": "shouldAdmitNoMatch",
+          "passed": true,
+          "detail": "correctly admits no match"
+        }
+      ],
+      "elapsedMs": 7076
+    },
+    {
+      "id": "hallucination-fake-size",
+      "category": "hallucination",
+      "question": "I need a 250ml Elegant bottle.",
+      "status": "pass",
+      "response": "We don't carry a 250ml in the Elegant family — the results show the Elegant runs from 15ml up through 30ml in our current catalog. If you need something in the 250ml range, I can point you toward another family that carries that size, like the Cylinder or Boston Round. Would either of those work for what you have in mind?",
+      "checks": [
+        {
+          "check": "shouldPivot",
+          "passed": true,
+          "detail": "pivot detected"
+        }
+      ],
+      "elapsedMs": 6436
+    },
+    {
+      "id": "policy-warehouse-pickup",
+      "category": "policy",
+      "question": "Can I pick up my order in person?",
+      "status": "pass",
+      "response": "Yes — you can pick up in person at our Union City warehouse. Just call us at 1-800-936-3628 at least a day ahead to arrange it, and we're open for pickups Monday through Friday, ten-thirty to three.\n\nIs there anything else I can help you with, or would you like to start putting together an order?",
+      "checks": [
+        {
+          "check": "mustMention: \"Union City\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"1-800-936-3628\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't offer\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"not available\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"cannot\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 3824
+    },
+    {
+      "id": "policy-minimum-order",
+      "category": "policy",
+      "question": "I only need 3 bottles. Can I order that?",
+      "status": "pass",
+      "response": "Absolutely — there's no unit minimum at all, just a $50 order floor.\n\nDepending on the bottle style, 3 units might come in under that threshold, but the easiest way to reach it is to add matching closures, try a second bottle style, or pick up a few extra pieces to build out a proper test kit.\n\nWhat kind of bottle are you looking for?",
+      "checks": [
+        {
+          "check": "mustMention: \"$50\"",
+          "passed": true
+        },
+        {
+          "check": "mustMention: \"no unit minimum\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"email sales\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"can't help\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"minimum 12\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 4306
+    },
+    {
+      "id": "brand-identity-no-manufacture",
+      "category": "brand_guard",
+      "question": "Do you manufacture your own glass?",
+      "status": "fail",
+      "response": "No — Best Bottles is a sourcing and supply partner, not a manufacturer. We curate our collection through a global network of artisan glassmakers, selecting only the vessels that meet our quality standards — including flame polishing to remove mold imperfections, and Type III cosmetic-grade glass throughout.\n\nWhat makes us distinctive is that we use these same bottles for Nemat's own fragrance lines, sold at Sephora, Ulta, and Whole Foods. So every piece in our catalog has been validated at retail level before it ever reaches your brand.\n\nIs there a particular bottle style or format you're exploring?",
+      "checks": [
+        {
+          "check": "mustMention: \"source\"",
+          "passed": false
+        },
+        {
+          "check": "mustNotMention: \"we manufacture\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our factory\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"we blow glass\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"our facility\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 6431
+    },
+    {
+      "id": "applicator-rollon-search",
+      "category": "exact_retrieval",
+      "question": "Show me your roll-on bottles.",
+      "status": "pass",
+      "response": "Here's a summary of what we carry in roll-on bottles — all in stock and ready to ship.\n\nWe have three distinct families available with roller ball applicators:\n\nBoston Round — the most versatile option, available in 30ml and 60ml, in clear, amber, and cobalt blue glass. Comes with your choice of metal or plastic roller ball, and cap colours ranging from shiny gold and silver to matte black, silver, and gold.\n\nCylinder — a clean, modern silhouette available in 28ml and 50ml, clear glass with metal or plastic roller ball and black or white caps.\n\nElegant — a slender, refined vessel available in 15ml frosted glass with a plastic roller ball — a lovely choice for a more intimate, personal-care presentation.\n\nOne quick note worth mentioning: roll-on applicators perform best with thin to medium-weight oils and serums. If your formula is on the thicker side — think attar or honey-like consistency — I'd want to steer you toward something better suited.\n\nWhat's the formula you're working with, and do you have a size in mind?",
+      "checks": [
+        {
+          "check": "mustNotMention: \"don't carry\"",
+          "passed": true
+        },
+        {
+          "check": "mustNotMention: \"don't have roll-on\"",
+          "passed": true
+        }
+      ],
+      "elapsedMs": 11625
+    }
+  ]
+}

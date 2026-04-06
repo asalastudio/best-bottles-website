@@ -1243,10 +1243,6 @@
     aspect-ratio: 4 / 5;
   }
 
-  .aspect-\[10\/11\] {
-    aspect-ratio: 10 / 11;
-  }
-
   .aspect-\[16\/9\] {
     aspect-ratio: 16 / 9;
   }
@@ -1367,6 +1363,10 @@
 
   .h-\[3px\] {
     height: 3px;
+  }
+
+  .h-\[5px\] {
+    height: 5px;
   }
 
   .h-\[7px\] {
@@ -1607,6 +1607,10 @@
 
   .w-\[3px\] {
     width: 3px;
+  }
+
+  .w-\[5px\] {
+    width: 5px;
   }
 
   .w-\[10px\] {
@@ -2176,6 +2180,10 @@
 
   .gap-\[3px\] {
     gap: 3px;
+  }
+
+  .gap-\[5px\] {
+    gap: 5px;
   }
 
   :where(.space-y-0\.5 > :not(:last-child)) {
@@ -3149,6 +3157,16 @@
   @supports (color: color-mix(in lab, red, red)) {
     .bg-obsidian\/10 {
       background-color: color-mix(in oklab, var(--color-obsidian) 10%, transparent);
+    }
+  }
+
+  .bg-obsidian\/25 {
+    background-color: #1d1d1f40;
+  }
+
+  @supports (color: color-mix(in lab, red, red)) {
+    .bg-obsidian\/25 {
+      background-color: color-mix(in oklab, var(--color-obsidian) 25%, transparent);
     }
   }
 
@@ -4187,6 +4205,10 @@
     padding-bottom: calc(var(--spacing) * 1);
   }
 
+  .pb-1\.5 {
+    padding-bottom: calc(var(--spacing) * 1.5);
+  }
+
   .pb-2 {
     padding-bottom: calc(var(--spacing) * 2);
   }
@@ -4354,10 +4376,6 @@
 
   .text-\[11px\] {
     font-size: 11px;
-  }
-
-  .text-\[12\.5px\] {
-    font-size: 12.5px;
   }
 
   .text-\[12px\] {

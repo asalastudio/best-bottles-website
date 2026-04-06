@@ -1,0 +1,10 @@
+{
+  "_catalog-clear-30ml.png": {
+    "image_file": "_catalog-clear-30ml.png",
+    "height_width_ratio": 3.3,
+    "cap_percent": 24,
+    "body_percent": 76,
+    "frame_occupancy_height_pct": 68,
+    "source": "catalog-estimated (pending PSD verification)"
+  }
+}

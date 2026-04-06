@@ -1,0 +1,110 @@
+{
+  "cylinder-clear-5ml": {
+    "height_width_ratio": 4.0,
+    "cap_percent": 28,
+    "body_percent": 72,
+    "frame_occupancy_height_pct": 60,
+    "capacity_ml": 5,
+    "color": "clear",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-cobalt-blue-5ml": {
+    "height_width_ratio": 4.0,
+    "cap_percent": 28,
+    "body_percent": 72,
+    "frame_occupancy_height_pct": 60,
+    "capacity_ml": 5,
+    "color": "cobalt-blue",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-clear-9ml": {
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "capacity_ml": 9,
+    "color": "clear",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-amber-9ml": {
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "capacity_ml": 9,
+    "color": "amber",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-cobalt-blue-9ml": {
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "capacity_ml": 9,
+    "color": "cobalt-blue",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-frosted-9ml": {
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "capacity_ml": 9,
+    "color": "frosted",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-swirl-9ml": {
+    "height_width_ratio": 4.3,
+    "cap_percent": 30,
+    "body_percent": 70,
+    "frame_occupancy_height_pct": 65,
+    "capacity_ml": 9,
+    "color": "swirl",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-clear-11ml": {
+    "height_width_ratio": 4.1,
+    "cap_percent": 29,
+    "body_percent": 71,
+    "frame_occupancy_height_pct": 66,
+    "capacity_ml": 11,
+    "color": "clear",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-clear-14ml": {
+    "height_width_ratio": 3.9,
+    "cap_percent": 28,
+    "body_percent": 72,
+    "frame_occupancy_height_pct": 67,
+    "capacity_ml": 14,
+    "color": "clear",
+    "closure": "shiny-gold-rollon"
+  },
+  "cylinder-clear-25ml": {
+    "height_width_ratio": 3.5,
+    "cap_percent": 25,
+    "body_percent": 75,
+    "frame_occupancy_height_pct": 68,
+    "capacity_ml": 25,
+    "color": "clear",
+    "closure": "sprayer"
+  },
+  "cylinder-clear-30ml": {
+    "height_width_ratio": 3.3,
+    "cap_percent": 24,
+    "body_percent": 76,
+    "frame_occupancy_height_pct": 68,
+    "capacity_ml": 30,
+    "color": "clear",
+    "closure": "matte-silver-rollon"
+  },
+  "cylinder-clear-50ml": {
+    "height_width_ratio": 3.0,
+    "cap_percent": 22,
+    "body_percent": 78,
+    "frame_occupancy_height_pct": 70,
+    "capacity_ml": 50,
+    "color": "clear",
+    "closure": "sprayer"
+  }
+}
