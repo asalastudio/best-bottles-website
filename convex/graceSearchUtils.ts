@@ -35,6 +35,7 @@ export type { ShapeMatch } from "../src/lib/graceShapeIntent";
 export {
     SHAPE_TO_FAMILIES,
     detectShapeIntent,
+    inferCatalogCategoryFromSearchTerm,
 } from "../src/lib/graceShapeIntent";
 
 // ─── Types ──────────────────────────────────────────────────────────────────

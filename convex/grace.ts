@@ -21,6 +21,7 @@ import {
     detectCatalogColor,
     detectApplicatorIntent,
     detectShapeIntent,
+    inferCatalogCategoryFromSearchTerm,
     dedupeCatalogResults,
     diversifyByFamily,
     scoreCatalogResult,
@@ -50,6 +51,8 @@ export const searchCatalog = query({
         if (!String(searchTermToUse).trim()) {
             return [];
         }
+        const categoryLimit =
+            args.categoryLimit ?? inferCatalogCategoryFromSearchTerm(args.searchTerm) ?? undefined;
         const termLower = searchTermToUse.toLowerCase();
         const detectedColor = detectCatalogColor(termLower);
         const applicatorIntent = detectApplicatorIntent(searchTermToUse);
@@ -60,7 +63,7 @@ export const searchCatalog = query({
         // Use search index filter fields (category, family) — faster than post-search .filter()
         let q = ctx.db.query("products").withSearchIndex("search_itemName", (q) => {
             let s = q.search("itemName", searchTermToUse);
-            if (args.categoryLimit) s = s.eq("category", args.categoryLimit);
+            if (categoryLimit) s = s.eq("category", categoryLimit);
             if (args.familyLimit) s = s.eq("family", args.familyLimit);
             return s;
         });
@@ -75,7 +78,7 @@ export const searchCatalog = query({
         if (results.length < 5 || (isRollOnSearch && is30mlSearch)) {
             const fallbackQ = ctx.db.query("products").withSearchIndex("search_itemName", (q) => {
                 let s = q.search("itemName", "roller");
-                if (args.categoryLimit) s = s.eq("category", args.categoryLimit);
+                if (categoryLimit) s = s.eq("category", categoryLimit);
                 if (args.familyLimit) s = s.eq("family", args.familyLimit);
                 return s;
             });
@@ -244,7 +247,7 @@ export const searchCatalog = query({
                 .query("productGroups")
                 .withSearchIndex("search_groupDescription", (q) => {
                     let sq = q.search("groupDescription", searchTermToUse);
-                    if (args.categoryLimit) sq = sq.eq("category", args.categoryLimit);
+                    if (categoryLimit) sq = sq.eq("category", categoryLimit);
                     if (args.familyLimit) sq = sq.eq("family", args.familyLimit);
                     return sq;
                 })

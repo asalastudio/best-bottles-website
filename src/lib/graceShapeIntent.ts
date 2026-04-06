@@ -116,6 +116,20 @@ export function catalogFamiliesForNav(
 }
 
 /**
+ * Aluminum bottles are a **category** (Aluminum Bottle), not a glass design family.
+ * Use this for catalog URLs and searchCatalog categoryLimit so results are not mixed with glass
+ * or mis-clustered into decorative/teardrop families.
+ */
+export function inferCatalogCategoryFromSearchTerm(term: string): string | null {
+    const t = term.trim();
+    if (!t) return null;
+    if (!/\b(aluminum|aluminium)\b/i.test(t)) return null;
+    // Shopping for caps/closures named aluminum — not the aluminum bottle product line
+    if (/\baluminum\s+(cap|caps|closure|closures)\b/i.test(t)) return null;
+    return "Aluminum Bottle";
+}
+
+/**
  * Catalog client-side search uses space-separated tokens (all must match).
  * For octagonal/tola requests, pin "octagonal" so Teardrop / Apothecary noise is excluded.
  */
@@ -138,6 +152,8 @@ export function expandCatalogPathFamilies(path: string): string {
     if (qMark === -1) return path;
     const search = path.slice(qMark + 1);
     const u = new URLSearchParams(search);
+    // Category (e.g. Aluminum Bottle, Glass Bottle) is authoritative — do not merge shape families on top.
+    if (u.get("category")) return path;
     const raw = u.get("families") ?? u.get("family");
     if (!raw) return path;
     const familyParts = raw.split(",").map((s) => s.trim()).filter(Boolean);

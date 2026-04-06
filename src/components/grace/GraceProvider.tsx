@@ -15,7 +15,12 @@ import {
     type ReactNode,
 } from "react";
 import { analytics } from "@/lib/analytics";
-import { catalogFamiliesForNav, expandCatalogPathFamilies, graceCatalogSearchFromQuery } from "@/lib/graceShapeIntent";
+import {
+    catalogFamiliesForNav,
+    expandCatalogPathFamilies,
+    graceCatalogSearchFromQuery,
+    inferCatalogCategoryFromSearchTerm,
+} from "@/lib/graceShapeIntent";
 import {
     GraceContext,
     type GraceContextValue,
@@ -114,25 +119,30 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     const sanitizedQuery = sanitizeCatalogQuery(query);
     const productFams = products.map((p) => p.family).filter(Boolean) as string[];
 
-    const expanded = catalogFamiliesForNav(query, family, productFams);
-    if (expanded) {
-        qs.set("families", expanded);
-    } else if (family) {
-        qs.set("families", family);
+    const category = inferCatalogCategoryFromSearchTerm(query ?? "");
+    if (category) {
+        qs.set("category", category);
     } else {
-        const familyCounts = new Map<string, number>();
-        for (const p of products) {
-            if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
-        }
-        const sorted = [...familyCounts.entries()].sort((a, b) => b[1] - a[1]);
-        const total = products.length;
-        if (sorted.length > 0) {
-            const dominant = sorted.filter(([, count]) => count / total >= 0.3).map(([f]) => f);
-            const families = dominant.length > 0 ? dominant : [sorted[0][0]];
-            const fromDominant = catalogFamiliesForNav(undefined, undefined, families);
-            qs.set("families", fromDominant ?? families.join(","));
-        } else if (sanitizedQuery) {
-            qs.set("search", sanitizedQuery);
+        const expanded = catalogFamiliesForNav(query, family, productFams);
+        if (expanded) {
+            qs.set("families", expanded);
+        } else if (family) {
+            qs.set("families", family);
+        } else {
+            const familyCounts = new Map<string, number>();
+            for (const p of products) {
+                if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
+            }
+            const sorted = [...familyCounts.entries()].sort((a, b) => b[1] - a[1]);
+            const total = products.length;
+            if (sorted.length > 0) {
+                const dominant = sorted.filter(([, count]) => count / total >= 0.3).map(([f]) => f);
+                const families = dominant.length > 0 ? dominant : [sorted[0][0]];
+                const fromDominant = catalogFamiliesForNav(undefined, undefined, families);
+                qs.set("families", fromDominant ?? families.join(","));
+            } else if (sanitizedQuery) {
+                qs.set("search", sanitizedQuery);
+            }
         }
     }
 
@@ -669,9 +679,16 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
 
             if (navPath.startsWith("/catalog")) {
                 navPath = expandCatalogPathFamilies(navPath);
-                const searchHint = graceCatalogSearchFromQuery(
-                    `${params.title ?? ""} ${params.description ?? ""}`.trim(),
-                );
+                const titleBlock = `${params.title ?? ""} ${params.description ?? ""}`.trim();
+                const categoryHint = inferCatalogCategoryFromSearchTerm(titleBlock);
+                if (categoryHint) {
+                    const qIdx = navPath.indexOf("?");
+                    const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);
+                    const sp = qIdx === -1 ? new URLSearchParams() : new URLSearchParams(navPath.slice(qIdx + 1));
+                    if (!sp.get("category")) sp.set("category", categoryHint);
+                    navPath = `${base}?${sp.toString()}`;
+                }
+                const searchHint = graceCatalogSearchFromQuery(titleBlock);
                 if (searchHint) {
                     const qIdx = navPath.indexOf("?");
                     const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);

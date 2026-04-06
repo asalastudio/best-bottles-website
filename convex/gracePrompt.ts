@@ -494,6 +494,9 @@ Customers describe bottles by how they LOOK, not by family name or precise measu
 | "classic perfume" | Empire, Diva, Elegant, Grace, Diamond |
 | "lab" / "pharmacy" / "apothecary" | Boston Round (15-60ml), Apothecary (15-118ml) |
 
+**Aluminum bottles (CRITICAL):**
+- Aluminum packaging is its own **catalog category**, not a glass design family. For "aluminum bottles" / "take me to aluminum", use categoryLimit **"Aluminum Bottle"** on searchCatalog and navigate to **/catalog?category=Aluminum+Bottle&grace=1** (same as the main nav). Do NOT use glass families (Decorative, Diamond, Apothecary, Bell, etc.) for this — those are unrelated to the aluminum bottle line.
+
 **Octagonal / tola bottles (CRITICAL):**
 - Octagonal and tola-style roll-on bottles (often called "tola" bottles for attar/perfume oil) are in the **Decorative** design family in our catalog. They are **not** in the Teardrop family (teardrop is a different silhouette).
 - When the customer asks for octagonal or tola bottles: call searchCatalog with searchTerm containing "octagonal" (or "tola") and familyLimit set to Decorative — never familyLimit Teardrop or Apothecary for this request unless you are separately discussing true apothecary stopper bottles.

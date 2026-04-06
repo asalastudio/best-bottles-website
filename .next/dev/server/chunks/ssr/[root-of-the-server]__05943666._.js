@@ -835,7 +835,9 @@ const components = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modu
     "expandCatalogPathFamilies",
     ()=>expandCatalogPathFamilies,
     "graceCatalogSearchFromQuery",
-    ()=>graceCatalogSearchFromQuery
+    ()=>graceCatalogSearchFromQuery,
+    "inferCatalogCategoryFromSearchTerm",
+    ()=>inferCatalogCategoryFromSearchTerm
 ]);
 const SHAPE_TO_FAMILIES = {
     square: {
@@ -1231,6 +1233,14 @@ function catalogFamiliesForNav(query, explicitFamily, productFamilies) {
     }
     return null;
 }
+function inferCatalogCategoryFromSearchTerm(term) {
+    const t = term.trim();
+    if (!t) return null;
+    if (!/\b(aluminum|aluminium)\b/i.test(t)) return null;
+    // Shopping for caps/closures named aluminum — not the aluminum bottle product line
+    if (/\baluminum\s+(cap|caps|closure|closures)\b/i.test(t)) return null;
+    return "Aluminum Bottle";
+}
 function graceCatalogSearchFromQuery(query) {
     if (!query?.trim()) return null;
     const t = query.toLowerCase();
@@ -1248,6 +1258,8 @@ function expandCatalogPathFamilies(path) {
     if (qMark === -1) return path;
     const search = path.slice(qMark + 1);
     const u = new URLSearchParams(search);
+    // Category (e.g. Aluminum Bottle, Glass Bottle) is authoritative — do not merge shape families on top.
+    if (u.get("category")) return path;
     const raw = u.get("families") ?? u.get("family");
     if (!raw) return path;
     const familyParts = raw.split(",").map((s)=>s.trim()).filter(Boolean);
@@ -1358,29 +1370,34 @@ function buildCatalogPath(products, query, family) {
     const qs = new URLSearchParams();
     const sanitizedQuery = sanitizeCatalogQuery(query);
     const productFams = products.map((p)=>p.family).filter(Boolean);
-    const expanded = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["catalogFamiliesForNav"])(query, family, productFams);
-    if (expanded) {
-        qs.set("families", expanded);
-    } else if (family) {
-        qs.set("families", family);
+    const category = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["inferCatalogCategoryFromSearchTerm"])(query ?? "");
+    if (category) {
+        qs.set("category", category);
     } else {
-        const familyCounts = new Map();
-        for (const p of products){
-            if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
-        }
-        const sorted = [
-            ...familyCounts.entries()
-        ].sort((a, b)=>b[1] - a[1]);
-        const total = products.length;
-        if (sorted.length > 0) {
-            const dominant = sorted.filter(([, count])=>count / total >= 0.3).map(([f])=>f);
-            const families = dominant.length > 0 ? dominant : [
-                sorted[0][0]
-            ];
-            const fromDominant = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["catalogFamiliesForNav"])(undefined, undefined, families);
-            qs.set("families", fromDominant ?? families.join(","));
-        } else if (sanitizedQuery) {
-            qs.set("search", sanitizedQuery);
+        const expanded = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["catalogFamiliesForNav"])(query, family, productFams);
+        if (expanded) {
+            qs.set("families", expanded);
+        } else if (family) {
+            qs.set("families", family);
+        } else {
+            const familyCounts = new Map();
+            for (const p of products){
+                if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
+            }
+            const sorted = [
+                ...familyCounts.entries()
+            ].sort((a, b)=>b[1] - a[1]);
+            const total = products.length;
+            if (sorted.length > 0) {
+                const dominant = sorted.filter(([, count])=>count / total >= 0.3).map(([f])=>f);
+                const families = dominant.length > 0 ? dominant : [
+                    sorted[0][0]
+                ];
+                const fromDominant = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["catalogFamiliesForNav"])(undefined, undefined, families);
+                qs.set("families", fromDominant ?? families.join(","));
+            } else if (sanitizedQuery) {
+                qs.set("search", sanitizedQuery);
+            }
         }
     }
     const navSearch = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["graceCatalogSearchFromQuery"])(query);
@@ -2134,7 +2151,16 @@ function GraceProvider({ children }) {
                 }
                 if (navPath.startsWith("/catalog")) {
                     navPath = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["expandCatalogPathFamilies"])(navPath);
-                    const searchHint = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["graceCatalogSearchFromQuery"])(`${params.title ?? ""} ${params.description ?? ""}`.trim());
+                    const titleBlock = `${params.title ?? ""} ${params.description ?? ""}`.trim();
+                    const categoryHint = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["inferCatalogCategoryFromSearchTerm"])(titleBlock);
+                    if (categoryHint) {
+                        const qIdx = navPath.indexOf("?");
+                        const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);
+                        const sp = qIdx === -1 ? new URLSearchParams() : new URLSearchParams(navPath.slice(qIdx + 1));
+                        if (!sp.get("category")) sp.set("category", categoryHint);
+                        navPath = `${base}?${sp.toString()}`;
+                    }
+                    const searchHint = (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$graceShapeIntent$2e$ts__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["graceCatalogSearchFromQuery"])(titleBlock);
                     if (searchHint) {
                         const qIdx = navPath.indexOf("?");
                         const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);
@@ -2623,7 +2649,7 @@ function GraceProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/grace/GraceProvider.tsx",
-        lineNumber: 1106,
+        lineNumber: 1123,
         columnNumber: 9
     }, this);
 }
