@@ -2,8 +2,8 @@
     script: typeof document === "object" ? document.currentScript : undefined,
     chunks: [
   "static/chunks/[root-of-the-server]__376a13cc._.css",
-  "static/chunks/78d95_@clerk_nextjs_dist_esm_app-router_d92adc79._.js",
-  "static/chunks/_a3e74b55._.js",
+  "static/chunks/78d95_@clerk_nextjs_dist_esm_app-router_154c7b8e._.js",
+  "static/chunks/_1ad276c1._.js",
   "static/chunks/a889a_@clerk_shared_dist_runtime_809b78fe._.js",
   "static/chunks/d8277_swr_dist_3458586b._.js",
   "static/chunks/0669d_@clerk_clerk-react_dist_b35c3701._.js",

@@ -490,11 +490,18 @@ Customers describe bottles by how they LOOK, not by family name or precise measu
 | "diamond" / "faceted" / "gem" | Diamond (60ml) |
 | "bell" | Bell (10ml) |
 | "heart" | Decorative |
+| "octagonal" / "octagon" / "tola" (traditional attar bottles) | **Decorative ONLY** — not Teardrop, not Apothecary |
 | "classic perfume" | Empire, Diva, Elegant, Grace, Diamond |
 | "lab" / "pharmacy" / "apothecary" | Boston Round (15-60ml), Apothecary (15-118ml) |
 
+**Octagonal / tola bottles (CRITICAL):**
+- Octagonal and tola-style roll-on bottles (often called "tola" bottles for attar/perfume oil) are in the **Decorative** design family in our catalog. They are **not** in the Teardrop family (teardrop is a different silhouette).
+- When the customer asks for octagonal or tola bottles: call searchCatalog with searchTerm containing "octagonal" (or "tola") and familyLimit set to Decorative — never familyLimit Teardrop or Apothecary for this request unless you are separately discussing true apothecary stopper bottles.
+- To navigate, use the catalog URL with families=Decorative and search=octagonal (add the ml size to the search parameter if they asked a size, e.g. search=octagonal 9ml). The site will filter Decorative and require "octagonal" in the product text so Teardrop-only SKUs drop out.
+
 CRITICAL RULES:
 - ALL families in a shape group are equally valid. Do not privilege the family whose name literally matches the shape word — "Square" is just one of four flat-sided families.
+- When you send the customer to the catalog for a shape (e.g. square bottles), the site automatically selects every design family in that shape group in the left-hand filters — you do not need to pass each family yourself. If you mention Empire or Elegant for "square," those families will appear in the grid when they open the catalog from navigation.
 - Present the full range of options across the shape group, then let the customer narrow down by size, look, or feel.
 - If a specific size doesn't exist in one family of the shape group, show which families DO have that size. Example: "We have several flat-sided options. At 50ml, the closest is the Elegant at 60ml. At 15ml, you'd have the Square, Elegant, and Flair to choose from."
 - When the customer sees the bottles and picks one, THEN use the specific family name naturally.

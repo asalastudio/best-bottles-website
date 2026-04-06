@@ -15,6 +15,7 @@ import {
     type ReactNode,
 } from "react";
 import { analytics } from "@/lib/analytics";
+import { catalogFamiliesForNav, expandCatalogPathFamilies, graceCatalogSearchFromQuery } from "@/lib/graceShapeIntent";
 import {
     GraceContext,
     type GraceContextValue,
@@ -111,8 +112,12 @@ function slugToSearchTerm(rawSlug: string): string {
 function buildCatalogPath(products: ProductCard[], query?: string, family?: string): string {
     const qs = new URLSearchParams();
     const sanitizedQuery = sanitizeCatalogQuery(query);
+    const productFams = products.map((p) => p.family).filter(Boolean) as string[];
 
-    if (family) {
+    const expanded = catalogFamiliesForNav(query, family, productFams);
+    if (expanded) {
+        qs.set("families", expanded);
+    } else if (family) {
         qs.set("families", family);
     } else {
         const familyCounts = new Map<string, number>();
@@ -124,14 +129,20 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
         if (sorted.length > 0) {
             const dominant = sorted.filter(([, count]) => count / total >= 0.3).map(([f]) => f);
             const families = dominant.length > 0 ? dominant : [sorted[0][0]];
-            qs.set("families", families.join(","));
+            const fromDominant = catalogFamiliesForNav(undefined, undefined, families);
+            qs.set("families", fromDominant ?? families.join(","));
         } else if (sanitizedQuery) {
             qs.set("search", sanitizedQuery);
         }
     }
 
+    const navSearch = graceCatalogSearchFromQuery(query);
     const capMatch = query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
-    if (capMatch) qs.set("search", `${capMatch[1]}ml`);
+    if (navSearch) {
+        qs.set("search", navSearch);
+    } else if (capMatch) {
+        qs.set("search", `${capMatch[1]}ml`);
+    }
     qs.set("grace", "1");
     return `/catalog?${qs.toString()}`;
 }
@@ -656,8 +667,21 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                 } catch (e) { console.error("[Grace] slug validation:", e); }
             }
 
-            if (navPath.startsWith("/catalog") && !navPath.includes("grace=")) {
-                navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}grace=1`;
+            if (navPath.startsWith("/catalog")) {
+                navPath = expandCatalogPathFamilies(navPath);
+                const searchHint = graceCatalogSearchFromQuery(
+                    `${params.title ?? ""} ${params.description ?? ""}`.trim(),
+                );
+                if (searchHint) {
+                    const qIdx = navPath.indexOf("?");
+                    const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);
+                    const sp = qIdx === -1 ? new URLSearchParams() : new URLSearchParams(navPath.slice(qIdx + 1));
+                    if (!sp.get("search")) sp.set("search", searchHint);
+                    navPath = `${base}?${sp.toString()}`;
+                }
+                if (!navPath.includes("grace=")) {
+                    navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}grace=1`;
+                }
             }
 
             sessionMetricsRef.current.toolsCalled++;
