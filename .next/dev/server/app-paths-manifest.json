@@ -1,5 +1,4 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/api/elevenlabs/server-tools/route": "app/api/elevenlabs/server-tools/route.js",
   "/api/elevenlabs/signed-url/route": "app/api/elevenlabs/signed-url/route.js",
   "/catalog/page": "app/catalog/page.js",
