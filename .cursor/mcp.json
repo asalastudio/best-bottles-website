@@ -18,6 +18,10 @@
     "Sanity": {
       "url": "https://mcp.sanity.io",
       "type": "http"
+    },
+    "mixpanel": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.mixpanel.com/mcp"]
     }
   }
 }

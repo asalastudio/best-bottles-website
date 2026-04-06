@@ -1,0 +1,21 @@
+{
+  "mcpServers": {
+    "ElevenLabs": {
+      "command": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.venv-elevenlabs/bin/python",
+      "args": [
+        "-m",
+        "elevenlabs_mcp"
+      ],
+      "env": {
+        "ELEVENLABS_API_KEY": "sk_819cd9edb8200d70e4d3e2c69169859222f6d0bff26dba7b"
+      }
+    },
+    "shadcn": {
+      "command": "npx",
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
+    }
+  }
+}
