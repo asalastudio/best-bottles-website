@@ -734,8 +734,14 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             } catch (e) { console.error("[Grace] compareProducts:", e); return "Comparison failed."; }
         },
 
-        proposeCartAdd: (params: { products: Array<{ itemName: string; graceSku: string; quantity?: number; webPrice1pc?: number }> }) => {
-            const products = (params.products ?? []).map((p) => ({ ...p, quantity: p.quantity ?? 1 }));
+        proposeCartAdd: (params: { products: Array<{ itemName: string; graceSku: string; quantity?: number; webPrice1pc?: number }> | string }) => {
+            let rawProducts: Array<{ itemName: string; graceSku: string; quantity?: number; webPrice1pc?: number }>;
+            if (typeof params.products === "string") {
+                try { rawProducts = JSON.parse(params.products); } catch { rawProducts = []; }
+            } else {
+                rawProducts = params.products ?? [];
+            }
+            const products = rawProducts.map((p) => ({ ...p, quantity: p.quantity ?? 1 }));
             if (products.length === 0) return "No products specified to add.";
             try {
                 addToCart(products.map((p) => ({
@@ -758,10 +764,16 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             } catch (e) { console.error("[Grace] proposeCartAdd:", e); return "Failed to add items to cart."; }
         },
 
-        navigateToPage: async (params: { path: string; title: string; description?: string; autoNavigate?: boolean; prefillFields?: Record<string, string> }) => {
+        navigateToPage: async (params: { path: string; title: string; description?: string; autoNavigate?: boolean | string; prefillFields?: Record<string, string> | string }) => {
             let navPath = params.path ?? "/";
-            if (params.prefillFields && Object.keys(params.prefillFields).length > 0) {
-                const qs = new URLSearchParams(params.prefillFields).toString();
+            let prefill: Record<string, string> | undefined;
+            if (typeof params.prefillFields === "string") {
+                try { prefill = JSON.parse(params.prefillFields); } catch { prefill = undefined; }
+            } else {
+                prefill = params.prefillFields;
+            }
+            if (prefill && Object.keys(prefill).length > 0) {
+                const qs = new URLSearchParams(prefill).toString();
                 navPath = `${navPath}?${qs}`;
             }
 
@@ -845,8 +857,14 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             } catch (e) { console.error("[Grace] showProductPresentation:", e); return "Product presentation failed."; }
         },
 
-        prefillForm: (params: { formType: string; fields: Record<string, string> }) => {
-            window.dispatchEvent(new CustomEvent("grace:prefillForm", { detail: { formType: params.formType, fields: params.fields } }));
+        prefillForm: (params: { formType: string; fields: Record<string, string> | string }) => {
+            let fields: Record<string, string>;
+            if (typeof params.fields === "string") {
+                try { fields = JSON.parse(params.fields); } catch { fields = {}; }
+            } else {
+                fields = params.fields;
+            }
+            window.dispatchEvent(new CustomEvent("grace:prefillForm", { detail: { formType: params.formType, fields } }));
             return "Form pre-filled. The customer can review and submit.";
         },
 

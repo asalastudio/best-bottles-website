@@ -259,6 +259,10 @@ export function emptySearchCatalogHint(rawSearchTerm: string): string {
     if (ml === 9 && roll) {
         return " For 9ml roll-on bottles in the Cylinder line, retry searchCatalog with searchTerm \"9ml cylinder roller\" and familyLimit \"Cylinder\" (and categoryLimit \"Glass Bottle\" if you restricted category). Do not tell the customer 9ml roll-ons are unavailable until that search has been tried.";
     }
+    const pump = /\b(lotion|treatment)\s*pump\b/i.test(normalized) || /\bpump\b/i.test(normalized);
+    if (ml === 9 && pump && /\bcylinder|roll/i.test(normalized)) {
+        return " For 9ml Cylinder lotion pump bottles, retry searchCatalog with searchTerm \"9ml cylinder lotion\" and familyLimit \"Cylinder\". The catalog stocks these; do not claim they are absent until this search is tried.";
+    }
     return "";
 }
 
@@ -307,6 +311,25 @@ export function buildSearchCatalogToolResult(
     if (wants9mlRoll && !has9mlRollOn && data.length > 0) {
         warnings.push(
             "WARNING: This result set contains no 9ml roll-on bottle (wrong size or family is common). Call searchCatalog again with searchTerm \"9ml cylinder roller\" and familyLimit \"Cylinder\" before telling the customer you cannot find 9ml roll-ons.",
+        );
+    }
+
+    const cyl9Roll = data.some(
+        (item) =>
+            item.family === "Cylinder"
+            && item.capacityMl === 9
+            && /roller|roll/i.test((item.applicator ?? "").toLowerCase()),
+    );
+    const cyl9Pump = data.some(
+        (item) =>
+            item.family === "Cylinder"
+            && item.capacityMl === 9
+            && (item.applicator ?? "").toLowerCase().includes("lotion pump"),
+    );
+    if (cyl9Roll || cyl9Pump) {
+        const parts = [cyl9Roll && "roll-on (roller ball)", cyl9Pump && "lotion pump"].filter(Boolean);
+        warnings.push(
+            `FORBIDDEN: Results below include 9ml Cylinder bottle(s) with ${parts.join(" and ")}. Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.`,
         );
     }
 

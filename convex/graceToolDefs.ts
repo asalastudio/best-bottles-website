@@ -61,7 +61,7 @@ export const GRACE_TOOLS: Anthropic.Tool[] = [
     {
         name: "getFamilyOverview",
         description:
-            "Get a complete overview of a bottle family: all available sizes, glass colours, thread sizes, applicator types, and price ranges. ALWAYS call this when a customer asks broadly about a family ('what sizes do your Boston Rounds come in?', 'tell me about the Diva', 'what do you have in Cylinders?'). This returns aggregated data — use searchCatalog afterwards if the customer wants specific variants.",
+            "Get a complete overview of a bottle family: all available sizes, glass colours, thread sizes, applicator types, and price ranges. ALWAYS call this when a customer asks broadly about a family ('what sizes do your Boston Rounds come in?', 'tell me about the Diva', 'what do you have in Cylinders?'). This returns aggregated data — use searchCatalog afterwards if the customer wants specific variants. For family 'Cylinder', the response may include graceHint: read it — it states facts about 9ml roll-on and lotion pump SKUs that you must not contradict.",
         input_schema: {
             type: "object" as const,
             properties: {

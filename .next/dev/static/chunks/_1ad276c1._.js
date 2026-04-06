@@ -2010,6 +2010,17 @@ function GraceProvider({ children }) {
                                 console.error("[Grace] searchCatalog HTTP", r.status, data.error);
                                 return "Search failed. Please try again.";
                             }
+                            if (typeof data.result === "string") {
+                                sessionMetricsRef.current.toolsCalled++;
+                                sessionMetricsRef.current.toolsUsed.add("searchCatalog");
+                                __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$analytics$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["analytics"].graceToolCalled({
+                                    toolName: "searchCatalog",
+                                    searchTerm: params.searchTerm,
+                                    family: params.familyLimit,
+                                    success: !data.result.startsWith("No products found")
+                                });
+                                return data.result;
+                            }
                             const products = Array.isArray(data.result) ? data.result : [];
                             sessionMetricsRef.current.toolsCalled++;
                             sessionMetricsRef.current.toolsUsed.add("searchCatalog");
@@ -2356,7 +2367,17 @@ function GraceProvider({ children }) {
                 })["GraceProvider.useMemo[clientTools]"],
                 proposeCartAdd: ({
                     "GraceProvider.useMemo[clientTools]": (params)=>{
-                        const products = (params.products ?? []).map({
+                        let rawProducts;
+                        if (typeof params.products === "string") {
+                            try {
+                                rawProducts = JSON.parse(params.products);
+                            } catch  {
+                                rawProducts = [];
+                            }
+                        } else {
+                            rawProducts = params.products ?? [];
+                        }
+                        const products = rawProducts.map({
                             "GraceProvider.useMemo[clientTools].products": (p)=>({
                                     ...p,
                                     quantity: p.quantity ?? 1
@@ -2411,8 +2432,18 @@ function GraceProvider({ children }) {
                 navigateToPage: ({
                     "GraceProvider.useMemo[clientTools]": async (params)=>{
                         let navPath = params.path ?? "/";
-                        if (params.prefillFields && Object.keys(params.prefillFields).length > 0) {
-                            const qs = new URLSearchParams(params.prefillFields).toString();
+                        let prefill;
+                        if (typeof params.prefillFields === "string") {
+                            try {
+                                prefill = JSON.parse(params.prefillFields);
+                            } catch  {
+                                prefill = undefined;
+                            }
+                        } else {
+                            prefill = params.prefillFields;
+                        }
+                        if (prefill && Object.keys(prefill).length > 0) {
+                            const qs = new URLSearchParams(prefill).toString();
                             navPath = `${navPath}?${qs}`;
                         }
                         if (navPath.startsWith("/products/")) {
@@ -2535,10 +2566,20 @@ function GraceProvider({ children }) {
                 })["GraceProvider.useMemo[clientTools]"],
                 prefillForm: ({
                     "GraceProvider.useMemo[clientTools]": (params)=>{
+                        let fields;
+                        if (typeof params.fields === "string") {
+                            try {
+                                fields = JSON.parse(params.fields);
+                            } catch  {
+                                fields = {};
+                            }
+                        } else {
+                            fields = params.fields;
+                        }
                         window.dispatchEvent(new CustomEvent("grace:prefillForm", {
                             detail: {
                                 formType: params.formType,
-                                fields: params.fields
+                                fields
                             }
                         }));
                         return "Form pre-filled. The customer can review and submit.";
@@ -3056,7 +3097,7 @@ function GraceProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/grace/GraceProvider.tsx",
-        lineNumber: 1236,
+        lineNumber: 1265,
         columnNumber: 9
     }, this);
 }

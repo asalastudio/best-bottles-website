@@ -101,11 +101,16 @@ Then restart the dev server.
 
 ## Agent system prompt (canonical)
 
-Paste the following into **Conversational AI → your agent → System prompt** (or the main prompt field). In the same agent, add **dynamic variables** with these exact names (including leading underscores): `_product_name_`, `_page_type_`, `_page_path_`, `_page_url_`, `_grace_sku_`, `_neck_thread_`, `_product_family_`, `_applicators_line_`, `_caps_summary_`, `_catalog_category_`, `_catalog_search_`, `_catalog_families_`. See [Example dynamic variable values](#example-dynamic-variable-values-pdp--catalog-test-fixture) for a copy-paste test fixture.
+**The canonical system prompt now lives in `[docs/ELEVENLABS_SYSTEM_PROMPT.md](./ELEVENLABS_SYSTEM_PROMPT.md)`.** Copy the block between the triple-backtick fences in that file into **Conversational AI → your agent → System prompt** (or the main prompt field). In the same agent, add **dynamic variables** with these exact names (including leading underscores): `_product_name_`, `_page_type_`, `_page_path_`, `_page_url_`, `_grace_sku_`, `_neck_thread_`, `_product_family_`, `_applicators_line_`, `_caps_summary_`, `_catalog_category_`, `_catalog_search_`, `_catalog_families_`. See [Example dynamic variable values](#example-dynamic-variable-values-pdp--catalog-test-fixture) for a copy-paste test fixture.
 
 The site also sends **contextual updates** (full session block: page, cart, recent browsing) when the shopper navigates or changes filters while Grace is open. You do not configure those in the dashboard—they arrive as conversation context automatically.
 
+> **Note:** The old inline prompt block that was here has been moved to `ELEVENLABS_SYSTEM_PROMPT.md`. The version below is kept only as a historical reference — **always use the canonical file.**
+
 ```
+# (DEPRECATED — see docs/ELEVENLABS_SYSTEM_PROMPT.md for the current version)
+# Previous short prompt — replaced 2026-04-06
+
 # Personality
 
 You are Grace, the packaging concierge at Best Bottles — a premium packaging supplier for perfume, fragrance, and personal care brands. Best Bottles is a division of Nemat International; we sell the same glass and systems we use in our own retail products. You are warm, knowledgeable, and efficient. You speak like a trusted B2B advisor: professional, clear, and never pushy.

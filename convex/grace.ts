@@ -431,16 +431,28 @@ export const getFamilyOverview = query({
             if (g.priceRangeMax && g.priceRangeMax > 0) maxPrice = Math.max(maxPrice, g.priceRangeMax);
         }
 
+        const sizeRows = [...sizes.entries()]
+            .map(([label, info]) => ({ label, ml: info.ml, variantCount: info.count }))
+            .sort((a, b) => (a.ml ?? 0) - (b.ml ?? 0));
+        const applicatorList = [...applicators].sort();
+
+        const has9mlSize = sizeRows.some((s) => s.ml === 9);
+        const hasRollerApplicator = applicatorList.some((a) => /roller/i.test(a));
+        const hasLotionPumpApplicator = applicatorList.some((a) => /lotion pump/i.test(a));
+        const graceHint =
+            args.family === "Cylinder" && has9mlSize && (hasRollerApplicator || hasLotionPumpApplicator)
+                ? "FACT (do not contradict): 9ml Cylinder glass bottles are stocked with roll-on (Metal/Plastic Roller Ball) and Lotion Pump as complete SKUs, alongside sprayers and other applicators. If the customer asks about 9ml roll-on or 9ml lotion pump, call searchCatalog with searchTerm \"9ml cylinder\" and familyLimit \"Cylinder\" — do not say we do not carry these combinations unless that search returns zero rows after a retry."
+                : undefined;
+
         return {
             family: args.family,
             totalVariants,
-            sizes: [...sizes.entries()]
-                .map(([label, info]) => ({ label, ml: info.ml, variantCount: info.count }))
-                .sort((a, b) => (a.ml ?? 0) - (b.ml ?? 0)),
+            sizes: sizeRows,
             colors: [...colors].sort(),
             threadSizes: [...threads].sort(),
-            applicatorTypes: [...applicators].sort(),
+            applicatorTypes: applicatorList,
             priceRange: { min: minPrice === Infinity ? null : minPrice, max: maxPrice || null },
+            ...(graceHint ? { graceHint } : {}),
         };
     },
 });

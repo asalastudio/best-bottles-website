@@ -1,0 +1,442 @@
+================================================================================
+BEST BOTTLES PRODUCT GAP REPORT
+Live Site vs. Convex Product Groups
+================================================================================
+
+Report Date: 2026-04-06
+
+SUMMARY
+--------------------------------------------------------------------------------
+Total Products on Live Site: 106
+Matched to Convex: 45 (42.5%)
+Gaps (Live site not in Convex): 61
+Orphans (Convex not on live site): 207
+
+BREAKDOWN BY APPLICATOR TYPE
+--------------------------------------------------------------------------------
+  CAP                   50 products
+  ROLLON                31 products
+  SPRAY                 25 products
+
+BREAKDOWN BY FAMILY
+--------------------------------------------------------------------------------
+  Bell                        3 products
+  Boston Round                6 products
+  Circle                      8 products
+  Cylinder                   20 products
+  Diamond                     1 products
+  Diva                        4 products
+  Elegant                    12 products
+  Empire                      2 products
+  Flair                       3 products
+  Grace                       1 products
+  Pillar                      3 products
+  Rectangle                   3 products
+  Round                       4 products
+  Royal                       3 products
+  Sleek                       9 products
+  Slim                        3 products
+  Square                      3 products
+  Tall Cylinder               6 products
+  Tall Rectangle              3 products
+  Tulip                       6 products
+  Unknown                     3 products
+
+BREAKDOWN BY COLOR
+--------------------------------------------------------------------------------
+  Amber                       7 products
+  Clear                      74 products
+  Cobalt Blue                 7 products
+  Frosted                    16 products
+  Swirl                       2 products
+
+GAPS - Products on Live Site NOT in Convex
+--------------------------------------------------------------------------------
+Total: 61 products need to be added to Convex
+
+Boston Round:
+  • GBBstnAmb1ozRollonGl           30ml       Amber           rollon
+  • GBBstnBlu1ozRollonGl           30ml       Cobalt Blue     rollon
+  • GBBstnAmb2ozRollonGl           59ml       Amber           rollon
+  • GBBstnBlu2ozRollonGl           59ml       Cobalt Blue     rollon
+
+Circle:
+  • GBCrcl15BlkShSht               5ml        Clear           cap
+  • GBCrcl50RdcrBlkLthr            5ml        Clear           cap
+  • GBCrclFrst50RdcrBlkLthr        5ml        Frosted         cap
+  • GBCrcl100RdcrBlkLthr           10ml       Clear           cap
+  • GBCrclFrst100RdcrBlkLthr       10ml       Frosted         cap
+  • GBCrcl15SpryBlkMatt            5ml        Clear           spray
+  • GBCrcl15RollBlkDot             5ml        Clear           rollon
+
+Cylinder:
+  • GBCylBlu5BlkShSht              5ml        Cobalt Blue     cap
+  • GBCylBlu5SpryBlkSh             5ml        Cobalt Blue     spray
+  • GBCylAmb9SpryBlk               9ml        Amber           spray
+  • GBCylBlu9SpryBlk               9ml        Cobalt Blue     spray
+  • GBCylFrst9SpryBlk              9ml        Frosted         spray
+  • GBCylSwrl9SpryBlk              9ml        Swirl           spray
+  • GBCylBlu5RollBlkDot            5ml        Cobalt Blue     rollon
+  • GBCylBlu9RollBlkDot            9ml        Cobalt Blue     rollon
+  • GBCylFrst9RollBlkDot           9ml        Frosted         rollon
+  • GBCylSwrl9RollBlkDot           9ml        Swirl           rollon
+
+Diamond:
+  • GBDmnd2ozRdcrBlkLthr           59ml       Clear           cap
+
+Diva:
+  • GBDiva30RdcrBlkLthr            30ml       Clear           cap
+  • GBDiva46RdcrBlkLthr            6ml        Clear           cap
+  • GBDivaFrst46RdcrBlkLthr        6ml        Frosted         cap
+  • GBDiva100RdcrBlkLthr           10ml       Clear           cap
+
+Elegant:
+  • GBElg15BlkShSht                5ml        Clear           cap
+  • GBElgFrst15BlkShSht            5ml        Frosted         cap
+  • GBElgFrst30GlCap               30ml       Frosted         cap
+  • GBElg60RdcrBlkLthr             6ml        Clear           cap
+  • GBElgFrst60RdcrBlkLthr         6ml        Frosted         cap
+  • GBElg100RdcrBlkLthr            10ml       Clear           cap
+  • GBElgFrst100RdcrBlkLthr        10ml       Frosted         cap
+  • GBElg15SpryBlkMatt             5ml        Clear           spray
+  • GBElgFrst15SpryBlkMatt         5ml        Frosted         spray
+  • GBElg15RollBlkDot              5ml        Clear           rollon
+  • GBElgFrst15RollBlkDot          5ml        Frosted         rollon
+
+Empire:
+  • GBEmp50RdcrBlkLthr             5ml        Clear           cap
+  • GBEmp100RdcrBlkLthr            10ml       Clear           cap
+
+Flair:
+  • GBFlair15BlkShSht              5ml        Clear           cap
+  • GBFlair15SpryBlkMatt           5ml        Clear           spray
+  • GBFlair15RollBlkDot            5ml        Clear           rollon
+
+Grace:
+  • GBGrce55RdcrBlkLthr            5ml        Clear           cap
+
+Round:
+  • GBRnd78RdcrBlkLthr             8ml        Clear           cap
+  • GBRndFrst78RdcrBlkLthr         8ml        Frosted         cap
+  • GBRnd128RdcrBlkLthr            8ml        Clear           cap
+  • GBRndFrst128RdcrBlkLthr        8ml        Frosted         cap
+
+Sleek:
+  • GBSlk30RdcrBlkLthr             30ml       Clear           cap
+  • GBSlk100RdcrBlkLthr            10ml       Clear           cap
+
+Slim:
+  • GBSlm30RdcrBlkLthr             30ml       Clear           cap
+  • GBSlm50RdcrBlkLthr             5ml        Clear           cap
+  • GBSlm100RdcrBlkLthr            10ml       Clear           cap
+
+Square:
+  • GBSqr15BlkShSht                5ml        Clear           cap
+  • GBSqr15SpryBlkSh               5ml        Clear           spray
+  • GBSqr15RollBlkDot              5ml        Clear           rollon
+
+Tall Cylinder:
+  • GBTallCylFrst9BlkShSht         9ml        Frosted         cap
+  • GBTallCylFrst9SpryBlkMatt      9ml        Frosted         spray
+  • GBTallCylFrst9RollBlkDot       9ml        Frosted         rollon
+
+Unknown:
+  • GBcyl25RdcrBlkLthr             5ml        Clear           cap
+  • GBSpry3mlClBlk                 3ml        Clear           spray
+  • GBSpry4mlClBlk                 4ml        Clear           spray
+
+ORPHANS - Products in Convex NOT on Live Site
+--------------------------------------------------------------------------------
+Total: 207 Convex products not found on live site
+
+Aluminum Bottle:
+  • aluminum-bottle-65ml-mixed-20-410        65ml       N/A             cap
+  • aluminum-bottle-100ml-mixed-20-410       100ml      N/A             cap
+  • aluminum-bottle-120ml-mixed-20-410       120ml      N/A             cap
+  • aluminum-bottle-500ml-mixed-20-410       500ml      N/A             cap
+
+Apothecary:
+  • apothecary-15ml-cobalt-blue-ground-glassapplicator 15ml       Cobalt          glassapplicator
+  • apothecary-30ml-clear-ground-glassapplicator 30ml       Clear           glassapplicator
+  • pear-118ml-clear-ground-stopper          118ml      Clear           cap
+
+Atomizer:
+  • atomizer-5ml                             5ml        N/A             cap
+  • atomizer-10ml                            10ml       N/A             cap
+
+Bell:
+  • bell-10ml-clear-13-415-finemist          10ml       Clear           finemist
+  • bell-10ml-clear-13-415-capclosure        10ml       Clear           capclosure
+
+Boston Round:
+  • boston-round-15ml-amber-18-400-dropper   15ml       Amber           dropper
+  • boston-round-15ml-clear-18-400           15ml       Clear           cap
+  • boston-round-30ml-clear-20-400-dropper   30ml       Clear           dropper
+  • boston-round-30ml-clear-20-400           30ml       Clear           cap
+  • boston-round-60ml-clear-20-400-dropper   60ml       Clear           dropper
+  • boston-round-60ml-clear-20-400           60ml       Clear           cap
+
+Cap/Closure:
+  • cap-closure-8-425                        N/A        N/A             cap
+
+Cap/Component:
+  • cap-component-0ml-clear                  N/A        Clear           cap
+
+Circle:
+  • circle-15ml-clear-13-415-rollon          15ml       Clear           rollon
+  • circle-15ml-clear-13-415-finemist        15ml       Clear           finemist
+  • circle-15ml-clear-13-415                 15ml       Clear           cap
+  • circle-30ml-clear-15-415-finemist        30ml       Clear           finemist
+  • circle-50ml-clear-18-415-finemist        50ml       Clear           finemist
+  • circle-50ml-clear-18-415-dropper         50ml       Clear           dropper
+  • circle-50ml-clear-18-415-reducer         50ml       Clear           reducer
+  • circle-50ml-clear-18-415-antiquespray    50ml       Clear           antiquespray
+  • circle-50ml-clear-18-415-antiquespray-tassel 50ml       Clear           antiquespray-tassel
+  • circle-50ml-clear-18-415-lotionpump      50ml       Clear           lotionpump
+  • circle-100ml-clear-18-415-lotionpump     100ml      Clear           lotionpump
+  • circle-100ml-clear-18-415-reducer        100ml      Clear           reducer
+  • circle-100ml-clear-18-415-finemist       100ml      Clear           finemist
+  • circle-100ml-clear-18-415-antiquespray   100ml      Clear           antiquespray
+  • circle-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+
+Component:
+  • lotion-pump-37mm                         5ml        N/A             cap
+
+Cream Jar:
+  • cream-jar-3ml-mixed                      3ml        N/A             cap
+  • cream-jar-5ml-mixed                      5ml        N/A             cap
+  • cream-jar-15ml-mixed                     15ml       N/A             cap
+  • cream-jar-20ml-mixed                     20ml       N/A             cap
+  • cream-jar-30ml-mixed                     30ml       N/A             cap
+  • cream-jar-40ml-mixed                     40ml       N/A             cap
+  • cream-jar-60ml-mixed                     60ml       N/A             cap
+  • cream-jar-63ml-mixed                     63ml       N/A             cap
+
+Cylinder:
+  • spray-bottle-3ml-clear-12mm-finemist     3ml        Clear           finemist
+  • spray-bottle-4ml-clear-12mm-finemist     4ml        Clear           finemist
+  • cylinder-5ml-clear-13-415-finemist       5ml        Clear           finemist
+  • cylinder-5ml-clear-13-415-rollon         5ml        Clear           rollon
+  • cylinder-9ml-clear-17-415-finemist       9ml        Clear           finemist
+  • cylinder-9ml-amber-17-415-lotionpump     9ml        Amber           lotionpump
+  • cylinder-9ml-clear-18-400-glasswand      9ml        Clear           glasswand
+  • cylinder-25ml-clear-18-415-lotionpump    25ml       Clear           lotionpump
+  • spray-bottle-30ml-clear-18-415           30ml       Clear           cap
+  • cylinder-50ml-white-16mm-rollon          50ml       Clear           rollon
+  • cylinder-50ml-clear-18-415-finemist      50ml       Clear           finemist
+  • cylinder-50ml-clear-18-415-reducer       50ml       Clear           reducer
+  • cylinder-50ml-clear-18-415-antiquespray  50ml       Clear           antiquespray
+  • cylinder-50ml-clear-18-415-antiquespray-tassel 50ml       Clear           antiquespray-tassel
+  • cylinder-50ml-clear-18-415-lotionpump    50ml       Clear           lotionpump
+  • cylinder-100ml-clear-18-415-lotionpump   100ml      Clear           lotionpump
+  • cylinder-100ml-clear-18-415-reducer      100ml      Clear           reducer
+  • cylinder-100ml-clear-18-415-finemist     100ml      Clear           finemist
+  • cylinder-100ml-clear-18-415-antiquespray 100ml      Clear           antiquespray
+  • cylinder-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+  • cylinder-118ml-clear                     118ml      Clear           cap
+  • cylinder-227ml-clear                     227ml      Clear           cap
+  • cylinder-454ml-clear                     454ml      Clear           cap
+
+Decorative:
+  • tola-3ml-clear-14-3mm                    3ml        Clear           cap
+  • heart-4ml-frosted-8mm-keychain           4ml        Frosted         cap
+  • marble-5ml-clear-17-52mm                 5ml        Clear           cap
+  • tola-6ml-clear-14-3mm                    6ml        Clear           cap
+  • marble-10ml-clear-17-52mm                10ml       Clear           cap
+  • genie-32ml-cobalt-blue-ground            32ml       Cobalt          cap
+  • eternal-flame-35ml-cobalt-blue-ground    35ml       Cobalt          cap
+  • pear-355ml-clear-ground-glassapplicator  355ml      Clear           glassapplicator
+
+Diamond:
+  • diamond-60ml-clear-18-415-antiquespray   60ml       Clear           antiquespray
+  • diamond-60ml-clear-18-415-antiquespray-tassel 60ml       Clear           antiquespray-tassel
+  • diamond-60ml-clear-18-415-finemist       60ml       Clear           finemist
+  • diamond-60ml-clear-18-415-reducer        60ml       Clear           reducer
+  • diamond-60ml-clear-18-415-lotionpump     60ml       Clear           lotionpump
+
+Diva:
+  • diva-30ml-clear-18-415-finemist          30ml       Clear           finemist
+  • diva-30ml-clear-18-415-reducer           30ml       Clear           reducer
+  • diva-30ml-clear-18-415-antiquespray      30ml       Clear           antiquespray
+  • diva-30ml-clear-18-415-lotionpump        30ml       Clear           lotionpump
+  • diva-46ml-clear-18-415-finemist          46ml       Clear           finemist
+  • diva-46ml-frosted-18-415-dropper         46ml       Frosted         dropper
+  • diva-46ml-clear-18-415-reducer           46ml       Clear           reducer
+  • diva-46ml-clear-18-415-antiquespray      46ml       Clear           antiquespray
+  • diva-46ml-clear-18-415-antiquespray-tassel 46ml       Clear           antiquespray-tassel
+  • diva-46ml-clear-18-415-lotionpump        46ml       Clear           lotionpump
+  • diva-100ml-clear-18-415-lotionpump       100ml      Clear           lotionpump
+  • diva-100ml-clear-18-415-reducer          100ml      Clear           reducer
+  • diva-100ml-clear-18-415-finemist         100ml      Clear           finemist
+  • diva-100ml-clear-18-415-antiquespray     100ml      Clear           antiquespray
+  • diva-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+
+Dropper:
+  • dropper-18-400                           N/A        N/A             cap
+
+Elegant:
+  • elegant-15ml-clear-13-415-rollon         15ml       Clear           rollon
+  • elegant-15ml-clear-13-415-finemist       15ml       Clear           finemist
+  • elegant-15ml-clear-13-415                15ml       Clear           cap
+  • elegant-15ml-clear-13-415-capclosure     15ml       Clear           capclosure
+  • elegant-30ml-clear-15-415-finemist       30ml       Clear           finemist
+  • elegant-60ml-clear-18-415-antiquespray   60ml       Clear           antiquespray
+  • elegant-60ml-clear-18-415-finemist       60ml       Clear           finemist
+  • elegant-60ml-clear-18-415-antiquespray-tassel 60ml       Clear           antiquespray-tassel
+  • elegant-60ml-clear-18-415-dropper        60ml       Clear           dropper
+  • elegant-60ml-clear-18-415-reducer        60ml       Clear           reducer
+  • elegant-60ml-clear-18-415-lotionpump     60ml       Clear           lotionpump
+  • elegant-100ml-frosted-18-415-lotionpump  100ml      Frosted         lotionpump
+  • elegant-100ml-clear-18-415-reducer       100ml      Clear           reducer
+  • elegant-100ml-clear-18-415-finemist      100ml      Clear           finemist
+  • elegant-100ml-clear-18-415-antiquespray  100ml      Clear           antiquespray
+  • elegant-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+
+Empire:
+  • empire-50ml-clear-18-415-antiquespray-tassel 50ml       Clear           antiquespray-tassel
+  • empire-50ml-clear-18-415-finemist        50ml       Clear           finemist
+  • empire-50ml-clear-18-415-dropper         50ml       Clear           dropper
+  • empire-50ml-clear-18-415-reducer         50ml       Clear           reducer
+  • empire-50ml-clear-18-415-antiquespray    50ml       Clear           antiquespray
+  • empire-50ml-clear-18-415-lotionpump      50ml       Clear           lotionpump
+  • empire-100ml-clear-18-415-lotionpump     100ml      Clear           lotionpump
+  • empire-100ml-clear-18-415-reducer        100ml      Clear           reducer
+  • empire-100ml-clear-18-415-finemist       100ml      Clear           finemist
+  • empire-100ml-clear-18-415-antiquespray   100ml      Clear           antiquespray
+  • empire-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+
+Flair:
+  • flair-15ml-clear-13-415-rollon           15ml       Clear           rollon
+  • flair-15ml-clear-13-415-finemist         15ml       Clear           finemist
+  • flair-15ml-clear-13-415                  15ml       Clear           cap
+
+Gift Bag:
+  • gift-bag-0ml-mixed                       N/A        N/A             cap
+
+Gift Box:
+  • gift-box-0ml-mixed                       N/A        N/A             cap
+
+Grace:
+  • grace-55ml-clear-18-415-antiquespray     55ml       Clear           antiquespray
+  • grace-55ml-clear-18-415-antiquespray-tassel 55ml       Clear           antiquespray-tassel
+  • grace-55ml-clear-18-415-finemist         55ml       Clear           finemist
+  • grace-55ml-clear-18-415-reducer          55ml       Clear           reducer
+  • grace-55ml-clear-18-415-lotionpump       55ml       Clear           lotionpump
+
+Lotion Bottle:
+  • lotion-bottle-3ml-clear-snap             3ml        Clear           cap
+  • lotion-bottle-30ml-clear                 30ml       Clear           cap
+
+Lotion Pump:
+  • lotion-pump-17-415                       N/A        N/A             cap
+
+Packaging Supply:
+  • packaging-supply-0ml-mixed               N/A        N/A             cap
+
+Pillar:
+  • pillar-9ml-clear-17-415-finemist         9ml        Clear           finemist
+
+Plastic Bottle:
+  • plastic-bottle-10ml-mixed                10ml       N/A             cap
+  • plastic-bottle-30ml-mixed                30ml       N/A             cap
+
+Rectangle:
+  • rectangle-9ml-clear-ground-glassapplicator 9ml        Clear           glassapplicator
+  • rectangle-10ml-clear-13-415-finemist     10ml       Clear           finemist
+  • rectangle-10ml-clear-13-415-rollon       10ml       Clear           rollon
+
+Roll-On Cap:
+  • cap-closure-13-415                       N/A        N/A             cap
+
+Round:
+  • round-78ml-frosted-18-415-reducer        78ml       Frosted         reducer
+  • round-78ml-clear-18-415-finemist         78ml       Clear           finemist
+  • round-78ml-clear-18-415-antiquespray     78ml       Clear           antiquespray
+  • round-78ml-clear-18-415-antiquespray-tassel 78ml       Clear           antiquespray-tassel
+  • round-78ml-clear-18-415-lotionpump       78ml       Clear           lotionpump
+  • round-128ml-frosted-18-415-antiquespray  128ml      Frosted         antiquespray
+  • round-128ml-clear-18-415-lotionpump      128ml      Clear           lotionpump
+  • round-128ml-clear-18-415-finemist        128ml      Clear           finemist
+  • round-128ml-clear-18-415-dropper         128ml      Clear           dropper
+  • round-128ml-clear-18-415-reducer         128ml      Clear           reducer
+  • round-128ml-clear-18-415-antiquespray-tassel 128ml      Clear           antiquespray-tassel
+
+Royal:
+  • royal-13ml-clear-13-415-finemist         13ml       Clear           finemist
+  • royal-14ml-clear-11mm                    14ml       Clear           cap
+
+Sleek:
+  • sleek-5ml-clear-13-415-finemist          5ml        Clear           finemist
+  • sleek-5ml-clear-13-415-rollon            5ml        Clear           rollon
+  • sleek-8ml-clear-13-415-finemist          8ml        Clear           finemist
+  • sleek-8ml-clear-13-415-rollon            8ml        Clear           rollon
+  • sleek-30ml-clear-18-415-finemist         30ml       Clear           finemist
+  • sleek-30ml-clear-18-415-dropper          30ml       Clear           dropper
+  • sleek-30ml-clear-18-415-reducer          30ml       Clear           reducer
+  • sleek-30ml-clear-18-415-antiquespray     30ml       Clear           antiquespray
+  • sleek-30ml-clear-18-415-lotionpump       30ml       Clear           lotionpump
+  • sleek-50ml-clear-18-415-antiquespray     50ml       Clear           antiquespray
+  • sleek-50ml-clear-18-415-antiquespray-tassel 50ml       Clear           antiquespray-tassel
+  • sleek-50ml-clear-18-415-finemist         50ml       Clear           finemist
+  • sleek-50ml-clear-18-415-reducer          50ml       Clear           reducer
+  • sleek-50ml-clear-18-415-lotionpump       50ml       Clear           lotionpump
+  • sleek-100ml-clear-18-415-lotionpump      100ml      Clear           lotionpump
+  • sleek-100ml-clear-18-415-reducer         100ml      Clear           reducer
+  • sleek-100ml-clear-18-415-finemist        100ml      Clear           finemist
+  • sleek-100ml-clear-18-415-antiquespray    100ml      Clear           antiquespray
+  • sleek-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+
+Slim:
+  • slim-30ml-clear-18-415-finemist          30ml       Clear           finemist
+  • slim-30ml-clear-18-415-dropper           30ml       Clear           dropper
+  • slim-30ml-clear-18-415-reducer           30ml       Clear           reducer
+  • slim-30ml-clear-18-415-antiquespray      30ml       Clear           antiquespray
+  • slim-30ml-clear-18-415-lotionpump        30ml       Clear           lotionpump
+  • slim-50ml-clear-18-415-antiquespray      50ml       Clear           antiquespray
+  • slim-50ml-clear-18-415-antiquespray-tassel 50ml       Clear           antiquespray-tassel
+  • slim-50ml-clear-18-415-finemist          50ml       Clear           finemist
+  • slim-50ml-clear-18-415-reducer           50ml       Clear           reducer
+  • slim-50ml-clear-18-415-lotionpump        50ml       Clear           lotionpump
+  • slim-100ml-clear-18-415-lotionpump       100ml      Clear           lotionpump
+  • slim-100ml-clear-18-415-finemist         100ml      Clear           finemist
+  • slim-100ml-clear-18-415-reducer          100ml      Clear           reducer
+  • slim-100ml-clear-18-415-antiquespray     100ml      Clear           antiquespray
+  • slim-100ml-clear-18-415-antiquespray-tassel 100ml      Clear           antiquespray-tassel
+
+Sprayer:
+  • fine-mist-sprayer-13-415                 N/A        N/A             cap
+  • fine-mist-sprayer-20-410                 250ml      N/A             cap
+
+Square:
+  • square-15ml-clear-13-415-rollon          15ml       Clear           rollon
+  • square-15ml-clear-13-415                 15ml       Clear           cap
+  • square-15ml-clear-13-415-finemist        15ml       Clear           finemist
+
+Teardrop:
+  • teardrop-9ml-cobalt-blue-ground-glassapplicator 9ml        Cobalt          glassapplicator
+
+Tool:
+  • tool-0ml-mixed                           N/A        N/A             cap
+
+Tulip:
+  • tulip-5ml-amber-13-415-finemist          5ml        Amber           finemist
+  • tulip-5ml-amber-13-415-rollon            5ml        Amber           rollon
+  • tulip-6ml-clear-13-415-rollon            6ml        Clear           rollon
+  • tulip-6ml-clear-13-415-finemist          6ml        Clear           finemist
+
+Unknown:
+  • unknown-0ml-clear                        N/A        Clear           cap
+
+Vial:
+  • vial-1ml-amber-plug                      1ml        Amber           cap
+  • vial-2ml-clear-8-425                     2ml        Clear           cap
+  • vial-3ml-clear-13-425                    3ml        Clear           cap
+  • vial-4ml-clear-13-425                    4ml        Clear           cap
+  • vial-4ml-clear-13-425-dropper            4ml        Clear           dropper
+
+NEXT STEPS
+--------------------------------------------------------------------------------
+1. Review gaps and add missing products to Convex
+2. Investigate orphans - determine if they should be on live site or removed from Convex
+3. Update grid images for all products (all gridImageNeeded=true)
+4. Test Paper Doll image pipeline with new product set

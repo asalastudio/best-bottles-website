@@ -1,11 +1,12 @@
 # ElevenLabs Tool Configurations — Grace AI
 
-**Updated: 2026-03-25**
+**Updated: 2026-04-06**
 
 These are the complete, enriched tool definitions for the Grace ElevenLabs agent.
 Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
 
 > **Critical config notes for ALL tools:**
+>
 > - Data-fetching tools should have `expects_response: true` and `response_timeout_secs: 10`
 > - This ensures Grace WAITS for the data before speaking (no hallucinated responses)
 > - Action tools (navigation, cart, forms) can stay `expects_response: false`
@@ -18,7 +19,7 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
 {
   "type": "client",
   "name": "searchCatalog",
-  "description": "Search the Best Bottles product catalog. Returns REAL products with name, SKU, capacity (ml), color, applicator type, neck thread size, and pricing (1pc and 12pc). ALWAYS call this FIRST before answering ANY product question — never guess availability from memory.\n\nThe search is intelligent: it does fuzzy matching, normalizes terms (e.g. 'fine mist' → 'sprayer', 'roll-on' → 'roller'), and has a multi-stage fallback. You don't need exact product names.\n\nResults are capped at 25 items. If a requested size doesn't exist, the response will include a WARNING with the actual available sizes — do NOT tell the customer we have a size that doesn't appear in the results.\n\nExamples:\n- searchCatalog({searchTerm: '3ml spray'})\n- searchCatalog({searchTerm: 'frosted circle 50ml', familyLimit: 'Circle'})\n- searchCatalog({searchTerm: 'amber boston round', applicatorFilter: 'Dropper'})\n- searchCatalog({searchTerm: '30ml roll-on', familyLimit: 'Cylinder'})",
+  "description": "Search the Best Bottles product catalog. Returns REAL products with name, SKU, capacity (ml), color, applicator type, neck thread size, and pricing (1pc and 12pc). ALWAYS call this FIRST before answering ANY product question — never guess availability from memory.\n\nThe search is intelligent: it does fuzzy matching, normalizes terms (e.g. 'fine mist' → 'sprayer', 'roll-on' → 'roller'), and has a multi-stage fallback. You don't need exact product names.\n\nResults are capped at 25 items. If a requested size doesn't exist, the response will include a WARNING with the actual available sizes — do NOT tell the customer we have a size that doesn't appear in the results.\n\nResults may include CONFIRMATION, WARNING, or FORBIDDEN lines at the top — follow them. If the result says 'CONFIRMATION: These results include 9ml roll-on products,' do NOT tell the customer you could not find 9ml roll-ons. If the result says 'FORBIDDEN,' do not say the forbidden thing. If a search for 9ml roll-on or lotion pump returns no results or wrong-size results, retry with searchTerm '9ml cylinder roller' or '9ml cylinder lotion' and familyLimit 'Cylinder' before telling the customer those products are unavailable.\n\nExamples:\n- searchCatalog({searchTerm: '3ml spray'})\n- searchCatalog({searchTerm: 'frosted circle 50ml', familyLimit: 'Circle'})\n- searchCatalog({searchTerm: 'amber boston round', applicatorFilter: 'Dropper'})\n- searchCatalog({searchTerm: '30ml roll-on', familyLimit: 'Cylinder'})\n- searchCatalog({searchTerm: '9ml cylinder roller', familyLimit: 'Cylinder'})",
   "disable_interruptions": false,
   "force_pre_tool_speech": "auto",
   "tool_call_sound": null,
@@ -44,7 +45,7 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
       "id": "familyLimit",
       "type": "string",
       "value_type": "llm_prompt",
-      "description": "Optional — restrict results to a specific bottle family. Valid families: Cylinder, Elegant, Boston Round, Circle, Diva, Empire, Slim, Vial, Sleek, Tulip, Rectangle, Square. Use when the customer names a specific shape or when you need to narrow results.",
+      "description": "Optional — restrict results to a specific bottle family. Valid families: Apothecary, Atomizer, Bell, Boston Round, Circle, Cylinder, Decorative, Diamond, Diva, Elegant, Empire, Flair, Grace, Pillar, Rectangle, Round, Royal, Sleek, Slim, Square, Teardrop, Tulip, Vial. For aluminum packaging use categoryLimit 'Aluminum Bottle' instead. Use when the customer names a specific shape or family, or when you need to narrow results.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -104,7 +105,7 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
       "id": "family",
       "type": "string",
       "value_type": "llm_prompt",
-      "description": "Optional bottle family to filter by: Cylinder, Elegant, Boston Round, Circle, Diva, Empire, Slim, Vial, Sleek, Tulip, Rectangle, Square.",
+      "description": "Optional bottle family to filter by: Apothecary, Atomizer, Bell, Boston Round, Circle, Cylinder, Decorative, Diamond, Diva, Elegant, Empire, Flair, Grace, Pillar, Rectangle, Round, Royal, Sleek, Slim, Square, Teardrop, Tulip, Vial.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -165,7 +166,7 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
 {
   "type": "client",
   "name": "getFamilyOverview",
-  "description": "Get a complete overview of a bottle family — all available sizes, colors, applicator types, thread sizes, and price range.\n\nUse this when a customer asks about a family in general (e.g., 'what do you have in the Cylinder line?', 'tell me about your Boston Round bottles').\n\nReturns:\n- All available sizes (with variant counts per size)\n- All available colors\n- All applicator types offered in this family\n- All thread sizes used\n- Price range (min/max for Glass Bottle category only — Component pricing is separate)\n\nValid families: Cylinder, Elegant, Boston Round, Circle, Diva, Empire, Slim, Vial, Sleek, Tulip, Rectangle, Square.",
+  "description": "Get a complete overview of a bottle family — all available sizes, colors, applicator types, thread sizes, and price range.\n\nUse this when a customer asks about a family in general (e.g., 'what do you have in the Cylinder line?', 'tell me about your Boston Round bottles').\n\nReturns:\n- All available sizes (with variant counts per size)\n- All available colors\n- All applicator types offered in this family\n- All thread sizes used\n- Price range (min/max for Glass Bottle category only — Component pricing is separate)\n- For Cylinder: a graceHint field with catalog facts (e.g. 9ml Cylinder is stocked with roll-on and lotion pump). Read graceHint carefully and do not contradict it.\n\nIf applicatorTypes includes 'Metal Roller Ball' or 'Lotion Pump' and sizes includes 9ml, that means 9ml roll-on and lotion pump bottles exist — do not deny them. Call searchCatalog to get specific SKUs.\n\nValid families: Apothecary, Atomizer, Bell, Boston Round, Circle, Cylinder, Decorative, Diamond, Diva, Elegant, Empire, Flair, Grace, Pillar, Rectangle, Round, Royal, Sleek, Slim, Square, Teardrop, Tulip, Vial.",
   "disable_interruptions": false,
   "force_pre_tool_speech": "auto",
   "tool_call_sound": null,
@@ -180,7 +181,7 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
       "id": "family",
       "type": "string",
       "value_type": "llm_prompt",
-      "description": "The bottle family name. Must match exactly: Cylinder, Elegant, Boston Round, Circle, Diva, Empire, Slim, Vial, Sleek, Tulip, Rectangle, Square. Case-sensitive.",
+      "description": "The bottle family name. Must match exactly: Apothecary, Atomizer, Bell, Boston Round, Circle, Cylinder, Decorative, Diamond, Diva, Elegant, Empire, Flair, Grace, Pillar, Rectangle, Round, Royal, Sleek, Slim, Square, Teardrop, Tulip, Vial. Case-sensitive.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -329,9 +330,9 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
   "parameters": [
     {
       "id": "products",
-      "type": "array",
+      "type": "string",
       "value_type": "llm_prompt",
-      "description": "Array of products to add. Each item needs: { itemName: string (product name), graceSku: string (from searchCatalog), quantity: number (default 1), webPrice1pc: number (price per piece, from searchCatalog) }. Example: [{ itemName: 'Cylinder 9ml Clear', graceSku: 'CYL-9ML-CLR', quantity: 12, webPrice1pc: 0.85 }]",
+      "description": "JSON string — an array of products to add. Each item needs: itemName (string, product name), graceSku (string, from searchCatalog), quantity (number, default 1), webPrice1pc (number, unit price from searchCatalog). Example: '[{\"itemName\":\"Cylinder 9ml Clear\",\"graceSku\":\"CYL-9ML-CLR\",\"quantity\":12,\"webPrice1pc\":0.85}]'",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -400,9 +401,9 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
     },
     {
       "id": "autoNavigate",
-      "type": "boolean",
+      "type": "string",
       "value_type": "llm_prompt",
-      "description": "Whether to navigate automatically (true, default) or show a 'Go' button for the customer to click (false). Use false when unsure if the customer wants to leave the current page.",
+      "description": "Whether to navigate automatically ('true', default) or show a 'Go' button for the customer to click ('false'). Use 'false' when unsure if the customer wants to leave the current page.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -411,9 +412,9 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
     },
     {
       "id": "prefillFields",
-      "type": "object",
+      "type": "string",
       "value_type": "llm_prompt",
-      "description": "Optional key-value pairs to pre-fill on the destination form page. Keys are field names (name, email, company, phone, message). Example: { name: 'John', email: 'john@example.com', company: 'Acme Inc' }.",
+      "description": "Optional JSON string of key-value pairs to pre-fill on the destination form page. Keys are field names (name, email, company, phone, message). Example: '{\"name\":\"John\",\"email\":\"john@example.com\",\"company\":\"Acme Inc\"}'.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -546,9 +547,9 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
     },
     {
       "id": "fields",
-      "type": "object",
+      "type": "string",
       "value_type": "llm_prompt",
-      "description": "Key-value pairs of form fields to fill. Example: { name: 'John Smith', email: 'john@example.com', company: 'Acme Inc', message: 'Looking for 1000 units of 30ml cylinder bottles' }.",
+      "description": "JSON string of key-value pairs of form fields to fill. Example: '{\"name\":\"John Smith\",\"email\":\"john@example.com\",\"company\":\"Acme Inc\",\"message\":\"Looking for 1000 units of 30ml cylinder bottles\"}'.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -686,7 +687,7 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
       "id": "familyLimit",
       "type": "string",
       "value_type": "llm_prompt",
-      "description": "Optional family filter: Cylinder, Elegant, Boston Round, Circle, Diva, Empire, Slim, Vial, Sleek, Tulip, Rectangle, Square.",
+      "description": "Optional family filter: Apothecary, Atomizer, Bell, Boston Round, Circle, Cylinder, Decorative, Diamond, Diva, Elegant, Empire, Flair, Grace, Pillar, Rectangle, Round, Royal, Sleek, Slim, Square, Teardrop, Tulip, Vial.",
       "dynamic_variable": "",
       "constant_value": "",
       "enum": null,
@@ -706,31 +707,41 @@ Copy each JSON block into the ElevenLabs agent dashboard → Tools section.
 ## Summary of Changes
 
 ### Existing tools enriched:
-| Tool | Key Change |
-|------|-----------|
-| searchCatalog | Added fuzzy matching docs, normalization info, size warning behavior, expanded family list, `expects_response: true`, `response_timeout_secs: 10` |
-| showProducts | Clarified navigation vs data-only distinction, size warning behavior |
-| getBottleComponents | Added thread-size fitment explanation, return format docs, dual-SKU support |
-| getFamilyOverview | Added return field details, price range caveat (Glass Bottle only), valid families |
-| checkCompatibility | Added GPI thread format explanation, common sizes, reverse-lookup framing |
-| getCatalogStats | Clarified counts vs inventory, return structure, usage examples |
-| compareProducts | Added visual card display docs, up-to-4 limit |
-| proposeCartAdd | Added confirmation flow docs, required fields, array format |
-| navigateToPage | Added common paths, prefillFields docs, auto-navigate explanation |
-| updateFormField | Added full workflow example, field names list |
-| submitForm | Added email requirement, fallback instructions |
-| prefillForm | Added batch-fill distinction from updateFormField |
+
+
+| Tool                | Key Change                                                                                                                                        |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------- |
+| searchCatalog       | Added fuzzy matching docs, normalization info, size warning behavior, expanded family list, `expects_response: true`, `response_timeout_secs: 10` |
+| showProducts        | Clarified navigation vs data-only distinction, size warning behavior                                                                              |
+| getBottleComponents | Added thread-size fitment explanation, return format docs, dual-SKU support                                                                       |
+| getFamilyOverview   | Added return field details, price range caveat (Glass Bottle only), valid families                                                                |
+| checkCompatibility  | Added GPI thread format explanation, common sizes, reverse-lookup framing                                                                         |
+| getCatalogStats     | Clarified counts vs inventory, return structure, usage examples                                                                                   |
+| compareProducts     | Added visual card display docs, up-to-4 limit                                                                                                     |
+| proposeCartAdd      | Added confirmation flow docs, required fields, array format                                                                                       |
+| navigateToPage      | Added common paths, prefillFields docs, auto-navigate explanation                                                                                 |
+| updateFormField     | Added full workflow example, field names list                                                                                                     |
+| submitForm          | Added email requirement, fallback instructions                                                                                                    |
+| prefillForm         | Added batch-fill distinction from updateFormField                                                                                                 |
+
 
 ### New tools added:
-| Tool | Purpose |
-|------|---------|
-| getCurrentPageContext | Grace can "see" what page the customer is on, what product they're viewing, and what's in their cart |
-| getCartContents | Detailed cart read — items, quantities, prices, total |
-| getBrowsingHistory | Session-level page tracking with browsing pattern insights |
-| showProductPresentation | Multi-product showcase cards in chat (up to 6 products) |
+
+
+| Tool                    | Purpose                                                                                              |
+| ----------------------- | ---------------------------------------------------------------------------------------------------- |
+| getCurrentPageContext   | Grace can "see" what page the customer is on, what product they're viewing, and what's in their cart |
+| getCartContents         | Detailed cart read — items, quantities, prices, total                                                |
+| getBrowsingHistory      | Session-level page tracking with browsing pattern insights                                           |
+| showProductPresentation | Multi-product showcase cards in chat (up to 6 products)                                              |
+
 
 ### Critical config changes:
-| Setting | Before | After | Why |
-|---------|--------|-------|-----|
-| `expects_response` | `false` (all tools) | `true` (data tools) | Grace WAITS for data before speaking — no hallucinated responses |
-| `response_timeout_secs` | `1` (all tools) | `10` (data tools), `5` (context tools) | Backend queries need time to complete |
+
+
+| Setting                 | Before              | After                                  | Why                                                              |
+| ----------------------- | ------------------- | -------------------------------------- | ---------------------------------------------------------------- |
+| `expects_response`      | `false` (all tools) | `true` (data tools)                    | Grace WAITS for data before speaking — no hallucinated responses |
+| `response_timeout_secs` | `1` (all tools)     | `10` (data tools), `5` (context tools) | Backend queries need time to complete                            |
+
+

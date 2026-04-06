@@ -1,0 +1,155 @@
+================================================================================
+BEST BOTTLES — CORRECTED PRODUCT GAP REPORT
+Live Site vs. Convex Dev Environment (Three-Way Cross-Reference)
+================================================================================
+
+Report Date: 2026-04-06 (Corrected)
+Previous Report: PRODUCT-GAP-REPORT.txt (SUPERSEDED — contained parsing bugs)
+
+EXECUTIVE SUMMARY
+--------------------------------------------------------------------------------
+The original gap report identified 61 products on the live site not in Convex.
+After cross-referencing against LIVE Convex data (not the stale JSON export),
+and fixing two parsing bugs in the crawler, the real gap is just 2 product groups.
+
+  Original report: 61 gaps, 207 orphans, 45 matches
+  Corrected:        2 gaps, ~126 orphans, 104 matches
+
+CONVEX DEV ENVIRONMENT STATUS
+--------------------------------------------------------------------------------
+  Total product groups:        343 (was 225 in old export)
+  Glass Bottle groups:         291
+  Non-glass groups:             52 (components, packaging, atomizers, etc.)
+
+  Groups with heroImageUrl:     31
+  Groups needing hero images:  260
+
+  applicatorTypes field:         0 populated (all null — needs backfill)
+
+  Unique grid images needed:   278 (from 291 glass bottle groups)
+
+PARSING BUGS FOUND IN ORIGINAL CRAWL
+--------------------------------------------------------------------------------
+
+BUG 1: CAPACITY PARSING
+  Legacy SKU codes embed capacity as a number suffix before the finish code.
+  The crawler was extracting only partial digits:
+
+  GBCrcl15BlkShSht  → was parsed as 5ml,  correct: 15ml
+  GBCrcl50RdcrBlkLthr → was parsed as 5ml, correct: 50ml
+  GBCrcl100RdcrBlkLthr → was parsed as 10ml, correct: 100ml
+  GBDiva46RdcrBlkLthr → was parsed as 6ml, correct: 46ml
+  GBElg60RdcrBlkLthr → was parsed as 6ml, correct: 60ml
+  GBRnd78RdcrBlkLthr → was parsed as 8ml, correct: 78ml
+  GBRnd128RdcrBlkLthr → was parsed as 8ml, correct: 128ml
+  GBGrce55RdcrBlkLthr → was parsed as 5ml, correct: 55ml
+  (and 33 more with same pattern)
+
+  Impact: 41 of 61 "gaps" were false positives from wrong capacity matching
+
+BUG 2: APPLICATOR PARSING
+  The suffix "RdcrBlkLthr" means "Reducer + Black Leather cap" — a reducer product.
+  The crawler was classifying these as "cap-only" when they're actually reducers.
+
+  GBDiva30RdcrBlkLthr = Diva 30ml Clear REDUCER  → matches diva-30ml-clear-18-415-reducer ✅
+  GBSlk30RdcrBlkLthr  = Sleek 30ml Clear REDUCER → matches sleek-30ml-clear-18-415-reducer ✅
+  GBSlm30RdcrBlkLthr  = Slim 30ml Clear REDUCER  → matches slim-30ml-clear-18-415-reducer ✅
+
+  Legacy SKU suffix decoder:
+    BlkShSht    = Black Short cap (cap-only)
+    RdcrBlkLthr = Reducer + Black Leather cap (reducer applicator)
+    SpryBlkMatt = Sprayer Black Matte (fine mist sprayer)
+    RollBlkDot  = Roll-on Black Dot (roll-on)
+    GlCap       = Glass Cap (cap-only)
+
+FAMILY NAME MAPPING
+--------------------------------------------------------------------------------
+The live site uses "Tall Cylinder" and "Tall Rectangle" as family names.
+Convex stores these differently:
+
+  Live Site             Convex Family     Convex Slug Pattern
+  ───────────────────   ──────────────    ──────────────────────────────
+  Tall Cylinder         Cylinder          cylinder-9ml-*-13-415-*
+  Tall Rectangle        Rectangle         tall-rectangle-10ml-clear-13-415-*
+  Pillar                Pillar            pillar-9ml-clear-*
+
+  Note: "Tall Cylinder" 9ml with 13-415 threading = same as Cylinder 9ml small-thread
+  Convex uses the base family name "Cylinder" but differentiates by thread size in slug.
+
+TRUE REMAINING GAPS
+--------------------------------------------------------------------------------
+Only 2 product groups on the live site do not exist in Convex:
+
+  1. Pillar 9ml Clear Roll-On
+     Live SKU: GBPillar9RollBlkDot
+     Convex has: pillar-9ml-clear-17-415-finemist, pillar-9ml-clear-13-415
+     Missing: pillar-9ml-clear-*-rollon
+
+  2. Cylinder 30ml Clear Roll-On
+     Live SKU: GBCyl1ozRollWht
+     Convex has: cylinder-30ml-clear-18-415 (cap-only), spray-bottle-30ml-clear-18-415
+     Missing: cylinder-30ml-clear-*-rollon
+
+CONVEX ORPHANS (in Convex, not on live site)
+--------------------------------------------------------------------------------
+Total: ~126 product groups in Convex with no matching live site product
+
+These fall into categories:
+  - Larger bottle sizes with specialty applicators (lotion pumps, antique sprays,
+    reducers, droppers for 50ml/100ml bottles) — likely CORRECT in Convex,
+    just sold through different legacy site pages not yet crawled
+  - Components (caps, sprayers, droppers, lotion pumps) — not glass bottles
+  - Packaging (gift bags, gift boxes, supplies) — not glass bottles
+  - Non-glass products (cream jars, aluminum, plastic) — separate category
+
+GRID IMAGE GENERATION NEEDS
+--------------------------------------------------------------------------------
+
+  Total glass bottle groups:    291
+  Unique grid images needed:    278
+  Already have heroImageUrl:     31
+  Need generation:              260
+
+  By Applicator Type:
+    Cap-only:              55 images
+    Spray (fine mist):     53 images
+    Lotion Pump:           34 images
+    Reducer:               28 images
+    Antique Spray:         28 images
+    Roll-on:               27 images
+    Antique Spray+Tassel:  23 images
+    Dropper:               20 images
+    Glass (wand/stopper):  10 images
+
+  By Family (top 10):
+    Cylinder:    43 images
+    Elegant:     32 images
+    Circle:      26 images
+    Boston Round: 23 images
+    Round:       21 images
+    Diva:        21 images
+    Sleek:       21 images
+    Slim:        15 images
+    Empire:      11 images
+    Decorative:  11 images
+
+RECOMMENDED ACTIONS
+--------------------------------------------------------------------------------
+
+1. ADD 2 MISSING PRODUCT GROUPS to Convex:
+   - pillar-9ml-clear-*-rollon
+   - cylinder-30ml-clear-*-rollon
+
+2. BACKFILL applicatorTypes field on all 343 product groups
+   (currently all null — can be derived from slug suffix)
+
+3. DO NOT mass-write product groups — Convex is already comprehensive
+
+4. GENERATE 260 grid images using the AI Product Image Gen pipeline
+   Prioritize by applicator type since the prompt architecture differs per type
+
+5. UPDATE the Grid-Image-Tracker.xlsx to reflect the corrected 278-image scope
+
+================================================================================
+END CORRECTED REPORT
+================================================================================
