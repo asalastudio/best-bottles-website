@@ -4377,6 +4377,37 @@ export const patchProductGroupFields = mutation({
     },
 });
 
+/** Insert a single new productGroup. Idempotent: skips if slug already exists. */
+export const addProductGroup = mutation({
+    args: {
+        slug: v.string(),
+        displayName: v.string(),
+        family: v.string(),
+        capacity: v.union(v.string(), v.null()),
+        capacityMl: v.union(v.number(), v.null()),
+        color: v.union(v.string(), v.null()),
+        category: v.string(),
+        bottleCollection: v.union(v.string(), v.null()),
+        neckThreadSize: v.union(v.string(), v.null()),
+        variantCount: v.number(),
+        priceRangeMin: v.union(v.number(), v.null()),
+        priceRangeMax: v.union(v.number(), v.null()),
+        applicatorTypes: v.array(v.string()),
+    },
+    handler: async (ctx, args) => {
+        // Check if slug already exists
+        const existing = await ctx.db
+            .query("productGroups")
+            .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+            .first();
+        if (existing) {
+            return { skipped: true, id: existing._id, reason: "slug already exists" };
+        }
+        const id = await ctx.db.insert("productGroups", args);
+        return { skipped: false, id };
+    },
+});
+
 /**
  * Re-patch Boston Round groupDescription from capacity-keyed map.
  * Use when updating copy (e.g. removing em dashes). Descriptions keyed by capacityMl.

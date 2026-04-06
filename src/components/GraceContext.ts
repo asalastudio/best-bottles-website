@@ -64,6 +64,8 @@ export type PanelMode = "closed" | "strip" | "open";
 export interface PageContext {
     pageType: "home" | "catalog" | "pdp" | "cart" | "contact" | "about" | "other";
     pathname: string;
+    /** Path + query (client-safe) for agent grounding */
+    pageUrl?: string;
     currentProduct?: {
         name: string;
         family: string;
@@ -73,11 +75,21 @@ export interface PageContext {
         graceSku: string;
         webPrice1pc?: number | null;
         webPrice12pc?: number | null;
+        /** Representative applicator only; prefer applicatorTypes for the full line */
         applicator?: string;
+        /** All applicator types available on this PDP product group */
+        applicatorTypes?: string[];
+        /** Catalog category for this line (e.g. Glass Bottle) */
+        category?: string;
+        variantCount?: number;
+        /** Distinct cap heights / styles / colors across variants (for closure questions) */
+        capsSummary?: string;
         stockStatus?: string;
         slug?: string;
     };
     currentCollection?: string;
+    /** URL `category` filter when on /catalog */
+    catalogCategory?: string;
     catalogSearch?: string;
     cartItems: Array<{ graceSku: string; name: string; quantity: number; unitPrice?: number | null }>;
     /** Total cart value in dollars */

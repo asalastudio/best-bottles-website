@@ -27,6 +27,7 @@ import {
     scoreCatalogResult,
     buildSearchCatalogToolResult,
     buildBottleComponentsToolResult,
+    emptySearchCatalogHint,
 } from "./graceSearchUtils";
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -72,10 +73,19 @@ export const searchCatalog = query({
         // Fallback or Expanded search:
         // 1. If few results
         // 2. OR if user explicitly asked for "30ml roll-on", we want to proactively include the 28ml cylinders too.
-        const isRollOnSearch = /\b(roll|roller|ball)\b/i.test(args.searchTerm);
-        const is30mlSearch = /\b30\s*ml\b/i.test(args.searchTerm);
+        const isRollOnSearch = /\b(roll|roller|ball)\b/i.test(searchTermToUse);
+        const is30mlSearch = /\b30\s*ml\b/i.test(searchTermToUse);
+        const capacityMatchEarly = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
+        const requestedMlFromTerm = capacityMatchEarly ? parseInt(capacityMatchEarly[1]) : null;
 
-        if (results.length < 5 || (isRollOnSearch && is30mlSearch)) {
+        // Merge roller fallback whenever roll-on + capacity is specified (not only when the
+        // primary search returns few hits), so 9ml roll-on Cylinders are not buried under
+        // unrelated "9ml" text matches.
+        if (
+            results.length < 5
+            || (isRollOnSearch && is30mlSearch)
+            || (isRollOnSearch && requestedMlFromTerm !== null)
+        ) {
             const fallbackQ = ctx.db.query("products").withSearchIndex("search_itemName", (q) => {
                 let s = q.search("itemName", "roller");
                 if (categoryLimit) s = s.eq("category", categoryLimit);
@@ -87,7 +97,7 @@ export const searchCatalog = query({
             // Intelligent size matching:
             // If they ask for 30ml roll-on, we also want to surface the 28ml Cylinder variants.
             const targetCapacities = new Set<number>();
-            const capacityMatch = args.searchTerm.match(/\b(\d+)\s*ml\b/i);
+            const capacityMatch = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
             if (capacityMatch) {
                 const ml = parseInt(capacityMatch[1]);
                 targetCapacities.add(ml);
@@ -122,7 +132,7 @@ export const searchCatalog = query({
         const detectedFamily = args.familyLimit
             ?? KNOWN_FAMILIES.find((f) => termLower.includes(f.toLowerCase()))
             ?? null;
-        const capMatch = args.searchTerm.match(/\b(\d+)\s*ml\b/i);
+        const capMatch = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
         const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;
 
         // Shape detection: "flat bottle" → Elegant, Flair; "square" → Square, Elegant, etc.
@@ -475,6 +485,7 @@ export const getBottleComponents = query({
             bottle: {
                 graceSku: bottle.graceSku,
                 itemName: bottle.itemName,
+                category: bottle.category,
                 family: bottle.family,
                 capacity: bottle.capacity
                     ? bottle.capacity.replace(/\s*(ml|oz)\s*/gi, (_, u: string) => u.toLowerCase())
@@ -856,7 +867,7 @@ export const askGrace = action({
                                 });
                                 result = data.length > 0
                                     ? buildSearchCatalogToolResult(input, data)
-                                    : "No products found for that search. Try a broader term.";
+                                    : `No products found for that search. Try a broader term.${emptySearchCatalogHint(input.searchTerm)}`;
                             } else if (block.name === "getFamilyOverview") {
                                 const input = block.input as { family: string };
                                 const data = await ctx.runQuery(api.grace.getFamilyOverview, {
