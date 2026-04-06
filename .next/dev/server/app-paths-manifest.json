@@ -1,7 +1,5 @@
 {
   "/api/elevenlabs/server-tools/route": "app/api/elevenlabs/server-tools/route.js",
   "/api/elevenlabs/signed-url/route": "app/api/elevenlabs/signed-url/route.js",
-  "/catalog/page": "app/catalog/page.js",
-  "/page": "app/page.js",
-  "/products/[slug]/page": "app/products/[slug]/page.js"
+  "/page": "app/page.js"
 }

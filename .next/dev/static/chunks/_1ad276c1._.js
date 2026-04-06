@@ -1405,22 +1405,48 @@ var _s = __turbopack_context__.k.signature();
 ;
 // ─── Core product intelligence injected into ElevenLabs session ─────────────
 // ─── Helpers ─────────────────────────────────────────────────────────────────
+/** Distinct cap-related options across PDP variants so Grace does not assume a single cap type. */ function summarizeCapsFromVariants(variants) {
+    if (!variants?.length) return "";
+    const heights = [
+        ...new Set(variants.map((v)=>v.capHeight).filter(Boolean))
+    ];
+    const styles = [
+        ...new Set(variants.map((v)=>v.capStyle).filter(Boolean))
+    ];
+    const colors = [
+        ...new Set(variants.map((v)=>v.capColor).filter(Boolean))
+    ];
+    const parts = [];
+    if (heights.length) parts.push(`cap heights: ${heights.join(", ")}`);
+    if (styles.length) parts.push(`cap styles: ${styles.slice(0, 14).join(", ")}`);
+    if (colors.length) parts.push(`cap colors: ${colors.slice(0, 12).join(", ")}`);
+    return parts.join(" | ");
+}
 function formatPageContextForGrace(ctx, history) {
     if (!ctx) return "";
     const lines = [
         "=== CURRENT SESSION CONTEXT ==="
     ];
+    if (ctx.pageUrl) lines.push(`URL: ${ctx.pageUrl}`);
     if (ctx.pageType === "pdp" && ctx.currentProduct) {
         const p = ctx.currentProduct;
         lines.push(`Page: Product Detail — ${p.name}`);
+        if (p.category) lines.push(`Category: ${p.category}`);
         lines.push(`Family: ${p.family} | Size: ${p.capacity} | Color: ${p.color}`);
-        if (p.neckThreadSize) lines.push(`Thread Size: ${p.neckThreadSize}`);
-        if (p.applicator) lines.push(`Applicator: ${p.applicator}`);
-        if (p.webPrice1pc) lines.push(`Price: $${p.webPrice1pc.toFixed(2)}/pc`);
-        lines.push(`SKU: ${p.graceSku}`);
-        lines.push(`CONTEXT NOTE: Customer is currently viewing this product. If they ask about it, you already know the details above. If they ask about compatible closures, use getBottleComponents with SKU ${p.graceSku}. Do NOT mention this product until the customer brings it up.`);
+        if (p.neckThreadSize) lines.push(`Neck thread: ${p.neckThreadSize}`);
+        if (p.applicatorTypes?.length) {
+            lines.push(`Applicator types on this line: ${p.applicatorTypes.join(", ")}`);
+        } else if (p.applicator) {
+            lines.push(`Applicator (representative): ${p.applicator}`);
+        }
+        if (p.variantCount != null) lines.push(`Variants in this group: ${p.variantCount}`);
+        if (p.capsSummary) lines.push(`Cap / closure options (from variants): ${p.capsSummary}`);
+        if (p.webPrice1pc) lines.push(`From: $${p.webPrice1pc.toFixed(2)}/pc`);
+        lines.push(`Primary SKU for tools: ${p.graceSku}`);
+        lines.push("CONTEXT NOTE: Customer is on this PDP. For compatible closures and caps, call getBottleComponents with the relevant variant SKU — COMPONENT DATA lists each type (e.g. Short Cap, Tall Cap, Sprayer, Roll-On Cap). Do not assume only one cap style; list what the tool returns.");
     } else if (ctx.pageType === "catalog") {
         lines.push(`Page: Product Catalog`);
+        if (ctx.catalogCategory) lines.push(`Category filter: ${ctx.catalogCategory}`);
         if (ctx.currentCollection) lines.push(`Active Family Filter: ${ctx.currentCollection}`);
         if (ctx.catalogSearch) lines.push(`Active Search: "${ctx.catalogSearch}"`);
         lines.push(`CONTEXT NOTE: Customer is browsing the catalog. Wait for them to ask a question before offering help.`);
@@ -1670,6 +1696,15 @@ function GraceProvider({ children }) {
     const productGroupResult = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$convex$40$1$2e$32$2e$0_$40$clerk$2b$clerk$2d$react$40$5$2e$61$2e$3_react$2d$dom$40$19$2e$2$2e$3_react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3_$5f$react$40$19$2e$2$2e$3$2f$node_modules$2f$convex$2f$dist$2f$esm$2f$react$2f$client$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useQuery"])(__TURBOPACK__imported__module__$5b$project$5d2f$convex$2f$_generated$2f$api$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["api"].products.getProductGroup, productSlug ? {
         slug: productSlug
     } : "skip");
+    const pageUrl = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "GraceProvider.useMemo[pageUrl]": ()=>{
+            const q = searchParams.toString();
+            return q ? `${pathname}?${q}` : pathname;
+        }
+    }["GraceProvider.useMemo[pageUrl]"], [
+        pathname,
+        searchParams
+    ]);
     const pageContext = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "GraceProvider.useMemo[pageContext]": ()=>{
             const cartSummary = cartItems.map({
@@ -1685,9 +1720,19 @@ function GraceProvider({ children }) {
             }["GraceProvider.useMemo[pageContext].cartTotal"], 0);
             if (pageType === "pdp" && productGroupResult?.group) {
                 const g = productGroupResult.group;
+                const variants = productGroupResult.variants ?? [];
+                const fromGroup = g.applicatorTypes?.filter(Boolean) ?? [];
+                const fromVariants = [
+                    ...new Set(variants.map({
+                        "GraceProvider.useMemo[pageContext]": (v)=>v.applicator
+                    }["GraceProvider.useMemo[pageContext]"]).filter(Boolean))
+                ];
+                const applicatorTypes = fromGroup.length > 0 ? fromGroup : fromVariants;
+                const capsSummary = summarizeCapsFromVariants(variants);
                 return {
                     pageType,
                     pathname,
+                    pageUrl,
                     cartItems: cartSummary,
                     cartTotal,
                     currentProduct: {
@@ -1698,7 +1743,11 @@ function GraceProvider({ children }) {
                         neckThreadSize: g.neckThreadSize ?? null,
                         graceSku: g.primaryGraceSku ?? "",
                         webPrice1pc: g.priceRangeMin ?? null,
-                        applicator: g.applicatorTypes?.[0] ?? undefined,
+                        applicator: applicatorTypes[0] ?? fromVariants[0],
+                        applicatorTypes: applicatorTypes.length > 0 ? applicatorTypes : undefined,
+                        category: g.category,
+                        variantCount: g.variantCount ?? variants.length,
+                        capsSummary: capsSummary || undefined,
                         slug: productSlug ?? undefined
                     }
                 };
@@ -1708,8 +1757,10 @@ function GraceProvider({ children }) {
                 return {
                     pageType,
                     pathname,
+                    pageUrl,
                     cartItems: cartSummary,
                     cartTotal,
+                    catalogCategory: searchParams.get("category") ?? undefined,
                     currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                     catalogSearch: searchParams.get("search") ?? undefined
                 };
@@ -1717,6 +1768,7 @@ function GraceProvider({ children }) {
             return {
                 pageType,
                 pathname,
+                pageUrl,
                 cartItems: cartSummary,
                 cartTotal
             };
@@ -1724,6 +1776,7 @@ function GraceProvider({ children }) {
     }["GraceProvider.useMemo[pageContext]"], [
         pageType,
         pathname,
+        pageUrl,
         productGroupResult,
         productSlug,
         searchParams,
@@ -1737,7 +1790,6 @@ function GraceProvider({ children }) {
     }["GraceProvider.useEffect"], [
         pageContext
     ]);
-    // ── Browsing history ─────────────────────────────────────────────────────
     const [browsingHistory, setBrowsingHistory] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])([]);
     const browsingHistoryRef = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])([]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
@@ -1746,6 +1798,63 @@ function GraceProvider({ children }) {
         }
     }["GraceProvider.useEffect"], [
         browsingHistory
+    ]);
+    /** Push full page intelligence to ElevenLabs (retries until session id exists). */ const sendPageContextToAgent = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useCallback"])({
+        "GraceProvider.useCallback[sendPageContextToAgent]": ()=>{
+            const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current);
+            if (!contextBlock) return;
+            let attempts = 0;
+            const trySend = {
+                "GraceProvider.useCallback[sendPageContextToAgent].trySend": ()=>{
+                    const conv = conversationRef.current;
+                    if (conv?.getId?.()) {
+                        conv.sendContextualUpdate(contextBlock);
+                        return;
+                    }
+                    if (attempts < 35) {
+                        attempts++;
+                        setTimeout(trySend, 100);
+                    }
+                }
+            }["GraceProvider.useCallback[sendPageContextToAgent].trySend"];
+            trySend();
+        }
+    }["GraceProvider.useCallback[sendPageContextToAgent]"], []);
+    const pageContextSignature = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
+        "GraceProvider.useMemo[pageContextSignature]": ()=>JSON.stringify({
+                pageUrl: pageContext.pageUrl,
+                pdpSku: pageContext.currentProduct?.graceSku,
+                applicators: pageContext.currentProduct?.applicatorTypes,
+                caps: pageContext.currentProduct?.capsSummary,
+                catalogCategory: pageContext.catalogCategory,
+                catalogSearch: pageContext.catalogSearch,
+                collection: pageContext.currentCollection,
+                cart: pageContext.cartItems.map({
+                    "GraceProvider.useMemo[pageContextSignature]": (i)=>`${i.graceSku}:${i.quantity}`
+                }["GraceProvider.useMemo[pageContextSignature]"]).join(","),
+                hist: browsingHistory.slice(-6).map({
+                    "GraceProvider.useMemo[pageContextSignature]": (h)=>h.pathname
+                }["GraceProvider.useMemo[pageContextSignature]"]).join("|")
+            })
+    }["GraceProvider.useMemo[pageContextSignature]"], [
+        pageContext,
+        browsingHistory
+    ]);
+    const lastPushedContextSig = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRef"])(null);
+    (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
+        "GraceProvider.useEffect": ()=>{
+            if (!conversationActive) {
+                lastPushedContextSig.current = null;
+                return;
+            }
+            if (lastPushedContextSig.current === pageContextSignature) return;
+            lastPushedContextSig.current = pageContextSignature;
+            sendPageContextToAgent();
+        }
+    }["GraceProvider.useEffect"], [
+        conversationActive,
+        pageContextSignature,
+        sendPageContextToAgent
     ]);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "GraceProvider.useEffect": ()=>{
@@ -2062,18 +2171,24 @@ function GraceProvider({ children }) {
                         if (!ctx) return "No page context available.";
                         const lines = [
                             `Page type: ${ctx.pageType}`,
-                            `URL: ${ctx.pathname}`
+                            `Path: ${ctx.pathname}`
                         ];
+                        if (ctx.pageUrl) lines.push(`Full URL: ${ctx.pageUrl}`);
                         if (ctx.pageType === "pdp" && ctx.currentProduct) {
                             const p = ctx.currentProduct;
                             lines.push(`\nCustomer is viewing:`, `  Product: ${p.name}`, `  Family: ${p.family}`, `  Size: ${p.capacity}`, `  Color: ${p.color}`);
-                            if (p.neckThreadSize) lines.push(`  Thread: ${p.neckThreadSize}`);
-                            if (p.applicator) lines.push(`  Applicator: ${p.applicator}`);
-                            if (p.graceSku) lines.push(`  SKU: ${p.graceSku}`);
-                            if (p.webPrice1pc) lines.push(`  Price: $${p.webPrice1pc.toFixed(2)}/pc`);
+                            if (p.category) lines.push(`  Category: ${p.category}`);
+                            if (p.neckThreadSize) lines.push(`  Neck thread: ${p.neckThreadSize}`);
+                            if (p.applicatorTypes?.length) lines.push(`  Applicator types on this line: ${p.applicatorTypes.join(", ")}`);
+                            else if (p.applicator) lines.push(`  Applicator (representative): ${p.applicator}`);
+                            if (p.capsSummary) lines.push(`  Cap / closure options (variants): ${p.capsSummary}`);
+                            if (p.variantCount != null) lines.push(`  Variant count: ${p.variantCount}`);
+                            if (p.graceSku) lines.push(`  Primary SKU for tools: ${p.graceSku}`);
+                            if (p.webPrice1pc) lines.push(`  From: $${p.webPrice1pc.toFixed(2)}/pc`);
                         } else if (ctx.pageType === "catalog") {
                             lines.push(`\nCustomer is browsing the catalog.`);
-                            if (ctx.currentCollection) lines.push(`  Active filter: ${ctx.currentCollection}`);
+                            if (ctx.catalogCategory) lines.push(`  Category filter: ${ctx.catalogCategory}`);
+                            if (ctx.currentCollection) lines.push(`  Family filter: ${ctx.currentCollection}`);
                             if (ctx.catalogSearch) lines.push(`  Search: "${ctx.catalogSearch}"`);
                         }
                         if (ctx.cartItems.length > 0) {
@@ -2492,11 +2607,6 @@ function GraceProvider({ children }) {
                 productFamily: ctx?.currentProduct?.family,
                 cartItemCount: ctx?.cartItems.length ?? 0
             });
-            // Send page context as a contextual update (does not require dashboard override permissions)
-            const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current);
-            if (contextBlock && conversationRef.current?.getId?.()) {
-                conversationRef.current.sendContextualUpdate(contextBlock);
-            }
             if (pendingMessageRef.current) {
                 const pending = pendingMessageRef.current;
                 pendingMessageRef.current = null;
@@ -2706,6 +2816,10 @@ function GraceProvider({ children }) {
                 if (!signedUrl) throw new Error("ElevenLabs did not return a valid signed URL.");
                 const page = pageContextRef.current;
                 const productName = page?.currentProduct?.name ?? "our collection";
+                const cp = page?.currentProduct;
+                const clip = {
+                    "GraceProvider.useCallback[startConversation].clip": (s, max)=>s.length > max ? `${s.slice(0, max)}…` : s
+                }["GraceProvider.useCallback[startConversation].clip"];
                 console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session...`);
                 await conversation.startSession({
                     signedUrl,
@@ -2714,7 +2828,18 @@ function GraceProvider({ children }) {
                         preferHeadphonesForIosDevices: true
                     } : {},
                     dynamicVariables: {
-                        _product_name_: productName
+                        _product_name_: productName,
+                        _page_type_: page?.pageType ?? "other",
+                        _page_path_: page?.pathname ?? "/",
+                        _page_url_: clip(page?.pageUrl ?? page?.pathname ?? "/", 500),
+                        _grace_sku_: cp?.graceSku ?? "",
+                        _neck_thread_: cp?.neckThreadSize ?? "",
+                        _product_family_: cp?.family ?? "",
+                        _applicators_line_: clip((cp?.applicatorTypes?.length ? cp.applicatorTypes.join(", ") : cp?.applicator) ?? "", 400),
+                        _caps_summary_: clip(cp?.capsSummary ?? "", 400),
+                        _catalog_category_: page?.catalogCategory ?? "",
+                        _catalog_search_: clip(page?.catalogSearch ?? "", 200),
+                        _catalog_families_: clip(page?.currentCollection ?? "", 300)
                     }
                 });
                 console.log("[Grace] Session started successfully.");
@@ -2931,11 +3056,11 @@ function GraceProvider({ children }) {
         children: children
     }, void 0, false, {
         fileName: "[project]/src/components/grace/GraceProvider.tsx",
-        lineNumber: 1123,
+        lineNumber: 1236,
         columnNumber: 9
     }, this);
 }
-_s(GraceProvider, "cxY8umoTDLE+HD0Ld4Bk7MRc3Uo=", false, function() {
+_s(GraceProvider, "qaiyrV+S6hrD0vLwNceekIhQaAE=", false, function() {
     return [
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useRouter"],
         __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f2e$pnpm$2f$next$40$16$2e$1$2e$6_$40$babel$2b$core$40$7$2e$29$2e$0_$40$opentelemetry$2b$api$40$1$2e$9$2e$0_babel$2d$plugin$2d$react$2d$compiler$40$1$2e$0_dfe2944aa2de3f51ba172bc2570b2432$2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"],
