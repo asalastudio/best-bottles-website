@@ -159,6 +159,23 @@ function getCapFinishFromItemName(itemName: string | null | undefined): { label:
     return null;
 }
 
+/** Resolved cap finish for PDP selectors — must match variantSwatchPreview so sparse capColor rows still appear. */
+function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName: string } {
+    const fromCapFields = (() => {
+        if (!v.capColor && !v.capStyle) return null;
+        if (v.capColor && v.capStyle) {
+            const s = `${v.capStyle} ${v.capColor}`.replace(/\s+/g, " ").trim();
+            return { label: s, swatchName: s };
+        }
+        if (v.capColor) return { label: v.capColor, swatchName: v.capColor };
+        if (v.capStyle) return { label: v.capStyle, swatchName: v.capStyle };
+        return null;
+    })();
+    const fromGraceSku = getFinishFromGraceSku(v.graceSku);
+    const fromItemName = getCapFinishFromItemName(v.itemName);
+    return fromCapFields ?? fromGraceSku ?? fromItemName ?? { label: "Variant Option", swatchName: "Standard" };
+}
+
 function getCapFinishFromComponent(comp: ProductComponent): { label: string; swatchName: string } {
     const sku = (comp.grace_sku || "").toUpperCase();
     // Prioritize SKU tokens so dotted/matte variants don't collapse into generic labels.
@@ -450,13 +467,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         [variants, activeApplicator]
     );
 
-    // Cap color options — filtered by selected applicator
+    // Cap color options — use resolved finish (DB capColor + SKU + itemName) so null capColor variants still list (e.g. MSLV/SSLV).
     const capColorOptions = useMemo(() => {
         const seen = new Set<string>();
         return variants
             .filter((v) => v.applicator === activeApplicator)
-            .map((v) => v.capColor)
-            .filter((c): c is string => !!c)
+            .map((v) => resolveVariantCapFinish(v).swatchName)
             .filter((c) => {
                 if (seen.has(c)) return false;
                 seen.add(c);
@@ -466,11 +482,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
     const activeCapColor = selectedCapColor ?? capColorOptions[0] ?? null;
 
-    // Cap style options — filtered by applicator + cap color
+    // Cap style options — filtered by applicator + resolved cap finish
     const capStyleOptions = useMemo(() => {
         const seen = new Set<string>();
         return variants
-            .filter((v) => v.applicator === activeApplicator && v.capColor === activeCapColor)
+            .filter(
+                (v) =>
+                    v.applicator === activeApplicator &&
+                    resolveVariantCapFinish(v).swatchName === activeCapColor,
+            )
             .map((v) => v.capStyle)
             .filter((s): s is string => !!s)
             .filter((s) => {
@@ -482,13 +502,13 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
     const activeCapStyle = selectedCapStyle ?? capStyleOptions[0] ?? null;
 
-    // Trim options — filtered by applicator + cap color + cap style
+    // Trim options — filtered by applicator + resolved cap finish + cap style
     const trimColorOptions = useMemo(() => {
         const seen = new Set<string>();
         return variants
             .filter((v) =>
                 v.applicator === activeApplicator &&
-                v.capColor === activeCapColor &&
+                resolveVariantCapFinish(v).swatchName === activeCapColor &&
                 (capStyleOptions.length === 0 || v.capStyle === activeCapStyle)
             )
             .map((v) => v.trimColor || "Standard")
@@ -511,7 +531,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             variants.find(
                 (v) =>
                     v.applicator === activeApplicator &&
-                    v.capColor === activeCapColor &&
+                    resolveVariantCapFinish(v).swatchName === activeCapColor &&
                     (capStyleOptions.length === 0 || v.capStyle === activeCapStyle) &&
                     (v.trimColor || "Standard") === activeTrimColor
             ) ??
@@ -523,22 +543,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
     const variantSwatchPreview = useMemo(() => {
         return variantsForApplicator.map((v) => {
-            const fromCapFields = (() => {
-                if (!v.capColor && !v.capStyle) return null;
-                if (v.capColor && v.capStyle) {
-                    return {
-                        label: `${v.capStyle} ${v.capColor}`.replace(/\s+/g, " ").trim(),
-                        swatchName: `${v.capStyle} ${v.capColor}`.replace(/\s+/g, " ").trim(),
-                    };
-                }
-                if (v.capColor) return { label: v.capColor, swatchName: v.capColor };
-                if (v.capStyle) return { label: v.capStyle, swatchName: v.capStyle };
-                return null;
-            })();
-
-            const fromGraceSku = getFinishFromGraceSku(v.graceSku);
-            const fromItemName = getCapFinishFromItemName(v.itemName);
-            const resolved = fromCapFields ?? fromGraceSku ?? fromItemName ?? { label: "Variant Option", swatchName: "Standard" };
+            const resolved = resolveVariantCapFinish(v);
             const swatchHex = COLOR_SWATCH[resolved.swatchName] ?? GLASS_COLOR_SWATCH[resolved.swatchName] ?? "#AAAAAA";
             const useDarkCheck = LIGHT_SWATCHES.has(resolved.swatchName) || LIGHT_GLASS.has(resolved.swatchName);
             return {
