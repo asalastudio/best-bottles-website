@@ -31,6 +31,7 @@ type Manifest = {
     canvas?: { width: number; height: number };
     layerOrderRollon?: string[];
     layerOrderSpray?: string[];
+    layerOrderShortcap?: string[];
     layerOrderLotion?: string[];
     layers: Array<{
         slot: string;
@@ -66,17 +67,19 @@ async function loadLayersFromSanity(familyKey: string): Promise<LayerRow[] | nul
 }
 
 function resolveLayerOrder(
-    mode: "rollon" | "spray" | "lotion",
+    mode: "rollon" | "spray" | "shortcap" | "lotion",
     manifest: Manifest | null
 ): string[] {
     if (manifest) {
         if (mode === "rollon" && manifest.layerOrderRollon?.length)
             return manifest.layerOrderRollon;
         if (mode === "spray" && manifest.layerOrderSpray?.length) return manifest.layerOrderSpray;
+        if (mode === "shortcap" && manifest.layerOrderShortcap?.length) return manifest.layerOrderShortcap;
         if (mode === "lotion" && manifest.layerOrderLotion?.length) return manifest.layerOrderLotion;
     }
     if (mode === "rollon") return ["body", "roller", "cap"];
-    if (mode === "spray") return ["body", "sprayer"];
+    if (mode === "spray") return ["body", "sprayer", "overcap"];
+    if (mode === "shortcap") return ["body", "shortcap"];
     return ["body", "pump"];
 }
 
@@ -93,11 +96,13 @@ export async function POST(req: Request) {
     try {
         const body = (await req.json()) as {
             family?: string;
-            mode?: "rollon" | "spray" | "lotion";
+            mode?: "rollon" | "spray" | "shortcap" | "lotion";
             body?: string;
             cap?: string;
             roller?: string;
             sprayer?: string;
+            overcap?: string;
+            shortcap?: string;
             pump?: string;
             preview?: boolean;
         };
@@ -133,6 +138,8 @@ export async function POST(req: Request) {
             else if (slot === "cap" && body.cap) picks.push({ slot, key: body.cap });
             else if (slot === "roller" && body.roller) picks.push({ slot, key: body.roller });
             else if (slot === "sprayer" && body.sprayer) picks.push({ slot, key: body.sprayer });
+            else if (slot === "overcap" && body.overcap) picks.push({ slot, key: body.overcap });
+            else if (slot === "shortcap" && body.shortcap) picks.push({ slot, key: body.shortcap });
             else if (slot === "pump" && body.pump) picks.push({ slot, key: body.pump });
         }
 

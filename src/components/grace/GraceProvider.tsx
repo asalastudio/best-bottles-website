@@ -194,8 +194,35 @@ function buildBrowsePath(products: ProductCard[], query?: string, family?: strin
 }
 
 function normalizeSearchText(rawValue: string): string {
-    return rawValue
-        .toLowerCase()
+    let s = rawValue.toLowerCase();
+    // Align spoken/written numbers with catalog copy ("one ml vial" → same tokens as "1 ml")
+    s = s
+        .replace(/\bzero\b/g, "0")
+        .replace(/\bone\b/g, "1")
+        .replace(/\btwo\b/g, "2")
+        .replace(/\bthree\b/g, "3")
+        .replace(/\bfour\b/g, "4")
+        .replace(/\bfive\b/g, "5")
+        .replace(/\bsix\b/g, "6")
+        .replace(/\bseven\b/g, "7")
+        .replace(/\beight\b/g, "8")
+        .replace(/\bnine\b/g, "9")
+        .replace(/\bten\b/g, "10")
+        .replace(/\beleven\b/g, "11")
+        .replace(/\btwelve\b/g, "12")
+        .replace(/\bthirteen\b/g, "13")
+        .replace(/\bfourteen\b/g, "14")
+        .replace(/\bfifteen\b/g, "15")
+        .replace(/\bsixteen\b/g, "16")
+        .replace(/\bseventeen\b/g, "17")
+        .replace(/\beighteen\b/g, "18")
+        .replace(/\bnineteen\b/g, "19")
+        .replace(/\btwenty\b/g, "20")
+        .replace(/\bthirty\b/g, "30")
+        .replace(/\bforty\b/g, "40")
+        .replace(/\bfifty\b/g, "50")
+        .replace(/\bmilliliters?\b/g, "ml");
+    return s
         .replace(/(\d+)\s*ml\b/g, "$1ml")
         .replace(/\broll[\s-]?on\b/g, "roll-on")
         .replace(/[^a-z0-9-]+/g, " ")
@@ -204,7 +231,13 @@ function normalizeSearchText(rawValue: string): string {
 }
 
 function tokenizeSearchText(rawValue: string): string[] {
-    const stopWords = new Set(["a", "an", "and", "bottle", "bottles", "browse", "can", "find", "for", "me", "open", "please", "show", "take", "the", "to", "you"]);
+    const stopWords = new Set([
+        "a", "an", "and", "any", "are", "bottle", "bottles", "browse", "can", "could", "direct", "do", "does",
+        "find", "for", "get", "give", "how", "i", "image", "images", "is", "it", "its", "just", "like", "look",
+        "looks", "me", "need", "open", "only", "page", "photo", "photos", "picture", "pictures", "please", "see",
+        "show", "some", "take", "that", "the", "them", "they", "this", "to", "visual", "want", "was", "what",
+        "which", "who", "you", "your",
+    ]);
     return normalizeSearchText(rawValue).split(" ").filter((t) => t && !stopWords.has(t));
 }
 

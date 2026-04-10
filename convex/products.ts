@@ -596,7 +596,7 @@ export const updateProductGroupHeroImage = mutation({
 });
 
 // Applicator bucket suffixes in slugs (e.g. cylinder-5ml-clear-13-415-spray ends with -spray)
-const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
+const APPLICATOR_BUCKET_SUFFIXES = ["-spray", "-finemist", "-perfumespray", "-antiquespray", "-antiquespray-tassel", "-rollon", "-dropper", "-lotionpump", "-reducer", "-glasswand", "-glassapplicator", "-capclosure"] as const;
 
 // Cylinder 5ml roll-on: only Clear and cobalt-blue glass (no Amber — 5ml Amber is Tulip-shaped only)
 const CYLINDER_5ML_ROLLON_ALLOWED = new Set(["Clear", "Blue", "Cobalt", "Cobalt Blue"]);

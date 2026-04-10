@@ -13,3 +13,13 @@ export const client: SanityClient = isSanityConfigured
           useCdn: true,
       })
     : (null as unknown as SanityClient);
+
+/** Non-CDN client for real-time data (e.g. Paper Doll offsets pushed from pipeline UI) */
+export const clientNoCdn: SanityClient = isSanityConfigured
+    ? createClient({
+          projectId: projectId!,
+          dataset,
+          apiVersion: "2024-01-01",
+          useCdn: false,
+      })
+    : (null as unknown as SanityClient);

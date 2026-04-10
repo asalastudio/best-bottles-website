@@ -31,6 +31,20 @@ export const productGroupContent = defineType({
             description: "OFF = this product's blocks are prepended to the family template blocks. ON = only this product's blocks are shown (family template is ignored entirely).",
         }),
         defineField({
+            name: "paperDollOffsetX",
+            title: "Paper Doll Offset X",
+            type: "number",
+            initialValue: 0,
+            description: "Per-product horizontal nudge (canvas pixels, added on top of family-level offsets). Positive = right.",
+        }),
+        defineField({
+            name: "paperDollOffsetY",
+            title: "Paper Doll Offset Y",
+            type: "number",
+            initialValue: 0,
+            description: "Per-product vertical nudge (canvas pixels, added on top of family-level offsets). Positive = down.",
+        }),
+        defineField({
             name: "pageBlocks",
             title: "Page Blocks",
             type: "array",

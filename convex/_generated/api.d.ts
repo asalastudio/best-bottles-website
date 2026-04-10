@@ -9,7 +9,9 @@
  */
 
 import type * as componentUtils from "../componentUtils.js";
+import type * as debug5ml from "../debug5ml.js";
 import type * as fitments from "../fitments.js";
+import type * as fix5mlCapColors from "../fix5mlCapColors.js";
 import type * as forms from "../forms.js";
 import type * as grace from "../grace.js";
 import type * as gracePrompt from "../gracePrompt.js";
@@ -30,7 +32,9 @@ import type {
 
 declare const fullApi: ApiFromModules<{
   componentUtils: typeof componentUtils;
+  debug5ml: typeof debug5ml;
   fitments: typeof fitments;
+  fix5mlCapColors: typeof fix5mlCapColors;
   forms: typeof forms;
   grace: typeof grace;
   gracePrompt: typeof gracePrompt;

@@ -2,7 +2,8 @@ import { defineType, defineField } from "sanity";
 import { ImageIcon } from "@sanity/icons";
 
 /**
- * One layer PNG for the Paper Doll compositor (body, cap, roller, sprayer, or pump).
+ * One layer PNG for the Paper Doll compositor.
+ * Slots: body, cap, roller, sprayer, overcap, shortcap, or pump.
  */
 export const paperDollLayerAsset = defineType({
     name: "paperDollLayerAsset",
@@ -19,7 +20,9 @@ export const paperDollLayerAsset = defineType({
                     { title: "Body (glass)", value: "body" },
                     { title: "Cap", value: "cap" },
                     { title: "Roller fitment", value: "roller" },
-                    { title: "Sprayer", value: "sprayer" },
+                    { title: "Sprayer mechanism", value: "sprayer" },
+                    { title: "Sprayer overcap", value: "overcap" },
+                    { title: "Short cap", value: "shortcap" },
                     { title: "Lotion pump", value: "pump" },
                 ],
                 layout: "dropdown",
