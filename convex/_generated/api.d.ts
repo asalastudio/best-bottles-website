@@ -23,6 +23,7 @@ import type * as paperDoll from "../paperDoll.js";
 import type * as portal from "../portal.js";
 import type * as products from "../products.js";
 import type * as seedProducts from "../seedProducts.js";
+import type * as shopifySync from "../shopifySync.js";
 
 import type {
   ApiFromModules,
@@ -46,6 +47,7 @@ declare const fullApi: ApiFromModules<{
   portal: typeof portal;
   products: typeof products;
   seedProducts: typeof seedProducts;
+  shopifySync: typeof shopifySync;
 }>;
 
 /**

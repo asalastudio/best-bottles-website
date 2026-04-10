@@ -18,8 +18,9 @@ export default defineSchema({
         variantCount: v.number(),
         priceRangeMin: v.union(v.number(), v.null()),        // lowest webPrice1pc in group
         priceRangeMax: v.union(v.number(), v.null()),        // highest webPrice1pc in group
-        // Filled in later phases:
-        shopifyProductId: v.optional(v.union(v.string(), v.null())),
+        // ── Shopify sync fields ──────────────────────────────────
+        shopifyProductId: v.optional(v.union(v.string(), v.null())),  // Shopify product GID
+        shopifyUpdatedAt: v.optional(v.number()),                      // Last webhook sync timestamp
         sanitySlug: v.optional(v.union(v.string(), v.null())),
         heroImageUrl: v.optional(v.union(v.string(), v.null())),
         // Option A: applicator-first — unique applicator types in this group (e.g. ["Metal Roller", "Fine Mist Sprayer"])
@@ -158,6 +159,11 @@ export default defineSchema({
         // ── Phase 1: Product Grouping ────────────────────────────────
         productGroupId: v.optional(v.id("productGroups")), // FK → productGroups
 
+        // ── Shopify sync fields ──────────────────────────────────────
+        shopifyVariantId: v.optional(v.union(v.string(), v.null())),        // Shopify variant GID
+        shopifyInventoryItemId: v.optional(v.union(v.string(), v.null())),  // Shopify inventory item GID
+        shopifyUpdatedAt: v.optional(v.number()),                           // Last webhook sync timestamp
+
         // ── Paper Doll (Sanity layer assets + compositor) ───────────
         paperDollBodyUrl: v.optional(v.union(v.string(), v.null())),
         paperDollFitmentUrl: v.optional(v.union(v.string(), v.null())),
@@ -174,6 +180,7 @@ export default defineSchema({
         .index("by_family", ["family"])
         .index("by_neckThreadSize", ["neckThreadSize"])
         .index("by_productGroupId", ["productGroupId"]) // Used by getProductGroup to avoid full table scan
+        .index("by_shopifyVariantId", ["shopifyVariantId"]) // Webhook sync: inventory updates
         .searchIndex("search_itemName", {
             searchField: "itemName",
             filterFields: ["category", "family"],

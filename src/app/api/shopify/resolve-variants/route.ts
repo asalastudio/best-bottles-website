@@ -13,7 +13,7 @@ export async function POST(req: NextRequest) {
     if (!token) {
         return Response.json(
             { error: "Shopify Admin token not configured" },
-            { status: 503 }
+            { status: 503 },
         );
     }
 
@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
         const variants = await resolveVariantsBySkus(skus);
 
         const skuToQuantity = Object.fromEntries(
-            body.items.map((i) => [i.sku, i.quantity])
+            body.items.map((i) => [i.sku, i.quantity]),
         );
 
         const checkoutItems = variants.map((v) => ({
@@ -38,22 +38,26 @@ export async function POST(req: NextRequest) {
             quantity: skuToQuantity[v.sku] ?? 1,
         }));
 
-        const checkoutUrl = checkoutItems.length > 0
-            ? buildCheckoutUrl(checkoutItems)
-            : null;
+        const checkoutUrl =
+            checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null;
 
         return Response.json({
             variants,
             checkoutUrl,
             unmatchedSkus: skus.filter(
-                (s) => !variants.some((v) => v.sku === s)
+                (s) => !variants.some((v) => v.sku === s),
             ),
         });
     } catch (err) {
         console.error("[shopify/resolve-variants] Error:", err);
         return Response.json(
-            { error: err instanceof Error ? err.message : "Failed to resolve variants" },
-            { status: 502 }
+            {
+                error:
+                    err instanceof Error
+                        ? err.message
+                        : "Failed to resolve variants",
+            },
+            { status: 502 },
         );
     }
 }
