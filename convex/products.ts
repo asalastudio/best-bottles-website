@@ -49,9 +49,6 @@ export const getAllForAudit = query({
         };
     },
 });
-
-
-
 // Get a specific product by its exact Grace Sku
 export const getBySku = query({
     args: { graceSku: v.string() },
@@ -1048,5 +1045,6 @@ export const getCatalogIntegrityBatch = query({
         };
     },
 });
+
 
 
