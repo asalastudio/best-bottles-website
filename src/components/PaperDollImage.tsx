@@ -144,14 +144,13 @@ function parseTrimFromItemName(itemName: string): string | null {
     return null;
 }
 
-/** Parse sprayer mechanism variant from item name (e.g. "Matte Black Spray" → "BLK-MT") */
-function parseSprayerFromItemName(itemName: string): string | null {
+/** Parse sprayer mechanism variant from item name using the same key scheme as the Sanity family. */
+function parseSprayerFromItemName(itemName: string, map: Record<string, string>): string | null {
     const lower = itemName.toLowerCase();
-    // Try direct match against known finish descriptions
-    for (const [desc, key] of Object.entries(SPRAYER_VARIANT_MAP)) {
+    const sorted = Object.entries(map).sort((a, b) => b[0].length - a[0].length);
+    for (const [desc, key] of sorted) {
         if (lower.includes(desc)) return key;
     }
-    // Fallback to trim parsing for 9ML-style "with X trim" patterns
     return parseTrimFromItemName(itemName);
 }
 
@@ -175,7 +174,7 @@ function parseOvercapPairs(anchorsJson?: string): Record<string, string> {
     }
 }
 
-/** Map a sprayer finish description (from itemName) to a CYL-5ML mechanism variant key */
+/** CYL-5ML / TALLCYL-style mechanism keys (pairs with SPR-MATT-* overcaps in Sanity). */
 const SPRAYER_VARIANT_MAP: Record<string, string> = {
     "matte black": "BLK-MT",
     "shiny black": "BLK-SH",
@@ -185,6 +184,50 @@ const SPRAYER_VARIANT_MAP: Record<string, string> = {
     "shiny gold": "GL-SH",
     "matte silver": "SL-MT",
     "shiny silver": "SL-SH",
+};
+
+/** CYL-9ML keys in Sanity — single-piece sprayer PNGs (see data/paper-doll/CYL-9ML/manifest.json). */
+const SPRAYER_VARIANT_MAP_CYL9ML: Record<string, string> = {
+    "shiny silver": "SHN-SL",
+    "matte silver": "MATT-SL",
+    silver: "SHN-SL",
+    "shiny black": "BLK",
+    "matte black": "BLK",
+    black: "BLK",
+    "shiny gold": "GL",
+    "matte gold": "GL",
+    gold: "GL",
+    red: "RD",
+    turquoise: "TUR",
+    teal: "TUR",
+};
+
+function sprayerFinishMap(familyKey: string): Record<string, string> {
+    return familyKey === "CYL-9ML" ? SPRAYER_VARIANT_MAP_CYL9ML : SPRAYER_VARIANT_MAP;
+}
+
+function matchCapColorToSprayerKey(capColor: string | null, map: Record<string, string>): string | null {
+    if (!capColor) return null;
+    const normalized = capColor.toLowerCase().trim();
+    const sorted = Object.entries(map).sort((a, b) => b[0].length - a[0].length);
+    for (const [desc, key] of sorted) {
+        if (normalized.includes(desc)) return key;
+        if (normalized.length >= 3 && desc.includes(normalized)) return key;
+    }
+    return null;
+}
+
+/** CYL-9ML lotion pump keys in Sanity (subset of finishes — no shiny-silver-only pump asset). */
+const PUMP_VARIANT_MAP_CYL9ML: Record<string, string> = {
+    "matte black": "BLK",
+    "shiny black": "BLK",
+    black: "BLK",
+    "matte gold": "GL",
+    "shiny gold": "GL",
+    gold: "GL",
+    "matte silver": "MATT-SL",
+    "shiny silver": "MATT-SL",
+    silver: "MATT-SL",
 };
 
 /** Map cap color descriptions to short cap variant keys */
@@ -356,46 +399,31 @@ export default function PaperDollImage({
     // Derive current selections from product attributes
     const bodyKey = useMemo(() => BODY_KEY_MAP[(glassColor ?? "").toLowerCase()] ?? null, [glassColor]);
     const capKey = useMemo(() => {
-        // Prefer direct capColor prop (exact value from Convex)
         if (capColor) {
             const normalized = capColor.toLowerCase().trim();
             const directMatch = CAP_KEY_MAP[normalized];
-            if (directMatch) {
-                console.log(`[PaperDoll] capColor="${capColor}" → direct match → ${directMatch}`);
-                return directMatch;
-            }
-            // Fuzzy match: check if any CAP_KEY_MAP key is contained in capColor
-            // Sort by key length descending so longer/more specific keys match first
+            if (directMatch) return directMatch;
             const sortedEntries = Object.entries(CAP_KEY_MAP).sort((a, b) => b[0].length - a[0].length);
             for (const [desc, key] of sortedEntries) {
-                if (normalized.includes(desc)) {
-                    console.log(`[PaperDoll] capColor="${capColor}" → fuzzy match "${desc}" → ${key}`);
-                    return key;
-                }
+                if (normalized.includes(desc)) return key;
             }
-            console.warn(`[PaperDoll] capColor="${capColor}" → NO MATCH`);
         }
-        // Fallback: parse from itemName
-        const fromName = parseCapFromItemName(itemName);
-        console.log(`[PaperDoll] capColor not set, itemName parse → ${fromName}`);
-        return fromName;
+        return parseCapFromItemName(itemName);
     }, [capColor, itemName]);
     const rollerKey = useMemo(() => {
         if (mode !== "rollon" || !applicator) return null;
         return ROLLER_KEY_MAP[applicator] ?? null;
     }, [mode, applicator]);
     const trimKey = useMemo(() => parseTrimFromItemName(itemName), [itemName]);
+    const sprayerMap = useMemo(() => sprayerFinishMap(familyKey), [familyKey]);
     const sprayerKey = useMemo(() => {
-        // Prefer capColor (from Convex) for spray mechanism lookup
-        if (capColor && mode === "spray") {
-            const normalized = capColor.toLowerCase().trim();
-            for (const [desc, key] of Object.entries(SPRAYER_VARIANT_MAP)) {
-                if (normalized.includes(desc) || desc.includes(normalized)) return key;
-            }
-        }
-        // Fallback: parse from itemName
-        return parseSprayerFromItemName(itemName);
-    }, [capColor, mode, itemName]);
+        if (mode !== "spray") return null;
+        return matchCapColorToSprayerKey(capColor ?? null, sprayerMap) ?? parseSprayerFromItemName(itemName, sprayerMap);
+    }, [capColor, mode, itemName, sprayerMap]);
+    const cyl9PumpKey = useMemo(() => {
+        if (familyKey !== "CYL-9ML" || mode !== "lotion") return null;
+        return matchCapColorToSprayerKey(capColor ?? null, PUMP_VARIANT_MAP_CYL9ML) ?? parseSprayerFromItemName(itemName, PUMP_VARIANT_MAP_CYL9ML);
+    }, [familyKey, mode, capColor, itemName]);
     const shortCapKey = useMemo(() => {
         // Use capColor directly for short cap resolution
         if (capColor) {
@@ -455,7 +483,7 @@ export default function PaperDollImage({
                 variantKey = shortCapKey ?? bySlot.shortcap?.[0]?.variantKey ?? null;
             }
             else if (slot === "pump") {
-                variantKey = trimKey ?? bySlot.pump?.[0]?.variantKey ?? null;
+                variantKey = cyl9PumpKey ?? trimKey ?? bySlot.pump?.[0]?.variantKey ?? null;
             }
 
             if (!variantKey) return;
@@ -474,7 +502,7 @@ export default function PaperDollImage({
         });
 
         return result;
-    }, [family, mode, bodyKey, capKey, rollerKey, trimKey, sprayerKey, shortCapKey, bySlot, overcapPairs]);
+    }, [family, mode, bodyKey, capKey, rollerKey, trimKey, sprayerKey, shortCapKey, cyl9PumpKey, bySlot, overcapPairs]);
 
     // Track per-layer load state for smooth appearance
     const [layersReady, setLayersReady] = useState<Set<string>>(new Set());
