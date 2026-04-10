@@ -30,7 +30,7 @@ export default defineSchema({
         primaryGraceSku: v.optional(v.union(v.string(), v.null())),
         primaryWebsiteSku: v.optional(v.union(v.string(), v.null())),
         groupDescription: v.optional(v.union(v.string(), v.null())),
-        /** Links catalog group to Sanity paperDollFamily.familyKey (e.g. CYL-9ML) */
+        /** Sanity paperDollFamily.familyKey — e.g. CYL-9ML = Cylinder 9 ml, neck 17-415 */
         paperDollFamilyKey: v.optional(v.union(v.string(), v.null())),
     })
         .index("by_slug", ["slug"])

@@ -186,7 +186,11 @@ const SPRAYER_VARIANT_MAP: Record<string, string> = {
     "shiny silver": "SL-SH",
 };
 
-/** CYL-9ML keys in Sanity — single-piece sprayer PNGs (see data/paper-doll/CYL-9ML/manifest.json). */
+/**
+ * Sprayer `variantKey`s for the **Cylinder 9 ml, neck 17-415** line (`paperDollFamily.familyKey`).
+ * Sanity uses compact keys (SHN-SL, MATT-SL, …) and single-piece sprayer PNGs — not the BLK-MT / SL-SH scheme used on CYL-5ML.
+ * @see data/paper-doll/CYL-9ML/manifest.json
+ */
 const SPRAYER_VARIANT_MAP_CYL9ML: Record<string, string> = {
     "shiny silver": "SHN-SL",
     "matte silver": "MATT-SL",
@@ -202,8 +206,11 @@ const SPRAYER_VARIANT_MAP_CYL9ML: Record<string, string> = {
     teal: "TUR",
 };
 
+/** Matches Convex/Sanity `familyKey` for 17-415 × 9 ml Cylinder only — other 9 ml SKUs may differ. */
+const FAMILY_KEY_CYLINDER_9ML_17_415 = "CYL-9ML" as const;
+
 function sprayerFinishMap(familyKey: string): Record<string, string> {
-    return familyKey === "CYL-9ML" ? SPRAYER_VARIANT_MAP_CYL9ML : SPRAYER_VARIANT_MAP;
+    return familyKey === FAMILY_KEY_CYLINDER_9ML_17_415 ? SPRAYER_VARIANT_MAP_CYL9ML : SPRAYER_VARIANT_MAP;
 }
 
 function matchCapColorToSprayerKey(capColor: string | null, map: Record<string, string>): string | null {
@@ -217,7 +224,7 @@ function matchCapColorToSprayerKey(capColor: string | null, map: Record<string, 
     return null;
 }
 
-/** CYL-9ML lotion pump keys in Sanity (subset of finishes — no shiny-silver-only pump asset). */
+/** Lotion pump keys for the same 17-415 × 9 ml Cylinder family (subset in Sanity — no shiny-silver-only pump layer). */
 const PUMP_VARIANT_MAP_CYL9ML: Record<string, string> = {
     "matte black": "BLK",
     "shiny black": "BLK",
@@ -421,7 +428,7 @@ export default function PaperDollImage({
         return matchCapColorToSprayerKey(capColor ?? null, sprayerMap) ?? parseSprayerFromItemName(itemName, sprayerMap);
     }, [capColor, mode, itemName, sprayerMap]);
     const cyl9PumpKey = useMemo(() => {
-        if (familyKey !== "CYL-9ML" || mode !== "lotion") return null;
+        if (familyKey !== FAMILY_KEY_CYLINDER_9ML_17_415 || mode !== "lotion") return null;
         return matchCapColorToSprayerKey(capColor ?? null, PUMP_VARIANT_MAP_CYL9ML) ?? parseSprayerFromItemName(itemName, PUMP_VARIANT_MAP_CYL9ML);
     }, [familyKey, mode, capColor, itemName]);
     const shortCapKey = useMemo(() => {
