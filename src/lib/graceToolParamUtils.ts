@@ -5,6 +5,8 @@
  * Convex validators require exact field names — map aliases here so queries never fail validation.
  */
 
+import { inferCatalogCategoryFromSearchTerm } from "@/lib/graceShapeIntent";
+
 export function resolveSearchCatalogParameters(
     parameters: Record<string, unknown>
 ): {
@@ -26,7 +28,11 @@ export function resolveSearchCatalogParameters(
         asTrimmedString(parameters.q) ??
         "";
 
-    const categoryLimit = asTrimmedString(parameters.categoryLimit);
+    let categoryLimit = asTrimmedString(parameters.categoryLimit);
+    if (!categoryLimit) {
+        const inferred = inferCatalogCategoryFromSearchTerm(searchTerm);
+        if (inferred) categoryLimit = inferred;
+    }
     const familyLimit = asTrimmedString(parameters.familyLimit);
     const applicatorFilter = asTrimmedString(parameters.applicatorFilter);
 

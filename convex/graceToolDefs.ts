@@ -33,7 +33,7 @@ export const GRACE_TOOLS: Anthropic.Tool[] = [
                 categoryLimit: {
                     type: "string",
                     description:
-                        "Optional: restrict to a category — 'Glass Bottle', 'Component', 'Aluminum Bottle', or 'Specialty'",
+                        "Optional: restrict to a category — 'Glass Bottle', 'Component', 'Aluminum Bottle', 'Plastic Bottle', 'Specialty', 'Cream Jar', 'Lotion Bottle', 'Metal Atomizer', etc.",
                 },
                 familyLimit: {
                     type: "string",
@@ -44,13 +44,15 @@ export const GRACE_TOOLS: Anthropic.Tool[] = [
                     type: "string",
                     description:
                         "Optional: restrict to products with a specific applicator type. Comma-separated list of EXACT values from the catalog. " +
+                        "For **9ml Cylinder roll-on** specifically, use searchTerm like '9ml cylinder roller' with familyLimit 'Cylinder' — do not rely on a vague 'roll-on' search with the wrong family. " +
                         "Customer language → applicator values to use: " +
                         "'roll-on / roller' → 'Metal Roller Ball,Plastic Roller Ball'; " +
                         "'spray / sprayer / perfume spray' → 'Fine Mist Sprayer,Atomizer,Antique Bulb Sprayer,Antique Bulb Sprayer with Tassel'; " +
                         "'splash-on / cologne / open mouth' → 'Reducer'; " +
                         "'dropper / eye dropper' → 'Dropper'; " +
                         "'lotion pump / pump' → 'Lotion Pump'; " +
-                        "'cap / closure / simple cap' → 'Cap/Closure'.",
+                        "'cap / closure / simple cap' → 'Cap/Closure'. " +
+                        "If the customer names several applicator types at once (e.g. 9ml roll-on, sprayer, and lotion pump), OMIT applicatorFilter so results include every variant.",
                 },
             },
             required: ["searchTerm"],
@@ -59,7 +61,7 @@ export const GRACE_TOOLS: Anthropic.Tool[] = [
     {
         name: "getFamilyOverview",
         description:
-            "Get a complete overview of a bottle family: all available sizes, glass colours, thread sizes, applicator types, and price ranges. ALWAYS call this when a customer asks broadly about a family ('what sizes do your Boston Rounds come in?', 'tell me about the Diva', 'what do you have in Cylinders?'). This returns aggregated data — use searchCatalog afterwards if the customer wants specific variants.",
+            "Get a complete overview of a bottle family: all available sizes, glass colours, thread sizes, applicator types, and price ranges. ALWAYS call this when a customer asks broadly about a family ('what sizes do your Boston Rounds come in?', 'tell me about the Diva', 'what do you have in Cylinders?'). This returns aggregated data — use searchCatalog afterwards if the customer wants specific variants. For family 'Cylinder', the response may include graceHint: read it — it states facts about 9ml roll-on and lotion pump SKUs that you must not contradict.",
         input_schema: {
             type: "object" as const,
             properties: {
@@ -75,7 +77,7 @@ export const GRACE_TOOLS: Anthropic.Tool[] = [
     {
         name: "checkCompatibility",
         description:
-            "Check which closures and applicators are compatible with a specific bottle neck/thread size. Call this for ANY compatibility question — what cap fits, does this dropper work, will that pump thread on. Never answer compatibility questions from memory.",
+            "Return the fitment matrix for a NECK THREAD size (e.g. 18-415, 20-410). Compatibility is keyed by thread — same specification required for physical fit. Call when the question is by thread size alone. Never answer from memory. For a specific bottle, use getBottleComponents first (it includes neck thread + components).",
         input_schema: {
             type: "object" as const,
             properties: {
@@ -91,7 +93,7 @@ export const GRACE_TOOLS: Anthropic.Tool[] = [
     {
         name: "getBottleComponents",
         description:
-            "Get the COMPLETE list of compatible components (closures, sprayers, droppers, lotion pumps, reducers, antique bulb sprayers, caps, roll-on applicators) for a specific bottle variant. Returns every compatible component grouped by type with SKU, name, price, and stock status. ALWAYS call this when a customer asks what components, closures, sprayers, pumps, or applicators work with a specific bottle. This is the definitive compatibility source — more complete than checkCompatibility. STRATEGY: For 'what sprayer fits X bottle?' questions, first call searchCatalog with the BOTTLE name (e.g. '30ml Cylinder', categoryLimit 'Glass Bottle') to get the bottle's SKU, then call THIS tool with that SKU. Do NOT search for the sprayer by name.",
+            "Get compatible components for a specific bottle SKU. Returns neck thread size (primary fitment key), grouped components, and counts. Compatibility is driven by NECK THREAD — explain fit using the thread from this result plus COMPONENT DATA. Component groups may include multiple cap types (Short Cap, Tall Cap, colors), sprayers, pumps, etc. — list each TYPE the tool returns. STRATEGY: Find the bottle SKU via searchCatalog with the correct categoryLimit, then call this tool. For 'what sprayer fits X bottle?' do NOT search for the sprayer by name first.",
         input_schema: {
             type: "object" as const,
             properties: {

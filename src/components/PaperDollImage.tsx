@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
+import { clientNoCdn, isSanityConfigured } from "@/sanity/lib/client";
 /* eslint-disable @next/next/no-img-element */
 
 // ── Types ────────────────────────────────────────────────────────────────────
@@ -19,19 +19,25 @@ interface FamilyData {
     _id: string;
     familyKey: string;
     displayName: string;
+    canvasWidth?: number;
+    canvasHeight?: number;
     layerOrderRollon: string[];
     layerOrderSpray: string[];
+    layerOrderShortcap: string[];
     layerOrderLotion: string[];
+    anchorsJson?: string;
     layerAssets: LayerAsset[];
 }
 
-type ApplicatorMode = "rollon" | "spray" | "lotion";
+type ApplicatorMode = "rollon" | "spray" | "shortcap" | "lotion";
 
 // ── Sanity query ─────────────────────────────────────────────────────────────
 
 const FAMILY_QUERY = `*[_type == "paperDollFamily" && familyKey == $familyKey][0]{
     _id, familyKey, displayName,
-    layerOrderRollon, layerOrderSpray, layerOrderLotion,
+    canvasWidth, canvasHeight,
+    layerOrderRollon, layerOrderSpray, layerOrderShortcap, layerOrderLotion,
+    anchorsJson,
     layerAssets[]{
         _key, slot, variantKey, sourceFilename,
         "imageUrl": image.asset->url,
@@ -50,7 +56,7 @@ function fetchFamily(familyKey: string): Promise<FamilyData | null> {
         familyCache.set(familyKey, p);
         return p;
     }
-    const p = client.fetch<FamilyData | null>(FAMILY_QUERY, { familyKey }).catch(() => null);
+    const p = clientNoCdn.fetch<FamilyData | null>(FAMILY_QUERY, { familyKey }).catch(() => null);
     familyCache.set(familyKey, p);
     return p;
 }
@@ -67,22 +73,43 @@ const BODY_KEY_MAP: Record<string, string> = {
 };
 
 const CAP_KEY_MAP: Record<string, string> = {
+    // Dot caps
     "black dot": "BLK-DOT",
+    "black with dots": "BLK-DOT",
+    "black dots": "BLK-DOT",
     "pink dot": "PNK-DOT",
+    "pink with dots": "PNK-DOT",
+    "pink dots": "PNK-DOT",
     "silver dot": "SL-DOT",
+    "silver with dots": "SL-DOT",
+    "silver dots": "SL-DOT",
+    // Matte caps (both word orders)
     "matte copper": "MATT-CU",
+    "copper matte": "MATT-CU",
+    copper: "MATT-CU",
     "matte gold": "MATT-GL",
+    "gold matte": "MATT-GL",
     "matte silver": "MATT-SL",
+    "silver matte": "MATT-SL",
+    // Shiny caps (both word orders)
     "shiny black": "SHN-BLK",
+    "black shiny": "SHN-BLK",
+    black: "SHN-BLK",
     "shiny gold": "SHN-GL",
+    "gold shiny": "SHN-GL",
     "shiny silver": "SHN-SL",
+    "silver shiny": "SHN-SL",
+    silver: "SHN-SL",
+    // Plain caps
     white: "WHT",
     transparent: "WHT",
 };
 
 const ROLLER_KEY_MAP: Record<string, string> = {
     "Metal Roller Ball": "MTL-ROLL",
+    "Metal Roller": "MTL-ROLL",
     "Plastic Roller Ball": "PLS-ROLL",
+    "Plastic Roller": "PLS-ROLL",
 };
 
 /** Map trim color descriptions (from itemName) to Sanity sprayer/pump variant keys */
@@ -117,11 +144,64 @@ function parseTrimFromItemName(itemName: string): string | null {
     return null;
 }
 
+/** Parse sprayer mechanism variant from item name (e.g. "Matte Black Spray" → "BLK-MT") */
+function parseSprayerFromItemName(itemName: string): string | null {
+    const lower = itemName.toLowerCase();
+    // Try direct match against known finish descriptions
+    for (const [desc, key] of Object.entries(SPRAYER_VARIANT_MAP)) {
+        if (lower.includes(desc)) return key;
+    }
+    // Fallback to trim parsing for 9ML-style "with X trim" patterns
+    return parseTrimFromItemName(itemName);
+}
+
+/** Parse short cap variant from item name (e.g. "Black Short Cap" → "BLK-SHT") */
+function parseShortCapFromItemName(itemName: string): string | null {
+    const lower = itemName.toLowerCase();
+    for (const [desc, key] of Object.entries(SHORT_CAP_MAP)) {
+        if (lower.includes(desc)) return key;
+    }
+    return null;
+}
+
+/** Parse sprayer-overcap pairing from anchorsJson stored in Sanity */
+function parseOvercapPairs(anchorsJson?: string): Record<string, string> {
+    if (!anchorsJson) return {};
+    try {
+        const parsed = JSON.parse(anchorsJson);
+        return parsed.sprayerOvercapPairs ?? {};
+    } catch {
+        return {};
+    }
+}
+
+/** Map a sprayer finish description (from itemName) to a CYL-5ML mechanism variant key */
+const SPRAYER_VARIANT_MAP: Record<string, string> = {
+    "matte black": "BLK-MT",
+    "shiny black": "BLK-SH",
+    "matte blue": "BLU-MT",
+    "matte copper": "CU-MT",
+    "matte gold": "GL-MT",
+    "shiny gold": "GL-SH",
+    "matte silver": "SL-MT",
+    "shiny silver": "SL-SH",
+};
+
+/** Map cap color descriptions to short cap variant keys */
+const SHORT_CAP_MAP: Record<string, string> = {
+    black: "BLK-SHT",
+    "shiny black": "BLK-SHT",
+    "black shiny": "BLK-SHT",
+    white: "WHT-SHT",
+};
+
 function getModeFromApplicator(applicator: string | null): ApplicatorMode {
     if (!applicator) return "rollon";
     const a = applicator.toLowerCase();
     if (a.includes("roller") || a.includes("roll-on")) return "rollon";
     if (a.includes("spray") || a.includes("mist") || a.includes("atomizer")) return "spray";
+    if (a.includes("short cap") || a.includes("shortcap") || a.includes("short-cap")) return "shortcap";
+    if (a.includes("cap/closure") || a.includes("cap") && a.includes("closure")) return "shortcap";
     if (a.includes("lotion") || a.includes("pump")) return "lotion";
     return "rollon";
 }
@@ -135,8 +215,16 @@ function groupBySlot(assets: LayerAsset[]): Record<string, LayerAsset[]> {
 }
 
 function sanityUrl(url: string): string {
-    return `${url}?w=1000&fm=png&q=90`;
+    // Serve full-resolution PNGs — same as pipeline UI uses.
+    // Downscaling via ?w= can introduce subtle sub-pixel shifts.
+    return `${url}?fm=png&q=90`;
 }
+
+// ── Canvas constants ────────────────────────────────────────────────────────
+// All layer PNGs are extracted onto a 1000×1300 canvas. Offsets stored in Sanity
+// are in this coordinate space and must be scaled to match the display size.
+const CANVAS_W = 1000;
+const CANVAS_H = 1300;
 
 // ── Component ────────────────────────────────────────────────────────────────
 
@@ -144,9 +232,15 @@ interface PaperDollImageProps {
     familyKey: string;
     glassColor: string | null;
     applicator: string | null;
+    /** Cap color from product data — e.g. "Shiny Black", "Black with Dots" */
+    capColor?: string | null;
+    /** Cap height — "Short" triggers shortcap mode when the family supports it */
+    capHeight?: string | null;
     itemName: string;
     fallbackImageUrl?: string | null;
     className?: string;
+    /** Per-product offset overrides (applied on top of family-level offsets) */
+    productOffsets?: { offsetX?: number; offsetY?: number } | null;
     /** Start with cap hidden to show fitment (default: true for rollon) */
     initialCapLifted?: boolean;
     /** Notify parent when cap visibility changes */
@@ -157,9 +251,12 @@ export default function PaperDollImage({
     familyKey,
     glassColor,
     applicator,
+    capColor,
+    capHeight,
     itemName,
     fallbackImageUrl,
     className = "",
+    productOffsets,
     initialCapLifted,
     onCapStateChange,
 }: PaperDollImageProps) {
@@ -167,7 +264,43 @@ export default function PaperDollImage({
     const [loaded, setLoaded] = useState(false);
     const [error, setError] = useState(false);
 
-    const mode = useMemo(() => getModeFromApplicator(applicator), [applicator]);
+    // ── Container measurement ──────────────────────────────────────────
+    // We measure the container and compute explicit top/left/width/height
+    // for each layer, matching the pipeline UI's rendering approach exactly.
+    const containerRef = useRef<HTMLDivElement>(null);
+    const [containerSize, setContainerSize] = useState({ w: 0, h: 0 });
+    const cW = family?.canvasWidth ?? CANVAS_W;
+    const cH = family?.canvasHeight ?? CANVAS_H;
+
+    useEffect(() => {
+        const el = containerRef.current;
+        if (!el) return;
+        const update = () => {
+            const { width, height } = el.getBoundingClientRect();
+            if (width > 0 && height > 0) {
+                setContainerSize({ w: width, h: height });
+            }
+        };
+        update();
+        const ro = new ResizeObserver(update);
+        ro.observe(el);
+        return () => ro.disconnect();
+    }, [loaded]);
+
+    const mode = useMemo(() => {
+        const baseMode = getModeFromApplicator(applicator);
+        // Cap/Closure products: mode depends on capHeight
+        // - "Short" → shortcap mode (uses the shortcap slot)
+        // - "Tall" or unset → rollon mode (uses the regular cap slot)
+        if (baseMode === "shortcap") {
+            if (capHeight?.toLowerCase() === "short" && family?.layerOrderShortcap?.length) {
+                return "shortcap" as ApplicatorMode;
+            }
+            // Tall caps or family doesn't support shortcap → use rollon (regular cap slot)
+            return "rollon" as ApplicatorMode;
+        }
+        return baseMode;
+    }, [applicator, capHeight, family]);
 
     // Cap visibility — for rollon mode, default to cap ON (showing the finished product)
     const [capVisible, setCapVisible] = useState(
@@ -222,17 +355,65 @@ export default function PaperDollImage({
 
     // Derive current selections from product attributes
     const bodyKey = useMemo(() => BODY_KEY_MAP[(glassColor ?? "").toLowerCase()] ?? null, [glassColor]);
-    const capKey = useMemo(() => parseCapFromItemName(itemName), [itemName]);
+    const capKey = useMemo(() => {
+        // Prefer direct capColor prop (exact value from Convex)
+        if (capColor) {
+            const normalized = capColor.toLowerCase().trim();
+            const directMatch = CAP_KEY_MAP[normalized];
+            if (directMatch) {
+                console.log(`[PaperDoll] capColor="${capColor}" → direct match → ${directMatch}`);
+                return directMatch;
+            }
+            // Fuzzy match: check if any CAP_KEY_MAP key is contained in capColor
+            // Sort by key length descending so longer/more specific keys match first
+            const sortedEntries = Object.entries(CAP_KEY_MAP).sort((a, b) => b[0].length - a[0].length);
+            for (const [desc, key] of sortedEntries) {
+                if (normalized.includes(desc)) {
+                    console.log(`[PaperDoll] capColor="${capColor}" → fuzzy match "${desc}" → ${key}`);
+                    return key;
+                }
+            }
+            console.warn(`[PaperDoll] capColor="${capColor}" → NO MATCH`);
+        }
+        // Fallback: parse from itemName
+        const fromName = parseCapFromItemName(itemName);
+        console.log(`[PaperDoll] capColor not set, itemName parse → ${fromName}`);
+        return fromName;
+    }, [capColor, itemName]);
     const rollerKey = useMemo(() => {
         if (mode !== "rollon" || !applicator) return null;
         return ROLLER_KEY_MAP[applicator] ?? null;
     }, [mode, applicator]);
     const trimKey = useMemo(() => parseTrimFromItemName(itemName), [itemName]);
+    const sprayerKey = useMemo(() => {
+        // Prefer capColor (from Convex) for spray mechanism lookup
+        if (capColor && mode === "spray") {
+            const normalized = capColor.toLowerCase().trim();
+            for (const [desc, key] of Object.entries(SPRAYER_VARIANT_MAP)) {
+                if (normalized.includes(desc) || desc.includes(normalized)) return key;
+            }
+        }
+        // Fallback: parse from itemName
+        return parseSprayerFromItemName(itemName);
+    }, [capColor, mode, itemName]);
+    const shortCapKey = useMemo(() => {
+        // Use capColor directly for short cap resolution
+        if (capColor) {
+            const normalized = capColor.toLowerCase().trim();
+            for (const [desc, key] of Object.entries(SHORT_CAP_MAP)) {
+                if (normalized.includes(desc)) return key;
+            }
+        }
+        return parseShortCapFromItemName(itemName);
+    }, [capColor, itemName]);
 
     const bySlot = useMemo(() => {
         if (!family) return {};
         return groupBySlot(family.layerAssets);
     }, [family]);
+
+    // Parse sprayer↔overcap pairs from anchorsJson
+    const overcapPairs = useMemo(() => parseOvercapPairs(family?.anchorsJson), [family]);
 
     // Build the list of layers to render
     const layers = useMemo(() => {
@@ -242,9 +423,14 @@ export default function PaperDollImage({
             ? family.layerOrderRollon
             : mode === "spray"
                 ? family.layerOrderSpray
-                : family.layerOrderLotion;
+                : mode === "shortcap"
+                    ? family.layerOrderShortcap
+                    : family.layerOrderLotion;
 
         if (!order) return [];
+
+        // Resolve the sprayer variant so we can also look up its paired overcap
+        const resolvedSprayerKey = sprayerKey ?? trimKey ?? bySlot.sprayer?.[0]?.variantKey ?? null;
 
         const result: { key: string; url: string; zIndex: number; slot: string; offsetX: number; offsetY: number }[] = [];
 
@@ -254,7 +440,19 @@ export default function PaperDollImage({
             else if (slot === "cap") variantKey = capKey;
             else if (slot === "roller") variantKey = rollerKey;
             else if (slot === "sprayer") {
-                variantKey = trimKey ?? bySlot.sprayer?.[0]?.variantKey ?? null;
+                variantKey = resolvedSprayerKey;
+            }
+            else if (slot === "overcap") {
+                // Look up the paired overcap for the current sprayer mechanism
+                if (resolvedSprayerKey && overcapPairs[resolvedSprayerKey]) {
+                    variantKey = overcapPairs[resolvedSprayerKey];
+                } else {
+                    // Fallback: first overcap
+                    variantKey = bySlot.overcap?.[0]?.variantKey ?? null;
+                }
+            }
+            else if (slot === "shortcap") {
+                variantKey = shortCapKey ?? bySlot.shortcap?.[0]?.variantKey ?? null;
             }
             else if (slot === "pump") {
                 variantKey = trimKey ?? bySlot.pump?.[0]?.variantKey ?? null;
@@ -276,7 +474,7 @@ export default function PaperDollImage({
         });
 
         return result;
-    }, [family, mode, bodyKey, capKey, rollerKey, trimKey, bySlot]);
+    }, [family, mode, bodyKey, capKey, rollerKey, trimKey, sprayerKey, shortCapKey, bySlot, overcapPairs]);
 
     // Track per-layer load state for smooth appearance
     const [layersReady, setLayersReady] = useState<Set<string>>(new Set());
@@ -319,33 +517,51 @@ export default function PaperDollImage({
     }
 
     const hasCapLayer = layers.some(l => l.slot === "cap");
-    const showCapToggle = mode === "rollon" && hasCapLayer;
+    const hasOvercapLayer = layers.some(l => l.slot === "overcap");
+    // Show toggle for rollon (cap) and spray (overcap) — not for shortcap or lotion
+    const showCapToggle = (mode === "rollon" && hasCapLayer) || (mode === "spray" && hasOvercapLayer);
+
+    // Fit canvas into container preserving aspect ratio (same as object-contain)
+    const scale = containerSize.w > 0 && containerSize.h > 0
+        ? Math.min(containerSize.w / cW, containerSize.h / cH)
+        : 0;
+    const renderedW = cW * scale;
+    const renderedH = cH * scale;
+    // Center the rendered area within the container
+    const offsetLeft = (containerSize.w - renderedW) / 2;
+    const offsetTop = (containerSize.h - renderedH) / 2;
 
     return (
-        <div className={`relative ${className}`}>
-            {layers.map(({ key, url, zIndex, slot, offsetX, offsetY }) => {
-                const isCap = slot === "cap";
-                const hidden = isCap && !capVisible && mode === "rollon";
-                const hasOffset = offsetX !== 0 || offsetY !== 0;
+        <div ref={containerRef} className={`relative ${className}`}>
+            {scale > 0 && layers.map(({ key, url, zIndex, slot, offsetX, offsetY }) => {
+                // Hide cap in rollon mode, or overcap in spray mode, when toggled off
+                const isRemovableLayer = (slot === "cap" && mode === "rollon") || (slot === "overcap" && mode === "spray");
+                const hidden = isRemovableLayer && !capVisible;
+                // Scale canvas-space offsets → display-space, add per-product overrides
+                const totalX = offsetX + (productOffsets?.offsetX ?? 0);
+                const totalY = offsetY + (productOffsets?.offsetY ?? 0);
                 return (
                     <img
                         key={key}
                         src={url}
                         alt=""
                         onLoad={() => onLayerLoad(key)}
-                        className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 ease-out"
+                        className="absolute transition-opacity duration-300 ease-out"
                         style={{
                             zIndex,
                             opacity: hidden ? 0 : (layersReady.has(key) ? 1 : 0),
-                            objectPosition: "50% 50%",
-                            transform: hasOffset ? `translate(${offsetX}px, ${offsetY}px)` : undefined,
+                            // Mirror pipeline UI: explicit position + size, no object-contain
+                            top: offsetTop + totalY * scale,
+                            left: offsetLeft + totalX * scale,
+                            width: renderedW,
+                            height: renderedH,
                         }}
                         draggable={false}
                     />
                 );
             })}
 
-            {/* Cap on/off toggle — clean pill button anchored at bottom of image */}
+            {/* Cap/overcap toggle — clean pill button anchored at bottom of image */}
             {showCapToggle && allLoaded && (
                 <button
                     onClick={toggleCap}
@@ -355,7 +571,7 @@ export default function PaperDollImage({
                         borderColor: capVisible ? "rgba(200,190,170,0.5)" : "transparent",
                         color: capVisible ? "#5c5549" : "#ffffff",
                     }}
-                    aria-label={capVisible ? "Remove cap to view fitment" : "Put cap back on"}
+                    aria-label={capVisible ? (mode === "spray" ? "Remove overcap to view sprayer" : "Remove cap to view fitment") : "Put cap back on"}
                 >
                     <span className="text-[11px] uppercase tracking-wider font-semibold">
                         {capVisible ? "Remove Cap" : "Cap On"}
