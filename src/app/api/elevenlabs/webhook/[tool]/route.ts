@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../../convex/_generated/api";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
+import {
+    buildSearchCatalogToolResult,
+    emptySearchCatalogHint,
+} from "../../../../../../convex/graceSearchUtils";
 
 let _convex: ConvexHttpClient | null = null;
 
@@ -26,8 +30,15 @@ type ToolHandler = (params: Record<string, unknown>) => Promise<unknown>;
 
 function buildToolHandlers(convex: ConvexHttpClient): Record<string, ToolHandler> {
   return {
-    searchCatalog: (p) =>
-      convex.query(api.grace.searchCatalog, resolveSearchCatalogParameters(p)),
+    searchCatalog: async (p) => {
+      const searchParams = resolveSearchCatalogParameters(p);
+      const data = await convex.query(api.grace.searchCatalog, searchParams);
+      if (!Array.isArray(data)) return data;
+      if (data.length === 0) {
+        return `No products found for that search. Try a broader term.${emptySearchCatalogHint(searchParams.searchTerm)}`;
+      }
+      return buildSearchCatalogToolResult(searchParams, data);
+    },
 
     getFamilyOverview: (p) =>
       convex.query(api.grace.getFamilyOverview, {

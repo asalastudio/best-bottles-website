@@ -190,12 +190,15 @@ const COLOR_SWATCH: Record<string, string> = {
     "Black": "#1D1D1F",
     "Matte Black": "#2D2D2D",
     "Shiny Black": "#0D0D0D",
+    "Short Black": "#1D1D1F",
+    "Short White": "#F5F5F0",
     "White": "#F5F5F0",
     "Matte Copper": "#B87333",
     "Copper": "#B87333",
     "Rose Gold": "#E8A090",
     "Pink": "#F4A7B9",
     "Blue": "#5B87B5",
+    "Matte Blue": "#3D6B9F",
     "Green": "#6B9A6B",
     "Lavender": "#E6E6FA",
     "Red": "#C41E3A",
@@ -203,10 +206,13 @@ const COLOR_SWATCH: Record<string, string> = {
     "Ivory Silver": "#C8C8C8",
     "Turquoise": "#40C4AA",
     "Standard": "#AAAAAA",
+    "Black with Dots": "#1D1D1F",
+    "Pink with Dots": "#F4A7B9",
+    "Silver with Dots": "#C8C8C8",
 };
 
 // Light swatches that need a dark checkmark
-const LIGHT_SWATCHES = new Set(["White", "Shiny Silver", "Matte Silver", "Standard", "Pink", "Rose Gold", "Lavender", "Ivory Gold", "Ivory Silver"]);
+const LIGHT_SWATCHES = new Set(["White", "Short White", "Shiny Silver", "Matte Silver", "Silver with Dots", "Standard", "Pink", "Pink with Dots", "Rose Gold", "Lavender", "Ivory Gold", "Ivory Silver"]);
 
 // Glass bottle body color hex map — used for sibling color navigation swatches
 const GLASS_COLOR_SWATCH: Record<string, string> = {
@@ -349,6 +355,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const [qty, setQty] = useState(qtyParam);
     const [addedFlash, setAddedFlash] = useState(false);
     const [pdpBlocks, setPdpBlocks] = useState<PdpBlock[]>([]);
+    const [productOffsets, setProductOffsets] = useState<{ offsetX?: number; offsetY?: number } | null>(null);
     const [stickyBarVisible, setStickyBarVisible] = useState(false);
     const inlineCartRef = useRef<HTMLDivElement>(null);
 
@@ -637,8 +644,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         if (!isSanityConfigured || !slug || !group?.family) return;
         let cancelled = false;
         Promise.all([
-            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
-                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
+            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean; paperDollOffsetX?: number; paperDollOffsetY?: number } | null>(
+                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate, paperDollOffsetX, paperDollOffsetY }`,
                 { slug }
             ),
             client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
@@ -654,6 +661,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                     ? groupBlocks
                     : [...groupBlocks, ...familyBlocks];
                 setPdpBlocks(merged);
+                // Per-product paper doll offset overrides
+                if (groupContent?.paperDollOffsetX || groupContent?.paperDollOffsetY) {
+                    setProductOffsets({
+                        offsetX: groupContent.paperDollOffsetX ?? 0,
+                        offsetY: groupContent.paperDollOffsetY ?? 0,
+                    });
+                } else {
+                    setProductOffsets(null);
+                }
             })
             .catch(() => { if (!cancelled) setPdpBlocks([]); });
         return () => { cancelled = true; };
@@ -836,9 +852,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         familyKey={group.paperDollFamilyKey}
                                         glassColor={group.color}
                                         applicator={selectedVariant.applicator}
+                                        capColor={selectedVariant.capColor}
+                                        capHeight={selectedVariant.capHeight}
                                         itemName={selectedVariant.itemName}
                                         fallbackImageUrl={selectedVariant.imageUrl}
                                         className="w-full h-full p-6 sm:p-12"
+                                        productOffsets={productOffsets}
                                         onCapStateChange={handleCapStateChange}
                                     />
                                 ) : selectedVariant?.imageUrl ? (
@@ -1138,8 +1157,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         </div>
                                     )}
 
-                                    {/* Explicit SKU-level selector fallback when metadata is sparse */}
-                                    {variantsForApplicator.length > 1 && (
+                                    {/* Explicit SKU-level selector fallback when metadata is sparse — hidden when Cap Color selector is already showing */}
+                                    {variantsForApplicator.length > 1 && capColorOptions.length === 0 && (
                                         <div className="mb-6">
                                             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                                                 {activeApplicator ? "Cap Color / Variant" : "Cap Finish"}

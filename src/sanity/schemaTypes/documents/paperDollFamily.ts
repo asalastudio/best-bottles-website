@@ -52,6 +52,12 @@ export const paperDollFamily = defineType({
             of: [{ type: "string" }],
         }),
         defineField({
+            name: "layerOrderShortcap",
+            title: "Layer order — Short Cap",
+            type: "array",
+            of: [{ type: "string" }],
+        }),
+        defineField({
             name: "layerOrderLotion",
             title: "Layer order — Lotion",
             type: "array",

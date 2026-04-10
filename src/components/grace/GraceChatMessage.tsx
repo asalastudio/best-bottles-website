@@ -44,3 +44,20 @@ export function StreamingMessage({ text }: StreamingMessageProps) {
         </div>
     );
 }
+
+export function ThinkingIndicator() {
+    return (
+        <div className="mb-4 flex items-center gap-2">
+            <span className="inline-flex gap-[5px]" aria-label="Grace is thinking">
+                {[0, 1, 2].map((i) => (
+                    <span
+                        key={i}
+                        className="w-[5px] h-[5px] rounded-full bg-obsidian/25 animate-bounce"
+                        style={{ animationDelay: `${i * 150}ms`, animationDuration: "0.9s" }}
+                    />
+                ))}
+            </span>
+            <span className="text-[12px] text-obsidian/40 font-sans">Grace is thinking&hellip;</span>
+        </div>
+    );
+}

@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
+import {
+    buildSearchCatalogToolResult,
+    emptySearchCatalogHint,
+} from "../../../../../convex/graceSearchUtils";
 
 /**
  * Server tools proxy for ElevenLabs Conversational AI.
@@ -43,10 +47,18 @@ export async function POST(req: NextRequest) {
 
         switch (tool_name) {
             case "searchCatalog": {
-                result = await convex.query(
+                const searchParams = resolveSearchCatalogParameters(parameters);
+                const data = await convex.query(
                     api.grace.searchCatalog,
-                    resolveSearchCatalogParameters(parameters)
+                    searchParams
                 );
+                if (!Array.isArray(data)) {
+                    result = data;
+                } else if (data.length === 0) {
+                    result = `No products found for that search. Try a broader term.${emptySearchCatalogHint(searchParams.searchTerm)}`;
+                } else {
+                    result = buildSearchCatalogToolResult(searchParams, data);
+                }
                 break;
             }
 

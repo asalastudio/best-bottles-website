@@ -31,6 +31,13 @@ export const FAMILY_MIN_SIZE_ML: Record<string, number> = {
     Slim: 15,
 };
 
+export type { ShapeMatch } from "../src/lib/graceShapeIntent";
+export {
+    SHAPE_TO_FAMILIES,
+    detectShapeIntent,
+    inferCatalogCategoryFromSearchTerm,
+} from "../src/lib/graceShapeIntent";
+
 // ─── Types ──────────────────────────────────────────────────────────────────
 
 export type SearchCandidate = {
@@ -108,13 +115,27 @@ export function detectRequestedColorToken(term: string): string | null {
     return colorTokens.find((token) => t.includes(token)) ?? null;
 }
 
+/**
+ * Single applicator intent for filtering/scoring. When the customer names **more than one**
+ * applicator type (e.g. "roll-on, sprayer, and lotion pump"), returns null so we do not
+ * narrow structured results to one applicator — critical for small sizes like 9ml where
+ * Cylinder has roller, fine mist, and pump as separate SKUs.
+ */
 export function detectApplicatorIntent(term: string): "rollon" | "spray" | "dropper" | "pump" | "reducer" | null {
     const t = term.toLowerCase();
-    if (/\b(roll|roller|ball)\b/.test(t)) return "rollon";
-    if (/\b(spray|sprayer|mist|atomizer)\b/.test(t)) return "spray";
-    if (/\bdropper\b/.test(t)) return "dropper";
-    if (/\b(lotion|pump)\b/.test(t)) return "pump";
-    if (/\b(reducer|splash)\b/.test(t)) return "reducer";
+    const hasRollon = /\b(roll|roller|ball)\b/.test(t);
+    const hasSpray = /\b(spray|sprayer|mist|atomizer)\b/.test(t);
+    const hasDropper = /\bdropper\b/.test(t);
+    const hasPump = /\b(lotion|pump)\b/.test(t);
+    const hasReducer = /\b(reducer|splash)\b/.test(t);
+    const distinctCount = [hasRollon, hasSpray, hasDropper, hasPump, hasReducer].filter(Boolean).length;
+    if (distinctCount >= 2) return null;
+
+    if (hasRollon) return "rollon";
+    if (hasSpray) return "spray";
+    if (hasDropper) return "dropper";
+    if (hasPump) return "pump";
+    if (hasReducer) return "reducer";
     return null;
 }
 
@@ -132,6 +153,51 @@ export function dedupeCatalogResults<T extends SearchCandidate>(items: T[]): T[]
     return out;
 }
 
+/**
+ * Ensures minimum representation from each required family in results.
+ * Reserves N slots per family, then fills remaining slots with highest-scored items.
+ */
+export function diversifyByFamily<T extends SearchCandidate>(
+    sortedItems: T[],
+    requiredFamilies: string[],
+    limit: number,
+    minPerFamily = 3,
+): T[] {
+    if (requiredFamilies.length === 0) return sortedItems.slice(0, limit);
+
+    const reserved: T[] = [];
+    const reservedKeys = new Set<string>();
+    const familyBuckets = new Map<string, T[]>();
+
+    for (const fam of requiredFamilies) {
+        familyBuckets.set(fam, []);
+    }
+
+    for (const item of sortedItems) {
+        const fam = item.family ?? "";
+        if (familyBuckets.has(fam)) {
+            const bucket = familyBuckets.get(fam)!;
+            if (bucket.length < minPerFamily) {
+                bucket.push(item);
+                reserved.push(item);
+                reservedKeys.add(item.graceSku ?? `${item.family}|${item.capacityMl}|${item.color}`);
+            }
+        }
+    }
+
+    const remaining = sortedItems.filter(
+        (item) => !reservedKeys.has(item.graceSku ?? `${item.family}|${item.capacityMl}|${item.color}`)
+    );
+
+    const result = [...reserved];
+    for (const item of remaining) {
+        if (result.length >= limit) break;
+        result.push(item);
+    }
+
+    return result;
+}
+
 // ─── Scoring ────────────────────────────────────────────────────────────────
 
 export function scoreCatalogResult(
@@ -142,6 +208,8 @@ export function scoreCatalogResult(
         detectedCapMl: number | null;
         detectedColor: string | null;
         applicatorIntent: "rollon" | "spray" | "dropper" | "pump" | "reducer" | null;
+        shapePrimaryFamilies?: string[];
+        shapeAlsoFamilies?: string[];
     }
 ): number {
     let score = 0;
@@ -149,6 +217,9 @@ export function scoreCatalogResult(
     if (meta.detectedFamily && result.family === meta.detectedFamily) score += 120;
     if (meta.detectedCapMl !== null && result.capacityMl === meta.detectedCapMl) score += 120;
     if (meta.detectedColor && result.color === meta.detectedColor) score += 140;
+
+    if (meta.shapePrimaryFamilies?.includes(result.family ?? "")) score += 100;
+    else if (meta.shapeAlsoFamilies?.includes(result.family ?? "")) score += 50;
 
     const applicator = (result.applicator ?? "").toLowerCase();
     if (meta.applicatorIntent === "rollon" && /(roller|roll)/.test(applicator)) score += 90;
@@ -174,6 +245,27 @@ export function scoreCatalogResult(
     return score;
 }
 
+// ─── Empty-result hints (askGrace tool path) ───────────────────────────────
+
+/**
+ * When searchCatalog returns [], suggest a better query so Grace does not claim
+ * a product is missing when the search term was too narrow (e.g. wrong family).
+ */
+export function emptySearchCatalogHint(rawSearchTerm: string): string {
+    const normalized = normalizeSearchTerm(rawSearchTerm) || rawSearchTerm;
+    const cap = normalized.match(/\b(\d+)\s*ml\b/i);
+    const ml = cap ? parseInt(cap[1], 10) : null;
+    const roll = /\b(roll|roller|ball)\b/i.test(normalized);
+    if (ml === 9 && roll) {
+        return " For 9ml roll-on bottles in the Cylinder line, retry searchCatalog with searchTerm \"9ml cylinder roller\" and familyLimit \"Cylinder\" (and categoryLimit \"Glass Bottle\" if you restricted category). Do not tell the customer 9ml roll-ons are unavailable until that search has been tried.";
+    }
+    const pump = /\b(lotion|treatment)\s*pump\b/i.test(normalized) || /\bpump\b/i.test(normalized);
+    if (ml === 9 && pump && /\bcylinder|roll/i.test(normalized)) {
+        return " For 9ml Cylinder lotion pump bottles, retry searchCatalog with searchTerm \"9ml cylinder lotion\" and familyLimit \"Cylinder\". The catalog stocks these; do not claim they are absent until this search is tried.";
+    }
+    return "";
+}
+
 // ─── Result formatters ──────────────────────────────────────────────────────
 
 export function buildSearchCatalogToolResult(
@@ -188,20 +280,58 @@ export function buildSearchCatalogToolResult(
         capacityMl?: number | null;
         capacity?: string | null;
         applicator?: string | null;
+        itemName?: string | null;
     }>
 ): string {
     const warnings: string[] = [];
     const term = input.searchTerm;
     const termLower = term.toLowerCase();
+    const termForCap = normalizeSearchTerm(term) || term;
     const detectedFamily =
         input.familyLimit
         ?? ["Apothecary", "Atomizer", "Bell", "Boston Round", "Circle", "Cylinder", "Diamond", "Diva", "Elegant", "Empire", "Grace", "Rectangle", "Round", "Sleek", "Slim", "Tulip", "Vial"]
             .find((family) => termLower.includes(family.toLowerCase()))
         ?? null;
-    const capMatch = term.match(/\b(\d+)\s*ml\b/i);
+    const capMatch = termForCap.match(/\b(\d+)\s*ml\b/i);
     const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;
     const requestedColor = detectRequestedColorToken(term);
-    const applicatorIntent = detectApplicatorIntent(term);
+    const applicatorIntent = detectApplicatorIntent(termForCap);
+
+    const has9mlRollOn = data.some((item) => {
+        if (item.capacityMl !== 9) return false;
+        const app = (item.applicator ?? "").toLowerCase();
+        return /roller|roll/.test(app);
+    });
+    const wants9mlRoll = detectedCapMl === 9 && /roll|roller/i.test(termForCap);
+    if (has9mlRollOn && wants9mlRoll) {
+        warnings.push(
+            "CONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.",
+        );
+    }
+    if (wants9mlRoll && !has9mlRollOn && data.length > 0) {
+        warnings.push(
+            "WARNING: This result set contains no 9ml roll-on bottle (wrong size or family is common). Call searchCatalog again with searchTerm \"9ml cylinder roller\" and familyLimit \"Cylinder\" before telling the customer you cannot find 9ml roll-ons.",
+        );
+    }
+
+    const cyl9Roll = data.some(
+        (item) =>
+            item.family === "Cylinder"
+            && item.capacityMl === 9
+            && /roller|roll/i.test((item.applicator ?? "").toLowerCase()),
+    );
+    const cyl9Pump = data.some(
+        (item) =>
+            item.family === "Cylinder"
+            && item.capacityMl === 9
+            && (item.applicator ?? "").toLowerCase().includes("lotion pump"),
+    );
+    if (cyl9Roll || cyl9Pump) {
+        const parts = [cyl9Roll && "roll-on (roller ball)", cyl9Pump && "lotion pump"].filter(Boolean);
+        warnings.push(
+            `FORBIDDEN: Results below include 9ml Cylinder bottle(s) with ${parts.join(" and ")}. Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.`,
+        );
+    }
 
     if (detectedFamily && detectedCapMl !== null) {
         const minimum = FAMILY_MIN_SIZE_ML[detectedFamily];
@@ -216,6 +346,28 @@ export function buildSearchCatalogToolResult(
         warnings.push(
             "WARNING: We do NOT stock roll-on bottles smaller than 5ml. Do NOT repeat the customer's requested sub-5ml roll-on as if it exists. Say the smallest roll-on is 5ml and pivot to actual 5ml options."
         );
+    }
+
+    const isCylinderContext =
+        detectedFamily === "Cylinder"
+        || (input.familyLimit?.toLowerCase() === "cylinder")
+        || /\bcylinder\b/i.test(term)
+        || /\bcylinder\b/i.test(termForCap);
+    const mentionsRollOn = /roll|roller/i.test(term) || /roll|roller/i.test(termForCap);
+    if (isCylinderContext && detectedCapMl === 9 && mentionsRollOn) {
+        const hasRollOnSku = data.some((item) => {
+            const app = (item.applicator ?? "").toLowerCase();
+            const name = (item.itemName ?? "").toLowerCase();
+            return (
+                /roller|roll-on|roll on/.test(app)
+                || /roll-on|roller\s*ball/.test(name)
+            );
+        });
+        if (hasRollOnSku) {
+            warnings.push(
+                "WARNING: 9ml Cylinder roll-on bottles ARE stocked as complete product SKUs (roller ball + cap). Do NOT say we do not typically offer pre-assembled roll-on or that the customer must only pair a plain bottle with a separate roll-on fitment."
+            );
+        }
     }
 
     if (requestedColor) {
@@ -249,6 +401,7 @@ export function buildBottleComponentsToolResult(data: {
     bottle: {
         itemName: string;
         neckThreadSize?: string | null;
+        category?: string | null;
     };
     componentTypes: string[];
     totalComponents: number;
@@ -256,8 +409,11 @@ export function buildBottleComponentsToolResult(data: {
 }): string {
     const thread = data.bottle.neckThreadSize ?? "unknown";
     return [
+        "COMPATIBILITY RULE: Physical fit is determined by matching NECK THREAD (finish). The bottle's neck thread size is the primary key — use it when explaining what closures or applicators fit.",
+        `BOTTLE NECK THREAD: ${thread}. State this specification when the customer asks what fits. If thread is unknown or missing, say so and rely on COMPONENT DATA only.`,
+        "COMPONENT DATA lists what we catalog for this bottle after fitment rules; for thread-only questions you may also use checkCompatibility with this thread size.",
+        "",
         `BOTTLE MATCHED: ${data.bottle.itemName}`,
-        `BOTTLE THREAD SIZE: ${thread}. If the customer asks what fits, mention this thread size explicitly in your answer.`,
         `COMPONENT TYPES AVAILABLE: ${data.componentTypes.join(", ") || "none"}`,
         `TOTAL COMPATIBLE COMPONENTS: ${data.totalComponents}`,
         "",

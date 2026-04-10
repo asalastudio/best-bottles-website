@@ -11,9 +11,10 @@ import {
     Leaf,
 } from "@phosphor-icons/react";
 import { useGrace } from "@/components/useGrace";
-import GraceChatMessage, { StreamingMessage } from "./GraceChatMessage";
+import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
 
-const DRAWER_WIDTH = 380;
+/** Desktop drawer width; keep in sync with layout push in `GraceLayoutShell`. */
+const DRAWER_WIDTH = 420;
 
 function useIsMobile() {
     const [mobile, setMobile] = useState(false);
@@ -64,6 +65,7 @@ export default function GraceChatDrawer() {
         closePanel,
         messages,
         streamingText,
+        isAwaitingReply,
         input,
         setInput,
         send,
@@ -82,7 +84,7 @@ export default function GraceChatDrawer() {
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, [messages, streamingText]);
+    }, [messages, streamingText, isAwaitingReply]);
 
     useEffect(() => {
         if (isOpen) {
@@ -150,11 +152,12 @@ export default function GraceChatDrawer() {
                         animate={{ x: 0 }}
                         exit={{ x: "100%" }}
                         transition={{ type: "spring", stiffness: 320, damping: 38 }}
-                        className={`fixed top-0 right-0 bottom-0 z-[61] flex flex-col ${
+                        className={`fixed top-0 right-0 z-[61] flex flex-col ${
                             isMobile ? "w-full" : ""
                         }`}
                         style={{
                             width: isMobile ? "100%" : DRAWER_WIDTH,
+                            height: "100dvh",
                             background: "#faf8f5",
                             borderLeft: "1px solid rgba(212, 197, 169, 0.35)",
                             boxShadow: "-8px 0 40px rgba(29, 29, 31, 0.08)",
@@ -199,27 +202,8 @@ export default function GraceChatDrawer() {
 
                             <StreamingMessage text={streamingText} />
 
-                            {/* Quick chips — visible until the user sends their first message */}
-                            {showChips && (
-                                <div className="grid grid-cols-2 gap-2 mt-4">
-                                    {QUICK_CHIPS.map((chip) => (
-                                        <button
-                                            key={chip.label}
-                                            onClick={() => handleChipClick(chip.query)}
-                                            className="flex items-start gap-2.5 p-3 rounded-lg text-left transition-colors duration-150 cursor-pointer hover:bg-obsidian/[0.04] group"
-                                            style={{ border: "1px solid rgba(29, 29, 31, 0.08)" }}
-                                        >
-                                            <chip.icon
-                                                size={16}
-                                                className="text-obsidian/40 mt-0.5 shrink-0 group-hover:text-obsidian/60 transition-colors"
-                                                weight="regular"
-                                            />
-                                            <span className="text-[12.5px] text-obsidian/70 leading-snug font-sans">
-                                                {chip.label}
-                                            </span>
-                                        </button>
-                                    ))}
-                                </div>
+                            {isAwaitingReply && !streamingText && (
+                                <ThinkingIndicator />
                             )}
 
                             {errorMessage && (
@@ -233,8 +217,33 @@ export default function GraceChatDrawer() {
                             <div ref={messagesEndRef} />
                         </div>
 
+                        {/* ── Chips (above composer, visible until first interaction) ── */}
+                        {showChips && (
+                            <div className="shrink-0 px-4 pb-1.5 pt-2" style={{ borderTop: "1px solid rgba(212, 197, 169, 0.15)" }}>
+                                <div className="grid grid-cols-2 gap-1.5">
+                                    {QUICK_CHIPS.map((chip) => (
+                                        <button
+                                            key={chip.label}
+                                            onClick={() => handleChipClick(chip.query)}
+                                            className="flex items-center gap-2 px-2.5 py-2 rounded-lg text-left transition-colors duration-150 cursor-pointer hover:bg-obsidian/[0.04] group"
+                                            style={{ border: "1px solid rgba(29, 29, 31, 0.08)" }}
+                                        >
+                                            <chip.icon
+                                                size={14}
+                                                className="text-obsidian/40 shrink-0 group-hover:text-obsidian/60 transition-colors"
+                                                weight="regular"
+                                            />
+                                            <span className="text-[12px] text-obsidian/60 leading-snug font-sans">
+                                                {chip.label}
+                                            </span>
+                                        </button>
+                                    ))}
+                                </div>
+                            </div>
+                        )}
+
                         {/* ── Input area ──────────────────────────────────── */}
-                        <div className="shrink-0 px-4 py-3">
+                        <div className="shrink-0 px-4 py-3" style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}>
                             <form
                                 onSubmit={handleSubmit}
                                 className="relative rounded-xl bg-white"

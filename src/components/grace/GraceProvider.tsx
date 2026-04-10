@@ -16,6 +16,12 @@ import {
 } from "react";
 import { analytics } from "@/lib/analytics";
 import {
+    catalogFamiliesForNav,
+    expandCatalogPathFamilies,
+    graceCatalogSearchFromQuery,
+    inferCatalogCategoryFromSearchTerm,
+} from "@/lib/graceShapeIntent";
+import {
     GraceContext,
     type GraceContextValue,
     type GraceStatus,
@@ -32,21 +38,52 @@ import {
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
+/** Distinct cap-related options across PDP variants so Grace does not assume a single cap type. */
+function summarizeCapsFromVariants(
+    variants: Array<{
+        capHeight?: string | null;
+        capStyle?: string | null;
+        capColor?: string | null;
+        applicator?: string | null;
+    }> | undefined,
+): string {
+    if (!variants?.length) return "";
+    const heights = [...new Set(variants.map((v) => v.capHeight).filter(Boolean))] as string[];
+    const styles = [...new Set(variants.map((v) => v.capStyle).filter(Boolean))] as string[];
+    const colors = [...new Set(variants.map((v) => v.capColor).filter(Boolean))] as string[];
+    const parts: string[] = [];
+    if (heights.length) parts.push(`cap heights: ${heights.join(", ")}`);
+    if (styles.length) parts.push(`cap styles: ${styles.slice(0, 14).join(", ")}`);
+    if (colors.length) parts.push(`cap colors: ${colors.slice(0, 12).join(", ")}`);
+    return parts.join(" | ");
+}
+
 function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHistoryEntry[]): string {
     if (!ctx) return "";
     const lines: string[] = ["=== CURRENT SESSION CONTEXT ==="];
+    if (ctx.pageUrl) lines.push(`URL: ${ctx.pageUrl}`);
 
     if (ctx.pageType === "pdp" && ctx.currentProduct) {
         const p = ctx.currentProduct;
         lines.push(`Page: Product Detail — ${p.name}`);
+        if (p.category) lines.push(`Category: ${p.category}`);
         lines.push(`Family: ${p.family} | Size: ${p.capacity} | Color: ${p.color}`);
-        if (p.neckThreadSize) lines.push(`Thread Size: ${p.neckThreadSize}`);
-        if (p.applicator) lines.push(`Applicator: ${p.applicator}`);
-        if (p.webPrice1pc) lines.push(`Price: $${p.webPrice1pc.toFixed(2)}/pc`);
-        lines.push(`SKU: ${p.graceSku}`);
-        lines.push(`CONTEXT NOTE: Customer is currently viewing this product. If they ask about it, you already know the details above. If they ask about compatible closures, use getBottleComponents with SKU ${p.graceSku}. Do NOT mention this product until the customer brings it up.`);
+        if (p.neckThreadSize) lines.push(`Neck thread: ${p.neckThreadSize}`);
+        if (p.applicatorTypes?.length) {
+            lines.push(`Applicator types on this line: ${p.applicatorTypes.join(", ")}`);
+        } else if (p.applicator) {
+            lines.push(`Applicator (representative): ${p.applicator}`);
+        }
+        if (p.variantCount != null) lines.push(`Variants in this group: ${p.variantCount}`);
+        if (p.capsSummary) lines.push(`Cap / closure options (from variants): ${p.capsSummary}`);
+        if (p.webPrice1pc) lines.push(`From: $${p.webPrice1pc.toFixed(2)}/pc`);
+        lines.push(`Primary SKU for tools: ${p.graceSku}`);
+        lines.push(
+            "CONTEXT NOTE: Customer is on this PDP. For compatible closures and caps, call getBottleComponents with the relevant variant SKU — COMPONENT DATA lists each type (e.g. Short Cap, Tall Cap, Sprayer, Roll-On Cap). Do not assume only one cap style; list what the tool returns.",
+        );
     } else if (ctx.pageType === "catalog") {
         lines.push(`Page: Product Catalog`);
+        if (ctx.catalogCategory) lines.push(`Category filter: ${ctx.catalogCategory}`);
         if (ctx.currentCollection) lines.push(`Active Family Filter: ${ctx.currentCollection}`);
         if (ctx.catalogSearch) lines.push(`Active Search: "${ctx.catalogSearch}"`);
         lines.push(`CONTEXT NOTE: Customer is browsing the catalog. Wait for them to ask a question before offering help.`);
@@ -111,27 +148,42 @@ function slugToSearchTerm(rawSlug: string): string {
 function buildCatalogPath(products: ProductCard[], query?: string, family?: string): string {
     const qs = new URLSearchParams();
     const sanitizedQuery = sanitizeCatalogQuery(query);
+    const productFams = products.map((p) => p.family).filter(Boolean) as string[];
 
-    if (family) {
-        qs.set("families", family);
+    const category = inferCatalogCategoryFromSearchTerm(query ?? "");
+    if (category) {
+        qs.set("category", category);
     } else {
-        const familyCounts = new Map<string, number>();
-        for (const p of products) {
-            if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
-        }
-        const sorted = [...familyCounts.entries()].sort((a, b) => b[1] - a[1]);
-        const total = products.length;
-        if (sorted.length > 0) {
-            const dominant = sorted.filter(([, count]) => count / total >= 0.3).map(([f]) => f);
-            const families = dominant.length > 0 ? dominant : [sorted[0][0]];
-            qs.set("families", families.join(","));
-        } else if (sanitizedQuery) {
-            qs.set("search", sanitizedQuery);
+        const expanded = catalogFamiliesForNav(query, family, productFams);
+        if (expanded) {
+            qs.set("families", expanded);
+        } else if (family) {
+            qs.set("families", family);
+        } else {
+            const familyCounts = new Map<string, number>();
+            for (const p of products) {
+                if (p.family) familyCounts.set(p.family, (familyCounts.get(p.family) || 0) + 1);
+            }
+            const sorted = [...familyCounts.entries()].sort((a, b) => b[1] - a[1]);
+            const total = products.length;
+            if (sorted.length > 0) {
+                const dominant = sorted.filter(([, count]) => count / total >= 0.3).map(([f]) => f);
+                const families = dominant.length > 0 ? dominant : [sorted[0][0]];
+                const fromDominant = catalogFamiliesForNav(undefined, undefined, families);
+                qs.set("families", fromDominant ?? families.join(","));
+            } else if (sanitizedQuery) {
+                qs.set("search", sanitizedQuery);
+            }
         }
     }
 
+    const navSearch = graceCatalogSearchFromQuery(query);
     const capMatch = query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
-    if (capMatch) qs.set("search", `${capMatch[1]}ml`);
+    if (navSearch) {
+        qs.set("search", navSearch);
+    } else if (capMatch) {
+        qs.set("search", `${capMatch[1]}ml`);
+    }
     qs.set("grace", "1");
     return `/catalog?${qs.toString()}`;
 }
@@ -142,8 +194,35 @@ function buildBrowsePath(products: ProductCard[], query?: string, family?: strin
 }
 
 function normalizeSearchText(rawValue: string): string {
-    return rawValue
-        .toLowerCase()
+    let s = rawValue.toLowerCase();
+    // Align spoken/written numbers with catalog copy ("one ml vial" → same tokens as "1 ml")
+    s = s
+        .replace(/\bzero\b/g, "0")
+        .replace(/\bone\b/g, "1")
+        .replace(/\btwo\b/g, "2")
+        .replace(/\bthree\b/g, "3")
+        .replace(/\bfour\b/g, "4")
+        .replace(/\bfive\b/g, "5")
+        .replace(/\bsix\b/g, "6")
+        .replace(/\bseven\b/g, "7")
+        .replace(/\beight\b/g, "8")
+        .replace(/\bnine\b/g, "9")
+        .replace(/\bten\b/g, "10")
+        .replace(/\beleven\b/g, "11")
+        .replace(/\btwelve\b/g, "12")
+        .replace(/\bthirteen\b/g, "13")
+        .replace(/\bfourteen\b/g, "14")
+        .replace(/\bfifteen\b/g, "15")
+        .replace(/\bsixteen\b/g, "16")
+        .replace(/\bseventeen\b/g, "17")
+        .replace(/\beighteen\b/g, "18")
+        .replace(/\bnineteen\b/g, "19")
+        .replace(/\btwenty\b/g, "20")
+        .replace(/\bthirty\b/g, "30")
+        .replace(/\bforty\b/g, "40")
+        .replace(/\bfifty\b/g, "50")
+        .replace(/\bmilliliters?\b/g, "ml");
+    return s
         .replace(/(\d+)\s*ml\b/g, "$1ml")
         .replace(/\broll[\s-]?on\b/g, "roll-on")
         .replace(/[^a-z0-9-]+/g, " ")
@@ -152,7 +231,13 @@ function normalizeSearchText(rawValue: string): string {
 }
 
 function tokenizeSearchText(rawValue: string): string[] {
-    const stopWords = new Set(["a", "an", "and", "bottle", "bottles", "browse", "can", "find", "for", "me", "open", "please", "show", "take", "the", "to", "you"]);
+    const stopWords = new Set([
+        "a", "an", "and", "any", "are", "bottle", "bottles", "browse", "can", "could", "direct", "do", "does",
+        "find", "for", "get", "give", "how", "i", "image", "images", "is", "it", "its", "just", "like", "look",
+        "looks", "me", "need", "open", "only", "page", "photo", "photos", "picture", "pictures", "please", "see",
+        "show", "some", "take", "that", "the", "them", "they", "this", "to", "visual", "want", "was", "what",
+        "which", "who", "you", "your",
+    ]);
     return normalizeSearchText(rawValue).split(" ").filter((t) => t && !stopWords.has(t));
 }
 
@@ -248,6 +333,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
     // ── Messages & streaming ─────────────────────────────────────────────────
     const [messages, setMessages] = useState<GraceMessage[]>([]);
     const [streamingText, setStreamingText] = useState("");
+    const [isAwaitingReply, setIsAwaitingReply] = useState(false);
     const [input, setInput] = useState("");
     const [voiceEnabled, setVoiceEnabled] = useState(false);
     const [errorMessage, setErrorMessage] = useState("");
@@ -270,6 +356,11 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
     const productSlug = pageType === "pdp" ? (pathname.split("/products/")[1] ?? null) : null;
     const productGroupResult = useQuery(api.products.getProductGroup, productSlug ? { slug: productSlug } : "skip");
 
+    const pageUrl = useMemo(() => {
+        const q = searchParams.toString();
+        return q ? `${pathname}?${q}` : pathname;
+    }, [pathname, searchParams]);
+
     const pageContext = useMemo((): PageContext => {
         const cartSummary = cartItems.map((i) => ({
             graceSku: i.graceSku,
@@ -281,9 +372,17 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
 
         if (pageType === "pdp" && productGroupResult?.group) {
             const g = productGroupResult.group;
+            const variants = productGroupResult.variants ?? [];
+            const fromGroup = (g.applicatorTypes as string[] | undefined)?.filter(Boolean) ?? [];
+            const fromVariants = [...new Set(variants.map((v) => v.applicator).filter(Boolean))] as string[];
+            const applicatorTypes = fromGroup.length > 0 ? fromGroup : fromVariants;
+            const capsSummary = summarizeCapsFromVariants(variants);
             return {
-                pageType, pathname,
-                cartItems: cartSummary, cartTotal,
+                pageType,
+                pathname,
+                pageUrl,
+                cartItems: cartSummary,
+                cartTotal,
                 currentProduct: {
                     name: g.displayName,
                     family: g.family ?? "",
@@ -292,7 +391,11 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                     neckThreadSize: g.neckThreadSize ?? null,
                     graceSku: g.primaryGraceSku ?? "",
                     webPrice1pc: g.priceRangeMin ?? null,
-                    applicator: (g.applicatorTypes as string[] | undefined)?.[0] ?? undefined,
+                    applicator: applicatorTypes[0] ?? fromVariants[0],
+                    applicatorTypes: applicatorTypes.length > 0 ? applicatorTypes : undefined,
+                    category: g.category,
+                    variantCount: g.variantCount ?? variants.length,
+                    capsSummary: capsSummary || undefined,
                     slug: productSlug ?? undefined,
                 },
             };
@@ -300,22 +403,71 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         if (pageType === "catalog") {
             const familiesParam = searchParams.get("families") ?? searchParams.get("family");
             return {
-                pageType, pathname,
-                cartItems: cartSummary, cartTotal,
+                pageType,
+                pathname,
+                pageUrl,
+                cartItems: cartSummary,
+                cartTotal,
+                catalogCategory: searchParams.get("category") ?? undefined,
                 currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
             };
         }
-        return { pageType, pathname, cartItems: cartSummary, cartTotal };
-    }, [pageType, pathname, productGroupResult, productSlug, searchParams, cartItems]);
+        return { pageType, pathname, pageUrl, cartItems: cartSummary, cartTotal };
+    }, [pageType, pathname, pageUrl, productGroupResult, productSlug, searchParams, cartItems]);
 
     const pageContextRef = useRef<PageContext>(pageContext);
     useEffect(() => { pageContextRef.current = pageContext; }, [pageContext]);
 
-    // ── Browsing history ─────────────────────────────────────────────────────
     const [browsingHistory, setBrowsingHistory] = useState<BrowsingHistoryEntry[]>([]);
     const browsingHistoryRef = useRef<BrowsingHistoryEntry[]>([]);
     useEffect(() => { browsingHistoryRef.current = browsingHistory; }, [browsingHistory]);
+
+    /** Push full page intelligence to ElevenLabs (retries until session id exists). */
+    const sendPageContextToAgent = useCallback(() => {
+        const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current);
+        if (!contextBlock) return;
+        let attempts = 0;
+        const trySend = () => {
+            const conv = conversationRef.current;
+            if (conv?.getId?.()) {
+                conv.sendContextualUpdate(contextBlock);
+                return;
+            }
+            if (attempts < 35) {
+                attempts++;
+                setTimeout(trySend, 100);
+            }
+        };
+        trySend();
+    }, []);
+
+    const pageContextSignature = useMemo(
+        () =>
+            JSON.stringify({
+                pageUrl: pageContext.pageUrl,
+                pdpSku: pageContext.currentProduct?.graceSku,
+                applicators: pageContext.currentProduct?.applicatorTypes,
+                caps: pageContext.currentProduct?.capsSummary,
+                catalogCategory: pageContext.catalogCategory,
+                catalogSearch: pageContext.catalogSearch,
+                collection: pageContext.currentCollection,
+                cart: pageContext.cartItems.map((i) => `${i.graceSku}:${i.quantity}`).join(","),
+                hist: browsingHistory.slice(-6).map((h) => h.pathname).join("|"),
+            }),
+        [pageContext, browsingHistory],
+    );
+
+    const lastPushedContextSig = useRef<string | null>(null);
+    useEffect(() => {
+        if (!conversationActive) {
+            lastPushedContextSig.current = null;
+            return;
+        }
+        if (lastPushedContextSig.current === pageContextSignature) return;
+        lastPushedContextSig.current = pageContextSignature;
+        sendPageContextToAgent();
+    }, [conversationActive, pageContextSignature, sendPageContextToAgent]);
 
     useEffect(() => {
         if (!pageContext) return;
@@ -381,6 +533,9 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
     const routerRef = useRef(router);
     useEffect(() => { routerRef.current = router; }, [router]);
 
+    const closePanelRef = useRef(closePanel);
+    useEffect(() => { closePanelRef.current = closePanel; }, [closePanel]);
+
     // ── Client tools ─────────────────────────────────────────────────────────
     const clientTools = useMemo(() => ({
 
@@ -390,10 +545,21 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                     method: "POST", headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({ tool_name: "searchCatalog", parameters: { searchTerm: params.searchTerm ?? "", familyLimit: params.familyLimit, applicatorFilter: params.applicatorFilter } }),
                 });
-                const data = await r.json() as { result?: ProductCard[]; error?: string };
+                const data = await r.json() as { result?: ProductCard[] | string; error?: string };
                 if (!r.ok) {
                     console.error("[Grace] searchCatalog HTTP", r.status, data.error);
                     return "Search failed. Please try again.";
+                }
+                if (typeof data.result === "string") {
+                    sessionMetricsRef.current.toolsCalled++;
+                    sessionMetricsRef.current.toolsUsed.add("searchCatalog");
+                    analytics.graceToolCalled({
+                        toolName: "searchCatalog",
+                        searchTerm: params.searchTerm,
+                        family: params.familyLimit,
+                        success: !data.result.startsWith("No products found"),
+                    });
+                    return data.result;
                 }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
                 sessionMetricsRef.current.toolsCalled++;
@@ -479,17 +645,23 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         getCurrentPageContext: () => {
             const ctx = pageContextRef.current;
             if (!ctx) return "No page context available.";
-            const lines: string[] = [`Page type: ${ctx.pageType}`, `URL: ${ctx.pathname}`];
+            const lines: string[] = [`Page type: ${ctx.pageType}`, `Path: ${ctx.pathname}`];
+            if (ctx.pageUrl) lines.push(`Full URL: ${ctx.pageUrl}`);
             if (ctx.pageType === "pdp" && ctx.currentProduct) {
                 const p = ctx.currentProduct;
                 lines.push(`\nCustomer is viewing:`, `  Product: ${p.name}`, `  Family: ${p.family}`, `  Size: ${p.capacity}`, `  Color: ${p.color}`);
-                if (p.neckThreadSize) lines.push(`  Thread: ${p.neckThreadSize}`);
-                if (p.applicator) lines.push(`  Applicator: ${p.applicator}`);
-                if (p.graceSku) lines.push(`  SKU: ${p.graceSku}`);
-                if (p.webPrice1pc) lines.push(`  Price: $${p.webPrice1pc.toFixed(2)}/pc`);
+                if (p.category) lines.push(`  Category: ${p.category}`);
+                if (p.neckThreadSize) lines.push(`  Neck thread: ${p.neckThreadSize}`);
+                if (p.applicatorTypes?.length) lines.push(`  Applicator types on this line: ${p.applicatorTypes.join(", ")}`);
+                else if (p.applicator) lines.push(`  Applicator (representative): ${p.applicator}`);
+                if (p.capsSummary) lines.push(`  Cap / closure options (variants): ${p.capsSummary}`);
+                if (p.variantCount != null) lines.push(`  Variant count: ${p.variantCount}`);
+                if (p.graceSku) lines.push(`  Primary SKU for tools: ${p.graceSku}`);
+                if (p.webPrice1pc) lines.push(`  From: $${p.webPrice1pc.toFixed(2)}/pc`);
             } else if (ctx.pageType === "catalog") {
                 lines.push(`\nCustomer is browsing the catalog.`);
-                if (ctx.currentCollection) lines.push(`  Active filter: ${ctx.currentCollection}`);
+                if (ctx.catalogCategory) lines.push(`  Category filter: ${ctx.catalogCategory}`);
+                if (ctx.currentCollection) lines.push(`  Family filter: ${ctx.currentCollection}`);
                 if (ctx.catalogSearch) lines.push(`  Search: "${ctx.catalogSearch}"`);
             }
             if (ctx.cartItems.length > 0) {
@@ -561,7 +733,12 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                     const redirectUrl = buildBrowsePath(displayProducts, params.query, params.family);
                     sessionMetricsRef.current.navigations++;
                     analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
-                    setTimeout(() => { routerRef.current.push(redirectUrl); }, 500);
+                    setTimeout(() => {
+                        routerRef.current.push(redirectUrl);
+                        if (window.matchMedia("(max-width: 768px)").matches) {
+                            closePanelRef.current();
+                        }
+                    }, 500);
                     return `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
                 }
                 return `${sizeWarning} Search returned ${products.length} nearby products: ${summary}.`;
@@ -590,8 +767,14 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             } catch (e) { console.error("[Grace] compareProducts:", e); return "Comparison failed."; }
         },
 
-        proposeCartAdd: (params: { products: Array<{ itemName: string; graceSku: string; quantity?: number; webPrice1pc?: number }> }) => {
-            const products = (params.products ?? []).map((p) => ({ ...p, quantity: p.quantity ?? 1 }));
+        proposeCartAdd: (params: { products: Array<{ itemName: string; graceSku: string; quantity?: number; webPrice1pc?: number }> | string }) => {
+            let rawProducts: Array<{ itemName: string; graceSku: string; quantity?: number; webPrice1pc?: number }>;
+            if (typeof params.products === "string") {
+                try { rawProducts = JSON.parse(params.products); } catch { rawProducts = []; }
+            } else {
+                rawProducts = params.products ?? [];
+            }
+            const products = rawProducts.map((p) => ({ ...p, quantity: p.quantity ?? 1 }));
             if (products.length === 0) return "No products specified to add.";
             try {
                 addToCart(products.map((p) => ({
@@ -614,10 +797,16 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             } catch (e) { console.error("[Grace] proposeCartAdd:", e); return "Failed to add items to cart."; }
         },
 
-        navigateToPage: async (params: { path: string; title: string; description?: string; autoNavigate?: boolean; prefillFields?: Record<string, string> }) => {
+        navigateToPage: async (params: { path: string; title: string; description?: string; autoNavigate?: boolean | string; prefillFields?: Record<string, string> | string }) => {
             let navPath = params.path ?? "/";
-            if (params.prefillFields && Object.keys(params.prefillFields).length > 0) {
-                const qs = new URLSearchParams(params.prefillFields).toString();
+            let prefill: Record<string, string> | undefined;
+            if (typeof params.prefillFields === "string") {
+                try { prefill = JSON.parse(params.prefillFields); } catch { prefill = undefined; }
+            } else {
+                prefill = params.prefillFields;
+            }
+            if (prefill && Object.keys(prefill).length > 0) {
+                const qs = new URLSearchParams(prefill).toString();
                 navPath = `${navPath}?${qs}`;
             }
 
@@ -647,8 +836,28 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                 } catch (e) { console.error("[Grace] slug validation:", e); }
             }
 
-            if (navPath.startsWith("/catalog") && !navPath.includes("grace=")) {
-                navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}grace=1`;
+            if (navPath.startsWith("/catalog")) {
+                navPath = expandCatalogPathFamilies(navPath);
+                const titleBlock = `${params.title ?? ""} ${params.description ?? ""}`.trim();
+                const categoryHint = inferCatalogCategoryFromSearchTerm(titleBlock);
+                if (categoryHint) {
+                    const qIdx = navPath.indexOf("?");
+                    const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);
+                    const sp = qIdx === -1 ? new URLSearchParams() : new URLSearchParams(navPath.slice(qIdx + 1));
+                    if (!sp.get("category")) sp.set("category", categoryHint);
+                    navPath = `${base}?${sp.toString()}`;
+                }
+                const searchHint = graceCatalogSearchFromQuery(titleBlock);
+                if (searchHint) {
+                    const qIdx = navPath.indexOf("?");
+                    const base = qIdx === -1 ? navPath : navPath.slice(0, qIdx);
+                    const sp = qIdx === -1 ? new URLSearchParams() : new URLSearchParams(navPath.slice(qIdx + 1));
+                    if (!sp.get("search")) sp.set("search", searchHint);
+                    navPath = `${base}?${sp.toString()}`;
+                }
+                if (!navPath.includes("grace=")) {
+                    navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}grace=1`;
+                }
             }
 
             sessionMetricsRef.current.toolsCalled++;
@@ -656,7 +865,12 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             sessionMetricsRef.current.navigations++;
             analytics.graceToolCalled({ toolName: "navigateToPage", success: true });
             analytics.graceNavigation({ destination: navPath, triggeredBy: "navigateToPage" });
-            setTimeout(() => { routerRef.current.push(navPath); }, 500);
+            setTimeout(() => {
+                routerRef.current.push(navPath);
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    closePanelRef.current();
+                }
+            }, 500);
             return `Navigating the customer to ${params.title ?? "the page"} now.`;
         },
 
@@ -676,8 +890,14 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             } catch (e) { console.error("[Grace] showProductPresentation:", e); return "Product presentation failed."; }
         },
 
-        prefillForm: (params: { formType: string; fields: Record<string, string> }) => {
-            window.dispatchEvent(new CustomEvent("grace:prefillForm", { detail: { formType: params.formType, fields: params.fields } }));
+        prefillForm: (params: { formType: string; fields: Record<string, string> | string }) => {
+            let fields: Record<string, string>;
+            if (typeof params.fields === "string") {
+                try { fields = JSON.parse(params.fields); } catch { fields = {}; }
+            } else {
+                fields = params.fields;
+            }
+            window.dispatchEvent(new CustomEvent("grace:prefillForm", { detail: { formType: params.formType, fields } }));
             return "Form pre-filled. The customer can review and submit.";
         },
 
@@ -733,12 +953,6 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             cartItemCount: ctx?.cartItems.length ?? 0,
         });
 
-        // Send page context as a contextual update (does not require dashboard override permissions)
-        const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current);
-        if (contextBlock && conversationRef.current?.getId?.()) {
-            conversationRef.current.sendContextualUpdate(contextBlock);
-        }
-
         if (pendingMessageRef.current) {
             const pending = pendingMessageRef.current;
             pendingMessageRef.current = null;
@@ -770,6 +984,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         setConversationActive(false);
         setGraceStatus("idle");
         setStreamingText("");
+        setIsAwaitingReply(false);
     }, []);
 
     const handleModeChange = useCallback((mode: { mode: string }) => {
@@ -783,6 +998,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         setGraceStatus("error");
         setErrorMessage(typeof error === "string" ? error : "Connection error");
         setVoiceFailed(true);
+        setIsAwaitingReply(false);
         setTimeout(() => {
             setGraceStatus((prev) => prev === "error" ? "idle" : prev);
         }, 5000);
@@ -793,13 +1009,26 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
 
     const handleMessage = useCallback((payload: { message: string; source?: string; role?: string }) => {
         const role = payload.role === "user" ? "user" as const : "grace" as const;
-        // Skip user echoes — send() already adds user messages to state
-        if (role === "user") return;
-        // Mark that onMessage handled finalization (prevents duplicate from stop-event fallback)
-        streamingFinalizedRef.current = true;
-        setStreamingText("");
         const text = payload.message;
         const norm = normalizeGraceMessageText(text);
+
+        if (role === "user") {
+            // Append voice transcripts; skip if send() already inserted an identical line
+            setMessages((prev) => {
+                const lastUser = [...prev].reverse().find((m) => m.role === "user");
+                if (lastUser && normalizeGraceMessageText(lastUser.content) === norm) {
+                    return prev;
+                }
+                return [...prev, { role: "user", content: text, id: nextMsgId() }];
+            });
+            setIsAwaitingReply(true);
+            return;
+        }
+
+        // Assistant message finalization
+        streamingFinalizedRef.current = true;
+        setIsAwaitingReply(false);
+        setStreamingText("");
         setMessages((prev) => {
             const last = prev[prev.length - 1];
             if (
@@ -845,6 +1074,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             }, 600);
             return;
         }
+        setIsAwaitingReply(false);
         setStreamingText((prev) => {
             if (prev === "") {
                 streamingFinalizedRef.current = false;
@@ -887,6 +1117,8 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
 
             const page = pageContextRef.current;
             const productName = page?.currentProduct?.name ?? "our collection";
+            const cp = page?.currentProduct;
+            const clip = (s: string, max: number) => (s.length > max ? `${s.slice(0, max)}…` : s);
 
             console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session...`);
             await conversation.startSession({
@@ -895,6 +1127,20 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                 ...(!useTextOnly ? { preferHeadphonesForIosDevices: true } : {}),
                 dynamicVariables: {
                     _product_name_: productName,
+                    _page_type_: page?.pageType ?? "other",
+                    _page_path_: page?.pathname ?? "/",
+                    _page_url_: clip(page?.pageUrl ?? page?.pathname ?? "/", 500),
+                    _grace_sku_: cp?.graceSku ?? "",
+                    _neck_thread_: cp?.neckThreadSize ?? "",
+                    _product_family_: cp?.family ?? "",
+                    _applicators_line_: clip(
+                        (cp?.applicatorTypes?.length ? cp.applicatorTypes.join(", ") : cp?.applicator) ?? "",
+                        400,
+                    ),
+                    _caps_summary_: clip(cp?.capsSummary ?? "", 400),
+                    _catalog_category_: page?.catalogCategory ?? "",
+                    _catalog_search_: clip(page?.catalogSearch ?? "", 200),
+                    _catalog_families_: clip(page?.currentCollection ?? "", 300),
                 },
             });
             console.log("[Grace] Session started successfully.");
@@ -978,6 +1224,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
             ...prev,
             { role: "user", content: msg, id: nextMsgId() },
         ]);
+        setIsAwaitingReply(true);
 
         if (conversationRef.current?.getId?.()) {
             conversationRef.current.sendUserMessage(msg);
@@ -1012,6 +1259,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         status: graceStatus,
         messages,
         streamingText,
+        isAwaitingReply,
         input,
         setInput,
         voiceEnabled,
@@ -1039,7 +1287,7 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         browsingHistory,
     }), [
         panelMode, openPanel, closePanel, minimizeToStrip, isOpen,
-        graceStatus, messages, streamingText, input, voiceEnabled,
+        graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
         send, errorMessage, conversationActive, startConversation, endConversation,
         onNavigate, pendingNavigation, clearPendingNavigation,
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,
