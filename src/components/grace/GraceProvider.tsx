@@ -729,19 +729,22 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
                 sessionMetricsRef.current.toolsCalled++;
                 sessionMetricsRef.current.toolsUsed.add("showProducts");
                 analytics.graceToolCalled({ toolName: "showProducts", searchTerm: params.query, family: params.family, success: products.length > 0 });
+                // Always open the site when we have hits — even with a size mismatch, send them to a filtered catalog instead of only narrating.
+                const redirectUrl = exactSizeFound
+                    ? buildBrowsePath(displayProducts, params.query, params.family)
+                    : buildCatalogPath(products, params.query, params.family);
+                sessionMetricsRef.current.navigations++;
+                analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
+                setTimeout(() => {
+                    routerRef.current.push(redirectUrl);
+                    if (window.matchMedia("(max-width: 768px)").matches) {
+                        closePanelRef.current();
+                    }
+                }, 500);
                 if (exactSizeFound) {
-                    const redirectUrl = buildBrowsePath(displayProducts, params.query, params.family);
-                    sessionMetricsRef.current.navigations++;
-                    analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
-                    setTimeout(() => {
-                        routerRef.current.push(redirectUrl);
-                        if (window.matchMedia("(max-width: 768px)").matches) {
-                            closePanelRef.current();
-                        }
-                    }, 500);
                     return `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
                 }
-                return `${sizeWarning} Search returned ${products.length} nearby products: ${summary}.`;
+                return `${sizeWarning} Opening the catalog with the closest matches: ${summary}.`;
             } catch (e) { console.error("[Grace] showProducts:", e); return "Catalog search failed."; }
         },
 
@@ -798,16 +801,40 @@ export default function GraceProvider({ children }: { children: ReactNode }) {
         },
 
         navigateToPage: async (params: { path: string; title: string; description?: string; autoNavigate?: boolean | string; prefillFields?: Record<string, string> | string }) => {
-            let navPath = params.path ?? "/";
+            let navPath = (params.path ?? "").trim();
             let prefill: Record<string, string> | undefined;
             if (typeof params.prefillFields === "string") {
                 try { prefill = JSON.parse(params.prefillFields); } catch { prefill = undefined; }
             } else {
                 prefill = params.prefillFields;
             }
+
+            // LLMs often omit path — infer from title/description via catalog search instead of sending users home.
+            if (!navPath || navPath === "/") {
+                const hint = `${params.title ?? ""} ${params.description ?? ""}`.trim();
+                if (hint.length >= 3) {
+                    try {
+                        const inferRes = await fetch("/api/elevenlabs/server-tools", {
+                            method: "POST", headers: { "Content-Type": "application/json" },
+                            body: JSON.stringify({
+                                tool_name: "searchCatalog",
+                                parameters: { searchTerm: hint.slice(0, 160) },
+                            }),
+                        });
+                        const inferData = await inferRes.json() as { result?: ProductCard[] };
+                        const hits: ProductCard[] = Array.isArray(inferData.result) ? inferData.result : [];
+                        navPath = hits.length > 0 ? buildBrowsePath(hits, hint, undefined) : buildCatalogPath([], hint);
+                    } catch {
+                        navPath = `/catalog?search=${encodeURIComponent(hint.slice(0, 80))}&grace=1`;
+                    }
+                } else {
+                    navPath = "/";
+                }
+            }
+
             if (prefill && Object.keys(prefill).length > 0) {
                 const qs = new URLSearchParams(prefill).toString();
-                navPath = `${navPath}?${qs}`;
+                navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}${qs}`;
             }
 
             if (navPath.startsWith("/products/")) {
