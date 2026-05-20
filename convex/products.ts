@@ -474,6 +474,76 @@ export const getCatalogGroupPrimarySkus = query({
 });
 
 /**
+ * Returns only the slim SKU fields needed for collection-card variant previews.
+ * The catalog calls this for currently visible groups instead of loading full PDP
+ * variant documents for every product group in the grid.
+ */
+export const getCatalogGroupVariantPreviewData = query({
+    args: {
+        groupIds: v.array(v.string()),
+    },
+    handler: async (ctx, args) => {
+        const groupIds = Array.from(new Set(args.groupIds)).slice(0, 240);
+        const results: {
+            groupId: string;
+            variants: Array<{
+                id: string;
+                itemName: string | null;
+                websiteSku: string | null;
+                graceSku: string | null;
+                imageUrl: string | null;
+                imageUrlCapOff: string | null;
+                color: string | null;
+                applicator: string | null;
+                capColor: string | null;
+                trimColor: string | null;
+                capStyle: string | null;
+                capHeight: string | null;
+                ballMaterial: string | null;
+            }>;
+        }[] = [];
+
+        const BATCH_SIZE = 16;
+        for (let i = 0; i < groupIds.length; i += BATCH_SIZE) {
+            const chunk = groupIds.slice(i, i + BATCH_SIZE);
+            const rows = await Promise.all(
+                chunk.map(async (groupId) => {
+                    const normalizedId = ctx.db.normalizeId("productGroups", groupId);
+                    if (!normalizedId) return { groupId, variants: [] };
+
+                    const variants = await ctx.db
+                        .query("products")
+                        .withIndex("by_productGroupId", (q) => q.eq("productGroupId", normalizedId))
+                        .collect();
+
+                    return {
+                        groupId,
+                        variants: variants.map((variant) => ({
+                            id: String(variant._id),
+                            itemName: variant.itemName ?? null,
+                            websiteSku: variant.websiteSku ?? null,
+                            graceSku: variant.graceSku ?? null,
+                            imageUrl: variant.imageUrl ?? null,
+                            imageUrlCapOff: variant.imageUrlCapOff ?? null,
+                            color: variant.color ?? null,
+                            applicator: variant.applicator ?? null,
+                            capColor: variant.capColor ?? null,
+                            trimColor: variant.trimColor ?? null,
+                            capStyle: variant.capStyle ?? null,
+                            capHeight: variant.capHeight ?? null,
+                            ballMaterial: variant.ballMaterial ?? null,
+                        })),
+                    };
+                }),
+            );
+            results.push(...rows);
+        }
+
+        return results;
+    },
+});
+
+/**
  * Paginated product group listing for the catalog page.
  * Mirrors getCatalogProducts but returns productGroups instead of flat SKUs.
  */
@@ -1197,6 +1267,5 @@ export const getCatalogIntegrityBatch = query({
         };
     },
 });
-
 
 

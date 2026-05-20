@@ -45,6 +45,7 @@ Use `dataLockStatus` to make intent explicit:
 | --- | --- | --- |
 | `draft` | Row is being cleaned or reviewed. | No generation. |
 | `locked` | Product, variant, color, applicator, SKU, and Shopify IDs are verified. | Generate images. |
+| `reference_only` | Existing flattened PNG is being used only to prove mapping/file integrity. | No upload. |
 | `approved` | Generated image passed visual QA and filename/hash checks. | Dry-run Shopify upload. |
 | `published` | Shopify media and Convex image URL were updated. | Production use. |
 | `blocked` | Row has a known ambiguity. | No generation or upload. |
@@ -114,9 +115,14 @@ Do not leave option fields blank in locked rows.
 
 ## SKU And Filename Rules
 
-The `graceSku` is the canonical normalized SKU used by Grace and image tooling.
-The `websiteSku` is the storefront/legacy code used in Convex and Shopify
-matching.
+The `graceSku` is the canonical normalized SKU used by Grace, image tooling,
+and current Shopify variant SKU matching when Shopify has been normalized.
+The `websiteSku` is the storefront/legacy code used in Convex, older Madison
+outputs, and filename compatibility.
+
+The Shopify variant ID is the authority for media assignment. During validation,
+the live Shopify SKU may match either `graceSku` or `websiteSku`, but it must
+not match neither.
 
 Approved output files must use both:
 
@@ -171,7 +177,19 @@ The Empire tassel smoke test may proceed as the first locked product group:
 empire-50ml-clear-18-415-antiquespray-tassel
 ```
 
-That smoke test should prove the full loop:
+There are two smoke-test levels:
+
+```txt
+reference mapping smoke test:
+canonical row -> existing flattened reference PNG -> Shopify product/variant ID check
+```
+
+```txt
+production media smoke test:
+canonical row -> final AI-generated PNG -> Shopify media -> variant assignment -> Convex imageUrl -> PDP tile
+```
+
+Only the production media smoke test proves the full loop:
 
 ```txt
 canonical row -> flattened PNG -> Shopify media -> variant assignment -> Convex imageUrl -> PDP tile

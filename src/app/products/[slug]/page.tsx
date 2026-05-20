@@ -1158,7 +1158,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 linkCanonical.setAttribute("rel", "canonical");
                 document.head.appendChild(linkCanonical);
             }
-            linkCanonical.href = `https://www.bestbottles.com/products/${slug}`;
+            linkCanonical.href = `${SITE_URL}/products/${slug}`;
 
             analytics.productViewed({
                 name: group.displayName,

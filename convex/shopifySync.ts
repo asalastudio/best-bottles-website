@@ -38,6 +38,7 @@ export const syncProduct = mutation({
                 sku: v.string(),
                 title: v.string(),
                 price: v.string(),
+                imageUrl: v.optional(v.union(v.string(), v.null())),
                 inventoryItemId: v.number(),
                 inventoryQuantity: v.number(),
                 option1: v.union(v.string(), v.null()),
@@ -124,6 +125,7 @@ export const syncProduct = mutation({
                 shopifyVariantId: `gid://shopify/ProductVariant/${variant.shopifyVariantId}`,
                 shopifyInventoryItemId: `gid://shopify/InventoryItem/${variant.inventoryItemId}`,
                 shopifyUpdatedAt: now,
+                ...(variant.imageUrl ? { imageUrl: variant.imageUrl } : {}),
             };
 
             if (existing) {

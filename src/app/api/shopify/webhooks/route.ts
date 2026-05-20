@@ -44,6 +44,17 @@ export async function POST(req: NextRequest) {
             case "products/create":
             case "products/update": {
                 const product = body as WebhookProduct;
+                const imageById = new Map<number, string>();
+                const imageByVariantId = new Map<number, string>();
+                for (const image of product.images ?? []) {
+                    imageById.set(image.id, image.src);
+                    for (const variantId of image.variant_ids ?? []) {
+                        if (!imageByVariantId.has(variantId)) {
+                            imageByVariantId.set(variantId, image.src);
+                        }
+                    }
+                }
+
                 await convex.mutation(api.shopifySync.syncProduct, {
                     shopifyProductId: product.id,
                     title: product.title,
@@ -63,6 +74,10 @@ export async function POST(req: NextRequest) {
                         sku: v.sku,
                         title: v.title,
                         price: v.price,
+                        imageUrl:
+                            (v.image_id ? imageById.get(v.image_id) : null) ??
+                            imageByVariantId.get(v.id) ??
+                            null,
                         inventoryItemId: v.inventory_item_id,
                         inventoryQuantity: v.inventory_quantity,
                         option1: v.option1,

@@ -13,6 +13,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import { useGrace } from "@/components/useGrace";
+import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -36,6 +37,11 @@ import {
     catalogSearchScore,
 } from "@/lib/catalogFilters";
 import { buildCanonicalProductGroup } from "@/lib/canonicalProduct";
+import {
+    getProductCardVariantPreviews,
+    type ProductCardVariantPreview,
+    type ProductCardVariantPreviewSource,
+} from "@/lib/products/product-card-variant-previews";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -182,6 +188,11 @@ interface CatalogGroupPrimarySku {
     graceSku: string | null;
 }
 
+interface CatalogGroupVariantPreviewData {
+    groupId: string;
+    variants: ProductCardVariantPreviewSource[];
+}
+
 interface Facets {
     categories: Record<string, number>;
     collections: Record<string, number>;
@@ -271,8 +282,22 @@ function SkeletonGrid() {
 
 // ─── Product Group Card ──────────────────────────────────────────────────────
 
-function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGroup; index: number; applicatorParam?: string | null }) {
-    const href = applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
+function productGroupHref(group: CatalogGroup, applicatorParam?: string | null): string {
+    return applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
+}
+
+function ProductGroupCard({
+    group,
+    index,
+    applicatorParam,
+    variantPreviews,
+}: {
+    group: CatalogGroup;
+    index: number;
+    applicatorParam?: string | null;
+    variantPreviews?: ProductCardVariantPreview[];
+}) {
+    const href = productGroupHref(group, applicatorParam);
     const cardSpecs = [
         { label: "Size", value: formatCatalogSpec(group.capacity) },
         { label: "Color", value: formatCatalogSpec(group.color) },
@@ -281,43 +306,22 @@ function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGro
     ];
 
     return (
-        <Link href={href}>
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-                className="group cursor-pointer flex flex-col h-full bg-white rounded-sm border border-champagne/40 overflow-hidden hover:border-muted-gold hover:shadow-lg transition-all duration-300"
-            >
-                <div className="relative aspect-[10/11] bg-[#efe2d0] w-full overflow-hidden flex items-center justify-center">
-                    {group.heroImageUrl ? (
-                        <Image
-                            src={group.heroImageUrl}
-                            alt={group.displayName}
-                            fill
-                            className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                            unoptimized
-                        />
-                    ) : (
-                        <div className="flex flex-col items-center justify-center text-center p-4">
-                            <Package className="w-12 h-12 text-champagne mb-3" strokeWidth={1} />
-                            <p className="text-[10px] text-slate/60 uppercase tracking-wider font-medium leading-tight max-w-[120px]">
-                                {group.family}
-                            </p>
-                        </div>
-                    )}
+        <motion.article
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
+            className="group/catalog-card flex h-full flex-col overflow-hidden rounded-sm border border-champagne/40 bg-white transition-all duration-300 hover:border-muted-gold hover:shadow-lg"
+        >
+            <ProductCardImagePreview
+                productTitle={group.displayName}
+                defaultImage={{ url: group.heroImageUrl, alt: group.displayName }}
+                placeholderLabel={group.family}
+                variantPreviews={variantPreviews}
+                productHref={href}
+            />
 
-                    {group.variantCount > 1 && (
-                        <div className="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <span className="inline-flex items-center px-2 py-0.5 text-[10px] uppercase tracking-wider font-bold rounded-sm bg-obsidian/60 text-white">
-                                {group.variantCount} variants
-                            </span>
-                        </div>
-                    )}
-                </div>
-
-                <div className="p-5 flex flex-col flex-1">
+            <Link href={href} className="flex flex-1 flex-col p-5">
                     <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{group.displayName}</h4>
                     <dl data-testid="catalog-card-specs" className="grid grid-cols-2 gap-x-3 gap-y-2 mb-4 text-[11px]">
                         {cardSpecs.map((spec) => (
@@ -328,9 +332,8 @@ function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGro
                         ))}
                     </dl>
                     <span className="font-semibold text-obsidian text-lg mt-auto">from {formatPrice(group.priceRangeMin)}/ea</span>
-                </div>
-            </motion.div>
-        </Link>
+            </Link>
+        </motion.article>
     );
 }
 
@@ -1544,7 +1547,34 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         return { filtered: result, facets: facetData, totalCount: result.length };
     }, [allGroups, filters, sortBy, skuMap]);
 
-    const visibleProducts = filtered.slice(0, visibleCount);
+    const visibleProducts = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+    const visibleProductIds = useMemo(() => visibleProducts.map((group) => group._id), [visibleProducts]);
+    const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
+    const variantPreviewRows = useQuery(
+        api.products.getCatalogGroupVariantPreviewData,
+        viewMode === "visual" && visibleProductIds.length > 0 ? { groupIds: visibleProductIds } : "skip",
+    ) as CatalogGroupVariantPreviewData[] | undefined;
+    const variantPreviewMap = useMemo(() => {
+        const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
+        const next = new Map<string, ProductCardVariantPreview[]>();
+
+        for (const row of variantPreviewRows ?? []) {
+            const group = groupById.get(row.groupId);
+            if (!group) continue;
+            const href = productGroupHref(group, visualApplicatorParam);
+            next.set(
+                row.groupId,
+                getProductCardVariantPreviews(row.variants, {
+                    productTitle: group.displayName,
+                    defaultImageUrl: group.heroImageUrl,
+                    groupColor: group.color,
+                    productHref: href,
+                }),
+            );
+        }
+
+        return next;
+    }, [variantPreviewRows, visibleProducts, visualApplicatorParam]);
     const hasMore = visibleCount < filtered.length;
     const isLoading = allGroups === undefined;
     const activeCount = activeFilterCount(filters);
@@ -2062,7 +2092,8 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         key={group._id}
                                         group={group}
                                         index={pIndex}
-                                        applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                        applicatorParam={visualApplicatorParam}
+                                        variantPreviews={variantPreviewMap.get(group._id)}
                                     />
                                 ))}
                             </div>
@@ -2077,7 +2108,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         <LineItemTable
                                             groups={visibleProducts}
                                             skuMap={skuMap}
-                                            applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                            applicatorParam={visualApplicatorParam}
                                         />
                                     </div>
                                 </div>
@@ -2087,7 +2118,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                     <LineItemMobileGrid
                                         groups={visibleProducts}
                                         skuMap={skuMap}
-                                        applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                        applicatorParam={visualApplicatorParam}
                                     />
                                 </div>
                             </>
