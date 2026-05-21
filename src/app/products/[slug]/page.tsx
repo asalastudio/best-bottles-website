@@ -951,6 +951,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         return match ?? null;
     }, [applicatorParam, applicatorOptions, hasCapClosure]);
     const validApplicatorParam = defaultFromUrl ? applicatorParam : null;
+    const primaryVariant = useMemo(() => {
+        const primaryWebsiteSku = group?.primaryWebsiteSku?.trim();
+        const primaryGraceSku = group?.primaryGraceSku?.trim();
+        if (!primaryWebsiteSku && !primaryGraceSku) return null;
+        return variants.find((variant) =>
+            (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
+            (primaryGraceSku && variant.graceSku === primaryGraceSku)
+        ) ?? null;
+    }, [variants, group?.primaryWebsiteSku, group?.primaryGraceSku]);
 
     // Guard stale deep links like ?applicator=spray on non-spray groups (e.g. decorative cap bottles).
     useEffect(() => {
@@ -961,7 +970,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
     const activeApplicator = selectedApplicator && applicatorOptions.includes(selectedApplicator)
         ? selectedApplicator
-        : defaultFromUrl ?? applicatorOptions[0] ?? (hasCapClosure ? "Cap/Closure" : null);
+        : defaultFromUrl ??
+            (primaryVariant?.applicator && (applicatorOptions.includes(primaryVariant.applicator) || primaryVariant.applicator === "Cap/Closure")
+                ? primaryVariant.applicator
+                : null) ??
+            applicatorOptions[0] ??
+            (hasCapClosure ? "Cap/Closure" : null);
     const variantsForApplicator = useMemo(
         () => variants.filter((v) => v.applicator === activeApplicator),
         [variants, activeApplicator]
@@ -980,7 +994,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             });
     }, [variants, activeApplicator]);
 
-    const activeCapColor = selectedCapColor ?? capColorOptions[0] ?? null;
+    const primaryCapColor = primaryVariant?.applicator === activeApplicator
+        ? resolveVariantCapFinish(primaryVariant).swatchName
+        : null;
+    const activeCapColor = selectedCapColor ?? (primaryCapColor && capColorOptions.includes(primaryCapColor) ? primaryCapColor : null) ?? capColorOptions[0] ?? null;
 
     // Cap style options — filtered by applicator + resolved cap finish
     const capStyleOptions = useMemo(() => {
@@ -1000,7 +1017,11 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             });
     }, [variants, activeApplicator, activeCapColor]);
 
-    const activeCapStyle = selectedCapStyle ?? capStyleOptions[0] ?? null;
+    const primaryCapStyle = primaryVariant?.applicator === activeApplicator &&
+        resolveVariantCapFinish(primaryVariant).swatchName === activeCapColor
+        ? primaryVariant.capStyle
+        : null;
+    const activeCapStyle = selectedCapStyle ?? (primaryCapStyle && capStyleOptions.includes(primaryCapStyle) ? primaryCapStyle : null) ?? capStyleOptions[0] ?? null;
 
     // Trim options — filtered by applicator + resolved cap finish + cap style
     const trimColorOptions = useMemo(() => {
@@ -1019,7 +1040,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             });
     }, [variants, activeApplicator, activeCapColor, activeCapStyle, capStyleOptions]);
 
-    const activeTrimColor = selectedTrimColor ?? trimColorOptions[0] ?? null;
+    const primaryTrimColor = primaryVariant?.applicator === activeApplicator &&
+        resolveVariantCapFinish(primaryVariant).swatchName === activeCapColor &&
+        (capStyleOptions.length === 0 || primaryVariant.capStyle === activeCapStyle)
+        ? primaryVariant.trimColor || "Standard"
+        : null;
+    const activeTrimColor = selectedTrimColor ?? (primaryTrimColor && trimColorOptions.includes(primaryTrimColor) ? primaryTrimColor : null) ?? trimColorOptions[0] ?? null;
 
     // Resolved variant — 4-way match with graceful fallback
     const selectedVariant = useMemo(() => {
@@ -1481,22 +1507,54 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             );
                                         }
 
-                                        // Mode 2 — gallery. Build the image set from any combination
-                                        // of imageUrl (cap-on / primary) and imageUrlCapOff. Both
-                                        // optional; the gallery handles 1- or 2-image cases cleanly.
+                                        // Mode 2 — gallery. Product-group hero is the default PDP image.
+                                        // Once a shopper chooses a specific variant, put that variant first
+                                        // while keeping the group hero available as a gallery alternate.
                                         const galleryImages: GalleryImage[] = [];
+                                        const seenGalleryUrls = new Set<string>();
+                                        const addGalleryImage = (image: GalleryImage) => {
+                                            const normalizedUrl = image.url.trim();
+                                            const imageKey = normalizedUrl.split("?")[0];
+                                            if (!normalizedUrl || seenGalleryUrls.has(imageKey)) return;
+                                            seenGalleryUrls.add(imageKey);
+                                            galleryImages.push({ ...image, url: normalizedUrl });
+                                        };
+                                        const hasExplicitVariantSelection = Boolean(
+                                            selectedVariantId ||
+                                            selectedApplicator ||
+                                            selectedCapColor ||
+                                            selectedCapStyle ||
+                                            selectedTrimColor ||
+                                            validApplicatorParam
+                                        );
+                                        const groupHeroImage = group.heroImageUrl?.trim() ?? "";
+
+                                        if (groupHeroImage && !hasExplicitVariantSelection) {
+                                            addGalleryImage({
+                                                url: groupHeroImage,
+                                                label: "Product hero",
+                                                alt: group.displayName,
+                                            });
+                                        }
                                         if (selectedVariant?.imageUrl) {
-                                            galleryImages.push({
+                                            addGalleryImage({
                                                 url: selectedVariant.imageUrl,
                                                 label: "Cap on",
                                                 alt: `${selectedVariant.itemName} — cap on`,
                                             });
                                         }
                                         if (selectedVariant?.imageUrlCapOff && supportsSecondaryPdpImage(selectedVariant)) {
-                                            galleryImages.push({
+                                            addGalleryImage({
                                                 url: selectedVariant.imageUrlCapOff,
                                                 label: "Cap off",
                                                 alt: `${selectedVariant.itemName} — applicator detail with cap removed`,
+                                            });
+                                        }
+                                        if (groupHeroImage && hasExplicitVariantSelection) {
+                                            addGalleryImage({
+                                                url: groupHeroImage,
+                                                label: "Product hero",
+                                                alt: group.displayName,
                                             });
                                         }
 
@@ -1504,7 +1562,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             return (
                                                 <ProductImageGallery
                                                     images={galleryImages}
-                                                    primaryAlt={selectedVariant?.itemName ?? group.displayName}
+                                                    primaryAlt={galleryImages[0]?.alt ?? selectedVariant?.itemName ?? group.displayName}
                                                     badge={variantBadge}
                                                     watermark={skuWatermark}
                                                     aspectRatio="10/11"
