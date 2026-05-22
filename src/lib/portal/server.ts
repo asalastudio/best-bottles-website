@@ -21,6 +21,12 @@ function getConvex() {
     return convexClient;
 }
 
+function getConvexWriteToken() {
+    const token = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!token) throw new Error("BEST_BOTTLES_CONVEX_WRITE_TOKEN is not set");
+    return token;
+}
+
 export async function getPortalViewer() {
     if (!CLERK_ENABLED) {
         return DISABLED_VIEWER;
@@ -154,6 +160,7 @@ export async function getPortalGraceWorkspace(projectId?: string) {
 export async function createPortalDraftForViewer(name?: string) {
     const viewer = await requirePortalViewer();
     return await getConvex().mutation(api.portal.createDraft, {
+        writeToken: getConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         name,
     });
@@ -162,6 +169,7 @@ export async function createPortalDraftForViewer(name?: string) {
 export async function createPortalDraftFromOrderForViewer(orderId: string) {
     const viewer = await requirePortalViewer();
     return await getConvex().mutation(api.portal.createDraftFromOrder, {
+        writeToken: getConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         orderId,
     });
@@ -170,6 +178,7 @@ export async function createPortalDraftFromOrderForViewer(orderId: string) {
 export async function createGraceProjectForViewer(name?: string) {
     const viewer = await requirePortalViewer();
     return await getConvex().mutation(api.portal.createGraceProject, {
+        writeToken: getConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         name,
     });
@@ -204,6 +213,7 @@ export async function askGraceForViewerProject(projectId: string, message: strin
     });
 
     await getConvex().mutation(api.portal.saveGraceChatTurn, {
+        writeToken: getConvexWriteToken(),
         clerkOrgId: viewer.clerkOrgId,
         clerkUserId: viewer.clerkUserId,
         projectId: projectId as never,

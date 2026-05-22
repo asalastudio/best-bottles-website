@@ -160,21 +160,43 @@ function getCapFinishFromItemName(itemName: string | null | undefined): { label:
     return null;
 }
 
+function getVariantOptionPrefix(v: ProductVariant): string | null {
+    const sku = (v.graceSku ?? "").toUpperCase();
+    const applicator = (v.applicator ?? "").toLowerCase();
+    const capStyle = v.capStyle?.trim() || null;
+
+    if (sku.includes("-SPR-") || applicator.includes("spray")) return "Spray";
+    if (sku.includes("-LPM-") || applicator.includes("lotion")) return "Lotion Pump";
+    if (sku.includes("-DRP-") || applicator.includes("dropper")) return "Dropper";
+    if (sku.includes("-ROL-") || sku.includes("-RON-") || applicator.includes("roller") || applicator.includes("roll-on")) {
+        return "Roller";
+    }
+    if (applicator.includes("cap/closure")) return capStyle ?? "Screw Cap";
+
+    return capStyle;
+}
+
 /** Resolved cap finish for PDP selectors — must match variantSwatchPreview so sparse capColor rows still appear. */
 function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName: string } {
-    const fromCapFields = (() => {
-        if (!v.capColor && !v.capStyle) return null;
-        if (v.capColor && v.capStyle) {
-            const s = `${v.capStyle} ${v.capColor}`.replace(/\s+/g, " ").trim();
-            return { label: s, swatchName: s };
-        }
-        if (v.capColor) return { label: v.capColor, swatchName: v.capColor };
-        if (v.capStyle) return { label: v.capStyle, swatchName: v.capStyle };
+    const fromCapColor = (() => {
+        if (!v.capColor) return null;
+        return { label: v.capColor, swatchName: v.capColor };
+    })();
+    const finish = getFinishFromGraceSku(v.graceSku) ?? fromCapColor ?? getCapFinishFromItemName(v.itemName);
+    const prefix = getVariantOptionPrefix(v);
+
+    if (finish) {
+        const label = prefix && !finish.label.toLowerCase().startsWith(prefix.toLowerCase())
+            ? `${prefix} ${finish.label}`
+            : finish.label;
+        return { label, swatchName: finish.swatchName };
+    }
+
+    const fromCapStyle = (() => {
+        if (prefix) return { label: prefix, swatchName: prefix };
         return null;
     })();
-    const fromGraceSku = getFinishFromGraceSku(v.graceSku);
-    const fromItemName = getCapFinishFromItemName(v.itemName);
-    return fromCapFields ?? fromGraceSku ?? fromItemName ?? { label: "Variant Option", swatchName: "Standard" };
+    return fromCapStyle ?? { label: "Variant Option", swatchName: "Standard" };
 }
 
 function getCapFinishFromComponent(comp: ProductComponent): { label: string; swatchName: string } {
@@ -454,6 +476,7 @@ interface ProductVariant {
     itemName: string;
     itemDescription: string | null;
     imageUrl: string | null;
+    shopifyVariantId?: string | null;
     /** Secondary gallery view — applicator/dropper/sprayer with cap removed. */
     imageUrlCapOff?: string | null;
     stockStatus: string | null;
@@ -660,16 +683,16 @@ function sortCompatibleApplicatorSiblings(
 
 function TrustStack({ variant, inStock }: { variant: ProductVariant | null | undefined; inStock: boolean }) {
     const caseQty = variant?.caseQuantity ?? null;
-    const stockLabel = variant?.stockStatus ?? "Unknown";
+    const stockLabel = inStock ? "Available to order" : "Confirm availability";
 
     return (
         <div className="mb-4 sm:mb-6">
-            {/* Stock badge — kept as colored pill for at-a-glance read */}
+            {/* Stock badge — intentionally avoids claiming live Shopify inventory until checkout resolves it. */}
             <span className={`inline-flex items-center px-3 py-1 text-[11px] uppercase tracking-wider font-bold rounded-full mb-3 ${inStock
                 ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
-                : "bg-red-50 text-red-600 border border-red-200"
+                : "bg-amber-50 text-amber-700 border border-amber-200"
                 }`}>
-                <span className={`w-1.5 h-1.5 rounded-full mr-1.5 ${inStock ? "bg-emerald-500" : "bg-red-400"}`}></span>
+                <span className={`w-1.5 h-1.5 rounded-full mr-1.5 ${inStock ? "bg-emerald-500" : "bg-amber-500"}`}></span>
                 {stockLabel}
             </span>
 
@@ -679,6 +702,12 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
                     <div className="flex items-center gap-2.5 text-obsidian">
                         <Package className="w-4 h-4 text-slate shrink-0" strokeWidth={1.5} />
                         <span>Case of <span className="font-semibold">{caseQty}</span> · order any quantity</span>
+                    </div>
+                )}
+                {!caseQty && (
+                    <div className="flex items-center gap-2.5 text-obsidian">
+                        <Package className="w-4 h-4 text-slate shrink-0" strokeWidth={1.5} />
+                        <span>Case quantity: <span className="font-semibold">confirm before ordering</span></span>
                     </div>
                 )}
                 <div className="flex items-center gap-2.5 text-obsidian">
@@ -707,7 +736,7 @@ function ProductConfidenceSummary({
     const rows = [
         { label: "Neck size", value: group.neckThreadSize ?? variant?.neckThreadSize ?? "Unable to verify" },
         { label: "Capacity", value: group.capacity ?? variant?.capacity ?? "Unable to verify" },
-        { label: "Case quantity", value: variant?.caseQuantity ? `${variant.caseQuantity} units/case` : "Unable to verify" },
+        { label: "Case quantity", value: variant?.caseQuantity ? `${variant.caseQuantity} units/case` : "Confirm before ordering" },
         { label: "Selected SKU", value: variant?.websiteSku ?? variant?.graceSku ?? "Unable to verify" },
     ];
 
@@ -1355,13 +1384,18 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     }
 
     const inStock = selectedVariant?.stockStatus === "In Stock";
+    const checkoutReady = Boolean(selectedVariant?.shopifyVariantId);
+    const canAddToCart = inStock && checkoutReady;
+    const quoteHref = `/request-quote?products=${encodeURIComponent(`${selectedVariant?.itemName ?? group?.displayName ?? ""} (SKU: ${selectedVariant?.graceSku ?? ""})`)}&quantities=${encodeURIComponent(`${qty} units`)}`;
     const handleAddToCart = () => {
-        if (!selectedVariant || !inStock) return;
+        if (!selectedVariant || !canAddToCart) return;
         addItems([{
             graceSku: selectedVariant.graceSku,
             itemName: selectedVariant.itemName,
             quantity: qty,
             unitPrice: selectedVariant.webPrice1pc ?? null,
+            checkoutEligible: checkoutReady,
+            shopifyVariantId: selectedVariant.shopifyVariantId ?? null,
             family: group?.family,
             capacity: group?.capacity ?? undefined,
             color: group?.color ?? undefined,
@@ -1477,8 +1511,15 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             </span>
                                         ) : null;
 
-                                        // Mode 1 — paper-doll configurator
-                                        if (group.paperDollFamilyKey && selectedVariant) {
+                                        const variantHasExternalStudioImage = Boolean(
+                                            selectedVariant?.imageUrl &&
+                                            !selectedVariant.imageUrl.includes("cdn.sanity.io/images/")
+                                        );
+
+                                        // Mode 1 — paper-doll configurator. Shopify/Madison-pushed
+                                        // variant images are final PDP media and should take
+                                        // precedence over generated layer compositions.
+                                        if (group.paperDollFamilyKey && selectedVariant && !variantHasExternalStudioImage) {
                                             return (
                                                 <motion.div
                                                     key="paper-doll"
@@ -1507,9 +1548,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             );
                                         }
 
-                                        // Mode 2 — gallery. Product-group hero is the default PDP image.
-                                        // Once a shopper chooses a specific variant, put that variant first
-                                        // while keeping the group hero available as a gallery alternate.
+                                        // Mode 2 — gallery. Shopify/Madison variant media is the source of
+                                        // truth for the PDP. The side rail handles variant switching;
+                                        // lifestyle/editorial images belong in the Sanity PDP gallery row below,
+                                        // not in this product-image thumbnail strip.
                                         const galleryImages: GalleryImage[] = [];
                                         const seenGalleryUrls = new Set<string>();
                                         const addGalleryImage = (image: GalleryImage) => {
@@ -1519,42 +1561,21 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             seenGalleryUrls.add(imageKey);
                                             galleryImages.push({ ...image, url: normalizedUrl });
                                         };
-                                        const hasExplicitVariantSelection = Boolean(
-                                            selectedVariantId ||
-                                            selectedApplicator ||
-                                            selectedCapColor ||
-                                            selectedCapStyle ||
-                                            selectedTrimColor ||
-                                            validApplicatorParam
-                                        );
-                                        const groupHeroImage = group.heroImageUrl?.trim() ?? "";
 
-                                        if (groupHeroImage && !hasExplicitVariantSelection) {
-                                            addGalleryImage({
-                                                url: groupHeroImage,
-                                                label: "Product hero",
-                                                alt: group.displayName,
-                                            });
-                                        }
                                         if (selectedVariant?.imageUrl) {
                                             addGalleryImage({
                                                 url: selectedVariant.imageUrl,
-                                                label: "Cap on",
-                                                alt: `${selectedVariant.itemName} — cap on`,
+                                                label: "Variant",
+                                                alt: selectedVariant.itemName,
                                             });
-                                        }
-                                        if (selectedVariant?.imageUrlCapOff && supportsSecondaryPdpImage(selectedVariant)) {
+                                        } else if (
+                                            selectedVariant?.imageUrlCapOff &&
+                                            supportsSecondaryPdpImage(selectedVariant)
+                                        ) {
                                             addGalleryImage({
                                                 url: selectedVariant.imageUrlCapOff,
-                                                label: "Cap off",
-                                                alt: `${selectedVariant.itemName} — applicator detail with cap removed`,
-                                            });
-                                        }
-                                        if (groupHeroImage && hasExplicitVariantSelection) {
-                                            addGalleryImage({
-                                                url: groupHeroImage,
-                                                label: "Product hero",
-                                                alt: group.displayName,
+                                                label: "Variant",
+                                                alt: selectedVariant.itemName,
                                             });
                                         }
 
@@ -1978,34 +1999,44 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         <span className="text-lg leading-none select-none">+</span>
                                     </button>
                                 </div>
-                                <button
-                                    disabled={!inStock || addedFlash}
-                                    onClick={handleAddToCart}
-                                    data-testid="pdp-add-to-cart"
-                                    className={`flex-1 flex items-center justify-center space-x-2 text-xs font-bold uppercase tracking-widest transition-colors disabled:cursor-not-allowed ${
-                                        addedFlash
-                                            ? "bg-emerald-600 text-white"
-                                            : "bg-obsidian text-white hover:bg-muted-gold disabled:opacity-40"
-                                    }`}
-                                >
-                                    {addedFlash ? (
-                                        <>
-                                            <Check className="w-4 h-4" strokeWidth={2} />
-                                            <span>Added!</span>
-                                        </>
-                                    ) : (
-                                        <>
-                                            <ShoppingBag className="w-4 h-4" strokeWidth={1.5} />
-                                            <span>{inStock ? "Add to Cart" : "Out of Stock"}</span>
-                                        </>
-                                    )}
-                                </button>
+                                {checkoutReady ? (
+                                    <button
+                                        disabled={!canAddToCart || addedFlash}
+                                        onClick={handleAddToCart}
+                                        data-testid="pdp-add-to-cart"
+                                        className={`flex-1 flex items-center justify-center space-x-2 text-xs font-bold uppercase tracking-widest transition-colors disabled:cursor-not-allowed ${
+                                            addedFlash
+                                                ? "bg-emerald-600 text-white"
+                                                : "bg-obsidian text-white hover:bg-muted-gold disabled:opacity-40"
+                                        }`}
+                                    >
+                                        {addedFlash ? (
+                                            <>
+                                                <Check className="w-4 h-4" strokeWidth={2} />
+                                                <span>Added!</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <ShoppingBag className="w-4 h-4" strokeWidth={1.5} />
+                                                <span>{inStock ? "Add to Cart" : "Out of Stock"}</span>
+                                            </>
+                                        )}
+                                    </button>
+                                ) : (
+                                    <Link
+                                        href={quoteHref}
+                                        data-testid="pdp-request-quote-primary"
+                                        className="flex-1 flex items-center justify-center text-xs font-bold uppercase tracking-widest bg-obsidian text-white hover:bg-muted-gold transition-colors"
+                                    >
+                                        Request Quote
+                                    </Link>
+                                )}
                             </div>
 
                             {/* Request a Quote CTA */}
                             <div className="mb-6">
                                 <Link
-                                    href={`/request-quote?products=${encodeURIComponent(`${selectedVariant?.itemName ?? group?.displayName ?? ''} (SKU: ${selectedVariant?.graceSku ?? ''})`)}&quantities=${encodeURIComponent(`${qty} units`)}`}
+                                    href={quoteHref}
                                     className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
                                 >
                                     <span>Request a Quote</span>
@@ -2099,7 +2130,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                     <SpecRow label="Diameter" value={selectedVariant.diameter} />
                                     <SpecRow label="Neck Thread Size" value={selectedVariant.neckThreadSize} />
                                     <SpecRow label="Bottle Weight" value={selectedVariant.bottleWeightG ? `${selectedVariant.bottleWeightG}g` : null} />
-                                    <SpecRow label="Case Quantity" value={selectedVariant.caseQuantity ? `${selectedVariant.caseQuantity} units/case` : null} />
+                                    <SpecRow label="Case Quantity" value={selectedVariant.caseQuantity ? `${selectedVariant.caseQuantity} units/case` : "Confirm before ordering"} />
                                     <SpecRow label="Capacity" value={selectedVariant.capacity} />
                                     <SpecRow label="Glass Color" value={selectedVariant.color} />
                                     <SpecRow label="Applicator" value={selectedVariant.applicator} />
@@ -2154,18 +2185,28 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             +
                         </button>
                     </div>
-                    <button
-                        disabled={!inStock || addedFlash}
-                        onClick={handleAddToCart}
-                        data-testid="pdp-sticky-add-to-cart"
-                        className={`flex-1 min-w-0 py-3 text-[11px] font-bold uppercase tracking-wider transition-colors ${
-                            addedFlash
-                                ? "bg-emerald-600 text-white"
-                                : "bg-obsidian text-white disabled:opacity-40"
-                        }`}
-                    >
-                        {addedFlash ? "Added!" : inStock ? "Add to Cart" : "Out of Stock"}
-                    </button>
+                    {checkoutReady ? (
+                        <button
+                            disabled={!canAddToCart || addedFlash}
+                            onClick={handleAddToCart}
+                            data-testid="pdp-sticky-add-to-cart"
+                            className={`flex-1 min-w-0 py-3 text-[11px] font-bold uppercase tracking-wider transition-colors ${
+                                addedFlash
+                                    ? "bg-emerald-600 text-white"
+                                    : "bg-obsidian text-white disabled:opacity-40"
+                            }`}
+                        >
+                            {addedFlash ? "Added!" : inStock ? "Add to Cart" : "Out of Stock"}
+                        </button>
+                    ) : (
+                        <Link
+                            href={quoteHref}
+                            data-testid="pdp-sticky-request-quote"
+                            className="flex-1 min-w-0 py-3 text-center text-[11px] font-bold uppercase tracking-wider bg-obsidian text-white"
+                        >
+                            Request Quote
+                        </Link>
+                    )}
                 </div>
             </div>
         </main>

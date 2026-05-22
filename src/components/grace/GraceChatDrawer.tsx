@@ -10,7 +10,6 @@ import {
     Paperclip,
     PaperPlaneTilt,
     ArrowsOutSimple,
-    Truck,
     Package,
     Compass,
     Leaf,
@@ -53,7 +52,7 @@ const QUICK_CHIPS = [
     { label: "Find by fitment", icon: Compass, query: "Help me find a bottle by fitment — I know the neck thread size I need." },
     { label: "Browse families", icon: Package, query: "Show me all bottle families — I want to browse what's available." },
     { label: "Match a reference image", icon: Leaf, query: "I have a reference image — help me find a bottle that matches." },
-    { label: "Compare two bottles", icon: Truck, query: "I want to compare two specific bottles side by side." },
+    { label: "Check compatibility", icon: Package, query: "Help me check which caps or applicators fit a bottle." },
 ];
 
 function GraceMark({ size = 56, glow = false }: { size?: number; glow?: boolean }) {

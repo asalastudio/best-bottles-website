@@ -28,15 +28,23 @@ const ACCEPTED_MIMES = new Set([
     "image/svg+xml",
 ]);
 
+function verifyWriteToken(writeToken: string) {
+    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!expected) throw new Error("convex_write_token_not_configured");
+    if (writeToken !== expected) throw new Error("unauthorized_convex_write");
+}
+
 export const generateUploadUrl = mutation({
-    args: {},
-    handler: async (ctx) => {
+    args: { writeToken: v.string() },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
         return await ctx.storage.generateUploadUrl();
     },
 });
 
 export const recordUpload = mutation({
     args: {
+        writeToken: v.string(),
         blobId: v.string(),
         mime: v.string(),
         size: v.number(),
@@ -44,6 +52,8 @@ export const recordUpload = mutation({
         kind: v.union(v.literal("reference"), v.literal("logo")),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         if (args.size > MAX_BYTES) {
             throw new Error(`File exceeds ${MAX_BYTES / (1024 * 1024)}MB limit.`);
         }

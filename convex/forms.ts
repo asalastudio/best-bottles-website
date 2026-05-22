@@ -1,4 +1,4 @@
-import { mutation, query } from "./_generated/server";
+import { internalQuery, mutation } from "./_generated/server";
 import { v } from "convex/values";
 
 export const submit = mutation({
@@ -26,7 +26,9 @@ export const submit = mutation({
     },
 });
 
-export const listByType = query({
+// Internal-only: form submissions contain customer contact information and
+// should never be readable from the public Convex client.
+export const listByType = internalQuery({
     args: { formType: v.string() },
     handler: async (ctx, args) => {
         return await ctx.db

@@ -1,11 +1,20 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import type { Doc, Id } from "./_generated/dataModel";
 import {
     filterGroupedComponentsByFitmentRule,
     normalizeComponentsByType,
     selectBestFitmentRule,
 } from "./componentUtils";
+
+function isSanityCdnUrl(value: string) {
+    try {
+        return new URL(value).hostname === "cdn.sanity.io";
+    } catch {
+        return value.includes("cdn.sanity.io/");
+    }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PRODUCT QUERIES — Powers the Homepage + Catalog + PDP
@@ -618,6 +627,131 @@ export const getProductGroup = query({
 });
 
 /**
+ * Read-only Madison/image-pipeline preflight.
+ *
+ * Slugs are route labels, not durable product identity. This resolver lets
+ * Madison validate a requested group hero target before attempting a publish:
+ * prefer productGroupId, then exact slug, then SKU/productId, then a
+ * case-insensitive slug alias. It returns the canonical Convex slug so the UI
+ * can display "did you mean..." instead of failing after image upload.
+ */
+export const preflightProductGroupImageTarget = query({
+    args: {
+        productGroupId: v.optional(v.id("productGroups")),
+        productGroupSlug: v.optional(v.string()),
+        graceSku: v.optional(v.string()),
+        websiteSku: v.optional(v.string()),
+        productId: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        const requestedSlug = args.productGroupSlug?.trim();
+
+        const toPayload = (
+            group: Doc<"productGroups">,
+            method: "productGroupId" | "exact_slug" | "sku_or_product_id" | "case_insensitive_slug",
+            matchedProduct?: {
+                _id: unknown;
+                productId?: string | null;
+                graceSku?: string | null;
+                websiteSku?: string | null;
+            } | null,
+        ) => ({
+            success: true as const,
+            status: method === "case_insensitive_slug" ? "alias_resolved" as const : "exact_match" as const,
+            method,
+            requestedSlug: requestedSlug ?? null,
+            canonical: {
+                productGroupId: group._id,
+                productGroupSlug: group.slug,
+                displayName: group.displayName,
+                family: group.family,
+                capacityMl: group.capacityMl ?? null,
+                color: group.color ?? null,
+                primaryGraceSku: group.primaryGraceSku ?? null,
+                primaryWebsiteSku: group.primaryWebsiteSku ?? null,
+                heroImageUrl: group.heroImageUrl ?? null,
+            },
+            matchedProduct: matchedProduct
+                ? {
+                    productId: matchedProduct.productId ?? null,
+                    graceSku: matchedProduct.graceSku ?? null,
+                    websiteSku: matchedProduct.websiteSku ?? null,
+                }
+                : null,
+            warnings: method === "case_insensitive_slug"
+                ? [`Slug differs by case. Use canonical slug "${group.slug}".`]
+                : [],
+        });
+
+        if (args.productGroupId) {
+            const group = await ctx.db.get(args.productGroupId);
+            if (group) return toPayload(group, "productGroupId");
+        }
+
+        if (requestedSlug) {
+            const exact = await ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", requestedSlug))
+                .first();
+            if (exact) return toPayload(exact, "exact_slug");
+        }
+
+        const productLookups = [
+            args.graceSku
+                ? ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku!)).first()
+                : null,
+            args.websiteSku
+                ? ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku!)).first()
+                : null,
+            args.productId
+                ? ctx.db.query("products").withIndex("by_productId", (q) => q.eq("productId", args.productId!)).first()
+                : null,
+        ].filter(Boolean) as Array<Promise<{
+            _id: unknown;
+            productGroupId?: Id<"productGroups"> | null;
+            productId?: string | null;
+            graceSku?: string | null;
+            websiteSku?: string | null;
+        } | null>>;
+
+        for (const lookup of productLookups) {
+            const product = await lookup;
+            if (!product?.productGroupId) continue;
+            const group = await ctx.db.get(product.productGroupId);
+            if (group) return toPayload(group, "sku_or_product_id", product);
+        }
+
+        if (requestedSlug) {
+            const normalized = requestedSlug.toLowerCase();
+            const matches = (await ctx.db.query("productGroups").collect())
+                .filter((group) => group.slug.toLowerCase() === normalized);
+            if (matches.length === 1) return toPayload(matches[0], "case_insensitive_slug");
+            if (matches.length > 1) {
+                return {
+                    success: false as const,
+                    status: "ambiguous_alias" as const,
+                    requestedSlug,
+                    matches: matches.map((group) => ({
+                        productGroupId: group._id,
+                        productGroupSlug: group.slug,
+                        displayName: group.displayName,
+                    })),
+                    warnings: ["More than one product group matches this slug after normalization. Manual review required."],
+                };
+            }
+        }
+
+        return {
+            success: false as const,
+            status: "not_found" as const,
+            requestedSlug: requestedSlug ?? null,
+            matches: [],
+            warnings: ["No Convex product group matched the supplied ID, slug, SKU, or productId."],
+        };
+    },
+});
+
+/**
  * Fetch just the variant products for a known group ID.
  * Used by the PDP variant selector to load options.
  */
@@ -698,15 +832,29 @@ export const updateProductGroupHeroImage = internalMutation({
         heroImageUrl: v.string(),
     },
     handler: async (ctx, args) => {
+        if (isSanityCdnUrl(args.heroImageUrl)) {
+            return { success: false, error: "sanity_product_image_rejected" as const };
+        }
+
         await ctx.db.patch(args.id, { heroImageUrl: args.heroImageUrl });
         return { success: true };
     },
 });
 
+function verifyProductImageWriteToken(writeToken: string) {
+    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!expected) {
+        throw new Error("product_image_write_token_not_configured");
+    }
+    if (writeToken !== expected) {
+        throw new Error("unauthorized_product_image_write");
+    }
+}
+
 /**
- * Public mutation called by Madison Studio's publish edge function after
- * uploading a per-SKU marketing image to Sanity. Patches products.imageUrl
- * for the matching websiteSku.
+ * Mutation called by Madison Studio's publish edge function after uploading a
+ * per-SKU product image to Shopify. Patches products.imageUrl for the matching
+ * websiteSku.
  *
  * Single-field convenience wrapper. For multi-view writes (cap-on + cap-off)
  * use `setVariantImages` below — it supports both fields in a single call
@@ -717,8 +865,19 @@ export const setImageUrl = mutation({
     args: {
         websiteSku: v.string(),
         imageUrl: v.string(),
+        writeToken: v.string(),
     },
     handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        if (isSanityCdnUrl(args.imageUrl)) {
+            return {
+                success: false,
+                websiteSku: args.websiteSku,
+                error: "sanity_product_image_rejected" as const,
+            };
+        }
+
         const product = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
@@ -760,8 +919,22 @@ export const setVariantImages = mutation({
         websiteSku: v.string(),
         imageUrl: v.optional(v.string()),
         imageUrlCapOff: v.optional(v.string()),
+        writeToken: v.string(),
     },
     handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        if (
+            (args.imageUrl && isSanityCdnUrl(args.imageUrl)) ||
+            (args.imageUrlCapOff && isSanityCdnUrl(args.imageUrlCapOff))
+        ) {
+            return {
+                success: false,
+                websiteSku: args.websiteSku,
+                error: "sanity_product_image_rejected" as const,
+            };
+        }
+
         if (!args.imageUrl && !args.imageUrlCapOff) {
             return {
                 success: false,
@@ -770,12 +943,12 @@ export const setVariantImages = mutation({
             };
         }
 
-        const product = await ctx.db
+        const products = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
-            .first();
+            .collect();
 
-        if (!product) {
+        if (products.length === 0) {
             return {
                 success: false,
                 websiteSku: args.websiteSku,
@@ -788,23 +961,31 @@ export const setVariantImages = mutation({
         const variantPatch: { imageUrl?: string; imageUrlCapOff?: string } = {};
         if (args.imageUrl) variantPatch.imageUrl = args.imageUrl;
         if (args.imageUrlCapOff) variantPatch.imageUrlCapOff = args.imageUrlCapOff;
-        await ctx.db.patch(product._id, variantPatch);
+        await Promise.all(products.map((product) => ctx.db.patch(product._id, variantPatch)));
 
         // Propagate the primary view to the group's heroImageUrl when this
         // SKU is the group's designated primary. Skipped for cap-off-only
         // writes — the catalog grid card never renders the cap-off view.
         let groupAlsoUpdated = false;
-        if (args.imageUrl && product.productGroupId) {
-            const group = await ctx.db.get(product.productGroupId);
-            if (group && group.primaryWebsiteSku === args.websiteSku) {
-                await ctx.db.patch(group._id, { heroImageUrl: args.imageUrl });
-                groupAlsoUpdated = true;
+        if (args.imageUrl) {
+            const groupIds = new Set(
+                products
+                    .map((product) => product.productGroupId)
+                    .filter((groupId): groupId is Id<"productGroups"> => Boolean(groupId)),
+            );
+            for (const groupId of groupIds) {
+                const group = await ctx.db.get(groupId);
+                if (group && group.primaryWebsiteSku === args.websiteSku) {
+                    await ctx.db.patch(group._id, { heroImageUrl: args.imageUrl });
+                    groupAlsoUpdated = true;
+                }
             }
         }
 
         return {
             success: true,
             websiteSku: args.websiteSku,
+            patchedCount: products.length,
             patched: {
                 imageUrl: !!args.imageUrl,
                 imageUrlCapOff: !!args.imageUrlCapOff,
@@ -1267,5 +1448,3 @@ export const getCatalogIntegrityBatch = query({
         };
     },
 });
-
-

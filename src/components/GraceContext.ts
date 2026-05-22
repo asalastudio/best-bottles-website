@@ -36,6 +36,7 @@ export interface ProductCard {
     neckThreadSize?: string;
     webPrice1pc?: number;
     webPrice12pc?: number;
+    shopifyVariantId?: string | null;
     slug?: string;
     dataQualityFlags?: string[];
 }

@@ -49,33 +49,6 @@ const PAGE_SIZE = 24;
 const SEARCH_DEBOUNCE_MS = 300;
 const MAX_VISIBLE_LIMIT = 240;
 
-const PACKAGING_ANSWER_BLOCKS = [
-    {
-        question: "What does neck size mean?",
-        answer: "Neck size is the bottle opening and thread finish used to match a bottle with a compatible cap, reducer, sprayer, dropper, or roller. Treat matching neck sizes as the first fitment check, then verify the selected SKU before ordering.",
-        href: "/resources#neck-size",
-        gracePrompt: "Can you explain neck size and help me find bottles and applicators that match?",
-    },
-    {
-        question: "How should I find a 10 ml roll-on bottle for perfume oil?",
-        answer: "Start with the Roll-On applicator filter and small capacities around 6-15 ml, then compare neck size, roller style, cap finish, and case quantity on the product page before adding to cart.",
-        href: "/catalog?applicators=rollon&search=10%20ml%20roll-on",
-        gracePrompt: "I need a 10 ml roll-on bottle for perfume oil. Help me compare compatible options.",
-    },
-    {
-        question: "Can I use any applicator with any bottle?",
-        answer: "No. Applicators and closures need to be compatible with the bottle neck finish and the selected product configuration. If compatibility is not clearly shown, confirm it with Grace or the Best Bottles team before ordering.",
-        href: "/catalog?applicators=rollon,finemist,dropper",
-        gracePrompt: "Can you check applicator compatibility for the bottle I am considering?",
-    },
-    {
-        question: "How many bottles come in a case?",
-        answer: "Case quantity can vary by product and selected SKU. Use the product detail page for the specific bottle, color, size, and applicator configuration you plan to order.",
-        href: "/catalog",
-        gracePrompt: "Can you help me verify case quantity for a product before I order?",
-    },
-] as const;
-
 // ─── Sanity Family Banner ─────────────────────────────────────────────────────
 
 // Module-level cache so the Sanity query only runs once per session
@@ -221,21 +194,6 @@ function formatApplicatorLabels(applicators: string[] | null | undefined): strin
     const values = (applicators ?? []).filter((value) => value && value !== "Cap/Closure");
     if (values.length === 0) return "—";
     return values.slice(0, 2).join(", ") + (values.length > 2 ? ` +${values.length - 2}` : "");
-}
-
-function buildCatalogFaqJsonLd() {
-    return {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: PACKAGING_ANSWER_BLOCKS.map((item) => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-            },
-        })),
-    };
 }
 
 function clampVisibleLimit(rawLimit: string | null): number {
@@ -770,58 +728,6 @@ function FilterSidebarContent({
     );
 }
 
-function CatalogAnswerBlocks({
-    onAskGrace,
-}: {
-    onAskGrace: (prompt: string) => void;
-}) {
-    return (
-        <section
-            className="mb-5 sm:mb-8 rounded-xl border border-champagne/50 bg-white/80 p-4 sm:p-5"
-            aria-labelledby="catalog-answer-blocks-heading"
-            data-testid="catalog-answer-blocks"
-        >
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-4">
-                <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-muted-gold font-bold mb-1">
-                        Packaging Answers
-                    </p>
-                    <h2 id="catalog-answer-blocks-heading" className="font-serif text-xl sm:text-2xl text-obsidian font-medium">
-                        Quick answers before you choose
-                    </h2>
-                </div>
-                <p className="text-xs text-slate max-w-md">
-                    Crawlable guidance for common packaging decisions, with Grace ready when fitment depends on a specific product.
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
-                {PACKAGING_ANSWER_BLOCKS.map((item) => (
-                    <article key={item.question} className="rounded-lg border border-champagne/40 bg-bone/50 p-4 flex flex-col min-h-[220px]">
-                        <h3 className="font-serif text-lg leading-snug text-obsidian mb-2">{item.question}</h3>
-                        <p className="text-xs leading-relaxed text-slate mb-4">{item.answer}</p>
-                        <div className="mt-auto flex flex-col gap-2">
-                            <Link
-                                href={item.href}
-                                className="inline-flex min-h-11 items-center justify-center rounded-sm border border-champagne bg-white px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-obsidian hover:border-muted-gold hover:text-muted-gold transition-colors"
-                            >
-                                Explore products
-                            </Link>
-                            <button
-                                type="button"
-                                onClick={() => onAskGrace(item.gracePrompt)}
-                                className="inline-flex min-h-11 items-center justify-center rounded-sm bg-obsidian px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-white hover:bg-muted-gold transition-colors"
-                                data-testid="catalog-answer-grace-cta"
-                            >
-                                Ask Grace
-                            </button>
-                        </div>
-                    </article>
-                ))}
-            </div>
-        </section>
-    );
-}
-
 // ─── View Toggle ─────────────────────────────────────────────────────────────
 
 function ViewToggle({
@@ -1280,7 +1186,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     const router = useRouter();
     const pathname = usePathname();
     const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-    const { open: openGrace, setInput: setGraceInput } = useGrace();
+    const { open: openGrace } = useGrace();
 
     const isGraceNav = searchParams.get("grace") === "1";
     const [graceBannerDismissed, setGraceBannerDismissed] = useState(false);
@@ -1643,14 +1549,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         [handleFilterChange, sortBy],
     );
 
-    const handleAskGrace = useCallback(
-        (prompt: string) => {
-            setGraceInput(prompt);
-            openGrace();
-        },
-        [openGrace, setGraceInput],
-    );
-
     const toggleCategory = useCallback((cat: string) => {
         setExpandedCategories((prev) => ({ ...prev, [cat]: prev[cat] === false ? true : !prev[cat] ? false : !prev[cat] }));
     }, []);
@@ -1696,10 +1594,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
 
     return (
         <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(buildCatalogFaqJsonLd()) }}
-            />
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
 
             <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
@@ -1998,8 +1892,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                 ))}
                             </div>
                         )}
-
-                        <CatalogAnswerBlocks onAskGrace={handleAskGrace} />
 
                         {/* Loading */}
                         {isLoading && <SkeletonGrid />}

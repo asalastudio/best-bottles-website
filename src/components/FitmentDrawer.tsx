@@ -252,6 +252,7 @@ export default function FitmentDrawer({ isOpen, onClose, bottleSku }: FitmentDra
                                                     itemName: fitment.itemName,
                                                     quantity: 1,
                                                     unitPrice: fitment.price1 ?? null,
+                                                    checkoutEligible: false,
                                                     color: fitment.color ?? undefined,
                                                 }]);
                                                 setAddedSku(fitment.graceSku);

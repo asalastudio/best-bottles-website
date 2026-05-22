@@ -44,6 +44,12 @@ function sortByNewest<T extends { updatedAt?: number; orderDate?: number; create
     });
 }
 
+function verifyWriteToken(writeToken: string) {
+    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!expected) throw new Error("convex_write_token_not_configured");
+    if (writeToken !== expected) throw new Error("unauthorized_convex_write");
+}
+
 export const getShellData = query({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
@@ -224,10 +230,13 @@ export const listDraftsByOrg = query({
 
 export const createDraft = mutation({
     args: {
+        writeToken: v.string(),
         clerkOrgId: v.string(),
         name: v.optional(v.string()),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const now = Date.now();
         const draftId = await ctx.db.insert("portalDrafts", {
             clerkOrgId: args.clerkOrgId,
@@ -245,10 +254,13 @@ export const createDraft = mutation({
 
 export const createDraftFromOrder = mutation({
     args: {
+        writeToken: v.string(),
         clerkOrgId: v.string(),
         orderId: v.string(),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const sourceOrder = await ctx.db
             .query("portalOrders")
             .withIndex("by_orderId", (q) => q.eq("orderId", args.orderId))
@@ -358,10 +370,13 @@ export const getGraceWorkspaceByOrg = query({
 
 export const createGraceProject = mutation({
     args: {
+        writeToken: v.string(),
         clerkOrgId: v.string(),
         name: v.optional(v.string()),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const now = Date.now();
         const projectId = await ctx.db.insert("graceProjects", {
             clerkOrgId: args.clerkOrgId,
@@ -377,6 +392,7 @@ export const createGraceProject = mutation({
 
 export const saveGraceChatTurn = mutation({
     args: {
+        writeToken: v.string(),
         clerkOrgId: v.string(),
         clerkUserId: v.string(),
         projectId: v.id("graceProjects"),
@@ -384,6 +400,8 @@ export const saveGraceChatTurn = mutation({
         assistantMessage: v.string(),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const project = await ctx.db.get(args.projectId);
         if (!project || project.clerkOrgId !== args.clerkOrgId) {
             throw new Error("Project not found for this organization.");

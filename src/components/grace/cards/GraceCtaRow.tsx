@@ -43,6 +43,8 @@ export default function GraceCtaRow({
                 itemName: product.itemName,
                 quantity: 1,
                 unitPrice: product.webPrice1pc ?? null,
+                checkoutEligible: Boolean(product.shopifyVariantId),
+                shopifyVariantId: product.shopifyVariantId ?? null,
             },
         ]);
     };
