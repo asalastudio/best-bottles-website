@@ -70,6 +70,7 @@ export interface WebhookProductVariant {
     sku: string;
     title: string;
     price: string;
+    image_id: number | null;
     inventory_item_id: number;
     inventory_quantity: number;
     option1: string | null;
@@ -86,7 +87,7 @@ export interface WebhookProduct {
     body_html: string | null;
     vendor: string;
     tags: string;
-    images: Array<{ id: number; src: string; alt: string | null }>;
+    images: Array<{ id: number; src: string; alt: string | null; variant_ids?: number[] }>;
     options: Array<{ name: string; values: string[] }>;
     variants: WebhookProductVariant[];
 }

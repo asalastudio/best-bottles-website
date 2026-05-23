@@ -2,8 +2,8 @@ import { getServerSideSitemap, ISitemapField } from "next-sitemap";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
 import { client as sanityClient, isSanityConfigured } from "@/sanity/lib/client";
+import { SITE_URL } from "@/lib/seo";
 
-const SITE_URL = "https://www.bestbottles.com";
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
 export async function GET() {

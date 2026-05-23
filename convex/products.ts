@@ -1,11 +1,20 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import type { Doc, Id } from "./_generated/dataModel";
 import {
     filterGroupedComponentsByFitmentRule,
     normalizeComponentsByType,
     selectBestFitmentRule,
 } from "./componentUtils";
+
+function isSanityCdnUrl(value: string) {
+    try {
+        return new URL(value).hostname === "cdn.sanity.io";
+    } catch {
+        return value.includes("cdn.sanity.io/");
+    }
+}
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PRODUCT QUERIES — Powers the Homepage + Catalog + PDP
@@ -329,6 +338,63 @@ export const getCatalogProducts = query({
     },
 });
 
+const toCatalogProductIndexRow = (product: Doc<"products">) => ({
+    _id: product._id,
+    _creationTime: product._creationTime,
+    websiteSku: product.websiteSku,
+    graceSku: product.graceSku,
+    productId: product.productId,
+    category: product.category,
+    family: product.family,
+    color: product.color,
+    capacity: product.capacity,
+    capacityMl: product.capacityMl,
+    capacityOz: product.capacityOz,
+    heightWithCap: product.heightWithCap,
+    heightWithoutCap: product.heightWithoutCap,
+    diameter: product.diameter,
+    neckThreadSize: product.neckThreadSize,
+    applicator: product.applicator,
+    capStyle: product.capStyle,
+    capColor: product.capColor,
+    trimColor: product.trimColor,
+    bottleCollection: product.bottleCollection,
+    itemName: product.itemName,
+    itemDescription: product.itemDescription,
+    useCaseDescription: product.useCaseDescription,
+    imageUrl: product.imageUrl,
+    imageUrlCapOff: product.imageUrlCapOff,
+    stockStatus: product.stockStatus,
+    verified: product.verified,
+    productGroupId: product.productGroupId,
+});
+
+/**
+ * Lightweight, paginated product index for Madison Studio SKU matching.
+ *
+ * Do not use `getCatalogProducts` for all-product reads from Madison: full
+ * product rows can include large component payloads and exceed Convex's
+ * per-execution read byte limit. This query pages through the table and
+ * returns only the fields Madison needs for crosswalk/finish validation.
+ */
+export const getCatalogProductIndexPage = query({
+    args: {
+        cursor: v.union(v.string(), v.null()),
+        limit: v.optional(v.number()),
+    },
+    handler: async (ctx, args) => {
+        const result = await ctx.db.query("products").paginate({
+            cursor: args.cursor,
+            numItems: Math.min(Math.max(args.limit ?? 150, 1), 200),
+        });
+
+        return {
+            ...result,
+            page: result.page.map(toCatalogProductIndexRow),
+        };
+    },
+});
+
 /**
  * Full-text search for the catalog search bar.
  */
@@ -474,6 +540,76 @@ export const getCatalogGroupPrimarySkus = query({
 });
 
 /**
+ * Returns only the slim SKU fields needed for collection-card variant previews.
+ * The catalog calls this for currently visible groups instead of loading full PDP
+ * variant documents for every product group in the grid.
+ */
+export const getCatalogGroupVariantPreviewData = query({
+    args: {
+        groupIds: v.array(v.string()),
+    },
+    handler: async (ctx, args) => {
+        const groupIds = Array.from(new Set(args.groupIds)).slice(0, 240);
+        const results: {
+            groupId: string;
+            variants: Array<{
+                id: string;
+                itemName: string | null;
+                websiteSku: string | null;
+                graceSku: string | null;
+                imageUrl: string | null;
+                imageUrlCapOff: string | null;
+                color: string | null;
+                applicator: string | null;
+                capColor: string | null;
+                trimColor: string | null;
+                capStyle: string | null;
+                capHeight: string | null;
+                ballMaterial: string | null;
+            }>;
+        }[] = [];
+
+        const BATCH_SIZE = 16;
+        for (let i = 0; i < groupIds.length; i += BATCH_SIZE) {
+            const chunk = groupIds.slice(i, i + BATCH_SIZE);
+            const rows = await Promise.all(
+                chunk.map(async (groupId) => {
+                    const normalizedId = ctx.db.normalizeId("productGroups", groupId);
+                    if (!normalizedId) return { groupId, variants: [] };
+
+                    const variants = await ctx.db
+                        .query("products")
+                        .withIndex("by_productGroupId", (q) => q.eq("productGroupId", normalizedId))
+                        .collect();
+
+                    return {
+                        groupId,
+                        variants: variants.map((variant) => ({
+                            id: String(variant._id),
+                            itemName: variant.itemName ?? null,
+                            websiteSku: variant.websiteSku ?? null,
+                            graceSku: variant.graceSku ?? null,
+                            imageUrl: variant.imageUrl ?? null,
+                            imageUrlCapOff: variant.imageUrlCapOff ?? null,
+                            color: variant.color ?? null,
+                            applicator: variant.applicator ?? null,
+                            capColor: variant.capColor ?? null,
+                            trimColor: variant.trimColor ?? null,
+                            capStyle: variant.capStyle ?? null,
+                            capHeight: variant.capHeight ?? null,
+                            ballMaterial: variant.ballMaterial ?? null,
+                        })),
+                    };
+                }),
+            );
+            results.push(...rows);
+        }
+
+        return results;
+    },
+});
+
+/**
  * Paginated product group listing for the catalog page.
  * Mirrors getCatalogProducts but returns productGroups instead of flat SKUs.
  */
@@ -544,6 +680,131 @@ export const getProductGroup = query({
             .collect();
 
         return { group, variants };
+    },
+});
+
+/**
+ * Read-only Madison/image-pipeline preflight.
+ *
+ * Slugs are route labels, not durable product identity. This resolver lets
+ * Madison validate a requested group hero target before attempting a publish:
+ * prefer productGroupId, then exact slug, then SKU/productId, then a
+ * case-insensitive slug alias. It returns the canonical Convex slug so the UI
+ * can display "did you mean..." instead of failing after image upload.
+ */
+export const preflightProductGroupImageTarget = query({
+    args: {
+        productGroupId: v.optional(v.id("productGroups")),
+        productGroupSlug: v.optional(v.string()),
+        graceSku: v.optional(v.string()),
+        websiteSku: v.optional(v.string()),
+        productId: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        const requestedSlug = args.productGroupSlug?.trim();
+
+        const toPayload = (
+            group: Doc<"productGroups">,
+            method: "productGroupId" | "exact_slug" | "sku_or_product_id" | "case_insensitive_slug",
+            matchedProduct?: {
+                _id: unknown;
+                productId?: string | null;
+                graceSku?: string | null;
+                websiteSku?: string | null;
+            } | null,
+        ) => ({
+            success: true as const,
+            status: method === "case_insensitive_slug" ? "alias_resolved" as const : "exact_match" as const,
+            method,
+            requestedSlug: requestedSlug ?? null,
+            canonical: {
+                productGroupId: group._id,
+                productGroupSlug: group.slug,
+                displayName: group.displayName,
+                family: group.family,
+                capacityMl: group.capacityMl ?? null,
+                color: group.color ?? null,
+                primaryGraceSku: group.primaryGraceSku ?? null,
+                primaryWebsiteSku: group.primaryWebsiteSku ?? null,
+                heroImageUrl: group.heroImageUrl ?? null,
+            },
+            matchedProduct: matchedProduct
+                ? {
+                    productId: matchedProduct.productId ?? null,
+                    graceSku: matchedProduct.graceSku ?? null,
+                    websiteSku: matchedProduct.websiteSku ?? null,
+                }
+                : null,
+            warnings: method === "case_insensitive_slug"
+                ? [`Slug differs by case. Use canonical slug "${group.slug}".`]
+                : [],
+        });
+
+        if (args.productGroupId) {
+            const group = await ctx.db.get(args.productGroupId);
+            if (group) return toPayload(group, "productGroupId");
+        }
+
+        if (requestedSlug) {
+            const exact = await ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", requestedSlug))
+                .first();
+            if (exact) return toPayload(exact, "exact_slug");
+        }
+
+        const productLookups = [
+            args.graceSku
+                ? ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku!)).first()
+                : null,
+            args.websiteSku
+                ? ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku!)).first()
+                : null,
+            args.productId
+                ? ctx.db.query("products").withIndex("by_productId", (q) => q.eq("productId", args.productId!)).first()
+                : null,
+        ].filter(Boolean) as Array<Promise<{
+            _id: unknown;
+            productGroupId?: Id<"productGroups"> | null;
+            productId?: string | null;
+            graceSku?: string | null;
+            websiteSku?: string | null;
+        } | null>>;
+
+        for (const lookup of productLookups) {
+            const product = await lookup;
+            if (!product?.productGroupId) continue;
+            const group = await ctx.db.get(product.productGroupId);
+            if (group) return toPayload(group, "sku_or_product_id", product);
+        }
+
+        if (requestedSlug) {
+            const normalized = requestedSlug.toLowerCase();
+            const matches = (await ctx.db.query("productGroups").collect())
+                .filter((group) => group.slug.toLowerCase() === normalized);
+            if (matches.length === 1) return toPayload(matches[0], "case_insensitive_slug");
+            if (matches.length > 1) {
+                return {
+                    success: false as const,
+                    status: "ambiguous_alias" as const,
+                    requestedSlug,
+                    matches: matches.map((group) => ({
+                        productGroupId: group._id,
+                        productGroupSlug: group.slug,
+                        displayName: group.displayName,
+                    })),
+                    warnings: ["More than one product group matches this slug after normalization. Manual review required."],
+                };
+            }
+        }
+
+        return {
+            success: false as const,
+            status: "not_found" as const,
+            requestedSlug: requestedSlug ?? null,
+            matches: [],
+            warnings: ["No Convex product group matched the supplied ID, slug, SKU, or productId."],
+        };
     },
 });
 
@@ -628,15 +889,29 @@ export const updateProductGroupHeroImage = internalMutation({
         heroImageUrl: v.string(),
     },
     handler: async (ctx, args) => {
+        if (isSanityCdnUrl(args.heroImageUrl)) {
+            return { success: false, error: "sanity_product_image_rejected" as const };
+        }
+
         await ctx.db.patch(args.id, { heroImageUrl: args.heroImageUrl });
         return { success: true };
     },
 });
 
+function verifyProductImageWriteToken(writeToken: string) {
+    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!expected) {
+        throw new Error("product_image_write_token_not_configured");
+    }
+    if (writeToken !== expected) {
+        throw new Error("unauthorized_product_image_write");
+    }
+}
+
 /**
- * Public mutation called by Madison Studio's publish edge function after
- * uploading a per-SKU marketing image to Sanity. Patches products.imageUrl
- * for the matching websiteSku.
+ * Mutation called by Madison Studio's publish edge function after uploading a
+ * per-SKU product image to Shopify. Patches products.imageUrl for the matching
+ * websiteSku.
  *
  * Single-field convenience wrapper. For multi-view writes (cap-on + cap-off)
  * use `setVariantImages` below — it supports both fields in a single call
@@ -647,8 +922,19 @@ export const setImageUrl = mutation({
     args: {
         websiteSku: v.string(),
         imageUrl: v.string(),
+        writeToken: v.string(),
     },
     handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        if (isSanityCdnUrl(args.imageUrl)) {
+            return {
+                success: false,
+                websiteSku: args.websiteSku,
+                error: "sanity_product_image_rejected" as const,
+            };
+        }
+
         const product = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
@@ -690,8 +976,22 @@ export const setVariantImages = mutation({
         websiteSku: v.string(),
         imageUrl: v.optional(v.string()),
         imageUrlCapOff: v.optional(v.string()),
+        writeToken: v.string(),
     },
     handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        if (
+            (args.imageUrl && isSanityCdnUrl(args.imageUrl)) ||
+            (args.imageUrlCapOff && isSanityCdnUrl(args.imageUrlCapOff))
+        ) {
+            return {
+                success: false,
+                websiteSku: args.websiteSku,
+                error: "sanity_product_image_rejected" as const,
+            };
+        }
+
         if (!args.imageUrl && !args.imageUrlCapOff) {
             return {
                 success: false,
@@ -700,12 +1000,12 @@ export const setVariantImages = mutation({
             };
         }
 
-        const product = await ctx.db
+        const products = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
-            .first();
+            .collect();
 
-        if (!product) {
+        if (products.length === 0) {
             return {
                 success: false,
                 websiteSku: args.websiteSku,
@@ -718,23 +1018,31 @@ export const setVariantImages = mutation({
         const variantPatch: { imageUrl?: string; imageUrlCapOff?: string } = {};
         if (args.imageUrl) variantPatch.imageUrl = args.imageUrl;
         if (args.imageUrlCapOff) variantPatch.imageUrlCapOff = args.imageUrlCapOff;
-        await ctx.db.patch(product._id, variantPatch);
+        await Promise.all(products.map((product) => ctx.db.patch(product._id, variantPatch)));
 
         // Propagate the primary view to the group's heroImageUrl when this
         // SKU is the group's designated primary. Skipped for cap-off-only
         // writes — the catalog grid card never renders the cap-off view.
         let groupAlsoUpdated = false;
-        if (args.imageUrl && product.productGroupId) {
-            const group = await ctx.db.get(product.productGroupId);
-            if (group && group.primaryWebsiteSku === args.websiteSku) {
-                await ctx.db.patch(group._id, { heroImageUrl: args.imageUrl });
-                groupAlsoUpdated = true;
+        if (args.imageUrl) {
+            const groupIds = new Set(
+                products
+                    .map((product) => product.productGroupId)
+                    .filter((groupId): groupId is Id<"productGroups"> => Boolean(groupId)),
+            );
+            for (const groupId of groupIds) {
+                const group = await ctx.db.get(groupId);
+                if (group && group.primaryWebsiteSku === args.websiteSku) {
+                    await ctx.db.patch(group._id, { heroImageUrl: args.imageUrl });
+                    groupAlsoUpdated = true;
+                }
             }
         }
 
         return {
             success: true,
             websiteSku: args.websiteSku,
+            patchedCount: products.length,
             patched: {
                 imageUrl: !!args.imageUrl,
                 imageUrlCapOff: !!args.imageUrlCapOff,
@@ -839,7 +1147,7 @@ export const getApplicatorSiblings = query({
         const currentSuffix = APPLICATOR_BUCKET_SUFFIXES.find((s) => args.excludeSlug.endsWith(s));
         const hasKnownSuffix = (slug: string) => APPLICATOR_BUCKET_SUFFIXES.some((s) => slug.endsWith(s));
 
-        return all.filter(
+        const siblings = all.filter(
             (g) =>
                 g.capacityMl === args.capacityMl &&
                 g.color === args.color &&
@@ -851,6 +1159,21 @@ export const getApplicatorSiblings = query({
                     : hasKnownSuffix(g.slug)           // current has no suffix (cap only) → show all suffixed groups
                 )
         );
+
+        return await Promise.all(siblings.map(async (g) => {
+            if (g.heroImageUrl) return g;
+
+            const variants = await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", g._id))
+                .collect();
+            const representative = variants.find((variant) => variant.imageUrl) ?? variants.find((variant) => variant.imageUrlCapOff);
+
+            return {
+                ...g,
+                heroImageUrl: representative?.imageUrl ?? representative?.imageUrlCapOff ?? null,
+            };
+        }));
     },
 });
 
@@ -1197,6 +1520,3 @@ export const getCatalogIntegrityBatch = query({
         };
     },
 });
-
-
-

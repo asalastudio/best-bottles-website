@@ -28,6 +28,7 @@ import type * as graceSearchUtils from "../graceSearchUtils.js";
 import type * as graceShortlists from "../graceShortlists.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
 import type * as graceUploads from "../graceUploads.js";
+import type * as imageReconciliation from "../imageReconciliation.js";
 import type * as importMissingLiveProducts from "../importMissingLiveProducts.js";
 import type * as knowledge from "../knowledge.js";
 import type * as migrations from "../migrations.js";
@@ -66,6 +67,7 @@ declare const fullApi: ApiFromModules<{
   graceShortlists: typeof graceShortlists;
   graceToolDefs: typeof graceToolDefs;
   graceUploads: typeof graceUploads;
+  imageReconciliation: typeof imageReconciliation;
   importMissingLiveProducts: typeof importMissingLiveProducts;
   knowledge: typeof knowledge;
   migrations: typeof migrations;

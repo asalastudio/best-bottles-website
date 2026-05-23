@@ -57,9 +57,13 @@ export async function POST(req: NextRequest) {
         }
 
         const convex = getConvex();
+        const writeToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+        if (!writeToken) {
+            return NextResponse.json({ error: "Upload service is not configured." }, { status: 500 });
+        }
 
         // Step 1 — get one-shot upload URL from Convex storage
-        const uploadUrl = await convex.mutation(api.graceUploads.generateUploadUrl, {});
+        const uploadUrl = await convex.mutation(api.graceUploads.generateUploadUrl, { writeToken });
 
         // Step 2 — POST the file blob to that URL
         const upload = await fetch(uploadUrl, {
@@ -74,6 +78,7 @@ export async function POST(req: NextRequest) {
 
         // Step 3 — register the upload + get serving URL
         const record = await convex.mutation(api.graceUploads.recordUpload, {
+            writeToken,
             blobId: storageId,
             mime: file.type,
             size: file.size,

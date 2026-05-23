@@ -1,4 +1,4 @@
-import { mutation, action, query, internalMutation, internalQuery } from "./_generated/server";
+import { action, query, internalMutation, internalQuery } from "./_generated/server";
 import { v } from "convex/values";
 import { api, internal } from "./_generated/api";
 import type { Doc, Id } from "./_generated/dataModel";
@@ -2320,7 +2320,7 @@ export const checkMigrationStatus = action({
 // Run: npx convex run migrations:patchKnowledgeBase
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const patchKnowledgeBase = mutation({
+export const patchKnowledgeBase = internalMutation({
     args: {},
     handler: async (ctx) => {
         const patched: string[] = [];
@@ -2430,7 +2430,7 @@ CRITICAL RULE: Thread size must match exactly. A 18-415 closure will not fit a 2
  * 
  * After running: rebuild product groups to consolidate siblings.
  */
-export const normalizeBlueColorVariants = mutation({
+export const normalizeBlueColorVariants = internalMutation({
     args: {
         cursor: v.optional(v.string()),
         batchSize: v.optional(v.number())
@@ -2485,7 +2485,7 @@ export const normalizeBlueColorVariants = mutation({
  *   family: "Plastic Bottle"
  *   bottleCollection: "Plastic Bottle Collection"
  */
-export const reclassifyPlasticBottleProducts = mutation({
+export const reclassifyPlasticBottleProducts = internalMutation({
     args: {
         cursor: v.optional(v.string()),
         batchSize: v.optional(v.number()),
@@ -2542,7 +2542,7 @@ export const reclassifyPlasticBottleProducts = mutation({
  * - Keep atomizers out of Cylinder/Slim family browsing.
  * - Group atomizers by capacity (5 ml and 10 ml) with color variants inside.
  */
-export const reclassifyAtomizerProducts = mutation({
+export const reclassifyAtomizerProducts = internalMutation({
     args: {
         cursor: v.optional(v.string()),
         batchSize: v.optional(v.number()),
@@ -2596,7 +2596,7 @@ export const reclassifyAtomizerProducts = mutation({
  *
  * This migration corrects those records to color = "Clear".
  */
-export const fixMisparsedSprayGlassColors = mutation({
+export const fixMisparsedSprayGlassColors = internalMutation({
     args: {
         cursor: v.optional(v.string()),
         batchSize: v.optional(v.number()),
@@ -2642,7 +2642,7 @@ export const fixMisparsedSprayGlassColors = mutation({
  * Populate the `shape` field for Decorative family products based on SKU patterns.
  * Heart, Tola, Marble, Pear — used by buildDisplayName for clean product titles.
  */
-export const enrichDecorativeShapes = mutation({
+export const enrichDecorativeShapes = internalMutation({
     args: {
         cursor: v.optional(v.string()),
         batchSize: v.optional(v.number()),
@@ -2683,7 +2683,7 @@ export const enrichDecorativeShapes = mutation({
  * Apply narrow, script-generated patches by websiteSku.
  * Intentionally constrained to a small set of low-risk fields.
  */
-export const applySafeWebsiteSkuPatches = mutation({
+export const applySafeWebsiteSkuPatches = internalMutation({
     args: {
         patches: v.array(
             v.object({
@@ -2817,7 +2817,7 @@ export const patchSwirlBatch = internalMutation({
     },
 });
 
-export const addMissingSwirlLtnBlk = mutation({
+export const addMissingSwirlLtnBlk = internalMutation({
     args: {},
     handler: async (ctx) => {
         const existing = await ctx.db
@@ -2908,7 +2908,7 @@ const COLLECTION_RENAMES: Record<string, string> = {
  * Paginated scan of products — fixes bottleCollection where it matches a known
  * duplicate name. Dry-run (apply=false) just counts without writing.
  */
-export const normalizeCollectionNames = mutation({
+export const normalizeCollectionNames = internalMutation({
     args: {
         cursor: v.union(v.string(), v.null()),
         batchSize: v.optional(v.number()),
@@ -2940,7 +2940,7 @@ export const normalizeCollectionNames = mutation({
 /**
  * Same fix for productGroups — all ~325 groups fit in one pass.
  */
-export const normalizeGroupCollectionNames = mutation({
+export const normalizeGroupCollectionNames = internalMutation({
     args: { apply: v.optional(v.boolean()) },
     handler: async (ctx, args) => {
         const apply = args.apply ?? false;
@@ -2975,7 +2975,7 @@ const COMPONENT_FIXES: Array<{ graceSku: string; family: string; bottleCollectio
  * Patches family + bottleCollection on the 5 misclassified component SKUs.
  * Dry-run by default (apply=false).
  */
-export const fixComponentMisclassifications = mutation({
+export const fixComponentMisclassifications = internalMutation({
     args: { apply: v.optional(v.boolean()) },
     handler: async (ctx, args) => {
         const apply = args.apply ?? false;
@@ -3014,7 +3014,7 @@ export const fixComponentMisclassifications = mutation({
  * Fixing category and clearing productGroupId lets the next grouping pass
  * re-assign them to the correct groups.
  */
-export const fixWrongGroupLinks = mutation({
+export const fixWrongGroupLinks = internalMutation({
     args: { apply: v.optional(v.boolean()) },
     handler: async (ctx, args) => {
         const apply = args.apply ?? false;
@@ -3092,7 +3092,7 @@ const VERIFIED_PRICE_PATCHES: Array<{ graceSku: string; webPrice1pc?: number; we
     { graceSku: "GB-GRN-GRN-20ML", webPrice1pc: 0.81, webPrice12pc: 0.77 }, // was $0.65
 ];
 
-export const applyVerifiedPricePatches = mutation({
+export const applyVerifiedPricePatches = internalMutation({
     args: {},
     handler: async (ctx) => {
         let updated = 0;
@@ -3124,7 +3124,7 @@ export const applyVerifiedPricePatches = mutation({
 // Run via: npx convex run migrations:addMissingElegant15mlMinaret
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const addMissingElegant15mlMinaret = mutation({
+export const addMissingElegant15mlMinaret = internalMutation({
     args: {},
     handler: async (ctx) => {
         const graceSku = "GB-ELG-CLR-15ML-MNR-MCPR";
@@ -3264,7 +3264,7 @@ const FROSTED_COLOR_CORRECTIONS = [
     { oldGraceSku: "LB-DVA-CLR-46ML-06", newGraceSku: "LB-DVA-FRS-46ML-06", itemName: "Diva 46 ml (1.56 oz) Clear Lotion Bottle" },
 ] as const;
 
-export const fixFrostedColorMismatches = mutation({
+export const fixFrostedColorMismatches = internalMutation({
     args: {},
     handler: async (ctx) => {
         let updated = 0, missing = 0;
@@ -3647,7 +3647,7 @@ const MISSING_PRODUCTS_20260304 = [
     },
 ] as const;
 
-export const addMissingProducts20260304 = mutation({
+export const addMissingProducts20260304 = internalMutation({
     args: {},
     handler: async (ctx) => {
         let inserted = 0, skipped = 0;
@@ -3715,7 +3715,7 @@ const MISSING_PRICE_PATCHES = [
     { graceSku: "CMP-ROC-WHT-03", webPrice1pc: 0.37, webPrice12pc: 4.22 },
 ] as const;
 
-export const fillMissingComponentPrices = mutation({
+export const fillMissingComponentPrices = internalMutation({
     args: {},
     handler: async (ctx) => {
         let updated = 0, missing = 0;
@@ -3755,7 +3755,7 @@ export const listNematSlugs = query({
     },
 });
 
-export const fixNematInternationSlugs = mutation({
+export const fixNematInternationSlugs = internalMutation({
     args: {},
     handler: async (ctx) => {
         const groups = await ctx.db.query("productGroups").collect();
@@ -4246,7 +4246,7 @@ const MISSING_COMPONENTS = [
     },
 ] as const;
 
-export const insertMissingComponents = mutation({
+export const insertMissingComponents = internalMutation({
     args: {},
     handler: async (ctx) => {
         let inserted = 0, skipped = 0;
@@ -4266,7 +4266,7 @@ export const insertMissingComponents = mutation({
 // Run BEFORE schema deployment via: npx convex run migrations:normalizeApplicatorValues
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const normalizeApplicatorValues = mutation({
+export const normalizeApplicatorValues = internalMutation({
     args: {},
     handler: async (ctx) => {
         const MAP: Record<string, string | null> = {
@@ -4303,7 +4303,7 @@ export const normalizeApplicatorValues = mutation({
     },
 });
 
-export const patchSingleStaleApplicator = mutation({
+export const patchSingleStaleApplicator = internalMutation({
     args: { cursor: v.optional(v.union(v.string(), v.null())) },
     handler: async (ctx, { cursor }) => {
         const MAP: Record<string, string | null> = {
@@ -4346,7 +4346,7 @@ const APPLICATOR_FILLS: Record<string, string> = {};
 // identified by its graceSku, without a full re-import.
 // ─────────────────────────────────────────────────────────────────────────────
 
-export const patchProductField = mutation({
+export const patchProductField = internalMutation({
     args: {
         graceSku: v.string(),
         field: v.string(),
@@ -4369,7 +4369,7 @@ export const patchProductField = mutation({
 // ─────────────────────────────────────────────────────────────────────────────
 
 /** Patch arbitrary fields on a productGroup by its _id. */
-export const patchProductGroupFields = mutation({
+export const patchProductGroupFields = internalMutation({
     args: { id: v.id("productGroups"), fields: v.any() },
     handler: async (ctx, { id, fields }) => {
         await ctx.db.patch(id, fields);
@@ -4378,7 +4378,7 @@ export const patchProductGroupFields = mutation({
 });
 
 /** Insert a single new productGroup. Idempotent: skips if slug already exists. */
-export const addProductGroup = mutation({
+export const addProductGroup = internalMutation({
     args: {
         slug: v.string(),
         displayName: v.string(),
@@ -4412,7 +4412,7 @@ export const addProductGroup = mutation({
  * Re-patch Boston Round groupDescription from capacity-keyed map.
  * Use when updating copy (e.g. removing em dashes). Descriptions keyed by capacityMl.
  */
-export const patchBostonRoundDescriptions = mutation({
+export const patchBostonRoundDescriptions = internalMutation({
     args: {
         descriptions: v.array(
             v.object({ capacityMl: v.number(), description: v.string() })
@@ -4448,7 +4448,7 @@ export const patchBostonRoundDescriptions = mutation({
  * Applicator-specific entries take precedence over capacity-only entries.
  * Applicator buckets: rollon, finemist, perfumespray, antiquespray, antiquespray-tassel, dropper, lotionpump, reducer, glasswand, glassapplicator, capclosure
  */
-export const patchFamilyDescriptions = mutation({
+export const patchFamilyDescriptions = internalMutation({
     args: {
         family: v.string(),
         descriptions: v.array(
@@ -4505,7 +4505,7 @@ export const patchFamilyDescriptions = mutation({
 });
 
 /** Patch arbitrary fields on a product by its _id. */
-export const patchProductById = mutation({
+export const patchProductById = internalMutation({
     args: { id: v.id("products"), fields: v.any() },
     handler: async (ctx, { id, fields }) => {
         await ctx.db.patch(id, fields);
@@ -4517,7 +4517,7 @@ export const patchProductById = mutation({
  * Patch the applicator field on all products belonging to a given set of
  * productGroup IDs. Used by the Fine Mist → Perfume Spray Pump capacity split.
  */
-export const patchVariantApplicatorBatch = mutation({
+export const patchVariantApplicatorBatch = internalMutation({
     args: {
         groupIds: v.array(v.id("productGroups")),
         fromApplicator: v.string(),
@@ -4546,7 +4546,7 @@ export const patchVariantApplicatorBatch = mutation({
  * Generic: patch a single string field on all products belonging to a given
  * set of productGroup IDs, but only where the current value matches fromValue.
  */
-export const patchVariantsFieldBatch = mutation({
+export const patchVariantsFieldBatch = internalMutation({
     args: {
         groupIds: v.array(v.id("productGroups")),
         field: v.string(),
@@ -4572,7 +4572,7 @@ export const patchVariantsFieldBatch = mutation({
 });
 
 /** Patch family (and optionally other fields) on all products that belong to a group. */
-export const patchVariantFamily = mutation({
+export const patchVariantFamily = internalMutation({
     args: {
         groupId: v.id("productGroups"),
         family: v.string(),
@@ -4589,7 +4589,7 @@ export const patchVariantFamily = mutation({
     },
 });
 
-export const insertMissingProduct = mutation({
+export const insertMissingProduct = internalMutation({
     args: { product: v.any() },
     handler: async (ctx, { product }) => {
         const existing = await ctx.db
@@ -5485,7 +5485,7 @@ export const fixAtomizerGroups = action({
             .map((p) => p.webPrice1pc ?? 0)
             .filter((p) => p > 0);
 
-        await ctx.runMutation(api.migrations.patchProductGroupFields, {
+        await ctx.runMutation(internal.migrations.patchProductGroupFields, {
             id: existing5mlGroup._id as any,
             fields: {
                 displayName: "5 ml Atomizer Bottle",
@@ -5502,7 +5502,7 @@ export const fixAtomizerGroups = action({
             .map((p) => p.webPrice1pc ?? 0)
             .filter((p) => p > 0);
 
-        await ctx.runMutation(api.migrations.patchProductGroupFields, {
+        await ctx.runMutation(internal.migrations.patchProductGroupFields, {
             id: existing10mlGroup._id as any,
             fields: {
                 variantCount: products10ml.length,
@@ -5567,7 +5567,7 @@ export const fixAtomizerGroups = action({
  *
  * Run: npx convex run migrations:fixAnomalousThreadSizes
  */
-export const fixAnomalousThreadSizes = mutation({
+export const fixAnomalousThreadSizes = internalMutation({
     args: {},
     handler: async (ctx) => {
         const VALID_THREAD_PATTERN = /^\d{1,3}[-/]\d{3,4}$|^\d{1,3}mm$/i;
@@ -5590,7 +5590,7 @@ export const fixAnomalousThreadSizes = mutation({
  * Fix anomalous neckThreadSize values in products table (paginated).
  * Run: npx convex run migrations:fixAnomalousThreadSizesProducts
  */
-export const fixAnomalousThreadSizesProducts = mutation({
+export const fixAnomalousThreadSizesProducts = internalMutation({
     args: { cursor: v.optional(v.string()) },
     handler: async (ctx, args) => {
         const VALID_THREAD_PATTERN = /^\d{1,3}[-/]\d{3,4}$|^\d{1,3}mm$/i;

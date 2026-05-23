@@ -13,10 +13,17 @@ import { v } from "convex/values";
  * Convex-owned fields like components, paperDollFamilyKey, or fitmentStatus.
  */
 
+function verifyWriteToken(writeToken: string) {
+    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!expected) throw new Error("convex_write_token_not_configured");
+    if (writeToken !== expected) throw new Error("unauthorized_convex_write");
+}
+
 // ─── Product Create / Update ────────────────────────────────────────────────
 
 export const syncProduct = mutation({
     args: {
+        writeToken: v.string(),
         shopifyProductId: v.number(),
         title: v.string(),
         handle: v.string(),
@@ -38,6 +45,7 @@ export const syncProduct = mutation({
                 sku: v.string(),
                 title: v.string(),
                 price: v.string(),
+                imageUrl: v.optional(v.union(v.string(), v.null())),
                 inventoryItemId: v.number(),
                 inventoryQuantity: v.number(),
                 option1: v.union(v.string(), v.null()),
@@ -47,6 +55,8 @@ export const syncProduct = mutation({
         ),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const shopifyGid = `gid://shopify/Product/${args.shopifyProductId}`;
         const now = Date.now();
 
@@ -124,6 +134,7 @@ export const syncProduct = mutation({
                 shopifyVariantId: `gid://shopify/ProductVariant/${variant.shopifyVariantId}`,
                 shopifyInventoryItemId: `gid://shopify/InventoryItem/${variant.inventoryItemId}`,
                 shopifyUpdatedAt: now,
+                ...(variant.imageUrl ? { imageUrl: variant.imageUrl } : {}),
             };
 
             if (existing) {
@@ -186,9 +197,12 @@ export const syncProduct = mutation({
 
 export const syncProductDelete = mutation({
     args: {
+        writeToken: v.string(),
         shopifyProductId: v.number(),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const shopifyGid = `gid://shopify/Product/${args.shopifyProductId}`;
 
         // Find the product group by shopifyProductId
@@ -225,11 +239,14 @@ export const syncProductDelete = mutation({
 
 export const syncInventoryLevel = mutation({
     args: {
+        writeToken: v.string(),
         inventoryItemId: v.number(),
         locationId: v.number(),
         available: v.number(),
     },
     handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
         const variantGid = `gid://shopify/InventoryItem/${args.inventoryItemId}`;
 
         // Find the product variant with this inventory item ID.

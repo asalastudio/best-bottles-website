@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { ProductCard } from "@/components/GraceContext";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import GraceCtaRow from "./GraceCtaRow";
 
 /**
@@ -61,6 +62,10 @@ export default function GraceProductCard({
 }: GraceProductCardProps) {
     const hero = product.heroImageUrl;
     const pdpHref = product.slug ? `/products/${product.slug}` : null;
+    const customerDisplayName = getCustomerFacingProductName({
+        variant: product,
+        fallbackName: product.itemName,
+    }).displayName;
 
     if (mode === "shortlist-tile") {
         return (
@@ -73,14 +78,14 @@ export default function GraceProductCard({
             >
                 <div className="relative aspect-[4/5] w-full bg-travertine">
                     {hero ? (
-                        <Image src={hero} alt={product.itemName} fill className="object-cover" sizes="120px" unoptimized />
+                        <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="120px" unoptimized />
                     ) : (
                         <FallbackThumb family={product.family} />
                     )}
                 </div>
                 <div className="px-2 py-1.5">
                     <div className="font-serif text-[11px] font-medium leading-tight truncate">
-                        {product.itemName}
+                        {customerDisplayName}
                     </div>
                     {product.capacity && (
                         <div className="text-[9px] text-slate uppercase tracking-wider mt-0.5">
@@ -105,14 +110,14 @@ export default function GraceProductCard({
             >
                 <div className="relative aspect-[4/5] w-full bg-travertine">
                     {hero ? (
-                        <Image src={hero} alt={product.itemName} fill className="object-cover" sizes="160px" unoptimized />
+                        <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="160px" unoptimized />
                     ) : (
                         <FallbackThumb family={product.family} />
                     )}
                 </div>
                 <div className="px-2.5 py-2">
                     <div className="font-serif text-[12.5px] font-medium tracking-[0.01em] leading-tight truncate group-hover:text-gold-dim transition-colors">
-                        {product.itemName}
+                        {customerDisplayName}
                     </div>
                     <div className="text-[9px] text-slate uppercase tracking-wider mt-0.5">
                         {product.family ?? ""}
@@ -140,7 +145,7 @@ export default function GraceProductCard({
                         title="Open product page"
                     >
                         {hero ? (
-                            <Image src={hero} alt={product.itemName} fill className="object-cover" sizes="84px" unoptimized />
+                            <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="84px" unoptimized />
                         ) : (
                             <FallbackThumb family={product.family} />
                         )}
@@ -148,7 +153,7 @@ export default function GraceProductCard({
                 ) : (
                     <div className="relative shrink-0 rounded-[2px] overflow-hidden bg-travertine" style={{ width: 84, height: 105 }}>
                         {hero ? (
-                            <Image src={hero} alt={product.itemName} fill className="object-cover" sizes="84px" unoptimized />
+                            <Image src={hero} alt={customerDisplayName} fill className="object-cover" sizes="84px" unoptimized />
                         ) : (
                             <FallbackThumb family={product.family} />
                         )}
@@ -160,11 +165,11 @@ export default function GraceProductCard({
                             href={pdpHref}
                             className="font-serif text-[15px] font-medium text-obsidian tracking-[0.01em] leading-tight hover:text-gold-dim transition-colors"
                         >
-                            {product.itemName}
+                            {customerDisplayName}
                         </Link>
                     ) : (
                         <div className="font-serif text-[15px] font-medium text-obsidian tracking-[0.01em] leading-tight">
-                            {product.itemName}
+                            {customerDisplayName}
                         </div>
                     )}
                     <div className="text-[10px] text-slate uppercase tracking-wider mt-1">

@@ -10,6 +10,7 @@ import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 
 const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+const convexWriteToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
 
 /**
  * POST /api/shopify/webhooks
@@ -31,6 +32,11 @@ export async function POST(req: NextRequest) {
         return new Response("Unauthorized", { status: 401 });
     }
 
+    if (!convexWriteToken) {
+        console.error("[Shopify Webhook] BEST_BOTTLES_CONVEX_WRITE_TOKEN is not configured");
+        return new Response("Server not configured", { status: 500 });
+    }
+
     const topic = parseWebhookTopic(topicHeader);
     if (!topic) {
         console.warn("[Shopify Webhook] Unknown topic:", topicHeader);
@@ -44,7 +50,19 @@ export async function POST(req: NextRequest) {
             case "products/create":
             case "products/update": {
                 const product = body as WebhookProduct;
+                const imageById = new Map<number, string>();
+                const imageByVariantId = new Map<number, string>();
+                for (const image of product.images ?? []) {
+                    imageById.set(image.id, image.src);
+                    for (const variantId of image.variant_ids ?? []) {
+                        if (!imageByVariantId.has(variantId)) {
+                            imageByVariantId.set(variantId, image.src);
+                        }
+                    }
+                }
+
                 await convex.mutation(api.shopifySync.syncProduct, {
+                    writeToken: convexWriteToken,
                     shopifyProductId: product.id,
                     title: product.title,
                     handle: product.handle,
@@ -63,6 +81,10 @@ export async function POST(req: NextRequest) {
                         sku: v.sku,
                         title: v.title,
                         price: v.price,
+                        imageUrl:
+                            (v.image_id ? imageById.get(v.image_id) : null) ??
+                            imageByVariantId.get(v.id) ??
+                            null,
                         inventoryItemId: v.inventory_item_id,
                         inventoryQuantity: v.inventory_quantity,
                         option1: v.option1,
@@ -79,6 +101,7 @@ export async function POST(req: NextRequest) {
             case "products/delete": {
                 const deleted = body as WebhookProductDelete;
                 await convex.mutation(api.shopifySync.syncProductDelete, {
+                    writeToken: convexWriteToken,
                     shopifyProductId: deleted.id,
                 });
                 console.log(
@@ -90,6 +113,7 @@ export async function POST(req: NextRequest) {
             case "inventory_levels/update": {
                 const level = body as WebhookInventoryLevel;
                 await convex.mutation(api.shopifySync.syncInventoryLevel, {
+                    writeToken: convexWriteToken,
                     inventoryItemId: level.inventory_item_id,
                     locationId: level.location_id,
                     available: level.available ?? 0,

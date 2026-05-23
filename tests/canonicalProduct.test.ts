@@ -94,6 +94,30 @@ describe("canonical product model", () => {
         expect(variant.dataQualityFlags).toContain("color_mismatch_group_variant");
     });
 
+    it("blocks Sanity CDN URLs from product and variant image fields", () => {
+        const sanityUrl = "https://cdn.sanity.io/images/project/production/product.png";
+
+        const group = buildCanonicalProductGroup({
+            _id: "group-1",
+            slug: "empire-50ml-clear-18-415-perfumespray",
+            displayName: "50 ml Clear Empire Bottle",
+            heroImageUrl: sanityUrl,
+        });
+        const variant = buildCanonicalProductVariant({
+            _id: "variant-1",
+            graceSku: "GB-EMP-CLR-50ML-SPR-SGLD",
+            websiteSku: "GBEmp50SpryShnGl",
+            imageUrl: sanityUrl,
+            imageUrlCapOff: sanityUrl,
+        });
+
+        expect(group.heroImageUrl).toBeNull();
+        expect(group.dataQualityFlags).toContain("sanity_product_image_blocked");
+        expect(variant.imageUrl).toBeNull();
+        expect(variant.imageUrlCapOff).toBeNull();
+        expect(variant.dataQualityFlags).toContain("sanity_product_image_blocked");
+    });
+
     it("does not use sprayer group copy for a roll-on variant", () => {
         const description = chooseCanonicalProductDescription({
             groupDescription: "A compact fine mist sprayer bottle for fragrance samples.",

@@ -21,32 +21,57 @@ export async function POST(req: NextRequest) {
         items?: Array<{ sku: string; quantity: number }>;
     };
 
-    if (!body.items?.length) {
+    const requestedItems = (body.items ?? [])
+        .map((item) => ({
+            sku: String(item.sku ?? "").trim(),
+            quantity: Number(item.quantity),
+        }))
+        .filter((item) => item.sku && Number.isFinite(item.quantity) && item.quantity > 0);
+
+    if (!requestedItems.length) {
         return Response.json({ error: "No items provided" }, { status: 400 });
     }
 
     try {
-        const skus = body.items.map((i) => i.sku);
+        const skus = requestedItems.map((i) => i.sku);
         const variants = await resolveVariantsBySkus(skus);
+        const unavailableSkus = variants.filter((v) => !v.available).map((v) => v.sku);
 
         const skuToQuantity = Object.fromEntries(
-            body.items.map((i) => [i.sku, i.quantity]),
+            requestedItems.map((i) => [i.sku, i.quantity]),
         );
 
-        const checkoutItems = variants.map((v) => ({
-            variantId: v.variantId,
-            quantity: skuToQuantity[v.sku] ?? 1,
-        }));
+        const checkoutItems = variants
+            .filter((v) => v.available)
+            .map((v) => ({
+                variantId: v.variantId,
+                quantity: skuToQuantity[v.sku] ?? 1,
+            }));
 
         const checkoutUrl =
             checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null;
+        const unmatchedSkus = skus.filter(
+            (s) => !variants.some((v) => v.sku === s),
+        );
+
+        if (!checkoutUrl) {
+            return Response.json(
+                {
+                    error: "No checkout-ready Shopify variants found",
+                    variants,
+                    checkoutUrl,
+                    unmatchedSkus,
+                    unavailableSkus,
+                },
+                { status: 409 },
+            );
+        }
 
         return Response.json({
             variants,
             checkoutUrl,
-            unmatchedSkus: skus.filter(
-                (s) => !variants.some((v) => v.sku === s),
-            ),
+            unmatchedSkus,
+            unavailableSkus,
         });
     } catch (err) {
         console.error("[shopify/resolve-variants] Error:", err);

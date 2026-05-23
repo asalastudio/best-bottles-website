@@ -13,6 +13,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import { useGrace } from "@/components/useGrace";
+import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -36,39 +37,19 @@ import {
     catalogSearchScore,
 } from "@/lib/catalogFilters";
 import { buildCanonicalProductGroup } from "@/lib/canonicalProduct";
+import {
+    getProductCardVariantPreviews,
+    type ProductCardVariantPreview,
+    type ProductCardVariantPreviewSource,
+} from "@/lib/products/product-card-variant-previews";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
 const PAGE_SIZE = 24;
 const SEARCH_DEBOUNCE_MS = 300;
 const MAX_VISIBLE_LIMIT = 240;
-
-const PACKAGING_ANSWER_BLOCKS = [
-    {
-        question: "What does neck size mean?",
-        answer: "Neck size is the bottle opening and thread finish used to match a bottle with a compatible cap, reducer, sprayer, dropper, or roller. Treat matching neck sizes as the first fitment check, then verify the selected SKU before ordering.",
-        href: "/resources#neck-size",
-        gracePrompt: "Can you explain neck size and help me find bottles and applicators that match?",
-    },
-    {
-        question: "How should I find a 10 ml roll-on bottle for perfume oil?",
-        answer: "Start with the Roll-On applicator filter and small capacities around 6-15 ml, then compare neck size, roller style, cap finish, and case quantity on the product page before adding to cart.",
-        href: "/catalog?applicators=rollon&search=10%20ml%20roll-on",
-        gracePrompt: "I need a 10 ml roll-on bottle for perfume oil. Help me compare compatible options.",
-    },
-    {
-        question: "Can I use any applicator with any bottle?",
-        answer: "No. Applicators and closures need to be compatible with the bottle neck finish and the selected product configuration. If compatibility is not clearly shown, confirm it with Grace or the Best Bottles team before ordering.",
-        href: "/catalog?applicators=rollon,finemist,dropper",
-        gracePrompt: "Can you check applicator compatibility for the bottle I am considering?",
-    },
-    {
-        question: "How many bottles come in a case?",
-        answer: "Case quantity can vary by product and selected SKU. Use the product detail page for the specific bottle, color, size, and applicator configuration you plan to order.",
-        href: "/catalog",
-        gracePrompt: "Can you help me verify case quantity for a product before I order?",
-    },
-] as const;
 
 // ─── Sanity Family Banner ─────────────────────────────────────────────────────
 
@@ -182,6 +163,11 @@ interface CatalogGroupPrimarySku {
     graceSku: string | null;
 }
 
+interface CatalogGroupVariantPreviewData {
+    groupId: string;
+    variants: ProductCardVariantPreviewSource[];
+}
+
 interface Facets {
     categories: Record<string, number>;
     collections: Record<string, number>;
@@ -210,21 +196,6 @@ function formatApplicatorLabels(applicators: string[] | null | undefined): strin
     const values = (applicators ?? []).filter((value) => value && value !== "Cap/Closure");
     if (values.length === 0) return "—";
     return values.slice(0, 2).join(", ") + (values.length > 2 ? ` +${values.length - 2}` : "");
-}
-
-function buildCatalogFaqJsonLd() {
-    return {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: PACKAGING_ANSWER_BLOCKS.map((item) => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-            },
-        })),
-    };
 }
 
 function clampVisibleLimit(rawLimit: string | null): number {
@@ -271,8 +242,25 @@ function SkeletonGrid() {
 
 // ─── Product Group Card ──────────────────────────────────────────────────────
 
-function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGroup; index: number; applicatorParam?: string | null }) {
-    const href = applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
+function productGroupHref(group: CatalogGroup, applicatorParam?: string | null): string {
+    return applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
+}
+
+function ProductGroupCard({
+    group,
+    index,
+    applicatorParam,
+    variantPreviews,
+    displayName,
+}: {
+    group: CatalogGroup;
+    index: number;
+    applicatorParam?: string | null;
+    variantPreviews?: ProductCardVariantPreview[];
+    displayName?: string;
+}) {
+    const href = productGroupHref(group, applicatorParam);
+    const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const cardSpecs = [
         { label: "Size", value: formatCatalogSpec(group.capacity) },
         { label: "Color", value: formatCatalogSpec(group.color) },
@@ -281,44 +269,23 @@ function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGro
     ];
 
     return (
-        <Link href={href}>
-            <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-                className="group cursor-pointer flex flex-col h-full bg-white rounded-sm border border-champagne/40 overflow-hidden hover:border-muted-gold hover:shadow-lg transition-all duration-300"
-            >
-                <div className="relative aspect-[10/11] bg-[#efe2d0] w-full overflow-hidden flex items-center justify-center">
-                    {group.heroImageUrl ? (
-                        <Image
-                            src={group.heroImageUrl}
-                            alt={group.displayName}
-                            fill
-                            className="object-contain transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-                            sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                            unoptimized
-                        />
-                    ) : (
-                        <div className="flex flex-col items-center justify-center text-center p-4">
-                            <Package className="w-12 h-12 text-champagne mb-3" strokeWidth={1} />
-                            <p className="text-[10px] text-slate/60 uppercase tracking-wider font-medium leading-tight max-w-[120px]">
-                                {group.family}
-                            </p>
-                        </div>
-                    )}
+        <motion.article
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
+            className="group/catalog-card flex h-full flex-col overflow-hidden rounded-sm border border-champagne/40 bg-white transition-all duration-300 hover:border-muted-gold hover:shadow-lg"
+        >
+            <ProductCardImagePreview
+                productTitle={customerDisplayName}
+                defaultImage={{ url: group.heroImageUrl, alt: customerDisplayName }}
+                placeholderLabel={group.family}
+                variantPreviews={variantPreviews}
+                productHref={href}
+            />
 
-                    {group.variantCount > 1 && (
-                        <div className="absolute top-3 left-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                            <span className="inline-flex items-center px-2 py-0.5 text-[10px] uppercase tracking-wider font-bold rounded-sm bg-obsidian/60 text-white">
-                                {group.variantCount} variants
-                            </span>
-                        </div>
-                    )}
-                </div>
-
-                <div className="p-5 flex flex-col flex-1">
-                    <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{group.displayName}</h4>
+            <Link href={href} className="flex flex-1 flex-col p-5">
+                    <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{customerDisplayName}</h4>
                     <dl data-testid="catalog-card-specs" className="grid grid-cols-2 gap-x-3 gap-y-2 mb-4 text-[11px]">
                         {cardSpecs.map((spec) => (
                             <div key={spec.label} className="min-w-0">
@@ -328,9 +295,8 @@ function ProductGroupCard({ group, index, applicatorParam }: { group: CatalogGro
                         ))}
                     </dl>
                     <span className="font-semibold text-obsidian text-lg mt-auto">from {formatPrice(group.priceRangeMin)}/ea</span>
-                </div>
-            </motion.div>
-        </Link>
+            </Link>
+        </motion.article>
     );
 }
 
@@ -767,58 +733,6 @@ function FilterSidebarContent({
     );
 }
 
-function CatalogAnswerBlocks({
-    onAskGrace,
-}: {
-    onAskGrace: (prompt: string) => void;
-}) {
-    return (
-        <section
-            className="mb-5 sm:mb-8 rounded-xl border border-champagne/50 bg-white/80 p-4 sm:p-5"
-            aria-labelledby="catalog-answer-blocks-heading"
-            data-testid="catalog-answer-blocks"
-        >
-            <div className="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between mb-4">
-                <div>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-muted-gold font-bold mb-1">
-                        Packaging Answers
-                    </p>
-                    <h2 id="catalog-answer-blocks-heading" className="font-serif text-xl sm:text-2xl text-obsidian font-medium">
-                        Quick answers before you choose
-                    </h2>
-                </div>
-                <p className="text-xs text-slate max-w-md">
-                    Crawlable guidance for common packaging decisions, with Grace ready when fitment depends on a specific product.
-                </p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3">
-                {PACKAGING_ANSWER_BLOCKS.map((item) => (
-                    <article key={item.question} className="rounded-lg border border-champagne/40 bg-bone/50 p-4 flex flex-col min-h-[220px]">
-                        <h3 className="font-serif text-lg leading-snug text-obsidian mb-2">{item.question}</h3>
-                        <p className="text-xs leading-relaxed text-slate mb-4">{item.answer}</p>
-                        <div className="mt-auto flex flex-col gap-2">
-                            <Link
-                                href={item.href}
-                                className="inline-flex min-h-11 items-center justify-center rounded-sm border border-champagne bg-white px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-obsidian hover:border-muted-gold hover:text-muted-gold transition-colors"
-                            >
-                                Explore products
-                            </Link>
-                            <button
-                                type="button"
-                                onClick={() => onAskGrace(item.gracePrompt)}
-                                className="inline-flex min-h-11 items-center justify-center rounded-sm bg-obsidian px-3 py-2 text-[10px] uppercase tracking-wider font-bold text-white hover:bg-muted-gold transition-colors"
-                                data-testid="catalog-answer-grace-cta"
-                            >
-                                Ask Grace
-                            </button>
-                        </div>
-                    </article>
-                ))}
-            </div>
-        </section>
-    );
-}
-
 // ─── View Toggle ─────────────────────────────────────────────────────────────
 
 function ViewToggle({
@@ -870,6 +784,7 @@ function LineItemRow({
     applicatorParam?: string | null;
 }) {
     const [quantity, setQuantity] = useState(1);
+    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = (() => {
         const params = new URLSearchParams();
         if (applicatorParam) params.set("applicator", applicatorParam);
@@ -895,7 +810,7 @@ function LineItemRow({
                         {group.heroImageUrl ? (
                             <Image
                                 src={group.heroImageUrl}
-                                alt={group.displayName}
+                                alt={customerDisplayName}
                                 fill
                                 className="object-contain p-1"
                                 sizes="56px"
@@ -910,7 +825,7 @@ function LineItemRow({
                             {group.category}
                         </p>
                         <p className="font-serif text-sm text-obsidian font-medium leading-snug group-hover:text-muted-gold transition-colors truncate max-w-[280px]">
-                            {group.displayName}
+                            {customerDisplayName}
                         </p>
                         {group.family && (
                             <p className="text-[10px] text-slate">{group.family}</p>
@@ -1013,6 +928,7 @@ function LineItemMobileCard({
 }) {
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
+    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = (() => {
         const params = new URLSearchParams();
         if (applicatorParam) params.set("applicator", applicatorParam);
@@ -1037,7 +953,7 @@ function LineItemMobileCard({
                     {group.heroImageUrl ? (
                         <Image
                             src={group.heroImageUrl}
-                            alt={group.displayName}
+                            alt={customerDisplayName}
                             fill
                             className="object-contain p-1"
                             sizes="56px"
@@ -1055,7 +971,7 @@ function LineItemMobileCard({
                     </p>
                     <Link href={href}>
                         <p className="font-serif text-sm text-obsidian font-medium leading-tight truncate hover:text-muted-gold transition-colors">
-                            {group.displayName}
+                            {customerDisplayName}
                         </p>
                     </Link>
                     <div className="flex items-center gap-2 mt-1">
@@ -1277,7 +1193,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     const router = useRouter();
     const pathname = usePathname();
     const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-    const { open: openGrace, setInput: setGraceInput } = useGrace();
+    const { open: openGrace } = useGrace();
 
     const isGraceNav = searchParams.get("grace") === "1";
     const [graceBannerDismissed, setGraceBannerDismissed] = useState(false);
@@ -1330,7 +1246,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     const taxonomy = useQuery(api.products.getCatalogTaxonomy);
 
     const allGroups = useMemo(() => {
-        return rawGroups?.map((group) => {
+        return rawGroups?.filter((group) => !getLegacyProductRouteOverride(group.slug)).map((group) => {
             const canonical = buildCanonicalProductGroup(group, [], "catalog-ui");
             return {
                 ...group,
@@ -1544,7 +1460,69 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         return { filtered: result, facets: facetData, totalCount: result.length };
     }, [allGroups, filters, sortBy, skuMap]);
 
-    const visibleProducts = filtered.slice(0, visibleCount);
+    const visibleProducts = useMemo(() => filtered.slice(0, visibleCount), [filtered, visibleCount]);
+    const visibleProductIds = useMemo(() => visibleProducts.map((group) => group._id), [visibleProducts]);
+    const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
+    const variantPreviewRows = useQuery(
+        api.products.getCatalogGroupVariantPreviewData,
+        viewMode === "visual" && visibleProductIds.length > 0 ? { groupIds: visibleProductIds } : "skip",
+    ) as CatalogGroupVariantPreviewData[] | undefined;
+    const variantPreviewMap = useMemo(() => {
+        const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
+        const next = new Map<string, ProductCardVariantPreview[]>();
+
+        for (const row of variantPreviewRows ?? []) {
+            const group = groupById.get(row.groupId);
+            if (!group) continue;
+            const href = productGroupHref(group, visualApplicatorParam);
+            const representativeVariant =
+                row.variants.find((variant) => variant.websiteSku === skuMap.get(group._id) || variant.graceSku === skuMap.get(group._id)) ??
+                row.variants[0] ??
+                null;
+            const customerDisplayName = getCustomerFacingProductName({
+                group,
+                variant: representativeVariant,
+                fallbackName: group.displayName,
+            }).displayName;
+            next.set(
+                row.groupId,
+                getProductCardVariantPreviews(row.variants, {
+                    productTitle: customerDisplayName,
+                    defaultImageUrl: group.heroImageUrl,
+                    groupColor: group.color,
+                    productHref: href,
+                }),
+            );
+        }
+
+        return next;
+    }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap]);
+    const customerNameMap = useMemo(() => {
+        const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
+        const next = new Map<string, string>();
+
+        for (const row of variantPreviewRows ?? []) {
+            const group = groupById.get(row.groupId);
+            if (!group) continue;
+            const representativeVariant =
+                row.variants.find((variant) => variant.websiteSku === skuMap.get(group._id) || variant.graceSku === skuMap.get(group._id)) ??
+                row.variants[0] ??
+                null;
+            next.set(row.groupId, getCustomerFacingProductName({
+                group,
+                variant: representativeVariant,
+                fallbackName: group.displayName,
+            }).displayName);
+        }
+
+        for (const group of visibleProducts) {
+            if (!next.has(group._id)) {
+                next.set(group._id, getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName);
+            }
+        }
+
+        return next;
+    }, [variantPreviewRows, visibleProducts, skuMap]);
     const hasMore = visibleCount < filtered.length;
     const isLoading = allGroups === undefined;
     const activeCount = activeFilterCount(filters);
@@ -1613,14 +1591,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         [handleFilterChange, sortBy],
     );
 
-    const handleAskGrace = useCallback(
-        (prompt: string) => {
-            setGraceInput(prompt);
-            openGrace();
-        },
-        [openGrace, setGraceInput],
-    );
-
     const toggleCategory = useCallback((cat: string) => {
         setExpandedCategories((prev) => ({ ...prev, [cat]: prev[cat] === false ? true : !prev[cat] ? false : !prev[cat] }));
     }, []);
@@ -1666,10 +1636,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
 
     return (
         <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(buildCatalogFaqJsonLd()) }}
-            />
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
 
             <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
@@ -1969,8 +1935,6 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                             </div>
                         )}
 
-                        <CatalogAnswerBlocks onAskGrace={handleAskGrace} />
-
                         {/* Loading */}
                         {isLoading && <SkeletonGrid />}
 
@@ -2062,7 +2026,9 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         key={group._id}
                                         group={group}
                                         index={pIndex}
-                                        applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                        applicatorParam={visualApplicatorParam}
+                                        variantPreviews={variantPreviewMap.get(group._id)}
+                                        displayName={customerNameMap.get(group._id)}
                                     />
                                 ))}
                             </div>
@@ -2077,7 +2043,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         <LineItemTable
                                             groups={visibleProducts}
                                             skuMap={skuMap}
-                                            applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                            applicatorParam={visualApplicatorParam}
                                         />
                                     </div>
                                 </div>
@@ -2087,7 +2053,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                     <LineItemMobileGrid
                                         groups={visibleProducts}
                                         skuMap={skuMap}
-                                        applicatorParam={filters.applicators.length === 1 ? filters.applicators[0] : null}
+                                        applicatorParam={visualApplicatorParam}
                                     />
                                 </div>
                             </>

@@ -60,6 +60,8 @@ export default function PatternD_BuildKit({
                 itemName: p.itemName,
                 quantity: 1,
                 unitPrice: p.webPrice1pc ?? null,
+                checkoutEligible: Boolean(p.shopifyVariantId),
+                shopifyVariantId: p.shopifyVariantId ?? null,
             })),
         );
     };

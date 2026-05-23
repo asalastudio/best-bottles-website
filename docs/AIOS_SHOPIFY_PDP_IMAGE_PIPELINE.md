@@ -50,11 +50,13 @@ Rollout order:
 
 ## Clean Output Workspace
 
-Generated and approved images live under an ignored pipeline workspace:
+Reference inputs, generated candidates, reviewed images, and approved images
+live under an ignored pipeline workspace:
 
 ```txt
 pipeline/aios-shopify-pdp-images/
   00-input/
+    reference-flattened/
   01-manifests/
   02-generated/
   03-review/
@@ -64,6 +66,14 @@ pipeline/aios-shopify-pdp-images/
 ```
 
 Only docs and scripts should be committed. Generated image binaries should stay out of Git.
+
+Folder meanings:
+
+- `00-input/reference-flattened/`: existing flattened PNGs used as references and mapping fixtures. These are not final AiOS/Madison outputs.
+- `02-generated/`: newly generated AI candidate images.
+- `03-review/`: candidates selected for human/art-direction review.
+- `04-shopify-ready/`: final approved images only, ready for Shopify media upload.
+- `05-push-reports/`: dry-run and apply reports.
 
 ## Filename Contract
 
@@ -102,14 +112,18 @@ empire-50ml-clear-18-415-antiquespray-tassel
 Current smoke manifest:
 
 ```txt
-pipeline/aios-shopify-pdp-images/01-manifests/2026-05-14-empire-50ml-ast-smoke-test.csv
+pipeline/aios-shopify-pdp-images/01-manifests/2026-05-14-empire-50ml-ast-reference-mapping-smoke-test.csv
 ```
 
-Current Shopify-ready assets:
+Current reference assets:
 
 ```txt
-pipeline/aios-shopify-pdp-images/04-shopify-ready/empire-50ml-clear-18-415-antiquespray-tassel/
+pipeline/aios-shopify-pdp-images/00-input/reference-flattened/empire-50ml-clear-18-415-antiquespray-tassel/
 ```
+
+These files are existing flattened references and mapping fixtures. They are not
+the final AI-generated on-brand images and should not be uploaded as production
+Shopify media.
 
 Smoke pass requirements:
 
@@ -119,6 +133,28 @@ Smoke pass requirements:
 4. Every row has a Shopify product ID and variant ID.
 5. Dry-run upload resolves every target.
 6. No Shopify writes happen until the dry-run report is reviewed.
+
+Local and Shopify ID dry-run:
+
+```bash
+node scripts/aios-shopify-images/smoke-test-pdp-media.mjs --live-shopify
+```
+
+This validates the CSV, PNG existence, image dimensions, byte sizes, hashes,
+Shopify product IDs, and Shopify variant IDs. It does not upload media or patch
+Convex.
+
+The reference smoke test only proves:
+
+```txt
+reference PNG -> manifest row -> Shopify product/variant ID mapping
+```
+
+The full production smoke test still needs:
+
+```txt
+Madison/AiOS generation -> review approval -> 04-shopify-ready -> Shopify media upload -> Convex patch -> PDP/mobile verification
+```
 
 ## Madison Skill Usage
 

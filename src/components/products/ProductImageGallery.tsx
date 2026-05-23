@@ -81,6 +81,11 @@ export default function ProductImageGallery({
 }: ProductImageGalleryProps) {
     const [activeUrl, setActiveUrl] = useState<string | null>(images[0]?.url ?? null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
+    const firstImageUrl = images[0]?.url ?? null;
+
+    useEffect(() => {
+        setActiveUrl(firstImageUrl);
+    }, [firstImageUrl]);
 
     const resolvedActiveIndex = images.findIndex((image) => image.url === activeUrl);
     const activeIndex = resolvedActiveIndex >= 0 ? resolvedActiveIndex : 0;

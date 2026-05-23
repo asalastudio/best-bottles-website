@@ -138,7 +138,7 @@ function WorkspaceShellView({
                 <Link
                     href="/"
                     className="flex items-center gap-[9px] rounded-[2px] px-1.5 pb-3.5 pt-1 -mx-1.5 -mt-1 hover:bg-obsidian/[0.03] transition-colors"
-                    title="Back to bestbottles.com"
+                    title="Back to bestbottles.company"
                     aria-label="Back to Best Bottles home"
                 >
                     <GraceMark />
@@ -287,7 +287,7 @@ function WorkspaceShellView({
                             href="/"
                             className="inline-flex items-center gap-1.5 rounded-[2px] px-2.5 py-1.5 text-[10.5px] font-semibold uppercase tracking-[0.14em] text-obsidian cursor-pointer hover:bg-obsidian/[0.04] transition-colors"
                             style={{ border: "1px solid rgba(99, 117, 136, 0.3)" }}
-                            title="Back to bestbottles.com"
+                            title="Back to bestbottles.company"
                         >
                             <ArrowLeft size={12} weight="bold" />
                             Back to site

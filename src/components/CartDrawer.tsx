@@ -5,6 +5,7 @@ import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
+import { isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 const FREE_SHIPPING_THRESHOLD = 99;
 
@@ -31,6 +32,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     }, [isOpen]);
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
+    const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
     const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
     const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
 
@@ -166,6 +168,11 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                             <p className="text-[10px] text-slate/70 font-mono uppercase tracking-wide mb-2">
                                                 SKU {item.graceSku}
                                             </p>
+                                            {!isCheckoutReady(item) && (
+                                                <p className="mb-2 inline-flex rounded-sm border border-amber-200 bg-amber-50 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-700">
+                                                    Quote required
+                                                </p>
+                                            )}
                                             <div className="flex items-center justify-between">
                                                 <div className="flex items-center gap-1 rounded-md overflow-hidden bg-bone/50 border border-champagne/50">
                                                     <button
@@ -258,7 +265,11 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                 </Link>
 
                                 <p className="text-[11px] text-slate text-center mt-3 tracking-wide">
-                                    {isCheckingOut ? "Checking Shopify variants and preparing checkout." : "Secure checkout · Terms apply"}
+                                    {isCheckingOut
+                                        ? "Checking Shopify variants and preparing checkout."
+                                        : quoteOnlyItems.length > 0
+                                            ? `Checkout includes ${checkoutReadyItems.length} verified item${checkoutReadyItems.length === 1 ? "" : "s"}; quote required for the rest.`
+                                            : "Secure checkout · Terms apply"}
                                 </p>
                             </div>
                         )}

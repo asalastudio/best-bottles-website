@@ -5,7 +5,9 @@
  * logic so every page stays consistent without duplication.
  */
 
-export const SITE_URL = "https://www.bestbottles.com";
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://bestbottles.company";
 export const SITE_NAME = "Best Bottles";
 export const SITE_TAGLINE = "Premium Glass Packaging for Beauty, Fragrance & Wellness Brands";
 export const SITE_DESCRIPTION =

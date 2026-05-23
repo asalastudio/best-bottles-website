@@ -16,7 +16,8 @@ export type CanonicalProductDataQualityFlag =
     | "color_mismatch_group_variant"
     | "capacity_label_normalized"
     | "description_applicator_mismatch"
-    | "shopify_variant_missing";
+    | "shopify_variant_missing"
+    | "sanity_product_image_blocked";
 
 export interface CanonicalSourceTrace {
     modelVersion: string;
@@ -224,6 +225,28 @@ function cleanString(value: string | null | undefined): string | null {
     return trimmed.length > 0 ? trimmed : null;
 }
 
+function isSanityCdnUrl(value: string | null): boolean {
+    if (!value) return false;
+    try {
+        return new URL(value).hostname === "cdn.sanity.io";
+    } catch {
+        return value.includes("cdn.sanity.io/");
+    }
+}
+
+function cleanProductImageUrl(
+    value: string | null | undefined,
+    flags: CanonicalProductDataQualityFlag[],
+): string | null {
+    const url = cleanString(value);
+    if (!url) return null;
+    if (isSanityCdnUrl(url)) {
+        flags.push("sanity_product_image_blocked");
+        return null;
+    }
+    return url;
+}
+
 function finiteNumber(value: number | null | undefined): number | null {
     return typeof value === "number" && Number.isFinite(value) ? value : null;
 }
@@ -426,8 +449,8 @@ export function buildCanonicalProductVariant(
         webPrice10pc: finiteNumber(raw.webPrice10pc),
         webPrice12pc: finiteNumber(raw.webPrice12pc),
         stockStatus: cleanString(raw.stockStatus),
-        imageUrl: cleanString(raw.imageUrl),
-        imageUrlCapOff: cleanString(raw.imageUrlCapOff),
+        imageUrl: cleanProductImageUrl(raw.imageUrl, flags),
+        imageUrlCapOff: cleanProductImageUrl(raw.imageUrlCapOff, flags),
         productUrl: cleanString(raw.productUrl),
         description: chooseCanonicalProductDescription({
             groupDescription: group?.groupDescription,
@@ -510,7 +533,7 @@ export function buildCanonicalProductGroup(
         priceRangeMin: finiteNumber(raw.priceRangeMin),
         priceRangeMax: finiteNumber(raw.priceRangeMax),
         shopifyProductId: cleanString(raw.shopifyProductId),
-        heroImageUrl: cleanString(raw.heroImageUrl),
+        heroImageUrl: cleanProductImageUrl(raw.heroImageUrl, flags),
         applicatorTypes: uniqueSorted(applicators),
         primaryGraceSku: cleanString(raw.primaryGraceSku),
         primaryWebsiteSku: cleanString(raw.primaryWebsiteSku),
