@@ -246,6 +246,22 @@ function productGroupHref(group: CatalogGroup, applicatorParam?: string | null):
     return applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
 }
 
+function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+    if (!value) return false;
+    try {
+        return new URL(value).hostname === "cdn.shopify.com";
+    } catch {
+        return value.includes("cdn.shopify.com/");
+    }
+}
+
+function getShopifyCatalogThumbnail(variant: ProductCardVariantPreviewSource | null | undefined): string | null {
+    if (!variant) return null;
+    if (isShopifyCdnImageUrl(variant.imageUrl)) return variant.imageUrl ?? null;
+    if (isShopifyCdnImageUrl(variant.imageUrlCapOff)) return variant.imageUrlCapOff ?? null;
+    return null;
+}
+
 function ProductGroupCard({
     group,
     index,
@@ -777,14 +793,18 @@ function LineItemRow({
     sku,
     index,
     applicatorParam,
+    thumbnailUrl,
+    displayName,
 }: {
     group: CatalogGroup;
     sku: string;
     index: number;
     applicatorParam?: string | null;
+    thumbnailUrl?: string | null;
+    displayName?: string;
 }) {
     const [quantity, setQuantity] = useState(1);
-    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = (() => {
         const params = new URLSearchParams();
         if (applicatorParam) params.set("applicator", applicatorParam);
@@ -807,9 +827,9 @@ function LineItemRow({
             <td className="py-3 px-4">
                 <Link href={href} className="flex items-center gap-4">
                     <div className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative">
-                        {group.heroImageUrl ? (
+                        {thumbnailUrl ? (
                             <Image
-                                src={group.heroImageUrl}
+                                src={thumbnailUrl}
                                 alt={customerDisplayName}
                                 fill
                                 className="object-contain p-1"
@@ -920,15 +940,19 @@ function LineItemMobileCard({
     sku,
     index,
     applicatorParam,
+    thumbnailUrl,
+    displayName,
 }: {
     group: CatalogGroup;
     sku: string;
     index: number;
     applicatorParam?: string | null;
+    thumbnailUrl?: string | null;
+    displayName?: string;
 }) {
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
-    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = (() => {
         const params = new URLSearchParams();
         if (applicatorParam) params.set("applicator", applicatorParam);
@@ -950,9 +974,9 @@ function LineItemMobileCard({
             <div className="flex items-center p-3 gap-3">
                 {/* Thumbnail */}
                 <div className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative">
-                    {group.heroImageUrl ? (
+                    {thumbnailUrl ? (
                         <Image
-                            src={group.heroImageUrl}
+                            src={thumbnailUrl}
                             alt={customerDisplayName}
                             fill
                             className="object-contain p-1"
@@ -1080,10 +1104,14 @@ function LineItemTable({
     groups,
     skuMap,
     applicatorParam,
+    thumbnailMap,
+    displayNameMap,
 }: {
     groups: CatalogGroup[];
     skuMap: Map<string, string>;
     applicatorParam?: string | null;
+    thumbnailMap?: Map<string, string>;
+    displayNameMap?: Map<string, string>;
 }) {
     return (
         <div className="w-full overflow-x-auto">
@@ -1124,6 +1152,8 @@ function LineItemTable({
                             sku={skuMap.get(group._id) ?? "—"}
                             index={idx}
                             applicatorParam={applicatorParam}
+                            thumbnailUrl={thumbnailMap?.get(group._id)}
+                            displayName={displayNameMap?.get(group._id)}
                         />
                     ))}
                 </tbody>
@@ -1138,10 +1168,14 @@ function LineItemMobileGrid({
     groups,
     skuMap,
     applicatorParam,
+    thumbnailMap,
+    displayNameMap,
 }: {
     groups: CatalogGroup[];
     skuMap: Map<string, string>;
     applicatorParam?: string | null;
+    thumbnailMap?: Map<string, string>;
+    displayNameMap?: Map<string, string>;
 }) {
     return (
         <div className="space-y-3">
@@ -1152,6 +1186,8 @@ function LineItemMobileGrid({
                     sku={skuMap.get(group._id) ?? "—"}
                     index={idx}
                     applicatorParam={applicatorParam}
+                    thumbnailUrl={thumbnailMap?.get(group._id)}
+                    displayName={displayNameMap?.get(group._id)}
                 />
             ))}
         </div>
@@ -1465,7 +1501,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = useQuery(
         api.products.getCatalogGroupVariantPreviewData,
-        viewMode === "visual" && visibleProductIds.length > 0 ? { groupIds: visibleProductIds } : "skip",
+        visibleProductIds.length > 0 ? { groupIds: visibleProductIds } : "skip",
     ) as CatalogGroupVariantPreviewData[] | undefined;
     const variantPreviewMap = useMemo(() => {
         const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
@@ -1497,6 +1533,24 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
 
         return next;
     }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap]);
+    const catalogThumbnailMap = useMemo(() => {
+        const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
+        const next = new Map<string, string>();
+
+        for (const row of variantPreviewRows ?? []) {
+            const group = groupById.get(row.groupId);
+            if (!group) continue;
+            const primarySku = skuMap.get(group._id);
+            const representativeVariant =
+                row.variants.find((variant) => variant.websiteSku === primarySku || variant.graceSku === primarySku) ??
+                row.variants.find((variant) => getShopifyCatalogThumbnail(variant)) ??
+                null;
+            const thumbnailUrl = getShopifyCatalogThumbnail(representativeVariant);
+            if (thumbnailUrl) next.set(row.groupId, thumbnailUrl);
+        }
+
+        return next;
+    }, [variantPreviewRows, visibleProducts, skuMap]);
     const customerNameMap = useMemo(() => {
         const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
         const next = new Map<string, string>();
@@ -2044,6 +2098,8 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                             groups={visibleProducts}
                                             skuMap={skuMap}
                                             applicatorParam={visualApplicatorParam}
+                                            thumbnailMap={catalogThumbnailMap}
+                                            displayNameMap={customerNameMap}
                                         />
                                     </div>
                                 </div>
@@ -2054,6 +2110,8 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         groups={visibleProducts}
                                         skuMap={skuMap}
                                         applicatorParam={visualApplicatorParam}
+                                        thumbnailMap={catalogThumbnailMap}
+                                        displayNameMap={customerNameMap}
                                     />
                                 </div>
                             </>
