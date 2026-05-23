@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Package } from "@/components/icons";
 import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 
 type ProductCardImagePreviewProps = {
     productTitle: string;
@@ -24,15 +25,11 @@ function stopCardNavigation(event: React.SyntheticEvent) {
 }
 
 function swatchStyle(preview: ProductCardVariantPreview): React.CSSProperties | undefined {
-    if (preview.swatchImageUrl) {
-        return {
-            backgroundImage: `url(${preview.swatchImageUrl})`,
-            backgroundPosition: "center",
-            backgroundSize: "cover",
-        };
-    }
-    if (preview.swatchColor) return { backgroundColor: preview.swatchColor };
-    return undefined;
+    const style = getMaterialSwatchStyle(preview.label, {
+        fallbackColor: preview.swatchColor,
+        imageUrl: preview.swatchImageUrl,
+    });
+    return Object.keys(style).length ? style : undefined;
 }
 
 function ProductCardSwatch({
@@ -60,12 +57,15 @@ function ProductCardSwatch({
             <span
                 className={`relative block h-5 w-5 overflow-hidden rounded-full border ${
                     isActive
-                        ? "border-obsidian shadow-[0_0_0_2px_rgba(32,32,32,0.16)]"
-                        : "border-champagne/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)]"
+                        ? "border-obsidian shadow-[0_0_0_2px_rgba(32,32,32,0.16),inset_0_1px_1px_rgba(255,255,255,0.48)]"
+                        : "border-champagne/80 shadow-[inset_0_1px_1px_rgba(255,255,255,0.65),inset_0_-2px_5px_rgba(32,32,32,0.12)]"
                 } ${preview.swatchColor || preview.swatchImageUrl ? "" : "bg-bone"}`}
                 style={swatchStyle(preview)}
                 aria-hidden="true"
             >
+                {(preview.swatchColor || preview.swatchImageUrl) && (
+                    <span className="absolute inset-[2px] rounded-full bg-[radial-gradient(circle_at_32%_24%,rgba(255,255,255,0.78),rgba(255,255,255,0)_42%)]" />
+                )}
                 {!preview.swatchColor && !preview.swatchImageUrl && (
                     <span className="absolute inset-x-1/2 top-0 h-full w-px -rotate-45 bg-slate/50" />
                 )}

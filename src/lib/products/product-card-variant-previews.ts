@@ -280,9 +280,10 @@ export function getProductCardVariantPreviews(
 
         const imageUrl = cleanString(variant.imageUrl) ?? cleanString(variant.imageUrlCapOff) ?? undefined;
         const finish = resolveCapFinish(variant);
+        const optionType = optionTypeFor(variant, options.groupColor);
         const swatchColor = swatchColorFor(finish, variant.color ?? options.groupColor);
         const glassColor = cleanLabel(variant.color ?? options.groupColor);
-        const swatchImageUrl = glassColor ? GLASS_SWATCH_IMAGES[glassColor] : undefined;
+        const swatchImageUrl = optionType === "glassColor" && glassColor ? GLASS_SWATCH_IMAGES[glassColor] : undefined;
         const sku = cleanString(variant.websiteSku) ?? cleanString(variant.graceSku) ?? undefined;
         const id = cleanString(variant.id) ?? sku ?? `${label}-${previews.length}`;
         const dedupeKey = [
@@ -302,7 +303,7 @@ export function getProductCardVariantPreviews(
             imageAlt: `${options.productTitle} - ${label}`,
             swatchColor,
             swatchImageUrl,
-            optionType: optionTypeFor(variant, options.groupColor),
+            optionType,
             sku,
             href: options.productHref,
         });

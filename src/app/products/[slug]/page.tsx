@@ -27,6 +27,7 @@ import ProductImageGallery, { type GalleryImage } from "@/components/products/Pr
 import { analytics } from "@/lib/analytics";
 import { SITE_URL, buildProductJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
+import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -581,7 +582,7 @@ function VariantImagePicker({
                 />
                 <span
                     className="absolute bottom-1 left-1 h-3 w-3 rounded-full border border-white/90 shadow-sm"
-                    style={{ backgroundColor: tile.swatchHex }}
+                    style={getMaterialSwatchStyle(tile.label, { fallbackColor: tile.swatchHex })}
                     aria-hidden="true"
                 />
                 {isSelected && (
@@ -632,7 +633,7 @@ function SelectedVariantSummary({
                 <div className="flex min-w-0 items-start gap-3 sm:items-center">
                     <span
                         className="h-7 w-7 shrink-0 rounded-full border border-champagne shadow-sm"
-                        style={{ backgroundColor: swatchHex }}
+                        style={getMaterialSwatchStyle(label, { fallbackColor: swatchHex })}
                         aria-hidden="true"
                     />
                     <div className="min-w-0">
@@ -1781,7 +1782,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                                 ? "border-obsidian scale-110 shadow-md"
                                                                 : "border-champagne hover:border-muted-gold"
                                                                 }`}
-                                                            style={{ backgroundColor: hex }}
+                                                            style={getMaterialSwatchStyle(color, { fallbackColor: hex })}
                                                         >
                                                             {isSelected && (
                                                                 <span className="absolute inset-0 flex items-center justify-center">
@@ -1849,7 +1850,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                                 ? "border-obsidian scale-110 shadow-md"
                                                                 : "border-champagne hover:border-muted-gold"
                                                                 }`}
-                                                            style={{ backgroundColor: hex }}
+                                                            style={getMaterialSwatchStyle(color, { fallbackColor: hex })}
                                                         >
                                                             {isSelected && (
                                                                 <span className="absolute inset-0 flex items-center justify-center">
@@ -1896,7 +1897,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                                     ? "border-obsidian scale-110 shadow-md"
                                                                     : "border-champagne group-hover/variant:border-muted-gold"
                                                                     }`}
-                                                                style={{ backgroundColor: item.swatchHex }}
+                                                                style={getMaterialSwatchStyle(item.displayLabel, { fallbackColor: item.swatchHex })}
                                                             >
                                                                 {isSelected && (
                                                                     <span className="absolute inset-0 flex items-center justify-center">

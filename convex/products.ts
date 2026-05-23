@@ -338,6 +338,63 @@ export const getCatalogProducts = query({
     },
 });
 
+const toCatalogProductIndexRow = (product: Doc<"products">) => ({
+    _id: product._id,
+    _creationTime: product._creationTime,
+    websiteSku: product.websiteSku,
+    graceSku: product.graceSku,
+    productId: product.productId,
+    category: product.category,
+    family: product.family,
+    color: product.color,
+    capacity: product.capacity,
+    capacityMl: product.capacityMl,
+    capacityOz: product.capacityOz,
+    heightWithCap: product.heightWithCap,
+    heightWithoutCap: product.heightWithoutCap,
+    diameter: product.diameter,
+    neckThreadSize: product.neckThreadSize,
+    applicator: product.applicator,
+    capStyle: product.capStyle,
+    capColor: product.capColor,
+    trimColor: product.trimColor,
+    bottleCollection: product.bottleCollection,
+    itemName: product.itemName,
+    itemDescription: product.itemDescription,
+    useCaseDescription: product.useCaseDescription,
+    imageUrl: product.imageUrl,
+    imageUrlCapOff: product.imageUrlCapOff,
+    stockStatus: product.stockStatus,
+    verified: product.verified,
+    productGroupId: product.productGroupId,
+});
+
+/**
+ * Lightweight, paginated product index for Madison Studio SKU matching.
+ *
+ * Do not use `getCatalogProducts` for all-product reads from Madison: full
+ * product rows can include large component payloads and exceed Convex's
+ * per-execution read byte limit. This query pages through the table and
+ * returns only the fields Madison needs for crosswalk/finish validation.
+ */
+export const getCatalogProductIndexPage = query({
+    args: {
+        cursor: v.union(v.string(), v.null()),
+        limit: v.optional(v.number()),
+    },
+    handler: async (ctx, args) => {
+        const result = await ctx.db.query("products").paginate({
+            cursor: args.cursor,
+            numItems: Math.min(Math.max(args.limit ?? 150, 1), 200),
+        });
+
+        return {
+            ...result,
+            page: result.page.map(toCatalogProductIndexRow),
+        };
+    },
+});
+
 /**
  * Full-text search for the catalog search bar.
  */
@@ -1090,7 +1147,7 @@ export const getApplicatorSiblings = query({
         const currentSuffix = APPLICATOR_BUCKET_SUFFIXES.find((s) => args.excludeSlug.endsWith(s));
         const hasKnownSuffix = (slug: string) => APPLICATOR_BUCKET_SUFFIXES.some((s) => slug.endsWith(s));
 
-        return all.filter(
+        const siblings = all.filter(
             (g) =>
                 g.capacityMl === args.capacityMl &&
                 g.color === args.color &&
@@ -1102,6 +1159,21 @@ export const getApplicatorSiblings = query({
                     : hasKnownSuffix(g.slug)           // current has no suffix (cap only) → show all suffixed groups
                 )
         );
+
+        return await Promise.all(siblings.map(async (g) => {
+            if (g.heroImageUrl) return g;
+
+            const variants = await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", g._id))
+                .collect();
+            const representative = variants.find((variant) => variant.imageUrl) ?? variants.find((variant) => variant.imageUrlCapOff);
+
+            return {
+                ...g,
+                heroImageUrl: representative?.imageUrl ?? representative?.imageUrlCapOff ?? null,
+            };
+        }));
     },
 });
 
