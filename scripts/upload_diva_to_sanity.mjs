@@ -14,6 +14,10 @@
 //   node scripts/upload_diva_to_sanity.mjs             (upload + update Convex)
 //   node scripts/upload_diva_to_sanity.mjs --clear-wrong  (remove bad assignments first)
 
+// DEPRECATED: product-level images now belong in Shopify, then Convex cache.
+// Sanity is reserved for editorial content only.
+throw new Error("Deprecated product-image Sanity uploader blocked. Use Shopify media + Convex reconciliation instead.");
+
 import { createClient as createSanityClient } from "@sanity/client";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../convex/_generated/api.js";

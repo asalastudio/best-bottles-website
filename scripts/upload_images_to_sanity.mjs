@@ -7,6 +7,10 @@
 //   node scripts/upload_images_to_sanity.mjs --family Diva     # one family
 //   node scripts/upload_images_to_sanity.mjs --dry-run         # preview only
 //
+// DEPRECATED: product-level images now belong in Shopify, then Convex cache.
+// Sanity is reserved for editorial content only.
+throw new Error("Deprecated product-image Sanity uploader blocked. Use Shopify media + Convex reconciliation instead.");
+
 // Naming convention for SKU subfolders (must live at GRID_ROOT/{family?}/{SKU}/):
 //   The SKU folder name drives applicator detection. Pattern examples:
 //     GBDiva30LpBlk  → Diva 30ml Lotion Pump / Black hardware
