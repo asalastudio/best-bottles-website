@@ -568,6 +568,14 @@ function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
     }
 }
 
+function hasShopifyPdpImage(variant: ProductVariant | null | undefined): boolean {
+    if (!variant) return false;
+    return (
+        isShopifyCdnImageUrl(variant.imageUrl) ||
+        (supportsSecondaryPdpImage(variant) && isShopifyCdnImageUrl(variant.imageUrlCapOff))
+    );
+}
+
 type VariantImageTile = {
     id: string;
     variant: ProductVariant;
@@ -577,14 +585,14 @@ type VariantImageTile = {
     websiteSku: string;
 };
 
-function getVariantTileImageUrl(variant: ProductVariant, requireShopifyBacked = false): string | null {
-    if (variant.imageUrl && (!requireShopifyBacked || isShopifyCdnImageUrl(variant.imageUrl))) {
+function getVariantTileImageUrl(variant: ProductVariant): string | null {
+    if (variant.imageUrl && isShopifyCdnImageUrl(variant.imageUrl)) {
         return variant.imageUrl;
     }
     if (
         variant.imageUrlCapOff &&
         supportsSecondaryPdpImage(variant) &&
-        (!requireShopifyBacked || isShopifyCdnImageUrl(variant.imageUrlCapOff))
+        isShopifyCdnImageUrl(variant.imageUrlCapOff)
     ) {
         return variant.imageUrlCapOff;
     }
@@ -1193,19 +1201,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     // not here — they would show as selectable but wouldn't change add-to-cart behavior.
     const capSwatchPreview = useMemo(() => variantSwatchPreview, [variantSwatchPreview]);
 
-    const hasShopifyBackedVariantImages = useMemo(() => {
-        return variantsForApplicator.some((variant) =>
-            isShopifyCdnImageUrl(variant.imageUrl) ||
-            (supportsSecondaryPdpImage(variant) && isShopifyCdnImageUrl(variant.imageUrlCapOff))
-        );
-    }, [variantsForApplicator]);
-
     const variantImageTiles = useMemo<VariantImageTile[]>(() => {
         const seen = new Set<string>();
         const tiles: VariantImageTile[] = [];
         for (const variant of variantsForApplicator) {
             if (seen.has(variant._id)) continue;
-            const imageUrl = getVariantTileImageUrl(variant, hasShopifyBackedVariantImages);
+            const imageUrl = getVariantTileImageUrl(variant);
             if (!imageUrl) continue;
 
             seen.add(variant._id);
@@ -1221,7 +1222,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             });
         }
         return tiles;
-    }, [variantsForApplicator, hasShopifyBackedVariantImages]);
+    }, [variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
@@ -1415,7 +1416,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             description: productDescription
                 ?? `${customerDisplayName} — ${group.family} collection from Best Bottles. ${group.capacity ?? ""}`.trim(),
             sku: selectedVariant.websiteSku,
-            image: selectedVariant.imageUrl ?? undefined,
+            image: isShopifyCdnImageUrl(selectedVariant.imageUrl) ? selectedVariant.imageUrl ?? undefined : undefined,
             url: `${SITE_URL}/products/${activeSlug}`,
             family: group.family,
             priceLow: selectedVariant.webPrice12pc ?? selectedVariant.webPrice10pc ?? selectedVariant.webPrice1pc,
@@ -1596,15 +1597,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             </span>
                                         ) : null;
 
-                                        const variantHasExternalStudioImage = Boolean(
-                                            selectedVariant?.imageUrl &&
-                                            !selectedVariant.imageUrl.includes("cdn.sanity.io/images/")
-                                        );
+                                        const variantHasShopifyProductMedia = hasShopifyPdpImage(selectedVariant);
 
                                         // Mode 1 — paper-doll configurator. Shopify/Madison-pushed
                                         // variant images are final PDP media and should take
                                         // precedence over generated layer compositions.
-                                        if (group.paperDollFamilyKey && selectedVariant && !variantHasExternalStudioImage) {
+                                        if (group.paperDollFamilyKey && selectedVariant && !variantHasShopifyProductMedia) {
                                             return (
                                                 <motion.div
                                                     key="paper-doll"
@@ -1649,7 +1647,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
                                         if (
                                             selectedVariant?.imageUrl &&
-                                            (!hasShopifyBackedVariantImages || isShopifyCdnImageUrl(selectedVariant.imageUrl))
+                                            isShopifyCdnImageUrl(selectedVariant.imageUrl)
                                         ) {
                                             addGalleryImage({
                                                 url: selectedVariant.imageUrl,
@@ -1659,7 +1657,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         } else if (
                                             selectedVariant?.imageUrlCapOff &&
                                             supportsSecondaryPdpImage(selectedVariant) &&
-                                            (!hasShopifyBackedVariantImages || isShopifyCdnImageUrl(selectedVariant.imageUrlCapOff))
+                                            isShopifyCdnImageUrl(selectedVariant.imageUrlCapOff)
                                         ) {
                                             addGalleryImage({
                                                 url: selectedVariant.imageUrlCapOff,
