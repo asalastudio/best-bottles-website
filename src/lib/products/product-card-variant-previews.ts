@@ -323,6 +323,21 @@ function imageKey(value: string | null | undefined): string {
     return cleanString(value)?.split("?")[0] ?? "";
 }
 
+function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+    const cleaned = cleanString(value);
+    if (!cleaned) return false;
+    try {
+        return new URL(cleaned).hostname === "cdn.shopify.com";
+    } catch {
+        return cleaned.includes("cdn.shopify.com/");
+    }
+}
+
+function shopifyImageUrl(value: string | null | undefined): string | undefined {
+    const cleaned = cleanString(value);
+    return cleaned && isShopifyCdnImageUrl(cleaned) ? cleaned : undefined;
+}
+
 export function getProductCardVariantPreviews(
     variants: ProductCardVariantPreviewSource[] | null | undefined,
     options: ProductCardVariantPreviewOptions,
@@ -339,7 +354,7 @@ export function getProductCardVariantPreviews(
         const label = previewLabel(variant, options.groupColor);
         if (!label) continue;
 
-        const imageUrl = cleanString(variant.imageUrl) ?? cleanString(variant.imageUrlCapOff) ?? undefined;
+        const imageUrl = shopifyImageUrl(variant.imageUrl) ?? shopifyImageUrl(variant.imageUrlCapOff);
         const finish = resolveCapFinish(variant);
         const optionType = optionTypeFor(variant, options.groupColor);
         const swatchColor = swatchColorFor(finish, variant.color ?? options.groupColor);

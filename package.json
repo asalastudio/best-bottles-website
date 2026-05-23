@@ -21,6 +21,8 @@
     "diag:grace": "node scripts/diagnose_grace.mjs",
     "test:catalog:integrity": "node scripts/catalog-integrity.mjs",
     "audit:shopify-skus": "node scripts/audit_shopify_sku_mapping.mjs",
+    "audit:shopify-media": "node scripts/backfill_convex_shopify_variant_media.mjs",
+    "catalog:set-primary-sku": "node scripts/set_product_group_primary_sku.mjs",
     "audit:madison-supabase": "node scripts/audit_madison_supabase_image_truth.mjs",
     "audit:madison-naming": "node scripts/audit_madison_image_naming.mjs",
     "reconcile:convex-images": "node scripts/reconcile_convex_image_truth.mjs",

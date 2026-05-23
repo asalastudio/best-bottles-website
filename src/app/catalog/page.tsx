@@ -294,7 +294,10 @@ function ProductGroupCard({
         >
             <ProductCardImagePreview
                 productTitle={customerDisplayName}
-                defaultImage={{ url: group.heroImageUrl, alt: customerDisplayName }}
+                defaultImage={{
+                    url: isShopifyCdnImageUrl(group.heroImageUrl) ? group.heroImageUrl : null,
+                    alt: customerDisplayName,
+                }}
                 placeholderLabel={group.family}
                 variantPreviews={variantPreviews}
                 productHref={href}

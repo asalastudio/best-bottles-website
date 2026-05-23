@@ -16,6 +16,15 @@ function isSanityCdnUrl(value: string) {
     }
 }
 
+function isShopifyCdnUrl(value: string | null | undefined) {
+    if (!value) return false;
+    try {
+        return new URL(value).hostname === "cdn.shopify.com";
+    } catch {
+        return value.includes("cdn.shopify.com/");
+    }
+}
+
 // ─────────────────────────────────────────────────────────────────────────────
 // PRODUCT QUERIES — Powers the Homepage + Catalog + PDP
 // ─────────────────────────────────────────────────────────────────────────────
@@ -907,6 +916,99 @@ function verifyProductImageWriteToken(writeToken: string) {
         throw new Error("unauthorized_product_image_write");
     }
 }
+
+/**
+ * Designates the customer-facing representative SKU for a product group.
+ *
+ * This controls:
+ *   - the PDP's default selected variant,
+ *   - the catalog/card representative SKU,
+ *   - and the group hero thumbnail when that SKU has Shopify-backed media.
+ *
+ * It does not rename SKUs, slugs, products, Shopify records, or Madison files.
+ * If the selected SKU does not yet have a Shopify CDN image, the group hero is
+ * cleared instead of keeping a stale legacy/Sanity image.
+ */
+export const setProductGroupPrimarySku = mutation({
+    args: {
+        writeToken: v.string(),
+        productGroupSlug: v.optional(v.string()),
+        productGroupId: v.optional(v.id("productGroups")),
+        websiteSku: v.optional(v.string()),
+        graceSku: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        const websiteSku = args.websiteSku?.trim();
+        const graceSku = args.graceSku?.trim();
+        if (!websiteSku && !graceSku) {
+            return { success: false, error: "missing_sku" as const };
+        }
+
+        const product = websiteSku
+            ? await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku))
+                .first()
+            : await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku!))
+                .first();
+
+        if (!product) {
+            return {
+                success: false,
+                error: "product_not_found" as const,
+                websiteSku: websiteSku ?? null,
+                graceSku: graceSku ?? null,
+            };
+        }
+
+        let group: Doc<"productGroups"> | null = null;
+        if (args.productGroupId) {
+            group = await ctx.db.get(args.productGroupId);
+        } else if (args.productGroupSlug?.trim()) {
+            group = await ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", args.productGroupSlug!.trim()))
+                .first();
+        } else if (product.productGroupId) {
+            group = await ctx.db.get(product.productGroupId);
+        }
+
+        if (!group) {
+            return { success: false, error: "group_not_found" as const };
+        }
+
+        if (product.productGroupId && product.productGroupId !== group._id) {
+            return {
+                success: false,
+                error: "sku_not_in_group" as const,
+                productGroupSlug: group.slug,
+                websiteSku: product.websiteSku ?? null,
+                graceSku: product.graceSku ?? null,
+            };
+        }
+
+        const heroImageUrl = isShopifyCdnUrl(product.imageUrl) ? product.imageUrl : null;
+        await ctx.db.patch(group._id, {
+            primaryGraceSku: product.graceSku ?? null,
+            primaryWebsiteSku: product.websiteSku ?? null,
+            heroImageUrl,
+        });
+
+        return {
+            success: true,
+            productGroupSlug: group.slug,
+            primaryGraceSku: product.graceSku ?? null,
+            primaryWebsiteSku: product.websiteSku ?? null,
+            heroImageUrl,
+            hasShopifyHeroImage: Boolean(heroImageUrl),
+            warning: heroImageUrl ? null : "selected_primary_sku_has_no_shopify_image",
+        };
+    },
+});
 
 /**
  * Mutation called by Madison Studio's publish edge function after uploading a
