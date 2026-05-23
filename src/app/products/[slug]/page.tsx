@@ -22,7 +22,6 @@ import {
     PdpEditorialZone,
     type PdpBlock,
 } from "@/components/PdpBlocks";
-import PaperDollImage from "@/components/PaperDollImage";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import { analytics } from "@/lib/analytics";
 import { SITE_URL, buildProductJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo";
@@ -454,15 +453,6 @@ const GLASS_COLOR_SWATCH: Record<string, string> = {
 };
 const LIGHT_GLASS = new Set(["Clear", "Frosted", "White", "Pink", "Swirl"]);
 
-// Glass texture swatch images — uploaded to Sanity CDN (200×200 material tiles)
-const GLASS_SWATCH_IMAGE: Record<string, string> = {
-    "Clear": "https://cdn.sanity.io/images/gh97irjh/production/6bfaeda1884020a1b0dd0a2ad8f5cfc6c9d877df-200x200.png",
-    "Frosted": "https://cdn.sanity.io/images/gh97irjh/production/73672075ba7d2697d7acd7918ff28428be2a450d-200x200.png",
-    "Amber": "https://cdn.sanity.io/images/gh97irjh/production/11fef500cbb78b56da83c5fdb3f39039440e9105-200x200.png",
-    "Cobalt Blue": "https://cdn.sanity.io/images/gh97irjh/production/a9203cb246e20bd9996c9aa398a002b9d6825f86-200x200.png",
-    "Swirl": "https://cdn.sanity.io/images/gh97irjh/production/44297e0289c1a81440c7bef879223dfc4e87acce-200x200.png",
-};
-
 const ATOMIZER_SHELL_MAP: Record<string, { label: string; hex: string; light: boolean }> = {
     black:    { label: "Black",    hex: "#1D1D1F", light: false },
     blue:     { label: "Blue",     hex: "#5B87B5", light: false },
@@ -566,14 +556,6 @@ function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
     } catch {
         return value.includes("cdn.shopify.com/");
     }
-}
-
-function hasShopifyPdpImage(variant: ProductVariant | null | undefined): boolean {
-    if (!variant) return false;
-    return (
-        isShopifyCdnImageUrl(variant.imageUrl) ||
-        (supportsSecondaryPdpImage(variant) && isShopifyCdnImageUrl(variant.imageUrlCapOff))
-    );
 }
 
 type VariantImageTile = {
@@ -960,16 +942,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const [selectedCapStyle, setSelectedCapStyle] = useState<string | null>(null);
     const [selectedTrimColor, setSelectedTrimColor] = useState<string | null>(null);
     const [selectedCapComponentSku, setSelectedCapComponentSku] = useState<string | null>(null);
-    // Swatch hint — appears after user closes the cap, dismisses after first cap color click
-    const [capSwatchHint, setCapSwatchHint] = useState(false);
-    const handleCapStateChange = useCallback((lifted: boolean) => {
-        if (!lifted) setCapSwatchHint(true);
-    }, []);
 
     const [qty, setQty] = useState(qtyParam);
     const [addedFlash, setAddedFlash] = useState(false);
     const [pdpBlocks, setPdpBlocks] = useState<PdpBlock[]>([]);
-    const [productOffsets, setProductOffsets] = useState<{ offsetX?: number; offsetY?: number } | null>(null);
     const [stickyBarVisible, setStickyBarVisible] = useState(false);
     const inlineCartRef = useRef<HTMLDivElement>(null);
 
@@ -981,19 +957,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
     const group = data?.group;
     const variants = useMemo(() => (data?.variants as ProductVariant[] | undefined) ?? [], [data?.variants]);
-
-    // Sibling groups — same family + capacityMl + neckThreadSize, different glass color
-    const siblingGroups = useQuery(
-        api.products.getSiblingGroups,
-        group
-            ? {
-                  family: group.family,
-                  capacityMl: group.capacityMl ?? 0,
-                  excludeSlug: activeSlug,
-                  neckThreadSize: group.neckThreadSize ?? undefined,
-              }
-            : "skip"
-    );
 
     // Applicator siblings — same bottle shape + size + color, different applicator
     const applicatorSiblings = useQuery(
@@ -1009,10 +972,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             : "skip"
     );
 
-    // Sibling groups: Cylinder 5ml roll-on shows Clear and Blue only (no Amber — 5ml Amber is Tulip-shaped)
-    const displaySiblingGroups = siblingGroups;
-
-    // Atomizer family flag — simplified UI (glass color only, no sub-selectors)
+    // Atomizer family flag — these remain simplified until variant/color data is normalized.
     const isAtomizer = useMemo(() =>
         (group?.family ?? "").toLowerCase().includes("atomizer"),
         [group]
@@ -1235,7 +1195,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         setSelectedCapStyle(variant.capStyle ?? null);
         setSelectedTrimColor(variant.trimColor || "Standard");
         setSelectedCapComponentSku(null);
-        setCapSwatchHint(false);
     }, []);
 
     const selectedVariantSummary = useMemo(() => {
@@ -1347,8 +1306,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         if (!isSanityConfigured || !activeSlug || !group?.family) return;
         let cancelled = false;
         Promise.all([
-            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean; paperDollOffsetX?: number; paperDollOffsetY?: number } | null>(
-                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate, paperDollOffsetX, paperDollOffsetY }`,
+            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
+                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
                 { slug: activeSlug }
             ),
             client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
@@ -1364,15 +1323,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                     ? groupBlocks
                     : [...groupBlocks, ...familyBlocks];
                 setPdpBlocks(merged);
-                // Per-product paper doll offset overrides
-                if (groupContent?.paperDollOffsetX || groupContent?.paperDollOffsetY) {
-                    setProductOffsets({
-                        offsetX: groupContent.paperDollOffsetX ?? 0,
-                        offsetY: groupContent.paperDollOffsetY ?? 0,
-                    });
-                } else {
-                    setProductOffsets(null);
-                }
             })
             .catch(() => { if (!cancelled) setPdpBlocks([]); });
         return () => { cancelled = true; };
@@ -1562,18 +1512,16 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
                         {/*
-                            Three rendering modes, in priority order:
-                              1. Paper-doll configurator (when group.paperDollFamilyKey is set)
-                                 — interactive layered image, owns the full panel for now.
-                                 Phase 2: lift the gallery thumb strip below to coexist with
-                                 the configurator as static editorial alternates.
-                              2. ProductImageGallery — primary path. Renders main image at
+                            Two rendering modes, in priority order:
+                              1. ProductImageGallery — primary path. Renders Shopify-backed
+                                 variant media at
                                  aspect-[10/11] (matches Madison's 2080×2288 render output)
                                  with a thumbnail strip below when both cap-on and cap-off
                                  views are available, plus a click-to-zoom lightbox.
-                              3. Placeholder — when the variant has no images yet.
+                              2. Placeholder — when the selected variant has no trusted
+                                 Shopify product media yet.
                             Variant-count badge and SKU watermark are shared overlays in
-                            modes 1 and 3, and passed as props to the gallery in mode 2.
+                            placeholder mode and passed as props to the gallery.
                         */}
                         <div className="lg:sticky lg:top-[120px]">
                             <div className={hasVariantImagePicker ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
@@ -1597,41 +1545,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             </span>
                                         ) : null;
 
-                                        const variantHasShopifyProductMedia = hasShopifyPdpImage(selectedVariant);
-
-                                        // Mode 1 — paper-doll configurator. Shopify/Madison-pushed
-                                        // variant images are final PDP media and should take
-                                        // precedence over generated layer compositions.
-                                        if (group.paperDollFamilyKey && selectedVariant && !variantHasShopifyProductMedia) {
-                                            return (
-                                                <motion.div
-                                                    key="paper-doll"
-                                                    initial={{ opacity: 0.6 }}
-                                                    animate={{ opacity: 1 }}
-                                                    transition={{ duration: 0.3 }}
-                                                    className="aspect-[10/11] bg-travertine rounded-none sm:rounded-sm border-0 sm:border border-champagne/50 flex items-center justify-center relative overflow-hidden"
-                                                >
-                                                    <PaperDollImage
-                                                        familyKey={group.paperDollFamilyKey}
-                                                        glassColor={group.color}
-                                                        applicator={selectedVariant.applicator}
-                                                        capColor={selectedVariant.capColor}
-                                                        capHeight={selectedVariant.capHeight}
-                                                        itemName={selectedVariant.itemName}
-                                                        fallbackImageUrl={selectedVariant.imageUrl}
-                                                        className="w-full h-full p-6 sm:p-12"
-                                                        productOffsets={productOffsets}
-                                                        onCapStateChange={handleCapStateChange}
-                                                    />
-                                                    <div className="absolute top-4 left-4 pointer-events-none">{variantBadge}</div>
-                                                    {skuWatermark && (
-                                                        <div className="absolute bottom-4 right-4 pointer-events-none">{skuWatermark}</div>
-                                                    )}
-                                                </motion.div>
-                                            );
-                                        }
-
-                                        // Mode 2 — gallery. Shopify/Madison variant media is the source of
+                                        // Mode 1 — gallery. Shopify/Madison variant media is the source of
                                         // truth for the PDP. The side rail handles variant switching;
                                         // lifestyle/editorial images belong in the Sanity PDP gallery row below,
                                         // not in this product-image thumbnail strip.
@@ -1679,7 +1593,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             );
                                         }
 
-                                        // Mode 3 — placeholder
+                                        // Mode 2 — placeholder. Avoid falling back to legacy URLs or
+                                        // paper-doll compositions for customer-facing product media.
                                         return (
                                             <motion.div
                                                 key="placeholder"
@@ -1700,57 +1615,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                     })()}
                                 </div>
                             </div>
-
-                            {/* Glass color siblings */}
-                            {displaySiblingGroups && displaySiblingGroups.length > 0 && group?.color && (
-                                <div className="mt-4">
-                                    <p className="text-[10px] uppercase tracking-wider font-bold text-slate mb-2.5">Glass Color</p>
-                                    <div className="flex flex-wrap gap-3">
-                                        {/* Current (selected) */}
-                                        <div className="flex flex-col items-center gap-1">
-                                            <span
-                                                className="w-[72px] h-[72px] rounded-sm ring-2 ring-obsidian scale-110 shadow-md flex items-center justify-center overflow-hidden"
-                                                style={GLASS_SWATCH_IMAGE[group.color]
-                                                    ? { backgroundImage: `url(${GLASS_SWATCH_IMAGE[group.color]})`, backgroundSize: "cover", backgroundPosition: "center" }
-                                                    : { backgroundColor: GLASS_COLOR_SWATCH[group.color] ?? "#CCCCCC" }
-                                                }
-                                            >
-                                                <Check
-                                                    className={`w-3.5 h-3.5 ${LIGHT_GLASS.has(group.color) ? "text-obsidian" : "text-white"}`}
-                                                    strokeWidth={2.5}
-                                                />
-                                            </span>
-                                            <span className="text-[9px] text-obsidian font-semibold">
-                                                {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && activeSlug.includes("rollon") && group.color === "Cobalt Blue"
-                                                    ? "Blue"
-                                                    : (group.color ?? "")}
-                                            </span>
-                                        </div>
-                                        {/* Sibling colors */}
-                                        {displaySiblingGroups.map((s: { _id: string; slug: string; color?: string | null; displayName?: string }) => (
-                                            <button
-                                                key={s._id}
-                                                onClick={() => router.push(`/products/${s.slug}`)}
-                                                title={s.color ?? s.displayName}
-                                                className="flex flex-col items-center gap-1 group/sib"
-                                            >
-                                                <span
-                                                    className="w-[72px] h-[72px] rounded-sm ring-2 ring-champagne/60 group-hover/sib:ring-muted-gold transition-all overflow-hidden"
-                                                    style={GLASS_SWATCH_IMAGE[s.color ?? ""]
-                                                        ? { backgroundImage: `url(${GLASS_SWATCH_IMAGE[s.color ?? ""]})`, backgroundSize: "cover", backgroundPosition: "center" }
-                                                        : { backgroundColor: GLASS_COLOR_SWATCH[s.color ?? ""] ?? "#CCCCCC" }
-                                                    }
-                                                />
-                                                <span className="text-[9px] text-slate group-hover/sib:text-muted-gold transition-colors">
-                                                    {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && activeSlug.includes("rollon") && s.color === "Cobalt Blue"
-                                                        ? "Blue"
-                                                        : (s.color ?? "")}
-                                                </span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            )}
                         </div>
 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
@@ -1839,15 +1703,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                     <span className="ml-2 normal-case font-medium text-obsidian">{activeCapColor}</span>
                                                 )}
                                             </p>
-                                            {/* One-time swatch hint for paper doll products */}
-                                            {group.paperDollFamilyKey && capSwatchHint && (
-                                                <div className="mb-3">
-                                                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-muted-gold/10 border border-muted-gold/30 text-[11px] text-muted-gold font-semibold animate-pulse">
-                                                        <span className="w-1.5 h-1.5 rounded-full bg-muted-gold" />
-                                                        Select a cap color to preview on the bottle
-                                                    </span>
-                                                </div>
-                                            )}
                                             <div className="flex flex-wrap gap-2.5">
                                                 {capColorOptions.map((color) => {
                                                     const hex = resolveSwatchHex(color);
@@ -1861,7 +1716,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                                 setSelectedCapColor(color);
                                                                 setSelectedCapStyle(null);
                                                                 setSelectedTrimColor(null);
-                                                                setCapSwatchHint(false);
                                                             }}
                                                             title={color}
                                                             className={`w-9 h-9 rounded-full border-2 transition-all relative ${isSelected
