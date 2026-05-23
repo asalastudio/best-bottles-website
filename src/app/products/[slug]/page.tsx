@@ -28,6 +28,8 @@ import { analytics } from "@/lib/analytics";
 import { SITE_URL, buildProductJsonLd, buildBreadcrumbJsonLd } from "@/lib/seo";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -163,9 +165,17 @@ function getCapFinishFromItemName(itemName: string | null | undefined): { label:
 
 function getVariantOptionPrefix(v: ProductVariant): string | null {
     const sku = (v.graceSku ?? "").toUpperCase();
+    const websiteSku = v.websiteSku ?? "";
     const applicator = (v.applicator ?? "").toLowerCase();
+    const itemName = (v.itemName ?? "").toLowerCase();
     const capStyle = v.capStyle?.trim() || null;
 
+    if (/-AST-/.test(sku) || /ansptsl/i.test(websiteSku) || (applicator.includes("vintage") && itemName.includes("tassel"))) {
+        return "Vintage Bulb Sprayer with Tassel";
+    }
+    if (/-ASP-/.test(sku) || /ansp/i.test(websiteSku) || /(vintage|antique|bulb).*(spray|sprayer)/.test(`${applicator} ${itemName}`)) {
+        return "Vintage Bulb Sprayer";
+    }
     if (sku.includes("-SPR-") || applicator.includes("spray")) return "Spray";
     if (sku.includes("-LPM-") || applicator.includes("lotion")) return "Lotion Pump";
     if (sku.includes("-DRP-") || applicator.includes("dropper")) return "Dropper";
@@ -177,10 +187,39 @@ function getVariantOptionPrefix(v: ProductVariant): string | null {
     return capStyle;
 }
 
+function isAntiqueBulbVariant(v: ProductVariant): boolean {
+    const sku = (v.graceSku ?? "").toUpperCase();
+    const websiteSku = v.websiteSku ?? "";
+    const text = `${v.applicator ?? ""} ${v.itemName ?? ""}`.toLowerCase();
+    return /-(?:ASP|AST)-/.test(sku) || /ansp/i.test(websiteSku) || /(vintage|antique|bulb).*(spray|sprayer)/.test(text);
+}
+
+function getAntiqueBulbVisualIdentity(v: ProductVariant): { label: string; swatchName: string } | null {
+    const text = `${v.websiteSku ?? ""} ${v.graceSku ?? ""} ${v.itemName ?? ""}`;
+    const tokens: Array<[RegExp, { label: string; swatchName: string }]> = [
+        [/IVSL|IVYSL|IVSL|IVORY.*SILVER/i, { label: "Ivory Bulb Sprayer", swatchName: "Ivory" }],
+        [/IVGD|IVYGL|GDIV|IVGL|IVORY.*GOLD/i, { label: "Ivory Bulb Sprayer", swatchName: "Ivory" }],
+        [/MSLV|MTSL|MATTE SILVER/i, { label: "Matte Silver Bulb Sprayer", swatchName: "Matte Silver" }],
+        [/LVN|LAVENDER|LAVENDAR/i, { label: "Lavender Bulb Sprayer", swatchName: "Lavender" }],
+        [/PNK|PINK/i, { label: "Pink Bulb Sprayer", swatchName: "Pink" }],
+        [/RED/i, { label: "Red Bulb Sprayer", swatchName: "Red" }],
+        [/WHT|WHITE/i, { label: "White Bulb Sprayer", swatchName: "White" }],
+        [/BLK|BLACK/i, { label: "Black Bulb Sprayer", swatchName: "Black" }],
+        [/(?:^|[-_])GLD(?:$|[-_])|ANSPGL\\b|\\bGOLD\\b/i, { label: "Gold Bulb Sprayer", swatchName: "Gold" }],
+    ];
+    return tokens.find(([pattern]) => pattern.test(text))?.[1] ?? null;
+}
+
 /** Resolved cap finish for PDP selectors — must match variantSwatchPreview so sparse capColor rows still appear. */
 function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName: string } {
+    if (isAntiqueBulbVariant(v)) {
+        const bulbIdentity = getAntiqueBulbVisualIdentity(v);
+        if (bulbIdentity) return bulbIdentity;
+    }
+
     const fromCapColor = (() => {
         if (!v.capColor) return null;
+        if (isAntiqueBulbVariant(v) && v.capColor.toLowerCase() === "clear") return null;
         return { label: v.capColor, swatchName: v.capColor };
     })();
     const finish = getFinishFromGraceSku(v.graceSku) ?? fromCapColor ?? getCapFinishFromItemName(v.itemName);
@@ -519,6 +558,16 @@ function supportsSecondaryPdpImage(variant: ProductVariant): boolean {
     return true;
 }
 
+function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+    if (!value) return false;
+    try {
+        const hostname = new URL(value).hostname;
+        return hostname === "cdn.shopify.com";
+    } catch {
+        return value.includes("cdn.shopify.com/");
+    }
+}
+
 type VariantImageTile = {
     id: string;
     variant: ProductVariant;
@@ -528,9 +577,17 @@ type VariantImageTile = {
     websiteSku: string;
 };
 
-function getVariantTileImageUrl(variant: ProductVariant): string | null {
-    if (variant.imageUrl) return variant.imageUrl;
-    if (variant.imageUrlCapOff && supportsSecondaryPdpImage(variant)) return variant.imageUrlCapOff;
+function getVariantTileImageUrl(variant: ProductVariant, requireShopifyBacked = false): string | null {
+    if (variant.imageUrl && (!requireShopifyBacked || isShopifyCdnImageUrl(variant.imageUrl))) {
+        return variant.imageUrl;
+    }
+    if (
+        variant.imageUrlCapOff &&
+        supportsSecondaryPdpImage(variant) &&
+        (!requireShopifyBacked || isShopifyCdnImageUrl(variant.imageUrlCapOff))
+    ) {
+        return variant.imageUrlCapOff;
+    }
     return null;
 }
 
@@ -879,10 +936,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const { slug } = use(params);
     const router = useRouter();
     const searchParams = useSearchParams();
+    const legacyRouteOverride = getLegacyProductRouteOverride(slug);
+    const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
     const qtyParam = Math.max(1, Math.min(9999, parseInt(searchParams.get("qty") ?? "1") || 1));
 
-    const data = useQuery(api.products.getProductGroup, { slug });
+    const data = useQuery(api.products.getProductGroup, { slug: activeSlug });
 
     const { addItems } = useCart();
     const [fitmentDrawerOpen, setFitmentDrawerOpen] = useState(false);
@@ -906,6 +965,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const [stickyBarVisible, setStickyBarVisible] = useState(false);
     const inlineCartRef = useRef<HTMLDivElement>(null);
 
+    useEffect(() => {
+        if (!legacyRouteOverride) return;
+        const qs = searchParams.toString();
+        router.replace(`/products/${legacyRouteOverride}${qs ? `?${qs}` : ""}`);
+    }, [legacyRouteOverride, router, searchParams]);
+
     const group = data?.group;
     const variants = useMemo(() => (data?.variants as ProductVariant[] | undefined) ?? [], [data?.variants]);
 
@@ -916,7 +981,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             ? {
                   family: group.family,
                   capacityMl: group.capacityMl ?? 0,
-                  excludeSlug: slug,
+                  excludeSlug: activeSlug,
                   neckThreadSize: group.neckThreadSize ?? undefined,
               }
             : "skip"
@@ -930,7 +995,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                   family: group.family,
                   capacityMl: group.capacityMl ?? 0,
                   color: group.color ?? "",
-                  excludeSlug: slug,
+                  excludeSlug: activeSlug,
                   neckThreadSize: group.neckThreadSize ?? undefined,
               }
             : "skip"
@@ -952,7 +1017,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const applicatorOptions = useMemo(() => {
         const seen = new Set<string>();
         const bottleThread = group?.neckThreadSize ?? "";
-        const isRollonGroup = slug.includes("rollon");
+        const isRollonGroup = activeSlug.includes("rollon");
         return variants
             .map((v) => v.applicator)
             .filter((a): a is string => !!a && a !== "Cap/Closure")
@@ -963,7 +1028,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 seen.add(a);
                 return true;
             });
-    }, [variants, group?.neckThreadSize, slug]);
+    }, [variants, group?.neckThreadSize, activeSlug]);
 
     // Whether any variant has no applicator (plain cap closure)
     const hasCapClosure = useMemo(() =>
@@ -995,8 +1060,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     useEffect(() => {
         if (!applicatorParam) return;
         if (validApplicatorParam) return;
-        router.replace(`/products/${slug}`);
-    }, [applicatorParam, validApplicatorParam, router, slug]);
+        router.replace(`/products/${activeSlug}`);
+    }, [applicatorParam, validApplicatorParam, router, activeSlug]);
 
     const activeApplicator = selectedApplicator && applicatorOptions.includes(selectedApplicator)
         ? selectedApplicator
@@ -1128,12 +1193,19 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     // not here — they would show as selectable but wouldn't change add-to-cart behavior.
     const capSwatchPreview = useMemo(() => variantSwatchPreview, [variantSwatchPreview]);
 
+    const hasShopifyBackedVariantImages = useMemo(() => {
+        return variantsForApplicator.some((variant) =>
+            isShopifyCdnImageUrl(variant.imageUrl) ||
+            (supportsSecondaryPdpImage(variant) && isShopifyCdnImageUrl(variant.imageUrlCapOff))
+        );
+    }, [variantsForApplicator]);
+
     const variantImageTiles = useMemo<VariantImageTile[]>(() => {
         const seen = new Set<string>();
         const tiles: VariantImageTile[] = [];
         for (const variant of variantsForApplicator) {
             if (seen.has(variant._id)) continue;
-            const imageUrl = getVariantTileImageUrl(variant);
+            const imageUrl = getVariantTileImageUrl(variant, hasShopifyBackedVariantImages);
             if (!imageUrl) continue;
 
             seen.add(variant._id);
@@ -1149,7 +1221,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             });
         }
         return tiles;
-    }, [variantsForApplicator]);
+    }, [variantsForApplicator, hasShopifyBackedVariantImages]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
@@ -1175,6 +1247,18 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         };
     }, [selectedVariant, hasVariantImagePicker]);
 
+    const customerFacingName = useMemo(
+        () => group
+            ? getCustomerFacingProductName({
+                group,
+                variant: selectedVariant,
+                fallbackName: group.displayName,
+            })
+            : null,
+        [group, selectedVariant],
+    );
+    const customerDisplayName = customerFacingName?.displayName ?? group?.displayName ?? selectedVariant?.itemName ?? "";
+
     const showTrimSelector = useMemo(() => {
         if (hasCompleteVariantImagePicker) return false;
         if (trimColorOptions.length === 0) return false;
@@ -1183,7 +1267,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     }, [trimColorOptions, hasCompleteVariantImagePicker]);
 
     // ── Roller type toggle for roll-on groups ─────────────────────────────────
-    const isRollonGroup = slug.includes("rollon");
+    const isRollonGroup = activeSlug.includes("rollon");
     const rollerTypeOptions = useMemo(() => {
         if (!isRollonGroup || applicatorOptions.length < 2) return [];
         // Normalize to "Metal" / "Plastic" labels
@@ -1196,10 +1280,10 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     // ── Dynamic SEO title ────────────────────────────────────────────────────
     useEffect(() => {
         if (group) {
-            document.title = `${group.displayName} — ${group.family} ${group.capacity ?? ""} | Best Bottles`.replace(/\s+/g, " ");
+            document.title = `${customerDisplayName} — ${group.family} ${group.capacity ?? ""} | Best Bottles`.replace(/\s+/g, " ");
 
             const desc = productDescription
-                ?? `${group.displayName} from the ${group.family} collection. ${group.capacity ?? ""} glass bottle. Wholesale pricing from Best Bottles.`.trim();
+                ?? `${customerDisplayName} from the ${group.family} collection. ${group.capacity ?? ""} glass bottle. Wholesale pricing from Best Bottles.`.trim();
             let metaDesc = document.querySelector('meta[name="description"]');
             if (!metaDesc) {
                 metaDesc = document.createElement("meta");
@@ -1214,20 +1298,20 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 linkCanonical.setAttribute("rel", "canonical");
                 document.head.appendChild(linkCanonical);
             }
-            linkCanonical.href = `${SITE_URL}/products/${slug}`;
+            linkCanonical.href = `${SITE_URL}/products/${activeSlug}`;
 
             analytics.productViewed({
-                name: group.displayName,
+                name: customerDisplayName,
                 family: group.family,
                 capacity: group.capacity ?? "",
                 color: group.color ?? "",
                 neckThreadSize: group.neckThreadSize ?? undefined,
                 price: group.priceRangeMin ?? undefined,
-                slug,
+                slug: activeSlug,
             });
         }
         return () => { document.title = "Best Bottles"; };
-    }, [group, productDescription, slug]);
+    }, [group, productDescription, activeSlug, customerDisplayName]);
 
     // ── Bridge current PDP product data for global Grace widgets ────────────
     useEffect(() => {
@@ -1240,7 +1324,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                 __GRACE_THREAD_SIZE__?: string;
             };
 
-            globalWindow.__GRACE_PRODUCT_NAME__ = group?.displayName ?? selectedVariant.itemName ?? "";
+            globalWindow.__GRACE_PRODUCT_NAME__ = customerDisplayName;
             globalWindow.__GRACE_PRODUCT_SKU__ = selectedVariant.graceSku ?? "";
             globalWindow.__GRACE_THREAD_SIZE__ = selectedVariant.neckThreadSize ?? "";
         }
@@ -1255,16 +1339,16 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             delete globalWindow.__GRACE_PRODUCT_SKU__;
             delete globalWindow.__GRACE_THREAD_SIZE__;
         };
-    }, [group?.displayName, selectedVariant]);
+    }, [customerDisplayName, selectedVariant]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
     useEffect(() => {
-        if (!isSanityConfigured || !slug || !group?.family) return;
+        if (!isSanityConfigured || !activeSlug || !group?.family) return;
         let cancelled = false;
         Promise.all([
             client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean; paperDollOffsetX?: number; paperDollOffsetY?: number } | null>(
                 `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate, paperDollOffsetX, paperDollOffsetY }`,
-                { slug }
+                { slug: activeSlug }
             ),
             client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
                 `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
@@ -1291,7 +1375,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             })
             .catch(() => { if (!cancelled) setPdpBlocks([]); });
         return () => { cancelled = true; };
-    }, [slug, group?.family]);
+    }, [activeSlug, group?.family]);
 
     // ── Mobile sticky bar: only visible once inline Add to Cart scrolls out of view ──
     useEffect(() => {
@@ -1327,12 +1411,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const jsonLd = useMemo(() => {
         if (!group || !selectedVariant) return null;
         return buildProductJsonLd({
-            name: group.displayName,
+            name: customerDisplayName,
             description: productDescription
-                ?? `${group.displayName} — ${group.family} collection from Best Bottles. ${group.capacity ?? ""}`.trim(),
+                ?? `${customerDisplayName} — ${group.family} collection from Best Bottles. ${group.capacity ?? ""}`.trim(),
             sku: selectedVariant.websiteSku,
             image: selectedVariant.imageUrl ?? undefined,
-            url: `${SITE_URL}/products/${slug}`,
+            url: `${SITE_URL}/products/${activeSlug}`,
             family: group.family,
             priceLow: selectedVariant.webPrice12pc ?? selectedVariant.webPrice10pc ?? selectedVariant.webPrice1pc,
             priceHigh: selectedVariant.webPrice1pc,
@@ -1340,7 +1424,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             neckThreadSize: group.neckThreadSize ?? undefined,
             capacity: group.capacity ?? undefined,
         });
-    }, [group, selectedVariant, productDescription, slug]);
+    }, [group, selectedVariant, productDescription, activeSlug, customerDisplayName]);
 
     const breadcrumbJsonLd = useMemo(() => {
         if (!group) return null;
@@ -1348,9 +1432,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             { name: "Home", url: SITE_URL },
             { name: "Catalog", url: `${SITE_URL}/catalog` },
             { name: group.family, url: `${SITE_URL}/catalog?family=${encodeURIComponent(group.family)}` },
-            { name: group.displayName, url: `${SITE_URL}/products/${slug}` },
+            { name: customerDisplayName, url: `${SITE_URL}/products/${activeSlug}` },
         ]);
-    }, [group, slug]);
+    }, [group, activeSlug, customerDisplayName]);
 
     const compatibleSiblings = useMemo(
         () => sortCompatibleApplicatorSiblings((applicatorSiblings ?? []) as ApplicatorSibling[], group?.family),
@@ -1387,12 +1471,12 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const inStock = selectedVariant?.stockStatus === "In Stock";
     const checkoutReady = Boolean(selectedVariant?.shopifyVariantId);
     const canAddToCart = inStock && checkoutReady;
-    const quoteHref = `/request-quote?products=${encodeURIComponent(`${selectedVariant?.itemName ?? group?.displayName ?? ""} (SKU: ${selectedVariant?.graceSku ?? ""})`)}&quantities=${encodeURIComponent(`${qty} units`)}`;
+    const quoteHref = `/request-quote?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}&quantities=${encodeURIComponent(`${qty} units`)}`;
     const handleAddToCart = () => {
         if (!selectedVariant || !canAddToCart) return;
         addItems([{
             graceSku: selectedVariant.graceSku,
-            itemName: selectedVariant.itemName,
+            itemName: customerDisplayName,
             quantity: qty,
             unitPrice: selectedVariant.webPrice1pc ?? null,
             checkoutEligible: checkoutReady,
@@ -1405,7 +1489,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         }]);
         analytics.cartItemAdded({
             sku: selectedVariant.graceSku,
-            name: selectedVariant.itemName,
+            name: customerDisplayName,
             quantity: qty,
             unitPrice: selectedVariant.webPrice1pc,
             family: group?.family,
@@ -1467,7 +1551,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                             {group.family}
                         </Link>
                         <ChevronRight className="w-3 h-3 shrink-0" />
-                        <span className="text-obsidian font-medium truncate max-w-[150px] sm:max-w-[200px]">{group.displayName}</span>
+                        <span className="text-obsidian font-medium truncate max-w-[150px] sm:max-w-[200px]">{customerDisplayName}</span>
                     </div>
                 </div>
 
@@ -1563,20 +1647,24 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             galleryImages.push({ ...image, url: normalizedUrl });
                                         };
 
-                                        if (selectedVariant?.imageUrl) {
+                                        if (
+                                            selectedVariant?.imageUrl &&
+                                            (!hasShopifyBackedVariantImages || isShopifyCdnImageUrl(selectedVariant.imageUrl))
+                                        ) {
                                             addGalleryImage({
                                                 url: selectedVariant.imageUrl,
                                                 label: "Variant",
-                                                alt: selectedVariant.itemName,
+                                                alt: customerDisplayName,
                                             });
                                         } else if (
                                             selectedVariant?.imageUrlCapOff &&
-                                            supportsSecondaryPdpImage(selectedVariant)
+                                            supportsSecondaryPdpImage(selectedVariant) &&
+                                            (!hasShopifyBackedVariantImages || isShopifyCdnImageUrl(selectedVariant.imageUrlCapOff))
                                         ) {
                                             addGalleryImage({
                                                 url: selectedVariant.imageUrlCapOff,
                                                 label: "Variant",
-                                                alt: selectedVariant.itemName,
+                                                alt: customerDisplayName,
                                             });
                                         }
 
@@ -1584,7 +1672,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             return (
                                                 <ProductImageGallery
                                                     images={galleryImages}
-                                                    primaryAlt={galleryImages[0]?.alt ?? selectedVariant?.itemName ?? group.displayName}
+                                                    primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
                                                     badge={variantBadge}
                                                     watermark={skuWatermark}
                                                     aspectRatio="10/11"
@@ -1635,7 +1723,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                 />
                                             </span>
                                             <span className="text-[9px] text-obsidian font-semibold">
-                                                {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && slug.includes("rollon") && group.color === "Cobalt Blue"
+                                                {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && activeSlug.includes("rollon") && group.color === "Cobalt Blue"
                                                     ? "Blue"
                                                     : (group.color ?? "")}
                                             </span>
@@ -1656,7 +1744,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                                     }
                                                 />
                                                 <span className="text-[9px] text-slate group-hover/sib:text-muted-gold transition-colors">
-                                                    {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && slug.includes("rollon") && s.color === "Cobalt Blue"
+                                                    {group?.family === "Cylinder" && (group?.capacityMl ?? 0) === 5 && activeSlug.includes("rollon") && s.color === "Cobalt Blue"
                                                         ? "Blue"
                                                         : (s.color ?? "")}
                                                 </span>
@@ -1676,7 +1764,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
 
                             {/* Title */}
                             <h1 className="font-serif text-xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-2 sm:mb-3">
-                                {group.displayName}
+                                {customerDisplayName}
                             </h1>
 
                             {/* Sanity trust badges */}

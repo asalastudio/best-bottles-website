@@ -2,6 +2,7 @@
 
 import type { ProductCard } from "@/components/GraceContext";
 import { useCart } from "@/components/CartProvider";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
 /**
  * The shared "Add to cart" + "+ shortlist" action row used by every product
@@ -31,6 +32,10 @@ export default function GraceCtaRow({
     compact = false,
 }: GraceCtaRowProps) {
     const { addItems } = useCart();
+    const customerDisplayName = getCustomerFacingProductName({
+        variant: product,
+        fallbackName: product.itemName,
+    }).displayName;
 
     const handleAdd = () => {
         if (onAddToCart) {
@@ -40,7 +45,7 @@ export default function GraceCtaRow({
         addItems([
             {
                 graceSku: product.graceSku,
-                itemName: product.itemName,
+                itemName: customerDisplayName,
                 quantity: 1,
                 unitPrice: product.webPrice1pc ?? null,
                 checkoutEligible: Boolean(product.shopifyVariantId),

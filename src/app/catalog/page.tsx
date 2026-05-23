@@ -42,6 +42,8 @@ import {
     type ProductCardVariantPreview,
     type ProductCardVariantPreviewSource,
 } from "@/lib/products/product-card-variant-previews";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -249,13 +251,16 @@ function ProductGroupCard({
     index,
     applicatorParam,
     variantPreviews,
+    displayName,
 }: {
     group: CatalogGroup;
     index: number;
     applicatorParam?: string | null;
     variantPreviews?: ProductCardVariantPreview[];
+    displayName?: string;
 }) {
     const href = productGroupHref(group, applicatorParam);
+    const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const cardSpecs = [
         { label: "Size", value: formatCatalogSpec(group.capacity) },
         { label: "Color", value: formatCatalogSpec(group.color) },
@@ -272,15 +277,15 @@ function ProductGroupCard({
             className="group/catalog-card flex h-full flex-col overflow-hidden rounded-sm border border-champagne/40 bg-white transition-all duration-300 hover:border-muted-gold hover:shadow-lg"
         >
             <ProductCardImagePreview
-                productTitle={group.displayName}
-                defaultImage={{ url: group.heroImageUrl, alt: group.displayName }}
+                productTitle={customerDisplayName}
+                defaultImage={{ url: group.heroImageUrl, alt: customerDisplayName }}
                 placeholderLabel={group.family}
                 variantPreviews={variantPreviews}
                 productHref={href}
             />
 
             <Link href={href} className="flex flex-1 flex-col p-5">
-                    <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{group.displayName}</h4>
+                    <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{customerDisplayName}</h4>
                     <dl data-testid="catalog-card-specs" className="grid grid-cols-2 gap-x-3 gap-y-2 mb-4 text-[11px]">
                         {cardSpecs.map((spec) => (
                             <div key={spec.label} className="min-w-0">
@@ -779,6 +784,7 @@ function LineItemRow({
     applicatorParam?: string | null;
 }) {
     const [quantity, setQuantity] = useState(1);
+    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = (() => {
         const params = new URLSearchParams();
         if (applicatorParam) params.set("applicator", applicatorParam);
@@ -804,7 +810,7 @@ function LineItemRow({
                         {group.heroImageUrl ? (
                             <Image
                                 src={group.heroImageUrl}
-                                alt={group.displayName}
+                                alt={customerDisplayName}
                                 fill
                                 className="object-contain p-1"
                                 sizes="56px"
@@ -819,7 +825,7 @@ function LineItemRow({
                             {group.category}
                         </p>
                         <p className="font-serif text-sm text-obsidian font-medium leading-snug group-hover:text-muted-gold transition-colors truncate max-w-[280px]">
-                            {group.displayName}
+                            {customerDisplayName}
                         </p>
                         {group.family && (
                             <p className="text-[10px] text-slate">{group.family}</p>
@@ -922,6 +928,7 @@ function LineItemMobileCard({
 }) {
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
+    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const href = (() => {
         const params = new URLSearchParams();
         if (applicatorParam) params.set("applicator", applicatorParam);
@@ -946,7 +953,7 @@ function LineItemMobileCard({
                     {group.heroImageUrl ? (
                         <Image
                             src={group.heroImageUrl}
-                            alt={group.displayName}
+                            alt={customerDisplayName}
                             fill
                             className="object-contain p-1"
                             sizes="56px"
@@ -964,7 +971,7 @@ function LineItemMobileCard({
                     </p>
                     <Link href={href}>
                         <p className="font-serif text-sm text-obsidian font-medium leading-tight truncate hover:text-muted-gold transition-colors">
-                            {group.displayName}
+                            {customerDisplayName}
                         </p>
                     </Link>
                     <div className="flex items-center gap-2 mt-1">
@@ -1239,7 +1246,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
     const taxonomy = useQuery(api.products.getCatalogTaxonomy);
 
     const allGroups = useMemo(() => {
-        return rawGroups?.map((group) => {
+        return rawGroups?.filter((group) => !getLegacyProductRouteOverride(group.slug)).map((group) => {
             const canonical = buildCanonicalProductGroup(group, [], "catalog-ui");
             return {
                 ...group,
@@ -1468,10 +1475,19 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
             const group = groupById.get(row.groupId);
             if (!group) continue;
             const href = productGroupHref(group, visualApplicatorParam);
+            const representativeVariant =
+                row.variants.find((variant) => variant.websiteSku === skuMap.get(group._id) || variant.graceSku === skuMap.get(group._id)) ??
+                row.variants[0] ??
+                null;
+            const customerDisplayName = getCustomerFacingProductName({
+                group,
+                variant: representativeVariant,
+                fallbackName: group.displayName,
+            }).displayName;
             next.set(
                 row.groupId,
                 getProductCardVariantPreviews(row.variants, {
-                    productTitle: group.displayName,
+                    productTitle: customerDisplayName,
                     defaultImageUrl: group.heroImageUrl,
                     groupColor: group.color,
                     productHref: href,
@@ -1480,7 +1496,33 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         }
 
         return next;
-    }, [variantPreviewRows, visibleProducts, visualApplicatorParam]);
+    }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap]);
+    const customerNameMap = useMemo(() => {
+        const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
+        const next = new Map<string, string>();
+
+        for (const row of variantPreviewRows ?? []) {
+            const group = groupById.get(row.groupId);
+            if (!group) continue;
+            const representativeVariant =
+                row.variants.find((variant) => variant.websiteSku === skuMap.get(group._id) || variant.graceSku === skuMap.get(group._id)) ??
+                row.variants[0] ??
+                null;
+            next.set(row.groupId, getCustomerFacingProductName({
+                group,
+                variant: representativeVariant,
+                fallbackName: group.displayName,
+            }).displayName);
+        }
+
+        for (const group of visibleProducts) {
+            if (!next.has(group._id)) {
+                next.set(group._id, getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName);
+            }
+        }
+
+        return next;
+    }, [variantPreviewRows, visibleProducts, skuMap]);
     const hasMore = visibleCount < filtered.length;
     const isLoading = allGroups === undefined;
     const activeCount = activeFilterCount(filters);
@@ -1986,6 +2028,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         index={pIndex}
                                         applicatorParam={visualApplicatorParam}
                                         variantPreviews={variantPreviewMap.get(group._id)}
+                                        displayName={customerNameMap.get(group._id)}
                                     />
                                 ))}
                             </div>
