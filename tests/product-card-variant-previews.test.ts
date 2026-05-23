@@ -57,6 +57,46 @@ describe("product card variant previews", () => {
         expect(previews[0]?.optionType).toBe("glassColor");
         expect(previews[0]?.swatchImageUrl).toContain("cdn.sanity.io");
     });
+
+    it("uses SKU finish evidence when imported cap fields are generic", () => {
+        const previews = getProductCardVariantPreviews(
+            [
+                {
+                    id: "copper-spray",
+                    itemName: "Spray Clear",
+                    imageUrl: "https://cdn.shopify.com/copper.png",
+                    color: "Clear",
+                    applicator: "Perfume Spray",
+                    capColor: "Clear",
+                    capStyle: "Spray",
+                    websiteSku: "GBDivaFrst46SpryCu",
+                    graceSku: "GB-DVA-FRST-46ML-SPR-CPR",
+                },
+                {
+                    id: "gold-spray",
+                    itemName: "Spray Clear",
+                    imageUrl: "https://cdn.shopify.com/gold.png",
+                    color: "Clear",
+                    applicator: "Perfume Spray",
+                    capColor: "Clear",
+                    capStyle: "Spray",
+                    websiteSku: "GBDivaFrst46SpryShnGl",
+                    graceSku: "GB-DVA-FRST-46ML-SPR-SGLD",
+                },
+            ],
+            {
+                productTitle: "46 ml Clear Diva Perfume Spray Bottle",
+                groupColor: "Clear",
+            },
+        );
+
+        expect(previews.map((preview) => preview.label)).toEqual([
+            "Copper Pump",
+            "Shiny Gold Pump",
+        ]);
+        expect(previews.map((preview) => preview.swatchColor)).toEqual(["#B87333", "#D2A94F"]);
+        expect(previews.every((preview) => preview.optionType === "fitment")).toBe(true);
+    });
 });
 
 describe("material swatch backgrounds", () => {

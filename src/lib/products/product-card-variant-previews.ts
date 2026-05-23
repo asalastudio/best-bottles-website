@@ -104,6 +104,28 @@ const SKU_FINISH_TOKENS: Record<string, string> = {
     TRQ: "Turquoise",
 };
 
+const WEBSITE_SKU_FINISH_PATTERNS: Array<[RegExp, string]> = [
+    [/ShnBlk/i, "Shiny Black"],
+    [/MtBlk/i, "Matte Black"],
+    [/Blk/i, "Black"],
+    [/ShnSl|ShnSlv|SSlv/i, "Shiny Silver"],
+    [/MtSl|MtSlv|MSlv/i, "Matte Silver"],
+    [/ShnGl|SGl?d/i, "Shiny Gold"],
+    [/MtGl|MGl?d/i, "Matte Gold"],
+    [/BrwnLthr/i, "Brown Leather"],
+    [/LBrwnLthr/i, "Light Brown Leather"],
+    [/PnkLthr/i, "Pink Leather"],
+    [/BlkLthr/i, "Black Leather"],
+    [/IvyLthr/i, "Ivory Leather"],
+    [/Lvn/i, "Lavender"],
+    [/Wht/i, "White"],
+    [/Red/i, "Red"],
+    [/Trq/i, "Turquoise"],
+    [/Cu|Cpr/i, "Copper"],
+    [/Gl|Gld/i, "Gold"],
+    [/Sl|Slv/i, "Silver"],
+];
+
 const GENERIC_LABELS = new Set([
     "default title",
     "default",
@@ -112,6 +134,23 @@ const GENERIC_LABELS = new Set([
     "option",
     "n/a",
     "standard",
+]);
+
+const GENERIC_FINISH_LABELS = new Set([
+    ...GENERIC_LABELS,
+    "",
+    "clear",
+    "spray",
+    "sprayer",
+    "perfume spray",
+    "fine mist sprayer",
+    "lotion pump",
+    "dropper",
+    "reducer",
+    "roll-on",
+    "roller",
+    "cap",
+    "cap/closure",
 ]);
 
 function cleanString(value: string | null | undefined): string | null {
@@ -131,11 +170,27 @@ function cleanLabel(value: string | null | undefined): string | null {
     return cleaned;
 }
 
+function cleanFinishLabel(value: string | null | undefined): string | null {
+    const cleaned = cleanString(value);
+    if (!cleaned) return null;
+    if (GENERIC_FINISH_LABELS.has(cleaned.toLowerCase())) return null;
+    return cleaned;
+}
+
 function finishFromSku(sku: string | null | undefined): string | null {
     const tokens = cleanString(sku)?.split("-").map((token) => token.toUpperCase()) ?? [];
     for (let i = tokens.length - 1; i >= 0; i -= 1) {
         const finish = SKU_FINISH_TOKENS[tokens[i]];
         if (finish) return finish;
+    }
+    return null;
+}
+
+function finishFromWebsiteSku(sku: string | null | undefined): string | null {
+    const value = cleanString(sku);
+    if (!value) return null;
+    for (const [pattern, finish] of WEBSITE_SKU_FINISH_PATTERNS) {
+        if (pattern.test(value)) return finish;
     }
     return null;
 }
@@ -169,13 +224,19 @@ function finishFromName(itemName: string | null | undefined): string | null {
 }
 
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
-    const capColor = cleanLabel(variant.capColor);
-    const capStyle = cleanLabel(variant.capStyle);
+    const capColor = cleanFinishLabel(variant.capColor);
+    const capStyle = cleanFinishLabel(variant.capStyle);
     if (capColor && capStyle && !normalizeKey(capStyle).includes(normalizeKey(capColor))) {
         if (normalizeKey(capStyle).includes("dot") && normalizeKey(capColor).includes("dot")) return capColor;
         return `${capStyle} ${capColor}`;
     }
-    return capColor ?? capStyle ?? cleanLabel(variant.trimColor) ?? finishFromSku(variant.graceSku) ?? finishFromSku(variant.websiteSku) ?? finishFromName(variant.itemName);
+    return capColor
+        ?? cleanFinishLabel(variant.trimColor)
+        ?? finishFromSku(variant.graceSku)
+        ?? finishFromWebsiteSku(variant.websiteSku)
+        ?? finishFromSku(variant.websiteSku)
+        ?? finishFromName(variant.itemName)
+        ?? capStyle;
 }
 
 function simplifyApplicator(value: string | null | undefined): string | null {
