@@ -1,3 +1,5 @@
+import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
+
 export type ProductCardVariantPreview = {
     id: string;
     label: string;
@@ -326,10 +328,11 @@ function imageKey(value: string | null | undefined): string {
 function isBlockedProductImageUrl(value: string | null | undefined): boolean {
     const cleaned = cleanString(value);
     if (!cleaned) return false;
+    if (isLegacyBestBottlesImageUrl(cleaned)) return true;
     try {
         return new URL(cleaned).hostname === "cdn.sanity.io";
     } catch {
-        return cleaned.includes("cdn.sanity.io/");
+        return cleaned.includes("cdn.sanity.io/") || cleaned.includes("www.bestbottles.com/images/store/");
     }
 }
 
@@ -363,10 +366,11 @@ export function getProductCardVariantPreviews(
         const sku = cleanString(variant.websiteSku) ?? cleanString(variant.graceSku) ?? undefined;
         const id = cleanString(variant.id) ?? sku ?? `${label}-${previews.length}`;
         const dedupeKey = [
-            imageKey(imageUrl),
+            optionType,
             normalizeKey(label),
             swatchColor ?? "",
             normalizeKey(simplifyApplicator(variant.applicator)),
+            normalizeKey(glassColor),
         ].join("|");
 
         if (seen.has(dedupeKey)) continue;

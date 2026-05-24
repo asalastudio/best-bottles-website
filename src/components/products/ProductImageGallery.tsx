@@ -34,8 +34,8 @@
  */
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
-/* eslint-disable @next/next/no-img-element */
 
 export type GalleryImage = {
     url: string;
@@ -151,12 +151,13 @@ export default function ProductImageGallery({
                     }}
                     aria-label={`Open ${activeImage.label} image at full size`}
                 >
-                    <img
+                    <Image
                         src={activeImage.url}
                         alt={activeImage.alt ?? primaryAlt}
-                        loading="eager"
-                        fetchPriority="high"
-                        className={`w-full h-full object-contain ${mainPadding}`}
+                        fill
+                        priority
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        className={`object-contain ${mainPadding}`}
                     />
                     {badge && (
                         <div className="absolute top-4 left-4 pointer-events-none">
@@ -199,10 +200,12 @@ export default function ProductImageGallery({
                                     }
                                 `}
                             >
-                                <img
+                                <Image
                                     src={img.url}
                                     alt={img.label}
-                                    className="w-full h-full object-contain p-1.5"
+                                    fill
+                                    sizes="80px"
+                                    className="object-contain p-1.5"
                                 />
                                 {isActive && (
                                     <span className="absolute inset-x-0 bottom-0 bg-obsidian/85 text-white text-[8px] uppercase tracking-wider py-0.5 text-center font-medium select-none">
@@ -237,9 +240,12 @@ export default function ProductImageGallery({
                             className="relative max-w-5xl w-full flex flex-col items-center"
                             onClick={(e) => e.stopPropagation()}
                         >
-                            <img
+                            <Image
                                 src={activeImage.url}
                                 alt={activeImage.alt ?? primaryAlt}
+                                width={1200}
+                                height={1200}
+                                sizes="100vw"
                                 className="max-w-full max-h-[80vh] object-contain"
                             />
 

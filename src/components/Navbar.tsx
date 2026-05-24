@@ -139,7 +139,7 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
             {
                 heading: "Unique & Artisan Bottles",
                 links: [
-                    { label: "Metal Atomizers", href: "/catalog?families=Atomizer", badge: "20" },
+                    { label: "Metal Atomizers", href: "/catalog?families=Atomizer", badge: "25" },
                     { label: "Aluminum Bottles", href: "/catalog?category=Aluminum+Bottle" },
                     { label: "Plastic Spray Bottles", href: "/catalog?families=Plastic+Bottle" },
                     { label: "Apothecary Collection", href: "/catalog?families=Apothecary" },

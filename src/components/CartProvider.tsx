@@ -26,6 +26,9 @@ export interface CartItem {
     unitPrice: number | null;
     checkoutEligible?: boolean;
     shopifyVariantId?: string | null;
+    websiteSku?: string | null;
+    variantId?: string | null;
+    productGroupSlug?: string | null;
     family?: string;
     capacity?: string;
     color?: string;
@@ -236,7 +239,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
         } finally {
             setIsCheckingOut(false);
         }
-    }, [items]);
+    }, [clearCart, items]);
 
     return (
         <CartContext.Provider

@@ -97,6 +97,38 @@ describe("product card variant previews", () => {
         expect(previews.map((preview) => preview.swatchColor)).toEqual(["#B87333", "#D2A94F"]);
         expect(previews.every((preview) => preview.optionType === "fitment")).toBe(true);
     });
+
+    it("collapses duplicate cap-finish dots that only differ by cap-on/cap-off media", () => {
+        const previews = getProductCardVariantPreviews(
+            [
+                {
+                    id: "green-cap-on",
+                    itemName: "3 ml Green Vial Bottle with Cap",
+                    imageUrl: "https://cdn.shopify.com/green-cap-on.png",
+                    color: "Green",
+                    capColor: "Green",
+                    capStyle: "Short",
+                    websiteSku: "GBVGreen2o4BlackCapSht",
+                },
+                {
+                    id: "green-cap-off",
+                    itemName: "3 ml Green Vial Bottle with Cap",
+                    imageUrlCapOff: "https://cdn.shopify.com/green-cap-off.png",
+                    color: "Green",
+                    capColor: "Green",
+                    capStyle: "Short",
+                    websiteSku: "GBVGreen2o4BlackCapSht",
+                },
+            ],
+            {
+                productTitle: "3 ml Green Vial Bottle with Cap",
+                groupColor: "Green",
+            },
+        );
+
+        expect(previews).toHaveLength(1);
+        expect(previews[0]?.label).toBe("Short Green Cap");
+    });
 });
 
 describe("material swatch backgrounds", () => {

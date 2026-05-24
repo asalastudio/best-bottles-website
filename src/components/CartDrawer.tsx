@@ -19,10 +19,30 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const { items, itemCount, removeItem, updateQuantity, checkout, isCheckingOut, checkoutError, isCartHydrated } = useCart();
     const { openPanel: openGracePanel } = useGrace();
     const drawerRef = useRef<HTMLDivElement>(null);
+    const closeButtonRef = useRef<HTMLButtonElement>(null);
+    const previousFocusRef = useRef<HTMLElement | null>(null);
 
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
-            if (e.key === "Escape" && isOpen) onClose();
+            if (!isOpen) return;
+            if (e.key === "Escape") {
+                onClose();
+                return;
+            }
+            if (e.key !== "Tab") return;
+            const focusable = drawerRef.current?.querySelectorAll<HTMLElement>(
+                'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])',
+            );
+            if (!focusable || focusable.length === 0) return;
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
         };
         window.addEventListener("keydown", handleKey);
         return () => window.removeEventListener("keydown", handleKey);
@@ -33,10 +53,65 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
         return () => { document.body.style.overflow = ""; };
     }, [isOpen]);
 
+    useEffect(() => {
+        if (!isOpen) {
+            previousFocusRef.current?.focus?.();
+            previousFocusRef.current = null;
+            return;
+        }
+        previousFocusRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+        window.requestAnimationFrame(() => closeButtonRef.current?.focus());
+    }, [isOpen]);
+
+    useEffect(() => {
+        if (!isOpen || !drawerRef.current?.parentElement) return;
+        const parent = drawerRef.current.parentElement;
+        const siblings = Array.from(parent.children).filter((element) =>
+            element !== drawerRef.current && element.getAttribute("data-cart-overlay") !== "true"
+        );
+        const previous = siblings.map((element) => ({
+            element,
+            ariaHidden: element.getAttribute("aria-hidden"),
+            inert: element instanceof HTMLElement ? element.inert : false,
+        }));
+        for (const element of siblings) {
+            element.setAttribute("aria-hidden", "true");
+            if (element instanceof HTMLElement) element.inert = true;
+        }
+        return () => {
+            for (const entry of previous) {
+                if (entry.ariaHidden === null) entry.element.removeAttribute("aria-hidden");
+                else entry.element.setAttribute("aria-hidden", entry.ariaHidden);
+                if (entry.element instanceof HTMLElement) entry.element.inert = entry.inert;
+            }
+        };
+    }, [isOpen]);
+
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
     const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
     const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
+    const persistQuoteDraft = () => {
+        try {
+            sessionStorage.setItem("bb-rfq-line-items", JSON.stringify(items.map((item) => ({
+                sku: item.graceSku,
+                websiteSku: item.websiteSku ?? undefined,
+                variantId: item.variantId ?? item.shopifyVariantId ?? undefined,
+                productGroupSlug: item.productGroupSlug ?? undefined,
+                name: item.itemName,
+                quantity: item.quantity,
+                unitPrice: item.unitPrice,
+                family: item.family,
+                capacity: item.capacity,
+                color: item.color,
+                applicator: item.applicator ?? null,
+                capColor: item.capColor ?? null,
+                neckThreadSize: item.neckThreadSize ?? null,
+            }))));
+        } catch {
+            // Session storage is an enhancement; the query-string fallback below still works.
+        }
+    };
     return (
         <AnimatePresence>
             {isOpen && (
@@ -54,6 +129,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                             backdropFilter: "blur(4px)",
                         }}
                         aria-hidden="true"
+                        data-cart-overlay="true"
                     />
 
                     <motion.div
@@ -74,6 +150,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         role="dialog"
                         aria-modal="true"
                         aria-label="Shopping cart"
+                        aria-describedby="cart-drawer-status"
                         data-testid="cart-drawer"
                     >
                         <div className="absolute inset-0 pointer-events-none overflow-hidden" aria-hidden="true">
@@ -102,6 +179,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                 </div>
                             </div>
                             <button
+                                ref={closeButtonRef}
                                 onClick={onClose}
                                 className="w-11 h-11 rounded-full flex items-center justify-center transition-all duration-200 cursor-pointer hover:bg-black/5"
                                 style={{ border: "1px solid rgba(29, 29, 31, 0.08)" }}
@@ -230,7 +308,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                 className="shrink-0 px-6 py-5 bg-white border-t border-champagne/30"
                             >
                                 {checkoutError && (
-                                    <div className="mb-3 text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
+                                    <div role="alert" className="mb-3 text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
                                         <div className="flex items-start gap-2">
                                             <WarningCircle className="shrink-0 mt-0.5" size={14} />
                                             <div className="flex-1">
@@ -264,7 +342,10 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                                 <Link
                                     href={`/request-quote?products=${encodeURIComponent(items.map(i => `${i.itemName} (x${i.quantity})`).join(', '))}`}
-                                    onClick={onClose}
+                                    onClick={() => {
+                                        persistQuoteDraft();
+                                        onClose();
+                                    }}
                                     className="w-full flex items-center justify-center gap-2 py-3 mt-2 border border-obsidian text-obsidian text-[13px] font-medium tracking-wide rounded-xl hover:bg-obsidian hover:text-bone transition-all duration-300"
                                 >
                                     Request Quote for This Order
@@ -305,7 +386,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     </div>
                                 )}
 
-                                <p className="text-[11px] text-slate text-center mt-3 tracking-wide">
+                                <p id="cart-drawer-status" aria-live="polite" className="text-[11px] text-slate text-center mt-3 tracking-wide">
                                     {isCheckingOut
                                         ? "Checking Shopify variants and preparing checkout."
                                         : quoteOnlyItems.length > 0

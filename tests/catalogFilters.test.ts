@@ -340,6 +340,22 @@ describe("catalog search tolerance", () => {
         ])).toBe(true);
     });
 
+    it("matches plural vial searches against singular vial product records", () => {
+        expect(catalogSearchMatches("vials", [
+            "2 ml Clear Vial Bottle with Cap",
+            "Vial",
+            "8-425",
+        ])).toBe(true);
+    });
+
+    it("matches common automizer misspellings against atomizer product records", () => {
+        expect(catalogSearchMatches("automizers", [
+            "5 ml Atomizer Bottle",
+            "Atomizer Collection",
+            "Metal Atomizer",
+        ])).toBe(true);
+    });
+
     it("treats neck sizes with slash and hyphen variants as equivalent", () => {
         expect(catalogSearchMatches("13/415", ["13-415 clear bottle"])).toBe(true);
     });

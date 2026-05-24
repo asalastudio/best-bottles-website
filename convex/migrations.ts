@@ -9,6 +9,8 @@ interface RawProduct {
     graceSku?: string;
     websiteSku?: string;
     itemName?: string;
+    itemDescription?: string;
+    productUrl?: string;
     family?: string;
     capacity?: string;
     capacityMl?: number;
@@ -20,7 +22,7 @@ interface RawProduct {
     webPrice1pc?: number;
     webPrice12pc?: number;
     imageUrl?: string;
-    productGroupId?: string;
+    productGroupId?: Id<"productGroups">;
     components?: unknown[];
     applicator?: string | null;
 }
@@ -4664,6 +4666,186 @@ export const linkOrphanBatch = internalMutation({
     },
 });
 
+export const patchVialGroupRepairBatch = internalMutation({
+    args: {
+        productPatches: v.array(v.object({
+            productId: v.id("products"),
+            productGroupId: v.id("productGroups"),
+            color: v.string(),
+        })),
+        groupStats: v.array(v.object({
+            groupId: v.id("productGroups"),
+            variantCount: v.number(),
+            priceRangeMin: v.union(v.number(), v.null()),
+            priceRangeMax: v.union(v.number(), v.null()),
+            applicatorTypes: v.array(v.string()),
+            primaryWebsiteSku: v.union(v.string(), v.null()),
+            primaryGraceSku: v.union(v.string(), v.null()),
+            heroImageUrl: v.union(v.string(), v.null()),
+        })),
+    },
+    handler: async (ctx, args) => {
+        for (const patch of args.productPatches) {
+            await ctx.db.patch(patch.productId, {
+                productGroupId: patch.productGroupId,
+                color: patch.color,
+                family: "Vial",
+                bottleCollection: "Vial",
+            });
+        }
+        for (const stat of args.groupStats) {
+            await ctx.db.patch(stat.groupId, {
+                variantCount: stat.variantCount,
+                priceRangeMin: stat.priceRangeMin,
+                priceRangeMax: stat.priceRangeMax,
+                applicatorTypes: stat.applicatorTypes,
+                primaryWebsiteSku: stat.primaryWebsiteSku,
+                primaryGraceSku: stat.primaryGraceSku,
+                heroImageUrl: stat.heroImageUrl,
+            });
+        }
+        return { patchedProducts: args.productPatches.length, patchedGroups: args.groupStats.length };
+    },
+});
+
+function deriveVialBottleColor(product: RawProduct): string | null {
+    const sku = (product.websiteSku ?? "").toLowerCase();
+    const url = (product.productUrl ?? "").toLowerCase();
+    const name = `${product.itemName ?? ""} ${product.itemDescription ?? ""}`.toLowerCase();
+    if (sku.includes("amb") || url.includes("amber-glass") || /\bamber\s+glass\b/.test(name)) return "Amber";
+    if (sku.includes("blu") || url.includes("blue-glass") || /\bblue\s+glass\b/.test(name)) return "Blue";
+    if (sku.includes("gr") || url.includes("green-glass") || /\bgreen\s+glass\b/.test(name)) return "Green";
+    if (sku.includes("clr") || url.includes("clear-glass") || /\bclear\s+glass\b/.test(name)) return "Clear";
+    return null;
+}
+
+/**
+ * Repairs vial products introduced after the original grouping pass.
+ *
+ * Several legacy vial Grace SKUs encode CLR even when the website SKU/name are
+ * Amber, Blue, or Green. This action treats websiteSku/productUrl/itemName as
+ * the bottle-color source of truth, creates any missing vial productGroups, and
+ * relinks the variants so Madison image pushes land on the correct PDP.
+ */
+export const repairAfterFactVialGroups = action({
+    args: {},
+    handler: async (ctx) => {
+        const groups = await ctx.runQuery(internal.migrations.getAllGroups, {}) as Array<Doc<"productGroups">>;
+        const slugToGroup = new Map(groups.map((group) => [group.slug, group]));
+        const allProducts: RawProduct[] = [];
+        const PAGE_SIZE = 200;
+        let cursor: string | null = null;
+        let isDone = false;
+
+        while (!isDone) {
+            const result = await ctx.runQuery(internal.migrations.getProductPage, { cursor, numItems: PAGE_SIZE }) as PageResult;
+            allProducts.push(...result.page);
+            isDone = result.isDone;
+            cursor = result.continueCursor;
+        }
+
+        const vialProducts = allProducts.filter((product) =>
+            product.family === "Vial" ||
+            product.bottleCollection === "Vial" ||
+            /vial/i.test(product.itemName ?? "") ||
+            /GBV/i.test(product.websiteSku ?? "")
+        );
+        const affectedSlugs = new Set<string>();
+        const productPatches: Array<{ productId: Id<"products">; productGroupId: Id<"productGroups">; color: string }> = [];
+        const notes: string[] = [];
+
+        for (const product of vialProducts) {
+            const derivedColor = deriveVialBottleColor(product);
+            if (!derivedColor) continue;
+            const category = product.category ?? "Glass Bottle";
+            const slug = buildSlug("Vial", product.capacityMl ?? null, derivedColor, category, product.neckThreadSize ?? null, getApplicatorBucket(product.applicator));
+            let group = slugToGroup.get(slug);
+            if (!group) {
+                const groupId = await ctx.runMutation(internal.migrations.insertSingleGroup, {
+                    group: {
+                        slug,
+                        displayName: buildDisplayName("Vial", product.capacity ?? null, derivedColor, category, getApplicatorBucket(product.applicator), null, null, null, product.neckThreadSize ?? null),
+                        family: "Vial",
+                        capacity: product.capacity ?? null,
+                        capacityMl: product.capacityMl ?? null,
+                        color: derivedColor,
+                        category,
+                        bottleCollection: "Vial",
+                        neckThreadSize: product.neckThreadSize ?? null,
+                        variantCount: 0,
+                        priceRangeMin: null,
+                        priceRangeMax: null,
+                        applicatorTypes: [],
+                    },
+                }) as Id<"productGroups">;
+                group = {
+                    _id: groupId,
+                    _creationTime: 0,
+                    slug,
+                    displayName: buildDisplayName("Vial", product.capacity ?? null, derivedColor, category, getApplicatorBucket(product.applicator), null, null, null, product.neckThreadSize ?? null),
+                    family: "Vial",
+                    capacity: product.capacity ?? null,
+                    capacityMl: product.capacityMl ?? null,
+                    color: derivedColor,
+                    category,
+                    bottleCollection: "Vial",
+                    neckThreadSize: product.neckThreadSize ?? null,
+                    variantCount: 0,
+                    priceRangeMin: null,
+                    priceRangeMax: null,
+                    applicatorTypes: [],
+                };
+                slugToGroup.set(slug, group);
+                notes.push(`Created ${slug}`);
+            }
+            affectedSlugs.add(slug);
+            if (product.productGroupId !== group._id || product.color !== derivedColor || product.family !== "Vial" || product.bottleCollection !== "Vial") {
+                productPatches.push({ productId: product._id, productGroupId: group._id, color: derivedColor });
+                notes.push(`${product.websiteSku ?? product.graceSku ?? product._id} -> ${slug}`);
+            }
+        }
+
+        const groupedProducts = new Map<string, RawProduct[]>();
+        for (const product of allProducts) {
+            const derivedColor = deriveVialBottleColor(product);
+            if (!derivedColor) continue;
+            const category = product.category ?? "Glass Bottle";
+            const slug = buildSlug("Vial", product.capacityMl ?? null, derivedColor, category, product.neckThreadSize ?? null, getApplicatorBucket(product.applicator));
+            if (!affectedSlugs.has(slug)) continue;
+            const rows = groupedProducts.get(slug) ?? [];
+            rows.push({ ...product, color: derivedColor, family: "Vial", bottleCollection: "Vial" });
+            groupedProducts.set(slug, rows);
+        }
+
+        const groupStats = Array.from(groupedProducts.entries()).flatMap(([slug, products]) => {
+            const group = slugToGroup.get(slug);
+            if (!group) return [];
+            const prices = products.map((product) => product.webPrice1pc).filter((value): value is number => value != null && value > 0);
+            const primary = products.find((product) => product.imageUrl?.includes("cdn.shopify.com")) ?? products[0] ?? null;
+            return [{
+                groupId: group._id,
+                variantCount: products.length,
+                priceRangeMin: prices.length ? Math.min(...prices) : null,
+                priceRangeMax: prices.length ? Math.max(...prices) : null,
+                applicatorTypes: Array.from(new Set(products.map((product) => product.applicator).filter((value): value is string => Boolean(value)))),
+                primaryWebsiteSku: primary?.websiteSku ?? null,
+                primaryGraceSku: primary?.graceSku ?? null,
+                heroImageUrl: primary?.imageUrl?.includes("cdn.shopify.com") ? primary.imageUrl : null,
+            }];
+        });
+
+        await ctx.runMutation(internal.migrations.patchVialGroupRepairBatch, { productPatches, groupStats });
+
+        return {
+            patchedProducts: productPatches.length,
+            patchedGroups: groupStats.length,
+            affectedSlugs: Array.from(affectedSlugs).sort(),
+            notes,
+            message: `Repaired ${productPatches.length} vial product links across ${groupStats.length} groups.`,
+        };
+    },
+});
+
 /**
  * Additive migration: builds productGroups for any product that currently
  * has no productGroupId. Existing groups are never modified or deleted.
@@ -5610,5 +5792,78 @@ export const fixAnomalousThreadSizesProducts = internalMutation({
             isDone: result.isDone,
             continueCursor: result.isDone ? null : result.continueCursor,
         };
+    },
+});
+
+/**
+ * Remove accidentally pushed 50 ml Frosted Circle tassel variants from the
+ * non-tassel antique spray PDP.
+ *
+ * The valid non-tassel group is:
+ *   circle-50ml-frosted-18-415-antiquespray
+ *
+ * A Madison/Shopify push added `GBCrclFrst50AnSpTsl*` variants to that same
+ * group, causing the non-tassel PDP to show tassel media. This repair deletes
+ * only those stale tassel variants and recomputes group summary fields.
+ *
+ * Run:
+ *   npx convex run migrations:removeAccidentalCircle50FrostedTasselVariants
+ */
+export const removeAccidentalCircle50FrostedTasselVariantsMutation = internalMutation({
+    args: {},
+    handler: async (ctx) => {
+        const group = await ctx.db
+            .query("productGroups")
+            .withIndex("by_slug", (q) => q.eq("slug", "circle-50ml-frosted-18-415-antiquespray"))
+            .first();
+
+        if (!group) {
+            return { success: false, error: "group_not_found" as const };
+        }
+
+        const variants = await ctx.db
+            .query("products")
+            .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+            .collect();
+
+        const toDelete = variants.filter((variant) =>
+            /AnSpTsl/i.test(variant.websiteSku ?? "") ||
+            /-AST-/i.test(variant.graceSku ?? "") ||
+            /with\s+tassel/i.test(variant.itemName ?? "") ||
+            /with\s+tassel/i.test(variant.itemDescription ?? "")
+        );
+
+        for (const variant of toDelete) {
+            await ctx.db.delete(variant._id);
+        }
+
+        const remaining = variants.filter((variant) => !toDelete.some((deleted) => deleted._id === variant._id));
+        const prices = remaining
+            .map((variant) => variant.webPrice1pc)
+            .filter((price): price is number => typeof price === "number" && price > 0);
+        const applicatorTypes = Array.from(new Set(remaining.map((variant) => variant.applicator).filter((value): value is NonNullable<typeof value> => Boolean(value))));
+
+        await ctx.db.patch(group._id, {
+            variantCount: remaining.length,
+            priceRangeMin: prices.length ? Math.min(...prices) : null,
+            priceRangeMax: prices.length ? Math.max(...prices) : null,
+            applicatorTypes,
+        });
+
+        return {
+            success: true,
+            groupId: group._id,
+            groupSlug: group.slug,
+            deletedCount: toDelete.length,
+            remainingCount: remaining.length,
+            deletedSkus: toDelete.map((variant) => variant.websiteSku ?? variant.graceSku ?? String(variant._id)),
+        };
+    },
+});
+
+export const removeAccidentalCircle50FrostedTasselVariants = action({
+    args: {},
+    handler: async (ctx): Promise<unknown> => {
+        return await ctx.runMutation(internal.migrations.removeAccidentalCircle50FrostedTasselVariantsMutation, {});
     },
 });

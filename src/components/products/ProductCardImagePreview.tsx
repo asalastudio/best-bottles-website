@@ -154,7 +154,6 @@ export default function ProductCardImagePreview({
                         fill
                         className="object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
-                        unoptimized
                     />
                 ) : (
                     <div className="flex h-full flex-col items-center justify-center p-4 text-center">

@@ -450,6 +450,349 @@ export const getAllCatalogGroups = query({
     },
 });
 
+const SEARCH_STOP_WORDS = new Set(["a", "an", "and", "for", "of", "the", "with"]);
+const APPLICATOR_BUCKETS = [
+    { value: "rollon", productValues: ["Metal Roller Ball", "Plastic Roller Ball", "Metal Roller", "Plastic Roller"] },
+    { value: "finemist", productValues: ["Fine Mist Sprayer", "Atomizer"] },
+    { value: "perfumespray", productValues: ["Perfume Spray Pump"] },
+    { value: "reducer", productValues: ["Reducer"] },
+    { value: "dropper", productValues: ["Dropper"] },
+    { value: "lotionpump", productValues: ["Lotion Pump"] },
+    { value: "antiquespray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
+    { value: "antiquespray-tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
+] as const;
+const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
+    rollon: ["-rollon"],
+    finemist: ["-spray"],
+    perfumespray: ["-spray"],
+    antiquespray: ["-spray"],
+    "antiquespray-tassel": ["-spray"],
+    dropper: ["-dropper"],
+    lotionpump: ["-lotionpump"],
+    reducer: ["-reducer"],
+};
+const COMPONENT_CATEGORIES = new Set([
+    "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
+    "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
+]);
+const BOTTLE_CATEGORIES = new Set(["Glass Bottle", "Cream Jar", "Lotion Bottle"]);
+const FAMILY_ORDER = [
+    "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
+    "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
+    "Tulip", "Queen", "Bell", "Swirl", "Grace",
+];
+
+function normalizeCatalogSearchText(value: string | null | undefined): string {
+    if (!value) return "";
+    return value
+        .toLowerCase()
+        .normalize("NFKD")
+        .replace(/[–—]/g, "-")
+        .replace(/(\d{1,4})\s*ml\b/g, "$1ml $1 ml")
+        .replace(/\b(\d{1,3})\s*[-/]\s*(\d{3,4})\b/g, "$1-$2 $1/$2")
+        .replace(/\broll[\s-]?on\b/g, "rollon roll-on roller rollerball roller ball")
+        .replace(/\bfine[\s-]?mist\b/g, "finemist fine mist spray sprayer")
+        .replace(/\bperfume\s*spray\b/g, "perfumespray perfume spray sprayer")
+        .replace(/\bbulb\b/g, "bulb vintage antique")
+        .replace(/\bsprayers?\b/g, "sprayer spray")
+        .replace(/\bauto?mizers?\b/g, "atomizer automizer automizers")
+        .replace(/\batomizers?\b/g, "atomizer automizer automizers")
+        .replace(/\bdroppers?\b/g, "dropper pipette")
+        .replace(/\breducers?\b/g, "reducer orifice plug")
+        .replace(/\blotion\s*pumps?\b/g, "lotionpump lotion pump")
+        .replace(/\bvials?\b/g, "vial vials sample")
+        .replace(/\bbottles?\b/g, "bottle bottles")
+        .replace(/\bcaps?\b/g, "cap closure lid")
+        .replace(/\bclosures?\b/g, "closure cap lid")
+        .replace(/\bamber\b/g, "amber brown")
+        .replace(/\bbrown\b/g, "brown amber")
+        .replace(/\bcobalt\b/g, "cobalt blue")
+        .replace(/\bfrost(ed)?\b/g, "frosted frost")
+        .replace(/[^\w\s/-]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+        .replace(/\b(\d{1,4})\s+ml\b/g, "$1ml $1 ml");
+}
+
+function catalogSearchTokens(queryText: string): string[] {
+    const normalized = normalizeCatalogSearchText(queryText);
+    if (!normalized) return [];
+    return Array.from(new Set(normalized.split(/\s+/).filter((token) => token && !SEARCH_STOP_WORDS.has(token))));
+}
+
+function catalogSearchMatches(queryText: string, fields: Array<string | number | null | undefined>): boolean {
+    const tokens = catalogSearchTokens(queryText);
+    if (tokens.length === 0) return true;
+    const haystack = normalizeCatalogSearchText(fields.filter((value) => value != null).join(" "));
+    return tokens.every((token) => haystack.includes(token));
+}
+
+function catalogSearchScore(queryText: string, weightedFields: Array<{ value: string | number | null | undefined; weight: number }>): number {
+    const tokens = catalogSearchTokens(queryText);
+    if (tokens.length === 0) return 0;
+    return weightedFields.reduce((score, field) => {
+        const text = normalizeCatalogSearchText(field.value == null ? null : String(field.value));
+        if (!text) return score;
+        const matchedTokens = tokens.filter((token) => text.includes(token)).length;
+        const exactPhraseBoost = text.includes(normalizeCatalogSearchText(queryText)) ? field.weight : 0;
+        return score + matchedTokens * field.weight + exactPhraseBoost;
+    }, 0);
+}
+
+function classifyCatalogComponentType(displayName: string, family: string | null): string | null {
+    const name = displayName.toLowerCase();
+    const fam = (family ?? "").toLowerCase();
+    if (name.includes("sprayer") || name.includes("atomizer") || name.includes("bulb") || fam.includes("sprayer")) return "Sprayer";
+    if (name.includes("dropper") || fam.includes("dropper")) return "Dropper";
+    if ((name.includes("lotion") && name.includes("pump")) || fam.includes("lotion pump")) return "Lotion Pump";
+    if (name.includes("roll-on") || name.includes("roll on") || fam.includes("roll-on")) return "Roll-On";
+    if (name.includes("roller") || fam.includes("roller")) return "Roller";
+    if (name.includes("reducer") || fam.includes("reducer")) return "Reducer";
+    if (name.includes("cap") || name.includes("closure") || fam.includes("cap")) return "Cap";
+    return null;
+}
+
+function countByCatalogGroup<T extends { [key: string]: unknown }>(items: T[], keyFn: (item: T) => string | null | undefined): Record<string, number> {
+    const counts: Record<string, number> = {};
+    for (const item of items) {
+        const key = keyFn(item);
+        if (key) counts[key] = (counts[key] ?? 0) + 1;
+    }
+    return counts;
+}
+
+function parseCapacityMl(label: string): number | null {
+    const match = label.match(/^(\d+(?:\.\d+)?)\s*ml/i);
+    return match ? Number(match[1]) : null;
+}
+
+/**
+ * Server/client catalog search endpoint used by the Next catalog page.
+ * Keeps the browser from loading all catalog groups and recomputing facets.
+ */
+export const searchCatalog = query({
+    args: {
+        filters: v.object({
+            search: v.optional(v.string()),
+            category: v.optional(v.union(v.string(), v.null())),
+            collection: v.optional(v.union(v.string(), v.null())),
+            applicators: v.optional(v.array(v.string())),
+            families: v.optional(v.array(v.string())),
+            colors: v.optional(v.array(v.string())),
+            capacities: v.optional(v.array(v.string())),
+            neckThreadSizes: v.optional(v.array(v.string())),
+            componentType: v.optional(v.union(v.string(), v.null())),
+            priceMin: v.optional(v.union(v.number(), v.null())),
+            priceMax: v.optional(v.union(v.number(), v.null())),
+        }),
+        sort: v.string(),
+        view: v.string(),
+        limit: v.number(),
+        cursor: v.optional(v.union(v.string(), v.null())),
+    },
+    handler: async (ctx, args) => {
+        const filters = {
+            search: args.filters.search ?? "",
+            category: args.filters.category ?? null,
+            collection: args.filters.collection ?? null,
+            applicators: args.filters.applicators ?? [],
+            families: args.filters.families ?? [],
+            colors: args.filters.colors ?? [],
+            capacities: args.filters.capacities ?? [],
+            neckThreadSizes: args.filters.neckThreadSizes ?? [],
+            componentType: args.filters.componentType ?? null,
+            priceMin: args.filters.priceMin ?? null,
+            priceMax: args.filters.priceMax ?? null,
+        };
+        const allGroups = await ctx.db.query("productGroups").collect();
+        const skuPairs = allGroups.map((group) => ({
+            groupId: String(group._id),
+            websiteSku: group.primaryWebsiteSku ?? null,
+            graceSku: group.primaryGraceSku ?? null,
+        }));
+        const skuMap = new Map(skuPairs.map((row) => [row.groupId, row.websiteSku ?? row.graceSku ?? ""]));
+
+        const matchesApplicatorBucket = (group: typeof allGroups[number], bucket: string) => {
+            const bucketDef = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
+            if (!bucketDef) return false;
+            if (!(group.applicatorTypes ?? []).some((value) => (bucketDef.productValues as readonly string[]).includes(value))) return false;
+            const allowedSuffixes = SLUG_BUCKET_SUFFIXES[bucket];
+            return !allowedSuffixes || allowedSuffixes.some((suffix) => group.slug.endsWith(suffix));
+        };
+
+        const runFilters = (skipKeys = new Set<string>()) => {
+            let rows = [...allGroups];
+            if (filters.search) {
+                rows = rows.filter((group) => catalogSearchMatches(filters.search, [
+                    group.displayName,
+                    group.family,
+                    group.color,
+                    group.capacity,
+                    group.capacityMl == null ? null : `${group.capacityMl} ml`,
+                    group.category,
+                    group.neckThreadSize,
+                    group.bottleCollection,
+                    group.slug,
+                    (group.applicatorTypes ?? []).join(" "),
+                    skuMap.get(String(group._id)),
+                ]));
+            }
+            if (filters.category) rows = rows.filter((group) => group.category === filters.category);
+            if (filters.collection) rows = rows.filter((group) => group.bottleCollection === filters.collection);
+            if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
+                rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
+            }
+            if (!skipKeys.has("families") && filters.families.length > 0) {
+                const familySet = new Set(filters.families);
+                rows = rows.filter((group) => group.family != null && familySet.has(group.family));
+            }
+            if (!skipKeys.has("colors") && filters.colors.length > 0) {
+                const colorSet = new Set(filters.colors);
+                rows = rows.filter((group) => group.color != null && colorSet.has(group.color));
+            }
+            if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
+                const selectedMls = new Set(filters.capacities.map(parseCapacityMl).filter((value): value is number => value != null));
+                rows = rows.filter((group) => group.capacityMl != null && selectedMls.has(group.capacityMl));
+            }
+            if (!skipKeys.has("neckThreadSizes") && filters.neckThreadSizes.length > 0) {
+                const threadSet = new Set(filters.neckThreadSizes);
+                rows = rows.filter((group) => group.neckThreadSize != null && threadSet.has(group.neckThreadSize));
+            }
+            if (filters.componentType) rows = rows.filter((group) => classifyCatalogComponentType(group.displayName, group.family) === filters.componentType);
+            if (filters.priceMin !== null) rows = rows.filter((group) => group.priceRangeMin !== null && group.priceRangeMin >= filters.priceMin!);
+            if (filters.priceMax !== null) rows = rows.filter((group) => group.priceRangeMin !== null && group.priceRangeMin <= filters.priceMax!);
+            return rows;
+        };
+
+        const result = runFilters();
+        const applicatorFacetBase = runFilters(new Set(["applicators"]));
+        const familyFacetBase = runFilters(new Set(["families"]));
+        const colorFacetBase = runFilters(new Set(["colors"]));
+        const capacityFacetBase = runFilters(new Set(["capacities"]));
+        const threadFacetBase = runFilters(new Set(["neckThreadSizes"]));
+
+        const applicatorCounts: Record<string, number> = {};
+        for (const bucket of APPLICATOR_BUCKETS) {
+            const count = applicatorFacetBase.filter((group) => matchesApplicatorBucket(group, bucket.value)).length;
+            if (count > 0 || filters.applicators.includes(bucket.value)) applicatorCounts[bucket.value] = count;
+        }
+
+        const capacities: Record<string, { label: string; ml: number | null; count: number }> = {};
+        for (const group of capacityFacetBase) {
+            const ml = group.capacityMl;
+            if (ml != null && ml > 0) {
+                const label = `${ml} ml`;
+                capacities[label] ??= { label, ml, count: 0 };
+                capacities[label].count++;
+            }
+        }
+
+        const priceValues = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
+        const facets = {
+            categories: countByCatalogGroup(result, (group) => group.category),
+            collections: countByCatalogGroup(result, (group) => group.bottleCollection),
+            applicators: applicatorCounts,
+            families: countByCatalogGroup(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
+            colors: countByCatalogGroup(colorFacetBase, (group) => group.color),
+            capacities,
+            neckThreadSizes: countByCatalogGroup(threadFacetBase, (group) => group.neckThreadSize),
+            componentTypes: countByCatalogGroup(result, (group) => classifyCatalogComponentType(group.displayName, group.family)),
+            priceRange: priceValues.length > 0 ? { min: Math.min(...priceValues), max: Math.max(...priceValues) } : { min: 0, max: 0 },
+        };
+
+        const sorted = [...result];
+        const sort = args.sort;
+        if (sort === "best-match" && filters.search) {
+            sorted.sort((a, b) => {
+                const score = (group: typeof sorted[number]) => catalogSearchScore(filters.search, [
+                    { value: group.displayName, weight: 5 },
+                    { value: skuMap.get(String(group._id)), weight: 5 },
+                    { value: (group.applicatorTypes ?? []).join(" "), weight: 4 },
+                    { value: group.family, weight: 3 },
+                    { value: group.capacity, weight: 3 },
+                    { value: group.capacityMl == null ? null : `${group.capacityMl} ml`, weight: 3 },
+                    { value: group.color, weight: 2 },
+                    { value: group.neckThreadSize, weight: 2 },
+                    { value: group.category, weight: 1 },
+                    { value: group.bottleCollection, weight: 1 },
+                    { value: group.slug, weight: 1 },
+                ]);
+                return score(b) - score(a) || (a.capacityMl ?? Infinity) - (b.capacityMl ?? Infinity) || a.displayName.localeCompare(b.displayName);
+            });
+        } else if (sort === "price-asc") {
+            sorted.sort((a, b) => (a.priceRangeMin ?? Infinity) - (b.priceRangeMin ?? Infinity));
+        } else if (sort === "price-desc") {
+            sorted.sort((a, b) => (b.priceRangeMin ?? -Infinity) - (a.priceRangeMin ?? -Infinity));
+        } else if (sort === "name-asc") {
+            sorted.sort((a, b) => a.displayName.localeCompare(b.displayName));
+        } else if (sort === "name-desc") {
+            sorted.sort((a, b) => b.displayName.localeCompare(a.displayName));
+        } else if (sort === "variants-desc") {
+            sorted.sort((a, b) => (b.variantCount ?? 0) - (a.variantCount ?? 0));
+        } else if (sort === "capacity-asc") {
+            sorted.sort((a, b) => (a.capacityMl ?? Infinity) - (b.capacityMl ?? Infinity));
+        } else if (sort === "capacity-desc") {
+            sorted.sort((a, b) => (b.capacityMl ?? -Infinity) - (a.capacityMl ?? -Infinity));
+        } else {
+            const familyIdx = (family: string | null) => {
+                if (!family) return FAMILY_ORDER.length;
+                const index = FAMILY_ORDER.indexOf(family);
+                return index >= 0 ? index : FAMILY_ORDER.length;
+            };
+            sorted.sort((a, b) => {
+                const categoryA = BOTTLE_CATEGORIES.has(a.category) ? 0 : 1;
+                const categoryB = BOTTLE_CATEGORIES.has(b.category) ? 0 : 1;
+                if (categoryA !== categoryB) return categoryA - categoryB;
+                const familyA = familyIdx(a.family);
+                const familyB = familyIdx(b.family);
+                if (familyA !== familyB) return familyA - familyB;
+                return (a.capacityMl ?? 99999) - (b.capacityMl ?? 99999);
+            });
+        }
+
+        const offset = Math.max(0, Number(args.cursor ?? 0) || 0);
+        const limit = Math.min(Math.max(args.limit, 1), 240);
+        const items = sorted.slice(offset, offset + limit);
+        const nextOffset = offset + items.length;
+        const nextCursor = nextOffset < sorted.length ? String(nextOffset) : null;
+        const visibleIds = new Set(items.map((group) => String(group._id)));
+
+        const variantPreviewRows = await Promise.all(items.map(async (group) => {
+            const variants = await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                .collect();
+            return {
+                groupId: String(group._id),
+                variants: variants.map((variant) => ({
+                    id: String(variant._id),
+                    itemName: variant.itemName ?? null,
+                    websiteSku: variant.websiteSku ?? null,
+                    graceSku: variant.graceSku ?? null,
+                    imageUrl: variant.imageUrl ?? null,
+                    imageUrlCapOff: variant.imageUrlCapOff ?? null,
+                    color: variant.color ?? null,
+                    applicator: variant.applicator ?? null,
+                    capColor: variant.capColor ?? null,
+                    trimColor: variant.trimColor ?? null,
+                    capStyle: variant.capStyle ?? null,
+                    capHeight: variant.capHeight ?? null,
+                    ballMaterial: variant.ballMaterial ?? null,
+                })),
+            };
+        }));
+
+        return {
+            items,
+            facets,
+            totalCount: sorted.length,
+            nextCursor,
+            primarySkus: skuPairs.filter((row) => visibleIds.has(row.groupId)),
+            variantPreviewRows,
+        };
+    },
+});
+
 /**
  * Top families ranked by total variant count, with one representative hero
  * image each. Used by the workspace's "Popular families" left-rail strip
@@ -711,16 +1054,60 @@ export const preflightProductGroupImageTarget = query({
     },
     handler: async (ctx, args) => {
         const requestedSlug = args.productGroupSlug?.trim();
+        const text = (value: string | null | undefined) => (value ?? "").toLowerCase();
+        const hasAmberSignal = (product: {
+            websiteSku?: string | null;
+            productUrl?: string | null;
+            itemName?: string | null;
+            itemDescription?: string | null;
+        }) => {
+            const sku = text(product.websiteSku);
+            const url = text(product.productUrl);
+            const name = text(`${product.itemName ?? ""} ${product.itemDescription ?? ""}`);
+            return /\bamb\b|amb\d|amb[0-9a-z]*|amber/.test(sku) ||
+                url.includes("amber-glass") ||
+                /\bamber\s+glass\b/.test(name);
+        };
+        const hasClearBottleSignal = (product: {
+            websiteSku?: string | null;
+            productUrl?: string | null;
+            itemName?: string | null;
+            itemDescription?: string | null;
+        }) => {
+            const sku = text(product.websiteSku);
+            const url = text(product.productUrl);
+            const name = text(`${product.itemName ?? ""} ${product.itemDescription ?? ""}`);
+            return /\bclr\b|clr\d|clr[0-9a-z]*|clear/.test(sku) ||
+                url.includes("clear-glass") ||
+                /\bclear\s+glass\b/.test(name);
+        };
+        const productContradictsGroup = (
+            group: Doc<"productGroups">,
+            product: {
+                websiteSku?: string | null;
+                productUrl?: string | null;
+                itemName?: string | null;
+                itemDescription?: string | null;
+            },
+        ) => {
+            const groupColor = text(group.color);
+            if (groupColor === "clear") return hasAmberSignal(product);
+            if (groupColor === "amber") return hasClearBottleSignal(product);
+            return false;
+        };
 
         const toPayload = (
             group: Doc<"productGroups">,
             method: "productGroupId" | "exact_slug" | "sku_or_product_id" | "case_insensitive_slug",
             matchedProduct?: {
                 _id: unknown;
-                productId?: string | null;
-                graceSku?: string | null;
-                websiteSku?: string | null;
-            } | null,
+                    productId?: string | null;
+                    graceSku?: string | null;
+                    websiteSku?: string | null;
+                    productUrl?: string | null;
+                    itemName?: string | null;
+                    itemDescription?: string | null;
+                } | null,
         ) => ({
             success: true as const,
             status: method === "case_insensitive_slug" ? "alias_resolved" as const : "exact_match" as const,
@@ -754,14 +1141,6 @@ export const preflightProductGroupImageTarget = query({
             if (group) return toPayload(group, "productGroupId");
         }
 
-        if (requestedSlug) {
-            const exact = await ctx.db
-                .query("productGroups")
-                .withIndex("by_slug", (q) => q.eq("slug", requestedSlug))
-                .first();
-            if (exact) return toPayload(exact, "exact_slug");
-        }
-
         const productLookups = [
             args.graceSku
                 ? ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku!)).first()
@@ -778,13 +1157,53 @@ export const preflightProductGroupImageTarget = query({
             productId?: string | null;
             graceSku?: string | null;
             websiteSku?: string | null;
+            productUrl?: string | null;
+            itemName?: string | null;
+            itemDescription?: string | null;
         } | null>>;
 
+        let matchedProduct: Awaited<(typeof productLookups)[number]> | null = null;
         for (const lookup of productLookups) {
-            const product = await lookup;
-            if (!product?.productGroupId) continue;
-            const group = await ctx.db.get(product.productGroupId);
-            if (group) return toPayload(group, "sku_or_product_id", product);
+            matchedProduct = await lookup;
+            if (matchedProduct) break;
+        }
+
+        if (requestedSlug) {
+            const exact = await ctx.db
+                .query("productGroups")
+                .withIndex("by_slug", (q) => q.eq("slug", requestedSlug))
+                .first();
+            if (exact) {
+                if (matchedProduct?.productGroupId && matchedProduct.productGroupId !== exact._id) {
+                    return {
+                        success: false as const,
+                        status: "sku_group_mismatch" as const,
+                        requestedSlug,
+                        productGroupSlug: exact.slug,
+                        websiteSku: matchedProduct.websiteSku ?? null,
+                        graceSku: matchedProduct.graceSku ?? null,
+                        message: "The requested SKU belongs to a different product group than the requested slug.",
+                    };
+                }
+                if (matchedProduct && productContradictsGroup(exact, matchedProduct)) {
+                    return {
+                        success: false as const,
+                        status: "sku_color_mismatch" as const,
+                        requestedSlug,
+                        productGroupSlug: exact.slug,
+                        groupColor: exact.color ?? null,
+                        websiteSku: matchedProduct.websiteSku ?? null,
+                        graceSku: matchedProduct.graceSku ?? null,
+                        message: "The requested SKU naming/product URL conflicts with the target product group's bottle color.",
+                    };
+                }
+                return toPayload(exact, "exact_slug", matchedProduct);
+            }
+        }
+
+        if (matchedProduct?.productGroupId) {
+            const group = await ctx.db.get(matchedProduct.productGroupId);
+            if (group) return toPayload(group, "sku_or_product_id", matchedProduct);
         }
 
         if (requestedSlug) {
@@ -1040,12 +1459,20 @@ export const setImageUrl = mutation({
         const product = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
-            .first();
+            .first() ?? await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", args.websiteSku))
+                .first();
         if (!product) {
             return { success: false, websiteSku: args.websiteSku, error: "not_found" as const };
         }
         await ctx.db.patch(product._id, { imageUrl: args.imageUrl });
-        return { success: true, websiteSku: args.websiteSku };
+        return {
+            success: true,
+            inputSku: args.websiteSku,
+            websiteSku: product.websiteSku ?? args.websiteSku,
+            graceSku: product.graceSku ?? null,
+        };
     },
 });
 
@@ -1102,10 +1529,16 @@ export const setVariantImages = mutation({
             };
         }
 
-        const products = await ctx.db
+        let products = await ctx.db
             .query("products")
             .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
             .collect();
+        if (products.length === 0) {
+            products = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", args.websiteSku))
+                .collect();
+        }
 
         if (products.length === 0) {
             return {
@@ -1134,7 +1567,14 @@ export const setVariantImages = mutation({
             );
             for (const groupId of groupIds) {
                 const group = await ctx.db.get(groupId);
-                if (group && group.primaryWebsiteSku === args.websiteSku) {
+                const isPrimary = products.some((product) =>
+                    group &&
+                    (
+                        (group.primaryWebsiteSku && product.websiteSku === group.primaryWebsiteSku) ||
+                        (group.primaryGraceSku && product.graceSku === group.primaryGraceSku)
+                    )
+                );
+                if (group && isPrimary) {
                     await ctx.db.patch(group._id, { heroImageUrl: args.imageUrl });
                     groupAlsoUpdated = true;
                 }
@@ -1143,7 +1583,9 @@ export const setVariantImages = mutation({
 
         return {
             success: true,
-            websiteSku: args.websiteSku,
+            inputSku: args.websiteSku,
+            websiteSku: products[0]?.websiteSku ?? args.websiteSku,
+            graceSku: products[0]?.graceSku ?? null,
             patchedCount: products.length,
             patched: {
                 imageUrl: !!args.imageUrl,
