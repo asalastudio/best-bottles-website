@@ -23,6 +23,36 @@ export function getCatalogConvexClient() {
     return convexClient;
 }
 
+async function withCatalogMediaPreviewRows(
+    convex: ConvexHttpClient,
+    result: CatalogSearchResultShape,
+): Promise<CatalogSearchResultShape> {
+    const groupIds = result.items.map((group) => group._id);
+    if (groupIds.length === 0) return result;
+
+    const hasPreviewRows = Array.isArray(result.variantPreviewRows) && result.variantPreviewRows.length >= groupIds.length;
+    const hasPrimarySkus = Array.isArray(result.primarySkus) && result.primarySkus.length >= groupIds.length;
+
+    if (hasPreviewRows && hasPrimarySkus) return result;
+
+    const [primarySkus, variantPreviewRows] = await Promise.all([
+        hasPrimarySkus
+            ? Promise.resolve(result.primarySkus)
+            : convex.query(api.products.getCatalogGroupPrimarySkus, {}),
+        hasPreviewRows
+            ? Promise.resolve(result.variantPreviewRows)
+            : convex.query(api.products.getCatalogGroupVariantPreviewData, { groupIds }),
+    ]);
+
+    const visibleIds = new Set(groupIds);
+
+    return {
+        ...result,
+        primarySkus: (primarySkus as CatalogSearchResultShape["primarySkus"]).filter((row) => visibleIds.has(row.groupId)),
+        variantPreviewRows: (variantPreviewRows as CatalogSearchResultShape["variantPreviewRows"]).filter((row) => visibleIds.has(row.groupId)),
+    };
+}
+
 function asStringArray(value: unknown): string[] {
     return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0) : [];
 }
@@ -58,7 +88,8 @@ export async function searchCatalogServer(args: CatalogSearchArgs): Promise<Cata
     const normalizedArgs = normalizeCatalogSearchArgs(args);
     const convex = getCatalogConvexClient();
     try {
-        return await convex.query(api.products.searchCatalog, normalizedArgs) as CatalogSearchResultShape;
+        const result = await convex.query(api.products.searchCatalog, normalizedArgs) as CatalogSearchResultShape;
+        return await withCatalogMediaPreviewRows(convex, result);
     } catch (error) {
         const message = error instanceof Error ? error.message : "";
         if (!message.includes("products:searchCatalog")) throw error;
