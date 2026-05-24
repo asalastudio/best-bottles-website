@@ -113,7 +113,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
-        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[78dvh] min-h-[560px] max-h-[680px] lg:h-[100dvh] lg:min-h-0 lg:max-h-none pt-[150px] lg:pt-[120px] pb-[calc(3.25rem+env(safe-area-inset-bottom,0px))] lg:pb-0 items-end lg:items-center bg-bone overflow-hidden`}>
+        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[78dvh] min-h-[620px] max-h-[700px] lg:h-[100dvh] lg:min-h-0 lg:max-h-none pt-[168px] lg:pt-[120px] pb-10 lg:pb-0 items-start lg:items-center bg-bone overflow-hidden`}>
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
@@ -180,8 +180,8 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                 </>
             )}
 
-            <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16 relative z-10 pt-4 lg:pt-0 pb-20 lg:pb-0 mb-5 lg:mb-0">
-                <div className="max-w-[600px]">
+            <div className="w-full max-w-[1440px] mx-auto px-6 lg:px-16 relative z-10 pt-4 lg:pt-0 pb-0 lg:pb-0 mb-0">
+                <div className="max-w-[360px] sm:max-w-[600px]">
                     <FadeUp delay={0.2}>
                         {(() => {
                             const eyebrow = slide?.eyebrow ?? DEFAULT_HERO_SLIDE.eyebrow;
@@ -190,7 +190,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                                 ? [eyebrow.split(" of ")[0]?.trim() ?? "", eyebrow.split(" of ")[1]?.trim() ?? ""]
                                 : null;
                             return (
-                                <div className="text-[10px] sm:text-xs uppercase tracking-[0.25em] text-white/90 font-bold mb-4 sm:mb-6 drop-shadow-sm space-y-1">
+                                <div className="text-[9px] sm:text-xs uppercase tracking-[0.25em] text-white/90 font-bold mb-3 sm:mb-6 drop-shadow-sm space-y-1">
                                     {parts ? (
                                         <>
                                             {parts[0] && <p className="leading-tight">{parts[0]} OF</p>}
@@ -204,7 +204,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                         })()}
                     </FadeUp>
                     <FadeUp delay={0.3}>
-                        <h1 className="font-display text-[56px] sm:text-[48px] lg:text-[87px] font-medium text-white leading-[1.05] sm:leading-[1.05] mb-6 sm:mb-8 drop-shadow-sm">
+                        <h1 className="font-display text-[48px] sm:text-[56px] lg:text-[87px] font-medium text-white leading-[0.98] sm:leading-[1.05] mb-5 sm:mb-8 drop-shadow-sm">
                             {(() => {
                                 const headline = slide?.headline ?? DEFAULT_HERO_SLIDE.headline;
                                 const spaceIdx = headline.indexOf(" ");
@@ -227,7 +227,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                                 ? [sub.split(" and ")[0]?.trim() ?? "", sub.split(" and ")[1]?.trim().replace(/\.$/, "") ?? ""]
                                 : null;
                             return (
-                                <div className="text-base sm:text-lg lg:text-xl text-white/90 leading-[1.6] max-w-[480px] mb-8 sm:mb-12 space-y-1">
+                                <div className="text-[15px] sm:text-lg lg:text-xl text-white/90 leading-[1.45] sm:leading-[1.6] max-w-[330px] sm:max-w-[480px] mb-7 sm:mb-12 space-y-1">
                                     {parts ? (
                                         <>
                                             {parts[0] && <p className="leading-snug">{toTitleCase(parts[0])}</p>}
@@ -241,7 +241,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                         })()}
                     </FadeUp>
                     <FadeUp delay={0.5} className="flex flex-col sm:flex-row items-start sm:items-center space-y-4 sm:space-y-0 sm:space-x-8">
-                        <Link href={slide?.ctaHref || DEFAULT_HERO_SLIDE.ctaHref} className="w-[200px] sm:w-auto px-8 py-4 bg-white/75 sm:bg-white text-obsidian uppercase text-sm font-semibold tracking-wider hover:bg-bone transition-colors duration-300 shadow-md text-center whitespace-nowrap">
+                        <Link href={slide?.ctaHref || DEFAULT_HERO_SLIDE.ctaHref} className="w-[190px] sm:w-auto px-7 sm:px-8 py-3.5 sm:py-4 bg-white/75 sm:bg-white text-obsidian uppercase text-[13px] sm:text-sm font-semibold tracking-wider hover:bg-bone transition-colors duration-300 shadow-md text-center whitespace-nowrap">
                             {(slide?.ctaText === "Explore Collections" ? "Browse Catalog" : slide?.ctaText) || DEFAULT_HERO_SLIDE.ctaText}
                         </Link>
                     </FadeUp>
