@@ -91,6 +91,8 @@ function getFinishFromGraceSku(graceSku: string | null | undefined): { label: st
         PNK: { label: "Pink", swatchName: "Pink" },
         GRN: { label: "Green", swatchName: "Green" },
         BKDT: { label: "Black with Dots", swatchName: "Black" },
+        SLDT: { label: "Silver with Dots", swatchName: "Shiny Silver" },
+        PKDT: { label: "Pink with Dots", swatchName: "Pink" },
         TRQ: { label: "Turquoise", swatchName: "Turquoise" },
         RED: { label: "Red", swatchName: "Red" },
     };
@@ -219,10 +221,13 @@ function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName
 
     const fromCapColor = (() => {
         if (!v.capColor) return null;
-        if (isAntiqueBulbVariant(v) && v.capColor.toLowerCase() === "clear") return null;
+        const capColor = v.capColor.trim();
+        const normalized = capColor.toLowerCase();
+        if (["clear", "standard", "default", "none", "n/a"].includes(normalized)) return null;
+        if (isAntiqueBulbVariant(v) && normalized === "clear") return null;
         return { label: v.capColor, swatchName: v.capColor };
     })();
-    const finish = getFinishFromGraceSku(v.graceSku) ?? fromCapColor ?? getCapFinishFromItemName(v.itemName);
+    const finish = fromCapColor ?? getFinishFromGraceSku(v.graceSku) ?? getCapFinishFromItemName(v.itemName);
     const prefix = getVariantOptionPrefix(v);
 
     if (finish) {
@@ -1222,16 +1227,6 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         setSelectedCapComponentSku(null);
     }, []);
 
-    const selectedVariantSummary = useMemo(() => {
-        if (!selectedVariant || !hasVariantImagePicker) return null;
-        const finish = resolveVariantCapFinish(selectedVariant);
-        return {
-            label: getVariantTileLabel(selectedVariant),
-            sku: selectedVariant.websiteSku,
-            swatchHex: resolveSwatchHex(finish.swatchName),
-        };
-    }, [selectedVariant, hasVariantImagePicker]);
-
     const customerFacingName = useMemo(
         () => group
             ? getCustomerFacingProductName({
@@ -1243,6 +1238,16 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
         [group, selectedVariant],
     );
     const customerDisplayName = customerFacingName?.displayName ?? group?.displayName ?? selectedVariant?.itemName ?? "";
+
+    const selectedVariantSummary = useMemo(() => {
+        if (!selectedVariant || !hasVariantImagePicker) return null;
+        const finish = resolveVariantCapFinish(selectedVariant);
+        return {
+            label: customerFacingName?.variantLabel ?? getVariantTileLabel(selectedVariant),
+            sku: selectedVariant.websiteSku,
+            swatchHex: resolveSwatchHex(finish.swatchName),
+        };
+    }, [customerFacingName?.variantLabel, selectedVariant, hasVariantImagePicker]);
 
     const showTrimSelector = useMemo(() => {
         if (hasCompleteVariantImagePicker) return false;

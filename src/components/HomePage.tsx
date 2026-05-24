@@ -15,7 +15,7 @@ import Navbar from "@/components/Navbar";
 import { useGrace } from "@/components/useGrace";
 import { urlFor } from "@/sanity/lib/image";
 import type { HomepageData } from "@/sanity/lib/queries";
-import { APPLICATOR_NAV, applicatorNavHref, applicatorNavHrefMulti } from "@/lib/catalogFilters";
+import { APPLICATOR_NAV, applicatorNavHref } from "@/lib/catalogFilters";
 import type { ApplicatorNavValue } from "@/lib/catalogFilters";
 
 const FadeUp = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -29,15 +29,6 @@ const FadeUp = ({ children, delay = 0, className = "" }: { children: React.React
         {children}
     </motion.div>
 );
-
-const _DEFAULT_START_HERE = [
-    { title: "essential oils & roll-ons", subtitle: "Roller-ready bottles for oils, topicals, and fragrance oils.", href: applicatorNavHref("rollon"), img: "/assets/vintage-spray.png", bg: "#DFD6C9" },
-    { title: "skincare & serums", subtitle: "Dropper and pump formats for treatment-focused formulas.", href: applicatorNavHrefMulti(["dropper", "lotionpump"]), img: "/assets/collection_skincare.png", bg: "#EADDD1" },
-    { title: "sample & discovery", subtitle: "Vials and compact formats for trial, travel, and discovery kits.", href: "/catalog?families=Vial", img: "/assets/Hero-BB.png", bg: "#EAE0D5" },
-    { title: "gift & retail packaging", subtitle: "Presentation-ready packaging for launches, gifting, and retail shelves.", href: "/catalog?category=Packaging", img: "/assets/collection_amber.png", bg: "#F3E5D8" },
-    { title: "components & closures", subtitle: "Caps, droppers, pumps, and fitments matched by thread size.", href: "/catalog?category=Component", img: "/assets/bottle_screwcap.png", bg: "#DCD0C0" },
-    { title: "fine mist & spray bottles", subtitle: "Spray-forward bottle families for fragrance and room scent formats.", href: applicatorNavHref("spray"), img: "/assets/Cylinder-BB.png", bg: "#D5C5B1" },
-];
 
 const DEFAULT_FAMILIES = [
     { family: "Cylinder", title: "Cylinder", img: "/assets/Cylinder-BB.png" },
@@ -362,27 +353,28 @@ function MobileFamilySwitcher({ designFamilyCards }: { designFamilyCards?: Homep
                         <Link
                             key={fam.family}
                             href={`/catalog?families=${encodeURIComponent(fam.family)}`}
-                            className="group relative h-[210px] w-[74vw] max-w-[310px] shrink-0 snap-start overflow-hidden rounded-sm border border-champagne/50 bg-travertine shadow-sm"
+                            className="group relative h-[420px] w-[calc(100vw-2.5rem)] max-w-[390px] shrink-0 snap-start overflow-hidden rounded-sm bg-travertine shadow-sm"
                         >
                             <Image
                                 src={imgSrc}
                                 alt={fam.title}
                                 fill
-                                className="object-cover object-center transition-transform duration-500 group-active:scale-[1.02]"
+                                sizes="calc(100vw - 40px)"
+                                className="object-cover object-center transition-transform duration-700 group-active:scale-[1.02]"
                                 unoptimized={imgSrc.startsWith("http")}
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/72 via-obsidian/18 to-transparent" />
-                            <div className="absolute left-4 right-4 bottom-4">
-                                <h3 className="font-serif text-[25px] leading-none text-white">{fam.title}</h3>
-                                <p className="mt-2 text-[12px] leading-snug text-bone/90">
+                            <div className="absolute left-5 right-5 bottom-5">
+                                <h3 className="font-serif text-[32px] leading-none text-white">{fam.title}</h3>
+                                <p className="mt-2 text-[13px] leading-snug text-bone/90">
                                     {MOBILE_FAMILY_DETAILS[fam.family] ?? "Explore available formats"}
                                 </p>
-                                <div className="mt-4 flex items-center justify-between">
+                                <div className="mt-5 flex items-center justify-between">
                                     <span className="text-[11px] font-semibold uppercase tracking-wider text-bone/80">
                                         {count > 0 ? `${count} products` : "Explore"}
                                     </span>
-                                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/85 text-obsidian">
-                                        <ArrowRight size={14} />
+                                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-obsidian">
+                                        <ArrowRight size={15} />
                                     </span>
                                 </div>
                             </div>
@@ -766,7 +758,7 @@ function DesignFamilies({ designFamilyCards }: { designFamilyCards?: HomepageDat
         : DEFAULT_FAMILIES;
 
     return (
-        <section className="py-24 bg-warm-white overflow-hidden">
+        <section className="hidden lg:block py-24 bg-warm-white overflow-hidden">
             <div className="pl-6 lg:pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))]">
                 <FadeUp className="mb-12">
                     <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-3">Already Know Your Style?</p>

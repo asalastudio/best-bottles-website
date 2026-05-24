@@ -130,6 +130,48 @@ describe("customer-facing product names", () => {
         ).toBe("10 ml Amber Bell Roll-On Bottle - Black Cap");
     });
 
+    it("keeps cobalt blue glass separate from roll-on cap finishes", () => {
+        const cylinderGroup = {
+            displayName: "5 ml Cobalt Blue Cylinder Roll-On Bottle",
+            family: "Cylinder",
+            capacity: "5 ml (0.17 oz)",
+            capacityMl: 5,
+            color: "Cobalt Blue",
+            category: "Glass Bottle",
+            applicatorTypes: ["Metal Roller Ball"],
+        };
+
+        expect(
+            getCustomerFacingProductName({
+                group: cylinderGroup,
+                variant: {
+                    itemName: "Silver with Dots Metal Roll-On Cap",
+                    graceSku: "GB-CYL-BLU-5ML-MRL-SLDT",
+                    websiteSku: "GBCylBlu5MtlRollSlDot",
+                    applicator: "Metal Roller Ball",
+                    capColor: "Silver with Dots",
+                    capStyle: "Dot Cap",
+                    ballMaterial: "Metal Roller",
+                },
+            }).variantLabel,
+        ).toBe("Silver with Dots Cap");
+
+        expect(
+            getCustomerFacingProductName({
+                group: cylinderGroup,
+                variant: {
+                    itemName: "Pink with Dots Metal Roll-On Cap",
+                    graceSku: "GB-CYL-BLU-5ML-MRL-PKDT",
+                    websiteSku: "GBCylBlu5MtlRollPinkDot",
+                    applicator: "Metal Roller Ball",
+                    capColor: "Pink with Dots",
+                    capStyle: "Dot Cap",
+                    ballMaterial: "Metal Roller",
+                },
+            }).variantLabel,
+        ).toBe("Pink with Dots Cap");
+    });
+
     it("keeps plain bottle fallback conservative", () => {
         expect(
             getCustomerFacingProductName({

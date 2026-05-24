@@ -273,8 +273,6 @@ function finishSuffix(productType: string, finish: string | null, variant?: Cust
     }
 
     if (productType === "Roll-On Bottle") {
-        const ball = clean(variant?.ballMaterial);
-        if (ball && !key(finish).includes(key(ball))) return `${finish} Cap / ${ball} Roller`;
         return `${finish} Cap`;
     }
 
