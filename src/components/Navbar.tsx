@@ -201,6 +201,17 @@ const NAV_LINKS: Record<string, NavLinkDef[]> = {
     ],
 };
 
+const SEARCH_SUGGESTIONS = [
+    { label: "Dropper", helper: "Applicator", query: "dropper" },
+    { label: "30 ml", helper: "Capacity", query: "30 ml" },
+    { label: "Amber", helper: "Glass color", query: "amber" },
+    { label: "Boston Round", helper: "Design family", query: "Boston Round" },
+    { label: "Roll-On", helper: "Applicator", query: "roll-on" },
+    { label: "Fine Mist Spray", helper: "Applicator", query: "fine mist spray" },
+    { label: "20-400", helper: "Neck thread", query: "20-400" },
+    { label: "Cream Jar", helper: "Category", query: "cream jar" },
+];
+
 export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false }: NavbarProps) {
     const router = useRouter();
     // Grace trigger moved to the floating launcher; useGrace no longer needed here.
@@ -377,6 +388,16 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
             router.push("/catalog");
         }
     };
+    const visibleSearchSuggestions = SEARCH_SUGGESTIONS.filter((suggestion) => {
+        const term = searchValue.trim().toLowerCase();
+        if (!term) return true;
+        return `${suggestion.label} ${suggestion.helper} ${suggestion.query}`.toLowerCase().includes(term);
+    }).slice(0, searchValue.trim() ? 5 : 4);
+    const showSearchSuggestions = visibleSearchSuggestions.length > 0 && !isDictating && !isTranscribing;
+    const handleSearchSuggestion = (query: string) => {
+        setSearchValue(query);
+        router.push(`/catalog?search=${encodeURIComponent(query)}`);
+    };
 
     const links = NAV_LINKS[variant];
     const [activeMega, setActiveMega] = useState<MegaMenuId | null>(null);
@@ -520,7 +541,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         </nav>
                         <form
                             onSubmit={handleSearchSubmit}
-                            className="hidden lg:flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 lg:min-w-[520px] lg:max-w-[520px]"
+                            className="group/search relative hidden lg:flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 lg:min-w-[520px] lg:max-w-[520px]"
                             suppressHydrationWarning
                         >
                             <MagnifyingGlass className="text-slate shrink-0" size={16} />
@@ -544,6 +565,25 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                             >
                                 <ArrowRight size={14} />
                             </button>
+                            {showSearchSuggestions && (
+                                <div className="absolute left-0 right-0 top-[calc(100%+0.5rem)] z-[70] hidden overflow-hidden rounded-xl border border-champagne bg-white shadow-xl group-focus-within/search:block">
+                                    <p className="px-3 pt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-slate/70">Suggested searches</p>
+                                    <div className="p-2">
+                                        {visibleSearchSuggestions.map((suggestion) => (
+                                            <button
+                                                key={`${suggestion.helper}-${suggestion.label}`}
+                                                type="button"
+                                                onMouseDown={(e) => e.preventDefault()}
+                                                onClick={() => handleSearchSuggestion(suggestion.query)}
+                                                className="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left hover:bg-bone"
+                                            >
+                                                <span className="text-sm font-medium text-obsidian">{suggestion.label}</span>
+                                                <span className="text-[11px] text-slate">{suggestion.helper}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </form>
                         <div className="hidden lg:flex flex-1" />
                         <div className="flex items-center justify-end space-x-2 shrink-0 ml-auto lg:ml-0">
@@ -576,7 +616,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     <div className="flex lg:hidden pb-3 border-t border-champagne/40 pt-2">
                         <form
                             onSubmit={handleSearchSubmit}
-                            className="flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
+                            className="group/search relative flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
                             suppressHydrationWarning
                         >
                             <MagnifyingGlass className="text-slate shrink-0" size={16} />
@@ -601,6 +641,25 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                             >
                                 <ArrowRight size={14} />
                             </button>
+                            {showSearchSuggestions && (
+                                <div className="absolute left-0 right-0 top-[calc(100%+0.5rem)] z-[70] hidden overflow-hidden rounded-xl border border-champagne bg-white shadow-xl group-focus-within/search:block">
+                                    <p className="px-3 pt-3 text-[10px] font-bold uppercase tracking-[0.18em] text-slate/70">Suggested searches</p>
+                                    <div className="p-2">
+                                        {visibleSearchSuggestions.map((suggestion) => (
+                                            <button
+                                                key={`${suggestion.helper}-${suggestion.label}`}
+                                                type="button"
+                                                onMouseDown={(e) => e.preventDefault()}
+                                                onClick={() => handleSearchSuggestion(suggestion.query)}
+                                                className="flex min-h-11 w-full items-center justify-between rounded-lg px-3 py-2 text-left hover:bg-bone"
+                                            >
+                                                <span className="text-sm font-medium text-obsidian">{suggestion.label}</span>
+                                                <span className="text-[11px] text-slate">{suggestion.helper}</span>
+                                            </button>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
                         </form>
                     </div>
                     )}

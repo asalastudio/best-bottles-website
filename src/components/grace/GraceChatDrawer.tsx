@@ -215,10 +215,10 @@ export default function GraceChatDrawer() {
                         animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
                         exit={{ opacity: 0, scale: isMobile ? 1 : 0.96, x: isMobile ? "100%" : 0, y: isMobile ? 0 : 8 }}
                         transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                        className={`fixed z-[61] flex flex-col ${isMobile ? "top-0 right-0 w-full h-dvh" : ""}`}
+                        className={`fixed z-[61] flex flex-col ${isMobile ? "top-0 right-0 w-full" : ""}`}
                         style={{
                             width: isMobile ? "100%" : DRAWER_WIDTH,
-                            height: isMobile ? "100dvh" : DRAWER_HEIGHT,
+                            height: isMobile ? "calc(100dvh - 4rem - env(safe-area-inset-bottom, 0px))" : DRAWER_HEIGHT,
                             // Bottom-right anchor with 22px breathing room (PRD v3).
                             ...(isMobile ? {} : {
                                 right: "max(22px, env(safe-area-inset-right))",
@@ -325,7 +325,7 @@ export default function GraceChatDrawer() {
                         {/* ── Composer ────────────────────────────────── */}
                         <div
                             className="shrink-0 px-4 py-3"
-                            style={{ paddingBottom: "max(0.75rem, env(safe-area-inset-bottom))" }}
+                            style={{ paddingBottom: isMobile ? "1rem" : "max(0.75rem, env(safe-area-inset-bottom))" }}
                         >
                             <form
                                 onSubmit={handleSubmit}

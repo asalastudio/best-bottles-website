@@ -21,6 +21,7 @@ import {
     APPLICATOR_BUCKETS,
     CAPACITY_RANGES,
     applicatorBucketMatchesProductValues,
+    type ApplicatorBucket,
     capacityInRange,
     type SortValue,
     type CatalogFilters,
@@ -246,19 +247,27 @@ function productGroupHref(group: CatalogGroup, applicatorParam?: string | null):
     return applicatorParam ? `/products/${group.slug}?applicator=${applicatorParam}` : `/products/${group.slug}`;
 }
 
-function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+function isBlockedProductImageUrl(value: string | null | undefined): boolean {
     if (!value) return false;
     try {
-        return new URL(value).hostname === "cdn.shopify.com";
+        return new URL(value).hostname === "cdn.sanity.io";
     } catch {
-        return value.includes("cdn.shopify.com/");
+        return value.includes("cdn.sanity.io/");
     }
+}
+
+function usableProductImageUrl(value: string | null | undefined): string | null {
+    const url = value?.trim();
+    if (!url || isBlockedProductImageUrl(url)) return null;
+    return url;
 }
 
 function getShopifyCatalogThumbnail(variant: ProductCardVariantPreviewSource | null | undefined): string | null {
     if (!variant) return null;
-    if (isShopifyCdnImageUrl(variant.imageUrl)) return variant.imageUrl ?? null;
-    if (isShopifyCdnImageUrl(variant.imageUrlCapOff)) return variant.imageUrlCapOff ?? null;
+    const primary = usableProductImageUrl(variant.imageUrl);
+    if (primary) return primary;
+    const secondary = usableProductImageUrl(variant.imageUrlCapOff);
+    if (secondary) return secondary;
     return null;
 }
 
@@ -268,12 +277,14 @@ function ProductGroupCard({
     applicatorParam,
     variantPreviews,
     displayName,
+    thumbnailUrl,
 }: {
     group: CatalogGroup;
     index: number;
     applicatorParam?: string | null;
     variantPreviews?: ProductCardVariantPreview[];
     displayName?: string;
+    thumbnailUrl?: string | null;
 }) {
     const href = productGroupHref(group, applicatorParam);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
@@ -295,7 +306,7 @@ function ProductGroupCard({
             <ProductCardImagePreview
                 productTitle={customerDisplayName}
                 defaultImage={{
-                    url: isShopifyCdnImageUrl(group.heroImageUrl) ? group.heroImageUrl : null,
+                    url: usableProductImageUrl(group.heroImageUrl) ?? thumbnailUrl ?? null,
                     alt: customerDisplayName,
                 }}
                 placeholderLabel={group.family}
@@ -1387,10 +1398,16 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
         const result = runFilters(false);
         const facetBase = runFilters(true); // broader set for facet counts (multi-select options stay visible)
 
+        const matchesApplicatorBucket = (group: CatalogGroup, bucket: ApplicatorBucket) => {
+            if (!applicatorBucketMatchesProductValues(bucket, group.applicatorTypes ?? [])) return false;
+            const allowedSuffixes = SLUG_BUCKET_SUFFIXES[bucket];
+            return !allowedSuffixes || allowedSuffixes.some((suffix) => (group.slug ?? "").endsWith(suffix));
+        };
+
         // Compute multi-select facets from facetBase so options stay visible (Baymard)
         const applicatorCounts: Record<string, number> = {};
         for (const bucket of APPLICATOR_BUCKETS) {
-            const count = facetBase.filter((g) => applicatorBucketMatchesProductValues(bucket.value, g.applicatorTypes ?? [])).length;
+            const count = facetBase.filter((g) => matchesApplicatorBucket(g, bucket.value)).length;
             if (count > 0) applicatorCounts[bucket.value] = count;
         }
         const familyFacets = countBy(
@@ -1820,8 +1837,11 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                 animate={{ x: 0 }}
                                 exit={{ x: "-100%" }}
                                 transition={{ type: "spring", damping: 30, stiffness: 300 }}
-                                className="fixed top-0 left-0 bottom-0 z-50 w-[300px] max-w-[85vw] bg-warm-white overflow-y-auto lg:hidden"
-                                style={{ boxShadow: "8px 0 40px rgba(29,29,31,0.15)" }}
+                                className="fixed top-0 left-0 z-50 w-[300px] max-w-[85vw] bg-warm-white overflow-y-auto lg:hidden"
+                                style={{
+                                    bottom: "calc(4rem + env(safe-area-inset-bottom, 0px))",
+                                    boxShadow: "8px 0 40px rgba(29,29,31,0.15)",
+                                }}
                                 data-testid="catalog-filter-drawer"
                             >
                                 <div className="flex items-center justify-between px-5 py-4 border-b border-champagne/50 sticky top-0 bg-warm-white z-10">
@@ -1841,7 +1861,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         <X className="w-5 h-5 text-slate" />
                                     </button>
                                 </div>
-                                <div className="px-5 py-4 pb-28">
+                                <div className="px-5 py-4 pb-8">
                                     <FilterSidebarContent
                                         facets={facets}
                                         taxonomy={taxonomy ?? null}
@@ -2086,6 +2106,7 @@ function CatalogContent({ searchParams }: { searchParams: URLSearchParams }) {
                                         applicatorParam={visualApplicatorParam}
                                         variantPreviews={variantPreviewMap.get(group._id)}
                                         displayName={customerNameMap.get(group._id)}
+                                        thumbnailUrl={catalogThumbnailMap.get(group._id)}
                                     />
                                 ))}
                             </div>

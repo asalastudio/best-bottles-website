@@ -38,16 +38,19 @@ export default function MobileTabBar() {
     const { openPanel } = useGrace();
     const [showGraceTooltip, setShowGraceTooltip] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const isProductPage = pathname.startsWith("/products/");
+    const tabs = isProductPage ? TABS.filter((tab) => tab.key !== "grace") : TABS;
 
     // Routes that own the entire viewport — tab bar would compete for space.
     const hideTabBar = pathname.startsWith("/grace-workspace");
 
     useEffect(() => {
         setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect -- hydration guard
+        if (isProductPage) return;
         if (typeof window !== "undefined" && !localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) {
             setShowGraceTooltip(true);
         }
-    }, []);
+    }, [isProductPage]);
 
     const dismissGraceTooltip = () => {
         setShowGraceTooltip(false);
@@ -89,7 +92,7 @@ export default function MobileTabBar() {
             aria-label="Main navigation"
         >
             <div className="flex items-center justify-around h-14">
-                {TABS.map((tab) => {
+                {tabs.map((tab) => {
                     const active = isActive(tab);
                     const Icon = tab.icon;
 

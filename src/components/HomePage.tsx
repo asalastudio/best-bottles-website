@@ -122,7 +122,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
-        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[100dvh] pt-[160px] lg:pt-[120px] pb-[calc(3.5rem+env(safe-area-inset-bottom,0px))] lg:pb-0 items-end lg:items-center bg-bone overflow-hidden`}>
+        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[78dvh] min-h-[560px] max-h-[680px] lg:h-[100dvh] lg:min-h-0 lg:max-h-none pt-[150px] lg:pt-[120px] pb-[calc(3.25rem+env(safe-area-inset-bottom,0px))] lg:pb-0 items-end lg:items-center bg-bone overflow-hidden`}>
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
@@ -146,9 +146,9 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                                 className={`absolute inset-0 transition-opacity duration-700 ${i === currentIndex ? "opacity-100 z-0" : "opacity-0 z-0 pointer-events-none"}`}
                             >
                                 {isVideo && vidUrl ? (
-                                    <video src={vidUrl} poster={vidPoster || "/assets/Hero-BB.png"} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_center] md:object-[70%_center]" />
+                                    <video src={vidUrl} poster={vidPoster || "/assets/Hero-BB.png"} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_78%] md:object-[70%_center]" />
                                 ) : (
-                                    <Image src={img || "/assets/Hero-BB.png"} alt="" fill className="object-cover object-[80%_center] md:object-[70%_center]" unoptimized={!!img} />
+                                    <Image src={img || "/assets/Hero-BB.png"} alt="" fill className="object-cover object-[80%_78%] md:object-[70%_center]" unoptimized={!!img} />
                                 )}
                             </div>
                         );
@@ -156,9 +156,9 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                 ) : (
                     <motion.div initial={{ scale: 1.05 }} animate={{ scale: 1 }} transition={{ duration: 8, ease: "easeOut" }} className="relative w-full h-full">
                         {showVideo ? (
-                            <video src={videoUrl} poster={posterUrl || undefined} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_center] md:object-[70%_center]" />
+                            <video src={videoUrl} poster={posterUrl || undefined} autoPlay muted loop playsInline className="w-full h-full object-cover object-[80%_78%] md:object-[70%_center]" />
                         ) : (
-                            <Image src={imageUrl || "/assets/Hero-BB.png"} alt="Luxury perfume glass atomizer bottle" fill className="object-cover object-[80%_center] md:object-[70%_center]" priority unoptimized={!!imageUrl} />
+                            <Image src={imageUrl || "/assets/Hero-BB.png"} alt="Luxury perfume glass atomizer bottle" fill className="object-cover object-[80%_78%] md:object-[70%_center]" priority unoptimized={!!imageUrl} />
                         )}
                     </motion.div>
                 )}
@@ -314,6 +314,77 @@ function MobileCategoryGrid({ data }: { data?: HomepageData | null }) {
                             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-obsidian/15 to-transparent" />
                             <div className="absolute bottom-0 left-0 right-0 p-3">
                                 <h3 className="font-serif text-[15px] text-white leading-tight">{card.label}</h3>
+                            </div>
+                        </Link>
+                    );
+                })}
+            </div>
+        </section>
+    );
+}
+
+const MOBILE_FAMILY_DETAILS: Record<string, string> = {
+    Cylinder: "Clean everyday formats",
+    Diva: "Perfume-ready silhouettes",
+    Elegant: "Slim premium profiles",
+    Empire: "Vintage spray formats",
+    "Boston Round": "Apothecary classics",
+    Round: "Soft beauty shapes",
+    Sleek: "Modern shelf presence",
+    Circle: "Compact rounded forms",
+    Slim: "Travel and discovery",
+    Atomizer: "Statement fragrance pieces",
+};
+
+function MobileFamilySwitcher({ designFamilyCards }: { designFamilyCards?: HomepageData["designFamilyCards"] }) {
+    const stats = useQuery(api.products.getHomepageStats);
+    const families = (designFamilyCards?.length
+        ? designFamilyCards.map((f) => ({ family: f.family, title: f.title, img: f.image ? urlFor(f.image) : "" }))
+        : DEFAULT_FAMILIES
+    ).slice(0, 10);
+
+    return (
+        <section className="lg:hidden bg-warm-white border-b border-champagne/40 pt-6 pb-5">
+            <div className="px-5 mb-4 flex items-end justify-between gap-4">
+                <div>
+                    <p className="text-[10px] uppercase tracking-[0.24em] text-muted-gold font-bold mb-1">Shop by Family</p>
+                    <h2 className="font-serif text-2xl text-obsidian font-medium">Choose a bottle style</h2>
+                </div>
+                <Link href="/catalog" className="shrink-0 text-[11px] uppercase tracking-wider font-bold text-slate hover:text-muted-gold">
+                    All
+                </Link>
+            </div>
+            <div className="flex gap-3 overflow-x-auto hide-scroll snap-x snap-mandatory px-5 pb-1">
+                {families.map((fam) => {
+                    const count = stats?.familyCounts?.[fam.family] ?? 0;
+                    const imgSrc = fam.img || (DEFAULT_FAMILIES.find((d) => d.family === fam.family)?.img ?? "/assets/Cylinder-BB.png");
+                    return (
+                        <Link
+                            key={fam.family}
+                            href={`/catalog?families=${encodeURIComponent(fam.family)}`}
+                            className="group relative h-[210px] w-[74vw] max-w-[310px] shrink-0 snap-start overflow-hidden rounded-sm border border-champagne/50 bg-travertine shadow-sm"
+                        >
+                            <Image
+                                src={imgSrc}
+                                alt={fam.title}
+                                fill
+                                className="object-cover object-center transition-transform duration-500 group-active:scale-[1.02]"
+                                unoptimized={imgSrc.startsWith("http")}
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/72 via-obsidian/18 to-transparent" />
+                            <div className="absolute left-4 right-4 bottom-4">
+                                <h3 className="font-serif text-[25px] leading-none text-white">{fam.title}</h3>
+                                <p className="mt-2 text-[12px] leading-snug text-bone/90">
+                                    {MOBILE_FAMILY_DETAILS[fam.family] ?? "Explore available formats"}
+                                </p>
+                                <div className="mt-4 flex items-center justify-between">
+                                    <span className="text-[11px] font-semibold uppercase tracking-wider text-bone/80">
+                                        {count > 0 ? `${count} products` : "Explore"}
+                                    </span>
+                                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/85 text-obsidian">
+                                        <ArrowRight size={14} />
+                                    </span>
+                                </div>
                             </div>
                         </Link>
                     );
@@ -943,6 +1014,7 @@ export default function HomePage({ homepageData }: { homepageData: HomepageData 
             <Navbar variant="home" />
             <Hero heroSlides={homepageData?.heroSlides} mobileHeroMode={homepageData?.mobileHeroMode} />
             <MobileCategoryGrid data={homepageData} />
+            <MobileFamilySwitcher designFamilyCards={homepageData?.designFamilyCards} />
             <TrustBar />
             <PathChooser />
             <DesignFamilies designFamilyCards={homepageData?.designFamilyCards} />

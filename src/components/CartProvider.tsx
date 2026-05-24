@@ -31,6 +31,9 @@ export interface CartItem {
     color?: string;
     applicator?: string | null;
     capColor?: string | null;
+    category?: string | null;
+    neckThreadSize?: string | null;
+    compatibleCount?: number;
 }
 
 interface CartContextValue {

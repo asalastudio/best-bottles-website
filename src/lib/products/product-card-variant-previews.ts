@@ -323,19 +323,19 @@ function imageKey(value: string | null | undefined): string {
     return cleanString(value)?.split("?")[0] ?? "";
 }
 
-function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+function isBlockedProductImageUrl(value: string | null | undefined): boolean {
     const cleaned = cleanString(value);
     if (!cleaned) return false;
     try {
-        return new URL(cleaned).hostname === "cdn.shopify.com";
+        return new URL(cleaned).hostname === "cdn.sanity.io";
     } catch {
-        return cleaned.includes("cdn.shopify.com/");
+        return cleaned.includes("cdn.sanity.io/");
     }
 }
 
-function shopifyImageUrl(value: string | null | undefined): string | undefined {
+function productImageUrl(value: string | null | undefined): string | undefined {
     const cleaned = cleanString(value);
-    return cleaned && isShopifyCdnImageUrl(cleaned) ? cleaned : undefined;
+    return cleaned && !isBlockedProductImageUrl(cleaned) ? cleaned : undefined;
 }
 
 export function getProductCardVariantPreviews(
@@ -354,7 +354,7 @@ export function getProductCardVariantPreviews(
         const label = previewLabel(variant, options.groupColor);
         if (!label) continue;
 
-        const imageUrl = shopifyImageUrl(variant.imageUrl) ?? shopifyImageUrl(variant.imageUrlCapOff);
+        const imageUrl = productImageUrl(variant.imageUrl) ?? productImageUrl(variant.imageUrlCapOff);
         const finish = resolveCapFinish(variant);
         const optionType = optionTypeFor(variant, options.groupColor);
         const swatchColor = swatchColorFor(finish, variant.color ?? options.groupColor);

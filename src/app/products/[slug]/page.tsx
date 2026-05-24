@@ -5,7 +5,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
     ShoppingBag, ArrowLeft, ChevronRight, Package,
-    Check, Truck,
+    Check, Truck, ChatCircle,
 } from "@/components/icons";
 import { motion } from "framer-motion";
 /* eslint-disable @next/next/no-img-element */
@@ -14,6 +14,7 @@ import { api } from "../../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
+import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import {
@@ -558,6 +559,21 @@ function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
     }
 }
 
+function isBlockedProductImageUrl(value: string | null | undefined): boolean {
+    if (!value) return false;
+    try {
+        return new URL(value).hostname === "cdn.sanity.io";
+    } catch {
+        return value.includes("cdn.sanity.io/");
+    }
+}
+
+function usableProductImageUrl(value: string | null | undefined): string | null {
+    const url = value?.trim();
+    if (!url || isBlockedProductImageUrl(url)) return null;
+    return url;
+}
+
 type VariantImageTile = {
     id: string;
     variant: ProductVariant;
@@ -568,15 +584,13 @@ type VariantImageTile = {
 };
 
 function getVariantTileImageUrl(variant: ProductVariant): string | null {
-    if (variant.imageUrl && isShopifyCdnImageUrl(variant.imageUrl)) {
-        return variant.imageUrl;
-    }
+    const primary = usableProductImageUrl(variant.imageUrl);
+    if (primary) return primary;
     if (
         variant.imageUrlCapOff &&
-        supportsSecondaryPdpImage(variant) &&
-        isShopifyCdnImageUrl(variant.imageUrlCapOff)
+        supportsSecondaryPdpImage(variant)
     ) {
-        return variant.imageUrlCapOff;
+        return usableProductImageUrl(variant.imageUrlCapOff);
     }
     return null;
 }
@@ -771,6 +785,7 @@ function ProductConfidenceSummary({
     group,
     variant,
     compatibleCount,
+    onAskGrace,
 }: {
     group: {
         displayName?: string | null;
@@ -780,6 +795,7 @@ function ProductConfidenceSummary({
     };
     variant: ProductVariant | null | undefined;
     compatibleCount: number;
+    onAskGrace: () => void;
 }) {
     const rows = [
         { label: "Neck size", value: group.neckThreadSize ?? variant?.neckThreadSize ?? "Unable to verify" },
@@ -816,6 +832,14 @@ function ProductConfidenceSummary({
             <p className="mt-3 text-xs leading-relaxed text-slate">
                 Use neck size to match caps, rollers, sprayers, reducers, and droppers. If a value is missing, treat it as unable to verify before ordering.
             </p>
+            <button
+                type="button"
+                onClick={onAskGrace}
+                className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-muted-gold/50 bg-muted-gold/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-muted-gold transition-colors hover:bg-muted-gold hover:text-white sm:w-auto"
+            >
+                <ChatCircle className="h-4 w-4" />
+                Ask Grace to confirm fitment
+            </button>
         </section>
     );
 }
@@ -926,6 +950,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
     const { slug } = use(params);
     const router = useRouter();
     const searchParams = useSearchParams();
+    const { openPanel: openGracePanel } = useGrace();
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
     const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
@@ -1437,6 +1462,9 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             color: group?.color ?? undefined,
             applicator: selectedVariant.applicator,
             capColor: selectedVariant.capColor,
+            category: group?.category,
+            neckThreadSize: selectedVariant.neckThreadSize ?? group?.neckThreadSize ?? null,
+            compatibleCount: compatibleSiblings.length,
         }]);
         analytics.cartItemAdded({
             sku: selectedVariant.graceSku,
@@ -1560,23 +1588,28 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                         };
 
                                         if (
-                                            selectedVariant?.imageUrl &&
-                                            isShopifyCdnImageUrl(selectedVariant.imageUrl)
+                                            usableProductImageUrl(selectedVariant?.imageUrl)
                                         ) {
                                             addGalleryImage({
-                                                url: selectedVariant.imageUrl,
+                                                url: usableProductImageUrl(selectedVariant?.imageUrl)!,
                                                 label: "Variant",
                                                 alt: customerDisplayName,
                                             });
                                         } else if (
                                             selectedVariant?.imageUrlCapOff &&
                                             supportsSecondaryPdpImage(selectedVariant) &&
-                                            isShopifyCdnImageUrl(selectedVariant.imageUrlCapOff)
+                                            usableProductImageUrl(selectedVariant.imageUrlCapOff)
                                         ) {
                                             addGalleryImage({
-                                                url: selectedVariant.imageUrlCapOff,
+                                                url: usableProductImageUrl(selectedVariant.imageUrlCapOff)!,
                                                 label: "Variant",
                                                 alt: customerDisplayName,
+                                            });
+                                        } else if (variantImageTiles[0]?.imageUrl) {
+                                            addGalleryImage({
+                                                url: variantImageTiles[0].imageUrl,
+                                                label: "Representative",
+                                                alt: `${customerDisplayName} representative product image`,
                                             });
                                         }
 
@@ -1647,6 +1680,7 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                 group={group}
                                 variant={selectedVariant}
                                 compatibleCount={compatibleSiblings.length}
+                                onAskGrace={openGracePanel}
                             />
 
                             {/* Price + Tier Ladder */}
@@ -2001,6 +2035,14 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
                                             View all →
                                         </button>
                                     </div>
+                                    <button
+                                        type="button"
+                                        onClick={openGracePanel}
+                                        className="mb-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-muted-gold/40 bg-muted-gold/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-muted-gold transition-colors hover:bg-muted-gold hover:text-white"
+                                    >
+                                        <ChatCircle className="h-4 w-4" />
+                                        Ask Grace which option fits
+                                    </button>
                                     <div className="space-y-2">
                                         {compatibleSiblings.slice(0, 4).map((sib) => {
                                             const applicatorLabel = (sib.applicatorTypes ?? []).join(", ") || "Cap & Closure";
@@ -2098,8 +2140,8 @@ export default function ProductDetailPage({ params }: { params: Promise<{ slug: 
             {/* Mobile sticky purchase bar — only appears once inline Add to Cart scrolls out of view (Baymard best practice) */}
             <div
                 data-testid="pdp-sticky-cart-bar"
-                className={`lg:hidden fixed inset-x-0 z-[55] border-t border-champagne bg-bone/95 backdrop-blur-md pb-2 transition-transform duration-300 ${stickyBarVisible ? "translate-y-0" : "translate-y-[calc(100%+5rem)]"}`}
-                style={{ bottom: "calc(5rem + env(safe-area-inset-bottom, 0px))" }}
+                className={`lg:hidden fixed inset-x-0 z-[55] border-t border-champagne bg-bone/95 backdrop-blur-md transition-transform duration-300 ${stickyBarVisible ? "translate-y-0" : "translate-y-[calc(100%+5rem)]"}`}
+                style={{ bottom: "calc(3.5rem + env(safe-area-inset-bottom, 0px))" }}
             >
                 <div className="px-4 py-3 flex items-center gap-3">
                     <div className="min-w-0">

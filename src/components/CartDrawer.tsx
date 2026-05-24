@@ -5,6 +5,7 @@ import Link from "next/link";
 import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@/components/icons";
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
+import { useGrace } from "@/components/useGrace";
 import { isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 const FREE_SHIPPING_THRESHOLD = 99;
@@ -16,6 +17,7 @@ interface CartDrawerProps {
 
 export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const { items, itemCount, removeItem, updateQuantity, checkout, isCheckingOut, checkoutError, isCartHydrated } = useCart();
+    const { openPanel: openGracePanel } = useGrace();
     const drawerRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -35,7 +37,6 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
     const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
     const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
-
     return (
         <AnimatePresence>
             {isOpen && (
@@ -47,8 +48,11 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         onClick={onClose}
-                        className="fixed inset-0 z-[70]"
-                        style={{ background: "rgba(29, 29, 31, 0.45)", backdropFilter: "blur(4px)" }}
+                        className="fixed left-0 right-0 top-0 bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] z-[70] lg:inset-0"
+                        style={{
+                            background: "rgba(29, 29, 31, 0.45)",
+                            backdropFilter: "blur(4px)",
+                        }}
                         aria-hidden="true"
                     />
 
@@ -59,7 +63,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: "100%", opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 35 }}
-                        className="fixed top-0 right-0 bottom-0 z-[70] w-full max-w-[560px] flex flex-col"
+                        className="fixed top-0 right-0 bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] z-[70] w-full max-w-[560px] flex flex-col lg:bottom-0"
                         style={{
                             background: "rgba(250, 248, 245, 0.95)",
                             backdropFilter: "blur(28px) saturate(180%)",
@@ -222,7 +226,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                         {/* Footer */}
                         {items.length > 0 && (
-                            <div className="shrink-0 px-6 py-5 bg-white border-t border-champagne/30">
+                            <div
+                                className="shrink-0 px-6 py-5 bg-white border-t border-champagne/30"
+                            >
                                 {checkoutError && (
                                     <div className="mb-3 text-xs text-red-700 bg-red-50 border border-red-200 rounded-lg px-3 py-2.5">
                                         <div className="flex items-start gap-2">
@@ -263,6 +269,41 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                 >
                                     Request Quote for This Order
                                 </Link>
+
+                                {items.some((item) => item.neckThreadSize || (item.compatibleCount ?? 0) > 0) && (
+                                    <div className="mt-3 rounded-lg border border-muted-gold/30 bg-muted-gold/10 px-3 py-2.5">
+                                        <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-muted-gold">
+                                            Complete the set
+                                        </p>
+                                        <p className="mt-1 text-[12px] leading-relaxed text-obsidian/75">
+                                            {(() => {
+                                                const item = items.find((cartItem) => cartItem.neckThreadSize || (cartItem.compatibleCount ?? 0) > 0);
+                                                const thread = item?.neckThreadSize;
+                                                if (thread) {
+                                                    return `Match ${thread} caps, droppers, rollers, sprayers, or reducers before checkout.`;
+                                                }
+                                                return "Review compatible caps, droppers, rollers, sprayers, or reducers before checkout.";
+                                            })()}
+                                        </p>
+                                        <Link
+                                            href={`/catalog?category=Component${items.find((item) => item.neckThreadSize)?.neckThreadSize ? `&search=${encodeURIComponent(items.find((item) => item.neckThreadSize)!.neckThreadSize!)}` : ""}`}
+                                            onClick={onClose}
+                                            className="mt-2 inline-flex text-[12px] font-semibold text-obsidian underline underline-offset-4 hover:text-muted-gold"
+                                        >
+                                            Find compatible components
+                                        </Link>
+                                        <button
+                                            type="button"
+                                            onClick={() => {
+                                                onClose();
+                                                openGracePanel();
+                                            }}
+                                            className="ml-3 mt-2 inline-flex text-[12px] font-semibold text-muted-gold underline underline-offset-4 hover:text-obsidian"
+                                        >
+                                            Ask Grace to check
+                                        </button>
+                                    </div>
+                                )}
 
                                 <p className="text-[11px] text-slate text-center mt-3 tracking-wide">
                                     {isCheckingOut
