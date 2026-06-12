@@ -9,7 +9,16 @@ import {
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 
-const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+// Lazily constructed so a missing NEXT_PUBLIC_CONVEX_URL surfaces as a 500 at
+// request time instead of crashing `next build` during page-data collection.
+let convexClient: ConvexHttpClient | null = null;
+function getConvex(): ConvexHttpClient | null {
+    if (convexClient) return convexClient;
+    const url = process.env.NEXT_PUBLIC_CONVEX_URL;
+    if (!url) return null;
+    convexClient = new ConvexHttpClient(url);
+    return convexClient;
+}
 const convexWriteToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
 
 /**
@@ -34,6 +43,12 @@ export async function POST(req: NextRequest) {
 
     if (!convexWriteToken) {
         console.error("[Shopify Webhook] BEST_BOTTLES_CONVEX_WRITE_TOKEN is not configured");
+        return new Response("Server not configured", { status: 500 });
+    }
+
+    const convex = getConvex();
+    if (!convex) {
+        console.error("[Shopify Webhook] NEXT_PUBLIC_CONVEX_URL is not configured");
         return new Response("Server not configured", { status: 500 });
     }
 
