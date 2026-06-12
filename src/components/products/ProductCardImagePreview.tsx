@@ -74,17 +74,50 @@ function ProductCardSwatch({
     );
 }
 
+function ProductCardStaticSwatch({
+    preview,
+}: {
+    preview: ProductCardVariantPreview;
+}) {
+    return (
+        <span
+            aria-label={`${preview.label} option`}
+            title={`${preview.label} option`}
+            className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
+            role="img"
+        >
+            <span
+                className={`relative block h-5 w-5 overflow-hidden rounded-full border border-champagne/60 opacity-75 shadow-[inset_0_1px_1px_rgba(255,255,255,0.65),inset_0_-2px_5px_rgba(32,32,32,0.10)] ${
+                    preview.swatchColor || preview.swatchImageUrl ? "" : "bg-bone"
+                }`}
+                style={swatchStyle(preview)}
+                aria-hidden="true"
+            >
+                {(preview.swatchColor || preview.swatchImageUrl) && (
+                    <span className="absolute inset-[2px] rounded-full bg-[radial-gradient(circle_at_32%_24%,rgba(255,255,255,0.72),rgba(255,255,255,0)_42%)]" />
+                )}
+                {!preview.swatchColor && !preview.swatchImageUrl && (
+                    <span className="absolute inset-x-1/2 top-0 h-full w-px -rotate-45 bg-slate/50" />
+                )}
+            </span>
+        </span>
+    );
+}
+
 function ProductCardSwatchRow({
-    variants,
+    previewableVariants,
+    staticVariants,
     activeVariantId,
     maxVisible,
     onPreview,
 }: {
-    variants: ProductCardVariantPreview[];
+    previewableVariants: ProductCardVariantPreview[];
+    staticVariants: ProductCardVariantPreview[];
     activeVariantId: string | null;
     maxVisible: number;
     onPreview: (preview: ProductCardVariantPreview) => void;
 }) {
+    const variants = [...previewableVariants, ...staticVariants];
     const visible = variants.slice(0, maxVisible);
     const hiddenCount = Math.max(variants.length - maxVisible, 0);
 
@@ -93,12 +126,16 @@ function ProductCardSwatchRow({
     return (
         <div className="flex min-h-11 items-center gap-1.5 border-t border-champagne/30 bg-white px-4" aria-label="Variant color previews">
             {visible.map((preview) => (
-                <ProductCardSwatch
-                    key={preview.id}
-                    preview={preview}
-                    isActive={activeVariantId === preview.id}
-                    onPreview={onPreview}
-                />
+                preview.imageUrl ? (
+                    <ProductCardSwatch
+                        key={preview.id}
+                        preview={preview}
+                        isActive={activeVariantId === preview.id}
+                        onPreview={onPreview}
+                    />
+                ) : (
+                    <ProductCardStaticSwatch key={preview.id} preview={preview} />
+                )
             ))}
             {hiddenCount > 0 && (
                 <span className="ml-1 inline-flex h-6 items-center rounded-full border border-champagne/70 bg-bone px-2 text-[10px] font-semibold text-slate">
@@ -121,9 +158,17 @@ export default function ProductCardImagePreview({
         () => variantPreviews.filter((preview) => preview.id && (preview.imageUrl || preview.swatchColor || preview.swatchImageUrl)),
         [variantPreviews],
     );
-    const [activePreviewId, setActivePreviewId] = useState<string | null>(previews[0]?.id ?? null);
+    const previewablePreviews = useMemo(
+        () => previews.filter((preview) => preview.imageUrl),
+        [previews],
+    );
+    const staticPreviews = useMemo(
+        () => previews.filter((preview) => !preview.imageUrl),
+        [previews],
+    );
+    const [activePreviewId, setActivePreviewId] = useState<string | null>(previewablePreviews[0]?.id ?? null);
 
-    const activePreview = previews.find((preview) => preview.id === activePreviewId) ?? previews[0] ?? null;
+    const activePreview = previewablePreviews.find((preview) => preview.id === activePreviewId) ?? previewablePreviews[0] ?? null;
     const displayImage = activePreview?.imageUrl
         ? {
             url: activePreview.imageUrl,
@@ -166,7 +211,8 @@ export default function ProductCardImagePreview({
 
             </div>
             <ProductCardSwatchRow
-                variants={previews}
+                previewableVariants={previewablePreviews}
+                staticVariants={staticPreviews}
                 activeVariantId={activePreview?.id ?? null}
                 maxVisible={maxVisibleSwatches}
                 onPreview={handlePreview}

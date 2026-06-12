@@ -153,8 +153,22 @@ Before AiOS/Madison generates a batch, validate:
 8. No Swirl SKU/title/slug is marked as Clear.
 9. `outputWidth=2080` and `outputHeight=2288`.
 10. `imageRole=pdp-main` unless a different role is intentionally documented.
+11. Same-capacity rows in the same family have an approved geometry anchor or reference set that locks bottle height, width, vertical axis, bottom baseline, shoulder shape, base shape, neck position, and product scale.
 
 If any check fails, keep the row `blocked` and do not generate it.
+
+## Visual QA Gate
+
+Before a generated image can move from `locked` to `approved`, validate:
+
+1. Same-capacity sibling variants share the same bottle height, width, product scale, vertical axis, and bottom baseline.
+2. The bottle silhouette, shoulder, base, neck, and glass proportions match the family reference unless the manifest intentionally documents a different physical SKU.
+3. Only the requested glass color, closure/applicator, finish, cap state, or supported accessory changed.
+4. The background is smooth and continuous, with no artificial horizontal lines, seams, table edges, horizon lines, divider lines, backdrop folds, transparent bands, or compositing artifacts.
+5. No fake line crosses behind or through the bottle, cap, sprayer, pump, roller, or closure.
+6. The product uses only a subtle natural contact shadow; hard shadows, ghosted outlines, and cut-and-paste edges are blockers.
+
+If any visual QA check fails, return the row to `locked` with blocker notes and regenerate. Do not push the image to Shopify.
 
 ## Upload Gate
 

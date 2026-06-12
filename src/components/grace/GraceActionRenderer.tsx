@@ -30,6 +30,8 @@ export interface GraceActionRendererProps {
     action: GraceAction;
     onAddToShortlist?: (p: ProductCard) => void;
     tierLabel?: string | null;
+    onConfirmAction?: () => void;
+    onDismissAction?: () => void;
 }
 
 function GraceProductTileGrid({
@@ -74,7 +76,74 @@ function GraceProductTileGrid({
     );
 }
 
-export default function GraceActionRenderer({ action, onAddToShortlist, tierLabel }: GraceActionRendererProps) {
+function CartProposal({
+    action,
+    onConfirmAction,
+    onDismissAction,
+}: {
+    action: Extract<GraceAction, { type: "proposeCartAdd" }>;
+    onConfirmAction?: () => void;
+    onDismissAction?: () => void;
+}) {
+    const total = action.products.reduce((sum, p) => sum + (p.unitPrice ?? p.webPrice1pc ?? 0) * p.quantity, 0);
+    return (
+        <div
+            className="mt-2 rounded-[2px] p-3 space-y-3"
+            style={{
+                background: "var(--color-linen)",
+                border: "1px solid rgba(212, 197, 169, 0.55)",
+            }}
+            data-testid="grace-cart-proposal"
+        >
+            <div className="text-[9.5px] font-semibold uppercase tracking-[0.18em] text-slate">
+                Review before adding
+            </div>
+            <div className="space-y-2">
+                {action.products.map((p) => (
+                    <div key={p.graceSku} className="flex items-start justify-between gap-3 text-[12px] text-obsidian/80">
+                        <div>
+                            <div className="font-medium text-obsidian">{p.itemName}</div>
+                            <div className="text-slate">{[p.capacity, p.color, p.applicator].filter(Boolean).join(" · ")}</div>
+                        </div>
+                        <div className="text-right whitespace-nowrap">
+                            <div>×{p.quantity}</div>
+                            {(p.unitPrice ?? p.webPrice1pc) != null && (
+                                <div className="text-slate">${((p.unitPrice ?? p.webPrice1pc) as number).toFixed(2)}/pc</div>
+                            )}
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <div className="flex items-center justify-between gap-2 pt-2 border-t border-champagne/50">
+                <div className="text-[11px] text-slate">
+                    {action.awaitingConfirmation
+                        ? (total > 0 ? `Estimated subtotal $${total.toFixed(2)}` : "Price will be confirmed in cart")
+                        : "Added to cart"}
+                </div>
+                {action.awaitingConfirmation && (
+                    <div className="flex items-center gap-2">
+                    <button
+                        type="button"
+                        onClick={onDismissAction}
+                        className="px-3 py-1.5 text-[11px] font-medium text-slate hover:text-obsidian"
+                    >
+                        Dismiss
+                    </button>
+                    <button
+                        type="button"
+                        onClick={onConfirmAction}
+                        className="px-3 py-1.5 rounded-[2px] bg-obsidian text-bone text-[11px] font-semibold hover:bg-black"
+                    >
+                        Add to cart
+                    </button>
+                    </div>
+                )}
+            </div>
+        </div>
+    );
+}
+
+export default function GraceActionRenderer({ action, onAddToShortlist, tierLabel, onConfirmAction, onDismissAction }: GraceActionRendererProps) {
     switch (action.type) {
         case "displayProductCard":
             return (
@@ -147,10 +216,16 @@ export default function GraceActionRenderer({ action, onAddToShortlist, tierLabe
                 />
             );
 
-        // Existing legacy non-product actions continue to act as routing /
-        // cart / form triggers via the provider, which is the v2 behavior.
         case "buildKit":
+            return null;
         case "proposeCartAdd":
+            return (
+                <CartProposal
+                    action={action}
+                    onConfirmAction={onConfirmAction}
+                    onDismissAction={onDismissAction}
+                />
+            );
         case "navigateToPage":
         case "prefillForm":
             return null;

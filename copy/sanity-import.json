@@ -1,0 +1,1643 @@
+{
+  "generatedAt": "2026-05-23",
+  "scope": "Pilot: Cylinder 9ml x five 17-415 roll-on color groups; five variants per group.",
+  "productGroups": [
+    {
+      "_type": "productGroup",
+      "sourceProductGroupId": "kh771qba96h5kj4qabn8z3nt1d83ktrw",
+      "sourceSlug": "cylinder-9ml-amber-17-415-rollon",
+      "slug": "cylinder-9ml-amber",
+      "familyName": "Cylinder",
+      "displayName": "Cylinder 9 ml Amber Roll-On Bottle",
+      "heroImageUrl": "https://cdn.sanity.io/images/gh97irjh/production/67b939ad6fa20320e90f0b3838792124705ccc3b-4297x4297.jpg",
+      "heroDescription": "The Cylinder 9 ml Amber Roll-On Bottle gives small-format oil lines a precise, retail-ready package without forcing a production-sized commitment. Its apothecary amber body holds 9 ml (0.3 oz), uses a 17-415 neck finish, and pairs with plastic or metal roller plugs from the verified fitment matrix. Brands use this size for essential oils, facial oils, botanical blends, and apothecary-style wellness lines. Choose the cap finish variant below, then request samples before building the full run.",
+      "body": [
+        {
+          "_type": "block",
+          "_key": "intro",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "This Amber Cylinder roll-on keeps the decision simple: a narrow glass body, a verified 17-415 roll-on fitment system, and a compact 9 ml fill. The Convex record lists diameter values of 20 ±0.5 mm / 21 ±0.5 mm and height-with-cap values of 75 ±1 mm / 83 ±1 mm, depending on the selected roller assembly.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority-heading",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Verified details",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Convex lists this group as Glass Bottle with 20 variants, a price range of $0.57-$0.82, and case quantity 724. No wall-thickness, pallet, or material-grade claim is included because those fields are not present in the source rows.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What it is for",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases-list",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Use it for essential oils, facial oils, botanical blends, and apothecary-style wellness lines. The 9 ml format suits discovery sets, travel-size products, counter testers, and focused single-note blends where the applicator matters as much as the glass.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "compatibility",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What pairs with it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "fitment",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "The verified 17-415 fitment matrix lists plastic roller plugs, metal roller plugs, roll-on cap options, spray tops, and lotion pumps for this Cylinder 9ml family. This pilot page focuses on roll-on assemblies only.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "How brands use it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it-copy",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Indie wellness and beauty brands typically use the Cylinder 9 ml Amber Roll-On Bottle as the small-size anchor in a broader product family. A founder can test several cap finishes, photograph the line quickly, and keep the 17-415 system consistent across roller, spray, and pump configurations. The amber finish gives this version its visual role while the shared Cylinder 9ml body keeps sourcing straightforward.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "cta",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Request a sample, compare cap finishes, or ask the Best Bottles team to confirm fitment before production.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        }
+      ],
+      "faq": [
+        {
+          "_type": "object",
+          "_key": "q1",
+          "question": "What neck finish does the Cylinder 9 ml Amber Roll-On Bottle use?",
+          "answer": "The neck finish is 17-415. The verified fitment matrix lists plastic roller plugs, metal roller plugs, roll-on caps, spray tops, and lotion pumps for Cylinder 9ml bottles."
+        },
+        {
+          "_type": "object",
+          "_key": "q2",
+          "question": "How much does the Cylinder 9 ml Amber Roll-On Bottle hold?",
+          "answer": "The Cylinder 9 ml Amber Roll-On Bottle holds 9 ml (0.3 oz). Convex lists this capacity for each selected roll-on variant in the pilot group."
+        },
+        {
+          "_type": "object",
+          "_key": "q3",
+          "question": "What is the case quantity for the Cylinder 9 ml Amber Roll-On Bottle?",
+          "answer": "The case quantity is 724. Use the product variant table for exact pricing because cap finish and roller material can change the unit price."
+        }
+      ],
+      "specHighlights": {
+        "neckFinish": "17-415",
+        "capacity": "9 ml | 0.3 oz",
+        "diameter": "20 ±0.5 mm / 21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm / 83 ±1 mm",
+        "material": "Glass",
+        "caseQuantity": "724",
+        "compatibleAccessories": "Plastic roller plug, Metal roller plug, Roll-on cap, Fine mist sprayer, Lotion pump"
+      },
+      "seo": {
+        "metaTitle": "9ml Amber Cylinder Roll-On Glass Bottle Set | Best Bottles",
+        "metaDescription": "Shop 9 ml Amber Cylinder roll-on bottles with 17-415 neck finish, verified roller fitments, cap options, and sample-friendly pricing. Compare variants.",
+        "h1": "Cylinder 9 ml Amber Roll-On Bottle",
+        "productSchemaDescription": "Cylinder 9 ml Amber Roll-On Bottle with 17-415 neck finish, 20 ±0.5 mm / 21 ±0.5 mm diameter, 75 ±1 mm / 83 ±1 mm height with cap, and roll-on cap variants from Convex."
+      }
+    },
+    {
+      "_type": "productGroup",
+      "sourceProductGroupId": "kh78wxygfm9p26dkth0mysyrsd83jwza",
+      "sourceSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "slug": "cylinder-9ml-cobalt-blue",
+      "familyName": "Cylinder",
+      "displayName": "Cylinder 9 ml Cobalt Blue Roll-On Bottle",
+      "heroImageUrl": "https://cdn.sanity.io/images/gh97irjh/production/48bc5a915e324a3a9c504e2849053094ad9f9070-4297x4297.jpg",
+      "heroDescription": "The Cylinder 9 ml Cobalt Blue Roll-On Bottle gives small-format oil lines a precise, retail-ready package without forcing a production-sized commitment. Its deep cobalt blue body holds 9 ml (0.3 oz), uses a 17-415 neck finish, and pairs with plastic or metal roller plugs from the verified fitment matrix. Brands use this size for aromatherapy blends, trial sizes, oil-based skincare, and color-coded product families. Choose the cap finish variant below, then request samples before building the full run.",
+      "body": [
+        {
+          "_type": "block",
+          "_key": "intro",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "This Cobalt Blue Cylinder roll-on keeps the decision simple: a narrow glass body, a verified 17-415 roll-on fitment system, and a compact 9 ml fill. The Convex record lists diameter values of 20 ±0.5 mm / 21 ±0.5 mm and height-with-cap values of 75 ±1 mm / 85 ±1 mm, depending on the selected roller assembly.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority-heading",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Verified details",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Convex lists this group as Glass Bottle with 20 variants, a price range of $0.60-$0.85, and case quantity 724. No wall-thickness, pallet, or material-grade claim is included because those fields are not present in the source rows.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What it is for",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases-list",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Use it for aromatherapy blends, trial sizes, oil-based skincare, and color-coded product families. The 9 ml format suits discovery sets, travel-size products, counter testers, and focused single-note blends where the applicator matters as much as the glass.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "compatibility",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What pairs with it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "fitment",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "The verified 17-415 fitment matrix lists plastic roller plugs, metal roller plugs, roll-on cap options, spray tops, and lotion pumps for this Cylinder 9ml family. This pilot page focuses on roll-on assemblies only.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "How brands use it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it-copy",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Indie wellness and beauty brands typically use the Cylinder 9 ml Cobalt Blue Roll-On Bottle as the small-size anchor in a broader product family. A founder can test several cap finishes, photograph the line quickly, and keep the 17-415 system consistent across roller, spray, and pump configurations. The cobalt blue finish gives this version its visual role while the shared Cylinder 9ml body keeps sourcing straightforward.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "cta",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Request a sample, compare cap finishes, or ask the Best Bottles team to confirm fitment before production.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        }
+      ],
+      "faq": [
+        {
+          "_type": "object",
+          "_key": "q1",
+          "question": "What neck finish does the Cylinder 9 ml Cobalt Blue Roll-On Bottle use?",
+          "answer": "The neck finish is 17-415. The verified fitment matrix lists plastic roller plugs, metal roller plugs, roll-on caps, spray tops, and lotion pumps for Cylinder 9ml bottles."
+        },
+        {
+          "_type": "object",
+          "_key": "q2",
+          "question": "How much does the Cylinder 9 ml Cobalt Blue Roll-On Bottle hold?",
+          "answer": "The Cylinder 9 ml Cobalt Blue Roll-On Bottle holds 9 ml (0.3 oz). Convex lists this capacity for each selected roll-on variant in the pilot group."
+        },
+        {
+          "_type": "object",
+          "_key": "q3",
+          "question": "What is the case quantity for the Cylinder 9 ml Cobalt Blue Roll-On Bottle?",
+          "answer": "The case quantity is 724. Use the product variant table for exact pricing because cap finish and roller material can change the unit price."
+        }
+      ],
+      "specHighlights": {
+        "neckFinish": "17-415",
+        "capacity": "9 ml | 0.3 oz",
+        "diameter": "20 ±0.5 mm / 21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm / 85 ±1 mm",
+        "material": "Glass",
+        "caseQuantity": "724",
+        "compatibleAccessories": "Plastic roller plug, Metal roller plug, Roll-on cap, Fine mist sprayer, Lotion pump"
+      },
+      "seo": {
+        "metaTitle": "9ml Cobalt Blue Cylinder Roll-On Glass Bottle | Best Bottles",
+        "metaDescription": "Shop 9 ml Cobalt Blue Cylinder roll-on bottles with 17-415 neck finish, verified roller fitments, cap options, and sample-friendly pricing. Compare variants.",
+        "h1": "Cylinder 9 ml Cobalt Blue Roll-On Bottle",
+        "productSchemaDescription": "Cylinder 9 ml Cobalt Blue Roll-On Bottle with 17-415 neck finish, 20 ±0.5 mm / 21 ±0.5 mm diameter, 75 ±1 mm / 85 ±1 mm height with cap, and roll-on cap variants from Convex."
+      }
+    },
+    {
+      "_type": "productGroup",
+      "sourceProductGroupId": "kh78nwhzjf4m5wdtatt5ecaa2583js72",
+      "sourceSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "slug": "cylinder-9ml-frosted",
+      "familyName": "Cylinder",
+      "displayName": "Cylinder 9 ml Frosted Roll-On Bottle",
+      "heroImageUrl": "https://cdn.sanity.io/images/gh97irjh/production/176b1d825d40e35b52afb26fcf214cda77e1404b-4297x4297.jpg",
+      "heroDescription": "The Cylinder 9 ml Frosted Roll-On Bottle gives small-format oil lines a precise, retail-ready package without forcing a production-sized commitment. Its soft frosted glass body holds 9 ml (0.3 oz), uses a 17-415 neck finish, and pairs with plastic or metal roller plugs from the verified fitment matrix. Brands use this size for beauty samples, roll-on oils, wellness blends, and understated gift sets. Choose the cap finish variant below, then request samples before building the full run.",
+      "body": [
+        {
+          "_type": "block",
+          "_key": "intro",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "This Frosted Cylinder roll-on keeps the decision simple: a narrow glass body, a verified 17-415 roll-on fitment system, and a compact 9 ml fill. The Convex record lists diameter values of 21 ±0.5 mm and height-with-cap values of 75 ±1 mm / 87 ±1 mm, depending on the selected roller assembly.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority-heading",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Verified details",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Convex lists this group as Glass Bottle with 20 variants, a price range of $0.65-$0.90, and case quantity 724. No wall-thickness, pallet, or material-grade claim is included because those fields are not present in the source rows.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What it is for",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases-list",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Use it for beauty samples, roll-on oils, wellness blends, and understated gift sets. The 9 ml format suits discovery sets, travel-size products, counter testers, and focused single-note blends where the applicator matters as much as the glass.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "compatibility",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What pairs with it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "fitment",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "The verified 17-415 fitment matrix lists plastic roller plugs, metal roller plugs, roll-on cap options, spray tops, and lotion pumps for this Cylinder 9ml family. This pilot page focuses on roll-on assemblies only.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "How brands use it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it-copy",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Indie wellness and beauty brands typically use the Cylinder 9 ml Frosted Roll-On Bottle as the small-size anchor in a broader product family. A founder can test several cap finishes, photograph the line quickly, and keep the 17-415 system consistent across roller, spray, and pump configurations. The frosted finish gives this version its visual role while the shared Cylinder 9ml body keeps sourcing straightforward.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "cta",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Request a sample, compare cap finishes, or ask the Best Bottles team to confirm fitment before production.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        }
+      ],
+      "faq": [
+        {
+          "_type": "object",
+          "_key": "q1",
+          "question": "What neck finish does the Cylinder 9 ml Frosted Roll-On Bottle use?",
+          "answer": "The neck finish is 17-415. The verified fitment matrix lists plastic roller plugs, metal roller plugs, roll-on caps, spray tops, and lotion pumps for Cylinder 9ml bottles."
+        },
+        {
+          "_type": "object",
+          "_key": "q2",
+          "question": "How much does the Cylinder 9 ml Frosted Roll-On Bottle hold?",
+          "answer": "The Cylinder 9 ml Frosted Roll-On Bottle holds 9 ml (0.3 oz). Convex lists this capacity for each selected roll-on variant in the pilot group."
+        },
+        {
+          "_type": "object",
+          "_key": "q3",
+          "question": "What is the case quantity for the Cylinder 9 ml Frosted Roll-On Bottle?",
+          "answer": "The case quantity is 724. Use the product variant table for exact pricing because cap finish and roller material can change the unit price."
+        }
+      ],
+      "specHighlights": {
+        "neckFinish": "17-415",
+        "capacity": "9 ml | 0.3 oz",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm / 87 ±1 mm",
+        "material": "Glass",
+        "caseQuantity": "724",
+        "compatibleAccessories": "Plastic roller plug, Metal roller plug, Roll-on cap, Fine mist sprayer, Lotion pump"
+      },
+      "seo": {
+        "metaTitle": "9ml Frosted Cylinder Roll-On Glass Bottle | Best Bottles",
+        "metaDescription": "Shop 9 ml Frosted Cylinder roll-on bottles with 17-415 neck finish, verified roller fitments, cap options, and sample-friendly pricing. Compare variants.",
+        "h1": "Cylinder 9 ml Frosted Roll-On Bottle",
+        "productSchemaDescription": "Cylinder 9 ml Frosted Roll-On Bottle with 17-415 neck finish, 21 ±0.5 mm diameter, 75 ±1 mm / 87 ±1 mm height with cap, and roll-on cap variants from Convex."
+      }
+    },
+    {
+      "_type": "productGroup",
+      "sourceProductGroupId": "kh70dybf6wqhct0knq6qx9dnbs83k26j",
+      "sourceSlug": "cylinder-9ml-clear-17-415-rollon",
+      "slug": "cylinder-9ml-clear",
+      "familyName": "Cylinder",
+      "displayName": "Cylinder 9 ml Clear Roll-On Bottle",
+      "heroImageUrl": "https://cdn.sanity.io/images/gh97irjh/production/60e39660fa473284f9db92e07cbdb51022438b3e-4297x4297.jpg",
+      "heroDescription": "The Cylinder 9 ml Clear Roll-On Bottle gives small-format oil lines a precise, retail-ready package without forcing a production-sized commitment. Its clear glass body holds 9 ml (0.3 oz), uses a 17-415 neck finish, and pairs with plastic or metal roller plugs from the verified fitment matrix. Brands use this size for sample programs, tester sets, essential oil blends, and small-batch launches. Choose the cap finish variant below, then request samples before building the full run.",
+      "body": [
+        {
+          "_type": "block",
+          "_key": "intro",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "This Clear Cylinder roll-on keeps the decision simple: a narrow glass body, a verified 17-415 roll-on fitment system, and a compact 9 ml fill. The Convex record lists diameter values of 20 ±0.5 mm / 21 ±0.5 mm and height-with-cap values of 75 ±1 mm / 83 ±1 mm, depending on the selected roller assembly.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority-heading",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Verified details",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Convex lists this group as Glass Bottle with 20 variants, a price range of $0.55-$0.80, and case quantity 724. No wall-thickness, pallet, or material-grade claim is included because those fields are not present in the source rows.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What it is for",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases-list",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Use it for sample programs, tester sets, essential oil blends, and small-batch launches. The 9 ml format suits discovery sets, travel-size products, counter testers, and focused single-note blends where the applicator matters as much as the glass.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "compatibility",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What pairs with it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "fitment",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "The verified 17-415 fitment matrix lists plastic roller plugs, metal roller plugs, roll-on cap options, spray tops, and lotion pumps for this Cylinder 9ml family. This pilot page focuses on roll-on assemblies only.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "How brands use it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it-copy",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Indie wellness and beauty brands typically use the Cylinder 9 ml Clear Roll-On Bottle as the small-size anchor in a broader product family. A founder can test several cap finishes, photograph the line quickly, and keep the 17-415 system consistent across roller, spray, and pump configurations. The clear finish gives this version its visual role while the shared Cylinder 9ml body keeps sourcing straightforward.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "cta",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Request a sample, compare cap finishes, or ask the Best Bottles team to confirm fitment before production.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        }
+      ],
+      "faq": [
+        {
+          "_type": "object",
+          "_key": "q1",
+          "question": "What neck finish does the Cylinder 9 ml Clear Roll-On Bottle use?",
+          "answer": "The neck finish is 17-415. The verified fitment matrix lists plastic roller plugs, metal roller plugs, roll-on caps, spray tops, and lotion pumps for Cylinder 9ml bottles."
+        },
+        {
+          "_type": "object",
+          "_key": "q2",
+          "question": "How much does the Cylinder 9 ml Clear Roll-On Bottle hold?",
+          "answer": "The Cylinder 9 ml Clear Roll-On Bottle holds 9 ml (0.3 oz). Convex lists this capacity for each selected roll-on variant in the pilot group."
+        },
+        {
+          "_type": "object",
+          "_key": "q3",
+          "question": "What is the case quantity for the Cylinder 9 ml Clear Roll-On Bottle?",
+          "answer": "The case quantity is 724. Use the product variant table for exact pricing because cap finish and roller material can change the unit price."
+        }
+      ],
+      "specHighlights": {
+        "neckFinish": "17-415",
+        "capacity": "9 ml | 0.3 oz",
+        "diameter": "20 ±0.5 mm / 21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm / 83 ±1 mm",
+        "material": "Glass",
+        "caseQuantity": "724",
+        "compatibleAccessories": "Plastic roller plug, Metal roller plug, Roll-on cap, Fine mist sprayer, Lotion pump"
+      },
+      "seo": {
+        "metaTitle": "9ml Clear Cylinder Roll-On Glass Bottle Set | Best Bottles",
+        "metaDescription": "Shop 9 ml Clear Cylinder roll-on bottles with 17-415 neck finish, verified roller fitments, cap options, and sample-friendly pricing. Compare variants.",
+        "h1": "Cylinder 9 ml Clear Roll-On Bottle",
+        "productSchemaDescription": "Cylinder 9 ml Clear Roll-On Bottle with 17-415 neck finish, 20 ±0.5 mm / 21 ±0.5 mm diameter, 75 ±1 mm / 83 ±1 mm height with cap, and roll-on cap variants from Convex."
+      }
+    },
+    {
+      "_type": "productGroup",
+      "sourceProductGroupId": "kh7686s0ghx7999p36nq1n48es83js8f",
+      "sourceSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "slug": "cylinder-9ml-swirl",
+      "familyName": "Cylinder",
+      "displayName": "Cylinder 9 ml Swirl Roll-On Bottle",
+      "heroImageUrl": "https://cdn.sanity.io/images/gh97irjh/production/7f624de8172648d0e81f40d70f495fd50a8b575e-4297x4297.jpg",
+      "heroDescription": "The Cylinder 9 ml Swirl Roll-On Bottle gives small-format oil lines a precise, retail-ready package without forcing a production-sized commitment. Its swirl glass body holds 9 ml (0.3 oz), uses a 17-415 neck finish, and pairs with plastic or metal roller plugs from the verified fitment matrix. Brands use this size for limited editions, discovery sets, roll-on oils, and boutique retail assortments. Choose the cap finish variant below, then request samples before building the full run.",
+      "body": [
+        {
+          "_type": "block",
+          "_key": "intro",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "This Swirl Cylinder roll-on keeps the decision simple: a narrow glass body, a verified 17-415 roll-on fitment system, and a compact 9 ml fill. The Convex record lists diameter values of 21 ±0.5 mm and height-with-cap values of 75 ±1 mm / 87 ±1 mm, depending on the selected roller assembly.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority-heading",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Verified details",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "authority",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Convex lists this group as Glass Bottle with 18 variants, a price range of $0.67-$0.92, and case quantity 684. No wall-thickness, pallet, or material-grade claim is included because those fields are not present in the source rows.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What it is for",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "use-cases-list",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Use it for limited editions, discovery sets, roll-on oils, and boutique retail assortments. The 9 ml format suits discovery sets, travel-size products, counter testers, and focused single-note blends where the applicator matters as much as the glass.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "compatibility",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "What pairs with it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "fitment",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "The verified 17-415 fitment matrix lists plastic roller plugs, metal roller plugs, roll-on cap options, spray tops, and lotion pumps for this Cylinder 9ml family. This pilot page focuses on roll-on assemblies only.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it",
+          "style": "h3",
+          "children": [
+            {
+              "_type": "span",
+              "text": "How brands use it",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "how-brands-use-it-copy",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Indie wellness and beauty brands typically use the Cylinder 9 ml Swirl Roll-On Bottle as the small-size anchor in a broader product family. A founder can test several cap finishes, photograph the line quickly, and keep the 17-415 system consistent across roller, spray, and pump configurations. The swirl finish gives this version its visual role while the shared Cylinder 9ml body keeps sourcing straightforward.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        },
+        {
+          "_type": "block",
+          "_key": "cta",
+          "style": "normal",
+          "children": [
+            {
+              "_type": "span",
+              "text": "Request a sample, compare cap finishes, or ask the Best Bottles team to confirm fitment before production.",
+              "marks": []
+            }
+          ],
+          "markDefs": []
+        }
+      ],
+      "faq": [
+        {
+          "_type": "object",
+          "_key": "q1",
+          "question": "What neck finish does the Cylinder 9 ml Swirl Roll-On Bottle use?",
+          "answer": "The neck finish is 17-415. The verified fitment matrix lists plastic roller plugs, metal roller plugs, roll-on caps, spray tops, and lotion pumps for Cylinder 9ml bottles."
+        },
+        {
+          "_type": "object",
+          "_key": "q2",
+          "question": "How much does the Cylinder 9 ml Swirl Roll-On Bottle hold?",
+          "answer": "The Cylinder 9 ml Swirl Roll-On Bottle holds 9 ml (0.3 oz). Convex lists this capacity for each selected roll-on variant in the pilot group."
+        },
+        {
+          "_type": "object",
+          "_key": "q3",
+          "question": "What is the case quantity for the Cylinder 9 ml Swirl Roll-On Bottle?",
+          "answer": "The case quantity is 684. Use the product variant table for exact pricing because cap finish and roller material can change the unit price."
+        }
+      ],
+      "specHighlights": {
+        "neckFinish": "17-415",
+        "capacity": "9 ml | 0.3 oz",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm / 87 ±1 mm",
+        "material": "Glass",
+        "caseQuantity": "684",
+        "compatibleAccessories": "Plastic roller plug, Metal roller plug, Roll-on cap, Fine mist sprayer, Lotion pump"
+      },
+      "seo": {
+        "metaTitle": "9ml Swirl Cylinder Roll-On Glass Bottle Set | Best Bottles",
+        "metaDescription": "Shop 9 ml Swirl Cylinder roll-on bottles with 17-415 neck finish, verified roller fitments, cap options, and sample-friendly pricing. Compare variants.",
+        "h1": "Cylinder 9 ml Swirl Roll-On Bottle",
+        "productSchemaDescription": "Cylinder 9 ml Swirl Roll-On Bottle with 17-415 neck finish, 21 ±0.5 mm diameter, 75 ±1 mm / 87 ±1 mm height with cap, and roll-on cap variants from Convex."
+      }
+    }
+  ],
+  "products": [
+    {
+      "_type": "product",
+      "sourceProductId": "kd76z5cdzpc2ztkynqr6d0361581t1ah",
+      "slug": "gbcylamb9rollwht",
+      "parentGroupSlug": "cylinder-9ml-amber",
+      "variantName": "Cylinder 9 ml Amber Plastic Roller Ball - White Cap",
+      "variantDescription": "This Amber Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a white cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.57. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylAmb9RollWht",
+        "graceSku": "GB-CYL-AMB-9ML-ROL-WHT",
+        "color": "Amber",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "White",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.57,
+        "qty10": null,
+        "qty12": 0.54,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd73gvq59bbak2tbrmvaxjks6181v743",
+      "slug": "gbcylamb9rollshblk",
+      "parentGroupSlug": "cylinder-9ml-amber",
+      "variantName": "Cylinder 9 ml Amber Plastic Roller Ball - Shiny Black Cap",
+      "variantDescription": "This Amber Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a shiny black cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.57. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylAmb9RollShBlk",
+        "graceSku": "GB-CYL-AMB-9ML-ROL-SBLK",
+        "color": "Amber",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Shiny Black",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.57,
+        "qty10": null,
+        "qty12": 0.54,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd757swv78j5r4nz5zzftk3rcx81t2ze",
+      "slug": "gbcylamb9rollmattgl",
+      "parentGroupSlug": "cylinder-9ml-amber",
+      "variantName": "Cylinder 9 ml Amber Plastic Roller Ball - Matte Gold Cap",
+      "variantDescription": "This Amber Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte gold cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.65. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylAmb9RollMattGl",
+        "graceSku": "GB-CYL-AMB-9ML-ROL-MGLD",
+        "color": "Amber",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Gold",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.65,
+        "qty10": null,
+        "qty12": 0.62,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7fnkekbmf247ewq1xsjwvdmx81vp8e",
+      "slug": "gbcylamb9rollmattsl",
+      "parentGroupSlug": "cylinder-9ml-amber",
+      "variantName": "Cylinder 9 ml Amber Plastic Roller Ball - Matte Silver Cap",
+      "variantDescription": "This Amber Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte silver cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.65. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylAmb9RollMattSl",
+        "graceSku": "GB-CYL-AMB-9ML-ROL-MSLV",
+        "color": "Amber",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Silver",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.65,
+        "qty10": null,
+        "qty12": 0.62,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7b03b6g119rhy73esw11pghx81tp01",
+      "slug": "gbcylamb9rollmattcu",
+      "parentGroupSlug": "cylinder-9ml-amber",
+      "variantName": "Cylinder 9 ml Amber Plastic Roller Ball - Matte Copper Cap",
+      "variantDescription": "This Amber Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte copper cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.65. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylAmb9RollMattCu",
+        "graceSku": "GB-CYL-AMB-9ML-ROL-MCPR",
+        "color": "Amber",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Copper",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.65,
+        "qty10": null,
+        "qty12": 0.62,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd73wkk1fv0mq1147c97t889y581tpm8",
+      "slug": "gbcylblu9rollwht",
+      "parentGroupSlug": "cylinder-9ml-cobalt-blue",
+      "variantName": "Cylinder 9 ml Cobalt Blue Plastic Roller Ball - White Cap",
+      "variantDescription": "This Cobalt Blue Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a white cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.60. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylBlu9RollWht",
+        "graceSku": "GB-CYL-BLU-9ML-ROL-WHT",
+        "color": "Cobalt Blue",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "White",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.6,
+        "qty10": null,
+        "qty12": 0.57,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd72v5tkv4ran1z5d5zwpcxtjd81vfrd",
+      "slug": "gbcylblu9rollshblk",
+      "parentGroupSlug": "cylinder-9ml-cobalt-blue",
+      "variantName": "Cylinder 9 ml Cobalt Blue Plastic Roller Ball - Shiny Black Cap",
+      "variantDescription": "This Cobalt Blue Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a shiny black cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.60. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylBlu9RollShBlk",
+        "graceSku": "GB-CYL-BLU-9ML-ROL-SBLK",
+        "color": "Cobalt Blue",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Shiny Black",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.6,
+        "qty10": null,
+        "qty12": 0.57,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd70455r8rqdk3jvavzrm8zq5d81tzq6",
+      "slug": "gbcylblu9rollmattgl",
+      "parentGroupSlug": "cylinder-9ml-cobalt-blue",
+      "variantName": "Cylinder 9 ml Cobalt Blue Plastic Roller Ball - Matte Gold Cap",
+      "variantDescription": "This Cobalt Blue Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte gold cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.68. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylBlu9RollMattGl",
+        "graceSku": "GB-CYL-BLU-9ML-ROL-MGLD",
+        "color": "Cobalt Blue",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Gold",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.68,
+        "qty10": null,
+        "qty12": 0.65,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7bv2e5e4mvkqa14k1y69cwmd81t06e",
+      "slug": "gbcylblu9rollmattsl",
+      "parentGroupSlug": "cylinder-9ml-cobalt-blue",
+      "variantName": "Cylinder 9 ml Cobalt Blue Plastic Roller Ball - Matte Silver Cap",
+      "variantDescription": "This Cobalt Blue Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte silver cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.68. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylBlu9RollMattSl",
+        "graceSku": "GB-CYL-BLU-9ML-ROL-MSLV",
+        "color": "Cobalt Blue",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Silver",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.68,
+        "qty10": null,
+        "qty12": 0.65,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd751kw0nyyyc42pkfaaj584an81tctb",
+      "slug": "gbcylblu9rollmattcu",
+      "parentGroupSlug": "cylinder-9ml-cobalt-blue",
+      "variantName": "Cylinder 9 ml Cobalt Blue Plastic Roller Ball - Matte Copper Cap",
+      "variantDescription": "This Cobalt Blue Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte copper cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.68. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylBlu9RollMattCu",
+        "graceSku": "GB-CYL-BLU-9ML-ROL-MCPR",
+        "color": "Cobalt Blue",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Copper",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.68,
+        "qty10": null,
+        "qty12": 0.65,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd77xaffkj0c4nwaxwwpmv986s81v20j",
+      "slug": "gbcylfrst9rollwht",
+      "parentGroupSlug": "cylinder-9ml-frosted",
+      "variantName": "Cylinder 9 ml Frosted Plastic Roller Ball - White Cap",
+      "variantDescription": "This Frosted Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a white cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.65. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylFrst9RollWht",
+        "graceSku": "GB-CYL-FRS-9ML-ROL-WHT",
+        "color": "Frosted",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "White",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.65,
+        "qty10": null,
+        "qty12": 0.62,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7797f1axm7c3q43759sqbvth81t6he",
+      "slug": "gbcylfrst9rollshblk",
+      "parentGroupSlug": "cylinder-9ml-frosted",
+      "variantName": "Cylinder 9 ml Frosted Plastic Roller Ball - Shiny Black Cap",
+      "variantDescription": "This Frosted Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a shiny black cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.65. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylFrst9RollShBlk",
+        "graceSku": "GB-CYL-FRS-9ML-ROL-SBLK",
+        "color": "Frosted",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Shiny Black",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.65,
+        "qty10": null,
+        "qty12": 0.62,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd71d0r1d25k52zy3ak7r5c83h81v4ts",
+      "slug": "gbcylfrst9rollmattgl",
+      "parentGroupSlug": "cylinder-9ml-frosted",
+      "variantName": "Cylinder 9 ml Frosted Plastic Roller Ball - Matte Gold Cap",
+      "variantDescription": "This Frosted Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte gold cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.73. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylFrst9RollMattGl",
+        "graceSku": "GB-CYL-FRS-9ML-ROL-MGLD",
+        "color": "Frosted",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Gold",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.73,
+        "qty10": null,
+        "qty12": 0.69,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7apfd8wj28k9835vmrm0t74d81v38q",
+      "slug": "gbcylfrst9rollmattsl",
+      "parentGroupSlug": "cylinder-9ml-frosted",
+      "variantName": "Cylinder 9 ml Frosted Plastic Roller Ball - Matte Silver Cap",
+      "variantDescription": "This Frosted Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte silver cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.73. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylFrst9RollMattSl",
+        "graceSku": "GB-CYL-FRS-9ML-ROL-MSLV",
+        "color": "Frosted",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Silver",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.73,
+        "qty10": null,
+        "qty12": 0.69,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd790dda5fh387knfr19p4f91d81ve9y",
+      "slug": "gbcylfrst9rollmattcu",
+      "parentGroupSlug": "cylinder-9ml-frosted",
+      "variantName": "Cylinder 9 ml Frosted Plastic Roller Ball - Matte Copper Cap",
+      "variantDescription": "This Frosted Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte copper cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.73. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylFrst9RollMattCu",
+        "graceSku": "GB-CYL-FRS-9ML-ROL-MCPR",
+        "color": "Frosted",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Copper",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.73,
+        "qty10": null,
+        "qty12": 0.69,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd77nrwdw0ahy2n13aw9qwf71x81tmsa",
+      "slug": "gbcyl9mtlrollmattsl",
+      "parentGroupSlug": "cylinder-9ml-clear",
+      "variantName": "Cylinder 9 ml Clear Metal Roller Ball - Matte Silver Cap",
+      "variantDescription": "This Clear Cylinder 9 ml roll-on variant uses a metal roller ball assembly with a matte silver cap. Convex lists a 17-415 neck finish, 20 ±0.5 mm diameter, and 83 ±1 mm height with cap. Unit price starts at $0.72. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCyl9MtlRollMattSl",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-MSLV-01",
+        "color": "Clear",
+        "applicator": "Metal Roller Ball",
+        "ballMaterial": "Metal",
+        "capColor": "Matte Silver",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "20 ±0.5 mm",
+        "heightWithCap": "83 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.72,
+        "qty10": null,
+        "qty12": 0.68,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7f3h21e96yvtkf2cdkf1vk5x81vqs6",
+      "slug": "gbcyl9rollblkdot",
+      "parentGroupSlug": "cylinder-9ml-clear",
+      "variantName": "Cylinder 9 ml Clear Plastic Roller Ball - Clear Cap",
+      "variantDescription": "This Clear Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a clear cap. Convex lists a 17-415 neck finish, 20 ±0.5 mm diameter, and 83 ±1 mm height with cap. Unit price starts at $0.71. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCyl9RollBlkDot",
+        "graceSku": "GB-CYL-CLR-9ML-T-11",
+        "color": "Clear",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Clear",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "20 ±0.5 mm",
+        "heightWithCap": "83 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.71,
+        "qty10": null,
+        "qty12": 0.67,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd72m12j4e9t0k07c595z9jet981tntq",
+      "slug": "gbcyl9rollmattcu",
+      "parentGroupSlug": "cylinder-9ml-clear",
+      "variantName": "Cylinder 9 ml Clear Plastic Roller Ball - Clear Cap",
+      "variantDescription": "This Clear Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a clear cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.63. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCyl9RollMattCu",
+        "graceSku": "GB-CYL-CLR-9ML-T-12",
+        "color": "Clear",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Clear",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.63,
+        "qty10": null,
+        "qty12": 0.6,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7eqwk5nb9a95wsf0yby5sb4s81vgvh",
+      "slug": "gbcyl9rollmattgl",
+      "parentGroupSlug": "cylinder-9ml-clear",
+      "variantName": "Cylinder 9 ml Clear Plastic Roller Ball - Clear Cap",
+      "variantDescription": "This Clear Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a clear cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.63. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCyl9RollMattGl",
+        "graceSku": "GB-CYL-CLR-9ML-T-13",
+        "color": "Clear",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Clear",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.63,
+        "qty10": null,
+        "qty12": 0.6,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7fmja16cvm0sr6cpc8azwa0d81tzw7",
+      "slug": "gbcyl9rollmattsl",
+      "parentGroupSlug": "cylinder-9ml-clear",
+      "variantName": "Cylinder 9 ml Clear Plastic Roller Ball - Clear Cap",
+      "variantDescription": "This Clear Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a clear cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.63. Case quantity is 724. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCyl9RollMattSl",
+        "graceSku": "GB-CYL-CLR-9ML-T-14",
+        "color": "Clear",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Clear",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 30.14
+      },
+      "pricing": {
+        "qty1": 0.63,
+        "qty10": null,
+        "qty12": 0.6,
+        "moq": 1,
+        "caseQuantity": 724
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd70k0yg4ftw7mrm2mwa7630x181th1p",
+      "slug": "gbcylswrl9rollshblk",
+      "parentGroupSlug": "cylinder-9ml-swirl",
+      "variantName": "Cylinder 9 ml Swirl Plastic Roller Ball - Shiny Black Cap",
+      "variantDescription": "This Swirl Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a shiny black cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.67. Case quantity is 684. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylSwrl9RollShBlk",
+        "graceSku": "GB-CYL-CLR-9ML-ROL-SBLK-01",
+        "color": "Swirl",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Shiny Black",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 29
+      },
+      "pricing": {
+        "qty1": 0.67,
+        "qty10": null,
+        "qty12": 0.64,
+        "moq": 1,
+        "caseQuantity": 684
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7d7rwb46z7bq18mabsccxwmh81tm8m",
+      "slug": "gbcylswrl9rollmattgl",
+      "parentGroupSlug": "cylinder-9ml-swirl",
+      "variantName": "Cylinder 9 ml Swirl Plastic Roller Ball - Matte Gold Cap",
+      "variantDescription": "This Swirl Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte gold cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 87 ±1 mm height with cap. Unit price starts at $0.75. Case quantity is 684. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylSwrl9RollMattGl",
+        "graceSku": "GB-CYL-CLR-9ML-ROL-MGLD-01",
+        "color": "Swirl",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Gold",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "87 ±1 mm",
+        "bottleWeightG": 29
+      },
+      "pricing": {
+        "qty1": 0.75,
+        "qty10": null,
+        "qty12": 0.71,
+        "moq": 1,
+        "caseQuantity": 684
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd7crtc5s2b3yzq5rc5remk6p581vkng",
+      "slug": "gbcylswrl9rollmattsl",
+      "parentGroupSlug": "cylinder-9ml-swirl",
+      "variantName": "Cylinder 9 ml Swirl Plastic Roller Ball - Matte Silver Cap",
+      "variantDescription": "This Swirl Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte silver cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 87 ±1 mm height with cap. Unit price starts at $0.75. Case quantity is 684. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylSwrl9RollMattSl",
+        "graceSku": "GB-CYL-CLR-9ML-ROL-MSLV-01",
+        "color": "Swirl",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Silver",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "87 ±1 mm",
+        "bottleWeightG": 29
+      },
+      "pricing": {
+        "qty1": 0.75,
+        "qty10": null,
+        "qty12": 0.71,
+        "moq": 1,
+        "caseQuantity": 684
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd78zga97yq2pfbbs5t0asnaa981tmwn",
+      "slug": "gbcylswrl9rollmattcu",
+      "parentGroupSlug": "cylinder-9ml-swirl",
+      "variantName": "Cylinder 9 ml Swirl Plastic Roller Ball - Matte Copper Cap",
+      "variantDescription": "This Swirl Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a matte copper cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 75 ±1 mm height with cap. Unit price starts at $0.75. Case quantity is 684. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylSwrl9RollMattCu",
+        "graceSku": "GB-CYL-CLR-9ML-ROL-MCPR-01",
+        "color": "Swirl",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Matte Copper",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "75 ±1 mm",
+        "bottleWeightG": 29
+      },
+      "pricing": {
+        "qty1": 0.75,
+        "qty10": null,
+        "qty12": 0.71,
+        "moq": 1,
+        "caseQuantity": 684
+      },
+      "stockStatus": "In Stock"
+    },
+    {
+      "_type": "product",
+      "sourceProductId": "kd75fqm067mzapy14tefmbwr3s81vnvz",
+      "slug": "gbcylswrl9rollblkdot",
+      "parentGroupSlug": "cylinder-9ml-swirl",
+      "variantName": "Cylinder 9 ml Swirl Plastic Roller Ball - Black Dotted Cap",
+      "variantDescription": "This Swirl Cylinder 9 ml roll-on variant uses a plastic roller ball assembly with a black dotted cap. Convex lists a 17-415 neck finish, 21 ±0.5 mm diameter, and 87 ±1 mm height with cap. Unit price starts at $0.83. Case quantity is 684. Status: In Stock.",
+      "spec": {
+        "websiteSku": "GBCylSwrl9RollBlkDot",
+        "graceSku": "GB-CYL-CLR-9ML-ROL-BKDT-01",
+        "color": "Swirl",
+        "applicator": "Plastic Roller Ball",
+        "ballMaterial": "Plastic",
+        "capColor": "Black Dotted",
+        "capacityMl": 9,
+        "capacityOz": 0.3,
+        "neckThreadSize": "17-415",
+        "diameter": "21 ±0.5 mm",
+        "heightWithCap": "87 ±1 mm",
+        "bottleWeightG": 29
+      },
+      "pricing": {
+        "qty1": 0.83,
+        "qty10": null,
+        "qty12": 0.79,
+        "moq": 1,
+        "caseQuantity": 684
+      },
+      "stockStatus": "In Stock"
+    }
+  ]
+}

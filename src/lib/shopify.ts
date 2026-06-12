@@ -83,6 +83,12 @@ export function numericId(gid: string): string {
     return gid.split("/").pop() ?? gid;
 }
 
+export function normalizeShopifyVariantId(value: string | null | undefined): string | null {
+    const trimmed = value?.trim();
+    if (!trimmed) return null;
+    return numericId(trimmed);
+}
+
 // ─── Variant resolver (SKU → Shopify variant) ───────────────────────────────
 
 export interface ResolvedVariant {
@@ -116,7 +122,7 @@ export async function resolveVariantsBySkus(
                 };
             }>(
                 `query VariantBySku($query: String!) {
-                    productVariants(first: 1, query: $query) {
+                    productVariants(first: 10, query: $query) {
                         edges {
                             node {
                                 id
@@ -131,10 +137,10 @@ export async function resolveVariantsBySkus(
                 { query: `sku:${sku}` },
             );
 
-            const node = data.productVariants.edges[0]?.node;
+            const node = data.productVariants.edges.find((edge) => edge.node.sku === sku)?.node;
             if (node) {
                 resolved.push({
-                    sku,
+                    sku: node.sku || sku,
                     variantId: numericId(node.id),
                     variantGid: node.id,
                     productGid: node.product.id,

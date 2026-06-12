@@ -10,7 +10,22 @@ module.exports = {
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },
-      { userAgent: "*", disallow: ["/api/", "/portal/", "/studio/", "/sign-in/", "/_next/"] },
+      {
+        userAgent: "*",
+        disallow: [
+          "/api/",
+          "/portal/",
+          "/studio/",
+          "/sign-in/",
+          "/sign-up/",
+          "/cart",
+          "/grace-workspace",
+          "/example",
+          "/fitment-demo",
+          "/tech-stack",
+          "/_next/",
+        ],
+      },
       { userAgent: "GPTBot", allow: "/" },
       { userAgent: "Google-Extended", allow: "/" },
       { userAgent: "anthropic-ai", allow: "/" },
@@ -25,7 +40,11 @@ module.exports = {
     "/portal/*",
     "/studio/*",
     "/sign-in/*",
+    "/sign-up/*",
     "/example",
     "/fitment-demo",
+    "/tech-stack",
+    "/cart",
+    "/grace-workspace",
   ],
 };

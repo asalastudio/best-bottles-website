@@ -1,10 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 /**
  * Generates a signed WebSocket URL for ElevenLabs Conversational AI.
  * Uses WebSocket (not WebRTC/LiveKit) — avoids LiveKit connection failures.
  */
-export async function GET() {
+export async function GET(req: NextRequest) {
+    const rateLimited = await enforceGraceRateLimit(req, {
+        route: "elevenlabs-signed-url",
+        limit: 30,
+        windowMs: 60_000,
+    });
+    if (rateLimited) return rateLimited;
+
     const apiKey = process.env.ELEVENLABS_API_KEY;
     const agentId = process.env.ELEVENLABS_AGENT_ID;
 

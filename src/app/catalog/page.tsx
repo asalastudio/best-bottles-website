@@ -1,10 +1,19 @@
+import type { Metadata } from "next";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
 import { api } from "../../../convex/_generated/api";
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
+import { SITE_URL } from "@/lib/seo";
 
 const PAGE_SIZE = 24;
 const MAX_VISIBLE_LIMIT = 240;
+
+export const metadata: Metadata = {
+    title: "Catalog — Wholesale Glass Bottles & Packaging | Best Bottles",
+    description:
+        "Browse wholesale glass bottles, jars, sprayers, droppers, roll-ons, and packaging components by family, capacity, color, applicator, and neck finish.",
+    alternates: { canonical: `${SITE_URL}/catalog` },
+};
 
 function toURLSearchParams(input: Record<string, string | string[] | undefined>): URLSearchParams {
     const params = new URLSearchParams();

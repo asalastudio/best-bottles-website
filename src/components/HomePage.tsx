@@ -9,7 +9,7 @@ import {
     Flower, Drop, SprayBottle, Gift, Flask, Sparkle,
 } from "@/components/icons";
 import { motion } from "framer-motion";
-import { useQuery } from "convex/react";
+import { useQuery, useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import { useGrace } from "@/components/useGrace";
@@ -899,17 +899,31 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
 }
 
 function Newsletter() {
-    const [submitted, setSubmitted] = useState(false);
+    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+    const [errorMsg, setErrorMsg] = useState("");
+    const submitForm = useMutation(api.forms.submit);
 
-    const handleSubmit = useCallback((e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.currentTarget;
         const email = new FormData(form).get("email") as string;
         if (email?.trim()) {
-            // TODO: wire up to email service (Mailchimp, ConvertKit, etc.)
-            setSubmitted(true);
+            setStatus("submitting");
+            setErrorMsg("");
+            try {
+                await submitForm({
+                    formType: "newsletter",
+                    email: email.trim(),
+                    source: "Homepage Newsletter"
+                });
+                setStatus("success");
+            } catch (err) {
+                console.error("Newsletter subscription error:", err);
+                setErrorMsg(err instanceof Error ? err.message : "Failed to subscribe. Please try again.");
+                setStatus("error");
+            }
         }
-    }, []);
+    }, [submitForm]);
 
     return (
         <section className="bg-linen py-24 border-t border-champagne/30 text-center">
@@ -917,15 +931,20 @@ function Newsletter() {
                 <FadeUp>
                     <h2 className="font-serif text-3xl text-obsidian font-medium mb-4">Stay in the Know</h2>
                     <p className="text-slate mb-8">Packaging insights, new arrivals, and scaling strategies. No spam—just expertise.</p>
-                    {submitted ? (
+                    {status === "success" ? (
                         <p className="text-muted-gold font-semibold text-sm">Thanks for subscribing! We&apos;ll be in touch.</p>
                     ) : (
-                        <form onSubmit={handleSubmit} className="flex w-full items-center border border-champagne bg-white p-1 rounded-full shadow-sm hover:border-muted-gold transition-colors focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/20">
-                            <input type="email" name="email" placeholder="Your email address" className="flex-1 px-6 py-3 bg-transparent text-sm focus:outline-none placeholder-slate/60 text-obsidian" required />
-                            <button type="submit" className="px-6 py-3 bg-muted-gold text-white uppercase text-xs font-bold tracking-wider rounded-full hover:bg-obsidian transition-colors duration-300">
-                                Subscribe
-                            </button>
-                        </form>
+                        <>
+                            <form onSubmit={handleSubmit} className="flex w-full items-center border border-champagne bg-white p-1 rounded-full shadow-sm hover:border-muted-gold transition-colors focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/20">
+                                <input type="email" name="email" placeholder="Your email address" aria-label="Email address" className="flex-1 px-6 py-3 bg-transparent text-sm focus:outline-none placeholder-slate/60 text-obsidian" required disabled={status === "submitting"} />
+                                <button type="submit" disabled={status === "submitting"} className="px-6 py-3 bg-muted-gold text-white uppercase text-xs font-bold tracking-wider rounded-full hover:bg-obsidian disabled:bg-slate transition-colors duration-300 cursor-pointer">
+                                    {status === "submitting" ? "Subscribing..." : "Subscribe"}
+                                </button>
+                            </form>
+                            {status === "error" && (
+                                <p className="text-red-500 text-xs mt-2 font-semibold">{errorMsg}</p>
+                            )}
+                        </>
                     )}
                 </FadeUp>
             </div>

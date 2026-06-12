@@ -6,7 +6,7 @@
  */
 
 import { describe, expect, it, vi, beforeEach, afterAll } from "vitest";
-import { buildCheckoutUrl, getShopifyDomain, type CheckoutLineItem } from "../src/lib/shopify";
+import { buildCheckoutUrl, getShopifyDomain, normalizeShopifyVariantId, type CheckoutLineItem } from "../src/lib/shopify";
 
 // ─── getShopifyDomain ───────────────────────────────────────────────────────
 
@@ -91,6 +91,21 @@ describe("buildCheckoutUrl", () => {
         const items: CheckoutLineItem[] = [{ variantId: "49876543210987", quantity: 1 }];
         const url = buildCheckoutUrl(items);
         expect(url).toContain("49876543210987:1");
+    });
+});
+
+// ─── normalizeShopifyVariantId ───────────────────────────────────────────────
+
+describe("normalizeShopifyVariantId", () => {
+    it("converts Shopify variant GIDs to numeric cart IDs", () => {
+        expect(normalizeShopifyVariantId("gid://shopify/ProductVariant/49876543210987")).toBe("49876543210987");
+    });
+
+    it("preserves numeric IDs and rejects empty values", () => {
+        expect(normalizeShopifyVariantId(" 12345 ")).toBe("12345");
+        expect(normalizeShopifyVariantId("")).toBeNull();
+        expect(normalizeShopifyVariantId(null)).toBeNull();
+        expect(normalizeShopifyVariantId(undefined)).toBeNull();
     });
 });
 

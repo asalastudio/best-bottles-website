@@ -5,9 +5,17 @@
  * logic so every page stays consistent without duplication.
  */
 
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-  "https://bestbottles.company";
+export const PRODUCTION_SITE_URL = "https://www.bestbottles.com";
+
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
+
+export const SITE_URL = configuredSiteUrl || PRODUCTION_SITE_URL;
+
+if (process.env.VERCEL_ENV === "production" && SITE_URL !== PRODUCTION_SITE_URL) {
+  throw new Error(
+    `NEXT_PUBLIC_SITE_URL must be https://www.bestbottles.com for production builds. Received: ${SITE_URL}`,
+  );
+}
 export const SITE_NAME = "Best Bottles";
 export const SITE_TAGLINE = "Premium Glass Packaging for Beauty, Fragrance & Wellness Brands";
 export const SITE_DESCRIPTION =

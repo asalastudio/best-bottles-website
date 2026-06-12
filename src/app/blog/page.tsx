@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import BlogGrid, { type JournalPost } from "@/components/BlogGrid";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { JOURNAL_POSTS_QUERY } from "@/sanity/lib/queries";
+import { SITE_URL } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
     title: "Journal — Packaging Insights & Brand Guides | Best Bottles",
     description:
         "Expert guides on glass packaging, fragrance, and brand strategy. From bottle selection to scaling your label — insights from the Best Bottles team.",
+    alternates: { canonical: `${SITE_URL}/blog` },
 };
 
 async function getPosts(): Promise<JournalPost[]> {

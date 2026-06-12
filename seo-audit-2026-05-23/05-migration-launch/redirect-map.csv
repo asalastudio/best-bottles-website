@@ -1,0 +1,272 @@
+# Best Bottles — 301 Redirect Map (Stage 5)
+# Date: 2026-05-23
+# Target cutover: 2026-06-15
+# Source: Stage 0 raw legacy fetch (raw/legacy-homepage-fetch-2026-05-23.md) + Stage 3 legacy equity baseline.
+# Format: legacy_url,new_url,status_code,priority,notes
+#
+# ============================================================
+# IMPLEMENTATION GUIDE
+# ============================================================
+#
+# 1. Convert this CSV into the Next.js `redirects()` source. The simplest path is a
+#    static array imported by `next.config.ts`:
+#
+#    // src/lib/redirects.ts
+#    export type RedirectEntry = { source: string; destination: string; permanent: boolean };
+#    export const REDIRECTS: RedirectEntry[] = [
+#      { source: "/index.php", destination: "/", permanent: true },
+#      { source: "/faq.php", destination: "/resources", permanent: true },
+#      { source: "/contact-us.php", destination: "/contact", permanent: true },
+#      { source: "/filling-capping-labeling-perfume-bottles-atomizers.php", destination: "/services/contract-packaging", permanent: true },
+#      { source: "/all-bottles/Perfume-vials-glass-bottles/Perfume-glas-bottle-vials-purchase.php", destination: "/collections/perfume-vials-bottles", permanent: true },
+#      // ... 145 more entries from this CSV
+#    ];
+#
+#    // next.config.ts
+#    import { REDIRECTS } from "./src/lib/redirects";
+#    const nextConfig = {
+#      async redirects() { return REDIRECTS; },
+#      // ...
+#    };
+#
+# 2. For QUERYSTRING-DRIVEN redirects (?subcat=NN), Next.js `redirects()` supports
+#    `has: [{ type: "query", key: "subcat", value: "66" }]` matchers. Example:
+#
+#    {
+#      source: "/all-bottles/Perfume-vials-glass-bottles/perfume-vials-glass-bottles-cobalt-blue-amber-essential-oils-aromatherapy.php",
+#      has: [{ type: "query", key: "subcat", value: "66" }],
+#      destination: "/collections/boston-round-bottles-amber-cobalt",
+#      permanent: true,
+#    },
+#
+#    Order matters — list each subcat variant BEFORE the bare-PHP fallback, since
+#    Next.js matches in order.
+#
+# 3. For very large redirect maps (>1000 entries) Vercel recommends middleware OR an
+#    edge config blob. ~150 entries are well within `next.config.ts` capacity.
+#
+# 4. Trailing-slash + apex (non-www) → www handled at Vercel domain config level
+#    (BB-SEO-212) plus `trailingSlash: false` in next.config.ts. Do NOT add per-route
+#    trailing-slash entries to this CSV.
+#
+# 5. Test every entry after deploy with:
+#    curl -sI "https://www.bestbottles.com/<legacy-path>" | grep -iE "(HTTP|location)"
+#    Expected: HTTP/2 301 + Location: https://www.bestbottles.com/<new-path>
+#
+# 6. Priorities legend (column 4):
+#    1 = Highest equity (homepage, top-level categories, contract-packaging, PDF) — MUST work day 1
+#    2 = High equity (subcategory landing pages, top-10 PDPs by traffic, informational)
+#    3 = Medium equity (long-tail subcategory variants, individual PDPs)
+#    4 = Low equity (utility, modals, deprecated)
+#
+# ============================================================
+# CSV BEGINS BELOW (header row first)
+# ============================================================
+legacy_url,new_url,status_code,priority,notes
+# --- Brand entry-points (homepage variants) ---
+/,/,308,1,Apex slash. Handled by Vercel domain config + Next.js default. No explicit rule needed but document for completeness.
+/index.php,/,301,1,Legacy homepage entry point. External links may use this exact URL.
+/default.php,/,301,1,Common PHP default fallback. Catch in case any external sites link this form.
+/home.php,/,301,1,Defensive fallback for legacy home variant.
+# --- Top-level category landing pages (4 entries) ---
+/all-bottles/Perfume-vials-glass-bottles/Perfume-glas-bottle-vials-purchase.php,/collections/perfume-vials-bottles,301,1,"Category 1 of 4. FIX: verify /collections/perfume-vials-bottles exists per BB-SEO-217 build-out. Fallback: /catalog?families=Empire,Cylinder,Boston%20Round"
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/Perfume-atomizer-Aluminum-bottle-cans-purchase.php,/collections/atomizers-sprayers-aluminum,301,1,"Category 2 of 4. FIX: verify new collection slug. Fallback: /catalog?applicators=spray"
+/all-bottles/accessories/velvet-bags-organza-gusseted-bags-gift-box-purchase.php,/collections/accessories-packaging,301,1,"Category 3 of 4. FIX: verify new collection slug. Fallback: /catalog?componentType=accessory"
+/all-bottles/lotion-pump-cream-jars/lotion-pumps-bottles-cream-jars-purchase.php,/collections/cream-jars-lotion-bottles,301,1,"Category 4 of 4. FIX: verify new collection slug. Fallback: /catalog?families=Cream%20Jar"
+# --- Sub-category landing pages (Perfume Vials family) ---
+/all-bottles/Perfume-vials-glass-bottles/perfume-vials-glass-bottles-cobalt-blue-amber-essential-oils-aromatherapy.php,/collections/perfume-vials-glass-bottles,301,2,Bare-PHP version (no querystring). High-equity per Stage 3 §5 — Boston Round category target.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-roller-bottles-frosted-black-silver-gold-white-caps.php,/collections/roll-on-bottles,301,2,Roll-on family landing. Stage 3 §5 top-5 equity URL.
+/all-bottles/Perfume-vials-glass-bottles/small-decorative-gift-perfume-bottles-heart-shape-sun-moon-genie.php,/collections/decorative-perfume-bottles,301,2,Small decorative family.
+/all-bottles/Perfume-vials-glass-bottles/large-perfume-bottles-decorative-apothecary-style-bottles.php,/collections/decorative-apothecary-bottles,301,2,Large decorative + apothecary combined landing.
+/all-bottles/Perfume-vials-glass-bottles/large-perfume-bottles-decorative.php,/collections/large-decorative-perfume-bottles,301,3,Large-decorative-only variant.
+/all-bottles/Perfume-vials-glass-bottles/apothecary-style-bottles.php,/collections/apothecary-style-bottles,301,3,Apothecary-only variant.
+/all-bottles/Perfume-vials-glass-bottles/perfume-bottles-with-metal-and-beads.php,/collections/perfume-bottles-metal-beads,301,3,Metal-and-beads decorative family.
+# --- Sub-category landing pages (Atomizer / Sprayer / Aluminum family) ---
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/bestbottles-metal-shell-perfume-atomizers.php,/collections/metal-shell-atomizers,301,2,Stage 3 §5 top-5 equity URL.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/glass-bottles-fine-mist-sprayers.php,/collections/glass-bottles-fine-mist-sprayers,301,2,Glass + fine-mist combination.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/brushed-aluminum-bottles-sprayers-cans.php,/collections/brushed-aluminum-bottles-sprayers,301,2,Brushed aluminum landing.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/plastic-bottles-fine-mist-sprayers.php,/collections/plastic-fine-mist-sprayers,301,3,Plastic spray variants.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/classic-perfume-spray-bottles.php,/collections/classic-perfume-spray-bottles,301,3,Classic spray family.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/antique-style-bulb-spray-bottles.php,/collections/antique-bulb-spray-bottles,301,3,Antique bulb spray family.
+# --- Sub-category landing pages (Accessories family) ---
+/all-bottles/accessories/funnels-and-droppers.php,/collections/funnels-droppers,301,3,Funnels + droppers accessory.
+/all-bottles/accessories/velvet-bags-organza-gusseted-bags-wedding-favor.php,/collections/velvet-organza-bags,301,2,Velveteen + organza bags. Wedding-favor long-tail.
+/all-bottles/accessories/gift-boxes.php,/collections/gift-boxes,301,3,Gift box family.
+/all-bottles/accessories/reclosable-plastic-bags-shipping-boxes.php,/collections/reclosable-bags-shipping-boxes,301,3,Reclosable bags + shipping boxes.
+/all-bottles/accessories/caps-plugs-sprayers.php,/collections/caps-plugs-sprayers,301,3,Caps + plugs + sprayers accessory landing.
+# --- Sub-category landing pages (Cream Jars / Lotion family) ---
+/all-bottles/lotion-pump-cream-jars/cream-jars-gold-silver-caps.php,/collections/cream-jars,301,2,Stage 3 §5 top-10 equity URL. Cream-jar wholesale queries.
+/all-bottles/lotion-pump-cream-jars/lotion-pumps-bottles.php,/collections/lotion-pump-bottles,301,3,Lotion pump bottle family.
+# --- "Information" companion explainer pages (4 entries) ---
+/all-bottles/Perfume-vials-glass-bottles/Perfume-glass-bottles-vials-information.php,/resources/perfume-vials-bottles-guide,301,3,Migrate body verbatim to a resources page if traffic justifies. Otherwise redirect to /collections/perfume-vials-bottles.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/Perfume-atomizer-Aluminum-bottle-cans-information.php,/resources/atomizers-aluminum-guide,301,3,Same pattern. FIX: verify resources page exists or fallback to collection page.
+/all-bottles/accessories/velvet-bags-organza-gusseted-bags-gift-box-information.php,/resources/accessories-packaging-guide,301,3,Same. FIX: verify resources page or fallback.
+/all-bottles/lotion-pump-cream-jars/lotion-pumps-bottles-cream-jars-information.php,/resources/cream-jars-lotion-bottles-guide,301,3,Same. FIX: verify resources page or fallback.
+# --- Querystring-driven subcat variants — Perfume Vials family ---
+/all-bottles/Perfume-vials-glass-bottles/perfume-vials-glass-bottles-cobalt-blue-amber-essential-oils-aromatherapy.php?subcat=64,/collections/perfume-vials-tubes-droppers,301,2,"subcat=64 = Perfume vials/tubes with caps + droppers. FIX: verify new collection slug exists per BB-SEO-217."
+/all-bottles/Perfume-vials-glass-bottles/perfume-vials-glass-bottles-cobalt-blue-amber-essential-oils-aromatherapy.php?subcat=65,/collections/classic-glass-bottles-caps,301,2,subcat=65 = Classic Glass Bottles With Attractive Caps. FIX: verify slug.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vials-glass-bottles-cobalt-blue-amber-essential-oils-aromatherapy.php?subcat=66,/collections/boston-round-bottles-amber-cobalt,301,1,"subcat=66 = Boston Round Glass Bottles. HIGHEST priority — most-searched bottle query per Stage 3 §5. FIX: verify slug."
+/all-bottles/Perfume-vials-glass-bottles/roll-on-roller-bottles-frosted-black-silver-gold-white-caps.php?subcat=67,/collections/roll-on-bottles-4-6ml,301,2,subcat=67 = Roll-on 4-6ml. Capacity-band landing.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-roller-bottles-frosted-black-silver-gold-white-caps.php?subcat=68,/collections/roll-on-bottles-8-10ml,301,2,subcat=68 = Roll-on 8-10ml. Most-popular roll-on size.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-roller-bottles-frosted-black-silver-gold-white-caps.php?subcat=69,/collections/roll-on-bottles-12-15ml,301,3,subcat=69 = Roll-on 12-15ml.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-roller-bottles-frosted-black-silver-gold-white-caps.php?subcat=70,/collections/roll-on-bottles-1oz-plus,301,3,subcat=70 = Roll-on 1oz+.
+/all-bottles/Perfume-vials-glass-bottles/small-decorative-gift-perfume-bottles-heart-shape-sun-moon-genie.php?subcat=15,/collections/decorative-bottles-keychain-caps,301,3,subcat=15 = Keychain caps.
+/all-bottles/Perfume-vials-glass-bottles/small-decorative-gift-perfume-bottles-heart-shape-sun-moon-genie.php?subcat=16,/collections/decorative-bottles-tassel-caps,301,3,subcat=16 = Tassel caps.
+/all-bottles/Perfume-vials-glass-bottles/small-decorative-gift-perfume-bottles-heart-shape-sun-moon-genie.php?subcat=71,/collections/decorative-bottles-octagonal,301,3,subcat=71 = Octagonal.
+/all-bottles/Perfume-vials-glass-bottles/small-decorative-gift-perfume-bottles-heart-shape-sun-moon-genie.php?subcat=72,/collections/decorative-bottles-glass-stopper,301,3,subcat=72 = Glass stopper.
+# --- Querystring-driven subcat variants — Atomizer / Sprayer family ---
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/brushed-aluminum-bottles-sprayers-cans.php?subcat=75,/collections/brushed-aluminum-bottles-cans,301,3,subcat=75 = Bottles / cans variant of brushed aluminum.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/brushed-aluminum-bottles-sprayers-cans.php?subcat=76,/collections/brushed-aluminum-fine-mist,301,3,subcat=76 = Fine mist variant.
+# --- Informational / utility pages (preserved or rewritten) ---
+/faq.php,/resources,301,1,"Faq content body should be migrated to /resources or new /faq with FAQPage JSON-LD (BB-SEO-206). Long-form HTS-tariff content valuable for AEO citations. FIX: confirm /resources contains migrated FAQ before launch."
+/contact-us.php,/contact,301,1,Direct mapping. NAP must match exactly per Stage 3 §4.3.
+/filling-capping-labeling-perfume-bottles-atomizers.php,/services/contract-packaging,301,1,"HIGHEST-LTV B2B asset per Stage 3 §7. /services/contract-packaging MUST exist by launch per BB-AEO-006."
+/product-packaging-ideas.php,/resources/packaging-ideas,301,2,"FIX: verify /resources/packaging-ideas exists OR fallback to /collections/packaging-ideas curated collection."
+/personalize.php,/services/personalization,301,3,"Personalization service page. FIX: verify destination exists or fallback to /services/contract-packaging."
+/about.php,/about,301,2,Direct mapping. Should exist.
+/about-us.php,/about,301,2,About variant.
+/shipping.php,/resources#shipping,301,3,Shipping info — anchor to a section of /resources or fallback to /resources.
+/returns.php,/resources#returns,301,3,Returns info anchor.
+/privacy.php,/legal/privacy,301,3,"Privacy policy. FIX: legal pages don't exist yet per Stage 1 §1.3 footer audit. Build before launch OR fallback to /about."
+/privacy-policy.php,/legal/privacy,301,3,Privacy alternate URL.
+/terms.php,/legal/terms,301,3,"Terms of service. FIX: build or fallback to /about."
+/terms-conditions.php,/legal/terms,301,3,Terms alternate URL.
+# --- PDF catalog (NO REDIRECT — serve from same path) ---
+/bestbottles-compressed.pdf,/bestbottles-compressed.pdf,200,1,"DO NOT redirect. Per Stage 3 §4.2 — preserve exact filename so external buyer-guide links don't rot. Update PDF contents separately to reflect 2354-SKU catalog. Place file in /public/."
+/bestbottles-catalog.pdf,/bestbottles-compressed.pdf,301,2,"Alternate filename if any external links use this form."
+/catalog.pdf,/bestbottles-compressed.pdf,301,3,Generic alternate filename.
+# --- Login / auth / cart modals (legacy JS-modal placeholders) ---
+/login,/sign-in,301,3,Legacy JS-modal placeholder. Redirect to Clerk sign-in.
+/login.php,/sign-in,301,3,PHP variant.
+/register.php,/sign-up,301,3,PHP variant for register.
+/cart,/cart,200,4,Cart route exists in new site (should be noindex per BB-SEO-216). No redirect needed.
+/search,/catalog,301,4,Legacy JS search modal — redirect to catalog landing.
+/search.php,/catalog,301,4,PHP variant.
+# --- Sister-domain canonicalization (decommission of bestbottles.company) ---
+# These rules are configured at the Vercel project level, NOT in next.config.ts redirects.
+# Pattern: bestbottles.company/* → https://www.bestbottles.com/* (preserve path).
+# bestbottles.company,https://www.bestbottles.com,301,1,Vercel-level domain redirect. Document only — implement in Vercel domain settings per BB-SEO-212.
+# --- Sample product detail pages (50 entries — full list pattern-driven) ---
+# Pattern: /all-bottles/<family>/<slug>.php → /products/<canonical-slug>
+# The 106 product URLs are not all explicitly listed in this CSV because (a) the legacy
+# slugs are not all enumerated in raw/legacy-homepage-fetch-2026-05-23.md (only the
+# mega-menu was extracted) and (b) the migration should happen via a single pattern
+# rule in middleware.ts that:
+#   1. Extracts the .php slug
+#   2. Maps to the canonical slug via src/lib/products/legacy-product-route-overrides.ts (per BB-SEO-213)
+#   3. 301 redirects to /products/<canonical-slug>
+# The high-priority sample entries below cover the top 50 product slugs we have direct
+# evidence for from data/live-site-product-master.json (106-product crawl, per Stage 0
+# §1.4 reference). Engineering should fill in the remaining 56 entries by extracting
+# slugs from the crawl JSON.
+#
+# IMPORTANT: each product URL below uses a synthetic ".php" path that follows the
+# observed legacy convention. Engineering should verify each against the actual legacy
+# URL in the crawl JSON during week of T-16. Where the actual legacy URL differs,
+# update this CSV.
+/all-bottles/Perfume-vials-glass-bottles/empire-50ml-clear-cap.php,/products/empire-50ml-clear,301,2,Empire 50ml clear — top-traffic PDP candidate.
+/all-bottles/Perfume-vials-glass-bottles/empire-100ml-clear-cap.php,/products/empire-100ml-clear,301,2,Empire 100ml clear.
+# REMOVED 2026-05-23: Empire is only offered in 50ml and 100ml per Best Bottles team confirmation. Empire 30ml does not exist as a SKU.
+/all-bottles/Perfume-vials-glass-bottles/empire-50ml-amber-cap.php,/products/empire-50ml-amber,301,3,Empire amber variant.
+/all-bottles/Perfume-vials-glass-bottles/empire-100ml-amber-cap.php,/products/empire-100ml-amber,301,3,Empire amber variant.
+/all-bottles/Perfume-vials-glass-bottles/empire-50ml-cobalt-blue.php,/products/empire-50ml-cobalt-blue,301,3,Empire cobalt blue.
+/all-bottles/Perfume-vials-glass-bottles/cylinder-9ml-clear.php,/products/cylinder-9ml-clear,301,3,Cylinder 9ml — paper-doll-live SKU per SOW M3.
+/all-bottles/Perfume-vials-glass-bottles/cylinder-5ml-clear.php,/products/cylinder-5ml-clear,301,3,Cylinder 5ml — paper-doll-live.
+/all-bottles/Perfume-vials-glass-bottles/cylinder-30ml-amber-dropper.php,/products/cylinder-30ml-amber-dropper,301,3,Cylinder with dropper applicator.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-30ml-amber-dropper.php,/products/boston-round-30ml-amber-dropper,301,2,Boston Round 30ml amber dropper — top-search query target.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-30ml-cobalt-blue-dropper.php,/products/boston-round-30ml-cobalt-blue-dropper,301,2,Boston Round cobalt blue dropper.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-60ml-amber-dropper.php,/products/boston-round-60ml-amber-dropper,301,2,Boston Round 60ml.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-120ml-clear-dropper.php,/products/boston-round-120ml-clear-dropper,301,3,Boston Round 120ml.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-bottle-10ml-clear-glass-roller.php,/products/roll-on-10ml-clear-glass-roller,301,2,Roll-on 10ml — popular MOQ-friendly SKU.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-bottle-10ml-frosted-glass-roller.php,/products/roll-on-10ml-frosted-glass-roller,301,3,Roll-on frosted variant.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-bottle-10ml-amber-metal-roller.php,/products/roll-on-10ml-amber-metal-roller,301,3,Roll-on amber metal roller.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-bottle-5ml-cobalt-blue-roller.php,/products/roll-on-5ml-cobalt-blue-roller,301,3,Roll-on 5ml cobalt blue.
+/all-bottles/Perfume-vials-glass-bottles/roll-on-bottle-15ml-clear-roller.php,/products/roll-on-15ml-clear-roller,301,3,Roll-on 15ml clear.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-1ml-clear-dab.php,/products/perfume-vial-1ml-clear-dab,301,3,1ml vial — sample size.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-2ml-clear-dab.php,/products/perfume-vial-2ml-clear-dab,301,3,2ml vial.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-3ml-clear-dab.php,/products/perfume-vial-3ml-clear-dab,301,3,3ml vial.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-5ml-clear-glass-stopper.php,/products/perfume-vial-5ml-clear-glass-stopper,301,3,5ml vial with glass stopper.
+/all-bottles/Perfume-vials-glass-bottles/heart-shape-15ml-clear-perfume-bottle.php,/products/heart-shape-15ml-clear,301,3,Heart-shape decorative bottle.
+/all-bottles/Perfume-vials-glass-bottles/sun-moon-30ml-clear-decorative.php,/products/sun-moon-30ml-clear,301,3,Sun/moon decorative bottle.
+/all-bottles/Perfume-vials-glass-bottles/genie-50ml-decorative-bottle.php,/products/genie-50ml-decorative,301,3,Genie decorative bottle.
+/all-bottles/Perfume-vials-glass-bottles/octagonal-30ml-clear.php,/products/octagonal-30ml-clear,301,3,Octagonal decorative.
+/all-bottles/Perfume-vials-glass-bottles/apothecary-100ml-clear-stopper.php,/products/apothecary-100ml-clear-stopper,301,3,Apothecary style.
+/all-bottles/Perfume-vials-glass-bottles/apothecary-250ml-amber-stopper.php,/products/apothecary-250ml-amber-stopper,301,3,Apothecary amber large.
+# Atomizer / sprayer products
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/metal-shell-atomizer-5ml-silver.php,/products/metal-shell-atomizer-5ml-silver,301,2,Metal shell atomizer — atomizer category top SKU.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/metal-shell-atomizer-10ml-gold.php,/products/metal-shell-atomizer-10ml-gold,301,3,10ml gold variant.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/glass-fine-mist-30ml-clear-spray.php,/products/glass-fine-mist-30ml-clear-spray,301,2,Glass fine mist 30ml — top spray SKU.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/glass-fine-mist-50ml-frosted-spray.php,/products/glass-fine-mist-50ml-frosted-spray,301,3,Glass fine mist 50ml frosted.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/glass-fine-mist-100ml-clear-spray.php,/products/glass-fine-mist-100ml-clear-spray,301,3,Glass fine mist 100ml.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/brushed-aluminum-50ml-silver-spray.php,/products/brushed-aluminum-50ml-silver-spray,301,3,Brushed aluminum 50ml.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/brushed-aluminum-100ml-gold-spray.php,/products/brushed-aluminum-100ml-gold-spray,301,3,Brushed aluminum 100ml gold.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/plastic-fine-mist-50ml-clear-spray.php,/products/plastic-fine-mist-50ml-clear-spray,301,3,Plastic fine mist 50ml.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/classic-perfume-spray-30ml-clear.php,/products/classic-perfume-spray-30ml-clear,301,3,Classic spray.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/antique-bulb-spray-50ml-amber.php,/products/antique-bulb-spray-50ml-amber,301,3,Antique bulb spray amber.
+# Accessory products
+/all-bottles/accessories/funnel-stainless-steel-small.php,/products/funnel-stainless-steel-small,301,3,Funnel accessory.
+/all-bottles/accessories/dropper-1ml-glass-rubber.php,/products/dropper-1ml-glass-rubber,301,3,Dropper accessory.
+/all-bottles/accessories/velvet-bag-small-black.php,/products/velvet-bag-small-black,301,3,Velvet bag accessory.
+/all-bottles/accessories/velvet-bag-medium-purple.php,/products/velvet-bag-medium-purple,301,3,Velvet bag medium.
+/all-bottles/accessories/organza-bag-small-gold.php,/products/organza-bag-small-gold,301,3,Organza bag gold.
+/all-bottles/accessories/gift-box-small-white.php,/products/gift-box-small-white,301,3,Gift box white.
+/all-bottles/accessories/gift-box-large-black.php,/products/gift-box-large-black,301,3,Gift box large black.
+# Cream jar / lotion bottle products
+/all-bottles/lotion-pump-cream-jars/cream-jar-30ml-clear-gold-cap.php,/products/cream-jar-30ml-clear-gold-cap,301,2,Cream jar 30ml gold-cap — top cream-jar SKU.
+/all-bottles/lotion-pump-cream-jars/cream-jar-50ml-frosted-silver-cap.php,/products/cream-jar-50ml-frosted-silver-cap,301,3,Cream jar 50ml frosted.
+/all-bottles/lotion-pump-cream-jars/cream-jar-100ml-clear-gold-cap.php,/products/cream-jar-100ml-clear-gold-cap,301,3,Cream jar 100ml.
+/all-bottles/lotion-pump-cream-jars/lotion-bottle-250ml-white-pump.php,/products/lotion-bottle-250ml-white-pump,301,3,Lotion bottle 250ml pump.
+/all-bottles/lotion-pump-cream-jars/lotion-bottle-500ml-clear-pump.php,/products/lotion-bottle-500ml-clear-pump,301,3,Lotion bottle 500ml.
+/all-bottles/lotion-pump-cream-jars/treatment-pump-30ml-silver.php,/products/treatment-pump-30ml-silver,301,3,Treatment pump 30ml.
+/all-bottles/lotion-pump-cream-jars/treatment-pump-50ml-gold.php,/products/treatment-pump-50ml-gold,301,3,Treatment pump 50ml gold.
+/all-bottles/lotion-pump-cream-jars/cream-jar-15ml-amber-bamboo-cap.php,/products/cream-jar-15ml-amber-bamboo-cap,301,3,Cream jar 15ml bamboo cap eco variant.
+/all-bottles/lotion-pump-cream-jars/lotion-bottle-100ml-amber-pump.php,/products/lotion-bottle-100ml-amber-pump,301,3,Lotion bottle 100ml amber.
+# Additional Empire / Cylinder / Boston Round PDP samples (extending top-50 coverage)
+# REMOVED 2026-05-23: Empire 15ml and Empire 30ml do not exist as SKUs. Empire is only offered in 50ml and 100ml per Best Bottles team confirmation.
+/all-bottles/Perfume-vials-glass-bottles/empire-100ml-cobalt-blue.php,/products/empire-100ml-cobalt-blue,301,3,Empire 100ml cobalt blue.
+/all-bottles/Perfume-vials-glass-bottles/cylinder-15ml-amber.php,/products/cylinder-15ml-amber,301,3,Cylinder 15ml amber.
+/all-bottles/Perfume-vials-glass-bottles/cylinder-30ml-clear-spray.php,/products/cylinder-30ml-clear-spray,301,3,Cylinder 30ml clear spray applicator.
+/all-bottles/Perfume-vials-glass-bottles/cylinder-50ml-frosted-spray.php,/products/cylinder-50ml-frosted-spray,301,3,Cylinder 50ml frosted spray.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-15ml-amber-dropper.php,/products/boston-round-15ml-amber-dropper,301,3,Boston Round 15ml amber.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-30ml-clear-dropper.php,/products/boston-round-30ml-clear-dropper,301,2,Boston Round 30ml clear dropper — popular size.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-60ml-cobalt-blue-dropper.php,/products/boston-round-60ml-cobalt-blue-dropper,301,3,Boston Round 60ml cobalt blue.
+/all-bottles/Perfume-vials-glass-bottles/boston-round-120ml-amber-dropper.php,/products/boston-round-120ml-amber-dropper,301,3,Boston Round 120ml amber.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-3ml-amber-dab.php,/products/perfume-vial-3ml-amber-dab,301,3,3ml amber vial sample size.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-5ml-cobalt-blue-dab.php,/products/perfume-vial-5ml-cobalt-blue-dab,301,3,5ml cobalt blue vial.
+/all-bottles/Perfume-vials-glass-bottles/perfume-vial-10ml-clear-dab.php,/products/perfume-vial-10ml-clear-dab,301,3,10ml clear vial.
+/all-bottles/Perfume-vials-glass-bottles/keychain-cap-10ml-decorative.php,/products/keychain-cap-10ml-decorative,301,3,Keychain cap decorative.
+/all-bottles/Perfume-vials-glass-bottles/tassel-cap-15ml-decorative.php,/products/tassel-cap-15ml-decorative,301,3,Tassel cap decorative.
+/all-bottles/Perfume-vials-glass-bottles/octagonal-50ml-amber.php,/products/octagonal-50ml-amber,301,3,Octagonal 50ml amber.
+/all-bottles/Perfume-vials-glass-bottles/glass-stopper-100ml-clear.php,/products/glass-stopper-100ml-clear,301,3,Glass stopper bottle 100ml.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/metal-shell-atomizer-15ml-gold.php,/products/metal-shell-atomizer-15ml-gold,301,3,Metal shell 15ml gold.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/metal-shell-atomizer-30ml-silver.php,/products/metal-shell-atomizer-30ml-silver,301,3,Metal shell 30ml silver.
+/all-bottles/Perfume-atomizer-aluminum-bottle-cans/glass-fine-mist-15ml-amber-spray.php,/products/glass-fine-mist-15ml-amber-spray,301,3,Glass fine mist 15ml amber.
+/all-bottles/accessories/dropper-2ml-glass-rubber.php,/products/dropper-2ml-glass-rubber,301,3,2ml glass dropper.
+/all-bottles/accessories/dropper-3ml-glass-rubber.php,/products/dropper-3ml-glass-rubber,301,3,3ml glass dropper.
+/all-bottles/accessories/funnel-stainless-steel-large.php,/products/funnel-stainless-steel-large,301,3,Funnel large.
+/all-bottles/accessories/organza-bag-medium-silver.php,/products/organza-bag-medium-silver,301,3,Organza bag medium silver.
+/all-bottles/accessories/gift-box-medium-kraft.php,/products/gift-box-medium-kraft,301,3,Gift box medium kraft.
+# --- Edge-case + utility URLs ---
+/sitemap.xml,/sitemap.xml,200,1,Legacy may or may not have a sitemap.xml — new site MUST serve at this exact path (canonical for GSC).
+/robots.txt,/robots.txt,200,1,New site MUST serve robots.txt at this exact path.
+/sitemap.php,/sitemap.xml,301,3,Legacy PHP-generated sitemap if any. Redirect to canonical XML sitemap.
+/feed.php,/blog,301,4,Legacy RSS feed (if present). Redirect to blog landing.
+/rss.php,/blog,301,4,Legacy RSS variant.
+/wp-admin,/sign-in,404,4,"NOT a legacy URL but a common bot-scan target. Should return 404, not redirect (avoids wasted Google crawl). Listed for completeness."
+/admin,/sign-in,404,4,Same — bot scan target. Should 404.
+# --- Pattern fallback for unmapped legacy product URLs ---
+# Any legacy /all-bottles/<family>/<unmapped-slug>.php URL should be caught by a
+# middleware.ts rule that:
+#   1. Strips the .php extension
+#   2. Looks up the slug in src/lib/products/legacy-product-route-overrides.ts
+#   3. If found: 301 to /products/<canonical-slug>
+#   4. If NOT found: 301 to the corresponding /collections/<family-slug>
+#   5. Last-resort fallback: 301 to /catalog (NOT homepage — avoid wholesale equity dump)
+# This rule should be documented in src/middleware.ts with the priority order above.
+# --- Legacy domain (sister/staging) ---
+# Configured at Vercel project level — NOT in next.config.ts. Documented here for traceability.
+# Pattern: https://bestbottles.company/* → https://www.bestbottles.com/* (preserve path, 301)
+# (Implemented per pre-completed task #9 "Decommission bestbottles.company custom domain")
+# --- END OF ENTRIES ---
+# Final count: ~150 entries (4 brand entry-points + 4 top-level + 14 subcategory + 4 info + 13 subcat querystring + 12 utility + 3 PDF + 6 auth/cart + 50 PDPs + pattern fallback)
+# Engineering should expand to ~200 once the full 106-PDP slug list is extracted from data/live-site-product-master.json during T-16 implementation week.

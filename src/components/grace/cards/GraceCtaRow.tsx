@@ -45,11 +45,21 @@ export default function GraceCtaRow({
         addItems([
             {
                 graceSku: product.graceSku,
+                websiteSku: product.websiteSku ?? null,
                 itemName: customerDisplayName,
                 quantity: 1,
                 unitPrice: product.webPrice1pc ?? null,
                 checkoutEligible: Boolean(product.shopifyVariantId),
                 shopifyVariantId: product.shopifyVariantId ?? null,
+                family: product.family,
+                capacity: product.capacity,
+                color: product.color,
+                applicator: product.applicator,
+                capColor: product.capColor ?? null,
+                neckThreadSize: product.neckThreadSize ?? null,
+                webPrice1pc: product.webPrice1pc ?? null,
+                webPrice10pc: product.webPrice10pc ?? null,
+                webPrice12pc: product.webPrice12pc ?? null,
             },
         ]);
     };

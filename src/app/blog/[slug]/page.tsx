@@ -8,6 +8,7 @@ import Navbar from "@/components/Navbar";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import { JOURNAL_POST_QUERY, JOURNAL_SLUGS_QUERY } from "@/sanity/lib/queries";
+import { SITE_URL } from "@/lib/seo";
 
 export const revalidate = 60;
 
@@ -65,9 +66,11 @@ export async function generateMetadata({
     return {
         title: `${post.title} | Best Bottles Journal`,
         description: post.excerpt ?? `Read ${post.title} on the Best Bottles Journal.`,
+        alternates: { canonical: `${SITE_URL}/blog/${slug}` },
         openGraph: {
             title: post.title,
             description: post.excerpt ?? "",
+            url: `${SITE_URL}/blog/${slug}`,
             images: post.image ? [{ url: urlFor(post.image) }] : [],
         },
     };

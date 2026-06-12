@@ -14,11 +14,14 @@ interface FitmentDrawerProps {
 
 interface FitmentOption {
     graceSku: string;
+    websiteSku?: string | null;
     itemName: string;
+    shopifyVariantId?: string | null;
     color?: string | null;
     imageUrl?: string | null;
     price1?: number | null;
     price12?: number | null;
+    stockStatus?: string | null;
 }
 
 export default function FitmentDrawer({ isOpen, onClose, bottleSku }: FitmentDrawerProps) {
@@ -244,16 +247,19 @@ export default function FitmentDrawer({ isOpen, onClose, bottleSku }: FitmentDra
                                         <h4 className="font-sans text-[12px] font-medium text-obsidian text-center leading-tight line-clamp-2" title={fitment.itemName}>
                                             {fitment.itemName}
                                         </h4>
-
                                         <button
                                             onClick={() => {
                                                 addItems([{
                                                     graceSku: fitment.graceSku,
+                                                    websiteSku: fitment.websiteSku ?? null,
                                                     itemName: fitment.itemName,
                                                     quantity: 1,
                                                     unitPrice: fitment.price1 ?? null,
-                                                    checkoutEligible: false,
+                                                    checkoutEligible: Boolean(fitment.shopifyVariantId),
+                                                    shopifyVariantId: fitment.shopifyVariantId ?? null,
                                                     color: fitment.color ?? undefined,
+                                                    webPrice1pc: fitment.price1 ?? null,
+                                                    webPrice12pc: fitment.price12 ?? null,
                                                 }]);
                                                 setAddedSku(fitment.graceSku);
                                                 setTimeout(() => setAddedSku(null), 1800);

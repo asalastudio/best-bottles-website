@@ -23,6 +23,7 @@ export type GraceStatus =
 
 export interface ProductCard {
     graceSku: string;
+    websiteSku?: string | null;
     itemName: string;
     family?: string;
     capacity?: string;
@@ -31,14 +32,22 @@ export interface ProductCard {
     color?: string;
     rawColor?: string | null;
     canonicalColor?: string | null;
-    applicator?: string;
+    applicator?: string | null;
     capColor?: string | null;
-    neckThreadSize?: string;
-    webPrice1pc?: number;
-    webPrice12pc?: number;
+    neckThreadSize?: string | null;
+    webPrice1pc?: number | null;
+    webPrice10pc?: number | null;
+    webPrice12pc?: number | null;
     shopifyVariantId?: string | null;
+    checkoutEligible?: boolean;
+    stockStatus?: string | null;
     slug?: string;
     dataQualityFlags?: string[];
+}
+
+export interface PendingCartProduct extends ProductCard {
+    quantity: number;
+    unitPrice?: number | null;
 }
 
 export interface KitItem {
@@ -143,7 +152,7 @@ export type GraceAction =
     | { type: "compareProducts"; products: ProductCard[] }
     | { type: "showProductPresentation"; products: ProductCard[]; headline?: string }
     | { type: "buildKit"; items: KitItem[]; totalPrice?: number }
-    | { type: "proposeCartAdd"; products: Array<ProductCard & { quantity: number }>; awaitingConfirmation: boolean }
+    | { type: "proposeCartAdd"; confirmationId: string; products: PendingCartProduct[]; awaitingConfirmation: boolean }
     | { type: "navigateToPage"; path: string; title: string; description?: string; autoNavigate?: boolean }
     | { type: "prefillForm"; formType: "sample" | "quote" | "contact" | "newsletter"; fields: Record<string, string> }
     /* ── v3 inline display actions (PRD patterns A–L) ─── */

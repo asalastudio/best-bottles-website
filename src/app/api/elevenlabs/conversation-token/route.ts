@@ -1,10 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 /**
  * Fetches a WebRTC conversation token from ElevenLabs.
  * Use this for low-latency voice (WebRTC) instead of signed URL (WebSocket).
  */
-export async function GET() {
+export async function GET(req: NextRequest) {
+    const rateLimited = await enforceGraceRateLimit(req, {
+        route: "elevenlabs-conversation-token",
+        limit: 30,
+        windowMs: 60_000,
+    });
+    if (rateLimited) return rateLimited;
+
     const apiKey = process.env.ELEVENLABS_API_KEY;
     const agentId = process.env.ELEVENLABS_AGENT_ID;
 

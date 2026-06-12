@@ -5,6 +5,7 @@ import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
     type ApplicatorSibling,
     type ProductGroupPayload,
+    type SiblingGroup,
     type ProductVariant,
 } from "./ProductDetailClient";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -59,6 +60,17 @@ async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlu
         excludeSlug: activeSlug,
         neckThreadSize: group.neckThreadSize ?? undefined,
     }) as ApplicatorSibling[];
+}
+
+async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: string): Promise<SiblingGroup[]> {
+    const group = data?.group;
+    if (!group) return [];
+    return await getConvexClient().query(api.products.getSiblingGroups, {
+        family: group.family,
+        capacityMl: group.capacityMl ?? 0,
+        excludeSlug: activeSlug,
+        neckThreadSize: group.neckThreadSize ?? undefined,
+    }) as SiblingGroup[];
 }
 
 async function getPdpBlocks(activeSlug: string, family: string | null | undefined): Promise<PdpBlock[]> {
@@ -163,8 +175,9 @@ export default async function ProductPage({
 
     const activeSlug = legacyRouteOverride ?? slug;
     const data = await getProductData(activeSlug);
-    const [siblings, pdpBlocks] = await Promise.all([
+    const [siblings, siblingGroups, pdpBlocks] = await Promise.all([
         getApplicatorSiblings(data, activeSlug),
+        getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
     ]);
     const group = data?.group;
@@ -225,6 +238,7 @@ export default async function ProductPage({
                 initialData={data}
                 initialApplicatorSiblings={siblings}
                 initialPdpBlocks={pdpBlocks}
+                siblingGroups={siblingGroups}
             />
         </>
     );

@@ -2,12 +2,14 @@
 
 import type { GraceMessage } from "@/components/GraceContext";
 import GraceActionRenderer from "./GraceActionRenderer";
+import { useGrace } from "@/components/useGrace";
 
 interface GraceChatMessageProps {
     message: GraceMessage;
 }
 
 export default function GraceChatMessage({ message }: GraceChatMessageProps) {
+    const { confirmAction, dismissAction } = useGrace();
     const isUser = message.role === "user";
 
     if (isUser) {
@@ -43,7 +45,13 @@ export default function GraceChatMessage({ message }: GraceChatMessageProps) {
             <p className="text-[14.5px] leading-[1.65] text-obsidian/85 whitespace-pre-wrap font-sans">
                 {message.content}
             </p>
-            {message.action && <GraceActionRenderer action={message.action} />}
+            {message.action && (
+                <GraceActionRenderer
+                    action={message.action}
+                    onConfirmAction={() => confirmAction(message.id)}
+                    onDismissAction={() => dismissAction(message.id)}
+                />
+            )}
         </div>
     );
 }

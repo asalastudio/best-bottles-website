@@ -69,6 +69,10 @@ interface ProductImageGalleryProps {
     onActiveChange?: (index: number, image: GalleryImage) => void;
 }
 
+function isRemoteProductImageUrl(value: string): boolean {
+    return /^https?:\/\//i.test(value);
+}
+
 export default function ProductImageGallery({
     images,
     primaryAlt,
@@ -155,9 +159,11 @@ export default function ProductImageGallery({
                         src={activeImage.url}
                         alt={activeImage.alt ?? primaryAlt}
                         fill
-                        priority
+                        loading="eager"
+                        fetchPriority="high"
                         sizes="(min-width: 1024px) 50vw, 100vw"
                         className={`object-contain ${mainPadding}`}
+                        unoptimized={isRemoteProductImageUrl(activeImage.url)}
                     />
                     {badge && (
                         <div className="absolute top-4 left-4 pointer-events-none">
@@ -206,6 +212,7 @@ export default function ProductImageGallery({
                                     fill
                                     sizes="80px"
                                     className="object-contain p-1.5"
+                                    unoptimized={isRemoteProductImageUrl(img.url)}
                                 />
                                 {isActive && (
                                     <span className="absolute inset-x-0 bottom-0 bg-obsidian/85 text-white text-[8px] uppercase tracking-wider py-0.5 text-center font-medium select-none">
@@ -247,6 +254,7 @@ export default function ProductImageGallery({
                                 height={1200}
                                 sizes="100vw"
                                 className="max-w-full max-h-[80vh] object-contain"
+                                unoptimized={isRemoteProductImageUrl(activeImage.url)}
                             />
 
                             {/* Footer controls — prev / label / next */}

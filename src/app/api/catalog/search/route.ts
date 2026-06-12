@@ -1,8 +1,16 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { searchCatalogServer, type CatalogSearchArgs } from "@/lib/catalogServer";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
     try {
+        const rateLimited = await enforceGraceRateLimit(request, {
+            route: "catalog-search",
+            limit: 120,
+            windowMs: 60_000,
+        });
+        if (rateLimited) return rateLimited;
+
         const args = await request.json() as CatalogSearchArgs;
         const result = await searchCatalogServer(args);
         return NextResponse.json(result);

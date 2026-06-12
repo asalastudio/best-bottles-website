@@ -71,6 +71,9 @@ Rules:
 - Run fresh AI generation from the Madison app unless a self-contained generator has intentionally been vendored into Best Bottles.
 - The Madison `assemblePrompt()` output is authoritative for generated hero images.
 - Best Bottles prompt markdown files are useful reference material, but they do not override Madison's live prompt assembler.
+- Same-capacity variants in one family must share locked product geometry: same bottle height, width, shoulder shape, base shape, neck position, product scale, vertical axis, and bottom baseline. For example, all CYL-9ML variants should align to the same baseline and apparent bottle height; only the requested glass color, closure/applicator, finish, cap state, or supported accessory should change.
+- Madison prompts and negative prompts must forbid artificial horizontal lines, seams, table edges, horizon lines, divider lines, backdrop folds, transparent bands, or compositing artifacts. Use a smooth continuous studio background with only a subtle natural contact shadow.
+- Reject or regenerate any output where a fake line crosses behind or through the bottle, where the bottle baseline drifts from the family reference, or where the bottle appears taller, shorter, wider, thinner, cropped differently, or a different capacity than sibling variants.
 
 ## Lane 3: Product Hub Prompt Brain
 
@@ -124,7 +127,7 @@ Before a new generation pass:
 3. Run Madison generator dry-run for one SKU and inspect the assembled prompt.
 4. Confirm final expected canvas is 2080 x 2288.
 5. Confirm the selected SKU has enough cap/applicator/color data to avoid generic output.
-6. Generate a tiny live sample, then verify dimensions, color, cap/applicator fidelity, and family consistency.
+6. Generate a tiny live sample, then verify dimensions, color, cap/applicator fidelity, family consistency, shared baseline, and clean seamless background.
 7. Only then run a family batch.
 8. Push approved PNGs through `scripts/madison-pipeline/04-push-heroes.ts`.
 

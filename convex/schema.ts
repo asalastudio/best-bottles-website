@@ -480,4 +480,19 @@ export default defineSchema({
     })
         .index("by_owner", ["ownerKey"])
         .index("by_blobId", ["blobId"]),
+
+    // -------------------------------------------------------------------------
+    // GRACE PUBLIC ROUTE RATE LIMITS — server-side counters for anonymous flows
+    // -------------------------------------------------------------------------
+
+    graceRateLimits: defineTable({
+        key: v.string(),
+        route: v.string(),
+        identifier: v.string(),
+        windowStart: v.number(),
+        count: v.number(),
+        updatedAt: v.number(),
+    })
+        .index("by_key", ["key"])
+        .index("by_route_identifier", ["route", "identifier"]),
 });

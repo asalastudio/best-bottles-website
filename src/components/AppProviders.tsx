@@ -1,7 +1,6 @@
 "use client";
 
 import { Suspense, type ReactNode } from "react";
-import { usePathname } from "next/navigation";
 import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
@@ -15,7 +14,7 @@ import GraceChatDrawer from "@/components/grace/GraceChatDrawer";
 import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
 import { MixpanelProvider } from "@/components/MixpanelProvider";
-import { CLERK_ENABLED, isClerkAuthPath } from "@/lib/clerk";
+import { CLERK_ENABLED } from "@/lib/clerk";
 
 // megaMenuPanels is fetched in the Server Component root layout and passed
 // down as a prop, because this file is a Client Component boundary and cannot
@@ -62,8 +61,13 @@ function ProviderContent({
 }
 
 export default function AppProviders({ children, megaMenuPanels }: AppProvidersProps) {
-    const pathname = usePathname();
-    const withClerk = CLERK_ENABLED && isClerkAuthPath(pathname);
+    // withClerk must be constant for the whole session. When it was derived
+    // from the pathname, navigating between a non-Clerk page and a Clerk page
+    // (e.g. expanding the Grace drawer into /grace-workspace) changed the
+    // provider tree shape (ClerkProvider wrapper, ConvexProviderWithClerk,
+    // GraceProviderWithClerk), so React remounted everything below — killing
+    // the live Grace conversation and its message state mid-session.
+    const withClerk = CLERK_ENABLED;
 
     if (withClerk) {
         return (

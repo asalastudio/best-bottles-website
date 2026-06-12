@@ -1,7 +1,7 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
+import { SITE_URL } from "@/lib/seo";
 
 const FIELDS = [
     { name: "name", label: "Full Name", type: "text" as const, required: true, placeholder: "Jane Smith" },
@@ -12,6 +12,13 @@ const FIELDS = [
     { name: "quantities", label: "Quantities per SKU", type: "text" as const, required: true, placeholder: "e.g. 5,000 per SKU, or 10,000+ total" },
     { name: "message", label: "Project Details", type: "textarea" as const, placeholder: "Launch timeline, recurring order frequency, delivery location..." },
 ];
+
+export const metadata: Metadata = {
+    title: "Request a Quote | Best Bottles Wholesale Glass Packaging",
+    description:
+        "Request volume pricing for wholesale glass bottles, jars, closures, applicators, and custom packaging from Best Bottles.",
+    alternates: { canonical: `${SITE_URL}/request-quote` },
+};
 
 export default function RequestQuotePage() {
     return (

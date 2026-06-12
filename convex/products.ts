@@ -204,20 +204,34 @@ export const getCompatibleFitments = query({
             return [type, matching] as const;
         });
 
+        const componentEntries = await Promise.all(
+            filteredEntries.map(async ([type, items]) => [
+                type,
+                await Promise.all(
+                    items.map(async (item) => {
+                        const product = await ctx.db
+                            .query("products")
+                            .withIndex("by_graceSku", (q) => q.eq("graceSku", item.graceSku))
+                            .first();
+                        return {
+                            graceSku: item.graceSku,
+                            websiteSku: product?.websiteSku ?? null,
+                            itemName: item.itemName,
+                            shopifyVariantId: product?.shopifyVariantId ?? null,
+                            checkoutEligible: Boolean(product?.shopifyVariantId),
+                            imageUrl: item.imageUrl,
+                            price1: item.webPrice1pc,
+                            price12: item.webPrice12pc,
+                            stockStatus: product?.stockStatus ?? item.stockStatus,
+                        };
+                    }),
+                ),
+            ] as const),
+        );
+
         return {
             bottle,
-            components: Object.fromEntries(
-                filteredEntries.map(([type, items]) => [
-                    type,
-                    items.map((item) => ({
-                        graceSku: item.graceSku,
-                        itemName: item.itemName,
-                        imageUrl: item.imageUrl,
-                        price1: item.webPrice1pc,
-                        price12: item.webPrice12pc,
-                    })),
-                ]),
-            ),
+            components: Object.fromEntries(componentEntries),
         };
     },
 });

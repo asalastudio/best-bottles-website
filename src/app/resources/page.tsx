@@ -2,10 +2,12 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, Wrench, ChatCircle, FileText, BookMarked } from "@/components/icons";
 import Navbar from "@/components/Navbar";
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Resources — Guides, FAQs & Compatibility Tools | Best Bottles",
     description: "Everything you need to choose the right bottles, closures, and packaging for your brand. Compatibility guides, FAQs, and expert insights.",
+    alternates: { canonical: `${SITE_URL}/resources` },
 };
 
 const RESOURCES = [

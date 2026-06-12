@@ -166,6 +166,14 @@ Use Madison for:
 - family/component context
 - QA and approval workflow
 
+Madison product-image prompts should include these visual guardrails:
+
+- Preserve locked geometry for same-capacity family variants: bottle height, width, shoulder shape, base shape, neck position, product scale, vertical axis, and bottom baseline must match the approved reference.
+- Change only the requested glass color, closure/applicator, finish, cap state, or supported accessory.
+- Do not add artificial horizontal lines, seams, table edges, horizon lines, divider lines, backdrop folds, transparent bands, or compositing artifacts.
+- Use a smooth continuous studio background with only a subtle natural contact shadow.
+- Reject or regenerate if a fake line crosses behind or through the product, or if a same-capacity bottle appears taller, shorter, wider, thinner, cropped differently, or physically inconsistent with sibling variants.
+
 Do not use the old Sanity push stage as the production destination for this phase.
 
 Existing useful files:

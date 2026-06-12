@@ -57,11 +57,21 @@ export default function PatternD_BuildKit({
         addItems(
             items.map((p) => ({
                 graceSku: p.graceSku,
+                websiteSku: p.websiteSku ?? null,
                 itemName: p.itemName,
                 quantity: 1,
                 unitPrice: p.webPrice1pc ?? null,
                 checkoutEligible: Boolean(p.shopifyVariantId),
                 shopifyVariantId: p.shopifyVariantId ?? null,
+                family: p.family,
+                capacity: p.capacity,
+                color: p.color,
+                applicator: p.applicator,
+                capColor: p.capColor ?? null,
+                neckThreadSize: p.neckThreadSize ?? null,
+                webPrice1pc: p.webPrice1pc ?? null,
+                webPrice10pc: p.webPrice10pc ?? null,
+                webPrice12pc: p.webPrice12pc ?? null,
             })),
         );
     };

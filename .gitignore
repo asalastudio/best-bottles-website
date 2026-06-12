@@ -26,9 +26,11 @@
 *.log
 
 # Local automation / browser scratch
+/.codex/
 /.claude/worktrees/
 /.cursor/settings.json
 /.firecrawl/
+/.playwright-cli/
 /.playwright-mcp/
 
 # Local scratch and generated test outputs
@@ -62,8 +64,12 @@
 # Generated audit/eval/report snapshots
 /data/grace-evals/results/
 /data/audits/20*/convex_snapshot*.json
+/data/audits/2026-05-20-image-audit/
+/data/audits/product-truth/
+/data/source-of-truth/
 /docs/data_alignment/*.json
 /docs/data_alignment/*.xlsx
+/mobile-audit-screenshots/
 
 # Coverage directory used by testing tools
 /coverage
@@ -85,3 +91,6 @@ __pycache__/
 
 # Local editor workspace files
 *.code-workspace
+
+# Local creative assets (84MB+, not for git)
+creative/

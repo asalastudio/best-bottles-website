@@ -55,6 +55,12 @@ node scripts/push_convex_to_shopify.mjs --apply --limit 10
 
 Missing prices block live apply by default. Only use `--allow-placeholder-prices` for a deliberately scoped rehearsal where `$0.01` placeholder prices are acceptable.
 
+For a launch catch-up pass after some IDs are already backfilled, scope Shopify writes to only groups with variants still missing `products.shopifyVariantId`:
+
+```bash
+node scripts/push_convex_to_shopify.mjs --apply --missing-shopify-ids-only
+```
+
 4. Backfill Shopify IDs into Convex:
 
 ```bash
@@ -62,6 +68,14 @@ node scripts/backfill_shopify_ids.mjs --apply --limit 10
 ```
 
 The backfill is the BB-7 bridge that makes checkout deterministic.
+
+5. Verify checkout readiness:
+
+```bash
+npm run audit:shopify-skus -- --json
+```
+
+Launch-ready output has zero unmatched Convex SKUs, zero missing stored Shopify variant IDs, zero mismatched stored Shopify variant IDs, and zero orderable-but-not-checkout-ready products.
 
 ## Manifest Expectations
 
