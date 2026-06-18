@@ -43,6 +43,14 @@ export type GalleryImage = {
     label: string;
     /** Accessibility alt text. Defaults to label if omitted. */
     alt?: string;
+    auditMeta?: {
+        surface: string;
+        family?: string | null;
+        productGroupSlug?: string | null;
+        graceSku?: string | null;
+        websiteSku?: string | null;
+        shopifyVariantId?: string | null;
+    };
 };
 
 export type GalleryMode =
@@ -161,6 +169,12 @@ export default function ProductImageGallery({
                         fill
                         loading="eager"
                         fetchPriority="high"
+                        data-bb-image-audit={activeImage.auditMeta?.surface ?? "pdp-gallery"}
+                        data-bb-family={activeImage.auditMeta?.family ?? undefined}
+                        data-bb-product-group-slug={activeImage.auditMeta?.productGroupSlug ?? undefined}
+                        data-bb-grace-sku={activeImage.auditMeta?.graceSku ?? undefined}
+                        data-bb-website-sku={activeImage.auditMeta?.websiteSku ?? undefined}
+                        data-bb-shopify-variant-id={activeImage.auditMeta?.shopifyVariantId ?? undefined}
                         sizes="(min-width: 1024px) 50vw, 100vw"
                         className={`object-contain ${mainPadding}`}
                         unoptimized={isRemoteProductImageUrl(activeImage.url)}
@@ -211,6 +225,12 @@ export default function ProductImageGallery({
                                     alt={img.label}
                                     fill
                                     sizes="80px"
+                                    data-bb-image-audit={img.auditMeta?.surface ?? "pdp-gallery-thumb"}
+                                    data-bb-family={img.auditMeta?.family ?? undefined}
+                                    data-bb-product-group-slug={img.auditMeta?.productGroupSlug ?? undefined}
+                                    data-bb-grace-sku={img.auditMeta?.graceSku ?? undefined}
+                                    data-bb-website-sku={img.auditMeta?.websiteSku ?? undefined}
+                                    data-bb-shopify-variant-id={img.auditMeta?.shopifyVariantId ?? undefined}
                                     className="object-contain p-1.5"
                                     unoptimized={isRemoteProductImageUrl(img.url)}
                                 />
