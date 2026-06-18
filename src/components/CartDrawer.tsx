@@ -276,8 +276,8 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                                     </p>
                                                     <div className="text-[12px] text-slate mb-2 space-y-0.5">
                                                         <p>{[item.family, item.capacity, item.color].filter(Boolean).join(" · ") || "Product details pending"}</p>
-                                                        {(item.applicator || item.capColor) && (
-                                                            <p>{[item.applicator, item.capColor].filter(Boolean).join(" · ")}</p>
+                                                        {(item.applicator || item.capColor || item.neckThreadSize) && (
+                                                            <p>{[item.applicator, item.capColor, item.neckThreadSize ? `Thread: ${item.neckThreadSize}` : null].filter(Boolean).join(" · ")}</p>
                                                         )}
                                                     </div>
                                                     <p className="text-[10px] text-slate/70 font-mono uppercase tracking-wide mb-2">

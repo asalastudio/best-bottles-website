@@ -528,6 +528,9 @@ type VariantImageTile = {
     label: string;
     swatchHex: string;
     websiteSku: string;
+    graceSku: string;
+    productGroupSlug: string;
+    shopifyVariantId?: string | null;
 };
 
 function getVariantTileImageUrl(variant: ProductVariant): string | null {
@@ -587,6 +590,12 @@ function VariantImagePicker({
                     alt=""
                     fill
                     sizes={mobile ? "64px" : "58px"}
+                    data-bb-image-audit="pdp-variant-tile"
+                    data-bb-family={tile.variant.family ?? undefined}
+                    data-bb-product-group-slug={tile.productGroupSlug}
+                    data-bb-grace-sku={tile.graceSku}
+                    data-bb-website-sku={tile.websiteSku}
+                    data-bb-shopify-variant-id={tile.shopifyVariantId ?? undefined}
                     className="object-cover"
                 />
                 <span
@@ -1186,10 +1195,13 @@ export default function ProductDetailClient({
                 label: getVariantTileLabel(variant),
                 swatchHex: resolveSwatchHex(swatchName),
                 websiteSku: variant.websiteSku,
+                graceSku: variant.graceSku,
+                productGroupSlug: group?.slug ?? activeSlug,
+                shopifyVariantId: variant.shopifyVariantId,
             });
         }
         return tiles;
-    }, [variantsForApplicator]);
+    }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
@@ -1484,6 +1496,7 @@ export default function ProductDetailClient({
                     isOpen={fitmentDrawerOpen}
                     onClose={() => setFitmentDrawerOpen(false)}
                     bottleSku={selectedVariant.graceSku}
+                    quantity={qty}
                 />
             )}
 
@@ -1549,6 +1562,14 @@ export default function ProductDetailClient({
                                                 url: usableProductImageUrl(selectedVariant?.imageUrl)!,
                                                 label: "Cap on",
                                                 alt: customerDisplayName,
+                                                auditMeta: {
+                                                    surface: "pdp-gallery",
+                                                    family: selectedVariant?.family ?? group.family,
+                                                    productGroupSlug: group.slug,
+                                                    graceSku: selectedVariant?.graceSku,
+                                                    websiteSku: selectedVariant?.websiteSku,
+                                                    shopifyVariantId: selectedVariant?.shopifyVariantId,
+                                                },
                                             });
                                         }
                                         if (
@@ -1560,6 +1581,14 @@ export default function ProductDetailClient({
                                                 url: usableProductImageUrl(selectedVariant.imageUrlCapOff)!,
                                                 label: "Cap off",
                                                 alt: `${customerDisplayName} with cap off`,
+                                                auditMeta: {
+                                                    surface: "pdp-gallery",
+                                                    family: selectedVariant.family ?? group.family,
+                                                    productGroupSlug: group.slug,
+                                                    graceSku: selectedVariant.graceSku,
+                                                    websiteSku: selectedVariant.websiteSku,
+                                                    shopifyVariantId: selectedVariant.shopifyVariantId,
+                                                },
                                             });
                                         }
                                         if (galleryImages.length === 0 && variantImageTiles[0]?.imageUrl) {
@@ -1567,6 +1596,14 @@ export default function ProductDetailClient({
                                                 url: variantImageTiles[0].imageUrl,
                                                 label: "Representative",
                                                 alt: `${customerDisplayName} representative product image`,
+                                                auditMeta: {
+                                                    surface: "pdp-gallery",
+                                                    family: variantImageTiles[0].variant.family ?? group.family,
+                                                    productGroupSlug: group.slug,
+                                                    graceSku: variantImageTiles[0].graceSku,
+                                                    websiteSku: variantImageTiles[0].websiteSku,
+                                                    shopifyVariantId: variantImageTiles[0].shopifyVariantId,
+                                                },
                                             });
                                         }
 
@@ -2218,7 +2255,15 @@ export default function ProductDetailClient({
                                         <span className="text-lg leading-none select-none">+</span>
                                     </button>
                                 </div>
-                                {checkoutReady ? (
+                                {qty >= 500 ? (
+                                    <Link
+                                        href={quoteHref}
+                                        data-testid="pdp-request-quote-primary"
+                                        className="flex-1 flex items-center justify-center text-xs font-bold uppercase tracking-widest bg-obsidian text-white hover:bg-muted-gold transition-colors"
+                                    >
+                                        Request Quote
+                                    </Link>
+                                ) : checkoutReady ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
                                         onClick={handleAddToCart}
@@ -2254,12 +2299,36 @@ export default function ProductDetailClient({
 
                             {/* Request a Quote CTA */}
                             <div className="mb-6">
-                                <Link
-                                    href={quoteHref}
-                                    className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
-                                >
-                                    <span>Request a Quote</span>
-                                </Link>
+                                {qty >= 500 && checkoutReady ? (
+                                    <button
+                                        disabled={!canAddToCart || addedFlash}
+                                        onClick={handleAddToCart}
+                                        className={`w-full flex items-center justify-center space-x-2 py-3 border text-xs font-bold uppercase tracking-widest transition-colors disabled:cursor-not-allowed ${
+                                            addedFlash
+                                                ? "bg-emerald-600 text-white border-emerald-600"
+                                                : "border-obsidian text-obsidian hover:bg-obsidian hover:text-white disabled:opacity-40"
+                                        }`}
+                                    >
+                                        {addedFlash ? (
+                                            <>
+                                                <Check className="w-4 h-4" strokeWidth={2} />
+                                                <span>Added!</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <ShoppingBag className="w-4 h-4" strokeWidth={1.5} />
+                                                <span>{inStock ? "Add to Cart" : "Out of Stock"}</span>
+                                            </>
+                                        )}
+                                    </button>
+                                ) : (
+                                    <Link
+                                        href={quoteHref}
+                                        className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
+                                    >
+                                        <span>Request a Quote</span>
+                                    </Link>
+                                )}
                             </div>
 
                             {/* Compatibility belongs near the buying decision for B2B confidence. */}
@@ -2412,7 +2481,15 @@ export default function ProductDetailClient({
                             +
                         </button>
                     </div>
-                    {checkoutReady ? (
+                    {qty >= 500 ? (
+                        <Link
+                            href={quoteHref}
+                            data-testid="pdp-sticky-request-quote"
+                            className="flex-1 min-w-0 py-3 text-center text-[11px] font-bold uppercase tracking-wider bg-obsidian text-white"
+                        >
+                            Request Quote
+                        </Link>
+                    ) : checkoutReady ? (
                         <button
                             disabled={!canAddToCart || addedFlash}
                             onClick={handleAddToCart}

@@ -10,6 +10,7 @@ interface FitmentDrawerProps {
     isOpen: boolean;
     onClose: () => void;
     bottleSku: string;
+    quantity?: number;
 }
 
 interface FitmentOption {
@@ -24,7 +25,7 @@ interface FitmentOption {
     stockStatus?: string | null;
 }
 
-export default function FitmentDrawer({ isOpen, onClose, bottleSku }: FitmentDrawerProps) {
+export default function FitmentDrawer({ isOpen, onClose, bottleSku, quantity = 1 }: FitmentDrawerProps) {
     const { addItems } = useCart();
     const [step, setStep] = useState<2 | 3>(2);
     const [selectedApplicator, setSelectedApplicator] = useState<string | null>(null);
@@ -249,21 +250,48 @@ export default function FitmentDrawer({ isOpen, onClose, bottleSku }: FitmentDra
                                         </h4>
                                         <button
                                             onClick={() => {
-                                                addItems([{
-                                                    graceSku: fitment.graceSku,
-                                                    websiteSku: fitment.websiteSku ?? null,
-                                                    itemName: fitment.itemName,
-                                                    quantity: 1,
-                                                    unitPrice: fitment.price1 ?? null,
-                                                    checkoutEligible: Boolean(fitment.shopifyVariantId),
-                                                    shopifyVariantId: fitment.shopifyVariantId ?? null,
-                                                    color: fitment.color ?? undefined,
-                                                    webPrice1pc: fitment.price1 ?? null,
-                                                    webPrice12pc: fitment.price12 ?? null,
-                                                }]);
+                                                if (!bottle) return;
+                                                addItems([
+                                                    {
+                                                        graceSku: bottle.graceSku,
+                                                        websiteSku: bottle.websiteSku ?? null,
+                                                        itemName: bottle.itemName,
+                                                        quantity: quantity,
+                                                        unitPrice: bottle.webPrice1pc ?? null,
+                                                        checkoutEligible: Boolean(bottle.shopifyVariantId),
+                                                        shopifyVariantId: bottle.shopifyVariantId ?? null,
+                                                        family: bottle.family ?? undefined,
+                                                        capacity: bottle.capacity ?? undefined,
+                                                        color: bottle.color ?? undefined,
+                                                        applicator: bottle.applicator ?? undefined,
+                                                        capColor: bottle.capColor ?? undefined,
+                                                        category: bottle.category ?? undefined,
+                                                        neckThreadSize: bottle.neckThreadSize ?? undefined,
+                                                        webPrice1pc: bottle.webPrice1pc ?? null,
+                                                        webPrice10pc: bottle.webPrice10pc ?? null,
+                                                        webPrice12pc: bottle.webPrice12pc ?? null,
+                                                    },
+                                                    {
+                                                        graceSku: fitment.graceSku,
+                                                        websiteSku: fitment.websiteSku ?? null,
+                                                        itemName: fitment.itemName,
+                                                        quantity: quantity,
+                                                        unitPrice: fitment.price1 ?? null,
+                                                        checkoutEligible: Boolean(fitment.shopifyVariantId),
+                                                        shopifyVariantId: fitment.shopifyVariantId ?? null,
+                                                        family: bottle.family ?? undefined,
+                                                        color: fitment.color ?? undefined,
+                                                        applicator: selectedApplicator ?? undefined,
+                                                        capColor: fitment.color ?? undefined,
+                                                        category: "Component",
+                                                        neckThreadSize: bottle.neckThreadSize ?? undefined,
+                                                        webPrice1pc: fitment.price1 ?? null,
+                                                        webPrice12pc: fitment.price12 ?? null,
+                                                    }
+                                                ]);
                                                 setAddedSku(fitment.graceSku);
                                                 setTimeout(() => setAddedSku(null), 1800);
-                                                setAgentStatus('Successfully added 1x ' + fitment.itemName + ' to the cart.');
+                                                setAgentStatus('Successfully added ' + quantity + 'x bundle to the cart.');
                                             }}
                                             className="mt-4 w-full py-2 bg-bone hover:bg-champagne/40 border border-champagne text-obsidian text-[11px] font-medium uppercase tracking-widest transition-colors rounded-lg flex items-center justify-center gap-1.5"
                                             data-agent-action="add-to-cart"
