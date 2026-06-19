@@ -16,6 +16,9 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 function getConvexClient() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is required to render product pages.");
@@ -31,6 +34,14 @@ function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
     }
 }
 
+function isPreferredProductImageUrl(value: string | null | undefined): boolean {
+    return isShopifyCdnImageUrl(value) && !isLegacyBestBottlesImageUrl(value);
+}
+
+function hasPreferredProductImage(variant: ProductVariant): boolean {
+    return isPreferredProductImageUrl(variant.imageUrl) || isPreferredProductImageUrl(variant.imageUrlCapOff);
+}
+
 async function getProductData(slug: string): Promise<ProductGroupPayload | null> {
     const data = await getConvexClient().query(api.products.getProductGroup, { slug }) as ProductGroupPayload | null;
     if (!data) return null;
@@ -44,10 +55,11 @@ function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | n
     if (!data) return null;
     const primaryWebsiteSku = data.group.primaryWebsiteSku?.trim();
     const primaryGraceSku = data.group.primaryGraceSku?.trim();
-    return data.variants.find((variant) =>
+    const explicitPrimary = data.variants.find((variant) =>
         (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
         (primaryGraceSku && variant.graceSku === primaryGraceSku)
-    ) ?? data.variants[0] ?? null;
+    );
+    return explicitPrimary ?? data.variants.find(hasPreferredProductImage) ?? data.variants[0] ?? null;
 }
 
 async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlug: string): Promise<ApplicatorSibling[]> {
@@ -135,7 +147,7 @@ export async function generateMetadata({
         graceDescription: variant?.graceDescription ?? null,
         applicators: variant?.applicator ? [variant.applicator] : group.applicatorTypes ?? [],
     }) ?? `${customerName} from the ${group.family} collection. ${group.capacity ?? ""} wholesale glass packaging from Best Bottles.`.trim();
-    const image = isShopifyCdnImageUrl(variant?.imageUrl) && !isLegacyBestBottlesImageUrl(variant?.imageUrl)
+    const image = isPreferredProductImageUrl(variant?.imageUrl)
         ? variant?.imageUrl ?? undefined
         : group.heroImageUrl ?? undefined;
 
@@ -198,7 +210,7 @@ export default async function ProductPage({
             name: customerName,
             description,
             sku: variant.websiteSku,
-            image: isShopifyCdnImageUrl(variant.imageUrl) && !isLegacyBestBottlesImageUrl(variant.imageUrl)
+            image: isPreferredProductImageUrl(variant.imageUrl)
                 ? variant.imageUrl ?? undefined
                 : undefined,
             url: `${SITE_URL}/products/${activeSlug}`,

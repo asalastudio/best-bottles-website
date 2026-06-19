@@ -8,6 +8,9 @@ import { SITE_URL } from "@/lib/seo";
 const PAGE_SIZE = 24;
 const MAX_VISIBLE_LIMIT = 240;
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export const metadata: Metadata = {
     title: "Catalog — Wholesale Glass Bottles & Packaging | Best Bottles",
     description:

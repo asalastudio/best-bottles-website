@@ -17,6 +17,14 @@ type ProductCardImagePreviewProps = {
     variantPreviews?: ProductCardVariantPreview[];
     productHref: string;
     maxVisibleSwatches?: number;
+    auditMeta?: {
+        surface: string;
+        family?: string | null;
+        productGroupSlug?: string | null;
+        graceSku?: string | null;
+        websiteSku?: string | null;
+        shopifyVariantId?: string | null;
+    };
 };
 
 function stopCardNavigation(event: React.SyntheticEvent) {
@@ -153,6 +161,7 @@ export default function ProductCardImagePreview({
     variantPreviews = [],
     productHref,
     maxVisibleSwatches = 3,
+    auditMeta,
 }: ProductCardImagePreviewProps) {
     const previews = useMemo(
         () => variantPreviews.filter((preview) => preview.id && (preview.imageUrl || preview.swatchColor || preview.swatchImageUrl)),
@@ -173,10 +182,14 @@ export default function ProductCardImagePreview({
         ? {
             url: activePreview.imageUrl,
             alt: activePreview.imageAlt ?? `${productTitle} - ${activePreview.label}`,
+            graceSku: activePreview.graceSku ?? auditMeta?.graceSku ?? null,
+            websiteSku: activePreview.websiteSku ?? activePreview.sku ?? auditMeta?.websiteSku ?? null,
         }
         : {
             url: defaultImage.url ?? null,
             alt: defaultImage.alt ?? productTitle,
+            graceSku: auditMeta?.graceSku ?? null,
+            websiteSku: auditMeta?.websiteSku ?? null,
         };
 
     const handlePreview = (preview: ProductCardVariantPreview) => {
@@ -185,7 +198,15 @@ export default function ProductCardImagePreview({
 
     return (
         <div>
-            <div className="relative aspect-[10/11] w-full overflow-hidden bg-[#efe2d0]">
+            <div
+                className="relative aspect-[10/11] w-full overflow-hidden bg-[#efe2d0]"
+                data-bb-image-audit={auditMeta?.surface}
+                data-bb-family={auditMeta?.family ?? undefined}
+                data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
+                data-bb-grace-sku={displayImage.graceSku ?? undefined}
+                data-bb-website-sku={displayImage.websiteSku ?? undefined}
+                data-bb-shopify-variant-id={auditMeta?.shopifyVariantId ?? undefined}
+            >
                 <Link
                     href={productHref}
                     className="absolute inset-0 z-10"
@@ -197,6 +218,12 @@ export default function ProductCardImagePreview({
                         src={displayImage.url}
                         alt={displayImage.alt ?? productTitle}
                         fill
+                        data-bb-image-audit={auditMeta?.surface}
+                        data-bb-family={auditMeta?.family ?? undefined}
+                        data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
+                        data-bb-grace-sku={displayImage.graceSku ?? undefined}
+                        data-bb-website-sku={displayImage.websiteSku ?? undefined}
+                        data-bb-shopify-variant-id={auditMeta?.shopifyVariantId ?? undefined}
                         className="object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
                     />

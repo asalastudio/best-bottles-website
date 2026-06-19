@@ -46,48 +46,6 @@ const PAGE_SIZE = 24;
 const SEARCH_DEBOUNCE_MS = 300;
 const MAX_VISIBLE_LIMIT = 240;
 
-const PACKAGING_ANSWER_BLOCKS = [
-    {
-        id: "applicator-fit",
-        question: "Can I use any applicator with any bottle?",
-        answer: "No. Applicators, caps, sprayers, droppers, and rollers must match the bottle neck finish and the selected SKU configuration.",
-        prompt: "Help me find bottles and applicators that are compatible with each other.",
-    },
-    {
-        id: "neck-finish",
-        question: "What does neck thread size mean?",
-        answer: "Neck thread size is the bottle opening and thread finish used to match bottles with closures, reducers, sprayers, droppers, or rollers.",
-        prompt: "Explain neck thread sizes and help me choose compatible packaging.",
-    },
-    {
-        id: "small-batch",
-        question: "Can I order samples before buying cases?",
-        answer: "Yes. Use the sample request flow or add small eligible quantities where checkout is available, then confirm the exact SKU before scaling.",
-        prompt: "Help me build a sample set for my product launch.",
-    },
-    {
-        id: "case-quantity",
-        question: "How do I confirm case quantity?",
-        answer: "Case quantity varies by SKU. Check the product detail page for the bottle, color, size, applicator, and closure configuration you plan to order.",
-        prompt: "Help me compare case quantities and prices for the products I am viewing.",
-    },
-] as const;
-
-function buildCatalogFaqJsonLd() {
-    return {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        mainEntity: PACKAGING_ANSWER_BLOCKS.map((item) => ({
-            "@type": "Question",
-            name: item.question,
-            acceptedAnswer: {
-                "@type": "Answer",
-                text: item.answer,
-            },
-        })),
-    };
-}
-
 // ─── Sanity Family Banner ─────────────────────────────────────────────────────
 
 // Module-level cache so the Sanity query only runs once per session
@@ -309,6 +267,8 @@ function ProductGroupCard({
     variantPreviews,
     displayName,
     thumbnailUrl,
+    primaryGraceSku,
+    primaryWebsiteSku,
 }: {
     group: CatalogGroup;
     index: number;
@@ -316,6 +276,8 @@ function ProductGroupCard({
     variantPreviews?: ProductCardVariantPreview[];
     displayName?: string;
     thumbnailUrl?: string | null;
+    primaryGraceSku?: string | null;
+    primaryWebsiteSku?: string | null;
 }) {
     const href = productGroupHref(group, applicatorParam);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
@@ -349,6 +311,13 @@ function ProductGroupCard({
                 variantPreviews={variantPreviews}
                 productHref={href}
                 maxVisibleSwatches={6}
+                auditMeta={{
+                    surface: "catalog-card",
+                    family: group.family,
+                    productGroupSlug: group.slug,
+                    graceSku: primaryGraceSku,
+                    websiteSku: primaryWebsiteSku,
+                }}
             />
 
             <Link href={href} className="flex flex-1 flex-col p-5">
@@ -865,6 +834,8 @@ function LineItemRow({
     applicatorParam,
     thumbnailUrl,
     displayName,
+    primaryGraceSku,
+    primaryWebsiteSku,
 }: {
     group: CatalogGroup;
     sku: string;
@@ -872,6 +843,8 @@ function LineItemRow({
     applicatorParam?: string | null;
     thumbnailUrl?: string | null;
     displayName?: string;
+    primaryGraceSku?: string | null;
+    primaryWebsiteSku?: string | null;
 }) {
     const [quantity, setQuantity] = useState(1);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
@@ -896,12 +869,24 @@ function LineItemRow({
             {/* Image + Name */}
             <td className="py-3 px-4">
                 <Link href={href} className="flex items-center gap-4">
-                    <div className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative">
+                    <div
+                        className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
+                        data-bb-image-audit="catalog-line-item"
+                        data-bb-family={group.family ?? undefined}
+                        data-bb-product-group-slug={group.slug}
+                        data-bb-grace-sku={primaryGraceSku ?? undefined}
+                        data-bb-website-sku={primaryWebsiteSku ?? sku}
+                    >
                         {thumbnailUrl ? (
                             <Image
                                 src={thumbnailUrl}
                                 alt={customerDisplayName}
                                 fill
+                                data-bb-image-audit="catalog-line-item"
+                                data-bb-family={group.family ?? undefined}
+                                data-bb-product-group-slug={group.slug}
+                                data-bb-grace-sku={primaryGraceSku ?? undefined}
+                                data-bb-website-sku={primaryWebsiteSku ?? sku}
                                 className="object-contain p-1"
                                 sizes="56px"
                                 unoptimized
@@ -1012,6 +997,8 @@ function LineItemMobileCard({
     applicatorParam,
     thumbnailUrl,
     displayName,
+    primaryGraceSku,
+    primaryWebsiteSku,
 }: {
     group: CatalogGroup;
     sku: string;
@@ -1019,6 +1006,8 @@ function LineItemMobileCard({
     applicatorParam?: string | null;
     thumbnailUrl?: string | null;
     displayName?: string;
+    primaryGraceSku?: string | null;
+    primaryWebsiteSku?: string | null;
 }) {
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
@@ -1043,12 +1032,24 @@ function LineItemMobileCard({
         >
             <div className="flex items-center p-3 gap-3">
                 {/* Thumbnail */}
-                <div className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative">
+                <div
+                    className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
+                    data-bb-image-audit="catalog-mobile-line-item"
+                    data-bb-family={group.family ?? undefined}
+                    data-bb-product-group-slug={group.slug}
+                    data-bb-grace-sku={primaryGraceSku ?? undefined}
+                    data-bb-website-sku={primaryWebsiteSku ?? sku}
+                >
                     {thumbnailUrl ? (
                         <Image
                             src={thumbnailUrl}
                             alt={customerDisplayName}
                             fill
+                            data-bb-image-audit="catalog-mobile-line-item"
+                            data-bb-family={group.family ?? undefined}
+                            data-bb-product-group-slug={group.slug}
+                            data-bb-grace-sku={primaryGraceSku ?? undefined}
+                            data-bb-website-sku={primaryWebsiteSku ?? sku}
                             className="object-contain p-1"
                             sizes="56px"
                             unoptimized
@@ -1176,12 +1177,14 @@ function LineItemTable({
     applicatorParam,
     thumbnailMap,
     displayNameMap,
+    primarySkuMetaMap,
 }: {
     groups: CatalogGroup[];
     skuMap: Map<string, string>;
     applicatorParam?: string | null;
     thumbnailMap?: Map<string, string>;
     displayNameMap?: Map<string, string>;
+    primarySkuMetaMap?: Map<string, CatalogGroupPrimarySku>;
 }) {
     return (
         <div className="w-full overflow-x-auto">
@@ -1224,6 +1227,8 @@ function LineItemTable({
                             applicatorParam={applicatorParam}
                             thumbnailUrl={thumbnailMap?.get(group._id)}
                             displayName={displayNameMap?.get(group._id)}
+                            primaryGraceSku={primarySkuMetaMap?.get(group._id)?.graceSku}
+                            primaryWebsiteSku={primarySkuMetaMap?.get(group._id)?.websiteSku}
                         />
                     ))}
                 </tbody>
@@ -1240,12 +1245,14 @@ function LineItemMobileGrid({
     applicatorParam,
     thumbnailMap,
     displayNameMap,
+    primarySkuMetaMap,
 }: {
     groups: CatalogGroup[];
     skuMap: Map<string, string>;
     applicatorParam?: string | null;
     thumbnailMap?: Map<string, string>;
     displayNameMap?: Map<string, string>;
+    primarySkuMetaMap?: Map<string, CatalogGroupPrimarySku>;
 }) {
     return (
         <div className="space-y-3">
@@ -1258,6 +1265,8 @@ function LineItemMobileGrid({
                     applicatorParam={applicatorParam}
                     thumbnailUrl={thumbnailMap?.get(group._id)}
                     displayName={displayNameMap?.get(group._id)}
+                    primaryGraceSku={primarySkuMetaMap?.get(group._id)?.graceSku}
+                    primaryWebsiteSku={primarySkuMetaMap?.get(group._id)?.websiteSku}
                 />
             ))}
         </div>
@@ -1293,32 +1302,6 @@ function BackToTop() {
     );
 }
 
-function CatalogAnswerBlocks({ onAskGrace }: { onAskGrace: (prompt: string) => void }) {
-    return (
-        <section
-            className="mb-6 sm:mb-8 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-3"
-            data-testid="catalog-answer-blocks"
-            aria-label="Catalog buying guidance"
-        >
-            {PACKAGING_ANSWER_BLOCKS.map((block) => (
-                <article key={block.id} className="bg-white border border-champagne/50 rounded-lg p-4 shadow-sm">
-                    <h2 className="font-serif text-base text-obsidian font-medium mb-2">{block.question}</h2>
-                    <p className="text-xs text-slate leading-relaxed mb-4">{block.answer}</p>
-                    <button
-                        type="button"
-                        onClick={() => onAskGrace(block.prompt)}
-                        className="inline-flex min-h-10 items-center gap-2 rounded-full border border-muted-gold/40 px-3 py-2 text-[11px] font-bold uppercase tracking-wider text-muted-gold hover:bg-muted-gold hover:text-white transition-colors"
-                        data-testid="catalog-answer-grace-cta"
-                    >
-                        <MessageCircle className="w-3.5 h-3.5" />
-                        Ask Grace
-                    </button>
-                </article>
-            ))}
-        </section>
-    );
-}
-
 // ─── Main Catalog Content ────────────────────────────────────────────────────
 
 export default function CatalogClient({
@@ -1334,7 +1317,7 @@ export default function CatalogClient({
     const pathname = usePathname();
     const searchParams = useMemo(() => new URLSearchParams(initialSearchParams), [initialSearchParams]);
     const searchDebounceRef = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
-    const { open: openGrace, setInput: setGraceInput } = useGrace();
+    const { open: openGrace } = useGrace();
 
     const isGraceNav = searchParams.get("grace") === "1";
     const [graceBannerDismissed, setGraceBannerDismissed] = useState(false);
@@ -1397,6 +1380,13 @@ export default function CatalogClient({
         const next = new Map<string, string>();
         for (const row of activeResult.primarySkus ?? []) {
             next.set(row.groupId, row.websiteSku ?? row.graceSku ?? "—");
+        }
+        return next;
+    }, [activeResult.primarySkus]);
+    const primarySkuMetaMap = useMemo(() => {
+        const next = new Map<string, CatalogGroupPrimarySku>();
+        for (const row of activeResult.primarySkus ?? []) {
+            next.set(row.groupId, row);
         }
         return next;
     }, [activeResult.primarySkus]);
@@ -1688,17 +1678,8 @@ export default function CatalogClient({
             </button>
         );
     };
-    const handleAnswerGracePrompt = useCallback((prompt: string) => {
-        setGraceInput(prompt);
-        openGrace();
-    }, [openGrace, setGraceInput]);
-
     return (
         <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(buildCatalogFaqJsonLd()) }}
-            />
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
             <Breadcrumbs steps={[{ label: "Catalog" }]} />
 
@@ -1738,8 +1719,6 @@ export default function CatalogClient({
                         </div>
                     </div>
                 </div>
-
-                <CatalogAnswerBlocks onAskGrace={handleAnswerGracePrompt} />
 
                 {/* Active Filter Chips */}
                 <AnimatePresence>
@@ -2116,6 +2095,8 @@ export default function CatalogClient({
                                             variantPreviews={variantPreviewMap.get(group._id)}
                                             displayName={customerNameMap.get(group._id)}
                                             thumbnailUrl={catalogThumbnailMap.get(group._id)}
+                                            primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}
+                                            primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
                                         />
                                     ))}
                                 </div>
@@ -2133,6 +2114,7 @@ export default function CatalogClient({
                                                 applicatorParam={visualApplicatorParam}
                                                 thumbnailMap={catalogThumbnailMap}
                                                 displayNameMap={customerNameMap}
+                                                primarySkuMetaMap={primarySkuMetaMap}
                                             />
                                         </div>
                                     </div>
@@ -2145,6 +2127,7 @@ export default function CatalogClient({
                                             applicatorParam={visualApplicatorParam}
                                             thumbnailMap={catalogThumbnailMap}
                                             displayNameMap={customerNameMap}
+                                            primarySkuMetaMap={primarySkuMetaMap}
                                         />
                                     </div>
                                 </>
@@ -2174,6 +2157,7 @@ export default function CatalogClient({
                                 </p>
                             </div>
                         )}
+
                     </div>
                 </div>
             </div>

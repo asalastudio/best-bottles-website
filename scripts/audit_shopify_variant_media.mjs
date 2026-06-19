@@ -70,6 +70,7 @@ function isShopifyCdn(value) {
 loadEnv();
 
 const JSON_MODE = process.argv.includes("--json");
+const FULL_REPORT = process.argv.includes("--full-report");
 const FAMILY = argValue("--family");
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 const SHOPIFY_DOMAIN = (process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN ?? "").replace(/^https?:\/\//, "").replace(/\/$/, "");
@@ -270,6 +271,15 @@ async function main() {
             convexNonShopifyWhenShopifyExists: sample(convexNonShopifyWhenShopifyExists),
         },
     };
+
+    if (FULL_REPORT) {
+        report.full = {
+            missingShopifyVariantImage,
+            shopifyImageNotCachedInConvex,
+            convexDiffersFromShopify,
+            convexNonShopifyWhenShopifyExists,
+        };
+    }
 
     if (JSON_MODE) {
         console.log(JSON.stringify(report, null, 2));

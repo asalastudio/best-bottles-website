@@ -521,6 +521,19 @@ function usableProductImageUrl(value: string | null | undefined): string | null 
     return url;
 }
 
+function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+    if (!value) return false;
+    try {
+        return new URL(value).hostname === "cdn.shopify.com";
+    } catch {
+        return value.includes("cdn.shopify.com/");
+    }
+}
+
+function hasPreferredProductImage(variant: ProductVariant): boolean {
+    return isShopifyCdnImageUrl(variant.imageUrl) || isShopifyCdnImageUrl(variant.imageUrlCapOff);
+}
+
 type VariantImageTile = {
     id: string;
     variant: ProductVariant;
@@ -1033,11 +1046,11 @@ export default function ProductDetailClient({
     const primaryVariant = useMemo(() => {
         const primaryWebsiteSku = group?.primaryWebsiteSku?.trim();
         const primaryGraceSku = group?.primaryGraceSku?.trim();
-        if (!primaryWebsiteSku && !primaryGraceSku) return null;
-        return variants.find((variant) =>
+        const explicitPrimary = variants.find((variant) =>
             (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
             (primaryGraceSku && variant.graceSku === primaryGraceSku)
-        ) ?? null;
+        );
+        return explicitPrimary ?? variants.find(hasPreferredProductImage) ?? null;
     }, [variants, group?.primaryWebsiteSku, group?.primaryGraceSku]);
 
     // Guard stale deep links like ?applicator=spray on non-spray groups (e.g. decorative cap bottles).

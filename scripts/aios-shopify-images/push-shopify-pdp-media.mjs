@@ -4,21 +4,33 @@
  * surface them in the UI.
  *
  * Per manifest row this script:
+ *   0. runs a bone-background QA gate on the evidence image and skips any
+ *      candidate whose canvas isn't on-brand cream/bone (or transparent) —
+ *      bypass with --skip-bg-gate, loosen with --bg-gate-allow-review,
  *   1. uploads the evidence image to the Shopify product (productCreateMedia,
  *      Shopify fetches the public URL itself),
  *   2. waits for media processing to finish,
- *   3. attaches the media to the variant matched by graceSku === variant.sku
- *      (productVariantAppendMedia),
+ *   3. attaches the media to the variant matched by graceSku === variant.sku.
+ *      Variants with no image are appended via productVariantAppendMedia.
+ *      With --replace, a variant that ALREADY has an image is repointed onto
+ *      the freshly-created media via productVariantsBulkUpdate — a plain append
+ *      there is rejected by Shopify ("the given variant already has attached
+ *      media"), which is the bug the old --replace path tripped on,
  *   4. patches Convex `imageUrl` with the resulting cdn.shopify.com URL so the
  *      catalog/PDP Shopify-CDN gate passes.
  *
  * Dry-run by default. Idempotent: variants that already carry a Shopify
- * variant image are skipped unless --replace is passed.
+ * variant image are skipped unless --replace is passed; with --replace they are
+ * repointed in place onto the new media (no orphan/duplicate media — the media
+ * just created is reused). Pass --delete-old-media to also remove the
+ * now-detached old gallery media (best-effort; off by default to stay safe).
  *
  * Usage:
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --family Cylinder --limit 5 --apply
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --manifest path/to.csv --apply
+ *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --family Cylinder --replace --apply
+ *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --replace --limit 1   # dry-run replace plan
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --json > report.json
  */
 
@@ -27,6 +39,8 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api.js";
+import { gateImageUrl, gatePasses } from "./bg-qa-gate.mjs";
+import { planVariantAction, mediaFilename } from "./replace-plan.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..", "..");
@@ -103,7 +117,16 @@ const LIMIT = Number(argValue("--limit") ?? "0");
 const MANIFEST = argValue("--manifest") ?? DEFAULT_MANIFEST;
 const APPLY = process.argv.includes("--apply");
 const REPLACE = process.argv.includes("--replace");
+// With --replace, also delete the old gallery media that each repointed variant
+// used to show. Best-effort and off by default — it is a destructive Shopify
+// op, so opt in explicitly once you trust the replace plan.
+const DELETE_OLD_MEDIA = process.argv.includes("--delete-old-media");
 const JSON_MODE = process.argv.includes("--json");
+// Bone-background QA gate: on by default; rejects non-cream/bone canvases before
+// they reach Shopify. --skip-bg-gate bypasses it; --bg-gate-allow-review lets
+// ambiguous/undecodable images through instead of holding them back.
+const SKIP_BG_GATE = process.argv.includes("--skip-bg-gate");
+const ALLOW_REVIEW = process.argv.includes("--bg-gate-allow-review");
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 const SHOPIFY_DOMAIN = (process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN ?? "").replace(/^https?:\/\//, "").replace(/\/$/, "");
 const SHOPIFY_TOKEN = process.env.SHOPIFY_ADMIN_TOKEN;
@@ -239,6 +262,57 @@ async function appendVariantMedia(productId, variantMedia) {
     return payload.productVariants;
 }
 
+// Repoint variants that already carry an image onto freshly-created media.
+// productVariantAppendMedia refuses these ("already has attached media"); the
+// bulk update replaces the variant→media association in place.
+async function bulkUpdateVariantMedia(productId, variants) {
+    const data = await shopifyGraphQL(
+        `mutation BulkUpdateVariantMedia($productId: ID!, $variants: [ProductVariantsBulkInput!]!) {
+          productVariantsBulkUpdate(productId: $productId, variants: $variants) {
+            productVariants { id sku image { url } }
+            userErrors { field message }
+          }
+        }`,
+        { productId, variants },
+    );
+    const payload = data.productVariantsBulkUpdate;
+    if (payload.userErrors?.length) {
+        throw new Error(payload.userErrors.map((e) => `${(e.field ?? []).join(".")}: ${e.message}`).join("; "));
+    }
+    return payload.productVariants;
+}
+
+async function fetchProductMedia(productId) {
+    const data = await shopifyGraphQL(
+        `query ProductMedia($id: ID!) {
+          node(id: $id) {
+            ... on Product {
+              media(first: 250) { nodes { ... on MediaImage { id status image { url } } } }
+            }
+          }
+        }`,
+        { id: productId },
+    );
+    return (data.node?.media?.nodes ?? []).filter((m) => m && m.id);
+}
+
+async function deleteProductMedia(productId, mediaIds) {
+    const data = await shopifyGraphQL(
+        `mutation DeleteProductMedia($productId: ID!, $mediaIds: [ID!]!) {
+          productDeleteMedia(productId: $productId, mediaIds: $mediaIds) {
+            deletedMediaIds
+            mediaUserErrors { field message }
+          }
+        }`,
+        { productId, mediaIds },
+    );
+    const payload = data.productDeleteMedia;
+    if (payload.mediaUserErrors?.length) {
+        throw new Error(payload.mediaUserErrors.map((e) => e.message).join("; "));
+    }
+    return payload.deletedMediaIds ?? [];
+}
+
 async function main() {
     const manifestRows = parseCsv(readFileSync(MANIFEST, "utf8"));
     const convex = new ConvexHttpClient(CONVEX_URL);
@@ -272,7 +346,8 @@ async function main() {
         if (duplicateSkus.has(r.graceSku)) { skippedDuplicateSku.push(r.graceSku); continue; }
         const variant = variantBySku.get(r.graceSku);
         if (!variant) { skippedUnmatchedSku.push(r.graceSku); continue; }
-        if (variant.image?.url && !REPLACE) {
+        const action = planVariantAction(variant, REPLACE); // "append" | "repoint" | "skip"
+        if (action === "skip") {
             skippedAlreadyHasImage.push({ graceSku: r.graceSku, url: variant.image.url });
             continue;
         }
@@ -285,10 +360,48 @@ async function main() {
             variantId: variant.id,
             productId: variant.product.id,
             productHandle: variant.product.handle,
+            action,                                  // append a new image or repoint onto it
+            oldImageUrl: variant.image?.url ?? null, // present only for repoint (old gallery media to clean up)
         });
     }
 
-    const selected = LIMIT > 0 ? plan.slice(0, LIMIT) : plan;
+    const selectedRaw = LIMIT > 0 ? plan.slice(0, LIMIT) : plan;
+
+    // ── Bone-background QA gate ───────────────────────────────────────────────
+    // Decode each candidate and reject anything whose canvas isn't the on-brand
+    // cream/bone studio background (or a transparent cutout). This is the guard
+    // that stops white-canvas masters from leaking to Shopify the way the
+    // original bulk push did (~50% landed white). Runs in dry-run too so the
+    // report shows exactly what would be held back.
+    const skippedOffBrandBackground = [];
+    let selected = selectedRaw;
+    if (!SKIP_BG_GATE && selectedRaw.length) {
+        const passed = [];
+        let cursor = 0;
+        const worker = async () => {
+            while (cursor < selectedRaw.length) {
+                const item = selectedRaw[cursor++];
+                const result = await gateImageUrl(item.evidenceUrl);
+                if (gatePasses(result, { allowReview: ALLOW_REVIEW })) {
+                    passed.push(item);
+                } else {
+                    skippedOffBrandBackground.push({
+                        graceSku: item.graceSku,
+                        family: item.family,
+                        verdict: result.verdict,
+                        bg: result.bg,
+                        reason: result.reason,
+                        evidenceUrl: item.evidenceUrl,
+                    });
+                }
+            }
+        };
+        await Promise.all(Array.from({ length: 8 }, worker));
+        selected = passed;
+        if (!JSON_MODE) {
+            console.log(`Bone-bg QA gate: ${passed.length} passed, ${skippedOffBrandBackground.length} rejected of ${selectedRaw.length} checked${ALLOW_REVIEW ? " (review allowed)" : ""}.`);
+        }
+    }
 
     // Group by product so each product gets one create + one append call.
     const byProduct = new Map();
@@ -300,6 +413,7 @@ async function main() {
 
     const uploaded = [];
     const convexPatched = [];
+    const deletedOldMedia = [];
     const failed = [];
 
     if (APPLY) {
@@ -318,10 +432,51 @@ async function main() {
                     throw new Error(`media count mismatch: sent ${items.length}, got ${media.length}`);
                 }
                 const urlByMediaId = await waitForMediaReady(media.map((m) => m.id));
-                await appendVariantMedia(
-                    productId,
-                    items.map((i, idx) => ({ variantId: i.variantId, mediaIds: [media[idx].id] })),
-                );
+
+                // New media is matched to its variant by array index. Variants
+                // with no image are appended; variants that already carry one are
+                // repointed onto the new media (append would be rejected). Both
+                // reference the SAME media we just created — no orphan/duplicate.
+                const appendInputs = [];
+                const repointInputs = [];
+                for (let idx = 0; idx < items.length; idx++) {
+                    const newMediaId = media[idx].id;
+                    if (items[idx].action === "repoint") {
+                        repointInputs.push({ id: items[idx].variantId, mediaId: newMediaId });
+                    } else {
+                        appendInputs.push({ variantId: items[idx].variantId, mediaIds: [newMediaId] });
+                    }
+                }
+                if (appendInputs.length) await appendVariantMedia(productId, appendInputs);
+                if (repointInputs.length) await bulkUpdateVariantMedia(productId, repointInputs);
+
+                // Optional cleanup: delete the old gallery media each repointed
+                // variant used to show, so --replace doesn't leave orphans behind.
+                // Guarded — never touches the media we just created, and only
+                // deletes media still named after a replaced variant's old image.
+                if (DELETE_OLD_MEDIA && repointInputs.length) {
+                    try {
+                        const newMediaIds = new Set(media.map((m) => m.id));
+                        const oldNames = new Set(
+                            items
+                                .filter((i) => i.action === "repoint" && i.oldImageUrl)
+                                .map((i) => mediaFilename(i.oldImageUrl))
+                                .filter(Boolean),
+                        );
+                        const productMedia = await fetchProductMedia(productId);
+                        const deletable = productMedia
+                            .filter((m) => !newMediaIds.has(m.id) && oldNames.has(mediaFilename(m.image?.url)))
+                            .map((m) => m.id);
+                        if (deletable.length) {
+                            const deleted = await deleteProductMedia(productId, deletable);
+                            deletedOldMedia.push(...deleted);
+                        }
+                    } catch (error) {
+                        // Cleanup is best-effort; a failure here never fails the push.
+                        failed.push({ stage: "delete_old_media", productId, error: String(error?.message ?? error) });
+                    }
+                }
+
                 for (let idx = 0; idx < items.length; idx++) {
                     const item = items[idx];
                     const cdnUrl = urlByMediaId.get(media[idx].id);
@@ -351,10 +506,17 @@ async function main() {
         }
     }
 
+    // How the selected rows split across the two attach paths — the headline
+    // numbers for validating a --replace run (e.g. `--replace --limit 1`).
+    const toAppend = selected.filter((i) => i.action === "append").length;
+    const toRepoint = selected.filter((i) => i.action === "repoint").length;
+
     const report = {
         generatedAt: new Date().toISOString(),
         mode: APPLY ? "apply" : "dry-run",
         family: FAMILY ?? "ALL",
+        replace: REPLACE,
+        deleteOldMedia: DELETE_OLD_MEDIA,
         manifest: MANIFEST,
         convexUrl: CONVEX_URL,
         shopifyDomain: SHOPIFY_DOMAIN,
@@ -362,9 +524,14 @@ async function main() {
             manifestRows: manifestRows.length,
             eligibleAfterFilters: plan.length,
             selected: selected.length,
+            toAppend,
+            toRepoint,
+            bgGateChecked: SKIP_BG_GATE ? 0 : selectedRaw.length,
+            skippedOffBrandBackground: skippedOffBrandBackground.length,
             products: byProduct.size,
             uploaded: uploaded.length,
             convexPatched: convexPatched.length,
+            deletedOldMedia: deletedOldMedia.length,
             failed: failed.length,
             skippedUntrustedSource: skippedUntrustedSource.length,
             skippedUnmatchedSku: skippedUnmatchedSku.length,
@@ -378,6 +545,7 @@ async function main() {
             skippedUntrustedSource: skippedUntrustedSource.slice(0, 10),
             skippedUnmatchedSku: skippedUnmatchedSku.slice(0, 10),
             skippedAlreadyHasImage: skippedAlreadyHasImage.slice(0, 10),
+            skippedOffBrandBackground: skippedOffBrandBackground.slice(0, 15),
         },
     };
 
