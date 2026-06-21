@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import FitmentIntegrationDemo from '@/components/FitmentIntegrationDemo';
 import { ArrowLeft, Star, Truck, ShieldCheck } from "@/components/icons";
+
+export const metadata: Metadata = {
+    title: "Example Product Demo | Best Bottles",
+    robots: { index: false, follow: false },
+};
 
 export default function ExampleProductPage() {
     return (

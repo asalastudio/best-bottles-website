@@ -3,21 +3,24 @@ import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
 import Navbar from "@/components/Navbar";
 import BlogGrid, { type JournalPost } from "@/components/BlogGrid";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
+import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
+import { isSanityConfigured } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
 import { JOURNAL_POSTS_QUERY } from "@/sanity/lib/queries";
-
-export const revalidate = 60;
+import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
     title: "Journal — Packaging Insights & Brand Guides | Best Bottles",
     description:
         "Expert guides on glass packaging, fragrance, and brand strategy. From bottle selection to scaling your label — insights from the Best Bottles team.",
+    alternates: { canonical: `${SITE_URL}/blog` },
 };
 
 async function getPosts(): Promise<JournalPost[]> {
     if (!isSanityConfigured) return [];
     try {
-        const raw = await client.fetch<JournalPost[]>(JOURNAL_POSTS_QUERY);
+        const { data } = await sanityFetch({ query: JOURNAL_POSTS_QUERY });
+        const raw = (data as JournalPost[]) ?? [];
         return raw.filter((p): p is JournalPost => Boolean(p.slug));
     } catch {
         return [];
@@ -86,6 +89,7 @@ export default async function BlogPage() {
                     </Link>
                 </div>
             </section>
+            <SanityLiveVisualEditing />
         </div>
     );
 }

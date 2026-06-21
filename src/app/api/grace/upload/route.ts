@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 /**
  * Grace AI file upload endpoint.
@@ -13,17 +14,17 @@ import { api } from "../../../../../convex/_generated/api";
  * Returns: { id, blobId, url, mime, size }
  */
 
-const MAX_BYTES = 25 * 1024 * 1024;
+const MAX_BYTES = 8 * 1024 * 1024;
 const ACCEPTED = new Set([
     "image/png",
     "image/jpeg",
     "image/jpg",
     "image/webp",
-    "application/pdf",
-    "application/postscript",
-    "application/illustrator",
-    "image/svg+xml",
 ]);
+
+function isValidOwnerKey(ownerKey: string): boolean {
+    return /^(anon-[a-z0-9-]{8,}|[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$/i.test(ownerKey);
+}
 
 let _convex: ConvexHttpClient | null = null;
 function getConvex() {
@@ -37,6 +38,13 @@ function getConvex() {
 
 export async function POST(req: NextRequest) {
     try {
+        const rateLimited = await enforceGraceRateLimit(req, {
+            route: "grace-upload",
+            limit: 12,
+            windowMs: 60 * 60_000,
+        });
+        if (rateLimited) return rateLimited;
+
         const form = await req.formData();
         const file = form.get("file");
         const ownerKey = (form.get("ownerKey") as string) ?? "";
@@ -49,8 +57,11 @@ export async function POST(req: NextRequest) {
         if (!ownerKey) {
             return NextResponse.json({ error: "Missing ownerKey" }, { status: 400 });
         }
+        if (!isValidOwnerKey(ownerKey)) {
+            return NextResponse.json({ error: "Invalid ownerKey" }, { status: 400 });
+        }
         if (file.size > MAX_BYTES) {
-            return NextResponse.json({ error: "File exceeds 25MB limit." }, { status: 413 });
+            return NextResponse.json({ error: "File exceeds 8MB limit." }, { status: 413 });
         }
         if (!ACCEPTED.has(file.type.toLowerCase())) {
             return NextResponse.json({ error: `Unsupported MIME type: ${file.type}` }, { status: 415 });
@@ -96,7 +107,7 @@ export async function POST(req: NextRequest) {
     } catch (err) {
         console.error("[Grace upload] Error:", err);
         return NextResponse.json(
-            { error: err instanceof Error ? err.message : "Upload failed" },
+            { error: "Upload failed. Please try again." },
             { status: 500 },
         );
     }

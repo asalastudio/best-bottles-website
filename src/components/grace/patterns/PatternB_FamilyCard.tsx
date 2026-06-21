@@ -45,11 +45,27 @@ export default function PatternB_FamilyCard({
 
     const hero = active.heroImageUrl ?? payload.heroImageUrl ?? null;
 
+    const variantBaseLabel = (variant: ProductCard) => variant.capacity ?? `${variant.capacityMl}ml`;
+    const capacityLabelCounts = variants.reduce((counts, variant) => {
+        const label = variantBaseLabel(variant);
+        counts.set(label, (counts.get(label) ?? 0) + 1);
+        return counts;
+    }, new Map<string, number>());
+    const variantColorCounts = variants.reduce((counts, variant) => {
+        const key = `${variantBaseLabel(variant)}|${variant.color ?? ""}`;
+        counts.set(key, (counts.get(key) ?? 0) + 1);
+        return counts;
+    }, new Map<string, number>());
+
     const variantOptions = variants
         .filter((v) => v.capacity || v.capacityMl != null)
         .map((v) => ({
             value: v.graceSku,
-            label: v.capacity ?? `${v.capacityMl}ml`,
+            label: [
+                variantBaseLabel(v),
+                (capacityLabelCounts.get(variantBaseLabel(v)) ?? 0) > 1 ? v.color : null,
+                (variantColorCounts.get(`${variantBaseLabel(v)}|${v.color ?? ""}`) ?? 0) > 1 ? v.applicator : null,
+            ].filter(Boolean).join(" "),
         }));
 
     const specRows = [

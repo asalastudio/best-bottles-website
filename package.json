@@ -2,6 +2,7 @@
   "name": "best-bottles",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "npm@10.9.8",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -10,6 +11,7 @@
     "lint": "eslint",
     "test:smoke": "vitest run tests/catalog.smoke.test.ts",
     "scrape:apothecary": "node scripts/scrape_apothecary_full.mjs",
+    "scrape:legacy-references": "node scripts/scrape_legacy_reference_images.mjs",
     "audit:catalog": "node scripts/export_convex_snapshot.mjs && python3 scripts/scrape_live_catalog.py && python3 scripts/normalize_scrape.py && python3 scripts/diff_scrape_vs_convex.py && python3 scripts/reconcile_patch_plan.py",
     "audit:catalog:apply": "node scripts/apply_safe_patches.mjs --apply --regroup",
     "audit:catalog:dry": "node scripts/apply_safe_patches.mjs",
@@ -25,7 +27,12 @@
     "catalog:set-primary-sku": "node scripts/set_product_group_primary_sku.mjs",
     "audit:madison-supabase": "node scripts/audit_madison_supabase_image_truth.mjs",
     "audit:madison-naming": "node scripts/audit_madison_image_naming.mjs",
+    "audit:product-truth": "node scripts/audit_product_truth_reconciliation.mjs",
+    "audit:convex-grace-skus": "node scripts/audit_convex_grace_sku_truth.mjs",
+    "audit:image-generation": "node scripts/audit_image_generation_coverage.mjs",
+    "audit:staging-ui-reference-images": "node scripts/audit_staging_ui_reference_images.mjs",
     "reconcile:convex-images": "node scripts/reconcile_convex_image_truth.mjs",
+    "reconcile:shopify-variant-media": "node scripts/reconcile_shopify_variant_media_assignments.mjs",
     "shopify:sync:validate": "node scripts/push_convex_to_shopify.mjs --validate-only",
     "shopify:sync:dry": "node scripts/push_convex_to_shopify.mjs",
     "paper-doll:manifest": "node scripts/paper-doll/generate-manifest.mjs",
@@ -58,7 +65,7 @@
     "convex-helpers": "^0.1.114",
     "framer-motion": "^12.34.3",
     "mixpanel-browser": "^2.77.0",
-    "next": "16.1.6",
+    "next": "^16.2.7",
     "next-sanity": "^12.1.6",
     "next-sitemap": "^4.2.3",
     "openai": "^6.34.0",
@@ -73,7 +80,20 @@
     "zod": "^4.3.6"
   },
   "overrides": {
-    "@sanity/telemetry": "0.9.0"
+    "@sanity/telemetry": "0.9.0",
+    "@sanity/uuid": {
+      "uuid": "^11.1.1"
+    },
+    "@vercel/frameworks": {
+      "js-yaml": "^3.14.2"
+    },
+    "next": {
+      ".": "^16.2.7",
+      "postcss": "^8.5.15"
+    },
+    "typeid-js": {
+      "uuid": "^11.1.1"
+    }
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -82,7 +102,7 @@
     "@types/react-dom": "^19",
     "dotenv": "^17.3.1",
     "eslint": "^9",
-    "eslint-config-next": "16.1.6",
+    "eslint-config-next": "^16.2.7",
     "shadcn": "^3.8.5",
     "tailwindcss": "^4",
     "typescript": "5.9.3",

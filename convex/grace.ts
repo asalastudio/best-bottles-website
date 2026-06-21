@@ -392,7 +392,10 @@ export const searchCatalog = query({
                     : null;
                 return {
                     graceSku: p.graceSku,
+                    websiteSku: p.websiteSku,
                     itemName: p.itemName,
+                    shopifyVariantId: p.shopifyVariantId ?? null,
+                    checkoutEligible: Boolean(p.shopifyVariantId),
                     category: p.category,
                     family: p.family,
                     capacity: canonicalVariant.capacity
@@ -414,6 +417,7 @@ export const searchCatalog = query({
                     caseQuantity: p.caseQuantity,
                     useCaseDescription: (p as { useCaseDescription?: string | null }).useCaseDescription ?? null,
                     webPrice1pc: p.webPrice1pc,
+                    webPrice10pc: p.webPrice10pc,
                     webPrice12pc: p.webPrice12pc,
                     stockStatus: p.stockStatus,
                     slug,
@@ -576,21 +580,44 @@ export const getBottleComponents = query({
             : [];
         const matchedFitmentRule = selectBestFitmentRule(fitmentRules, bottle);
         const reconciled = filterGroupedComponentsByFitmentRule(grouped, matchedFitmentRule);
-        const summary: Record<string, Array<{ graceSku: string; itemName: string; webPrice1pc: number | null; capColor: string | null; stockStatus: string | null }>> = {};
+        const summary: Record<string, Array<{
+            graceSku: string;
+            websiteSku: string | null;
+            itemName: string;
+            shopifyVariantId: string | null;
+            checkoutEligible: boolean;
+            webPrice1pc: number | null;
+            webPrice12pc: number | null;
+            capColor: string | null;
+            stockStatus: string | null;
+        }>> = {};
         for (const [type, items] of Object.entries(reconciled)) {
-            summary[type] = items.map((item) => ({
-                graceSku: item.graceSku,
-                itemName: item.itemName,
-                webPrice1pc: item.webPrice1pc,
-                capColor: item.capColor,
-                stockStatus: item.stockStatus,
+            summary[type] = await Promise.all(items.map(async (item) => {
+                const product = await ctx.db
+                    .query("products")
+                    .withIndex("by_graceSku", (q) => q.eq("graceSku", item.graceSku))
+                    .first();
+                return {
+                    graceSku: item.graceSku,
+                    websiteSku: product?.websiteSku ?? null,
+                    itemName: item.itemName,
+                    shopifyVariantId: product?.shopifyVariantId ?? null,
+                    checkoutEligible: Boolean(product?.shopifyVariantId),
+                    webPrice1pc: item.webPrice1pc,
+                    webPrice12pc: item.webPrice12pc,
+                    capColor: item.capColor,
+                    stockStatus: item.stockStatus,
+                };
             }));
         }
 
         return {
             bottle: {
                 graceSku: bottle.graceSku,
+                websiteSku: bottle.websiteSku,
                 itemName: bottle.itemName,
+                shopifyVariantId: bottle.shopifyVariantId ?? null,
+                checkoutEligible: Boolean(bottle.shopifyVariantId),
                 category: bottle.category,
                 family: bottle.family,
                 capacity: bottle.capacity
@@ -598,6 +625,8 @@ export const getBottleComponents = query({
                     : bottle.capacity,
                 color: bottle.color,
                 neckThreadSize: bottle.neckThreadSize,
+                applicator: bottle.applicator,
+                capColor: bottle.capColor,
                 capStyle: bottle.capStyle,
                 heightWithCap: bottle.heightWithCap,
                 heightWithoutCap: bottle.heightWithoutCap,
@@ -607,7 +636,9 @@ export const getBottleComponents = query({
                 caseQuantity: bottle.caseQuantity,
                 useCaseDescription: (bottle as { useCaseDescription?: string | null }).useCaseDescription ?? null,
                 webPrice1pc: bottle.webPrice1pc,
+                webPrice10pc: bottle.webPrice10pc,
                 webPrice12pc: bottle.webPrice12pc,
+                stockStatus: bottle.stockStatus,
             },
             componentTypes: Object.keys(summary),
             totalComponents: Object.values(summary).reduce((s, arr) => s + arr.length, 0),

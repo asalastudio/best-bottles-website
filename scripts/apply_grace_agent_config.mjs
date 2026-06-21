@@ -12,7 +12,8 @@
  *   conversation_config.agent.prompt.temperature
  *   conversation_config.agent.prompt.enable_parallel_tool_calls
  *   conversation_config.agent.prompt.prompt           — the full system prompt text
- *   conversation_config.agent.prompt.tools            — all 12 client-tool definitions
+ *   conversation_config.agent.prompt.tools            — resolved tool definitions from ElevenLabs
+ *   conversation_config.agent.prompt.tool_ids         — registered ElevenLabs tool resources
  *
  * Everything else (voice, webhooks, auth, coaching settings) stays whatever
  * it is on ElevenLabs — we don't touch it.
@@ -137,6 +138,16 @@ function extract(full, agentId) {
     };
 }
 
+function comparableConversationConfig(config) {
+    const c = JSON.parse(JSON.stringify(config));
+    const p = c?.agent?.prompt;
+    if (p) {
+        p.tools = Array.isArray(p.tools) ? p.tools.map((tool) => tool?.name ?? tool).sort() : [];
+        delete p.tool_ids;
+    }
+    return c;
+}
+
 // ── Deep diff — returns list of changed leaf paths ──────────────────────────
 function deepDiff(a, b, path = "") {
     const diffs = [];
@@ -204,7 +215,11 @@ async function runDiff() {
     const canonical = loadCanonical();
     section(`Diffing canonical ⟷ live for ${canonical.agent_id}`);
     const live = extract(await fetchLive(canonical.agent_id), canonical.agent_id);
-    const diffs = deepDiff(canonical.conversation_config, live.conversation_config, "conversation_config");
+    const diffs = deepDiff(
+        comparableConversationConfig(canonical.conversation_config),
+        comparableConversationConfig(live.conversation_config),
+        "conversation_config",
+    );
     summarizeDiff(diffs);
 }
 
@@ -213,7 +228,11 @@ async function runApply() {
     const canonical = loadCanonical();
     section(`${WRITE ? "APPLY" : "DRY-RUN"} canonical → live for ${canonical.agent_id}`);
     const live = extract(await fetchLive(canonical.agent_id), canonical.agent_id);
-    const diffs = deepDiff(canonical.conversation_config, live.conversation_config, "conversation_config");
+    const diffs = deepDiff(
+        comparableConversationConfig(canonical.conversation_config),
+        comparableConversationConfig(live.conversation_config),
+        "conversation_config",
+    );
     if (diffs.length === 0) {
         ok("Live already matches canonical — nothing to do.");
         return;
@@ -226,32 +245,12 @@ async function runApply() {
     }
     console.log();
     info("PATCHing live agent...");
-    // ElevenLabs's PATCH semantics: sending `tools` and `tool_ids` together
-    // is rejected; sending only `tools` doesn't clear server-stored tool_ids
-    // (the agent keeps using them). We send `tools` AND explicitly empty
-    // `tool_ids: []` to force a switch from registered Tool resources to
-    // our inline canonical definitions.
-    //
-    // …except ElevenLabs ALSO rejects `tool_ids: []` alongside `tools` for
-    // the same "both" reason. So we do it in two steps:
-    //   1. Clear tool_ids first (tools omitted)
-    //   2. Send the inline tools
-    const baseConfig = JSON.parse(JSON.stringify(canonical.conversation_config));
-    delete baseConfig.agent.prompt.tools;
-    delete baseConfig.agent.prompt.tool_ids;
-
-    const clear = await fetch(`https://api.elevenlabs.io/v1/convai/agents/${canonical.agent_id}`, {
-        method: "PATCH",
-        headers: { "xi-api-key": API_KEY, "Content-Type": "application/json" },
-        body: JSON.stringify({ conversation_config: { agent: { prompt: { tool_ids: [] } } } }),
-    });
-    if (!clear.ok) {
-        console.error(`${R}✗${X} Step 1 (clear tool_ids) failed: HTTP ${clear.status} — ${(await clear.text()).slice(0, 500)}`);
-        process.exit(2);
-    }
-
+    // ElevenLabs distinguishes registered Tool resources (`tool_ids`) from
+    // resolved inline `tools`. The live API may return resolved `tools`, but
+    // PATCHing inline client tools can be rejected or stripped. Keep registered
+    // tool_ids as the source of truth and never clear them during apply.
     const payload = JSON.parse(JSON.stringify(canonical.conversation_config));
-    delete payload.agent.prompt.tool_ids;
+    delete payload.agent.prompt.tools;
     const res = await fetch(`https://api.elevenlabs.io/v1/convai/agents/${canonical.agent_id}`, {
         method: "PATCH",
         headers: { "xi-api-key": API_KEY, "Content-Type": "application/json" },
@@ -263,7 +262,11 @@ async function runApply() {
     }
     const updated = await res.json();
     const postCheck = extract(updated, canonical.agent_id);
-    const residual = deepDiff(canonical.conversation_config, postCheck.conversation_config, "conversation_config");
+    const residual = deepDiff(
+        comparableConversationConfig(canonical.conversation_config),
+        comparableConversationConfig(postCheck.conversation_config),
+        "conversation_config",
+    );
     if (residual.length === 0) {
         ok("Live agent now matches canonical.");
     } else {

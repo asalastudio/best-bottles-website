@@ -43,6 +43,14 @@ export type GalleryImage = {
     label: string;
     /** Accessibility alt text. Defaults to label if omitted. */
     alt?: string;
+    auditMeta?: {
+        surface: string;
+        family?: string | null;
+        productGroupSlug?: string | null;
+        graceSku?: string | null;
+        websiteSku?: string | null;
+        shopifyVariantId?: string | null;
+    };
 };
 
 export type GalleryMode =
@@ -67,6 +75,10 @@ interface ProductImageGalleryProps {
     mode?: GalleryMode;
     /** Optional callback when the active thumbnail changes. */
     onActiveChange?: (index: number, image: GalleryImage) => void;
+}
+
+function isRemoteProductImageUrl(value: string): boolean {
+    return /^https?:\/\//i.test(value);
 }
 
 export default function ProductImageGallery({
@@ -155,9 +167,17 @@ export default function ProductImageGallery({
                         src={activeImage.url}
                         alt={activeImage.alt ?? primaryAlt}
                         fill
-                        priority
+                        loading="eager"
+                        fetchPriority="high"
+                        data-bb-image-audit={activeImage.auditMeta?.surface ?? "pdp-gallery"}
+                        data-bb-family={activeImage.auditMeta?.family ?? undefined}
+                        data-bb-product-group-slug={activeImage.auditMeta?.productGroupSlug ?? undefined}
+                        data-bb-grace-sku={activeImage.auditMeta?.graceSku ?? undefined}
+                        data-bb-website-sku={activeImage.auditMeta?.websiteSku ?? undefined}
+                        data-bb-shopify-variant-id={activeImage.auditMeta?.shopifyVariantId ?? undefined}
                         sizes="(min-width: 1024px) 50vw, 100vw"
                         className={`object-contain ${mainPadding}`}
+                        unoptimized={isRemoteProductImageUrl(activeImage.url)}
                     />
                     {badge && (
                         <div className="absolute top-4 left-4 pointer-events-none">
@@ -205,7 +225,14 @@ export default function ProductImageGallery({
                                     alt={img.label}
                                     fill
                                     sizes="80px"
+                                    data-bb-image-audit={img.auditMeta?.surface ?? "pdp-gallery-thumb"}
+                                    data-bb-family={img.auditMeta?.family ?? undefined}
+                                    data-bb-product-group-slug={img.auditMeta?.productGroupSlug ?? undefined}
+                                    data-bb-grace-sku={img.auditMeta?.graceSku ?? undefined}
+                                    data-bb-website-sku={img.auditMeta?.websiteSku ?? undefined}
+                                    data-bb-shopify-variant-id={img.auditMeta?.shopifyVariantId ?? undefined}
                                     className="object-contain p-1.5"
+                                    unoptimized={isRemoteProductImageUrl(img.url)}
                                 />
                                 {isActive && (
                                     <span className="absolute inset-x-0 bottom-0 bg-obsidian/85 text-white text-[8px] uppercase tracking-wider py-0.5 text-center font-medium select-none">
@@ -247,6 +274,7 @@ export default function ProductImageGallery({
                                 height={1200}
                                 sizes="100vw"
                                 className="max-w-full max-h-[80vh] object-contain"
+                                unoptimized={isRemoteProductImageUrl(activeImage.url)}
                             />
 
                             {/* Footer controls — prev / label / next */}

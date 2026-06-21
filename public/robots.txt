@@ -8,6 +8,12 @@ Disallow: /api/
 Disallow: /portal/
 Disallow: /studio/
 Disallow: /sign-in/
+Disallow: /sign-up/
+Disallow: /cart
+Disallow: /grace-workspace
+Disallow: /example
+Disallow: /fitment-demo
+Disallow: /tech-stack
 Disallow: /_next/
 
 # GPTBot

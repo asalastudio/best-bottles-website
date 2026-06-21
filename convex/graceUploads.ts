@@ -15,17 +15,13 @@ import { v } from "convex/values";
  * (Patterns H and I both need this).
  */
 
-const MAX_BYTES = 25 * 1024 * 1024; // PRD: 25MB cap
+const MAX_BYTES = 8 * 1024 * 1024;
 
 const ACCEPTED_MIMES = new Set([
     "image/png",
     "image/jpeg",
     "image/jpg",
     "image/webp",
-    "application/pdf",
-    "application/postscript", // .ai
-    "application/illustrator", // some clients
-    "image/svg+xml",
 ]);
 
 function verifyWriteToken(writeToken: string) {

@@ -37,6 +37,26 @@ export interface CartItem {
     category?: string | null;
     neckThreadSize?: string | null;
     compatibleCount?: number;
+    webPrice1pc?: number | null;
+    webPrice10pc?: number | null;
+    webPrice12pc?: number | null;
+}
+
+export function resolveUnitPrice(
+    quantity: number,
+    prices: {
+        webPrice1pc?: number | null;
+        webPrice10pc?: number | null;
+        webPrice12pc?: number | null;
+    }
+): number | null {
+    const p1 = prices.webPrice1pc ?? null;
+    const p10 = prices.webPrice10pc ?? null;
+    const p12 = prices.webPrice12pc ?? null;
+
+    if (p12 != null && quantity >= 12) return p12;
+    if (p10 != null && quantity >= 10) return p10;
+    return p1;
 }
 
 interface CartContextValue {
@@ -110,13 +130,46 @@ export function CartProvider({ children }: { children: ReactNode }) {
             for (const item of newItems) {
                 const existing = updated.find((i) => i.graceSku === item.graceSku);
                 if (existing) {
+                    const combinedQty = existing.quantity + item.quantity;
+                    const webPrice1pc = item.webPrice1pc ?? existing.webPrice1pc ?? existing.unitPrice;
+                    const webPrice10pc = item.webPrice10pc ?? existing.webPrice10pc ?? null;
+                    const webPrice12pc = item.webPrice12pc ?? existing.webPrice12pc ?? null;
+                    const shopifyVariantId = item.shopifyVariantId ?? existing.shopifyVariantId ?? null;
+                    const websiteSku = item.websiteSku ?? existing.websiteSku ?? null;
+                    const checkoutEligible = item.checkoutEligible ?? existing.checkoutEligible ?? Boolean(shopifyVariantId);
+
+                    const activePrice = resolveUnitPrice(combinedQty, {
+                        webPrice1pc,
+                        webPrice10pc,
+                        webPrice12pc,
+                    });
+
                     Object.assign(existing, {
                         ...existing,
                         ...item,
-                        quantity: existing.quantity + item.quantity,
+                        quantity: combinedQty,
+                        unitPrice: activePrice,
+                        checkoutEligible,
+                        shopifyVariantId,
+                        websiteSku,
+                        webPrice1pc,
+                        webPrice10pc,
+                        webPrice12pc,
                     });
                 } else {
-                    updated.push({ ...item });
+                    const shopifyVariantId = item.shopifyVariantId ?? null;
+                    const checkoutEligible = item.checkoutEligible ?? Boolean(shopifyVariantId);
+                    const activePrice = resolveUnitPrice(item.quantity, {
+                        webPrice1pc: item.webPrice1pc ?? item.unitPrice,
+                        webPrice10pc: item.webPrice10pc ?? null,
+                        webPrice12pc: item.webPrice12pc ?? null,
+                    });
+                    updated.push({
+                        ...item,
+                        checkoutEligible,
+                        shopifyVariantId,
+                        unitPrice: activePrice,
+                    });
                 }
             }
             return updated;
@@ -136,7 +189,17 @@ export function CartProvider({ children }: { children: ReactNode }) {
             setItems((prev) => prev.filter((i) => i.graceSku !== graceSku));
         } else {
             setItems((prev) =>
-                prev.map((i) => (i.graceSku === graceSku ? { ...i, quantity } : i))
+                prev.map((i) => {
+                    if (i.graceSku === graceSku) {
+                        const activePrice = resolveUnitPrice(quantity, {
+                            webPrice1pc: i.webPrice1pc ?? i.unitPrice,
+                            webPrice10pc: i.webPrice10pc ?? null,
+                            webPrice12pc: i.webPrice12pc ?? null,
+                        });
+                        return { ...i, quantity, unitPrice: activePrice };
+                    }
+                    return i;
+                })
             );
         }
     }, []);
@@ -170,6 +233,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
                 body: JSON.stringify({
                     items: checkoutReadyItems.map((i) => ({
                         sku: i.graceSku,
+                        websiteSku: i.websiteSku,
+                        shopifyVariantId: i.shopifyVariantId,
                         quantity: i.quantity,
                     })),
                 }),

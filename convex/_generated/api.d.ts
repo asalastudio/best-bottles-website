@@ -24,6 +24,7 @@ import type * as fixOrphanProducts from "../fixOrphanProducts.js";
 import type * as forms from "../forms.js";
 import type * as grace from "../grace.js";
 import type * as gracePrompt from "../gracePrompt.js";
+import type * as graceRateLimits from "../graceRateLimits.js";
 import type * as graceSearchUtils from "../graceSearchUtils.js";
 import type * as graceShortlists from "../graceShortlists.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
@@ -63,6 +64,7 @@ declare const fullApi: ApiFromModules<{
   forms: typeof forms;
   grace: typeof grace;
   gracePrompt: typeof gracePrompt;
+  graceRateLimits: typeof graceRateLimits;
   graceSearchUtils: typeof graceSearchUtils;
   graceShortlists: typeof graceShortlists;
   graceToolDefs: typeof graceToolDefs;

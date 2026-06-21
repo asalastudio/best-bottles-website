@@ -31,7 +31,7 @@ const mixpanelAdapter: AnalyticsAdapter = {
     mixpanel.init(token, {
       autocapture: true,
       track_pageview: "full-url",
-      record_sessions_percent: 100,
+      record_sessions_percent: 0,
       ...options,
     });
   },
@@ -117,8 +117,56 @@ export const analytics = {
     searchTerm?: string;
     family?: string;
     success: boolean;
+    status?: string;
+    durationMs?: number;
+    errorCode?: string;
   }) {
     adapter.track("Grace Tool Called", properties);
+  },
+
+  graceNoMatch(properties: {
+    searchTerm: string;
+    family?: string;
+    suggestedQueries?: string;
+  }) {
+    adapter.track("Grace No Match", properties);
+  },
+
+  graceConnectionFailed(properties: {
+    mode: "voice" | "text";
+    error: string;
+  }) {
+    adapter.track("Grace Connection Failed", properties);
+  },
+
+  graceMicFallback(properties: {
+    reason: string;
+  }) {
+    adapter.track("Grace Mic Fallback", properties);
+  },
+
+  graceCartProposalShown(properties: {
+    itemCount: number;
+    skus: string;
+    estimatedValue: number;
+  }) {
+    adapter.track("Grace Cart Proposal Shown", properties);
+  },
+
+  graceCartProposalConfirmed(properties: {
+    itemCount: number;
+    skus: string;
+    cartValueDelta: number;
+  }) {
+    adapter.track("Grace Cart Proposal Confirmed", properties);
+  },
+
+  graceMobilePdpOpened(properties: {
+    pathname: string;
+    productName?: string;
+    productFamily?: string;
+  }) {
+    adapter.track("Grace Mobile PDP Opened", properties);
   },
 
   graceConversationEnded(properties: {

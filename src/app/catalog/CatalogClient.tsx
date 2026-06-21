@@ -12,6 +12,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { useGrace } from "@/components/useGrace";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -255,6 +256,10 @@ function getShopifyCatalogThumbnail(variant: ProductCardVariantPreviewSource | n
     return null;
 }
 
+function getFirstPreviewImageUrl(variantPreviews: ProductCardVariantPreview[] | null | undefined): string | null {
+    return variantPreviews?.find((preview) => usableProductImageUrl(preview.imageUrl))?.imageUrl ?? null;
+}
+
 function ProductGroupCard({
     group,
     index,
@@ -262,6 +267,8 @@ function ProductGroupCard({
     variantPreviews,
     displayName,
     thumbnailUrl,
+    primaryGraceSku,
+    primaryWebsiteSku,
 }: {
     group: CatalogGroup;
     index: number;
@@ -269,9 +276,16 @@ function ProductGroupCard({
     variantPreviews?: ProductCardVariantPreview[];
     displayName?: string;
     thumbnailUrl?: string | null;
+    primaryGraceSku?: string | null;
+    primaryWebsiteSku?: string | null;
 }) {
     const href = productGroupHref(group, applicatorParam);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const defaultImageUrl =
+        usableProductImageUrl(group.heroImageUrl) ??
+        thumbnailUrl ??
+        getFirstPreviewImageUrl(variantPreviews) ??
+        null;
     const cardSpecs = [
         { label: "Size", value: formatCatalogSpec(group.capacity) },
         { label: "Color", value: formatCatalogSpec(group.color) },
@@ -290,12 +304,20 @@ function ProductGroupCard({
             <ProductCardImagePreview
                 productTitle={customerDisplayName}
                 defaultImage={{
-                    url: usableProductImageUrl(group.heroImageUrl) ?? thumbnailUrl ?? null,
+                    url: defaultImageUrl,
                     alt: customerDisplayName,
                 }}
-                placeholderLabel={group.family}
+                placeholderLabel={group.family ? `${group.family}\nShopify media needed` : "Shopify media needed"}
                 variantPreviews={variantPreviews}
                 productHref={href}
+                maxVisibleSwatches={6}
+                auditMeta={{
+                    surface: "catalog-card",
+                    family: group.family,
+                    productGroupSlug: group.slug,
+                    graceSku: primaryGraceSku,
+                    websiteSku: primaryWebsiteSku,
+                }}
             />
 
             <Link href={href} className="flex flex-1 flex-col p-5">
@@ -384,6 +406,7 @@ function CheckboxItem({
                 type="checkbox"
                 checked={checked}
                 onChange={onChange}
+                aria-label={`Filter by ${label}`}
                 className="w-4 h-4 rounded border-champagne text-muted-gold focus:ring-muted-gold/30 cursor-pointer"
             />
             {swatch && (
@@ -444,6 +467,7 @@ function PriceRangeSlider({
                         step={0.01}
                         value={effectiveMin}
                         onChange={(e) => handleChange(Number(e.target.value), effectiveMax)}
+                        aria-label="Minimum price"
                         className="flex-1 h-1.5 accent-muted-gold cursor-pointer"
                     />
                 </div>
@@ -456,6 +480,7 @@ function PriceRangeSlider({
                         step={0.01}
                         value={effectiveMax}
                         onChange={(e) => handleChange(effectiveMin, Number(e.target.value))}
+                        aria-label="Maximum price"
                         className="flex-1 h-1.5 accent-muted-gold cursor-pointer"
                     />
                 </div>
@@ -809,6 +834,8 @@ function LineItemRow({
     applicatorParam,
     thumbnailUrl,
     displayName,
+    primaryGraceSku,
+    primaryWebsiteSku,
 }: {
     group: CatalogGroup;
     sku: string;
@@ -816,6 +843,8 @@ function LineItemRow({
     applicatorParam?: string | null;
     thumbnailUrl?: string | null;
     displayName?: string;
+    primaryGraceSku?: string | null;
+    primaryWebsiteSku?: string | null;
 }) {
     const [quantity, setQuantity] = useState(1);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
@@ -840,12 +869,24 @@ function LineItemRow({
             {/* Image + Name */}
             <td className="py-3 px-4">
                 <Link href={href} className="flex items-center gap-4">
-                    <div className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative">
+                    <div
+                        className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
+                        data-bb-image-audit="catalog-line-item"
+                        data-bb-family={group.family ?? undefined}
+                        data-bb-product-group-slug={group.slug}
+                        data-bb-grace-sku={primaryGraceSku ?? undefined}
+                        data-bb-website-sku={primaryWebsiteSku ?? sku}
+                    >
                         {thumbnailUrl ? (
                             <Image
                                 src={thumbnailUrl}
                                 alt={customerDisplayName}
                                 fill
+                                data-bb-image-audit="catalog-line-item"
+                                data-bb-family={group.family ?? undefined}
+                                data-bb-product-group-slug={group.slug}
+                                data-bb-grace-sku={primaryGraceSku ?? undefined}
+                                data-bb-website-sku={primaryWebsiteSku ?? sku}
                                 className="object-contain p-1"
                                 sizes="56px"
                                 unoptimized
@@ -956,6 +997,8 @@ function LineItemMobileCard({
     applicatorParam,
     thumbnailUrl,
     displayName,
+    primaryGraceSku,
+    primaryWebsiteSku,
 }: {
     group: CatalogGroup;
     sku: string;
@@ -963,6 +1006,8 @@ function LineItemMobileCard({
     applicatorParam?: string | null;
     thumbnailUrl?: string | null;
     displayName?: string;
+    primaryGraceSku?: string | null;
+    primaryWebsiteSku?: string | null;
 }) {
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
@@ -987,12 +1032,24 @@ function LineItemMobileCard({
         >
             <div className="flex items-center p-3 gap-3">
                 {/* Thumbnail */}
-                <div className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative">
+                <div
+                    className="w-14 h-14 shrink-0 bg-travertine rounded border border-champagne/40 flex items-center justify-center overflow-hidden relative"
+                    data-bb-image-audit="catalog-mobile-line-item"
+                    data-bb-family={group.family ?? undefined}
+                    data-bb-product-group-slug={group.slug}
+                    data-bb-grace-sku={primaryGraceSku ?? undefined}
+                    data-bb-website-sku={primaryWebsiteSku ?? sku}
+                >
                     {thumbnailUrl ? (
                         <Image
                             src={thumbnailUrl}
                             alt={customerDisplayName}
                             fill
+                            data-bb-image-audit="catalog-mobile-line-item"
+                            data-bb-family={group.family ?? undefined}
+                            data-bb-product-group-slug={group.slug}
+                            data-bb-grace-sku={primaryGraceSku ?? undefined}
+                            data-bb-website-sku={primaryWebsiteSku ?? sku}
                             className="object-contain p-1"
                             sizes="56px"
                             unoptimized
@@ -1120,12 +1177,14 @@ function LineItemTable({
     applicatorParam,
     thumbnailMap,
     displayNameMap,
+    primarySkuMetaMap,
 }: {
     groups: CatalogGroup[];
     skuMap: Map<string, string>;
     applicatorParam?: string | null;
     thumbnailMap?: Map<string, string>;
     displayNameMap?: Map<string, string>;
+    primarySkuMetaMap?: Map<string, CatalogGroupPrimarySku>;
 }) {
     return (
         <div className="w-full overflow-x-auto">
@@ -1168,6 +1227,8 @@ function LineItemTable({
                             applicatorParam={applicatorParam}
                             thumbnailUrl={thumbnailMap?.get(group._id)}
                             displayName={displayNameMap?.get(group._id)}
+                            primaryGraceSku={primarySkuMetaMap?.get(group._id)?.graceSku}
+                            primaryWebsiteSku={primarySkuMetaMap?.get(group._id)?.websiteSku}
                         />
                     ))}
                 </tbody>
@@ -1184,12 +1245,14 @@ function LineItemMobileGrid({
     applicatorParam,
     thumbnailMap,
     displayNameMap,
+    primarySkuMetaMap,
 }: {
     groups: CatalogGroup[];
     skuMap: Map<string, string>;
     applicatorParam?: string | null;
     thumbnailMap?: Map<string, string>;
     displayNameMap?: Map<string, string>;
+    primarySkuMetaMap?: Map<string, CatalogGroupPrimarySku>;
 }) {
     return (
         <div className="space-y-3">
@@ -1202,6 +1265,8 @@ function LineItemMobileGrid({
                     applicatorParam={applicatorParam}
                     thumbnailUrl={thumbnailMap?.get(group._id)}
                     displayName={displayNameMap?.get(group._id)}
+                    primaryGraceSku={primarySkuMetaMap?.get(group._id)?.graceSku}
+                    primaryWebsiteSku={primarySkuMetaMap?.get(group._id)?.websiteSku}
                 />
             ))}
         </div>
@@ -1315,6 +1380,13 @@ export default function CatalogClient({
         const next = new Map<string, string>();
         for (const row of activeResult.primarySkus ?? []) {
             next.set(row.groupId, row.websiteSku ?? row.graceSku ?? "—");
+        }
+        return next;
+    }, [activeResult.primarySkus]);
+    const primarySkuMetaMap = useMemo(() => {
+        const next = new Map<string, CatalogGroupPrimarySku>();
+        for (const row of activeResult.primarySkus ?? []) {
+            next.set(row.groupId, row);
         }
         return next;
     }, [activeResult.primarySkus]);
@@ -1577,10 +1649,39 @@ export default function CatalogClient({
         { label: summarizeFilterValue(filters.neckThreadSizes, "Neck"), active: filters.neckThreadSizes.length > 0 },
         { label: summarizeFilterValue(filters.families, "Family"), active: filters.families.length > 0 },
     ];
-
+    const quickApplicatorBuckets = APPLICATOR_BUCKETS.filter((bucket) => (
+        (facets?.applicators?.[bucket.value] ?? 0) > 0 || filters.applicators.includes(bucket.value)
+    ));
+    const mobileQuickApplicatorBuckets = filters.applicators.length > 0
+        ? quickApplicatorBuckets.filter((bucket) => filters.applicators.includes(bucket.value))
+        : quickApplicatorBuckets;
+    const renderQuickApplicatorButton = (bucket: (typeof APPLICATOR_BUCKETS)[number]) => {
+        const isActive = filters.applicators.includes(bucket.value);
+        return (
+            <button
+                key={bucket.value}
+                onClick={() => {
+                    handleFilterChange({
+                        applicators: isActive
+                            ? filters.applicators.filter((a) => a !== bucket.value)
+                            : [...filters.applicators, bucket.value],
+                    });
+                }}
+                aria-pressed={isActive}
+                data-testid="catalog-quick-applicator"
+                className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors whitespace-nowrap ${isActive
+                    ? "bg-obsidian text-white border-obsidian"
+                    : "bg-white border-champagne text-obsidian hover:border-muted-gold"
+                    }`}
+            >
+                {bucket.label} ({facets?.applicators?.[bucket.value] ?? 0})
+            </button>
+        );
+    };
     return (
         <main className="min-h-screen bg-warm-white pt-[160px] lg:pt-[120px]">
             <Navbar variant="catalog" initialSearchValue={filters.search || undefined} />
+            <Breadcrumbs steps={[{ label: "Catalog" }]} />
 
             <div className="max-w-[1720px] mx-auto px-4 sm:px-6 py-4 sm:py-8">
 
@@ -1679,6 +1780,7 @@ export default function CatalogClient({
                         <select
                             value={sortBy}
                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
+                            aria-label="Sort catalog results"
                             className="w-full appearance-none bg-white border border-champagne rounded-lg px-3 py-2.5 text-sm text-obsidian pr-8 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none"
                         >
                             {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
@@ -1817,6 +1919,7 @@ export default function CatalogClient({
                                         <select
                                             value={sortBy}
                                             onChange={(e) => handleSortChange(e.target.value as SortValue)}
+                                            aria-label="Sort visible catalog results"
                                             className="appearance-none bg-white border border-champagne rounded-lg px-3 py-1.5 text-xs text-obsidian pr-7 focus:border-muted-gold focus:ring-2 focus:ring-muted-gold/20 outline-none cursor-pointer"
                                         >
                                             {SORT_OPTIONS.filter((opt) => opt.value !== "best-match" || filters.search).map((opt) => (
@@ -1847,40 +1950,36 @@ export default function CatalogClient({
 
                         {/* Quick applicator chips */}
                         {facets && Object.keys(facets.applicators).length > 0 && (
-                            <div className="flex gap-2 mb-4 sm:mb-6 overflow-x-auto pb-1 hide-scroll sm:flex-wrap">
-                                <button
-                                    onClick={() => handleFilterChange({ applicators: [] })}
-                                    aria-pressed={filters.applicators.length === 0}
-                                    data-testid="catalog-quick-applicator"
-                                    className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
-                                        ? "bg-obsidian text-white border-obsidian"
-                                        : "bg-white border-champagne text-obsidian hover:border-muted-gold"
-                                        }`}
-                                >
-                                    All Bottles
-                                </button>
-                                {APPLICATOR_BUCKETS.filter((b) => (facets.applicators[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
+                            <>
+                                <div className="lg:hidden flex gap-2 mb-4 overflow-x-auto pb-1 hide-scroll">
                                     <button
-                                        key={bucket.value}
-                                        onClick={() => {
-                                            const isActive = filters.applicators.includes(bucket.value);
-                                            handleFilterChange({
-                                                applicators: isActive
-                                                    ? filters.applicators.filter((a) => a !== bucket.value)
-                                                    : [...filters.applicators, bucket.value],
-                                            });
-                                        }}
-                                        aria-pressed={filters.applicators.includes(bucket.value)}
+                                        onClick={() => handleFilterChange({ applicators: [] })}
+                                        aria-pressed={filters.applicators.length === 0}
                                         data-testid="catalog-quick-applicator"
-                                        className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors whitespace-nowrap ${filters.applicators.includes(bucket.value)
+                                        className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
                                             ? "bg-obsidian text-white border-obsidian"
                                             : "bg-white border-champagne text-obsidian hover:border-muted-gold"
                                             }`}
                                     >
-                                        {bucket.label} ({facets.applicators[bucket.value]})
+                                        All Bottles
                                     </button>
-                                ))}
-                            </div>
+                                    {mobileQuickApplicatorBuckets.map(renderQuickApplicatorButton)}
+                                </div>
+                                <div className="hidden lg:flex gap-2 mb-6 overflow-x-auto pb-1 hide-scroll sm:flex-wrap">
+                                    <button
+                                        onClick={() => handleFilterChange({ applicators: [] })}
+                                        aria-pressed={filters.applicators.length === 0}
+                                        data-testid="catalog-quick-applicator"
+                                        className={`shrink-0 min-h-11 px-4 py-2 text-xs font-semibold uppercase tracking-wider rounded-full border transition-colors ${filters.applicators.length === 0
+                                            ? "bg-obsidian text-white border-obsidian"
+                                            : "bg-white border-champagne text-obsidian hover:border-muted-gold"
+                                            }`}
+                                    >
+                                        All Bottles
+                                    </button>
+                                    {quickApplicatorBuckets.map(renderQuickApplicatorButton)}
+                                </div>
+                            </>
                         )}
 
                         <div className="lg:hidden -mt-2 mb-4 flex gap-2 overflow-x-auto pb-1 hide-scroll">
@@ -1984,50 +2083,56 @@ export default function CatalogClient({
                         </AnimatePresence>
 
                         {/* Product Display — Visual Grid or Line Items */}
-                        {visibleProducts.length > 0 && viewMode === "visual" && (
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
-                                {visibleProducts.map((group: CatalogGroup, pIndex: number) => (
-                                    <ProductGroupCard
-                                        key={group._id}
-                                        group={group}
-                                        index={pIndex}
-                                        applicatorParam={visualApplicatorParam}
-                                        variantPreviews={variantPreviewMap.get(group._id)}
-                                        displayName={customerNameMap.get(group._id)}
-                                        thumbnailUrl={catalogThumbnailMap.get(group._id)}
-                                    />
-                                ))}
-                            </div>
-                        )}
+                        <div className={`transition-opacity duration-300 ${isFetchingCatalog && activeResult.items.length > 0 ? "opacity-50 pointer-events-none" : "opacity-100"}`}>
+                            {visibleProducts.length > 0 && viewMode === "visual" && (
+                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                                    {visibleProducts.map((group: CatalogGroup, pIndex: number) => (
+                                        <ProductGroupCard
+                                            key={group._id}
+                                            group={group}
+                                            index={pIndex}
+                                            applicatorParam={visualApplicatorParam}
+                                            variantPreviews={variantPreviewMap.get(group._id)}
+                                            displayName={customerNameMap.get(group._id)}
+                                            thumbnailUrl={catalogThumbnailMap.get(group._id)}
+                                            primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}
+                                            primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
+                                        />
+                                    ))}
+                                </div>
+                            )}
 
-                        {/* Line Item View — Desktop Table */}
-                        {visibleProducts.length > 0 && viewMode === "line" && (
-                            <>
-                                {/* Desktop: Table aligned with header */}
-                                <div className="hidden lg:block">
-                                    <div className="bg-white border border-champagne/40 rounded-lg overflow-hidden shadow-sm">
-                                        <LineItemTable
+                            {/* Line Item View — Desktop Table */}
+                            {visibleProducts.length > 0 && viewMode === "line" && (
+                                <>
+                                    {/* Desktop: Table aligned with header */}
+                                    <div className="hidden lg:block">
+                                        <div className="bg-white border border-champagne/40 rounded-lg overflow-hidden shadow-sm">
+                                            <LineItemTable
+                                                groups={visibleProducts}
+                                                skuMap={skuMap}
+                                                applicatorParam={visualApplicatorParam}
+                                                thumbnailMap={catalogThumbnailMap}
+                                                displayNameMap={customerNameMap}
+                                                primarySkuMetaMap={primarySkuMetaMap}
+                                            />
+                                        </div>
+                                    </div>
+
+                                    {/* Mobile: Compact cards */}
+                                    <div className="lg:hidden">
+                                        <LineItemMobileGrid
                                             groups={visibleProducts}
                                             skuMap={skuMap}
                                             applicatorParam={visualApplicatorParam}
                                             thumbnailMap={catalogThumbnailMap}
                                             displayNameMap={customerNameMap}
+                                            primarySkuMetaMap={primarySkuMetaMap}
                                         />
                                     </div>
-                                </div>
-
-                                {/* Mobile: Compact cards */}
-                                <div className="lg:hidden">
-                                    <LineItemMobileGrid
-                                        groups={visibleProducts}
-                                        skuMap={skuMap}
-                                        applicatorParam={visualApplicatorParam}
-                                        thumbnailMap={catalogThumbnailMap}
-                                        displayNameMap={customerNameMap}
-                                    />
-                                </div>
-                            </>
-                        )}
+                                </>
+                            )}
+                        </div>
 
                         {/* Load More */}
                         {hasMore && (
@@ -2052,6 +2157,7 @@ export default function CatalogClient({
                                 </p>
                             </div>
                         )}
+
                     </div>
                 </div>
             </div>

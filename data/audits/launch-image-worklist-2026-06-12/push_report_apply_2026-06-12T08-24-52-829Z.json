@@ -1,0 +1,425 @@
+{
+  "generatedAt": "2026-06-12T08:24:52.829Z",
+  "mode": "apply",
+  "family": "ALL",
+  "manifest": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/data/audits/launch-image-worklist-2026-06-12/2_generated_but_not_in_shopify.csv",
+  "convexUrl": "https://helpful-elephant-638.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "manifestRows": 1347,
+    "eligibleAfterFilters": 1302,
+    "selected": 1302,
+    "products": 220,
+    "uploaded": 1302,
+    "convexPatched": 1302,
+    "failed": 0,
+    "skippedUntrustedSource": 42,
+    "skippedUnmatchedSku": 0,
+    "skippedDuplicateSku": 0,
+    "skippedAlreadyHasImage": 3
+  },
+  "samples": {
+    "plan": [
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-RED",
+        "websiteSku": "GBRndFrst128AnSpRed",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with red vintage style bulb sprayer with shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the be",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-RED_1779532381920_7k4a97.png",
+        "variantId": "gid://shopify/ProductVariant/53343606800676",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray"
+      },
+      {
+        "graceSku": "LB-ELG-FRS-100ML-LPM-MGLD",
+        "websiteSku": "LBElgFrst100LtnMtGl",
+        "family": "Elegant",
+        "alt": "Elegant design 100 ml, 3 1/2oz frosted glass bottle with matte gold lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Elegant bottle is a family of bottles ",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Elegant/LB-ELG-FRS-100ML-LPM-MGLD_1779482824690_5z4a7b.png",
+        "variantId": "gid://shopify/ProductVariant/53343609094436",
+        "productId": "gid://shopify/Product/10433890451748",
+        "productHandle": "elegant-100ml-frosted-18-415-lotionpump"
+      },
+      {
+        "graceSku": "LB-CIR-FRS-100ML-LPM-COCP",
+        "websiteSku": "LBCrclFrst100LtnClOvrCap",
+        "family": "Circle",
+        "alt": "Circle design 100 ml, 3 1/2oz frosted glass bottle with with a matte silver collar treatment pump and clear overcap. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Ci",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Circle/LB-CIR-FRS-100ML-LPM-COCP_1779525206447_9r5102.png",
+        "variantId": "gid://shopify/ProductVariant/53343609356580",
+        "productId": "gid://shopify/Product/10433890484516",
+        "productHandle": "circle-100ml-frosted-18-415-lotionpump"
+      },
+      {
+        "graceSku": "GB-RYL-CLR-13ML-ROL-MSLV",
+        "websiteSku": "GBRoyal13RollSlMatt",
+        "family": "Royal",
+        "alt": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and matte silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. P",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/best-bottles/reference-images/GB-RYL-CLR-13ML-ROL-MSLV__GBRoyal13RollSlMatt__pdp-main__v001.png",
+        "variantId": "gid://shopify/ProductVariant/53343605293348",
+        "productId": "gid://shopify/Product/10433890255140",
+        "productHandle": "royal-13ml-clear-13-415-rollon"
+      },
+      {
+        "graceSku": "GB-RND-FRS-78ML-RDC-MSLV",
+        "websiteSku": "GBRndFrst78RdcrMtSl",
+        "family": "Round",
+        "alt": "Round design 78 ml, 2.65oz frosted glass bottle with reducer and silver matte cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-78ML-RDC-MSLV_1779532325262_ur3x7q.png",
+        "variantId": "gid://shopify/ProductVariant/53343606112548",
+        "productId": "gid://shopify/Product/10433890320676",
+        "productHandle": "round-78ml-frosted-18-415-reducer"
+      },
+      {
+        "graceSku": "GB-SQR-CLR-15ML-MRL-SBLK",
+        "websiteSku": "GBSqr15MtlRollBlkSh",
+        "family": "Square",
+        "alt": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pri",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/best-bottles/reference-images/GB-SQR-CLR-15ML-MRL-SBLK__GBSqr15MtlRollBlkSh__pdp-main__v001.png",
+        "variantId": "gid://shopify/ProductVariant/53343609618724",
+        "productId": "gid://shopify/Product/10433890517284",
+        "productHandle": "square-15ml-clear-13-415-rollon"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-MSLV",
+        "websiteSku": "GBRndFrst128AnSpMtSl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with matte silver vintage style sprayer with matte silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance th",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-MSLV_1779532373102_yulpff.png",
+        "variantId": "gid://shopify/ProductVariant/53343606833444",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray"
+      },
+      {
+        "graceSku": "LB-ELG-FRS-100ML-LPM-SGLD",
+        "websiteSku": "LBElgFrst100LtnShnGl",
+        "family": "Elegant",
+        "alt": "Elegant design 100 ml, 3 1/2oz frosted glass bottle with shiny gold lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Elegant bottle is a family of bottles ",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Elegant/LB-ELG-FRS-100ML-LPM-SGLD_1779482822537_l1jj4h.png",
+        "variantId": "gid://shopify/ProductVariant/53343609127204",
+        "productId": "gid://shopify/Product/10433890451748",
+        "productHandle": "elegant-100ml-frosted-18-415-lotionpump"
+      },
+      {
+        "graceSku": "GB-RND-FRS-78ML-RDC-WHT",
+        "websiteSku": "GBRndFrst78RdcrWht",
+        "family": "Round",
+        "alt": "Round design 78 ml, 2.65oz frosted glass bottle with reducer and white cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-78ML-RDC-WHT_1779532330358_e3fszx.png",
+        "variantId": "gid://shopify/ProductVariant/53343606145316",
+        "productId": "gid://shopify/Product/10433890320676",
+        "productHandle": "round-78ml-frosted-18-415-reducer"
+      },
+      {
+        "graceSku": "GB-RYL-CLR-13ML-ROL-SSLV",
+        "websiteSku": "GBRoyal13RollSlSh",
+        "family": "Royal",
+        "alt": "Royal design 13ml, 1/2oz Clear glass bottle with plastic roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. P",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/best-bottles/local-generation/reference-backed-clear-remaining-batch-001-nb2-2026-06-09/cap-on/GB-RYL-CLR-13ML-ROL-SSLV.png",
+        "variantId": "gid://shopify/ProductVariant/53343605326116",
+        "productId": "gid://shopify/Product/10433890255140",
+        "productHandle": "royal-13ml-clear-13-415-rollon"
+      },
+      {
+        "graceSku": "GB-SQR-CLR-15ML-MRL-MCPR",
+        "websiteSku": "GBSqr15MtlRollCuMatt",
+        "family": "Square",
+        "alt": "Square design 15ml, 1/2oz Clear glass bottle with metal roller ball plug and matte copper cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. Pr",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/best-bottles/reference-images/GB-SQR-CLR-15ML-MRL-MCPR__GBSqr15MtlRollCuMatt__pdp-main__v001.png",
+        "variantId": "gid://shopify/ProductVariant/53343609651492",
+        "productId": "gid://shopify/Product/10433890517284",
+        "productHandle": "square-15ml-clear-13-415-rollon"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-WHT",
+        "websiteSku": "GBRndFrst128AnSpWht",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with white vintage style bulb sprayer with shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the ",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-WHT_1779532395078_oogfvt.png",
+        "variantId": "gid://shopify/ProductVariant/53343606866212",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray"
+      },
+      {
+        "graceSku": "LB-ELG-FRS-100ML-LPM-SBLK",
+        "websiteSku": "LBElgFrst100LtnShnBlk",
+        "family": "Elegant",
+        "alt": "Elegant design 100 ml, 3 1/2oz frosted glass bottle with shiny black lotion pump. For use with serums, light creams, moisturizers, facial oils or face oils, beard oils, body lotions, body wash, and hair products. Elegant bottle is a family of bottles",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Elegant/LB-ELG-FRS-100ML-LPM-SBLK_1779482829011_ktk292.png",
+        "variantId": "gid://shopify/ProductVariant/53343609159972",
+        "productId": "gid://shopify/Product/10433890451748",
+        "productHandle": "elegant-100ml-frosted-18-415-lotionpump"
+      },
+      {
+        "graceSku": "GB-RND-FRS-78ML-RDC-IVLT",
+        "websiteSku": "GBRndFrst78RdcrIvyLthr",
+        "family": "Round",
+        "alt": "Round design 78 ml, 2.65oz frosted glass bottle with reducer and ivory faux leather cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Round design bottle is available in 2 sizes - 78ml and 128 ml. Price each",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-78ML-RDC-IVLT_1779532324417_hu478m.png",
+        "variantId": "gid://shopify/ProductVariant/53343606178084",
+        "productId": "gid://shopify/Product/10433890320676",
+        "productHandle": "round-78ml-frosted-18-415-reducer"
+      },
+      {
+        "graceSku": "GB-CIR-CLR-15ML-ROL-SBLK",
+        "websiteSku": "GBCrcl15RollBlkSh",
+        "family": "Circle",
+        "alt": "Circle design 15ml, 1/2oz Clear glass bottle with plastic roller ball plug and black shiny cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Refillable, classic style bottle good for promotions and decants. P",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/best-bottles/local-generation/reference-backed-clear-remaining-batch-001-nb2-2026-06-09/cap-on/GB-CIR-CLR-15ML-ROL-SBLK.png",
+        "variantId": "gid://shopify/ProductVariant/53343610667300",
+        "productId": "gid://shopify/Product/10433890648356",
+        "productHandle": "circle-15ml-clear-13-415-rollon"
+      }
+    ],
+    "uploaded": [
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-RED",
+        "websiteSku": "GBRndFrst128AnSpRed",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with red vintage style bulb sprayer with shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the be",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-RED_1779532381920_7k4a97.png",
+        "variantId": "gid://shopify/ProductVariant/53343606800676",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302582052",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-RED_1779532381920_7k4a97.png?v=1781251531"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-MSLV",
+        "websiteSku": "GBRndFrst128AnSpMtSl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with matte silver vintage style sprayer with matte silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance th",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-MSLV_1779532373102_yulpff.png",
+        "variantId": "gid://shopify/ProductVariant/53343606833444",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302614820",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-MSLV_1779532373102_yulpff.png?v=1781251531"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-WHT",
+        "websiteSku": "GBRndFrst128AnSpWht",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with white vintage style bulb sprayer with shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the ",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-WHT_1779532395078_oogfvt.png",
+        "variantId": "gid://shopify/ProductVariant/53343606866212",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302647588",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-WHT_1779532395078_oogfvt.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-08",
+        "websiteSku": "GBRndFrst128AnSpTslRed",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Red vintage style bulb sprayer with tasseland shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enha",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-08_1779532376778_kziay2.png",
+        "variantId": "gid://shopify/ProductVariant/53343606898980",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302680356",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-08_1779532376778_kziay2.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-02",
+        "websiteSku": "GBRndFrst128AnSpTslGl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Gold vintage style bulb sprayer with tasseland shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhan",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-02_1779532389691_94nerc.png",
+        "variantId": "gid://shopify/ProductVariant/53343606931748",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302713124",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-02_1779532389691_94nerc.png?v=1781251531"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-03",
+        "websiteSku": "GBRndFrst128AnSpTslIvyGl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Ivory vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enh",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-03_1779532386250_kpnsv1.png",
+        "variantId": "gid://shopify/ProductVariant/53343606964516",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302745892",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-03_1779532386250_kpnsv1.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-04",
+        "websiteSku": "GBRndFrst128AnSpTslIvySl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Ivory vintage style bulb sprayer with tassel and shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers e",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-04_1779532383026_zryqd4.png",
+        "variantId": "gid://shopify/ProductVariant/53343606997284",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302778660",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-04_1779532383026_zryqd4.png?v=1781251533"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-05",
+        "websiteSku": "GBRndFrst128AnSpTslLvn",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Lavender vintage style bulb sprayer with Tasseland shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-05_1779532380937_s56sb5.png",
+        "variantId": "gid://shopify/ProductVariant/53343607030052",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302811428",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-05_1779532380937_s56sb5.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-07",
+        "websiteSku": "GBRndFrst128AnSpTslPnk",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Pink vintage style bulb sprayer with tassel and shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enha",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-07_1779532379802_b01gyq.png",
+        "variantId": "gid://shopify/ProductVariant/53343607062820",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302844196",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-07_1779532379802_b01gyq.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-09",
+        "websiteSku": "GBRndFrst128AnSpTslWht",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with White vintage style bulb sprayer with tasseland shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers en",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-09_1779532374034_pyu70g.png",
+        "variantId": "gid://shopify/ProductVariant/53343607095588",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302876964",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-09_1779532374034_pyu70g.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-06",
+        "websiteSku": "GBRndFrst128AnSpTslMtSl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Silver vintage style bulb sprayer with tasseland matte silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers e",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-06_1779532378938_1emr5u.png",
+        "variantId": "gid://shopify/ProductVariant/53343607128356",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302909732",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-06_1779532378938_1emr5u.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-BLK",
+        "websiteSku": "GBRndFrst128AnSpBlk",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with black vintage style bulb sprayer with shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the ",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-BLK_1779532370077_bxkhw4.png",
+        "variantId": "gid://shopify/ProductVariant/53343607161124",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302942500",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-BLK_1779532370077_bxkhw4.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-01",
+        "websiteSku": "GBRndFrst128AnSpTslBlk",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with Black vintage style bulb sprayer with tasseland shiny silver collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers en",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-01_1779532385350_c5l8n5.png",
+        "variantId": "gid://shopify/ProductVariant/53343607193892",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772302975268",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-01_1779532385350_c5l8n5.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-SGLD",
+        "websiteSku": "GBRndFrst128AnSpGl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with gold vintage style sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the beauty o",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-SGLD_1779532387404_gwpa08.png",
+        "variantId": "gid://shopify/ProductVariant/53343607226660",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772303008036",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-SGLD_1779532387404_gwpa08.png?v=1781251532"
+      },
+      {
+        "graceSku": "GB-RND-FRS-128ML-ASP-IVGD",
+        "websiteSku": "GBRndFrst128AnSpIvyGl",
+        "family": "Round",
+        "alt": "Round design 128 ml, 4.33oz frosted glass bottle with ivory vintage style bulb sprayer with shiny gold collar cap. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Antique or vintage bulb sprayers enhance the be",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Round/GB-RND-FRS-128ML-ASP-IVGD_1779532367841_ej75p5.png",
+        "variantId": "gid://shopify/ProductVariant/53343607259428",
+        "productId": "gid://shopify/Product/10433890386212",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "mediaId": "gid://shopify/MediaImage/45772303040804",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-128ML-ASP-IVGD_1779532367841_ej75p5.png?v=1781251531"
+      }
+    ],
+    "failed": [],
+    "skippedUntrustedSource": [
+      {
+        "graceSku": "GB-ELG-CLR-30ML-SPR-SGLD",
+        "family": "Elegant",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "LB-SLM-CLR-100ML-LPM-CPR",
+        "family": "Slim",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-28ML-MRL-02",
+        "family": "Cylinder",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-SLM-CLR-50ML-SPR-SGLD",
+        "family": "Slim",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-SLK-CLR-30ML-DRP-SLV",
+        "family": "Sleek",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-SLM-CLR-30ML-DRP-SLV",
+        "family": "Slim",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-CIR-CLR-15ML-GLD-T",
+        "family": "Circle",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-FLR-CLR-15ML-BLK-S",
+        "family": "Flair",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-SQR-CLR-15ML-S",
+        "family": "Square",
+        "evidenceHost": "www.bestbottles.com"
+      },
+      {
+        "graceSku": "GB-SLK-CLR-100ML-RDC-IVLT",
+        "family": "Sleek",
+        "evidenceHost": "www.bestbottles.com"
+      }
+    ],
+    "skippedUnmatchedSku": [],
+    "skippedAlreadyHasImage": [
+      {
+        "graceSku": "GB-RYL-CLR-13ML-ROL-SLDT",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RYL-CLR-13ML-ROL-SLDT.png?v=1781249930"
+      },
+      {
+        "graceSku": "LB-CIR-CLR-100ML-LPM-COCP",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779527035625_ec59ln.png?v=1781249936"
+      },
+      {
+        "graceSku": "GB-RND-FRS-78ML-RDC-MSLV-T",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-RND-FRS-78ML-RDC-MSLV-T_1779532318771_k6nlas.png?v=1781249940"
+      }
+    ]
+  }
+}

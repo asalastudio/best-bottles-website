@@ -28,7 +28,7 @@ describe("Mizan UX recovery guardrails", () => {
     });
 
     it("renders PDP confidence content and avoids a generic loading-only PDP state", () => {
-        const pdp = readRepoFile("src/app/products/[slug]/page.tsx");
+        const pdp = readRepoFile("src/app/products/[slug]/ProductDetailClient.tsx");
         const gallery = readRepoFile("src/components/products/ProductImageGallery.tsx");
 
         expect(pdp).toContain("ProductConfidenceSummary");
@@ -37,10 +37,13 @@ describe("Mizan UX recovery guardrails", () => {
         expect(pdp).not.toContain("Loading product...");
         expect(gallery).toContain('loading="eager"');
         expect(gallery).toContain('fetchPriority="high"');
+        expect(gallery).toContain("function isRemoteProductImageUrl");
+        expect(gallery).toContain("unoptimized={isRemoteProductImageUrl(activeImage.url)}");
+        expect(gallery).toContain("unoptimized={isRemoteProductImageUrl(img.url)}");
     });
 
     it("surfaces catalog search and filtering recovery affordances", () => {
-        const catalog = readRepoFile("src/app/catalog/page.tsx");
+        const catalog = readRepoFile("src/app/catalog/CatalogClient.tsx");
         const filters = readRepoFile("src/lib/catalogFilters.ts");
 
         expect(filters).toContain("catalogSearchMatches");
@@ -53,7 +56,7 @@ describe("Mizan UX recovery guardrails", () => {
     });
 
     it("adds crawlable AEO answer blocks with Grace handoff prompts", () => {
-        const catalog = readRepoFile("src/app/catalog/page.tsx");
+        const catalog = readRepoFile("src/app/catalog/CatalogClient.tsx");
         const resources = readRepoFile("src/app/resources/page.tsx");
 
         expect(catalog).toContain("PACKAGING_ANSWER_BLOCKS");
@@ -72,7 +75,7 @@ describe("Mizan UX recovery guardrails", () => {
         const home = readRepoFile("src/components/HomePage.tsx");
         const graceProvider = readRepoFile("src/components/grace/GraceProvider.tsx");
         const graceRenderer = readRepoFile("src/components/grace/GraceActionRenderer.tsx");
-        const pdp = readRepoFile("src/app/products/[slug]/page.tsx");
+        const pdp = readRepoFile("src/app/products/[slug]/ProductDetailClient.tsx");
 
         expect(home).toContain("1–5 ml (0.03–0.17 oz)");
         expect(home).toContain("capacities=3.7+ml&capacities=4+ml");

@@ -10,11 +10,11 @@ import {
 } from "@/components/icons";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
 import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
 import {
     PdpInlineBadges,
     PdpInlinePromo,
@@ -403,6 +403,12 @@ const GLASS_COLOR_SWATCH: Record<string, string> = {
 };
 const LIGHT_GLASS = new Set(["Clear", "Frosted", "White", "Pink", "Swirl"]);
 
+function resolveGlassSwatchHex(color: string | null | undefined): string {
+    if (!color) return "rgba(200, 235, 245, 0.55)";
+    return GLASS_COLOR_SWATCH[color] ?? GLASS_COLOR_SWATCH[color.trim()] ?? "rgba(200, 235, 245, 0.55)";
+}
+
+
 const ATOMIZER_SHELL_MAP: Record<string, { label: string; hex: string; light: boolean }> = {
     black:    { label: "Black",    hex: "#1D1D1F", light: false },
     blue:     { label: "Blue",     hex: "#5B87B5", light: false },
@@ -488,6 +494,10 @@ export interface ProductVariant {
     components?: ProductComponent[] | null;
 }
 
+function canonicalSku(variant: ProductVariant | null | undefined): string | null {
+    return variant?.graceSku?.trim() || variant?.websiteSku?.trim() || null;
+}
+
 function supportsSecondaryPdpImage(variant: ProductVariant): boolean {
     const isEmpire =
         variant.family === "Empire" ||
@@ -514,6 +524,19 @@ function usableProductImageUrl(value: string | null | undefined): string | null 
     return url;
 }
 
+function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
+    if (!value) return false;
+    try {
+        return new URL(value).hostname === "cdn.shopify.com";
+    } catch {
+        return value.includes("cdn.shopify.com/");
+    }
+}
+
+function hasPreferredProductImage(variant: ProductVariant): boolean {
+    return isShopifyCdnImageUrl(variant.imageUrl) || isShopifyCdnImageUrl(variant.imageUrlCapOff);
+}
+
 type VariantImageTile = {
     id: string;
     variant: ProductVariant;
@@ -521,6 +544,9 @@ type VariantImageTile = {
     label: string;
     swatchHex: string;
     websiteSku: string;
+    graceSku: string;
+    productGroupSlug: string;
+    shopifyVariantId?: string | null;
 };
 
 function getVariantTileImageUrl(variant: ProductVariant): string | null {
@@ -561,7 +587,7 @@ function VariantImagePicker({
                 key={tile.id}
                 type="button"
                 onClick={() => onSelect(tile.variant)}
-                title={`${tile.label} · ${tile.websiteSku}`}
+                title={`${tile.label} · ${tile.graceSku}`}
                 aria-label={`Select ${tile.label} variant`}
                 aria-pressed={isSelected}
                 className={`
@@ -580,6 +606,12 @@ function VariantImagePicker({
                     alt=""
                     fill
                     sizes={mobile ? "64px" : "58px"}
+                    data-bb-image-audit="pdp-variant-tile"
+                    data-bb-family={tile.variant.family ?? undefined}
+                    data-bb-product-group-slug={tile.productGroupSlug}
+                    data-bb-grace-sku={tile.graceSku}
+                    data-bb-website-sku={tile.websiteSku}
+                    data-bb-shopify-variant-id={tile.shopifyVariantId ?? undefined}
                     className="object-cover"
                 />
                 <span
@@ -742,7 +774,7 @@ function ProductConfidenceSummary({
         { label: "Neck size", value: group.neckThreadSize ?? variant?.neckThreadSize ?? "Unable to verify" },
         { label: "Capacity", value: group.capacity ?? variant?.capacity ?? "Unable to verify" },
         { label: "Case quantity", value: variant?.caseQuantity ? `${variant.caseQuantity} units/case` : "Confirm before ordering" },
-        { label: "Selected SKU", value: variant?.websiteSku ?? variant?.graceSku ?? "Unable to verify" },
+        { label: "Selected SKU", value: canonicalSku(variant) ?? "Unable to verify" },
     ];
 
     return (
@@ -911,16 +943,25 @@ export interface ProductGroupPayload {
     variants: ProductVariant[];
 }
 
+export interface SiblingGroup {
+    _id: string;
+    slug: string;
+    color: string | null;
+    displayName: string;
+}
+
 export default function ProductDetailClient({
     slug,
     initialData,
     initialApplicatorSiblings,
     initialPdpBlocks = [],
+    siblingGroups = [],
 }: {
     slug: string;
     initialData: ProductGroupPayload | null;
     initialApplicatorSiblings: ApplicatorSibling[];
     initialPdpBlocks?: PdpBlock[];
+    siblingGroups?: SiblingGroup[];
 }) {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -1008,11 +1049,11 @@ export default function ProductDetailClient({
     const primaryVariant = useMemo(() => {
         const primaryWebsiteSku = group?.primaryWebsiteSku?.trim();
         const primaryGraceSku = group?.primaryGraceSku?.trim();
-        if (!primaryWebsiteSku && !primaryGraceSku) return null;
-        return variants.find((variant) =>
+        const explicitPrimary = variants.find((variant) =>
             (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
             (primaryGraceSku && variant.graceSku === primaryGraceSku)
-        ) ?? null;
+        );
+        return explicitPrimary ?? variants.find(hasPreferredProductImage) ?? null;
     }, [variants, group?.primaryWebsiteSku, group?.primaryGraceSku]);
 
     // Guard stale deep links like ?applicator=spray on non-spray groups (e.g. decorative cap bottles).
@@ -1137,6 +1178,7 @@ export default function ProductDetailClient({
             const useDarkCheck = isLightSwatch(resolved.swatchName) || LIGHT_GLASS.has(resolved.swatchName);
             return {
                 id: v._id,
+                graceSku: v.graceSku,
                 websiteSku: v.websiteSku,
                 displayLabel: resolved.label,
                 swatchHex,
@@ -1170,10 +1212,13 @@ export default function ProductDetailClient({
                 label: getVariantTileLabel(variant),
                 swatchHex: resolveSwatchHex(swatchName),
                 websiteSku: variant.websiteSku,
+                graceSku: variant.graceSku,
+                productGroupSlug: group?.slug ?? activeSlug,
+                shopifyVariantId: variant.shopifyVariantId,
             });
         }
         return tiles;
-    }, [variantsForApplicator]);
+    }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
@@ -1200,12 +1245,69 @@ export default function ProductDetailClient({
     );
     const customerDisplayName = customerFacingName?.displayName ?? group?.displayName ?? selectedVariant?.itemName ?? "";
 
+    const breadcrumbsSteps = useMemo(() => {
+        if (!group) return [];
+        const steps: BreadcrumbStep[] = [
+            { label: "Catalog", href: "/catalog" }
+        ];
+
+        if (validApplicatorParam) {
+            const applicatorLabel = APPLICATOR_BUCKETS.find((b) => b.value === validApplicatorParam)?.label ?? validApplicatorParam;
+            steps.push({
+                label: `${applicatorLabel} Bottles`,
+                href: `/catalog?applicators=${encodeURIComponent(validApplicatorParam)}`
+            });
+        }
+
+        if (group.family) {
+            const applicatorQuery = validApplicatorParam ? `&applicators=${encodeURIComponent(validApplicatorParam)}` : "";
+            steps.push({
+                label: group.family,
+                href: `/catalog?families=${encodeURIComponent(group.family)}${applicatorQuery}`
+            });
+        }
+
+        steps.push({ label: customerDisplayName });
+        return steps;
+    }, [group, validApplicatorParam, customerDisplayName]);
+
+    const uniqueColorGroups = useMemo(() => {
+        if (!group) return [];
+        const seenColors = new Set<string>();
+        const list = [];
+
+        const currentColor = group.color ?? "Clear";
+        seenColors.add(currentColor.toLowerCase());
+        list.push({
+            slug: activeSlug,
+            color: currentColor,
+            displayName: group.displayName || "",
+            isActive: true
+        });
+
+        for (const sib of siblingGroups) {
+            const sibColor = sib.color ?? "Clear";
+            const key = sibColor.toLowerCase();
+            if (!seenColors.has(key)) {
+                seenColors.add(key);
+                list.push({
+                    slug: sib.slug,
+                    color: sibColor,
+                    displayName: sib.displayName,
+                    isActive: false
+                });
+            }
+        }
+        return list;
+    }, [group, activeSlug, siblingGroups]);
+
+
     const selectedVariantSummary = useMemo(() => {
         if (!selectedVariant || !hasVariantImagePicker) return null;
         const finish = resolveVariantCapFinish(selectedVariant);
         return {
             label: customerFacingName?.variantLabel ?? getVariantTileLabel(selectedVariant),
-            sku: selectedVariant.websiteSku,
+            sku: canonicalSku(selectedVariant),
             swatchHex: resolveSwatchHex(finish.swatchName),
         };
     }, [customerFacingName?.variantLabel, selectedVariant, hasVariantImagePicker]);
@@ -1272,31 +1374,13 @@ export default function ProductDetailClient({
     }, [customerDisplayName, selectedVariant]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
+    // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so
+    // they carry draft content + stega click-to-edit overlays inside Presentation.
+    // Sync from the server-provided props on navigation; never re-fetch here, which
+    // would strip the overlays by overwriting with plain CDN content.
     useEffect(() => {
-        if (!isSanityConfigured || !activeSlug || !group?.family) return;
-        let cancelled = false;
-        Promise.all([
-            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
-                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
-                { slug: activeSlug }
-            ),
-            client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
-                `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
-                { family: group.family }
-            ),
-        ])
-            .then(([groupContent, familyContent]) => {
-                if (cancelled) return;
-                const groupBlocks: PdpBlock[] = groupContent?.pageBlocks ?? [];
-                const familyBlocks: PdpBlock[] = familyContent?.pageBlocks ?? [];
-                const merged = groupContent?.overrideTemplate
-                    ? groupBlocks
-                    : [...groupBlocks, ...familyBlocks];
-                setPdpBlocks(merged);
-            })
-            .catch(() => { if (!cancelled) setPdpBlocks([]); });
-        return () => { cancelled = true; };
-    }, [activeSlug, group?.family]);
+        setPdpBlocks(initialPdpBlocks);
+    }, [initialPdpBlocks]);
 
     // ── Mobile sticky bar: only visible once inline Add to Cart scrolls out of view ──
     useEffect(() => {
@@ -1384,6 +1468,9 @@ export default function ProductDetailClient({
             category: group?.category,
             neckThreadSize: selectedVariant.neckThreadSize ?? group?.neckThreadSize ?? null,
             compatibleCount: compatibleSiblings.length,
+            webPrice1pc: selectedVariant.webPrice1pc ?? null,
+            webPrice10pc: selectedVariant.webPrice10pc ?? null,
+            webPrice12pc: selectedVariant.webPrice12pc ?? null,
         }]);
         analytics.cartItemAdded({
             sku: selectedVariant.graceSku,
@@ -1408,38 +1495,13 @@ export default function ProductDetailClient({
                     isOpen={fitmentDrawerOpen}
                     onClose={() => setFitmentDrawerOpen(false)}
                     bottleSku={selectedVariant.graceSku}
+                    quantity={qty}
                 />
             )}
 
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]">
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
-                <div className="border-b border-champagne/50 bg-bone overflow-x-auto">
-                    <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-1.5 sm:py-3 flex items-center space-x-2 text-[11px] sm:text-xs text-slate whitespace-nowrap">
-                        <Link href="/" className="hover:text-muted-gold transition-colors shrink-0">Home</Link>
-                        <ChevronRight className="w-3 h-3 shrink-0" />
-                        <Link href="/catalog" className="hover:text-muted-gold transition-colors shrink-0">Catalog</Link>
-                        {validApplicatorParam && (
-                            <>
-                                <ChevronRight className="w-3 h-3 shrink-0" />
-                                <Link
-                                    href={`/catalog?applicators=${encodeURIComponent(validApplicatorParam)}`}
-                                    className="hover:text-muted-gold transition-colors shrink-0"
-                                >
-                                    {APPLICATOR_BUCKETS.find((b) => b.value === validApplicatorParam)?.label ?? validApplicatorParam} Bottles
-                                </Link>
-                            </>
-                        )}
-                        <ChevronRight className="w-3 h-3 shrink-0" />
-                        <Link
-                            href={`/catalog?families=${encodeURIComponent(group.family)}${validApplicatorParam ? `&applicators=${encodeURIComponent(validApplicatorParam)}` : ""}`}
-                            className="hover:text-muted-gold transition-colors shrink-0"
-                        >
-                            {group.family}
-                        </Link>
-                        <ChevronRight className="w-3 h-3 shrink-0" />
-                        <span className="text-obsidian font-medium truncate max-w-[150px] sm:max-w-[200px]">{customerDisplayName}</span>
-                    </div>
-                </div>
+                <Breadcrumbs steps={breadcrumbsSteps} />
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
                 <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
@@ -1476,7 +1538,7 @@ export default function ProductDetailClient({
                                         );
                                         const skuWatermark = selectedVariant ? (
                                             <span className="text-[9px] uppercase tracking-widest text-slate/40 font-mono select-none">
-                                                {selectedVariant.websiteSku}
+                                                {canonicalSku(selectedVariant)}
                                             </span>
                                         ) : null;
 
@@ -1499,6 +1561,14 @@ export default function ProductDetailClient({
                                                 url: usableProductImageUrl(selectedVariant?.imageUrl)!,
                                                 label: "Cap on",
                                                 alt: customerDisplayName,
+                                                auditMeta: {
+                                                    surface: "pdp-gallery",
+                                                    family: selectedVariant?.family ?? group.family,
+                                                    productGroupSlug: group.slug,
+                                                    graceSku: selectedVariant?.graceSku,
+                                                    websiteSku: selectedVariant?.websiteSku,
+                                                    shopifyVariantId: selectedVariant?.shopifyVariantId,
+                                                },
                                             });
                                         }
                                         if (
@@ -1510,6 +1580,14 @@ export default function ProductDetailClient({
                                                 url: usableProductImageUrl(selectedVariant.imageUrlCapOff)!,
                                                 label: "Cap off",
                                                 alt: `${customerDisplayName} with cap off`,
+                                                auditMeta: {
+                                                    surface: "pdp-gallery",
+                                                    family: selectedVariant.family ?? group.family,
+                                                    productGroupSlug: group.slug,
+                                                    graceSku: selectedVariant.graceSku,
+                                                    websiteSku: selectedVariant.websiteSku,
+                                                    shopifyVariantId: selectedVariant.shopifyVariantId,
+                                                },
                                             });
                                         }
                                         if (galleryImages.length === 0 && variantImageTiles[0]?.imageUrl) {
@@ -1517,6 +1595,14 @@ export default function ProductDetailClient({
                                                 url: variantImageTiles[0].imageUrl,
                                                 label: "Representative",
                                                 alt: `${customerDisplayName} representative product image`,
+                                                auditMeta: {
+                                                    surface: "pdp-gallery",
+                                                    family: variantImageTiles[0].variant.family ?? group.family,
+                                                    productGroupSlug: group.slug,
+                                                    graceSku: variantImageTiles[0].graceSku,
+                                                    websiteSku: variantImageTiles[0].websiteSku,
+                                                    shopifyVariantId: variantImageTiles[0].shopifyVariantId,
+                                                },
                                             });
                                         }
 
@@ -1555,6 +1641,249 @@ export default function ProductDetailClient({
                                     })()}
                                 </div>
                             </div>
+
+                            {!isAtomizer && (
+                                <div className="lg:hidden mt-3 rounded-sm border border-champagne/50 bg-white p-3 shadow-sm">
+                                    <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-gold">
+                                        Choose Option
+                                    </p>
+
+                                    {rollerTypeOptions.length >= 2 && (
+                                        <div className="mb-4">
+                                            <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate">Roller Type</p>
+                                            <div className="grid grid-cols-2 gap-2">
+                                                {rollerTypeOptions.map((opt) => (
+                                                    <button
+                                                        key={opt.value}
+                                                        onClick={() => {
+                                                            setSelectedApplicator(opt.value);
+                                                            setSelectedVariantId(null);
+                                                            setSelectedCapColor(null);
+                                                            setSelectedCapStyle(null);
+                                                            setSelectedTrimColor(null);
+                                                        }}
+                                                        className={`min-h-10 rounded-sm border px-3 py-2 text-sm font-medium transition-all ${activeApplicator === opt.value
+                                                            ? "border-obsidian bg-obsidian text-white"
+                                                            : "border-champagne text-obsidian"
+                                                        }`}
+                                                    >
+                                                        {opt.label}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {!hasCompleteVariantImagePicker && capColorOptions.length > 0 && (
+                                        <div className="mb-4">
+                                            <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate">
+                                                Cap Color
+                                                {activeCapColor && (
+                                                    <span className="ml-2 normal-case tracking-normal text-obsidian">{activeCapColor}</span>
+                                                )}
+                                            </p>
+                                            <div className="flex gap-2 overflow-x-auto pb-1 hide-scroll">
+                                                {capColorOptions.map((color) => {
+                                                    const hex = resolveSwatchHex(color);
+                                                    const isSelected = activeCapColor === color;
+                                                    const useDarkCheck = isLightSwatch(color);
+                                                    return (
+                                                        <button
+                                                            key={color}
+                                                            onClick={() => {
+                                                                setSelectedVariantId(null);
+                                                                setSelectedCapColor(color);
+                                                                setSelectedCapStyle(null);
+                                                                setSelectedTrimColor(null);
+                                                            }}
+                                                            title={color}
+                                                            aria-label={`Select ${color}`}
+                                                            className={`relative h-11 w-11 shrink-0 rounded-full border-2 transition-all ${isSelected
+                                                                ? "border-obsidian scale-105 shadow-md"
+                                                                : "border-champagne"
+                                                            }`}
+                                                            style={getMaterialSwatchStyle(color, { fallbackColor: hex })}
+                                                        >
+                                                            {isSelected && (
+                                                                <span className="absolute inset-0 flex items-center justify-center">
+                                                                    <Check
+                                                                        className={`h-4 w-4 ${useDarkCheck ? "text-obsidian" : "text-white"}`}
+                                                                        strokeWidth={2.5}
+                                                                    />
+                                                                </span>
+                                                            )}
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {!hasCompleteVariantImagePicker && capStyleOptions.length > 1 && (
+                                        <div className="mb-4">
+                                            <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate">Cap Style</p>
+                                            <div className="flex gap-2 overflow-x-auto pb-1 hide-scroll">
+                                                {capStyleOptions.map((style) => (
+                                                    <button
+                                                        key={style}
+                                                        onClick={() => {
+                                                            setSelectedVariantId(null);
+                                                            setSelectedCapStyle(style);
+                                                            setSelectedTrimColor(null);
+                                                        }}
+                                                        className={`min-h-10 shrink-0 rounded-sm border px-3 py-2 text-sm font-medium transition-all ${activeCapStyle === style
+                                                            ? "border-obsidian bg-obsidian text-white"
+                                                            : "border-champagne text-obsidian"
+                                                        }`}
+                                                    >
+                                                        {style}
+                                                    </button>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {showTrimSelector && (
+                                        <div className="mb-1">
+                                            <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate">
+                                                Trim
+                                                {activeTrimColor && (
+                                                    <span className="ml-2 normal-case tracking-normal text-obsidian">{activeTrimColor}</span>
+                                                )}
+                                            </p>
+                                            <div className="flex gap-2 overflow-x-auto pb-1 hide-scroll">
+                                                {trimColorOptions.map((color) => {
+                                                    const hex = resolveSwatchHex(color);
+                                                    const isSelected = activeTrimColor === color;
+                                                    const useDarkCheck = isLightSwatch(color);
+                                                    return (
+                                                        <button
+                                                            key={color}
+                                                            onClick={() => {
+                                                                setSelectedVariantId(null);
+                                                                setSelectedTrimColor(color);
+                                                            }}
+                                                            title={color}
+                                                            aria-label={`Select ${color} trim`}
+                                                            className={`relative h-10 w-10 shrink-0 rounded-full border-2 transition-all ${isSelected
+                                                                ? "border-obsidian scale-105 shadow-md"
+                                                                : "border-champagne"
+                                                            }`}
+                                                            style={getMaterialSwatchStyle(color, { fallbackColor: hex })}
+                                                        >
+                                                            {isSelected && (
+                                                                <span className="absolute inset-0 flex items-center justify-center">
+                                                                    <Check
+                                                                        className={`h-3.5 w-3.5 ${useDarkCheck ? "text-obsidian" : "text-white"}`}
+                                                                        strokeWidth={2.5}
+                                                                    />
+                                                                </span>
+                                                            )}
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {!hasCompleteVariantImagePicker && variantsForApplicator.length > 1 && capColorOptions.length === 0 && (
+                                        <div className="mb-1">
+                                            <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate">
+                                                {activeApplicator ? "Variant" : "Cap Finish"}
+                                            </p>
+                                            <div className="flex gap-3 overflow-x-auto pb-1 hide-scroll">
+                                                {capSwatchPreview.map((item) => {
+                                                    const isSelected = item.variantId
+                                                        ? selectedVariant?._id === item.variantId
+                                                        : selectedCapComponentSku === item.websiteSku;
+                                                    return (
+                                                        <button
+                                                            key={item.id}
+                                                            onClick={() => {
+                                                                if (item.variantId) {
+                                                                    setSelectedVariantId(item.variantId);
+                                                                    setSelectedCapComponentSku(null);
+                                                                } else {
+                                                                    setSelectedCapComponentSku(item.websiteSku);
+                                                                }
+                                                            }}
+                                                            title={item.graceSku ?? item.websiteSku}
+                                                            className="flex shrink-0 flex-col items-center gap-1.5"
+                                                        >
+                                                            <span
+                                                                className={`relative h-11 w-11 rounded-full border-2 transition-all ${isSelected
+                                                                    ? "border-obsidian scale-105 shadow-md"
+                                                                    : "border-champagne"
+                                                                }`}
+                                                                style={getMaterialSwatchStyle(item.displayLabel, { fallbackColor: item.swatchHex })}
+                                                            >
+                                                                {isSelected && (
+                                                                    <span className="absolute inset-0 flex items-center justify-center">
+                                                                        <Check
+                                                                            className={`h-4 w-4 ${item.useDarkCheck ? "text-obsidian" : "text-white"}`}
+                                                                            strokeWidth={2.5}
+                                                                        />
+                                                                    </span>
+                                                                )}
+                                                            </span>
+                                                            <span className={`max-w-[76px] text-center text-[10px] leading-tight ${isSelected ? "font-semibold text-obsidian" : "text-slate"}`}>
+                                                                {item.displayLabel}
+                                                            </span>
+                                                        </button>
+                                                    );
+                                                })}
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            )}
+
+                            {isAtomizer && !hasCompleteVariantImagePicker && variantsForApplicator.length > 1 && (
+                                <div className="lg:hidden mt-3 rounded-sm border border-champagne/50 bg-white p-3 shadow-sm">
+                                    <p className="mb-3 text-[10px] font-bold uppercase tracking-[0.2em] text-muted-gold">
+                                        Choose Shell
+                                        {selectedVariant && (
+                                            <span className="ml-2 normal-case tracking-normal text-obsidian">
+                                                {getAtomizerShellInfo(selectedVariant).label}
+                                            </span>
+                                        )}
+                                    </p>
+                                    <div className="flex gap-3 overflow-x-auto pb-1 hide-scroll">
+                                        {variantsForApplicator.map((v) => {
+                                            const shell = getAtomizerShellInfo(v);
+                                            const isSelected = selectedVariant?._id === v._id;
+                                            return (
+                                                <button
+                                                    key={v._id}
+                                                    onClick={() => setSelectedVariantId(v._id)}
+                                                    title={canonicalSku(v) ?? v.websiteSku}
+                                                    className="flex shrink-0 flex-col items-center gap-1.5"
+                                                >
+                                                    <span
+                                                        className={`relative h-11 w-11 rounded-full border-2 transition-all ${isSelected
+                                                            ? "border-obsidian scale-105 shadow-md"
+                                                            : "border-champagne"
+                                                        }`}
+                                                        style={{ backgroundColor: shell.hex }}
+                                                    >
+                                                        {isSelected && (
+                                                            <span className="absolute inset-0 flex items-center justify-center">
+                                                                <Check
+                                                                    className={`h-4 w-4 ${shell.useDarkCheck ? "text-obsidian" : "text-white"}`}
+                                                                    strokeWidth={2.5}
+                                                                />
+                                                            </span>
+                                                        )}
+                                                    </span>
+                                                    <span className={`max-w-[76px] text-center text-[10px] leading-tight ${isSelected ? "font-semibold text-obsidian" : "text-slate"}`}>
+                                                        {shell.label}
+                                                    </span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            )}
                         </div>
 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
@@ -1601,10 +1930,10 @@ export default function ProductDetailClient({
                                 <TierLadder variant={selectedVariant} qty={qty} />
                             </div>
 
-                            {/* ── Variant Selectors (hidden for atomizers — glass color is the only selection) ── */}
-
-                            {!isAtomizer && (
-                                <>
+                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price) ── */}
+                            <div className="hidden lg:block">
+                                {!isAtomizer && (
+                                    <>
                                     {/* Roller type toggle — Metal vs Plastic for roll-on groups */}
                                     {rollerTypeOptions.length >= 2 && (
                                         <div className="mb-6">
@@ -1631,6 +1960,49 @@ export default function ProductDetailClient({
                                                         {opt.label}
                                                     </button>
                                                 ))}
+                                            </div>
+                                        </div>
+                                    )}
+
+                                    {/* Glass color selector */}
+                                    {uniqueColorGroups.length > 1 && (
+                                        <div className="mb-6 relative">
+                                            <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
+                                                Glass Color
+                                                {group?.color && (
+                                                    <span className="ml-2 normal-case font-medium text-obsidian">{group.color}</span>
+                                                )}
+                                            </p>
+                                            <div className="flex flex-wrap gap-2.5">
+                                                {uniqueColorGroups.map((item) => {
+                                                    const hex = resolveGlassSwatchHex(item.color);
+                                                    const isSelected = item.isActive;
+                                                    const useDarkCheck = !item.color || LIGHT_GLASS.has(item.color);
+                                                    return (
+                                                        <button
+                                                            key={item.color}
+                                                            onClick={() => {
+                                                                if (isSelected) return;
+                                                                router.replace(`/products/${item.slug}${window.location.search}`, { scroll: false });
+                                                            }}
+                                                            title={item.color}
+                                                            className={`w-9 h-9 rounded-full border-2 transition-all relative ${isSelected
+                                                                ? "border-obsidian scale-110 shadow-md"
+                                                                : "border-champagne hover:border-muted-gold"
+                                                                }`}
+                                                            style={{ backgroundColor: hex }}
+                                                        >
+                                                            {isSelected && (
+                                                                <span className="absolute inset-0 flex items-center justify-center">
+                                                                    <Check
+                                                                        className={`w-3.5 h-3.5 ${useDarkCheck ? "text-obsidian" : "text-white"}`}
+                                                                        strokeWidth={2.5}
+                                                                    />
+                                                                </span>
+                                                            )}
+                                                        </button>
+                                                    );
+                                                })}
                                             </div>
                                         </div>
                                     )}
@@ -1770,7 +2142,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.websiteSku}
+                                                            title={item.graceSku ?? item.websiteSku}
                                                             className="flex flex-col items-center gap-1.5 group/variant"
                                                         >
                                                             <span
@@ -1803,12 +2175,12 @@ export default function ProductDetailClient({
                                             </div>
                                         </div>
                                     )}
-                                </>
-                            )}
+                                    </>
+                                )}
 
-                            {/* ── Atomizer Shell Design selector ── */}
-                            {isAtomizer && !hasCompleteVariantImagePicker && variantsForApplicator.length > 1 && (
-                                <div className="mb-6">
+                                {/* ── Atomizer Shell Design selector ── */}
+                                {isAtomizer && !hasCompleteVariantImagePicker && variantsForApplicator.length > 1 && (
+                                    <div className="mb-6">
                                     <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                                         Shell Design
                                         {selectedVariant && (
@@ -1825,7 +2197,7 @@ export default function ProductDetailClient({
                                                 <button
                                                     key={v._id}
                                                     onClick={() => setSelectedVariantId(v._id)}
-                                                    title={v.websiteSku}
+                                                    title={canonicalSku(v) ?? v.websiteSku}
                                                     className="flex flex-col items-center gap-1.5 group/variant"
                                                 >
                                                     <span
@@ -1856,8 +2228,9 @@ export default function ProductDetailClient({
                                             );
                                         })}
                                     </div>
-                                </div>
-                            )}
+                                    </div>
+                                )}
+                            </div>
 
                             {/* Sanity promo banner (above Add to Cart) */}
                             <PdpInlinePromo blocks={pdpBlocks} />
@@ -1881,7 +2254,15 @@ export default function ProductDetailClient({
                                         <span className="text-lg leading-none select-none">+</span>
                                     </button>
                                 </div>
-                                {checkoutReady ? (
+                                {qty >= 500 ? (
+                                    <Link
+                                        href={quoteHref}
+                                        data-testid="pdp-request-quote-primary"
+                                        className="flex-1 flex items-center justify-center text-xs font-bold uppercase tracking-widest bg-obsidian text-white hover:bg-muted-gold transition-colors"
+                                    >
+                                        Request Quote
+                                    </Link>
+                                ) : checkoutReady ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
                                         onClick={handleAddToCart}
@@ -1917,12 +2298,36 @@ export default function ProductDetailClient({
 
                             {/* Request a Quote CTA */}
                             <div className="mb-6">
-                                <Link
-                                    href={quoteHref}
-                                    className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
-                                >
-                                    <span>Request a Quote</span>
-                                </Link>
+                                {qty >= 500 && checkoutReady ? (
+                                    <button
+                                        disabled={!canAddToCart || addedFlash}
+                                        onClick={handleAddToCart}
+                                        className={`w-full flex items-center justify-center space-x-2 py-3 border text-xs font-bold uppercase tracking-widest transition-colors disabled:cursor-not-allowed ${
+                                            addedFlash
+                                                ? "bg-emerald-600 text-white border-emerald-600"
+                                                : "border-obsidian text-obsidian hover:bg-obsidian hover:text-white disabled:opacity-40"
+                                        }`}
+                                    >
+                                        {addedFlash ? (
+                                            <>
+                                                <Check className="w-4 h-4" strokeWidth={2} />
+                                                <span>Added!</span>
+                                            </>
+                                        ) : (
+                                            <>
+                                                <ShoppingBag className="w-4 h-4" strokeWidth={1.5} />
+                                                <span>{inStock ? "Add to Cart" : "Out of Stock"}</span>
+                                            </>
+                                        )}
+                                    </button>
+                                ) : (
+                                    <Link
+                                        href={quoteHref}
+                                        className="w-full flex items-center justify-center space-x-2 py-3 border border-obsidian text-obsidian text-xs font-bold uppercase tracking-widest hover:bg-obsidian hover:text-white transition-colors"
+                                    >
+                                        <span>Request a Quote</span>
+                                    </Link>
+                                )}
                             </div>
 
                             {/* Compatibility belongs near the buying decision for B2B confidence. */}
@@ -2011,10 +2416,7 @@ export default function ProductDetailClient({
                             </div>
                             <div className="py-10 max-w-2xl">
                                 <dl>
-                                    <SpecRow label="SKU" value={selectedVariant.websiteSku} />
-                                    {selectedVariant.graceSku && (
-                                        <SpecRow label="Grace SKU" value={selectedVariant.graceSku} />
-                                    )}
+                                    <SpecRow label="SKU" value={canonicalSku(selectedVariant)} />
                                     <SpecRow label="Height (with cap)" value={selectedVariant.heightWithCap} />
                                     <SpecRow label="Height (without cap)" value={selectedVariant.heightWithoutCap} />
                                     <SpecRow label="Diameter" value={selectedVariant.diameter} />
@@ -2075,7 +2477,15 @@ export default function ProductDetailClient({
                             +
                         </button>
                     </div>
-                    {checkoutReady ? (
+                    {qty >= 500 ? (
+                        <Link
+                            href={quoteHref}
+                            data-testid="pdp-sticky-request-quote"
+                            className="flex-1 min-w-0 py-3 text-center text-[11px] font-bold uppercase tracking-wider bg-obsidian text-white"
+                        >
+                            Request Quote
+                        </Link>
+                    ) : checkoutReady ? (
                         <button
                             disabled={!canAddToCart || addedFlash}
                             onClick={handleAddToCart}

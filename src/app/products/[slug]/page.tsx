@@ -5,15 +5,21 @@ import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
     type ApplicatorSibling,
     type ProductGroupPayload,
+    type SiblingGroup,
     type ProductVariant,
 } from "./ProductDetailClient";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
+import { isSanityConfigured } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
+import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "@/lib/seo";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 function getConvexClient() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
@@ -30,6 +36,14 @@ function isShopifyCdnImageUrl(value: string | null | undefined): boolean {
     }
 }
 
+function isPreferredProductImageUrl(value: string | null | undefined): boolean {
+    return isShopifyCdnImageUrl(value) && !isLegacyBestBottlesImageUrl(value);
+}
+
+function hasPreferredProductImage(variant: ProductVariant): boolean {
+    return isPreferredProductImageUrl(variant.imageUrl) || isPreferredProductImageUrl(variant.imageUrlCapOff);
+}
+
 async function getProductData(slug: string): Promise<ProductGroupPayload | null> {
     const data = await getConvexClient().query(api.products.getProductGroup, { slug }) as ProductGroupPayload | null;
     if (!data) return null;
@@ -43,10 +57,11 @@ function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | n
     if (!data) return null;
     const primaryWebsiteSku = data.group.primaryWebsiteSku?.trim();
     const primaryGraceSku = data.group.primaryGraceSku?.trim();
-    return data.variants.find((variant) =>
+    const explicitPrimary = data.variants.find((variant) =>
         (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
         (primaryGraceSku && variant.graceSku === primaryGraceSku)
-    ) ?? data.variants[0] ?? null;
+    );
+    return explicitPrimary ?? data.variants.find(hasPreferredProductImage) ?? data.variants[0] ?? null;
 }
 
 async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlug: string): Promise<ApplicatorSibling[]> {
@@ -61,19 +76,34 @@ async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlu
     }) as ApplicatorSibling[];
 }
 
+async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: string): Promise<SiblingGroup[]> {
+    const group = data?.group;
+    if (!group) return [];
+    return await getConvexClient().query(api.products.getSiblingGroups, {
+        family: group.family,
+        capacityMl: group.capacityMl ?? 0,
+        excludeSlug: activeSlug,
+        neckThreadSize: group.neckThreadSize ?? undefined,
+    }) as SiblingGroup[];
+}
+
 async function getPdpBlocks(activeSlug: string, family: string | null | undefined): Promise<PdpBlock[]> {
     if (!isSanityConfigured || !activeSlug || !family) return [];
     try {
-        const [groupContent, familyContent] = await Promise.all([
-            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
-                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
-                { slug: activeSlug },
-            ),
-            client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
-                `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
-                { family },
-            ),
+        // Live, draft-aware fetch: published blocks for visitors, draft blocks with
+        // click-to-edit overlays inside the Studio's Presentation tool.
+        const [groupRes, familyRes] = await Promise.all([
+            sanityFetch({
+                query: `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
+                params: { slug: activeSlug },
+            }),
+            sanityFetch({
+                query: `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
+                params: { family },
+            }),
         ]);
+        const groupContent = groupRes.data as { pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null;
+        const familyContent = familyRes.data as { pageBlocks?: PdpBlock[] } | null;
         const groupBlocks = groupContent?.pageBlocks ?? [];
         const familyBlocks = familyContent?.pageBlocks ?? [];
         return groupContent?.overrideTemplate ? groupBlocks : [...groupBlocks, ...familyBlocks];
@@ -123,7 +153,7 @@ export async function generateMetadata({
         graceDescription: variant?.graceDescription ?? null,
         applicators: variant?.applicator ? [variant.applicator] : group.applicatorTypes ?? [],
     }) ?? `${customerName} from the ${group.family} collection. ${group.capacity ?? ""} wholesale glass packaging from Best Bottles.`.trim();
-    const image = isShopifyCdnImageUrl(variant?.imageUrl) && !isLegacyBestBottlesImageUrl(variant?.imageUrl)
+    const image = isPreferredProductImageUrl(variant?.imageUrl)
         ? variant?.imageUrl ?? undefined
         : group.heroImageUrl ?? undefined;
 
@@ -163,8 +193,9 @@ export default async function ProductPage({
 
     const activeSlug = legacyRouteOverride ?? slug;
     const data = await getProductData(activeSlug);
-    const [siblings, pdpBlocks] = await Promise.all([
+    const [siblings, siblingGroups, pdpBlocks] = await Promise.all([
         getApplicatorSiblings(data, activeSlug),
+        getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
     ]);
     const group = data?.group;
@@ -184,8 +215,8 @@ export default async function ProductPage({
         ? buildProductJsonLd({
             name: customerName,
             description,
-            sku: variant.websiteSku,
-            image: isShopifyCdnImageUrl(variant.imageUrl) && !isLegacyBestBottlesImageUrl(variant.imageUrl)
+            sku: variant.graceSku ?? variant.websiteSku,
+            image: isPreferredProductImageUrl(variant.imageUrl)
                 ? variant.imageUrl ?? undefined
                 : undefined,
             url: `${SITE_URL}/products/${activeSlug}`,
@@ -225,7 +256,9 @@ export default async function ProductPage({
                 initialData={data}
                 initialApplicatorSiblings={siblings}
                 initialPdpBlocks={pdpBlocks}
+                siblingGroups={siblingGroups}
             />
+            <SanityLiveVisualEditing />
         </>
     );
 }

@@ -26,9 +26,11 @@
 *.log
 
 # Local automation / browser scratch
+/.codex/
 /.claude/worktrees/
 /.cursor/settings.json
 /.firecrawl/
+/.playwright-cli/
 /.playwright-mcp/
 
 # Local scratch and generated test outputs
@@ -48,8 +50,21 @@
 # Local packaged skills belong in AIOS, not this app repo.
 /_skills/
 
-# Paper Doll / Madison pipeline generated or local-only data
-/pipeline/
+# Best Bottles / Madison pipeline generated or local-only data
+/pipeline/*
+!/pipeline/best-bottles-reference-images-clean/
+!/pipeline/best-bottles-reference-images-clean/**/
+!/pipeline/best-bottles-reference-images-clean/**/*.md
+!/pipeline/best-bottles-reference-images-clean/**/*.csv
+!/pipeline/best-bottles-reference-images-clean/**/*.json
+!/pipeline/best-bottles-reference-images-clean/**/.gitkeep
+/pipeline/best-bottles-reference-images-clean/**/*.psd
+/pipeline/best-bottles-reference-images-clean/**/*.psb
+/pipeline/best-bottles-reference-images-clean/**/*.png
+/pipeline/best-bottles-reference-images-clean/**/*.jpg
+/pipeline/best-bottles-reference-images-clean/**/*.jpeg
+/pipeline/best-bottles-reference-images-clean/**/*.webp
+/pipeline/best-bottles-reference-images-clean/**/*.gif
 /pipeline/**/.env
 /pipeline/**/output/
 /pipeline/**/processing/
@@ -62,8 +77,12 @@
 # Generated audit/eval/report snapshots
 /data/grace-evals/results/
 /data/audits/20*/convex_snapshot*.json
+/data/audits/2026-05-20-image-audit/
+/data/audits/product-truth/
+/data/source-of-truth/
 /docs/data_alignment/*.json
 /docs/data_alignment/*.xlsx
+/mobile-audit-screenshots/
 
 # Coverage directory used by testing tools
 /coverage
@@ -83,5 +102,13 @@ __pycache__/
 # Dotenv and similar local-only files
 *.local
 
+# Env backups — may contain live secrets (write tokens, API keys); never commit
+.env*.bak*
+.env.local.bak*
+*.bak-clerk-toggle
+
 # Local editor workspace files
 *.code-workspace
+
+# Local creative assets (84MB+, not for git)
+creative/

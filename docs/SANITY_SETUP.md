@@ -23,10 +23,13 @@ NEXT_PUBLIC_SANITY_DATASET=production
 SANITY_STUDIO_PROJECT_ID=gh97irjh
 SANITY_STUDIO_DATASET=production
 
-# Required for seeding / writes (scripts, Studio publish)
-SANITY_API_WRITE_TOKEN=your_token_here
-# or
-SANITY_API_TOKEN=your_token_here
+# Required for seeding / writes (image-upload scripts, paper-doll render route).
+# The code reads SANITY_API_TOKEN — set THIS name (a legacy SANITY_API_WRITE_TOKEN
+# alias is NOT read by any script and will silently no-op).
+SANITY_API_TOKEN=your_write_token_here
+
+# Read-only (Viewer) token — live preview / Visual Editing / draft mode only.
+SANITY_API_READ_TOKEN=your_viewer_token_here
 ```
 
 ## CORS (Required for Production)

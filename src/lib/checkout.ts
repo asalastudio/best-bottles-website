@@ -1,10 +1,12 @@
 export type CheckoutCandidate = {
     graceSku: string;
     checkoutEligible?: boolean;
+    shopifyVariantId?: string | null;
 };
 
 export function isCheckoutReady(item: CheckoutCandidate): boolean {
-    return item.checkoutEligible === true;
+    if (item.checkoutEligible === false) return false;
+    return item.checkoutEligible === true || Boolean(item.shopifyVariantId);
 }
 
 export function splitCheckoutItems<T extends CheckoutCandidate>(items: T[]) {

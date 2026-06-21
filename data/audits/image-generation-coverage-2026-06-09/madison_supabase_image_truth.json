@@ -1,0 +1,885 @@
+{
+  "supabase": {
+    "projectUrl": "https://likkskifwsrvszxdvufw.supabase.co",
+    "keyType": "service_role_or_supplied"
+  },
+  "options": {
+    "madisonRepo": "/Users/jordanrichter/Projects/Madison Studio/madison-app",
+    "supabaseUrl": "https://likkskifwsrvszxdvufw.supabase.co",
+    "supabaseKey": "[redacted]",
+    "orgId": "4ab1ac72-cd7e-4faf-9152-5aa5f2862411",
+    "family": null,
+    "limit": 1000,
+    "tables": [
+      "best_bottles_pipeline_groups",
+      "paper_doll_approved_assets",
+      "best_bottles_pipeline_sku_jobs",
+      "shopify_publish_log"
+    ],
+    "convexUrl": "https://helpful-elephant-638.convex.cloud",
+    "productionConvexUrl": "https://precise-raccoon-123.convex.cloud",
+    "json": true
+  },
+  "tableStatus": [
+    {
+      "table": "best_bottles_pipeline_groups",
+      "rows": 356,
+      "error": null
+    },
+    {
+      "table": "paper_doll_approved_assets",
+      "rows": 0,
+      "error": null
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "rows": 1000,
+      "error": null
+    },
+    {
+      "table": "shopify_publish_log",
+      "rows": 1000,
+      "error": null
+    }
+  ],
+  "counts": {
+    "rowsFetchedBeforeFamilyFilter": 2356,
+    "rowsRead": 2356,
+    "rowsWithIdentity": 2356,
+    "rowsWithImages": 2256,
+    "approvedGeneratedImagesResolved": 5,
+    "targetConvexGroups": 369,
+    "productionConvexGroups": 353,
+    "issues": {
+      "approved_madison_group_not_synced_to_convex": 4,
+      "approved_madison_group_has_no_target_convex_hero": 1,
+      "sku_not_found_in_target_convex": 18,
+      "target_product_image_does_not_match_madison_image": 389
+    }
+  },
+  "samples": [
+    {
+      "table": "best_bottles_pipeline_groups",
+      "id": "4530c393-c267-49fa-984d-d62db07fadb1",
+      "slug": "empire-100ml-clear-18-415-reducer",
+      "websiteSku": "GBEmp100RdcrShnGl",
+      "graceSku": "GB-EMP-CLR-100ML-RDC-SGLD",
+      "shopifySku": "",
+      "imageFields": [
+        "legacy_hero_image_url",
+        "madison_approved_image_url"
+      ],
+      "issues": [
+        "approved_madison_group_not_synced_to_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/1777261512387-97135f96-4c54-46e9-b135-130f6a7329ab.png",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779339981825_m39n0z.png?v=1779340532",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/06fb4a9e231e545b2e1ccb6c37f9f8a5593864d3-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/1777261512387-97135f96-4c54-46e9-b135-130f6a7329ab.png",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779339981825_m39n0z.png?v=1779340532",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/06fb4a9e231e545b2e1ccb6c37f9f8a5593864d3-2080x2288.png"
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_groups",
+      "id": "49302868-ede9-4bee-9bd2-f988f607181a",
+      "slug": "empire-100ml-clear-18-415-perfumespray",
+      "websiteSku": "GBEmp100SpryCu",
+      "graceSku": "GB-EMP-CLR-100ML-SPR-CPR",
+      "shopifySku": "",
+      "imageFields": [
+        "legacy_hero_image_url",
+        "madison_approved_image_url"
+      ],
+      "issues": [
+        "approved_madison_group_not_synced_to_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/1777261681743-8cecb437-5f4f-49ac-acfe-a5e90faa3538.png",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779386075033_xrja5r.png?v=1779401217",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/06fb4a9e231e545b2e1ccb6c37f9f8a5593864d3-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/1777261681743-8cecb437-5f4f-49ac-acfe-a5e90faa3538.png",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779386075033_xrja5r.png?v=1779401217",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/06fb4a9e231e545b2e1ccb6c37f9f8a5593864d3-2080x2288.png"
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_groups",
+      "id": "4551b901-9631-4669-b1d1-0d4fe1e31a46",
+      "slug": "empire-50ml-clear-18-415-reducer",
+      "websiteSku": "GBEmp50RdcrBlkLthr",
+      "graceSku": "GB-EMP-CLR-50ML-RDC-BKLT",
+      "shopifySku": "",
+      "imageFields": [
+        "legacy_hero_image_url",
+        "madison_approved_image_url"
+      ],
+      "issues": [
+        "approved_madison_group_not_synced_to_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/1777476550772-e32b61ab-1968-4cbd-8a96-f02c92e1fa1e.png",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778802666914-ff2ef553-b686-49d4-abe6-a18e253f4f51.png?v=1779011844",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/1777476550772-e32b61ab-1968-4cbd-8a96-f02c92e1fa1e.png",
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778802666914-ff2ef553-b686-49d4-abe6-a18e253f4f51.png?v=1779011844",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_groups",
+      "id": "ed343f13-dc41-4db8-bd0e-78331481ea4b",
+      "slug": "diva-30ml-clear-18-415-reducer",
+      "websiteSku": "GBDiva30RdcrBlkLthr",
+      "graceSku": "GB-DVA-CLR-30ML-RDC-BKLT",
+      "shopifySku": "",
+      "imageFields": [
+        "legacy_hero_image_url",
+        "madison_approved_image_url"
+      ],
+      "issues": [
+        "approved_madison_group_not_synced_to_convex",
+        "approved_madison_group_has_no_target_convex_hero"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778804355267-2cb57327-c2cd-499a-9541-e70c9b26f4f8_72ca4d5d-05dc-41a5-ba9b-81aa9e76661b.png?v=1779470692",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778804355267-2cb57327-c2cd-499a-9541-e70c9b26f4f8.png?v=1779012205",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "ea0ca58d-7edb-4b1c-9af8-41abe29c862c",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslMtSl",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-06",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-06",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "d5d8294a-fcd0-4b32-be3c-fb7d23c5411e",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslGl",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-02",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-02",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "1428673e-b4c0-449d-9c6d-78116bcc7667",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslIvyGl",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-03",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-03",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "b74104f5-c596-46e6-9c72-d4eaecd5edb5",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslBlk",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-01",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-01",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "33feb917-5278-4f19-9ea4-60f0871e8842",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslLvn",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-05",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-05",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "1e8141d8-0542-411d-adac-be1e38d82d5e",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslWht",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-09",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-09",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "2dea0027-54f1-4327-91f8-567d475e19f0",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslPnk",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-07",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-07",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "f12f748f-f6e1-4086-9b0b-b3012030494c",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslRed",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-08",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-08",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "best_bottles_pipeline_sku_jobs",
+      "id": "e2b08992-b6b6-46e1-8f5c-d2804914fc68",
+      "slug": "circle-50ml-frosted-18-415-antiquespray",
+      "websiteSku": "GBCrclFrst50AnSpTslIvySl",
+      "graceSku": "GB-CIR-FRS-50ML-ASP-04",
+      "shopifySku": "GB-CIR-FRS-50ML-ASP-04",
+      "imageFields": [
+        "best_reference_candidate_path",
+        "approved_image_url",
+        "shopify_image_url"
+      ],
+      "issues": [
+        "sku_not_found_in_target_convex"
+      ],
+      "target": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": true,
+        "productMatched": false,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": null,
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "a1972a0c-371f-4a77-bed9-cf6200f42de3",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-CYL-CLR-5ML-SPR-SSLV",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532326789_uo4s2u_40ade88e-9e0e-4330-89c2-df92810c4631.png?v=1779556412",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532326789_uo4s2u_40ade88e-9e0e-4330-89c2-df92810c4631.png?v=1779556412",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "ee4d11af-b568-42c1-bab7-ac5a5a6bc434",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-CYL-CLR-5ML-SPR-SGLD",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532246826_mmab0o_2b57fff5-4bc6-4d2c-8f40-86fb8050461d.png?v=1779556417",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532246826_mmab0o_2b57fff5-4bc6-4d2c-8f40-86fb8050461d.png?v=1779556417",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "fb00318c-3388-4df2-af87-38cec41f293e",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-CYL-CLR-5ML-SPR-SBLK",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532185393_d8g9r6_c656f6ad-8fd9-4264-9cf1-16badeef18f2.png?v=1779556421",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779532185393_d8g9r6_c656f6ad-8fd9-4264-9cf1-16badeef18f2.png?v=1779556421",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "1c6ac5c8-70ad-4996-97bf-4bf16c551106",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-CYL-BLU-5ML-SPR-SGLD",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779556240793_91zf8d.png?v=1779556596",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779556240793_91zf8d.png?v=1779556596",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "b962ce84-1576-4e1f-addb-b48a318ea951",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-CYL-BLU-5ML-SPR-SBLK",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779556164268_p97bcf.png?v=1779556250",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779556164268_p97bcf.png?v=1779556250",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "c886dcf6-809b-462d-8cd9-0ec9eebfdfb4",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-CYL-BLU-5ML-SPR-SSLV",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779556103487_6a0tbh.png?v=1779556254",
+        "productImageUrlCapOff": null
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779556103487_6a0tbh.png?v=1779556254",
+        "productImageUrlCapOff": null
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "0fbb0185-0c54-4bee-836f-26091e1e82b3",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-EMP-CLR-50ML-RDC-WHT",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803308295-11de9dd6-114c-4d61-8436-372ba8b2558d.png?v=1779011808",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803308295-11de9dd6-114c-4d61-8436-372ba8b2558d.png?v=1779011808",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "0329531a-4dc5-4201-af3d-8b2769355b6e",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-EMP-CLR-50ML-RDC-MSLV",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803254854-ef7b6c62-7418-43b3-8f18-e6ce9067f770.png?v=1779011810",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803254854-ef7b6c62-7418-43b3-8f18-e6ce9067f770.png?v=1779011810",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "7afad881-f681-4a6b-baac-5eee52062922",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-EMP-CLR-50ML-RDC-MSLV-T",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803180528-6bc65d16-d86c-4ef9-8d35-ea23aa35d10c.png?v=1779011814",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803180528-6bc65d16-d86c-4ef9-8d35-ea23aa35d10c.png?v=1779011814",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "37f9c31d-f2b9-4ec0-a309-28ad2dc9f2d8",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-EMP-CLR-50ML-RDC-LBLT",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803127615-51dbbf4f-12e9-4ffa-8a3a-a2b09e13e6e5.png?v=1779011818",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803127615-51dbbf4f-12e9-4ffa-8a3a-a2b09e13e6e5.png?v=1779011818",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "35e4dfc2-8d28-47b4-909a-a225f0dd13c1",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-EMP-CLR-50ML-RDC-BRLT",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803062329-a9d10322-f1eb-41e5-baab-bebaab5a9be0.png?v=1779011821",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803062329-a9d10322-f1eb-41e5-baab-bebaab5a9be0.png?v=1779011821",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    },
+    {
+      "table": "shopify_publish_log",
+      "id": "7a619378-03bd-4ba1-8604-de0e26753113",
+      "slug": "",
+      "websiteSku": "",
+      "graceSku": "",
+      "shopifySku": "GB-EMP-CLR-50ML-RDC-SBLK-T",
+      "imageFields": [
+        "published_content.imageUrl"
+      ],
+      "issues": [
+        "target_product_image_does_not_match_madison_image"
+      ],
+      "target": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803008209-a92ed64f-9757-4af3-b235-a34c90895360.png?v=1779011824",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      },
+      "production": {
+        "groupMatched": false,
+        "productMatched": true,
+        "groupHeroMatches": false,
+        "productImageMatches": false,
+        "groupHeroUrl": null,
+        "productImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1778803008209-a92ed64f-9757-4af3-b235-a34c90895360.png?v=1779011824",
+        "productImageUrlCapOff": "https://cdn.sanity.io/images/gh97irjh/production/625c2a62e987a68e38b28c393708f5974c2dd2ba-2080x2288.png"
+      }
+    }
+  ]
+}

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 /**
  * Grace vision endpoint — GPT-4o analyzes an uploaded reference image and
@@ -11,17 +12,99 @@ import OpenAI from "openai";
  * Resp:  { description: string, searchTerms: string }
  */
 
+const PUBLIC_VISION_UNAVAILABLE_MESSAGE =
+    "Image analysis is temporarily unavailable right now. Please describe the bottle shape, color, size, or closure and Grace can search from that.";
+
+type PublicVisionError = {
+    error: string;
+    code: string;
+    status: number;
+};
+
+function getProviderStatus(err: unknown): number | null {
+    if (!err || typeof err !== "object" || !("status" in err)) return null;
+    const status = Number((err as { status?: unknown }).status);
+    return Number.isFinite(status) ? status : null;
+}
+
+function getProviderMessage(err: unknown): string {
+    if (err instanceof Error) return err.message;
+    if (!err || typeof err !== "object") return "";
+    const maybeMessage = (err as { message?: unknown; error?: { message?: unknown } }).message;
+    if (typeof maybeMessage === "string") return maybeMessage;
+    const nestedMessage = (err as { error?: { message?: unknown } }).error?.message;
+    return typeof nestedMessage === "string" ? nestedMessage : "";
+}
+
+function publicVisionError(err: unknown): PublicVisionError {
+    const status = getProviderStatus(err);
+    const message = getProviderMessage(err);
+    const lowered = message.toLowerCase();
+
+    if (status === 401 || status === 403 || lowered.includes("api key") || lowered.includes("unauthorized")) {
+        return {
+            error: PUBLIC_VISION_UNAVAILABLE_MESSAGE,
+            code: "vision_credentials_invalid",
+            status: 503,
+        };
+    }
+
+    if (status === 429 || lowered.includes("rate limit")) {
+        return {
+            error: "Image analysis is busy right now. Please try again in a minute.",
+            code: "vision_rate_limited",
+            status: 429,
+        };
+    }
+
+    return {
+        error: PUBLIC_VISION_UNAVAILABLE_MESSAGE,
+        code: "vision_failed",
+        status: 502,
+    };
+}
+
 export async function POST(req: NextRequest) {
     try {
-        const body = (await req.json()) as { imageUrl?: string };
+        const rateLimited = await enforceGraceRateLimit(req, {
+            route: "grace-vision",
+            limit: 20,
+            windowMs: 60 * 60_000,
+        });
+        if (rateLimited) return rateLimited;
+
+        const body = (await req.json()) as { imageUrl?: string; ownerKey?: string };
         const imageUrl = body.imageUrl?.trim();
         if (!imageUrl) {
             return NextResponse.json({ error: "imageUrl required" }, { status: 400 });
         }
+        if (!body.ownerKey || !/^(anon-[a-z0-9-]{8,}|[0-9a-f]{8}-[0-9a-f]{4}-[1-5][0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12})$/i.test(body.ownerKey)) {
+            return NextResponse.json({ error: "Valid ownerKey required" }, { status: 400 });
+        }
+        let parsed: URL;
+        try {
+            parsed = new URL(imageUrl);
+        } catch {
+            return NextResponse.json({ error: "Invalid imageUrl" }, { status: 400 });
+        }
+        const trustedHost = parsed.protocol === "https:" && (
+            parsed.hostname.endsWith(".convex.cloud") ||
+            parsed.hostname.endsWith(".convex.site") ||
+            parsed.hostname === new URL(process.env.NEXT_PUBLIC_CONVEX_URL ?? "https://invalid.invalid").hostname
+        );
+        if (!trustedHost) {
+            return NextResponse.json({ error: "Image URL must come from Grace upload storage." }, { status: 400 });
+        }
 
-        const apiKey = process.env.OPENAI_API_KEY;
+        const apiKey = process.env.OPENAI_API_KEY?.trim();
         if (!apiKey) {
-            return NextResponse.json({ error: "OpenAI key not configured" }, { status: 500 });
+            return NextResponse.json(
+                {
+                    error: PUBLIC_VISION_UNAVAILABLE_MESSAGE,
+                    code: "vision_not_configured",
+                },
+                { status: 503 },
+            );
         }
 
         const openai = new OpenAI({ apiKey });
@@ -61,9 +144,10 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ description, searchTerms });
     } catch (err) {
         console.error("[Grace vision] Error:", err);
+        const publicError = publicVisionError(err);
         return NextResponse.json(
-            { error: err instanceof Error ? err.message : "Vision failed" },
-            { status: 500 },
+            { error: publicError.error, code: publicError.code },
+            { status: publicError.status },
         );
     }
 }

@@ -9,6 +9,8 @@ export type ProductCardVariantPreview = {
     swatchImageUrl?: string;
     optionType?: "glassColor" | "capColor" | "fitment" | "variant" | "related";
     sku?: string;
+    graceSku?: string;
+    websiteSku?: string;
     href?: string;
 };
 
@@ -385,13 +387,15 @@ export function getProductCardVariantPreviews(
             swatchImageUrl,
             optionType,
             sku,
+            graceSku: cleanString(variant.graceSku) ?? undefined,
+            websiteSku: cleanString(variant.websiteSku) ?? undefined,
             href: options.productHref,
         });
     }
 
     return previews.sort((a, b) => {
-        const aMatchesDefault = imageKey(a.imageUrl) === defaultImageKey ? 0 : 1;
-        const bMatchesDefault = imageKey(b.imageUrl) === defaultImageKey ? 0 : 1;
+        const aMatchesDefault = defaultImageKey && imageKey(a.imageUrl) === defaultImageKey ? 0 : 1;
+        const bMatchesDefault = defaultImageKey && imageKey(b.imageUrl) === defaultImageKey ? 0 : 1;
         if (aMatchesDefault !== bMatchesDefault) return aMatchesDefault - bMatchesDefault;
         if (a.imageUrl && !b.imageUrl) return -1;
         if (!a.imageUrl && b.imageUrl) return 1;

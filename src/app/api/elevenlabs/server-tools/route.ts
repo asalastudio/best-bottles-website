@@ -3,9 +3,12 @@ import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 import { resolveSearchCatalogParameters } from "@/lib/graceToolParamUtils";
 import {
+    VERIFIED_9ML_CYLINDER_ROLLON_COLORS,
     buildSearchCatalogToolResult,
     emptySearchCatalogHint,
 } from "../../../../../convex/graceSearchUtils";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
+import { noMatchGraceToolResult } from "@/lib/graceToolResults";
 
 /**
  * Server tools proxy for ElevenLabs Conversational AI.
@@ -66,6 +69,13 @@ export async function POST(req: NextRequest) {
             }
         }
 
+        const rateLimited = await enforceGraceRateLimit(req, {
+            route: "elevenlabs-server-tools",
+            limit: 120,
+            windowMs: 60_000,
+        });
+        if (rateLimited) return rateLimited;
+
         const body = (await req.json()) as {
             tool_name?: string;
             parameters?: Record<string, unknown>;
@@ -99,11 +109,26 @@ export async function POST(req: NextRequest) {
                         result = [];
                         break;
                     }
-                    result = `No products found for that search. Try a broader term.${emptySearchCatalogHint(searchParams.searchTerm)}`;
+                    result = noMatchGraceToolResult({
+                        message: `No verified exact match found for "${searchParams.searchTerm}". Do not name or recommend a specific product from memory. Try a broader term or one of the suggested searches.${emptySearchCatalogHint(searchParams.searchTerm)}`,
+                        requested: {
+                            searchTerm: searchParams.searchTerm,
+                            familyLimit: searchParams.familyLimit,
+                            applicatorFilter: searchParams.applicatorFilter,
+                        },
+                        suggestedQueries: [
+                            searchParams.familyLimit ? `${searchParams.familyLimit} ${searchParams.searchTerm}` : searchParams.searchTerm.replace(/\b10\s*ml\b/i, "9ml"),
+                            searchParams.searchTerm.replace(/\broll[- ]?on\b/i, "roller"),
+                        ].filter((q, i, arr) => q.trim() && arr.indexOf(q) === i),
+                        warnings: ["Never claim an exact size, SKU, price, stock status, or compatibility unless a tool result returned it."],
+                    });
                 } else {
                     const slim = data.map((p) => ({
                         graceSku: p.graceSku,
+                        websiteSku: p.websiteSku,
                         itemName: p.itemName,
+                        shopifyVariantId: p.shopifyVariantId ?? null,
+                        checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
                         family: p.family,
                         capacity: p.capacity,
                         capacityMl: p.capacityMl,
@@ -115,6 +140,7 @@ export async function POST(req: NextRequest) {
                         neckThreadSize: p.neckThreadSize,
                         slug: p.slug,
                         webPrice1pc: p.webPrice1pc,
+                        webPrice10pc: p.webPrice10pc,
                         webPrice12pc: p.webPrice12pc,
                         stockStatus: p.stockStatus,
                         dataQualityFlags: p.dataQualityFlags,
@@ -133,9 +159,23 @@ export async function POST(req: NextRequest) {
             }
 
             case "getBottleComponents": {
-                const data = await convex.query(api.grace.getBottleComponents, {
-                    bottleSku: (parameters.bottleSku as string) ?? "",
+                const requestedBottle = String((parameters.bottleSku as string) ?? "").trim();
+                let resolvedBottleSku = requestedBottle;
+                let data = await convex.query(api.grace.getBottleComponents, {
+                    bottleSku: resolvedBottleSku,
                 });
+                if (!data && requestedBottle.length >= 3) {
+                    const fallbackMatches = await convex.query(api.grace.searchCatalog, {
+                        searchTerm: requestedBottle,
+                    });
+                    const firstMatch = Array.isArray(fallbackMatches) ? fallbackMatches[0] : null;
+                    if (firstMatch?.graceSku) {
+                        resolvedBottleSku = firstMatch.graceSku;
+                        data = await convex.query(api.grace.getBottleComponents, {
+                            bottleSku: resolvedBottleSku,
+                        });
+                    }
+                }
                 if (data && typeof data === "object" && "bottle" in data) {
                     const d = data as {
                         bottle: Record<string, unknown>;
@@ -146,13 +186,21 @@ export async function POST(req: NextRequest) {
                     result = {
                         bottle: {
                             graceSku: d.bottle.graceSku,
+                            websiteSku: d.bottle.websiteSku,
                             itemName: d.bottle.itemName,
+                            shopifyVariantId: d.bottle.shopifyVariantId,
+                            checkoutEligible: d.bottle.checkoutEligible ?? Boolean(d.bottle.shopifyVariantId),
                             family: d.bottle.family,
                             capacity: d.bottle.capacity,
                             color: d.bottle.color,
                             neckThreadSize: d.bottle.neckThreadSize,
+                            applicator: d.bottle.applicator,
+                            capColor: d.bottle.capColor,
                             capStyle: d.bottle.capStyle,
                             webPrice1pc: d.bottle.webPrice1pc,
+                            webPrice10pc: d.bottle.webPrice10pc,
+                            webPrice12pc: d.bottle.webPrice12pc,
+                            stockStatus: d.bottle.stockStatus,
                         },
                         componentTypes: d.componentTypes,
                         totalComponents: d.totalComponents,
@@ -200,7 +248,10 @@ export async function POST(req: NextRequest) {
                 } else {
                     result = {
                         graceSku: data.graceSku,
+                        websiteSku: data.websiteSku,
                         itemName: data.itemName,
+                        shopifyVariantId: data.shopifyVariantId ?? null,
+                        checkoutEligible: Boolean(data.shopifyVariantId),
                         family: data.family,
                         capacity: data.capacity,
                         capacityMl: data.capacityMl,
@@ -209,7 +260,9 @@ export async function POST(req: NextRequest) {
                         capColor: data.capColor,
                         neckThreadSize: data.neckThreadSize,
                         webPrice1pc: data.webPrice1pc,
+                        webPrice10pc: data.webPrice10pc,
                         webPrice12pc: data.webPrice12pc,
+                        stockStatus: data.stockStatus,
                         // Hero image from product group (catalog renders this);
                         // fall back to per-product imageUrl when group hero missing.
                         heroImageUrl: data.imageUrl ?? null,
@@ -225,25 +278,37 @@ export async function POST(req: NextRequest) {
                 // (which returns real variants with graceSku + slug).
                 const family = (parameters.family as string) ?? "";
                 if (!family) { result = null; break; }
+                const rawCapacityMl = parameters.capacityMl;
+                const parsedCapacityMl = typeof rawCapacityMl === "number"
+                    ? rawCapacityMl
+                    : Number.parseFloat(String(rawCapacityMl ?? ""));
+                const requestedCapacityMl = Number.isFinite(parsedCapacityMl) ? parsedCapacityMl : null;
                 const groups = await convex.query(api.products.getProductGroupsByFamily, { family });
                 const overview = await convex.query(api.grace.getFamilyOverview, { family });
                 let variants = (groups ?? [])
                     .filter((g) => g.primaryGraceSku)
                     .map((g) => ({
                         graceSku: g.primaryGraceSku as string,
+                        websiteSku: g.primaryWebsiteSku ?? null,
                         itemName: g.displayName,
+                        shopifyVariantId: null as string | null,
+                        checkoutEligible: false,
                         family: g.family,
                         capacity: g.capacity,
                         capacityMl: g.capacityMl,
                         color: g.color,
                         neckThreadSize: g.neckThreadSize,
+                        applicator: (g.applicatorTypes ?? []).join(", ") || null,
                         webPrice1pc: g.priceRangeMin,
+                        webPrice10pc: null as number | null,
+                        webPrice12pc: null as number | null,
+                        stockStatus: null as string | null,
                         slug: g.slug,
                         heroImageUrl: g.heroImageUrl ?? null,
                     }));
 
                 // Fallback: groups missing primaryGraceSku — search the catalog
-                // and dedupe by capacityMl so we still get one variant per size.
+                // and keep requested-size color variants distinct.
                 if (variants.length === 0) {
                     const search = await convex.query(api.grace.searchCatalog, {
                         searchTerm: family,
@@ -252,7 +317,9 @@ export async function POST(req: NextRequest) {
                     const seen = new Set<string | number>();
                     variants = (Array.isArray(search) ? search : [])
                         .filter((p) => {
-                            const key = p.capacityMl ?? p.capacity ?? p.graceSku;
+                            const key = requestedCapacityMl != null && p.capacityMl === requestedCapacityMl
+                                ? `${p.capacityMl ?? p.capacity ?? ""}|${p.color ?? ""}|${p.applicator ?? ""}|${p.graceSku}`
+                                : p.capacityMl ?? p.capacity ?? p.graceSku;
                             if (seen.has(key)) return false;
                             seen.add(key);
                             return true;
@@ -260,7 +327,10 @@ export async function POST(req: NextRequest) {
                         .slice(0, 8)
                         .map((p) => ({
                             graceSku: p.graceSku,
+                            websiteSku: p.websiteSku ?? null,
                             itemName: p.itemName,
+                            shopifyVariantId: p.shopifyVariantId ?? null,
+                            checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
                             // Fallback path: searchCatalog returns family/slug as
                             // optional, but the primary `groups`-based path infers
                             // them as required strings. Coerce to satisfy the
@@ -271,11 +341,141 @@ export async function POST(req: NextRequest) {
                             capacityMl: p.capacityMl,
                             color: p.color,
                             neckThreadSize: p.neckThreadSize,
+                            applicator: p.applicator ?? null,
                             webPrice1pc: p.webPrice1pc,
+                            webPrice10pc: p.webPrice10pc ?? null,
+                            webPrice12pc: p.webPrice12pc ?? null,
+                            stockStatus: p.stockStatus ?? null,
                             slug: p.slug ?? "",
                             heroImageUrl: null as string | null,
                         }));
                 }
+
+                // The groups path is intentionally representative, but Grace's
+                // family card is more useful when it exposes every real size
+                // the catalog search can verify. Merge in missing capacities
+                // from searchCatalog, preserving one concise representative
+                // per numeric size.
+                const search = await convex.query(api.grace.searchCatalog, {
+                    searchTerm: requestedCapacityMl != null ? `${family} ${requestedCapacityMl}ml` : family,
+                    familyLimit: family,
+                });
+                if (Array.isArray(search) && search.length > 0) {
+                    const seenCapacity = new Set(
+                        variants.map((v) => requestedCapacityMl != null && v.capacityMl === requestedCapacityMl
+                            ? `${v.capacityMl ?? v.capacity ?? ""}|${v.color ?? ""}|${v.applicator ?? ""}|${v.graceSku}`
+                            : v.capacityMl ?? v.capacity ?? v.graceSku),
+                    );
+                    for (const p of search) {
+                        const key = requestedCapacityMl != null && p.capacityMl === requestedCapacityMl
+                            ? `${p.capacityMl ?? p.capacity ?? ""}|${p.color ?? ""}|${p.applicator ?? ""}|${p.graceSku}`
+                            : p.capacityMl ?? p.capacity ?? p.graceSku;
+                        if (seenCapacity.has(key)) continue;
+                        seenCapacity.add(key);
+                        variants.push({
+                            graceSku: p.graceSku,
+                            websiteSku: p.websiteSku ?? null,
+                            itemName: p.itemName,
+                            shopifyVariantId: p.shopifyVariantId ?? null,
+                            checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
+                            family: p.family ?? family,
+                            capacity: p.capacity,
+                            capacityMl: p.capacityMl,
+                            color: p.color,
+                            neckThreadSize: p.neckThreadSize,
+                            applicator: p.applicator ?? null,
+                            webPrice1pc: p.webPrice1pc,
+                            webPrice10pc: p.webPrice10pc ?? null,
+                            webPrice12pc: p.webPrice12pc ?? null,
+                            stockStatus: p.stockStatus ?? null,
+                            slug: p.slug ?? "",
+                            heroImageUrl: null as string | null,
+                        });
+                    }
+                }
+                if (overview && typeof overview === "object" && "sizes" in overview) {
+                    const sizes = ((overview as { sizes?: Array<{ label?: string; ml?: number | null }> }).sizes ?? [])
+                        .filter((s) => s.label || s.ml != null);
+                    const seenCapacity = new Set(variants.map((v) => v.capacityMl ?? v.capacity ?? v.graceSku));
+                    for (const size of sizes) {
+                        const key = size.ml ?? size.label;
+                        if (key == null || seenCapacity.has(key)) continue;
+                        const searchTerm = `${family} ${size.label ?? `${size.ml}ml`}`;
+                        const sizeMatches = await convex.query(api.grace.searchCatalog, {
+                            searchTerm,
+                            familyLimit: family,
+                        });
+                        const match = Array.isArray(sizeMatches)
+                            ? sizeMatches.find((p) => p.capacityMl === size.ml) ?? sizeMatches[0]
+                            : null;
+                        if (!match?.graceSku) continue;
+                        seenCapacity.add(key);
+                        variants.push({
+                            graceSku: match.graceSku,
+                            websiteSku: match.websiteSku ?? null,
+                            itemName: match.itemName,
+                            shopifyVariantId: match.shopifyVariantId ?? null,
+                            checkoutEligible: match.checkoutEligible ?? Boolean(match.shopifyVariantId),
+                            family: match.family ?? family,
+                            capacity: match.capacity,
+                            capacityMl: match.capacityMl,
+                            color: match.color,
+                            neckThreadSize: match.neckThreadSize,
+                            applicator: match.applicator ?? null,
+                            webPrice1pc: match.webPrice1pc,
+                            webPrice10pc: match.webPrice10pc ?? null,
+                            webPrice12pc: match.webPrice12pc ?? null,
+                            stockStatus: match.stockStatus ?? null,
+                            slug: match.slug ?? "",
+                            heroImageUrl: null as string | null,
+                        });
+                    }
+                }
+                const variantKey = (variant: { graceSku?: string | null; slug?: string | null; capacityMl?: number | null; color?: string | null }) =>
+                    variant.graceSku ?? `${variant.slug ?? ""}|${variant.capacityMl ?? ""}|${variant.color ?? ""}`;
+                const seenVariantKeys = new Set<string>();
+                variants = variants.filter((variant) => {
+                    const key = variantKey(variant);
+                    if (seenVariantKeys.has(key)) return false;
+                    seenVariantKeys.add(key);
+                    return true;
+                });
+                const byCapacity = (a: { capacityMl?: number | null }, b: { capacityMl?: number | null }) =>
+                    (a.capacityMl ?? Number.MAX_SAFE_INTEGER) - (b.capacityMl ?? Number.MAX_SAFE_INTEGER);
+                if (requestedCapacityMl != null) {
+                    const requestedVariants = variants.filter((v) => v.capacityMl === requestedCapacityMl);
+                    const otherVariants = variants.filter((v) => v.capacityMl !== requestedCapacityMl);
+                    const reservedKeys = new Set<string>();
+                    const requestedColorReps = family.toLowerCase() === "cylinder" && requestedCapacityMl === 9
+                        ? VERIFIED_9ML_CYLINDER_ROLLON_COLORS
+                            .map((color) => requestedVariants.find((v) => v.color === color))
+                            .filter((v): v is (typeof variants)[number] => Boolean(v))
+                        : [];
+                    for (const variant of requestedColorReps) reservedKeys.add(variantKey(variant));
+                    const requestedRest = requestedVariants.filter((variant) => !reservedKeys.has(variantKey(variant)));
+                    variants = [
+                        ...requestedColorReps,
+                        ...requestedRest.sort((a, b) => String(a.color ?? "").localeCompare(String(b.color ?? ""))),
+                        ...otherVariants.sort(byCapacity),
+                    ].slice(0, 16);
+                } else {
+                    variants = variants.sort(byCapacity).slice(0, 16);
+                }
+                variants = await Promise.all(variants.map(async (variant) => {
+                    if (variant.shopifyVariantId) return variant;
+                    const product = await convex.query(api.products.getBySku, { graceSku: variant.graceSku }).catch(() => null);
+                    if (!product) return variant;
+                    return {
+                        ...variant,
+                        websiteSku: product.websiteSku ?? variant.websiteSku ?? null,
+                        shopifyVariantId: product.shopifyVariantId ?? null,
+                        checkoutEligible: Boolean(product.shopifyVariantId ?? variant.shopifyVariantId),
+                        webPrice1pc: product.webPrice1pc ?? variant.webPrice1pc,
+                        webPrice10pc: product.webPrice10pc ?? variant.webPrice10pc ?? null,
+                        webPrice12pc: product.webPrice12pc ?? variant.webPrice12pc ?? null,
+                        stockStatus: product.stockStatus ?? variant.stockStatus ?? null,
+                    };
+                }));
 
                 result = {
                     family,
@@ -329,7 +529,10 @@ export async function POST(req: NextRequest) {
                     .filter((p): p is NonNullable<typeof p> => !!p)
                     .map((p) => ({
                         graceSku: p.graceSku,
+                        websiteSku: p.websiteSku,
                         itemName: p.itemName,
+                        shopifyVariantId: p.shopifyVariantId ?? null,
+                        checkoutEligible: Boolean(p.shopifyVariantId),
                         family: p.family,
                         capacity: p.capacity,
                         capacityMl: p.capacityMl,
@@ -337,7 +540,9 @@ export async function POST(req: NextRequest) {
                         applicator: p.applicator,
                         neckThreadSize: p.neckThreadSize,
                         webPrice1pc: p.webPrice1pc,
+                        webPrice10pc: p.webPrice10pc,
                         webPrice12pc: p.webPrice12pc,
+                        stockStatus: p.stockStatus,
                         heroImageUrl: p.imageUrl ?? null,
                         heightMm: null,
                     }));

@@ -1,7 +1,7 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
+import { SITE_URL } from "@/lib/seo";
 
 const FIELDS = [
     { name: "name", label: "Full Name", type: "text" as const, required: true, placeholder: "Jane Smith" },
@@ -10,6 +10,13 @@ const FIELDS = [
     { name: "phone", label: "Phone", type: "tel" as const, placeholder: "+1 (555) 000-0000" },
     { name: "message", label: "How Can We Help?", type: "textarea" as const, required: true, placeholder: "Questions about products, orders, compatibility, custom packaging, or anything else..." },
 ];
+
+export const metadata: Metadata = {
+    title: "Contact Best Bottles | Wholesale Packaging Support",
+    description:
+        "Contact the Best Bottles team for product questions, compatibility help, quotes, samples, and wholesale glass packaging support.",
+    alternates: { canonical: `${SITE_URL}/contact` },
+};
 
 export default function ContactPage() {
     return (

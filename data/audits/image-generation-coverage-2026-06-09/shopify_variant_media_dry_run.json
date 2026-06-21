@@ -1,0 +1,247 @@
+{
+  "generatedAt": "2026-06-10T02:38:09.434Z",
+  "mode": "dry-run",
+  "family": "ALL",
+  "convexUrl": "https://helpful-elephant-638.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "convexProducts": 2474,
+    "shopifyVariants": 2485,
+    "patchesReady": 2,
+    "patchesSelected": 2,
+    "applied": 0,
+    "failed": 0,
+    "skippedMissingShopifyImage": 1816,
+    "skippedUnmatchedShopifySku": 0,
+    "skippedDuplicateShopifySku": 0
+  },
+  "samples": {
+    "patchesReady": [
+      {
+        "websiteSku": "GBAtom10Blk",
+        "graceSku": "GB-CYL-BLK-10ML-ATM-BLK-01",
+        "family": "Atomizer",
+        "productHandle": "atomizer-10ml",
+        "reason": "replace_stale_shopify_image",
+        "currentImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588837027_u6vyrl_bb2bbd5b-20af-4712-9d51-057408c6a328.png?v=1779603839",
+        "currentImageHost": "cdn.shopify.com",
+        "shopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588837027_u6vyrl.png?v=1779594740"
+      },
+      {
+        "websiteSku": "Alu250SpryBl",
+        "graceSku": "BB-ALU250SPRYBL",
+        "family": "Aluminum Bottle",
+        "productHandle": "fine-mist-sprayer-20-410",
+        "reason": "replace_stale_shopify_image",
+        "currentImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1779309151640-13126207-25cc-4be4-91df-b88b4885ec15_f61e997f-afb9-47b2-abb9-f99c6041877e.png?v=1779326524",
+        "currentImageHost": "cdn.shopify.com",
+        "shopifyImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/1779263753602-a62a4b27-dd0f-4fe9-99ee-aa4c1661a3c1.png?v=1779568550"
+      }
+    ],
+    "skippedMissingShopifyImage": [
+      {
+        "websiteSku": "GBAtom5SlimBlk",
+        "graceSku": "GB-SLM-BLK-5ML-ATM-BLK-T",
+        "family": "Atomizer",
+        "productHandle": "atomizer-5ml-slim",
+        "convexImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588034304_nb3j5c_046d75ee-7554-4bd7-8bf8-f8d86ad9dd1e.png?v=1779602567",
+        "convexImageHost": "cdn.shopify.com"
+      },
+      {
+        "websiteSku": "GBRoyal13RollSlDot",
+        "graceSku": "GB-RYL-CLR-13ML-ROL-SLDT",
+        "family": "Royal",
+        "productHandle": "royal-13ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRoyal13RollSlDot.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "LBCrcl100LtnClOvrCap",
+        "graceSku": "LB-CIR-CLR-100ML-LPM-COCP",
+        "family": "Circle",
+        "productHandle": "circle-100ml-clear-18-415-lotionpump",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBCrcl100LtnClOvrCap.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst78RdcrMtSlTall",
+        "graceSku": "GB-RND-FRS-78ML-RDC-MSLV-T",
+        "family": "Round",
+        "productHandle": "round-78ml-frosted-18-415-reducer",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst78RdcrMtSlTall.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst128AnSpRed",
+        "graceSku": "GB-RND-FRS-128ML-ASP-RED",
+        "family": "Round",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst128AnSpRed.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "LBElgFrst100LtnMtGl",
+        "graceSku": "LB-ELG-FRS-100ML-LPM-MGLD",
+        "family": "Elegant",
+        "productHandle": "elegant-100ml-frosted-18-415-lotionpump",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBElgFrst100LtnMtGl.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBAtom5SlimGl",
+        "graceSku": "GB-SLM-CLR-5ML-ATM-GLD-T",
+        "family": "Atomizer",
+        "productHandle": "atomizer-5ml-slim",
+        "convexImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588088625_bcij1v_bb6f1470-9d52-4e6e-9862-145e6d16bf29.png?v=1779602562",
+        "convexImageHost": "cdn.shopify.com"
+      },
+      {
+        "websiteSku": "LBCrclFrst100LtnClOvrCap",
+        "graceSku": "LB-CIR-FRS-100ML-LPM-COCP",
+        "family": "Circle",
+        "productHandle": "circle-100ml-frosted-18-415-lotionpump",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBCrclFrst100LtnClOvrCap.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRoyal13RollSlMatt",
+        "graceSku": "GB-RYL-CLR-13ML-ROL-MSLV",
+        "family": "Royal",
+        "productHandle": "royal-13ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRoyal13RollSlMatt.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst78RdcrMtSl",
+        "graceSku": "GB-RND-FRS-78ML-RDC-MSLV",
+        "family": "Round",
+        "productHandle": "round-78ml-frosted-18-415-reducer",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst78RdcrMtSl.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBSqr15MtlRollBlkSh",
+        "graceSku": "GB-SQR-CLR-15ML-MRL-SBLK",
+        "family": "Square",
+        "productHandle": "square-15ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBSqr15MtlRollBlkSh.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst128AnSpMtSl",
+        "graceSku": "GB-RND-FRS-128ML-ASP-MSLV",
+        "family": "Round",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst128AnSpMtSl.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "LBElgFrst100LtnShnGl",
+        "graceSku": "LB-ELG-FRS-100ML-LPM-SGLD",
+        "family": "Elegant",
+        "productHandle": "elegant-100ml-frosted-18-415-lotionpump",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBElgFrst100LtnShnGl.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst78RdcrWht",
+        "graceSku": "GB-RND-FRS-78ML-RDC-WHT",
+        "family": "Round",
+        "productHandle": "round-78ml-frosted-18-415-reducer",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst78RdcrWht.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBAtom5SlimSl",
+        "graceSku": "GB-SLM-CLR-5ML-ATM-SLV-T",
+        "family": "Atomizer",
+        "productHandle": "atomizer-5ml-slim",
+        "convexImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588140614_j2unbh_fa555608-e72c-471a-8506-6fe01160585d.png?v=1779602557",
+        "convexImageHost": "cdn.shopify.com"
+      },
+      {
+        "websiteSku": "GBRoyal13RollSlSh",
+        "graceSku": "GB-RYL-CLR-13ML-ROL-SSLV",
+        "family": "Royal",
+        "productHandle": "royal-13ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRoyal13RollSlSh.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBSqr15MtlRollCuMatt",
+        "graceSku": "GB-SQR-CLR-15ML-MRL-MCPR",
+        "family": "Square",
+        "productHandle": "square-15ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBSqr15MtlRollCuMatt.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst128AnSpWht",
+        "graceSku": "GB-RND-FRS-128ML-ASP-WHT",
+        "family": "Round",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst128AnSpWht.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "LBElgFrst100LtnShnBlk",
+        "graceSku": "LB-ELG-FRS-100ML-LPM-SBLK",
+        "family": "Elegant",
+        "productHandle": "elegant-100ml-frosted-18-415-lotionpump",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/LBElgFrst100LtnShnBlk.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBAtom5SlStars",
+        "graceSku": "GB-CYL-CLR-5ML-ATM-SLV-03",
+        "family": "Atomizer",
+        "productHandle": "atomizer-5ml",
+        "convexImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779588197499_i22fdn_cbc7a9bb-6df6-475a-8e20-5e6730a03743.png?v=1779603554",
+        "convexImageHost": "cdn.shopify.com"
+      },
+      {
+        "websiteSku": "GBRndFrst78RdcrIvyLthr",
+        "graceSku": "GB-RND-FRS-78ML-RDC-IVLT",
+        "family": "Round",
+        "productHandle": "round-78ml-frosted-18-415-reducer",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst78RdcrIvyLthr.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBCrcl15RollBlkSh",
+        "graceSku": "GB-CIR-CLR-15ML-ROL-SBLK",
+        "family": "Circle",
+        "productHandle": "circle-15ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBCrcl15RollBlkSh.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBSqr15MtlRollGlMatt",
+        "graceSku": "GB-SQR-CLR-15ML-MRL-MGLD",
+        "family": "Square",
+        "productHandle": "square-15ml-clear-13-415-rollon",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBSqr15MtlRollGlMatt.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBSlk50AnSpLvn",
+        "graceSku": "GB-SLK-CLR-50ML-ASP-LVN",
+        "family": "Sleek",
+        "productHandle": "sleek-50ml-clear-18-415-antiquespray",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBSlk50AnSpLvn.gif",
+        "convexImageHost": "www.bestbottles.com"
+      },
+      {
+        "websiteSku": "GBRndFrst128AnSpTslRed",
+        "graceSku": "GB-RND-FRS-128ML-ASP-08",
+        "family": "Round",
+        "productHandle": "round-128ml-frosted-18-415-antiquespray",
+        "convexImageUrl": "https://www.bestbottles.com/images/store/enlarged_pics/GBRndFrst128AnSpTslRed.gif",
+        "convexImageHost": "www.bestbottles.com"
+      }
+    ],
+    "skippedUnmatchedShopifySku": [],
+    "skippedDuplicateShopifySku": [],
+    "failed": []
+  }
+}

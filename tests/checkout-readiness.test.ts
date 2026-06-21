@@ -10,20 +10,23 @@ import {
 } from "../src/lib/checkout";
 
 describe("checkout readiness helpers", () => {
-    it("only treats explicitly verified items as checkout-ready", () => {
+    it("treats explicit eligibility or a stored Shopify variant ID as checkout-ready", () => {
         expect(isCheckoutReady({ graceSku: "A", checkoutEligible: true })).toBe(true);
         expect(isCheckoutReady({ graceSku: "B", checkoutEligible: false })).toBe(false);
         expect(isCheckoutReady({ graceSku: "C" })).toBe(false);
+        expect(isCheckoutReady({ graceSku: "D", shopifyVariantId: "gid://shopify/ProductVariant/123" })).toBe(true);
+        expect(isCheckoutReady({ graceSku: "E", checkoutEligible: false, shopifyVariantId: "gid://shopify/ProductVariant/456" })).toBe(false);
     });
 
     it("splits verified checkout items from quote-only items", () => {
         const result = splitCheckoutItems([
             { graceSku: "READY", checkoutEligible: true },
+            { graceSku: "STORED_ID", shopifyVariantId: "gid://shopify/ProductVariant/123" },
             { graceSku: "QUOTE", checkoutEligible: false },
             { graceSku: "UNKNOWN" },
         ]);
 
-        expect(result.checkoutReadyItems.map((i) => i.graceSku)).toEqual(["READY"]);
+        expect(result.checkoutReadyItems.map((i) => i.graceSku)).toEqual(["READY", "STORED_ID"]);
         expect(result.quoteOnlyItems.map((i) => i.graceSku)).toEqual(["QUOTE", "UNKNOWN"]);
     });
 
@@ -46,7 +49,7 @@ describe("checkout buying-path guardrails", () => {
     });
 
     it("gates PDP add-to-cart on verified Shopify checkout eligibility", () => {
-        const pdp = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
+        const pdp = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
 
         expect(pdp).toContain("const checkoutReady = Boolean(selectedVariant?.shopifyVariantId)");
         expect(pdp).toContain("const canAddToCart = inStock && checkoutReady");
@@ -55,7 +58,7 @@ describe("checkout buying-path guardrails", () => {
     });
 
     it("labels spray variants from the applicator/SKU instead of stale capStyle data", () => {
-        const pdp = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
+        const pdp = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
 
         expect(pdp).toContain("function getVariantOptionPrefix");
         expect(pdp).toContain('sku.includes("-SPR-") || applicator.includes("spray")');
@@ -71,5 +74,17 @@ describe("checkout buying-path guardrails", () => {
         expect(auditScript).not.toContain("ctx.db.patch");
         expect(auditScript).not.toContain("convex.mutation");
         expect(auditScript).not.toContain("mutation(");
+    });
+
+    it("carries stored Shopify variant IDs from cart to checkout before SKU fallback", () => {
+        const cartProvider = readFileSync("src/components/CartProvider.tsx", "utf8");
+        const route = readFileSync("src/app/api/shopify/resolve-variants/route.ts", "utf8");
+
+        expect(cartProvider).toContain("shopifyVariantId: i.shopifyVariantId");
+        expect(cartProvider).toContain("checkoutEligible = item.checkoutEligible ?? Boolean(shopifyVariantId)");
+        expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
+        expect(route).toContain("const directCheckoutItems = requestedItems");
+        expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId)");
+        expect(route).toContain("const checkoutItems = [...directCheckoutItems, ...resolvedCheckoutItems]");
     });
 });

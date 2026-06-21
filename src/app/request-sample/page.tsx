@@ -1,7 +1,7 @@
-"use client";
-
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import FormPage from "@/components/FormPage";
+import { SITE_URL } from "@/lib/seo";
 
 const FIELDS = [
     { name: "name", label: "Full Name", type: "text" as const, required: true, placeholder: "Jane Smith" },
@@ -12,6 +12,13 @@ const FIELDS = [
     { name: "quantities", label: "Estimated Quantities", type: "text" as const, placeholder: "e.g. 500-1,000 pieces" },
     { name: "message", label: "Additional Notes", type: "textarea" as const, placeholder: "Timeline, special requirements, anything else we should know..." },
 ];
+
+export const metadata: Metadata = {
+    title: "Request Samples | Best Bottles Glass Packaging",
+    description:
+        "Request curated glass bottle and packaging samples from Best Bottles before placing a wholesale order.",
+    alternates: { canonical: `${SITE_URL}/request-sample` },
+};
 
 export default function RequestSamplePage() {
     return (

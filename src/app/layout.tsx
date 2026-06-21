@@ -81,7 +81,12 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: [DEFAULT_OG_IMAGE],
   },
-  verification: {},
+  verification: {
+    google: "laASiYMkfPY-XhBRUD49XRJWN-BnmP2YweGBcmm2Fjc",
+    other: {
+      "msvalidate.01": "DD2ECFD7F20F418A4A67662DFC0D0B03",
+    },
+  },
 };
 
 export default async function RootLayout({

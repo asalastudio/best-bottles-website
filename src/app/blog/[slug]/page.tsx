@@ -5,11 +5,12 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, Calendar } from "@/components/icons";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Navbar from "@/components/Navbar";
+import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
 import { urlFor } from "@/sanity/lib/image";
 import { JOURNAL_POST_QUERY, JOURNAL_SLUGS_QUERY } from "@/sanity/lib/queries";
-
-export const revalidate = 60;
+import { SITE_URL } from "@/lib/seo";
 
 type ArticleImage = { asset?: { _ref: string }; _type?: string } | null | undefined;
 
@@ -38,7 +39,8 @@ const CATEGORY_LABELS: Record<string, string> = {
 async function getPost(slug: string): Promise<JournalPost | null> {
     if (!isSanityConfigured) return null;
     try {
-        return await client.fetch<JournalPost | null>(JOURNAL_POST_QUERY, { slug });
+        const { data } = await sanityFetch({ query: JOURNAL_POST_QUERY, params: { slug } });
+        return (data as JournalPost) ?? null;
     } catch {
         return null;
     }
@@ -65,9 +67,11 @@ export async function generateMetadata({
     return {
         title: `${post.title} | Best Bottles Journal`,
         description: post.excerpt ?? `Read ${post.title} on the Best Bottles Journal.`,
+        alternates: { canonical: `${SITE_URL}/blog/${slug}` },
         openGraph: {
             title: post.title,
             description: post.excerpt ?? "",
+            url: `${SITE_URL}/blog/${slug}`,
             images: post.image ? [{ url: urlFor(post.image) }] : [],
         },
     };
@@ -290,6 +294,7 @@ export default async function BlogArticlePage({
                     </div>
                 </div>
             </section>
+            <SanityLiveVisualEditing />
         </div>
     );
 }

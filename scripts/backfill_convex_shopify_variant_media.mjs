@@ -84,6 +84,7 @@ const FAMILY = argValue("--family");
 const LIMIT = Number(argValue("--limit") ?? "0");
 const APPLY = process.argv.includes("--apply");
 const JSON_MODE = process.argv.includes("--json");
+const FULL_REPORT = process.argv.includes("--full-report");
 const CONVEX_URL = process.env.NEXT_PUBLIC_CONVEX_URL;
 const SHOPIFY_DOMAIN = (process.env.NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN ?? "").replace(/^https?:\/\//, "").replace(/\/$/, "");
 const SHOPIFY_TOKEN = process.env.SHOPIFY_ADMIN_TOKEN;
@@ -252,10 +253,21 @@ async function main() {
         for (const patch of selectedPatches) {
             try {
                 const result = await convex.mutation(api.products.setVariantImages, {
-                    websiteSku: patch.websiteSku,
+                    // websiteSku is not globally unique for a few component SKUs.
+                    // Passing Grace SKU lets the Convex mutation fall through to
+                    // the unique by_graceSku index and avoids cross-row ping-pong.
+                    websiteSku: patch.graceSku,
                     imageUrl: patch.shopifyImageUrl,
                     writeToken: WRITE_TOKEN,
                 });
+                if (result?.success === false) {
+                    failed.push({
+                        ...patch,
+                        result,
+                        error: result.error ?? "mutation_returned_success_false",
+                    });
+                    continue;
+                }
                 applied.push({ ...patch, result });
             } catch (error) {
                 failed.push({ ...patch, error: String(error?.message ?? error) });
@@ -282,12 +294,25 @@ async function main() {
         },
         samples: {
             patchesReady: patches.slice(0, 25),
+            applied: applied.slice(0, 25),
             skippedMissingShopifyImage: skippedMissingShopifyImage.slice(0, 25),
             skippedUnmatchedShopifySku: skippedUnmatchedShopifySku.slice(0, 25),
             skippedDuplicateShopifySku: skippedDuplicateShopifySku.slice(0, 25),
             failed,
         },
     };
+
+    if (FULL_REPORT) {
+        report.full = {
+            patchesReady: patches,
+            selectedPatches,
+            applied,
+            skippedMissingShopifyImage,
+            skippedUnmatchedShopifySku,
+            skippedDuplicateShopifySku,
+            failed,
+        };
+    }
 
     if (JSON_MODE) {
         console.log(JSON.stringify(report, null, 2));

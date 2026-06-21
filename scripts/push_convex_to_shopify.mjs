@@ -3,8 +3,8 @@
  * Push Convex catalog → Shopify Plus.
  *
  * One Shopify product per Convex productGroup; each Convex product in the
- * group becomes a Shopify variant keyed on `graceSku` (matches the path
- * /api/shopify/resolve-variants uses).
+ * group becomes a Shopify variant keyed on `graceSku` or `websiteSku`
+ * (checkout later uses the backfilled Shopify variant ID, not this SKU).
  *
  * v1 scope (deliberately minimal — goal: make checkout work, not perfect UX):
  *   - Options: single "SKU" option with graceSku as value per variant
@@ -67,6 +67,7 @@ Options:
   --apply                      Write to Shopify. Without this, the script is a dry run
   --allow-placeholder-prices   Allow missing prices to sync as $0.01 during --apply
   --skip-existing              In apply mode, skip products whose Shopify handle already exists
+  --missing-shopify-ids-only   Only process Convex groups with variants missing shopifyVariantId
   --family <name>              Limit to one Convex family
   --slug <slug>                Limit to one product group slug
   --limit <n>                  Limit number of product groups
@@ -89,6 +90,7 @@ const args = {
     validateOnly: argv.includes("--validate-only"),
     allowPlaceholderPrices: argv.includes("--allow-placeholder-prices"),
     skipExisting: argv.includes("--skip-existing"),
+    missingShopifyIdsOnly: argv.includes("--missing-shopify-ids-only"),
     limit: Number(argVal("--limit")) || undefined,
     family: argVal("--family"),
     slug: argVal("--slug"),
@@ -216,6 +218,22 @@ function variantSku(v) {
     return v.graceSku ?? v.websiteSku ?? null;
 }
 
+function manifestVariantsWithShopifyIds(variants, syncedVariants) {
+    const syncedBySku = new Map(
+        syncedVariants.map((variant) => [variant.sku, variant]),
+    );
+    return variants.map((variant) => {
+        const sku = variantSku(variant);
+        const synced = sku ? syncedBySku.get(sku) : null;
+        return {
+            ...manifestVariant(variant),
+            sku,
+            shopifyVariantId: synced?.shopifyVariantId ?? variant.shopifyVariantId ?? null,
+            shopifyInventoryItemId: synced?.shopifyInventoryItemId ?? variant.shopifyInventoryItemId ?? null,
+        };
+    });
+}
+
 function buildManifest() {
     return {
         runId,
@@ -228,6 +246,7 @@ function buildManifest() {
             slug: args.slug ?? null,
             limit: args.limit ?? null,
             status: args.status,
+            missingShopifyIdsOnly: args.missingShopifyIdsOnly,
         },
         summary: {
             created: 0,
@@ -259,7 +278,7 @@ function writeManifest(manifest) {
 section("Push Convex → Shopify");
 info(`Mode: ${args.validateOnly ? `${G}VALIDATE ONLY${X}` : args.apply ? `${R}APPLY${X}` : `${G}DRY-RUN${X}`}`);
 info(`Status: ${args.status}`);
-info(`Sync mode: ${args.validateOnly ? "Convex contract validation" : args.skipExisting ? "create-only (skip existing handles)" : "upsert (update existing handles)"}`);
+info(`Sync mode: ${args.validateOnly ? "Convex contract validation" : args.skipExisting ? "create-only (skip existing handles)" : args.missingShopifyIdsOnly ? "upsert missing Shopify IDs only" : "upsert (update existing handles)"}`);
 if (args.apply && !args.allowPlaceholderPrices) {
     info("Price policy: missing prices block apply. Pass --allow-placeholder-prices to use $0.01 placeholders.");
 }
@@ -267,6 +286,7 @@ info(`Manifest: ${args.manifestPath}`);
 if (args.limit) info(`Limit: ${args.limit} groups`);
 if (args.family) info(`Family filter: ${args.family}`);
 if (args.slug) info(`Slug filter: ${args.slug}`);
+if (args.missingShopifyIdsOnly) info("Missing-ID filter: only groups with variants missing shopifyVariantId");
 
 const manifest = buildManifest();
 
@@ -286,6 +306,17 @@ if (args.family) {
 if (args.slug) {
     groups = groups.filter((g) => g.slug === args.slug);
     info(`After slug filter: ${groups.length}`);
+}
+if (args.missingShopifyIdsOnly) {
+    const missingIdGroups = [];
+    for (const g of groups) {
+        const variants = await convex.query("products:getVariantsForGroup", { groupId: g._id }).catch(() => []);
+        if (variants.some((variant) => !variant.shopifyVariantId)) {
+            missingIdGroups.push(g);
+        }
+    }
+    groups = missingIdGroups;
+    info(`After missing Shopify ID filter: ${groups.length}`);
 }
 if (args.limit) {
     groups = groups.slice(0, args.limit);
@@ -324,6 +355,15 @@ for (let i = 0; i < groups.length; i++) {
     } catch (err) {
         fail(`${idx} ${g.slug} — failed to load variants: ${err.message}`);
         summary.failed++;
+        recordRow(manifest, {
+            slug: g.slug,
+            displayName: g.displayName,
+            status: "failed",
+            operation: args.validateOnly ? "validate" : "plan",
+            reason: "convex_variant_fetch_failed",
+            error: err.message,
+            variantCount: 0,
+        });
         continue;
     }
 
@@ -366,7 +406,19 @@ for (let i = 0; i < groups.length; i++) {
             );
             existing = existsData.productByHandle;
         } catch (err) {
-            warn(`${idx} ${g.slug} — handle check failed (${err.message.slice(0, 80)}), proceeding anyway`);
+            warn(`${idx} ${g.slug} — handle check failed (${err.message.slice(0, 80)})`);
+            summary.failed++;
+            recordRow(manifest, {
+                slug: g.slug,
+                displayName: g.displayName,
+                status: "failed",
+                operation: args.apply ? "apply" : "dry-run",
+                reason: "handle_check_failed",
+                error: err.message,
+                variantCount: variants.length,
+                variants: variants.map(manifestVariant),
+            });
+            continue;
         }
     }
 
@@ -463,6 +515,7 @@ for (let i = 0; i < groups.length; i++) {
             status: args.validateOnly ? "validated" : `planned_${operation}`,
             operation,
             shopifyProductId: existing?.id ?? null,
+            ...(priceIssues.length ? { reason: "missing_prices" } : {}),
             variantCount: variants.length,
             priceIssueSkus: priceIssues,
             skus: variants.map(variantSku).filter(Boolean),
@@ -509,6 +562,7 @@ for (let i = 0; i < groups.length; i++) {
                 reason: "shopify_user_errors",
                 errors: errs,
                 variantCount: variants.length,
+                variants: variants.map(manifestVariant),
             });
             continue;
         }
@@ -534,7 +588,7 @@ for (let i = 0; i < groups.length; i++) {
             shopifyHandle: prod.handle,
             variantCount: variants.length,
             priceIssueSkus: priceIssues,
-            variants: syncedVariants,
+            variants: manifestVariantsWithShopifyIds(variants, syncedVariants),
         });
     } catch (err) {
         fail(`${idx} ${g.slug} — ${err.message.slice(0, 200)}`);
@@ -547,6 +601,7 @@ for (let i = 0; i < groups.length; i++) {
             reason: "exception",
             error: err.message,
             variantCount: variants.length,
+            variants: variants.map(manifestVariant),
         });
     }
 }

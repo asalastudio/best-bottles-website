@@ -223,82 +223,131 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     <p className="text-sm text-slate">Browse our catalog or ask Grace, your AI Bottling Specialist, to find the right bottle and fitment.</p>
                                 </div>
                             ) : (
-                                items.map((item, i) => (
-                                    <motion.div
-                                        key={item.graceSku}
-                                        initial={{ opacity: 0, y: 10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, x: -20 }}
-                                        transition={{ delay: i * 0.04 }}
-                                        className="group relative flex gap-3 p-3 rounded-xl bg-white/70"
-                                        style={{ border: "1px solid rgba(212, 197, 169, 0.3)" }}
-                                    >
-                                        <div className="w-16 h-16 rounded-xl shrink-0 flex items-center justify-center bg-bone/80 border border-champagne/40">
-                                            <ShoppingBag className="text-champagne" size={24} />
-                                        </div>
+                                items.map((item, i) => {
+                                    const p1 = item.webPrice1pc ?? item.unitPrice ?? 0;
+                                    const p10 = item.webPrice10pc ?? null;
+                                    const p12 = item.webPrice12pc ?? null;
 
-                                        <div className="flex-1 min-w-0 pr-6">
-                                            <p className="text-[14px] font-medium text-obsidian leading-snug line-clamp-2 mb-0.5">
-                                                {item.itemName}
-                                            </p>
-                                            <div className="text-[12px] text-slate mb-2 space-y-0.5">
-                                                <p>{[item.family, item.capacity, item.color].filter(Boolean).join(" · ") || "Product details pending"}</p>
-                                                {(item.applicator || item.capColor) && (
-                                                    <p>{[item.applicator, item.capColor].filter(Boolean).join(" · ")}</p>
-                                                )}
-                                            </div>
-                                            <p className="text-[10px] text-slate/70 font-mono uppercase tracking-wide mb-2">
-                                                SKU {item.graceSku}
-                                            </p>
-                                            {!isCheckoutReady(item) && (
-                                                <p className="mb-2 inline-flex rounded-sm border border-amber-200 bg-amber-50 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-700">
-                                                    Quote required
-                                                </p>
-                                            )}
-                                            <div className="flex items-center justify-between">
-                                                <div className="flex items-center gap-1 rounded-md overflow-hidden bg-bone/50 border border-champagne/50">
-                                                    <button
-                                                        onClick={() => updateQuantity(item.graceSku, item.quantity - 1)}
-                                                        className="w-11 h-11 flex items-center justify-center text-obsidian/60 hover:text-obsidian hover:bg-white transition-colors cursor-pointer"
-                                                        aria-label="Decrease quantity"
-                                                    >
-                                                        <Minus size={12} />
-                                                    </button>
-                                                    <span className="text-[12px] font-medium text-obsidian min-w-[20px] text-center">
-                                                        {item.quantity}
-                                                    </span>
-                                                    <button
-                                                        onClick={() => updateQuantity(item.graceSku, item.quantity + 1)}
-                                                        className="w-11 h-11 flex items-center justify-center text-obsidian/60 hover:text-obsidian hover:bg-white transition-colors cursor-pointer"
-                                                        aria-label="Increase quantity"
-                                                    >
-                                                        <Plus size={12} />
-                                                    </button>
-                                                </div>
-                                                <div className="text-right">
-                                                    {item.unitPrice != null ? (
-                                                        <>
-                                                            <p className="text-[11px] text-slate">${item.unitPrice.toFixed(2)} ea</p>
-                                                            <p className="text-[14px] font-medium text-obsidian">
-                                                                ${(item.unitPrice * item.quantity).toFixed(2)}
-                                                            </p>
-                                                        </>
-                                                    ) : (
-                                                        <p className="text-[12px] font-medium text-slate">Quote pricing</p>
-                                                    )}
-                                                </div>
-                                            </div>
-                                        </div>
+                                    let nudge = null;
+                                    if (p1 > 0) {
+                                        if (p12 != null && item.quantity < 12 && (p10 == null || item.quantity >= 10)) {
+                                            const unitsToNext = 12 - item.quantity;
+                                            const pct = Math.round((1 - p12 / p1) * 100);
+                                            if (pct > 0) {
+                                                nudge = {
+                                                    units: unitsToNext,
+                                                    targetQty: 12,
+                                                    price: p12,
+                                                    savePct: pct,
+                                                };
+                                            }
+                                        } else if (p10 != null && item.quantity < 10) {
+                                            const unitsToNext = 10 - item.quantity;
+                                            const pct = Math.round((1 - p10 / p1) * 100);
+                                            if (pct > 0) {
+                                                nudge = {
+                                                    units: unitsToNext,
+                                                    targetQty: 10,
+                                                    price: p10,
+                                                    savePct: pct,
+                                                };
+                                            }
+                                        }
+                                    }
 
-                                        <button
-                                            onClick={() => removeItem(item.graceSku)}
-                                            className="absolute top-2 right-2 w-11 h-11 flex items-center justify-center opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity cursor-pointer rounded-full hover:bg-red-50"
-                                            aria-label="Remove item"
+                                    return (
+                                        <motion.div
+                                            key={item.graceSku}
+                                            initial={{ opacity: 0, y: 10 }}
+                                            animate={{ opacity: 1, y: 0 }}
+                                            exit={{ opacity: 0, x: -20 }}
+                                            transition={{ delay: i * 0.04 }}
+                                            className="group relative flex flex-col p-3 rounded-xl bg-white/70"
+                                            style={{ border: "1px solid rgba(212, 197, 169, 0.3)" }}
                                         >
-                                            <Trash className="text-slate hover:text-red-500 transition-colors" size={14} />
-                                        </button>
-                                    </motion.div>
-                                ))
+                                            <div className="flex gap-3">
+                                                <div className="w-16 h-16 rounded-xl shrink-0 flex items-center justify-center bg-bone/80 border border-champagne/40">
+                                                    <ShoppingBag className="text-champagne" size={24} />
+                                                </div>
+
+                                                <div className="flex-1 min-w-0 pr-6">
+                                                    <p className="text-[14px] font-medium text-obsidian leading-snug line-clamp-2 mb-0.5">
+                                                        {item.itemName}
+                                                    </p>
+                                                    <div className="text-[12px] text-slate mb-2 space-y-0.5">
+                                                        <p>{[item.family, item.capacity, item.color].filter(Boolean).join(" · ") || "Product details pending"}</p>
+                                                        {(item.applicator || item.capColor || item.neckThreadSize) && (
+                                                            <p>{[item.applicator, item.capColor, item.neckThreadSize ? `Thread: ${item.neckThreadSize}` : null].filter(Boolean).join(" · ")}</p>
+                                                        )}
+                                                    </div>
+                                                    <p className="text-[10px] text-slate/70 font-mono uppercase tracking-wide mb-2">
+                                                        SKU {item.graceSku}
+                                                    </p>
+                                                    {!isCheckoutReady(item) && (
+                                                        <p className="mb-2 inline-flex rounded-sm border border-amber-200 bg-amber-50 px-2 py-1 text-[10px] font-semibold uppercase tracking-wider text-amber-700">
+                                                            Quote required
+                                                        </p>
+                                                    )}
+                                                    <div className="flex items-center justify-between">
+                                                        <div className="flex items-center gap-1 rounded-md overflow-hidden bg-bone/50 border border-champagne/50">
+                                                            <button
+                                                                onClick={() => updateQuantity(item.graceSku, item.quantity - 1)}
+                                                                className="w-11 h-11 flex items-center justify-center text-obsidian/60 hover:text-obsidian hover:bg-white transition-colors cursor-pointer"
+                                                                aria-label="Decrease quantity"
+                                                            >
+                                                                <Minus size={12} />
+                                                            </button>
+                                                            <span className="text-[12px] font-medium text-obsidian min-w-[20px] text-center">
+                                                                {item.quantity}
+                                                            </span>
+                                                            <button
+                                                                onClick={() => updateQuantity(item.graceSku, item.quantity + 1)}
+                                                                className="w-11 h-11 flex items-center justify-center text-obsidian/60 hover:text-obsidian hover:bg-white transition-colors cursor-pointer"
+                                                                aria-label="Increase quantity"
+                                                            >
+                                                                <Plus size={12} />
+                                                            </button>
+                                                        </div>
+                                                        <div className="text-right">
+                                                            {item.unitPrice != null ? (
+                                                                <>
+                                                                    <p className="text-[11px] text-slate">${item.unitPrice.toFixed(2)} ea</p>
+                                                                    <p className="text-[14px] font-medium text-obsidian">
+                                                                        ${(item.unitPrice * item.quantity).toFixed(2)}
+                                                                    </p>
+                                                                </>
+                                                            ) : (
+                                                                <p className="text-[12px] font-medium text-slate">Quote pricing</p>
+                                                            )}
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {nudge && (
+                                                <div className="mt-3 p-2 bg-muted-gold/10 border border-muted-gold/20 rounded-lg flex items-center justify-between gap-2">
+                                                    <p className="text-[11px] text-obsidian/85 leading-normal">
+                                                        Add <span className="font-semibold text-muted-gold">{nudge.units} more</span> to unlock <span className="font-semibold">{nudge.targetQty}+ pricing</span> at <span className="font-semibold">${nudge.price.toFixed(2)}/ea</span> (Save <span className="font-semibold text-emerald-700">{nudge.savePct}%</span>!)
+                                                    </p>
+                                                    <button
+                                                        onClick={() => updateQuantity(item.graceSku, nudge.targetQty)}
+                                                        className="shrink-0 px-2 py-1 bg-muted-gold hover:bg-obsidian text-white text-[9px] uppercase font-bold tracking-wider rounded transition-colors cursor-pointer"
+                                                    >
+                                                        + Add {nudge.units}
+                                                    </button>
+                                                </div>
+                                            )}
+
+                                            <button
+                                                onClick={() => removeItem(item.graceSku)}
+                                                className="absolute top-2 right-2 w-11 h-11 flex items-center justify-center opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity cursor-pointer rounded-full hover:bg-red-50"
+                                                aria-label="Remove item"
+                                            >
+                                                <Trash className="text-slate hover:text-red-500 transition-colors" size={14} />
+                                            </button>
+                                        </motion.div>
+                                    );
+                                })
                             )}
                         </div>
 

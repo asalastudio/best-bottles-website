@@ -7,6 +7,7 @@ import { House, GridFour, ShoppingBag, User, X, Microphone } from "@/components/
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
+import { analytics } from "@/lib/analytics";
 
 const GRACE_TAB_ONBOARDING_KEY = "grace-tab-onboarding-seen";
 
@@ -39,18 +40,17 @@ export default function MobileTabBar() {
     const [showGraceTooltip, setShowGraceTooltip] = useState(false);
     const [mounted, setMounted] = useState(false);
     const isProductPage = pathname.startsWith("/products/");
-    const tabs = isProductPage ? TABS.filter((tab) => tab.key !== "grace") : TABS;
+    const tabs = TABS;
 
     // Routes that own the entire viewport — tab bar would compete for space.
     const hideTabBar = pathname.startsWith("/grace-workspace");
 
     useEffect(() => {
         setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect -- hydration guard
-        if (isProductPage) return;
         if (typeof window !== "undefined" && !localStorage.getItem(GRACE_TAB_ONBOARDING_KEY)) {
             setShowGraceTooltip(true);
         }
-    }, [isProductPage]);
+    }, []);
 
     const dismissGraceTooltip = () => {
         setShowGraceTooltip(false);
@@ -72,6 +72,9 @@ export default function MobileTabBar() {
             window.dispatchEvent(new Event("open-cart-drawer"));
         } else {
             dismissGraceTooltip();
+            if (isProductPage) {
+                analytics.graceMobilePdpOpened({ pathname });
+            }
             openPanel();
         }
     }
@@ -134,7 +137,7 @@ export default function MobileTabBar() {
                         return (
                             <div key={tab.key} className="relative flex-1 flex items-center justify-center h-full min-w-[44px]">
                                 <AnimatePresence>
-                                    {isGrace && showGraceTooltip && (
+                                {isGrace && showGraceTooltip && (
                                         <motion.div
                                             initial={{ opacity: 0, y: 6 }}
                                             animate={{ opacity: 1, y: 0 }}
@@ -143,7 +146,9 @@ export default function MobileTabBar() {
                                             className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-[200px] z-[60]"
                                         >
                                             <div className="bg-obsidian text-bone text-xs rounded-xl shadow-xl px-3 py-2.5 pr-7 relative">
-                                                <p className="leading-snug">Need fitment help? Talk with Grace — your bottle & closure expert.</p>
+                                                <p className="leading-snug">
+                                                    {isProductPage ? "Ask Grace about fit for this bottle." : "Need fitment help? Talk with Grace — your bottle & closure expert."}
+                                                </p>
                                                 <button
                                                     onClick={(e) => { e.stopPropagation(); dismissGraceTooltip(); }}
                                                     aria-label="Dismiss"
