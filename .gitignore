@@ -50,8 +50,21 @@
 # Local packaged skills belong in AIOS, not this app repo.
 /_skills/
 
-# Paper Doll / Madison pipeline generated or local-only data
-/pipeline/
+# Best Bottles / Madison pipeline generated or local-only data
+/pipeline/*
+!/pipeline/best-bottles-reference-images-clean/
+!/pipeline/best-bottles-reference-images-clean/**/
+!/pipeline/best-bottles-reference-images-clean/**/*.md
+!/pipeline/best-bottles-reference-images-clean/**/*.csv
+!/pipeline/best-bottles-reference-images-clean/**/*.json
+!/pipeline/best-bottles-reference-images-clean/**/.gitkeep
+/pipeline/best-bottles-reference-images-clean/**/*.psd
+/pipeline/best-bottles-reference-images-clean/**/*.psb
+/pipeline/best-bottles-reference-images-clean/**/*.png
+/pipeline/best-bottles-reference-images-clean/**/*.jpg
+/pipeline/best-bottles-reference-images-clean/**/*.jpeg
+/pipeline/best-bottles-reference-images-clean/**/*.webp
+/pipeline/best-bottles-reference-images-clean/**/*.gif
 /pipeline/**/.env
 /pipeline/**/output/
 /pipeline/**/processing/
@@ -88,6 +101,11 @@ __pycache__/
 
 # Dotenv and similar local-only files
 *.local
+
+# Env backups — may contain live secrets (write tokens, API keys); never commit
+.env*.bak*
+.env.local.bak*
+*.bak-clerk-toggle
 
 # Local editor workspace files
 *.code-workspace

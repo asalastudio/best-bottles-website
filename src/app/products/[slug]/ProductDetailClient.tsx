@@ -15,7 +15,6 @@ import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
 import {
     PdpInlineBadges,
     PdpInlinePromo,
@@ -495,6 +494,10 @@ export interface ProductVariant {
     components?: ProductComponent[] | null;
 }
 
+function canonicalSku(variant: ProductVariant | null | undefined): string | null {
+    return variant?.graceSku?.trim() || variant?.websiteSku?.trim() || null;
+}
+
 function supportsSecondaryPdpImage(variant: ProductVariant): boolean {
     const isEmpire =
         variant.family === "Empire" ||
@@ -584,7 +587,7 @@ function VariantImagePicker({
                 key={tile.id}
                 type="button"
                 onClick={() => onSelect(tile.variant)}
-                title={`${tile.label} · ${tile.websiteSku}`}
+                title={`${tile.label} · ${tile.graceSku}`}
                 aria-label={`Select ${tile.label} variant`}
                 aria-pressed={isSelected}
                 className={`
@@ -771,7 +774,7 @@ function ProductConfidenceSummary({
         { label: "Neck size", value: group.neckThreadSize ?? variant?.neckThreadSize ?? "Unable to verify" },
         { label: "Capacity", value: group.capacity ?? variant?.capacity ?? "Unable to verify" },
         { label: "Case quantity", value: variant?.caseQuantity ? `${variant.caseQuantity} units/case` : "Confirm before ordering" },
-        { label: "Selected SKU", value: variant?.websiteSku ?? variant?.graceSku ?? "Unable to verify" },
+        { label: "Selected SKU", value: canonicalSku(variant) ?? "Unable to verify" },
     ];
 
     return (
@@ -1175,6 +1178,7 @@ export default function ProductDetailClient({
             const useDarkCheck = isLightSwatch(resolved.swatchName) || LIGHT_GLASS.has(resolved.swatchName);
             return {
                 id: v._id,
+                graceSku: v.graceSku,
                 websiteSku: v.websiteSku,
                 displayLabel: resolved.label,
                 swatchHex,
@@ -1303,7 +1307,7 @@ export default function ProductDetailClient({
         const finish = resolveVariantCapFinish(selectedVariant);
         return {
             label: customerFacingName?.variantLabel ?? getVariantTileLabel(selectedVariant),
-            sku: selectedVariant.websiteSku,
+            sku: canonicalSku(selectedVariant),
             swatchHex: resolveSwatchHex(finish.swatchName),
         };
     }, [customerFacingName?.variantLabel, selectedVariant, hasVariantImagePicker]);
@@ -1370,31 +1374,13 @@ export default function ProductDetailClient({
     }, [customerDisplayName, selectedVariant]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
+    // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so
+    // they carry draft content + stega click-to-edit overlays inside Presentation.
+    // Sync from the server-provided props on navigation; never re-fetch here, which
+    // would strip the overlays by overwriting with plain CDN content.
     useEffect(() => {
-        if (!isSanityConfigured || !activeSlug || !group?.family) return;
-        let cancelled = false;
-        Promise.all([
-            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
-                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
-                { slug: activeSlug }
-            ),
-            client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
-                `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
-                { family: group.family }
-            ),
-        ])
-            .then(([groupContent, familyContent]) => {
-                if (cancelled) return;
-                const groupBlocks: PdpBlock[] = groupContent?.pageBlocks ?? [];
-                const familyBlocks: PdpBlock[] = familyContent?.pageBlocks ?? [];
-                const merged = groupContent?.overrideTemplate
-                    ? groupBlocks
-                    : [...groupBlocks, ...familyBlocks];
-                setPdpBlocks(merged);
-            })
-            .catch(() => { if (!cancelled) setPdpBlocks([]); });
-        return () => { cancelled = true; };
-    }, [activeSlug, group?.family]);
+        setPdpBlocks(initialPdpBlocks);
+    }, [initialPdpBlocks]);
 
     // ── Mobile sticky bar: only visible once inline Add to Cart scrolls out of view ──
     useEffect(() => {
@@ -1552,7 +1538,7 @@ export default function ProductDetailClient({
                                         );
                                         const skuWatermark = selectedVariant ? (
                                             <span className="text-[9px] uppercase tracking-widest text-slate/40 font-mono select-none">
-                                                {selectedVariant.websiteSku}
+                                                {canonicalSku(selectedVariant)}
                                             </span>
                                         ) : null;
 
@@ -1821,7 +1807,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.websiteSku}
+                                                            title={item.graceSku ?? item.websiteSku}
                                                             className="flex shrink-0 flex-col items-center gap-1.5"
                                                         >
                                                             <span
@@ -1870,7 +1856,7 @@ export default function ProductDetailClient({
                                                 <button
                                                     key={v._id}
                                                     onClick={() => setSelectedVariantId(v._id)}
-                                                    title={v.websiteSku}
+                                                    title={canonicalSku(v) ?? v.websiteSku}
                                                     className="flex shrink-0 flex-col items-center gap-1.5"
                                                 >
                                                     <span
@@ -2156,7 +2142,7 @@ export default function ProductDetailClient({
                                                                     setSelectedCapComponentSku(item.websiteSku);
                                                                 }
                                                             }}
-                                                            title={item.websiteSku}
+                                                            title={item.graceSku ?? item.websiteSku}
                                                             className="flex flex-col items-center gap-1.5 group/variant"
                                                         >
                                                             <span
@@ -2211,7 +2197,7 @@ export default function ProductDetailClient({
                                                 <button
                                                     key={v._id}
                                                     onClick={() => setSelectedVariantId(v._id)}
-                                                    title={v.websiteSku}
+                                                    title={canonicalSku(v) ?? v.websiteSku}
                                                     className="flex flex-col items-center gap-1.5 group/variant"
                                                 >
                                                     <span
@@ -2430,10 +2416,7 @@ export default function ProductDetailClient({
                             </div>
                             <div className="py-10 max-w-2xl">
                                 <dl>
-                                    <SpecRow label="SKU" value={selectedVariant.websiteSku} />
-                                    {selectedVariant.graceSku && (
-                                        <SpecRow label="Grace SKU" value={selectedVariant.graceSku} />
-                                    )}
+                                    <SpecRow label="SKU" value={canonicalSku(selectedVariant)} />
                                     <SpecRow label="Height (with cap)" value={selectedVariant.heightWithCap} />
                                     <SpecRow label="Height (without cap)" value={selectedVariant.heightWithoutCap} />
                                     <SpecRow label="Diameter" value={selectedVariant.diameter} />

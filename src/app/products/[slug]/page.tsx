@@ -8,7 +8,9 @@ import ProductDetailClient, {
     type SiblingGroup,
     type ProductVariant,
 } from "./ProductDetailClient";
-import { client, isSanityConfigured } from "@/sanity/lib/client";
+import { isSanityConfigured } from "@/sanity/lib/client";
+import { sanityFetch } from "@/sanity/lib/live";
+import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "@/lib/seo";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -88,16 +90,20 @@ async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: st
 async function getPdpBlocks(activeSlug: string, family: string | null | undefined): Promise<PdpBlock[]> {
     if (!isSanityConfigured || !activeSlug || !family) return [];
     try {
-        const [groupContent, familyContent] = await Promise.all([
-            client.fetch<{ pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null>(
-                `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
-                { slug: activeSlug },
-            ),
-            client.fetch<{ pageBlocks?: PdpBlock[] } | null>(
-                `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
-                { family },
-            ),
+        // Live, draft-aware fetch: published blocks for visitors, draft blocks with
+        // click-to-edit overlays inside the Studio's Presentation tool.
+        const [groupRes, familyRes] = await Promise.all([
+            sanityFetch({
+                query: `*[_type == "productGroupContent" && slug.current == $slug][0] { pageBlocks, overrideTemplate }`,
+                params: { slug: activeSlug },
+            }),
+            sanityFetch({
+                query: `*[_type == "productFamilyContent" && family == $family][0] { pageBlocks }`,
+                params: { family },
+            }),
         ]);
+        const groupContent = groupRes.data as { pageBlocks?: PdpBlock[]; overrideTemplate?: boolean } | null;
+        const familyContent = familyRes.data as { pageBlocks?: PdpBlock[] } | null;
         const groupBlocks = groupContent?.pageBlocks ?? [];
         const familyBlocks = familyContent?.pageBlocks ?? [];
         return groupContent?.overrideTemplate ? groupBlocks : [...groupBlocks, ...familyBlocks];
@@ -209,7 +215,7 @@ export default async function ProductPage({
         ? buildProductJsonLd({
             name: customerName,
             description,
-            sku: variant.websiteSku,
+            sku: variant.graceSku ?? variant.websiteSku,
             image: isPreferredProductImageUrl(variant.imageUrl)
                 ? variant.imageUrl ?? undefined
                 : undefined,
@@ -252,6 +258,7 @@ export default async function ProductPage({
                 initialPdpBlocks={pdpBlocks}
                 siblingGroups={siblingGroups}
             />
+            <SanityLiveVisualEditing />
         </>
     );
 }
