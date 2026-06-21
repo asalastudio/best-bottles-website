@@ -1,11 +1,16 @@
 import { defineConfig } from "sanity";
 import { structureTool } from "sanity/structure";
 import { visionTool } from "@sanity/vision";
+import { presentationTool } from "sanity/presentation";
 import { schemaTypes } from "./src/sanity/schemaTypes";
+import { resolve } from "./src/sanity/presentation/resolve";
 
 export default defineConfig({
     name: "best-bottles",
     title: "Best Bottles",
+    // The Studio is embedded in the Next.js app at /studio. Without basePath the
+    // Studio router treats the "studio" URL segment as a tool name → "Tool not found".
+    basePath: "/studio",
     projectId: process.env.SANITY_STUDIO_PROJECT_ID ?? process.env.NEXT_PUBLIC_SANITY_PROJECT_ID!,
     dataset: process.env.SANITY_STUDIO_DATASET ?? process.env.NEXT_PUBLIC_SANITY_DATASET ?? "production",
     plugins: [
@@ -84,6 +89,16 @@ export default defineConfig({
                                 ].includes(item.getId() ?? "")
                         ),
                     ]),
+        }),
+        presentationTool({
+            resolve,
+            previewUrl: {
+                // Same-origin: the embedded Studio previews the site it ships with.
+                previewMode: {
+                    enable: "/api/draft-mode/enable",
+                    disable: "/api/draft-mode/disable",
+                },
+            },
         }),
         visionTool(),
     ],
