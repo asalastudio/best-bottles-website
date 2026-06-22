@@ -4,12 +4,20 @@ import { api } from "../../../convex/_generated/api";
 import { client as sanityClient, isSanityConfigured } from "@/sanity/lib/client";
 import { SITE_URL } from "@/lib/seo";
 
-const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
+// Lazy so the module loads cleanly during `next build`'s page-data
+// collection even when NEXT_PUBLIC_CONVEX_URL is unset on the build env.
+function getConvexClient(): ConvexHttpClient | null {
+  const url = process.env.NEXT_PUBLIC_CONVEX_URL;
+  if (!url) return null;
+  return new ConvexHttpClient(url);
+}
 
 export async function GET() {
   const fields: ISitemapField[] = [];
 
+  const convex = getConvexClient();
   try {
+    if (!convex) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
     const groups = await convex.query(api.products.getAllCatalogGroups, {});
     for (const g of groups as Array<{ slug: string }>) {
       fields.push({
