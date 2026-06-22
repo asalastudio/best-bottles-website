@@ -6,14 +6,19 @@
  */
 
 export const PRODUCTION_SITE_URL = "https://www.bestbottles.com";
+// Pre-cutover, the Vercel staging URL is acting as production. Allow it
+// alongside the canonical domain until DNS, Sanity CORS, and Clerk allowed
+// origins are switched over to www.bestbottles.com.
+const STAGING_SITE_URL = "https://best-bottles-website.vercel.app";
+const ALLOWED_PRODUCTION_SITE_URLS = new Set<string>([PRODUCTION_SITE_URL, STAGING_SITE_URL]);
 
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
 
 export const SITE_URL = configuredSiteUrl || PRODUCTION_SITE_URL;
 
-if (process.env.VERCEL_ENV === "production" && SITE_URL !== PRODUCTION_SITE_URL) {
+if (process.env.VERCEL_ENV === "production" && !ALLOWED_PRODUCTION_SITE_URLS.has(SITE_URL)) {
   throw new Error(
-    `NEXT_PUBLIC_SITE_URL must be https://www.bestbottles.com for production builds. Received: ${SITE_URL}`,
+    `NEXT_PUBLIC_SITE_URL must be https://www.bestbottles.com (or the staging URL during pre-cutover) for production builds. Received: ${SITE_URL}`,
   );
 }
 export const SITE_NAME = "Best Bottles";
