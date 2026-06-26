@@ -20,6 +20,8 @@ import {
     expandCatalogPathFamilies,
     graceCatalogSearchFromQuery,
     inferCatalogCategoryFromSearchTerm,
+    isGraceCapacityOnlySearch,
+    normalizeGraceCatalogNavigationPath,
 } from "@/lib/graceShapeIntent";
 import {
     GraceContext,
@@ -153,10 +155,14 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     const sanitizedQuery = sanitizeCatalogQuery(query);
     const productFams = products.map((p) => p.family).filter(Boolean) as string[];
     const queryText = (query ?? "").toLowerCase();
+    const capacityOnlySearch = isGraceCapacityOnlySearch(sanitizedQuery);
 
     const category = inferCatalogCategoryFromSearchTerm(query ?? "");
     if (category) {
         qs.set("category", category);
+    } else if (capacityOnlySearch) {
+        const capMatch = sanitizedQuery.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
+        if (capMatch) qs.set("search", `${capMatch[1]}ml`);
     } else {
         const expanded = catalogFamiliesForNav(query, family, productFams);
         if (expanded) {
@@ -183,12 +189,14 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
 
     const navSearch = graceCatalogSearchFromQuery(query);
     const capMatch = query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
-    if (navSearch) {
+    if (navSearch && !capacityOnlySearch) {
         qs.set("search", navSearch);
-    } else if (capMatch) {
+    } else if (capMatch && !qs.has("search")) {
         qs.set("search", `${capMatch[1]}ml`);
     }
-    if (/roll[\s-]?on|roller/.test(queryText)) {
+    if (capacityOnlySearch) {
+        // Keep pure size navigation broad. Specific intents like "1ml roll-on" still apply filters.
+    } else if (/roll[\s-]?on|roller/.test(queryText)) {
         qs.set("applicators", "rollon");
     } else if (/(bulb|vintage|antique).*(spray|sprayer)/.test(queryText)) {
         qs.set("applicators", "antiquespray,antiquespray-tassel");
@@ -1199,6 +1207,7 @@ function GraceProviderBase({
                     if (!sp.get("search")) sp.set("search", searchHint);
                     navPath = `${base}?${sp.toString()}`;
                 }
+                navPath = normalizeGraceCatalogNavigationPath(navPath);
                 if (!navPath.includes("grace=")) {
                     navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}grace=1`;
                 }
