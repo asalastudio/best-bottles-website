@@ -439,7 +439,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     {isCheckingOut
                                         ? "Checking Shopify variants and preparing checkout."
                                         : quoteOnlyItems.length > 0
-                                            ? `Checkout includes ${checkoutReadyItems.length} verified item${checkoutReadyItems.length === 1 ? "" : "s"}; quote required for the rest.`
+                                            ? checkoutReadyItems.length > 0
+                                                ? `Shopify checkout will use ${checkoutReadyItems.length} verified item${checkoutReadyItems.length === 1 ? "" : "s"} and remove ${quoteOnlyItems.length} quote-only item${quoteOnlyItems.length === 1 ? "" : "s"}.`
+                                                : "This cart needs a quote before Shopify checkout."
                                             : "Secure checkout · Terms apply"}
                                 </p>
                             </div>

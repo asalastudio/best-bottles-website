@@ -12,6 +12,7 @@ import { analytics } from "@/lib/analytics";
 import {
     checkoutUnavailableMessage,
     quoteOnlyCartMessage,
+    removeBlockedCheckoutItems,
     splitCheckoutItems,
     unavailableCheckoutMessage,
     unmatchedCheckoutMessage,
@@ -136,7 +137,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     const webPrice12pc = item.webPrice12pc ?? existing.webPrice12pc ?? null;
                     const shopifyVariantId = item.shopifyVariantId ?? existing.shopifyVariantId ?? null;
                     const websiteSku = item.websiteSku ?? existing.websiteSku ?? null;
-                    const checkoutEligible = item.checkoutEligible ?? existing.checkoutEligible ?? Boolean(shopifyVariantId);
+                    const checkoutEligible = Boolean(shopifyVariantId) || item.checkoutEligible === true || existing.checkoutEligible === true;
 
                     const activePrice = resolveUnitPrice(combinedQty, {
                         webPrice1pc,
@@ -158,7 +159,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     });
                 } else {
                     const shopifyVariantId = item.shopifyVariantId ?? null;
-                    const checkoutEligible = item.checkoutEligible ?? Boolean(shopifyVariantId);
+                    const checkoutEligible = Boolean(shopifyVariantId) || item.checkoutEligible === true;
                     const activePrice = resolveUnitPrice(item.quantity, {
                         webPrice1pc: item.webPrice1pc ?? item.unitPrice,
                         webPrice10pc: item.webPrice10pc ?? null,
@@ -273,7 +274,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     quoteOnly.length > 0 ? quoteOnlyCartMessage(quoteOnly) : "",
                 ].filter(Boolean);
                 if (warnings.length > 0) {
-                    setCheckoutError(`${warnings.join(" ")} Checkout opened for the verified items.`);
+                    const blockedSkus = [...quoteOnly, ...unmatched, ...unavailable];
+                    setItems((currentItems) => removeBlockedCheckoutItems(currentItems, blockedSkus));
+                    setCheckoutError(`${warnings.join(" ")} Removed those SKUs from this checkout and opened Shopify for the verified items.`);
                 } else {
                     clearCart();
                 }

@@ -133,7 +133,9 @@ export default function CartPage() {
                             </div>
                             <p className="mt-4 text-xs leading-relaxed text-slate">
                                 {quoteOnlyItems.length > 0
-                                    ? `${quoteOnlyItems.length} item${quoteOnlyItems.length === 1 ? "" : "s"} require a quote. Checkout will only include ${checkoutReadyItems.length} verified item${checkoutReadyItems.length === 1 ? "" : "s"}.`
+                                    ? checkoutReadyItems.length > 0
+                                        ? `Shopify checkout will use ${checkoutReadyItems.length} verified item${checkoutReadyItems.length === 1 ? "" : "s"} and remove ${quoteOnlyItems.length} quote-only item${quoteOnlyItems.length === 1 ? "" : "s"} from this checkout.`
+                                        : "This cart needs a quote before Shopify checkout."
                                     : "Online checkout verifies Shopify variants before redirecting."}
                             </p>
                             {checkoutError && (

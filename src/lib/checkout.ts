@@ -5,14 +5,23 @@ export type CheckoutCandidate = {
 };
 
 export function isCheckoutReady(item: CheckoutCandidate): boolean {
-    if (item.checkoutEligible === false) return false;
-    return item.checkoutEligible === true || Boolean(item.shopifyVariantId);
+    if (item.shopifyVariantId) return true;
+    return item.checkoutEligible === true;
 }
 
 export function splitCheckoutItems<T extends CheckoutCandidate>(items: T[]) {
     const checkoutReadyItems = items.filter(isCheckoutReady);
     const quoteOnlyItems = items.filter((item) => !isCheckoutReady(item));
     return { checkoutReadyItems, quoteOnlyItems };
+}
+
+export function removeBlockedCheckoutItems<T extends CheckoutCandidate>(
+    items: T[],
+    blockedSkus: string[],
+): T[] {
+    const blocked = new Set(blockedSkus.filter(Boolean));
+    if (blocked.size === 0) return items;
+    return items.filter((item) => !blocked.has(item.graceSku));
 }
 
 export function formatSkuList(skus: string[]): string {
