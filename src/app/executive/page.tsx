@@ -208,6 +208,11 @@ const quickLinks = [
     { label: "Team Hub", href: "/team?preview=1" },
     { label: "Sanity Studio", href: "/studio" },
     { label: "Madison Studio", href: getMadisonStudioHref() },
+    {
+        label: "Packaging Studio",
+        href: "https://best-bottles-packaging-studio.vercel.app/",
+        ariaLabel: "Best Bottles Packaging Studio",
+    },
     { label: "Mixpanel Replay", href: "https://mixpanel.com/project/4006168/view/4501946/app/session-replay" },
     { label: "Shopify Admin", href: getShopifyAdminHref() },
     { label: "Convex Dashboard", href: "https://dashboard.convex.dev" },
@@ -534,7 +539,12 @@ export default async function ExecutivePage({ searchParams }: ExecutivePageProps
                                             variant="outline"
                                             className="h-11 justify-between border-linen/20 bg-linen/5 text-linen hover:bg-linen/10 hover:text-linen"
                                         >
-                                            <Link href={link.href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
+                                            <Link
+                                                href={link.href}
+                                                target={external ? "_blank" : undefined}
+                                                rel={external ? "noopener noreferrer" : undefined}
+                                                aria-label={link.ariaLabel ?? link.label}
+                                            >
                                                 {link.label}
                                                 <ExternalLink size={15} weight="bold" />
                                             </Link>
