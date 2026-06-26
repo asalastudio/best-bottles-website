@@ -145,6 +145,53 @@ export function graceCatalogSearchFromQuery(query?: string): string | null {
     return parts.join(" ");
 }
 
+function compactGraceCapacitySearch(term: string): string | null {
+    const normalized = term
+        .trim()
+        .replace(/^["']|["']$/g, "")
+        .replace(/\bmilliliters?\b/gi, "ml")
+        .replace(/\b(?:take|show|open|bring|send|go|navigate|direct|get|me|us|to|the|a|an|specific|catalog|page|products?|bottles?)\b/gi, " ")
+        .replace(/\s+/g, " ")
+        .trim();
+    const cap = normalized.match(/^(\d+(?:\.\d+)?)\s*ml$/i);
+    return cap ? `${cap[1]}ml` : null;
+}
+
+export function isGraceCapacityOnlySearch(term?: string | null): boolean {
+    return Boolean(term && compactGraceCapacitySearch(term));
+}
+
+export function normalizeGraceCatalogNavigationPath(path: string): string {
+    if (!path.startsWith("/catalog")) return path;
+    const qMark = path.indexOf("?");
+    if (qMark === -1) return path;
+
+    const base = path.slice(0, qMark);
+    const params = new URLSearchParams(path.slice(qMark + 1));
+    const compactSearch = compactGraceCapacitySearch(params.get("search") ?? "");
+    if (!compactSearch) return path;
+
+    for (const key of [
+        "families",
+        "family",
+        "applicators",
+        "category",
+        "collection",
+        "componentType",
+        "colors",
+        "neckThreadSizes",
+        "threads",
+        "capacities",
+        "priceMin",
+        "priceMax",
+    ]) {
+        params.delete(key);
+    }
+    params.set("search", compactSearch);
+    if (!params.get("sort")) params.set("sort", "best-match");
+    return `${base}?${params.toString()}`;
+}
+
 /** Expand a single-family catalog URL using shape vocabulary (e.g. Square → related families). Skips multi-family URLs. */
 export function expandCatalogPathFamilies(path: string): string {
     if (!path.startsWith("/catalog")) return path;
