@@ -19,4 +19,9 @@ describe("Team Hub links", () => {
         expect(source).not.toContain('redirect("/")');
         expect(source).toContain("Team Hub access pending");
     });
+
+    it("lets a denied signed-in user switch to a team email", () => {
+        expect(source).toContain("SwitchAccountButton");
+        expect(source).toContain("Use another team email");
+    });
 });

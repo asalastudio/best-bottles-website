@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { auth, currentUser } from "@clerk/nextjs/server";
-import { hasTeamHubAccess } from "@/lib/teamAccess";
+import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
+import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
 
 export const dynamic = "force-dynamic";
 
@@ -89,8 +90,9 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
         }
 
         const user = await currentUser();
-        if (!hasTeamHubAccess(user?.publicMetadata)) {
-            return <TeamAccessPending />;
+        const emailAddresses = getUserEmailAddresses(user);
+        if (!hasTeamHubAccess(user?.publicMetadata, { emailAddresses })) {
+            return <TeamAccessPending emailAddresses={emailAddresses} />;
         }
     }
 
@@ -156,7 +158,9 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
     );
 }
 
-function TeamAccessPending() {
+function TeamAccessPending({ emailAddresses }: { emailAddresses: string[] }) {
+    const signedInEmail = emailAddresses[0];
+
     return (
         <main className="min-h-screen bg-bone px-6 py-20 sm:py-24">
             <div className="mx-auto max-w-2xl border border-champagne/60 bg-linen p-8 shadow-[0_18px_45px_rgba(29,29,31,0.04)]">
@@ -168,14 +172,27 @@ function TeamAccessPending() {
                 </h1>
                 <p className="mt-5 text-base leading-7 text-slate">
                     You are signed in, but this account is not enabled for the Team Hub yet.
-                    Ask Jordan or a Best Bottles admin to turn on team access in Clerk.
+                    Use the approved team email for your Clerk login, or ask a Best Bottles admin to turn on team access.
                 </p>
-                <a
-                    href="mailto:jordan@asala.ai"
-                    className="mt-8 inline-flex border border-obsidian bg-obsidian px-5 py-3 text-sm font-semibold text-linen transition hover:border-muted-gold hover:bg-muted-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-                >
-                    Contact Jordan
-                </a>
+                {signedInEmail ? (
+                    <p className="mt-4 text-sm leading-6 text-slate">
+                        Signed in as <span className="font-semibold text-obsidian">{signedInEmail}</span>.
+                    </p>
+                ) : null}
+                <div className="mt-8 flex flex-wrap gap-3">
+                    <SwitchAccountButton
+                        redirectUrl="/team"
+                        className="inline-flex border border-obsidian bg-obsidian px-5 py-3 text-sm font-semibold text-linen transition hover:border-muted-gold hover:bg-muted-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                    >
+                        Use another team email
+                    </SwitchAccountButton>
+                    <a
+                        href="mailto:jordan@asala.ai"
+                        className="inline-flex border border-champagne bg-bone px-5 py-3 text-sm font-semibold text-obsidian transition hover:border-muted-gold hover:text-muted-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                    >
+                        Contact Jordan
+                    </a>
+                </div>
             </div>
         </main>
     );
