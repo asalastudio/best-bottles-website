@@ -19,7 +19,10 @@ export const EXECUTIVE_HUB_ACCESS_ROLES = [
 
 const TEAM_HUB_ACCESS_ROLE_SET = new Set<string>(TEAM_HUB_ACCESS_ROLES);
 const EXECUTIVE_HUB_ACCESS_ROLE_SET = new Set<string>(EXECUTIVE_HUB_ACCESS_ROLES);
-const DEFAULT_HUB_OWNER_EMAILS = ["jordan@asala.ai"] as const;
+const DEFAULT_HUB_ALLOWED_EMAILS = [
+    "jordan@asala.ai",
+    "abbas@nematinternational.com",
+] as const;
 
 type TeamHubMetadata = Record<string, unknown> | null | undefined;
 
@@ -62,7 +65,7 @@ function parseEmailList(value: string | undefined) {
 
 function getConfiguredAllowedEmails(envName: "TEAM_HUB_ALLOWED_EMAILS" | "EXECUTIVE_HUB_ALLOWED_EMAILS", options: HubAccessOptions) {
     return [
-        ...DEFAULT_HUB_OWNER_EMAILS,
+        ...DEFAULT_HUB_ALLOWED_EMAILS,
         ...parseEmailList(process.env[envName]),
         ...(options.allowedEmails ?? []),
     ];

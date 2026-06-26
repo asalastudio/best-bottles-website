@@ -15,8 +15,9 @@ describe("Team Hub access", () => {
         expect(hasTeamHubAccess({ teamAccess: true })).toBe(true);
     });
 
-    it("allows Jordan and configured team emails", () => {
+    it("allows default approved and configured team emails", () => {
         expect(hasTeamHubAccess({}, { emailAddresses: ["jordan@asala.ai"] })).toBe(true);
+        expect(hasTeamHubAccess({}, { emailAddresses: ["abbas@nematinternational.com"] })).toBe(true);
         expect(hasTeamHubAccess({}, { emailAddresses: ["JORDAN@ASALA.AI"] })).toBe(true);
         expect(
             hasTeamHubAccess({}, {
@@ -49,8 +50,9 @@ describe("Executive Hub access", () => {
         expect(hasExecutiveHubAccess({ executiveAccess: true })).toBe(true);
     });
 
-    it("allows Jordan and configured executive emails", () => {
+    it("allows default approved and configured executive emails", () => {
         expect(hasExecutiveHubAccess({}, { emailAddresses: ["jordan@asala.ai"] })).toBe(true);
+        expect(hasExecutiveHubAccess({}, { emailAddresses: ["abbas@nematinternational.com"] })).toBe(true);
         expect(
             hasExecutiveHubAccess({}, {
                 emailAddresses: ["ceo@bestbottles.com"],
