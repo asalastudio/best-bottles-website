@@ -14,10 +14,11 @@ import {
     Users,
     WarningCircle,
 } from "@/components/icons";
+import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { hasExecutiveHubAccess } from "@/lib/teamAccess";
+import { getUserEmailAddresses, hasExecutiveHubAccess } from "@/lib/teamAccess";
 import { cn } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
@@ -310,8 +311,9 @@ async function getExecutiveAccessFallback(previewMode: boolean) {
     }
 
     const user = await currentUser();
-    if (!hasExecutiveHubAccess(user?.publicMetadata)) {
-        return <ExecutiveAccessPending />;
+    const emailAddresses = getUserEmailAddresses(user);
+    if (!hasExecutiveHubAccess(user?.publicMetadata, { emailAddresses })) {
+        return <ExecutiveAccessPending emailAddresses={emailAddresses} />;
     }
 
     return null;
@@ -558,7 +560,9 @@ export default async function ExecutivePage({ searchParams }: ExecutivePageProps
     );
 }
 
-function ExecutiveAccessPending() {
+function ExecutiveAccessPending({ emailAddresses }: { emailAddresses: string[] }) {
+    const signedInEmail = emailAddresses[0];
+
     return (
         <main className="min-h-screen bg-bone px-6 py-20 sm:py-24">
             <div className="mx-auto max-w-2xl border border-champagne/60 bg-linen p-8 shadow-[0_18px_45px_rgba(29,29,31,0.04)]">
@@ -570,14 +574,27 @@ function ExecutiveAccessPending() {
                 </h1>
                 <p className="mt-5 text-base leading-7 text-slate">
                     You are signed in, but this account is not enabled for the Executive Hub yet.
-                    Ask Jordan or a Best Bottles admin to turn on executive access in Clerk.
+                    Use the approved executive email for your Clerk login, or ask a Best Bottles admin to turn on executive access.
                 </p>
-                <a
-                    href="mailto:jordan@asala.ai"
-                    className="mt-8 inline-flex border border-obsidian bg-obsidian px-5 py-3 text-sm font-semibold text-linen transition hover:border-muted-gold hover:bg-muted-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
-                >
-                    Contact Jordan
-                </a>
+                {signedInEmail ? (
+                    <p className="mt-4 text-sm leading-6 text-slate">
+                        Signed in as <span className="font-semibold text-obsidian">{signedInEmail}</span>.
+                    </p>
+                ) : null}
+                <div className="mt-8 flex flex-wrap gap-3">
+                    <SwitchAccountButton
+                        redirectUrl="/executive"
+                        className="inline-flex border border-obsidian bg-obsidian px-5 py-3 text-sm font-semibold text-linen transition hover:border-muted-gold hover:bg-muted-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                    >
+                        Use another executive email
+                    </SwitchAccountButton>
+                    <a
+                        href="mailto:jordan@asala.ai"
+                        className="inline-flex border border-champagne bg-bone px-5 py-3 text-sm font-semibold text-obsidian transition hover:border-muted-gold hover:text-muted-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                    >
+                        Contact Jordan
+                    </a>
+                </div>
             </div>
         </main>
     );

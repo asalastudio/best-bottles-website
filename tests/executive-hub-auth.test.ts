@@ -13,4 +13,9 @@ describe("Executive Hub auth", () => {
     it("uses the shared Executive Hub access rules", () => {
         expect(source).toContain("hasExecutiveHubAccess");
     });
+
+    it("lets a denied signed-in user switch to an executive email", () => {
+        expect(source).toContain("SwitchAccountButton");
+        expect(source).toContain("Use another executive email");
+    });
 });
