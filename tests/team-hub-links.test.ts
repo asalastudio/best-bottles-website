@@ -10,6 +10,11 @@ describe("Team Hub links", () => {
         expect(source).toContain("https://best-bottles-packaging-studio.vercel.app/");
     });
 
+    it("links to the backend Shopify admin", () => {
+        expect(source).toContain("Backend Shopify Admin");
+        expect(source).toContain("https://admin.shopify.com");
+    });
+
     it("does not expose the Convex Dashboard link", () => {
         expect(source).not.toContain("Convex Dashboard");
         expect(source).not.toContain("https://dashboard.convex.dev");
