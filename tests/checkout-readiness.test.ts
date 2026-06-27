@@ -4,6 +4,7 @@ import {
     checkoutUnavailableMessage,
     isCheckoutReady,
     quoteOnlyCartMessage,
+    removeBlockedCheckoutItems,
     splitCheckoutItems,
     unavailableCheckoutMessage,
     unmatchedCheckoutMessage,
@@ -15,7 +16,7 @@ describe("checkout readiness helpers", () => {
         expect(isCheckoutReady({ graceSku: "B", checkoutEligible: false })).toBe(false);
         expect(isCheckoutReady({ graceSku: "C" })).toBe(false);
         expect(isCheckoutReady({ graceSku: "D", shopifyVariantId: "gid://shopify/ProductVariant/123" })).toBe(true);
-        expect(isCheckoutReady({ graceSku: "E", checkoutEligible: false, shopifyVariantId: "gid://shopify/ProductVariant/456" })).toBe(false);
+        expect(isCheckoutReady({ graceSku: "E", checkoutEligible: false, shopifyVariantId: "gid://shopify/ProductVariant/456" })).toBe(true);
     });
 
     it("splits verified checkout items from quote-only items", () => {
@@ -28,6 +29,19 @@ describe("checkout readiness helpers", () => {
 
         expect(result.checkoutReadyItems.map((i) => i.graceSku)).toEqual(["READY", "STORED_ID"]);
         expect(result.quoteOnlyItems.map((i) => i.graceSku)).toEqual(["QUOTE", "UNKNOWN"]);
+    });
+
+    it("removes quote-only or unresolved SKUs once Shopify can open for verified items", () => {
+        const result = removeBlockedCheckoutItems(
+            [
+                { graceSku: "READY", checkoutEligible: true },
+                { graceSku: "QUOTE", checkoutEligible: false },
+                { graceSku: "UNMATCHED", checkoutEligible: true },
+            ],
+            ["QUOTE", "UNMATCHED"],
+        );
+
+        expect(result.map((i) => i.graceSku)).toEqual(["READY"]);
     });
 
     it("keeps checkout failure messages buyer-oriented", () => {
@@ -81,7 +95,7 @@ describe("checkout buying-path guardrails", () => {
         const route = readFileSync("src/app/api/shopify/resolve-variants/route.ts", "utf8");
 
         expect(cartProvider).toContain("shopifyVariantId: i.shopifyVariantId");
-        expect(cartProvider).toContain("checkoutEligible = item.checkoutEligible ?? Boolean(shopifyVariantId)");
+        expect(cartProvider).toContain("checkoutEligible = Boolean(shopifyVariantId) || item.checkoutEligible === true");
         expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
         expect(route).toContain("const directCheckoutItems = requestedItems");
         expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId)");
