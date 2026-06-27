@@ -53,9 +53,9 @@ const tools = [
         badge: "B2B",
     },
     {
-        name: "Shopify Admin",
+        name: "Backend Shopify Admin",
         href: getShopifyAdminHref(),
-        description: "Orders, inventory, and product publishing.",
+        description: "Open the Shopify backend for orders, inventory, refunds, and product publishing.",
         badge: "Storefront",
     },
     {
