@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-09
 
-**Status:** Proposed for implementation after user review
+**Status:** Approved for implementation
 
 **Calibration family:** Diva
 
