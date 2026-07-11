@@ -3,6 +3,8 @@
  * client-side catalog navigation so URLs and filters stay aligned.
  */
 
+import { CATALOG_FACET_PARAM_KEYS } from "./catalogFilters";
+
 export type ShapeMatch = { primary: string[]; also: string[] };
 
 export const SHAPE_TO_FAMILIES: Record<string, ShapeMatch> = {
@@ -145,49 +147,54 @@ export function graceCatalogSearchFromQuery(query?: string): string | null {
     return parts.join(" ");
 }
 
-function compactGraceCapacitySearch(term: string): string | null {
+/**
+ * When a request is purely a capacity ("50 ml", "the 50 milliliter bottles"),
+ * returns the canonical catalog search token for it (e.g. "50ml"); otherwise null.
+ */
+export function graceCapacityOnlySearchTerm(term?: string | null): string | null {
+    if (!term?.trim()) return null;
     const normalized = term
         .trim()
         .replace(/^["']|["']$/g, "")
         .replace(/\bmilliliters?\b/gi, "ml")
-        .replace(/\b(?:take|show|open|bring|send|go|navigate|direct|get|me|us|to|the|a|an|specific|catalog|page|products?|bottles?)\b/gi, " ")
+        .replace(/\b(bottles?|products?|page)\b/gi, "")
         .replace(/\s+/g, " ")
         .trim();
-    const cap = normalized.match(/^(\d+(?:\.\d+)?)\s*ml$/i);
-    return cap ? `${cap[1]}ml` : null;
+    const match = normalized.match(/^(\d+(?:\.\d+)?)\s*ml$/i);
+    return match ? `${match[1]}ml` : null;
 }
 
 export function isGraceCapacityOnlySearch(term?: string | null): boolean {
-    return Boolean(term && compactGraceCapacitySearch(term));
+    return graceCapacityOnlySearchTerm(term) !== null;
 }
 
-export function normalizeGraceCatalogNavigationPath(path: string): string {
+/**
+ * Strip stale catalog facets when the customer's request was purely a capacity
+ * ("take me to the 50 ml bottle"), so exploratory family/applicator context
+ * from earlier browsing doesn't trap them on an over-filtered page.
+ *
+ * `intentQuery` is the customer's original wording when the caller has it.
+ * With wording supplied, facets are stripped only when that wording is itself
+ * capacity-only: a bare "9ml" search param on a "cylinder 9ml" request keeps
+ * its families filter. Without wording, a capacity-only search param is
+ * treated as capacity-only intent.
+ */
+export function normalizeGraceCatalogNavigationPath(path: string, intentQuery?: string | null): string {
     if (!path.startsWith("/catalog")) return path;
     const qMark = path.indexOf("?");
     if (qMark === -1) return path;
 
     const base = path.slice(0, qMark);
     const params = new URLSearchParams(path.slice(qMark + 1));
-    const compactSearch = compactGraceCapacitySearch(params.get("search") ?? "");
-    if (!compactSearch) return path;
+    const capacityTerm = graceCapacityOnlySearchTerm(params.get("search"));
+    if (!capacityTerm) return path;
+    const hasIntentWording = typeof intentQuery === "string" && intentQuery.trim().length > 0;
+    if (hasIntentWording && !isGraceCapacityOnlySearch(intentQuery)) return path;
 
-    for (const key of [
-        "families",
-        "family",
-        "applicators",
-        "category",
-        "collection",
-        "componentType",
-        "colors",
-        "neckThreadSizes",
-        "threads",
-        "capacities",
-        "priceMin",
-        "priceMax",
-    ]) {
+    params.set("search", capacityTerm);
+    for (const key of CATALOG_FACET_PARAM_KEYS) {
         params.delete(key);
     }
-    params.set("search", compactSearch);
     if (!params.get("sort")) params.set("sort", "best-match");
     return `${base}?${params.toString()}`;
 }
