@@ -27,7 +27,11 @@ export const FAMILY_MIN_SIZE_ML: Record<string, number> = {
     Cylinder: 5,
     Diva: 30,
     Elegant: 15,
-    Empire: 30,
+    // Empire's smallest real size is 50ml (also 100ml). 30 caused Grace to
+    // assert a non-existent 30ml Empire in both channels and fails the
+    // pivot-empire-15ml eval. Cylinder/Slim minimums remain under review
+    // pending catalog-truth reconciliation (see launch sprint plan).
+    Empire: 50,
     Slim: 15,
 };
 

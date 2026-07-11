@@ -8,7 +8,7 @@ import { getPortalShellData } from "@/lib/portal/server";
 export const dynamic = "force-dynamic";
 
 export const metadata: Metadata = {
-    title: "Client Portal — Best Bottles",
+    title: { absolute: "Client Portal — Best Bottles" },
 };
 
 export default async function PortalLayout({ children }: { children: ReactNode }) {

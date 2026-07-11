@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+# Cancel superseded runs on the same ref.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npx tsc --noEmit
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit tests
+        run: npx vitest run
+
+      - name: Production build
+        run: npm run build
+        env:
+          # Build with placeholder public config so no live service is required.
+          # Not VERCEL_ENV=production, so src/lib/seo.ts does not throw on the
+          # placeholder domain. Clerk is disabled so the build needs no keys.
+          NEXT_PUBLIC_SITE_URL: https://ci.example.com
+          NEXT_PUBLIC_CLERK_ENABLED: "false"
+          # Public Sanity identifiers (shipped to the browser, not secrets) so
+          # the Sanity client initializes at build time — the draft-mode route
+          # collects page data during `next build`.
+          NEXT_PUBLIC_SANITY_PROJECT_ID: gh97irjh
+          NEXT_PUBLIC_SANITY_DATASET: production
+          # Placeholder Convex URL so ConvexReactClient (in the root providers)
+          # constructs during the /_not-found prerender. No queries run at build
+          # time, so it never connects — a well-formed URL is all that's needed.
+          NEXT_PUBLIC_CONVEX_URL: https://ci-placeholder.convex.cloud

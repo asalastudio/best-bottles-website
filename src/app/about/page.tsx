@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-    title: "About Best Bottles — 20+ Years of Packaging Excellence",
+    title: { absolute: "About Best Bottles — 20+ Years of Packaging Excellence" },
     description: "Discover the story behind Best Bottles and Nemat International. Over 20 years of fragrance and packaging expertise, serving brands from startups to retail.",
     alternates: { canonical: `${SITE_URL}/about` },
 };
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const VALUES = [
     { icon: Award, title: "Heritage", description: "Over 20 years of fragrance and packaging expertise, rooted in the Nemat International family tradition." },
     { icon: Shield, title: "Quality", description: "Every glass bottle meets Type III cosmetic and pharmaceutical standards. UV-resistant amber glass available across all families." },
-    { icon: Globe, title: "Made in USA", description: "Domestic manufacturing means no tariff surprises, shorter lead times, and consistent quality control." },
+    { icon: Globe, title: "US-Based Sourcing", description: "US-based sourcing and warehousing in Union City, California means shorter lead times, reliable in-stock inventory, and hands-on support." },
     { icon: Users, title: "Partnership", description: "From 12-piece samples to 100,000-unit production runs, we scale with your brand at every stage." },
 ];
 

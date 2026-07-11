@@ -31,6 +31,15 @@ export interface CheckoutLineItem {
 
 export function buildCheckoutUrl(items: CheckoutLineItem[]): string {
     const domain = getShopifyDomain();
+    // Guard against a missing/blank NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN, which
+    // would otherwise produce `https:///cart/...` (empty host) and send the
+    // customer to a dead checkout. Throwing lets the caller's error handling
+    // surface a "checkout temporarily unavailable" message instead.
+    if (!domain) {
+        throw new Error(
+            "NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN is not set — cannot build a Shopify checkout URL.",
+        );
+    }
     const lineItems = items.map((i) => `${i.variantId}:${i.quantity}`).join(",");
     return `https://${domain}/cart/${lineItems}`;
 }

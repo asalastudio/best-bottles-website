@@ -19,7 +19,7 @@ const ICON_OPTIONS = [
     { title: "Clock — Limited Time", value: "Clock" },
     { title: "Sparkles — New Arrival", value: "Sparkles" },
     { title: "Tag — On Sale", value: "Tag" },
-    { title: "Globe — Made in USA", value: "Globe" },
+    { title: "Globe — US-Based / Worldwide Shipping", value: "Globe" },
 ];
 
 export const pdpFeatureStrip = defineType({

@@ -10,7 +10,7 @@ import { JOURNAL_POSTS_QUERY } from "@/sanity/lib/queries";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-    title: "Journal — Packaging Insights & Brand Guides | Best Bottles",
+    title: { absolute: "Journal — Packaging Insights & Brand Guides | Best Bottles" },
     description:
         "Expert guides on glass packaging, fragrance, and brand strategy. From bottle selection to scaling your label — insights from the Best Bottles team.",
     alternates: { canonical: `${SITE_URL}/blog` },

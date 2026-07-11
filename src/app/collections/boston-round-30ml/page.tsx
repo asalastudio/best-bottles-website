@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-    title: "30ml Boston Round Bottles | Best Bottles",
+    title: { absolute: "30ml Boston Round Bottles | Best Bottles" },
     description: "Browse 30ml Boston Round wholesale glass bottle options in the Best Bottles catalog.",
     alternates: { canonical: `${SITE_URL}/catalog?families=Boston%20Round&search=30ml` },
 };

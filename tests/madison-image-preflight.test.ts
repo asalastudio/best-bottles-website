@@ -1,8 +1,15 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const root = process.cwd();
+
+// This source-of-truth CSV is gitignored (local-only), so the case-slug
+// documentation test only runs where the file is present.
+const coverageQueueCsv = resolve(
+    root,
+    "data/source-of-truth/best-bottles-image-control-center-2026-05-20/madison-pipeline-ui/madison_product_group_coverage_queue.csv",
+);
 
 describe("Madison image preflight guardrails", () => {
     it("exposes a read-only product group image target preflight query", () => {
@@ -28,14 +35,8 @@ describe("Madison image preflight guardrails", () => {
         expect(source).not.toContain("export const setHeroImageUrl = mutation");
     });
 
-    it("documents the canonical Pear slug that differs by case from Madison's failed slug", () => {
-        const source = readFileSync(
-            resolve(
-                root,
-                "data/source-of-truth/best-bottles-image-control-center-2026-05-20/madison-pipeline-ui/madison_product_group_coverage_queue.csv",
-            ),
-            "utf8",
-        );
+    it.skipIf(!existsSync(coverageQueueCsv))("documents the canonical Pear slug that differs by case from Madison's failed slug", () => {
+        const source = readFileSync(coverageQueueCsv, "utf8");
 
         expect(source).toContain("pear-118ml-clear-Ground-stopper");
         expect(source).not.toContain("pear-118ml-clear-ground-stopper");
