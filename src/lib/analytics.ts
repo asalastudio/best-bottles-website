@@ -169,6 +169,14 @@ export const analytics = {
     adapter.track("Grace Mobile PDP Opened", properties);
   },
 
+  graceMultiActionRendered(properties: {
+    messageId: string;
+    actionCount: number;
+    actionTypes: string;
+  }) {
+    adapter.track("Grace Multi-Action Rendered", properties);
+  },
+
   graceConversationEnded(properties: {
     pageType: string;
     pathname: string;
