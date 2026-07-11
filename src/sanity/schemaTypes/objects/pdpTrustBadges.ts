@@ -7,7 +7,7 @@ const PRESET_BADGES = [
     { title: "Sample Ready", value: "Sample Ready" },
     { title: "Low MOQ", value: "Low MOQ" },
     { title: "Ships in 3–5 Days", value: "Ships in 3–5 Days" },
-    { title: "Made in USA", value: "Made in USA" },
+    { title: "Ships from USA", value: "Ships from USA" },
     { title: "Leak-Proof", value: "Leak-Proof" },
     { title: "Recyclable", value: "Recyclable" },
     { title: "Refillable", value: "Refillable" },

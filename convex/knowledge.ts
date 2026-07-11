@@ -31,7 +31,7 @@ export const seedAll = internalMutation({
             {
                 category: "policy",
                 title: "Shipping and Lead Times",
-                content: "In-stock items typically ship within 1–3 business days from our USA warehouse. Standard domestic ground shipping is free on orders above $199. Expedited shipping is available at checkout. International shipping is available, though lead times may vary. All products are manufactured and warehoused domestically to avoid import tariff surprises.",
+                content: "In-stock items typically ship within 1–3 business days from our USA warehouse. Standard domestic ground shipping is free on orders above $199. Expedited shipping is available at checkout. International shipping is available, though lead times may vary. All products are sourced and warehoused domestically to keep lead times short and avoid import surprises.",
                 tags: ["shipping", "lead time", "domestic", "warehouse", "express"],
                 priority: 1,
                 source: "policy_doc",
@@ -209,7 +209,7 @@ export const seedAll = internalMutation({
             {
                 category: "quality",
                 objection: "How do I know your glass quality is consistent batch to batch?",
-                response: "This is one of the most important questions you can ask, and it's exactly why domestic manufacturing matters. We control our own moulds and work with the same glass partners that supply to major retail channels. Our glass meets ASTM Type III standards for pharmaceutical and cosmetic compatibility. If you ever receive a batch with dimensional variance outside tolerance, we make it right.",
+                response: "This is one of the most important questions you can ask, and it's exactly why our sourcing model matters. We work with established glass partners that supply the same major retail channels, and every batch is held to ASTM Type III standards for pharmaceutical and cosmetic compatibility. If you ever receive a batch with dimensional variance outside tolerance, we make it right.",
                 followUpQuestion: "Are you working with a formulation that has specific material compatibility requirements? I can double-check the glass spec for you.",
                 relatedPersonas: ["enterprise_retail", "wellness_formulator"],
             },
@@ -289,7 +289,7 @@ export const seedAll = internalMutation({
                 category: "quality",
                 stat: "Domestic Supply Chain, No Tariff Surprises",
                 context: "All Best Bottles products are sourced and warehoused domestically in the USA, eliminating import tariff exposure.",
-                description: "In an era of volatile international trade policy, domestic production and warehousing insulates customers from unpredictable cost increases. Best Bottles controls its own moulds and warehousing, which means lead times and quality standards remain consistent regardless of international supply chain disruption.",
+                description: "In an era of volatile international trade policy, domestic sourcing and warehousing insulates customers from unpredictable cost increases. Best Bottles' domestic sourcing and warehousing keep lead times and quality standards consistent regardless of international supply chain disruption.",
                 verified: true,
             },
         ];
