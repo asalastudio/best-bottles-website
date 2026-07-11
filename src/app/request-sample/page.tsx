@@ -14,7 +14,7 @@ const FIELDS = [
 ];
 
 export const metadata: Metadata = {
-    title: "Request Samples | Best Bottles Glass Packaging",
+    title: { absolute: "Request Samples | Best Bottles Glass Packaging" },
     description:
         "Request curated glass bottle and packaging samples from Best Bottles before placing a wholesale order.",
     alternates: { canonical: `${SITE_URL}/request-sample` },

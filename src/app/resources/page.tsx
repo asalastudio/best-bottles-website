@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
-    title: "Resources — Guides, FAQs & Compatibility Tools | Best Bottles",
+    title: { absolute: "Resources — Guides, FAQs & Compatibility Tools | Best Bottles" },
     description: "Everything you need to choose the right bottles, closures, and packaging for your brand. Compatibility guides, FAQs, and expert insights.",
     alternates: { canonical: `${SITE_URL}/resources` },
 };

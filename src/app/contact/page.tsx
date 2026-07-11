@@ -12,7 +12,7 @@ const FIELDS = [
 ];
 
 export const metadata: Metadata = {
-    title: "Contact Best Bottles | Wholesale Packaging Support",
+    title: { absolute: "Contact Best Bottles — Wholesale Packaging Support" },
     description:
         "Contact the Best Bottles team for product questions, compatibility help, quotes, samples, and wholesale glass packaging support.",
     alternates: { canonical: `${SITE_URL}/contact` },

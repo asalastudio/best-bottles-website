@@ -63,9 +63,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { slug } = await params;
     const post = await getPost(slug);
-    if (!post) return { title: "Article Not Found | Best Bottles Journal" };
+    if (!post) return { title: { absolute: "Article Not Found | Best Bottles Journal" } };
     return {
-        title: `${post.title} | Best Bottles Journal`,
+        title: { absolute: `${post.title} | Best Bottles Journal` },
         description: post.excerpt ?? `Read ${post.title} on the Best Bottles Journal.`,
         alternates: { canonical: `${SITE_URL}/blog/${slug}` },
         openGraph: {

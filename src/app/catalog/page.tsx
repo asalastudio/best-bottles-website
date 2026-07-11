@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
 export const metadata: Metadata = {
-    title: "Catalog — Wholesale Glass Bottles & Packaging | Best Bottles",
+    title: { absolute: "Catalog — Wholesale Glass Bottles & Packaging | Best Bottles" },
     description:
         "Browse wholesale glass bottles, jars, sprayers, droppers, roll-ons, and packaging components by family, capacity, color, applicator, and neck finish.",
     alternates: { canonical: `${SITE_URL}/catalog` },
