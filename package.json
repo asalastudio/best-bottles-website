@@ -20,6 +20,7 @@
     "eval:grace:loop": "node scripts/eval_grace.mjs --runs 3 --verbose",
     "test:grace:matrix": "node scripts/grace-retrieval-matrix.mjs",
     "test:grace:matrix:verbose": "node scripts/grace-retrieval-matrix.mjs --verbose",
+    "test:grace:e2e": "node scripts/grace-pdp-orchestration-e2e.mjs",
     "diag:grace": "node scripts/diagnose_grace.mjs",
     "test:catalog:integrity": "node scripts/catalog-integrity.mjs",
     "audit:shopify-skus": "node scripts/audit_shopify_sku_mapping.mjs",
