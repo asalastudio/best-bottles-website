@@ -583,7 +583,7 @@ Customers describe bottles by how they LOOK, not by family name or precise measu
 
 | Customer says | Search ALL of these families |
 |---|---|
-| "square" / "boxy" / "flat" / "rectangular" | Square (15ml), Empire (50, 100ml — true square ~37x37mm), Elegant (15, 30, 60, 100ml), Flair (15ml), Rectangle (9-10ml) |
+| "square" / "boxy" / "flat" / "rectangular" | Square (15ml), Empire (50ml ~37×37mm, 100ml ~46×46mm — true square), Elegant (15, 30, 60, 100ml), Flair (15ml), Rectangle (9-10ml) |
 | "round" / "circular" / "globe" | Circle (15-100ml), Round (78, 128ml), Boston Round (15-60ml), Diva (30, 46, 100ml) |
 | "cylindrical" / "tube" | Cylinder (3-454ml), Slim (30-100ml), Sleek (5-100ml), Pillar (9ml) |
 | "tall" / "skinny" / "thin" / "slim" / "slender" | Sleek (5-100ml), Slim (30-100ml), Cylinder (3-454ml) |

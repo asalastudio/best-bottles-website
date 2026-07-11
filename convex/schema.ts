@@ -112,11 +112,23 @@ export default defineSchema({
         neckThreadSize: v.union(v.string(), v.null()),
         heightWithCap: v.union(v.string(), v.null()),
         heightWithoutCap: v.union(v.string(), v.null()),
+        // Legacy formatted string (e.g. "37 ±0.5 mm"). Being replaced by
+        // numeric widthMm/depthMm — kept during the migration window so
+        // unmigrated rows / external consumers (Madison edge function) can
+        // still parse the string. To be dropped in a follow-up PR once
+        // every consumer reads widthMm.
         diameter: v.union(v.string(), v.null()),
-        // Numeric mm dimensions populated by some products (atomizers etc).
-        // Kept optional + nullable to preserve back-compat with rows that lack them.
-        depthMm: v.optional(v.union(v.number(), v.null())),
+        // Bottle face width in mm. Populated by migrateDiameterToWidthDepth
+        // from the leading numeric portion of `diameter`. For square families
+        // this is the side length; for round families this is the diameter.
+        // Optional + nullable to preserve back-compat with rows that lack it.
         widthMm: v.optional(v.union(v.number(), v.null())),
+        // Bottle depth (front-to-back) in mm. For circular and square cross-
+        // sections this equals widthMm. For rectangular families (Elegant,
+        // Flair, Rectangle) this differs from widthMm and is left null until
+        // the value is sourced from Grace specs / live site (then patched via
+        // patchRectangularDepth).
+        depthMm: v.optional(v.union(v.number(), v.null())),
         bottleWeightG: v.union(v.number(), v.null()),
         caseQuantity: v.union(v.number(), v.null()),
         caseWeightG: v.optional(v.union(v.number(), v.null())),
