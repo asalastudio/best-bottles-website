@@ -160,6 +160,17 @@ function computeCanonicalGroups(csv: CsvRow[]): CanonicalGroup[] {
 }
 
 // ── Action: rebuild productGroups from CSV ───────────────────────
+/**
+ * Safety interlock: a healthy sync updates existing groups in place and
+ * creates at most a handful of genuinely new ones. A large create count
+ * means the CSV slugs don't match the live slug grammar (see the header
+ * warning) — applying would DUPLICATE the catalog rather than sync it. An
+ * --apply that would create more than this many groups is refused unless
+ * `force: true` is passed explicitly. Raise deliberately only after
+ * buildGroupSlug has been reconciled and a dry-run has been reviewed.
+ */
+const APPLY_CREATE_LIMIT = 20;
+
 export const rebuildFromCsv = action({
   args: {
     /** Full text of the canonical CSV (read locally by the runner script). */
@@ -167,6 +178,12 @@ export const rebuildFromCsv = action({
     /** Human-readable source label for the report, e.g. the local file path. */
     csvLabel: v.optional(v.string()),
     dryRun: v.optional(v.boolean()),
+    /**
+     * Override the APPLY_CREATE_LIMIT interlock. Only pass this once
+     * buildGroupSlug has been reconciled with the live slug grammar and a
+     * dry-run has been reviewed. Ignored in dry-run mode.
+     */
+    force: v.optional(v.boolean()),
   },
   handler: async (ctx, args): Promise<{
     dryRun: boolean;
@@ -181,6 +198,7 @@ export const rebuildFromCsv = action({
     sampleCanonical: CanonicalGroup[];
   }> => {
     const dryRun = args.dryRun ?? true;
+    const force = args.force ?? false;
 
     const csv = parseCsv(args.csvContent);
     const canonical = computeCanonicalGroups(csv);
@@ -195,6 +213,19 @@ export const rebuildFromCsv = action({
     let unchanged = 0;
 
     if (!dryRun) {
+      // Interlock: refuse to apply a run that would create an implausible
+      // number of new groups — the signature of a slug-grammar mismatch that
+      // would duplicate the catalog. Computed before any write happens.
+      const plannedCreates = canonical.filter((g) => !existingBySlug.has(g.slug)).length;
+      if (plannedCreates > APPLY_CREATE_LIMIT && !force) {
+        throw new Error(
+          `Refusing to apply: this run would create ${plannedCreates} new productGroups ` +
+          `(limit ${APPLY_CREATE_LIMIT}). That almost always means buildGroupSlug does not ` +
+          `match the live slug grammar and applying would DUPLICATE the catalog. ` +
+          `Run a dry-run and reconcile buildGroupSlug first. If this create count is ` +
+          `genuinely intended, re-run with force: true. See docs/CSV_REBUILD_RUNBOOK.md.`,
+        );
+      }
       for (const g of canonical) {
         const ex = existingBySlug.get(g.slug);
         const primaryGraceSku = g.graceSkus[0] ?? null;

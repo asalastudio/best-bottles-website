@@ -17,6 +17,25 @@ from the canonical CSV (`data/grace_products_final.v2.csv`).
 > Until `buildGroupSlug` is reconciled with the live slug grammar (or a
 > crosswalk table is added), run **dry-run only**. `--apply` becomes safe
 > only when a dry-run reports `created: 0` and orphans ≈ 0.
+>
+> **Code interlock:** `rebuildFromCsv` refuses to `--apply` any run that
+> would create more than `APPLY_CREATE_LIMIT` (20) new groups — it throws
+> before writing anything. This is a backstop for the warning above, not a
+> substitute for reconciling the slugs. `--force` overrides it and must
+> only be used once the slug grammar is reconciled and a dry-run reviewed.
+
+## Recommended sequence to make `--apply` safe
+
+1. Resolve the 153 duplicate-website-SKU pairs (catalog dedupe) first — the
+   canonical group set changes once dupes are removed.
+2. Reconcile `buildGroupSlug()` to emit the live grammar
+   (`family-capacity-color-neckThread-applicator`, hyphenated colors), or
+   add a slug crosswalk table.
+3. Run the dry-run (`node scripts/rebuild_product_groups.mjs`) and confirm
+   `created: 0` (or a small, explainable number) and orphans ≈ 0.
+4. Only then `--apply`. The interlock will still block a bad run; do not
+   reach for `--force` to get past it — a large create count means step 2
+   is not done.
 
 ## When to run
 

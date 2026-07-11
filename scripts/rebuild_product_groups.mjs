@@ -8,8 +8,14 @@
  * Usage:
  *   node scripts/rebuild_product_groups.mjs                 # dry-run (default)
  *   node scripts/rebuild_product_groups.mjs --apply         # write changes
+ *   node scripts/rebuild_product_groups.mjs --apply --force # override the create-count interlock
  *   node scripts/rebuild_product_groups.mjs --csv path.csv  # non-default CSV
  *   CONVEX_URL=https://... node scripts/rebuild_product_groups.mjs
+ *
+ * The rebuild action refuses to --apply a run that would create more than a
+ * small number of new groups (the signature of a slug-grammar mismatch that
+ * would duplicate the catalog). --force overrides it; only use once
+ * buildGroupSlug is reconciled and a dry-run has been reviewed.
  *
  * Targets the deployment in NEXT_PUBLIC_CONVEX_URL (.env.local) unless
  * CONVEX_URL is set explicitly. See memory/project_convex_deployments.md
@@ -31,6 +37,7 @@ function readEnvLocal(key) {
 
 const argv = process.argv.slice(2);
 const apply = argv.includes("--apply");
+const force = argv.includes("--force");
 const csvFlagIdx = argv.indexOf("--csv");
 const csvPath = csvFlagIdx !== -1 ? argv[csvFlagIdx + 1] : "data/grace_products_final.v2.csv";
 
@@ -46,11 +53,18 @@ console.log(`Deployment: ${convexUrl}`);
 console.log(`Mode: ${apply ? "APPLY (writing changes)" : "dry-run (pass --apply to write)"}`);
 
 const client = new ConvexHttpClient(convexUrl);
-const report = await client.action("productGroupsRebuild:rebuildFromCsv", {
-  csvContent,
-  csvLabel: csvPath,
-  dryRun: !apply,
-});
+let report;
+try {
+  report = await client.action("productGroupsRebuild:rebuildFromCsv", {
+    csvContent,
+    csvLabel: csvPath,
+    dryRun: !apply,
+    force,
+  });
+} catch (err) {
+  console.error(`\n✗ Rebuild refused: ${err instanceof Error ? err.message : String(err)}`);
+  process.exit(1);
+}
 
 console.log(JSON.stringify(report, null, 2));
 if (report.orphansInConvex?.length) {
