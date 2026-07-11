@@ -1,0 +1,23 @@
+{
+  "ranAt": "2026-06-24T22:18:55.466Z",
+  "source": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/data/grace_products_final.csv",
+  "totalRows": 2285,
+  "alreadyFilled": 0,
+  "filledFromText": 2060,
+  "filledFromSku": 21,
+  "couldNotInfer": 0,
+  "markedNA": 202,
+  "distribution": {
+    "cobalt_blue": 116,
+    "clear": 1066,
+    "green": 10,
+    "amber": 109,
+    "black": 225,
+    "white": 119,
+    "frosted": 405,
+    "swirl": 29,
+    "pink": 2,
+    "n/a": 202
+  },
+  "inferFailures": []
+}

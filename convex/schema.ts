@@ -32,6 +32,15 @@ export default defineSchema({
         groupDescription: v.optional(v.union(v.string(), v.null())),
         /** Sanity paperDollFamily.familyKey — e.g. CYL-9ML = Cylinder 9 ml, neck 17-415 */
         paperDollFamilyKey: v.optional(v.union(v.string(), v.null())),
+        // ── CSV reconciliation fields (added by rebuildProductGroupsFromCsv) ──
+        // Timestamp of the last successful rebuild from the canonical CSV.
+        // When this is null, the group was hand-created and hasn't been
+        // reconciled. Used by the reconciliation script to detect stale groups.
+        lastSyncedAt: v.optional(v.number()),
+        // Number of CSV rows that map to this group at the time of last sync.
+        // When variantCount differs from csvRowCount, the group has drifted
+        // from the CSV (a SKU was added/removed in CSV without rebuilding).
+        csvRowCount: v.optional(v.number()),
     })
         .index("by_slug", ["slug"])
         .index("by_family", ["family"])
