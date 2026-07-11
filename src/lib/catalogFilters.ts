@@ -274,6 +274,25 @@ export function activeFilterCount(f: CatalogFilters): number {
     return n;
 }
 
+/**
+ * Every URL param that narrows the catalog (facets only — excludes
+ * search/sort/view). Keep in lockstep with filtersToParams/paramsToFilters;
+ * anything that navigates Grace away from stale filters strips these keys.
+ */
+export const CATALOG_FACET_PARAM_KEYS = [
+    "category",
+    "collection",
+    "applicators",
+    "families",
+    "family",
+    "colors",
+    "capacities",
+    "threads",
+    "componentType",
+    "priceMin",
+    "priceMax",
+] as const;
+
 export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMode = "visual"): URLSearchParams {
     const p = new URLSearchParams();
     if (f.category) p.set("category", f.category);

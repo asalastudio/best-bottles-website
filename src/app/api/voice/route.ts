@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 // ─── TTS: ElevenLabs (preferred) or OpenAI fallback ─────────────────────────────
 
@@ -39,6 +40,9 @@ function prepareTtsText(raw: string): string {
 }
 
 export async function POST(req: NextRequest) {
+    const limited = await enforceGraceRateLimit(req, { route: "voice-tts", limit: 20, windowMs: 60_000 });
+    if (limited) return limited;
+
     const { text } = (await req.json()) as { text?: string };
 
     if (!text || typeof text !== "string" || text.trim().length === 0) {

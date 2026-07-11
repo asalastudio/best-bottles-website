@@ -1,11 +1,11 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
-const provider = () => readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
-const config = () => JSON.parse(readFileSync("scripts/grace_agent_config.json", "utf8"));
+const read = (path: string) => readFileSync(path, "utf8");
+const agentConfig = () => JSON.parse(read("scripts/grace_agent_config.json"));
 
 function implementedClientTools(): Set<string> {
-  const source = provider();
+  const source = read("src/components/grace/GraceProvider.tsx");
   const start = source.indexOf("const clientTools = useMemo(() => ({");
   const end = source.indexOf("// eslint-disable-next-line react-hooks/exhaustive-deps", start);
   expect(start).toBeGreaterThan(-1);
@@ -16,19 +16,19 @@ function implementedClientTools(): Set<string> {
   );
 }
 
-describe("Grace hardening contracts", () => {
+describe("Grace 100-point hardening contracts", () => {
   it("keeps ElevenLabs config tools aligned with implemented client tools", () => {
-    const toolNames = config().conversation_config.agent.prompt.tools.map((t: { name: string }) => t.name);
+    const toolNames = agentConfig().conversation_config.agent.prompt.tools.map((t: { name: string }) => t.name);
     const implemented = implementedClientTools();
 
     for (const toolName of toolNames) {
       expect(implemented.has(toolName), `${toolName} is advertised to ElevenLabs but not implemented`).toBe(true);
     }
-    expect(provider()).not.toContain("Shortlist sharing isn't available yet");
+    expect(read("src/components/grace/GraceProvider.tsx")).not.toContain("Shortlist sharing isn't available yet");
   });
 
   it("keeps Grace strictly grounded and removes stale memorized catalog facts", () => {
-    const prompt = config().conversation_config.agent.prompt.prompt;
+    const prompt = agentConfig().conversation_config.agent.prompt.prompt;
     expect(prompt).toContain("Strict catalog grounding");
     expect(prompt).toContain("Tool routing hardening");
     expect(prompt).toContain("Movement commands are mandatory tool calls");
@@ -40,25 +40,13 @@ describe("Grace hardening contracts", () => {
     expect(prompt).not.toContain("GUARANTEED to fit");
   });
 
-  it("does not add cart items until the customer confirms the proposal", () => {
-    const source = provider();
-    const proposeStart = source.indexOf("proposeCartAdd:");
-    const proceedStart = source.indexOf("proceedToCheckout:", proposeStart);
-    const proposeBlock = source.slice(proposeStart, proceedStart);
-
-    expect(proposeBlock).toContain('type: "proposeCartAdd"');
-    expect(proposeBlock).toContain("analytics.graceCartProposalShown");
-    expect(proposeBlock).not.toContain("addToCart(");
-    expect(source).toContain("analytics.graceCartProposalConfirmed");
-  });
-
   it("preserves Shopify checkout metadata through Grace cart proposals", () => {
-    const source = provider();
+    const source = read("src/components/grace/GraceProvider.tsx");
     const proposeStart = source.indexOf("proposeCartAdd:");
-    const proceedStart = source.indexOf("proceedToCheckout:", proposeStart);
-    const proposeBlock = source.slice(proposeStart, proceedStart);
-    const route = readFileSync("src/app/api/elevenlabs/server-tools/route.ts", "utf8");
-    const promptTools = JSON.stringify(config().conversation_config.agent.prompt.tools);
+    const navigateStart = source.indexOf("navigateToPage:", proposeStart);
+    const proposeBlock = source.slice(proposeStart, navigateStart);
+    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+    const promptTools = JSON.stringify(agentConfig().conversation_config.agent.prompt.tools);
 
     expect(route).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
     expect(route).toContain("checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId)");
@@ -70,20 +58,20 @@ describe("Grace hardening contracts", () => {
   });
 
   it("keeps mobile Grace available on product detail pages", () => {
-    const mobileTab = readFileSync("src/components/mobile/MobileTabBar.tsx", "utf8");
+    const mobileTab = read("src/components/mobile/MobileTabBar.tsx");
     expect(mobileTab).not.toContain('TABS.filter((tab) => tab.key !== "grace")');
     expect(mobileTab).toContain("Ask Grace about fit for this bottle");
     expect(mobileTab).toContain("analytics.graceMobilePdpOpened");
   });
 
   it("guards public Grace routes and trusted image analysis", () => {
-    expect(readFileSync("src/app/api/elevenlabs/server-tools/route.ts", "utf8")).toContain("enforceGraceRateLimit");
-    const upload = readFileSync("src/app/api/grace/upload/route.ts", "utf8");
+    expect(read("src/app/api/elevenlabs/server-tools/route.ts")).toContain("enforceGraceRateLimit");
+    const upload = read("src/app/api/grace/upload/route.ts");
     expect(upload).toContain("File exceeds 8MB limit");
     expect(upload).toContain("Upload failed. Please try again.");
     expect(upload).not.toContain("err instanceof Error ? err.message");
 
-    const vision = readFileSync("src/app/api/grace/vision/route.ts", "utf8");
+    const vision = read("src/app/api/grace/vision/route.ts");
     expect(vision).toContain("Valid ownerKey required");
     expect(vision).toContain("Image URL must come from Grace upload storage");
     expect(vision).toContain("publicVisionError");
@@ -93,12 +81,12 @@ describe("Grace hardening contracts", () => {
   });
 
   it("keeps Grace image sharing wired to catalog match without leaking provider errors", () => {
-    const imageUpload = readFileSync("src/lib/useGraceImageUpload.ts", "utf8");
+    const imageUpload = read("src/lib/useGraceImageUpload.ts");
     const composerSurfaces = [
       "src/components/grace/GraceChatDrawer.tsx",
       "src/components/grace-workspace/DockedComposer.tsx",
       "src/components/grace-workspace/GreetingState.tsx",
-    ].map((file) => readFileSync(file, "utf8")).join("\n");
+    ].map((file) => read(file)).join("\n");
     expect(composerSurfaces).toContain('accept="image/png,image/jpeg,image/jpg,image/webp"');
     expect(composerSurfaces).toContain("Attach reference image");
 
@@ -112,25 +100,25 @@ describe("Grace hardening contracts", () => {
   });
 
   it("returns structured no-match results so Grace cannot invent unavailable sizes", () => {
-    const route = readFileSync("src/app/api/elevenlabs/server-tools/route.ts", "utf8");
+    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
     expect(route).toContain("noMatchGraceToolResult");
     expect(route).toContain("No verified exact match found");
     expect(route).toContain("Never claim an exact size");
   });
 
   it("keeps compatibility tools resilient when ElevenLabs passes product names", () => {
-    const route = readFileSync("src/app/api/elevenlabs/server-tools/route.ts", "utf8");
+    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
     expect(route).toContain("fallbackMatches");
     expect(route).toContain("api.grace.searchCatalog");
     expect(route).toContain("resolvedBottleSku");
 
-    const source = provider();
+    const source = read("src/components/grace/GraceProvider.tsx");
     expect(source).toContain("Compatibility tray is open");
     expect(source).toContain("Do not ask whether to open it");
   });
 
   it("keeps build kits fitment-verified and family cards broad enough for shopping", () => {
-    const source = provider();
+    const source = read("src/components/grace/GraceProvider.tsx");
     const buildKitStart = source.indexOf("displayBuildKit:");
     const comparisonStart = source.indexOf("displayComparison:", buildKitStart);
     const buildKitBlock = source.slice(buildKitStart, comparisonStart);
@@ -141,7 +129,7 @@ describe("Grace hardening contracts", () => {
     expect(buildKitBlock).toContain("Fitment-verified kit workspace is open");
     expect(source).toContain("capacityMl: params.capacityMl");
 
-    const route = readFileSync("src/app/api/elevenlabs/server-tools/route.ts", "utf8");
+    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
     expect(route).toContain("seenCapacity");
     expect(route).toContain(".slice(0, 16)");
     expect(route).toContain("applicator: d.bottle.applicator");
@@ -149,12 +137,115 @@ describe("Grace hardening contracts", () => {
     expect(route).toContain("VERIFIED_9ML_CYLINDER_ROLLON_COLORS");
     expect(route).toContain("requestedColorReps");
 
-    const familyCard = readFileSync("src/components/grace/patterns/PatternB_FamilyCard.tsx", "utf8");
+    const familyCard = read("src/components/grace/patterns/PatternB_FamilyCard.tsx");
     expect(familyCard).toContain("capacityLabelCounts");
     expect(familyCard).toContain("variantColorCounts");
 
-    const prompt = config().conversation_config.agent.prompt.prompt;
+    const prompt = agentConfig().conversation_config.agent.prompt.prompt;
     expect(prompt).toContain("Never pass closureSku or applicatorSku unless that SKU came from getBottleComponents");
     expect(prompt).toContain("optional swaps rather than required add-ons");
+  });
+
+  it("renders every Grace tool action emitted in a single assistant turn and tracks it", () => {
+    const context = read("src/components/GraceContext.ts");
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    const message = read("src/components/grace/GraceChatMessage.tsx");
+    const drawer = read("src/components/grace/GraceChatDrawer.tsx");
+    const analytics = read("src/lib/analytics.ts");
+
+    expect(context).toContain("actions?: GraceAction[]");
+    expect(provider).toContain("const actions = pendingActionsRef.current.splice(0)");
+    expect(provider).toContain("mergeGraceActions");
+    expect(message).toContain("const actions = message.actions");
+    expect(message).toContain("actions.map");
+    expect(message).toContain("analytics.graceMultiActionRendered");
+    expect(drawer).toContain("const showEmptyState = messages.length === 0");
+    expect(analytics).toContain("graceMultiActionRendered");
+    expect(analytics).toContain('"Grace Multi-Action Rendered"');
+  });
+
+  it("does not leave Grace looking down after microphone permission is denied", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+
+    expect(provider).toContain("const publicErrorMessage");
+    expect(provider).toContain("Microphone access is blocked");
+    expect(provider).toContain("if (useTextOnly)");
+    expect(provider).toContain('setErrorMessage("")');
+    expect(provider).toContain("setVoiceFailed(false)");
+  });
+
+  it("keeps Grace cart adds confirmation-first even when bundled with other actions", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    const renderer = read("src/components/grace/GraceActionRenderer.tsx");
+
+    const proposeStart = provider.indexOf("proposeCartAdd:");
+    const navigateStart = provider.indexOf("navigateToPage:", proposeStart);
+    const proposeBlock = provider.slice(proposeStart, navigateStart);
+
+    expect(proposeBlock).toContain('type: "proposeCartAdd"');
+    expect(proposeBlock).toContain("analytics.graceCartProposalShown");
+    expect(proposeBlock).not.toContain("addToCart(");
+    expect(provider).toContain("analytics.graceCartProposalConfirmed");
+    expect(provider).toContain("pendingCartProposals");
+    expect(provider).toContain("updateCartProposalAction");
+    // Confirm adds every pending proposal (never marks skipped products as
+    // added); dismiss only drops proposals still awaiting confirmation.
+    expect(provider).toContain("proposals.flatMap((proposal) => proposal.products)");
+    expect(provider).toContain("action.awaitingConfirmation ? null : action");
+    expect(renderer).toContain("Review before adding");
+    expect(renderer).toContain("onConfirmAction");
+  });
+
+  it("guards legacy voice routes from anonymous cost abuse via the shared Convex limiter", () => {
+    const voice = read("src/app/api/voice/route.ts");
+    const transcribe = read("src/app/api/voice/transcribe/route.ts");
+
+    expect(voice).toContain("enforceGraceRateLimit");
+    expect(voice).toContain('route: "voice-tts"');
+    expect(transcribe).toContain("enforceGraceRateLimit");
+    expect(transcribe).toContain('route: "voice-transcribe"');
+  });
+
+  it("caches family-card tool responses without poisoning the cache with degraded reads", () => {
+    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+
+    expect(route).toContain("FAMILY_CARD_CACHE_TTL_MS");
+    expect(route).toContain("familyCardCache");
+    expect(route).toContain(".slice(0, 16)");
+    expect(route).toContain("cachedAt");
+    // Degraded results (failed enrichment / empty reads) must not be cached,
+    // and the curated requested-capacity ordering must not be re-sorted away.
+    expect(route).toContain("enrichmentFailed");
+    expect(route).toContain("if (variants.length && !enrichmentFailed)");
+    expect(route).not.toContain("compactFamilyCardVariants");
+  });
+
+  it("provides a real browser E2E regression for PDP fitment plus starter kit", () => {
+    const script = read("scripts/grace-pdp-orchestration-e2e.mjs");
+    const pkg = JSON.parse(read("package.json"));
+
+    expect(pkg.scripts["test:grace:e2e"]).toBe("node scripts/grace-pdp-orchestration-e2e.mjs");
+    expect(script).toContain("puppeteer-core");
+    expect(script).toContain("@sparticuz/chromium");
+    expect(script).toContain("__GRACE_TEST_APPEND_MESSAGE__");
+    expect(script).toContain("displayCompatibility");
+    expect(script).toContain("displayBuildKit");
+    expect(script).toContain("Build-a-kit");
+    expect(script).toContain("pairs with");
+  });
+
+  it("normalizes Grace direct size navigation so stale filters do not trap shoppers", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    const shapeIntent = read("src/lib/graceShapeIntent.ts");
+    const catalogFilters = read("src/lib/catalogFilters.ts");
+
+    expect(provider).toContain("normalizeGraceCatalogNavigationPath");
+    expect(provider).toContain("graceCapacityOnlySearchTerm");
+    expect(shapeIntent).toContain("normalizeGraceCatalogNavigationPath");
+    // Facet keys come from the canonical catalog list so they can't drift
+    // from the params the catalog actually reads (threads, not neckThreadSizes).
+    expect(shapeIntent).toContain("CATALOG_FACET_PARAM_KEYS");
+    expect(catalogFilters).toContain("CATALOG_FACET_PARAM_KEYS");
+    expect(catalogFilters).toContain('"threads"');
   });
 });

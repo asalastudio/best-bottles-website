@@ -55,18 +55,18 @@ describe("Mizan UX recovery guardrails", () => {
         expect(catalog).toContain('data-testid="catalog-card-specs"');
     });
 
-    it("adds crawlable AEO answer blocks with Grace handoff prompts", () => {
+    it("keeps crawlable AEO answer content and Grace handoff prompts on resources", () => {
         const catalog = readRepoFile("src/app/catalog/CatalogClient.tsx");
         const resources = readRepoFile("src/app/resources/page.tsx");
 
-        expect(catalog).toContain("PACKAGING_ANSWER_BLOCKS");
-        expect(catalog).toContain('data-testid="catalog-answer-blocks"');
-        expect(catalog).toContain('data-testid="catalog-answer-grace-cta"');
-        expect(catalog).toContain("buildCatalogFaqJsonLd");
-        expect(catalog).toContain("Can I use any applicator with any bottle?");
-        expect(catalog).toContain("setGraceInput(prompt)");
+        expect(catalog).not.toContain("PACKAGING_ANSWER_BLOCKS");
+        expect(catalog).not.toContain('data-testid="catalog-answer-blocks"');
 
         expect(resources).toContain("buildResourcesFaqJsonLd");
+        expect(resources).toContain("PACKAGING_BASICS");
+        expect(resources).toContain("Can I use any applicator with any bottle?");
+        expect(resources).toContain("Talk with Grace");
+        expect(resources).toContain("Open Grace");
         expect(resources).toContain('id: "neck-size"');
         expect(resources).toContain('id: "case-quantity"');
     });

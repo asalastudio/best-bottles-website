@@ -18,9 +18,9 @@ import { analytics } from "@/lib/analytics";
 import {
     catalogFamiliesForNav,
     expandCatalogPathFamilies,
+    graceCapacityOnlySearchTerm,
     graceCatalogSearchFromQuery,
     inferCatalogCategoryFromSearchTerm,
-    isGraceCapacityOnlySearch,
     normalizeGraceCatalogNavigationPath,
 } from "@/lib/graceShapeIntent";
 import {
@@ -28,6 +28,7 @@ import {
     type GraceContextValue,
     type GraceStatus,
     type GraceMessage,
+    type GraceAction,
     type PanelMode,
     type PageContext,
     type BrowsingHistoryEntry,
@@ -155,14 +156,16 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
     const sanitizedQuery = sanitizeCatalogQuery(query);
     const productFams = products.map((p) => p.family).filter(Boolean) as string[];
     const queryText = (query ?? "").toLowerCase();
-    const capacityOnlySearch = isGraceCapacityOnlySearch(sanitizedQuery);
+    const capacityOnlyTerm = graceCapacityOnlySearchTerm(sanitizedQuery);
+    const capacityOnlySearch = capacityOnlyTerm !== null;
 
     const category = inferCatalogCategoryFromSearchTerm(query ?? "");
     if (category) {
         qs.set("category", category);
-    } else if (capacityOnlySearch) {
-        const capMatch = sanitizedQuery.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
-        if (capMatch) qs.set("search", `${capMatch[1]}ml`);
+    } else if (capacityOnlyTerm) {
+        // Canonical token ("50ml") — the raw query may carry filler words like
+        // "bottles" that would fuse into an unmatchable search string.
+        qs.set("search", capacityOnlyTerm);
     } else {
         const expanded = catalogFamiliesForNav(query, family, productFams);
         if (expanded) {
@@ -195,7 +198,9 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
         qs.set("search", `${capMatch[1]}ml`);
     }
     if (capacityOnlySearch) {
-        // Keep pure size navigation broad. Specific intents like "1ml roll-on" still apply filters.
+        // A direct Grace request such as "take me to the 50 ml bottle" should
+        // land on a clean size search, not inherit exploratory family/applicator
+        // facets from search results or the previous PDP context.
     } else if (/roll[\s-]?on|roller/.test(queryText)) {
         qs.set("applicators", "rollon");
     } else if (/(bulb|vintage|antique).*(spray|sprayer)/.test(queryText)) {
@@ -388,6 +393,33 @@ function nextMsgId(): string {
     return `grace-msg-${Date.now()}-${++msgCounter}`;
 }
 
+function graceMessageActions(message: GraceMessage): GraceAction[] {
+    return message.actions ?? (message.action ? [message.action] : []);
+}
+
+function mergeGraceActions(message: GraceMessage, actions: GraceAction[]): GraceMessage {
+    if (actions.length === 0) return message;
+    const mergedActions = [...graceMessageActions(message), ...actions];
+    return { ...message, action: mergedActions[0], actions: mergedActions };
+}
+
+function pendingCartProposals(message: GraceMessage): Array<Extract<GraceAction, { type: "proposeCartAdd" }>> {
+    return graceMessageActions(message).filter(
+        (action): action is Extract<GraceAction, { type: "proposeCartAdd" }> =>
+            action.type === "proposeCartAdd" && action.awaitingConfirmation,
+    );
+}
+
+function updateCartProposalAction(
+    message: GraceMessage,
+    updater: (action: Extract<GraceAction, { type: "proposeCartAdd" }>) => GraceAction | null,
+): GraceMessage {
+    const updatedActions = graceMessageActions(message)
+        .map((action) => action.type === "proposeCartAdd" ? updater(action) : action)
+        .filter((action): action is GraceAction => Boolean(action));
+    return { ...message, action: updatedActions[0], actions: updatedActions.length ? updatedActions : undefined };
+}
+
 const GRACE_TOOL_TIMEOUT_MS = 12000;
 
 async function fetchJsonWithTimeout<T>(
@@ -502,18 +534,40 @@ function GraceProviderBase({
 
     // Direct message injection (bypass ElevenLabs) — used by client-side flows
     // like the image-upload vision analysis that don't need agent narration.
-    const appendInlineMessage = useCallback((msg: { role: "user" | "grace"; content: string; action?: import("@/components/GraceContext").GraceAction; attachments?: import("@/components/GraceContext").GraceAttachment[] }) => {
+    const appendInlineMessage = useCallback((msg: { role: "user" | "grace"; content: string; action?: import("@/components/GraceContext").GraceAction; actions?: import("@/components/GraceContext").GraceAction[]; attachments?: import("@/components/GraceContext").GraceAttachment[] }) => {
+        const actions = msg.actions ?? (msg.action ? [msg.action] : undefined);
         setMessages((prev) => [
             ...prev,
             {
                 role: msg.role,
                 content: msg.content,
                 id: nextMsgId(),
-                action: msg.action,
+                action: actions?.[0],
+                actions,
                 attachments: msg.attachments,
             },
         ]);
     }, []);
+
+    useEffect(() => {
+        if (process.env.NODE_ENV === "production" || typeof window === "undefined") return;
+        const testWindow = window as typeof window & {
+            __GRACE_TEST_APPEND_MESSAGE__?: typeof appendInlineMessage;
+            __GRACE_TEST_OPEN_PANEL__?: typeof openPanel;
+            __GRACE_TEST_RENDER_ACTIONS__?: typeof appendInlineMessage;
+        };
+        testWindow.__GRACE_TEST_APPEND_MESSAGE__ = appendInlineMessage;
+        testWindow.__GRACE_TEST_OPEN_PANEL__ = openPanel;
+        testWindow.__GRACE_TEST_RENDER_ACTIONS__ = (msg) => {
+            setPanelMode("open");
+            appendInlineMessage(msg);
+        };
+        return () => {
+            delete testWindow.__GRACE_TEST_APPEND_MESSAGE__;
+            delete testWindow.__GRACE_TEST_OPEN_PANEL__;
+            delete testWindow.__GRACE_TEST_RENDER_ACTIONS__;
+        };
+    }, [appendInlineMessage, openPanel]);
 
     // ── Connection state ─────────────────────────────────────────────────────
     const [graceStatus, setGraceStatus] = useState<GraceStatus>("idle");
@@ -1207,7 +1261,9 @@ function GraceProviderBase({
                     if (!sp.get("search")) sp.set("search", searchHint);
                     navPath = `${base}?${sp.toString()}`;
                 }
-                navPath = normalizeGraceCatalogNavigationPath(navPath);
+                // Strip stale facets only when the agent's own wording was purely a
+                // size request — a "Cylinder 9ml" title keeps its families filter.
+                navPath = normalizeGraceCatalogNavigationPath(navPath, titleBlock);
                 if (!navPath.includes("grace=")) {
                     navPath = `${navPath}${navPath.includes("?") ? "&" : "?"}grace=1`;
                 }
@@ -1496,17 +1552,17 @@ function GraceProviderBase({
                 };
 
                 for (const msg of [...messagesRef.current].reverse()) {
-                    const action = msg.action;
-                    if (!action) continue;
-                    if (action.type === "displayProductCard") addUnique(action.product);
-                    if (action.type === "showProducts" || action.type === "compareProducts" || action.type === "showProductPresentation") {
-                        action.products.forEach(addUnique);
-                    }
-                    if (action.type === "displayComparison") action.payload.products.forEach(addUnique);
-                    if (action.type === "displayBuildKit") {
-                        addUnique(action.payload.bottle);
-                        addUnique(action.payload.closure);
-                        addUnique(action.payload.applicator);
+                    for (const action of graceMessageActions(msg)) {
+                        if (action.type === "displayProductCard") addUnique(action.product);
+                        if (action.type === "showProducts" || action.type === "compareProducts" || action.type === "showProductPresentation") {
+                            action.products.forEach(addUnique);
+                        }
+                        if (action.type === "displayComparison") action.payload.products.forEach(addUnique);
+                        if (action.type === "displayBuildKit") {
+                            addUnique(action.payload.bottle);
+                            addUnique(action.payload.closure);
+                            addUnique(action.payload.applicator);
+                        }
                     }
                     if (recentProducts.length >= 6) break;
                 }
@@ -1755,20 +1811,17 @@ function GraceProviderBase({
             return;
         }
 
-        // Assistant message finalization — attach the OLDEST queued GraceAction.
-        // FIFO so parallel tool calls (e.g. two displayProductCard calls in one
-        // turn) each get attached to a successive Grace message instead of the
-        // later call overwriting the earlier one.
+        // Assistant message finalization — attach every queued GraceAction for
+        // this turn. ElevenLabs can call several display tools before emitting
+        // one final assistant message, so a single-action slot strands later UI.
         streamingFinalizedRef.current = true;
         setIsAwaitingReply(false);
         setStreamingText("");
-        const action = pendingActionsRef.current.shift() ?? null;
-        if (action) {
+        const actions = pendingActionsRef.current.splice(0);
+        if (actions.length) {
             console.log(
-                "[Grace] handleMessage attaching action:",
-                action.type,
-                "remaining in queue:",
-                pendingActionsRef.current.length,
+                "[Grace] handleMessage attaching actions:",
+                actions.map((action) => action.type).join(", "),
                 "to message:",
                 text.slice(0, 60),
             );
@@ -1779,16 +1832,15 @@ function GraceProviderBase({
                 last?.role === "grace"
                 && normalizeGraceMessageText(last.content) === norm
             ) {
-                // Same content already finalized — but the action might be new.
-                // Attach it to the existing message if it doesn't already carry one.
-                if (action && !last.action) {
-                    return prev.map((m, i) => i === prev.length - 1 ? { ...m, action } : m);
+                // Same content already finalized — but actions might be new.
+                if (actions.length) {
+                    return prev.map((m, i) => i === prev.length - 1 ? mergeGraceActions(m, actions) : m);
                 }
                 return prev;
             }
             return [
                 ...prev,
-                { role, content: text, id: nextMsgId(), action: action ?? undefined },
+                { role, content: text, id: nextMsgId(), action: actions[0], actions: actions.length ? actions : undefined },
             ];
         });
     }, []);
@@ -1808,13 +1860,11 @@ function GraceProviderBase({
                         const final = (prev + stopText).trim();
                         if (final) {
                             const n = normalizeGraceMessageText(final);
-                            const action = pendingActionsRef.current.shift() ?? null;
-                            if (action) {
+                            const actions = pendingActionsRef.current.splice(0);
+                            if (actions.length) {
                                 console.log(
-                                    "[Grace] handleAgentChatResponsePart(stop) attaching action:",
-                                    action.type,
-                                    "remaining in queue:",
-                                    pendingActionsRef.current.length,
+                                    "[Grace] handleAgentChatResponsePart(stop) attaching actions:",
+                                    actions.map((action) => action.type).join(", "),
                                     "to:",
                                     final.slice(0, 60),
                                 );
@@ -1822,14 +1872,14 @@ function GraceProviderBase({
                             setMessages((msgs) => {
                                 const last = msgs[msgs.length - 1];
                                 if (last?.role === "grace" && normalizeGraceMessageText(last.content) === n) {
-                                    if (action && !last.action) {
-                                        return msgs.map((m, i) => i === msgs.length - 1 ? { ...m, action } : m);
+                                    if (actions.length) {
+                                        return msgs.map((m, i) => i === msgs.length - 1 ? mergeGraceActions(m, actions) : m);
                                     }
                                     return msgs;
                                 }
                                 return [
                                     ...msgs,
-                                    { role: "grace" as const, content: final, id: nextMsgId(), action: action ?? undefined },
+                                    { role: "grace" as const, content: final, id: nextMsgId(), action: actions[0], actions: actions.length ? actions : undefined },
                                 ];
                             });
                         }
@@ -1915,16 +1965,24 @@ function GraceProviderBase({
             });
             console.log("[Grace] Session started successfully.");
             setConversationActive(true);
+            if (useTextOnly) {
+                setErrorMessage("");
+                setVoiceFailed(false);
+            }
             return true;
         } catch (err) {
             console.error("[Grace] Connection failed:", err);
             connectingRef.current = false;
             setGraceStatus("error");
             setVoiceFailed(true);
-            setErrorMessage(err instanceof Error ? err.message : "Connection failed");
+            const rawErrorMessage = err instanceof Error ? err.message : "Connection failed";
+            const publicErrorMessage = /notallowed|permission/i.test(rawErrorMessage)
+                ? "Microphone access is blocked. Grace is still available in text mode."
+                : rawErrorMessage;
+            setErrorMessage(publicErrorMessage);
             analytics.graceConnectionFailed({
                 mode: useTextOnly ? "text" : "voice",
-                error: err instanceof Error ? err.message : "Connection failed",
+                error: rawErrorMessage,
             });
             return false;
         } finally {
@@ -1988,7 +2046,7 @@ function GraceProviderBase({
             analytics.graceMicFallback({ reason: "voice_session_failed" });
             setVoiceEnabled(false);
             setVoiceFailed(true);
-            setErrorMessage("Voice unavailable — using text mode instead.");
+            setErrorMessage("Microphone access is blocked. Grace is still available in text mode.");
             setGraceStatus("idle");
             connectingRef.current = false;
             // Clear duplicate greeting from the failed voice attempt
@@ -2038,8 +2096,12 @@ function GraceProviderBase({
 
     const confirmAction = useCallback((messageId: string) => {
         const message = messagesRef.current.find((m) => m.id === messageId);
-        if (!message?.action || message.action.type !== "proposeCartAdd" || !message.action.awaitingConfirmation) return;
-        const products = message.action.products;
+        if (!message) return;
+        // Confirm is per-message: add every pending proposal so the UI never
+        // shows "Added to cart" for products that were silently skipped.
+        const proposals = pendingCartProposals(message);
+        if (proposals.length === 0) return;
+        const products = proposals.flatMap((proposal) => proposal.products);
         addToCart(products.map((p) => ({
             graceSku: p.graceSku,
             websiteSku: p.websiteSku ?? null,
@@ -2079,22 +2141,22 @@ function GraceProviderBase({
             });
         }
         setMessages((prev) => prev.map((m) => {
-            if (m.id !== messageId || m.action?.type !== "proposeCartAdd") return m;
+            if (m.id !== messageId) return m;
             return {
-                ...m,
+                ...updateCartProposalAction(m, (action) => ({ ...action, awaitingConfirmation: false })),
                 content: `${m.content}\n\nAdded to cart.`,
-                action: { ...m.action, awaitingConfirmation: false },
             };
         }));
     }, [addToCart]);
 
     const dismissAction = useCallback((messageId: string) => {
         setMessages((prev) => prev.map((m) => {
-            if (m.id !== messageId || m.action?.type !== "proposeCartAdd") return m;
+            if (m.id !== messageId || pendingCartProposals(m).length === 0) return m;
             return {
-                ...m,
+                // Only drop proposals still awaiting confirmation — a confirmed
+                // receipt card must survive dismissing a sibling proposal.
+                ...updateCartProposalAction(m, (action) => action.awaitingConfirmation ? null : action),
                 content: `${m.content}\n\nCart add dismissed.`,
-                action: undefined,
             };
         }));
     }, []);

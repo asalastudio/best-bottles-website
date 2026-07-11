@@ -33,6 +33,13 @@ const nextConfig: NextConfig = {
             },
             {
                 protocol: "https",
+                // Pinned to our single Supabase project — a wildcard here would let
+                // any Supabase bucket on the internet use /_next/image as a proxy.
+                hostname: "likkskifwsrvszxdvufw.supabase.co",
+                pathname: "/storage/v1/object/public/**",
+            },
+            {
+                protocol: "https",
                 hostname: "www.bestbottles.com",
             },
         ],

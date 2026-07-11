@@ -189,7 +189,7 @@ export default function GraceChatDrawer() {
     };
 
     const userHasInteracted = chipsUsed || messages.some((m) => m.role === "user");
-    const showEmptyState = !userHasInteracted;
+    const showEmptyState = messages.length === 0 && !userHasInteracted;
 
     return (
         <AnimatePresence>
