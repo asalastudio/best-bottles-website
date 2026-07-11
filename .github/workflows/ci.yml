@@ -42,3 +42,8 @@ jobs:
           # placeholder domain. Clerk is disabled so the build needs no keys.
           NEXT_PUBLIC_SITE_URL: https://ci.example.com
           NEXT_PUBLIC_CLERK_ENABLED: "false"
+          # Public Sanity identifiers (shipped to the browser, not secrets) so
+          # the Sanity client initializes at build time — the draft-mode route
+          # collects page data during `next build`.
+          NEXT_PUBLIC_SANITY_PROJECT_ID: gh97irjh
+          NEXT_PUBLIC_SANITY_DATASET: production
