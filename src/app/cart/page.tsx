@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { useCart } from "@/components/CartProvider";
 import { ArrowRight, Minus, Plus, ShoppingBag, Trash, WarningCircle } from "@/components/icons";
 import { isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
@@ -163,6 +164,7 @@ export default function CartPage() {
                     </div>
                 )}
             </section>
+            <Footer />
         </main>
     );
 }

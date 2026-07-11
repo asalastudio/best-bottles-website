@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, Clock, Calendar } from "@/components/icons";
 import { PortableText, type PortableTextComponents } from "@portabletext/react";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
@@ -295,6 +296,7 @@ export default async function BlogArticlePage({
                 </div>
             </section>
             <SanityLiveVisualEditing />
+            <Footer />
         </div>
     );
 }
