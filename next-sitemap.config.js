@@ -1,6 +1,13 @@
+// Derive the canonical origin from the environment so staging deployments
+// never emit robots/sitemap URLs that point at the production domain
+// (mirrors SITE_URL resolution in src/lib/seo.ts). Set NEXT_PUBLIC_SITE_URL
+// per Vercel environment; the fallback is the production custom domain
+// used after DNS cutover.
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.bestbottles.com").replace(/\/+$/, "");
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.bestbottles.com",
+  siteUrl,
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   changefreq: "weekly",
@@ -31,7 +38,7 @@ module.exports = {
       { userAgent: "anthropic-ai", allow: "/" },
     ],
     additionalSitemaps: [
-      "https://www.bestbottles.com/server-sitemap.xml",
+      `${siteUrl}/server-sitemap.xml`,
     ],
   },
 
