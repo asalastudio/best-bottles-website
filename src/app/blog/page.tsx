@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight } from "@/components/icons";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import BlogGrid, { type JournalPost } from "@/components/BlogGrid";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { isSanityConfigured } from "@/sanity/lib/client";
@@ -90,6 +91,7 @@ export default async function BlogPage() {
                 </div>
             </section>
             <SanityLiveVisualEditing />
+            <Footer />
         </div>
     );
 }

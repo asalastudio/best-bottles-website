@@ -3,6 +3,8 @@
 import { useState, useEffect, type FormEvent } from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { ArrowLeft, Send, CheckCircle2, Loader2 } from "@/components/icons";
 import { useMutation } from "convex/react";
 import { api } from "../../convex/_generated/api";
@@ -210,6 +212,7 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
 
     return (
         <div className="min-h-screen bg-bone">
+            <Navbar hideMobileSearch />
             <div className="max-w-[640px] mx-auto px-6 pt-32 pb-20">
                 <Link
                     href="/"
@@ -313,6 +316,7 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
                     </button>
                 </form>
             </div>
+            <Footer />
         </div>
     );
 }
