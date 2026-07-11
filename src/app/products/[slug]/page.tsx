@@ -138,7 +138,7 @@ export async function generateMetadata({
 
     if (!group) {
         return {
-            title: `Product Not Found | ${SITE_NAME}`,
+            title: { absolute: `Product Not Found | ${SITE_NAME}` },
             robots: { index: false, follow: true },
         };
     }
@@ -159,7 +159,7 @@ export async function generateMetadata({
         : group.heroImageUrl ?? undefined;
 
     return {
-        title: `${customerName} | ${SITE_NAME}`,
+        title: { absolute: `${customerName} | ${SITE_NAME}` },
         description,
         alternates: { canonical: `${SITE_URL}/products/${activeSlug}` },
         openGraph: {
