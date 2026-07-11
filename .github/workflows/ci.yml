@@ -47,3 +47,7 @@ jobs:
           # collects page data during `next build`.
           NEXT_PUBLIC_SANITY_PROJECT_ID: gh97irjh
           NEXT_PUBLIC_SANITY_DATASET: production
+          # Placeholder Convex URL so ConvexReactClient (in the root providers)
+          # constructs during the /_not-found prerender. No queries run at build
+          # time, so it never connects — a well-formed URL is all that's needed.
+          NEXT_PUBLIC_CONVEX_URL: https://ci-placeholder.convex.cloud
