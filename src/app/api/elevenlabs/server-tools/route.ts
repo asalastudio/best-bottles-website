@@ -45,6 +45,9 @@ function wantsRawSearchCatalogResult(parameters: Record<string, unknown>): boole
     return parameters.returnRaw === true || parameters.returnRaw === "true" || format === "raw";
 }
 
+const FAMILY_CARD_CACHE_TTL_MS = 5 * 60 * 1000;
+const familyCardCache = new Map<string, { cachedAt: number; result: unknown }>();
+
 export async function POST(req: NextRequest) {
     try {
         // All 12 agent tools are registered on ElevenLabs as type:"client",
@@ -283,8 +286,16 @@ export async function POST(req: NextRequest) {
                     ? rawCapacityMl
                     : Number.parseFloat(String(rawCapacityMl ?? ""));
                 const requestedCapacityMl = Number.isFinite(parsedCapacityMl) ? parsedCapacityMl : null;
-                const groups = await convex.query(api.products.getProductGroupsByFamily, { family });
-                const overview = await convex.query(api.grace.getFamilyOverview, { family });
+                const familyCacheKey = `${family.toLowerCase()}:${requestedCapacityMl ?? "all"}`;
+                const familyCached = familyCardCache.get(familyCacheKey);
+                if (familyCached && Date.now() - familyCached.cachedAt < FAMILY_CARD_CACHE_TTL_MS) {
+                    result = familyCached.result;
+                    break;
+                }
+                const [groups, overview] = await Promise.all([
+                    convex.query(api.products.getProductGroupsByFamily, { family }),
+                    convex.query(api.grace.getFamilyOverview, { family }),
+                ]);
                 let variants = (groups ?? [])
                     .filter((g) => g.primaryGraceSku)
                     .map((g) => ({
@@ -461,9 +472,13 @@ export async function POST(req: NextRequest) {
                 } else {
                     variants = variants.sort(byCapacity).slice(0, 16);
                 }
+                let enrichmentFailed = false;
                 variants = await Promise.all(variants.map(async (variant) => {
                     if (variant.shopifyVariantId) return variant;
-                    const product = await convex.query(api.products.getBySku, { graceSku: variant.graceSku }).catch(() => null);
+                    const product = await convex.query(api.products.getBySku, { graceSku: variant.graceSku }).catch(() => {
+                        enrichmentFailed = true;
+                        return null;
+                    });
                     if (!product) return variant;
                     return {
                         ...variant,
@@ -491,6 +506,11 @@ export async function POST(req: NextRequest) {
                         ? Math.round((Math.min(...variants.map((v) => v.webPrice1pc ?? Infinity).filter((n) => Number.isFinite(n))) || 0) * 100)
                         : null,
                 };
+                // Only cache healthy payloads: a transiently failed enrichment or an
+                // empty read would otherwise poison the card for the full TTL.
+                if (variants.length && !enrichmentFailed) {
+                    familyCardCache.set(familyCacheKey, { cachedAt: Date.now(), result });
+                }
                 break;
             }
 

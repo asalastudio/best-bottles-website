@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 type ElevenLabsTranscriptResponse =
   | {
@@ -21,6 +22,9 @@ function getTranscriptText(payload: ElevenLabsTranscriptResponse): string {
 }
 
 export async function POST(req: NextRequest) {
+  const limited = await enforceGraceRateLimit(req, { route: "voice-transcribe", limit: 12, windowMs: 60_000 });
+  if (limited) return limited;
+
   const elevenLabsKey = process.env.ELEVENLABS_API_KEY;
   if (!elevenLabsKey) {
     return Response.json(
