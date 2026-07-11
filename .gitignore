@@ -52,6 +52,9 @@
 
 # Best Bottles / Madison pipeline generated or local-only data
 /pipeline/*
+!/pipeline/aios-shopify-pdp-images/
+/pipeline/aios-shopify-pdp-images/*
+!/pipeline/aios-shopify-pdp-images/prompt-template.mjs
 !/pipeline/best-bottles-reference-images-clean/
 !/pipeline/best-bottles-reference-images-clean/**/
 !/pipeline/best-bottles-reference-images-clean/**/*.md
@@ -79,6 +82,10 @@
 /data/audits/20*/convex_snapshot*.json
 /data/audits/2026-05-20-image-audit/
 /data/audits/product-truth/
+/data/audits/convex-grace-sku-truth-2026-06-19/
+/data/audits/launch-health-2026-06-22/
+/data/audits/shopify_sku_mapping_launch_audit_2026-06-22.json
+/Best-Bottles-Master-Product-Sheet-2026-06-21/
 /data/source-of-truth/
 /docs/data_alignment/*.json
 /docs/data_alignment/*.xlsx
@@ -106,6 +113,10 @@ __pycache__/
 .env*.bak*
 .env.local.bak*
 *.bak-clerk-toggle
+
+# MCP configs — contain live API keys and admin tokens; never commit
+.mcp.json
+.cursor/mcp.json
 
 # Local editor workspace files
 *.code-workspace
