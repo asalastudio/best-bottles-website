@@ -15,6 +15,44 @@ for (const key of requiredEnvVars) {
     }
 }
 
+// ── Content-Security-Policy (REPORT-ONLY baseline) ───────────────────────
+// Report-only: browsers report violations to the console but do NOT block
+// anything, so this cannot break the app. It exists to observe what the real
+// origin set is before we ever switch to an enforcing `Content-Security-Policy`.
+// Convex origins are derived from env so this stays correct per-environment.
+// TUNE from observed reports, then flip the header name to enforce.
+function buildContentSecurityPolicy(): string {
+    const convexHttps = (process.env.NEXT_PUBLIC_CONVEX_URL ?? "").replace(/\/$/, "");
+    const convexWss = convexHttps.replace(/^https:/, "wss:");
+    const supabase = "https://likkskifwsrvszxdvufw.supabase.co";
+    const shopify = "https://cdn.shopify.com";
+
+    return [
+        "default-src 'self'",
+        // Next.js needs inline/eval; Mixpanel + Clerk load scripts.
+        "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.mxpnl.com https://*.clerk.accounts.dev https://challenges.cloudflare.com",
+        "style-src 'self' 'unsafe-inline'",
+        `img-src 'self' data: blob: https://cdn.sanity.io ${shopify} https://www.bestbottles.com ${supabase}`,
+        "font-src 'self' data:",
+        [
+            "connect-src 'self'",
+            convexHttps,
+            convexWss,
+            "https://*.api.sanity.io https://*.apicdn.sanity.io https://cdn.sanity.io",
+            "https://api.mixpanel.com",
+            "https://*.clerk.accounts.dev",
+            "https://api.elevenlabs.io https://api.us.elevenlabs.io wss://*.elevenlabs.io",
+            supabase,
+            "https://vitals.vercel-insights.com",
+        ].filter(Boolean).join(" "),
+        // Sanity Presentation embeds the Studio; Clerk uses frames for auth.
+        "frame-src 'self' https://*.clerk.accounts.dev https://challenges.cloudflare.com",
+        "frame-ancestors 'self'",
+        "base-uri 'self'",
+        "object-src 'none'",
+    ].join("; ");
+}
+
 const nextConfig: NextConfig = {
     reactStrictMode: false,
     outputFileTracingRoot: projectRoot,
@@ -110,6 +148,9 @@ const nextConfig: NextConfig = {
                     { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
                     { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
                     { key: "Permissions-Policy", value: "camera=(), microphone=(self), geolocation=(), payment=(self), usb=()" },
+                    // Report-only: observe violations without blocking. Tune from
+                    // real reports, then add an enforcing Content-Security-Policy.
+                    { key: "Content-Security-Policy-Report-Only", value: buildContentSecurityPolicy() },
                 ],
             },
         ];
