@@ -1,0 +1,36 @@
+{
+  "sku": "GB-CYL-CLR-9ML-SPR-SSLV-01",
+  "status": "rejected_not_valid_primary_reference",
+  "role": "disallowed_transparent_source_derivative",
+  "sellableState": "cap-on",
+  "source": {
+    "path": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/best-bottles-reference-images-clean/01-transparent-png-candidates/_cylinder-organized-2026-06-20/Fine Mist Sprayer/GB-CYL-CLR-9ML-SPR-SSLV-01.png",
+    "classification": "component_inventory_only",
+    "sourceComponents": {
+      "assembledBottleAndSprayer": { "x": 794, "y": 946, "width": 247, "height": 1158 },
+      "detachedClearOvercap": { "x": 1091, "y": 1843, "width": 198, "height": 258 }
+    }
+  },
+  "derivation": {
+    "method": "deterministic source-pixel compositing only; no generative model",
+    "operation": "Removed the detached clear-overcap component from its source position and alpha-composited those unchanged pixels centered over the existing fine-mist sprayer.",
+    "overcapDestination": { "x": 819, "y": 920 },
+    "normalization": "Cropped the complete assembled object, resized it by 1.4987 using Lanczos resampling, and placed it at x=737/y=256 on the standard 2080x2288 transparent canvas."
+  },
+  "output": {
+    "png": "GB-CYL-CLR-9ML-SPR-SSLV-01__assembled-cap-on__candidate-v002.png",
+    "preview": "GB-CYL-CLR-9ML-SPR-SSLV-01__assembled-cap-on__candidate-v002-preview.jpg",
+    "canvas": { "width": 2080, "height": 2288 }
+  },
+  "qa": {
+    "sourceMasterReview": "pass_candidate",
+    "findings": [
+      "Exactly one assembled product.",
+      "Clear overcap is attached above the shiny-silver fine-mist collar.",
+      "No detached or duplicate component remains.",
+      "Full product is visible with safe canvas margins.",
+      "Must receive Best Bottles visual approval before use as a production geometry master."
+    ]
+  },
+  "createdAt": "2026-07-11"
+}
