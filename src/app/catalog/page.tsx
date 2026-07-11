@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CatalogClient, { type CatalogSearchResult } from "./CatalogClient";
+import Footer from "@/components/Footer";
 import { api } from "../../../convex/_generated/api";
 import { paramsToFilters } from "@/lib/catalogFilters";
 import { getCatalogConvexClient, searchCatalogServer } from "@/lib/catalogServer";
@@ -59,10 +60,13 @@ export default async function CatalogPage({
     ]);
 
     return (
-        <CatalogClient
-            initialSearchParams={urlSearchParams.toString()}
-            initialResult={initialResult}
-            initialTaxonomy={initialTaxonomy}
-        />
+        <>
+            <CatalogClient
+                initialSearchParams={urlSearchParams.toString()}
+                initialResult={initialResult}
+                initialTaxonomy={initialTaxonomy}
+            />
+            <Footer />
+        </>
     );
 }

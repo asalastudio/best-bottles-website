@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { BookOpen, Wrench, ChatCircle, FileText, BookMarked } from "@/components/icons";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { SITE_URL } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -188,6 +189,7 @@ export default function ResourcesPage() {
                     </div>
                 </div>
             </section>
+            <Footer />
         </div>
     );
 }

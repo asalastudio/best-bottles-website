@@ -11,6 +11,7 @@ import ProductDetailClient, {
 import { isSanityConfigured } from "@/sanity/lib/client";
 import { sanityFetch } from "@/sanity/lib/live";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
+import Footer from "@/components/Footer";
 import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "@/lib/seo";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -259,6 +260,7 @@ export default async function ProductPage({
                 siblingGroups={siblingGroups}
             />
             <SanityLiveVisualEditing />
+            <Footer />
         </>
     );
 }
