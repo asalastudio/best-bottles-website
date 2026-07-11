@@ -43,7 +43,7 @@ export default function MobileTabBar() {
     const tabs = TABS;
 
     // Routes that own the entire viewport — tab bar would compete for space.
-    const hideTabBar = pathname.startsWith("/grace-workspace");
+    const hideTabBar = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
 
     useEffect(() => {
         setMounted(true); // eslint-disable-line react-hooks/set-state-in-effect -- hydration guard

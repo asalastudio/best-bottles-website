@@ -439,14 +439,8 @@ export default async function ExecutivePage({ searchParams }: ExecutivePageProps
 
     return (
         <main className="min-h-screen overflow-x-hidden bg-bone text-obsidian" id="overview" data-executive-hub>
-            <style>
-                {`
-                    body:has([data-executive-hub]) button[class*="z-[55]"],
-                    body:has([data-executive-hub]) nav[class*="bottom-0"][class*="z-50"] {
-                        display: none !important;
-                    }
-                `}
-            </style>
+            {/* Grace launcher and the mobile tab bar skip /executive via their
+                own pathname gates (GraceLauncher.tsx / MobileTabBar.tsx). */}
             <div className="mx-auto grid w-full max-w-[1680px] lg:grid-cols-[260px_minmax(0,1fr)]">
                 <aside className="min-w-0 border-b border-champagne/70 bg-linen px-5 py-5 lg:sticky lg:top-0 lg:min-h-screen lg:border-b-0 lg:border-r">
                     <div className="flex items-center gap-3">

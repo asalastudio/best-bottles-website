@@ -35,8 +35,8 @@ export default function GraceLauncher() {
         return () => mq.removeEventListener("change", onResize);
     }, []);
 
-    // Workspace owns the viewport — no launcher there.
-    const ownsViewport = pathname.startsWith("/grace-workspace");
+    // Workspace and the executive hub own the viewport — no launcher there.
+    const ownsViewport = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
     const visible = !isOpen && !isMobile && !ownsViewport;
 
     return (
