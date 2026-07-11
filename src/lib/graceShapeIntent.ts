@@ -157,7 +157,7 @@ export function graceCapacityOnlySearchTerm(term?: string | null): string | null
         .trim()
         .replace(/^["']|["']$/g, "")
         .replace(/\bmilliliters?\b/gi, "ml")
-        .replace(/\b(bottles?|products?|page)\b/gi, "")
+        .replace(/\b(?:take|show|open|bring|send|go|navigate|direct|get|me|us|to|the|a|an|specific|catalog|page|products?|bottles?)\b/gi, " ")
         .replace(/\s+/g, " ")
         .trim();
     const match = normalized.match(/^(\d+(?:\.\d+)?)\s*ml$/i);

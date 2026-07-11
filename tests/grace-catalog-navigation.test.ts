@@ -52,7 +52,7 @@ describe("Grace catalog navigation", () => {
     it("uses the normalization from Grace's navigation tools", () => {
         const provider = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
 
-        expect(provider).toContain("isGraceCapacityOnlySearch");
+        expect(provider).toContain("graceCapacityOnlySearchTerm");
         expect(provider).toContain("normalizeGraceCatalogNavigationPath");
     });
 });
