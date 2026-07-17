@@ -29,7 +29,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-sm">
                             <li><Link href="/catalog" className="hover:text-muted-gold transition-colors">All Bottles</Link></li>
                             <li><Link href="/catalog?sort=best-match" className="hover:text-muted-gold transition-colors">Browse by Family</Link></li>
-                            <li><Link href="/catalog?category=Closures" className="hover:text-muted-gold transition-colors">Closures & Applicators</Link></li>
+                            <li><Link href="/catalog?category=Component" className="hover:text-muted-gold transition-colors">Closures & Applicators</Link></li>
                             <li><Link href="/request-sample" className="hover:text-muted-gold transition-colors">Request Samples</Link></li>
                             <li><Link href="/request-quote" className="hover:text-muted-gold transition-colors">Request a Quote</Link></li>
                         </ul>

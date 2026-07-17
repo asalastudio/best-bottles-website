@@ -21,12 +21,15 @@ const FAMILY_ORDER = [
     "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
     "Tulip", "Queen", "Bell", "Swirl", "Grace",
 ];
+// Must mirror SLUG_BUCKET_SUFFIXES in convex/products.ts — no live slug ends
+// in "-spray"; the real spray suffixes are below (the "-spray" mapping made
+// every spray filter return zero results).
 const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
     rollon: ["-rollon"],
-    finemist: ["-spray"],
-    perfumespray: ["-spray"],
-    antiquespray: ["-spray"],
-    "antiquespray-tassel": ["-spray"],
+    finemist: ["-finemist"],
+    perfumespray: ["-perfumespray"],
+    antiquespray: ["-antiquespray"],
+    "antiquespray-tassel": ["-tassel"],
     dropper: ["-dropper"],
     lotionpump: ["-lotionpump"],
     reducer: ["-reducer"],
