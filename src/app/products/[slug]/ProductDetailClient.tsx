@@ -118,6 +118,11 @@ function getCapFinishFromItemName(itemName: string | null | undefined): { label:
         };
         if (trimMap[trim]) return trimMap[trim];
     }
+    // Dotted caps before plain colors — "pink dotted cap" must keep its dots
+    // (T-nn graceSkus have no finish token, so itemName is the only source).
+    if (name.includes("black dotted")) return { label: "Black with Dots", swatchName: "Black" };
+    if (name.includes("silver dotted")) return { label: "Silver with Dots", swatchName: "Shiny Silver" };
+    if (name.includes("pink dotted")) return { label: "Pink with Dots", swatchName: "Pink" };
     if (name.includes("short black cap")) return { label: "Short Black", swatchName: "Black" };
     if (name.includes("short white cap")) return { label: "Short White", swatchName: "White" };
     if (name.includes("shiny silver cap")) return { label: "Shiny Silver", swatchName: "Shiny Silver" };

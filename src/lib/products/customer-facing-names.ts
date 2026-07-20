@@ -79,7 +79,9 @@ const GRACE_SKU_FINISHES: Record<string, string> = {
     MCPR: "Matte Copper",
     WHT: "White",
     PNK: "Pink",
-    PKDT: "Pink",
+    PKDT: "Pink with Dots",
+    BKDT: "Black with Dots",
+    SLDT: "Silver with Dots",
     RED: "Red",
     GRN: "Green",
     BLU: "Blue",
@@ -88,6 +90,10 @@ const GRACE_SKU_FINISHES: Record<string, string> = {
 };
 
 const WEBSITE_SKU_FINISH_PATTERNS: Array<[RegExp, string]> = [
+    // Dotted caps first — "BlkDot" must not fall through to the plain /Blk/ match.
+    [/BlkDot|BlkDt/i, "Black with Dots"],
+    [/SlDot|SlvDot/i, "Silver with Dots"],
+    [/PnkDot|PinkDot/i, "Pink with Dots"],
     [/ShnBlk/i, "Shiny Black"],
     [/MtBlk/i, "Matte Black"],
     [/Blk/i, "Black"],
@@ -210,6 +216,11 @@ function finishFromWebsiteSku(sku: string | null | undefined): string | null {
 function finishFromName(value: string | null | undefined): string | null {
     const name = key(value);
     if (!name) return null;
+    // Dotted caps before the plain-color list — "pink dotted cap" must not
+    // collapse to bare "Pink" (PDP mislabeled the dotted roll-on caps).
+    if (name.includes("black dotted")) return "Black with Dots";
+    if (name.includes("silver dotted")) return "Silver with Dots";
+    if (name.includes("pink dotted")) return "Pink with Dots";
     const finishes = [
         "light brown leather",
         "brown leather",
@@ -273,7 +284,9 @@ function finishSuffix(productType: string, finish: string | null, variant?: Cust
     }
 
     if (productType === "Roll-On Bottle") {
-        return `${finish} Cap`;
+        // "Pink with Dots" reads better as "Pink Cap with Dots" than "Pink with Dots Cap".
+        const dotted = finish.match(/^(.+) with Dots$/i);
+        return dotted ? `${dotted[1]} Cap with Dots` : `${finish} Cap`;
     }
 
     return finish;
