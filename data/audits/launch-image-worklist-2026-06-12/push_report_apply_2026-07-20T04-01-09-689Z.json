@@ -1,0 +1,143 @@
+{
+  "generatedAt": "2026-07-20T04:01:09.689Z",
+  "mode": "apply",
+  "family": "Cylinder",
+  "replace": true,
+  "deleteOldMedia": true,
+  "manifest": "/tmp/cylinder-5ml-final4-manifest.csv",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "manifestRows": 4,
+    "eligibleAfterFilters": 4,
+    "selected": 4,
+    "toAppend": 3,
+    "toRepoint": 1,
+    "bgGateChecked": 4,
+    "skippedOffBrandBackground": 0,
+    "products": 2,
+    "uploaded": 4,
+    "convexPatched": 4,
+    "deletedOldMedia": 1,
+    "failed": 0,
+    "skippedUntrustedSource": 0,
+    "skippedUnmatchedSku": 0,
+    "skippedDuplicateSku": 0,
+    "skippedAlreadyHasImage": 0
+  },
+  "samples": {
+    "plan": [
+      {
+        "graceSku": "GB-CYL-CLR-5ML-SLV-T",
+        "websiteSku": "GBCyl5Sl",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-SLV-T",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784519588801_jz071s.png",
+        "variantId": "gid://shopify/ProductVariant/53343621185828",
+        "productId": "gid://shopify/Product/10433892188452",
+        "productHandle": "cylinder-5ml-clear-13-415",
+        "action": "repoint",
+        "oldImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784509191332_efbqaj.png?v=1784519021"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-5ML-S",
+        "websiteSku": "GBCyl5BlkSht",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-S",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784519906573_guq7ln.png",
+        "variantId": "gid://shopify/ProductVariant/53343621251364",
+        "productId": "gid://shopify/Product/10433892188452",
+        "productHandle": "cylinder-5ml-clear-13-415",
+        "action": "append",
+        "oldImageUrl": null
+      },
+      {
+        "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+        "websiteSku": "GBCyl5MtlRollBlkDot",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-MRL-BKDT",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784518979232_m23o7c.png",
+        "variantId": "gid://shopify/ProductVariant/53343649464612",
+        "productId": "gid://shopify/Product/10433895956772",
+        "productHandle": "cylinder-5ml-clear-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      },
+      {
+        "graceSku": "GB-CYL-CLR-5ML-GLD-T",
+        "websiteSku": "GBCyl5Gl",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-GLD-T",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784519733899_6jjq5r.png",
+        "variantId": "gid://shopify/ProductVariant/53343621218596",
+        "productId": "gid://shopify/Product/10433892188452",
+        "productHandle": "cylinder-5ml-clear-13-415",
+        "action": "append",
+        "oldImageUrl": null
+      }
+    ],
+    "uploaded": [
+      {
+        "graceSku": "GB-CYL-CLR-5ML-SLV-T",
+        "websiteSku": "GBCyl5Sl",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-SLV-T",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784519588801_jz071s.png",
+        "variantId": "gid://shopify/ProductVariant/53343621185828",
+        "productId": "gid://shopify/Product/10433892188452",
+        "productHandle": "cylinder-5ml-clear-13-415",
+        "action": "repoint",
+        "oldImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784509191332_efbqaj.png?v=1784519021",
+        "mediaId": "gid://shopify/MediaImage/46105492783396",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784519588801_jz071s.png?v=1784520062"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-5ML-S",
+        "websiteSku": "GBCyl5BlkSht",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-S",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784519906573_guq7ln.png",
+        "variantId": "gid://shopify/ProductVariant/53343621251364",
+        "productId": "gid://shopify/Product/10433892188452",
+        "productHandle": "cylinder-5ml-clear-13-415",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46105492816164",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784519906573_guq7ln.png?v=1784520062"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-5ML-GLD-T",
+        "websiteSku": "GBCyl5Gl",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-GLD-T",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784519733899_6jjq5r.png",
+        "variantId": "gid://shopify/ProductVariant/53343621218596",
+        "productId": "gid://shopify/Product/10433892188452",
+        "productHandle": "cylinder-5ml-clear-13-415",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46105492848932",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784519733899_6jjq5r.png?v=1784520062"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-5ML-MRL-BKDT",
+        "websiteSku": "GBCyl5MtlRollBlkDot",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-MRL-BKDT",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784518979232_m23o7c.png",
+        "variantId": "gid://shopify/ProductVariant/53343649464612",
+        "productId": "gid://shopify/Product/10433895956772",
+        "productHandle": "cylinder-5ml-clear-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46105500483876",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784518979232_m23o7c.png?v=1784520068"
+      }
+    ],
+    "failed": [],
+    "skippedUntrustedSource": [],
+    "skippedUnmatchedSku": [],
+    "skippedAlreadyHasImage": [],
+    "skippedOffBrandBackground": []
+  }
+}

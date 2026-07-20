@@ -1,0 +1,142 @@
+{
+  "generatedAt": "2026-07-20T07:59:19.368Z",
+  "mode": "apply",
+  "family": "Cylinder",
+  "replace": false,
+  "deleteOldMedia": false,
+  "manifest": "/tmp/cobalt-plastic-rollers-manifest.csv",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "manifestRows": 9,
+    "eligibleAfterFilters": 3,
+    "selected": 3,
+    "toAppend": 3,
+    "toRepoint": 0,
+    "bgGateChecked": 3,
+    "skippedOffBrandBackground": 0,
+    "products": 1,
+    "uploaded": 3,
+    "convexPatched": 3,
+    "deletedOldMedia": 0,
+    "failed": 0,
+    "skippedUntrustedSource": 0,
+    "skippedUnmatchedSku": 0,
+    "skippedDuplicateSku": 0,
+    "skippedAlreadyHasImage": 6
+  },
+  "samples": {
+    "plan": [
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+        "websiteSku": "GBCylBlu5RollPinkDot",
+        "family": "Cylinder",
+        "alt": "GB-CYL-BLU-5ML-ROL-PKDT",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784533535293_d1ugog.png",
+        "variantId": "gid://shopify/ProductVariant/53343663292708",
+        "productId": "gid://shopify/Product/10433897464100",
+        "productHandle": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+        "websiteSku": "GBCylBlu5RollCuMatt",
+        "family": "Cylinder",
+        "alt": "GB-CYL-BLU-5ML-ROL-MCPR",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784533901238_305adz.png",
+        "variantId": "gid://shopify/ProductVariant/53343663358244",
+        "productId": "gid://shopify/Product/10433897464100",
+        "productHandle": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+        "websiteSku": "GBCylBlu5RollBlkSh",
+        "family": "Cylinder",
+        "alt": "GB-CYL-BLU-5ML-ROL-SBLK",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784533223044_qcy4d5.png",
+        "variantId": "gid://shopify/ProductVariant/53343663227172",
+        "productId": "gid://shopify/Product/10433897464100",
+        "productHandle": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      }
+    ],
+    "uploaded": [
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-PKDT",
+        "websiteSku": "GBCylBlu5RollPinkDot",
+        "family": "Cylinder",
+        "alt": "GB-CYL-BLU-5ML-ROL-PKDT",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784533535293_d1ugog.png",
+        "variantId": "gid://shopify/ProductVariant/53343663292708",
+        "productId": "gid://shopify/Product/10433897464100",
+        "productHandle": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46113124647204",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784533535293_d1ugog.png?v=1784534357"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-MCPR",
+        "websiteSku": "GBCylBlu5RollCuMatt",
+        "family": "Cylinder",
+        "alt": "GB-CYL-BLU-5ML-ROL-MCPR",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784533901238_305adz.png",
+        "variantId": "gid://shopify/ProductVariant/53343663358244",
+        "productId": "gid://shopify/Product/10433897464100",
+        "productHandle": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46113124679972",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784533901238_305adz.png?v=1784534357"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-SBLK",
+        "websiteSku": "GBCylBlu5RollBlkSh",
+        "family": "Cylinder",
+        "alt": "GB-CYL-BLU-5ML-ROL-SBLK",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784533223044_qcy4d5.png",
+        "variantId": "gid://shopify/ProductVariant/53343663227172",
+        "productId": "gid://shopify/Product/10433897464100",
+        "productHandle": "cylinder-5ml-cobalt-blue-13-415-rollon",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46113124712740",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784533223044_qcy4d5.png?v=1784534357"
+      }
+    ],
+    "failed": [],
+    "skippedUntrustedSource": [],
+    "skippedUnmatchedSku": [],
+    "skippedAlreadyHasImage": [
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-BKDT",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784532468894_admu1g_cf887328-f35a-4f88-8718-4256bac5a7f8.png?v=1784534324"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-MGLD",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784533386312_w8qt6y_57db9b54-c0eb-4c92-93d9-53ef5dbce60b.png?v=1784534306"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-MSLV",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784534082891_gr0sn7_51790862-ea25-42a6-8c4d-55c3b2034c10.png?v=1784534296"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-SGLD",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784532854556_5zccpk_a6e459fb-6b8a-484f-aa02-ebbcd63e4355.png?v=1784534315"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-SLDT",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784533707642_yudatf_c7a3c92b-b292-4dae-8e8e-fad96985e3c3.png?v=1784534301"
+      },
+      {
+        "graceSku": "GB-CYL-BLU-5ML-ROL-SSLV",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784533038827_3855f5_9aea79d5-8cb6-43a9-8026-fb5cf1f64ba4.png?v=1784534311"
+      }
+    ],
+    "skippedOffBrandBackground": []
+  }
+}
