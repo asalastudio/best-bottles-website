@@ -1,0 +1,96 @@
+{
+  "generatedAt": "2026-07-20T17:28:19.953Z",
+  "mode": "apply",
+  "family": "ALL",
+  "replace": false,
+  "deleteOldMedia": false,
+  "manifest": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-cylinder-pipeline-handoff-1411d7/55d398ea-6d72-42d2-afea-6cf621984448/scratchpad/repush-3-manifest.csv",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "manifestRows": 3,
+    "eligibleAfterFilters": 2,
+    "selected": 2,
+    "toAppend": 2,
+    "toRepoint": 0,
+    "bgGateChecked": 2,
+    "skippedOffBrandBackground": 0,
+    "products": 1,
+    "uploaded": 2,
+    "convexPatched": 2,
+    "deletedOldMedia": 0,
+    "failed": 0,
+    "skippedUntrustedSource": 0,
+    "skippedUnmatchedSku": 0,
+    "skippedDuplicateSku": 0,
+    "skippedAlreadyHasImage": 1
+  },
+  "samples": {
+    "plan": [
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-15",
+        "websiteSku": "GBCyl9RollPnkDot",
+        "family": "Cylinder",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle — GBCyl9RollPnkDot",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784567786960_xnqlae.png",
+        "variantId": "gid://shopify/ProductVariant/53343680790820",
+        "productId": "gid://shopify/Product/10433899495716",
+        "productHandle": "cylinder-9ml-clear-17-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-05",
+        "websiteSku": "GBCyl9MtlRollPnkDot",
+        "family": "Cylinder",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle — GBCyl9MtlRollPnkDot",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784565648228_sbmw9q.png",
+        "variantId": "gid://shopify/ProductVariant/53343680332068",
+        "productId": "gid://shopify/Product/10433899495716",
+        "productHandle": "cylinder-9ml-clear-17-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      }
+    ],
+    "uploaded": [
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-15",
+        "websiteSku": "GBCyl9RollPnkDot",
+        "family": "Cylinder",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle — GBCyl9RollPnkDot",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784567786960_xnqlae.png",
+        "variantId": "gid://shopify/ProductVariant/53343680790820",
+        "productId": "gid://shopify/Product/10433899495716",
+        "productHandle": "cylinder-9ml-clear-17-415-rollon",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46115505897764",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784567786960_xnqlae.png?v=1784568498"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-05",
+        "websiteSku": "GBCyl9MtlRollPnkDot",
+        "family": "Cylinder",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle — GBCyl9MtlRollPnkDot",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784565648228_sbmw9q.png",
+        "variantId": "gid://shopify/ProductVariant/53343680332068",
+        "productId": "gid://shopify/Product/10433899495716",
+        "productHandle": "cylinder-9ml-clear-17-415-rollon",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46115505930532",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784565648228_sbmw9q.png?v=1784568498"
+      }
+    ],
+    "failed": [],
+    "skippedUntrustedSource": [],
+    "skippedUnmatchedSku": [],
+    "skippedAlreadyHasImage": [
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-13",
+        "url": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784568202210_zyv9y8.png?v=1784568449"
+      }
+    ],
+    "skippedOffBrandBackground": []
+  }
+}
