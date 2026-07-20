@@ -1,0 +1,107 @@
+{
+  "generatedAt": "2026-07-20T17:09:04.565Z",
+  "mode": "dry-run",
+  "family": "ALL",
+  "replace": false,
+  "deleteOldMedia": false,
+  "manifest": "/private/tmp/claude-501/-Users-jordanrichter-Projects-Clients-Nemat-International-Best-Bottles-Website-02-20-2026--claude-worktrees-cylinder-pipeline-handoff-1411d7/55d398ea-6d72-42d2-afea-6cf621984448/scratchpad/repush-9ml-manifest.csv",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "manifestRows": 8,
+    "eligibleAfterFilters": 8,
+    "selected": 1,
+    "toAppend": 1,
+    "toRepoint": 0,
+    "bgGateChecked": 8,
+    "skippedOffBrandBackground": 7,
+    "products": 1,
+    "uploaded": 0,
+    "convexPatched": 0,
+    "deletedOldMedia": 0,
+    "failed": 0,
+    "skippedUntrustedSource": 0,
+    "skippedUnmatchedSku": 0,
+    "skippedDuplicateSku": 0,
+    "skippedAlreadyHasImage": 0
+  },
+  "samples": {
+    "plan": [
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-11",
+        "websiteSku": "GBCyl9RollBlkDot",
+        "family": "Cylinder",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle — GBCyl9RollBlkDot",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1782039545068_fk35tu.png",
+        "variantId": "gid://shopify/ProductVariant/53343680233764",
+        "productId": "gid://shopify/Product/10433899495716",
+        "productHandle": "cylinder-9ml-clear-17-415-rollon",
+        "action": "append",
+        "oldImageUrl": null
+      }
+    ],
+    "uploaded": [],
+    "failed": [],
+    "skippedUntrustedSource": [],
+    "skippedUnmatchedSku": [],
+    "skippedAlreadyHasImage": [],
+    "skippedOffBrandBackground": [
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-05",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-05_1779521799504_09m7uy.png"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-15",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-15_1779521862079_82275h.png"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-18",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-18_1779521833256_m73nin.png"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-20",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-20_1779521834704_m7nbfj.png"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-16",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-16_1779521865704_bg0xuj.png"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-13",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-13_1779521857454_fwpg7v.png"
+      },
+      {
+        "graceSku": "GB-CYL-CLR-9ML-T-12",
+        "family": "Cylinder",
+        "verdict": "fail",
+        "bg": "white",
+        "reason": "neutral-light canvas — rgb(255,255,255) warmth=0 bright=255 grad=0",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/best-bottles/reference-imports/Cylinder/GB-CYL-CLR-9ML-T-12_1779521858717_zuq9tj.png"
+      }
+    ]
+  }
+}
