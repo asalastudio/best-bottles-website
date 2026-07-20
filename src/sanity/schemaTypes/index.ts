@@ -18,6 +18,7 @@ import { pdpFaqAccordion } from "./objects/pdpFaqAccordion";
 import { pdpTrustBadges } from "./objects/pdpTrustBadges";
 import { paperDollLayerAsset } from "./objects/paperDollLayerAsset";
 import { paperDollFamily } from "./documents/paperDollFamily";
+import { marketingHeroAsset } from "./documents/marketingHeroAsset";
 
 export const schemaTypes = [
     // Documents
@@ -27,6 +28,7 @@ export const schemaTypes = [
     productFamilyContent,
     productGroupContent,
     paperDollFamily,
+    marketingHeroAsset,
     // Objects — Homepage
     heroBlock,
     startHereCard,
