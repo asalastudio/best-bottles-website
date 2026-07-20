@@ -126,6 +126,16 @@ export default defineSchema({
         webPrice1pc: v.union(v.number(), v.null()),
         webPrice10pc: v.union(v.number(), v.null()),
         webPrice12pc: v.union(v.number(), v.null()),
+        // Full quantity-tier ladder scraped from legacy bestbottles.com PDPs
+        // (2026-07-20). Loaded ONLY for SKUs whose tier-1 unit price matched
+        // the existing webPrice1pc (accuracy cross-reference gate); break
+        // points vary per product (e.g. 1/12/144/690/3450 vs 1/12/144/300/1500).
+        priceTiers: v.optional(v.array(v.object({
+            minQty: v.number(),
+            totalPrice: v.number(),
+            unitPrice: v.number(),
+        }))),
+        priceTiersSyncedAt: v.optional(v.number()),
 
         // ── Content & Status ────────────────────────────────────────
         stockStatus: v.union(v.string(), v.null()),
