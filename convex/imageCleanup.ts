@@ -19,9 +19,39 @@ import { action, internalMutation, internalQuery } from "./_generated/server";
 import { internal } from "./_generated/api";
 import type { Id } from "./_generated/dataModel";
 
+// Explicit types on everything the action consumes via `internal.imageCleanup.*`:
+// a module referencing its own generated `internal` entry is circular for TS
+// inference, which collapses the whole generated `api` type to `any` and
+// breaks typechecking in every api consumer (observed in CI on PR #57).
+interface FamilyImageRefs {
+    products: Array<{
+        id: Id<"products">;
+        graceSku: string | null;
+        imageUrl: string | null;
+        imageUrlCapOff: string | null;
+    }>;
+    groups: Array<{
+        id: Id<"productGroups">;
+        slug: string;
+        heroImageUrl: string | null;
+    }>;
+}
+
+interface CleanupReport {
+    family: string;
+    dryRun: boolean;
+    productsScanned: number;
+    groupsScanned: number;
+    distinctShopifyUrls: number;
+    deadUrls: number;
+    liveUrlsKept: number;
+    productsPatched: number;
+    groupsPatched: number;
+}
+
 export const listFamilyImageRefs = internalQuery({
     args: { family: v.string() },
-    handler: async (ctx, args) => {
+    handler: async (ctx, args): Promise<FamilyImageRefs> => {
         const products = await ctx.db
             .query("products")
             .withIndex("by_family", (q) => q.eq("family", args.family))
@@ -100,13 +130,14 @@ export const cleanupDeadShopifyImages = action({
          */
         graceSkus: v.optional(v.array(v.string())),
     },
-    handler: async (ctx, args) => {
+    handler: async (ctx, args): Promise<CleanupReport> => {
         const dryRun = args.dryRun ?? true;
-        const all = await ctx.runQuery(internal.imageCleanup.listFamilyImageRefs, {
-            family: args.family,
-        });
+        const all: FamilyImageRefs = await ctx.runQuery(
+            internal.imageCleanup.listFamilyImageRefs,
+            { family: args.family },
+        );
         const only = args.graceSkus ? new Set(args.graceSkus) : null;
-        const refs = only
+        const refs: FamilyImageRefs = only
             ? { products: all.products.filter((p) => p.graceSku && only.has(p.graceSku)), groups: [] }
             : all;
 
