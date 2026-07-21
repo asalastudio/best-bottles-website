@@ -475,12 +475,17 @@ const APPLICATOR_BUCKETS = [
     { value: "antiquespray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
     { value: "antiquespray-tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
 ] as const;
+// Slug suffixes gate each bucket to groups whose *identity* is that
+// applicator (a colored cap group may list "Fine Mist Sprayer" in its
+// applicatorTypes without being a spray product). NOTE: no live slug ends in
+// "-spray" — the real suffixes are -finemist/-perfumespray/-antiquespray/
+// -tassel; mapping the spray buckets to "-spray" made all four return zero.
 const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
     rollon: ["-rollon"],
-    finemist: ["-spray"],
-    perfumespray: ["-spray"],
-    antiquespray: ["-spray"],
-    "antiquespray-tassel": ["-spray"],
+    finemist: ["-finemist"],
+    perfumespray: ["-perfumespray"],
+    antiquespray: ["-antiquespray"],
+    "antiquespray-tassel": ["-tassel"],
     dropper: ["-dropper"],
     lotionpump: ["-lotionpump"],
     reducer: ["-reducer"],

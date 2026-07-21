@@ -106,10 +106,15 @@ const COLOR_SWATCH_MAP: Record<string, string> = {
     Swirl: "bg-gradient-to-br from-sky-100 to-slate-300 border border-champagne/60",
 };
 
+// Every category that exists on live productGroups, in display order.
+// (Values absent from the taxonomy render nothing, but listing only real
+// categories matters: previous entries like "Packaging Box"/"Other" never
+// existed while Glass Jar / Aluminum Bottle / Metal Atomizer / Packaging /
+// Plastic Bottle / Roll-On Bottle — 24 real groups — were unlistable.)
 const CATEGORY_ORDER = [
-    "Glass Bottle", "Cream Jar", "Lotion Bottle",
-    "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
-    "Packaging Box", "Other",
+    "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle",
+    "Plastic Bottle", "Roll-On Bottle", "Metal Atomizer",
+    "Component", "Cap/Closure", "Accessory", "Packaging",
 ];
 
 const COMPONENT_CATEGORIES = new Set([
