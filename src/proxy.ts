@@ -10,7 +10,15 @@ export default clerkMiddleware(async (auth, req) => {
     }
 
     if (isPortalRoute(req)) {
-        await auth.protect();
+        // `auth.protect()` answers a signed-out request with a bare 404 when it
+        // cannot resolve a sign-in URL for itself — which is what the deployed
+        // site did for every /portal route, so customers hit "not found"
+        // instead of a login screen. Redirect explicitly, carrying the
+        // originally requested path so they land where they were going.
+        const { userId, redirectToSignIn } = await auth();
+        if (!userId) {
+            return redirectToSignIn({ returnBackUrl: req.url });
+        }
     }
 });
 

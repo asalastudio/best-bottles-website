@@ -61,3 +61,19 @@ describe("branded Clerk auth", () => {
         }
     });
 });
+
+describe("portal route protection", () => {
+    const proxy = readFileSync("src/proxy.ts", "utf8");
+
+    it("redirects signed-out visitors to sign-in instead of 404ing", () => {
+        // Deployed 2026-07-29: bare auth.protect() answered every signed-out
+        // /portal request with 404 (no lambda invocation), so customers saw
+        // "not found" rather than a login screen.
+        expect(proxy).toContain("redirectToSignIn({ returnBackUrl: req.url })");
+        expect(proxy).not.toMatch(/await auth\.protect\(\);/);
+    });
+
+    it("still leaves public routes untouched", () => {
+        expect(proxy).toContain('createRouteMatcher(["/portal(.*)", "/api/portal(.*)"])');
+    });
+});
