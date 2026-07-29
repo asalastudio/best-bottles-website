@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
     MagnifyingGlass, User, ShoppingBag, CaretDown, List, X,
-    Sparkle, Flask, Diamond, ArrowRight,
+    Sparkle, Flask, Diamond, ArrowRight, SprayBottle,
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
@@ -86,7 +86,7 @@ const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
             title: "New: Grace Collection",
             subtitle: "Refined 55 ml silhouette with premium spray, reducer, and lotion pump options.",
             href: "/catalog?families=Grace",
-            placeholderIcon: Sparkle,
+            placeholderIcon: SprayBottle,
             accentColor: "bg-gradient-to-br from-muted-gold/20 to-champagne/40",
         },
         footerLinks: [

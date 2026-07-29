@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { X, ChevronRight, Droplet, SprayCan, CheckCircle2, Droplets, Sparkles, Check } from "@/components/icons";
+import { X, ChevronRight, Droplet, SprayCan, CheckCircle2, Droplets, LinkSimple, Check } from "@/components/icons";
 import { useQuery } from 'convex/react';
 import { api } from '../../convex/_generated/api';
 import { useCart } from "@/components/CartProvider";
@@ -97,7 +97,7 @@ export default function FitmentDrawer({ isOpen, onClose, bottleSku, quantity = 1
                                 boxShadow: "0 2px 8px rgba(197, 160, 101, 0.15)"
                             }}
                         >
-                            <Sparkles className="w-4 h-4 text-muted-gold" />
+                            <LinkSimple className="w-4 h-4 text-muted-gold" />
                         </div>
                         <div>
                             <h2 id="drawer-title" className="font-serif text-[17px] font-medium text-obsidian tracking-wide">Compatible Fitment</h2>

@@ -1,6 +1,6 @@
 'use client';
 
-import { ChevronRight, Sparkles } from "@/components/icons";
+import { ChevronRight, LinkSimple } from "@/components/icons";
 import { useQuery } from 'convex/react';
 import { api } from '../../convex/_generated/api';
 
@@ -33,7 +33,7 @@ export default function FitmentCarousel({ bottleSku, onOpenDrawer }: FitmentCaro
             <div className="flex items-center justify-between mb-6 px-4 md:px-0">
                 <div className="flex items-center gap-3">
                     <div className="p-2 bg-muted-gold/10 rounded-lg text-muted-gold shrink-0">
-                        <Sparkles className="w-5 h-5" />
+                        <LinkSimple className="w-5 h-5" />
                     </div>
                     <div>
                         <h3 className="font-serif text-lg font-medium text-obsidian">Engineered Compatibility</h3>

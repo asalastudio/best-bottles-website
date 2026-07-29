@@ -320,3 +320,77 @@ body {
 .animate-fade-in-up {
   animation: fadeInUp 0.25s ease-out forwards;
 }
+/* ── Clerk: dissolve the default card into the Best Bottles page ────────────
+   The `appearance.elements` Tailwind classes in src/lib/clerkAppearance.ts
+   handle typography and controls, but Clerk's own CSS-in-JS wins on the
+   card container's background/shadow/border. These `.cl-*` overrides are
+   Clerk's documented escape hatch and remove the "third-party modal" look:
+   AuthShell already supplies the surrounding card, header, and footer. */
+.cl-cardBox,
+.cl-card {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  width: 100% !important;
+  max-width: none !important;
+  padding: 0 !important;
+  gap: 1.25rem !important;
+}
+
+/* Clerk's own logo/title block — AuthShell renders these instead. */
+.cl-header {
+  display: none !important;
+}
+
+/* "Secured by Clerk" strip: keep the legal links, drop the boxed chrome. */
+.cl-footer {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+
+.cl-footer > div,
+.cl-footerAction {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Square the inputs and give focus the brand gold instead of Clerk's blue. */
+.cl-formFieldInput {
+  border-radius: 2px !important;
+  box-shadow: inset 0 0 0 1px rgb(212 197 169 / 0.7) !important;
+}
+
+.cl-formFieldInput:focus,
+.cl-formFieldInput:focus-visible {
+  outline: none !important;
+  box-shadow: inset 0 0 0 1px var(--color-muted-gold),
+              0 0 0 3px rgb(197 160 101 / 0.18) !important;
+}
+
+/* Primary CTA — match the site's square obsidian → gold button. */
+.cl-formButtonPrimary {
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  background: var(--color-obsidian) !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.cl-formButtonPrimary:hover {
+  background: var(--color-muted-gold) !important;
+}
+
+/* Social buttons pick up the same square, champagne-bordered treatment. */
+.cl-socialButtonsBlockButton {
+  border-radius: 2px !important;
+  box-shadow: inset 0 0 0 1px rgb(212 197 169 / 0.7) !important;
+  background: #fff !important;
+}
+
+.cl-socialButtonsBlockButton:hover {
+  box-shadow: inset 0 0 0 1px var(--color-muted-gold) !important;
+  background: var(--color-bone) !important;
+}

@@ -12,6 +12,7 @@ const sectionLabels: Record<string, string> = {
     "/portal/grace": "Grace AI",
     "/portal/documents": "Documents",
     "/portal/account": "Account",
+    "/portal/settings": "Profile & Security",
 };
 
 export default function PortalTopBar({
@@ -20,7 +21,15 @@ export default function PortalTopBar({
     inTransitCount?: number;
 }) {
     const pathname = usePathname();
-    const section = sectionLabels[pathname] ?? "Portal";
+    // Longest-prefix match, not exact — Clerk's <UserProfile routing="path">
+    // renders sub-routes like /portal/settings/security that must still show
+    // the parent section name in the breadcrumb.
+    const section =
+        sectionLabels[pathname] ??
+        Object.entries(sectionLabels)
+            .filter(([href]) => href !== "/portal" && pathname.startsWith(`${href}/`))
+            .sort((a, b) => b[0].length - a[0].length)[0]?.[1] ??
+        "Portal";
 
     return (
         <div className="h-12 bg-white border-b border-neutral-200 flex items-center justify-between px-6 sticky top-0 z-10 shrink-0">

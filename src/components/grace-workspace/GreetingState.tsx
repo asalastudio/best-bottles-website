@@ -9,7 +9,7 @@ import {
     Paperclip,
     Plus,
     Ruler,
-    Star,
+    ChatCircle,
 } from "./icons";
 
 interface SkillChip {
@@ -99,7 +99,7 @@ export default function GreetingState({
             <div className="w-full max-w-[720px]">
                 {/* Greeting */}
                 <div className="mb-[30px] flex items-center justify-center gap-4">
-                    <Star size={34} weight="fill" className="text-muted-gold" />
+                    <ChatCircle size={34} className="text-muted-gold" />
                     <h1 className="font-serif text-[42px] font-medium tracking-[0.02em] text-obsidian">
                         {getGreeting()}, {name}.
                     </h1>

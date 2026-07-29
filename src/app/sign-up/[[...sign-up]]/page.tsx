@@ -3,6 +3,7 @@
 import { SignUp } from "@clerk/nextjs";
 import { useSearchParams } from "next/navigation";
 import { CLERK_ENABLED } from "@/lib/clerk";
+import AuthShell from "@/components/auth/AuthShell";
 
 function getSafeRedirectUrl(value: string | null | undefined) {
     if (!value) return "/portal";
@@ -33,43 +34,41 @@ export default function SignUpPage() {
 
     if (!CLERK_ENABLED) {
         return (
-            <div className="min-h-screen bg-bone flex flex-col items-center justify-center px-6">
-                <div className="max-w-md text-center">
-                    <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-muted-gold mb-2">
-                        {signUpContext}
-                    </p>
-                    <h1 className="font-serif text-3xl text-obsidian font-normal tracking-[0.02em] mb-4">
-                        Sign-up is temporarily unavailable
-                    </h1>
-                    <p className="text-sm text-slate leading-relaxed">
-                        Clerk auth is disabled for this environment. Set{" "}
-                        <code className="font-mono text-[12px] bg-obsidian/[0.05] px-1.5 py-0.5 rounded">
-                            NEXT_PUBLIC_CLERK_ENABLED=true
-                        </code>{" "}
-                        in <code className="font-mono text-[12px] bg-obsidian/[0.05] px-1.5 py-0.5 rounded">.env.local</code> and restart
-                        the dev server.
-                    </p>
-                </div>
-            </div>
+            <AuthShell
+                context={signUpContext}
+                title="Sign-up is temporarily unavailable"
+                subtitle="Authentication is disabled for this environment."
+            >
+                <p className="text-sm leading-relaxed text-slate">
+                    Set{" "}
+                    <code className="rounded-sm bg-obsidian/[0.05] px-1.5 py-0.5 font-mono text-[12px]">
+                        NEXT_PUBLIC_CLERK_ENABLED=true
+                    </code>{" "}
+                    in{" "}
+                    <code className="rounded-sm bg-obsidian/[0.05] px-1.5 py-0.5 font-mono text-[12px]">
+                        .env.local
+                    </code>{" "}
+                    and restart the dev server.
+                </p>
+            </AuthShell>
         );
     }
 
     return (
-        <div className="min-h-screen bg-bone flex flex-col items-center justify-center">
-            <div className="mb-8 text-center">
-                <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-muted-gold mb-2">
-                    {signUpContext}
-                </p>
-                <h1 className="font-serif text-3xl text-obsidian font-normal tracking-[0.02em]">
-                    Create your Best Bottles account
-                </h1>
-            </div>
+        <AuthShell
+            context={signUpContext}
+            title="Create your account"
+            subtitle="Save your specs, track quotes, and reorder in a click."
+        >
             <SignUp
+                routing="path"
+                path="/sign-up"
+                signInUrl={`/sign-in?redirect_url=${encodeURIComponent(redirectUrl)}`}
                 forceRedirectUrl={redirectUrl}
                 fallbackRedirectUrl={redirectUrl}
                 signInForceRedirectUrl={redirectUrl}
                 signInFallbackRedirectUrl={redirectUrl}
             />
-        </div>
+        </AuthShell>
     );
 }

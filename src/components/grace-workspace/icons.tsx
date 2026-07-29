@@ -11,5 +11,6 @@ export {
     ArrowsInSimple,
     ArrowLeft,
     Star,
+    ChatCircle,
     DotOutline,
 } from "@phosphor-icons/react";

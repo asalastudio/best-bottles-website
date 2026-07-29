@@ -38,9 +38,12 @@ function NavIcon({ id }: { id: string }) {
                 <path d="M8 1v2M8 13v2M1 8h2M13 8h2M3.05 3.05l1.41 1.41M11.54 11.54l1.41 1.41M3.05 12.95l1.41-1.41M11.54 4.46l1.41-1.41" />
             </svg>
         ),
+        // Conversation bubble, not a sparkle/star — Grace is a specialist you
+        // talk to, and the sparkle motif reads as generic "AI" decoration.
         grace: (
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M8 2l1.5 4h4.3l-3.4 2.5 1.4 4L8 10l-3.8 2.5 1.4-4L2.2 6h4.3L8 2Z" />
+                <path d="M14 9.5a2 2 0 0 1-2 2H6.5L3 14v-2.5a2 2 0 0 1-1-1.74V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5.5Z" />
+                <path d="M5.5 6h5M5.5 8.5h3" />
             </svg>
         ),
         documents: (
@@ -54,6 +57,14 @@ function NavIcon({ id }: { id: string }) {
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
                 <circle cx="8" cy="5.5" r="2.5" />
                 <path d="M2.5 14c0-2.76 2.46-4.5 5.5-4.5s5.5 1.74 5.5 4.5" />
+            </svg>
+        ),
+        // Sliders — distinct from the `tools` gear so the two don't read alike.
+        settings: (
+            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" strokeWidth="1.4" strokeLinecap="round">
+                <path d="M2 4.5h5M10.5 4.5H14M2 11.5h3.5M9 11.5H14" />
+                <circle cx="8.75" cy="4.5" r="1.75" />
+                <circle cx="7.25" cy="11.5" r="1.75" />
             </svg>
         ),
     };
@@ -85,6 +96,10 @@ const navSections = [
     {
         items: [
             { href: "/portal/account", label: "Account", id: "account" },
+            // Clerk <UserProfile /> embedded in the portal shell — customers
+            // edit their details here instead of being sent to Clerk's hosted
+            // Account Portal.
+            { href: "/portal/settings", label: "Profile & Security", id: "settings" },
         ],
     },
 ];

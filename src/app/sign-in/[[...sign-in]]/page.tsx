@@ -3,6 +3,7 @@
 import { SignIn } from "@clerk/nextjs";
 import { useSearchParams } from "next/navigation";
 import { CLERK_ENABLED } from "@/lib/clerk";
+import AuthShell from "@/components/auth/AuthShell";
 
 function getSafeRedirectUrl(value: string | null | undefined) {
     if (!value) return "/portal";
@@ -26,6 +27,14 @@ function getSignInContext(redirectUrl: string) {
     return "Client Portal";
 }
 
+/** Internal hubs shouldn't be sold on customer pricing and order history. */
+function getSignInSubtitle(context: string) {
+    if (context === "Team Hub") return "Sign in with your Best Bottles team account.";
+    if (context === "Executive Hub") return "Sign in to view the executive dashboard.";
+
+    return "Sign in to see your pricing, quotes, and order history.";
+}
+
 export default function SignInPage() {
     const searchParams = useSearchParams();
     const redirectUrl = getSafeRedirectUrl(searchParams?.get("redirect_url"));
@@ -33,43 +42,41 @@ export default function SignInPage() {
 
     if (!CLERK_ENABLED) {
         return (
-            <div className="min-h-screen bg-bone flex flex-col items-center justify-center px-6">
-                <div className="max-w-md text-center">
-                    <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-muted-gold mb-2">
-                        {signInContext}
-                    </p>
-                    <h1 className="font-serif text-3xl text-obsidian font-normal tracking-[0.02em] mb-4">
-                        Sign-in is temporarily unavailable
-                    </h1>
-                    <p className="text-sm text-slate leading-relaxed">
-                        Clerk auth is disabled for this environment. Set{" "}
-                        <code className="font-mono text-[12px] bg-obsidian/[0.05] px-1.5 py-0.5 rounded">
-                            NEXT_PUBLIC_CLERK_ENABLED=true
-                        </code>{" "}
-                        in <code className="font-mono text-[12px] bg-obsidian/[0.05] px-1.5 py-0.5 rounded">.env.local</code> and restart
-                        the dev server.
-                    </p>
-                </div>
-            </div>
+            <AuthShell
+                context={signInContext}
+                title="Sign-in is temporarily unavailable"
+                subtitle="Authentication is disabled for this environment."
+            >
+                <p className="text-sm leading-relaxed text-slate">
+                    Set{" "}
+                    <code className="rounded-sm bg-obsidian/[0.05] px-1.5 py-0.5 font-mono text-[12px]">
+                        NEXT_PUBLIC_CLERK_ENABLED=true
+                    </code>{" "}
+                    in{" "}
+                    <code className="rounded-sm bg-obsidian/[0.05] px-1.5 py-0.5 font-mono text-[12px]">
+                        .env.local
+                    </code>{" "}
+                    and restart the dev server.
+                </p>
+            </AuthShell>
         );
     }
 
     return (
-        <div className="min-h-screen bg-bone flex flex-col items-center justify-center">
-            <div className="mb-8 text-center">
-                <p className="font-sans text-[9px] tracking-[0.3em] uppercase text-muted-gold mb-2">
-                    {signInContext}
-                </p>
-                <h1 className="font-serif text-3xl text-obsidian font-normal tracking-[0.02em]">
-                    Best Bottles
-                </h1>
-            </div>
+        <AuthShell
+            context={signInContext}
+            title="Welcome back"
+            subtitle={getSignInSubtitle(signInContext)}
+        >
             <SignIn
+                routing="path"
+                path="/sign-in"
+                signUpUrl={`/sign-up?redirect_url=${encodeURIComponent(redirectUrl)}`}
                 forceRedirectUrl={redirectUrl}
                 fallbackRedirectUrl={redirectUrl}
                 signUpForceRedirectUrl={redirectUrl}
                 signUpFallbackRedirectUrl={redirectUrl}
             />
-        </div>
+        </AuthShell>
     );
 }

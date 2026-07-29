@@ -77,6 +77,12 @@ export {
     Eyedropper,
     Rows as RowsIcon,
     Question,
+    // Concrete, product-literal icons — preferred over Sparkle/Star, which
+    // read as generic "AI" decoration.
+    Ruler,
+    ArrowsClockwise,
+    Receipt,
+    LinkSimple,
 } from "@phosphor-icons/react";
 
 export { ArrowsLeftRight as GitCompare } from "@phosphor-icons/react";

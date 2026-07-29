@@ -15,6 +15,7 @@ import GraceLauncher from "@/components/grace/GraceLauncher";
 import GraceLayoutShell from "@/components/grace/GraceLayoutShell";
 import { MixpanelProvider } from "@/components/MixpanelProvider";
 import { CLERK_ENABLED } from "@/lib/clerk";
+import { clerkAppearance } from "@/lib/clerkAppearance";
 
 // megaMenuPanels is fetched in the Server Component root layout and passed
 // down as a prop, because this file is a Client Component boundary and cannot
@@ -71,7 +72,10 @@ export default function AppProviders({ children, megaMenuPanels }: AppProvidersP
 
     if (withClerk) {
         return (
-            <ClerkProvider>
+            // appearance is set here (not per-page) so every Clerk surface —
+            // SignIn, SignUp, UserButton, UserProfile — renders in the Best
+            // Bottles design rather than Clerk's default third-party card.
+            <ClerkProvider appearance={clerkAppearance}>
                 <ProviderContent withClerk={withClerk} megaMenuPanels={megaMenuPanels}>
                     {children}
                 </ProviderContent>
