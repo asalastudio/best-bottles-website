@@ -1,4 +1,4 @@
-# What We Need From You — Best Bottles Launch
+# What We Need From Abbas — Best Bottles Launch
 
 **Date:** 2026-07-29 · One page of decisions. Everything here is blocked on you, not on us.
 

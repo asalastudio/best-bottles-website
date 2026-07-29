@@ -16,9 +16,9 @@ The site is structurally sound: it builds, typechecks, all 296 tests pass, catal
 
 | # | Blocker | Impact | Owner |
 |---|---|---|---|
-| 1 | **377 SKUs 410 at checkout** — Shopify products are DRAFT/unpublished | 16% of catalog unbuyable | Boss / Shopify |
-| 2 | **Advertised volume discounts aren't honored** — site quotes less than Shopify charges | 2,252 SKUs | Boss decision |
-| 3 | **Every lead goes into a black hole** — no email/notification on form submit | 100% of quote requests | Us + Boss |
+| 1 | **377 SKUs 410 at checkout** — Shopify products are DRAFT/unpublished | 16% of catalog unbuyable | Abbas / Shopify |
+| 2 | **Advertised volume discounts aren't honored** — site quotes less than Shopify charges | 2,252 SKUs | Abbas decision |
+| 3 | **Every lead goes into a black hole** — no email/notification on form submit | 100% of quote requests | Us + Abbas |
 
 Plus: **Grace text mode is dead in production** (invalid API key — 2-minute fix).
 
@@ -55,7 +55,7 @@ Elegant 77 · Round 48 · Diva 43 · Sleek 36 · Slim 36 · Circle 34
 Cylinder 24 · Empire 24 · Sprayer 15 · Atomizer 12 · Grace 12 · Diamond 12 · Lotion Pump 7
 ```
 
-**The question for the boss:** are these 377 intentionally held back (discontinued, not yet launched), or did they simply never get published? That answer decides whether we publish them in Shopify or leave them as quote-only.
+**The question for Abbas:** are these 377 intentionally held back (discontinued, not yet launched), or did they simply never get published? That answer decides whether we publish them in Shopify or leave them as quote-only.
 
 **Done on this branch:** the storefront no longer sends anyone to a dead checkout. Added `products.shopifySellable`, synced from Shopify, and `isCheckoutReady()` now treats it as a veto. Blocked SKUs fall back to **Request a Quote** instead of a 410. Full list: `data/audits/launch-readiness-2026-07-29/shopify-blocked-skus-prod.json`.
 
@@ -94,7 +94,7 @@ Quoting a price you don't charge is a trust and consumer-protection problem, not
 
 The tiers stay visible (they're real quote pricing, and the sales team honors them), but nothing now claims the discount applies online.
 
-**The decision for the boss:** either (a) configure Shopify quantity rules so the tiers are real online — we're on Shopify **Plus**, so this is available — then flip `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT=true`; or (b) keep volume as quote-only and ship as it now stands. Either way, **the 34 suspect prices need a human pass** (`suspect-tier-pricing-prod.json`).
+**The decision for Abbas:** either (a) configure Shopify quantity rules so the tiers are real online — we're on Shopify **Plus**, so this is available — then flip `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT=true`; or (b) keep volume as quote-only and ship as it now stands. Either way, **the 34 suspect prices need a human pass** (`suspect-tier-pricing-prod.json`).
 
 ---
 
@@ -191,7 +191,7 @@ This is the catalog/Grace misalignment you flagged. Fix is a `variantCount` reco
 
 ## P2 — Worth cleaning up
 
-- **Stale "Made in USA" claims.** `convex/knowledge.ts` asserts *"All products are sourced and warehoused domestically in the USA"* and *"our entire supply chain is domestic."* These are **not currently live** (the text agent builds its prompt only from `gracePrompt.ts`), but they'd activate the moment anyone re-seeds `graceKnowledge`. Given Made-in-USA claims are FTC-regulated, these should be corrected or deleted — worth confirming the actual sourcing truth with the boss.
+- **Stale "Made in USA" claims.** `convex/knowledge.ts` asserts *"All products are sourced and warehoused domestically in the USA"* and *"our entire supply chain is domestic."* These are **not currently live** (the text agent builds its prompt only from `gracePrompt.ts`), but they'd activate the moment anyone re-seeds `graceKnowledge`. Given Made-in-USA claims are FTC-regulated, these should be corrected or deleted — worth confirming the actual sourcing truth with Abbas.
 - **Shipping threshold contradiction.** `knowledge.ts` says free shipping over **$199**; the site banner and PDP say **$99**. Same latent-not-live status. `src/app/example/page.tsx` also shows $199 (noindexed demo page).
 - **`/collections` 404s.** Only `collections/boston-round-30ml` exists, and nothing links to it. Either build the index or remove the route.
 - **Soft-404 on unknown products.** `/products/anything-invalid` returns **HTTP 200** with a "Product Not Found" body. It is correctly `noindex`, so SEO damage is limited, but it should return a real 404.
@@ -212,9 +212,9 @@ Convex already holds the data: `bottleWeightG` on 2,168 products and `caseWeight
 2,035, making **2,164 of the 2,309** fixable by a push rather than by re-measuring. The
 remaining ~145 have no weight anywhere and need real measurements.
 
-Blocked on the boss: carrier choice, flat vs live rates, box sizes and packing weight,
+Blocked on Abbas: carrier choice, flat vs live rates, box sizes and packing weight,
 and the free-shipping threshold ($99 on the site vs $199 in `knowledge.ts`). See
-`docs/BOSS-CHECKLIST-2026-07-29.md`.
+`docs/ABBAS-CHECKLIST-2026-07-29.md`.
 
 We also cannot read the store's shipping configuration — the Admin token lacks
 `read_shipping`, so delivery profiles and rates are unverifiable from here.
