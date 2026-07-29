@@ -1,0 +1,167 @@
+{
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "generatedAt": "2026-07-29T21:00:43.313Z",
+  "totals": {
+    "products": 2330,
+    "groups": 356
+  },
+  "orphanProductsWithNoGroup": 0,
+  "groupsWithZeroSkus": 4,
+  "groupsWithSkusButNoCheckout": 3,
+  "groupsWithPartialCheckout": 3,
+  "groupsWithVariantCountDrift": 3,
+  "detail": {
+    "emptyGroups": [
+      {
+        "slug": "vial-3ml-clear-13-425",
+        "displayName": "3 ml Clear Vial Bottle with Cap",
+        "family": "Vial",
+        "declaredVariantCount": 1,
+        "actualSkus": 0,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 0,
+        "heroImage": false,
+        "priceRangeMin": 1.08
+      },
+      {
+        "slug": "cylinder-9ml-clear-18-400-glasswand",
+        "displayName": "9 ml Clear Cylinder Applicator Bottle",
+        "family": "Cylinder",
+        "declaredVariantCount": 1,
+        "actualSkus": 0,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 0,
+        "heroImage": false,
+        "priceRangeMin": 0.46
+      },
+      {
+        "slug": "cylinder-9ml-clear-18-400",
+        "displayName": "9 ml Clear Cylinder Bottle with Cap",
+        "family": "Cylinder",
+        "declaredVariantCount": 1,
+        "actualSkus": 0,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 0,
+        "heroImage": false,
+        "priceRangeMin": 0.4
+      },
+      {
+        "slug": "vial-3ml-cobalt-blue-13-425",
+        "displayName": "3 ml Cobalt Blue Vial Bottle with Cap",
+        "family": "Vial",
+        "declaredVariantCount": 1,
+        "actualSkus": 0,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 0,
+        "heroImage": false,
+        "priceRangeMin": 1.08
+      }
+    ],
+    "noCheckoutGroups": [
+      {
+        "slug": "cylinder-25ml-clear-18-415-finemist",
+        "displayName": "25 ml Clear Cylinder Fine Mist Spray Bottle",
+        "family": "Cylinder",
+        "declaredVariantCount": 1,
+        "actualSkus": 1,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 1,
+        "heroImage": false,
+        "priceRangeMin": 2.5
+      },
+      {
+        "slug": "aluminum-bottle-250ml-clear-20-410-finemist",
+        "displayName": "250 ml Clear Aluminum Fine Mist Spray Bottle",
+        "family": "Aluminum Bottle",
+        "declaredVariantCount": 1,
+        "actualSkus": 1,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 1,
+        "heroImage": false,
+        "priceRangeMin": 1.5
+      },
+      {
+        "slug": "cream-jar-5ml-amber",
+        "displayName": "5 ml Amber Cream Jar",
+        "family": "Cream Jar",
+        "declaredVariantCount": 1,
+        "actualSkus": 1,
+        "checkoutReadySkus": 0,
+        "pricedSkus": 1,
+        "heroImage": false,
+        "priceRangeMin": 0.5
+      }
+    ],
+    "partialCheckout": [
+      {
+        "slug": "fine-mist-sprayer-13-415",
+        "displayName": "Fine Mist Sprayer — Thread 13-415",
+        "family": "Sprayer",
+        "declaredVariantCount": 9,
+        "actualSkus": 12,
+        "checkoutReadySkus": 9,
+        "pricedSkus": 12,
+        "heroImage": false,
+        "priceRangeMin": 0.65
+      },
+      {
+        "slug": "fine-mist-sprayer-18-415",
+        "displayName": "Fine Mist Sprayer — Thread 18-415",
+        "family": "Sprayer",
+        "declaredVariantCount": 6,
+        "actualSkus": 8,
+        "checkoutReadySkus": 6,
+        "pricedSkus": 8,
+        "heroImage": false,
+        "priceRangeMin": 1.4
+      },
+      {
+        "slug": "circle-50ml-frosted-18-415-antiquespray",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle",
+        "family": "Circle",
+        "declaredVariantCount": 9,
+        "actualSkus": 18,
+        "checkoutReadySkus": 9,
+        "pricedSkus": 9,
+        "heroImage": false,
+        "priceRangeMin": 5.95
+      }
+    ],
+    "countDrift": [
+      {
+        "slug": "fine-mist-sprayer-13-415",
+        "displayName": "Fine Mist Sprayer — Thread 13-415",
+        "family": "Sprayer",
+        "declaredVariantCount": 9,
+        "actualSkus": 12,
+        "checkoutReadySkus": 9,
+        "pricedSkus": 12,
+        "heroImage": false,
+        "priceRangeMin": 0.65
+      },
+      {
+        "slug": "fine-mist-sprayer-18-415",
+        "displayName": "Fine Mist Sprayer — Thread 18-415",
+        "family": "Sprayer",
+        "declaredVariantCount": 6,
+        "actualSkus": 8,
+        "checkoutReadySkus": 6,
+        "pricedSkus": 8,
+        "heroImage": false,
+        "priceRangeMin": 1.4
+      },
+      {
+        "slug": "circle-50ml-frosted-18-415-antiquespray",
+        "displayName": "50 ml Frosted Circle Vintage Bulb Spray Bottle",
+        "family": "Circle",
+        "declaredVariantCount": 9,
+        "actualSkus": 18,
+        "checkoutReadySkus": 9,
+        "pricedSkus": 9,
+        "heroImage": false,
+        "priceRangeMin": 5.95
+      }
+    ]
+  },
+  "orphanProductSample": []
+}

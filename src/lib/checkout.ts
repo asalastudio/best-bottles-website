@@ -2,9 +2,19 @@ export type CheckoutCandidate = {
     graceSku: string;
     checkoutEligible?: boolean;
     shopifyVariantId?: string | null;
+    /**
+     * Synced from Shopify product status. `false` means Shopify will refuse
+     * the sale (DRAFT / unpublished product → /cart permalink returns 410),
+     * even though a variant ID exists. `undefined` means "not yet synced".
+     */
+    shopifySellable?: boolean | null;
 };
 
 export function isCheckoutReady(item: CheckoutCandidate): boolean {
+    // An explicit `false` from the Shopify sellability sync overrides
+    // everything else — a variant ID on a DRAFT product still 410s at
+    // checkout, so route these to the quote path instead of a dead end.
+    if (item.shopifySellable === false) return false;
     if (item.shopifyVariantId) return true;
     return item.checkoutEligible === true;
 }

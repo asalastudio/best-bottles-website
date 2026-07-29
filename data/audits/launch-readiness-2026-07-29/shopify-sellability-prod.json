@@ -1,0 +1,31 @@
+{
+  "generatedAt": "2026-07-29T21:06:54.892Z",
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "checkoutReadySkus": 2313,
+  "verifiedInShopify": 2309,
+  "trulySellable": 1932,
+  "blocked": 381,
+  "byProblem": {
+    "VARIANT_MISSING": 4,
+    "STATUS_DRAFT+NOT_PUBLISHED": 377
+  },
+  "byFamilyBlocked": {
+    "Atomizer": 12,
+    "Round": 48,
+    "Circle": 34,
+    "Elegant": 77,
+    "Cylinder": 24,
+    "Diva": 43,
+    "Sprayer": 15,
+    "Empire": 24,
+    "Sleek": 36,
+    "Lotion Pump": 7,
+    "Slim": 36,
+    "Grace": 12,
+    "Diamond": 12,
+    "(none)": 1
+  },
+  "inventoryTrackedSkus": 0,
+  "inventoryUntrackedSkus": 2313
+}

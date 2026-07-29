@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "atomizer-5ml",
+    "displayName": "5 ml Atomizer Bottle",
+    "variantCount": 9,
+    "matchedSkus": 0
+  },
+  {
+    "slug": "atomizer-10ml",
+    "displayName": "10 ml Atomizer Bottle",
+    "variantCount": 11,
+    "matchedSkus": 0
+  },
+  {
+    "slug": "vial-3ml-clear-13-425",
+    "displayName": "3 ml Clear Vial Bottle with Cap",
+    "variantCount": 1,
+    "matchedSkus": 0
+  },
+  {
+    "slug": "vial-3ml-cobalt-blue-13-425",
+    "displayName": "3 ml Cobalt Blue Vial Bottle with Cap",
+    "variantCount": 1,
+    "matchedSkus": 0
+  },
+  {
+    "slug": "atomizer-5ml-slim",
+    "displayName": "5 ml Slim Atomizer Bottle",
+    "variantCount": 3,
+    "matchedSkus": 0
+  },
+  {
+    "slug": "webhook-test-hmac",
+    "displayName": "HMAC integration test",
+    "variantCount": 1,
+    "matchedSkus": 0
+  },
+  {
+    "slug": "aluminum-bottle-250ml-clear-20-410-finemist",
+    "displayName": "250 ml Clear Aluminum Fine Mist Spray Bottle",
+    "variantCount": 1,
+    "matchedSkus": 1
+  },
+  {
+    "slug": "cream-jar-5ml-amber",
+    "displayName": "5 ml Amber Cream Jar",
+    "variantCount": 1,
+    "matchedSkus": 1
+  }
+]

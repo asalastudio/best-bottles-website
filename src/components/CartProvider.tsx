@@ -9,6 +9,7 @@ import {
     type ReactNode,
 } from "react";
 import { analytics } from "@/lib/analytics";
+import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
     checkoutUnavailableMessage,
     quoteOnlyCartMessage,
@@ -27,6 +28,8 @@ export interface CartItem {
     unitPrice: number | null;
     checkoutEligible?: boolean;
     shopifyVariantId?: string | null;
+    /** False when Shopify will refuse the sale (DRAFT/unpublished product). */
+    shopifySellable?: boolean | null;
     websiteSku?: string | null;
     variantId?: string | null;
     productGroupSlug?: string | null;
@@ -43,6 +46,11 @@ export interface CartItem {
     webPrice12pc?: number | null;
 }
 
+/**
+ * Cart unit price. Delegates to the volume-pricing policy so the cart
+ * subtotal always equals what Shopify will actually charge — see
+ * `src/lib/volumePricing.ts` for why tiers are display-only by default.
+ */
 export function resolveUnitPrice(
     quantity: number,
     prices: {
@@ -51,13 +59,7 @@ export function resolveUnitPrice(
         webPrice12pc?: number | null;
     }
 ): number | null {
-    const p1 = prices.webPrice1pc ?? null;
-    const p10 = prices.webPrice10pc ?? null;
-    const p12 = prices.webPrice12pc ?? null;
-
-    if (p12 != null && quantity >= 12) return p12;
-    if (p10 != null && quantity >= 10) return p10;
-    return p1;
+    return resolveChargedUnitPrice(quantity, prices);
 }
 
 interface CartContextValue {
@@ -137,7 +139,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     const webPrice12pc = item.webPrice12pc ?? existing.webPrice12pc ?? null;
                     const shopifyVariantId = item.shopifyVariantId ?? existing.shopifyVariantId ?? null;
                     const websiteSku = item.websiteSku ?? existing.websiteSku ?? null;
-                    const checkoutEligible = Boolean(shopifyVariantId) || item.checkoutEligible === true || existing.checkoutEligible === true;
+                    // A synced `false` is authoritative — a DRAFT Shopify
+                    // product 410s at checkout regardless of variant ID.
+                    const shopifySellable = item.shopifySellable ?? existing.shopifySellable ?? undefined;
+                    const checkoutEligible = shopifySellable === false
+                        ? false
+                        : Boolean(shopifyVariantId) || item.checkoutEligible === true || existing.checkoutEligible === true;
 
                     const activePrice = resolveUnitPrice(combinedQty, {
                         webPrice1pc,
@@ -151,6 +158,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                         quantity: combinedQty,
                         unitPrice: activePrice,
                         checkoutEligible,
+                        shopifySellable,
                         shopifyVariantId,
                         websiteSku,
                         webPrice1pc,
@@ -159,7 +167,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     });
                 } else {
                     const shopifyVariantId = item.shopifyVariantId ?? null;
-                    const checkoutEligible = Boolean(shopifyVariantId) || item.checkoutEligible === true;
+                    const checkoutEligible = item.shopifySellable === false
+                        ? false
+                        : Boolean(shopifyVariantId) || item.checkoutEligible === true;
                     const activePrice = resolveUnitPrice(item.quantity, {
                         webPrice1pc: item.webPrice1pc ?? item.unitPrice,
                         webPrice10pc: item.webPrice10pc ?? null,

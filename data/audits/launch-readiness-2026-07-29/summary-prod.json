@@ -1,0 +1,299 @@
+{
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "generatedAt": "2026-07-29T20:59:45.798Z",
+  "totals": {
+    "products": 2330,
+    "productGroups": 356
+  },
+  "checkout": {
+    "skusCheckoutReady": 2313,
+    "skusMissingShopifyVariant": 17,
+    "pctReady": "99.3%",
+    "pricedButNotCheckoutable": 8,
+    "checkoutableButUnpriced": 3
+  },
+  "pricing": {
+    "skusMissingWebPrice1pc": 12,
+    "groupsMissingPriceRange": 0
+  },
+  "images": {
+    "skusMissingImage": 263,
+    "groupsMissingHeroImage": 324
+  },
+  "groupsWithZeroCheckoutReadySkus": 8,
+  "byFamily": {
+    "Circle": {
+      "total": 214,
+      "ready": 205,
+      "priced": 205,
+      "imaged": 214,
+      "gap": 9
+    },
+    "Sprayer": {
+      "total": 50,
+      "ready": 45,
+      "priced": 50,
+      "imaged": 44,
+      "gap": 5
+    },
+    "Cylinder": {
+      "total": 372,
+      "ready": 371,
+      "priced": 372,
+      "imaged": 137,
+      "gap": 1
+    },
+    "Aluminum Bottle": {
+      "total": 8,
+      "ready": 7,
+      "priced": 8,
+      "imaged": 8,
+      "gap": 1
+    },
+    "Cream Jar": {
+      "total": 19,
+      "ready": 18,
+      "priced": 19,
+      "imaged": 19,
+      "gap": 1
+    },
+    "Atomizer": {
+      "total": 23,
+      "ready": 23,
+      "priced": 23,
+      "imaged": 23,
+      "gap": 0
+    },
+    "Royal": {
+      "total": 30,
+      "ready": 30,
+      "priced": 30,
+      "imaged": 30,
+      "gap": 0
+    },
+    "Round": {
+      "total": 178,
+      "ready": 178,
+      "priced": 178,
+      "imaged": 178,
+      "gap": 0
+    },
+    "Empire": {
+      "total": 91,
+      "ready": 91,
+      "priced": 91,
+      "imaged": 91,
+      "gap": 0
+    },
+    "Elegant": {
+      "total": 254,
+      "ready": 254,
+      "priced": 254,
+      "imaged": 254,
+      "gap": 0
+    },
+    "Square": {
+      "total": 29,
+      "ready": 29,
+      "priced": 29,
+      "imaged": 29,
+      "gap": 0
+    },
+    "Diva": {
+      "total": 176,
+      "ready": 176,
+      "priced": 176,
+      "imaged": 176,
+      "gap": 0
+    },
+    "Sleek": {
+      "total": 186,
+      "ready": 186,
+      "priced": 186,
+      "imaged": 186,
+      "gap": 0
+    },
+    "Slim": {
+      "total": 123,
+      "ready": 123,
+      "priced": 123,
+      "imaged": 123,
+      "gap": 0
+    },
+    "Boston Round": {
+      "total": 123,
+      "ready": 123,
+      "priced": 120,
+      "imaged": 123,
+      "gap": 0
+    },
+    "Dropper": {
+      "total": 22,
+      "ready": 22,
+      "priced": 22,
+      "imaged": 21,
+      "gap": 0
+    },
+    "Vial": {
+      "total": 26,
+      "ready": 26,
+      "priced": 26,
+      "imaged": 24,
+      "gap": 0
+    },
+    "Tulip": {
+      "total": 60,
+      "ready": 60,
+      "priced": 60,
+      "imaged": 60,
+      "gap": 0
+    },
+    "Flair": {
+      "total": 30,
+      "ready": 30,
+      "priced": 30,
+      "imaged": 30,
+      "gap": 0
+    },
+    "Cap/Closure": {
+      "total": 32,
+      "ready": 32,
+      "priced": 32,
+      "imaged": 20,
+      "gap": 0
+    },
+    "Roll-On Cap": {
+      "total": 35,
+      "ready": 35,
+      "priced": 35,
+      "imaged": 34,
+      "gap": 0
+    },
+    "Grace": {
+      "total": 43,
+      "ready": 43,
+      "priced": 43,
+      "imaged": 43,
+      "gap": 0
+    },
+    "Rectangle": {
+      "total": 63,
+      "ready": 63,
+      "priced": 63,
+      "imaged": 63,
+      "gap": 0
+    },
+    "Diamond": {
+      "total": 43,
+      "ready": 43,
+      "priced": 43,
+      "imaged": 43,
+      "gap": 0
+    },
+    "Plastic Bottle": {
+      "total": 4,
+      "ready": 4,
+      "priced": 4,
+      "imaged": 4,
+      "gap": 0
+    },
+    "Lotion Pump": {
+      "total": 7,
+      "ready": 7,
+      "priced": 7,
+      "imaged": 7,
+      "gap": 0
+    },
+    "Tool": {
+      "total": 3,
+      "ready": 3,
+      "priced": 3,
+      "imaged": 3,
+      "gap": 0
+    },
+    "Gift Bag": {
+      "total": 21,
+      "ready": 21,
+      "priced": 21,
+      "imaged": 21,
+      "gap": 0
+    },
+    "Gift Box": {
+      "total": 15,
+      "ready": 15,
+      "priced": 15,
+      "imaged": 14,
+      "gap": 0
+    },
+    "Decorative": {
+      "total": 12,
+      "ready": 12,
+      "priced": 12,
+      "imaged": 12,
+      "gap": 0
+    },
+    "Packaging Supply": {
+      "total": 12,
+      "ready": 12,
+      "priced": 12,
+      "imaged": 11,
+      "gap": 0
+    },
+    "Teardrop": {
+      "total": 3,
+      "ready": 3,
+      "priced": 3,
+      "imaged": 3,
+      "gap": 0
+    },
+    "Lotion Bottle": {
+      "total": 4,
+      "ready": 4,
+      "priced": 4,
+      "imaged": 4,
+      "gap": 0
+    },
+    "Apothecary": {
+      "total": 5,
+      "ready": 5,
+      "priced": 5,
+      "imaged": 5,
+      "gap": 0
+    },
+    "Pillar": {
+      "total": 4,
+      "ready": 4,
+      "priced": 4,
+      "imaged": 4,
+      "gap": 0
+    },
+    "Bell": {
+      "total": 6,
+      "ready": 6,
+      "priced": 6,
+      "imaged": 6,
+      "gap": 0
+    },
+    "Unknown": {
+      "total": 1,
+      "ready": 1,
+      "priced": 1,
+      "imaged": 0,
+      "gap": 0
+    },
+    "Cap/Component": {
+      "total": 2,
+      "ready": 2,
+      "priced": 2,
+      "imaged": 0,
+      "gap": 0
+    },
+    "(none)": {
+      "total": 1,
+      "ready": 1,
+      "priced": 1,
+      "imaged": 0,
+      "gap": 0
+    }
+  }
+}

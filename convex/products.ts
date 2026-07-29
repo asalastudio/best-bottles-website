@@ -2078,3 +2078,97 @@ export const getCatalogIntegrityBatch = query({
         };
     },
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// SHOPIFY SELLABILITY SYNC
+// ─────────────────────────────────────────────────────────────────────────────
+
+/**
+ * Records whether Shopify will actually complete a sale for each variant.
+ *
+ * A `shopifyVariantId` alone is not enough: if the parent Shopify product is
+ * DRAFT or unpublished, `/cart/<variantId>:<qty>` returns HTTP 410 and the
+ * customer hits a dead checkout. The 2026-07-29 launch audit found 377 of
+ * 2,313 variants in exactly that state.
+ *
+ * Driven by `scripts/sync_shopify_sellability.mjs`. Write-token guarded so it
+ * can never be called from the public client.
+ */
+export const setShopifySellabilityBatch = mutation({
+    args: {
+        writeToken: v.string(),
+        entries: v.array(
+            v.object({
+                graceSku: v.string(),
+                sellable: v.boolean(),
+                reason: v.union(v.string(), v.null()),
+            }),
+        ),
+    },
+    handler: async (ctx, args) => {
+        verifyProductImageWriteToken(args.writeToken);
+
+        const checkedAt = Date.now();
+        let updated = 0;
+        let unchanged = 0;
+        const notFound: string[] = [];
+
+        for (const entry of args.entries) {
+            const product = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", entry.graceSku))
+                .first();
+
+            if (!product) {
+                notFound.push(entry.graceSku);
+                continue;
+            }
+
+            if (
+                product.shopifySellable === entry.sellable &&
+                (product.shopifySellableReason ?? null) === entry.reason
+            ) {
+                // Still stamp the check time so staleness is visible.
+                await ctx.db.patch(product._id, { shopifySellableCheckedAt: checkedAt });
+                unchanged++;
+                continue;
+            }
+
+            await ctx.db.patch(product._id, {
+                shopifySellable: entry.sellable,
+                shopifySellableReason: entry.reason,
+                shopifySellableCheckedAt: checkedAt,
+            });
+            updated++;
+        }
+
+        return { updated, unchanged, notFound, checkedAt };
+    },
+});
+
+/**
+ * Launch gate: how many SKUs the storefront advertises as checkout-ready but
+ * Shopify would refuse. Should be 0 before go-live.
+ */
+export const getCheckoutBlockedCount = query({
+    args: {},
+    handler: async (ctx) => {
+        const products = await ctx.db.query("products").collect();
+        const withVariant = products.filter((p) => Boolean(p.shopifyVariantId));
+        const blocked = withVariant.filter((p) => p.shopifySellable === false);
+        const unsynced = withVariant.filter((p) => p.shopifySellable === undefined || p.shopifySellable === null);
+        const byReason: Record<string, number> = {};
+        for (const p of blocked) {
+            const key = p.shopifySellableReason ?? "unknown";
+            byReason[key] = (byReason[key] ?? 0) + 1;
+        }
+        return {
+            totalProducts: products.length,
+            withShopifyVariant: withVariant.length,
+            sellable: withVariant.length - blocked.length - unsynced.length,
+            blocked: blocked.length,
+            neverSynced: unsynced.length,
+            byReason,
+        };
+    },
+});

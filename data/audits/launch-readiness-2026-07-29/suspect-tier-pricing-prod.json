@@ -1,0 +1,274 @@
+[
+  {
+    "sku": "CMP-CAP-PNK-18-415",
+    "name": "Pink Antique or Vintage style bulb sprayer",
+    "p1": 4.25,
+    "p10": null,
+    "p12": 0.08,
+    "pct": 98.1
+  },
+  {
+    "sku": "GB-CIR-CLR-50ML-ASP-02",
+    "name": "Circle design 50 ml, 1.7oz  clear glass bo",
+    "p1": 6.2,
+    "p10": null,
+    "p12": 2.42,
+    "pct": 61
+  },
+  {
+    "sku": "GB-SLM-CLR-50ML-ASP-PNK",
+    "name": "Slim design 50 ml, 1.7oz  clear glass bott",
+    "p1": 5.55,
+    "p10": null,
+    "p12": 2.33,
+    "pct": 58
+  },
+  {
+    "sku": "GB-CYL-CLR-50ML-ASP-WHT",
+    "name": "Cylinder design 50 ml, 1.7oz  clear glass ",
+    "p1": 5.55,
+    "p10": null,
+    "p12": 2.33,
+    "pct": 58
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-02",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 6.35,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 57.3
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-05",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 6.35,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 57.3
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-04",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 6.35,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 57.3
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-03",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 6.35,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 57.3
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-01",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 6.35,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 57.3
+  },
+  {
+    "sku": "GB-DVA-FRS-46ML-T-29",
+    "name": "Diva 46 ml (1.56 oz) Frosted Glass Bottle ",
+    "p1": 6.6,
+    "p10": null,
+    "p12": 2.85,
+    "pct": 56.8
+  },
+  {
+    "sku": "GB-ELG-CLR-100ML-ASP-WHT-01",
+    "name": "Elegant design 100 ml, 3 1/2oz  clear glas",
+    "p1": 6.15,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 55.9
+  },
+  {
+    "sku": "GB-ELG-FRS-100ML-ASP-WHT-02",
+    "name": "Elegant 100 ml (3.38 oz) Frosted Glass Bot",
+    "p1": 6.65,
+    "p10": null,
+    "p12": 2.99,
+    "pct": 55
+  },
+  {
+    "sku": "GB-RND-CLR-78ML-T",
+    "name": "Round design 78 ml, 2.65oz  clear glass bo",
+    "p1": 5.9,
+    "p10": null,
+    "p12": 2.71,
+    "pct": 54.1
+  },
+  {
+    "sku": "GB-ELG-FRS-60ML-ASP-WHT-02",
+    "name": "Elegant 60 ml (2.03 oz) Frosted Glass Bott",
+    "p1": 6.1,
+    "p10": null,
+    "p12": 2.81,
+    "pct": 53.9
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-PNK",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 5.6,
+    "p10": null,
+    "p12": 2.61,
+    "pct": 53.4
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-SGLD",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 5.6,
+    "p10": null,
+    "p12": 2.61,
+    "pct": 53.4
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-WHT-01",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 5.6,
+    "p10": null,
+    "p12": 2.61,
+    "pct": 53.4
+  },
+  {
+    "sku": "GB-ELG-CLR-60ML-ASP-RED",
+    "name": "Elegant design 60 ml, 2oz  clear glass bot",
+    "p1": 5.6,
+    "p10": null,
+    "p12": 2.61,
+    "pct": 53.4
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-RED",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 7.15,
+    "p10": null,
+    "p12": 3.37,
+    "pct": 52.9
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-01",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 7.15,
+    "p10": null,
+    "p12": 3.47,
+    "pct": 51.5
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-02",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 7.15,
+    "p10": null,
+    "p12": 3.47,
+    "pct": 51.5
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-04",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 7.15,
+    "p10": null,
+    "p12": 3.47,
+    "pct": 51.5
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-05",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 7.15,
+    "p10": null,
+    "p12": 3.47,
+    "pct": 51.5
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-06",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 7.15,
+    "p10": null,
+    "p12": 3.47,
+    "pct": 51.5
+  },
+  {
+    "sku": "GB-CIR-FRS-50ML-ASP-PNK",
+    "name": "Circle design 50 ml, 1.7oz  frosted glass ",
+    "p1": 5.95,
+    "p10": null,
+    "p12": 2.95,
+    "pct": 50.4
+  },
+  {
+    "sku": "GB-CIR-FRS-50ML-ASP-WHT",
+    "name": "Circle design 50 ml, 1.7oz  frosted glass ",
+    "p1": 5.95,
+    "p10": null,
+    "p12": 2.95,
+    "pct": 50.4
+  },
+  {
+    "sku": "GB-RND-FRS-78ML-T",
+    "name": "Round design 78 ml, 2.65oz frosted glass b",
+    "p1": 6.4,
+    "p10": null,
+    "p12": 3.19,
+    "pct": 50.2
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-LVN",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 6.4,
+    "p10": null,
+    "p12": 3.37,
+    "pct": 47.3
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-PNK",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 6.4,
+    "p10": null,
+    "p12": 3.37,
+    "pct": 47.3
+  },
+  {
+    "sku": "GB-CIR-FRS-100ML-ASP-IVSL",
+    "name": "Circle design 100 ml, 3 1/2oz frosted glas",
+    "p1": 6.4,
+    "p10": null,
+    "p12": 3.37,
+    "pct": 47.3
+  },
+  {
+    "sku": "GB-RND-CLR-128ML-ASP-WHT",
+    "name": "Round design 128 ml, 4.33oz  clear glass b",
+    "p1": 5.9,
+    "p10": null,
+    "p12": 3.19,
+    "pct": 45.9
+  },
+  {
+    "sku": "GB-RND-FRS-128ML-ASP-WHT",
+    "name": "Round design 128 ml, 4.33oz frosted glass ",
+    "p1": 6.4,
+    "p10": null,
+    "p12": 3.76,
+    "pct": 41.3
+  },
+  {
+    "sku": "PKG-BOX-WHT-4X4X4",
+    "name": "Corrugated Box 4 x 4 x 4. 32 lbs ECT",
+    "p1": 0.35,
+    "p10": 0.23,
+    "p12": null,
+    "pct": 34.3
+  },
+  {
+    "sku": "GB-BSR-CLR-60ML-RON-SSLV",
+    "name": "Boston round design 60ml, 2oz Clear glass ",
+    "p1": 0.95,
+    "p10": null,
+    "p12": 0.71,
+    "pct": 25.3
+  }
+]

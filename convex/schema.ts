@@ -189,6 +189,22 @@ export default defineSchema({
         shopifyVariantId: v.optional(v.union(v.string(), v.null())),        // Shopify variant GID
         shopifyInventoryItemId: v.optional(v.union(v.string(), v.null())),  // Shopify inventory item GID
         shopifyUpdatedAt: v.optional(v.number()),                           // Last webhook sync timestamp
+        /**
+         * Whether Shopify will actually SELL this variant right now.
+         *
+         * Having a shopifyVariantId is NOT sufficient: if the parent Shopify
+         * product is DRAFT or unpublished, the /cart/<id>:<qty> permalink
+         * returns HTTP 410 and the customer lands on a dead checkout. Audited
+         * 2026-07-29: 377 of 2,313 variants with an ID were in that state.
+         *
+         * Populated by scripts/sync_shopify_sellability.mjs and refreshed by
+         * the products/update webhook. Treat `false` as quote-only; treat
+         * `undefined` as "not yet synced" (falls back to shopifyVariantId).
+         */
+        shopifySellable: v.optional(v.union(v.boolean(), v.null())),
+        /** Why a variant is not sellable — e.g. "STATUS_DRAFT+NOT_PUBLISHED". */
+        shopifySellableReason: v.optional(v.union(v.string(), v.null())),
+        shopifySellableCheckedAt: v.optional(v.number()),
 
         // ── Paper Doll (Sanity layer assets + compositor) ───────────
         paperDollBodyUrl: v.optional(v.union(v.string(), v.null())),

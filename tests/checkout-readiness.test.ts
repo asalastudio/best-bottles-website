@@ -65,7 +65,12 @@ describe("checkout buying-path guardrails", () => {
     it("gates PDP add-to-cart on verified Shopify checkout eligibility", () => {
         const pdp = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
 
-        expect(pdp).toContain("const checkoutReady = Boolean(selectedVariant?.shopifyVariantId)");
+        // Must go through the shared helper so the Shopify sellability flag is
+        // honoured — a raw Boolean(shopifyVariantId) check lets DRAFT products
+        // through to a 410 checkout.
+        expect(pdp).toContain("isCheckoutReady({");
+        expect(pdp).toContain("shopifySellable: selectedVariant.shopifySellable");
+        expect(pdp).not.toContain("const checkoutReady = Boolean(selectedVariant?.shopifyVariantId)");
         expect(pdp).toContain("const canAddToCart = inStock && checkoutReady");
         expect(pdp).toContain('data-testid="pdp-request-quote-primary"');
         expect(pdp).toContain("checkoutEligible: checkoutReady");
@@ -95,7 +100,9 @@ describe("checkout buying-path guardrails", () => {
         const route = readFileSync("src/app/api/shopify/resolve-variants/route.ts", "utf8");
 
         expect(cartProvider).toContain("shopifyVariantId: i.shopifyVariantId");
-        expect(cartProvider).toContain("checkoutEligible = Boolean(shopifyVariantId) || item.checkoutEligible === true");
+        expect(cartProvider).toContain("Boolean(shopifyVariantId) || item.checkoutEligible === true");
+        // Sellability must veto a stale variant ID rather than the other way round.
+        expect(cartProvider).toContain("shopifySellable === false");
         expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
         expect(route).toContain("const directCheckoutItems = requestedItems");
         expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId)");

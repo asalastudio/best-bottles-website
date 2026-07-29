@@ -28,6 +28,8 @@ import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { isCheckoutReady } from "@/lib/checkout";
+import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -463,6 +465,8 @@ export interface ProductVariant {
     itemDescription: string | null;
     imageUrl: string | null;
     shopifyVariantId?: string | null;
+    /** False when Shopify will refuse the sale (DRAFT/unpublished product). */
+    shopifySellable?: boolean | null;
     /** Secondary gallery view — applicator/dropper/sprayer with cap removed. */
     imageUrlCapOff?: string | null;
     stockStatus: string | null;
@@ -837,7 +841,9 @@ function TierLadder({ variant, qty }: { variant: ProductVariant | null | undefin
 
     return (
         <div className="bg-travertine border border-champagne/60 p-4 sm:p-5 rounded-sm">
-            <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">Volume Pricing</p>
+            <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
+                {VOLUME_TIERS_HONORED_AT_CHECKOUT ? "Volume Pricing" : "Volume Pricing · By Quote"}
+            </p>
             <div className="space-y-1">
                 {tiers.map((t, i) => {
                     const active = i === activeIdx;
@@ -865,10 +871,23 @@ function TierLadder({ variant, qty }: { variant: ProductVariant | null | undefin
                 })}
             </div>
 
-            {next && unitsToNext > 0 && unitsToNext <= 11 && (
-                <p className="text-xs text-muted-gold mt-3 leading-relaxed">
-                    Add <span className="font-bold">{unitsToNext}</span> more to unlock {formatPrice(next.price)}/ea
-                    <span className="text-slate"> · save {next.savePct}%</span>
+            {VOLUME_TIERS_HONORED_AT_CHECKOUT ? (
+                next && unitsToNext > 0 && unitsToNext <= 11 && (
+                    <p className="text-xs text-muted-gold mt-3 leading-relaxed">
+                        Add <span className="font-bold">{unitsToNext}</span> more to unlock {formatPrice(next.price)}/ea
+                        <span className="text-slate"> · save {next.savePct}%</span>
+                    </p>
+                )
+            ) : (
+                // Shopify's cart-permalink checkout charges the flat 1pc price,
+                // so we must not imply the ladder applies online. Verified
+                // 2026-07-29 — see src/lib/volumePricing.ts.
+                <p className="text-xs text-slate mt-3 leading-relaxed">
+                    Volume rates are confirmed on a quote — online checkout is billed at
+                    the {formatPrice(p1)}/ea rate.{" "}
+                    <span className="font-semibold text-obsidian">Request a quote</span> for
+                    {tiers.length > 1 ? ` ${tiers[tiers.length - 1].minQty}+ ` : " volume "}
+                    pricing.
                 </p>
             )}
         </div>
@@ -1445,7 +1464,16 @@ export default function ProductDetailClient({
     }
 
     const inStock = selectedVariant?.stockStatus === "In Stock";
-    const checkoutReady = Boolean(selectedVariant?.shopifyVariantId);
+    // A variant ID alone does not mean Shopify will sell it — a DRAFT or
+    // unpublished parent product 410s at the /cart permalink. Respect the
+    // synced sellability flag so these fall back to the quote path.
+    const checkoutReady = selectedVariant
+        ? isCheckoutReady({
+            graceSku: selectedVariant.graceSku,
+            shopifyVariantId: selectedVariant.shopifyVariantId ?? null,
+            shopifySellable: selectedVariant.shopifySellable ?? undefined,
+        })
+        : false;
     const canAddToCart = inStock && checkoutReady;
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}&quantities=${encodeURIComponent(`${qty} units`)}`;
     const handleAddToCart = () => {
