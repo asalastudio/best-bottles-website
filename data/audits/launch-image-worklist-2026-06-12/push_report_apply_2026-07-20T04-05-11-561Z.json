@@ -1,0 +1,65 @@
+{
+  "generatedAt": "2026-07-20T04:05:11.561Z",
+  "mode": "apply",
+  "family": "Cylinder",
+  "replace": false,
+  "deleteOldMedia": false,
+  "manifest": "/tmp/cylinder-sblk-manifest.csv",
+  "convexUrl": "https://precise-raccoon-123.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "totals": {
+    "manifestRows": 1,
+    "eligibleAfterFilters": 1,
+    "selected": 1,
+    "toAppend": 1,
+    "toRepoint": 0,
+    "bgGateChecked": 1,
+    "skippedOffBrandBackground": 0,
+    "products": 1,
+    "uploaded": 1,
+    "convexPatched": 1,
+    "deletedOldMedia": 0,
+    "failed": 0,
+    "skippedUntrustedSource": 0,
+    "skippedUnmatchedSku": 0,
+    "skippedDuplicateSku": 0,
+    "skippedAlreadyHasImage": 0
+  },
+  "samples": {
+    "plan": [
+      {
+        "graceSku": "GB-CYL-CLR-5ML-SPR-SBLK",
+        "websiteSku": "GBCyl5SpryBlkSh",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-SPR-SBLK",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784520250914_ize71k.png",
+        "variantId": "gid://shopify/ProductVariant/53343619875108",
+        "productId": "gid://shopify/Product/10433891991844",
+        "productHandle": "cylinder-5ml-clear-13-415-finemist",
+        "action": "append",
+        "oldImageUrl": null
+      }
+    ],
+    "uploaded": [
+      {
+        "graceSku": "GB-CYL-CLR-5ML-SPR-SBLK",
+        "websiteSku": "GBCyl5SpryBlkSh",
+        "family": "Cylinder",
+        "alt": "GB-CYL-CLR-5ML-SPR-SBLK",
+        "evidenceUrl": "https://likkskifwsrvszxdvufw.supabase.co/storage/v1/object/public/generated-images/4ab1ac72-cd7e-4faf-9152-5aa5f2862411/d4cd4ae9-a9a8-4ea6-ab6f-fd1e19078e5e/paper-doll/master_rigged_1784520250914_ize71k.png",
+        "variantId": "gid://shopify/ProductVariant/53343619875108",
+        "productId": "gid://shopify/Product/10433891991844",
+        "productHandle": "cylinder-5ml-clear-13-415-finemist",
+        "action": "append",
+        "oldImageUrl": null,
+        "mediaId": "gid://shopify/MediaImage/46105663832356",
+        "cdnUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784520250914_ize71k.png?v=1784520310"
+      }
+    ],
+    "failed": [],
+    "skippedUntrustedSource": [],
+    "skippedUnmatchedSku": [],
+    "skippedAlreadyHasImage": [],
+    "skippedOffBrandBackground": []
+  }
+}

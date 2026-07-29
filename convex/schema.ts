@@ -126,28 +126,21 @@ export default defineSchema({
         webPrice1pc: v.union(v.number(), v.null()),
         webPrice10pc: v.union(v.number(), v.null()),
         webPrice12pc: v.union(v.number(), v.null()),
-        /**
-         * Full volume-price ladder — the real B2B structure.
-         *
-         * Present on 2,305 of 2,330 prod products but MISSING from this schema
-         * until 2026-07-29, which blocked every `convex deploy` with a schema
-         * validation error. Written by an out-of-band sync (last run
-         * 2026-07-20); the repo had drifted from the deployment.
-         *
-         * Breaks are typically 1 / 12 / 144 / 600 / 3000 plus case-quantity
-         * multiples — far deeper than the 1pc/10pc/12pc trio the PDP renders.
-         * Note webPrice10pc is largely vestigial: only 53 SKUs have a real
-         * 10-unit break, while 2,252 break at 12.
-         */
-        priceTiers: v.optional(v.union(
-            v.array(v.object({
-                minQty: v.number(),
-                unitPrice: v.number(),
-                totalPrice: v.number(),
-            })),
-            v.null(),
-        )),
-        priceTiersSyncedAt: v.optional(v.union(v.number(), v.null())),
+        // Full quantity-tier ladder scraped from legacy bestbottles.com PDPs
+        // (2026-07-20). Loaded ONLY for SKUs whose tier-1 unit price matched
+        // the existing webPrice1pc (accuracy cross-reference gate); break
+        // points vary per product (e.g. 1/12/144/690/3450 vs 1/12/144/300/1500).
+        //
+        // 2026-07-29 audit: present on 2,305 of 2,330 prod products. Note that
+        // webPrice10pc is largely vestigial against this — only 53 SKUs have a
+        // real 10-unit break while 2,252 break at 12, so any UI reading
+        // webPrice10pc understates the ladder. See docs/LAUNCH-READINESS-AUDIT-2026-07-29.md.
+        priceTiers: v.optional(v.array(v.object({
+            minQty: v.number(),
+            totalPrice: v.number(),
+            unitPrice: v.number(),
+        }))),
+        priceTiersSyncedAt: v.optional(v.number()),
 
         // ── Content & Status ────────────────────────────────────────
         stockStatus: v.union(v.string(), v.null()),

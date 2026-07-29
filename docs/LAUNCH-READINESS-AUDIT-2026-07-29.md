@@ -76,9 +76,8 @@ GB-DVA-CLR-46ML-T-06
 ```
 
 > **Correction.** My first test used quantity 10 on `PKG-BOX-WHT-4X4X4`. That was
-> the wrong threshold: production carries a `priceTiers` field (undocumented in
-> the repo schema until today) whose real breaks are **1 / 12 / 144 / 600 / 3000**,
-> not 10. Only 53 SKUs have a genuine 10-unit break; **2,252 break at 12**, so
+> the wrong threshold: products carry a `priceTiers` field (added in #57 on
+> 2026-07-20) whose real breaks are **1 / 12 / 144 / 600 / 3000**, not 10. Only 53 SKUs have a genuine 10-unit break; **2,252 break at 12**, so
 > `webPrice10pc` is largely vestigial. Re-tested at the correct 12-unit threshold
 > above — the conclusion is unchanged, but this is the sound evidence.
 
@@ -113,8 +112,9 @@ GB-SLM-BLK-5ML-ATM-BLK-T
 
 The PDP renders only the 1 / 10 / 12 slice, so the site **under-sells the actual
 B2B pricing** — a distributor ordering 3,000 units sees no indication that the
-price drops 22%. This field was also missing from `convex/schema.ts`, which
-blocked every `convex deploy` until it was added today.
+price drops 22%. The ladder was loaded in #57 with an accuracy gate (tier-1 unit
+price had to match `webPrice1pc`), so the data is trustworthy; it simply isn't
+surfaced.
 
 **Decision needed:** show the full ladder on the PDP (and make Shopify honor it),
 or keep volume strictly to quotes.
@@ -197,6 +197,27 @@ This is the catalog/Grace misalignment you flagged. Fix is a `variantCount` reco
 - **Soft-404 on unknown products.** `/products/anything-invalid` returns **HTTP 200** with a "Product Not Found" body. It is correctly `noindex`, so SEO damage is limited, but it should return a real 404.
 - **Canonical domain unconfirmed.** Sitemap and canonicals emit `https://www.bestbottles.com` — which memory records as the *legacy* PHP site. Needs an explicit confirmation that launch = cutting that domain over to this app.
 - **Local env inconsistency.** `.env.local` has `CONVEX_DEPLOYMENT=dev:helpful-elephant-638` but `NEXT_PUBLIC_CONVEX_URL` pointing at **prod**. Convex CLI writes to dev while the app reads prod — an easy way to "fix" something invisibly.
+
+---
+
+### 9. Every Shopify variant has zero weight
+
+**0 of 2,309** variants carry a weight, and all are flagged `requiresShipping: true`.
+
+Carrier-calculated rates (FedEx/UPS live rates) cannot price a parcel with no weight —
+customers would see no shipping option, or a wrong one. Flat-rate shipping is unaffected,
+which may be why this has gone unnoticed.
+
+Convex already holds the data: `bottleWeightG` on 2,168 products and `caseWeightG` on
+2,035, making **2,164 of the 2,309** fixable by a push rather than by re-measuring. The
+remaining ~145 have no weight anywhere and need real measurements.
+
+Blocked on the boss: carrier choice, flat vs live rates, box sizes and packing weight,
+and the free-shipping threshold ($99 on the site vs $199 in `knowledge.ts`). See
+`docs/BOSS-CHECKLIST-2026-07-29.md`.
+
+We also cannot read the store's shipping configuration — the Admin token lacks
+`read_shipping`, so delivery profiles and rates are unverifiable from here.
 
 ---
 
