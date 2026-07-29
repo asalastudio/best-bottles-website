@@ -1,0 +1,25 @@
+{
+  "generatedAt": "2026-07-29T23:00:42.788Z",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "deployment": "https://precise-raccoon-123.convex.cloud",
+  "totals": {
+    "products": 2330,
+    "withShopifyVariant": 2313,
+    "verifiedInShopify": 2309
+  },
+  "shopifyWeights": {
+    "variantsWithRealWeight": 0,
+    "zeroWeightButRequiresShipping": 2309,
+    "zeroWeightNotShippable": 0,
+    "variantsNotFound": 4,
+    "unitsSeen": {
+      "POUNDS": 2309
+    }
+  },
+  "convexWeightData": {
+    "productsWithBottleWeightG": 2168,
+    "productsWithCaseWeightG": 2035,
+    "zeroWeightVariantsFixableFromConvex": 2164
+  },
+  "note": "Shopify weight 0 + requiresShipping=true means carrier-calculated rates (FedEx/UPS live rates) cannot price the parcel. Flat-rate shipping is unaffected. Convex already holds bottleWeightG for most SKUs, so the fix is a push, not a data-collection exercise."
+}

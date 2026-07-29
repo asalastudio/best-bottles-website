@@ -2153,22 +2153,23 @@ export const setShopifySellabilityBatch = mutation({
 export const getCheckoutBlockedCount = query({
     args: {},
     handler: async (ctx) => {
-        const products = await ctx.db.query("products").collect();
-        const withVariant = products.filter((p) => Boolean(p.shopifyVariantId));
-        const blocked = withVariant.filter((p) => p.shopifySellable === false);
-        const unsynced = withVariant.filter((p) => p.shopifySellable === undefined || p.shopifySellable === null);
+        // Indexed reads only — a full `products` collect() blows Convex's
+        // 16 MB per-function byte limit at 2,330 documents.
+        const blocked = await ctx.db
+            .query("products")
+            .withIndex("by_shopifySellable", (q) => q.eq("shopifySellable", false))
+            .collect();
+
         const byReason: Record<string, number> = {};
         for (const p of blocked) {
             const key = p.shopifySellableReason ?? "unknown";
             byReason[key] = (byReason[key] ?? 0) + 1;
         }
+
         return {
-            totalProducts: products.length,
-            withShopifyVariant: withVariant.length,
-            sellable: withVariant.length - blocked.length - unsynced.length,
             blocked: blocked.length,
-            neverSynced: unsynced.length,
             byReason,
+            sampleBlockedSkus: blocked.slice(0, 10).map((p) => p.graceSku),
         };
     },
 });

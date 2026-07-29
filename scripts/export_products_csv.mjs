@@ -47,7 +47,7 @@ const COLUMNS = [
     "neckThreadSize", "heightWithCap", "heightWithoutCap", "diameter", "bottleWeightG", "caseQuantity",
     "qbPrice", "webPrice1pc", "webPrice10pc", "webPrice12pc",
     "stockStatus", "itemName", "itemDescription", "imageUrl", "productUrl", "dataGrade", "bottleCollection",
-    "fitmentStatus", "graceDescription", "assemblyType", "componentGroup",
+    "fitmentStatus", "graceDescription", "assemblyType", "componentGroup", "productGroupId",
     "verified", "importSource",
 ];
 

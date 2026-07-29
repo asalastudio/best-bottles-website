@@ -67,13 +67,20 @@ Cylinder 24 · Empire 24 · Sprayer 15 · Atomizer 12 · Grace 12 · Diamond 12 
 
 The PDP renders a volume ladder with an explicit savings promise. Shopify's cart permalink charges the **flat 1-piece price**.
 
-**Proven with a real checkout:**
+**Proven with a real checkout** (corrected 2026-07-29 — see note below):
 
 ```
-PKG-BOX-WHT-4X4X4
-  PDP said:          $0.23/ea at 10+  ("Save 34%")  → $2.30 for 10
-  Shopify charged:   $0.35/ea                        → $3.50 for 10
+GB-DVA-CLR-46ML-T-06
+  Tier says:         $7.46/ea at 12+   → $89.49 for 12
+  Shopify charged:   $7.85/ea (1pc)    → $94.20 for 12
 ```
+
+> **Correction.** My first test used quantity 10 on `PKG-BOX-WHT-4X4X4`. That was
+> the wrong threshold: production carries a `priceTiers` field (undocumented in
+> the repo schema until today) whose real breaks are **1 / 12 / 144 / 600 / 3000**,
+> not 10. Only 53 SKUs have a genuine 10-unit break; **2,252 break at 12**, so
+> `webPrice10pc` is largely vestigial. Re-tested at the correct 12-unit threshold
+> above — the conclusion is unchanged, but this is the sound evidence.
 
 - **2,252 of 2,330 SKUs** render this ladder.
 - Most gaps are 2–10%, but **34 SKUs advertise 25–98% off**. The worst, `CMP-CAP-PNK-18-415`, shows $4.25 → $0.08 (98% off) — near-certainly a data error, and a disaster if anyone ever honored it.
@@ -91,6 +98,26 @@ The tiers stay visible (they're real quote pricing, and the sales team honors th
 **The decision for the boss:** either (a) configure Shopify quantity rules so the tiers are real online — we're on Shopify **Plus**, so this is available — then flip `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT=true`; or (b) keep volume as quote-only and ship as it now stands. Either way, **the 34 suspect prices need a human pass** (`suspect-tier-pricing-prod.json`).
 
 ---
+
+### 2b. The real volume ladder is far deeper than the site shows
+
+Production holds a `priceTiers` array on **2,305 of 2,330** products, last synced
+2026-07-20, with breaks at 1 / 12 / 144 / 600 / 3000 plus case-quantity multiples
+(up to 15,840 units). Example:
+
+```
+GB-SLM-BLK-5ML-ATM-BLK-T
+  1     $2.25      144   $2.03
+  12    $2.14      600   $1.91      3000  $1.76
+```
+
+The PDP renders only the 1 / 10 / 12 slice, so the site **under-sells the actual
+B2B pricing** — a distributor ordering 3,000 units sees no indication that the
+price drops 22%. This field was also missing from `convex/schema.ts`, which
+blocked every `convex deploy` until it was added today.
+
+**Decision needed:** show the full ladder on the PDP (and make Shopify honor it),
+or keep volume strictly to quotes.
 
 ### 3. Quote and contact form submissions notify nobody
 

@@ -126,6 +126,28 @@ export default defineSchema({
         webPrice1pc: v.union(v.number(), v.null()),
         webPrice10pc: v.union(v.number(), v.null()),
         webPrice12pc: v.union(v.number(), v.null()),
+        /**
+         * Full volume-price ladder — the real B2B structure.
+         *
+         * Present on 2,305 of 2,330 prod products but MISSING from this schema
+         * until 2026-07-29, which blocked every `convex deploy` with a schema
+         * validation error. Written by an out-of-band sync (last run
+         * 2026-07-20); the repo had drifted from the deployment.
+         *
+         * Breaks are typically 1 / 12 / 144 / 600 / 3000 plus case-quantity
+         * multiples — far deeper than the 1pc/10pc/12pc trio the PDP renders.
+         * Note webPrice10pc is largely vestigial: only 53 SKUs have a real
+         * 10-unit break, while 2,252 break at 12.
+         */
+        priceTiers: v.optional(v.union(
+            v.array(v.object({
+                minQty: v.number(),
+                unitPrice: v.number(),
+                totalPrice: v.number(),
+            })),
+            v.null(),
+        )),
+        priceTiersSyncedAt: v.optional(v.union(v.number(), v.null())),
 
         // ── Content & Status ────────────────────────────────────────
         stockStatus: v.union(v.string(), v.null()),
@@ -223,6 +245,9 @@ export default defineSchema({
         .index("by_neckThreadSize", ["neckThreadSize"])
         .index("by_productGroupId", ["productGroupId"]) // Used by getProductGroup to avoid full table scan
         .index("by_shopifyVariantId", ["shopifyVariantId"]) // Webhook sync: inventory updates
+        // Launch gate reads only the blocked rows instead of the full table,
+        // which otherwise exceeds Convex's per-function byte limit at 2,330 docs.
+        .index("by_shopifySellable", ["shopifySellable"])
         .searchIndex("search_itemName", {
             searchField: "itemName",
             filterFields: ["category", "family"],
