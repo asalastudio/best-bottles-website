@@ -91,27 +91,6 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
     const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
     const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
-    const persistQuoteDraft = () => {
-        try {
-            sessionStorage.setItem("bb-rfq-line-items", JSON.stringify(items.map((item) => ({
-                sku: item.graceSku,
-                websiteSku: item.websiteSku ?? undefined,
-                variantId: item.variantId ?? item.shopifyVariantId ?? undefined,
-                productGroupSlug: item.productGroupSlug ?? undefined,
-                name: item.itemName,
-                quantity: item.quantity,
-                unitPrice: item.unitPrice,
-                family: item.family,
-                capacity: item.capacity,
-                color: item.color,
-                applicator: item.applicator ?? null,
-                capColor: item.capColor ?? null,
-                neckThreadSize: item.neckThreadSize ?? null,
-            }))));
-        } catch {
-            // Session storage is an enhancement; the query-string fallback below still works.
-        }
-    };
     return (
         <AnimatePresence>
             {isOpen && (
@@ -385,20 +364,9 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     style={{ boxShadow: "0 4px 20px rgba(29,29,31,0.15)" }}
                                 >
                                     <span className="absolute inset-0 liquid-shimmer opacity-0 group-hover:opacity-100 transition-opacity duration-500" aria-hidden="true" />
-                                    <span className="relative">{isCheckingOut ? "Preparing Checkout…" : "Proceed to Checkout"}</span>
+                                    <span className="relative">{isCheckingOut ? "Redirecting to secure checkout…" : "Proceed to Checkout"}</span>
                                     <ArrowRight className="relative transition-transform duration-300 group-hover:translate-x-0.5" size={16} />
                                 </button>
-
-                                <Link
-                                    href={`/request-quote?products=${encodeURIComponent(items.map(i => `${i.itemName} (x${i.quantity})`).join(', '))}`}
-                                    onClick={() => {
-                                        persistQuoteDraft();
-                                        onClose();
-                                    }}
-                                    className="w-full flex items-center justify-center gap-2 py-3 mt-2 border border-obsidian text-obsidian text-[13px] font-medium tracking-wide rounded-xl hover:bg-obsidian hover:text-bone transition-all duration-300"
-                                >
-                                    Request Quote for This Order
-                                </Link>
 
                                 {items.some((item) => item.neckThreadSize || (item.compatibleCount ?? 0) > 0) && (
                                     <div className="mt-3 rounded-lg border border-muted-gold/30 bg-muted-gold/10 px-3 py-2.5">
@@ -437,7 +405,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
 
                                 <p id="cart-drawer-status" aria-live="polite" className="text-[11px] text-slate text-center mt-3 tracking-wide">
                                     {isCheckingOut
-                                        ? "Checking Shopify variants and preparing checkout."
+                                        ? "Redirecting to secure checkout."
                                         : quoteOnlyItems.length > 0
                                             ? checkoutReadyItems.length > 0
                                                 ? `Shopify checkout will use ${checkoutReadyItems.length} verified item${checkoutReadyItems.length === 1 ? "" : "s"} and remove ${quoteOnlyItems.length} quote-only item${quoteOnlyItems.length === 1 ? "" : "s"}.`

@@ -13,7 +13,7 @@ import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
     checkoutUnavailableMessage,
     quoteOnlyCartMessage,
-    removeBlockedCheckoutItems,
+    redirectToCheckout,
     splitCheckoutItems,
     unavailableCheckoutMessage,
     unmatchedCheckoutMessage,
@@ -221,6 +221,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
 
     const checkout = useCallback(async () => {
         if (items.length === 0) return;
+        let redirectStarted = false;
         setIsCheckingOut(true);
         setCheckoutError("");
 
@@ -284,13 +285,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     quoteOnly.length > 0 ? quoteOnlyCartMessage(quoteOnly) : "",
                 ].filter(Boolean);
                 if (warnings.length > 0) {
-                    const blockedSkus = [...quoteOnly, ...unmatched, ...unavailable];
-                    setItems((currentItems) => removeBlockedCheckoutItems(currentItems, blockedSkus));
                     setCheckoutError(`${warnings.join(" ")} Removed those SKUs from this checkout and opened Shopify for the verified items.`);
-                } else {
-                    clearCart();
                 }
-                window.location.assign(checkoutUrl);
+                redirectToCheckout({
+                    checkoutUrl,
+                    navigationTarget: window,
+                    onNavigationConfirmed: () => saveCartToStorage([]),
+                });
+                redirectStarted = true;
             } else if (data.unmatchedSkus?.length) {
                 setCheckoutError(unmatchedCheckoutMessage(data.unmatchedSkus));
             } else if (data.unavailableSkus?.length) {
@@ -315,9 +317,9 @@ export function CartProvider({ children }: { children: ReactNode }) {
                 );
             }
         } finally {
-            setIsCheckingOut(false);
+            if (!redirectStarted) setIsCheckingOut(false);
         }
-    }, [clearCart, items]);
+    }, [items]);
 
     return (
         <CartContext.Provider

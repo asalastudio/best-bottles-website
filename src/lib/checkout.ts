@@ -55,3 +55,39 @@ export function unmatchedCheckoutMessage(skus: string[]): string {
 export function unavailableCheckoutMessage(skus: string[]): string {
     return `Shopify marked ${skus.length === 1 ? "this SKU" : "these SKUs"} unavailable for online checkout: ${formatSkuList(skus)}. Request a quote and the team can confirm availability or suggest a substitute.`;
 }
+
+interface CheckoutNavigationTarget {
+    addEventListener: (
+        type: "pagehide",
+        listener: () => void,
+        options?: { once?: boolean },
+    ) => void;
+    removeEventListener: (type: "pagehide", listener: () => void) => void;
+    location: { assign: (url: string) => void };
+}
+
+export function redirectToCheckout({
+    checkoutUrl,
+    navigationTarget,
+    onNavigationConfirmed,
+}: {
+    checkoutUrl: string;
+    navigationTarget: CheckoutNavigationTarget;
+    onNavigationConfirmed: () => void;
+}): void {
+    let confirmed = false;
+    const handlePageHide = () => {
+        if (confirmed) return;
+        confirmed = true;
+        navigationTarget.removeEventListener("pagehide", handlePageHide);
+        onNavigationConfirmed();
+    };
+
+    navigationTarget.addEventListener("pagehide", handlePageHide, { once: true });
+    try {
+        navigationTarget.location.assign(checkoutUrl);
+    } catch (error) {
+        navigationTarget.removeEventListener("pagehide", handlePageHide);
+        throw error;
+    }
+}

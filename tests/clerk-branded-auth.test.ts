@@ -1,5 +1,6 @@
 import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
+import { clerkAppearance } from "../src/lib/clerkAppearance";
 
 /**
  * Clerk must render inside the Best Bottles design, not as a default
@@ -33,6 +34,34 @@ describe("branded Clerk auth", () => {
         expect(css).toContain(".cl-header");
         // Brand focus ring, not Clerk's default blue.
         expect(css).toContain("--color-muted-gold");
+    });
+
+    it("keeps embedded auth controls full-width and the last-used badge in flow", () => {
+        // Clerk types `elements` as a closed key union, and it omits
+        // `lastAuthenticationStrategyBadge` in this SDK version — index it as a
+        // plain record so the assertions typecheck without weakening them.
+        const elements = (clerkAppearance.elements ?? {}) as Record<string, unknown>;
+
+        for (const key of [
+            "rootBox",
+            "cardBox",
+            "card",
+            "main",
+            "form",
+            "formFieldRow",
+            "formFieldInput",
+            "formButtonPrimary",
+            "socialButtonsRoot",
+            "socialButtons",
+            "socialButtonsBlockButton",
+        ]) {
+            expect(String(elements[key])).toContain("w-full");
+        }
+
+        expect(String(elements.lastAuthenticationStrategyBadge)).toContain("static");
+        expect(shell).toContain("auth-clerk-embed");
+        expect(css).toContain(".auth-clerk-embed .cl-rootBox");
+        expect(css).toContain(".auth-clerk-embed .cl-lastAuthenticationStrategyBadge");
     });
 
     it("cross-links sign-in and sign-up while preserving the redirect target", () => {

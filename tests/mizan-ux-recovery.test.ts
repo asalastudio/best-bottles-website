@@ -11,8 +11,10 @@ function readRepoFile(path: string) {
 describe("Mizan UX recovery guardrails", () => {
     it("starts Shopify checkout in the same tab instead of relying on a popup", () => {
         const cartProvider = readRepoFile("src/components/CartProvider.tsx");
+        const checkout = readRepoFile("src/lib/checkout.ts");
 
-        expect(cartProvider).toContain("window.location.assign(checkoutUrl)");
+        expect(cartProvider).toContain("redirectToCheckout({");
+        expect(checkout).toContain("navigationTarget.location.assign(checkoutUrl)");
         expect(cartProvider).not.toContain("window.open(checkoutUrl");
     });
 

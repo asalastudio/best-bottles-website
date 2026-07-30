@@ -110,6 +110,68 @@ export interface ResolvedVariant {
     price: string;
 }
 
+export interface CheckoutVariantState {
+    variantId: string;
+    sku: string;
+    available: boolean;
+}
+
+/**
+ * Re-validates client-carried Shopify variant IDs at checkout time.
+ *
+ * Cart state lives in localStorage and can outlive a Shopify publication
+ * change, so the server must not trust a stored variant ID by itself. Shopify
+ * returns HTTP 410 for cart permalinks whose product is draft or unpublished.
+ */
+export async function resolveCheckoutVariantsByIds(
+    variantIds: string[],
+): Promise<CheckoutVariantState[]> {
+    const ids = [...new Set(
+        variantIds
+            .map(normalizeShopifyVariantId)
+            .filter((id): id is string => Boolean(id)),
+    )];
+    if (ids.length === 0) return [];
+
+    const data = await adminGraphQL<{
+        nodes: Array<{
+            id: string;
+            sku: string;
+            availableForSale: boolean;
+            product: {
+                status: string;
+                publishedAt: string | null;
+            };
+        } | null>;
+    }>(
+        `query CheckoutVariantsById($ids: [ID!]!) {
+            nodes(ids: $ids) {
+                ... on ProductVariant {
+                    id
+                    sku
+                    availableForSale
+                    product { status publishedAt }
+                }
+            }
+        }`,
+        {
+            ids: ids.map((id) => `gid://shopify/ProductVariant/${id}`),
+        },
+    );
+
+    return data.nodes.flatMap((node) => {
+        if (!node) return [];
+        return [{
+            variantId: numericId(node.id),
+            sku: node.sku,
+            available:
+                node.availableForSale === true
+                && node.product.status === "ACTIVE"
+                && Boolean(node.product.publishedAt),
+        }];
+    });
+}
+
 export async function resolveVariantsBySkus(
     skus: string[],
 ): Promise<ResolvedVariant[]> {
@@ -125,7 +187,12 @@ export async function resolveVariantsBySkus(
                             sku: string;
                             availableForSale: boolean;
                             price: string;
-                            product: { id: string; title: string };
+                            product: {
+                                id: string;
+                                title: string;
+                                status: string;
+                                publishedAt: string | null;
+                            };
                         };
                     }>;
                 };
@@ -138,7 +205,7 @@ export async function resolveVariantsBySkus(
                                 sku
                                 availableForSale
                                 price
-                                product { id title }
+                                product { id title status publishedAt }
                             }
                         }
                     }
@@ -154,7 +221,10 @@ export async function resolveVariantsBySkus(
                     variantGid: node.id,
                     productGid: node.product.id,
                     productTitle: node.product.title,
-                    available: node.availableForSale,
+                    available:
+                        node.availableForSale === true
+                        && node.product.status === "ACTIVE"
+                        && Boolean(node.product.publishedAt),
                     price: node.price,
                 });
             }

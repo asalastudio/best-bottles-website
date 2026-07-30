@@ -51,18 +51,22 @@ export const clerkAppearance: Appearance = {
     },
     elements: {
         // Merge the card into the page instead of floating it.
-        rootBox: "w-full",
-        cardBox: "w-full shadow-none border-none",
-        card: "bg-transparent shadow-none border-none p-0 gap-6",
+        rootBox: "w-full min-w-0",
+        cardBox: "w-full min-w-0 shadow-none border-none",
+        card: "w-full min-w-0 bg-transparent shadow-none border-none p-0 gap-6",
         header: "hidden",
         headerTitle: "hidden",
         headerSubtitle: "hidden",
+        main: "w-full min-w-0",
+        form: "w-full min-w-0",
 
         // Fields
+        formFieldRow: "w-full min-w-0",
+        formField: "min-w-0 flex-1",
         formFieldLabel:
             "font-sans text-[10px] font-semibold uppercase tracking-[0.18em] text-slate mb-2",
         formFieldInput:
-            "rounded-sm border border-champagne/70 bg-white px-4 py-3 text-[15px] text-obsidian shadow-none transition-colors focus:border-muted-gold focus:ring-1 focus:ring-muted-gold/40",
+            "w-full min-w-0 rounded-sm border border-champagne/70 bg-white px-4 py-3 text-[15px] text-obsidian shadow-none transition-colors focus:border-muted-gold focus:ring-1 focus:ring-muted-gold/40",
         formFieldInputShowPasswordButton: "text-slate hover:text-obsidian",
         formFieldAction: "text-obsidian underline underline-offset-4 hover:text-muted-gold",
         formFieldHintText: "text-xs text-slate",
@@ -70,16 +74,20 @@ export const clerkAppearance: Appearance = {
 
         // Primary CTA — matches the site's obsidian → gold button language.
         formButtonPrimary:
-            "rounded-none bg-obsidian px-5 py-4 text-xs font-bold uppercase tracking-[0.18em] text-bone shadow-none transition-colors hover:bg-muted-gold focus:ring-2 focus:ring-muted-gold/40 normal-case",
+            "w-full min-w-0 rounded-none bg-obsidian px-5 py-4 text-xs font-bold uppercase tracking-[0.18em] text-bone shadow-none transition-colors hover:bg-muted-gold focus:ring-2 focus:ring-muted-gold/40 normal-case",
         formButtonReset:
             "text-sm font-semibold text-obsidian underline underline-offset-4 hover:text-muted-gold",
 
         // Social / alternate methods
+        socialButtonsRoot: "w-full min-w-0",
+        socialButtons: "w-full min-w-0",
         socialButtonsBlockButton:
-            "rounded-sm border border-champagne/70 bg-white py-3 text-sm font-semibold text-obsidian transition-colors hover:border-muted-gold hover:bg-bone",
-        socialButtonsBlockButtonText: "font-sans text-sm font-semibold text-obsidian",
+            "w-full min-w-0 rounded-sm border border-champagne/70 bg-white py-3 text-sm font-semibold text-obsidian transition-colors hover:border-muted-gold hover:bg-bone",
+        socialButtonsBlockButtonText: "min-w-0 font-sans text-sm font-semibold text-obsidian",
+        lastAuthenticationStrategyBadge:
+            "static ml-auto shrink-0 whitespace-nowrap rounded-sm bg-travertine px-1.5 py-0.5 text-[9px] font-semibold uppercase tracking-wide text-obsidian",
         alternativeMethodsBlockButton:
-            "rounded-sm border border-champagne/70 bg-white py-3 text-sm text-obsidian hover:border-muted-gold hover:bg-bone",
+            "w-full min-w-0 rounded-sm border border-champagne/70 bg-white py-3 text-sm text-obsidian hover:border-muted-gold hover:bg-bone",
 
         dividerLine: "bg-champagne/60",
         dividerText:

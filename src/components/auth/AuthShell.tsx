@@ -94,7 +94,9 @@ export default function AuthShell({
                             </h1>
                             <p className="mt-2 text-sm leading-relaxed text-slate">{subtitle}</p>
 
-                            <div className="mt-7 border-t border-champagne/50 pt-7">{children}</div>
+                            <div className="auth-clerk-embed mt-7 w-full min-w-0 border-t border-champagne/50 pt-7">
+                                {children}
+                            </div>
                         </div>
 
                         <p className="mt-5 text-center text-xs leading-relaxed text-slate">

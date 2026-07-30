@@ -21,8 +21,6 @@ export default function CartPage() {
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
-    const quoteProducts = items.map((i) => `${i.itemName} (SKU: ${i.graceSku}, x${i.quantity})`).join(", ");
-    const quoteQuantities = items.map((i) => `${i.graceSku}: ${i.quantity}`).join(", ");
 
     return (
         <main className="min-h-screen bg-bone">
@@ -151,15 +149,9 @@ export default function CartPage() {
                                 data-testid="cart-page-checkout-button"
                                 className="mt-5 flex w-full items-center justify-center gap-2 bg-obsidian px-5 py-4 text-sm font-semibold text-bone hover:bg-muted-gold disabled:cursor-not-allowed disabled:opacity-50"
                             >
-                                <span>{isCheckingOut ? "Preparing Checkout..." : "Proceed to Checkout"}</span>
+                                <span>{isCheckingOut ? "Redirecting to secure checkout..." : "Proceed to Checkout"}</span>
                                 <ArrowRight size={16} />
                             </button>
-                            <Link
-                                href={`/request-quote?products=${encodeURIComponent(quoteProducts)}&quantities=${encodeURIComponent(quoteQuantities)}`}
-                                className="mt-3 flex w-full items-center justify-center border border-obsidian px-5 py-3 text-sm font-semibold text-obsidian hover:bg-obsidian hover:text-bone"
-                            >
-                                Request Quote for This Cart
-                            </Link>
                         </aside>
                     </div>
                 )}

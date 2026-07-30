@@ -1,5 +1,10 @@
 import { NextRequest } from "next/server";
-import { resolveVariantsBySkus, buildCheckoutUrl, normalizeShopifyVariantId } from "@/lib/shopify";
+import {
+    buildCheckoutUrl,
+    normalizeShopifyVariantId,
+    resolveCheckoutVariantsByIds,
+    resolveVariantsBySkus,
+} from "@/lib/shopify";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
 /**
@@ -40,27 +45,47 @@ export async function POST(req: NextRequest) {
     }
 
     try {
-        const directCheckoutItems = requestedItems
-            .filter((item) => item.shopifyVariantId)
-            .map((item) => ({
-                variantId: item.shopifyVariantId as string,
-                quantity: item.quantity,
-            }));
+        const directItems = requestedItems.filter((item) => item.shopifyVariantId);
         const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId);
         const fallbackSkus = fallbackItems.map((i) => i.sku);
 
         const token = process.env.SHOPIFY_ADMIN_TOKEN;
-        if (fallbackItems.length > 0 && !token && directCheckoutItems.length === 0) {
+        if (!token) {
             return Response.json(
                 { error: "Shopify Admin token not configured" },
                 { status: 503 },
             );
         }
 
-        const variants = fallbackItems.length > 0 && token
+        // A variant ID in localStorage is not proof that Shopify can still sell
+        // it. Re-check direct IDs server-side so draft/unpublished products do
+        // not produce a cart permalink that Shopify answers with HTTP 410.
+        const directVariantStates = directItems.length > 0
+            ? await resolveCheckoutVariantsByIds(
+                directItems.map((item) => item.shopifyVariantId as string),
+            )
+            : [];
+        const directStateById = new Map(
+            directVariantStates.map((state) => [state.variantId, state]),
+        );
+        const directCheckoutItems = directItems.flatMap((item) => {
+            const state = directStateById.get(item.shopifyVariantId as string);
+            if (!state?.available) return [];
+            return [{
+                variantId: state.variantId,
+                quantity: item.quantity,
+            }];
+        });
+
+        const variants = fallbackItems.length > 0
             ? await resolveVariantsBySkus(fallbackSkus)
             : [];
-        const unavailableSkus = variants.filter((v) => !v.available).map((v) => v.sku);
+        const unavailableSkus = [
+            ...directItems
+                .filter((item) => directStateById.get(item.shopifyVariantId as string)?.available === false)
+                .map((item) => item.sku),
+            ...variants.filter((v) => !v.available).map((v) => v.sku),
+        ];
 
         const skuToQuantity = Object.fromEntries(
             requestedItems.map((i) => [i.sku, i.quantity]),
@@ -76,9 +101,12 @@ export async function POST(req: NextRequest) {
 
         const checkoutUrl =
             checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null;
-        const unmatchedSkus = fallbackSkus.filter(
-            (s) => !variants.some((v) => v.sku === s),
-        );
+        const unmatchedSkus = [
+            ...directItems
+                .filter((item) => !directStateById.has(item.shopifyVariantId as string))
+                .map((item) => item.sku),
+            ...fallbackSkus.filter((s) => !variants.some((v) => v.sku === s)),
+        ];
 
         if (!checkoutUrl) {
             return Response.json(

@@ -53,12 +53,12 @@ describe("checkout readiness helpers", () => {
 });
 
 describe("checkout buying-path guardrails", () => {
-    it("has a real /cart page with quote and checkout CTAs", () => {
+    it("has a real /cart page with a direct checkout CTA", () => {
         const cartPage = readFileSync("src/app/cart/page.tsx", "utf8");
 
         expect(cartPage).toContain("Your Cart");
         expect(cartPage).toContain("cart-page-checkout-button");
-        expect(cartPage).toContain("Request Quote for This Cart");
+        expect(cartPage).not.toContain("Request Quote for This Cart");
         expect(cartPage).toContain("Quote required before checkout");
     });
 
@@ -104,7 +104,8 @@ describe("checkout buying-path guardrails", () => {
         // Sellability must veto a stale variant ID rather than the other way round.
         expect(cartProvider).toContain("shopifySellable === false");
         expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
-        expect(route).toContain("const directCheckoutItems = requestedItems");
+        expect(route).toContain("resolveCheckoutVariantsByIds");
+        expect(route).toContain("const directCheckoutItems = directItems.flatMap");
         expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId)");
         expect(route).toContain("const checkoutItems = [...directCheckoutItems, ...resolvedCheckoutItems]");
     });

@@ -6,7 +6,13 @@
  */
 
 import { describe, expect, it, vi, beforeEach, afterAll } from "vitest";
-import { buildCheckoutUrl, getShopifyDomain, normalizeShopifyVariantId, type CheckoutLineItem } from "../src/lib/shopify";
+import {
+    buildCheckoutUrl,
+    getShopifyDomain,
+    normalizeShopifyVariantId,
+    resolveCheckoutVariantsByIds,
+    type CheckoutLineItem,
+} from "../src/lib/shopify";
 
 // ─── getShopifyDomain ───────────────────────────────────────────────────────
 
@@ -106,6 +112,75 @@ describe("normalizeShopifyVariantId", () => {
         expect(normalizeShopifyVariantId("")).toBeNull();
         expect(normalizeShopifyVariantId(null)).toBeNull();
         expect(normalizeShopifyVariantId(undefined)).toBeNull();
+    });
+});
+
+// ─── Server-side checkout validation ───────────────────────────────────────
+
+describe("resolveCheckoutVariantsByIds", () => {
+    const originalFetch = global.fetch;
+    const originalEnv = process.env;
+
+    beforeEach(() => {
+        process.env = {
+            ...originalEnv,
+            NEXT_PUBLIC_SHOPIFY_STORE_DOMAIN: "best-bottles.myshopify.com",
+            SHOPIFY_ADMIN_TOKEN: "test-token",
+        };
+    });
+
+    afterAll(() => {
+        global.fetch = originalFetch;
+        process.env = originalEnv;
+    });
+
+    it("rejects direct variant IDs whose parent product is draft or unpublished", async () => {
+        global.fetch = vi.fn().mockResolvedValue(
+            new Response(JSON.stringify({
+                data: {
+                    nodes: [
+                        {
+                            id: "gid://shopify/ProductVariant/111",
+                            sku: "READY",
+                            availableForSale: true,
+                            product: {
+                                status: "ACTIVE",
+                                publishedAt: "2026-07-29T00:00:00Z",
+                            },
+                        },
+                        {
+                            id: "gid://shopify/ProductVariant/222",
+                            sku: "DRAFT",
+                            availableForSale: true,
+                            product: {
+                                status: "DRAFT",
+                                publishedAt: null,
+                            },
+                        },
+                        {
+                            id: "gid://shopify/ProductVariant/333",
+                            sku: "UNPUBLISHED",
+                            availableForSale: true,
+                            product: {
+                                status: "ACTIVE",
+                                publishedAt: null,
+                            },
+                        },
+                    ],
+                },
+            }), {
+                status: 200,
+                headers: { "Content-Type": "application/json" },
+            }),
+        ) as typeof fetch;
+
+        const result = await resolveCheckoutVariantsByIds(["111", "222", "333"]);
+
+        expect(result).toEqual([
+            { variantId: "111", sku: "READY", available: true },
+            { variantId: "222", sku: "DRAFT", available: false },
+            { variantId: "333", sku: "UNPUBLISHED", available: false },
+        ]);
     });
 });
 
