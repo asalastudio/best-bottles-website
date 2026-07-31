@@ -1,0 +1,508 @@
+{
+  "generatedAt": "2026-07-30",
+  "source": "docs/LAUNCH-READINESS-AUDIT-2026-07-29.md, docs/ABBAS-CHECKLIST-2026-07-29.md, docs/CLERK-PRODUCTION-CHECKLIST.md, UX-AUDIT-REPORT.md (Mar 2026), session audit 2026-07-29/30",
+  "priorityLegend": { "1": "Urgent", "2": "High", "3": "Medium", "4": "Low" },
+  "ownerLegend": {
+    "team": "We build/run it",
+    "abbas": "Business decision or access — blocked until answered",
+    "both": "Needs an Abbas answer, then we build"
+  },
+  "projects": [
+    { "key": "checkout", "name": "Checkout & Pricing Integrity", "why": "Customers cannot buy 17% of the catalog, and the price shown is not the price charged." },
+    { "key": "shipping", "name": "Shipping & Fulfillment", "why": "Zero variant weights make carrier rates impossible; free shipping is effectively unconditional at B2B volumes." },
+    { "key": "leads", "name": "Lead Capture & CRM", "why": "Every quote/sample/contact submission is invisible to the team." },
+    { "key": "auth", "name": "Auth, Portal & Accounts", "why": "Production runs Clerk's dev instance; the portal dead-ends without an organization." },
+    { "key": "grace", "name": "Grace AI", "why": "Text mode is down in production; catalog stats disagree with the catalog." },
+    { "key": "content", "name": "Content, SEO & Compliance", "why": "Test artifacts are indexable and some published claims are legally risky." },
+    { "key": "security", "name": "Security & Environments", "why": "Live credentials in git history; env drift between local and prod." },
+    { "key": "ux", "name": "UX, Research & Competitive", "why": "40 March findings never tracked to closure; the rebuild regressed against the legacy site on pricing display." }
+  ],
+  "issues": [
+    {
+      "ref": "BB-001",
+      "title": "Publish or classify the 377 DRAFT Shopify products blocking checkout",
+      "project": "checkout",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "shopify", "needs-abbas"],
+      "estimate": 3,
+      "description": "## Problem\n398 of 2,330 SKUs (17%) cannot be purchased. 377 sit on Shopify products in DRAFT + unpublished state; Shopify answers their cart permalink with **HTTP 410 Gone**.\n\n## Evidence\n```\nDRAFT   GB-RND-FRS-78ML-RDC-MSLV  → /cart/53343606112548:1  → HTTP 410 Gone\nACTIVE  (control)                 → /cart/53343616598308:2  → HTTP 302 → real checkout\n```\nSpread across 13 families: Elegant 77 · Round 48 · Diva 43 · Sleek 36 · Slim 36 · Circle 34 · Cylinder 24 · Empire 24 · Sprayer 15 · Atomizer 12 · Grace 12 · Diamond 12 · Lotion Pump 7.\n\nFull list: `data/audits/launch-readiness-2026-07-29/shopify-blocked-skus-prod.json`\n\n## Decision needed from Abbas\nWere these held back deliberately (discontinued / not yet launched), or never published?\n\n## Acceptance criteria\n- [ ] Abbas confirms per-family or per-SKU intent\n- [ ] Intentionally-available SKUs set to ACTIVE + published to Online Store in Shopify\n- [ ] Intentionally-unavailable SKUs documented so they stay quote-only\n- [ ] `scripts/sync_shopify_sellability.mjs --apply` re-run\n- [ ] `npx convex run products:getCheckoutBlockedCount --prod` returns only the intended count",
+      "blocks": ["BB-002"]
+    },
+    {
+      "ref": "BB-002",
+      "title": "Re-run Shopify sellability sync after products are published",
+      "project": "checkout",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["shopify", "data"],
+      "estimate": 1,
+      "description": "## Task\nAfter BB-001, re-sync `products.shopifySellable` so the storefront stops routing newly-published SKUs to the quote path.\n\n```bash\nCONVEX_URL=https://precise-raccoon-123.convex.cloud node scripts/sync_shopify_sellability.mjs --apply\n```\n\n## Acceptance criteria\n- [ ] Sync reports the expected reduction in `notSellable`\n- [ ] `products:getCheckoutBlockedCount` matches Abbas's intended quote-only set\n- [ ] Spot-check 3 newly-published SKUs show \"Add to Cart\" on the PDP",
+      "blockedBy": ["BB-001"]
+    },
+    {
+      "ref": "BB-003",
+      "title": "DECISION: volume pricing model — Shopify quantity rules vs quote-only",
+      "project": "checkout",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "pricing", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Problem\nThe site displays a volume ladder; Shopify's cart permalink charges the flat 1-piece price. Verified with a real checkout:\n```\nGB-DVA-CLR-46ML-T-06\n  Tier says:        $7.46/ea at 12+  → $89.49 for 12\n  Shopify charged:  $7.85/ea (1pc)   → $94.20 for 12\n```\n\n## Why this is urgent at our actual order sizes\nAverage order is 100–1,000 units. Measured against production:\n\n| Order size | SKUs with a better price hidden | Avg overcharge per line |\n|---|---|---|\n| 100 | 5.0% | $13.45 |\n| 250 | **98.3%** | $83.96 |\n| 500 | **98.3%** | $195.48 |\n| 1,000 | **98.5%** | $412.37 |\n\nOn legacy bestbottles.com the same 500-unit order bills at the 144/210 tier. On the new site it bills at 1pc. **We are migrating customers to a site that charges ~15% more for the same order.**\n\n## Options\n**(a)** Configure Shopify quantity rules (we are on Shopify **Plus**, so this is included), then flip `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT=true`.\n**(b)** Keep volume strictly quote-only — ship as it currently stands (PDP labels tiers \"By Quote\").\n\n## Acceptance criteria\n- [ ] Abbas picks (a) or (b) in writing\n- [ ] If (a): BB-004 and BB-005 are unblocked\n- [ ] If (b): confirm sales will honor ladder prices on quotes, and BB-006 still proceeds",
+      "blocks": ["BB-004", "BB-005"]
+    },
+    {
+      "ref": "BB-004",
+      "title": "Configure Shopify quantity price rules to honor the volume ladder",
+      "project": "checkout",
+      "priority": 1,
+      "owner": "team",
+      "labels": ["launch-blocker", "shopify", "pricing"],
+      "estimate": 5,
+      "description": "## Task\nOnly if BB-003 resolves to option (a). Implement Shopify Plus quantity rules / volume pricing so the checkout total matches the advertised ladder.\n\nBreakpoints are per-product and case-derived: 1 / 12 / 144 / 600 / 3000 plus case multiples (210, 216, 224, 240, 270, 288, …). Source of truth is `products.priceTiers` in Convex (2,305 of 2,330 SKUs, loaded in #57 with an accuracy gate).\n\n## Acceptance criteria\n- [ ] A qty-12 checkout on `GB-DVA-CLR-46ML-T-06` totals **$89.49**, not $94.20\n- [ ] A qty-500 checkout matches the ladder tier for that SKU\n- [ ] `node scripts/audit_price_parity.mjs` shows 0 mismatches at tier quantities\n- [ ] `NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT=true` set in Vercel production\n- [ ] Cart subtotal equals Shopify checkout total end-to-end",
+      "blockedBy": ["BB-003"]
+    },
+    {
+      "ref": "BB-005",
+      "title": "Surface the full price ladder on the PDP (144 / 600 / 3000 tiers)",
+      "project": "checkout",
+      "priority": 1,
+      "owner": "team",
+      "labels": ["launch-blocker", "pricing", "ux", "regression"],
+      "estimate": 3,
+      "description": "## Problem\nThe PDP renders only the 1 / 10 / 12 slice from `webPrice1pc/10pc/12pc`. The real ladder lives in `products.priceTiers` and runs far deeper.\n\n```\nGB-SLM-BLK-5ML-ATM-BLK-T\n  1     $2.25      144   $2.03\n  12    $2.14      600   $1.91      3000  $1.76\n```\n\nAt our average order size (100–1,000 units) **98.3% of SKUs have a better price the customer qualifies for and never sees**.\n\n## This is a regression, not a gap\nLegacy bestbottles.com shows all five tiers inline **on the category page**, with a live quantity calculator:\n```\nPack Of : 1 pcs - $0.39/pc  12 pcs - $4.45($0.37/pc)  144 pcs - $50.54($0.35/pc)\n          576 pcs - $190.94($0.33/pc)  2880 pcs - $876.10($0.30/pc)\nQty: [__]  Add to  →  Total Quantity: __   Price: __\n```\nSKS Bottle (industry leader) does the same. We are the only one hiding it.\n\n## Scope\nRender from `priceTiers`, not the legacy 1pc/10pc/12pc trio. Note `webPrice10pc` is vestigial — only 53 SKUs have a real 10-unit break; 2,252 break at 12.\n\n## Acceptance criteria\n- [ ] PDP shows every tier in `priceTiers` with per-unit **and** line total\n- [ ] Active tier highlighted for the entered quantity\n- [ ] \"Add N more to reach $X/ea\" nudge to the next break\n- [ ] Copy matches whichever BB-003 option was chosen\n- [ ] Falls back gracefully for the 25 SKUs with no `priceTiers`",
+      "blockedBy": ["BB-003"]
+    },
+    {
+      "ref": "BB-006",
+      "title": "Human review of 34 suspect tier prices (25–98% off)",
+      "project": "checkout",
+      "priority": 2,
+      "owner": "abbas",
+      "labels": ["pricing", "data-quality", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Problem\n34 SKUs advertise a volume saving of 25–98%. The worst, `CMP-CAP-PNK-18-415`, shows $4.25 → $0.08 (98% off) — almost certainly a data error, and financially dangerous if it were ever honored.\n\nList: `data/audits/launch-readiness-2026-07-29/suspect-tier-pricing-prod.json`\n\n## Acceptance criteria\n- [ ] Each of the 34 marked correct or corrected\n- [ ] Corrections written back to Convex `priceTiers` and `webPrice12pc`\n- [ ] Re-run of the audit shows no unexplained >25% breaks"
+    },
+    {
+      "ref": "BB-007",
+      "title": "DECISION: sell by case or by unit",
+      "project": "checkout",
+      "priority": 2,
+      "owner": "abbas",
+      "labels": ["pricing", "ux", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Problem\n83–86% of typical orders (100–1,000 units) are **partial cases**. Case quantities run 210 / 216 / 224 / 240 / 270 / 288, and the PDP says \"order any quantity.\" The tier breakpoints are themselves case-derived, so the underlying pricing model is case-based while the storefront presents per-unit.\n\n## Industry comparison\n- **SKS Bottle**: `221/cs | $238.68 ($1.08 each)` — sells by case, shows per-each in parentheses\n- **Calaso**: quantity stepper rounds to \"(Safe)Pack\", states MOQ and pcs/pallet\n\n## Questions for Abbas\n- Does the warehouse actually break cases at 100–1,000 units, or does someone round up by hand after the order lands?\n- Should the site enforce case multiples, or keep \"any quantity\"?\n- Is there a real MOQ?\n\n## Acceptance criteria\n- [ ] Decision recorded\n- [ ] If case-based: PDP shows case price + per-each, quantity snaps to case multiples, MOQ enforced"
+    },
+    {
+      "ref": "BB-008",
+      "title": "Resolve 4 SKUs whose Shopify variant no longer exists",
+      "project": "checkout",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["shopify", "data"],
+      "estimate": 1,
+      "description": "## Problem\nFour SKUs carry a `shopifyVariantId` that returns nothing from Shopify: `GB-SLM-BLK-5ML-ATM-BLK-T`, `GB-SLM-CLR-5ML-ATM-GLD-T`, `GB-SLM-CLR-5ML-ATM-SLV-T`, `HMAC-TEST-ONLY`.\n\nThey are already flagged `shopifySellable: false` so they degrade to quote — this is cleanup, not a live break.\n\n## Acceptance criteria\n- [ ] Each either re-linked to a real variant or the stale ID cleared\n- [ ] `HMAC-TEST-ONLY` handled by BB-030 (delete)"
+    },
+    {
+      "ref": "BB-009",
+      "title": "Fix 3 product groups that are browsable but have zero sellable SKUs",
+      "project": "checkout",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["catalog", "ux"],
+      "estimate": 2,
+      "description": "## Problem\nThese groups render a PDP where nothing can be bought:\n- `cylinder-25ml-clear-18-415-finemist` (1 SKU, blocked)\n- `aluminum-bottle-250ml-clear-20-410-finemist` (1 SKU, blocked)\n- `cream-jar-5ml-amber` (1 SKU, blocked)\n\nPartially blocked: `fine-mist-sprayer-13-415` (9/12), `fine-mist-sprayer-18-415` (6/8), `circle-50ml-frosted-18-415-antiquespray` (9/18).\n\nMostly resolves via BB-001. Verify after.\n\n## Acceptance criteria\n- [ ] After BB-002, re-run `scripts/audit_group_checkout_integrity.mjs`\n- [ ] Groups still fully blocked are either de-listed or clearly labelled quote-only",
+      "blockedBy": ["BB-002"]
+    },
+    {
+      "ref": "BB-010",
+      "title": "12 SKUs have no webPrice1pc",
+      "project": "checkout",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["data-quality", "pricing"],
+      "estimate": 1,
+      "description": "## Problem\n12 products carry no 1-piece price. 3 of them are checkout-ready, so they can be added to a cart with no price shown.\n\nList: `data/audits/launch-readiness-2026-07-29/summary-prod.json`\n\n## Acceptance criteria\n- [ ] All 12 either priced or explicitly marked quote-only\n- [ ] No checkout-ready SKU lacks a price"
+    },
+    {
+      "ref": "BB-011",
+      "title": "Push variant weights to Shopify (2,164 available from Convex)",
+      "project": "shipping",
+      "priority": 1,
+      "owner": "team",
+      "labels": ["launch-blocker", "shipping", "shopify"],
+      "estimate": 3,
+      "description": "## Problem\n**0 of 2,309** Shopify variants carry a weight, and every one is flagged `requiresShipping: true`. Carrier-calculated rates (FedEx/UPS live rates) cannot price a parcel with no weight — the customer sees no shipping option, or a wrong one.\n\n## Good news\nConvex already holds `bottleWeightG` for 2,168 products and `caseWeightG` for 2,035 — **2,164 of the 2,309 are fixable by a push**, not by re-measuring.\n\nData: `data/audits/launch-readiness-2026-07-29/shopify-zero-weight-skus.json`\n\n## Blocked on\nBB-013 (shipping model) — if we go flat-rate, weights are lower priority; for live rates they are mandatory.\n\n## Acceptance criteria\n- [ ] Write a dry-run-by-default push script following the `sync_shopify_sellability.mjs` pattern\n- [ ] Weights written to `inventoryItem.measurement.weight` with correct unit\n- [ ] Re-run `scripts/audit_shipping_readiness.mjs` → `variantsWithRealWeight` ≥ 2,164\n- [ ] Test checkout returns a real carrier rate",
+      "blockedBy": ["BB-013"]
+    },
+    {
+      "ref": "BB-012",
+      "title": "Source weights for the ~145 SKUs with no weight data anywhere",
+      "project": "shipping",
+      "priority": 2,
+      "owner": "abbas",
+      "labels": ["shipping", "data-quality", "needs-abbas"],
+      "estimate": 3,
+      "description": "## Problem\n~145 SKUs have no `bottleWeightG` in Convex and no weight in Shopify. These need physical measurement or supplier data.\n\n## Acceptance criteria\n- [ ] List produced and handed to Abbas\n- [ ] Weights supplied and loaded to Convex\n- [ ] Included in the BB-011 push"
+    },
+    {
+      "ref": "BB-013",
+      "title": "DECISION: shipping model — flat rate, live carrier rates, or manual quote",
+      "project": "shipping",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "shipping", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Decision needed\nHow do orders actually ship?\n- [ ] Live FedEx/UPS rates at checkout (needs weights + box dimensions + carrier account connected)\n- [ ] Flat rate — how much?\n- [ ] Free over a threshold, flat under\n- [ ] Shipping quoted manually after the order\n\n## Supporting questions\n- Which carrier(s), and whose account? Do we have the account number to connect?\n- Where do we ship from — Union City only, or multiple locations?\n- Any regions/countries we will not ship to?\n\n## Acceptance criteria\n- [ ] Model chosen in writing\n- [ ] Unblocks BB-011, BB-014, BB-017",
+      "blocks": ["BB-011", "BB-014", "BB-017"]
+    },
+    {
+      "ref": "BB-014",
+      "title": "DECISION: free-shipping threshold is effectively unconditional at B2B volumes",
+      "project": "shipping",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "shipping", "pricing", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Problem\nThe site promises free shipping over **$99**. At our real order sizes that means free freight on essentially every order:\n\n| Order size | Orders clearing $99 |\n|---|---|\n| 100 units | 64.9% |\n| 250 units | 96.6% |\n| 500 units | 99.7% |\n| 1,000 units | 100.0% |\n\nHeavy, breakable glass, no weights configured, no carrier answers — this is unbounded freight liability.\n\n## Also: the number contradicts itself\n- Site banner + PDP: **$99**\n- `convex/knowledge.ts` + `/example` page: **$199**\n\n## Industry comparison\nSKS Bottle sets theirs at **$350** (US) / $500 (CA) and sells by case. Calaso quotes freight per order.\n\n## Acceptance criteria\n- [ ] Correct threshold confirmed by Abbas\n- [ ] Single source of truth in code; all copy updated\n- [ ] Threshold actually configured in Shopify, not just written on the site",
+      "blockedBy": ["BB-013"]
+    },
+    {
+      "ref": "BB-015",
+      "title": "Add read_shipping scope to the Shopify Admin token",
+      "project": "shipping",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["shipping", "shopify", "access"],
+      "estimate": 1,
+      "description": "## Problem\nWe cannot audit the store's delivery profiles or rates — `deliveryProfiles` returns `ACCESS_DENIED: Apps must have read_shipping access scope`. Shipping configuration is currently unverifiable from code.\n\nSame gap on `read_discounts`, which blocked verifying whether any quantity discount exists.\n\n## Acceptance criteria\n- [ ] `read_shipping` and `read_discounts` added to the custom app\n- [ ] Token rotated and updated in Vercel + `.env.local` (coordinate with BB-041)\n- [ ] `scripts/audit_shipping_readiness.mjs` extended to report zones and rates"
+    },
+    {
+      "ref": "BB-016",
+      "title": "Collect box sizes and packing weights",
+      "project": "shipping",
+      "priority": 2,
+      "owner": "abbas",
+      "labels": ["shipping", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Needed from Abbas\nWe know bottle weights, but not the parcel:\n- What boxes do you ship in? (dimensions)\n- Packing material weight per box?\n- Do you ship loose units, or only full cases?\n\nWithout these, even with variant weights, carrier rates will be wrong — the dimensional weight of glass in a box is what actually prices.\n\n## Acceptance criteria\n- [ ] Box catalogue with dimensions + tare weight\n- [ ] Packing rules documented\n- [ ] Configured in Shopify packages"
+    },
+    {
+      "ref": "BB-017",
+      "title": "Configure Shopify shipping zones and rates",
+      "project": "shipping",
+      "priority": 1,
+      "owner": "team",
+      "labels": ["launch-blocker", "shipping", "shopify"],
+      "estimate": 3,
+      "description": "## Task\nImplement whatever BB-013 decides, in Shopify. Currently unverifiable from our side (see BB-015).\n\n## Acceptance criteria\n- [ ] Zones cover all regions we sell to\n- [ ] Rates return for a 100, 500, and 1,000-unit test cart\n- [ ] Free-shipping threshold from BB-014 configured\n- [ ] A real test checkout shows a correct, non-zero shipping line",
+      "blockedBy": ["BB-013"]
+    },
+    {
+      "ref": "BB-018",
+      "title": "Define the freight/LTL cutover quantity",
+      "project": "shipping",
+      "priority": 3,
+      "owner": "abbas",
+      "labels": ["shipping", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Needed from Abbas\nAt 3,000+ units this becomes pallets and LTL freight, not parcel. At what quantity does an order stop being a normal shipment and need a freight quote?\n\nThis matters because the price ladder runs to 15,840 units — the site will happily accept an order it cannot parcel-ship.\n\n## Acceptance criteria\n- [ ] Threshold defined\n- [ ] Above it, checkout routes to a freight quote instead of a parcel rate"
+    },
+    {
+      "ref": "BB-019",
+      "title": "Confirm published lead times",
+      "project": "shipping",
+      "priority": 3,
+      "owner": "abbas",
+      "labels": ["content", "shipping", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Needed from Abbas\nThe site says in-stock items ship in **1–3 business days**; `gracePrompt.ts` says processing is 2–3 business days domestic, 1–5 to ship, up to 4–5 in Sept–Dec peak.\n\nAre these current? Do they differ for 1,000-unit orders?\n\n## Acceptance criteria\n- [ ] Confirmed numbers\n- [ ] Single source of truth; site copy and Grace prompt agree"
+    },
+    {
+      "ref": "BB-020",
+      "title": "Wire form submissions to email/Slack notification",
+      "project": "leads",
+      "priority": 1,
+      "owner": "both",
+      "labels": ["launch-blocker", "leads"],
+      "estimate": 3,
+      "description": "## Problem\n`convex/forms.ts` writes every quote, sample, contact, and newsletter submission into `formSubmissions` and **stops there**. No email integration exists anywhere in the codebase (verified: no Resend, SendGrid, Postmark, Nodemailer, or Slack webhook). The only reader is `listByType`, an `internalQuery` no UI can call.\n\nA quote request is invisible unless somebody opens the Convex dashboard.\n\n## Why this is urgent\nQuotes are the fallback path for all 398 unsellable SKUs *and* for all volume pricing. It is the primary conversion path right now — and it is unmonitored.\n\n## Needed from Abbas\n- Destination email address(es)\n- Slack/SMS alerts too?\n- Who owns responding, and within what SLA?\n\n## Acceptance criteria\n- [ ] Provider chosen and configured\n- [ ] Every `forms.submit` triggers a notification containing all line items\n- [ ] Failure to notify is logged, never silent\n- [ ] Test submission received end-to-end"
+    },
+    {
+      "ref": "BB-021",
+      "title": "Build an internal view for form submissions",
+      "project": "leads",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["leads", "portal"],
+      "estimate": 3,
+      "description": "## Problem\nEven with notifications (BB-020), there is nowhere to see the history, mark a lead handled, or recover a missed email.\n\n## Acceptance criteria\n- [ ] Authenticated internal page listing submissions with filters by type and date\n- [ ] Shows structured line items where present\n- [ ] Marks handled/unhandled\n- [ ] Gated to team accounts only"
+    },
+    {
+      "ref": "BB-022",
+      "title": "Restore structured RFQ line items (currently dead code)",
+      "project": "leads",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["leads", "regression"],
+      "estimate": 2,
+      "description": "## Problem\n`FormPage.tsx:92` is the only producer of structured quote line items, fed exclusively from `sessionStorage['bb-rfq-line-items']`. The only writer (`persistQuoteDraft` in CartDrawer) was deleted this week, so **every quote now submits an empty `rfqLineItems` array**.\n\nSales receives free-text `products`/`quantities` blobs instead of resolvable SKUs, variant IDs, quantities, unit prices, and neck sizes.\n\n## Direction\nCart-level quote CTAs are deliberately gone — a cart is for checking out (confirmed with Jordan, and it matches both Calaso and SKS: one cart, one purpose). Calaso still captures a structured line-item list, they just capture it **before** the cart.\n\nSo: have the PDP \"Request a Quote\" button write `bb-rfq-line-items` for that product.\n\n## Acceptance criteria\n- [ ] PDP quote CTA writes the structured draft\n- [ ] A quote submitted from a PDP arrives with populated `rfqLineItems`\n- [ ] No quote CTA reintroduced in cart or cart drawer\n- [ ] If rejected, remove the orphaned reader and the line-item editor UI instead"
+    },
+    {
+      "ref": "BB-023",
+      "title": "Cut Clerk over to its production instance",
+      "project": "auth",
+      "priority": 1,
+      "owner": "team",
+      "labels": ["launch-blocker", "auth"],
+      "estimate": 3,
+      "description": "## Problem\nVercel **production** runs Clerk's **development** instance. Verified three ways:\n```\nBackend API  → GET /v1/instance → environment_type: \"development\"\nVercel prod  → pk_test_… / sk_test_…\nfrontend     → instanceEnvironmentType: \"development\"\n```\nHost: `together-lemur-38.clerk.accounts.dev`. Only domain: `together.lemur-38.lcl.dev`. 4 users.\n\nConsequences: hard user cap (~100), \"Development mode\" badge visible to customers, dev-grade sessions, instance can be reset.\n\nNote: the dashboard URL Jordan supplied points at `ins_3EyaM8yXPtZB8lTO6AUP7T43Oe2`, a **different** instance in the same app — likely the production one already exists. **Users do not migrate between instances.**\n\n## Acceptance criteria\n- [ ] Production instance confirmed/configured\n- [ ] Production domain added, DNS records (clerk., accounts., clkmail.) verified\n- [ ] `pk_live_`/`sk_live_` set in Vercel production\n- [ ] Paths set: sign-in `/sign-in`, sign-up `/sign-up`, after-auth `/portal`\n- [ ] Best Bottles logo uploaded (currently `logoImageUrl: null`)\n- [ ] \"Development mode\" badge gone from the live site",
+      "blocks": ["BB-024"]
+    },
+    {
+      "ref": "BB-024",
+      "title": "Create a Google Cloud OAuth client before Clerk production cutover",
+      "project": "auth",
+      "priority": 1,
+      "owner": "both",
+      "labels": ["launch-blocker", "auth", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Problem — this is the cutover trap\nGoogle sign-in is enabled and working today (`socialEnabled: [\"oauth_google\"]`), but a **development** Clerk instance uses Clerk's **shared** Google OAuth app. Production instances reject those.\n\n**Google sign-in will break the moment we flip to `pk_live_`** unless our own Google Cloud OAuth client exists first. It works right up until it doesn't, which is why this gets missed.\n\n## Needed\n- A Google Cloud account/project (Abbas or us?)\n- OAuth consent screen branded Best Bottles\n- Client ID + secret pasted into Clerk → SSO → Google\n- Authorized redirect URI from the Clerk dashboard\n\n## Acceptance criteria\n- [ ] Own OAuth client created\n- [ ] Consent screen shows \"Best Bottles\", not accounts.dev\n- [ ] Google sign-in verified on the production instance before DNS cutover",
+      "blockedBy": ["BB-023"]
+    },
+    {
+      "ref": "BB-025",
+      "title": "DECISION: portal onboarding — invite-only or self-serve organizations",
+      "project": "auth",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "portal", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Problem\nThe B2B portal keys off a Clerk **organization**. With none active it shows \"Choose your organization to use the portal.\" So **a customer who signs up on their own reaches a portal they cannot use** — a dead end.\n\nCurrent sign-up config: email (required) → verification code → password (required); first/last name **optional**; no phone; no company field.\n\n## Options\n- **Invite-only** — Abbas approves each customer. Works today; the `ticket` attribute is already enabled.\n- **Self-serve** — anyone signs up and creates/joins an org. Needs Organizations with self-serve creation enabled and a company field at sign-up.\n\n## Acceptance criteria\n- [ ] Decision recorded\n- [ ] Onboarding path implemented end-to-end with no dead end\n- [ ] A brand-new account reaches a functioning portal"
+    },
+    {
+      "ref": "BB-026",
+      "title": "Seed portalAccounts records so the portal shows real data",
+      "project": "auth",
+      "priority": 2,
+      "owner": "both",
+      "labels": ["portal", "data"],
+      "estimate": 2,
+      "description": "## Problem\nFour Clerk organizations exist (TestCompany, My Organization, Tarife Attar, ASALA) and **none has a matching `portalAccounts` record in Convex**. The portal renders \"Account sync pending\" with no orders, terms, credit, or account manager.\n\nDeliberately not fabricated — inventing an account number and credit limit could be mistaken for real data.\n\n## Acceptance criteria\n- [ ] Real account records for genuine customer orgs, or a clearly-labelled demo account for presentations\n- [ ] Test orgs (TestCompany, My Organization) removed or renamed\n- [ ] Portal dashboard renders terms, credit, and orders for a signed-in org"
+    },
+    {
+      "ref": "BB-027",
+      "title": "Make first/last name required at sign-up",
+      "project": "auth",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["auth", "onboarding", "ux"],
+      "estimate": 1,
+      "description": "## Problem\nNames are optional, so they render with a grey \"Optional\" tag and most users skip them. The portal then has no name to greet the customer with, and sales gets a lead with an email but no person.\n\n## Acceptance criteria\n- [ ] Clerk → User & Authentication → Personal information: first/last set required\n- [ ] Sign-up form no longer shows \"Optional\" on names\n- [ ] Existing 4 users backfilled or prompted"
+    },
+    {
+      "ref": "BB-028",
+      "title": "Replace the invalid OpenAI key on prod Convex (Grace text mode is down)",
+      "project": "grace",
+      "priority": 1,
+      "owner": "both",
+      "labels": ["launch-blocker", "grace", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Problem\nAll 50 Grace eval cases return `INFRA_ERROR`. Customers get *\"I ran into an unexpected issue.\"*\n\nRoot cause: `OPENAI_API_KEY` on the **prod Convex deployment** returns **401 Incorrect API key** from OpenAI. The key in `.env.local` is also invalid.\n\n```bash\nnpx convex env set OPENAI_API_KEY sk-... --prod\n```\n\n## Important\nGrace's *retrieval* layer is healthy — 36/36 matrix, all catalog tools pass, ElevenLabs voice and signed-url OK. **Only the text LLM call is broken.** Voice mode is unaffected.\n\n## Acceptance criteria\n- [ ] Valid key with billing set on prod Convex\n- [ ] `node scripts/eval_grace.mjs` returns real scores, not INFRA_ERROR\n- [ ] Text Grace answers a catalog question on staging"
+    },
+    {
+      "ref": "BB-029",
+      "title": "Fix Grace's product count drift (reports 2,320 vs actual 2,330)",
+      "project": "grace",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["grace", "data-quality"],
+      "estimate": 2,
+      "description": "## Problem\n`getCatalogStats` sums `productGroups.variantCount`, which has drifted from reality:\n```\nfine-mist-sprayer-13-415                 declared  9 → actual 12\nfine-mist-sprayer-18-415                 declared  6 → actual  8\ncircle-50ml-frosted-18-415-antiquespray  declared  9 → actual 18\n+ 4 empty groups still declaring 1 variant each\n```\nGrace tells customers 2,320; the catalog holds 2,330.\n\n## Constraint\n**Do not run `productGroupsRebuild --apply`** until `buildGroupSlug` is reconciled — it produces 194 duplicate groups. A targeted `variantCount` recount only.\n\n## Acceptance criteria\n- [ ] `variantCount` recounted from the `by_productGroupId` FK\n- [ ] `getCatalogStats` matches the true product count\n- [ ] `scripts/audit_group_checkout_integrity.mjs` reports 0 drift"
+    },
+    {
+      "ref": "BB-030",
+      "title": "Delete the live, indexable, purchasable test product",
+      "project": "content",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["seo", "cleanup", "data"],
+      "estimate": 1,
+      "description": "## Problem\n`/products/webhook-test-hmac` renders publicly as **\"HMAC integration test\"**, is in the sitemap, and its SKU `HMAC-TEST-ONLY` was checkout-ready — a customer could have bought it.\n\nDeleting production Convex records is destructive, so it was left for a human decision.\n\n## Acceptance criteria\n- [ ] `webhook-test-hmac` productGroup and `HMAC-TEST-ONLY` product deleted from prod Convex\n- [ ] Route 404s\n- [ ] Gone from `/server-sitemap.xml`\n- [ ] Google removal requested if already indexed"
+    },
+    {
+      "ref": "BB-031",
+      "title": "Resolve 4 empty product groups rendering dead PDPs",
+      "project": "content",
+      "priority": 2,
+      "owner": "both",
+      "labels": ["catalog", "seo", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Problem\nThese groups have **zero** variants but render a live PDP with a phantom \"FROM $1.08/ea\" price and a \"1 VARIANT\" badge:\n```\nvial-3ml-clear-13-425\nvial-3ml-cobalt-blue-13-425\ncylinder-9ml-clear-18-400\ncylinder-9ml-clear-18-400-glasswand\n```\nThey degrade to \"Request a Quote\" rather than crashing, but they are dead ends — and all are in the sitemap.\n\n## Question for Abbas\nShould these products exist (repopulate) or not (delete)?\n\n## Acceptance criteria\n- [ ] Each either populated with real variants or deleted\n- [ ] No group with 0 variants renders a PDP\n- [ ] Sitemap regenerated"
+    },
+    {
+      "ref": "BB-032",
+      "title": "VERIFY: \"sourced and warehoused domestically in the USA\" claim",
+      "project": "content",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "legal", "content", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Problem — legal exposure\n`convex/knowledge.ts` asserts:\n- *\"All products are sourced and warehoused domestically in the USA\"*\n- *\"our entire supply chain is domestic\"*, *\"no tariff exposure\"*\n\n**Made in USA claims are FTC-regulated.** If the glass is imported, this has to change.\n\n## Current status\nNot live — the text agent builds its prompt only from `gracePrompt.ts`. But it activates the moment anyone re-seeds `graceKnowledge`.\n\nNote SKS Bottle lists country of origin **per product** (\"Mexico\") rather than making a blanket brand claim.\n\n## Acceptance criteria\n- [ ] Abbas confirms actual sourcing\n- [ ] Claims corrected or removed from `knowledge.ts`\n- [ ] Consider a per-product country-of-origin field instead\n- [ ] `gracePrompt.ts` line 272 (\"lead with domestic supply chain reliability\") reviewed"
+    },
+    {
+      "ref": "BB-033",
+      "title": "Resolve the $99 vs $199 free-shipping contradiction in content",
+      "project": "content",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["content", "shipping"],
+      "estimate": 1,
+      "description": "## Problem\n- Navbar + PDP: free shipping over **$99**\n- `convex/knowledge.ts:34`: free over **$199**\n- `src/app/example/page.tsx:15`: **$199**\n\nGrace would quote $199 while the site promises $99.\n\nDepends on BB-014 for the correct number.\n\n## Acceptance criteria\n- [ ] One constant, imported everywhere\n- [ ] `knowledge.ts` and `/example` updated\n- [ ] A test asserts no divergent threshold string exists",
+      "blockedBy": ["BB-014"]
+    },
+    {
+      "ref": "BB-034",
+      "title": "Verify the \"over two decades of expertise\" heritage claim",
+      "project": "content",
+      "priority": 3,
+      "owner": "abbas",
+      "labels": ["content", "legal", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Context\nThe old \"170 years / since 1850s\" claim was removed as false. The current copy says *\"a family-owned Bay Area company (Union City, CA) with over two decades of fragrance industry expertise.\"* March audit item H15 flagged heritage messaging as still needing clarification.\n\n## Acceptance criteria\n- [ ] Abbas confirms the accurate founding date and phrasing\n- [ ] `gracePrompt.ts` and site copy aligned"
+    },
+    {
+      "ref": "BB-035",
+      "title": "/collections returns 404",
+      "project": "content",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["seo", "routing"],
+      "estimate": 1,
+      "description": "## Problem\n`/collections` 404s. Only `collections/boston-round-30ml` exists, and nothing links to it. The March audit also flagged its hardcoded breadcrumbs with non-functional `href=\"#\"` links.\n\n## Acceptance criteria\n- [ ] Either build a real `/collections` index or remove the route entirely\n- [ ] No orphan prototype pages remain reachable"
+    },
+    {
+      "ref": "BB-036",
+      "title": "Unknown product URLs return HTTP 200 instead of 404",
+      "project": "content",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["seo"],
+      "estimate": 1,
+      "description": "## Problem\n`/products/does-not-exist-xyz` returns **HTTP 200** with a \"Product Not Found\" body. It is correctly `noindex`, so SEO damage is limited, but Google prefers a real 404 and soft-404s waste crawl budget.\n\n## Acceptance criteria\n- [ ] Missing products call `notFound()` and return 404\n- [ ] Legacy route overrides still redirect correctly (301, not 404)"
+    },
+    {
+      "ref": "BB-037",
+      "title": "DECISION: confirm the launch domain and DNS cutover",
+      "project": "content",
+      "priority": 1,
+      "owner": "abbas",
+      "labels": ["launch-blocker", "seo", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Problem\nSitemap and canonicals emit `https://www.bestbottles.com` — which currently serves the **legacy PHP site**. Staging runs at `best-bottles-website.vercel.app`.\n\nLaunch means pointing bestbottles.com at the new app. That needs explicit confirmation, because everything else (Clerk domain, Sanity CORS, Shopify, OG tags) keys off it.\n\n## Questions\n- Confirmed that bestbottles.com is the launch domain?\n- Who controls DNS?\n- Target date?\n\n## Acceptance criteria\n- [ ] Domain and date confirmed\n- [ ] `NEXT_PUBLIC_SITE_URL` correct in Vercel production\n- [ ] Clerk, Sanity CORS, and Shopify allowed origins updated in lockstep"
+    },
+    {
+      "ref": "BB-038",
+      "title": "Define returns policy and terms",
+      "project": "content",
+      "priority": 3,
+      "owner": "abbas",
+      "labels": ["content", "legal", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Needed from Abbas\n- Return window and restocking fee?\n- Who pays return shipping?\n- Minimum order? Any SKU-level minimums?\n\nSKS publishes \"free online returns up to 45 days\" as a competitive differentiator; we currently have a `/shipping-returns` page that needs real numbers.\n\n## Acceptance criteria\n- [ ] Policy confirmed and published\n- [ ] Matches whatever Shopify enforces"
+    },
+    {
+      "ref": "BB-039",
+      "title": "Verify tax configuration and wholesale exemption handling",
+      "project": "content",
+      "priority": 2,
+      "owner": "both",
+      "labels": ["legal", "checkout", "needs-abbas"],
+      "estimate": 2,
+      "description": "## Needed\n- Is Shopify tax calculation configured for every state we sell into?\n- How are tax-exempt wholesale customers handled at checkout?\n\nThe portal already models `taxExempt` on `portalAccounts`, but nothing connects it to Shopify checkout.\n\n## Acceptance criteria\n- [ ] Tax registration/nexus confirmed with Abbas\n- [ ] Exempt customers verified not charged tax at checkout\n- [ ] Path documented for a customer to submit an exemption certificate"
+    },
+    {
+      "ref": "BB-040",
+      "title": "Enable Shopify test mode for the demo, and disable before launch",
+      "project": "security",
+      "priority": 2,
+      "owner": "abbas",
+      "labels": ["shopify", "demo", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Task\nTo demo a completed purchase without a real charge, enable test mode in Shopify Payments (Settings → Payments → Manage → test mode). Complete the flow with a test card — real order record, no real money.\n\n**Must be turned OFF before real launch**, or live orders will not capture payment.\n\n## Acceptance criteria\n- [ ] Test mode enabled for the demo\n- [ ] Full flow demoed: catalog → PDP → cart → checkout → confirmation\n- [ ] Test mode disabled and verified before go-live\n- [ ] Test orders cancelled/archived"
+    },
+    {
+      "ref": "BB-041",
+      "title": "Rotate all credentials exposed in git history",
+      "project": "security",
+      "priority": 1,
+      "owner": "team",
+      "labels": ["launch-blocker", "security"],
+      "estimate": 3,
+      "description": "## Problem\nLive credentials are in git history and readable from the Convex dashboard:\n- ElevenLabs API key + Shopify Admin token (`.mcp.json` was tracked in git)\n- Prod Convex `OPENAI_API_KEY` and `ANTHROPIC_API_KEY` readable via `npx convex env list --prod`\n\nThe OpenAI key must be replaced anyway (BB-028), so rotate the whole set in one pass.\n\n## Acceptance criteria\n- [ ] ElevenLabs key rotated; updated in Vercel, Convex, `.env.local`\n- [ ] Shopify Admin token rotated (combine with BB-015 scope change)\n- [ ] OpenAI + Anthropic keys rotated on prod Convex\n- [ ] `.mcp.json` confirmed gitignored\n- [ ] Old keys revoked and verified dead\n- [ ] Consider history rewrite or accept and rotate",
+      "blocks": ["BB-015", "BB-028"]
+    },
+    {
+      "ref": "BB-042",
+      "title": "Fix local env inconsistency (Convex dev vs prod)",
+      "project": "security",
+      "priority": 4,
+      "owner": "team",
+      "labels": ["devex"],
+      "estimate": 1,
+      "description": "## Problem\n`.env.local` has `CONVEX_DEPLOYMENT=dev:helpful-elephant-638` while `NEXT_PUBLIC_CONVEX_URL` points at **prod** (`precise-raccoon-123`). The Convex CLI writes to dev while the app reads prod — an easy way to \"fix\" something invisibly, or to run a migration against the wrong deployment.\n\n## Acceptance criteria\n- [ ] Documented in the README which combination is intended\n- [ ] A guard or npm script that warns on mismatch"
+    },
+    {
+      "ref": "BB-043",
+      "title": "Triage the ~40 open findings from the March 2026 UX audit",
+      "project": "ux",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["ux", "research"],
+      "estimate": 3,
+      "description": "## Problem\n`UX-AUDIT-REPORT.md` (411 lines, March 2026) holds ~40 severity-ranked findings that were never tracked to closure. Several were independently rediscovered in July:\n\n| March finding | Rediscovered July |\n|---|---|\n| **H12a** Only 3 pricing tiers — missing production volume tiers | BB-005 |\n| **C6** No shipping or lead time info anywhere in cart flow | BB-013 |\n| **C5** No tier pricing nudge in cart | BB-003 |\n| **M6** No \"Request Quote\" button in cart drawer | …which we then removed |\n\nThat last row is the point: M6 logged a gap, and five months later the opposite change shipped with nothing surfacing the contradiction.\n\n## Method\nBoth March docs were *codebase walkthroughs* — inferred from source, never observed on a running site. That is why the expensive problems (410 checkouts, wrong prices charged) went unseen. Re-walk **against live staging**.\n\n## Acceptance criteria\n- [ ] Every March finding marked fixed / still-open / obsolete against staging\n- [ ] Still-open findings become Linear issues linked to this one\n- [ ] Obsolete findings struck with a reason\n- [ ] Expect roughly a third done and a third stale"
+    },
+    {
+      "ref": "BB-044",
+      "title": "Competitive study: 5 competitors, journey-based, evidence-backed",
+      "project": "ux",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["ux", "research"],
+      "estimate": 5,
+      "description": "## Scope\nPanel: **Calaso** (quote model, EU premium), **SKS/Pipeline Packaging** (US e-comm leader — note their site now says \"SKS Bottle is now Pipeline Packaging\", worth checking for consolidation), **Berlin Packaging** (largest US hybrid), **The Cary Company** (mid-market hybrid), **Baralan** (closest to Nemat's premium fragrance niche).\n\n## Structure\nUnit of analysis is **persona × journey step × site**, not page × site. Reuse the four existing personas so March scores stay comparable. Every row carries three columns: **legacy bestbottles.com / staging / best-in-class** — the legacy column is what surfaced the pricing regression and most audits omit it.\n\nStore as machine-readable records in `data/competitive/` so quarterly re-runs can be diffed, with docs generated from them:\n```\nfindings.jsonl      id, source, persona, journey, severity, status, owner, evidence[]\npanel.json          sites + per-journey URLs\nobservations.jsonl  one row per (site × journey-step)\nevidence/<site>/    screenshots + scraped markdown\n```\n\n## 12 fixed dimensions\nPrice visibility · tiers shown and where · cart model · MOQ/pack rounding · free-shipping threshold · published weights/dimensions · country of origin · stock visibility · fitment cross-sell · sample flow · account gating · lead times.\n\n## Every finding ends in an owner tag\n`code` / `content` / `abbas` — findings without an owner are how H12a stayed open five months.\n\n## Already established (do not re-verify)\nThe pricing-display dimension is settled: legacy Best Bottles, SKS, and Calaso all surface the full ladder; the new site is the only one that doesn't.\n\n## Acceptance criteria\n- [ ] Register populated for all 5 competitors + legacy + staging\n- [ ] Matrix rendered with the three-way column\n- [ ] Findings triaged into Linear with owner tags\n- [ ] Re-runnable and diffable",
+      "blockedBy": ["BB-043"]
+    },
+    {
+      "ref": "BB-045",
+      "title": "DECISION: which buyer persona are we optimizing for",
+      "project": "ux",
+      "priority": 2,
+      "owner": "abbas",
+      "labels": ["ux", "strategy", "needs-abbas"],
+      "estimate": 1,
+      "description": "## Context\nThe March analysis weights four personas equally: Decisive Buyer, Explorer, Overwhelmed Newcomer, Bulk/B2B Buyer. Jordan indicates it is **mostly B2B bulk, averaging 100–1,000 units per order**, with larger orders above that.\n\nIf that holds, two of the four personas are probably not who we are building for, which would let us drop a meaningful chunk of the March backlog rather than work it.\n\n## Why it matters\nAt 100–1,000 units the B2B buyer cares, in order: correct price at their quantity, freight certainty, case/MOQ clarity, fast reorder. Discovery polish — where the rebuild is genuinely strong — matters less to them than any of those.\n\n## Acceptance criteria\n- [ ] Primary and secondary personas confirmed\n- [ ] March backlog re-scored against them; out-of-scope items closed as won't-do\n- [ ] BB-044 dimensions weighted accordingly"
+    },
+    {
+      "ref": "BB-046",
+      "title": "Restore legacy parity: tier ladder + quantity calculator on listing pages",
+      "project": "ux",
+      "priority": 2,
+      "owner": "team",
+      "labels": ["ux", "pricing", "regression"],
+      "estimate": 5,
+      "description": "## Problem\nLegacy bestbottles.com puts the **full five-tier ladder and a live quantity calculator inline on the category page** — no click required, ~180 products per page:\n```\nGBV1DrmBlackCapSht\nPack Of : 1 pcs - $0.39/pc  12 pcs - $4.45($0.37/pc)  144 pcs - $50.54($0.35/pc)\n          576 pcs - $190.94($0.33/pc)  2880 pcs - $876.10($0.30/pc)\nQty: [__]  Add to  →  Total Quantity: __   Price: __\n```\n\nThe new catalog shows a \"From $X\" price and requires a PDP visit to see any tier at all.\n\n## Trade-off worth being explicit about\nThe rebuild is far better at discovery — filters, sort, search, Grace, fitment — which legacy has **none** of (Filter count 0, Sort count 0). This is not \"go back to the old site.\" It is: keep the discovery gains, restore the commercial density that a repeat B2B buyer relies on.\n\nDepends on BB-005 (PDP ladder) landing first, and on BB-045 confirming the B2B buyer is primary.\n\n## Acceptance criteria\n- [ ] Catalog cards show the tier ladder, or a compact \"from $X at 144+\" summary\n- [ ] Quantity entry + add-to-cart from the listing for repeat buyers\n- [ ] Does not degrade catalog performance (356 groups)\n- [ ] Mobile layout verified",
+      "blockedBy": ["BB-005", "BB-045"]
+    },
+    {
+      "ref": "BB-047",
+      "title": "Set up a launch smoke-test suite runnable against any environment",
+      "project": "security",
+      "priority": 3,
+      "owner": "team",
+      "labels": ["testing", "devex"],
+      "estimate": 2,
+      "description": "## Context\nSeveral audit scripts already exist and each caught a real defect:\n```\nscripts/audit_launch_readiness.mjs          checkout/price/image coverage\nscripts/audit_group_checkout_integrity.mjs  group→SKU FK integrity\nscripts/audit_checkout_smoke.mjs            live checkout across families/tiers\nscripts/audit_price_parity.mjs              Convex vs Shopify price parity\nscripts/audit_shopify_sellability.mjs       full sellability sweep\nscripts/audit_shipping_readiness.mjs        weights + carrier readiness\nscripts/audit_typical_order_economics.mjs   100–1,000 unit order economics\n```\n\n## Task\nOne command that runs all of them against a chosen environment and fails loudly on regression, so launch readiness is a check rather than a memory.\n\n## Acceptance criteria\n- [ ] `npm run audit:launch` runs the full set\n- [ ] Non-zero exit on any launch-blocking regression\n- [ ] Runs against staging and production by env var\n- [ ] Documented in the README"
+    }
+  ]
+}
