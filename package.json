@@ -37,6 +37,7 @@
     "shopify:sync:validate": "node scripts/push_convex_to_shopify.mjs --validate-only",
     "shopify:sync:dry": "node scripts/push_convex_to_shopify.mjs",
     "paper-doll:manifest": "node scripts/paper-doll/generate-manifest.mjs",
+    "paper-doll:recanvas:cylinder-9ml": "node scripts/paper-doll/recanvas-cylinder-9ml.mjs",
     "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs"
   },
   "dependencies": {
