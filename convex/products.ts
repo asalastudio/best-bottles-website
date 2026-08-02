@@ -7,6 +7,7 @@ import {
     normalizeComponentsByType,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 
 function isSanityCdnUrl(value: string) {
     try {
@@ -1274,6 +1275,97 @@ export const getGroupsByFamily = query({
             .query("productGroups")
             .withIndex("by_family", (q) => q.eq("family", args.family))
             .collect();
+    },
+});
+
+/**
+ * Dedicated family-page read model.
+ *
+ * Counts and applicator breadth are derived from product rows rather than
+ * cached product-group summaries, which are known to omit the plastic roller
+ * path for some 9 ml Cylinder groups.
+ */
+export const getFamilyPageData = query({
+    args: { family: v.string() },
+    handler: async (ctx, args) => {
+        const groups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+        const eligibleGroups = groups.filter((group) => group.variantCount > 0);
+        const variantsByGroup = await Promise.all(
+            eligibleGroups.map((group) =>
+                ctx.db
+                    .query("products")
+                    .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                    .collect(),
+            ),
+        );
+
+        return buildFamilyPageData(
+            args.family,
+            eligibleGroups.map((group) => ({
+                id: group._id,
+                slug: group.slug,
+                family: group.family,
+                capacity: group.capacity,
+                capacityMl: group.capacityMl,
+                neckThreadSize: group.neckThreadSize,
+                color: group.color,
+                variantCount: group.variantCount,
+                priceRangeMin: group.priceRangeMin,
+                paperDollFamilyKey: group.paperDollFamilyKey ?? null,
+                applicatorTypes: group.applicatorTypes ?? [],
+            })),
+            variantsByGroup.flatMap((variants, index) =>
+                variants.map((variant) => ({
+                    groupId: eligibleGroups[index]._id,
+                    applicator: variant.applicator,
+                })),
+            ),
+        );
+    },
+});
+
+/**
+ * Exact product cohort used by the unified PDP. Capacity is never sufficient:
+ * family, capacity, neck finish, and Sanity family key must all match.
+ */
+export const getProductCohort = query({
+    args: {
+        family: v.string(),
+        capacityMl: v.number(),
+        neckThreadSize: v.string(),
+        paperDollFamilyKey: v.string(),
+    },
+    handler: async (ctx, args) => {
+        const familyGroups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+        const groups = familyGroups.filter((group) =>
+            group.variantCount > 0
+            && group.capacityMl === args.capacityMl
+            && group.neckThreadSize === args.neckThreadSize
+            && group.paperDollFamilyKey === args.paperDollFamilyKey,
+        );
+        const variants = (
+            await Promise.all(
+                groups.map((group) =>
+                    ctx.db
+                        .query("products")
+                        .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                        .collect(),
+                ),
+            )
+        ).flat();
+
+        return {
+            groups,
+            variants,
+            declaredVariantCount: groups.reduce((sum, group) => sum + group.variantCount, 0),
+            actualVariantCount: variants.length,
+        };
     },
 });
 
