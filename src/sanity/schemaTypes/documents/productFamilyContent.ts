@@ -32,6 +32,21 @@ export const productFamilyContent = defineType({
             description: "Must match the family name exactly as it appears in the catalog (e.g. Diva, Cylinder, Boston Round).",
         }),
         defineField({
+            name: "familyPageSlug",
+            title: "Family Page Slug",
+            type: "slug",
+            options: { source: "family", maxLength: 96 },
+            validation: (Rule) => Rule.required(),
+            description: "Dedicated catalog route, e.g. cylinder becomes /catalog/cylinder.",
+        }),
+        defineField({
+            name: "familyPageEyebrow",
+            title: "Family Page Eyebrow",
+            type: "string",
+            initialValue: "Buildable Bottle Family",
+            description: "Short label above the family name. Keep this specific to how customers shop.",
+        }),
+        defineField({
             name: "templateType",
             title: "Default Template",
             type: "string",
@@ -44,7 +59,19 @@ export const productFamilyContent = defineType({
             title: "Family Hero Image",
             type: "image",
             options: { hotspot: true },
-            description: "Lifestyle or editorial image representing the whole family. Shown as the banner on the catalog page when this family is filtered. Recommended: 1400×600px wide.",
+            description: "Editorial beauty image for the dedicated family page. Compose at 2080×2288 so the desktop and mobile crops preserve the bottle, stone, and negative space.",
+        }),
+        defineField({
+            name: "familyHeroAlt",
+            title: "Family Hero Alt Text",
+            type: "string",
+            validation: (Rule) => Rule.custom((value, context) => {
+                const parent = context.document as { familyHeroImage?: unknown } | undefined;
+                return parent?.familyHeroImage && !value
+                    ? "Alt text is required when a family hero image is present."
+                    : true;
+            }),
+            description: "Describe the visible bottles and material setting; do not repeat marketing copy.",
         }),
         defineField({
             name: "familyStory",
@@ -52,6 +79,12 @@ export const productFamilyContent = defineType({
             type: "text",
             rows: 3,
             description: "2–3 sentence brand narrative about this bottle family. Shown below the family name on catalog and product pages.",
+        }),
+        defineField({
+            name: "featuredCohortSlug",
+            title: "Featured Builder Cohort Slug",
+            type: "string",
+            description: "Convex-owned unified PDP slug, e.g. cylinder-9ml-17-415. This is editorial routing only; it does not define compatibility.",
         }),
         defineField({
             name: "pageBlocks",

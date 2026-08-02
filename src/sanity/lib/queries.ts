@@ -126,6 +126,40 @@ export const JOURNAL_SLUGS_QUERY = `
 `;
 
 import { client, isSanityConfigured } from "./client";
+import {
+    assertStorefrontPaperDollFamily,
+    type StorefrontPaperDollFamily,
+} from "@/lib/paper-doll/sanity";
+
+export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
+  *[_type == "paperDollFamily" && familyKey == $familyKey][0] {
+    _id,
+    familyKey,
+    displayName,
+    canvasPreset,
+    canvasWidth,
+    canvasHeight,
+    pipelineVersion,
+    assetRevision,
+    storefrontReady,
+    layerOrderRollon,
+    layerOrderSpray,
+    layerOrderShortcap,
+    layerOrderLotion,
+    anchorsJson,
+    layerAssets[] {
+      _key,
+      slot,
+      variantKey,
+      sourceFilename,
+      "imageUrl": image.asset->url,
+      "imageWidth": image.asset->metadata.dimensions.width,
+      "imageHeight": image.asset->metadata.dimensions.height,
+      offsetX,
+      offsetY
+    }
+  }
+`;
 
 // Mega menu panels only (for Navbar)
 export const MEGA_MENU_QUERY = `
@@ -157,6 +191,20 @@ export async function getMegaMenuPanels(): Promise<HomepageData["megaMenuPanels"
     } catch {
         return null;
     }
+}
+
+/**
+ * Fetch a Paper Doll family only through the strict storefront release gate.
+ * A present-but-invalid Sanity document throws with actionable diagnostics;
+ * it never silently falls back to legacy dimensions or partial layers.
+ */
+export async function getStorefrontPaperDollFamily(
+    familyKey: string,
+): Promise<StorefrontPaperDollFamily | null> {
+    if (!isSanityConfigured) return null;
+    const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
+    if (!family) return null;
+    return assertStorefrontPaperDollFamily(family);
 }
 
 export type HomepageData = {
