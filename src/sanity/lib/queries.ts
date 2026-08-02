@@ -161,6 +161,18 @@ export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
   }
 `;
 
+export const PRODUCT_FAMILY_PAGE_QUERY = `
+  *[_type == "productFamilyContent" && family == $family][0] {
+    family,
+    "familyPageSlug": familyPageSlug.current,
+    familyPageEyebrow,
+    familyStory,
+    familyHeroAlt,
+    featuredCohortSlug,
+    "familyHeroImageUrl": familyHeroImage.asset->url
+  }
+`;
+
 // Mega menu panels only (for Navbar)
 export const MEGA_MENU_QUERY = `
   *[_type == "homepagePage"][0] {
@@ -205,6 +217,23 @@ export async function getStorefrontPaperDollFamily(
     const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
     if (!family) return null;
     return assertStorefrontPaperDollFamily(family);
+}
+
+export type ProductFamilyPageContent = {
+    family: string;
+    familyPageSlug?: string;
+    familyPageEyebrow?: string;
+    familyStory?: string;
+    familyHeroAlt?: string;
+    featuredCohortSlug?: string;
+    familyHeroImageUrl?: string;
+};
+
+export async function getProductFamilyPageContent(
+    family: string,
+): Promise<ProductFamilyPageContent | null> {
+    if (!isSanityConfigured) return null;
+    return client.fetch<ProductFamilyPageContent | null>(PRODUCT_FAMILY_PAGE_QUERY, { family });
 }
 
 export type HomepageData = {

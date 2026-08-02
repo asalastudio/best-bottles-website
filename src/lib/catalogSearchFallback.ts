@@ -47,6 +47,7 @@ export interface CatalogSearchGroup {
     priceRangeMin: number | null;
     priceRangeMax: number | null;
     heroImageUrl?: string | null;
+    paperDollFamilyKey?: string | null;
     applicatorTypes?: string[] | null;
 }
 
