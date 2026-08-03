@@ -9,6 +9,8 @@ import {
 } from "../../../../../convex/graceSearchUtils";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 import { noMatchGraceToolResult } from "@/lib/graceToolResults";
+import { searchCatalogServer } from "@/lib/catalogServer";
+import type { GraceRefineState } from "@/lib/grace/refineState";
 
 /**
  * Provider-neutral server tools proxy for Grace.
@@ -101,6 +103,42 @@ export async function POST(req: NextRequest) {
             case "searchCatalog": {
                 const searchParams = resolveSearchCatalogParameters(parameters);
                 const returnRaw = wantsRawSearchCatalogResult(parameters);
+                const refineState = parameters.refineState as GraceRefineState | undefined;
+                if (refineState?.filters && refineState.sort && refineState.view) {
+                    const catalog = await searchCatalogServer({
+                        filters: refineState.filters,
+                        sort: refineState.sort,
+                        view: refineState.view,
+                        limit: 24,
+                        cursor: null,
+                    });
+                    if (catalog.items.length === 0) {
+                        result = noMatchGraceToolResult({
+                            message: `No verified products match the active Refine state for "${searchParams.searchTerm}". Keep the active constraints unless the customer explicitly asks to broaden them.`,
+                            requested: { searchTerm: searchParams.searchTerm },
+                            suggestedQueries: [],
+                            warnings: ["Never silently remove a family, capacity, color, applicator, or neck-thread constraint."],
+                        });
+                        break;
+                    }
+                    const primarySkuByGroup = new Map(catalog.primarySkus.map((row) => [String(row.groupId), row]));
+                    const lines = [
+                        `Verified Refine results: ${catalog.totalCount} product group${catalog.totalCount === 1 ? "" : "s"}. Showing ${catalog.items.length}.`,
+                        ...catalog.items.map((group) => {
+                            const primary = primarySkuByGroup.get(String(group._id));
+                            return [
+                                group.displayName,
+                                group.capacity,
+                                group.color,
+                                group.neckThreadSize ? `thread ${group.neckThreadSize}` : null,
+                                primary?.graceSku ? `Grace SKU ${primary.graceSku}` : null,
+                                typeof group.priceRangeMin === "number" ? `from $${group.priceRangeMin.toFixed(2)}` : null,
+                            ].filter(Boolean).join(" — ");
+                        }),
+                    ];
+                    result = returnRaw ? catalog : lines.join("\n");
+                    break;
+                }
                 const data = await convex.query(
                     api.grace.searchCatalog,
                     searchParams

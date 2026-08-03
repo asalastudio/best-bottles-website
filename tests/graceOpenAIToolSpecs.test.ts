@@ -29,6 +29,8 @@ const EXISTING_GRACE_TOOLS = [
     "displayCatalogStrip",
     "displayShortlist",
     "displayAnatomy",
+    "setCatalogRefinements",
+    "setPaperDollSelection",
 ] as const;
 
 describe("Grace OpenAI tool contract", () => {
@@ -54,6 +56,20 @@ describe("Grace OpenAI tool contract", () => {
         const search = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "searchCatalog");
         expect(search?.parameters.required).toContain("familyLimit");
         expect(search?.parameters.properties.familyLimit.type).toEqual(["string", "null"]);
+    });
+
+    it("exposes exact Refine and Paper Doll controls", () => {
+        const refine = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "setCatalogRefinements");
+        const paperDoll = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "setPaperDollSelection");
+
+        expect(refine?.parameters.required).toContain("customerRequest");
+        expect(refine?.parameters.properties.neckThreadSizes).toEqual(expect.objectContaining({
+            type: ["array", "null"],
+        }));
+        expect(paperDoll?.parameters.properties.configurationSku.type).toEqual(["string", "null"]);
+        expect(paperDoll?.parameters.properties.deliverySystem).toEqual(expect.objectContaining({
+            enum: ["rollon", "spray", "lotion", null],
+        }));
     });
 
     it("keeps the ElevenLabs tool route as a compatibility alias", () => {

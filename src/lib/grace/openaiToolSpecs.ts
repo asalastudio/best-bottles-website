@@ -15,6 +15,11 @@ const string = (description: string): JsonSchemaProperty => ({ type: "string", d
 const nullableString = (description: string): JsonSchemaProperty => ({ type: ["string", "null"], description });
 const nullableNumber = (description: string): JsonSchemaProperty => ({ type: ["number", "null"], description });
 const nullableBoolean = (description: string): JsonSchemaProperty => ({ type: ["boolean", "null"], description });
+const nullableStringArray = (description: string): JsonSchemaProperty => ({
+    type: ["array", "null"],
+    items: { type: "string" },
+    description,
+});
 
 function objectSchema(properties: Record<string, JsonSchemaProperty> = {}) {
     return {
@@ -134,6 +139,40 @@ export const GRACE_OPENAI_TOOL_SPECS: GraceOpenAIToolSpec[] = [
     }),
     spec("displayAnatomy", "Render technical callouts for one verified product.", {
         graceSku: string("Exact Grace SKU returned by a catalog tool."),
+    }),
+    spec("setCatalogRefinements", "Update the visible catalog while inheriting every active Refine constraint unless the customer's exact words explicitly broaden one dimension.", {
+        customerRequest: string("The customer's exact current request; used to authorize any broadening."),
+        search: nullableString("New search phrase, or null to preserve the active search."),
+        category: nullableString("Requested category, or null."),
+        collection: nullableString("Requested collection, or null."),
+        applicators: nullableStringArray("Requested Refine applicator values, or null."),
+        families: nullableStringArray("Requested exact family values, or null."),
+        colors: nullableStringArray("Requested exact color values, or null."),
+        capacities: nullableStringArray("Requested exact capacity labels, or null."),
+        neckThreadSizes: nullableStringArray("Requested exact GPI neck threads, or null."),
+        componentType: nullableString("Requested component type, or null."),
+        priceMin: nullableNumber("Requested minimum price, or null."),
+        priceMax: nullableNumber("Requested maximum price, or null."),
+    }),
+    spec("setPaperDollSelection", "Open and control the visible 9 mL 17-415 Cylinder Paper Doll using only an exact compatible configuration.", {
+        glass: nullableString("Exact available glass label, or null to preserve it."),
+        deliverySystem: {
+            type: ["string", "null"],
+            enum: ["rollon", "spray", "lotion", null],
+            description: "Exact delivery system, or null to preserve it.",
+        },
+        rollerMaterial: {
+            type: ["string", "null"],
+            enum: ["Metal", "Plastic", null],
+            description: "Roller material for roll-on configurations, or null.",
+        },
+        finish: nullableString("Exact compatible finish label, or null to preserve it."),
+        configurationSku: nullableString("Exact verified 9 mL 17-415 configuration SKU, or null."),
+        view: {
+            type: "string",
+            enum: ["beauty", "build"],
+            description: "The media view to show after applying the selection.",
+        },
     }),
 ];
 

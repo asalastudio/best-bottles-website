@@ -15,6 +15,11 @@ import { isCheckoutReady } from "@/lib/checkout";
 import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
+    GRACE_PAPER_DOLL_SELECT_EVENT,
+    resolveGracePaperDollSelection,
+    type GracePaperDollSelectionRequest,
+} from "@/lib/grace/paperDollController";
+import {
     isUnifiedCylinderBuildReady,
     resolveCylinderConfigurationFromQuery,
     resolveUnifiedPdpView,
@@ -91,6 +96,41 @@ export default function UnifiedBottlePdp({
             router.replace(`?${next.toString()}`, { scroll: false });
         }
     }, [buildReady, router, searchParams]);
+
+    useEffect(() => {
+        const handleGraceSelection = (event: Event) => {
+            const request = (event as CustomEvent<GracePaperDollSelectionRequest>).detail;
+            if (!request) return;
+            const result = resolveGracePaperDollSelection(configurations, selected, request);
+            if (!result.ok) {
+                window.dispatchEvent(new CustomEvent("grace:paperDollSelectionRejected", { detail: { reason: result.reason } }));
+                return;
+            }
+
+            setSelectedSku(result.configuration.graceSku);
+            setCanvasFailed(false);
+            const next = new URLSearchParams(searchParams.toString());
+            next.set("view", request.view === "beauty" || !buildReady ? "beauty" : "build");
+            next.set("configuration", result.configuration.graceSku);
+            next.delete("glass");
+            next.delete("applicator");
+            next.delete("roller");
+            next.delete("finish");
+            router.replace(`?${next.toString()}`, { scroll: false });
+            analytics.paperDollOptionSelected({
+                familyKey: "CYL-9ML",
+                capacityMl: 9,
+                neckThreadSize: "17-415",
+                sku: result.configuration.graceSku,
+                dimension: "grace",
+                value: request.configurationSku ?? [request.glass, request.deliverySystem, request.rollerMaterial, request.finish].filter(Boolean).join(" · "),
+            });
+            analytics.paperDollConfigurationResolved({ familyKey: "CYL-9ML", capacityMl: 9, neckThreadSize: "17-415", sku: result.configuration.graceSku });
+        };
+
+        window.addEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
+        return () => window.removeEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
+    }, [buildReady, configurations, router, searchParams, selected]);
 
     const images = useMemo(() => {
         const rows: GalleryImage[] = [];

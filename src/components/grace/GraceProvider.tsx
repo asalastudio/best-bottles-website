@@ -39,6 +39,18 @@ import {
 } from "@/components/GraceContext";
 import { getAnonOwnerKey } from "@/lib/graceAnonOwnerKey";
 import { isGraceToolResult } from "@/lib/graceToolResults";
+import {
+    applyGraceRefinementRequest,
+    formatGraceRefineState,
+    getGraceRefineState,
+    graceRefineStateToParams,
+    type GraceRefinementProposal,
+} from "@/lib/grace/refineState";
+import {
+    requestGracePaperDollSelection,
+    type GracePaperDollSelectionRequest,
+} from "@/lib/grace/paperDollController";
+import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
 
 // ─── Core product intelligence injected into ElevenLabs session ─────────────
 
@@ -92,6 +104,7 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         if (ctx.catalogCategory) lines.push(`Category filter: ${ctx.catalogCategory}`);
         if (ctx.currentCollection) lines.push(`Active Family Filter: ${ctx.currentCollection}`);
         if (ctx.catalogSearch) lines.push(`Active Search: "${ctx.catalogSearch}"`);
+        if (ctx.refineState) lines.push(formatGraceRefineState(ctx.refineState));
         lines.push(`CONTEXT NOTE: Customer is browsing the catalog. Wait for them to ask a question before offering help.`);
     } else if (ctx.pageType === "cart") {
         lines.push(`Page: Shopping Cart`);
@@ -103,6 +116,12 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         lines.push(`CONTEXT NOTE: Customer is on the homepage. Greet them briefly and wait for their question.`);
     } else {
         lines.push(`Page: ${ctx.pathname}`);
+    }
+
+    if (ctx.paperDoll) {
+        lines.push(`Paper Doll: ${ctx.paperDoll.family} ${ctx.paperDoll.capacityMl} mL ${ctx.paperDoll.neckThreadSize} (${ctx.paperDoll.view} view)`);
+        if (ctx.paperDoll.configurationSku) lines.push(`Selected Paper Doll SKU: ${ctx.paperDoll.configurationSku}`);
+        lines.push("PLATFORM LOCK: Never mix this Paper Doll with 9 mL 13-415 products or components.");
     }
 
     if (ctx.cartItems.length > 0) {
@@ -655,6 +674,29 @@ function GraceProviderBase({
                     capsSummary: capsSummary || undefined,
                     slug: productSlug ?? undefined,
                 },
+                paperDoll: productSlug === CYLINDER_9ML_17415_COHORT.slug ? {
+                    configurationSku: searchParams.get("configuration"),
+                    view: searchParams.get("view") === "build" ? "build" : "beauty",
+                    family: "Cylinder",
+                    capacityMl: 9,
+                    neckThreadSize: "17-415",
+                } : undefined,
+            };
+        }
+        if (pageType === "pdp" && productSlug === CYLINDER_9ML_17415_COHORT.slug) {
+            return {
+                pageType,
+                pathname,
+                pageUrl,
+                cartItems: cartSummary,
+                cartTotal,
+                paperDoll: {
+                    configurationSku: searchParams.get("configuration"),
+                    view: searchParams.get("view") === "build" ? "build" : "beauty",
+                    family: "Cylinder",
+                    capacityMl: 9,
+                    neckThreadSize: "17-415",
+                },
             };
         }
         if (pageType === "catalog") {
@@ -668,6 +710,7 @@ function GraceProviderBase({
                 catalogCategory: searchParams.get("category") ?? undefined,
                 currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
+                refineState: getGraceRefineState(new URLSearchParams(searchParams.toString())),
             };
         }
         return { pageType, pathname, pageUrl, cartItems: cartSummary, cartTotal };
@@ -709,6 +752,8 @@ function GraceProviderBase({
                 catalogCategory: pageContext.catalogCategory,
                 catalogSearch: pageContext.catalogSearch,
                 collection: pageContext.currentCollection,
+                refine: pageContext.refineState,
+                paperDoll: pageContext.paperDoll,
                 cart: pageContext.cartItems.map((i) => `${i.graceSku}:${i.quantity}`).join(","),
                 hist: browsingHistory.slice(-6).map((h) => h.pathname).join("|"),
             }),
@@ -810,12 +855,22 @@ function GraceProviderBase({
     // ── Client tools ─────────────────────────────────────────────────────────
     const clientTools = useMemo(() => ({
 
-        searchCatalog: async (params: { searchTerm: string; familyLimit?: string; applicatorFilter?: string }) => {
+        searchCatalog: async (params: { searchTerm: string; categoryLimit?: string; familyLimit?: string; applicatorFilter?: string }) => {
             try {
+                const currentRefine = pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams());
+                const searchProposal: GraceRefinementProposal = { search: params.searchTerm ?? "" };
+                if (params.categoryLimit) searchProposal.category = params.categoryLimit;
+                if (params.familyLimit) searchProposal.families = [params.familyLimit];
+                if (params.applicatorFilter) {
+                    searchProposal.applicators = params.applicatorFilter.split(",").map((value) => value.trim()).filter(Boolean) as GraceRefinementProposal["applicators"];
+                }
+                const inheritedRefine = applyGraceRefinementRequest(currentRefine, searchProposal, params.searchTerm ?? "");
                 const data = await callGraceServerTool<ProductCard[] | string>("searchCatalog", {
                     searchTerm: params.searchTerm ?? "",
+                    categoryLimit: params.categoryLimit,
                     familyLimit: params.familyLimit,
                     applicatorFilter: params.applicatorFilter,
+                    refineState: inheritedRefine,
                 });
                 if (data.error) {
                     console.error("[Grace] searchCatalog HTTP", data.status, data.error);
@@ -956,6 +1011,13 @@ function GraceProviderBase({
                 if (ctx.catalogCategory) lines.push(`  Category filter: ${ctx.catalogCategory}`);
                 if (ctx.currentCollection) lines.push(`  Family filter: ${ctx.currentCollection}`);
                 if (ctx.catalogSearch) lines.push(`  Search: "${ctx.catalogSearch}"`);
+                if (ctx.refineState) lines.push(formatGraceRefineState(ctx.refineState));
+            }
+            if (ctx.paperDoll) {
+                lines.push(`\nPaper Doll platform: ${ctx.paperDoll.family} ${ctx.paperDoll.capacityMl} mL ${ctx.paperDoll.neckThreadSize}`);
+                lines.push(`  View: ${ctx.paperDoll.view}`);
+                if (ctx.paperDoll.configurationSku) lines.push(`  Selected configuration SKU: ${ctx.paperDoll.configurationSku}`);
+                lines.push("  Never mix this platform with 9 mL 13-415 products or components.");
             }
             if (ctx.cartItems.length > 0) {
                 lines.push(`\nCart (${ctx.cartItems.length} items):`);
@@ -1621,6 +1683,88 @@ function GraceProviderBase({
                 analytics.graceToolCalled({ toolName: "displayShortlist", success: false, status: "error" });
                 return "Could not create the shortlist right now.";
             }
+        },
+
+        setCatalogRefinements: (params: {
+            customerRequest: string;
+            search?: string | null;
+            category?: string | null;
+            collection?: string | null;
+            applicators?: string[] | string | null;
+            families?: string[] | string | null;
+            colors?: string[] | string | null;
+            capacities?: string[] | string | null;
+            neckThreadSizes?: string[] | string | null;
+            componentType?: string | null;
+            priceMin?: number | null;
+            priceMax?: number | null;
+        }) => {
+            const asArray = (value: string[] | string | null | undefined): string[] | undefined => {
+                if (Array.isArray(value)) return value.map((item) => item.trim()).filter(Boolean);
+                if (typeof value !== "string") return undefined;
+                try {
+                    const parsed = JSON.parse(value);
+                    if (Array.isArray(parsed)) return parsed.filter((item): item is string => typeof item === "string" && Boolean(item.trim()));
+                } catch { /* comma-delimited ElevenLabs compatibility */ }
+                return value.split(",").map((item) => item.trim()).filter(Boolean);
+            };
+            const proposal: GraceRefinementProposal = {};
+            if (typeof params.search === "string") proposal.search = params.search;
+            if (typeof params.category === "string") proposal.category = params.category;
+            if (typeof params.collection === "string") proposal.collection = params.collection;
+            if (typeof params.componentType === "string") proposal.componentType = params.componentType;
+            if (typeof params.priceMin === "number") proposal.priceMin = params.priceMin;
+            if (typeof params.priceMax === "number") proposal.priceMax = params.priceMax;
+            const applicators = asArray(params.applicators);
+            const families = asArray(params.families);
+            const colors = asArray(params.colors);
+            const capacities = asArray(params.capacities);
+            const neckThreadSizes = asArray(params.neckThreadSizes);
+            if (applicators) proposal.applicators = applicators as GraceRefinementProposal["applicators"];
+            if (families) proposal.families = families;
+            if (colors) proposal.colors = colors;
+            if (capacities) proposal.capacities = capacities;
+            if (neckThreadSizes) proposal.neckThreadSizes = neckThreadSizes;
+
+            const current = pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams());
+            const next = applyGraceRefinementRequest(current, proposal, params.customerRequest ?? "");
+            const query = graceRefineStateToParams(next).toString();
+            routerRef.current.replace(`/catalog${query ? `?${query}` : ""}`);
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("setCatalogRefinements");
+            analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: true });
+            return `Refine updated. ${formatGraceRefineState(next)}`;
+        },
+
+        setPaperDollSelection: (params: GracePaperDollSelectionRequest) => {
+            const request: GracePaperDollSelectionRequest = {
+                glass: params.glass ?? null,
+                deliverySystem: params.deliverySystem ?? null,
+                rollerMaterial: params.rollerMaterial ?? null,
+                finish: params.finish ?? null,
+                configurationSku: params.configurationSku ?? null,
+                view: params.view === "beauty" ? "beauty" : "build",
+            };
+            const canonicalPath = `/products/${CYLINDER_9ML_17415_COHORT.slug}`;
+            if (pathnameRef.current !== canonicalPath) {
+                const next = new URLSearchParams();
+                next.set("view", request.view);
+                if (request.configurationSku) next.set("configuration", request.configurationSku);
+                if (request.glass) next.set("glass", request.glass);
+                if (request.deliverySystem) {
+                    next.set("applicator", request.deliverySystem === "spray" ? "Fine Mist Spray" : request.deliverySystem === "lotion" ? "Lotion Pump" : "Roll-On");
+                }
+                if (request.rollerMaterial) next.set("roller", request.rollerMaterial);
+                if (request.finish) next.set("finish", request.finish);
+                routerRef.current.push(`${canonicalPath}?${next.toString()}`);
+                completeGraceNavigationRef.current("Grace is opening the 9 mL 17-415 bottle builder.");
+            } else if (!requestGracePaperDollSelection(request)) {
+                return "The Paper Doll is not available on this page.";
+            }
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("setPaperDollSelection");
+            analytics.graceToolCalled({ toolName: "setPaperDollSelection", success: true });
+            return "The 9 mL 17-415 Paper Doll selection request was applied to the visible builder. Do not describe it as a 13-415 bottle.";
         },
 
         displayAnatomy: async (params: { graceSku: string }) => {
