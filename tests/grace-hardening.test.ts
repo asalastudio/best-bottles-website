@@ -7,7 +7,7 @@ const agentConfig = () => JSON.parse(read("scripts/grace_agent_config.json"));
 function implementedClientTools(): Set<string> {
   const source = read("src/components/grace/GraceProvider.tsx");
   const start = source.indexOf("const clientTools = useMemo(() => ({");
-  const end = source.indexOf("// eslint-disable-next-line react-hooks/exhaustive-deps", start);
+  const end = source.indexOf("// ── End provider-neutral client tools", start);
   expect(start).toBeGreaterThan(-1);
   expect(end).toBeGreaterThan(start);
   const block = source.slice(start, end);

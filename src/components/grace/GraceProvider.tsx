@@ -1911,7 +1911,7 @@ function GraceProviderBase({
             } catch (e) { console.error("[Grace] displayAnatomy:", e); return "Could not render anatomy view."; }
         },
 
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        // ── End provider-neutral client tools ───────────────────────────────
     }), []);
 
     // ── ElevenLabs callbacks ─────────────────────────────────────────────────
