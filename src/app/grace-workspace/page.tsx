@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import GraceWorkspaceRouter from "./GraceWorkspaceRouter";
+import WorkspaceModeServer from "./WorkspaceModeServer";
 
 export const metadata: Metadata = {
     title: "Grace Workspace",
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function GraceWorkspacePage() {
-    return <GraceWorkspaceRouter />;
+    return <WorkspaceModeServer />;
 }
