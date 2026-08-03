@@ -1,7 +1,7 @@
 # Grace OpenAI Realtime + Marin Design
 
-**Date:** 2026-08-02  
-**Status:** Approved direction, implementation-ready after written-spec review  
+**Date:** 2026-08-02
+**Status:** Approved direction, implementation-ready after written-spec review
 **Branch:** `codex/grace-openai-realtime-marin`
 
 ## Objective
