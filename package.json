@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "eslint",
     "test:smoke": "vitest run tests/catalog.smoke.test.ts",
+    "test:knowledge-gateway": "vitest run tests/knowledge-*.test.ts tests/employee-knowledge-*.test.ts tests/executive-grace-operations.test.ts tests/graceOpenAIToolSpecs.test.ts tests/graceRealtimeConfig.test.ts tests/graceRefineState.test.ts tests/cylinder-v3-acceptance.test.ts",
     "scrape:apothecary": "node scripts/scrape_apothecary_full.mjs",
     "scrape:legacy-references": "node scripts/scrape_legacy_reference_images.mjs",
     "audit:catalog": "node scripts/export_convex_snapshot.mjs && python3 scripts/scrape_live_catalog.py && python3 scripts/normalize_scrape.py && python3 scripts/diff_scrape_vs_convex.py && python3 scripts/reconcile_patch_plan.py",
