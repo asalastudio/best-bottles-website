@@ -70,6 +70,7 @@ export const submitKnowledgeCorrection = mutation({
         correction: v.object({
             conversationId: v.string(),
             messageId: v.string(),
+            requestId: v.string(),
             actorId: v.string(),
             surface,
             category: v.union(
@@ -81,6 +82,8 @@ export const submitKnowledgeCorrection = mutation({
             ),
             correction: v.string(),
             sourceUrl: v.union(v.string(), v.null()),
+            answerExcerpt: v.string(),
+            sourceIds: v.array(v.string()),
         }),
     },
     handler: async (ctx, args) => {

@@ -69,6 +69,16 @@ export type KnowledgeResponseRun = {
     trace: KnowledgeTrace;
 };
 
+export class KnowledgeResponseExecutionError extends Error {
+    readonly trace: KnowledgeTrace;
+
+    constructor(message: string, trace: KnowledgeTrace) {
+        super(message);
+        this.name = "KnowledgeResponseExecutionError";
+        this.trace = trace;
+    }
+}
+
 const isRecord = (value: unknown): value is Record<string, unknown> => (
     Boolean(value) && typeof value === "object" && !Array.isArray(value)
 );
@@ -175,102 +185,150 @@ export async function runKnowledgeResponse({
     let outputTokens = 0;
     let fileSearchCalls = 0;
     let toolRounds = 0;
+    let failureStatus: KnowledgeTrace["status"] = "model_error";
 
-    while (true) {
-        const response = await client.responses.create({
-            model,
-            instructions: buildEmployeeKnowledgeInstructions(context),
-            input,
-            tools,
-            store: false,
-        });
-        const output = response.output ?? [];
-        inputTokens += response.usage?.input_tokens ?? 0;
-        cachedInputTokens += response.usage?.input_tokens_details?.cached_tokens ?? 0;
-        outputTokens += response.usage?.output_tokens ?? 0;
-        fileSearchCalls += output.filter((item) => item.type === "file_search_call").length;
-        for (const citation of extractFileCitations(output, context.role)) citations.set(citation.sourceId, citation);
-
-        const functionCalls = output.filter((item) => item.type === "function_call");
-        if (functionCalls.length === 0) {
-            const text = extractText(output);
-            const completedAt = Date.now();
-            const cost = estimateKnowledgeCost({
+    try {
+        while (true) {
+            const response = await client.responses.create({
                 model,
-                inputTokens,
-                cachedInputTokens,
-                outputTokens,
-                audioInputTokens: 0,
-                audioOutputTokens: 0,
-                fileSearchCalls,
+                instructions: buildEmployeeKnowledgeInstructions(context),
+                input,
+                tools,
+                store: false,
             });
-            const trace: KnowledgeTrace = {
-                requestId: context.requestId,
-                conversationId: context.conversationId,
-                surface: context.surface,
-                role: context.role,
-                model,
-                startedAt,
-                completedAt,
-                durationMs: completedAt - startedAt,
-                status: text ? "success" : "no_match",
-                inputTokens,
-                cachedInputTokens,
-                outputTokens,
-                audioInputTokens: 0,
-                audioOutputTokens: 0,
-                fileSearchCalls,
-                estimatedCostUsd: cost.estimatedCostUsd,
-                rateCardVersion: cost.rateCardVersion,
-                toolCalls,
-                sourceIds: [...citations.keys()],
-                rawContentStored: false,
-            };
-            return {
-                text,
-                citations: [...citations.values()],
-                model,
-                inputTokens,
-                cachedInputTokens,
-                outputTokens,
-                fileSearchCalls,
-                estimatedCostUsd: cost.estimatedCostUsd,
-                rateCardVersion: cost.rateCardVersion,
-                toolCalls,
-                trace,
-            };
-        }
+            const output = response.output ?? [];
+            inputTokens += response.usage?.input_tokens ?? 0;
+            cachedInputTokens += response.usage?.input_tokens_details?.cached_tokens ?? 0;
+            outputTokens += response.usage?.output_tokens ?? 0;
+            fileSearchCalls += output.filter((item) => item.type === "file_search_call").length;
+            for (const citation of extractFileCitations(output, context.role)) citations.set(citation.sourceId, citation);
 
-        if (toolRounds >= 6) throw new Error("Knowledge response exceeded 6 tool rounds");
-        const toolOutputs: Array<Record<string, unknown>> = [];
-        for (const call of functionCalls) {
-            const name = String(call.name ?? "") as GraceOpenAIToolName;
-            const parameters = parseToolParameters(name, call.arguments);
-            const callStartedAt = Date.now();
-            try {
-                const result = await executeTool(name, parameters);
-                toolCalls.push({ name, durationMs: Date.now() - callStartedAt, status: "success" });
-                const sourceId = `convex:${name}`;
-                citations.set(sourceId, {
-                    sourceId,
-                    title: `Live Convex product truth · ${name}`,
-                    kind: "product_truth",
+            const functionCalls = output.filter((item) => item.type === "function_call");
+            if (functionCalls.length === 0) {
+                const text = extractText(output);
+                const completedAt = Date.now();
+                const cost = estimateKnowledgeCost({
+                    model,
+                    inputTokens,
+                    cachedInputTokens,
+                    outputTokens,
+                    audioInputTokens: 0,
+                    audioOutputTokens: 0,
+                    fileSearchCalls,
                 });
-                toolOutputs.push({
-                    type: "function_call_output",
-                    call_id: String(call.call_id ?? ""),
-                    output: JSON.stringify(result),
-                });
-            } catch (error) {
-                toolCalls.push({
-                    name,
-                    durationMs: Date.now() - callStartedAt,
-                    status: error instanceof Error && error.message.startsWith("Knowledge tool blocked:") ? "blocked" : "error",
-                });
-                throw error;
+                const trace: KnowledgeTrace = {
+                    requestId: context.requestId,
+                    conversationId: context.conversationId,
+                    surface: context.surface,
+                    role: context.role,
+                    model,
+                    startedAt,
+                    completedAt,
+                    durationMs: completedAt - startedAt,
+                    status: text ? "success" : "no_match",
+                    inputTokens,
+                    cachedInputTokens,
+                    outputTokens,
+                    audioInputTokens: 0,
+                    audioOutputTokens: 0,
+                    fileSearchCalls,
+                    estimatedCostUsd: cost.estimatedCostUsd,
+                    rateCardVersion: cost.rateCardVersion,
+                    toolCalls,
+                    sourceIds: [...citations.keys()],
+                    rawContentStored: false,
+                };
+                return {
+                    text,
+                    citations: [...citations.values()],
+                    model,
+                    inputTokens,
+                    cachedInputTokens,
+                    outputTokens,
+                    fileSearchCalls,
+                    estimatedCostUsd: cost.estimatedCostUsd,
+                    rateCardVersion: cost.rateCardVersion,
+                    toolCalls,
+                    trace,
+                };
             }
+
+            if (toolRounds >= 6) throw new Error("Knowledge response exceeded 6 tool rounds");
+            const toolOutputs: Array<Record<string, unknown>> = [];
+            for (const call of functionCalls) {
+                const name = String(call.name ?? "") as GraceOpenAIToolName;
+                let parameters: Record<string, unknown>;
+                try {
+                    parameters = parseToolParameters(name, call.arguments);
+                } catch (error) {
+                    failureStatus = "tool_error";
+                    throw error;
+                }
+                const callStartedAt = Date.now();
+                try {
+                    const result = await executeTool(name, parameters);
+                    toolCalls.push({ name, durationMs: Date.now() - callStartedAt, status: "success" });
+                    const sourceId = `convex:${name}`;
+                    citations.set(sourceId, {
+                        sourceId,
+                        title: `Live Convex product truth · ${name}`,
+                        kind: "product_truth",
+                    });
+                    toolOutputs.push({
+                        type: "function_call_output",
+                        call_id: String(call.call_id ?? ""),
+                        output: JSON.stringify(result),
+                    });
+                } catch (error) {
+                    toolCalls.push({
+                        name,
+                        durationMs: Date.now() - callStartedAt,
+                        status: error instanceof Error && error.message.startsWith("Knowledge tool blocked:") ? "blocked" : "error",
+                    });
+                    failureStatus = error instanceof Error && error.message.startsWith("Knowledge tool blocked:")
+                        ? "blocked"
+                        : "tool_error";
+                    throw error;
+                }
+            }
+            toolRounds += 1;
+            input.push(...output, ...toolOutputs);
         }
-        toolRounds += 1;
-        input.push(...output, ...toolOutputs);
+    } catch (error) {
+        if (error instanceof KnowledgeResponseExecutionError) throw error;
+        const completedAt = Date.now();
+        const cost = estimateKnowledgeCost({
+            model,
+            inputTokens,
+            cachedInputTokens,
+            outputTokens,
+            audioInputTokens: 0,
+            audioOutputTokens: 0,
+            fileSearchCalls,
+        });
+        const trace: KnowledgeTrace = {
+            requestId: context.requestId,
+            conversationId: context.conversationId,
+            surface: context.surface,
+            role: context.role,
+            model,
+            startedAt,
+            completedAt,
+            durationMs: completedAt - startedAt,
+            status: failureStatus,
+            inputTokens,
+            cachedInputTokens,
+            outputTokens,
+            audioInputTokens: 0,
+            audioOutputTokens: 0,
+            fileSearchCalls,
+            estimatedCostUsd: cost.estimatedCostUsd,
+            rateCardVersion: cost.rateCardVersion,
+            toolCalls,
+            sourceIds: [...citations.keys()],
+            rawContentStored: false,
+        };
+        const message = error instanceof Error ? error.message : "Knowledge response failed";
+        throw new KnowledgeResponseExecutionError(message, trace);
     }
 }

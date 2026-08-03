@@ -27,6 +27,9 @@ describe("knowledge corrections", () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
                 messageId: "message_1",
+                requestId: "request_answer_1",
+                answerExcerpt: "The previous verified answer said this bottle used 13-415.",
+                sourceIds: ["convex:checkCompatibility"],
                 category: "compatibility",
                 correction: "This bottle uses 17-415, not 13-415.",
                 status: "accepted",
@@ -37,6 +40,9 @@ describe("knowledge corrections", () => {
             actorId: "user_staff",
             status: "pending",
             surface: "employee_workspace",
+            requestId: "request_answer_1",
+            answerExcerpt: "The previous verified answer said this bottle used 13-415.",
+            sourceIds: ["convex:checkCompatibility"],
         }));
         expect(await response.json()).toEqual({ correctionId: "correction_1", status: "pending" });
     });
@@ -52,6 +58,9 @@ describe("knowledge corrections", () => {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({
                 messageId: "message_1",
+                requestId: "request_answer_1",
+                answerExcerpt: "A prior assistant answer.",
+                sourceIds: [],
                 category: "compatibility",
                 correction: "Too short",
                 sourceUrl: "http://example.com/source",

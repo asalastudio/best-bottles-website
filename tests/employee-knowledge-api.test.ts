@@ -3,6 +3,7 @@ import { describe, expect, it, vi } from "vitest";
 vi.mock("server-only", () => ({}));
 
 import { createKnowledgeChatHandler } from "../src/app/api/knowledge/chat/route";
+import { KnowledgeResponseExecutionError } from "../src/lib/knowledge/openaiResponsesServer";
 
 const serverContext = {
     surface: "employee_workspace" as const,
@@ -102,5 +103,44 @@ describe("employee knowledge chat API", () => {
             rawContentStored: false,
             requestId: "request_1",
         }));
+    });
+
+    it("persists the runtime failure trace instead of replacing its usage", async () => {
+        const persist = vi.fn();
+        const runtimeTrace = {
+            requestId: "request_1",
+            conversationId: "conversation_1",
+            surface: "employee_workspace" as const,
+            role: "employee" as const,
+            model: "gpt-5.6-luna",
+            startedAt: 1,
+            completedAt: 2,
+            durationMs: 1,
+            status: "tool_error" as const,
+            inputTokens: 1000,
+            cachedInputTokens: 200,
+            outputTokens: 100,
+            audioInputTokens: 0,
+            audioOutputTokens: 0,
+            fileSearchCalls: 0,
+            estimatedCostUsd: 0.0003,
+            rateCardVersion: "2026-08-03",
+            toolCalls: [{ name: "getCatalogStats", durationMs: 2, status: "error" as const }],
+            sourceIds: [],
+            rawContentStored: false as const,
+        };
+        const handler = createKnowledgeChatHandler({
+            deriveContext: vi.fn().mockResolvedValue(serverContext),
+            run: vi.fn().mockRejectedValue(new KnowledgeResponseExecutionError("failed", runtimeTrace)),
+            persist,
+        });
+        const response = await handler(new Request("http://localhost/api/knowledge/chat", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify({ message: "Count products" }),
+        }));
+
+        expect(response.status).toBe(502);
+        expect(persist).toHaveBeenCalledWith(runtimeTrace);
     });
 });

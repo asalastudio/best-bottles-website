@@ -92,11 +92,13 @@ Interpret the results separately:
 
 ## Grace Operations metrics
 
+Current dashboard coverage is explicitly limited to the authenticated employee/internal Responses runtime. Public storefront Realtime traffic is not included until Realtime usage and tool traces are wired into the same minimized operations contract.
+
 - **Estimated spend:** effective-dated token and File Search rates attached to minimized traces.
-- **Successful answers:** successful traces divided by all recorded requests in the trailing 30 days.
-- **Request volume:** recorded requests in that window.
+- **Successful answers:** successful employee/internal Responses traces divided by all recorded employee/internal Responses requests in the trailing 30 days.
+- **Request volume:** recorded employee/internal Responses requests in that window.
 - **P95 latency:** the 95th-percentile end-to-end response duration.
-- **Tool calls:** authorized tool executions recorded without payloads.
+- **Tool calls:** authorized employee/internal Responses tool executions recorded without payloads.
 - **Pending corrections:** explicit employee corrections awaiting human review.
 
 Grace Operations never shows raw prompts, audio, conversation transcripts, customer payment details, or provider credentials.
@@ -104,7 +106,7 @@ Grace Operations never shows raw prompts, audio, conversation transcripts, custo
 ## Controlled correction review
 
 1. Review `knowledgeCorrections` entries whose status is `pending`.
-2. Confirm the claim against its canonical source and any supplied HTTPS citation.
+2. Use the stored answer `requestId`, bounded answer excerpt, and source IDs to locate the exact response evidence; then confirm the claim against its canonical source and any supplied HTTPS citation.
 3. Classify the approved change as a Convex/Sanity data correction, an approved document revision, or a prompt/evaluation case.
 4. Apply the change through the owning system's normal reviewed workflow.
 5. Re-run the relevant product-truth and gateway tests.

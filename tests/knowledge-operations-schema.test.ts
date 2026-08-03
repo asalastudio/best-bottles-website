@@ -7,6 +7,9 @@ describe("knowledge operations schema", () => {
         expect(schema).toContain("knowledgeTraces");
         expect(schema).toContain("knowledgeCorrections");
         expect(schema).toContain("rateCardVersion");
+        expect(schema).toContain("answerExcerpt");
+        expect(schema).toContain("sourceIds");
+        expect(schema).toContain('.index("by_requestId"');
         expect(schema).toContain("rawContentStored: v.literal(false)");
         expect(schema).toContain('.index("by_completedAt"');
         expect(schema).toContain('.index("by_status"');

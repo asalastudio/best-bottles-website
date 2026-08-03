@@ -1,6 +1,7 @@
 import type { KnowledgeCitation, KnowledgeRequestContext, KnowledgeTrace } from "@/lib/knowledge/contracts";
 import { deriveEmployeeKnowledgeContext } from "@/lib/knowledge/requestContextServer";
 import {
+    KnowledgeResponseExecutionError,
     runKnowledgeResponse,
     type KnowledgeRuntimeEnvironment,
 } from "@/lib/knowledge/openaiResponsesServer";
@@ -114,7 +115,9 @@ export function createKnowledgeChatHandler(dependencies: KnowledgeChatDependenci
                 error: error instanceof Error ? error.name : "unknown",
             });
             const completedAt = Date.now();
-            const errorTrace: KnowledgeTrace = {
+            const errorTrace: KnowledgeTrace = error instanceof KnowledgeResponseExecutionError
+                ? error.trace
+                : {
                 requestId: context.requestId,
                 conversationId: context.conversationId,
                 surface: context.surface,
@@ -139,7 +142,7 @@ export function createKnowledgeChatHandler(dependencies: KnowledgeChatDependenci
                 toolCalls: [],
                 sourceIds: [],
                 rawContentStored: false,
-            };
+                };
             try {
                 await dependencies.persist(errorTrace);
             } catch {

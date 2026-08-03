@@ -1,4 +1,5 @@
 export const TEAM_HUB_ACCESS_ROLES = [
+    "support",
     "employee",
     "team",
     "admin",

@@ -55,4 +55,31 @@ describe("knowledge tool registry", () => {
         })).resolves.toEqual({ threadSize: "17-415" });
         expect(execute).toHaveBeenCalledWith("checkCompatibility", { threadSize: "17-415" });
     });
+
+    it("rejects undeclared and incorrectly typed tool arguments before execution", async () => {
+        const execute = vi.fn();
+
+        await expect(executeKnowledgeTool({
+            context: { ...employeeContext, surface: "storefront", role: "customer" },
+            name: "getCatalogStats",
+            parameters: { unexpected: true },
+            execute,
+        })).rejects.toThrow("Invalid parameters for knowledge tool getCatalogStats");
+
+        await expect(executeKnowledgeTool({
+            context: { ...employeeContext, surface: "storefront", role: "customer" },
+            name: "setPaperDollSelection",
+            parameters: {
+                glass: null,
+                deliverySystem: "dropper",
+                rollerMaterial: null,
+                finish: null,
+                configurationSku: null,
+                view: "build",
+            },
+            execute,
+        })).rejects.toThrow("Invalid parameters for knowledge tool setPaperDollSelection");
+
+        expect(execute).not.toHaveBeenCalled();
+    });
 });

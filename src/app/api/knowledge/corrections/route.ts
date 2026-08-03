@@ -35,6 +35,15 @@ function normalizeHttpsUrl(value: unknown): string | null | undefined {
     }
 }
 
+function normalizeSourceIds(value: unknown): string[] | undefined {
+    if (value === undefined) return [];
+    if (!Array.isArray(value) || value.some((entry) => typeof entry !== "string")) return undefined;
+    return [...new Set(value
+        .map((entry) => entry.trim().slice(0, 160))
+        .filter(Boolean))]
+        .slice(0, 20);
+}
+
 export function createCorrectionHandler(dependencies: CorrectionDependencies) {
     return async function correctionHandler(request: Request): Promise<Response> {
         let body: Record<string, unknown>;
@@ -48,13 +57,16 @@ export function createCorrectionHandler(dependencies: CorrectionDependencies) {
         }
 
         const messageId = typeof body.messageId === "string" ? body.messageId.trim().slice(0, 160) : "";
+        const requestId = typeof body.requestId === "string" ? body.requestId.trim().slice(0, 160) : "";
+        const answerExcerpt = typeof body.answerExcerpt === "string" ? body.answerExcerpt.trim().slice(0, 1_000) : "";
         const correctionText = typeof body.correction === "string" ? body.correction.trim() : "";
         const category = typeof body.category === "string" && CATEGORIES.includes(body.category as KnowledgeCorrection["category"])
             ? body.category as KnowledgeCorrection["category"]
             : null;
         const sourceUrl = normalizeHttpsUrl(body.sourceUrl);
-        if (!messageId || !category || correctionText.length < 10 || correctionText.length > 2_000 || sourceUrl === undefined) {
-            return json({ error: "Provide a category, message, 10–2,000 character correction, and optional HTTPS source." }, 400);
+        const sourceIds = normalizeSourceIds(body.sourceIds);
+        if (!messageId || !requestId || !answerExcerpt || !category || correctionText.length < 10 || correctionText.length > 2_000 || sourceUrl === undefined || sourceIds === undefined) {
+            return json({ error: "Provide the answer reference, category, 10–2,000 character correction, and optional HTTPS source." }, 400);
         }
 
         let context: KnowledgeRequestContext;
@@ -75,11 +87,14 @@ export function createCorrectionHandler(dependencies: CorrectionDependencies) {
         const correction: KnowledgeCorrection = {
             conversationId: context.conversationId,
             messageId,
+            requestId,
             actorId: context.actorId,
             surface: context.surface,
             category,
             correction: correctionText,
             sourceUrl,
+            answerExcerpt,
+            sourceIds,
             status: "pending",
             createdAt: Date.now(),
         };

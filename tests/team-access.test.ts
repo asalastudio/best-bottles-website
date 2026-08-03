@@ -3,7 +3,7 @@ import { getUserEmailAddresses, hasExecutiveHubAccess, hasTeamHubAccess } from "
 
 describe("Team Hub access", () => {
     it("allows known Best Bottles staff and admin roles", () => {
-        for (const role of ["employee", "team", "admin", "executive", "super_admin", "founder", "ceo"]) {
+        for (const role of ["support", "employee", "team", "admin", "executive", "super_admin", "founder", "ceo"]) {
             expect(hasTeamHubAccess({ role })).toBe(true);
         }
     });

@@ -91,11 +91,14 @@ export type KnowledgeTrace = {
 export type KnowledgeCorrection = {
     conversationId: string;
     messageId: string;
+    requestId: string;
     actorId: string;
     surface: KnowledgeSurface;
     category: "product_truth" | "compatibility" | "policy" | "behavior" | "missing_knowledge";
     correction: string;
     sourceUrl: string | null;
+    answerExcerpt: string;
+    sourceIds: string[];
     status: "pending" | "accepted" | "rejected";
     createdAt: number;
 };

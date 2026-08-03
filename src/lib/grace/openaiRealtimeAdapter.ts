@@ -6,9 +6,13 @@ import {
 } from "@openai/agents/realtime";
 import { GRACE_REALTIME_MODEL, GRACE_REALTIME_VOICE } from "./openaiRealtimeConfig";
 import {
-    GRACE_OPENAI_TOOL_SPECS,
     type GraceOpenAIToolSpec,
 } from "./openaiToolSpecs";
+import type { KnowledgeRequestContext } from "@/lib/knowledge/contracts";
+import {
+    assertKnowledgeToolParameters,
+    getAuthorizedKnowledgeTools,
+} from "@/lib/knowledge/toolRegistry";
 
 export type GraceConversationMode = "voice" | "text";
 export type GraceRealtimeRole = "user" | "assistant";
@@ -99,11 +103,16 @@ export function buildGraceRealtimeTools(
             description: spec.description,
             parameters: spec.parameters as never,
             strict: true,
-            execute: async (args: GraceToolArguments) => serializeToolResult(
-                await implementation(args),
-            ),
+            execute: async (args: GraceToolArguments) => {
+                assertKnowledgeToolParameters(spec.name, args);
+                return serializeToolResult(await implementation(args));
+            },
         });
     });
+}
+
+export function getGraceRealtimeToolSpecs(context: KnowledgeRequestContext) {
+    return getAuthorizedKnowledgeTools(context);
 }
 
 function toError(value: unknown): Error {
@@ -130,13 +139,24 @@ export function createGraceOpenAIRealtimeAdapter({
     toolImplementations,
     callbacks = {},
     dependencies = defaultDependencies,
+    knowledgeContext = {
+        surface: "storefront",
+        role: "public",
+        actorId: null,
+        organizationId: null,
+        conversationId: "grace-realtime",
+        projectId: null,
+        refineState: null,
+        requestId: "grace-realtime-config",
+    },
 }: {
     baseInstructions: string;
     toolImplementations: GraceRealtimeToolImplementations;
     callbacks?: GraceRealtimeCallbacks;
     dependencies?: GraceRealtimeDependencies;
+    knowledgeContext?: KnowledgeRequestContext;
 }): GraceOpenAIRealtimeAdapter {
-    const tools = buildGraceRealtimeTools(GRACE_OPENAI_TOOL_SPECS, toolImplementations);
+    const tools = buildGraceRealtimeTools(getGraceRealtimeToolSpecs(knowledgeContext), toolImplementations);
     let session: GraceRealtimeSessionLike | null = null;
     let connected = false;
     let currentContext = "";

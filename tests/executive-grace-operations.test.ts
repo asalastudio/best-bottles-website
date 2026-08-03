@@ -16,6 +16,7 @@ describe("Executive Grace Operations", () => {
                 p95LatencyMs: 1400,
                 toolCalls: 188,
                 pendingCorrections: 3,
+                coverage: "employee_responses_only",
                 message: null,
             },
         }));
@@ -23,6 +24,7 @@ describe("Executive Grace Operations", () => {
         expect(html).toContain("$14.82");
         expect(html).toContain("97.5%");
         expect(html).toContain("3 pending corrections");
-        expect(html).not.toContain("conversation transcript");
+        expect(html).toContain("Employee/internal Responses only");
+        expect(html).toContain("public Realtime traffic is not included yet");
     });
 });

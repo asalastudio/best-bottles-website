@@ -1,5 +1,8 @@
 import { describe, expect, it, vi } from "vitest";
-import { runKnowledgeResponse } from "../src/lib/knowledge/openaiResponsesServer";
+import {
+    KnowledgeResponseExecutionError,
+    runKnowledgeResponse,
+} from "../src/lib/knowledge/openaiResponsesServer";
 
 const context = {
     surface: "employee_workspace" as const,
@@ -74,5 +77,57 @@ describe("OpenAI knowledge response runtime", () => {
             env: {},
         })).rejects.toThrow("Invalid arguments for knowledge tool searchCatalog");
         expect(executeTool).not.toHaveBeenCalled();
+    });
+
+    it("retains usage and tool failure details when execution fails", async () => {
+        const create = vi.fn().mockResolvedValue({
+            output: [{ type: "function_call", name: "getCatalogStats", call_id: "call_failed", arguments: "{}" }],
+            usage: { input_tokens: 1000, output_tokens: 100, input_tokens_details: { cached_tokens: 200 } },
+        });
+
+        try {
+            await runKnowledgeResponse({
+                context,
+                messages: [{ role: "user", content: "How many products?" }],
+                complexity: "routine",
+                client: { responses: { create } },
+                executeTool: vi.fn().mockRejectedValue(new Error("catalog unavailable")),
+                env: {},
+            });
+            throw new Error("Expected the runtime to reject");
+        } catch (error) {
+            expect(error).toBeInstanceOf(KnowledgeResponseExecutionError);
+            const trace = (error as KnowledgeResponseExecutionError).trace;
+            expect(trace).toEqual(expect.objectContaining({
+                status: "tool_error",
+                inputTokens: 1000,
+                outputTokens: 100,
+            }));
+            expect(trace.estimatedCostUsd).toBeGreaterThan(0);
+            expect(trace.toolCalls).toEqual([
+                expect.objectContaining({ name: "getCatalogStats", status: "error" }),
+            ]);
+        }
+    });
+
+    it("classifies authorization failures as blocked traces", async () => {
+        const create = vi.fn().mockResolvedValue({
+            output: [{ type: "function_call", name: "getCatalogStats", call_id: "call_blocked", arguments: "{}" }],
+            usage: { input_tokens: 10, output_tokens: 2 },
+        });
+
+        await expect(runKnowledgeResponse({
+            context,
+            messages: [{ role: "user", content: "Count products" }],
+            complexity: "routine",
+            client: { responses: { create } },
+            executeTool: vi.fn().mockRejectedValue(new Error("Knowledge tool blocked: missing_scope:catalog.read")),
+            env: {},
+        })).rejects.toMatchObject({
+            trace: expect.objectContaining({
+                status: "blocked",
+                toolCalls: [expect.objectContaining({ status: "blocked" })],
+            }),
+        });
     });
 });

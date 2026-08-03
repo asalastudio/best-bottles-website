@@ -44,7 +44,7 @@ export default function EmployeeKnowledgeWorkspace() {
 
     const submitCorrection = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        if (!correctionTarget || correctionText.trim().length < 10 || correctionStatus === "submitting") return;
+        if (!correctionTarget?.requestId || correctionText.trim().length < 10 || correctionStatus === "submitting") return;
         setCorrectionStatus("submitting");
         try {
             const response = await fetch("/api/knowledge/corrections", {
@@ -53,6 +53,9 @@ export default function EmployeeKnowledgeWorkspace() {
                 body: JSON.stringify({
                     conversationId,
                     messageId: correctionTarget.id,
+                    requestId: correctionTarget.requestId,
+                    answerExcerpt: correctionTarget.content.slice(0, 1_000),
+                    sourceIds: correctionTarget.citations.map(({ sourceId }) => sourceId).slice(0, 20),
                     category: correctionCategory,
                     correction: correctionText,
                     sourceUrl: correctionSourceUrl || null,

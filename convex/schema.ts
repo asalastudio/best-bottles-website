@@ -580,6 +580,7 @@ export default defineSchema({
     knowledgeCorrections: defineTable({
         conversationId: v.string(),
         messageId: v.string(),
+        requestId: v.optional(v.string()),
         actorId: v.string(),
         surface: v.union(
             v.literal("storefront"),
@@ -597,12 +598,15 @@ export default defineSchema({
         ),
         correction: v.string(),
         sourceUrl: v.union(v.string(), v.null()),
+        answerExcerpt: v.optional(v.string()),
+        sourceIds: v.optional(v.array(v.string())),
         status: v.union(v.literal("pending"), v.literal("accepted"), v.literal("rejected")),
         createdAt: v.number(),
         updatedAt: v.number(),
         reviewerId: v.optional(v.union(v.string(), v.null())),
     })
         .index("by_status", ["status"])
+        .index("by_requestId", ["requestId"])
         .index("by_createdAt", ["createdAt"])
         .index("by_actorId", ["actorId"]),
 

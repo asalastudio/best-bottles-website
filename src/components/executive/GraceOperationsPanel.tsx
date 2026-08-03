@@ -11,10 +11,10 @@ const latency = (value: number | null) => value === null ? "—" : `${new Intl.N
 export function GraceOperationsPanel({ snapshot }: { snapshot: GraceOperationsSnapshot }) {
     const signals = [
         { label: "Estimated spend · 30D", value: money(snapshot.estimatedCostUsd) },
-        { label: "Successful answers", value: percent(snapshot.successRate) },
-        { label: "Request volume", value: integer(snapshot.requestCount) },
+        { label: "Internal successful answers", value: percent(snapshot.successRate) },
+        { label: "Internal request volume", value: integer(snapshot.requestCount) },
         { label: "P95 latency", value: latency(snapshot.p95LatencyMs) },
-        { label: "Tool calls", value: integer(snapshot.toolCalls) },
+        { label: "Internal tool calls", value: integer(snapshot.toolCalls) },
         {
             label: "Review queue",
             value: snapshot.pendingCorrections === null ? "—" : `${snapshot.pendingCorrections} pending corrections`,
@@ -30,7 +30,7 @@ export function GraceOperationsPanel({ snapshot }: { snapshot: GraceOperationsSn
                 </div>
                 <div className="flex items-center gap-2 text-[9px] uppercase tracking-[0.13em] text-zinc-400">
                     <span className={`h-1.5 w-1.5 rounded-full ${snapshot.status === "source-backed" ? "bg-emerald-400" : "bg-amber-300"}`} />
-                    {snapshot.status === "source-backed" ? "Source-backed · trailing 30 days" : "Not connected"}
+                    {snapshot.status === "source-backed" ? "Internal Responses · trailing 30 days" : "Not connected"}
                 </div>
             </div>
 
@@ -50,7 +50,7 @@ export function GraceOperationsPanel({ snapshot }: { snapshot: GraceOperationsSn
             <details className="border-t border-zinc-800 px-4 py-3 text-[10px] text-zinc-400">
                 <summary className="cursor-pointer font-semibold uppercase tracking-[0.12em] text-zinc-300">Source coverage & metric definitions</summary>
                 <div className="mt-3 grid gap-3 leading-5 sm:grid-cols-3">
-                    <p><strong className="text-zinc-200">Coverage.</strong> Minimized Convex traces only; no prompts, audio, customer PII, or raw conversations.</p>
+                    <p><strong className="text-zinc-200">Coverage.</strong> Employee/internal Responses only; public Realtime traffic is not included yet. Traces contain no prompts, audio, customer PII, or raw conversations.</p>
                     <p><strong className="text-zinc-200">Reliability.</strong> Successful answers divided by total recorded requests in the selected 30-day window.</p>
                     <p><strong className="text-zinc-200">Cost.</strong> Estimated from effective-dated OpenAI token and File Search rates retained with each trace.</p>
                 </div>

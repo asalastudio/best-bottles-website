@@ -2,6 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 import {
     buildGraceRealtimeTools,
     createGraceOpenAIRealtimeAdapter,
+    getGraceRealtimeToolSpecs,
     type GraceRealtimeAgentConfig,
     type GraceRealtimeSessionLike,
 } from "../src/lib/grace/openaiRealtimeAdapter";
@@ -29,6 +30,29 @@ class FakeSession implements GraceRealtimeSessionLike {
 }
 
 describe("Grace OpenAI Realtime adapter", () => {
+    it("exposes only tools authorized for the active storefront actor", () => {
+        const baseContext = {
+            surface: "storefront" as const,
+            actorId: null,
+            organizationId: null,
+            conversationId: "grace-realtime",
+            projectId: null,
+            refineState: null,
+            requestId: "grace-realtime-config",
+        };
+
+        expect(getGraceRealtimeToolSpecs({ ...baseContext, role: "public" }).map(({ name }) => name))
+            .not.toContain("listGraceProjects");
+        expect(getGraceRealtimeToolSpecs({
+            ...baseContext,
+            role: "customer",
+            actorId: "user_customer",
+        }).map(({ name }) => name)).toEqual(expect.arrayContaining([
+            "listGraceProjects",
+            "proposeProjectSave",
+        ]));
+    });
+
     it("connects a WebRTC session with gpt-realtime-2.1 and Marin", async () => {
         const session = new FakeSession();
         const createAgent = vi.fn((config: GraceRealtimeAgentConfig) => config);

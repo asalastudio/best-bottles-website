@@ -2179,6 +2179,16 @@ function GraceProviderBase({
         createGraceOpenAIRealtimeAdapter({
             baseInstructions: GRACE_REALTIME_INSTRUCTIONS,
             toolImplementations: clientTools as unknown as GraceRealtimeToolImplementations,
+            knowledgeContext: {
+                surface: "storefront",
+                role: userId ? "customer" : "public",
+                actorId: userId,
+                organizationId: null,
+                conversationId: "grace-realtime",
+                projectId: null,
+                refineState: null,
+                requestId: "grace-realtime-config",
+            },
             callbacks: {
                 onConnect: handleConnect,
                 onDisconnect: () => handleDisconnect({ reason: "disconnected" }),
@@ -2192,7 +2202,7 @@ function GraceProviderBase({
                 }),
             },
         }),
-    [clientTools, handleAgentChatResponsePart, handleConnect, handleDisconnect, handleError, handleMessage, handleModeChange]);
+    [clientTools, handleAgentChatResponsePart, handleConnect, handleDisconnect, handleError, handleMessage, handleModeChange, userId]);
 
     const openAIConversation = useMemo<GraceConversationController>(() => ({
         getId: () => openAIAdapter.isConnected() ? "openai-realtime" : null,

@@ -3,6 +3,7 @@ import "server-only";
 import { loadKnowledgeOperationsSummary } from "@/lib/knowledge/operationsServer";
 
 export type GraceOperationsSnapshot = {
+    coverage: "employee_responses_only";
     status: "source-backed" | "not-connected";
     asOf: string | null;
     requestCount: number | null;
@@ -16,6 +17,7 @@ export type GraceOperationsSnapshot = {
 };
 
 const notConnected = (): GraceOperationsSnapshot => ({
+    coverage: "employee_responses_only",
     status: "not-connected",
     asOf: null,
     requestCount: null,
@@ -33,6 +35,7 @@ export async function getGraceOperationsSnapshot(now = Date.now()): Promise<Grac
         const trailingThirtyDays = now - 30 * 24 * 60 * 60 * 1000;
         const summary = await loadKnowledgeOperationsSummary(trailingThirtyDays);
         return {
+            coverage: "employee_responses_only",
             status: "source-backed",
             asOf: new Date(now).toISOString(),
             ...summary,

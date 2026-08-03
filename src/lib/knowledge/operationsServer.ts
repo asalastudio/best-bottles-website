@@ -30,11 +30,14 @@ export async function persistKnowledgeCorrection(
         correction: {
             conversationId: correction.conversationId,
             messageId: correction.messageId,
+            requestId: correction.requestId,
             actorId: correction.actorId,
             surface: correction.surface,
             category: correction.category,
             correction: correction.correction,
             sourceUrl: correction.sourceUrl,
+            answerExcerpt: correction.answerExcerpt,
+            sourceIds: correction.sourceIds,
         },
     });
     return String(correctionId);

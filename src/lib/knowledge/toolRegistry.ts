@@ -76,8 +76,8 @@ const TOOL_POLICIES = {
     setCatalogRefinements: propose(NAVIGATION_PROPOSAL),
     setPaperDollSelection: propose(["catalog.read", "compatibility.read"]),
     prepareQuoteRequest: propose(CART_PROPOSAL),
-    listGraceProjects: read(["customer_project.read.self"], ["customer_portal"]),
-    proposeProjectSave: propose(["customer_project.write.self"], ["customer_portal"]),
+    listGraceProjects: read(["customer_project.read.self"], CUSTOMER_SURFACES),
+    proposeProjectSave: propose(["customer_project.write.self"], CUSTOMER_SURFACES),
 } satisfies Record<GraceOpenAIToolName, PolicyWithoutSchema>;
 
 export const KNOWLEDGE_TOOL_REGISTRY = Object.fromEntries(
@@ -92,6 +92,67 @@ export function getAuthorizedKnowledgeTools(context: KnowledgeRequestContext): G
         const definition = KNOWLEDGE_TOOL_REGISTRY[schema.name];
         return authorizeKnowledgeTool(context, definition.requiredScopes, definition.surfaces).allowed;
     });
+}
+
+function matchesJsonType(value: unknown, type: unknown) {
+    if (type === "null") return value === null;
+    if (type === "array") return Array.isArray(value);
+    if (type === "object") return typeof value === "object" && value !== null && !Array.isArray(value);
+    if (type === "number") return typeof value === "number" && Number.isFinite(value);
+    return typeof value === type;
+}
+
+function validateJsonSchema(schemaValue: unknown, value: unknown, path: string): string | null {
+    if (!schemaValue || typeof schemaValue !== "object" || Array.isArray(schemaValue)) {
+        return `${path} has an invalid schema`;
+    }
+    const schema = schemaValue as Record<string, unknown>;
+    const acceptedTypes = Array.isArray(schema.type) ? schema.type : [schema.type];
+    if (!acceptedTypes.some((type) => matchesJsonType(value, type))) {
+        return `${path} has an invalid type`;
+    }
+    if (Array.isArray(schema.enum) && !schema.enum.some((entry) => Object.is(entry, value))) {
+        return `${path} is not an allowed value`;
+    }
+
+    if (Array.isArray(value)) {
+        if (typeof schema.minItems === "number" && value.length < schema.minItems) return `${path} has too few items`;
+        if (typeof schema.maxItems === "number" && value.length > schema.maxItems) return `${path} has too many items`;
+        for (let index = 0; index < value.length; index += 1) {
+            const error = validateJsonSchema(schema.items, value[index], `${path}[${index}]`);
+            if (error) return error;
+        }
+    }
+
+    if (typeof value === "object" && value !== null && !Array.isArray(value)) {
+        const record = value as Record<string, unknown>;
+        const properties = (schema.properties ?? {}) as Record<string, unknown>;
+        const required = Array.isArray(schema.required) ? schema.required : [];
+        for (const key of required) {
+            if (typeof key === "string" && !Object.prototype.hasOwnProperty.call(record, key)) {
+                return `${path}.${key} is required`;
+            }
+        }
+        if (schema.additionalProperties === false) {
+            const unexpected = Object.keys(record).find((key) => !Object.prototype.hasOwnProperty.call(properties, key));
+            if (unexpected) return `${path}.${unexpected} is not allowed`;
+        }
+        for (const [key, childValue] of Object.entries(record)) {
+            if (!Object.prototype.hasOwnProperty.call(properties, key)) continue;
+            const error = validateJsonSchema(properties[key], childValue, `${path}.${key}`);
+            if (error) return error;
+        }
+    }
+    return null;
+}
+
+export function assertKnowledgeToolParameters(
+    name: string,
+    parameters: Record<string, unknown>,
+) {
+    const definition = KNOWLEDGE_TOOL_REGISTRY[name as GraceOpenAIToolName];
+    const error = definition ? validateJsonSchema(definition.schema.parameters, parameters, "parameters") : "unknown tool";
+    if (error) throw new Error(`Invalid parameters for knowledge tool ${name}: ${error}`);
 }
 
 export async function executeKnowledgeTool(args: {
@@ -113,6 +174,8 @@ export async function executeKnowledgeTool(args: {
     if (!authorization.allowed) {
         throw new Error(`Knowledge tool blocked: ${authorization.reason}`);
     }
+
+    assertKnowledgeToolParameters(args.name, args.parameters);
 
     return args.execute(args.name, args.parameters);
 }

@@ -33,6 +33,7 @@ export function ExecutiveDashboard({ snapshot, graceOperations, previewMode = fa
     const [range, setRange] = useState<ExecutiveDateRange>(snapshot.range);
     const [selection, setSelection] = useState<ExecutiveDetailSelection>(null);
     const visibleGraceOperations: GraceOperationsSnapshot = graceOperations ?? {
+        coverage: "employee_responses_only",
         status: "not-connected",
         asOf: null,
         requestCount: null,
