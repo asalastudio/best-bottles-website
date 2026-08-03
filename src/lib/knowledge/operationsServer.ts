@@ -22,10 +22,22 @@ export async function persistKnowledgeTrace(trace: KnowledgeTrace): Promise<void
 }
 
 export async function persistKnowledgeCorrection(
-    correction: Omit<KnowledgeCorrection, "status" | "createdAt">,
-): Promise<void> {
+    correction: KnowledgeCorrection,
+): Promise<string> {
     const { client, token } = getPersistenceConfiguration();
-    await client.mutation(api.knowledgeOperations.submitKnowledgeCorrection, { token, correction });
+    const correctionId = await client.mutation(api.knowledgeOperations.submitKnowledgeCorrection, {
+        token,
+        correction: {
+            conversationId: correction.conversationId,
+            messageId: correction.messageId,
+            actorId: correction.actorId,
+            surface: correction.surface,
+            category: correction.category,
+            correction: correction.correction,
+            sourceUrl: correction.sourceUrl,
+        },
+    });
+    return String(correctionId);
 }
 
 export async function loadKnowledgeOperationsSummary(since: number): Promise<KnowledgeOperationsSummary> {

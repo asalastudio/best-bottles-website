@@ -16,8 +16,12 @@ const STARTERS = [
 ];
 
 export default function EmployeeKnowledgeWorkspace() {
-    const { messages, input, setInput, isSending, error, send, reset } = useEmployeeKnowledgeChat();
+    const { messages, input, setInput, isSending, error, send, reset, conversationId } = useEmployeeKnowledgeChat();
     const [correctionTarget, setCorrectionTarget] = useState<EmployeeKnowledgeMessage | null>(null);
+    const [correctionCategory, setCorrectionCategory] = useState("product_truth");
+    const [correctionText, setCorrectionText] = useState("");
+    const [correctionSourceUrl, setCorrectionSourceUrl] = useState("");
+    const [correctionStatus, setCorrectionStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
     const endRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
@@ -26,7 +30,39 @@ export default function EmployeeKnowledgeWorkspace() {
 
     const handleReset = () => {
         setCorrectionTarget(null);
+        setCorrectionStatus("idle");
         reset();
+    };
+
+    const openCorrection = (message: EmployeeKnowledgeMessage) => {
+        setCorrectionTarget(message);
+        setCorrectionCategory("product_truth");
+        setCorrectionText("");
+        setCorrectionSourceUrl("");
+        setCorrectionStatus("idle");
+    };
+
+    const submitCorrection = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        if (!correctionTarget || correctionText.trim().length < 10 || correctionStatus === "submitting") return;
+        setCorrectionStatus("submitting");
+        try {
+            const response = await fetch("/api/knowledge/corrections", {
+                method: "POST",
+                headers: { "content-type": "application/json" },
+                body: JSON.stringify({
+                    conversationId,
+                    messageId: correctionTarget.id,
+                    category: correctionCategory,
+                    correction: correctionText,
+                    sourceUrl: correctionSourceUrl || null,
+                }),
+            });
+            if (!response.ok) throw new Error("Correction submission failed");
+            setCorrectionStatus("success");
+        } catch {
+            setCorrectionStatus("error");
+        }
     };
 
     return (
@@ -69,9 +105,94 @@ export default function EmployeeKnowledgeWorkspace() {
                             </div>
                         </section>
                     ) : (
-                        messages.map((message) => (
-                            <KnowledgeMessage key={message.id} message={message} onCorrect={setCorrectionTarget} />
-                        ))
+                        messages.map((message) => {
+                            const correctionOpen = correctionTarget?.id === message.id;
+                            return (
+                                <div key={message.id}>
+                                    <KnowledgeMessage
+                                        message={message}
+                                        onCorrect={openCorrection}
+                                        correctionOpen={correctionOpen}
+                                    />
+                                    {correctionOpen ? (
+                                        <form
+                                            onSubmit={submitCorrection}
+                                            className="mb-7 ml-auto max-w-[760px] border border-champagne/70 bg-linen p-5"
+                                            aria-label="Suggest a correction"
+                                        >
+                                            <div className="flex items-start justify-between gap-4">
+                                                <div>
+                                                    <p className="text-[10px] font-bold uppercase tracking-[0.17em] text-muted-gold">Controlled learning</p>
+                                                    <h3 className="mt-1 font-serif text-xl text-obsidian">Submit for human review</h3>
+                                                </div>
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setCorrectionTarget(null)}
+                                                    className="text-xs text-slate underline underline-offset-4"
+                                                >
+                                                    Cancel
+                                                </button>
+                                            </div>
+                                            {correctionStatus === "success" ? (
+                                                <p className="mt-4 border-l-2 border-emerald-600 bg-emerald-50 px-4 py-3 text-xs leading-5 text-emerald-800" role="status">
+                                                    Correction submitted for human review. No product data was changed.
+                                                </p>
+                                            ) : (
+                                                <>
+                                                    <label className="mt-4 block text-[11px] font-semibold text-obsidian">
+                                                        Category
+                                                        <select
+                                                            value={correctionCategory}
+                                                            onChange={(event) => setCorrectionCategory(event.target.value)}
+                                                            className="mt-1.5 block w-full border border-champagne bg-bone px-3 py-2.5 text-sm"
+                                                        >
+                                                            <option value="product_truth">Product truth</option>
+                                                            <option value="compatibility">Compatibility</option>
+                                                            <option value="policy">Policy</option>
+                                                            <option value="behavior">Grace behavior</option>
+                                                            <option value="missing_knowledge">Missing knowledge</option>
+                                                        </select>
+                                                    </label>
+                                                    <label className="mt-3 block text-[11px] font-semibold text-obsidian">
+                                                        What should the reviewed answer say?
+                                                        <textarea
+                                                            value={correctionText}
+                                                            onChange={(event) => setCorrectionText(event.target.value.slice(0, 2_000))}
+                                                            minLength={10}
+                                                            maxLength={2000}
+                                                            required
+                                                            rows={4}
+                                                            className="mt-1.5 block w-full resize-y border border-champagne bg-bone px-3 py-2.5 text-sm leading-6"
+                                                        />
+                                                    </label>
+                                                    <label className="mt-3 block text-[11px] font-semibold text-obsidian">
+                                                        Supporting HTTPS source (optional)
+                                                        <input
+                                                            type="url"
+                                                            pattern="https://.*"
+                                                            value={correctionSourceUrl}
+                                                            onChange={(event) => setCorrectionSourceUrl(event.target.value)}
+                                                            placeholder="https://"
+                                                            className="mt-1.5 block w-full border border-champagne bg-bone px-3 py-2.5 text-sm"
+                                                        />
+                                                    </label>
+                                                    {correctionStatus === "error" ? (
+                                                        <p className="mt-3 text-xs text-red-700" role="alert">The correction could not be submitted. Please try again.</p>
+                                                    ) : null}
+                                                    <button
+                                                        type="submit"
+                                                        disabled={correctionStatus === "submitting" || correctionText.trim().length < 10}
+                                                        className="mt-4 bg-obsidian px-4 py-2.5 text-[11px] font-bold uppercase tracking-[0.13em] text-bone disabled:opacity-40"
+                                                    >
+                                                        {correctionStatus === "submitting" ? "Submitting…" : "Submit for review"}
+                                                    </button>
+                                                </>
+                                            )}
+                                        </form>
+                                    ) : null}
+                                </div>
+                            );
+                        })
                     )}
 
                     {isSending ? (
@@ -81,11 +202,6 @@ export default function EmployeeKnowledgeWorkspace() {
                         </div>
                     ) : null}
                     {error ? <p className="mb-5 border-l-2 border-red-400 bg-red-50 px-4 py-3 text-xs leading-5 text-red-700">{error}</p> : null}
-                    {correctionTarget ? (
-                        <p className="mb-5 border border-champagne/60 bg-linen px-4 py-3 text-xs text-slate">
-                            Correction selected for request {correctionTarget.requestId}. Add the reviewed correction in the next step.
-                        </p>
-                    ) : null}
                     <div ref={endRef} />
                 </div>
             </div>

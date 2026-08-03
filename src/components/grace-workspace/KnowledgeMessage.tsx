@@ -5,9 +5,11 @@ import type { EmployeeKnowledgeMessage } from "@/lib/knowledge/useEmployeeKnowle
 export default function KnowledgeMessage({
     message,
     onCorrect,
+    correctionOpen = false,
 }: {
     message: EmployeeKnowledgeMessage;
     onCorrect: (message: EmployeeKnowledgeMessage) => void;
+    correctionOpen?: boolean;
 }) {
     const isAssistant = message.role === "assistant";
     return (
@@ -42,9 +44,10 @@ export default function KnowledgeMessage({
                 <button
                     type="button"
                     onClick={() => onCorrect(message)}
+                    aria-expanded={correctionOpen}
                     className="mt-3 text-[11px] font-semibold text-slate underline decoration-champagne underline-offset-4 transition hover:text-obsidian"
                 >
-                    Suggest a correction
+                    {correctionOpen ? "Correction form open" : "Suggest a correction"}
                 </button>
             ) : null}
         </article>
