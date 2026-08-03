@@ -216,6 +216,13 @@ describe("Grace 100-point hardening contracts", () => {
     expect(provider).toContain('graceProvider === "elevenlabs"');
   });
 
+  it("closes the previous Realtime adapter when Clerk identity changes", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    expect(provider).toContain("openAIAdapter.disconnect();");
+    expect(provider).toContain("}, [openAIAdapter]);");
+    expect(provider).toContain("intentionalEndRef.current = true;");
+  });
+
   it("caches family-card tool responses without poisoning the cache with degraded reads", () => {
     const route = read("src/lib/grace/toolGatewayServer.ts");
 

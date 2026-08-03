@@ -2204,6 +2204,16 @@ function GraceProviderBase({
         }),
     [clientTools, handleAgentChatResponsePart, handleConnect, handleDisconnect, handleError, handleMessage, handleModeChange, userId]);
 
+    // Close the exact adapter created for the previous Clerk identity. Without
+    // adapter-scoped cleanup, a guest-to-customer transition can orphan an
+    // active WebRTC connection and microphone stream.
+    useEffect(() => {
+        return () => {
+            intentionalEndRef.current = true;
+            openAIAdapter.disconnect();
+        };
+    }, [openAIAdapter]);
+
     const openAIConversation = useMemo<GraceConversationController>(() => ({
         getId: () => openAIAdapter.isConnected() ? "openai-realtime" : null,
         sendContextualUpdate: (context) => { void openAIAdapter.sendContext(context); },
