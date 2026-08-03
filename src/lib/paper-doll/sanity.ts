@@ -1,9 +1,10 @@
-export const PAPER_DOLL_PDP_CANVAS = Object.freeze({
-    width: 2080,
-    height: 2288,
-});
+import {
+    PAPER_DOLL_CANVAS,
+    PAPER_DOLL_CANVAS_PRESET,
+} from "./contract";
 
-export const PAPER_DOLL_PDP_CANVAS_PRESET = "pdp-2080x2288" as const;
+export const PAPER_DOLL_PDP_CANVAS = PAPER_DOLL_CANVAS;
+export const PAPER_DOLL_PDP_CANVAS_PRESET = PAPER_DOLL_CANVAS_PRESET;
 
 export type StorefrontPaperDollLayer = {
     _key: string;
