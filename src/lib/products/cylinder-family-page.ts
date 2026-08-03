@@ -132,3 +132,17 @@ export function buildCylinderBuilderHref(selection?: {
     if (selection?.finish) params.set("finish", selection.finish);
     return `/products/${CYLINDER_9ML_17415_COHORT.slug}?${params.toString()}`;
 }
+
+export function buildCylinderReadyMadeHref(
+    group: Pick<CatalogSearchGroup, "slug" | "family" | "capacityMl" | "neckThreadSize" | "paperDollFamilyKey">,
+    graceSku?: string | null,
+): string {
+    const isUnifiedCohort = group.family === CYLINDER_9ML_17415_COHORT.family
+        && group.capacityMl === CYLINDER_9ML_17415_COHORT.capacityMl
+        && group.neckThreadSize === CYLINDER_9ML_17415_COHORT.neckThreadSize
+        && group.paperDollFamilyKey === CYLINDER_9ML_17415_COHORT.paperDollFamilyKey;
+    if (!isUnifiedCohort) return `/products/${group.slug}`;
+    const params = new URLSearchParams({ view: "beauty" });
+    if (graceSku) params.set("configuration", graceSku);
+    return `/products/${CYLINDER_9ML_17415_COHORT.slug}?${params.toString()}`;
+}

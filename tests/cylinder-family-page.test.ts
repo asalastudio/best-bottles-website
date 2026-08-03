@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
     buildCylinderBuilderHref,
     buildCylinderFamilyPageModel,
+    buildCylinderReadyMadeHref,
     classifyCylinderApplicatorSystem,
 } from "@/lib/products/cylinder-family-page";
 
@@ -132,6 +133,15 @@ describe("Cylinder family page model", () => {
             finish: "Shiny Gold",
         })).toBe(
             "/products/cylinder-9ml-17-415?view=build&glass=Amber&applicator=Roll-On&roller=Metal&finish=Shiny+Gold",
+        );
+    });
+
+    it("routes only 9 ml 17-415 cards into the unified PDP", () => {
+        expect(buildCylinderReadyMadeHref(groups[0], "GB-CYL-CLR-9ML-T-11")).toBe(
+            "/products/cylinder-9ml-17-415?view=beauty&configuration=GB-CYL-CLR-9ML-T-11",
+        );
+        expect(buildCylinderReadyMadeHref(groups[2], "GB-TALLCYL-CLR-9ML-T-11")).toBe(
+            "/products/tall-cylinder-9ml-clear-13-415-rollon",
         );
     });
 });

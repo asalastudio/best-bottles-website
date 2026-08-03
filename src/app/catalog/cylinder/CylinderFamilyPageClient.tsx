@@ -17,6 +17,7 @@ import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import {
     CYLINDER_9ML_BUILDER_OPTIONS,
     buildCylinderBuilderHref,
+    buildCylinderReadyMadeHref,
     type CylinderApplicatorSystem,
     type CylinderFamilyPageModel,
 } from "@/lib/products/cylinder-family-page";
@@ -280,7 +281,7 @@ function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyPageModel["car
     const row = catalog.variantPreviewRows.find((candidate) => candidate.groupId === group._id);
     const representativeVariant = row?.variants[0] ?? null;
     const productTitle = getCustomerFacingProductName({ group, variant: representativeVariant, fallbackName: group.displayName }).displayName;
-    const productHref = `/products/${group.slug}`;
+    const productHref = buildCylinderReadyMadeHref(group, representativeVariant?.graceSku);
     const previews = getProductCardVariantPreviews(row?.variants ?? [], {
         productTitle,
         defaultImageUrl: group.heroImageUrl,

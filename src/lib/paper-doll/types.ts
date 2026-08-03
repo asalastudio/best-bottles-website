@@ -28,5 +28,17 @@ export interface PaperDollConfiguration {
     stockStatus: string | null;
     shopifyVariantId: string | null;
     shopifySellable: boolean | null;
+    variantId?: string | null;
+    itemName?: string | null;
+    itemDescription?: string | null;
+    imageUrl?: string | null;
+    imageUrlCapOff?: string | null;
+    webPrice10pc?: number | null;
+    webPrice12pc?: number | null;
+    category?: string | null;
+    heightWithCap?: string | null;
+    heightWithoutCap?: string | null;
+    diameter?: string | null;
+    bottleWeightG?: number | null;
+    caseQuantity?: number | null;
 }
-

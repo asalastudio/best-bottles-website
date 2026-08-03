@@ -13,6 +13,7 @@ export interface CylinderConfigurationSourceGroup extends ProductCohortGroupIden
 }
 
 export interface CylinderConfigurationSourceVariant {
+    _id?: string;
     graceSku: string;
     websiteSku: string;
     applicator: string | null;
@@ -24,6 +25,17 @@ export interface CylinderConfigurationSourceVariant {
     stockStatus: string | null;
     shopifyVariantId?: string | null;
     shopifySellable?: boolean | null;
+    itemDescription?: string | null;
+    imageUrl?: string | null;
+    imageUrlCapOff?: string | null;
+    webPrice10pc?: number | null;
+    webPrice12pc?: number | null;
+    category?: string | null;
+    heightWithCap?: string | null;
+    heightWithoutCap?: string | null;
+    diameter?: string | null;
+    bottleWeightG?: number | null;
+    caseQuantity?: number | null;
 }
 
 export interface CylinderConfigurationSourceRow {
@@ -182,6 +194,19 @@ export function buildCylinder9mlConfigurations(
             stockStatus: row.variant.stockStatus,
             shopifyVariantId: row.variant.shopifyVariantId ?? null,
             shopifySellable: row.variant.shopifySellable ?? null,
+            variantId: row.variant._id ?? null,
+            itemName: row.variant.itemName ?? null,
+            itemDescription: row.variant.itemDescription ?? null,
+            imageUrl: row.variant.imageUrl ?? null,
+            imageUrlCapOff: row.variant.imageUrlCapOff ?? null,
+            webPrice10pc: row.variant.webPrice10pc ?? null,
+            webPrice12pc: row.variant.webPrice12pc ?? null,
+            category: row.variant.category ?? null,
+            heightWithCap: row.variant.heightWithCap ?? null,
+            heightWithoutCap: row.variant.heightWithoutCap ?? null,
+            diameter: row.variant.diameter ?? null,
+            bottleWeightG: row.variant.bottleWeightG ?? null,
+            caseQuantity: row.variant.caseQuantity ?? null,
         };
     });
 

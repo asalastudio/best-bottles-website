@@ -229,6 +229,35 @@ export const analytics = {
     adapter.track("Catalog Filtered", properties);
   },
 
+  paperDollViewOpened(properties: {
+    familyKey: string;
+    capacityMl: number;
+    neckThreadSize: string;
+    sku: string;
+  }) {
+    adapter.track("paper_doll_view_opened", properties);
+  },
+
+  paperDollOptionSelected(properties: {
+    familyKey: string;
+    capacityMl: number;
+    neckThreadSize: string;
+    sku: string;
+    dimension: string;
+    value: string;
+  }) {
+    adapter.track("paper_doll_option_selected", properties);
+  },
+
+  paperDollConfigurationResolved(properties: {
+    familyKey: string;
+    capacityMl: number;
+    neckThreadSize: string;
+    sku: string;
+  }) {
+    adapter.track("paper_doll_configuration_resolved", properties);
+  },
+
   // ── Cart & Checkout ──────────────────────────────────────────────────────
 
   cartItemAdded(properties: {
