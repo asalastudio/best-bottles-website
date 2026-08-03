@@ -51,8 +51,22 @@ import {
     type GracePaperDollSelectionRequest,
 } from "@/lib/grace/paperDollController";
 import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
+import { getGraceProvider } from "@/lib/grace/openaiRealtimeConfig";
+import {
+    createGraceOpenAIRealtimeAdapter,
+    type GraceOpenAIRealtimeAdapter,
+    type GraceRealtimeToolImplementations,
+} from "@/lib/grace/openaiRealtimeAdapter";
+import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 
 // ─── Core product intelligence injected into ElevenLabs session ─────────────
+
+type GraceConversationController = {
+    getId(): string | null;
+    sendContextualUpdate(context: string): void;
+    sendUserMessage(message: string): void;
+    endSession(): Promise<void>;
+};
 
 // ─── Helpers ─────────────────────────────────────────────────────────────────
 
@@ -592,7 +606,8 @@ function GraceProviderBase({
     const [graceStatus, setGraceStatus] = useState<GraceStatus>("idle");
     const [conversationActive, setConversationActive] = useState(false);
     const connectingRef = useRef(false);
-    const conversationRef = useRef<ReturnType<typeof useConversation> | null>(null);
+    const conversationRef = useRef<GraceConversationController | null>(null);
+    const graceProvider = getGraceProvider(process.env.NEXT_PUBLIC_GRACE_PROVIDER);
 
     // ── Messages & streaming ─────────────────────────────────────────────────
     const [messages, setMessages] = useState<GraceMessage[]>([]);
@@ -2045,7 +2060,7 @@ function GraceProviderBase({
         });
     }, []);
 
-    const conversation = useConversation({
+    const elevenLabsConversation = useConversation({
         clientTools,
         onConnect: handleConnect,
         onDisconnect: handleDisconnect,
@@ -2055,7 +2070,41 @@ function GraceProviderBase({
         onAgentChatResponsePart: handleAgentChatResponsePart,
     });
 
-    useEffect(() => { conversationRef.current = conversation; });
+    const openAIAdapter = useMemo<GraceOpenAIRealtimeAdapter>(() =>
+        createGraceOpenAIRealtimeAdapter({
+            baseInstructions: GRACE_REALTIME_INSTRUCTIONS,
+            toolImplementations: clientTools as unknown as GraceRealtimeToolImplementations,
+            callbacks: {
+                onConnect: handleConnect,
+                onDisconnect: () => handleDisconnect({ reason: "disconnected" }),
+                onModeChange: (mode) => handleModeChange({ mode }),
+                onError: handleError,
+                onTranscriptDelta: (text) => handleAgentChatResponsePart({ text, type: "delta" }),
+                onMessage: ({ role, text }) => handleMessage({
+                    message: text,
+                    role: role === "assistant" ? "assistant" : "user",
+                    source: "openai-realtime",
+                }),
+            },
+        }),
+    [clientTools, handleAgentChatResponsePart, handleConnect, handleDisconnect, handleError, handleMessage, handleModeChange]);
+
+    const openAIConversation = useMemo<GraceConversationController>(() => ({
+        getId: () => openAIAdapter.isConnected() ? "openai-realtime" : null,
+        sendContextualUpdate: (context) => { void openAIAdapter.sendContext(context); },
+        sendUserMessage: (message) => openAIAdapter.sendText(message),
+        endSession: async () => { openAIAdapter.disconnect(); },
+    }), [openAIAdapter]);
+
+    useEffect(() => {
+        if (graceProvider === "openai") {
+            conversationRef.current = openAIConversation;
+            return;
+        }
+        if (graceProvider === "elevenlabs") {
+            conversationRef.current = elevenLabsConversation as GraceConversationController;
+        }
+    }, [elevenLabsConversation, graceProvider, openAIConversation]);
 
     // ── Start / stop ─────────────────────────────────────────────────────────
 
@@ -2072,41 +2121,50 @@ function GraceProviderBase({
         reconnectAttemptsRef.current = 0;
 
         try {
-            const res = await fetchJsonWithTimeout<{ signedUrl?: string; error?: string }>("/api/elevenlabs/signed-url", {});
-            if (!res.ok) {
-                throw new Error(res.error ?? "Failed to get ElevenLabs connection.");
-            }
-            const { signedUrl } = res.data ?? {};
-            if (!signedUrl) throw new Error("ElevenLabs did not return a valid signed URL.");
-
             const page = pageContextRef.current;
             const productName = page?.currentProduct?.name ?? "our collection";
             const cp = page?.currentProduct;
             const clip = (s: string, max: number) => (s.length > max ? `${s.slice(0, max)}…` : s);
 
-            console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session...`);
-            await conversation.startSession({
-                signedUrl,
-                textOnly: useTextOnly,
-                ...(!useTextOnly ? { preferHeadphonesForIosDevices: true } : {}),
-                dynamicVariables: {
-                    _product_name_: productName,
-                    _page_type_: page?.pageType ?? "other",
-                    _page_path_: page?.pathname ?? "/",
-                    _page_url_: clip(page?.pageUrl ?? page?.pathname ?? "/", 500),
-                    _grace_sku_: cp?.graceSku ?? "",
-                    _neck_thread_: cp?.neckThreadSize ?? "",
-                    _product_family_: cp?.family ?? "",
-                    _applicators_line_: clip(
-                        (cp?.applicatorTypes?.length ? cp.applicatorTypes.join(", ") : cp?.applicator) ?? "",
-                        400,
-                    ),
-                    _caps_summary_: clip(cp?.capsSummary ?? "", 400),
-                    _catalog_category_: page?.catalogCategory ?? "",
-                    _catalog_search_: clip(page?.catalogSearch ?? "", 200),
-                    _catalog_families_: clip(page?.currentCollection ?? "", 300),
-                },
-            });
+            console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session with ${graceProvider}...`);
+            if (graceProvider === "openai") {
+                const res = await fetchJsonWithTimeout<{ clientSecret?: string; error?: string }>(
+                    "/api/openai/realtime-token",
+                    { method: "GET" },
+                );
+                if (!res.ok) throw new Error(res.error ?? "Failed to initialize OpenAI Realtime.");
+                const clientSecret = res.data?.clientSecret;
+                if (!clientSecret) throw new Error("OpenAI did not return a valid Realtime client secret.");
+                await openAIAdapter.sendContext(formatPageContextForGrace(page, browsingHistoryRef.current));
+                await openAIAdapter.connect({ clientSecret, mode: useTextOnly ? "text" : "voice" });
+            } else if (graceProvider === "elevenlabs") {
+                const res = await fetchJsonWithTimeout<{ signedUrl?: string; error?: string }>("/api/elevenlabs/signed-url", {});
+                if (!res.ok) throw new Error(res.error ?? "Failed to get ElevenLabs connection.");
+                const { signedUrl } = res.data ?? {};
+                if (!signedUrl) throw new Error("ElevenLabs did not return a valid signed URL.");
+                await elevenLabsConversation.startSession({
+                    signedUrl,
+                    textOnly: useTextOnly,
+                    ...(!useTextOnly ? { preferHeadphonesForIosDevices: true } : {}),
+                    dynamicVariables: {
+                        _product_name_: productName,
+                        _page_type_: page?.pageType ?? "other",
+                        _page_path_: page?.pathname ?? "/",
+                        _page_url_: clip(page?.pageUrl ?? page?.pathname ?? "/", 500),
+                        _grace_sku_: cp?.graceSku ?? "",
+                        _neck_thread_: cp?.neckThreadSize ?? "",
+                        _product_family_: cp?.family ?? "",
+                        _applicators_line_: clip(
+                            (cp?.applicatorTypes?.length ? cp.applicatorTypes.join(", ") : cp?.applicator) ?? "",
+                            400,
+                        ),
+                        _caps_summary_: clip(cp?.capsSummary ?? "", 400),
+                        _catalog_category_: page?.catalogCategory ?? "",
+                        _catalog_search_: clip(page?.catalogSearch ?? "", 200),
+                        _catalog_families_: clip(page?.currentCollection ?? "", 300),
+                    },
+                });
+            }
             console.log("[Grace] Session started successfully.");
             setConversationActive(true);
             if (useTextOnly) {
@@ -2132,7 +2190,7 @@ function GraceProviderBase({
         } finally {
             connectingRef.current = false;
         }
-    }, [conversation]);
+    }, [elevenLabsConversation, graceProvider, openAIAdapter]);
 
     // Sync startConversation into the ref so handleDisconnect can invoke it
     // for auto-reconnect on transient WebSocket failures.
@@ -2207,6 +2265,35 @@ function GraceProviderBase({
 
     const pendingMessageRef = useRef<string | null>(null);
 
+    const sendWithOpenAITextFallback = useCallback(async (message: string): Promise<boolean> => {
+        const history = messagesRef.current.map((entry) => ({
+            role: entry.role === "grace" ? "assistant" as const : "user" as const,
+            content: entry.content,
+        }));
+        const last = history[history.length - 1];
+        if (!last || last.role !== "user" || normalizeGraceMessageText(last.content) !== normalizeGraceMessageText(message)) {
+            history.push({ role: "user", content: message });
+        }
+        const response = await fetchJsonWithTimeout<{ message?: string; error?: string }>(
+            "/api/grace/chat",
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    messages: history,
+                    pageContextBlock: formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current),
+                }),
+            },
+            30_000,
+        );
+        if (!response.ok || !response.data?.message) return false;
+        handleMessage({ message: response.data.message, role: "assistant", source: "openai-text-fallback" });
+        setErrorMessage("");
+        setVoiceFailed(false);
+        setGraceStatus("idle");
+        return true;
+    }, [handleMessage]);
+
     const send = useCallback(async (text?: string) => {
         const msg = (text ?? input).trim();
         if (!msg) return;
@@ -2226,9 +2313,17 @@ function GraceProviderBase({
             setGraceStatus("idle");
             setVoiceFailed(false);
             pendingMessageRef.current = msg;
-            await startConversation(true);
+            const connected = await startConversation(true);
+            if (!connected && graceProvider === "openai") {
+                pendingMessageRef.current = null;
+                const recovered = await sendWithOpenAITextFallback(msg);
+                if (!recovered) {
+                    setIsAwaitingReply(false);
+                    setErrorMessage("Grace is temporarily unavailable. Please try again.");
+                }
+            }
         }
-    }, [input, startConversation]);
+    }, [graceProvider, input, sendWithOpenAITextFallback, startConversation]);
 
     // ── Navigation handling ──────────────────────────────────────────────────
     const [pendingNavigation, setPendingNavigation] = useState<string | null>(null);
@@ -2305,6 +2400,10 @@ function GraceProviderBase({
         }));
     }, []);
 
+    const stopSpeaking = useCallback(() => {
+        if (graceProvider === "openai") openAIAdapter.interrupt();
+    }, [graceProvider, openAIAdapter]);
+
     // ── Compose context value ────────────────────────────────────────────────
 
     const contextValue = useMemo((): GraceContextValue => ({
@@ -2329,7 +2428,7 @@ function GraceProviderBase({
         send,
         startDictation: async () => { },
         stopDictation: () => { },
-        stopSpeaking: () => { },
+        stopSpeaking,
         errorMessage,
         conversationActive,
         startConversation,
@@ -2354,7 +2453,7 @@ function GraceProviderBase({
         send, errorMessage, conversationActive, startConversation, endConversation,
         onNavigate, pendingNavigation, clearPendingNavigation, confirmAction, dismissAction,
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,
-        voiceFailed, graceQuery, pageContext, browsingHistory,
+        voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking,
     ]);
 
     return (

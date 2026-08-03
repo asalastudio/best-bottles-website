@@ -206,6 +206,16 @@ describe("Grace 100-point hardening contracts", () => {
     expect(transcribe).toContain('route: "voice-transcribe"');
   });
 
+  it("defaults Grace to OpenAI Realtime while retaining the temporary ElevenLabs rollback", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    expect(provider).toContain("getGraceProvider");
+    expect(provider).toContain("createGraceOpenAIRealtimeAdapter");
+    expect(provider).toContain('"/api/openai/realtime-token"');
+    expect(provider).toContain('"/api/grace/chat"');
+    expect(provider).toContain('graceProvider === "openai"');
+    expect(provider).toContain('graceProvider === "elevenlabs"');
+  });
+
   it("caches family-card tool responses without poisoning the cache with degraded reads", () => {
     const route = read("src/app/api/grace/tools/route.ts");
 
