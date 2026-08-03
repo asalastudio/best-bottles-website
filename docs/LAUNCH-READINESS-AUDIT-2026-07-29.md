@@ -292,3 +292,22 @@ npx convex run products:getCheckoutBlockedCount --prod
 ```bash
 CONVEX_URL=https://precise-raccoon-123.convex.cloud node scripts/audit_shopify_sellability.mjs
 ```
+
+## Cylinder Version 3 pilot update — 2026-08-02
+
+The responsive Cylinder family page and unified 9 mL 17-415 PDP are implemented on `codex/family-page-v3-cylinder`. The 9 mL 13-415 Tall Cylinder is excluded from the family-page assortment and remains on its own legacy PDP path.
+
+The read-only production audit is intentionally red and the Paper Doll Build tab remains hidden:
+
+- 15 exact `CYL-9ML` / 17-415 product groups are present.
+- 143 of the required 145 configurations are present in the storefront Convex deployment.
+- The missing rows are the Swirl metal roller + white cap and Swirl plastic roller + white cap SKUs.
+- Sanity still contains the 26 legacy 1000×1300 layers; `storefrontReady` is false and no asset revision is published.
+- The dedicated Cylinder editorial hero record is not published.
+- The locally recanvased 2080×2288 layer set passed geometry, alpha, and contact-sheet checks, but has not been uploaded or activated.
+
+No production data or Sanity assets were changed during this build. Re-run the gate with:
+
+```bash
+node scripts/paper-doll/audit-storefront-family.mjs --family CYL-9ML --capacity 9 --neck 17-415
+```

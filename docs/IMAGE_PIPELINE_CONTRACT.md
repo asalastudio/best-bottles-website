@@ -138,3 +138,13 @@ Before a new generation pass:
 - Older Gemini/Nano Banana prompt files are rich in geometry language but use square or legacy output sizes.
 - Paper Doll render API outputs may crop transparent pixels for API responses; the live Paper Doll component model preserves full-canvas layer alignment.
 - Root-level PNGs are usually proof images. Commit only intentional final assets or move them into a documented asset folder.
+
+## CYL-9ML Version 3 release contract — 2026-08-02
+
+- The only pilot cohort is Cylinder, 9 mL, 17-415, `paperDollFamilyKey: CYL-9ML`.
+- The 9 mL 13-415 Tall Cylinder is a separate platform. It must not enter the family-page assortment, unified PDP, layer manifest, compatibility controls, or configuration count for this pilot.
+- The release count remains 15 product groups and 145 unique configurations. Do not lower the expectation to match an incomplete deployment.
+- The required Swirl white-cap rows are `GB-CYL-WHT-9ML-MRL-WHT` and `GB-CYL-WHT-9ML-ROL-WHT`.
+- All 26 transparent layers must be 2080×2288 and pass the strict Sanity storefront validator before `storefrontReady` is set.
+- The family editorial hero is a separate opaque 2080×2288 image. It must not reuse a transparent Paper Doll layer.
+- Run `node scripts/paper-doll/audit-storefront-family.mjs --family CYL-9ML --capacity 9 --neck 17-415` before activation.
