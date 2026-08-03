@@ -7,7 +7,7 @@ This matrix keeps the Paper Doll golden reference in the context of the complete
 | Case | Architecture | Required result |
 |---|---|---|
 | Cylinder 9 mL · 17-415 | Paper Doll | Exact platform; Build request remains explicit; selected SKU, price, stock, compatibility, and cart identity move together |
-| Tall Cylinder 9 mL · 13-415 | Conventional | Never enters or redirects to the 17-415 platform |
+| Cylinder 9 mL · 13-415 roll-on | Conventional | Uses `/products/cylinder-9ml-clear-13-415-rollon`; never enters or redirects to the 17-415 platform |
 | Boston Round | Conventional | Family Refine state and result count survive navigation |
 | Elegant fine mist | Conventional | Family and applicator filters remain URL-backed |
 | Diva | Conventional | Variation previews are accessible and preserve PDP identity |

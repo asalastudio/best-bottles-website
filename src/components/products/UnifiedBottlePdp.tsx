@@ -230,7 +230,7 @@ export default function UnifiedBottlePdp({
                         {view === "build" && buildReady && paperDollFamily && !canvasFailed ? (
                             <PaperDollCanvas family={paperDollFamily} selected={selected} onFailure={() => setCanvasFailed(true)} />
                         ) : view === "build" ? (
-                            <div className="flex aspect-[10/11] min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
+                            <div className="flex aspect-[10/11] min-h-[360px] sm:min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
                                 <Package className="h-10 w-10 text-muted-gold" />
                                 <h2 className="mt-4 font-serif text-2xl text-obsidian">
                                     {canvasFailed ? "Layered preview temporarily unavailable" : "Layered preview in preparation"}

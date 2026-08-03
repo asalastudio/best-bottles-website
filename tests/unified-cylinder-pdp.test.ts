@@ -94,6 +94,7 @@ describe("unified Cylinder PDP state", () => {
         expect(source).toContain("Build This Bottle · 145 configurations");
         expect(source).toContain("aria-disabled={!buildReady}");
         expect(source).toContain("Layered preview in preparation");
+        expect(source).toContain("min-h-[360px] sm:min-h-[420px]");
         expect(source).not.toContain('next.set("view", "beauty");\n            router.replace');
     });
 

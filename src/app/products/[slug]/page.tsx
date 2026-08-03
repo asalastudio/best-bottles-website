@@ -120,7 +120,7 @@ async function getReleasedCylinderPaperDoll() {
     try {
         return await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
     } catch (error) {
-        console.error("CYL-9ML Paper Doll release gate rejected the Sanity document", error);
+        console.warn("CYL-9ML Paper Doll release gate rejected the Sanity document", error);
         return null;
     }
 }

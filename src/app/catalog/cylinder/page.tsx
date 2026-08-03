@@ -19,7 +19,7 @@ async function hasReleasedCylinderPaperDoll(): Promise<boolean> {
     try {
         return Boolean(await getStorefrontPaperDollFamily("CYL-9ML"));
     } catch (error) {
-        console.error("CYL-9ML Paper Doll remains behind the storefront release gate", error);
+        console.warn("CYL-9ML Paper Doll remains behind the storefront release gate", error);
         return false;
     }
 }

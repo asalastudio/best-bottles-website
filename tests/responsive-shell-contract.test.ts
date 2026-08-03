@@ -26,6 +26,7 @@ describe("responsive shell contract", () => {
         const cartDrawer = read("src/components/CartDrawer.tsx");
 
         expect(globals).toContain("--mobile-tab-bar-clearance:");
+        expect(globals).toContain("--mobile-tab-bar-height: calc(3.5rem + 1px)");
         expect(globals).toContain("padding-bottom: calc(var(--mobile-tab-bar-clearance) + 0.75rem)");
         expect(globals).toContain("@media (max-width: 1279px)");
         expect(mobileTabs).toContain("xl:hidden");

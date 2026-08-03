@@ -62,8 +62,8 @@ export const CATALOG_UX_CASES: readonly CatalogUxVerificationCase[] = Object.fre
     }),
     verificationCase({
         id: "cylinder-9ml-13-415-conventional",
-        label: "Tall Cylinder 9 mL · 13-415 conventional platform",
-        entryPath: "/products/tall-cylinder-9ml-clear-13-415-rollon",
+        label: "Cylinder 9 mL · 13-415 conventional roll-on platform",
+        entryPath: "/products/cylinder-9ml-clear-13-415-rollon",
         architecture: "conventional",
         coverageTags: ["cylinder", "conventional", "roll-on"],
         expected: { capacityMl: 9, neckThreadSize: "13-415", deliverySystem: "Roll-On", sellability: "checkout", compatibility: "exact", urlState: ["never redirects into cylinder-9ml-17-415", "neck finish remains 13-415"] },
