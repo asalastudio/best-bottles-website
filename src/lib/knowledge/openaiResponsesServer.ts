@@ -44,7 +44,7 @@ export type KnowledgeResponsesClient = {
     };
 };
 
-type KnowledgeRuntimeEnvironment = Partial<Record<
+export type KnowledgeRuntimeEnvironment = Partial<Record<
     | "OPENAI_API_KEY"
     | "OPENAI_KNOWLEDGE_ROUTINE_MODEL"
     | "OPENAI_KNOWLEDGE_COMPLEX_MODEL"
