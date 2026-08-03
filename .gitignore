@@ -32,6 +32,7 @@
 /.firecrawl/
 /.playwright-cli/
 /.playwright-mcp/
+/.superpowers/
 
 # Local scratch and generated test outputs
 /tmp/
