@@ -45,7 +45,7 @@ describe("Grace 100-point hardening contracts", () => {
     const proposeStart = source.indexOf("proposeCartAdd:");
     const navigateStart = source.indexOf("navigateToPage:", proposeStart);
     const proposeBlock = source.slice(proposeStart, navigateStart);
-    const route = read("src/app/api/grace/tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     const promptTools = JSON.stringify(agentConfig().conversation_config.agent.prompt.tools);
 
     expect(route).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
@@ -100,14 +100,14 @@ describe("Grace 100-point hardening contracts", () => {
   });
 
   it("returns structured no-match results so Grace cannot invent unavailable sizes", () => {
-    const route = read("src/app/api/grace/tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     expect(route).toContain("noMatchGraceToolResult");
     expect(route).toContain("No verified exact match found");
     expect(route).toContain("Never claim an exact size");
   });
 
   it("keeps compatibility tools resilient when ElevenLabs passes product names", () => {
-    const route = read("src/app/api/grace/tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     expect(route).toContain("fallbackMatches");
     expect(route).toContain("api.grace.searchCatalog");
     expect(route).toContain("resolvedBottleSku");
@@ -129,7 +129,7 @@ describe("Grace 100-point hardening contracts", () => {
     expect(buildKitBlock).toContain("Fitment-verified kit workspace is open");
     expect(source).toContain("capacityMl: params.capacityMl");
 
-    const route = read("src/app/api/grace/tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     expect(route).toContain("seenCapacity");
     expect(route).toContain(".slice(0, 16)");
     expect(route).toContain("applicator: d.bottle.applicator");
@@ -217,7 +217,7 @@ describe("Grace 100-point hardening contracts", () => {
   });
 
   it("caches family-card tool responses without poisoning the cache with degraded reads", () => {
-    const route = read("src/app/api/grace/tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
 
     expect(route).toContain("FAMILY_CARD_CACHE_TTL_MS");
     expect(route).toContain("familyCardCache");
