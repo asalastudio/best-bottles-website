@@ -122,7 +122,7 @@ export function useGraceImageUpload() {
                 let searchFailed = false;
                 let matches: ProductCard[] = [];
                 try {
-                    const searchRes = await fetch("/api/elevenlabs/server-tools", {
+                    const searchRes = await fetch("/api/grace/tools", {
                         method: "POST",
                         headers: { "Content-Type": "application/json", "x-grace-owner-key": ownerKey },
                         body: JSON.stringify({

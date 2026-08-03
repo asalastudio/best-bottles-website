@@ -454,7 +454,7 @@ async function callGraceServerTool<T>(
     toolName: string,
     parameters: Record<string, unknown>,
 ): Promise<{ result: T | null; error?: string; status: number }> {
-    const response = await fetchJsonWithTimeout<{ result?: T; error?: string }>("/api/elevenlabs/server-tools", {
+    const response = await fetchJsonWithTimeout<{ result?: T; error?: string }>("/api/grace/tools", {
         method: "POST",
         headers: { "Content-Type": "application/json", "x-grace-owner-key": getAnonOwnerKey() },
         body: JSON.stringify({ tool_name: toolName, parameters }),
