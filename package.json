@@ -39,7 +39,8 @@
     "shopify:sync:dry": "node scripts/push_convex_to_shopify.mjs",
     "paper-doll:manifest": "node scripts/paper-doll/generate-manifest.mjs",
     "paper-doll:recanvas:cylinder-9ml": "node scripts/paper-doll/recanvas-cylinder-9ml.mjs",
-    "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs"
+    "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs",
+    "paper-doll:import-madison-release": "tsx scripts/paper-doll/import-madison-release.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
@@ -110,6 +111,7 @@
     "eslint-config-next": "^16.2.12",
     "shadcn": "^3.8.5",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "5.9.3",
     "vitest": "^3.2.4"
   }

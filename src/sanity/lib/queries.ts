@@ -128,6 +128,7 @@ export const JOURNAL_SLUGS_QUERY = `
 import { client, isSanityConfigured } from "./client";
 import {
     assertStorefrontPaperDollFamily,
+    selectStorefrontPaperDollReleaseCandidate,
     type StorefrontPaperDollFamily,
 } from "@/lib/paper-doll/sanity";
 
@@ -147,6 +148,34 @@ export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
     layerOrderShortcap,
     layerOrderLotion,
     anchorsJson,
+    "currentReleaseReference": currentRelease._ref,
+    currentRelease->{
+      _id,
+      familyKey,
+      displayName,
+      canvasPreset,
+      canvasWidth,
+      canvasHeight,
+      pipelineVersion,
+      assetRevision,
+      storefrontReady,
+      layerOrderRollon,
+      layerOrderSpray,
+      layerOrderShortcap,
+      layerOrderLotion,
+      anchorsJson,
+      layerAssets[] {
+        _key,
+        slot,
+        variantKey,
+        sourceFilename,
+        "imageUrl": image.asset->url,
+        "imageWidth": image.asset->metadata.dimensions.width,
+        "imageHeight": image.asset->metadata.dimensions.height,
+        offsetX,
+        offsetY
+      }
+    },
     layerAssets[] {
       _key,
       slot,
@@ -216,7 +245,7 @@ export async function getStorefrontPaperDollFamily(
     if (!isSanityConfigured) return null;
     const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
     if (!family) return null;
-    return assertStorefrontPaperDollFamily(family);
+    return assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
 }
 
 export type ProductFamilyPageContent = {

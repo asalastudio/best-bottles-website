@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 import {
     PAPER_DOLL_PDP_CANVAS,
     assertStorefrontPaperDollFamily,
+    selectStorefrontPaperDollReleaseCandidate,
     validateStorefrontPaperDollFamily,
 } from "@/lib/paper-doll/sanity";
 
@@ -140,5 +141,26 @@ describe("Paper Doll Sanity storefront contract", () => {
             pipelineVersion: "",
             assetRevision: "",
         })).toThrow(/pipelineVersion is required[\s\S]*assetRevision is required/);
+    });
+
+    it("uses a selected immutable release and never falls back around an invalid selected release", () => {
+        const selectedRelease = {
+            ...validFamily(),
+            _id: "paperDollRelease.CYL-9ML.1-0-0",
+            assetRevision: "1.0.0",
+        };
+        const family = {
+            ...validFamily(),
+            storefrontReady: false,
+            currentRelease: selectedRelease,
+        };
+
+        expect(assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family)).assetRevision)
+            .toBe("1.0.0");
+        expect(() => assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate({
+            ...family,
+            currentRelease: { ...selectedRelease, storefrontReady: false },
+        }))).toThrow(/storefrontReady must be true/);
+        expect(selectStorefrontPaperDollReleaseCandidate(validFamily())).toEqual(validFamily());
     });
 });

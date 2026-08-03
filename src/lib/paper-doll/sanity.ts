@@ -46,6 +46,13 @@ function isRecord(value: unknown): value is UnknownRecord {
     return Boolean(value) && typeof value === "object" && !Array.isArray(value);
 }
 
+export function selectStorefrontPaperDollReleaseCandidate(value: unknown): unknown {
+    if (!isRecord(value)) return value;
+    const hasReleaseReference = cleanString(value.currentReleaseReference).length > 0;
+    if (hasReleaseReference) return value.currentRelease;
+    return isRecord(value.currentRelease) ? value.currentRelease : value;
+}
+
 function cleanString(value: unknown): string {
     return typeof value === "string" ? value.trim() : "";
 }
