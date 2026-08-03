@@ -94,6 +94,17 @@ describe("Cylinder family page model", () => {
         expect(model.featuredCohort.groupSlugs).not.toContain("tall-cylinder-9ml-clear-13-415-rollon");
     });
 
+    it("keeps the 9 ml 13-415 Tall Cylinder out of the 17-415 family-page assortment", () => {
+        const model = buildCylinderFamilyPageModel(groups, variantPreviewRows);
+
+        expect(model.cards.map((card) => card.slug)).toEqual([
+            "cylinder-9ml-clear-17-415-rollon",
+            "cylinder-9ml-amber-17-415-spray",
+        ]);
+        expect(model.totalReadyMadeGroups).toBe(2);
+        expect(model.totalVariants).toBe(3);
+    });
+
     it("derives roll-on breadth from product rows, not the incomplete group summary", () => {
         const model = buildCylinderFamilyPageModel(groups, variantPreviewRows);
         const rollon = model.cards.find((card) => card.id === "clear-rollon");
