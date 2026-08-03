@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -393,13 +393,8 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
         ),
         [filterOptions, searchParams],
     );
-    const [refine, setRefine] = useState<CylinderFamilyRefineState>(parsedRefine);
+    const refine = parsedRefine;
     const [mobileDraft, setMobileDraft] = useState<CylinderFamilyRefineState>(parsedRefine);
-
-    useEffect(() => {
-        setRefine(parsedRefine);
-        if (!mobileRefineOpen) setMobileDraft(parsedRefine);
-    }, [mobileRefineOpen, parsedRefine]);
 
     const replaceRefineUrl = useCallback((next: CylinderFamilyRefineState) => {
         const query = serializeCylinderFamilyRefine(next).toString();
@@ -408,7 +403,6 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
 
     const commitRefine = useCallback((next: CylinderFamilyRefineState) => {
         const sanitized = sanitizeCylinderFamilyRefine(next, filterOptions);
-        setRefine(sanitized);
         setMobileDraft(sanitized);
         replaceRefineUrl(sanitized);
     }, [filterOptions, replaceRefineUrl]);

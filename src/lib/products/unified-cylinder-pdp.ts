@@ -27,7 +27,6 @@ function rollerMaterial(configuration: PaperDollConfiguration): "Metal" | "Plast
 
 export function resolveUnifiedPdpView(
     requestedView: string | null | undefined,
-    _buildReady: boolean,
 ): UnifiedPdpView {
     return requestedView === "build" ? "build" : "beauty";
 }

@@ -67,7 +67,7 @@ export default function UnifiedBottlePdp({
     const searchParams = useSearchParams();
     const { addItems } = useCart();
     const buildReady = isUnifiedCylinderBuildReady(configurations, Boolean(paperDollFamily));
-    const view = resolveUnifiedPdpView(searchParams.get("view"), buildReady);
+    const view = resolveUnifiedPdpView(searchParams.get("view"));
     const [selectedSku, setSelectedSku] = useState(() => initialFromSearch(configurations, new URLSearchParams(searchParams.toString())).graceSku);
     const [qty, setQty] = useState(1);
     const [added, setAdded] = useState(false);

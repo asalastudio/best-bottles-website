@@ -83,9 +83,8 @@ const configurations = [
 
 describe("unified Cylinder PDP state", () => {
     it("preserves an explicitly requested Build view while the release is still preparing", () => {
-        expect(resolveUnifiedPdpView("build", false)).toBe("build");
-        expect(resolveUnifiedPdpView(null, true)).toBe("beauty");
-        expect(resolveUnifiedPdpView("build", true)).toBe("build");
+        expect(resolveUnifiedPdpView("build")).toBe("build");
+        expect(resolveUnifiedPdpView(null)).toBe("beauty");
     });
 
     it("keeps Beauty and Build visible as peer views while the layered release is preparing", () => {
