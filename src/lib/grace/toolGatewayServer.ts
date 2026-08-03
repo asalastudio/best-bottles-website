@@ -53,6 +53,50 @@ export type GraceServerToolName = GraceOpenAIToolName
     | "getCatalogStrip"
     | "getProductsForComparison";
 
+export function normalizeGraceServerToolCall(
+    toolName: GraceServerToolName,
+    parameters: Record<string, unknown>,
+): { toolName: GraceServerToolName; parameters: Record<string, unknown> } {
+    switch (toolName) {
+        case "compareProducts":
+            return {
+                toolName: "searchCatalog",
+                parameters: {
+                    searchTerm: parameters.query ?? "",
+                    familyLimit: parameters.family ?? null,
+                },
+            };
+        case "showProductPresentation":
+            return {
+                toolName: "searchCatalog",
+                parameters: {
+                    searchTerm: parameters.searchTerm ?? "",
+                    familyLimit: parameters.familyLimit ?? null,
+                },
+            };
+        case "displayProductCard":
+        case "displayAnatomy":
+            return { toolName: "getProductBySku", parameters: { graceSku: parameters.graceSku ?? "" } };
+        case "displayFamilyCard":
+            return {
+                toolName: "getFamilyForCard",
+                parameters: {
+                    family: parameters.family ?? "",
+                    capacityMl: parameters.capacityMl ?? null,
+                },
+            };
+        case "displayCompatibility":
+        case "displayBuildKit":
+            return { toolName: "getBottleComponents", parameters: { bottleSku: parameters.bottleSku ?? "" } };
+        case "displayComparison":
+            return { toolName: "getProductsForComparison", parameters: { graceSkus: parameters.graceSkus ?? [] } };
+        case "displayCatalogStrip":
+            return { toolName: "getCatalogStrip", parameters: { category: parameters.category ?? null } };
+        default:
+            return { toolName, parameters };
+    }
+}
+
 export async function executeGraceServerTool({
     toolName,
     parameters = {},
@@ -62,7 +106,9 @@ export async function executeGraceServerTool({
 }): Promise<unknown> {
         if (!toolName) throw new Error("Missing tool_name");
 
-        const tool_name = toolName;
+        const normalized = normalizeGraceServerToolCall(toolName, parameters);
+        const tool_name = normalized.toolName;
+        parameters = normalized.parameters;
         const convex = getConvex();
         const t0 = Date.now();
         let result: unknown;

@@ -71,7 +71,7 @@ const TOOL_POLICIES = {
     displayBuildKit: read(COMPATIBILITY_READ),
     displayComparison: read(CATALOG_READ),
     displayCatalogStrip: read(CATALOG_READ),
-    displayShortlist: read(CATALOG_READ),
+    displayShortlist: read(CATALOG_READ, CUSTOMER_SURFACES),
     displayAnatomy: read(CATALOG_READ),
     setCatalogRefinements: propose(NAVIGATION_PROPOSAL),
     setPaperDollSelection: propose(["catalog.read", "compatibility.read"]),
