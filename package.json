@@ -48,7 +48,7 @@
     "@convex-dev/agent": "^0.6.1",
     "@convex-dev/rag": "^0.7.2",
     "@elevenlabs/react": "^0.14.3",
-    "@openai/agents": "^0.5.1",
+    "@openai/agents": "^0.14.2",
     "@phosphor-icons/react": "^2.1.10",
     "@portabletext/react": "^6.0.2",
     "@radix-ui/react-progress": "^1.1.8",
