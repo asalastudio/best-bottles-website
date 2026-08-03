@@ -1,5 +1,8 @@
+import type { ReactNode } from "react";
+
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Progress } from "@/components/ui/progress";
+import type { ExecutiveDateRange } from "@/lib/executive/contracts";
 
 const funnel = [
     { label: "Leads", value: "312", height: "100%" },
@@ -29,12 +32,12 @@ function PanelHeader({ title, subtitle }: { title: string; subtitle: string }) {
     return (
         <CardHeader className="flex-row items-start justify-between space-y-0 border-b border-zinc-800 p-4">
             <h2 className="font-serif text-base text-zinc-100">{title}</h2>
-            <p className="text-right text-[9px] uppercase tracking-wider text-zinc-600">{subtitle}</p>
+            <p className="text-right text-[9px] uppercase tracking-wider text-zinc-400">{subtitle}</p>
         </CardHeader>
     );
 }
 
-export function ExecutiveOperatingPanels() {
+export function ExecutiveOperatingPanels({ decisionQueue }: { decisionQueue?: ReactNode }) {
     return (
         <div className="grid grid-cols-1 gap-2 xl:grid-cols-12">
             <Card id="sales" className="rounded-none border-zinc-800 bg-zinc-900/80 text-zinc-100 shadow-none xl:col-span-5">
@@ -45,11 +48,11 @@ export function ExecutiveOperatingPanels() {
                             <div key={stage.label} className="flex h-full min-w-0 flex-col justify-end">
                                 <div className="border-t border-amber-300/80 bg-amber-300/35" style={{ height: stage.height }} />
                                 <span className="mt-2 text-xs font-medium tabular-nums text-zinc-300">{stage.value}</span>
-                                <span className="truncate text-[8px] text-zinc-600">{stage.label}</span>
+                                <span className="truncate text-[8px] text-zinc-400">{stage.label}</span>
                             </div>
                         ))}
                     </div>
-                    <div className="mt-4 flex justify-between border-t border-zinc-800 pt-3 text-[10px] text-zinc-500">
+                    <div className="mt-4 flex justify-between border-t border-zinc-800 pt-3 text-[10px] text-zinc-400">
                         <span>Quote response 7.8h</span>
                         <span>Sample-to-order 41%</span>
                         <span>Forecast 96% of target</span>
@@ -62,18 +65,20 @@ export function ExecutiveOperatingPanels() {
                 <CardContent className="space-y-3 p-4">
                     {supplySignals.map((signal) => (
                         <div key={signal.label} className="grid grid-cols-[8rem_minmax(0,1fr)_2.5rem] items-center gap-3">
-                            <span className="truncate text-[10px] text-zinc-500">{signal.label}</span>
+                            <span className="truncate text-[10px] text-zinc-400">{signal.label}</span>
                             <Progress value={signal.value} className={`h-1 rounded-none bg-zinc-800 ${signal.tone}`} />
                             <span className="text-right text-[10px] font-medium tabular-nums text-zinc-300">{signal.display}</span>
                         </div>
                     ))}
-                    <div className="grid grid-cols-3 gap-3 border-t border-zinc-800 pt-4 text-[9px] text-zinc-500">
+                    <div className="grid grid-cols-3 gap-3 border-t border-zinc-800 pt-4 text-[9px] text-zinc-400">
                         <span>12 open POs</span><span>3 containers in transit</span><span>1 delayed</span>
                     </div>
                 </CardContent>
             </Card>
 
-            <Card className="rounded-none border-zinc-800 bg-zinc-900/80 text-zinc-100 shadow-none xl:col-span-4">
+            {decisionQueue ? <div className="order-first xl:order-none xl:col-span-3">{decisionQueue}</div> : null}
+
+            <Card id="products" className="rounded-none border-zinc-800 bg-zinc-900/80 text-zinc-100 shadow-none xl:col-span-4">
                 <PanelHeader title="Top product families" subtitle="Revenue · gross margin" />
                 <CardContent className="space-y-3 p-4">
                     {productFamilies.map((family) => (
@@ -85,7 +90,7 @@ export function ExecutiveOperatingPanels() {
                             <span className="text-right text-[10px] tabular-nums text-zinc-400">{family.revenue} · {family.margin}</span>
                         </div>
                     ))}
-                    <p className="border-t border-zinc-800 pt-3 text-[9px] text-zinc-600">View by closure, capacity, color, finish, decoration</p>
+                    <p className="border-t border-zinc-800 pt-3 text-[9px] text-zinc-400">View by closure, capacity, color, finish, decoration</p>
                 </CardContent>
             </Card>
 
@@ -101,7 +106,7 @@ export function ExecutiveOperatingPanels() {
                             ["Largest at-risk account", "$92k"],
                         ].map(([label, value]) => (
                             <div key={label} className="flex justify-between gap-4 px-4 py-2.5 text-[10px]">
-                                <dt className="text-zinc-500">{label}</dt><dd className="tabular-nums text-zinc-300">{value}</dd>
+                                <dt className="text-zinc-400">{label}</dt><dd className="tabular-nums text-zinc-200">{value}</dd>
                             </div>
                         ))}
                     </dl>
@@ -120,12 +125,40 @@ export function ExecutiveOperatingPanels() {
                             ["Scrap / rework rate", "2.1%"],
                         ].map(([label, value]) => (
                             <div key={label} className="flex justify-between gap-4 px-4 py-2.5 text-[10px]">
-                                <dt className="text-zinc-500">{label}</dt><dd className="tabular-nums text-zinc-300">{value}</dd>
+                                <dt className="text-zinc-400">{label}</dt><dd className="tabular-nums text-zinc-200">{value}</dd>
                             </div>
                         ))}
                     </dl>
                 </CardContent>
             </Card>
         </div>
+    );
+}
+
+const unavailablePanels = [
+    { title: "CEO decision queue", span: "order-first xl:order-none xl:col-span-3" },
+    { title: "Commercial funnel", span: "xl:col-span-5" },
+    { title: "Inventory and supply health", span: "xl:col-span-4" },
+    { title: "Top product families", span: "xl:col-span-4" },
+    { title: "Customer account health", span: "xl:col-span-4" },
+    { title: "Operations and production", span: "xl:col-span-4" },
+];
+
+export function ExecutiveUnavailablePanels({ range }: { range: ExecutiveDateRange }) {
+    return (
+        <section aria-label="Unavailable operating ranges" className="grid grid-cols-1 gap-2 xl:grid-cols-12">
+            {unavailablePanels.map((panel) => (
+                <div key={panel.title} className={panel.span}>
+                    <Card className="min-h-32 rounded-none border-zinc-800 bg-zinc-900/80 text-zinc-100 shadow-none">
+                        <CardHeader className="border-b border-zinc-800 p-4">
+                            <h2 className="font-serif text-base text-zinc-100">{panel.title}</h2>
+                        </CardHeader>
+                        <CardContent className="p-4 text-sm text-zinc-400">
+                            {range.toUpperCase()} data is not connected. No values are inferred from the Today fixture.
+                        </CardContent>
+                    </Card>
+                </div>
+            ))}
+        </section>
     );
 }

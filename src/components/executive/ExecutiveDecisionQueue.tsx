@@ -22,9 +22,9 @@ export function ExecutiveDecisionQueue({ decisions, onOpenDecision }: ExecutiveD
             <header className="flex items-start justify-between gap-4 border-b border-zinc-800 px-4 py-3">
                 <div>
                     <h2 id="decision-queue-title" className="font-serif text-base text-zinc-100">CEO decision queue</h2>
-                    <p className="mt-1 text-[10px] uppercase tracking-wider text-zinc-500">Impact · owner · deadline</p>
+                    <p className="mt-1 text-[10px] uppercase tracking-wider text-zinc-400">Impact · owner · deadline</p>
                 </div>
-                <span className="text-xs tabular-nums text-zinc-500">{decisions.length} open</span>
+                <span className="text-xs tabular-nums text-zinc-400">{decisions.length} open</span>
             </header>
             <div className="divide-y divide-zinc-800">
                 {decisions.map((decision) => (
@@ -39,7 +39,7 @@ export function ExecutiveDecisionQueue({ decisions, onOpenDecision }: ExecutiveD
                         </span>
                         <span className="min-w-0">
                             <span className="block truncate text-xs font-medium text-zinc-200">{decision.title}</span>
-                            <span className="mt-1 block truncate text-[10px] text-zinc-500">
+                            <span className="mt-1 block truncate text-[10px] text-zinc-400">
                                 {decision.impact} · {decision.owner}
                             </span>
                             <span className="sr-only">Recommendation: {decision.recommendation}. Evidence: {decision.evidence}</span>

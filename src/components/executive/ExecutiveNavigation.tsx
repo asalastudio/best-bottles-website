@@ -48,7 +48,7 @@ function LaneList({ mobile = false }: { mobile?: boolean }) {
                                 title={mobile ? undefined : lane.label}
                             >
                                 <span>{mobile ? lane.label : lane.short}</span>
-                                {mobile ? <span className="text-[10px] text-zinc-600">Available</span> : null}
+                                {mobile ? <span className="text-[10px] text-zinc-400">Available</span> : null}
                             </a>
                         ) : (
                             <span
@@ -97,7 +97,7 @@ export function ExecutiveNavigation() {
                     <SheetContent side="left" className="border-zinc-800 bg-[#111216] text-zinc-100">
                         <SheetHeader>
                             <SheetTitle className="font-serif text-zinc-100">BB / Executive</SheetTitle>
-                            <SheetDescription className="text-zinc-500">Executive Hub sections and source readiness.</SheetDescription>
+                            <SheetDescription className="text-zinc-400">Executive Hub sections and source readiness.</SheetDescription>
                         </SheetHeader>
                         <LaneList mobile />
                     </SheetContent>

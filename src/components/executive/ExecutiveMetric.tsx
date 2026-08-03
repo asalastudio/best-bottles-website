@@ -37,12 +37,12 @@ export function ExecutiveQuestionCard({
     return (
         <Card
             className={cn(
-                "min-w-0 rounded-sm border-zinc-700/80 border-t-2 bg-zinc-900/90 text-zinc-100 shadow-none",
+                "min-w-0 rounded-none border-zinc-700/80 border-t-2 bg-zinc-900/90 text-zinc-100 shadow-none",
                 toneStyles[primaryMetric.tone],
             )}
         >
             <CardHeader className="space-y-2 p-4 pb-2 sm:p-5 sm:pb-2">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-500">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-zinc-400">
                     {question.eyebrow}
                 </p>
                 <h2 className="font-serif text-lg leading-tight text-zinc-100">
@@ -76,18 +76,18 @@ export function ExecutiveQuestionCard({
                                 onClick={() => onOpenMetric(metric)}
                                 className="min-w-0 text-left outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
                             >
-                                <dt className="truncate text-[10px] uppercase tracking-wider text-zinc-500">{metric.label}</dt>
+                                <dt className="truncate text-[10px] uppercase tracking-wider text-zinc-400">{metric.label}</dt>
                                 <dd className="mt-1 text-sm font-medium tabular-nums text-zinc-200">{metric.value}</dd>
                             </button>
                         ))}
                     </dl>
                 ) : null}
 
-                <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-zinc-800 pt-3 text-[10px] text-zinc-500">
+                <div className="mt-4 flex flex-wrap items-center gap-2 border-t border-zinc-800 pt-3 text-[10px] text-zinc-400">
                     <Badge variant="outline" className="rounded-sm border-zinc-700 px-1.5 py-0 font-medium text-zinc-400">
                         {metricStatusLabel(primaryMetric.status)}
                     </Badge>
-                    <span>{primaryMetric.coverage}</span>
+                    <span className="text-zinc-400">{primaryMetric.coverage}</span>
                 </div>
             </CardContent>
         </Card>
@@ -106,11 +106,11 @@ export function ExecutiveHeadlineMetric({ metric, onOpenMetric }: ExecutiveHeadl
             onClick={() => onOpenMetric(metric)}
             className="group min-w-0 border border-zinc-800 bg-zinc-900/75 p-4 text-left outline-none transition-colors hover:border-zinc-600 focus-visible:ring-2 focus-visible:ring-amber-400"
         >
-            <span className="block truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-zinc-500">
+            <span className="block truncate text-[10px] font-semibold uppercase tracking-[0.14em] text-zinc-400">
                 {metric.label}
             </span>
             <span className="mt-2 block text-xl font-medium tabular-nums text-zinc-100">{metric.value}</span>
-            <span className="mt-1 block truncate text-[10px] text-zinc-500">{metric.comparison}</span>
+            <span className="mt-1 block truncate text-[10px] text-zinc-400">{metric.comparison}</span>
         </button>
     );
 }

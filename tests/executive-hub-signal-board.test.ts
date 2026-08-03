@@ -3,7 +3,7 @@ import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { ExecutiveQuestionCard } from "../src/components/executive/ExecutiveMetric";
 import { ExecutiveDecisionQueue } from "../src/components/executive/ExecutiveDecisionQueue";
-import { ExecutiveOperatingPanels } from "../src/components/executive/ExecutiveOperatingPanels";
+import { ExecutiveOperatingPanels, ExecutiveUnavailablePanels } from "../src/components/executive/ExecutiveOperatingPanels";
 import { ExecutiveDashboard } from "../src/components/executive/ExecutiveDashboard";
 import { ExecutiveDetailContent } from "../src/components/executive/ExecutiveDetailSheet";
 import { EXECUTIVE_HUB_FIXTURE } from "../src/lib/executive/fixture";
@@ -79,5 +79,15 @@ describe("Executive Signal Board components", () => {
         expect(decisionHtml).toContain("Recommendation");
         expect(decisionHtml).toContain("Evidence");
         expect(decisionHtml).toContain("$92k stockout exposure");
+    });
+
+    it("never carries illustrative operating values into an unavailable range", () => {
+        const html = renderToStaticMarkup(createElement(ExecutiveUnavailablePanels, { range: "mtd" }));
+
+        expect(html).toContain("Commercial funnel");
+        expect(html).toContain("CEO decision queue");
+        expect(html).toContain("MTD data is not connected");
+        expect(html).not.toContain("$428k");
+        expect(html).not.toContain("Approve expedited Cylinder replenishment");
     });
 });
