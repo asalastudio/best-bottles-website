@@ -44,6 +44,7 @@ import type * as pricing from "../pricing.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
 import type * as products from "../products.js";
+import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
 
@@ -90,6 +91,7 @@ declare const fullApi: ApiFromModules<{
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
   products: typeof products;
+  repairCylinderPilot: typeof repairCylinderPilot;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
 }>;
