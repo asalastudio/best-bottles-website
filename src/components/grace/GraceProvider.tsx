@@ -2209,6 +2209,7 @@ function GraceProviderBase({
     // active WebRTC connection and microphone stream.
     useEffect(() => {
         return () => {
+            if (!openAIAdapter.isConnected()) return;
             intentionalEndRef.current = true;
             openAIAdapter.disconnect();
         };

@@ -218,6 +218,7 @@ describe("Grace 100-point hardening contracts", () => {
 
   it("closes the previous Realtime adapter when Clerk identity changes", () => {
     const provider = read("src/components/grace/GraceProvider.tsx");
+    expect(provider).toContain("if (!openAIAdapter.isConnected()) return;");
     expect(provider).toContain("openAIAdapter.disconnect();");
     expect(provider).toContain("}, [openAIAdapter]);");
     expect(provider).toContain("intentionalEndRef.current = true;");
