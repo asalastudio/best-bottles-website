@@ -4,6 +4,7 @@ import { auth, currentUser } from "@clerk/nextjs/server";
 import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
 import { ExecutiveDashboard } from "@/components/executive/ExecutiveDashboard";
 import { EXECUTIVE_HUB_FIXTURE } from "@/lib/executive/fixture";
+import { getGraceOperationsSnapshot } from "@/lib/executive/graceOperations";
 import { getUserEmailAddresses, hasExecutiveHubAccess } from "@/lib/teamAccess";
 
 export const dynamic = "force-dynamic";
@@ -50,10 +51,12 @@ export default async function ExecutivePage({ searchParams }: ExecutivePageProps
 
     const accessFallback = await getExecutiveAccessFallback(previewMode);
     if (accessFallback) return accessFallback;
+    const graceOperations = await getGraceOperationsSnapshot();
 
     return (
         <ExecutiveDashboard
             snapshot={EXECUTIVE_HUB_FIXTURE}
+            graceOperations={graceOperations}
             previewMode={previewMode}
         />
     );

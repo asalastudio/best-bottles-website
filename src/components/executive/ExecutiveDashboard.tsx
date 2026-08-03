@@ -8,8 +8,10 @@ import { ExecutiveDetailSheet, type ExecutiveDetailSelection } from "@/component
 import { ExecutiveHeadlineMetric, ExecutiveQuestionCard } from "@/components/executive/ExecutiveMetric";
 import { ExecutiveNavigation } from "@/components/executive/ExecutiveNavigation";
 import { ExecutiveOperatingPanels, ExecutiveUnavailablePanels } from "@/components/executive/ExecutiveOperatingPanels";
+import { GraceOperationsPanel } from "@/components/executive/GraceOperationsPanel";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import type { ExecutiveDashboardSnapshot, ExecutiveDateRange } from "@/lib/executive/contracts";
+import type { GraceOperationsSnapshot } from "@/lib/executive/graceOperations";
 import { getExecutiveMetric } from "@/lib/executive/fixture";
 import { cn } from "@/lib/utils";
 
@@ -23,12 +25,25 @@ const ranges: Array<{ value: ExecutiveDateRange; label: string }> = [
 
 type ExecutiveDashboardProps = {
     snapshot: ExecutiveDashboardSnapshot;
+    graceOperations?: GraceOperationsSnapshot;
     previewMode?: boolean;
 };
 
-export function ExecutiveDashboard({ snapshot, previewMode = false }: ExecutiveDashboardProps) {
+export function ExecutiveDashboard({ snapshot, graceOperations, previewMode = false }: ExecutiveDashboardProps) {
     const [range, setRange] = useState<ExecutiveDateRange>(snapshot.range);
     const [selection, setSelection] = useState<ExecutiveDetailSelection>(null);
+    const visibleGraceOperations: GraceOperationsSnapshot = graceOperations ?? {
+        status: "not-connected",
+        asOf: null,
+        requestCount: null,
+        successRate: null,
+        estimatedCostUsd: null,
+        averageLatencyMs: null,
+        p95LatencyMs: null,
+        toolCalls: null,
+        pendingCorrections: null,
+        message: "Grace Operations data is not connected.",
+    };
 
     const visibleSnapshot = useMemo<ExecutiveDashboardSnapshot>(() => {
         if (range === snapshot.range) return snapshot;
@@ -127,6 +142,8 @@ export function ExecutiveDashboard({ snapshot, previewMode = false }: ExecutiveD
                         <ExecutiveHeadlineMetric key={id} metric={getExecutiveMetric(visibleSnapshot, id)} onOpenMetric={(metric) => setSelection({ kind: "metric", metric })} />
                     ))}
                 </section>
+
+                <GraceOperationsPanel snapshot={visibleGraceOperations} />
 
                 {range === snapshot.range ? (
                     <ExecutiveOperatingPanels
