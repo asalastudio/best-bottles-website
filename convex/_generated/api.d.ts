@@ -34,6 +34,7 @@ import type * as imageCleanup from "../imageCleanup.js";
 import type * as imageReconciliation from "../imageReconciliation.js";
 import type * as importMissingLiveProducts from "../importMissingLiveProducts.js";
 import type * as knowledge from "../knowledge.js";
+import type * as knowledgeOperations from "../knowledgeOperations.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
 import type * as paperDoll from "../paperDoll.js";
@@ -79,6 +80,7 @@ declare const fullApi: ApiFromModules<{
   imageReconciliation: typeof imageReconciliation;
   importMissingLiveProducts: typeof importMissingLiveProducts;
   knowledge: typeof knowledge;
+  knowledgeOperations: typeof knowledgeOperations;
   measurements: typeof measurements;
   migrations: typeof migrations;
   paperDoll: typeof paperDoll;
