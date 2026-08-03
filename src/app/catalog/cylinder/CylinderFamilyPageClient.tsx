@@ -364,11 +364,11 @@ function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyPageModel["car
                 maxVisibleSwatches={5}
                 auditMeta={{ surface: "family-page-card", family: "Cylinder", productGroupSlug: group.slug }}
             />
-            <Link href={productHref} className="flex flex-1 flex-col p-4">
+            <Link href={productHref} className="flex flex-1 flex-col p-3 sm:p-4">
                 <p className="text-[10px] font-bold uppercase tracking-[0.15em] text-muted-gold">{group.capacity} · {group.neckThreadSize}</p>
-                <h3 className="mt-2 font-serif text-lg font-medium leading-snug text-obsidian">{productTitle}</h3>
+                <h3 className="mt-1.5 font-serif text-base font-medium leading-snug text-obsidian sm:mt-2 sm:text-lg">{productTitle}</h3>
                 <p className="mt-2 text-[11px] leading-relaxed text-slate">{group.applicatorSystems.join(" · ")} · {group.variantCount} finish{group.variantCount === 1 ? "" : "es"}</p>
-                <p className="mt-auto pt-4 text-sm font-semibold text-obsidian">From {formatPrice(group.priceRangeMin)}/ea</p>
+                <p className="mt-auto pt-3 text-sm font-semibold text-obsidian sm:pt-4">From {formatPrice(group.priceRangeMin)}/ea</p>
             </Link>
         </article>
     );

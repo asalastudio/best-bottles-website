@@ -1,8 +1,31 @@
 import { describe, expect, it } from "vitest";
 import { getMaterialSwatchBackground } from "../src/lib/products/material-swatches";
-import { getProductCardVariantPreviews } from "../src/lib/products/product-card-variant-previews";
+import {
+    getProductCardPreviewAccessibleLabel,
+    getProductCardVariantPreviews,
+} from "../src/lib/products/product-card-variant-previews";
 
 describe("product card variant previews", () => {
+    it("gives visually similar swatches unique product- and SKU-specific accessible names", () => {
+        const first = {
+            id: "gold-metal",
+            label: "Shiny Gold Roller",
+            graceSku: "GB-CYL-AMB-9ML-MRL-SGLD",
+        };
+        const second = {
+            id: "gold-plastic",
+            label: "Shiny Gold Roller",
+            graceSku: "GB-CYL-AMB-9ML-ROL-SGLD",
+        };
+
+        expect(getProductCardPreviewAccessibleLabel(first, "9 mL Amber Cylinder", 0)).toBe(
+            "Preview Shiny Gold Roller for 9 mL Amber Cylinder · SKU GB-CYL-AMB-9ML-MRL-SGLD",
+        );
+        expect(getProductCardPreviewAccessibleLabel(second, "9 mL Amber Cylinder", 1)).not.toBe(
+            getProductCardPreviewAccessibleLabel(first, "9 mL Amber Cylinder", 0),
+        );
+    });
+
     it("uses finish swatches for cap variants instead of glass texture fallbacks", () => {
         const previews = getProductCardVariantPreviews(
             [

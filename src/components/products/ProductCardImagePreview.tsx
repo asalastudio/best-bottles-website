@@ -4,7 +4,10 @@ import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Package } from "@/components/icons";
-import type { ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import {
+    getProductCardPreviewAccessibleLabel,
+    type ProductCardVariantPreview,
+} from "@/lib/products/product-card-variant-previews";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 
 type ProductCardImagePreviewProps = {
@@ -42,17 +45,21 @@ function swatchStyle(preview: ProductCardVariantPreview): React.CSSProperties | 
 
 function ProductCardSwatch({
     preview,
+    productTitle,
+    index,
     isActive,
     onPreview,
 }: {
     preview: ProductCardVariantPreview;
+    productTitle: string;
+    index: number;
     isActive: boolean;
     onPreview: (preview: ProductCardVariantPreview) => void;
 }) {
     return (
         <button
             type="button"
-            aria-label={`Preview ${preview.label}`}
+            aria-label={getProductCardPreviewAccessibleLabel(preview, productTitle, index)}
             title={preview.label}
             onMouseEnter={() => onPreview(preview)}
             onFocus={() => onPreview(preview)}
@@ -60,7 +67,7 @@ function ProductCardSwatch({
                 stopCardNavigation(event);
                 onPreview(preview);
             }}
-            className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2 focus-visible:ring-obsidian focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition focus:outline-none focus-visible:ring-2 focus-visible:ring-obsidian focus-visible:ring-offset-2 focus-visible:ring-offset-white"
         >
             <span
                 className={`relative block h-5 w-5 overflow-hidden rounded-full border ${
@@ -89,10 +96,9 @@ function ProductCardStaticSwatch({
 }) {
     return (
         <span
-            aria-label={`${preview.label} option`}
             title={`${preview.label} option`}
-            className="inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full"
-            role="img"
+            className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full"
+            aria-hidden="true"
         >
             <span
                 className={`relative block h-5 w-5 overflow-hidden rounded-full border border-champagne/60 opacity-75 shadow-[inset_0_1px_1px_rgba(255,255,255,0.65),inset_0_-2px_5px_rgba(32,32,32,0.10)] ${
@@ -115,12 +121,14 @@ function ProductCardStaticSwatch({
 function ProductCardSwatchRow({
     previewableVariants,
     staticVariants,
+    productTitle,
     activeVariantId,
     maxVisible,
     onPreview,
 }: {
     previewableVariants: ProductCardVariantPreview[];
     staticVariants: ProductCardVariantPreview[];
+    productTitle: string;
     activeVariantId: string | null;
     maxVisible: number;
     onPreview: (preview: ProductCardVariantPreview) => void;
@@ -132,12 +140,14 @@ function ProductCardSwatchRow({
     if (variants.length <= 1) return null;
 
     return (
-        <div className="flex min-h-11 items-center gap-1.5 border-t border-champagne/30 bg-white px-4" aria-label="Variant color previews">
-            {visible.map((preview) => (
+        <div className="flex min-h-11 items-center gap-0.5 border-t border-champagne/30 bg-white px-2 sm:px-4" aria-label="Available variant previews">
+            {visible.map((preview, index) => (
                 preview.imageUrl ? (
                     <ProductCardSwatch
                         key={preview.id}
                         preview={preview}
+                        productTitle={productTitle}
+                        index={index}
                         isActive={activeVariantId === preview.id}
                         onPreview={onPreview}
                     />
@@ -199,7 +209,7 @@ export default function ProductCardImagePreview({
     return (
         <div>
             <div
-                className="relative aspect-[10/11] w-full overflow-hidden bg-[#efe2d0]"
+                className="relative aspect-[4/3] sm:aspect-[10/11] w-full overflow-hidden bg-[#efe2d0]"
                 data-bb-image-audit={auditMeta?.surface}
                 data-bb-family={auditMeta?.family ?? undefined}
                 data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
@@ -240,6 +250,7 @@ export default function ProductCardImagePreview({
             <ProductCardSwatchRow
                 previewableVariants={previewablePreviews}
                 staticVariants={staticPreviews}
+                productTitle={productTitle}
                 activeVariantId={activePreview?.id ?? null}
                 maxVisible={maxVisibleSwatches}
                 onPreview={handlePreview}
