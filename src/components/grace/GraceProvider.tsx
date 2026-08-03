@@ -800,6 +800,22 @@ function GraceProviderBase({
         setBrowsingHistory((prev) => [...prev.slice(-49), entry]);
     }, [pageContext]);
 
+    const proactiveHintKeyRef = useRef<string | null>(null);
+    useEffect(() => {
+        const paperDoll = pageContext.paperDoll;
+        if (!paperDoll || paperDoll.view !== "beauty" || panelMode !== "closed" || messagesRef.current.length > 0) return;
+        const key = `${paperDoll.family}:${paperDoll.capacityMl}:${paperDoll.neckThreadSize}`;
+        if (proactiveHintKeyRef.current === key) return;
+        proactiveHintKeyRef.current = key;
+        const timer = window.setTimeout(() => {
+            setLauncherTooltip({
+                message: "This 9 mL 17-415 bottle can be configured by glass, applicator, roller, and finish.",
+                expiresAt: Date.now() + 7000,
+            });
+        }, 1500);
+        return () => window.clearTimeout(timer);
+    }, [pageContext.paperDoll, panelMode]);
+
     // ── Form state ───────────────────────────────────────────────────────────
     const [activeForm, setActiveForm] = useState<ActiveForm | null>(null);
     const activeFormRef = useRef<{ formType: string; fields: Record<string, string> } | null>(null);
@@ -852,6 +868,9 @@ function GraceProviderBase({
 
     const pathnameRef = useRef(pathname);
     useEffect(() => { pathnameRef.current = pathname; }, [pathname]);
+
+    const userIdRef = useRef(userId);
+    useEffect(() => { userIdRef.current = userId; }, [userId]);
 
     const closePanelRef = useRef(closePanel);
     useEffect(() => { closePanelRef.current = closePanel; }, [closePanel]);
@@ -1782,6 +1801,92 @@ function GraceProviderBase({
             return "The 9 mL 17-415 Paper Doll selection request was applied to the visible builder. Do not describe it as a 13-415 bottle.";
         },
 
+        prepareQuoteRequest: async (params: {
+            products: PendingCartProduct[] | string;
+            name?: string | null;
+            email?: string | null;
+            company?: string | null;
+            phone?: string | null;
+            message?: string | null;
+        }) => {
+            const requested: PendingCartProduct[] = (() => {
+                if (Array.isArray(params.products)) return params.products;
+                try {
+                    const parsed = JSON.parse(params.products);
+                    return Array.isArray(parsed) ? parsed : [];
+                } catch { return []; }
+            })();
+            if (requested.length === 0) return "No quote line items were supplied. Search the catalog first.";
+
+            const lineItems = [];
+            for (const item of requested.slice(0, 12)) {
+                const data = await callGraceServerTool<ProductCard | null>("getProductBySku", { graceSku: item.graceSku });
+                if (!data.result) return `I could not verify SKU ${item.graceSku}, so I did not prepare the quote.`;
+                const product = data.result;
+                lineItems.push({
+                    sku: product.graceSku,
+                    websiteSku: product.websiteSku ?? undefined,
+                    name: product.itemName,
+                    quantity: Math.max(1, Number(item.quantity) || 1),
+                    unitPrice: product.webPrice1pc ?? null,
+                    family: product.family,
+                    capacity: product.capacity,
+                    color: product.color,
+                    applicator: product.applicator ?? null,
+                    capColor: product.capColor ?? null,
+                    neckThreadSize: product.neckThreadSize ?? null,
+                });
+            }
+            sessionStorage.setItem("bb-rfq-line-items", JSON.stringify(lineItems));
+            const next = new URLSearchParams();
+            const fields = ["name", "email", "company", "phone", "message"] as const;
+            for (const field of fields) {
+                const value = params[field];
+                if (typeof value === "string" && value.trim()) next.set(field, value.trim());
+            }
+            next.set("products", lineItems.map((item) => `${item.name} (SKU: ${item.websiteSku ?? item.sku})`).join("\n"));
+            next.set("quantities", lineItems.map((item) => `${item.websiteSku ?? item.sku}: ${item.quantity}`).join("\n"));
+            routerRef.current.push(`/request-quote?${next.toString()}`);
+            completeGraceNavigationRef.current("Your verified quote draft is ready to review.");
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("prepareQuoteRequest");
+            analytics.graceToolCalled({ toolName: "prepareQuoteRequest", success: true });
+            return `Prepared a structured quote draft with ${lineItems.length} verified line item${lineItems.length === 1 ? "" : "s"}. The customer must review and submit the form.`;
+        },
+
+        listGraceProjects: async () => {
+            if (!userIdRef.current) return "Project saving is available after sign-in. Guests can use a shareable shortlist in the meantime.";
+            const response = await fetchJsonWithTimeout<{ projects?: Array<{ _id: string; name: string; savedBottleCount: number }>; error?: string }>(
+                "/api/portal/grace/projects",
+                { method: "GET" },
+            );
+            if (!response.ok) return response.error ?? "Could not load Grace projects.";
+            const projects = response.data?.projects ?? [];
+            if (projects.length === 0) return "The customer has no Grace projects yet. Offer to create one with proposeProjectSave.";
+            return projects.map((project) => `${project.name} — ID ${project._id} — ${project.savedBottleCount} saved bottle${project.savedBottleCount === 1 ? "" : "s"}`).join("\n");
+        },
+
+        proposeProjectSave: async (params: { graceSku: string; projectId?: string | null; projectName?: string | null; notes?: string | null }) => {
+            const data = await callGraceServerTool<ProductCard | null>("getProductBySku", { graceSku: params.graceSku });
+            if (!data.result) return `I could not verify SKU ${params.graceSku}, so I did not prepare a project save.`;
+            pendingActionsRef.current.push({
+                type: "proposeProjectSave",
+                confirmationId: `project-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`,
+                product: data.result,
+                projectId: params.projectId ?? undefined,
+                projectName: params.projectName ?? undefined,
+                notes: params.notes ?? undefined,
+                requiresSignIn: !userIdRef.current,
+                awaitingConfirmation: true,
+            });
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("proposeProjectSave");
+            analytics.graceToolCalled({ toolName: "proposeProjectSave", success: true });
+            return userIdRef.current
+                ? "Project save prepared. Ask the customer to confirm the visible save card. Do not claim it is saved yet."
+                : "Project save prepared, but the customer must sign in before confirming. Their guest shortlist remains available.";
+        },
+
         displayAnatomy: async (params: { graceSku: string }) => {
             try {
                 const data = await callGraceServerTool<ProductCard & { heroImageUrl?: string | null; paperDollBodyUrl?: string | null; capColor?: string | null } | null>("getProductBySku", { graceSku: params.graceSku });
@@ -2333,9 +2438,55 @@ function GraceProviderBase({
     }, [router]);
     const clearPendingNavigation = useCallback(() => setPendingNavigation(null), []);
 
+    const confirmProjectSave = useCallback(async (
+        messageId: string,
+        action: Extract<GraceAction, { type: "proposeProjectSave" }>,
+    ) => {
+        if (action.requiresSignIn) {
+            router.push(`/sign-in?redirect_url=${encodeURIComponent(pageContextRef.current?.pageUrl ?? "/grace-workspace")}`);
+            return;
+        }
+        const response = await fetchJsonWithTimeout<{ projectId?: string; error?: string }>(
+            "/api/portal/grace/projects",
+            {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    projectId: action.projectId,
+                    projectName: action.projectName,
+                    bottle: {
+                        description: action.product.itemName,
+                        sku: action.product.graceSku,
+                        notes: action.notes,
+                    },
+                }),
+            },
+        );
+        setMessages((previous) => previous.map((message) => {
+            if (message.id !== messageId) return message;
+            const actions = graceMessageActions(message).map((candidate): GraceAction =>
+                candidate.type === "proposeProjectSave"
+                    ? {
+                        ...candidate,
+                        projectId: response.data?.projectId ?? candidate.projectId,
+                        awaitingConfirmation: !response.ok,
+                        saved: response.ok,
+                        error: response.ok ? undefined : response.error ?? "Unable to save this project.",
+                    }
+                    : candidate,
+            );
+            return { ...message, action: actions[0], actions };
+        }));
+    }, [router]);
+
     const confirmAction = useCallback((messageId: string) => {
         const message = messagesRef.current.find((m) => m.id === messageId);
         if (!message) return;
+        const projectProposal = graceMessageActions(message).find((action) => action.type === "proposeProjectSave");
+        if (projectProposal?.type === "proposeProjectSave") {
+            void confirmProjectSave(messageId, projectProposal);
+            return;
+        }
         // Confirm is per-message: add every pending proposal so the UI never
         // shows "Added to cart" for products that were silently skipped.
         const proposals = pendingCartProposals(message);
@@ -2386,16 +2537,24 @@ function GraceProviderBase({
                 content: `${m.content}\n\nAdded to cart.`,
             };
         }));
-    }, [addToCart]);
+    }, [addToCart, confirmProjectSave]);
 
     const dismissAction = useCallback((messageId: string) => {
         setMessages((prev) => prev.map((m) => {
-            if (m.id !== messageId || pendingCartProposals(m).length === 0) return m;
+            if (m.id !== messageId) return m;
+            const existingActions = graceMessageActions(m);
+            const hasDismissable = pendingCartProposals(m).length > 0
+                || existingActions.some((action) => action.type === "proposeProjectSave" && action.awaitingConfirmation);
+            if (!hasDismissable) return m;
+            const cartUpdated = updateCartProposalAction(m, (action) => action.awaitingConfirmation ? null : action);
+            const actions = graceMessageActions(cartUpdated)
+                .map((action) => action?.type === "proposeProjectSave" && action.awaitingConfirmation ? null : action)
+                .filter((action): action is GraceAction => Boolean(action));
             return {
-                // Only drop proposals still awaiting confirmation — a confirmed
-                // receipt card must survive dismissing a sibling proposal.
-                ...updateCartProposalAction(m, (action) => action.awaitingConfirmation ? null : action),
-                content: `${m.content}\n\nCart add dismissed.`,
+                ...m,
+                action: actions[0],
+                actions: actions.length ? actions : undefined,
+                content: `${m.content}\n\nAction dismissed.`,
             };
         }));
     }, []);

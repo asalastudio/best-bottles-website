@@ -154,6 +154,18 @@ export type GraceAction =
     | { type: "showProductPresentation"; products: ProductCard[]; headline?: string }
     | { type: "buildKit"; items: KitItem[]; totalPrice?: number }
     | { type: "proposeCartAdd"; confirmationId: string; products: PendingCartProduct[]; awaitingConfirmation: boolean }
+    | {
+        type: "proposeProjectSave";
+        confirmationId: string;
+        product: ProductCard;
+        projectId?: string;
+        projectName?: string;
+        notes?: string;
+        requiresSignIn: boolean;
+        awaitingConfirmation: boolean;
+        saved?: boolean;
+        error?: string;
+    }
     | { type: "navigateToPage"; path: string; title: string; description?: string; autoNavigate?: boolean }
     | { type: "prefillForm"; formType: "sample" | "quote" | "contact" | "newsletter"; fields: Record<string, string> }
     /* ── v3 inline display actions (PRD patterns A–L) ─── */

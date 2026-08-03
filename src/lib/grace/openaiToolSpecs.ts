@@ -174,6 +174,21 @@ export const GRACE_OPENAI_TOOL_SPECS: GraceOpenAIToolSpec[] = [
             description: "The media view to show after applying the selection.",
         },
     }),
+    spec("prepareQuoteRequest", "Verify line items, prepare a structured RFQ, and move the customer to a reviewable quote form without submitting it.", {
+        products: { type: "array", items: productProposal, minItems: 1, maxItems: 12 },
+        name: nullableString("Customer name already supplied, or null."),
+        email: nullableString("Customer email already supplied, or null."),
+        company: nullableString("Customer company already supplied, or null."),
+        phone: nullableString("Customer phone already supplied, or null."),
+        message: nullableString("Customer quote notes already supplied, or null."),
+    }),
+    spec("listGraceProjects", "List the authenticated customer's existing Grace packaging projects; guests must be invited to sign in."),
+    spec("proposeProjectSave", "Prepare a confirmation-gated save of one verified bottle to an authenticated Grace project; this tool must never write directly.", {
+        graceSku: string("Exact verified Grace SKU to save."),
+        projectId: nullableString("Existing Grace project ID, or null to create a new project after confirmation."),
+        projectName: nullableString("New project name, or null for a dated default."),
+        notes: nullableString("Customer-supplied notes for the saved bottle, or null."),
+    }),
 ];
 
 export type GraceOpenAIToolName = (typeof GRACE_OPENAI_TOOL_SPECS)[number]["name"];

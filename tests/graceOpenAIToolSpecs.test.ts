@@ -31,6 +31,9 @@ const EXISTING_GRACE_TOOLS = [
     "displayAnatomy",
     "setCatalogRefinements",
     "setPaperDollSelection",
+    "prepareQuoteRequest",
+    "listGraceProjects",
+    "proposeProjectSave",
 ] as const;
 
 describe("Grace OpenAI tool contract", () => {
@@ -70,6 +73,14 @@ describe("Grace OpenAI tool contract", () => {
         expect(paperDoll?.parameters.properties.deliverySystem).toEqual(expect.objectContaining({
             enum: ["rollon", "spray", "lotion", null],
         }));
+    });
+
+    it("supports quote preparation and confirmation-gated authenticated projects", () => {
+        const quote = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "prepareQuoteRequest");
+        const project = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "proposeProjectSave");
+        expect(quote?.parameters.properties.products).toEqual(expect.objectContaining({ type: "array" }));
+        expect(project?.description).toContain("confirmation");
+        expect(project?.parameters.properties.projectId.type).toEqual(["string", "null"]);
     });
 
     it("keeps the ElevenLabs tool route as a compatibility alias", () => {
