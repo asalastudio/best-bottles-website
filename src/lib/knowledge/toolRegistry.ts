@@ -98,6 +98,7 @@ function matchesJsonType(value: unknown, type: unknown) {
     if (type === "null") return value === null;
     if (type === "array") return Array.isArray(value);
     if (type === "object") return typeof value === "object" && value !== null && !Array.isArray(value);
+    if (type === "integer") return typeof value === "number" && Number.isInteger(value);
     if (type === "number") return typeof value === "number" && Number.isFinite(value);
     return typeof value === type;
 }
@@ -113,6 +114,13 @@ function validateJsonSchema(schemaValue: unknown, value: unknown, path: string):
     }
     if (Array.isArray(schema.enum) && !schema.enum.some((entry) => Object.is(entry, value))) {
         return `${path} is not an allowed value`;
+    }
+    if (typeof value === "number") {
+        if (typeof schema.minimum === "number" && value < schema.minimum) return `${path} is below the minimum`;
+        if (typeof schema.maximum === "number" && value > schema.maximum) return `${path} is above the maximum`;
+    }
+    if (typeof value === "string" && value.length > 2_000) {
+        return `${path} is too long`;
     }
 
     if (Array.isArray(value)) {

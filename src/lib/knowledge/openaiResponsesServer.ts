@@ -83,6 +83,16 @@ const isRecord = (value: unknown): value is Record<string, unknown> => (
     Boolean(value) && typeof value === "object" && !Array.isArray(value)
 );
 
+const UNVERIFIED_ANSWER_FALLBACK = "I couldn't verify an answer from the live catalog or approved knowledge sources. Please try a more specific question or ask a Best Bottles specialist.";
+
+function isGroundedToolResult(result: unknown): boolean {
+    if (result === null || result === undefined) return false;
+    if (typeof result === "string") return Boolean(result.trim());
+    if (Array.isArray(result)) return result.length > 0;
+    if (isRecord(result) && (result.status === "no_match" || result.status === "error")) return false;
+    return isRecord(result);
+}
+
 function parseToolParameters(name: string, serialized: unknown): Record<string, unknown> {
     try {
         const parsed = JSON.parse(typeof serialized === "string" ? serialized : "{}");
@@ -205,7 +215,9 @@ export async function runKnowledgeResponse({
 
             const functionCalls = output.filter((item) => item.type === "function_call");
             if (functionCalls.length === 0) {
-                const text = extractText(output);
+                const modelText = extractText(output);
+                const grounded = citations.size > 0;
+                const text = grounded && modelText ? modelText : UNVERIFIED_ANSWER_FALLBACK;
                 const completedAt = Date.now();
                 const cost = estimateKnowledgeCost({
                     model,
@@ -225,7 +237,7 @@ export async function runKnowledgeResponse({
                     startedAt,
                     completedAt,
                     durationMs: completedAt - startedAt,
-                    status: text ? "success" : "no_match",
+                    status: grounded && modelText ? "success" : "no_match",
                     inputTokens,
                     cachedInputTokens,
                     outputTokens,
@@ -268,12 +280,14 @@ export async function runKnowledgeResponse({
                 try {
                     const result = await executeTool(name, parameters);
                     toolCalls.push({ name, durationMs: Date.now() - callStartedAt, status: "success" });
-                    const sourceId = `convex:${name}`;
-                    citations.set(sourceId, {
-                        sourceId,
-                        title: `Live Convex product truth · ${name}`,
-                        kind: "product_truth",
-                    });
+                    if (isGroundedToolResult(result)) {
+                        const sourceId = `convex:${name}`;
+                        citations.set(sourceId, {
+                            sourceId,
+                            title: `Live Convex product truth · ${name}`,
+                            kind: "product_truth",
+                        });
+                    }
                     toolOutputs.push({
                         type: "function_call_output",
                         call_id: String(call.call_id ?? ""),

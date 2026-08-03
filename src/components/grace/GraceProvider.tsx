@@ -54,6 +54,7 @@ import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
 import { getGraceProvider } from "@/lib/grace/openaiRealtimeConfig";
 import {
     createGraceOpenAIRealtimeAdapter,
+    GraceRealtimeConnectionCancelledError,
     type GraceOpenAIRealtimeAdapter,
     type GraceRealtimeToolImplementations,
 } from "@/lib/grace/openaiRealtimeAdapter";
@@ -511,13 +512,9 @@ function GraceProviderBase({
     const router = useRouter();
     const pathname = usePathname();
     const searchParams = useSearchParams();
-    const { addItems: addToCart, items: cartItems, checkout, isCheckingOut } = useCart();
+    const { addItems: addToCart, items: cartItems } = useCart();
     const cartItemsRef = useRef(cartItems);
-    const checkoutRef = useRef(checkout);
-    const isCheckingOutRef = useRef(isCheckingOut);
     useEffect(() => { cartItemsRef.current = cartItems; }, [cartItems]);
-    useEffect(() => { checkoutRef.current = checkout; }, [checkout]);
-    useEffect(() => { isCheckingOutRef.current = isCheckingOut; }, [isCheckingOut]);
 
     const submitFormMutation = useMutation(api.forms.submit);
     const createShortlistMutation = useMutation(api.graceShortlists.create);
@@ -1219,7 +1216,7 @@ function GraceProviderBase({
                 itemName: p.itemName,
                 shopifyVariantId: p.shopifyVariantId ?? null,
                 checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId),
-                quantity: p.quantity ?? 1,
+                quantity: Math.max(1, Math.floor(Number(p.quantity) || 1)),
                 unitPrice: p.unitPrice ?? p.webPrice1pc ?? null,
                 webPrice1pc: p.webPrice1pc,
                 webPrice10pc: p.webPrice10pc,
@@ -1255,18 +1252,14 @@ function GraceProviderBase({
                 analytics.graceToolCalled({ toolName: "proceedToCheckout", success: false, status: "empty_cart" });
                 return "The cart is empty. Ask which verified product they want to add before checkout.";
             }
-            if (isCheckingOutRef.current) return "Checkout is already starting. Ask the customer to wait a moment.";
-            try {
-                sessionMetricsRef.current.toolsCalled++;
-                sessionMetricsRef.current.toolsUsed.add("proceedToCheckout");
-                analytics.graceToolCalled({ toolName: "proceedToCheckout", success: true });
-                await checkoutRef.current();
-                return "Starting checkout for the verified cart items.";
-            } catch (e) {
-                console.error("[Grace] proceedToCheckout:", e);
-                analytics.graceToolCalled({ toolName: "proceedToCheckout", success: false, status: "error" });
-                return "Checkout could not start. Ask the customer to review the cart or contact sales.";
-            }
+            // This tool is proposal-only. Opening the cart is reversible; the
+            // customer must confirm checkout from the visible cart UI.
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("proceedToCheckout");
+            analytics.graceToolCalled({ toolName: "proceedToCheckout", success: true });
+            analytics.graceNavigation({ destination: "/cart#drawer", triggeredBy: "proceedToCheckout" });
+            window.dispatchEvent(new Event("open-cart-drawer"));
+            return "The cart review is open. The customer must confirm checkout from the cart.";
         },
 
         navigateToPage: async (params: { path: string; title: string; description?: string; autoNavigate?: boolean | string; prefillFields?: Record<string, string> | string }) => {
@@ -1425,26 +1418,29 @@ function GraceProviderBase({
             const form = activeFormRef.current;
             if (!form) return "No form data collected. Use updateFormField first.";
             if (!form.fields.email) return "Email address is required. Please ask for it.";
-            try {
-                await submitFormRef.current({
-                    formType: form.formType as "sample" | "quote" | "contact" | "newsletter",
-                    name: form.fields.name || undefined,
-                    email: form.fields.email,
-                    company: form.fields.company || undefined,
-                    phone: form.fields.phone || undefined,
-                    message: form.fields.message || undefined,
-                    products: form.fields.products || undefined,
-                    quantities: form.fields.quantities || undefined,
-                    source: "grace",
-                });
-                analytics.formSubmitted({ formType: form.formType as "quote" | "sample" | "contact" | "newsletter", source: "grace" });
-                sessionMetricsRef.current.toolsCalled++;
-                sessionMetricsRef.current.toolsUsed.add("submitForm");
-                activeFormRef.current = null;
-                return "Form submitted successfully. Thank the customer.";
-            } catch (err) {
-                return `Submission failed: ${err instanceof Error ? err.message : "Unknown error"}.`;
-            }
+            // This tool never performs the mutation. It moves the exact draft
+            // into a visible first-party form where the customer must review
+            // and submit it themselves.
+            const formDestinations: Record<string, { path: string; formType: FormType }> = {
+                sample: { path: "/request-sample", formType: "sample" },
+                quote: { path: "/request-quote", formType: "quote" },
+                contact: { path: "/contact", formType: "contact" },
+                newsletter: { path: "/contact", formType: "contact" },
+            };
+            const formDestination = formDestinations[form.formType];
+            if (!formDestination) return "That form type is not supported.";
+            const safeFields = Object.fromEntries(
+                Object.entries(form.fields).slice(0, 20).map(([key, value]) => [key, value.slice(0, 2_000)]),
+            );
+            sessionStorage.setItem("bb-grace-form-draft", JSON.stringify({
+                formType: formDestination.formType,
+                fields: safeFields,
+            }));
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("submitForm");
+            analytics.graceToolCalled({ toolName: "submitForm", success: true, status: "review_required" });
+            routerRef.current.push(formDestination.path);
+            return "The completed draft is open in a visible form. The customer must review and submit it.";
         },
 
         // ─── v3 inline display tools (PRD Patterns A–L) ──────────────────────
@@ -2209,8 +2205,8 @@ function GraceProviderBase({
     // active WebRTC connection and microphone stream.
     useEffect(() => {
         return () => {
-            if (!openAIAdapter.isConnected()) return;
-            intentionalEndRef.current = true;
+            if (!openAIAdapter.hasSession()) return;
+            if (openAIAdapter.isConnected()) intentionalEndRef.current = true;
             openAIAdapter.disconnect();
         };
     }, [openAIAdapter]);
@@ -2299,6 +2295,7 @@ function GraceProviderBase({
             }
             return true;
         } catch (err) {
+            if (err instanceof GraceRealtimeConnectionCancelledError) return false;
             console.error("[Grace] Connection failed:", err);
             connectingRef.current = false;
             setGraceStatus("error");

@@ -17,6 +17,8 @@ describe("employee knowledge workspace", () => {
             onCorrect: () => undefined,
         }));
         expect(html).toContain("Internal answer");
+        expect(html).toContain("Grace · Internal knowledge");
+        expect(html).not.toContain("Grace · Marin");
         expect(html).toContain("Live Convex fitment");
         expect(html).toContain("Suggest a correction");
     });

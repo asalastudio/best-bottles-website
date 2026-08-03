@@ -72,6 +72,34 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
         }
     }, [searchParams, fields]);
 
+    // Grace drafts stay in this browser session rather than URL query strings,
+    // which keeps customer contact details out of history, referrers, and logs.
+    useEffect(() => {
+        let timer: number | undefined;
+        try {
+            const raw = sessionStorage.getItem("bb-grace-form-draft");
+            if (!raw) return;
+            const draft = JSON.parse(raw) as { formType?: unknown; fields?: unknown };
+            if (draft.formType !== formType || !draft.fields || typeof draft.fields !== "object" || Array.isArray(draft.fields)) return;
+            const allowedFields = new Set(fields.map((field) => field.name));
+            const prefilled = Object.fromEntries(
+                Object.entries(draft.fields as Record<string, unknown>)
+                    .filter(([key, value]) => allowedFields.has(key) && typeof value === "string")
+                    .slice(0, 20)
+                    .map(([key, value]) => [key, (value as string).slice(0, 2_000)]),
+            );
+            sessionStorage.removeItem("bb-grace-form-draft");
+            if (Object.keys(prefilled).length > 0) {
+                timer = window.setTimeout(() => setValues((current) => ({ ...current, ...prefilled })), 0);
+            }
+        } catch {
+            sessionStorage.removeItem("bb-grace-form-draft");
+        }
+        return () => {
+            if (timer !== undefined) window.clearTimeout(timer);
+        };
+    }, [fields, formType]);
+
     useEffect(() => {
         if (formType !== "quote") return;
         let cancelled = false;

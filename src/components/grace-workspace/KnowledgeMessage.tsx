@@ -17,7 +17,7 @@ export default function KnowledgeMessage({
             <div className="mb-2 flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.17em] text-slate">
                 <span>{isAssistant ? "Internal answer" : "You"}</span>
                 {isAssistant ? <span className="h-1 w-1 rounded-full bg-muted-gold" aria-hidden="true" /> : null}
-                {isAssistant ? <span>Grace · Marin</span> : null}
+                {isAssistant ? <span>Grace · Internal knowledge</span> : null}
             </div>
             <div className={`whitespace-pre-wrap text-[14px] leading-7 ${
                 isAssistant

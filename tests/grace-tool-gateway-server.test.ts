@@ -4,6 +4,10 @@ import {
     normalizeGraceServerToolCall,
 } from "../src/lib/grace/toolGatewayServer";
 import { POST as graceToolsPost } from "../src/app/api/grace/tools/route";
+import {
+    executePublicGraceToolCall,
+    parsePublicGraceToolCall,
+} from "../src/app/api/grace/tools/route";
 
 describe("provider-neutral Grace tool executor", () => {
     it("exports an injectable server executor", () => {
@@ -27,5 +31,27 @@ describe("provider-neutral Grace tool executor", () => {
             toolName: "searchCatalog",
             parameters: { searchTerm: "amber 9ml", familyLimit: "Cylinder" },
         });
+    });
+
+    it("rejects undeclared public registry arguments before executing a tool", () => {
+        expect(() => parsePublicGraceToolCall({
+            tool_name: "getFamilyOverview",
+            parameters: { family: "Cylinder", bypass: true },
+        })).toThrow("Invalid parameters");
+    });
+
+    it("strictly bounds retained public compatibility aliases", () => {
+        expect(() => parsePublicGraceToolCall({
+            tool_name: "getProductsForComparison",
+            parameters: { graceSkus: Array.from({ length: 50 }, (_, index) => `SKU-${index}`) },
+        })).toThrow("too many items");
+    });
+
+    it("applies the shared public authorization policy to browser tool calls", async () => {
+        const execute = async () => ({ shouldNotRun: true });
+        await expect(executePublicGraceToolCall({
+            tool_name: "listGraceProjects",
+            parameters: {},
+        }, "request-test", execute)).rejects.toThrow("missing_scope:customer_project.read.self");
     });
 });

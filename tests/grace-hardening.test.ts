@@ -184,6 +184,7 @@ describe("Grace 100-point hardening contracts", () => {
 
     expect(proposeBlock).toContain('type: "proposeCartAdd"');
     expect(proposeBlock).toContain("analytics.graceCartProposalShown");
+    expect(proposeBlock).toContain("Math.max(1, Math.floor(Number(p.quantity) || 1))");
     expect(proposeBlock).not.toContain("addToCart(");
     expect(provider).toContain("analytics.graceCartProposalConfirmed");
     expect(provider).toContain("pendingCartProposals");
@@ -194,6 +195,30 @@ describe("Grace 100-point hardening contracts", () => {
     expect(provider).toContain("action.awaitingConfirmation ? null : action");
     expect(renderer).toContain("Review before adding");
     expect(renderer).toContain("onConfirmAction");
+  });
+
+  it("keeps checkout and form tools proposal-only until the customer confirms in visible UI", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    const schemas = read("src/lib/knowledge/toolSchemas.ts");
+
+    const checkoutStart = provider.indexOf("proceedToCheckout:");
+    const navigateStart = provider.indexOf("navigateToPage:", checkoutStart);
+    const checkoutBlock = provider.slice(checkoutStart, navigateStart);
+    const formStart = provider.indexOf("submitForm:");
+    const nextToolStart = provider.indexOf("displayProductCard:", formStart);
+    const formBlock = provider.slice(formStart, nextToolStart);
+
+    expect(checkoutBlock).toContain('new Event("open-cart-drawer")');
+    expect(checkoutBlock).toContain("customer must confirm checkout");
+    expect(checkoutBlock).not.toContain("checkoutRef.current");
+    expect(formBlock).toContain("routerRef.current.push");
+    expect(formBlock).toContain('sessionStorage.setItem("bb-grace-form-draft"');
+    expect(formBlock).toContain('newsletter: { path: "/contact", formType: "contact" }');
+    expect(formBlock).toContain("customer must review and submit");
+    expect(formBlock).not.toContain("submitFormRef.current");
+    expect(formBlock).not.toContain("new URLSearchParams");
+    expect(schemas).toContain("never place an order directly");
+    expect(schemas).toContain("never submit the form directly");
   });
 
   it("guards legacy voice routes from anonymous cost abuse via the shared Convex limiter", () => {
@@ -218,7 +243,7 @@ describe("Grace 100-point hardening contracts", () => {
 
   it("closes the previous Realtime adapter when Clerk identity changes", () => {
     const provider = read("src/components/grace/GraceProvider.tsx");
-    expect(provider).toContain("if (!openAIAdapter.isConnected()) return;");
+    expect(provider).toContain("if (!openAIAdapter.hasSession()) return;");
     expect(provider).toContain("openAIAdapter.disconnect();");
     expect(provider).toContain("}, [openAIAdapter]);");
     expect(provider).toContain("intentionalEndRef.current = true;");

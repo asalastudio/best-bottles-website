@@ -3,6 +3,7 @@ import {
     buildGraceRealtimeTools,
     createGraceOpenAIRealtimeAdapter,
     getGraceRealtimeToolSpecs,
+    GraceRealtimeConnectionCancelledError,
     type GraceRealtimeAgentConfig,
     type GraceRealtimeSessionLike,
 } from "../src/lib/grace/openaiRealtimeAdapter";
@@ -11,7 +12,7 @@ import { GRACE_REALTIME_MODEL, GRACE_REALTIME_VOICE } from "../src/lib/grace/ope
 
 class FakeSession implements GraceRealtimeSessionLike {
     handlers = new Map<string, Array<(...args: unknown[]) => void>>();
-    connect = vi.fn(async () => undefined);
+    connect = vi.fn<GraceRealtimeSessionLike["connect"]>(async () => undefined);
     sendMessage = vi.fn();
     updateAgent = vi.fn(async (agent: unknown) => agent);
     interrupt = vi.fn();
@@ -201,6 +202,37 @@ describe("Grace OpenAI Realtime adapter", () => {
 
         expect(session.interrupt).toHaveBeenCalledTimes(1);
         expect(session.close).toHaveBeenCalledTimes(1);
+        expect(adapter.isConnected()).toBe(false);
+    });
+
+    it("cancels and closes a session whose handshake finishes after disconnect", async () => {
+        let finishHandshake: (() => void) | undefined;
+        const session = new FakeSession();
+        session.connect.mockImplementation(() => new Promise<void>((resolve) => {
+            finishHandshake = resolve;
+        }));
+        const onConnect = vi.fn();
+        const adapter = createGraceOpenAIRealtimeAdapter({
+            baseInstructions: "Truth first.",
+            toolImplementations: Object.fromEntries(
+                GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()]),
+            ),
+            callbacks: { onConnect },
+            dependencies: {
+                createAgent: (config) => config,
+                createSession: () => session,
+            },
+        });
+
+        const connecting = adapter.connect({ clientSecret: "ek_test", mode: "voice" });
+        expect(adapter.hasSession()).toBe(true);
+        adapter.disconnect();
+        finishHandshake?.();
+
+        await expect(connecting).rejects.toBeInstanceOf(GraceRealtimeConnectionCancelledError);
+        expect(session.close).toHaveBeenCalled();
+        expect(onConnect).not.toHaveBeenCalled();
+        expect(adapter.hasSession()).toBe(false);
         expect(adapter.isConnected()).toBe(false);
     });
 });

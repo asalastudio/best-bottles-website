@@ -124,8 +124,8 @@ Never paste secrets, raw customer data, private supplier records, payment inform
 
 ## Verification record — 2026-08-03
 
-- Knowledge Gateway suite: 49 tests passed.
-- Full repository suite: 426 tests passed and 1 intentionally skipped.
+- Knowledge Gateway suite: 57 tests passed.
+- Full repository suite: 442 tests passed and 1 intentionally skipped.
 - ESLint: 0 errors; 39 existing warnings.
 - Production build: passed.
 - Live catalog integrity: 2,330 products, 356 groups, no duplicate Grace SKU, missing Grace SKU, or orphan group reference.

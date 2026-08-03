@@ -18,6 +18,7 @@ const nullableBoolean = (description: string): JsonSchemaProperty => ({ type: ["
 const nullableStringArray = (description: string): JsonSchemaProperty => ({
     type: ["array", "null"],
     items: { type: "string" },
+    maxItems: 30,
     description,
 });
 
@@ -43,7 +44,7 @@ const productProposal = {
     properties: {
         itemName: string("Verified customer-facing product name."),
         graceSku: string("Exact Grace SKU returned by a catalog tool."),
-        quantity: { type: "number", description: "Requested quantity greater than zero." },
+        quantity: { type: "integer", minimum: 1, description: "Requested whole-unit quantity greater than zero." },
         webPrice1pc: nullableNumber("Verified one-piece price, or null when unavailable."),
         websiteSku: nullableString("Website SKU returned by the catalog, or null."),
         shopifyVariantId: nullableString("Shopify variant ID returned by the catalog, or null."),
@@ -89,7 +90,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
     spec("proposeCartAdd", "Show a cart confirmation proposal for verified purchasable products; never mutate the cart directly.", {
         products: { type: "array", items: productProposal, minItems: 1, maxItems: 12 },
     }),
-    spec("proceedToCheckout", "Open the cart review flow only after the customer explicitly asks to check out."),
+    spec("proceedToCheckout", "Open the cart review flow after explicit customer intent; never place an order directly and require the customer to confirm checkout in the visible cart."),
     spec("navigateToPage", "Navigate to a verified Best Bottles path after explicit customer movement intent.", {
         path: string("Verified site-relative path."),
         title: string("Customer-facing destination title."),
@@ -111,7 +112,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         fieldName: string("Supported field name."),
         value: string("Exact customer-supplied value."),
     }),
-    spec("submitForm", "Submit the reviewed form only after the customer explicitly confirms submission."),
+    spec("submitForm", "Open the completed draft in a visible review form; never submit the form directly and require the customer to press Submit."),
     spec("displayProductCard", "Render one verified product inline without navigating away from Grace.", {
         graceSku: string("Exact Grace SKU returned by a catalog tool."),
     }),

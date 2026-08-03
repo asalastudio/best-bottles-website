@@ -130,4 +130,61 @@ describe("OpenAI knowledge response runtime", () => {
             }),
         });
     });
+
+    it("does not present unsupported model text as a verified answer", async () => {
+        const create = vi.fn().mockResolvedValue({
+            output: [{
+                type: "message",
+                content: [{ type: "output_text", text: "The price is definitely $1.25.", annotations: [] }],
+            }],
+            usage: { input_tokens: 8, output_tokens: 6 },
+        });
+
+        const result = await runKnowledgeResponse({
+            context,
+            messages: [{ role: "user", content: "What is the price?" }],
+            complexity: "routine",
+            client: { responses: { create } },
+            executeTool: vi.fn(),
+            env: {},
+        });
+
+        expect(result.trace.status).toBe("no_match");
+        expect(result.citations).toEqual([]);
+        expect(result.text).not.toContain("$1.25");
+        expect(result.text).toContain("couldn't verify");
+    });
+
+    it("does not cite a null or no-match tool result as live Convex truth", async () => {
+        const create = vi.fn()
+            .mockResolvedValueOnce({
+                output: [{ type: "function_call", name: "searchCatalog", call_id: "call_none", arguments: JSON.stringify({
+                    searchTerm: "imaginary bottle",
+                    categoryLimit: null,
+                    familyLimit: null,
+                    applicatorFilter: null,
+                }) }],
+                usage: { input_tokens: 8, output_tokens: 4 },
+            })
+            .mockResolvedValueOnce({
+                output: [{
+                    type: "message",
+                    content: [{ type: "output_text", text: "I found the imaginary bottle.", annotations: [] }],
+                }],
+                usage: { input_tokens: 10, output_tokens: 5 },
+            });
+
+        const result = await runKnowledgeResponse({
+            context,
+            messages: [{ role: "user", content: "Find the imaginary bottle" }],
+            complexity: "routine",
+            client: { responses: { create } },
+            executeTool: vi.fn().mockResolvedValue({ status: "no_match", message: "No verified match." }),
+            env: {},
+        });
+
+        expect(result.trace.status).toBe("no_match");
+        expect(result.citations).toEqual([]);
+        expect(result.text).not.toContain("found the imaginary bottle");
+    });
 });

@@ -34,6 +34,7 @@ type HubAccessOptions = {
 
 type ClerkEmailAddress = {
     emailAddress?: string | null;
+    verification?: { status?: string | null } | null;
 } | null | undefined;
 
 type ClerkUserEmails = {
@@ -124,7 +125,9 @@ export function getUserEmailAddresses(user: ClerkUserEmails) {
     const emails: string[] = [];
     const seen = new Set<string>();
 
-    const addEmail = (value: unknown) => {
+    const addEmail = (emailAddress: ClerkEmailAddress) => {
+        if (emailAddress?.verification?.status !== "verified") return;
+        const value = emailAddress.emailAddress;
         if (typeof value !== "string") return;
 
         const email = value.trim();
@@ -135,8 +138,8 @@ export function getUserEmailAddresses(user: ClerkUserEmails) {
         emails.push(email);
     };
 
-    addEmail(user?.primaryEmailAddress?.emailAddress);
-    user?.emailAddresses?.forEach((emailAddress) => addEmail(emailAddress?.emailAddress));
+    addEmail(user?.primaryEmailAddress);
+    user?.emailAddresses?.forEach(addEmail);
 
     return emails;
 }

@@ -78,10 +78,18 @@ export type GraceOpenAIRealtimeAdapter = {
     connect(options: { clientSecret: string; mode: GraceConversationMode }): Promise<void>;
     disconnect(): void;
     interrupt(): void;
+    hasSession(): boolean;
     isConnected(): boolean;
     sendContext(context: string): Promise<void>;
     sendText(text: string): void;
 };
+
+export class GraceRealtimeConnectionCancelledError extends Error {
+    constructor() {
+        super("Grace Realtime connection was cancelled.");
+        this.name = "GraceRealtimeConnectionCancelledError";
+    }
+}
 
 function serializeToolResult(result: unknown): string {
     if (typeof result === "string") return result;
@@ -181,19 +189,27 @@ export function createGraceOpenAIRealtimeAdapter({
     };
 
     const bindEvents = (activeSession: GraceRealtimeSessionLike) => {
-        activeSession.on("audio_start", () => callbacks.onModeChange?.("speaking"));
-        activeSession.on("audio_stopped", () => callbacks.onModeChange?.("listening"));
+        const isCurrentSession = () => session === activeSession;
+        activeSession.on("audio_start", () => {
+            if (isCurrentSession()) callbacks.onModeChange?.("speaking");
+        });
+        activeSession.on("audio_stopped", () => {
+            if (isCurrentSession()) callbacks.onModeChange?.("listening");
+        });
         activeSession.on("agent_end", (...args: unknown[]) => {
+            if (!isCurrentSession()) return;
             const output = args[2];
             if (typeof output === "string" && output.trim()) {
                 callbacks.onMessage?.({ role: "assistant", text: output.trim() });
             }
         });
         activeSession.on("error", (...args: unknown[]) => {
+            if (!isCurrentSession()) return;
             const payload = args[0] as { error?: unknown } | undefined;
             callbacks.onError?.(toError(payload?.error ?? payload));
         });
         activeSession.on("transport_event", (...args: unknown[]) => {
+            if (!isCurrentSession()) return;
             const event = args[0] as Record<string, unknown> | undefined;
             if (!event) return;
 
@@ -229,7 +245,7 @@ export function createGraceOpenAIRealtimeAdapter({
             if (session) session.close();
 
             const agent = createAgent();
-            session = dependencies.createSession(agent, {
+            const activeSession = dependencies.createSession(agent, {
                 model: GRACE_REALTIME_MODEL,
                 transport: "webrtc",
                 config: {
@@ -250,15 +266,22 @@ export function createGraceOpenAIRealtimeAdapter({
                 tracingDisabled: false,
                 workflowName: "Best Bottles Grace",
             });
-            bindEvents(session);
+            session = activeSession;
+            bindEvents(activeSession);
 
             try {
-                await session.connect({ apiKey: clientSecret });
+                await activeSession.connect({ apiKey: clientSecret });
+                if (session !== activeSession) {
+                    activeSession.close();
+                    throw new GraceRealtimeConnectionCancelledError();
+                }
                 notifyConnected();
             } catch (error) {
-                session.close();
-                session = null;
-                notifyDisconnected();
+                activeSession.close();
+                if (session === activeSession) {
+                    session = null;
+                    notifyDisconnected();
+                }
                 throw error;
             }
         },
@@ -271,6 +294,10 @@ export function createGraceOpenAIRealtimeAdapter({
 
         interrupt() {
             session?.interrupt();
+        },
+
+        hasSession() {
+            return session !== null;
         },
 
         isConnected() {

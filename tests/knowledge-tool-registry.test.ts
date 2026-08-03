@@ -82,4 +82,40 @@ describe("knowledge tool registry", () => {
 
         expect(execute).not.toHaveBeenCalled();
     });
+
+    it("bounds string payloads before they reach catalog handlers", async () => {
+        const execute = vi.fn();
+        await expect(executeKnowledgeTool({
+            context: employeeContext,
+            name: "getFamilyOverview",
+            parameters: { family: "x".repeat(2_001) },
+            execute,
+        })).rejects.toThrow("is too long");
+        expect(execute).not.toHaveBeenCalled();
+    });
+
+    it("rejects non-positive and fractional cart quantities", async () => {
+        const execute = vi.fn();
+        const product = {
+            itemName: "9 mL Amber Cylinder",
+            graceSku: "GB-CYL-AMB-9ML-MRL-MGLD",
+            quantity: -2,
+            webPrice1pc: 0.79,
+            websiteSku: "GBCylAmb9MtlRollMattGl",
+            shopifyVariantId: "gid://shopify/ProductVariant/1",
+            checkoutEligible: true,
+            webPrice10pc: null,
+            webPrice12pc: 0.71,
+        };
+
+        for (const quantity of [-2, 1.5]) {
+            await expect(executeKnowledgeTool({
+                context: { ...employeeContext, surface: "storefront", role: "customer" },
+                name: "proposeCartAdd",
+                parameters: { products: [{ ...product, quantity }] },
+                execute,
+            })).rejects.toThrow("Invalid parameters for knowledge tool proposeCartAdd");
+        }
+        expect(execute).not.toHaveBeenCalled();
+    });
 });
