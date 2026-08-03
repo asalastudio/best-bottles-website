@@ -27,9 +27,9 @@ function rollerMaterial(configuration: PaperDollConfiguration): "Metal" | "Plast
 
 export function resolveUnifiedPdpView(
     requestedView: string | null | undefined,
-    buildReady: boolean,
+    _buildReady: boolean,
 ): UnifiedPdpView {
-    return requestedView === "build" && buildReady ? "build" : "beauty";
+    return requestedView === "build" ? "build" : "beauty";
 }
 
 export function resolveCylinderConfigurationFromQuery(

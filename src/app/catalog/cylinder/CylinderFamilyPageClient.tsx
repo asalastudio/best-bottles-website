@@ -27,6 +27,7 @@ import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import {
     CYLINDER_9ML_BUILDER_OPTIONS,
     buildCylinderBuilderHref,
+    buildCylinderConfigurationPreviewHref,
     buildCylinderReadyMadeHref,
     type CylinderApplicatorSystem,
     type CylinderFamilyPageModel,
@@ -52,6 +53,7 @@ type Props = {
     catalog: CatalogSearchResultShape;
     model: CylinderFamilyPageModel;
     editorial: ProductFamilyPageContent | null;
+    paperDollBuildReady: boolean;
 };
 
 const FINISH_COLORS: Record<string, string> = {
@@ -95,7 +97,7 @@ function finishOptions(system: CylinderApplicatorSystem): readonly string[] {
     return CYLINDER_9ML_BUILDER_OPTIONS.rollonFinishes;
 }
 
-function BuilderPreview({ catalog }: { catalog: CatalogSearchResultShape }) {
+function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultShape; buildReady: boolean }) {
     const [glass, setGlass] = useState("Clear");
     const [applicator, setApplicator] = useState<CylinderApplicatorSystem>("Roll-On");
     const [rollerMaterial, setRollerMaterial] = useState("Metal");
@@ -129,12 +131,15 @@ function BuilderPreview({ catalog }: { catalog: CatalogSearchResultShape }) {
 
     const finishes = finishOptions(applicator);
     const selectedFinish = finishes.includes(finish) ? finish : finishes[0];
-    const builderHref = buildCylinderBuilderHref({
+    const selection = {
         glass,
         applicator,
         rollerMaterial,
         finish: selectedFinish,
-    });
+    };
+    const builderHref = buildReady
+        ? buildCylinderBuilderHref(selection)
+        : buildCylinderConfigurationPreviewHref(selection);
 
     function selectApplicator(value: CylinderApplicatorSystem) {
         setApplicator(value);
@@ -279,8 +284,9 @@ function BuilderPreview({ catalog }: { catalog: CatalogSearchResultShape }) {
                 <p className="mb-3 text-[10px] leading-relaxed text-slate md:mb-2">
                     Starting with <strong className="text-obsidian">{glass}</strong> · {applicator}{applicator === "Roll-On" ? ` · ${rollerMaterial} roller` : ""} · {selectedFinish}
                 </p>
-                <Link href={builderHref} className="flex min-h-12 w-full items-center justify-center gap-2 bg-obsidian px-4 text-[11px] font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-muted-gold hover:text-obsidian md:min-h-10">
-                    Build a 9 mL 17-415 Cylinder <ArrowRight className="h-4 w-4" />
+                {!buildReady && <p className="mb-2 text-[10px] leading-4 text-slate">Layered component preview is in preparation. Product selections, pricing, and compatibility are available now.</p>}
+                <Link href={builderHref} className="flex min-h-12 w-full items-center justify-center gap-2 bg-obsidian px-4 text-center text-[11px] font-bold uppercase tracking-[0.16em] text-white transition-colors hover:bg-muted-gold hover:text-obsidian md:min-h-10">
+                    {buildReady ? "Build a 9 mL 17-415 Cylinder" : "Preview this 9 mL 17-415 configuration"} <ArrowRight className="h-4 w-4" />
                 </Link>
                 <a href="#ready-made" className="mt-2 flex min-h-12 w-full items-center justify-center border border-obsidian px-4 text-[11px] font-bold uppercase tracking-[0.16em] text-obsidian md:hidden">
                     Browse ready-made options
@@ -368,7 +374,7 @@ function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyPageModel["car
     );
 }
 
-export default function CylinderFamilyPageClient({ catalog, model, editorial }: Props) {
+export default function CylinderFamilyPageClient({ catalog, model, editorial, paperDollBuildReady }: Props) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const [mobileRefineOpen, setMobileRefineOpen] = useState(false);
@@ -471,7 +477,7 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial }: 
                         <p className="mt-4 hidden items-center gap-2 text-[11px] text-slate lg:flex"><Check className="h-4 w-4 text-muted-gold" /> Every builder combination is 9 mL · 17-415 compatible.</p>
 
                         <div className="mt-7 hidden flex-col gap-3 sm:flex-row lg:mt-8 lg:flex">
-                            <Link href={buildCylinderBuilderHref()} className="flex min-h-12 items-center justify-center bg-obsidian px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-white hover:bg-muted-gold hover:text-obsidian">Build a 9 mL Cylinder</Link>
+                            <Link href={paperDollBuildReady ? buildCylinderBuilderHref() : buildCylinderConfigurationPreviewHref()} className="flex min-h-12 items-center justify-center bg-obsidian px-5 text-center text-[10px] font-bold uppercase tracking-[0.16em] text-white hover:bg-muted-gold hover:text-obsidian">{paperDollBuildReady ? "Build a 9 mL Cylinder" : "Preview 9 mL Cylinder options"}</Link>
                             <a href="#ready-made" className="flex min-h-12 items-center justify-center border border-obsidian px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-obsidian hover:bg-obsidian hover:text-white">Browse ready-made</a>
                         </div>
                     </div>
@@ -485,7 +491,7 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial }: 
                     </div>
 
                     <div className="p-4 sm:p-6 lg:col-span-4 lg:p-0">
-                        <BuilderPreview catalog={catalog} />
+                        <BuilderPreview catalog={catalog} buildReady={paperDollBuildReady} />
                     </div>
                 </div>
             </section>

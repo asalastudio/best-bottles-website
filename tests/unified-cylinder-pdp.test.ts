@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
     getCylinderConfiguratorOptions,
@@ -81,10 +82,20 @@ const configurations = [
 ] as const;
 
 describe("unified Cylinder PDP state", () => {
-    it("defaults to Beauty and opens Build only when the release gate is ready", () => {
-        expect(resolveUnifiedPdpView("build", false)).toBe("beauty");
+    it("preserves an explicitly requested Build view while the release is still preparing", () => {
+        expect(resolveUnifiedPdpView("build", false)).toBe("build");
         expect(resolveUnifiedPdpView(null, true)).toBe("beauty");
         expect(resolveUnifiedPdpView("build", true)).toBe("build");
+    });
+
+    it("keeps Beauty and Build visible as peer views while the layered release is preparing", () => {
+        const source = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
+
+        expect(source).toContain("Beauty View");
+        expect(source).toContain("Build This Bottle · 145 configurations");
+        expect(source).toContain("aria-disabled={!buildReady}");
+        expect(source).toContain("Layered preview in preparation");
+        expect(source).not.toContain('next.set("view", "beauty");\n            router.replace');
     });
 
     it("selects a valid configuration SKU and flags an invalid SKU for URL cleanup", () => {

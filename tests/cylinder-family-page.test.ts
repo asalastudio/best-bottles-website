@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
     buildCylinderBuilderHref,
+    buildCylinderConfigurationPreviewHref,
     buildCylinderFamilyPageModel,
     buildCylinderReadyMadeHref,
     classifyCylinderApplicatorSystem,
@@ -133,6 +134,17 @@ describe("Cylinder family page model", () => {
             finish: "Shiny Gold",
         })).toBe(
             "/products/cylinder-9ml-17-415?view=build&glass=Amber&applicator=Roll-On&roller=Metal&finish=Shiny+Gold",
+        );
+    });
+
+    it("builds an honest Beauty preview URL before the layered release is ready", () => {
+        expect(buildCylinderConfigurationPreviewHref({
+            glass: "Amber",
+            applicator: "Roll-On",
+            rollerMaterial: "Metal",
+            finish: "Shiny Gold",
+        })).toBe(
+            "/products/cylinder-9ml-17-415?view=beauty&glass=Amber&applicator=Roll-On&roller=Metal&finish=Shiny+Gold",
         );
     });
 

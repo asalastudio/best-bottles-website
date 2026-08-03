@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import { searchCatalogServer } from "@/lib/catalogServer";
 import { buildCylinderFamilyPageModel } from "@/lib/products/cylinder-family-page";
-import { getProductFamilyPageContent } from "@/sanity/lib/queries";
+import { getProductFamilyPageContent, getStorefrontPaperDollFamily } from "@/sanity/lib/queries";
 import { SITE_URL } from "@/lib/seo";
 import CylinderFamilyPageClient from "./CylinderFamilyPageClient";
 
@@ -15,8 +15,17 @@ export const metadata: Metadata = {
     alternates: { canonical: `${SITE_URL}/catalog/cylinder` },
 };
 
+async function hasReleasedCylinderPaperDoll(): Promise<boolean> {
+    try {
+        return Boolean(await getStorefrontPaperDollFamily("CYL-9ML"));
+    } catch (error) {
+        console.error("CYL-9ML Paper Doll remains behind the storefront release gate", error);
+        return false;
+    }
+}
+
 export default async function CylinderFamilyPage() {
-    const [catalog, editorial] = await Promise.all([
+    const [catalog, editorial, assetsReady] = await Promise.all([
         searchCatalogServer({
             filters: { families: ["Cylinder"] },
             sort: "capacity-asc",
@@ -25,6 +34,7 @@ export default async function CylinderFamilyPage() {
             cursor: null,
         }),
         getProductFamilyPageContent("Cylinder"),
+        hasReleasedCylinderPaperDoll(),
     ]);
     const model = buildCylinderFamilyPageModel(catalog.items, catalog.variantPreviewRows);
 
@@ -34,6 +44,7 @@ export default async function CylinderFamilyPage() {
                 catalog={catalog}
                 model={model}
                 editorial={editorial}
+                paperDollBuildReady={assetsReady && model.featuredCohort.variantCount === 145}
             />
             <Footer />
         </>

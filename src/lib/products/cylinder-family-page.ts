@@ -117,13 +117,15 @@ export function buildCylinderFamilyPageModel(
     };
 }
 
-export function buildCylinderBuilderHref(selection?: {
+type CylinderFamilySelection = {
     glass?: string;
     applicator?: CylinderApplicatorSystem;
     rollerMaterial?: string;
     finish?: string;
-}): string {
-    const params = new URLSearchParams({ view: "build" });
+};
+
+function buildCylinderConfigurationHref(view: "beauty" | "build", selection?: CylinderFamilySelection): string {
+    const params = new URLSearchParams({ view });
     if (selection?.glass) params.set("glass", selection.glass);
     if (selection?.applicator) params.set("applicator", selection.applicator);
     if (selection?.rollerMaterial && selection.applicator === "Roll-On") {
@@ -131,6 +133,14 @@ export function buildCylinderBuilderHref(selection?: {
     }
     if (selection?.finish) params.set("finish", selection.finish);
     return `/products/${CYLINDER_9ML_17415_COHORT.slug}?${params.toString()}`;
+}
+
+export function buildCylinderBuilderHref(selection?: CylinderFamilySelection): string {
+    return buildCylinderConfigurationHref("build", selection);
+}
+
+export function buildCylinderConfigurationPreviewHref(selection?: CylinderFamilySelection): string {
+    return buildCylinderConfigurationHref("beauty", selection);
 }
 
 export function buildCylinderReadyMadeHref(

@@ -90,14 +90,6 @@ export default function UnifiedBottlePdp({
     }, [queryResolution?.invalidConfiguration, router, searchParams]);
 
     useEffect(() => {
-        if (searchParams.get("view") === "build" && !buildReady) {
-            const next = new URLSearchParams(searchParams.toString());
-            next.set("view", "beauty");
-            router.replace(`?${next.toString()}`, { scroll: false });
-        }
-    }, [buildReady, router, searchParams]);
-
-    useEffect(() => {
         const handleGraceSelection = (event: Event) => {
             const request = (event as CustomEvent<GracePaperDollSelectionRequest>).detail;
             if (!request) return;
@@ -110,7 +102,7 @@ export default function UnifiedBottlePdp({
             setSelectedSku(result.configuration.graceSku);
             setCanvasFailed(false);
             const next = new URLSearchParams(searchParams.toString());
-            next.set("view", request.view === "beauty" || !buildReady ? "beauty" : "build");
+            next.set("view", request.view === "beauty" ? "beauty" : "build");
             next.set("configuration", result.configuration.graceSku);
             next.delete("glass");
             next.delete("applicator");
@@ -130,7 +122,7 @@ export default function UnifiedBottlePdp({
 
         window.addEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
         return () => window.removeEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
-    }, [buildReady, configurations, router, searchParams, selected]);
+    }, [configurations, router, searchParams, selected]);
 
     const images = useMemo(() => {
         const rows: GalleryImage[] = [];
@@ -222,12 +214,32 @@ export default function UnifiedBottlePdp({
                     <div className="min-w-0">
                         <div className="mb-3 flex border-b border-champagne" role="tablist" aria-label="Product media view">
                             <button type="button" role="tab" aria-selected={view === "beauty"} onClick={() => updateView("beauty")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "beauty" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Beauty View</button>
-                            {buildReady && (
-                                <button type="button" role="tab" aria-selected={view === "build"} onClick={() => updateView("build")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Build This Bottle · 145 configurations</button>
-                            )}
+                            <button
+                                type="button"
+                                role="tab"
+                                aria-selected={view === "build"}
+                                aria-disabled={!buildReady}
+                                disabled={!buildReady}
+                                onClick={() => updateView("build")}
+                                className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"} disabled:cursor-not-allowed disabled:opacity-65`}
+                            >
+                                <span className="block">Build This Bottle · 145 configurations</span>
+                                {!buildReady && <span className="mt-0.5 block text-[9px] font-medium text-slate">Layered preview in preparation</span>}
+                            </button>
                         </div>
-                        {view === "build" && paperDollFamily && !canvasFailed ? (
-                            <PaperDollCanvas family={paperDollFamily} selected={selected} onFailure={() => { setCanvasFailed(true); updateView("beauty"); }} />
+                        {view === "build" && buildReady && paperDollFamily && !canvasFailed ? (
+                            <PaperDollCanvas family={paperDollFamily} selected={selected} onFailure={() => setCanvasFailed(true)} />
+                        ) : view === "build" ? (
+                            <div className="flex aspect-[10/11] min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
+                                <Package className="h-10 w-10 text-muted-gold" />
+                                <h2 className="mt-4 font-serif text-2xl text-obsidian">
+                                    {canvasFailed ? "Layered preview temporarily unavailable" : "Layered preview in preparation"}
+                                </h2>
+                                <p className="mt-2 max-w-md text-sm leading-6 text-slate">
+                                    You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
+                                </p>
+                                <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">Return to Beauty View</button>
+                            </div>
                         ) : (
                             <ProductImageGallery images={images} primaryAlt={productName} aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
                         )}
