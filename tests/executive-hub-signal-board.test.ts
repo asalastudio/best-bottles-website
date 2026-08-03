@@ -4,6 +4,8 @@ import { describe, expect, it } from "vitest";
 import { ExecutiveQuestionCard } from "../src/components/executive/ExecutiveMetric";
 import { ExecutiveDecisionQueue } from "../src/components/executive/ExecutiveDecisionQueue";
 import { ExecutiveOperatingPanels } from "../src/components/executive/ExecutiveOperatingPanels";
+import { ExecutiveDashboard } from "../src/components/executive/ExecutiveDashboard";
+import { ExecutiveDetailContent } from "../src/components/executive/ExecutiveDetailSheet";
 import { EXECUTIVE_HUB_FIXTURE } from "../src/lib/executive/fixture";
 
 describe("Executive Signal Board components", () => {
@@ -42,5 +44,40 @@ describe("Executive Signal Board components", () => {
         expect(html).toContain("Customer account health");
         expect(html).toContain("Operations and production");
         expect(html).not.toContain("Website conversion");
+    });
+
+    it("renders the approved questions, honest data mode, ranges, and mobile navigation", () => {
+        const html = renderToStaticMarkup(createElement(ExecutiveDashboard, {
+            snapshot: EXECUTIVE_HUB_FIXTURE,
+            previewMode: true,
+        }));
+
+        expect(html).toContain("Executive signal board");
+        expect(html).toContain("Illustrative concept — not live business data");
+        expect(html).toContain("Are we growing profitably?");
+        expect(html).toContain("Is the pipeline healthy?");
+        expect(html).toContain("What needs me today?");
+        expect(html).toContain("Open Executive Hub navigation");
+        expect(html).toContain("aria-pressed=\"true\"");
+        expect(html).toContain("MTD");
+        expect(html).toContain("YTD");
+    });
+
+    it("renders accessible metric and decision detail contracts", () => {
+        const metricHtml = renderToStaticMarkup(createElement(ExecutiveDetailContent, {
+            selection: { kind: "metric", metric: EXECUTIVE_HUB_FIXTURE.metrics[0] },
+            snapshot: EXECUTIVE_HUB_FIXTURE,
+        }));
+        const decisionHtml = renderToStaticMarkup(createElement(ExecutiveDetailContent, {
+            selection: { kind: "decision", decision: EXECUTIVE_HUB_FIXTURE.decisions[0] },
+            snapshot: EXECUTIVE_HUB_FIXTURE,
+        }));
+
+        expect(metricHtml).toContain("Source");
+        expect(metricHtml).toContain("Coverage");
+        expect(metricHtml).toContain("Illustrative concept");
+        expect(decisionHtml).toContain("Recommendation");
+        expect(decisionHtml).toContain("Evidence");
+        expect(decisionHtml).toContain("$92k stockout exposure");
     });
 });
