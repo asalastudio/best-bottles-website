@@ -4,6 +4,7 @@ import {
     validateExecutiveDashboardSnapshot,
     type ExecutiveDashboardSnapshot,
 } from "../src/lib/executive/contracts";
+import { EXECUTIVE_HUB_FIXTURE, getExecutiveMetric } from "../src/lib/executive/fixture";
 
 const validSnapshot: ExecutiveDashboardSnapshot = {
     mode: "illustrative",
@@ -62,5 +63,30 @@ describe("Executive Hub contract", () => {
     it("uses honest source-state labels", () => {
         expect(metricStatusLabel("source-backed")).toBe("Source-backed");
         expect(metricStatusLabel("not-connected")).toBe("Not connected");
+    });
+
+    it("marks every preview value as illustrative and directional", () => {
+        expect(EXECUTIVE_HUB_FIXTURE.mode).toBe("illustrative");
+        expect(EXECUTIVE_HUB_FIXTURE.metrics.every((metric) => metric.status === "directional")).toBe(true);
+        expect(EXECUTIVE_HUB_FIXTURE.metrics.every((metric) => metric.coverage === "Illustrative design fixture")).toBe(true);
+    });
+
+    it("leads with B2B packaging metrics", () => {
+        expect(getExecutiveMetric(EXECUTIVE_HUB_FIXTURE, "net-revenue").label).toBe("Net revenue MTD");
+        expect(getExecutiveMetric(EXECUTIVE_HUB_FIXTURE, "qualified-pipeline").label).toBe("Qualified pipeline");
+        expect(EXECUTIVE_HUB_FIXTURE.headlineMetricIds).toEqual([
+            "cash-on-hand",
+            "orders-received",
+            "inventory-value",
+            "stockout-risks",
+            "on-time-shipments",
+            "overdue-ar",
+        ]);
+    });
+
+    it("throws when a consumer requests an unknown metric", () => {
+        expect(() => getExecutiveMetric(EXECUTIVE_HUB_FIXTURE, "missing")).toThrow(
+            "Unknown Executive Hub metric: missing",
+        );
     });
 });
