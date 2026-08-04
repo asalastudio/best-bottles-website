@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -26,34 +26,42 @@ import {
 } from "@/components/icons";
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import {
+    APPLICATOR_BUCKETS,
+    EMPTY_FILTERS,
+    filtersToParams,
+    paramsToFilters,
+    type CatalogFilters,
+    type SortValue,
+} from "@/lib/catalogFilters";
+import {
+    buildAppliedFilterChips,
+    formatCatalogCapacityLabel,
+    removeCatalogFilterChip,
+    toggleCatalogFacetValue,
+    type CatalogArrayFacet,
+} from "@/lib/catalogRefineModel";
+import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
+import { auditCatalogResult } from "@/lib/catalogResultIntegrity";
+import { applyCatalogSurface, CYLINDER_CATALOG_SURFACE } from "@/lib/catalogSurface";
+import { analytics } from "@/lib/analytics";
+import {
     CYLINDER_9ML_BUILDER_OPTIONS,
+    buildCylinderFamilyCards,
     buildCylinderBuilderHref,
     buildCylinderConfigurationPreviewHref,
     buildCylinderReadyMadeHref,
+    summarizeCylinderRefineResults,
     type CylinderApplicatorSystem,
-    type CylinderFamilyPageModel,
+    type CylinderFamilyCardModel,
 } from "@/lib/products/cylinder-family-page";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
-import {
-    cylinderRefineChips,
-    emptyCylinderFamilyRefine,
-    filterCylinderFamilyCards,
-    parseCylinderFamilyRefine,
-    removeCylinderRefineChip,
-    sanitizeCylinderFamilyRefine,
-    serializeCylinderFamilyRefine,
-    summarizeCylinderRefineResults,
-    type CylinderFamilyRefineOptions,
-    type CylinderFamilyRefineState,
-    type CylinderRefineDimension,
-} from "@/lib/products/cylinder-family-refine";
 import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
 import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 import type { ProductFamilyPageContent } from "@/sanity/lib/queries";
 
 type Props = {
-    catalog: CatalogSearchResultShape;
-    model: CylinderFamilyPageModel;
+    baseCatalog: CatalogSearchResultShape;
+    initialReadyMadeCatalog: CatalogSearchResultShape;
     editorial: ProductFamilyPageContent | null;
     paperDollBuildReady: boolean;
 };
@@ -318,14 +326,25 @@ function FilterCheckbox({ label, checked, onChange, count }: { label: string; ch
     );
 }
 
+type CylinderRefineOption = {
+    value: string;
+    label: string;
+    count: number;
+};
+
+type CylinderRefineOptions = Record<
+    "capacities" | "colors" | "applicators" | "neckThreadSizes",
+    CylinderRefineOption[]
+>;
+
 function CylinderRefineFields({
     state,
     options,
     onToggle,
 }: {
-    state: CylinderFamilyRefineState;
-    options: CylinderFamilyRefineOptions;
-    onToggle: (dimension: CylinderRefineDimension, value: string) => void;
+    state: CatalogFilters;
+    options: CylinderRefineOptions;
+    onToggle: (dimension: CatalogArrayFacet, value: string) => void;
 }) {
     const groups = [
         { dimension: "capacities" as const, label: "Capacity", values: options.capacities, defaultOpen: true },
@@ -345,12 +364,13 @@ function CylinderRefineFields({
                 >
                     <fieldset>
                         <legend className="sr-only">{group.label}</legend>
-                        {group.values.map((label) => (
+                        {group.values.map((option) => (
                             <FilterCheckbox
-                                key={label}
-                                label={label}
-                                checked={(state[group.dimension] as string[]).includes(label)}
-                                onChange={() => onToggle(group.dimension, label)}
+                                key={option.value}
+                                label={option.label}
+                                count={option.count}
+                                checked={(state[group.dimension] as string[]).includes(option.value)}
+                                onChange={() => onToggle(group.dimension, option.value)}
                             />
                         ))}
                     </fieldset>
@@ -360,7 +380,7 @@ function CylinderRefineFields({
     );
 }
 
-function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyPageModel["cards"][number]; catalog: CatalogSearchResultShape }) {
+function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyCardModel; catalog: CatalogSearchResultShape }) {
     const row = catalog.variantPreviewRows.find((candidate) => candidate.groupId === group._id);
     const representativeVariant = row?.variants[0] ?? null;
     const productTitle = getCustomerFacingProductName({ group, variant: representativeVariant, fallbackName: group.displayName }).displayName;
@@ -393,63 +413,161 @@ function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyPageModel["car
     );
 }
 
-export default function CylinderFamilyPageClient({ catalog, model, editorial, paperDollBuildReady }: Props) {
+export default function CylinderFamilyPageClient({
+    baseCatalog,
+    initialReadyMadeCatalog,
+    editorial,
+    paperDollBuildReady,
+}: Props) {
     const router = useRouter();
     const searchParams = useSearchParams();
+    const searchParamsString = searchParams.toString();
     const [mobileRefineOpen, setMobileRefineOpen] = useState(false);
-
-    const filterOptions = useMemo<CylinderFamilyRefineOptions>(() => ({
-        capacities: [...new Set(model.cards.map((card) => card.capacity).filter((value): value is string => Boolean(value)))],
-        colors: [...new Set(model.cards.map((card) => card.color).filter((value): value is string => Boolean(value)))],
-        applicators: [...new Set(model.cards.flatMap((card) => card.applicatorSystems))],
-        neckThreadSizes: [...new Set(model.cards.map((card) => card.neckThreadSize).filter((value): value is string => Boolean(value)))],
-    }), [model.cards]);
-
-    const parsedRefine = useMemo(
-        () => sanitizeCylinderFamilyRefine(
-            parseCylinderFamilyRefine(new URLSearchParams(searchParams.toString())),
-            filterOptions,
-        ),
-        [filterOptions, searchParams],
+    const parsedUrlState = useMemo(
+        () => paramsToFilters(new URLSearchParams(searchParamsString)),
+        [searchParamsString],
     );
-    const refine = parsedRefine;
-    const [mobileDraft, setMobileDraft] = useState<CylinderFamilyRefineState>(parsedRefine);
+    const refine = useMemo(
+        () => applyCatalogSurface(parsedUrlState.filters, CYLINDER_CATALOG_SURFACE),
+        [parsedUrlState.filters],
+    );
+    const sortBy = useMemo<SortValue>(() => (
+        new URLSearchParams(searchParamsString).has("sort")
+            ? parsedUrlState.sort
+            : CYLINDER_CATALOG_SURFACE.defaultSort
+    ), [parsedUrlState.sort, searchParamsString]);
+    const [activeCatalog, setActiveCatalog] = useState(initialReadyMadeCatalog);
+    const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
+    const [queryError, setQueryError] = useState<string | null>(null);
+    const [mobileDraft, setMobileDraft] = useState<CatalogFilters>(refine);
+    const [mobileDraftCount, setMobileDraftCount] = useState(initialReadyMadeCatalog.totalCount);
 
-    const replaceRefineUrl = useCallback((next: CylinderFamilyRefineState) => {
-        const query = serializeCylinderFamilyRefine(next).toString();
-        router.replace(`/catalog/cylinder?${query}#ready-made`, { scroll: false });
-    }, [router]);
+    useEffect(() => {
+        setActiveCatalog(initialReadyMadeCatalog);
+    }, [initialReadyMadeCatalog]);
 
-    const commitRefine = useCallback((next: CylinderFamilyRefineState) => {
-        const sanitized = sanitizeCylinderFamilyRefine(next, filterOptions);
-        setMobileDraft(sanitized);
-        replaceRefineUrl(sanitized);
-    }, [filterOptions, replaceRefineUrl]);
+    useEffect(() => {
+        const controller = new AbortController();
+        const loadingTimer = window.setTimeout(() => setIsFetchingCatalog(true), 0);
+        setQueryError(null);
+        fetchCatalogSearch(buildCatalogSearchArgs({
+            surface: CYLINDER_CATALOG_SURFACE,
+            filters: refine,
+            sort: sortBy,
+            view: "visual",
+            limit: 240,
+        }), controller.signal)
+            .then((result) => {
+                const integrity = auditCatalogResult({
+                    filters: refine,
+                    expectedCount: result.totalCount,
+                    items: result.items,
+                });
+                if (integrity.status !== "verified") {
+                    analytics.catalogRefineIncident({
+                        surface: "cylinder",
+                        status: integrity.status,
+                        expectedCount: integrity.expectedCount,
+                        renderedCount: integrity.renderedCount,
+                        capacityCount: refine.capacities.length,
+                        applicatorCount: refine.applicators.length,
+                        threadCount: refine.neckThreadSizes.length,
+                    });
+                }
+                setActiveCatalog(result);
+            })
+            .catch((error) => {
+                if (error instanceof DOMException && error.name === "AbortError") return;
+                console.error("[Cylinder Catalog] Search failed:", error);
+                setQueryError("Unable to update these results. Your selected filters are still applied.");
+                analytics.catalogRefineIncident({
+                    surface: "cylinder",
+                    status: "query_failure",
+                    capacityCount: refine.capacities.length,
+                    applicatorCount: refine.applicators.length,
+                    threadCount: refine.neckThreadSizes.length,
+                });
+            })
+            .finally(() => {
+                window.clearTimeout(loadingTimer);
+                if (!controller.signal.aborted) setIsFetchingCatalog(false);
+            });
+        return () => {
+            controller.abort();
+            window.clearTimeout(loadingTimer);
+        };
+    }, [refine, sortBy]);
+
+    useEffect(() => {
+        if (!mobileRefineOpen) return;
+        const controller = new AbortController();
+        const timer = window.setTimeout(() => {
+            fetchCatalogSearch(buildCatalogSearchArgs({
+                surface: CYLINDER_CATALOG_SURFACE,
+                filters: mobileDraft,
+                sort: sortBy,
+                view: "visual",
+                limit: 1,
+            }), controller.signal)
+                .then((result) => setMobileDraftCount(result.totalCount))
+                .catch((error) => {
+                    if (error instanceof DOMException && error.name === "AbortError") return;
+                    console.error("[Cylinder Catalog] Draft count failed:", error);
+                });
+        }, 150);
+        return () => {
+            controller.abort();
+            window.clearTimeout(timer);
+        };
+    }, [mobileDraft, mobileRefineOpen, sortBy]);
+
+    const filterOptions = useMemo<CylinderRefineOptions>(() => ({
+        capacities: Object.values(activeCatalog.facets.capacities)
+            .sort((a, b) => (a.ml ?? Infinity) - (b.ml ?? Infinity))
+            .map((option) => ({
+                value: option.label,
+                label: formatCatalogCapacityLabel(option.label),
+                count: option.count,
+            })),
+        colors: Object.entries(activeCatalog.facets.colors)
+            .sort(([a], [b]) => a.localeCompare(b))
+            .map(([value, count]) => ({ value, label: value, count })),
+        applicators: APPLICATOR_BUCKETS
+            .filter((bucket) => (activeCatalog.facets.applicators[bucket.value] ?? 0) > 0 || refine.applicators.includes(bucket.value))
+            .map((bucket) => ({
+                value: bucket.value,
+                label: bucket.label,
+                count: activeCatalog.facets.applicators[bucket.value] ?? 0,
+            })),
+        neckThreadSizes: Object.entries(activeCatalog.facets.neckThreadSizes)
+            .filter(([value]) => /^\d{1,3}[-/]\d{3,4}$|^\d{1,3}mm$/i.test(value))
+            .sort(([a], [b]) => Number.parseFloat(a) - Number.parseFloat(b))
+            .map(([value, count]) => ({ value, label: value, count })),
+    }), [activeCatalog.facets, refine.applicators]);
+
+    const commitRefine = useCallback((next: CatalogFilters, nextSort: SortValue = sortBy) => {
+        const scoped = applyCatalogSurface(next, CYLINDER_CATALOG_SURFACE);
+        setMobileDraft(scoped);
+        const params = filtersToParams(scoped, nextSort, "visual");
+        if (nextSort === CYLINDER_CATALOG_SURFACE.defaultSort) params.delete("sort");
+        router.replace(`/catalog/cylinder?${params.toString()}#ready-made`, { scroll: false });
+    }, [router, sortBy]);
 
     const toggleDimension = useCallback((
-        state: CylinderFamilyRefineState,
-        dimension: CylinderRefineDimension,
+        state: CatalogFilters,
+        dimension: CatalogArrayFacet,
         value: string,
-    ): CylinderFamilyRefineState => {
-        const current = state[dimension] as string[];
-        return {
-            ...state,
-            [dimension]: current.includes(value)
-                ? current.filter((item) => item !== value)
-                : [...current, value],
-        };
-    }, []);
+    ): CatalogFilters => toggleCatalogFacetValue(state, dimension, value), []);
 
     const visibleCards = useMemo(
-        () => filterCylinderFamilyCards(model.cards, refine),
-        [model.cards, refine],
-    );
-    const mobileDraftCards = useMemo(
-        () => filterCylinderFamilyCards(model.cards, mobileDraft),
-        [model.cards, mobileDraft],
+        () => buildCylinderFamilyCards(activeCatalog.items, activeCatalog.variantPreviewRows),
+        [activeCatalog.items, activeCatalog.variantPreviewRows],
     );
     const resultSummary = useMemo(() => summarizeCylinderRefineResults(visibleCards), [visibleCards]);
-    const chips = useMemo(() => cylinderRefineChips(refine), [refine]);
+    const chips = useMemo(
+        () => buildAppliedFilterChips(refine).filter((chip) => chip.facet !== "families"),
+        [refine],
+    );
 
     const activeFilterCount = chips.length;
     const heroImageUrl = editorial?.familyHeroImageUrl || "/assets/Cylinder-BB.png";
@@ -457,7 +575,7 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
     const story = editorial?.familyStory || "One clean bottle profile, built around how your product is dispensed. Choose the size first, then compare glass, fitment, and finish without losing compatibility context.";
 
     function clearFilters() {
-        commitRefine(emptyCylinderFamilyRefine());
+        commitRefine(applyCatalogSurface(EMPTY_FILTERS, CYLINDER_CATALOG_SURFACE));
     }
 
     return (
@@ -504,7 +622,7 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                     </div>
 
                     <div className="p-4 sm:p-6 lg:col-span-4 lg:p-0">
-                        <BuilderPreview catalog={catalog} buildReady={paperDollBuildReady} />
+                        <BuilderPreview catalog={baseCatalog} buildReady={paperDollBuildReady} />
                     </div>
                 </div>
             </section>
@@ -521,11 +639,11 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                         </div>
                         <div className="flex items-center gap-3">
                             <span className="text-[10px] font-semibold uppercase tracking-wider text-slate">{resultSummary.groupCount} groups</span>
-                            <select value={refine.sort} onChange={(event) => commitRefine({ ...refine, sort: event.target.value as CylinderFamilyRefineState["sort"] })} aria-label="Sort Cylinder products" className="min-h-11 border border-champagne bg-white px-3 text-xs text-obsidian outline-none focus:border-muted-gold">
-                                <option value="capacity">Sort: Capacity</option>
-                                <option value="price">Sort: Price</option>
-                                <option value="name">Sort: Name</option>
-                                <option value="variants">Sort: Most finishes</option>
+                            <select value={sortBy} onChange={(event) => commitRefine(refine, event.target.value as SortValue)} aria-label="Sort Cylinder products" className="min-h-11 border border-champagne bg-white px-3 text-xs text-obsidian outline-none focus:border-muted-gold">
+                                <option value="capacity-asc">Sort: Capacity</option>
+                                <option value="price-asc">Sort: Price</option>
+                                <option value="name-asc">Sort: Name</option>
+                                <option value="variants-desc">Sort: Most finishes</option>
                             </select>
                         </div>
                     </div>
@@ -535,6 +653,7 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                             type="button"
                             onClick={() => {
                                 setMobileDraft(refine);
+                                setMobileDraftCount(activeCatalog.totalCount);
                                 setMobileRefineOpen(true);
                             }}
                             className="inline-flex min-h-11 items-center gap-2 border border-obsidian bg-white px-4 text-xs font-semibold text-obsidian"
@@ -548,9 +667,9 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                             <div className="flex w-max gap-2">
                                 {chips.map((chip) => (
                                     <button
-                                        key={`${chip.dimension}-${chip.value}`}
+                                        key={`${chip.facet}-${chip.value}`}
                                         type="button"
-                                        onClick={() => commitRefine(removeCylinderRefineChip(refine, chip))}
+                                        onClick={() => commitRefine(removeCatalogFilterChip(refine, chip))}
                                         className="inline-flex min-h-11 items-center gap-1 border border-champagne bg-bone px-3 text-[10px] font-semibold text-obsidian"
                                         aria-label={`Remove ${chip.label}`}
                                     >
@@ -565,9 +684,9 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                         <div className="mb-5 hidden flex-wrap items-center gap-2 lg:flex" aria-label="Applied Cylinder filters">
                             {chips.map((chip) => (
                                 <button
-                                    key={`${chip.dimension}-${chip.value}`}
+                                    key={`${chip.facet}-${chip.value}`}
                                     type="button"
-                                    onClick={() => commitRefine(removeCylinderRefineChip(refine, chip))}
+                                    onClick={() => commitRefine(removeCatalogFilterChip(refine, chip))}
                                     className="inline-flex min-h-10 items-center gap-1 border border-champagne bg-bone px-3 text-[10px] font-semibold text-obsidian hover:border-obsidian"
                                     aria-label={`Remove ${chip.label}`}
                                 >
@@ -593,10 +712,16 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                             </div>
                         </aside>
 
-                        <div className="min-w-0 flex-1">
+                        <div className="min-w-0 flex-1" aria-busy={isFetchingCatalog}>
+                            {queryError && (
+                                <div role="alert" className="mb-4 flex flex-col gap-3 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900 sm:flex-row sm:items-center sm:justify-between">
+                                    <span>{queryError}</span>
+                                    <button type="button" onClick={() => commitRefine(refine)} className="min-h-11 border border-red-300 bg-white px-4 text-[10px] font-bold uppercase tracking-wider">Retry</button>
+                                </div>
+                            )}
                             {visibleCards.length > 0 ? (
-                                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
-                                    {visibleCards.map((group) => <ReadyMadeCard key={group._id} group={group} catalog={catalog} />)}
+                                <div className={`grid grid-cols-1 gap-4 transition-opacity sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 ${isFetchingCatalog ? "pointer-events-none opacity-60" : "opacity-100"}`}>
+                                    {visibleCards.map((group) => <ReadyMadeCard key={group._id} group={group} catalog={activeCatalog} />)}
                                 </div>
                             ) : (
                                 <div className="flex min-h-80 flex-col items-center justify-center border border-champagne bg-bone p-8 text-center">
@@ -622,7 +747,10 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                 open={mobileRefineOpen}
                 onOpenChange={(open) => {
                     setMobileRefineOpen(open);
-                    if (open) setMobileDraft(refine);
+                    if (open) {
+                        setMobileDraft(refine);
+                        setMobileDraftCount(activeCatalog.totalCount);
+                    }
                 }}
             >
                 <SheetContent
@@ -649,12 +777,12 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                     <div className="border-t border-champagne bg-white px-5 pb-[calc(1rem+env(safe-area-inset-bottom))] pt-4">
                         <div className="mb-3 flex items-center justify-between">
                             <span className="text-xs text-slate">
-                                {mobileDraftCards.length} group{mobileDraftCards.length === 1 ? "" : "s"} match
+                                {mobileDraftCount} group{mobileDraftCount === 1 ? "" : "s"} match
                             </span>
-                            {cylinderRefineChips(mobileDraft).length > 0 && (
+                            {buildAppliedFilterChips(mobileDraft).some((chip) => chip.facet !== "families") && (
                                 <button
                                     type="button"
-                                    onClick={() => setMobileDraft(emptyCylinderFamilyRefine())}
+                                    onClick={() => setMobileDraft(applyCatalogSurface(EMPTY_FILTERS, CYLINDER_CATALOG_SURFACE))}
                                     className="min-h-11 px-2 text-[10px] font-bold uppercase tracking-wider text-muted-gold"
                                 >
                                     Clear all
@@ -669,7 +797,7 @@ export default function CylinderFamilyPageClient({ catalog, model, editorial, pa
                             }}
                             className="flex min-h-12 w-full items-center justify-center bg-obsidian px-5 text-[11px] font-bold uppercase tracking-[0.14em] text-white"
                         >
-                            Show {mobileDraftCards.length} Cylinder group{mobileDraftCards.length === 1 ? "" : "s"}
+                            Show {mobileDraftCount} Cylinder group{mobileDraftCount === 1 ? "" : "s"}
                         </button>
                     </div>
                 </SheetContent>

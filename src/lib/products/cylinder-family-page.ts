@@ -64,13 +64,9 @@ export function buildCylinderFamilyPageModel(
     variantRows: readonly CylinderFamilyVariantPreviewRow[],
 ): CylinderFamilyPageModel {
     const cylinderGroups = groups.filter((group) => group.family === "Cylinder" && group.variantCount > 0);
-    const readyMadeGroups = cylinderGroups.filter((group) => !(
-        group.capacityMl === 9 && group.neckThreadSize === "13-415"
-    ));
-    const variantsByGroup = new Map(variantRows.map((row) => [row.groupId, row.variants]));
     const familyData = buildFamilyPageData(
         "Cylinder",
-        readyMadeGroups.map((group) => ({
+        cylinderGroups.map((group) => ({
             id: group._id,
             slug: group.slug,
             family: group.family!,
@@ -98,15 +94,7 @@ export function buildCylinderFamilyPageModel(
         throw new Error("Cylinder family page is missing the exact CYL-9ML 17-415 featured cohort.");
     }
 
-    const cards = readyMadeGroups.map((group): CylinderFamilyCardModel => {
-        const applicators = variantsByGroup.get(group._id)?.map((variant) => variant.applicator) ?? group.applicatorTypes ?? [];
-        const applicatorSystems = [...new Set(
-            applicators
-                .map(classifyCylinderApplicatorSystem)
-                .filter((value): value is CylinderApplicatorSystem => Boolean(value)),
-        )];
-        return { ...group, id: group._id, applicatorSystems };
-    });
+    const cards = buildCylinderFamilyCards(cylinderGroups, variantRows);
 
     return {
         family: "Cylinder",
@@ -114,6 +102,31 @@ export function buildCylinderFamilyPageModel(
         totalReadyMadeGroups: familyData.totalReadyMadeGroups,
         totalVariants: familyData.totalVariants,
         cards,
+    };
+}
+
+export function buildCylinderFamilyCards(
+    groups: readonly CatalogSearchGroup[],
+    variantRows: readonly CylinderFamilyVariantPreviewRow[],
+): CylinderFamilyCardModel[] {
+    const variantsByGroup = new Map(variantRows.map((row) => [row.groupId, row.variants]));
+    return groups
+        .filter((group) => group.family === "Cylinder" && group.variantCount > 0)
+        .map((group): CylinderFamilyCardModel => {
+        const applicators = variantsByGroup.get(group._id)?.map((variant) => variant.applicator) ?? group.applicatorTypes ?? [];
+        const applicatorSystems = [...new Set(
+            applicators
+                .map(classifyCylinderApplicatorSystem)
+                .filter((value): value is CylinderApplicatorSystem => Boolean(value)),
+        )];
+            return { ...group, id: group._id, applicatorSystems };
+        });
+}
+
+export function summarizeCylinderRefineResults(cards: readonly CylinderFamilyCardModel[]) {
+    return {
+        groupCount: cards.length,
+        configurationCount: cards.reduce((total, card) => total + card.variantCount, 0),
     };
 }
 

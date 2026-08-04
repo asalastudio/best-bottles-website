@@ -19,7 +19,7 @@ export type CatalogFilterChip = {
     label: string;
 };
 
-function customerCapacityLabel(value: string): string {
+export function formatCatalogCapacityLabel(value: string): string {
     if (/\boz\b/i.test(value)) return value;
     const match = value.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
     if (!match) return value;
@@ -50,7 +50,7 @@ export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterC
         chips.push({ facet: "colors", value, label: `Glass: ${value}` });
     }
     for (const value of filters.capacities) {
-        chips.push({ facet: "capacities", value, label: `Capacity: ${customerCapacityLabel(value)}` });
+        chips.push({ facet: "capacities", value, label: `Capacity: ${formatCatalogCapacityLabel(value)}` });
     }
     for (const value of filters.neckThreadSizes) {
         chips.push({ facet: "neckThreadSizes", value, label: `Neck: ${value}` });

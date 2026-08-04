@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import Footer from "@/components/Footer";
 import { searchCatalogServer } from "@/lib/catalogServer";
+import { paramsToFilters } from "@/lib/catalogFilters";
+import { buildCatalogSearchArgs } from "@/lib/catalogSearchClient";
+import { CYLINDER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { buildCylinderFamilyPageModel } from "@/lib/products/cylinder-family-page";
 import { getProductFamilyPageContent, getStorefrontPaperDollFamily } from "@/sanity/lib/queries";
 import { SITE_URL } from "@/lib/seo";
@@ -24,25 +27,57 @@ async function hasReleasedCylinderPaperDoll(): Promise<boolean> {
     }
 }
 
-export default async function CylinderFamilyPage() {
-    const [catalog, editorial, assetsReady] = await Promise.all([
-        searchCatalogServer({
-            filters: { families: ["Cylinder"] },
-            sort: "capacity-asc",
-            view: "visual",
-            limit: 240,
-            cursor: null,
-        }),
+function toURLSearchParams(input: Record<string, string | string[] | undefined>): URLSearchParams {
+    const params = new URLSearchParams();
+    for (const [key, value] of Object.entries(input)) {
+        if (Array.isArray(value)) {
+            for (const item of value) params.append(key, item);
+        } else if (value != null) {
+            params.set(key, value);
+        }
+    }
+    return params;
+}
+
+export default async function CylinderFamilyPage({
+    searchParams,
+}: {
+    searchParams: Promise<Record<string, string | string[] | undefined>>;
+}) {
+    const resolvedSearchParams = await searchParams;
+    const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    const parsedState = paramsToFilters(urlSearchParams);
+    const baseArgs = buildCatalogSearchArgs({
+        surface: CYLINDER_CATALOG_SURFACE,
+        filters: {},
+        sort: CYLINDER_CATALOG_SURFACE.defaultSort,
+        view: "visual",
+        limit: 240,
+    });
+    const activeArgs = buildCatalogSearchArgs({
+        surface: CYLINDER_CATALOG_SURFACE,
+        filters: parsedState.filters,
+        sort: urlSearchParams.has("sort") ? parsedState.sort : CYLINDER_CATALOG_SURFACE.defaultSort,
+        view: "visual",
+        limit: 240,
+    });
+    const baseCatalogPromise = searchCatalogServer(baseArgs);
+    const activeCatalogPromise = JSON.stringify(activeArgs) === JSON.stringify(baseArgs)
+        ? baseCatalogPromise
+        : searchCatalogServer(activeArgs);
+    const [baseCatalog, initialReadyMadeCatalog, editorial, assetsReady] = await Promise.all([
+        baseCatalogPromise,
+        activeCatalogPromise,
         getProductFamilyPageContent("Cylinder"),
         hasReleasedCylinderPaperDoll(),
     ]);
-    const model = buildCylinderFamilyPageModel(catalog.items, catalog.variantPreviewRows);
+    const model = buildCylinderFamilyPageModel(baseCatalog.items, baseCatalog.variantPreviewRows);
 
     return (
         <>
             <CylinderFamilyPageClient
-                catalog={catalog}
-                model={model}
+                baseCatalog={baseCatalog}
+                initialReadyMadeCatalog={initialReadyMadeCatalog}
                 editorial={editorial}
                 paperDollBuildReady={assetsReady && model.featuredCohort.variantCount === 145}
             />
