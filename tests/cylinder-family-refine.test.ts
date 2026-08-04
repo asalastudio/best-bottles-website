@@ -65,8 +65,17 @@ describe("Cylinder family authoritative Refine state", () => {
             sort: "price",
         });
         expect(serializeCylinderFamilyRefine(state).toString()).toBe(
-            "families=Cylinder&capacities=9+ml+%280.3+oz%29&colors=Amber&applicators=rollon&threads=17-415&sort=price",
+            "families=Cylinder&capacities=9+ml&colors=Amber&applicators=rollon&threads=17-415&sort=price",
         );
+    });
+
+    it("maps Grace's canonical capacity value onto the customer-facing family label", () => {
+        const state = sanitizeCylinderFamilyRefine(parseCylinderFamilyRefine(new URLSearchParams(
+            "families=Cylinder&capacities=9+ml&applicators=rollon&threads=17-415",
+        )), options);
+
+        expect(state.capacities).toEqual(["9 ml (0.3 oz)"]);
+        expect(serializeCylinderFamilyRefine(state).get("capacities")).toBe("9 ml");
     });
 
     it("never broadens a selected 17-415 thread into the 13-415 platform", () => {

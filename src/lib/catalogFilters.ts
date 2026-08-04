@@ -32,6 +32,44 @@ export const APPLICATOR_NAV = [
 
 export type ApplicatorNavValue = (typeof APPLICATOR_NAV)[number]["value"];
 
+function normalizeApplicatorToken(value: string): string {
+    return value.toLowerCase().replace(/[^a-z0-9]+/g, "");
+}
+
+/**
+ * Accept the customer-facing labels and product-level applicator values that
+ * Grace may return, but serialize only the canonical catalog bucket values.
+ */
+export function normalizeApplicatorBuckets(values: readonly string[]): ApplicatorBucket[] {
+    const resolved: ApplicatorBucket[] = [];
+    const add = (bucket: ApplicatorBucket) => {
+        if (!resolved.includes(bucket)) resolved.push(bucket);
+    };
+
+    for (const rawValue of values) {
+        const token = normalizeApplicatorToken(rawValue.trim());
+        if (!token) continue;
+
+        const nav = APPLICATOR_NAV.find((candidate) =>
+            normalizeApplicatorToken(candidate.value) === token
+            || normalizeApplicatorToken(candidate.label) === token
+        );
+        if (nav) {
+            nav.buckets.forEach(add);
+            continue;
+        }
+
+        const bucket = APPLICATOR_BUCKETS.find((candidate) =>
+            normalizeApplicatorToken(candidate.value) === token
+            || normalizeApplicatorToken(candidate.label) === token
+            || candidate.productValues.some((value) => normalizeApplicatorToken(value) === token)
+        );
+        if (bucket) add(bucket.value);
+    }
+
+    return resolved;
+}
+
 export const CAPACITY_RANGES = [
     { value: "miniature", label: "Miniature", detail: "1-5 ml", min: 1, max: 5 },
     { value: "small", label: "Small", detail: "6-15 ml", min: 6, max: 15 },
@@ -328,9 +366,7 @@ function getNonNegativeNumberParam(sp: URLSearchParams, key: string): number | n
 
 export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters; sort: SortValue; view: ViewMode } {
     const applicatorValues = getMultiParam(sp, "applicators");
-    const validApplicators = applicatorValues.filter((a) =>
-        APPLICATOR_BUCKETS.some((b) => b.value === a)
-    ) as ApplicatorBucket[];
+    const validApplicators = normalizeApplicatorBuckets(applicatorValues);
     const familiesParam = getMultiParam(sp, "families");
     const viewParam = sp.get("view");
     const view: ViewMode = viewParam === "line" ? "line" : "visual";

@@ -1,6 +1,7 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
     filterGroupedComponentsByFitmentRule,
@@ -476,16 +477,6 @@ const APPLICATOR_BUCKETS = [
     { value: "antiquespray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
     { value: "antiquespray-tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
 ] as const;
-const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
-    rollon: ["-rollon"],
-    finemist: ["-spray"],
-    perfumespray: ["-spray"],
-    antiquespray: ["-spray"],
-    "antiquespray-tassel": ["-spray"],
-    dropper: ["-dropper"],
-    lotionpump: ["-lotionpump"],
-    reducer: ["-reducer"],
-};
 const COMPONENT_CATEGORIES = new Set([
     "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
     "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
@@ -619,7 +610,8 @@ export const searchCatalog = query({
             priceMin: args.filters.priceMin ?? null,
             priceMax: args.filters.priceMax ?? null,
         };
-        const allGroups = await ctx.db.query("productGroups").collect();
+        const allGroups = (await ctx.db.query("productGroups").collect())
+            .filter((group) => !isLegacyProductRouteAlias(group.slug));
         const skuPairs = allGroups.map((group) => ({
             groupId: String(group._id),
             websiteSku: group.primaryWebsiteSku ?? null,
@@ -630,9 +622,9 @@ export const searchCatalog = query({
         const matchesApplicatorBucket = (group: typeof allGroups[number], bucket: string) => {
             const bucketDef = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
             if (!bucketDef) return false;
-            if (!(group.applicatorTypes ?? []).some((value) => (bucketDef.productValues as readonly string[]).includes(value))) return false;
-            const allowedSuffixes = SLUG_BUCKET_SUFFIXES[bucket];
-            return !allowedSuffixes || allowedSuffixes.some((suffix) => group.slug.endsWith(suffix));
+            return (group.applicatorTypes ?? []).some((value) =>
+                (bucketDef.productValues as readonly string[]).includes(value)
+            );
         };
 
         const runFilters = (skipKeys = new Set<string>()) => {

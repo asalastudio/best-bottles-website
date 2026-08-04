@@ -48,6 +48,25 @@ function unique<T extends string>(items: readonly T[]): T[] {
     return [...new Set(items)];
 }
 
+function capacityMl(value: string): number | null {
+    const match = value.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
+    if (!match) return null;
+    const parsed = Number(match[1]);
+    return Number.isFinite(parsed) ? parsed : null;
+}
+
+function customerCapacityLabel(value: string, options: readonly string[]): string | null {
+    if (options.includes(value)) return value;
+    const selectedMl = capacityMl(value);
+    if (selectedMl === null) return null;
+    return options.find((option) => capacityMl(option) === selectedMl) ?? null;
+}
+
+function canonicalCapacityParam(value: string): string {
+    const ml = capacityMl(value);
+    return ml === null ? value : `${ml} ml`;
+}
+
 export function emptyCylinderFamilyRefine(): CylinderFamilyRefineState {
     return {
         capacities: [],
@@ -76,7 +95,9 @@ export function sanitizeCylinderFamilyRefine(
     options: CylinderFamilyRefineOptions,
 ): CylinderFamilyRefineState {
     return {
-        capacities: state.capacities.filter((value) => options.capacities.includes(value)),
+        capacities: unique(state.capacities
+            .map((value) => customerCapacityLabel(value, options.capacities))
+            .filter((value): value is string => Boolean(value))),
         colors: state.colors.filter((value) => options.colors.includes(value)),
         applicators: state.applicators.filter((value) => options.applicators.includes(value)),
         neckThreadSizes: state.neckThreadSizes.filter((value) => options.neckThreadSizes.includes(value)),
@@ -87,7 +108,7 @@ export function sanitizeCylinderFamilyRefine(
 export function serializeCylinderFamilyRefine(state: CylinderFamilyRefineState): URLSearchParams {
     const params = new URLSearchParams();
     params.set("families", "Cylinder");
-    if (state.capacities.length) params.set("capacities", state.capacities.join(","));
+    if (state.capacities.length) params.set("capacities", state.capacities.map(canonicalCapacityParam).join(","));
     if (state.colors.length) params.set("colors", state.colors.join(","));
     if (state.applicators.length) {
         params.set("applicators", state.applicators.map((value) => APPLICATOR_TO_PARAM[value]).join(","));

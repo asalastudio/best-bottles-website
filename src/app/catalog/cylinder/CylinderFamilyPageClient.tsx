@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RefineSection from "@/components/catalog/RefineSection";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import {
     Sheet,
@@ -327,26 +328,33 @@ function CylinderRefineFields({
     onToggle: (dimension: CylinderRefineDimension, value: string) => void;
 }) {
     const groups = [
-        { dimension: "capacities" as const, label: "Capacity", values: options.capacities },
-        { dimension: "colors" as const, label: "Glass color", values: options.colors },
-        { dimension: "applicators" as const, label: "Delivery system", values: options.applicators },
-        { dimension: "neckThreadSizes" as const, label: "Neck finish", values: options.neckThreadSizes },
+        { dimension: "capacities" as const, label: "Capacity", values: options.capacities, defaultOpen: true },
+        { dimension: "colors" as const, label: "Glass color", values: options.colors, defaultOpen: false },
+        { dimension: "applicators" as const, label: "Delivery system", values: options.applicators, defaultOpen: false },
+        { dimension: "neckThreadSizes" as const, label: "Neck finish", values: options.neckThreadSizes, defaultOpen: false },
     ];
 
     return (
-        <div className="divide-y divide-champagne">
+        <div>
             {groups.map((group) => (
-                <fieldset key={group.dimension} className="py-4 first:pt-0 last:pb-0">
-                    <legend className="mb-2 text-[10px] font-bold uppercase tracking-wider text-slate">{group.label}</legend>
-                    {group.values.map((label) => (
-                        <FilterCheckbox
-                            key={label}
-                            label={label}
-                            checked={(state[group.dimension] as string[]).includes(label)}
-                            onChange={() => onToggle(group.dimension, label)}
-                        />
-                    ))}
-                </fieldset>
+                <RefineSection
+                    key={group.dimension}
+                    title={group.label}
+                    defaultOpen={group.defaultOpen}
+                    activeCount={state[group.dimension].length}
+                >
+                    <fieldset>
+                        <legend className="sr-only">{group.label}</legend>
+                        {group.values.map((label) => (
+                            <FilterCheckbox
+                                key={label}
+                                label={label}
+                                checked={(state[group.dimension] as string[]).includes(label)}
+                                onChange={() => onToggle(group.dimension, label)}
+                            />
+                        ))}
+                    </fieldset>
+                </RefineSection>
             ))}
         </div>
     );

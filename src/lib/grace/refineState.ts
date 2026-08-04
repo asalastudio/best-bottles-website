@@ -28,6 +28,11 @@ export type GraceBroadenScope =
 
 export type GraceRefinementProposal = Partial<CatalogFilters>;
 
+function exactCapacityFacet(search: string | undefined): string | null {
+    const match = search?.trim().match(/^(\d+(?:\.\d+)?)\s*ml(?:\s*\([^)]*\))?$/i);
+    return match ? `${Number(match[1])} ml` : null;
+}
+
 const ARRAY_FILTERS = [
     "applicators",
     "families",
@@ -42,6 +47,22 @@ export function getGraceRefineState(searchParams: URLSearchParams): GraceRefineS
 
 export function graceRefineStateToParams(state: GraceRefineState): URLSearchParams {
     return filtersToParams(state.filters, state.sort, state.view);
+}
+
+export function graceRefineDestination(state: GraceRefineState): string {
+    const query = graceRefineStateToParams(state).toString();
+    const filters = state.filters;
+    const cylinderFamilySurface =
+        filters.families.length === 1
+        && filters.families[0] === "Cylinder"
+        && !filters.category
+        && !filters.collection
+        && !filters.componentType
+        && !filters.search
+        && filters.priceMin === null
+        && filters.priceMax === null;
+    const base = cylinderFamilySurface ? "/catalog/cylinder" : "/catalog";
+    return `${base}${query ? `?${query}` : ""}${cylinderFamilySurface ? "#ready-made" : ""}`;
 }
 
 export function inferGraceBroadenScope(customerRequest: string): GraceBroadenScope {
@@ -89,24 +110,32 @@ export function applyGraceRefinementRequest(
     proposal: GraceRefinementProposal,
     customerRequest: string,
 ): GraceRefineState {
+    const exactCapacity = exactCapacityFacet(proposal.search);
+    const effectiveProposal: GraceRefinementProposal = exactCapacity
+        ? {
+            ...proposal,
+            capacities: proposal.capacities?.length ? proposal.capacities : [exactCapacity],
+            search: "",
+        }
+        : proposal;
     const broaden = inferGraceBroadenScope(customerRequest);
     const filters = broaden === "all" ? cloneFilters(EMPTY_FILTERS) : cloneFilters(current.filters);
 
     if (broaden && broaden !== "all") {
         if (broaden === "price") {
-            filters.priceMin = typeof proposal.priceMin === "number" ? proposal.priceMin : null;
-            filters.priceMax = typeof proposal.priceMax === "number" ? proposal.priceMax : null;
+            filters.priceMin = typeof effectiveProposal.priceMin === "number" ? effectiveProposal.priceMin : null;
+            filters.priceMax = typeof effectiveProposal.priceMax === "number" ? effectiveProposal.priceMax : null;
         } else if (ARRAY_FILTERS.includes(broaden as (typeof ARRAY_FILTERS)[number])) {
             const key = broaden as (typeof ARRAY_FILTERS)[number];
-            (filters[key] as string[]) = Array.isArray(proposal[key]) ? [...proposal[key] as string[]] : [];
+            (filters[key] as string[]) = Array.isArray(effectiveProposal[key]) ? [...effectiveProposal[key] as string[]] : [];
         } else {
             const key = broaden as "category" | "collection" | "componentType";
-            filters[key] = typeof proposal[key] === "string" ? proposal[key] : null;
+            filters[key] = typeof effectiveProposal[key] === "string" ? effectiveProposal[key] : null;
         }
     }
 
-    applyEmptyConstraints(filters, proposal);
-    if (typeof proposal.search === "string") filters.search = proposal.search.trim();
+    applyEmptyConstraints(filters, effectiveProposal);
+    if (typeof effectiveProposal.search === "string") filters.search = effectiveProposal.search.trim();
 
     return { filters, sort: current.sort, view: current.view };
 }

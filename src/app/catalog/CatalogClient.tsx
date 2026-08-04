@@ -13,6 +13,7 @@ import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RefineSection from "@/components/catalog/RefineSection";
 import { useGrace } from "@/components/useGrace";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -337,55 +338,6 @@ function ProductGroupCard({
     );
 }
 
-// ─── Collapsible Filter Section ──────────────────────────────────────────────
-
-function FilterSection({
-    title,
-    defaultOpen = false,
-    expanded,
-    onToggle,
-    hasActiveFilters = false,
-    children,
-}: {
-    title: string;
-    defaultOpen?: boolean;
-    expanded?: boolean;
-    onToggle?: () => void;
-    hasActiveFilters?: boolean;
-    children: React.ReactNode;
-}) {
-    const [internalOpen, setInternalOpen] = useState(defaultOpen);
-    const isOpen = expanded ?? internalOpen;
-    const toggle = onToggle ?? (() => setInternalOpen((p) => !p));
-    const showGlow = hasActiveFilters && !isOpen;
-
-    return (
-        <div className={`border-b border-champagne/30 pb-4 mb-4 rounded-lg px-2 -mx-2 transition-all duration-200 ${showGlow ? "ring-1 ring-muted-gold/50 ring-offset-2 ring-offset-bone bg-muted-gold/5" : ""}`}>
-            <button
-                onClick={toggle}
-                className="flex min-h-11 items-center justify-between w-full text-xs uppercase tracking-wider font-bold text-slate hover:text-obsidian transition-colors py-2"
-                aria-expanded={isOpen}
-            >
-                <span className={hasActiveFilters ? "text-muted-gold font-semibold" : ""}>{title}</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-0" : "-rotate-90"}`} />
-            </button>
-            <AnimatePresence initial={false}>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                    >
-                        <div className="pt-3">{children}</div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
-    );
-}
-
 // ─── Checkbox Filter Item ────────────────────────────────────────────────────
 
 function CheckboxItem({
@@ -610,7 +562,7 @@ function FilterSidebarContent({
     };
 
     const applicatorSection = Object.keys(facets?.applicators ?? {}).length > 0 ? (
-        <FilterSection title="Product Type" defaultOpen hasActiveFilters={filters.applicators.length > 0}>
+        <RefineSection title="Product Type" defaultOpen hasActiveFilters={filters.applicators.length > 0}>
             <div className="space-y-0.5">
                 {APPLICATOR_BUCKETS.filter((b) => (facets?.applicators?.[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
                     <CheckboxItem
@@ -622,11 +574,11 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const familySection = sortedFamilies.length > 0 ? (
-        <FilterSection
+        <RefineSection
             title="Design Families"
             defaultOpen={mobileOptimized ? !hasNonFamilyFilter : true}
             hasActiveFilters={filters.families.length > 0}
@@ -642,11 +594,12 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const capacitySection = capacityRanges.length > 0 ? (
-        <FilterSection title="Capacity" defaultOpen hasActiveFilters={filters.capacities.length > 0}>
+        <RefineSection title="Capacity" defaultOpen hasActiveFilters={filters.capacities.length > 0}>
+            <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">Size ranges</p>
             <div className="space-y-0.5">
                 {capacityRanges.map((range) => (
                     <CheckboxItem
@@ -658,11 +611,25 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+            <div className="mt-3 border-t border-champagne/40 pt-3">
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">Exact capacity</p>
+                <div className="max-h-[260px] space-y-0.5 overflow-y-auto pr-1 hide-scroll">
+                    {sortedCapacities.map((capacity) => (
+                        <CheckboxItem
+                            key={capacity.label}
+                            label={capacity.label}
+                            count={capacity.count}
+                            checked={filters.capacities.includes(capacity.label)}
+                            onChange={() => toggleArrayFilter("capacities", capacity.label)}
+                        />
+                    ))}
+                </div>
+            </div>
+        </RefineSection>
     ) : null;
 
     const colorSection = sortedColors.length > 0 ? (
-        <FilterSection title="Glass Color" defaultOpen={mobileOptimized} hasActiveFilters={filters.colors.length > 0}>
+        <RefineSection title="Glass Color" defaultOpen={mobileOptimized} hasActiveFilters={filters.colors.length > 0}>
             <div className="space-y-0.5 max-h-[240px] overflow-y-auto hide-scroll">
                 {sortedColors.map(([color, count]) => (
                     <CheckboxItem
@@ -675,11 +642,11 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const categorySection = (
-        <FilterSection title="Categories" defaultOpen={false} hasActiveFilters={!!(filters.category || filters.collection)}>
+        <RefineSection title="Categories" defaultOpen={false} hasActiveFilters={!!(filters.category || filters.collection)}>
                 {sidebarCategories.map((group) => (
                     <div key={group.category} className="mb-2">
                         <button
@@ -720,11 +687,11 @@ function FilterSidebarContent({
                         </AnimatePresence>
                     </div>
                 ))}
-        </FilterSection>
+        </RefineSection>
     );
 
     const componentTypeSection = isComponentCategory && sortedComponentTypes.length > 0 ? (
-        <FilterSection title="Component Type" defaultOpen={false} hasActiveFilters={!!filters.componentType}>
+        <RefineSection title="Component Type" defaultOpen={false} hasActiveFilters={!!filters.componentType}>
             <div className="space-y-0.5">
                 {sortedComponentTypes.map(([type, count]) => (
                     <button
@@ -736,11 +703,11 @@ function FilterSidebarContent({
                     </button>
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const neckThreadSection = sortedThreads.length > 0 ? (
-        <FilterSection title="Neck Thread Size" defaultOpen={mobileOptimized} hasActiveFilters={filters.neckThreadSizes.length > 0}>
+        <RefineSection title="Neck Thread Size" defaultOpen={mobileOptimized} hasActiveFilters={filters.neckThreadSizes.length > 0}>
             <div className="space-y-0.5 max-h-[200px] overflow-y-auto hide-scroll">
                 {sortedThreads.map(([thread, count]) => (
                     <CheckboxItem
@@ -752,11 +719,11 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const priceSection = facets && facets.priceRange.min < facets.priceRange.max ? (
-        <FilterSection title="Price Range" defaultOpen={false} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
+        <RefineSection title="Price Range" defaultOpen={false} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
             <PriceRangeSlider
                 min={facets.priceRange.min}
                 max={facets.priceRange.max}
@@ -764,7 +731,7 @@ function FilterSidebarContent({
                 valueMax={filters.priceMax}
                 onChange={(min, max) => onFilterChange({ priceMin: min, priceMax: max })}
             />
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const orderedSections = mobileOptimized
@@ -1343,6 +1310,19 @@ export default function CatalogClient({
     const [activeResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
 
+    // Sync externally-driven URL changes (including Grace) into the live grid.
+    // Local state is intentional for responsive interactions, but the URL is
+    // the authoritative cross-surface contract.
+    useEffect(() => {
+        const urlState = paramsToFilters(new URLSearchParams(initialSearchParams));
+        setFilters(urlState.filters); // eslint-disable-line react-hooks/set-state-in-effect
+        setSortBy(urlState.sort);
+        setViewMode(urlState.view);
+        setSearchInput(urlState.filters.search);
+        setVisibleCount(clampVisibleLimit(new URLSearchParams(initialSearchParams).get("limit")));
+        setActiveResult(initialResult);
+    }, [initialSearchParams, initialResult]);
+
     // Sync URL when filters/sort/view change
     const pushToUrl = useCallback(
         (f: CatalogFilters, s: SortValue, v: ViewMode, limit?: number) => {
@@ -1586,7 +1566,7 @@ export default function CatalogClient({
         const allCapacities = Object.values(facets.capacities);
         for (const range of CAPACITY_RANGES) {
             const labels = allCapacities.filter((cap) => capacityInRange(cap.ml, range)).map((cap) => cap.label);
-            if (labels.length > 0 && labels.every((label) => filters.capacities.includes(label))) {
+            if (labels.length > 1 && labels.every((label) => filters.capacities.includes(label))) {
                 labels.forEach((label) => capacityChipLabels.add(label));
                 chips.push({
                     label: `${range.label} — ${range.detail}`,
@@ -1638,7 +1618,7 @@ export default function CatalogClient({
             const allLabels = Object.values(facets?.capacities ?? {})
                 .filter((cap) => capacityInRange(cap.ml, range))
                 .map((cap) => cap.label);
-            if (allLabels.length > 0 && allLabels.every((label) => filters.capacities.includes(label))) {
+            if (allLabels.length > 1 && allLabels.every((label) => filters.capacities.includes(label))) {
                 return range.label;
             }
         }
@@ -1882,6 +1862,21 @@ export default function CatalogClient({
 
                     {/* Product Grid Content */}
                     <div className="flex-1 min-w-0 w-full pb-32 border-l-0 lg:border-l border-champagne/30 lg:pl-6">
+
+                        {selectedFamilyLabel === "Cylinder" && (
+                            <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
+                                <div>
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Cylinder V3</p>
+                                    <p className="mt-1 text-sm text-obsidian">Looking for the editorial family page and the 9 mL · 17-415 Paper Doll builder?</p>
+                                </div>
+                                <Link
+                                    href="/catalog/cylinder"
+                                    className="inline-flex min-h-11 shrink-0 items-center justify-center bg-obsidian px-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-white hover:bg-muted-gold hover:text-obsidian"
+                                >
+                                    {"Open the Cylinder family & builder"}
+                                </Link>
+                            </div>
+                        )}
 
                         {/* Family banner — shown when a single design family is filtered */}
                         {filters.families.length === 1 && !filters.search && (

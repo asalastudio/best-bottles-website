@@ -43,7 +43,7 @@ import {
     applyGraceRefinementRequest,
     formatGraceRefineState,
     getGraceRefineState,
-    graceRefineStateToParams,
+    graceRefineDestination,
     type GraceRefinementProposal,
 } from "@/lib/grace/refineState";
 import {
@@ -59,6 +59,7 @@ import {
     type GraceRealtimeToolImplementations,
 } from "@/lib/grace/openaiRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
+import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
 
 // ─── Core product intelligence injected into ElevenLabs session ─────────────
 
@@ -893,7 +894,9 @@ function GraceProviderBase({
                 if (params.categoryLimit) searchProposal.category = params.categoryLimit;
                 if (params.familyLimit) searchProposal.families = [params.familyLimit];
                 if (params.applicatorFilter) {
-                    searchProposal.applicators = params.applicatorFilter.split(",").map((value) => value.trim()).filter(Boolean) as GraceRefinementProposal["applicators"];
+                    searchProposal.applicators = normalizeApplicatorBuckets(
+                        params.applicatorFilter.split(","),
+                    );
                 }
                 const inheritedRefine = applyGraceRefinementRequest(currentRefine, searchProposal, params.searchTerm ?? "");
                 const data = await callGraceServerTool<ProductCard[] | string>("searchCatalog", {
@@ -1715,7 +1718,7 @@ function GraceProviderBase({
             }
         },
 
-        setCatalogRefinements: (params: {
+        setCatalogRefinements: async (params: {
             customerRequest: string;
             search?: string | null;
             category?: string | null;
@@ -1750,7 +1753,7 @@ function GraceProviderBase({
             const colors = asArray(params.colors);
             const capacities = asArray(params.capacities);
             const neckThreadSizes = asArray(params.neckThreadSizes);
-            if (applicators) proposal.applicators = applicators as GraceRefinementProposal["applicators"];
+            if (applicators) proposal.applicators = normalizeApplicatorBuckets(applicators);
             if (families) proposal.families = families;
             if (colors) proposal.colors = colors;
             if (capacities) proposal.capacities = capacities;
@@ -1758,12 +1761,29 @@ function GraceProviderBase({
 
             const current = pageContextRef.current?.refineState ?? getGraceRefineState(new URLSearchParams());
             const next = applyGraceRefinementRequest(current, proposal, params.customerRequest ?? "");
-            const query = graceRefineStateToParams(next).toString();
-            routerRef.current.replace(`/catalog${query ? `?${query}` : ""}`);
+            const refinementVerification = await callGraceServerTool<{
+                totalCount?: number;
+                items?: unknown[];
+            }>("searchCatalog", {
+                searchTerm: next.filters.search || params.customerRequest || "catalog refinement",
+                categoryLimit: null,
+                familyLimit: null,
+                applicatorFilter: null,
+                refineState: next,
+                returnRaw: true,
+            });
+            if (refinementVerification.error) {
+                analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: false, status: "verification_failed" });
+                return `I could not verify that Refine change, so I did not claim it succeeded. ${refinementVerification.error}`;
+            }
+            const verifiedCount = refinementVerification.result?.totalCount
+                ?? refinementVerification.result?.items?.length
+                ?? 0;
+            routerRef.current.replace(graceRefineDestination(next));
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("setCatalogRefinements");
             analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: true });
-            return `Refine updated. ${formatGraceRefineState(next)}`;
+            return `Verified ${verifiedCount} matching product group${verifiedCount === 1 ? "" : "s"} and updated the visible Refine state. ${formatGraceRefineState(next)}`;
         },
 
         setPaperDollSelection: (params: GracePaperDollSelectionRequest) => {

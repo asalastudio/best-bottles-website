@@ -22,6 +22,16 @@ const nullableStringArray = (description: string): JsonSchemaProperty => ({
     description,
 });
 
+const nullableApplicatorArray = (description: string): JsonSchemaProperty => ({
+    type: ["array", "null"],
+    items: {
+        type: "string",
+        enum: ["rollon", "finemist", "perfumespray", "reducer", "dropper", "lotionpump", "antiquespray", "antiquespray-tassel"],
+    },
+    maxItems: 8,
+    description,
+});
+
 function objectSchema(properties: Record<string, JsonSchemaProperty> = {}) {
     return {
         type: "object" as const,
@@ -150,7 +160,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         search: nullableString("New search phrase, or null to preserve the active search."),
         category: nullableString("Requested category, or null."),
         collection: nullableString("Requested collection, or null."),
-        applicators: nullableStringArray("Requested Refine applicator values, or null."),
+        applicators: nullableApplicatorArray("Requested canonical Refine applicator buckets, or null."),
         families: nullableStringArray("Requested exact family values, or null."),
         colors: nullableStringArray("Requested exact color values, or null."),
         capacities: nullableStringArray("Requested exact capacity labels, or null."),
