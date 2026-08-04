@@ -99,7 +99,7 @@ describe("Paper Doll draft preview contract", () => {
         const productPageSource = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
 
         expect(serverClientSource).toContain('import "server-only"');
-        expect(serverClientSource).toContain('perspective: "previewDrafts"');
+        expect(serverClientSource).toContain('createServerClient("previewDrafts")');
         expect(serverClientSource).toContain("SANITY_API_READ_TOKEN");
         expect(serverClientSource).not.toContain("NEXT_PUBLIC_SANITY_API_READ_TOKEN");
         expect(queriesSource).toContain("getPreviewPaperDollFamily");

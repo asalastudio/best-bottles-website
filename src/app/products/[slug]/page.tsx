@@ -20,7 +20,11 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import UnifiedBottlePdp from "@/components/products/UnifiedBottlePdp";
-import { getPreviewPaperDollFamily, getStorefrontPaperDollFamily } from "@/sanity/lib/queries";
+import {
+    getPreviewPaperDollFamily,
+    getStorefrontCylinderBeautyGallery,
+    getStorefrontPaperDollFamily,
+} from "@/sanity/lib/queries";
 import { isPaperDollDraftPreviewAllowed } from "@/lib/paper-doll/preview";
 import {
     buildCylinder9mlConfigurations,
@@ -125,6 +129,15 @@ async function getReleasedCylinderPaperDoll(preview: boolean) {
             : await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
     } catch (error) {
         console.warn(`CYL-9ML Paper Doll ${preview ? "draft preview" : "release gate"} rejected the Sanity document`, error);
+        return null;
+    }
+}
+
+async function getReleasedCylinderBeautyGallery() {
+    try {
+        return await getStorefrontCylinderBeautyGallery(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
+    } catch (error) {
+        console.warn("CYL-9ML beauty gallery release gate rejected the Sanity document", error);
         return null;
     }
 }
@@ -291,14 +304,20 @@ export default async function ProductPage({
             draftModeEnabled: (await draftMode()).isEnabled,
             nodeEnv: process.env.NODE_ENV,
         });
-        const [configurations, paperDollFamily] = await Promise.all([
+        const [configurations, paperDollFamily, beautyGallery] = await Promise.all([
             getUnifiedCylinderData(),
             getReleasedCylinderPaperDoll(paperDollPreviewAllowed),
+            getReleasedCylinderBeautyGallery(),
         ]);
         const paperDollPreview = paperDollPreviewAllowed && Boolean(paperDollFamily);
         return (
             <>
-                <UnifiedBottlePdp configurations={configurations} paperDollFamily={paperDollFamily} paperDollPreview={paperDollPreview} />
+                <UnifiedBottlePdp
+                    configurations={configurations}
+                    paperDollFamily={paperDollFamily}
+                    beautyGallery={beautyGallery}
+                    paperDollPreview={paperDollPreview}
+                />
                 <SanityLiveVisualEditing />
                 <Footer />
             </>

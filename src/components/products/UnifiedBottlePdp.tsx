@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -27,6 +28,10 @@ import {
     selectCylinderConfiguration,
     type CylinderSelectionChange,
 } from "@/lib/products/unified-cylinder-pdp";
+import {
+    resolveCylinderBeautyHero,
+    type StorefrontCylinderBeautyGallery,
+} from "@/lib/products/cylinder-beauty-gallery";
 
 function usableImage(value: string | null | undefined): value is string {
     return Boolean(value && !value.includes("www.bestbottles.com/images/store/") && !value.includes("cdn.sanity.io/"));
@@ -60,10 +65,12 @@ function formatPrice(value: number | null | undefined): string {
 export default function UnifiedBottlePdp({
     configurations,
     paperDollFamily,
+    beautyGallery,
     paperDollPreview = false,
 }: {
     configurations: PaperDollConfiguration[];
     paperDollFamily: RenderablePaperDollFamily | null;
+    beautyGallery: StorefrontCylinderBeautyGallery | null;
     paperDollPreview?: boolean;
 }) {
     const router = useRouter();
@@ -132,6 +139,8 @@ export default function UnifiedBottlePdp({
         window.addEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
         return () => window.removeEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
     }, [configurations, router, searchParams, selected]);
+
+    const beautyHero = resolveCylinderBeautyHero(beautyGallery, selected.glassKey);
 
     const images = useMemo(() => {
         const rows: GalleryImage[] = [];
@@ -216,24 +225,48 @@ export default function UnifiedBottlePdp({
                 <div className="mb-7 border-b border-champagne pb-6">
                     <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-gold">Unified bottle platform · 9 mL · 17-415</p>
                     <h1 className="mt-2 font-serif text-4xl font-medium text-obsidian sm:text-5xl">9 mL Cylinder Bottle</h1>
-                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate">Choose the glass, delivery system, roller material when needed, and finish. Every option shown belongs to this exact 17-415 bottle platform.</p>
+                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate">Choose the glass, applicator, roller material when needed, and finish. Every option shown belongs to this exact 17-415 bottle platform.</p>
                 </div>
 
-                <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12">
-                    <div className="min-w-0">
+                {beautyHero && (
+                    <section aria-labelledby="cylinder-beauty-title" className="border-b border-champagne pb-10 sm:pb-14">
+                        <div className="mx-auto w-full max-w-[1040px]">
+                            <div className="relative aspect-[10/11] w-full overflow-hidden bg-travertine">
+                                <Image
+                                    src={beautyHero.imageUrl}
+                                    alt={beautyHero.alt}
+                                    fill
+                                    priority
+                                    unoptimized
+                                    sizes="(max-width: 1100px) 100vw, 1040px"
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1 border-x border-b border-champagne bg-bone px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+                                <h2 id="cylinder-beauty-title" className="font-serif text-lg text-obsidian">{beautyHero.glassLabel} Cylinder</h2>
+                                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate">Beauty reference · Metal roller · Matte silver</p>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                <div className="mb-6 mt-10 border-b border-champagne pb-5 sm:mt-14">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-gold">Build your bottle</p>
+                    <h2 className="mt-1 font-serif text-3xl font-medium text-obsidian">Choose the exact components</h2>
+                </div>
+
+                <div className={buildReady ? "grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12" : "mx-auto max-w-[820px]"}>
+                    {buildReady && <div className="min-w-0">
                         <div className="mb-3 flex border-b border-champagne" role="tablist" aria-label="Product media view">
-                            <button type="button" role="tab" aria-selected={view === "beauty"} onClick={() => updateView("beauty")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "beauty" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Beauty View</button>
+                            <button type="button" role="tab" aria-selected={view === "beauty"} onClick={() => updateView("beauty")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "beauty" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Product photos</button>
                             <button
                                 type="button"
                                 role="tab"
                                 aria-selected={view === "build"}
-                                aria-disabled={!buildReady}
-                                disabled={!buildReady}
                                 onClick={() => updateView("build")}
-                                className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"} disabled:cursor-not-allowed disabled:opacity-65`}
+                                className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}
                             >
-                                <span className="block">Build This Bottle · 145 configurations</span>
-                                {!buildReady && <span className="mt-0.5 block text-[9px] font-medium text-slate">Layered preview in preparation</span>}
+                                <span className="block">Build preview · 145 configurations</span>
                             </button>
                         </div>
                         {paperDollPreview && (
@@ -262,17 +295,17 @@ export default function UnifiedBottlePdp({
                                         You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
                                     </p>
                                 )}
-                                <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">Return to Beauty View</button>
+                                <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">View product photos</button>
                             </div>
                         ) : (
                             <ProductImageGallery images={images} primaryAlt={productName} fallbackUrl="/assets/Cylinder-BB.png" aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
                         )}
                         <div className="mt-4 grid grid-cols-3 border border-champagne bg-bone text-center">
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Glass</p><p className="mt-1 text-xs font-semibold">{selected.glassLabel}</p></div>
-                            <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Delivery</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
+                            <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Applicator</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Finish</p><p className="mt-1 text-xs font-semibold">{selected.finishLabel}</p></div>
                         </div>
-                    </div>
+                    </div>}
 
                     <aside className="border border-champagne bg-bone p-4 sm:p-6 lg:sticky lg:top-32">
                         <div className="flex items-start justify-between gap-4 border-b border-champagne pb-5">
@@ -283,6 +316,12 @@ export default function UnifiedBottlePdp({
                             </div>
                             <div className="text-right"><p className="font-serif text-2xl text-obsidian">{formatPrice(selected.price1pc)}</p><p className="text-[10px] text-slate">per bottle</p></div>
                         </div>
+
+                        {!buildReady && (
+                            <p className="mt-4 border-l-2 border-muted-gold pl-3 text-xs leading-5 text-slate">
+                                Choose from every verified component below. The exact layered preview will appear after the complete 2080 × 2288 component set passes its release check.
+                            </p>
+                        )}
 
                         <div className="py-5"><BottleConfigurator configurations={configurations} selected={selected} onSelect={updateSelection} /></div>
 
