@@ -261,6 +261,17 @@ export interface CatalogFilters {
     search: string;
 }
 
+export type CatalogFacetKey =
+    | "applicators"
+    | "families"
+    | "capacities"
+    | "colors"
+    | "neckThreadSizes"
+    | "category"
+    | "collection"
+    | "componentType"
+    | "price";
+
 export const EMPTY_FILTERS: CatalogFilters = {
     category: null,
     collection: null,
