@@ -161,18 +161,22 @@ function bestLayerOrder(
         .sort((left, right) => right.length - left.length || left.join(":").localeCompare(right.join(":")))[0] ?? [];
 }
 
-export function validateMadisonReleaseManifest(manifest: MadisonPaperDollReleaseManifest): string[] {
+export function validateMadisonReleaseManifest(
+    manifest: MadisonPaperDollReleaseManifest,
+    options: { target?: "draft" | "public" } = {},
+): string[] {
     const issues: string[] = [];
+    const target = options.target ?? "public";
     if (manifest.schemaVersion !== 1) issues.push("release schemaVersion must be 1");
     if (!clean(manifest.familyKey)) issues.push("release familyKey is required");
     if (!clean(manifest.releaseVersion)) issues.push("releaseVersion is required");
-    if (manifest.status !== "ready" && manifest.status !== "published") {
+    if (target === "public" && manifest.status !== "ready" && manifest.status !== "published") {
         issues.push("release status must be ready or published");
     }
     if (manifest.canvas?.widthPx !== PAPER_DOLL_CANVAS.width || manifest.canvas?.heightPx !== PAPER_DOLL_CANVAS.height) {
         issues.push(`release canvas must be ${PAPER_DOLL_CANVAS.width}×${PAPER_DOLL_CANVAS.height}`);
     }
-    if (manifest.blockers.length > 0) issues.push("release blockers must be empty");
+    if (target === "public" && manifest.blockers.length > 0) issues.push("release blockers must be empty");
     if (manifest.assets.length === 0) issues.push("release assets must not be empty");
 
     const layerIdentities = new Set<string>();
@@ -257,7 +261,7 @@ export async function buildMadisonSanityDraftDocuments(input: {
     sanityAssetRefsBySha256: SanityAssetReferenceMap;
     existingFamilyDocumentId?: string | null;
 }) {
-    const issues = validateMadisonReleaseManifest(input.manifest);
+    const issues = validateMadisonReleaseManifest(input.manifest, { target: "draft" });
     if (issues.length > 0) throw new Error(`Madison release failed the Sanity import gate:\n- ${issues.join("\n- ")}`);
     const displayName = clean(input.displayName);
     if (!displayName) throw new Error("Paper Doll family displayName is required");
@@ -303,7 +307,7 @@ export async function buildMadisonSanityDraftDocuments(input: {
                 measurementsJson: JSON.stringify(measurements),
             };
         }),
-        releaseBlockers: [] as string[],
+        releaseBlockers: [...input.manifest.blockers],
         provenance: {
             _type: "paperDollReleaseProvenance",
             sourceGitCommit: input.manifest.provenance.sourceGitCommit,
@@ -322,7 +326,12 @@ export async function buildMadisonSanityDraftDocuments(input: {
             _id: draftDocumentId(familyPublicId),
             _type: "paperDollFamily" as const,
             ...releaseFields,
-            currentRelease: { _type: "reference" as const, _ref: releasePublicId },
+            // The versioned release exists only as a draft at this stage. Keep
+            // the stable public ID as a weak reference so Sanity accepts the
+            // paired draft transaction without fabricating a public release.
+            // Storefront activation replaces this with a strong reference
+            // after the release document is published separately.
+            currentRelease: { _type: "reference" as const, _ref: releasePublicId, _weak: true as const },
         },
     };
 }

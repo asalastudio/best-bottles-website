@@ -11,14 +11,18 @@ This runbook moves an approved Madison Paper Doll release into Sanity without pu
 
 ## Import prerequisites
 
-The Madison manifest must:
+Every Madison manifest must:
 
 - use release schema version 1;
-- have status `ready` or `published`;
-- have no release blockers;
-- contain only approved 2080×2288 RGBA layers;
+- contain only approved 2080×2288 PNG layers; reusable component layers must
+  be RGBA, while full-canvas body plates may be RGB or RGBA;
 - have passing blocking QA evidence;
 - use unique `slot:variantKey` layer identities.
+
+A private draft may have status `blocked` and explicit release blockers. The
+importer preserves those blockers and always writes `storefrontReady=false`.
+Public activation still requires status `ready` or `published` with no release
+blockers.
 
 `CYL-9ML` has additional hard gates:
 
@@ -62,8 +66,10 @@ The importer:
 5. uploads only missing image assets;
 6. creates or replaces an immutable versioned `paperDollRelease` draft;
 7. preserves the existing `paperDollFamily` document while updating its draft release fields;
-8. leaves `storefrontReady=false` on both drafts;
-9. performs no public publication.
+8. records the draft-only release as a weak family reference until the release
+   is independently published;
+9. leaves `storefrontReady=false` on both drafts;
+10. performs no public publication.
 
 Private Madison `imagePath` and `geometryMaskPath` values are never copied into Sanity documents.
 
