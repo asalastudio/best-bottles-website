@@ -30,4 +30,9 @@ describe("catalog Refine states", () => {
             expect(source).toContain("setRetryNonce");
         }
     });
+
+    it("creates browser-history entries when customers commit Refine changes", () => {
+        expect(master).toContain("router.push(`${pathname}${qs ? `?${qs}` : \"\"}`");
+        expect(cylinder).toContain("router.push(`/catalog/cylinder?${params.toString()}#ready-made`");
+    });
 });

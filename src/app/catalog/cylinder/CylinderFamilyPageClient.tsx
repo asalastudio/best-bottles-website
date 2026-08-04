@@ -394,7 +394,7 @@ function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyCardModel; cat
     });
 
     return (
-        <article className="group/catalog-card flex h-full flex-col overflow-hidden bg-white transition-colors duration-200 hover:bg-bone/25 focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]">
+        <article className="group/catalog-card flex h-full flex-col overflow-hidden bg-white focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]">
             <ProductCardImagePreview
                 productTitle={productTitle}
                 defaultImage={{ url: safeVariantImage(group.heroImageUrl), alt: productTitle }}
@@ -554,7 +554,7 @@ export default function CylinderFamilyPageClient({
         setMobileDraft(scoped);
         const params = filtersToParams(scoped, nextSort, "visual");
         if (nextSort === CYLINDER_CATALOG_SURFACE.defaultSort) params.delete("sort");
-        router.replace(`/catalog/cylinder?${params.toString()}#ready-made`, { scroll: false });
+        router.push(`/catalog/cylinder?${params.toString()}#ready-made`, { scroll: false });
     }, [router, sortBy]);
 
     const toggleDimension = useCallback((

@@ -311,7 +311,7 @@ function ProductGroupCard({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-            className="group/catalog-card flex h-full flex-col overflow-hidden bg-white transition-colors duration-200 hover:bg-bone/25 focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]"
+            className="group/catalog-card flex h-full flex-col overflow-hidden bg-white focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]"
         >
             <ProductCardImagePreview
                 productTitle={customerDisplayName}
@@ -333,7 +333,7 @@ function ProductGroupCard({
             />
 
             <Link href={href} className="flex flex-1 flex-col p-5">
-                    <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{customerDisplayName}</h4>
+                    <h4 className="mb-3 font-serif text-lg font-medium leading-snug text-obsidian">{customerDisplayName}</h4>
                     <dl data-testid="catalog-card-specs" className="grid grid-cols-2 gap-x-3 gap-y-2 mb-4 text-[11px]">
                         {cardSpecs.map((spec) => (
                             <div key={spec.label} className="min-w-0">
@@ -1340,7 +1340,7 @@ export default function CatalogClient({
             const params = filtersToParams(f, s, v);
             if (limit && limit > PAGE_SIZE) params.set("limit", String(limit));
             const qs = params.toString();
-            router.replace(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
+            router.push(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
         },
         [router, pathname],
     );

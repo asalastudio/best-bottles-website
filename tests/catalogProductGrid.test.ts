@@ -29,7 +29,14 @@ describe("continuous catalog product grid", () => {
         const cylinder = readFileSync(join(process.cwd(), "src/app/catalog/cylinder/CylinderFamilyPageClient.tsx"), "utf8");
         expect(master).not.toContain("hover:shadow-lg");
         expect(cylinder).not.toContain("hover:shadow-md");
+        expect(master).not.toContain("hover:bg-bone/25");
+        expect(cylinder).not.toContain("hover:bg-bone/25");
         expect(master).toContain("focus-within:outline");
         expect(cylinder).toContain("focus-within:outline");
+    });
+
+    it("keeps product titles readable instead of truncating them", () => {
+        const master = readFileSync(join(process.cwd(), "src/app/catalog/CatalogClient.tsx"), "utf8");
+        expect(master).not.toContain("leading-snug line-clamp-2 mb-3");
     });
 });
