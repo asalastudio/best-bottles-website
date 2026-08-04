@@ -18,7 +18,7 @@ export type StorefrontPaperDollLayer = {
     offsetY?: number;
 };
 
-export type StorefrontPaperDollFamily = {
+export type RenderablePaperDollFamily = {
     _id: string;
     familyKey: string;
     displayName: string;
@@ -27,7 +27,7 @@ export type StorefrontPaperDollFamily = {
     canvasHeight: number;
     pipelineVersion: string;
     assetRevision: string;
-    storefrontReady: true;
+    storefrontReady: boolean;
     layerOrderRollon: string[];
     layerOrderSpray: string[];
     layerOrderShortcap: string[];
@@ -36,8 +36,12 @@ export type StorefrontPaperDollFamily = {
     layerAssets: StorefrontPaperDollLayer[];
 };
 
-export type PaperDollValidationResult =
-    | { ok: true; family: StorefrontPaperDollFamily; issues: [] }
+export type StorefrontPaperDollFamily = RenderablePaperDollFamily & {
+    storefrontReady: true;
+};
+
+export type PaperDollValidationResult<TFamily extends RenderablePaperDollFamily = StorefrontPaperDollFamily> =
+    | { ok: true; family: TFamily; issues: [] }
     | { ok: false; issues: string[] };
 
 type UnknownRecord = Record<string, unknown>;
@@ -116,7 +120,16 @@ function parseLayer(value: unknown, index: number, issues: string[]): Storefront
     };
 }
 
-export function validateStorefrontPaperDollFamily(value: unknown): PaperDollValidationResult {
+function validatePaperDollFamily(
+    value: unknown,
+    {
+        requireStorefrontReady,
+        requireLayerOrderCoverage,
+    }: {
+        requireStorefrontReady: boolean;
+        requireLayerOrderCoverage: boolean;
+    },
+): PaperDollValidationResult<RenderablePaperDollFamily> {
     const issues: string[] = [];
     if (!isRecord(value)) return { ok: false, issues: ["paperDollFamily must be an object"] };
 
@@ -139,7 +152,7 @@ export function validateStorefrontPaperDollFamily(value: unknown): PaperDollVali
     }
     if (!pipelineVersion) issues.push("pipelineVersion is required");
     if (!assetRevision) issues.push("assetRevision is required");
-    if (value.storefrontReady !== true) issues.push("storefrontReady must be true");
+    if (requireStorefrontReady && value.storefrontReady !== true) issues.push("storefrontReady must be true");
 
     const layerOrderRollon = stringArray(value.layerOrderRollon);
     const layerOrderSpray = stringArray(value.layerOrderSpray);
@@ -167,10 +180,12 @@ export function validateStorefrontPaperDollFamily(value: unknown): PaperDollVali
         if (uniqueLayerKeys.has(key)) issues.push(`duplicate layer key ${key}`);
         uniqueLayerKeys.add(key);
     }
-    const availableSlots = new Set(layerAssets.map((layer) => layer.slot));
-    for (const [field, order] of orderEntries) {
-        for (const slot of new Set(order)) {
-            if (!availableSlots.has(slot)) issues.push(`${field} requires at least one ${slot} asset`);
+    if (requireLayerOrderCoverage) {
+        const availableSlots = new Set(layerAssets.map((layer) => layer.slot));
+        for (const [field, order] of orderEntries) {
+            for (const slot of new Set(order)) {
+                if (!availableSlots.has(slot)) issues.push(`${field} requires at least one ${slot} asset`);
+            }
         }
     }
 
@@ -188,7 +203,7 @@ export function validateStorefrontPaperDollFamily(value: unknown): PaperDollVali
             canvasHeight,
             pipelineVersion,
             assetRevision,
-            storefrontReady: true,
+            storefrontReady: value.storefrontReady === true,
             layerOrderRollon,
             layerOrderSpray,
             layerOrderShortcap,
@@ -199,10 +214,38 @@ export function validateStorefrontPaperDollFamily(value: unknown): PaperDollVali
     };
 }
 
+export function validateStorefrontPaperDollFamily(value: unknown): PaperDollValidationResult {
+    const result = validatePaperDollFamily(value, {
+        requireStorefrontReady: true,
+        requireLayerOrderCoverage: true,
+    });
+    if (!result.ok) return result;
+    return {
+        ok: true,
+        issues: [],
+        family: result.family as StorefrontPaperDollFamily,
+    };
+}
+
+export function validatePreviewPaperDollFamily(value: unknown): PaperDollValidationResult<RenderablePaperDollFamily> {
+    return validatePaperDollFamily(value, {
+        requireStorefrontReady: false,
+        requireLayerOrderCoverage: false,
+    });
+}
+
 export function assertStorefrontPaperDollFamily(value: unknown): StorefrontPaperDollFamily {
     const result = validateStorefrontPaperDollFamily(value);
     if (!result.ok) {
         throw new Error(`Paper Doll family failed storefront validation:\n- ${result.issues.join("\n- ")}`);
+    }
+    return result.family;
+}
+
+export function assertPreviewPaperDollFamily(value: unknown): RenderablePaperDollFamily {
+    const result = validatePreviewPaperDollFamily(value);
+    if (!result.ok) {
+        throw new Error(`Paper Doll draft failed preview validation:\n- ${result.issues.join("\n- ")}`);
     }
     return result.family;
 }

@@ -106,6 +106,7 @@ describe("Madison → Sanity Paper Doll adapter", () => {
         expect(documents.familyDocument.currentRelease).toEqual({
             _type: "reference",
             _ref: "paperDollRelease.TEST-FAMILY.1-0-0",
+            _weak: true,
         });
         expect(documents.familyDocument.storefrontReady).toBe(false);
         expect(documents.familyDocument.canvasPreset).toBe("pdp-2080x2288");
@@ -118,7 +119,7 @@ describe("Madison → Sanity Paper Doll adapter", () => {
         expect(JSON.stringify(documents)).not.toMatch(/private\/releases|imagePath|geometryMaskPath/);
     });
 
-    it("rejects blocked, unapproved, and incorrectly sized release input", () => {
+    it("allows an incomplete release into a private draft while preserving the public gate", async () => {
         const blocked = releaseManifest();
         blocked.status = "blocked";
         blocked.blockers = ["placement_lock_required"];
@@ -126,11 +127,27 @@ describe("Madison → Sanity Paper Doll adapter", () => {
             "release status must be ready or published",
             "release blockers must be empty",
         ]));
+        expect(validateMadisonReleaseManifest(blocked, { target: "draft" })).toEqual([]);
+
+        const documents = await buildMadisonSanityDraftDocuments({
+            manifest: blocked,
+            displayName: "Test family",
+            sanityAssetRefsBySha256: {
+                ["a".repeat(64)]: "image-body-2080x2288-png",
+                ["b".repeat(64)]: "image-roller-2080x2288-png",
+            },
+        });
+        expect(documents.familyDocument.releaseStatus).toBe("blocked");
+        expect(documents.familyDocument.releaseBlockers).toEqual(["placement_lock_required"]);
+        expect(documents.familyDocument.storefrontReady).toBe(false);
+    });
+
+    it("still rejects unapproved and incorrectly sized assets from a private draft", () => {
 
         const unapproved = releaseManifest();
         unapproved.assets[0].approvalStatus = "candidate";
         unapproved.assets[1].widthPx = 1000;
-        expect(validateMadisonReleaseManifest(unapproved)).toEqual(expect.arrayContaining([
+        expect(validateMadisonReleaseManifest(unapproved, { target: "draft" })).toEqual(expect.arrayContaining([
             "body:CLR must be approved",
             "roller:METAL must be 2080×2288",
         ]));
