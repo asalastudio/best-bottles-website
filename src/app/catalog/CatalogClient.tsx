@@ -14,6 +14,7 @@ import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RefineSection from "@/components/catalog/RefineSection";
+import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -212,7 +213,7 @@ function clampVisibleLimit(rawLimit: string | null): number {
 
 function SkeletonCard() {
     return (
-        <div className="flex flex-col h-full bg-white rounded-sm border border-champagne/40 overflow-hidden animate-pulse">
+        <div className="flex h-full flex-col overflow-hidden bg-white animate-pulse">
             <div className="aspect-[10/11] bg-champagne/20 w-full" />
             <div className="p-5 flex flex-col flex-1">
                 <div className="h-5 w-3/4 bg-champagne/30 rounded mb-2" />
@@ -225,11 +226,11 @@ function SkeletonCard() {
 
 function SkeletonGrid() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <CatalogProductGrid>
             {Array.from({ length: 12 }).map((_, i) => (
                 <SkeletonCard key={i} />
             ))}
-        </div>
+        </CatalogProductGrid>
     );
 }
 
@@ -307,7 +308,7 @@ function ProductGroupCard({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-            className="group/catalog-card flex h-full flex-col overflow-hidden rounded-sm border border-champagne/40 bg-white transition-all duration-300 hover:border-muted-gold hover:shadow-lg"
+            className="group/catalog-card flex h-full flex-col overflow-hidden bg-white transition-colors duration-200 hover:bg-bone/25 focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]"
         >
             <ProductCardImagePreview
                 productTitle={customerDisplayName}
@@ -2055,7 +2056,7 @@ export default function CatalogClient({
                         {/* Product Display — Visual Grid or Line Items */}
                         <div className={`transition-opacity duration-300 ${isFetchingCatalog && activeResult.items.length > 0 ? "opacity-50 pointer-events-none" : "opacity-100"}`}>
                             {visibleProducts.length > 0 && viewMode === "visual" && (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                                <CatalogProductGrid>
                                     {visibleProducts.map((group: CatalogGroup, pIndex: number) => (
                                         <ProductGroupCard
                                             key={group._id}
@@ -2069,7 +2070,7 @@ export default function CatalogClient({
                                             primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
                                         />
                                     ))}
-                                </div>
+                                </CatalogProductGrid>
                             )}
 
                             {/* Line Item View — Desktop Table */}

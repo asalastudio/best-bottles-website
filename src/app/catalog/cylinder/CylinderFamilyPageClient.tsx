@@ -7,6 +7,7 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RefineSection from "@/components/catalog/RefineSection";
+import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import {
     Sheet,
@@ -393,7 +394,7 @@ function ReadyMadeCard({ group, catalog }: { group: CylinderFamilyCardModel; cat
     });
 
     return (
-        <article className="group/catalog-card flex h-full flex-col overflow-hidden border border-champagne/60 bg-white transition hover:border-muted-gold hover:shadow-md">
+        <article className="group/catalog-card flex h-full flex-col overflow-hidden bg-white transition-colors duration-200 hover:bg-bone/25 focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]">
             <ProductCardImagePreview
                 productTitle={productTitle}
                 defaultImage={{ url: safeVariantImage(group.heroImageUrl), alt: productTitle }}
@@ -720,9 +721,9 @@ export default function CylinderFamilyPageClient({
                                 </div>
                             )}
                             {visibleCards.length > 0 ? (
-                                <div className={`grid grid-cols-1 gap-4 transition-opacity sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 ${isFetchingCatalog ? "pointer-events-none opacity-60" : "opacity-100"}`}>
+                                <CatalogProductGrid className={`xl:grid-cols-3 2xl:grid-cols-4 ${isFetchingCatalog ? "pointer-events-none opacity-60" : "opacity-100"}`}>
                                     {visibleCards.map((group) => <ReadyMadeCard key={group._id} group={group} catalog={activeCatalog} />)}
-                                </div>
+                                </CatalogProductGrid>
                             ) : (
                                 <div className="flex min-h-80 flex-col items-center justify-center border border-champagne bg-bone p-8 text-center">
                                     <Package className="h-10 w-10 text-champagne" />
