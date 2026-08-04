@@ -21,16 +21,6 @@ const FAMILY_ORDER = [
     "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
     "Tulip", "Queen", "Bell", "Swirl", "Grace",
 ];
-const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
-    rollon: ["-rollon"],
-    finemist: ["-spray"],
-    perfumespray: ["-spray"],
-    antiquespray: ["-spray"],
-    "antiquespray-tassel": ["-spray"],
-    dropper: ["-dropper"],
-    lotionpump: ["-lotionpump"],
-    reducer: ["-reducer"],
-};
 
 export interface CatalogSearchGroup {
     _id: string;
@@ -47,6 +37,7 @@ export interface CatalogSearchGroup {
     priceRangeMin: number | null;
     priceRangeMax: number | null;
     heroImageUrl?: string | null;
+    paperDollFamilyKey?: string | null;
     applicatorTypes?: string[] | null;
 }
 
@@ -122,9 +113,7 @@ export function buildCatalogSearchResult(input: {
     const skuMap = new Map(input.primarySkus.map((row) => [row.groupId, row.websiteSku ?? row.graceSku ?? ""]));
     const filters = input.filters;
     const matchesApplicatorBucket = (group: CatalogSearchGroup, bucket: string) => {
-        if (!applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? [])) return false;
-        const allowedSuffixes = SLUG_BUCKET_SUFFIXES[bucket];
-        return !allowedSuffixes || allowedSuffixes.some((suffix) => group.slug.endsWith(suffix));
+        return applicatorBucketMatchesProductValues(bucket as never, group.applicatorTypes ?? []);
     };
     const runFilters = (skipKeys = new Set<keyof CatalogFilters>()) => {
         let rows = [...groups];

@@ -10,6 +10,7 @@
     "start": "next start",
     "lint": "eslint",
     "test:smoke": "vitest run tests/catalog.smoke.test.ts",
+    "test:knowledge-gateway": "vitest run tests/knowledge-*.test.ts tests/employee-knowledge-*.test.ts tests/executive-grace-operations.test.ts tests/graceOpenAIToolSpecs.test.ts tests/graceRealtimeConfig.test.ts tests/graceRefineState.test.ts tests/cylinder-v3-acceptance.test.ts",
     "scrape:apothecary": "node scripts/scrape_apothecary_full.mjs",
     "scrape:legacy-references": "node scripts/scrape_legacy_reference_images.mjs",
     "audit:catalog": "node scripts/export_convex_snapshot.mjs && python3 scripts/scrape_live_catalog.py && python3 scripts/normalize_scrape.py && python3 scripts/diff_scrape_vs_convex.py && python3 scripts/reconcile_patch_plan.py",
@@ -37,7 +38,9 @@
     "shopify:sync:validate": "node scripts/push_convex_to_shopify.mjs --validate-only",
     "shopify:sync:dry": "node scripts/push_convex_to_shopify.mjs",
     "paper-doll:manifest": "node scripts/paper-doll/generate-manifest.mjs",
-    "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs"
+    "paper-doll:recanvas:cylinder-9ml": "node scripts/paper-doll/recanvas-cylinder-9ml.mjs",
+    "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs",
+    "paper-doll:import-madison-release": "tsx scripts/paper-doll/import-madison-release.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
@@ -47,12 +50,14 @@
     "@convex-dev/agent": "^0.6.1",
     "@convex-dev/rag": "^0.7.2",
     "@elevenlabs/react": "^0.14.3",
-    "@openai/agents": "^0.5.1",
+    "@openai/agents": "^0.14.2",
     "@phosphor-icons/react": "^2.1.10",
     "@portabletext/react": "^6.0.2",
+    "@radix-ui/react-dialog": "^1.1.23",
     "@radix-ui/react-progress": "^1.1.8",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
+    "@radix-ui/react-tooltip": "^1.2.16",
     "@sanity/client": "^7.20.0",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",
@@ -66,7 +71,7 @@
     "convex-helpers": "^0.1.114",
     "framer-motion": "^12.34.3",
     "mixpanel-browser": "^2.77.0",
-    "next": "^16.2.7",
+    "next": "^16.2.12",
     "next-sanity": "^12.1.6",
     "next-sitemap": "^4.2.3",
     "openai": "^6.34.0",
@@ -89,7 +94,7 @@
       "js-yaml": "^3.14.2"
     },
     "next": {
-      ".": "^16.2.7",
+      ".": "^16.2.12",
       "postcss": "^8.5.15"
     },
     "typeid-js": {
@@ -103,9 +108,10 @@
     "@types/react-dom": "^19",
     "dotenv": "^17.3.1",
     "eslint": "^9",
-    "eslint-config-next": "^16.2.7",
+    "eslint-config-next": "^16.2.12",
     "shadcn": "^3.8.5",
     "tailwindcss": "^4",
+    "tsx": "^4.22.4",
     "typescript": "5.9.3",
     "vitest": "^3.2.4"
   }

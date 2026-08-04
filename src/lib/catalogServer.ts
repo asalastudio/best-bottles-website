@@ -5,12 +5,9 @@ import {
     type CatalogSearchResultShape,
 } from "@/lib/catalogSearchFallback";
 import {
-    APPLICATOR_BUCKETS,
     EMPTY_FILTERS,
     SORT_OPTIONS,
     VIEW_MODES,
-    applicatorBucketMatchesProductValues,
-    classifyComponentType,
     type CatalogFilters,
     type SortValue,
     type ViewMode,
@@ -34,62 +31,7 @@ export function getCatalogConvexClient() {
     return convexClient;
 }
 
-function countBy<T>(items: T[], keyFn: (item: T) => string | null | undefined): Record<string, number> {
-    const counts: Record<string, number> = {};
-    for (const item of items) {
-        const key = keyFn(item);
-        if (key) counts[key] = (counts[key] ?? 0) + 1;
-    }
-    return counts;
-}
-
-function parseCapacityMl(label: string): number | null {
-    const match = label.match(/^(\d+(?:\.\d+)?)\s*ml/i);
-    return match ? Number(match[1]) : null;
-}
-
-function recomputeVisibleFacets(items: CatalogSearchResultShape["items"]): CatalogSearchResultShape["facets"] {
-    const capacities: CatalogSearchResultShape["facets"]["capacities"] = {};
-    const applicators: Record<string, number> = {};
-    for (const item of items) {
-        if (!item.capacity) continue;
-        const current = capacities[item.capacity] ?? {
-            label: item.capacity,
-            ml: item.capacityMl ?? parseCapacityMl(item.capacity),
-            count: 0,
-        };
-        current.count += 1;
-        capacities[item.capacity] = current;
-    }
-
-    for (const item of items) {
-        for (const bucket of APPLICATOR_BUCKETS) {
-            if (!applicatorBucketMatchesProductValues(bucket.value, item.applicatorTypes ?? [])) continue;
-            applicators[bucket.value] = (applicators[bucket.value] ?? 0) + 1;
-        }
-    }
-
-    const prices = items
-        .flatMap((item) => [item.priceRangeMin, item.priceRangeMax])
-        .filter((price): price is number => typeof price === "number" && Number.isFinite(price));
-
-    return {
-        categories: countBy(items, (item) => item.category),
-        collections: countBy(items, (item) => item.bottleCollection),
-        applicators,
-        families: countBy(items, (item) => item.family),
-        colors: countBy(items, (item) => item.color),
-        capacities,
-        neckThreadSizes: countBy(items, (item) => item.neckThreadSize),
-        componentTypes: countBy(items, (item) => classifyComponentType(item.category, item.displayName)),
-        priceRange: {
-            min: prices.length ? Math.min(...prices) : 0,
-            max: prices.length ? Math.max(...prices) : 0,
-        },
-    };
-}
-
-function sanitizeCatalogResult(result: CatalogSearchResultShape): CatalogSearchResultShape {
+export function sanitizeCatalogResult(result: CatalogSearchResultShape): CatalogSearchResultShape {
     const items = result.items.filter((group) => !getLegacyProductRouteOverride(group.slug));
     if (items.length === result.items.length) return result;
 
@@ -97,7 +39,9 @@ function sanitizeCatalogResult(result: CatalogSearchResultShape): CatalogSearchR
     return {
         ...result,
         items,
-        facets: recomputeVisibleFacets(items),
+        // Facets describe the complete filtered catalog, not the current page.
+        // Rebuilding them from `items` collapses Refine to the first 24 cards.
+        facets: result.facets,
         totalCount: Math.max(0, result.totalCount - (result.items.length - items.length)),
         primarySkus: result.primarySkus.filter((row) => visibleIds.has(row.groupId)),
         variantPreviewRows: result.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)),

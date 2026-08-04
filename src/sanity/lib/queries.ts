@@ -126,6 +126,81 @@ export const JOURNAL_SLUGS_QUERY = `
 `;
 
 import { client, isSanityConfigured } from "./client";
+import {
+    assertStorefrontPaperDollFamily,
+    selectStorefrontPaperDollReleaseCandidate,
+    type StorefrontPaperDollFamily,
+} from "@/lib/paper-doll/sanity";
+
+export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
+  *[_type == "paperDollFamily" && familyKey == $familyKey][0] {
+    _id,
+    familyKey,
+    displayName,
+    canvasPreset,
+    canvasWidth,
+    canvasHeight,
+    pipelineVersion,
+    assetRevision,
+    storefrontReady,
+    layerOrderRollon,
+    layerOrderSpray,
+    layerOrderShortcap,
+    layerOrderLotion,
+    anchorsJson,
+    "currentReleaseReference": currentRelease._ref,
+    currentRelease->{
+      _id,
+      familyKey,
+      displayName,
+      canvasPreset,
+      canvasWidth,
+      canvasHeight,
+      pipelineVersion,
+      assetRevision,
+      storefrontReady,
+      layerOrderRollon,
+      layerOrderSpray,
+      layerOrderShortcap,
+      layerOrderLotion,
+      anchorsJson,
+      layerAssets[] {
+        _key,
+        slot,
+        variantKey,
+        sourceFilename,
+        "imageUrl": image.asset->url,
+        "imageWidth": image.asset->metadata.dimensions.width,
+        "imageHeight": image.asset->metadata.dimensions.height,
+        offsetX,
+        offsetY
+      }
+    },
+    layerAssets[] {
+      _key,
+      slot,
+      variantKey,
+      sourceFilename,
+      "imageUrl": image.asset->url,
+      "imageWidth": image.asset->metadata.dimensions.width,
+      "imageHeight": image.asset->metadata.dimensions.height,
+      offsetX,
+      offsetY
+    }
+  }
+`;
+
+export const PRODUCT_FAMILY_PAGE_QUERY = `
+  *[_type == "productFamilyContent" && family == $family][0] {
+    family,
+    "familyPageSlug": familyPageSlug.current,
+    familyPageEyebrow,
+    familyStory,
+    familyHeroAlt,
+    featuredCohortSlug,
+    "familyHeroImageUrl": familyHeroImage.asset->url
+  }
+`;
 
 // Mega menu panels only (for Navbar)
 export const MEGA_MENU_QUERY = `
@@ -157,6 +232,37 @@ export async function getMegaMenuPanels(): Promise<HomepageData["megaMenuPanels"
     } catch {
         return null;
     }
+}
+
+/**
+ * Fetch a Paper Doll family only through the strict storefront release gate.
+ * A present-but-invalid Sanity document throws with actionable diagnostics;
+ * it never silently falls back to legacy dimensions or partial layers.
+ */
+export async function getStorefrontPaperDollFamily(
+    familyKey: string,
+): Promise<StorefrontPaperDollFamily | null> {
+    if (!isSanityConfigured) return null;
+    const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
+    if (!family) return null;
+    return assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
+}
+
+export type ProductFamilyPageContent = {
+    family: string;
+    familyPageSlug?: string;
+    familyPageEyebrow?: string;
+    familyStory?: string;
+    familyHeroAlt?: string;
+    featuredCohortSlug?: string;
+    familyHeroImageUrl?: string;
+};
+
+export async function getProductFamilyPageContent(
+    family: string,
+): Promise<ProductFamilyPageContent | null> {
+    if (!isSanityConfigured) return null;
+    return client.fetch<ProductFamilyPageContent | null>(PRODUCT_FAMILY_PAGE_QUERY, { family });
 }
 
 export type HomepageData = {

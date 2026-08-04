@@ -40,8 +40,8 @@ describe("Mizan UX recovery guardrails", () => {
         expect(gallery).toContain('loading="eager"');
         expect(gallery).toContain('fetchPriority="high"');
         expect(gallery).toContain("function isRemoteProductImageUrl");
-        expect(gallery).toContain("unoptimized={isRemoteProductImageUrl(activeImage.url)}");
-        expect(gallery).toContain("unoptimized={isRemoteProductImageUrl(img.url)}");
+        expect(gallery).toContain("unoptimized={isRemoteProductImageUrl(activeDisplayUrl)}");
+        expect(gallery).toContain("unoptimized={isRemoteProductImageUrl(displayUrl)}");
     });
 
     it("surfaces catalog search and filtering recovery affordances", () => {

@@ -34,6 +34,7 @@ import type * as imageCleanup from "../imageCleanup.js";
 import type * as imageReconciliation from "../imageReconciliation.js";
 import type * as importMissingLiveProducts from "../importMissingLiveProducts.js";
 import type * as knowledge from "../knowledge.js";
+import type * as knowledgeOperations from "../knowledgeOperations.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
 import type * as paperDoll from "../paperDoll.js";
@@ -43,6 +44,7 @@ import type * as pricing from "../pricing.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
 import type * as products from "../products.js";
+import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
 
@@ -79,6 +81,7 @@ declare const fullApi: ApiFromModules<{
   imageReconciliation: typeof imageReconciliation;
   importMissingLiveProducts: typeof importMissingLiveProducts;
   knowledge: typeof knowledge;
+  knowledgeOperations: typeof knowledgeOperations;
   measurements: typeof measurements;
   migrations: typeof migrations;
   paperDoll: typeof paperDoll;
@@ -88,6 +91,7 @@ declare const fullApi: ApiFromModules<{
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
   products: typeof products;
+  repairCylinderPilot: typeof repairCylinderPilot;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
 }>;

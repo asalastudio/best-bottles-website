@@ -7,7 +7,7 @@ const agentConfig = () => JSON.parse(read("scripts/grace_agent_config.json"));
 function implementedClientTools(): Set<string> {
   const source = read("src/components/grace/GraceProvider.tsx");
   const start = source.indexOf("const clientTools = useMemo(() => ({");
-  const end = source.indexOf("// eslint-disable-next-line react-hooks/exhaustive-deps", start);
+  const end = source.indexOf("// ── End provider-neutral client tools", start);
   expect(start).toBeGreaterThan(-1);
   expect(end).toBeGreaterThan(start);
   const block = source.slice(start, end);
@@ -45,7 +45,7 @@ describe("Grace 100-point hardening contracts", () => {
     const proposeStart = source.indexOf("proposeCartAdd:");
     const navigateStart = source.indexOf("navigateToPage:", proposeStart);
     const proposeBlock = source.slice(proposeStart, navigateStart);
-    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     const promptTools = JSON.stringify(agentConfig().conversation_config.agent.prompt.tools);
 
     expect(route).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
@@ -65,7 +65,7 @@ describe("Grace 100-point hardening contracts", () => {
   });
 
   it("guards public Grace routes and trusted image analysis", () => {
-    expect(read("src/app/api/elevenlabs/server-tools/route.ts")).toContain("enforceGraceRateLimit");
+    expect(read("src/app/api/grace/tools/route.ts")).toContain("enforceGraceRateLimit");
     const upload = read("src/app/api/grace/upload/route.ts");
     expect(upload).toContain("File exceeds 8MB limit");
     expect(upload).toContain("Upload failed. Please try again.");
@@ -100,14 +100,14 @@ describe("Grace 100-point hardening contracts", () => {
   });
 
   it("returns structured no-match results so Grace cannot invent unavailable sizes", () => {
-    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     expect(route).toContain("noMatchGraceToolResult");
     expect(route).toContain("No verified exact match found");
     expect(route).toContain("Never claim an exact size");
   });
 
   it("keeps compatibility tools resilient when ElevenLabs passes product names", () => {
-    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     expect(route).toContain("fallbackMatches");
     expect(route).toContain("api.grace.searchCatalog");
     expect(route).toContain("resolvedBottleSku");
@@ -129,7 +129,7 @@ describe("Grace 100-point hardening contracts", () => {
     expect(buildKitBlock).toContain("Fitment-verified kit workspace is open");
     expect(source).toContain("capacityMl: params.capacityMl");
 
-    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
     expect(route).toContain("seenCapacity");
     expect(route).toContain(".slice(0, 16)");
     expect(route).toContain("applicator: d.bottle.applicator");
@@ -184,6 +184,7 @@ describe("Grace 100-point hardening contracts", () => {
 
     expect(proposeBlock).toContain('type: "proposeCartAdd"');
     expect(proposeBlock).toContain("analytics.graceCartProposalShown");
+    expect(proposeBlock).toContain("Math.max(1, Math.floor(Number(p.quantity) || 1))");
     expect(proposeBlock).not.toContain("addToCart(");
     expect(provider).toContain("analytics.graceCartProposalConfirmed");
     expect(provider).toContain("pendingCartProposals");
@@ -196,6 +197,30 @@ describe("Grace 100-point hardening contracts", () => {
     expect(renderer).toContain("onConfirmAction");
   });
 
+  it("keeps checkout and form tools proposal-only until the customer confirms in visible UI", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    const schemas = read("src/lib/knowledge/toolSchemas.ts");
+
+    const checkoutStart = provider.indexOf("proceedToCheckout:");
+    const navigateStart = provider.indexOf("navigateToPage:", checkoutStart);
+    const checkoutBlock = provider.slice(checkoutStart, navigateStart);
+    const formStart = provider.indexOf("submitForm:");
+    const nextToolStart = provider.indexOf("displayProductCard:", formStart);
+    const formBlock = provider.slice(formStart, nextToolStart);
+
+    expect(checkoutBlock).toContain('new Event("open-cart-drawer")');
+    expect(checkoutBlock).toContain("customer must confirm checkout");
+    expect(checkoutBlock).not.toContain("checkoutRef.current");
+    expect(formBlock).toContain("routerRef.current.push");
+    expect(formBlock).toContain('sessionStorage.setItem("bb-grace-form-draft"');
+    expect(formBlock).toContain('newsletter: { path: "/contact", formType: "contact" }');
+    expect(formBlock).toContain("customer must review and submit");
+    expect(formBlock).not.toContain("submitFormRef.current");
+    expect(formBlock).not.toContain("new URLSearchParams");
+    expect(schemas).toContain("never place an order directly");
+    expect(schemas).toContain("never submit the form directly");
+  });
+
   it("guards legacy voice routes from anonymous cost abuse via the shared Convex limiter", () => {
     const voice = read("src/app/api/voice/route.ts");
     const transcribe = read("src/app/api/voice/transcribe/route.ts");
@@ -206,8 +231,26 @@ describe("Grace 100-point hardening contracts", () => {
     expect(transcribe).toContain('route: "voice-transcribe"');
   });
 
+  it("defaults Grace to OpenAI Realtime while retaining the temporary ElevenLabs rollback", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    expect(provider).toContain("getGraceProvider");
+    expect(provider).toContain("createGraceOpenAIRealtimeAdapter");
+    expect(provider).toContain('"/api/openai/realtime-token"');
+    expect(provider).toContain('"/api/grace/chat"');
+    expect(provider).toContain('graceProvider === "openai"');
+    expect(provider).toContain('graceProvider === "elevenlabs"');
+  });
+
+  it("closes the previous Realtime adapter when Clerk identity changes", () => {
+    const provider = read("src/components/grace/GraceProvider.tsx");
+    expect(provider).toContain("if (!openAIAdapter.hasSession()) return;");
+    expect(provider).toContain("openAIAdapter.disconnect();");
+    expect(provider).toContain("}, [openAIAdapter]);");
+    expect(provider).toContain("intentionalEndRef.current = true;");
+  });
+
   it("caches family-card tool responses without poisoning the cache with degraded reads", () => {
-    const route = read("src/app/api/elevenlabs/server-tools/route.ts");
+    const route = read("src/lib/grace/toolGatewayServer.ts");
 
     expect(route).toContain("FAMILY_CARD_CACHE_TTL_MS");
     expect(route).toContain("familyCardCache");

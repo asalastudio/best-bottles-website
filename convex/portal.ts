@@ -390,6 +390,33 @@ export const createGraceProject = mutation({
     },
 });
 
+export const saveBottleToGraceProject = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        projectId: v.id("graceProjects"),
+        bottle: v.object({
+            description: v.string(),
+            sku: v.optional(v.string()),
+            notes: v.optional(v.string()),
+        }),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const project = await ctx.db.get(args.projectId);
+        if (!project || project.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("Project not found for this organization.");
+        }
+
+        const savedBottles = project.savedBottles.filter((bottle) =>
+            !args.bottle.sku || bottle.sku !== args.bottle.sku,
+        );
+        savedBottles.push(args.bottle);
+        await ctx.db.patch(project._id, { savedBottles, updatedAt: Date.now() });
+        return { projectId: project._id, savedBottleCount: savedBottles.length };
+    },
+});
+
 export const saveGraceChatTurn = mutation({
     args: {
         writeToken: v.string(),

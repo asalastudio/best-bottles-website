@@ -463,10 +463,10 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
 
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
                     {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | actions */}
-                    <div className="h-[56px] lg:h-[72px] flex items-center gap-2 sm:gap-4 lg:gap-6 relative">
+                    <div className="relative flex h-[56px] items-center gap-2 sm:gap-4 xl:h-[72px] xl:gap-4 2xl:gap-6">
                         <button
                             aria-label="Open menu"
-                            className="lg:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0"
+                            className="xl:hidden p-2 -ml-2 text-obsidian hover:text-muted-gold transition-colors shrink-0"
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <List size={20} weight="regular" />
@@ -474,19 +474,19 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         {/* Mobile logo — text, Cormorant, left-aligned */}
                         <Link
                             href="/"
-                            className="lg:hidden ml-1 font-cormorant text-lg font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                            className="xl:hidden ml-1 font-cormorant text-lg font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
                         >
                             BEST BOTTLES
                         </Link>
                         {/* Desktop logo — Cormorant font */}
                         <Link
                             href="/"
-                            className="hidden lg:flex shrink-0 mr-4 font-cormorant text-2xl font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
+                            className="hidden xl:flex shrink-0 xl:mr-2 2xl:mr-4 font-cormorant text-2xl font-semibold tracking-tight text-obsidian hover:text-muted-gold transition-colors"
                         >
                             BEST BOTTLES
                         </Link>
                         <nav
-                            className="hidden lg:flex items-center gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
+                            className="hidden xl:flex items-center xl:gap-x-6 2xl:gap-x-12 text-sm font-medium text-obsidian tracking-wide normal-case shrink-0"
                             ref={megaRef}
                         >
                             {links.map((link) => {
@@ -541,7 +541,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                         </nav>
                         <form
                             onSubmit={handleSearchSubmit}
-                            className="group/search relative hidden lg:flex min-w-0 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2 lg:min-w-[520px] lg:max-w-[520px]"
+                            className="group/search relative hidden min-w-0 items-center space-x-2 rounded-xl border border-champagne bg-white/60 px-3 py-2 transition-all duration-200 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 xl:flex xl:min-w-[320px] xl:max-w-[420px] xl:flex-1 2xl:min-w-[520px] 2xl:max-w-[520px]"
                             suppressHydrationWarning
                         >
                             <MagnifyingGlass className="text-slate shrink-0" size={16} />
@@ -585,21 +585,21 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                                 </div>
                             )}
                         </form>
-                        <div className="hidden lg:flex flex-1" />
-                        <div className="flex items-center justify-end space-x-2 shrink-0 ml-auto lg:ml-0">
+                        <div className="hidden xl:flex flex-1" />
+                        <div className="ml-auto flex shrink-0 items-center justify-end space-x-2 xl:ml-0">
                             {/* Grace AI trigger removed from navbar in v3 — Grace now opens
                                 via the floating bottom-right launcher (GraceLauncher.tsx)
                                 so the entry point matches the PRD's collapsed-launcher spec.
                                 Mobile keeps the tab-bar Grace button, PDPs keep PdpGraceTrigger. */}
 
-                            <Link href="/sign-in" aria-label="Account" className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors">
+                            <Link href="/sign-in" aria-label="Account" className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors">
                                 <User className="text-obsidian" size={20} />
                             </Link>
 
                             <button
                                 aria-label="Cart"
                                 onClick={() => setCartOpen(true)}
-                                className="hidden lg:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
+                                className="hidden xl:flex items-center p-2 hover:text-muted-gold transition-colors relative cursor-pointer"
                             >
                                 <ShoppingBag className="text-obsidian" size={20} />
                                 {mounted && isCartHydrated && itemCount > 0 && (
@@ -613,7 +613,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
 
                     {/* Row 2: full-width search bar (mobile only) */}
                     {!hideMobileSearch && (
-                    <div className="flex lg:hidden pb-3 border-t border-champagne/40 pt-2">
+                    <div className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
                         <form
                             onSubmit={handleSearchSubmit}
                             className="group/search relative flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"
@@ -680,21 +680,20 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
             {mobileMenuOpen && (
                 <>
                     <div
-                        className="fixed inset-0 bg-obsidian/40 z-[60] lg:hidden"
+                        className="fixed inset-0 bg-obsidian/40 z-[60] xl:hidden"
                         onClick={() => setMobileMenuOpen(false)}
                     />
-                    <div className="fixed top-0 left-0 bottom-0 z-[61] w-[360px] max-w-[88vw] bg-bone border-r border-champagne shadow-2xl lg:hidden flex flex-col">
+                    <div className="fixed top-0 left-0 bottom-0 z-[61] w-[360px] max-w-[88vw] bg-bone border-r border-champagne shadow-2xl xl:hidden flex flex-col">
                         <div className="h-[44px] bg-obsidian" />
                         <div className="h-[72px] px-4 flex items-center justify-between border-b border-champagne">
-                            <div className="relative w-[180px] h-[36px]">
-                                <Image
-                                    src="/assets/best-bottles-logo.png"
-                                    alt="Best Bottles"
-                                    fill
-                                    className="object-contain object-left"
-                                    priority
-                                />
-                            </div>
+                            <Link
+                                href="/"
+                                onClick={() => setMobileMenuOpen(false)}
+                                className="font-cormorant text-2xl font-semibold tracking-tight text-obsidian"
+                                data-testid="mobile-menu-wordmark"
+                            >
+                                BEST BOTTLES
+                            </Link>
                             <button
                                 aria-label="Close menu"
                                 onClick={() => setMobileMenuOpen(false)}

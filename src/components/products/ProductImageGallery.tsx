@@ -36,6 +36,8 @@
 import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { Package } from "@/components/icons";
+import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 
 export type GalleryImage = {
     url: string;
@@ -75,6 +77,8 @@ interface ProductImageGalleryProps {
     mode?: GalleryMode;
     /** Optional callback when the active thumbnail changes. */
     onActiveChange?: (index: number, image: GalleryImage) => void;
+    /** Approved local or remote image shown when a catalog image cannot load. */
+    fallbackUrl?: string;
 }
 
 function isRemoteProductImageUrl(value: string): boolean {
@@ -90,9 +94,11 @@ export default function ProductImageGallery({
     mainPadding = "p-6 sm:p-12",
     mode = "full",
     onActiveChange,
+    fallbackUrl,
 }: ProductImageGalleryProps) {
     const [activeUrl, setActiveUrl] = useState<string | null>(images[0]?.url ?? null);
     const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [failedUrls, setFailedUrls] = useState<Set<string>>(() => new Set());
     const firstImageUrl = images[0]?.url ?? null;
 
     useEffect(() => {
@@ -102,6 +108,16 @@ export default function ProductImageGallery({
     const resolvedActiveIndex = images.findIndex((image) => image.url === activeUrl);
     const activeIndex = resolvedActiveIndex >= 0 ? resolvedActiveIndex : 0;
     const activeImage = images[activeIndex];
+    const activeDisplayUrl = resolveImageWithFallback(activeImage?.url, failedUrls, fallbackUrl);
+
+    const markImageFailed = useCallback((url: string) => {
+        setFailedUrls((current) => {
+            if (current.has(url)) return current;
+            const next = new Set(current);
+            next.add(url);
+            return next;
+        });
+    }, []);
 
     // Notify parent when active image changes — lets the PDP track which
     // view the customer is looking at (analytics, e.g.).
@@ -152,33 +168,42 @@ export default function ProductImageGallery({
                     transition={{ duration: 0.3 }}
                     style={{ aspectRatio }}
                     className="bg-travertine rounded-none sm:rounded-sm border-0 sm:border border-champagne/50 flex items-center justify-center relative overflow-hidden cursor-zoom-in"
-                    onClick={() => setLightboxOpen(true)}
+                    onClick={() => activeDisplayUrl && setLightboxOpen(true)}
                     role="button"
                     tabIndex={0}
                     onKeyDown={(e) => {
                         if (e.key === "Enter" || e.key === " ") {
                             e.preventDefault();
-                            setLightboxOpen(true);
+                            if (activeDisplayUrl) setLightboxOpen(true);
                         }
                     }}
                     aria-label={`Open ${activeImage.label} image at full size`}
                 >
-                    <Image
-                        src={activeImage.url}
-                        alt={activeImage.alt ?? primaryAlt}
-                        fill
-                        loading="eager"
-                        fetchPriority="high"
-                        data-bb-image-audit={activeImage.auditMeta?.surface ?? "pdp-gallery"}
-                        data-bb-family={activeImage.auditMeta?.family ?? undefined}
-                        data-bb-product-group-slug={activeImage.auditMeta?.productGroupSlug ?? undefined}
-                        data-bb-grace-sku={activeImage.auditMeta?.graceSku ?? undefined}
-                        data-bb-website-sku={activeImage.auditMeta?.websiteSku ?? undefined}
-                        data-bb-shopify-variant-id={activeImage.auditMeta?.shopifyVariantId ?? undefined}
-                        sizes="(min-width: 1024px) 50vw, 100vw"
-                        className={`object-contain ${mainPadding}`}
-                        unoptimized={isRemoteProductImageUrl(activeImage.url)}
-                    />
+                    {activeDisplayUrl ? (
+                        <Image
+                            key={activeDisplayUrl}
+                            src={activeDisplayUrl}
+                            alt={activeImage.alt ?? primaryAlt}
+                            fill
+                            loading="eager"
+                            fetchPriority="high"
+                            data-bb-image-audit={activeImage.auditMeta?.surface ?? "pdp-gallery"}
+                            data-bb-family={activeImage.auditMeta?.family ?? undefined}
+                            data-bb-product-group-slug={activeImage.auditMeta?.productGroupSlug ?? undefined}
+                            data-bb-grace-sku={activeImage.auditMeta?.graceSku ?? undefined}
+                            data-bb-website-sku={activeImage.auditMeta?.websiteSku ?? undefined}
+                            data-bb-shopify-variant-id={activeImage.auditMeta?.shopifyVariantId ?? undefined}
+                            sizes="(min-width: 1024px) 50vw, 100vw"
+                            className={`object-contain ${mainPadding}`}
+                            unoptimized={isRemoteProductImageUrl(activeDisplayUrl)}
+                            onError={() => markImageFailed(activeDisplayUrl)}
+                        />
+                    ) : (
+                        <div className="flex flex-col items-center gap-2 text-slate" role="img" aria-label={`${primaryAlt} image unavailable`}>
+                            <Package className="h-9 w-9 text-champagne" />
+                            <span className="text-[10px] font-semibold uppercase tracking-wider">Image unavailable</span>
+                        </div>
+                    )}
                     {badge && (
                         <div className="absolute top-4 left-4 pointer-events-none">
                             {badge}
@@ -201,6 +226,7 @@ export default function ProductImageGallery({
                 >
                     {images.map((img, i) => {
                         const isActive = i === activeIndex;
+                        const displayUrl = resolveImageWithFallback(img.url, failedUrls, fallbackUrl);
                         return (
                             <button
                                 key={img.url}
@@ -220,20 +246,26 @@ export default function ProductImageGallery({
                                     }
                                 `}
                             >
-                                <Image
-                                    src={img.url}
-                                    alt={img.label}
-                                    fill
-                                    sizes="80px"
-                                    data-bb-image-audit={img.auditMeta?.surface ?? "pdp-gallery-thumb"}
-                                    data-bb-family={img.auditMeta?.family ?? undefined}
-                                    data-bb-product-group-slug={img.auditMeta?.productGroupSlug ?? undefined}
-                                    data-bb-grace-sku={img.auditMeta?.graceSku ?? undefined}
-                                    data-bb-website-sku={img.auditMeta?.websiteSku ?? undefined}
-                                    data-bb-shopify-variant-id={img.auditMeta?.shopifyVariantId ?? undefined}
-                                    className="object-contain p-1.5"
-                                    unoptimized={isRemoteProductImageUrl(img.url)}
-                                />
+                                {displayUrl ? (
+                                    <Image
+                                        key={displayUrl}
+                                        src={displayUrl}
+                                        alt={img.label}
+                                        fill
+                                        sizes="80px"
+                                        data-bb-image-audit={img.auditMeta?.surface ?? "pdp-gallery-thumb"}
+                                        data-bb-family={img.auditMeta?.family ?? undefined}
+                                        data-bb-product-group-slug={img.auditMeta?.productGroupSlug ?? undefined}
+                                        data-bb-grace-sku={img.auditMeta?.graceSku ?? undefined}
+                                        data-bb-website-sku={img.auditMeta?.websiteSku ?? undefined}
+                                        data-bb-shopify-variant-id={img.auditMeta?.shopifyVariantId ?? undefined}
+                                        className="object-contain p-1.5"
+                                        unoptimized={isRemoteProductImageUrl(displayUrl)}
+                                        onError={() => markImageFailed(displayUrl)}
+                                    />
+                                ) : (
+                                    <Package className="absolute inset-0 m-auto h-5 w-5 text-champagne" aria-hidden="true" />
+                                )}
                                 {isActive && (
                                     <span className="absolute inset-x-0 bottom-0 bg-obsidian/85 text-white text-[8px] uppercase tracking-wider py-0.5 text-center font-medium select-none">
                                         {img.label}
@@ -247,7 +279,7 @@ export default function ProductImageGallery({
 
             {/* ── Lightbox ─────────────────────────────────────────────── */}
             <AnimatePresence>
-                {lightboxOpen && (
+                {lightboxOpen && activeDisplayUrl && (
                     <motion.div
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
@@ -268,13 +300,18 @@ export default function ProductImageGallery({
                             onClick={(e) => e.stopPropagation()}
                         >
                             <Image
-                                src={activeImage.url}
+                                key={activeDisplayUrl}
+                                src={activeDisplayUrl}
                                 alt={activeImage.alt ?? primaryAlt}
                                 width={1200}
                                 height={1200}
                                 sizes="100vw"
                                 className="max-w-full max-h-[80vh] object-contain"
-                                unoptimized={isRemoteProductImageUrl(activeImage.url)}
+                                unoptimized={isRemoteProductImageUrl(activeDisplayUrl)}
+                                onError={() => {
+                                    markImageFailed(activeDisplayUrl);
+                                    setLightboxOpen(false);
+                                }}
                             />
 
                             {/* Footer controls — prev / label / next */}

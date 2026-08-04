@@ -229,6 +229,47 @@ export const analytics = {
     adapter.track("Catalog Filtered", properties);
   },
 
+  catalogRefineIncident(properties: {
+    surface: "master" | "cylinder";
+    status: "query_failure" | "count_mismatch" | "constraint_mismatch";
+    expectedCount?: number;
+    renderedCount?: number;
+    capacityCount: number;
+    applicatorCount: number;
+    threadCount: number;
+  }) {
+    adapter.track("Catalog Refine Incident", properties);
+  },
+
+  paperDollViewOpened(properties: {
+    familyKey: string;
+    capacityMl: number;
+    neckThreadSize: string;
+    sku: string;
+  }) {
+    adapter.track("paper_doll_view_opened", properties);
+  },
+
+  paperDollOptionSelected(properties: {
+    familyKey: string;
+    capacityMl: number;
+    neckThreadSize: string;
+    sku: string;
+    dimension: string;
+    value: string;
+  }) {
+    adapter.track("paper_doll_option_selected", properties);
+  },
+
+  paperDollConfigurationResolved(properties: {
+    familyKey: string;
+    capacityMl: number;
+    neckThreadSize: string;
+    sku: string;
+  }) {
+    adapter.track("paper_doll_configuration_resolved", properties);
+  },
+
   // ── Cart & Checkout ──────────────────────────────────────────────────────
 
   cartItemAdded(properties: {

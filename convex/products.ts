@@ -1,12 +1,14 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
     filterGroupedComponentsByFitmentRule,
     normalizeComponentsByType,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 
 function isSanityCdnUrl(value: string) {
     try {
@@ -475,16 +477,6 @@ const APPLICATOR_BUCKETS = [
     { value: "antiquespray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
     { value: "antiquespray-tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
 ] as const;
-const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
-    rollon: ["-rollon"],
-    finemist: ["-spray"],
-    perfumespray: ["-spray"],
-    antiquespray: ["-spray"],
-    "antiquespray-tassel": ["-spray"],
-    dropper: ["-dropper"],
-    lotionpump: ["-lotionpump"],
-    reducer: ["-reducer"],
-};
 const COMPONENT_CATEGORIES = new Set([
     "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
     "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
@@ -618,7 +610,8 @@ export const searchCatalog = query({
             priceMin: args.filters.priceMin ?? null,
             priceMax: args.filters.priceMax ?? null,
         };
-        const allGroups = await ctx.db.query("productGroups").collect();
+        const allGroups = (await ctx.db.query("productGroups").collect())
+            .filter((group) => !isLegacyProductRouteAlias(group.slug));
         const skuPairs = allGroups.map((group) => ({
             groupId: String(group._id),
             websiteSku: group.primaryWebsiteSku ?? null,
@@ -629,9 +622,9 @@ export const searchCatalog = query({
         const matchesApplicatorBucket = (group: typeof allGroups[number], bucket: string) => {
             const bucketDef = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
             if (!bucketDef) return false;
-            if (!(group.applicatorTypes ?? []).some((value) => (bucketDef.productValues as readonly string[]).includes(value))) return false;
-            const allowedSuffixes = SLUG_BUCKET_SUFFIXES[bucket];
-            return !allowedSuffixes || allowedSuffixes.some((suffix) => group.slug.endsWith(suffix));
+            return (group.applicatorTypes ?? []).some((value) =>
+                (bucketDef.productValues as readonly string[]).includes(value)
+            );
         };
 
         const runFilters = (skipKeys = new Set<string>()) => {
@@ -1274,6 +1267,97 @@ export const getGroupsByFamily = query({
             .query("productGroups")
             .withIndex("by_family", (q) => q.eq("family", args.family))
             .collect();
+    },
+});
+
+/**
+ * Dedicated family-page read model.
+ *
+ * Counts and applicator breadth are derived from product rows rather than
+ * cached product-group summaries, which are known to omit the plastic roller
+ * path for some 9 ml Cylinder groups.
+ */
+export const getFamilyPageData = query({
+    args: { family: v.string() },
+    handler: async (ctx, args) => {
+        const groups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+        const eligibleGroups = groups.filter((group) => group.variantCount > 0);
+        const variantsByGroup = await Promise.all(
+            eligibleGroups.map((group) =>
+                ctx.db
+                    .query("products")
+                    .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                    .collect(),
+            ),
+        );
+
+        return buildFamilyPageData(
+            args.family,
+            eligibleGroups.map((group) => ({
+                id: group._id,
+                slug: group.slug,
+                family: group.family,
+                capacity: group.capacity,
+                capacityMl: group.capacityMl,
+                neckThreadSize: group.neckThreadSize,
+                color: group.color,
+                variantCount: group.variantCount,
+                priceRangeMin: group.priceRangeMin,
+                paperDollFamilyKey: group.paperDollFamilyKey ?? null,
+                applicatorTypes: group.applicatorTypes ?? [],
+            })),
+            variantsByGroup.flatMap((variants, index) =>
+                variants.map((variant) => ({
+                    groupId: eligibleGroups[index]._id,
+                    applicator: variant.applicator,
+                })),
+            ),
+        );
+    },
+});
+
+/**
+ * Exact product cohort used by the unified PDP. Capacity is never sufficient:
+ * family, capacity, neck finish, and Sanity family key must all match.
+ */
+export const getProductCohort = query({
+    args: {
+        family: v.string(),
+        capacityMl: v.number(),
+        neckThreadSize: v.string(),
+        paperDollFamilyKey: v.string(),
+    },
+    handler: async (ctx, args) => {
+        const familyGroups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+        const groups = familyGroups.filter((group) =>
+            group.variantCount > 0
+            && group.capacityMl === args.capacityMl
+            && group.neckThreadSize === args.neckThreadSize
+            && group.paperDollFamilyKey === args.paperDollFamilyKey,
+        );
+        const variants = (
+            await Promise.all(
+                groups.map((group) =>
+                    ctx.db
+                        .query("products")
+                        .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                        .collect(),
+                ),
+            )
+        ).flat();
+
+        return {
+            groups,
+            variants,
+            declaredVariantCount: groups.reduce((sum, group) => sum + group.variantCount, 0),
+            actualVariantCount: variants.length,
+        };
     },
 });
 

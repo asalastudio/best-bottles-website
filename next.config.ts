@@ -5,8 +5,7 @@ const projectRoot = process.cwd();
 // ── Validate required environment variables at build time ────────────────
 const requiredEnvVars = [
     "NEXT_PUBLIC_CONVEX_URL",
-    "ELEVENLABS_API_KEY",
-    "ELEVENLABS_VOICE_ID",
+    "OPENAI_API_KEY",
 ] as const;
 
 for (const key of requiredEnvVars) {

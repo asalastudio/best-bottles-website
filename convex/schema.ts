@@ -525,6 +525,92 @@ export default defineSchema({
         .index("by_blobId", ["blobId"]),
 
     // -------------------------------------------------------------------------
+    // GRACE KNOWLEDGE OPERATIONS — minimized traces + controlled corrections
+    // -------------------------------------------------------------------------
+
+    knowledgeTraces: defineTable({
+        requestId: v.string(),
+        conversationId: v.string(),
+        surface: v.union(
+            v.literal("storefront"),
+            v.literal("customer_portal"),
+            v.literal("employee_workspace"),
+            v.literal("executive_hub"),
+            v.literal("chatgpt_app"),
+        ),
+        role: v.union(
+            v.literal("public"),
+            v.literal("customer"),
+            v.literal("support"),
+            v.literal("employee"),
+            v.literal("executive"),
+            v.literal("admin"),
+        ),
+        model: v.string(),
+        startedAt: v.number(),
+        completedAt: v.number(),
+        durationMs: v.number(),
+        status: v.union(
+            v.literal("success"),
+            v.literal("no_match"),
+            v.literal("tool_error"),
+            v.literal("model_error"),
+            v.literal("blocked"),
+        ),
+        inputTokens: v.number(),
+        cachedInputTokens: v.number(),
+        outputTokens: v.number(),
+        audioInputTokens: v.number(),
+        audioOutputTokens: v.number(),
+        fileSearchCalls: v.number(),
+        estimatedCostUsd: v.number(),
+        rateCardVersion: v.string(),
+        toolCalls: v.array(v.object({
+            name: v.string(),
+            durationMs: v.number(),
+            status: v.union(v.literal("success"), v.literal("error"), v.literal("blocked")),
+        })),
+        sourceIds: v.array(v.string()),
+        rawContentStored: v.literal(false),
+    })
+        .index("by_completedAt", ["completedAt"])
+        .index("by_surface", ["surface"])
+        .index("by_status", ["status"]),
+
+    knowledgeCorrections: defineTable({
+        conversationId: v.string(),
+        messageId: v.string(),
+        requestId: v.optional(v.string()),
+        actorId: v.string(),
+        surface: v.union(
+            v.literal("storefront"),
+            v.literal("customer_portal"),
+            v.literal("employee_workspace"),
+            v.literal("executive_hub"),
+            v.literal("chatgpt_app"),
+        ),
+        category: v.union(
+            v.literal("product_truth"),
+            v.literal("compatibility"),
+            v.literal("policy"),
+            v.literal("behavior"),
+            v.literal("missing_knowledge"),
+        ),
+        correction: v.string(),
+        sourceUrl: v.union(v.string(), v.null()),
+        answerExcerpt: v.optional(v.string()),
+        sourceIds: v.optional(v.array(v.string())),
+        status: v.union(v.literal("pending"), v.literal("accepted"), v.literal("rejected")),
+        createdAt: v.number(),
+        updatedAt: v.number(),
+        reviewerId: v.optional(v.union(v.string(), v.null())),
+    })
+        .index("by_status", ["status"])
+        .index("by_requestId", ["requestId"])
+        .index("by_createdAt", ["createdAt"])
+        .index("by_actorId", ["actorId"]),
+
+    // -------------------------------------------------------------------------
     // GRACE PUBLIC ROUTE RATE LIMITS — server-side counters for anonymous flows
     // -------------------------------------------------------------------------
 
