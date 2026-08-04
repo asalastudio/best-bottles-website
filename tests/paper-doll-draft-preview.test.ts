@@ -1,0 +1,93 @@
+import { describe, expect, it } from "vitest";
+import {
+    assertPreviewPaperDollFamily,
+    assertStorefrontPaperDollFamily,
+} from "@/lib/paper-doll/sanity";
+import { isPaperDollDraftPreviewAllowed } from "@/lib/paper-doll/preview";
+
+function draftFamily() {
+    return {
+        _id: "drafts.paperDollRelease.CYL-9ML.1-2-0",
+        familyKey: "CYL-9ML",
+        displayName: "Cylinder 9 mL — 17-415",
+        canvasPreset: "pdp-2080x2288",
+        canvasWidth: 2080,
+        canvasHeight: 2288,
+        pipelineVersion: "paper-doll-capped-source-v3",
+        assetRevision: "1.2.0-capped-dispensers.1",
+        storefrontReady: false,
+        layerOrderRollon: ["body", "roller", "cap"],
+        layerOrderSpray: ["body", "sprayer"],
+        layerOrderShortcap: [],
+        layerOrderLotion: ["body", "pump"],
+        layerAssets: [
+            {
+                _key: "body-clr",
+                slot: "body",
+                variantKey: "CLR",
+                imageUrl: "https://cdn.sanity.io/images/project/production/body.png",
+                imageWidth: 2080,
+                imageHeight: 2288,
+            },
+            {
+                _key: "roller-metal",
+                slot: "roller",
+                variantKey: "MTL-ROLL",
+                imageUrl: "https://cdn.sanity.io/images/project/production/roller.png",
+                imageWidth: 2080,
+                imageHeight: 2288,
+            },
+            {
+                _key: "sprayer-black",
+                slot: "sprayer",
+                variantKey: "BLK",
+                imageUrl: "https://cdn.sanity.io/images/project/production/sprayer.png",
+                imageWidth: 2080,
+                imageHeight: 2288,
+            },
+            {
+                _key: "pump-black",
+                slot: "pump",
+                variantKey: "BLK",
+                imageUrl: "https://cdn.sanity.io/images/project/production/pump.png",
+                imageWidth: 2080,
+                imageHeight: 2288,
+            },
+        ],
+    };
+}
+
+describe("Paper Doll draft preview contract", () => {
+    it("allows an explicit preview only in local development or signed Draft Mode", () => {
+        expect(isPaperDollDraftPreviewAllowed({
+            requested: true,
+            draftModeEnabled: false,
+            nodeEnv: "development",
+        })).toBe(true);
+        expect(isPaperDollDraftPreviewAllowed({
+            requested: true,
+            draftModeEnabled: true,
+            nodeEnv: "production",
+        })).toBe(true);
+        expect(isPaperDollDraftPreviewAllowed({
+            requested: true,
+            draftModeEnabled: false,
+            nodeEnv: "production",
+        })).toBe(false);
+        expect(isPaperDollDraftPreviewAllowed({
+            requested: false,
+            draftModeEnabled: true,
+            nodeEnv: "production",
+        })).toBe(false);
+    });
+
+    it("accepts a structurally valid draft without weakening the public release gate", () => {
+        expect(() => assertStorefrontPaperDollFamily(draftFamily())).toThrow("storefrontReady must be true");
+        expect(assertPreviewPaperDollFamily(draftFamily())).toMatchObject({
+            familyKey: "CYL-9ML",
+            storefrontReady: false,
+            assetRevision: "1.2.0-capped-dispensers.1",
+        });
+    });
+});
+
