@@ -7,7 +7,7 @@ import { POST as graceToolsPost } from "../src/app/api/grace/tools/route";
 import {
     executePublicGraceToolCall,
     parsePublicGraceToolCall,
-} from "../src/app/api/grace/tools/route";
+} from "../src/lib/grace/publicToolCallServer";
 
 describe("provider-neutral Grace tool executor", () => {
     it("exports an injectable server executor", () => {

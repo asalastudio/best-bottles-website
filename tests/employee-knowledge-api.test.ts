@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 vi.mock("server-only", () => ({}));
 
-import { createKnowledgeChatHandler } from "../src/app/api/knowledge/chat/route";
+import { createKnowledgeChatHandler } from "../src/lib/knowledge/chatHandlerServer";
 import { KnowledgeResponseExecutionError } from "../src/lib/knowledge/openaiResponsesServer";
 
 const serverContext = {

@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from "vitest";
 
 vi.mock("server-only", () => ({}));
 
-import { createCorrectionHandler } from "../src/app/api/knowledge/corrections/route";
+import { createCorrectionHandler } from "../src/lib/knowledge/correctionHandlerServer";
 
 const context = {
     surface: "employee_workspace" as const,
