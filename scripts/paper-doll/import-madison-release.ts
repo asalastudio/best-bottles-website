@@ -61,13 +61,11 @@ async function verifyReleaseFiles(manifest: MadisonPaperDollReleaseManifest, ass
             throw new Error(`${asset.slot}:${asset.variantKey} SHA-256 mismatch; release=${asset.imageSha256}, file=${actualSha}`);
         }
         const metadata = await sharp(bytes).metadata();
-        if (
-            metadata.width !== 2080
-            || metadata.height !== 2288
-            || metadata.hasAlpha !== true
-            || metadata.channels !== 4
-        ) {
-            throw new Error(`${asset.slot}:${asset.variantKey} must be a 2080×2288 RGBA PNG`);
+        const validChannels = asset.slot === "body"
+            ? metadata.channels === 3 || metadata.channels === 4
+            : metadata.hasAlpha === true && metadata.channels === 4;
+        if (metadata.width !== 2080 || metadata.height !== 2288 || !validChannels) {
+            throw new Error(`${asset.slot}:${asset.variantKey} must be a 2080×2288 PNG; component layers require RGBA while body plates may be RGB or RGBA`);
         }
         verified.push({ asset, absolutePath });
     }
@@ -84,7 +82,7 @@ function withoutSystemFields(value: Record<string, unknown> | null): Record<stri
 async function main() {
     const options = parseOptions(process.argv.slice(2));
     const manifest = JSON.parse(await readFile(options.manifestPath, "utf8")) as MadisonPaperDollReleaseManifest;
-    const issues = validateMadisonReleaseManifest(manifest);
+    const issues = validateMadisonReleaseManifest(manifest, { target: "draft" });
     if (issues.length > 0) {
         throw new Error(`Madison release is not eligible for Sanity draft import:\n- ${issues.join("\n- ")}`);
     }
