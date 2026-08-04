@@ -34,7 +34,7 @@ The query parameter alone must never expose Sanity drafts in a public production
 1. The product page detects a permitted Paper Doll preview request.
 2. A server-only authenticated Sanity client reads the `paperDollFamily` draft using the `previewDrafts` perspective.
 3. The family draft resolves its `currentRelease` reference to the corresponding draft release.
-4. The draft release is validated with the same canvas, URL, dimension, unique-layer, and layer-order checks as a public release, except `storefrontReady` is not required.
+4. The draft release is validated with the same canvas, URL, dimension, unique-layer, and layer-order structure checks as a public release. Draft preview does not require `storefrontReady` or complete coverage of every ordered slot; missing selected layers are reported by configuration preflight. Public validation remains strict on both requirements.
 5. The validated preview family is passed to the existing `UnifiedBottlePdp` and `PaperDollCanvas`.
 6. The browser never receives the Sanity token.
 
@@ -86,4 +86,3 @@ Run the focused Paper Doll and unified PDP tests plus TypeScript validation befo
 ## Public release boundary
 
 This feature does not publish Sanity documents. Public visibility still requires a separate named approval after the cap blockers are resolved, followed by publication of the immutable release and the `paperDollFamily` document that points to it.
-

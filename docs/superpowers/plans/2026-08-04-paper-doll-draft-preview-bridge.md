@@ -52,7 +52,7 @@ Expected: FAIL because the preview access and preview validator exports do not e
 
 - [ ] **Step 3: Implement the minimal access helper and shared structural validator**
 
-`preview.ts` must return true only when `requested` is true and either Draft Mode is enabled or `nodeEnv === "development"`. Refactor the existing parser in `sanity.ts` so one internal validator accepts `{ requireStorefrontReady: boolean }`; the public assertion passes `true`, and the preview assertion passes `false`. All existing dimension, URL, layer-order, uniqueness, and metadata checks remain shared.
+`preview.ts` must return true only when `requested` is true and either Draft Mode is enabled or `nodeEnv === "development"`. Refactor the existing parser in `sanity.ts` so one internal validator accepts `{ requireStorefrontReady: boolean; requireLayerOrderCoverage: boolean }`. The public assertion passes `true` for both requirements. The preview assertion passes `false` for both, while retaining layer-order structure, dimension, URL, uniqueness, and metadata checks; per-configuration preflight reports missing selected layers.
 
 - [ ] **Step 4: Run focused and existing contract tests**
 
@@ -217,4 +217,3 @@ Expected: only pre-existing unrelated user changes remain; the preview work is c
 - [ ] **Step 4: Handoff the local preview**
 
 Leave the verified Chrome tab open at the preview URL and report the exact remaining cap blockers. Do not publish the Sanity release or family document.
-
