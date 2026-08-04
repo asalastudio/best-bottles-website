@@ -126,9 +126,12 @@ export const JOURNAL_SLUGS_QUERY = `
 `;
 
 import { client, isSanityConfigured } from "./client";
+import { previewServerClient } from "./serverClient";
 import {
+    assertPreviewPaperDollFamily,
     assertStorefrontPaperDollFamily,
     selectStorefrontPaperDollReleaseCandidate,
+    type RenderablePaperDollFamily,
     type StorefrontPaperDollFamily,
 } from "@/lib/paper-doll/sanity";
 
@@ -246,6 +249,16 @@ export async function getStorefrontPaperDollFamily(
     const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
     if (!family) return null;
     return assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
+}
+
+/** Fetch a structurally valid Paper Doll draft through the private preview client. */
+export async function getPreviewPaperDollFamily(
+    familyKey: string,
+): Promise<RenderablePaperDollFamily | null> {
+    if (!previewServerClient) return null;
+    const family = await previewServerClient.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
+    if (!family) return null;
+    return assertPreviewPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
 }
 
 export type ProductFamilyPageContent = {

@@ -1,8 +1,8 @@
-import type { StorefrontPaperDollFamily, StorefrontPaperDollLayer } from "./sanity";
+import type { RenderablePaperDollFamily, StorefrontPaperDollLayer } from "./sanity";
 import type { PaperDollConfiguration, PaperDollLayerKeys } from "./types";
 
 export function resolvePaperDollLayers(
-    family: StorefrontPaperDollFamily,
+    family: RenderablePaperDollFamily,
     configuration: PaperDollConfiguration,
 ): StorefrontPaperDollLayer[] {
     const order = configuration.mode === "rollon"

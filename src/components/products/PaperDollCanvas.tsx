@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 import { resolvePaperDollLayers } from "@/lib/paper-doll/render";
-import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
+import type { RenderablePaperDollFamily } from "@/lib/paper-doll/sanity";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 
 export default function PaperDollCanvas({
@@ -11,7 +11,7 @@ export default function PaperDollCanvas({
     selected,
     onFailure,
 }: {
-    family: StorefrontPaperDollFamily;
+    family: RenderablePaperDollFamily;
     selected: PaperDollConfiguration;
     onFailure?: () => void;
 }) {

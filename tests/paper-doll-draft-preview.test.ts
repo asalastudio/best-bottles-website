@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
     assertPreviewPaperDollFamily,
@@ -89,5 +90,18 @@ describe("Paper Doll draft preview contract", () => {
             assetRevision: "1.2.0-capped-dispensers.1",
         });
     });
-});
 
+    it("keeps draft reads server-only and explicitly gated by the product page", () => {
+        const serverClientSource = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
+        const queriesSource = readFileSync("src/sanity/lib/queries.ts", "utf8");
+        const productPageSource = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
+
+        expect(serverClientSource).toContain('import "server-only"');
+        expect(serverClientSource).toContain('perspective: "previewDrafts"');
+        expect(serverClientSource).toContain("SANITY_API_READ_TOKEN");
+        expect(serverClientSource).not.toContain("NEXT_PUBLIC_SANITY_API_READ_TOKEN");
+        expect(queriesSource).toContain("getPreviewPaperDollFamily");
+        expect(productPageSource).toContain("isPaperDollDraftPreviewAllowed");
+        expect(productPageSource).toContain("paperDollPreview={paperDollPreview}");
+    });
+});

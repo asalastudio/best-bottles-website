@@ -12,7 +12,7 @@ import PaperDollCanvas from "./PaperDollCanvas";
 import ProductImageGallery, { type GalleryImage } from "./ProductImageGallery";
 import { analytics } from "@/lib/analytics";
 import { isCheckoutReady } from "@/lib/checkout";
-import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
+import type { RenderablePaperDollFamily } from "@/lib/paper-doll/sanity";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
     GRACE_PAPER_DOLL_SELECT_EVENT,
@@ -59,9 +59,11 @@ function formatPrice(value: number | null | undefined): string {
 export default function UnifiedBottlePdp({
     configurations,
     paperDollFamily,
+    paperDollPreview = false,
 }: {
     configurations: PaperDollConfiguration[];
-    paperDollFamily: StorefrontPaperDollFamily | null;
+    paperDollFamily: RenderablePaperDollFamily | null;
+    paperDollPreview?: boolean;
 }) {
     const router = useRouter();
     const searchParams = useSearchParams();
