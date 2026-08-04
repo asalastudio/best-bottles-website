@@ -47,6 +47,9 @@ import {
 } from "@/lib/products/product-card-variant-previews";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
+import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
+import { analytics } from "@/lib/analytics";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -1315,6 +1318,8 @@ export default function CatalogClient({
     const [searchInput, setSearchInput] = useState(initialState.filters.search);
     const [activeResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
+    const [queryError, setQueryError] = useState<string | null>(null);
+    const [retryNonce, setRetryNonce] = useState(0);
 
     // Sync externally-driven URL changes (including Grace) into the live grid.
     // Local state is intentional for responsive interactions, but the URL is
@@ -1461,37 +1466,43 @@ export default function CatalogClient({
 
     useEffect(() => {
         const controller = new AbortController();
-        window.setTimeout(() => {
-            if (!controller.signal.aborted) setIsFetchingCatalog(true);
+        const loadingTimer = window.setTimeout(() => {
+            if (!controller.signal.aborted) {
+                setIsFetchingCatalog(true);
+                setQueryError(null);
+            }
         }, 0);
-        fetch("/api/catalog/search", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                filters,
-                sort: sortBy,
-                view: viewMode,
-                limit: queryLimit,
-                cursor: null,
-            }),
-            signal: controller.signal,
-        })
-            .then((response) => {
-                if (!response.ok) throw new Error("Catalog search failed");
-                return response.json() as Promise<CatalogSearchResult>;
-            })
+        fetchCatalogSearch(buildCatalogSearchArgs({
+            surface: MASTER_CATALOG_SURFACE,
+            filters,
+            sort: sortBy,
+            view: viewMode,
+            limit: queryLimit,
+        }), controller.signal)
             .then((result) => {
-                setActiveResult(result);
+                setActiveResult(result as CatalogSearchResult);
             })
             .catch((error) => {
                 if (error instanceof DOMException && error.name === "AbortError") return;
                 console.error("[Catalog] Search failed:", error);
+                setQueryError("Unable to update these results. Your selected filters are still applied.");
+                analytics.catalogRefineIncident({
+                    surface: "master",
+                    status: "query_failure",
+                    capacityCount: filters.capacities.length,
+                    applicatorCount: filters.applicators.length,
+                    threadCount: filters.neckThreadSizes.length,
+                });
             })
             .finally(() => {
+                window.clearTimeout(loadingTimer);
                 if (!controller.signal.aborted) setIsFetchingCatalog(false);
             });
-        return () => controller.abort();
-    }, [filters, sortBy, viewMode, queryLimit]);
+        return () => {
+            controller.abort();
+            window.clearTimeout(loadingTimer);
+        };
+    }, [filters, sortBy, viewMode, queryLimit, retryNonce]);
 
     // ── Handler Functions ────────────────────────────────────────────────────
 
@@ -1564,6 +1575,9 @@ export default function CatalogClient({
             handleFilterChange(removeCatalogFilterChip(filters, chip));
         },
     }));
+    const activeConstraintSummary = buildAppliedFilterChips(filters)
+        .map((chip) => chip.label)
+        .join(" · ");
 
     const selectedApplicatorLabel = filters.applicators.length === 1
         ? APPLICATOR_BUCKETS.find((b) => b.value === filters.applicators[0])?.label ?? filters.applicators[0]
@@ -1970,6 +1984,12 @@ export default function CatalogClient({
                         </div>
 
                         {/* Loading */}
+                        {queryError && (
+                            <div role="alert" className="mb-4 flex flex-col gap-3 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900 sm:flex-row sm:items-center sm:justify-between">
+                                <span>{queryError}</span>
+                                <button type="button" onClick={() => setRetryNonce((value) => value + 1)} className="min-h-11 border border-red-300 bg-white px-4 text-[10px] font-bold uppercase tracking-wider">Retry</button>
+                            </div>
+                        )}
                         {isLoading && <SkeletonGrid />}
 
                         {/* Empty State */}
@@ -1985,7 +2005,7 @@ export default function CatalogClient({
                                 </p>
                                 {chips.length > 0 && (
                                     <p className="text-slate text-xs mb-6">
-                                        Try removing {chips.length === 1 ? "your filter" : "some filters"} to see more results.
+                                        Active constraints: {activeConstraintSummary}. Remove one constraint or clear all to see more results.
                                     </p>
                                 )}
                                 {searchRecoverySuggestions.length > 0 && (
@@ -2054,7 +2074,7 @@ export default function CatalogClient({
                         </AnimatePresence>
 
                         {/* Product Display — Visual Grid or Line Items */}
-                        <div className={`transition-opacity duration-300 ${isFetchingCatalog && activeResult.items.length > 0 ? "opacity-50 pointer-events-none" : "opacity-100"}`}>
+                        <div aria-busy={isFetchingCatalog} className={`transition-opacity duration-300 ${isFetchingCatalog && activeResult.items.length > 0 ? "opacity-50 pointer-events-none" : "opacity-100"}`}>
                             {visibleProducts.length > 0 && viewMode === "visual" && (
                                 <CatalogProductGrid>
                                     {visibleProducts.map((group: CatalogGroup, pIndex: number) => (

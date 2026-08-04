@@ -440,6 +440,7 @@ export default function CylinderFamilyPageClient({
     const [activeCatalog, setActiveCatalog] = useState(initialReadyMadeCatalog);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
     const [queryError, setQueryError] = useState<string | null>(null);
+    const [retryNonce, setRetryNonce] = useState(0);
     const [mobileDraft, setMobileDraft] = useState<CatalogFilters>(refine);
     const [mobileDraftCount, setMobileDraftCount] = useState(initialReadyMadeCatalog.totalCount);
 
@@ -449,8 +450,10 @@ export default function CylinderFamilyPageClient({
 
     useEffect(() => {
         const controller = new AbortController();
-        const loadingTimer = window.setTimeout(() => setIsFetchingCatalog(true), 0);
-        setQueryError(null);
+        const loadingTimer = window.setTimeout(() => {
+            setIsFetchingCatalog(true);
+            setQueryError(null);
+        }, 0);
         fetchCatalogSearch(buildCatalogSearchArgs({
             surface: CYLINDER_CATALOG_SURFACE,
             filters: refine,
@@ -497,7 +500,7 @@ export default function CylinderFamilyPageClient({
             controller.abort();
             window.clearTimeout(loadingTimer);
         };
-    }, [refine, sortBy]);
+    }, [refine, sortBy, retryNonce]);
 
     useEffect(() => {
         if (!mobileRefineOpen) return;
@@ -569,6 +572,7 @@ export default function CylinderFamilyPageClient({
         () => buildAppliedFilterChips(refine).filter((chip) => chip.facet !== "families"),
         [refine],
     );
+    const activeConstraintSummary = chips.map((chip) => chip.label).join(" · ");
 
     const activeFilterCount = chips.length;
     const heroImageUrl = editorial?.familyHeroImageUrl || "/assets/Cylinder-BB.png";
@@ -717,7 +721,7 @@ export default function CylinderFamilyPageClient({
                             {queryError && (
                                 <div role="alert" className="mb-4 flex flex-col gap-3 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900 sm:flex-row sm:items-center sm:justify-between">
                                     <span>{queryError}</span>
-                                    <button type="button" onClick={() => commitRefine(refine)} className="min-h-11 border border-red-300 bg-white px-4 text-[10px] font-bold uppercase tracking-wider">Retry</button>
+                                    <button type="button" onClick={() => setRetryNonce((value) => value + 1)} className="min-h-11 border border-red-300 bg-white px-4 text-[10px] font-bold uppercase tracking-wider">Retry</button>
                                 </div>
                             )}
                             {visibleCards.length > 0 ? (
@@ -728,7 +732,11 @@ export default function CylinderFamilyPageClient({
                                 <div className="flex min-h-80 flex-col items-center justify-center border border-champagne bg-bone p-8 text-center">
                                     <Package className="h-10 w-10 text-champagne" />
                                     <h3 className="mt-4 font-serif text-2xl text-obsidian">No Cylinder groups match</h3>
-                                    <p className="mt-2 text-sm text-slate">Remove one or more filters to see compatible bottle groups.</p>
+                                    <p className="mt-2 max-w-xl text-sm text-slate">
+                                        {activeConstraintSummary
+                                            ? `Active constraints: ${activeConstraintSummary}. Remove one constraint or clear all to see more groups.`
+                                            : "No ready-made Cylinder groups are currently available."}
+                                    </p>
                                     <button onClick={clearFilters} className="mt-5 min-h-11 bg-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-white">Clear filters</button>
                                 </div>
                             )}
