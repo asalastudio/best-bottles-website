@@ -241,7 +241,7 @@ export default function UnifiedBottlePdp({
                                 <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">Return to Beauty View</button>
                             </div>
                         ) : (
-                            <ProductImageGallery images={images} primaryAlt={productName} aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
+                            <ProductImageGallery images={images} primaryAlt={productName} fallbackUrl="/assets/Cylinder-BB.png" aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
                         )}
                         <div className="mt-4 grid grid-cols-3 border border-champagne bg-bone text-center">
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Glass</p><p className="mt-1 text-xs font-semibold">{selected.glassLabel}</p></div>

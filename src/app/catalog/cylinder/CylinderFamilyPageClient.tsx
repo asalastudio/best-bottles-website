@@ -47,6 +47,7 @@ import {
     type CylinderRefineDimension,
 } from "@/lib/products/cylinder-family-refine";
 import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
+import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 import type { ProductFamilyPageContent } from "@/sanity/lib/queries";
 
 type Props = {
@@ -103,6 +104,16 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
     const [rollerMaterial, setRollerMaterial] = useState("Metal");
     const [finish, setFinish] = useState("Matte Gold");
     const [mobileStep, setMobileStep] = useState<"glass" | "applicator" | "finish" | null>(null);
+    const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());
+
+    const markImageFailed = useCallback((url: string) => {
+        setFailedImages((current) => {
+            if (current.has(url)) return current;
+            const next = new Set(current);
+            next.add(url);
+            return next;
+        });
+    }, []);
 
     const images = useMemo(() => {
         const groupById = new Map(catalog.items.map((group) => [group._id, group]));
@@ -150,7 +161,7 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
         <div className="grid grid-cols-5 gap-2">
             {CYLINDER_9ML_BUILDER_OPTIONS.glassColors.map((label) => {
                 const selected = glass === label;
-                const imageUrl = images.byGlass.get(label);
+                const imageUrl = resolveImageWithFallback(images.byGlass.get(label), failedImages);
                 return (
                     <button
                         key={label}
@@ -161,7 +172,7 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
                     >
                         <span className="relative mx-auto block h-12 w-full overflow-hidden bg-bone md:h-9">
                             {imageUrl ? (
-                                <Image src={imageUrl} alt="" fill unoptimized className="object-contain" sizes="80px" />
+                                <Image src={imageUrl} alt="" fill unoptimized className="object-contain" sizes="80px" onError={() => markImageFailed(imageUrl)} />
                             ) : (
                                 <span className="absolute inset-2 border border-champagne" style={{ background: GLASS_SWATCHES[label] }} />
                             )}
@@ -177,7 +188,7 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
         <div className="grid grid-cols-3 gap-2">
             {CYLINDER_9ML_BUILDER_OPTIONS.applicatorSystems.map((label) => {
                 const selected = applicator === label;
-                const imageUrl = images.byApplicator.get(label);
+                const imageUrl = resolveImageWithFallback(images.byApplicator.get(label), failedImages);
                 return (
                     <button
                         key={label}
@@ -187,7 +198,7 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
                         className={`border bg-white px-2 py-2 text-center transition-colors md:py-1 ${selected ? "border-obsidian ring-1 ring-obsidian" : "border-champagne hover:border-muted-gold"}`}
                     >
                         <span className="relative mx-auto block h-14 w-full bg-bone md:h-10">
-                            {imageUrl ? <Image src={imageUrl} alt="" fill unoptimized className="object-contain" sizes="100px" /> : <Package className="absolute inset-0 m-auto h-7 w-7 text-champagne" />}
+                            {imageUrl ? <Image src={imageUrl} alt="" fill unoptimized className="object-contain" sizes="100px" onError={() => markImageFailed(imageUrl)} /> : <Package className="absolute inset-0 m-auto h-7 w-7 text-champagne" />}
                         </span>
                         <span className="mt-1 block text-[10px] font-semibold leading-tight text-obsidian">{label}</span>
                         {label === "Roll-On" && <span className="block text-[8px] text-slate">metal or plastic</span>}

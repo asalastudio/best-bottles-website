@@ -30,4 +30,10 @@ describe("employee knowledge workspace", () => {
         expect(source.indexOf("hasTeamHubAccess")).toBeLessThan(source.lastIndexOf("<EmployeeKnowledgeWorkspace"));
         expect(source).not.toContain("publicMetadata=");
     });
+
+    it("does not label an anonymous workspace visitor as signed in", () => {
+        const source = readFileSync("src/components/grace-workspace/WorkspaceShell.tsx", "utf8");
+        expect(source).toContain('user ? "Signed in" : "Sign in required"');
+        expect(source).toContain(': "Guest";');
+    });
 });

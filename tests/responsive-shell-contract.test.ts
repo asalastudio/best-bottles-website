@@ -24,6 +24,7 @@ describe("responsive shell contract", () => {
         const globals = read("src/app/globals.css");
         const mobileTabs = read("src/components/mobile/MobileTabBar.tsx");
         const cartDrawer = read("src/components/CartDrawer.tsx");
+        const footer = read("src/components/Footer.tsx");
 
         expect(globals).toContain("--mobile-tab-bar-clearance:");
         expect(globals).toContain("--mobile-tab-bar-height: calc(3.5rem + 1px)");
@@ -32,5 +33,6 @@ describe("responsive shell contract", () => {
         expect(mobileTabs).toContain("xl:hidden");
         expect(cartDrawer).toContain("bottom-[var(--mobile-tab-bar-clearance)]");
         expect(cartDrawer).toContain("xl:bottom-0");
+        expect(footer).toContain("pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8");
     });
 });
