@@ -9,7 +9,7 @@ import {
     selectCylinderConfiguration,
 } from "@/lib/products/unified-cylinder-pdp";
 import { buildCylinder9mlConfigurations } from "@/lib/products/cylinder-9ml-configurator";
-import { resolvePaperDollLayers } from "@/lib/paper-doll/render";
+import { resolvePaperDollLayers, resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
 import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
 import { swirlWhiteCapFixtures } from "./fixtures/cylinder-9ml";
 
@@ -251,5 +251,22 @@ describe("unified Cylinder PDP state", () => {
         } as StorefrontPaperDollFamily;
 
         expect(() => resolvePaperDollLayers(family, configurations[0])).toThrow(/roller:MTL-ROLL/);
+        expect(resolvePaperDollLayersResult(family, configurations[0])).toEqual({
+            ok: false,
+            missing: {
+                slot: "roller",
+                variantKey: "MTL-ROLL",
+                sku: "GB-CYL-CLR-9ML-MRL-WHT",
+            },
+        });
+    });
+
+    it("labels draft preview and exposes exact missing-layer diagnostics", () => {
+        const source = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
+
+        expect(source).toContain("Draft preview — not publicly released");
+        expect(source).toContain("resolvePaperDollLayersResult");
+        expect(source).toContain("layerResolution.missing.slot");
+        expect(source).toContain("layerResolution.missing.variantKey");
     });
 });

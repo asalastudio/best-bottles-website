@@ -5,6 +5,8 @@ import {
     assertStorefrontPaperDollFamily,
 } from "@/lib/paper-doll/sanity";
 import { isPaperDollDraftPreviewAllowed } from "@/lib/paper-doll/preview";
+import { resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
+import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 
 function draftFamily() {
     return {
@@ -103,5 +105,25 @@ describe("Paper Doll draft preview contract", () => {
         expect(queriesSource).toContain("getPreviewPaperDollFamily");
         expect(productPageSource).toContain("isPaperDollDraftPreviewAllowed");
         expect(productPageSource).toContain("paperDollPreview={paperDollPreview}");
+    });
+
+    it("preflights each draft configuration without throwing or substituting layers", () => {
+        const spray = {
+            graceSku: "GB-CYL-CLR-9ML-SPR-BLK",
+            mode: "spray",
+            layerKeys: { body: "CLR", sprayer: "BLK" },
+        } as PaperDollConfiguration;
+        const rollon = {
+            graceSku: "GB-CYL-CLR-9ML-MRL-WHT",
+            mode: "rollon",
+            layerKeys: { body: "CLR", roller: "MTL-ROLL", cap: "WHT" },
+        } as PaperDollConfiguration;
+        const family = assertPreviewPaperDollFamily(draftFamily());
+
+        expect(resolvePaperDollLayersResult(family, spray)).toMatchObject({ ok: true });
+        expect(resolvePaperDollLayersResult(family, rollon)).toEqual({
+            ok: false,
+            missing: { slot: "cap", variantKey: "WHT", sku: rollon.graceSku },
+        });
     });
 });

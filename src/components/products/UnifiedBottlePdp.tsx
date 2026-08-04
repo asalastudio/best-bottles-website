@@ -13,6 +13,7 @@ import ProductImageGallery, { type GalleryImage } from "./ProductImageGallery";
 import { analytics } from "@/lib/analytics";
 import { isCheckoutReady } from "@/lib/checkout";
 import type { RenderablePaperDollFamily } from "@/lib/paper-doll/sanity";
+import { resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
     GRACE_PAPER_DOLL_SELECT_EVENT,
@@ -68,7 +69,9 @@ export default function UnifiedBottlePdp({
     const router = useRouter();
     const searchParams = useSearchParams();
     const { addItems } = useCart();
-    const buildReady = isUnifiedCylinderBuildReady(configurations, Boolean(paperDollFamily));
+    const buildReady = paperDollPreview
+        ? Boolean(paperDollFamily)
+        : isUnifiedCylinderBuildReady(configurations, Boolean(paperDollFamily));
     const view = resolveUnifiedPdpView(searchParams.get("view"));
     const [selectedSku, setSelectedSku] = useState(() => initialFromSearch(configurations, new URLSearchParams(searchParams.toString())).graceSku);
     const [qty, setQty] = useState(1);
@@ -82,6 +85,10 @@ export default function UnifiedBottlePdp({
     const selected = queryResolution && !queryResolution.invalidConfiguration
         ? queryResolution.configuration
         : configurations.find((configuration) => configuration.graceSku === selectedSku) ?? configurations[0];
+    const layerResolution = useMemo(
+        () => paperDollFamily ? resolvePaperDollLayersResult(paperDollFamily, selected) : null,
+        [paperDollFamily, selected],
+    );
 
     useEffect(() => {
         if (queryResolution?.invalidConfiguration) {
@@ -229,17 +236,32 @@ export default function UnifiedBottlePdp({
                                 {!buildReady && <span className="mt-0.5 block text-[9px] font-medium text-slate">Layered preview in preparation</span>}
                             </button>
                         </div>
-                        {view === "build" && buildReady && paperDollFamily && !canvasFailed ? (
-                            <PaperDollCanvas family={paperDollFamily} selected={selected} onFailure={() => setCanvasFailed(true)} />
+                        {paperDollPreview && (
+                            <div className="mb-3 border border-muted-gold bg-[#fff4d8] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-obsidian" role="status">
+                                Draft preview — not publicly released
+                            </div>
+                        )}
+                        {view === "build" && buildReady && paperDollFamily && layerResolution?.ok && !canvasFailed ? (
+                            <PaperDollCanvas family={paperDollFamily} selected={selected} preview={paperDollPreview} onFailure={() => setCanvasFailed(true)} />
                         ) : view === "build" ? (
                             <div className="flex aspect-[10/11] min-h-[360px] sm:min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
                                 <Package className="h-10 w-10 text-muted-gold" />
                                 <h2 className="mt-4 font-serif text-2xl text-obsidian">
-                                    {canvasFailed ? "Layered preview temporarily unavailable" : "Layered preview in preparation"}
+                                    {layerResolution && !layerResolution.ok
+                                        ? "Draft configuration incomplete"
+                                        : canvasFailed
+                                            ? "Layered preview temporarily unavailable"
+                                            : "Layered preview in preparation"}
                                 </h2>
-                                <p className="mt-2 max-w-md text-sm leading-6 text-slate">
-                                    You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
-                                </p>
+                                {layerResolution && !layerResolution.ok ? (
+                                    <p className="mt-2 max-w-md text-sm leading-6 text-slate" role="alert">
+                                        Missing {layerResolution.missing.slot} layer: {layerResolution.missing.variantKey ?? "unassigned"}
+                                    </p>
+                                ) : (
+                                    <p className="mt-2 max-w-md text-sm leading-6 text-slate">
+                                        You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
+                                    </p>
+                                )}
                                 <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">Return to Beauty View</button>
                             </div>
                         ) : (
