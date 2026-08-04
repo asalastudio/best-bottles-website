@@ -229,6 +229,18 @@ export const analytics = {
     adapter.track("Catalog Filtered", properties);
   },
 
+  catalogRefineIncident(properties: {
+    surface: "master" | "cylinder";
+    status: "query_failure" | "count_mismatch" | "constraint_mismatch";
+    expectedCount?: number;
+    renderedCount?: number;
+    capacityCount: number;
+    applicatorCount: number;
+    threadCount: number;
+  }) {
+    adapter.track("Catalog Refine Incident", properties);
+  },
+
   paperDollViewOpened(properties: {
     familyKey: string;
     capacityMl: number;
