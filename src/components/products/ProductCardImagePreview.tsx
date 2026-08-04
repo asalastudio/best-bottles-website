@@ -9,6 +9,7 @@ import {
     type ProductCardVariantPreview,
 } from "@/lib/products/product-card-variant-previews";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 
 type ProductCardImagePreviewProps = {
     productTitle: string;
@@ -186,6 +187,7 @@ export default function ProductCardImagePreview({
         [previews],
     );
     const [activePreviewId, setActivePreviewId] = useState<string | null>(previewablePreviews[0]?.id ?? null);
+    const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());
 
     const activePreview = previewablePreviews.find((preview) => preview.id === activePreviewId) ?? previewablePreviews[0] ?? null;
     const displayImage = activePreview?.imageUrl
@@ -201,6 +203,22 @@ export default function ProductCardImagePreview({
             graceSku: auditMeta?.graceSku ?? null,
             websiteSku: auditMeta?.websiteSku ?? null,
         };
+    const fallbackImageUrl = activePreview?.imageUrl && defaultImage.url !== activePreview.imageUrl
+        ? defaultImage.url
+        : null;
+    const resolvedImageUrl = resolveImageWithFallback(displayImage.url, failedImages, fallbackImageUrl);
+    const resolvedImageAlt = resolvedImageUrl === displayImage.url
+        ? displayImage.alt
+        : defaultImage.alt ?? productTitle;
+
+    const markImageFailed = (url: string) => {
+        setFailedImages((current) => {
+            if (current.has(url)) return current;
+            const next = new Set(current);
+            next.add(url);
+            return next;
+        });
+    };
 
     const handlePreview = (preview: ProductCardVariantPreview) => {
         setActivePreviewId(preview.id);
@@ -222,11 +240,11 @@ export default function ProductCardImagePreview({
                     className="absolute inset-0 z-10"
                     aria-label={`View ${productTitle}`}
                 />
-                {displayImage.url ? (
+                {resolvedImageUrl ? (
                     <Image
-                        key={displayImage.url}
-                        src={displayImage.url}
-                        alt={displayImage.alt ?? productTitle}
+                        key={resolvedImageUrl}
+                        src={resolvedImageUrl}
+                        alt={resolvedImageAlt ?? productTitle}
                         fill
                         data-bb-image-audit={auditMeta?.surface}
                         data-bb-family={auditMeta?.family ?? undefined}
@@ -236,6 +254,7 @@ export default function ProductCardImagePreview({
                         data-bb-shopify-variant-id={auditMeta?.shopifyVariantId ?? undefined}
                         className="object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                        onError={() => markImageFailed(resolvedImageUrl)}
                     />
                 ) : (
                     <div className="flex h-full flex-col items-center justify-center p-4 text-center">

@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import { resolveImageWithFallback } from "@/lib/products/image-fallback";
 
 describe("product image fallback", () => {
@@ -21,5 +22,12 @@ describe("product image fallback", () => {
 
         expect(resolveImageWithFallback("https://cdn.example.com/bottle.png", failed, "/assets/Cylinder-BB.png"))
             .toBeNull();
+    });
+
+    it("removes a failed product-card image and renders the honest placeholder", () => {
+        const source = readFileSync("src/components/products/ProductCardImagePreview.tsx", "utf8");
+
+        expect(source).toContain("resolveImageWithFallback(displayImage.url, failedImages, fallbackImageUrl)");
+        expect(source).toContain("onError={() => markImageFailed(resolvedImageUrl)}");
     });
 });
