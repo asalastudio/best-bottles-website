@@ -1,7 +1,7 @@
 # Cylinder Beauty Hero Gallery Design
 
 **Date:** 2026-08-04  
-**Status:** Approved for implementation planning  
+**Status:** Programmatic production set published and storefront-verified
 **Scope:** Best Bottles 9 mL Cylinder, 17-415 platform (`CYL-9ML`)
 
 ## Objective
@@ -41,18 +41,18 @@ The PSD establishes bottle geometry, glass treatment, neck and thread structure,
 
 ### Background
 
-- Seamless bone paper: `#EFE9DE`.
+- Warm ivory studio sweep with the approved soft tonal falloff.
 - Matte, warm-neutral, and nearly achromatic.
-- No horizon line, sweep edge, gradient band, environmental context, or visible studio equipment.
-- The background, exposure, white balance, and shadow color remain constant across all five images.
+- No hard horizon line, environmental context, or visible studio equipment.
+- Background, exposure, white balance, and shadow color remain constant across all five images.
 
 ### Pedestal
 
-- One turned cylindrical disc, approximately 140 mm diameter by 40 mm tall.
-- Honed ultra-high-performance micro-concrete, integrally pigmented Warm Gray `#8D8880`.
-- Near-poreless glassy-fine mineral matrix with no visible aggregate, pinholes, grain, veining, or trowel marks.
-- Dead-matte dry finish and a precise 1.5 mm eased top arris.
-- Pedestal scale, height, color, and finish remain constant across all five images.
+- One low, irregular slab of natural warm sandstone.
+- Flat usable top with authentic quarried fracture at the perimeter.
+- Fine sandy mineral grain, restrained tonal variation, dry matte finish, and no artificial cylindrical machining.
+- No marble veining, glossy sealant, generic concrete, stacked platform, decorative rubble, or additional stones.
+- Slab footprint, top line, scale, color, and finish remain constant across all five images.
 
 ### Product presentation
 
@@ -62,35 +62,46 @@ The PSD establishes bottle geometry, glass treatment, neck and thread structure,
 - Bottle remains empty and unlabelled.
 - No text, logo, props, plants, fabric, wood, water, or decorative objects.
 
-### Camera and lighting
+### Canvas, camera, and lighting
 
-- Square 1:1 final composition.
-- Straight-on, level camera approximately 15 degrees below the pedestal top plane.
+- Canonical final canvas: exactly 2080 × 2288 px, a 10:11 portrait ratio matching the `CYL-9ML` Paper Doll canvas.
+- The 2080 × 2288 master is the only production hero asset. Square previews are direction-setting references or derived crops, never source masters.
+- Straight-on, level camera with a shallow view of the sandstone top plane.
 - Product-photography perspective equivalent to a 100 mm macro lens at f/8.
-- Large soft source at 45 degrees camera left and slightly behind.
-- White bounce camera right and a restrained low rake across the pedestal.
+- Large studio softbox at camera left and slightly above.
+- White bounce camera right and a restrained low rake across the sandstone.
 - Soft directional shadow falls camera right.
 - Bottle scale, baseline, cap lane, crop, and negative-space proportions remain consistent across the set.
+- Keep bottle, cap, and pedestal inside a centered crop-safe area so the Clear master can be used in the more square family-page media panel without clipping the roller, glass base, cap, or pedestal arris.
 
 ## Controlled creative freedom
 
-The renders may use subtle highlight and shadow adjustments needed to reveal each glass treatment. Clear glass may receive stronger edge definition; amber and cobalt may receive carefully controlled transmitted light; frosted glass may receive a broader soft highlight; swirl may receive a restrained raking highlight that reveals its pattern.
+The renders may use subtle highlight and shadow adjustments needed to reveal each glass treatment. Clear glass may receive stronger edge definition; amber and cobalt may receive carefully controlled transmitted light; frosted glass may receive a broad uniform highlight without an internal fill boundary; swirl may receive a restrained raking highlight that reveals its molded pattern.
 
-These adjustments must not change the background color, pedestal, camera position, bottle geometry, cap finish, component count, or overall gallery layout. The five images should read as one photographic session.
+These adjustments must not change the background color, sandstone slab, camera position, bottle geometry, cap finish, component count, or overall gallery layout. The five images should read as one photographic session.
+
+## Content architecture
+
+- **Shopify:** continues to own exact sellable SKU media, variant identity, price, and availability. The generic metal-roller/matte-silver beauty images must not become Shopify variant images because they would misrepresent other component selections.
+- **Sanity:** owns one atomic `paperDollBeautyGallery` document for `CYL-9ML`, containing exactly one clean 2080 × 2288 hero for each glass key (`CLR`, `AMB`, `BLU`, `FRS`, `SWL`). The selected glass hero appears in its own large editorial canvas above the component builder, never as a configurator-gallery thumbnail.
+- **Paper Doll:** remains the exact visual source for the selected roller, cap, sprayer, or pump in Build View.
+- **Release gate:** the storefront rejects a gallery unless all five keys are present exactly once, every image is 2080 × 2288, the reference is metal roller plus matte silver, and `storefrontReady` is true.
+- Watermarked review comps never enter public assets or Sanity production documents.
 
 ## Generation and review flow
 
 1. Convert each authoritative PSD to a lossless PNG reference without altering its proportions.
-2. Generate one image per glass body using the same approved prompt chassis.
-3. Save generated candidates non-destructively in a versioned Cylinder beauty-gallery directory in the project.
-4. Review each candidate for product geometry, glass identity, component count, cap finish, pedestal material, background consistency, and crop.
-5. Compare all five images together as a contact sheet before approval.
-6. Regenerate only failed members, changing one prompt variable at a time.
-7. Integrate approved assets into the beauty gallery without changing Paper Doll product or configuration data.
+2. Generate one image per glass body using the same approved prompt chassis and explicit 10:11 portrait composition.
+3. Export each approved candidate natively and recanvas deterministically to exactly 2080 × 2288 without stretching the product.
+4. Keep watermarked candidates as review evidence; upload only clean production masters to the versioned Sanity gallery.
+5. Review each candidate for product geometry, glass identity, component count, cap finish, pedestal material, background consistency, crop, and shared baseline coordinates.
+6. Compare all five 2080 × 2288 masters together as a contact sheet before approval.
+7. Regenerate only failed members, changing one prompt variable at a time.
+8. Publish the complete Sanity gallery and enable `storefrontReady` without changing Shopify variant media or Paper Doll product/configuration data.
 
 ## Failure handling
 
-A candidate fails if it invents or removes a component, changes glass color or pattern, alters the roller type, changes the cap away from matte silver, introduces a label or liquid, changes the pedestal material or geometry, creates visible pores or rustic stone texture, or drifts materially from the shared crop and lighting.
+A candidate fails if it invents or removes a component, changes glass color or pattern, alters the roller type, changes the cap away from matte silver, introduces a label or liquid, changes the sandstone material or slab geometry, or drifts materially from the shared crop and lighting.
 
 Failed candidates are retained as review evidence but are not wired into the storefront. Product truth is never inferred from a generated result; the PSD and current `CYL-9ML` configuration contract remain authoritative.
 
@@ -98,7 +109,7 @@ Failed candidates are retained as review evidence but are not wired into the sto
 
 - Confirm the five PSD references resolve to the intended 9 mL 17-415 Cylinder bodies.
 - Confirm the product-truth audit for `Cylinder + 9ml` reports no critical or high issues before integration.
-- Verify all final files are square and share the same pixel dimensions.
+- Verify all final files are exactly 2080 × 2288 px and contain no non-uniform stretching.
 - Review a five-up contact sheet for background, pedestal, scale, cap lane, and shadow consistency.
 - Verify the gallery at desktop and mobile breakpoints.
 - Verify selecting plastic roller, cap finishes, spray, and lotion options still uses Paper Doll layers rather than editorial beauty images.
@@ -108,5 +119,5 @@ Failed candidates are retained as review evidence but are not wired into the sto
 - Generating 145 beauty images for every exact configuration.
 - Replacing Paper Doll layer assets.
 - Creating SKU-specific Shopify product heroes or catalog-grid images.
-- Publishing images to Shopify, Convex, Sanity, or Madison as part of this initial generation pass.
+- Publishing generic beauty imagery as Shopify variant media.
 - Regenerating other bottle families.

@@ -245,7 +245,7 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
 
     const stepRows = [
         { key: "glass" as const, number: 1, title: "Choose glass", detail: `${CYLINDER_9ML_BUILDER_OPTIONS.glassColors.length} colors`, content: glassOptions },
-        { key: "applicator" as const, number: 2, title: "Choose delivery system", detail: "Roll-on, spray, or lotion", content: applicatorOptions },
+        { key: "applicator" as const, number: 2, title: "Choose applicator", detail: "Roll-on, spray, or lotion", content: applicatorOptions },
         { key: "finish" as const, number: 3, title: "Choose finish", detail: `${finishes.length} for ${applicator.toLowerCase()}`, content: finishOptionsView },
     ];
 
@@ -261,7 +261,7 @@ function BuilderPreview({ catalog, buildReady }: { catalog: CatalogSearchResultS
                     {glassOptions}
                 </div>
                 <div>
-                    <p className="mb-1.5 text-xs font-semibold text-obsidian"><span className="mr-2 text-muted-gold">2</span>Delivery system</p>
+                    <p className="mb-1.5 text-xs font-semibold text-obsidian"><span className="mr-2 text-muted-gold">2</span>Applicator</p>
                     {applicatorOptions}
                 </div>
                 {applicator === "Roll-On" && (
@@ -350,7 +350,7 @@ function CylinderRefineFields({
     const groups = [
         { dimension: "capacities" as const, label: "Capacity", values: options.capacities, defaultOpen: true },
         { dimension: "colors" as const, label: "Glass color", values: options.colors, defaultOpen: false },
-        { dimension: "applicators" as const, label: "Delivery system", values: options.applicators, defaultOpen: false },
+        { dimension: "applicators" as const, label: "Applicator", values: options.applicators, defaultOpen: false },
         { dimension: "neckThreadSizes" as const, label: "Neck finish", values: options.neckThreadSizes, defaultOpen: false },
     ];
 
@@ -593,7 +593,7 @@ export default function CylinderFamilyPageClient({
                     <div className="flex flex-col justify-start px-5 py-5 sm:px-8 sm:py-8 lg:col-span-4 lg:px-10 lg:py-10 xl:px-12">
                         <p className="text-[10px] font-bold uppercase tracking-[0.24em] text-muted-gold">{editorial?.familyPageEyebrow || "Buildable Bottle Family"}</p>
                         <h1 className="mt-2 font-serif text-5xl font-medium leading-none text-obsidian sm:text-6xl xl:text-7xl">Cylinder</h1>
-                        <p className="mt-3 text-sm leading-6 text-slate lg:hidden">One profile. Choose the glass, delivery system, and finish for your product.</p>
+                        <p className="mt-3 text-sm leading-6 text-slate lg:hidden">One profile. Choose the glass, applicator, and finish for your product.</p>
                         <p className="mt-5 hidden max-w-lg text-sm leading-7 text-slate lg:block">{story}</p>
 
                         <div className="mt-7 hidden grid-cols-3 gap-3 lg:grid">
@@ -603,7 +603,7 @@ export default function CylinderFamilyPageClient({
                             </div>
                             <div className="border border-champagne bg-white p-3">
                                 <Package className="mb-2 h-6 w-6 text-muted-gold" />
-                                <p className="text-xs font-semibold text-obsidian">3 delivery systems</p>
+                                <p className="text-xs font-semibold text-obsidian">3 applicators</p>
                             </div>
                             <div className="border border-champagne bg-white p-3">
                                 <div className="mb-2 flex gap-1">{["Shiny Black", "Matte Gold", "Matte Silver", "White"].map((label) => <span key={label} className="h-6 w-3 border border-black/10" style={{ background: FINISH_COLORS[label] }} />)}</div>
@@ -639,7 +639,7 @@ export default function CylinderFamilyPageClient({
                             <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-gold">Shop by bottle first</p>
                             <h2 className="mt-1 font-serif text-3xl font-medium text-obsidian sm:text-4xl">Ready-made Cylinder options</h2>
                             <p className="mt-2 text-xs text-slate" aria-live="polite">
-                                {resultSummary.configurationCount} configuration{resultSummary.configurationCount === 1 ? "" : "s"} across {resultSummary.groupCount} bottle and delivery-system group{resultSummary.groupCount === 1 ? "" : "s"}.
+                                {resultSummary.configurationCount} configuration{resultSummary.configurationCount === 1 ? "" : "s"} across {resultSummary.groupCount} bottle and applicator group{resultSummary.groupCount === 1 ? "" : "s"}.
                             </p>
                         </div>
                         <div className="flex items-center gap-3">

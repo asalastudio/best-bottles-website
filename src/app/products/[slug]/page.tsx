@@ -19,7 +19,10 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import UnifiedBottlePdp from "@/components/products/UnifiedBottlePdp";
-import { getStorefrontPaperDollFamily } from "@/sanity/lib/queries";
+import {
+    getStorefrontCylinderBeautyGallery,
+    getStorefrontPaperDollFamily,
+} from "@/sanity/lib/queries";
 import {
     buildCylinder9mlConfigurations,
     type CylinderConfigurationSourceGroup,
@@ -121,6 +124,15 @@ async function getReleasedCylinderPaperDoll() {
         return await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
     } catch (error) {
         console.warn("CYL-9ML Paper Doll release gate rejected the Sanity document", error);
+        return null;
+    }
+}
+
+async function getReleasedCylinderBeautyGallery() {
+    try {
+        return await getStorefrontCylinderBeautyGallery(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
+    } catch (error) {
+        console.warn("CYL-9ML beauty gallery release gate rejected the Sanity document", error);
         return null;
     }
 }
@@ -278,13 +290,18 @@ export default async function ProductPage({
 
     const activeSlug = legacyRouteOverride ?? slug;
     if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        const [configurations, paperDollFamily] = await Promise.all([
+        const [configurations, paperDollFamily, beautyGallery] = await Promise.all([
             getUnifiedCylinderData(),
             getReleasedCylinderPaperDoll(),
+            getReleasedCylinderBeautyGallery(),
         ]);
         return (
             <>
-                <UnifiedBottlePdp configurations={configurations} paperDollFamily={paperDollFamily} />
+                <UnifiedBottlePdp
+                    configurations={configurations}
+                    paperDollFamily={paperDollFamily}
+                    beautyGallery={beautyGallery}
+                />
                 <SanityLiveVisualEditing />
                 <Footer />
             </>
