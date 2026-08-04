@@ -34,6 +34,12 @@ import {
     catalogSearchRecoverySuggestions,
 } from "@/lib/catalogFilters";
 import {
+    buildAppliedFilterChips,
+    removeCatalogFilterChip,
+    toggleCatalogFacetValue,
+    type CatalogArrayFacet,
+} from "@/lib/catalogRefineModel";
+import {
     getProductCardVariantPreviews,
     type ProductCardVariantPreview,
     type ProductCardVariantPreviewSource,
@@ -483,10 +489,9 @@ function FilterSidebarContent({
         filters.priceMin !== null ||
         filters.priceMax !== null;
 
-    const toggleArrayFilter = (key: keyof CatalogFilters, value: string) => {
-        const current = filters[key] as string[];
-        const next = current.includes(value) ? current.filter((v) => v !== value) : [...current, value];
-        onFilterChange({ [key]: next });
+    const toggleArrayFilter = (key: CatalogArrayFacet, value: string) => {
+        const next = toggleCatalogFacetValue(filters, key, value);
+        onFilterChange({ [key]: next[key] });
     };
 
     const sidebarCategories = useMemo(() => {
@@ -1551,44 +1556,13 @@ export default function CatalogClient({
         setExpandedCategories((prev) => ({ ...prev, [cat]: prev[cat] === false ? true : !prev[cat] ? false : !prev[cat] }));
     }, []);
 
-    // Build active filter chips
-    const chips: Array<{ label: string; onRemove: () => void }> = [];
-    if (filters.category) chips.push({ label: filters.category, onRemove: () => handleFilterChange({ category: null }) });
-    if (filters.collection) chips.push({ label: filters.collection, onRemove: () => handleFilterChange({ collection: null }) });
-    for (const a of filters.applicators) {
-        const label = APPLICATOR_BUCKETS.find((b) => b.value === a)?.label ?? a;
-        chips.push({ label, onRemove: () => handleFilterChange({ applicators: filters.applicators.filter((x) => x !== a) }) });
-    }
-    for (const f of filters.families) chips.push({ label: f, onRemove: () => handleFilterChange({ families: filters.families.filter((x) => x !== f) }) });
-    for (const c of filters.colors) chips.push({ label: c, onRemove: () => handleFilterChange({ colors: filters.colors.filter((x) => x !== c) }) });
-    const capacityChipLabels = new Set<string>();
-    if (facets) {
-        const allCapacities = Object.values(facets.capacities);
-        for (const range of CAPACITY_RANGES) {
-            const labels = allCapacities.filter((cap) => capacityInRange(cap.ml, range)).map((cap) => cap.label);
-            if (labels.length > 1 && labels.every((label) => filters.capacities.includes(label))) {
-                labels.forEach((label) => capacityChipLabels.add(label));
-                chips.push({
-                    label: `${range.label} — ${range.detail}`,
-                    onRemove: () => handleFilterChange({ capacities: filters.capacities.filter((x) => !labels.includes(x)) }),
-                });
-            }
-        }
-    }
-    for (const cap of filters.capacities) {
-        if (!capacityChipLabels.has(cap)) {
-            chips.push({ label: cap, onRemove: () => handleFilterChange({ capacities: filters.capacities.filter((x) => x !== cap) }) });
-        }
-    }
-    for (const t of filters.neckThreadSizes) chips.push({ label: `Thread ${t}`, onRemove: () => handleFilterChange({ neckThreadSizes: filters.neckThreadSizes.filter((x) => x !== t) }) });
-    if (filters.componentType) chips.push({ label: filters.componentType, onRemove: () => handleFilterChange({ componentType: null }) });
-    if (filters.priceMin !== null || filters.priceMax !== null) {
-        chips.push({
-            label: `${formatPrice(filters.priceMin ?? 0)} – ${formatPrice(filters.priceMax ?? 999)}`,
-            onRemove: () => handleFilterChange({ priceMin: null, priceMax: null }),
-        });
-    }
-    if (filters.search) chips.push({ label: `"${filters.search}"`, onRemove: () => { handleFilterChange({ search: "" }); setSearchInput(""); } });
+    const chips = buildAppliedFilterChips(filters).map((chip) => ({
+        label: chip.label,
+        onRemove: () => {
+            if (chip.facet === "search") setSearchInput("");
+            handleFilterChange(removeCatalogFilterChip(filters, chip));
+        },
+    }));
 
     const selectedApplicatorLabel = filters.applicators.length === 1
         ? APPLICATOR_BUCKETS.find((b) => b.value === filters.applicators[0])?.label ?? filters.applicators[0]
