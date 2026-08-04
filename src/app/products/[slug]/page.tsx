@@ -286,15 +286,16 @@ export default async function ProductPage({
             ? resolvedSearchParams.paperDollPreview[0]
             : resolvedSearchParams.paperDollPreview;
         const previewRequested = previewValue === "1" || previewValue === "true";
-        const paperDollPreview = isPaperDollDraftPreviewAllowed({
+        const paperDollPreviewAllowed = isPaperDollDraftPreviewAllowed({
             requested: previewRequested,
             draftModeEnabled: (await draftMode()).isEnabled,
             nodeEnv: process.env.NODE_ENV,
         });
         const [configurations, paperDollFamily] = await Promise.all([
             getUnifiedCylinderData(),
-            getReleasedCylinderPaperDoll(paperDollPreview),
+            getReleasedCylinderPaperDoll(paperDollPreviewAllowed),
         ]);
+        const paperDollPreview = paperDollPreviewAllowed && Boolean(paperDollFamily);
         return (
             <>
                 <UnifiedBottlePdp configurations={configurations} paperDollFamily={paperDollFamily} paperDollPreview={paperDollPreview} />
