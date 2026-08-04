@@ -24,6 +24,7 @@ import { paperDollAssemblyMapping } from "./objects/paperDollAssemblyMapping";
 import { paperDollQaEvidence } from "./objects/paperDollQaEvidence";
 import { paperDollReleaseProvenance } from "./objects/paperDollReleaseProvenance";
 import { marketingHeroAsset } from "./documents/marketingHeroAsset";
+import { paperDollBeautyGallery } from "./documents/paperDollBeautyGallery";
 
 export const schemaTypes = [
     // Documents
@@ -35,6 +36,7 @@ export const schemaTypes = [
     paperDollFamily,
     paperDollRelease,
     marketingHeroAsset,
+    paperDollBeautyGallery,
     // Objects — Homepage
     heroBlock,
     startHereCard,

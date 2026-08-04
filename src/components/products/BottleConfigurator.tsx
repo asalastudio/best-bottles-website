@@ -61,8 +61,8 @@ export default function BottleConfigurator({
                 </div>
             </section>
 
-            <section aria-labelledby="delivery-choice">
-                <ChoiceLabel number={2}><span id="delivery-choice">Delivery system</span></ChoiceLabel>
+            <section aria-labelledby="applicator-choice">
+                <ChoiceLabel number={2}><span id="applicator-choice">Applicator</span></ChoiceLabel>
                 <div className="grid grid-cols-3 gap-2">
                     {options.deliverySystems.map((mode) => {
                         const active = selected.mode === mode;

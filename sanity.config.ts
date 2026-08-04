@@ -76,6 +76,15 @@ export default defineConfig({
                                     .filter('_type == "paperDollFamily"')
                                     .defaultOrdering([{ field: "familyKey", direction: "asc" }])
                             ),
+                        S.listItem()
+                            .title("Paper Doll Beauty Galleries")
+                            .child(
+                                S.documentList()
+                                    .title("Paper Doll Beauty Galleries")
+                                    .apiVersion("v2025-02-19")
+                                    .filter('_type == "paperDollBeautyGallery"')
+                                    .defaultOrdering([{ field: "familyKey", direction: "asc" }])
+                            ),
                         S.divider(),
                         // ── Everything else ────────────────────────────────────
                         ...S.documentTypeListItems().filter(
@@ -86,6 +95,7 @@ export default defineConfig({
                                     "productFamilyContent",
                                     "productGroupContent",
                                     "paperDollFamily",
+                                    "paperDollBeautyGallery",
                                 ].includes(item.getId() ?? "")
                         ),
                     ]),

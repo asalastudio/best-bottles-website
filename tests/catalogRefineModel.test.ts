@@ -19,7 +19,7 @@ describe("canonical Refine view model", () => {
         expect(buildAppliedFilterChips(filters)).toEqual(expect.arrayContaining([
             { facet: "families", value: "Cylinder", label: "Family: Cylinder" },
             { facet: "capacities", value: "9 ml", label: "Capacity: 9 ml (0.3 oz)" },
-            { facet: "applicators", value: "rollon", label: "Delivery: Roll-On" },
+            { facet: "applicators", value: "rollon", label: "Applicator: Roll-On" },
             { facet: "neckThreadSizes", value: "17-415", label: "Neck: 17-415" },
         ]));
     });
