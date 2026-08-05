@@ -1,5 +1,9 @@
-import type { RenderablePaperDollFamily, StorefrontPaperDollLayer } from "./sanity";
-import type { PaperDollConfiguration, PaperDollLayerKeys } from "./types";
+import type {
+    PaperDollAssemblyMapping,
+    RenderablePaperDollFamily,
+    StorefrontPaperDollLayer,
+} from "./sanity";
+import type { PaperDollConfiguration, PaperDollLayerKeys, PaperDollMode } from "./types";
 
 export type PaperDollLayerResolution =
     | { ok: true; layers: StorefrontPaperDollLayer[] }
@@ -12,6 +16,40 @@ export type PaperDollLayerResolution =
           };
       };
 
+function layerKeysFromMapping(
+    mapping: PaperDollAssemblyMapping,
+    mode: PaperDollMode,
+): PaperDollLayerKeys | null {
+    const body = mapping.bodyVariantKey;
+    if (!body || !mapping.fitmentVariantKey) return null;
+    if (mode === "rollon") {
+        if (!mapping.closureVariantKey) return null;
+        return { body, roller: mapping.fitmentVariantKey, cap: mapping.closureVariantKey };
+    }
+    if (mode === "spray") return { body, sprayer: mapping.fitmentVariantKey };
+    return { body, pump: mapping.fitmentVariantKey };
+}
+
+/**
+ * A Madison release is self-describing: its assemblyMappings carry the exact
+ * variant keys for every catalog SKU. Prefer that authority over the
+ * configurator's derived legacy keys; fall back to the legacy keys only for
+ * families that ship no mappings (the pre-release family document).
+ */
+export function resolveConfigurationLayerKeys(
+    family: RenderablePaperDollFamily,
+    configuration: PaperDollConfiguration,
+): PaperDollLayerKeys {
+    const mappings = family.assemblyMappings;
+    if (mappings && mappings.length > 0) {
+        const mapping = mappings.find((entry) => entry.graceSku === configuration.graceSku)
+            ?? mappings.find((entry) => Boolean(entry.websiteSku) && entry.websiteSku === configuration.websiteSku);
+        const mapped = mapping ? layerKeysFromMapping(mapping, configuration.mode) : null;
+        if (mapped) return mapped;
+    }
+    return configuration.layerKeys;
+}
+
 export function resolvePaperDollLayersResult(
     family: RenderablePaperDollFamily,
     configuration: PaperDollConfiguration,
@@ -22,9 +60,10 @@ export function resolvePaperDollLayersResult(
             ? family.layerOrderSpray
             : family.layerOrderLotion;
 
+    const layerKeys = resolveConfigurationLayerKeys(family, configuration);
     const layers: StorefrontPaperDollLayer[] = [];
     for (const slot of order) {
-        const variantKey = configuration.layerKeys[slot as keyof PaperDollLayerKeys] ?? null;
+        const variantKey = layerKeys[slot as keyof PaperDollLayerKeys] ?? null;
         const layer = variantKey
             ? family.layerAssets.find((asset) => asset.slot === slot && asset.variantKey === variantKey)
             : undefined;

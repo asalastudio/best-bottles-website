@@ -40,6 +40,15 @@ export default function PaperDollCanvas({
             )}
             {layers.map((layer) => {
                 const key = `${layer.slot}:${layer.variantKey}`;
+                const markLoaded = () => setLoadState((current) => {
+                    // Idempotent: ref callbacks re-fire on every render, so an
+                    // already-recorded key must return the same state object.
+                    if (current.identity === loadIdentity && current.keys.has(key)) return current;
+                    return {
+                        identity: loadIdentity,
+                        keys: new Set(current.identity === loadIdentity ? current.keys : []).add(key),
+                    };
+                });
                 return (
                     <Image
                         key={key}
@@ -49,10 +58,12 @@ export default function PaperDollCanvas({
                         unoptimized
                         sizes="(min-width: 1024px) 52vw, 100vw"
                         className="absolute inset-0 object-contain"
-                        onLoad={() => setLoadState((current) => ({
-                            identity: loadIdentity,
-                            keys: new Set(current.identity === loadIdentity ? current.keys : []).add(key),
-                        }))}
+                        // Cached images can complete before hydration attaches
+                        // onLoad; the ref check clears the overlay for those.
+                        ref={(image) => {
+                            if (image?.complete && image.naturalWidth > 0) markLoaded();
+                        }}
+                        onLoad={markLoaded}
                         onError={onFailure}
                     />
                 );
