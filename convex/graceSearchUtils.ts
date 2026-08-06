@@ -420,6 +420,7 @@ export function buildSearchCatalogToolResult(
         slug?: string | null;
         graceSku?: string | null;
         neckThreadSize?: string | null;
+        capColor?: string | null;
         dataQualityFlags?: CanonicalProductDataQualityFlag[] | string[] | null;
     }>
 ): string {
@@ -455,7 +456,17 @@ export function buildSearchCatalogToolResult(
             && isVerified9mlCylinderRollOnColor(item.canonicalColor ?? item.color)
         )
         : data;
-    const coverage = summarizeCanonicalProductCoverage(coverageRows);
+    // A search for "1ml vial" returns neighbouring capacities too. Coverage
+    // statements must describe ONLY the capacity the customer asked about —
+    // otherwise 3ml/4ml colours get attributed to the 1ml, which is how a
+    // fix for under-reporting turns into over-claiming.
+    const capacityScopedRows = detectedCapMl !== null
+        ? data.filter((item) => item.capacityMl === detectedCapMl)
+        : data;
+    const coverageScope = capacityScopedRows.length > 0 ? capacityScopedRows : data;
+    const coverage = summarizeCanonicalProductCoverage(
+        is9mlCylinderRollOnContext ? coverageRows : coverageScope,
+    );
 
     if (is9mlCylinderRollOnContext) {
         warnings.push(
@@ -480,6 +491,28 @@ export function buildSearchCatalogToolResult(
                 .sort((a, b) => b[1] - a[1])
                 .map(([t, n]) => `${t} (${n} rows)`)
                 .join(", ")}. Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.`,
+        );
+    }
+
+    // Closure/cap colour is a separate dimension from glass colour. Without an
+    // explicit nudge the model reports whichever cap it happened to see first:
+    // asked for a 1ml sample vial it answered "white plug only" while the result
+    // set also contained black and clear plugs. Same failure shape as neck
+    // threads, so it gets the same treatment.
+    const capColorCounts = new Map<string, number>();
+    for (const item of coverageScope) {
+        const cap = item.capColor?.trim();
+        if (cap && cap.toLowerCase() !== "n/a") {
+            capColorCounts.set(cap, (capColorCounts.get(cap) ?? 0) + 1);
+        }
+    }
+    if (capColorCounts.size > 1) {
+        const scopeLabel = detectedCapMl !== null && capacityScopedRows.length > 0 ? `${detectedCapMl}ml ` : "";
+        warnings.push(
+            `CLOSURE COLOR COVERAGE: the ${scopeLabel}products in this result set come with these cap/closure colors — ${[...capColorCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([c, n]) => `${c} (${n} rows)`)
+                .join(", ")}. When the customer asks what a product comes with, list EVERY closure color in this sentence. Never name one and imply it is the only option, and never say a closure color is unavailable when it appears here. Do NOT attribute colors from other capacities to this one.`,
         );
     }
 

@@ -8,6 +8,7 @@
  * P1-3 no-result searches terminate instead of looping until the reply is blank.
  */
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import { GRACE_OPENAI_TOOL_SPECS, CATALOG_CATEGORY_VALUES } from "../src/lib/knowledge/toolSchemas";
 import { GRACE_REALTIME_INSTRUCTIONS } from "../src/lib/grace/realtimeInstructions";
 
@@ -95,5 +96,24 @@ describe("applicator vocabularies must not be confused across tools", () => {
         expect(items?.enum).toContain("antiquespray-tassel");
         // Customer-facing labels must never be valid here.
         expect(items?.enum).not.toContain("Vintage Bulb Sprayer with Tassel");
+    });
+});
+
+describe("coverage warnings force enumeration of every option", () => {
+    // Grace reports whichever value she saw first unless the tool result tells
+    // her to enumerate. Glass colour and neck thread already had a coverage
+    // warning; closure colour did not, so a 1ml vial was reported as
+    // "white plug only" when black and clear were also in the result set.
+    const src = readFileSync("convex/graceSearchUtils.ts", "utf8");
+
+    it("emits a closure-colour coverage warning", () => {
+        expect(src).toContain("CLOSURE COLOR COVERAGE");
+        expect(src).toContain("list EVERY closure color");
+        expect(src).toContain("never say a closure color is unavailable");
+    });
+
+    it("still emits the neck-thread and glass-colour coverage warnings", () => {
+        expect(src).toContain("NECK THREAD COVERAGE");
+        expect(src).toContain("CATALOG COVERAGE");
     });
 });

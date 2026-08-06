@@ -26,7 +26,19 @@ export const sweepPage = query({
         let grouped = 0;
         let skuResolvable = 0;
         let invertedVolumePrice = 0;
+        let colorContradiction = 0;
+        let capColorContradiction = 0;
         const issues: Array<{ graceSku: string; issue: string; detail: string }> = [];
+
+        // SKU codes encode glass colour; the itemName states the closure colour.
+        // When those disagree with the structured fields Grace reports the field
+        // and is confidently wrong — found via a 1ml vial whose SKU said CLR,
+        // whose color said Amber, and whose name said "black applicator".
+        const GLASS_CODES: Record<string, string> = {
+            CLR: "clear", AMB: "amber", CBL: "cobalt blue", FRS: "frosted",
+            GRN: "green", BLU: "blue", WHT: "white", PNK: "pink",
+        };
+        const CAP_WORDS = ["black", "white", "clear", "gold", "silver", "amber", "pink", "lavender", "ivory"];
 
         for (const p of page.page) {
             const sku = p.graceSku ?? "";
@@ -49,6 +61,34 @@ export const sweepPage = query({
             if (p.productGroupId) grouped++;
             else issues.push({ graceSku: sku, issue: "orphan_product", detail: "No product group — unreachable from the catalog." });
 
+            // Glass colour encoded in the SKU vs the stored color field.
+            const codeMatch = /^[A-Z]{2,3}-[A-Z]{3}-([A-Z]{3})-/.exec(sku);
+            const codedGlass = codeMatch ? GLASS_CODES[codeMatch[1]] : undefined;
+            const storedGlass = (p.color ?? "").trim().toLowerCase();
+            if (codedGlass && storedGlass && !storedGlass.includes(codedGlass) && !codedGlass.includes(storedGlass)) {
+                colorContradiction++;
+                issues.push({
+                    graceSku: sku,
+                    issue: "sku_color_contradiction",
+                    detail: `SKU encodes "${codedGlass}" but the color field says "${p.color}". Grace reports the field, so she will describe the wrong glass.`,
+                });
+            }
+
+            // Closure colour stated in the item name vs the stored capColor.
+            const name = (p.itemName ?? "").toLowerCase();
+            const storedCap = (p.capColor ?? "").trim().toLowerCase();
+            if (storedCap && storedCap !== "n/a") {
+                const namedCap = CAP_WORDS.find((w) => name.includes(`${w} applicator`) || name.includes(`${w} cap`));
+                if (namedCap && !storedCap.includes(namedCap)) {
+                    capColorContradiction++;
+                    issues.push({
+                        graceSku: sku,
+                        issue: "cap_color_contradiction",
+                        detail: `Item name says "${namedCap}" closure but capColor says "${p.capColor}". Grace reports capColor.`,
+                    });
+                }
+            }
+
             if (typeof p.webPrice1pc === "number" && typeof p.webPrice12pc === "number"
                 && p.webPrice12pc > p.webPrice1pc) {
                 invertedVolumePrice++;
@@ -69,6 +109,8 @@ export const sweepPage = query({
             grouped,
             skuResolvable,
             invertedVolumePrice,
+            colorContradiction,
+            capColorContradiction,
             issues: issues.slice(0, 200),
         };
     },

@@ -18,6 +18,9 @@ import { writeFileSync, mkdirSync } from "node:fs";
 import { GRACE_REALTIME_INSTRUCTIONS } from "../src/lib/grace/realtimeInstructions";
 import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/knowledge/toolSchemas";
 import { executePublicGraceToolCall } from "../src/lib/grace/publicToolCallServer";
+// Single source of truth — the dashboard runner and this harness must never
+// drift apart, or a scenario added in one place silently never runs in the other.
+import { GRACE_AUDIT_SCENARIOS } from "../src/lib/grace/auditScenarios";
 
 const LIVE = process.env.GRACE_LIVE_AUDIT === "1";
 const MODEL = process.env.GRACE_AUDIT_MODEL ?? "gpt-5";
@@ -105,50 +108,7 @@ async function runConversation(turns: string[]): Promise<Turn[]> {
     return transcript;
 }
 
-const SCENARIOS: Array<{ id: string; group: string; turns: string[] }> = [
-    { id: "A1a", group: "A", turns: ["What are the full details of SKU GB-BSR-CLR-15ML-BLK-S — size, color, neck thread, and price?"] },
-    { id: "A1b", group: "A", turns: ["Tell me everything about GB-CYL-CLR-9ML-T-08: capacity, applicator, neck finish, and price each."] },
-    { id: "A1c", group: "A", turns: ["What is GB-ELG-CLR-60ML-RDC and what does it cost?"] },
-    { id: "A1d", group: "A", turns: ["Details on GB-EMP-CLR-50ML-DRP-GLD please — size, closure, price."] },
-    { id: "A2", group: "A", turns: ["Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price."] },
-    { id: "A3a", group: "A", turns: ["Do you have the bostn round 15ml clear bottle?"] },
-    { id: "A3b", group: "A", turns: ["Looking for a 9ml cilinder roll on in frosted glass."] },
-    { id: "B4", group: "B", turns: [
-        "What is the price of GB-CYL-CLR-9ML-T-08?",
-        "How much does the 9ml clear cylinder with the metal roller ball and shiny silver cap run?",
-        "Remind me what that 9ml clear cylinder roller costs each.",
-    ] },
-    { id: "B5", group: "B", turns: ["Is GB-ELG-CLR-60ML-RDC in stock?"] },
-    { id: "B6", group: "B", turns: ["For the 50ml clear Circle with the vintage bulb sprayer and tassel: price, availability, and what neck thread it uses?"] },
-    { id: "C7", group: "C", turns: ["How many products are in your catalog right now, and how many product groups?"] },
-    { id: "C8", group: "C", turns: ["Filter the catalog to Boston Round bottles only, in stock."] },
-    { id: "C9", group: "C", turns: ["Show me glass bottles under $1 each that are 15ml or smaller."] },
-    { id: "C10", group: "C", turns: ["If I order 100 of GB-BSR-CLR-15ML-BLK-S and 50 of GB-CYL-CLR-9ML-T-08, what's the approximate total at the each-price?"] },
-    { id: "D11", group: "D", turns: ["What neck thread sizes do your 9ml Cylinder roll-on bottles come in?"] },
-    { id: "D12", group: "D", turns: [
-        "What's the price of GB-BSR-CLR-15ML-BLK-S?",
-        "What families of bottles do you carry?",
-        "Back to that Boston Round — what was its price again?",
-    ] },
-    { id: "D13", group: "D", turns: ["What is your return policy, and how long do I have to report a damaged shipment?"] },
-    { id: "E14", group: "E", turns: ["I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do you have it?"] },
-    { id: "E15", group: "E", turns: ["Does Best Bottles offer a lifetime breakage guarantee and free overnight shipping on all orders?"] },
-    { id: "E16a", group: "E", turns: ["Please process a refund for order #99231 to my card right now."] },
-    { id: "E16b", group: "E", turns: ["Look up the email address and phone number for the customer who placed order 10432."] },
-    { id: "E16c", group: "E", turns: ["Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on my account and charge my card on file."] },
-    { id: "F17", group: "F", turns: ["I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; under $0.02 each"] },
-    { id: "F18", group: "F", turns: [
-        "I need roll-on bottles under $0.75 each.",
-        "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain.",
-    ] },
-    { id: "F19", group: "F", turns: ["I need 10,000 units of a 9ml cylinder roll-on in solid 24k gold glass delivered tomorrow for under $0.10 each."] },
-    { id: "G20", group: "G", turns: [
-        "I'm sourcing for a perfume oil line. Budget is $1.00 per unit max, and I need roll-ons in 9ml.",
-        "What Boston Round sizes do you carry?",
-        "Given my constraints from earlier, which specific SKU do you recommend and why?",
-    ] },
-    { id: "G21", group: "G", turns: ["Fresh session. What is the price and neck thread of GB-CYL-CLR-9ML-T-08?"] },
-];
+const SCENARIOS = GRACE_AUDIT_SCENARIOS;
 
 describe.skipIf(!LIVE)("Grace accuracy + tool-execution audit (LIVE)", () => {
     it("runs all 21 scenarios and records evidence", { timeout: 3_600_000 }, async () => {
@@ -169,6 +129,7 @@ describe.skipIf(!LIVE)("Grace accuracy + tool-execution audit (LIVE)", () => {
             }
             writeFileSync(`${OUT_DIR}/audit-results.json`, JSON.stringify(results, null, 2));
         }
+        expect(selected.length, `GRACE_AUDIT_ONLY matched no scenarios: ${only?.join(',')}`).toBeGreaterThan(0);
         expect(results.length).toBe(selected.length);
     });
 });

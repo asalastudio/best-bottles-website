@@ -156,6 +156,18 @@ export const GRACE_AUDIT_SCENARIOS: AuditScenario[] = [
         },
     },
     {
+        id: "A4", group: "Product knowledge", title: "Enumerates ALL closure colours, not just the first",
+        turns: ["I need a 1ml sample vial. What glass and what plug colours do they come with?"],
+        expect: {
+            mustAnswer: true,
+            // Found in production 2026-08-06: Grace answered "white plug only"
+            // while her own result set contained black and clear plugs too.
+            mustIncludeAll: ["black"],
+            mustIncludeAny: ["clear", "amber"],
+            mustNotInclude: ["only white", "we don't have black", "no black"],
+        },
+    },
+    {
         id: "C7", group: "Tool execution", title: "Live catalog totals",
         turns: ["How many products are in your catalog right now, and how many product groups?"],
         expect: { mustAnswer: true, mustCallAnyTool: ["getCatalogStats"], catalogTotals: true },
