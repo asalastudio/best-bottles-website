@@ -118,7 +118,13 @@ async function runTurns(turns: string[]): Promise<AuditTurn[]> {
 
 // ─── Grading ─────────────────────────────────────────────────────────────────
 
-const normalize = (s: string) => s.toLowerCase().replace(/[’‘]/g, "'").replace(/\s+/g, " ");
+// Folds typographic variants the model emits: curly quotes, and the Unicode
+// hyphen family (U+2010–U+2015, incl. the non-breaking hyphen U+2011 that made
+// "in‑stock" miss an ASCII "in-stock" phrase check).
+const normalize = (s: string) => s.toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/[‐-―]/g, "-")
+    .replace(/\s+/g, " ");
 
 /** Money/number tolerant match: "0.72" matches "$0.72", "0.72 each", "$ 0.72". */
 function mentionsNumber(haystack: string, value: number): boolean {
@@ -128,7 +134,7 @@ function mentionsNumber(haystack: string, value: number): boolean {
         || haystack.includes(fixed.replace(/\.00$/, ""));
 }
 
-async function buildChecks(scenario: AuditScenario, transcript: AuditTurn[]): Promise<AuditCheck[]> {
+export async function buildChecks(scenario: AuditScenario, transcript: AuditTurn[]): Promise<AuditCheck[]> {
     const checks: AuditCheck[] = [];
     const lastTurn = transcript[transcript.length - 1];
     const allText = normalize(transcript.map((t) => t.assistant).join("\n"));

@@ -539,3 +539,35 @@ found the true cause. Two takeaways for future prompt/schema work:
 2. When a scenario fails, read the **tool arguments and raw tool output**, not just the
    assistant text. The visible answer said "I can't find it"; the arguments said the filter
    was wrong. Those lead to opposite fixes.
+
+---
+
+## Post-sync re-audit — 2026-08-06 (after site-truth pricing sync)
+
+Same live harness, all scenarios, against **production** Convex + the deployed
+realtime brain (priceTiers payload + VOLUME PRICING RULE).
+
+**Machine verdicts: 21 pass · 2 partial · 0 wrong · 0 tool-fail (23 scenarios).**
+34 live tool calls, **0 execution errors**. Both partials (A2, F17) passed on an
+immediate re-sample — they are model nondeterminism in phrasing/display choice,
+not accuracy defects: A2 deferred comparison specs to the visual card instead of
+narrating them; F17 handled the 5ml/100ml contradiction with a clarifying
+question instead of the expected "can't be both" phrasing (while correctly
+citing the live $0.13 catalog floor via getPriceStats).
+
+**What changed since the 95/100 run:**
+- **End-to-end price truth.** At the 95 run, Grace quoted Convex faithfully but
+  Convex disagreed with bestbottles.com on 127 SKUs (P2-1: "Grace is accurate;
+  the data is wrong"). That class is now structurally impossible for synced
+  SKUs: every price she quoted in this run matches the live website.
+- **Volume-tier quoting is live and exact.** C10: quoted the true 12+ breaks
+  ($0.40, $0.68) from the synced ladders and computed $74.00 correctly — a
+  capability that did not exist at the prior run.
+- **Repetition consistency held.** B4 priced the same SKU identically across
+  three phrasings.
+
+**Grader fixes this pass (test infrastructure, not Grace):** normalize() now
+folds the Unicode hyphen family (U+2010–U+2015) — Grace's "in‑stock" (U+2011)
+had false-failed an ASCII phrase check in C8; C10's hardcoded 1-pc arithmetic
+(42/36/78) now also accepts the equally-correct tier arithmetic (74), since both
+are grounded in synced site truth.

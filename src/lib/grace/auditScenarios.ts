@@ -187,7 +187,12 @@ export const GRACE_AUDIT_SCENARIOS: AuditScenario[] = [
         expect: {
             mustAnswer: true,
             mustCallAnyTool: ["getProductBySku"],
-            mustIncludeAll: ["42", "36", "78"],
+            // Two valid arithmetic paths, both grounded in synced site truth
+            // (2026-08-06): the 1-pc each-price (100×$0.42 + 50×$0.72 = $78)
+            // or the published volume tiers the quantities actually qualify
+            // for (100×$0.40 + 50×$0.68 = $74). Either total passes; any
+            // other number is a math or data error.
+            mustIncludeAny: ["78", "74"],
             mustNotInclude: ["can't find", "cannot find"],
         },
     },

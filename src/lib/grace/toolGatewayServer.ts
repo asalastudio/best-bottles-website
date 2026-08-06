@@ -348,6 +348,11 @@ export async function executeGraceServerTool({
                         webPrice1pc: data.webPrice1pc,
                         webPrice10pc: data.webPrice10pc,
                         webPrice12pc: data.webPrice12pc,
+                        // Full quantity-break ladder mirrored from bestbottles.com
+                        // (minQty / unitPrice / totalPrice). This is the ONLY tool
+                        // payload carrying tiers past the second break — quantity
+                        // quotes above 12 pcs must come from here, never estimated.
+                        priceTiers: data.priceTiers ?? null,
                         stockStatus: data.stockStatus,
                         // PDP slug so Grace can navigate straight to this product.
                         slug: found?.slug ?? null,

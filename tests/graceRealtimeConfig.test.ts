@@ -20,6 +20,8 @@ describe("Grace OpenAI Realtime configuration", () => {
                 audio: {
                     output: {
                         voice: "marin",
+                        // 0.9 = slightly unhurried delivery for older customers.
+                        speed: 0.9,
                     },
                 },
             },
