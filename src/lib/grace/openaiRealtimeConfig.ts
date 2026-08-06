@@ -1,11 +1,10 @@
 export const GRACE_REALTIME_MODEL = "gpt-realtime-2.1" as const;
 export const GRACE_REALTIME_VOICE = "marin" as const;
-
-export type GraceProviderId = "openai" | "elevenlabs";
-
-export function getGraceProvider(rawValue: string | undefined): GraceProviderId {
-    return rawValue?.trim().toLowerCase() === "elevenlabs" ? "elevenlabs" : "openai";
-}
+// Slightly under 1.0 so speech lands clearly for older customers (Jordan,
+// 2026-08-06). Range OpenAI accepts is 0.25–1.5; pair with the PACING
+// instruction in realtimeInstructions.ts rather than dropping this further —
+// very low values sound unnatural.
+export const GRACE_REALTIME_SPEED = 0.9 as const;
 
 export function buildGraceRealtimeSessionRequest() {
     return {
@@ -15,6 +14,7 @@ export function buildGraceRealtimeSessionRequest() {
             audio: {
                 output: {
                     voice: GRACE_REALTIME_VOICE,
+                    speed: GRACE_REALTIME_SPEED,
                 },
             },
         },

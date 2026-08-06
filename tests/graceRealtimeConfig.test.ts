@@ -4,20 +4,12 @@ import {
     GRACE_REALTIME_VOICE,
     buildGraceRealtimeSessionRequest,
     createGraceRealtimeClientSecret,
-    getGraceProvider,
 } from "../src/lib/grace/openaiRealtimeConfig";
 
 describe("Grace OpenAI Realtime configuration", () => {
-    it("uses OpenAI, gpt-realtime-2.1, and Marin by default", () => {
-        expect(getGraceProvider(undefined)).toBe("openai");
-        expect(getGraceProvider("unexpected")).toBe("openai");
+    it("uses gpt-realtime-2.1 and Marin", () => {
         expect(GRACE_REALTIME_MODEL).toBe("gpt-realtime-2.1");
         expect(GRACE_REALTIME_VOICE).toBe("marin");
-    });
-
-    it("retains ElevenLabs only when explicitly selected for rollback", () => {
-        expect(getGraceProvider("elevenlabs")).toBe("elevenlabs");
-        expect(getGraceProvider(" openai ")).toBe("openai");
     });
 
     it("builds the fixed Realtime client-secret session request", () => {
@@ -28,6 +20,8 @@ describe("Grace OpenAI Realtime configuration", () => {
                 audio: {
                     output: {
                         voice: "marin",
+                        // 0.9 = slightly unhurried delivery for older customers.
+                        speed: 0.9,
                     },
                 },
             },

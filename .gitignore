@@ -124,3 +124,12 @@ __pycache__/
 
 # Local creative assets (84MB+, not for git)
 creative/
+
+# Bulk local working assets — large, regenerable, not source of truth.
+# Audit *reports* under docs/reviews/ ARE committed; only the image-heavy
+# review galleries are excluded.
+reference_images/
+Best-Bottles-Orphan-urls/
+/data/audits/canonical-truth-2026-07-12/
+/data/audits/image-generation-coverage-2026-08-05/
+/docs/reviews/cylinder-beauty-gallery-v1/

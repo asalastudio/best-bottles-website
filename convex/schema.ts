@@ -614,6 +614,59 @@ export default defineSchema({
     // GRACE PUBLIC ROUTE RATE LIMITS — server-side counters for anonymous flows
     // -------------------------------------------------------------------------
 
+    // -------------------------------------------------------------------------
+    // GRACE AUDIT — executive-hub initiated accuracy runs.
+    // A run is written scenario-by-scenario so the dashboard can render progress
+    // reactively and a long run never depends on one request staying alive.
+    // -------------------------------------------------------------------------
+
+    graceAuditRuns: defineTable({
+        kind: v.union(v.literal("conversation"), v.literal("integrity")),
+        status: v.union(v.literal("running"), v.literal("complete"), v.literal("failed"), v.literal("cancelled")),
+        startedAt: v.number(),
+        finishedAt: v.union(v.number(), v.null()),
+        triggeredBy: v.string(),          // Clerk user id or "system"
+        environment: v.string(),          // convex deployment URL under test
+        scenarioTotal: v.number(),
+        scenarioComplete: v.number(),
+        passCount: v.number(),
+        warnCount: v.number(),
+        failCount: v.number(),
+        scorePct: v.union(v.number(), v.null()),
+        notes: v.union(v.string(), v.null()),
+    })
+        .index("by_startedAt", ["startedAt"])
+        .index("by_kind_startedAt", ["kind", "startedAt"]),
+
+    graceAuditResults: defineTable({
+        runId: v.id("graceAuditRuns"),
+        scenarioId: v.string(),
+        group: v.string(),
+        title: v.string(),
+        verdict: v.union(v.literal("pass"), v.literal("warn"), v.literal("fail")),
+        checks: v.array(v.object({
+            label: v.string(),
+            passed: v.boolean(),
+            severity: v.union(v.literal("critical"), v.literal("soft")),
+            detail: v.string(),
+        })),
+        transcript: v.array(v.object({
+            user: v.string(),
+            assistant: v.string(),
+            toolCalls: v.array(v.object({
+                name: v.string(),
+                argsJson: v.string(),
+                executed: v.string(),
+            })),
+        })),
+        toolCallCount: v.number(),
+        durationMs: v.number(),
+        error: v.union(v.string(), v.null()),
+        createdAt: v.number(),
+    })
+        .index("by_runId", ["runId"])
+        .index("by_runId_scenarioId", ["runId", "scenarioId"]),
+
     graceRateLimits: defineTable({
         key: v.string(),
         route: v.string(),

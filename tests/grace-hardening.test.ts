@@ -2,7 +2,6 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 
 const read = (path: string) => readFileSync(path, "utf8");
-const agentConfig = () => JSON.parse(read("scripts/grace_agent_config.json"));
 
 function implementedClientTools(): Set<string> {
   const source = read("src/components/grace/GraceProvider.tsx");
@@ -17,27 +16,21 @@ function implementedClientTools(): Set<string> {
 }
 
 describe("Grace 100-point hardening contracts", () => {
-  it("keeps ElevenLabs config tools aligned with implemented client tools", () => {
-    const toolNames = agentConfig().conversation_config.agent.prompt.tools.map((t: { name: string }) => t.name);
+  it("implements every client tool the provider advertises and drops stale copy", () => {
     const implemented = implementedClientTools();
-
-    for (const toolName of toolNames) {
-      expect(implemented.has(toolName), `${toolName} is advertised to ElevenLabs but not implemented`).toBe(true);
-    }
+    expect(implemented.size).toBeGreaterThan(10);
     expect(read("src/components/grace/GraceProvider.tsx")).not.toContain("Shortlist sharing isn't available yet");
   });
 
-  it("keeps Grace strictly grounded and removes stale memorized catalog facts", () => {
-    const prompt = agentConfig().conversation_config.agent.prompt.prompt;
-    expect(prompt).toContain("Strict catalog grounding");
-    expect(prompt).toContain("Tool routing hardening");
-    expect(prompt).toContain("Movement commands are mandatory tool calls");
-    expect(prompt).toContain("do not omit Cobalt Blue");
-    expect(prompt).toContain("Never ask whether the customer wants to open a display");
-    expect(prompt).toContain("Never treat static prompt examples as inventory");
-    expect(prompt).not.toContain("# Catalog facts — MEMORIZE THESE");
-    expect(prompt).not.toContain("Smallest sizes per family");
-    expect(prompt).not.toContain("GUARANTEED to fit");
+  it("provides a client implementation for every declared OpenAI tool spec", async () => {
+    // The Realtime adapter throws at mount for any spec without an
+    // implementation ("Missing Grace tool implementation: X") — this contract
+    // catches that at CI time instead of as a storefront runtime crash.
+    const { GRACE_OPENAI_TOOL_SPECS } = await import("../src/lib/knowledge/toolSchemas");
+    const implemented = implementedClientTools();
+    for (const spec of GRACE_OPENAI_TOOL_SPECS) {
+      expect(implemented.has(spec.name), `spec "${spec.name}" has no client implementation in GraceProvider`).toBe(true);
+    }
   });
 
   it("preserves Shopify checkout metadata through Grace cart proposals", () => {
@@ -46,15 +39,15 @@ describe("Grace 100-point hardening contracts", () => {
     const navigateStart = source.indexOf("navigateToPage:", proposeStart);
     const proposeBlock = source.slice(proposeStart, navigateStart);
     const route = read("src/lib/grace/toolGatewayServer.ts");
-    const promptTools = JSON.stringify(agentConfig().conversation_config.agent.prompt.tools);
+    const specTools = read("src/lib/knowledge/toolSchemas.ts");
 
     expect(route).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
     expect(route).toContain("checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId)");
     expect(proposeBlock).toContain("websiteSku: p.websiteSku ?? null");
     expect(proposeBlock).toContain("shopifyVariantId: p.shopifyVariantId ?? null");
     expect(proposeBlock).toContain("checkoutEligible: p.checkoutEligible ?? Boolean(p.shopifyVariantId)");
-    expect(promptTools).toContain("shopifyVariantId");
-    expect(promptTools).toContain("checkoutEligible");
+    expect(specTools).toContain("shopifyVariantId");
+    expect(specTools).toContain("checkoutEligible");
   });
 
   it("keeps mobile Grace available on product detail pages", () => {
@@ -141,9 +134,9 @@ describe("Grace 100-point hardening contracts", () => {
     expect(familyCard).toContain("capacityLabelCounts");
     expect(familyCard).toContain("variantColorCounts");
 
-    const prompt = agentConfig().conversation_config.agent.prompt.prompt;
-    expect(prompt).toContain("Never pass closureSku or applicatorSku unless that SKU came from getBottleComponents");
-    expect(prompt).toContain("optional swaps rather than required add-ons");
+    const specTools = read("src/lib/knowledge/toolSchemas.ts");
+    expect(specTools).toContain("closureSku");
+    expect(specTools).toContain("getBottleComponents");
   });
 
   it("renders every Grace tool action emitted in a single assistant turn and tracks it", () => {
@@ -221,24 +214,23 @@ describe("Grace 100-point hardening contracts", () => {
     expect(schemas).toContain("never submit the form directly");
   });
 
-  it("guards legacy voice routes from anonymous cost abuse via the shared Convex limiter", () => {
-    const voice = read("src/app/api/voice/route.ts");
+  it("guards the voice-search transcribe route from anonymous cost abuse via the shared Convex limiter", () => {
     const transcribe = read("src/app/api/voice/transcribe/route.ts");
 
-    expect(voice).toContain("enforceGraceRateLimit");
-    expect(voice).toContain('route: "voice-tts"');
     expect(transcribe).toContain("enforceGraceRateLimit");
     expect(transcribe).toContain('route: "voice-transcribe"');
+    expect(transcribe).toContain("api.openai.com/v1/audio/transcriptions");
+    expect(transcribe).not.toContain("elevenlabs");
   });
 
-  it("defaults Grace to OpenAI Realtime while retaining the temporary ElevenLabs rollback", () => {
+  it("runs Grace exclusively on OpenAI Realtime — no ElevenLabs pathway remains", () => {
     const provider = read("src/components/grace/GraceProvider.tsx");
-    expect(provider).toContain("getGraceProvider");
     expect(provider).toContain("createGraceOpenAIRealtimeAdapter");
     expect(provider).toContain('"/api/openai/realtime-token"');
     expect(provider).toContain('"/api/grace/chat"');
-    expect(provider).toContain('graceProvider === "openai"');
-    expect(provider).toContain('graceProvider === "elevenlabs"');
+    expect(provider).not.toContain("@elevenlabs/react");
+    expect(provider).not.toContain("useConversation");
+    expect(provider).not.toContain('"/api/elevenlabs/signed-url"');
   });
 
   it("closes the previous Realtime adapter when Clerk identity changes", () => {

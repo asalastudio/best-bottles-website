@@ -8,6 +8,7 @@ import {
 } from "../../../convex/graceSearchUtils";
 import { noMatchGraceToolResult } from "@/lib/graceToolResults";
 import { searchCatalogServer } from "@/lib/catalogServer";
+import { buildPolicyToolResult } from "@/lib/grace/policyCorpus";
 import type { GraceRefineState } from "@/lib/grace/refineState";
 import type { GraceOpenAIToolName } from "@/lib/knowledge/toolSchemas";
 
@@ -165,7 +166,7 @@ export async function executeGraceServerTool({
                         break;
                     }
                     result = noMatchGraceToolResult({
-                        message: `No verified exact match found for "${searchParams.searchTerm}". Do not name or recommend a specific product from memory. Try a broader term or one of the suggested searches.${emptySearchCatalogHint(searchParams.searchTerm)}`,
+                        message: `No verified exact match found for "${searchParams.searchTerm}". Do not name or recommend a specific product from memory. You may try ONE broader or reworded search. If a second search for this same request also returns no match, STOP searching — tell the customer plainly that we do not carry it, name the closest real alternatives you have already seen, and ask one narrowing question. Never issue a third reworded search for the same request.${emptySearchCatalogHint(searchParams.searchTerm)}`,
                         requested: {
                             searchTerm: searchParams.searchTerm,
                             familyLimit: searchParams.familyLimit,
@@ -279,6 +280,21 @@ export async function executeGraceServerTool({
                 break;
             }
 
+            case "getPolicy": {
+                result = buildPolicyToolResult(
+                    typeof parameters.question === "string" ? parameters.question : "",
+                );
+                break;
+            }
+
+            case "getPriceStats": {
+                const family = typeof parameters.family === "string" && parameters.family.trim()
+                    ? parameters.family.trim()
+                    : undefined;
+                result = await convex.query(api.grace.getPriceStats, { family });
+                break;
+            }
+
             case "getProductGroup": {
                 result = await convex.query(api.products.getProductGroup, {
                     slug: (parameters.slug as string) ?? "",
@@ -287,8 +303,10 @@ export async function executeGraceServerTool({
             }
 
             case "getProductBySku": {
-                // Used by the new `displayProductCard` clientTool. Returns the
-                // slim ProductCard shape the inline card components consume.
+                // Exact SKU lookup (audit P0-1) and the `displayProductCard`
+                // clientTool source. Resolves by index — Grace SKU then website
+                // SKU, case-normalized — because searchCatalog's full-text index
+                // does not cover SKU strings.
                 const sku = (parameters.graceSku as string)
                     ?? (parameters.websiteSku as string)
                     ?? (parameters.sku as string)
@@ -297,11 +315,24 @@ export async function executeGraceServerTool({
                     result = null;
                     break;
                 }
-                const data = await convex.query(api.products.getBySku, { graceSku: sku });
+                const found = await convex.query(api.products.lookupSku, { sku });
+                const data = found?.product ?? null;
+                // Inline card renderers call with `graceSku` and expect null on
+                // a miss; the agent calls with `sku` and needs guidance text so
+                // it does not report a lookup miss as "we don't carry that".
+                const isAgentLookup = typeof parameters.sku === "string" && !parameters.graceSku;
                 if (!data) {
-                    result = null;
+                    result = isAgentLookup
+                        ? {
+                            found: false,
+                            requestedSku: sku,
+                            guidance:
+                                `No catalog record matches "${sku}". This is an exact-index lookup, so a miss means the SKU is not in the catalog as written — it may be mistyped, renamed, or a legacy code. Do NOT tell the customer we do not carry the product; offer to search by description or to have the team verify the code.`,
+                        }
+                        : null;
                 } else {
                     result = {
+                        found: true,
                         graceSku: data.graceSku,
                         websiteSku: data.websiteSku,
                         itemName: data.itemName,
@@ -317,7 +348,14 @@ export async function executeGraceServerTool({
                         webPrice1pc: data.webPrice1pc,
                         webPrice10pc: data.webPrice10pc,
                         webPrice12pc: data.webPrice12pc,
+                        // Full quantity-break ladder mirrored from bestbottles.com
+                        // (minQty / unitPrice / totalPrice). This is the ONLY tool
+                        // payload carrying tiers past the second break — quantity
+                        // quotes above 12 pcs must come from here, never estimated.
+                        priceTiers: data.priceTiers ?? null,
                         stockStatus: data.stockStatus,
+                        // PDP slug so Grace can navigate straight to this product.
+                        slug: found?.slug ?? null,
                         // Hero image from product group (catalog renders this);
                         // fall back to per-product imageUrl when group hero missing.
                         heroImageUrl: data.imageUrl ?? null,

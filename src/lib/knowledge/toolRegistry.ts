@@ -49,10 +49,13 @@ const propose = (
 
 const TOOL_POLICIES = {
     searchCatalog: read(CATALOG_READ),
+    getProductBySku: read(CATALOG_READ),
+    getPolicy: read(CATALOG_READ),
     getFamilyOverview: read(CATALOG_READ),
     getBottleComponents: read(COMPATIBILITY_READ),
     checkCompatibility: read(COMPATIBILITY_READ),
     getCatalogStats: read(CATALOG_READ),
+    getPriceStats: read(CATALOG_READ),
     getCurrentPageContext: read(CATALOG_READ, CUSTOMER_SURFACES),
     getCartContents: read(CATALOG_READ, CUSTOMER_SURFACES),
     getBrowsingHistory: read(CATALOG_READ, CUSTOMER_SURFACES),

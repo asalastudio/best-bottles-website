@@ -95,8 +95,7 @@ describe("June 15 launch readiness guardrails", () => {
         const expectations = [
             ["src/app/api/catalog/search/route.ts", 'route: "catalog-search"'],
             ["src/app/api/shopify/resolve-variants/route.ts", 'route: "shopify-resolve-variants"'],
-            ["src/app/api/elevenlabs/conversation-token/route.ts", 'route: "elevenlabs-conversation-token"'],
-            ["src/app/api/elevenlabs/signed-url/route.ts", 'route: "elevenlabs-signed-url"'],
+            ["src/app/api/voice/transcribe/route.ts", 'route: "voice-transcribe"'],
         ];
 
         for (const [path, routeKey] of expectations) {

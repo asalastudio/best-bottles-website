@@ -1,0 +1,57 @@
+[
+  {
+    "id": "C9",
+    "group": "C",
+    "turns": [
+      "Show me glass bottles under $1 each that are 15ml or smaller."
+    ],
+    "transcript": [
+      {
+        "user": "Show me glass bottles under $1 each that are 15ml or smaller.",
+        "assistant": "I’ve filtered to Glass Bottles that are 15 ml and smaller, priced at $1.00 or less per piece. The matching options are on your screen now.\n\nWould you like to narrow by neck thread or applicator (open bottle, dropper, roll-on, or spray)?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Show me glass bottles under $1 each that are 15ml or smaller.",
+              "search": null,
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": null,
+              "families": null,
+              "colors": null,
+              "capacities": [
+                "1 ml",
+                "2 ml",
+                "3 ml",
+                "5 ml",
+                "7.5 ml",
+                "9 ml",
+                "10 ml",
+                "12 ml",
+                "15 ml"
+              ],
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 1
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          },
+          {
+            "name": "showProductPresentation",
+            "args": {
+              "searchTerm": "Glass bottles ≤15 ml under $1",
+              "headline": "Glass bottles 15 ml & smaller under $1",
+              "familyLimit": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"showProductPresentation runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+]

@@ -3,7 +3,7 @@
 /**
  * Shared Grace context — the single source of truth for the Grace hook and types.
  *
- * This context is shared across the ElevenLabs provider and any 
+ * This context is shared across the Grace provider and any 
  * text-only fallbacks. Components call useGrace() from here and 
  * get the active provider state.
  */
@@ -309,7 +309,7 @@ export interface GraceContextValue {
      * and parks a brief contextual hint beside the launcher for ~3 seconds. */
     minimizeWithTooltip: (message: string) => void;
     /** Append a message + optional action directly to the conversation,
-     * bypassing ElevenLabs. Used by client-side flows like image-upload
+     * bypassing the Realtime session. Used by client-side flows like image-upload
      * vision analysis that don't need round-trip narration. */
     appendInlineMessage: (msg: { role: "user" | "grace"; content: string; action?: GraceAction; actions?: GraceAction[]; attachments?: GraceAttachment[] }) => void;
     isOpen: boolean;

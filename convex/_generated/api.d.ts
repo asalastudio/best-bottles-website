@@ -24,6 +24,8 @@ import type * as fixEmpireDiameters from "../fixEmpireDiameters.js";
 import type * as fixOrphanProducts from "../fixOrphanProducts.js";
 import type * as forms from "../forms.js";
 import type * as grace from "../grace.js";
+import type * as graceAudit from "../graceAudit.js";
+import type * as graceIntegrity from "../graceIntegrity.js";
 import type * as gracePrompt from "../gracePrompt.js";
 import type * as graceRateLimits from "../graceRateLimits.js";
 import type * as graceSearchUtils from "../graceSearchUtils.js";
@@ -71,6 +73,8 @@ declare const fullApi: ApiFromModules<{
   fixOrphanProducts: typeof fixOrphanProducts;
   forms: typeof forms;
   grace: typeof grace;
+  graceAudit: typeof graceAudit;
+  graceIntegrity: typeof graceIntegrity;
   gracePrompt: typeof gracePrompt;
   graceRateLimits: typeof graceRateLimits;
   graceSearchUtils: typeof graceSearchUtils;

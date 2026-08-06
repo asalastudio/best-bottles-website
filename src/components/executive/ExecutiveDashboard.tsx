@@ -8,6 +8,7 @@ import { ExecutiveDetailSheet, type ExecutiveDetailSelection } from "@/component
 import { ExecutiveHeadlineMetric, ExecutiveQuestionCard } from "@/components/executive/ExecutiveMetric";
 import { ExecutiveNavigation } from "@/components/executive/ExecutiveNavigation";
 import { ExecutiveOperatingPanels, ExecutiveUnavailablePanels } from "@/components/executive/ExecutiveOperatingPanels";
+import { GraceAuditPanel } from "@/components/executive/GraceAuditPanel";
 import { GraceOperationsPanel } from "@/components/executive/GraceOperationsPanel";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import type { ExecutiveDashboardSnapshot, ExecutiveDateRange } from "@/lib/executive/contracts";
@@ -145,6 +146,8 @@ export function ExecutiveDashboard({ snapshot, graceOperations, previewMode = fa
                 </section>
 
                 <GraceOperationsPanel snapshot={visibleGraceOperations} />
+
+                <GraceAuditPanel />
 
                 {range === snapshot.range ? (
                     <ExecutiveOperatingPanels

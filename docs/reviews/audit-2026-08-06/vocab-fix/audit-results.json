@@ -1,0 +1,131 @@
+[
+  {
+    "id": "A3b",
+    "group": "A",
+    "turns": [
+      "Looking for a 9ml cilinder roll on in frosted glass."
+    ],
+    "transcript": [
+      {
+        "user": "Looking for a 9ml cilinder roll on in frosted glass.",
+        "assistant": "Great news — we have 9 ml Cylinder roll-ons in frosted glass, pre-assembled (bottle + roller + cap), 17-415 neck.\n\nOptions:\n- Plastic roller + black dot cap — GB-CYL-FRS-9ML-ROL-BKDT — $0.81 each ($0.77 at 12)\n- Metal roller + black dot cap — GB-CYL-FRS-9ML-MRL-BKDT — $0.90 each ($0.86 at 12)\n- Metal roller + white cap — GB-CYL-FRS-9ML-MRL-WHT — $0.74 each ($0.70 at 12)\n- Metal roller + matte copper cap — GB-CYL-FRS-9ML-MRL-MCPR — $0.82 each ($0.78 at 12)\n\nDo you prefer plastic or metal roller, and which cap color? How many pieces should I stage?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "9 ml frosted cylinder roll-on",
+              "categoryLimit": null,
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "VERIFIED 9ML CYLINDER ROLL-ON COLORS: Amber, Clear, Cobalt Blue, Frosted, Swirl. Swirl is a verified 9ml Cylinder roll-on glass option. Do NOT list White or Green as 9ml Cylinder roll-on glass colors; White is cap/import drift in this family, and Green belongs to separate decorative/glass-stopper products when present.\nCATALOG COVERAGE: The returned 9ml result set includes these canonical color options: Amber, Clear, Cobalt Blue, Frosted, Swirl. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (17 rows), 13-415 (8 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not "
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "B6",
+    "group": "B",
+    "turns": [
+      "For the 50ml clear Circle with the vintage bulb sprayer and tassel: price, availability, and what neck thread it uses?"
+    ],
+    "transcript": [
+      {
+        "user": "For the 50ml clear Circle with the vintage bulb sprayer and tassel: price, availability, and what neck thread it uses?",
+        "assistant": "Here’s what I’m seeing for the 50 ml clear Circle with vintage bulb sprayer + tassel:\n- Neck thread: 18-415\n- Price: $6.20 each ($5.89 at 12+)\n- Availability: In Stock\n\nWhich bulb/tassel color do you want (Ivory/Gold, Ivory/Silver, White, Pink, Lavender)?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "50 ml clear Circle vintage bulb sprayer tassel",
+              "categoryLimit": null,
+              "familyLimit": "Circle",
+              "applicatorFilter": "Vintage Bulb Sprayer with Tassel"
+            },
+            "executed": "live",
+            "outputPreview": "CATALOG COVERAGE: The returned 50ml result set includes these canonical color options: Amber, Clear. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 18-415 (16 rows), 13-415 (9 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-BEL-CLR-10ML-SPR-SBLK\",\n    \"websiteSku\": \"GBBell10SpryBlkSh\",\n    \"itemName\": \"Bell design 10ml Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343699239204\",\n    \"checkoutEligible\": true,\n    \"family\": \"Bell\",\n    \"capacity\": \"10ml(0.34oz)\",\n    \"capacityMl\": 10,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Fine Mist Sprayer\",\n    \"capColor\": \"Shiny Black\",\n    \"neckThreadSize\": \"13-415\",\n    \"slug\": \"bell-10ml-clear-13-415-finemist\","
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "F18",
+    "group": "F",
+    "turns": [
+      "I need roll-on bottles under $0.75 each.",
+      "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain."
+    ],
+    "transcript": [
+      {
+        "user": "I need roll-on bottles under $0.75 each.",
+        "assistant": "I’ve pulled up all roll-on bottles priced at $0.75 or less. \n\nDo you have a preferred size or thread (for example 9 mL 17-415), or glass vs. plastic? I can narrow it and prep a quick cart or quote.",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "I need roll-on bottles under $0.75 each.",
+              "search": null,
+              "category": null,
+              "collection": null,
+              "applicators": [
+                "rollon"
+              ],
+              "families": null,
+              "colors": null,
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 0.75
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          },
+          {
+            "name": "showProductPresentation",
+            "args": {
+              "searchTerm": "roll-on bottles under $0.75",
+              "headline": "Roll-on bottles priced at $0.75 or less",
+              "familyLimit": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"showProductPresentation runs in the customer's browser.\"}"
+          }
+        ]
+      },
+      {
+        "user": "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain.",
+        "assistant": "Got it — I’ve narrowed to roll-on bottles with frosted or swirl glass at $0.75 or less.\n\nWhat size and neck thread do you need (e.g., 9 mL 17-415)? If you share that, I’ll shortlist the exact matches and prep a quick cart or quote.",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain.",
+              "search": "frosted or swirl glass",
+              "category": null,
+              "collection": null,
+              "applicators": [
+                "rollon"
+              ],
+              "families": null,
+              "colors": null,
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 0.75
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+]

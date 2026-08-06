@@ -40,20 +40,27 @@ export const listAll = query({
 });
 
 // ── Price Audit Query ────────────────────────────────────────────────────────
-// Paginated pricing export for convex_price_audit.py.
-// Script pages through all products in batches (default 500 per page).
+// Paginated pricing export for audit scripts (convex_price_audit.py,
+// build_crosscheck_merged.mjs, grace_catalog_coverage_audit.mjs).
+//
+// Cursor-paginated as of 2026-08-06: the old collect()+slice read the whole
+// table per call, and once every product carried a full priceTiers ladder the
+// table crossed Convex's 16MB per-execution read limit. Loop with
+// `cursor: continueCursor` until `isDone`.
 export const getAllForAudit = query({
     args: {
         limit: v.optional(v.number()),
-        skip: v.optional(v.number()),
+        cursor: v.optional(v.union(v.string(), v.null())),
     },
     handler: async (ctx, args) => {
-        const limit = args.limit ?? 500;
-        const skip = args.skip ?? 0;
-        const all = await ctx.db.query("products").collect();
-        const page = all.slice(skip, skip + limit);
+        const result = await ctx.db
+            .query("products")
+            .order("asc")
+            .paginate({ numItems: args.limit ?? 500, cursor: args.cursor ?? null });
+        const page = result.page;
         return {
-            total: all.length,
+            isDone: result.isDone,
+            continueCursor: result.continueCursor,
             page: page.map((p) => ({
                 graceSku: p.graceSku,
                 websiteSku: p.websiteSku,
@@ -64,6 +71,13 @@ export const getAllForAudit = query({
                 webPrice1pc: p.webPrice1pc ?? null,
                 webPrice10pc: p.webPrice10pc ?? null,
                 webPrice12pc: p.webPrice12pc ?? null,
+                priceTiers: p.priceTiers ?? null,
+                priceTiersSyncedAt: p.priceTiersSyncedAt ?? null,
+                capacity: p.capacity ?? null,
+                color: p.color ?? null,
+                capColor: p.capColor ?? null,
+                caseQuantity: p.caseQuantity ?? null,
+                neckThreadSize: p.neckThreadSize ?? null,
                 stockStatus: p.stockStatus ?? null,
             })),
         };
@@ -77,6 +91,43 @@ export const getBySku = query({
             .query("products")
             .withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku))
             .first();
+    },
+});
+
+/**
+ * Exact SKU lookup for Grace — 2026-08-06 audit P0-1.
+ *
+ * `grace.searchCatalog` is a full-text index over `itemName`, so SKU strings
+ * are not indexed: a 40-SKU probe against prod resolved only 28% of exact SKUs.
+ * That produced false "we don't carry that" answers on in-stock products and
+ * one misattributed price. This resolves a SKU deterministically by index —
+ * Grace SKU first, then website SKU, each case-normalized — and returns the
+ * PDP slug so Grace can navigate straight to the product.
+ */
+export const lookupSku = query({
+    args: { sku: v.string() },
+    handler: async (ctx, args) => {
+        const raw = args.sku.trim();
+        if (!raw) return null;
+
+        const candidates = Array.from(new Set([raw, raw.toUpperCase()]));
+        let product = null;
+        for (const candidate of candidates) {
+            product = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", candidate))
+                .first();
+            if (product) break;
+            product = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", candidate))
+                .first();
+            if (product) break;
+        }
+        if (!product) return null;
+
+        const group = product.productGroupId ? await ctx.db.get(product.productGroupId) : null;
+        return { product, slug: group?.slug ?? null, groupDisplayName: group?.displayName ?? null };
     },
 });
 

@@ -67,30 +67,25 @@ def load_products(convex_url: str) -> list[dict]:
     """
     endpoint = f"{convex_url.rstrip('/')}/api/query"
     batch    = 500
-    skip     = 0
+    cursor   = None
     all_prods: list[dict] = []
-    total    = None
 
     try:
         while True:
             r = requests.post(endpoint, json={
                 "path": "products:getAllForAudit",
-                "args": {"limit": batch, "skip": skip}
+                "args": {"limit": batch, "cursor": cursor}
             }, timeout=30)
             if r.status_code != 200:
                 raise Exception(f"HTTP {r.status_code}: {r.text[:200]}")
             data = r.json()
             val  = data.get("value", {})
-            if total is None:
-                total = val.get("total", 0)
             page = val.get("page", [])
-            if not page:
-                break
             all_prods.extend(page)
-            print(f"     Loaded {len(all_prods)}/{total}...", end="\r")
-            if len(all_prods) >= (total or 0):
+            print(f"     Loaded {len(all_prods)}...", end="\r")
+            if val.get("isDone") or not page:
                 break
-            skip += batch
+            cursor = val.get("continueCursor")
 
         if all_prods:
             print(f"  ✅ {len(all_prods)} products loaded from live Convex          ")
