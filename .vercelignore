@@ -1,0 +1,19 @@
+# Keep deploy uploads small. Without this, `vercel deploy` ships the entire
+# working tree — 26+ GB and 27,928 files, which exceeds Vercel's 15,000-file
+# limit and forces --archive=tgz. None of the paths below are imported by the
+# Next.js app or needed by the build; they are local working assets.
+
+# Madison paper-doll source library (~36 GB of PSDs/renders)
+pipeline/
+
+# Local research, audit, and scrape artifacts
+data/
+docs/
+reference_images/
+Best-Bottles-Orphan-urls/
+
+# Convex snapshot exports and local dumps
+*.zip
+
+# Test/report outputs
+coverage/

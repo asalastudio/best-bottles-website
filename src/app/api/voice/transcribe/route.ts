@@ -1,32 +1,14 @@
 import { NextRequest } from "next/server";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 
-type ElevenLabsTranscriptResponse =
-  | {
-      text?: string;
-      transcripts?: Array<{ text?: string }>;
-    }
-  | null;
-
-function getTranscriptText(payload: ElevenLabsTranscriptResponse): string {
-  if (!payload) return "";
-  if (typeof payload.text === "string") return payload.text.trim();
-  if (Array.isArray(payload.transcripts)) {
-    return payload.transcripts
-      .map((entry) => entry.text?.trim() || "")
-      .filter(Boolean)
-      .join(" ")
-      .trim();
-  }
-  return "";
-}
+type OpenAITranscriptResponse = { text?: string } | null;
 
 export async function POST(req: NextRequest) {
-  const limited = await enforceGraceRateLimit(req, { route: "voice-transcribe", limit: 12, windowMs: 60_000 });
-  if (limited) return limited;
+  const rateLimited = await enforceGraceRateLimit(req, { route: "voice-transcribe", limit: 12, windowMs: 60_000 });
+  if (rateLimited) return rateLimited;
 
-  const elevenLabsKey = process.env.ELEVENLABS_API_KEY;
-  if (!elevenLabsKey) {
+  const openaiKey = process.env.OPENAI_API_KEY;
+  if (!openaiKey) {
     return Response.json(
       { error: "Voice search is not configured on the server." },
       { status: 503 }
@@ -55,30 +37,29 @@ export async function POST(req: NextRequest) {
   }
 
   const upstreamForm = new FormData();
-  upstreamForm.append("model_id", "scribe_v2");
-  upstreamForm.append("language_code", "en");
-  upstreamForm.append("tag_audio_events", "false");
+  upstreamForm.append("model", "gpt-4o-mini-transcribe");
+  upstreamForm.append("language", "en");
   upstreamForm.append("file", audio, audio.name || "recording.webm");
 
-  const upstream = await fetch("https://api.elevenlabs.io/v1/speech-to-text", {
+  const upstream = await fetch("https://api.openai.com/v1/audio/transcriptions", {
     method: "POST",
     headers: {
-      "xi-api-key": elevenLabsKey,
+      Authorization: `Bearer ${openaiKey}`,
     },
     body: upstreamForm,
   });
 
   if (!upstream.ok) {
     const detail = await upstream.text().catch(() => "");
-    console.error("[voice/transcribe] ElevenLabs STT error:", upstream.status, detail);
+    console.error("[voice/transcribe] OpenAI STT error:", upstream.status, detail);
     return Response.json(
       { error: "Voice search transcription failed." },
       { status: 502 }
     );
   }
 
-  const payload = (await upstream.json()) as ElevenLabsTranscriptResponse;
-  const text = getTranscriptText(payload);
+  const payload = (await upstream.json()) as OpenAITranscriptResponse;
+  const text = typeof payload?.text === "string" ? payload.text.trim() : "";
 
   return Response.json({ text });
 }

@@ -1,6 +1,5 @@
 "use client";
 
-import { useConversation } from "@elevenlabs/react";
 import { usePathname, useSearchParams, useRouter } from "next/navigation";
 import { useQuery, useMutation } from "convex/react";
 import { api } from "../../../convex/_generated/api";
@@ -51,7 +50,6 @@ import {
     type GracePaperDollSelectionRequest,
 } from "@/lib/grace/paperDollController";
 import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
-import { getGraceProvider } from "@/lib/grace/openaiRealtimeConfig";
 import {
     createGraceOpenAIRealtimeAdapter,
     GraceRealtimeConnectionCancelledError,
@@ -61,7 +59,7 @@ import {
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
 
-// ─── Core product intelligence injected into ElevenLabs session ─────────────
+// ─── Core product intelligence injected into the Realtime session ───────────
 
 type GraceConversationController = {
     getId(): string | null;
@@ -563,7 +561,7 @@ function GraceProviderBase({
     const minimizeWithTooltipRef = useRef(minimizeWithTooltip);
     useEffect(() => { minimizeWithTooltipRef.current = minimizeWithTooltip; }, [minimizeWithTooltip]);
 
-    // Direct message injection (bypass ElevenLabs) — used by client-side flows
+    // Direct message injection (bypass the Realtime session) — used by client-side flows
     // like the image-upload vision analysis that don't need agent narration.
     const appendInlineMessage = useCallback((msg: { role: "user" | "grace"; content: string; action?: import("@/components/GraceContext").GraceAction; actions?: import("@/components/GraceContext").GraceAction[]; attachments?: import("@/components/GraceContext").GraceAttachment[] }) => {
         const actions = msg.actions ?? (msg.action ? [msg.action] : undefined);
@@ -605,7 +603,6 @@ function GraceProviderBase({
     const [conversationActive, setConversationActive] = useState(false);
     const connectingRef = useRef(false);
     const conversationRef = useRef<GraceConversationController | null>(null);
-    const graceProvider = getGraceProvider(process.env.NEXT_PUBLIC_GRACE_PROVIDER);
 
     // ── Messages & streaming ─────────────────────────────────────────────────
     const [messages, setMessages] = useState<GraceMessage[]>([]);
@@ -736,7 +733,7 @@ function GraceProviderBase({
     const browsingHistoryRef = useRef<BrowsingHistoryEntry[]>([]);
     useEffect(() => { browsingHistoryRef.current = browsingHistory; }, [browsingHistory]);
 
-    /** Push full page intelligence to ElevenLabs (retries until session id exists). */
+    /** Push full page intelligence to the Realtime session (retries until session id exists). */
     const sendPageContextToAgent = useCallback(() => {
         const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current);
         if (!contextBlock) return;
@@ -1022,6 +1019,39 @@ function GraceProviderBase({
                 if (stats.familyCounts) lines.push(`Families: ${Object.entries(stats.familyCounts).sort(([, a], [, b]) => b - a).map(([n, c]) => `${n} (${c})`).join(", ")}`);
                 return lines.join("\n");
             } catch (e) { console.error("[Grace] getCatalogStats:", e); return "Stats lookup failed."; }
+        },
+
+        getProductBySku: async (params: { sku?: string | null }) => {
+            const sku = (params?.sku ?? "").trim();
+            if (!sku) return "No SKU provided. Ask the customer for the exact code.";
+            try {
+                const data = await callGraceServerTool<Record<string, unknown>>("getProductBySku", { sku });
+                if (data.error) return `${data.error} I could not look up that SKU.`;
+                if (!data.result) return `No catalog record matches "${sku}" as written. Do not say we don't carry it — offer to search by description or have the team verify the code.`;
+                return JSON.stringify(data.result);
+            } catch (e) { console.error("[Grace] getProductBySku:", e); return "SKU lookup failed."; }
+        },
+
+        getPolicy: async (params: { question?: string | null }) => {
+            try {
+                const data = await callGraceServerTool<Record<string, unknown>>("getPolicy", {
+                    question: params?.question ?? "",
+                });
+                if (data.error) return `${data.error} I could not retrieve the policy text.`;
+                if (!data.result) return "No published policy found for that question. Do not invent terms — offer to connect the customer with the team.";
+                return JSON.stringify(data.result);
+            } catch (e) { console.error("[Grace] getPolicy:", e); return "Policy lookup failed."; }
+        },
+
+        getPriceStats: async (params: { family?: string | null }) => {
+            try {
+                const data = await callGraceServerTool<Record<string, unknown>>("getPriceStats", {
+                    family: params?.family ?? null,
+                });
+                if (data.error) return `${data.error} I could not retrieve price statistics.`;
+                if (!data.result) return "No priced products found for that scope.";
+                return JSON.stringify(data.result);
+            } catch (e) { console.error("[Grace] getPriceStats:", e); return "Price lookup failed."; }
         },
 
         getCurrentPageContext: () => {
@@ -1582,7 +1612,7 @@ function GraceProviderBase({
 
         displayComparison: async (params: { graceSkus: string[] | string; dimensions?: string[] | string }) => {
             try {
-                // ElevenLabs sometimes JSON-stringifies array params — defensive parse,
+                // Realtime tool calls sometimes JSON-stringify array params — defensive parse,
                 // matches the pattern proposeCartAdd already uses.
                 const skus: string[] = (() => {
                     if (Array.isArray(params.graceSkus)) return params.graceSkus;
@@ -1738,7 +1768,7 @@ function GraceProviderBase({
                 try {
                     const parsed = JSON.parse(value);
                     if (Array.isArray(parsed)) return parsed.filter((item): item is string => typeof item === "string" && Boolean(item.trim()));
-                } catch { /* comma-delimited ElevenLabs compatibility */ }
+                } catch { /* comma-delimited legacy param compatibility */ }
                 return value.split(",").map((item) => item.trim()).filter(Boolean);
             };
             const proposal: GraceRefinementProposal = {};
@@ -1930,7 +1960,7 @@ function GraceProviderBase({
         // ── End provider-neutral client tools ───────────────────────────────
     }), []);
 
-    // ── ElevenLabs callbacks ─────────────────────────────────────────────────
+    // ── Realtime session callbacks ───────────────────────────────────────────
 
     const handleConnect = useCallback(() => {
         connectingRef.current = false;
@@ -1962,7 +1992,7 @@ function GraceProviderBase({
     const MAX_RECONNECTS = 2;
     // True while a teardown the user asked for (end button, voice toggle, new
     // chat) is in flight, so handleDisconnect can tell intentional ends apart
-    // from server-side cutoffs (e.g. ElevenLabs max call duration).
+    // from server-side cutoffs (e.g. provider max call duration).
     const intentionalEndRef = useRef(false);
 
     const handleDisconnect = useCallback((details: { reason: string; message?: string; closeCode?: number; closeReason?: string }) => {
@@ -2024,7 +2054,7 @@ function GraceProviderBase({
             // Reset the counter so the next user-initiated session starts fresh.
             reconnectAttemptsRef.current = 0;
 
-            // Surface unexpected session ends (e.g. ElevenLabs max call
+            // Surface unexpected session ends (e.g. provider max call
             // duration, closeCode 1000 from the agent) — otherwise the chat
             // just goes quiet and voice users keep talking into a dead
             // connection. send() restarts the session on the next message.
@@ -2092,7 +2122,7 @@ function GraceProviderBase({
         }
 
         // Assistant message finalization — attach every queued GraceAction for
-        // this turn. ElevenLabs can call several display tools before emitting
+        // this turn. The model can call several display tools before emitting
         // one final assistant message, so a single-action slot strands later UI.
         streamingFinalizedRef.current = true;
         setIsAwaitingReply(false);
@@ -2181,16 +2211,6 @@ function GraceProviderBase({
         });
     }, []);
 
-    const elevenLabsConversation = useConversation({
-        clientTools,
-        onConnect: handleConnect,
-        onDisconnect: handleDisconnect,
-        onModeChange: handleModeChange,
-        onError: handleError,
-        onMessage: handleMessage,
-        onAgentChatResponsePart: handleAgentChatResponsePart,
-    });
-
     const openAIAdapter = useMemo<GraceOpenAIRealtimeAdapter>(() =>
         createGraceOpenAIRealtimeAdapter({
             baseInstructions: GRACE_REALTIME_INSTRUCTIONS,
@@ -2239,14 +2259,8 @@ function GraceProviderBase({
     }), [openAIAdapter]);
 
     useEffect(() => {
-        if (graceProvider === "openai") {
-            conversationRef.current = openAIConversation;
-            return;
-        }
-        if (graceProvider === "elevenlabs") {
-            conversationRef.current = elevenLabsConversation as GraceConversationController;
-        }
-    }, [elevenLabsConversation, graceProvider, openAIConversation]);
+        conversationRef.current = openAIConversation;
+    }, [openAIConversation]);
 
     // ── Start / stop ─────────────────────────────────────────────────────────
 
@@ -2264,49 +2278,17 @@ function GraceProviderBase({
 
         try {
             const page = pageContextRef.current;
-            const productName = page?.currentProduct?.name ?? "our collection";
-            const cp = page?.currentProduct;
-            const clip = (s: string, max: number) => (s.length > max ? `${s.slice(0, max)}…` : s);
 
-            console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session with ${graceProvider}...`);
-            if (graceProvider === "openai") {
-                const res = await fetchJsonWithTimeout<{ clientSecret?: string; error?: string }>(
-                    "/api/openai/realtime-token",
-                    { method: "GET" },
-                );
-                if (!res.ok) throw new Error(res.error ?? "Failed to initialize OpenAI Realtime.");
-                const clientSecret = res.data?.clientSecret;
-                if (!clientSecret) throw new Error("OpenAI did not return a valid Realtime client secret.");
-                await openAIAdapter.sendContext(formatPageContextForGrace(page, browsingHistoryRef.current));
-                await openAIAdapter.connect({ clientSecret, mode: useTextOnly ? "text" : "voice" });
-            } else if (graceProvider === "elevenlabs") {
-                const res = await fetchJsonWithTimeout<{ signedUrl?: string; error?: string }>("/api/elevenlabs/signed-url", {});
-                if (!res.ok) throw new Error(res.error ?? "Failed to get ElevenLabs connection.");
-                const { signedUrl } = res.data ?? {};
-                if (!signedUrl) throw new Error("ElevenLabs did not return a valid signed URL.");
-                await elevenLabsConversation.startSession({
-                    signedUrl,
-                    textOnly: useTextOnly,
-                    ...(!useTextOnly ? { preferHeadphonesForIosDevices: true } : {}),
-                    dynamicVariables: {
-                        _product_name_: productName,
-                        _page_type_: page?.pageType ?? "other",
-                        _page_path_: page?.pathname ?? "/",
-                        _page_url_: clip(page?.pageUrl ?? page?.pathname ?? "/", 500),
-                        _grace_sku_: cp?.graceSku ?? "",
-                        _neck_thread_: cp?.neckThreadSize ?? "",
-                        _product_family_: cp?.family ?? "",
-                        _applicators_line_: clip(
-                            (cp?.applicatorTypes?.length ? cp.applicatorTypes.join(", ") : cp?.applicator) ?? "",
-                            400,
-                        ),
-                        _caps_summary_: clip(cp?.capsSummary ?? "", 400),
-                        _catalog_category_: page?.catalogCategory ?? "",
-                        _catalog_search_: clip(page?.catalogSearch ?? "", 200),
-                        _catalog_families_: clip(page?.currentCollection ?? "", 300),
-                    },
-                });
-            }
+            console.log(`[Grace] Starting ${useTextOnly ? "text" : "voice"} session with OpenAI Realtime...`);
+            const res = await fetchJsonWithTimeout<{ clientSecret?: string; error?: string }>(
+                "/api/openai/realtime-token",
+                { method: "GET" },
+            );
+            if (!res.ok) throw new Error(res.error ?? "Failed to initialize OpenAI Realtime.");
+            const clientSecret = res.data?.clientSecret;
+            if (!clientSecret) throw new Error("OpenAI did not return a valid Realtime client secret.");
+            await openAIAdapter.sendContext(formatPageContextForGrace(page, browsingHistoryRef.current));
+            await openAIAdapter.connect({ clientSecret, mode: useTextOnly ? "text" : "voice" });
             console.log("[Grace] Session started successfully.");
             setConversationActive(true);
             if (useTextOnly) {
@@ -2333,7 +2315,7 @@ function GraceProviderBase({
         } finally {
             connectingRef.current = false;
         }
-    }, [elevenLabsConversation, graceProvider, openAIAdapter]);
+    }, [openAIAdapter]);
 
     // Sync startConversation into the ref so handleDisconnect can invoke it
     // for auto-reconnect on transient WebSocket failures.
@@ -2378,8 +2360,9 @@ function GraceProviderBase({
         setVoiceFailed(false);
         connectingRef.current = false;
 
-        // Do not call getUserMedia here — @elevenlabs/client VoiceConversation already acquires
-        // the mic (twice: preliminary + Input). Priming + stopping tracks can break the second capture on Safari/Chrome.
+        // Do not call getUserMedia here — the @openai/agents RealtimeSession WebRTC
+        // transport acquires the mic itself on connect. Priming + stopping tracks
+        // here can break the SDK's capture on Safari/Chrome.
 
         await new Promise((r) => setTimeout(r, 400));
 
@@ -2457,7 +2440,7 @@ function GraceProviderBase({
             setVoiceFailed(false);
             pendingMessageRef.current = msg;
             const connected = await startConversation(true);
-            if (!connected && graceProvider === "openai") {
+            if (!connected) {
                 pendingMessageRef.current = null;
                 const recovered = await sendWithOpenAITextFallback(msg);
                 if (!recovered) {
@@ -2466,7 +2449,7 @@ function GraceProviderBase({
                 }
             }
         }
-    }, [graceProvider, input, sendWithOpenAITextFallback, startConversation]);
+    }, [input, sendWithOpenAITextFallback, startConversation]);
 
     // ── Navigation handling ──────────────────────────────────────────────────
     const [pendingNavigation, setPendingNavigation] = useState<string | null>(null);
@@ -2598,8 +2581,8 @@ function GraceProviderBase({
     }, []);
 
     const stopSpeaking = useCallback(() => {
-        if (graceProvider === "openai") openAIAdapter.interrupt();
-    }, [graceProvider, openAIAdapter]);
+        openAIAdapter.interrupt();
+    }, [openAIAdapter]);
 
     // ── Compose context value ────────────────────────────────────────────────
 

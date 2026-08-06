@@ -9,7 +9,10 @@ import { executePublicGraceToolCall } from "@/lib/grace/publicToolCallServer";
  */
 export async function POST(req: NextRequest) {
     try {
-        const expectedSecret = process.env.ELEVENLABS_WEBHOOK_SECRET;
+        // GRACE_TOOLS_WEBHOOK_SECRET is the canonical name; the ELEVENLABS_*
+        // fallback keeps existing Vercel envs working until they are renamed.
+        const expectedSecret = process.env.GRACE_TOOLS_WEBHOOK_SECRET
+            ?? process.env.ELEVENLABS_WEBHOOK_SECRET;
         if (expectedSecret) {
             const originHeader = req.headers.get("origin");
             const hostHeader = req.headers.get("host");

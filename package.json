@@ -40,7 +40,8 @@
     "paper-doll:manifest": "node scripts/paper-doll/generate-manifest.mjs",
     "paper-doll:recanvas:cylinder-9ml": "node scripts/paper-doll/recanvas-cylinder-9ml.mjs",
     "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs",
-    "paper-doll:import-madison-release": "tsx scripts/paper-doll/import-madison-release.ts"
+    "paper-doll:import-madison-release": "tsx scripts/paper-doll/import-madison-release.ts",
+    "cylinder:beauty:publish-sanity": "node scripts/publish-cylinder-beauty-gallery-to-sanity.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
@@ -49,7 +50,6 @@
     "@clerk/nextjs": "^6.39.0",
     "@convex-dev/agent": "^0.6.1",
     "@convex-dev/rag": "^0.7.2",
-    "@elevenlabs/react": "^0.14.3",
     "@openai/agents": "^0.14.2",
     "@phosphor-icons/react": "^2.1.10",
     "@portabletext/react": "^6.0.2",
@@ -67,7 +67,6 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "convex": "^1.32.0",
-    "convex-elevenlabs": "^0.1.0",
     "convex-helpers": "^0.1.114",
     "framer-motion": "^12.34.3",
     "mixpanel-browser": "^2.77.0",

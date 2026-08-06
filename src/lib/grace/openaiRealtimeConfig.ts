@@ -1,12 +1,6 @@
 export const GRACE_REALTIME_MODEL = "gpt-realtime-2.1" as const;
 export const GRACE_REALTIME_VOICE = "marin" as const;
 
-export type GraceProviderId = "openai" | "elevenlabs";
-
-export function getGraceProvider(rawValue: string | undefined): GraceProviderId {
-    return rawValue?.trim().toLowerCase() === "elevenlabs" ? "elevenlabs" : "openai";
-}
-
 export function buildGraceRealtimeSessionRequest() {
     return {
         session: {

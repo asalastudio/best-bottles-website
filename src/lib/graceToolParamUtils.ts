@@ -1,7 +1,7 @@
 /**
  * Normalize Grace client-tool parameters before Convex calls.
  *
- * ElevenLabs / LLMs sometimes send `query` or `q` instead of `searchTerm`.
+ * LLM tool calls sometimes send `query` or `q` instead of `searchTerm`.
  * Convex validators require exact field names — map aliases here so queries never fail validation.
  */
 
