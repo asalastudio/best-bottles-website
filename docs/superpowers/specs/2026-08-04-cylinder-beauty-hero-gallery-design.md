@@ -1,7 +1,7 @@
 # Cylinder Beauty Hero Gallery Design
 
 **Date:** 2026-08-04  
-**Status:** UI architecture implemented; clean production exports pending  
+**Status:** Programmatic production set published and storefront-verified
 **Scope:** Best Bottles 9 mL Cylinder, 17-415 platform (`CYL-9ML`)
 
 ## Objective
@@ -83,7 +83,7 @@ These adjustments must not change the background color, sandstone slab, camera p
 ## Content architecture
 
 - **Shopify:** continues to own exact sellable SKU media, variant identity, price, and availability. The generic metal-roller/matte-silver beauty images must not become Shopify variant images because they would misrepresent other component selections.
-- **Sanity:** owns one atomic `paperDollBeautyGallery` document for `CYL-9ML`, containing exactly one clean 2080 × 2288 hero for each glass key (`CLR`, `AMB`, `BLU`, `FRS`, `SWL`).
+- **Sanity:** owns one atomic `paperDollBeautyGallery` document for `CYL-9ML`, containing exactly one clean 2080 × 2288 hero for each glass key (`CLR`, `AMB`, `BLU`, `FRS`, `SWL`). The selected glass hero appears in its own large editorial canvas above the component builder, never as a configurator-gallery thumbnail.
 - **Paper Doll:** remains the exact visual source for the selected roller, cap, sprayer, or pump in Build View.
 - **Release gate:** the storefront rejects a gallery unless all five keys are present exactly once, every image is 2080 × 2288, the reference is metal roller plus matte silver, and `storefrontReady` is true.
 - Watermarked review comps never enter public assets or Sanity production documents.

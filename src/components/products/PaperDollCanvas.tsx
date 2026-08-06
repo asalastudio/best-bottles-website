@@ -2,23 +2,28 @@
 
 import Image from "next/image";
 import { useMemo, useState } from "react";
-import { resolvePaperDollLayers } from "@/lib/paper-doll/render";
-import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
+import { resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
+import type { RenderablePaperDollFamily } from "@/lib/paper-doll/sanity";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 
 export default function PaperDollCanvas({
     family,
     selected,
+    preview = false,
     onFailure,
 }: {
-    family: StorefrontPaperDollFamily;
+    family: RenderablePaperDollFamily;
     selected: PaperDollConfiguration;
+    preview?: boolean;
     onFailure?: () => void;
 }) {
-    const layers = useMemo(() => resolvePaperDollLayers(family, selected), [family, selected]);
+    const resolution = useMemo(() => resolvePaperDollLayersResult(family, selected), [family, selected]);
+    const layers = resolution.ok ? resolution.layers : [];
     const loadIdentity = `${family.assetRevision}:${selected.graceSku}`;
     const [loadState, setLoadState] = useState<{ identity: string; keys: Set<string> }>({ identity: loadIdentity, keys: new Set() });
     const loaded = loadState.identity === loadIdentity ? loadState.keys : new Set<string>();
+
+    if (!resolution.ok) return null;
 
     return (
         <div
@@ -26,6 +31,7 @@ export default function PaperDollCanvas({
             role="img"
             aria-label={`${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel} and ${selected.finishLabel} finish`}
             data-paper-doll-revision={family.assetRevision}
+            data-paper-doll-preview={preview ? "true" : undefined}
         >
             {loaded.size < layers.length && (
                 <div className="absolute inset-0 z-20 flex items-center justify-center bg-travertine" aria-live="polite">

@@ -9,7 +9,7 @@ import {
     selectCylinderConfiguration,
 } from "@/lib/products/unified-cylinder-pdp";
 import { buildCylinder9mlConfigurations } from "@/lib/products/cylinder-9ml-configurator";
-import { resolvePaperDollLayers } from "@/lib/paper-doll/render";
+import { resolvePaperDollLayers, resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
 import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
 import { swirlWhiteCapFixtures } from "./fixtures/cylinder-9ml";
 
@@ -87,14 +87,15 @@ describe("unified Cylinder PDP state", () => {
         expect(resolveUnifiedPdpView(null)).toBe("beauty");
     });
 
-    it("keeps Beauty and Build visible as peer views while the layered release is preparing", () => {
+    it("keeps unreleased layered media out of the configurator while preserving its future release path", () => {
         const source = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
 
-        expect(source).toContain("Beauty View");
-        expect(source).toContain("Build This Bottle · 145 configurations");
-        expect(source).toContain("aria-disabled={!buildReady}");
-        expect(source).toContain("Layered preview in preparation");
+        expect(source).toContain("Product photos");
+        expect(source).toContain("Build preview · 145 configurations");
         expect(source).toContain("min-h-[360px] sm:min-h-[420px]");
+        expect(source).toContain('{buildReady && <div className="min-w-0">');
+        expect(source).toContain('"mx-auto max-w-[820px]"');
+        expect(source).toContain("Choose from every verified component below");
         expect(source).not.toContain('next.set("view", "beauty");\n            router.replace');
     });
 
@@ -105,7 +106,10 @@ describe("unified Cylinder PDP state", () => {
         const serverClient = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
 
         expect(component).toContain("resolveCylinderBeautyHero(beautyGallery, selected.glassKey)");
-        expect(component).toContain("Metal roller · Matte silver reference");
+        expect(component).toContain('className="object-cover"');
+        expect(component).toContain("max-w-[1040px]");
+        expect(component).toContain("Beauty reference · Metal roller · Matte silver");
+        expect(component).not.toContain('rows.push({\n                url: beautyHero.imageUrl');
         expect(component).toContain("<PaperDollCanvas");
         expect(page).toContain("getStorefrontCylinderBeautyGallery");
         expect(page).toContain("beautyGallery={beautyGallery}");
@@ -268,5 +272,22 @@ describe("unified Cylinder PDP state", () => {
         } as StorefrontPaperDollFamily;
 
         expect(() => resolvePaperDollLayers(family, configurations[0])).toThrow(/roller:MTL-ROLL/);
+        expect(resolvePaperDollLayersResult(family, configurations[0])).toEqual({
+            ok: false,
+            missing: {
+                slot: "roller",
+                variantKey: "MTL-ROLL",
+                sku: "GB-CYL-CLR-9ML-MRL-WHT",
+            },
+        });
+    });
+
+    it("labels draft preview and exposes exact missing-layer diagnostics", () => {
+        const source = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
+
+        expect(source).toContain("Draft preview — not publicly released");
+        expect(source).toContain("resolvePaperDollLayersResult");
+        expect(source).toContain("layerResolution.missing.slot");
+        expect(source).toContain("layerResolution.missing.variantKey");
     });
 });

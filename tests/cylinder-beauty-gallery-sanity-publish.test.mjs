@@ -2,21 +2,29 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
-    CYLINDER_BEAUTY_UPLOADS,
+    CYLINDER_BEAUTY_ASSETS,
     buildCylinderBeautyGalleryDocument,
+    resolveCylinderBeautyUploads,
 } from "../scripts/cylinder-beauty-gallery-sanity-core.mjs";
 
 test("publishes exactly the five canonical glass assets", () => {
     assert.deepEqual(
-        CYLINDER_BEAUTY_UPLOADS.map((asset) => asset.glassKey),
+        CYLINDER_BEAUTY_ASSETS.map((asset) => asset.glassKey),
         ["CLR", "AMB", "BLU", "FRS", "SWL"],
     );
-    assert.ok(CYLINDER_BEAUTY_UPLOADS.every((asset) => asset.absolutePath.endsWith(".png")));
+    assert.ok(CYLINDER_BEAUTY_ASSETS.every((asset) => asset.filename.endsWith(".png")));
+});
+
+test("resolves generated assets from an explicit portable output root", () => {
+    const uploads = resolveCylinderBeautyUploads("/tmp/cylinder-heroes");
+    assert.equal(uploads.length, 5);
+    assert.ok(uploads.every((asset) => asset.absolutePath.startsWith("/tmp/cylinder-heroes/")));
+    assert.throws(() => resolveCylinderBeautyUploads(""), /output root is required/i);
 });
 
 test("builds the atomic storefront-ready Sanity gallery document", () => {
     const uploadedAssets = Object.fromEntries(
-        CYLINDER_BEAUTY_UPLOADS.map((asset) => [asset.glassKey, `image-${asset.glassKey}-2080x2288-png`]),
+        CYLINDER_BEAUTY_ASSETS.map((asset) => [asset.glassKey, `image-${asset.glassKey}-2080x2288-png`]),
     );
     const document = buildCylinderBeautyGalleryDocument(uploadedAssets);
 
@@ -30,7 +38,7 @@ test("builds the atomic storefront-ready Sanity gallery document", () => {
     assert.equal(document.heroes.length, 5);
     assert.deepEqual(
         document.heroes.map((hero) => hero.image.asset._ref),
-        CYLINDER_BEAUTY_UPLOADS.map((asset) => uploadedAssets[asset.glassKey]),
+        CYLINDER_BEAUTY_ASSETS.map((asset) => uploadedAssets[asset.glassKey]),
     );
 });
 

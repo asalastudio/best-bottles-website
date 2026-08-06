@@ -1,41 +1,50 @@
-const MADISON_OUTPUT_ROOT =
-    "/Users/jordanrichter/Projects/Madison Studio/madison-app/outputs/best-bottles/cylinder-beauty-gallery/sandstone-v1/final";
+import path from "node:path";
 
-export const CYLINDER_BEAUTY_UPLOADS = [
+export const CYLINDER_BEAUTY_ASSETS = [
     {
         glassKey: "CLR",
         glassLabel: "Clear",
         outputSlug: "clear",
-        absolutePath: `${MADISON_OUTPUT_ROOT}/cylinder-clear-metal-roller-matte-silver-sandstone-v1.png`,
+        filename: "cylinder-clear-metal-roller-matte-silver-sandstone-v1.png",
     },
     {
         glassKey: "AMB",
         glassLabel: "Amber",
         outputSlug: "amber",
-        absolutePath: `${MADISON_OUTPUT_ROOT}/cylinder-amber-metal-roller-matte-silver-sandstone-v1.png`,
+        filename: "cylinder-amber-metal-roller-matte-silver-sandstone-v1.png",
     },
     {
         glassKey: "BLU",
         glassLabel: "Cobalt Blue",
         outputSlug: "cobalt-blue",
-        absolutePath: `${MADISON_OUTPUT_ROOT}/cylinder-cobalt-metal-roller-matte-silver-sandstone-v1.png`,
+        filename: "cylinder-cobalt-metal-roller-matte-silver-sandstone-v1.png",
     },
     {
         glassKey: "FRS",
         glassLabel: "Frosted",
         outputSlug: "frosted",
-        absolutePath: `${MADISON_OUTPUT_ROOT}/cylinder-frosted-metal-roller-matte-silver-sandstone-v1.png`,
+        filename: "cylinder-frosted-metal-roller-matte-silver-sandstone-v1.png",
     },
     {
         glassKey: "SWL",
         glassLabel: "Swirl",
         outputSlug: "swirl",
-        absolutePath: `${MADISON_OUTPUT_ROOT}/cylinder-swirl-metal-roller-matte-silver-sandstone-v1.png`,
+        filename: "cylinder-swirl-metal-roller-matte-silver-sandstone-v1.png",
     },
 ];
 
+export function resolveCylinderBeautyUploads(outputRoot) {
+    if (typeof outputRoot !== "string" || outputRoot.trim().length === 0) {
+        throw new Error("Cylinder beauty output root is required");
+    }
+    return CYLINDER_BEAUTY_ASSETS.map((asset) => ({
+        ...asset,
+        absolutePath: path.resolve(outputRoot, asset.filename),
+    }));
+}
+
 export function buildCylinderBeautyGalleryDocument(uploadedAssets) {
-    const missing = CYLINDER_BEAUTY_UPLOADS.filter(
+    const missing = CYLINDER_BEAUTY_ASSETS.filter(
         (asset) => typeof uploadedAssets?.[asset.glassKey] !== "string"
             || uploadedAssets[asset.glassKey].trim().length === 0,
     );
@@ -55,7 +64,7 @@ export function buildCylinderBeautyGalleryDocument(uploadedAssets) {
         generator: "Google Gemini Nano Banana Pro (gemini-3-pro-image)",
         assetRevision: "sandstone-v1",
         storefrontReady: true,
-        heroes: CYLINDER_BEAUTY_UPLOADS.map((asset) => ({
+        heroes: CYLINDER_BEAUTY_ASSETS.map((asset) => ({
             _key: asset.glassKey.toLowerCase(),
             _type: "glassBeautyHero",
             glassKey: asset.glassKey,

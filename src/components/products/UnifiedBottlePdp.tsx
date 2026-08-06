@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
@@ -12,7 +13,8 @@ import PaperDollCanvas from "./PaperDollCanvas";
 import ProductImageGallery, { type GalleryImage } from "./ProductImageGallery";
 import { analytics } from "@/lib/analytics";
 import { isCheckoutReady } from "@/lib/checkout";
-import type { StorefrontPaperDollFamily } from "@/lib/paper-doll/sanity";
+import type { RenderablePaperDollFamily } from "@/lib/paper-doll/sanity";
+import { resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
     GRACE_PAPER_DOLL_SELECT_EVENT,
@@ -63,23 +65,20 @@ function formatPrice(value: number | null | undefined): string {
 export default function UnifiedBottlePdp({
     configurations,
     paperDollFamily,
-    paperDollPreview = false,
     beautyGallery,
+    paperDollPreview = false,
 }: {
     configurations: PaperDollConfiguration[];
-    paperDollFamily: StorefrontPaperDollFamily | null;
-    /**
-     * True when the gated draft-preview flag resolved on the server. Draft
-     * families are not storefront-ready, so `paperDollFamily` is null for them;
-     * this flag tells the UI it is showing a draft rather than a released build.
-     */
-    paperDollPreview?: boolean;
+    paperDollFamily: RenderablePaperDollFamily | null;
     beautyGallery: StorefrontCylinderBeautyGallery | null;
+    paperDollPreview?: boolean;
 }) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const { addItems } = useCart();
-    const buildReady = isUnifiedCylinderBuildReady(configurations, Boolean(paperDollFamily));
+    const buildReady = paperDollPreview
+        ? Boolean(paperDollFamily)
+        : isUnifiedCylinderBuildReady(configurations, Boolean(paperDollFamily));
     const view = resolveUnifiedPdpView(searchParams.get("view"));
     const [selectedSku, setSelectedSku] = useState(() => initialFromSearch(configurations, new URLSearchParams(searchParams.toString())).graceSku);
     const [qty, setQty] = useState(1);
@@ -93,6 +92,10 @@ export default function UnifiedBottlePdp({
     const selected = queryResolution && !queryResolution.invalidConfiguration
         ? queryResolution.configuration
         : configurations.find((configuration) => configuration.graceSku === selectedSku) ?? configurations[0];
+    const layerResolution = useMemo(
+        () => paperDollFamily ? resolvePaperDollLayersResult(paperDollFamily, selected) : null,
+        [paperDollFamily, selected],
+    );
 
     useEffect(() => {
         if (queryResolution?.invalidConfiguration) {
@@ -137,21 +140,15 @@ export default function UnifiedBottlePdp({
         return () => window.removeEventListener(GRACE_PAPER_DOLL_SELECT_EVENT, handleGraceSelection);
     }, [configurations, router, searchParams, selected]);
 
+    const beautyHero = resolveCylinderBeautyHero(beautyGallery, selected.glassKey);
+
     const images = useMemo(() => {
         const rows: GalleryImage[] = [];
-        const beautyHero = resolveCylinderBeautyHero(beautyGallery, selected.glassKey);
-        if (beautyHero) {
-            rows.push({
-                url: beautyHero.imageUrl,
-                label: "Metal roller · Matte silver reference",
-                alt: beautyHero.alt,
-            });
-        }
         if (usableImage(selected.imageUrl)) rows.push({ url: selected.imageUrl, label: "Complete bottle", alt: `${selected.glassLabel} Cylinder bottle with ${selected.finishLabel} finish` });
         if (usableImage(selected.imageUrlCapOff) && selected.imageUrlCapOff !== selected.imageUrl) rows.push({ url: selected.imageUrlCapOff, label: "Applicator view", alt: `${selected.glassLabel} Cylinder bottle with applicator exposed` });
         if (rows.length === 0) rows.push({ url: "/assets/Cylinder-BB.png", label: "Cylinder family", alt: "Cylinder bottle on warm natural stone" });
         return rows;
-    }, [beautyGallery, selected]);
+    }, [selected]);
 
     const checkoutReady = isCheckoutReady(selected);
     const inStock = selected.stockStatus === "In Stock";
@@ -231,35 +228,74 @@ export default function UnifiedBottlePdp({
                     <p className="mt-3 max-w-3xl text-sm leading-6 text-slate">Choose the glass, applicator, roller material when needed, and finish. Every option shown belongs to this exact 17-415 bottle platform.</p>
                 </div>
 
-                <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12">
-                    <div className="min-w-0">
+                {beautyHero && (
+                    <section aria-labelledby="cylinder-beauty-title" className="border-b border-champagne pb-10 sm:pb-14">
+                        <div className="mx-auto w-full max-w-[1040px]">
+                            <div className="relative aspect-[10/11] w-full overflow-hidden bg-travertine">
+                                <Image
+                                    src={beautyHero.imageUrl}
+                                    alt={beautyHero.alt}
+                                    fill
+                                    priority
+                                    unoptimized
+                                    sizes="(max-width: 1100px) 100vw, 1040px"
+                                    className="object-cover"
+                                />
+                            </div>
+                            <div className="flex flex-col gap-1 border-x border-b border-champagne bg-bone px-4 py-3 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+                                <h2 id="cylinder-beauty-title" className="font-serif text-lg text-obsidian">{beautyHero.glassLabel} Cylinder</h2>
+                                <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-slate">Beauty reference · Metal roller · Matte silver</p>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                <div className="mb-6 mt-10 border-b border-champagne pb-5 sm:mt-14">
+                    <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-muted-gold">Build your bottle</p>
+                    <h2 className="mt-1 font-serif text-3xl font-medium text-obsidian">Choose the exact components</h2>
+                </div>
+
+                <div className={buildReady ? "grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12" : "mx-auto max-w-[820px]"}>
+                    {buildReady && <div className="min-w-0">
                         <div className="mb-3 flex border-b border-champagne" role="tablist" aria-label="Product media view">
-                            <button type="button" role="tab" aria-selected={view === "beauty"} onClick={() => updateView("beauty")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "beauty" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Beauty View</button>
+                            <button type="button" role="tab" aria-selected={view === "beauty"} onClick={() => updateView("beauty")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "beauty" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Product photos</button>
                             <button
                                 type="button"
                                 role="tab"
                                 aria-selected={view === "build"}
-                                aria-disabled={!buildReady}
-                                disabled={!buildReady}
                                 onClick={() => updateView("build")}
-                                className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"} disabled:cursor-not-allowed disabled:opacity-65`}
+                                className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}
                             >
-                                <span className="block">Build This Bottle · 145 configurations</span>
-                                {!buildReady && <span className="mt-0.5 block text-[9px] font-medium text-slate">Layered preview in preparation</span>}
+                                <span className="block">Build preview · 145 configurations</span>
                             </button>
                         </div>
-                        {view === "build" && buildReady && paperDollFamily && !canvasFailed ? (
-                            <PaperDollCanvas family={paperDollFamily} selected={selected} onFailure={() => setCanvasFailed(true)} />
+                        {paperDollPreview && (
+                            <div className="mb-3 border border-muted-gold bg-[#fff4d8] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-obsidian" role="status">
+                                Draft preview — not publicly released
+                            </div>
+                        )}
+                        {view === "build" && buildReady && paperDollFamily && layerResolution?.ok && !canvasFailed ? (
+                            <PaperDollCanvas family={paperDollFamily} selected={selected} preview={paperDollPreview} onFailure={() => setCanvasFailed(true)} />
                         ) : view === "build" ? (
                             <div className="flex aspect-[10/11] min-h-[360px] sm:min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
                                 <Package className="h-10 w-10 text-muted-gold" />
                                 <h2 className="mt-4 font-serif text-2xl text-obsidian">
-                                    {canvasFailed ? "Layered preview temporarily unavailable" : "Layered preview in preparation"}
+                                    {layerResolution && !layerResolution.ok
+                                        ? "Draft configuration incomplete"
+                                        : canvasFailed
+                                            ? "Layered preview temporarily unavailable"
+                                            : "Layered preview in preparation"}
                                 </h2>
-                                <p className="mt-2 max-w-md text-sm leading-6 text-slate">
-                                    You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
-                                </p>
-                                <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">Return to Beauty View</button>
+                                {layerResolution && !layerResolution.ok ? (
+                                    <p className="mt-2 max-w-md text-sm leading-6 text-slate" role="alert">
+                                        Missing {layerResolution.missing.slot} layer: {layerResolution.missing.variantKey ?? "unassigned"}
+                                    </p>
+                                ) : (
+                                    <p className="mt-2 max-w-md text-sm leading-6 text-slate">
+                                        You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
+                                    </p>
+                                )}
+                                <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">View product photos</button>
                             </div>
                         ) : (
                             <ProductImageGallery images={images} primaryAlt={productName} fallbackUrl="/assets/Cylinder-BB.png" aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
@@ -269,7 +305,7 @@ export default function UnifiedBottlePdp({
                             <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Applicator</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Finish</p><p className="mt-1 text-xs font-semibold">{selected.finishLabel}</p></div>
                         </div>
-                    </div>
+                    </div>}
 
                     <aside className="border border-champagne bg-bone p-4 sm:p-6 lg:sticky lg:top-32">
                         <div className="flex items-start justify-between gap-4 border-b border-champagne pb-5">
@@ -280,6 +316,12 @@ export default function UnifiedBottlePdp({
                             </div>
                             <div className="text-right"><p className="font-serif text-2xl text-obsidian">{formatPrice(selected.price1pc)}</p><p className="text-[10px] text-slate">per bottle</p></div>
                         </div>
+
+                        {!buildReady && (
+                            <p className="mt-4 border-l-2 border-muted-gold pl-3 text-xs leading-5 text-slate">
+                                Choose from every verified component below. The exact layered preview will appear after the complete 2080 × 2288 component set passes its release check.
+                            </p>
+                        )}
 
                         <div className="py-5"><BottleConfigurator configurations={configurations} selected={selected} onSelect={updateSelection} /></div>
 

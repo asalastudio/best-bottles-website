@@ -122,20 +122,13 @@ async function getUnifiedCylinderData() {
     return buildCylinder9mlConfigurations(rows);
 }
 
-async function getReleasedCylinderPaperDoll() {
+async function getReleasedCylinderPaperDoll(preview: boolean) {
     try {
-        return await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
+        return preview
+            ? await getPreviewPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey)
+            : await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
     } catch (error) {
-        console.warn("CYL-9ML Paper Doll release gate rejected the Sanity document", error);
-        return null;
-    }
-}
-
-async function getPreviewCylinderPaperDoll() {
-    try {
-        return await getPreviewPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
-    } catch (error) {
-        console.warn("CYL-9ML Paper Doll draft failed preview validation", error);
+        console.warn(`CYL-9ML Paper Doll ${preview ? "draft preview" : "release gate"} rejected the Sanity document`, error);
         return null;
     }
 }
@@ -302,33 +295,28 @@ export default async function ProductPage({
 
     const activeSlug = legacyRouteOverride ?? slug;
     if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        const previewParam = resolvedSearchParams.paperDollPreview;
-        const previewRequested = (Array.isArray(previewParam) ? previewParam : [previewParam])
-            .some((value) => value === "1" || value === "true");
-        const paperDollPreview = isPaperDollDraftPreviewAllowed({
+        const previewValue = Array.isArray(resolvedSearchParams.paperDollPreview)
+            ? resolvedSearchParams.paperDollPreview[0]
+            : resolvedSearchParams.paperDollPreview;
+        const previewRequested = previewValue === "1" || previewValue === "true";
+        const paperDollPreviewAllowed = isPaperDollDraftPreviewAllowed({
             requested: previewRequested,
             draftModeEnabled: (await draftMode()).isEnabled,
             nodeEnv: process.env.NODE_ENV,
         });
         const [configurations, paperDollFamily, beautyGallery] = await Promise.all([
             getUnifiedCylinderData(),
-            paperDollPreview ? getPreviewCylinderPaperDoll() : getReleasedCylinderPaperDoll(),
+            getReleasedCylinderPaperDoll(paperDollPreviewAllowed),
             getReleasedCylinderBeautyGallery(),
         ]);
-        // Gated previews may return an incomplete draft (storefrontReady: false).
-        // The PDP canvas only accepts storefront-ready families; incomplete
-        // drafts render no canvas until the draft-diagnostic UI lands.
-        const storefrontPaperDollFamily =
-            paperDollFamily && paperDollFamily.storefrontReady
-                ? { ...paperDollFamily, storefrontReady: true as const }
-                : null;
+        const paperDollPreview = paperDollPreviewAllowed && Boolean(paperDollFamily);
         return (
             <>
                 <UnifiedBottlePdp
                     configurations={configurations}
-                    paperDollFamily={storefrontPaperDollFamily}
-                    paperDollPreview={paperDollPreview}
+                    paperDollFamily={paperDollFamily}
                     beautyGallery={beautyGallery}
+                    paperDollPreview={paperDollPreview}
                 />
                 <SanityLiveVisualEditing />
                 <Footer />

@@ -9,8 +9,8 @@ import dotenv from "dotenv";
 import sharp from "sharp";
 
 import {
-    CYLINDER_BEAUTY_UPLOADS,
     buildCylinderBeautyGalleryDocument,
+    resolveCylinderBeautyUploads,
 } from "./cylinder-beauty-gallery-sanity-core.mjs";
 
 const scriptDirectory = path.dirname(fileURLToPath(import.meta.url));
@@ -24,11 +24,16 @@ const dataset = process.env.SANITY_STUDIO_DATASET
     || process.env.NEXT_PUBLIC_SANITY_DATASET
     || "production";
 const token = process.env.SANITY_API_TOKEN;
+const assetRootArgumentIndex = process.argv.indexOf("--asset-root");
+const assetRoot = assetRootArgumentIndex >= 0
+    ? process.argv[assetRootArgumentIndex + 1]
+    : process.env.CYLINDER_BEAUTY_OUTPUT_ROOT;
+const uploads = resolveCylinderBeautyUploads(assetRoot);
 
 if (!projectId) throw new Error("Missing Best Bottles Sanity project id");
 if (apply && !token) throw new Error("SANITY_API_TOKEN is required with --apply");
 
-for (const asset of CYLINDER_BEAUTY_UPLOADS) {
+for (const asset of uploads) {
     if (!existsSync(asset.absolutePath)) throw new Error(`Missing generated asset: ${asset.absolutePath}`);
     const metadata = await sharp(asset.absolutePath).metadata();
     if (metadata.width !== 2080 || metadata.height !== 2288) {
@@ -43,7 +48,7 @@ if (!apply) {
         dataset,
         documentId: "paperDollBeautyGallery.CYL-9ML",
         storefrontReady: true,
-        assets: CYLINDER_BEAUTY_UPLOADS.map((asset) => ({
+        assets: uploads.map((asset) => ({
             glassKey: asset.glassKey,
             path: asset.absolutePath,
             dimensions: "2080x2288",
@@ -61,7 +66,7 @@ const sanity = createClient({
 });
 
 const uploadedAssets = {};
-for (const asset of CYLINDER_BEAUTY_UPLOADS) {
+for (const asset of uploads) {
     console.log(`[${asset.glassKey}] uploading ${path.basename(asset.absolutePath)}`);
     const uploaded = await sanity.assets.upload("image", createReadStream(asset.absolutePath), {
         filename: `cylinder-${asset.outputSlug}-metal-roller-matte-silver-sandstone-v1.png`,

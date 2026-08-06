@@ -282,14 +282,11 @@ export async function getStorefrontPaperDollFamily(
     return assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
 }
 
-/**
- * Read a draft family/current-release pair for an already-authorized local or
- * signed Draft Mode request. Callers own the access decision.
- */
+/** Fetch a structurally valid Paper Doll draft through the private preview client. */
 export async function getPreviewPaperDollFamily(
     familyKey: string,
 ): Promise<RenderablePaperDollFamily | null> {
-    if (!isSanityConfigured || !previewServerClient) return null;
+    if (!previewServerClient) return null;
     const family = await previewServerClient.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
     if (!family) return null;
     return assertPreviewPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
