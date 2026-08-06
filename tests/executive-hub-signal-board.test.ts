@@ -1,4 +1,12 @@
 import { createElement } from "react";
+import { vi } from "vitest";
+
+// GraceAuditPanel subscribes to Convex for live audit progress. These tests
+// render the dashboard in isolation with renderToStaticMarkup, so there is no
+// ConvexProvider in the tree — stub the subscription rather than standing up a
+// client. The panel's own behaviour is covered by tests/grace-audit-report.test.ts.
+vi.mock("convex/react", () => ({ useQuery: () => undefined }));
+
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 import { ExecutiveQuestionCard } from "../src/components/executive/ExecutiveMetric";

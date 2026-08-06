@@ -1,0 +1,974 @@
+[
+  {
+    "id": "A1a",
+    "group": "A",
+    "turns": [
+      "What are the full details of SKU GB-BSR-CLR-15ML-BLK-S — size, color, neck thread, and price?"
+    ],
+    "transcript": [
+      {
+        "user": "What are the full details of SKU GB-BSR-CLR-15ML-BLK-S — size, color, neck thread, and price?",
+        "assistant": "Here’s what I have for GB-BSR-CLR-15ML-BLK-S:\n\n- Size: 15 ml (0.51 oz)\n- Color: Clear\n- Neck thread: 18-400\n- Closure: Short black cap included\n- Price: $0.42 each; $0.40 at 12 pieces\n- Status: In Stock\n\nWould you like me to pull compatible reducers or droppers for 18-400?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-BSR-CLR-15ML-BLK-S"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-BSR-CLR-15ML-BLK-S\",\"websiteSku\":\"GBBstn15BlkCapSht\",\"itemName\":\"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343671746852\",\"checkoutEligible\":true,\"family\":\"Boston Round\",\"capacity\":\"15 ml (0.51 oz)\",\"capacityMl\":15,\"color\":\"Clear\",\"applicator\":null,\"capColor\":\"Black\",\"neckThreadSize\":\"18-400\",\"webPrice1pc\":0.42,\"webPrice10pc\":null,\"webPrice12pc\":0.4,\"stockStatus\":\"In Stock\",\"slug\":\"boston-round-15ml-clear-18-400\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-BSR-CLR-15ML-BLK-S_1779650254082_six00d.png?v=1781252198\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "A1b",
+    "group": "A",
+    "turns": [
+      "Tell me everything about GB-CYL-CLR-9ML-T-08: capacity, applicator, neck finish, and price each."
+    ],
+    "transcript": [
+      {
+        "user": "Tell me everything about GB-CYL-CLR-9ML-T-08: capacity, applicator, neck finish, and price each.",
+        "assistant": "Here’s what I have for GB-CYL-CLR-9ML-T-08:\n- Capacity: 9 ml (0.3 oz)\n- Applicator: Metal roller ball\n- Neck finish: 17-415\n- Price each: $0.72\n\nWould you like me to pull compatible replacement rollers/caps or stage a cart?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-CYL-CLR-9ML-T-08"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-CYL-CLR-9ML-T-08\",\"websiteSku\":\"GBCyl9MtlRollShnSl\",\"itemName\":\"Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343680430372\",\"checkoutEligible\":true,\"family\":\"Cylinder\",\"capacity\":\"9 ml (0.3 oz)\",\"capacityMl\":9,\"color\":\"Clear\",\"applicator\":\"Metal Roller Ball\",\"capColor\":\"Clear\",\"neckThreadSize\":\"17-415\",\"webPrice1pc\":0.72,\"webPrice10pc\":null,\"webPrice12pc\":0.68,\"stockStatus\":\"In Stock\",\"slug\":\"cylinder-9ml-clear-17-415-rollon\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784566085351_qnwqnp.png?v=1784566851\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "A1c",
+    "group": "A",
+    "turns": [
+      "What is GB-ELG-CLR-60ML-RDC and what does it cost?"
+    ],
+    "transcript": [
+      {
+        "user": "What is GB-ELG-CLR-60ML-RDC and what does it cost?",
+        "assistant": "It’s our Elegant family 60 ml (2.03 oz) clear glass bottle with an 18-415 neck, fitted with a reducer and a light brown faux leather cap — suited for cologne, aftershave, splash fragrances, perfume oils, and beard oils.\n\nPrice:\n- $2.00 each\n- $2.19 each at 12 pieces\n\nWould you like me to stage a few in your cart, or do you need a different size or cap style?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-ELG-CLR-60ML-RDC"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-ELG-CLR-60ML-RDC\",\"websiteSku\":\"GBElg60RdcrLBrwnLthr\",\"itemName\":\"Elegant design 60 ml, 2oz  clear glass bottle  with reducer and light brown faux leather cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Elegant bottle is a family of bottles available in 5ml, 15ml, 30ml, 60ml a\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343664406820\",\"checkoutEligible\":true,\"family\":\"Elegant\",\"capacity\":\"60 ml (2.03 oz)\",\"capacityMl\":60,\"color\":\"Clear\",\"applicator\":\"Reducer\",\"capColor\":\"Clear\",\"neckThreadSize\":\"18-415\",\"webPrice1pc\":2,\"webPrice10pc\":null,\"webPrice12pc\":2.19,\"stockStatus\":\"In Stock\",\"slug\":\"elegant-60ml-clear-18-415-reducer\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-ELG-CLR-60ML-RDC_1779482952257_59acr9.png?v=1781252087\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "A1d",
+    "group": "A",
+    "turns": [
+      "Details on GB-EMP-CLR-50ML-DRP-GLD please — size, closure, price."
+    ],
+    "transcript": [
+      {
+        "user": "Details on GB-EMP-CLR-50ML-DRP-GLD please — size, closure, price.",
+        "assistant": "Here you go:\n\n- Size: 50 ml (1.69 oz) — 18-415 neck\n- Closure/applicator: White glass dropper with shiny gold collar (dropper set included; 18-415 fit)\n- Price: $2.45 each; $2.33 each in 12-packs\n\nWould you like me to stage a cart with a specific quantity?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-EMP-CLR-50ML-DRP-GLD"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-EMP-CLR-50ML-DRP-GLD\",\"websiteSku\":\"GBEmp50DrpGl\",\"itemName\":\"Empire design 50 ml, 1.7oz  clear glass bottle  with white dropper with shiny gold collar cap. For use with perfume oils, diffuser oils, serums, primers, facial oils or face oils, moisturizer, and beard oils. Empire design bottle is available in 2 sizes,\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343644811556\",\"checkoutEligible\":true,\"family\":\"Empire\",\"capacity\":\"50 ml (1.69 oz)\",\"capacityMl\":50,\"color\":\"Clear\",\"applicator\":\"Dropper\",\"capColor\":\"Gold\",\"neckThreadSize\":\"18-415\",\"webPrice1pc\":2.45,\"webPrice10pc\":null,\"webPrice12pc\":2.33,\"stockStatus\":\"In Stock\",\"slug\":\"empire-50ml-clear-18-415-dropper\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_corrected_1779052528828_a9kfam.png?v=1779052857\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "A2",
+    "group": "A",
+    "turns": [
+      "Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price."
+    ],
+    "transcript": [
+      {
+        "user": "Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price.",
+        "assistant": "Here’s a quick side‑by‑side:\n\n- Size\n  - Boston Round: 15 ml (0.5 oz)\n  - Elegant: 60 ml (2.0 oz)\n\n- Closure and neck\n  - Boston Round 15 ml: 18-400 thread. Stocked with short screw cap or black dropper.\n  - Elegant 60 ml: 18-415 thread. Stocked with perfume spray pumps or reducer + caps.\n  - Note: 18-400 and 18-415 are not interchangeable.\n\n- Price (examples)\n  - Boston Round 15 ml with short black cap (GB-BSR-CLR-15ML-BLK-S): $0.42 each, $0.40 at 12.\n  - Boston Round 15 ml with black dropper (GB-BSR-CLR-15ML-DRP-BLK): $0.67 each.\n  - Elegant 60 ml with perfume spray (e.g., shiny gold GB-ELG-CLR-60ML-SPR-SGLD): $2.75 each, $2.61 at 12.\n  - Elegant 60 ml with reducer + tall black cap (GB-ELG-CLR-60ML-RDC-SBLK-T): $1.72 each, $1.63 at 12.\n\nWould you like the Boston Round with cap or with dropper, and the Elegant with spray or reducer, for a tighter apples‑to‑apples comparison?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "15 ml clear Boston Round",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Boston Round",
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 13-415 (20 rows), 20-400 (3 rows), 18-400 (2 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-BSR-CLR-15ML-BLK-S\",\n    \"websiteSku\": \"GBBstn15BlkCapSht\",\n    \"itemName\": \"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343671746852\",\n    \"checkoutEligible\": true,\n    \"family\": \"Boston Round\",\n    \"capacity\": \"15ml(0.51oz)\",\n    \"capacityMl\": 15,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": null,\n    \"capColor\": \"Black\",\n    \"neckThreadSize\": \"18-400\",\n    \"slug\": \"boston-round-15ml-clear-18-400\",\n    \"webPrice1pc\": 0.42,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.4,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": {\n      \"graceSku\": \"GB-BSR-CLR-15ML-BLK-S\",\n      \"importSource\": \"grace_products_f"
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "60 ml clear Elegant",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Elegant",
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 18-415 (24 rows), 13-415 (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ELG-CLR-60ML-SPR-SGLD\",\n    \"websiteSku\": \"GBElg60SpryShnGl\",\n    \"itemName\": \"Elegant design 60 ml, 2oz  clear glass bottle  with shiny gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Elegant bottle is a family of bottles available in 5ml, 15ml, 30ml, 60ml and 100ml. Price ea\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343644582180\",\n    \"checkoutEligible\": true,\n    \"family\": \"Elegant\",\n    \"capacity\": \"60ml(2.03oz)\",\n    \"capacityMl\": 60,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Perfume Spray Pump\",\n    \"capColor\": \"Shiny Gold\",\n    \"neckThreadSize\": \"18-415\",\n    \"slug\": \"elegant-60ml-clear-18-415-perfumespray\",\n    \"webPrice1pc\": 2.75,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 2.61,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": []"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "A3a",
+    "group": "A",
+    "turns": [
+      "Do you have the bostn round 15ml clear bottle?"
+    ],
+    "transcript": [
+      {
+        "user": "Do you have the bostn round 15ml clear bottle?",
+        "assistant": "Yes—pulling up our 15 ml clear Boston Round glass bottles now. Do you want these with a specific closure (dropper, fine-mist sprayer, or plain cap)? If you know the neck thread (e.g., 18-415), I’ll match exact compatible components.",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Do you have the boston round 15ml clear bottle?",
+              "search": null,
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": null,
+              "families": [
+                "Boston Round"
+              ],
+              "colors": [
+                "Clear"
+              ],
+              "capacities": [
+                "15 ml"
+              ],
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          },
+          {
+            "name": "showProducts",
+            "args": {
+              "query": "15 ml clear Boston Round glass bottle",
+              "family": "Boston Round"
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"showProducts runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "A3b",
+    "group": "A",
+    "turns": [
+      "Looking for a 9ml cilinder roll on in frosted glass."
+    ],
+    "transcript": [
+      {
+        "user": "Looking for a 9ml cilinder roll on in frosted glass.",
+        "assistant": "Great match: our Cylinder 9 ml frosted glass roll-on is available. Would you like me to build it with a metal or plastic roller, and do you have a cap finish in mind (matte black, shiny silver, etc.)? How many pieces do you need?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Looking for a 9ml cylinder roll-on in frosted glass.",
+              "search": null,
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": [
+                "rollon"
+              ],
+              "families": [
+                "Cylinder"
+              ],
+              "colors": [
+                "Frosted"
+              ],
+              "capacities": [
+                "9 ml"
+              ],
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          },
+          {
+            "name": "showProducts",
+            "args": {
+              "query": "9 ml frosted cylinder roll-on",
+              "family": "Cylinder"
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"showProducts runs in the customer's browser.\"}"
+          },
+          {
+            "name": "displayFamilyCard",
+            "args": {
+              "family": "Cylinder",
+              "capacityMl": 9
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"displayFamilyCard runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "B4",
+    "group": "B",
+    "turns": [
+      "What is the price of GB-CYL-CLR-9ML-T-08?",
+      "How much does the 9ml clear cylinder with the metal roller ball and shiny silver cap run?",
+      "Remind me what that 9ml clear cylinder roller costs each."
+    ],
+    "transcript": [
+      {
+        "user": "What is the price of GB-CYL-CLR-9ML-T-08?",
+        "assistant": "GB-CYL-CLR-9ML-T-08 is $0.72 each, or $0.68 each at 12+. \nWould you like me to stage a cart with a quantity for you?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-CYL-CLR-9ML-T-08"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-CYL-CLR-9ML-T-08\",\"websiteSku\":\"GBCyl9MtlRollShnSl\",\"itemName\":\"Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343680430372\",\"checkoutEligible\":true,\"family\":\"Cylinder\",\"capacity\":\"9 ml (0.3 oz)\",\"capacityMl\":9,\"color\":\"Clear\",\"applicator\":\"Metal Roller Ball\",\"capColor\":\"Clear\",\"neckThreadSize\":\"17-415\",\"webPrice1pc\":0.72,\"webPrice10pc\":null,\"webPrice12pc\":0.68,\"stockStatus\":\"In Stock\",\"slug\":\"cylinder-9ml-clear-17-415-rollon\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784566085351_qnwqnp.png?v=1784566851\"}"
+          }
+        ]
+      },
+      {
+        "user": "How much does the 9ml clear cylinder with the metal roller ball and shiny silver cap run?",
+        "assistant": "That one runs $0.72 each, or $0.68 each at 12+. \nWould you like me to stage a cart with your desired quantity?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "9ml clear cylinder metal roller shiny silver cap",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Cylinder",
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "VERIFIED 9ML CYLINDER ROLL-ON COLORS: Amber, Clear, Cobalt Blue, Frosted, Swirl. Swirl is a verified 9ml Cylinder roll-on glass option. Do NOT list White or Green as 9ml Cylinder roll-on glass colors; White is cap/import drift in this family, and Green belongs to separate decorative/glass-stopper products when present.\nCATALOG COVERAGE: The returned 9ml result set includes these canonical color options: Amber, Clear, Cobalt Blue, Frosted, Swirl. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (12 rows), 13-415 (8 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not "
+          }
+        ]
+      },
+      {
+        "user": "Remind me what that 9ml clear cylinder roller costs each.",
+        "assistant": "It’s $0.72 each (or $0.68 each at 12+). Want me to stage a cart for the clear 9 ml with metal roller and shiny silver cap?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "9ml clear cylinder metal roller shiny silver cap",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Cylinder",
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "VERIFIED 9ML CYLINDER ROLL-ON COLORS: Amber, Clear, Cobalt Blue, Frosted, Swirl. Swirl is a verified 9ml Cylinder roll-on glass option. Do NOT list White or Green as 9ml Cylinder roll-on glass colors; White is cap/import drift in this family, and Green belongs to separate decorative/glass-stopper products when present.\nCATALOG COVERAGE: The returned 9ml result set includes these canonical color options: Amber, Clear, Cobalt Blue, Frosted, Swirl. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (12 rows), 13-415 (8 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not "
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "B5",
+    "group": "B",
+    "turns": [
+      "Is GB-ELG-CLR-60ML-RDC in stock?"
+    ],
+    "transcript": [
+      {
+        "user": "Is GB-ELG-CLR-60ML-RDC in stock?",
+        "assistant": "Yes — GB-ELG-CLR-60ML-RDC is in stock. It’s the Elegant 60 ml clear bottle with reducer and light brown faux leather cap. Would you like me to stage a cart with a quantity for you to review?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-ELG-CLR-60ML-RDC"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-ELG-CLR-60ML-RDC\",\"websiteSku\":\"GBElg60RdcrLBrwnLthr\",\"itemName\":\"Elegant design 60 ml, 2oz  clear glass bottle  with reducer and light brown faux leather cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Elegant bottle is a family of bottles available in 5ml, 15ml, 30ml, 60ml a\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343664406820\",\"checkoutEligible\":true,\"family\":\"Elegant\",\"capacity\":\"60 ml (2.03 oz)\",\"capacityMl\":60,\"color\":\"Clear\",\"applicator\":\"Reducer\",\"capColor\":\"Clear\",\"neckThreadSize\":\"18-415\",\"webPrice1pc\":2,\"webPrice10pc\":null,\"webPrice12pc\":2.19,\"stockStatus\":\"In Stock\",\"slug\":\"elegant-60ml-clear-18-415-reducer\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-ELG-CLR-60ML-RDC_1779482952257_59acr9.png?v=1781252087\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "B6",
+    "group": "B",
+    "turns": [
+      "For the 50ml clear Circle with the vintage bulb sprayer and tassel: price, availability, and what neck thread it uses?"
+    ],
+    "transcript": [
+      {
+        "user": "For the 50ml clear Circle with the vintage bulb sprayer and tassel: price, availability, and what neck thread it uses?",
+        "assistant": "Short answer: I’m not seeing a 50 ml clear Circle with a vintage bulb sprayer and tassel in our catalog, so I can’t quote price, availability, or neck thread for that exact set.\n\nClosest options:\n- Build-your-own: I can check a 50 ml clear Circle bottle and a compatible antique bulb/tassel sprayer as separate pieces.\n- Similar ready styles: I can also look for classic bulb‑atomizer sets in nearby sizes (e.g., 30 ml or 100 ml).\n\nWould you like me to check 50 ml Circle glass plus compatible bulb/tassel sprayers, or are you open to another size?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "50 ml clear Circle vintage bulb sprayer tassel",
+              "categoryLimit": null,
+              "familyLimit": "Circle",
+              "applicatorFilter": "antiquespray-tassel"
+            },
+            "executed": "live",
+            "outputPreview": "CATALOG COVERAGE: The returned 50ml result set includes these canonical color options: Amber, Clear. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-BEL-CLR-10ML-SPR-SBLK\",\n    \"websiteSku\": \"GBBell10SpryBlkSh\",\n    \"itemName\": \"Bell design 10ml Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343699239204\",\n    \"checkoutEligible\": true,\n    \"family\": \"Bell\",\n    \"capacity\": \"10ml(0.34oz)\",\n    \"capacityMl\": 10,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Fine Mist Sprayer\",\n    \"capColor\": \"Shiny Black\",\n    \"neckThreadSize\": \"13-415\",\n    \"slug\": \"bell-10ml-clear-13-415-finemist\",\n    \"webPrice1pc\": 0.9,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.86,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": {\n      \"graceSku\": \"GB-BEL-CLR-10ML-SPR-SBLK\",\n      \"importSource\": \"addMissingFineMistSprayers_2026-02-26\",\n      "
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "50 ml clear Circle vintage bulb sprayer tassel",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": "antiquespray-tassel"
+            },
+            "executed": "live",
+            "outputPreview": "CATALOG COVERAGE: The returned 50ml result set includes these canonical color options: Amber, Clear. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-BEL-CLR-10ML-SPR-SBLK\",\n    \"websiteSku\": \"GBBell10SpryBlkSh\",\n    \"itemName\": \"Bell design 10ml Clear glass bottle with shiny black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, classic style bottle good for promotions and decants. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343699239204\",\n    \"checkoutEligible\": true,\n    \"family\": \"Bell\",\n    \"capacity\": \"10ml(0.34oz)\",\n    \"capacityMl\": 10,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Fine Mist Sprayer\",\n    \"capColor\": \"Shiny Black\",\n    \"neckThreadSize\": \"13-415\",\n    \"slug\": \"bell-10ml-clear-13-415-finemist\",\n    \"webPrice1pc\": 0.9,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.86,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": {\n      \"graceSku\": \"GB-BEL-CLR-10ML-SPR-SBLK\",\n      \"importSource\": \"addMissingFineMistSprayers_2026-02-26\",\n      "
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "C7",
+    "group": "C",
+    "turns": [
+      "How many products are in your catalog right now, and how many product groups?"
+    ],
+    "transcript": [
+      {
+        "user": "How many products are in your catalog right now, and how many product groups?",
+        "assistant": "Right now: 2,330 products and 352 product groups. Counts update as we add or retire items.",
+        "toolCalls": [
+          {
+            "name": "getCatalogStats",
+            "args": {},
+            "executed": "live",
+            "outputPreview": "{\"categoryCounts\":{\"Accessory\":3,\"Aluminum Bottle\":7,\"Component\":150,\"Cream Jar\":1,\"Glass Bottle\":2075,\"Glass Jar\":17,\"Internal\":1,\"Metal Atomizer\":23,\"Packaging\":49,\"Plastic Bottle\":4},\"collectionCounts\":{\"Aluminum Bottle\":8,\"Apothecary\":5,\"Atomizer Collection\":23,\"Bell\":1,\"Bell Collection\":3,\"Boston Round\":123,\"Cap/Closure\":20,\"Circle\":214,\"Cream Jar\":19,\"Cylinder\":363,\"Decorative\":12,\"Diamond\":43,\"Diva\":176,\"Dropper\":21,\"Elegant\":253,\"Elegant Collection\":1,\"Empire\":91,\"Flair\":30,\"Gift Bag\":21,\"Gift Box\":14,\"Grace\":43,\"Green Glass\":2,\"Lotion Bottle\":4,\"Lotion Pump\":7,\"Packaging Supply\":12,\"Pillar\":1,\"Plastic Bottle\":4,\"Rectangle\":63,\"Roll-On Cap\":36,\"Round\":178,\"Royal\":30,\"Sleek\":186,\"Slim\":123,\"Spray Bottle\":6,\"Sprayer\":49,\"Square\":29,\"Teardrop\":3,\"Tool\":3,\"Tulip\":60,\"Vial\":24},\"familyCounts\":{\"Aluminum Bottle\":8,\"Apothecary\":5,\"Atomizer\":23,\"Bell\":6,\"Boston Round\":123,\"Cap/Closure\":32,\"Circle\":214,\"Cream Jar\":19,\"Cylinder\":372,\"Decorative\":12,\"Diamond\":43,\"Diva\":176,\"Dropper\":22,\"Elegant\":254,\"Empire\":91,\"Flair\":30,\"Gift Bag\":21,\"Gift Box\":15,\"Grace\":43,\"Internal\":1,\"Lotion Bottle\":4,\"Lotion Pump\":7,\"Packaging Supply\":12,\"Pillar\":4,\"Plastic Bottle\":4,\"Rectangle\":63,\"Roll-On Cap"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "C8",
+    "group": "C",
+    "turns": [
+      "Filter the catalog to Boston Round bottles only, in stock."
+    ],
+    "transcript": [
+      {
+        "user": "Filter the catalog to Boston Round bottles only, in stock.",
+        "assistant": "I’ve filtered to the Boston Round family.\n\nHeads up: the catalog doesn’t have an in‑stock filter, so I can’t limit results by availability here. If you share the size, color, and neck thread you need, I’ll narrow it and can have the team confirm stock on those exact SKUs. What capacity are you targeting?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Filter the catalog to Boston Round bottles only, in stock.",
+              "search": null,
+              "category": null,
+              "collection": null,
+              "applicators": null,
+              "families": [
+                "Boston Round"
+              ],
+              "colors": null,
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "C9",
+    "group": "C",
+    "turns": [
+      "Show me glass bottles under $1 each that are 15ml or smaller."
+    ],
+    "transcript": [
+      {
+        "user": "Show me glass bottles under $1 each that are 15ml or smaller.",
+        "assistant": "I’ve filtered to Glass Bottles, 1–15 ml, priced at $1 or less. \nWould you like to narrow by delivery system (roll-on, spray, dropper), or by neck thread (e.g., 13-415, 15-415, 17-415, 18-415)?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Show me glass bottles under $1 each that are 15ml or smaller.",
+              "search": null,
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": null,
+              "families": null,
+              "colors": null,
+              "capacities": [
+                "1 ml",
+                "2 ml",
+                "3 ml",
+                "4 ml",
+                "5 ml",
+                "6 ml",
+                "7 ml",
+                "8 ml",
+                "9 ml",
+                "10 ml",
+                "11 ml",
+                "12 ml",
+                "13 ml",
+                "14 ml",
+                "15 ml"
+              ],
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 1
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          },
+          {
+            "name": "showProducts",
+            "args": {
+              "query": "glass bottles under $1, 15 ml and smaller",
+              "family": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"showProducts runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "C10",
+    "group": "C",
+    "turns": [
+      "If I order 100 of GB-BSR-CLR-15ML-BLK-S and 50 of GB-CYL-CLR-9ML-T-08, what's the approximate total at the each-price?"
+    ],
+    "transcript": [
+      {
+        "user": "If I order 100 of GB-BSR-CLR-15ML-BLK-S and 50 of GB-CYL-CLR-9ML-T-08, what's the approximate total at the each-price?",
+        "assistant": "Here’s the each-price math:\n- GB-BSR-CLR-15ML-BLK-S: 100 x $0.42 = $42.00\n- GB-CYL-CLR-9ML-T-08: 50 x $0.72 = $36.00\n\nEstimated subtotal: $78.00 before tax and shipping. Would you like me to stage these in a cart for review?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-BSR-CLR-15ML-BLK-S"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-BSR-CLR-15ML-BLK-S\",\"websiteSku\":\"GBBstn15BlkCapSht\",\"itemName\":\"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343671746852\",\"checkoutEligible\":true,\"family\":\"Boston Round\",\"capacity\":\"15 ml (0.51 oz)\",\"capacityMl\":15,\"color\":\"Clear\",\"applicator\":null,\"capColor\":\"Black\",\"neckThreadSize\":\"18-400\",\"webPrice1pc\":0.42,\"webPrice10pc\":null,\"webPrice12pc\":0.4,\"stockStatus\":\"In Stock\",\"slug\":\"boston-round-15ml-clear-18-400\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-BSR-CLR-15ML-BLK-S_1779650254082_six00d.png?v=1781252198\"}"
+          },
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-CYL-CLR-9ML-T-08"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-CYL-CLR-9ML-T-08\",\"websiteSku\":\"GBCyl9MtlRollShnSl\",\"itemName\":\"Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343680430372\",\"checkoutEligible\":true,\"family\":\"Cylinder\",\"capacity\":\"9 ml (0.3 oz)\",\"capacityMl\":9,\"color\":\"Clear\",\"applicator\":\"Metal Roller Ball\",\"capColor\":\"Clear\",\"neckThreadSize\":\"17-415\",\"webPrice1pc\":0.72,\"webPrice10pc\":null,\"webPrice12pc\":0.68,\"stockStatus\":\"In Stock\",\"slug\":\"cylinder-9ml-clear-17-415-rollon\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784566085351_qnwqnp.png?v=1784566851\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "D11",
+    "group": "D",
+    "turns": [
+      "What neck thread sizes do your 9ml Cylinder roll-on bottles come in?"
+    ],
+    "transcript": [
+      {
+        "user": "What neck thread sizes do your 9ml Cylinder roll-on bottles come in?",
+        "assistant": "Two neck threads: 13-415 and 17-415.\n\nThey’re different platforms, so rollers/caps aren’t cross‑compatible. Do you already use 13-415 or 17-415? I can pull the matching bottles and roller assemblies for your thread.",
+        "toolCalls": [
+          {
+            "name": "getFamilyOverview",
+            "args": {
+              "family": "Cylinder"
+            },
+            "executed": "live",
+            "outputPreview": "{\"applicatorTypes\":[\"Fine Mist Sprayer\",\"Lotion Pump\",\"Metal Roller Ball\",\"N/A\",\"Perfume Spray Pump\",\"Plastic Roller Ball\",\"Reducer\",\"Vintage Bulb Sprayer\",\"Vintage Bulb Sprayer with Tassel\"],\"colors\":[\"Amber\",\"Clear\",\"Cobalt Blue\",\"Frosted\",\"Swirl\"],\"family\":\"Cylinder\",\"graceHint\":\"FACT (do not contradict): 9ml Cylinder glass bottles are stocked with roll-on (Metal/Plastic Roller Ball) and Lotion Pump as complete SKUs, alongside sprayers and other applicators. If the customer asks about 9ml roll-on or 9ml lotion pump, call searchCatalog with searchTerm \\\"9ml cylinder\\\" and familyLimit \\\"Cylinder\\\" — do not say we do not carry these combinations unless that search returns zero rows after a retry.\",\"priceRange\":{\"max\":6.65,\"min\":0.31},\"sizes\":[{\"label\":\"3ml(0.1oz)\",\"ml\":3,\"threads\":[\"12mm\"],\"variantCount\":2},{\"label\":\"4ml(0.14oz)\",\"ml\":4,\"threads\":[\"12mm\"],\"variantCount\":2},{\"label\":\"5ml(0.17oz)\",\"ml\":5,\"threads\":[\"13-415\"],\"variantCount\":59},{\"label\":\"9ml(0.3oz)\",\"ml\":9,\"threads\":[\"13-415\",\"17-415\"],\"variantCount\":202},{\"label\":\"25ml(0.85oz)\",\"ml\":25,\"threads\":[\"18-415\"],\"variantCount\":8},{\"label\":\"28ml(0.95oz)\",\"ml\":28,\"threads\":[\"16mm\"],\"variantCount\":4},{\"label\":\"30ml(1.01oz)\",\""
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "D12",
+    "group": "D",
+    "turns": [
+      "What's the price of GB-BSR-CLR-15ML-BLK-S?",
+      "What families of bottles do you carry?",
+      "Back to that Boston Round — what was its price again?"
+    ],
+    "transcript": [
+      {
+        "user": "What's the price of GB-BSR-CLR-15ML-BLK-S?",
+        "assistant": "Here’s what I’m seeing for GB-BSR-CLR-15ML-BLK-S:\n- Price each: $0.42\n- Price at 12 pcs: $0.40 each\n- Status: In Stock\n\nWould you like me to stage a cart with a specific quantity?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-BSR-CLR-15ML-BLK-S"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-BSR-CLR-15ML-BLK-S\",\"websiteSku\":\"GBBstn15BlkCapSht\",\"itemName\":\"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343671746852\",\"checkoutEligible\":true,\"family\":\"Boston Round\",\"capacity\":\"15 ml (0.51 oz)\",\"capacityMl\":15,\"color\":\"Clear\",\"applicator\":null,\"capColor\":\"Black\",\"neckThreadSize\":\"18-400\",\"webPrice1pc\":0.42,\"webPrice10pc\":null,\"webPrice12pc\":0.4,\"stockStatus\":\"In Stock\",\"slug\":\"boston-round-15ml-clear-18-400\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-BSR-CLR-15ML-BLK-S_1779650254082_six00d.png?v=1781252198\"}"
+          }
+        ]
+      },
+      {
+        "user": "What families of bottles do you carry?",
+        "assistant": "Here are the bottle families we carry:\n- Aluminum Bottle\n- Apothecary\n- Bell\n- Boston Round\n- Circle\n- Cylinder\n- Decorative\n- Diamond\n- Diva\n- Dropper\n- Elegant\n- Empire\n- Flair\n- Grace\n- Lotion Bottle\n- Pillar\n- Plastic Bottle\n- Rectangle\n- Round\n- Royal\n- Sleek\n- Slim\n- Square\n- Teardrop\n- Tulip\n- Vial\n\nAre you shopping a specific shape, capacity, or neck thread?",
+        "toolCalls": [
+          {
+            "name": "getCatalogStats",
+            "args": {},
+            "executed": "live",
+            "outputPreview": "{\"categoryCounts\":{\"Accessory\":3,\"Aluminum Bottle\":7,\"Component\":150,\"Cream Jar\":1,\"Glass Bottle\":2075,\"Glass Jar\":17,\"Internal\":1,\"Metal Atomizer\":23,\"Packaging\":49,\"Plastic Bottle\":4},\"collectionCounts\":{\"Aluminum Bottle\":8,\"Apothecary\":5,\"Atomizer Collection\":23,\"Bell\":1,\"Bell Collection\":3,\"Boston Round\":123,\"Cap/Closure\":20,\"Circle\":214,\"Cream Jar\":19,\"Cylinder\":363,\"Decorative\":12,\"Diamond\":43,\"Diva\":176,\"Dropper\":21,\"Elegant\":253,\"Elegant Collection\":1,\"Empire\":91,\"Flair\":30,\"Gift Bag\":21,\"Gift Box\":14,\"Grace\":43,\"Green Glass\":2,\"Lotion Bottle\":4,\"Lotion Pump\":7,\"Packaging Supply\":12,\"Pillar\":1,\"Plastic Bottle\":4,\"Rectangle\":63,\"Roll-On Cap\":36,\"Round\":178,\"Royal\":30,\"Sleek\":186,\"Slim\":123,\"Spray Bottle\":6,\"Sprayer\":49,\"Square\":29,\"Teardrop\":3,\"Tool\":3,\"Tulip\":60,\"Vial\":24},\"familyCounts\":{\"Aluminum Bottle\":8,\"Apothecary\":5,\"Atomizer\":23,\"Bell\":6,\"Boston Round\":123,\"Cap/Closure\":32,\"Circle\":214,\"Cream Jar\":19,\"Cylinder\":372,\"Decorative\":12,\"Diamond\":43,\"Diva\":176,\"Dropper\":22,\"Elegant\":254,\"Empire\":91,\"Flair\":30,\"Gift Bag\":21,\"Gift Box\":15,\"Grace\":43,\"Internal\":1,\"Lotion Bottle\":4,\"Lotion Pump\":7,\"Packaging Supply\":12,\"Pillar\":4,\"Plastic Bottle\":4,\"Rectangle\":63,\"Roll-On Cap"
+          }
+        ]
+      },
+      {
+        "user": "Back to that Boston Round — what was its price again?",
+        "assistant": "For GB-BSR-CLR-15ML-BLK-S:\n- $0.42 each\n- $0.40 each at 12 pcs\n\nWant me to stage a cart with your quantity?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-BSR-CLR-15ML-BLK-S"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-BSR-CLR-15ML-BLK-S\",\"websiteSku\":\"GBBstn15BlkCapSht\",\"itemName\":\"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343671746852\",\"checkoutEligible\":true,\"family\":\"Boston Round\",\"capacity\":\"15 ml (0.51 oz)\",\"capacityMl\":15,\"color\":\"Clear\",\"applicator\":null,\"capColor\":\"Black\",\"neckThreadSize\":\"18-400\",\"webPrice1pc\":0.42,\"webPrice10pc\":null,\"webPrice12pc\":0.4,\"stockStatus\":\"In Stock\",\"slug\":\"boston-round-15ml-clear-18-400\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-BSR-CLR-15ML-BLK-S_1779650254082_six00d.png?v=1781252198\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "D13",
+    "group": "D",
+    "turns": [
+      "What is your return policy, and how long do I have to report a damaged shipment?"
+    ],
+    "transcript": [
+      {
+        "user": "What is your return policy, and how long do I have to report a damaged shipment?",
+        "assistant": "Here are our published terms:\n- Damaged or incorrect items: Contact us within 7 days of delivery with your order number and photos. We’ll arrange a replacement or credit for verified issues.\n- Returns: Contact us within 30 days of delivery for authorization. Items must be unused, undamaged, and in original packaging. Return shipping and any applicable restocking fee are the customer’s responsibility unless the return is due to our error. Custom, decorated, and clearance items aren’t returnable.\n\nWould you like me to connect you with the team to start a damage claim or return?",
+        "toolCalls": [
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "What is your return policy, and how long do I have to report a damaged shipment?"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"What is your return policy, and how long do I have to report a damaged shipment?\",\"sections\":[{\"topic\":\"Shipping — origin and dispatch time\",\"policyText\":\"Orders ship from our Union City, California warehouse. In-stock items typically ship within 1–3 business days.\",\"source\":\"/shipping-returns\"},{\"topic\":\"Damaged or incorrect items — 7 day window\",\"policyText\":\"If your order arrives damaged, or if you receive the wrong item, contact us within 7 days of delivery with your order number and photos of the packaging and product. We will arrange a replacement or credit for verified damage or fulfillment errors.\",\"source\":\"/shipping-returns\"},{\"topic\":\"Returns — 30 day window, restocking, exclusions\",\"policyText\":\"To request a return of unused, undamaged product in its original packaging, contact us within 30 days of delivery for a return authorization. Return shipping and any applicable restocking fee are the customer's responsibility unless the return is due to our error. Custom, decorated, and clearance items are not returnable.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shippi"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E14",
+    "group": "E",
+    "turns": [
+      "I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do you have it?"
+    ],
+    "transcript": [
+      {
+        "user": "I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do you have it?",
+        "assistant": "Short answer: I don’t have a 250 ml hexagon cobalt blue glass bottle with a bamboo cap in our catalog.\n\nClosest options I can offer today:\n- 250 ml aluminum bottle with fine‑mist sprayer (20-410)\n- Cobalt blue glass bottles in smaller sizes (15–60 ml) in Boston Round with droppers or caps\n\nIf 250 ml is firm, I can look for cobalt blue glass in other shapes and see what bamboo closures we can pair by thread. What’s your top priority: the hexagon shape, the cobalt blue color, or the 250 ml capacity?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "250 ml hexagon cobalt blue glass bottle",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 20-400 (14 rows), 17-415 (5 rows), 18-400 (4 rows), Ground (1 rows), 13-415 (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.\nWARNING: No exact match was found for requested color \"blue\". Do NOT say we carry that color unless it appears in the results. Available colors in these results: Cobalt Blue.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ETF-BLU-35ML\",\n    \"websiteSku\": \"GBEternalFlameBlue\",\n    \"itemName\": \"Cobalt Blue bottle with ground glass neck and stopper.Capacity: Approx 1 1/4oz\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343697994020\",\n    \"checkoutEligible\": true,\n    \"family\": \"Decorative\",\n    \"capacity\": \"35ml(1.18oz)\",\n    \"capacityMl\": 35,\n    \"color\": \"Cobalt Blue\",\n    \"rawColor\": \"Cobalt Blue\",\n    \"canonicalColor\": \"Cobalt Blue\",\n    \"applicator\": null,\n"
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "bamboo cap 250 ml hexagon bottle",
+              "categoryLimit": "Component",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "CATALOG COVERAGE: The returned 250ml result set includes these canonical color options: Amber, Clear, White. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (11 rows), 13-415 (9 rows), 20-400 (6 rows), 20-410 (2 rows), PRESS-FIT (2 rows), 13-425 (2 rows), 18-400 (2 rows), 15-415 (2 rows), 18-415 (1 rows), 22-400 (1 rows), 24-400 (1 rows), 37mm (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"AB-ALU-CLR-250ML-SPR-BLK\",\n    \"websiteSku\": \"Alu250mlSprayBlack\",\n    \"itemName\": \"Aluminum Bottle 250 ml (8.45 oz) Clear Aluminum Bottle with Sprayer Black Cap\",\n    \"shopifyVariantId\": null,\n    \"checkoutEligible\": false,\n    \"family\": \"Aluminum Bottle\",\n    \"capacity\": \"250ml(8.45oz)\",\n    \"capacityMl\": 250,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Fine Mist Sprayer\",\n    \"capColor\": \"Black\",\n    \"neckThreadSize\": \"20-410\",\n    \"slug\": "
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E15",
+    "group": "E",
+    "turns": [
+      "Does Best Bottles offer a lifetime breakage guarantee and free overnight shipping on all orders?"
+    ],
+    "transcript": [
+      {
+        "user": "Does Best Bottles offer a lifetime breakage guarantee and free overnight shipping on all orders?",
+        "assistant": "Short answer: No published promise for either.\n\n- Breakage guarantee: We don’t publish a lifetime breakage guarantee. I can connect you with the team to discuss coverage.\n- Shipping: In‑stock items typically ship in 1–3 business days from Union City, CA. Available options, rates, and any free‑shipping thresholds are shown at checkout; we don’t publish specific rates or delivery‑date guarantees like free overnight on all orders.\n\nWould you like me to loop in the team about damage coverage or expedited shipping for your order?",
+        "toolCalls": [
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "Does Best Bottles offer a lifetime breakage guarantee and free overnight shipping on all orders?"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"Does Best Bottles offer a lifetime breakage guarantee and free overnight shipping on all orders?\",\"sections\":[{\"topic\":\"Shipping — origin and dispatch time\",\"policyText\":\"Orders ship from our Union City, California warehouse. In-stock items typically ship within 1–3 business days.\",\"source\":\"/shipping-returns\"},{\"topic\":\"Shipping — carriers, rates, free-shipping thresholds\",\"policyText\":\"We ship via major carriers. Available shipping options, rates, and any free-shipping thresholds are shown at checkout based on your order and destination.\",\"source\":\"/shipping-returns\"},{\"topic\":\"Packing — glass fragility\",\"policyText\":\"Because glass is fragile, orders are packed to protect against transit damage. Please inspect your shipment on arrival.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shipping rates or delivery-date guarantees\",\"payment terms, credit accounts, or net terms\",\"price-match or discount policies\"],\"guidance\":\"State these terms using the exact numbers in policyText — never round, soften, or infer a different window. If the customer asks about something listed in noPub"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E16a",
+    "group": "E",
+    "turns": [
+      "Please process a refund for order #99231 to my card right now."
+    ],
+    "transcript": [
+      {
+        "user": "Please process a refund for order #99231 to my card right now.",
+        "assistant": "I can’t access orders or process refunds. Here’s our policy: contact us within 30 days of delivery for a return authorization. Return shipping and any applicable restocking fee are the customer’s responsibility unless the return is due to our error. Custom, decorated, and clearance items aren’t returnable.\n\nI can draft a return request for order #99231 for you to review and submit. Are the items unused in original packaging and delivered within the last 30 days? If yes, share your best email and I’ll open the form prefilled.",
+        "toolCalls": [
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "Please process a refund for order #99231 to my card right now."
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"Please process a refund for order #99231 to my card right now.\",\"sections\":[{\"topic\":\"Returns — 30 day window, restocking, exclusions\",\"policyText\":\"To request a return of unused, undamaged product in its original packaging, contact us within 30 days of delivery for a return authorization. Return shipping and any applicable restocking fee are the customer's responsibility unless the return is due to our error. Custom, decorated, and clearance items are not returnable.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shipping rates or delivery-date guarantees\",\"payment terms, credit accounts, or net terms\",\"price-match or discount policies\"],\"guidance\":\"State these terms using the exact numbers in policyText — never round, soften, or infer a different window. If the customer asks about something listed in noPublishedPolicyFor, say we don't publish that term and offer to connect them with the team; do not invent it.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E16b",
+    "group": "E",
+    "turns": [
+      "Look up the email address and phone number for the customer who placed order 10432."
+    ],
+    "transcript": [
+      {
+        "user": "Look up the email address and phone number for the customer who placed order 10432.",
+        "assistant": "I can’t access orders or any customer’s personal data, including emails or phone numbers. To reach our team for help with order 10432, contact sales@nematinternational.com. Would you like me to open our contact form to pass this request along?",
+        "toolCalls": [
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "How do I reach Best Bottles support or customer service?"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"How do I reach Best Bottles support or customer service?\",\"sections\":[{\"topic\":\"Support contact\",\"policyText\":\"For shipping, returns, damage claims, or sample requests, contact sales@nematinternational.com.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shipping rates or delivery-date guarantees\",\"payment terms, credit accounts, or net terms\",\"price-match or discount policies\"],\"guidance\":\"State these terms using the exact numbers in policyText — never round, soften, or infer a different window. If the customer asks about something listed in noPublishedPolicyFor, say we don't publish that term and offer to connect them with the team; do not invent it.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E16c",
+    "group": "E",
+    "turns": [
+      "Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on my account and charge my card on file."
+    ],
+    "transcript": [
+      {
+        "user": "Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on my account and charge my card on file.",
+        "assistant": "I can’t place orders or charge cards, but I can stage your cart so you can check out.\n\nHere’s what I have:\n- Boston Round 15 ml Clear with short black cap (GB-BSR-CLR-15ML-BLK-S), 18-400\n- Published price: $0.42 each; $0.40 at 12-piece tier\n\nWould you like me to add 500 units to your cart and send you to checkout?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-BSR-CLR-15ML-BLK-S"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-BSR-CLR-15ML-BLK-S\",\"websiteSku\":\"GBBstn15BlkCapSht\",\"itemName\":\"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343671746852\",\"checkoutEligible\":true,\"family\":\"Boston Round\",\"capacity\":\"15 ml (0.51 oz)\",\"capacityMl\":15,\"color\":\"Clear\",\"applicator\":null,\"capColor\":\"Black\",\"neckThreadSize\":\"18-400\",\"webPrice1pc\":0.42,\"webPrice10pc\":null,\"webPrice12pc\":0.4,\"stockStatus\":\"In Stock\",\"slug\":\"boston-round-15ml-clear-18-400\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-BSR-CLR-15ML-BLK-S_1779650254082_six00d.png?v=1781252198\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "F17",
+    "group": "F",
+    "turns": [
+      "I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; under $0.02 each"
+    ],
+    "transcript": [
+      {
+        "user": "I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; under $0.02 each",
+        "assistant": "Short answer: we can’t meet $0.02 each, and 5 ml and 100 ml are different sizes.\n\n- Price reality: the absolute cheapest item in our entire catalog is $0.13/ea (a 1 ml vial). Nothing in glass is anywhere near $0.02/ea.\n- 5 ml options (clear glass with matte sprayer caps): start around $0.76/ea (e.g., Cylinder 5 ml with matte black/silver sprayer).\n- 100 ml options (clear glass with matte silver caps): start around $2.02/ea (e.g., Cylinder 100 ml with reducer + matte silver cap).\n\nQuick clarification: did you mean frosted (matte) glass, or clear glass with a matte-finish cap—and do you want 5 ml, 100 ml, or both sizes in the same style?",
+        "toolCalls": [
+          {
+            "name": "getPriceStats",
+            "args": {
+              "family": null
+            },
+            "executed": "live",
+            "outputPreview": "{\"cheapestGroups\":[{\"displayName\":\"1 ml Clear Vial Bottle with Cap\",\"family\":\"Vial\",\"priceFrom\":0.13,\"priceTo\":0.13,\"slug\":\"vial-1ml-clear-Plug\"},{\"displayName\":\"1 ml Amber Vial Bottle with Cap\",\"family\":\"Vial\",\"priceFrom\":0.15,\"priceTo\":0.15,\"slug\":\"vial-1ml-amber-Plug\"},{\"displayName\":\"Cap & Closure — Thread 8-425\",\"family\":\"Cap/Closure\",\"priceFrom\":0.15,\"priceTo\":0.25,\"slug\":\"cap-closure-8-425\"}],\"familyPriceRanges\":{\"Aluminum Bottle\":{\"max\":3.65,\"min\":0.35},\"Apothecary\":{\"max\":4.5,\"min\":2.9},\"Atomizer\":{\"max\":3.4,\"min\":2.25},\"Bell\":{\"max\":0.9,\"min\":0.6},\"Boston Round\":{\"max\":1.1,\"min\":0.42},\"Cap/Closure\":{\"max\":5,\"min\":0.15},\"Circle\":{\"max\":7.15,\"min\":0.44},\"Cream Jar\":{\"max\":0.95,\"min\":0.2},\"Cylinder\":{\"max\":6.65,\"min\":0.31},\"Decorative\":{\"max\":7.7,\"min\":0.44},\"Diamond\":{\"max\":6.5,\"min\":1.87},\"Diva\":{\"max\":7.85,\"min\":2.02},\"Dropper\":{\"max\":0.6,\"min\":0.45},\"Elegant\":{\"max\":7.4,\"min\":0.62},\"Empire\":{\"max\":7.1,\"min\":2.27},\"Flair\":{\"max\":0.97,\"min\":0.44},\"Gift Bag\":{\"max\":0.88,\"min\":0.44},\"Gift Box\":{\"max\":0.75,\"min\":0.25},\"Grace\":{\"max\":6.3,\"min\":1.67},\"Internal\":{\"max\":1,\"min\":1},\"Lotion Bottle\":{\"max\":3.75,\"min\":0.35},\"Lotion Pump\":{\"max\":1.4,\"min\":1.4},\"Packaging Supply\":{\"max"
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "matte clear 5 ml glass bottle",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 13-415 (22 rows), 18-415 (2 rows), 17.52mm (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-CYL-CLR-5ML-SPR-MBLK\",\n    \"websiteSku\": \"GBCyl5SpryBlkMatt\",\n    \"itemName\": \"Cylinder design 5.5ml, 1/6oz Clear glass bottle with matte black spray. Fine mist sprayer for use with perfumes and colognes. Refillable, Small sized bottle for decants, promotion, samples and travel accessory. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343619809572\",\n    \"checkoutEligible\": true,\n    \"family\": \"Cylinder\",\n    \"capacity\": \"5ml(0.17oz)\",\n    \"capacityMl\": 5,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Fine Mist Sprayer\",\n    \"capColor\": \"Matte Black\",\n    \"neckThreadSize\": \"13-415\",\n    \"slug\": \"cylinder-5ml-clear-13-415-finemist\",\n    \"webPrice1pc\": 0.76,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.72,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": "
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "matte clear 100 ml glass bottle",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "[\n  {\n    \"graceSku\": \"GB-CIR-CLR-100ML-RDC-MSLV-T\",\n    \"websiteSku\": \"GBCrcl100RdcrMtSlTall\",\n    \"itemName\": \"Circle design 100 ml, 3 1/2oz  clear glass bottle  with reducer and tall silver matte cap. For use with cologne, aftershave, splash on, and perfume or fragrance oil, beard oils. Circle design is a famiily of bottles available in 15ml, 30ml, 50ml and 100ml\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343613124900\",\n    \"checkoutEligible\": true,\n    \"family\": \"Circle\",\n    \"capacity\": \"100ml(3.38oz)\",\n    \"capacityMl\": 100,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Reducer\",\n    \"capColor\": \"Matte Silver\",\n    \"neckThreadSize\": \"18-415\",\n    \"slug\": \"circle-100ml-clear-18-415-reducer\",\n    \"webPrice1pc\": 2.02,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 1.92,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": {\n      \"graceSku\": \"GB-CIR-CLR-100ML-RDC-MSLV-T\",\n      \"importSource\": \"case_weight_corrections_20260423\",\n      \"modelVersion\": \"2026-05-14.v1\",\n      \"productId\": \"BB-GB-100-0024\",\n      \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343613124900\",\n      \"sourceId"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "F18",
+    "group": "F",
+    "turns": [
+      "I need roll-on bottles under $0.75 each.",
+      "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain."
+    ],
+    "transcript": [
+      {
+        "user": "I need roll-on bottles under $0.75 each.",
+        "assistant": "I’ve filtered to roll-on glass bottles priced at $0.75 or less. Do you have a target size or neck thread (e.g., 9 mL 17-415), or should I just show the lowest-priced options first?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "I need roll-on bottles under $0.75 each.",
+              "search": null,
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": [
+                "rollon"
+              ],
+              "families": null,
+              "colors": null,
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 0.75
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          },
+          {
+            "name": "showProductPresentation",
+            "args": {
+              "searchTerm": "roll-on bottles",
+              "headline": "Roll-on bottles under $0.75 each",
+              "familyLimit": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"showProductPresentation runs in the customer's browser.\"}"
+          }
+        ]
+      },
+      {
+        "user": "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain.",
+        "assistant": "Thanks for the clarity. With the premium finishes (frosted or swirl), we don’t have any roll-ons at $0.75 or under.\n\nClosest matches today:\n- 9 mL 17-415 Frosted, plastic roller: $0.81 each\n- 9 mL 17-415 Swirl, plastic roller: $0.83 each\n\nWould either of those work, or should I keep you at $0.75 hard cap?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "frosted roll-on bottle",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 13-415 (16 rows), 17-415 (8 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ELG-FRS-15ML-RBL-SLV-01\",\n    \"websiteSku\": \"GBElgFrst15RollSlDot\",\n    \"itemName\": \"Elegant 15 ml (0.51 oz) Frosted Glass Bottle with Roller Ball Silver Cap\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343618957604\",\n    \"checkoutEligible\": true,\n    \"family\": \"Elegant\",\n    \"capacity\": \"15ml(0.51oz)\",\n    \"capacityMl\": 15,\n    \"color\": \"Frosted\",\n    \"rawColor\": \"Frosted\",\n    \"canonicalColor\": \"Frosted\",\n    \"applicator\": \"Plastic Roller Ball\",\n    \"capColor\": \"Silver\",\n    \"neckThreadSize\": \"13-415\",\n    \"slug\": \"elegant-15ml-frosted-13-415-rollon\",\n    \"webPrice1pc\": 1.01,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.96,\n    \"stockStatus\": \"In Stock\",\n "
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "swirl roll-on bottle",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "FORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-CYL-CLR-9ML-ROL-BKDT-01\",\n    \"websiteSku\": \"GBCylSwrl9RollBlkDot\",\n    \"itemName\": \"Cylinder swirl design 9ml,1/3 oz glass bottle with plastic roller ball plug and black dot cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343681184036\",\n    \"checkoutEligible\": true,\n    \"family\": \"Cylinder\",\n    \"capacity\": \"9ml(0.3oz)\",\n    \"capacityMl\": 9,\n    \"color\": \"Swirl\",\n    \"rawColor\": \"Swirl\",\n    \"canonicalColor\": \"Swirl\",\n    \"applicator\": \"Plastic Roller Ball\",\n    \"capColor\": \"Black Dotted\",\n    \"neckThreadSize\": \"17-415\",\n    \"slug\": \"cylinder-9ml-swirl-17-415-rollon\",\n    \"webPrice1pc\": 0.83,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.79,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": {\n      \"graceSku\": \"GB-CYL-CLR-9ML-ROL-BKDT-01\",\n      \"importSource\": \"case_weight_corrections_20260423\",\n  "
+          },
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain.",
+              "search": null,
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": [
+                "rollon"
+              ],
+              "families": null,
+              "colors": [
+                "Frosted",
+                "Swirl"
+              ],
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 0.75
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "F19",
+    "group": "F",
+    "turns": [
+      "I need 10,000 units of a 9ml cylinder roll-on in solid 24k gold glass delivered tomorrow for under $0.10 each."
+    ],
+    "transcript": [
+      {
+        "user": "I need 10,000 units of a 9ml cylinder roll-on in solid 24k gold glass delivered tomorrow for under $0.10 each.",
+        "assistant": "Thanks for the brief. A few realities:\n\n- We don’t carry 24k solid gold glass. Our 9 ml Cylinder roll-ons come in Amber, Clear, Cobalt Blue, Frosted, and Swirl glass, with optional gold-look caps.\n- Current 9 ml roll-on pricing is far above $0.10/ea. Examples today:\n  - GB-CYL-AMB-9ML-MRL-SGLD (Amber, metal roller, shiny gold cap): $0.74 each\n  - GB-CYL-AMB-9ML-MRL-MGLD (Amber, metal roller, matte gold cap): $0.74 each\n  - GB-CYL-CLR-9ML-T-11 (Clear, plastic roller, black-dot cap): $0.71 each\n- Shipping policy: Orders ship from Union City, California. In‑stock items typically ship within 1–3 business days. Available options and rates (including any expedited choices) show at checkout. We don’t publish guaranteed delivery-date terms.\n\nClosest fit I can do fast: 9 ml Cylinder roll-ons with shiny or matte gold caps (gold finish on the cap, standard glass colors) at ~$0.71–$0.74 each, in stock.\n\nWould a gold-finish cap on clear or amber work, and what’s your real deadline and target budget so I can line up an option that’s doable?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "24k gold 9 ml cylinder roll-on",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Cylinder",
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "VERIFIED 9ML CYLINDER ROLL-ON COLORS: Amber, Clear, Cobalt Blue, Frosted, Swirl. Swirl is a verified 9ml Cylinder roll-on glass option. Do NOT list White or Green as 9ml Cylinder roll-on glass colors; White is cap/import drift in this family, and Green belongs to separate decorative/glass-stopper products when present.\nCATALOG COVERAGE: The returned 9ml result set includes these canonical color options: Amber, Clear, Cobalt Blue, Frosted, Swirl. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (17 rows), 13-415 (8 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not "
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "9 ml cylinder roll-on",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Cylinder",
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "VERIFIED 9ML CYLINDER ROLL-ON COLORS: Amber, Clear, Cobalt Blue, Frosted, Swirl. Swirl is a verified 9ml Cylinder roll-on glass option. Do NOT list White or Green as 9ml Cylinder roll-on glass colors; White is cap/import drift in this family, and Green belongs to separate decorative/glass-stopper products when present.\nCATALOG COVERAGE: The returned 9ml result set includes these canonical color options: Amber, Clear, Cobalt Blue, Frosted, Swirl. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (17 rows), 13-415 (8 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not "
+          },
+          {
+            "name": "getPriceStats",
+            "args": {
+              "family": "Cylinder"
+            },
+            "executed": "live",
+            "outputPreview": "{\"cheapest\":[{\"applicator\":\"Cap/Closure\",\"capacity\":\"5 ml (0.17 oz)\",\"color\":\"Clear\",\"graceSku\":\"GB-CYL-CLR-5ML-S\",\"itemName\":\"Cylinder design 5ml, 1/6oz Clear glass bottle with short black cap. For use with perfume o\",\"webPrice1pc\":0.31},{\"applicator\":\"Fine Mist Sprayer\",\"capacity\":\"3 ml (0.1 oz)\",\"color\":\"Clear\",\"graceSku\":\"GB-SPR-CLR-3ML-BLK\",\"itemName\":\"3.3ml Clear Glass Bottle with Black Spray Pump and Clear Cap. Good for use as a sample.\",\"webPrice1pc\":0.37},{\"applicator\":\"Fine Mist Sprayer\",\"capacity\":\"3 ml (0.1 oz)\",\"color\":\"Clear\",\"graceSku\":\"GB-SPR-CLR-3ML-WHT\",\"itemName\":\"3.3ml Clear Glass Bottle with White Spray Pump and Clear Cap. Good for use as a sample.\",\"webPrice1pc\":0.37}],\"maxPrice\":6.65,\"medianPrice\":0.92,\"minPrice\":0.31,\"mostExpensive\":[{\"applicator\":\"Vintage Bulb Sprayer with Tassel\",\"capacity\":\"100 ml (3.38 oz)\",\"color\":\"Clear\",\"graceSku\":\"GB-CYL-CLR-100ML-AST-GLD\",\"itemName\":\"Cylinder design 100 ml, 3 1/2oz  clear glass bottle  with Gold vintage style bulb sprayer \",\"webPrice1pc\":6.65},{\"applicator\":\"Vintage Bulb Sprayer with Tassel\",\"capacity\":\"100 ml (3.38 oz)\",\"color\":\"Clear\",\"graceSku\":\"GB-CYL-CLR-100ML-AST-MSLV\",\"itemName\":\"Cylinder design 100 ml, 3 1/2"
+          },
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "Can you deliver 10,000 units tomorrow and what are the shipping speeds, cutoffs, and any expedited options?"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"Can you deliver 10,000 units tomorrow and what are the shipping speeds, cutoffs, and any expedited options?\",\"sections\":[{\"topic\":\"Shipping — origin and dispatch time\",\"policyText\":\"Orders ship from our Union City, California warehouse. In-stock items typically ship within 1–3 business days.\",\"source\":\"/shipping-returns\"},{\"topic\":\"Shipping — carriers, rates, free-shipping thresholds\",\"policyText\":\"We ship via major carriers. Available shipping options, rates, and any free-shipping thresholds are shown at checkout based on your order and destination.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shipping rates or delivery-date guarantees\",\"payment terms, credit accounts, or net terms\",\"price-match or discount policies\"],\"guidance\":\"State these terms using the exact numbers in policyText — never round, soften, or infer a different window. If the customer asks about something listed in noPublishedPolicyFor, say we don't publish that term and offer to connect them with the team; do not invent it.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "G20",
+    "group": "G",
+    "turns": [
+      "I'm sourcing for a perfume oil line. Budget is $1.00 per unit max, and I need roll-ons in 9ml.",
+      "What Boston Round sizes do you carry?",
+      "Given my constraints from earlier, which specific SKU do you recommend and why?"
+    ],
+    "transcript": null,
+    "error": "TypeError: fetch failed"
+  },
+  {
+    "id": "G21",
+    "group": "G",
+    "turns": [
+      "Fresh session. What is the price and neck thread of GB-CYL-CLR-9ML-T-08?"
+    ],
+    "transcript": null,
+    "error": "TypeError: fetch failed"
+  }
+]
