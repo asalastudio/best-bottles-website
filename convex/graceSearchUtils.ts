@@ -248,6 +248,32 @@ export function ensureVerified9mlCylinderRollOnCoverage<T extends {
     return covered;
 }
 
+/**
+ * Ensures every neck thread present in the candidate pool survives the final
+ * slice. Text relevance can rank an entire minority thread line (e.g. the
+ * 13-415 9ml rollers) below the majority line, making Grace deny products that
+ * exist. Replaces tail rows of the picked slice with the top-ranked rows of
+ * each missing thread (up to minPerThread each).
+ */
+export function ensureThreadDiversity<
+    T extends SearchCandidate & { neckThreadSize?: string | null },
+>(pool: T[], picked: T[], limit: number, minPerThread = 2): T[] {
+    const pickedThreads = new Set(
+        picked.map((p) => p.neckThreadSize).filter((t): t is string => !!t),
+    );
+    const additions: T[] = [];
+    const handled = new Set<string>();
+    for (const row of pool) {
+        const thread = row.neckThreadSize;
+        if (!thread || pickedThreads.has(thread) || handled.has(thread)) continue;
+        handled.add(thread);
+        additions.push(...pool.filter((r) => r.neckThreadSize === thread).slice(0, minPerThread));
+    }
+    if (additions.length === 0) return picked;
+    const keep = picked.slice(0, Math.max(0, limit - additions.length));
+    return dedupeCatalogResults([...keep, ...additions]).slice(0, limit);
+}
+
 // ─── Deduplication ──────────────────────────────────────────────────────────
 
 export function dedupeCatalogResults<T extends SearchCandidate>(items: T[]): T[] {
@@ -393,6 +419,7 @@ export function buildSearchCatalogToolResult(
         itemName?: string | null;
         slug?: string | null;
         graceSku?: string | null;
+        neckThreadSize?: string | null;
         dataQualityFlags?: CanonicalProductDataQualityFlag[] | string[] | null;
     }>
 ): string {
@@ -441,6 +468,21 @@ export function buildSearchCatalogToolResult(
             `${asksForColorCoverage ? "REQUIRED COVERAGE" : "CATALOG COVERAGE"}: The returned ${detectedCapMl}ml result set includes these canonical color options: ${coverage.colors.join(", ")}. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.`
         );
     }
+    const threadCounts = new Map<string, number>();
+    for (const item of data) {
+        if (item.neckThreadSize) {
+            threadCounts.set(item.neckThreadSize, (threadCounts.get(item.neckThreadSize) ?? 0) + 1);
+        }
+    }
+    if (threadCounts.size > 1) {
+        warnings.push(
+            `NECK THREAD COVERAGE: this result set spans multiple neck finishes — ${[...threadCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([t, n]) => `${t} (${n} rows)`)
+                .join(", ")}. Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.`,
+        );
+    }
+
     if (coverage.dataQualityFlags.includes("color_derived_from_sku_swirl")) {
         warnings.push(
             "DATA QUALITY NOTE: At least one Swirl color is derived from SKU/name evidence because the raw source color may be marked Clear. Preserve this as Swirl in customer-facing color lists and flag it for source-sheet cleanup."

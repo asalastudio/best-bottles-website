@@ -142,4 +142,25 @@ export const GRACE_TOOLS: OpenAI.Chat.Completions.ChatCompletionTool[] = [
             strict: true,
         },
     },
+    {
+        type: "function",
+        function: {
+            name: "getPriceStats",
+            description:
+                "Authoritative price aggregation. ALWAYS call this — never searchCatalog — for any cheapest / most expensive / most affordable / budget / price-range / 'starting at' question. With a family: exact min/max/median plus the actual cheapest and most expensive SKUs in that family. Without a family: the catalog-wide price range and the cheapest and most expensive product groups. searchCatalog returns relevance-ranked results and MUST NOT be used to infer price extremes.",
+            parameters: {
+                type: "object",
+                properties: {
+                    family: {
+                        type: ["string", "null"],
+                        description:
+                            "Optional bottle family to scope the stats to — same valid values as searchCatalog's familyLimit (e.g. 'Boston Round', 'Cylinder', 'Elegant'). Pass null for catalog-wide stats.",
+                    },
+                },
+                required: ["family"],
+                additionalProperties: false,
+            },
+            strict: true,
+        },
+    },
 ];

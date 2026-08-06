@@ -20,7 +20,9 @@ type PublicGraceToolCall = {
 
 const COMPATIBILITY_ALIASES = new Set<GraceServerToolName>([
     "getProductGroup",
-    "getProductBySku",
+    // "getProductBySku" is no longer an alias — it is a first-class Grace tool
+    // (audit P0-1). Its legacy `{ graceSku }` card callers are normalized to
+    // `{ sku }` in parsePublicGraceToolCall.
     "getFamilyForCard",
     "getCatalogStrip",
     "getProductsForComparison",
@@ -98,10 +100,6 @@ function parseAlias(
     let authorizationName: GraceOpenAIToolName;
     let authorizationParameters: Record<string, unknown>;
     switch (name) {
-        case "getProductBySku":
-            authorizationName = "displayProductCard";
-            authorizationParameters = parameters;
-            break;
         case "getFamilyForCard":
             authorizationName = "displayFamilyCard";
             authorizationParameters = fillNullableArguments(authorizationName, parameters);
@@ -157,6 +155,24 @@ export function parsePublicGraceToolCall(body: unknown): PublicGraceToolCall {
     let authorizationParameters = parameters;
     let gatewayParameters = parameters;
     let refineState: GraceRefineState | null = null;
+    if (authorizationName === "getProductBySku") {
+        // Accept the agent shape `{ sku }` and the legacy inline-card shape
+        // `{ graceSku }` / `{ websiteSku }`; the schema declares `sku`.
+        const pick = (key: string) =>
+            typeof parameters[key] === "string" && (parameters[key] as string).trim()
+                ? (parameters[key] as string).trim()
+                : "";
+        const sku = pick("sku") || pick("graceSku") || pick("websiteSku");
+        if (!sku) {
+            throw new Error("Invalid parameters for public Grace tool getProductBySku: a SKU is required");
+        }
+        authorizationParameters = { sku };
+        // Preserve the caller's intent so the gateway can keep returning `null`
+        // (not a guidance object) to the card renderers.
+        gatewayParameters = pick("sku") ? { sku } : { graceSku: sku };
+        assertKnowledgeToolParameters(authorizationName, authorizationParameters);
+        return { authorizationName, authorizationParameters, gatewayName: name, gatewayParameters, refineState };
+    }
     if (authorizationName === "searchCatalog") {
         const { returnRaw, refineState: rawRefineState, ...declared } = parameters;
         if (returnRaw !== undefined && typeof returnRaw !== "boolean") {

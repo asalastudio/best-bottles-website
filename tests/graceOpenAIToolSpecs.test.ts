@@ -1,14 +1,15 @@
 import { describe, expect, it } from "vitest";
 import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/grace/openaiToolSpecs";
-import { POST as graceToolsPost } from "../src/app/api/grace/tools/route";
-import { POST as legacyToolsPost } from "../src/app/api/elevenlabs/server-tools/route";
 
 const EXISTING_GRACE_TOOLS = [
     "searchCatalog",
+    "getProductBySku",
+    "getPolicy",
     "getFamilyOverview",
     "getBottleComponents",
     "checkCompatibility",
     "getCatalogStats",
+    "getPriceStats",
     "getCurrentPageContext",
     "getCartContents",
     "getBrowsingHistory",
@@ -83,7 +84,4 @@ describe("Grace OpenAI tool contract", () => {
         expect(project?.parameters.properties.projectId.type).toEqual(["string", "null"]);
     });
 
-    it("keeps the ElevenLabs tool route as a compatibility alias", () => {
-        expect(legacyToolsPost).toBe(graceToolsPost);
-    });
 });

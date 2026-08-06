@@ -22,6 +22,34 @@ const nullableStringArray = (description: string): JsonSchemaProperty => ({
     description,
 });
 
+/**
+ * Catalog `category` values as stored on productGroups. The catalog filter does
+ * an exact string match (`convex/products.ts` — `group.category === filters.category`),
+ * so an invented value like "bottles" silently matches NOTHING and shows the
+ * customer an empty catalog. The 2026-08-06 audit caught exactly that, so the
+ * vocabulary is pinned here rather than left free-form.
+ *
+ * The catalog also contains an "Internal" category; it is intentionally omitted
+ * so Grace can never surface internal-only rows to a customer.
+ */
+export const CATALOG_CATEGORY_VALUES = [
+    "Glass Bottle",
+    "Component",
+    "Packaging",
+    "Metal Atomizer",
+    "Glass Jar",
+    "Cream Jar",
+    "Aluminum Bottle",
+    "Plastic Bottle",
+    "Accessory",
+] as const;
+
+const nullableCategory = (description: string): JsonSchemaProperty => ({
+    type: ["string", "null"],
+    enum: [...CATALOG_CATEGORY_VALUES, null],
+    description,
+});
+
 const nullableApplicatorArray = (description: string): JsonSchemaProperty => ({
     type: ["array", "null"],
     items: {
@@ -72,12 +100,21 @@ const productProposal = {
 export const GRACE_OPENAI_TOOL_SPECS = [
     spec("searchCatalog", "Search live Best Bottles product truth before making any product, price, stock, size, color, or SKU claim.", {
         searchTerm: string("Natural-language product request including known size, family, color, or applicator."),
-        categoryLimit: nullableString("Exact category constraint, or null."),
+        categoryLimit: nullableCategory("Exact category constraint — must be one of the listed exact values, or null."),
         familyLimit: nullableString("Exact family constraint, or null."),
-        applicatorFilter: nullableString("Comma-separated catalog applicator values, or null."),
+        applicatorFilter: nullableString("Comma-separated EXACT catalog applicator values, or null. Valid values: 'Metal Roller Ball', 'Plastic Roller Ball', 'Fine Mist Sprayer', 'Perfume Spray Pump', 'Vintage Bulb Sprayer', 'Vintage Bulb Sprayer with Tassel', 'Lotion Pump', 'Dropper', 'Reducer', 'Cap/Closure'. Do NOT pass the canonical Refine bucket slugs here (rollon, finemist, perfumespray, antiquespray, antiquespray-tassel, lotionpump) — those belong to setCatalogRefinements.applicators and match NOTHING in this tool, silently filtering out the products you are looking for. When unsure, pass null and read the applicator field on the returned rows."),
+    }),
+    spec("getProductBySku", "Look up ONE exact product by its SKU code. REQUIRED whenever the customer names or types a SKU (e.g. GB-CYL-CLR-9ML-T-08, CMP-CAP-SBLK-13-415) — searchCatalog is a name search and does NOT reliably match SKU codes. Accepts Grace or website SKUs. A null/found:false result means the code was not found as written; it does NOT mean the product is unavailable.", {
+        sku: string("The exact SKU code the customer supplied, e.g. 'GB-CYL-CLR-9ML-T-08'."),
+    }),
+    spec("getPolicy", "Return verbatim published policy text for shipping, delivery times, international duties, damaged or incorrect items, returns, restocking, and support contact. REQUIRED before stating any policy term, window, or timeframe — never answer a policy question from memory.", {
+        question: string("The customer's policy question, in their own words."),
     }),
     spec("getFamilyOverview", "Return verified sizes, colors, applicators, threads, counts, and price range for one bottle family.", {
         family: string("Exact bottle family name."),
+    }),
+    spec("getPriceStats", "Return authoritative price aggregation — exact min/max/median and the actual cheapest and most expensive items. REQUIRED for any cheapest, most expensive, budget, or price-range question; never infer price extremes from search results.", {
+        family: nullableString("Exact bottle family to scope stats to, or null for catalog-wide."),
     }),
     spec("getBottleComponents", "Return fitment-verified components for a specific bottle SKU using its neck thread.", {
         bottleSku: string("Exact Grace or website SKU returned by a catalog tool."),
@@ -158,16 +195,16 @@ export const GRACE_OPENAI_TOOL_SPECS = [
     spec("setCatalogRefinements", "Update the visible catalog while inheriting every active Refine constraint unless the customer's exact words explicitly broaden one dimension.", {
         customerRequest: string("The customer's exact current request; used to authorize any broadening."),
         search: nullableString("New search phrase, or null to preserve the active search."),
-        category: nullableString("Requested category, or null."),
+        category: nullableCategory("Requested category — must be one of the listed exact values, or null. There is NO stock/availability filter: never claim results were limited to in-stock items."),
         collection: nullableString("Requested collection, or null."),
         applicators: nullableApplicatorArray("Requested canonical Refine applicator buckets, or null."),
         families: nullableStringArray("Requested exact family values, or null."),
         colors: nullableStringArray("Requested exact color values, or null."),
-        capacities: nullableStringArray("Requested exact capacity labels, or null."),
+        capacities: nullableStringArray("Requested exact capacity labels, or null. This is an EXACT SET, not a range: to honour 'under 15ml' or '15ml and smaller' you must enumerate every qualifying capacity (e.g. ['1 ml','3 ml','5 ml','9 ml','15 ml']). If you do not enumerate them, the size constraint is NOT applied — do not tell the customer the results are limited by size."),
         neckThreadSizes: nullableStringArray("Requested exact GPI neck threads, or null."),
         componentType: nullableString("Requested component type, or null."),
         priceMin: nullableNumber("Requested minimum price, or null."),
-        priceMax: nullableNumber("Requested maximum price, or null."),
+        priceMax: nullableNumber("Requested maximum price, or null. Price IS a true range filter."),
     }),
     spec("setPaperDollSelection", "Open and control the visible 9 mL 17-415 Cylinder Paper Doll using only an exact compatible configuration.", {
         glass: nullableString("Exact available glass label, or null to preserve it."),
