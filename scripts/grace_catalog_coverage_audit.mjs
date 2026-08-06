@@ -95,12 +95,12 @@ if (!skipDrift) {
     console.log("\n=== LAYER 3: DEV ↔ PROD SKU DRIFT ===");
     const prod = new ConvexHttpClient(PROD_URL);
     const prodSkus = new Set();
-    let skip = 0, total = Infinity;
-    while (skip < total) {
-        const page = await prod.query("products:getAllForAudit", { limit: 500, skip });
-        total = page.total;
+    let cursor = null;
+    for (;;) {
+        const page = await prod.query("products:getAllForAudit", { limit: 500, cursor });
         for (const p of page.page) prodSkus.add(p.graceSku);
-        skip += 500;
+        if (page.isDone) break;
+        cursor = page.continueCursor;
     }
     const devSkus = new Set(products.map((p) => p.graceSku));
     const onlyDev = [...devSkus].filter((s) => !prodSkus.has(s));

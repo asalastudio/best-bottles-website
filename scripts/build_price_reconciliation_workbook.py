@@ -20,6 +20,7 @@ from openpyxl.utils import get_column_letter
 
 REPO = Path(__file__).resolve().parents[1]
 DATA = REPO / "docs/reviews/audit-2026-08-06/inverted-pricing-prod.json"
+FIELDS = REPO / "docs/reviews/audit-2026-08-06/field-contradictions-prod.json"
 OUT = REPO / "docs/reviews/audit-2026-08-06/Grace-Price-Reconciliation.xlsx"
 
 FONT = "Arial"
@@ -177,6 +178,93 @@ def build_reconciliation(ws, rows):
     return last
 
 
+def build_field_contradictions(ws, rows):
+    """
+    Rows where the SKU code, the item name, and the structured field disagree.
+    Grace reports the structured field, so wherever these conflict she is
+    confidently wrong. Surfaced by a customer asking for a 1ml sample vial and
+    being told "white plug only" when black and clear also exist.
+    """
+    ws.title = "Field Contradictions"
+    ws.sheet_view.showGridLines = False
+
+    ws["A1"] = "Field contradictions — SKU code / item name / stored field disagree"
+    ws["A1"].font = TITLE
+    ws["A2"] = (
+        "Grace answers from the STORED FIELD. Where the SKU code or the item name says something "
+        "different, she reports the wrong colour with full confidence. Enter the correct value and "
+        "which source is authoritative in the yellow columns."
+    )
+    ws["A2"].font = NOTE
+    ws.merge_cells("A2:M2")
+    ws.row_dimensions[2].height = 28
+    ws["A2"].alignment = Alignment(wrap_text=True, vertical="top")
+
+    headers = [
+        "Grace SKU", "Website SKU", "Issue", "Item name (says)", "Stored color",
+        "Stored capColor", "Family", "Capacity", "1 pc ($)", "What Grace will say",
+        "CORRECT VALUE", "AUTHORITATIVE SOURCE", "NOTES (Abbas)",
+    ]
+    hrow = 4
+    for c, h in enumerate(headers, start=1):
+        cell = ws.cell(row=hrow, column=c, value=h)
+        cell.font = HEAD_FONT
+        cell.fill = HEADER
+        cell.border = BORDER
+        cell.alignment = Alignment(wrap_text=True, vertical="center", horizontal="center")
+    ws.row_dimensions[hrow].height = 30
+    ws.freeze_panes = "A5"
+
+    r = hrow + 1
+    for item in rows:
+        is_glass = item["issue"] == "sku_color_contradiction"
+        says = f'Grace will describe the glass as "{item["storedColor"]}"' if is_glass \
+            else f'Grace will describe the closure as "{item["storedCapColor"]}"'
+        vals = [
+            item["graceSku"], item["websiteSku"],
+            "Glass colour" if is_glass else "Closure colour",
+            item["itemName"], item["storedColor"], item["storedCapColor"],
+            item["family"], item["capacity"], item["price1pc"], says,
+        ]
+        for c, v in enumerate(vals, start=1):
+            cell = ws.cell(row=r, column=c, value=v)
+            cell.font = BLACK
+            cell.border = BORDER
+            cell.fill = RED if is_glass else AMBER
+            if c == 9:
+                cell.number_format = MONEY
+        for c in (11, 12, 13):
+            cell = ws.cell(row=r, column=c)
+            cell.fill = YELLOW_INPUT
+            cell.font = BLUE_INPUT
+            cell.border = BORDER
+        r += 1
+
+    last = r - 1
+    ws.cell(row=r + 1, column=1, value="EXAMPLE (do not edit)").font = BOLD
+    ws.cell(row=r + 1, column=11, value="Clear").font = BLUE_INPUT
+    ws.cell(row=r + 1, column=11).fill = YELLOW_INPUT
+    ws.cell(row=r + 1, column=12, value="SKU code").font = BLUE_INPUT
+    ws.cell(row=r + 1, column=12).fill = YELLOW_INPUT
+    ws.cell(row=r + 1, column=13, value="Plug is natural translucent plastic, not white.").font = BLUE_INPUT
+    ws.cell(row=r + 1, column=13).fill = YELLOW_INPUT
+
+    s_row = r + 3
+    ws.cell(row=s_row, column=1, value="SUMMARY").font = BOLD
+    for i, (label, formula) in enumerate([
+        ("Rows flagged", f"=COUNTA(A5:A{last})"),
+        ("Glass colour contradictions", f'=COUNTIF(C5:C{last},"Glass colour")'),
+        ("Closure colour contradictions", f'=COUNTIF(C5:C{last},"Closure colour")'),
+        ("Resolved by reviewer", f"=COUNTA(K5:K{last})"),
+        ("Still outstanding", f"=COUNTA(A5:A{last})-COUNTA(K5:K{last})"),
+    ]):
+        ws.cell(row=s_row + 1 + i, column=1, value=label).font = BLACK
+        ws.cell(row=s_row + 1 + i, column=3, value=formula).font = BOLD
+
+    autosize(ws, [26, 20, 15, 62, 14, 15, 13, 15, 10, 34, 16, 20, 40])
+    ws.auto_filter.ref = f"A{hrow}:M{last}"
+
+
 def build_audit_status(ws):
     ws.title = "Grace Audit Status"
     ws.sheet_view.showGridLines = False
@@ -267,8 +355,12 @@ def main():
     rows = json.loads(DATA.read_text())
     rows.sort(key=lambda x: -x["multiple"])
 
+    fields = json.loads(FIELDS.read_text()) if FIELDS.exists() else []
+    fields.sort(key=lambda x: (x["issue"], x["graceSku"]))
+
     wb = Workbook()
     build_reconciliation(wb.active, rows)
+    build_field_contradictions(wb.create_sheet(), fields)
     build_audit_status(wb.create_sheet())
     build_legend(
         wb.create_sheet(),
@@ -278,7 +370,7 @@ def main():
     )
     OUT.parent.mkdir(parents=True, exist_ok=True)
     wb.save(OUT)
-    print(f"wrote {OUT} — {len(rows)} inverted-price rows")
+    print(f"wrote {OUT} — {len(rows)} inverted-price rows, {len(fields)} field contradictions")
 
 
 if __name__ == "__main__":
