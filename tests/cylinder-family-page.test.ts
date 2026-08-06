@@ -122,7 +122,7 @@ describe("Cylinder family page model", () => {
         ]);
     });
 
-    it("uses three customer-facing delivery systems", () => {
+    it("uses three customer-facing applicator types", () => {
         expect(classifyCylinderApplicatorSystem("Metal Roller Ball")).toBe("Roll-On");
         expect(classifyCylinderApplicatorSystem("Plastic Roller Ball")).toBe("Roll-On");
         expect(classifyCylinderApplicatorSystem("Fine Mist Sprayer")).toBe("Fine Mist Spray");

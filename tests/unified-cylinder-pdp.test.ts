@@ -98,6 +98,23 @@ describe("unified Cylinder PDP state", () => {
         expect(source).not.toContain('next.set("view", "beauty");\n            router.replace');
     });
 
+    it("uses the Sanity beauty gallery for the glass-level hero without replacing exact builder truth", () => {
+        const component = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
+        const page = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
+        const queries = readFileSync("src/sanity/lib/queries.ts", "utf8");
+        const serverClient = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
+
+        expect(component).toContain("resolveCylinderBeautyHero(beautyGallery, selected.glassKey)");
+        expect(component).toContain("Metal roller · Matte silver reference");
+        expect(component).toContain("<PaperDollCanvas");
+        expect(page).toContain("getStorefrontCylinderBeautyGallery");
+        expect(page).toContain("beautyGallery={beautyGallery}");
+        expect(queries).toContain("authenticatedServerClient ?? client");
+        expect(serverClient).toContain('import "server-only"');
+        expect(serverClient).toContain("SANITY_API_READ_TOKEN");
+        expect(serverClient).not.toContain("NEXT_PUBLIC_SANITY_API_READ_TOKEN");
+    });
+
     it("selects a valid configuration SKU and flags an invalid SKU for URL cleanup", () => {
         expect(resolveCylinderConfigurationFromQuery(configurations, "GB-CYL-AMB-9ML-MRL-SGLD")).toMatchObject({
             configuration: { graceSku: "GB-CYL-AMB-9ML-MRL-SGLD" },

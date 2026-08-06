@@ -41,7 +41,7 @@ export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterC
     if (filters.collection) chips.push({ facet: "collection", value: filters.collection, label: `Collection: ${filters.collection}` });
     for (const value of filters.applicators) {
         const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value;
-        chips.push({ facet: "applicators", value, label: `Delivery: ${label}` });
+        chips.push({ facet: "applicators", value, label: `Applicator: ${label}` });
     }
     for (const value of filters.families) {
         chips.push({ facet: "families", value, label: `Family: ${value}` });

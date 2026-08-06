@@ -26,6 +26,10 @@ import {
     selectCylinderConfiguration,
     type CylinderSelectionChange,
 } from "@/lib/products/unified-cylinder-pdp";
+import {
+    resolveCylinderBeautyHero,
+    type StorefrontCylinderBeautyGallery,
+} from "@/lib/products/cylinder-beauty-gallery";
 
 function usableImage(value: string | null | undefined): value is string {
     return Boolean(value && !value.includes("www.bestbottles.com/images/store/") && !value.includes("cdn.sanity.io/"));
@@ -59,9 +63,18 @@ function formatPrice(value: number | null | undefined): string {
 export default function UnifiedBottlePdp({
     configurations,
     paperDollFamily,
+    paperDollPreview = false,
+    beautyGallery,
 }: {
     configurations: PaperDollConfiguration[];
     paperDollFamily: StorefrontPaperDollFamily | null;
+    /**
+     * True when the gated draft-preview flag resolved on the server. Draft
+     * families are not storefront-ready, so `paperDollFamily` is null for them;
+     * this flag tells the UI it is showing a draft rather than a released build.
+     */
+    paperDollPreview?: boolean;
+    beautyGallery: StorefrontCylinderBeautyGallery | null;
 }) {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -126,11 +139,19 @@ export default function UnifiedBottlePdp({
 
     const images = useMemo(() => {
         const rows: GalleryImage[] = [];
+        const beautyHero = resolveCylinderBeautyHero(beautyGallery, selected.glassKey);
+        if (beautyHero) {
+            rows.push({
+                url: beautyHero.imageUrl,
+                label: "Metal roller · Matte silver reference",
+                alt: beautyHero.alt,
+            });
+        }
         if (usableImage(selected.imageUrl)) rows.push({ url: selected.imageUrl, label: "Complete bottle", alt: `${selected.glassLabel} Cylinder bottle with ${selected.finishLabel} finish` });
         if (usableImage(selected.imageUrlCapOff) && selected.imageUrlCapOff !== selected.imageUrl) rows.push({ url: selected.imageUrlCapOff, label: "Applicator view", alt: `${selected.glassLabel} Cylinder bottle with applicator exposed` });
         if (rows.length === 0) rows.push({ url: "/assets/Cylinder-BB.png", label: "Cylinder family", alt: "Cylinder bottle on warm natural stone" });
         return rows;
-    }, [selected]);
+    }, [beautyGallery, selected]);
 
     const checkoutReady = isCheckoutReady(selected);
     const inStock = selected.stockStatus === "In Stock";
@@ -207,7 +228,7 @@ export default function UnifiedBottlePdp({
                 <div className="mb-7 border-b border-champagne pb-6">
                     <p className="text-[10px] font-bold uppercase tracking-[0.22em] text-muted-gold">Unified bottle platform · 9 mL · 17-415</p>
                     <h1 className="mt-2 font-serif text-4xl font-medium text-obsidian sm:text-5xl">9 mL Cylinder Bottle</h1>
-                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate">Choose the glass, delivery system, roller material when needed, and finish. Every option shown belongs to this exact 17-415 bottle platform.</p>
+                    <p className="mt-3 max-w-3xl text-sm leading-6 text-slate">Choose the glass, applicator, roller material when needed, and finish. Every option shown belongs to this exact 17-415 bottle platform.</p>
                 </div>
 
                 <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12">
@@ -245,7 +266,7 @@ export default function UnifiedBottlePdp({
                         )}
                         <div className="mt-4 grid grid-cols-3 border border-champagne bg-bone text-center">
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Glass</p><p className="mt-1 text-xs font-semibold">{selected.glassLabel}</p></div>
-                            <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Delivery</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
+                            <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Applicator</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Finish</p><p className="mt-1 text-xs font-semibold">{selected.finishLabel}</p></div>
                         </div>
                     </div>

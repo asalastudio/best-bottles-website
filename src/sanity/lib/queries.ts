@@ -126,11 +126,18 @@ export const JOURNAL_SLUGS_QUERY = `
 `;
 
 import { client, isSanityConfigured } from "./client";
+import { authenticatedServerClient, previewServerClient } from "./serverClient";
 import {
+    assertPreviewPaperDollFamily,
     assertStorefrontPaperDollFamily,
     selectStorefrontPaperDollReleaseCandidate,
+    type RenderablePaperDollFamily,
     type StorefrontPaperDollFamily,
 } from "@/lib/paper-doll/sanity";
+import {
+    assertStorefrontCylinderBeautyGallery,
+    type StorefrontCylinderBeautyGallery,
+} from "@/lib/products/cylinder-beauty-gallery";
 
 export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
   *[_type == "paperDollFamily" && familyKey == $familyKey][0] {
@@ -186,6 +193,33 @@ export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
       "imageHeight": image.asset->metadata.dimensions.height,
       offsetX,
       offsetY
+    }
+  }
+`;
+
+export const STOREFRONT_CYLINDER_BEAUTY_GALLERY_QUERY = `
+  *[
+    _type == "paperDollBeautyGallery"
+    && familyKey == $familyKey
+    && storefrontReady == true
+  ][0] {
+    _id,
+    familyKey,
+    displayName,
+    canvasWidth,
+    canvasHeight,
+    referenceRoller,
+    referenceCapFinish,
+    generator,
+    assetRevision,
+    storefrontReady,
+    heroes[] {
+      glassKey,
+      glassLabel,
+      alt,
+      "imageUrl": image.asset->url,
+      "imageWidth": image.asset->metadata.dimensions.width,
+      "imageHeight": image.asset->metadata.dimensions.height
     }
   }
 `;
@@ -246,6 +280,33 @@ export async function getStorefrontPaperDollFamily(
     const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
     if (!family) return null;
     return assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
+}
+
+/**
+ * Read a draft family/current-release pair for an already-authorized local or
+ * signed Draft Mode request. Callers own the access decision.
+ */
+export async function getPreviewPaperDollFamily(
+    familyKey: string,
+): Promise<RenderablePaperDollFamily | null> {
+    if (!isSanityConfigured || !previewServerClient) return null;
+    const family = await previewServerClient.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
+    if (!family) return null;
+    return assertPreviewPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
+}
+
+/**
+ * Fetch the atomic five-image Cylinder beauty set. A partial or incorrectly
+ * sized set is rejected instead of leaking a mixed gallery to the storefront.
+ */
+export async function getStorefrontCylinderBeautyGallery(
+    familyKey: string,
+): Promise<StorefrontCylinderBeautyGallery | null> {
+    if (!isSanityConfigured) return null;
+    const galleryClient = authenticatedServerClient ?? client;
+    const gallery = await galleryClient.fetch<unknown>(STOREFRONT_CYLINDER_BEAUTY_GALLERY_QUERY, { familyKey });
+    if (!gallery) return null;
+    return assertStorefrontCylinderBeautyGallery(gallery);
 }
 
 export type ProductFamilyPageContent = {

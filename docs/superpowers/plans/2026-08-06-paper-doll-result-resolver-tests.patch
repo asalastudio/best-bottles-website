@@ -1,0 +1,94 @@
+diff --git a/tests/paper-doll-draft-preview.test.ts b/tests/paper-doll-draft-preview.test.ts
+index 4dcdc8c..e94d583 100644
+--- a/tests/paper-doll-draft-preview.test.ts
++++ b/tests/paper-doll-draft-preview.test.ts
+@@ -1,9 +1,12 @@
+ import { describe, expect, it } from "vitest";
++import { readFileSync } from "node:fs";
+ import {
+     assertPreviewPaperDollFamily,
+     assertStorefrontPaperDollFamily,
+ } from "@/lib/paper-doll/sanity";
+ import { isPaperDollDraftPreviewAllowed } from "@/lib/paper-doll/preview";
++import { resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
++import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
+ 
+ function draftFamily() {
+     return {
+@@ -57,6 +60,32 @@ function draftFamily() {
+     };
+ }
+ 
++function configuration(
++    mode: "rollon" | "spray" | "lotion",
++    layerKeys: PaperDollConfiguration["layerKeys"],
++): PaperDollConfiguration {
++    return {
++        graceSku: `GB-CYL-CLR-9ML-${mode.toUpperCase()}`,
++        websiteSku: `GBCyl9${mode}`,
++        productGroupSlug: "cylinder-9ml-clear-17-415",
++        familyKey: "CYL-9ML",
++        family: "Cylinder",
++        capacityMl: 9,
++        neckThreadSize: "17-415",
++        glassLabel: "Clear",
++        glassKey: "CLR",
++        applicatorLabel: mode,
++        applicatorKey: mode,
++        mode,
++        finishLabel: "White",
++        layerKeys,
++        price1pc: 1,
++        priceTiers: [{ minQty: 1, totalPrice: 1, unitPrice: 1 }],
++        stockStatus: "In Stock",
++        shopifySellable: true,
++    };
++}
++
+ describe("Paper Doll draft preview contract", () => {
+     it("allows an explicit preview only in local development or signed Draft Mode", () => {
+         expect(isPaperDollDraftPreviewAllowed({
+@@ -89,5 +118,42 @@ describe("Paper Doll draft preview contract", () => {
+             assetRevision: "1.2.0-capped-dispensers.1",
+         });
+     });
+-});
+ 
++    it("keeps draft reads server-only and wires the explicit preview through the product page", () => {
++        const serverClientSource = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
++        const queriesSource = readFileSync("src/sanity/lib/queries.ts", "utf8");
++        const productPageSource = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
++
++        expect(serverClientSource).toContain('perspective: "previewDrafts"');
++        expect(serverClientSource).not.toContain("NEXT_PUBLIC_SANITY_API_READ_TOKEN");
++        expect(queriesSource).toContain("getPreviewPaperDollFamily");
++        expect(productPageSource).toContain("isPaperDollDraftPreviewAllowed");
++        expect(productPageSource).toContain("paperDollPreview={paperDollPreview}");
++    });
++
++    it("renders complete draft configurations and reports an exact missing selected layer", () => {
++        const family = assertPreviewPaperDollFamily(draftFamily());
++        const spray = configuration("spray", { body: "CLR", sprayer: "BLK" });
++        const rollon = configuration("rollon", { body: "CLR", roller: "MTL-ROLL", cap: "WHT" });
++
++        expect(resolvePaperDollLayersResult(family, spray)).toMatchObject({
++            ok: true,
++            layers: [
++                { slot: "body", variantKey: "CLR" },
++                { slot: "sprayer", variantKey: "BLK" },
++            ],
++        });
++        expect(resolvePaperDollLayersResult(family, rollon)).toEqual({
++            ok: false,
++            missing: { slot: "cap", variantKey: "WHT", sku: rollon.graceSku },
++        });
++    });
++
++    it("labels the draft UI and exposes the exact missing-layer diagnostic", () => {
++        const unifiedPdpSource = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
++
++        expect(unifiedPdpSource).toContain("Draft preview — not publicly released");
++        expect(unifiedPdpSource).toContain("Missing");
++        expect(unifiedPdpSource).toContain("layer");
++    });
++});
