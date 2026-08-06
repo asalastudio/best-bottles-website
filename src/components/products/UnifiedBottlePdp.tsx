@@ -289,6 +289,7 @@ export default function UnifiedBottlePdp({
                                     selected={selected}
                                     preview={paperDollPreview}
                                     capOff={capOff && selected.mode === "rollon"}
+                                    className="aspect-[10/11] max-lg:aspect-auto max-lg:h-[38vh]"
                                     onFailure={() => setCanvasFailed(true)}
                                 />
                                 {selected.mode === "rollon" && (
@@ -337,7 +338,7 @@ export default function UnifiedBottlePdp({
                         ) : (
                             <ProductImageGallery images={images} primaryAlt={productName} fallbackUrl="/assets/Cylinder-BB.png" aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
                         )}
-                        <div className="mt-4 grid grid-cols-3 border border-champagne bg-bone text-center">
+                        <div className="mt-4 hidden grid-cols-3 border border-champagne bg-bone text-center lg:grid">
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Glass</p><p className="mt-1 text-xs font-semibold">{selected.glassLabel}</p></div>
                             <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Applicator</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Finish</p><p className="mt-1 text-xs font-semibold">{selected.finishLabel}</p></div>

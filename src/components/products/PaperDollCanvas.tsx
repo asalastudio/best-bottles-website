@@ -11,6 +11,7 @@ export default function PaperDollCanvas({
     selected,
     preview = false,
     capOff = false,
+    className = "aspect-[10/11]",
     onFailure,
 }: {
     family: RenderablePaperDollFamily;
@@ -18,6 +19,8 @@ export default function PaperDollCanvas({
     preview?: boolean;
     /** Lift the cap layer so the roller fitment underneath stays visible. */
     capOff?: boolean;
+    /** Sizing classes for the canvas box; defaults to the full 10/11 plate. */
+    className?: string;
     onFailure?: () => void;
 }) {
     const resolution = useMemo(() => resolvePaperDollLayersResult(family, selected), [family, selected]);
@@ -30,7 +33,7 @@ export default function PaperDollCanvas({
 
     return (
         <div
-            className="relative aspect-[10/11] overflow-hidden border border-champagne/60 bg-travertine"
+            className={`relative overflow-hidden border border-champagne/60 bg-travertine ${className}`}
             role="img"
             aria-label={capOff
                 ? `${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel}, cap removed to show the roller fitment`
