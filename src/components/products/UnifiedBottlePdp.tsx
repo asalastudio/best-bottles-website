@@ -84,6 +84,10 @@ export default function UnifiedBottlePdp({
     const [qty, setQty] = useState(1);
     const [added, setAdded] = useState(false);
     const [canvasFailed, setCanvasFailed] = useState(false);
+    // Cap-off view: lifts the roll-on overcap so the metal/plastic roller
+    // fitment underneath is visible. Auto-lifts when the shopper changes the
+    // roller material, auto-replaces when they pick a finish.
+    const [capOff, setCapOff] = useState(false);
 
     const requestedConfiguration = searchParams.get("configuration");
     const queryResolution = requestedConfiguration
@@ -117,6 +121,8 @@ export default function UnifiedBottlePdp({
 
             setSelectedSku(result.configuration.graceSku);
             setCanvasFailed(false);
+            if (request.finish) setCapOff(false);
+            else if (request.rollerMaterial) setCapOff(true);
             const next = new URLSearchParams(searchParams.toString());
             next.set("view", request.view === "beauty" ? "beauty" : "build");
             next.set("configuration", result.configuration.graceSku);
@@ -168,6 +174,8 @@ export default function UnifiedBottlePdp({
     function updateSelection(configuration: PaperDollConfiguration, change: CylinderSelectionChange) {
         setSelectedSku(configuration.graceSku);
         setCanvasFailed(false);
+        if (change.dimension === "rollerMaterial") setCapOff(true);
+        else if (change.dimension === "finish" || change.dimension === "deliverySystem") setCapOff(false);
         const next = new URLSearchParams(searchParams.toString());
         next.set("configuration", configuration.graceSku);
         next.delete("glass");
@@ -275,7 +283,36 @@ export default function UnifiedBottlePdp({
                             </div>
                         )}
                         {view === "build" && buildReady && paperDollFamily && layerResolution?.ok && !canvasFailed ? (
-                            <PaperDollCanvas family={paperDollFamily} selected={selected} preview={paperDollPreview} onFailure={() => setCanvasFailed(true)} />
+                            <div className="relative">
+                                <PaperDollCanvas
+                                    family={paperDollFamily}
+                                    selected={selected}
+                                    preview={paperDollPreview}
+                                    capOff={capOff && selected.mode === "rollon"}
+                                    onFailure={() => setCanvasFailed(true)}
+                                />
+                                {selected.mode === "rollon" && (
+                                    <button
+                                        type="button"
+                                        onClick={() => {
+                                            const next = !capOff;
+                                            setCapOff(next);
+                                            analytics.paperDollOptionSelected({
+                                                familyKey: "CYL-9ML",
+                                                capacityMl: 9,
+                                                neckThreadSize: "17-415",
+                                                sku: selected.graceSku,
+                                                dimension: "capView",
+                                                value: next ? "roller-exposed" : "capped",
+                                            });
+                                        }}
+                                        aria-pressed={capOff}
+                                        className="absolute bottom-3 right-3 z-30 min-h-11 border border-obsidian bg-white/90 px-4 text-[10px] font-bold uppercase tracking-wider text-obsidian backdrop-blur-sm transition-colors hover:bg-obsidian hover:text-white"
+                                    >
+                                        {capOff ? "Replace cap" : "Remove cap · view roller"}
+                                    </button>
+                                )}
+                            </div>
                         ) : view === "build" ? (
                             <div className="flex aspect-[10/11] min-h-[360px] sm:min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
                                 <Package className="h-10 w-10 text-muted-gold" />

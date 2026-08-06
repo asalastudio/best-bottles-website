@@ -10,11 +10,14 @@ export default function PaperDollCanvas({
     family,
     selected,
     preview = false,
+    capOff = false,
     onFailure,
 }: {
     family: RenderablePaperDollFamily;
     selected: PaperDollConfiguration;
     preview?: boolean;
+    /** Lift the cap layer so the roller fitment underneath stays visible. */
+    capOff?: boolean;
     onFailure?: () => void;
 }) {
     const resolution = useMemo(() => resolvePaperDollLayersResult(family, selected), [family, selected]);
@@ -29,9 +32,12 @@ export default function PaperDollCanvas({
         <div
             className="relative aspect-[10/11] overflow-hidden border border-champagne/60 bg-travertine"
             role="img"
-            aria-label={`${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel} and ${selected.finishLabel} finish`}
+            aria-label={capOff
+                ? `${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel}, cap removed to show the roller fitment`
+                : `${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel} and ${selected.finishLabel} finish`}
             data-paper-doll-revision={family.assetRevision}
             data-paper-doll-preview={preview ? "true" : undefined}
+            data-paper-doll-cap={capOff ? "off" : "on"}
         >
             {loaded.size < layers.length && (
                 <div className="absolute inset-0 z-20 flex items-center justify-center bg-travertine" aria-live="polite">
@@ -49,6 +55,10 @@ export default function PaperDollCanvas({
                         keys: new Set(current.identity === loadIdentity ? current.keys : []).add(key),
                     };
                 });
+                // The cap stays mounted while lifted so replacing it is
+                // instant; it fades and rises out of frame instead of
+                // unmounting.
+                const lifted = capOff && layer.slot === "cap";
                 return (
                     <Image
                         key={key}
@@ -57,7 +67,8 @@ export default function PaperDollCanvas({
                         fill
                         unoptimized
                         sizes="(min-width: 1024px) 52vw, 100vw"
-                        className="absolute inset-0 object-contain"
+                        aria-hidden={lifted || undefined}
+                        className={`absolute inset-0 object-contain transition-[opacity,transform] duration-300 ease-out ${lifted ? "-translate-y-[6%] opacity-0" : "translate-y-0 opacity-100"}`}
                         // Cached images can complete before hydration attaches
                         // onLoad; the ref check clears the overlay for those.
                         ref={(image) => {
