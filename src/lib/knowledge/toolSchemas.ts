@@ -199,7 +199,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         collection: nullableString("Requested collection, or null."),
         applicators: nullableApplicatorArray("Requested canonical Refine applicator buckets, or null."),
         families: nullableStringArray("Requested exact family values, or null."),
-        colors: nullableStringArray("Requested exact color values, or null."),
+        colors: nullableStringArray("Requested exact GLASS color values, or null. This facet filters the BOTTLE GLASS only — cap, closure, plug, applicator, and trim colors are NOT refinable and a closure color placed here matches nothing (e.g. colors:['Black'] for a 'black plug' request returns zero groups because the glass is amber or clear). When the customer's color word describes the cap/plug/applicator, pass null here and use searchCatalog instead, answering from the rows' cap/closure colors."),
         capacities: nullableStringArray("Requested exact capacity labels, or null. This is an EXACT SET, not a range: to honour 'under 15ml' or '15ml and smaller' you must enumerate every qualifying capacity (e.g. ['1 ml','3 ml','5 ml','9 ml','15 ml']). If you do not enumerate them, the size constraint is NOT applied — do not tell the customer the results are limited by size."),
         neckThreadSizes: nullableStringArray("Requested exact GPI neck threads, or null."),
         componentType: nullableString("Requested component type, or null."),
