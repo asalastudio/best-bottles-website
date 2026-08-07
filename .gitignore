@@ -123,3 +123,17 @@ __pycache__/
 
 # Local creative assets (84MB+, not for git)
 creative/
+
+# Paper Doll 3D lane — track the scripts and the written record, never the
+# binaries. Blend files and renders are build artifacts: a re-run of
+# scripts/paper-doll-3d/ regenerates them deterministically.
+!/pipeline/paper-doll-3d/
+!/pipeline/paper-doll-3d/**/
+!/pipeline/paper-doll-3d/**/*.md
+!/pipeline/paper-doll-3d/**/*.json
+!/pipeline/paper-doll-3d/**/.gitkeep
+/pipeline/paper-doll-3d/**/*.blend
+/pipeline/paper-doll-3d/**/*.blend[0-9]
+/pipeline/paper-doll-3d/**/*.glb
+/pipeline/paper-doll-3d/**/*.png
+/pipeline/paper-doll-3d/**/*.jpg

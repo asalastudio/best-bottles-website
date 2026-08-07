@@ -1,0 +1,298 @@
+#!/usr/bin/env python3
+"""
+Paper Doll 3D — closure builder (screw caps).
+
+Builds a closure as its OWN object, authored against a neck finish rather than
+against a particular bottle. A 20-400 cap fits Boston Round 30 ml and 60 ml and
+every other 20-400 family, so it is authored once here and reused — that is what
+makes the component library one source of truth instead of copies.
+
+SEATING CONTRACT
+    The origin sits at the closure's MATING FACE: the interior top surface that
+    lands on the bottle's sealing land. The bottle's neck datum sits at the same
+    plane (top of finish). So seating is:
+
+        cap.parent = bottle_datum        cap.location = (0, 0, 0)
+
+    No offsets, no eyeballing. Every component in this lane follows the same
+    rule, which is what makes the paper doll swap cleanly.
+
+The internal thread is generated as a MIRROR of the bottle's: same pitch, same
+lead, radii offset by a running clearance so the two mesh without intersecting.
+
+Usage:
+  blender --background --python scripts/paper-doll-3d/build-closure.py -- \\
+      --finish 20-400 --style short --output <path>.blend
+
+  blender --background --python scripts/paper-doll-3d/build-closure.py -- \\
+      --finish 20-400 --dry-run
+"""
+from __future__ import annotations
+
+import argparse
+import importlib.util
+import math
+import sys
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple
+
+try:
+    import bpy
+except ImportError:
+    print("ERROR: run inside Blender.", file=sys.stderr)
+    raise SystemExit(2)
+
+HERE = Path(__file__).resolve().parent
+
+RADIAL_SEGMENTS = 288        # 4 samples per rib at RIB_COUNT=72 — below this the ribs alias
+RIB_COUNT = 72
+RIB_DEPTH = 0.22             # mm, peak-to-valley on the knurl
+THREAD_CLEARANCE = 0.30      # mm diametral gap so cap and bottle never intersect
+WALL = 1.60
+TOP_TH = 1.80
+EDGE_R = 0.70                # softened top edge
+BOT_R = 0.35
+
+
+# od is the closure's real outer diameter, stated rather than derived — a
+# 20-400 screw cap measures ~22.4 mm across the knurl. Deriving it from T plus a
+# wall double-counts and gives an oversized cap.
+# skirt_d = how far the skirt hangs below the sealing plane. It must stop ABOVE
+# the bottle's transfer bead or the cap would foul it.
+CLOSURE_STYLES: Dict[str, Dict[str, float]] = {
+    "short": {"skirt_d": 9.0, "od": 22.40},
+    "tall":  {"skirt_d": 13.5, "od": 22.40},
+}
+
+
+def load_builder():
+    spec = importlib.util.spec_from_file_location("bbr_build", HERE / "build-boston-round.py")
+    mod = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def _arc(cr, cz, radius, a0_deg, a1_deg, steps):
+    a0, a1 = math.radians(a0_deg), math.radians(a1_deg)
+    return [(cr + radius * math.cos(a0 + (a1 - a0) * i / steps),
+             cz + radius * math.sin(a0 + (a1 - a0) * i / steps))
+            for i in range(steps + 1)]
+
+
+def build_profile(fin: Dict[str, float], style: Dict[str, float]) -> Dict[str, object]:
+    """
+    Closed (r, z) section of the closure, z = 0 at the mating face.
+
+    Traversal: exterior top centre -> outer edge -> down the skirt -> around the
+    bottom -> up the interior -> interior top centre. One winding rule then gives
+    outward normals on the outside and cavity-facing normals inside, same as the
+    bottle shell.
+    """
+    T = float(fin["T"])
+    E = float(fin["E"])
+    skirt_d = float(style["skirt_d"])
+    r_out = float(style["od"]) / 2.0
+    # interior: valley clears the bottle's crest, ridge drops to just over its root
+    r_in_valley = (T + THREAD_CLEARANCE) / 2.0
+    r_in_ridge = (E + THREAD_CLEARANCE) / 2.0
+
+    pts: List[Tuple[float, float]] = [(0.0, TOP_TH), (r_out - EDGE_R, TOP_TH)]
+    pts += _arc(r_out - EDGE_R, TOP_TH - EDGE_R, EDGE_R, 90.0, 0.0, 8)[1:]
+    pts.append((r_out, -skirt_d + BOT_R))
+    pts += _arc(r_out - BOT_R, -skirt_d + BOT_R, BOT_R, 0.0, -90.0, 5)[1:]
+    outer_count = len(pts)
+
+    pts.append((r_in_valley, -skirt_d))                 # bottom face, inward
+    steps = max(2, int(skirt_d * 4))
+    for i in range(1, steps + 1):
+        pts.append((r_in_valley, -skirt_d + skirt_d * i / steps))
+    pts.append((0.0, 0.0))                              # interior top disc
+    return {
+        "loop": pts, "outer_count": outer_count,
+        "r_out": r_out, "r_in_valley": r_in_valley, "r_in_ridge": r_in_ridge,
+        "skirt_d": skirt_d, "thread_lo": -skirt_d, "thread_hi": -0.8,
+    }
+
+
+def make_modulator(prof, fin, ribs: int, rib_depth: float):
+    """
+    Ribs on the outside, female thread on the inside — in one pass.
+
+    Ribs are pure angular modulation (vertical flutes, no lead). The thread is
+    angular AND axial, so it is a real helix that mirrors the bottle's; its
+    radius moves INWARD from the valley, because on a cap the thread protrudes
+    into the bore.
+    """
+    outer_count = prof["outer_count"]
+    r_out = prof["r_out"]
+    pitch = float(fin["pitch"])
+    depth_in = prof["r_in_valley"] - prof["r_in_ridge"]
+    lo, hi = prof["thread_lo"], prof["thread_hi"]
+
+    def modulate(index: int, r: float, z: float, theta: float) -> float:
+        if index < outer_count:
+            # knurl only on the vertical skirt, never on the top face
+            if abs(r - r_out) < 1e-6 and z < TOP_TH - EDGE_R:
+                return r - rib_depth * 0.5 * (1.0 - math.cos(ribs * theta))
+            return r
+        if not (lo <= z <= hi) or depth_in <= 0.0:
+            return r
+        fade = min(1.0, (z - lo) / 1.2, (hi - z) / 1.2)
+        if fade <= 0.0:
+            return r
+        phase = ((z - lo) / pitch) - (theta / (2.0 * math.pi))
+        bump = 0.5 * (1.0 - math.cos(2.0 * math.pi * (phase % 1.0)))
+        return r - depth_in * bump * fade
+
+    return modulate
+
+
+def make_pp_material(name: str) -> bpy.types.Material:
+    """
+    Injection-moulded polypropylene: near-black, fine matte, low gloss.
+
+    Base colour is set in LINEAR space. The brief asks for sRGB ~(25,25,25),
+    which is ~0.0116 linear — putting 25/255 = 0.098 straight in would render
+    noticeably too light, a common slip.
+    """
+    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
+    mat.use_nodes = True
+    b = next(n for n in mat.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    def st(k, v):
+        if k in b.inputs:
+            b.inputs[k].default_value = v
+    st("Base Color", (0.0116, 0.0116, 0.0116, 1.0))
+    st("Roughness", 0.52)          # very low gloss, grazing reflections only
+    st("Metallic", 0.0)
+    st("IOR", 1.49)                # polypropylene
+    st("Specular IOR Level", 0.42)
+    st("Coat Weight", 0.0)
+    return mat
+
+
+def build(finish: str, style_name: str, clear_scene: bool = True) -> Dict[str, object]:
+    mod = load_builder()
+    fin = mod.NECK_FINISHES[finish]
+    style = CLOSURE_STYLES[style_name]
+
+    name = f"bb_cap_{finish.replace('-', '')}_{style_name}_v001"
+    if clear_scene:
+        for o in list(bpy.data.objects):
+            bpy.data.objects.remove(o, do_unlink=True)
+
+    scene = bpy.context.scene
+    scene.unit_settings.system = 'METRIC'
+    scene.unit_settings.scale_length = 0.001
+    scene.unit_settings.length_unit = 'MILLIMETERS'
+
+    prof = build_profile(fin, style)
+    modulate = make_modulator(prof, fin, RIB_COUNT, RIB_DEPTH)
+    verts, faces = mod.revolve_mesh(prof["loop"], RADIAL_SEGMENTS, modulate)
+
+    mesh = bpy.data.meshes.new(name)
+    mesh.from_pydata(verts, [], faces)
+    mesh.validate(verbose=False)
+    mesh.update()
+    for p in mesh.polygons:
+        p.use_smooth = True
+    obj = bpy.data.objects.new(name, mesh)
+    obj.location = (0.0, 0.0, 0.0)          # origin IS the mating face
+    mesh.materials.append(make_pp_material("bb_mat_pp_black"))
+
+    coll = bpy.data.collections.get("BSR_CLOSURES") or bpy.data.collections.new("BSR_CLOSURES")
+    if coll.name not in {c.name for c in scene.collection.children}:
+        scene.collection.children.link(coll)
+    coll.objects.link(obj)
+
+    meta = {
+        "part": "closure", "finish": finish, "style": style_name,
+        "outer_dia_mm": round(prof["r_out"] * 2, 3),
+        "skirt_depth_mm": prof["skirt_d"],
+        "total_height_mm": round(prof["skirt_d"] + TOP_TH, 3),
+        "thread_valley_dia_mm": round(prof["r_in_valley"] * 2, 3),
+        "thread_ridge_dia_mm": round(prof["r_in_ridge"] * 2, 3),
+        "clearance_mm": THREAD_CLEARANCE,
+        "ribs": RIB_COUNT, "rib_depth_mm": RIB_DEPTH,
+        "radial_segments": RADIAL_SEGMENTS,
+        "verts": len(mesh.vertices), "faces": len(mesh.polygons),
+        "tris": sum(len(p.vertices) - 2 for p in mesh.polygons),
+        "seating": "origin at mating face; parent to neck datum with zero transform",
+    }
+    for k, v in meta.items():
+        obj[k] = v
+    return {"obj": obj, "meta": meta, "prof": prof, "fin": fin}
+
+
+def validate(res, fin) -> List[Tuple[bool, str]]:
+    mesh = res["obj"].data
+    out: List[Tuple[bool, str]] = []
+    zs = [v.co.z for v in mesh.vertices]
+    rs = [math.hypot(v.co.x, v.co.y) for v in mesh.vertices]
+
+    out.append((abs(max(zs) - TOP_TH) < 1e-3, f"top at z={max(zs):.3f} (expect {TOP_TH})"))
+    out.append((abs(min(zs) + res["prof"]["skirt_d"]) < 1e-3,
+                f"skirt bottom z={min(zs):.3f} (expect {-res['prof']['skirt_d']})"))
+    out.append((max(rs) * 2 <= res["meta"]["outer_dia_mm"] + 1e-3,
+                f"outer dia {max(rs)*2:.2f} mm"))
+
+    edges: Dict[Tuple[int, int], int] = {}
+    for p in mesh.polygons:
+        vs = list(p.vertices)
+        for a, b in zip(vs, vs[1:] + vs[:1]):
+            k = (min(a, b), max(a, b)); edges[k] = edges.get(k, 0) + 1
+    bad = [e for e, c in edges.items() if c != 2]
+    out.append((not bad, f"manifold: {len(bad)} bad edges"))
+    out.append((not [p for p in mesh.polygons if len(p.vertices) > 4],
+                "no n-gons"))
+
+    # the cap's thread must clear the bottle's, or the two meshes interpenetrate
+    gap = res["meta"]["thread_valley_dia_mm"] - float(fin["T"])
+    out.append((gap > 0.0,
+                f"cap valley Ø{res['meta']['thread_valley_dia_mm']:.2f} vs bottle crest "
+                f"Ø{fin['T']:.2f} — clearance {gap:+.2f} mm"))
+    ridge_gap = float(fin["E"]) - res["meta"]["thread_ridge_dia_mm"]
+    out.append((ridge_gap < 0.0,
+                f"cap ridge Ø{res['meta']['thread_ridge_dia_mm']:.2f} engages inside bottle "
+                f"crest Ø{fin['T']:.2f}"))
+    return out
+
+
+def main() -> int:
+    argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
+    p = argparse.ArgumentParser(prog="build-closure.py")
+    p.add_argument("--finish", default="20-400")
+    p.add_argument("--style", default="short", choices=sorted(CLOSURE_STYLES))
+    p.add_argument("--output", type=Path)
+    p.add_argument("--dry-run", action="store_true")
+    p.add_argument("--keep-scene", action="store_true")
+    args = p.parse_args(argv)
+
+    res = build(args.finish, args.style, clear_scene=not args.keep_scene)
+    m = res["meta"]
+    print(f"Closure — {args.finish} {args.style}")
+    print(f"  outer Ø      {m['outer_dia_mm']} mm")
+    print(f"  height       {m['total_height_mm']} mm  (skirt {m['skirt_depth_mm']})")
+    print(f"  thread       valley Ø{m['thread_valley_dia_mm']} / ridge Ø{m['thread_ridge_dia_mm']}"
+          f"  clearance {m['clearance_mm']} mm")
+    print(f"  knurl        {m['ribs']} ribs × {m['rib_depth_mm']} mm")
+    print(f"  mesh         {m['verts']} verts · {m['tris']} tris")
+    print()
+    ok = True
+    for passed, msg in validate(res, res["fin"]):
+        print(f"  {'PASS' if passed else 'FAIL'}  {msg}")
+        ok = ok and passed
+    print()
+    if args.dry_run:
+        print("[DRY RUN] nothing written.")
+    elif args.output:
+        out = Path(args.output).resolve()
+        out.parent.mkdir(parents=True, exist_ok=True)
+        bpy.ops.wm.save_as_mainfile(filepath=str(out))
+        print(f"Saved: {out}")
+    return 0 if ok else 1
+
+
+if __name__ == "__main__":
+    code = main()
+    if bpy.app.background:
+        sys.exit(code)
