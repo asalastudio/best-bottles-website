@@ -1809,6 +1809,16 @@ function GraceProviderBase({
             const verifiedCount = refinementVerification.result?.totalCount
                 ?? refinementVerification.result?.items?.length
                 ?? 0;
+            // A zero-match refinement means the FILTER combination is wrong, not
+            // that the product is missing. Do not apply it to the visible catalog
+            // (an empty grid reads as "we don't carry it") — steer the model to
+            // recover instead. Found live 2026-08-06: "black plug" became
+            // colors:["Black"], but the colors facet filters GLASS color, so a
+            // black-closure vial verified 0 and Grace declared it nonexistent.
+            if (verifiedCount === 0) {
+                analytics.graceToolCalled({ toolName: "setCatalogRefinements", success: false, status: "zero_matches" });
+                return `Refine NOT applied: that filter combination matches 0 product groups, so the change was rejected to avoid showing an empty catalog. This is NOT evidence the product doesn't exist — one dimension is wrong (most often a cap/closure color placed in the glass-color facet). Drop the suspect dimension and call searchCatalog with a plain description instead; answer availability ONLY from those rows. Current state remains: ${formatGraceRefineState(current)}`;
+            }
             routerRef.current.replace(graceRefineDestination(next));
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("setCatalogRefinements");
