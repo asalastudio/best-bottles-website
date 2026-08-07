@@ -585,8 +585,16 @@ def _set(node: bpy.types.Node, key: str, value) -> bool:
 GLASS_TINTS: Dict[str, Dict[str, object]] = {
     "clear":  {"volume": None,                    "density": 0.00,
                "surface": (0.97, 0.99, 0.98, 1.0), "roughness": 0.005},
-    "amber":  {"volume": (0.80, 0.52, 0.02, 1.0), "density": 1.60,
-               "surface": (0.99, 0.99, 0.99, 1.0), "roughness": 0.005},
+    # Re-solved from the REAL bottle (17. GBBstnAmb1ozBlkCapSht.psd). Measured
+    # transmission through 2 walls (4.9 mm) at the body centre is R 0.176 /
+    # G 0.082 / B 0.0088, giving coefficients 0.355 / 0.511 / 0.966. The first
+    # pass over-absorbed green and blue, which made the glass read orange rather
+    # than the reference's brown-amber.
+    # v3: solved from the reference's centre-of-body transmission ratios
+    # (R:G ~2.4, G:B ~3.0). Zero blue in v2 pushed the hue olive; real amber
+    # transmits a little blue.
+    "amber":  {"volume": (0.578, 0.390, 0.155, 1.0), "density": 0.97,
+               "surface": (0.99, 0.99, 0.99, 1.0), "roughness": 0.008},
     "cobalt": {"volume": (0.04, 0.22, 0.86, 1.0), "density": 1.85,
                "surface": (0.99, 0.99, 0.99, 1.0), "roughness": 0.005},
 }

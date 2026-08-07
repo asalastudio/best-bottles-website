@@ -49,19 +49,26 @@ RIB_COUNT = 72
 RIB_DEPTH = 0.22             # mm, peak-to-valley on the knurl
 THREAD_CLEARANCE = 0.30      # mm diametral gap so cap and bottle never intersect
 WALL = 1.60
-TOP_TH = 1.80
 EDGE_R = 0.70                # softened top edge
 BOT_R = 0.35
 
 
-# od is the closure's real outer diameter, stated rather than derived — a
-# 20-400 screw cap measures ~22.4 mm across the knurl. Deriving it from T plus a
-# wall double-counts and gives an oversized cap.
-# skirt_d = how far the skirt hangs below the sealing plane. It must stop ABOVE
-# the bottle's transfer bead or the cap would foul it.
+# MEASURED off the real part: 17. GBBstnAmb1ozBlkCapSht.psd in the master PSD
+# library, scaled on the 33 mm body diameter (perspective-safe, unlike height).
+#
+#   cap outer diameter   24.52 mm   (across the knurl)
+#   cap overall height   14.17 mm
+#   assembled height     82.46 mm  -> 4.46 mm of cap stands above the 78 mm rim
+#   skirt bottom lands at z ~ 68.3, i.e. right at the transfer bead
+#
+# Earlier values here (22.4 od, 9.0 skirt) were guessed from "standard 20-400"
+# and were wrong on every axis. Measure the part.
+#
+# top_th = how much cap sits ABOVE the sealing plane; skirt_d = how far it hangs
+# below. Their sum is the cap's overall height.
 CLOSURE_STYLES: Dict[str, Dict[str, float]] = {
-    "short": {"skirt_d": 9.0, "od": 22.40},
-    "tall":  {"skirt_d": 13.5, "od": 22.40},
+    "short": {"skirt_d": 9.71, "od": 24.52, "top_th": 4.46},
+    "tall":  {"skirt_d": 13.50, "od": 24.52, "top_th": 4.46},
 }
 
 
@@ -92,12 +99,13 @@ def build_profile(fin: Dict[str, float], style: Dict[str, float]) -> Dict[str, o
     E = float(fin["E"])
     skirt_d = float(style["skirt_d"])
     r_out = float(style["od"]) / 2.0
+    top_th = float(style.get("top_th", 1.8))
     # interior: valley clears the bottle's crest, ridge drops to just over its root
     r_in_valley = (T + THREAD_CLEARANCE) / 2.0
     r_in_ridge = (E + THREAD_CLEARANCE) / 2.0
 
-    pts: List[Tuple[float, float]] = [(0.0, TOP_TH), (r_out - EDGE_R, TOP_TH)]
-    pts += _arc(r_out - EDGE_R, TOP_TH - EDGE_R, EDGE_R, 90.0, 0.0, 8)[1:]
+    pts: List[Tuple[float, float]] = [(0.0, top_th), (r_out - EDGE_R, top_th)]
+    pts += _arc(r_out - EDGE_R, top_th - EDGE_R, EDGE_R, 90.0, 0.0, 8)[1:]
     pts.append((r_out, -skirt_d + BOT_R))
     pts += _arc(r_out - BOT_R, -skirt_d + BOT_R, BOT_R, 0.0, -90.0, 5)[1:]
     outer_count = len(pts)
@@ -110,7 +118,8 @@ def build_profile(fin: Dict[str, float], style: Dict[str, float]) -> Dict[str, o
     return {
         "loop": pts, "outer_count": outer_count,
         "r_out": r_out, "r_in_valley": r_in_valley, "r_in_ridge": r_in_ridge,
-        "skirt_d": skirt_d, "thread_lo": -skirt_d, "thread_hi": -0.8,
+        "skirt_d": skirt_d, "top_th": top_th,
+        "thread_lo": -skirt_d, "thread_hi": -0.8,
     }
 
 
@@ -125,6 +134,7 @@ def make_modulator(prof, fin, ribs: int, rib_depth: float):
     """
     outer_count = prof["outer_count"]
     r_out = prof["r_out"]
+    prof_top_th = prof["top_th"]
     pitch = float(fin["pitch"])
     depth_in = prof["r_in_valley"] - prof["r_in_ridge"]
     lo, hi = prof["thread_lo"], prof["thread_hi"]
@@ -132,7 +142,7 @@ def make_modulator(prof, fin, ribs: int, rib_depth: float):
     def modulate(index: int, r: float, z: float, theta: float) -> float:
         if index < outer_count:
             # knurl only on the vertical skirt, never on the top face
-            if abs(r - r_out) < 1e-6 and z < TOP_TH - EDGE_R:
+            if abs(r - r_out) < 1e-6 and z < prof_top_th - EDGE_R:
                 return r - rib_depth * 0.5 * (1.0 - math.cos(ribs * theta))
             return r
         if not (lo <= z <= hi) or depth_in <= 0.0:
@@ -162,7 +172,10 @@ def make_pp_material(name: str) -> bpy.types.Material:
         if k in b.inputs:
             b.inputs[k].default_value = v
     st("Base Color", (0.0116, 0.0116, 0.0116, 1.0))
-    st("Roughness", 0.52)          # very low gloss, grazing reflections only
+    # The real short black cap is moulded phenolic/PP with a distinct sheen —
+    # the reference shows sharp specular streaks running down the ribs. 0.52
+    # rendered it dead matte.
+    st("Roughness", 0.30)
     st("Metallic", 0.0)
     st("IOR", 1.49)                # polypropylene
     st("Specular IOR Level", 0.42)
@@ -208,7 +221,8 @@ def build(finish: str, style_name: str, clear_scene: bool = True) -> Dict[str, o
         "part": "closure", "finish": finish, "style": style_name,
         "outer_dia_mm": round(prof["r_out"] * 2, 3),
         "skirt_depth_mm": prof["skirt_d"],
-        "total_height_mm": round(prof["skirt_d"] + TOP_TH, 3),
+        "total_height_mm": round(prof["skirt_d"] + prof["top_th"], 3),
+        "above_rim_mm": prof["top_th"],
         "thread_valley_dia_mm": round(prof["r_in_valley"] * 2, 3),
         "thread_ridge_dia_mm": round(prof["r_in_ridge"] * 2, 3),
         "clearance_mm": THREAD_CLEARANCE,
@@ -229,7 +243,8 @@ def validate(res, fin) -> List[Tuple[bool, str]]:
     zs = [v.co.z for v in mesh.vertices]
     rs = [math.hypot(v.co.x, v.co.y) for v in mesh.vertices]
 
-    out.append((abs(max(zs) - TOP_TH) < 1e-3, f"top at z={max(zs):.3f} (expect {TOP_TH})"))
+    tt = res["prof"]["top_th"]
+    out.append((abs(max(zs) - tt) < 1e-3, f"top at z={max(zs):.3f} (expect {tt})"))
     out.append((abs(min(zs) + res["prof"]["skirt_d"]) < 1e-3,
                 f"skirt bottom z={min(zs):.3f} (expect {-res['prof']['skirt_d']})"))
     out.append((max(rs) * 2 <= res["meta"]["outer_dia_mm"] + 1e-3,

@@ -71,19 +71,22 @@ def stage_collection(scene) -> bpy.types.Collection:
     return coll
 
 
-def backdrop(coll, tone="bone", width=900.0, depth=700.0, rise=600.0,
-             radius=180.0, steps=24):
+def backdrop(coll, tone="bone", width=1400.0, depth=900.0, rise=700.0,
+             radius=260.0, steps=28):
     """
     Seamless sweep: floor running toward camera, curving up behind the subject.
     No horizon line, which is what makes a product shot read as studio rather
     than as an object sitting on a table.
     """
-    prof: List[Tuple[float, float]] = [(-depth, 0.0)]
-    cy, cz = radius, radius                       # arc centre
-    for i in range(steps + 1):
-        a = math.radians(-90.0 + 90.0 * i / steps)
-        prof.append((cy + radius * math.sin(a), cz + radius * math.cos(a) - radius))
-    prof.append((cy, rise))
+    # Flat floor runs from in front of the camera to BEHIND the subject, then
+    # sweeps up. The earlier version began curving at y=0 — exactly where the
+    # bottle stands — which put a visible crease right at its base.
+    flat_back = 150.0
+    prof: List[Tuple[float, float]] = [(-depth, 0.0), (flat_back, 0.0)]
+    for i in range(1, steps + 1):
+        t = math.radians(90.0 * i / steps)
+        prof.append((flat_back + radius * math.sin(t), radius - radius * math.cos(t)))
+    prof.append((flat_back + radius, rise))
 
     verts, faces = [], []
     for y, z in prof:
@@ -124,21 +127,41 @@ def area_light(coll, name, loc, rot, size_x, size_y, energy):
 
 
 def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone"):
+    """
+    BRIGHT-FIELD glass stage.
+
+    Amber glass gets its colour from TRANSMISSION, so the dominant source is
+    behind the subject: two washes light the sweep itself, and the camera sees
+    that bright field through the glass, tinted by the volume. Frontal light is
+    minimal — a big frontal softbox mirrors across the whole front face of
+    polished glass and buries the amber under a neutral white reflection (probe:
+    the same glass reads (0.40,0.27,0.07) by transmission but rendered neutral
+    grey under the old frontal rig). Narrow strips supply the two vertical edge
+    highlights every product shot of a cylinder has; a small top light models
+    the cap and shoulder and throws the contact shadow.
+    """
     coll = stage_collection(scene)
     backdrop(coll, tone)
     mid = subject_h * 0.5
 
-    # large overhead softbox — the dominant source, straight above and forward
-    area_light(coll, "key_softbox", (0.0, -110.0, 330.0),
-               (math.radians(28.0), 0.0, 0.0), 420, 420, 620_000 * exposure)
-    # two vertical strip lights: long specular highlights down the glass edges
-    area_light(coll, "strip_left", (-230.0, -130.0, mid + 30.0),
-               (math.radians(90.0), 0.0, math.radians(-62.0)), 60, 320, 210_000 * exposure)
-    area_light(coll, "strip_right", (230.0, -130.0, mid + 30.0),
-               (math.radians(90.0), 0.0, math.radians(62.0)), 60, 320, 210_000 * exposure)
-    # white bounce cards, low and wide, to lift the base out of black
-    area_light(coll, "bounce_low", (0.0, -300.0, 20.0),
-               (math.radians(96.0), 0.0, 0.0), 500, 160, 70_000 * exposure)
+    # background washes — the actual key. Aimed at the sweep BEHIND the bottle,
+    # offset left/right so neither throws the bottle's own shadow into frame.
+    area_light(coll, "bg_wash_l", (-150.0, -60.0, 260.0),
+               (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420, 640_000 * exposure)
+    area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
+               (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420, 640_000 * exposure)
+    # narrow vertical strips: the two long speculars down the glass edges
+    area_light(coll, "strip_left", (-220.0, -110.0, mid + 20.0),
+               (math.radians(90.0), 0.0, math.radians(-64.0)), 55, 300, 300_000 * exposure)
+    area_light(coll, "strip_right", (220.0, -110.0, mid + 20.0),
+               (math.radians(90.0), 0.0, math.radians(64.0)), 55, 300, 300_000 * exposure)
+    # floor wash: skims the sweep base behind the subject so a straight-on
+    # camera still sees lit backdrop through the LOWER body, not dark floor
+    area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
+               (math.radians(78.0), 0.0, 0.0), 420, 120, 260_000 * exposure)
+    # small top light: cap modelling + soft contact shadow, NOT a frontal wash
+    area_light(coll, "top_soft", (0.0, -30.0, 340.0),
+               (math.radians(12.0), 0.0, 0.0), 90, 90, 480_000 * exposure)
     return coll
 
 
@@ -160,7 +183,7 @@ def build_camera(scene, coll, subject_h: float, lens: float,
     cam = bpy.data.objects.new("hero_cam", cd)
     coll.objects.link(cam)
     elev = math.radians(elevation_deg)
-    aim_z = subject_h * 0.52                      # just above midpoint, per spec
+    aim_z = subject_h * 0.50                      # dead centre for a straight-on pack shot
     cam.location = (0.0, -dist * math.cos(elev), aim_z + dist * math.sin(elev))
     cam.rotation_euler = (math.radians(90.0) - elev, 0.0, 0.0)
     scene.camera = cam
@@ -179,12 +202,13 @@ def main() -> int:
     p.add_argument("--lens", type=float, default=100.0)
     p.add_argument("--fill", type=float, default=0.80,
                    help="fraction of frame height the bottle occupies")
-    p.add_argument("--elevation", type=float, default=8.0)
+    p.add_argument("--elevation", type=float, default=0.0,
+                   help="camera elevation; 0 = straight-on e-commerce pack shot")
     p.add_argument("--backdrop", default="bone", choices=sorted(BACKDROP_TONES),
                    help="stage backdrop tone; bone is the house standard")
     p.add_argument("--exposure", type=float, default=1.0,
                    help="scales every light; 1.0 is calibrated for dark amber glass")
-    p.add_argument("--ambient", type=float, default=0.22,
+    p.add_argument("--ambient", type=float, default=0.10,
                    help="world background strength (fill wrap)")
     p.add_argument("--show-liquid", action="store_true")
     p.add_argument("--with-cap", action="store_true",
@@ -237,7 +261,7 @@ def main() -> int:
     scene.cycles.use_denoising = True
     scene.cycles.caustics_reflective = True
     scene.cycles.caustics_refractive = True       # glass needs these
-    scene.cycles.blur_glossy = 0.5                # suppresses fireflies without killing caustics
+    scene.cycles.blur_glossy = 0.2                # suppresses fireflies without killing caustics
     scene.cycles.transmission_bounces = 24
     scene.cycles.max_bounces = 32
 
