@@ -1,0 +1,34 @@
+{
+  "skus": 2318,
+  "joined": 2278,
+  "classes": {
+    "BODY": 2118,
+    "COMPONENT": 148,
+    "NON_PRODUCT": 52
+  },
+  "families": 27,
+  "bodies": 109,
+  "components": 31,
+  "conf": {
+    "HIGH": 50,
+    "MEDIUM": 34,
+    "LOW": 25
+  },
+  "status": {
+    "UNIQUE GEOMETRY": 70,
+    "PARAMETRIC CANDIDATE": 29,
+    "PARAMETRIC VARIANT": 10
+  },
+  "complexity": {
+    "EASY": 68,
+    "MODERATE": 26,
+    "COMPLEX": 15
+  },
+  "param_groups": 18,
+  "param_masters": 18,
+  "confirmed_param_groups": 5,
+  "candidate_param_groups": 13,
+  "unique_bodies": 70,
+  "masters_if_parametric": 88,
+  "merge_conflicts": 0
+}

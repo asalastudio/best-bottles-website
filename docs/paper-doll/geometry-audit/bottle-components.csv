@@ -1,0 +1,32 @@
+component_id,type,style,neck_finish,description,sku_count,colorways,example_skus,existing_model
+BB-SPRAYER-001,Sprayer,?,18-415,? Sprayer for 18-415,24,0,AnSp18-415Blk; AnSp18-415Gl; AnSp18-415IvyGl,NO
+BB-ROLLER-001,Roll-On Cap,?,13-415,? Roll-On Cap for 13-415,13,0,CP13-415BlkSht; CP13-415Gl; CP13-415Sl,PARTIAL (cyl9_rollon_overcap.py lathe)
+BB-ROLLER-002,Roll-On Cap,?,17-415,? Roll-On Cap for 17-415,13,0,CpRoll17-415BlkDot; CpRoll17-415Cu; CpRoll17-415MattGl,PARTIAL (cyl9_rollon_overcap.py lathe)
+BB-DROPPER-001,Dropper,?,20-400,? Dropper for 20-400,12,0,Drp20-4001ozBlckBulb; Drp20-4001ozShnGlTrimBlkBulb; Drp20-4001ozShnSlTrimBlkBulb,NO
+BB-CAP-001,Cap/Closure,?,18-415,? Cap/Closure for 18-415,11,0,CP18-415BlkLthr; CP18-415BrwnLthr; CP18-415LBrwnLthr,NO
+BB-SPRAYER-002,Sprayer,?,13-415,? Sprayer for 13-415,8,0,CP13-415SpryBlkMt; CP13-415SpryBlkSh; CP13-415SpryBluMt,NO
+BB-PUMP-001,Lotion Pump,?,18-415,? Lotion Pump for 18-415,7,0,Ltn18-415Cu; Ltn18-415MtGl; Ltn18-415MtSl,NO
+BB-DROPPER-002,Dropper,?,18-400,? Dropper for 18-400,6,0,Drp18-40015mlBlckBulb; Drp18-40015mlShnGlTrimBlkBulb; Drp18-40015mlShnGlTrimWhiteBulb,NO
+BB-SPRAYER-003,Sprayer,?,17-415,? Sprayer for 17-415,6,0,Spry17-415Blk; Spry17-415Gl; Spry17-415MattSl,NO
+BB-ROLLER-003,Roll-On Cap,?,20-400,? Roll-On Cap for 20-400,6,0,CPRoll20-400TallMattBlk; CPRoll20-400TallMattGl; CPRoll20-400TallMattSl,PARTIAL (cyl9_rollon_overcap.py lathe)
+BB-CAP-002,Cap/Closure,Cap/Closure,PRESS-FIT,Cap/Closure Cap/Closure for PRESS-FIT,6,2,CJ30BlkCap; CJ30SlCap; CJ40BlkCap,NO
+BB-CAP-003,Cap/Closure,?,8-425,? Cap/Closure for 8-425,5,0,8-425CpShortBlack; 8-425CpShortWhite; CP8-425TallBlack,NO
+BB-SPRAYER-004,Sprayer,?,15-415,? Sprayer for 15-415,5,0,Spry15-415Blk; Spry15-415MattGl; Spry15-415MattSl,NO
+BB-DROPPER-003,Dropper,?,18-415,? Dropper for 18-415,3,0,Drp18-415Cu; Drp18-415Gl; Drp18-415Sl,NO
+BB-ROLLER-004,Roll-On Cap,?,15-415,? Roll-On Cap for 15-415,2,0,CP15-415ShnGl; CP15-415ShnSl,PARTIAL (cyl9_rollon_overcap.py lathe)
+BB-COMP-001,Plastic Bottle,?,13-415,? Plastic Bottle for 13-415,2,0,PB1ozSpryNat; PB1ozSprySl,NO
+BB-CAP-004,Cap/Closure,?,18-400,? Cap/Closure for 18-400,2,0,18-400CpAppBlk; 18-400CpShortBlk,NO
+BB-CAP-005,Cap/Closure,?,20-400,? Cap/Closure for 20-400,2,0,20-400Cp2ozShortBlk; 20-400cp1ozShortBlk,NO
+BB-CAP-006,Cap/Closure,Cap/Closure,13-425,Cap/Closure Cap/Closure for 13-425,2,2,CP13-425Blk; CP13-425Wht,NO
+BB-CAP-007,Cap/Closure,Cap/Closure,SPECIAL,Cap/Closure Cap/Closure for SPECIAL,2,2,CPKeyChnGld; CPTslRed,NO
+BB-COMP-002,Aluminum Bottle,?,20-410,? Aluminum Bottle for 20-410,1,0,Alu250SpryBl,NO
+BB-COMP-003,Plastic Bottle,?,?,? Plastic Bottle for ?,1,0,PB10SpryNat,NO
+BB-COMP-004,Cream Jar,?,37mm,? Cream Jar for 37mm,1,0,CreamJarAmb5mlSlcap,NO
+BB-CAP-008,Cap/Component,N/A,17-415,N/A Cap/Component for 17-415,1,0,,NO
+BB-CAP-009,Cap/Component,N/A,13-415,N/A Cap/Component for 13-415,1,0,,NO
+BB-SPRAYER-005,Sprayer,N/A,?,N/A Sprayer for ?,1,1,AntqSprBulbLavender,NO
+BB-SPRAYER-006,Sprayer,Fine Mist Sprayer,13-415,Fine Mist Sprayer Sprayer for 13-415,1,1,GBATom5RedBurg,NO
+BB-CAP-010,Cap/Closure,Cap/Closure,22-400,Cap/Closure Cap/Closure for 22-400,1,1,CapBlackPoly22mm-400,NO
+BB-CAP-011,Cap/Closure,N/A,24-400,N/A Cap/Closure for 24-400,1,1,CP24-400BlkPls,NO
+BB-DROPPER-004,Dropper,Dropper,17-415,Dropper Dropper for 17-415,1,0,Droppers1ozElg,NO
+BB-ROLLER-005,Roll-On Cap,Plastic Roller Ball,?,Plastic Roller Ball Roll-On Cap for ?,1,1,CPWhite1Oz,PARTIAL (cyl9_rollon_overcap.py lathe)

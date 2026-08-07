@@ -1,0 +1,477 @@
+[
+  {
+    "group": "CAND-ELEGANT-18-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Elegant",
+    "neck": "18-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 181,
+    "heights": [
+      86.0,
+      109.0
+    ],
+    "height_span_mm": 23.0,
+    "capacities": [
+      60,
+      100
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-003",
+      "BB-BODY-005"
+    ]
+  },
+  {
+    "group": "CAND-CIRCLE-18-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Circle",
+    "neck": "18-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 162,
+    "heights": [
+      87.0,
+      105.0
+    ],
+    "height_span_mm": 18.0,
+    "capacities": [
+      50,
+      100
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-006",
+      "BB-BODY-008"
+    ]
+  },
+  {
+    "group": "CAND-ELEGANT-13-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Elegant",
+    "neck": "13-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 59,
+    "heights": [
+      61.0
+    ],
+    "height_span_mm": 0,
+    "capacities": [
+      15
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-012",
+      "BB-BODY-071"
+    ]
+  },
+  {
+    "group": "PARAM-BOSTONROUND-20-400-33",
+    "status": "PARAMETRIC VARIANT",
+    "family": "Boston Round",
+    "neck": "20-400",
+    "diameter_mm": 33.0,
+    "bodies": 2,
+    "skus": 53,
+    "heights": [
+      68.0,
+      78.0
+    ],
+    "height_span_mm": 10.0,
+    "capacities": [
+      30
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml"
+    ],
+    "members": [
+      "BB-BODY-014",
+      "BB-BODY-080"
+    ]
+  },
+  {
+    "group": "CAND-EMPIRE-18-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Empire",
+    "neck": "18-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 91,
+    "heights": [
+      88.0,
+      107.0
+    ],
+    "height_span_mm": 19.0,
+    "capacities": [
+      50,
+      100
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-015",
+      "BB-BODY-016"
+    ]
+  },
+  {
+    "group": "CAND-SLEEK-18-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Sleek",
+    "neck": "18-415",
+    "diameter_mm": null,
+    "bodies": 3,
+    "skus": 110,
+    "heights": [
+      98.0,
+      139.0,
+      149.0
+    ],
+    "height_span_mm": 51.0,
+    "capacities": [
+      30,
+      50,
+      100
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-017",
+      "BB-BODY-023",
+      "BB-BODY-031"
+    ]
+  },
+  {
+    "group": "PARAM-CYLINDER-18-415-32",
+    "status": "PARAMETRIC VARIANT",
+    "family": "Cylinder",
+    "neck": "18-415",
+    "diameter_mm": 32.0,
+    "bodies": 2,
+    "skus": 50,
+    "heights": [
+      83.0,
+      117.0
+    ],
+    "height_span_mm": 34.0,
+    "capacities": [
+      25,
+      50
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml"
+    ],
+    "members": [
+      "BB-BODY-019",
+      "BB-BODY-045"
+    ]
+  },
+  {
+    "group": "CAND-RECTANGLE-13-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Rectangle",
+    "neck": "13-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 60,
+    "heights": [
+      50.0,
+      101.0
+    ],
+    "height_span_mm": 51.0,
+    "capacities": [
+      10
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-029",
+      "BB-BODY-030"
+    ]
+  },
+  {
+    "group": "CAND-SLEEK-13-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Sleek",
+    "neck": "13-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 60,
+    "heights": [
+      45.0,
+      66.0
+    ],
+    "height_span_mm": 21.0,
+    "capacities": [
+      5,
+      8
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-032",
+      "BB-BODY-033"
+    ]
+  },
+  {
+    "group": "CAND-ELEGANT-15-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Elegant",
+    "neck": "15-415",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 14,
+    "heights": [
+      75.0
+    ],
+    "height_span_mm": 0,
+    "capacities": [
+      30
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-041",
+      "BB-BODY-055"
+    ]
+  },
+  {
+    "group": "PARAM-SLEEK-18-415-28",
+    "status": "PARAMETRIC VARIANT",
+    "family": "Sleek",
+    "neck": "18-415",
+    "diameter_mm": 28.0,
+    "bodies": 2,
+    "skus": 16,
+    "heights": [
+      98.0,
+      139.0
+    ],
+    "height_span_mm": 41.0,
+    "capacities": [
+      30,
+      50
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml"
+    ],
+    "members": [
+      "BB-BODY-042",
+      "BB-BODY-043"
+    ]
+  },
+  {
+    "group": "CAND-SLIM-18-415",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Slim",
+    "neck": "18-415",
+    "diameter_mm": null,
+    "bodies": 3,
+    "skus": 21,
+    "heights": [
+      87.0,
+      121.0,
+      154.0
+    ],
+    "height_span_mm": 67.0,
+    "capacities": [
+      30,
+      50,
+      100
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-046",
+      "BB-BODY-047",
+      "BB-BODY-048"
+    ]
+  },
+  {
+    "group": "PARAM-CYLINDER-12mm-14",
+    "status": "PARAMETRIC VARIANT",
+    "family": "Cylinder",
+    "neck": "12mm",
+    "diameter_mm": 14.0,
+    "bodies": 2,
+    "skus": 4,
+    "heights": [
+      37.0,
+      49.0
+    ],
+    "height_span_mm": 12.0,
+    "capacities": [
+      3,
+      4
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml"
+    ],
+    "members": [
+      "BB-BODY-065",
+      "BB-BODY-067"
+    ]
+  },
+  {
+    "group": "CAND-DECORATIVE-Ground",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Decorative",
+    "neck": "Ground",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 3,
+    "heights": [
+      43.0,
+      44.0
+    ],
+    "height_span_mm": 1.0,
+    "capacities": [
+      35
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-069",
+      "BB-BODY-097"
+    ]
+  },
+  {
+    "group": "PARAM-CREAMJAR-27mm-31",
+    "status": "PARAMETRIC VARIANT",
+    "family": "Cream Jar",
+    "neck": "27mm",
+    "diameter_mm": 31.0,
+    "bodies": 2,
+    "skus": 2,
+    "heights": [
+      16.0,
+      24.0
+    ],
+    "height_span_mm": 8.0,
+    "capacities": [
+      5
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml"
+    ],
+    "members": [
+      "BB-BODY-085",
+      "BB-BODY-086"
+    ]
+  },
+  {
+    "group": "CAND-CYLINDER-?",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Cylinder",
+    "neck": "?",
+    "diameter_mm": null,
+    "bodies": 3,
+    "skus": 3,
+    "heights": [],
+    "height_span_mm": 0,
+    "capacities": [
+      118,
+      227,
+      454
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-089",
+      "BB-BODY-090",
+      "BB-BODY-091"
+    ]
+  },
+  {
+    "group": "CAND-DECORATIVE-17.52mm",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Decorative",
+    "neck": "17.52mm",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 2,
+    "heights": [
+      66.0,
+      80.0
+    ],
+    "height_span_mm": 14.0,
+    "capacities": [
+      5,
+      10
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-095",
+      "BB-BODY-099"
+    ]
+  },
+  {
+    "group": "CAND-VIAL-13-425",
+    "status": "PARAMETRIC CANDIDATE",
+    "family": "Vial",
+    "neck": "13-425",
+    "diameter_mm": null,
+    "bodies": 2,
+    "skus": 2,
+    "heights": [],
+    "height_span_mm": 0,
+    "capacities": [
+      2,
+      3
+    ],
+    "drivers": [
+      "body_height_mm",
+      "capacity_ml",
+      "diameter_mm (UNVERIFIED)"
+    ],
+    "members": [
+      "BB-BODY-108",
+      "BB-BODY-109"
+    ]
+  }
+]
