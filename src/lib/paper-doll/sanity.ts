@@ -34,10 +34,27 @@ export type RenderablePaperDollFamily = {
     layerOrderLotion: string[];
     anchorsJson?: string;
     layerAssets: StorefrontPaperDollLayer[];
+    assemblyMappings?: PaperDollAssemblyMapping[];
 };
 
 export type StorefrontPaperDollFamily = RenderablePaperDollFamily & {
     storefrontReady: true;
+};
+
+/**
+ * Catalog mapping carried inside a Madison release. Maps one graceSku to the
+ * exact release variant keys, so the storefront never guesses layer names.
+ */
+export type PaperDollAssemblyMapping = {
+    _key: string;
+    mappingKey: string;
+    recipeKey: string;
+    graceSku: string;
+    websiteSku?: string;
+    bodyVariantKey: string;
+    fitmentVariantKey?: string;
+    closureVariantKey?: string;
+    overcapVariantKey?: string;
 };
 
 export type PaperDollValidationResult<TFamily extends RenderablePaperDollFamily = StorefrontPaperDollFamily> =
@@ -77,6 +94,35 @@ function isSanityImageUrl(value: string): boolean {
     } catch {
         return false;
     }
+}
+
+/**
+ * Mappings are additive metadata: entries that cannot ever resolve a layer
+ * (no graceSku or body key) are dropped rather than failing the whole family,
+ * because per-configuration resolution already fails closed with a visible
+ * missing-layer card.
+ */
+function parseAssemblyMappings(value: unknown): PaperDollAssemblyMapping[] | undefined {
+    if (!Array.isArray(value)) return undefined;
+    const mappings: PaperDollAssemblyMapping[] = [];
+    for (const [index, entry] of value.entries()) {
+        if (!isRecord(entry)) continue;
+        const graceSku = cleanString(entry.graceSku);
+        const bodyVariantKey = cleanString(entry.bodyVariantKey);
+        if (!graceSku || !bodyVariantKey) continue;
+        mappings.push({
+            _key: cleanString(entry._key) || `mapping-${index}`,
+            mappingKey: cleanString(entry.mappingKey),
+            recipeKey: cleanString(entry.recipeKey),
+            graceSku,
+            websiteSku: cleanString(entry.websiteSku) || undefined,
+            bodyVariantKey,
+            fitmentVariantKey: cleanString(entry.fitmentVariantKey) || undefined,
+            closureVariantKey: cleanString(entry.closureVariantKey) || undefined,
+            overcapVariantKey: cleanString(entry.overcapVariantKey) || undefined,
+        });
+    }
+    return mappings.length > 0 ? mappings : undefined;
 }
 
 function parseLayer(value: unknown, index: number, issues: string[]): StorefrontPaperDollLayer | null {
@@ -210,6 +256,7 @@ function validatePaperDollFamily(
             layerOrderLotion,
             anchorsJson: cleanString(value.anchorsJson) || undefined,
             layerAssets,
+            assemblyMappings: parseAssemblyMappings(value.assemblyMappings),
         },
     };
 }

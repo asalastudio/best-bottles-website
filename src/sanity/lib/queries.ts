@@ -181,6 +181,17 @@ export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
         "imageHeight": image.asset->metadata.dimensions.height,
         offsetX,
         offsetY
+      },
+      assemblyMappings[] {
+        _key,
+        mappingKey,
+        recipeKey,
+        graceSku,
+        websiteSku,
+        bodyVariantKey,
+        fitmentVariantKey,
+        closureVariantKey,
+        overcapVariantKey
       }
     },
     layerAssets[] {
@@ -193,6 +204,17 @@ export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
       "imageHeight": image.asset->metadata.dimensions.height,
       offsetX,
       offsetY
+    },
+    assemblyMappings[] {
+      _key,
+      mappingKey,
+      recipeKey,
+      graceSku,
+      websiteSku,
+      bodyVariantKey,
+      fitmentVariantKey,
+      closureVariantKey,
+      overcapVariantKey
     }
   }
 `;
