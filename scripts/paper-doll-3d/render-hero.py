@@ -169,7 +169,8 @@ def soft_softbox(coll, name, w, h, loc, rot, strength, tint=(1.0, 1.0, 1.0)):
 
 
 def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone",
-                trans_card: bool = False, sweep: float = 0.3):
+                trans_card: bool = False, sweep: float = 0.3,
+                floor_glow: float = 0.75):
     """
     BRIGHT-FIELD glass stage.
 
@@ -199,9 +200,19 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
         area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
                    (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420,
                    560_000 * exposure * sweep, color=(1.0, 0.93, 0.80))
-        area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
-                   (math.radians(78.0), 0.0, 0.0), 420, 120,
-                   140_000 * exposure * sweep, color=(1.0, 0.94, 0.82))
+    # Floor glow is decoupled from sweep: the LOW back-field is what the lower
+    # body's refracted sightlines land on. Under-lighting it makes the cavity
+    # tangent render as a crisp dark cone ("internal object" artifact); with it
+    # lit, the lower darkening grades gradually from absorption alone.
+    # Floor glow — decoupled from sweep. The LOW back-field is what the lower
+    # body's refracted sightlines land on; under-lit, the cavity tangent
+    # renders as a crisp dark cone (the "internal object" artifact). Lit, the
+    # lower darkening grades gradually from absorption alone, matching the
+    # real photo's white-surround bounce.
+    area_light(coll, "floor_wash_glow", (0.0, -240.0, 35.0),
+               (math.radians(74.0), 0.0, 0.0), 520, 160,
+               420_000 * exposure * floor_glow, color=(1.0, 0.94, 0.82))
+
     # ONE huge near-frontal scrim (Aesop-style): a giant soft source close to
     # the camera axis, slightly above and camera-left, so the glass carries one
     # continuous soft sheen instead of a discrete patch — and the slight left
@@ -420,6 +431,9 @@ def main() -> int:
                    help="fraction of frame height the bottle occupies")
     p.add_argument("--elevation", type=float, default=0.0,
                    help="camera elevation; 0 = straight-on e-commerce pack shot")
+    p.add_argument("--floor-glow", dest="floor_glow", type=float, default=0.75,
+                   help="low back-field luminance behind the bottle; prevents the "
+                        "cavity tangent reading as a dark internal cone")
     p.add_argument("--sweep", type=float, default=0.3,
                    help="backdrop wash level: 0.3 = midtone Aesop-style default, "
                         "1.0 = bright bone, 0.0 = softbox only")
@@ -483,7 +497,8 @@ def main() -> int:
     if hero:
         build_stage_hero(scene, subject_h, args.exposure)
     else:
-        build_stage(scene, subject_h, args.exposure, args.backdrop, sweep=args.sweep)
+        build_stage(scene, subject_h, args.exposure, args.backdrop,
+                    sweep=args.sweep, floor_glow=args.floor_glow)
     cam, dist = build_camera(scene, bpy.data.collections[STAGE], subject_h,
                              args.lens, args.fill, args.elevation if not hero else 6.0)
     if hero:
