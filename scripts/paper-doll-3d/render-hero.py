@@ -129,7 +129,8 @@ def area_light(coll, name, loc, rot, size_x, size_y, energy):
     return o
 
 
-def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone"):
+def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone",
+                trans_card: bool = False):
     """
     BRIGHT-FIELD glass stage.
 
@@ -166,6 +167,50 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # contact shadow without washing the glass frontally
     area_light(coll, "key_45", (-200.0, -200.0, 300.0),
                (math.radians(48.0), 0.0, math.radians(-45.0)), 140, 140, 520_000 * exposure)
+
+    # SUBTRACTIVE FLAGS — the piece a physical glass shoot always has and a CG
+    # stage usually forgets. Polished glass at grazing angles mirrors whatever
+    # is beside it; with a bright wrapping stage the flanks mirror white and
+    # the bottle washes out. Two near-black cards out of frame give the flanks
+    # real darkness to reflect — this is where an amber bottle's deep edges
+    # actually come from in product photography.
+    for sx, nm in ((-1.0, "flag_left"), (1.0, "flag_right")):
+        mesh = bpy.data.meshes.new(nm)
+        x = sx * 150.0
+        mesh.from_pydata([(x, -175.0, 0.0), (x, -25.0, 0.0),
+                          (x, -25.0, 190.0), (x, -175.0, 190.0)],
+                         [], [[0, 1, 2, 3]])
+        mesh.update()
+        fm = bpy.data.materials.get("bb_mat_flag") or bpy.data.materials.new("bb_mat_flag")
+        fm.use_nodes = True
+        fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+        fb.inputs["Base Color"].default_value = (0.035, 0.035, 0.035, 1.0)
+        fb.inputs["Roughness"].default_value = 0.9
+        mesh.materials.append(fm)
+        o = bpy.data.objects.new(nm, mesh)
+        o.visible_camera = False          # reflected and refracted, never seen directly
+        coll.objects.link(o)
+
+    # TRANSMISSION CARD — hidden behind the subject; only transmission rays
+    # see it. OFF BY DEFAULT: tested against the reference, dimming the centre
+    # column also killed the warm punch (+33 -> +20 warmth) — the real photo's
+    # centre is bright; its darkness lives in the flanks, which the flags
+    # already supply. Kept for dark-mood shots via trans_card=True.
+    if not trans_card:
+        return coll
+    mesh = bpy.data.meshes.new("transmission_card")
+    mesh.from_pydata([(-13.0, 28.0, 2.0), (13.0, 28.0, 2.0),
+                      (13.0, 28.0, 92.0), (-13.0, 28.0, 92.0)], [], [[0, 1, 2, 3]])
+    mesh.update()
+    cm = bpy.data.materials.get("bb_mat_transcard") or bpy.data.materials.new("bb_mat_transcard")
+    cm.use_nodes = True
+    cb = next(n for n in cm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    cb.inputs["Base Color"].default_value = (0.22, 0.215, 0.205, 1.0)   # warm grey
+    cb.inputs["Roughness"].default_value = 0.9
+    mesh.materials.append(cm)
+    o = bpy.data.objects.new("transmission_card", mesh)
+    o.visible_camera = False
+    coll.objects.link(o)
     return coll
 
 

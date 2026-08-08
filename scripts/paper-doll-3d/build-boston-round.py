@@ -616,9 +616,46 @@ def make_glass_material(name: str, tint: str = "clear") -> bpy.types.Material:
 
     nt = mat.node_tree
     out = next((n for n in nt.nodes if n.type == "OUTPUT_MATERIAL"), None)
-    # clear out any absorption from a previous build of this material
-    for n in [n for n in nt.nodes if n.type == "VOLUME_ABSORPTION"]:
+    # clear anything a previous build of this material added
+    for n in [n for n in nt.nodes
+              if n.type in ("VOLUME_ABSORPTION", "TEX_NOISE", "BUMP", "MAP_RANGE", "TEX_COORD")]:
         nt.nodes.remove(n)
+
+    # ---- moulded-glass imperfection stack (procedural) ----------------------
+    # Real container glass is never optically flat: the mould leaves ~5-10 mm
+    # waviness that makes highlights wobble, and fire-polish leaves micro
+    # variation in roughness. Perfectly straight highlights on a perfect
+    # revolve are the single loudest CGI tell. Object-space coordinates keep
+    # the pattern stable under transforms. (This is the part a Substance
+    # glass .sbsar would contribute; procedural = no asset dependency.)
+    coord = nt.nodes.new("ShaderNodeTexCoord")
+    coord.location = (bsdf.location.x - 900, bsdf.location.y - 150)
+
+    wavy = nt.nodes.new("ShaderNodeTexNoise")
+    wavy.location = (bsdf.location.x - 700, bsdf.location.y - 60)
+    wavy.inputs["Scale"].default_value = 0.14          # ~7 mm features (1 BU = 1 mm)
+    wavy.inputs["Detail"].default_value = 1.5
+    bump = nt.nodes.new("ShaderNodeBump")
+    bump.location = (bsdf.location.x - 420, bsdf.location.y - 60)
+    bump.inputs["Strength"].default_value = 0.35
+    bump.inputs["Distance"].default_value = 0.035      # tens of microns of wobble
+    nt.links.new(coord.outputs["Object"], wavy.inputs["Vector"])
+    nt.links.new(wavy.outputs["Fac"], bump.inputs["Height"])
+    nt.links.new(bump.outputs["Normal"], bsdf.inputs["Normal"])
+
+    micro = nt.nodes.new("ShaderNodeTexNoise")
+    micro.location = (bsdf.location.x - 700, bsdf.location.y - 320)
+    micro.inputs["Scale"].default_value = 1.8          # ~0.5 mm patches
+    micro.inputs["Detail"].default_value = 2.0
+    rng = nt.nodes.new("ShaderNodeMapRange")
+    rng.location = (bsdf.location.x - 420, bsdf.location.y - 320)
+    base_rough = float(spec.get("roughness", 0.03))
+    rng.inputs["To Min"].default_value = max(0.004, base_rough - 0.013)
+    rng.inputs["To Max"].default_value = base_rough + 0.015
+    nt.links.new(coord.outputs["Object"], micro.inputs["Vector"])
+    nt.links.new(micro.outputs["Fac"], rng.inputs["Value"])
+    if "Roughness" in bsdf.inputs:
+        nt.links.new(rng.outputs["Result"], bsdf.inputs["Roughness"])
     if spec["volume"] and out is not None:
         vol = nt.nodes.new("ShaderNodeVolumeAbsorption")
         vol.location = (out.location.x - 300, out.location.y - 260)
