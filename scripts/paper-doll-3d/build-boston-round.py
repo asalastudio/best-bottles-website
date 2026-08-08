@@ -162,6 +162,14 @@ HEEL_STEPS = 14              # the heel is a large radius on this family — nee
 # shape error in the model, up to 5.7 mm of diameter at z~58.
 SHOULDER_TENSION_BODY = 0.45   # handle at the wall end — holds the full diameter
 SHOULDER_TENSION_NECK = 0.125  # handle at the neck end — arrives quickly
+# The INNER cavity uses gentler, near-symmetric tensions. The outer values are
+# measured from the silhouette and must not move; the inner wall is unverified
+# modelling, and reusing the outer's abrupt 0.125 neck-side handle created a
+# sharp internal tangent line that rendered as a crisp diagonal refraction
+# seam. Softer inner curvature diffuses it without touching the twin's
+# measured exterior.
+INNER_TENSION_BODY = 0.40
+INNER_TENSION_NECK = 0.35
 
 # --- packaging-studio contract (packaging-saas/public/models/MODELS.md) --------
 # The studio loader matches meshes by case-insensitive SUBSTRING and applies its
@@ -206,7 +214,7 @@ def _bezier(p0: Tuple[float, float], p1: Tuple[float, float],
 
 
 def _shoulder(r_from: float, z_from: float, r_to: float, z_to: float,
-              steps: int) -> List[Tuple[float, float]]:
+              steps: int, k_body: float = None, k_neck: float = None) -> List[Tuple[float, float]]:
     """
     Boston Round shoulder: leaves the cylindrical wall vertically, curves in,
     and arrives at the neck vertically. Vertical tangents at both ends are what
@@ -217,8 +225,10 @@ def _shoulder(r_from: float, z_from: float, r_to: float, z_to: float,
     sharply, which a symmetric curve cannot reproduce.
     """
     span = z_to - z_from
-    return _bezier((r_from, z_from), (r_from, z_from + SHOULDER_TENSION_BODY * span),
-                   (r_to, z_to - SHOULDER_TENSION_NECK * span), (r_to, z_to), steps)
+    kb = SHOULDER_TENSION_BODY if k_body is None else k_body
+    kn = SHOULDER_TENSION_NECK if k_neck is None else k_neck
+    return _bezier((r_from, z_from), (r_from, z_from + kb * span),
+                   (r_to, z_to - kn * span), (r_to, z_to), steps)
 
 
 def build_profile(spec: Dict[str, float]) -> Dict[str, object]:
@@ -333,7 +343,8 @@ def build_profile(spec: Dict[str, float]) -> Dict[str, object]:
                           z_shoulder_start - taper * (1.0 - t)))
     else:
         inner.append((r_body_in, z_shoulder_start))
-    inner += _shoulder(r_shoulder_in, z_shoulder_start, r_bore, z_neck_bottom, SHOULDER_STEPS)[1:]
+    inner += _shoulder(r_shoulder_in, z_shoulder_start, r_bore, z_neck_bottom,
+                       SHOULDER_STEPS, INNER_TENSION_BODY, INNER_TENSION_NECK)[1:]
     if lip_r > 0.0:
         inner.append((r_bore, height - lip_r))
         inner += _arc(r_bore + lip_r, height - lip_r, lip_r, 180.0, 90.0, 6)[1:]
@@ -974,6 +985,22 @@ def validate(body: bpy.types.Object, spec: Dict[str, object]) -> List[Tuple[bool
     used = {vi for p in mesh.polygons for vi in p.vertices}
     loose = [v for v in mesh.vertices if v.index not in used]
     checks.append((not loose, f"no loose vertices ({len(loose)} found)"))
+
+    # Normals orientation: signed volume via the divergence theorem. Consistent
+    # outward normals give a positive volume equal to the glass solid; any
+    # flipped patch collapses or negates it. (Volume absorption also depends on
+    # this — the probe render verified it empirically once; this keeps it true.)
+    sv = 0.0
+    vs = mesh.vertices
+    for poly in mesh.polygons:
+        ids = list(poly.vertices)
+        a = vs[ids[0]].co
+        for i in range(1, len(ids) - 1):
+            b_, c_ = vs[ids[i]].co, vs[ids[i + 1]].co
+            sv += a.dot(b_.cross(c_)) / 6.0
+    sv_ml = sv / 1000.0
+    checks.append((6.0 < sv_ml < 40.0,
+                   f"normals outward: signed glass volume {sv_ml:.1f} ml"))
 
     # Non-manifold check: every edge in a closed solid borders exactly 2 faces.
     edge_count: Dict[Tuple[int, int], int] = {}

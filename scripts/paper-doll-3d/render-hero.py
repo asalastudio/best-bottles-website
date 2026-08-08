@@ -118,11 +118,12 @@ def backdrop(coll, tone="bone", width=1400.0, depth=900.0, rise=700.0,
     return obj
 
 
-def area_light(coll, name, loc, rot, size_x, size_y, energy):
+def area_light(coll, name, loc, rot, size_x, size_y, energy, color=(1.0, 1.0, 1.0)):
     d = bpy.data.lights.new(name, 'AREA')
     d.shape = 'RECTANGLE'
     d.size, d.size_y = size_x, size_y
     d.energy = energy
+    d.color = color
     o = bpy.data.objects.new(name, d)
     o.location, o.rotation_euler = loc, rot
     coll.objects.link(o)
@@ -194,13 +195,13 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     if sweep > 0.0:
         area_light(coll, "bg_wash_l", (-150.0, -60.0, 260.0),
                    (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420,
-                   560_000 * exposure * sweep)
+                   560_000 * exposure * sweep, color=(1.0, 0.93, 0.80))
         area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
                    (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420,
-                   560_000 * exposure * sweep)
+                   560_000 * exposure * sweep, color=(1.0, 0.93, 0.80))
         area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
                    (math.radians(78.0), 0.0, 0.0), 420, 120,
-                   140_000 * exposure * sweep)
+                   140_000 * exposure * sweep, color=(1.0, 0.94, 0.82))
     # ONE huge near-frontal scrim (Aesop-style): a giant soft source close to
     # the camera axis, slightly above and camera-left, so the glass carries one
     # continuous soft sheen instead of a discrete patch — and the slight left
@@ -512,7 +513,7 @@ def main() -> int:
     scene.cycles.max_bounces = 16
     scene.cycles.transmission_bounces = 16
     scene.cycles.volume_bounces = 8
-    scene.cycles.transparent_max_bounces = 12
+    scene.cycles.transparent_max_bounces = 16
     try:
         scene.cycles.denoiser = 'OPENIMAGEDENOISE'
         scene.cycles.denoising_prefilter = 'ACCURATE'
