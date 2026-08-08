@@ -44,31 +44,36 @@ except ImportError:
 
 HERE = Path(__file__).resolve().parent
 
-RADIAL_SEGMENTS = 288        # 4 samples per rib at RIB_COUNT=72 — below this the ribs alias
-RIB_COUNT = 72
-RIB_DEPTH = 0.22             # mm, peak-to-valley on the knurl
+RADIAL_SEGMENTS = 288        # 9 samples per rib at RIB_COUNT=32
+RIB_COUNT = 32               # measured: 16 rising edges across the visible face
+RIB_DEPTH = 0.40             # coarse moulded flutes, ~2.3 mm pitch at the crest
+RIB_TOP_MARGIN = 0.8         # smooth ring between the top edge and the first rib
 THREAD_CLEARANCE = 0.30      # mm diametral gap so cap and bottle never intersect
 WALL = 1.60
 EDGE_R = 0.70                # softened top edge
 BOT_R = 0.35
 
 
-# MEASURED off the real part: 17. GBBstnAmb1ozBlkCapSht.psd in the master PSD
-# library, scaled on the 33 mm body diameter (perspective-safe, unlike height).
+# MEASURED off the real part — the CAP LAYER's own alpha in
+# 17. GBBstnAmb1ozBlkCapSht.psd (Layer 6), 11.79 px/mm:
 #
-#   cap outer diameter   24.52 mm   (across the knurl)
-#   cap overall height   14.17 mm
-#   assembled height     82.46 mm  -> 4.46 mm of cap stands above the 78 mm rim
-#   skirt bottom lands at z ~ 68.3, i.e. right at the transfer bead
+#   height        11.79 mm   (4.46 above the sealing plane + 7.33 skirt)
+#   OD            23.50 mm   through the ribbed skirt, near-zero draft
+#   bottom band    1.40 mm   smooth, flaring to ~24.1 mm at the lip
+#   ribs          ~32 coarse flutes, ~2.3 mm pitch (phenolic "bonetic" style)
+#   skirt bottom  z ~ 70.7 assembled — ~2 mm of bare neck shows above the
+#                 transfer bead, as in the product photo
 #
-# Earlier values here (22.4 od, 9.0 skirt) were guessed from "standard 20-400"
-# and were wrong on every axis. Measure the part.
+# A first pass measured 24.52 x 14.17 by colour boundary; that swallowed the
+# shadowed neck below the cap into "cap". The layer alpha is authoritative.
 #
 # top_th = how much cap sits ABOVE the sealing plane; skirt_d = how far it hangs
-# below. Their sum is the cap's overall height.
+# below. band_h/band_flare describe the smooth flared ring at the skirt lip.
 CLOSURE_STYLES: Dict[str, Dict[str, float]] = {
-    "short": {"skirt_d": 9.71, "od": 24.52, "top_th": 4.46},
-    "tall":  {"skirt_d": 13.50, "od": 24.52, "top_th": 4.46},
+    "short": {"skirt_d": 7.33, "od": 23.50, "top_th": 4.46,
+              "band_h": 1.40, "band_flare": 0.30},
+    "tall":  {"skirt_d": 13.50, "od": 23.50, "top_th": 4.46,
+              "band_h": 1.40, "band_flare": 0.30},
 }
 
 
@@ -106,7 +111,11 @@ def build_profile(fin: Dict[str, float], style: Dict[str, float]) -> Dict[str, o
 
     pts: List[Tuple[float, float]] = [(0.0, top_th), (r_out - EDGE_R, top_th)]
     pts += _arc(r_out - EDGE_R, top_th - EDGE_R, EDGE_R, 90.0, 0.0, 8)[1:]
-    pts.append((r_out, -skirt_d + BOT_R))
+    z_wall_top = top_th - EDGE_R
+    z_wall_bot = -skirt_d + BOT_R
+    wall_steps = max(4, int((z_wall_top - z_wall_bot) * 4))
+    for i in range(1, wall_steps + 1):
+        pts.append((r_out, z_wall_top + (z_wall_bot - z_wall_top) * i / wall_steps))
     pts += _arc(r_out - BOT_R, -skirt_d + BOT_R, BOT_R, 0.0, -90.0, 5)[1:]
     outer_count = len(pts)
 
@@ -119,6 +128,8 @@ def build_profile(fin: Dict[str, float], style: Dict[str, float]) -> Dict[str, o
         "loop": pts, "outer_count": outer_count,
         "r_out": r_out, "r_in_valley": r_in_valley, "r_in_ridge": r_in_ridge,
         "skirt_d": skirt_d, "top_th": top_th,
+        "band_h": float(style.get("band_h", 0.0)),
+        "band_flare": float(style.get("band_flare", 0.0)),
         "thread_lo": -skirt_d, "thread_hi": -0.8,
     }
 
@@ -139,10 +150,18 @@ def make_modulator(prof, fin, ribs: int, rib_depth: float):
     depth_in = prof["r_in_valley"] - prof["r_in_ridge"]
     lo, hi = prof["thread_lo"], prof["thread_hi"]
 
+    band_top = prof["thread_lo"] + prof["band_h"]          # z where the band ends
+    flare = prof["band_flare"]
+
     def modulate(index: int, r: float, z: float, theta: float) -> float:
         if index < outer_count:
-            # knurl only on the vertical skirt, never on the top face
-            if abs(r - r_out) < 1e-6 and z < prof_top_th - EDGE_R:
+            if abs(r - r_out) > 1e-6:
+                return r                                    # top/bottom arcs
+            if z <= band_top:
+                # smooth flared lip band: no ribs, radius grows toward the edge
+                t = (band_top - z) / max(prof["band_h"], 1e-6)
+                return r + flare * t * t * (3.0 - 2.0 * t)
+            if z < prof_top_th - EDGE_R - RIB_TOP_MARGIN:
                 return r - rib_depth * 0.5 * (1.0 - math.cos(ribs * theta))
             return r
         if not (lo <= z <= hi) or depth_in <= 0.0:
@@ -247,8 +266,10 @@ def validate(res, fin) -> List[Tuple[bool, str]]:
     out.append((abs(max(zs) - tt) < 1e-3, f"top at z={max(zs):.3f} (expect {tt})"))
     out.append((abs(min(zs) + res["prof"]["skirt_d"]) < 1e-3,
                 f"skirt bottom z={min(zs):.3f} (expect {-res['prof']['skirt_d']})"))
-    out.append((max(rs) * 2 <= res["meta"]["outer_dia_mm"] + 1e-3,
-                f"outer dia {max(rs)*2:.2f} mm"))
+    od = res["meta"]["outer_dia_mm"]
+    flare_max = od + 2.0 * res["prof"]["band_flare"]
+    out.append((od - 1e-3 <= max(rs) * 2 <= flare_max + 1e-3,
+                f"outer dia {max(rs)*2:.2f} mm (ribbed {od}, lip flares to ≤{flare_max:.2f})"))
 
     edges: Dict[Tuple[int, int], int] = {}
     for p in mesh.polygons:
