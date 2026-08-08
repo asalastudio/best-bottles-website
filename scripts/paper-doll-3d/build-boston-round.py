@@ -137,8 +137,8 @@ CAPACITY_SPECS: Dict[int, Dict[str, object]] = {
     },
     30: {
         "height": 78.0, "diameter": 33.0, "neck": "20-400",
-        "wall": 2.45, "wall_shoulder": 2.75, "shoulder_h": 11.22, "neck_straight": 5.52,
-        "base_th": 5.5, "heel_r": 7.5, "push_up_h": 2.0, "contact_w": 2.5, "lip_r": 0.4,
+        "wall": 1.80, "wall_shoulder": 2.00, "shoulder_h": 11.22, "neck_straight": 5.52,
+        "base_th": 4.5, "heel_r": 7.5, "push_up_h": 2.0, "contact_w": 2.5, "lip_r": 0.4,
         "label_w": 72.0, "label_h": 32.0, "label_off": 14.0,
         "ref_sku": "GBBstn1ozBlkCapSht", "shape_measured": True,
     },
@@ -594,7 +594,7 @@ GLASS_TINTS: Dict[str, Dict[str, object]] = {
     # (R:G ~2.4, G:B ~3.0). Zero blue in v2 pushed the hue olive; real amber
     # transmits a little blue.
     "amber":  {"volume": (0.578, 0.390, 0.155, 1.0), "density": 0.97,
-               "surface": (0.99, 0.99, 0.99, 1.0), "roughness": 0.008},
+               "surface": (0.99, 0.99, 0.99, 1.0), "roughness": 0.03},
     "cobalt": {"volume": (0.04, 0.22, 0.86, 1.0), "density": 1.85,
                "surface": (0.99, 0.99, 0.99, 1.0), "roughness": 0.005},
 }

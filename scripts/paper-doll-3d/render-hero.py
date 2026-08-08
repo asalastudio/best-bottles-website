@@ -111,6 +111,9 @@ def backdrop(coll, tone="bone", width=1400.0, depth=900.0, rise=700.0,
     mesh.materials.append(mat)
 
     obj = bpy.data.objects.new("stage_backdrop", mesh)
+    # floor sits 0.1 mm below z=0 so the bottle's flat contact ring never
+    # shares a plane with it (z-fighting / shadow-terminator artifacts)
+    obj.location = (0.0, 0.0, -0.1)
     coll.objects.link(obj)
     return obj
 
@@ -151,17 +154,18 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
                (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420, 640_000 * exposure)
     # narrow vertical strips: the two long speculars down the glass edges
-    area_light(coll, "strip_left", (-220.0, -110.0, mid + 20.0),
+    area_light(coll, "strip_left", (-220.0, 40.0, mid + 20.0),
                (math.radians(90.0), 0.0, math.radians(-64.0)), 55, 300, 300_000 * exposure)
-    area_light(coll, "strip_right", (220.0, -110.0, mid + 20.0),
+    area_light(coll, "strip_right", (220.0, 40.0, mid + 20.0),
                (math.radians(90.0), 0.0, math.radians(64.0)), 55, 300, 300_000 * exposure)
     # floor wash: skims the sweep base behind the subject so a straight-on
     # camera still sees lit backdrop through the LOWER body, not dark floor
     area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
                (math.radians(78.0), 0.0, 0.0), 420, 120, 260_000 * exposure)
-    # small top light: cap modelling + soft contact shadow, NOT a frontal wash
-    area_light(coll, "top_soft", (0.0, -30.0, 340.0),
-               (math.radians(12.0), 0.0, 0.0), 90, 90, 480_000 * exposure)
+    # key: 45 degrees off-camera, soft — models the cap face and throws the
+    # contact shadow without washing the glass frontally
+    area_light(coll, "key_45", (-200.0, -200.0, 300.0),
+               (math.radians(48.0), 0.0, math.radians(-45.0)), 140, 140, 520_000 * exposure)
     return coll
 
 
@@ -204,6 +208,8 @@ def main() -> int:
                    help="fraction of frame height the bottle occupies")
     p.add_argument("--elevation", type=float, default=0.0,
                    help="camera elevation; 0 = straight-on e-commerce pack shot")
+    p.add_argument("--view", default="standard", choices=["standard", "agx"],
+                   help="colour transform; agx = AgX + Medium High Contrast")
     p.add_argument("--backdrop", default="bone", choices=sorted(BACKDROP_TONES),
                    help="stage backdrop tone; bone is the house standard")
     p.add_argument("--exposure", type=float, default=1.0,
@@ -262,12 +268,27 @@ def main() -> int:
     scene.cycles.caustics_reflective = True
     scene.cycles.caustics_refractive = True       # glass needs these
     scene.cycles.blur_glossy = 0.2                # suppresses fireflies without killing caustics
-    scene.cycles.transmission_bounces = 24
-    scene.cycles.max_bounces = 32
+    scene.cycles.max_bounces = 16
+    scene.cycles.transmission_bounces = 16
+    scene.cycles.volume_bounces = 8
+    scene.cycles.transparent_max_bounces = 12
+    try:
+        scene.cycles.denoiser = 'OPENIMAGEDENOISE'
+        scene.cycles.denoising_prefilter = 'ACCURATE'
+    except (AttributeError, TypeError):
+        pass
 
-    # CRITICAL: AgX would grey the backdrop and bleach the amber.
-    scene.view_settings.view_transform = 'Standard'
-    scene.view_settings.look = 'None'
+    if args.view == "agx":
+        scene.view_settings.view_transform = 'AgX'
+        try:
+            scene.view_settings.look = 'AgX - Medium High Contrast'
+        except TypeError:
+            scene.view_settings.look = 'None'
+    else:
+        # Standard is the verified default: AgX greyed the backdrop and
+        # bleached the amber on this exact scene (see commit 317c418).
+        scene.view_settings.view_transform = 'Standard'
+        scene.view_settings.look = 'None'
     scene.render.film_transparent = False
 
     world = bpy.data.worlds.get("bb_stage_world") or bpy.data.worlds.new("bb_stage_world")

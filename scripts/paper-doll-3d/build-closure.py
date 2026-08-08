@@ -58,7 +58,7 @@ CAP_BEAD_CLEARANCE = 0.25    # skirt lip stops this far above the transfer bead
 THREAD_CLEARANCE = 0.30      # mm diametral gap so cap and bottle never intersect
 WALL = 1.60
 EDGE_R = 1.35                # rounded top outer edge (was 0.70 — too crisp)
-BOT_R = 0.35
+BOT_R = 0.50                 # bottom rim bevel catches its own highlight
 
 
 # MEASURED off the real part — the CAP LAYER's own alpha in
@@ -218,15 +218,29 @@ def make_pp_material(name: str) -> bpy.types.Material:
     def st(k, v):
         if k in b.inputs:
             b.inputs[k].default_value = v
-    st("Base Color", (0.0116, 0.0116, 0.0116, 1.0))
-    # The real short black cap is moulded phenolic/PP with a distinct sheen —
-    # the reference shows sharp specular streaks running down the ribs. 0.52
-    # rendered it dead matte.
-    st("Roughness", 0.30)
+    st("Base Color", (0.0103, 0.0103, 0.0103, 1.0))   # #1A1A1A, linearised
+    st("Roughness", 0.40)          # soft matte plastic sheen
     st("Metallic", 0.0)
     st("IOR", 1.49)                # polypropylene
     st("Specular IOR Level", 0.42)
     st("Coat Weight", 0.0)
+    # Micro-grain: moulded plastic is never optically flat. ~0.1 mm noise cells
+    # displacing ~10 µm via a bump map — visible as texture in a highlight,
+    # invisible in silhouette. (This is what a Substance plastic .sbsar would
+    # supply; procedural here so the cap has no asset dependency.)
+    nt = mat.node_tree
+    for n in [n for n in nt.nodes if n.type in ("TEX_NOISE", "BUMP")]:
+        nt.nodes.remove(n)
+    noise = nt.nodes.new("ShaderNodeTexNoise")
+    noise.location = (b.location.x - 500, b.location.y - 300)
+    noise.inputs["Scale"].default_value = 12.0        # 1 BU = 1 mm here
+    noise.inputs["Detail"].default_value = 3.0
+    bump = nt.nodes.new("ShaderNodeBump")
+    bump.location = (b.location.x - 250, b.location.y - 300)
+    bump.inputs["Strength"].default_value = 0.6
+    bump.inputs["Distance"].default_value = 0.012
+    nt.links.new(noise.outputs["Fac"], bump.inputs["Height"])
+    nt.links.new(bump.outputs["Normal"], b.inputs["Normal"])
     return mat
 
 
