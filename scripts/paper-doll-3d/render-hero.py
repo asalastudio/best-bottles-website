@@ -218,24 +218,29 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # the bottle washes out. Two near-black cards out of frame give the flanks
     # real darkness to reflect — this is where an amber bottle's deep edges
     # actually come from in product photography.
-    # Slimmed after review: at +/-150 and full height these mirrored as thick
-    # angled black wedges, heaviest at the base. Further out, shorter, and
-    # lighter they read as the reference's narrow dark edge band instead.
-    for sx, nm in ((-1.0, "flag_left"), (1.0, "flag_right")):
+    # DARK SIDE WALLS, room-scale. Earlier versions used card-sized flags,
+    # and their rectangular edges mirrored on the curved glass as straight
+    # diagonal seams — the "fake" angled boundaries. A real studio's dark
+    # sides are the room itself: no edge within reach of the reflection. These
+    # walls are big enough that only their darkness is visible, never their
+    # geometry. The remaining soft dark gradient at the flanks is genuine
+    # physics (grazing paths through the cavity taper) and appears on the
+    # real product photo too.
+    for sx, nm in ((-1.0, "sidewall_left"), (1.0, "sidewall_right")):
         mesh = bpy.data.meshes.new(nm)
-        x = sx * 240.0
-        mesh.from_pydata([(x, -150.0, 15.0), (x, -45.0, 15.0),
-                          (x, -45.0, 165.0), (x, -150.0, 165.0)],
+        x = sx * 430.0
+        mesh.from_pydata([(x, -450.0, -0.1), (x, 250.0, -0.1),
+                          (x, 250.0, 520.0), (x, -450.0, 520.0)],
                          [], [[0, 1, 2, 3]])
         mesh.update()
-        fm = bpy.data.materials.get("bb_mat_flag") or bpy.data.materials.new("bb_mat_flag")
+        fm = bpy.data.materials.get("bb_mat_sidewall") or bpy.data.materials.new("bb_mat_sidewall")
         fm.use_nodes = True
         fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-        fb.inputs["Base Color"].default_value = (0.11, 0.105, 0.10, 1.0)
+        fb.inputs["Base Color"].default_value = (0.07, 0.068, 0.065, 1.0)
         fb.inputs["Roughness"].default_value = 0.9
         mesh.materials.append(fm)
         o = bpy.data.objects.new(nm, mesh)
-        o.visible_camera = False          # reflected and refracted, never seen directly
+        o.visible_camera = False
         coll.objects.link(o)
 
     # TRANSMISSION CARD — hidden behind the subject; only transmission rays
