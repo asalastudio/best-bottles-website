@@ -434,6 +434,10 @@ def main() -> int:
     p.add_argument("--floor-glow", dest="floor_glow", type=float, default=0.75,
                    help="low back-field luminance behind the bottle; prevents the "
                         "cavity tangent reading as a dark internal cone")
+    p.add_argument("--clay", action="store_true",
+                   help="diagnostic: flat diffuse grey on bottle and cap. Optical "
+                        "images (reflections/refractions) cannot survive clay; "
+                        "geometry must. Whatever vanishes was never a shape.")
     p.add_argument("--sweep", type=float, default=0.3,
                    help="backdrop wash level: 0.3 = midtone Aesop-style default, "
                         "1.0 = bright bone, 0.0 = softbox only")
@@ -492,6 +496,18 @@ def main() -> int:
                         for v in cap.data.vertices)
         print(f"cap seated: {cap.name} -> parent {res['datum'].name}, "
               f"zero transform; assembled height {subject_h:.2f} mm")
+
+    if args.clay:
+        clay = bpy.data.materials.new("bb_clay")
+        clay.use_nodes = True
+        cb = next(n for n in clay.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+        cb.inputs["Base Color"].default_value = (0.48, 0.47, 0.45, 1.0)
+        cb.inputs["Roughness"].default_value = 0.85
+        for o in bpy.data.objects:
+            if o.type == 'MESH' and o.name.startswith("bb_"):
+                o.data.materials.clear()
+                o.data.materials.append(clay)
+        print("CLAY diagnostic: bottle and cap overridden with diffuse grey")
 
     scene = bpy.context.scene
     if hero:
