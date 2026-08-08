@@ -219,10 +219,14 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # offset keeps the drop shadow trailing to 2 o'clock. With the backdrop
     # exposed as a midtone (sweep ~0.3) nothing bright sits behind the bottle,
     # so the refracted field stops reading as "two softboxes and a strip".
-    soft_softbox(coll, "softbox_key", 620, 720,
-                 (-120.0, -320.0, 310.0),
+    # Wall-of-light scrim: sized so its boundaries project OUTSIDE the glass's
+    # entire field of view. A panel the glass can see the edges of survives
+    # refraction as a rectangle standing in the bottle; a panel it cannot see
+    # the edges of reads as pure gradient. Strength drops with the area.
+    soft_softbox(coll, "softbox_key", 1300, 1400,
+                 (-120.0, -330.0, 340.0),
                  (math.radians(38.0), 0.0, math.radians(-18.0)),
-                 26.0 * exposure)
+                 8.5 * exposure, tint=(1.0, 0.94, 0.83))
 
     # SUBTRACTIVE FLAGS — the piece a physical glass shoot always has and a CG
     # stage usually forgets. Polished glass at grazing angles mirrors whatever
@@ -248,7 +252,7 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
         fm = bpy.data.materials.get("bb_mat_sidewall") or bpy.data.materials.new("bb_mat_sidewall")
         fm.use_nodes = True
         fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-        fb.inputs["Base Color"].default_value = (0.07, 0.068, 0.065, 1.0)
+        fb.inputs["Base Color"].default_value = (0.15, 0.145, 0.14, 1.0)
         fb.inputs["Roughness"].default_value = 0.9
         mesh.materials.append(fm)
         o = bpy.data.objects.new(nm, mesh)
@@ -453,7 +457,7 @@ def main() -> int:
                    help="stage backdrop tone; bone is the house standard")
     p.add_argument("--exposure", type=float, default=1.0,
                    help="scales every light; 1.0 is calibrated for dark amber glass")
-    p.add_argument("--ambient", type=float, default=0.10,
+    p.add_argument("--ambient", type=float, default=0.15,
                    help="world background strength (fill wrap)")
     p.add_argument("--show-liquid", action="store_true")
     p.add_argument("--with-cap", action="store_true",
