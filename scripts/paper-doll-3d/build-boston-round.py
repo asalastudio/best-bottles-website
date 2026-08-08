@@ -600,7 +600,7 @@ GLASS_TINTS: Dict[str, Dict[str, object]] = {
 }
 
 
-def make_glass_material(name: str, tint: str = "clear") -> bpy.types.Material:
+def make_glass_material(name: str, tint: str = "clear", wear: float = 0.0) -> bpy.types.Material:
     spec = GLASS_TINTS.get(tint, GLASS_TINTS["clear"])
     mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
     bsdf = _principled(mat)
@@ -656,6 +656,43 @@ def make_glass_material(name: str, tint: str = "clear") -> bpy.types.Material:
     nt.links.new(micro.outputs["Fac"], rng.inputs["Value"])
     if "Roughness" in bsdf.inputs:
         nt.links.new(rng.outputs["Result"], bsdf.inputs["Roughness"])
+
+    # ---- handling wear (hero shots only; pack shots ship factory-new) -------
+    # Smudges: vertically-stretched streaks raising roughness. Dust: sparse
+    # voronoi specks adding rough points. Both scale with `wear` and vanish
+    # at 0 — the material name carries a _worn suffix so variants coexist.
+    if wear > 0.0:
+        smap = nt.nodes.new("ShaderNodeMapping")
+        smap.location = (bsdf.location.x - 900, bsdf.location.y - 520)
+        smap.inputs["Scale"].default_value = (0.5, 0.5, 0.06)   # streaks run vertically
+        smud = nt.nodes.new("ShaderNodeTexNoise")
+        smud.location = (bsdf.location.x - 700, bsdf.location.y - 520)
+        smud.inputs["Scale"].default_value = 1.0
+        dust = nt.nodes.new("ShaderNodeTexVoronoi")
+        dust.location = (bsdf.location.x - 700, bsdf.location.y - 700)
+        dust.inputs["Scale"].default_value = 2.6
+        dthr = nt.nodes.new("ShaderNodeMath")
+        dthr.operation = 'LESS_THAN'
+        dthr.location = (bsdf.location.x - 520, bsdf.location.y - 700)
+        dthr.inputs[1].default_value = 0.06 * wear
+        sm_r = nt.nodes.new("ShaderNodeMath")
+        sm_r.operation = 'MULTIPLY_ADD'
+        sm_r.location = (bsdf.location.x - 300, bsdf.location.y - 520)
+        sm_r.inputs[1].default_value = 0.10 * wear
+        dust_r = nt.nodes.new("ShaderNodeMath")
+        dust_r.operation = 'MULTIPLY_ADD'
+        dust_r.location = (bsdf.location.x - 140, bsdf.location.y - 600)
+        dust_r.inputs[1].default_value = 0.30 * wear
+        nt.links.new(coord.outputs["Object"], smap.inputs["Vector"])
+        nt.links.new(smap.outputs["Vector"], smud.inputs["Vector"])
+        nt.links.new(coord.outputs["Object"], dust.inputs["Vector"])
+        nt.links.new(dust.outputs["Distance"], dthr.inputs[0])
+        nt.links.new(smud.outputs["Fac"], sm_r.inputs[0])
+        nt.links.new(rng.outputs["Result"], sm_r.inputs[2])
+        nt.links.new(dthr.outputs["Value"], dust_r.inputs[0])
+        nt.links.new(sm_r.outputs["Value"], dust_r.inputs[2])
+        if "Roughness" in bsdf.inputs:
+            nt.links.new(dust_r.outputs["Value"], bsdf.inputs["Roughness"])
     if spec["volume"] and out is not None:
         vol = nt.nodes.new("ShaderNodeVolumeAbsorption")
         vol.location = (out.location.x - 300, out.location.y - 260)
@@ -747,7 +784,9 @@ def build(spec: Dict[str, object], clear_scene: bool = True) -> Dict[str, object
     body.location = (0.0, 0.0, 0.0)
 
     tint = str(spec.get("glass", "clear"))
-    glass = make_glass_material(f"bb_mat_glass_{tint}", tint)
+    wear = float(spec.get("wear", 0.0) or 0.0)
+    mat_name = f"bb_mat_glass_{tint}" + ("_worn" if wear > 0 else "")
+    glass = make_glass_material(mat_name, tint, wear)
     gold = make_gold_material("bb_mat_gold_shiny")
     mesh.materials.append(glass)
 
@@ -774,6 +813,29 @@ def build(spec: Dict[str, object], clear_scene: bool = True) -> Dict[str, object
     label_front = make_label_object(lfront_name, r_label, lz0, lz1, arc, -math.pi / 2)
     label_back = make_label_object(lback_name, r_label, lz0, lz1, arc, math.pi / 2)
 
+    # Seeds: minute air bubbles trapped in the wall — real Type III glass has
+    # the occasional one. Deterministic golden-angle placement (no RNG — reruns
+    # must reproduce). Confined to the straight wall, mid-thickness. At 0.15-
+    # 0.30 mm they read as 1-2 px glints, which is exactly what real ones do.
+    n_seeds = int(spec.get("bubbles", 0) or 0)
+    seeds = []
+    if n_seeds > 0:
+        import bmesh as _bm
+        z_lo, z_hi = base_z = (10.0, max(12.0, prof["z_shoulder_start"] - 4.0))
+        for i in range(n_seeds):
+            ang = i * 2.399963                       # golden angle
+            zz = z_lo + ((i * 7.31) % (z_hi - z_lo))
+            rr = (prof["r_body_in"] + prof["r_body"]) / 2.0
+            rad = 0.15 + ((i * 37) % 10) / 10.0 * 0.15
+            m = bpy.data.meshes.new(f"{stem}_seed{i:02d}")
+            bmm = _bm.new()
+            _bm.ops.create_icosphere(bmm, subdivisions=1, radius=rad)
+            bmm.to_mesh(m); bmm.free()
+            o = bpy.data.objects.new(f"{stem}_seed{i:02d}", m)
+            o.location = (rr * math.cos(ang), rr * math.sin(ang), zz)
+            m.materials.append(glass)
+            seeds.append(o)
+
     datum = bpy.data.objects.new(datum_name, None)
     datum.empty_display_type = "PLAIN_AXES"
     datum.empty_display_size = spec["diameter"] / 3.0
@@ -784,8 +846,10 @@ def build(spec: Dict[str, object], clear_scene: bool = True) -> Dict[str, object
     datum.parent = body
 
     body_coll = get_collection("BSR_BODY", scene.collection)
-    for obj in (body, liquid, label_front, label_back, datum):
+    for obj in (body, liquid, label_front, label_back, datum, *seeds):
         body_coll.objects.link(obj)
+    for o in seeds:
+        o.parent = body
 
     brim_ml = revolve_volume(prof["inner"])
     shoulder_ml = revolve_volume(prof["inner"], z_max=prof["z_shoulder_start"])
@@ -1048,6 +1112,8 @@ def resolve_spec(args: argparse.Namespace) -> Dict[str, object]:
     spec["neck_measured"] = finish.get("measured", False)
     spec["threads"] = not args.no_threads
     spec["glass"] = args.glass
+    spec["wear"] = args.wear
+    spec["bubbles"] = args.bubbles
     return spec
 
 
@@ -1081,6 +1147,10 @@ def parse_args(argv: List[str]) -> argparse.Namespace:
     g.add_argument("--shoulder-h", dest="shoulder_h", type=float, help="shoulder height, mm")
     g.add_argument("--base-th", dest="base_th", type=float, help="base glass thickness, mm")
     g.add_argument("--heel-r", dest="heel_r", type=float, help="heel fillet radius, mm")
+    g.add_argument("--wear", type=float, default=0.0,
+                   help="0..1 smudge/dust on the glass (hero shots; pack shots stay 0)")
+    g.add_argument("--bubbles", type=int, default=0,
+                   help="minute seeds trapped in the wall (hero shots)")
 
     n = p.add_argument_group("neck finish overrides (default: NECK_FINISHES table)")
     n.add_argument("--neck-t", dest="neck_t", type=float, help="thread crest diameter, mm")

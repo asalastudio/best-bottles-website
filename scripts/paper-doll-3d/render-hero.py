@@ -214,6 +214,125 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     return coll
 
 
+def build_stage_hero(scene, subject_h: float, exposure: float = 1.0):
+    """
+    Editorial hero stage — a DIFFERENT deliverable from the pack shot, kept as
+    its own mode so the canonical e-comm scene never inherits dust or DOF.
+
+    The "HDRI" is emissive geometry: a ceiling grid of light bars and a distant
+    warm window card. Real geometry beats an image environment here because the
+    reflections it draws on the glass are exactly placeable, and there is no
+    external file to lose. The floor is procedural stone; a small hard spot
+    drives MNEE shadow caustics under the bottle.
+    """
+    coll = stage_collection(scene)
+
+    # stone floor
+    mesh = bpy.data.meshes.new("hero_floor")
+    E = 900.0
+    mesh.from_pydata([(-E, -E, -0.1), (E, -E, -0.1), (E, E, -0.1), (-E, E, -0.1)],
+                     [], [[0, 1, 2, 3]])
+    mesh.update()
+    fm = bpy.data.materials.get("bb_mat_stone") or bpy.data.materials.new("bb_mat_stone")
+    fm.use_nodes = True
+    fnt = fm.node_tree
+    for n in [n for n in fnt.nodes if n.type in ("TEX_NOISE", "BUMP", "TEX_VORONOI")]:
+        fnt.nodes.remove(n)
+    fb = next(n for n in fnt.nodes if n.type == "BSDF_PRINCIPLED")
+    fb.inputs["Base Color"].default_value = (0.10, 0.095, 0.09, 1.0)
+    fb.inputs["Roughness"].default_value = 0.68
+    fn1 = fnt.nodes.new("ShaderNodeTexNoise")
+    fn1.inputs["Scale"].default_value = 0.06        # broad tonal patches
+    fn1.inputs["Detail"].default_value = 6.0
+    fvor = fnt.nodes.new("ShaderNodeTexVoronoi")
+    fvor.inputs["Scale"].default_value = 0.8        # ~1.2 mm stone speckle
+    fmix = fnt.nodes.new("ShaderNodeMath"); fmix.operation = 'MULTIPLY_ADD'
+    fmix.inputs[1].default_value = 0.5
+    fnt.links.new(fvor.outputs["Distance"], fmix.inputs[0])
+    fnt.links.new(fn1.outputs["Fac"], fmix.inputs[2])
+    fbmp = fnt.nodes.new("ShaderNodeBump")
+    fbmp.inputs["Strength"].default_value = 0.55
+    fbmp.inputs["Distance"].default_value = 0.07    # fine tactile stone grain
+    fnt.links.new(fmix.outputs["Value"], fbmp.inputs["Height"])
+    fnt.links.new(fbmp.outputs["Normal"], fb.inputs["Normal"])
+    mesh.materials.append(fm)
+    floor = bpy.data.objects.new("hero_floor", mesh)
+    coll.objects.link(floor)
+
+    def emissive_card(name, verts, strength, color=(1, 1, 1)):
+        m = bpy.data.meshes.new(name)
+        m.from_pydata(verts, [], [[0, 1, 2, 3]])
+        m.update()
+        em = bpy.data.materials.new(name + "_mat")
+        em.use_nodes = True
+        ent = em.node_tree
+        for n in list(ent.nodes):
+            ent.nodes.remove(n)
+        o1 = ent.nodes.new("ShaderNodeOutputMaterial")
+        e1 = ent.nodes.new("ShaderNodeEmission")
+        e1.inputs["Color"].default_value = (*color, 1.0)
+        e1.inputs["Strength"].default_value = strength
+        ent.links.new(e1.outputs[0], o1.inputs["Surface"])
+        m.materials.append(em)
+        o = bpy.data.objects.new(name, m)
+        coll.objects.link(o)
+        return o
+
+    # ceiling grid: five bars — the classic striped reflection across a curve
+    for i in range(5):
+        x = -260.0 + i * 130.0
+        emissive_card(f"grid_bar_{i}",
+                      [(x, -340, 460), (x + 46, -340, 460),
+                       (x + 46, 320, 460), (x, 320, 460)],
+                      9.0 * exposure)
+    # distant warm window, camera-left
+    emissive_card("window_card",
+                  [(-620, -60, 40), (-600, 320, 40),
+                   (-600, 320, 420), (-620, -60, 420)],
+                  7.0 * exposure, color=(1.0, 0.88, 0.72))
+
+    # hard spot for MNEE caustics under the glass
+    sd = bpy.data.lights.new("caustic_spot", 'SPOT')
+    sd.energy = 3_200_000 * exposure
+    sd.spot_size = 0.5
+    sd.shadow_soft_size = 2.0                        # small source -> defined caustics
+    spot = bpy.data.objects.new("caustic_spot", sd)
+    spot.location = (-160.0, -240.0, 430.0)
+    spot.rotation_euler = (math.radians(29.0), 0.0, math.radians(-33.0))
+    coll.objects.link(spot)
+    for target, attr in ((sd, "use_shadow_caustics"), (getattr(sd, "cycles", None), "is_caustics_light")):
+        if target is None:
+            continue
+        try:
+            setattr(target, attr, True)
+        except (AttributeError, TypeError):
+            pass
+
+    world = bpy.data.worlds.get("bb_hero_world") or bpy.data.worlds.new("bb_hero_world")
+    world.use_nodes = True
+    world.node_tree.nodes["Background"].inputs[0].default_value = (0.02, 0.02, 0.022, 1)
+    world.node_tree.nodes["Background"].inputs[1].default_value = 1.0
+    scene.world = world
+    return coll
+
+
+def film_grain(path, amount=0.011, seed=7):
+    """Luminance-correlated grain, strongest in mids — film, not sensor noise."""
+    try:
+        import numpy as np
+        from PIL import Image
+    except ImportError:
+        return False
+    im = np.asarray(Image.open(path).convert("RGB")).astype(np.float32) / 255.0
+    rng = np.random.default_rng(seed)
+    g = rng.normal(0.0, 1.0, im.shape[:2])[..., None]
+    lum = im.mean(axis=2, keepdims=True)
+    weight = 4.0 * lum * (1.0 - lum)               # peaks at mid-grey, like print film
+    out = np.clip(im + g * amount * weight, 0.0, 1.0)
+    Image.fromarray((out * 255).astype(np.uint8)).save(path)
+    return True
+
+
 def build_camera(scene, coll, subject_h: float, lens: float,
                  fill: float, elevation_deg: float):
     """
@@ -253,6 +372,12 @@ def main() -> int:
                    help="fraction of frame height the bottle occupies")
     p.add_argument("--elevation", type=float, default=0.0,
                    help="camera elevation; 0 = straight-on e-commerce pack shot")
+    p.add_argument("--stage", default="packshot", choices=["packshot", "hero"],
+                   help="packshot = canonical bone e-comm scene; hero = editorial stone/caustics/DOF")
+    p.add_argument("--wear", type=float, default=None,
+                   help="glass smudge/dust 0..1 (default: 0 packshot, 0.35 hero)")
+    p.add_argument("--bubbles", type=int, default=None,
+                   help="trapped seeds in the wall (default: 0 packshot, 8 hero)")
     p.add_argument("--view", default="standard", choices=["standard", "agx"],
                    help="colour transform; agx = AgX + Medium High Contrast")
     p.add_argument("--backdrop", default="bone", choices=sorted(BACKDROP_TONES),
@@ -268,8 +393,13 @@ def main() -> int:
     p.add_argument("--output", type=Path, required=True)
     args = p.parse_args(argv)
 
+    hero = args.stage == "hero"
+    wear = args.wear if args.wear is not None else (0.35 if hero else 0.0)
+    bubbles = args.bubbles if args.bubbles is not None else (8 if hero else 0)
+
     mod = load_builder()
-    bargs = ["--glass", args.glass, "--capacity", str(args.capacity)]
+    bargs = ["--glass", args.glass, "--capacity", str(args.capacity),
+             "--wear", str(wear), "--bubbles", str(bubbles)]
     if args.turns is not None:
         bargs += ["--turns", str(args.turns)]
     spec = mod.resolve_spec(mod.parse_args(bargs))
@@ -299,9 +429,25 @@ def main() -> int:
               f"zero transform; assembled height {subject_h:.2f} mm")
 
     scene = bpy.context.scene
-    build_stage(scene, subject_h, args.exposure, args.backdrop)
+    if hero:
+        build_stage_hero(scene, subject_h, args.exposure)
+    else:
+        build_stage(scene, subject_h, args.exposure, args.backdrop)
     cam, dist = build_camera(scene, bpy.data.collections[STAGE], subject_h,
-                             args.lens, args.fill, args.elevation)
+                             args.lens, args.fill, args.elevation if not hero else 6.0)
+    if hero:
+        cam.data.dof.use_dof = True
+        cam.data.dof.focus_distance = dist
+        cam.data.dof.aperture_fstop = 2.8
+        try:
+            body = next(o for o in bpy.data.objects if o.name.endswith("_body_v001"))
+            for ob, attr in ((body, "is_caustics_caster"), (bpy.data.objects["hero_floor"], "is_caustics_receiver")):
+                try:
+                    setattr(ob, attr, True)
+                except AttributeError:
+                    setattr(ob.cycles, attr, True)
+        except (StopIteration, KeyError, AttributeError):
+            pass
 
     scene.render.engine = 'CYCLES'
     try:
@@ -336,11 +482,12 @@ def main() -> int:
         scene.view_settings.look = 'None'
     scene.render.film_transparent = False
 
-    world = bpy.data.worlds.get("bb_stage_world") or bpy.data.worlds.new("bb_stage_world")
-    world.use_nodes = True
-    world.node_tree.nodes["Background"].inputs[0].default_value = (1, 1, 1, 1)
-    world.node_tree.nodes["Background"].inputs[1].default_value = args.ambient
-    scene.world = world
+    if not hero:
+        world = bpy.data.worlds.get("bb_stage_world") or bpy.data.worlds.new("bb_stage_world")
+        world.use_nodes = True
+        world.node_tree.nodes["Background"].inputs[0].default_value = (1, 1, 1, 1)
+        world.node_tree.nodes["Background"].inputs[1].default_value = args.ambient
+        scene.world = world
 
     scene.render.resolution_x, scene.render.resolution_y = args.res_x, args.res_y
     scene.render.image_settings.file_format = 'PNG'
@@ -353,6 +500,8 @@ def main() -> int:
           f"camera {dist:.0f}mm · fill {args.fill:.0%} · exposure {args.exposure} · "
           f"ambient {args.ambient} · view transform Standard")
     bpy.ops.render.render(write_still=True)
+    if hero and film_grain(str(out)):
+        print("film grain applied")
     print(f"wrote {out}")
     return 0
 
