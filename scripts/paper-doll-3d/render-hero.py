@@ -129,6 +129,44 @@ def area_light(coll, name, loc, rot, size_x, size_y, energy):
     return o
 
 
+def soft_softbox(coll, name, w, h, loc, rot, strength, tint=(1.0, 1.0, 1.0)):
+    """Centred quad with hot-centre quadratic falloff — a diffusion panel,
+    not a hard-edged emissive rectangle."""
+    m = bpy.data.meshes.new(name)
+    m.from_pydata([(-w/2, -h/2, 0), (w/2, -h/2, 0), (w/2, h/2, 0), (-w/2, h/2, 0)],
+                  [], [[0, 1, 2, 3]])
+    m.update()
+    em = bpy.data.materials.new(name + "_mat")
+    em.use_nodes = True
+    ent = em.node_tree
+    for n in list(ent.nodes):
+        ent.nodes.remove(n)
+    o1 = ent.nodes.new("ShaderNodeOutputMaterial")
+    e1 = ent.nodes.new("ShaderNodeEmission")
+    e1.inputs["Color"].default_value = (*tint, 1.0)
+    tc = ent.nodes.new("ShaderNodeTexCoord")
+    mp = ent.nodes.new("ShaderNodeMapping")
+    mp.inputs["Location"].default_value = (-1.0, -1.0, 0.0)
+    mp.inputs["Scale"].default_value = (2.0, 2.0, 1.0)
+    gr = ent.nodes.new("ShaderNodeTexGradient")
+    gr.gradient_type = 'QUADRATIC_SPHERE'
+    mth = ent.nodes.new("ShaderNodeMath")
+    mth.operation = 'MULTIPLY'
+    mth.inputs[1].default_value = strength
+    ent.links.new(tc.outputs["Generated"], mp.inputs["Vector"])
+    ent.links.new(mp.outputs["Vector"], gr.inputs["Vector"])
+    ent.links.new(gr.outputs["Fac"], mth.inputs[0])
+    ent.links.new(mth.outputs["Value"], e1.inputs["Strength"])
+    ent.links.new(e1.outputs[0], o1.inputs["Surface"])
+    m.materials.append(em)
+    o = bpy.data.objects.new(name, m)
+    o.location = loc
+    o.rotation_euler = rot
+    coll.objects.link(o)
+    return o
+
+
+
 def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone",
                 trans_card: bool = False):
     """
@@ -151,22 +189,22 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # background washes — the actual key. Aimed at the sweep BEHIND the bottle,
     # offset left/right so neither throws the bottle's own shadow into frame.
     area_light(coll, "bg_wash_l", (-150.0, -60.0, 260.0),
-               (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420, 640_000 * exposure)
+               (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420, 560_000 * exposure)
     area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
-               (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420, 640_000 * exposure)
-    # narrow vertical strips: the two long speculars down the glass edges
-    area_light(coll, "strip_left", (-220.0, 40.0, mid + 20.0),
-               (math.radians(90.0), 0.0, math.radians(-64.0)), 55, 300, 300_000 * exposure)
-    area_light(coll, "strip_right", (220.0, 40.0, mid + 20.0),
-               (math.radians(90.0), 0.0, math.radians(64.0)), 55, 300, 300_000 * exposure)
+               (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420, 560_000 * exposure)
+
     # floor wash: skims the sweep base behind the subject so a straight-on
     # camera still sees lit backdrop through the LOWER body, not dark floor
     area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
-               (math.radians(78.0), 0.0, 0.0), 420, 120, 260_000 * exposure)
-    # key: 45 degrees off-camera, soft — models the cap face and throws the
-    # contact shadow without washing the glass frontally
-    area_light(coll, "key_45", (-200.0, -200.0, 300.0),
-               (math.radians(48.0), 0.0, math.radians(-45.0)), 140, 140, 520_000 * exposure)
+               (math.radians(78.0), 0.0, 0.0), 420, 120, 140_000 * exposure)
+    # ONE big softbox key at the 8-o'clock position, upper camera-left-front,
+    # so the single soft drop shadow falls toward 2 o'clock in frame — the
+    # branded look. The bright-field washes stay: they are what keeps amber
+    # transmissive on bone, and they read as background, not as lights.
+    soft_softbox(coll, "softbox_key", 360, 460,
+                 (-270.0, -160.0, 340.0),
+                 (math.radians(50.0), 0.0, math.radians(-59.0)),
+                 34.0 * exposure)
 
     # SUBTRACTIVE FLAGS — the piece a physical glass shoot always has and a CG
     # stage usually forgets. Polished glass at grazing angles mirrors whatever
@@ -278,18 +316,13 @@ def build_stage_hero(scene, subject_h: float, exposure: float = 1.0):
         coll.objects.link(o)
         return o
 
-    # ceiling grid: five bars — the classic striped reflection across a curve
-    for i in range(5):
-        x = -260.0 + i * 130.0
-        emissive_card(f"grid_bar_{i}",
-                      [(x, -340, 460), (x + 46, -340, 460),
-                       (x + 46, 320, 460), (x, 320, 460)],
-                      9.0 * exposure)
-    # distant warm window, camera-left
-    emissive_card("window_card",
-                  [(-620, -60, 40), (-600, 320, 40),
-                   (-600, 320, 420), (-620, -60, 420)],
-                  7.0 * exposure, color=(1.0, 0.88, 0.72))
+    # ONE big softbox (final art direction) — its soft-edged reflection is the
+    # only bright shape the glass sees besides the dark surround.
+    mid = subject_h * 0.55
+    soft_softbox(coll, "softbox_key", 340, 440,
+                 (-250.0, -190.0, mid + 220.0),
+                 (math.radians(52.0), 0.0, math.radians(-52.0)),
+                 24.0 * exposure)
 
     # hard spot for MNEE caustics under the glass
     sd = bpy.data.lights.new("caustic_spot", 'SPOT')
