@@ -44,13 +44,20 @@ except ImportError:
 
 HERE = Path(__file__).resolve().parent
 
-RADIAL_SEGMENTS = 288        # 9 samples per rib at RIB_COUNT=32
-RIB_COUNT = 32               # measured: 16 rising edges across the visible face
-RIB_DEPTH = 0.40             # coarse moulded flutes, ~2.3 mm pitch at the crest
+RADIAL_SEGMENTS = 288
+# Ribbing is GROUPED, not continuous: clusters of thin vertical ribs separated
+# by smooth flat panels around the circumference — the bonetic pattern in the
+# reference. 8 groups x 4 ribs = 32 grooves total, agreeing with the 16 rising
+# edges counted across the visible face.
+RIB_GROUPS = 8
+RIBS_PER_GROUP = 4
+RIB_GROUP_DUTY = 0.62        # fraction of each group period that is ribbed
+RIB_DEPTH = 0.40             # groove depth, mm
 RIB_TOP_MARGIN = 0.8         # smooth ring between the top edge and the first rib
+CAP_BEAD_CLEARANCE = 0.25    # skirt lip stops this far above the transfer bead
 THREAD_CLEARANCE = 0.30      # mm diametral gap so cap and bottle never intersect
 WALL = 1.60
-EDGE_R = 0.70                # softened top edge
+EDGE_R = 1.35                # rounded top outer edge (was 0.70 — too crisp)
 BOT_R = 0.35
 
 
@@ -69,8 +76,15 @@ BOT_R = 0.35
 #
 # top_th = how much cap sits ABOVE the sealing plane; skirt_d = how far it hangs
 # below. band_h/band_flare describe the smooth flared ring at the skirt lip.
-CLOSURE_STYLES: Dict[str, Dict[str, float]] = {
-    "short": {"skirt_d": 7.33, "od": 23.50, "top_th": 4.46,
+# skirt_d None => computed so the lip sits flush just above the transfer bead:
+#     skirt_d = bead_below_rim - bead_h/2 - CAP_BEAD_CLEARANCE
+# For 20-400 that is 10.80 - 1.50 - 0.25 = 9.05 mm (cap bottom z = 68.95,
+# bead top z = 68.70). NOTE the trade-off: the cap layer's alpha measured a
+# 7.33 mm skirt with ~2 mm of bare neck showing; "flush above the bead" was
+# then requested explicitly and wins. To restore the photo-exact reveal, set
+# skirt_d back to 7.33.
+CLOSURE_STYLES: Dict[str, Dict[str, object]] = {
+    "short": {"skirt_d": None, "od": 23.50, "top_th": 4.46,
               "band_h": 1.40, "band_flare": 0.30},
     "tall":  {"skirt_d": 13.50, "od": 23.50, "top_th": 4.46,
               "band_h": 1.40, "band_flare": 0.30},
@@ -102,7 +116,10 @@ def build_profile(fin: Dict[str, float], style: Dict[str, float]) -> Dict[str, o
     """
     T = float(fin["T"])
     E = float(fin["E"])
-    skirt_d = float(style["skirt_d"])
+    if style.get("skirt_d") is None:
+        skirt_d = float(fin["bead_below_rim"]) - float(fin["bead_h"]) / 2.0 - CAP_BEAD_CLEARANCE
+    else:
+        skirt_d = float(style["skirt_d"])
     r_out = float(style["od"]) / 2.0
     top_th = float(style.get("top_th", 1.8))
     # interior: valley clears the bottle's crest, ridge drops to just over its root
@@ -162,7 +179,18 @@ def make_modulator(prof, fin, ribs: int, rib_depth: float):
                 t = (band_top - z) / max(prof["band_h"], 1e-6)
                 return r + flare * t * t * (3.0 - 2.0 * t)
             if z < prof_top_th - EDGE_R - RIB_TOP_MARGIN:
-                return r - rib_depth * 0.5 * (1.0 - math.cos(ribs * theta))
+                # grouped ribbing: position within this group's period
+                u = (theta * RIB_GROUPS / (2.0 * math.pi)) % 1.0
+                if u >= RIB_GROUP_DUTY:
+                    return r                        # smooth flat panel
+                v = u / RIB_GROUP_DUTY * RIBS_PER_GROUP
+                # grooves at v = 0,1,..,N so the panel edges land on crests and
+                # the section reads as N thin ribs between N+1 grooves
+                cut = 0.5 * (1.0 + math.cos(2.0 * math.pi * (v % 1.0)))
+                # ease the envelope at both panel edges over ~half a rib
+                edge = min(v, RIBS_PER_GROUP - v)
+                env = min(1.0, max(0.0, edge / 0.5 + 0.5))
+                return r - rib_depth * cut * env
             return r
         if not (lo <= z <= hi) or depth_in <= 0.0:
             return r
@@ -218,7 +246,7 @@ def build(finish: str, style_name: str, clear_scene: bool = True) -> Dict[str, o
     scene.unit_settings.length_unit = 'MILLIMETERS'
 
     prof = build_profile(fin, style)
-    modulate = make_modulator(prof, fin, RIB_COUNT, RIB_DEPTH)
+    modulate = make_modulator(prof, fin, RIB_GROUPS * RIBS_PER_GROUP, RIB_DEPTH)
     verts, faces = mod.revolve_mesh(prof["loop"], RADIAL_SEGMENTS, modulate)
 
     mesh = bpy.data.meshes.new(name)
@@ -245,7 +273,7 @@ def build(finish: str, style_name: str, clear_scene: bool = True) -> Dict[str, o
         "thread_valley_dia_mm": round(prof["r_in_valley"] * 2, 3),
         "thread_ridge_dia_mm": round(prof["r_in_ridge"] * 2, 3),
         "clearance_mm": THREAD_CLEARANCE,
-        "ribs": RIB_COUNT, "rib_depth_mm": RIB_DEPTH,
+        "ribs": f"{RIB_GROUPS}x{RIBS_PER_GROUP}", "rib_depth_mm": RIB_DEPTH,
         "radial_segments": RADIAL_SEGMENTS,
         "verts": len(mesh.vertices), "faces": len(mesh.polygons),
         "tris": sum(len(p.vertices) - 2 for p in mesh.polygons),
@@ -290,6 +318,12 @@ def validate(res, fin) -> List[Tuple[bool, str]]:
     out.append((ridge_gap < 0.0,
                 f"cap ridge Ø{res['meta']['thread_ridge_dia_mm']:.2f} engages inside bottle "
                 f"crest Ø{fin['T']:.2f}"))
+    if "bead_below_rim" in fin:
+        bead_top = -(float(fin["bead_below_rim"]) - float(fin["bead_h"]) / 2.0)
+        lip = -res["prof"]["skirt_d"]
+        out.append((0.0 < lip - bead_top <= 0.6,
+                    f"lip z={lip:.2f} sits {lip - bead_top:.2f} mm above bead top "
+                    f"z={bead_top:.2f} (flush, no overlap)"))
     return out
 
 
@@ -310,7 +344,8 @@ def main() -> int:
     print(f"  height       {m['total_height_mm']} mm  (skirt {m['skirt_depth_mm']})")
     print(f"  thread       valley Ø{m['thread_valley_dia_mm']} / ridge Ø{m['thread_ridge_dia_mm']}"
           f"  clearance {m['clearance_mm']} mm")
-    print(f"  knurl        {m['ribs']} ribs × {m['rib_depth_mm']} mm")
+    print(f"  knurl        {m['ribs']} grouped ribs × {m['rib_depth_mm']} mm "
+          f"(duty {RIB_GROUP_DUTY})")
     print(f"  mesh         {m['verts']} verts · {m['tris']} tris")
     print()
     ok = True
