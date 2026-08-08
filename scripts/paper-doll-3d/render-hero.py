@@ -168,7 +168,7 @@ def soft_softbox(coll, name, w, h, loc, rot, strength, tint=(1.0, 1.0, 1.0)):
 
 
 def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone",
-                trans_card: bool = False, sweep: float = 1.0):
+                trans_card: bool = False, sweep: float = 0.3):
     """
     BRIGHT-FIELD glass stage.
 
@@ -201,14 +201,16 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
         area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
                    (math.radians(78.0), 0.0, 0.0), 420, 120,
                    140_000 * exposure * sweep)
-    # ONE big softbox key at the 8-o'clock position, upper camera-left-front,
-    # so the single soft drop shadow falls toward 2 o'clock in frame — the
-    # branded look. The bright-field washes stay: they are what keeps amber
-    # transmissive on bone, and they read as background, not as lights.
-    soft_softbox(coll, "softbox_key", 360, 460,
-                 (-270.0, -160.0, 340.0),
-                 (math.radians(50.0), 0.0, math.radians(-59.0)),
-                 34.0 * exposure)
+    # ONE huge near-frontal scrim (Aesop-style): a giant soft source close to
+    # the camera axis, slightly above and camera-left, so the glass carries one
+    # continuous soft sheen instead of a discrete patch — and the slight left
+    # offset keeps the drop shadow trailing to 2 o'clock. With the backdrop
+    # exposed as a midtone (sweep ~0.3) nothing bright sits behind the bottle,
+    # so the refracted field stops reading as "two softboxes and a strip".
+    soft_softbox(coll, "softbox_key", 620, 720,
+                 (-120.0, -320.0, 310.0),
+                 (math.radians(38.0), 0.0, math.radians(-18.0)),
+                 26.0 * exposure)
 
     # SUBTRACTIVE FLAGS — the piece a physical glass shoot always has and a CG
     # stage usually forgets. Polished glass at grazing angles mirrors whatever
@@ -221,7 +223,7 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # lighter they read as the reference's narrow dark edge band instead.
     for sx, nm in ((-1.0, "flag_left"), (1.0, "flag_right")):
         mesh = bpy.data.meshes.new(nm)
-        x = sx * 200.0
+        x = sx * 240.0
         mesh.from_pydata([(x, -150.0, 15.0), (x, -45.0, 15.0),
                           (x, -45.0, 165.0), (x, -150.0, 165.0)],
                          [], [[0, 1, 2, 3]])
@@ -229,7 +231,7 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
         fm = bpy.data.materials.get("bb_mat_flag") or bpy.data.materials.new("bb_mat_flag")
         fm.use_nodes = True
         fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-        fb.inputs["Base Color"].default_value = (0.075, 0.073, 0.070, 1.0)
+        fb.inputs["Base Color"].default_value = (0.11, 0.105, 0.10, 1.0)
         fb.inputs["Roughness"].default_value = 0.9
         mesh.materials.append(fm)
         o = bpy.data.objects.new(nm, mesh)
@@ -412,8 +414,9 @@ def main() -> int:
                    help="fraction of frame height the bottle occupies")
     p.add_argument("--elevation", type=float, default=0.0,
                    help="camera elevation; 0 = straight-on e-commerce pack shot")
-    p.add_argument("--sweep", type=float, default=1.0,
-                   help="backdrop wash level: 1.0 = approved look, 0.0 = true single light")
+    p.add_argument("--sweep", type=float, default=0.3,
+                   help="backdrop wash level: 0.3 = midtone Aesop-style default, "
+                        "1.0 = bright bone, 0.0 = softbox only")
     p.add_argument("--stage", default="packshot", choices=["packshot", "hero"],
                    help="packshot = canonical bone e-comm scene; hero = editorial stone/caustics/DOF")
     p.add_argument("--wear", type=float, default=None,
