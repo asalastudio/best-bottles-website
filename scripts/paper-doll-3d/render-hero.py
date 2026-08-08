@@ -170,7 +170,7 @@ def soft_softbox(coll, name, w, h, loc, rot, strength, tint=(1.0, 1.0, 1.0)):
 
 def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone",
                 trans_card: bool = False, sweep: float = 0.3,
-                floor_glow: float = 0.75):
+                floor_glow: float = 0.75, bounce: float = 0.90):
     """
     BRIGHT-FIELD glass stage.
 
@@ -254,7 +254,7 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
         fm = bpy.data.materials.get("bb_mat_bounce") or bpy.data.materials.new("bb_mat_bounce")
         fm.use_nodes = True
         fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-        fb.inputs["Base Color"].default_value = (0.90, 0.88, 0.83, 1.0)   # near-white bounce
+        fb.inputs["Base Color"].default_value = (bounce, bounce * 0.975, bounce * 0.92, 1.0)
         fb.inputs["Roughness"].default_value = 0.7
         mesh.materials.append(fm)
         o = bpy.data.objects.new(nm, mesh)
@@ -464,6 +464,9 @@ def main() -> int:
                    help="diagnostic: flat diffuse grey on bottle and cap. Optical "
                         "images (reflections/refractions) cannot survive clay; "
                         "geometry must. Whatever vanishes was never a shape.")
+    p.add_argument("--bounce", type=float, default=0.90,
+                   help="side bounce-wall albedo: 0.12 = dark room (rich glass, "
+                        "crisp folds), 0.90 = light tent (soft folds, sheen)")
     p.add_argument("--sweep", type=float, default=0.3,
                    help="backdrop wash level: 0.3 = midtone Aesop-style default, "
                         "1.0 = bright bone, 0.0 = softbox only")
@@ -540,7 +543,8 @@ def main() -> int:
         build_stage_hero(scene, subject_h, args.exposure)
     else:
         build_stage(scene, subject_h, args.exposure, args.backdrop,
-                    sweep=args.sweep, floor_glow=args.floor_glow)
+                    sweep=args.sweep, floor_glow=args.floor_glow,
+                    bounce=args.bounce)
     cam, dist = build_camera(scene, bpy.data.collections[STAGE], subject_h,
                              args.lens, args.fill, args.elevation if not hero else 6.0)
     if hero:
