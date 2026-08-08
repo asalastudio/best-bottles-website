@@ -137,7 +137,7 @@ CAPACITY_SPECS: Dict[int, Dict[str, object]] = {
     },
     30: {
         "height": 78.0, "diameter": 33.0, "neck": "20-400",
-        "wall": 1.80, "wall_shoulder": 2.00, "shoulder_h": 11.22, "neck_straight": 5.52,
+        "wall": 2.45, "wall_shoulder": 2.75, "shoulder_h": 11.22, "neck_straight": 5.52,
         "base_th": 4.5, "heel_r": 7.5, "push_up_h": 2.0, "contact_w": 2.5, "lip_r": 0.4,
         "label_w": 72.0, "label_h": 32.0, "label_off": 14.0,
         "ref_sku": "GBBstn1ozBlkCapSht", "shape_measured": True,

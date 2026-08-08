@@ -234,30 +234,52 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # the bottle washes out. Two near-black cards out of frame give the flanks
     # real darkness to reflect — this is where an amber bottle's deep edges
     # actually come from in product photography.
-    # DARK SIDE WALLS, room-scale. Earlier versions used card-sized flags,
-    # and their rectangular edges mirrored on the curved glass as straight
-    # diagonal seams — the "fake" angled boundaries. A real studio's dark
-    # sides are the room itself: no edge within reach of the reflection. These
-    # walls are big enough that only their darkness is visible, never their
-    # geometry. The remaining soft dark gradient at the flanks is genuine
-    # physics (grazing paths through the cavity taper) and appears on the
-    # real product photo too.
-    for sx, nm in ((-1.0, "sidewall_left"), (1.0, "sidewall_right")):
+    # LIGHT-TENT SIDES. Dark side walls were the root cause of both signature
+    # artifacts: an air-cored glass cylinder is a thick lens whose off-axis
+    # rays deflect hard toward the SIDES of the room. Dark sides made the
+    # direct-transmission window read as a crisp bright rectangle (its edges
+    # are caustic fold boundaries) bounded by dark diagonal wedges. Bone
+    # bounce walls put warm brightness where those deflected rays land, so the
+    # fold boundary has nothing to contrast against — exactly why the real
+    # product photo, shot in a white tent, shows neither artifact. Flank
+    # darkening now comes only from absorption through long glass chords,
+    # which is gradual by nature.
+    for sx, nm in ((-1.0, "bounce_left"), (1.0, "bounce_right")):
         mesh = bpy.data.meshes.new(nm)
-        x = sx * 430.0
-        mesh.from_pydata([(x, -450.0, -0.1), (x, 250.0, -0.1),
-                          (x, 250.0, 520.0), (x, -450.0, 520.0)],
+        x = sx * 280.0
+        mesh.from_pydata([(x, -420.0, -0.1), (x, 300.0, -0.1),
+                          (x, 300.0, 540.0), (x, -420.0, 540.0)],
                          [], [[0, 1, 2, 3]])
         mesh.update()
-        fm = bpy.data.materials.get("bb_mat_sidewall") or bpy.data.materials.new("bb_mat_sidewall")
+        fm = bpy.data.materials.get("bb_mat_bounce") or bpy.data.materials.new("bb_mat_bounce")
         fm.use_nodes = True
         fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-        fb.inputs["Base Color"].default_value = (0.15, 0.145, 0.14, 1.0)
-        fb.inputs["Roughness"].default_value = 0.9
+        fb.inputs["Base Color"].default_value = (0.90, 0.88, 0.83, 1.0)   # near-white bounce
+        fb.inputs["Roughness"].default_value = 0.7
         mesh.materials.append(fm)
         o = bpy.data.objects.new(nm, mesh)
         o.visible_camera = False
         coll.objects.link(o)
+
+    # CAMERA-SIDE DARK WALL — the last piece of a real light tent: the camera
+    # shoots through a slit in an otherwise dark front. The bottle's FRONT face
+    # mirrors this darkness, which is where real glass gets its deep saturated
+    # read. Without it the tent's omnidirectional brightness lays a white
+    # Fresnel veil over the whole face and the amber washes out pale.
+    mesh = bpy.data.meshes.new("camera_flag")
+    mesh.from_pydata([(-520.0, -620.0, -0.1), (520.0, -620.0, -0.1),
+                      (520.0, -620.0, 560.0), (-520.0, -620.0, 560.0)],
+                     [], [[0, 1, 2, 3]])
+    mesh.update()
+    cfm = bpy.data.materials.get("bb_mat_camflag") or bpy.data.materials.new("bb_mat_camflag")
+    cfm.use_nodes = True
+    cfb = next(n for n in cfm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    cfb.inputs["Base Color"].default_value = (0.05, 0.05, 0.05, 1.0)
+    cfb.inputs["Roughness"].default_value = 0.9
+    mesh.materials.append(cfm)
+    o = bpy.data.objects.new("camera_flag", mesh)
+    o.visible_camera = False
+    coll.objects.link(o)
 
     # TRANSMISSION CARD — hidden behind the subject; only transmission rays
     # see it. OFF BY DEFAULT: tested against the reference, dimming the centre
@@ -457,7 +479,7 @@ def main() -> int:
                    help="stage backdrop tone; bone is the house standard")
     p.add_argument("--exposure", type=float, default=1.0,
                    help="scales every light; 1.0 is calibrated for dark amber glass")
-    p.add_argument("--ambient", type=float, default=0.15,
+    p.add_argument("--ambient", type=float, default=0.20,
                    help="world background strength (fill wrap)")
     p.add_argument("--show-liquid", action="store_true")
     p.add_argument("--with-cap", action="store_true",
@@ -571,7 +593,7 @@ def main() -> int:
     if not hero:
         world = bpy.data.worlds.get("bb_stage_world") or bpy.data.worlds.new("bb_stage_world")
         world.use_nodes = True
-        world.node_tree.nodes["Background"].inputs[0].default_value = (1, 1, 1, 1)
+        world.node_tree.nodes["Background"].inputs[0].default_value = (1.0, 0.965, 0.90, 1)
         world.node_tree.nodes["Background"].inputs[1].default_value = args.ambient
         scene.world = world
 
