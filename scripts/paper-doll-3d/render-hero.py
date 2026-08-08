@@ -168,7 +168,7 @@ def soft_softbox(coll, name, w, h, loc, rot, strength, tint=(1.0, 1.0, 1.0)):
 
 
 def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bone",
-                trans_card: bool = False):
+                trans_card: bool = False, sweep: float = 1.0):
     """
     BRIGHT-FIELD glass stage.
 
@@ -186,17 +186,21 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     backdrop(coll, tone)
     mid = subject_h * 0.5
 
-    # background washes — the actual key. Aimed at the sweep BEHIND the bottle,
-    # offset left/right so neither throws the bottle's own shadow into frame.
-    area_light(coll, "bg_wash_l", (-150.0, -60.0, 260.0),
-               (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420, 560_000 * exposure)
-    area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
-               (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420, 560_000 * exposure)
-
-    # floor wash: skims the sweep base behind the subject so a straight-on
-    # camera still sees lit backdrop through the LOWER body, not dark floor
-    area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
-               (math.radians(78.0), 0.0, 0.0), 420, 120, 140_000 * exposure)
+    # Sweep washes — helper fill on the backdrop. sweep=1.0 reproduces the
+    # approved v5 look; sweep=0.0 is a true single-light setup (softbox alone,
+    # backdrop lit purely by its bounce). A parameter, not an assumption: an
+    # unasserted edit once claimed these lights were deleted while they kept
+    # rendering.
+    if sweep > 0.0:
+        area_light(coll, "bg_wash_l", (-150.0, -60.0, 260.0),
+                   (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420,
+                   560_000 * exposure * sweep)
+        area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
+                   (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420,
+                   560_000 * exposure * sweep)
+        area_light(coll, "floor_wash", (0.0, -240.0, 30.0),
+                   (math.radians(78.0), 0.0, 0.0), 420, 120,
+                   140_000 * exposure * sweep)
     # ONE big softbox key at the 8-o'clock position, upper camera-left-front,
     # so the single soft drop shadow falls toward 2 o'clock in frame — the
     # branded look. The bright-field washes stay: they are what keeps amber
@@ -212,17 +216,20 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     # the bottle washes out. Two near-black cards out of frame give the flanks
     # real darkness to reflect — this is where an amber bottle's deep edges
     # actually come from in product photography.
+    # Slimmed after review: at +/-150 and full height these mirrored as thick
+    # angled black wedges, heaviest at the base. Further out, shorter, and
+    # lighter they read as the reference's narrow dark edge band instead.
     for sx, nm in ((-1.0, "flag_left"), (1.0, "flag_right")):
         mesh = bpy.data.meshes.new(nm)
-        x = sx * 150.0
-        mesh.from_pydata([(x, -175.0, 0.0), (x, -25.0, 0.0),
-                          (x, -25.0, 190.0), (x, -175.0, 190.0)],
+        x = sx * 200.0
+        mesh.from_pydata([(x, -150.0, 15.0), (x, -45.0, 15.0),
+                          (x, -45.0, 165.0), (x, -150.0, 165.0)],
                          [], [[0, 1, 2, 3]])
         mesh.update()
         fm = bpy.data.materials.get("bb_mat_flag") or bpy.data.materials.new("bb_mat_flag")
         fm.use_nodes = True
         fb = next(n for n in fm.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
-        fb.inputs["Base Color"].default_value = (0.035, 0.035, 0.035, 1.0)
+        fb.inputs["Base Color"].default_value = (0.075, 0.073, 0.070, 1.0)
         fb.inputs["Roughness"].default_value = 0.9
         mesh.materials.append(fm)
         o = bpy.data.objects.new(nm, mesh)
@@ -405,6 +412,8 @@ def main() -> int:
                    help="fraction of frame height the bottle occupies")
     p.add_argument("--elevation", type=float, default=0.0,
                    help="camera elevation; 0 = straight-on e-commerce pack shot")
+    p.add_argument("--sweep", type=float, default=1.0,
+                   help="backdrop wash level: 1.0 = approved look, 0.0 = true single light")
     p.add_argument("--stage", default="packshot", choices=["packshot", "hero"],
                    help="packshot = canonical bone e-comm scene; hero = editorial stone/caustics/DOF")
     p.add_argument("--wear", type=float, default=None,
@@ -465,7 +474,7 @@ def main() -> int:
     if hero:
         build_stage_hero(scene, subject_h, args.exposure)
     else:
-        build_stage(scene, subject_h, args.exposure, args.backdrop)
+        build_stage(scene, subject_h, args.exposure, args.backdrop, sweep=args.sweep)
     cam, dist = build_camera(scene, bpy.data.collections[STAGE], subject_h,
                              args.lens, args.fill, args.elevation if not hero else 6.0)
     if hero:
