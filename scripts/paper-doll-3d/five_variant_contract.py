@@ -30,9 +30,30 @@ class SwirlSpec:
     diameter_mm: float = 21.0
     finish: str = "17-415"
     flute_count: int = 8
-    twist_deg: float = 70.0
-    depth_mm: float = 0.55
+    twist_deg: float = 85.0
+    depth_mm: float = 0.75
     minimum_wall_mm: float = 0.8
+
+
+@dataclass(frozen=True)
+class JunctionSpec:
+    nominal_finish_height_mm: float = 14.06
+    finish_height_mm: float = 13.76
+    band_height_mm: float = 2.0
+    band_center_z_mm: float = 1.3
+    first_thread_material_bottom_z_mm: float = 4.06
+
+    @property
+    def shoulder_to_band_gap_mm(self):
+        return self.band_center_z_mm - self.band_height_mm / 2.0
+
+    @property
+    def band_to_first_thread_gap_mm(self):
+        return (
+            self.first_thread_material_bottom_z_mm
+            - self.band_center_z_mm
+            - self.band_height_mm / 2.0
+        )
 
 
 VARIANTS = {
@@ -48,6 +69,7 @@ VARIANTS = {
 }
 
 SWIRL = SwirlSpec()
+JUNCTION_17_415 = JunctionSpec()
 
 
 def swirl_radius(radius, theta, z, outer_radius, z_min, z_max, spec=SWIRL):
@@ -65,8 +87,10 @@ def swirl_radius(radius, theta, z, outer_radius, z_min, z_max, spec=SWIRL):
         raise ValueError("swirl region must have positive height")
     t = (z - z_min) / span
     fade = math.sin(math.pi * t) ** 2
-    phase = spec.flute_count * theta - math.radians(spec.twist_deg) * t
-    groove = ((1.0 + math.cos(phase)) * 0.5) ** 2
+    phase = spec.flute_count * (
+        theta - math.radians(spec.twist_deg) * t
+    )
+    groove = (1.0 + math.cos(phase)) * 0.5
     return radius - spec.depth_mm * fade * groove
 
 

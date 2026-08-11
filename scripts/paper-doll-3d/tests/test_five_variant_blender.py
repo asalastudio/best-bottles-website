@@ -47,13 +47,36 @@ builder.build_variant("clear", save=False)
 
 after = builder.protected_snapshot()
 assert before == after, "clear variant changed protected camera/studio/light/finish state"
-assert body_before == builder.mesh_fingerprint(bpy.data.objects[builder.BODY_NAME]), (
-    "clear variant changed the approved smooth-body mesh"
+assert body_before != builder.mesh_fingerprint(bpy.data.objects[builder.BODY_NAME]), (
+    "clear variant did not replace the capped body/finish pair with one continuous shell"
 )
 assert finish_before == builder.mesh_fingerprint(bpy.data.objects[builder.FINISH_NAME]), (
     "clear variant changed the approved 17/415 finish mesh"
 )
 assert bpy.context.scene["bb_variant"] == "clear"
+continuous = bpy.data.objects[builder.BODY_NAME]
+source_finish = bpy.data.objects[builder.FINISH_NAME]
+assert continuous["bb_continuous_glass_shell"]
+assert math.isclose(continuous["bb_finish_height_mm"], 13.76, abs_tol=1e-6)
+assert math.isclose(continuous["bb_band_height_mm"], 2.0, abs_tol=1e-6)
+assert math.isclose(continuous["bb_band_center_z_mm"], 1.3, abs_tol=1e-6)
+assert source_finish.hide_render
+datum_z = continuous["bb_finish_datum_z_mm"]
+datum_faces = [
+    polygon
+    for polygon in continuous.data.polygons
+    if all(abs(continuous.data.vertices[index].co.z - datum_z) < 1e-4
+           for index in polygon.vertices)
+]
+assert not datum_faces, "continuous shell still contains a transverse datum annulus"
+thread_band_radii = [
+    (vertex.co.x ** 2 + vertex.co.y ** 2) ** 0.5
+    for vertex in continuous.data.vertices
+    if datum_z + 4.0 <= vertex.co.z <= datum_z + 12.9
+]
+assert max(thread_band_radii) >= 8.14, (
+    "continuous shell lost the 16.3 mm approved thread crest diameter"
+)
 
 
 def principled(material):
@@ -95,9 +118,7 @@ assert math.isclose(
 )
 
 body_material = bpy.data.objects[builder.BODY_NAME].data.materials[0]
-finish_material = bpy.data.objects[builder.FINISH_NAME].data.materials[0]
 assert body_material == materials["clear"]
-assert finish_material == materials["clear"]
 
 strip = builder.ensure_reflection_strip()
 assert strip.name == "BB_CARD_GLASS_REFLECTION_STRIP"
@@ -108,6 +129,17 @@ assert not strip.visible_transmission
 assert not strip.visible_shadow
 assert strip.visible_glossy
 assert any(node.type == "LIGHT_PATH" for node in strip.data.materials[0].node_tree.nodes)
+
+builder.configure_workspaces()
+assert bpy.context.window.workspace.name == "SCENE OVERVIEW"
+largest_area = max(
+    bpy.context.window.screen.areas,
+    key=lambda area: area.width * area.height,
+)
+assert largest_area.type == "VIEW_3D"
+assert strip.display_type == "BOUNDS"
+assert strip.show_name
+assert not bpy.data.objects[builder.BODY_NAME].hide_viewport
 
 # Reload the immutable source before exercising the sole geometry exception.
 bpy.ops.wm.open_mainfile(filepath=str(builder.LOCKED_BASELINE))
@@ -123,10 +155,10 @@ assert builder.mesh_fingerprint(finish) == finish_fingerprint
 assert not any(modifier.type == "DISPLACE" for modifier in swirl.modifiers)
 assert math.isclose(swirl.dimensions.x, 21.0, abs_tol=0.5)
 assert math.isclose(swirl.dimensions.y, 21.0, abs_tol=0.5)
-assert math.isclose(finish.location.z + finish.dimensions.z, 74.0, abs_tol=1.0)
+assert math.isclose(swirl.dimensions.z, 74.0, abs_tol=1.0)
 assert swirl["bb_swirl_flute_count"] == 8
-assert swirl["bb_swirl_twist_deg"] == 70.0
-assert swirl["bb_swirl_depth_mm"] == 0.55
+assert swirl["bb_swirl_twist_deg"] == 85.0
+assert swirl["bb_swirl_depth_mm"] == 0.75
 assert swirl["bb_min_wall_mm"] >= 0.8
 assert swirl["bb_geometry_authority"] == "photo-solved relief; measured envelope"
 

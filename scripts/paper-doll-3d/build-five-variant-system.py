@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 import bpy
-from mathutils import Vector
+from mathutils import Quaternion, Vector
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -265,12 +265,99 @@ def ensure_reflection_strip():
     return card
 
 
+def _largest_area(screen):
+    return max(screen.areas, key=lambda area: area.width * area.height)
+
+
+def _configure_view(workspace, view_location, distance, rotation, shading="SOLID"):
+    if workspace is None or bpy.context.window is None:
+        return
+    bpy.context.window.workspace = workspace
+    screen = bpy.context.window.screen
+    area = _largest_area(screen)
+    area.type = "VIEW_3D"
+    space = area.spaces.active
+    space.clip_start = 0.1
+    space.clip_end = 10000.0
+    space.shading.type = shading
+    space.shading.color_type = "MATERIAL"
+    space.overlay.show_floor = True
+    space.overlay.show_axis_x = True
+    space.overlay.show_axis_y = True
+    space.overlay.show_extras = True
+    space.overlay.show_text = True
+    space.overlay.show_relationship_lines = True
+    space.overlay.show_outline_selected = True
+    region = space.region_3d
+    region.view_location = Vector(view_location)
+    region.view_distance = distance
+    region.view_rotation = Quaternion(rotation)
+    region.view_perspective = "PERSP"
+
+
+def configure_workspaces():
+    """Save understandable overview, product, and lighting workspaces."""
+    strip = ensure_reflection_strip()
+    for name in (
+        "BB_LIGHT_KEY_SOFTBOX",
+        "BB_CARD_FILL_RIGHT",
+        "BB_CARD_TOP",
+        "BB_LIGHT_SWEEP_WASH",
+        strip.name,
+    ):
+        obj = bpy.data.objects.get(name)
+        if obj is not None:
+            obj.display_type = "BOUNDS"
+            obj.show_name = True
+            obj.show_in_front = True
+    studio = bpy.data.objects.get("BB_STUDIO_SWEEP")
+    if studio is not None:
+        studio.display_type = "TEXTURED"
+        studio.show_name = True
+    body = bpy.data.objects.get(BODY_NAME)
+    if body is not None:
+        body.hide_viewport = False
+        body.display_type = "TEXTURED"
+        body.show_name = True
+    finish = bpy.data.objects.get(FINISH_NAME)
+    if finish is not None:
+        finish.hide_viewport = bool(finish.get("bb_source_geometry", False))
+        finish.display_type = "WIRE" if finish.hide_viewport else "TEXTURED"
+        finish.show_name = True
+
+    overview = bpy.data.workspaces.get("SCENE OVERVIEW")
+    detail = bpy.data.workspaces.get("PRODUCT DETAIL")
+    lighting = bpy.data.workspaces.get("LIGHTING PREVIEW")
+    overview_rotation = (0.712, 0.441, 0.287, 0.464)
+    front_rotation = (0.7071068, 0.7071068, 0.0, 0.0)
+    _configure_view(overview, (0.0, -80.0, 260.0), 1450.0, overview_rotation)
+    _configure_view(detail, (0.0, 0.0, 36.0), 95.0, front_rotation, "MATERIAL")
+    _configure_view(lighting, (0.0, 0.0, 36.0), 95.0, front_rotation, "RENDERED")
+    if lighting is not None and bpy.context.window is not None:
+        bpy.context.window.workspace = lighting
+        area = _largest_area(bpy.context.window.screen)
+        space = area.spaces.active
+        space.shading.use_scene_lights_render = True
+        space.shading.use_scene_world_render = True
+        space.overlay.show_overlays = False
+        space.region_3d.view_perspective = "CAMERA"
+    if overview is not None and bpy.context.window is not None:
+        bpy.context.window.workspace = overview
+
+    scene = bpy.context.scene
+    scene["interactive_scene_ready"] = True
+    scene["interactive_scene_notes"] = (
+        "SCENE OVERVIEW shows the complete studio and glossy-only reflection "
+        "strip; PRODUCT DETAIL frames the bottle; LIGHTING PREVIEW opens in "
+        "the production camera with scene lighting."
+    )
+
+
 def _assign_variant_material(name):
     material = build_glass_material(name)
-    for object_name in (BODY_NAME, FINISH_NAME):
-        obj = bpy.data.objects[object_name]
-        obj.data.materials.clear()
-        obj.data.materials.append(material)
+    obj = bpy.data.objects[BODY_NAME]
+    obj.data.materials.clear()
+    obj.data.materials.append(material)
     return material
 
 
@@ -285,12 +372,75 @@ def _densify_profile(profile, max_z_step=0.55):
     return dense
 
 
-def build_swirl_body():
-    """Replace the smooth body with a true inward-molded helical body.
+def _continuous_profile(master, bottle_spec, finish_spec):
+    """Splice body and finish outlines without a transverse datum annulus."""
+    body_profile = master.cylinder_profile(bottle_spec, finish_spec)
+    finish_profile = master.finish_profile(finish_spec)
+    datum_z = bottle_spec["height"] - finish_spec["finish_h"]
+    outer_radius = finish_spec["neck_d"] / 2.0
+    bore_radius = finish_spec["bore_d"] / 2.0
 
-    The engineering finish remains the immutable baseline mesh. Only its
-    attachment datum moves to the 74 mm measured overall height.
-    """
+    outer_index = next(
+        index for index, (radius, z) in enumerate(body_profile)
+        if math.isclose(z, datum_z, abs_tol=1e-6)
+        and math.isclose(radius, outer_radius, abs_tol=1e-6)
+    )
+    inner_index = next(
+        index for index in range(outer_index + 1, len(body_profile))
+        if math.isclose(body_profile[index][1], datum_z, abs_tol=1e-6)
+        and math.isclose(body_profile[index][0], bore_radius, abs_tol=1e-6)
+    )
+    finish_outer_index = max(
+        index for index, (radius, z) in enumerate(finish_profile)
+        if math.isclose(z, 0.0, abs_tol=1e-6)
+        and math.isclose(radius, outer_radius, abs_tol=1e-6)
+    )
+    finish_outer_to_inner = list(reversed(finish_profile[:finish_outer_index + 1]))
+    shifted_finish = [
+        (radius, z + datum_z) for radius, z in finish_outer_to_inner
+    ]
+    assert math.isclose(shifted_finish[0][0], outer_radius, abs_tol=1e-6)
+    assert math.isclose(shifted_finish[-1][0], bore_radius, abs_tol=1e-6)
+
+    return (
+        body_profile[:outer_index + 1]
+        + shifted_finish[1:]
+        + body_profile[inner_index + 1:]
+    ), datum_z
+
+
+def _union_exact(base, addition):
+    """Union a deeply embedded swept helix into the continuous neck wall."""
+    import bmesh
+
+    for obj in (base, addition):
+        bm = bmesh.new()
+        bm.from_mesh(obj.data)
+        bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)
+        bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+        bm.to_mesh(obj.data)
+        bm.free()
+    bpy.ops.object.select_all(action="DESELECT")
+    base.select_set(True)
+    bpy.context.view_layer.objects.active = base
+    modifier = base.modifiers.new("APPROVED_HELIX_UNION", "BOOLEAN")
+    modifier.operation = "UNION"
+    modifier.solver = "EXACT"
+    modifier.object = addition
+    bpy.ops.object.modifier_apply(modifier=modifier.name)
+    bpy.data.objects.remove(addition, do_unlink=True)
+    bm = bmesh.new()
+    bm.from_mesh(base.data)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(base.data)
+    bm.free()
+    for polygon in base.data.polygons:
+        polygon.use_smooth = True
+
+
+def build_continuous_body(name):
+    """Build one continuous glass shell with the approved 17/415 helix."""
     source = bpy.data.objects[BODY_NAME]
     collections = list(source.users_collection)
     parent = source.parent
@@ -303,10 +453,14 @@ def build_swirl_body():
     master = _load_master_builder()
     bottle_spec = dict(master.CYL_SPECS["009"])
     finish_spec = dict(master.FINISH_MASTERS["17-415"])
-    bottle_spec["height"] = contract.SWIRL.height_mm
-    bottle_spec["diameter"] = contract.SWIRL.diameter_mm
-    datum_z = bottle_spec["height"] - finish_spec["finish_h"]
-    profile = _densify_profile(master.cylinder_profile(bottle_spec, finish_spec))
+    finish_spec["bead_z"] = contract.JUNCTION_17_415.band_center_z_mm
+    finish_spec["bead_h"] = contract.JUNCTION_17_415.band_height_mm
+    if name == "swirl":
+        bottle_spec["height"] = contract.SWIRL.height_mm
+        bottle_spec["diameter"] = contract.SWIRL.diameter_mm
+    profile, datum_z = _continuous_profile(master, bottle_spec, finish_spec)
+    if name == "swirl":
+        profile = _densify_profile(profile)
     outer_radius = bottle_spec["diameter"] / 2.0
     relief_z_min = 4.0
     relief_z_max = datum_z - 4.0
@@ -323,10 +477,19 @@ def build_swirl_body():
         )
 
     replacement = master.revolve(
-        "BB_BTL_CYL_SWIRL_010ML_001", profile, modulate=molded_radius
+        "BB_BTL_CYL_CONTINUOUS_010ML_001",
+        profile,
+        segments=512,
+        modulate=molded_radius if name == "swirl" else None,
     )
     for collection in collections:
         collection.objects.link(replacement)
+    thread = master.helical_thread_object(
+        finish_spec, "BB_FIN_17_415_APPROVED_HELIX_WORKING"
+    )
+    thread.location.z = datum_z
+    collections[0].objects.link(thread)
+    _union_exact(replacement, thread)
     replacement.parent = parent
     replacement.location = location
     replacement.rotation_euler = rotation
@@ -336,26 +499,46 @@ def build_swirl_body():
 
     bpy.data.objects.remove(source, do_unlink=True)
     replacement.name = BODY_NAME
-    replacement.data.name = "BB_BTL_CYL_SWIRL_010ML_001_MESH"
-    replacement["asset_id"] = "BB_BTL_CYL_SWIRL_010ML_001"
-    replacement["height_mm"] = contract.SWIRL.height_mm
-    replacement["diameter"] = contract.SWIRL.diameter_mm
-    replacement["neck_finish"] = contract.SWIRL.finish
-    replacement["bb_swirl_flute_count"] = contract.SWIRL.flute_count
-    replacement["bb_swirl_twist_deg"] = contract.SWIRL.twist_deg
-    replacement["bb_swirl_depth_mm"] = contract.SWIRL.depth_mm
-    replacement["bb_relief_z_min_mm"] = relief_z_min
-    replacement["bb_relief_z_max_mm"] = relief_z_max
-    replacement["bb_min_wall_mm"] = bottle_spec["wall"] - contract.SWIRL.depth_mm
-    replacement["bb_geometry_authority"] = "photo-solved relief; measured envelope"
+    replacement.data.name = f"BB_BTL_CYL_{name.upper()}_CONTINUOUS_MESH"
+    replacement["asset_id"] = (
+        "BB_BTL_CYL_SWIRL_010ML_001"
+        if name == "swirl" else "BB_BTL_CYL_010ML_CONTINUOUS_001"
+    )
+    replacement["height_mm"] = bottle_spec["height"]
+    replacement["diameter"] = bottle_spec["diameter"]
+    replacement["neck_finish"] = "17-415"
+    replacement["bb_continuous_glass_shell"] = True
+    replacement["bb_finish_datum_z_mm"] = datum_z
+    replacement["bb_finish_height_mm"] = finish_spec["finish_h"]
+    replacement["bb_nominal_finish_height_mm"] = finish_spec["nominal_finish_h"]
+    replacement["bb_band_height_mm"] = finish_spec["bead_h"]
+    replacement["bb_band_center_z_mm"] = finish_spec["bead_z"]
+    replacement["bb_thread_pitch_mm"] = finish_spec["pitch"]
+    replacement["bb_thread_turns"] = finish_spec["turns"]
+    replacement["bb_thread_material_envelope_mm"] = finish_spec["thread_material_envelope"]
+    if name == "swirl":
+        replacement["bb_swirl_flute_count"] = contract.SWIRL.flute_count
+        replacement["bb_swirl_twist_deg"] = contract.SWIRL.twist_deg
+        replacement["bb_swirl_depth_mm"] = contract.SWIRL.depth_mm
+        replacement["bb_relief_z_min_mm"] = relief_z_min
+        replacement["bb_relief_z_max_mm"] = relief_z_max
+        replacement["bb_min_wall_mm"] = bottle_spec["wall"] - contract.SWIRL.depth_mm
+        replacement["bb_geometry_authority"] = "photo-solved relief; measured envelope"
 
     finish = bpy.data.objects[FINISH_NAME]
-    finish.location.z = datum_z
+    finish["bb_source_geometry"] = True
+    finish["bb_source_role"] = "immutable approved finish reference; not rendered"
+    finish.hide_render = True
+    finish.hide_viewport = True
     if attachment is not None:
         attachment.parent = replacement
-        attachment.location = (0.0, 0.0, contract.SWIRL.height_mm)
+        attachment.location = (0.0, 0.0, bottle_spec["height"])
     bpy.context.view_layer.update()
     return replacement
+
+
+def build_swirl_body():
+    return build_continuous_body("swirl")
 
 
 def _assert_protected_unchanged(before, after, name):
@@ -394,10 +577,10 @@ def build_variant(name, *, save=False, output=None):
         "approved smooth body" if not contract.VARIANTS[name].allows_body_geometry_change
         else "dedicated molded helical body"
     )
-    if name == "swirl":
-        build_swirl_body()
+    build_continuous_body(name)
     _assign_variant_material(name)
     ensure_reflection_strip()
+    configure_workspaces()
     after = protected_snapshot()
     _assert_protected_unchanged(before, after, name)
     if save:

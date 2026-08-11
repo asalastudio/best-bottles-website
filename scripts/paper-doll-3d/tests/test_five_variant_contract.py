@@ -48,8 +48,23 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertEqual(swirl.diameter_mm, 21.0)
         self.assertEqual(swirl.finish, "17-415")
         self.assertEqual(swirl.flute_count, 8)
-        self.assertEqual(swirl.twist_deg, 70.0)
-        self.assertEqual(swirl.depth_mm, 0.55)
+        self.assertEqual(swirl.twist_deg, 85.0)
+        self.assertEqual(swirl.depth_mm, 0.75)
+
+    def test_17_415_finish_height_remains_at_lower_drawing_tolerance(self):
+        junction = self.contract.JUNCTION_17_415
+        self.assertEqual(junction.finish_height_mm, 13.76)
+        self.assertEqual(junction.nominal_finish_height_mm, 14.06)
+
+    def test_bottom_band_matches_drawing_and_spacing_rule(self):
+        junction = self.contract.JUNCTION_17_415
+        self.assertEqual(junction.band_height_mm, 2.0)
+        self.assertEqual(junction.band_center_z_mm, 1.3)
+        self.assertAlmostEqual(junction.shoulder_to_band_gap_mm, 0.3)
+        self.assertLessEqual(
+            junction.shoulder_to_band_gap_mm,
+            junction.band_to_first_thread_gap_mm,
+        )
 
     def test_swirl_is_inward_and_respects_wall_gate(self):
         swirl = self.contract.SWIRL
@@ -73,6 +88,32 @@ class FiveVariantContractTests(unittest.TestCase):
                         abs_tol=1e-9,
                     )
                 )
+
+    def test_each_flute_rotates_by_the_full_photo_solved_twist(self):
+        swirl = self.contract.SWIRL
+        z_min, z_max = 4.0, 56.0
+        t = 0.25
+        z = z_min + (z_max - z_min) * t
+        expected_groove_angle = math.radians(swirl.twist_deg * t)
+        divided_angle = expected_groove_angle / swirl.flute_count
+        expected_radius = self.contract.swirl_radius(
+            10.5, expected_groove_angle, z, 10.5, z_min, z_max, swirl
+        )
+        divided_radius = self.contract.swirl_radius(
+            10.5, divided_angle, z, 10.5, z_min, z_max, swirl
+        )
+        self.assertLess(expected_radius, divided_radius - 0.1)
+
+    def test_molded_trough_has_broad_shoulders(self):
+        swirl = self.contract.SWIRL
+        z_min, z_max = 4.0, 56.0
+        z = (z_min + z_max) * 0.5
+        center_angle = math.radians(swirl.twist_deg * 0.5)
+        quarter_phase_angle = center_angle + math.pi / (2 * swirl.flute_count)
+        radius = self.contract.swirl_radius(
+            10.5, quarter_phase_angle, z, 10.5, z_min, z_max, swirl
+        )
+        self.assertLessEqual(radius, 10.15)
 
     def test_inner_or_non_body_vertices_are_never_modulated(self):
         swirl = self.contract.SWIRL

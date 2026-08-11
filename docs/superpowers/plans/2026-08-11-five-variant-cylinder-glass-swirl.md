@@ -28,6 +28,13 @@ against the locked baseline and reject any drift in protected data.
 - Clear, frosted, cobalt, and amber retain the baseline smooth-body mesh.
 - All five retain the exact locked 17/415 finish mesh: two turns, `2.70 mm`
   visual pitch, `8.05 mm` material envelope, `+0.25 mm` group offset.
+- User correction from the drawing: the renderable bottle is one continuous
+  glass shell through the shoulder/finish junction. The preserved source
+  finish remains in the file, but the two closed meshes cannot render on top
+  of each other at the datum.
+- The bottom junction band is `2.0 mm` high, centered `1.3 mm` above the
+  attachment datum, leaving a `0.3 mm` shoulder-to-band land. That lower gap
+  is no larger than the band-to-first-thread gap.
 - Camera, backdrop, key, fill, top card, and sweep wash remain numerically
   unchanged.
 - Existing key remains responsible for the 2:00 right-cast shadow.
@@ -36,8 +43,10 @@ against the locked baseline and reject any drift in protected data.
 - Swirl height is `74 ±1 mm`, maximum diameter `21 ±0.5 mm`, finish `17-415`,
   and minimum wall thickness `0.8 mm`.
 - Swirl relief is real outer-surface geometry; its cavity remains smooth.
-- Selected photo-solved swirl candidate: `8` flutes, `70°` body-region twist,
-  `0.55 mm` maximum inward indentation. Preserve these as explicit metadata.
+- Selected after the first glass proof: `8` flutes, `85°` body-region twist,
+  `0.75 mm` maximum inward indentation. The initial `8 / 70° / 0.55 mm`
+  candidate read as gentle waviness rather than molded relief. Preserve the
+  selected values as explicit metadata.
 - Outputs go only to new working/render directories.
 
 ---
