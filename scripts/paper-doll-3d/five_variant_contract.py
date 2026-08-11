@@ -1,0 +1,76 @@
+"""Source-independent contracts for the Best Bottles five-variant family.
+
+This module deliberately has no Blender dependency. Geometry math and the
+approved material parameters can therefore be regression-tested without
+launching Blender, while the scene builder consumes the same immutable values.
+"""
+
+from dataclasses import dataclass
+import hashlib
+import math
+from typing import Optional, Tuple
+
+
+Color = Tuple[float, float, float]
+
+
+@dataclass(frozen=True)
+class VariantSpec:
+    name: str
+    allows_body_geometry_change: bool
+    roughness: float
+    absorption_color: Optional[Color] = None
+    density: Optional[float] = None
+    frosted: bool = False
+
+
+@dataclass(frozen=True)
+class SwirlSpec:
+    height_mm: float = 74.0
+    diameter_mm: float = 21.0
+    finish: str = "17-415"
+    flute_count: int = 8
+    twist_deg: float = 70.0
+    depth_mm: float = 0.55
+    minimum_wall_mm: float = 0.8
+
+
+VARIANTS = {
+    "clear": VariantSpec("clear", False, 0.025),
+    "frosted": VariantSpec("frosted", False, 0.28, frosted=True),
+    "cobalt": VariantSpec(
+        "cobalt", False, 0.025, absorption_color=(0.018, 0.045, 0.80), density=0.85
+    ),
+    "amber": VariantSpec(
+        "amber", False, 0.025, absorption_color=(0.50, 0.22, 0.055), density=0.95
+    ),
+    "swirl": VariantSpec("swirl", True, 0.025),
+}
+
+SWIRL = SwirlSpec()
+
+
+def swirl_radius(radius, theta, z, outer_radius, z_min, z_max, spec=SWIRL):
+    """Return a real inward-only multi-start helical molded radius.
+
+    Only vertices within 0.8 mm of the nominal outer envelope are eligible.
+    This keeps the inner cavity smooth. A squared sinusoid gives broad molded
+    troughs rather than sharp screw-like grooves, and the vertical sine fade
+    returns the relief to the smooth body before the heel and shoulder.
+    """
+    if radius < outer_radius - 0.8 or not z_min <= z <= z_max:
+        return radius
+    span = z_max - z_min
+    if span <= 0:
+        raise ValueError("swirl region must have positive height")
+    t = (z - z_min) / span
+    fade = math.sin(math.pi * t) ** 2
+    phase = spec.flute_count * theta - math.radians(spec.twist_deg) * t
+    groove = ((1.0 + math.cos(phase)) * 0.5) ** 2
+    return radius - spec.depth_mm * fade * groove
+
+
+def fingerprint_values(values, digits=6):
+    """Fingerprint numeric state after stable, precision-bounded rounding."""
+    encoded = "|".join(f"{float(value):.{digits}f}" for value in values)
+    return hashlib.sha256(encoded.encode("utf-8")).hexdigest()
