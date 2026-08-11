@@ -19,10 +19,45 @@ class VariantSpec:
     name: str
     allows_body_geometry_change: bool
     roughness: float
+    ior: float = 1.52
+    transmission: float = 1.0
     absorption_color: Optional[Color] = None
     density: Optional[float] = None
     frosted: bool = False
     surface_tint: Color = (1.0, 1.0, 1.0)
+    frost_scale: Optional[float] = None
+    frost_strength: Optional[float] = None
+    frost_distance: Optional[float] = None
+
+
+@dataclass(frozen=True)
+class PrecisionShoulderSpec:
+    body_radius_mm: float = 9.85
+    finish_root_radius_mm: float = 7.40
+    datum_z_mm: float = 58.24
+    convex_radius_mm: float = 1.75
+    concave_radius_mm: float = 0.80
+    wall_mm: float = 1.60
+    base_mm: float = 3.50
+
+
+@dataclass(frozen=True)
+class ShoulderSolution:
+    angle_rad: float
+    transition_height_mm: float
+    start_z_mm: float
+
+
+@dataclass(frozen=True)
+class TransmissionCardSpec:
+    width_mm: float = 140.0
+    height_mm: float = 220.0
+    location_mm: Tuple[float, float, float] = (-35.0, 105.0, 95.0)
+    emission_strength: float = 0.60
+    visible_camera: bool = False
+    visible_shadow: bool = False
+    visible_transmission: bool = True
+    visible_glossy: bool = False
 
 
 @dataclass(frozen=True)
@@ -65,17 +100,18 @@ class JunctionSpec:
 
 
 VARIANTS = {
-    "clear": VariantSpec("clear", False, 0.025),
-    "frosted": VariantSpec("frosted", False, 0.28, frosted=True),
+    "clear": VariantSpec("clear", False, 0.018),
+    "frosted": VariantSpec(
+        "frosted", False, 0.22, frosted=True,
+        frost_scale=85.0, frost_strength=0.04, frost_distance=0.012,
+    ),
     "cobalt": VariantSpec(
-        "cobalt", False, 0.012,
-        absorption_color=(0.002, 0.008, 0.95), density=0.65,
-        surface_tint=(0.005, 0.012, 0.65),
+        "cobalt", False, 0.018,
+        absorption_color=(0.003, 0.012, 0.92), density=0.55,
     ),
     "amber": VariantSpec(
-        "amber", False, 0.012,
-        absorption_color=(0.50, 0.22, 0.055), density=0.65,
-        surface_tint=(0.35, 0.07, 0.008),
+        "amber", False, 0.020,
+        absorption_color=(0.55, 0.20, 0.035), density=0.60,
     ),
     "swirl": VariantSpec("swirl", True, 0.025),
 }
@@ -85,6 +121,18 @@ SWIRL_CANDIDATES = {
     12: SwirlSpec(flute_count=12),
 }
 JUNCTION_17_415 = JunctionSpec()
+SHOULDER_009 = PrecisionShoulderSpec()
+TRANSMISSION_CARD_009 = TransmissionCardSpec()
+
+
+def shoulder_solution(spec):
+    span = spec.body_radius_mm - spec.finish_root_radius_mm
+    radius_sum = spec.convex_radius_mm + spec.concave_radius_mm
+    if radius_sum <= span:
+        raise ValueError("precision shoulder radii must exceed radial span")
+    angle = math.acos(1.0 - span / radius_sum)
+    height = radius_sum * math.sin(angle)
+    return ShoulderSolution(angle, height, spec.datum_z_mm - height)
 
 
 def smoothstep01(value):

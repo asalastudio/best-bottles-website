@@ -38,17 +38,48 @@ class FiveVariantContractTests(unittest.TestCase):
                 )
         self.assertTrue(self.contract.VARIANTS["swirl"].allows_body_geometry_change)
 
+    def test_precision_shoulder_contract(self):
+        shoulder = self.contract.SHOULDER_009
+        solved = self.contract.shoulder_solution(shoulder)
+        self.assertAlmostEqual(shoulder.body_radius_mm, 9.85)
+        self.assertAlmostEqual(shoulder.finish_root_radius_mm, 7.40)
+        self.assertAlmostEqual(shoulder.datum_z_mm, 58.24)
+        self.assertAlmostEqual(shoulder.convex_radius_mm, 1.75)
+        self.assertAlmostEqual(shoulder.concave_radius_mm, 0.80)
+        self.assertAlmostEqual(shoulder.wall_mm, 1.60)
+        self.assertAlmostEqual(shoulder.base_mm, 3.50)
+        self.assertAlmostEqual(solved.transition_height_mm, 2.548, places=3)
+        self.assertGreater(solved.start_z_mm, 55.6)
+        self.assertLess(solved.start_z_mm, 55.8)
+
+    def test_production_glass_contract(self):
+        for name in ("clear", "frosted", "cobalt", "amber"):
+            with self.subTest(name=name):
+                spec = self.contract.VARIANTS[name]
+                self.assertEqual(spec.ior, 1.52)
+                self.assertEqual(spec.transmission, 1.0)
+                self.assertEqual(spec.surface_tint, (1.0, 1.0, 1.0))
+        self.assertIsNone(self.contract.VARIANTS["clear"].absorption_color)
+        self.assertIsNone(self.contract.VARIANTS["frosted"].absorption_color)
+        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.55)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.60)
+
+    def test_transmission_card_contract(self):
+        card = self.contract.TRANSMISSION_CARD_009
+        self.assertEqual(card.width_mm, 140.0)
+        self.assertEqual(card.height_mm, 220.0)
+        self.assertFalse(card.visible_camera)
+        self.assertFalse(card.visible_shadow)
+        self.assertTrue(card.visible_transmission)
+        self.assertFalse(card.visible_glossy)
+
     def test_colored_density_candidates_resolve_to_approved_values(self):
-        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.65)
+        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.55)
         self.assertEqual(
             self.contract.VARIANTS["cobalt"].absorption_color,
-            (0.002, 0.008, 0.95),
+            (0.003, 0.012, 0.92),
         )
-        self.assertEqual(
-            self.contract.VARIANTS["cobalt"].surface_tint,
-            (0.005, 0.012, 0.65),
-        )
-        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.65)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.60)
 
     def test_swirl_comparison_has_only_ten_and_twelve_flute_candidates(self):
         candidates = self.contract.SWIRL_CANDIDATES
@@ -98,10 +129,10 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertEqual(junction.runout_overlap_deg, 20.0)
 
     def test_colored_glass_is_luminous_not_overabsorbed(self):
-        self.assertEqual(self.contract.VARIANTS["cobalt"].roughness, 0.012)
-        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.65)
-        self.assertEqual(self.contract.VARIANTS["amber"].roughness, 0.012)
-        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.65)
+        self.assertEqual(self.contract.VARIANTS["cobalt"].roughness, 0.018)
+        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.55)
+        self.assertEqual(self.contract.VARIANTS["amber"].roughness, 0.020)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.60)
 
     def test_swirl_is_inward_and_respects_wall_gate(self):
         for swirl in self.contract.SWIRL_CANDIDATES.values():
