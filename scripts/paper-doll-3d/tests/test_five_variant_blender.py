@@ -67,7 +67,17 @@ assert math.isclose(
     continuous["bb_thread_runout_overlap_deg"], 20.0, abs_tol=1e-6
 )
 clear_thread_source_fingerprint = continuous["bb_thread_source_fingerprint"]
-assert len(clear_thread_source_fingerprint) == 64
+assert clear_thread_source_fingerprint == (
+    "016804a72dc0e7e1197d76d92a20ce84bbac75944a876dda6d2f34712129b39f"
+)
+assert continuous["bb_precision_shoulder"]
+assert math.isclose(
+    continuous["bb_shoulder_start_z_mm"], 55.692, abs_tol=0.01
+)
+assert math.isclose(
+    continuous["bb_shoulder_end_z_mm"], 58.24, abs_tol=1e-6
+)
+assert continuous["bb_min_smooth_wall_mm"] >= 1.5
 assert source_finish.hide_render
 datum_z = continuous["bb_finish_datum_z_mm"]
 datum_faces = [
@@ -77,6 +87,36 @@ datum_faces = [
            for index in polygon.vertices)
 ]
 assert not datum_faces, "continuous shell still contains a transverse datum annulus"
+straight_body_radii = [
+    (vertex.co.x ** 2 + vertex.co.y ** 2) ** 0.5
+    for vertex in continuous.data.vertices
+    if abs(vertex.co.z - continuous["bb_shoulder_start_z_mm"]) < 1e-3
+    and (vertex.co.x ** 2 + vertex.co.y ** 2) ** 0.5 > 9.0
+]
+assert straight_body_radii
+assert max(abs(radius - 9.85) for radius in straight_body_radii) < 1e-3
+master_module = builder._load_master_builder()
+profile_spec = dict(master_module.CYL_SPECS["009"])
+profile_finish = dict(master_module.FINISH_MASTERS["17-415"])
+raw_profile = builder._precision_009_body_profile(
+    master_module, profile_spec, profile_finish
+)
+outer_end_index = next(
+    index
+    for index, (radius, z) in enumerate(raw_profile)
+    if math.isclose(radius, 7.4, abs_tol=1e-6)
+    and math.isclose(z, 58.24, abs_tol=1e-6)
+)
+outer_ring_radii = [
+    radius
+    for radius, z in raw_profile[:outer_end_index + 1]
+    if continuous["bb_shoulder_start_z_mm"] - 1e-4 <= z <= 58.24 + 1e-4
+]
+assert len(outer_ring_radii) >= 40
+assert all(
+    next_radius <= radius + 1e-4
+    for radius, next_radius in zip(outer_ring_radii, outer_ring_radii[1:])
+)
 thread_band_radii = [
     (vertex.co.x ** 2 + vertex.co.y ** 2) ** 0.5
     for vertex in continuous.data.vertices
@@ -104,7 +144,7 @@ for name in ("clear", "cobalt", "amber", "swirl"):
     shader = principled(material)
     assert shader.inputs["Transmission Weight"].default_value == 1.0
     assert shader.inputs["IOR"].default_value == 1.5
-    expected_roughness = 0.012 if name in ("cobalt", "amber") else 0.025
+    expected_roughness = builder.contract.VARIANTS[name].roughness
     assert math.isclose(
         shader.inputs["Roughness"].default_value,
         expected_roughness,
@@ -126,8 +166,8 @@ cobalt_volume = volume_absorption(materials["cobalt"])
 amber_volume = volume_absorption(materials["amber"])
 assert cobalt_volume is not None
 assert amber_volume is not None
-assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.65, abs_tol=1e-6)
-assert math.isclose(amber_volume.inputs["Density"].default_value, 0.65, abs_tol=1e-6)
+assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.55, abs_tol=1e-6)
+assert math.isclose(amber_volume.inputs["Density"].default_value, 0.60, abs_tol=1e-6)
 assert volume_absorption(materials["clear"]) is None
 assert volume_absorption(materials["swirl"]) is None
 
@@ -135,7 +175,7 @@ frosted = materials["frosted"]
 assert any(node.type == "TEX_NOISE" for node in frosted.node_tree.nodes)
 assert any(node.type == "BUMP" for node in frosted.node_tree.nodes)
 assert math.isclose(
-    principled(frosted).inputs["Roughness"].default_value, 0.28, abs_tol=1e-6
+    principled(frosted).inputs["Roughness"].default_value, 0.22, abs_tol=1e-6
 )
 
 body_material = bpy.data.objects[builder.BODY_NAME].data.materials[0]

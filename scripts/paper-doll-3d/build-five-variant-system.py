@@ -377,9 +377,108 @@ def _densify_profile(profile, max_z_step=0.55, z_max=None):
     return dense
 
 
-def _continuous_profile(master, bottle_spec, finish_spec):
+def _precision_009_body_profile(master, bottle_spec, finish_spec):
+    """Return the corrected 9 ml body outline below the immutable finish."""
+    shoulder = contract.SHOULDER_009
+    solved = contract.shoulder_solution(shoulder)
+    radius = bottle_spec["diameter"] / 2.0
+    finish_radius = finish_spec["neck_d"] / 2.0
+    bore_radius = finish_spec["bore_d"] / 2.0
+    datum_z = bottle_spec["height"] - finish_spec["finish_h"]
+    wall = bottle_spec["wall"]
+    if not math.isclose(radius, shoulder.body_radius_mm, abs_tol=1e-6):
+        raise ValueError("9 ml precision shoulder requires the 19.7 mm body")
+    if not math.isclose(
+        finish_radius, shoulder.finish_root_radius_mm, abs_tol=1e-6
+    ):
+        raise ValueError("9 ml precision shoulder requires the 14.8 mm finish root")
+    if not math.isclose(datum_z, shoulder.datum_z_mm, abs_tol=1e-6):
+        raise ValueError("9 ml precision shoulder datum drifted")
+
+    angle = solved.angle_rad
+    convex = shoulder.convex_radius_mm
+    concave = shoulder.concave_radius_mm
+    steps = 22
+
+    def shoulder_points(rad_out, rad_in):
+        points = []
+        for index in range(steps + 1):
+            phi = angle * index / steps
+            points.append(
+                (
+                    (radius - convex) + rad_out * math.cos(phi),
+                    solved.start_z_mm + rad_out * math.sin(phi),
+                )
+            )
+        for index in range(steps, -1, -1):
+            phi = angle * index / steps
+            points.append(
+                (
+                    (finish_radius + concave) - rad_in * math.cos(phi),
+                    datum_z - rad_in * math.sin(phi),
+                )
+            )
+        return points
+
+    outer_shoulder = shoulder_points(convex, concave)
+    inner_shoulder = shoulder_points(convex - wall, concave + wall)
+    inner_cutoff_z = datum_z - 0.55
+    inner_parallel = [
+        point for point in inner_shoulder if point[1] <= inner_cutoff_z + 1e-6
+    ]
+    if not inner_parallel:
+        raise ValueError("precision shoulder interior taper has no parallel wall")
+
+    profile = [(0.0, bottle_spec["push_up"])]
+    profile += master.arc(
+        radius - bottle_spec["heel_r"] - 0.8,
+        bottle_spec["push_up"] + 0.5,
+        0.8,
+        270,
+        305,
+        4,
+    )
+    profile += master.arc(
+        radius - bottle_spec["heel_r"],
+        bottle_spec["heel_r"],
+        bottle_spec["heel_r"],
+        270,
+        360,
+    )
+    profile.append((radius, solved.start_z_mm))
+    profile += outer_shoulder
+    profile.append((finish_radius, datum_z))
+    profile.append((bore_radius, datum_z))
+    profile.append((bore_radius, datum_z - 0.22))
+    profile += list(reversed(inner_parallel))
+    profile.append((radius - wall, bottle_spec["base_th"] + 2.0))
+    profile += master.arc(
+        radius - wall - 2.0,
+        bottle_spec["base_th"] + 2.0,
+        2.0,
+        0,
+        -90,
+        6,
+    )
+    profile.append((0.0, bottle_spec["base_th"]))
+
+    deduped = [profile[0]]
+    for point in profile[1:]:
+        if (
+            abs(point[0] - deduped[-1][0]) > 1e-4
+            or abs(point[1] - deduped[-1][1]) > 1e-4
+        ):
+            deduped.append(point)
+    return deduped
+
+
+def _continuous_profile(master, bottle_spec, finish_spec, *, precision=False):
     """Splice body and finish outlines without a transverse datum annulus."""
-    body_profile = master.cylinder_profile(bottle_spec, finish_spec)
+    body_profile = (
+        _precision_009_body_profile(master, bottle_spec, finish_spec)
+        if precision
+        else master.cylinder_profile(bottle_spec, finish_spec)
+    )
     finish_profile = master.finish_profile(finish_spec)
     datum_z = bottle_spec["height"] - finish_spec["finish_h"]
     outer_radius = finish_spec["neck_d"] / 2.0
@@ -469,7 +568,12 @@ def build_continuous_body(name, *, swirl_spec=None):
     if name == "swirl":
         bottle_spec["height"] = swirl_spec.height_mm
         bottle_spec["diameter"] = swirl_spec.diameter_mm
-    profile, datum_z = _continuous_profile(master, bottle_spec, finish_spec)
+    profile, datum_z = _continuous_profile(
+        master,
+        bottle_spec,
+        finish_spec,
+        precision=name != "swirl",
+    )
     if name == "swirl":
         profile = _densify_profile(profile, max_z_step=0.35, z_max=datum_z)
     outer_radius = bottle_spec["diameter"] / 2.0
@@ -531,6 +635,12 @@ def build_continuous_body(name, *, swirl_spec=None):
     replacement["bb_thread_group_offset_z_mm"] = finish_spec["thread_group_offset_z"]
     replacement["bb_thread_runout_overlap_deg"] = finish_spec["runout_overlap_deg"]
     replacement["bb_thread_source_fingerprint"] = thread_source_fingerprint
+    if name != "swirl":
+        solved_shoulder = contract.shoulder_solution(contract.SHOULDER_009)
+        replacement["bb_precision_shoulder"] = True
+        replacement["bb_shoulder_start_z_mm"] = solved_shoulder.start_z_mm
+        replacement["bb_shoulder_end_z_mm"] = contract.SHOULDER_009.datum_z_mm
+        replacement["bb_min_smooth_wall_mm"] = contract.SHOULDER_009.wall_mm
     if name == "swirl":
         replacement["bb_swirl_flute_count"] = swirl_spec.flute_count
         replacement["bb_swirl_twist_deg"] = swirl_spec.twist_deg
