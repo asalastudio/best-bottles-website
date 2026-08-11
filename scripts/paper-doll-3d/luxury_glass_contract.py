@@ -11,6 +11,7 @@ from dataclasses import asdict, dataclass
 import hashlib
 import math
 from pathlib import Path
+import struct
 from typing import Any, Iterable, Mapping, Tuple
 
 
@@ -162,11 +163,19 @@ NEGATIVE_CARDS = (
 def geometry_fingerprint(mesh: Any) -> str:
     """Hash original mesh coordinates and polygon topology deterministically."""
     digest = hashlib.sha256()
-    digest.update(f"v={len(mesh.vertices)};p={len(mesh.polygons)};".encode())
     for vertex in mesh.vertices:
-        digest.update(("%.6f,%.6f,%.6f;" % tuple(vertex.co)).encode("ascii"))
+        digest.update(
+            struct.pack(
+                "<3d",
+                round(float(vertex.co.x), 6),
+                round(float(vertex.co.y), 6),
+                round(float(vertex.co.z), 6),
+            )
+        )
     for polygon in mesh.polygons:
-        digest.update((",".join(str(index) for index in polygon.vertices) + ";").encode("ascii"))
+        digest.update(struct.pack("<I", len(polygon.vertices)))
+        for index in polygon.vertices:
+            digest.update(struct.pack("<I", index))
     return digest.hexdigest()
 
 
