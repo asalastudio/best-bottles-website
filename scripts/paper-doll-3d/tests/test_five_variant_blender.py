@@ -139,11 +139,11 @@ def volume_absorption(material):
 
 
 materials = {name: builder.build_glass_material(name) for name in builder.contract.VARIANTS}
-for name in ("clear", "cobalt", "amber", "swirl"):
+for name in ("clear", "frosted", "cobalt", "amber"):
     material = materials[name]
     shader = principled(material)
     assert shader.inputs["Transmission Weight"].default_value == 1.0
-    assert shader.inputs["IOR"].default_value == 1.5
+    assert math.isclose(shader.inputs["IOR"].default_value, 1.52, abs_tol=1e-6)
     expected_roughness = builder.contract.VARIANTS[name].roughness
     assert math.isclose(
         shader.inputs["Roughness"].default_value,
@@ -158,8 +158,19 @@ for name in ("clear", "cobalt", "amber", "swirl"):
             expected_tint,
         )
     )
-    assert not any(node.type == "BUMP" for node in material.node_tree.nodes), (
-        f"{name} polished material still contains a Bump node"
+    if name != "frosted":
+        assert not any(node.type == "BUMP" for node in material.node_tree.nodes), (
+            f"{name} polished material still contains a Bump node"
+        )
+    assert math.isclose(material["bb_ior"], 1.52, abs_tol=1e-6)
+    assert math.isclose(material["bb_transmission"], 1.0, abs_tol=1e-6)
+    assert math.isclose(material["bb_roughness"], expected_roughness, abs_tol=1e-6)
+
+for name in ("cobalt", "amber"):
+    shader = principled(materials[name])
+    assert all(
+        math.isclose(value, 1.0, abs_tol=1e-6)
+        for value in shader.inputs["Base Color"].default_value
     )
 
 cobalt_volume = volume_absorption(materials["cobalt"])
@@ -168,12 +179,29 @@ assert cobalt_volume is not None
 assert amber_volume is not None
 assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.55, abs_tol=1e-6)
 assert math.isclose(amber_volume.inputs["Density"].default_value, 0.60, abs_tol=1e-6)
+assert all(
+    math.isclose(actual, expected, abs_tol=1e-6)
+    for actual, expected in zip(
+        cobalt_volume.inputs["Color"].default_value,
+        (0.003, 0.012, 0.92, 1.0),
+    )
+)
+assert all(
+    math.isclose(actual, expected, abs_tol=1e-6)
+    for actual, expected in zip(
+        amber_volume.inputs["Color"].default_value,
+        (0.55, 0.20, 0.035, 1.0),
+    )
+)
 assert volume_absorption(materials["clear"]) is None
 assert volume_absorption(materials["swirl"]) is None
 
 frosted = materials["frosted"]
-assert any(node.type == "TEX_NOISE" for node in frosted.node_tree.nodes)
-assert any(node.type == "BUMP" for node in frosted.node_tree.nodes)
+frost_noise = next(node for node in frosted.node_tree.nodes if node.type == "TEX_NOISE")
+frost_bump = next(node for node in frosted.node_tree.nodes if node.type == "BUMP")
+assert math.isclose(frost_noise.inputs["Scale"].default_value, 85.0, abs_tol=1e-6)
+assert math.isclose(frost_bump.inputs["Strength"].default_value, 0.04, abs_tol=1e-6)
+assert math.isclose(frost_bump.inputs["Distance"].default_value, 0.012, abs_tol=1e-6)
 assert math.isclose(
     principled(frosted).inputs["Roughness"].default_value, 0.22, abs_tol=1e-6
 )

@@ -169,9 +169,9 @@ def build_glass_material(name):
     shader = nodes.new("ShaderNodeBsdfPrincipled")
     shader.name = "Principled BSDF"
     shader.location = (-40, 40)
-    shader.inputs["Base Color"].default_value = (*spec.surface_tint, 1.0)
-    shader.inputs["Transmission Weight"].default_value = 1.0
-    shader.inputs["IOR"].default_value = 1.5
+    shader.inputs["Base Color"].default_value = (1.0, 1.0, 1.0, 1.0)
+    shader.inputs["Transmission Weight"].default_value = spec.transmission
+    shader.inputs["IOR"].default_value = spec.ior
     shader.inputs["Roughness"].default_value = spec.roughness
     links.new(shader.outputs["BSDF"], output.inputs["Surface"])
 
@@ -179,14 +179,14 @@ def build_glass_material(name):
         noise = nodes.new("ShaderNodeTexNoise")
         noise.name = "Uniform Frost Microstructure"
         noise.location = (-650, -100)
-        noise.inputs["Scale"].default_value = 38.0
+        noise.inputs["Scale"].default_value = spec.frost_scale
         noise.inputs["Detail"].default_value = 2.0
         noise.inputs["Roughness"].default_value = 0.55
         bump = nodes.new("ShaderNodeBump")
         bump.name = "Uniform Frost Micro Normal"
         bump.location = (-300, -100)
-        bump.inputs["Strength"].default_value = 0.10
-        bump.inputs["Distance"].default_value = 0.025
+        bump.inputs["Strength"].default_value = spec.frost_strength
+        bump.inputs["Distance"].default_value = spec.frost_distance
         links.new(noise.outputs["Fac"], bump.inputs["Height"])
         links.new(bump.outputs["Normal"], shader.inputs["Normal"])
 
@@ -200,6 +200,12 @@ def build_glass_material(name):
 
     material["bb_variant"] = name
     material["bb_polished"] = not spec.frosted
+    material["bb_ior"] = spec.ior
+    material["bb_transmission"] = spec.transmission
+    material["bb_roughness"] = spec.roughness
+    material["bb_absorption_density"] = (
+        spec.density if spec.density is not None else 0.0
+    )
     return material
 
 
