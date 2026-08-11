@@ -53,7 +53,8 @@ class TransmissionCardSpec:
     width_mm: float = 140.0
     height_mm: float = 220.0
     location_mm: Tuple[float, float, float] = (-35.0, 105.0, 95.0)
-    emission_strength: float = 0.60
+    emission_color: Color = (0.863, 0.815, 0.730)
+    emission_strength: float = 0.35
     visible_camera: bool = False
     visible_shadow: bool = False
     visible_transmission: bool = True
@@ -111,7 +112,7 @@ VARIANTS = {
     ),
     "amber": VariantSpec(
         "amber", False, 0.020,
-        absorption_color=(0.55, 0.20, 0.035), density=0.60,
+        absorption_color=(0.72, 0.32, 0.045), density=0.75,
     ),
     "swirl": VariantSpec("swirl", True, 0.025),
 }

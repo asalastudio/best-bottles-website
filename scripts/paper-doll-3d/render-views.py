@@ -13,6 +13,7 @@ silently falls back to CPU at ~4x the wall time).
 Views:
     front         master camera as saved (product elevation)
     macro         tight neck close-up (framing from the finish specs)
+    shoulder      neck plus complete shoulder transition for geometry review
     threequarter  38-degree hero angle (flat-face bottles show their face)
     section       drawing convention: near half cut away, engineering clay,
                   camera sees the FAR wall's threads (use --spin-phi to pose
@@ -103,11 +104,19 @@ def neck_frame(bottle):
     return h - neck_h * 0.45, 61.0        # cz, distance
 
 
+def shoulder_frame(bottle):
+    """Review framing that includes the complete 9 ml shoulder and finish."""
+    return 63.5, 72.0
+
+
 def main():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     p = argparse.ArgumentParser()
     p.add_argument("--view", required=True,
-                   choices=["front", "macro", "threequarter", "section", "spin"])
+                   choices=[
+                       "front", "macro", "shoulder", "threequarter",
+                       "section", "spin",
+                   ])
     p.add_argument("--out", required=True)
     p.add_argument("--samples", type=int, default=160)
     p.add_argument("--spin-phi", type=float, default=0.0,
@@ -145,6 +154,11 @@ def main():
 
     elif a.view == "macro":
         cz, dist = neck_frame(bottle)
+        cam.location = (0, -dist, cz)
+        cam.rotation_euler = (math.radians(90), 0, 0)
+
+    elif a.view == "shoulder":
+        cz, dist = shoulder_frame(bottle)
         cam.location = (0, -dist, cz)
         cam.rotation_euler = (math.radians(90), 0, 0)
 

@@ -62,7 +62,11 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertIsNone(self.contract.VARIANTS["clear"].absorption_color)
         self.assertIsNone(self.contract.VARIANTS["frosted"].absorption_color)
         self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.55)
-        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.60)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.75)
+        self.assertEqual(
+            self.contract.VARIANTS["amber"].absorption_color,
+            (0.72, 0.32, 0.045),
+        )
 
     def test_transmission_card_contract(self):
         card = self.contract.TRANSMISSION_CARD_009
@@ -72,6 +76,8 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertFalse(card.visible_shadow)
         self.assertTrue(card.visible_transmission)
         self.assertFalse(card.visible_glossy)
+        self.assertEqual(card.emission_strength, 0.35)
+        self.assertEqual(card.emission_color, (0.863, 0.815, 0.730))
 
     def test_colored_density_candidates_resolve_to_approved_values(self):
         self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.55)
@@ -79,7 +85,7 @@ class FiveVariantContractTests(unittest.TestCase):
             self.contract.VARIANTS["cobalt"].absorption_color,
             (0.003, 0.012, 0.92),
         )
-        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.60)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.75)
 
     def test_swirl_comparison_has_only_ten_and_twelve_flute_candidates(self):
         candidates = self.contract.SWIRL_CANDIDATES
@@ -132,7 +138,7 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertEqual(self.contract.VARIANTS["cobalt"].roughness, 0.018)
         self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.55)
         self.assertEqual(self.contract.VARIANTS["amber"].roughness, 0.020)
-        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.60)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.75)
 
     def test_swirl_is_inward_and_respects_wall_gate(self):
         for swirl in self.contract.SWIRL_CANDIDATES.values():

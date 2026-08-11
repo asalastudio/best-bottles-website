@@ -17,6 +17,7 @@ import bpy
 
 ROOT = Path(__file__).resolve().parents[3]
 BUILDER_PATH = ROOT / "scripts/paper-doll-3d/build-five-variant-system.py"
+RENDERER_PATH = ROOT / "scripts/paper-doll-3d/render-views.py"
 PROTECTED = {
     "BB_CAM_MASTER",
     "BB_STUDIO_SWEEP",
@@ -37,6 +38,12 @@ def load_builder():
 
 
 builder = load_builder()
+renderer_spec = importlib.util.spec_from_file_location(
+    "bb_nine_ml_renderer", RENDERER_PATH
+)
+renderer = importlib.util.module_from_spec(renderer_spec)
+sys.modules[renderer_spec.name] = renderer
+renderer_spec.loader.exec_module(renderer)
 
 before = builder.protected_snapshot()
 assert set(before) == PROTECTED, f"protected set drifted: {set(before)}"
@@ -78,6 +85,9 @@ assert math.isclose(
     continuous["bb_shoulder_end_z_mm"], 58.24, abs_tol=1e-6
 )
 assert continuous["bb_min_smooth_wall_mm"] >= 1.5
+shoulder_center_z, shoulder_distance = renderer.shoulder_frame(continuous)
+assert math.isclose(shoulder_center_z, 63.5, abs_tol=1e-6)
+assert math.isclose(shoulder_distance, 72.0, abs_tol=1e-6)
 assert source_finish.hide_render
 datum_z = continuous["bb_finish_datum_z_mm"]
 datum_faces = [
@@ -178,7 +188,7 @@ amber_volume = volume_absorption(materials["amber"])
 assert cobalt_volume is not None
 assert amber_volume is not None
 assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.55, abs_tol=1e-6)
-assert math.isclose(amber_volume.inputs["Density"].default_value, 0.60, abs_tol=1e-6)
+assert math.isclose(amber_volume.inputs["Density"].default_value, 0.75, abs_tol=1e-6)
 assert all(
     math.isclose(actual, expected, abs_tol=1e-6)
     for actual, expected in zip(
@@ -190,7 +200,7 @@ assert all(
     math.isclose(actual, expected, abs_tol=1e-6)
     for actual, expected in zip(
         amber_volume.inputs["Color"].default_value,
-        (0.55, 0.20, 0.035, 1.0),
+        (0.72, 0.32, 0.045, 1.0),
     )
 )
 assert volume_absorption(materials["clear"]) is None

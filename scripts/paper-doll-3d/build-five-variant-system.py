@@ -299,7 +299,7 @@ def ensure_transmission_card():
     nodes.clear()
     output = nodes.new("ShaderNodeOutputMaterial")
     emission = nodes.new("ShaderNodeEmission")
-    emission.inputs["Color"].default_value = (1.0, 0.985, 0.96, 1.0)
+    emission.inputs["Color"].default_value = (*spec.emission_color, 1.0)
     emission.inputs["Strength"].default_value = spec.emission_strength
     links.new(emission.outputs["Emission"], output.inputs["Surface"])
     mesh.materials.append(material)
