@@ -29,6 +29,13 @@ WORKING_OUTPUT_DIR = ROOT / (
 RENDER_OUTPUT_DIR = ROOT / (
     "pipeline/paper-doll-3d/renders/five-variant/9ml-luxury-glass-studio"
 )
+CORRECTION_WORKING_DIR = ROOT / (
+    "pipeline/paper-doll-3d/master/working/five-variant/9ml-cobalt-correction-v1"
+)
+CORRECTION_RENDER_DIR = ROOT / (
+    "pipeline/paper-doll-3d/renders/five-variant/9ml-cobalt-correction-v1"
+)
+COMPARISON_FONT = Path("/System/Library/Fonts/Supplemental/Arial.ttf")
 
 BODY_NAME = "BB_BTL_CYL_009ML_001"
 FINISH_NAME = "BB_FIN_17_415"
@@ -140,8 +147,42 @@ class RenderContract:
     gamma: float = 1.0
 
 
+@dataclass(frozen=True)
+class CobaltCorrectionContract:
+    version: str = "cobalt-correction-v1"
+    collection_name: str = "BB_STUDIO_COBALT_CORRECTION_V1"
+    background_hex: str = "#F3EFE8"
+    clear_roughness: float = 0.035
+    cobalt_roughness: float = 0.040
+    world_strength: float = 0.70
+    exposure: float = 0.50
+    use_negative_fill: bool = False
+    use_rear_rim: bool = False
+
+
+@dataclass(frozen=True)
+class CorrectionLightSpec:
+    name: str
+    location_mm: Tuple[float, float, float]
+    target_mm: Tuple[float, float, float]
+    width_mm: float
+    height_mm: float
+    energy_watts: float
+    visible_glossy: bool
+
+
+@dataclass(frozen=True)
+class CorrectionScrimSpec:
+    name: str
+    location_mm: Tuple[float, float, float]
+    target_mm: Tuple[float, float, float]
+    width_mm: float
+    height_mm: float
+
+
 GEOMETRY = GeometryContract()
 RENDER = RenderContract()
+COBALT_CORRECTION = CobaltCorrectionContract()
 
 VARIANTS: Mapping[str, GlassPreset] = {
     "clear": GlassPreset(1.50, 0.020, 1.0, (1.0, 1.0, 1.0), 0.0, 0.0, 0.0, 420.0, 0.0),
@@ -163,6 +204,29 @@ LIGHTS = (
 NEGATIVE_CARDS = (
     NegativeCardSpec("BB_LUX_NEG_LEFT", -2.30, -0.80, 0.53, 0.52, 1.38),
     NegativeCardSpec("BB_LUX_NEG_RIGHT", 2.45, -0.55, 0.53, 0.42, 1.32),
+)
+
+CORRECTION_COBALT_DENSITIES = {25: 0.50, 50: 1.00, 75: 1.50, 100: 2.00}
+
+CORRECTION_SCRIMS = (
+    CorrectionScrimSpec(
+        "BB_CORR_LEFT_SCRIM", (-27.0, -20.0, 38.0), (0.0, 0.0, 38.0), 27.0, 104.0
+    ),
+    CorrectionScrimSpec(
+        "BB_CORR_RIGHT_SCRIM", (29.0, -7.0, 38.0), (0.0, 0.0, 38.0), 12.0, 94.0
+    ),
+)
+
+CORRECTION_LIGHTS = (
+    CorrectionLightSpec(
+        "BB_CORR_LEFT_AREA", (-55.0, -10.0, 40.0), (-27.0, -20.0, 38.0), 34.0, 112.0, 700.0, False
+    ),
+    CorrectionLightSpec(
+        "BB_CORR_RIGHT_AREA", (53.0, 4.0, 40.0), (29.0, -7.0, 38.0), 18.0, 102.0, 310.0, False
+    ),
+    CorrectionLightSpec(
+        "BB_CORR_TOP_FILL", (0.0, -42.0, 104.0), (0.0, 0.0, 53.0), 76.0, 48.0, 90.0, False
+    ),
 )
 
 
@@ -256,6 +320,27 @@ def qc_render_plan(width: int, height: int, samples: int) -> dict[str, dict[str,
             entry[f"{region}_box"] = boxes[region]
         plan[variant] = entry
     return plan
+
+
+def correction_filename(value: Any) -> str:
+    names = {
+        "clear": "01_CLEAR_CALIBRATION.png",
+        25: "02_COBALT_25.png",
+        50: "03_COBALT_50.png",
+        75: "04_COBALT_75.png",
+        100: "05_COBALT_100.png",
+    }
+    if value not in names:
+        raise ValueError(f"unknown correction output {value!r}")
+    return names[value]
+
+
+def correction_crop_filename(value: Any, region: str, suffix: str = "") -> str:
+    if region not in {"neck", "shoulder", "base"}:
+        raise ValueError(f"unknown correction crop region {region!r}")
+    stem = Path(correction_filename(value)).stem
+    suffix_text = f"_{suffix.upper()}" if suffix else ""
+    return f"{stem}_{region.upper()}_200PCT{suffix_text}.png"
 
 
 def dataclass_dict(value: Any) -> dict[str, Any]:

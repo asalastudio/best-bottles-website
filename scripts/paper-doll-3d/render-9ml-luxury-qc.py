@@ -123,13 +123,15 @@ def compose_comparison(out_dir: Path, samples: int):
     for path, label in zip(inputs[:2], labels[:2]):
         command.extend(
             ["(", str(path), "-resize", "600x660", "-gravity", "south", "-background", bone,
-             "-splice", "0x52", "-fill", ink, "-pointsize", "25", "-annotate", "+0+13", label, ")"]
+             "-splice", "0x52", "-fill", ink, "-font", str(contract.COMPARISON_FONT),
+             "-pointsize", "25", "-annotate", "+0+13", label, ")"]
         )
     command.extend(["+append", "("])
     for path, label in zip(inputs[2:], labels[2:]):
         command.extend(
             ["(", str(path), "-resize", "600x660", "-gravity", "south", "-background", bone,
-             "-splice", "0x52", "-fill", ink, "-pointsize", "25", "-annotate", "+0+13", label, ")"]
+             "-splice", "0x52", "-fill", ink, "-font", str(contract.COMPARISON_FONT),
+             "-pointsize", "25", "-annotate", "+0+13", label, ")"]
         )
     command.extend(["+append", ")", "-append", "-background", bone, str(output)])
     subprocess.run(command, check=True)

@@ -83,6 +83,7 @@ class LuxuryGlassContractTests(unittest.TestCase):
         self.assertEqual(contract.RENDER.gamma, 1.0)
 
     def test_qc_plan_centers_non_overflowing_200_percent_crops(self):
+        self.assertTrue(contract.COMPARISON_FONT.is_file())
         boxes = contract.crop_boxes(1200, 1320)
         self.assertEqual(boxes["neck"], (408, 73, 792, 449))
         self.assertEqual(boxes["shoulder"], (360, 290, 840, 647))
@@ -107,6 +108,38 @@ class LuxuryGlassContractTests(unittest.TestCase):
             "009ml-amber-base-512s-denoised.png",
         )
         self.assertEqual(plan["clear"]["crop_scale_percent"], 200)
+
+    def test_cobalt_correction_is_a_separate_high_key_absorption_bracket(self):
+        correction = contract.COBALT_CORRECTION
+        self.assertEqual(correction.version, "cobalt-correction-v1")
+        self.assertEqual(correction.background_hex, "#F3EFE8")
+        self.assertEqual(correction.clear_roughness, 0.035)
+        self.assertEqual(correction.world_strength, 0.70)
+        self.assertFalse(correction.use_negative_fill)
+        self.assertFalse(correction.use_rear_rim)
+        self.assertEqual(
+            contract.CORRECTION_COBALT_DENSITIES,
+            {25: 0.50, 50: 1.00, 75: 1.50, 100: 2.00},
+        )
+        self.assertEqual(
+            [light.name for light in contract.CORRECTION_LIGHTS],
+            ["BB_CORR_LEFT_AREA", "BB_CORR_RIGHT_AREA", "BB_CORR_TOP_FILL"],
+        )
+        self.assertEqual(
+            {scrim.name for scrim in contract.CORRECTION_SCRIMS},
+            {"BB_CORR_LEFT_SCRIM", "BB_CORR_RIGHT_SCRIM"},
+        )
+        self.assertNotEqual(contract.CORRECTION_WORKING_DIR, contract.WORKING_OUTPUT_DIR)
+        self.assertNotEqual(contract.CORRECTION_RENDER_DIR, contract.RENDER_OUTPUT_DIR)
+        self.assertEqual(contract.correction_filename("clear"), "01_CLEAR_CALIBRATION.png")
+        self.assertEqual(contract.correction_filename(25), "02_COBALT_25.png")
+        self.assertEqual(contract.correction_filename(50), "03_COBALT_50.png")
+        self.assertEqual(contract.correction_filename(75), "04_COBALT_75.png")
+        self.assertEqual(contract.correction_filename(100), "05_COBALT_100.png")
+        self.assertEqual(
+            contract.correction_crop_filename(75, "base"),
+            "04_COBALT_75_BASE_200PCT.png",
+        )
 
 
 if __name__ == "__main__":
