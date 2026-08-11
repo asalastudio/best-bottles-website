@@ -240,6 +240,24 @@ def qc_filename(variant: str, region: str, samples: int, denoised: bool) -> str:
     return f"009ml-{variant}-{region}-{samples}s-{state}.png"
 
 
+def qc_render_plan(width: int, height: int, samples: int) -> dict[str, dict[str, Any]]:
+    boxes = crop_boxes(width, height)
+    plan = {}
+    for variant in VARIANTS:
+        entry: dict[str, Any] = {
+            "resolution": (width, height),
+            "crop_scale_percent": 200,
+            "full_denoised": qc_filename(variant, "full", samples, True),
+            "full_raw": qc_filename(variant, "full", samples, False),
+        }
+        for region in boxes:
+            entry[f"{region}_denoised"] = qc_filename(variant, region, samples, True)
+            entry[f"{region}_raw"] = qc_filename(variant, region, samples, False)
+            entry[f"{region}_box"] = boxes[region]
+        plan[variant] = entry
+    return plan
+
+
 def dataclass_dict(value: Any) -> dict[str, Any]:
     return asdict(value)
 

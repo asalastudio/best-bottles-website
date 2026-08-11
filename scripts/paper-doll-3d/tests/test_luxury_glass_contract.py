@@ -82,6 +82,32 @@ class LuxuryGlassContractTests(unittest.TestCase):
         self.assertEqual(contract.RENDER.exposure, 0.0)
         self.assertEqual(contract.RENDER.gamma, 1.0)
 
+    def test_qc_plan_centers_non_overflowing_200_percent_crops(self):
+        boxes = contract.crop_boxes(1200, 1320)
+        self.assertEqual(boxes["neck"], (408, 73, 792, 449))
+        self.assertEqual(boxes["shoulder"], (360, 290, 840, 647))
+        self.assertEqual(boxes["base"], (360, 924, 840, 1274))
+        for left, top, right, bottom in boxes.values():
+            self.assertEqual(left + right, 1200)
+            self.assertGreaterEqual(left, 0)
+            self.assertGreaterEqual(top, 0)
+            self.assertLessEqual(right, 1200)
+            self.assertLessEqual(bottom, 1320)
+            self.assertGreater(right, left)
+            self.assertGreater(bottom, top)
+
+        plan = contract.qc_render_plan(1200, 1320, 512)
+        self.assertEqual(set(plan), {"clear", "amber", "cobalt", "frosted"})
+        self.assertEqual(
+            plan["cobalt"]["neck_raw"],
+            "009ml-cobalt-neck-512s-raw.png",
+        )
+        self.assertEqual(
+            plan["amber"]["base_denoised"],
+            "009ml-amber-base-512s-denoised.png",
+        )
+        self.assertEqual(plan["clear"]["crop_scale_percent"], 200)
+
 
 if __name__ == "__main__":
     unittest.main()
