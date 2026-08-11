@@ -169,7 +169,7 @@ def build_glass_material(name):
     shader = nodes.new("ShaderNodeBsdfPrincipled")
     shader.name = "Principled BSDF"
     shader.location = (-40, 40)
-    shader.inputs["Base Color"].default_value = (1.0, 1.0, 1.0, 1.0)
+    shader.inputs["Base Color"].default_value = (*spec.surface_tint, 1.0)
     shader.inputs["Transmission Weight"].default_value = 1.0
     shader.inputs["IOR"].default_value = 1.5
     shader.inputs["Roughness"].default_value = spec.roughness
@@ -361,11 +361,16 @@ def _assign_variant_material(name):
     return material
 
 
-def _densify_profile(profile, max_z_step=0.55):
-    """Insert radial-profile rings so helical relief exists as mesh geometry."""
+def _densify_profile(profile, max_z_step=0.55, z_max=None):
+    """Insert body rings for molded relief without subdividing the finish."""
     dense = [profile[0]]
     for (r0, z0), (r1, z1) in zip(profile, profile[1:]):
-        steps = max(1, int(math.ceil(abs(z1 - z0) / max_z_step)))
+        eligible = z_max is None or max(z0, z1) <= z_max + 1e-6
+        steps = (
+            max(1, int(math.ceil(abs(z1 - z0) / max_z_step)))
+            if eligible
+            else 1
+        )
         for index in range(1, steps + 1):
             t = index / steps
             dense.append((r0 + (r1 - r0) * t, z0 + (z1 - z0) * t))
@@ -455,12 +460,16 @@ def build_continuous_body(name):
     finish_spec = dict(master.FINISH_MASTERS["17-415"])
     finish_spec["bead_z"] = contract.JUNCTION_17_415.band_center_z_mm
     finish_spec["bead_h"] = contract.JUNCTION_17_415.band_height_mm
+    finish_spec["thread_group_offset_z"] = (
+        contract.JUNCTION_17_415.thread_group_offset_z_mm
+    )
+    finish_spec["runout_overlap_deg"] = contract.JUNCTION_17_415.runout_overlap_deg
     if name == "swirl":
         bottle_spec["height"] = contract.SWIRL.height_mm
         bottle_spec["diameter"] = contract.SWIRL.diameter_mm
     profile, datum_z = _continuous_profile(master, bottle_spec, finish_spec)
     if name == "swirl":
-        profile = _densify_profile(profile)
+        profile = _densify_profile(profile, z_max=datum_z)
     outer_radius = bottle_spec["diameter"] / 2.0
     relief_z_min = 4.0
     relief_z_max = datum_z - 4.0
@@ -487,6 +496,7 @@ def build_continuous_body(name):
     thread = master.helical_thread_object(
         finish_spec, "BB_FIN_17_415_APPROVED_HELIX_WORKING"
     )
+    thread_source_fingerprint = mesh_fingerprint(thread)
     thread.location.z = datum_z
     collections[0].objects.link(thread)
     _union_exact(replacement, thread)
@@ -516,6 +526,9 @@ def build_continuous_body(name):
     replacement["bb_thread_pitch_mm"] = finish_spec["pitch"]
     replacement["bb_thread_turns"] = finish_spec["turns"]
     replacement["bb_thread_material_envelope_mm"] = finish_spec["thread_material_envelope"]
+    replacement["bb_thread_group_offset_z_mm"] = finish_spec["thread_group_offset_z"]
+    replacement["bb_thread_runout_overlap_deg"] = finish_spec["runout_overlap_deg"]
+    replacement["bb_thread_source_fingerprint"] = thread_source_fingerprint
     if name == "swirl":
         replacement["bb_swirl_flute_count"] = contract.SWIRL.flute_count
         replacement["bb_swirl_twist_deg"] = contract.SWIRL.twist_deg

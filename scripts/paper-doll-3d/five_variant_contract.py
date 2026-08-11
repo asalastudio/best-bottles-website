@@ -22,6 +22,7 @@ class VariantSpec:
     absorption_color: Optional[Color] = None
     density: Optional[float] = None
     frosted: bool = False
+    surface_tint: Color = (1.0, 1.0, 1.0)
 
 
 @dataclass(frozen=True)
@@ -39,6 +40,11 @@ class SwirlSpec:
 class JunctionSpec:
     nominal_finish_height_mm: float = 14.06
     finish_height_mm: float = 13.76
+    top_land_mm: float = 0.9
+    nominal_thread_zone_mm: float = 8.8
+    thread_material_envelope_mm: float = 8.05
+    thread_group_offset_z_mm: float = 0.375
+    runout_overlap_deg: float = 20.0
     band_height_mm: float = 2.0
     band_center_z_mm: float = 1.3
     first_thread_material_bottom_z_mm: float = 4.06
@@ -60,10 +66,14 @@ VARIANTS = {
     "clear": VariantSpec("clear", False, 0.025),
     "frosted": VariantSpec("frosted", False, 0.28, frosted=True),
     "cobalt": VariantSpec(
-        "cobalt", False, 0.025, absorption_color=(0.018, 0.045, 0.80), density=0.85
+        "cobalt", False, 0.012,
+        absorption_color=(0.002, 0.008, 0.95), density=0.65,
+        surface_tint=(0.005, 0.012, 0.65),
     ),
     "amber": VariantSpec(
-        "amber", False, 0.025, absorption_color=(0.50, 0.22, 0.055), density=0.95
+        "amber", False, 0.012,
+        absorption_color=(0.50, 0.22, 0.055), density=0.65,
+        surface_tint=(0.35, 0.07, 0.008),
     ),
     "swirl": VariantSpec("swirl", True, 0.025),
 }

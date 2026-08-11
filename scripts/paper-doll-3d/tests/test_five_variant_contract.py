@@ -39,8 +39,16 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertTrue(self.contract.VARIANTS["swirl"].allows_body_geometry_change)
 
     def test_colored_density_candidates_resolve_to_approved_values(self):
-        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.85)
-        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.95)
+        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.65)
+        self.assertEqual(
+            self.contract.VARIANTS["cobalt"].absorption_color,
+            (0.002, 0.008, 0.95),
+        )
+        self.assertEqual(
+            self.contract.VARIANTS["cobalt"].surface_tint,
+            (0.005, 0.012, 0.65),
+        )
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.65)
 
     def test_swirl_contract_uses_approved_photo_solved_candidate(self):
         swirl = self.contract.SWIRL
@@ -65,6 +73,30 @@ class FiveVariantContractTests(unittest.TestCase):
             junction.shoulder_to_band_gap_mm,
             junction.band_to_first_thread_gap_mm,
         )
+
+    def test_thread_group_uses_remaining_upward_zone_without_clipping(self):
+        junction = self.contract.JUNCTION_17_415
+        self.assertEqual(junction.thread_group_offset_z_mm, 0.375)
+        nominal_band_top = (
+            junction.finish_height_mm - junction.top_land_mm
+        )
+        nominal_band_bottom = nominal_band_top - junction.nominal_thread_zone_mm
+        group_mid = (
+            (nominal_band_bottom + nominal_band_top) / 2.0
+            + junction.thread_group_offset_z_mm
+        )
+        group_top = group_mid + junction.thread_material_envelope_mm / 2.0
+        self.assertAlmostEqual(group_top, nominal_band_top)
+
+    def test_thread_runouts_overlap_across_the_front_centerline(self):
+        junction = self.contract.JUNCTION_17_415
+        self.assertEqual(junction.runout_overlap_deg, 20.0)
+
+    def test_colored_glass_is_luminous_not_overabsorbed(self):
+        self.assertEqual(self.contract.VARIANTS["cobalt"].roughness, 0.012)
+        self.assertEqual(self.contract.VARIANTS["cobalt"].density, 0.65)
+        self.assertEqual(self.contract.VARIANTS["amber"].roughness, 0.012)
+        self.assertEqual(self.contract.VARIANTS["amber"].density, 0.65)
 
     def test_swirl_is_inward_and_respects_wall_gate(self):
         swirl = self.contract.SWIRL

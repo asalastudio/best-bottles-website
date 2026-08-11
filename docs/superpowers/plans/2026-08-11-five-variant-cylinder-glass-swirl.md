@@ -35,6 +35,9 @@ against the locked baseline and reject any drift in protected data.
 - The bottom junction band is `2.0 mm` high, centered `1.3 mm` above the
   attachment datum, leaving a `0.3 mm` shoulder-to-band land. That lower gap
   is no larger than the band-to-first-thread gap.
+- The approved two-turn thread group uses the full remaining nominal-zone
+  allowance at `+0.375 mm` Z offset, tightening the top visual land to the
+  drawing boundary without changing pitch or the `8.05 mm` material envelope.
 - Camera, backdrop, key, fill, top card, and sweep wash remain numerically
   unchanged.
 - Existing key remains responsible for the 2:00 right-cast shadow.

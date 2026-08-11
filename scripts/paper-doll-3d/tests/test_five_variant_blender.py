@@ -60,6 +60,14 @@ assert continuous["bb_continuous_glass_shell"]
 assert math.isclose(continuous["bb_finish_height_mm"], 13.76, abs_tol=1e-6)
 assert math.isclose(continuous["bb_band_height_mm"], 2.0, abs_tol=1e-6)
 assert math.isclose(continuous["bb_band_center_z_mm"], 1.3, abs_tol=1e-6)
+assert math.isclose(
+    continuous["bb_thread_group_offset_z_mm"], 0.375, abs_tol=1e-6
+)
+assert math.isclose(
+    continuous["bb_thread_runout_overlap_deg"], 20.0, abs_tol=1e-6
+)
+clear_thread_source_fingerprint = continuous["bb_thread_source_fingerprint"]
+assert len(clear_thread_source_fingerprint) == 64
 assert source_finish.hide_render
 datum_z = continuous["bb_finish_datum_z_mm"]
 datum_faces = [
@@ -96,7 +104,20 @@ for name in ("clear", "cobalt", "amber", "swirl"):
     shader = principled(material)
     assert shader.inputs["Transmission Weight"].default_value == 1.0
     assert shader.inputs["IOR"].default_value == 1.5
-    assert 0.02 <= shader.inputs["Roughness"].default_value <= 0.04
+    expected_roughness = 0.012 if name in ("cobalt", "amber") else 0.025
+    assert math.isclose(
+        shader.inputs["Roughness"].default_value,
+        expected_roughness,
+        abs_tol=1e-6,
+    )
+    expected_tint = (*builder.contract.VARIANTS[name].surface_tint, 1.0)
+    assert all(
+        math.isclose(actual, expected, abs_tol=1e-6)
+        for actual, expected in zip(
+            shader.inputs["Base Color"].default_value,
+            expected_tint,
+        )
+    )
     assert not any(node.type == "BUMP" for node in material.node_tree.nodes), (
         f"{name} polished material still contains a Bump node"
     )
@@ -105,8 +126,8 @@ cobalt_volume = volume_absorption(materials["cobalt"])
 amber_volume = volume_absorption(materials["amber"])
 assert cobalt_volume is not None
 assert amber_volume is not None
-assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.85, abs_tol=1e-6)
-assert math.isclose(amber_volume.inputs["Density"].default_value, 0.95, abs_tol=1e-6)
+assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.65, abs_tol=1e-6)
+assert math.isclose(amber_volume.inputs["Density"].default_value, 0.65, abs_tol=1e-6)
 assert volume_absorption(materials["clear"]) is None
 assert volume_absorption(materials["swirl"]) is None
 
@@ -159,6 +180,7 @@ assert math.isclose(swirl.dimensions.z, 74.0, abs_tol=1.0)
 assert swirl["bb_swirl_flute_count"] == 8
 assert swirl["bb_swirl_twist_deg"] == 85.0
 assert swirl["bb_swirl_depth_mm"] == 0.75
+assert swirl["bb_thread_source_fingerprint"] == clear_thread_source_fingerprint
 assert swirl["bb_min_wall_mm"] >= 0.8
 assert swirl["bb_geometry_authority"] == "photo-solved relief; measured envelope"
 
