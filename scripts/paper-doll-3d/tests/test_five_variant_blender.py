@@ -109,4 +109,38 @@ assert not strip.visible_shadow
 assert strip.visible_glossy
 assert any(node.type == "LIGHT_PATH" for node in strip.data.materials[0].node_tree.nodes)
 
-print("PASS five-variant Blender baseline, material, and reflection-card gates")
+# Reload the immutable source before exercising the sole geometry exception.
+bpy.ops.wm.open_mainfile(filepath=str(builder.LOCKED_BASELINE))
+smooth_fingerprint = builder.mesh_fingerprint(bpy.data.objects[builder.BODY_NAME])
+finish_fingerprint = builder.mesh_fingerprint(bpy.data.objects[builder.FINISH_NAME])
+
+builder.build_variant("swirl", save=False)
+
+swirl = bpy.data.objects[builder.BODY_NAME]
+finish = bpy.data.objects[builder.FINISH_NAME]
+assert builder.mesh_fingerprint(swirl) != smooth_fingerprint
+assert builder.mesh_fingerprint(finish) == finish_fingerprint
+assert not any(modifier.type == "DISPLACE" for modifier in swirl.modifiers)
+assert math.isclose(swirl.dimensions.x, 21.0, abs_tol=0.5)
+assert math.isclose(swirl.dimensions.y, 21.0, abs_tol=0.5)
+assert math.isclose(finish.location.z + finish.dimensions.z, 74.0, abs_tol=1.0)
+assert swirl["bb_swirl_flute_count"] == 8
+assert swirl["bb_swirl_twist_deg"] == 70.0
+assert swirl["bb_swirl_depth_mm"] == 0.55
+assert swirl["bb_min_wall_mm"] >= 0.8
+assert swirl["bb_geometry_authority"] == "photo-solved relief; measured envelope"
+
+# Real mesh evidence: a mid-body ring contains repeated inward radii rather
+# than one smooth cylindrical radius, and no render-time modifier supplies it.
+mid_radii = {
+    round((vertex.co.x ** 2 + vertex.co.y ** 2) ** 0.5, 3)
+    for vertex in swirl.data.vertices
+    if 20.0 <= vertex.co.z <= 40.0
+    and (vertex.co.x ** 2 + vertex.co.y ** 2) ** 0.5 > 9.7
+}
+assert len(mid_radii) >= 20, f"swirl relief is not present in mesh radii: {mid_radii}"
+
+print(
+    "PASS five-variant Blender baseline, materials, reflection card, "
+    "and molded-swirl gates"
+)

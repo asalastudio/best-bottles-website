@@ -23,6 +23,7 @@ from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[2]
 CONTRACT_PATH = ROOT / "scripts/paper-doll-3d/five_variant_contract.py"
+MASTER_BUILDER_PATH = ROOT / "scripts/paper-doll-3d/build-master-scene.py"
 LOCKED_BASELINE = (
     ROOT
     / "pipeline/paper-doll-3d/master/locked/"
@@ -55,6 +56,14 @@ def _load_contract():
 
 
 contract = _load_contract()
+
+
+def _load_master_builder():
+    spec = importlib.util.spec_from_file_location("bb_master_scene_builder", MASTER_BUILDER_PATH)
+    module = importlib.util.module_from_spec(spec)
+    sys.modules.setdefault(spec.name, module)
+    spec.loader.exec_module(module)
+    return module
 
 
 def _rounded(value, digits=6):
@@ -265,6 +274,105 @@ def _assign_variant_material(name):
     return material
 
 
+def _densify_profile(profile, max_z_step=0.55):
+    """Insert radial-profile rings so helical relief exists as mesh geometry."""
+    dense = [profile[0]]
+    for (r0, z0), (r1, z1) in zip(profile, profile[1:]):
+        steps = max(1, int(math.ceil(abs(z1 - z0) / max_z_step)))
+        for index in range(1, steps + 1):
+            t = index / steps
+            dense.append((r0 + (r1 - r0) * t, z0 + (z1 - z0) * t))
+    return dense
+
+
+def build_swirl_body():
+    """Replace the smooth body with a true inward-molded helical body.
+
+    The engineering finish remains the immutable baseline mesh. Only its
+    attachment datum moves to the 74 mm measured overall height.
+    """
+    source = bpy.data.objects[BODY_NAME]
+    collections = list(source.users_collection)
+    parent = source.parent
+    location = source.location.copy()
+    rotation = source.rotation_euler.copy()
+    scale = source.scale.copy()
+    source_properties = {key: source[key] for key in source.keys()}
+    attachment = bpy.data.objects.get("BB_ATTACH_NECK")
+
+    master = _load_master_builder()
+    bottle_spec = dict(master.CYL_SPECS["009"])
+    finish_spec = dict(master.FINISH_MASTERS["17-415"])
+    bottle_spec["height"] = contract.SWIRL.height_mm
+    bottle_spec["diameter"] = contract.SWIRL.diameter_mm
+    datum_z = bottle_spec["height"] - finish_spec["finish_h"]
+    profile = _densify_profile(master.cylinder_profile(bottle_spec, finish_spec))
+    outer_radius = bottle_spec["diameter"] / 2.0
+    relief_z_min = 4.0
+    relief_z_max = datum_z - 4.0
+
+    def molded_radius(radius, z, theta):
+        return contract.swirl_radius(
+            radius,
+            theta,
+            z,
+            outer_radius,
+            relief_z_min,
+            relief_z_max,
+            contract.SWIRL,
+        )
+
+    replacement = master.revolve(
+        "BB_BTL_CYL_SWIRL_010ML_001", profile, modulate=molded_radius
+    )
+    for collection in collections:
+        collection.objects.link(replacement)
+    replacement.parent = parent
+    replacement.location = location
+    replacement.rotation_euler = rotation
+    replacement.scale = scale
+    for key, value in source_properties.items():
+        replacement[key] = value
+
+    bpy.data.objects.remove(source, do_unlink=True)
+    replacement.name = BODY_NAME
+    replacement.data.name = "BB_BTL_CYL_SWIRL_010ML_001_MESH"
+    replacement["asset_id"] = "BB_BTL_CYL_SWIRL_010ML_001"
+    replacement["height_mm"] = contract.SWIRL.height_mm
+    replacement["diameter"] = contract.SWIRL.diameter_mm
+    replacement["neck_finish"] = contract.SWIRL.finish
+    replacement["bb_swirl_flute_count"] = contract.SWIRL.flute_count
+    replacement["bb_swirl_twist_deg"] = contract.SWIRL.twist_deg
+    replacement["bb_swirl_depth_mm"] = contract.SWIRL.depth_mm
+    replacement["bb_relief_z_min_mm"] = relief_z_min
+    replacement["bb_relief_z_max_mm"] = relief_z_max
+    replacement["bb_min_wall_mm"] = bottle_spec["wall"] - contract.SWIRL.depth_mm
+    replacement["bb_geometry_authority"] = "photo-solved relief; measured envelope"
+
+    finish = bpy.data.objects[FINISH_NAME]
+    finish.location.z = datum_z
+    if attachment is not None:
+        attachment.parent = replacement
+        attachment.location = (0.0, 0.0, contract.SWIRL.height_mm)
+    bpy.context.view_layer.update()
+    return replacement
+
+
+def _assert_protected_unchanged(before, after, name):
+    if name != "swirl":
+        if before != after:
+            raise AssertionError("protected baseline state changed during variant build")
+        return
+    for object_name in PROTECTED_NAMES:
+        previous = dict(before[object_name])
+        current = dict(after[object_name])
+        if object_name == FINISH_NAME:
+            previous.pop("location", None)
+            current.pop("location", None)
+        if previous != current:
+            raise AssertionError(f"swirl changed protected state for {object_name}")
+
+
 def _safe_output(output):
     path = Path(output).expanduser().resolve()
     if path == LOCKED_BASELINE:
@@ -286,11 +394,12 @@ def build_variant(name, *, save=False, output=None):
         "approved smooth body" if not contract.VARIANTS[name].allows_body_geometry_change
         else "dedicated molded helical body"
     )
+    if name == "swirl":
+        build_swirl_body()
     _assign_variant_material(name)
     ensure_reflection_strip()
     after = protected_snapshot()
-    if before != after:
-        raise AssertionError("protected baseline state changed during variant build")
+    _assert_protected_unchanged(before, after, name)
     if save:
         if output is None:
             raise ValueError("output is required when save=True")
