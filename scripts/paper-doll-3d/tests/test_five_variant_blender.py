@@ -8,6 +8,7 @@ Run with the immutable approved baseline already loaded:
 """
 
 import importlib.util
+import math
 import sys
 from pathlib import Path
 
@@ -54,4 +55,58 @@ assert finish_before == builder.mesh_fingerprint(bpy.data.objects[builder.FINISH
 )
 assert bpy.context.scene["bb_variant"] == "clear"
 
-print("PASS five-variant Blender baseline preservation")
+
+def principled(material):
+    return next(node for node in material.node_tree.nodes if node.type == "BSDF_PRINCIPLED")
+
+
+def volume_absorption(material):
+    return next(
+        (node for node in material.node_tree.nodes if node.type == "VOLUME_ABSORPTION"),
+        None,
+    )
+
+
+materials = {name: builder.build_glass_material(name) for name in builder.contract.VARIANTS}
+for name in ("clear", "cobalt", "amber", "swirl"):
+    material = materials[name]
+    shader = principled(material)
+    assert shader.inputs["Transmission Weight"].default_value == 1.0
+    assert shader.inputs["IOR"].default_value == 1.5
+    assert 0.02 <= shader.inputs["Roughness"].default_value <= 0.04
+    assert not any(node.type == "BUMP" for node in material.node_tree.nodes), (
+        f"{name} polished material still contains a Bump node"
+    )
+
+cobalt_volume = volume_absorption(materials["cobalt"])
+amber_volume = volume_absorption(materials["amber"])
+assert cobalt_volume is not None
+assert amber_volume is not None
+assert math.isclose(cobalt_volume.inputs["Density"].default_value, 0.85, abs_tol=1e-6)
+assert math.isclose(amber_volume.inputs["Density"].default_value, 0.95, abs_tol=1e-6)
+assert volume_absorption(materials["clear"]) is None
+assert volume_absorption(materials["swirl"]) is None
+
+frosted = materials["frosted"]
+assert any(node.type == "TEX_NOISE" for node in frosted.node_tree.nodes)
+assert any(node.type == "BUMP" for node in frosted.node_tree.nodes)
+assert math.isclose(
+    principled(frosted).inputs["Roughness"].default_value, 0.28, abs_tol=1e-6
+)
+
+body_material = bpy.data.objects[builder.BODY_NAME].data.materials[0]
+finish_material = bpy.data.objects[builder.FINISH_NAME].data.materials[0]
+assert body_material == materials["clear"]
+assert finish_material == materials["clear"]
+
+strip = builder.ensure_reflection_strip()
+assert strip.name == "BB_CARD_GLASS_REFLECTION_STRIP"
+assert tuple(round(value, 3) for value in strip.dimensions[:2]) == (55.0, 240.0)
+assert not strip.visible_camera
+assert not strip.visible_diffuse
+assert not strip.visible_transmission
+assert not strip.visible_shadow
+assert strip.visible_glossy
+assert any(node.type == "LIGHT_PATH" for node in strip.data.materials[0].node_tree.nodes)
+
+print("PASS five-variant Blender baseline, material, and reflection-card gates")

@@ -13,10 +13,12 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import math
 import sys
 from pathlib import Path
 
 import bpy
+from mathutils import Vector
 
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -104,7 +106,7 @@ def material_fingerprint(material):
     return hashlib.sha256(json.dumps(state, sort_keys=True).encode()).hexdigest()
 
 
-def object_snapshot(obj):
+def object_snapshot(obj, *, include_materials=True):
     result = {
         "type": obj.type,
         "location": tuple(_rounded(v) for v in obj.location),
@@ -113,9 +115,10 @@ def object_snapshot(obj):
     }
     if obj.type == "MESH":
         result["mesh"] = mesh_fingerprint(obj)
-        result["materials"] = tuple(
-            material_fingerprint(material) for material in obj.data.materials
-        )
+        if include_materials:
+            result["materials"] = tuple(
+                material_fingerprint(material) for material in obj.data.materials
+            )
     elif obj.type == "CAMERA":
         result["lens"] = _rounded(obj.data.lens)
         result["sensor_width"] = _rounded(obj.data.sensor_width)
@@ -126,7 +129,140 @@ def protected_snapshot():
     missing = [name for name in PROTECTED_NAMES if bpy.data.objects.get(name) is None]
     if missing:
         raise RuntimeError(f"baseline is missing protected objects: {missing}")
-    return {name: object_snapshot(bpy.data.objects[name]) for name in PROTECTED_NAMES}
+    return {
+        name: object_snapshot(
+            bpy.data.objects[name], include_materials=(name != FINISH_NAME)
+        )
+        for name in PROTECTED_NAMES
+    }
+
+
+def build_glass_material(name):
+    """Return the calibrated material for one approved family variant."""
+    if name not in contract.VARIANTS:
+        raise ValueError(f"unknown glass variant {name!r}")
+    spec = contract.VARIANTS[name]
+    material_name = f"BB_MAT_GLASS_{name.upper()}_FIVE_VARIANT"
+    material = bpy.data.materials.get(material_name)
+    if material is not None:
+        return material
+
+    material = bpy.data.materials.new(material_name)
+    material.use_nodes = True
+    material.use_fake_user = True
+    nodes = material.node_tree.nodes
+    links = material.node_tree.links
+    nodes.clear()
+
+    output = nodes.new("ShaderNodeOutputMaterial")
+    output.name = "Material Output"
+    output.location = (320, 0)
+    shader = nodes.new("ShaderNodeBsdfPrincipled")
+    shader.name = "Principled BSDF"
+    shader.location = (-40, 40)
+    shader.inputs["Base Color"].default_value = (1.0, 1.0, 1.0, 1.0)
+    shader.inputs["Transmission Weight"].default_value = 1.0
+    shader.inputs["IOR"].default_value = 1.5
+    shader.inputs["Roughness"].default_value = spec.roughness
+    links.new(shader.outputs["BSDF"], output.inputs["Surface"])
+
+    if spec.frosted:
+        noise = nodes.new("ShaderNodeTexNoise")
+        noise.name = "Uniform Frost Microstructure"
+        noise.location = (-650, -100)
+        noise.inputs["Scale"].default_value = 38.0
+        noise.inputs["Detail"].default_value = 2.0
+        noise.inputs["Roughness"].default_value = 0.55
+        bump = nodes.new("ShaderNodeBump")
+        bump.name = "Uniform Frost Micro Normal"
+        bump.location = (-300, -100)
+        bump.inputs["Strength"].default_value = 0.10
+        bump.inputs["Distance"].default_value = 0.025
+        links.new(noise.outputs["Fac"], bump.inputs["Height"])
+        links.new(bump.outputs["Normal"], shader.inputs["Normal"])
+
+    if spec.absorption_color is not None:
+        volume = nodes.new("ShaderNodeVolumeAbsorption")
+        volume.name = f"{name.title()} Volume Absorption"
+        volume.location = (-40, -180)
+        volume.inputs["Color"].default_value = (*spec.absorption_color, 1.0)
+        volume.inputs["Density"].default_value = spec.density
+        links.new(volume.outputs["Volume"], output.inputs["Volume"])
+
+    material["bb_variant"] = name
+    material["bb_polished"] = not spec.frosted
+    return material
+
+
+def _lighting_collection():
+    collection = bpy.data.collections.get("LIGHTING")
+    if collection is None:
+        collection = bpy.data.collections.new("LIGHTING")
+        bpy.context.scene.collection.children.link(collection)
+    return collection
+
+
+def ensure_reflection_strip():
+    """Create the shared glossy-only vertical reflection card."""
+    existing = bpy.data.objects.get("BB_CARD_GLASS_REFLECTION_STRIP")
+    if existing is not None:
+        return existing
+
+    width, height = 55.0, 240.0
+    mesh = bpy.data.meshes.new("BB_CARD_GLASS_REFLECTION_STRIP_MESH")
+    mesh.from_pydata(
+        [
+            (-width / 2, -height / 2, 0.0),
+            (width / 2, -height / 2, 0.0),
+            (width / 2, height / 2, 0.0),
+            (-width / 2, height / 2, 0.0),
+        ],
+        [],
+        [(0, 1, 2, 3)],
+    )
+    mesh.update()
+
+    material = bpy.data.materials.new("BB_MAT_GLASS_REFLECTION_STRIP")
+    material.use_nodes = True
+    nodes = material.node_tree.nodes
+    links = material.node_tree.links
+    nodes.clear()
+    output = nodes.new("ShaderNodeOutputMaterial")
+    transparent = nodes.new("ShaderNodeBsdfTransparent")
+    emission = nodes.new("ShaderNodeEmission")
+    emission.inputs["Color"].default_value = (1.0, 1.0, 1.0, 1.0)
+    emission.inputs["Strength"].default_value = 4.0
+    light_path = nodes.new("ShaderNodeLightPath")
+    mix = nodes.new("ShaderNodeMixShader")
+    links.new(light_path.outputs["Is Glossy Ray"], mix.inputs[0])
+    links.new(transparent.outputs["BSDF"], mix.inputs[1])
+    links.new(emission.outputs["Emission"], mix.inputs[2])
+    links.new(mix.outputs["Shader"], output.inputs["Surface"])
+    mesh.materials.append(material)
+
+    card = bpy.data.objects.new("BB_CARD_GLASS_REFLECTION_STRIP", mesh)
+    card.location = (-95.0, -135.0, 105.0)
+    target = Vector((0.0, 0.0, 38.0))
+    card.rotation_euler = (target - card.location).to_track_quat("-Z", "Y").to_euler()
+    card.visible_camera = False
+    card.visible_diffuse = False
+    card.visible_transmission = False
+    card.visible_shadow = False
+    card.visible_glossy = True
+    card.show_name = True
+    card["bb_role"] = "reflection_only_softbox"
+    card["bb_dimensions_mm"] = "55x240"
+    _lighting_collection().objects.link(card)
+    return card
+
+
+def _assign_variant_material(name):
+    material = build_glass_material(name)
+    for object_name in (BODY_NAME, FINISH_NAME):
+        obj = bpy.data.objects[object_name]
+        obj.data.materials.clear()
+        obj.data.materials.append(material)
+    return material
 
 
 def _safe_output(output):
@@ -150,6 +286,8 @@ def build_variant(name, *, save=False, output=None):
         "approved smooth body" if not contract.VARIANTS[name].allows_body_geometry_change
         else "dedicated molded helical body"
     )
+    _assign_variant_material(name)
+    ensure_reflection_strip()
     after = protected_snapshot()
     if before != after:
         raise AssertionError("protected baseline state changed during variant build")
