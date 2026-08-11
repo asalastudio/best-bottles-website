@@ -444,8 +444,10 @@ def _union_exact(base, addition):
         polygon.use_smooth = True
 
 
-def build_continuous_body(name):
+def build_continuous_body(name, *, swirl_spec=None):
     """Build one continuous glass shell with the approved 17/415 helix."""
+    if name == "swirl" and swirl_spec is None:
+        raise ValueError("swirl requires an explicit 10- or 12-flute candidate")
     source = bpy.data.objects[BODY_NAME]
     collections = list(source.users_collection)
     parent = source.parent
@@ -465,14 +467,14 @@ def build_continuous_body(name):
     )
     finish_spec["runout_overlap_deg"] = contract.JUNCTION_17_415.runout_overlap_deg
     if name == "swirl":
-        bottle_spec["height"] = contract.SWIRL.height_mm
-        bottle_spec["diameter"] = contract.SWIRL.diameter_mm
+        bottle_spec["height"] = swirl_spec.height_mm
+        bottle_spec["diameter"] = swirl_spec.diameter_mm
     profile, datum_z = _continuous_profile(master, bottle_spec, finish_spec)
     if name == "swirl":
-        profile = _densify_profile(profile, z_max=datum_z)
+        profile = _densify_profile(profile, max_z_step=0.35, z_max=datum_z)
     outer_radius = bottle_spec["diameter"] / 2.0
-    relief_z_min = 4.0
-    relief_z_max = datum_z - 4.0
+    relief_z_min = 2.0
+    relief_z_max = datum_z - 2.0
 
     def molded_radius(radius, z, theta):
         return contract.swirl_radius(
@@ -482,7 +484,7 @@ def build_continuous_body(name):
             outer_radius,
             relief_z_min,
             relief_z_max,
-            contract.SWIRL,
+            swirl_spec,
         )
 
     replacement = master.revolve(
@@ -530,12 +532,17 @@ def build_continuous_body(name):
     replacement["bb_thread_runout_overlap_deg"] = finish_spec["runout_overlap_deg"]
     replacement["bb_thread_source_fingerprint"] = thread_source_fingerprint
     if name == "swirl":
-        replacement["bb_swirl_flute_count"] = contract.SWIRL.flute_count
-        replacement["bb_swirl_twist_deg"] = contract.SWIRL.twist_deg
-        replacement["bb_swirl_depth_mm"] = contract.SWIRL.depth_mm
+        replacement["bb_swirl_flute_count"] = swirl_spec.flute_count
+        replacement["bb_swirl_twist_deg"] = swirl_spec.twist_deg
+        replacement["bb_swirl_depth_mm"] = swirl_spec.depth_mm
+        replacement["bb_swirl_fade_mm"] = swirl_spec.fade_mm
+        replacement["bb_swirl_channel_power"] = swirl_spec.channel_power
+        replacement["bb_swirl_candidate"] = (
+            f"{swirl_spec.flute_count}-flute-clay-review"
+        )
         replacement["bb_relief_z_min_mm"] = relief_z_min
         replacement["bb_relief_z_max_mm"] = relief_z_max
-        replacement["bb_min_wall_mm"] = bottle_spec["wall"] - contract.SWIRL.depth_mm
+        replacement["bb_min_wall_mm"] = bottle_spec["wall"] - swirl_spec.depth_mm
         replacement["bb_geometry_authority"] = "photo-solved relief; measured envelope"
 
     finish = bpy.data.objects[FINISH_NAME]
@@ -550,8 +557,12 @@ def build_continuous_body(name):
     return replacement
 
 
-def build_swirl_body():
-    return build_continuous_body("swirl")
+def build_swirl_candidate(flute_count):
+    try:
+        swirl_spec = contract.SWIRL_CANDIDATES[flute_count]
+    except KeyError as error:
+        raise ValueError("swirl candidate must use 10 or 12 flutes") from error
+    return build_continuous_body("swirl", swirl_spec=swirl_spec)
 
 
 def _assert_protected_unchanged(before, after, name):
@@ -578,7 +589,7 @@ def _safe_output(output):
     return path
 
 
-def build_variant(name, *, save=False, output=None):
+def build_variant(name, *, save=False, output=None, swirl_flutes=None):
     if name not in contract.VARIANTS:
         raise ValueError(f"unknown variant {name!r}; choose {sorted(contract.VARIANTS)}")
     before = protected_snapshot()
@@ -590,7 +601,14 @@ def build_variant(name, *, save=False, output=None):
         "approved smooth body" if not contract.VARIANTS[name].allows_body_geometry_change
         else "dedicated molded helical body"
     )
-    build_continuous_body(name)
+    if name == "swirl":
+        if swirl_flutes is None:
+            raise ValueError("swirl variant requires swirl_flutes=10 or 12")
+        build_swirl_candidate(swirl_flutes)
+    else:
+        if swirl_flutes is not None:
+            raise ValueError("swirl_flutes is only valid for the swirl variant")
+        build_continuous_body(name)
     _assign_variant_material(name)
     ensure_reflection_strip()
     configure_workspaces()
@@ -610,13 +628,24 @@ def parse_args():
     argv = sys.argv[sys.argv.index("--") + 1:] if "--" in sys.argv else []
     parser = argparse.ArgumentParser()
     parser.add_argument("--variant", required=True, choices=sorted(contract.VARIANTS))
+    parser.add_argument("--swirl-flutes", type=int, choices=(10, 12))
     parser.add_argument("--output", type=Path, required=True)
-    return parser.parse_args(argv)
+    args = parser.parse_args(argv)
+    if args.variant == "swirl" and args.swirl_flutes is None:
+        parser.error("--swirl-flutes is required when --variant swirl")
+    if args.variant != "swirl" and args.swirl_flutes is not None:
+        parser.error("--swirl-flutes is only valid when --variant swirl")
+    return args
 
 
 def main():
     args = parse_args()
-    build_variant(args.variant, save=True, output=args.output)
+    build_variant(
+        args.variant,
+        save=True,
+        output=args.output,
+        swirl_flutes=args.swirl_flutes,
+    )
 
 
 if __name__ == "__main__":

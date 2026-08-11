@@ -167,7 +167,7 @@ bpy.ops.wm.open_mainfile(filepath=str(builder.LOCKED_BASELINE))
 smooth_fingerprint = builder.mesh_fingerprint(bpy.data.objects[builder.BODY_NAME])
 finish_fingerprint = builder.mesh_fingerprint(bpy.data.objects[builder.FINISH_NAME])
 
-builder.build_variant("swirl", save=False)
+builder.build_swirl_candidate(10)
 
 swirl = bpy.data.objects[builder.BODY_NAME]
 finish = bpy.data.objects[builder.FINISH_NAME]
@@ -177,9 +177,11 @@ assert not any(modifier.type == "DISPLACE" for modifier in swirl.modifiers)
 assert math.isclose(swirl.dimensions.x, 21.0, abs_tol=0.5)
 assert math.isclose(swirl.dimensions.y, 21.0, abs_tol=0.5)
 assert math.isclose(swirl.dimensions.z, 74.0, abs_tol=1.0)
-assert swirl["bb_swirl_flute_count"] == 8
-assert swirl["bb_swirl_twist_deg"] == 85.0
+assert swirl["bb_swirl_flute_count"] == 10
+assert swirl["bb_swirl_twist_deg"] == 90.0
 assert swirl["bb_swirl_depth_mm"] == 0.75
+assert swirl["bb_swirl_fade_mm"] == 2.75
+assert swirl["bb_swirl_channel_power"] == 2.5
 assert swirl["bb_thread_source_fingerprint"] == clear_thread_source_fingerprint
 assert swirl["bb_min_wall_mm"] >= 0.8
 assert swirl["bb_geometry_authority"] == "photo-solved relief; measured envelope"
