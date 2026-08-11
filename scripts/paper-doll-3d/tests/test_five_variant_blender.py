@@ -219,6 +219,20 @@ assert not strip.visible_shadow
 assert strip.visible_glossy
 assert any(node.type == "LIGHT_PATH" for node in strip.data.materials[0].node_tree.nodes)
 
+camera_before_card = builder.object_snapshot(bpy.data.objects["BB_CAM_MASTER"])
+key_before_card = builder.object_snapshot(bpy.data.objects["BB_LIGHT_KEY_SOFTBOX"])
+transmission_card = builder.ensure_transmission_card()
+assert transmission_card.name == "BB_CARD_GLASS_TRANSMISSION_BACK"
+assert not transmission_card.visible_camera
+assert not transmission_card.visible_shadow
+assert transmission_card.visible_transmission
+assert not transmission_card.visible_glossy
+assert not transmission_card.visible_diffuse
+assert transmission_card["bb_role"] == "transmission_only_back_card"
+assert transmission_card["bb_dimensions_mm"] == "140x220"
+assert builder.object_snapshot(bpy.data.objects["BB_CAM_MASTER"]) == camera_before_card
+assert builder.object_snapshot(bpy.data.objects["BB_LIGHT_KEY_SOFTBOX"]) == key_before_card
+
 builder.configure_workspaces()
 assert bpy.context.window.workspace.name == "SCENE OVERVIEW"
 largest_area = max(

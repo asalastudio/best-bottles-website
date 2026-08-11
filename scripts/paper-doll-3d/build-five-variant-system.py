@@ -271,6 +271,54 @@ def ensure_reflection_strip():
     return card
 
 
+def ensure_transmission_card():
+    """Create the broad back card seen only through refracted glass rays."""
+    existing = bpy.data.objects.get("BB_CARD_GLASS_TRANSMISSION_BACK")
+    if existing is not None:
+        return existing
+
+    spec = contract.TRANSMISSION_CARD_009
+    width, height = spec.width_mm, spec.height_mm
+    mesh = bpy.data.meshes.new("BB_CARD_GLASS_TRANSMISSION_BACK_MESH")
+    mesh.from_pydata(
+        [
+            (-width / 2.0, 0.0, -height / 2.0),
+            (width / 2.0, 0.0, -height / 2.0),
+            (width / 2.0, 0.0, height / 2.0),
+            (-width / 2.0, 0.0, height / 2.0),
+        ],
+        [],
+        [(0, 1, 2, 3)],
+    )
+    mesh.update()
+
+    material = bpy.data.materials.new("BB_MAT_GLASS_TRANSMISSION_BACK")
+    material.use_nodes = True
+    nodes = material.node_tree.nodes
+    links = material.node_tree.links
+    nodes.clear()
+    output = nodes.new("ShaderNodeOutputMaterial")
+    emission = nodes.new("ShaderNodeEmission")
+    emission.inputs["Color"].default_value = (1.0, 0.985, 0.96, 1.0)
+    emission.inputs["Strength"].default_value = spec.emission_strength
+    links.new(emission.outputs["Emission"], output.inputs["Surface"])
+    mesh.materials.append(material)
+
+    card = bpy.data.objects.new("BB_CARD_GLASS_TRANSMISSION_BACK", mesh)
+    card.location = spec.location_mm
+    card.visible_camera = spec.visible_camera
+    card.visible_diffuse = False
+    card.visible_glossy = spec.visible_glossy
+    card.visible_transmission = spec.visible_transmission
+    card.visible_shadow = spec.visible_shadow
+    card.show_name = True
+    card["bb_role"] = "transmission_only_back_card"
+    card["bb_dimensions_mm"] = f"{int(width)}x{int(height)}"
+    card["bb_emission_strength"] = spec.emission_strength
+    _lighting_collection().objects.link(card)
+    return card
+
+
 def _largest_area(screen):
     return max(screen.areas, key=lambda area: area.width * area.height)
 
@@ -304,12 +352,14 @@ def _configure_view(workspace, view_location, distance, rotation, shading="SOLID
 def configure_workspaces():
     """Save understandable overview, product, and lighting workspaces."""
     strip = ensure_reflection_strip()
+    transmission_card = ensure_transmission_card()
     for name in (
         "BB_LIGHT_KEY_SOFTBOX",
         "BB_CARD_FILL_RIGHT",
         "BB_CARD_TOP",
         "BB_LIGHT_SWEEP_WASH",
         strip.name,
+        transmission_card.name,
     ):
         obj = bpy.data.objects.get(name)
         if obj is not None:
@@ -727,6 +777,7 @@ def build_variant(name, *, save=False, output=None, swirl_flutes=None):
         build_continuous_body(name)
     _assign_variant_material(name)
     ensure_reflection_strip()
+    ensure_transmission_card()
     configure_workspaces()
     after = protected_snapshot()
     _assert_protected_unchanged(before, after, name)
