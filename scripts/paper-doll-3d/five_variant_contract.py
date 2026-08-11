@@ -30,10 +30,12 @@ class SwirlSpec:
     height_mm: float = 74.0
     diameter_mm: float = 21.0
     finish: str = "17-415"
-    flute_count: int = 8
-    twist_deg: float = 85.0
+    flute_count: int = 10
+    twist_deg: float = 90.0
     depth_mm: float = 0.75
     minimum_wall_mm: float = 0.8
+    fade_mm: float = 2.75
+    channel_power: float = 2.5
 
 
 @dataclass(frozen=True)
@@ -78,17 +80,25 @@ VARIANTS = {
     "swirl": VariantSpec("swirl", True, 0.025),
 }
 
-SWIRL = SwirlSpec()
+SWIRL_CANDIDATES = {
+    10: SwirlSpec(flute_count=10),
+    12: SwirlSpec(flute_count=12),
+}
 JUNCTION_17_415 = JunctionSpec()
 
 
-def swirl_radius(radius, theta, z, outer_radius, z_min, z_max, spec=SWIRL):
+def smoothstep01(value):
+    value = max(0.0, min(1.0, value))
+    return value * value * (3.0 - 2.0 * value)
+
+
+def swirl_radius(radius, theta, z, outer_radius, z_min, z_max, spec):
     """Return a real inward-only multi-start helical molded radius.
 
     Only vertices within 0.8 mm of the nominal outer envelope are eligible.
-    This keeps the inner cavity smooth. A squared sinusoid gives broad molded
-    troughs rather than sharp screw-like grooves, and the vertical sine fade
-    returns the relief to the smooth body before the heel and shoulder.
+    This keeps the inner cavity smooth. A powered cosine produces narrow,
+    smoothly rounded channels between broad outer lands. Short smoothstep
+    fades retain full molded depth over most of the body.
     """
     if radius < outer_radius - 0.8 or not z_min <= z <= z_max:
         return radius
@@ -96,12 +106,13 @@ def swirl_radius(radius, theta, z, outer_radius, z_min, z_max, spec=SWIRL):
     if span <= 0:
         raise ValueError("swirl region must have positive height")
     t = (z - z_min) / span
-    fade = math.sin(math.pi * t) ** 2
+    edge_distance = min(z - z_min, z_max - z)
+    fade = smoothstep01(edge_distance / spec.fade_mm)
     phase = spec.flute_count * (
         theta - math.radians(spec.twist_deg) * t
     )
-    groove = (1.0 + math.cos(phase)) * 0.5
-    return radius - spec.depth_mm * fade * groove
+    channel = ((1.0 + math.cos(phase)) * 0.5) ** spec.channel_power
+    return radius - spec.depth_mm * fade * channel
 
 
 def fingerprint_values(values, digits=6):

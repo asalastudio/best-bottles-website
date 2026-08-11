@@ -50,14 +50,19 @@ class FiveVariantContractTests(unittest.TestCase):
         )
         self.assertEqual(self.contract.VARIANTS["amber"].density, 0.65)
 
-    def test_swirl_contract_uses_approved_photo_solved_candidate(self):
-        swirl = self.contract.SWIRL
-        self.assertEqual(swirl.height_mm, 74.0)
-        self.assertEqual(swirl.diameter_mm, 21.0)
-        self.assertEqual(swirl.finish, "17-415")
-        self.assertEqual(swirl.flute_count, 8)
-        self.assertEqual(swirl.twist_deg, 85.0)
-        self.assertEqual(swirl.depth_mm, 0.75)
+    def test_swirl_comparison_has_only_ten_and_twelve_flute_candidates(self):
+        candidates = self.contract.SWIRL_CANDIDATES
+        self.assertEqual(set(candidates), {10, 12})
+        for flute_count, candidate in candidates.items():
+            with self.subTest(flute_count=flute_count):
+                self.assertEqual(candidate.height_mm, 74.0)
+                self.assertEqual(candidate.diameter_mm, 21.0)
+                self.assertEqual(candidate.finish, "17-415")
+                self.assertEqual(candidate.flute_count, flute_count)
+                self.assertEqual(candidate.twist_deg, 90.0)
+                self.assertEqual(candidate.depth_mm, 0.75)
+                self.assertEqual(candidate.fade_mm, 2.75)
+                self.assertEqual(candidate.channel_power, 2.5)
 
     def test_17_415_finish_height_remains_at_lower_drawing_tolerance(self):
         junction = self.contract.JUNCTION_17_415
@@ -99,31 +104,47 @@ class FiveVariantContractTests(unittest.TestCase):
         self.assertEqual(self.contract.VARIANTS["amber"].density, 0.65)
 
     def test_swirl_is_inward_and_respects_wall_gate(self):
-        swirl = self.contract.SWIRL
-        radius = self.contract.swirl_radius(
-            10.5, 0.0, 30.0, 10.5, 4.0, 56.0, swirl
-        )
-        self.assertGreaterEqual(radius, 10.5 - swirl.depth_mm)
-        self.assertLessEqual(radius, 10.5)
-        self.assertGreaterEqual(10.5 - swirl.depth_mm - 8.9, 0.8)
+        for swirl in self.contract.SWIRL_CANDIDATES.values():
+            with self.subTest(flute_count=swirl.flute_count):
+                radius = self.contract.swirl_radius(
+                    10.5, 0.0, 30.0, 10.5, 2.0, 58.0, swirl
+                )
+                self.assertGreaterEqual(radius, 10.5 - swirl.depth_mm)
+                self.assertLessEqual(radius, 10.5)
+                self.assertGreaterEqual(10.5 - swirl.depth_mm - 8.9, 0.8)
+
+    def test_both_candidates_preserve_the_wall_gate(self):
+        for swirl in self.contract.SWIRL_CANDIDATES.values():
+            with self.subTest(flute_count=swirl.flute_count):
+                self.assertGreaterEqual(1.6 - swirl.depth_mm, swirl.minimum_wall_mm)
 
     def test_swirl_fades_to_zero_at_body_region_ends(self):
-        swirl = self.contract.SWIRL
-        for z in (4.0, 56.0):
+        swirl = self.contract.SWIRL_CANDIDATES[10]
+        for z in (2.0, 58.0):
             with self.subTest(z=z):
                 self.assertTrue(
                     math.isclose(
                         self.contract.swirl_radius(
-                            10.5, 0.0, z, 10.5, 4.0, 56.0, swirl
+                            10.5, 0.0, z, 10.5, 2.0, 58.0, swirl
                         ),
                         10.5,
                         abs_tol=1e-9,
                     )
                 )
 
+    def test_swirl_has_full_depth_after_short_end_fade(self):
+        swirl = self.contract.SWIRL_CANDIDATES[10]
+        z_min, z_max, outer = 2.0, 58.0, 10.5
+        t = swirl.fade_mm / (z_max - z_min)
+        theta = math.radians(swirl.twist_deg * t)
+        radius = self.contract.swirl_radius(
+            outer, theta, z_min + swirl.fade_mm, outer, z_min, z_max, swirl
+        )
+        self.assertAlmostEqual(radius, outer - swirl.depth_mm, places=6)
+
     def test_each_flute_rotates_by_the_full_photo_solved_twist(self):
-        swirl = self.contract.SWIRL
-        z_min, z_max = 4.0, 56.0
+        swirl = self.contract.SWIRL_CANDIDATES[12]
+        z_min, z_max = 2.0, 58.0
         t = 0.25
         z = z_min + (z_max - z_min) * t
         expected_groove_angle = math.radians(swirl.twist_deg * t)
@@ -136,25 +157,29 @@ class FiveVariantContractTests(unittest.TestCase):
         )
         self.assertLess(expected_radius, divided_radius - 0.1)
 
-    def test_molded_trough_has_broad_shoulders(self):
-        swirl = self.contract.SWIRL
-        z_min, z_max = 4.0, 56.0
+    def test_molded_channel_is_narrow_with_broad_outer_lands(self):
+        swirl = self.contract.SWIRL_CANDIDATES[12]
+        z_min, z_max = 2.0, 58.0
         z = (z_min + z_max) * 0.5
         center_angle = math.radians(swirl.twist_deg * 0.5)
         quarter_phase_angle = center_angle + math.pi / (2 * swirl.flute_count)
-        radius = self.contract.swirl_radius(
+        center_radius = self.contract.swirl_radius(
+            10.5, center_angle, z, 10.5, z_min, z_max, swirl
+        )
+        shoulder_radius = self.contract.swirl_radius(
             10.5, quarter_phase_angle, z, 10.5, z_min, z_max, swirl
         )
-        self.assertLessEqual(radius, 10.15)
+        self.assertAlmostEqual(center_radius, 9.75, places=6)
+        self.assertGreater(shoulder_radius, 10.35)
 
     def test_inner_or_non_body_vertices_are_never_modulated(self):
-        swirl = self.contract.SWIRL
+        swirl = self.contract.SWIRL_CANDIDATES[10]
         self.assertEqual(
-            self.contract.swirl_radius(8.9, 0.0, 30.0, 10.5, 4.0, 56.0, swirl),
+            self.contract.swirl_radius(8.9, 0.0, 30.0, 10.5, 2.0, 58.0, swirl),
             8.9,
         )
         self.assertEqual(
-            self.contract.swirl_radius(10.5, 0.0, 2.0, 10.5, 4.0, 56.0, swirl),
+            self.contract.swirl_radius(10.5, 0.0, 1.0, 10.5, 2.0, 58.0, swirl),
             10.5,
         )
 
