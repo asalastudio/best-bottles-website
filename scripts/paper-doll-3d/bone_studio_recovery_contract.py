@@ -52,8 +52,8 @@ class StudioSpec:
     render_width_px: int = 2080
     render_height_px: int = 2288
     render_samples: int = 512
-    engine: str = "BLENDER_EEVEE_NEXT"
-    view_transform: str = "AgX"
+    engine: str = "CYCLES"
+    view_transform: str = "Standard"
     look: str = "None"
     exposure: float = 0.0
 
