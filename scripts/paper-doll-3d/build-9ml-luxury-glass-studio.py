@@ -37,6 +37,15 @@ GROUP_INPUT_NAMES = (
     "micro_normal_strength",
 )
 
+LEGACY_EMITTERS = (
+    "BB_LIGHT_KEY_SOFTBOX",
+    "BB_CARD_FILL_RIGHT",
+    "BB_CARD_TOP",
+    "BB_LIGHT_SWEEP_WASH",
+    "BB_CARD_GLASS_REFLECTION_STRIP",
+    "BB_CARD_GLASS_TRANSMISSION_BACK",
+)
+
 
 def _body():
     obj = bpy.data.objects.get(contract.BODY_NAME)
@@ -306,6 +315,184 @@ def assign_variant(variant: str):
     body.data.materials.append(material)
     bpy.context.scene["bb_variant"] = variant
     return material
+
+
+def _luxury_collection():
+    collection = bpy.data.collections.get(contract.LUXURY_COLLECTION)
+    if collection is None:
+        collection = bpy.data.collections.new(contract.LUXURY_COLLECTION)
+        bpy.context.scene.collection.children.link(collection)
+    return collection
+
+
+def _aim_local_axis(obj, target, axis="-Z", up="Y"):
+    direction = Vector(target) - obj.location
+    if direction.length == 0:
+        raise ValueError(f"cannot aim {obj.name} at its own location")
+    obj.rotation_euler = direction.to_track_quat(axis, up).to_euler()
+
+
+def _ensure_area_light(spec, collection):
+    obj = bpy.data.objects.get(spec.name)
+    if obj is None:
+        data = bpy.data.lights.new(spec.name, "AREA")
+        obj = bpy.data.objects.new(spec.name, data)
+        collection.objects.link(obj)
+    elif obj.name not in collection.objects:
+        collection.objects.link(obj)
+    width, height = spec.dimensions(contract.GEOMETRY)
+    obj.data.type = "AREA"
+    obj.data.shape = "RECTANGLE"
+    obj.data.size = width
+    obj.data.size_y = height
+    obj.data.energy = spec.energy_watts
+    obj.data.color = (1.0, 0.985, 0.96) if spec.name == "BB_LUX_KEY_LEFT" else (1.0, 1.0, 1.0)
+    obj.location = spec.location(contract.GEOMETRY)
+    _aim_local_axis(obj, spec.target(contract.GEOMETRY), "-Z", "Y")
+    obj["bb_role"] = "luxury_glass_area_light"
+    obj["bb_contract_angle_degrees"] = spec.angle_degrees
+    obj["bb_contract_energy_watts"] = spec.energy_watts
+    obj["bb_contract_width_mm"] = width
+    obj["bb_contract_height_mm"] = height
+    return obj
+
+
+def _negative_fill_material():
+    material = bpy.data.materials.get("BB_MAT_LUXURY_NEGATIVE_FILL")
+    if material is not None:
+        return material
+    material = bpy.data.materials.new("BB_MAT_LUXURY_NEGATIVE_FILL")
+    material.use_nodes = True
+    material.diffuse_color = (0.003, 0.003, 0.003, 1.0)
+    principled = material.node_tree.nodes.get("Principled BSDF")
+    principled.inputs["Base Color"].default_value = (0.003, 0.003, 0.003, 1.0)
+    principled.inputs["Metallic"].default_value = 0.0
+    principled.inputs["Roughness"].default_value = 1.0
+    return material
+
+
+def _ensure_negative_card(spec, collection):
+    obj = bpy.data.objects.get(spec.name)
+    width, height = spec.dimensions(contract.GEOMETRY)
+    if obj is None:
+        mesh = bpy.data.meshes.new(f"{spec.name}_MESH")
+        mesh.from_pydata(
+            [
+                (-width * 0.5, -height * 0.5, 0.0),
+                (width * 0.5, -height * 0.5, 0.0),
+                (width * 0.5, height * 0.5, 0.0),
+                (-width * 0.5, height * 0.5, 0.0),
+            ],
+            [],
+            [(0, 1, 2, 3)],
+        )
+        mesh.materials.append(_negative_fill_material())
+        obj = bpy.data.objects.new(spec.name, mesh)
+        collection.objects.link(obj)
+    elif obj.name not in collection.objects:
+        collection.objects.link(obj)
+    obj.location = spec.location(contract.GEOMETRY)
+    _aim_local_axis(obj, (0.0, 0.0, contract.GEOMETRY.height_mm * 0.53), "Z", "Y")
+    obj.visible_camera = False
+    obj.visible_shadow = False
+    obj.visible_diffuse = False
+    obj.visible_glossy = True
+    obj.visible_transmission = False
+    obj.visible_volume_scatter = False
+    obj["bb_negative_fill"] = True
+    obj["bb_contract_width_mm"] = width
+    obj["bb_contract_height_mm"] = height
+    return obj
+
+
+def ensure_luxury_studio():
+    collection = _luxury_collection()
+    for spec in contract.LIGHTS:
+        _ensure_area_light(spec, collection)
+    for spec in contract.NEGATIVE_CARDS:
+        _ensure_negative_card(spec, collection)
+    for name in LEGACY_EMITTERS:
+        obj = bpy.data.objects.get(name)
+        if obj is not None:
+            obj.hide_render = True
+            obj["bb_disabled_by_luxury_studio"] = True
+    sweep = bpy.data.objects.get("BB_STUDIO_SWEEP")
+    if sweep is None:
+        raise RuntimeError("approved physical seamless sweep is missing")
+    sweep.hide_render = False
+    collection["bb_height_mm"] = contract.GEOMETRY.height_mm
+    collection["bb_diameter_mm"] = contract.GEOMETRY.diameter_mm
+    collection["bb_background_gradient_target_percent"] = 6.5
+    return collection
+
+
+def configure_camera():
+    camera = bpy.data.objects.get(contract.CAMERA_NAME)
+    if camera is None or camera.type != "CAMERA":
+        raise RuntimeError("approved 100 mm master camera is missing")
+    expected_location = contract.GEOMETRY.camera_location
+    expected_rotation = tuple(math.radians(value) for value in contract.GEOMETRY.camera_rotation_degrees)
+    if any(abs(float(camera.location[index]) - expected_location[index]) > 1e-4 for index in range(3)):
+        raise RuntimeError("approved camera location drifted")
+    if any(abs(float(camera.rotation_euler[index]) - expected_rotation[index]) > 1e-4 for index in range(3)):
+        raise RuntimeError("approved camera rotation drifted")
+    if abs(camera.data.lens - contract.GEOMETRY.camera_lens_mm) > 1e-5:
+        raise RuntimeError("approved 100 mm camera lens drifted")
+    if abs(camera.data.sensor_width - contract.GEOMETRY.camera_sensor_mm) > 1e-5:
+        raise RuntimeError("approved camera sensor drifted")
+    camera.data.dof.use_dof = False
+    bpy.context.scene.camera = camera
+    return camera
+
+
+def _configure_cycles_device():
+    preferences = bpy.context.preferences.addons.get("cycles")
+    if preferences is None:
+        return
+    prefs = preferences.preferences
+    try:
+        prefs.compute_device_type = "METAL"
+        prefs.get_devices()
+        for device in prefs.devices:
+            device.use = device.type != "CPU"
+    except (AttributeError, TypeError):
+        pass
+
+
+def configure_cycles():
+    scene = bpy.context.scene
+    render = contract.RENDER
+    scene.render.engine = render.engine
+    scene.cycles.device = render.device
+    scene.cycles.samples = render.samples
+    scene.cycles.use_adaptive_sampling = render.adaptive_sampling
+    scene.cycles.adaptive_threshold = render.noise_threshold
+    scene.cycles.use_denoising = render.denoise
+    scene.cycles.max_bounces = render.max_bounces
+    scene.cycles.transmission_bounces = render.transmission_bounces
+    scene.cycles.glossy_bounces = render.glossy_bounces
+    scene.cycles.diffuse_bounces = render.diffuse_bounces
+    scene.cycles.transparent_max_bounces = render.transparent_bounces
+    if hasattr(scene.cycles, "use_reflective_caustics"):
+        scene.cycles.use_reflective_caustics = True
+    if hasattr(scene.cycles, "use_refractive_caustics"):
+        scene.cycles.use_refractive_caustics = True
+    _configure_cycles_device()
+    return scene.cycles
+
+
+def configure_color_management():
+    settings = bpy.context.scene.view_settings
+    settings.view_transform = contract.RENDER.view_transform
+    for candidate in (f"AgX - {contract.RENDER.look}", contract.RENDER.look, "None"):
+        try:
+            settings.look = candidate
+            break
+        except TypeError:
+            continue
+    settings.exposure = contract.RENDER.exposure
+    settings.gamma = contract.RENDER.gamma
+    return settings
 
 
 def _parse_args(argv):
