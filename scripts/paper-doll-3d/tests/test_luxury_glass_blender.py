@@ -6,6 +6,7 @@ import importlib.util
 import math
 from pathlib import Path
 import sys
+import tempfile
 import unittest
 
 import bpy
@@ -165,6 +166,39 @@ class LuxuryGlassBlenderTests(unittest.TestCase):
         self.assertEqual(scene.view_settings.view_transform, render.view_transform)
         self.assertEqual(scene.view_settings.exposure, render.exposure)
         self.assertEqual(scene.view_settings.gamma, render.gamma)
+
+    def test_z_master_and_derivatives_preserve_everything_except_material(self):
+        output_root = builder.contract.WORKING_OUTPUT_DIR
+        output_root.mkdir(parents=True, exist_ok=True)
+        expected_camera = builder.contract.object_snapshot(
+            bpy.data.objects[builder.contract.CAMERA_NAME]
+        )
+        with tempfile.TemporaryDirectory(dir=output_root, prefix="contract-test-") as temp:
+            temp_dir = Path(temp)
+            master_path = temp_dir / "009ml-luxury-master.blend"
+            builder.build_master(master_path)
+            derivatives = builder.save_derivatives(temp_dir)
+            self.assertEqual(set(derivatives), {"clear", "amber", "cobalt", "frosted"})
+            self.assertTrue(master_path.exists())
+            expected_studio = builder.studio_snapshot()
+
+            for variant, path in derivatives.items():
+                self.assertTrue(path.exists(), path)
+                bpy.ops.wm.open_mainfile(filepath=str(path))
+                body = bpy.data.objects[builder.contract.BODY_NAME]
+                self.assertEqual(
+                    builder.contract.geometry_fingerprint(body.data),
+                    builder.contract.BODY_GEOMETRY_SHA256,
+                )
+                self.assertEqual(body.data.materials[0].name, f"BB_GLASS_{variant.upper()}")
+                self.assertEqual(bpy.context.scene["bb_variant"], variant)
+                self.assertEqual(
+                    builder.contract.object_snapshot(bpy.data.objects[builder.contract.CAMERA_NAME]),
+                    expected_camera,
+                )
+                self.assertEqual(builder.studio_snapshot(), expected_studio)
+                self.assertEqual(bpy.context.scene.view_settings.view_transform, "AgX")
+                self.assertEqual(bpy.context.scene.cycles.samples, 512)
 
 
 suite = unittest.defaultTestLoader.loadTestsFromTestCase(LuxuryGlassBlenderTests)

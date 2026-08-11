@@ -495,6 +495,184 @@ def configure_color_management():
     return settings
 
 
+def _rounded_tuple(values, digits=6):
+    return tuple(round(float(value), digits) for value in values)
+
+
+def studio_snapshot() -> dict[str, Any]:
+    collection = bpy.data.collections.get(contract.LUXURY_COLLECTION)
+    if collection is None:
+        raise RuntimeError("luxury studio collection is missing")
+    state = {}
+    for obj in sorted(collection.objects, key=lambda item: item.name):
+        item = {
+            "type": obj.type,
+            "location": _rounded_tuple(obj.location),
+            "rotation": _rounded_tuple(obj.rotation_euler),
+            "scale": _rounded_tuple(obj.scale),
+            "hide_render": bool(obj.hide_render),
+        }
+        if obj.type == "LIGHT":
+            item.update(
+                light_type=obj.data.type,
+                shape=obj.data.shape,
+                size=round(float(obj.data.size), 6),
+                size_y=round(float(obj.data.size_y), 6),
+                energy=round(float(obj.data.energy), 6),
+                color=_rounded_tuple(obj.data.color),
+            )
+        elif obj.get("bb_negative_fill"):
+            item.update(
+                negative_fill=True,
+                visible_camera=bool(obj.visible_camera),
+                visible_glossy=bool(obj.visible_glossy),
+                visible_shadow=bool(obj.visible_shadow),
+                dimensions=_rounded_tuple(obj.dimensions),
+            )
+        state[obj.name] = item
+    return state
+
+
+def _safe_generated_path(path, *, replace_generated=False):
+    resolved = Path(path).expanduser().resolve()
+    root = contract.WORKING_OUTPUT_DIR.resolve()
+    if resolved != root and root not in resolved.parents:
+        raise ValueError(f"generated Blender files must remain below {root}")
+    if resolved.exists() and not replace_generated:
+        raise FileExistsError(f"refusing to overwrite existing generated file: {resolved}")
+    resolved.parent.mkdir(parents=True, exist_ok=True)
+    return resolved
+
+
+def _lock_approved_geometry():
+    locked = []
+    for name in (contract.BODY_NAME, contract.FINISH_NAME, contract.FINISH_MASTER_NAME):
+        obj = bpy.data.objects.get(name)
+        if obj is not None:
+            obj.hide_select = True
+            obj["bb_geometry_locked"] = True
+            locked.append(name)
+    return locked
+
+
+def build_master(output_path, *, replace_generated=False):
+    """Build and save one protected master without touching mesh data."""
+    current_path = Path(bpy.data.filepath).resolve() if bpy.data.filepath else None
+    if current_path == contract.SOURCE_SCENE.resolve():
+        source_hash = contract.sha256_file(current_path)
+        if source_hash != contract.SOURCE_SHA256:
+            raise RuntimeError(f"approved source file hash drifted: {source_hash}")
+    body_before = contract.object_snapshot(_body())
+    camera_before = contract.object_snapshot(bpy.data.objects[contract.CAMERA_NAME])
+    audit = audit_geometry()
+    ensure_all_glass_materials()
+    ensure_luxury_studio()
+    configure_camera()
+    configure_cycles()
+    configure_color_management()
+    assign_variant("clear")
+    locked = _lock_approved_geometry()
+    if contract.object_snapshot(_body()) != body_before:
+        raise AssertionError("look development changed approved bottle geometry")
+    if contract.object_snapshot(bpy.data.objects[contract.CAMERA_NAME]) != camera_before:
+        raise AssertionError("look development changed approved camera composition")
+
+    scene = bpy.context.scene
+    scene["bb_luxury_glass_master"] = True
+    scene["bb_source_scene"] = str(contract.SOURCE_SCENE)
+    scene["bb_source_sha256"] = contract.SOURCE_SHA256
+    scene["bb_body_geometry_sha256"] = contract.BODY_GEOMETRY_SHA256
+    scene["bb_thread_sha256"] = contract.THREAD_SHA256
+    scene["bb_geometry_locked_objects"] = ",".join(locked)
+    scene["bb_geometry_audit_passed"] = True
+    scene["bb_geometry_audit_summary"] = json.dumps(audit, sort_keys=True)
+    path = _safe_generated_path(output_path, replace_generated=replace_generated)
+    scene["bb_master_path"] = str(path)
+    bpy.ops.wm.save_as_mainfile(filepath=str(path))
+    return path
+
+
+def save_derivatives(output_dir, *, replace_generated=False):
+    """Save four material-only variants from the same configured master."""
+    output_dir = Path(output_dir).expanduser().resolve()
+    root = contract.WORKING_OUTPUT_DIR.resolve()
+    if output_dir != root and root not in output_dir.parents:
+        raise ValueError(f"derivatives must remain below {root}")
+    audit_geometry()
+    ensure_all_glass_materials()
+    ensure_luxury_studio()
+    configure_camera()
+    configure_cycles()
+    configure_color_management()
+    body_snapshot = contract.object_snapshot(_body())
+    outputs = {}
+    for variant in contract.VARIANTS:
+        path = _safe_generated_path(
+            output_dir / f"009ml-luxury-{variant}.blend",
+            replace_generated=replace_generated,
+        )
+        assign_variant(variant)
+        bpy.context.scene["bb_derivative_material_only"] = True
+        bpy.context.scene.render.filepath = str(
+            contract.RENDER_OUTPUT_DIR / contract.qc_filename(variant, "full", contract.RENDER.samples, True)
+        )
+        if contract.object_snapshot(_body()) != body_snapshot:
+            raise AssertionError(f"{variant} assignment changed approved bottle geometry")
+        bpy.ops.wm.save_as_mainfile(filepath=str(path))
+        outputs[variant] = path
+    assign_variant("clear")
+    return outputs
+
+
+def _material_manifest():
+    result = {}
+    for variant, preset in contract.VARIANTS.items():
+        result[variant] = {
+            "material": f"BB_GLASS_{variant.upper()}",
+            **contract.dataclass_dict(preset),
+        }
+    return result
+
+
+def _camera_manifest():
+    camera = bpy.data.objects[contract.CAMERA_NAME]
+    return contract.object_snapshot(camera)
+
+
+def _render_manifest():
+    scene = bpy.context.scene
+    return {
+        **contract.dataclass_dict(contract.RENDER),
+        "active_view_transform": scene.view_settings.view_transform,
+        "active_look": scene.view_settings.look,
+        "device": scene.cycles.device,
+    }
+
+
+def write_audit_manifest(path, outputs):
+    path = Path(path).expanduser().resolve()
+    render_root = contract.RENDER_OUTPUT_DIR.resolve()
+    if path != render_root and render_root not in path.parents:
+        raise ValueError(f"audit manifest must remain below {render_root}")
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "source_scene": str(contract.SOURCE_SCENE),
+        "source_sha256": contract.SOURCE_SHA256,
+        "geometry": audit_geometry(),
+        "materials": _material_manifest(),
+        "studio": studio_snapshot(),
+        "camera": _camera_manifest(),
+        "render": _render_manifest(),
+        "legacy_emitters_disabled": [
+            name for name in LEGACY_EMITTERS
+            if bpy.data.objects.get(name) is not None and bpy.data.objects[name].hide_render
+        ],
+        "outputs": {name: str(output) for name, output in outputs.items()},
+    }
+    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return path
+
+
 def _parse_args(argv):
     parser = argparse.ArgumentParser()
     parser.add_argument("--output-dir", type=Path)
@@ -505,11 +683,19 @@ def _parse_args(argv):
 
 def main(argv=None):
     args = _parse_args(argv if argv is not None else sys.argv[sys.argv.index("--") + 1 :] if "--" in sys.argv else [])
-    audit = audit_geometry()
-    ensure_all_glass_materials()
-    print(json.dumps(audit, indent=2, sort_keys=True))
-    if args.output_dir or args.audit_json:
-        raise RuntimeError("saving is implemented after the protected look-development gates")
+    if args.output_dir is None:
+        print(json.dumps(audit_geometry(), indent=2, sort_keys=True))
+        return
+    output_dir = args.output_dir.expanduser().resolve()
+    master_path = output_dir / "009ml-luxury-master.blend"
+    build_master(master_path, replace_generated=args.replace_generated)
+    derivatives = save_derivatives(output_dir, replace_generated=args.replace_generated)
+    outputs = {"master": master_path, **derivatives}
+    if args.audit_json is not None:
+        write_audit_manifest(args.audit_json, outputs)
+    print("BB_LUXURY_MASTER", master_path)
+    for variant, path in derivatives.items():
+        print("BB_LUXURY_DERIVATIVE", variant, path)
 
 
 if __name__ == "__main__":

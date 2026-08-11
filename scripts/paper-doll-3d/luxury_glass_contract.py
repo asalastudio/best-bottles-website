@@ -23,6 +23,12 @@ SOURCE_SCENE = ROOT / (
 SOURCE_SHA256 = "c436ed8f8c0c363695bf2bcbbdb371a67a4e8c1fd2b6574ac8ebcd6663d22ea0"
 BODY_GEOMETRY_SHA256 = "ed64930d7ea4e7301a2687340ea2e3235cbb5f0f4545be0313200e1d1dfba016"
 THREAD_SHA256 = "016804a72dc0e7e1197d76d92a20ce84bbac75944a876dda6d2f34712129b39f"
+WORKING_OUTPUT_DIR = ROOT / (
+    "pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio"
+)
+RENDER_OUTPUT_DIR = ROOT / (
+    "pipeline/paper-doll-3d/renders/five-variant/9ml-luxury-glass-studio"
+)
 
 BODY_NAME = "BB_BTL_CYL_009ML_001"
 FINISH_NAME = "BB_FIN_17_415"
