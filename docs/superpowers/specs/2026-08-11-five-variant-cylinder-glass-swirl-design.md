@@ -1,7 +1,7 @@
 # Five-variant cylinder glass and swirl design
 
 Date: 2026-08-11
-Status: Five-variant scope awaiting final written-spec review
+Status: Approved by Jordan Richter on 2026-08-11
 Subject: Cylinder bottle family in clear, frosted, cobalt, amber, and molded
 swirl; shared 17/415 finish
 
