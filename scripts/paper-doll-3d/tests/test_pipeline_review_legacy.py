@@ -1,5 +1,6 @@
 import hashlib
 import json
+import os
 import sys
 import tempfile
 import unittest
@@ -185,6 +186,7 @@ class LegacyInventoryTests(unittest.TestCase):
             self.assertEqual(first.discovered, 1)
             self.assertEqual(first.written, 1)
             self.assertEqual(first.status_counts, (("imported_unverified", 1),))
+            self.assertEqual(first.artifact_records[0].kind, "legacy_scene")
             self.assertEqual(len(record_paths), 1)
             self.assertEqual(
                 tuple(iter_records(pipeline_root, "artifacts", ArtifactRecord)),
@@ -194,6 +196,176 @@ class LegacyInventoryTests(unittest.TestCase):
                 {path.name: path.read_bytes() for path in record_paths}, bytes_before,
             )
             self.assertEqual(list((pipeline_root / "artifacts/records").glob("*.tmp")), [])
+
+    def test_changed_scene_replaces_only_the_prior_legacy_inventory_record(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory) / "pipeline"
+            scene = self._write_scene(
+                pipeline_root / "master", "builds/change.blend", b"first version",
+            )
+            atomic_write_json(
+                pipeline_root / "reconciliation/legacy-status.json",
+                {"schema_version": 1, "rules": []},
+            )
+            preserved = ArtifactRecord(
+                "artifact_published", "f" * 64, 12, "file:///published.glb", "",
+                "candidate", kind="published_asset",
+            )
+            write_record(pipeline_root, "artifacts", preserved)
+            first = inventory_pending_legacy_assets(pipeline_root)
+            first_id = first.artifact_records[0].id
+
+            scene.write_bytes(b"second version")
+            second = inventory_pending_legacy_assets(pipeline_root)
+            persisted = tuple(iter_records(pipeline_root, "artifacts", ArtifactRecord))
+            legacy = tuple(record for record in persisted if record.kind == "legacy_scene")
+
+            self.assertEqual(len(legacy), 1)
+            self.assertNotEqual(legacy[0].id, first_id)
+            self.assertEqual(legacy[0], second.artifact_records[0])
+            self.assertEqual(legacy[0].sha256, hashlib.sha256(b"second version").hexdigest())
+            self.assertIn(preserved, persisted)
+            self.assertFalse(
+                (pipeline_root / f"artifacts/records/{first_id}.json").exists()
+            )
+
+    def test_deleted_scene_removes_its_stale_legacy_record(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory) / "pipeline"
+            scene = self._write_scene(
+                pipeline_root / "master", "builds/delete.blend", b"temporary scene",
+            )
+            atomic_write_json(
+                pipeline_root / "reconciliation/legacy-status.json",
+                {"schema_version": 1, "rules": []},
+            )
+            inventory_pending_legacy_assets(pipeline_root)
+
+            scene.unlink()
+            report = inventory_pending_legacy_assets(pipeline_root)
+
+            self.assertEqual(report.artifact_records, ())
+            self.assertEqual(
+                tuple(iter_records(pipeline_root, "artifacts", ArtifactRecord)), (),
+            )
+
+    def test_inventory_never_overwrites_a_nonlegacy_record_with_a_colliding_id(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory) / "pipeline"
+            master_root = pipeline_root / "master"
+            self._write_scene(master_root, "builds/collision.blend", b"collision")
+            rules = {"schema_version": 1, "rules": []}
+            atomic_write_json(
+                pipeline_root / "reconciliation/legacy-status.json", rules,
+            )
+            generated = inventory_legacy_assets(master_root, rules)[0]
+            nonlegacy = ArtifactRecord(
+                generated.id, "e" * 64, 99, "file:///published.glb", "", "candidate",
+                kind="published_asset",
+            )
+            path = write_record(pipeline_root, "artifacts", nonlegacy)
+            before = path.read_bytes()
+
+            with self.assertRaisesRegex(ValueError, "non-legacy"):
+                inventory_pending_legacy_assets(pipeline_root)
+
+            self.assertEqual(path.read_bytes(), before)
+            self.assertEqual(
+                tuple(iter_records(pipeline_root, "artifacts", ArtifactRecord)),
+                (nonlegacy,),
+            )
+
+    def test_failed_scan_keeps_the_last_complete_legacy_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            pipeline_root = root / "pipeline"
+            master_root = pipeline_root / "master"
+            self._write_scene(master_root, "builds/known.blend", b"known scene")
+            atomic_write_json(
+                pipeline_root / "reconciliation/legacy-status.json",
+                {"schema_version": 1, "rules": []},
+            )
+            first = inventory_pending_legacy_assets(pipeline_root)
+            record_path = (
+                pipeline_root / f"artifacts/records/{first.artifact_records[0].id}.json"
+            )
+            before = record_path.read_bytes()
+            outside = root / "outside.blend"
+            outside.write_bytes(b"outside")
+            (master_root / "race.blend").symlink_to(outside)
+
+            with self.assertRaises(ValueError):
+                inventory_pending_legacy_assets(pipeline_root)
+
+            self.assertEqual(record_path.read_bytes(), before)
+
+    def test_rule_status_and_scope_combinations_fail_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            master_root = Path(directory) / "master"
+            self._write_scene(master_root, "builds/scene.blend", b"scene")
+            invalid = (
+                _rule("builds/scene.blend", "approved", ()),
+                _rule("builds/scene.blend", "imported_unverified", ("body_geometry",)),
+                _rule("builds/scene.blend", "experimental", ("body_geometry",)),
+                _rule("builds/scene.blend", "extrapolated", ("body_geometry",)),
+                _rule("builds/scene.blend", "protected", ("body_geometry",)),
+            )
+            for rule in invalid:
+                with self.subTest(status=rule["status"]):
+                    with self.assertRaises(ValueError):
+                        inventory_legacy_assets(
+                            master_root, {"schema_version": 1, "rules": [rule]},
+                        )
+
+            partial = inventory_legacy_assets(
+                master_root,
+                {
+                    "schema_version": 1,
+                    "rules": [_rule(
+                        "builds/scene.blend", "approved",
+                        ("finish_thread_geometry",),
+                    )],
+                },
+            )[0]
+            self.assertEqual(partial.status, "approved")
+            self.assertEqual(partial.approved_scopes, ("finish_thread_geometry",))
+
+    def test_scene_is_opened_once_and_size_comes_from_the_hashed_descriptor(self):
+        with tempfile.TemporaryDirectory() as directory:
+            master_root = Path(directory) / "master"
+            self._write_scene(master_root, "builds/scene.blend", b"descriptor bytes")
+            calls = []
+
+            def opener(path, flags):
+                calls.append((Path(path), flags))
+                return os.open(path, flags)
+
+            record = inventory_legacy_assets(
+                master_root, {"schema_version": 1, "rules": []}, opener=opener,
+            )[0]
+
+            self.assertEqual(len(calls), 1)
+            if hasattr(os, "O_NOFOLLOW"):
+                self.assertTrue(calls[0][1] & os.O_NOFOLLOW)
+            self.assertEqual(record.size_bytes, len(b"descriptor bytes"))
+            self.assertEqual(record.sha256, hashlib.sha256(b"descriptor bytes").hexdigest())
+
+    def test_scene_replacement_between_discovery_and_open_is_rejected(self):
+        with tempfile.TemporaryDirectory() as directory:
+            master_root = Path(directory) / "master"
+            scene = self._write_scene(master_root, "builds/scene.blend", b"discovered")
+
+            def replacing_opener(path, flags):
+                scene.unlink()
+                scene.write_bytes(b"replacement")
+                return os.open(path, flags)
+
+            with self.assertRaisesRegex(ValueError, "changed during inventory"):
+                inventory_legacy_assets(
+                    master_root,
+                    {"schema_version": 1, "rules": []},
+                    opener=replacing_opener,
+                )
 
     def test_checked_in_registry_names_only_exact_documented_exceptions(self):
         registry = json.loads(LEGACY_RULES_PATH.read_text(encoding="utf-8"))
@@ -211,7 +383,7 @@ class LegacyInventoryTests(unittest.TestCase):
                 self.assertEqual(rules[relative_path]["evidence_note"], circle_note)
                 self.assertEqual(
                     rules[relative_path]["reviewer_source"],
-                    "pipeline/paper-doll-3d/HANDOVER-2026-08-10.md",
+                    "docs/superpowers/specs/2026-08-11-paper-doll-document-to-asset-production-loop.md",
                 )
 
         approved_paths = {
@@ -235,8 +407,8 @@ class FoundationReviewTests(unittest.TestCase):
             DocumentRecord(
                 id="doc_1", sha256="a" * 64,
                 canonical_path="documents/originals/a.pdf",
-                observed_names=("drawing.pdf", "drawing-copy.pdf"),
-                observed_paths=("/source/drawing.pdf", "/source/drawing-copy.pdf"),
+                observed_names=("drawing.pdf",),
+                observed_paths=("/source-a/drawing.pdf", "/source-b/drawing.pdf"),
                 status="inspected",
             ),
             DocumentRecord(
@@ -308,6 +480,11 @@ class FoundationReviewTests(unittest.TestCase):
                 "Component drawing missing.", "open", "MISSING_COMPONENT_DRAWING",
             ),
             IssueRecord(
+                "issue_component_duplicate", "contract_component_1", "warning",
+                "The same component gap was observed again.", "open",
+                "MISSING_COMPONENT_DRAWING_DUPLICATE",
+            ),
+            IssueRecord(
                 "issue_assembly", "contract_bottle_1", "blocked",
                 "Assembly evidence missing.", "open", "MISSING_ASSEMBLY_EVIDENCE",
             ),
@@ -329,7 +506,8 @@ class FoundationReviewTests(unittest.TestCase):
             "artifacts",
             ArtifactRecord(
                 "artifact_baseline", "c" * 64, 42, "file:///master/baseline.blend", "",
-                "approved", approved_scopes=("finish_thread_geometry",),
+                "approved", kind="legacy_scene",
+                approved_scopes=("finish_thread_geometry",),
                 evidence_note="17-415 finish only.", reviewer_source="design.md",
             ),
         )
@@ -373,6 +551,127 @@ class FoundationReviewTests(unittest.TestCase):
                     self.assertIn(expected, text)
             self.assertNotIn("`body_geometry`", text)
             self.assertEqual(list(output.parent.glob("*.tmp")), [])
+
+    def test_review_shows_only_latest_valid_hash_consistent_scoped_decisions(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory) / "pipeline"
+            self._seed_records(pipeline_root)
+            write_record(
+                pipeline_root,
+                "approvals",
+                ApprovalRecord(
+                    "approval_rejection", "artifact", "artifact_baseline",
+                    "finish_thread_geometry", "c" * 64, "Jordan Richter",
+                    "2026-08-11T01:00:00Z", "rejected", "Supersedes approval.",
+                ),
+            )
+            write_record(
+                pipeline_root,
+                "approvals",
+                ApprovalRecord(
+                    "approval_bot", "artifact", "missing_artifact", "body_geometry",
+                    "d" * 64, "Automation Bot", "not-a-timestamp", "approved",
+                    "Must never become current.",
+                ),
+            )
+            write_record(
+                pipeline_root,
+                "approvals",
+                ApprovalRecord(
+                    "approval_wrong_hash", "artifact", "artifact_baseline",
+                    "body_geometry", "d" * 64, "Jordan Richter",
+                    "2026-08-11T02:00:00Z", "approved", "Wrong artifact hash.",
+                ),
+            )
+
+            output = pipeline_root / "reviews/foundation/review.md"
+            write_foundation_review(pipeline_root, output)
+            text = output.read_text(encoding="utf-8")
+
+            self.assertIn("Approved scopes: none", text)
+            self.assertIn("`approval_rejection`", text)
+            self.assertIn("decision `rejected`", text)
+            self.assertNotIn("`approval_finish`", text)
+            self.assertNotIn("`approval_bot`", text)
+            self.assertNotIn("`approval_wrong_hash`", text)
+            self.assertNotIn("`body_geometry`", text)
+
+    def test_review_requires_existing_pipeline_and_required_source_directories(self):
+        required = ("documents/records", "issues/records", "artifacts/records")
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            missing_root = root / "missing-pipeline"
+            missing_output = missing_root / "reviews/foundation/review.md"
+            with self.assertRaisesRegex(ValueError, "pipeline_root"):
+                write_foundation_review(missing_root, missing_output)
+            self.assertFalse(missing_output.exists())
+
+            for omitted in required:
+                with self.subTest(omitted=omitted):
+                    pipeline_root = root / omitted.replace("/", "-")
+                    pipeline_root.mkdir()
+                    for relative_path in required:
+                        if relative_path != omitted:
+                            (pipeline_root / relative_path).mkdir(parents=True)
+                    output = pipeline_root / "reviews/foundation/review.md"
+                    with self.assertRaisesRegex(ValueError, "source directory"):
+                        write_foundation_review(pipeline_root, output)
+                    self.assertFalse(output.exists())
+
+    def test_dynamic_markdown_is_normalized_and_cannot_add_sections(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory) / "pipeline"
+            self._seed_records(pipeline_root)
+            hostile = "danger\n## 9. Injected | [link] `tick` <tag>"
+            write_record(
+                pipeline_root,
+                "documents",
+                DocumentRecord(
+                    "doc_1", "a" * 64, "documents/originals/a.pdf", (hostile,),
+                    "inspected", ("/source-a/same.pdf", "/source-b/same.pdf"),
+                ),
+            )
+            page_name = "page-evil]|`tick`.png"
+            atomic_write_json(
+                pipeline_root / "evidence/doc_1/inspection.json",
+                {
+                    "schema_version": 1, "document_id": "doc_1",
+                    "source_sha256": "a" * 64, "page_count": 1,
+                    "page_paths": [page_name], "candidates": [],
+                },
+            )
+            (pipeline_root / "evidence/doc_1" / page_name).write_bytes(b"png")
+            write_record(
+                pipeline_root,
+                "issues",
+                IssueRecord(
+                    "issue_component", "contract_component_1", "blocked", hostile,
+                    "open", "MISSING_COMPONENT_DRAWING",
+                ),
+            )
+            write_record(
+                pipeline_root,
+                "artifacts",
+                ArtifactRecord(
+                    "artifact_baseline", "c" * 64, 42,
+                    "file:///master/baseline.blend", "", "approved",
+                    kind="legacy_scene", approved_scopes=("finish_thread_geometry",),
+                    evidence_note=hostile, reviewer_source=hostile,
+                ),
+            )
+
+            output = pipeline_root / "reviews/foundation/review.md"
+            write_foundation_review(pipeline_root, output)
+            text = output.read_text(encoding="utf-8")
+
+            self.assertEqual(text.count("\n## "), 8)
+            self.assertNotIn("\n## 9. Injected", text)
+            self.assertIn("danger ## 9. Injected \\| \\[link\\] &#96;tick&#96; &lt;tag&gt;", text)
+            self.assertIn(
+                "[page-evil\\]\\|&#96;tick&#96;.png]"
+                "(../../evidence/doc_1/page-evil%5D%7C%60tick%60.png)",
+                text,
+            )
 
     def test_review_rejects_output_and_evidence_reads_outside_pipeline(self):
         with tempfile.TemporaryDirectory() as directory:

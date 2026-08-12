@@ -2,13 +2,25 @@
 
 from __future__ import annotations
 
+from dataclasses import dataclass
+import html
 import json
 import os
 from pathlib import Path
+import re
 import tempfile
 from typing import Iterator
 from urllib.parse import quote
 
+from .approvals import (
+    _approval_scope,
+    _artifact_hash,
+    _aware_timestamp,
+    _decision,
+    _human_reviewer,
+    _required_string,
+)
+from .ids import content_hash
 from .models import (
     ApprovalRecord,
     ArtifactRecord,
@@ -18,6 +30,58 @@ from .models import (
     SCHEMA_VERSION,
 )
 from .paths import resolve_descendant, safe_record_id
+
+
+_LINE_BREAKS = re.compile(r"[\r\n\v\f\x1c-\x1e\x85\u2028\u2029]+")
+_REQUIRED_SOURCE_DIRECTORIES = (
+    Path("documents/records"),
+    Path("issues/records"),
+    Path("artifacts/records"),
+)
+
+
+@dataclass(frozen=True)
+class _EntityAuthority:
+    entity_type: str
+    artifact_hash: str
+
+
+def _normalize(value: object) -> str:
+    return _LINE_BREAKS.sub(" ", str(value))
+
+
+def _text(value: object) -> str:
+    escaped = html.escape(_normalize(value), quote=False).replace("`", "&#96;")
+    result = []
+    for character in escaped:
+        if character in {"\\", "[", "]", "|"}:
+            result.append("\\")
+        result.append(character)
+    return "".join(result)
+
+
+def _code(value: object) -> str:
+    escaped = html.escape(_normalize(value), quote=False)
+    for character, entity in (
+        ("`", "&#96;"), ("|", "&#124;"), ("[", "&#91;"), ("]", "&#93;"),
+    ):
+        escaped = escaped.replace(character, entity)
+    return f"`{escaped}`"
+
+
+def _pipeline_root(path: Path) -> Path:
+    configured = Path(path)
+    if not configured.exists() or not configured.is_dir():
+        raise ValueError("pipeline_root must be an existing directory")
+    root = configured.resolve(strict=True)
+    for relative_path in _REQUIRED_SOURCE_DIRECTORIES:
+        source = root / relative_path
+        if source.is_symlink() or not source.is_dir():
+            raise ValueError(
+                f"required source directory is missing or unsafe: {relative_path}"
+            )
+        resolve_descendant(root, source, "required source directory")
+    return root
 
 
 def _record_paths(root: Path, pattern: str) -> Iterator[Path]:
@@ -93,8 +157,11 @@ def _inspection(root: Path, document: DocumentRecord) -> dict | None:
     return value
 
 
-def _relative_link(output: Path, target: Path) -> str:
-    relative = Path(os.path.relpath(target, output.parent)).as_posix()
+def _relative_link(root: Path, output: Path, target: Path) -> str:
+    resolved = resolve_descendant(root, target, "review evidence link target")
+    if not resolved.is_file():
+        raise ValueError("review evidence link target must be a regular file")
+    relative = Path(os.path.relpath(resolved, output.parent)).as_posix()
     return quote(relative, safe="/.-_~")
 
 
@@ -127,9 +194,94 @@ def _status_counts(records: tuple[ArtifactRecord, ...]) -> str:
     return ", ".join(f"{status}: {count}" for status, count in sorted(counts.items()))
 
 
+def _entity_authorities(
+    documents: tuple[DocumentRecord, ...],
+    contracts: tuple[ContractRecord, ...],
+    artifacts: tuple[ArtifactRecord, ...],
+) -> dict[str, _EntityAuthority]:
+    authorities: dict[str, _EntityAuthority] = {}
+
+    def add(entity_id: str, entity_type: str, artifact_hash: str) -> None:
+        if entity_id in authorities:
+            raise ValueError(f"duplicate review entity ID: {entity_id!r}")
+        try:
+            validated_hash = _artifact_hash(artifact_hash)
+        except ValueError as error:
+            raise ValueError(f"invalid hash on review entity: {entity_id!r}") from error
+        authorities[entity_id] = _EntityAuthority(entity_type, validated_hash)
+
+    for document in documents:
+        add(document.id, "document", document.sha256)
+    for contract in contracts:
+        add(contract.id, "contract", content_hash(contract.to_dict()))
+    for artifact in artifacts:
+        add(artifact.id, "artifact", artifact.sha256)
+    return authorities
+
+
+def _current_decisions(
+    approvals: tuple[ApprovalRecord, ...],
+    authorities: dict[str, _EntityAuthority],
+) -> tuple[ApprovalRecord, ...]:
+    current = {}
+    for approval in approvals:
+        try:
+            approval_id = _required_string(approval.id, "approval id")
+            entity_type = _required_string(approval.entity_type, "approval entity_type")
+            entity_id = _required_string(approval.entity_id, "approval entity_id")
+            scope = _approval_scope(approval.scope)
+            artifact_hash = _artifact_hash(approval.artifact_hash)
+            _human_reviewer(approval.reviewer)
+            decided_at = _aware_timestamp(approval.decided_at)
+            _decision(approval.decision)
+            if not isinstance(approval.notes, str):
+                raise ValueError("approval notes must be a string")
+        except (AttributeError, TypeError, ValueError):
+            continue
+        authority = authorities.get(entity_id)
+        if authority is None or (
+            authority.entity_type != entity_type
+            or authority.artifact_hash != artifact_hash
+        ):
+            continue
+        stream = (entity_id, scope, artifact_hash)
+        candidate = (decided_at, approval_id, approval)
+        if stream not in current or candidate[:2] > current[stream][:2]:
+            current[stream] = candidate
+    return tuple(
+        value[2] for _, value in sorted(current.items(), key=lambda item: item[0])
+    )
+
+
+def _effective_artifact_scopes(
+    artifact: ArtifactRecord, decisions: tuple[ApprovalRecord, ...],
+) -> tuple[str, ...]:
+    scopes = set(artifact.approved_scopes)
+    for approval in decisions:
+        if (
+            approval.entity_id == artifact.id
+            and approval.artifact_hash == artifact.sha256
+        ):
+            if approval.decision == "approved":
+                scopes.add(approval.scope)
+            else:
+                scopes.discard(approval.scope)
+    return tuple(sorted(scopes))
+
+
+def _missing_entities(
+    issues: tuple[IssueRecord, ...], code_prefix: str,
+) -> tuple[IssueRecord, ...]:
+    by_entity = {}
+    for issue in issues:
+        if issue.code.startswith(code_prefix):
+            by_entity.setdefault(issue.entity_id, issue)
+    return tuple(by_entity[entity_id] for entity_id in sorted(by_entity))
+
+
 def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
     """Atomically write the deterministic eight-section foundation review."""
-    root = Path(pipeline_root).resolve()
+    root = _pipeline_root(Path(pipeline_root))
     destination = resolve_descendant(root, Path(output), "review output")
 
     documents = _records(root, "documents/records/*.json", DocumentRecord)
@@ -143,7 +295,7 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
         if (inspection := _inspection(root, document)) is not None
     }
 
-    duplicate_count = sum(max(0, len(document.observed_names) - 1) for document in documents)
+    duplicate_count = sum(max(0, len(document.observed_paths) - 1) for document in documents)
     rendered_pages = sum(value["page_count"] for value in inspections.values())
     referenced_documents = {
         document_id for contract in contracts for document_id in contract.document_ids
@@ -163,20 +315,22 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
     )
     open_issues = tuple(issue for issue in issues if issue.status == "open")
     blockers = tuple(issue for issue in open_issues if issue.severity == "blocked")
-    missing_fitments = tuple(
-        issue for issue in open_issues if issue.code.startswith("MISSING_FITMENT")
-    )
-    missing_components = tuple(
-        issue for issue in open_issues if issue.code.startswith("MISSING_COMPONENT")
-    )
-    missing_assemblies = tuple(
-        issue for issue in open_issues if issue.code.startswith("MISSING_ASSEMBLY")
-    )
-    approved = tuple(approval for approval in approvals if approval.decision == "approved")
+    missing_fitments = _missing_entities(open_issues, "MISSING_FITMENT")
+    missing_components = _missing_entities(open_issues, "MISSING_COMPONENT")
+    missing_assemblies = _missing_entities(open_issues, "MISSING_ASSEMBLY")
+    authorities = _entity_authorities(documents, contracts, artifacts)
+    current_decisions = _current_decisions(approvals, authorities)
+    effective_scopes_by_artifact = {
+        artifact.id: _effective_artifact_scopes(artifact, current_decisions)
+        for artifact in artifacts
+    }
     scopes = tuple(sorted({
-        *(approval.scope for approval in approved),
-        *(scope for artifact in artifacts for scope in artifact.approved_scopes),
+        *(approval.scope for approval in current_decisions if approval.decision == "approved"),
+        *(scope for values in effective_scopes_by_artifact.values() for scope in values),
     }))
+    legacy_artifacts = tuple(
+        artifact for artifact in artifacts if artifact.kind == "legacy_scene"
+    )
 
     lines = [
         "# Paper-Doll Document and Contract Foundation Review",
@@ -200,11 +354,14 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
             if inspection is not None:
                 for page_name in inspection["page_paths"]:
                     page = root / "evidence" / document.id / page_name
-                    links.append(f"[{page_name}]({_relative_link(destination, page)})")
+                    links.append(
+                        f"[{_text(page_name)}]({_relative_link(root, destination, page)})"
+                    )
             evidence = ", ".join(links) if links else "no rendered-page evidence"
-            names = ", ".join(f"`{name}`" for name in document.observed_names) or "none"
+            names = ", ".join(_code(name) for name in document.observed_names) or "none"
             lines.append(
-                f"- `{document.id}` — status `{document.status}`; names: {names}; {evidence}."
+                f"- {_code(document.id)} — status {_code(document.status)}; "
+                f"names: {names}; {evidence}."
             )
     else:
         lines.append("- No document records.")
@@ -217,7 +374,9 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
         f"- Documents still needing identity reconciliation: {len(unresolved_documents)}",
     ])
     for document in unresolved_documents:
-        lines.append(f"- `{document.id}` remains unresolved; no product identity is implied.")
+        lines.append(
+            f"- {_code(document.id)} remains unresolved; no product identity is implied."
+        )
 
     bottle_finish = tuple(
         contract for contract in contracts if contract.contract_type in {"bottle", "finish"}
@@ -231,8 +390,8 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
     ])
     for contract in bottle_finish:
         lines.append(
-            f"- `{contract.id}` — `{contract.contract_type}` / "
-            f"`{contract.sold_product_key}` / status `{contract.status}`; "
+            f"- {_code(contract.id)} — {_code(contract.contract_type)} / "
+            f"{_code(contract.sold_product_key)} / status {_code(contract.status)}; "
             f"candidate dimensions: {len(contract.dimensions)}."
         )
     if not bottle_finish:
@@ -248,7 +407,7 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
     ])
     missing = missing_fitments + missing_components + missing_assemblies
     for issue in missing:
-        lines.append(f"- `{issue.entity_id}` — {issue.message}")
+        lines.append(f"- {_code(issue.entity_id)} — {_text(issue.message)}")
     if not missing:
         lines.append("- No open missing-evidence issues.")
 
@@ -261,8 +420,8 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
     ])
     for issue in open_issues:
         lines.append(
-            f"- `{issue.id}` / `{issue.code or 'UNCLASSIFIED'}` / "
-            f"`{issue.severity}` — {issue.message}"
+            f"- {_code(issue.id)} / {_code(issue.code or 'UNCLASSIFIED')} / "
+            f"{_code(issue.severity)} — {_text(issue.message)}"
         )
     if not open_issues:
         lines.append("- No open issues.")
@@ -271,28 +430,32 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
         "",
         "## 7. Legacy scene inventory and scoped approvals",
         "",
-        f"- Legacy scenes: {len(artifacts)}",
-        f"- Status counts: {_status_counts(artifacts)}",
+        f"- Legacy scenes: {len(legacy_artifacts)}",
+        f"- Status counts: {_status_counts(legacy_artifacts)}",
         "- Approved scopes: " + (
-            ", ".join(f"`{scope}`" for scope in scopes) if scopes else "none"
+            ", ".join(_code(scope) for scope in scopes) if scopes else "none"
         ),
     ])
-    for artifact in artifacts:
-        artifact_scopes = (
-            ", ".join(f"`{scope}`" for scope in artifact.approved_scopes)
-            if artifact.approved_scopes else "none"
+    for artifact in legacy_artifacts:
+        artifact_scopes_text = (
+            ", ".join(
+                _code(scope) for scope in effective_scopes_by_artifact[artifact.id]
+            )
+            if effective_scopes_by_artifact[artifact.id] else "none"
         )
         lines.append(
-            f"- `{artifact.id}` — status `{artifact.status}`; scopes: "
-            f"{artifact_scopes}; evidence: {artifact.evidence_note or 'none'}; "
-            f"source: {artifact.reviewer_source or 'none'}."
+            f"- {_code(artifact.id)} — status {_code(artifact.status)}; scopes: "
+            f"{artifact_scopes_text}; evidence: "
+            f"{_text(artifact.evidence_note or 'none')}; "
+            f"source: {_text(artifact.reviewer_source or 'none')}."
         )
-    for approval in approved:
+    for approval in current_decisions:
         lines.append(
-            f"- Approval `{approval.id}` applies only to `{approval.scope}` on "
-            f"hash `{approval.artifact_hash}`."
+            f"- Current decision {_code(approval.id)}: decision "
+            f"{_code(approval.decision)} for {_code(approval.scope)} on "
+            f"{_code(approval.entity_id)} at hash {_code(approval.artifact_hash)}."
         )
-    if not artifacts and not approved:
+    if not legacy_artifacts and not current_decisions:
         lines.append("- No legacy artifacts or approvals recorded.")
 
     lines.extend([
@@ -302,7 +465,7 @@ def write_foundation_review(pipeline_root: Path, output: Path) -> Path:
     ])
     for contract in draft_reviewable:
         lines.append(
-            f"- Review candidate dimensions for `{contract.id}`; this packet does "
+            f"- Review candidate dimensions for {_code(contract.id)}; this packet does "
             "not grant dimensional or geometry approval."
         )
     if not draft_reviewable:

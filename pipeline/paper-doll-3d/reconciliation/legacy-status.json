@@ -4,14 +4,14 @@
       "approved_scopes": [],
       "evidence_note": "No manufacturer drawing; extrapolated pending source evidence.",
       "relative_path": "builds/circle15--bare.blend",
-      "reviewer_source": "pipeline/paper-doll-3d/HANDOVER-2026-08-10.md",
+      "reviewer_source": "docs/superpowers/specs/2026-08-11-paper-doll-document-to-asset-production-loop.md",
       "status": "extrapolated"
     },
     {
       "approved_scopes": [],
       "evidence_note": "No manufacturer drawing; extrapolated pending source evidence.",
       "relative_path": "builds/circle100--bare.blend",
-      "reviewer_source": "pipeline/paper-doll-3d/HANDOVER-2026-08-10.md",
+      "reviewer_source": "docs/superpowers/specs/2026-08-11-paper-doll-document-to-asset-production-loop.md",
       "status": "extrapolated"
     },
     {
