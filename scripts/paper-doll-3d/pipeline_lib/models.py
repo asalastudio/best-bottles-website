@@ -55,8 +55,7 @@ def _from_dict(
         if missing:
             details.append(f"missing fields: {sorted(missing)}")
         raise ValueError("invalid record fields (" + "; ".join(details) + ")")
-    if value["schema_version"] != SCHEMA_VERSION:
-        raise ValueError(f"unsupported schema version: {value['schema_version']!r}")
+    _require_schema_version(value["schema_version"])
 
     parsed = dict(value)
     for name in tuple_fields:
@@ -77,7 +76,7 @@ def _require_member(value: str, allowed: frozenset[str], field_name: str) -> Non
 
 
 def _require_schema_version(schema_version: int) -> None:
-    if schema_version != SCHEMA_VERSION:
+    if type(schema_version) is not int or schema_version != SCHEMA_VERSION:
         raise ValueError(f"unsupported schema version: {schema_version!r}")
 
 

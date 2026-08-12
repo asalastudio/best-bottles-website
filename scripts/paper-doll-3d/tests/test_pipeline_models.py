@@ -92,6 +92,16 @@ class PipelineModelTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             ApprovalRecord.from_dict(approval.to_dict() | {"scope": "unknown_scope"})
 
+    def test_schema_version_requires_an_integer(self):
+        document = DocumentRecord("doc_1", "abc", "documents/a.pdf", ("a.pdf",), "archived")
+        self.assertEqual(DocumentRecord.from_dict(document.to_dict()), document)
+        for schema_version in (True, 1.0):
+            with self.subTest(schema_version=schema_version):
+                with self.assertRaises(ValueError):
+                    DocumentRecord.from_dict(
+                        document.to_dict() | {"schema_version": schema_version}
+                    )
+
 
 if __name__ == "__main__":
     unittest.main()
