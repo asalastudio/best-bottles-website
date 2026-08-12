@@ -1,0 +1,173 @@
+{
+  "rules": [
+    {
+      "document_role": "bottle_drawing",
+      "family": "cylinder",
+      "review_status": "matched",
+      "sold_capacity_label": "9ml",
+      "sold_product_key": "cylinder-9ml",
+      "source_capacity_label": "10ml",
+      "source_pattern": "10ml Bottle dimensions and print area.pdf"
+    },
+    {
+      "document_role": "print_area_only",
+      "family": "cylinder",
+      "review_status": "matched",
+      "sold_capacity_label": "5ml",
+      "sold_product_key": "cylinder-5ml",
+      "source_capacity_label": "5ml",
+      "source_pattern": "Cylinder 5ml bottle Screen Printing Area Nemat.pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "flair",
+      "review_status": "matched",
+      "sold_capacity_label": "15ml",
+      "sold_product_key": "flair-15ml",
+      "source_capacity_label": "15ml",
+      "source_pattern": "Flair 15ml.pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "circle",
+      "review_status": "matched",
+      "sold_capacity_label": "30ml",
+      "sold_product_key": "circle-30ml",
+      "source_capacity_label": "30ml",
+      "source_pattern": "GBCrcl30.pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "circle",
+      "review_status": "matched",
+      "sold_capacity_label": "50ml",
+      "sold_product_key": "circle-50ml",
+      "source_capacity_label": "50ml",
+      "source_pattern": "GBCrcl50 (3).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "cylinder",
+      "finish_context": "blue",
+      "review_status": "matched",
+      "sold_capacity_label": "9ml",
+      "sold_product_key": "cylinder-9ml",
+      "source_capacity_label": "10ml",
+      "source_pattern": "GBCyl10mBlue (4).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "cylinder",
+      "finish_context": "amber",
+      "review_status": "matched",
+      "sold_capacity_label": "9ml",
+      "sold_product_key": "cylinder-9ml",
+      "source_capacity_label": "10ml",
+      "source_pattern": "GBCyl10mlAmber (2).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "cylinder",
+      "finish_context": "blue",
+      "review_status": "matched",
+      "sold_capacity_label": "5ml",
+      "sold_product_key": "cylinder-5ml",
+      "source_capacity_label": "5ml",
+      "source_pattern": "GBCyl5mlBlue.pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "elegant",
+      "review_status": "matched",
+      "sold_capacity_label": "15ml",
+      "sold_product_key": "elegant-15ml",
+      "source_capacity_label": "15ml",
+      "source_pattern": "GBElegant15 Bottle - Nemat.pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "elegant",
+      "review_status": "matched",
+      "sold_capacity_label": "60ml",
+      "sold_product_key": "elegant-60ml",
+      "source_capacity_label": "60ml",
+      "source_pattern": "GBElegant60 Bottle - Nemat (1).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "elegant",
+      "review_status": "matched",
+      "sold_capacity_label": "30ml",
+      "sold_product_key": "elegant-30ml",
+      "source_capacity_label": "30ml",
+      "source_pattern": "GBElg30 (1).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "empire",
+      "review_status": "matched",
+      "sold_capacity_label": "100ml",
+      "sold_product_key": "empire-100ml",
+      "source_capacity_label": "100ml",
+      "source_pattern": "GBEmpire100 (1).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "empire",
+      "review_status": "matched",
+      "sold_capacity_label": "50ml",
+      "sold_product_key": "empire-50ml",
+      "source_capacity_label": "50ml",
+      "source_pattern": "GBEmpire50 (1).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "sleek",
+      "review_status": "matched",
+      "sold_capacity_label": "30ml",
+      "sold_product_key": "sleek-30ml",
+      "source_capacity_label": "30ml",
+      "source_pattern": "GBSleek30 (1).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "sleek",
+      "review_status": "matched",
+      "sold_capacity_label": "50ml",
+      "sold_product_key": "sleek-50ml",
+      "source_capacity_label": "50ml",
+      "source_pattern": "GBSleek50 (1).pdf"
+    },
+    {
+      "document_role": "bottle_drawing",
+      "family": "tulip",
+      "review_status": "matched",
+      "sold_capacity_label": "6ml",
+      "sold_product_key": "tulip-6ml",
+      "source_capacity_label": "6ml",
+      "source_pattern": "GBTulip6 (1).pdf"
+    },
+    {
+      "document_role": "print_area_only",
+      "family": "slim",
+      "review_status": "matched",
+      "sold_capacity_label": "100ml",
+      "sold_product_key": "slim-100ml",
+      "source_capacity_label": "100ml",
+      "source_pattern": "Slim 100ml screen printable Area (1).pdf"
+    },
+    {
+      "aliases": [
+        "tall-cylinder-9ml-drawing-nemat-2015.pdf"
+      ],
+      "document_role": "bottle_drawing",
+      "family": "tall-cylinder",
+      "review_status": "matched",
+      "sold_capacity_label": "9ml",
+      "sold_product_key": "tall-cylinder-9ml",
+      "source_capacity_label": "9ml",
+      "source_pattern": "Tall cylinder 9ml bottle drawing Nemat (1).pdf"
+    }
+  ],
+  "schema_version": 1
+}
