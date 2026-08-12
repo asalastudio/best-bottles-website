@@ -304,7 +304,13 @@ dependent geometry, assemblies, and assets; a studio-preset revision invalidates
 only dependent renders, not geometry. Prior versions remain intact.
 
 Approvals are separate immutable records containing the reviewed entity type,
-artifact hash, named reviewer, timestamp, decision, and notes. A changed input
+approval scope, artifact hash, named reviewer, timestamp, decision, and notes.
+Approval scopes include dimensional truth, body geometry, neck-finish/thread
+geometry, fitment geometry, component geometry, assembly visual fit, assembly
+dimensional fit, studio architecture, studio preset, material/look-development,
+and final asset. An entity's displayed status is derived from the scopes its
+next stage requires. A thread-only approval does not approve a bottle body, and
+a body approval does not approve a material or studio preset. A changed input
 never inherits an approval from an older hash.
 
 ## 9. Review packets and human gates
@@ -681,7 +687,9 @@ The first implementation tranche stops before new broad Blender production:
    preserving their actual status: `approved`, `converted_unreviewed`,
    `provisional`, `extrapolated`, `experimental`, or `superseded`. The Circle
    15 ml and Circle 100 ml scenes remain extrapolated until drawings and clay
-   approvals exist.
+   approvals exist. Migrate approvals at their original scope: the approved
+   17-415 thread/finish can remain approved while an unfinished or experimental
+   body, material, studio, or assembly remains unapproved.
 7. Report drawings ready for specification review, missing dimensions,
    unresolved product matches, existing masters, and missing components.
 8. Calibrate, compare, and approve the protected studio template before
@@ -713,6 +721,8 @@ The loop is complete when:
 - the existing approved geometry is migrated without mutation;
 - migrated provisional, extrapolated, or experimental scenes retain those
   statuses and cannot inherit approval;
+- scoped approvals cannot leak across body, finish/thread, fitment, assembly,
+  studio, material, or final-asset boundaries;
 - one protected studio architecture supports versioned flexible presets;
 - clay, assembly, and final QA gates block unapproved promotion;
 - a rerun resumes cleanly and does not duplicate work;
