@@ -5,6 +5,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -299,6 +300,39 @@ class LegacyInventoryTests(unittest.TestCase):
 
             self.assertEqual(record_path.read_bytes(), before)
 
+    def test_walk_error_keeps_the_last_complete_legacy_inventory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory) / "pipeline"
+            master_root = pipeline_root / "master"
+            self._write_scene(master_root, "builds/known.blend", b"known scene")
+            atomic_write_json(
+                pipeline_root / "reconciliation/legacy-status.json",
+                {"schema_version": 1, "rules": []},
+            )
+            first = inventory_pending_legacy_assets(pipeline_root)
+            record_path = (
+                pipeline_root / f"artifacts/records/{first.artifact_records[0].id}.json"
+            )
+            before = record_path.read_bytes()
+
+            def failing_walker(root, *, followlinks, onerror=None):
+                self.assertTrue(os.path.samefile(root, master_root))
+                self.assertFalse(followlinks)
+                if onerror is None:
+                    return ()
+
+                def fail_during_iteration():
+                    onerror(PermissionError("forced traversal failure"))
+                    yield  # pragma: no cover - keeps this a walker iterator
+
+                return fail_during_iteration()
+
+            with mock.patch("pipeline_lib.legacy.os.walk", failing_walker):
+                with self.assertRaisesRegex(ValueError, "traverse legacy master"):
+                    inventory_pending_legacy_assets(pipeline_root)
+
+            self.assertEqual(record_path.read_bytes(), before)
+
     def test_rule_status_and_scope_combinations_fail_closed(self):
         with tempfile.TemporaryDirectory() as directory:
             master_root = Path(directory) / "master"
@@ -336,17 +370,20 @@ class LegacyInventoryTests(unittest.TestCase):
             self._write_scene(master_root, "builds/scene.blend", b"descriptor bytes")
             calls = []
 
-            def opener(path, flags):
-                calls.append((Path(path), flags))
-                return os.open(path, flags)
+            def opener(path, flags, *, dir_fd=None):
+                calls.append((os.fspath(path), flags, dir_fd))
+                return os.open(path, flags, dir_fd=dir_fd)
 
             record = inventory_legacy_assets(
                 master_root, {"schema_version": 1, "rules": []}, opener=opener,
             )[0]
 
-            self.assertEqual(len(calls), 1)
+            scene_calls = [call for call in calls if not call[1] & os.O_DIRECTORY]
+            self.assertEqual(len(scene_calls), 1)
+            self.assertEqual(scene_calls[0][0], "scene.blend")
+            self.assertIsNotNone(scene_calls[0][2])
             if hasattr(os, "O_NOFOLLOW"):
-                self.assertTrue(calls[0][1] & os.O_NOFOLLOW)
+                self.assertTrue(all(call[1] & os.O_NOFOLLOW for call in calls))
             self.assertEqual(record.size_bytes, len(b"descriptor bytes"))
             self.assertEqual(record.sha256, hashlib.sha256(b"descriptor bytes").hexdigest())
 
@@ -355,10 +392,15 @@ class LegacyInventoryTests(unittest.TestCase):
             master_root = Path(directory) / "master"
             scene = self._write_scene(master_root, "builds/scene.blend", b"discovered")
 
-            def replacing_opener(path, flags):
-                scene.unlink()
-                scene.write_bytes(b"replacement")
-                return os.open(path, flags)
+            replaced = False
+
+            def replacing_opener(path, flags, *, dir_fd=None):
+                nonlocal replaced
+                if os.fspath(path) == "scene.blend" and not replaced:
+                    scene.unlink()
+                    scene.write_bytes(b"replacement")
+                    replaced = True
+                return os.open(path, flags, dir_fd=dir_fd)
 
             with self.assertRaisesRegex(ValueError, "changed during inventory"):
                 inventory_legacy_assets(
@@ -366,6 +408,38 @@ class LegacyInventoryTests(unittest.TestCase):
                     {"schema_version": 1, "rules": []},
                     opener=replacing_opener,
                 )
+
+    def test_parent_symlink_swap_is_rejected_and_descriptors_are_closed(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            master_root = root / "master"
+            builds = master_root / "builds"
+            self._write_scene(master_root, "builds/scene.blend", b"discovered")
+            outside = root / "outside"
+            outside.mkdir()
+            (outside / "scene.blend").write_bytes(b"outside replacement")
+            displaced = master_root / "builds-displaced"
+            opened_descriptors = []
+
+            def racing_opener(path, flags, *, dir_fd=None):
+                if os.fspath(path) == "builds" and dir_fd is not None:
+                    builds.rename(displaced)
+                    builds.symlink_to(outside, target_is_directory=True)
+                descriptor = os.open(path, flags, dir_fd=dir_fd)
+                opened_descriptors.append(descriptor)
+                return descriptor
+
+            with self.assertRaisesRegex(ValueError, "changed during inventory"):
+                inventory_legacy_assets(
+                    master_root,
+                    {"schema_version": 1, "rules": []},
+                    opener=racing_opener,
+                )
+
+            for descriptor in opened_descriptors:
+                with self.subTest(descriptor=descriptor):
+                    with self.assertRaises(OSError):
+                        os.fstat(descriptor)
 
     def test_checked_in_registry_names_only_exact_documented_exceptions(self):
         registry = json.loads(LEGACY_RULES_PATH.read_text(encoding="utf-8"))

@@ -45,7 +45,6 @@ class _StatusRule:
 @dataclass(frozen=True)
 class _ScenePath:
     relative_path: str
-    path: Path
     identity: tuple[int, int, int, int, int]
 
 
@@ -157,50 +156,129 @@ def _scene_paths(master_root: Path) -> tuple[_ScenePath, ...]:
         return ()
     if not master_root.is_dir():
         raise ValueError("master_root must be a real directory")
-    root = master_root.resolve(strict=True)
+    root = master_root
     scenes = []
-    for directory, directory_names, file_names in os.walk(root, followlinks=False):
-        directory_names.sort()
-        file_names.sort()
-        current = Path(directory)
-        for directory_name in tuple(directory_names):
-            child = current / directory_name
-            if child.is_symlink():
-                raise ValueError("legacy scene directory must not be a symlink")
-        for file_name in file_names:
-            candidate = current / file_name
-            if candidate.suffix.lower() != ".blend":
-                continue
-            try:
+
+    def traversal_error(error: OSError) -> None:
+        raise ValueError("unable to traverse legacy master") from error
+
+    try:
+        walker = os.walk(
+            root, followlinks=False, onerror=traversal_error,
+        )
+        for directory, directory_names, file_names in walker:
+            directory_names.sort()
+            file_names.sort()
+            current = Path(directory)
+            for directory_name in tuple(directory_names):
+                child = current / directory_name
+                metadata = child.lstat()
+                if stat_module.S_ISLNK(metadata.st_mode):
+                    raise ValueError("legacy scene directory must not be a symlink")
+                if not stat_module.S_ISDIR(metadata.st_mode):
+                    raise ValueError("legacy scene directory must be a real directory")
+            for file_name in file_names:
+                candidate = current / file_name
+                if candidate.suffix.lower() != ".blend":
+                    continue
                 metadata = candidate.lstat()
-            except OSError as error:
-                raise ValueError("legacy scene changed during inventory") from error
-            if stat_module.S_ISLNK(metadata.st_mode):
-                raise ValueError("legacy scene path must not be a symlink")
-            if not stat_module.S_ISREG(metadata.st_mode):
-                raise ValueError("legacy scene path must be a regular file")
-            scenes.append(_ScenePath(
-                relative_path=candidate.relative_to(root).as_posix(),
-                path=candidate,
-                identity=_identity(metadata),
-            ))
+                if stat_module.S_ISLNK(metadata.st_mode):
+                    raise ValueError("legacy scene path must not be a symlink")
+                if not stat_module.S_ISREG(metadata.st_mode):
+                    raise ValueError("legacy scene path must be a regular file")
+                scenes.append(_ScenePath(
+                    relative_path=candidate.relative_to(root).as_posix(),
+                    identity=_identity(metadata),
+                ))
+    except ValueError:
+        raise
+    except OSError as error:
+        raise ValueError("unable to traverse legacy master") from error
     return tuple(sorted(scenes, key=lambda scene: scene.relative_path))
 
 
-def _fingerprint_scene(
-    root: Path, scene: _ScenePath, opener,
-) -> tuple[str, int, Path]:
-    """Hash one stable regular-file descriptor and reject pathname races."""
+def _open_flags(*, directory: bool) -> int:
+    if not hasattr(os, "O_NOFOLLOW") or (directory and not hasattr(os, "O_DIRECTORY")):
+        raise ValueError("platform lacks required no-follow file opening support")
+    flags = os.O_RDONLY | os.O_NOFOLLOW
+    flags |= getattr(os, "O_CLOEXEC", 0)
+    flags |= getattr(os, "O_NONBLOCK", 0)
+    if directory:
+        flags |= os.O_DIRECTORY
+    return flags
+
+
+def _relative_scene_parts(relative_path: str) -> tuple[str, ...]:
+    normalized = _relative_path(relative_path)
+    parts = PurePosixPath(normalized).parts
+    if not parts:
+        raise ValueError("legacy scene path must name a file")
+    return parts
+
+
+def _open_scene_parent(
+    root_descriptor: int, parent_parts: tuple[str, ...], opener,
+) -> tuple[int, bool]:
+    """Open a relative parent chain without following any component symlink."""
+    descriptor = root_descriptor
+    owned = False
     try:
-        resolve_descendant(root, scene.path, "legacy scene path")
-        flags = os.O_RDONLY
-        flags |= getattr(os, "O_CLOEXEC", 0)
-        flags |= getattr(os, "O_NONBLOCK", 0)
-        flags |= getattr(os, "O_NOFOLLOW", 0)
-        descriptor = opener(scene.path, flags)
+        for component in parent_parts:
+            child_descriptor = opener(
+                component, _open_flags(directory=True), dir_fd=descriptor,
+            )
+            try:
+                metadata = os.fstat(child_descriptor)
+                if not stat_module.S_ISDIR(metadata.st_mode):
+                    raise ValueError("legacy scene parent must be a directory")
+            except BaseException:
+                os.close(child_descriptor)
+                raise
+            if owned:
+                os.close(descriptor)
+            descriptor = child_descriptor
+            owned = True
+        return descriptor, owned
+    except BaseException:
+        if owned:
+            os.close(descriptor)
+        raise
+
+
+def _anchored_scene_metadata(
+    root_descriptor: int, parts: tuple[str, ...], opener,
+) -> os.stat_result:
+    parent_descriptor, owned = _open_scene_parent(
+        root_descriptor, parts[:-1], opener,
+    )
+    try:
+        return os.stat(
+            parts[-1], dir_fd=parent_descriptor, follow_symlinks=False,
+        )
+    finally:
+        if owned:
+            os.close(parent_descriptor)
+
+
+def _fingerprint_scene(
+    root: Path, root_descriptor: int, scene: _ScenePath, opener,
+) -> tuple[str, int, Path]:
+    """Hash one root-anchored descriptor and reject component/pathname races."""
+    try:
+        parts = _relative_scene_parts(scene.relative_path)
+        parent_descriptor, owned_parent = _open_scene_parent(
+            root_descriptor, parts[:-1], opener,
+        )
+        descriptor = -1
         try:
+            descriptor = opener(
+                parts[-1], _open_flags(directory=False), dir_fd=parent_descriptor,
+            )
             before = os.fstat(descriptor)
-            if not stat_module.S_ISREG(before.st_mode) or _identity(before) != scene.identity:
+            if (
+                not stat_module.S_ISREG(before.st_mode)
+                or _identity(before) != scene.identity
+            ):
                 raise ValueError("legacy scene changed during inventory")
             digest = hashlib.sha256()
             streamed_size = 0
@@ -210,20 +288,26 @@ def _fingerprint_scene(
                     digest.update(chunk)
                     streamed_size += len(chunk)
                 after = os.fstat(handle.fileno())
+            final_metadata = os.stat(
+                parts[-1], dir_fd=parent_descriptor, follow_symlinks=False,
+            )
         finally:
             if descriptor >= 0:
                 os.close(descriptor)
+            if owned_parent:
+                os.close(parent_descriptor)
 
-        final_path = resolve_descendant(root, scene.path, "legacy scene path")
-        final_metadata = scene.path.lstat()
+        anchored_metadata = _anchored_scene_metadata(root_descriptor, parts, opener)
         if (
             _identity(after) != scene.identity
             or _identity(final_metadata) != scene.identity
+            or _identity(anchored_metadata) != scene.identity
             or not stat_module.S_ISREG(final_metadata.st_mode)
+            or not stat_module.S_ISREG(anchored_metadata.st_mode)
             or streamed_size != after.st_size
         ):
             raise ValueError("legacy scene changed during inventory")
-        return digest.hexdigest(), streamed_size, final_path
+        return digest.hexdigest(), streamed_size, root.joinpath(*parts)
     except (OSError, ValueError) as error:
         raise ValueError(
             f"legacy scene changed during inventory: {scene.relative_path}"
@@ -251,49 +335,107 @@ def inventory_legacy_assets(
 ) -> tuple[ArtifactRecord, ...]:
     """Inventory Blender scenes without deriving authority from their filenames."""
     rules = _parse_rules(status_rules)
-    root = Path(master_root).resolve()
-    records = []
-    for scene in _scene_paths(Path(master_root)):
-        relative_path = scene.relative_path
-        digest, size_bytes, scene_path = _fingerprint_scene(root, scene, opener)
-        rule = _matching_rule(relative_path, digest, rules)
-        is_working = PurePosixPath(relative_path).parts[0] == "working"
-        if is_working:
-            if rule is not None and (
-                rule.status != "experimental" or rule.approved_scopes
-            ):
-                raise ValueError("working scenes must remain experimental and unapproved")
-            status = "experimental"
-            scopes: tuple[str, ...] = ()
-            note = rule.evidence_note if rule else "Working scene; experimental by location."
-            source = rule.reviewer_source if rule else "legacy inventory path policy"
-        elif rule is None:
-            status = "imported_unverified"
-            scopes = ()
-            note = "No explicit legacy status rule; imported without approval."
-            source = "legacy inventory default"
-        else:
-            status = rule.status
-            scopes = rule.approved_scopes
-            note = rule.evidence_note
-            source = rule.reviewer_source
+    configured_root = Path(master_root).absolute()
+    try:
+        root_path_metadata = configured_root.lstat()
+    except FileNotFoundError:
+        return ()
+    except OSError as error:
+        raise ValueError("unable to inspect legacy master root") from error
+    if (
+        stat_module.S_ISLNK(root_path_metadata.st_mode)
+        or not stat_module.S_ISDIR(root_path_metadata.st_mode)
+    ):
+        raise ValueError("master_root must be a real directory")
 
-        records.append(ArtifactRecord(
-            id=stable_id("artifact", {
-                "relative_path": relative_path,
-                "sha256": digest,
-            }),
-            sha256=digest,
-            size_bytes=size_bytes,
-            primary_uri=scene_path.as_uri(),
-            mirror_uri="",
-            status=status,
-            kind="legacy_scene",
-            approved_scopes=scopes,
-            evidence_note=note,
-            reviewer_source=source,
-        ))
-    return tuple(records)
+    root_descriptor = -1
+    try:
+        root_descriptor = opener(
+            configured_root, _open_flags(directory=True), dir_fd=None,
+        )
+        root_metadata = os.fstat(root_descriptor)
+        if (
+            not stat_module.S_ISDIR(root_metadata.st_mode)
+            or (root_metadata.st_dev, root_metadata.st_ino)
+            != (root_path_metadata.st_dev, root_path_metadata.st_ino)
+        ):
+            raise ValueError("legacy master root changed during inventory")
+        root = configured_root.resolve(strict=True)
+        resolved_metadata = root.lstat()
+        if (
+            not stat_module.S_ISDIR(resolved_metadata.st_mode)
+            or (resolved_metadata.st_dev, resolved_metadata.st_ino)
+            != (root_metadata.st_dev, root_metadata.st_ino)
+        ):
+            raise ValueError("legacy master root changed during inventory")
+
+        records = []
+        for scene in _scene_paths(root):
+            relative_path = scene.relative_path
+            digest, size_bytes, scene_path = _fingerprint_scene(
+                root, root_descriptor, scene, opener,
+            )
+            rule = _matching_rule(relative_path, digest, rules)
+            is_working = PurePosixPath(relative_path).parts[0] == "working"
+            if is_working:
+                if rule is not None and (
+                    rule.status != "experimental" or rule.approved_scopes
+                ):
+                    raise ValueError(
+                        "working scenes must remain experimental and unapproved"
+                    )
+                status = "experimental"
+                scopes: tuple[str, ...] = ()
+                note = (
+                    rule.evidence_note
+                    if rule else "Working scene; experimental by location."
+                )
+                source = (
+                    rule.reviewer_source
+                    if rule else "legacy inventory path policy"
+                )
+            elif rule is None:
+                status = "imported_unverified"
+                scopes = ()
+                note = "No explicit legacy status rule; imported without approval."
+                source = "legacy inventory default"
+            else:
+                status = rule.status
+                scopes = rule.approved_scopes
+                note = rule.evidence_note
+                source = rule.reviewer_source
+
+            records.append(ArtifactRecord(
+                id=stable_id("artifact", {
+                    "relative_path": relative_path,
+                    "sha256": digest,
+                }),
+                sha256=digest,
+                size_bytes=size_bytes,
+                primary_uri=scene_path.as_uri(),
+                mirror_uri="",
+                status=status,
+                kind="legacy_scene",
+                approved_scopes=scopes,
+                evidence_note=note,
+                reviewer_source=source,
+            ))
+
+        final_root_metadata = configured_root.lstat()
+        if (
+            stat_module.S_ISLNK(final_root_metadata.st_mode)
+            or (final_root_metadata.st_dev, final_root_metadata.st_ino)
+            != (root_metadata.st_dev, root_metadata.st_ino)
+        ):
+            raise ValueError("legacy master root changed during inventory")
+        return tuple(records)
+    except (OSError, ValueError) as error:
+        if isinstance(error, ValueError):
+            raise
+        raise ValueError("legacy master root changed during inventory") from error
+    finally:
+        if root_descriptor >= 0:
+            os.close(root_descriptor)
 
 
 def _artifact_records(root: Path) -> tuple[tuple[Path, ArtifactRecord], ...]:
@@ -348,8 +490,23 @@ def inventory_pending_legacy_assets(pipeline_root: Path) -> LegacyReport:
     if artifact_directory.exists() and not artifact_directory.is_dir():
         raise ValueError("artifact record directory must be a directory")
     master_root = root / "master"
-    complete_scan = master_root.exists()
+    complete_scan = False
+    try:
+        before_scan = master_root.lstat()
+    except FileNotFoundError:
+        before_scan = None
     records = inventory_legacy_assets(master_root, status_rules)
+    try:
+        after_scan = master_root.lstat()
+    except FileNotFoundError:
+        after_scan = None
+    if before_scan is not None and after_scan is not None:
+        complete_scan = (
+            stat_module.S_ISDIR(before_scan.st_mode)
+            and stat_module.S_ISDIR(after_scan.st_mode)
+            and (before_scan.st_dev, before_scan.st_ino)
+            == (after_scan.st_dev, after_scan.st_ino)
+        )
     prior_records = _artifact_records(root)
     current_ids = {record.id for record in records}
     for _, prior in prior_records:

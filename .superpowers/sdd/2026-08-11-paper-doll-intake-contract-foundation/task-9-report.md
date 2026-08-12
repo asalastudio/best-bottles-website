@@ -132,8 +132,9 @@ scope_sets {('finish_thread_geometry',): 6, (): 54}
   final-asset, or protected status.
 - Legacy inventory cannot grant `protected`; that remains exclusively behind
   the independent two-copy integrity gate.
-- Scene and evidence reads are resolved beneath their configured roots.
-  Symlinked scene files/directories and evidence escapes fail closed.
+- Evidence reads are resolved beneath their configured roots. Legacy scene
+  content reads now use the root-anchored descriptor traversal documented in
+  fix round 2 below; symlinked components and evidence escapes fail closed.
 - Artifact records use stable path-plus-hash IDs and the existing strict model;
   persistence uses the atomic/idempotent record store. Review Markdown is also
   staged, fsynced, compared, and atomically replaced.
@@ -222,10 +223,11 @@ OK
 - Rule parsing rejects protected status, scope-less approvals, and any approved
   scope on imported-unverified, experimental, or extrapolated rules. One-scope
   finish/thread approvals remain valid without transferring body authority.
-- Each scene is opened once with no-follow, close-on-exec, and nonblocking
-  flags. Discovery identity, descriptor identity, pre/post `fstat`, streamed
-  byte count, final `lstat`, and final contained path must all agree. Hash and
-  size come from that one descriptor.
+- Round 1 opened each scene once with no-follow, close-on-exec, and nonblocking
+  flags and derived hash and size from that descriptor. Its pathname was still
+  resolved and opened as an absolute path, so that round did not yet protect
+  every parent component against a replacement race; fix round 2 below
+  supersedes that incomplete boundary with root-anchored descriptor traversal.
 - Review generation requires a real pipeline root plus the document, issue,
   and artifact authority directories before choosing or creating an output.
 - Approval records are policy-validated for reviewer, scope, hash, decision,
@@ -278,4 +280,83 @@ python3 -m py_compile scripts/paper-doll-3d/pipeline_lib/legacy.py \
   scripts/paper-doll-3d/tests/test_pipeline_review_legacy.py
 python3 -m json.tool pipeline/paper-doll-3d/reconciliation/legacy-status.json >/dev/null
 git diff --check
+```
+
+## Fix round 2 — complete traversal and descriptor anchoring
+
+### RED evidence
+
+The focused Task 9 run after adding deterministic walker-error and parent
+symlink-swap regressions exposed the absolute-path opening and incomplete-scan
+behavior:
+
+```bash
+python3 -m unittest scripts/paper-doll-3d/tests/test_pipeline_review_legacy.py -v
+```
+
+```text
+test_parent_symlink_swap_is_rejected_and_descriptors_are_closed ... FAIL
+test_scene_is_opened_once_and_size_comes_from_the_hashed_descriptor ... FAIL
+test_scene_replacement_between_discovery_and_open_is_rejected ... FAIL
+test_walk_error_keeps_the_last_complete_legacy_inventory ... FAIL
+
+Ran 20 tests in 0.092s
+FAILED (failures=4)
+```
+
+The walk regression initially compared the macOS `/var` alias with its
+`/private/var` canonical path. After changing that fixture-only assertion to
+`samefile`, the behavioral regression remained RED for the intended reason:
+
+```text
+AssertionError: ValueError not raised
+
+Ran 1 test in 0.010s
+FAILED (failures=1)
+```
+
+### GREEN evidence
+
+After the traversal and opening changes, the focused suite passed with
+resource warnings promoted to errors:
+
+```bash
+python3 -W error::ResourceWarning -m unittest \
+  scripts/paper-doll-3d/tests/test_pipeline_review_legacy.py -v
+```
+
+```text
+Ran 20 tests in 0.108s
+OK
+```
+
+### Fix-round implementation review
+
+- `os.walk` now receives an `onerror` callback that turns traversal failures
+  into a failed scan. The completion flag remains false until inventory
+  traversal and every scene fingerprint have returned successfully, so failed
+  traversal cannot reconcile away the last complete `legacy_scene` snapshot.
+- The scanner opens the configured master directory first. Every relative
+  parent component is then opened from its parent descriptor with
+  `O_DIRECTORY | O_NOFOLLOW`; the final scene is opened from that descriptor
+  with `O_NOFOLLOW`. Absolute paths, `..`, symlinked components, non-directory
+  parents, and nonregular scenes fail closed.
+- Hash, byte count, and before/after metadata come from one scene descriptor.
+  The final file is checked relative to its still-open parent and the complete
+  relative chain is reopened from the original root descriptor to reject path
+  replacement. All owned descriptors close on successful and exceptional
+  paths.
+
+### Fix-round final verification
+
+Fresh Tasks 1–9 verification after the focused GREEN run:
+
+```bash
+python3 -W error::ResourceWarning -m unittest discover \
+  -s scripts/paper-doll-3d/tests -p 'test_pipeline_*.py' -v
+```
+
+```text
+Ran 88 tests in 0.195s
+OK
 ```
