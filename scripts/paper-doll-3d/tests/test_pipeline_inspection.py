@@ -33,6 +33,15 @@ class MeasurementCandidateTests(unittest.TestCase):
 
         self.assertEqual([item["value"] for item in candidates], [19.0])
 
+    def test_rejects_malformed_token_suffixes_without_over_rejecting_valid_values(self):
+        malformed = "1e3±0.3 0x16±0.3 - 16±0.3 − 17±0.3"
+
+        self.assertEqual(extract_measurement_candidates(malformed, page=1), ())
+        valid = extract_measurement_candidates(
+            "Ø16.3±0.3  Ø14.8 ± 0.3  72±0.8  neck 14.06±0.3", page=1,
+        )
+        self.assertEqual([item["value"] for item in valid], [16.3, 14.8, 72.0, 14.06])
+
 
 class VisualReviewTests(unittest.TestCase):
     def test_short_text_counts_non_whitespace_characters(self):

@@ -16,6 +16,17 @@ _MEASUREMENT = re.compile(
 )
 
 
+def _has_malformed_prefix(text: str, start: int) -> bool:
+    """Reject a numeric suffix embedded in a malformed numeric token."""
+    prefix = text[:start]
+    if prefix and (
+        (prefix[-1].isalnum() and prefix[-1] not in "Ø⌀")
+        or prefix[-1] in ".-−"
+    ):
+        return True
+    return bool(re.search(r"[-−]\s+$", prefix))
+
+
 def extract_measurement_candidates(text: str, page: int) -> tuple[dict, ...]:
     """Extract explicit value/tolerance pairs without assigning their meanings."""
     if page < 1:
@@ -23,6 +34,8 @@ def extract_measurement_candidates(text: str, page: int) -> tuple[dict, ...]:
 
     candidates = []
     for match in _MEASUREMENT.finditer(text):
+        if _has_malformed_prefix(text, match.start("value")):
+            continue
         candidates.append({
             "page": page,
             "raw_text": match.group(0),
