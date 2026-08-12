@@ -1,4 +1,5 @@
 import hashlib
+import os
 import sys
 import tempfile
 import unittest
@@ -93,6 +94,36 @@ class PipelineArtifactTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             protect_artifact(record, self.backend, self.clock)
 
+    def test_rejects_a_hard_linked_mirror_of_the_primary_copy(self):
+        content = b"same inode through another filename"
+        primary = self._write("primary.blend", content)
+        mirror = self.root / "mirror.blend"
+        os.link(primary, mirror)
+        record = self._record(primary, mirror, content)
+
+        with self.assertRaises(ValueError):
+            protect_artifact(record, self.backend, self.clock)
+
+    def test_normalizes_a_missing_mirror_to_value_error(self):
+        content = b"primary copy exists"
+        record = self._record(
+            self._write("primary.blend", content), self.root / "missing.blend", content,
+        )
+
+        with self.assertRaises(ValueError):
+            protect_artifact(record, self.backend, self.clock)
+
+    def test_normalizes_a_broken_symlink_mirror_to_value_error(self):
+        content = b"primary copy exists"
+        broken_mirror = self.root / "broken-mirror.blend"
+        broken_mirror.symlink_to(self.root / "does-not-exist.blend")
+        record = self._record(
+            self._write("primary.blend", content), broken_mirror, content,
+        )
+
+        with self.assertRaises(ValueError):
+            protect_artifact(record, self.backend, self.clock)
+
     def test_rejects_wrong_byte_size_even_when_both_hashes_match(self):
         content = b"same complete bytes"
         record = self._record(
@@ -117,6 +148,31 @@ class PipelineArtifactTests(unittest.TestCase):
             self.backend,
         ))
         self.assertFalse(verify_artifact_copy(path.as_uri(), "not-a-sha256", self.backend))
+
+    def test_verify_artifact_copy_rejects_unsafe_file_uri_encodings(self):
+        content = b"valid file contents"
+        raw_space = self._write("raw space.blend", content)
+        raw_bracket = self._write("raw[bracket].blend", content)
+        raw_tab = self._write("rawtab.blend", content)
+        replacement_character = self._write("replacement-\ufffd.blend", content)
+        expected_sha256 = hashlib.sha256(content).hexdigest()
+
+        replacement_uri = replacement_character.as_uri().replace("%EF%BF%BD", "%FF")
+        tab_uri = f"file://{raw_tab.parent}/raw\ttab.blend"
+        unsafe_uris = (
+            f"file://{raw_space}",
+            f"file://{raw_bracket}",
+            tab_uri,
+            replacement_uri,
+            raw_space.as_uri().replace("%20", "%ZZ"),
+            f"file://localhost{raw_space}",
+            raw_space.as_uri() + "?copy=mirror",
+            raw_space.as_uri() + "#mirror",
+        )
+
+        for uri in unsafe_uris:
+            with self.subTest(uri=uri):
+                self.assertFalse(verify_artifact_copy(uri, expected_sha256, self.backend))
 
     def test_rejects_malformed_record_metadata_and_naive_clock_values(self):
         content = b"well formed copies"

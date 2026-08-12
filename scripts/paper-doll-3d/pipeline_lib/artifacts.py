@@ -5,10 +5,11 @@ from __future__ import annotations
 from dataclasses import replace
 from datetime import datetime
 import hashlib
+import os
 from pathlib import Path
 import re
 import stat as stat_module
-from urllib.parse import unquote, urlsplit
+from urllib.parse import unquote_to_bytes, urlsplit
 
 from .models import (
     APPROVAL_SCOPES,
@@ -21,6 +22,7 @@ from .models import (
 CHUNK_SIZE = 1024 * 1024
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")
 _INVALID_PERCENT_ESCAPE = re.compile(r"%(?![0-9a-fA-F]{2})")
+_RAW_URI_PATH = re.compile(r"/[A-Za-z0-9._~!$&'()*+,;=:@/%-]*\Z")
 
 
 def _sha256(value: object, field_name: str) -> str:
@@ -46,7 +48,12 @@ def _aware_timestamp(value: object, field_name: str) -> str:
 
 def _file_path(uri: object) -> Path:
     """Parse an absolute local file URI without accepting ambiguous forms."""
-    if not isinstance(uri, str) or not uri or uri != uri.strip():
+    if (
+        not isinstance(uri, str)
+        or not uri
+        or uri != uri.strip()
+        or any(character.isspace() for character in uri)
+    ):
         raise ValueError("artifact URI must be a non-empty, whitespace-free file URI")
     if _INVALID_PERCENT_ESCAPE.search(uri):
         raise ValueError("artifact URI has an invalid percent escape")
@@ -61,7 +68,12 @@ def _file_path(uri: object) -> Path:
     ):
         raise ValueError("only absolute file:// artifact URIs are supported")
 
-    decoded_path = unquote(parsed.path)
+    if _RAW_URI_PATH.fullmatch(parsed.path) is None:
+        raise ValueError("artifact URI path contains raw illegal characters")
+    try:
+        decoded_path = unquote_to_bytes(parsed.path).decode("utf-8", errors="strict")
+    except UnicodeDecodeError as error:
+        raise ValueError("artifact URI path must be valid UTF-8") from error
     if "\x00" in decoded_path:
         raise ValueError("artifact URI must not contain a null byte")
     path = Path(decoded_path)
@@ -151,9 +163,12 @@ def _validate_record(record: object) -> ArtifactRecord:
 def _resolved_path(backend: object, uri: str) -> Path:
     if not isinstance(backend, FileArtifactBackend):
         raise ValueError("only FileArtifactBackend is supported for artifact protection")
-    resolved = backend.resolve(uri)
-    if not resolved.is_file():
-        raise ValueError("artifact URI must resolve to a regular file")
+    try:
+        resolved = backend.resolve(uri)
+        if not resolved.is_file():
+            raise ValueError("artifact URI must resolve to a regular file")
+    except (OSError, TypeError, ValueError) as error:
+        raise ValueError("artifact URI must resolve to an available regular file") from error
     return resolved
 
 
@@ -167,8 +182,12 @@ def protect_artifact(record: ArtifactRecord, backend: object, clock) -> Artifact
 
     primary_path = _resolved_path(backend, record.primary_uri)
     mirror_path = _resolved_path(backend, record.mirror_uri)
-    if primary_path == mirror_path:
-        raise ValueError("artifact primary and mirror must resolve to different files")
+    try:
+        same_file = os.path.samefile(primary_path, mirror_path)
+    except OSError as error:
+        raise ValueError("artifact copies must remain available for identity checking") from error
+    if same_file:
+        raise ValueError("artifact primary and mirror must be different filesystem files")
 
     for uri in (record.primary_uri, record.mirror_uri):
         observed = _stream_copy(uri, backend)
