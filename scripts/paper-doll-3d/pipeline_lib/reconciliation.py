@@ -9,15 +9,16 @@ from typing import Any, Iterable
 
 from .ids import stable_id
 from .models import SCHEMA_VERSION, ContractRecord, DocumentRecord, IssueRecord
+from .paths import resolve_descendant, safe_record_id
 from .store import atomic_write_json, iter_records, write_record
 
 
 DOCUMENT_ROLES = frozenset({"bottle_drawing", "print_area_only"})
 REVIEW_STATUSES = frozenset({"matched", "needs_review"})
 CONTRACT_DIRECTORIES = {
-    "bottle": Path("contracts/bottles"),
-    "fitment": Path("contracts/fitments"),
-    "component": Path("contracts/components"),
+    "bottle": Path("bottles"),
+    "fitment": Path("fitments"),
+    "component": Path("components"),
 }
 
 
@@ -154,6 +155,7 @@ def suggest_identity(
     document: DocumentRecord, rules: Iterable[IdentityRule],
 ) -> ReconciliationResult:
     """Match every observed filename while retaining one content-backed document ID."""
+    rules = tuple(rules)
     names = _observed_names(document)
     matched_pairs = tuple(
         (name, rule)
@@ -320,13 +322,28 @@ def _write_contract(pipeline_root: Path, contract: ContractRecord) -> Path:
         directory = CONTRACT_DIRECTORIES[contract.contract_type]
     except KeyError as error:
         raise ValueError(f"unsupported contract type: {contract.contract_type!r}") from error
-    path = pipeline_root / directory / f"{contract.id}.json"
+    contract_id = safe_record_id(contract.id, "contract id")
+    root = pipeline_root.resolve()
+    contracts_root = resolve_descendant(root, root / "contracts", "contracts root")
+    contract_directory = resolve_descendant(
+        contracts_root, contracts_root / directory, "contract directory",
+    )
+    path = resolve_descendant(
+        contracts_root, contract_directory / f"{contract_id}.json", "contract path",
+    )
     atomic_write_json(path, contract.to_dict())
     return path
 
 
 def _read_inspection(pipeline_root: Path, document: DocumentRecord) -> dict[str, Any]:
-    path = pipeline_root / "evidence" / document.id / "inspection.json"
+    document_id = safe_record_id(document.id, "document id")
+    root = pipeline_root.resolve()
+    evidence_root = resolve_descendant(root, root / "evidence", "evidence root")
+    path = resolve_descendant(
+        evidence_root,
+        evidence_root / document_id / "inspection.json",
+        "inspection path",
+    )
     with path.open(encoding="utf-8") as handle:
         value = json.load(handle)
     if not isinstance(value, dict):

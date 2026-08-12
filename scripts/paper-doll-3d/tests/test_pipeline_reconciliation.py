@@ -107,6 +107,17 @@ class PipelineReconciliationTests(unittest.TestCase):
         self.assertEqual(result.sold_product_key, "")
         self.assertEqual(result.matched_observed_names, ())
 
+    def test_one_shot_rule_iterator_detects_ambiguous_observed_names(self):
+        document = self._document("Flair 15ml.pdf", "GBCrcl30.pdf")
+
+        result = suggest_identity(document, iter(self.rules))
+
+        self.assertEqual(result.status, "needs_review")
+        self.assertEqual(result.document_role, "conflict")
+        self.assertEqual(result.matched_source_patterns, (
+            "Flair 15ml.pdf", "GBCrcl30.pdf",
+        ))
+
     def test_draft_preserves_capacity_provenance_and_never_approves_candidates(self):
         document = self._document("GBCyl10mBlue (4).pdf", "GBCyl10mlAmber (2).pdf")
         inspection = {
@@ -209,6 +220,78 @@ class PipelineReconciliationTests(unittest.TestCase):
             report = reconcile_pending_documents(pipeline_root)
 
             self.assertIn("MISSING_BOTTLE_DRAWING", {issue.code for issue in report.issues})
+
+    def test_reconcile_rejects_traversal_document_id_before_reading_evidence(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory)
+            rules_path = pipeline_root / "reconciliation/identity-rules.json"
+            rules_path.parent.mkdir(parents=True)
+            rules_path.write_bytes(RULES_PATH.read_bytes())
+            records = pipeline_root / "documents/records"
+            records.mkdir(parents=True)
+            unsafe = self._document("Flair 15ml.pdf").to_dict() | {"id": "../outside"}
+            (records / "unsafe.json").write_text(json.dumps(unsafe), encoding="utf-8")
+            (pipeline_root / "evidence").mkdir()
+            escaped = pipeline_root / "outside/inspection.json"
+            escaped.parent.mkdir()
+            escaped.write_text(json.dumps({
+                "schema_version": 1,
+                "document_id": "../outside",
+                "source_sha256": unsafe["sha256"],
+                "candidates": [],
+            }), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "document id"):
+                reconcile_pending_documents(pipeline_root)
+
+    def test_reconcile_rejects_evidence_symlink_escape(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory)
+            rules_path = pipeline_root / "reconciliation/identity-rules.json"
+            rules_path.parent.mkdir(parents=True)
+            rules_path.write_bytes(RULES_PATH.read_bytes())
+            document = self._document("Flair 15ml.pdf")
+            write_record(pipeline_root, "documents", document)
+            outside = pipeline_root / "outside-evidence"
+            outside.mkdir()
+            (outside / "inspection.json").write_text(json.dumps({
+                "schema_version": 1,
+                "document_id": document.id,
+                "source_sha256": document.sha256,
+                "candidates": [],
+            }), encoding="utf-8")
+            evidence = pipeline_root / "evidence"
+            evidence.mkdir()
+            (evidence / document.id).symlink_to(outside, target_is_directory=True)
+
+            with self.assertRaisesRegex(ValueError, "inspection path"):
+                reconcile_pending_documents(pipeline_root)
+
+    def test_reconcile_rejects_contract_directory_symlink_escape(self):
+        with tempfile.TemporaryDirectory() as directory:
+            pipeline_root = Path(directory)
+            rules_path = pipeline_root / "reconciliation/identity-rules.json"
+            rules_path.parent.mkdir(parents=True)
+            rules_path.write_bytes(RULES_PATH.read_bytes())
+            document = self._document("Flair 15ml.pdf")
+            write_record(pipeline_root, "documents", document)
+            inspection = pipeline_root / "evidence" / document.id / "inspection.json"
+            inspection.parent.mkdir(parents=True)
+            inspection.write_text(json.dumps({
+                "schema_version": 1,
+                "document_id": document.id,
+                "source_sha256": document.sha256,
+                "candidates": [],
+            }), encoding="utf-8")
+            contracts = pipeline_root / "contracts"
+            contracts.mkdir()
+            outside = pipeline_root / "outside-contracts"
+            outside.mkdir()
+            (contracts / "bottles").symlink_to(outside, target_is_directory=True)
+
+            with self.assertRaisesRegex(ValueError, "contract directory"):
+                reconcile_pending_documents(pipeline_root)
+            self.assertEqual(list(outside.glob("*.json")), [])
 
 
 if __name__ == "__main__":

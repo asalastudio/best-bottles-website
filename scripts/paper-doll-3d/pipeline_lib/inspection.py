@@ -15,6 +15,7 @@ from typing import Callable
 
 from .measurements import extract_measurement_candidates
 from .models import SCHEMA_VERSION, DocumentRecord
+from .paths import resolve_descendant, safe_record_id
 from .store import atomic_write_json, iter_records, write_record
 
 
@@ -66,39 +67,25 @@ def _canonical_source(document: DocumentRecord, pipeline_root: Path) -> Path:
     if relative_path.is_absolute():
         raise ValueError("document canonical_path must be relative")
     root = pipeline_root.resolve()
-    source = (root / relative_path).resolve()
-    if source == root or root not in source.parents:
-        raise ValueError("document canonical_path escapes pipeline root")
+    source = resolve_descendant(root, root / relative_path, "document canonical_path")
     if not source.is_file():
         raise FileNotFoundError(source)
     return source
 
 
-def _safe_document_id(document_id: object) -> str:
-    if not isinstance(document_id, str) or not document_id or not document_id.isascii():
-        raise ValueError(f"invalid document id: {document_id!r}")
-    if not all(character.isalnum() or character in "_-" for character in document_id):
-        raise ValueError(f"invalid document id: {document_id!r}")
-    return document_id
-
-
 def _evidence_destination(document: DocumentRecord, pipeline_root: Path) -> tuple[Path, Path]:
-    document_id = _safe_document_id(document.id)
+    document_id = safe_record_id(document.id, "document id")
     root = pipeline_root.resolve()
     configured_root = root / "evidence"
     configured_root.mkdir(parents=True, exist_ok=True)
-    evidence_root = configured_root.resolve()
-    if evidence_root == root or root not in evidence_root.parents:
-        raise ValueError("evidence root escapes pipeline root")
+    evidence_root = resolve_descendant(root, configured_root, "evidence root")
 
     destination = evidence_root / document_id
     if destination.is_symlink():
         raise ValueError("evidence destination must not be a symlink")
     if destination.exists() and not destination.is_dir():
         raise ValueError("evidence destination must be a directory")
-    resolved_destination = destination.resolve()
-    if resolved_destination == evidence_root or evidence_root not in resolved_destination.parents:
-        raise ValueError("evidence destination escapes evidence root")
+    resolve_descendant(evidence_root, destination, "evidence destination")
     return evidence_root, destination
 
 

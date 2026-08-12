@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any
 
 from .models import SCHEMA_VERSION
+from .paths import safe_record_id
 
 
 RECORD_DIRECTORIES = {
@@ -27,11 +28,7 @@ def _record_directory(root: Path, kind: str) -> Path:
 
 
 def _record_path(directory: Path, record_id: object) -> Path:
-    if not isinstance(record_id, str) or not record_id or not record_id.isascii():
-        raise ValueError(f"invalid record id: {record_id!r}")
-    if not all(character.isalnum() or character in "_-" for character in record_id):
-        raise ValueError(f"invalid record id: {record_id!r}")
-    return directory / f"{record_id}.json"
+    return directory / f"{safe_record_id(record_id)}.json"
 
 
 def _record_value(record: object) -> dict[str, Any]:
