@@ -7,6 +7,8 @@ from collections.abc import Iterator
 from pathlib import Path
 from typing import Any
 
+from .models import SCHEMA_VERSION
+
 
 RECORD_DIRECTORIES = {
     "documents": Path("pipeline/paper-doll-3d/documents/records"),
@@ -22,6 +24,23 @@ def _record_directory(root: Path, kind: str) -> Path:
         return root / RECORD_DIRECTORIES[kind]
     except KeyError as error:
         raise ValueError(f"unknown record kind: {kind!r}") from error
+
+
+def _record_path(directory: Path, record_id: object) -> Path:
+    if not isinstance(record_id, str) or not record_id or not record_id.isascii():
+        raise ValueError(f"invalid record id: {record_id!r}")
+    if not all(character.isalnum() or character in "_-" for character in record_id):
+        raise ValueError(f"invalid record id: {record_id!r}")
+    return directory / f"{record_id}.json"
+
+
+def _record_value(record: object) -> dict[str, Any]:
+    value = getattr(record, "to_dict")()
+    if not isinstance(value, dict):
+        raise ValueError("record must serialize to a dictionary")
+    if type(value.get("schema_version")) is not int or value["schema_version"] != SCHEMA_VERSION:
+        raise ValueError(f"unsupported schema version: {value.get('schema_version')!r}")
+    return value
 
 
 def atomic_write_json(path: Path, value: dict[str, Any]) -> None:
@@ -48,10 +67,8 @@ def atomic_write_json(path: Path, value: dict[str, Any]) -> None:
 def write_record(root: Path, kind: str, record: object) -> Path:
     """Persist a record under its fixed kind directory and return its path."""
     directory = _record_directory(root, kind)
-    record_id = getattr(record, "id")
-    value = getattr(record, "to_dict")()
-    path = directory / f"{record_id}.json"
-    atomic_write_json(path, value)
+    path = _record_path(directory, getattr(record, "id"))
+    atomic_write_json(path, _record_value(record))
     return path
 
 
