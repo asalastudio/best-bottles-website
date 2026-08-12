@@ -2,7 +2,9 @@
 
 **Date:** 2026-08-11
 
-**Status:** Approved design
+**Status:** Revised approved design
+
+**Revision:** 2 — adversarial audit corrections
 
 **Scope:** Best Bottles paper-doll bottle, neck-finish, fitment, component,
 closure, assembly, studio, and catalog-asset production
@@ -15,9 +17,11 @@ manufacturer documents in:
 `/Users/jordanrichter/Desktop/Best Bottles/Demo-Abbas/Spec Sheets`
 
 and ends with approved, traceable paper-doll assets. The Desktop folder is the
-incoming source. The repository holds the immutable, fingerprinted canonical
-document library and every downstream contract, approval, protected master,
-render, QA result, and asset-ledger record.
+incoming source. Git holds the immutable, fingerprinted canonical source
+documents, contracts, approvals, manifests, and artifact records. Protected
+Blender masters and production renders live in a content-addressed artifact
+backend with verified backup copies; Git stores their hashes, URIs, producing
+environment, and approval provenance.
 
 The loop must support bottles and the complete dimensional assembly around
 them: neck finishes, fitments, components, closures, and verified combinations.
@@ -40,9 +44,14 @@ stages.
    closures, and cameras reference it without reshaping it.
 7. A product is an assembly, not merely a bottle.
 8. Unsupported combinations are blocked rather than inferred.
-9. Every stage is idempotent and resumable from content hashes and recorded
-   state.
+9. Every stage is idempotent and resumable from content hashes, explicit
+   dependency records, and entity-specific state.
 10. Existing approved scenes and deliverables are never overwritten.
+11. A Blender assembly can prove visual and dimensional relationships; it
+    cannot by itself certify manufacturing fit, sealing, retention, or
+    production performance.
+12. Asset generation follows the live product/role matrix, not an unrestricted
+    Cartesian product of every bottle, material, fitment, closure, and view.
 
 ## 3. Source authority
 
@@ -128,17 +137,21 @@ It records:
 - permitted material and finish combinations;
 - compatibility status and evidence.
 
-Compatibility states are:
+Compatibility evidence levels are:
 
-- `documented`
-- `dimensionally_verified`
-- `physically_verified`
-- `provisional`
+- `manufacturer_documented`
+- `visual_fit_verified`
+- `dimensional_fit_verified`
+- `sample_fit_verified`
+- `production_verified`
 - `incompatible`
 - `unknown`
 
-Only documented, dimensionally verified, physically verified, or explicitly
-approved provisional assemblies may produce catalog-ready assets.
+An assembly may produce a review render after visual-fit approval. A
+catalog-ready visual requires dimensional-fit approval or an explicit approved
+exception. Claims about interference fit, sealing, retention, or production
+performance require manufacturer documentation, sample testing, or production
+verification. A Blender result never promotes itself to physical verification.
 
 ### 4.6 Geometry cohort
 
@@ -224,28 +237,75 @@ measurement.
 Catalog identity reconciliation may read canonical product truth but does not
 mutate live catalog data during document or geometry processing.
 
-## 8. Pipeline state machine
+## 8. Entity lifecycles and dependency graph
 
-Each record moves through explicit states:
+A single flat state machine cannot describe documents, contracts, geometry,
+assemblies, studio presets, and assets. Each entity has its own lifecycle:
+
+**Document**
 
 - `discovered`
 - `archived`
 - `extracted`
-- `needs_reconciliation`
-- `spec_ready`
-- `spec_approved`
-- `clay_ready`
-- `geometry_approved`
-- `master_locked`
-- `variants_ready`
-- `qa_passed`
-- `publish_ready`
+- `reconciled`
+- `superseded`
 - `blocked`
 
-Approvals are separate immutable records containing the reviewed artifact hash,
-reviewer, timestamp, and notes. If an approved upstream contract changes, the
-loop invalidates downstream approvals and outputs without deleting their prior
-versions.
+**Dimensional contract**
+
+- `draft`
+- `needs_review`
+- `approved`
+- `superseded`
+- `blocked`
+
+**Geometry master**
+
+- `unbuilt`
+- `working`
+- `clay_ready`
+- `approved`
+- `protected`
+- `invalidated`
+- `blocked`
+
+**Assembly**
+
+- `draft`
+- `visual_fit_verified`
+- `dimensional_fit_verified`
+- `sample_fit_verified`
+- `production_verified`
+- `rejected`
+- `blocked`
+
+**Studio architecture or preset**
+
+- `draft`
+- `calibration_ready`
+- `approved`
+- `protected`
+- `superseded`
+- `blocked`
+
+**Asset job**
+
+- `queued`
+- `rendering`
+- `qa_failed`
+- `review_ready`
+- `approved`
+- `publish_ready`
+- `superseded`
+- `blocked`
+
+Explicit dependency edges connect these records. A contract revision invalidates
+dependent geometry, assemblies, and assets; a studio-preset revision invalidates
+only dependent renders, not geometry. Prior versions remain intact.
+
+Approvals are separate immutable records containing the reviewed entity type,
+artifact hash, named reviewer, timestamp, decision, and notes. A changed input
+never inherits an approval from an older hash.
 
 ## 9. Review packets and human gates
 
@@ -303,6 +363,14 @@ The fixed template owns:
 - inspection workspaces;
 - visibility and linking rules.
 
+The template is selected through a calibration review, not by automatically
+promoting the newest existing scene. The comparison set includes the approved
+9 ml cylinder in clay, clear, cobalt, amber, and frosted glass plus one mixed
+plastic/metal component assembly. Calibration compares the current bone,
+interactive, luxury, and correction rigs under the same framing and render
+recipe. AgX is the photographic color-management baseline unless the
+calibration review explicitly records another approved transform.
+
 The template is fixed but not rigid. Versioned presets may adjust:
 
 - light and scrim position, rotation, size, power, and softness;
@@ -335,9 +403,18 @@ Saved workspaces must include:
 Lighting or background experiments create new preset versions. They never
 overwrite the protected template or an approved production preset.
 
+## 10.1 Studio contracts
+
+The protected studio architecture and every preset are machine-readable
+contracts. They record object transforms, source sizes, energies, colors,
+visibility, camera settings, render engine, Blender version, color management,
+and the product-envelope formula. Light placement may be expressed in bottle
+height/diameter ratios, but the physical backdrop and product geometry are not
+scaled to manufacture a match.
+
 ## 11. Executable stages
 
-One orchestrator controls specialized stages:
+One thin orchestrator dispatches specialized stages:
 
 ```bash
 python3 scripts/paper-doll-3d/pipeline.py run
@@ -366,6 +443,24 @@ pipeline.py status
 approval gate, documented conflict, missing dependency, failed audit, or
 `publish_ready`. It concludes with a summary of complete, waiting, blocked,
 failed, and ready records.
+
+The CLI contains no document parsing, contract logic, Blender building, or QA
+logic. Those responsibilities live in separate modules under
+`scripts/paper-doll-3d/pipeline_lib/`:
+
+- `intake.py`
+- `extraction.py`
+- `reconciliation.py`
+- `contracts.py`
+- `approvals.py`
+- `dependencies.py`
+- `geometry.py`
+- `blender_runner.py`
+- `studio.py`
+- `assemblies.py`
+- `asset_jobs.py`
+- `qa.py`
+- `ledger.py`
 
 ### 11.1 Intake
 
@@ -406,12 +501,17 @@ Unapproved combinations remain blocked.
 
 ### 11.7 Asset generation and QA
 
-Render approved bare parts and assemblies across permitted materials, finishes,
-colors, catalog roles, and diagnostic views. Automated QA checks dimensions,
-fingerprints, topology, normals, materials, camera/background consistency,
-output completeness, canvas requirements, naming, and identity alignment.
-Visual approval remains required for silhouette, fit, glass realism, and
-luxury-photography quality.
+Compile an explicit asset-job matrix from live catalog variants, required
+website roles, approved merchandising priorities, and requested diagnostics.
+Do not render an unrestricted product of every part and material. Each job
+records its reason, role, priority, estimated render cost, and complete input
+hash set.
+
+Render approved bare parts and assemblies across only the permitted jobs.
+Automated QA checks dimensions, fingerprints, topology, normals, materials,
+camera/background consistency, output completeness, canvas requirements,
+naming, and identity alignment. Visual approval remains required for
+silhouette, fit, glass realism, and luxury-photography quality.
 
 ### 11.8 Asset ledger
 
@@ -422,14 +522,20 @@ render fingerprint, approval provenance, readiness, and blockers. Madison
 Studio, Convex, Shopify, or the website pipeline may later consume the same
 ledger.
 
-## 12. Repository layout
+## 12. Records, indexes, and repository layout
+
+Source-controlled data uses one versioned JSON record per entity with an
+explicit `schema_version`. Monolithic mutable registry or ledger files are not
+the source of truth. A derived SQLite index provides fast status, dependency,
+and dashboard queries; it is rebuilt from the JSON records and is never the
+only copy of an approval or contract.
 
 ```text
 pipeline/paper-doll-3d/
 ├── documents/
 │   ├── originals/
 │   ├── rendered-pages/
-│   └── registry.json
+│   └── records/
 ├── evidence/
 │   └── <document-id>/
 ├── contracts/
@@ -451,11 +557,56 @@ pipeline/paper-doll-3d/
 │   ├── working/
 │   └── protected/
 ├── renders/
-└── asset-ledger.json
+├── assets/
+│   └── records/
+└── indexes/
+    └── pipeline.sqlite
 ```
 
-Large generated Blender and render artifacts continue to follow the existing
-repository storage policy; the ledger always contains their hashes and paths.
+The SQLite index and rendered evidence pages are derived outputs. The canonical
+source PDFs are small enough to be versioned with the contracts. Large Blender
+and render binaries remain outside Git and are addressed through artifact
+records.
+
+## 12.1 Artifact protection
+
+A protected-master record contains:
+
+- content SHA-256;
+- primary artifact URI;
+- verified mirror/backup URI;
+- byte size and media type;
+- Blender version and platform;
+- producing contract, builder, and studio hashes;
+- approval record;
+- last successful integrity check.
+
+A local `.blend` file is a working artifact, not a protected master. Promotion
+to `protected` succeeds only after the primary and backup copies both match the
+recorded hash. The artifact backend is adapter-based so the initial filesystem
+workflow can later use object storage or approved shared storage without
+changing contract IDs.
+
+## 12.2 Fingerprint definitions
+
+Use separate fingerprints for:
+
+- source document content;
+- dimensional contract content;
+- canonical source-mesh topology and quantized millimeter coordinates;
+- evaluated render mesh;
+- finish/thread signature;
+- assembly-transform contract;
+- studio architecture;
+- lighting/background preset;
+- render recipe and software environment;
+- final binary output.
+
+A raw `.blend` hash proves binary identity, not geometry identity. Render-cache
+keys include Blender/Cycles version, device class, samples, color management,
+and every geometry/material/studio input. Cross-hardware visual QA uses approved
+tolerances or perceptual comparisons rather than assuming pixel-identical GPU
+renders.
 
 ## 13. Failure, resume, and safety behavior
 
@@ -467,6 +618,8 @@ repository storage policy; the ledger always contains their hashes and paths.
 - Retrying never deletes a previous approved artifact.
 - Existing locked/approved scenes are read-only inputs.
 - Drafts and experiments remain under `working/`.
+- No scene is called protected until its artifact record has two hash-verified
+  copies.
 - No live catalog or website mutation occurs in the initial implementation.
 
 ## 14. Testing strategy
@@ -477,7 +630,7 @@ repository storage policy; the ledger always contains their hashes and paths.
 - SHA-256 duplicate/revision detection;
 - unit and tolerance normalization;
 - source-provenance validation;
-- state-transition legality;
+- entity-lifecycle and dependency-transition legality;
 - approval invalidation;
 - compatibility-matrix decisions;
 - deterministic output naming.
@@ -499,7 +652,11 @@ repository storage policy; the ledger always contains their hashes and paths.
 - assembly insertion and engagement audits;
 - studio-template and preset separation;
 - camera framing without product scaling;
-- deterministic renders at test settings.
+- deterministic job manifests and bounded render comparisons at test settings.
+
+Fast unit and fixture tests run without Blender. Blender integration tests run
+as a separate tier pinned to Blender 5.2 LTS. Full GPU renders are release or
+local-production gates, not requirements for every lightweight test run.
 
 ### 14.4 End-to-end dry run
 
@@ -512,16 +669,34 @@ The first implementation tranche stops before new broad Blender production:
 
 1. Create schemas, registry, state store, approval records, issue records, and
    CLI scaffolding.
-2. Intake and fingerprint the 19 existing Desktop PDFs.
+2. Intake and fingerprint the 18 existing Desktop PDFs. Reconcile the one
+   additional repository PDF as a duplicate, alternate revision, or separate
+   source record.
 3. Render all pages and create document evidence packets.
 4. Reconcile documents to the current drawing-coverage and product identities.
-5. Create draft bottle, finish, fitment, component, and assembly contracts.
-6. Migrate the already built bottle cohorts and 17-415 parts as legacy-approved
-   references without modifying or rebuilding their geometry.
+5. Create source-backed bottle and finish contracts. Create blocked placeholder
+   records for fitments, components, closures, or assemblies that lack adequate
+   documentation rather than inventing complete contracts.
+6. Migrate existing scenes without modifying or rebuilding geometry while
+   preserving their actual status: `approved`, `converted_unreviewed`,
+   `provisional`, `extrapolated`, `experimental`, or `superseded`. The Circle
+   15 ml and Circle 100 ml scenes remain extrapolated until drawings and clay
+   approvals exist.
 7. Report drawings ready for specification review, missing dimensions,
    unresolved product matches, existing masters, and missing components.
-8. Consolidate and review the protected studio template before connecting new
-   product contracts to catalog rendering.
+8. Calibrate, compare, and approve the protected studio template before
+   connecting new product contracts to catalog rendering.
+
+The first complete-loop pilot uses three deliberately different cases:
+
+1. **9 ml cylinder:** regression and migration of the approved thread work.
+2. **Elegant 15 ml:** first new drawing-to-geometry family.
+3. **17-415 roller assembly:** proves component/assembly records and correctly
+   blocks physical-fit claims that lack manufacturer or sample evidence.
+
+All 18 documents enter intake immediately, but broad geometry production waits
+until these three paths prove document provenance, blocking behavior, clay
+approval, artifact protection, studio calibration, and resumability.
 
 After the foundation passes, implementation proceeds through geometry
 compilation, clay approval, protected master promotion, assembly QA, asset
@@ -536,9 +711,13 @@ The loop is complete when:
 - bottles, finishes, fitments, components, closures, and assemblies have
   separate contracts and compatibility records;
 - the existing approved geometry is migrated without mutation;
+- migrated provisional, extrapolated, or experimental scenes retain those
+  statuses and cannot inherit approval;
 - one protected studio architecture supports versioned flexible presets;
 - clay, assembly, and final QA gates block unapproved promotion;
 - a rerun resumes cleanly and does not duplicate work;
+- protected masters have two hash-verified artifact copies;
+- the asset-job matrix produces only required live catalog and diagnostic roles;
 - approved assets are registered in a validated ledger ready for publishing
   integration;
 - unresolved truth, compatibility, or quality problems remain visible blockers
