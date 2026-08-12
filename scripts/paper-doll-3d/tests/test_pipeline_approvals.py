@@ -12,7 +12,7 @@ from pipeline_lib.approvals import (
     create_approval,
     has_valid_approval,
 )
-from pipeline_lib.dependencies import EDGE_TYPES, invalidate_dependents
+from pipeline_lib.dependencies import EDGE_TYPES, entity_kind, invalidate_dependents
 from pipeline_lib.models import DependencyRecord
 
 
@@ -227,6 +227,39 @@ class PipelineApprovalTests(unittest.TestCase):
                 "studio_1", HASH_B, (edge,),
                 self._records(studio_1="studio_preset", geometry_1="geometry"),
             )
+
+    def test_explicit_geometry_cannot_masquerade_as_artifact(self):
+        edge = self._edge("studio_1", "geometry_1", "uses_studio", HASH_A)
+        records = self._records(studio_1="studio_preset")
+        records["geometry_1"] = {
+            "id": "geometry_1",
+            "entity_type": "geometry",
+            "sha256": HASH_A,
+            "primary_uri": "assets/geometry.blend",
+            "mirror_uri": "mirrors/geometry.blend",
+            "status": "candidate",
+        }
+
+        with self.assertRaises(ValueError):
+            entity_kind(records["geometry_1"])
+        with self.assertRaises(ValueError):
+            invalidate_dependents("studio_1", HASH_B, (edge,), records)
+
+    def test_structurally_inferred_artifact_remains_a_valid_studio_target(self):
+        edge = self._edge("studio_1", "artifact_1", "uses_studio", HASH_A)
+        records = self._records(studio_1="studio_preset")
+        records["artifact_1"] = {
+            "id": "artifact_1",
+            "sha256": HASH_A,
+            "primary_uri": "assets/render.png",
+            "mirror_uri": "mirrors/render.png",
+            "status": "candidate",
+        }
+
+        self.assertEqual(
+            invalidate_dependents("studio_1", HASH_B, (edge,), records),
+            ("artifact_1",),
+        )
 
     def test_studio_edge_with_unknown_endpoint_kind_fails_closed(self):
         edge = self._edge("studio_1", "mystery_1", "uses_studio", HASH_A)

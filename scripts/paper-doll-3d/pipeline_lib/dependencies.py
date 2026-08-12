@@ -99,20 +99,55 @@ def entity_kind(record: object) -> str:
     if isinstance(record, str):
         kind = record
     elif isinstance(record, Mapping):
-        if {
-            "sha256", "primary_uri", "mirror_uri", "status",
-        }.issubset(record):
-            kind = "artifact"
-        elif {"contract_type", "document_ids", "dimensions"}.issubset(record):
-            kind = "contract"
+        explicit_kinds = [
+            record[field] for field in ("entity_type", "kind") if field in record
+        ]
+        for explicit_kind in explicit_kinds:
+            if (
+                not isinstance(explicit_kind, str)
+                or explicit_kind not in ENTITY_KINDS
+            ):
+                raise ValueError(
+                    f"unknown explicit dependency entity kind: {explicit_kind!r}"
+                )
+
+        inferred_kinds = set()
+        if {"sha256", "primary_uri", "mirror_uri", "status"}.issubset(record):
+            inferred_kinds.add("artifact")
+        if {"contract_type", "document_ids", "dimensions"}.issubset(record):
+            inferred_kinds.add("contract")
+        if len(inferred_kinds) > 1:
+            raise ValueError(
+                f"conflicting structural entity kinds: {inferred_kinds!r}"
+            )
+
+        if explicit_kinds:
+            kind = explicit_kinds[0]
+            for other_kind in explicit_kinds[1:]:
+                if not _compatible_entity_kinds(kind, other_kind):
+                    raise ValueError(
+                        f"conflicting explicit entity kinds: {explicit_kinds!r}"
+                    )
+            for inferred_kind in inferred_kinds:
+                if not _compatible_entity_kinds(kind, inferred_kind):
+                    raise ValueError(
+                        "explicit entity kind conflicts with structural type: "
+                        f"{kind!r} != {inferred_kind!r}"
+                    )
+        elif inferred_kinds:
+            kind = next(iter(inferred_kinds))
         else:
-            kind = record.get("entity_type", record.get("kind"))
+            kind = None
     else:
         kind = getattr(record, "entity_type", getattr(record, "kind", None))
 
     if not isinstance(kind, str) or kind not in ENTITY_KINDS:
         raise ValueError(f"unknown dependency entity kind: {kind!r}")
     return kind
+
+
+def _compatible_entity_kinds(first: str, second: str) -> bool:
+    return first == second or {first, second}.issubset(ASSET_ENTITY_KINDS)
 
 
 def validate_dependency_edge(
@@ -123,7 +158,9 @@ def validate_dependency_edge(
         source = records[edge.source_id]
         target = records[edge.target_id]
     except KeyError as error:
-        raise ValueError(f"dependency endpoint has no record: {error.args[0]!r}") from error
+        raise ValueError(
+            f"dependency endpoint has no record: {error.args[0]!r}"
+        ) from error
 
     source_kind = entity_kind(source)
     target_kind = entity_kind(target)
