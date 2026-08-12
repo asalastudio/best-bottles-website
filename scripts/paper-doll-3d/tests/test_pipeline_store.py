@@ -31,6 +31,7 @@ class RecordStoreTests(unittest.TestCase):
             second = write_record(root, "documents", record)
 
             self.assertEqual(first, second)
+            self.assertEqual(first, root / "documents/records/doc_abc.json")
             self.assertEqual(second.read_bytes(), before)
             self.assertEqual(list(second.parent.glob("*.tmp")), [])
 

@@ -77,11 +77,9 @@ def _with_observation(record: DocumentRecord, path: Path) -> DocumentRecord:
 
 
 def _archive_source(source: Path, destination: Path, expected_hash: str) -> None:
-    """Copy a source into the archive, verifying before its atomic replacement."""
+    """Copy a source into the archive, repairing missing or corrupt targets atomically."""
     destination.parent.mkdir(parents=True, exist_ok=True)
-    if destination.exists():
-        if sha256_file(destination) != expected_hash:
-            raise RuntimeError(f"canonical archive hash mismatch: {destination}")
+    if destination.exists() and sha256_file(destination) == expected_hash:
         return
 
     temporary_path: Path | None = None
@@ -97,11 +95,7 @@ def _archive_source(source: Path, destination: Path, expected_hash: str) -> None
 
         if sha256_file(temporary_path) != expected_hash:
             raise RuntimeError(f"source changed while archiving: {source}")
-        if destination.exists():
-            if sha256_file(destination) != expected_hash:
-                raise RuntimeError(f"canonical archive hash mismatch: {destination}")
-        else:
-            os.replace(temporary_path, destination)
+        os.replace(temporary_path, destination)
     finally:
         if temporary_path is not None:
             temporary_path.unlink(missing_ok=True)
@@ -142,12 +136,16 @@ def intake_documents(source_dir: Path, pipeline_root: Path) -> IntakeReport:
     for source in discovered:
         sha256 = sha256_file(source)
         record = records.get(sha256)
-        if record is None:
-            conflicts = tuple(
-                previous for previous in records.values()
-                if source.name in previous.observed_names and previous.sha256 != sha256
+        observed_path = str(source)
+        conflicts = tuple(
+            previous for previous in records.values()
+            if previous.sha256 != sha256 and (
+                source.name in previous.observed_names
+                or observed_path in previous.observed_paths
             )
-            _archive_source(source, pipeline_root / _canonical_path(sha256), sha256)
+        )
+        _archive_source(source, pipeline_root / _canonical_path(sha256), sha256)
+        if record is None:
             record = DocumentRecord(
                 id=f"doc_{sha256[:16]}",
                 sha256=sha256,
@@ -158,14 +156,15 @@ def intake_documents(source_dir: Path, pipeline_root: Path) -> IntakeReport:
             )
             records[sha256] = record
             new += 1
-            for previous in conflicts:
-                issue = _revision_issue(previous, source.name, sha256)
-                if issue.id not in seen_issue_ids:
-                    issues.append(issue)
-                    seen_issue_ids.add(issue.id)
-                    write_record(pipeline_root, "issues", issue)
         else:
             duplicate += 1
+
+        for previous in conflicts:
+            issue = _revision_issue(previous, source.name, sha256)
+            if issue.id not in seen_issue_ids:
+                issues.append(issue)
+                seen_issue_ids.add(issue.id)
+                write_record(pipeline_root, "issues", issue)
 
         observed = _with_observation(record, source)
         if observed != record:

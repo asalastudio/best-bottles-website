@@ -11,11 +11,11 @@ from .models import SCHEMA_VERSION
 
 
 RECORD_DIRECTORIES = {
-    "documents": Path("pipeline/paper-doll-3d/documents/records"),
-    "approvals": Path("pipeline/paper-doll-3d/approvals/records"),
-    "dependencies": Path("pipeline/paper-doll-3d/dependencies/records"),
-    "issues": Path("pipeline/paper-doll-3d/issues/records"),
-    "artifacts": Path("pipeline/paper-doll-3d/artifacts/records"),
+    "documents": Path("documents/records"),
+    "approvals": Path("approvals/records"),
+    "dependencies": Path("dependencies/records"),
+    "issues": Path("issues/records"),
+    "artifacts": Path("artifacts/records"),
 }
 
 

@@ -63,6 +63,28 @@ class PipelineIntakeTests(unittest.TestCase):
             self.assertEqual(rerun.duplicate, 3)
             self.assertEqual(list((pipeline_root / "documents/originals").glob("*.tmp")), [])
 
+    def test_rerun_repairs_missing_or_corrupt_canonical_content(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "manufacturer"
+            pipeline_root = root / "pipeline-root"
+            source.mkdir()
+            content = b"canonical drawing"
+            source_file = source / "Blue.pdf"
+            source_file.write_bytes(content)
+            intake_documents(source, pipeline_root)
+            canonical = pipeline_root / "documents/originals" / f"{hashlib.sha256(content).hexdigest()}.pdf"
+
+            canonical.unlink()
+            missing_repair = intake_documents(source, pipeline_root)
+            self.assertEqual(missing_repair.new, 0)
+            self.assertEqual(canonical.read_bytes(), content)
+
+            canonical.write_bytes(b"corrupt archive bytes")
+            corrupt_repair = intake_documents(source, pipeline_root)
+            self.assertEqual(corrupt_repair.new, 0)
+            self.assertEqual(canonical.read_bytes(), content)
+
     def test_changed_observed_filename_archives_a_revision_and_records_conflict(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -84,9 +106,31 @@ class PipelineIntakeTests(unittest.TestCase):
                 hashlib.sha256(b"first revision").hexdigest(),
                 hashlib.sha256(b"second revision").hexdigest(),
             })
-            issue_paths = list((pipeline_root / "pipeline/paper-doll-3d/issues/records").glob("*.json"))
+            issue_paths = list((pipeline_root / "issues/records").glob("*.json"))
             self.assertEqual(len(issue_paths), 1)
             self.assertIn("REVISION_CONFLICT", issue_paths[0].read_text(encoding="utf-8"))
+
+            repeated = intake_documents(source, pipeline_root)
+            self.assertEqual(repeated.revision_conflicts, 1)
+            self.assertEqual(len(list((pipeline_root / "issues/records").glob("*.json"))), 1)
+
+    def test_changed_name_conflicts_even_when_content_is_already_canonical(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            source = root / "manufacturer"
+            pipeline_root = root / "pipeline-root"
+            source.mkdir()
+            blue = source / "Blue.pdf"
+            blue.write_bytes(b"first revision")
+            (source / "Blue-revision.pdf").write_bytes(b"second revision")
+            intake_documents(source, pipeline_root)
+            blue.write_bytes(b"second revision")
+
+            report = intake_documents(source, pipeline_root)
+
+            self.assertEqual(report.new, 0)
+            self.assertEqual(report.revision_conflicts, 1)
+            self.assertEqual(len(list((pipeline_root / "issues/records").glob("*.json"))), 1)
 
     def test_mirror_audit_retains_aliases_and_reports_unknown_content(self):
         with tempfile.TemporaryDirectory() as directory:
