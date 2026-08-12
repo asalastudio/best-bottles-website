@@ -6,10 +6,12 @@ import re
 
 
 _MEASUREMENT = re.compile(
-    r"(?P<diameter>[Ø⌀])?\s*"
+    r"(?<![-−\d.])(?P<diameter>[Ø⌀])?\s*"
     r"(?P<value>\d+(?:\.\d+)?)\s*±\s*"
     r"(?P<tolerance>\d+(?:\.\d+)?)"
-    r"(?:\s*(?P<unit>mm|cm|in))?",
+    r"(?!\s*(?:mm|cm|in)[\d.A-Za-z])"
+    r"(?:\s*(?P<unit>mm|cm|in))?"
+    r"(?![\d.A-Za-z])",
     re.IGNORECASE,
 )
 
