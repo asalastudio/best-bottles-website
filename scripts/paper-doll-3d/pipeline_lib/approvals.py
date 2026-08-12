@@ -9,6 +9,7 @@ from .models import APPROVAL_DECISIONS, APPROVAL_SCOPES, ApprovalRecord
 
 
 _SHA256 = re.compile(r"[0-9a-f]{64}\Z")
+HUMAN_APPROVAL_REVIEWERS = frozenset({"Jordan Richter"})
 
 
 def _required_string(value: object, field_name: str) -> str:
@@ -20,6 +21,12 @@ def _required_string(value: object, field_name: str) -> str:
 def _artifact_hash(value: object) -> str:
     if not isinstance(value, str) or _SHA256.fullmatch(value) is None:
         raise ValueError("artifact_hash must be a lowercase SHA-256 hex digest")
+    return value
+
+
+def _human_reviewer(value: object) -> str:
+    if not isinstance(value, str) or value not in HUMAN_APPROVAL_REVIEWERS:
+        raise ValueError(f"reviewer is not authorized for human approval: {value!r}")
     return value
 
 
@@ -64,7 +71,7 @@ def create_approval(
     entity_id = _required_string(entity_id, "entity_id")
     scope = _approval_scope(scope)
     artifact_hash = _artifact_hash(artifact_hash)
-    reviewer = _required_string(reviewer, "reviewer")
+    reviewer = _human_reviewer(reviewer)
     decision = _decision(decision)
     if not isinstance(notes, str):
         raise ValueError("notes must be a string")
@@ -96,19 +103,26 @@ def has_valid_approval(
 
     matching: list[tuple[datetime, str, str]] = []
     for approval in approvals:
+        try:
+            approval_id = _required_string(approval.id, "approval id")
+            _required_string(approval.entity_type, "approval entity_type")
+            approval_entity_id = _required_string(
+                approval.entity_id, "approval entity_id"
+            )
+            approval_scope = _approval_scope(approval.scope)
+            approval_hash = _artifact_hash(approval.artifact_hash)
+            timestamp = _aware_timestamp(approval.decided_at)
+            _human_reviewer(approval.reviewer)
+            decision = _decision(approval.decision)
+        except (AttributeError, TypeError, ValueError):
+            continue
         if (
-            approval.entity_id != entity_id
-            or approval.scope != scope
-            or approval.artifact_hash != artifact_hash
+            approval_entity_id != entity_id
+            or approval_scope != scope
+            or approval_hash != artifact_hash
         ):
             continue
-        try:
-            timestamp = _aware_timestamp(approval.decided_at)
-            _artifact_hash(approval.artifact_hash)
-            decision = _decision(approval.decision)
-        except ValueError:
-            continue
-        matching.append((timestamp, approval.id, decision))
+        matching.append((timestamp, approval_id, decision))
 
     if not matching:
         return False
