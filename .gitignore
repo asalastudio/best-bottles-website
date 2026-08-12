@@ -137,3 +137,5 @@ creative/
 /pipeline/paper-doll-3d/**/*.glb
 /pipeline/paper-doll-3d/**/*.png
 /pipeline/paper-doll-3d/**/*.jpg
+/pipeline/paper-doll-3d/indexes/*.sqlite
+/pipeline/paper-doll-3d/indexes/*.sqlite-*
