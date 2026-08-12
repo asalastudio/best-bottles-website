@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_38b5a81513b84287",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-frosted.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "00e7af245a4b930d6feaf92c015073185ab2e5a774737d782212e5849c7f777a",
+  "size_bytes": 4943068,
+  "status": "experimental"
+}

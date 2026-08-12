@@ -1,0 +1,14 @@
+{
+  "contract_type": "fitment",
+  "dimensions": [],
+  "document_ids": [
+    "doc_503669c99d126c63"
+  ],
+  "geometry_authority": false,
+  "id": "contract_3da857e6ca0f6f66",
+  "schema_version": 1,
+  "sold_capacity_label": "30ml",
+  "sold_product_key": "elegant-30ml",
+  "source_capacity_label": "30ml",
+  "status": "blocked"
+}

@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "No explicit legacy status rule; imported without approval.",
+  "id": "artifact_664dfbefae39f173",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/builds/009--17-415-cobalt-tight-runouts.blend",
+  "reviewer_source": "legacy inventory default",
+  "schema_version": 1,
+  "sha256": "d87fcd720130d799ff77ba5dee7a2375f2c002306e86e0b196f93486b39a30b8",
+  "size_bytes": 2717224,
+  "status": "imported_unverified"
+}

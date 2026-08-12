@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_COMPONENT_DRAWING",
+  "entity_id": "contract_4c8d318662986507",
+  "id": "issue_866e6cc66a3ae60e",
+  "message": "No source-backed component drawing is available for sleek-50ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

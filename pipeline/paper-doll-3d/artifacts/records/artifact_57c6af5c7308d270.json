@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_57c6af5c7308d270",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-cobalt-correction-v1/009ml-cobalt-100.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "60089163879db4052820d9c52acf71f87e6f582ac2e6250555d544a9da3b9f91",
+  "size_bytes": 4944991,
+  "status": "experimental"
+}

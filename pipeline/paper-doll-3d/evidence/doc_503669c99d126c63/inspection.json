@@ -1,0 +1,80 @@
+{
+  "candidates": [],
+  "commands": [
+    [
+      "pdfinfo",
+      "-v"
+    ],
+    [
+      "pdftotext",
+      "-v"
+    ],
+    [
+      "pdftoppm",
+      "-v"
+    ],
+    [
+      "pdfinfo",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/503669c99d126c63db69208af065617dc02902ec087c2d280b21c242f63e7dc0.pdf"
+    ],
+    [
+      "pdftotext",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/503669c99d126c63db69208af065617dc02902ec087c2d280b21c242f63e7dc0.pdf",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/evidence/.doc_503669c99d126c63.staging-1678d_nl/extracted.txt"
+    ],
+    [
+      "pdftoppm",
+      "-png",
+      "-r",
+      "240",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "-singlefile",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/503669c99d126c63db69208af065617dc02902ec087c2d280b21c242f63e7dc0.pdf",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/evidence/.doc_503669c99d126c63.staging-1678d_nl/page-001"
+    ],
+    [
+      "pdftoppm",
+      "-png",
+      "-r",
+      "240",
+      "-f",
+      "2",
+      "-l",
+      "2",
+      "-singlefile",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/503669c99d126c63db69208af065617dc02902ec087c2d280b21c242f63e7dc0.pdf",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/evidence/.doc_503669c99d126c63.staging-1678d_nl/page-002"
+    ]
+  ],
+  "document_id": "doc_503669c99d126c63",
+  "page_count": 2,
+  "page_paths": [
+    "page-001.png",
+    "page-002.png"
+  ],
+  "pages": [
+    {
+      "candidate_count": 0,
+      "number": 1,
+      "path": "page-001.png"
+    },
+    {
+      "candidate_count": 0,
+      "number": 2,
+      "path": "page-002.png"
+    }
+  ],
+  "poppler_versions": {
+    "pdfinfo": "pdfinfo version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
+    "pdftoppm": "pdftoppm version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
+    "pdftotext": "pdftotext version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+  },
+  "schema_version": 1,
+  "source_path": "documents/originals/503669c99d126c63db69208af065617dc02902ec087c2d280b21c242f63e7dc0.pdf",
+  "source_sha256": "503669c99d126c63db69208af065617dc02902ec087c2d280b21c242f63e7dc0",
+  "text_sha256": "21e83d5f489d8fe575dd794001cd8d1acc1cfe94a76dbed79b764986817cf935",
+  "visual_review_required": false
+}

@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_1a477e476372751e"
+  ],
+  "geometry_authority": true,
+  "id": "contract_688ce171947a9fd1",
+  "schema_version": 1,
+  "sold_capacity_label": "9ml",
+  "sold_product_key": "cylinder-9ml",
+  "source_capacity_label": "10ml",
+  "status": "draft"
+}

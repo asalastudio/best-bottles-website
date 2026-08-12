@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_165f2f769f6ff9c5",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-shoulder-glass-upgrade/009ml-cobalt-shoulder-glass.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "1fdad580f1bdba227113b7326a7eeb6b302066a56120dfec5baee31377183cd7",
+  "size_bytes": 4930715,
+  "status": "experimental"
+}

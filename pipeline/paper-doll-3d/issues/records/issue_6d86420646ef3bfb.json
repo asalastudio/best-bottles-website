@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_COMPONENT_DRAWING",
+  "entity_id": "contract_af27e9fd86d6c468",
+  "id": "issue_6d86420646ef3bfb",
+  "message": "No source-backed component drawing is available for flair-15ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

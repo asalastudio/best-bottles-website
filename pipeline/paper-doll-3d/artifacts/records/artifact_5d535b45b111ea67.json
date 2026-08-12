@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "No explicit legacy status rule; imported without approval.",
+  "id": "artifact_5d535b45b111ea67",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/builds/009--17-415-cobalt-closer-shorter.blend",
+  "reviewer_source": "legacy inventory default",
+  "schema_version": 1,
+  "sha256": "8c83f459ce8c1d7c53d986accdf0a025b91c0fe9134d76f53b8a926a1a76b289",
+  "size_bytes": 2658716,
+  "status": "imported_unverified"
+}

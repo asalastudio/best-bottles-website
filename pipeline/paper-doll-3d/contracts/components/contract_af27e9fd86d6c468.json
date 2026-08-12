@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_c01a8e887435df89"
+  ],
+  "geometry_authority": false,
+  "id": "contract_af27e9fd86d6c468",
+  "schema_version": 1,
+  "sold_capacity_label": "15ml",
+  "sold_product_key": "flair-15ml",
+  "source_capacity_label": "15ml",
+  "status": "blocked"
+}

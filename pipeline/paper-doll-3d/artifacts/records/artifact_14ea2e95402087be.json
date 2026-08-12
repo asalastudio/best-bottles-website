@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "No explicit legacy status rule; imported without approval.",
+  "id": "artifact_14ea2e95402087be",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/builds/005--bare.blend",
+  "reviewer_source": "legacy inventory default",
+  "schema_version": 1,
+  "sha256": "7c4b0362bf16becd153f6df5234c396cccd2f5e75e41d3ecbe7f63ce0c1505a9",
+  "size_bytes": 1171952,
+  "status": "imported_unverified"
+}

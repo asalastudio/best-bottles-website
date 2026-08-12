@@ -1,0 +1,14 @@
+{
+  "contract_type": "fitment",
+  "dimensions": [],
+  "document_ids": [
+    "doc_34f72ebf3fdd45a7"
+  ],
+  "geometry_authority": false,
+  "id": "contract_37c2cbe8cb75496d",
+  "schema_version": 1,
+  "sold_capacity_label": "100ml",
+  "sold_product_key": "empire-100ml",
+  "source_capacity_label": "100ml",
+  "status": "blocked"
+}

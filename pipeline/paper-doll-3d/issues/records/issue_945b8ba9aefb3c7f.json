@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_FITMENT_DRAWING",
+  "entity_id": "contract_67e2034de13af331",
+  "id": "issue_945b8ba9aefb3c7f",
+  "message": "No source-backed fitment drawing is available for slim-100ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

@@ -1,0 +1,61 @@
+{
+  "candidates": [],
+  "commands": [
+    [
+      "pdfinfo",
+      "-v"
+    ],
+    [
+      "pdftotext",
+      "-v"
+    ],
+    [
+      "pdftoppm",
+      "-v"
+    ],
+    [
+      "pdfinfo",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/0cf9d90b2ea0d56fe04d26b14b984a52a1d45c1ce3afd1d364276a12ae05b477.pdf"
+    ],
+    [
+      "pdftotext",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/0cf9d90b2ea0d56fe04d26b14b984a52a1d45c1ce3afd1d364276a12ae05b477.pdf",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/evidence/.doc_0cf9d90b2ea0d56f.staging-48taupgb/extracted.txt"
+    ],
+    [
+      "pdftoppm",
+      "-png",
+      "-r",
+      "240",
+      "-f",
+      "1",
+      "-l",
+      "1",
+      "-singlefile",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/documents/originals/0cf9d90b2ea0d56fe04d26b14b984a52a1d45c1ce3afd1d364276a12ae05b477.pdf",
+      "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/.worktrees/paper-doll-intake-foundation/pipeline/paper-doll-3d/evidence/.doc_0cf9d90b2ea0d56f.staging-48taupgb/page-001"
+    ]
+  ],
+  "document_id": "doc_0cf9d90b2ea0d56f",
+  "page_count": 1,
+  "page_paths": [
+    "page-001.png"
+  ],
+  "pages": [
+    {
+      "candidate_count": 0,
+      "number": 1,
+      "path": "page-001.png"
+    }
+  ],
+  "poppler_versions": {
+    "pdfinfo": "pdfinfo version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
+    "pdftoppm": "pdftoppm version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC",
+    "pdftotext": "pdftotext version 26.03.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+  },
+  "schema_version": 1,
+  "source_path": "documents/originals/0cf9d90b2ea0d56fe04d26b14b984a52a1d45c1ce3afd1d364276a12ae05b477.pdf",
+  "source_sha256": "0cf9d90b2ea0d56fe04d26b14b984a52a1d45c1ce3afd1d364276a12ae05b477",
+  "text_sha256": "298ab89e94b81186417a4c15271159d7abaa5212c467eef217700b5f55f57c95",
+  "visual_review_required": false
+}

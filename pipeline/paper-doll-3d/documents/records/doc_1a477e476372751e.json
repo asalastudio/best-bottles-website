@@ -1,0 +1,15 @@
+{
+  "canonical_path": "documents/originals/1a477e476372751e4033f8ee9f8bd14e2e8d7616a530dcb4387c4cb5168de860.pdf",
+  "id": "doc_1a477e476372751e",
+  "observed_names": [
+    "GBCyl10mBlue (4).pdf",
+    "GBCyl10mlAmber (2).pdf"
+  ],
+  "observed_paths": [
+    "/Users/jordanrichter/Desktop/Best Bottles/Demo-Abbas/Spec Sheets/GBCyl10mBlue (4).pdf",
+    "/Users/jordanrichter/Desktop/Best Bottles/Demo-Abbas/Spec Sheets/GBCyl10mlAmber (2).pdf"
+  ],
+  "schema_version": 1,
+  "sha256": "1a477e476372751e4033f8ee9f8bd14e2e8d7616a530dcb4387c4cb5168de860",
+  "status": "inspected"
+}

@@ -1,0 +1,16 @@
+{
+  "approved_scopes": [
+    "finish_thread_geometry"
+  ],
+  "evidence_note": "Jordan-approved 17-415 finish/thread geometry only; no body, material, studio, assembly, or asset approval.",
+  "id": "artifact_40849c7974d14463",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/locked/five-variant-2026-08-11/010ml-swirl-17-415-THREAD-LOCKED-2026-08-11.blend",
+  "reviewer_source": "docs/superpowers/specs/2026-08-11-five-variant-cylinder-glass-swirl-design.md",
+  "schema_version": 1,
+  "sha256": "b621b9adf8e890f29f359bd46ea92c3b6f888d65e161e10fa77170e08decad19",
+  "size_bytes": 7669139,
+  "status": "approved"
+}

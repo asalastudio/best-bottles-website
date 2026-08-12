@@ -1,0 +1,14 @@
+{
+  "contract_type": "fitment",
+  "dimensions": [],
+  "document_ids": [
+    "doc_406d4d1ae58819b8"
+  ],
+  "geometry_authority": false,
+  "id": "contract_d9fc1ed2627f56a4",
+  "schema_version": 1,
+  "sold_capacity_label": "50ml",
+  "sold_product_key": "sleek-50ml",
+  "source_capacity_label": "50ml",
+  "status": "blocked"
+}

@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_e46b5542eacb6452",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-shoulder-glass-upgrade/009ml-amber-shoulder-glass.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "ae9389af29575765e8a20520379b513deecd718b5f2e90fec351d24f7d0af1a4",
+  "size_bytes": 4930701,
+  "status": "experimental"
+}

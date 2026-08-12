@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_3faa2112dfff604e",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/010ml-swirl-17-415-THREAD-APPROVED-2026-08-11.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "b621b9adf8e890f29f359bd46ea92c3b6f888d65e161e10fa77170e08decad19",
+  "size_bytes": 7669139,
+  "status": "experimental"
+}

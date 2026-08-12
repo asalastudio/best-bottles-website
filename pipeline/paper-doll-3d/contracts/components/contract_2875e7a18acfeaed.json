@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_e4b1a3c46de4d15d"
+  ],
+  "geometry_authority": false,
+  "id": "contract_2875e7a18acfeaed",
+  "schema_version": 1,
+  "sold_capacity_label": "50ml",
+  "sold_product_key": "empire-50ml",
+  "source_capacity_label": "50ml",
+  "status": "blocked"
+}

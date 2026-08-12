@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "No manufacturer drawing; extrapolated pending source evidence.",
+  "id": "artifact_1643823adda6a599",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/builds/circle100--bare.blend",
+  "reviewer_source": "docs/superpowers/specs/2026-08-11-paper-doll-document-to-asset-production-loop.md",
+  "schema_version": 1,
+  "sha256": "370705b7c3f37ac460ba977b40423c01b0fbbdcfcf9fb6f8ae8df3fd50224f1f",
+  "size_bytes": 1773050,
+  "status": "extrapolated"
+}

@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_FITMENT_DRAWING",
+  "entity_id": "contract_263c8b574414e730",
+  "id": "issue_e769d85cca7dd30e",
+  "message": "No source-backed fitment drawing is available for sleek-30ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_5eb6fb224cd0a52f"
+  ],
+  "geometry_authority": false,
+  "id": "contract_2fb7ef8d0266c945",
+  "schema_version": 1,
+  "sold_capacity_label": "100ml",
+  "sold_product_key": "slim-100ml",
+  "source_capacity_label": "100ml",
+  "status": "blocked"
+}

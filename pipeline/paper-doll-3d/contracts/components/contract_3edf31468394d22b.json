@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_c7ef0b88a0974d4f"
+  ],
+  "geometry_authority": false,
+  "id": "contract_3edf31468394d22b",
+  "schema_version": 1,
+  "sold_capacity_label": "9ml",
+  "sold_product_key": "tall-cylinder-9ml",
+  "source_capacity_label": "9ml",
+  "status": "blocked"
+}

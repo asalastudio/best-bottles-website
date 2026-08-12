@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_7cf8be9cc79b0a13"
+  ],
+  "geometry_authority": true,
+  "id": "contract_44e7f9b020f50aba",
+  "schema_version": 1,
+  "sold_capacity_label": "30ml",
+  "sold_product_key": "sleek-30ml",
+  "source_capacity_label": "30ml",
+  "status": "draft"
+}

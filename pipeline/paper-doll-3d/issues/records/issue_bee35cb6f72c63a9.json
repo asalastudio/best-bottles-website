@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_FITMENT_DRAWING",
+  "entity_id": "contract_69ba14166c1efe71",
+  "id": "issue_bee35cb6f72c63a9",
+  "message": "No source-backed fitment drawing is available for elegant-15ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

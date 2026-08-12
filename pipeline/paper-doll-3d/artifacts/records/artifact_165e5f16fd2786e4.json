@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_165e5f16fd2786e4",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/009--17-415-cobalt-TAN-INTERACTIVE-V4.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "d6b8380443cff5a3d2e4ddbb21d0fd06541edf95bf8fb036914a87dc64966937",
+  "size_bytes": 2661219,
+  "status": "experimental"
+}

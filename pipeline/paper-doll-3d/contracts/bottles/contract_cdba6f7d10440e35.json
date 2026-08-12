@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_e4b1a3c46de4d15d"
+  ],
+  "geometry_authority": true,
+  "id": "contract_cdba6f7d10440e35",
+  "schema_version": 1,
+  "sold_capacity_label": "50ml",
+  "sold_product_key": "empire-50ml",
+  "source_capacity_label": "50ml",
+  "status": "draft"
+}

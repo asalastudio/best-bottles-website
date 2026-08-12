@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_c01a8e887435df89"
+  ],
+  "geometry_authority": true,
+  "id": "contract_fb26cddfe090b096",
+  "schema_version": 1,
+  "sold_capacity_label": "15ml",
+  "sold_product_key": "flair-15ml",
+  "source_capacity_label": "15ml",
+  "status": "draft"
+}

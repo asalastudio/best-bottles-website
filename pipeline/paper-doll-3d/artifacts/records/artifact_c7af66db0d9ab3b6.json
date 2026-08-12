@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_c7af66db0d9ab3b6",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-shoulder-glass-upgrade/009ml-frosted-shoulder-glass.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "41a0c0b5a08decb898a8a4ce7fab402034f106f5fa6d493d8fbc0b3846183118",
+  "size_bytes": 4931190,
+  "status": "experimental"
+}

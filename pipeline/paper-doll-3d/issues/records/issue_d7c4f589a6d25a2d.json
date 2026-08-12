@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_COMPONENT_DRAWING",
+  "entity_id": "contract_4d35745e2fc11367",
+  "id": "issue_d7c4f589a6d25a2d",
+  "message": "No source-backed component drawing is available for cylinder-5ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

@@ -480,8 +480,10 @@ def _load_status_rules(pipeline_root: Path) -> dict[str, Any]:
     return value
 
 
-def inventory_pending_legacy_assets(pipeline_root: Path) -> LegacyReport:
-    """Inventory ``master`` and atomically persist strict artifact records."""
+def inventory_pending_legacy_assets(
+    pipeline_root: Path, *, master_root: Path | None = None,
+) -> LegacyReport:
+    """Inventory a read-only ``master`` and atomically persist strict records."""
     root = Path(pipeline_root).resolve()
     status_rules = _load_status_rules(root)
     artifact_directory = resolve_descendant(
@@ -489,7 +491,7 @@ def inventory_pending_legacy_assets(pipeline_root: Path) -> LegacyReport:
     )
     if artifact_directory.exists() and not artifact_directory.is_dir():
         raise ValueError("artifact record directory must be a directory")
-    master_root = root / "master"
+    master_root = root / "master" if master_root is None else Path(master_root)
     complete_scan = False
     try:
         before_scan = master_root.lstat()

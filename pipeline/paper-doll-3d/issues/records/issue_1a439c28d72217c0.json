@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_COMPONENT_DRAWING",
+  "entity_id": "contract_a795ae35737d3568",
+  "id": "issue_1a439c28d72217c0",
+  "message": "No source-backed component drawing is available for elegant-15ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

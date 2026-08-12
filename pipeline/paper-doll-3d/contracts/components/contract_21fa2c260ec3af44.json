@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_1a477e476372751e"
+  ],
+  "geometry_authority": false,
+  "id": "contract_21fa2c260ec3af44",
+  "schema_version": 1,
+  "sold_capacity_label": "9ml",
+  "sold_product_key": "cylinder-9ml",
+  "source_capacity_label": "10ml",
+  "status": "blocked"
+}

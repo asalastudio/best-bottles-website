@@ -1,0 +1,14 @@
+{
+  "contract_type": "fitment",
+  "dimensions": [],
+  "document_ids": [
+    "doc_f32faf669179ef56"
+  ],
+  "geometry_authority": false,
+  "id": "contract_f7fb60c3c0662f39",
+  "schema_version": 1,
+  "sold_capacity_label": "6ml",
+  "sold_product_key": "tulip-6ml",
+  "source_capacity_label": "6ml",
+  "status": "blocked"
+}

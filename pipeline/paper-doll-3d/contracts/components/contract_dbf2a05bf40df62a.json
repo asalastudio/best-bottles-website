@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_017d0432d80dc615"
+  ],
+  "geometry_authority": false,
+  "id": "contract_dbf2a05bf40df62a",
+  "schema_version": 1,
+  "sold_capacity_label": "30ml",
+  "sold_product_key": "circle-30ml",
+  "source_capacity_label": "30ml",
+  "status": "blocked"
+}

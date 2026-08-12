@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_f32faf669179ef56"
+  ],
+  "geometry_authority": true,
+  "id": "contract_6195968f682160a5",
+  "schema_version": 1,
+  "sold_capacity_label": "6ml",
+  "sold_product_key": "tulip-6ml",
+  "source_capacity_label": "6ml",
+  "status": "draft"
+}

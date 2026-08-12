@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_FITMENT_DRAWING",
+  "entity_id": "contract_d0a179c73128591d",
+  "id": "issue_ee98e6f133e748e2",
+  "message": "No source-backed fitment drawing is available for cylinder-5ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

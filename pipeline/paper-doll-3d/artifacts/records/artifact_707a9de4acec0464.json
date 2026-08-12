@@ -1,0 +1,14 @@
+{
+  "approved_scopes": [],
+  "evidence_note": "Working scene; experimental by location.",
+  "id": "artifact_707a9de4acec0464",
+  "kind": "legacy_scene",
+  "last_integrity_check": null,
+  "mirror_uri": "",
+  "primary_uri": "file:///Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/swirl-clay-comparison/010ml-swirl-clay-12flute.blend",
+  "reviewer_source": "legacy inventory path policy",
+  "schema_version": 1,
+  "sha256": "3703f972df841edbdd9077ed83dfc5bb0eaf2159bfe2d972088fa95ce9cebc70",
+  "size_bytes": 9226081,
+  "status": "experimental"
+}

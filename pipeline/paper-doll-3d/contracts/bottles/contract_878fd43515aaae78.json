@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_d200567329868854"
+  ],
+  "geometry_authority": false,
+  "id": "contract_878fd43515aaae78",
+  "schema_version": 1,
+  "sold_capacity_label": "5ml",
+  "sold_product_key": "cylinder-5ml",
+  "source_capacity_label": "5ml",
+  "status": "blocked"
+}

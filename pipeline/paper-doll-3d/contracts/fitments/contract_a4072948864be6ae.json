@@ -1,0 +1,14 @@
+{
+  "contract_type": "fitment",
+  "dimensions": [],
+  "document_ids": [
+    "doc_8b8e619cd138cea1"
+  ],
+  "geometry_authority": false,
+  "id": "contract_a4072948864be6ae",
+  "schema_version": 1,
+  "sold_capacity_label": "5ml",
+  "sold_product_key": "cylinder-5ml",
+  "source_capacity_label": "5ml",
+  "status": "blocked"
+}

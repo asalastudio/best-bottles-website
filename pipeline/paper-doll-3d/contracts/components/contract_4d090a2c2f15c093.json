@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_7cf8be9cc79b0a13"
+  ],
+  "geometry_authority": false,
+  "id": "contract_4d090a2c2f15c093",
+  "schema_version": 1,
+  "sold_capacity_label": "30ml",
+  "sold_product_key": "sleek-30ml",
+  "source_capacity_label": "30ml",
+  "status": "blocked"
+}

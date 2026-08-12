@@ -1,0 +1,14 @@
+{
+  "contract_type": "bottle",
+  "dimensions": [],
+  "document_ids": [
+    "doc_f250d605174d5cf4"
+  ],
+  "geometry_authority": true,
+  "id": "contract_009261fc5c6ce5ef",
+  "schema_version": 1,
+  "sold_capacity_label": "60ml",
+  "sold_product_key": "elegant-60ml",
+  "source_capacity_label": "60ml",
+  "status": "draft"
+}

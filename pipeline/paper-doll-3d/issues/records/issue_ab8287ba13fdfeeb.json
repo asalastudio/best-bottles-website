@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_COMPONENT_DRAWING",
+  "entity_id": "contract_f95ec7a3e9f557fa",
+  "id": "issue_ab8287ba13fdfeeb",
+  "message": "No source-backed component drawing is available for empire-100ml; dimensions were not inferred.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

@@ -1,0 +1,9 @@
+{
+  "code": "MISSING_BOTTLE_DRAWING",
+  "entity_id": "contract_2fb7ef8d0266c945",
+  "id": "issue_2f6dc09b133550a5",
+  "message": "The matched source is print-area-only; a dimensional bottle drawing is required.",
+  "schema_version": 1,
+  "severity": "blocked",
+  "status": "open"
+}

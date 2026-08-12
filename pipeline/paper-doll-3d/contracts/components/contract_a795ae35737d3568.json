@@ -1,0 +1,14 @@
+{
+  "contract_type": "component",
+  "dimensions": [],
+  "document_ids": [
+    "doc_0cf9d90b2ea0d56f"
+  ],
+  "geometry_authority": false,
+  "id": "contract_a795ae35737d3568",
+  "schema_version": 1,
+  "sold_capacity_label": "15ml",
+  "sold_product_key": "elegant-15ml",
+  "source_capacity_label": "15ml",
+  "status": "blocked"
+}

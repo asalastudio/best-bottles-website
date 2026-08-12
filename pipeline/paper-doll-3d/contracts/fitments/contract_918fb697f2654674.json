@@ -1,0 +1,14 @@
+{
+  "contract_type": "fitment",
+  "dimensions": [],
+  "document_ids": [
+    "doc_d108d944c59eeb97"
+  ],
+  "geometry_authority": false,
+  "id": "contract_918fb697f2654674",
+  "schema_version": 1,
+  "sold_capacity_label": "9ml",
+  "sold_product_key": "cylinder-9ml",
+  "source_capacity_label": "10ml",
+  "status": "blocked"
+}
