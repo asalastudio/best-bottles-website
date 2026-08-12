@@ -675,9 +675,10 @@ The first implementation tranche stops before new broad Blender production:
 
 1. Create schemas, registry, state store, approval records, issue records, and
    CLI scaffolding.
-2. Intake and fingerprint the 18 existing Desktop PDFs. Reconcile the one
-   additional repository PDF as a duplicate, alternate revision, or separate
-   source record.
+2. Intake and fingerprint the 18 existing Desktop PDF files, which resolve to
+   17 unique content hashes because the blue and amber 9 ml cylinder PDFs are
+   byte-identical. Reconcile the repository's nineteenth PDF filename as an
+   exact duplicate alias of the tall-cylinder drawing, not as a new drawing.
 3. Render all pages and create document evidence packets.
 4. Reconcile documents to the current drawing-coverage and product identities.
 5. Create source-backed bottle and finish contracts. Create blocked placeholder
