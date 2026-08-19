@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "recordType": "artifact-containment-receipt",
+  "project": "Best Bottles",
+  "assetKey": "cyl-009-17-415",
+  "createdAt": "2026-08-19",
+  "scope": "Existing Cylinder 9 mL / 17-415 Blender scenes, working history, render evidence, drawings, reference imagery, and recoverable source checkpoint.",
+  "sourceRepository": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026",
+  "git": {
+    "branch": "checkpoint/best-bottles-9ml-containment-2026-08-19",
+    "commit": "e8ef19aa68f96cb31a958c9272f7bd90f692e22e",
+    "bundle": "repo/best-bottles-9ml-source-checkpoint.bundle",
+    "bundleVerified": true,
+    "completeHistory": true,
+    "pushed": false
+  },
+  "protection": {
+    "protectedEntriesIncludingBundle": 413,
+    "checksumEntries": 415,
+    "totalBytesIncludingBundle": 1998854267,
+    "localCapsule": "/Users/jordanrichter/Desktop/AIOS-System/92 Generated Artifacts/Best Bottles/paper-doll-3d/containment-2026-08-19",
+    "googleDriveMirror": "/Users/jordanrichter/Library/CloudStorage/GoogleDrive-jordan@asala.ai/My Drive/02-clients/best-bottles/internal-artifacts/paper-doll-3d/containment-2026-08-19",
+    "manifestSha256": "24af1c6acc1b58a01e5391d6167ec22dcb88f1b9e7eb45f54b53aa2be34a41ea",
+    "localChecksumsPassed": 415,
+    "mirrorChecksumsPassed": 415,
+    "localFilesystemReadOnly": true,
+    "mirrorFilesystemReadOnly": true,
+    "sourceFilesMoved": false,
+    "sourceBlendFilesEdited": false,
+    "providerSideCloudSyncIndependentlyVerified": false
+  },
+  "approvalScope": {
+    "hashVerified": "17-415 thread/geometry across the five locked scenes",
+    "notImplied": [
+      "final material approval",
+      "studio approval",
+      "component approval",
+      "assembly approval",
+      "catalog approval",
+      "PDP approval"
+    ]
+  },
+  "verification": {
+    "pythonContractTests": "29/29 passed",
+    "blender17415Helix": "passed",
+    "blenderFiveVariantBaseline": "passed",
+    "gitBundle": "valid; complete history",
+    "substanceAddonWarning": "Non-fatal load_pre handler warning observed; Blender tests completed with exit code 0."
+  }
+}
