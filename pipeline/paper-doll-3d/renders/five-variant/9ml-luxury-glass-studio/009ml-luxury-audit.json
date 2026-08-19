@@ -1,0 +1,353 @@
+{
+  "camera": {
+    "dof": false,
+    "lens": 100.0,
+    "location": [
+      0.0,
+      -305.555542,
+      36.0
+    ],
+    "name": "BB_CAM_MASTER",
+    "rotation": [
+      1.5707964,
+      0.0,
+      0.0
+    ],
+    "scale": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "sensor_width": 36.0,
+    "type": "CAMERA"
+  },
+  "geometry": {
+    "all_faces_smooth": true,
+    "base_thickness_mm": 3.5,
+    "body_geometry_sha256": "ed64930d7ea4e7301a2687340ea2e3235cbb5f0f4545be0313200e1d1dfba016",
+    "boundary_edges": 0,
+    "components": 1,
+    "duplicate_coordinates": 0,
+    "duplicate_faces": 0,
+    "edges": 245789,
+    "faces": 122464,
+    "minimum_wall_mm": 1.6,
+    "non_manifold_edges": 0,
+    "normalized_face_normals": true,
+    "object": "BB_BTL_CYL_009ML_001",
+    "open_bore": true,
+    "physical_rim": true,
+    "positive_signed_volume": true,
+    "signed_volume_mm3": 7417.02031362056,
+    "solidify_modifiers": [],
+    "thread_source_sha256": "016804a72dc0e7e1197d76d92a20ce84bbac75944a876dda6d2f34712129b39f",
+    "vertices": 123327,
+    "wire_edges": 0,
+    "zero_area_faces": 0
+  },
+  "legacy_emitters_disabled": [
+    "BB_LIGHT_KEY_SOFTBOX",
+    "BB_CARD_FILL_RIGHT",
+    "BB_CARD_TOP",
+    "BB_LIGHT_SWEEP_WASH",
+    "BB_CARD_GLASS_REFLECTION_STRIP",
+    "BB_CARD_GLASS_TRANSMISSION_BACK"
+  ],
+  "materials": {
+    "amber": {
+      "absorption_color": [
+        0.72,
+        0.32,
+        0.045
+      ],
+      "absorption_density": 0.65,
+      "frost_amount": 0.0,
+      "ior": 1.5,
+      "material": "BB_GLASS_AMBER",
+      "micro_normal_strength": 0.0,
+      "micro_roughness_amount": 0.006,
+      "micro_roughness_scale": 420.0,
+      "surface_roughness": 0.022,
+      "transmission": 1.0
+    },
+    "clear": {
+      "absorption_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absorption_density": 0.0,
+      "frost_amount": 0.0,
+      "ior": 1.5,
+      "material": "BB_GLASS_CLEAR",
+      "micro_normal_strength": 0.0,
+      "micro_roughness_amount": 0.0,
+      "micro_roughness_scale": 420.0,
+      "surface_roughness": 0.02,
+      "transmission": 1.0
+    },
+    "cobalt": {
+      "absorption_color": [
+        0.003,
+        0.012,
+        0.92
+      ],
+      "absorption_density": 0.55,
+      "frost_amount": 0.0,
+      "ior": 1.5,
+      "material": "BB_GLASS_COBALT",
+      "micro_normal_strength": 0.0,
+      "micro_roughness_amount": 0.006,
+      "micro_roughness_scale": 420.0,
+      "surface_roughness": 0.02,
+      "transmission": 1.0
+    },
+    "frosted": {
+      "absorption_color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "absorption_density": 0.0,
+      "frost_amount": 1.0,
+      "ior": 1.5,
+      "material": "BB_GLASS_FROSTED",
+      "micro_normal_strength": 0.018,
+      "micro_roughness_amount": 0.035,
+      "micro_roughness_scale": 420.0,
+      "surface_roughness": 0.26,
+      "transmission": 1.0
+    }
+  },
+  "outputs": {
+    "amber": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-amber.blend",
+    "clear": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-clear.blend",
+    "cobalt": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-cobalt.blend",
+    "frosted": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-frosted.blend",
+    "master": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-master.blend"
+  },
+  "render": {
+    "active_look": "None",
+    "active_view_transform": "AgX",
+    "adaptive_sampling": true,
+    "denoise": true,
+    "device": "GPU",
+    "diffuse_bounces": 4,
+    "engine": "CYCLES",
+    "exposure": 0.0,
+    "gamma": 1.0,
+    "glossy_bounces": 8,
+    "look": "None",
+    "max_bounces": 12,
+    "noise_threshold": 0.005,
+    "samples": 512,
+    "transmission_bounces": 12,
+    "transparent_bounces": 8,
+    "view_transform": "AgX"
+  },
+  "source_scene": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-shoulder-glass-upgrade/009ml-clear-shoulder-glass.blend",
+  "source_sha256": "c436ed8f8c0c363695bf2bcbbdb371a67a4e8c1fd2b6574ac8ebcd6663d22ea0",
+  "studio": {
+    "BB_LUX_EDGE_RIGHT": {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "energy": 800.0,
+      "hide_render": false,
+      "light_type": "AREA",
+      "location": [
+        85.303505,
+        -49.25,
+        40.32
+      ],
+      "rotation": [
+        1.547248,
+        0.0,
+        1.047198
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape": "RECTANGLE",
+      "size": 12.214,
+      "size_y": 93.599998,
+      "type": "LIGHT"
+    },
+    "BB_LUX_FILL_FRONT": {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "energy": 240.0,
+      "hide_render": false,
+      "light_type": "AREA",
+      "location": [
+        0.0,
+        -137.899994,
+        37.439999
+      ],
+      "rotation": [
+        1.574857,
+        -0.0,
+        0.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape": "RECTANGLE",
+      "size": 63.040001,
+      "size_y": 97.199997,
+      "type": "LIGHT"
+    },
+    "BB_LUX_KEY_LEFT": {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "energy": 1800.0,
+      "hide_render": false,
+      "light_type": "AREA",
+      "location": [
+        -65.494064,
+        -83.828583,
+        41.759998
+      ],
+      "rotation": [
+        1.535466,
+        0.0,
+        -0.663225
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape": "RECTANGLE",
+      "size": 26.594999,
+      "size_y": 104.400002,
+      "type": "LIGHT"
+    },
+    "BB_LUX_NEG_LEFT": {
+      "dimensions": [
+        10.244,
+        99.360001,
+        0.0
+      ],
+      "hide_render": false,
+      "location": [
+        -45.310001,
+        -15.76,
+        38.16
+      ],
+      "negative_fill": true,
+      "rotation": [
+        1.570797,
+        -0.0,
+        1.905533
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "type": "MESH",
+      "visible_camera": false,
+      "visible_glossy": true,
+      "visible_shadow": false
+    },
+    "BB_LUX_NEG_RIGHT": {
+      "dimensions": [
+        8.274,
+        95.040001,
+        0.0
+      ],
+      "hide_render": false,
+      "location": [
+        48.264999,
+        -10.835,
+        38.16
+      ],
+      "negative_fill": true,
+      "rotation": [
+        1.570796,
+        0.0,
+        -1.791625
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "type": "MESH",
+      "visible_camera": false,
+      "visible_glossy": true,
+      "visible_shadow": false
+    },
+    "BB_LUX_RIM_REAR": {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "energy": 1400.0,
+      "hide_render": false,
+      "light_type": "AREA",
+      "location": [
+        0.0,
+        78.800003,
+        41.759998
+      ],
+      "rotation": [
+        1.523117,
+        0.0,
+        3.141593
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape": "RECTANGLE",
+      "size": 14.184,
+      "size_y": 84.959999,
+      "type": "LIGHT"
+    },
+    "BB_LUX_TOP": {
+      "color": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "energy": 1100.0,
+      "hide_render": false,
+      "light_type": "AREA",
+      "location": [
+        -4.935078,
+        -35.114906,
+        112.32
+      ],
+      "rotation": [
+        0.551829,
+        0.0,
+        -0.139626
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "shape": "RECTANGLE",
+      "size": 55.16,
+      "size_y": 34.560001,
+      "type": "LIGHT"
+    }
+  }
+}

@@ -23,6 +23,9 @@ SOURCE_SCENE = ROOT / (
 SOURCE_SHA256 = "c436ed8f8c0c363695bf2bcbbdb371a67a4e8c1fd2b6574ac8ebcd6663d22ea0"
 BODY_GEOMETRY_SHA256 = "ed64930d7ea4e7301a2687340ea2e3235cbb5f0f4545be0313200e1d1dfba016"
 THREAD_SHA256 = "016804a72dc0e7e1197d76d92a20ce84bbac75944a876dda6d2f34712129b39f"
+APPROVED_FINISH_GEOMETRY_SHA256 = (
+    "c53244ffb82a5944134f1318ff77da5be7aca7c423ceb6c663e7e4264be1f6c9"
+)
 WORKING_OUTPUT_DIR = ROOT / (
     "pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio"
 )
@@ -35,6 +38,24 @@ CORRECTION_WORKING_DIR = ROOT / (
 CORRECTION_RENDER_DIR = ROOT / (
     "pipeline/paper-doll-3d/renders/five-variant/9ml-cobalt-correction-v1"
 )
+REFERENCE_V2_WORKING_DIR = ROOT / (
+    "pipeline/paper-doll-3d/master/working/five-variant/9ml-cobalt-reference-v2"
+)
+REFERENCE_V2_RENDER_DIR = ROOT / (
+    "pipeline/paper-doll-3d/renders/five-variant/9ml-cobalt-reference-v2"
+)
+FINAL_LOCK_WORKING_DIR = ROOT / (
+    "pipeline/paper-doll-3d/master/working/five-variant/9ml-cobalt-final-lock"
+)
+FINAL_LOCK_RENDER_DIR = ROOT / (
+    "pipeline/paper-doll-3d/renders/five-variant/9ml-cobalt-final-lock"
+)
+GLOSS_REFRACTION_WORKING_DIR = FINAL_LOCK_WORKING_DIR / "gloss-refraction-bracket-v1"
+GLOSS_REFRACTION_RENDER_DIR = FINAL_LOCK_RENDER_DIR / "gloss-refraction-bracket-v1"
+GLOSS_REFRACTION_SCRIM_GAIN = 1.10
+GLOSS_REFRACTION_SCRIM_FILENAME = "05_COBALT_LUMINOUS_POLISHED_SCRIM_110.png"
+NEUTRAL_SURFACE_TINT_WORKING_DIR = FINAL_LOCK_WORKING_DIR / "neutral-surface-tint-v1"
+NEUTRAL_SURFACE_TINT_RENDER_DIR = FINAL_LOCK_RENDER_DIR / "neutral-surface-tint-v1"
 COMPARISON_FONT = Path("/System/Library/Fonts/Supplemental/Arial.ttf")
 
 BODY_NAME = "BB_BTL_CYL_009ML_001"
@@ -161,6 +182,98 @@ class CobaltCorrectionContract:
 
 
 @dataclass(frozen=True)
+class CobaltReferenceV2Contract:
+    """Material/lighting-only target derived from the supplied product photo."""
+
+    version: str = "cobalt-reference-v2"
+    collection_name: str = "BB_STUDIO_COBALT_REFERENCE_V2"
+    background_hex: str = "#F5F3EF"
+    absorption_color: Tuple[float, float, float] = (0.002, 0.006, 0.72)
+    transmission_tint: Tuple[float, float, float] = (0.0002, 0.0015, 0.98)
+    clear_roughness: float = 0.032
+    cobalt_roughness: float = 0.032
+    world_strength: float = 0.92
+    exposure: float = 0.25
+    selected_density_percentage: int = 75
+    selected_packshot_yaw_degrees: float = -30.0
+    hero_scrim_name: str = "BB_REF_V2_HERO_SCRIM"
+    hero_scrim_width_mm: float = 118.0
+    hero_scrim_height_mm: float = 122.0
+    hero_scrim_wrap_degrees: float = 220.0
+    hero_scrim_emission: float = 0.75
+    left_scrim_width_mm: float = 13.0
+    right_scrim_width_mm: float = 5.0
+    left_area_watts: float = 820.0
+    right_area_watts: float = 350.0
+    top_fill_watts: float = 210.0
+    neck_separation_fill_watts: float = 65.0
+    use_negative_fill: bool = False
+    use_rear_rim: bool = False
+
+
+@dataclass(frozen=True)
+class CobaltFinalLockContract:
+    """Photo 2 subject rendered through Photo 1's warm left-key studio."""
+
+    version: str = "cobalt-final-lock-candidate-v1"
+    collection_name: str = "BB_STUDIO_COBALT_FINAL_LOCK_V1"
+    background_hex: str = "#B8B1A7"
+    floor_hex: str = "#D5CFC3"
+    world_strength: float = 2.00
+    exposure: float = 0.80
+    left_key_name: str = "BB_FINAL_LEFT_SHADOW_KEY"
+    left_scrim_name: str = "BB_FINAL_LEFT_DIFFUSION_SCRIM"
+    top_fill_name: str = "BB_FINAL_TOP_FILL"
+    neck_fill_name: str = "BB_FINAL_NECK_FILL"
+    backdrop_name: str = "BB_FINAL_WARM_BONE_BACKDROP"
+    floor_name: str = "BB_FINAL_WARM_BONE_FLOOR"
+    left_key_watts: float = 85000.0
+    top_fill_watts: float = 12000.0
+    neck_fill_watts: float = 5000.0
+    scrim_emission: float = 0.13
+    selected_density_percentage: int = 75
+    selected_packshot_yaw_degrees: float = -30.0
+    contact_key_location_mm: Tuple[float, float, float] = (-88.0, -30.0, 84.0)
+    contact_key_width_mm: float = 37.0
+    contact_key_height_mm: float = 80.0
+    contact_key_watts: float = 89000.0
+    contact_v2_key_location_mm: Tuple[float, float, float] = (-88.0, -30.0, 82.0)
+    contact_v2_key_width_mm: float = 35.0
+    contact_v2_key_height_mm: float = 76.0
+    contact_v2_key_watts: float = 89000.0
+    base_halo_control_name: str = "BB_FINAL_BASE_HALO_CONTROL_15"
+    base_halo_reduction_percent: int = 15
+    base_halo_control_radius_mm: float = 32.0
+    base_halo_control_height_mm: float = 9.0
+    base_halo_control_center_z_mm: float = 3.5
+    base_halo_control_wrap_degrees: float = 250.0
+
+
+@dataclass(frozen=True)
+class GlossRefractionPreset:
+    material_name: str
+    absorption_density: float
+    surface_roughness: float
+    filename: str
+
+
+@dataclass(frozen=True)
+class NeutralSurfaceTintPreset:
+    version: str = "cobalt-neutral-surface-tint-v1"
+    material_name: str = "BB_GLOSS_COBALT_NEUTRAL_SURFACE"
+    node_group_name: str = "BB_GLASS_MASTER_COBALT_NEUTRAL_SURFACE"
+    surface_tint: Tuple[float, float, float] = (1.0, 1.0, 1.0)
+    absorption_color: Tuple[float, float, float] = (0.002, 0.006, 0.72)
+    absorption_density: float = 1.55
+    surface_roughness: float = 0.020
+    ior: float = 1.50
+    transmission: float = 1.0
+    filename: str = "07_COBALT_NEUTRAL_SURFACE_TINT.png"
+    scene_filename: str = "009ml-cobalt-neutral-surface-tint-v1.blend"
+    comparison_filename: str = "08_NEUTRAL_SURFACE_TINT_COMPARISON.png"
+
+
+@dataclass(frozen=True)
 class CorrectionLightSpec:
     name: str
     location_mm: Tuple[float, float, float]
@@ -183,6 +296,8 @@ class CorrectionScrimSpec:
 GEOMETRY = GeometryContract()
 RENDER = RenderContract()
 COBALT_CORRECTION = CobaltCorrectionContract()
+COBALT_REFERENCE_V2 = CobaltReferenceV2Contract()
+COBALT_FINAL_LOCK = CobaltFinalLockContract()
 
 VARIANTS: Mapping[str, GlassPreset] = {
     "clear": GlassPreset(1.50, 0.020, 1.0, (1.0, 1.0, 1.0), 0.0, 0.0, 0.0, 420.0, 0.0),
@@ -207,6 +322,31 @@ NEGATIVE_CARDS = (
 )
 
 CORRECTION_COBALT_DENSITIES = {25: 0.50, 50: 1.00, 75: 1.50, 100: 2.00}
+
+# Stronger than the first correction bracket because the supplied physical
+# sample is a saturated royal cobalt.  The bracket still leaves selection to
+# rendered optical-path evidence rather than treating a density as universal.
+REFERENCE_V2_COBALT_DENSITIES = {25: 1.00, 50: 1.40, 75: 1.80, 100: 2.20}
+
+# Material-only bracket against the protected grounded-contact V1 scene.
+# The first entry is the immutable visual baseline; the other two are isolated
+# derivatives that alter only the two explicitly listed optical inputs.
+GLOSS_REFRACTION_PRESETS: Mapping[str, GlossRefractionPreset] = {
+    "baseline-v1": GlossRefractionPreset(
+        "BB_REF_V2_COBALT_75", 1.80, 0.032, "01_COBALT_BASELINE_V1.png"
+    ),
+    "polished": GlossRefractionPreset(
+        "BB_GLOSS_COBALT_POLISHED", 1.80, 0.020, "02_COBALT_POLISHED.png"
+    ),
+    "luminous-polished": GlossRefractionPreset(
+        "BB_GLOSS_COBALT_LUMINOUS_POLISHED",
+        1.55,
+        0.020,
+        "03_COBALT_LUMINOUS_POLISHED.png",
+    ),
+}
+
+NEUTRAL_SURFACE_TINT = NeutralSurfaceTintPreset()
 
 CORRECTION_SCRIMS = (
     CorrectionScrimSpec(
@@ -295,6 +435,28 @@ def crop_boxes(width: int, height: int) -> dict[str, tuple[int, int, int, int]]:
     }
 
 
+def gloss_refraction_crop_boxes(
+    width: int, height: int
+) -> dict[str, tuple[int, int, int, int]]:
+    """Return diagnostic boxes for finish, full optical body, and thick base."""
+    if width <= 0 or height <= 0:
+        raise ValueError("render dimensions must be positive")
+    boxes_normalized = {
+        "neck": (0.34, 0.055, 0.66, 0.34),
+        "body": (0.30, 0.27, 0.70, 0.81),
+        "base": (0.30, 0.70, 0.70, 0.965),
+    }
+    return {
+        name: (
+            round(left * width),
+            round(top * height),
+            round(right * width),
+            round(bottom * height),
+        )
+        for name, (left, top, right, bottom) in boxes_normalized.items()
+    }
+
+
 def qc_filename(variant: str, region: str, samples: int, denoised: bool) -> str:
     if variant not in VARIANTS:
         raise ValueError(f"unknown glass variant {variant!r}")
@@ -353,3 +515,12 @@ def sha256_file(path: Path) -> str:
         for chunk in iter(lambda: handle.read(1024 * 1024), b""):
             digest.update(chunk)
     return digest.hexdigest()
+
+
+def assert_derivative_path(path: Path, root: Path, label: str) -> Path:
+    """Resolve and confine a generated derivative below its dedicated root."""
+    path = path.expanduser().resolve()
+    root = root.expanduser().resolve()
+    if path != root and root not in path.parents:
+        raise ValueError(f"{label} must remain below {root}")
+    return path

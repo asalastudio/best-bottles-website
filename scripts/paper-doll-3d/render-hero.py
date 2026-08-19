@@ -188,18 +188,23 @@ def build_stage(scene, subject_h: float, exposure: float = 1.0, tone: str = "bon
     backdrop(coll, tone)
     mid = subject_h * 0.5
 
-    # Sweep washes — helper fill on the backdrop. sweep=1.0 reproduces the
-    # approved v5 look; sweep=0.0 is a true single-light setup (softbox alone,
-    # backdrop lit purely by its bounce). A parameter, not an assumption: an
-    # unasserted edit once claimed these lights were deleted while they kept
-    # rendering.
+    # Sweep wash — helper fill on the backdrop. sweep=1.0 reproduces the
+    # approved v5 exposure; sweep=0.0 is a true single-light setup (softbox
+    # alone, backdrop lit purely by its bounce). A parameter, not an
+    # assumption: an unasserted edit once claimed these lights were deleted
+    # while they kept rendering.
+    #
+    # ONE panel wider than the sweep itself (1750 vs 1400), not two narrow
+    # cross-firing panels. A lit pool whose edges fall inside the glass's
+    # refracted field of view is imaged through the bottle as a slim bright
+    # rectangle — the same failure mode the wall-of-light scrim fixes for
+    # reflections. The backdrop must be even across everything the refracted
+    # sightlines can reach; its warmth then arrives through the glass as
+    # colour, not geometry.
     if sweep > 0.0:
-        area_light(coll, "bg_wash_l", (-150.0, -60.0, 260.0),
-                   (math.radians(52.0), 0.0, math.radians(-16.0)), 240, 420,
-                   560_000 * exposure * sweep, color=(1.0, 0.93, 0.80))
-        area_light(coll, "bg_wash_r", (150.0, -60.0, 260.0),
-                   (math.radians(52.0), 0.0, math.radians(16.0)), 240, 420,
-                   560_000 * exposure * sweep, color=(1.0, 0.93, 0.80))
+        area_light(coll, "bg_wash", (0.0, -70.0, 320.0),
+                   (math.radians(52.0), 0.0, 0.0), 1750, 640,
+                   1_400_000 * exposure * sweep, color=(1.0, 0.93, 0.80))
     # Floor glow is decoupled from sweep: the LOW back-field is what the lower
     # body's refracted sightlines land on. Under-lighting it makes the cavity
     # tangent render as a crisp dark cone ("internal object" artifact); with it

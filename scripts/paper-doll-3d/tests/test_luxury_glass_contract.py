@@ -141,6 +141,120 @@ class LuxuryGlassContractTests(unittest.TestCase):
             "04_COBALT_75_BASE_200PCT.png",
         )
 
+    def test_cobalt_reference_v2_targets_luminous_royal_blue_without_geometry_changes(self):
+        correction = contract.COBALT_REFERENCE_V2
+        self.assertEqual(correction.version, "cobalt-reference-v2")
+        self.assertEqual(correction.collection_name, "BB_STUDIO_COBALT_REFERENCE_V2")
+        self.assertEqual(correction.background_hex, "#F5F3EF")
+        self.assertEqual(correction.absorption_color, (0.002, 0.006, 0.72))
+        self.assertEqual(correction.transmission_tint, (0.0002, 0.0015, 0.98))
+        self.assertLessEqual(correction.hero_scrim_emission, 1.0)
+        self.assertEqual(
+            contract.REFERENCE_V2_COBALT_DENSITIES,
+            {25: 1.00, 50: 1.40, 75: 1.80, 100: 2.20},
+        )
+        self.assertGreater(correction.world_strength, contract.COBALT_CORRECTION.world_strength)
+        self.assertGreater(correction.top_fill_watts, 90.0)
+        self.assertGreaterEqual(correction.hero_scrim_width_mm, contract.GEOMETRY.diameter_mm * 5.0)
+        self.assertGreaterEqual(correction.hero_scrim_height_mm, contract.GEOMETRY.height_mm * 1.5)
+        self.assertEqual(correction.hero_scrim_name, "BB_REF_V2_HERO_SCRIM")
+        self.assertGreaterEqual(correction.hero_scrim_wrap_degrees, 200.0)
+        self.assertFalse(correction.use_negative_fill)
+        self.assertFalse(correction.use_rear_rim)
+        self.assertNotEqual(contract.REFERENCE_V2_WORKING_DIR, contract.CORRECTION_WORKING_DIR)
+        self.assertNotEqual(contract.REFERENCE_V2_RENDER_DIR, contract.CORRECTION_RENDER_DIR)
+
+    def test_gloss_refraction_bracket_is_an_isolated_three_candidate_material_test(self):
+        presets = contract.GLOSS_REFRACTION_PRESETS
+        self.assertEqual(tuple(presets), ("baseline-v1", "polished", "luminous-polished"))
+        self.assertEqual(
+            {
+                key: (preset.absorption_density, preset.surface_roughness)
+                for key, preset in presets.items()
+            },
+            {
+                "baseline-v1": (1.80, 0.032),
+                "polished": (1.80, 0.020),
+                "luminous-polished": (1.55, 0.020),
+            },
+        )
+        self.assertEqual(
+            [preset.filename for preset in presets.values()],
+            [
+                "01_COBALT_BASELINE_V1.png",
+                "02_COBALT_POLISHED.png",
+                "03_COBALT_LUMINOUS_POLISHED.png",
+            ],
+        )
+        self.assertEqual(
+            contract.gloss_refraction_crop_boxes(900, 990),
+            {
+                "neck": (306, 54, 594, 337),
+                "body": (270, 267, 630, 802),
+                "base": (270, 693, 630, 955),
+            },
+        )
+        self.assertNotEqual(
+            contract.GLOSS_REFRACTION_RENDER_DIR,
+            contract.FINAL_LOCK_RENDER_DIR,
+        )
+        self.assertNotEqual(
+            contract.GLOSS_REFRACTION_WORKING_DIR,
+            contract.FINAL_LOCK_WORKING_DIR,
+        )
+        with self.assertRaises(ValueError):
+            contract.assert_derivative_path(
+                contract.GLOSS_REFRACTION_RENDER_DIR.parent / "protected.png",
+                contract.GLOSS_REFRACTION_RENDER_DIR,
+                "gloss render",
+            )
+        self.assertEqual(
+            contract.assert_derivative_path(
+                contract.GLOSS_REFRACTION_RENDER_DIR / "candidate.png",
+                contract.GLOSS_REFRACTION_RENDER_DIR,
+                "gloss render",
+            ),
+            contract.GLOSS_REFRACTION_RENDER_DIR / "candidate.png",
+        )
+        self.assertEqual(contract.GLOSS_REFRACTION_SCRIM_GAIN, 1.10)
+        self.assertEqual(
+            contract.GLOSS_REFRACTION_SCRIM_FILENAME,
+            "05_COBALT_LUMINOUS_POLISHED_SCRIM_110.png",
+        )
+
+    def test_neutral_surface_tint_pass_is_a_confined_one_variable_derivative(self):
+        preset = contract.NEUTRAL_SURFACE_TINT
+        self.assertEqual(preset.version, "cobalt-neutral-surface-tint-v1")
+        self.assertEqual(preset.material_name, "BB_GLOSS_COBALT_NEUTRAL_SURFACE")
+        self.assertEqual(preset.surface_tint, (1.0, 1.0, 1.0))
+        self.assertEqual(preset.absorption_color, (0.002, 0.006, 0.72))
+        self.assertEqual(preset.absorption_density, 1.55)
+        self.assertEqual(preset.surface_roughness, 0.020)
+        self.assertEqual(preset.ior, 1.50)
+        self.assertEqual(preset.transmission, 1.0)
+        self.assertNotEqual(
+            contract.NEUTRAL_SURFACE_TINT_RENDER_DIR,
+            contract.GLOSS_REFRACTION_RENDER_DIR,
+        )
+        self.assertNotEqual(
+            contract.NEUTRAL_SURFACE_TINT_WORKING_DIR,
+            contract.GLOSS_REFRACTION_WORKING_DIR,
+        )
+        with self.assertRaises(ValueError):
+            contract.assert_derivative_path(
+                contract.GLOSS_REFRACTION_RENDER_DIR / "protected.png",
+                contract.NEUTRAL_SURFACE_TINT_RENDER_DIR,
+                "neutral surface render",
+            )
+        self.assertEqual(
+            contract.assert_derivative_path(
+                contract.NEUTRAL_SURFACE_TINT_RENDER_DIR / preset.filename,
+                contract.NEUTRAL_SURFACE_TINT_RENDER_DIR,
+                "neutral surface render",
+            ),
+            contract.NEUTRAL_SURFACE_TINT_RENDER_DIR / preset.filename,
+        )
+
 
 if __name__ == "__main__":
     unittest.main()
