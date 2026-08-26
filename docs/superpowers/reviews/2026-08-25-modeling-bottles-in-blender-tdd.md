@@ -153,10 +153,67 @@ Exact headless Blender regression command:
 Exit `0`; output ended with:
 
 ```text
-Ran 11 tests in 3.813s
+Ran 19 tests in 3.054s
 
 OK
 ```
+
+## Final-review hardening evidence
+
+The final-review pass retained the structured JSON contract without adding or
+changing a leaf. Focused tests were written before the validator changes. The
+initial six-test RED command exited `1` and produced these decisive failures:
+
+- vertex-baked full-assembly inversion: expected `overall: fail`, observed
+  `overall: pass`;
+- upright centered-origin control: `label_semantic_witnesses` was absent;
+- split `body_exterior`/`body_interior`: expected `overall: pass`, observed
+  `overall: fail` even though each object independently exposed `[2, 2]`
+  crossings;
+- protected caller scene: the sentinel object became an invalid Blender object;
+- GLB and contract report collisions: `ValueError not raised` for both inputs;
+- atomic persistence: the destination inode did not change.
+
+The focused GREEN command ran eight tests in 1.710 seconds with `OK`. A
+separate mutation proof restored the prior destructive `import_glb()` behavior;
+`test_public_import_glb_does_not_clear_active_scene_objects` then failed because
+the protected sentinel became invalid, and passed after the non-destructive
+implementation was restored. The exact full headless command above was rerun
+after all refactoring and passed 19 tests.
+
+The new structural coverage proves:
+
+- `authoring.up_axis` requires body local +Z, envelope-axis consistency, and
+  positive UV-V/world-Z semantic witnesses for both required labels; the
+  vertex-baked inversion fails while the upright centered-origin control passes;
+- `validate_glb()` uses a disposable scene and restores the protected caller
+  scene, selected/unselected state, active object, and imperial unit settings
+  after both a passing validation and a hard contract failure; temporary
+  imported objects do not remain in `bpy.data.objects`;
+- public `import_glb()` imports into, but never clears, the active scene;
+- cavity crossings are merged and deduplicated across the categorized body
+  assembly, so separately exported exterior/interior meshes pass with four
+  combined crossings at both sample heights;
+- both report/input collisions are rejected, failed validation reports persist,
+  report replacement changes the inode atomically, and failed replacement
+  leaves no same-directory temporary report;
+- a real subprocess launched with `bpy.app.binary_path` exited `0`, persisted
+  `overall: pass`, retained the fixture's 10,752 triangles, and emitted only the
+  advisory size warning above 46,080 bytes after export extras enlarged the GLB.
+
+Fresh structural checks also passed: `uv run --no-project --with pyyaml`
+reported `Skill is valid!`; both Python files passed AST parsing; the shipped
+contract passed JSON parsing and had an empty Git diff; `git diff --check` was
+clean; the global symlink still resolved to the canonical nested repository;
+and the placeholder scan remained empty.
+
+The fresh Boston Round smoke built successfully in a new `/tmp` directory and
+the validator enumerated all 17 contract leaves. It remains **not ready** for
+one project-owned gap only: `authoring.units` imports at approximately 1,000×
+scale (`78,000 × 32,998.7 × 32,998.7 mm` observed versus
+`78 × 33 × 33 mm`). Both new label semantic witnesses pass, as do +Z,
+floor, triangle budget (37,824), combined cavity, UV, and Draco checks. The
+56,920-byte size is still advisory. No builder or protected master changed.
 
 ## Trigger Micro-tests
 The controller collected all ten rows in independent fresh contexts using a mini catalog containing only `modeling-bottles-in-blender` and `paper-doll-image-processing`; no tools or file inspection occurred.
@@ -193,6 +250,6 @@ The controller collected all ten rows in independent fresh contexts using a mini
 - [x] Finish invariance: Scenario 2 preserves the 20-400 finish and requires identical T/E/I, finish height, pitch, and thread turns; only body/interior changes below the attachment datum.
 - [x] Missing-delivery-contract behavior: Scenario 7 uses the required behavior—report the export-readiness gap without inventing destination requirements when no delivery contract is configured.
 - [x] Protected-source behavior: Scenario 8 leaves locked/hash-verified masters unchanged, creates a named working-lane derivative, validates it, and requires operator disposition.
-- [x] Full Blender validator regression: 11 tests passed with the exact headless Blender command.
-- [x] Best Bottles GLB artifact-contract result: all 17 fields were enumerated; the current project-owned Boston Round smoke artifact is not ready because only `authoring.units` fails after import at approximately 1,000× too large. Its 56,920-byte size is an advisory warning above 46,080 bytes; the builder remained untouched.
-- [x] Remaining limitation: the skill's 11 Blender validator tests pass, but the current project-owned Boston Round smoke artifact fails only `authoring.units` because it imports approximately 1,000× too large; its 56,920-byte size is an advisory warning above 46,080. This is a project artifact/exporter gap, not a skill-validator failure.
+- [x] Full Blender validator regression: 19 tests passed with the exact headless Blender command, including a true successful CLI subprocess and protected-scene/public-import regressions.
+- [x] Best Bottles GLB artifact-contract result: all 17 fields were enumerated; the current project-owned Boston Round smoke artifact is not ready because only `authoring.units` fails after import at approximately 1,000× too large. Both label semantic witnesses pass. Its 56,920-byte size is an advisory warning above 46,080 bytes; the builder remained untouched.
+- [x] Remaining limitation: the skill's 19 Blender validator tests pass, but the current project-owned Boston Round smoke artifact fails only `authoring.units` because it imports approximately 1,000× too large; its 56,920-byte size is an advisory warning above 46,080. This is a project artifact/exporter gap, not a skill-validator failure.
