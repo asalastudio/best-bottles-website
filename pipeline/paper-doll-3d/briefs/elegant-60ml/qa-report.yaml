@@ -14,7 +14,9 @@ checks:
   - {field: max_body_width_mm, result: pass, expected: 54.5, tolerance: 1.0, observed: 54.5}
   - {field: max_body_depth_mm, result: pass, expected: 27.5, tolerance: 1.0, observed: 27.5}
   - {field: base_at_z_mm, result: pass, expected: 0.0, tolerance: 0.05, observed: 0.0}
-  - {field: cavity_overflow_ml, result: pass, expected: 63.0, tolerance_percent: 8.0, observed: 66.7}
+  - {field: cavity_overflow_ml, result: pass, expected: 63.0, tolerance_percent: 8.0, observed: 67.1}
+  - {field: visible_side_wall_mm, result: pass, expected: 1.6, tolerance: 0.15, observed: 1.6}
+  - {field: inner_shoulder_max_outward_slope, result: pass, expected_max: 6.0, observed: 4.87}
   - {field: finish_designation, result: pass, expected: 18-415, observed: 18-415}
   - {field: finish_t_mm, result: pass, expected: 17.5, tolerance: 0.3, observed: 17.489}
   - {field: finish_e_mm, result: pass, expected: 15.5, tolerance: 0.3, observed: 15.5}
@@ -27,6 +29,7 @@ checks:
   - {field: clear_studio_card_transmission_visibility, result: pass, expected: false, observed: false}
   - {field: transmission_back_card, result: pass, expected: absent, observed: absent}
   - {field: body_and_finish_manifold, result: pass, expected: closed, observed: closed}
+  - {field: beauty_render_dielectric, result: pass, expected: one manifold matched-ring glass shell with separate source body and finish preserved, observed: BB_RENDER_GLASS_ASSEMBLY visible with interface_weld_method matched-rings; source body and BB_FIN_18_415 hidden from render only}
 profile_provenance:
   measured_silhouette: []
   direct_photo: [lip, finish, neck-land, shoulder, body-wall, heel, base]
@@ -40,11 +43,13 @@ evidence_limits:
   notes:
     - Manufacturer dimensions govern the measured envelope and finish.
     - Original front and side photographs interpret only unspecified molded curve softness.
+    - The operator-supplied 50 ml physical photograph supports the shared Elegant shoulder language but does not replace the 60 ml drawing or original PSDs.
+    - The operator wall target was calibrated against the 54.5 mm drawing width; the 3.4 mm front/back cavity offset is inferred from the overflow gate and is not a manufacturing wall-thickness claim.
 component_reuse:
   project_fingerprint: null
   source_path: scripts/paper-doll-3d/build-master-scene.py
   source_revision: 31c87dd
-  sha256: f0fb51dc248d5b91fe8effca085cd6aea65c087945bf4b5719710fecd652772d
+  sha256: b0cf66ef504a84c1f18f94beb9092bc640ee8c2d00a6de5885d372dca2fd6087
   component: FINISH_MASTER_18_415
   reuse_mode: procedurally-instantiated fixed mesh datablock
   scale: [1.0, 1.0, 1.0]
@@ -56,24 +61,31 @@ delivery_qa:
     - {field: delivery_contract, result: warn, observed: no delivery contract on file}
     - {field: glb_export, result: not-tested, observed: Excluded from the approved first visual-production mockup pass.}
 render_qa:
-  result: pass
+  result: in-review
   clay_front: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-front.png
   clay_threequarter: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-threequarter.png
   rejected_revision:
     result: fail
     path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clear-hero-front.png
     reason: Transmitted centered studio panels produced cloudy square forms that read as objects inside the bottle.
-  clear_glass_hero: pipeline/paper-doll-3d/renders/elegant-60ml-clear/revision-02/elegant60-clear-hero-front.png
-  blender_master: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/revision-02/elegant60-clear-master.blend
+  rejected_revision_02:
+    result: fail
+    path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/revision-02/elegant60-clear-hero-front.png
+    markup: pipeline/paper-doll-3d/briefs/elegant-60ml/evidence/rejected-revision-02-shoulder-hole.jpg
+    reason: The abrupt cavity flare and coplanar closed body/finish boundary refracted as a floating oval and apparent second hole below the neck.
+  clear_glass_hero: pipeline/paper-doll-3d/renders/elegant-60ml-clear/revision-08/elegant60-clear-hero-front.png
+  blender_master: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/revision-08/elegant60-clear-master.blend
   lighting_profile: standard-off-axis
   backdrop: '#EFE9DE'
   visual_observations:
     - Broad front and flattened depth match the Elegant photographs.
-    - Clear glass shows wall thickness, an empty continuous cavity, polished molded edges, and a centered fixed finish.
+    - Clear glass shows slim 1.6 mm side walls, an empty continuous cavity, polished molded edges and bore, and a centered fixed finish.
+    - The inner shoulder opens continuously without an annular shelf, and the derived render shell removes the false coplanar body/finish boundary.
+    - A faint continuous oval remains at the real open-bore transition; no dark hole, floating ring, boolean spoke, or separate internal object remains.
     - No studio emitter is visible to transmission rays and no transmission back card is present.
     - Off-axis reflections define the shoulder, walls, base, and finish without forming a central rectangular patch.
     - Light neutral seamless studio matches the high-fidelity 9 ml visual language.
 operator_disposition:
   acceptance_class: visual-production
   decision: revise
-  notes: Operator rejected revision 01 and requested clear, reflective, visibly empty glass. Revision 02 addresses that request and awaits operator approval; no manufacturing-accuracy or delivery-contract claim is made.
+  notes: Operator rejected revision 01's transmitted cards and revision 02's apparent shoulder hole, then supplied the wall target calibrated for revision 08. Revision 08 awaits final operator approval; no manufacturing-accuracy or delivery-contract claim is made.

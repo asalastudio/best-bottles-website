@@ -15,8 +15,8 @@ intended_use:
 source_inventory:
   views:
     - view: front
-      source_ids: [drawing-2015, photo-front]
-      notes: Drawing governs dimensions; the original product image interprets corner and shoulder softness.
+      source_ids: [drawing-2015, photo-front, operator-elegant-50-photo, operator-wall-target]
+      notes: Drawing governs dimensions and the original 60 ml PSD governs its visible silhouette; the physical 50 ml photo supports the shared Elegant shoulder language and the operator target defines the desired slim-wall read.
     - view: side
       source_ids: [drawing-2015, photo-side]
       notes: Drawing governs depth and base flat; the original product image interprets the molded edge transitions.
@@ -37,6 +37,8 @@ dimensions:
     - {name: base_flat_depth, value: 23.5, tolerance: null, source_id: drawing-2015}
     - {name: base_chamfer, value: 2.0, tolerance: null, source_id: drawing-2015}
     - {name: overflow_capacity_ml, value: 63.0, tolerance: null, source_id: drawing-2015}
+    - {name: visible_side_wall_target, value: 1.6, tolerance: 0.15, source_id: operator-wall-target}
+    - {name: front_back_cavity_offset, value: 3.4, tolerance: null, source_id: capacity-solve-r08}
 profile_segments:
   - segment: lip
     source_class: direct-photo
@@ -52,12 +54,12 @@ profile_segments:
     notes: Drawing fixes the elevations; photograph interprets the soft seating transition.
   - segment: shoulder
     source_class: direct-photo
-    source_ids: [drawing-2015, photo-front, photo-side]
-    notes: Drawing fixes the 68.9 mm body line and overall envelope; photographs interpret the curve between them.
+    source_ids: [drawing-2015, photo-front, photo-side, operator-elegant-50-photo]
+    notes: Drawing fixes the 68.9 mm body line and overall envelope; original photographs and the supporting physical-family photo interpret one continuous curve with no floating annular shelf.
   - segment: body-wall
     source_class: direct-photo
-    source_ids: [drawing-2015, photo-front, photo-side]
-    notes: Drawing fixes width and depth; original photographs confirm broad flat faces and softened vertical corners.
+    source_ids: [drawing-2015, photo-front, photo-side, operator-wall-target]
+    notes: Drawing fixes width and depth; original photographs confirm broad flat faces and softened vertical corners. Calibrating the operator target against the 54.5 mm drawing width sets a 1.6 +/-0.15 mm visible side-wall read; the unseen depth offset remains capacity-solved rather than manufacturer-verified.
   - segment: heel
     source_class: direct-photo
     source_ids: [drawing-2015, photo-front, photo-side]
@@ -95,6 +97,8 @@ appearance:
     - use off-axis key and fill for the broad flat Elegant faces; do not use the centered cylinder softbox
     - studio cards may shape glossy reflections but must be invisible to transmission rays
     - no transmission back card or other apparent object inside the empty cavity
+    - no coplanar body-to-finish dielectric seam or annular shoulder artifact in the beauty render
+    - slim, consistent visible side walls matching the operator target
     - bare bottle with no closure for the geometry-master review
 delivery_contract:
   status: missing
@@ -130,15 +134,33 @@ evidence:
     accessed: 2026-08-25
     confidence: exact
     evidence_status: direct
+  - id: operator-elegant-50-photo
+    kind: operator-supplied physical Elegant 50 ml bottle photograph
+    location: pipeline/paper-doll-3d/briefs/elegant-60ml/evidence/operator-elegant-50ml-photo.jpg
+    accessed: 2026-08-25
+    confidence: supporting-family
+    evidence_status: direct
+  - id: operator-wall-target
+    kind: operator-approved visual wall target
+    location: pipeline/paper-doll-3d/briefs/elegant-60ml/evidence/operator-wall-target.jpg
+    accessed: 2026-08-25
+    confidence: operator-target
+    evidence_status: inferred
+  - id: capacity-solve-r08
+    kind: documented visual-production cavity solve
+    location: scripts/paper-doll-3d/build-master-scene.py#CYL_SPECS[elegant60]
+    accessed: 2026-08-25
+    confidence: capacity-gated
+    evidence_status: inferred
 unresolved_conflicts:
   - issue: The 2026-08-19 cockpit deferred new families pending the Cylinder 9 ml identity decision.
     source_ids: [operator-clear-2026-08-25]
     status: interpreted
     interpretation: Jordan's 2026-08-25 approval authorizes this Elegant visual-production mockup without asserting that the Cylinder identity issue is resolved.
   - issue: The drawing does not dimension outer plan corner radius or the interior cavity profile.
-    source_ids: [drawing-2015, photo-front, photo-side]
+    source_ids: [drawing-2015, photo-front, photo-side, operator-elegant-50-photo, operator-wall-target, capacity-solve-r08]
     status: interpreted
-    interpretation: Use direct photographs for outer corner softness and solve the interior wall/base profile to the 63 ml overflow gate.
+    interpretation: Use direct photographs for outer corner softness, the operator target for a 1.6 mm visible side-wall read, and a 3.4 mm unseen front/back cavity offset to keep the inferred interior within the 63 ml +/-8% overflow gate. This is visual-production geometry, not a manufacturing wall-thickness claim.
 decisions:
   - issue: Elegant material master
     choice: All Elegant geometry masters are clear glass; frosting, if ever needed, is a derived material treatment.
@@ -152,12 +174,20 @@ decisions:
     choice: Reject the centered-softbox render; use the off-axis standard profile on #EFE9DE, with every studio card invisible to transmission rays and no internal/back card.
     operator: Jordan Richter
     date: 2026-08-25
+  - issue: Elegant shoulder and body/finish interface
+    choice: Reject revision 02's apparent second hole; use a vertically continuous inner shoulder and a derived matched-ring beauty-render shell while preserving separate body and fixed 18-415 source components.
+    operator: Jordan Richter
+    date: 2026-08-25
+  - issue: Elegant visible wall target
+    choice: Use the supplied slim-wall reference as the visual target; calibrate the visible side wall to 1.6 mm and retain capacity-gated uncertainty for unsectioned interior dimensions.
+    operator: Jordan Richter
+    date: 2026-08-25
 artifacts:
   - {role: source_drawing, path: pipeline/paper-doll-3d/specs/GBElegant60 Bottle - Nemat.pdf, sha256: f250d605174d5cf44371db4fa79a891894bdd77ffa74c79efbf1d9daaea32a95}
   - {role: source_photo_front, path: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant 60ml.psd, sha256: 11c02cd54f479c8a9a7ee030382f1b9a4e8e98fc24c4a49a358367d0ecb860ad}
   - {role: source_photo_side, path: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant Side.psd, sha256: 7bb02bcd80f6a341a31412b5b6fa8cd720931a2601d38d1bb870b016125bf352}
   - {role: studio_reference, path: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-master.blend, sha256: 5b365876937365c83c31156dde570c32b77418b2efe4d7120f0e2c764e794357}
-  - {role: reused_finish_source, path: scripts/paper-doll-3d/build-master-scene.py, source_revision: 31c87dd, sha256: f0fb51dc248d5b91fe8effca085cd6aea65c087945bf4b5719710fecd652772d}
+  - {role: reused_finish_source, path: scripts/paper-doll-3d/build-master-scene.py, source_revision: 31c87dd, sha256: b0cf66ef504a84c1f18f94beb9092bc640ee8c2d00a6de5885d372dca2fd6087}
   - {role: initial_blender_master, path: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/elegant60-clear-master.blend, sha256: d66eea47ab2dcf523bd616eba553682063e6f41b19acd98c130214625a7e7f44}
   - {role: clay_front, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-front.png, sha256: b9df606f16ad7dacf0738f931c5ba45235fb9a66259d67034ea9306ba84a414e}
   - {role: clay_threequarter, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-threequarter.png, sha256: 3f1d9718f7e342bd16248303239a20b4ea9ca2b308b5e2cff34aa3be3192b59d}
@@ -165,14 +195,21 @@ artifacts:
   - {role: render_builder_revision_02, path: scripts/paper-doll-3d/build-master-scene.py, sha256: b2ff9a716501fe8c5b24e731edd3cd9dc4faa68527abe376490d12ba164c27f7}
   - {role: blender_master_revision_02, path: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/revision-02/elegant60-clear-master.blend, sha256: 33e7c26763db939bc2a74af7a985c450ca4cd4824a15426eb92f3970cecd495d}
   - {role: clear_glass_hero_revision_02, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/revision-02/elegant60-clear-hero-front.png, sha256: 6c68718654b1f52dbda538caad820a3f72d45be2133c4f27d4affe5bf59543f0}
+  - {role: rejected_revision_02_markup, path: pipeline/paper-doll-3d/briefs/elegant-60ml/evidence/rejected-revision-02-shoulder-hole.jpg, sha256: b02f5708061a4c7909619cbca466f280a49231ef45c8645f948717c1c8fcca23}
+  - {role: supporting_elegant_50_photo, path: pipeline/paper-doll-3d/briefs/elegant-60ml/evidence/operator-elegant-50ml-photo.jpg, sha256: 9ad97f4f74e00eb326bf6a31c375f2d1354df2522acb52558e8ca6b1731f95dc}
+  - {role: operator_wall_target, path: pipeline/paper-doll-3d/briefs/elegant-60ml/evidence/operator-wall-target.jpg, sha256: 1937e5ea09dbaa03fe6ccd8e0f47b098a49176910b0b243de315e2aaed6ba9a8}
+  - {role: render_builder_revision_08, path: scripts/paper-doll-3d/build-master-scene.py, sha256: b0cf66ef504a84c1f18f94beb9092bc640ee8c2d00a6de5885d372dca2fd6087}
+  - {role: elegant_integration_test_revision_08, path: scripts/paper-doll-3d/tests/test_elegant_60_blender.py, sha256: 34667f7e8c4306c670b6edcab0c375dd1da894e89f05b1a5a6752a9fdc602fa9}
+  - {role: blender_master_revision_08, path: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/revision-08/elegant60-clear-master.blend, sha256: 91e2c2280007fc19e8cc40e51c8940e1b450d89de42df2a6c37cfa85a36d99a9}
+  - {role: clear_glass_hero_revision_08, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/revision-08/elegant60-clear-hero-front.png, sha256: 98ec709dcc6d5d23957232ad11ace2b3cdb528134ea47e181c24abcfd9a46a4e}
 validation_results:
-  - {scope: model, result: pass, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Drawing envelope, cavity, closed topology, clear material, and fixed finish passed Blender integration tests.}
+  - {scope: model, result: pass, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Drawing envelope, cavity, closed source and render topology, polished clear material, fixed finish, and matched-ring interface passed seven Blender integration tests.}
   - {scope: render, result: fail, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Initial hero rejected by the operator for cloudy transmitted studio cards and square internal-looking reflections.}
-  - {scope: render, result: pass, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Revision 02 was visually inspected at native resolution; the cavity reads empty and continuous, with no transmitted studio cards or centered rectangular reflection.}
+  - {scope: render, result: fail, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Revision 02 removed transmitted studio cards but was rejected because the abrupt inner shoulder and coplanar body/finish dielectric boundary read as a second hole beneath the neck.}
   - {scope: artifact, result: not-tested, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: no delivery contract on file; GLB export was outside the approved first mockup pass.}
 approval:
   status: in-review
   acceptance_class: visual-production
   operator: Jordan Richter
   date: 2026-08-25
-  notes: Operator rejected revision 01 optical artifacts. Revision 02 is ready for operator visual review; dimensional approval remains unchanged.
+  notes: Operator rejected revisions 01 and 02. Revision 08 uses the calibrated slim-wall target, a continuous inner shoulder beginning at the neck datum, a polished bore, and a manifold matched-ring beauty-render shell; dimensional approval remains unchanged and the new render awaits final operator review.

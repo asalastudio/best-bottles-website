@@ -77,6 +77,80 @@ class Elegant60ContractTests(unittest.TestCase):
         self.assertGreaterEqual(cavity_ml, 63.0 * 0.92)
         self.assertLessEqual(cavity_ml, 63.0 * 1.08)
 
+    def test_inner_shoulder_opens_gradually_without_annular_shelf(self):
+        """The photo-backed cavity must not form a second oval below the neck."""
+        bottle_spec = self.elegant_spec()
+        finish = self.builder.FINISH_MASTERS["18-415"]
+        stations = self.builder.elegant_stations(bottle_spec, finish)
+        datum_z = bottle_spec["height"] - finish["finish_h"]
+        inner_w = bottle_spec["diameter"] / 2.0 - bottle_spec["wall"]
+
+        # The first station at the maximum datum is the outer neck land; the
+        # second is the inner bore. Everything after that walks down the
+        # cavity. The original front PSD and the operator's physical-bottle
+        # photo both show a broad, continuous inner shoulder—not a tight,
+        # near-horizontal flare that refracts as a floating oval ring.
+        inner_start = next(
+            index
+            for index, station in enumerate(stations)
+            if abs(station[3] - datum_z) <= 0.05
+            and abs(station[0] - finish["bore_d"] / 2.0) <= 0.05
+        )
+        inner = stations[inner_start:]
+        self.assertGreater(
+            inner[1][0],
+            inner[0][0],
+            "the cavity must begin opening at the neck datum instead of forming a visible bore stem below it",
+        )
+        outward_slopes = []
+        for upper, lower in zip(inner, inner[1:]):
+            width_growth = lower[0] - upper[0]
+            drop = upper[3] - lower[3]
+            if width_growth > 0.0 and drop > 0.0:
+                outward_slopes.append(width_growth / drop)
+
+        self.assertTrue(outward_slopes)
+        self.assertLessEqual(
+            max(outward_slopes),
+            6.0,
+            "the inner shoulder flares too abruptly and will read as an annular shelf",
+        )
+
+        broad_cavity = next(station for station in inner if station[0] >= inner_w * 0.9)
+        self.assertLessEqual(
+            broad_cavity[3],
+            bottle_spec["shoulder_line"] - 3.0,
+            "the broad cavity begins too close to the outer shoulder and creates a second oval",
+        )
+
+    def test_visible_side_walls_match_operator_reference(self):
+        """The approved visual target uses slim, consistent side walls."""
+        bottle_spec = self.elegant_spec()
+        finish = self.builder.FINISH_MASTERS["18-415"]
+        stations = self.builder.elegant_stations(bottle_spec, finish)
+        half_width = bottle_spec["diameter"] / 2.0
+
+        inner_start = next(
+            index
+            for index, station in enumerate(stations)
+            if abs(station[0] - finish["bore_d"] / 2.0) <= 0.05
+            and abs(station[3] - (bottle_spec["height"] - finish["finish_h"])) <= 0.05
+        )
+        inner_body = [
+            station
+            for station in stations[inner_start:]
+            if station[0] > finish["bore_d"] / 2.0
+            and station[3] >= bottle_spec["base_th"] + 0.5
+        ]
+        visible_wall = half_width - max(station[0] for station in inner_body)
+
+        self.assertAlmostEqual(
+            visible_wall,
+            1.6,
+            delta=0.15,
+            msg="the side wall is heavier than the operator-approved Elegant reference",
+        )
+
     def test_clear_symmetric_studio_reflects_without_transmitting_cards(self):
         """Reflection panels must shape glass without appearing inside it."""
         self.elegant_spec()
@@ -147,8 +221,13 @@ class Elegant60ContractTests(unittest.TestCase):
             self.assertTrue(output.exists())
             body = bpy.data.objects.get("BB_BTL_ELEGANT_060ML_001")
             finish = bpy.data.objects.get("BB_FIN_18_415")
+            render_glass = bpy.data.objects.get("BB_RENDER_GLASS_ASSEMBLY")
             self.assertIsNotNone(body)
             self.assertIsNotNone(finish)
+            self.assertIsNotNone(
+                render_glass,
+                "the beauty scene needs one welded dielectric at the body/finish interface",
+            )
 
             body_bounds = world_bounds(body)
             finish_bounds = world_bounds(finish)
@@ -161,9 +240,24 @@ class Elegant60ContractTests(unittest.TestCase):
             self.assertAlmostEqual(17.5, finish["major_d"], delta=1e-6)
             self.assertAlmostEqual(15.5, finish["neck_d"], delta=1e-6)
             self.assertAlmostEqual(10.3, finish["bore_d"], delta=1e-6)
-            self.assertTrue(any("CLEAR" in material.name for material in body.data.materials))
+            clear_material = next(
+                material for material in body.data.materials if "CLEAR" in material.name
+            )
+            self.assertFalse(
+                clear_material.node_tree.nodes["Principled BSDF"].inputs["Roughness"].is_linked,
+                "the operator reference uses a clear polished Elegant bore, not the generic molded-bore frost mask",
+            )
+            self.assertTrue(body.hide_render)
+            self.assertTrue(finish.hide_render)
+            self.assertFalse(render_glass.hide_render)
+            self.assertEqual("matched-rings", render_glass["interface_weld_method"])
+            render_bounds = world_bounds(render_glass)
+            self.assertAlmostEqual(54.5, render_bounds["width"], delta=0.15)
+            self.assertAlmostEqual(27.5, render_bounds["depth"], delta=0.15)
+            self.assertAlmostEqual(0.0, render_bounds["min_z"], delta=0.05)
+            self.assertAlmostEqual(86.7, render_bounds["max_z"], delta=0.15)
 
-            for obj in (body, finish):
+            for obj in (body, finish, render_glass):
                 mesh = bmesh.new()
                 mesh.from_mesh(obj.data)
                 self.assertFalse(

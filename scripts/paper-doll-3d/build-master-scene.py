@@ -207,7 +207,11 @@ CYL_SPECS = {
         body_top=70.9, shoulder_line=68.9,
         base_w=50.5, base_d=23.5, chamfer_h=2.0,
         corner_r=3.2,
-        wall=3.0, wall_face=3.0, base_th=4.5,
+        # Operator-approved visual target (2026-08-25): the calibrated front
+        # silhouette needs slim ~1.6 mm side walls. The unseen front/back
+        # offset remains a capacity-solved 3.4 mm because the drawing supplies overflow but
+        # no sectioned wall-thickness callout.
+        wall=1.6, wall_face=3.4, base_th=4.5,
         neck_finish="18-415",
         neck_t=17.5, neck_e=15.5, neck_h=15.9,
         thread_band=10.1,
@@ -215,6 +219,8 @@ CYL_SPECS = {
         thread_fade_in=0.18, thread_lead_out=0.12,
         thread_top_gap=0.4,
         bore_d=10.3, lip_r=0.5,
+        polished_bore=True,
+        render_weld_finish=True,
         measured_body=True, measured_neck=True, source="drawing",
     ),
 
@@ -939,16 +945,25 @@ def elegant_stations(s, fm=None):
     stations.append((bore_r, bore_r, bore_r, datum_z))
 
     # Interior is evidence-limited: retain a straight bore, then open into a
-    # restrained rectangular cavity. Wall/base values are explicitly audited
-    # against the drawing's 63 ml overflow capacity.
+    # restrained rectangular cavity. The original front PSD and the physical-
+    # bottle reference show one broad, continuous inner shoulder. A short,
+    # near-horizontal flare here refracts as a floating oval below the mouth,
+    # so spread the circular-to-rectangular transition vertically. Wall/base
+    # values remain explicitly audited against the drawing's 63 ml overflow.
     inner_w = half_w - s["wall"]
     inner_d = half_d - s.get("wall_face", s["wall"])
     inner_corner = max(1.2, corner - 1.4)
+    funnel_top = datum_z
+    funnel_bottom = shoulder_z - 4.5
+    for step in range(1, 11):
+        t = step / 10.0
+        eased = _ease(t)
+        z = funnel_top + (funnel_bottom - funnel_top) * t
+        a = bore_r + (inner_w - bore_r) * eased
+        b = bore_r + (inner_d - bore_r) * eased
+        radius = bore_r + (inner_corner - bore_r) * eased
+        stations.append((a, b, min(radius, a, b), z))
     stations.extend([
-        (bore_r, bore_r, bore_r, datum_z - 1.1),
-        (bore_r + 1.0, bore_r + 0.8, bore_r, datum_z - 1.8),
-        (inner_w * 0.58, inner_d * 0.72, min(inner_corner, inner_d * 0.72), shoulder_z - 0.2),
-        (inner_w, inner_d, inner_corner, shoulder_z - 2.2),
         (inner_w, inner_d, inner_corner, s["base_th"] + 1.0),
         (max(inner_w - 0.8, 1.0), max(inner_d - 0.8, 1.0), inner_corner, s["base_th"]),
         (0.0, 0.0, 1.0, s["base_th"] + 0.7),
@@ -1016,6 +1031,67 @@ def loft(name, stations, segments=SEGMENTS, modulate=None):
         poly.use_smooth = True
     o = bpy.data.objects.new(name, m)
     return o
+
+
+def welded_glass_render_assembly(body, finish, coll):
+    """Create one dielectric for beauty renders while preserving source parts.
+
+    The body and fixed finish remain separate, closed, inspectable source
+    components. Rendering those closed meshes on the exact same attachment
+    plane creates a false internal glass boundary in Cycles. A derived shell
+    removes both coincident datum faces and welds their matching outer/bore
+    rings without scaling or rewriting either source component.
+    """
+    import bmesh
+
+    bpy.context.view_layer.update()
+    datum = finish.matrix_world.translation.z
+    vertices = []
+    faces = []
+
+    def append_component(component):
+        offset = len(vertices)
+        transformed = [
+            component.matrix_world @ vertex.co
+            for vertex in component.data.vertices
+        ]
+        vertices.extend(tuple(coordinate) for coordinate in transformed)
+        for polygon in component.data.polygons:
+            coordinates = [transformed[index] for index in polygon.vertices]
+            # Each closed source owns an annular face at the same attachment
+            # plane. Remove both faces; their matching outer and bore rings
+            # are welded below, leaving one continuous glass shell.
+            if all(abs(coordinate.z - datum) <= 1e-4 for coordinate in coordinates):
+                continue
+            faces.append(tuple(offset + index for index in polygon.vertices))
+
+    append_component(body)
+    append_component(finish)
+    mesh_data = bpy.data.meshes.new("BB_RENDER_GLASS_ASSEMBLY")
+    mesh_data.from_pydata(vertices, [], faces)
+    mesh_data.materials.append(body.data.materials[0])
+
+    mesh = bmesh.new()
+    mesh.from_mesh(mesh_data)
+    bmesh.ops.remove_doubles(mesh, verts=mesh.verts, dist=1e-4)
+    bmesh.ops.recalc_face_normals(mesh, faces=mesh.faces)
+    mesh.to_mesh(mesh_data)
+    mesh.free()
+    mesh_data.update()
+    for polygon in mesh_data.polygons:
+        polygon.use_smooth = True
+
+    render_body = bpy.data.objects.new("BB_RENDER_GLASS_ASSEMBLY", mesh_data)
+    link(render_body, coll)
+    body.hide_render = True
+    finish.hide_render = True
+    render_body.hide_render = False
+    render_body["render_only"] = True
+    render_body["interface_weld_method"] = "matched-rings"
+    render_body["source_body"] = body.name
+    render_body["source_finish"] = finish.name
+    render_body["web_name"] = "body"
+    return render_body
 
 
 def thread_modulator(s):
@@ -1612,7 +1688,7 @@ def mat_glass(variant="clear", s=None):
     m = _build_clear_glass(name)
     pr = m.node_tree.nodes["Principled BSDF"]
     pr.inputs["Roughness"].default_value = v["rough"]
-    if variant == "clear" and s is not None:
+    if variant == "clear" and s is not None and not s.get("polished_bore", False):
         # Molded-neck bore frost: the plunger leaves the bore matte on real
         # bottles. Optically this is what makes cobalt/frosted thread reads
         # "perfect" while identical clear geometry looked busy — clear glass
@@ -2007,7 +2083,9 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
               f"vs {tgt:.0f} ml overflow spec "
               f"({'OK' if abs(cav - tgt) / tgt < 0.08 else 'OUT OF GATE'})")
     elif s.get("body") == "elegant":
-        bottle = loft(s["asset_id"], elegant_stations(s, fm))
+        # Match the fixed finish master's 512-point datum rings so the
+        # derived beauty shell can weld outer and bore boundaries one-to-one.
+        bottle = loft(s["asset_id"], elegant_stations(s, fm), segments=512)
         cav = elegant_cavity_ml(s)
         tgt = s.get("overflow_ml", s["capacity_ml"])
         print(f"CAVITY_AUDIT {bottle_key}: {cav:.1f} ml enclosed "
@@ -2049,6 +2127,9 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
     master.data.materials.clear()
     master.data.materials.append(mat_glass(glass, None))
     link(fin, c_bottles)
+
+    if s.get("render_weld_finish"):
+        welded_glass_render_assembly(bottle, fin, c_bottles)
 
     neck = bpy.data.objects.new("BB_ATTACH_NECK", None)
     neck.empty_display_type = "ARROWS"
