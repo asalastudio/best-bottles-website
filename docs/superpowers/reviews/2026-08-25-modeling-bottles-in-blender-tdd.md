@@ -41,8 +41,20 @@ The controller collected each control in an independent fresh agent context. Non
 |---|---|---|---|---|
 
 ## Trigger Micro-tests
+The controller collected all ten rows in independent fresh contexts using a mini catalog containing only `modeling-bottles-in-blender` and `paper-doll-image-processing`; no tools or file inspection occurred.
+
 | Variant | Rep | Prompt | Selected skill | Result |
 |---|---:|---|---|---|
+| Positive | 1 | Create a real-scale GLB of this 50 ml vial with a separate dropper mesh. | `modeling-bottles-in-blender` | PASS |
+| Positive | 2 | Create a real-scale GLB of this 50 ml vial with a separate dropper mesh. | `modeling-bottles-in-blender` | PASS |
+| Positive | 3 | Create a real-scale GLB of this 50 ml vial with a separate dropper mesh. | `modeling-bottles-in-blender` | PASS |
+| Positive | 4 | Create a real-scale GLB of this 50 ml vial with a separate dropper mesh. | `modeling-bottles-in-blender` | PASS |
+| Positive | 5 | Create a real-scale GLB of this 50 ml vial with a separate dropper mesh. | `modeling-bottles-in-blender` | PASS |
+| Negative | 1 | Remove the background from these bottle PSDs and keep the layers organized. | `paper-doll-image-processing` | PASS |
+| Negative | 2 | Remove the background from these bottle PSDs and keep the layers organized. | `paper-doll-image-processing` | PASS |
+| Negative | 3 | Remove the background from these bottle PSDs and keep the layers organized. | `paper-doll-image-processing` | PASS |
+| Negative | 4 | Remove the background from these bottle PSDs and keep the layers organized. | `paper-doll-image-processing` | PASS |
+| Negative | 5 | Remove the background from these bottle PSDs and keep the layers organized. | `paper-doll-image-processing` | PASS |
 
 ## Final Checklist
 - [x] Eight fresh-context baseline scenarios recorded.
@@ -53,4 +65,4 @@ The controller collected each control in an independent fresh agent context. Non
 - [ ] Candidate comparison preserves the adapter pattern: project adapters route to live project-native documents, scripts, contracts, fingerprints, and approval rules without copying product dimensions into the global workflow.
 - [ ] Candidate comparison preserves non-blocking uncertainty: evidence quality, assumptions, inferred geometry, and conflicts remain visible; the operator selects intended use and decides whether the result is acceptable.
 - [ ] Candidate guidance scenarios recorded.
-- [ ] Trigger micro-tests recorded.
+- [x] Trigger micro-tests recorded.
