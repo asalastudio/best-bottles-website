@@ -24,6 +24,25 @@ The controller collected each control in an independent fresh agent context. Non
 | `baseline_7` | 7 | Independent fresh context | Not loaded | “treat it as a reference-led 3D reconstruction, not manufacturing-grade CAD.” |
 | `baseline_8` | 8 | Independent fresh context | Not loaded | “do not modify the protected master directly. Create a versioned derivative and keep the original immutable.” |
 
+## Candidate Control Provenance
+
+The controller collected `candidate_1` through `candidate_8` in independent
+fresh contexts. The installed path was
+`/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` in every
+positive scenario; it resolves to the canonical package at
+`/Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender`.
+
+| Candidate ID | Exact installed skill path | Exact request prompt | Context and skill loading | Decisive retained output excerpt |
+|---|---|---|---|---|
+| `candidate_1` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Use the calibrated front photography as the source of truth for silhouette, proportions, label placement, cap geometry, and material cues. Treat the AI side sheet only as a gap-filler for unseen contours—not as authority. | Independent fresh context; installed skill body and only routed `inferred-schematics.md` and `bottle-brief.md` references loaded. | “Do not adopt the cleaner AI shoulder.” “only the unseen side-depth transition: ai-inferred”. |
+| `candidate_2` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Use the finished 30 ml model as the base, but do not uniformly scale the entire bottle—the 20-400 finish must remain unchanged. | Independent fresh context; installed skill body and only routed `blender-modeling.md` and `qa-and-handoff.md` references loaded. | “derive the 60 ml as a new body variant, not a uniformly scaled copy of the full 30 ml assembly. Reuse the approved 20-400 finish unchanged.” |
+| `candidate_3` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Do not claim a GLB is configurator-ready without validating the delivery contract. | Independent fresh context; installed skill body and only routed `best-bottles-adapter.md`, the structured contract, and validator material loaded. | “not ready to approve yet. The Best Bottles GLB contract exists, but no exported artifact plus fresh-import validation report has been provided.” |
+| `candidate_4` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Route the 2D PSD/background-removal request to a layered paper-doll workflow, not Blender bottle modeling. | Independent fresh context; frontmatter only; skill rejected and neither body nor references loaded. | “Do not use modeling-bottles-in-blender.” “This is a 2D asset-production task, not a 3D geometry task.” |
+| `candidate_5` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Reuse a closure only with explicit compatibility and reuse provenance, without inventing unsupported infrastructure. | Independent fresh context; installed skill body and only routed `blender-modeling.md` and `qa-and-handoff.md` references loaded. | “project_fingerprint: null”, “source_path: /absolute/path/to/approved-closure-source.blend-or-component”, “sha256: <SHA-256 of the exact reused source>”. |
+| `candidate_6` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Avoid calling a marketplace listing the exact bottle without the approved evidence grade and limitation. | Independent fresh context; installed skill body and only routed `evidence-research.md` loaded. | “Grade: Probable (at most).” “Not established as the exact bottle.” |
+| `candidate_7` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Model the asymmetric bottle with research grades and segment-level provenance, including inferred geometry. | Independent fresh context; installed skill body and only routed `bottle-brief.md`, `evidence-research.md`, `inferred-schematics.md`, `blender-modeling.md`, and `qa-and-handoff.md` references loaded. | “accept the assignment for visual-production only” and “AI inference must never override a photographed contour or catalog-supported numeric value.” |
+| `candidate_8` | `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender` | Preserve the protected master by creating a derivative rather than editing it in place. | Independent fresh context; installed skill body and only routed `blender-modeling.md` and `best-bottles-adapter.md` references loaded. | “do not modify the protected master. Treat it as an immutable, hash-verified input and create a named derived working copy”. |
+
 ## Baseline Results
 | Scenario | Expected behavior | Observed behavior | Result | Failure or rationale |
 |---|---|---|---|---|
@@ -50,18 +69,94 @@ The controller collected each control in an independent fresh agent context. Non
 
 ## Baseline → Candidate Comparison
 
-| Scenario | Baseline result → candidate result | Corrected failure or new rationalization | Guidance responsible |
-|---|---|---|---|
-| 1 | PASS → PASS | No baseline defect; candidate made per-segment hierarchy explicit. | `inferred-schematics.md` profile hierarchy; `bottle-brief.md` segment records. |
-| 2 | PASS → PASS | No baseline defect; candidate added exact finish-invariance fields. | `blender-modeling.md` fixed finish modules/family scaling; `qa-and-handoff.md` finish invariance. |
-| 3 | PARTIAL → PASS | Corrected: named active contract and every configurator field; no new rationalization. | `best-bottles-adapter.md`, structured contract, and validator. |
-| 4 | PASS → PASS | Negative routing preserved; Blender skill explicitly rejected. | `SKILL.md` frontmatter 2D exclusion. |
-| 5 | PARTIAL → PASS | Corrected: explicit path + SHA-256 with null project fingerprint. | `blender-modeling.md` and `qa-and-handoff.md` component reuse provenance. |
-| 6 | PARTIAL → PASS | Corrected: exact grade vocabulary and marketplace maximum `Probable`. | `evidence-research.md` candidate comparison. |
-| 7 | PARTIAL → PASS | Corrected: per-segment provenance and distinct AI/assumed treatment. | Bottle brief, evidence research, inferred schematics, Blender modeling, and QA/handoff references. |
-| 8 | PASS → PASS | Protected-master behavior preserved and project working lane made explicit. | `blender-modeling.md` source protection; `best-bottles-adapter.md` protected-master rules. |
+| Scenario | Baseline result → candidate result | Correction or preserved behavior | New rationalization | Guidance responsible |
+|---|---|---|---|---|
+| 1 | PASS → PASS | No baseline defect; candidate made per-segment hierarchy explicit. | No new rationalization. | `inferred-schematics.md` profile hierarchy; `bottle-brief.md` segment records. |
+| 2 | PASS → PASS | No baseline defect; candidate added exact finish-invariance fields. | No new rationalization. | `blender-modeling.md` fixed finish modules/family scaling; `qa-and-handoff.md` finish invariance. |
+| 3 | PARTIAL → PASS | Corrected: named active contract and every configurator field. | No new rationalization. | `best-bottles-adapter.md`, structured contract, and validator. |
+| 4 | PASS → PASS | Negative routing preserved; Blender skill explicitly rejected. | No new rationalization. | `SKILL.md` frontmatter 2D exclusion. |
+| 5 | PARTIAL → PASS | Corrected: explicit path + SHA-256 with null project fingerprint. | No new rationalization. | `blender-modeling.md` and `qa-and-handoff.md` component reuse provenance. |
+| 6 | PARTIAL → PASS | Corrected: exact grade vocabulary and marketplace maximum `Probable`. | No new rationalization. | `evidence-research.md` candidate comparison. |
+| 7 | PARTIAL → PASS | Corrected: per-segment provenance and distinct AI/assumed treatment. | No new rationalization. | Bottle brief, evidence research, inferred schematics, Blender modeling, and QA/handoff references. |
+| 8 | PASS → PASS | Protected-master behavior preserved and project working lane made explicit. | No new rationalization. | `blender-modeling.md` source protection; `best-bottles-adapter.md` protected-master rules. |
 
 No candidate behavior gap was observed. No speculative skill or reference edit was made.
+
+## Structural Verification Evidence
+
+Installed global skill path:
+`/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender`.
+Canonical package path:
+`/Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender`.
+
+The exact package resources (relative to the canonical package; nested `.git`
+metadata excluded) are:
+
+```text
+SKILL.md
+agents/openai.yaml
+references/best-bottles-adapter.md
+references/best-bottles-glb-contract.json
+references/blender-modeling.md
+references/bottle-brief.md
+references/evidence-research.md
+references/inferred-schematics.md
+references/qa-and-handoff.md
+scripts/test_validate_glb_contract.py
+scripts/validate_glb_contract.py
+```
+
+The direct validator command was:
+
+```bash
+python3 /Users/jordanrichter/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
+  /Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender
+```
+
+It exited `1` only because system Python lacked `yaml`
+(`ModuleNotFoundError: No module named 'yaml'`). The required retry was:
+
+```bash
+uv run --no-project --with pyyaml python \
+  /Users/jordanrichter/.codex/skills/.system/skill-creator/scripts/quick_validate.py \
+  /Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender
+```
+
+It exited `0` with `Skill is valid!` (and the non-failing `--no-project`
+warning). Symlink command/result:
+
+```bash
+test "$(readlink /Users/jordanrichter/.codex/skills/modeling-bottles-in-blender)" = \
+  "/Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender"
+```
+
+Exit `0`; `readlink` returned exactly
+`/Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender`.
+`wc -lw` reports `SKILL.md` as 16 lines and 182 words.
+
+Exact placeholder scan command:
+
+```bash
+rg -n 'TBD|TODO|FIXME|PLACEHOLDER' \
+  /Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender || true
+```
+
+Result: empty (no placeholder matches).
+
+Exact headless Blender regression command:
+
+```bash
+/Applications/Blender.app/Contents/MacOS/Blender --background --factory-startup \
+  --python /Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender/scripts/test_validate_glb_contract.py
+```
+
+Exit `0`; output ended with:
+
+```text
+Ran 11 tests in 3.813s
+
+OK
+```
 
 ## Trigger Micro-tests
 The controller collected all ten rows in independent fresh contexts using a mini catalog containing only `modeling-bottles-in-blender` and `paper-doll-image-processing`; no tools or file inspection occurred.
@@ -87,7 +182,8 @@ The controller collected all ten rows in independent fresh contexts using a mini
 - [x] Candidate comparison preserves layered model separation: Scenario 7 retains layered objects, and Scenario 2 retains the separate, fixed finish while regenerating only body/interior geometry.
 - [x] Candidate comparison preserves the adapter pattern: Scenario 3 names the active Best Bottles contract and validator; Scenario 8 routes changes through the named project working lane rather than copying dimensions into the global workflow.
 - [x] Candidate comparison preserves non-blocking uncertainty: Scenarios 1 and 7 preserve per-segment source classes and the `ai-inferred`/`assumed` distinction; Scenario 8 requires operator disposition.
-- [x] Candidate guidance scenarios recorded: all eight independent fresh candidate contexts are recorded above and in `.superpowers/sdd/2026-08-25-universal-blender-bottle-skill/task-6-candidate-outputs.md`.
+- [x] `candidate_1` through `candidate_8` document independent fresh contexts, exact request prompts, the installed skill path, loaded-scope status, and decisive retained output excerpts.
+- [x] All eight baseline → candidate comparisons are recorded, including correction/preserved behavior, explicit new-rationalization status, and responsible guidance location.
 - [x] Trigger micro-tests recorded.
 - [x] Global skill path: `/Users/jordanrichter/.codex/skills/modeling-bottles-in-blender`; canonical source path: `/Users/jordanrichter/Desktop/AI-OS/.agents/skills/modeling-bottles-in-blender`; `readlink` matched exactly.
 - [x] Skill package validator: direct `python3` invocation failed only because system Python lacks `yaml` (`ModuleNotFoundError`); prescribed `uv run --no-project --with pyyaml` retry exited 0 with `Skill is valid!`.
