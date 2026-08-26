@@ -41,6 +41,7 @@ evidence_limits:
 component_reuse:
   project_fingerprint: null
   source_path: scripts/paper-doll-3d/build-master-scene.py
+  source_revision: 31c87dd
   sha256: f0fb51dc248d5b91fe8effca085cd6aea65c087945bf4b5719710fecd652772d
   component: FINISH_MASTER_18_415
   reuse_mode: procedurally-instantiated fixed mesh datablock
