@@ -1,0 +1,167 @@
+identity:
+  project: Best Bottles
+  bottle_id: elegant-60ml
+  family: Elegant
+  capacity_ml: 60
+  known_codes:
+    catalog: [Elegant 60]
+intended_use:
+  acceptance_class: visual-production
+  operator_priorities:
+    - clear-glass geometry master for every Elegant derivative
+    - manufacturer-drawing envelope
+    - 9 ml luxury-studio visual language
+    - one clay dimensional gate and one polished mockup
+source_inventory:
+  views:
+    - view: front
+      source_ids: [drawing-2015, photo-front]
+      notes: Drawing governs dimensions; the original product image interprets corner and shoulder softness.
+    - view: side
+      source_ids: [drawing-2015, photo-side]
+      notes: Drawing governs depth and base flat; the original product image interprets the molded edge transitions.
+  shape_descriptors:
+    - flattened rectangular bottle with broad flat front and back faces
+    - softened vertical corners
+    - shallow shoulder flowing into a centered circular finish
+    - thick chamfered glass base
+dimensions:
+  units: mm
+  values:
+    - {name: overall_height, value: 86.7, tolerance: 1.0, source_id: drawing-2015}
+    - {name: max_body_width, value: 54.5, tolerance: 1.0, source_id: drawing-2015}
+    - {name: max_body_depth, value: 27.5, tolerance: 1.0, source_id: drawing-2015}
+    - {name: main_body_height, value: 68.9, tolerance: null, source_id: drawing-2015}
+    - {name: finish_and_shoulder_height, value: 17.8, tolerance: null, source_id: drawing-2015}
+    - {name: base_flat_width, value: 50.5, tolerance: null, source_id: drawing-2015}
+    - {name: base_flat_depth, value: 23.5, tolerance: null, source_id: drawing-2015}
+    - {name: base_chamfer, value: 2.0, tolerance: null, source_id: drawing-2015}
+    - {name: overflow_capacity_ml, value: 63.0, tolerance: null, source_id: drawing-2015}
+profile_segments:
+  - segment: lip
+    source_class: direct-photo
+    source_ids: [drawing-2015, photo-front]
+    notes: Manufacturer dimensions govern; the photograph only interprets the visible molded round-over.
+  - segment: finish
+    source_class: direct-photo
+    source_ids: [drawing-2015, finish-master-18-415, photo-front]
+    notes: Drawing dimensions and the fixed project finish master govern geometry; photograph is visual evidence only.
+  - segment: neck-land
+    source_class: direct-photo
+    source_ids: [drawing-2015, photo-front]
+    notes: Drawing fixes the elevations; photograph interprets the soft seating transition.
+  - segment: shoulder
+    source_class: direct-photo
+    source_ids: [drawing-2015, photo-front, photo-side]
+    notes: Drawing fixes the 68.9 mm body line and overall envelope; photographs interpret the curve between them.
+  - segment: body-wall
+    source_class: direct-photo
+    source_ids: [drawing-2015, photo-front, photo-side]
+    notes: Drawing fixes width and depth; original photographs confirm broad flat faces and softened vertical corners.
+  - segment: heel
+    source_class: direct-photo
+    source_ids: [drawing-2015, photo-front, photo-side]
+    notes: The 2 x 45 degree drawing callout governs the outer base chamfer; photographs interpret molding softness.
+  - segment: base
+    source_class: direct-photo
+    source_ids: [drawing-2015, photo-front, photo-side]
+    notes: Drawing fixes the base flats; photographs interpret glass thickness and edge polish.
+  - segment: push-up
+    source_class: assumed
+    source_ids: [drawing-2015]
+    notes: Interior base contour is not sectioned; solve a restrained cavity to the 63 ml overflow value.
+finish_and_fitment:
+  finish:
+    designation: 18-415
+    t_mm: 17.5
+    e_mm: 15.5
+    i_mm: 10.3
+    height_mm: 15.8
+    pitch_mm: 3.175
+    thread_turns: 3.181102
+    source_ids: [drawing-2015, finish-master-18-415]
+  opening: {diameter_mm: 10.3, source_ids: [drawing-2015]}
+  closure: {type: null, identifiers: [], source_ids: []}
+  fitment: {type: null, identifiers: [], source_ids: []}
+  seating: {datum: finish rim, engagement: not-tested, clearance_mm: null, source_ids: []}
+appearance:
+  material: {value: Type III soda-lime silica glass, source_ids: [drawing-2015]}
+  color: {value: clear, source_ids: [operator-clear-2026-08-25]}
+  decoration: []
+  liquid: {present: false, color: null, fill_level: null, source_ids: []}
+  render_requirements:
+    - reuse the warm 9 ml luxury-studio visual language
+    - preserve clear neutral glass without a yellow cast
+    - bare bottle with no closure for the geometry-master review
+delivery_contract:
+  status: missing
+  contract_path: null
+evidence:
+  - id: drawing-2015
+    kind: manufacturer engineering drawing
+    location: pipeline/paper-doll-3d/specs/GBElegant60 Bottle - Nemat.pdf
+    accessed: 2026-08-25
+    confidence: exact
+    evidence_status: direct
+  - id: photo-front
+    kind: original calibrated product image PSD
+    location: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant 60ml.psd
+    accessed: 2026-08-25
+    confidence: strong
+    evidence_status: direct
+  - id: photo-side
+    kind: original product side-view PSD
+    location: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant Side.psd
+    accessed: 2026-08-25
+    confidence: strong
+    evidence_status: direct
+  - id: finish-master-18-415
+    kind: project-native fixed finish module
+    location: scripts/paper-doll-3d/build-master-scene.py#FINISH_MASTERS[18-415]
+    accessed: 2026-08-25
+    confidence: exact
+    evidence_status: direct
+  - id: operator-clear-2026-08-25
+    kind: operator decision
+    location: current Codex session
+    accessed: 2026-08-25
+    confidence: exact
+    evidence_status: direct
+unresolved_conflicts:
+  - issue: The 2026-08-19 cockpit deferred new families pending the Cylinder 9 ml identity decision.
+    source_ids: [operator-clear-2026-08-25]
+    status: interpreted
+    interpretation: Jordan's 2026-08-25 approval authorizes this Elegant visual-production mockup without asserting that the Cylinder identity issue is resolved.
+  - issue: The drawing does not dimension outer plan corner radius or the interior cavity profile.
+    source_ids: [drawing-2015, photo-front, photo-side]
+    status: interpreted
+    interpretation: Use direct photographs for outer corner softness and solve the interior wall/base profile to the 63 ml overflow gate.
+decisions:
+  - issue: Elegant material master
+    choice: All Elegant geometry masters are clear glass; frosting, if ever needed, is a derived material treatment.
+    operator: Jordan Richter
+    date: 2026-08-25
+  - issue: First family member
+    choice: Begin with Elegant 60 ml as a visual-production master.
+    operator: Jordan Richter
+    date: 2026-08-25
+artifacts:
+  - {role: source_drawing, path: pipeline/paper-doll-3d/specs/GBElegant60 Bottle - Nemat.pdf, sha256: f250d605174d5cf44371db4fa79a891894bdd77ffa74c79efbf1d9daaea32a95}
+  - {role: source_photo_front, path: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant 60ml.psd, sha256: 11c02cd54f479c8a9a7ee030382f1b9a4e8e98fc24c4a49a358367d0ecb860ad}
+  - {role: source_photo_side, path: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images/2. 18-415 Bottles/17. Elegant 60ml/2. Elegant 60ml (18-415) Sideviews/Elegant Side.psd, sha256: 7bb02bcd80f6a341a31412b5b6fa8cd720931a2601d38d1bb870b016125bf352}
+  - {role: studio_reference, path: /Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026/pipeline/paper-doll-3d/master/working/five-variant/9ml-luxury-glass-studio/009ml-luxury-master.blend, sha256: 5b365876937365c83c31156dde570c32b77418b2efe4d7120f0e2c764e794357}
+  - {role: reused_finish_source, path: scripts/paper-doll-3d/build-master-scene.py, sha256: f0fb51dc248d5b91fe8effca085cd6aea65c087945bf4b5719710fecd652772d}
+  - {role: blender_master, path: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/elegant60-clear-master.blend, sha256: d66eea47ab2dcf523bd616eba553682063e6f41b19acd98c130214625a7e7f44}
+  - {role: clay_front, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-front.png, sha256: b9df606f16ad7dacf0738f931c5ba45235fb9a66259d67034ea9306ba84a414e}
+  - {role: clay_threequarter, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-threequarter.png, sha256: 3f1d9718f7e342bd16248303239a20b4ea9ca2b308b5e2cff34aa3be3192b59d}
+  - {role: clear_glass_hero, path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clear-hero-front.png, sha256: 0d8f17672953e0861d8acd940194bcb42db8359522f83da6ca2353f81688b445}
+validation_results:
+  - {scope: model, result: pass, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Drawing envelope, cavity, closed topology, clear material, and fixed finish passed Blender integration tests.}
+  - {scope: render, result: pass, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: Clay front and three-quarter proofs plus the clear-glass hero were visually inspected at native resolution.}
+  - {scope: artifact, result: not-tested, report_path: pipeline/paper-doll-3d/briefs/elegant-60ml/qa-report.yaml, date: 2026-08-25, notes: no delivery contract on file; GLB export was outside the approved first mockup pass.}
+approval:
+  status: in-review
+  acceptance_class: visual-production
+  operator: Jordan Richter
+  date: 2026-08-25
+  notes: Operator approved the brief and clear-glass direction; final hero is ready for operator visual review.

@@ -192,6 +192,32 @@ CYL_SPECS = {
         bore_d=9.8, lip_r=0.35,
         measured_body=True, measured_neck=True, source="drawing",
     ),
+    # ----------------------------------------------- ELEGANT family (flacon)
+    "elegant60": dict(
+        # SOURCE OF TRUTH: Nemat drawing "GBElegant60 Bottle - Nemat.pdf"
+        # (May 10 2015): Elegant 60, Type III soda-lime silica glass,
+        # 63 ml overflow, Finish 18/415. 86.7 +/-1 tall x 54.5 +/-1 wide x
+        # 27.5 +/-1 deep; main body line at 68.9; base flats 50.5 x 23.5
+        # with 2 x 45 degree chamfers; T 17.5, E 15.5, bore 10.3; finish
+        # 15.9 +/-0.3. Original front/side PSDs govern only the unprinted
+        # corner and shoulder softness. Jordan: all Elegant masters clear.
+        asset_id="BB_BTL_ELEGANT_060ML_001",
+        body="elegant", capacity_ml=60.0, overflow_ml=63.0,
+        height=86.7, diameter=54.5, depth=27.5,
+        body_top=70.9, shoulder_line=68.9,
+        base_w=50.5, base_d=23.5, chamfer_h=2.0,
+        corner_r=3.2,
+        wall=3.0, wall_face=3.0, base_th=4.5,
+        neck_finish="18-415",
+        neck_t=17.5, neck_e=15.5, neck_h=15.9,
+        thread_band=10.1,
+        thread_phase_deg=176.5,
+        thread_fade_in=0.18, thread_lead_out=0.12,
+        thread_top_gap=0.4,
+        bore_d=10.3, lip_r=0.5,
+        measured_body=True, measured_neck=True, source="drawing",
+    ),
+
     # ------------------------------------------------- CIRCLE family (disc)
     # First non-revolve shape: circular front silhouette, stadium plan
     # section, rectangular plinth foot. Built as a superellipse loft (see
@@ -864,6 +890,83 @@ def disc_cavity_ml(s):
         A1 = _rrect_area(max(a1, 1e-4), max(b1, 1e-4), n1)
         vol += (A0 + A1) / 2.0 * abs(z0 - z1)
     return vol / 1000.0
+
+
+def elegant_stations(s, fm=None):
+    """Closed loft stations for the Elegant flattened rectangular flacon.
+
+    The drawing fixes the broad front/depth envelope and 2 x 45 degree base
+    chamfer. Original product photographs govern only the molded corner and
+    shoulder softness between those printed datums. The fixed finish remains
+    a separate module attached at ``height - finish_h``.
+    """
+    half_w = s["diameter"] / 2.0
+    half_d = s["depth"] / 2.0
+    base_w = s["base_w"] / 2.0
+    base_d = s["base_d"] / 2.0
+    corner = s["corner_r"]
+    chamfer_h = s["chamfer_h"]
+    shoulder_z = s["shoulder_line"]
+    finish = fm or FINISH_MASTERS[s["neck_finish"]]
+    datum_z = s["height"] - finish["finish_h"]
+    neck_r = finish["neck_d"] / 2.0
+    bore_r = finish["bore_d"] / 2.0
+
+    stations = [
+        (0.0, 0.0, 1.0, 1.2),
+        (base_w, base_d, 2.2, 0.0),
+        (base_w + 0.55, base_d + 0.55, 2.5, 0.55),
+        (half_w, half_d, corner, chamfer_h),
+        (half_w, half_d, corner, chamfer_h + 0.8),
+        (half_w, half_d, corner, shoulder_z - 1.0),
+        (half_w, half_d, corner, shoulder_z),
+    ]
+
+    # Shallow two-millimetre shoulder: broad and nearly flat in front, with
+    # depth converging early enough to match the original three-quarter view.
+    shoulder_span = datum_z - shoulder_z
+    for fraction, width_scale, depth_scale in (
+        (0.20, 0.94, 0.93),
+        (0.45, 0.77, 0.82),
+        (0.70, 0.54, 0.69),
+        (0.88, 0.40, 0.62),
+    ):
+        z = shoulder_z + shoulder_span * fraction
+        a = neck_r + (half_w - neck_r) * width_scale
+        b = neck_r + (half_d - neck_r) * depth_scale
+        stations.append((a, b, min(corner, b), z))
+    stations.append((neck_r, neck_r, neck_r, datum_z))
+    stations.append((bore_r, bore_r, bore_r, datum_z))
+
+    # Interior is evidence-limited: retain a straight bore, then open into a
+    # restrained rectangular cavity. Wall/base values are explicitly audited
+    # against the drawing's 63 ml overflow capacity.
+    inner_w = half_w - s["wall"]
+    inner_d = half_d - s.get("wall_face", s["wall"])
+    inner_corner = max(1.2, corner - 1.4)
+    stations.extend([
+        (bore_r, bore_r, bore_r, datum_z - 1.1),
+        (bore_r + 1.0, bore_r + 0.8, bore_r, datum_z - 1.8),
+        (inner_w * 0.58, inner_d * 0.72, min(inner_corner, inner_d * 0.72), shoulder_z - 0.2),
+        (inner_w, inner_d, inner_corner, shoulder_z - 2.2),
+        (inner_w, inner_d, inner_corner, s["base_th"] + 1.0),
+        (max(inner_w - 0.8, 1.0), max(inner_d - 0.8, 1.0), inner_corner, s["base_th"]),
+        (0.0, 0.0, 1.0, s["base_th"] + 0.7),
+    ])
+    return stations
+
+
+def elegant_cavity_ml(s):
+    """Integrate the Elegant inner loft and report overflow capacity in ml."""
+    stations = elegant_stations(s, FINISH_MASTERS[s["neck_finish"]])
+    top = max(range(len(stations)), key=lambda index: stations[index][3])
+    inner = stations[top:]
+    volume = 0.0
+    for (a0, b0, r0, z0), (a1, b1, r1, z1) in zip(inner, inner[1:]):
+        area0 = _rrect_area(max(a0, 1e-4), max(b0, 1e-4), r0)
+        area1 = _rrect_area(max(a1, 1e-4), max(b1, 1e-4), r1)
+        volume += (area0 + area1) / 2.0 * abs(z0 - z1)
+    return volume / 1000.0
 
 
 def loft(name, stations, segments=SEGMENTS, modulate=None):
@@ -1899,6 +2002,13 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
     if s.get("body") == "disc":
         bottle = loft(s["asset_id"], disc_stations(s, fm))
         cav = disc_cavity_ml(s)
+        tgt = s.get("overflow_ml", s["capacity_ml"])
+        print(f"CAVITY_AUDIT {bottle_key}: {cav:.1f} ml enclosed "
+              f"vs {tgt:.0f} ml overflow spec "
+              f"({'OK' if abs(cav - tgt) / tgt < 0.08 else 'OUT OF GATE'})")
+    elif s.get("body") == "elegant":
+        bottle = loft(s["asset_id"], elegant_stations(s, fm))
+        cav = elegant_cavity_ml(s)
         tgt = s.get("overflow_ml", s["capacity_ml"])
         print(f"CAVITY_AUDIT {bottle_key}: {cav:.1f} ml enclosed "
               f"vs {tgt:.0f} ml overflow spec "
