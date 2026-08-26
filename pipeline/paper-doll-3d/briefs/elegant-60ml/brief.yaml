@@ -46,16 +46,21 @@ profile_segments:
     notes: Manufacturer dimensions govern; the photograph only interprets the visible molded round-over.
   - segment: finish
     source_class: direct-photo
-    source_ids: [drawing-2015, finish-master-18-415, photo-front]
-    notes: Drawing dimensions and the fixed project finish master govern geometry; photograph is visual evidence only.
+    source_ids: [drawing-2015, finish-master-18-415, photo-front, operator-wall-target]
+    notes: >-
+      Drawing dimensions and the fixed project finish master govern geometry.
+      Photographs guide the compact visual read: rounded continuous helical
+      crests with clean spacing, not disconnected decorative rings; the
+      operator target never overrides the locked 18-415 dimensions or thread
+      turns.
   - segment: neck-land
     source_class: direct-photo
-    source_ids: [drawing-2015, photo-front]
-    notes: Drawing fixes the elevations; photograph interprets the soft seating transition.
+    source_ids: [drawing-2015, photo-front, operator-elegant-50-photo, operator-wall-target]
+    notes: Drawing fixes the elevations. Photographs require a compact exposed lower land that grows directly out of the shoulder, without a tall straight stem or added collar.
   - segment: shoulder
     source_class: direct-photo
-    source_ids: [drawing-2015, photo-front, photo-side, operator-elegant-50-photo]
-    notes: Drawing fixes the 68.9 mm body line and overall envelope; original photographs and the supporting physical-family photo interpret one continuous curve with no floating annular shelf.
+    source_ids: [drawing-2015, photo-front, photo-side, operator-elegant-50-photo, operator-wall-target]
+    notes: Drawing fixes the 68.9 mm body line and overall envelope. Photographs require a shallow, softly crowned rise from the rounded upper corners into the neck, with no broad flat shoulder slab, hard step, or floating annular shelf.
   - segment: body-wall
     source_class: direct-photo
     source_ids: [drawing-2015, photo-front, photo-side, operator-wall-target]
@@ -99,6 +104,9 @@ appearance:
     - no transmission back card or other apparent object inside the empty cavity
     - no coplanar body-to-finish dielectric seam or annular shoulder artifact in the beauty render
     - slim, consistent visible side walls matching the operator target
+    - shoulder must rise shallowly and continuously into the neck rather than reading as a flat glass shelf
+    - neck must remain compact, with minimal exposed straight land between shoulder and lower thread
+    - threads must read as one rounded continuous 18-415 helix with clean, even spacing; locked finish dimensions and turns govern
     - bare bottle with no closure for the geometry-master review
 delivery_contract:
   status: missing
@@ -180,6 +188,10 @@ decisions:
     date: 2026-08-25
   - issue: Elegant visible wall target
     choice: Use the supplied slim-wall reference as the visual target; calibrate the visible side wall to 1.6 mm and retain capacity-gated uncertainty for unsectioned interior dimensions.
+    operator: Jordan Richter
+    date: 2026-08-25
+  - issue: Elegant shoulder, neck, and thread character
+    choice: Preserve the reference's shallow crowned shoulder, compact exposed neck land, and rounded continuous thread read while keeping the manufacturer-backed fixed 18-415 dimensions and turns unchanged.
     operator: Jordan Richter
     date: 2026-08-25
 artifacts:

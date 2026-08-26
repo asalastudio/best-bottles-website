@@ -82,10 +82,12 @@ render_qa:
     - Clear glass shows slim 1.6 mm side walls, an empty continuous cavity, polished molded edges and bore, and a centered fixed finish.
     - The inner shoulder opens continuously without an annular shelf, and the derived render shell removes the false coplanar body/finish boundary.
     - A faint continuous oval remains at the real open-bore transition; no dark hole, floating ring, boolean spoke, or separate internal object remains.
+    - Operator reference requires the outer shoulder to read as a shallow crowned rise, the exposed neck land to remain compact, and the thread to read as a rounded continuous helix rather than separate rings.
+    - Manufacturer-backed 18-415 dimensions and thread turns remain authoritative; the operator image guides visible character only.
     - No studio emitter is visible to transmission rays and no transmission back card is present.
     - Off-axis reflections define the shoulder, walls, base, and finish without forming a central rectangular patch.
     - Light neutral seamless studio matches the high-fidelity 9 ml visual language.
 operator_disposition:
   acceptance_class: visual-production
   decision: revise
-  notes: Operator rejected revision 01's transmitted cards and revision 02's apparent shoulder hole, then supplied the wall target calibrated for revision 08. Revision 08 awaits final operator approval; no manufacturing-accuracy or delivery-contract claim is made.
+  notes: Operator rejected revision 01's transmitted cards and revision 02's apparent shoulder hole, then supplied the wall target calibrated for revision 08 and explicitly flagged the shoulder, neck, and thread character for comparison. Revision 08 remains in review; no manufacturing-accuracy or delivery-contract claim is made.
