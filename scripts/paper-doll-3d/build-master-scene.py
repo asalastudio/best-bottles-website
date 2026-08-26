@@ -2116,19 +2116,26 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
         key.rotation_euler = aim(key)
         # The centred box straddles the lens axis; on tall bottles the camera
         # retreats (envelope) BEHIND the tilted quad and every ray hits it —
-        # a pure-white frame. Camera rays skip it; glossy/transmission (the
-        # reflections that ARE the lighting) still see it.
+        # a pure-white frame. Camera rays always skip it and glossy rays keep
+        # the highlight; clear-glass transmission skips it below so the panel
+        # cannot refract as an apparent object inside a broad flat cavity.
         key.visible_camera = False
+        if glass == "clear":
+            key.visible_transmission = False
         link(key, c_light)
     else:
         key = feathered_emitter("BB_LIGHT_KEY_SOFTBOX", 420, 700, 9.0, tint=WHITE)
         key.location = (-230, -230, mid + 55)        # 45 deg front-left
         key.rotation_euler = aim(key)
+        if glass == "clear":
+            key.visible_transmission = False
         link(key, c_light)
 
         fill = feathered_emitter("BB_CARD_FILL_RIGHT", 620, 680, 1.4, tint=WHITE)
         fill.location = (310, -120, mid + 20)        # broad neutral card, camera-right
         fill.rotation_euler = aim(fill)
+        if glass == "clear":
+            fill.visible_transmission = False
         link(fill, c_light)
 
     top = feathered_emitter("BB_CARD_TOP", 700, 700,
@@ -2136,6 +2143,8 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
                             tint=WHITE)
     top.location = (0, -30, 200)                     # overhead card: shoulder curvature
     top.rotation_euler = aim(top)
+    if glass == "clear":
+        top.visible_transmission = False
     link(top, c_light)
 
     # even wash on the sweep — wider than the sweep itself so no pool edge
@@ -2148,6 +2157,8 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
                              tint=WHITE)
     wash.location = (0, -60, 520)
     wash.rotation_euler = (math.radians(48), 0, 0)
+    if glass == "clear":
+        wash.visible_transmission = False
     link(wash, c_light)
 
 

@@ -24,6 +24,8 @@ checks:
   - {field: thread_band_bottom_mm, result: pass, expected: 4.8, tolerance: 0.3, observed: 4.59}
   - {field: finish_scale, result: pass, expected: [1.0, 1.0, 1.0], observed: [1.0, 1.0, 1.0]}
   - {field: clear_glass_material, result: pass, expected: BB_MAT_GLASS_CLEAR, observed: BB_MAT_GLASS_CLEAR}
+  - {field: clear_studio_card_transmission_visibility, result: pass, expected: false, observed: false}
+  - {field: transmission_back_card, result: pass, expected: absent, observed: absent}
   - {field: body_and_finish_manifold, result: pass, expected: closed, observed: closed}
 profile_provenance:
   measured_silhouette: []
@@ -57,12 +59,21 @@ render_qa:
   result: pass
   clay_front: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-front.png
   clay_threequarter: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clay-threequarter.png
-  clear_glass_hero: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clear-hero-front.png
+  rejected_revision:
+    result: fail
+    path: pipeline/paper-doll-3d/renders/elegant-60ml-clear/elegant60-clear-hero-front.png
+    reason: Transmitted centered studio panels produced cloudy square forms that read as objects inside the bottle.
+  clear_glass_hero: pipeline/paper-doll-3d/renders/elegant-60ml-clear/revision-02/elegant60-clear-hero-front.png
+  blender_master: pipeline/paper-doll-3d/master/working/elegant-60ml-clear/revision-02/elegant60-clear-master.blend
+  lighting_profile: standard-off-axis
+  backdrop: '#EFE9DE'
   visual_observations:
     - Broad front and flattened depth match the Elegant photographs.
-    - Clear glass shows wall thickness, interior cavity, polished molded edges, and a centered fixed finish.
-    - Warm seamless studio matches the approved 9 ml visual language.
+    - Clear glass shows wall thickness, an empty continuous cavity, polished molded edges, and a centered fixed finish.
+    - No studio emitter is visible to transmission rays and no transmission back card is present.
+    - Off-axis reflections define the shoulder, walls, base, and finish without forming a central rectangular patch.
+    - Light neutral seamless studio matches the high-fidelity 9 ml visual language.
 operator_disposition:
   acceptance_class: visual-production
-  decision: approved
-  notes: Operator approved the brief and clear-glass direction. Final hero remains available for visual revision; no manufacturing-accuracy or delivery-contract claim is made.
+  decision: revise
+  notes: Operator rejected revision 01 and requested clear, reflective, visibly empty glass. Revision 02 addresses that request and awaits operator approval; no manufacturing-accuracy or delivery-contract claim is made.

@@ -77,6 +77,61 @@ class Elegant60ContractTests(unittest.TestCase):
         self.assertGreaterEqual(cavity_ml, 63.0 * 0.92)
         self.assertLessEqual(cavity_ml, 63.0 * 1.08)
 
+    def test_clear_symmetric_studio_reflects_without_transmitting_cards(self):
+        """Reflection panels must shape glass without appearing inside it."""
+        self.elegant_spec()
+        with tempfile.TemporaryDirectory(prefix="bb-elegant60-optics-test-") as temp_dir:
+            output = Path(temp_dir) / "elegant-60ml-clear.blend"
+            self.builder.build(
+                output,
+                samples=8,
+                bottle_key="elegant60",
+                glass="clear",
+                lighting="symmetric",
+            )
+
+            cards = [
+                bpy.data.objects[name]
+                for name in (
+                    "BB_LIGHT_KEY_CENTER",
+                    "BB_CARD_TOP",
+                    "BB_LIGHT_SWEEP_WASH",
+                )
+            ]
+            for card in cards:
+                self.assertTrue(
+                    card.visible_glossy,
+                    f"{card.name} must remain visible to reflective glass rays",
+                )
+                self.assertFalse(
+                    card.visible_transmission,
+                    f"{card.name} must not refract as a rectangular object inside clear glass",
+                )
+
+    def test_clear_standard_studio_reflects_without_transmitting_key_or_fill(self):
+        """The Elegant off-axis key/fill must not appear inside clear glass."""
+        self.elegant_spec()
+        with tempfile.TemporaryDirectory(prefix="bb-elegant60-standard-optics-test-") as temp_dir:
+            output = Path(temp_dir) / "elegant-60ml-clear.blend"
+            self.builder.build(
+                output,
+                samples=8,
+                bottle_key="elegant60",
+                glass="clear",
+                lighting="standard",
+            )
+
+            for name in ("BB_LIGHT_KEY_SOFTBOX", "BB_CARD_FILL_RIGHT"):
+                card = bpy.data.objects[name]
+                self.assertTrue(
+                    card.visible_glossy,
+                    f"{card.name} must remain visible to reflective glass rays",
+                )
+                self.assertFalse(
+                    card.visible_transmission,
+                    f"{card.name} must not refract as a rectangular object inside clear glass",
+                )
+
     def test_full_build_uses_clear_glass_and_unscaled_18_415_finish(self):
         self.elegant_spec()
         with tempfile.TemporaryDirectory(prefix="bb-elegant60-test-") as temp_dir:
