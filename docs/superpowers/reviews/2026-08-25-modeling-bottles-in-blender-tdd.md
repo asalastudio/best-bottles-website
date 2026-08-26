@@ -181,11 +181,23 @@ the protected sentinel became invalid, and passed after the non-destructive
 implementation was restored. The exact full headless command above was rerun
 after all refactoring and passed 19 tests.
 
+The scoped re-review rejected one part of that first GREEN implementation: it
+used label UV-V direction as an uncontracted hard uprightness gate. That could
+reject a valid upright bottle whose 0-1 label UVs were mirrored, rotated, or
+atlas-oriented, while still being defeatable by re-unwrapping an inverted
+assembly. Final adjudication removed UV direction from the hard gate, retained
+it as a diagnostic, and made the limitation explicit: without a
+delivery-contract top landmark, generic geometry cannot prove semantic
+uprightness after inversion has been baked into identity-transform vertices.
+Consumer-visible uprightness therefore requires visual QA. The structured JSON
+contract remained unchanged.
+
 The new structural coverage proves:
 
-- `authoring.up_axis` requires body local +Z, envelope-axis consistency, and
-  positive UV-V/world-Z semantic witnesses for both required labels; the
-  vertex-baked inversion fails while the upright centered-origin control passes;
+- `authoring.up_axis` requires body local +Z and envelope-axis consistency;
+  label UV-V/world-Z direction is diagnostic only, the vertex-baked inversion
+  fixture documents the non-authoritative semantic-orientation limitation, and
+  the upright centered-origin control passes;
 - `validate_glb()` uses a disposable scene and restores the protected caller
   scene, selected/unselected state, active object, and imperial unit settings
   after both a passing validation and a hard contract failure; temporary
@@ -211,8 +223,9 @@ The fresh Boston Round smoke built successfully in a new `/tmp` directory and
 the validator enumerated all 17 contract leaves. It remains **not ready** for
 one project-owned gap only: `authoring.units` imports at approximately 1,000×
 scale (`78,000 × 32,998.7 × 32,998.7 mm` observed versus
-`78 × 33 × 33 mm`). Both new label semantic witnesses pass, as do +Z,
-floor, triangle budget (37,824), combined cavity, UV, and Draco checks. The
+`78 × 33 × 33 mm`). Its label UV-direction diagnostics align with +Z, and the
+hard +Z, floor, triangle budget (37,824), combined cavity, UV, and Draco checks
+pass. The
 56,920-byte size is still advisory. No builder or protected master changed.
 
 ## Trigger Micro-tests
@@ -251,5 +264,5 @@ The controller collected all ten rows in independent fresh contexts using a mini
 - [x] Missing-delivery-contract behavior: Scenario 7 uses the required behavior—report the export-readiness gap without inventing destination requirements when no delivery contract is configured.
 - [x] Protected-source behavior: Scenario 8 leaves locked/hash-verified masters unchanged, creates a named working-lane derivative, validates it, and requires operator disposition.
 - [x] Full Blender validator regression: 19 tests passed with the exact headless Blender command, including a true successful CLI subprocess and protected-scene/public-import regressions.
-- [x] Best Bottles GLB artifact-contract result: all 17 fields were enumerated; the current project-owned Boston Round smoke artifact is not ready because only `authoring.units` fails after import at approximately 1,000× too large. Both label semantic witnesses pass. Its 56,920-byte size is an advisory warning above 46,080 bytes; the builder remained untouched.
-- [x] Remaining limitation: the skill's 19 Blender validator tests pass, but the current project-owned Boston Round smoke artifact fails only `authoring.units` because it imports approximately 1,000× too large; its 56,920-byte size is an advisory warning above 46,080. This is a project artifact/exporter gap, not a skill-validator failure.
+- [x] Best Bottles GLB artifact-contract result: all 17 fields were enumerated; the current project-owned Boston Round smoke artifact is not ready because only `authoring.units` fails after import at approximately 1,000× too large. Its label UV-direction diagnostics align with +Z. Its 56,920-byte size is an advisory warning above 46,080 bytes; the builder remained untouched.
+- [x] Remaining limitations: the skill's 19 Blender validator tests pass, but consumer-visible uprightness still requires visual QA when no explicit top landmark exists, and the current project-owned Boston Round smoke artifact fails only `authoring.units` because it imports approximately 1,000× too large. Its 56,920-byte size is an advisory warning above 46,080. The units issue is a project artifact/exporter gap, not a skill-validator failure.
