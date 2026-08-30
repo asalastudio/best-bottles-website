@@ -78,9 +78,14 @@ import csv
 import math
 import os
 import sys
+from pathlib import Path
 
 import numpy as np
 import bpy
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import finish_splice
+import swirl
 
 MM = 0.001                  # ledger millimetres -> Blender/GLB metres
 DEFAULT_CORNER_FRAC = 0.18  # boxy corner radius default: 18% of smaller side
@@ -107,6 +112,10 @@ def parse_args():
     p.add_argument("--keep-scene", action="store_true",
                    help="skip cleanup (single-SKU debugging: open the .blend after)")
     p.add_argument("--save-blend", default=None, help="write a .blend for inspection")
+    p.add_argument("--splice-finish", action="store_true",
+                   help="replace the traced neck with the drawing-exact finish "
+                        "master for the row's neck code (see finish_splice.py). "
+                        "Off by default so before/after stays comparable.")
     return p.parse_args(argv)
 
 
@@ -295,6 +304,100 @@ def trace_profile(alpha, n_points):
 # Stage 3 - force TRUE millimetre size
 # ---------------------------------------------------------------------------
 
+_RIG = None
+
+
+def _load_rig():
+    """The render rig owns FINISH_MASTERS and build_finish_master(); its
+    filename is hyphenated, so it cannot be a plain import. Cached: building a
+    finish master per row would re-import the module 40+ times."""
+    global _RIG
+    if _RIG is None:
+        import importlib.util as ilu
+        rig_path = (Path(__file__).resolve().parents[3]
+                    / "scripts" / "paper-doll-3d" / "build-master-scene.py")
+        spec = ilu.spec_from_file_location("build_master_scene", rig_path)
+        mod = ilu.module_from_spec(spec)
+        sys.modules["build_master_scene"] = mod
+        spec.loader.exec_module(mod)
+        _RIG = mod
+    return _RIG
+
+
+def _load_finish_masters():
+    return _load_rig().FINISH_MASTERS
+
+
+def graft_finish_master(body, finish_key, datum_z_m):
+    """UNION the canonical threaded finish onto a body that ends at the datum.
+
+    THREAD-STANDARD.md §0: the finish is ONE canonical component and bodies
+    INSTANCE it — they never rebuild or scale it. So the master is built at its
+    own sheet dimensions (millimetres, datum at z=0), scaled ONCE into the
+    body's metre space, dropped on the datum, and EXACT-unioned.
+
+    Returns the audit dict from audit_finish_master() so the thread is graded
+    against the sheet on every build, not just when someone remembers to look.
+    """
+    import bmesh
+    from mathutils import Matrix
+
+    rig = _load_rig()
+    master = rig.build_finish_master(finish_key)
+
+    # audit_finish_master() PRINTS its table and returns None, so calling it
+    # and testing the return value silently grades nothing — the first version
+    # of this gate looked green on every build while checking literally
+    # nothing. Capture stdout and parse the FINISH_QA_JSON line it emits.
+    import contextlib, io, json as _json
+    audit = None
+    try:
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rig.audit_finish_master(master, rig.FINISH_MASTERS[finish_key])
+        for line in buf.getvalue().splitlines():
+            if line.startswith("FINISH_QA_JSON "):
+                audit = _json.loads(line[len("FINISH_QA_JSON "):])
+                break
+        print(buf.getvalue(), end="")           # keep the table in the log
+        if audit is None:
+            audit = {"error": "no FINISH_QA_JSON emitted"}
+    except Exception as exc:                       # audit is advisory, not fatal
+        audit = {"error": str(exc)}
+
+    # DO THE BOOLEAN IN MILLIMETRES, not metres.
+    #
+    # The masters are watertight on their own (verified: 0 non-manifold for all
+    # four finishes) and were audited in millimetres. Scaling one down to metres
+    # first asks EXACT to resolve a 0.75 mm thread depth at 0.00075 units, and
+    # it returns a shell with ~6000 non-manifold edges. Same family of trap as
+    # Blender's 0.01 m default merge threshold: the solver's tolerances are
+    # tuned for metre-scale objects, so keep the fine geometry numerically big
+    # and scale the RESULT down afterwards.
+    up, down = 1.0 / MM, MM
+    body.data.transform(Matrix.Diagonal((up, up, up, 1.0)))
+    master.matrix_world = Matrix.Translation((0.0, 0.0, datum_z_m * up))
+
+    bpy.context.view_layer.objects.active = body
+    body.select_set(True)
+    mod = body.modifiers.new("FINISH_UNION", "BOOLEAN")
+    mod.operation = "UNION"
+    mod.solver = "EXACT"
+    mod.object = master
+    bpy.ops.object.modifier_apply(modifier="FINISH_UNION")
+    bpy.data.objects.remove(master, do_unlink=True)
+
+    bm = bmesh.new()
+    bm.from_mesh(body.data)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-4)   # mm space
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(body.data)
+    bm.free()
+    body.data.transform(Matrix.Diagonal((down, down, down, 1.0)))   # back to m
+    _shade_smooth(body)
+    return audit
+
+
 def scale_profile(profile01, height_mm, across_mm):
     return [(r01 * (across_mm / 2.0) * MM, y01 * height_mm * MM)
             for y01, r01 in profile01]
@@ -435,6 +538,40 @@ def _extrude(name, profile_m, depth_over_width, corner_r_m, ring_points,
     mesh.validate()
     obj = bpy.data.objects.new(name, mesh)
     bpy.context.collection.objects.link(obj)
+    _shade_smooth(obj)
+    return obj
+
+
+def build_body_swirled(name, profile_m, segments, body_id, shoulder_z_m):
+    """Lathe a body with per-angle flute modulation.
+
+    _revolve() drives Blender's SCREW modifier, which sweeps one profile and
+    cannot vary radius with theta — so it can only ever produce a smooth solid
+    of revolution. A fluted body therefore uses the SAME explicit construction
+    the thread uses: build-master-scene.revolve(), which takes a
+    modulate(r, z, theta) callback. Reusing that function rather than
+    reimplementing it keeps one lathe in the project, not two.
+
+    That revolve works in the profile's own units and expects axis points to be
+    supplied, so the profile goes in as millimetres (the unit every measured
+    swirl record is written in) and the finished mesh is scaled back to metres.
+    """
+    from mathutils import Matrix
+
+    rig = _load_rig()
+    mod = swirl.swirl_modulator(body_id,
+                                z_lo_mm=profile_m[0][1] / MM,
+                                z_hi_mm=shoulder_z_m / MM)
+    if mod is None:
+        raise ValueError(f"no swirl record for {body_id}")
+
+    prof_mm = [(r / MM, z / MM) for r, z in profile_m]
+    prof_mm = ([(0.0, prof_mm[0][1])] + prof_mm + [(0.0, prof_mm[-1][1])])
+
+    obj = rig.revolve(f"BB_BTL_{body_id}", prof_mm,
+                      segments=segments, modulate=mod)
+    bpy.context.collection.objects.link(obj)
+    obj.data.transform(Matrix.Diagonal((MM, MM, MM, 1.0)))   # mm -> m
     _shade_smooth(obj)
     return obj
 
@@ -659,17 +796,66 @@ def process_row(row, args, report):
     rim_z_m = profile_m[-1][1]
     shoulder_z_m = (seat_mm * MM) if seat_mm else derive_seat_z(profile_m)
 
+    # Stage 3b - the drawing owns the neck.
+    # A photograph cannot be trusted for the finish: the 9ml cylinder traced
+    # 11.5mm of neck against a drawn 13.76, which buried 4.12mm of a correct
+    # cap in the shoulder. Pin the finish to the sheet, keep the traced body.
+    splice_note = ""
+    if args.splice_finish:
+        masters = _load_finish_masters()
+        if neck not in masters:
+            report.append((sku, "SKIP",
+                           f"--splice-finish: no finish master for {neck!r}; "
+                           f"have {sorted(masters)}", ""))
+            return
+        fin = masters[neck]
+        before = profile_m
+        profile_m, datum_z_m = finish_splice.splice_profile(
+            profile_m, fin, rim_z_m)
+        rpt = finish_splice.report(before, profile_m, fin, rim_z_m, datum_z_m)
+        splice_note = (f" spliced {neck} "
+                       f"(traced neck {rpt['traced_neck_len_mm']:.2f} -> "
+                       f"drawing {rpt['drawing_neck_len_mm']:.2f}mm, "
+                       f"r@datum {rpt['radius_at_datum_before_mm']:.2f} -> "
+                       f"{rpt['radius_at_datum_after_mm']:.2f}mm, "
+                       f"blend {rpt['blend_mm']:.1f}mm)")
+        # A spliced neck IS the round finish, so the boxy round-neck blend
+        # should start exactly there rather than at the traced 72% shoulder.
+        shoulder_z_m = datum_z_m
+
     corner_mm = get_mm(row, "corner_radius_mm")
     if shape == "boxy" and not corner_mm:
         corner_mm = DEFAULT_CORNER_FRAC * min(across_mm, depth_mm)
 
-    body = build_body(
+    if swirl.has_swirl(out_name):
+        # Fluted glass is GEOMETRY: the live photo's silhouette wobbles 1.93mm,
+        # and no material can move an outline. See scripts/swirl.py.
+        body = build_body_swirled(f"BB_BTL_{out_name}", profile_m,
+                                  args.segments, out_name, shoulder_z_m)
+        splice_note += f" swirl({swirl.SWIRL_SPECS[out_name]['flutes']} flutes)"
+    else:
+      body = build_body(
         f"BB_BTL_{out_name}", profile_m, args.segments, shape=shape,
         depth_over_width=(depth_mm / across_mm) if depth_mm else 1.0,
         corner_r_m=(corner_mm * MM) if corner_mm else 0.004,
         seat_z_m=shoulder_z_m,
         max_hd=(depth_mm / 2.0 * MM) if depth_mm else None,
-    )
+      )
+    # The threaded finish is grafted AFTER the body solid exists and BEFORE
+    # validation, so the dimension gate measures what actually ships.
+    if args.splice_finish:
+        audit = graft_finish_master(body, neck, datum_z_m)
+        if isinstance(audit, dict) and "error" not in audit:
+            bad = [r for r in audit.get("rows", [])
+                   if r.get("status") == "FAIL"]
+            splice_note += (f" thread-audit {'PASS' if not bad else 'FAIL'}"
+                            + ("" if not bad else
+                               " [" + "; ".join(
+                                   f"{r['dim']} dev {r['deviation']}" for r in bad)
+                               + "]"))
+        elif isinstance(audit, dict):
+            splice_note += f" thread-audit unavailable ({audit['error'][:60]})"
+
     mounts = add_mount(body, neck, rim_z_m, shoulder_z_m)
 
     failures, measured = validate(body, shape, height_mm, across_mm, depth_mm,
@@ -681,7 +867,8 @@ def process_row(row, args, report):
         out_path = os.path.join(args.out, f"{out_name}.glb")
         export_glb(body, mounts, out_path)
         report.append((sku, "PASS", f"{out_path} [{shape}, from {origin}, "
-                                    f"{len(body.data.polygons)} faces]", meas))
+                                    f"{len(body.data.polygons)} faces]"
+                                    f"{splice_note}", meas))
 
     if args.save_blend:
         bpy.ops.wm.save_as_mainfile(filepath=args.save_blend)

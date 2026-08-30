@@ -1,0 +1,22 @@
+{
+  "closures": [
+    {
+      "file": "BB_CAP_13415.glb",
+      "mesh": "BB_CAP_13415",
+      "kind": "cap",
+      "finish": "13-415",
+      "sku_coverage": 111,
+      "provisional": true,
+      "attach": "BB_ATTACH_NECK"
+    },
+    {
+      "file": "BB_CAP_17415.glb",
+      "mesh": "BB_CAP_17415",
+      "kind": "cap",
+      "finish": "17-415",
+      "sku_coverage": 145,
+      "provisional": false,
+      "attach": "BB_ATTACH_NECK"
+    }
+  ]
+}

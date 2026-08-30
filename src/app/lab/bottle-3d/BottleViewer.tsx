@@ -194,12 +194,29 @@ function useDatumRing(target: THREE.Object3D | null, visible: boolean, radius: n
   }, [target, visible, radius]);
 }
 
-export default function BottleViewer({ bodies }: { bodies: Body[] }) {
+export default function BottleViewer({
+  bodies,
+  threadedIds = [],
+}: {
+  bodies: Body[];
+  /** bodyIds that also exist under /models/bodies-threaded/ */
+  threadedIds?: string[];
+}) {
   const [i, setI] = useState(0);
   const [glass, setGlass] = useState<GlassKey>("clear");
   const [showDatum, setShowDatum] = useState(true);
+  const [threaded, setThreaded] = useState(true);
   const [m, setM] = useState<Measured | null>(null);
   const body = bodies[i];
+
+  // The threaded build carries the drawing-exact finish master (real helix)
+  // grafted on; the original has a smooth silhouette-traced neck. Only some
+  // bodies have one, so fall back rather than 404.
+  const threadedSet = useMemo(() => new Set(threadedIds), [threadedIds]);
+  const hasThreaded = threadedSet.has(body.bodyId);
+  const url = hasThreaded && threaded
+    ? body.url.replace("/models/bodies/", "/models/bodies-threaded/")
+    : body.url;
 
   // 18-415 / 17-415 / 13-415 outside diameters, in metres.
   const neckRadiusM = useMemo(() => {
@@ -246,10 +263,25 @@ export default function BottleViewer({ bodies }: { bodies: Body[] }) {
           ))}
         </div>
 
-        <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 14, cursor: "pointer" }}>
+        <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 8, cursor: "pointer" }}>
           <input type="checkbox" checked={showDatum} onChange={(e) => setShowDatum(e.target.checked)} />
           <span>show BB_ATTACH_NECK</span>
         </label>
+
+        <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 4,
+                        cursor: hasThreaded ? "pointer" : "not-allowed",
+                        opacity: hasThreaded ? 1 : 0.4 }}>
+          <input type="checkbox" checked={hasThreaded && threaded} disabled={!hasThreaded}
+                 onChange={(e) => setThreaded(e.target.checked)} />
+          <span>threaded finish</span>
+        </label>
+        <div style={{ color: "#8b8b96", marginBottom: 14, fontSize: 11 }}>
+          {hasThreaded
+            ? (threaded
+                ? "drawing-exact finish master, grafted"
+                : "original silhouette-traced neck")
+            : "no threaded build for this body yet"}
+        </div>
 
         <div style={{ borderTop: "1px solid #26262c", paddingTop: 10 }}>
           {bodies.map((b, idx) => (
@@ -272,7 +304,7 @@ export default function BottleViewer({ bodies }: { bodies: Body[] }) {
           <color attach="background" args={["#101014"]} />
           <Suspense fallback={null}>
             <Center key={body.bodyId}>
-              <Bottle url={body.url} glass={glass} showDatum={showDatum}
+              <Bottle url={url} glass={glass} showDatum={showDatum}
                       neckRadiusM={neckRadiusM} onMeasure={setM} />
             </Center>
             {/* Environment built in-scene: no CDN fetch, CSP-safe. */}

@@ -26,6 +26,13 @@ for path in a.glb:
     empties = [o for o in bpy.data.objects if o.type == "EMPTY"]
 
     bm = bmesh.new(); bm.from_mesh(ob.data)
+    # WELD BEFORE COUNTING. glTF stores a separate vertex per normal, so every
+    # sharp edge round-trips as two coincident vertex pairs and the seam reads
+    # as a hole. A threaded finish is nothing but sharp edges: the 17-415
+    # master measures 0 non-manifold in Blender, 7138 straight after a GLB
+    # round-trip, and 0 again after this weld. Counting without it condemns
+    # watertight geometry and sends you hunting a boolean bug that isn't there.
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-7)   # 1e-4 mm
     non_manifold = sum(1 for e in bm.edges if not e.is_manifold)
     volume_mm3 = bm.calc_volume(signed=True) * 1e9
     bm.free()

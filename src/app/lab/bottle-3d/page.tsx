@@ -9,5 +9,18 @@ export default async function Page() {
     path.join(process.cwd(), "public/models/bodies/manifest.json"),
     "utf8",
   );
-  return <BottleViewer bodies={JSON.parse(manifest)} />;
+
+  // Which bodies also have a threaded build. Read from disk rather than
+  // hardcoded: the threaded set grows one batch at a time.
+  let threadedIds: string[] = [];
+  try {
+    const dir = path.join(process.cwd(), "public/models/bodies-threaded");
+    threadedIds = (await fs.readdir(dir))
+      .filter((f) => f.endsWith(".glb"))
+      .map((f) => f.slice(0, -4));
+  } catch {
+    threadedIds = [];
+  }
+
+  return <BottleViewer bodies={JSON.parse(manifest)} threadedIds={threadedIds} />;
 }
