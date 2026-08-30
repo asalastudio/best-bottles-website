@@ -176,6 +176,68 @@ def overcap_builder(rig, finish, variant):
     return dict(spec=oc, profile=c17.overcap_profile(oc), modulate=None)
 
 
+# --------------------------------------------------------------- 18-415 reducer
+# Traced from the ISOLATED part layer in
+# "20. Closures .../23. 18-415 Reducer/18-415Reducer.psd" (Layer 2, 114x128 px),
+# which photographs the plug alone on white — no bottle to separate it from.
+#
+# SCALE comes from the finish, not the photo: the plug body press-fits the
+# 18-415 bore (Ø10.3, drawing-exact) less 0.10/side, the same fit the roller
+# record uses. 99 px == 10.10 mm gives 9.802 px/mm, and every other dimension
+# falls out of that one anchor.
+#
+# It corroborates: flange 11.63 > bore 10.30 so it seats on the rim; 11.63 <
+# E 15.50 so it clears inside a cap; insert 10.71 < finish_h 15.80 so it sits
+# within the finish. A wrong scale would break at least one of those.
+REDUCER_18415 = dict(
+    asset_id="BB_RDCR_18415_001",
+    source="18-415Reducer.psd Layer 2, traced 2026-08-30",
+    scale_reference="body OD == 18-415 bore 10.3 less 0.10/side press fit",
+    lip_od=7.65, lip_top_z=2.24,
+    flange_od=11.63, flange_top_z=0.92,
+    body_od=10.10, body_bottom_z=-8.88,
+    chamfer_od=6.43, bottom_z=-10.71,
+    orifice_d=1.6,        # ASSUMED — a silhouette cannot show a bore. The
+                          # part's whole job is to restrict flow, so it is a
+                          # through-channel, but this diameter is unverified.
+)
+
+
+def reducer_profile(rd):
+    """Closed (r,z) outline, z = 0 on the flange underside — its mating face,
+    which rests on the neck rim, so seating stays parent-and-zero."""
+    ro = rd["orifice_d"] / 2.0
+    p = [
+        (ro, rd["bottom_z"]),                       # bore mouth at the bottom
+        (rd["chamfer_od"] / 2.0, rd["bottom_z"]),   # chamfered lead-in
+        (rd["body_od"] / 2.0, rd["body_bottom_z"]),
+        (rd["body_od"] / 2.0, 0.0),                 # body, inside the bore
+        (rd["flange_od"] / 2.0, 0.0),               # flange underside = the rim
+        (rd["flange_od"] / 2.0, rd["flange_top_z"]),
+        (rd["lip_od"] / 2.0, rd["flange_top_z"]),   # flange top face
+        (rd["lip_od"] / 2.0, rd["lip_top_z"]),      # lip, proud of the rim
+        (ro, rd["lip_top_z"]),
+    ]
+    z = rd["lip_top_z"]                             # back down the channel
+    while z > rd["bottom_z"] + 0.2:
+        p.append((ro, z)); z -= 0.4
+    p.append((ro, rd["bottom_z"]))
+    return _dedupe_profile(p)
+
+
+def _dedupe_profile(p, eps=1e-4):
+    out = [p[0]]
+    for q in p[1:]:
+        if abs(q[0] - out[-1][0]) > eps or abs(q[1] - out[-1][1]) > eps:
+            out.append(q)
+    return out
+
+
+def reducer_builder(rig, finish, variant):
+    return dict(spec=REDUCER_18415, profile=reducer_profile(REDUCER_18415),
+                modulate=None)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -193,6 +255,7 @@ PARTS = {
     ("17-415", "SPR_OVERCAP", None):       overcap_builder,
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
+    ("18-415", "REDUCER", None):           reducer_builder,
 }
 
 # Assembly = an ordered stack of parts, bottom first. The order is what an
@@ -204,6 +267,7 @@ ASSEMBLIES = {
     ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
     ("17-415", "cap"):            ["CAP"],
     ("13-415", "cap"):            ["CAP"],
+    ("18-415", "reducer"):        ["REDUCER"],
 }
 
 

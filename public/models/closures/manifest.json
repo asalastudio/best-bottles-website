@@ -124,6 +124,19 @@
       "verts": 1250,
       "height_mm": 21.85,
       "max_diameter_mm": 16.94
+    },
+    {
+      "file": "BB_REDUCER_18415.glb",
+      "mesh": "BB_REDUCER_18415",
+      "finish": "18-415",
+      "part": "REDUCER",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_RDCR_18415_001",
+      "non_manifold": 0,
+      "verts": 3840,
+      "height_mm": 12.95,
+      "max_diameter_mm": 11.63
     }
   ],
   "assemblies": [
@@ -173,6 +186,13 @@
         "BB_SPR_COLLAR_17415",
         "BB_SPR_ACTUATOR_17415",
         "BB_SPR_OVERCAP_17415"
+      ]
+    },
+    {
+      "finish": "18-415",
+      "kind": "reducer",
+      "stack": [
+        "BB_REDUCER_18415"
       ]
     }
   ]
