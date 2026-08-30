@@ -298,8 +298,14 @@ PARTS = {
 ASSEMBLIES = {
     ("17-415", "roller-plastic"): ["ROLL_HOUSING@plastic", "ROLL_BALL@plastic"],
     ("17-415", "roller-steel"):   ["ROLL_HOUSING@steel", "ROLL_BALL@steel"],
-    ("17-415", "sprayer"):        ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
-    ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
+    # The base sprayer and pump have NO overcap. Spry17-415Blk photographs
+    # without one, and the SKU vocabulary carries it separately (*LtnClOvrCap
+    # = lotion + clear overcap, only ~16 SKUs). Bundling it into every stack
+    # made the assembled render 21.85 mm taller than the product.
+    ("17-415", "sprayer"):        ["SPR_COLLAR", "SPR_ACTUATOR"],
+    ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR"],
+    ("17-415", "sprayer-overcap"):     ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
+    ("17-415", "lotion-pump-overcap"): ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
     ("17-415", "cap"):            ["CAP"],
     ("13-415", "cap"):            ["CAP"],
     ("18-415", "reducer"):        ["REDUCER", "CAP"],

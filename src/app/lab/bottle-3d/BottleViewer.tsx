@@ -77,6 +77,68 @@ const GLASS = {
 
 type GlassKey = keyof typeof GLASS;
 
+export type ClosurePart = {
+  file: string; mesh: string; finish: string; part: string;
+  variant: string | null; attach: string; asset_id?: string;
+  non_manifold?: number; verts?: number;
+  height_mm?: number; max_diameter_mm?: number;
+};
+export type ClosureManifest = {
+  parts: ClosurePart[];
+  assemblies: { finish: string; kind: string; stack: string[] }[];
+};
+
+/**
+ * Closure appearance, keyed by MESH NAME. This is the whole reason parts ship
+ * as separate files with stable names and zero materials: the geometry says
+ * nothing about how it looks, and the browser decides. Swapping a black cap
+ * for a gold one is a line here, not a new asset.
+ */
+function partMaterial(mesh: string): THREE.Material {
+  const metal = (color: string, roughness: number) =>
+    new THREE.MeshStandardMaterial({ color, metalness: 1.0, roughness });
+  const plastic = (color: string, roughness: number) =>
+    new THREE.MeshStandardMaterial({ color, metalness: 0.0, roughness });
+
+  if (mesh.includes("ROLL_BALL")) {
+    return mesh.includes("STEEL")
+      ? metal("#cfd2d6", 0.18)          // polished steel ball
+      : plastic("#eeece4", 0.45);       // natural PP ball
+  }
+  if (mesh.includes("ROLL_HOUSING")) return plastic("#e8e6dd", 0.40);
+  if (mesh.includes("REDUCER")) return plastic("#e9e7df", 0.42);
+  if (mesh.includes("SPR_ACTUATOR")) return plastic("#f4f4f2", 0.38);
+  if (mesh.includes("SPR_OVERCAP")) return plastic("#dcdcdc", 0.25);
+  if (mesh.includes("SPR_COLLAR")) return metal("#1b1b1d", 0.22);
+  if (mesh.includes("CAP")) return metal("#1b1b1d", 0.18);
+  return plastic("#cccccc", 0.4);
+}
+
+/**
+ * One closure part, seated the way the contract says: its origin IS the neck
+ * rim, so it parent-and-zeros onto BB_ATTACH_NECK. `explodeMm` lifts it along
+ * +Y by its index for an exploded view — no part needs to know its own seating
+ * maths for that to work.
+ */
+function ClosurePartMesh({
+  file, mesh, attachY, explodeMm, index,
+}: {
+  file: string; mesh: string; attachY: number;
+  explodeMm: number; index: number;
+}) {
+  const gltf = useGLTF(`/models/closures/${file}`);
+  const root = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
+  useEffect(() => {
+    root.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (m.isMesh) m.material = partMaterial(mesh);
+    });
+  }, [root, mesh]);
+  return (
+    <primitive object={root} position={[0, attachY + index * explodeMm / 1000, 0]} />
+  );
+}
+
 function Bottle({
   url,
   glass,
@@ -197,15 +259,19 @@ function useDatumRing(target: THREE.Object3D | null, visible: boolean, radius: n
 export default function BottleViewer({
   bodies,
   threadedIds = [],
+  closures = { parts: [], assemblies: [] },
 }: {
   bodies: Body[];
   /** bodyIds that also exist under /models/bodies-threaded/ */
   threadedIds?: string[];
+  closures?: ClosureManifest;
 }) {
   const [i, setI] = useState(0);
   const [glass, setGlass] = useState<GlassKey>("clear");
   const [showDatum, setShowDatum] = useState(true);
   const [threaded, setThreaded] = useState(true);
+  const [closureKind, setClosureKind] = useState<string>("none");
+  const [explodeMm, setExplodeMm] = useState(0);
   const [m, setM] = useState<Measured | null>(null);
   const body = bodies[i];
 
@@ -228,7 +294,22 @@ export default function BottleViewer({
     return (od[body.neckFinish ?? ""] ?? 0.02) / 2;
   }, [body.neckFinish]);
 
+  // Only closures for THIS body's neck finish can seat on it — that is the
+  // whole point of the finish being part of the contract.
+  const fits = useMemo(
+    () => closures.assemblies.filter((a) => a.finish === body.neckFinish),
+    [closures.assemblies, body.neckFinish],
+  );
+  const partByMesh = useMemo(() => {
+    const m = new Map<string, ClosurePart>();
+    for (const p of closures.parts) m.set(p.mesh, p);
+    return m;
+  }, [closures.parts]);
+  const stack = fits.find((a) => a.kind === closureKind)?.stack ?? [];
+
   useEffect(() => setM(null), [i]);
+  // A closure chosen for one finish cannot seat on the next body.
+  useEffect(() => setClosureKind("none"), [body.neckFinish]);
 
   const expected =
     body.shape === "round"
@@ -283,6 +364,53 @@ export default function BottleViewer({
             : "no threaded build for this body yet"}
         </div>
 
+        <div style={{ borderTop: "1px solid #26262c", paddingTop: 10, marginBottom: 12 }}>
+          <div style={{ fontWeight: 600, marginBottom: 6 }}>Closure</div>
+          {fits.length === 0 ? (
+            <div style={{ color: "#8b8b96", marginBottom: 8 }}>
+              no closure built for {body.neckFinish ?? "this finish"} yet
+            </div>
+          ) : (
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 8 }}>
+              {["none", ...fits.map((a) => a.kind)].map((k) => (
+                <button key={k} onClick={() => setClosureKind(k)}
+                  style={{ padding: "4px 7px", borderRadius: 4, cursor: "pointer", fontSize: 11,
+                           border: "1px solid " + (closureKind === k ? "#6a6af0" : "#33333c"),
+                           background: closureKind === k ? "#23234a" : "transparent",
+                           color: "#d2d2d8" }}>{k}</button>
+              ))}
+            </div>
+          )}
+
+          {stack.length > 0 && (
+            <>
+              <label style={{ display: "block", color: "#8b8b96", marginBottom: 3 }}>
+                explode {explodeMm} mm
+              </label>
+              <input type="range" min={0} max={40} step={1} value={explodeMm}
+                     onChange={(e) => setExplodeMm(Number(e.target.value))}
+                     style={{ width: "100%", marginBottom: 8 }} />
+              <div style={{ color: "#8b8b96", lineHeight: 1.7 }}>
+                {stack.map((meshName, idx) => {
+                  const pp = partByMesh.get(meshName);
+                  return (
+                    <div key={meshName} style={{ whiteSpace: "nowrap", overflow: "hidden",
+                                                 textOverflow: "ellipsis" }}>
+                      <span style={{ color: "#6a6af0" }}>{idx}</span>{" "}
+                      {meshName.replace(/^BB_/, "")}
+                      {pp?.height_mm ? (
+                        <span style={{ color: "#5f5f6a" }}>
+                          {" "}· {pp.height_mm}×Ø{pp.max_diameter_mm}
+                        </span>
+                      ) : null}
+                    </div>
+                  );
+                })}
+              </div>
+            </>
+          )}
+        </div>
+
         <div style={{ borderTop: "1px solid #26262c", paddingTop: 10 }}>
           {bodies.map((b, idx) => (
             <button key={b.bodyId} onClick={() => setI(idx)}
@@ -306,6 +434,18 @@ export default function BottleViewer({
             <Center key={body.bodyId}>
               <Bottle url={url} glass={glass} showDatum={showDatum}
                       neckRadiusM={neckRadiusM} onMeasure={setM} />
+              {/* Every part parent-and-zeros to the rim: its origin already IS
+                  the rim, so the only placement needed is the attach height. */}
+              {m?.attachYmm != null &&
+                stack.map((meshName, idx) => {
+                  const pp = partByMesh.get(meshName);
+                  if (!pp) return null;
+                  return (
+                    <ClosurePartMesh key={meshName} file={pp.file} mesh={pp.mesh}
+                                     attachY={m.attachYmm! / 1000}
+                                     explodeMm={explodeMm} index={idx} />
+                  );
+                })}
             </Center>
             {/* Environment built in-scene: no CDN fetch, CSP-safe. */}
             {/* Transmission samples the ENVIRONMENT, not the lights, so a dim

@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import BottleViewer from "./BottleViewer";
+import BottleViewer, { type ClosureManifest } from "./BottleViewer";
 
 export const metadata = { title: "Bottle bodies — 3D lab" };
 
@@ -22,5 +22,24 @@ export default async function Page() {
     threadedIds = [];
   }
 
-  return <BottleViewer bodies={JSON.parse(manifest)} threadedIds={threadedIds} />;
+  // Closure parts + assembly stacks. Absent until closures.py has run.
+  let closures: unknown = { parts: [], assemblies: [] };
+  try {
+    closures = JSON.parse(
+      await fs.readFile(
+        path.join(process.cwd(), "public/models/closures/manifest.json"),
+        "utf8",
+      ),
+    );
+  } catch {
+    /* no closures published yet */
+  }
+
+  return (
+    <BottleViewer
+      bodies={JSON.parse(manifest)}
+      threadedIds={threadedIds}
+      closures={closures as ClosureManifest}
+    />
+  );
 }
