@@ -89,28 +89,76 @@ export type ClosureManifest = {
 };
 
 /**
- * Closure appearance, keyed by MESH NAME. This is the whole reason parts ship
- * as separate files with stable names and zero materials: the geometry says
- * nothing about how it looks, and the browser decides. Swapping a black cap
- * for a gold one is a line here, not a new asset.
+ * Closure colourways, taken from the SKU vocabulary rather than invented:
+ * ShnBlk / MtSl / ShnSl / ShnGl / MtGl / Cu / Wh, plus the leather wraps
+ * (BlkLthr, BrwnLthr, LBrwnLthr, IvyLthr, PnkLthr).
+ *
+ * These apply to the SHELL parts only — the cap and the metal collar. The
+ * product descriptions are explicit that these are two-material assemblies
+ * ("metal shell collar over plastic sprayer", "metal shell cap with plastic
+ * insert"), so the actuator stays white plastic and a steel ball stays steel
+ * no matter which colourway is picked. Recolouring the whole assembly would
+ * be wrong, not merely ugly.
  */
-function partMaterial(mesh: string): THREE.Material {
-  const metal = (color: string, roughness: number) =>
-    new THREE.MeshStandardMaterial({ color, metalness: 1.0, roughness });
+const CLOSURE_FINISHES = {
+  "shiny-black":  { color: "#1b1b1d", metalness: 1.0, roughness: 0.14 },
+  "matte-black":  { color: "#1c1c1e", metalness: 1.0, roughness: 0.52 },
+  "shiny-silver": { color: "#cfd2d6", metalness: 1.0, roughness: 0.12 },
+  "matte-silver": { color: "#b6b9bd", metalness: 1.0, roughness: 0.46 },
+  "shiny-gold":   { color: "#d4af5a", metalness: 1.0, roughness: 0.14 },
+  "matte-gold":   { color: "#c9a75f", metalness: 1.0, roughness: 0.46 },
+  copper:         { color: "#b87333", metalness: 1.0, roughness: 0.22 },
+  white:          { color: "#f3f3f1", metalness: 0.0, roughness: 0.34 },
+  "black-leather":{ color: "#26221f", metalness: 0.0, roughness: 0.78 },
+  "brown-leather":{ color: "#6b4b32", metalness: 0.0, roughness: 0.76 },
+  "ivory-leather":{ color: "#d8ccb4", metalness: 0.0, roughness: 0.76 },
+} as const;
+
+type ClosureFinishKey = keyof typeof CLOSURE_FINISHES;
+
+/** Which parts wear the colourway, and which have a fixed material role. */
+function isShell(mesh: string) {
+  return mesh.includes("CAP_") || mesh.includes("SPR_COLLAR");
+}
+
+/**
+ * Closure appearance, keyed by MESH NAME plus the chosen colourway. This is
+ * the whole reason parts ship as separate files with stable names and ZERO
+ * materials: the geometry says nothing about how it looks, so a customer
+ * switching from black to copper is a state change here, not a new asset and
+ * not a re-export.
+ */
+function partMaterial(mesh: string, finish: ClosureFinishKey): THREE.Material {
   const plastic = (color: string, roughness: number) =>
     new THREE.MeshStandardMaterial({ color, metalness: 0.0, roughness });
 
+  if (isShell(mesh)) {
+    const f = CLOSURE_FINISHES[finish];
+    return new THREE.MeshStandardMaterial({
+      color: f.color, metalness: f.metalness, roughness: f.roughness,
+    });
+  }
+  // Fixed roles — these do NOT follow the colourway.
   if (mesh.includes("ROLL_BALL")) {
     return mesh.includes("STEEL")
-      ? metal("#cfd2d6", 0.18)          // polished steel ball
-      : plastic("#eeece4", 0.45);       // natural PP ball
+      ? new THREE.MeshStandardMaterial({ color: "#cfd2d6", metalness: 1.0, roughness: 0.18 })
+      : plastic("#eeece4", 0.45);
   }
   if (mesh.includes("ROLL_HOUSING")) return plastic("#e8e6dd", 0.40);
   if (mesh.includes("REDUCER")) return plastic("#e9e7df", 0.42);
   if (mesh.includes("SPR_ACTUATOR")) return plastic("#f4f4f2", 0.38);
-  if (mesh.includes("SPR_OVERCAP")) return plastic("#dcdcdc", 0.25);
-  if (mesh.includes("SPR_COLLAR")) return metal("#1b1b1d", 0.22);
-  if (mesh.includes("CAP")) return metal("#1b1b1d", 0.18);
+  if (mesh.includes("PMP_SPOUT")) return plastic("#f4f4f2", 0.38);
+  if (mesh.includes("SPR_OVERCAP")) {
+    // Clear on the *ClOvrCap SKUs. Clear plastic is TRANSMISSIVE, not pale
+    // opaque grey. thickness/attenuation are WORLD UNITS (metres), so a
+    // 0.6 mm wall is 0.0006 — writing 0.6 renders it solid.
+    return new THREE.MeshPhysicalMaterial({
+      color: "#ffffff", roughness: 0.12, metalness: 0.0,
+      transmission: 0.94, thickness: 0.0006, ior: 1.49,
+      attenuationDistance: 0.5,
+      attenuationColor: new THREE.Color("#f2f4f2"),
+    });
+  }
   return plastic("#cccccc", 0.4);
 }
 
@@ -121,19 +169,19 @@ function partMaterial(mesh: string): THREE.Material {
  * maths for that to work.
  */
 function ClosurePartMesh({
-  file, mesh, attachY, explodeMm, index,
+  file, mesh, attachY, explodeMm, index, finish,
 }: {
   file: string; mesh: string; attachY: number;
-  explodeMm: number; index: number;
+  explodeMm: number; index: number; finish: ClosureFinishKey;
 }) {
   const gltf = useGLTF(`/models/closures/${file}`);
   const root = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
   useEffect(() => {
     root.traverse((o) => {
       const m = o as THREE.Mesh;
-      if (m.isMesh) m.material = partMaterial(mesh);
+      if (m.isMesh) m.material = partMaterial(mesh, finish);
     });
-  }, [root, mesh]);
+  }, [root, mesh, finish]);
   return (
     <primitive object={root} position={[0, attachY + index * explodeMm / 1000, 0]} />
   );
@@ -272,6 +320,8 @@ export default function BottleViewer({
   const [threaded, setThreaded] = useState(true);
   const [closureKind, setClosureKind] = useState<string>("none");
   const [explodeMm, setExplodeMm] = useState(0);
+  const [closureFinish, setClosureFinish] =
+    useState<ClosureFinishKey>("shiny-black");
   const [m, setM] = useState<Measured | null>(null);
   const body = bodies[i];
 
@@ -384,6 +434,21 @@ export default function BottleViewer({
 
           {stack.length > 0 && (
             <>
+              <div style={{ color: "#8b8b96", marginBottom: 4 }}>closure finish</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 4, marginBottom: 10 }}>
+                {(Object.keys(CLOSURE_FINISHES) as ClosureFinishKey[]).map((k) => (
+                  <button key={k} onClick={() => setClosureFinish(k)} title={k}
+                    style={{ width: 22, height: 22, borderRadius: 4, cursor: "pointer",
+                             background: CLOSURE_FINISHES[k].color,
+                             border: "2px solid " +
+                               (closureFinish === k ? "#6a6af0" : "#33333c") }} />
+                ))}
+              </div>
+              <div style={{ color: "#7d7d88", marginBottom: 10, fontSize: 11 }}>
+                {closureFinish} — applied to the shell only; the actuator stays
+                plastic and a steel ball stays steel
+              </div>
+
               <label style={{ display: "block", color: "#8b8b96", marginBottom: 3 }}>
                 explode {explodeMm} mm
               </label>
@@ -443,7 +508,8 @@ export default function BottleViewer({
                   return (
                     <ClosurePartMesh key={meshName} file={pp.file} mesh={pp.mesh}
                                      attachY={m.attachYmm! / 1000}
-                                     explodeMm={explodeMm} index={idx} />
+                                     explodeMm={explodeMm} index={idx}
+                                     finish={closureFinish} />
                   );
                 })}
             </Center>

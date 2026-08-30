@@ -27,6 +27,7 @@ from __future__ import annotations
 
 import argparse
 import importlib.util as ilu
+import math
 import sys
 from pathlib import Path
 
@@ -272,6 +273,45 @@ def reducer_builder(rig, finish, variant):
                 modulate=None)
 
 
+def pump_spout_builder(rig, finish, variant):
+    """The lotion pump's spout nub — geometry, and the ONLY thing distinguishing
+    a pump from a sprayer.
+
+    components_17415 builds one actuator moulding for both and differentiates
+    them at the face: the pump gets this sideways spout, the sprayer an orifice
+    insert. Exporting neither made the two assemblies byte-identical, which is
+    exactly the "missing detail" it looks like. No material can add it — a
+    normal map cannot either, since these meshes carry no UVs by design.
+
+    It is OFF-AXIS: a small cylinder lying along -Y, so it cannot come from the
+    lathe path. Built, rotated and positioned here, then baked so its origin is
+    still the neck rim and it parent-and-zeros like every other part.
+    """
+    import bmesh
+    from mathutils import Matrix
+
+    c17 = _load_c17(rig)
+    hs = c17.ACTUATOR_17415
+    r_face = (hs["body_od_high"] / 2.0
+              + (hs["body_od_low"] - hs["body_od_high"]) / 2.0 * 0.25)
+    d, proud, z = hs["pump_spout_d"], hs["pump_spout_proud"], hs["pump_spout_z"]
+
+    me = bpy.data.meshes.new("BB_PMP_SPOUT_17415")
+    bm = bmesh.new()
+    bmesh.ops.create_cone(bm, cap_ends=True, segments=32,
+                          radius1=d / 2.0, radius2=d / 2.0, depth=proud + 1.0)
+    bm.to_mesh(me); bm.free()
+    obj = bpy.data.objects.new("BB_PMP_SPOUT_17415", me)
+    bpy.context.scene.collection.objects.link(obj)
+    # create_cone builds along +Z centred on the origin: stand it along -Y and
+    # push it out to the actuator face at the spout height.
+    obj.data.transform(Matrix.Rotation(math.radians(90.0), 4, "X"))
+    obj.data.transform(Matrix.Translation((0.0, -(r_face - 1.0), z)))
+    return dict(spec=dict(asset_id="BB_PMP_SPOUT_17415",
+                          spout_d=d, proud=proud, spout_z=z),
+                object=obj)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -287,6 +327,7 @@ PARTS = {
     ("17-415", "SPR_COLLAR", None):        collar_builder,
     ("17-415", "SPR_ACTUATOR", None):      actuator_builder,
     ("17-415", "SPR_OVERCAP", None):       overcap_builder,
+    ("17-415", "PMP_SPOUT", None):         pump_spout_builder,
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
     ("18-415", "REDUCER", None):           reducer_builder,
@@ -303,9 +344,10 @@ ASSEMBLIES = {
     # = lotion + clear overcap, only ~16 SKUs). Bundling it into every stack
     # made the assembled render 21.85 mm taller than the product.
     ("17-415", "sprayer"):        ["SPR_COLLAR", "SPR_ACTUATOR"],
-    ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR"],
+    ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR", "PMP_SPOUT"],
     ("17-415", "sprayer-overcap"):     ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
-    ("17-415", "lotion-pump-overcap"): ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
+    ("17-415", "lotion-pump-overcap"): ["SPR_COLLAR", "SPR_ACTUATOR", "PMP_SPOUT",
+                                        "SPR_OVERCAP"],
     ("17-415", "cap"):            ["CAP"],
     ("13-415", "cap"):            ["CAP"],
     ("18-415", "reducer"):        ["REDUCER", "CAP"],
@@ -382,7 +424,11 @@ def build_part(rig, finish, part, variant, segments):
     if variant:
         name += f"_{variant.upper()}"
 
-    if "sphere" in rec:
+    if "object" in rec:
+        obj = rec["object"]
+        obj.name = name
+        obj.data.name = name
+    elif "sphere" in rec:
         d, z = rec["sphere"]
         obj = rig.uv_sphere(name, d)
         if obj.name not in bpy.context.scene.collection.objects:
