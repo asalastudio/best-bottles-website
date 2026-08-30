@@ -4,6 +4,18 @@ For locking glass material in the Material Lab (`/dev/material-lab`).
 
 **Five photographs, one sitting.** Clear · Amber · Cobalt · Frosted · Swirl.
 
+Only **two are strictly needed** — clear and swirl have no usable reference at
+all. Amber, cobalt and frosted are already measured. But shoot all five anyway:
+they currently come from different sessions under different light, which is why
+amber carries two conflicting values (`#8b6a38` from a wall shot, `#c88e63`
+from an older catalogue shot). One sitting puts all of them on one footing, and
+it is the same effort.
+
+**A phone is fine.** Our best measurement to date — IMG_5040 — was handheld,
+against a wall. A tripod helps, but its value is CONSISTENCY between the five,
+not sharpness; shooting back-to-back without changing settings gets most of the
+way there.
+
 The point of these is not beauty. It is **measurement**. We extract one thing
 from each photo — how much of each colour channel survives the glass — and
 that number becomes the material. Everything else about your photo is
@@ -114,17 +126,43 @@ Two of the five have **no usable reference at all** today:
 
 ---
 
+## Caps, fitments and applicators — do NOT shoot these
+
+They are already measured from the cap PSDs and live in `materials.py`:
+
+```
+CAP_SHINY_SILVER  #828282  rough 0.10  metal 1.0  coat 0.35   vacuum-metallized
+CAP_MATTE_GOLD    #c5b375  rough 0.44  metal 1.0  coat 0.35
+CAP_SHINY_BLACK   #292929  rough 0.09  metal 0.0  coat 0.90   phenolic: dielectric
+PART_BALL_STEEL   #cfd2d6  rough 0.18  metal 1.0
+PART_BALL_PLASTIC #eeece4  rough 0.45  metal 0.0
+```
+
+Opaque parts are a much easier problem than glass: no transmission, so no path
+length, no attenuation, no ratio. Base colour reads almost directly off the
+surface, and the important distinction — plated vs pigmented — is already
+captured (silver/gold/copper are metal 1.0 because they are vacuum-metallized;
+black and white are metal 0.0 because pigmented phenolic is a dielectric).
+
+Re-shoot only if a specific finish looks wrong in the configurator. Copper and
+matte gold are the likeliest to need a nudge. That is a targeted fix, not a
+session.
+
 ## On AI-generated reference
 
-**Do not use generated images to measure material.**
+The goal is a MATERIAL that looks right. Measurement is one route to that, and
+a good one because it is grounded and repeatable — but it is not the goal
+itself, and it is not sacred.
 
-A generated amber bottle shows a model's idea of amber, not Nemat's. Measuring
-absorption from it would produce a preset that is confidently wrong, and every
-bottle in the configurator would inherit that fiction — while looking
-plausible, which is worse than looking broken.
+Amber and cobalt container glass are genuinely industry-standard chemistries
+(Type III soda-lime, specified for UV protection), so a model trained on
+thousands of real amber bottles will not produce something arbitrary.
 
-Generated imagery is legitimate for **art direction** — agreeing on mood,
-lighting style, or a target look. That is a different job from establishing
-what our glass actually does, and the two must not be mixed.
+The one line worth holding: **never run the sigma solve on a generated image
+and record the result as a measurement.** That produces a number that is
+precise, plausible and unverifiable — a guess wearing a lab coat — and it would
+propagate silently into every bottle.
 
-The physical bottles are the only source of truth for the material.
+Tuning by eye against a generated target is fine. Record it in the preset's
+`provenance` as art direction rather than as sigma, so the next person knows
+which values are evidence and which are taste.
