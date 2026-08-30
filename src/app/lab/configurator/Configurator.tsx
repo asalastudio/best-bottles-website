@@ -75,50 +75,88 @@ const FINISHES = {
 } as const;
 type FinishKey = keyof typeof FINISHES;
 
+/**
+ * Resolve a material from the Blender-authored JSON, falling back to the
+ * built-in default when it is absent.
+ *
+ * This is the bridge that was missing: materials.json was being loaded and
+ * passed in, but nothing read it, so every value tuned in materials.blend
+ * stopped at the component boundary and the browser kept rendering my
+ * hardcoded guesses.
+ */
+function resolve<T extends object>(
+  mats: Record<string, MatRec> | undefined, key: string, fallback: T,
+): T & Partial<MatRec> {
+  const m = mats?.[key];
+  return m ? { ...fallback, ...m } : fallback;
+}
+
+/** "shiny-gold" -> "CAP_SHINY_GOLD",  "clear" -> "GLASS_CLEAR" */
+const matKey = (prefix: string, k: string) =>
+  `${prefix}_${k.replace(/-/g, "_").toUpperCase()}`;
+
+const PART_MAT_KEY: Array<[string, string]> = [
+  ["CAP_DOTS", "PART_STUD_STEEL"],
+  ["ROLL_BALL_17415_STEEL", "PART_BALL_STEEL"],
+  ["ROLL_BALL", "PART_BALL_PLASTIC"],
+  ["ROLL_HOUSING", "PART_HOUSING_PP"],
+  ["SPR_ACTUATOR", "PART_ACTUATOR_PP"],
+  ["PMP_SPOUT", "PART_ACTUATOR_PP"],
+  ["REDUCER", "PART_REDUCER_PP"],
+  ["SPR_OVERCAP", "PART_OVERCAP_CLEAR"],
+];
+
 function isShell(mesh: string) {
   if (mesh.includes("CAP_DOTS")) return false;   // studs stay silver always
   return mesh.includes("CAP_") || mesh.includes("SPR_COLLAR");
 }
 
-function partMaterial(mesh: string, finish: FinishKey) {
-  const plastic = (color: string, roughness: number) =>
-    new THREE.MeshStandardMaterial({ color, metalness: 0, roughness });
+function partMaterial(
+  mesh: string, finish: FinishKey, mats?: Record<string, MatRec>,
+) {
   if (isShell(mesh)) {
     const f = FINISHES[finish];
-    const brushed = f.plated && f.rough > 0.35;
+    const a = resolve(mats, matKey("CAP", finish), {
+      color: f.color, roughness: f.rough,
+      metalness: f.plated ? 1 : 0, clearcoat: f.plated ? 0.35 : 0.9,
+    });
+    // brushed = a metallized finish that is also rough; its highlight stretches
+    // around the cylinder instead of forming a round hotspot
+    const brushed = (a.metalness ?? 0) > 0.5 && (a.roughness ?? 0) > 0.35;
     return new THREE.MeshPhysicalMaterial({
-      color: f.color,
-      metalness: f.plated ? 1 : 0,
-      roughness: f.rough,
-      clearcoat: f.plated ? 0.35 : 0.9,
-      clearcoatRoughness: f.plated ? 0.1 : 0.06,
+      color: a.color,
+      metalness: a.metalness ?? 0,
+      roughness: a.roughness ?? 0.3,
+      clearcoat: a.clearcoat ?? 0,
+      clearcoatRoughness: 0.05,
       anisotropy: brushed ? 0.65 : 0,
       anisotropyRotation: Math.PI / 2,
       envMapIntensity: 1.35,
     });
   }
-  if (mesh.includes("CAP_DOTS"))
-    return new THREE.MeshPhysicalMaterial({
-      color: "#f2f4f6", metalness: 1, roughness: 0.06,
-      clearcoat: 0.5, envMapIntensity: 3.2 });
-  if (mesh.includes("ROLL_BALL"))
-    return mesh.includes("STEEL")
-      ? new THREE.MeshStandardMaterial({ color: "#cfd2d6", metalness: 1, roughness: 0.18 })
-      : plastic("#eeece4", 0.45);
-  if (mesh.includes("ROLL_HOUSING")) return plastic("#e8e6dd", 0.4);
-  if (mesh.includes("SPR_ACTUATOR") || mesh.includes("PMP_SPOUT"))
-    return plastic("#f4f4f2", 0.38);
-  if (mesh.includes("SPR_OVERCAP"))
-    return new THREE.MeshPhysicalMaterial({
-      color: "#ffffff", roughness: 0.12, metalness: 0, transmission: 0.94,
-      thickness: 0.0006, ior: 1.49 });
-  return plastic("#cccccc", 0.4);
+
+  const hit = PART_MAT_KEY.find(([frag]) => mesh.includes(frag));
+  const a = resolve(mats, hit ? hit[1] : "", {
+    color: "#cccccc", roughness: 0.4, metalness: 0,
+    clearcoat: 0, transmission: 0, ior: 1.5,
+  });
+  return new THREE.MeshPhysicalMaterial({
+    color: a.color,
+    metalness: a.metalness ?? 0,
+    roughness: a.roughness ?? 0.4,
+    clearcoat: a.clearcoat ?? 0,
+    transmission: a.transmission ?? 0,
+    thickness: (a.transmission ?? 0) > 0 ? 0.0006 : 0,
+    ior: a.ior ?? 1.5,
+    envMapIntensity: 1.35,
+  });
 }
 
 /* ----------------------------------------------------------------- scene */
 
-function Bottle({ url, glass, onAttach }: {
+function Bottle({ url, glass, onAttach, mats }: {
   url: string; glass: GlassKey; onAttach: (y: number | null) => void;
+  mats?: Record<string, MatRec>;
 }) {
   const gltf = useGLTF(url);
   const root = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
@@ -136,20 +174,24 @@ function Bottle({ url, glass, onAttach }: {
 
   useEffect(() => { onAttach(attachY); }, [attachY, onAttach]);
 
-  const g = GLASS[glass];
+  const d = GLASS[glass];
+  const g = resolve(mats, matKey("GLASS", glass), {
+    roughness: d.roughness, transmission: d.transmission, ior: d.ior,
+    attenuationDistance: d.atten, attenuationColor: d.attenColor,
+  });
   if (!geometry) return null;
   return (
     <mesh geometry={geometry as THREE.BufferGeometry}>
       <meshPhysicalMaterial
         color="#ffffff"
-        roughness={g.roughness}
+        roughness={g.roughness ?? d.roughness}
         metalness={0}
-        transmission={g.transmission}
-        thickness={g.thickness}
-        ior={g.ior}
-        attenuationDistance={g.atten}
-        attenuationColor={new THREE.Color(g.attenColor)}
-        dispersion={g.dispersion}
+        transmission={g.transmission ?? d.transmission}
+        thickness={d.thickness}
+        ior={g.ior ?? d.ior}
+        attenuationDistance={g.attenuationDistance ?? d.atten}
+        attenuationColor={new THREE.Color(g.attenuationColor ?? d.attenColor)}
+        dispersion={d.dispersion}
         transparent
         side={THREE.DoubleSide}
         envMapIntensity={1.5}
@@ -158,17 +200,18 @@ function Bottle({ url, glass, onAttach }: {
   );
 }
 
-function Part({ file, mesh, y, finish }: {
+function Part({ file, mesh, y, finish, mats }: {
   file: string; mesh: string; y: number; finish: FinishKey;
+  mats?: Record<string, MatRec>;
 }) {
   const gltf = useGLTF(`/models/closures/${file}`);
   const root = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
   useEffect(() => {
     root.traverse((o) => {
       const m = o as THREE.Mesh;
-      if (m.isMesh) m.material = partMaterial(mesh, finish);
+      if (m.isMesh) m.material = partMaterial(mesh, finish, mats);
     });
-  }, [root, mesh, finish]);
+  }, [root, mesh, finish, mats]);
   return <primitive object={root} position={[0, y, 0]} />;
 }
 
@@ -300,13 +343,13 @@ export default function Configurator({ bodies, closures, materials = {} }: {
           <Suspense fallback={null}>
             <BoneSweep />
             <Center key={body.bodyId + kind}>
-              <Bottle url={url} glass={glass} onAttach={setAttachY} />
+              <Bottle url={url} glass={glass} onAttach={setAttachY} mats={materials} />
               {attachY != null &&
                 stack.map((meshName) => {
                   const p = byMesh.get(meshName);
                   return p ? (
                     <Part key={meshName} file={p.file} mesh={p.mesh}
-                          y={attachY} finish={finish} />
+                          y={attachY} finish={finish} mats={materials} />
                   ) : null;
                 })}
             </Center>
