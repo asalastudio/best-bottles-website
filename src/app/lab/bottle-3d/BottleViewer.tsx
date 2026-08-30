@@ -132,6 +132,9 @@ type ClosureFinishKey = keyof typeof CLOSURE_FINISHES;
 
 /** Which parts wear the colourway, and which have a fixed material role. */
 function isShell(mesh: string) {
+  // CAP_DOTS is deliberately excluded: on the product the studs read SILVER on
+  // the black, pink and silver caps alike, so they never take the colourway.
+  if (mesh.includes("CAP_DOTS")) return false;
   return mesh.includes("CAP_") || mesh.includes("SPR_COLLAR");
 }
 
@@ -160,6 +163,12 @@ function partMaterial(mesh: string, finish: ClosureFinishKey): THREE.Material {
     });
   }
   // Fixed roles — these do NOT follow the colourway.
+  if (mesh.includes("CAP_DOTS")) {
+    return new THREE.MeshPhysicalMaterial({
+      color: "#d9dcdf", metalness: 1.0, roughness: 0.10,
+      clearcoat: 0.4, clearcoatRoughness: 0.06,
+    });
+  }
   if (mesh.includes("ROLL_BALL")) {
     return mesh.includes("STEEL")
       ? new THREE.MeshStandardMaterial({ color: "#cfd2d6", metalness: 1.0, roughness: 0.18 })

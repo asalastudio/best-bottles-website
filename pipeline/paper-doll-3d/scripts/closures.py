@@ -312,6 +312,66 @@ def pump_spout_builder(rig, finish, variant):
                 object=obj)
 
 
+# Dot studs, measured in build-master-scene.py: ~1.4 mm domes on a STAGGERED
+# lattice, ~3.9 mm row pitch, 8 columns, extracted from CpRoll17-415*Dot.psd.
+DOTS_17415 = dict(asset_id="BB_CAP_DOTS_17415_001",
+                  dot_d=1.4, row_pitch=3.9, columns=8,
+                  proud=0.45,          # how far a dome stands off the wall
+                  z_lo=-11.0, z_hi=9.5)   # the run of wall that carries studs
+
+
+def cap_dots_builder(rig, finish, variant):
+    """The studs on a *Dot cap — GEOMETRY, and a separate part from the shell.
+
+    The render rig does these as a shader (stud mask + dome bump + silver metal
+    in-dot) on the cap mesh. That cannot cross to the browser: these meshes
+    carry no UVs, so there is nothing to map a texture to — and a normal map
+    would be wrong regardless, because real studs BREAK THE SILHOUETTE at the
+    edge of the cap and no bump map moves an outline.
+
+    Separate from the shell because the product is: the studs read silver on
+    the black, pink AND silver variants, so the shell takes the colourway and
+    the studs stay metal. Same split as collar-and-actuator.
+    """
+    import bmesh
+    from mathutils import Matrix
+
+    d = DOTS_17415
+    # Reuse cap_builder so the wall this sits on is the SAME wall the shell
+    # builds — deriving skirt_below_rim twice is how the two drift apart.
+    cs, _prof, _mod = cap_builder(rig, finish)
+    r_base, r_top = cs["od_base"] / 2.0, cs["od_top"] / 2.0
+    z_lo, z_hi = d["z_lo"], d["z_hi"]
+    span = z_hi - z_lo
+    rows = int(span // d["row_pitch"]) + 1
+
+    me = bpy.data.meshes.new("BB_CAP_DOTS_17415")
+    acc = bmesh.new()
+    for col in range(d["columns"]):
+        theta = 2.0 * math.pi * col / d["columns"]
+        # stagger every other column by half a row, as the photo shows
+        z0 = z_lo + (d["row_pitch"] / 2.0 if col % 2 else 0.0)
+        z = z0
+        while z <= z_hi:
+            t = (z - (-cs["skirt_below_rim"])) / cs["height"]
+            r_wall = r_base + (r_top - r_base) * max(0.0, min(1.0, t))
+            tmp = bmesh.new()
+            bmesh.ops.create_uvsphere(tmp, u_segments=12, v_segments=8,
+                                      radius=d["dot_d"] / 2.0)
+            # sit the dome ON the wall, sunk so only `proud` stands out
+            off = r_wall + d["proud"] - d["dot_d"] / 2.0
+            bmesh.ops.translate(tmp, verts=tmp.verts,
+                                vec=(off * math.cos(theta),
+                                     off * math.sin(theta), z))
+            me2 = bpy.data.meshes.new("t"); tmp.to_mesh(me2); tmp.free()
+            acc.from_mesh(me2); bpy.data.meshes.remove(me2)
+            z += d["row_pitch"]
+    acc.to_mesh(me); acc.free()
+    obj = bpy.data.objects.new("BB_CAP_DOTS_17415", me)
+    bpy.context.scene.collection.objects.link(obj)
+    return dict(spec=dict(d, count=rows * d["columns"]), object=obj)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -328,6 +388,7 @@ PARTS = {
     ("17-415", "SPR_ACTUATOR", None):      actuator_builder,
     ("17-415", "SPR_OVERCAP", None):       overcap_builder,
     ("17-415", "PMP_SPOUT", None):         pump_spout_builder,
+    ("17-415", "CAP_DOTS", None):          cap_dots_builder,
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
     ("18-415", "REDUCER", None):           reducer_builder,
@@ -349,6 +410,7 @@ ASSEMBLIES = {
     ("17-415", "lotion-pump-overcap"): ["SPR_COLLAR", "SPR_ACTUATOR", "PMP_SPOUT",
                                         "SPR_OVERCAP"],
     ("17-415", "cap"):            ["CAP"],
+    ("17-415", "cap-dot"):        ["CAP", "CAP_DOTS"],
     ("13-415", "cap"):            ["CAP"],
     ("18-415", "reducer"):        ["REDUCER", "CAP"],
     ("18-415", "cap"):            ["CAP"],

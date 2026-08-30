@@ -9,19 +9,6 @@
   },
   "parts": [
     {
-      "file": "BB_CAP_13415.glb",
-      "mesh": "BB_CAP_13415",
-      "finish": "13-415",
-      "part": "CAP",
-      "variant": null,
-      "attach": "BB_ATTACH_NECK",
-      "asset_id": "BB_CAP_13415_001",
-      "non_manifold": 0,
-      "verts": 22370,
-      "height_mm": 24.0,
-      "max_diameter_mm": 17.0
-    },
-    {
       "file": "BB_CAP_17415.glb",
       "mesh": "BB_CAP_17415",
       "finish": "17-415",
@@ -33,6 +20,19 @@
       "verts": 25250,
       "height_mm": 27.0,
       "max_diameter_mm": 19.0
+    },
+    {
+      "file": "BB_CAP_DOTS_17415.glb",
+      "mesh": "BB_CAP_DOTS_17415",
+      "finish": "17-415",
+      "part": "CAP_DOTS",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_CAP_DOTS_17415_001",
+      "non_manifold": 0,
+      "verts": 3784,
+      "height_mm": 20.9,
+      "max_diameter_mm": 19.85
     },
     {
       "file": "BB_PMP_SPOUT_17415.glb",
@@ -137,47 +137,22 @@
       "verts": 1250,
       "height_mm": 21.85,
       "max_diameter_mm": 16.94
-    },
-    {
-      "file": "BB_CAP_18415.glb",
-      "mesh": "BB_CAP_18415",
-      "finish": "18-415",
-      "part": "CAP",
-      "variant": null,
-      "attach": "BB_ATTACH_NECK",
-      "asset_id": "BB_CAP_18415_001",
-      "non_manifold": 0,
-      "verts": 17570,
-      "height_mm": 19.0,
-      "max_diameter_mm": 21.0
-    },
-    {
-      "file": "BB_REDUCER_18415.glb",
-      "mesh": "BB_REDUCER_18415",
-      "finish": "18-415",
-      "part": "REDUCER",
-      "variant": null,
-      "attach": "BB_ATTACH_NECK",
-      "asset_id": "BB_RDCR_18415_001",
-      "non_manifold": 0,
-      "verts": 3840,
-      "height_mm": 12.95,
-      "max_diameter_mm": 11.63
     }
   ],
   "assemblies": [
-    {
-      "finish": "13-415",
-      "kind": "cap",
-      "stack": [
-        "BB_CAP_13415"
-      ]
-    },
     {
       "finish": "17-415",
       "kind": "cap",
       "stack": [
         "BB_CAP_17415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "cap-dot",
+      "stack": [
+        "BB_CAP_17415",
+        "BB_CAP_DOTS_17415"
       ]
     },
     {
@@ -230,21 +205,6 @@
         "BB_SPR_COLLAR_17415",
         "BB_SPR_ACTUATOR_17415",
         "BB_SPR_OVERCAP_17415"
-      ]
-    },
-    {
-      "finish": "18-415",
-      "kind": "cap",
-      "stack": [
-        "BB_CAP_18415"
-      ]
-    },
-    {
-      "finish": "18-415",
-      "kind": "reducer",
-      "stack": [
-        "BB_REDUCER_18415",
-        "BB_CAP_18415"
       ]
     }
   ]
