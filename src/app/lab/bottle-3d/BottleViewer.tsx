@@ -101,17 +101,31 @@ export type ClosureManifest = {
  * be wrong, not merely ugly.
  */
 const CLOSURE_FINISHES = {
-  "shiny-black":  { color: "#1b1b1d", metalness: 1.0, roughness: 0.14 },
-  "matte-black":  { color: "#1c1c1e", metalness: 1.0, roughness: 0.52 },
-  "shiny-silver": { color: "#cfd2d6", metalness: 1.0, roughness: 0.12 },
-  "matte-silver": { color: "#b6b9bd", metalness: 1.0, roughness: 0.46 },
-  "shiny-gold":   { color: "#d4af5a", metalness: 1.0, roughness: 0.14 },
-  "matte-gold":   { color: "#c9a75f", metalness: 1.0, roughness: 0.46 },
-  copper:         { color: "#b87333", metalness: 1.0, roughness: 0.22 },
-  white:          { color: "#f3f3f1", metalness: 0.0, roughness: 0.34 },
-  "black-leather":{ color: "#26221f", metalness: 0.0, roughness: 0.78 },
-  "brown-leather":{ color: "#6b4b32", metalness: 0.0, roughness: 0.76 },
-  "ivory-leather":{ color: "#d8ccb4", metalness: 0.0, roughness: 0.76 },
+  // MEASURED from the isolated cap layers in
+  // "20. Closures .../12. 17-415 Roll on" — base colour is the 10-90 percentile
+  // mean (trimming the specular so it is not washed out), and `spread` is the
+  // p99-p02 luminance range, a proxy for how sharp the highlight is.
+  //
+  // These are PHENOLIC (composite) caps, NOT metal — Jordan, 2026-08-30. That
+  // is a shading model, not a colour: a pigmented phenolic cap is a DIELECTRIC
+  // with a clearcoat, so metalness 0. Modelling black or white as metal (which
+  // an earlier version of this file did) makes it reflect like a mirror and
+  // lose its body colour entirely.
+  //
+  // The silver/gold/copper finishes read metallic because the substrate is
+  // vacuum-METALLIZED — a real metal layer under clearcoat — so those keep
+  // metalness 1. If any of them turn out to be pigmented rather than plated,
+  // flip `plated` and the colour stays as measured.
+  "shiny-silver": { color: "#828282", plated: true,  roughness: 0.10, spread: 0.957 },
+  "shiny-gold":   { color: "#9b9062", plated: true,  roughness: 0.13, spread: 0.898 },
+  "pink-dot":     { color: "#d8c5cc", plated: true,  roughness: 0.22, spread: 0.748 },
+  "silver-dot":   { color: "#d4d4d4", plated: true,  roughness: 0.22, spread: 0.725 },
+  "matte-gold":   { color: "#c5b375", plated: true,  roughness: 0.44, spread: 0.695 },
+  copper:         { color: "#975a42", plated: true,  roughness: 0.28, spread: 0.528 },
+  "matte-silver": { color: "#c0c0c0", plated: true,  roughness: 0.48, spread: 0.475 },
+  "shiny-black":  { color: "#292929", plated: false, roughness: 0.09, spread: 0.333 },
+  "black-dot":    { color: "#202020", plated: false, roughness: 0.11, spread: 0.722 },
+  white:          { color: "#f1f1f1", plated: false, roughness: 0.42, spread: 0.118 },
 } as const;
 
 type ClosureFinishKey = keyof typeof CLOSURE_FINISHES;
@@ -134,8 +148,15 @@ function partMaterial(mesh: string, finish: ClosureFinishKey): THREE.Material {
 
   if (isShell(mesh)) {
     const f = CLOSURE_FINISHES[finish];
-    return new THREE.MeshStandardMaterial({
-      color: f.color, metalness: f.metalness, roughness: f.roughness,
+    // Clearcoat is what makes phenolic read as phenolic: a glassy lacquer over
+    // a coloured body, so the highlight sits ON TOP of the colour instead of
+    // replacing it the way a bare metal highlight does.
+    return new THREE.MeshPhysicalMaterial({
+      color: f.color,
+      metalness: f.plated ? 1.0 : 0.0,
+      roughness: f.roughness,
+      clearcoat: f.plated ? 0.35 : 0.9,
+      clearcoatRoughness: f.plated ? 0.10 : 0.06,
     });
   }
   // Fixed roles — these do NOT follow the colourway.
