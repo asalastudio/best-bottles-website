@@ -258,6 +258,19 @@
       "clearcoat": 0.5,
       "ior": 1.5,
       "transmission": 0.0
+    },
+    "STUDIO_BONE": {
+      "color": "#b29878",
+      "linear": [
+        0.4452,
+        0.314,
+        0.1878
+      ],
+      "roughness": 0.95,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0
     }
   }
 }

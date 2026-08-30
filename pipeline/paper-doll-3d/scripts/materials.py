@@ -121,22 +121,103 @@ def _set(bsdf, name, value):
         bsdf.inputs[name].default_value = value
 
 
-def build():
-    """Create or refresh materials.blend from LIBRARY, preserving edits.
+def _studio(scene):
+    """Bone cyc + the same key/fill/rim set the browser uses.
 
-    A material that already exists is LEFT ALONE — the whole point is that this
-    file is hand-tuned, so a rebuild must never clobber that work. Delete a
-    material in Blender to have it regenerated from the starting values.
+    Tuning a material against a grey void tells you nothing — a metallized cap
+    is entirely a picture of its surroundings. This mirrors the R3F studio so
+    what you judge in Cycles is at least lit like what ships.
     """
+    import math
+    # cyc: a big curved sweep, bone #B29878
+    bpy.ops.mesh.primitive_plane_add(size=4.0, location=(0, 0.6, 0))
+    cyc = bpy.context.active_object
+    cyc.name = "BB_STUDIO_CYC"
+    cyc.rotation_euler = (math.radians(90), 0, 0)
+    m = bpy.data.materials.new("BB_MAT_STUDIO_BONE")
+    m.use_nodes = True
+    bsdf = m.node_tree.nodes["Principled BSDF"]
+    _set(bsdf, "Base Color", (*hex_to_linear("#B29878"), 1.0))
+    _set(bsdf, "Roughness", 0.95)
+    cyc.data.materials.append(m)
+
+    bpy.ops.mesh.primitive_plane_add(size=4.0, location=(0, -1.4, 0))
+    floor = bpy.context.active_object
+    floor.name = "BB_STUDIO_FLOOR"
+    floor.data.materials.append(m)
+
+    for name, loc, rot, size, energy in (
+        ("KEY",   (0.0, -0.9, 1.6), (math.radians(-35), 0, 0), 2.4, 420),
+        ("FILL_L", (-1.5, -0.7, 0.5), (0, math.radians(-65), 0), 1.8, 120),
+        ("FILL_R", (1.5, -0.7, 0.4), (0, math.radians(65), 0), 1.6, 90),
+        ("RIM_L", (-1.0, 1.1, 0.7), (0, math.radians(-115), 0), 0.35, 500),
+        ("RIM_R", (1.0, 1.1, 0.7), (0, math.radians(115), 0), 0.35, 420),
+    ):
+        L = bpy.data.lights.new(f"BB_{name}", "AREA")
+        L.energy, L.size, L.shape = energy, size, "SQUARE"
+        ob = bpy.data.objects.new(f"BB_{name}", L)
+        ob.location, ob.rotation_euler = loc, rot
+        scene.collection.objects.link(ob)
+
+    cam_d = bpy.data.cameras.new("BB_CAM")
+    cam_d.lens = 42
+    cam = bpy.data.objects.new("BB_CAM", cam_d)
+    # framed on the two rows, which sit around z 0.00 and z -0.10
+    cam.location = (0.0, -0.52, 0.055)
+    cam.rotation_euler = (math.radians(84), 0, 0)
+    scene.collection.objects.link(cam)
+    scene.camera = cam
+    scene.render.engine = "CYCLES"
+    scene.cycles.samples = 128
+
+
+def _import_geo(path, name):
+    """Bring in one shipped GLB and return its mesh object."""
+    before = set(bpy.data.objects)
+    bpy.ops.import_scene.gltf(filepath=str(path))
+    new = [o for o in bpy.data.objects if o not in before]
+    mesh = next((o for o in new if o.type == "MESH"), None)
+    for o in new:
+        if o is not mesh:
+            bpy.data.objects.remove(o, do_unlink=True)
+    if mesh:
+        mesh.name = name
+    return mesh
+
+
+def build():
+    """Create materials.blend: a real STUDIO you can open and judge.
+
+    The first version of this shipped 19 materials and nothing else — an empty
+    scene, because a Blender material is invisible until it is on an object.
+    It laid out no geometry, no lights and no camera, which made it useless as
+    an authoring surface.
+
+    So this lays out the actual shipped geometry: a row of bottles carrying the
+    glass materials, and a row of bottle-plus-cap pairs carrying the closure
+    colourways, on the bone cyc under the browser's lighting. Open it, switch
+    the viewport to Rendered, and tune what you can see.
+
+    Existing materials are PRESERVED on rebuild — the file is hand-tuned and a
+    rebuild must never clobber that. Delete one in Blender to regenerate it.
+    """
+    reuse = {}
     if BLEND.exists():
         bpy.ops.wm.open_mainfile(filepath=str(BLEND))
+        for m in bpy.data.materials:
+            if m.name.startswith("BB_MAT_"):
+                reuse[m.name] = m
+        # rebuild the set from scratch each time; only MATERIALS are precious
+        for o in list(bpy.data.objects):
+            bpy.data.objects.remove(o, do_unlink=True)
     else:
         bpy.ops.wm.read_factory_settings(use_empty=True)
 
+    scene = bpy.context.scene
     made, kept = [], []
     for name, v in LIBRARY.items():
         full = f"BB_MAT_{name}"
-        if bpy.data.materials.get(full):
+        if full in reuse:
             kept.append(full)
             continue
         m = bpy.data.materials.new(full)
@@ -150,15 +231,82 @@ def build():
             _set(b, "IOR", v["ior"])
         if "transmission" in v:
             _set(b, "Transmission Weight", v["transmission"])
-        m.use_fake_user = True          # survive a save with no object using it
+
+        # Glass COLOUR is attenuation over distance, and that is a VOLUME
+        # property — there is no Principled slider for it. Without this the
+        # amber, cobalt and green materials render clear in Cycles, which is
+        # exactly what the first studio render showed.
+        #
+        # It also exports: Blender maps Volume Absorption to
+        # KHR_materials_volume (attenuationColor / attenuationDistance), the
+        # same pair three.js reads. So the browser and Cycles agree.
+        if "atten_dist" in v:
+            nt = m.node_tree
+            vol = nt.nodes.new("ShaderNodeVolumeAbsorption")
+            vol.location = (b.location.x, b.location.y - 320)
+            vol.inputs["Color"].default_value = (*hex_to_linear(v["atten_color"]), 1.0)
+            # Density is per Blender unit and the scene is METRES, so a 20 mm
+            # bottle is only 0.02 of path. 1/atten_dist gives an optical depth
+            # of ~0.6 and the glass renders almost clear — which the first
+            # studio render showed. Scale so the tint reads at product size.
+            vol.inputs["Density"].default_value = 3.0 / max(1e-6, v["atten_dist"])
+            out = nt.nodes.get("Material Output")
+            if out:
+                nt.links.new(vol.outputs["Volume"], out.inputs["Volume"])
+
+        m.use_fake_user = True
+        reuse[full] = m
         made.append(full)
+
+    _studio(scene)
+
+    lane = LANE.parents[1] / "public" / "models"
+    body_src = lane / "bodies-threaded" / "Cyl-round-17-415-70x20.glb"
+    cap_src = lane / "closures" / "BB_CAP_17415.glb"
+
+    proto_body = _import_geo(body_src, "PROTO_BODY") if body_src.exists() else None
+    proto_cap = _import_geo(cap_src, "PROTO_CAP") if cap_src.exists() else None
+
+    def place(proto, x, y, mat, label):
+        if proto is None:
+            return None
+        ob = proto.copy()
+        ob.data = proto.data.copy()
+        ob.data.materials.clear()
+        ob.data.materials.append(mat)
+        ob.location = (x, y, 0.0)
+        ob.name = label
+        scene.collection.objects.link(ob)
+        return ob
+
+    GAP = 0.035
+    glass_keys = [k for k in LIBRARY if k.startswith("GLASS_")]
+    cap_keys = [k for k in LIBRARY if k.startswith("CAP_")]
+
+    # row 1 — glass, bare bottles
+    x0 = -GAP * (len(glass_keys) - 1) / 2
+    for i, k in enumerate(glass_keys):
+        place(proto_body, x0 + i * GAP, 0.0, reuse[f"BB_MAT_{k}"], f"GLASS__{k}")
+
+    # row 2 — cap colourways, on a clear bottle so the pairing reads
+    x0 = -GAP * (len(cap_keys) - 1) / 2
+    for i, k in enumerate(cap_keys):
+        x = x0 + i * GAP
+        place(proto_body, x, 0.075, reuse["BB_MAT_GLASS_CLEAR"], f"BODY__{k}")
+        c = place(proto_cap, x, -0.10, reuse[f"BB_MAT_{k}"], f"CAP__{k}")
+        if c:
+            c.location = (x, 0.075, 0.070)     # seat on the 70 mm rim
+
+    for p in (proto_body, proto_cap):
+        if p:
+            bpy.data.objects.remove(p, do_unlink=True)
 
     bpy.ops.wm.save_as_mainfile(filepath=str(BLEND))
     print(f"materials.blend: {len(made)} created, {len(kept)} preserved")
-    for n in made:
-        print(f"   new  {n}")
+    print(f"  objects laid out: {len(scene.objects)}")
     print(f"\nOpen {BLEND}")
-    print("Set the viewport to Rendered (Cycles) and tune. Re-run `extract`.")
+    print("Viewport -> Rendered (Cycles). Row 1 is glass, row 2 is cap finishes.")
+    print("Tune, then: blender --background --python scripts/materials.py -- extract")
 
 
 def extract():
