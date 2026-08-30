@@ -68,11 +68,50 @@ type Measured = {
  * glass is 2-3 mm, so these are ~0.002.
  */
 const GLASS = {
-  clear:   { color: "#ffffff", roughness: 0.05, transmission: 1.0,  thickness: 0.0025, ior: 1.52, atten: 0.35, attenColor: "#eaf3ef" },
-  frosted: { color: "#ffffff", roughness: 0.62, transmission: 0.95, thickness: 0.0030, ior: 1.50, atten: 0.18, attenColor: "#f2f2f2" },
-  amber:   { color: "#ffffff", roughness: 0.06, transmission: 1.0,  thickness: 0.0030, ior: 1.52, atten: 0.020, attenColor: "#b8641a" },
-  cobalt:  { color: "#ffffff", roughness: 0.06, transmission: 1.0,  thickness: 0.0030, ior: 1.52, atten: 0.018, attenColor: "#12379c" },
-  swirl:   { color: "#ffffff", roughness: 0.40, transmission: 0.92, thickness: 0.0035, ior: 1.50, atten: 0.10, attenColor: "#ded4c2" },
+  // `thickness` and `attenuationDistance` are WORLD UNITS, and this scene is
+  // METRES — the same contract the GLBs are built to. Writing `thickness: 1.6`
+  // reads as 1.6 METRES of glass across a 70 mm bottle, which absorbs
+  // everything and renders the body opaque.
+  //
+  // `dispersion` splits light into colour the way real glass does, strongest
+  // at edges and around the thread. It is the cheapest single thing that stops
+  // three.js glass reading as tinted plastic — CG glass without it looks
+  // "clean" in a way real glass never is.
+  //
+  // These bodies are SOLID (no cavity), so light crosses one thick slab rather
+  // than wall-air-wall. thickness is therefore set to a real fraction of the
+  // body, not to a wall thickness — and the attenuation distances are longer
+  // than real glass chemistry would give, to compensate. A real amber bottle
+  // is a ~2 mm wall you can see through; a 27 mm solid slab of the same glass
+  // would be nearly black. This is the clearest symptom of the SOLID-BODY
+  // ceiling: the values are being bent to fake a cavity that is not modelled.
+  clear: {
+    color: "#ffffff", roughness: 0.03, transmission: 1.0, thickness: 0.012,
+    ior: 1.52, atten: 0.42, attenColor: "#eef6f2", dispersion: 1.4,
+    clearcoat: 0.0,
+  },
+  frosted: {
+    // Frosting is a SURFACE, so roughness climbs but transmission stays high;
+    // dropping transmission instead makes it look like grey plastic.
+    color: "#ffffff", roughness: 0.55, transmission: 0.98, thickness: 0.010,
+    ior: 1.50, atten: 0.28, attenColor: "#f4f6f5", dispersion: 0.5,
+    clearcoat: 0.0,
+  },
+  amber: {
+    color: "#ffffff", roughness: 0.04, transmission: 1.0, thickness: 0.014,
+    ior: 1.52, atten: 0.030, attenColor: "#a8571a", dispersion: 1.2,
+    clearcoat: 0.0,
+  },
+  cobalt: {
+    color: "#ffffff", roughness: 0.04, transmission: 1.0, thickness: 0.014,
+    ior: 1.52, atten: 0.026, attenColor: "#123f9e", dispersion: 1.2,
+    clearcoat: 0.0,
+  },
+  swirl: {
+    color: "#ffffff", roughness: 0.30, transmission: 0.96, thickness: 0.011,
+    ior: 1.50, atten: 0.16, attenColor: "#e2d8c6", dispersion: 0.9,
+    clearcoat: 0.0,
+  },
 } as const;
 
 type GlassKey = keyof typeof GLASS;
@@ -154,12 +193,20 @@ function partMaterial(mesh: string, finish: ClosureFinishKey): THREE.Material {
     // Clearcoat is what makes phenolic read as phenolic: a glassy lacquer over
     // a coloured body, so the highlight sits ON TOP of the colour instead of
     // replacing it the way a bare metal highlight does.
+    // A matte metallized cap is BRUSHED, not merely rough: its highlight
+    // stretches around the cylinder instead of forming a round hotspot.
+    // Uniform roughness is one of the reasons a CG cap reads as fake, so the
+    // matte plated finishes get real anisotropy.
+    const brushed = f.plated && f.roughness > 0.35;
     return new THREE.MeshPhysicalMaterial({
       color: f.color,
       metalness: f.plated ? 1.0 : 0.0,
       roughness: f.roughness,
       clearcoat: f.plated ? 0.35 : 0.9,
       clearcoatRoughness: f.plated ? 0.10 : 0.06,
+      anisotropy: brushed ? 0.65 : 0.0,
+      anisotropyRotation: Math.PI / 2,      // brushing runs around the cap
+      envMapIntensity: 1.35,
     });
   }
   // Fixed roles — these do NOT follow the colourway.
@@ -268,9 +315,13 @@ function Bottle({
           // amber/cobalt glass works: thin walls stay pale, thick bases go deep.
           attenuationDistance: g.atten,
           attenuationColor: new THREE.Color(g.attenColor),
+          // Chromatic dispersion — the colour fringing real glass shows at
+          // edges and around the thread. Without it, three.js glass reads
+          // "too clean", which is a large part of why CG glass looks CG.
+          dispersion: g.dispersion,
           transparent: true,
           side: THREE.DoubleSide,
-          envMapIntensity: 1.3,
+          envMapIntensity: 1.45,
         });
         m.castShadow = true;
       }
