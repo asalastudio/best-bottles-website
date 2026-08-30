@@ -6,3 +6,6 @@ Spry18-415Cu,sprayer,18-415,41.0,23.0,0.5,bestbottles.com PDP,published,same env
 18-415Reducer,reducer,18-415,13.06,11.63,,PSD trace scaled by the Ø10.3 bore,traced,flange 11.63 / body 10.10 / insert 10.71; orifice ASSUMED
 CP17-415,cap,17-415,27.0,19.0,0.5,Jordan listing 2026-08-09,published,h/d 1.42
 CP13-415,cap,13-415,24.0,17.0,0.5,Jordan listing 2026-08-09,published,h/d 1.41
+AnSp18-415Blk,bulb-sprayer,18-415,38.0,65.0,,bestbottles.com PDP,published,"Ø65 is the SIDEWAYS SPAN (collar + bulb), not a diameter — NOT a lathe part"
+AnSpTsl18-415Blk,bulb-sprayer-tassel,18-415,36.0,21.0,,bestbottles.com PDP,published,"Ø21 measures the COLLAR only; the braided hose, bulb and tassel hang off-axis"
+
