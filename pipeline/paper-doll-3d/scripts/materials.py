@@ -62,13 +62,17 @@ LIBRARY = {
     # Amber container glass is iron-sulphur-carbon: it passes red and orange
     # and blocks blue, which is why it protects contents from UV.
     #
-    # The absorption COLOUR is what SURVIVES the trip, so it must be a bright,
-    # saturated version of the hue you want — density alone makes it deep. A
-    # dark brown here double-darkens and the bottle reads as opaque plastic
-    # rather than glass, which is exactly what happened on the first attempt.
+    # SOLVED, not guessed. Sampling GBCylAmb9MtlRollMattSl on the live site
+    # gives the real transmitted colour through the glass: #823110 at the thin
+    # centre, #58280b mid, #1a1403 near the edge. Blender's absorption is
+    # sigma = density * (1 - colour) and T = exp(-sigma * path), so with a
+    # 20 mm path and density 150 the colour that reproduces those measurements
+    # is #e4b34e. Three earlier guesses (chocolate, coral, terracotta) all
+    # missed because real amber is far DARKER than it looks in isolation —
+    # even its brightest point is a burnt brown.
     "GLASS_AMBER":   dict(base="#ffffff", rough=0.0, metal=0.0, ior=1.52,
                           transmission=1.0, coat=0.0,
-                          atten_color="#d98a35", atten_dist=0.009),
+                          atten_color="#e4b34e", atten_dist=0.020),
     # Cobalt oxide passes a narrow deep blue and blocks red and green hard.
     "GLASS_COBALT":  dict(base="#ffffff", rough=0.0, metal=0.0, ior=1.52,
                           transmission=1.0, coat=0.0,

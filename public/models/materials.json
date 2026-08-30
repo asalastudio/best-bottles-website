@@ -105,8 +105,8 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.03,
-      "attenuationColor": "#a8571a"
+      "attenuationDistance": 0.02,
+      "attenuationColor": "#e4b34e"
     },
     "GLASS_CLEAR": {
       "color": "#ffffff",
@@ -135,8 +135,8 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.026,
-      "attenuationColor": "#123f9e"
+      "attenuationDistance": 0.011,
+      "attenuationColor": "#2f6bff"
     },
     "GLASS_FROSTED": {
       "color": "#ffffff",
@@ -145,11 +145,11 @@
         1.0,
         1.0
       ],
-      "roughness": 0.42,
+      "roughness": 0.55,
       "metalness": 0.0,
       "clearcoat": 0.0,
-      "ior": 1.52,
-      "transmission": 1.0,
+      "ior": 1.5,
+      "transmission": 0.98,
       "attenuationDistance": 0.28,
       "attenuationColor": "#f4f6f5"
     },
@@ -165,8 +165,8 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.028,
-      "attenuationColor": "#1f6b3a"
+      "attenuationDistance": 0.013,
+      "attenuationColor": "#4fd486"
     },
     "PART_ACTUATOR_PP": {
       "color": "#f4f4f2",
