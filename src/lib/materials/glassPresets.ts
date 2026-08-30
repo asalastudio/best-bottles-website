@@ -37,7 +37,7 @@ export type MaterialRole =
   | "closure"
   | "insert";
 
-export type GlassPresetId = "clear" | "amber" | "cobalt" | "frosted";
+export type GlassPresetId = "clear" | "amber" | "cobalt" | "frosted" | "swirl";
 
 export type GlassPreset = {
   id: GlassPresetId;
@@ -121,12 +121,34 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     dispersion: 1.2,
     envMapIntensity: 1.0,
     provenance:
-      "APPROVED BY EYE — the measured value (#6e77f2 at 0.014) renders " +
-      "near-black. Measurement kept for reference: " +
-      "T = .156/.185/.884 -> sigma [286, 260, 19]/m. Note how lopsided that " +
-      "is — cobalt oxide blocks red and green almost completely and passes a " +
-      "narrow deep blue, which is why it must NOT be authored as a blue tint " +
-      "with even absorption.",
+      "ART DIRECTION, not measurement. No physical cobalt bottle was " +
+      "available to photograph, so this is eye-set against a reference image " +
+      "of unknown origin (pure white background, no room in the reflections - " +
+      "likely a render or a retouched catalogue asset). " +
+      "Treat it as taste until a real bottle can be shot the way clear, " +
+      "frosted and amber were. " +
+      "A measurement from the OLD catalogue silhouette exists and is " +
+      "recorded for reference - sigma [286, 260, 19]/m, #6e77f2 at 0.014 - " +
+      "but it rendered near-black and is not what ships.",
+  },
+  swirl: {
+    id: "swirl",
+    label: "Swirl",
+    transmission: 0.96,
+    roughness: 0.30,
+    ior: 1.50,
+    thickness: 0.011,
+    attenuationColor: "#e2d8c6",
+    attenuationDistance: 0.16,
+    dispersion: 0.9,
+    envMapIntensity: 1.0,
+    provenance:
+      "ART DIRECTION, not measurement - no physical swirl bottle available. " +
+      "IMPORTANT: the swirl is GEOMETRY, not a material. The flutes are a real " +
+      "0.970 mm relief on the mesh (catalogue O21 against the plain O20), so " +
+      "this preset only supplies the glass; the character comes from the body. " +
+      "Every flute adds optical path, so a preset tuned on the smooth cylinder " +
+      "reads noticeably heavier here - that is physical, not a bug.",
   },
   frosted: {
     id: "frosted",
