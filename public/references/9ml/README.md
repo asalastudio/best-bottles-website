@@ -36,14 +36,36 @@ was generated to the shoot spec (bone ground, soft front-side light, contact
 shadow, 0.02% clipping) specifically so it can be compared against the other
 three in the lab.
 
-Use it for **glass character and lighting**. Do NOT use it as a geometry
-target: its flutes read at roughly 15-20% of the bottle diameter, while the
-real part is **0.970 mm on O21 — about 4.6%**. That millimetre is the
-catalogue's O21 swirl against the plain O20 cylinder, and it is what our mesh
-is built to. The generated version is prettier and is not the product.
+Jordan confirms the flute form here is ACCURATE to the real part.
+
+An earlier note in this file claimed the flutes were far too deep, reasoning
+that the catalogue's O21 swirl against the plain O20 implied only ~1 mm of
+relief. That inference was wrong: **O21 is the envelope across the flute
+CRESTS** and says nothing about how deep the valleys cut. Measured edge
+undulation on this image is ~1.17 mm per side, against our mesh's 0.970 mm
+relief - comparable, not the 4x discrepancy first claimed.
+
+If anything our mesh may be slightly UNDER-fluted. Worth checking against a
+physical bottle or a drawing before treating swirl.py's depth as settled.
 
 Never solve sigma from this file. See the AI section in
 `../../pipeline/paper-doll-3d/REFERENCE-SHOOT-SPEC.md`.
+
+## cobalt.jpg is GENERATED — GLASS ONLY, never geometry
+
+Shot to the spec so it overlays against the others: bone ground, soft
+front-side light, contact shadow, 0.00% clipping. No physical cobalt bottle was
+available.
+
+**Jordan's instruction: use it for the GLASS only. The threading in this image
+is WRONG** — it reads as stacked rings, not a continuous helix. Our mesh
+carries the drawing-exact finish (0.75 mm relief, crest rotating ~146 deg per
+mm of height), and that stays authoritative.
+
+So: judge colour, depth and how the blue behaves through thick and thin
+sections. Ignore the neck entirely.
+
+Sampled centre: RGB 20/36/143, hue 232, saturation 0.86.
 
 ## Frosted has a CLEAR neck
 
