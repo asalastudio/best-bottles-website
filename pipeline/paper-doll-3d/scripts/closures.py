@@ -107,6 +107,106 @@ def cap_builder(rig, finish):
     return cs, rig.cap_profile(cs), rig.cap_thread_modulator(cs, bottle)
 
 
+# ---------------------------------------------------------------------------
+# The 17-415 family — already MEASURED, only ever trapped in the render rig.
+# ---------------------------------------------------------------------------
+# Every part is exported SEPARATELY so the configurator can swap one piece,
+# recolour one piece, or pull the stack apart for an exploded view. Split
+# where the real product has a separate moulding or a separate colour (roller
+# housing / ball; collar / actuator / overcap) — never for cosmetic sub-pieces,
+# which multiplies files without buying versatility.
+#
+# EVERY part's origin is the NECK RIM, z = 0. That is the house convention
+# ("origin IS the rim datum"), so the browser does one thing for all of them:
+# parent to BB_ATTACH_NECK, zero the transform. Position within the stack is
+# baked into the geometry, so an exploded view is a translation along +Y by
+# stack index and nothing has to know each part's seating maths.
+
+def _load_c17(rig):
+    """components_17415.py, loaded the way the rig itself loads it."""
+    import importlib.util as ilu
+    spec = ilu.spec_from_file_location(
+        "components_17415", RIG_DIR / "components_17415.py")
+    mod = ilu.module_from_spec(spec)
+    sys.modules["components_17415"] = mod
+    spec.loader.exec_module(mod)
+    return mod
+
+
+def roller_housing_builder(rig, finish, variant):
+    c17 = _load_c17(rig)
+    rs = c17.ROLLER_PLASTIC_17415 if variant == "plastic" else rig.ROLLER_17415
+    bore_r = rig.FINISH_MASTERS[finish]["bore_d"] / 2.0
+    return dict(spec=rs, profile=rig.roller_profile(rs, bore_r), modulate=None)
+
+
+def roller_ball_builder(rig, finish, variant):
+    """A sphere, not a revolve — and it carries its own seat height.
+
+    The rig parents the ball to the neck and sets location z = ball_z. Baking
+    that offset into the geometry instead keeps the one rule that every part
+    parent-and-zeros; otherwise the ball alone would need special handling in
+    the browser.
+    """
+    c17 = _load_c17(rig)
+    rs = c17.ROLLER_PLASTIC_17415 if variant == "plastic" else rig.ROLLER_17415
+    return dict(spec=rs, sphere=(rs["ball_d"], rs["ball_z"]))
+
+
+def collar_builder(rig, finish, variant):
+    c17 = _load_c17(rig)
+    cs = c17.COLLAR_17415
+    bottle = rig.FINISH_MASTERS[finish]
+    rig.resolve_thread(bottle)
+    if "turns" not in bottle and "thread_band" in bottle:
+        bottle["turns"] = bottle["thread_band"] / bottle["pitch"]
+    return dict(spec=cs, profile=c17.collar_profile(rig, cs),
+                modulate=rig.cap_thread_modulator(cs, bottle))
+
+
+def actuator_builder(rig, finish, variant):
+    c17 = _load_c17(rig)
+    hs = c17.ACTUATOR_17415
+    return dict(spec=hs, profile=c17.actuator_profile(hs), modulate=None)
+
+
+def overcap_builder(rig, finish, variant):
+    c17 = _load_c17(rig)
+    oc = c17.OVERCAP_17415
+    return dict(spec=oc, profile=c17.overcap_profile(oc), modulate=None)
+
+
+def cap_part_builder(rig, finish, variant):
+    cs, profile, modulate = cap_builder(rig, finish)
+    return dict(spec=cs, profile=profile, modulate=modulate)
+
+
+# (finish, part, variant) -> builder.  `part` names the MESH; `variant` is a
+# distinct moulding of that part, never a colour.
+PARTS = {
+    ("17-415", "ROLL_HOUSING", "plastic"): roller_housing_builder,
+    ("17-415", "ROLL_HOUSING", "steel"):   roller_housing_builder,
+    ("17-415", "ROLL_BALL", "plastic"):    roller_ball_builder,
+    ("17-415", "ROLL_BALL", "steel"):      roller_ball_builder,
+    ("17-415", "SPR_COLLAR", None):        collar_builder,
+    ("17-415", "SPR_ACTUATOR", None):      actuator_builder,
+    ("17-415", "SPR_OVERCAP", None):       overcap_builder,
+    ("17-415", "CAP", None):               cap_part_builder,
+    ("13-415", "CAP", None):               cap_part_builder,
+}
+
+# Assembly = an ordered stack of parts, bottom first. The order is what an
+# exploded view animates along; it is NOT a rendering hint.
+ASSEMBLIES = {
+    ("17-415", "roller-plastic"): ["ROLL_HOUSING@plastic", "ROLL_BALL@plastic"],
+    ("17-415", "roller-steel"):   ["ROLL_HOUSING@steel", "ROLL_BALL@steel"],
+    ("17-415", "sprayer"):        ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
+    ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
+    ("17-415", "cap"):            ["CAP"],
+    ("13-415", "cap"):            ["CAP"],
+}
+
+
 BUILDERS = {
     ("17-415", "cap"): cap_builder,
     ("13-415", "cap"): cap_builder,
@@ -161,6 +261,39 @@ def weld_seam(obj):
     bm.to_mesh(obj.data)
     bm.free()
     obj.data.update()
+
+
+def build_part(rig, finish, part, variant, segments):
+    """Build ONE closure part as a bare mesh in metres, origin on the rim."""
+    from mathutils import Matrix
+
+    builder = PARTS.get((finish, part, variant))
+    if builder is None:
+        raise SystemExit(f"no builder for {(finish, part, variant)}. "
+                         f"have: {sorted(PARTS)}")
+    rec = builder(rig, finish, variant)
+    name = f"BB_{part}_{finish.replace('-', '')}"
+    if variant:
+        name += f"_{variant.upper()}"
+
+    if "sphere" in rec:
+        d, z = rec["sphere"]
+        obj = rig.uv_sphere(name, d)
+        if obj.name not in bpy.context.scene.collection.objects:
+            try:
+                bpy.context.scene.collection.objects.link(obj)
+            except RuntimeError:
+                pass
+        obj.data.transform(Matrix.Translation((0.0, 0.0, z)))   # bake the seat
+    else:
+        obj = rig.revolve(name, rec["profile"], segments=segments,
+                          modulate=rec.get("modulate"))
+        bpy.context.scene.collection.objects.link(obj)
+        weld_seam(obj)
+
+    obj.data.transform(_scale_matrix(MM))
+    strip_materials(obj)
+    return obj, rec["spec"]
 
 
 def _scale_matrix(s):
@@ -225,13 +358,88 @@ def export_glb(obj, out_path):
 
 # ---------------------------------------------------------------------------
 
+def build_all_parts(rig, args):
+    """Export every registered part, plus the assembly stacks that use them."""
+    import json
+
+    out_dir = Path(args.out)
+    out_dir.mkdir(parents=True, exist_ok=True)
+    made, failed = {}, []
+
+    print("\n=== closure parts ===")
+    for (finish, part, variant) in sorted(PARTS, key=lambda k: (k[0], k[1], k[2] or "")):
+        if args.finish and finish != args.finish:
+            continue
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+        try:
+            obj, spec = build_part(rig, finish, part, variant, args.segments)
+        except Exception as exc:
+            failed.append((finish, part, variant, str(exc)[:90]))
+            print(f"  FAIL {finish} {part} {variant or '':8s} {str(exc)[:70]}")
+            continue
+        rep = verify_part(obj)
+        path = out_dir / f"{obj.name}.glb"
+        export_glb(obj, path)
+        key = f"{part}@{variant}" if variant else part
+        made[(finish, key)] = dict(
+            file=path.name, mesh=obj.name, finish=finish, part=part,
+            variant=variant, attach="BB_ATTACH_NECK",
+            asset_id=spec.get("asset_id"),
+            non_manifold=rep["non_manifold_edges"], verts=rep["verts"],
+            height_mm=round(rep["height_mm"], 2),
+            max_diameter_mm=round(rep["max_diameter_mm"], 2))
+        flag = "" if rep["non_manifold_edges"] == 0 else "  NOT WATERTIGHT"
+        print(f"  ok   {obj.name:34s} {rep['height_mm']:6.2f}h "
+              f"x {rep['max_diameter_mm']:6.2f}d  {rep['verts']:6d}v"
+              f"  nm={rep['non_manifold_edges']}{flag}")
+
+    assemblies = []
+    for (finish, kind), stack in sorted(ASSEMBLIES.items()):
+        if args.finish and finish != args.finish:
+            continue
+        if all((finish, k) in made for k in stack):
+            assemblies.append(dict(finish=finish, kind=kind,
+                                   stack=[made[(finish, k)]["mesh"] for k in stack]))
+    manifest = dict(
+        contract=dict(units="metres", up="Y", materials=0,
+                      origin="neck rim (BB_ATTACH_NECK) for EVERY part",
+                      seating="parent to BB_ATTACH_NECK and zero the transform",
+                      exploded="translate each part along +Y by its stack index"),
+        parts=list(made.values()), assemblies=assemblies)
+    (out_dir / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    print(f"\n  {len(made)} parts, {len(assemblies)} assemblies -> "
+          f"{out_dir}/manifest.json")
+    if failed:
+        print(f"  {len(failed)} FAILED")
+    return 1 if failed else 0
+
+
+def verify_part(obj):
+    import bmesh
+    bm = bmesh.new(); bm.from_mesh(obj.data)
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-7)   # glTF-style weld
+    nm = sum(1 for e in bm.edges if not e.is_manifold)
+    bm.free()
+    zs = [v.co.z for v in obj.data.vertices]
+    rs = [(v.co.x ** 2 + v.co.y ** 2) ** 0.5 for v in obj.data.vertices]
+    return dict(non_manifold_edges=nm, verts=len(obj.data.vertices),
+                height_mm=(max(zs) - min(zs)) / MM,
+                max_diameter_mm=max(rs) * 2 / MM)
+
+
 def main(argv):
     ap = argparse.ArgumentParser()
     ap.add_argument("--finish", default="17-415")
     ap.add_argument("--kind", default="cap")
+    ap.add_argument("--parts", action="store_true",
+                    help="build every registered PART for --finish (Phase 1)")
     ap.add_argument("--segments", type=int, default=96)
     ap.add_argument("--out", default="glb-closures")
     args = ap.parse_args(argv)
+
+    if args.parts:
+        bpy.ops.wm.read_factory_settings(use_empty=True)
+        return build_all_parts(load_rig(), args)
 
     bpy.ops.wm.read_factory_settings(use_empty=True)
     rig = load_rig()
