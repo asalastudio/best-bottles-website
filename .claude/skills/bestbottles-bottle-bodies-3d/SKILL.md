@@ -1,6 +1,6 @@
 ---
 name: bestbottles-bottle-bodies-3d
-description: Build Best Bottles 3D bottle bodies (GLB) from PSD silhouettes plus live-site millimetres — lathe for round, extrude for boxy — then graft the drawing-exact threaded finish, flute swirl bodies, and export geometry-only closures that seat on the rim datum. Use when generating, fixing, threading, or batching bottle geometry for the web configurator.
+description: Build Best Bottles 3D bottle bodies (GLB) from PSD silhouettes plus live-site millimetres — lathe for round, extrude for boxy — then graft the drawing-exact threaded finish, flute swirl bodies, export geometry-only closures that seat on the rim datum, and author glass and cap materials in Blender for the browser to consume. Use when generating, fixing, threading, batching, or shading bottle geometry for the web configurator.
 ---
 
 # Bottle bodies → GLB
@@ -208,6 +208,82 @@ force the section circular at and above the seat, blended over the shoulder.
 
 **Free the mesh datablock,** not just the object — otherwise a 2,000-row batch
 leaks unboundedly.
+
+## Materials: authored in Blender, consumed by the browser
+
+Geometry-only GLBs are the contract, so material VALUES travel as data instead
+of being baked in. Baking would freeze one colourway per file — ten cap
+finishes become ten GLBs instead of one plus a swatch click.
+
+```bash
+# tune: open the bench, drag sliders, watch Cycles update
+open pipeline/paper-doll-3d/materials.blend
+
+# or edit the TUNE table and run it inside Blender's Scripting tab
+pipeline/paper-doll-3d/scripts/tune_glass.py
+
+# push what you tuned to the browser
+blender --background --python scripts/materials.py -- extract   # -> public/models/materials.json
+```
+
+`materials.blend` is a ONE-bottle bench, not a showroom: twelve bottles at
+160k faces each is 2.27M faces, which crashes machines and makes Cycles preview
+useless. It saves already in Rendered view through the camera, because finding
+the viewport-shading buttons is a genuine stumbling block.
+
+### The traps, each one found the hard way
+
+**Blender's Base Color is LINEAR.** Feeding it a measured sRGB hex and
+converting again on extract double-gammas it — `#292929` came back `#6f6f6f`.
+Store measured hex, convert at both boundaries.
+
+**AgX washes everything out.** Blender 4+ defaults `view_transform` to AgX, a
+film emulation that desaturates hard: it turns amber to salmon and cobalt to
+grey, and it guarantees Blender and three.js can never agree, because three.js
+is not applying AgX. Use Filmic — Standard has no highlight rolloff and any
+bright source clips to flat white instantly.
+
+**Glass colour is a VOLUME property, not Base Color.** There is no Principled
+slider for it. Without a Volume Absorption node, amber and cobalt render
+CLEAR. Base Color stays white; colour lives in the volume, which is also why a
+thin wall looks pale and a thick base looks deep.
+
+**"Thin Wall" must be OFF.** When it is on, the shader treats the surface as an
+infinitely thin membrane, light never travels through a volume, and absorption
+is ignored entirely.
+
+**The absorption colour is what SURVIVES, so it must be BRIGHT.** Density alone
+makes it deep. A dark brown double-darkens and the bottle reads as opaque
+plastic. Amber overshot in both directions before landing: dark brown gave
+chocolate, pure orange gave coral.
+
+**Density is per metre and these bottles are tiny.** Transmission is
+`exp(-density x path)`, and a Ø20 mm bottle is 0.02 m of path: density 40 lets
+45% through, 150 lets 5%. A density that reads correctly on a metre cube is
+invisible at product scale.
+
+**Hard area lights put fake panel reflections INSIDE the glass.** A bottle is a
+lens, so any small bright source becomes a crisp rectangle floating in the
+body — it reads as CG instantly. Use a soft dome (a gradient world) plus one
+large dim key. Real glass photography uses a tent or scrim for exactly this
+reason.
+
+**Caps are PHENOLIC (composite), not metal.** A pigmented cap is a DIELECTRIC
+with a clearcoat: metalness 0, and the highlight sits ON TOP of the colour
+rather than replacing it. Silver/gold/copper keep metalness 1 only because
+they are vacuum-METALLIZED — a real metal layer under lacquer.
+
+**Cycles is not three.js.** Values transfer exactly; the look does not. Blender
+path-traces with true refraction and caustics, three.js rasterizes an
+approximation. Expect one round trip, and judge the browser in the browser.
+
+### The bridge is easy to leave unconnected
+
+`materials.json` was loaded, passed in as a prop, and never read — so every
+value tuned in Blender stopped at the component boundary while the browser
+rendered hardcoded defaults. If tuning "does nothing", check that
+`partMaterial()` and `Bottle()` actually resolve from the JSON before touching
+any material value.
 
 ## Gates
 

@@ -52,21 +52,31 @@ OUT = LANE.parents[1] / "public" / "models" / "materials.json"
 # browser, which is why parts ship with stable names.
 LIBRARY = {
     # ---- glass -----------------------------------------------------------
-    "GLASS_CLEAR":   dict(base="#ffffff", rough=0.03, metal=0.0, ior=1.52,
+    # Optically polished soda-lime: roughness 0. Even 0.03 reads as acrylic.
+    "GLASS_CLEAR":   dict(base="#ffffff", rough=0.0, metal=0.0, ior=1.52,
                           transmission=1.0, coat=0.0,
                           atten_color="#eef6f2", atten_dist=0.42),
     "GLASS_FROSTED": dict(base="#ffffff", rough=0.55, metal=0.0, ior=1.50,
                           transmission=0.98, coat=0.0,
                           atten_color="#f4f6f5", atten_dist=0.28),
-    "GLASS_AMBER":   dict(base="#ffffff", rough=0.04, metal=0.0, ior=1.52,
+    # Amber container glass is iron-sulphur-carbon: it passes red and orange
+    # and blocks blue, which is why it protects contents from UV.
+    #
+    # The absorption COLOUR is what SURVIVES the trip, so it must be a bright,
+    # saturated version of the hue you want — density alone makes it deep. A
+    # dark brown here double-darkens and the bottle reads as opaque plastic
+    # rather than glass, which is exactly what happened on the first attempt.
+    "GLASS_AMBER":   dict(base="#ffffff", rough=0.0, metal=0.0, ior=1.52,
                           transmission=1.0, coat=0.0,
-                          atten_color="#a8571a", atten_dist=0.030),
-    "GLASS_COBALT":  dict(base="#ffffff", rough=0.04, metal=0.0, ior=1.52,
+                          atten_color="#d98a35", atten_dist=0.009),
+    # Cobalt oxide passes a narrow deep blue and blocks red and green hard.
+    "GLASS_COBALT":  dict(base="#ffffff", rough=0.0, metal=0.0, ior=1.52,
                           transmission=1.0, coat=0.0,
-                          atten_color="#123f9e", atten_dist=0.026),
-    "GLASS_GREEN":   dict(base="#ffffff", rough=0.04, metal=0.0, ior=1.52,
+                          atten_color="#2f6bff", atten_dist=0.011),
+    # Chromium/iron green — the classic wine-bottle glass.
+    "GLASS_GREEN":   dict(base="#ffffff", rough=0.0, metal=0.0, ior=1.52,
                           transmission=1.0, coat=0.0,
-                          atten_color="#1f6b3a", atten_dist=0.028),
+                          atten_color="#4fd486", atten_dist=0.013),
 
     # ---- closure shells: MEASURED from the cap PSDs ----------------------
     # plated = vacuum-metallized (a real metal layer under lacquer).
@@ -146,18 +156,52 @@ def _studio(scene):
     floor.name = "BB_STUDIO_FLOOR"
     floor.data.materials.append(m)
 
-    for name, loc, rot, size, energy in (
-        ("KEY",   (0.0, -0.9, 1.6), (math.radians(-35), 0, 0), 2.4, 420),
-        ("FILL_L", (-1.5, -0.7, 0.5), (0, math.radians(-65), 0), 1.8, 120),
-        ("FILL_R", (1.5, -0.7, 0.4), (0, math.radians(65), 0), 1.6, 90),
-        ("RIM_L", (-1.0, 1.1, 0.7), (0, math.radians(-115), 0), 0.35, 500),
-        ("RIM_R", (1.0, 1.1, 0.7), (0, math.radians(115), 0), 0.35, 420),
-    ):
-        L = bpy.data.lights.new(f"BB_{name}", "AREA")
-        L.energy, L.size, L.shape = energy, size, "SQUARE"
-        ob = bpy.data.objects.new(f"BB_{name}", L)
-        ob.location, ob.rotation_euler = loc, rot
-        scene.collection.objects.link(ob)
+    # A SOFT DOME, not light panels.
+    #
+    # Discrete area lights are what put those hard white rectangles inside the
+    # glass: a bottle is a lens, so any small bright source becomes a crisp
+    # panel-shaped reflection floating in the body. It reads as CG instantly.
+    #
+    # Real glass photography uses a large diffuse source — a tent, a scrim, a
+    # soft dome — so the bottle picks up a smooth gradient and its EDGES define
+    # the form instead of hot spots. Here the world itself is that dome: a
+    # vertical gradient from bright above to dim below, which is what a softbox
+    # over a sweep actually produces.
+    world = bpy.data.worlds.new("BB_WORLD")
+    world.use_nodes = True
+    wnt = world.node_tree
+    for n in list(wnt.nodes):
+        if n.type != "OUTPUT_WORLD":
+            wnt.nodes.remove(n)
+    wout = next(n for n in wnt.nodes if n.type == "OUTPUT_WORLD")
+    bg = wnt.nodes.new("ShaderNodeBackground")
+    ramp = wnt.nodes.new("ShaderNodeValToRGB")
+    ramp.color_ramp.elements[0].position = 0.34
+    ramp.color_ramp.elements[0].color = (0.42, 0.43, 0.46, 1)   # floor-side
+    ramp.color_ramp.elements[1].position = 0.72
+    ramp.color_ramp.elements[1].color = (1.00, 1.00, 1.00, 1)   # sky-side
+    grad = wnt.nodes.new("ShaderNodeTexGradient")
+    grad.gradient_type = "EASING"
+    mapping = wnt.nodes.new("ShaderNodeMapping")
+    mapping.inputs["Rotation"].default_value = (math.radians(90), 0, 0)
+    texco = wnt.nodes.new("ShaderNodeTexCoord")
+    wnt.links.new(texco.outputs["Generated"], mapping.inputs["Vector"])
+    wnt.links.new(mapping.outputs["Vector"], grad.inputs["Vector"])
+    wnt.links.new(grad.outputs["Color"], ramp.inputs["Fac"])
+    wnt.links.new(ramp.outputs["Color"], bg.inputs["Color"])
+    bg.inputs["Strength"].default_value = 3.4
+    wnt.links.new(bg.outputs["Background"], wout.inputs["Surface"])
+    scene.world = world
+
+    # ONE very large, very soft key well off to the side, only to give the
+    # edges something to catch. Big and dim: a small bright light is exactly
+    # what we are removing.
+    L = bpy.data.lights.new("BB_SOFT_KEY", "AREA")
+    L.energy, L.size, L.shape = 90.0, 3.2, "SQUARE"
+    ob = bpy.data.objects.new("BB_SOFT_KEY", L)
+    ob.location = (-0.9, -1.0, 1.1)
+    ob.rotation_euler = (math.radians(-38), 0, math.radians(-32))
+    scene.collection.objects.link(ob)
 
     cam_d = bpy.data.cameras.new("BB_CAM")
     cam_d.lens = 50
@@ -168,10 +212,34 @@ def _studio(scene):
     scene.collection.objects.link(cam)
     scene.camera = cam
     scene.render.engine = "CYCLES"
+
+    # COLOUR MANAGEMENT — the single biggest reason the glass looked "faded".
+    #
+    # Blender 4+ defaults view_transform to AgX, a film emulation that
+    # deliberately desaturates and rolls off colour. It is a good default for
+    # cinematic work and the wrong one here: it washes amber toward salmon and
+    # cobalt toward grey. Standard is a straight sRGB transform, but it has NO
+    # highlight rolloff, so any bright source clips to flat white immediately.
+    # Filmic keeps the rolloff while staying far more saturated than AgX.
+    scene.view_settings.view_transform = "Filmic"
+    scene.view_settings.look = "None"
+    scene.view_settings.exposure = 0.6
+
+    # Light must survive the trip through a 20 mm slab of glass. Volume bounces
+    # at 0 was capping how absorption resolves; transmission bounces need
+    # headroom for a solid body with a cap on it.
+    scene.cycles.transmission_bounces = 24
+    scene.cycles.volume_bounces = 4
+    scene.cycles.max_bounces = 24
+    scene.cycles.caustics_refractive = True
     scene.cycles.samples = 128
     # Interactive preview: 24 samples refreshes fast enough to tune against,
     # while the F12 render still uses the full 128.
-    scene.cycles.preview_samples = 24
+    # 8 preview samples with denoising: grainy but it MOVES, which is the
+    # whole point of a bench. F12 still renders the full 128.
+    scene.cycles.preview_samples = 8
+    scene.cycles.use_preview_denoising = True
+    scene.cycles.use_denoising = True
 
 
 def _import_geo(path, name):
