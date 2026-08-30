@@ -1,0 +1,263 @@
+{
+  "source": "pipeline/paper-doll-3d/materials.blend",
+  "note": "Authored in Blender, consumed by the browser. Values are Principled BSDF sliders; Cycles is not three.js, so expect one round trip.",
+  "materials": {
+    "CAP_COPPER": {
+      "color": "#975a42",
+      "linear": [
+        0.3095,
+        0.1022,
+        0.0545
+      ],
+      "roughness": 0.28,
+      "metalness": 1.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "CAP_MATTE_GOLD": {
+      "color": "#c5b375",
+      "linear": [
+        0.5583,
+        0.4508,
+        0.1779
+      ],
+      "roughness": 0.44,
+      "metalness": 1.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "CAP_MATTE_SILVER": {
+      "color": "#c0c0c0",
+      "linear": [
+        0.5271,
+        0.5271,
+        0.5271
+      ],
+      "roughness": 0.48,
+      "metalness": 1.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "CAP_SHINY_BLACK": {
+      "color": "#292929",
+      "linear": [
+        0.0222,
+        0.0222,
+        0.0222
+      ],
+      "roughness": 0.09,
+      "metalness": 0.0,
+      "clearcoat": 0.9,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "CAP_SHINY_GOLD": {
+      "color": "#9b9062",
+      "linear": [
+        0.3278,
+        0.2789,
+        0.1221
+      ],
+      "roughness": 0.13,
+      "metalness": 1.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "CAP_SHINY_SILVER": {
+      "color": "#828282",
+      "linear": [
+        0.2232,
+        0.2232,
+        0.2232
+      ],
+      "roughness": 0.1,
+      "metalness": 1.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "CAP_WHITE": {
+      "color": "#f1f1f1",
+      "linear": [
+        0.8796,
+        0.8796,
+        0.8796
+      ],
+      "roughness": 0.42,
+      "metalness": 0.0,
+      "clearcoat": 0.9,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "GLASS_AMBER": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.04,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.03,
+      "attenuationColor": "#a8571a"
+    },
+    "GLASS_CLEAR": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.03,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.42,
+      "attenuationColor": "#eef6f2"
+    },
+    "GLASS_COBALT": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.04,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.026,
+      "attenuationColor": "#123f9e"
+    },
+    "GLASS_FROSTED": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.55,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.98,
+      "attenuationDistance": 0.28,
+      "attenuationColor": "#f4f6f5"
+    },
+    "GLASS_GREEN": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.04,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.028,
+      "attenuationColor": "#1f6b3a"
+    },
+    "PART_ACTUATOR_PP": {
+      "color": "#f4f4f2",
+      "linear": [
+        0.9047,
+        0.9047,
+        0.8879
+      ],
+      "roughness": 0.38,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "PART_BALL_PLASTIC": {
+      "color": "#eeece4",
+      "linear": [
+        0.855,
+        0.8388,
+        0.7758
+      ],
+      "roughness": 0.45,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "PART_BALL_STEEL": {
+      "color": "#cfd2d6",
+      "linear": [
+        0.624,
+        0.6445,
+        0.6724
+      ],
+      "roughness": 0.18,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "PART_HOUSING_PP": {
+      "color": "#e8e6dd",
+      "linear": [
+        0.807,
+        0.7913,
+        0.7231
+      ],
+      "roughness": 0.4,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "PART_OVERCAP_CLEAR": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.12,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.49,
+      "transmission": 0.94
+    },
+    "PART_REDUCER_PP": {
+      "color": "#e9e7df",
+      "linear": [
+        0.8148,
+        0.7991,
+        0.7379
+      ],
+      "roughness": 0.42,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0
+    },
+    "PART_STUD_STEEL": {
+      "color": "#f2f4f6",
+      "linear": [
+        0.8879,
+        0.9047,
+        0.9216
+      ],
+      "roughness": 0.06,
+      "metalness": 1.0,
+      "clearcoat": 0.5,
+      "ior": 1.5,
+      "transmission": 0.0
+    }
+  }
+}

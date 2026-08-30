@@ -250,8 +250,16 @@ function Studio() {
 
 /* ------------------------------------------------------------------- page */
 
-export default function Configurator({ bodies, closures }: {
+type MatRec = {
+  color: string; roughness: number; metalness: number; clearcoat: number;
+  ior: number; transmission: number;
+  attenuationDistance?: number; attenuationColor?: string;
+};
+
+export default function Configurator({ bodies, closures, materials = {} }: {
   bodies: Body[]; closures: ClosureManifest;
+  /** authored in pipeline/paper-doll-3d/materials.blend, extracted to JSON */
+  materials?: Record<string, MatRec>;
 }) {
   const [bodyIdx, setBodyIdx] = useState(0);
   const [glass, setGlass] = useState<GlassKey>("clear");

@@ -20,5 +20,19 @@ export default async function Page() {
       path.join(process.cwd(), "public/models/closures/manifest.json"), "utf8"),
   );
 
-  return <Configurator bodies={bodies} closures={closures} />;
+  // Material values authored in Blender and extracted to JSON. Absent until
+  // `materials.py -- extract` has run, in which case the component falls back
+  // to its built-in defaults.
+  let materials = {};
+  try {
+    materials = JSON.parse(
+      await fs.readFile(
+        path.join(process.cwd(), "public/models/materials.json"), "utf8"),
+    ).materials;
+  } catch { /* not extracted yet */ }
+
+  return (
+    <Configurator bodies={bodies} closures={closures}
+                  materials={materials as never} />
+  );
 }
