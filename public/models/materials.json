@@ -100,7 +100,7 @@
         1.0,
         1.0
       ],
-      "roughness": 0.04,
+      "roughness": 0.0,
       "metalness": 0.0,
       "clearcoat": 0.0,
       "ior": 1.52,
@@ -115,7 +115,7 @@
         1.0,
         1.0
       ],
-      "roughness": 0.03,
+      "roughness": 0.0,
       "metalness": 0.0,
       "clearcoat": 0.0,
       "ior": 1.52,
@@ -130,7 +130,7 @@
         1.0,
         1.0
       ],
-      "roughness": 0.04,
+      "roughness": 0.0,
       "metalness": 0.0,
       "clearcoat": 0.0,
       "ior": 1.52,
@@ -145,11 +145,11 @@
         1.0,
         1.0
       ],
-      "roughness": 0.55,
+      "roughness": 0.42,
       "metalness": 0.0,
       "clearcoat": 0.0,
-      "ior": 1.5,
-      "transmission": 0.98,
+      "ior": 1.52,
+      "transmission": 1.0,
       "attenuationDistance": 0.28,
       "attenuationColor": "#f4f6f5"
     },
@@ -160,7 +160,7 @@
         1.0,
         1.0
       ],
-      "roughness": 0.04,
+      "roughness": 0.0,
       "metalness": 0.0,
       "clearcoat": 0.0,
       "ior": 1.52,
