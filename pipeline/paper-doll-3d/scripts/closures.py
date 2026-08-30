@@ -314,10 +314,22 @@ def pump_spout_builder(rig, finish, variant):
 
 # Dot studs, measured in build-master-scene.py: ~1.4 mm domes on a STAGGERED
 # lattice, ~3.9 mm row pitch, 8 columns, extracted from CpRoll17-415*Dot.psd.
-DOTS_17415 = dict(asset_id="BB_CAP_DOTS_17415_001",
-                  dot_d=1.4, row_pitch=3.9, columns=8,
-                  proud=0.45,          # how far a dome stands off the wall
-                  z_lo=-11.0, z_hi=9.5)   # the run of wall that carries studs
+DOTS_17415 = dict(
+    asset_id="BB_CAP_DOTS_17415_001",
+    # MEASURED 2026-08-30 from the isolated cap layer in
+    # "20. Closures .../12. 17-415 Roll on/2. CpRoll17-415BlkDot.psd", scaled
+    # by the published cap Ø19.0. Supersedes build-master-scene's comment
+    # ("1.4 mm, 3.9 mm pitch, 8 columns"), which gives ~3x too many studs and
+    # reads as a dense speckle instead of the sparse jewels the product has.
+    #
+    # The front face shows THREE columns, so six around the circumference at
+    # 60 deg. Centre column studs sit at y 5.92 / 14.24 / 22.41 mm (pitch
+    # ~8.25) and the side columns at 9.85 / 18.42 — offset half a row, which is
+    # the stagger.
+    dot_d=1.2, row_pitch=8.4, columns=6,
+    proud=0.85,             # set stones standing well proud, not dimples
+    z_lo=-8.9, z_hi=9.6,    # measured span, referenced to the rim datum
+)
 
 
 def cap_dots_builder(rig, finish, variant):

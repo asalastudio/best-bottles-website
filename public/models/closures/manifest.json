@@ -43,9 +43,9 @@
       "attach": "BB_ATTACH_NECK",
       "asset_id": "BB_CAP_DOTS_17415_001",
       "non_manifold": 0,
-      "verts": 3784,
-      "height_mm": 20.9,
-      "max_diameter_mm": 19.85
+      "verts": 1290,
+      "height_mm": 18.0,
+      "max_diameter_mm": 20.61
     },
     {
       "file": "BB_PMP_SPOUT_17415.glb",

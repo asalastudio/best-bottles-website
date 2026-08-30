@@ -99,7 +99,8 @@ function partMaterial(mesh: string, finish: FinishKey) {
   }
   if (mesh.includes("CAP_DOTS"))
     return new THREE.MeshPhysicalMaterial({
-      color: "#d9dcdf", metalness: 1, roughness: 0.1, clearcoat: 0.4 });
+      color: "#f2f4f6", metalness: 1, roughness: 0.06,
+      clearcoat: 0.5, envMapIntensity: 3.2 });
   if (mesh.includes("ROLL_BALL"))
     return mesh.includes("STEEL")
       ? new THREE.MeshStandardMaterial({ color: "#cfd2d6", metalness: 1, roughness: 0.18 })
@@ -308,9 +309,12 @@ export default function Configurator({ bodies, closures }: {
                             scale={0.4} blur={2.4} far={0.12} />
           </Suspense>
           <ambientLight intensity={0.35} />
-          <OrbitControls makeDefault enablePan={false} target={[0, 0, 0]}
-                         minDistance={0.07} maxDistance={0.45}
-                         minPolarAngle={0.5} maxPolarAngle={2.2} />
+          {/* The bottle is FIXED on the canvas — Jordan, 2026-08-30. Rotate
+              to inspect, but no zoom and no pan: a product page should present
+              the bottle at one considered size, not let it drift. */}
+          <OrbitControls makeDefault enableZoom={false} enablePan={false}
+                         target={[0, 0, 0]}
+                         minPolarAngle={0.85} maxPolarAngle={1.85} />
         </Canvas>
       </div>
 

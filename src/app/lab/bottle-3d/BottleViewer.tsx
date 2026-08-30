@@ -213,8 +213,11 @@ function partMaterial(mesh: string, finish: ClosureFinishKey): THREE.Material {
   // Fixed roles — these do NOT follow the colourway.
   if (mesh.includes("CAP_DOTS")) {
     return new THREE.MeshPhysicalMaterial({
-      color: "#d9dcdf", metalness: 1.0, roughness: 0.10,
-      clearcoat: 0.4, clearcoatRoughness: 0.06,
+      // Polished set stones. A tiny convex mirror reflects a very small
+      // solid angle, so on a dark cap it reads as a dark speck unless the
+      // environment response is pushed hard — hence envMapIntensity 3.2.
+      color: "#f2f4f6", metalness: 1.0, roughness: 0.06,
+      clearcoat: 0.5, clearcoatRoughness: 0.05, envMapIntensity: 3.2,
     });
   }
   if (mesh.includes("ROLL_BALL")) {
