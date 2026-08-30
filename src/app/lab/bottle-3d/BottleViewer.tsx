@@ -31,6 +31,7 @@ import {
   Lightformer,
   Center,
   useGLTF,
+  MeshTransmissionMaterial,
 } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -264,115 +265,25 @@ function ClosurePartMesh({
   );
 }
 
-function Bottle({
-  url,
-  glass,
-  showDatum,
-  neckRadiusM,
-  onMeasure,
-}: {
-  url: string;
-  glass: GlassKey;
-  showDatum: boolean;
-  neckRadiusM: number;
-  onMeasure: (m: Measured) => void;
-}) {
-  const gltf = useGLTF(url);
-  const scene = gltf.scene;
-  // what the FILE declares, not what three.js defaulted in:
-  const fileMaterials: number =
-    (gltf as unknown as { parser?: { json?: { materials?: unknown[] } } })
-      .parser?.json?.materials?.length ?? 0;
-  const root = useMemo(() => scene.clone(true), [scene]);
-
-  const { attach, shoulder } = useMemo(() => {
-    let attach: THREE.Object3D | null = null;
-    let shoulder: THREE.Object3D | null = null;
-    root.traverse((o) => {
-      if (o.name === "BB_ATTACH_NECK") attach = o;
-      if (o.name === "BB_REF_SHOULDER") shoulder = o;
-    });
-    return { attach, shoulder };
-  }, [root]);
-
-  // Materials are assigned HERE, by mesh name - never baked into the GLB.
-  useEffect(() => {
-    const g = GLASS[glass];
-    let mesh: THREE.Mesh | null = null;
-    root.traverse((o) => {
-      if (!(o as THREE.Mesh).isMesh) return;
-      const m = o as THREE.Mesh;
-      if (m.name.startsWith("BB_BTL_")) {
-        mesh = m;
-        m.material = new THREE.MeshPhysicalMaterial({
-          color: new THREE.Color(g.color),
-          roughness: g.roughness,
-          metalness: 0,
-          transmission: g.transmission,
-          thickness: g.thickness,
-          ior: g.ior,
-          // colour comes from ATTENUATION over distance, which is how real
-          // amber/cobalt glass works: thin walls stay pale, thick bases go deep.
-          attenuationDistance: g.atten,
-          attenuationColor: new THREE.Color(g.attenColor),
-          // Chromatic dispersion — the colour fringing real glass shows at
-          // edges and around the thread. Without it, three.js glass reads
-          // "too clean", which is a large part of why CG glass looks CG.
-          dispersion: g.dispersion,
-          transparent: true,
-          side: THREE.DoubleSide,
-          envMapIntensity: 1.45,
-        });
-        m.castShadow = true;
-      }
-    });
-    if (!mesh) return;
-    const m = mesh as THREE.Mesh;
-    // Measure the GEOMETRY, not the object subtree. setFromObject walks
-    // children, and the datum ring is parented to BB_ATTACH_NECK inside this
-    // mesh - so it was adding its own tube radius to the bottle and reporting
-    // 0.61 mm of drift that does not exist in the asset.
-    m.geometry.computeBoundingBox();
-    const size = new THREE.Vector3();
-    (m.geometry.boundingBox as THREE.Box3).getSize(size);
-    const pos = m.geometry.getAttribute("position");
-    onMeasure({
-      // GLB is Y-up in metres: y is the bottle's height.
-      widthMm: size.x * 1000,
-      depthMm: size.z * 1000,
-      heightMm: size.y * 1000,
-      verts: pos ? pos.count : 0,
-      // Y-UP: export_yup rotates Blender's Z-up into glTF's Y-up, so the
-      // datum height lives in .y here. Reading .z gave 0.00 mm for every body
-      // and made a correct attach point look broken.
-      attachYmm: attach ? (attach as THREE.Object3D).position.y * 1000 : null,
-      shoulderYmm: shoulder ? (shoulder as THREE.Object3D).position.y * 1000 : null,
-      meshName: m.name,
-      materials: fileMaterials,
-    });
-  }, [root, glass, attach, shoulder, onMeasure, fileMaterials]);
-
-  useDatumRing(attach as THREE.Object3D | null, showDatum, neckRadiusM);
-
-  return <primitive object={root} />;
-}
-
 /**
- * A ring at BB_ATTACH_NECK - where every closure will parent-and-zero.
+ * A ring at BB_ATTACH_NECK so the seating datum is visible while judging fit.
  *
- * It is ADDED AS A CHILD of the datum node rather than positioned from a world
- * vector: <Center> offsets the whole model, so copying a world position into a
- * local one counted that offset twice and drew the ring at mid-body. Parenting
- * it means the ring is placed by exactly the transform a real closure will
- * inherit - which is the thing this marker is supposed to prove.
+ * Parented to the datum object, which is why the bottle is measured from its
+ * GEOMETRY: Box3.setFromObject walks children, so this ring would otherwise be
+ * counted as part of the bottle and report drift that does not exist.
  */
-function useDatumRing(target: THREE.Object3D | null, visible: boolean, radius: number) {
+function useDatumRing(
+  target: THREE.Object3D | null,
+  visible: boolean,
+  radius: number,
+) {
   useEffect(() => {
     if (!target) return;
-    const ring = new THREE.Mesh(
-      new THREE.TorusGeometry(radius, radius * 0.05, 8, 64),
-      new THREE.MeshBasicMaterial({ color: "#ff4d4d", toneMapped: false, depthTest: false }),
-    );
+    const geo = new THREE.TorusGeometry(radius * 1.12, radius * 0.055, 12, 64);
+    const mat = new THREE.MeshBasicMaterial({
+      color: "#ff3b52", depthTest: false, transparent: true, opacity: 0.9,
+    });
+    const ring = new THREE.Mesh(geo, mat);
     ring.rotation.x = Math.PI / 2;
     ring.renderOrder = 999;
     ring.visible = visible;
@@ -384,6 +295,144 @@ function useDatumRing(target: THREE.Object3D | null, visible: boolean, radius: n
     };
   }, [target, visible, radius]);
 }
+
+
+function Bottle({
+  url,
+  glass,
+  showDatum,
+  neckRadiusM,
+  onMeasure,
+  transmissionModel,
+}: {
+  url: string;
+  glass: GlassKey;
+  showDatum: boolean;
+  neckRadiusM: number;
+  onMeasure: (m: Measured) => void;
+  transmissionModel: boolean;
+}) {
+  const gltf = useGLTF(url);
+  const scene = gltf.scene;
+  // What the FILE declares, not what three.js defaulted in. Counting materials
+  // on the loaded mesh always returns >= 1 because three.js assigns a default
+  // to any primitive that has none.
+  const fileMaterials: number =
+    (gltf as unknown as { parser?: { json?: { materials?: unknown[] } } })
+      .parser?.json?.materials?.length ?? 0;
+  const root = useMemo(() => scene.clone(true), [scene]);
+
+  // The bottle renders as an explicit <mesh> rather than a <primitive> so the
+  // transmission material can be a JSX child — drei's MeshTransmissionMaterial
+  // is a component, not a class, and cannot be assigned in a traverse.
+  const { geometry, attach, shoulder, meshName } = useMemo(() => {
+    let geometry: THREE.BufferGeometry | null = null;
+    let meshName = "";
+    let attach: THREE.Object3D | null = null;
+    let shoulder: THREE.Object3D | null = null;
+    root.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (m.isMesh && !geometry) {
+        geometry = m.geometry;
+        meshName = m.name;
+      }
+      if (o.name === "BB_ATTACH_NECK") attach = o;
+      if (o.name === "BB_REF_SHOULDER") shoulder = o;
+    });
+    return { geometry, attach, shoulder, meshName };
+  }, [root]);
+
+  const g = GLASS[glass];
+  const groupRef = useRef<THREE.Group>(null);
+
+  useEffect(() => {
+    if (!geometry) return;
+    const geo = geometry as THREE.BufferGeometry;
+    geo.computeBoundingBox();
+    const bb = geo.boundingBox!;
+    const size = new THREE.Vector3();
+    bb.getSize(size);
+    onMeasure({
+      // Measure the GEOMETRY, not Box3.setFromObject: that walks children, so
+      // anything parented to a datum (the marker ring now, a closure later)
+      // gets counted as part of the bottle.
+      heightMm: size.y * 1000,
+      widthMm: size.x * 1000,
+      depthMm: size.z * 1000,
+      // Y-up: export_yup rotated Blender's Z-up, so a datum's height is .y.
+      // Reading .z reports 0.00 mm for every body.
+      attachYmm: attach ? (attach as THREE.Object3D).position.y * 1000 : null,
+      shoulderYmm: shoulder ? (shoulder as THREE.Object3D).position.y * 1000 : null,
+      verts: geo.attributes.position.count,
+      meshName,
+      materials: fileMaterials,
+    });
+  }, [geometry, attach, shoulder, meshName, fileMaterials, onMeasure]);
+
+  useDatumRing(attach as THREE.Object3D | null, showDatum, neckRadiusM);
+
+  if (!geometry) return null;
+  return (
+    <group ref={groupRef}>
+      <mesh geometry={geometry as THREE.BufferGeometry} name={meshName}>
+        {/* `backside` renders the BACK faces in their own pass, so light is
+            traced through the far wall as well as the near one. A physical
+            material only refracts where it hits, which on a SOLID body reads
+            as a glass paperweight — the ceiling we kept hitting. This buys the
+            wall-air-wall look without hollowing the mesh.
+            It costs an extra render pass, so buffers are kept modest; drei's
+            own guidance is that low buffer resolution barely shows. */}
+        {/* The two models refract DIFFERENT things, which is why neither wins
+            outright:
+              physical      refracts the ENVIRONMENT MAP — crisp, contrasty,
+                            and it does not care that the scene is empty
+              transmission  refracts the SCENE through a render buffer, so it
+                            needs real content behind the bottle or it turns
+                            milky, but `backside` traces the far wall too
+            On a solid body with a plain backdrop, physical currently looks
+            better. Keep both until a real HDRI and a fuller set are in. */}
+        {!transmissionModel ? (
+          <meshPhysicalMaterial
+            color={g.color}
+            roughness={g.roughness}
+            metalness={0}
+            transmission={g.transmission}
+            thickness={g.thickness}
+            ior={g.ior}
+            attenuationDistance={g.atten}
+            attenuationColor={new THREE.Color(g.attenColor)}
+            dispersion={g.dispersion}
+            transparent
+            side={THREE.DoubleSide}
+            envMapIntensity={1.45}
+          />
+        ) : (
+        <MeshTransmissionMaterial
+          transmission={g.transmission}
+          thickness={g.thickness}
+          backside
+          backsideThickness={g.thickness * 2.6}
+          samples={8}
+          resolution={512}
+          backsideResolution={256}
+          roughness={g.roughness}
+          ior={g.ior}
+          chromaticAberration={g.dispersion * 0.055}
+          anisotropicBlur={g.roughness > 0.4 ? 0.6 : 0.1}
+          distortion={0}
+          attenuationDistance={g.atten}
+          attenuationColor={g.attenColor}
+          color={g.color}
+          envMapIntensity={1.45}
+        />
+        )}
+      </mesh>
+      {attach ? <primitive object={attach as THREE.Object3D} /> : null}
+      {shoulder ? <primitive object={shoulder as THREE.Object3D} /> : null}
+    </group>
+  );
+}
+
 
 /**
  * A product studio, built in-scene — no CDN fetch, CSP-safe.
@@ -404,6 +453,47 @@ function useDatumRing(target: THREE.Object3D | null, visible: boolean, radius: n
  *              something is transparent, and it can only come from behind
  *   FLOOR      a wide dim bounce, giving the base something to pick up
  */
+/**
+ * A seamless studio backdrop — a real sweep, not a flat clear colour.
+ *
+ * MeshTransmissionMaterial refracts the SCENE through a render buffer, so an
+ * empty background gives it nothing to bend and the glass turns milky. A real
+ * table-top set never shoots into a void; it uses a curved sweep with a
+ * gradient, and that gradient IS what you see through the glass. This is also
+ * what puts a vertical falloff into the caps' reflections instead of one flat
+ * grey.
+ */
+function Backdrop({ light }: { light: boolean }) {
+  const tex = useMemo(() => {
+    const c = document.createElement("canvas");
+    c.width = 8; c.height = 256;
+    const ctx = c.getContext("2d")!;
+    const grd = ctx.createLinearGradient(0, 0, 0, 256);
+    if (light) {
+      grd.addColorStop(0.0, "#ffffff");
+      grd.addColorStop(0.45, "#f2f5f7");
+      grd.addColorStop(1.0, "#c8ced4");
+    } else {
+      grd.addColorStop(0.0, "#3a3a44");
+      grd.addColorStop(0.5, "#22222a");
+      grd.addColorStop(1.0, "#101014");
+    }
+    ctx.fillStyle = grd;
+    ctx.fillRect(0, 0, 8, 256);
+    const t = new THREE.CanvasTexture(c);
+    t.colorSpace = THREE.SRGBColorSpace;
+    return t;
+  }, [light]);
+
+  return (
+    <mesh position={[0, 0.02, -0.55]} scale={[3.2, 2.2, 1]}>
+      <planeGeometry args={[1, 1, 1, 1]} />
+      <meshBasicMaterial map={tex} toneMapped={false} />
+    </mesh>
+  );
+}
+
+
 function StudioEnvironment() {
   return (
     <Environment resolution={1024}>
@@ -456,6 +546,7 @@ export default function BottleViewer({
   // it, transmission has nothing to carry and it reads as smoked glass. A light
   // ground is what every product photograph uses, and for the same reason.
   const [lightBg, setLightBg] = useState(true);
+  const [transmissionModel, setTransmissionModel] = useState(false);
   const [closureFinish, setClosureFinish] =
     useState<ClosureFinishKey>("shiny-black");
   const [m, setM] = useState<Measured | null>(null);
@@ -539,6 +630,17 @@ export default function BottleViewer({
           <input type="checkbox" checked={lightBg} onChange={(e) => setLightBg(e.target.checked)} />
           <span>studio background</span>
         </label>
+
+        <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 4, cursor: "pointer" }}>
+          <input type="checkbox" checked={transmissionModel}
+                 onChange={(e) => setTransmissionModel(e.target.checked)} />
+          <span>MeshTransmissionMaterial</span>
+        </label>
+        <div style={{ color: "#7d7d88", marginBottom: 10, fontSize: 11 }}>
+          {transmissionModel
+            ? "refracts the SCENE (backside pass) — needs content behind"
+            : "refracts the ENVIRONMENT map — crisper on an empty set"}
+        </div>
 
         <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 4,
                         cursor: hasThreaded ? "pointer" : "not-allowed",
@@ -647,7 +749,8 @@ export default function BottleViewer({
           <Suspense fallback={null}>
             <Center key={body.bodyId}>
               <Bottle url={url} glass={glass} showDatum={showDatum}
-                      neckRadiusM={neckRadiusM} onMeasure={setM} />
+                      neckRadiusM={neckRadiusM} onMeasure={setM}
+                      transmissionModel={transmissionModel} />
               {/* Every part parent-and-zeros to the rim: its origin already IS
                   the rim, so the only placement needed is the attach height. */}
               {m?.attachYmm != null &&
@@ -665,6 +768,7 @@ export default function BottleViewer({
             {/* Environment built in-scene: no CDN fetch, CSP-safe. */}
             {/* Transmission samples the ENVIRONMENT, not the lights, so a dim
                 env renders glass black however many lights are added. */}
+            <Backdrop light={lightBg} />
             <StudioEnvironment />
             {/* Deliberately dim: transmissive glass barely responds to direct
                 lights, so these only lift the opaque closure parts. Realism
