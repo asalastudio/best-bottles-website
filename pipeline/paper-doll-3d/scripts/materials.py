@@ -160,15 +160,18 @@ def _studio(scene):
         scene.collection.objects.link(ob)
 
     cam_d = bpy.data.cameras.new("BB_CAM")
-    cam_d.lens = 42
+    cam_d.lens = 50
     cam = bpy.data.objects.new("BB_CAM", cam_d)
     # framed on the two rows, which sit around z 0.00 and z -0.10
-    cam.location = (0.0, -0.52, 0.055)
-    cam.rotation_euler = (math.radians(84), 0, 0)
+    cam.location = (0.0, -0.30, 0.042)
+    cam.rotation_euler = (math.radians(86), 0, 0)
     scene.collection.objects.link(cam)
     scene.camera = cam
     scene.render.engine = "CYCLES"
     scene.cycles.samples = 128
+    # Interactive preview: 24 samples refreshes fast enough to tune against,
+    # while the F12 render still uses the full 128.
+    scene.cycles.preview_samples = 24
 
 
 def _import_geo(path, name):
@@ -264,48 +267,43 @@ def build():
     body_src = lane / "bodies-threaded" / "Cyl-round-17-415-70x20.glb"
     cap_src = lane / "closures" / "BB_CAP_17415.glb"
 
-    proto_body = _import_geo(body_src, "PROTO_BODY") if body_src.exists() else None
-    proto_cap = _import_geo(cap_src, "PROTO_CAP") if cap_src.exists() else None
+    # ONE bottle and ONE cap — a tuning bench, not a showroom.
+    #
+    # The previous layout put twelve bottles on the cyc, which meant every
+    # material edit had to be found among them and the viewport was slow to
+    # refresh. A single subject renders fast enough that Cycles preview is
+    # genuinely interactive, so you can drag a slider and watch the glass
+    # change. Switch which material is on it from the Material Properties
+    # dropdown; all 19 are still in the file.
+    body = _import_geo(body_src, "TUNE_BOTTLE") if body_src.exists() else None
+    cap = _import_geo(cap_src, "TUNE_CAP") if cap_src.exists() else None
 
-    def place(proto, x, y, mat, label):
-        if proto is None:
-            return None
-        ob = proto.copy()
-        ob.data = proto.data.copy()
-        ob.data.materials.clear()
-        ob.data.materials.append(mat)
-        ob.location = (x, y, 0.0)
-        ob.name = label
-        scene.collection.objects.link(ob)
-        return ob
+    if body:
+        body.data.materials.clear()
+        body.data.materials.append(reuse["BB_MAT_GLASS_AMBER"])
+        body.location = (0.0, 0.0, 0.0)
+    if cap:
+        cap.data.materials.clear()
+        cap.data.materials.append(reuse["BB_MAT_CAP_SHINY_GOLD"])
+        cap.location = (0.0, 0.0, 0.070)      # seats on the 70 mm rim
 
-    GAP = 0.035
-    glass_keys = [k for k in LIBRARY if k.startswith("GLASS_")]
-    cap_keys = [k for k in LIBRARY if k.startswith("CAP_")]
-
-    # row 1 — glass, bare bottles
-    x0 = -GAP * (len(glass_keys) - 1) / 2
-    for i, k in enumerate(glass_keys):
-        place(proto_body, x0 + i * GAP, 0.0, reuse[f"BB_MAT_{k}"], f"GLASS__{k}")
-
-    # row 2 — cap colourways, on a clear bottle so the pairing reads
-    x0 = -GAP * (len(cap_keys) - 1) / 2
-    for i, k in enumerate(cap_keys):
-        x = x0 + i * GAP
-        place(proto_body, x, 0.075, reuse["BB_MAT_GLASS_CLEAR"], f"BODY__{k}")
-        c = place(proto_cap, x, -0.10, reuse[f"BB_MAT_{k}"], f"CAP__{k}")
-        if c:
-            c.location = (x, 0.075, 0.070)     # seat on the 70 mm rim
-
-    for p in (proto_body, proto_cap):
-        if p:
-            bpy.data.objects.remove(p, do_unlink=True)
+    # Save the file already in RENDERED view, through the camera. Finding the
+    # viewport shading buttons is a real stumbling block, so the file should
+    # simply open showing the thing you came to look at.
+    for area in bpy.context.screen.areas:
+        if area.type == "VIEW_3D":
+            for space in area.spaces:
+                if space.type == "VIEW_3D":
+                    space.shading.type = "RENDERED"
+                    space.region_3d.view_perspective = "CAMERA"
 
     bpy.ops.wm.save_as_mainfile(filepath=str(BLEND))
     print(f"materials.blend: {len(made)} created, {len(kept)} preserved")
     print(f"  objects laid out: {len(scene.objects)}")
     print(f"\nOpen {BLEND}")
-    print("Viewport -> Rendered (Cycles). Row 1 is glass, row 2 is cap finishes.")
+    print("It opens already in RENDERED view through the camera.")
+    print("Select TUNE_BOTTLE or TUNE_CAP, open Material Properties, and drag.")
+    print("Swap material from the dropdown at the top of that panel.")
     print("Tune, then: blender --background --python scripts/materials.py -- extract")
 
 
