@@ -212,6 +212,11 @@ export default function MaterialLab(
   const [distance, setDistance] = useState(0.22);
   const [fov, setFov] = useState(30);
   const [copied, setCopied] = useState(false);
+  // Glass TRANSMITS the background. A dark viewport makes even a correct amber
+  // render near-black - the values are fine, there is simply nothing behind the
+  // bottle to see through it. /lab/bottle-3d gets this right with a light
+  // studio backdrop, which is why the same values look rich there.
+  const [bg, setBg] = useState("#e9e6e0");
   // Default ON: the plain bodies/ build has a FLAT neck (0.00 mm relief).
   // Only bodies-threaded/ carries the drawing-exact helix, and glass
   // magnifies the neck - a flat one is immediately obvious.
@@ -285,7 +290,7 @@ export default function MaterialLab(
                 camera={{ position: [0.12, 0.05, 0.18], fov }}
                 gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping,
                       toneMappingExposure: exposure }}>
-          <color attach="background" args={["#15151a"]} />
+          <color attach="background" args={[bg]} />
           <Suspense fallback={null}>
             <Center key={modelUrl}>
               <Model url={modelUrl} preset={working} envIntensity={envIntensity}
@@ -372,6 +377,19 @@ export default function MaterialLab(
                 hint="prismatic edge split — the anti-plastic cue" />
 
         <Section title="ENVIRONMENT" />
+        <label style={{ display: "flex", justifyContent: "space-between",
+                        alignItems: "center", marginBottom: 9 }}>
+          <span style={{ color: "#b9b9c4", fontSize: 11 }}>backdrop</span>
+          <input type="color" value={bg} onChange={(e) => setBg(e.target.value)}
+                 style={{ width: 54, height: 22, background: "none",
+                          border: "1px solid #33333c" }} />
+        </label>
+        <div style={{ display: "flex", gap: 4, marginBottom: 10 }}>
+          {[["bone", "#e9e6e0"], ["white", "#f7f7f7"], ["grey", "#8d8d94"],
+            ["dark", "#15151a"]].map(([n, c]) => (
+            <button key={n} onClick={() => setBg(c)} style={btn(bg === c)}>{n}</button>
+          ))}
+        </div>
         <Slider label="env intensity" value={envIntensity} min={0} max={4} step={0.05}
                 onChange={setEnvIntensity} />
         <Slider label="env rotation °" value={envRot} min={0} max={360} step={1}

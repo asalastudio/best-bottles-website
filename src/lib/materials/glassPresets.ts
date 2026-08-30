@@ -86,12 +86,18 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     roughness: 0.04,
     ior: 1.52,
     thickness: 0.014,
-    attenuationColor: "#8b6a38",
-    attenuationDistance: 0.014,
+    attenuationColor: "#a8571a",
+    attenuationDistance: 0.030,
     dispersion: 1.2,
     envMapIntensity: 1.0,
     provenance:
-      "SOLVED from IMG_5040 (real 9 mL amber): T = .260/.143/.040 over a " +
+      "APPROVED BY EYE. These are the values that actually look right in the " +
+      "browser. A measured alternative exists and was tried: IMG_5040 gives " +
+      "sigma [208,300,497]/m -> #8b6a38 at distance 0.014, and it renders DARK " +
+      "and murky. Measurement is grounded, but it is not automatically better " +
+      "than the eye for APPEARANCE, and rasterized transmission is not the " +
+      "path-traced glass those numbers were solved against. Measured detail " +
+      "kept for reference: T = .260/.143/.040 over a " +
       "ray-cast 3.24 mm x2 wall -> sigma [208,300,497]/m. attenuationDistance " +
       "is set EQUAL to thickness, which collapses three.js' Beer-Lambert to " +
       "exp(ln(c)) = c — so attenuationColor IS the transmitted colour and can " +
@@ -110,12 +116,13 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     roughness: 0.04,
     ior: 1.52,
     thickness: 0.014,
-    attenuationColor: "#6e77f2",
-    attenuationDistance: 0.014,
+    attenuationColor: "#123f9e",
+    attenuationDistance: 0.026,
     dispersion: 1.2,
     envMapIntensity: 1.0,
     provenance:
-      "MEASURED from GBCylBlu9MtlRollMattCu (real product photography): " +
+      "APPROVED BY EYE — the measured value (#6e77f2 at 0.014) renders " +
+      "near-black. Measurement kept for reference: " +
       "T = .156/.185/.884 -> sigma [286, 260, 19]/m. Note how lopsided that " +
       "is — cobalt oxide blocks red and green almost completely and passes a " +
       "narrow deep blue, which is why it must NOT be authored as a blue tint " +
@@ -127,13 +134,14 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 0.98,
     roughness: 0.55,
     ior: 1.50,
-    thickness: 0.014,
-    attenuationColor: "#f3f3f3",
-    attenuationDistance: 0.014,
+    thickness: 0.010,
+    attenuationColor: "#f4f6f5",
+    attenuationDistance: 0.28,
     dispersion: 0.5,
     envMapIntensity: 0.9,
     provenance:
-      "MEASURED from GBCylFrst9MtlRollMattCu: T = .896/.898/.899 — " +
+      "APPROVED BY EYE. The measurement still stands and is the useful " +
+      "finding: T = .896/.898/.899 — " +
       "PERFECTLY NEUTRAL, saturation 0.00. That is the finding: frosted glass " +
       "has essentially NO volume absorption. It is the same clear glass with " +
       "an etched SURFACE, so almost all of its character lives in `roughness`, " +
