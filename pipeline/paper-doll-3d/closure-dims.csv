@@ -23,8 +23,8 @@ Drp20-4001ozBlckBulb,dropper,20-400,32.0,22.0,0.5,bestbottles.com accessories pa
 Drp20-4002ozBlckBulb,dropper,20-400,32.0,22.0,0.5,bestbottles.com accessories page,published,
 Drp18-415Cu,dropper,18-415,39.0,23.0,0.5,bestbottles.com accessories page,published,
 CP13-415BlkShShtMtl,cap,13-415,17.0,17.0,0.5,bestbottles.com accessories page,published,
-Ltn17-415Blk,lotion-pump,17-415,31.0,19.0,0.5,bestbottles.com accessories page,published,
+Ltn17-415Blk,lotion-pump,17-415,31.0,19.0,0.5,bestbottles.com accessories page,published,"VALIDATION GATE: photo splits this 31mm into 14.43 collar + 16.57 actuator (height-derived scale 13.52 px/mm, agrees with the O19 width scale to 9%). Built parts stack to 35.15mm (collar 16.30 + actuator 21.85 above rim) — 13% TOO TALL. components_17415.py is photo-solved and marked provisional; this published listing outranks it."
 Ltn18-415MtGl,lotion-pump,18-415,41.0,23.0,0.5,bestbottles.com accessories page,published,
-Spry17-415Blk,sprayer,17-415,31.0,19.0,0.5,bestbottles.com accessories page,published,
+Spry17-415Blk,sprayer,17-415,31.0,19.0,0.5,bestbottles.com accessories page,published,"VALIDATION GATE: photo splits this 31mm into 14.43 collar + 16.57 actuator (height-derived scale 13.52 px/mm, agrees with the O19 width scale to 9%). Built parts stack to 35.15mm (collar 16.30 + actuator 21.85 above rim) — 13% TOO TALL. components_17415.py is photo-solved and marked provisional; this published listing outranks it."
 CP13-415SpryBlkMt,sprayer,13-415,32.0,17.0,0.5,bestbottles.com accessories page,published,
 Spry15-415Blk,sprayer,15-415,41.0,20.0,0.5,bestbottles.com accessories page,published,
