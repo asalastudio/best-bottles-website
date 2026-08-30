@@ -29,6 +29,22 @@ What they are good for:
 
 The approved preset values remain EYE-SET against these photographs.
 
+## swirl.jpg is GENERATED — art direction only
+
+`swirl.jpg` is not a photograph. No physical swirl bottle was available, so it
+was generated to the shoot spec (bone ground, soft front-side light, contact
+shadow, 0.02% clipping) specifically so it can be compared against the other
+three in the lab.
+
+Use it for **glass character and lighting**. Do NOT use it as a geometry
+target: its flutes read at roughly 15-20% of the bottle diameter, while the
+real part is **0.970 mm on O21 — about 4.6%**. That millimetre is the
+catalogue's O21 swirl against the plain O20 cylinder, and it is what our mesh
+is built to. The generated version is prettier and is not the product.
+
+Never solve sigma from this file. See the AI section in
+`../../pipeline/paper-doll-3d/REFERENCE-SHOOT-SPEC.md`.
+
 ## Frosted has a CLEAR neck
 
 Visible in `frosted.jpg`: the etch stops at the shoulder and the thread finish
