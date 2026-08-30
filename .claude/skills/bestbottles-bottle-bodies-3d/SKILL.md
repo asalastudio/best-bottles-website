@@ -1,6 +1,6 @@
 ---
 name: bestbottles-bottle-bodies-3d
-description: Build Best Bottles 3D bottle bodies (GLB) from PSD silhouettes plus live-site millimetres, by lathe for round bodies and extrude for boxy ones. Use when generating, fixing, or batching bottle geometry for the web configurator.
+description: Build Best Bottles 3D bottle bodies (GLB) from PSD silhouettes plus live-site millimetres — lathe for round, extrude for boxy — then graft the drawing-exact threaded finish, flute swirl bodies, and export geometry-only closures that seat on the rim datum. Use when generating, fixing, threading, or batching bottle geometry for the web configurator.
 ---
 
 # Bottle bodies → GLB
@@ -43,16 +43,125 @@ python3 scripts/extract_psd_silhouette.py --from-csv bodies-3d-dims.csv
 # 3. collapse SKUs -> BODIES (never skip this)
 python3 scripts/group_bodies.py
 
-# 4. build - one GLB per body
+# 4. build - one GLB per body. --splice-finish REPLACES the traced neck with
+#    the drawing's threaded finish master. Ship with it; without it the neck
+#    is whatever the photograph happened to show.
 blender --background --python scripts/bottle_bodies.py -- \
-    --ledger bodies-58.csv --cutouts silhouettes --out glb
+    --ledger bodies.csv --cutouts silhouettes --out glb --splice-finish
 
 # 5. verify — mesh integrity + a render to actually look at
 blender --background --python scripts/verify_glb.py -- \
     --glb glb/SKU.glb --out renders/verify
+
+# 6. does a closure actually FIT? (radial interference, not just heights)
+blender --background --python scripts/seat_check.py -- \
+    --body glb/BODY.glb --closure glb-closures/BB_CAP_17415.glb
+
+# macro clay of the finish — the only view thread form can be judged in
+blender --background --python scripts/thread_macro.py -- \
+    --glb glb/BODY.glb --finish-h 13.76
 ```
 
 Add `--sku X` to any step for one body.
+
+## The finish is the DRAWING's, never the photograph's
+
+A photo gets the neck wrong. The 9 ml cylinder traced 11.5 mm of finish where
+GBCyl10mlAmber.pdf draws 13.76, so a correct 17-415 cap buried **4.12 mm** of
+skirt in the shoulder. THREAD-STANDARD.md settles it: "truth = drawings +
+specs; photos, PSD measurements and prior renders are history, not authority."
+
+`--splice-finish` does two things:
+
+1. **`finish_splice.py`** pins the finish datum at `rim - finish_h`, discards
+   the traced neck above it, and eases the shoulder below it. Catalogue height
+   is untouched and `BB_ATTACH_NECK` does not move, so every closure that
+   parents to the rim keeps working.
+2. **`graft_finish_master()`** EXACT-unions the canonical
+   `FINISH_MASTER_<std>` on top. Per THREAD-STANDARD §0 bodies **instance** the
+   master, they never rebuild or scale a finish. All four masters
+   (13/15/17/18-415) already pass their dimensional audits.
+
+Result: cap clears by 0.97 mm where it previously cut 1.51 mm into glass.
+
+**Do the boolean in the master's own units.** Both meshes are watertight alone;
+scaling the master to metres first asks EXACT to resolve a 0.75 mm thread at
+0.00075 units. Same family as the 10 mm merge-threshold trap.
+
+**Taper the body's land inward ~0.25 mm** where the master lands. Held straight
+at E/2 it is exactly the master's base radius, and two coincident cylindrical
+walls leave an interior shell — 172 edges with THREE faces at r = E/2.
+
+**The shoulder blend is NOT settled.** It is currently `0.06 x body width`,
+calibrated on two live photos (9 ml: 1.21 mm on Ø20; Elegant 60: 3.03 mm on
+Ø54). The 5 ml breaks it — it measures ~2.0 mm on Ø17, a fraction of 0.118.
+The drawings' `shoulder_r_out` (005 = R2.5, 009 = R2.2) is the better source
+where a sheet exists. Do not treat the current constant as truth.
+
+## Swirl bodies: an angular modulator, never a material
+
+Fluting is GEOMETRY. The catalogue publishes the swirl at Ø21.0 against the
+plain cylinder's Ø20.0 and that millimetre IS the relief; no material or normal
+map can move a silhouette.
+
+`swirl.py` mirrors `thread_modulator()` exactly — guard, phase, signed offset,
+raised-cosine crest, fades, single return — because a swirl is the same object
+as a thread: a rounded section swept along a helix. It carves **inward** from
+the traced crest envelope so the bottle cannot grow past its catalogue Ø.
+
+**`_revolve()` cannot do this.** It drives Blender's SCREW modifier, which
+sweeps one profile and cannot vary radius with theta. Fluted bodies reuse
+`build-master-scene.revolve()` — the same lathe the thread uses — via
+`build_body_swirled()`. One lathe in the project, not two.
+
+**Flutes must stop clear of the shoulder** (`shoulder_clear_mm`). Running them
+to the datum leaves the body non-cylindrical exactly where the master is
+unioned on: 379 boundary edges, all at z = datum, r = E/2.
+
+## Closures
+
+`closures.py` exports to the SAME contract as bodies: one mesh, **no materials**,
+metres, Y-up, and the origin on the **mating face** so a closure parent-and-zeros
+onto `BB_ATTACH_NECK`. The measured records already use z = 0 at the rim, so
+there is no offset maths to get wrong.
+
+Build only what is MEASURED. 17-415 is measured; 13-415 derives its skirt and
+is flagged provisional; **18-415 — 694 SKUs, 69% of coverage — has no cap spec
+at all** and must be photo-solved from `20. Closures .../6. 18-415 Caps` before
+anything is built for it. Inventing a height for the largest finish is the one
+mistake this lane cannot afford.
+
+Closures collapse moulding-vs-colourway exactly as bodies collapse to glass:
+12 cap PSDs are ~3 mouldings. Read the SKU token — `Tall` and `Lthr` are
+geometry, colour names are not.
+
+## Measure the measurement before you fix the model
+
+Five times in one session the bug was in a CHECK, not the geometry — and four
+of the five returned confident wrong numbers rather than an error. Before
+changing geometry, prove the instrument.
+
+- **glTF splits vertices at sharp edges.** A threaded finish measures 0
+  non-manifold in Blender, **7138** straight after a GLB round-trip, and 0
+  again after a weld. `verify_glb.py` now welds before counting. Unfixed, it
+  condemns exactly the geometry you just got right — and 6000 phantom edges
+  hid 187 real ones, so two correct fixes looked like failures.
+- **The Y-up rule INVERTS inside Blender.** Files are Y-up on disk, but the
+  glTF importer restores Blender's Z-up. Reading `.y` in a Blender script
+  reports a bottle's DIAMETER as its height. Browser = `.y`; Blender = `.z`.
+- **A seat check must be ANGULAR.** §4 seats the cap a half-period anti-phase
+  so its ridges nest in the bottle's root land. Comparing max-body-radius to
+  min-cap-radius around a whole ring reports a phantom 0.60 mm collision. Bin
+  by (z, theta).
+- **`audit_finish_master()` prints and returns None.** Testing its return value
+  grades nothing; the gate reads green while checking literally nothing.
+  Capture stdout and parse its `FINISH_QA_JSON` line.
+- **A global dark-threshold mask fails on glass.** A blown specular highlight
+  is as bright as the background and punches holes in the mask — it measured a
+  10.5 mm body as 7.73 mm. Scan inward from each edge for an outline.
+- **Locate before patching.** Report the bad edges' (z, r, faces-per-edge)
+  first. Every wrong guess this session came from patching before diagnosing;
+  the one right fix came from a histogram.
 
 ## Rules that cost real time to find
 
@@ -105,8 +214,12 @@ leaks unboundedly.
 A body ships only if all of these hold:
 
 - dimensions within `--tolerance-pct` (default 0.5%) of the catalogue
-- `non-manifold == 0` — a closed solid
-- the render looks like the source silhouette
+- `non-manifold == 0` — a closed solid (weld before counting; see above)
+- `thread-audit PASS` — every finish row inside its sheet tolerance
+- `seat_check.py` says SEATS for the closure that finish takes
+- the render looks like the source silhouette — and for thread form, the
+  MACRO CLAY view (`thread_macro.py`), never through glass. §5: the front
+  elevation must read as ~3 angled parallel lines.
 
 Bounding-box agreement alone is **not** sufficient: a collapsed or
 self-intersecting mesh can still measure 70 × 20 mm. That is what
