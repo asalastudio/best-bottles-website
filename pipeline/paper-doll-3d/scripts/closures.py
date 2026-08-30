@@ -195,9 +195,19 @@ def actuator_builder(rig, finish, variant):
 
 
 def overcap_builder(rig, finish, variant):
+    """The overcap seats on the COLLAR's top face, not on the rim.
+
+    fit_closure() parents it to the collar-top datum and zeroes it, and
+    COLLAR_17415 documents `top_face_z=3.0` as "overcap seating plane". Its
+    own profile starts at its base, so exporting it unshifted puts it 3 mm
+    too low once every part is rim-referenced. Bake the offset in, keeping
+    the one rule that all parts parent-and-zero to BB_ATTACH_NECK.
+    """
     c17 = _load_c17(rig)
     oc = c17.OVERCAP_17415
-    return dict(spec=oc, profile=c17.overcap_profile(oc), modulate=None)
+    z0 = c17.COLLAR_17415["top_face_z"]
+    prof = [(r, z + z0) for r, z in c17.overcap_profile(oc)]
+    return dict(spec=oc, profile=prof, modulate=None)
 
 
 # --------------------------------------------------------------- 18-415 reducer
