@@ -70,14 +70,38 @@ SKIRT_BELOW_DATUM = 0.94
 
 MEASURED_SKIRT = {"17-415": 14.70}          # do not derive what was measured
 
+# Cap listings the live site publishes, in the same shape as the rig's
+# CAPS_BY_FINISH. These are PUBLISHED dimensions, not derived ones.
+#
+#   plain    CP18-415MtSl    19 +/-0.5 x Ø21 +/-0.5   483 SKUs
+#   leather  CP18-415BlkLthr 30 +/-0.5 x Ø25 +/-0.5    82 SKUs (the wrap adds
+#                                                      real diameter and height)
+#
+# The 18-415 cap is SQUAT — h/d 0.90 against 1.42 for both 17-415 and 13-415 —
+# so it cannot be extrapolated from the family, which is exactly why the thread
+# standard recorded "(no cap modeled yet)" rather than guessing. The isolated
+# PSD layer independently measures h/d 0.95-1.00, agreeing with the listing.
+#
+# Thread fit follows the two measured caps: the cap's root land clears the
+# bottle's crest T by a consistent +0.60 on both 17-415 (16.90 vs 16.3) and
+# 13-415 (13.40 vs 12.8). Crest clearance over E varies (+0.30 / +0.70), so
+# the midpoint is used and flagged.
+LOCAL_CAPS = {
+    "18-415": dict(asset_id="BB_CAP_18415_001", height=19.0,
+                   od_top=20.60, od_base=21.0,
+                   thread_root_d=18.10,      # T 17.5 + 0.60, the measured rule
+                   thread_crest_d=16.00,     # E 15.5 + 0.50, midpoint — DERIVED
+                   source="bestbottles.com CP18-415MtSl listing"),
+}
+
 
 def cap_builder(rig, finish):
     """Threaded screw cap, built from the CAPS_BY_FINISH listing registry."""
-    listing = rig.CAPS_BY_FINISH.get(finish)
+    listing = dict(rig.CAPS_BY_FINISH, **LOCAL_CAPS).get(finish)
     if listing is None:
         raise SystemExit(
             f"no cap listing for {finish}. CAPS_BY_FINISH has "
-            f"{sorted(rig.CAPS_BY_FINISH)}. Photo-solve {finish} from the PSD "
+            f"{sorted(dict(rig.CAPS_BY_FINISH, **LOCAL_CAPS))}. Photo-solve it "
             f"library ('20. Closures .../{finish} Caps') before building it — "
             f"inventing a height for a 694-SKU finish is not a shortcut.")
 
@@ -256,6 +280,7 @@ PARTS = {
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
     ("18-415", "REDUCER", None):           reducer_builder,
+    ("18-415", "CAP", None):               cap_part_builder,
 }
 
 # Assembly = an ordered stack of parts, bottom first. The order is what an
@@ -267,7 +292,8 @@ ASSEMBLIES = {
     ("17-415", "lotion-pump"):    ["SPR_COLLAR", "SPR_ACTUATOR", "SPR_OVERCAP"],
     ("17-415", "cap"):            ["CAP"],
     ("13-415", "cap"):            ["CAP"],
-    ("18-415", "reducer"):        ["REDUCER"],
+    ("18-415", "reducer"):        ["REDUCER", "CAP"],
+    ("18-415", "cap"):            ["CAP"],
 }
 
 
