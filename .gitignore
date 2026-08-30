@@ -137,3 +137,10 @@ creative/
 /pipeline/paper-doll-3d/**/*.glb
 /pipeline/paper-doll-3d/**/*.png
 /pipeline/paper-doll-3d/**/*.jpg
+
+# --- bottle-bodies 3D lane: regenerable outputs (see pipeline/paper-doll-3d/HANDOFF-2026-08-30.md)
+# Silhouette cache: ~529 MB, rebuilt by extract_psd_silhouette.py in ~19 min.
+pipeline/paper-doll-3d/silhouettes/
+# Working build output; the frozen copy in releases/ is the keeper.
+pipeline/paper-doll-3d/glb/
+pipeline/paper-doll-3d/logs-batch*.txt
