@@ -40,6 +40,14 @@ from pathlib import Path
 import bpy
 from mathutils import Vector
 
+# 17-415 component library (rollers, sprayer, lotion pump, overcap) lives in
+# its own module so the closure records stay reviewable on their own.
+import importlib.util as _ilu
+_c17_spec = _ilu.spec_from_file_location(
+    "components_17415", Path(__file__).resolve().parent / "components_17415.py")
+c17 = _ilu.module_from_spec(_c17_spec)
+_c17_spec.loader.exec_module(c17)
+
 # ---------------------------------------------------------------- constants
 
 BONE_HEX = "#B29878"                      # Aesop-style warm tan (user pivot 2026-08-08;
@@ -167,12 +175,21 @@ CYL_SPECS = {
         height=72.0, diameter=19.7,
         wall=1.6, base_th=3.5, push_up=1.0,
         heel_r=2.2,
-        # Tangent-continuous shoulder: convex body radius into concave neck
-        # fillet. Their sum MUST exceed (R - neck_r) or the convex arc turns
-        # past horizontal and undercuts. A generous radius here is deliberate:
-        # the references show an almost cylinder-on-cylinder step, which no
-        # mould can actually produce and which reads as a hard seam.
-        shoulder_r_out=2.2, shoulder_r_in=1.4,
+        # SHOULDER — corrected 2026-08-29 from the engineering drawing.
+        # The previous note claimed an "almost cylinder-on-cylinder step ...
+        # no mould can actually produce" and used r_out 2.2 / r_in 1.4. The
+        # Nemat sheet (GBCyl10mlAmber.pdf, 5:1 detail) draws exactly that step
+        # and calls out R0.8 and R0.3 at the finish base. Measured against the
+        # source PSD the two-arc shoulder ran 4.8x too long (27.6% of body
+        # width vs the reference's 5.7%).
+        #
+        # cylinder_profile's two-arc solve cannot express it: it asserts
+        # ro + ri > (R - neck_r) = 1.7, and the drawing's 0.8 + 0.3 = 1.1.
+        # So this spec now uses the cone profile - short near-flat shoulder
+        # with small corner fillets - which is what the drawing shows.
+        # Presence of shoulder_cone_h selects cylinder_profile_cone.
+        shoulder_r_out=2.2, shoulder_r_in=1.4,   # legacy, unused by the cone path
+        shoulder_cone_h=1.1, shoulder_edge_r=0.8, shoulder_neck_r=0.3,
         neck_finish="17-415",
         # Use the lower edge of the drawing's 14.06 +/-0.30 finish tolerance
         # for the slightly shorter production presentation requested 2026-08-11.
@@ -2034,7 +2051,9 @@ def build_sweep(coll, color=BONE):
 def build(out_path: Path, samples: int, ball_mode: str = "none",
           cap_mode: str = "none", bottle_key: str = "009",
           transparent: bool = False, envelope_mm: float = 0.0,
-          glass: str = "clear", backdrop: str = "", lighting: str = "standard"):
+          glass: str = "clear", backdrop: str = "", lighting: str = "standard",
+          closure_mode: str = "none", closure_finish: str = "black",
+          overcap: bool = True, internals: bool = False):
     bpy.ops.wm.read_factory_settings(use_empty=True)
     scene = bpy.context.scene
     scene.name = "MASTER_SCENE"
@@ -2142,34 +2161,26 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
     # -- roll-on fitment: its own objects, seated by parent-and-zero on the
     # neck datum. Housing and ball are separate so a metal/plastic ball is a
     # material or object swap, never a duplicated assembly.
-    if bottle_key != "009" and ball_mode != "none":
-        print(f"the roll-on fitment is dimensioned for the 009 (17-415) neck; "
-              f"skipping roller on {bottle_key}")  # caps exist for every finish
+    if bottle_key != "009" and (ball_mode != "none" or closure_mode != "none"):
+        print(f"17-415 components are dimensioned for the 009 neck; "
+              f"skipping roller/closure on {bottle_key}")  # caps exist for every finish
         ball_mode = "none"
+        closure_mode = "none"
+    if closure_mode != "none" and (ball_mode != "none" or cap_mode != "none"):
+        print("a sprayer/pump replaces the roller and cap; ignoring --roller/--cap")
+        ball_mode = "none"
+        cap_mode = "none"
+    component_objs = {}
     if ball_mode != "none":
-        rs = ROLLER_17415
         c_clos = collection("CLOSURES", c_root)
-        housing = revolve(rs["asset_id"],
-                          roller_profile(rs, s["bore_d"] / 2.0))
-        housing.data.materials.append(
-            mat_natural_plastic("BB_MAT_ROLLER_NATURAL", (0.93, 0.92, 0.87), 0.40, 0.58))
-        housing.parent = neck
-        housing.location = (0, 0, 0)                 # origin IS its mating face
-        housing["asset_id"] = rs["asset_id"]
-        housing["neck_finish"] = s["neck_finish"]
-        housing["web_name"] = "roller_housing"       # matches the loader's cap group
-        link(housing, c_clos)
-
-        ball = uv_sphere("BB_ROLL_BALL_17415_001", rs["ball_d"])
-        ball.data.materials.append(
-            mat_steel() if ball_mode == "steel" else
-            mat_natural_plastic("BB_MAT_BALL_NATURAL", (0.94, 0.93, 0.89), 0.45, 0.55))
-        ball.parent = neck
-        ball.location = (0, 0, rs["ball_z"])
-        ball["asset_id"] = f"BB_ROLL_BALL_17415_{ball_mode.upper()}"
-        ball["ball_d"] = rs["ball_d"]
-        ball["web_name"] = "roller_ball"
-        link(ball, c_clos)
+        housing, ball = c17.fit_roller(sys.modules[__name__], s, neck, c_clos, ball_mode)
+        component_objs = {"housing": housing, "ball": ball}
+    if closure_mode != "none":
+        # sprayer / lotion pump: collar + actuator (+ spout) (+ overcap)
+        c_clos = collection("CLOSURES", c_root)
+        component_objs = c17.fit_closure(sys.modules[__name__], s, neck, c_clos,
+                                         closure_mode, finish=closure_finish,
+                                         overcap=overcap, internals=internals)
 
     # -- lighting: reflection cards, not direct illumination.
     # Clear glass is read almost entirely through what it MIRRORS, so the rig
@@ -2283,11 +2294,24 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
     # geometry is never scaled to fit the frame. With a 100mm lens on a 36mm
     # sensor, visible height = 0.36 x distance, so distance derives directly
     # from the product envelope (25% margin, 110mm floor for small SKUs).
-    envelope = envelope_mm or max(110.0, s["height"] * 1.25)
+    # The envelope is the ASSEMBLED product: bottle + whatever is seated on
+    # the neck (a 17-415 sprayer with its overcap tops out at +24.85 above
+    # the rim — 96.85 mm on the 9 mL — which a bottle-only envelope clips).
+    product_top = s["height"]
+    if component_objs:
+        bpy.context.view_layer.update()
+        product_top = max(product_top,
+                          max(c17._bounds_local(o)[1] for o in component_objs.values()
+                              if o.type == "MESH"))
+    envelope = envelope_mm or max(110.0, product_top * 1.25)
+    print(f"FRAME_ENVELOPE product_top {product_top:.2f} mm -> envelope {envelope:.1f} mm "
+          f"({'override' if envelope_mm else 'derived'})")
     # Shared-scale sets: when an envelope override is given, the camera height
     # is ALSO fixed so the ground line lands at 82% of frame height on every
     # canvas — one baseline across all SKUs, truthful relative sizes.
-    cam_z = (0.32 * envelope) if envelope_mm else mid
+    # Camera centres on the ASSEMBLED product (bottle + closure); the light
+    # rig keeps aiming at the bottle's own mid-height (locked provenance).
+    cam_z = (0.32 * envelope) if envelope_mm else (product_top * 0.5 if component_objs else mid)
     cam.location = (0, -envelope / 0.36, cam_z)      # level camera: verticals straight
     cam.rotation_euler = (math.radians(90), 0, 0)
     link(cam, c_cam)
@@ -2368,6 +2392,15 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
                 c.objects.link(twin)
             sweep_ob.is_shadow_catcher = True
 
+    if component_objs:
+        bpy.context.view_layer.update()
+        listing = {"sprayer": "Spry17-415: 31 ±0.5 × Ø19 ±0.5; assembled 96 ±1 with overcap",
+                   "pump": "Ltn17-415: 31 ±0.5 × Ø19 ±0.5; assembled 96 ±1 with overcap",
+                   "none": "roll-on: assembled 83–85 ±1 capped"}
+        c17.component_audit(component_objs, neck,
+                            closure_mode if closure_mode != "none" else f"roller-{ball_mode}",
+                            catalog=listing.get(closure_mode))
+
     out_path.parent.mkdir(parents=True, exist_ok=True)
     bpy.ops.wm.save_as_mainfile(filepath=str(out_path))
     print(f"master scene saved: {out_path}")
@@ -2390,6 +2423,16 @@ def main():
     p.add_argument("--cap", dest="cap_mode", default="none",
                    choices=["none"] + sorted(CAP_FINISHES) + sorted(CAP_DOT_FINISHES),
                    help="fit the closure; picks the finish")
+    p.add_argument("--closure", dest="closure_mode", default="none",
+                   choices=["none"] + list(c17.CLOSURE_KINDS),
+                   help="fit a sprayer or lotion pump (17-415 only); replaces roller/cap")
+    p.add_argument("--closure-finish", default="black",
+                   choices=c17.SPRAYER_FINISHES,
+                   help="collar colourway for --closure (pump ships black/gold/matte-silver)")
+    p.add_argument("--no-overcap", dest="overcap", action="store_false",
+                   help="omit the frosted overcap on a sprayer/pump")
+    p.add_argument("--internals", action="store_true",
+                   help="add the pump chamber + dip tube (OPTIONAL: product photos show empty glass)")
     p.add_argument("--glass", default="clear", choices=sorted(GLASS_VARIANTS),
                    help="glass material variant (one geometry, many glasses)")
     p.add_argument("--backdrop", default="",
@@ -2431,7 +2474,9 @@ def main():
 
     scene = build(a.output.resolve(), a.samples, a.ball_mode, a.cap_mode,
                   a.bottle_key, a.transparent, a.envelope, a.glass, a.backdrop,
-                  lighting=a.lighting)
+                  lighting=a.lighting, closure_mode=a.closure_mode,
+                  closure_finish=a.closure_finish, overcap=a.overcap,
+                  internals=a.internals)
     if a.test_render:
         scene.render.filepath = str(a.test_render.resolve())
         bpy.ops.render.render(write_still=True)

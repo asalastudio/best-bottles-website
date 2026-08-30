@@ -49,7 +49,8 @@ def bottle_object():
 
 def product_meshes():
     return [o for o in bpy.data.objects if o.type == "MESH"
-            and o.name.startswith(("BB_BTL", "BB_ROLL", "BB_CAP", "BB_FIN"))
+            and o.name.startswith(("BB_BTL", "BB_ROLL", "BB_CAP", "BB_FIN",
+                                   "BB_SPR", "BB_PMP"))
             and not o.hide_render]        # skip the parked library master
 
 
@@ -114,7 +115,7 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument("--view", required=True,
                    choices=[
-                       "front", "macro", "shoulder", "threequarter",
+                       "front", "macro", "shoulder", "closure", "threequarter",
                        "section", "spin",
                    ])
     p.add_argument("--out", required=True)
@@ -152,6 +153,13 @@ def main():
     if a.view == "front":
         pass                                       # master camera as saved
 
+    elif a.view == "closure":
+        # 17-415 component review: frames the closure from the finish base
+        # to 31 mm above the rim (sprayer/pump + overcap top at +24.85).
+        h = float(bottle_object()["height_mm"])
+        cz, dist = h + 5.5, 140.0
+        cam.location = (0, -dist, cz)
+        cam.rotation_euler = (math.radians(90), 0, 0)
     elif a.view == "macro":
         cz, dist = neck_frame(bottle)
         cam.location = (0, -dist, cz)
