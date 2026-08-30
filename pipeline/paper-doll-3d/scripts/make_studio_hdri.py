@@ -59,9 +59,16 @@ def build():
     theta = (np.arange(W) + 0.5) / W * 2 * math.pi - math.pi
     P, T = np.meshgrid(phi, theta, indexing="ij")
 
+    # DARK AMBIENT, BRIGHT EMITTERS - this is how glass is actually shot.
+    # A bright base field fills the whole sphere and BACKLIGHTS the bottle from
+    # every direction at once, which floods dense amber to pale cream no matter
+    # what the absorption says. Measured: at density 5000 absorbing everything,
+    # a bottle in a bright surround still rendered mid-grey - a floor no
+    # material value can get under. Drop the ambient and the same material
+    # reads as real amber.
     up = np.cos(P)
-    sky = 0.30 + 0.62 * smoothstep(-0.85, 0.95, up)
-    floor = 0.20 * smoothstep(0.10, -1.00, up)
+    sky = 0.030 + 0.075 * smoothstep(-0.85, 0.95, up)
+    floor = 0.020 * smoothstep(0.10, -1.00, up)
     img = np.stack([sky * 0.97 + floor * 1.00,
                     sky * 0.98 + floor * 0.96,
                     sky * 1.00 + floor * 0.90], axis=-1)
