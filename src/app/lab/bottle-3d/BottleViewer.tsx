@@ -334,6 +334,57 @@ function useDatumRing(target: THREE.Object3D | null, visible: boolean, radius: n
   }, [target, visible, radius]);
 }
 
+/**
+ * A product studio, built in-scene — no CDN fetch, CSP-safe.
+ *
+ * This is what glass and glossy plastic actually SEE. Transmission and metal
+ * sample the environment map, not the lights, so a bottle looks real or fake
+ * almost entirely because of what is in here. Adding more lights to a thin
+ * environment does nothing for glass.
+ *
+ * Laid out like a real table-top set rather than as abstract panels:
+ *
+ *   KEY        one large soft box high and in front — the broad highlight that
+ *              runs down a bottle shoulder in every product photo
+ *   FILL       tall dim cards either side, so the body does not go black
+ *              where it curves away
+ *   RIM        two bright, NARROW strips behind. These matter most: the bright
+ *              outline along a glass edge is the single strongest cue that
+ *              something is transparent, and it can only come from behind
+ *   FLOOR      a wide dim bounce, giving the base something to pick up
+ */
+function StudioEnvironment() {
+  return (
+    <Environment resolution={1024}>
+      {/* key */}
+      <Lightformer form="rect" intensity={10} color="#ffffff"
+                   position={[0, 1.6, 0.9]} rotation={[-Math.PI / 3, 0, 0]}
+                   scale={[3.5, 2.6, 1]} />
+      {/* fill */}
+      <Lightformer form="rect" intensity={3.2} color="#eef2f6"
+                   position={[-1.9, 0.5, 0.5]} rotation={[0, Math.PI / 2.4, 0]}
+                   scale={[2.2, 3.2, 1]} />
+      <Lightformer form="rect" intensity={2.4} color="#f6f2ee"
+                   position={[1.9, 0.4, 0.4]} rotation={[0, -Math.PI / 2.4, 0]}
+                   scale={[2.0, 3.0, 1]} />
+      {/* rim — narrow and hot, the edge-defining pair */}
+      <Lightformer form="rect" intensity={22} color="#ffffff"
+                   position={[-1.1, 0.7, -1.5]} rotation={[0, Math.PI / 4, 0]}
+                   scale={[0.35, 3.0, 1]} />
+      <Lightformer form="rect" intensity={18} color="#ffffff"
+                   position={[1.1, 0.7, -1.5]} rotation={[0, -Math.PI / 4, 0]}
+                   scale={[0.35, 3.0, 1]} />
+      {/* floor bounce */}
+      <Lightformer form="rect" intensity={1.6} color="#ffffff"
+                   position={[0, -1.4, 0.2]} rotation={[Math.PI / 2, 0, 0]}
+                   scale={[4, 4, 1]} />
+      {/* a dim ceiling wrap keeps metal from reading as flat grey */}
+      <Lightformer form="ring" intensity={1.2} color="#ffffff"
+                   position={[0, 2.4, -0.6]} scale={[4, 4, 1]} />
+    </Environment>
+  );
+}
+
 export default function BottleViewer({
   bodies,
   threadedIds = [],
@@ -350,6 +401,10 @@ export default function BottleViewer({
   const [threaded, setThreaded] = useState(true);
   const [closureKind, setClosureKind] = useState<string>("none");
   const [explodeMm, setExplodeMm] = useState(0);
+  // Clear glass cannot be judged against near-black: with nothing bright behind
+  // it, transmission has nothing to carry and it reads as smoked glass. A light
+  // ground is what every product photograph uses, and for the same reason.
+  const [lightBg, setLightBg] = useState(true);
   const [closureFinish, setClosureFinish] =
     useState<ClosureFinishKey>("shiny-black");
   const [m, setM] = useState<Measured | null>(null);
@@ -427,6 +482,11 @@ export default function BottleViewer({
         <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 8, cursor: "pointer" }}>
           <input type="checkbox" checked={showDatum} onChange={(e) => setShowDatum(e.target.checked)} />
           <span>show BB_ATTACH_NECK</span>
+        </label>
+
+        <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 8, cursor: "pointer" }}>
+          <input type="checkbox" checked={lightBg} onChange={(e) => setLightBg(e.target.checked)} />
+          <span>studio background</span>
         </label>
 
         <label style={{ display: "flex", gap: 6, alignItems: "center", marginBottom: 4,
@@ -523,8 +583,16 @@ export default function BottleViewer({
       </aside>
 
       <main style={{ flex: 1, position: "relative" }}>
-        <Canvas dpr={[1, 2]} camera={{ position: [0.16, 0.09, 0.19], fov: 32 }}>
-          <color attach="background" args={["#101014"]} />
+        <Canvas dpr={[1, 2]} camera={{ position: [0.16, 0.09, 0.19], fov: 32 }}
+                gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping,
+                      toneMappingExposure: 1.05 }}>
+          {/* A mid-grey ground reads closer to a product shot than near-black,
+              and gives the glass something to refract that is not the void.
+              NOTE: no drei <AccumulativeShadows> or <ContactShadows> here —
+              they re-render the scene into an offscreen buffer and that pass
+              draws transmissive glass OPAQUE WHITE, while the material stays
+              correct, so it reads as a material bug and is not one. */}
+          <color attach="background" args={[lightBg ? "#eceff2" : "#2a2a30"]} />
           <Suspense fallback={null}>
             <Center key={body.bodyId}>
               <Bottle url={url} glass={glass} showDatum={showDatum}
@@ -546,14 +614,12 @@ export default function BottleViewer({
             {/* Environment built in-scene: no CDN fetch, CSP-safe. */}
             {/* Transmission samples the ENVIRONMENT, not the lights, so a dim
                 env renders glass black however many lights are added. */}
-            <Environment resolution={512}>
-              <Lightformer intensity={14} position={[0, 1.2, 0.8]} scale={[2, 2, 1]} />
-              <Lightformer intensity={8} position={[-1.4, 0.6, 0.4]} scale={[1.4, 2.4, 1]} />
-              <Lightformer intensity={6} position={[1.4, 0.4, -0.6]} scale={[1.6, 1.6, 1]} />
-              <Lightformer intensity={5} form="ring" position={[0, -1.0, 0.4]} scale={[2, 2, 1]} />
-            </Environment>
-            <ambientLight intensity={0.5} />
-            <directionalLight position={[0.2, 0.5, 0.3]} intensity={1.4} castShadow />
+            <StudioEnvironment />
+            {/* Deliberately dim: transmissive glass barely responds to direct
+                lights, so these only lift the opaque closure parts. Realism
+                comes from the ENVIRONMENT above, not from adding lights. */}
+            <ambientLight intensity={0.35} />
+            <directionalLight position={[0.2, 0.5, 0.3]} intensity={0.9} />
           </Suspense>
           <OrbitControls makeDefault enablePan target={[0, 0, 0]}
                          minDistance={0.06} maxDistance={0.8} />
