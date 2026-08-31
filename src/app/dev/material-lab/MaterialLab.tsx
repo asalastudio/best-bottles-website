@@ -91,7 +91,10 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
     }
   }, [pbrMaps]);
   const matcaps = useTexture({
-    ballSteel: "/models/matcaps/ball-steel.png",
+    // versioned filename: the matcap went through three layouts at one URL
+    // and browser caches served the stale black-centred v1 ("still a
+    // transparent dome") long after v3 shipped
+    ballSteel: "/models/matcaps/ball-steel-v3.png",
     steel: "/models/matcaps/steel.png",
     gold: "/models/matcaps/gold.png",
     goldMatte: "/models/matcaps/gold-matte.png",
@@ -120,9 +123,11 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
   // indistinguishable from glass (mirrors show only their surroundings);
   // "steel" is a baked PATTERN - bright sky, crisp horizon, dark floor,
   // window glints - synthesized in ball-steel.png. Cylinders never matcap.
-  const MATCAP_FOR: Record<string, THREE.Texture> = {
-    PART_BALL_STEEL: matcaps.ballSteel,
-  };
+  // Matcaps are RETIRED: they were a workaround for the ball's inverted
+  // normals (the real bug, fixed in the asset). Real PBR metal under the
+  // universal studio is correct and consistent with every other component.
+  // The baked matcaps stay in public/models/matcaps/ for future use.
+  const MATCAP_FOR: Record<string, THREE.Texture> = {};
   const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string,
                              tune?: MatOverride) => {
     const scene = gltf.scene.clone(true);
@@ -487,8 +492,9 @@ const CAM_PRESETS = {
 } as const;
 type CamPresetId = keyof typeof CAM_PRESETS;
 
-function Rig({ azimuth, elevation, distance, targetY, fov }: {
-  azimuth: number; elevation: number; distance: number; targetY: number; fov: number;
+function Rig({ azimuth, elevation, distance, targetY, fov, nonce }: {
+  azimuth: number; elevation: number; distance: number; targetY: number;
+  fov: number; nonce: number;
 }) {
   const { camera } = useThree();
   useEffect(() => {
@@ -503,7 +509,7 @@ function Rig({ azimuth, elevation, distance, targetY, fov }: {
       distance * Math.cos(e) * Math.cos(a),
     );
     cam.lookAt(0, targetY, 0);
-  }, [camera, azimuth, elevation, distance, targetY, fov]);
+  }, [camera, azimuth, elevation, distance, targetY, fov, nonce]);
   return null;
 }
 
@@ -652,6 +658,16 @@ export default function MaterialLab(
 
   const targetY = m ? (m.hMm / 1000) / 2 : 0.035;
   const { azimuth, elevation } = CAM_PRESETS[cam];
+  // OrbitControls drift persists until something re-seizes the camera —
+  // bumping the nonce re-runs the Rig placement (Jordan: "the orbital
+  // adjustment needs to be reset")
+  const [viewNonce, setViewNonce] = useState(0);
+  const controlsRef = useRef<{ target: THREE.Vector3; update: () => void } | null>(null);
+  const resetView = () => {
+    const c = controlsRef.current;
+    if (c) { c.target.set(0, targetY, 0); c.update(); }
+    setViewNonce((n) => n + 1);
+  };
 
   return (
     <div style={{ display: "flex", height: "100vh", background: "#101014", color: "#e8e8ea",
@@ -750,9 +766,13 @@ export default function MaterialLab(
             ) : null}
             <StudioEnv studioId={studioId} intensity={envIntensity} rotationDeg={envRot} />
           </Suspense>
-          <Rig azimuth={azimuth} elevation={elevation} distance={distance}
+          <Rig nonce={viewNonce}
+               azimuth={azimuth} elevation={elevation} distance={distance}
                targetY={0} fov={fov} />
-          <OrbitControls makeDefault target={[0, 0, 0]} minDistance={0.05} maxDistance={1} />
+          <OrbitControls makeDefault target={[0, targetY, 0]}
+                         // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                         ref={controlsRef as any}
+                         minDistance={0.05} maxDistance={1} />
         </Canvas>
 
         {refUrl && refMode === "overlay" ? (
@@ -984,6 +1004,7 @@ export default function MaterialLab(
 
         <Section title="CAMERA" />
         <div style={{ display: "flex", gap: 4, marginBottom: 8 }}>
+          <button onClick={resetView} style={btn(false)}>reset view</button>
           {(Object.keys(CAM_PRESETS) as CamPresetId[]).map((id) => (
             <button key={id} onClick={() => setCam(id)} style={btn(cam === id)}>
               {id === "threeQuarter" ? "¾" : id}

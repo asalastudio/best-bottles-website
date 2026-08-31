@@ -265,7 +265,8 @@
       "metalness": 0.0,
       "clearcoat": 0.0,
       "ior": 1.5,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "env": "tent"
     },
     "PART_BALL_STEEL": {
       "color": "#fbf7ee",
@@ -274,14 +275,15 @@
         0.96,
         0.915
       ],
-      "roughness": 0.12,
+      "roughness": 0.09,
       "metalness": 1.0,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "the ball's DOME mirrors the zenith, which the metal env dims on purpose (cap-halo fix) - caps and balls want opposite ceilings, so env choice is per-material data. The tent's bright feathered zenith at 2.8x gives the dome its steel.",
-      "envMapIntensity": 2.8,
-      "env": "tent"
+      "note": "F0 silver, PBR under the universal panels-only studio. ROOT CAUSE of the whole 'transparent dome' saga: the ball GLB shipped with 100% INVERTED normals (mean dot(n, outward) = -1.000), so shading lit the sphere's inside - no material could fix it, and the matcap detour was treating the symptom. fix_inverted_normals.py corrected the asset; real PBR chrome works now.",
+      "envMapIntensity": 1.9,
+      "env": "metal",
+      "maps": null
     },
     "PART_HOUSING_PP": {
       "color": "#e8e6dd",
