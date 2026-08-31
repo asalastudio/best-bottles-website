@@ -112,6 +112,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
         ior: m.ior ?? 1.5, transmission: m.transmission ?? 0,
       } : { color: 0x999999, roughness: 0.4, metalness: 0.4 });
       if ((m?.transmission ?? 0) > 0) mat.thickness = 0.002;
+      // library reflectivity fields (Jordan's MeshPhongMaterial.reflectivity
+      // pointer): specularIntensity scales dielectric F0 — the pop a glossy
+      // black needs that roughness alone can't give
+      const spec = m as { specularIntensity?: number; specularColor?: string } | undefined;
+      if (spec?.specularIntensity != null) mat.specularIntensity = spec.specularIntensity;
+      if (spec?.specularColor) mat.specularColor = new THREE.Color(spec.specularColor);
       if ((m as { maps?: string } | undefined)?.maps === "matte") {
         // closure GLBs carry no UVs — cylindrical unwrap for the maps
         if (!mesh.geometry.getAttribute("uv")) {

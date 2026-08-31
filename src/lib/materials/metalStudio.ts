@@ -47,8 +47,14 @@ export type MetalStudioParams = {
 };
 
 export const METAL_STUDIO_DEFAULTS: MetalStudioParams = {
-  floor: 0.055, band: 0.95, bandEl: 0.12, bandWidth: 0.2,
-  ceiling: 5.0, lobe: 0.32, lobeDeg: 130,
+  // Glossy black is CONTRAST, not brightness: a uniform hot band washed
+  // the black cap to grey (band 2.2 experiment), and a dim band (0.95)
+  // vanished into the 4% dielectric reflection. So the band is moderate
+  // and the azimuthal lobe is strong: one flank carries a broad hot sheen
+  // (~3x) while the far side stays near-black — piano black on a
+  // cylinder, and on metals a graded accent that cannot stripe.
+  floor: 0.055, band: 1.5, bandEl: 0.12, bandWidth: 0.24,
+  ceiling: 5.0, lobe: 0.85, lobeDeg: 130,
 };
 
 export function useMetalStudio(params?: Partial<MetalStudioParams>): THREE.Texture {

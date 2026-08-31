@@ -68,8 +68,9 @@
       "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "Glossy 'piano' black per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
-      "envMapIntensity": 1.15
+      "note": "Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
+      "envMapIntensity": 1.15,
+      "specularIntensity": 1.5
     },
     "CAP_SHINY_GOLD": {
       "color": "#ffe496",
@@ -434,8 +435,9 @@
       "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "Glossy 'piano' black per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
-      "envMapIntensity": 1.15
+      "note": "Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
+      "envMapIntensity": 1.15,
+      "specularIntensity": 1.5
     },
     "CAP_DOTS_PINK": {
       "color": "#ddbfc8",

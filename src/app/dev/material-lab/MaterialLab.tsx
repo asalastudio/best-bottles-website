@@ -179,6 +179,10 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune }: 
       } : { color: 0x888888, roughness: 0.4, metalness: 0.5,
             ior: 1.5, transmission: 0 };
       const mat = new THREE.MeshPhysicalMaterial(phys);
+      // library reflectivity fields (specularIntensity scales dielectric F0)
+      const spec = m as { specularIntensity?: number; specularColor?: string } | undefined;
+      if (spec?.specularIntensity != null) mat.specularIntensity = spec.specularIntensity;
+      if (spec?.specularColor) mat.specularColor = new THREE.Color(spec.specularColor);
       if (phys.transmission > 0) {           // translucent plastics
         mat.thickness = 0.002;
         mat.transparent = false;
@@ -737,7 +741,11 @@ export default function MaterialLab(
         <Canvas dpr={[1, 2]} shadows={false}
                 camera={{ position: [0.12, 0.05, 0.18], fov }}
                 gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping,
-                      toneMappingExposure: exposure }}>
+                      toneMappingExposure: exposure }}
+                onCreated={(state) => {
+                  if (process.env.NODE_ENV !== "production")
+                    (window as unknown as Record<string, unknown>).__lab = state;
+                }}>
           {/* the OFF-FRAME ROOM: only rays that refract past the sweep's
               edges ever see this — the camera never does, the sweep covers
               the frame. Strongly-bent rays (heel, rim, silhouette) land
