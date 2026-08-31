@@ -82,33 +82,27 @@ EMITTERS = [
     # version of this rig painted hard vertical lines down the cylinder
     # (2026-08-30) because rects have no falloff - that is why the room is an
     # HDRI and not JSX.
-    # THE RULE, settled over v2-v6 (Jordan): a source that mirrors on the
-    # FACE must be a pure gradient (soft=1.0) — any defined edge mid-face
-    # reads abrupt/painted, at any intensity. Definition is allowed ONLY for
-    # sources that land at the SILHOUETTE (the rim columns below), where
-    # curvature compresses them into the thin Aesop edge lines.
-    dict(theta=-0.55, phi=0.75, wt=1.10, wp=0.90, i=6.0, c=(1.00,0.99,0.96), soft=1.00),
-    dict(theta= 0.95, phi=0.95, wt=0.65, wp=1.25, i=3.5, c=(0.93,0.96,1.00), soft=1.00),
-    # THE SHEEN: a WIDE moderate dome behind the camera. A narrow hot strip
-    # was tried (wt 0.24, i 16, fully feathered) and REJECTED (Jordan,
-    # 2026-08-31): above ~8x the whole feathered shoulder still tone-maps to
-    # clipped white, and the cylinder compresses the reflection horizontally,
-    # so it reads as a painted-on line no matter how soft the radiance is.
-    # The real IMG_5048 sheen is a broad gradient across ~1/3 of the face;
-    # contrast comes from the DARK ZONES below, never from a hot peak.
-    dict(theta=-0.30, phi=1.00, wt=0.95, wp=1.30, i=4.5, c=(1,1,1), soft=1.00),
-    # dim front fill so the camera side of the room exists around the dome
-    dict(theta= 0.55, phi=1.05, wt=1.00, wp=1.00, i=0.9, c=(0.99,0.98,0.96), soft=1.00),
+    # THE RULE, final form (settled v2-v8 against IMG_5048): an environment
+    # lives at INFINITY, so ANY above-ambient source near the horizon paints
+    # a FULL-HEIGHT line down a straight cylinder wall — no softness or
+    # dimming trick survives, because the wall mirrors the horizon band
+    # along its entire height. A real studio light sits at a finite height
+    # ABOVE the bottle, so its reflection lives on the threads and shoulder
+    # and never on the wall. The env equivalent (Jordan: "one or two lights
+    # at the top"): ALL punch goes HIGH in the sphere (small phi), which
+    # only upward-facing surfaces can mirror; the horizon band stays a
+    # near-uniform gentle field so the wall carries a gradient and NOTHING
+    # ELSE. No rim columns, no face dome, no window shape. Ever.
+    # top light 1: warm, above front-left — thread/shoulder/ledge accents
+    dict(theta=-0.50, phi=0.35, wt=1.00, wp=0.45, i=7.0, c=(1.00,0.99,0.96), soft=0.80),
+    # top light 2: cooler, above right — the second accent
+    dict(theta= 0.90, phi=0.40, wt=0.60, wp=0.40, i=5.0, c=(0.94,0.96,1.00), soft=0.70),
+    # horizon band: one VERY wide, VERY gentle warm gradient for the body
+    dict(theta=-0.35, phi=0.95, wt=1.60, wp=1.10, i=1.5, c=(1.00,0.99,0.96), soft=1.00),
     # behind: wide soft bounce, keeps the far wall alive through the glass
-    dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.8, c=(1.00,0.98,0.95), soft=1.00),
-    # RIM COLUMNS: tall panels at the sideways-behind directions the
-    # silhouette mirrors. Grazing Fresnel is ~100% reflective, so moderate
-    # intensity still draws a bright THIN line confined to the last degrees
-    # of curvature — the Aesop edge highlight, stable under rotation.
-    dict(theta= 2.35, phi=1.05, wt=0.40, wp=1.35, i=5.0, c=(1,1,1), soft=0.50),
-    dict(theta=-2.35, phi=1.05, wt=0.40, wp=1.35, i=5.0, c=(1,1,1), soft=0.50),
-    # overhead scrim - soft; it mirrors on the shelf and thread tops
-    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=2.2, c=(1,1,1), soft=0.90),
+    dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.4, c=(1.00,0.98,0.95), soft=1.00),
+    # overhead scrim - soft; mirrors on the shelf and thread tops
+    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=2.6, c=(1,1,1), soft=0.90),
 ]
 
 
