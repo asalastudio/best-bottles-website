@@ -607,7 +607,7 @@
       "envMapIntensity": 0.3,
       "env": "tent",
       "specularColor": null,
-      "note": "TRANSLUCENCY IS PAINTED, NOT SIMULATED: three's transmission buffer excludes transparent AND transmissive parts, so the tube must be opaque - and a translucent object READS as its background seen through milk. The PSD tube layer is near-white because the photo background is white; on OUR taupe stage the same tube reads milky-taupe #c9c0b4. Low env intensity kills the white rotation flare (Jordan). O2.8 curved thread per the product photos.",
+      "note": "RENDERS VIA MATCAP (matcaps/diptube.png), not PBR: the tube is DRAWN BY ITS EDGES like Jordan's reference photo - two soft grey edge lines, core melted to the stage-through-glass tone, one faint sheen line. View-dependent, env-free (no rotation flare), opaque pass (visible through transmissive glass). Regenerate via the numpy recipe in the matcap commit. TRANSLUCENCY IS PAINTED, NOT SIMULATED: three's transmission buffer excludes transparent AND transmissive parts, so the tube must be opaque - and a translucent object READS as its background seen through milk. The PSD tube layer is near-white because the photo background is white; on OUR taupe stage the same tube reads milky-taupe #c9c0b4. Low env intensity kills the white rotation flare (Jordan). O2.8 curved thread per the product photos.",
       "opacity": 1.0,
       "alphaHash": false,
       "specularIntensity": 0.6

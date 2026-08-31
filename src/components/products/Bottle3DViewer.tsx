@@ -98,6 +98,14 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     normal: "/models/pbr/matte/normal.png",
     rough: "/models/pbr/matte/roughness.png",
   });
+  // matcap for the dip tube: view-dependent core/edge/sheen baked into one
+  // image - the only way a translucent-plastic read survives the opaque
+  // pass without env flare (matcaps ignore the environment entirely)
+  const tubeMatcap = useTexture("/models/matcaps/diptube.png");
+  useEffect(() => {
+    tubeMatcap.colorSpace = THREE.SRGBColorSpace;
+    tubeMatcap.needsUpdate = true;
+  }, [tubeMatcap]);
   useEffect(() => {
     for (const t of Object.values(matteMaps)) {
       t.colorSpace = THREE.NoColorSpace;
@@ -228,6 +236,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       // DIP TUBE on every sprayer/pump — scaled from its nominal length
       // to reach near the bottle base (neckY = rim height in body space)
       const tube = build(dipTube, "PART_DIPTUBE_PP");
+      tube.traverse((o) => {
+        const mesh = o as THREE.Mesh;
+        if (mesh.isMesh)
+          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+      });
       const nominal = fin === "18415" ? 0.08 : 0.062;
       tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
       g.push(tube);
@@ -238,7 +251,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, nozzle, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 
