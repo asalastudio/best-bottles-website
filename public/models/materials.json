@@ -63,13 +63,13 @@
         0.0033,
         0.0033
       ],
-      "roughness": 0.12,
+      "roughness": 0.1,
       "metalness": 0.0,
-      "clearcoat": 0.5,
+      "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "glossy black phenolic: DEEP black + a few crisp streaks. Grey cap failure (Jordan) = env intensity spraying sheen over a dark dielectric; black needs LESS env (0.65), crisper roughness (0.12), near-black base.",
-      "envMapIntensity": 0.65
+      "note": "Glossy 'piano' black per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
+      "envMapIntensity": 1.15
     },
     "CAP_SHINY_GOLD": {
       "color": "#ffe496",
@@ -429,13 +429,13 @@
         0.0069,
         0.0069
       ],
-      "roughness": 0.12,
+      "roughness": 0.1,
       "metalness": 0.0,
-      "clearcoat": 0.5,
+      "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "Jordan 2026-08-31: 'the black dot is supposed to be a shiny black' - values mirror CAP_SHINY_BLACK EXACTLY (keep them in sync). Studs are PART_STUD_CHROME, flush-set rhinestones.",
-      "envMapIntensity": 0.65
+      "note": "Glossy 'piano' black per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
+      "envMapIntensity": 1.15
     },
     "CAP_DOTS_PINK": {
       "color": "#ddbfc8",
