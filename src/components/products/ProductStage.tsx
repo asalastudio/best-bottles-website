@@ -117,7 +117,7 @@ export default function ProductStage({
 
   return (
     <QualityContext.Provider value={tier}>
-      <Canvas camera={{ position: [0, targetY, 0.22], fov: 30, near: 0.01, far: 10 }}
+      <Canvas camera={{ position: [0, targetY, 0.33], fov: 20.41, near: 0.01, far: 10 }}
               // colour pipeline is PINNED, never inherited from a
               // library default — see colorManagement.ts
               gl={{ antialias: true, ...GL_COLOR_SETTINGS }}

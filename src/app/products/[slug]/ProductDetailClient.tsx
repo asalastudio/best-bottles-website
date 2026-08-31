@@ -23,6 +23,7 @@ import {
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import BottleConfigurator from "@/components/products/BottleConfigurator";
+import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
 import { Safe3D } from "@/components/products/Viewer3DBoundary";
 import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
@@ -844,7 +845,7 @@ function TierLadder({ variant, qty }: { variant: ProductVariant | null | undefin
     const unitsToNext = next ? next.minQty - qty : 0;
 
     return (
-        <div className="bg-travertine border border-champagne/60 p-4 sm:p-5 rounded-sm">
+        <div id="volume-pricing" style={{ scrollMarginTop: 120 }} className="bg-travertine border border-champagne/60 p-4 sm:p-5 rounded-sm">
             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                 {VOLUME_TIERS_HONORED_AT_CHECKOUT ? "Volume Pricing" : "Volume Pricing · By Quote"}
             </p>
@@ -1539,7 +1540,26 @@ export default function ProductDetailClient({
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
                 <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start">
+                    {/* Guided configurator hero (design handoff 2026-08-31):
+                        full-width 50/50 stage + step panel for 3D families;
+                        the classic grid keeps everything else below the fold. */}
+                    {is3dFamily && group.slug ? (
+                        <div className="mb-8 lg:mb-14">
+                            <ConfiguratorPdp
+                                currentSlug={group.slug}
+                                groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
+                                capacityLabel={`${group.color ?? "Clear"} glass`}
+                                priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin ?? null}
+                                siblings={compatibleSiblings}
+                                heroImageUrl={group.heroImageUrl}
+                                onAddToCart={handleAddToCart}
+                                onAskGrace={openGracePanel}
+                            />
+                        </div>
+                    ) : null}
+                    <div className={is3dFamily
+                        ? "max-w-3xl mx-auto"
+                        : "grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start"}>
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
                         {/*
@@ -1554,7 +1574,7 @@ export default function ProductDetailClient({
                             Variant-count badge and SKU watermark are shared overlays in
                             placeholder mode and passed as props to the gallery.
                         */}
-                        <div className="lg:sticky lg:top-[120px]">
+                        <div className={is3dFamily ? "hidden" : "lg:sticky lg:top-[120px]"}>
                             <div className={hasVariantImagePicker && !is3dFamily ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
                                 {hasVariantImagePicker && !is3dFamily && (
                                     <VariantImagePicker

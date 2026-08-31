@@ -452,13 +452,15 @@ export default function Bottle3DViewer({
   glass = "amber", closure = "roller",
   capMat = "CAP_SHINY_BLACK", ballMat = "PART_BALL_STEEL",
   rollerVariant = "metal", trimMat = "CAP_SHINY_BLACK",
-  backdrop = STAGE.backdrop, className,
+  backdrop = STAGE.backdrop, className, fill = false,
 }: {
   bodyId?: string; finish?: "17-415" | "18-415";
   capMoulding?: CapMoulding;
   glass?: GlassPresetId; closure?: ClosureMode;
   capMat?: string; ballMat?: string; rollerVariant?: "metal" | "plastic";
   trimMat?: string; backdrop?: string; className?: string;
+  /** fill the parent (guided-PDP stage) instead of the 10/11 aspect box */
+  fill?: boolean;
 }) {
   const preset = GLASS_PRESETS[glass];
   const [h, setH] = useState(0.07);
@@ -469,7 +471,8 @@ export default function Bottle3DViewer({
 
   return (
     <div className={className}
-         style={{ position: "relative", width: "100%", aspectRatio: "10 / 11",
+         style={{ position: "relative", width: "100%",
+                  ...(fill ? { height: "100%" } : { aspectRatio: "10 / 11" }),
                   background: backdrop, borderRadius: 4, overflow: "hidden" }}>
       <ProductStage envRotationDeg={preset.envRotationDeg}
                     targetY={h * 0.62} ground
@@ -492,8 +495,8 @@ export default function Bottle3DViewer({
             Elegant frames like the 70mm cylinder instead of filling the
             viewport — 3.15 x h reproduces the approved 9ml framing. */}
         <OrbitControls makeDefault target={[0, h * 0.62, 0]}
-                       minDistance={Math.max(0.22, h * 3.15)}
-                       maxDistance={Math.max(0.22, h * 3.15)}
+                       minDistance={Math.max(0.33, h * 4.69)}
+                       maxDistance={Math.max(0.33, h * 4.69)}
                        enablePan={false} enableZoom={false}
                        minPolarAngle={Math.PI / 2.05} maxPolarAngle={Math.PI / 2.05}
                        autoRotate={!touched} autoRotateSpeed={0.9}

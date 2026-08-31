@@ -48,6 +48,39 @@
   /* ── Typography ───────────────────────────────────────────────────────── */
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-eb-garamond), ui-serif, Georgia, "Times New Roman", serif;
+
+  /* ── Catalog surfaces ─────────────────────────────────────────────────── */
+  --color-product-well: #EFE2D0;  /* product image wells (design handoff) */
+
+  /* ── Micro type scale — the 9–15px B2B spec range. These generate
+     text-2xs … text-md utilities; use them instead of text-[9px]…text-[15px]
+     (848 inline arbitraries measured 2026-08-31 — do not add more). ── */
+  --text-2xs: 9px;      /* smallest metadata: swatch counts, footnotes */
+  --text-2xs--line-height: 1.3;
+  --text-xs: 10px;      /* eyebrow labels, spec eyebrows, status metadata */
+  --text-xs--line-height: 1.35;
+  --text-caption: 11px; /* captions, helper text, secondary meta */
+  --text-caption--line-height: 1.4;
+  --text-spec: 12px;    /* spec-table values, chips, dense UI text */
+  --text-spec--line-height: 1.45;
+  --text-ui: 13px;      /* menu links, compact controls, filter rows */
+  --text-ui--line-height: 1.45;
+  --text-md: 15px;      /* prices, prominent inline UI, card names */
+  --text-md--line-height: 1.5;
+
+  /* ── Tracking stops — collapses the 0.14/0.18/0.2/0.25em drift ── */
+  --tracking-label: 0.14em;    /* 10px metadata labels */
+  --tracking-eyebrow: 0.2em;   /* uppercase section/spec eyebrows */
+  --tracking-hero: 0.25em;     /* hero + announcement eyebrows only */
+}
+
+/* ── Design-system runtime tokens (motion, elevation, density) — consumed
+   as CSS vars by primitives; not Tailwind utility generators. ── */
+:root {
+  --motion-state: 200ms ease-out;
+  --motion-drawer: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --shadow-drawer: 0 24px 60px rgba(29, 29, 31, 0.18), 0 4px 16px rgba(29, 29, 31, 0.08);
+  --focus-ring: 2px solid #C5A065;
 }
 
 /* Hero headline — explicit EB Garamond for "Beautifully Contained" */
