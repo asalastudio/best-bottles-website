@@ -269,19 +269,19 @@
       "env": "tent"
     },
     "PART_BALL_STEEL": {
-      "color": "#fbf7ee",
+      "color": "#e0dfdd",
       "linear": [
-        0.972,
-        0.96,
-        0.915
+        0.7547806693306308,
+        0.7438551299770171,
+        0.7313912786073086
       ],
-      "roughness": 0.09,
+      "roughness": 0.1,
       "metalness": 1.0,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "F0 silver, PBR under the universal panels-only studio. ROOT CAUSE of the whole 'transparent dome' saga: the ball GLB shipped with 100% INVERTED normals (mean dot(n, outward) = -1.000), so shading lit the sphere's inside - no material could fix it, and the matcap detour was treating the symptom. fix_inverted_normals.py corrected the asset; real PBR chrome works now.",
-      "envMapIntensity": 1.9,
+      "note": "metal.steel from the absorbed library (physicallybased.info, CC0): #e0dfdd - genuinely DARKER than silver, which is what gives a roller ball its dark flanks. Reflects the peak-capped universal studio: the uncapped version peaked at 3335x and any mirror blew to pure white (the 'transparent dome').",
+      "envMapIntensity": 1.0,
       "env": "metal",
       "maps": null
     },

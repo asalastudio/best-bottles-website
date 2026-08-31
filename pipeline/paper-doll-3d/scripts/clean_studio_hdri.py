@@ -66,6 +66,11 @@ p.add_argument("--panels-only", action="store_true",
                     "straight-on).")
 p.add_argument("--panel-lo", type=float, default=1.3)
 p.add_argument("--panel-hi", type=float, default=3.0)
+p.add_argument("--peak", type=float, default=0.0,
+               help="cap the brightest value (0 = no cap). Real studio HDRIs "
+                    "peak in the THOUSANDS; a mirror reflecting that blows to "
+                    "pure white and reads as a transparent dome. ~24 keeps "
+                    "panels bright with structure intact.")
 a = p.parse_args()
 
 img = read_hdr(a.src)
@@ -81,12 +86,33 @@ if a.panels_only:
     lum_src = img @ np.array([0.2126, 0.7152, 0.0722], np.float32)
     t = np.clip((lum_src - a.panel_lo) / (a.panel_hi - a.panel_lo), 0, 1)
     mask = (t * t * (3 - 2 * t))[:, :, None]
-    out = smooth * (1 - mask) + img * mask
+    # the room field must average NON-panel pixels only - folding the light
+    # rows into the mean made the whole room glow and mirrors clipped white
+    keep = (mask[:, :, 0] < 0.05)
+    field_rows = np.zeros((H, 3), np.float32)
+    for y in range(H):
+        sel = img[y][keep[y]] if keep[y].any() else img[y]
+        field_rows[y] = sel.mean(axis=0)
+    k2 = max(3, H // 24) | 1
+    pad2 = np.pad(field_rows, ((k2//2, k2//2), (0, 0)), mode="edge")
+    field_rows = np.stack([np.convolve(pad2[:, c], np.ones(k2)/k2, mode="valid")
+                           for c in range(3)], axis=-1)
+    room = field_rows[:, None, :] * np.ones((1, W, 1), np.float32)
+    out = room * (1 - mask) + img * mask
 else:
     wz = np.clip((a.zenith_deg + a.feather_deg - phi) / a.feather_deg, 0, 1)   # 1 above
     wf = np.clip((phi - (a.floor_deg - a.feather_deg)) / a.feather_deg, 0, 1)  # 1 below
     w = np.maximum(wz, wf)[:, None, None]
     out = img * (1 - w) + smooth * w
+if a.peak > 0:
+    mx = float(out.max())
+    if mx > a.peak:
+        # soft-knee: everything under half the cap is untouched, the top
+        # compresses - preserves panel SHAPE while killing the blowout
+        knee = a.peak * 0.5
+        hi = out > knee
+        out[hi] = knee + (a.peak - knee) * np.tanh((out[hi] - knee) / (a.peak - knee))
+        print(f"peak {mx:.0f} -> {float(out.max()):.1f} (soft knee at {knee:.1f})")
 write_hdr(a.out, out.astype(np.float32))
 lum = out @ np.array([0.2126, 0.7152, 0.0722])
 print(f"cleaned: zenith<= {a.zenith_deg} deg and floor >= {a.floor_deg} deg "

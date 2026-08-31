@@ -193,6 +193,18 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
       const envOverride = (m as { envMapIntensity?: number } | undefined)?.envMapIntensity;
       mat.envMapIntensity = envOverride ?? (glossy ? 1.15 : 0.9);
       mesh.material = mat;
+      // dev diagnostic: what did each closure part ACTUALLY get?
+      if (typeof window !== "undefined") {
+        const w = window as unknown as { __labParts?: Record<string, unknown> };
+        w.__labParts = w.__labParts || {};
+        w.__labParts[matName] = {
+          mesh: mesh.name, type: mat.type,
+          color: mat.color.getHexString(), rough: mat.roughness,
+          metal: mat.metalness, envMap: !!mat.envMap,
+          envInt: mat.envMapIntensity, transmission: mat.transmission,
+          side: mat.side, visible: mesh.visible,
+        };
+      }
     });
     return scene;
   }, [mats, plasticEnv, metalEnv, matcaps, pbrMaps]);
