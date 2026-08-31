@@ -72,3 +72,32 @@ Sampled centre: RGB 20/36/143, hue 232, saturation 0.86.
 Visible in `frosted.jpg`: the etch stops at the shoulder and the thread finish
 is clear glass. If the configurator ever applies frosted to a whole body it
 will be wrong at the neck — the real part is two materials.
+
+## amber-studio.jpg — IMG_5048 (2026-08-31) — CANONICAL AMBER REFERENCE
+
+Real 9 mL amber roll-on, tripod-style shot on a seamless bone/sage sweep,
+broad diffuse light, essentially zero clipping (1.5e-6). Supersedes amber.jpg
+(the wall shot, IMG_5040) for LOOK sign-off; the wall shot keeps its role as
+the source of the documented sigma solve.
+
+Measured patches (sRGB 0-1, background beside body = 0.621/0.621/0.580):
+
+    thread flank   #311a06   T vs bg  0.31 / 0.17 / 0.05   <- lightest glass
+    shoulder glow  #271100   T vs bg  0.25 / 0.11 / 0.004
+    body mid       #140500   T vs bg  0.13 / 0.035 / 0.003  <- darkest
+    heel           #0d1319   (floor shadow + backdrop bounce, not glass colour)
+
+What it certifies:
+  1. The REAL bottle is much darker than the approved preset renders — the
+     working range for tuning is deeper, not paler.
+  2. The vertical gradient runs threads (lightest) -> shoulder -> body
+     (darkest): the SAME direction the baked thicknessMap produces. The bake
+     is physically confirmed by this photograph.
+  3. One broad soft sheen, no hard reflection edges — the feathered room/tent
+     HDRI discipline is what a real studio does.
+  4. Background is a seamless sweep with a soft floor gradient — matches the
+     lab's cyclorama.
+
+Tune in the lab with reference compare (side/overlay) against THIS file.
+Numbers above are advisory; the eye-set preset remains the shipping value
+until Jordan approves a retune.
