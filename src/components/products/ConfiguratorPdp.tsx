@@ -50,6 +50,15 @@ const CLOSURE_GLYPH: Record<string, typeof SprayBottle> = {
   pump: HandSoap, dropper: Eyedropper, roller: Drop, reducer: TestTube,
 };
 
+/** rail tile fills per colourway — glass reads as a gradient, not a dot */
+const GLASS_TILE: Record<string, string> = {
+  clear: "linear-gradient(150deg,#f7f9f8 0%,#dde3e1 55%,#c9d1cf 100%)",
+  frosted: "linear-gradient(150deg,#f4f5f4 0%,#e3e6e4 55%,#d2d6d4 100%)",
+  amber: "linear-gradient(150deg,#c98a45 0%,#8a4c16 55%,#5b3010 100%)",
+  cobalt: "linear-gradient(150deg,#3f63d6 0%,#1d3aa8 55%,#12246b 100%)",
+  swirl: "linear-gradient(150deg,#efe7d8 0%,#dccfb4 55%,#c3b392 100%)",
+};
+
 /** glass tint approximations for the GLASS swatches (attenuation-derived) */
 const GLASS_TONE: Record<string, SwatchableMaterial> = {
   clear: { color: "#e9edeb", roughness: 0.06 },
@@ -73,6 +82,7 @@ export default function ConfiguratorPdp({
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, price10, price12, priceTiers,
   sampleHref, quoteHref, qty = 1, onQtyChange,
+  capOptions, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
 }: {
   currentSlug: string;
   groupTitle: string;          // "Elegant 60 ml"
@@ -101,6 +111,16 @@ export default function ConfiguratorPdp({
   priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
   sampleHref?: string;
   quoteHref?: string;
+  /** SKU TRUTH for the fitment row: the cap/trim colourways this closure
+   *  actually ships in, derived from the group's own variants. A reducer
+   *  has ~14 caps, a lotion pump far fewer, a bulb its own colourways —
+   *  a single hardcoded palette was wrong for every closure but spray. */
+  capOptions?: string[];
+  activeCapOption?: string | null;
+  onCapOptionChange?: (name: string) => void;
+  capSwatchStyle?: (name: string) => React.CSSProperties;
+  /** glass colourways this family sells, for the stage-side rail */
+  glassOptions?: Array<{ id: string; label: string; href: string; active: boolean }>;
   qty?: number;
   onQtyChange?: (n: number) => void;
 }) {
@@ -243,6 +263,38 @@ export default function ConfiguratorPdp({
 
   /* ----------------------------------------------- swatch rows (seam) */
   const finishRow = (compact = false) => {
+    // SKU truth first: what this closure actually ships in
+    if (capOptions && capOptions.length > 0) {
+      return (
+        <div>
+          <p className="text-2xs font-semibold uppercase tracking-label">
+            <span className="text-slate">Fitment</span>
+            <span className="text-slate"> · </span>
+            <span className="text-obsidian normal-case tracking-normal text-caption">
+              {activeCapOption ?? capOptions[0]}
+            </span>
+            <span className="text-slate normal-case tracking-normal text-caption ml-2">
+              ({capOptions.length})
+            </span>
+          </p>
+          <div className="flex items-center gap-3 flex-wrap mt-2.5">
+            {capOptions.map((name) => (
+              <button key={name} type="button"
+                      onClick={() => onCapOptionChange?.(name)}
+                      aria-label={name} aria-pressed={activeCapOption === name}
+                      title={name}
+                      className={`h-8 w-8 rounded-full transition-all duration-200
+                                  focus-visible:outline-2 focus-visible:outline-offset-2
+                                  focus-visible:outline-muted-gold
+                                  ${activeCapOption === name
+                                    ? "outline outline-2 outline-offset-2 outline-obsidian"
+                                    : "ring-1 ring-champagne hover:ring-ash"}`}
+                      style={capSwatchStyle?.(name)} />
+            ))}
+          </div>
+        </div>
+      );
+    }
     const isBulb = isAntiquePreview;
     const trims = fam?.trims ?? [];
     return (
@@ -479,21 +531,18 @@ export default function ConfiguratorPdp({
                 const save = priceEach > 0
                   ? Math.round((1 - t.price / priceEach) * 100) : 0;
                 return (
-                  <button key={t.minQty} type="button"
-                          onClick={() => onQtyChange?.(t.minQty)}
-                          aria-label={`Set quantity to ${t.minQty}`}
-                          className={`w-full flex items-baseline justify-between rounded-[2px]
-                                      px-2.5 py-2 text-left transition-colors duration-200
-                                      ${active
-                                        ? "bg-white ring-1 ring-champagne/60"
-                                        : "hover:bg-white/60"}`}>
-                    <span className={`text-sm ${active ? "font-semibold text-obsidian" : "text-slate"}`}>
+                  <div key={t.minQty}
+                       className={`grid grid-cols-[1fr_auto_auto_92px] items-center gap-2
+                                   rounded-[2px] px-2.5 py-1.5 transition-colors duration-200
+                                   ${active ? "bg-white ring-1 ring-champagne/60" : ""}`}>
+                    <button type="button" onClick={() => onQtyChange?.(t.minQty)}
+                            aria-label={`Set quantity to ${t.minQty}`}
+                            className={`text-left text-sm ${active
+                              ? "font-semibold text-obsidian"
+                              : "text-slate hover:text-obsidian"}`}>
                       {t.minQty.toLocaleString()}+ units
-                    </span>
-                    <span className="flex items-baseline gap-2">
-                      <span className={`text-sm tabular-nums ${active ? "font-semibold text-obsidian" : "text-obsidian"}`}>
-                        ${t.price.toFixed(2)} ea
-                      </span>
+                    </button>
+                    <span>
                       {save > 0 && (
                         <span className="text-2xs uppercase tracking-label font-semibold
                                          text-[#1F6B49] bg-[#2E9E6B]/10 border border-[#2E9E6B]/30
@@ -502,7 +551,26 @@ export default function ConfiguratorPdp({
                         </span>
                       )}
                     </span>
-                  </button>
+                    <span className={`text-sm tabular-nums text-right ${active
+                      ? "font-semibold text-obsidian" : "text-obsidian"}`}>
+                      ${t.price.toFixed(2)} ea
+                    </span>
+                    {active ? (
+                      <button type="button" onClick={onAddToCart}
+                              className="text-2xs uppercase tracking-label font-semibold
+                                         bg-obsidian text-white rounded-[2px] py-1.5
+                                         transition-colors duration-200
+                                         hover:bg-muted-gold hover:text-obsidian">
+                        Add to cart
+                      </button>
+                    ) : (
+                      <button type="button" onClick={() => onQtyChange?.(t.minQty)}
+                              className="text-2xs uppercase tracking-label font-semibold
+                                         text-slate hover:text-gold-dim py-1.5">
+                        Select
+                      </button>
+                    )}
+                  </div>
                 );
               })}
             </div>
@@ -691,10 +759,26 @@ export default function ConfiguratorPdp({
 
   return (
     <section className="w-full">
-      {/* desktop 50/50 — tone-on-background, no card chrome (Jordan:
-          "we don't need that card... give a little bit more width") */}
-      <div className="hidden lg:grid grid-cols-2 gap-10 h-[calc(100vh-150px)]
-                      min-h-[600px] max-h-[820px]">
+      {/* desktop — glass rail | stage | buy column. The rail runs down the
+          left of the viewport (Jordan) and takes lifestyle tiles later. */}
+      <div className="hidden lg:grid grid-cols-[76px_1fr_1fr] gap-6 xl:gap-8
+                      h-[calc(100vh-150px)] min-h-[600px] max-h-[820px]">
+        <div className="flex flex-col gap-2.5 overflow-y-auto pr-0.5">
+          {(glassOptions ?? []).map((g) => (
+            <a key={g.id} href={g.href} aria-current={g.active ? "true" : undefined}
+               className={`group block rounded-[3px] overflow-hidden transition-colors
+                           duration-200 ${g.active
+                             ? "border-[1.5px] border-obsidian"
+                             : "border border-champagne hover:border-muted-gold"}`}>
+              <span className="block aspect-square"
+                    style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }} />
+              <span className={`block px-1 py-1.5 text-center text-spec leading-tight
+                                ${g.active ? "font-semibold text-obsidian" : "text-slate"}`}>
+                {g.label}
+              </span>
+            </a>
+          ))}
+        </div>
         <div className="relative rounded-sm overflow-hidden">{stage}</div>
         {stepPanel}
       </div>

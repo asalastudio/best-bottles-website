@@ -26,6 +26,7 @@ import BottleConfigurator from "@/components/products/BottleConfigurator";
 import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
 import { Safe3D } from "@/components/products/Viewer3DBoundary";
 import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
+import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
@@ -1568,6 +1569,30 @@ export default function ProductDetailClient({
                                 price10={selectedVariant?.webPrice10pc ?? null}
                                 price12={selectedVariant?.webPrice12pc ?? null}
                                 priceTiers={selectedVariant?.priceTiers ?? null}
+                                capOptions={capColorOptions}
+                                activeCapOption={activeCapColor}
+                                onCapOptionChange={(name) => {
+                                    setSelectedVariantId(null);
+                                    setSelectedCapColor(name);
+                                    setSelectedCapStyle(null);
+                                    setSelectedTrimColor(null);
+                                }}
+                                capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
+                                glassOptions={(() => {
+                                    const f = familyForSlug(group.slug ?? "");
+                                    if (!f) return [];
+                                    const token = (group.slug ?? "").split("-").pop() ?? "";
+                                    const current = glassFromSlug(f, group.slug ?? "");
+                                    return f.glasses.map((g) => {
+                                        const colour = f.slugColour[g];
+                                        return {
+                                            id: g,
+                                            label: GLASS_PRESETS[g].label,
+                                            href: colour ? `/products/${f.buildSlug(colour, token)}` : "#",
+                                            active: g === current,
+                                        };
+                                    });
+                                })()}
                                 sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
                                 quoteHref={quoteHref}
                                 qty={qty}
