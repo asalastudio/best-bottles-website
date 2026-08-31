@@ -14,17 +14,17 @@
  */
 
 import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import {
-  OrbitControls, Environment, useGLTF, useTexture, useEnvironment,
-  MeshTransmissionMaterial, ContactShadows, Center,
+  OrbitControls, useGLTF, useTexture, useEnvironment,
+  MeshTransmissionMaterial, Center,
 } from "@react-three/drei";
+import ProductStage, { STAGE, useStageQuality } from "./ProductStage";
 import * as THREE from "three";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
   type GlassPresetId, type GlassPreset,
 } from "@/lib/materials/glassPresets";
-import { STUDIO_PRESETS, APPROVED_STUDIO } from "@/lib/materials/studioPresets";
 
 export type ClosureMode =
   | "none" | "roller" | "rollerCapped"
@@ -70,12 +70,26 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
   const metalEnv = useEnvironment({ files: "/models/studio-universal.hdr" });
   const plasticEnv = useEnvironment({ files: "/models/studio-browser.hdr" });
 
+  // materials are memoized per registry name and SHARED across every mesh
+  // and clone that wears them — 20+ swappable parts per bottle makes
+  // per-render reconstruction real cost (audit item C)
+  const matCache = useMemo(() => new Map<string, THREE.MeshPhysicalMaterial>(), []);
   const build = useCallback((gltf: { scene: THREE.Object3D }, name: string) => {
     const scene = gltf.scene.clone(true);
     const m = mats?.[name];
+    const cached = matCache.get(name);
+    if (cached) {
+      scene.traverse((o) => {
+        const mesh = o as THREE.Mesh;
+        if (mesh.isMesh) mesh.material = cached;
+      });
+      return scene;
+    }
+    let firstMat: THREE.MeshPhysicalMaterial | null = null;
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
+      if (firstMat) { mesh.material = firstMat; return; }
       const mat = new THREE.MeshPhysicalMaterial(m ? {
         color: new THREE.Color(m.color), roughness: m.roughness,
         metalness: m.metalness, clearcoat: m.clearcoat ?? 0,
@@ -88,9 +102,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
                  : glossy ? metalEnv : plasticEnv;
       mat.envMapIntensity = m?.envMapIntensity ?? (glossy ? 1.15 : 0.9);
       mesh.material = mat;
+      firstMat = mat;
+      matCache.set(name, mat);
     });
     return scene;
-  }, [mats, metalEnv, plasticEnv]);
+  }, [mats, matCache, metalEnv, plasticEnv]);
 
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
@@ -174,21 +190,25 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
   }, [glass, onHeight]);
 
   // thinWall finishes ship on the plain MeshPhysicalMaterial path (the
-  // scraped Pacdora recipe); volume finishes use MeshTransmissionMaterial
+  // scraped Pacdora recipe); volume finishes use MeshTransmissionMaterial.
+  // On the lite tier (coarse pointer / small screen) EVERY glass takes the
+  // plain path — transmission is the expensive pipeline.
+  const quality = useStageQuality();
+  const usePlain = preset.thinWall || quality === "lite";
   useEffect(() => {
-    if (!glass || !preset.thinWall) return;
+    if (!glass || !usePlain) return;
     glass.visible = true;
     const m = applyGlassPreset(glass, preset);
     if (preset.frostMask) { m.roughnessMap = frostTex; m.needsUpdate = true; }
     return () => { glass.visible = false; };
-  }, [glass, preset, frostTex]);
+  }, [glass, preset, frostTex, usePlain]);
 
   return (
     <group>
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
                rollerVariant={rollerVariant} trimMat={trimMat} />
-      {glass && !preset.thinWall ? (
+      {glass && !usePlain ? (
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
           <MeshTransmissionMaterial
@@ -196,7 +216,7 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
             thicknessMap={preset.thicknessBake === false ? null : thicknessTex}
             roughnessMap={preset.frostMask ? frostTex : null}
             backside backsideThickness={preset.thickness}
-            samples={16} resolution={1024} backsideResolution={512}
+            samples={16} resolution={512} backsideResolution={256}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
@@ -210,20 +230,6 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
       ) : null}
     </group>
   );
-}
-
-/* ------------------------------------------------------- approved context */
-
-/** Each colourway was approved at ITS OWN studio rotation (envRotationDeg,
- *  so the finishes do not all catch the light in the same place). The
- *  material without its context is only half the approved look. */
-function StudioContext({ rotationDeg }: { rotationDeg: number }) {
-  const { scene } = useThree();
-  useEffect(() => {
-    scene.environmentIntensity = 1;
-    scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
-  }, [scene, rotationDeg]);
-  return null;
 }
 
 /* -------------------------------------------------------------- entrance */
@@ -256,14 +262,13 @@ export default function Bottle3DViewer({
   glass = "amber", closure = "roller",
   capMat = "CAP_SHINY_BLACK", ballMat = "PART_BALL_STEEL",
   rollerVariant = "metal", trimMat = "CAP_SHINY_BLACK",
-  backdrop = "#e9e6e0", className,
+  backdrop = STAGE.backdrop, className,
 }: {
   bodyId?: string; glass?: GlassPresetId; closure?: ClosureMode;
   capMat?: string; ballMat?: string; rollerVariant?: "metal" | "plastic";
   trimMat?: string; backdrop?: string; className?: string;
 }) {
   const preset = GLASS_PRESETS[glass];
-  const studio = STUDIO_PRESETS[APPROVED_STUDIO];
   const [h, setH] = useState(0.07);
   // gentle showcase motion until the customer takes over
   const [touched, setTouched] = useState(false);
@@ -274,36 +279,22 @@ export default function Bottle3DViewer({
     <div className={className}
          style={{ position: "relative", width: "100%", aspectRatio: "10 / 11",
                   background: backdrop, borderRadius: 4, overflow: "hidden" }}>
-      <Canvas camera={{ position: [0, h / 2, 0.22], fov: 30, near: 0.01, far: 10 }}
-              gl={{ antialias: true, toneMappingExposure: studio.toneMappingExposure }}
-              dpr={[1, 2]}>
-        <color attach="background" args={[new THREE.Color(backdrop).multiplyScalar(0.32)]} />
-        <Suspense fallback={null}>
-          <EntranceGroup>
-            <Center disableY>
-              <Bottle url={url} preset={preset} closure={closure}
-                      capMat={capMat} ballMat={ballMat}
-                      rollerVariant={rollerVariant} trimMat={trimMat}
-                      onHeight={onHeight} />
-            </Center>
-          </EntranceGroup>
-          <group>
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
-              <planeGeometry args={[1.2, 1.2]} />
-              <meshStandardMaterial color={backdrop} roughness={0.85} />
-            </mesh>
-            <ContactShadows opacity={0.42} scale={0.35} blur={2.4}
-                            far={0.06} resolution={1024} color="#3a3128" />
-          </group>
-          {studio.hdri ? <Environment files={studio.hdri} /> : null}
-          <StudioContext rotationDeg={preset.envRotationDeg} />
-        </Suspense>
+      <ProductStage envRotationDeg={preset.envRotationDeg} targetY={h / 2}
+                    backdrop={backdrop}>
+        <EntranceGroup>
+          <Center disableY>
+            <Bottle url={url} preset={preset} closure={closure}
+                    capMat={capMat} ballMat={ballMat}
+                    rollerVariant={rollerVariant} trimMat={trimMat}
+                    onHeight={onHeight} />
+          </Center>
+        </EntranceGroup>
         <OrbitControls makeDefault target={[0, h / 2, 0]}
                        enablePan={false} minDistance={0.12} maxDistance={0.45}
                        minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 1.9}
                        autoRotate={!touched} autoRotateSpeed={0.9}
                        onStart={() => setTouched(true)} />
-      </Canvas>
+      </ProductStage>
       {/* gallery vignette — depth without touching the render */}
       <div style={{ position: "absolute", inset: 0, pointerEvents: "none",
                     background: "radial-gradient(120% 90% at 50% 42%, transparent 55%, rgba(20,14,8,0.22) 100%)" }} />
