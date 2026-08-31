@@ -327,7 +327,11 @@ DOTS_17415 = dict(
     # ~8.25) and the side columns at 9.85 / 18.42 — offset half a row, which is
     # the stagger.
     dot_d=1.2, row_pitch=8.4, columns=6,
-    proud=0.85,             # set stones standing well proud, not dimples
+    # FLUSH-set (Jordan 2026-08-31: "they're not sticking out, they're
+    # flush with the surface" — all three dot colourways). The stud is a
+    # shallow spherical lens: visible disc dot_d, protruding only `proud`
+    # above the wall, sphere radius derived so the face sits level.
+    proud=0.12,
     z_lo=-8.9, z_hi=9.6,    # measured span, referenced to the rim datum
 )
 
@@ -368,10 +372,24 @@ def cap_dots_builder(rig, finish, variant):
             t = (z - (-cs["skirt_below_rim"])) / cs["height"]
             r_wall = r_base + (r_top - r_base) * max(0.0, min(1.0, t))
             tmp = bmesh.new()
-            bmesh.ops.create_uvsphere(tmp, u_segments=12, v_segments=8,
-                                      radius=d["dot_d"] / 2.0)
-            # sit the dome ON the wall, sunk so only `proud` stands out
-            off = r_wall + d["proud"] - d["dot_d"] / 2.0
+            # RHINESTONE, flush-set (Jordan): a tiny faceted stone — flat
+            # octagonal table over angled bezel facets — rising only `proud`
+            # above the wall. Flat-shaded facets each catch their own glint,
+            # which is what makes a rhinestone sparkle; a smooth dome can't.
+            a, p_ = d["dot_d"] / 2.0, d["proud"]
+            bmesh.ops.create_cone(tmp, cap_ends=True, segments=8,
+                                  radius1=a, radius2=a * 0.58, depth=p_)
+            # vary each stone's facet clocking so the glints don't repeat
+            clock = math.radians((col * 37 + int(z * 7)) % 360)
+            bmesh.ops.rotate(tmp, verts=tmp.verts,
+                             cent=(0, 0, 0),
+                             matrix=Matrix.Rotation(clock, 3, "Z"))
+            # axis +Z -> radial: tilt the stone to face outward
+            bmesh.ops.rotate(tmp, verts=tmp.verts, cent=(0, 0, 0),
+                             matrix=Matrix.Rotation(math.pi / 2.0, 3, "Y"))
+            bmesh.ops.rotate(tmp, verts=tmp.verts, cent=(0, 0, 0),
+                             matrix=Matrix.Rotation(theta, 3, "Z"))
+            off = r_wall + p_ / 2.0
             bmesh.ops.translate(tmp, verts=tmp.verts,
                                 vec=(off * math.cos(theta),
                                      off * math.sin(theta), z))
