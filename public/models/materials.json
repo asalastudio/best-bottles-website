@@ -524,6 +524,76 @@
       "env": "metal",
       "specularColor": "#b0bacc",
       "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Brighter stud variant for the SILVER dot cap only (Jordan 2026-08-31: 'make sure the rhinestones show up a little bit better on the matte silver dot'). Chrome-on-matte-silver is tone-on-tone; the extra env intensity + harder polish gives the stones their own sparkle contrast. Black/pink dots keep PART_STUD_CHROME."
+    },
+    "LEATHER_BLACK": {
+      "color": "#303030",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_BROWN": {
+      "color": "#a17249",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_LIGHT_BROWN": {
+      "color": "#b79875",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_IVORY": {
+      "color": "#cfb58f",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_PINK": {
+      "color": "#d092a0",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
     }
   }
 }

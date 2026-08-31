@@ -95,10 +95,31 @@ LOCAL_CAPS = {
                    source="bestbottles.com CP18-415MtSl listing"),
 }
 
+# MOULDING VARIANTS, measured 2026-08-31 from "6. 18-415 Caps" PSDs scaled
+# by the known diameters (short/tall share the O21 wall; leather is the
+# published 30 x O25 listing — the wrap adds real size). Tall = mean of
+# ShnBlkTall (h/w 1.310), MtSlTall (1.247), Wh (1.268) at O21 -> 26.8.
+# White exists ONLY as a tall cap.
+LOCAL_CAP_VARIANTS = {
+    ("18-415", "tall"): dict(
+        asset_id="BB_CAP_18415_TALL_001", height=26.8,
+        od_top=20.60, od_base=21.0,
+        thread_root_d=18.10, thread_crest_d=16.00,
+        source="CP18-415ShnBlkTall/MtSlTall/Wh PSDs at O21"),
+    ("18-415", "leather"): dict(
+        asset_id="BB_CAP_18415_LTHR_001", height=30.0,
+        od_top=24.60, od_base=25.0,
+        thread_root_d=18.10, thread_crest_d=16.00,
+        source="bestbottles.com CP18-415BlkLthr listing 30 x O25; PSD h/w agrees"),
+}
 
-def cap_builder(rig, finish):
-    """Threaded screw cap, built from the CAPS_BY_FINISH listing registry."""
-    listing = dict(rig.CAPS_BY_FINISH, **LOCAL_CAPS).get(finish)
+
+def cap_builder(rig, finish, variant=None):
+    """Threaded screw cap, built from the CAPS_BY_FINISH listing registry.
+    `variant` selects an alternative MOULDING (tall / leather) of the same
+    thread — a different physical cap, never just a colour."""
+    listing = (LOCAL_CAP_VARIANTS.get((finish, variant)) if variant
+               else dict(rig.CAPS_BY_FINISH, **LOCAL_CAPS).get(finish))
     if listing is None:
         raise SystemExit(
             f"no cap listing for {finish}. CAPS_BY_FINISH has "
@@ -411,7 +432,7 @@ def cap_dots_builder(rig, finish, variant):
 
 
 def cap_part_builder(rig, finish, variant):
-    cs, profile, modulate = cap_builder(rig, finish)
+    cs, profile, modulate = cap_builder(rig, finish, variant)
     return dict(spec=cs, profile=profile, modulate=modulate)
 
 
@@ -435,6 +456,8 @@ PARTS = {
     ("18-415", "PMP_SPOUT", None):         pump_spout_builder,
     ("18-415", "REDUCER", None):           reducer_builder,
     ("18-415", "CAP", None):               cap_part_builder,
+    ("18-415", "CAP", "tall"):             cap_part_builder,
+    ("18-415", "CAP", "leather"):          cap_part_builder,
 }
 
 # Assembly = an ordered stack of parts, bottom first. The order is what an

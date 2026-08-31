@@ -28,8 +28,12 @@ import {
 } from "@/lib/materials/glassPresets";
 
 export type ClosureMode =
-  | "none" | "roller" | "rollerCapped"
+  | "none" | "capped" | "roller" | "rollerCapped"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
+
+/** cap MOULDINGS — different physical caps sharing one thread (18-415
+ *  ships short / tall / leather; leather materials force their moulding) */
+export type CapMoulding = "short" | "tall" | "leather";
 
 type MatSpec = {
   color: string; roughness: number; metalness: number;
@@ -40,10 +44,11 @@ type MatSpec = {
 /* --------------------------------------------------------------- closure */
 
 function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
-                   finish = "17-415" }: {
+                   finish = "17-415", capMoulding = "short" }: {
   mode: ClosureMode; neckY: number; capMat: string; ballMat: string;
   /** neck finish — selects the closure GLB set (17-415 | 18-415) */
   finish?: "17-415" | "18-415";
+  capMoulding?: CapMoulding;
   /** metal (MtlRoll SKUs) or plastic (Roll SKUs) roll-on hardware */
   rollerVariant: "metal" | "plastic";
   /** spray/pump collar+actuator colour (SKU-derived: Blk/Gl/MattSl/ShSl/Tur/Rd) */
@@ -55,6 +60,13 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const ballPlastic = useGLTF("/models/closures/BB_ROLL_BALL_17415_PLASTIC.glb");
   const fin = finish.replace("-", "");
   const cap = useGLTF(`/models/closures/BB_CAP_${fin}.glb`);
+  // moulding variants ship for 18-415 only; hooks must run unconditionally,
+  // so other finishes load the base cap under both names (cheap, cached)
+  const has1841 = fin === "18415";
+  const capTall = useGLTF(has1841
+    ? "/models/closures/BB_CAP_18415_TALL.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const capLeather = useGLTF(has1841
+    ? "/models/closures/BB_CAP_18415_LEATHER.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const capDots = useGLTF("/models/closures/BB_CAP_DOTS_17415.glb");
   // fine-mist sprayer + lotion pump: every part origins at the neck rim
   // per the closures manifest — zero transforms. The whole set exists per
@@ -157,6 +169,17 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: THREE.Object3D[] = [];
+    if (mode === "capped") {
+      // cap straight on the neck — the "Bottle with Cap" SKUs. Leather
+      // materials force their moulding; otherwise the moulding prop picks.
+      const moulding = capMat.startsWith("LEATHER_") ? "leather" : capMoulding;
+      const capGltf = moulding === "leather" ? capLeather
+                    : moulding === "tall" ? capTall : cap;
+      g.push(build(capGltf, capMat));
+      if (capMat.startsWith("CAP_DOTS"))
+        g.push(build(capDots, "PART_STUD_CHROME"));
+      return g;
+    }
     if (mode === "roller" || mode === "rollerCapped") {
       const metal = rollerVariant === "metal";
       g.push(
@@ -184,7 +207,8 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capDots, collar, actuator, overcap, spout, capMat, ballMat,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout,
+      capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 
   if (!parts) return null;
@@ -198,10 +222,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
 /* ------------------------------------------------------------------ body */
 
 function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
-                  trimMat, finish, onHeight }: {
+                  trimMat, finish, capMoulding, onHeight }: {
   url: string; preset: GlassPreset; closure: ClosureMode;
   capMat: string; ballMat: string; rollerVariant: "metal" | "plastic";
   trimMat: string; finish: "17-415" | "18-415";
+  capMoulding?: CapMoulding;
   onHeight: (m: number) => void;
 }) {
   const gltf = useGLTF(url);
@@ -267,7 +292,8 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
     <group>
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
-               rollerVariant={rollerVariant} trimMat={trimMat} finish={finish} />
+               rollerVariant={rollerVariant} trimMat={trimMat} finish={finish}
+               capMoulding={capMoulding} />
       {glass && !usePlain ? (
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
@@ -319,12 +345,14 @@ function EntranceGroup({ children }: { children: React.ReactNode }) {
 export default function Bottle3DViewer({
   bodyId = "Cyl-round-17-415-70x20",
   finish = "17-415" as const,
+  capMoulding = "short" as const,
   glass = "amber", closure = "roller",
   capMat = "CAP_SHINY_BLACK", ballMat = "PART_BALL_STEEL",
   rollerVariant = "metal", trimMat = "CAP_SHINY_BLACK",
   backdrop = STAGE.backdrop, className,
 }: {
   bodyId?: string; finish?: "17-415" | "18-415";
+  capMoulding?: CapMoulding;
   glass?: GlassPresetId; closure?: ClosureMode;
   capMat?: string; ballMat?: string; rollerVariant?: "metal" | "plastic";
   trimMat?: string; backdrop?: string; className?: string;
@@ -348,7 +376,8 @@ export default function Bottle3DViewer({
             <Bottle url={url} preset={preset} closure={closure}
                     capMat={capMat} ballMat={ballMat}
                     rollerVariant={rollerVariant} trimMat={trimMat}
-                    finish={finish} onHeight={onHeight} />
+                    finish={finish} capMoulding={capMoulding}
+                    onHeight={onHeight} />
           </Center>
         </EntranceGroup>
         {/* rotate-only: tilt LOCKED (min == max polar), no pan — the
