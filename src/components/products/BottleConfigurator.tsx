@@ -64,6 +64,8 @@ const TRIMS: { id: string; label: string; swatch: string; pump: boolean }[] = [
     { id: "CAP_SHINY_SILVER", label: "Shiny silver", swatch: "linear-gradient(145deg,#ffffff,#b9bcbe)", pump: false },
     { id: "SPRAY_TURQUOISE", label: "Turquoise", swatch: "linear-gradient(145deg,#37b6b8,#136a6c)", pump: false },
     { id: "SPRAY_RED", label: "Red", swatch: "linear-gradient(145deg,#c93540,#7c0f18)", pump: false },
+    { id: "CAP_MATTE_GOLD", label: "Matte gold", swatch: "linear-gradient(145deg,#ecdcae,#b39a63)", pump: true },
+    { id: "CAP_COPPER", label: "Copper", swatch: "linear-gradient(145deg,#e8b18b,#9c5c38)", pump: true },
 ];
 
 const BASES = [
@@ -261,7 +263,8 @@ export default function BottleConfigurator({
                             {base === "sprayer" ? `Sprayer · ${trimLabel}` : `Pump · ${trimLabel}`}
                         </span>
                         <div className="flex items-center gap-2.5">
-                            {TRIMS.filter((t) => base === "sprayer" || t.pump).map((t) => (
+                            {TRIMS.filter((t) => (fam.trims ? fam.trims.includes(t.id) : !["CAP_MATTE_GOLD", "CAP_COPPER"].includes(t.id)))
+                                        .filter((t) => base === "sprayer" || t.pump).map((t) => (
                                 <button key={t.id} type="button" onClick={() => setTrimMat(t.id)}
                                         aria-label={`${t.label} ${base}`} aria-pressed={trimMat === t.id}
                                         title={t.label}

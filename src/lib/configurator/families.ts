@@ -23,6 +23,11 @@ export type ConfiguratorFamily = {
   glasses: GlassPresetId[];
   /** closure bases the family sells AND we have geometry for */
   bases: ClosureBase[];
+  /** spray/pump trim material ids this finish ships (SKU truth); omit for
+   *  the default 17-415 palette. 18-415 sprayers come in MtGl/ShnGl/
+   *  ShnBlk/MtSl/Cu/ShnSl — copper and matte gold exist ONLY here, and
+   *  turquoise/red only on 17-415 (Spry PSD folders per finish). */
+  trims?: string[];
   bodyDefault: string;
   /** colourways that live on their own mesh (flutes etc.) */
   bodyForGlass?: Partial<Record<GlassPresetId, string>>;
@@ -54,6 +59,8 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "elegant60",
     finish: "18-415",
+    trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
+            "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],
     // SKU truth (2026-08-31): elegant-60ml sells clear + frosted with
     // finemist (clear only) / perfumespray / lotionpump renderable today;
     // dropper, reducer and antique-bulb pages keep the photo gallery
@@ -74,6 +81,8 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "circle50",
     finish: "18-415",
+    trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
+            "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],
     // SKU truth: clear + frosted; perfumespray + lotionpump renderable
     // (antique bulb, dropper, reducer keep the photo gallery; the lone
     // 18-400 reducer variant is a different finish entirely)
@@ -89,6 +98,8 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "circle100",
     finish: "18-415",
+    trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
+            "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],
     slugRe: /^circle-100ml-(clear|frosted)-18-415-(perfumespray|lotionpump)$/,
     glasses: ["clear", "frosted"],
     bases: ["none", "sprayer", "pump"],
