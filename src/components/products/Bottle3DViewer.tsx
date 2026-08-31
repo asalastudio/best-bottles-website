@@ -255,61 +255,48 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       return g;
     }
     if (mode === "antique" || mode === "antiqueTassel") {
-      // the SCULPTED assembly (Jordan-approved prototype, Blender-zoned):
-      // SLOT_FABRIC keeps its baked knit texture, SLOT_METAL takes the
-      // library chrome/gold (trimMat), SLOT_TUBE the glass matcap
-      const asm = anspAssembly.scene.clone(true);
-      asm.traverse((o) => {
-        const mesh = o as THREE.Mesh;
+      // COMPOSED, not carved: the fitment is spec-built by closures.py
+      // (ansp_collar_builder, the same COLLAR_18415 barrel the sprayer
+      // wears) and the SCULPT supplies only the bulb + its ferrule.
+      // Hand-editing the sculpt's own collar gave a double-height barrel
+      // and a torn joint; this keeps the mechanical part in the pipeline
+      // that already works and Jordan's shape where it belongs.
+      g.push(build(anspCollar, trimMat));
+      const bulb = anspBulb.scene.clone(true);
+      bulb.traverse((n) => {
+        const mesh = n as THREE.Mesh;
         if (!mesh.isMesh) return;
         const slot = (mesh.material as THREE.Material)?.name ?? "";
         if (slot === "SLOT_METAL") {
-          const m = mats?.[trimMat];
-          const mm = new THREE.MeshPhysicalMaterial(m ? {
-            color: new THREE.Color(m.color), roughness: m.roughness,
-            metalness: m.metalness, clearcoat: m.clearcoat ?? 0,
-          } : { color: 0xd3d8da, roughness: 0.08, metalness: 1 });
-          const sp = m as { specularIntensity?: number;
-                            specularColor?: string } | undefined;
-          if (sp?.specularIntensity != null)
-            mm.specularIntensity = sp.specularIntensity;
-          if (sp?.specularColor)
-            mm.specularColor = new THREE.Color(sp.specularColor);
-          if ((m as { maps?: string } | undefined)?.maps === "matte") {
-            // matte finishes carry the library normal/roughness maps
-            // (the sculpt has UVs from its bake, so they apply directly)
-            mm.normalMap = matteMaps.normal;
-            mm.roughnessMap = matteMaps.rough;
-            mm.roughness = 1.0;
-            mm.normalScale = new THREE.Vector2(0.6, 0.6);
-          }
-          mm.envMap = metalEnv;
-          // the tall straight collar face-on reflects only the HDRI's
-          // melted-horizon band — at cap-tuned intensities it blows to
-          // flat white, so the assembly's metal runs lower to keep the
-          // side-gradient structure a real chrome ferrule shows
-          mm.envMapIntensity = Math.min(m?.envMapIntensity ?? 1.15, 1.1);
-          mesh.material = mm;
-        } else if (slot === "SLOT_TUBE") {
-          mesh.material = new THREE.MeshMatcapMaterial({
-            matcap: glassMatcap, side: THREE.DoubleSide });
-          // the tube trims/stretches to each bottle's depth (Jordan: "cut
-          // or lengthen it whenever required") — geometry hangs from the
-          // pump stem down to -150mm, so a y-scale from the rim origin
-          // reaches near the base of any body
-          mesh.scale.y = Math.max(0.15, (neckY - 0.007) / 0.15);
-        } else if (slot === "SLOT_FABRIC") {
-          // the baked knit texture stays; the colourway tints it
-          // (capMat carries the ANSP_* fabric id in antique mode)
+          // the ferrule wears the SAME approved metal as the fitment
+          const donor = build(anspCollar, trimMat);
+          let src: THREE.Material | null = null;
+          donor.traverse((d) => {
+            const dm = d as THREE.Mesh;
+            if (!src && dm.isMesh) src = dm.material as THREE.Material;
+          });
+          if (src) mesh.material = src;
+        } else {
+          // knit bulb: the baked weave stays, the colourway tints it
           const fab = mats?.[capMat];
           if (fab) {
-            const tinted = (mesh.material as THREE.MeshStandardMaterial).clone();
-            tinted.color = new THREE.Color(fab.color);
-            mesh.material = tinted;
+            const t = (mesh.material as THREE.MeshStandardMaterial).clone();
+            t.color = new THREE.Color(fab.color);
+            mesh.material = t;
           }
         }
       });
-      g.push(asm);
+      g.push(bulb);
+      // the works inside the bottle: the proven pump body + dip tube
+      g.push(build(pumpBody, "PART_ACTUATOR_PP"));
+      const at = build(dipTube, "PART_DIPTUBE_PP");
+      at.traverse((n) => {
+        const mesh = n as THREE.Mesh;
+        if (mesh.isMesh)
+          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+      });
+      at.scale.y = Math.max(0.3, (neckY - 0.006) / 0.08);
+      g.push(at);
       return g;
     }
     if (mode === "reducer" || mode === "reducerCapped") {

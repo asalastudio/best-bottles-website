@@ -45,15 +45,15 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     finish: "17-415",
     slugRe: /^cylinder-9ml-.*17-415-(rollon|finemist|lotionpump)$/,
     glasses: ["clear", "amber", "cobalt", "frosted", "swirl"],
-    bases: ["none", "roller", "sprayer", "pump"],
+    bases: ["none", "roller", "sprayer", "pump", "antique"],
     bodyDefault: "Cyl-round-17-415-70x20",
     bodyForGlass: { swirl: "CylSwrl-round-17-415-74x21" },
     slugColour: {
       clear: "clear", amber: "amber", cobalt: "cobalt-blue",
       frosted: "frosted", swirl: "swirl",
     },
-    slugClosure: { roller: "rollon", sprayer: "finemist", pump: "lotionpump" },
-    closureFromSlug: { rollon: "roller", finemist: "sprayer", lotionpump: "pump" },
+    slugClosure: { roller: "rollon", sprayer: "finemist", pump: "lotionpump", antique: "antiquespray" },
+    closureFromSlug: { rollon: "roller", finemist: "sprayer", lotionpump: "pump", antiquespray: "antique" },
     buildSlug: (c, cl) => `cylinder-9ml-${c}-17-415-${cl}`,
   },
   {
@@ -77,8 +77,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
                    antique: "antiquespray" },
     closureFromSlug: {
       finemist: "sprayer", perfumespray: "sprayer", lotionpump: "pump",
-      reducer: "reducer", dropper: "dropper",
-      antiquespray: "antique",
+      reducer: "reducer", dropper: "dropper", antiquespray: "antique",
     },
     buildSlug: (c, cl) => `elegant-60ml-${c}-18-415-${cl}`,
   },
@@ -99,8 +98,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
                    sprayer: "perfumespray", pump: "lotionpump",
                    antique: "antiquespray" },
     closureFromSlug: { reducer: "reducer", dropper: "dropper",
-                       perfumespray: "sprayer", lotionpump: "pump",
-                       antiquespray: "antique" },
+                       perfumespray: "sprayer", lotionpump: "pump", antiquespray: "antique" },
     buildSlug: (c, cl) => `circle-50ml-${c}-18-415-${cl}`,
   },
   {
@@ -113,14 +111,14 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     bases: ["none", "reducer", "sprayer", "pump", "antique"],
     bodyDefault: "Circle-disc-18-415-111x94",
     slugColour: { clear: "clear", frosted: "frosted" },
-    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump" },
-    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump",
-                       antiquespray: "antique" },
+    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump",
+                   antique: "antiquespray" },
+    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump", antiquespray: "antique" },
     buildSlug: (c, cl) => `circle-100ml-${c}-18-415-${cl}`,
   },
   // ---- 2026-08-31 scale-out: every family below runs on the SAME finished
   // 18-415 closure set (caps, monochrome spray/pump, reducer, dropper,
-  // antique bulb); bodies are harvest-dim builds (no drawings — request list)
+  // caps, monochrome spray/pump, reducer, dropper); bodies are harvest-dim (no drawings — request list)
   {
     key: "round128",
     finish: "18-415",
@@ -135,8 +133,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
                    sprayer: "perfumespray", pump: "lotionpump",
                    antique: "antiquespray" },
     closureFromSlug: { reducer: "reducer", dropper: "dropper",
-                       perfumespray: "sprayer", lotionpump: "pump",
-                       antiquespray: "antique" },
+                       perfumespray: "sprayer", lotionpump: "pump", antiquespray: "antique" },
     buildSlug: (c, cl) => `round-128ml-${c}-18-415-${cl}`,
   },
   {
@@ -203,8 +200,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     slugClosure: { reducer: "reducer", sprayer: "perfumespray",
                    pump: "lotionpump", antique: "antiquespray" },
     closureFromSlug: { finemist: "sprayer", perfumespray: "sprayer",
-                       lotionpump: "pump", reducer: "reducer",
-                       antiquespray: "antique" },
+                       lotionpump: "pump", reducer: "reducer" },
     buildSlug: (c, cl) => `elegant-100ml-${c}-18-415-${cl}`,
   },
 ];

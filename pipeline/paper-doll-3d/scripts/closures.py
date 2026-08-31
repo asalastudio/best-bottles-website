@@ -544,25 +544,39 @@ def pump_body_builder(rig, finish, variant):
 # one chrome part.
 
 def ansp_collar_builder(rig, finish, variant):
-    """Collar barrel + ringed stem + bullet nozzle, one chrome revolve."""
+    """The antique atomizer's FITMENT — barrel + short stem stub.
+
+    REBUILT 2026-08-31 (Jordan). The sculpted prototype supplies the bulb
+    and its ferrule; the mechanical fitment is spec-built here, the same
+    way every other 18-415 closure is, because hand-editing the sculpt's
+    own collar produced a double-height barrel and a torn joint.
+
+    Reference truth (GBElgFrst60AnSpBlk render, scaled off the bottle's
+    known 54.5 mm width): the barrel covers the whole finish — top a shade
+    proud of the rim, bottom landing on the shoulder — and reads ~20.4 mm
+    OD. It uses COLLAR_18415's Ø21.3 so it matches the sprayer collar
+    already shipping beside it. Only a short stub shows above the rim; the
+    sculpted ferrule swallows it.
+    """
     fm = rig.FINISH_MASTERS[finish]
-    skirt = fm["finish_h"] - 0.45
+    skirt = fm["finish_h"] - 0.45           # 15.35: stops shy of the datum
+    bore_r = fm["bore_d"] / 2.0 - 0.2
     prof = [
-        (10.65, -skirt),                        # barrel wall bottom
-        (10.65, 18.5),                          # barrel top
-        (9.0, 18.6),
-        (4.5, 19.6), (4.5, 20.6),               # ring
-        (2.8, 21.4), (2.8, 22.6),
-        (4.0, 23.2), (4.0, 24.2),               # ring
-        (2.6, 25.0), (2.6, 27.0),
-        (4.4, 28.5), (4.6, 33.0), (2.2, 37.6),  # bullet nozzle
-        (1.2, 38.2),                            # tip
-        (2.0, 38.0), (2.0, 17.0),               # stem core
-        (fm["bore_d"] / 2.0 - 0.2, 16.0),       # inner sleeve
-        (fm["bore_d"] / 2.0 - 0.2, -skirt),
+        (10.65, -skirt),                    # barrel wall, down to the shoulder
+        (10.65, 1.4),                       # ...up to just proud of the rim
+        (10.35, 2.0),                       # rolled top edge
+        (9.20, 2.5),
+        (4.60, 3.1),                        # shoulder in to the stem
+        (3.20, 4.2),
+        (3.20, 9.0),                        # stem stub = the ferrule's socket
+        (2.10, 9.4),                        # stub crown
+        (2.10, 8.6),                        # ---- inner return ----
+        (2.30, 4.6),
+        (bore_r, 3.0),
+        (bore_r, -skirt),                   # inner sleeve down the finish
     ]
     return dict(spec=dict(asset_id=f"BB_ANSP_COLLAR_{finish.replace('-','')}",
-                          od=21.3, barrel_h=18.5, top=38.2),
+                          od=21.3, barrel_h=skirt + 2.0, top=9.4),
                 profile=prof, modulate=None)
 
 
