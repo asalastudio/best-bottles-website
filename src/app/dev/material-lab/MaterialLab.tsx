@@ -11,7 +11,8 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, Environment, Lightformer, useGLTF, Center } from "@react-three/drei";
+import { OrbitControls, Environment, Lightformer, useGLTF, Center,
+         MeshTransmissionMaterial } from "@react-three/drei";
 import * as THREE from "three";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
@@ -34,23 +35,35 @@ type Measured = {
 /* ------------------------------------------------------------------ model */
 
 function Model({
-  url, preset, envIntensity, onMeasure,
+  url, preset, envIntensity, transmissionMat, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
-  onMeasure: (m: Measured) => void;
+  transmissionMat: boolean; onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
   const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
-  // what the FILE declares — three.js hands every material-less primitive a
-  // default, so counting on the loaded mesh always returns >= 1.
   const materialsInFile: number =
     (gltf as unknown as { parser?: { json?: { materials?: unknown[] } } })
       .parser?.json?.materials?.length ?? 0;
 
+  // Pull the glass mesh OUT of the cloned scene so its material can be a JSX
+  // child. drei's MeshTransmissionMaterial is a component, not a constructor -
+  // and it is the reason /lab/bottle-3d reads as glass while a plain
+  // MeshPhysicalMaterial does not: it renders the BACKSIDE through the front
+  // wall and multi-samples the transmission.
+  const glass = useMemo(() => {
+    let g: THREE.Mesh | null = null;
+    scene.traverse((o) => {
+      const m = o as THREE.Mesh;
+      if (m.isMesh && roleOf(m.name) === "bottle_glass" && !g) g = m;
+    });
+    if (g) (g as THREE.Mesh).visible = false;
+    return g as THREE.Mesh | null;
+  }, [scene]);
+
   useEffect(() => {
     let verts = 0, tris = 0;
     const meshes: string[] = [];
-    let glass: THREE.Mesh | null = null;
     scene.traverse((o) => {
       const m = o as THREE.Mesh;
       if (!m.isMesh) return;
@@ -59,38 +72,59 @@ function Model({
       verts += pos ? pos.count : 0;
       const idx = m.geometry.getIndex();
       tris += idx ? idx.count / 3 : (pos ? pos.count / 3 : 0);
-      if (roleOf(m.name) === "bottle_glass") glass = m;
     });
     if (!glass) return;
-    const g = glass as THREE.Mesh;
-    // measure the GEOMETRY, not the subtree: datums parented inside would
-    // otherwise be counted as part of the bottle.
-    g.geometry.computeBoundingBox();
+    glass.geometry.computeBoundingBox();
     const size = new THREE.Vector3();
-    (g.geometry.boundingBox as THREE.Box3).getSize(size);
+    (glass.geometry.boundingBox as THREE.Box3).getSize(size);
     const hMm = size.y * 1000;
     onMeasure({
       wMm: size.x * 1000, hMm, dMm: size.z * 1000,
       verts, tris: Math.round(tris), meshes, materialsInFile,
       unit: "metres (1 world unit = 1 m)",
-      // real bottles are 20–160 mm. Anything far outside that is a unit slip.
       scaleWarning:
         hMm > 400 ? `height ${hMm.toFixed(0)} — exported in MILLIMETRES?`
         : hMm < 5 ? `height ${hMm.toFixed(2)} mm — exported too small?`
         : null,
     });
-  }, [scene, onMeasure, materialsInFile]);
+  }, [scene, glass, onMeasure, materialsInFile]);
 
+  // the fallback path, for A/B against the better material
   useEffect(() => {
-    scene.traverse((o) => {
-      const m = o as THREE.Mesh;
-      if (m.isMesh && roleOf(m.name) === "bottle_glass") {
-        applyGlassPreset(m, { ...preset, envMapIntensity: envIntensity });
-      }
-    });
-  }, [scene, preset, envIntensity]);
+    if (!glass || transmissionMat) return;
+    glass.visible = true;
+    applyGlassPreset(glass, { ...preset, envMapIntensity: envIntensity });
+    return () => { glass.visible = false; };
+  }, [glass, preset, envIntensity, transmissionMat]);
 
-  return <primitive object={scene} />;
+  return (
+    <group>
+      <primitive object={scene} />
+      {glass && transmissionMat ? (
+        <mesh geometry={glass.geometry} position={glass.position}
+              rotation={glass.rotation} scale={glass.scale}>
+          <MeshTransmissionMaterial
+            transmission={preset.transmission}
+            thickness={preset.thickness}
+            backside
+            backsideThickness={preset.thickness * 2.6}
+            samples={8}
+            resolution={512}
+            backsideResolution={256}
+            roughness={preset.roughness}
+            ior={preset.ior}
+            chromaticAberration={preset.dispersion * 0.055}
+            anisotropicBlur={preset.roughness > 0.4 ? 0.6 : 0.1}
+            distortion={0}
+            attenuationDistance={preset.attenuationDistance}
+            attenuationColor={preset.attenuationColor}
+            color="#ffffff"
+            envMapIntensity={envIntensity}
+          />
+        </mesh>
+      ) : null}
+    </group>
+  );
 }
 
 /* ------------------------------------------------------------- environment */
@@ -217,6 +251,10 @@ export default function MaterialLab(
   // bottle to see through it. /lab/bottle-3d gets this right with a light
   // studio backdrop, which is why the same values look rich there.
   const [bg, setBg] = useState("#e9e6e0");
+  // MeshTransmissionMaterial renders the BACKSIDE through the front wall and
+  // multi-samples; MeshPhysicalMaterial does a single flat backdrop lookup.
+  // The difference is most of what separates "glass" from "tinted plastic".
+  const [transmissionMat, setTransmissionMat] = useState(true);
   // Default ON: the plain bodies/ build has a FLAT neck (0.00 mm relief).
   // Only bodies-threaded/ carries the drawing-exact helix, and glass
   // magnifies the neck - a flat one is immediately obvious.
@@ -294,6 +332,7 @@ export default function MaterialLab(
           <Suspense fallback={null}>
             <Center key={modelUrl}>
               <Model url={modelUrl} preset={working} envIntensity={envIntensity}
+                    transmissionMat={transmissionMat}
                      onMeasure={onMeasure} />
             </Center>
             <StudioEnv intensity={envIntensity} rotationDeg={envRot} />
@@ -375,6 +414,17 @@ export default function MaterialLab(
         <Slider label="dispersion" value={working.dispersion} min={0} max={4} step={0.05}
                 onChange={(v) => set("dispersion", v)}
                 hint="prismatic edge split — the anti-plastic cue" />
+
+        <label style={{ display: "flex", gap: 6, alignItems: "center",
+                        margin: "2px 0 4px", cursor: "pointer" }}>
+          <input type="checkbox" checked={transmissionMat}
+                 onChange={(e) => setTransmissionMat(e.target.checked)} />
+          <span>MeshTransmissionMaterial</span>
+        </label>
+        <div style={{ fontSize: 10, color: "#6f6f7d", marginBottom: 10 }}>
+          backside refraction + 8-sample transmission. Off = plain
+          MeshPhysicalMaterial, a single flat backdrop lookup.
+        </div>
 
         <Section title="ENVIRONMENT" />
         <label style={{ display: "flex", justifyContent: "space-between",
