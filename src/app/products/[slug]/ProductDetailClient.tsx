@@ -2041,8 +2041,8 @@ export default function ProductDetailClient({
                                 />
                             )}
 
-                            {/* Price + Tier Ladder */}
-                            <div className="mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50">
+                            {/* Price + Tier Ladder (panel carries these on 3D families) */}
+                            <div className={`mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50 ${is3dFamily ? "hidden" : ""}`}>
                                 <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                 <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian mb-4">
                                     {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
@@ -2359,7 +2359,7 @@ export default function ProductDetailClient({
                             <PdpInlinePromo blocks={pdpBlocks} />
 
                             {/* Quantity + Add to Cart */}
-                            <div ref={inlineCartRef} className="flex items-stretch space-x-3 mb-6">
+                            <div ref={inlineCartRef} className={`flex items-stretch space-x-3 mb-6 ${is3dFamily ? "hidden" : ""}`}>
                                 <div className="flex items-center border border-champagne rounded-sm bg-white">
                                     <button
                                         onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -2420,7 +2420,7 @@ export default function ProductDetailClient({
                             </div>
 
                             {/* Request a Quote CTA */}
-                            <div className="mb-6">
+                            <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`}>
                                 {qty >= 500 && checkoutReady ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}

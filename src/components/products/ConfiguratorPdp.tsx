@@ -376,8 +376,6 @@ export default function ConfiguratorPdp({
   /* CTA stack — sample-first (B2B buyers sample before they order),
      then quantity + add to cart, then the working price summary */
   const linePrice = tierPrice != null ? tierPrice * qty : null;
-  const savings = priceEach != null && tierPrice != null && tierPrice < priceEach
-    ? (priceEach - tierPrice) * qty : 0;
   const ctaStack = (
     <div className="mt-7">
       {sampleHref && (
@@ -428,35 +426,61 @@ export default function ConfiguratorPdp({
         </button>
       </div>
 
-      {linePrice != null && (
-        <div className="mt-4 rounded-[3px] border border-champagne/60 bg-travertine/40
-                        px-4 py-3 space-y-1">
-          <div className="flex items-baseline justify-between">
-            <span className="text-sm text-slate">Your price</span>
-            <span className="text-md font-semibold text-obsidian tabular-nums">
-              ${linePrice.toFixed(2)}
-            </span>
+      {priceEach != null && (
+        <div id="volume-pricing" style={{ scrollMarginTop: 120 }}
+             className="mt-4 rounded-[3px] border border-champagne/60 bg-travertine/40 px-4 py-3">
+          <p className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
+            Volume pricing · by quote
+          </p>
+          <div className="mt-2 space-y-1">
+            {([[1, priceEach], [10, price10], [12, price12]] as const)
+              .filter((t, i) => i === 0 || (t[1] != null && t[1]! < priceEach))
+              .map(([minQ, price]) => {
+                const active = qty >= minQ &&
+                  !([[10, price10], [12, price12]] as const).some(
+                    ([m, pp]) => m > minQ && pp != null && pp < priceEach && qty >= m);
+                const save = minQ > 1 && price != null
+                  ? Math.round((1 - price / priceEach) * 100) : 0;
+                return (
+                  <div key={minQ}
+                       className={`flex items-baseline justify-between rounded-[2px]
+                                   px-2.5 py-1.5 ${active ? "bg-white" : ""}`}>
+                    <span className={`text-sm ${active ? "font-semibold text-obsidian" : "text-slate"}`}>
+                      {minQ}+ units
+                    </span>
+                    <span className="flex items-baseline gap-2">
+                      <span className={`text-sm tabular-nums ${active ? "font-semibold text-obsidian" : "text-obsidian"}`}>
+                        ${price!.toFixed(2)} ea
+                      </span>
+                      {save > 0 && (
+                        <span className="text-2xs uppercase tracking-label font-semibold
+                                         text-[#1F6B49] bg-[#2E9E6B]/10 border border-[#2E9E6B]/30
+                                         rounded-full px-1.5 py-0.5">
+                          Save {save}%
+                        </span>
+                      )}
+                    </span>
+                  </div>
+                );
+              })}
           </div>
-          {savings > 0 && (
-            <div className="flex items-baseline justify-between">
-              <span className="text-sm text-slate">Volume savings</span>
-              <span className="text-sm font-semibold text-[#1F6B49] tabular-nums">
-                −${savings.toFixed(2)}
+          {linePrice != null && (
+            <div className="flex items-baseline justify-between mt-2 pt-2 border-t border-champagne/50">
+              <span className="text-sm text-slate">Your price · {qty} unit{qty === 1 ? "" : "s"}</span>
+              <span className="text-md font-semibold text-obsidian tabular-nums">
+                ${linePrice.toFixed(2)}
               </span>
             </div>
           )}
-          <div className="flex items-baseline justify-between pt-0.5">
-            <a href="#volume-pricing"
-               className="text-spec text-gold-dim underline underline-offset-2">
-              Full volume pricing
-            </a>
+          <p className="text-spec text-slate mt-2">
+            Volume rates are confirmed on a quote — online checkout is billed
+            at the ${priceEach.toFixed(2)}/ea rate.{" "}
             {quoteHref && (
-              <a href={quoteHref}
-                 className="text-spec text-gold-dim underline underline-offset-2">
-                Request a quote for 12+
+              <a href={quoteHref} className="font-semibold text-gold-dim underline underline-offset-2">
+                Request a quote
               </a>
-            )}
-          </div>
+            )}{" "}for 12+ pricing.
+          </p>
         </div>
       )}
     </div>
