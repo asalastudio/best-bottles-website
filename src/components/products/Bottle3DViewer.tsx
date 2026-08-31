@@ -76,6 +76,9 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const overcap = useGLTF(`/models/closures/BB_SPR_OVERCAP_${fin}.glb`);
   const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
   const dipTube = useGLTF(`/models/closures/BB_DIP_TUBE_${fin}.glb`);
+  const nozzle = useGLTF(has1841
+    ? "/models/closures/BB_SPR_NOZZLE_18415.glb"
+    : `/models/closures/BB_DIP_TUBE_${fin}.glb`);
   const [mats, setMats] = useState<Record<string, MatSpec> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -198,9 +201,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
                         ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME"));
       }
     } else {
-      // the actuator is ALWAYS white PP; only the collar wears the trim
-      // colour (PSD reference, all six colourways)
-      g.push(build(collar, trimMat), build(actuator, "PART_ACTUATOR_PP"));
+      // material rule differs BY FINISH (PSD truth): 17-415 heads are
+      // ALWAYS white PP over a trim collar; 18-415 is MONOCHROME — head
+      // and collar both in trim, only the tiny nozzle insert is white
+      const headMat = fin === "18415" ? trimMat : "PART_ACTUATOR_PP";
+      g.push(build(collar, trimMat), build(actuator, headMat));
+      if (fin === "18415") g.push(build(nozzle, "PART_ACTUATOR_PP"));
       // DIP TUBE on every sprayer/pump — scaled from its nominal length
       // to reach near the bottle base (neckY = rim height in body space)
       const tube = build(dipTube, "PART_DIPTUBE_PP");
@@ -208,13 +214,13 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
       g.push(tube);
       if (mode === "pump" || mode === "pumpCapped")
-        g.push(build(spout, "PART_ACTUATOR_PP"));
+        g.push(build(spout, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
       if (mode === "sprayerCapped" || mode === "pumpCapped")
         g.push(build(overcap, "PART_OVERCAP_CLEAR"));
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, nozzle, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

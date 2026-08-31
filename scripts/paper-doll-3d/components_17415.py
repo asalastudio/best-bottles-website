@@ -503,17 +503,22 @@ COLLAR_18415 = dict(
     thread_root_d=18.10, thread_crest_d=15.80,   # engages T 17.5 / clears E 15.5
 )
 
+# CORRECTED 2026-08-31 (Jordan: "the spray pump you have on these is
+# wrong"): Spry18-415ShnBlk + Ltn18-415ShnBlk show the 18-415 head is a
+# PLAIN STRAIGHT CYLINDER in the trim colour — no white two-tier head,
+# no dome. O14.5 flat-top column over the O21.3 collar; the only non-trim
+# element is the small white nozzle/spout insert on the face.
 ACTUATOR_18415 = dict(
-    asset_id="BB_SPR_HEAD_18415_001",
+    asset_id="BB_SPR_HEAD_18415_002",
     stem_d=6.0, stem_bottom_z=-2.0,
-    skirt_od=16.6, skirt_bottom_z=10.0, skirt_top_z=14.2, skirt_edge_r=0.4,
-    shoulder_top_z=15.0, body_od_low=14.5,
-    body_top_z=22.3, body_od_high=14.1,
-    top_z=23.7, top_edge_r=1.0,
-    wall=1.0, cavity_top_z=21.2,
-    orifice_z=20.4,
-    spray_insert_d=3.6, spray_insert_depth=0.3, spray_hole_d=0.4,
-    pump_spout_d=4.8, pump_spout_proud=1.3, pump_spout_z=20.0, pump_hole_d=1.6,
+    skirt_od=14.5, skirt_bottom_z=10.0, skirt_top_z=10.5, skirt_edge_r=0.2,
+    shoulder_top_z=10.7, body_od_low=14.5,
+    body_top_z=22.9, body_od_high=14.5,
+    top_z=23.7, top_edge_r=0.8,
+    wall=1.0, cavity_top_z=21.4,
+    orifice_z=21.3,
+    spray_insert_d=2.6, spray_insert_depth=0.3, spray_hole_d=0.5,
+    pump_spout_d=3.6, pump_spout_proud=0.6, pump_spout_z=21.3, pump_hole_d=1.4,
 )
 
 OVERCAP_18415 = dict(

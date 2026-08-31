@@ -473,6 +473,28 @@ def dip_tube_builder(rig, finish, variant):
                 profile=prof, modulate=None)
 
 
+def nozzle_insert_builder(rig, finish, variant):
+    """The small WHITE nozzle/spout insert on the 18-415 head's face — the
+    single non-trim element of the monochrome design (both PSD refs)."""
+    import bmesh
+    from mathutils import Matrix
+    c17 = _load_c17(rig)
+    hs = _fin_spec(c17, "ACTUATOR", finish)
+    d, z = hs["spray_insert_d"], hs["orifice_z"]
+    r_face = hs["body_od_high"] / 2.0
+    me = bpy.data.meshes.new("noz")
+    bm = bmesh.new()
+    bmesh.ops.create_cone(bm, cap_ends=True, segments=24,
+                          radius1=d / 2.0, radius2=d / 2.0, depth=1.2)
+    bm.to_mesh(me); bm.free()
+    obj = bpy.data.objects.new("noz", me)
+    bpy.context.scene.collection.objects.link(obj)
+    obj.data.transform(Matrix.Rotation(math.radians(90.0), 4, "X"))
+    obj.data.transform(Matrix.Translation((0.0, -(r_face - 0.35), z)))
+    return dict(spec=dict(asset_id=f"BB_SPR_NOZZLE_{finish.replace('-','')}",
+                          insert_d=d, z=z), object=obj)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish, variant)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -494,6 +516,7 @@ PARTS = {
     ("17-415", "CAP_DOTS", None):          cap_dots_builder,
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
+    ("18-415", "SPR_NOZZLE", None):        nozzle_insert_builder,
     ("18-415", "SPR_COLLAR", None):        collar_builder,
     ("18-415", "SPR_ACTUATOR", None):      actuator_builder,
     ("18-415", "SPR_OVERCAP", None):       overcap_builder,

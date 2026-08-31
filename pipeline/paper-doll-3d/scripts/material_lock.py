@@ -59,6 +59,7 @@ TRACKED_FILES = [
     "public/models/closures/BB_PMP_SPOUT_18415.glb",
     "public/models/closures/BB_DIP_TUBE_17415.glb",
     "public/models/closures/BB_DIP_TUBE_18415.glb",
+    "public/models/closures/BB_SPR_NOZZLE_18415.glb",
     "public/models/bodies-thickness/Elegant-oval-18-415-87x55.glb",
     "public/models/bodies-thickness/Elegant-oval-18-415-87x55.thickness.png",
     "public/models/bodies-thickness/Circle-disc-18-415-88x73.glb",

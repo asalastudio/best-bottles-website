@@ -25,9 +25,10 @@
   "public/models/closures/BB_ROLL_BALL_17415_STEEL.glb": "24cd65d2e0c4c807",
   "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb": "23caa8659874e952",
   "public/models/closures/BB_SPR_ACTUATOR_17415.glb": "50f83ae4b1018b20",
-  "public/models/closures/BB_SPR_ACTUATOR_18415.glb": "12faf4052dc734fe",
+  "public/models/closures/BB_SPR_ACTUATOR_18415.glb": "f7552f7c688b420a",
   "public/models/closures/BB_SPR_COLLAR_17415.glb": "523fdea82d18f552",
   "public/models/closures/BB_SPR_COLLAR_18415.glb": "82e365f9794c8e04",
+  "public/models/closures/BB_SPR_NOZZLE_18415.glb": "c68ea0720c1e2614",
   "public/models/closures/BB_SPR_OVERCAP_17415.glb": "80e66f1b1044fb36",
   "public/models/closures/BB_SPR_OVERCAP_18415.glb": "b8c5a599872c35c7",
   "public/models/matcaps/ball-steel-v3.png": "e03db93507f351cc",
@@ -396,16 +397,16 @@
   },
   "PART_DIPTUBE_PP": {
    "clearcoat": 0.0,
-   "color": "#eef0ee",
+   "color": "#e9ebe8",
    "env": "tent",
-   "envMapIntensity": 0.8,
+   "envMapIntensity": 0.7,
    "ior": 1.49,
    "linear": null,
    "maps": null,
    "metalness": 0.0,
-   "roughness": 0.4,
+   "roughness": 0.45,
    "specularColor": null,
-   "transmission": 0.55
+   "transmission": 0.0
   },
   "PART_HOUSING_PP": {
    "clearcoat": 0.0,
