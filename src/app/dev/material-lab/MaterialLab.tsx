@@ -187,7 +187,7 @@ function Model({
 
   // the fallback path, for A/B against the better material
   useEffect(() => {
-    if (!glass || transmissionMat) return;
+    if (!glass || (transmissionMat && !preset.thinWall)) return;
     glass.visible = true;
     const m = applyGlassPreset(glass, { ...preset, envMapIntensity: envIntensity });
     if (bakeMax != null) {
@@ -208,7 +208,7 @@ function Model({
     <group>
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} />
-      {glass && transmissionMat && caustics ? (
+      {glass && transmissionMat && !preset.thinWall && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
           // glass onto the surface below. Not path-traced caustics - it renders
@@ -252,7 +252,7 @@ function Model({
           />
         </mesh>
         </Caustics>
-      ) : glass && transmissionMat ? (
+      ) : glass && transmissionMat && !preset.thinWall ? (
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
           <MeshTransmissionMaterial

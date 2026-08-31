@@ -111,28 +111,35 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     id: "clear",
     label: "Clear",
     transmission: 1.0,
-    roughness: 0.02,
-    ior: 1.54,
-    thickness: 0.004,
+    roughness: 0.1,
+    ior: 1.5,
+    thickness: 0.0002,
     attenuationColor: "#eef6f2",
     attenuationDistance: 0.06,
-    dispersion: 1.4,
-    clearcoat: 0.70,
-    clearcoatRoughness: 0.02,
-    envMapIntensity: 1.15,
+    dispersion: 0,
+    clearcoat: 0,
+    clearcoatRoughness: 0,
+    envMapIntensity: 1.0,
     thicknessBake: false,
     thinWall: true,
     distortion: 0.05,
     anisotropicBlur: 0.05,
     envRotationDeg: 62,
     provenance:
-      "thickness 0.002 = the WALL, not the vessel: a hollow clear bottle is optically two thin plates. Vessel-scale 0.0165 made MTM refract like a SOLID ROD, smearing the backdrop into milk (Jordan: more frosted than clear). Tinted colourways keep vessel-scale thickness because theirs feeds ABSORPTION via the bake; clear opts out of the bake so its thickness is purely optical. " +
-      "CLEAR IS A MIRROR AND A LENS, so its dials are not the tinted ones: envMapIntensity 1.35 (reflection carries most of the read), distortion 0.14 (static wall waviness - the refraction must SWIM), anisotropicBlur 0.05 (crisp). The cyclorama darkens far off-axis specifically so the edge lens has something to compress into the dark silhouette bands every real clear bottle shows. "
-      + "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .689/.686/.678 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. attenuationDistance 0.06 measures .974/.978/.974 - just enough for the thick heel and finish to pick up the faint soda-lime green." +
-      "SURFACE ONLY carried over from the approved amber (2026-08-31): ior 1.54, roughness 0.02, clearcoat 0.70/0.02 - one physical glass, so the surface must not differ by colourway. The ABSORPTION below is NOT approved and still needs its own lab session. " +
-      "Faintly green soda-lime, as flint glass actually is. Long attenuation " +
-      "distance so only the thickest sections tint at all.",
+      "PACDORA'S EXACT RECIPE, scraped 2026-08-31 from their model API " +
+      "(api/v2/models/details, mockup 510470, part '主体'/body): stock " +
+      "MeshPhysicalMaterial - transmission 1, thickness ABSENT (0: zero " +
+      "refraction offset, background passes straight through), roughness " +
+      "0.1 (NOT polished 0.02 - this IS their soft visible sheen), ior 1.5, " +
+      "clearcoat 0, side DOUBLE (both shell walls render - back wall and " +
+      "doubled edges for free, no backside machinery), transparent true. " +
+      "No thicknessMap, no attenuation, no dispersion. thinWall mode " +
+      "renders this preset through the plain MeshPhysicalMaterial path " +
+      "with DoubleSide. Their parts list also confirms the content " +
+      "principle: dip tube, liquid filler mesh and label are separate " +
+      "meshes behind the glass.",
   },
+
   amber: {
     id: "amber",
     label: "Amber",
@@ -300,7 +307,7 @@ export function applyGlassPreset(
     clearcoatRoughness: preset.clearcoatRoughness,
     envMapIntensity: preset.envMapIntensity,
     transparent: true,
-    side: THREE.FrontSide,
+    side: preset.thinWall ? THREE.DoubleSide : THREE.FrontSide,
   });
   const old = mesh.material;
   mesh.material = m;
