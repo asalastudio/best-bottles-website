@@ -38,6 +38,8 @@ const GLASS_SWATCH: Record<GlassPresetId, string> = {
     swirl: "linear-gradient(145deg,#efe7d8,#cbbfa6)",
 };
 
+/** THE 10 CAPS — SKU-derived (BlkDot/Wht/MattCu/MattGl/MattSl/PnkDot/
+ *  ShBlk/ShnGl/ShnSl/SlDot). Dot caps render on the DOTS geometry. */
 const CAPS: { id: string; label: string; swatch: string }[] = [
     { id: "CAP_SHINY_BLACK", label: "Black", swatch: "linear-gradient(145deg,#3a3a3a,#0b0b0b)" },
     { id: "CAP_WHITE", label: "White", swatch: "linear-gradient(145deg,#ffffff,#e2e0da)" },
@@ -46,6 +48,19 @@ const CAPS: { id: string; label: string; swatch: string }[] = [
     { id: "CAP_SHINY_SILVER", label: "Shiny silver", swatch: "linear-gradient(145deg,#ffffff,#b9bcbe)" },
     { id: "CAP_MATTE_SILVER", label: "Matte silver", swatch: "linear-gradient(145deg,#e6e6e4,#a9adae)" },
     { id: "CAP_COPPER", label: "Matte copper", swatch: "linear-gradient(145deg,#d99a6c,#8f4f2c)" },
+    { id: "CAP_DOTS_BLACK", label: "Black dot", swatch: "radial-gradient(circle at 35% 35%, #161616 42%, #efece3 46%)" },
+    { id: "CAP_DOTS_PINK", label: "Pink dot", swatch: "radial-gradient(circle at 35% 35%, #d98ba3 42%, #efece3 46%)" },
+    { id: "CAP_DOTS_SILVER", label: "Silver dot", swatch: "radial-gradient(circle at 35% 35%, #b9bcbe 42%, #efece3 46%)" },
+];
+
+/** spray collar colours (6, SKU-derived) — pump uses the first 3 */
+const TRIMS: { id: string; label: string; swatch: string; pump: boolean }[] = [
+    { id: "CAP_SHINY_BLACK", label: "Black", swatch: "linear-gradient(145deg,#3a3a3a,#0b0b0b)", pump: true },
+    { id: "CAP_SHINY_GOLD", label: "Gold", swatch: "linear-gradient(145deg,#fff4d0,#c9a24a)", pump: true },
+    { id: "CAP_MATTE_SILVER", label: "Matte silver", swatch: "linear-gradient(145deg,#e6e6e4,#a9adae)", pump: true },
+    { id: "CAP_SHINY_SILVER", label: "Shiny silver", swatch: "linear-gradient(145deg,#ffffff,#b9bcbe)", pump: false },
+    { id: "SPRAY_TURQUOISE", label: "Turquoise", swatch: "linear-gradient(145deg,#37b6b8,#136a6c)", pump: false },
+    { id: "SPRAY_RED", label: "Red", swatch: "linear-gradient(145deg,#c93540,#7c0f18)", pump: false },
 ];
 
 const BASES = [
@@ -74,6 +89,8 @@ export default function BottleConfigurator({
     const [base, setBase] = useState<BaseId>("roller");
     const [withCap, setWithCap] = useState(false);
     const [capMat, setCapMat] = useState("CAP_SHINY_GOLD");
+    const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
+    const [trimMat, setTrimMat] = useState("CAP_SHINY_BLACK");
     const capLabel = CAPS.find((c) => c.id === capMat)?.label ?? "";
     const closure =
         base === "none" ? "none"
@@ -85,6 +102,7 @@ export default function BottleConfigurator({
         : base === "roller" ? (withCap ? `Roll-on · ${capLabel} cap` : "Roll-on")
         : base === "sprayer" ? (withCap ? "Fine-mist spray · Overcap" : "Fine-mist spray")
         : withCap ? "Lotion pump · Overcap" : "Lotion pump";
+    const trimLabel = TRIMS.find((t) => t.id === trimMat)?.label ?? "";
 
     return (
         <div className={className}>
@@ -95,6 +113,8 @@ export default function BottleConfigurator({
                     glass={glass}
                     closure={closure}
                     capMat={capMat}
+                    rollerVariant={rollerVariant}
+                    trimMat={trimMat}
                     backdrop="#a29383"
                     className="rounded-sm overflow-hidden"
                 />
@@ -172,6 +192,20 @@ export default function BottleConfigurator({
                             </button>
                         ))}
                     </div>
+                    {base === "roller" ? (
+                        <div className="inline-flex rounded-full border border-champagne bg-warm-white p-0.5">
+                            {(["metal", "plastic"] as const).map((v) => (
+                                <button key={v} type="button"
+                                        onClick={() => setRollerVariant(v)}
+                                        aria-pressed={rollerVariant === v}
+                                        className={`px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.14em] font-bold transition-colors duration-200 ${
+                                            rollerVariant === v ? "bg-obsidian text-bone" : "text-ash hover:text-ink"
+                                        }`}>
+                                    {v}
+                                </button>
+                            ))}
+                        </div>
+                    ) : null}
                     {base !== "none" ? (
                         <button
                             type="button"
@@ -187,6 +221,28 @@ export default function BottleConfigurator({
                         </button>
                     ) : null}
                 </div>
+
+                {/* spray / pump trim colours */}
+                {base === "sprayer" || base === "pump" ? (
+                    <div className="flex flex-col items-center gap-2">
+                        <span className="text-[9px] uppercase tracking-[0.22em] font-bold text-muted-gold">
+                            {base === "sprayer" ? `Sprayer · ${trimLabel}` : `Pump · ${trimLabel}`}
+                        </span>
+                        <div className="flex items-center gap-2.5">
+                            {TRIMS.filter((t) => base === "sprayer" || t.pump).map((t) => (
+                                <button key={t.id} type="button" onClick={() => setTrimMat(t.id)}
+                                        aria-label={`${t.label} ${base}`} aria-pressed={trimMat === t.id}
+                                        title={t.label}
+                                        className={`h-6 w-6 rounded-full transition-all duration-200 ${
+                                            trimMat === t.id
+                                                ? "ring-2 ring-muted-gold ring-offset-2 ring-offset-linen scale-105"
+                                                : "ring-1 ring-champagne hover:ring-ash"
+                                        }`}
+                                        style={{ background: t.swatch }} />
+                            ))}
+                        </div>
+                    </div>
+                ) : null}
 
                 {/* cap finishes — only when capped */}
                 <AnimatePresence initial={false}>

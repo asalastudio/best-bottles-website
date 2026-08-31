@@ -41,7 +41,7 @@ TRACKED_FILES = [
     "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb",
     "public/models/closures/BB_CAP_17415.glb",
 ]
-TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING")
+TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
     "transmission", "roughness", "ior", "thickness", "attenuationColor",
     "attenuationDistance", "dispersion", "clearcoat", "clearcoatRoughness",

@@ -392,6 +392,80 @@
       "transmission": 1.0,
       "opacity": 0.0,
       "note": "the liquid-fill mesh material, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part \u586b\u5145\u7269): ships at opacity 0 = empty bottle; set color+opacity to show contents"
+    },
+    "SPRAY_TURQUOISE": {
+      "color": "#1f8a8c",
+      "linear": [
+        0.0126,
+        0.2415,
+        0.2503
+      ],
+      "roughness": 0.22,
+      "metalness": 0.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+    },
+    "SPRAY_RED": {
+      "color": "#a31621",
+      "linear": [
+        0.3712,
+        0.0069,
+        0.0129
+      ],
+      "roughness": 0.22,
+      "metalness": 0.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+    },
+    "CAP_DOTS_BLACK": {
+      "color": "#161616",
+      "linear": [
+        0.0069,
+        0.0069,
+        0.0069
+      ],
+      "roughness": 0.3,
+      "metalness": 0.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+    },
+    "CAP_DOTS_PINK": {
+      "color": "#d98ba3",
+      "linear": [
+        0.6866,
+        0.2508,
+        0.3712
+      ],
+      "roughness": 0.3,
+      "metalness": 0.0,
+      "clearcoat": 0.35,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+    },
+    "CAP_DOTS_SILVER": {
+      "color": "#fbf7ee",
+      "linear": [
+        0.972,
+        0.96,
+        0.915
+      ],
+      "metalness": 1.0,
+      "roughness": 0.42,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "specularColor": "#fefeff",
+      "note": "matte-silver finish on the DOTS cap geometry - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
     }
   }
 }

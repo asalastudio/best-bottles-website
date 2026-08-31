@@ -74,12 +74,21 @@ shipped 100% inverted and resisted every material for a full session).
 `public/models/closures/manifest.json`: every part origins at the NECK RIM;
 seat by rendering at `BB_ATTACH_NECK`'s y with zero transform. Assemblies:
 
-- roll-on: HOUSING (PART_HOUSING_PP_NATURAL) + BALL (PART_BALL_STEEL) [+ CAP]
-- spray  (Spry17-415): SPR_COLLAR (cap finish) + SPR_ACTUATOR [+ SPR_OVERCAP clear]
-- pump   (Ltn17-415):  spray parts + PMP_SPOUT
+- roll-on METAL (MtlRoll SKUs): STEEL housing + STEEL ball; roll-on
+  PLASTIC (Roll SKUs): PLASTIC housing + PLASTIC ball [+ CAP either way]
+- spray (Spry17-415): SPR_COLLAR + SPR_ACTUATOR in the trim colour
+  [+ SPR_OVERCAP clear]
+- pump  (Ltn17-415): spray parts + PMP_SPOUT
 
-Cap finish matrix (phenolic/metallized, all locked in materials.json):
-black, white, shiny/matte gold, shiny/matte silver, matte copper.
+**THE CATALOG INVENTORY (SKU-derived from Convex — never guess counts):**
+- 10 caps: ShBlk, Wht, ShnGl, MattGl, ShnSl, MattSl, MattCu + the DOT caps
+  (BlkDot, PnkDot, SlDot) on the BB_CAP_DOTS_17415 geometry
+- 6 spray trims: Blk, Gl, MattSl, ShSl, Tur (SPRAY_TURQUOISE), Rd (SPRAY_RED)
+- 3 pump trims: Gl, MtSl, Blk (the first three of the spray set)
+- 2 roller variants: metal / plastic
+The counts came from `products.withIndex("by_productGroupId")` per group —
+when extending a family, derive the option lists from the SKUs the same way
+(suffix tokens after the size segment), never from memory.
 Metals mirror `studio-universal.hdr` (a REAL studio laundered to panels-only
 by `clean_studio_hdri.py` — field-gain and peak caps balanced for caps AND
 ball); matte plastics light from the tent; glass owns the room HDRI.
@@ -95,6 +104,21 @@ ball); matte plastics light from the tent; glass owns the room HDRI.
    (`configurator3d` block) and the colourway inference.
 5. Verify in the live PDP, get Jordan's approval per colourway, add the new
    files to `material_lock.py` TRACKED_FILES, relock.
+
+## LAYOUT PROCESS (how the PDP rework was done — repeat for new surfaces)
+
+1. Pull real patterns from Mobbin (search "product configurator" web) —
+   Revolut Business card configurator + Wise customiser set the grammar.
+2. Read the brand tokens from `src/app/globals.css` (obsidian/bone/
+   champagne/muted-gold/travertine, EB Garamond `font-serif`, micro-labels
+   `text-[9px] uppercase tracking-[0.18em] font-bold text-muted-gold`).
+3. On configurator families the 3D IS the imagery: hide BOTH the
+   thumbs-only gallery AND the VariantImagePicker rail (the `is3dFamily`
+   flag in ProductDetailClient) so the vitrine takes the full column.
+4. Controls stay centred under the caption and must WRAP gracefully —
+   compact chip padding when a row grows (Spray/Pump + toggles).
+5. Verify on a FRESH load (`?v=` cache-buster): the preview pane's bfcache
+   restores old React state and fakes "wrong default colourway" bugs.
 
 ## UI GRAMMAR (Mobbin: Revolut/Wise; do not regress)
 

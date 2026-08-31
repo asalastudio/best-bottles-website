@@ -117,6 +117,49 @@
    "specularColor": "#fdf9f9",
    "transmission": 0.0
   },
+  "CAP_DOTS_BLACK": {
+   "clearcoat": 0.35,
+   "color": "#161616",
+   "ior": 1.5,
+   "linear": [
+    0.0069,
+    0.0069,
+    0.0069
+   ],
+   "metalness": 0.0,
+   "roughness": 0.3,
+   "transmission": 0.0
+  },
+  "CAP_DOTS_PINK": {
+   "clearcoat": 0.35,
+   "color": "#d98ba3",
+   "ior": 1.5,
+   "linear": [
+    0.6866,
+    0.2508,
+    0.3712
+   ],
+   "metalness": 0.0,
+   "roughness": 0.3,
+   "transmission": 0.0
+  },
+  "CAP_DOTS_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#fbf7ee",
+   "env": "metal",
+   "envMapIntensity": 1.5,
+   "ior": 1.5,
+   "linear": [
+    0.972,
+    0.96,
+    0.915
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.42,
+   "specularColor": "#fefeff",
+   "transmission": 0.0
+  },
   "CAP_MATTE_GOLD": {
    "clearcoat": 0.0,
    "color": "#ffe29b",
@@ -267,6 +310,32 @@
    "metalness": 0.0,
    "roughness": 0.42,
    "transmission": 0.62
+  },
+  "SPRAY_RED": {
+   "clearcoat": 0.35,
+   "color": "#a31621",
+   "ior": 1.5,
+   "linear": [
+    0.3712,
+    0.0069,
+    0.0129
+   ],
+   "metalness": 0.0,
+   "roughness": 0.22,
+   "transmission": 0.0
+  },
+  "SPRAY_TURQUOISE": {
+   "clearcoat": 0.35,
+   "color": "#1f8a8c",
+   "ior": 1.5,
+   "linear": [
+    0.0126,
+    0.2415,
+    0.2503
+   ],
+   "metalness": 0.0,
+   "roughness": 0.22,
+   "transmission": 0.0
   }
  },
  "note": "Locks the LOOK: file hashes + shipping values. verify before shipping; write only alongside a Jordan approval."
