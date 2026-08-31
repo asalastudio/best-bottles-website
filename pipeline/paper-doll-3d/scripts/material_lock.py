@@ -57,6 +57,8 @@ TRACKED_FILES = [
     "public/models/closures/BB_SPR_ACTUATOR_18415.glb",
     "public/models/closures/BB_SPR_OVERCAP_18415.glb",
     "public/models/closures/BB_PMP_SPOUT_18415.glb",
+    "public/models/closures/BB_DIP_TUBE_17415.glb",
+    "public/models/closures/BB_DIP_TUBE_18415.glb",
     "public/models/bodies-thickness/Elegant-oval-18-415-87x55.glb",
     "public/models/bodies-thickness/Elegant-oval-18-415-87x55.thickness.png",
     "public/models/bodies-thickness/Circle-disc-18-415-88x73.glb",
@@ -64,7 +66,7 @@ TRACKED_FILES = [
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png",
 ]
-TRACKED_MATERIALS_PREFIXES = ("CAP_", "LEATHER_", "PART_BALL", "PART_HOUSING", "PART_STUD", "SPRAY_")
+TRACKED_MATERIALS_PREFIXES = ("CAP_", "LEATHER_", "PART_BALL", "PART_HOUSING", "PART_STUD", "PART_DIPTUBE", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
     "transmission", "roughness", "ior", "thickness", "attenuationColor",
     "attenuationDistance", "dispersion", "clearcoat", "clearcoatRoughness",

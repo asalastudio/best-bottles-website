@@ -75,6 +75,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const actuator = useGLTF(`/models/closures/BB_SPR_ACTUATOR_${fin}.glb`);
   const overcap = useGLTF(`/models/closures/BB_SPR_OVERCAP_${fin}.glb`);
   const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
+  const dipTube = useGLTF(`/models/closures/BB_DIP_TUBE_${fin}.glb`);
   const [mats, setMats] = useState<Record<string, MatSpec> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -200,6 +201,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       // the actuator is ALWAYS white PP; only the collar wears the trim
       // colour (PSD reference, all six colourways)
       g.push(build(collar, trimMat), build(actuator, "PART_ACTUATOR_PP"));
+      // DIP TUBE on every sprayer/pump — scaled from its nominal length
+      // to reach near the bottle base (neckY = rim height in body space)
+      const tube = build(dipTube, "PART_DIPTUBE_PP");
+      const nominal = fin === "18415" ? 0.08 : 0.062;
+      tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
+      g.push(tube);
       if (mode === "pump" || mode === "pumpCapped")
         g.push(build(spout, "PART_ACTUATOR_PP"));
       if (mode === "sprayerCapped" || mode === "pumpCapped")
@@ -207,7 +214,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

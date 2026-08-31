@@ -594,6 +594,20 @@
       "env": "tent",
       "specularColor": null,
       "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "PART_DIPTUBE_PP": {
+      "color": "#eef0ee",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.4,
+      "clearcoat": 0.0,
+      "ior": 1.49,
+      "transmission": 0.55,
+      "maps": null,
+      "envMapIntensity": 0.8,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Dip tube: milky translucent PP, visible through clear/frosted glass - the content that makes the vessel refract (Pacdora lesson; Jordan 2026-08-31)."
     }
   }
 }

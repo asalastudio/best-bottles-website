@@ -14,9 +14,11 @@
   "public/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb": "fd0b9eea0dea5886",
   "public/models/closures/BB_CAP_17415.glb": "17349331f59b76a8",
   "public/models/closures/BB_CAP_18415.glb": "08d3040027c23ebd",
-  "public/models/closures/BB_CAP_18415_LEATHER.glb": "f1ea5f54aaf88359",
+  "public/models/closures/BB_CAP_18415_LEATHER.glb": "6826b00e2042d31c",
   "public/models/closures/BB_CAP_18415_TALL.glb": "4c7df72927ce90c5",
   "public/models/closures/BB_CAP_DOTS_17415.glb": "82ad240061d511e6",
+  "public/models/closures/BB_DIP_TUBE_17415.glb": "de42e955bb10bf00",
+  "public/models/closures/BB_DIP_TUBE_18415.glb": "625045c364b1a35a",
   "public/models/closures/BB_PMP_SPOUT_17415.glb": "b8f3d37614dad918",
   "public/models/closures/BB_PMP_SPOUT_18415.glb": "5ff0264bbc75f801",
   "public/models/closures/BB_REDUCER_18415.glb": "d53cf2c0331a87c6",
@@ -378,6 +380,32 @@
    "metalness": 1.0,
    "roughness": 0.1,
    "transmission": 0.0
+  },
+  "PART_DIPTUBE_CLEAR": {
+   "clearcoat": 0.0,
+   "color": "#fefefe",
+   "ior": 1.5,
+   "linear": [
+    0.9911,
+    0.9911,
+    0.9911
+   ],
+   "metalness": 0.0,
+   "roughness": 0.1,
+   "transmission": 1.0
+  },
+  "PART_DIPTUBE_PP": {
+   "clearcoat": 0.0,
+   "color": "#eef0ee",
+   "env": "tent",
+   "envMapIntensity": 0.8,
+   "ior": 1.49,
+   "linear": null,
+   "maps": null,
+   "metalness": 0.0,
+   "roughness": 0.4,
+   "specularColor": null,
+   "transmission": 0.55
   },
   "PART_HOUSING_PP": {
    "clearcoat": 0.0,

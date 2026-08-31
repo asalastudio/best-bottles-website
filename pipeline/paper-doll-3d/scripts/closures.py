@@ -431,6 +431,48 @@ def cap_dots_builder(rig, finish, variant):
     return dict(spec=dict(d, count=rows * d["columns"]), object=obj)
 
 
+def leather_cap_builder(rig, finish, variant):
+    """The faux-leather cap, PROFILE-TRACED from CP18-415BlkLthr.psd
+    (2026-08-31): a straight O24.5 wrap wall with a ~2.5mm top roundover
+    and a slightly domed top — NOT the tapered hard-cap shell (Jordan:
+    "the leather is completely off"). Published 30 x O25 envelope; traced
+    wall O24.5, height 29.1. No visible thread: the wrap covers the shell,
+    interior is a plain bore. Origin = neck rim per the house contract."""
+    import math
+    R, r_in = 12.25, 10.75
+    skirt, top, ro = 16.75, 12.35, 2.5
+    prof = [(r_in, -skirt), (r_in, top - 2.4), (0.001, top - 2.0),
+            (0.001, top + 0.55)]
+    prof.append((R - ro - 2.0, top + 0.35))          # gentle dome
+    prof.append((R - ro, top))
+    for i in range(1, 7):                             # top roundover
+        a = math.pi / 2 * i / 6
+        prof.append((R - ro + ro * math.sin(a), top - ro + ro * math.cos(a)))
+    prof.append((R, -skirt))
+    return dict(spec=dict(asset_id="BB_CAP_18415_LTHR_002",
+                          height=skirt + top + 0.55, od=R * 2,
+                          source="CP18-415BlkLthr.psd trace"),
+                profile=prof, modulate=None)
+
+
+def dip_tube_builder(rig, finish, variant):
+    """The DIP TUBE (Jordan: "we can't just go raw dog without them") — the
+    thin PP tube descending from the pump/spray stem to the bottle base.
+    Through clear or frosted glass it is what gives the vessel content to
+    refract (the Pacdora lesson). Nominal length per finish; the viewer
+    scales it to each body's interior depth. Angled tip like the real part.
+    Origin = rim datum; the tube runs DOWN (-z)."""
+    import math
+    ro, ri = 2.0, 1.5
+    L = 62.0 if finish == "17-415" else 80.0
+    tip = 3.0                                     # 45-deg-ish angled tip
+    prof = [(ri, 0.0), (ri, -(L - tip - 0.5)), (ro * 0.45, -L),
+            (ro, -(L - tip)), (ro, 0.0)]
+    return dict(spec=dict(asset_id=f"BB_DIP_TUBE_{finish.replace('-','')}",
+                          od=ro * 2, length=L),
+                profile=prof, modulate=None)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish, variant)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -443,6 +485,8 @@ PARTS = {
     ("17-415", "ROLL_HOUSING", "steel"):   roller_housing_builder,
     ("17-415", "ROLL_BALL", "plastic"):    roller_ball_builder,
     ("17-415", "ROLL_BALL", "steel"):      roller_ball_builder,
+    ("17-415", "DIP_TUBE", None):          dip_tube_builder,
+    ("18-415", "DIP_TUBE", None):          dip_tube_builder,
     ("17-415", "SPR_COLLAR", None):        collar_builder,
     ("17-415", "SPR_ACTUATOR", None):      actuator_builder,
     ("17-415", "SPR_OVERCAP", None):       overcap_builder,
@@ -457,7 +501,7 @@ PARTS = {
     ("18-415", "REDUCER", None):           reducer_builder,
     ("18-415", "CAP", None):               cap_part_builder,
     ("18-415", "CAP", "tall"):             cap_part_builder,
-    ("18-415", "CAP", "leather"):          cap_part_builder,
+    ("18-415", "CAP", "leather"):          leather_cap_builder,
 }
 
 # Assembly = an ordered stack of parts, bottom first. The order is what an
