@@ -1661,6 +1661,7 @@ export default function ProductDetailClient({
                                             return (
                                                 <div>
                                                     <BottleConfigurator
+                                                        key={`${group.slug}-${configurator3d.glass}`}
                                                         bodyId={configurator3d.bodyId}
                                                         initialGlass={configurator3d.glass}
                                                     />

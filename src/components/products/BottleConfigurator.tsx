@@ -22,7 +22,7 @@ const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
     ssr: false,
     loading: () => (
         <div className="aspect-[10/11] w-full rounded-sm flex items-center justify-center"
-             style={{ background: "#3b2f27" }}>
+             style={{ background: "#a29383" }}>
             <span className="text-[10px] tracking-[0.22em] uppercase text-champagne/70">
                 Preparing 3D view
             </span>
@@ -81,7 +81,7 @@ export default function BottleConfigurator({
                     glass={glass}
                     closure={closure}
                     capMat={capMat}
-                    backdrop="#3b2f27"
+                    backdrop="#a29383"
                     className="rounded-sm overflow-hidden"
                 />
                 <div className="absolute top-3 left-3 flex items-center gap-1.5 pointer-events-none">
@@ -119,7 +119,9 @@ export default function BottleConfigurator({
             <div className="mt-4 flex flex-col items-center gap-4">
                 {/* glass swatches */}
                 <div className="flex items-center gap-2.5">
-                    {(Object.keys(GLASS_PRESETS) as GlassPresetId[]).map((id) => (
+                    {(Object.keys(GLASS_PRESETS) as GlassPresetId[])
+                        .filter((id) => GLASS_PRESETS[id].configuratorReady !== false)
+                        .map((id) => (
                         <button
                             key={id}
                             type="button"

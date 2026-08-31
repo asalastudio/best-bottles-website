@@ -66,6 +66,10 @@ p.add_argument("--panels-only", action="store_true",
                     "straight-on).")
 p.add_argument("--panel-lo", type=float, default=1.3)
 p.add_argument("--panel-hi", type=float, default=3.0)
+p.add_argument("--field-gain", type=float, default=1.0,
+               help="multiply the SMOOTH ROOM FIELD only (panels untouched). "
+                    "The caps were approved under a brighter field; the "
+                    "peak-cap that fixed the ball also dimmed it.")
 p.add_argument("--peak", type=float, default=0.0,
                help="cap the brightest value (0 = no cap). Real studio HDRIs "
                     "peak in the THOUSANDS; a mirror reflecting that blows to "
@@ -98,7 +102,7 @@ if a.panels_only:
     field_rows = np.stack([np.convolve(pad2[:, c], np.ones(k2)/k2, mode="valid")
                            for c in range(3)], axis=-1)
     room = field_rows[:, None, :] * np.ones((1, W, 1), np.float32)
-    out = room * (1 - mask) + img * mask
+    out = room * a.field_gain * (1 - mask) + img * mask
 else:
     wz = np.clip((a.zenith_deg + a.feather_deg - phi) / a.feather_deg, 0, 1)   # 1 above
     wf = np.clip((phi - (a.floor_deg - a.feather_deg)) / a.feather_deg, 0, 1)  # 1 below

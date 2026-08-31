@@ -67,6 +67,10 @@ export type GlassPreset = {
   clearcoatRoughness: number;
   /** how hard the studio shows in the surface. */
   envMapIntensity: number;
+  /** false = colourway exists in the lab but is NOT offered to customers
+   *  yet (swirl: its fluted body has no bake and would render as a smooth
+   *  cylinder). The configurator filters on this. */
+  configuratorReady?: boolean;
   /** true = render as THIN-WALL glass: no backside pass, near-zero optical
    *  path. MeshTransmissionMaterial's backside machinery is built for SOLID
    *  volumes; on a hollow shell its "backside" is the INTERIOR surfaces, so
@@ -234,6 +238,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    configuratorReady: false,
     distortion: 0.06,
     anisotropicBlur: 0.15,
     envRotationDeg: 46,
@@ -255,16 +260,17 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     ior: 1.54,
     thickness: 0.0165,
     attenuationColor: "#b6babd",
-    attenuationDistance: 0.028,
+    attenuationDistance: 0.048,
     dispersion: 0.5,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
-    envMapIntensity: 0.9,
+    envMapIntensity: 1.15,
     frostMask: true,
     distortion: 0.05,
     anisotropicBlur: 0.12,
     envRotationDeg: 18,
     provenance:
+      "PDP STAGE ADJUSTMENT 2026-08-31: the measured scatter loss (#b6babd @ 0.028) was solved against the lab\u2019s BONE backdrop; on the PDP\u2019s warm taupe vitrine it rendered too dark with a heavy top gradient (Jordan: not accurate). attenuationDistance eased to 0.048 and envMapIntensity lifted to 1.15 so the white surface scatter carries more of the read. Re-verify against frosted.jpg if the stage changes again. " +
       "BACK ON THE MTM PATH 2026-08-31 after the thin-wall detour: native transmission couples its screen-space blur to surface roughness, so the frosted body SMEARED the gold cap downward into the glass on pan (Jordan: colour pours into the bottle). MeshTransmissionMaterial decouples them - roughness 0.45 keeps the etch, anisotropicBlur 0.12 keeps the transmission calm. Measured scatter values restored: #b6babd @ 0.028 (T .725/.736/.742 vs reference .727/.722/.709). " +
       "REBASED 2026-08-31 onto the Pacdora thin-wall recipe (Jordan: the rough-0.1 DoubleSide clear registered as frosted - so frosted claims it): thinWall + DoubleSide + thickness 0.0002, roughness 0.45 for the etch. NOTE the measured scatter-loss attenuation (#b6babd @ 0.028) cannot act at thin-wall thickness - the slight darkening now comes from the material colour path; re-tune by eye against frosted.jpg. " +
       "SOLVED 2026-08-31 by measurement, approved by Jordan ('keep it'). " +
