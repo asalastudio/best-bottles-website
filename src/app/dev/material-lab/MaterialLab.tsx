@@ -58,23 +58,28 @@ type LabClosure = "none" | "capped" | "roller" | "rollerCapped"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
 function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
-                   metalStudioId }: {
+                   metalStudioId, capFinish = "17-415" }: {
   mode: LabClosure; neckY: number;
   capMat: string; ballMat: string; capTune: MatOverride; trimMat: string;
   metalTune?: Partial<MetalStudioParams>;
   metalStudioId?: MetalStudioId;
+  /** the SELECTED BODY's neck finish — closures follow the body so a
+   *  O25 18-415 leather cap can never sit on a O20 17-415 bottle
+   *  (Jordan's "conflict" screenshot) */
+  capFinish?: "17-415" | "18-415";
 }) {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
-  const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
+  const labFin = capFinish.replace("-", "");
+  const cap = useGLTF(`/models/closures/BB_CAP_${labFin}.glb`);
   const cap18 = useGLTF("/models/closures/BB_CAP_18415.glb");
   const cap18Tall = useGLTF("/models/closures/BB_CAP_18415_TALL.glb");
   const cap18Leather = useGLTF("/models/closures/BB_CAP_18415_LEATHER.glb");
   const capDots = useGLTF("/models/closures/BB_CAP_DOTS_17415.glb");
-  const collar = useGLTF("/models/closures/BB_SPR_COLLAR_17415.glb");
-  const actuator = useGLTF("/models/closures/BB_SPR_ACTUATOR_17415.glb");
-  const overcap = useGLTF("/models/closures/BB_SPR_OVERCAP_17415.glb");
-  const spout = useGLTF("/models/closures/BB_PMP_SPOUT_17415.glb");
+  const collar = useGLTF(`/models/closures/BB_SPR_COLLAR_${labFin}.glb`);
+  const actuator = useGLTF(`/models/closures/BB_SPR_ACTUATOR_${labFin}.glb`);
+  const overcap = useGLTF(`/models/closures/BB_SPR_OVERCAP_${labFin}.glb`);
+  const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${labFin}.glb`);
   const [mats, setMats] = useState<Record<string, {
     color: string; roughness: number; metalness: number; clearcoat?: number;
   }> | null>(null);
@@ -237,7 +242,8 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
     if (mode === "capped") {
       // 18-415 capped-bottle inspection: leather mats force their
       // moulding; CAP_WHITE ships tall-only at this finish
-      const capGltf = capMat.startsWith("LEATHER_") ? cap18Leather
+      const capGltf = capFinish !== "18-415" ? cap
+                    : capMat.startsWith("LEATHER_") ? cap18Leather
                     : (capMat === "CAP_WHITE" || capMat.endsWith("_TALL_VIEW"))
                     ? cap18Tall : cap18;
       g.push({ scene: build(capGltf, capMat.replace("_TALL_VIEW", ""), capTune) });
@@ -277,7 +283,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
   thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, capTune, trimMat,
-  metalTune, metalStudioId, onMeasure,
+  metalTune, metalStudioId, capFinish, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
@@ -290,6 +296,7 @@ function Model({
   capMat: string; ballMat: string; trimMat: string; capTune: MatOverride;
   metalTune?: Partial<MetalStudioParams>;
   metalStudioId?: MetalStudioId;
+  capFinish?: "17-415" | "18-415";
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
@@ -393,7 +400,7 @@ function Model({
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
                capTune={capTune} trimMat={trimMat} metalTune={metalTune}
-               metalStudioId={metalStudioId} />
+               metalStudioId={metalStudioId} capFinish={capFinish} />
       {glass && transmissionMat && !preset.thinWall && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
@@ -787,6 +794,7 @@ export default function MaterialLab(
                      closure={closure} capMat={capMat} ballMat={ballMat}
                      capTune={capTune} trimMat={trimMat} metalTune={metalTune}
                      metalStudioId={metalStudioId}
+                     capFinish={(body.bodyId.includes("18-415") ? "18-415" : "17-415")}
                      frostUrl={uvModel && working.frostMask
                        ? `/models/bodies-thickness/${body.bodyId}.frost.png`
                        : null}
@@ -962,7 +970,10 @@ export default function MaterialLab(
         <div style={{ display: "flex", gap: 4, alignItems: "center", margin: "2px 0 8px" }}>
           <span style={{ color: "#b9b9c4", fontSize: 11, marginRight: 4 }}>closure</span>
           {(["none", "capped", "roller", "rollerCapped", "sprayer", "sprayerCapped",
-             "pump", "pumpCapped"] as const).map((m) => (
+             "pump", "pumpCapped"] as const)
+            // 18-415 has NO roll-ons (Jordan; catalog agrees: zero groups)
+            .filter((m) => !(body.bodyId.includes("18-415") && m.startsWith("roller")))
+            .map((m) => (
             <button key={m} onClick={() => setClosure(m)} style={btn(closure === m)}>
               {m === "capped" ? "cap 18"
                : m === "rollerCapped" ? "roller+cap"
