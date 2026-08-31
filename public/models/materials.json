@@ -495,6 +495,24 @@
       "env": "metal",
       "specularColor": "#b0bacc",
       "note": "Chrome set-studs on the *Dot caps (library coats.chrome). The studs read silver on ALL dot colourways - shell takes the colour, studs stay chrome (CpRoll17-415*Dot.psd)."
+    },
+    "PART_STUD_CHROME_BRIGHT": {
+      "color": "#d3d8da",
+      "linear": [
+        0.8289136787893979,
+        0.8461357050249962,
+        0.854846859663698
+      ],
+      "metalness": 1.0,
+      "roughness": 0.02,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 2.9,
+      "env": "metal",
+      "specularColor": "#b0bacc",
+      "note": "Brighter stud variant for the SILVER dot cap only (Jordan 2026-08-31: 'make sure the rhinestones show up a little bit better on the matte silver dot'). Chrome-on-matte-silver is tone-on-tone; the extra env intensity + harder polish gives the stones their own sparkle contrast. Black/pink dots keep PART_STUD_CHROME."
     }
   }
 }

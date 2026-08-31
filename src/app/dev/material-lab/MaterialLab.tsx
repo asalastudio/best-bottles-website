@@ -238,7 +238,8 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
         // *Dot caps: shell in the colourway + BB_CAP_DOTS studs in chrome
         g.push({ scene: build(cap, capMat, capTune) });
         if (capMat.startsWith("CAP_DOTS"))
-          g.push({ scene: build(capDots, "PART_STUD_CHROME") });
+          g.push({ scene: build(capDots, capMat === "CAP_DOTS_SILVER"
+                        ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME") });
       }
     } else {
       // the trim tune rides capTune so the same sliders serve sprays too

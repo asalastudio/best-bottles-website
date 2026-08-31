@@ -165,7 +165,8 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
         // shell/jewel split as collar/actuator)
         g.push(build(cap, capMat));
         if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, "PART_STUD_CHROME"));
+          g.push(build(capDots, capMat === "CAP_DOTS_SILVER"
+                        ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME"));
       }
     } else {
       // the actuator is ALWAYS white PP; only the collar wears the trim

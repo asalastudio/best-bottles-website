@@ -342,6 +342,23 @@
    "specularColor": "#b0bacc",
    "transmission": 0.0
   },
+  "PART_STUD_CHROME_BRIGHT": {
+   "clearcoat": 0.0,
+   "color": "#d3d8da",
+   "env": "metal",
+   "envMapIntensity": 2.9,
+   "ior": 1.5,
+   "linear": [
+    0.8289136787893979,
+    0.8461357050249962,
+    0.854846859663698
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.02,
+   "specularColor": "#b0bacc",
+   "transmission": 0.0
+  },
   "PART_STUD_STEEL": {
    "clearcoat": 0.5,
    "color": "#f2f4f6",
