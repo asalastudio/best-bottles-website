@@ -351,8 +351,13 @@ export default function Bottle3DViewer({
             floating bottle turns like a jewellery piece; target sits above
             the bottle's middle so it rides lower in the viewport */}
         {/* NO wheel zoom — wheel capture over a canvas this large made the
-            whole page feel stuck when scrolling */}
+            whole page feel stuck when scrolling. The orbit RADIUS scales
+            with the measured body height (min==max pins it), so an 87mm
+            Elegant frames like the 70mm cylinder instead of filling the
+            viewport — 3.15 x h reproduces the approved 9ml framing. */}
         <OrbitControls makeDefault target={[0, h * 0.62, 0]}
+                       minDistance={Math.max(0.22, h * 3.15)}
+                       maxDistance={Math.max(0.22, h * 3.15)}
                        enablePan={false} enableZoom={false}
                        minPolarAngle={Math.PI / 2.05} maxPolarAngle={Math.PI / 2.05}
                        autoRotate={!touched} autoRotateSpeed={0.9}
