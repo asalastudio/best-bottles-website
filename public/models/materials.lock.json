@@ -13,7 +13,7 @@
   "public/models/bodies-threaded/Cyl-round-17-415-70x20.glb": "c63517d3900b6070",
   "public/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb": "fd0b9eea0dea5886",
   "public/models/closures/BB_ANSP_BULB_18415.glb": "f83b56c4713c6041",
-  "public/models/closures/BB_ANSP_COLLAR_18415.glb": "10b7a99c7c08fa6f",
+  "public/models/closures/BB_ANSP_COLLAR_18415.glb": "126cb5f5c02d1f10",
   "public/models/closures/BB_ANSP_FERRULE_18415.glb": "abce45ef2e1169f2",
   "public/models/closures/BB_ANSP_TASSEL_18415.glb": "1f966849b9851683",
   "public/models/closures/BB_CAP_17415.glb": "17349331f59b76a8",
@@ -23,6 +23,9 @@
   "public/models/closures/BB_CAP_DOTS_17415.glb": "82ad240061d511e6",
   "public/models/closures/BB_DIP_TUBE_17415.glb": "9554b48b56412350",
   "public/models/closures/BB_DIP_TUBE_18415.glb": "89f74f7eeca16d22",
+  "public/models/closures/BB_DRP_BULB_18415.glb": "737b73f338abb8d0",
+  "public/models/closures/BB_DRP_COLLAR_18415.glb": "1476dbd94121ca08",
+  "public/models/closures/BB_DRP_PIPETTE_18415.glb": "c8c2ffbf13ab6288",
   "public/models/closures/BB_PMP_BODY_17415.glb": "3ad648ca7c7f7d49",
   "public/models/closures/BB_PMP_BODY_18415.glb": "ab822b3c3bd4a6d8",
   "public/models/closures/BB_PMP_SPOUT_17415.glb": "b8f3d37614dad918",
@@ -519,6 +522,19 @@
    "roughness": 0.32,
    "specularColor": null,
    "specularIntensity": 0.6,
+   "transmission": 0.0
+  },
+  "PART_DRP_RUBBER": {
+   "clearcoat": 0.05,
+   "color": "#f2f1ee",
+   "env": "tent",
+   "envMapIntensity": 0.85,
+   "ior": 1.5,
+   "linear": null,
+   "maps": null,
+   "metalness": 0.0,
+   "roughness": 0.5,
+   "specularColor": null,
    "transmission": 0.0
   },
   "PART_HOUSING_PP": {

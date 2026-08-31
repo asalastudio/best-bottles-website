@@ -29,7 +29,7 @@ import {
 
 export type ClosureMode =
   | "none" | "capped" | "roller" | "rollerCapped"
-  | "reducer" | "reducerCapped" | "antique" | "antiqueTassel"
+  | "reducer" | "reducerCapped" | "antique" | "antiqueTassel" | "dropper"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
 /** cap MOULDINGS — different physical caps sharing one thread (18-415
@@ -78,6 +78,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
   const dipTube = useGLTF(`/models/closures/BB_DIP_TUBE_${fin}.glb`);
   const pumpBody = useGLTF(`/models/closures/BB_PMP_BODY_${fin}.glb`);
+  const drpCollar = useGLTF(has1841
+    ? "/models/closures/BB_DRP_COLLAR_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const drpBulb = useGLTF(has1841
+    ? "/models/closures/BB_DRP_BULB_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const drpPipette = useGLTF(has1841
+    ? "/models/closures/BB_DRP_PIPETTE_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspCollar = useGLTF(has1841
     ? "/models/closures/BB_ANSP_COLLAR_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspBulb = useGLTF(has1841
@@ -223,6 +229,19 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         g.push(build(capDots, "PART_STUD_CHROME"));
       return g;
     }
+    if (mode === "dropper") {
+      // glass-pipette dropper: metal collar (trim), white rubber bulb,
+      // pipette rendered via the tube matcap (glass-through-glass rule)
+      g.push(build(drpCollar, trimMat), build(drpBulb, "PART_DRP_RUBBER"));
+      const pip = build(drpPipette, "PART_DIPTUBE_PP");
+      pip.traverse((o) => {
+        const mesh = o as THREE.Mesh;
+        if (mesh.isMesh)
+          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+      });
+      g.push(pip);
+      return g;
+    }
     if (mode === "antique" || mode === "antiqueTassel") {
       // vintage bulb atomiser: chrome collar+stem in the metal (trimMat),
       // mesh-net bulb (+tassel) in the fabric colourway (capMat), tube
@@ -299,7 +318,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

@@ -85,6 +85,7 @@ const BASES = [
     { id: "none", label: "Bottle" },
     { id: "roller", label: "Roll-on" },
     { id: "reducer", label: "Reducer" },
+    { id: "dropper", label: "Dropper" },
     { id: "antique", label: "Bulb" },
     { id: "antiqueTassel", label: "Bulb+Tassel" },
     { id: "sprayer", label: "Spray" },
@@ -136,6 +137,7 @@ export default function BottleConfigurator({
         base === "none" ? "none"
         : base === "roller" ? (withCap ? "rollerCapped" : "roller")
         : base === "reducer" ? (withCap ? "reducerCapped" : "reducer")
+        : base === "dropper" ? "dropper"
         : base === "antique" ? "antique"
         : base === "antiqueTassel" ? "antiqueTassel"
         : base === "sprayer" ? (withCap ? "sprayerCapped" : "sprayer")
@@ -144,6 +146,7 @@ export default function BottleConfigurator({
         base === "none" ? "Bottle only"
         : base === "roller" ? (withCap ? `Roll-on · ${capLabel} cap` : "Roll-on")
         : base === "reducer" ? (withCap ? `Reducer · ${capLabel} cap` : "Pour reducer")
+        : base === "dropper" ? "Glass dropper"
         : base === "antique" ? "Vintage bulb sprayer"
         : base === "antiqueTassel" ? "Vintage bulb · Tassel"
         : base === "sprayer" ? (withCap ? "Fine-mist spray · Overcap" : "Fine-mist spray")

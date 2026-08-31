@@ -723,6 +723,20 @@
       "env": "tent",
       "specularColor": null,
       "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "PART_DRP_RUBBER": {
+      "color": "#f2f1ee",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.5,
+      "clearcoat": 0.05,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 0.85,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
     }
   }
 }

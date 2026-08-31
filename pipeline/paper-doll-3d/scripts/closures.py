@@ -645,6 +645,48 @@ def ansp_tassel_builder(rig, finish, variant):
                 object=obj)
 
 
+# ------------------------------------------------------- dropper (18-415)
+# Measured 2026-08-31 from Drp18-415Sl.psd at 33.7 px/mm (collar = O21.3):
+# white rubber bulb O9.8 x 18.3 above the collar, chrome barrel O21.3
+# (finish + 2.0 proud), glass pipette O6.7 descending ~52 with a taper
+# and the classic balled tip. All revolves.
+
+def drp_collar_builder(rig, finish, variant):
+    fm = rig.FINISH_MASTERS[finish]
+    skirt = fm["finish_h"] - 0.45
+    prof = [
+        (10.65, -skirt), (10.65, 2.0),          # barrel
+        (9.6, 2.2), (5.4, 2.2),                 # top face in to the bulb base
+        (5.4, 1.0), (4.0, 0.8),                 # inner ring
+        (fm["bore_d"] / 2.0 - 0.2, 0.6),
+        (fm["bore_d"] / 2.0 - 0.2, -skirt),     # inner sleeve
+    ]
+    return dict(spec=dict(asset_id=f"BB_DRP_COLLAR_{finish.replace('-','')}",
+                          od=21.3, proud=2.0), profile=prof, modulate=None)
+
+
+def drp_bulb_builder(rig, finish, variant):
+    import math as _m
+    prof = [(3.4, 2.0), (4.9, 2.6), (4.9, 14.0)]
+    for i in range(1, 9):                       # rounded top
+        a = _m.pi / 2 * i / 8
+        prof.append((4.9 * _m.cos(a), 14.0 + 6.3 * _m.sin(a)))
+    return dict(spec=dict(asset_id=f"BB_DRP_BULB_{finish.replace('-','')}",
+                          od=9.8, top=20.3), profile=prof, modulate=None)
+
+
+def drp_pipette_builder(rig, finish, variant):
+    prof = [
+        (3.35, 1.0), (3.35, -44.0),             # straight tube
+        (1.6, -49.0),                            # taper
+        (1.6, -50.0),
+        (2.15, -50.8), (2.15, -52.2),            # balled tip
+        (0.9, -53.0), (0.001, -53.2),
+    ]
+    return dict(spec=dict(asset_id=f"BB_DRP_PIPETTE_{finish.replace('-','')}",
+                          od=6.7, tip=-53.2), profile=prof, modulate=None)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish, variant)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -669,6 +711,9 @@ PARTS = {
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
     ("18-415", "SPR_NOZZLE", None):        nozzle_insert_builder,
+    ("18-415", "DRP_COLLAR", None):        drp_collar_builder,
+    ("18-415", "DRP_BULB", None):          drp_bulb_builder,
+    ("18-415", "DRP_PIPETTE", None):       drp_pipette_builder,
     ("18-415", "ANSP_COLLAR", None):       ansp_collar_builder,
     ("18-415", "ANSP_BULB", None):         ansp_bulb_builder,
     ("18-415", "ANSP_FERRULE", None):      ansp_ferrule_builder,

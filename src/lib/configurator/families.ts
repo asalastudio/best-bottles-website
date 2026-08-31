@@ -11,7 +11,7 @@
 
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 
-export type ClosureBase = "none" | "roller" | "reducer" | "sprayer" | "pump" | "antique" | "antiqueTassel";
+export type ClosureBase = "none" | "roller" | "reducer" | "dropper" | "sprayer" | "pump" | "antique" | "antiqueTassel";
 export type FinishCode = "17-415" | "18-415";
 
 export type ConfiguratorFamily = {
@@ -65,17 +65,18 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     // finemist (clear only) / perfumespray / lotionpump renderable today;
     // dropper, reducer and antique-bulb pages keep the photo gallery
     // until their geometry lands.
-    slugRe: /^elegant-60ml-(clear|frosted)-18-415-(finemist|perfumespray|lotionpump|reducer)$/,
+    slugRe: /^elegant-60ml-(clear|frosted)-18-415-(finemist|perfumespray|lotionpump|reducer|dropper)$/,
     glasses: ["clear", "frosted"],
-    bases: ["none", "reducer", "sprayer", "pump"],
+    bases: ["none", "reducer", "dropper", "sprayer", "pump"],
     bodyDefault: "Elegant-oval-18-415-87x55",
     slugColour: { clear: "clear", frosted: "frosted" },
     // perfumespray exists in BOTH colourways (finemist is clear-only), so
     // sibling navigation lands on the token every colourway has
-    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump" },
+    slugClosure: { reducer: "reducer", dropper: "dropper",
+                   sprayer: "perfumespray", pump: "lotionpump" },
     closureFromSlug: {
       finemist: "sprayer", perfumespray: "sprayer", lotionpump: "pump",
-      reducer: "reducer",
+      reducer: "reducer", dropper: "dropper",
     },
     buildSlug: (c, cl) => `elegant-60ml-${c}-18-415-${cl}`,
   },
@@ -87,13 +88,15 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     // SKU truth: clear + frosted; perfumespray + lotionpump renderable
     // (antique bulb, dropper, reducer keep the photo gallery; the lone
     // 18-400 reducer variant is a different finish entirely)
-    slugRe: /^circle-50ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer)$/,
+    slugRe: /^circle-50ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer|dropper)$/,
     glasses: ["clear", "frosted"],
-    bases: ["none", "reducer", "sprayer", "pump"],
+    bases: ["none", "reducer", "dropper", "sprayer", "pump"],
     bodyDefault: "Circle-disc-18-415-88x73",
     slugColour: { clear: "clear", frosted: "frosted" },
-    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump" },
-    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump" },
+    slugClosure: { reducer: "reducer", dropper: "dropper",
+                   sprayer: "perfumespray", pump: "lotionpump" },
+    closureFromSlug: { reducer: "reducer", dropper: "dropper",
+                       perfumespray: "sprayer", lotionpump: "pump" },
     buildSlug: (c, cl) => `circle-50ml-${c}-18-415-${cl}`,
   },
   {

@@ -62,6 +62,9 @@ TRACKED_FILES = [
     "public/models/closures/BB_DIP_TUBE_17415.glb",
     "public/models/closures/BB_DIP_TUBE_18415.glb",
     "public/models/closures/BB_SPR_NOZZLE_18415.glb",
+    "public/models/closures/BB_DRP_COLLAR_18415.glb",
+    "public/models/closures/BB_DRP_BULB_18415.glb",
+    "public/models/closures/BB_DRP_PIPETTE_18415.glb",
     "public/models/closures/BB_ANSP_COLLAR_18415.glb",
     "public/models/closures/BB_ANSP_BULB_18415.glb",
     "public/models/closures/BB_ANSP_FERRULE_18415.glb",
@@ -73,7 +76,7 @@ TRACKED_FILES = [
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png",
 ]
-TRACKED_MATERIALS_PREFIXES = ("ANSP_", "CAP_", "LEATHER_", "PART_BALL", "PART_HOUSING", "PART_STUD", "PART_DIPTUBE", "SPRAY_")
+TRACKED_MATERIALS_PREFIXES = ("ANSP_", "CAP_", "LEATHER_", "PART_BALL", "PART_HOUSING", "PART_STUD", "PART_DIPTUBE", "PART_DRP", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
     "transmission", "roughness", "ior", "thickness", "attenuationColor",
     "attenuationDistance", "dispersion", "clearcoat", "clearcoatRoughness",
