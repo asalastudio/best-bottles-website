@@ -236,13 +236,14 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
 
 /* -------------------------------------------------------------- entrance */
 
-/** The bottle SPINS into place on load — rotation only, no rise, no scale
- *  pop (Jordan: "it just spins into place and doesn't rise up from
- *  anywhere"). Decelerating spin hands off into the idle auto-rotate. */
+/** Entrance: the bottle is SET DOWN onto the stage — a decelerating spin
+ *  while it eases from slightly above onto the floor, where the contact
+ *  shadow catches it. Never rises from below (would clip the cove floor). */
 function EntranceGroup({ children }: { children: React.ReactNode }) {
   const ref = useRef<THREE.Group | null>(null);
   const t = useRef(0);
   const DURATION = 1.5;
+  const DROP = 0.008;                              // 8 mm settle
   useFrame((_, delta) => {
     const g = ref.current;
     if (!g || t.current >= DURATION) return;
@@ -250,6 +251,7 @@ function EntranceGroup({ children }: { children: React.ReactNode }) {
     const x = t.current / DURATION;
     const e = 1 - Math.pow(1 - x, 3);              // easeOutCubic
     g.rotation.y = (1 - e) * -1.6;
+    g.position.y = (1 - e) * DROP;
   });
   return <group ref={ref}>{children}</group>;
 }
@@ -279,7 +281,7 @@ export default function Bottle3DViewer({
          style={{ position: "relative", width: "100%", aspectRatio: "10 / 11",
                   background: backdrop, borderRadius: 4, overflow: "hidden" }}>
       <ProductStage envRotationDeg={preset.envRotationDeg}
-                    targetY={h * 0.62} ground={false}
+                    targetY={h * 0.62} ground
                     backdrop={backdrop}>
         <EntranceGroup>
           <Center disableY>
@@ -292,8 +294,10 @@ export default function Bottle3DViewer({
         {/* rotate-only: tilt LOCKED (min == max polar), no pan — the
             floating bottle turns like a jewellery piece; target sits above
             the bottle's middle so it rides lower in the viewport */}
+        {/* NO wheel zoom — wheel capture over a canvas this large made the
+            whole page feel stuck when scrolling */}
         <OrbitControls makeDefault target={[0, h * 0.62, 0]}
-                       enablePan={false} minDistance={0.14} maxDistance={0.4}
+                       enablePan={false} enableZoom={false}
                        minPolarAngle={Math.PI / 2.05} maxPolarAngle={Math.PI / 2.05}
                        autoRotate={!touched} autoRotateSpeed={0.9}
                        onStart={() => setTouched(true)} />

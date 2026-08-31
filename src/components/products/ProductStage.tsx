@@ -27,7 +27,37 @@ export const STAGE = {
   /** only refracted rays that bend past the sweep ever see this */
   offFrameDim: 0.32,
   shadow: { color: "#3a3128", opacity: 0.42, blur: 2.4, scale: 0.35, far: 0.06 },
+  /** Aesop-photo cove: floor radius, fillet radius, wall height (m) */
+  cove: { radius: 0.55, fillet: 0.14, wall: 0.7 },
 } as const;
+
+/** Infinity-cove sweep — the floor curves up into the backdrop with no
+ *  horizon line, like the seamless paper behind an Aesop packshot. One
+ *  lathe: flat floor -> quarter-round fillet -> vertical wall, viewed from
+ *  inside (BackSide). The studio HDRI's overhead punch lights the floor
+ *  and lets the wall fall off naturally toward the top. */
+function CoveSweep({ backdrop }: { backdrop: string }) {
+  const geometry = useMemo(() => {
+    const { radius, fillet, wall } = STAGE.cove;
+    const pts: THREE.Vector2[] = [new THREE.Vector2(0.001, 0)];
+    pts.push(new THREE.Vector2(radius - fillet, 0));
+    for (let i = 1; i <= 12; i++) {
+      const a = (i / 12) * (Math.PI / 2);
+      pts.push(new THREE.Vector2(
+        radius - fillet + fillet * Math.sin(a),
+        fillet - fillet * Math.cos(a),
+      ));
+    }
+    pts.push(new THREE.Vector2(radius, wall));
+    return new THREE.LatheGeometry(pts, 72);
+  }, []);
+  return (
+    <mesh geometry={geometry} position={[0, -0.0004, 0]}>
+      <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness}
+                            side={THREE.BackSide} />
+    </mesh>
+  );
+}
 
 /** Quality tier: "lite" (coarse pointers / small screens) drops the heavy
  *  transmission pipeline per the perf constraint — consumers read this via
@@ -88,16 +118,17 @@ export default function ProductStage({
     <QualityContext.Provider value={tier}>
       <Canvas camera={{ position: [0, targetY, 0.22], fov: 30, near: 0.01, far: 10 }}
               gl={{ antialias: true, toneMappingExposure: studio.toneMappingExposure }}
-              dpr={tier === "lite" ? [1, 1.5] : [1, 2]}>
+              dpr={tier === "lite" ? [1, 1.5] : [1, 2]}
+              onCreated={(state) => {
+                if (process.env.NODE_ENV !== "production")
+                  (window as unknown as Record<string, unknown>).__stage = state;
+              }}>
         <color attach="background" args={[offFrame]} />
         <Suspense fallback={null}>
           {children}
           {ground ? (
             <group>
-              <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
-                <planeGeometry args={[1.2, 1.2]} />
-                <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness} />
-              </mesh>
+              <CoveSweep backdrop={backdrop} />
               <ContactShadows opacity={STAGE.shadow.opacity} scale={STAGE.shadow.scale}
                               blur={STAGE.shadow.blur} far={STAGE.shadow.far}
                               resolution={tier === "lite" ? 512 : 1024}
