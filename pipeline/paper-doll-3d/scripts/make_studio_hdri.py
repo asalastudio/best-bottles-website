@@ -30,12 +30,13 @@ import math, pathlib, struct
 import numpy as np
 
 import sys
-PROFILE = ("room" if "--room" in sys.argv
+PROFILE = ("metal" if "--metal" in sys.argv
+           else "room" if "--room" in sys.argv
            else "browser" if "--browser" in sys.argv else "cycles")
 
 W, H = (2048, 1024) if PROFILE == "room" else (1024, 512)
 _name = {"browser": "studio-browser.hdr", "room": "studio-room.hdr",
-         "cycles": "studio.hdr"}[PROFILE]
+         "metal": "studio-metal.hdr", "cycles": "studio.hdr"}[PROFILE]
 OUT = pathlib.Path(__file__).resolve().parents[1] / _name
 PUBLIC = pathlib.Path(__file__).resolve().parents[3] / "public" / "models" / _name
 
@@ -74,6 +75,18 @@ EMITTERS = [
     dict(theta=0.0, phi=0.18, wt=math.pi, wp=0.42, i=2.4, c=(1,1,1), soft=1.00),
     # overhead scrim - soft falloff down the shoulder
     dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.30, i=2.6, c=(1,1,1), soft=1.00),
+] if PROFILE == "metal" else [
+    # METAL profile: chrome/gold sparkle = hard-edged bright cards over a
+    # dark field. This env is FOR COMPONENTS ONLY (balls, caps) — never for
+    # glass, where hard edges paint lines. A mirrored ball wants a studio
+    # full of crisp windows.
+    dict(theta=-0.55, phi=0.55, wt=0.55, wp=0.70, i=14.0, c=(1.00,0.99,0.97), soft=0.20),
+    dict(theta= 0.85, phi=0.65, wt=0.30, wp=0.90, i=10.0, c=(0.95,0.97,1.00), soft=0.15),
+    dict(theta= 2.30, phi=0.80, wt=0.40, wp=0.60, i=7.0,  c=(1.00,0.98,0.95), soft=0.25),
+    dict(theta=-2.40, phi=0.95, wt=0.25, wp=0.80, i=6.0,  c=(1,1,1),          soft=0.20),
+    dict(theta= 0.10, phi=0.18, wt=1.60, wp=0.28, i=9.0,  c=(1,1,1),          soft=0.30),
+    # low warm bounce so the underside is not dead
+    dict(theta= 0.0,  phi=2.30, wt=2.20, wp=0.60, i=1.2,  c=(1.00,0.96,0.90), soft=0.80),
 ] if PROFILE == "browser" else [
     # ROOM profile: the reflections themselves are the product feature
     # (Aesop-style sheen). The tent's field is featureless on purpose; a room
@@ -143,7 +156,11 @@ def build():
     # material value can get under. Drop the ambient and the same material
     # reads as real amber.
     up = np.cos(P)
-    if PROFILE == "browser":
+    if PROFILE == "metal":
+        # dark field: contrast IS the shine
+        sky = 0.05 + 0.10 * smoothstep(-0.85, 0.95, up)
+        floor = 0.07 * smoothstep(0.10, -1.00, up)
+    elif PROFILE == "browser":
         sky = 0.28 + 0.55 * smoothstep(-0.85, 0.95, up)
         floor = 0.22 * smoothstep(0.10, -1.00, up)
     elif PROFILE == "room":

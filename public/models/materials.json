@@ -9,11 +9,12 @@
         0.1022,
         0.0545
       ],
-      "roughness": 0.28,
+      "roughness": 0.46,
       "metalness": 1.0,
       "clearcoat": 0.35,
       "ior": 1.5,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "note": "MATTE copper (was 0.28 semi-gloss). Jordan 2026-08-31: caps are PHENOLIC/COMPOSITE PLASTIC; gold/silver/copper are METALLIZED finishes on plastic, not solid metal. Finish matrix: black+white phenolic, copper MATTE only, silver shiny+matte, gold shiny+matte."
     },
     "CAP_MATTE_GOLD": {
       "color": "#c5b375",
@@ -83,17 +84,18 @@
       "note": "scraped 2026-08-31 from Pacdora model API (mockups 510470/550911); previous values: {\"color\": \"#828282\", \"linear\": [0.2232, 0.2232, 0.2232], \"roughness\": 0.1, \"metalness\": 1.0, \"clearcoat\": 0.35, \"ior\": 1.5, \"transmission\": 0.0}"
     },
     "CAP_WHITE": {
-      "color": "#f1f1f1",
+      "color": "#f4f3f0",
       "linear": [
-        0.8796,
-        0.8796,
-        0.8796
+        0.9046,
+        0.8963,
+        0.8714
       ],
-      "roughness": 0.42,
+      "roughness": 0.38,
       "metalness": 0.0,
-      "clearcoat": 0.9,
+      "clearcoat": 0.15,
       "ior": 1.5,
-      "transmission": 0.0
+      "transmission": 0.0,
+      "note": "white phenolic - must READ white; components carry their own bright env in the lab because the dark glass room greys it. Jordan 2026-08-31: caps are PHENOLIC/COMPOSITE PLASTIC; gold/silver/copper are METALLIZED finishes on plastic, not solid metal. Finish matrix: black+white phenolic, copper MATTE only, silver shiny+matte, gold shiny+matte."
     },
     "GLASS_AMBER": {
       "color": "#ffffff",
