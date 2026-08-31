@@ -36,7 +36,7 @@
  * (coloured/warm) light colours.
  */
 
-import { useMemo } from "react";
+import { memo, useMemo } from "react";
 import { Environment } from "@react-three/drei";
 import * as THREE from "three";
 
@@ -129,19 +129,27 @@ function SoftEmitter({ emitter }: { emitter: Emitter }) {
   );
 }
 
-export function StudioEnvironment() {
+/** memo + memoized children: the environment must be INERT to parent
+ *  re-renders. Without this, any state flip in the viewer (the first
+ *  click sets `touched`) recreated the children array, drei's Environment
+ *  portal re-fired its bake effect, and the frames={1} re-bake caught the
+ *  portal with its HDRI background unset — the scene snapped to "four
+ *  bright quads over black": bottle goes dark, halo wraps it (Jordan's
+ *  wet-bottle-until-I-click bug). One mount, one bake, ever. */
+export const StudioEnvironment = memo(function StudioEnvironment() {
+  const emitters = useMemo(
+    () => EMITTERS.map((e, i) => <SoftEmitter key={i} emitter={e} />),
+    [],
+  );
   return (
     // frames={1}: bake the cubemap ONCE — the environment is static, so
     // nothing about the lighting can shimmer or re-resolve frame to frame.
     // The HDRI is the PEAK-CLAMPED variant (luminance capped at 24,
     // hue-preserving): the raw Poly Haven file peaks at ~97 and its hot
     // bare-fixture texels rendered as firefly speckle — "miniature ants"
-    // (Jordan) — on the glossy glass. Pristine original kept alongside;
-    // clamp derivation in docs/configurator/lighting-test/.
+    // (Jordan) — on the glossy glass. Pristine original kept alongside.
     <Environment files="/env/studio_small_08_1k_peak24.hdr" resolution={512} frames={1}>
-      {EMITTERS.map((e, i) => (
-        <SoftEmitter key={i} emitter={e} />
-      ))}
+      {emitters}
     </Environment>
   );
-}
+});
