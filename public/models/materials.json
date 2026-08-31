@@ -242,17 +242,18 @@
       }
     },
     "PART_ACTUATOR_PP": {
-      "color": "#f4f4f2",
+      "color": "#f4f3f0",
       "linear": [
-        0.9047,
-        0.9047,
-        0.8879
+        0.9046,
+        0.8963,
+        0.8714
       ],
-      "roughness": 0.38,
+      "roughness": 0.3,
       "metalness": 0.0,
-      "clearcoat": 0.0,
-      "ior": 1.5,
-      "transmission": 0.0
+      "clearcoat": 0.25,
+      "ior": 1.49,
+      "transmission": 0.0,
+      "note": "the sprayer ACTUATOR IS ALWAYS WHITE PP - only the collar carries the trim colour (PSD reference 13. 17-415 Spray, all six colourways, 2026-08-31)."
     },
     "PART_BALL_PLASTIC": {
       "color": "#eeece4",

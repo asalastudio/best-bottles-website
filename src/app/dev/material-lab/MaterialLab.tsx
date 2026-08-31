@@ -225,9 +225,9 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat }: {
     } else {
       // the trim tune rides capTune so the same sliders serve sprays too
       g.push({ scene: build(collar, trimMat, capTune) });
-      g.push({ scene: build(actuator, trimMat, capTune) });
+      g.push({ scene: build(actuator, "PART_ACTUATOR_PP") });   // always white
       if (mode === "pump" || mode === "pumpCapped")
-        g.push({ scene: build(spout, trimMat, capTune) });
+        g.push({ scene: build(spout, "PART_ACTUATOR_PP") });
       if (mode === "sprayerCapped" || mode === "pumpCapped")
         g.push({ scene: build(overcap, "PART_OVERCAP_CLEAR") });
     }

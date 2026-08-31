@@ -40,6 +40,11 @@ TRACKED_FILES = [
     "public/models/closures/BB_ROLL_BALL_17415_STEEL.glb",
     "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb",
     "public/models/closures/BB_CAP_17415.glb",
+    "public/models/closures/BB_CAP_DOTS_17415.glb",
+    "public/models/closures/BB_SPR_COLLAR_17415.glb",
+    "public/models/closures/BB_SPR_ACTUATOR_17415.glb",
+    "public/models/closures/BB_SPR_OVERCAP_17415.glb",
+    "public/models/closures/BB_PMP_SPOUT_17415.glb",
 ]
 TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [

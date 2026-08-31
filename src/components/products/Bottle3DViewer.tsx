@@ -121,9 +121,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
       if (mode === "rollerCapped")
         g.push(build(capMat.startsWith("CAP_DOTS") ? capDots : cap, capMat));
     } else {
-      g.push(build(collar, trimMat), build(actuator, trimMat));
+      // the actuator is ALWAYS white PP; only the collar wears the trim
+      // colour (PSD reference, all six colourways)
+      g.push(build(collar, trimMat), build(actuator, "PART_ACTUATOR_PP"));
       if (mode === "pump" || mode === "pumpCapped")
-        g.push(build(spout, trimMat));
+        g.push(build(spout, "PART_ACTUATOR_PP"));
       if (mode === "sprayerCapped" || mode === "pumpCapped")
         g.push(build(overcap, "PART_OVERCAP_CLEAR"));
     }
