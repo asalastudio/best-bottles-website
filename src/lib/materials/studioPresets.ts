@@ -117,17 +117,20 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
     backdrop: "#e9e6e0",
     provenance:
-      "CANDIDATE single environment for the whole scene (2026-08-31 handoff): " +
-      "Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN preset) as " +
-      "the neutral coverage base, COMBINED in one cubemap with four " +
-      "Lightformers (StudioEnvironment.tsx): L/R vertical strips for " +
+      "APPROVED STUDIO as of 2026-08-31 (Jordan, at /dev/lighting-test: " +
+      "'the feathered softbox is much better' — glass colourways inherit). " +
+      "The single environment for the whole scene, per the studio-lighting " +
+      "handoff: Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN " +
+      "preset) as the neutral coverage base, COMBINED in one cubemap with " +
+      "four FEATHERED softbox emitters (StudioEnvironment.tsx EMITTERS — " +
+      "Gaussian-windowed quads; the first cut used hard-edged drei " +
+      "Lightformer rects and their edges printed razor lines down the " +
+      "cylinders, the documented banned artefact): L/R vertical strips for " +
       "clear-glass edges, overhead softbox for cap tops, broad dim backlight " +
-      "so amber/cobalt transmit. One env, no per-material envMap overrides; " +
-      "per-finish variation lives in material recipes (Convex). The strips " +
-      "knowingly test the banned-artefact law (narrow sources stripe " +
-      "cylinders) — Jordan judges at /dev/lighting-test before this can " +
-      "become APPROVED_STUDIO.",
+      "so amber/cobalt transmit. Per-finish variation lives in material " +
+      "recipes, never in swapping environments. material_lock.py pins the " +
+      "HDRI hash, the EMITTERS values, and this flip.",
   },
 };
 
-export const APPROVED_STUDIO: StudioPresetId = "room";
+export const APPROVED_STUDIO: StudioPresetId = "hybrid-small08";
