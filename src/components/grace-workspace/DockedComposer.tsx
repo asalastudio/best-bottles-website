@@ -13,6 +13,9 @@ interface DockedComposerProps {
     voiceEnabled: boolean;
     placeholder?: string;
     autoFocus?: boolean;
+    enableAttachments?: boolean;
+    voiceAvailable?: boolean;
+    disabled?: boolean;
 }
 
 export default function DockedComposer({
@@ -23,6 +26,9 @@ export default function DockedComposer({
     voiceEnabled,
     placeholder,
     autoFocus,
+    enableAttachments = true,
+    voiceAvailable = true,
+    disabled = false,
 }: DockedComposerProps) {
     const ref = useRef<HTMLTextAreaElement>(null);
     const fileRef = useRef<HTMLInputElement>(null);
@@ -39,7 +45,7 @@ export default function DockedComposer({
     const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
         if (e.key === "Enter" && !e.shiftKey) {
             e.preventDefault();
-            if (input.trim()) onSubmit();
+            if (!disabled && input.trim()) onSubmit();
         }
     };
 
@@ -68,7 +74,7 @@ export default function DockedComposer({
             <form
                 onSubmit={(e) => {
                     e.preventDefault();
-                    if (input.trim()) onSubmit();
+                    if (!disabled && input.trim()) onSubmit();
                 }}
                 className="mx-auto flex max-w-[880px] items-center gap-3 rounded-[3px] px-4 py-3"
                 style={{
@@ -78,22 +84,26 @@ export default function DockedComposer({
                         : "1px solid rgba(212, 197, 169, 0.7)",
                 }}
             >
-                <input
-                    ref={fileRef}
-                    type="file"
-                    accept="image/png,image/jpeg,image/jpg,image/webp"
-                    className="hidden"
-                    onChange={handleFileChange}
-                />
-                <button
-                    type="button"
-                    aria-label="Attach reference image"
-                    onClick={handleAttachClick}
-                    disabled={isUploading}
-                    className="flex cursor-pointer border-none bg-transparent p-0 text-slate hover:text-obsidian transition-colors disabled:opacity-50 disabled:cursor-wait"
-                >
-                    <Paperclip size={15} />
-                </button>
+                {enableAttachments ? (
+                    <>
+                        <input
+                            ref={fileRef}
+                            type="file"
+                            accept="image/png,image/jpeg,image/jpg,image/webp"
+                            className="hidden"
+                            onChange={handleFileChange}
+                        />
+                        <button
+                            type="button"
+                            aria-label="Attach reference image"
+                            onClick={handleAttachClick}
+                            disabled={isUploading || disabled}
+                            className="flex cursor-pointer border-none bg-transparent p-0 text-slate hover:text-obsidian transition-colors disabled:opacity-50 disabled:cursor-wait"
+                        >
+                            <Paperclip size={15} />
+                        </button>
+                    </>
+                ) : null}
                 <textarea
                     ref={ref}
                     value={input}
@@ -101,27 +111,31 @@ export default function DockedComposer({
                     onKeyDown={handleKeyDown}
                     placeholder={placeholderText}
                     rows={1}
+                    disabled={disabled}
                     className="w-full min-w-0 flex-1 resize-none border-none bg-transparent text-[14px] text-obsidian outline-none placeholder:text-slate/70"
                     style={{ minHeight: 22, fontFamily: "var(--font-sans)" }}
                 />
-                <button
-                    type="button"
-                    onClick={onToggleVoice}
-                    aria-pressed={voiceEnabled}
-                    aria-label={voiceEnabled ? "End voice conversation with Grace" : "Talk with Grace"}
-                    title={voiceEnabled ? "End voice conversation" : "Talk with Grace"}
-                    className="flex cursor-pointer items-center justify-center rounded-[2px] px-2 py-1.5 transition-colors"
-                    style={{
-                        border: voiceEnabled ? "none" : "1px solid rgba(99, 117, 136, 0.32)",
-                        background: voiceEnabled ? "var(--color-muted-gold)" : "transparent",
-                        color: voiceEnabled ? "var(--color-obsidian)" : "var(--color-obsidian)",
-                    }}
-                >
-                    <VoiceWaveGlyph size={18} active={voiceEnabled} />
-                </button>
+                {voiceAvailable ? (
+                    <button
+                        type="button"
+                        onClick={onToggleVoice}
+                        disabled={disabled}
+                        aria-pressed={voiceEnabled}
+                        aria-label={voiceEnabled ? "End voice conversation with Grace" : "Talk with Grace"}
+                        title={voiceEnabled ? "End voice conversation" : "Talk with Grace"}
+                        className="flex cursor-pointer items-center justify-center rounded-[2px] px-2 py-1.5 transition-colors"
+                        style={{
+                            border: voiceEnabled ? "none" : "1px solid rgba(99, 117, 136, 0.32)",
+                            background: voiceEnabled ? "var(--color-muted-gold)" : "transparent",
+                            color: "var(--color-obsidian)",
+                        }}
+                    >
+                        <VoiceWaveGlyph size={18} active={voiceEnabled} />
+                    </button>
+                ) : null}
                 <button
                     type="submit"
-                    disabled={!input.trim()}
+                    disabled={disabled || !input.trim()}
                     aria-label="Send"
                     className="flex cursor-pointer items-center justify-center rounded-[2px] border-none bg-obsidian p-1.5 text-white disabled:cursor-not-allowed disabled:opacity-40 hover:bg-black transition-colors"
                 >

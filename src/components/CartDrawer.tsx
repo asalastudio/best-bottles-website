@@ -102,7 +102,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
                         onClick={onClose}
-                        className="fixed left-0 right-0 top-0 bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] z-[70] lg:inset-0"
+                        className="fixed left-0 right-0 top-0 bottom-[var(--mobile-tab-bar-clearance)] z-[70] xl:inset-0"
                         style={{
                             background: "rgba(29, 29, 31, 0.45)",
                             backdropFilter: "blur(4px)",
@@ -118,7 +118,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                         animate={{ x: 0, opacity: 1 }}
                         exit={{ x: "100%", opacity: 0 }}
                         transition={{ type: "spring", stiffness: 300, damping: 35 }}
-                        className="fixed top-0 right-0 bottom-[calc(4rem+env(safe-area-inset-bottom,0px))] z-[70] w-full max-w-[560px] flex flex-col lg:bottom-0"
+                        className="fixed top-0 right-0 bottom-[var(--mobile-tab-bar-clearance)] z-[70] w-full max-w-[560px] flex flex-col xl:bottom-0"
                         style={{
                             background: "rgba(250, 248, 245, 0.95)",
                             backdropFilter: "blur(28px) saturate(180%)",

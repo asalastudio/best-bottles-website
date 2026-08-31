@@ -24,6 +24,7 @@ import {
     inferCatalogCategoryFromSearchTerm,
     dedupeCatalogResults,
     diversifyByFamily,
+    ensureThreadDiversity,
     scoreCatalogResult,
     buildSearchCatalogToolResult,
     buildBottleComponentsToolResult,
@@ -68,6 +69,10 @@ export const searchCatalog = query({
 
         // When an applicator filter is active, take more results before filtering
         const takeCount = args.applicatorFilter ? 100 : 25;
+        // Fetch a wider pool than the returned slice so scoring and thread
+        // diversification can see minority variants (e.g. 13-415 9ml rollers
+        // ranked entirely below the 17-415 line in text relevance).
+        const poolCount = Math.max(takeCount, 75);
 
         // Use search index filter fields (category, family) — faster than post-search .filter()
         const q = ctx.db.query("products").withSearchIndex("search_itemName", (q) => {
@@ -76,7 +81,7 @@ export const searchCatalog = query({
             if (args.familyLimit) s = s.eq("family", args.familyLimit);
             return s;
         });
-        let results = await q.take(takeCount);
+        let results = await q.take(poolCount);
 
         // Fallback or Expanded search:
         // 1. If few results
@@ -119,7 +124,7 @@ export const searchCatalog = query({
 
             const seen = new Set(results.map((r) => r.graceSku));
             for (const p of fallback) {
-                if (!seen.has(p.graceSku) && results.length < takeCount) {
+                if (!seen.has(p.graceSku) && results.length < poolCount) {
                     results = [...results, p];
                     seen.add(p.graceSku);
                 }
@@ -248,19 +253,60 @@ export const searchCatalog = query({
 
             if (groupHits.length > 0) {
                 const isPrimary = new Set(shapeMatch?.primary ?? []);
+                // When the customer asked for a specific applicator, groups of
+                // that applicator line must rank first — otherwise the
+                // per-family cap spends all its slots on groups whose variants
+                // the applicator filter below will discard (e.g. fine-mist
+                // groups on a "roller" query), leaving structuredResults empty.
+                const intentPattern =
+                    applicatorIntent === "rollon" ? /roll[-\s]?on|rollon|roller/
+                    : applicatorIntent === "spray" ? /spray|fine-?mist|atomizer/
+                    : applicatorIntent === "pump" ? /pump/
+                    : applicatorIntent === "dropper" ? /dropper/
+                    : applicatorIntent === "reducer" ? /reducer/
+                    : null;
+                // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                const intentBoost = (g: any) =>
+                    intentPattern && intentPattern.test(`${g.slug} ${g.displayName}`.toLowerCase()) ? 5 : 0;
                 groupHits.sort((a, b) => {
                     const scoreA =
                         (detectedFamily && a.family === detectedFamily ? 3 : 0) +
                         (isPrimary.has(a.family) ? 2 : 0) +
                         (detectedCapMl !== null && a.capacityMl === detectedCapMl ? 3 : 0) +
-                        (detectedColor && a.color === detectedColor ? 4 : 0);
+                        (detectedColor && a.color === detectedColor ? 4 : 0) +
+                        intentBoost(a);
                     const scoreB =
                         (detectedFamily && b.family === detectedFamily ? 3 : 0) +
                         (isPrimary.has(b.family) ? 2 : 0) +
                         (detectedCapMl !== null && b.capacityMl === detectedCapMl ? 3 : 0) +
-                        (detectedColor && b.color === detectedColor ? 4 : 0);
+                        (detectedColor && b.color === detectedColor ? 4 : 0) +
+                        intentBoost(b);
                     return scoreB - scoreA;
                 });
+
+                if (detectedCapMl !== null) {
+                    // Round-robin across neck finishes so minority thread
+                    // sub-lines (e.g. the 13-415 "Tall" 9ml cylinders) get to
+                    // contribute variants before the per-family cap truncates
+                    // group processing — a flat sort ties on score and leaves
+                    // them stranded past the cap.
+                    const byThread = new Map<string, typeof groupHits>();
+                    for (const g of groupHits) {
+                        const key = g.neckThreadSize ?? "unknown";
+                        if (!byThread.has(key)) byThread.set(key, []);
+                        byThread.get(key)!.push(g);
+                    }
+                    if (byThread.size > 1) {
+                        const buckets = [...byThread.values()];
+                        const interleaved: typeof groupHits = [];
+                        for (let i = 0; interleaved.length < groupHits.length; i++) {
+                            for (const b of buckets) {
+                                if (i < b.length) interleaved.push(b[i]);
+                            }
+                        }
+                        groupHits = interleaved;
+                    }
+                }
 
                 // Limit per-family to ensure shape diversity in results.
                 // For broad size-only questions ("do you have a 9ml bottle?"),
@@ -374,6 +420,13 @@ export const searchCatalog = query({
                 resultLimit,
             );
         }
+        if (detectedCapMl !== null) {
+            // Capacity-specific queries must show every neck finish stocked at
+            // that size, or Grace generalizes "all X use thread Y" from the
+            // slice. Must run LAST — earlier coverage passes prepend their own
+            // representatives and would push these rows past the limit.
+            results = ensureThreadDiversity(sorted, results, resultLimit);
+        }
 
         // Return a trimmed version — components arrays are large and waste tokens.
         // Normalize capacity strings: remove internal spaces ("9 ml" → "9ml")
@@ -472,6 +525,82 @@ export const getCatalogStats = query({
 });
 
 /**
+ * AI Tool: Price Stats
+ *
+ * Authoritative price aggregation. With a family: exact per-SKU stats from the
+ * products table (cheapest/most-expensive items included). Without: global
+ * min/max aggregated from productGroups.priceRangeMin/Max (verified accurate
+ * against the products table 2026-08-04; a full products read would exceed the
+ * 16MB transaction limit).
+ */
+export const getPriceStats = query({
+    args: { family: v.optional(v.string()) },
+    handler: async (ctx, args) => {
+        if (args.family) {
+            const family = args.family;
+            const rows = await ctx.db
+                .query("products")
+                .withIndex("by_family", (q) => q.eq("family", family))
+                .collect();
+            const priced = rows
+                .filter((p) => typeof p.webPrice1pc === "number" && p.webPrice1pc > 0)
+                .sort((a, b) => (a.webPrice1pc as number) - (b.webPrice1pc as number));
+            if (priced.length === 0) return null;
+            const pick = (p: (typeof priced)[number]) => ({
+                graceSku: p.graceSku,
+                itemName: (p.itemName ?? "").slice(0, 90),
+                capacity: p.capacity ?? null,
+                color: p.color ?? null,
+                applicator: p.applicator ?? null,
+                webPrice1pc: p.webPrice1pc,
+            });
+            return {
+                scope: family,
+                pricedProducts: priced.length,
+                minPrice: priced[0].webPrice1pc,
+                maxPrice: priced[priced.length - 1].webPrice1pc,
+                medianPrice: priced[Math.floor(priced.length / 2)].webPrice1pc,
+                cheapest: priced.slice(0, 3).map(pick),
+                mostExpensive: priced.slice(-3).reverse().map(pick),
+            };
+        }
+        const groups = await ctx.db.query("productGroups").collect();
+        const ranged = groups
+            .filter((g) => typeof g.priceRangeMin === "number" && (g.priceRangeMin as number) > 0)
+            .sort((a, b) => (a.priceRangeMin as number) - (b.priceRangeMin as number));
+        if (ranged.length === 0) return null;
+        const familyRanges: Record<string, { min: number; max: number }> = {};
+        for (const g of ranged) {
+            const fMin = g.priceRangeMin as number;
+            const fMax = (g.priceRangeMax as number) ?? fMin;
+            const cur = familyRanges[g.family];
+            familyRanges[g.family] = {
+                min: cur ? Math.min(cur.min, fMin) : fMin,
+                max: cur ? Math.max(cur.max, fMax) : fMax,
+            };
+        }
+        const byMax = [...ranged].sort(
+            (a, b) => ((b.priceRangeMax as number) ?? 0) - ((a.priceRangeMax as number) ?? 0),
+        );
+        const pickGroup = (g: (typeof ranged)[number]) => ({
+            slug: g.slug,
+            displayName: g.displayName,
+            family: g.family,
+            priceFrom: g.priceRangeMin,
+            priceTo: g.priceRangeMax,
+        });
+        return {
+            scope: "catalog",
+            minPrice: ranged[0].priceRangeMin,
+            maxPrice: Math.max(...ranged.map((g) => (g.priceRangeMax as number) ?? 0)),
+            cheapestGroups: ranged.slice(0, 3).map(pickGroup),
+            mostExpensiveGroups: byMax.slice(0, 3).map(pickGroup),
+            familyPriceRanges: familyRanges,
+        };
+    },
+});
+
+/**
  * AI Tool: Family Overview
  *
  * Returns aggregated sizes, colours, threads, applicators, and price ranges
@@ -492,7 +621,7 @@ export const getFamilyOverview = query({
             return cap.replace(/\s*(ml|oz)\s*/gi, (_, u: string) => u.toLowerCase());
         };
 
-        const sizes = new Map<string, { ml: number | null; count: number }>();
+        const sizes = new Map<string, { ml: number | null; count: number; threads: Set<string> }>();
         const colors = new Set<string>();
         const threads = new Set<string>();
         const applicators = new Set<string>();
@@ -510,8 +639,13 @@ export const getFamilyOverview = query({
                 const existing = sizes.get(cap);
                 if (existing) {
                     existing.count += g.variantCount ?? 1;
+                    if (g.neckThreadSize) existing.threads.add(g.neckThreadSize);
                 } else {
-                    sizes.set(cap, { ml: g.capacityMl, count: g.variantCount ?? 1 });
+                    sizes.set(cap, {
+                        ml: g.capacityMl,
+                        count: g.variantCount ?? 1,
+                        threads: new Set(g.neckThreadSize ? [g.neckThreadSize] : []),
+                    });
                 }
             }
 
@@ -530,7 +664,12 @@ export const getFamilyOverview = query({
         }
 
         const sizeRows = [...sizes.entries()]
-            .map(([label, info]) => ({ label, ml: info.ml, variantCount: info.count }))
+            .map(([label, info]) => ({
+                label,
+                ml: info.ml,
+                variantCount: info.count,
+                threads: [...info.threads].sort(),
+            }))
             .sort((a, b) => (a.ml ?? 0) - (b.ml ?? 0));
         const applicatorList = [...applicators].sort();
 
@@ -1074,6 +1213,14 @@ export const askGrace = action({
                             } else if (name === "getCatalogStats") {
                                 const data = await ctx.runQuery(api.grace.getCatalogStats, {});
                                 result = JSON.stringify(data, null, 2);
+                            } else if (name === "getPriceStats") {
+                                const input = parsedArgs as { family?: string | null };
+                                const data = await ctx.runQuery(api.grace.getPriceStats, {
+                                    family: input.family ?? undefined,
+                                });
+                                result = data
+                                    ? JSON.stringify(data, null, 2)
+                                    : `No priced products found${input.family ? ` for the "${input.family}" family — check the family name spelling` : ""}.`;
                             } else {
                                 result = `Unknown tool: ${name}`;
                             }

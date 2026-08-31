@@ -116,10 +116,10 @@ function WorkspaceShellView({
 
     // Identity — fall back gracefully when org/account aren't yet wired.
     const orgName = account?.companyName ?? organization?.name ?? null;
-    const tierLabel = account?.tier ?? (clerkOrgId ? "Authenticated" : "Signed in");
+    const tierLabel = account?.tier ?? (clerkOrgId ? "Authenticated" : user ? "Signed in" : "Sign in required");
     const userFullName = user
         ? [user.firstName, user.lastName].filter(Boolean).join(" ") || (user.primaryEmailAddress?.emailAddress ?? "You")
-        : "You";
+        : "Guest";
     const userInitial = (user?.firstName?.[0] ?? user?.primaryEmailAddress?.emailAddress?.[0] ?? "·").toUpperCase();
 
     return (

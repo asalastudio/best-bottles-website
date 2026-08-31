@@ -143,6 +143,38 @@ function CartProposal({
     );
 }
 
+function ProjectSaveProposal({
+    action,
+    onConfirmAction,
+    onDismissAction,
+}: {
+    action: Extract<GraceAction, { type: "proposeProjectSave" }>;
+    onConfirmAction?: () => void;
+    onDismissAction?: () => void;
+}) {
+    return (
+        <div className="mt-2 space-y-3 rounded-[2px] border border-champagne/60 bg-linen p-3" data-testid="grace-project-proposal">
+            <div className="text-[9.5px] font-semibold uppercase tracking-[0.18em] text-slate">Review project save</div>
+            <div>
+                <div className="text-[12px] font-medium text-obsidian">{action.product.itemName}</div>
+                <div className="text-[11px] text-slate">SKU {action.product.graceSku}</div>
+                {action.projectName && <div className="mt-1 text-[11px] text-slate">Project: {action.projectName}</div>}
+            </div>
+            {action.error && <p className="text-[11px] text-red-700">{action.error}</p>}
+            {action.saved ? (
+                <p className="border-t border-champagne/50 pt-2 text-[11px] font-medium text-obsidian">Saved to your Grace project.</p>
+            ) : action.awaitingConfirmation ? (
+                <div className="flex items-center justify-end gap-2 border-t border-champagne/50 pt-2">
+                    <button type="button" onClick={onDismissAction} className="px-3 py-1.5 text-[11px] font-medium text-slate hover:text-obsidian">Dismiss</button>
+                    <button type="button" onClick={onConfirmAction} className="rounded-[2px] bg-obsidian px-3 py-1.5 text-[11px] font-semibold text-bone hover:bg-black">
+                        {action.requiresSignIn ? "Sign in to save" : "Confirm save"}
+                    </button>
+                </div>
+            ) : null}
+        </div>
+    );
+}
+
 export default function GraceActionRenderer({ action, onAddToShortlist, tierLabel, onConfirmAction, onDismissAction }: GraceActionRendererProps) {
     switch (action.type) {
         case "displayProductCard":
@@ -221,6 +253,14 @@ export default function GraceActionRenderer({ action, onAddToShortlist, tierLabe
         case "proposeCartAdd":
             return (
                 <CartProposal
+                    action={action}
+                    onConfirmAction={onConfirmAction}
+                    onDismissAction={onDismissAction}
+                />
+            );
+        case "proposeProjectSave":
+            return (
+                <ProjectSaveProposal
                     action={action}
                     onConfirmAction={onConfirmAction}
                     onDismissAction={onDismissAction}

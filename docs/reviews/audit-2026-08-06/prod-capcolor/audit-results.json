@@ -1,0 +1,45 @@
+[
+  {
+    "id": "A4",
+    "group": "Product knowledge",
+    "title": "Enumerates ALL closure colours, not just the first",
+    "turns": [
+      "I need a 1ml sample vial. What glass and what plug colours do they come with?"
+    ],
+    "expect": {
+      "mustAnswer": true,
+      "mustIncludeAll": [
+        "black"
+      ],
+      "mustIncludeAny": [
+        "clear",
+        "amber"
+      ],
+      "mustNotInclude": [
+        "only white",
+        "we don't have black",
+        "no black"
+      ]
+    },
+    "transcript": [
+      {
+        "user": "I need a 1ml sample vial. What glass and what plug colours do they come with?",
+        "assistant": "For 1 ml sample vials, we stock:\n- Glass colors: Amber and Clear\n- Plug/cap colors: White, Clear, and Black\n\nDo you have a preference on glass color and plug color? I can pull up the exact options and pricing.",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "1 ml sample vial",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "CATALOG COVERAGE: The returned 1ml result set includes these canonical color options: Amber, Clear. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 13-425 (16 rows), Plug (4 rows), 8-425 (4 rows), 18-400 (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCLOSURE COLOR COVERAGE: the 1ml products in this result set come with these cap/closure colors — White (2 rows), Clear (1 rows), Black (1 rows). When the customer asks what a product comes with, list EVERY closure color in this sentence. Never name one and imply it is the only option, and never say a closure color is unavailable when it appears here. Do NOT attribute colors from other capacities to this one.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-VIA-AMB-1ML-WHT-T\",\n    \"websiteSku\": \"GB1mlAmbVialWht\",\n    \"itemName\": \"Vial style 1 ml amber glass bottle with white applicator. For use with perfume or fragrance oil, essential oil, aromatherapy, sample or trial size. Good for giv"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+]

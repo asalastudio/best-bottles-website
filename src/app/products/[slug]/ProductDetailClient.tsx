@@ -22,7 +22,7 @@ import {
     type PdpBlock,
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
-import BottleConfigurator from "@/components/products/BottleConfigurator";
+import Bottle3DConfigurator from "@/components/products/Bottle3DConfigurator";
 import { Safe3D } from "@/components/products/Viewer3DBoundary";
 import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
@@ -477,6 +477,8 @@ export interface ProductVariant {
     webPrice1pc: number | null;
     webPrice10pc: number | null;
     webPrice12pc: number | null;
+    /** Full quantity-break ladder mirrored from bestbottles.com (minQty asc). */
+    priceTiers?: { minQty: number; totalPrice: number; unitPrice: number }[];
     category: string;
     family: string | null;
     shape: string | null;
@@ -829,13 +831,27 @@ function TierLadder({ variant, qty }: { variant: ProductVariant | null | undefin
     if (!variant?.webPrice1pc) return null;
 
     const p1 = variant.webPrice1pc;
-    const p10 = variant.webPrice10pc && variant.webPrice10pc < p1 ? variant.webPrice10pc : null;
-    const p12 = variant.webPrice12pc && variant.webPrice12pc < p1 ? variant.webPrice12pc : null;
 
     type Tier = { minQty: number; price: number; savePct: number };
-    const tiers: Tier[] = [{ minQty: 1, price: p1, savePct: 0 }];
-    if (p10) tiers.push({ minQty: 10, price: p10, savePct: Math.round((1 - p10 / p1) * 100) });
-    if (p12) tiers.push({ minQty: 12, price: p12, savePct: Math.round((1 - p12 / p1) * 100) });
+    // Prefer the full published ladder (mirrored from bestbottles.com); the
+    // flat webPrice10pc/12pc pair is the fallback for rows not yet synced.
+    const ladder = (variant.priceTiers ?? [])
+        .filter((t) => t.unitPrice > 0)
+        .sort((a, b) => a.minQty - b.minQty);
+    let tiers: Tier[];
+    if (ladder.length >= 2 && ladder[0].minQty === 1) {
+        tiers = ladder.map((t) => ({
+            minQty: t.minQty,
+            price: t.unitPrice,
+            savePct: t.minQty === 1 ? 0 : Math.max(0, Math.round((1 - t.unitPrice / ladder[0].unitPrice) * 100)),
+        }));
+    } else {
+        const p10 = variant.webPrice10pc && variant.webPrice10pc < p1 ? variant.webPrice10pc : null;
+        const p12 = variant.webPrice12pc && variant.webPrice12pc < p1 ? variant.webPrice12pc : null;
+        tiers = [{ minQty: 1, price: p1, savePct: 0 }];
+        if (p10) tiers.push({ minQty: 10, price: p10, savePct: Math.round((1 - p10 / p1) * 100) });
+        if (p12) tiers.push({ minQty: 12, price: p12, savePct: Math.round((1 - p12 / p1) * 100) });
+    }
 
     if (tiers.length === 1) return null; // no discount tiers — hide ladder entirely
 
@@ -890,7 +906,7 @@ function TierLadder({ variant, qty }: { variant: ProductVariant | null | undefin
                     Volume rates are confirmed on a quote — online checkout is billed at
                     the {formatPrice(p1)}/ea rate.{" "}
                     <span className="font-semibold text-obsidian">Request a quote</span> for
-                    {tiers.length > 1 ? ` ${tiers[tiers.length - 1].minQty}+ ` : " volume "}
+                    {tiers.length > 1 ? ` ${tiers[1].minQty}+ ` : " volume "}
                     pricing.
                 </p>
             )}
@@ -1686,7 +1702,7 @@ export default function ProductDetailClient({
                                                                         border border-champagne/50" />
                                                     )}
                                                 >
-                                                    <BottleConfigurator
+                                                    <Bottle3DConfigurator
                                                         key={`${group.slug}-${configurator3d.glass}`}
                                                         bodyId={configurator3d.bodyId}
                                                         initialGlass={configurator3d.glass}

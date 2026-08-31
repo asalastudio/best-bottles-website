@@ -7,7 +7,7 @@ import type { ProductCard, ReferenceMatchPayload } from "@/components/GraceConte
 
 /**
  * End-to-end image-upload + vision flow for Grace's reference-match
- * pattern (PRD Pattern H). Bypasses ElevenLabs — runs purely client-side
+ * pattern (PRD Pattern H). Bypasses the Realtime session — runs purely client-side
  * with two server endpoints (/api/grace/upload + /api/grace/vision) and
  * the existing searchCatalog tool.
  *
@@ -122,7 +122,7 @@ export function useGraceImageUpload() {
                 let searchFailed = false;
                 let matches: ProductCard[] = [];
                 try {
-                    const searchRes = await fetch("/api/elevenlabs/server-tools", {
+                    const searchRes = await fetch("/api/grace/tools", {
                         method: "POST",
                         headers: { "Content-Type": "application/json", "x-grace-owner-key": ownerKey },
                         body: JSON.stringify({

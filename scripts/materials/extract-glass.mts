@@ -7,7 +7,7 @@
  * re-run after any glass edit and the token file follows.
  */
 import { writeFileSync } from "node:fs";
-import { GLASS_PRESETS } from "../../src/lib/materials/glassPresets.ts";
+import { GLASS_PRESETS } from "../../src/lib/materials/glassPresets";
 
 const out = "data/materials/glass-presets.generated.json";
 writeFileSync(out, JSON.stringify(GLASS_PRESETS, null, 2) + "\n");

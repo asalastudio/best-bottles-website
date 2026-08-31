@@ -1,12 +1,14 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
     filterGroupedComponentsByFitmentRule,
     normalizeComponentsByType,
     selectBestFitmentRule,
 } from "./componentUtils";
+import { buildFamilyPageData } from "../src/lib/products/family-page-data";
 
 function isSanityCdnUrl(value: string) {
     try {
@@ -38,20 +40,27 @@ export const listAll = query({
 });
 
 // ── Price Audit Query ────────────────────────────────────────────────────────
-// Paginated pricing export for convex_price_audit.py.
-// Script pages through all products in batches (default 500 per page).
+// Paginated pricing export for audit scripts (convex_price_audit.py,
+// build_crosscheck_merged.mjs, grace_catalog_coverage_audit.mjs).
+//
+// Cursor-paginated as of 2026-08-06: the old collect()+slice read the whole
+// table per call, and once every product carried a full priceTiers ladder the
+// table crossed Convex's 16MB per-execution read limit. Loop with
+// `cursor: continueCursor` until `isDone`.
 export const getAllForAudit = query({
     args: {
         limit: v.optional(v.number()),
-        skip: v.optional(v.number()),
+        cursor: v.optional(v.union(v.string(), v.null())),
     },
     handler: async (ctx, args) => {
-        const limit = args.limit ?? 500;
-        const skip = args.skip ?? 0;
-        const all = await ctx.db.query("products").collect();
-        const page = all.slice(skip, skip + limit);
+        const result = await ctx.db
+            .query("products")
+            .order("asc")
+            .paginate({ numItems: args.limit ?? 500, cursor: args.cursor ?? null });
+        const page = result.page;
         return {
-            total: all.length,
+            isDone: result.isDone,
+            continueCursor: result.continueCursor,
             page: page.map((p) => ({
                 graceSku: p.graceSku,
                 websiteSku: p.websiteSku,
@@ -62,6 +71,13 @@ export const getAllForAudit = query({
                 webPrice1pc: p.webPrice1pc ?? null,
                 webPrice10pc: p.webPrice10pc ?? null,
                 webPrice12pc: p.webPrice12pc ?? null,
+                priceTiers: p.priceTiers ?? null,
+                priceTiersSyncedAt: p.priceTiersSyncedAt ?? null,
+                capacity: p.capacity ?? null,
+                color: p.color ?? null,
+                capColor: p.capColor ?? null,
+                caseQuantity: p.caseQuantity ?? null,
+                neckThreadSize: p.neckThreadSize ?? null,
                 stockStatus: p.stockStatus ?? null,
             })),
         };
@@ -75,6 +91,43 @@ export const getBySku = query({
             .query("products")
             .withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku))
             .first();
+    },
+});
+
+/**
+ * Exact SKU lookup for Grace — 2026-08-06 audit P0-1.
+ *
+ * `grace.searchCatalog` is a full-text index over `itemName`, so SKU strings
+ * are not indexed: a 40-SKU probe against prod resolved only 28% of exact SKUs.
+ * That produced false "we don't carry that" answers on in-stock products and
+ * one misattributed price. This resolves a SKU deterministically by index —
+ * Grace SKU first, then website SKU, each case-normalized — and returns the
+ * PDP slug so Grace can navigate straight to the product.
+ */
+export const lookupSku = query({
+    args: { sku: v.string() },
+    handler: async (ctx, args) => {
+        const raw = args.sku.trim();
+        if (!raw) return null;
+
+        const candidates = Array.from(new Set([raw, raw.toUpperCase()]));
+        let product = null;
+        for (const candidate of candidates) {
+            product = await ctx.db
+                .query("products")
+                .withIndex("by_graceSku", (q) => q.eq("graceSku", candidate))
+                .first();
+            if (product) break;
+            product = await ctx.db
+                .query("products")
+                .withIndex("by_websiteSku", (q) => q.eq("websiteSku", candidate))
+                .first();
+            if (product) break;
+        }
+        if (!product) return null;
+
+        const group = product.productGroupId ? await ctx.db.get(product.productGroupId) : null;
+        return { product, slug: group?.slug ?? null, groupDisplayName: group?.displayName ?? null };
     },
 });
 
@@ -475,16 +528,6 @@ const APPLICATOR_BUCKETS = [
     { value: "antiquespray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
     { value: "antiquespray-tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
 ] as const;
-const SLUG_BUCKET_SUFFIXES: Record<string, string[]> = {
-    rollon: ["-rollon"],
-    finemist: ["-spray"],
-    perfumespray: ["-spray"],
-    antiquespray: ["-spray"],
-    "antiquespray-tassel": ["-spray"],
-    dropper: ["-dropper"],
-    lotionpump: ["-lotionpump"],
-    reducer: ["-reducer"],
-};
 const COMPONENT_CATEGORIES = new Set([
     "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
     "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
@@ -618,7 +661,8 @@ export const searchCatalog = query({
             priceMin: args.filters.priceMin ?? null,
             priceMax: args.filters.priceMax ?? null,
         };
-        const allGroups = await ctx.db.query("productGroups").collect();
+        const allGroups = (await ctx.db.query("productGroups").collect())
+            .filter((group) => !isLegacyProductRouteAlias(group.slug));
         const skuPairs = allGroups.map((group) => ({
             groupId: String(group._id),
             websiteSku: group.primaryWebsiteSku ?? null,
@@ -629,9 +673,9 @@ export const searchCatalog = query({
         const matchesApplicatorBucket = (group: typeof allGroups[number], bucket: string) => {
             const bucketDef = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
             if (!bucketDef) return false;
-            if (!(group.applicatorTypes ?? []).some((value) => (bucketDef.productValues as readonly string[]).includes(value))) return false;
-            const allowedSuffixes = SLUG_BUCKET_SUFFIXES[bucket];
-            return !allowedSuffixes || allowedSuffixes.some((suffix) => group.slug.endsWith(suffix));
+            return (group.applicatorTypes ?? []).some((value) =>
+                (bucketDef.productValues as readonly string[]).includes(value)
+            );
         };
 
         const runFilters = (skipKeys = new Set<string>()) => {
@@ -1274,6 +1318,97 @@ export const getGroupsByFamily = query({
             .query("productGroups")
             .withIndex("by_family", (q) => q.eq("family", args.family))
             .collect();
+    },
+});
+
+/**
+ * Dedicated family-page read model.
+ *
+ * Counts and applicator breadth are derived from product rows rather than
+ * cached product-group summaries, which are known to omit the plastic roller
+ * path for some 9 ml Cylinder groups.
+ */
+export const getFamilyPageData = query({
+    args: { family: v.string() },
+    handler: async (ctx, args) => {
+        const groups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+        const eligibleGroups = groups.filter((group) => group.variantCount > 0);
+        const variantsByGroup = await Promise.all(
+            eligibleGroups.map((group) =>
+                ctx.db
+                    .query("products")
+                    .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                    .collect(),
+            ),
+        );
+
+        return buildFamilyPageData(
+            args.family,
+            eligibleGroups.map((group) => ({
+                id: group._id,
+                slug: group.slug,
+                family: group.family,
+                capacity: group.capacity,
+                capacityMl: group.capacityMl,
+                neckThreadSize: group.neckThreadSize,
+                color: group.color,
+                variantCount: group.variantCount,
+                priceRangeMin: group.priceRangeMin,
+                paperDollFamilyKey: group.paperDollFamilyKey ?? null,
+                applicatorTypes: group.applicatorTypes ?? [],
+            })),
+            variantsByGroup.flatMap((variants, index) =>
+                variants.map((variant) => ({
+                    groupId: eligibleGroups[index]._id,
+                    applicator: variant.applicator,
+                })),
+            ),
+        );
+    },
+});
+
+/**
+ * Exact product cohort used by the unified PDP. Capacity is never sufficient:
+ * family, capacity, neck finish, and Sanity family key must all match.
+ */
+export const getProductCohort = query({
+    args: {
+        family: v.string(),
+        capacityMl: v.number(),
+        neckThreadSize: v.string(),
+        paperDollFamilyKey: v.string(),
+    },
+    handler: async (ctx, args) => {
+        const familyGroups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", args.family))
+            .collect();
+        const groups = familyGroups.filter((group) =>
+            group.variantCount > 0
+            && group.capacityMl === args.capacityMl
+            && group.neckThreadSize === args.neckThreadSize
+            && group.paperDollFamilyKey === args.paperDollFamilyKey,
+        );
+        const variants = (
+            await Promise.all(
+                groups.map((group) =>
+                    ctx.db
+                        .query("products")
+                        .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                        .collect(),
+                ),
+            )
+        ).flat();
+
+        return {
+            groups,
+            variants,
+            declaredVariantCount: groups.reduce((sum, group) => sum + group.variantCount, 0),
+            actualVariantCount: variants.length,
+        };
     },
 });
 

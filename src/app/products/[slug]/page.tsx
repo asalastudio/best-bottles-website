@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
+import { draftMode } from "next/headers";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
@@ -18,6 +19,20 @@ import { getCustomerFacingProductName } from "@/lib/products/customer-facing-nam
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
+import UnifiedBottlePdp from "@/components/products/UnifiedBottlePdp";
+import {
+    getPreviewPaperDollFamily,
+    getStorefrontCylinderBeautyGallery,
+    getStorefrontPaperDollFamily,
+} from "@/sanity/lib/queries";
+import { isPaperDollDraftPreviewAllowed } from "@/lib/paper-doll/preview";
+import {
+    buildCylinder9mlConfigurations,
+    type CylinderConfigurationSourceGroup,
+    type CylinderConfigurationSourceVariant,
+} from "@/lib/products/cylinder-9ml-configurator";
+import { CYLINDER_9ML_17415_COHORT, isCylinder9ml17415Group } from "@/lib/products/product-cohorts";
+import { searchCatalogServer } from "@/lib/catalogServer";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -52,6 +67,79 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
         ...data,
         variants: filterVariantsForProductGroup(data.group, data.variants),
     };
+}
+
+type CylinderCohortGroup = CylinderConfigurationSourceGroup & { _id: string };
+type CylinderCohortVariant = CylinderConfigurationSourceVariant & { productGroupId?: string };
+
+async function getUnifiedCylinderData() {
+    let cohort: { groups: CylinderCohortGroup[]; variants: CylinderCohortVariant[] };
+    try {
+        cohort = await getConvexClient().query(api.products.getProductCohort, {
+            family: CYLINDER_9ML_17415_COHORT.family,
+            capacityMl: CYLINDER_9ML_17415_COHORT.capacityMl,
+            neckThreadSize: CYLINDER_9ML_17415_COHORT.neckThreadSize,
+            paperDollFamilyKey: CYLINDER_9ML_17415_COHORT.paperDollFamilyKey,
+        }) as { groups: CylinderCohortGroup[]; variants: CylinderCohortVariant[] };
+    } catch {
+        // The storefront Convex deployment can lag the web branch. Rebuild the
+        // exact cohort through the already-deployed group reads, preserving the
+        // same family/capacity/neck/family-key boundary and complete commerce rows.
+        const catalog = await searchCatalogServer({
+            filters: { families: [CYLINDER_9ML_17415_COHORT.family] },
+            sort: "capacity-asc",
+            view: "visual",
+            limit: 240,
+            cursor: null,
+        });
+        const exactGroups = catalog.items.filter((group) => isCylinder9ml17415Group({
+            family: group.family,
+            capacityMl: group.capacityMl,
+            neckThreadSize: group.neckThreadSize,
+            paperDollFamilyKey: group.paperDollFamilyKey ?? null,
+        }));
+        const payloads = await Promise.all(exactGroups.map((group) => getProductData(group.slug)));
+        cohort = {
+            groups: exactGroups.map((group) => ({
+                ...group,
+                family: group.family,
+                paperDollFamilyKey: group.paperDollFamilyKey ?? null,
+            })) as CylinderCohortGroup[],
+            variants: payloads.flatMap((payload, index) =>
+                (payload?.variants ?? []).map((variant) => ({
+                    ...variant,
+                    productGroupId: exactGroups[index]._id,
+                })),
+            ),
+        };
+    }
+    const groups = new Map(cohort.groups.map((group) => [String(group._id), group]));
+    const rows = cohort.variants.map((variant) => {
+        const group = groups.get(String(variant.productGroupId ?? ""));
+        if (!group) throw new Error(`CYL-9ML product ${variant.graceSku} is missing its cohort group`);
+        return { group, variant };
+    });
+    return buildCylinder9mlConfigurations(rows);
+}
+
+async function getReleasedCylinderPaperDoll(preview: boolean) {
+    try {
+        return preview
+            ? await getPreviewPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey)
+            : await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
+    } catch (error) {
+        console.warn(`CYL-9ML Paper Doll ${preview ? "draft preview" : "release gate"} rejected the Sanity document`, error);
+        return null;
+    }
+}
+
+async function getReleasedCylinderBeautyGallery() {
+    try {
+        return await getStorefrontCylinderBeautyGallery(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
+    } catch (error) {
+        console.warn("CYL-9ML beauty gallery release gate rejected the Sanity document", error);
+        return null;
+    }
 }
 
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
@@ -132,6 +220,19 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { slug } = await params;
     const activeSlug = getLegacyProductRouteOverride(slug) ?? slug;
+    if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
+        return {
+            title: { absolute: `9 mL Cylinder Bottle — 17-415 | ${SITE_NAME}` },
+            description: "Configure one 9 mL 17-415 Cylinder bottle across compatible glass colors, roll-on fitments, fine mist sprayers, lotion pumps, and finishes.",
+            alternates: { canonical: `${SITE_URL}/products/${CYLINDER_9ML_17415_COHORT.slug}` },
+            openGraph: {
+                title: `9 mL Cylinder Bottle — 17-415 | ${SITE_NAME}`,
+                description: "Choose the glass, delivery system, roller material, and finish for the exact 9 mL 17-415 Cylinder platform.",
+                url: `${SITE_URL}/products/${CYLINDER_9ML_17415_COHORT.slug}`,
+                type: "website",
+            },
+        };
+    }
     const data = await getProductData(activeSlug);
     const group = data?.group;
     const variant = getPrimaryVariant(data);
@@ -193,7 +294,49 @@ export default async function ProductPage({
     }
 
     const activeSlug = legacyRouteOverride ?? slug;
+    if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
+        const previewValue = Array.isArray(resolvedSearchParams.paperDollPreview)
+            ? resolvedSearchParams.paperDollPreview[0]
+            : resolvedSearchParams.paperDollPreview;
+        const previewRequested = previewValue === "1" || previewValue === "true";
+        const paperDollPreviewAllowed = isPaperDollDraftPreviewAllowed({
+            requested: previewRequested,
+            draftModeEnabled: (await draftMode()).isEnabled,
+            nodeEnv: process.env.NODE_ENV,
+        });
+        const [configurations, paperDollFamily, beautyGallery] = await Promise.all([
+            getUnifiedCylinderData(),
+            getReleasedCylinderPaperDoll(paperDollPreviewAllowed),
+            getReleasedCylinderBeautyGallery(),
+        ]);
+        const paperDollPreview = paperDollPreviewAllowed && Boolean(paperDollFamily);
+        return (
+            <>
+                <UnifiedBottlePdp
+                    configurations={configurations}
+                    paperDollFamily={paperDollFamily}
+                    beautyGallery={beautyGallery}
+                    paperDollPreview={paperDollPreview}
+                />
+                <SanityLiveVisualEditing />
+                <Footer />
+            </>
+        );
+    }
     const data = await getProductData(activeSlug);
+    const productGroupWithFamilyKey = data?.group as (ProductGroupPayload["group"] & { paperDollFamilyKey?: string | null }) | undefined;
+    if (productGroupWithFamilyKey && isCylinder9ml17415Group({
+        family: productGroupWithFamilyKey.family ?? null,
+        capacityMl: productGroupWithFamilyKey.capacityMl ?? null,
+        neckThreadSize: productGroupWithFamilyKey.neckThreadSize ?? null,
+        paperDollFamilyKey: productGroupWithFamilyKey.paperDollFamilyKey ?? null,
+    })) {
+        const primary = getPrimaryVariant(data);
+        const next = new URLSearchParams();
+        next.set("view", "beauty");
+        if (primary?.graceSku) next.set("configuration", primary.graceSku);
+        redirect(`/products/${CYLINDER_9ML_17415_COHORT.slug}?${next.toString()}`);
+    }
     const [siblings, siblingGroups, pdpBlocks] = await Promise.all([
         getApplicatorSiblings(data, activeSlug),
         getSiblingGroups(data, activeSlug),

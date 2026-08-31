@@ -30,6 +30,15 @@ export type ProductCardVariantPreviewSource = {
     ballMaterial?: string | null;
 };
 
+export function getProductCardPreviewAccessibleLabel(
+    preview: Pick<ProductCardVariantPreview, "id" | "label" | "sku" | "graceSku" | "websiteSku">,
+    productTitle: string,
+    index: number,
+): string {
+    const sku = preview.graceSku ?? preview.websiteSku ?? preview.sku;
+    return `Preview ${preview.label} for ${productTitle}${sku ? ` · SKU ${sku}` : ` · option ${index + 1}`}`;
+}
+
 type ProductCardVariantPreviewOptions = {
     productTitle: string;
     defaultImageUrl?: string | null;

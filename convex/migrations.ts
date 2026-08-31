@@ -5867,3 +5867,44 @@ export const removeAccidentalCircle50FrostedTasselVariants = action({
         return await ctx.runMutation(internal.migrations.removeAccidentalCircle50FrostedTasselVariantsMutation, {});
     },
 });
+
+// ─────────────────────────────────────────────────────────────────────────────
+// 2026-08-04 — Grace consistency audit follow-up.
+// productGroups is denormalized (variantCount) and had drifted from the
+// products table: 4 ghost groups claimed variantCount=1 with zero member
+// products (inflating getCatalogStats to 2,478 vs 2,474 actual) and 3 zombie
+// groups sat at variantCount=0 with no primarySku. Deletes memberless groups
+// and recomputes variantCount from actual membership for the rest.
+// ─────────────────────────────────────────────────────────────────────────────
+export const reconcileProductGroups = internalMutation({
+    args: {
+        dryRun: v.optional(v.boolean()),
+        // Batched to stay under the 16MB per-transaction read limit — the
+        // per-group member scans read full product docs. Drive with a loop:
+        // skip 0, 50, 100, ... until groupsScanned < take.
+        skip: v.optional(v.number()),
+        take: v.optional(v.number()),
+    },
+    handler: async (ctx, args) => {
+        const dryRun = args.dryRun ?? true;
+        const skip = args.skip ?? 0;
+        const take = args.take ?? 50;
+        const groups = (await ctx.db.query("productGroups").collect()).slice(skip, skip + take);
+        const deleted: Array<Record<string, unknown>> = [];
+        const patched: Array<{ slug: string; from: number; to: number }> = [];
+        for (const g of groups) {
+            const members = await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", g._id))
+                .collect();
+            if (members.length === 0) {
+                deleted.push({ slug: g.slug, displayName: g.displayName, family: g.family, variantCount: g.variantCount, _id: g._id });
+                if (!dryRun) await ctx.db.delete(g._id);
+            } else if (g.variantCount !== members.length) {
+                patched.push({ slug: g.slug, from: g.variantCount, to: members.length });
+                if (!dryRun) await ctx.db.patch(g._id, { variantCount: members.length });
+            }
+        }
+        return { dryRun, groupsScanned: groups.length, deleted, patched };
+    },
+});

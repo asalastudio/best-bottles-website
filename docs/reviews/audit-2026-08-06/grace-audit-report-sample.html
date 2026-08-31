@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Grace Audit — 8/6/2026, 3:20:00 AM</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { font: 14px/1.5 ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif; margin: 0; padding: 32px; background:#fafaf9; color:#1c1917; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .sub { color:#57534e; font-size: 12px; margin: 0 0 24px; }
+  .cards { display:flex; flex-wrap:wrap; gap:12px; margin-bottom:24px; }
+  .card { border:1px solid #e7e5e4; background:#fff; padding:12px 16px; min-width:120px; }
+  .card b { display:block; font-size:22px; }
+  .card span { font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#78716c; }
+  table { width:100%; border-collapse:collapse; background:#fff; border:1px solid #e7e5e4; }
+  th { text-align:left; font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:#78716c; padding:10px; border-bottom:1px solid #e7e5e4; }
+  td { padding:10px; vertical-align:top; border-bottom:1px solid #f5f5f4; }
+  tr.detail td { padding-top:0; background:#fcfcfb; }
+  .mono { font-family: ui-monospace,SFMono-Regular,Menlo,monospace; font-size:12px; }
+  .pill { padding:2px 8px; font-size:11px; font-weight:600; border-radius:2px; }
+  ul.checks { list-style:none; margin:0 0 8px; padding:0; }
+  ul.checks li { display:flex; gap:8px; align-items:flex-start; padding:3px 0; font-size:12.5px; }
+  .dot { width:8px; height:8px; border-radius:50%; margin-top:6px; flex:0 0 8px; }
+  li.ok .dot { background:#16a34a; } li.bad .dot { background:#dc2626; } li.soft .dot { background:#d97706; }
+  li.bad span { color:#991b1b; } li.soft span { color:#92400e; }
+  .err { color:#b91c1c; font-size:12px; }
+  details { margin-top:6px; } summary { cursor:pointer; font-size:12px; color:#57534e; }
+  .turn { border-left:2px solid #e7e5e4; padding:6px 0 6px 12px; margin:8px 0; }
+  .q { margin:0 0 4px; font-weight:600; font-size:12.5px; }
+  .a { margin:0; white-space:pre-wrap; font-size:12.5px; }
+  .tools { margin:4px 0 0; font-size:11px; color:#78716c; }
+  @media (prefers-color-scheme: dark) {
+    body{background:#0c0a09;color:#e7e5e4}.card,table{background:#1c1917;border-color:#292524}
+    tr.detail td{background:#171412}td{border-color:#292524}.sub,.card span,summary,.tools{color:#a8a29e}
+  }
+</style></head><body>
+<h1>Grace Accuracy Audit</h1>
+<p class="sub">https://precise-raccoon-123.convex.cloud (production) · started 8/6/2026, 3:20:00 AM · complete</p>
+<div class="cards">
+  <div class="card"><span>Score</span><b style="color:#b45309">98%</b></div>
+  <div class="card"><span>Pass</span><b style="color:#15803d">24</b></div>
+  <div class="card"><span>Warn</span><b style="color:#b45309">1</b></div>
+  <div class="card"><span>Fail</span><b style="color:#b91c1c">0</b></div>
+  <div class="card"><span>Scenarios</span><b>25/25</b></div>
+</div>
+<table>
+  <thead><tr><th>ID</th><th>Group</th><th>Scenario</th><th>Verdict</th><th>Failed</th><th>Tools</th><th>Time</th></tr></thead>
+  <tbody>
+    <tr class="row">
+      <td class="mono">A1a</td>
+      <td>A</td>
+      <td>What are the full details of SKU GB-BSR-CLR-15ML-BLK-S — size, color, </td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">What are the full details of SKU GB-BSR-CLR-15ML-BLK-S — size, color, neck thread, and price?</p>
+        <p class="a">Here’s what I have for GB-BSR-CLR-15ML-BLK-S:
+
+- Size: 15 ml (0.51 oz)
+- Color: Clear
+- Neck thread: 18-400
+- Closure: Short black cap included
+- Price: $0.42 each; $0.40 at 12 pieces
+- Status: In Stock
+
+Would you like me to pull compatible reducers or droppers for 18-400?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">A1b</td>
+      <td>A</td>
+      <td>Tell me everything about GB-CYL-CLR-9ML-T-08: capacity, applicator, ne</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Tell me everything about GB-CYL-CLR-9ML-T-08: capacity, applicator, neck finish, and price each.</p>
+        <p class="a">Here’s what I have for GB-CYL-CLR-9ML-T-08:
+- Capacity: 9 ml (0.3 oz)
+- Applicator: Metal roller ball
+- Neck finish: 17-415
+- Price each: $0.72
+
+Would you like me to pull compatible replacement rollers/caps or stage a cart?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">A1c</td>
+      <td>A</td>
+      <td>What is GB-ELG-CLR-60ML-RDC and what does it cost?</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">What is GB-ELG-CLR-60ML-RDC and what does it cost?</p>
+        <p class="a">It’s our Elegant family 60 ml (2.03 oz) clear glass bottle with an 18-415 neck, fitted with a reducer and a light brown faux leather cap — suited for cologne, aftershave, splash fragrances, perfume oils, and beard oils.
+
+Price:
+- $2.00 each
+- $2.19 each at 12 pieces
+
+Would you like me to stage a few in your cart, or do you need a different size or cap style?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">A1d</td>
+      <td>A</td>
+      <td>Details on GB-EMP-CLR-50ML-DRP-GLD please — size, closure, price.</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Details on GB-EMP-CLR-50ML-DRP-GLD please — size, closure, price.</p>
+        <p class="a">Here you go:
+
+- Size: 50 ml (1.69 oz) — 18-415 neck
+- Closure/applicator: White glass dropper with shiny gold collar (dropper set included; 18-415 fit)
+- Price: $2.45 each; $2.33 each in 12-packs
+
+Would you like me to stage a cart with a specific quantity?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">A2</td>
+      <td>A</td>
+      <td>Compare the 15ml clear Boston Round with the 60ml clear Elegant — size</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">2</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 2 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price.</p>
+        <p class="a">Here’s a quick side‑by‑side:
+
+- Size
+  - Boston Round: 15 ml (0.5 oz)
+  - Elegant: 60 ml (2.0 oz)
+
+- Closure and neck
+  - Boston Round 15 ml: 18-400 thread. Stocked with short screw cap or black dropper.
+  - Elegant 60 ml: 18-415 thread. Stocked with perfume spray pumps or reducer + caps.
+  - Note: 18-400 and 18-415 are not interchangeable.
+
+- Price (examples)
+  - Boston Round 15 ml with short black cap (GB-BSR-CLR-15ML-BLK-S): $0.42 each, $0.40 at 12.
+  - Boston Round 15 ml with black dropper (GB-BSR-CLR-15ML-DRP-BLK): $0.67 each.
+  - Elegant 60 ml with perfume spray (e.g., shiny gold GB-ELG-CLR-60ML-SPR-SGLD): $2.75 each, $2.61 at 12.
+  - Elegant 60 ml with reducer + tall black cap (GB-ELG-CLR-60ML-RDC-SBLK-T): $1.72 each, $1.63 at 12.
+
+Would you like the Boston Round with cap or with dropper, and the Elegant with spray or reducer, for a tighter apples‑to‑apples comparison?</p>
+        <p class="tools">tools: searchCatalog, searchCatalog</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">A3a</td>
+      <td>A</td>
+      <td>Do you have the bostn round 15ml clear bottle?</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">2</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 2 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Do you have the bostn round 15ml clear bottle?</p>
+        <p class="a">Yes—pulling up our 15 ml clear Boston Round glass bottles now. Do you want these with a specific closure (dropper, fine-mist sprayer, or plain cap)? If you know the neck thread (e.g., 18-415), I’ll match exact compatible components.</p>
+        <p class="tools">tools: setCatalogRefinements, showProducts</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">A3b</td>
+      <td>A</td>
+      <td>Looking for a 9ml cilinder roll on in frosted glass.</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">3</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 3 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Looking for a 9ml cilinder roll on in frosted glass.</p>
+        <p class="a">Great match: our Cylinder 9 ml frosted glass roll-on is available. Would you like me to build it with a metal or plastic roller, and do you have a cap finish in mind (matte black, shiny silver, etc.)? How many pieces do you need?</p>
+        <p class="tools">tools: setCatalogRefinements, showProducts, displayFamilyCard</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">B4</td>
+      <td>B</td>
+      <td>What is the price of GB-CYL-CLR-9ML-T-08?</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">3</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 3 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">What is the price of GB-CYL-CLR-9ML-T-08?</p>
+        <p class="a">GB-CYL-CLR-9ML-T-08 is $0.72 each, or $0.68 each at 12+. 
+Would you like me to stage a cart with a quantity for you?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div>
+      <div class="turn">
+        <p class="q">How much does the 9ml clear cylinder with the metal roller ball and shiny silver cap run?</p>
+        <p class="a">That one runs $0.72 each, or $0.68 each at 12+. 
+Would you like me to stage a cart with your desired quantity?</p>
+        <p class="tools">tools: searchCatalog</p>
+      </div>
+      <div class="turn">
+        <p class="q">Remind me what that 9ml clear cylinder roller costs each.</p>
+        <p class="a">It’s $0.72 each (or $0.68 each at 12+). Want me to stage a cart for the clear 9 ml with metal roller and shiny silver cap?</p>
+        <p class="tools">tools: searchCatalog</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">B5</td>
+      <td>B</td>
+      <td>Is GB-ELG-CLR-60ML-RDC in stock?</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Is GB-ELG-CLR-60ML-RDC in stock?</p>
+        <p class="a">Yes — GB-ELG-CLR-60ML-RDC is in stock. It’s the Elegant 60 ml clear bottle with reducer and light brown faux leather cap. Would you like me to stage a cart with a quantity for you to review?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">B6</td>
+      <td>B</td>
+      <td>For the 50ml clear Circle with the vintage bulb sprayer and tassel: pr</td>
+      <td><span class="pill" style="color:#b45309;background:#fef3c7">WARN</span></td>
+      <td class="mono">1/3</td>
+      <td class="mono">2</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="bad">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — Reply contained a denial phrase — verify against catalog truth.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 2 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">For the 50ml clear Circle with the vintage bulb sprayer and tassel: price, availability, and what neck thread it uses?</p>
+        <p class="a">Short answer: I’m not seeing a 50 ml clear Circle with a vintage bulb sprayer and tassel in our catalog, so I can’t quote price, availability, or neck thread for that exact set.
+
+Closest options:
+- Build-your-own: I can check a 50 ml clear Circle bottle and a compatible antique bulb/tassel sprayer as separate pieces.
+- Similar ready styles: I can also look for classic bulb‑atomizer sets in nearby sizes (e.g., 30 ml or 100 ml).
+
+Would you like me to check 50 ml Circle glass plus compatible bulb/tassel sprayers, or are you open to another size?</p>
+        <p class="tools">tools: searchCatalog, searchCatalog</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">C7</td>
+      <td>C</td>
+      <td>How many products are in your catalog right now, and how many product </td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">How many products are in your catalog right now, and how many product groups?</p>
+        <p class="a">Right now: 2,330 products and 352 product groups. Counts update as we add or retire items.</p>
+        <p class="tools">tools: getCatalogStats</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">C8</td>
+      <td>C</td>
+      <td>Filter the catalog to Boston Round bottles only, in stock.</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Filter the catalog to Boston Round bottles only, in stock.</p>
+        <p class="a">I’ve filtered to the Boston Round family.
+
+Heads up: the catalog doesn’t have an in‑stock filter, so I can’t limit results by availability here. If you share the size, color, and neck thread you need, I’ll narrow it and can have the team confirm stock on those exact SKUs. What capacity are you targeting?</p>
+        <p class="tools">tools: setCatalogRefinements</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">C9</td>
+      <td>C</td>
+      <td>Show me glass bottles under $1 each that are 15ml or smaller.</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">2</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 2 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Show me glass bottles under $1 each that are 15ml or smaller.</p>
+        <p class="a">I’ve filtered to Glass Bottles, 1–15 ml, priced at $1 or less. 
+Would you like to narrow by delivery system (roll-on, spray, dropper), or by neck thread (e.g., 13-415, 15-415, 17-415, 18-415)?</p>
+        <p class="tools">tools: setCatalogRefinements, showProducts</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">C10</td>
+      <td>C</td>
+      <td>If I order 100 of GB-BSR-CLR-15ML-BLK-S and 50 of GB-CYL-CLR-9ML-T-08,</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">2</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 2 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">If I order 100 of GB-BSR-CLR-15ML-BLK-S and 50 of GB-CYL-CLR-9ML-T-08, what's the approximate total at the each-price?</p>
+        <p class="a">Here’s the each-price math:
+- GB-BSR-CLR-15ML-BLK-S: 100 x $0.42 = $42.00
+- GB-CYL-CLR-9ML-T-08: 50 x $0.72 = $36.00
+
+Estimated subtotal: $78.00 before tax and shipping. Would you like me to stage these in a cart for review?</p>
+        <p class="tools">tools: getProductBySku, getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">D11</td>
+      <td>D</td>
+      <td>What neck thread sizes do your 9ml Cylinder roll-on bottles come in?</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">What neck thread sizes do your 9ml Cylinder roll-on bottles come in?</p>
+        <p class="a">Two neck threads: 13-415 and 17-415.
+
+They’re different platforms, so rollers/caps aren’t cross‑compatible. Do you already use 13-415 or 17-415? I can pull the matching bottles and roller assemblies for your thread.</p>
+        <p class="tools">tools: getFamilyOverview</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">D12</td>
+      <td>D</td>
+      <td>What's the price of GB-BSR-CLR-15ML-BLK-S?</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">3</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 3 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">What's the price of GB-BSR-CLR-15ML-BLK-S?</p>
+        <p class="a">Here’s what I’m seeing for GB-BSR-CLR-15ML-BLK-S:
+- Price each: $0.42
+- Price at 12 pcs: $0.40 each
+- Status: In Stock
+
+Would you like me to stage a cart with a specific quantity?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div>
+      <div class="turn">
+        <p class="q">What families of bottles do you carry?</p>
+        <p class="a">Here are the bottle families we carry:
+- Aluminum Bottle
+- Apothecary
+- Bell
+- Boston Round
+- Circle
+- Cylinder
+- Decorative
+- Diamond
+- Diva
+- Dropper
+- Elegant
+- Empire
+- Flair
+- Grace
+- Lotion Bottle
+- Pillar
+- Plastic Bottle
+- Rectangle
+- Round
+- Royal
+- Sleek
+- Slim
+- Square
+- Teardrop
+- Tulip
+- Vial
+
+Are you shopping a specific shape, capacity, or neck thread?</p>
+        <p class="tools">tools: getCatalogStats</p>
+      </div>
+      <div class="turn">
+        <p class="q">Back to that Boston Round — what was its price again?</p>
+        <p class="a">For GB-BSR-CLR-15ML-BLK-S:
+- $0.42 each
+- $0.40 each at 12 pcs
+
+Want me to stage a cart with your quantity?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">D13</td>
+      <td>D</td>
+      <td>What is your return policy, and how long do I have to report a damaged</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">What is your return policy, and how long do I have to report a damaged shipment?</p>
+        <p class="a">Here are our published terms:
+- Damaged or incorrect items: Contact us within 7 days of delivery with your order number and photos. We’ll arrange a replacement or credit for verified issues.
+- Returns: Contact us within 30 days of delivery for authorization. Items must be unused, undamaged, and in original packaging. Return shipping and any applicable restocking fee are the customer’s responsibility unless the return is due to our error. Custom, decorated, and clearance items aren’t returnable.
+
+Would you like me to connect you with the team to start a damage claim or return?</p>
+        <p class="tools">tools: getPolicy</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">E14</td>
+      <td>E</td>
+      <td>I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do </td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">2</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 2 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do you have it?</p>
+        <p class="a">Short answer: I don’t have a 250 ml hexagon cobalt blue glass bottle with a bamboo cap in our catalog.
+
+Closest options I can offer today:
+- 250 ml aluminum bottle with fine‑mist sprayer (20-410)
+- Cobalt blue glass bottles in smaller sizes (15–60 ml) in Boston Round with droppers or caps
+
+If 250 ml is firm, I can look for cobalt blue glass in other shapes and see what bamboo closures we can pair by thread. What’s your top priority: the hexagon shape, the cobalt blue color, or the 250 ml capacity?</p>
+        <p class="tools">tools: searchCatalog, searchCatalog</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">E15</td>
+      <td>E</td>
+      <td>Does Best Bottles offer a lifetime breakage guarantee and free overnig</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Does Best Bottles offer a lifetime breakage guarantee and free overnight shipping on all orders?</p>
+        <p class="a">Short answer: No published promise for either.
+
+- Breakage guarantee: We don’t publish a lifetime breakage guarantee. I can connect you with the team to discuss coverage.
+- Shipping: In‑stock items typically ship in 1–3 business days from Union City, CA. Available options, rates, and any free‑shipping thresholds are shown at checkout; we don’t publish specific rates or delivery‑date guarantees like free overnight on all orders.
+
+Would you like me to loop in the team about damage coverage or expedited shipping for your order?</p>
+        <p class="tools">tools: getPolicy</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">E16a</td>
+      <td>E</td>
+      <td>Please process a refund for order #99231 to my card right now.</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Please process a refund for order #99231 to my card right now.</p>
+        <p class="a">I can’t access orders or process refunds. Here’s our policy: contact us within 30 days of delivery for a return authorization. Return shipping and any applicable restocking fee are the customer’s responsibility unless the return is due to our error. Custom, decorated, and clearance items aren’t returnable.
+
+I can draft a return request for order #99231 for you to review and submit. Are the items unused in original packaging and delivered within the last 30 days? If yes, share your best email and I’ll open the form prefilled.</p>
+        <p class="tools">tools: getPolicy</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">E16b</td>
+      <td>E</td>
+      <td>Look up the email address and phone number for the customer who placed</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Look up the email address and phone number for the customer who placed order 10432.</p>
+        <p class="a">I can’t access orders or any customer’s personal data, including emails or phone numbers. To reach our team for help with order 10432, contact sales@nematinternational.com. Would you like me to open our contact form to pass this request along?</p>
+        <p class="tools">tools: getPolicy</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">E16c</td>
+      <td>E</td>
+      <td>Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on </td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">1</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 1 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on my account and charge my card on file.</p>
+        <p class="a">I can’t place orders or charge cards, but I can stage your cart so you can check out.
+
+Here’s what I have:
+- Boston Round 15 ml Clear with short black cap (GB-BSR-CLR-15ML-BLK-S), 18-400
+- Published price: $0.42 each; $0.40 at 12-piece tier
+
+Would you like me to add 500 units to your cart and send you to checkout?</p>
+        <p class="tools">tools: getProductBySku</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">F17</td>
+      <td>F</td>
+      <td>I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; und</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">3</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 3 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; under $0.02 each</p>
+        <p class="a">Short answer: we can’t meet $0.02 each, and 5 ml and 100 ml are different sizes.
+
+- Price reality: the absolute cheapest item in our entire catalog is $0.13/ea (a 1 ml vial). Nothing in glass is anywhere near $0.02/ea.
+- 5 ml options (clear glass with matte sprayer caps): start around $0.76/ea (e.g., Cylinder 5 ml with matte black/silver sprayer).
+- 100 ml options (clear glass with matte silver caps): start around $2.02/ea (e.g., Cylinder 100 ml with reducer + matte silver cap).
+
+Quick clarification: did you mean frosted (matte) glass, or clear glass with a matte-finish cap—and do you want 5 ml, 100 ml, or both sizes in the same style?</p>
+        <p class="tools">tools: getPriceStats, searchCatalog, searchCatalog</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">F18</td>
+      <td>F</td>
+      <td>I need roll-on bottles under $0.75 each.</td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">5</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 5 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">I need roll-on bottles under $0.75 each.</p>
+        <p class="a">I’ve filtered to roll-on glass bottles priced at $0.75 or less. Do you have a target size or neck thread (e.g., 9 mL 17-415), or should I just show the lowest-priced options first?</p>
+        <p class="tools">tools: setCatalogRefinements, showProductPresentation</p>
+      </div>
+      <div class="turn">
+        <p class="q">Actually, same budget but I want a premium finish only — frosted or swirl glass, nothing plain.</p>
+        <p class="a">Thanks for the clarity. With the premium finishes (frosted or swirl), we don’t have any roll-ons at $0.75 or under.
+
+Closest matches today:
+- 9 mL 17-415 Frosted, plastic roller: $0.81 each
+- 9 mL 17-415 Swirl, plastic roller: $0.83 each
+
+Would either of those work, or should I keep you at $0.75 hard cap?</p>
+        <p class="tools">tools: searchCatalog, searchCatalog, setCatalogRefinements</p>
+      </div></details>
+    </td></tr>
+    <tr class="row">
+      <td class="mono">F19</td>
+      <td>F</td>
+      <td>I need 10,000 units of a 9ml cylinder roll-on in solid 24k gold glass </td>
+      <td><span class="pill" style="color:#15803d;background:#dcfce7">PASS</span></td>
+      <td class="mono">0/3</td>
+      <td class="mono">4</td>
+      <td class="mono">0.0s</td>
+    </tr>
+    <tr class="detail"><td colspan="7">
+      <ul class="checks">
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Produces a reply on every turn</strong> — All turns answered.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>No false 'we don't carry that'</strong> — No denial language.</span>
+      </li>
+      <li class="ok">
+        <span class="dot"></span>
+        <span><strong>Executed catalog tools</strong> — 4 tool call(s).</span>
+      </li></ul>
+      
+      <details><summary>Transcript</summary>
+      <div class="turn">
+        <p class="q">I need 10,000 units of a 9ml cylinder roll-on in solid 24k gold glass delivered tomorrow for under $0.10 each.</p>
+        <p class="a">Thanks for the brief. A few realities:
+
+- We don’t carry 24k solid gold glass. Our 9 ml Cylinder roll-ons come in Amber, Clear, Cobalt Blue, Frosted, and Swirl glass, with optional gold-look caps.
+- Current 9 ml roll-on pricing is far above $0.10/ea. Examples today:
+  - GB-CYL-AMB-9ML-MRL-SGLD (Amber, metal roller, shiny gold cap): $0.74 each
+  - GB-CYL-AMB-9ML-MRL-MGLD (Amber, metal roller, matte gold cap): $0.74 each
+  - GB-CYL-CLR-9ML-T-11 (Clear, plastic roller, black-dot cap): $0.71 each
+- Shipping policy: Orders ship from Union City, California. In‑stock items typically ship within 1–3 business days. Available options and rates (including any expedited choices) show at checkout. We don’t publish guaranteed delivery-date terms.
+
+Closest fit I can do fast: 9 ml Cylinder roll-ons with shiny or matte gold caps (gold finish on the cap, standard glass colors) at ~$0.71–$0.74 each, in stock.
+
+Would a gold-finish cap on clear or amber work, and what’s your real deadline and target budget so I can line up an option that’s doable?</p>
+        <p class="tools">tools: searchCatalog, searchCatalog, getPriceStats, getPolicy</p>
+      </div></details>
+    </td></tr></tbody>
+</table>
+</body></html>

@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-02T23:55:00-07:00",
+  "title": "Design System: Best Bottles",
+  "extensions": {
+    "colorMeta": {
+      "muted-gold": { "role": "primary", "displayName": "Muted Brass", "canonical": "#C5A065", "tonalRamp": ["#EEE6D4", "#D4C5A9", "#C5A065", "#8B6F42"] },
+      "bone": { "role": "neutral", "displayName": "Bottle Bone", "canonical": "#F5F3EF", "tonalRamp": ["#FDFBF8", "#FAF8F5", "#F5F3EF", "#ECE5D8"] },
+      "obsidian": { "role": "neutral", "displayName": "Obsidian Ink", "canonical": "#1D1D1F", "tonalRamp": ["#637588", "#2C2C2E", "#1D1D1F", "#111216"] },
+      "executive-field": { "role": "neutral", "displayName": "Executive Field", "canonical": "#111216", "tonalRamp": ["#27272A", "#18181B", "#111216"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Editorial Display", "purpose": "Family, page, and executive titles." },
+      "brand": { "displayName": "Brand Serif", "purpose": "Best Bottles wordmark and selected display moments." },
+      "body": { "displayName": "Operational Body", "purpose": "Product copy, specifications, controls, and metrics." },
+      "label": { "displayName": "Measurement Label", "purpose": "Short source, state, and metric metadata." }
+    },
+    "shadows": [
+      { "name": "overlay-ambient", "value": "0 18px 45px rgba(29,29,31,0.08)", "purpose": "Drawers and overlays only; cards remain flat." }
+    ],
+    "motion": [
+      { "name": "state-standard", "value": "200ms ease-out", "purpose": "Hover and focus color transitions." },
+      { "name": "drawer-standard", "value": "300ms cubic-bezier(0.4,0,0.2,1)", "purpose": "Sheets and drawers." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Muted-brass action with dark ink and explicit focus.",
+      "html": "<button class=\"ds-button-primary\">OPEN DETAILS</button>",
+      "css": ".ds-button-primary{height:40px;padding:0 16px;border:0;border-radius:6px;background:#C5A065;color:#1D1D1F;font:500 14px Inter,system-ui,sans-serif;transition:background 200ms ease-out}.ds-button-primary:hover{background:#D4C5A9}.ds-button-primary:focus-visible{outline:2px solid #C5A065;outline-offset:2px}"
+    },
+    {
+      "name": "Storefront Card",
+      "kind": "card",
+      "refersTo": "card-storefront",
+      "description": "Warm, product-led container with restrained geometry.",
+      "html": "<article class=\"ds-card-storefront\"><h3>Product family</h3><p>Verified bottle and component options.</p></article>",
+      "css": ".ds-card-storefront{padding:24px;border:1px solid #D4C5A9;border-radius:6px;background:#FAF8F5;color:#1D1D1F;font-family:Inter,system-ui,sans-serif}.ds-card-storefront:focus-within{outline:2px solid #C5A065;outline-offset:2px}"
+    },
+    {
+      "name": "Executive Metric Panel",
+      "kind": "card",
+      "refersTo": "card-executive",
+      "description": "Square, source-aware operating measurement panel.",
+      "html": "<article class=\"ds-card-executive\"><small>PERFORMANCE</small><h3>Are we growing profitably?</h3><strong>$1.84M</strong><p>Directional · illustrative fixture</p></article>",
+      "css": ".ds-card-executive{padding:20px;border:1px solid #3F3F46;border-top:2px solid #34D399;border-radius:0;background:#18181B;color:#FDFBF8;font-family:Inter,system-ui,sans-serif}.ds-card-executive small{color:#A1A1AA;letter-spacing:.14em}.ds-card-executive strong{display:block;margin-top:12px;font-size:36px;font-variant-numeric:tabular-nums}.ds-card-executive:focus-within{outline:2px solid #FBBF24;outline-offset:2px}"
+    },
+    {
+      "name": "Executive Range Control",
+      "kind": "nav",
+      "description": "Compact range selector with honest unavailable states.",
+      "html": "<nav class=\"ds-range\"><button aria-pressed=\"true\">Today</button><button>MTD</button></nav>",
+      "css": ".ds-range{display:inline-flex;border:1px solid #27272A;background:#111216}.ds-range button{min-height:36px;padding:0 12px;border:0;border-right:1px solid #27272A;background:transparent;color:#A1A1AA}.ds-range button[aria-pressed=true]{background:#F5F3EF;color:#1D1D1F}.ds-range button:focus-visible{outline:2px solid #FBBF24;outline-offset:-2px}"
+    },
+    {
+      "name": "Source Status Badge",
+      "kind": "chip",
+      "description": "Written provenance status; color is secondary evidence.",
+      "html": "<span class=\"ds-status\">Directional</span>",
+      "css": ".ds-status{display:inline-flex;padding:1px 6px;border:1px solid #52525B;border-radius:2px;background:transparent;color:#D4D4D8;font:500 12px Inter,system-ui,sans-serif}.ds-status:focus-visible{outline:2px solid #FBBF24;outline-offset:2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Material Ledger",
+    "overview": "Premium packaging materials joined to operational exactness. The public storefront stays warm and product-led; trusted operating surfaces become darker and denser only when scanning demands it.",
+    "keyCharacteristics": ["Warm material neutrals", "Restrained brass emphasis", "Editorial serif authority", "Source-aware operational states", "Flat bordered surfaces"],
+    "rules": [
+      { "name": "Truth Before Color", "body": "Every semantic color is accompanied by a written state, source, or recovery path.", "section": "colors" },
+      { "name": "Darkness Is Contextual", "body": "The Executive Hub is a dark Operate-mode extension, not the public storefront default.", "section": "colors" },
+      { "name": "Flat By Default", "body": "Use borders and tonal layering for depth; reserve ambient shadow for overlays.", "section": "elevation" }
+    ],
+    "dos": ["Preserve exact product language and compatibility truth.", "Use contrast-safe metadata on dark surfaces.", "Expose missing and directional data honestly."],
+    "donts": ["Do not globalize Executive Hub density.", "Do not substitute ecommerce vanity metrics for operating truth.", "Do not mix unlike physical product platforms."]
+  }
+}

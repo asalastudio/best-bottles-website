@@ -154,7 +154,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
                         )}
                     </motion.div>
                 )}
-                <div className="absolute inset-0 bg-gradient-to-r from-obsidian/55 via-obsidian/25 to-transparent z-[1]" />
+                <div className="absolute inset-0 z-[1] bg-gradient-to-r from-obsidian/75 via-obsidian/40 to-transparent md:from-obsidian/55 md:via-obsidian/25" />
             </div>
 
             {isMultiSlide && (

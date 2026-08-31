@@ -3,7 +3,7 @@ import { getUserEmailAddresses, hasExecutiveHubAccess, hasTeamHubAccess } from "
 
 describe("Team Hub access", () => {
     it("allows known Best Bottles staff and admin roles", () => {
-        for (const role of ["employee", "team", "admin", "executive", "super_admin", "founder", "ceo"]) {
+        for (const role of ["support", "employee", "team", "admin", "executive", "super_admin", "founder", "ceo"]) {
             expect(hasTeamHubAccess({ role })).toBe(true);
         }
     });
@@ -75,12 +75,28 @@ describe("Clerk user email extraction", () => {
     it("uses primary and secondary Clerk email addresses", () => {
         expect(
             getUserEmailAddresses({
-                primaryEmailAddress: { emailAddress: "jordan@asala.ai" },
+                primaryEmailAddress: { emailAddress: "jordan@asala.ai", verification: { status: "verified" } },
                 emailAddresses: [
-                    { emailAddress: "ops@bestbottles.com" },
-                    { emailAddress: null },
+                    { emailAddress: "ops@bestbottles.com", verification: { status: "verified" } },
+                    { emailAddress: null, verification: { status: "verified" } },
                 ],
             }),
         ).toEqual(["jordan@asala.ai", "ops@bestbottles.com"]);
+    });
+
+    it("never authorizes an unverified secondary Clerk email", () => {
+        const emails = getUserEmailAddresses({
+            primaryEmailAddress: {
+                emailAddress: "customer@example.com",
+                verification: { status: "verified" },
+            },
+            emailAddresses: [
+                { emailAddress: "jordan@asala.ai", verification: { status: "unverified" } },
+            ],
+        });
+
+        expect(emails).toEqual(["customer@example.com"]);
+        expect(hasTeamHubAccess({}, { emailAddresses: emails })).toBe(false);
+        expect(hasExecutiveHubAccess({}, { emailAddresses: emails })).toBe(false);
     });
 });

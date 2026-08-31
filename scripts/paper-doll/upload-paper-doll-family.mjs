@@ -6,13 +6,18 @@
  *   SANITY_API_TOKEN — write token
  *   NEXT_PUBLIC_SANITY_PROJECT_ID or SANITY_STUDIO_PROJECT_ID
  *   NEXT_PUBLIC_SANITY_DATASET (default production)
- *   PAPER_DOLL_ASSETS_ROOT — folder with family-model.json and bodies/, caps/, etc.
+ *   PAPER_DOLL_ASSETS_ROOT — recanvas output folder with manifest.json and PNGs
+ *
+ * This command always leaves storefrontReady=false. The Sanity document must
+ * pass the independent storefront validator before a separate reviewed release
+ * can enable it.
  */
 
 import { createReadStream } from "node:fs";
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { createClient } from "@sanity/client";
+import sharp from "sharp";
 
 const projectId =
     process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || process.env.SANITY_STUDIO_PROJECT_ID;
@@ -44,71 +49,50 @@ async function uploadPng(absPath, filename) {
     });
 }
 
-const SUBDIRS = {
-    body: "bodies",
-    cap: "caps",
-    roller: "fitments",
-    sprayer: "spray",
-    pump: "lotion",
-};
-
-function variantKeyFromFilename(slot, basename) {
-    const base = basename.replace(/\.png$/i, "");
-    if (slot === "body") {
-        const m = base.match(/^CYL-([A-Z]+)-9ML-body$/i);
-        return m ? m[1] : base;
-    }
-    if (slot === "cap") {
-        const m = base.match(/^CYL-9ML-(.+)-cap$/i);
-        return m ? m[1] : base;
-    }
-    if (slot === "roller") {
-        const m = base.match(/^CYL-9ML-(.+)-roller$/i);
-        return m ? m[1] : base;
-    }
-    if (slot === "sprayer") {
-        const m = base.match(/^CYL-9ML-SPRAY-(.+)-sprayer$/i);
-        return m ? m[1] : base;
-    }
-    if (slot === "pump") {
-        const m = base.match(/^CYL-9ML-LOTION-(.+)-pump$/i);
-        return m ? m[1] : base;
-    }
-    return base;
+function assertManifest(raw) {
+    if (raw.familyKey !== "CYL-9ML") throw new Error("Only the reviewed CYL-9ML manifest is supported.");
+    if (raw.canvasPreset !== "pdp-2080x2288") throw new Error("Manifest canvasPreset must be pdp-2080x2288.");
+    if (raw.canvas?.width !== 2080 || raw.canvas?.height !== 2288) throw new Error("Manifest canvas must be 2080×2288.");
+    if (raw.pipelineVersion !== "recanvas-v1") throw new Error("Manifest pipelineVersion must be recanvas-v1.");
+    if (!raw.assetRevision) throw new Error("Manifest assetRevision is required.");
+    if (!Array.isArray(raw.layers) || raw.layers.length !== 26) throw new Error("Manifest must contain all 26 CYL-9ML layers.");
+    const keys = new Set(raw.layers.map((layer) => `${layer.slot}:${layer.variantKey}`));
+    if (keys.size !== raw.layers.length) throw new Error("Manifest contains duplicate slot:variantKey values.");
 }
 
 async function main() {
-    const modelPath = join(ASSETS_ROOT, "family-model.json");
-    const raw = JSON.parse(await readFile(modelPath, "utf8"));
-    const familyKey = raw.family ?? "CYL-9ML";
+    const manifestPath = join(ASSETS_ROOT, "manifest.json");
+    const raw = JSON.parse(await readFile(manifestPath, "utf8"));
+    assertManifest(raw);
+    const familyKey = raw.familyKey;
 
     const layerAssets = [];
-
-    for (const [slot, sub] of Object.entries(SUBDIRS)) {
-        const names = raw.availableComponents?.[slot] ?? [];
-        for (const name of names) {
-            const abs = join(ASSETS_ROOT, sub, name);
-            console.log("Uploading", abs);
-            const asset = await uploadPng(abs, name);
-            layerAssets.push({
-                _type: "paperDollLayerAsset",
-                _key: `${slot}-${variantKeyFromFilename(slot, name)}`.replace(/[^a-z0-9-]/gi, "-"),
-                slot,
-                variantKey: variantKeyFromFilename(slot, name),
-                sourceFilename: name,
-                image: {
-                    _type: "image",
-                    asset: {
-                        _type: "reference",
-                        _ref: asset._id,
-                    },
-                },
-            });
+    for (const layer of raw.layers) {
+        const abs = join(ASSETS_ROOT, layer.relativePath);
+        const metadata = await sharp(abs).metadata();
+        if (metadata.width !== 2080 || metadata.height !== 2288 || metadata.channels !== 4 || metadata.hasAlpha !== true) {
+            throw new Error(`${layer.relativePath} failed the 2080×2288 RGBA pre-upload gate.`);
         }
+        console.log("Uploading", abs);
+        const asset = await uploadPng(abs, layer.sourceFilename);
+        layerAssets.push({
+            _type: "paperDollLayerAsset",
+            _key: `${layer.slot}-${layer.variantKey}`.replace(/[^a-z0-9-]/gi, "-"),
+            slot: layer.slot,
+            variantKey: layer.variantKey,
+            sourceFilename: layer.sourceFilename,
+            image: {
+                _type: "image",
+                asset: {
+                    _type: "reference",
+                    _ref: asset._id,
+                },
+            },
+        });
     }
 
     const anchorsJson = JSON.stringify(
-        { anchors: raw.anchors, contentBounds: raw.contentBounds },
+        { sourceCanvas: raw.sourceCanvas, transform: raw.transform },
         null,
         2
     );
@@ -116,12 +100,16 @@ async function main() {
     const doc = {
         _type: "paperDollFamily",
         familyKey,
-        displayName: raw.displayName ?? "9ml Cylinder",
-        canvasWidth: raw.canvas?.width ?? 2000,
-        canvasHeight: raw.canvas?.height ?? 2200,
-        layerOrderRollon: raw.layerOrder ?? ["body", "roller", "cap"],
-        layerOrderSpray: raw.layerOrderSpray ?? ["body", "sprayer"],
-        layerOrderLotion: raw.layerOrderLotion ?? ["body", "pump"],
+        displayName: raw.displayName,
+        canvasPreset: raw.canvasPreset,
+        canvasWidth: raw.canvas.width,
+        canvasHeight: raw.canvas.height,
+        pipelineVersion: raw.pipelineVersion,
+        assetRevision: raw.assetRevision,
+        storefrontReady: false,
+        layerOrderRollon: raw.layerOrderRollon,
+        layerOrderSpray: raw.layerOrderSpray,
+        layerOrderLotion: raw.layerOrderLotion,
         anchorsJson,
         layerAssets,
     };
@@ -139,7 +127,7 @@ async function main() {
         console.log("Created paperDollFamily", created._id);
     }
 
-    console.log(`Done. ${layerAssets.length} layer assets uploaded.`);
+    console.log(`Done. ${layerAssets.length} layer assets uploaded with storefrontReady=false.`);
 }
 
 main().catch((e) => {
