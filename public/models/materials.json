@@ -739,41 +739,42 @@
       "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
     },
     "CAP_PINK": {
-      "color": "#c9a7b5",
+      "color": "#ddc6d1",
       "linear": [
-        0.585,
-        0.386,
-        0.462
+        0.718,
+        0.567,
+        0.638
       ],
-      "metalness": 1.0,
+      "metalness": 0.0,
       "roughness": 0.42,
-      "clearcoat": 0.6,
-      "ior": 1.5,
+      "clearcoat": 0.15,
+      "ior": 1.49,
       "transmission": 0.0,
       "maps": "matte",
-      "envMapIntensity": 1.15,
-      "env": "metal",
-      "specularColor": "#f6e9ef",
-      "note": "DRAFT 2026-08-31 — pending Jordan lab approval, NOT locked. The pearlescent pink shell (Jordan: 'metallic-coated matte with rhinestones'). Base = physicallybased coats.metallic_coat_matte (metalness 1, matte roughness) tinted with the shell midtone MEASURED from CpRoll17-415PnkDot.psd (#c2a5b1 median, lifted a touch rosier for ACES desaturation of coloured metals). clearcoat 0.6 gives the pearl sheen over the matte metal base; maps=matte pulls the library matte normal/roughness like the other matte finishes. Colored metal -> envMapIntensity BELOW silver per the ACES rule."
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularIntensity": 1.2,
+      "specularColor": "#ffffff",
+      "note": "DRAFT v2 2026-08-31 — pending Jordan lab approval, NOT locked. Jordan corrected v1: 'this is more of a FLAT pink', not pearl — so a flat pale pink DIELECTRIC (metalness 0), satin-matte with the library matte maps, a hair of clearcoat 0.15. Colour re-sampled from CpRoll17-415PnkDot.psd's lit face: flat band #f0e8e9 (near-highlight) to #c5a9b6 (mid-shade); albedo set between at #ddc6d1. Tent env like the other PP dielectrics."
     },
     "PART_STUD_RHINESTONE": {
-      "color": "#fdfbfc",
+      "color": "#6d7772",
       "linear": [
-        0.984,
-        0.966,
-        0.975
+        0.155,
+        0.19,
+        0.172
       ],
       "metalness": 0.0,
       "roughness": 0.03,
       "clearcoat": 1.0,
-      "ior": 2.0,
+      "ior": 2.2,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 3.2,
+      "envMapIntensity": 4.0,
       "env": "metal",
-      "specularIntensity": 3.0,
+      "specularIntensity": 3.5,
       "specularColor": "#ffffff",
-      "note": "DRAFT 2026-08-31 — pending Jordan lab approval, NOT locked. Rhinestone treatment for the dot-cap stud lattice (replaces the PART_STUD_CHROME stand-in on rhinestone caps). A rhinestone is foil-backed crystal: dielectric (metalness 0), near-mirror roughness, high-IOR sparkle via ior 2.0 + specularIntensity 3 + hot envMapIntensity so the tiny domes catch the studio as point-sparkle. The dark setting ring comes free from the stud sink geometry (BB_CAP_DOTS). If the read needs true facets, that is a later geometry pass, not more material."
+      "note": "DRAFT v2 2026-08-31 — pending Jordan lab approval, NOT locked. Matched to the PSD stone zoom: each rhinestone reads as a BRIGHT WHITE SPARKLE RING around a DARK GLASSY HEART (flush-set crystal). Recipe: dark glass-green heart colour + blazing rim specular — dielectric, roughness 0.03, ior 2.2, specular 3.5, envMapIntensity 4.0 on the metal studio so the dome edge catches hot ring highlights while the face stays dark. Flush geometry already true (stud sink); stones stay explicit by CONTRAST, not protrusion — exactly Jordan's spec."
     }
   }
 }

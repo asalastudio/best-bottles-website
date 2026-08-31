@@ -36,6 +36,15 @@ export type ClosureMode =
   | "reducer" | "reducerCapped" | "antique" | "antiqueTassel" | "dropper"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
+/** stud material per dot cap: PINK wears the rhinestone treatment
+ *  (Jordan 2026-08-31: flush but explicit, sparkly); black/silver keep
+ *  their APPROVED chrome studs */
+function studMatFor(capMat: string): string {
+  if (capMat === "CAP_DOTS_PINK") return "PART_STUD_RHINESTONE";
+  if (capMat === "CAP_DOTS_SILVER") return "PART_STUD_CHROME_BRIGHT";
+  return "PART_STUD_CHROME";
+}
+
 /** cap MOULDINGS — different physical caps sharing one thread (18-415
  *  ships short / tall / leather; leather materials force their moulding) */
 export type CapMoulding = "short" | "tall" | "leather";
@@ -259,7 +268,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         g.push(build(moulding === "leather" ? capLeather
                    : moulding === "tall" ? capTall : cap, capMat));
         if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, "PART_STUD_CHROME"));
+          g.push(build(capDots, studMatFor(capMat)));
       }
       return g;
     }
@@ -276,8 +285,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         // shell/jewel split as collar/actuator)
         g.push(build(cap, capMat));
         if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, capMat === "CAP_DOTS_SILVER"
-                        ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME"));
+          g.push(build(capDots, studMatFor(capMat)));
       }
     } else {
       // material rule differs BY FINISH (PSD truth): 17-415 heads are
