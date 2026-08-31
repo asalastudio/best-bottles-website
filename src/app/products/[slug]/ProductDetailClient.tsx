@@ -1554,6 +1554,10 @@ export default function ProductDetailClient({
                                 heroImageUrl={group.heroImageUrl}
                                 onAddToCart={handleAddToCart}
                                 onAskGrace={openGracePanel}
+                                displayName={customerDisplayName}
+                                categoryLabel={`${group.category ?? "Glass Bottle"} · ${group.family ?? ""}`}
+                                inStock={inStock}
+                                caseQty={selectedVariant?.caseQuantity ?? null}
                             />
                         </div>
                     ) : null}
@@ -1987,21 +1991,29 @@ export default function ProductDetailClient({
 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
                         <div className="px-2 sm:px-0">
-                            {/* Category · Family */}
-                            <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-1 sm:mb-2">
-                                {group.category} · {group.family}
-                            </p>
+                            {/* Identity lives in the configurator hero for 3D
+                                families (single h1); repeat nothing here. */}
+                            {!is3dFamily && (
+                                <>
+                                    {/* Category · Family */}
+                                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-1 sm:mb-2">
+                                        {group.category} · {group.family}
+                                    </p>
 
-                            {/* Title */}
-                            <h1 className="font-serif text-xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-2 sm:mb-3">
-                                {customerDisplayName}
-                            </h1>
+                                    {/* Title */}
+                                    <h1 className="font-serif text-xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-2 sm:mb-3">
+                                        {customerDisplayName}
+                                    </h1>
+                                </>
+                            )}
 
                             {/* Sanity trust badges */}
                             <PdpInlineBadges blocks={pdpBlocks} />
 
                             {/* Trust Stack — stock, case pack, shipping */}
-                            <TrustStack variant={selectedVariant} inStock={inStock} />
+                            {!is3dFamily && (
+                                <TrustStack variant={selectedVariant} inStock={inStock} />
+                            )}
 
                             {selectedVariantSummary && (
                                 <SelectedVariantSummary

@@ -73,7 +73,8 @@ type Sibling = {
 
 export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
-  siblings, heroImageUrl, onAddToCart, onAskGrace, quantity,
+  siblings, heroImageUrl, onAddToCart, onAskGrace,
+  displayName, categoryLabel, inStock = true, caseQty,
 }: {
   currentSlug: string;
   groupTitle: string;          // "Elegant 60 ml"
@@ -84,7 +85,13 @@ export default function ConfiguratorPdp({
   heroImageUrl?: string | null;
   onAddToCart?: () => void;
   onAskGrace?: () => void;
-  quantity?: number;
+  /** product identity — the panel IS the buy box and leads with it
+      (Mobbin verdict 2026-08-31: every strong commerce PDP puts
+      title → price → options → CTA above the fold) */
+  displayName?: string;
+  categoryLabel?: string;      // "Glass Bottle · Cylinder"
+  inStock?: boolean;
+  caseQty?: number | null;
 }) {
   const router = useRouter();
   const fam = familyForSlug(currentSlug);
@@ -276,34 +283,60 @@ export default function ConfiguratorPdp({
     );
   };
 
+  /* --------------------------------------------- identity header */
+  const identity = (
+    <header>
+      {categoryLabel && (
+        <p className="text-xs uppercase tracking-eyebrow font-semibold
+                      text-gold-dim">
+          {categoryLabel}
+        </p>
+      )}
+      <h1 className="font-serif font-medium text-[30px] leading-[1.12]
+                     tracking-[-0.02em] text-obsidian mt-1.5">
+        {displayName ?? `${groupTitle} · ${capacityLabel}`}
+      </h1>
+      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3">
+        <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
+                          text-xs uppercase tracking-label font-semibold border
+                          ${inStock
+                            ? "text-[#1F6B49] border-[#2E9E6B]/30 bg-[#2E9E6B]/10"
+                            : "text-amber-700 border-amber-300 bg-amber-50"}`}>
+          <span className={`h-1.5 w-1.5 rounded-full
+                            ${inStock ? "bg-[#2E9E6B]" : "bg-amber-500"}`} />
+          {inStock ? "Available to order" : "Confirm availability"}
+        </span>
+        {caseQty ? (
+          <span className="text-ui text-slate">
+            Case of <span className="font-semibold text-obsidian">{caseQty}</span> · order any quantity
+          </span>
+        ) : null}
+      </div>
+      {priceEach != null && (
+        <p className="mt-3 text-[22px] font-semibold text-obsidian tabular-nums">
+          ${priceEach.toFixed(2)}
+          <span className="text-sm font-normal text-slate ml-1.5">each</span>
+        </p>
+      )}
+    </header>
+  );
+
   /* ------------------------------------------------------- step panel */
   const stepPanel = (
     <div className="h-full overflow-y-auto px-6 lg:px-11 py-7">
-      {/* context row */}
-      <div className="flex items-baseline justify-between gap-4 border-b
-                      border-champagne/50 pb-4">
-        <p className="text-base text-obsidian min-w-0 truncate">
-          {groupTitle}
-          <span className="text-slate mx-2">·</span>
-          <span className="text-slate">{capacityLabel}</span>
-        </p>
-        <div className="flex items-baseline gap-6 shrink-0">
-          {priceEach != null && (
-            <p className="text-lg font-semibold text-obsidian tabular-nums">
-              ${priceEach.toFixed(2)}
-              <span className="text-sm font-normal text-slate ml-1">each</span>
-            </p>
-          )}
-          <p className="text-sm text-slate border-b-2 border-muted-gold pb-0.5">
-            {stepCountLabel ?? "Step 2 of 4"}
-          </p>
-        </div>
-      </div>
+      {identity}
 
-      <h1 className="font-serif font-medium text-[34px] leading-[1.1]
-                     tracking-[-0.02em] text-obsidian mt-7">
-        How will this bottle be used?
-      </h1>
+      {/* configuration section — the QUESTION is a section, not the page */}
+      <div className="flex items-baseline justify-between gap-4 mt-8 pt-6
+                      border-t border-champagne/50">
+        <h2 className="font-serif font-medium text-[22px] leading-tight
+                       tracking-[-0.02em] text-obsidian">
+          How will this bottle be used?
+        </h2>
+        <p className="shrink-0 text-ui text-slate border-b-2 border-muted-gold pb-0.5">
+          {stepCountLabel ?? "Step 2 of 4"}
+        </p>
+      </div>
 
       {/* mode toggle */}
       <div className="grid grid-cols-2 border border-champagne rounded-[3px]
@@ -355,11 +388,11 @@ export default function ConfiguratorPdp({
         </div>
       )}
 
-      <h2 className="font-serif font-medium text-2xl text-obsidian mt-8">
+      <h3 className="font-serif font-medium text-xl text-obsidian mt-7">
         {mode === "guided"
           ? `Best matches for ${USE_CASES.find((u)=>u.id===useCase)?.label.toLowerCase()}`
           : "All compatible closures"}
-      </h2>
+      </h3>
 
       {/* match cards */}
       <div className="grid grid-cols-2 gap-3.5 mt-4">
@@ -492,6 +525,7 @@ export default function ConfiguratorPdp({
   /* --------------------------------------------------------- mobile */
   const mobile = (
     <div className="lg:hidden">
+      <div className="px-4 pb-4">{identity}</div>
       <div className="mx-4 aspect-[10/13] rounded-[2px] overflow-hidden relative">
         {stage}
       </div>
