@@ -121,10 +121,16 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   // image - the only way a translucent-plastic read survives the opaque
   // pass without env flare (matcaps ignore the environment entirely)
   const tubeMatcap = useTexture("/models/matcaps/diptube.png");
+  // GLASS parts (dropper pipette) get the glass-rod matcap: bright TIR
+  // rim, dark refraction ring, background core — the double-line glass
+  // read; the milky diptube matcap stays for PP tubes
+  const glassMatcap = useTexture("/models/matcaps/glassrod.png");
   useEffect(() => {
-    tubeMatcap.colorSpace = THREE.SRGBColorSpace;
-    tubeMatcap.needsUpdate = true;
-  }, [tubeMatcap]);
+    for (const t of [tubeMatcap, glassMatcap]) {
+      t.colorSpace = THREE.SRGBColorSpace;
+      t.needsUpdate = true;
+    }
+  }, [tubeMatcap, glassMatcap]);
   useEffect(() => {
     for (const t of Object.values(matteMaps)) {
       t.colorSpace = THREE.NoColorSpace;
@@ -237,7 +243,8 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       pip.traverse((o) => {
         const mesh = o as THREE.Mesh;
         if (mesh.isMesh)
-          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+          mesh.material = new THREE.MeshMatcapMaterial({
+            matcap: glassMatcap, side: THREE.DoubleSide });
       });
       // the pipette reaches NEAR THE BASE of every bottle, like the dip
       // tube (Jordan: a mid-bottle pipette "is not going to work")
@@ -321,7 +328,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

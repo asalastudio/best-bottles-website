@@ -676,15 +676,25 @@ def drp_bulb_builder(rig, finish, variant):
 
 
 def drp_pipette_builder(rig, finish, variant):
+    """HOLLOW glass tube — outer wall AND inner bore modelled, because
+    glass-in-glass reads by its DOUBLE edge lines (Jordan: the solid rod
+    'looks like some weird plastic pipe'). The bore's silhouette gives the
+    second line pair for free in any shading mode."""
     prof = [
-        (3.35, 1.0), (3.35, -44.0),             # straight tube
-        (1.6, -49.0),                            # taper
-        (1.6, -50.0),
+        # outer wall down
+        (3.35, 1.0), (3.35, -44.0),
+        (1.6, -49.0), (1.6, -50.0),
         (2.15, -50.8), (2.15, -52.2),            # balled tip
-        (0.9, -53.0), (0.001, -53.2),
+        (0.9, -53.0), (0.35, -53.15),
+        # tip orifice up the BORE
+        (0.35, -52.6), (0.9, -52.0),
+        (1.05, -50.0), (1.05, -49.0),
+        (2.1, -44.5),                             # bore widens after taper
+        (2.1, 0.6), (3.35, 1.0),                  # bore wall up to the top
     ]
     return dict(spec=dict(asset_id=f"BB_DRP_PIPETTE_{finish.replace('-','')}",
-                          od=6.7, tip=-53.2), profile=prof, modulate=None)
+                          od=6.7, bore=4.2, tip=-53.15),
+                profile=prof, modulate=None)
 
 
 def cap_part_builder(rig, finish, variant):
