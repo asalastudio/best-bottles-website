@@ -87,13 +87,16 @@ EMITTERS = [
     # window: tall cool panel front-right. WIDE enough to wrap (wt 0.55 =
     # the tent's approved rim width), never a bar
     dict(theta= 0.95, phi=0.95, wt=0.55, wp=1.25, i=7.0, c=(0.93,0.96,1.00), soft=1.00),
-    # THE SHEEN STRIP: the thin bright vertical reflection production glass
-    # carries (IMG_5048 has exactly one; Pacdora's glass lives on it). The
-    # front face mirrors the env BEHIND the camera, so it sits near theta 0.
-    # Narrow is allowed - HARD is not: soft=1.0, so it slides as a gradient.
-    dict(theta=-0.22, phi=1.00, wt=0.24, wp=1.40, i=16.0, c=(1,1,1), soft=1.00),
-    # dim front fill so the camera side of the room exists around the strip
-    dict(theta= 0.30, phi=1.05, wt=1.20, wp=1.00, i=0.9, c=(0.99,0.98,0.96), soft=1.00),
+    # THE SHEEN: a WIDE moderate dome behind the camera. A narrow hot strip
+    # was tried (wt 0.24, i 16, fully feathered) and REJECTED (Jordan,
+    # 2026-08-31): above ~8x the whole feathered shoulder still tone-maps to
+    # clipped white, and the cylinder compresses the reflection horizontally,
+    # so it reads as a painted-on line no matter how soft the radiance is.
+    # The real IMG_5048 sheen is a broad gradient across ~1/3 of the face;
+    # contrast comes from the DARK ZONES below, never from a hot peak.
+    dict(theta=-0.30, phi=1.00, wt=0.95, wp=1.30, i=4.5, c=(1,1,1), soft=1.00),
+    # dim front fill so the camera side of the room exists around the dome
+    dict(theta= 0.55, phi=1.05, wt=1.00, wp=1.00, i=0.9, c=(0.99,0.98,0.96), soft=1.00),
     # behind: wide soft bounce, keeps the far wall alive through the glass
     dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.8, c=(1.00,0.98,0.95), soft=1.00),
     # overhead scrim
