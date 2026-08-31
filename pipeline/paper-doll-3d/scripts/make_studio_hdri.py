@@ -33,7 +33,7 @@ import sys
 PROFILE = ("room" if "--room" in sys.argv
            else "browser" if "--browser" in sys.argv else "cycles")
 
-W, H = 1024, 512
+W, H = (2048, 1024) if PROFILE == "room" else (1024, 512)
 _name = {"browser": "studio-browser.hdr", "room": "studio-room.hdr",
          "cycles": "studio.hdr"}[PROFILE]
 OUT = pathlib.Path(__file__).resolve().parents[1] / _name
@@ -82,11 +82,13 @@ EMITTERS = [
     # version of this rig painted hard vertical lines down the cylinder
     # (2026-08-30) because rects have no falloff - that is why the room is an
     # HDRI and not JSX.
-    # key softbox: big, warm, front-left - the broad sheen that slides
-    dict(theta=-0.55, phi=0.75, wt=1.10, wp=0.90, i=9.0, c=(1.00,0.99,0.96), soft=1.00),
-    # window: tall cool panel front-right. WIDE enough to wrap (wt 0.55 =
-    # the tent's approved rim width), never a bar
-    dict(theta= 0.95, phi=0.95, wt=0.55, wp=1.25, i=7.0, c=(0.93,0.96,1.00), soft=1.00),
+    # THE RULE, settled over v2-v6 (Jordan): a source that mirrors on the
+    # FACE must be a pure gradient (soft=1.0) — any defined edge mid-face
+    # reads abrupt/painted, at any intensity. Definition is allowed ONLY for
+    # sources that land at the SILHOUETTE (the rim columns below), where
+    # curvature compresses them into the thin Aesop edge lines.
+    dict(theta=-0.55, phi=0.75, wt=1.10, wp=0.90, i=6.0, c=(1.00,0.99,0.96), soft=1.00),
+    dict(theta= 0.95, phi=0.95, wt=0.65, wp=1.25, i=3.5, c=(0.93,0.96,1.00), soft=1.00),
     # THE SHEEN: a WIDE moderate dome behind the camera. A narrow hot strip
     # was tried (wt 0.24, i 16, fully feathered) and REJECTED (Jordan,
     # 2026-08-31): above ~8x the whole feathered shoulder still tone-maps to
@@ -99,8 +101,14 @@ EMITTERS = [
     dict(theta= 0.55, phi=1.05, wt=1.00, wp=1.00, i=0.9, c=(0.99,0.98,0.96), soft=1.00),
     # behind: wide soft bounce, keeps the far wall alive through the glass
     dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.8, c=(1.00,0.98,0.95), soft=1.00),
-    # overhead scrim
-    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=2.2, c=(1,1,1), soft=1.00),
+    # RIM COLUMNS: tall panels at the sideways-behind directions the
+    # silhouette mirrors. Grazing Fresnel is ~100% reflective, so moderate
+    # intensity still draws a bright THIN line confined to the last degrees
+    # of curvature — the Aesop edge highlight, stable under rotation.
+    dict(theta= 2.35, phi=1.05, wt=0.40, wp=1.35, i=5.0, c=(1,1,1), soft=0.50),
+    dict(theta=-2.35, phi=1.05, wt=0.40, wp=1.35, i=5.0, c=(1,1,1), soft=0.50),
+    # overhead scrim - soft; it mirrors on the shelf and thread tops
+    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=2.2, c=(1,1,1), soft=0.90),
 ]
 
 
@@ -144,9 +152,13 @@ def build():
         # mirrored world is darker or brighter than the transmitted backdrop.
         # A uniform bright field erases them - measured on the 9 ml amber,
         # which rendered matte until these went in. Fully feathered.
-        for zt, zp, wt, wp, depth in [(2.10, 1.15, 0.90, 0.95, 0.70),
-                                      (-2.10, 1.15, 0.90, 0.95, 0.70),
-                                      (3.14159, 1.10, 0.80, 0.90, 0.55)]:
+        # v5 (Aesop reference): side dark zones REMOVED — they occupied the
+        # directions the silhouette edges mirror, erasing the thin bright rim
+        # lines that are Aesop glass's signature. Edge darkness comes free
+        # from tangential absorption; the env's job at the sides is the
+        # BRIGHT line, not more dark. Only the behind-camera zone remains,
+        # for front-face sheen contrast.
+        for zt, zp, wt, wp, depth in [(3.14159, 1.10, 0.80, 0.90, 0.55)]:
             dt = np.abs((T - zt + math.pi) % (2 * math.pi) - math.pi) / wt
             dp = np.abs(P - zp) / wp
             f = smoothstep(1.0, 0.0, np.hypot(dt, dp))
