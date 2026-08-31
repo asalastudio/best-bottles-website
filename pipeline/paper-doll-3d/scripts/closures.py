@@ -655,11 +655,11 @@ def drp_collar_builder(rig, finish, variant):
     fm = rig.FINISH_MASTERS[finish]
     skirt = fm["finish_h"] - 0.45
     prof = [
-        (10.65, -skirt), (10.65, 2.0),          # barrel
-        (9.6, 2.2), (5.4, 2.2),                 # top face in to the bulb base
-        (5.4, 1.0), (4.0, 0.8),                 # inner ring
-        (fm["bore_d"] / 2.0 - 0.2, 0.6),
-        (fm["bore_d"] / 2.0 - 0.2, -skirt),     # inner sleeve
+        (10.65, -skirt), (10.65, 1.6),          # barrel
+        (10.2, 2.1), (5.6, 2.1),                # FLAT top face (a stepped
+        (5.2, 1.7),                              # top caught the softbox as
+        (fm["bore_d"] / 2.0 - 0.2, 1.5),         # a weird hotspot - Jordan)
+        (fm["bore_d"] / 2.0 - 0.2, -skirt),
     ]
     return dict(spec=dict(asset_id=f"BB_DRP_COLLAR_{finish.replace('-','')}",
                           od=21.3, proud=2.0), profile=prof, modulate=None)

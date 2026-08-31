@@ -239,6 +239,9 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         if (mesh.isMesh)
           mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
       });
+      // the pipette reaches NEAR THE BASE of every bottle, like the dip
+      // tube (Jordan: a mid-bottle pipette "is not going to work")
+      pip.scale.y = Math.max(0.3, (neckY - 0.007) / 0.0532);
       g.push(pip);
       return g;
     }
