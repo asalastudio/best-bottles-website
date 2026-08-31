@@ -98,7 +98,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     ior: 1.54,
     thickness: 0.0165,
     attenuationColor: "#8f4a16",
-    attenuationDistance: 0.011,
+    attenuationDistance: 0.015,
     dispersion: 0.95,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
@@ -115,11 +115,20 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
       "near-black on a solid mesh and as a flat slab without the bake. " +
       "See studioPresets.ts APPROVED_STUDIO and public/models/" +
       "bodies-thickness/. " +
-      "WHY SO DARK: measured off the reference, the real bottle transmits " +
-      "only .13/.035/.003 of the backdrop through its body - far darker " +
-      "than every earlier eye-set amber. attenuationDistance 0.011 against " +
-      "thickness 0.0165 lets the baked map thin the walls back out, which " +
-      "is what keeps it from going opaque. " +
+      "attenuationDistance 0.015 SET BY JORDAN 2026-08-31 after the room v9 " +
+      "ambient cut, and it is the counter-intuitive one - RAISING it (less " +
+      "absorption) made the glass MORE saturated, not less. Measured on the " +
+      "live canvas, body mid as a fraction of the backdrop:\n" +
+      "    0.011 -> .097/.040/.040   blue/red 0.41\n" +
+      "    0.015 -> .194/.049/.045   blue/red 0.23  <- shipping\n" +
+      "    real  -> .130/.035/.003   blue/red 0.02\n" +
+      "Surface reflection is a FIXED colourless floor; letting more tinted " +
+      "light through raises the amber signal above it. So when this glass " +
+      "reads washed out, the fix is more transmission or a darker room - " +
+      "NOT more absorption, which only crushes it toward black. It ships " +
+      "brighter than the reference photograph (red .194 vs .130) by choice: " +
+      "the photo has its own exposure, and the luminous read is the Aesop " +
+      "one Jordan approved. " +
       "Superseded: eye-set #a8571a at 0.030 (too pale once the body was " +
       "hollow); photographic solves #8b6a38 (IMG_5040 wall shot) and " +
       "#c88e63 (catalogue studio shot).",
