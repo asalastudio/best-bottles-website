@@ -67,6 +67,17 @@ export type GlassPreset = {
   clearcoatRoughness: number;
   /** how hard the studio shows in the surface. */
   envMapIntensity: number;
+  /** false = skip the baked thicknessMap for this finish. The bake encodes
+   *  ABSORPTION depth, which colourless glass has none of - all the map does
+   *  on clear is modulate the refraction offset, drawing the bake's shoulder
+   *  transition as a horizontal band (Jordan, 2026-08-31). Clear keeps the
+   *  smooth scalar. Defaults true. */
+  thicknessBake?: boolean;
+  /** static glass-waviness: MeshTransmissionMaterial's distortion. Real
+   *  bottle walls are slightly irregular and the refraction SWIMS - the
+   *  strongest single "this is glass" cue a colourless bottle has. Keep it
+   *  subtle; zero for finishes whose character comes from elsewhere. */
+  distortion: number;
   /** true = this finish is acid-etched on the BODY ONLY, with a clear glass
    *  finish. Real etched bottles mask the neck so the closure seals, and the
    *  reference photograph shows exactly that: clear threads on a frosted
@@ -93,17 +104,21 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 1.0,
     roughness: 0.02,
     ior: 1.54,
-    thickness: 0.0165,
+    thickness: 0.002,
     attenuationColor: "#eef6f2",
     attenuationDistance: 0.06,
     dispersion: 1.4,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
-    envMapIntensity: 1.0,
-    anisotropicBlur: 0.10,
+    envMapIntensity: 1.15,
+    thicknessBake: false,
+    distortion: 0.14,
+    anisotropicBlur: 0.05,
     envRotationDeg: 62,
     provenance:
-      "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .689/.686/.678 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. attenuationDistance 0.06 measures .974/.978/.974 - just enough for the thick heel and finish to pick up the faint soda-lime green." +
+      "thickness 0.002 = the WALL, not the vessel: a hollow clear bottle is optically two thin plates. Vessel-scale 0.0165 made MTM refract like a SOLID ROD, smearing the backdrop into milk (Jordan: more frosted than clear). Tinted colourways keep vessel-scale thickness because theirs feeds ABSORPTION via the bake; clear opts out of the bake so its thickness is purely optical. " +
+      "CLEAR IS A MIRROR AND A LENS, so its dials are not the tinted ones: envMapIntensity 1.35 (reflection carries most of the read), distortion 0.14 (static wall waviness - the refraction must SWIM), anisotropicBlur 0.05 (crisp). The cyclorama darkens far off-axis specifically so the edge lens has something to compress into the dark silhouette bands every real clear bottle shows. "
+      + "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .689/.686/.678 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. attenuationDistance 0.06 measures .974/.978/.974 - just enough for the thick heel and finish to pick up the faint soda-lime green." +
       "SURFACE ONLY carried over from the approved amber (2026-08-31): ior 1.54, roughness 0.02, clearcoat 0.70/0.02 - one physical glass, so the surface must not differ by colourway. The ABSORPTION below is NOT approved and still needs its own lab session. " +
       "Faintly green soda-lime, as flint glass actually is. Long attenuation " +
       "distance so only the thickest sections tint at all.",
@@ -121,6 +136,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    distortion: 0,
     anisotropicBlur: 0.10,
     envRotationDeg: 0,
     provenance:
@@ -166,6 +182,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    distortion: 0,
     anisotropicBlur: 0.3,
     envRotationDeg: 34,
     provenance:
@@ -198,6 +215,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    distortion: 0.06,
     anisotropicBlur: 0.15,
     envRotationDeg: 46,
     provenance:
@@ -224,6 +242,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoatRoughness: 0.02,
     envMapIntensity: 0.9,
     frostMask: true,
+    distortion: 0.05,
     anisotropicBlur: 0.25,
     envRotationDeg: 18,
     provenance:

@@ -38,9 +38,59 @@ type Measured = {
 
 /* ------------------------------------------------------------------ model */
 
+/** Lane B's 17-415 closure set, seated per its manifest contract: every part
+ *  origins at the neck rim; parent to BB_ATTACH_NECK and zero the transform.
+ *  This is what Pacdora's clear bottle taught us: colourless glass reads as
+ *  glass when it has CONTENT of its own to refract — their dip tube, our
+ *  steel roller descending into the neck. Also the first configurator joint:
+ *  same parts, same datum, same materials.json. */
+const CLOSURE_MATS: Record<string, { color: string; roughness: number;
+  metalness: number; clearcoat?: number }> = {} as never;
+
+function Closure({ mode, neckY }: { mode: "roller" | "rollerCapped" | "none";
+                                    neckY: number }) {
+  const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
+  const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
+  const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
+  const [mats, setMats] = useState<Record<string, {
+    color: string; roughness: number; metalness: number; clearcoat?: number;
+  }> | null>(null);
+  useEffect(() => {
+    fetch("/models/materials.json").then(r => r.json())
+      .then(j => setMats(j.materials)).catch(() => {});
+  }, []);
+  const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string) => {
+    const scene = gltf.scene.clone(true);
+    const m = mats?.[matName];
+    scene.traverse((o) => {
+      const mesh = o as THREE.Mesh;
+      if (!mesh.isMesh) return;
+      mesh.material = new THREE.MeshPhysicalMaterial(m ? {
+        color: new THREE.Color(m.color), roughness: m.roughness,
+        metalness: m.metalness, clearcoat: m.clearcoat ?? 0,
+      } : { color: 0x888888, roughness: 0.4, metalness: 0.5 });
+    });
+    return scene;
+  }, [mats]);
+  const parts = useMemo(() => {
+    if (mode === "none" || !mats) return null;
+    const g: { scene: THREE.Object3D }[] = [];
+    g.push({ scene: build(housing, "PART_HOUSING_PP") });
+    g.push({ scene: build(ball, "PART_BALL_STEEL") });
+    if (mode === "rollerCapped") g.push({ scene: build(cap, "CAP_SHINY_BLACK") });
+    return g;
+  }, [mode, mats, build, housing, ball, cap]);
+  if (!parts) return null;
+  return (
+    <group position={[0, neckY, 0]}>
+      {parts.map((p, i) => <primitive key={i} object={p.scene} />)}
+    </group>
+  );
+}
+
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
-  thicknessUrl, bakeMax, frostUrl, onMeasure,
+  thicknessUrl, bakeMax, frostUrl, closure, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
@@ -49,6 +99,7 @@ function Model({
   thicknessUrl: string | null; bakeMax: number | null;
   /** baked frost mask, or null for a uniformly finished colourway */
   frostUrl: string | null;
+  closure: "roller" | "rollerCapped" | "none";
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
@@ -136,9 +187,17 @@ function Model({
     return () => { glass.visible = false; };
   }, [glass, preset, envIntensity, transmissionMat, bakeMax, thicknessTex]);
 
+  // rim datum from the GLB's own empty — the manifest contract
+  const neckY = useMemo(() => {
+    let y = 0;
+    scene.traverse((o) => { if (o.name === "BB_ATTACH_NECK") y = o.position.y; });
+    return y;
+  }, [scene]);
+
   return (
     <group>
       <primitive object={scene} />
+      <Closure mode={closure} neckY={neckY} />
       {glass && transmissionMat && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
@@ -173,7 +232,9 @@ function Model({
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
             anisotropicBlur={preset.anisotropicBlur}
-            distortion={0}
+            distortion={preset.distortion}
+            distortionScale={0.5}
+            temporalDistortion={0}
             attenuationDistance={preset.attenuationDistance}
             attenuationColor={preset.attenuationColor}
             color="#ffffff"
@@ -194,7 +255,9 @@ function Model({
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
             anisotropicBlur={preset.anisotropicBlur}
-            distortion={0}
+            distortion={preset.distortion}
+            distortionScale={0.5}
+            temporalDistortion={0}
             attenuationDistance={preset.attenuationDistance}
             attenuationColor={preset.attenuationColor}
             color="#ffffff" envMapIntensity={envIntensity}
@@ -379,6 +442,9 @@ export default function MaterialLab(
   // Only bodies-threaded/ carries the drawing-exact helix, and glass
   // magnifies the neck - a flat one is immediately obvious.
   const [threaded, setThreaded] = useState(true);
+  // interior content: Pacdora's lesson — clear glass needs something of its
+  // own to refract. Also the first live configurator joint.
+  const [closure, setClosure] = useState<"roller" | "rollerCapped" | "none">("roller");
   // Reference comparison. The photo is held LOCALLY (object URL) — nothing is
   // uploaded. Framing does not need to match: scale/offset/opacity exist so a
   // hand-held shot can still be lined up for judging.
@@ -411,7 +477,7 @@ export default function MaterialLab(
     return () => { dead = true; };
   }, [body.bodyId]);
 
-  const bakeLive = bakedMap && bakeMax != null;
+  const bakeLive = bakedMap && bakeMax != null && working.thicknessBake !== false;
   const modelUrl = bakeLive
     ? `/models/bodies-thickness/${body.bodyId}.glb`
     : threaded && hasThreaded
@@ -474,7 +540,14 @@ export default function MaterialLab(
                 camera={{ position: [0.12, 0.05, 0.18], fov }}
                 gl={{ antialias: true, toneMapping: THREE.ACESFilmicToneMapping,
                       toneMappingExposure: exposure }}>
-          <color attach="background" args={[bg]} />
+          {/* the OFF-FRAME ROOM: only rays that refract past the sweep's
+              edges ever see this — the camera never does, the sweep covers
+              the frame. Strongly-bent rays (heel, rim, silhouette) land
+              here, and its darkness is what draws the grey edge bands every
+              real clear bottle shows. Bright, it was the milkiness: bent
+              rays clamped to bone. */}
+          <color attach="background"
+                 args={[new THREE.Color(bg).multiplyScalar(0.32)]} />
           <Suspense fallback={null}>
             <Center key={modelUrl}>
               <Model url={modelUrl} preset={working} envIntensity={envIntensity}
@@ -482,6 +555,7 @@ export default function MaterialLab(
                        ? `/models/bodies-thickness/${body.bodyId}.thickness.png`
                        : null}
                      bakeMax={bakeLive ? bakeMax : null}
+                     closure={closure}
                      frostUrl={bakeLive && working.frostMask
                        ? `/models/bodies-thickness/${body.bodyId}.frost.png`
                        : null}
@@ -505,18 +579,24 @@ export default function MaterialLab(
                                         onBeforeCompile={(sh) => {
                                           sh.vertexShader = sh.vertexShader.replace(
                                             "#include <common>",
-                                            "#include <common>\nvarying float vSweepY;");
+                                            "#include <common>\nvarying float vSweepY;\nvarying float vSweepX;");
                                           sh.vertexShader = sh.vertexShader.replace(
                                             "#include <begin_vertex>",
-                                            "#include <begin_vertex>\nvSweepY = position.y;");
+                                            "#include <begin_vertex>\nvSweepY = position.y;\nvSweepX = position.x;");
                                           sh.fragmentShader = sh.fragmentShader.replace(
                                             "#include <common>",
-                                            "#include <common>\nvarying float vSweepY;");
+                                            "#include <common>\nvarying float vSweepY;\nvarying float vSweepX;");
                                           sh.fragmentShader = sh.fragmentShader.replace(
                                             "#include <dithering_fragment>",
                                             "#include <dithering_fragment>\n" +
                                             "float g = smoothstep(-0.05, 1.05, vSweepY);\n" +
-                                            "gl_FragColor.rgb *= mix(1.06, 0.72, g);");
+                                            "gl_FragColor.rgb *= mix(1.06, 0.72, g);\n" +
+                                            // off-axis falloff: invisible behind the
+                                            // bottle, but the silhouette's edge lens
+                                            // compresses it into the dark bands real
+                                            // clear glass shows
+                                            "float ox = smoothstep(0.14, 0.90, abs(vSweepX));\n" +
+                                            "gl_FragColor.rgb *= 1.0 - 0.30 * ox;");
                                         }} />
                 </mesh>
                 <ContactShadows opacity={0.42} scale={0.35} blur={2.4}
@@ -583,6 +663,9 @@ export default function MaterialLab(
         <Slider label="roughness" value={working.roughness} min={0} max={1} step={0.01}
                 onChange={(v) => set("roughness", v)}
                 hint="0 = polished · 0.5+ = etched/frosted" />
+        <Slider label="distortion" value={working.distortion} min={0} max={0.5} step={0.01}
+                onChange={(v) => set("distortion", v)}
+                hint="static wall waviness — the refraction swims like real glass" />
         <Slider label="anisotropicBlur" value={working.anisotropicBlur}
                 min={0} max={0.8} step={0.01}
                 onChange={(v) => set("anisotropicBlur", v)}
@@ -635,6 +718,14 @@ export default function MaterialLab(
                  onChange={(e) => setTransmissionMat(e.target.checked)} />
           <span>MeshTransmissionMaterial</span>
         </label>
+        <div style={{ display: "flex", gap: 4, alignItems: "center", margin: "2px 0 8px" }}>
+          <span style={{ color: "#b9b9c4", fontSize: 11, marginRight: 4 }}>closure</span>
+          {(["none", "roller", "rollerCapped"] as const).map((m) => (
+            <button key={m} onClick={() => setClosure(m)} style={btn(closure === m)}>
+              {m === "rollerCapped" ? "roller+cap" : m}
+            </button>
+          ))}
+        </div>
         <label style={{ display: "flex", gap: 6, alignItems: "center",
                         margin: "2px 0 4px",
                         cursor: bakeMax != null ? "pointer" : "default",
