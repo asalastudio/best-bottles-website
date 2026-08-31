@@ -20,7 +20,7 @@ import {
   MeshTransmissionMaterial, Center,
 } from "@react-three/drei";
 import ProductStage, { STAGE, useStageQuality } from "./ProductStage";
-import { useMetalStudio } from "@/lib/materials/metalStudio";
+import { useMetalStudioHdri } from "@/lib/materials/metalStudio";
 import * as THREE from "three";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
@@ -67,10 +67,10 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
   }, []);
 
   // three material classes, three environments — see the glass-material-lab
-  // skill: glass mirrors the room, plastics the tent, metals the studio.
-  // Metals bake three's RoomEnvironment — the threejs-materials library's
-  // "Studio mode", whose broad area lights never stripe a cylinder.
-  const metalEnv = useMetalStudio();
+  // skill: glass mirrors the room, plastics the tent, metals a REAL studio
+  // HDRI (Poly Haven monochrome_studio_02): actual softboxes give metals
+  // genuine structured reflections; monochrome keeps silver silver.
+  const metalEnv = useMetalStudioHdri();
   const plasticEnv = useEnvironment({ files: "/models/studio-browser.hdr" });
   // library matte finish maps (physicallybased): maps:"matte" in the registry
   const matteMaps = useTexture({

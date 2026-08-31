@@ -15,7 +15,7 @@ import { OrbitControls, Environment, Lightformer, useGLTF, useTexture,
          useEnvironment, Center,
          MeshTransmissionMaterial, Caustics, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
-import { useMetalStudio, METAL_STUDIO_DEFAULTS,
+import { useMetalStudioHdri, METAL_STUDIO_DEFAULTS,
          type MetalStudioParams } from "@/lib/materials/metalStudio";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
@@ -132,7 +132,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune }: 
   // metals bake three's RoomEnvironment — the threejs-materials library's
   // "Studio mode" (Jordan: the beautiful shiny gold/silver were graded
   // under it); broad area lights never stripe a cylinder
-  const metalEnv = useMetalStudio(metalTune);
+  const metalEnv = useMetalStudioHdri();
   // matcap for the BALL only: a chrome sphere in a soft-gradient env is
   // indistinguishable from glass (mirrors show only their surroundings);
   // "steel" is a baked PATTERN - bright sky, crisp horizon, dark floor,
@@ -1062,6 +1062,18 @@ export default function MaterialLab(
         <Slider label="band softness" value={metalTune.bandWidth}
                 min={0.05} max={0.5} step={0.01}
                 onChange={(v) => setMetalTune((t) => ({ ...t, bandWidth: v }))} />
+        <Slider label="key softbox (the visible shine)" value={metalTune.key}
+                min={0} max={14} step={0.2}
+                onChange={(v) => setMetalTune((t) => ({ ...t, key: v }))} />
+        <Slider label="key direction (deg)" value={metalTune.keyDeg}
+                min={0} max={360} step={5}
+                onChange={(v) => setMetalTune((t) => ({ ...t, keyDeg: v }))} />
+        <Slider label="key width (deg)" value={metalTune.keyWidth}
+                min={8} max={70} step={1}
+                onChange={(v) => setMetalTune((t) => ({ ...t, keyWidth: v }))} />
+        <Slider label="counter softbox" value={metalTune.counter}
+                min={0} max={8} step={0.1}
+                onChange={(v) => setMetalTune((t) => ({ ...t, counter: v }))} />
         <Slider label="accent strength" value={metalTune.lobe}
                 min={0} max={1} step={0.02}
                 onChange={(v) => setMetalTune((t) => ({ ...t, lobe: v }))} />
