@@ -56,9 +56,13 @@ type Emitter = {
  *  seeds (strips 3@z=+2 → 4.5@z=±1 → feathered); geometry unchanged. */
 const EMITTERS: Emitter[] = [
   // left + right vertical strips: clear-glass edge highlights, graded
-  // sheens (not stripes) in the metal caps
-  { position: [-4, 2, 1], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
-  { position: [4, 2, 1], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
+  // sheens (not stripes) in the metal caps. z=+1.6: at z=+1 the strips sat
+  // nearly beside the bottle and grazing-angle Fresnel wrapped the DARK
+  // volume glasses (amber/cobalt) in a glowing outline — "halo around the
+  // bottle" (Jordan). Forward-biased, the line lands just inboard of the
+  // silhouette: clear keeps its edge definition, ambers stop haloing.
+  { position: [-4, 2, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
+  { position: [4, 2, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
   // overhead softbox: cap tops and bottle shoulders
   { position: [0, 6, 0], scale: [6, 3], intensity: 2.5, sigma: [0.45, 0.45] },
   // broad dim backlight: amber/cobalt transmit instead of reading black
