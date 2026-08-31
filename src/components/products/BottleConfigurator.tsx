@@ -69,6 +69,15 @@ const TRIMS: { id: string; label: string; swatch: string; pump: boolean }[] = [
 ];
 
 /** antique bulb colourways (9, SKU-derived): bulb fabric + collar metal */
+/* the metal fitment finishes the antique atomizer ships in (Jordan:
+   shiny gold, shiny silver, matte silver — one gold only) — picked
+   independently of the bulb colour */
+const ANSP_METALS: { id: string; label: string; swatch: string }[] = [
+    { id: "CAP_SHINY_SILVER", label: "Shiny Silver", swatch: "linear-gradient(145deg,#f4f6f8,#9ea4a8)" },
+    { id: "CAP_MATTE_SILVER", label: "Matte Silver", swatch: "linear-gradient(145deg,#d9dadb,#a8a9ab)" },
+    { id: "CAP_SHINY_GOLD", label: "Shiny Gold", swatch: "linear-gradient(145deg,#f7e6a2,#b8912f)" },
+];
+
 const ANSP_COLORS: { id: string; label: string; bulb: string; collar: string; swatch: string }[] = [
     { id: "blk", label: "Black", bulb: "ANSP_BLACK", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#3a3a3a,#101010)" },
     { id: "wht", label: "White", bulb: "ANSP_WHITE", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#f4f4f4,#d5d5d5)" },
@@ -319,15 +328,33 @@ export default function BottleConfigurator({
                         <div className="flex items-center gap-2 flex-wrap justify-center">
                             {ANSP_COLORS.map((c) => (
                                 <button key={c.id} type="button"
-                                        onClick={() => { setCapMat(c.bulb); setTrimMat(c.collar); }}
+                                        onClick={() => setCapMat(c.bulb)}
                                         aria-label={`${c.label} bulb`}
                                         title={c.label}
                                         className={`h-6 w-6 rounded-full transition-all duration-200 ${
-                                            capMat === c.bulb && trimMat === c.collar
+                                            capMat === c.bulb
                                                 ? "ring-2 ring-muted-gold ring-offset-2 ring-offset-bone scale-110"
                                                 : "ring-1 ring-champagne hover:ring-ash"
                                         }`}
                                         style={{ background: c.swatch }} />
+                            ))}
+                        </div>
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-muted-gold font-bold pt-1">
+                            Fitment · {ANSP_METALS.find((m) => m.id === trimMat)?.label ?? "Shiny Silver"}
+                        </span>
+                        <div className="flex items-center gap-2">
+                            {ANSP_METALS.map((m) => (
+                                <button key={m.id} type="button"
+                                        onClick={() => setTrimMat(m.id)}
+                                        aria-label={`${m.label} fitment`}
+                                        aria-pressed={trimMat === m.id}
+                                        title={m.label}
+                                        className={`h-6 w-6 rounded-full transition-all duration-200 ${
+                                            trimMat === m.id
+                                                ? "ring-2 ring-muted-gold ring-offset-2 ring-offset-bone scale-110"
+                                                : "ring-1 ring-champagne hover:ring-ash"
+                                        }`}
+                                        style={{ background: m.swatch }} />
                             ))}
                         </div>
                     </div>

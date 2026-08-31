@@ -84,6 +84,8 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     ? "/models/closures/BB_DRP_BULB_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const drpPipette = useGLTF(has1841
     ? "/models/closures/BB_DRP_PIPETTE_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const anspAssembly = useGLTF(has1841
+    ? "/models/closures/BB_ANSP_ASSEMBLY_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspCollar = useGLTF(has1841
     ? "/models/closures/BB_ANSP_COLLAR_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspBulb = useGLTF(has1841
@@ -253,20 +255,61 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       return g;
     }
     if (mode === "antique" || mode === "antiqueTassel") {
-      // vintage bulb atomiser: chrome collar+stem in the metal (trimMat),
-      // mesh-net bulb (+tassel) in the fabric colourway (capMat), tube
-      g.push(build(anspCollar, trimMat), build(anspFerrule, trimMat),
-             build(anspBulb, capMat));
-      if (mode === "antiqueTassel") g.push(build(anspTassel, capMat));
-      const tube = build(dipTube, "PART_DIPTUBE_PP");
-      tube.traverse((o) => {
+      // the SCULPTED assembly (Jordan-approved prototype, Blender-zoned):
+      // SLOT_FABRIC keeps its baked knit texture, SLOT_METAL takes the
+      // library chrome/gold (trimMat), SLOT_TUBE the glass matcap
+      const asm = anspAssembly.scene.clone(true);
+      asm.traverse((o) => {
         const mesh = o as THREE.Mesh;
-        if (mesh.isMesh)
-          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+        if (!mesh.isMesh) return;
+        const slot = (mesh.material as THREE.Material)?.name ?? "";
+        if (slot === "SLOT_METAL") {
+          const m = mats?.[trimMat];
+          const mm = new THREE.MeshPhysicalMaterial(m ? {
+            color: new THREE.Color(m.color), roughness: m.roughness,
+            metalness: m.metalness, clearcoat: m.clearcoat ?? 0,
+          } : { color: 0xd3d8da, roughness: 0.08, metalness: 1 });
+          const sp = m as { specularIntensity?: number;
+                            specularColor?: string } | undefined;
+          if (sp?.specularIntensity != null)
+            mm.specularIntensity = sp.specularIntensity;
+          if (sp?.specularColor)
+            mm.specularColor = new THREE.Color(sp.specularColor);
+          if ((m as { maps?: string } | undefined)?.maps === "matte") {
+            // matte finishes carry the library normal/roughness maps
+            // (the sculpt has UVs from its bake, so they apply directly)
+            mm.normalMap = matteMaps.normal;
+            mm.roughnessMap = matteMaps.rough;
+            mm.roughness = 1.0;
+            mm.normalScale = new THREE.Vector2(0.6, 0.6);
+          }
+          mm.envMap = metalEnv;
+          // the tall straight collar face-on reflects only the HDRI's
+          // melted-horizon band — at cap-tuned intensities it blows to
+          // flat white, so the assembly's metal runs lower to keep the
+          // side-gradient structure a real chrome ferrule shows
+          mm.envMapIntensity = Math.min(m?.envMapIntensity ?? 1.15, 1.1);
+          mesh.material = mm;
+        } else if (slot === "SLOT_TUBE") {
+          mesh.material = new THREE.MeshMatcapMaterial({
+            matcap: glassMatcap, side: THREE.DoubleSide });
+          // the tube trims/stretches to each bottle's depth (Jordan: "cut
+          // or lengthen it whenever required") — geometry hangs from the
+          // pump stem down to -150mm, so a y-scale from the rim origin
+          // reaches near the base of any body
+          mesh.scale.y = Math.max(0.15, (neckY - 0.007) / 0.15);
+        } else if (slot === "SLOT_FABRIC") {
+          // the baked knit texture stays; the colourway tints it
+          // (capMat carries the ANSP_* fabric id in antique mode)
+          const fab = mats?.[capMat];
+          if (fab) {
+            const tinted = (mesh.material as THREE.MeshStandardMaterial).clone();
+            tinted.color = new THREE.Color(fab.color);
+            mesh.material = tinted;
+          }
+        }
       });
-      const nominal = fin === "18415" ? 0.08 : 0.062;
-      tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
-      g.push(tube);
+      g.push(asm);
       return g;
     }
     if (mode === "reducer" || mode === "reducerCapped") {
@@ -328,7 +371,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspAssembly, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

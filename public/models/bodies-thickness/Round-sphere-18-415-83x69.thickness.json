@@ -1,0 +1,11 @@
+{
+  "bodyId": "Round-sphere-18-415-83x69",
+  "maxThicknessM": 0.063194,
+  "clampPercentile": 98.0,
+  "medianThicknessM": 0.0026,
+  "resolution": 1024,
+  "channel": "green",
+  "source": "Round-sphere-18-415-83x69.glb",
+  "frostDatumM": null,
+  "note": "browser: material.thickness = maxThicknessM, material.thicknessMap = PNG (flipY=false, NoColorSpace)"
+}

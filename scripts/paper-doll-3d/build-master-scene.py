@@ -351,6 +351,105 @@ CYL_SPECS = {
         bore_d=7.6, lip_r=0.5,
         measured_body=False, measured_neck=False, source="extrapolated",
     ),
+
+    # ------------------------------------------- 18-415 scale-out (2026-08-31)
+    # Four bodies onboarded from the live-site harvest so every family that
+    # shares the finished 18-415 closure set can go 3D before any sculpted
+    # shape (Diva/Diamond/Grace) is attempted. Headline dims are the
+    # harvest's live-site truth; NO drawings on file (request list) — the
+    # 18/415 finish is a STANDARD copied verbatim from the Circle 50 sheet,
+    # exactly the circle100 doctrine. REPLACE with drawing values on arrival.
+    "cyl50": dict(
+        # Straight column, crisp near-flat shoulder (reference render
+        # GBCyl50RdcrMtSlTall: sharp step, thick base slab). Live 117 x O32.
+        asset_id="BB_BTL_CYL_050ML_001",
+        capacity_ml=50.0, overflow_ml=52.0,
+        height=117.0, diameter=32.0,
+        wall=2.85, base_th=4.5, push_up=1.0,
+        heel_r=2.2,
+        shoulder_r_out=2.2, shoulder_r_in=1.4,   # legacy pair, cone governs
+        shoulder_cone_h=1.2, shoulder_edge_r=1.2, shoulder_neck_r=0.5,
+        neck_finish="18-415",
+        neck_t=17.5, neck_e=15.5, neck_h=15.8,
+        thread_band=8.7,
+        thread_phase_deg=176.5,
+        thread_fade_in=0.18, thread_lead_out=0.12,
+        thread_top_gap=0.4,
+        bore_d=10.3, lip_r=0.5,
+        measured_body=False, measured_neck=True, source="harvested",
+    ),
+    "cyl100": dict(
+        asset_id="BB_BTL_CYL_100ML_001",
+        capacity_ml=100.0, overflow_ml=103.0,
+        height=154.0, diameter=35.0,
+        wall=1.8, base_th=4.5, push_up=1.0,
+        heel_r=2.2,
+        shoulder_r_out=2.2, shoulder_r_in=1.4,
+        shoulder_cone_h=1.2, shoulder_edge_r=1.2, shoulder_neck_r=0.5,
+        neck_finish="18-415",
+        neck_t=17.5, neck_e=15.5, neck_h=15.8,
+        thread_band=8.7,
+        thread_phase_deg=176.5,
+        thread_fade_in=0.18, thread_lead_out=0.12,
+        thread_top_gap=0.4,
+        bore_d=10.3, lip_r=0.5,
+        measured_body=False, measured_neck=True, source="harvested",
+    ),
+    # Sphere-on-plinth apothecary flask (reference GBRndFrst128Rdcr...: full
+    # sphere body, narrow foot disc, the sphere's own curve IS the shoulder).
+    # body="round" selects round_profile.
+    "round78": dict(
+        asset_id="BB_BTL_ROUND_078ML_001",
+        body="round", capacity_ml=78.0, overflow_ml=80.0,
+        height=73.0, diameter=59.0,
+        base_w=23.0, plinth_h=1.8,
+        wall=2.6, base_th=4.0, push_up=0.8,
+        neck_finish="18-415",
+        neck_t=17.5, neck_e=15.5, neck_h=15.8,
+        thread_band=8.7,
+        thread_phase_deg=176.5,
+        thread_fade_in=0.18, thread_lead_out=0.12,
+        thread_top_gap=0.4,
+        bore_d=10.3, lip_r=0.5,
+        measured_body=False, measured_neck=True, source="harvested",
+    ),
+    "round128": dict(
+        asset_id="BB_BTL_ROUND_128ML_001",
+        body="round", capacity_ml=128.0, overflow_ml=131.0,
+        height=83.0, diameter=69.0,
+        base_w=27.0, plinth_h=2.0,
+        wall=2.9, base_th=4.5, push_up=0.8,
+        neck_finish="18-415",
+        neck_t=17.5, neck_e=15.5, neck_h=15.8,
+        thread_band=8.7,
+        thread_phase_deg=176.5,
+        thread_fade_in=0.18, thread_lead_out=0.12,
+        thread_top_gap=0.4,
+        bore_d=10.3, lip_r=0.5,
+        measured_body=False, measured_neck=True, source="harvested",
+    ),
+    "elegant100": dict(
+        # Same oval loft as the drawing-exact elegant60, scaled to the
+        # harvest's live headline dims (109 x 61 x 30); section character
+        # (chamfers, corner R, shoulder drop) scaled per-axis from the 60.
+        asset_id="BB_BTL_ELEGANT_100ML_001",
+        body="elegant", capacity_ml=100.0, overflow_ml=103.0,
+        height=109.0, diameter=61.0, depth=30.0,
+        body_top=93.2, shoulder_line=91.2,
+        base_w=56.5, base_d=25.6, chamfer_h=2.5,
+        corner_r=3.6,
+        wall=2.4, wall_face=4.4, base_th=4.5,   # cavity-solved to ~103ml
+        neck_finish="18-415",
+        neck_t=17.5, neck_e=15.5, neck_h=15.9,
+        thread_band=10.1,
+        thread_phase_deg=176.5,
+        thread_fade_in=0.18, thread_lead_out=0.12,
+        thread_top_gap=0.4,
+        bore_d=10.3, lip_r=0.5,
+        polished_bore=True,
+        render_weld_finish=True,
+        measured_body=False, measured_neck=True, source="harvested",
+    ),
 }
 
 # Roll-on fitment, measured off the same PSD photograph that defined the neck
@@ -631,6 +730,82 @@ def cylinder_profile(s, fm=None):
     p += arc(R - wall - 2.0, s["base_th"] + 2.0, 2.0, 0, -90, 6)
     p.append((0.0, s["base_th"]))
     # dedupe consecutive near-identical points
+    out = [p[0]]
+    for q in p[1:]:
+        if abs(q[0] - out[-1][0]) > 1e-4 or abs(q[1] - out[-1][1]) > 1e-4:
+            out.append(q)
+    return out
+
+
+def round_profile(s, fm):
+    """Sphere-on-plinth flask (Round 78/128): the sphere's own curve is the
+    shoulder — it runs from a concave heel blend above the narrow foot disc
+    all the way to the finish land. Same closed-outline contract as
+    cylinder_profile, BODY-ONLY (fm required: ledge -> land -> datum).
+
+    Also stashes the numerically-integrated cavity in s["_cavity_ml"] so the
+    build dispatch can print the same CAVITY_AUDIT gate the lofts get."""
+    R_s = s["diameter"] / 2.0
+    wall = s["wall"]
+    E2, B2 = fm["neck_d"] / 2.0, fm["bore_d"] / 2.0
+    z_d = s["height"] - fm["finish_h"]
+    LAND_H, LED_H, LED_W = 1.2, 0.5, 0.55
+    neck_r = E2 + LED_W
+    z_n = z_d - LAND_H - LED_H
+    # sphere centre: its surface passes through the land bottom (neck_r, z_n)
+    z_c = z_n - math.sqrt(R_s * R_s - neck_r * neck_r)
+    r_p, h_p = s["base_w"] / 2.0, s["plinth_h"]
+    pu = s["push_up"]
+
+    # sphere param: r = R_s sin(phi), z = z_c + R_s cos(phi); phi from +z axis
+    phi_top = math.asin(neck_r / R_s)             # land junction (above centre)
+    blend_h = 2.5                                 # heel blend rise above plinth
+    phi_bot = math.acos(max(-1.0, (h_p + blend_h - z_c) / R_s))
+
+    p = [(0.0, pu)]
+    p += arc(r_p - 0.8, pu + 0.4, 0.8, 270, 340, 4)   # push-up out to the foot
+    p.append((r_p, 0.6))
+    p.append((r_p, h_p))                              # plinth wall
+    # concave heel blend: quadratic from the plinth edge to the sphere
+    bx, bz = R_s * math.sin(phi_bot), z_c + R_s * math.cos(phi_bot)
+    for i in range(1, 7):
+        t = i / 7.0
+        e = t * t * (3 - 2 * t)
+        p.append((r_p + (bx - r_p) * e, h_p + (bz - h_p) * t))
+    steps = 48                                        # the sphere itself
+    for i in range(steps + 1):
+        phi = phi_bot + (phi_top - phi_bot) * i / steps
+        p.append((R_s * math.sin(phi), z_c + R_s * math.cos(phi)))
+    for i in range(1, 7):                             # defined ledge step
+        t = i / 6.0
+        p.append((E2 + LED_W * (0.5 + 0.5 * math.cos(math.pi * t)),
+                  z_n + LED_H * t))
+    p.append((E2, z_d))                               # short controlled land
+    p.append((B2, z_d))                               # datum annulus
+    p.append((B2, z_d - 0.4))                         # bore continues down
+    # --- inner surface: bore -> inner sphere -> base ---
+    Ri = R_s - wall
+    z_j = z_c + math.sqrt(Ri * Ri - B2 * B2)          # bore meets inner sphere
+    stepsb = 8
+    for i in range(1, stepsb + 1):
+        t = i / stepsb
+        p.append((B2, (z_d - 0.4) + ((z_j) - (z_d - 0.4)) * t))
+    phi_i0 = math.asin(B2 / Ri)
+    z_b = s["base_th"]
+    phi_i1 = math.acos(max(-1.0, (z_b - z_c) / Ri))
+    inner = []
+    for i in range(1, 49):
+        phi = phi_i0 + (phi_i1 - phi_i0) * i / 48.0
+        inner.append((Ri * math.sin(phi), z_c + Ri * math.cos(phi)))
+    p += inner
+    p.append((0.0, z_b))
+    # cavity: revolve integral over the inner descent (bore + sphere + base)
+    icontour = [(B2, z_d)] + [(B2, z_j)] + inner + [(0.0, z_b)]
+    cav = 0.0
+    for (r0, zz0), (r1, zz1) in zip(icontour, icontour[1:]):
+        dz = zz0 - zz1                                # descending
+        cav += math.pi * ((r0 * r0 + r0 * r1 + r1 * r1) / 3.0) * dz
+    s["_cavity_ml"] = cav / 1000.0
     out = [p[0]]
     for q in p[1:]:
         if abs(q[0] - out[-1][0]) > 1e-4 or abs(q[1] - out[-1][1]) > 1e-4:
@@ -2106,6 +2281,13 @@ def build(out_path: Path, samples: int, ball_mode: str = "none",
         # derived beauty shell can weld outer and bore boundaries one-to-one.
         bottle = loft(s["asset_id"], elegant_stations(s, fm), segments=512)
         cav = elegant_cavity_ml(s)
+        tgt = s.get("overflow_ml", s["capacity_ml"])
+        print(f"CAVITY_AUDIT {bottle_key}: {cav:.1f} ml enclosed "
+              f"vs {tgt:.0f} ml overflow spec "
+              f"({'OK' if abs(cav - tgt) / tgt < 0.08 else 'OUT OF GATE'})")
+    elif s.get("body") == "round":
+        bottle = revolve(s["asset_id"], round_profile(s, fm))
+        cav = s["_cavity_ml"]
         tgt = s.get("overflow_ml", s["capacity_ml"])
         print(f"CAVITY_AUDIT {bottle_key}: {cav:.1f} ml enclosed "
               f"vs {tgt:.0f} ml overflow spec "
