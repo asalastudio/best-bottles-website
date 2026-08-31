@@ -105,8 +105,17 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.02,
-      "attenuationColor": "#e4b34e"
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#dcb189",
+      "absorptionCoefficient": [
+        33.6,
+        82.4,
+        138.6
+      ],
+      "_blender": {
+        "volume_density": 150.0,
+        "volume_color": "#e4b34e"
+      }
     },
     "GLASS_CLEAR": {
       "color": "#ffffff",
@@ -120,8 +129,17 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.42,
-      "attenuationColor": "#eef6f2"
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#fefefe",
+      "absorptionCoefficient": [
+        1.0,
+        0.6,
+        0.8
+      ],
+      "_blender": {
+        "volume_density": 7.1,
+        "volume_color": "#eef6f2"
+      }
     },
     "GLASS_COBALT": {
       "color": "#ffffff",
@@ -135,8 +153,17 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.011,
-      "attenuationColor": "#2f6bff"
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#4b58ff",
+      "absorptionCoefficient": [
+        265.0,
+        232.6,
+        0.0
+      ],
+      "_blender": {
+        "volume_density": 272.7,
+        "volume_color": "#2f6bff"
+      }
     },
     "GLASS_FROSTED": {
       "color": "#ffffff",
@@ -150,8 +177,17 @@
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.98,
-      "attenuationDistance": 0.28,
-      "attenuationColor": "#f4f6f5"
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#fefefe",
+      "absorptionCoefficient": [
+        1.0,
+        0.8,
+        0.9
+      ],
+      "_blender": {
+        "volume_density": 10.7,
+        "volume_color": "#f4f6f5"
+      }
     },
     "GLASS_GREEN": {
       "color": "#ffffff",
@@ -165,8 +201,17 @@
       "clearcoat": 0.0,
       "ior": 1.52,
       "transmission": 1.0,
-      "attenuationDistance": 0.013,
-      "attenuationColor": "#4fd486"
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#61b473",
+      "absorptionCoefficient": [
+        212.7,
+        78.8,
+        175.8
+      ],
+      "_blender": {
+        "volume_density": 230.8,
+        "volume_color": "#4fd486"
+      }
     },
     "PART_ACTUATOR_PP": {
       "color": "#f4f4f2",

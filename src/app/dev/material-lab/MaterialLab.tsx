@@ -12,7 +12,7 @@
 import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
 import { OrbitControls, Environment, Lightformer, useGLTF, Center,
-         MeshTransmissionMaterial } from "@react-three/drei";
+         MeshTransmissionMaterial, Caustics, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
@@ -39,10 +39,11 @@ type Measured = {
 /* ------------------------------------------------------------------ model */
 
 function Model({
-  url, preset, envIntensity, transmissionMat, onMeasure,
+  url, preset, envIntensity, transmissionMat, caustics, causticIntensity, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
-  transmissionMat: boolean; onMeasure: (m: Measured) => void;
+  transmissionMat: boolean; caustics: boolean; causticIntensity: number;
+  onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
   const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
@@ -104,7 +105,23 @@ function Model({
   return (
     <group>
       <primitive object={scene} />
-      {glass && transmissionMat ? (
+      {glass && transmissionMat && caustics ? (
+        <Caustics
+          // The closest real-time approximation of light focused THROUGH the
+          // glass onto the surface below. Not path-traced caustics - it renders
+          // the object from the light's point of view and projects the result -
+          // but it is the single strongest "this is really glass" cue available,
+          // because a bottle that casts a flat grey shadow reads as plastic.
+          color={preset.attenuationColor}
+          ior={preset.ior}
+          backsideIOR={preset.ior * 0.72}
+          worldRadius={0.006}
+          intensity={causticIntensity}
+          backside
+          causticsOnly={false}
+          resolution={1024}
+          lightSource={[-0.6, 1.2, 0.8]}
+        >
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
           <MeshTransmissionMaterial
@@ -118,12 +135,31 @@ function Model({
             roughness={preset.roughness}
             ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
+            clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
             anisotropicBlur={preset.roughness > 0.4 ? 0.6 : 0.1}
             distortion={0}
             attenuationDistance={preset.attenuationDistance}
             attenuationColor={preset.attenuationColor}
             color="#ffffff"
             envMapIntensity={envIntensity}
+          />
+        </mesh>
+        </Caustics>
+      ) : glass && transmissionMat ? (
+        <mesh geometry={glass.geometry} position={glass.position}
+              rotation={glass.rotation} scale={glass.scale}>
+          <MeshTransmissionMaterial
+            transmission={preset.transmission} thickness={preset.thickness}
+            backside backsideThickness={preset.thickness * 2.6}
+            samples={8} resolution={512} backsideResolution={256}
+            roughness={preset.roughness} ior={preset.ior}
+            chromaticAberration={preset.dispersion * 0.055}
+            clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
+            anisotropicBlur={preset.roughness > 0.4 ? 0.6 : 0.1}
+            distortion={0}
+            attenuationDistance={preset.attenuationDistance}
+            attenuationColor={preset.attenuationColor}
+            color="#ffffff" envMapIntensity={envIntensity}
           />
         </mesh>
       ) : null}
@@ -254,6 +290,9 @@ export default function MaterialLab(
   // multi-samples; MeshPhysicalMaterial does a single flat backdrop lookup.
   // The difference is most of what separates "glass" from "tinted plastic".
   const [transmissionMat, setTransmissionMat] = useState(true);
+  const [caustics, setCaustics] = useState(true);
+  const [causticIntensity, setCausticIntensity] = useState(0.04);
+  const [ground, setGround] = useState(true);
   // Default ON: the plain bodies/ build has a FLAT neck (0.00 mm relief).
   // Only bodies-threaded/ carries the drawing-exact helix, and glass
   // magnifies the neck - a flat one is immediately obvious.
@@ -332,8 +371,21 @@ export default function MaterialLab(
             <Center key={modelUrl}>
               <Model url={modelUrl} preset={working} envIntensity={envIntensity}
                     transmissionMat={transmissionMat}
+                    caustics={caustics} causticIntensity={causticIntensity}
                      onMeasure={onMeasure} />
             </Center>
+            {ground && m ? (
+              <group position={[0, -(m.hMm / 1000) / 2, 0]}>
+                {/* caustics need a surface to land on, and a floating bottle
+                    reads as a cut-out no matter how good the glass is */}
+                <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
+                  <planeGeometry args={[1, 1]} />
+                  <meshStandardMaterial color={bg} roughness={0.85} metalness={0} />
+                </mesh>
+                <ContactShadows opacity={0.42} scale={0.35} blur={2.4}
+                                far={0.06} resolution={1024} color="#3a3128" />
+              </group>
+            ) : null}
             <StudioEnv studioId={studioId} intensity={envIntensity} rotationDeg={envRot} />
           </Suspense>
           <Rig azimuth={azimuth} elevation={elevation} distance={distance}
@@ -413,6 +465,12 @@ export default function MaterialLab(
         <Slider label="dispersion" value={working.dispersion} min={0} max={4} step={0.05}
                 onChange={(v) => set("dispersion", v)}
                 hint="prismatic edge split — the anti-plastic cue" />
+        <Slider label="clearcoat" value={working.clearcoat} min={0} max={1} step={0.05}
+                onChange={(v) => set("clearcoat", v)}
+                hint="the wet second highlight — Pacdora runs this high, dispersion 0" />
+        <Slider label="clearcoatRoughness" value={working.clearcoatRoughness} min={0} max={0.5} step={0.01}
+                onChange={(v) => set("clearcoatRoughness", v)}
+                hint="~0.05 polished · higher softens the coat only" />
 
         <label style={{ display: "flex", gap: 6, alignItems: "center",
                         margin: "2px 0 4px", cursor: "pointer" }}>
@@ -424,6 +482,23 @@ export default function MaterialLab(
           backside refraction + 8-sample transmission. Off = plain
           MeshPhysicalMaterial, a single flat backdrop lookup.
         </div>
+
+        <label style={{ display: "flex", gap: 6, alignItems: "center", margin: "2px 0" }}>
+          <input type="checkbox" checked={caustics}
+                 onChange={(e) => setCaustics(e.target.checked)} />
+          <span>caustics</span>
+        </label>
+        {caustics ? (
+          <Slider label="caustic intensity" value={causticIntensity}
+                  min={0} max={0.25} step={0.005} onChange={setCausticIntensity}
+                  hint="light focused through the glass onto the surface" />
+        ) : null}
+        <label style={{ display: "flex", gap: 6, alignItems: "center",
+                        margin: "2px 0 10px" }}>
+          <input type="checkbox" checked={ground}
+                 onChange={(e) => setGround(e.target.checked)} />
+          <span>ground + contact shadow</span>
+        </label>
 
         <Section title="ENVIRONMENT" />
         <div style={{ display: "flex", gap: 4, marginBottom: 4 }}>

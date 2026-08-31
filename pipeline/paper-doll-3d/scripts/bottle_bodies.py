@@ -287,9 +287,23 @@ def trace_profile(alpha, n_points):
         # Correction 5: mode="same" zero-pads, which drags the foot and the
         # mouth toward zero radius - the two places the silhouette must stay
         # honest. Pad with the edge value instead.
-        pad = 2
-        padded = np.pad(radii, pad, mode="edge")
-        radii = np.convolve(padded, np.ones(5) / 5.0, mode="valid")
+        #
+        # Correction 11: the kernel must be WIDE. A 5-row average left 0.130 mm
+        # of peak-to-peak radius ripple on the straight wall - one pixel of
+        # silhouette quantisation. That is inside drawing tolerance and
+        # invisible on a matte surface, but a refracting wall bends rays enough
+        # to turn it into ~5 visible horizontal BANDS across the glass. The
+        # tolerance that matters for a transparent material is not the
+        # dimensional one.
+        #
+        # Scale the window to the source height (~4% of it) so a tall silhouette
+        # gets proportionally more smoothing, and run it twice - two passes of a
+        # box filter approximate a Gaussian, which removes the ripple without
+        # the ringing a single wide box leaves at the shoulder.
+        win = max(5, int(radii.size * 0.04) | 1)
+        for _ in range(2):
+            padded = np.pad(radii, win // 2, mode="edge")
+            radii = np.convolve(padded, np.ones(win) / win, mode="valid")
 
     ys = np.linspace(0.0, 1.0, radii.size)
     ys_new = np.linspace(0.0, 1.0, n_points)

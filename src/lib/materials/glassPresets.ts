@@ -57,6 +57,14 @@ export type GlassPreset = {
   /** prismatic edge split. The cheapest single cue that stops glass reading
    *  as tinted plastic. three >= 0.176. */
   dispersion: number;
+  /** 0..1 — a second, sharp specular lobe on top of the transmission: the
+   *  "wet" highlight production glass has and tinted plastic lacks. Pacdora's
+   *  three.js glass leans on it heavily (verified in their bundle 2026-08-30;
+   *  they also ship dispersion 0). Presets default to 0 so the approved looks
+   *  stay bit-identical — tune in the lab (try 1.0 with roughness ~0.05). */
+  clearcoat: number;
+  /** micro-roughness of the clearcoat lobe only. ~0.05 for polished glass. */
+  clearcoatRoughness: number;
   /** how hard the studio shows in the surface. */
   envMapIntensity: number;
   /** where the numbers came from, so nobody re-guesses them later. */
@@ -74,6 +82,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#eef6f2",
     attenuationDistance: 0.42,
     dispersion: 1.4,
+    clearcoat: 0,
+    clearcoatRoughness: 0.05,
     envMapIntensity: 1.0,
     provenance:
       "Faintly green soda-lime, as flint glass actually is. Long attenuation " +
@@ -89,6 +99,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#a8571a",
     attenuationDistance: 0.030,
     dispersion: 1.2,
+    clearcoat: 0,
+    clearcoatRoughness: 0.05,
     envMapIntensity: 1.0,
     provenance:
       "APPROVED BY EYE. These are the values that actually look right in the " +
@@ -119,6 +131,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#123f9e",
     attenuationDistance: 0.026,
     dispersion: 1.2,
+    clearcoat: 0,
+    clearcoatRoughness: 0.05,
     envMapIntensity: 1.0,
     provenance:
       "ART DIRECTION, not measurement. No physical cobalt bottle was " +
@@ -141,6 +155,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#e2d8c6",
     attenuationDistance: 0.16,
     dispersion: 0.9,
+    clearcoat: 0,
+    clearcoatRoughness: 0.05,
     envMapIntensity: 1.0,
     provenance:
       "ART DIRECTION, not measurement - no physical swirl bottle available. " +
@@ -160,6 +176,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#f4f6f5",
     attenuationDistance: 0.28,
     dispersion: 0.5,
+    clearcoat: 0,
+    clearcoatRoughness: 0.05,
     envMapIntensity: 0.9,
     provenance:
       "APPROVED BY EYE. The measurement still stands and is the useful " +
@@ -194,6 +212,8 @@ export function applyGlassPreset(
     attenuationColor: new THREE.Color(preset.attenuationColor),
     attenuationDistance: preset.attenuationDistance,
     dispersion: preset.dispersion,
+    clearcoat: preset.clearcoat,
+    clearcoatRoughness: preset.clearcoatRoughness,
     envMapIntensity: preset.envMapIntensity,
     transparent: true,
     side: THREE.FrontSide,
