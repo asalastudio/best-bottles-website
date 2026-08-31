@@ -217,6 +217,26 @@ const CYC_GEOMETRY = (() => {
   return g;
 })();
 
+/** Hex text entry that types freely and commits only valid #rrggbb. Exists
+ *  because the native color-dialog popup cannot open inside the embedded
+ *  preview pane — typing (and the swatches) must always work. */
+function HexField({ value, onValid }: { value: string; onValid: (v: string) => void }) {
+  const [draft, setDraft] = useState(value);
+  useEffect(() => { setDraft(value); }, [value]);
+  return (
+    <input value={draft} spellCheck={false}
+           onChange={(e) => {
+             const t = e.target.value.trim();
+             setDraft(t);
+             const v = /^[0-9a-fA-F]{6}$/.test(t) ? "#" + t : t;
+             if (/^#[0-9a-fA-F]{6}$/.test(v)) onValid(v.toLowerCase());
+           }}
+           style={{ width: 70, height: 22, background: "#101014",
+                    color: "#e8e8ea", border: "1px solid #33333c",
+                    fontSize: 11, fontFamily: "inherit", padding: "0 5px" }} />
+  );
+}
+
 function StudioEnv({ studioId, intensity, rotationDeg }:
                    { studioId: StudioPresetId; intensity: number; rotationDeg: number }) {
   const { scene } = useThree();
@@ -534,12 +554,28 @@ export default function MaterialLab(
                 onChange={(v) => set("attenuationDistance", v)}
                 hint="pair with thickness — together these ARE the depth" />
         <label style={{ display: "flex", justifyContent: "space-between",
-                        alignItems: "center", margin: "2px 0 10px" }}>
+                        alignItems: "center", margin: "2px 0 4px" }}>
           <span style={{ color: "#b9b9c4", fontSize: 11 }}>attenuationColor</span>
-          <input type="color" value={working.attenuationColor}
-                 onChange={(e) => set("attenuationColor", e.target.value)}
-                 style={{ width: 54, height: 22, background: "none", border: "1px solid #33333c" }} />
+          <span style={{ display: "flex", gap: 6, alignItems: "center" }}>
+            <HexField value={working.attenuationColor}
+                      onValid={(v) => set("attenuationColor", v)} />
+            <input type="color" value={working.attenuationColor}
+                   onChange={(e) => set("attenuationColor", e.target.value)}
+                   style={{ width: 34, height: 22, background: "none", border: "1px solid #33333c" }} />
+          </span>
         </label>
+        <div style={{ display: "flex", gap: 4, marginBottom: 10, flexWrap: "wrap" }}>
+          {[["amber", "#a8571a"], ["amber pale", "#c88e63"], ["amber deep", "#7a3c10"],
+            ["cobalt", "#123f9e"], ["clear", "#eef6f2"], ["frost", "#f4f6f5"],
+            ["swirl", "#e2d8c6"]].map(([n, c]) => (
+            <button key={n} onClick={() => set("attenuationColor", c)}
+                    title={c}
+                    style={{ width: 22, height: 18, background: c, cursor: "pointer",
+                             border: working.attenuationColor === c
+                               ? "2px solid #8a8af0" : "1px solid #33333c",
+                             borderRadius: 3 }} />
+          ))}
+        </div>
         <Slider label="dispersion" value={working.dispersion} min={0} max={4} step={0.05}
                 onChange={(v) => set("dispersion", v)}
                 hint="prismatic edge split — the anti-plastic cue" />
