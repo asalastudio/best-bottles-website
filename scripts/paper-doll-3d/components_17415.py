@@ -94,17 +94,32 @@ COLLAR_17415 = dict(
 )
 
 # Actuator head — one moulding for both; the pump adds the spout nub.
+#
+# RE-MEASURED 2026-08-31 against "14. 17-415 Lotion/19. Ltn17-415Blk.psd"
+# (Jordan: "this lotion pump is not accurate").
+#
+# SCALE ANCHOR — get this wrong and every number below is wrong. The black
+# collar photographs 285 px against COLLAR_17415's Ø19.5 (its own spec, NOT
+# a guess), giving 14.615 px/mm. An earlier pass here assumed Ø21.0 and
+# inflated the whole head by 7.7%; the anchor must come from a dimension we
+# already hold, never from eyeballing the sheet.
+#
+# At the correct scale the sheet confirms the moulding was already right to
+# about a millimetre — these are refinements, not a rebuild. Measured:
+# lower tier Ø15.46 to z 10.39, upper tier Ø13.48 to z 21.88, crown 22.70
+# with a 0.82 edge break, discharge orifice Ø4.58 centred 3.72 below the
+# crown (z 18.98) on the FRONT face, near-flush rather than a proud nub.
 ACTUATOR_17415 = dict(
     asset_id="BB_SPR_HEAD_17415_001",
     stem_d=6.0, stem_bottom_z=-2.0,
-    skirt_od=15.6, skirt_bottom_z=3.0, skirt_top_z=9.2, skirt_edge_r=0.4,
-    shoulder_top_z=10.0, body_od_low=13.75,
-    body_top_z=20.5, body_od_high=13.3,
-    top_z=21.85, top_edge_r=1.0,
-    wall=1.0, cavity_top_z=19.4,
-    orifice_z=18.6,
+    skirt_od=15.5, skirt_bottom_z=3.0, skirt_top_z=10.4, skirt_edge_r=0.4,
+    shoulder_top_z=11.2, body_od_low=13.5,
+    body_top_z=21.9, body_od_high=13.5,
+    top_z=22.7, top_edge_r=0.82,
+    wall=1.0, cavity_top_z=20.6,
+    orifice_z=19.0,
     spray_insert_d=3.6, spray_insert_depth=0.3, spray_hole_d=0.4,
-    pump_spout_d=4.5, pump_spout_proud=1.2, pump_spout_z=18.2, pump_hole_d=1.6,
+    pump_spout_d=4.6, pump_spout_proud=0.45, pump_spout_z=19.0, pump_hole_d=1.9,
 )
 
 OVERCAP_17415 = dict(
