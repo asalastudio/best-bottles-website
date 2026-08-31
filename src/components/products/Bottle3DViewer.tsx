@@ -29,6 +29,7 @@ import {
 
 export type ClosureMode =
   | "none" | "capped" | "roller" | "rollerCapped"
+  | "reducer" | "reducerCapped"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
 /** cap MOULDINGS — different physical caps sharing one thread (18-415
@@ -77,6 +78,9 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
   const dipTube = useGLTF(`/models/closures/BB_DIP_TUBE_${fin}.glb`);
   const pumpBody = useGLTF(`/models/closures/BB_PMP_BODY_${fin}.glb`);
+  const reducer = useGLTF(has1841
+    ? "/models/closures/BB_REDUCER_18415.glb"
+    : `/models/closures/BB_CAP_${fin}.glb`);
   const nozzle = useGLTF(has1841
     ? "/models/closures/BB_SPR_NOZZLE_18415.glb"
     : `/models/closures/BB_DIP_TUBE_${fin}.glb`);
@@ -211,6 +215,18 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         g.push(build(capDots, "PART_STUD_CHROME"));
       return g;
     }
+    if (mode === "reducer" || mode === "reducerCapped") {
+      // the pour-reducer seated in the neck; its cap goes over it
+      g.push(build(reducer, "PART_ACTUATOR_PP"));
+      if (mode === "reducerCapped") {
+        const moulding = capMat.startsWith("LEATHER_") ? "leather" : capMoulding;
+        g.push(build(moulding === "leather" ? capLeather
+                   : moulding === "tall" ? capTall : cap, capMat));
+        if (capMat.startsWith("CAP_DOTS"))
+          g.push(build(capDots, "PART_STUD_CHROME"));
+      }
+      return g;
+    }
     if (mode === "roller" || mode === "rollerCapped") {
       const metal = rollerVariant === "metal";
       g.push(
@@ -252,11 +268,13 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       if (mode === "pump" || mode === "pumpCapped")
         g.push(build(spout, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
       if (mode === "sprayerCapped" || mode === "pumpCapped")
-        g.push(build(overcap, "PART_OVERCAP_CLEAR"));
+        // 18-415 overcaps ship as a KIT in the trim colour (the tall cap
+        // beside the bottle in the legacy listings); 17-415's is clear
+        g.push(build(overcap, fin === "18415" ? trimMat : "PART_OVERCAP_CLEAR"));
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

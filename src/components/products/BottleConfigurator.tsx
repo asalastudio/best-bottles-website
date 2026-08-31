@@ -71,6 +71,7 @@ const TRIMS: { id: string; label: string; swatch: string; pump: boolean }[] = [
 const BASES = [
     { id: "none", label: "Bottle" },
     { id: "roller", label: "Roll-on" },
+    { id: "reducer", label: "Reducer" },
     { id: "sprayer", label: "Spray" },
     { id: "pump", label: "Pump" },
 ] as const;
@@ -118,11 +119,13 @@ export default function BottleConfigurator({
     const closure =
         base === "none" ? "none"
         : base === "roller" ? (withCap ? "rollerCapped" : "roller")
+        : base === "reducer" ? (withCap ? "reducerCapped" : "reducer")
         : base === "sprayer" ? (withCap ? "sprayerCapped" : "sprayer")
         : withCap ? "pumpCapped" : "pump";
     const closureLabel =
         base === "none" ? "Bottle only"
         : base === "roller" ? (withCap ? `Roll-on · ${capLabel} cap` : "Roll-on")
+        : base === "reducer" ? (withCap ? `Reducer · ${capLabel} cap` : "Pour reducer")
         : base === "sprayer" ? (withCap ? "Fine-mist spray · Overcap" : "Fine-mist spray")
         : withCap ? "Lotion pump · Overcap" : "Lotion pump";
     const trimLabel = TRIMS.find((t) => t.id === trimMat)?.label ?? "";
@@ -251,7 +254,7 @@ export default function BottleConfigurator({
                                     : "border-champagne bg-warm-white text-ash hover:text-ink"
                             }`}
                         >
-                            {base === "roller" ? "+ Cap" : "+ Overcap"}
+                            {base === "roller" || base === "reducer" ? "+ Cap" : "+ Overcap"}
                         </button>
                     ) : null}
                 </div>
@@ -281,7 +284,7 @@ export default function BottleConfigurator({
 
                 {/* cap finishes — only when capped */}
                 <AnimatePresence initial={false}>
-                    {closure === "rollerCapped" ? (
+                    {closure === "rollerCapped" || closure === "reducerCapped" ? (
                         <motion.div
                             initial={{ opacity: 0, height: 0 }}
                             animate={{ opacity: 1, height: "auto" }}
