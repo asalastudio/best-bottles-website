@@ -65,17 +65,27 @@ function Closure({ mode, neckY }: { mode: "roller" | "rollerCapped" | "none";
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
-      mesh.material = new THREE.MeshPhysicalMaterial(m ? {
+      const phys = m ? {
         color: new THREE.Color(m.color), roughness: m.roughness,
         metalness: m.metalness, clearcoat: m.clearcoat ?? 0,
-      } : { color: 0x888888, roughness: 0.4, metalness: 0.5 });
+        ior: (m as { ior?: number }).ior ?? 1.5,
+        transmission: (m as { transmission?: number }).transmission ?? 0,
+      } : { color: 0x888888, roughness: 0.4, metalness: 0.5,
+            ior: 1.5, transmission: 0 };
+      const mat = new THREE.MeshPhysicalMaterial(phys);
+      if (phys.transmission > 0) {           // translucent plastics
+        mat.thickness = 0.002;
+        mat.transparent = false;
+      }
+      if (phys.metalness >= 1) mat.envMapIntensity = 1.6;   // steel mirrors
+      mesh.material = mat;
     });
     return scene;
   }, [mats]);
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
-    g.push({ scene: build(housing, "PART_HOUSING_PP") });
+    g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
     g.push({ scene: build(ball, "PART_BALL_STEEL") });
     if (mode === "rollerCapped") g.push({ scene: build(cap, "CAP_SHINY_BLACK") });
     return g;
@@ -596,7 +606,13 @@ export default function MaterialLab(
                                             // compresses it into the dark bands real
                                             // clear glass shows
                                             "float ox = smoothstep(0.14, 0.90, abs(vSweepX));\n" +
-                                            "gl_FragColor.rgb *= 1.0 - 0.30 * ox;");
+                                            "gl_FragColor.rgb *= 1.0 - 0.30 * ox;\n" +
+                                            // soft light pool behind the product:
+                                            // a dark sweep with no pool reads as a
+                                            // flat card, not a lit studio
+                                            "float pool = exp(-pow(vSweepX / 0.30, 2.0)) *\n" +
+                                            "             exp(-pow((vSweepY - 0.13) / 0.26, 2.0));\n" +
+                                            "gl_FragColor.rgb *= 1.0 + 0.26 * pool;");
                                         }} />
                 </mesh>
                 <ContactShadows opacity={0.42} scale={0.35} blur={2.4}

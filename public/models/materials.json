@@ -316,6 +316,20 @@
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0
+    },
+    "PART_HOUSING_PP_NATURAL": {
+      "color": "#efece3",
+      "linear": [
+        0.8713,
+        0.8388,
+        0.7681
+      ],
+      "roughness": 0.42,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.49,
+      "transmission": 0.62,
+      "note": "natural (undyed) PP: translucent milky, NOT white plastic. Jordan 2026-08-31 against the real roller housing."
     }
   }
 }
