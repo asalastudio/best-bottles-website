@@ -22,6 +22,8 @@ import {
     type PdpBlock,
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
+import BottleConfigurator from "@/components/products/BottleConfigurator";
+import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -1559,6 +1561,23 @@ export default function ProductDetailClient({
                                 )}
                                 <div className="min-w-0">
                                     {(() => {
+                                        // 3D eligibility: ONLY where the whole chain is approved —
+                                        // hollow body GLB + thickness/frost bakes + locked glass
+                                        // preset. Today that is the 17-415 9 ml cylinder. Anything
+                                        // else keeps the photographic gallery.
+                                        const slug3d = group.slug ?? "";
+                                        const configurator3d: { bodyId: string; glass: GlassPresetId } | null =
+                                            /cylinder-9ml-.*17-415/.test(slug3d)
+                                                ? {
+                                                    bodyId: "Cyl-round-17-415-70x20",
+                                                    glass: /cobalt/.test(slug3d) ? "cobalt"
+                                                         : /frosted/.test(slug3d) ? "frosted"
+                                                         : /clear/.test(slug3d) ? "clear"
+                                                         : /swirl/.test(slug3d) ? "swirl"
+                                                         : "amber",
+                                                  }
+                                                : null;
+
                                         const variantBadge = (
                                             <span className="inline-flex items-center px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-full bg-obsidian/80 text-white backdrop-blur-sm">
                                                 {group.variantCount} Variant{group.variantCount !== 1 ? "s" : ""}
@@ -1632,6 +1651,34 @@ export default function ProductDetailClient({
                                                     shopifyVariantId: variantImageTiles[0].shopifyVariantId,
                                                 },
                                             });
+                                        }
+
+                                        // Mode 0 — LIVE 3D CONFIGURATOR. Only for families whose
+                                        // geometry, bake and materials are all approved (today: the
+                                        // 17-415 9 ml cylinder). The gallery drops to thumbs-only
+                                        // beneath it — the arrangement it was designed for.
+                                        if (configurator3d) {
+                                            return (
+                                                <div>
+                                                    <BottleConfigurator
+                                                        bodyId={configurator3d.bodyId}
+                                                        initialGlass={configurator3d.glass}
+                                                    />
+                                                    {galleryImages.length > 0 ? (
+                                                        <div className="mt-5">
+                                                            <ProductImageGallery
+                                                                images={galleryImages}
+                                                                primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
+                                                                badge={variantBadge}
+                                                                watermark={skuWatermark}
+                                                                aspectRatio="10/11"
+                                                                mainPadding="p-0"
+                                                                mode="thumbs-only"
+                                                            />
+                                                        </div>
+                                                    ) : null}
+                                                </div>
+                                            );
                                         }
 
                                         if (galleryImages.length > 0) {
