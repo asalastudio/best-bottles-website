@@ -49,6 +49,14 @@ def parse_args() -> argparse.Namespace:
     p.add_argument("--glb", required=True)
     p.add_argument("--out", required=True)
     p.add_argument("--res", type=int, default=1024)
+    p.add_argument("--frost-datum-mm", type=float, default=None,
+                   help="height of the frost line in mm (usually the finish "
+                        "base). Emits <bodyId>.frost.png: WHITE where the "
+                        "glass is etched, BLACK on the clear finish. Real "
+                        "acid-etched bottles mask the neck so the closure "
+                        "seals - the reference photo shows clear threads on "
+                        "a frosted body.")
+    p.add_argument("--frost-feather-mm", type=float, default=1.2)
     p.add_argument("--clamp-pct", type=float, default=98.0,
                    help="percentile of vertex thickness used as the encoding "
                         "ceiling; the base looking straight down the axis can "
@@ -160,6 +168,34 @@ def main() -> None:
     img.file_format = "PNG"
     img.save()
 
+    # ---- optional FROST MASK, baked through the same UVs so it lines up
+    # with the thickness map texel for texel.
+    if args.frost_datum_mm is not None:
+        datum = args.frost_datum_mm / 1000.0
+        feather = max(args.frost_feather_mm, 1e-6) / 1000.0
+        fattr = me.color_attributes.new(name="bb_frost", type="FLOAT_COLOR",
+                                        domain="POINT")
+        for v in me.vertices:
+            # Blender is Z-up here; 1 = etched below the datum, 0 = clear above
+            t = (datum - v.co.z) / feather
+            g = 0.0 if t <= 0.0 else (1.0 if t >= 1.0 else t * t * (3 - 2 * t))
+            fattr.data[v.index].color = (g, g, g, 1.0)
+        n_attr.attribute_name = "bb_frost"
+        fimg = bpy.data.images.new(f"{body_id}_frost", width=args.res,
+                                   height=args.res, alpha=False,
+                                   float_buffer=False)
+        fimg.generated_color = (0.0, 0.0, 0.0, 1.0)
+        fimg.colorspace_settings.name = "Non-Color"
+        n_img.image = fimg
+        bpy.ops.object.bake(type="EMIT", margin=8)
+        frost_path = out_dir / f"{body_id}.frost.png"
+        fimg.filepath_raw = str(frost_path)
+        fimg.file_format = "PNG"
+        fimg.save()
+        me.color_attributes.remove(me.color_attributes["bb_frost"])
+        print(f"[out] {frost_path.name}  frost line {args.frost_datum_mm} mm "
+              f"(feather {args.frost_feather_mm} mm)")
+
     # ---- export: strip the bake material and the color attribute; ship
     # geometry + UVs only, exactly like every other Lane A GLB
     me.materials.clear()
@@ -183,6 +219,8 @@ def main() -> None:
         "resolution": args.res,
         "channel": "green",
         "source": str(glb_path.name),
+        "frostDatumM": (round(args.frost_datum_mm / 1000.0, 6)
+                        if args.frost_datum_mm is not None else None),
         "note": "browser: material.thickness = maxThicknessM, "
                 "material.thicknessMap = PNG (flipY=false, NoColorSpace)",
     }

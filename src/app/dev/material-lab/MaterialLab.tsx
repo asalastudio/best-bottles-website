@@ -40,18 +40,30 @@ type Measured = {
 
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
-  thicknessUrl, bakeMax, onMeasure,
+  thicknessUrl, bakeMax, frostUrl, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
   /** baked per-texel thickness (Blender lane). null = identity 1x1 white,
    *  which multiplies the scalar by 1 — a no-op that keeps hook order stable. */
   thicknessUrl: string | null; bakeMax: number | null;
+  /** baked frost mask, or null for a uniformly finished colourway */
+  frostUrl: string | null;
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
   const thicknessTex = useTexture(
     thicknessUrl ?? "/models/bodies-thickness/white-1x1.png");
+  // frost mask: white = etched body, black = clear finish. Fed as a
+  // roughnessMap so one mesh carries both surfaces, the way a real
+  // acid-etched bottle does.
+  const frostTex = useTexture(
+    frostUrl ?? "/models/bodies-thickness/white-1x1.png");
+  useEffect(() => {
+    frostTex.flipY = false;
+    frostTex.colorSpace = THREE.NoColorSpace;
+    frostTex.needsUpdate = true;
+  }, [frostTex]);
   useEffect(() => {
     // glTF-convention UVs + linear data, not colour
     thicknessTex.flipY = false;
@@ -150,6 +162,7 @@ function Model({
             transmission={preset.transmission}
             thickness={effThickness}
             thicknessMap={thicknessTex}
+            roughnessMap={frostUrl ? frostTex : null}
             backside
             backsideThickness={effBackside}
             samples={8}
@@ -159,7 +172,7 @@ function Model({
             ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
-            anisotropicBlur={preset.roughness > 0.4 ? 0.6 : 0.1}
+            anisotropicBlur={preset.anisotropicBlur}
             distortion={0}
             attenuationDistance={preset.attenuationDistance}
             attenuationColor={preset.attenuationColor}
@@ -174,12 +187,13 @@ function Model({
           <MeshTransmissionMaterial
             transmission={preset.transmission} thickness={effThickness}
             thicknessMap={thicknessTex}
+            roughnessMap={frostUrl ? frostTex : null}
             backside backsideThickness={effBackside}
             samples={8} resolution={1024} backsideResolution={512}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
-            anisotropicBlur={preset.roughness > 0.4 ? 0.6 : 0.1}
+            anisotropicBlur={preset.anisotropicBlur}
             distortion={0}
             attenuationDistance={preset.attenuationDistance}
             attenuationColor={preset.attenuationColor}
@@ -468,6 +482,9 @@ export default function MaterialLab(
                        ? `/models/bodies-thickness/${body.bodyId}.thickness.png`
                        : null}
                      bakeMax={bakeLive ? bakeMax : null}
+                     frostUrl={bakeLive && working.frostMask
+                       ? `/models/bodies-thickness/${body.bodyId}.frost.png`
+                       : null}
                     transmissionMat={transmissionMat}
                     caustics={caustics} causticIntensity={causticIntensity}
                      onMeasure={onMeasure} />
@@ -480,8 +497,27 @@ export default function MaterialLab(
                     through a fillet, so no horizon line ever cuts through the
                     glass. Profile runs front->back->up; swept across x. */}
                 <mesh position={[0, -0.0002, 0]} geometry={CYC_GEOMETRY}>
+                  {/* a real sweep is never one flat tone, and CLEAR glass is
+                      invisible without something to bend: the vertical
+                      gradient is what its refraction actually shows */}
                   <meshStandardMaterial color={bg} roughness={0.85} metalness={0}
-                                        side={THREE.DoubleSide} />
+                                        side={THREE.DoubleSide}
+                                        onBeforeCompile={(sh) => {
+                                          sh.vertexShader = sh.vertexShader.replace(
+                                            "#include <common>",
+                                            "#include <common>\nvarying float vSweepY;");
+                                          sh.vertexShader = sh.vertexShader.replace(
+                                            "#include <begin_vertex>",
+                                            "#include <begin_vertex>\nvSweepY = position.y;");
+                                          sh.fragmentShader = sh.fragmentShader.replace(
+                                            "#include <common>",
+                                            "#include <common>\nvarying float vSweepY;");
+                                          sh.fragmentShader = sh.fragmentShader.replace(
+                                            "#include <dithering_fragment>",
+                                            "#include <dithering_fragment>\n" +
+                                            "float g = smoothstep(-0.05, 1.05, vSweepY);\n" +
+                                            "gl_FragColor.rgb *= mix(1.06, 0.72, g);");
+                                        }} />
                 </mesh>
                 <ContactShadows opacity={0.42} scale={0.35} blur={2.4}
                                 far={0.06} resolution={1024} color="#3a3128" />
@@ -547,6 +583,10 @@ export default function MaterialLab(
         <Slider label="roughness" value={working.roughness} min={0} max={1} step={0.01}
                 onChange={(v) => set("roughness", v)}
                 hint="0 = polished · 0.5+ = etched/frosted" />
+        <Slider label="anisotropicBlur" value={working.anisotropicBlur}
+                min={0} max={0.8} step={0.01}
+                onChange={(v) => set("anisotropicBlur", v)}
+                hint="smear of the TRANSMITTED image — high = opaque plastic" />
         <Slider label="ior" value={working.ior} min={1.3} max={1.8} step={0.01}
                 onChange={(v) => set("ior", v)} hint="soda-lime glass = 1.52" />
         <Slider label="thickness (m)" value={working.thickness} min={0} max={0.05} step={0.0005}

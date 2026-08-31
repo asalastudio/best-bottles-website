@@ -101,8 +101,27 @@ EMITTERS = [
     dict(theta=-0.35, phi=0.95, wt=1.60, wp=1.10, i=1.5, c=(1.00,0.99,0.96), soft=1.00),
     # behind: wide soft bounce, keeps the far wall alive through the glass
     dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.4, c=(1.00,0.98,0.95), soft=1.00),
-    # overhead scrim - soft; mirrors on the shelf and thread tops
-    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=2.6, c=(1,1,1), soft=0.90),
+    # overhead scrim - v10: calmed from 2.6. Pacdora's zenith band averages
+    # 0.72 against our 2.53; a hot ceiling flattens clear glass.
+    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=1.6, c=(1,1,1), soft=0.90),
+    # ---- v10 STRUCTURE LAYER, learned from Pacdora's shipped env
+    # (cdn 7c4487d5..., analysed 2026-08-31: 512x256, Photoshop-painted,
+    # max 5.8x, 99.5% of pixels under 2.6x, mild structure at EVERY
+    # elevation including the horizon). Refinement of the horizon law: what
+    # paints lines is a source that tone-maps well above the local field
+    # (ours were 4-16x); at <= ~1.8x the same placement is gentle modulation,
+    # and that mid-frequency richness is what CLEAR glass refracts into
+    # life - a lens pointed at a featureless void shows nothing. All patches
+    # below are capped FAR under the clip and vary in size, tint and
+    # elevation like a real room's walls, doorways and furniture.
+    dict(theta=-2.60, phi=0.90, wt=0.50, wp=0.70, i=0.55, c=(0.98,0.96,0.92), soft=0.85),
+    dict(theta=-1.60, phi=1.10, wt=0.35, wp=0.90, i=0.70, c=(0.94,0.95,0.99), soft=0.90),
+    dict(theta=-0.90, phi=1.25, wt=0.55, wp=0.60, i=0.45, c=(1.00,0.97,0.92), soft=1.00),
+    dict(theta= 0.35, phi=0.85, wt=0.30, wp=0.75, i=0.80, c=(0.99,0.98,0.95), soft=0.80),
+    dict(theta= 1.45, phi=1.00, wt=0.45, wp=1.00, i=0.65, c=(0.93,0.95,0.99), soft=0.90),
+    dict(theta= 2.20, phi=0.80, wt=0.60, wp=0.55, i=0.50, c=(0.98,0.97,0.94), soft=1.00),
+    dict(theta= 2.90, phi=1.15, wt=0.40, wp=0.80, i=0.60, c=(0.96,0.96,0.97), soft=0.85),
+    dict(theta=-3.05, phi=0.65, wt=0.45, wp=0.50, i=0.55, c=(0.99,0.97,0.93), soft=0.90),
 ]
 
 

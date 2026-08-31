@@ -67,6 +67,16 @@ export type GlassPreset = {
   clearcoatRoughness: number;
   /** how hard the studio shows in the surface. */
   envMapIntensity: number;
+  /** true = this finish is acid-etched on the BODY ONLY, with a clear glass
+   *  finish. Real etched bottles mask the neck so the closure seals, and the
+   *  reference photograph shows exactly that: clear threads on a frosted
+   *  body. Consumes <bodyId>.frost.png as a roughnessMap. */
+  frostMask?: boolean;
+  /** how far the TRANSMITTED image is smeared. Was a hidden step in the lab
+   *  (roughness > 0.4 ? 0.6 : 0.1), which slammed frosted to 0.6 and turned
+   *  it into opaque white plastic - etched glass is TRANSLUCENT, you should
+   *  still make out the far wall. Now data, per finish. */
+  anisotropicBlur: number;
   /** degrees. Per-colourway studio rotation, so the highlights land in a
    *  different place on each finish instead of five identical bottles
    *  (Jordan, 2026-08-31). It rotates the SAME approved room - no new
@@ -90,6 +100,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    anisotropicBlur: 0.10,
     envRotationDeg: 62,
     provenance:
       "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .689/.686/.678 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. attenuationDistance 0.06 measures .974/.978/.974 - just enough for the thick heel and finish to pick up the faint soda-lime green." +
@@ -110,6 +121,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    anisotropicBlur: 0.10,
     envRotationDeg: 0,
     provenance:
       "APPROVED 2026-08-31 BY JORDAN IN THE MATERIAL LAB - 'this is the " +
@@ -154,6 +166,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    anisotropicBlur: 0.10,
     envRotationDeg: 34,
     provenance:
       "SOLVED 2026-08-31 by measurement against public/references/9ml/" +
@@ -186,6 +199,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    anisotropicBlur: 0.15,
     envRotationDeg: 46,
     provenance:
       "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = 1.108/1.160/1.208 - BRIGHTER than the backdrop of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. A value above 1.0 cannot come from absorption at all; the flutes CONCENTRATE light, which is geometry doing the work. Roughness 0.30 is kept as this finish\u2019s identity." +
@@ -210,6 +224,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 0.9,
+    frostMask: true,
+    anisotropicBlur: 0.25,
     envRotationDeg: 18,
     provenance:
       "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .727/.722/.709 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. Roughness 0.55 is this finish\u2019s entire identity and is NOT the amber\u2019s 0.02 - the reference measures perfectly NEUTRAL (saturation 0.00), confirming frosted has essentially no volume absorption: it is the same glass with an etched SURFACE." +

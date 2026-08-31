@@ -6,5 +6,6 @@
   "resolution": 1024,
   "channel": "green",
   "source": "Cyl-round-17-415-70x20.glb",
+  "frostDatumM": 0.055,
   "note": "browser: material.thickness = maxThicknessM, material.thicknessMap = PNG (flipY=false, NoColorSpace)"
 }
