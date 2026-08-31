@@ -3,46 +3,58 @@
   "note": "Authored in Blender, consumed by the browser. Values are Principled BSDF sliders; Cycles is not three.js, so expect one round trip.",
   "materials": {
     "CAP_COPPER": {
-      "color": "#fad0bf",
+      "color": "#c77e52",
       "linear": [
-        0.955,
-        0.637,
-        0.538
+        0.573,
+        0.212,
+        0.083
       ],
-      "roughness": 0.42,
       "metalness": 1.0,
+      "roughness": 1.0,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "canonical measured metal reflectance (F0) table from the PBR references the three.js ecosystem uses (Filament/PBR book values); metal baseColor IS the reflectance and is always LIGHT - dark bases render as mud (Jordan rejected all previous metallized finishes)"
+      "maps": "matte",
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "specularColor": "#fdf9f9",
+      "note": "metal.copper - physicallybased.info measured values (CC0) via bernhard-42/threejs-materials (Apache-2.0); brushed/matte finishes use the repo's real normal+roughness maps at /models/pbr/ COLOUR OVERRIDE kept per Jordan: measured F0 copper is pale-pink and 'lost its copperness'; the penny tone #c77e52 is the approved product colour."
     },
     "CAP_MATTE_GOLD": {
-      "color": "#ffe29b",
+      "color": "#fff2c9",
       "linear": [
-        1.0,
-        0.766,
-        0.336
+        0.9999999999999999,
+        0.8926775272379572,
+        0.5900005962166698
       ],
-      "roughness": 0.4,
       "metalness": 1.0,
+      "roughness": 1.0,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "canonical measured metal reflectance (F0) table from the PBR references the three.js ecosystem uses (Filament/PBR book values); metal baseColor IS the reflectance and is always LIGHT - dark bases render as mud (Jordan rejected all previous metallized finishes)"
+      "maps": "matte",
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "specularColor": "#fcfffe",
+      "note": "metal.gold - physicallybased.info measured values (CC0) via bernhard-42/threejs-materials (Apache-2.0); brushed/matte finishes use the repo's real normal+roughness maps at /models/pbr/"
     },
     "CAP_MATTE_SILVER": {
-      "color": "#fbf7ee",
+      "color": "#fffefe",
       "linear": [
-        0.972,
-        0.96,
-        0.915
+        0.9960333152256678,
+        0.9933771717300072,
+        0.9884829524812248
       ],
-      "roughness": 0.42,
       "metalness": 1.0,
+      "roughness": 1.0,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "canonical measured metal reflectance (F0) table from the PBR references the three.js ecosystem uses (Filament/PBR book values); metal baseColor IS the reflectance and is always LIGHT - dark bases render as mud (Jordan rejected all previous metallized finishes)"
+      "maps": "matte",
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "specularColor": "#fefeff",
+      "note": "metal.silver - physicallybased.info measured values (CC0) via bernhard-42/threejs-materials (Apache-2.0); brushed/matte finishes use the repo's real normal+roughness maps at /models/pbr/"
     },
     "CAP_SHINY_BLACK": {
       "color": "#0b0b0b",
@@ -60,36 +72,40 @@
       "envMapIntensity": 0.65
     },
     "CAP_SHINY_GOLD": {
-      "color": "#ffe29b",
+      "color": "#fff2c9",
       "linear": [
-        1.0,
-        0.766,
-        0.336
+        0.9999999999999999,
+        0.8926775272379572,
+        0.5900005962166698
       ],
-      "roughness": 0.1,
       "metalness": 1.0,
+      "roughness": 0.05,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "SHINE = brightness headroom: a mirror reads as metal only when its reflections tone-map to near-WHITE. At envInt ~1.35 under exposure 0.91 the peaks never clipped and everything read matte-satin (Jordan, three rounds). Production configurators run metals at 2-3x env intensity; roughness at true mirror.",
-      "envMapIntensity": 2.6,
-      "anisotropy": 0.7
+      "maps": null,
+      "envMapIntensity": 1.6,
+      "env": "metal",
+      "specularColor": "#fcfffe",
+      "note": "POLISHED showcase variant per Jordan ('apply that shiny gold/silver to the cap'): metal.gold/metal.silver measured colours at mirror roughness, NO maps - the brushed maps stay on the matte variants."
     },
     "CAP_SHINY_SILVER": {
-      "color": "#fbf7ee",
+      "color": "#fffefe",
       "linear": [
-        0.972,
-        0.96,
-        0.915
+        0.9960333152256678,
+        0.9933771717300072,
+        0.9884829524812248
       ],
-      "roughness": 0.08,
       "metalness": 1.0,
+      "roughness": 0.05,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "SHINE = brightness headroom: a mirror reads as metal only when its reflections tone-map to near-WHITE. At envInt ~1.35 under exposure 0.91 the peaks never clipped and everything read matte-satin (Jordan, three rounds). Production configurators run metals at 2-3x env intensity; roughness at true mirror.",
-      "envMapIntensity": 2.6,
-      "anisotropy": 0.7
+      "maps": null,
+      "envMapIntensity": 1.6,
+      "env": "metal",
+      "specularColor": "#fefeff",
+      "note": "POLISHED showcase variant per Jordan ('apply that shiny gold/silver to the cap'): metal.gold/metal.silver measured colours at mirror roughness, NO maps - the brushed maps stay on the matte variants."
     },
     "CAP_WHITE": {
       "color": "#f4f3f0",
@@ -258,13 +274,14 @@
         0.96,
         0.915
       ],
-      "roughness": 0.1,
+      "roughness": 0.12,
       "metalness": 1.0,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "F0 silver, PBR under the rhythmic metal env. The matcap ball read as transparent over the white housing (its baked dark hemisphere looked like see-through); now that PBR metal works, the ball joins the caps on that path (Jordan, 2026-08-31).",
-      "envMapIntensity": 2.4
+      "note": "the ball's DOME mirrors the zenith, which the metal env dims on purpose (cap-halo fix) - caps and balls want opposite ceilings, so env choice is per-material data. The tent's bright feathered zenith at 2.8x gives the dome its steel.",
+      "envMapIntensity": 2.8,
+      "env": "tent"
     },
     "PART_HOUSING_PP": {
       "color": "#e8e6dd",

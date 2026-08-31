@@ -180,6 +180,40 @@ dome. Rooms are HDRIs, never JSX `Lightformer` rects (rects have no falloff).
 | grey-brown instead of tinted | neutral reflection floor dominating | more transmission or darker room |
 | everything black | viewport background is dark — glass TRANSMITS it | light backdrop |
 
+## The absorbed material library — never guess again
+
+`data/materials/physicallybased-library.json` holds **64 measured materials**
+extracted from bernhard-42/threejs-materials (Apache-2.0; values are CC0 from
+physicallybased.info): every metal (gold, silver, copper, steel, stainless,
+brass, bronze, nickel, titanium, zinc, tin) in polished/brushed/matte, plus
+glass, plastics, coats (`metallic_coat_gloss` = metallized plastic caps),
+paper, wood, textiles. Real brushed/matte normal+roughness maps live at
+`public/models/pbr/{brush,matte}/`. Start EVERY new component material from
+this file, then eye-tune.
+
+Hard-won component rules (Jordan's scorecard, 2026-08-31):
+- Metal baseColor IS the reflectance: always LIGHT (gold #fff2c9, silver
+  #fffefe). Dark bases render as mud.
+- EXCEPTION - measured copper is pale-pink and "loses its copperness" in
+  single-bounce raster; the approved product copper is the penny tone
+  #c77e52. Measured is the start, the eye rules.
+- Shine = brightness headroom (env intensity 1.6-2.6 on metals) so
+  reflections tone-map to near-white; silver needs LESS than gold (~97%
+  reflectance clips to structureless white).
+- A chrome sphere in a soft env is indistinguishable from glass; balls use
+  a synthesized matcap (bright CENTER - face-on normals sample the matcap
+  centre, so the horizon goes LOW in the image, never through the middle).
+- Cylinders NEVER matcap (normals vary only horizontally -> full-height
+  smears). Caps are PBR under the rhythmic metal env (hard cards allowed -
+  banned for glass, wanted by chrome); overhead card stays moderate or every
+  cap chamfer mirrors it as a white ring.
+- Three material classes, three environments (per-material `env` field in
+  materials.json): glass = the dark room; matte plastics = soft tent;
+  glossy/metals = rhythmic metal studio. Like a real product shoot.
+- MTM's anisotropicBlur exists to DECOUPLE surface frost from transmission
+  smear - native transmission couples them and pours neighbours' colour
+  into the glass on pan.
+
 ## Recording an approval
 
 Presets are DATA (`src/lib/materials/glassPresets.ts`), tuned in the lab and
