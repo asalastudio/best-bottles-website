@@ -74,22 +74,26 @@ tune until the ratios agree. **`B/R` — blue over red — is the saturation
 number and the one that matters**; matching absolute brightness is optional
 because a photograph carries its own exposure.
 
-### When the ratio method does NOT apply
+### Where the ratio method reaches — refined twice, keep both halves
 
-**It only works where absorption dominates — amber and cobalt.** For a
-near-colourless finish (clear, frosted, swirl) the reference ratio is
-unreachable and chasing it produces grey plastic:
+**Absorption colourways (amber, cobalt): direct fit.** Sweep the colour or
+distance until the ratios land.
 
-- clear measures .689 on the reference, but sweeping absorption on the live
-  canvas bottoms out at **.913** even at `attenuationDistance` 0.012
-- swirl measures **above 1.0** — brighter than the backdrop, which absorption
-  cannot produce at all; the flutes concentrate light
+**Scattering finishes (frosted): fit the LOSS, not the colour.** First read
+said "doesn't apply" — wrong. The frosted reference is 27% darker than its
+backdrop (T .727), light lost to SCATTERING, and that loss models cleanly as
+mild neutral-cool absorption: `#b6babd` @ 0.028 → T .725/.736/.742.
+**Lossless transmission IS the white-plastic look** (the old preset measured
+.983). The etch itself is neutral (saturation 0.00) — the attenuation stands
+in for scatter loss, not colour. Also structural: real acid-etching masks the
+finish, so bake a frost mask (`--frost-datum-mm`) and keep the threads clear.
 
-A colourless bottle gets its presence from **refraction, edges and
-reflection**, and the reference was shot in a room with far more to refract
-than our studio. Judge those finishes **structurally** — are the edges, the
-far wall and the shoulder legible? — and keep their absorption minimal.
-`roughness` carries frosted (0.55) and swirl (0.30); it is their identity.
+**Truly clear glass: the ratio is unreachable and that is fine.** Clear
+bottoms out at .913 against a .689 reference; swirl measures above 1.0
+(flutes concentrate light — absorption cannot produce that). These get their
+presence from refraction, edges and reflection: judge them structurally, and
+give the environment mid-frequency detail (below). `roughness` carries
+frosted (0.55) and swirl (0.30); it is their identity.
 
 ### Reference targets, measured from public/references/9ml/
 
@@ -122,7 +126,18 @@ rescue a source that is too defined.
 
 ## Lighting law — where artefacts come from
 
-**No above-ambient emitter may sit near the horizon (phi ~0.8–1.3).**
+**No emitter that tone-maps well above the local field may sit near the
+horizon (phi ~0.8–1.3).** Refined against Pacdora's shipped environment
+(cdn `7c4487d5...`, analysed 2026-08-31): a Photoshop-PAINTED 512x256 room,
+max 5.8x, 99.5% of pixels under 2.6x, mild structure at EVERY elevation.
+Placement was never the crime — intensity was. At <=~1.8x, horizon content
+is gentle modulation, and that mid-frequency richness everywhere is what
+CLEAR glass refracts into life: a lens pointed at a featureless void shows
+nothing. The room profile's v10 structure layer implements this. It also
+means environments can be AUTHORED AS IMAGES — Photoshop, Higgsfield, a
+photograph — via `pipeline/paper-doll-3d/scripts/ldr_to_env.py`, which caps
+the peak at 5.0 so the line artefact is impossible by construction. (AI is
+fine HERE: an environment has no product geometry to drift.)
 
 An environment map lives at INFINITY, so any bright source near the horizon is
 mirrored by a straight cylinder wall along its ENTIRE height. This is geometry,
@@ -182,6 +197,12 @@ dispersion 0.95   clearcoat 0.70   clearcoatRoughness 0.02
 
 Cobalt, solved the same way: `#060cc4` at the same surface and optical
 treatment — measures .000/.035/.592 against a .007/.066/.608 reference.
+Frosted: `#b6babd` @ 0.028 (scatter loss as absorption), roughness 0.55,
+anisotropicBlur 0.25, frost mask for clear threads.
+
+**Session discipline: the user's pane is theirs.** Run sweeps in your own
+browser tab. Driving sliders in the tab the user is watching stomps their
+working copy mid-click and reads as "you changed my locked preset".
 
 Restore point: tag `aesop-amber-v1`. Register: **Aesop** — dark apothecary
 amber, bone sweep, soft studio, one broad sheen and no lines.
