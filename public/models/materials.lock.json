@@ -397,17 +397,18 @@
   },
   "PART_DIPTUBE_PP": {
    "alphaHash": false,
-   "clearcoat": 0.55,
-   "color": "#f4f5f4",
+   "clearcoat": 0.3,
+   "color": "#c9c0b4",
    "env": "tent",
-   "envMapIntensity": 0.75,
+   "envMapIntensity": 0.3,
    "ior": 1.49,
    "linear": null,
    "maps": null,
    "metalness": 0.0,
    "opacity": 1.0,
-   "roughness": 0.18,
+   "roughness": 0.32,
    "specularColor": null,
+   "specularIntensity": 0.6,
    "transmission": 0.0
   },
   "PART_HOUSING_PP": {

@@ -596,20 +596,21 @@
       "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
     },
     "PART_DIPTUBE_PP": {
-      "color": "#f4f5f4",
+      "color": "#c9c0b4",
       "linear": null,
       "metalness": 0.0,
-      "roughness": 0.18,
-      "clearcoat": 0.55,
+      "roughness": 0.32,
+      "clearcoat": 0.3,
       "ior": 1.49,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 0.75,
+      "envMapIntensity": 0.3,
       "env": "tent",
       "specularColor": null,
-      "note": "MEASURED from the PSD tube layer itself (GBCrcl100SpryCu Layer 2: rgb ~246, alpha ~93%, O2.8mm at 13.25px/mm): the real tube reads NEAR-OPAQUE WHITE and thin - the 'paper' failure was width+flatness, not whiteness. Opaque + clearcoat highlight; NO alpha hash (dither read as animation noise - Jordan). Curved bezier geometry per the product photos.",
+      "note": "TRANSLUCENCY IS PAINTED, NOT SIMULATED: three's transmission buffer excludes transparent AND transmissive parts, so the tube must be opaque - and a translucent object READS as its background seen through milk. The PSD tube layer is near-white because the photo background is white; on OUR taupe stage the same tube reads milky-taupe #c9c0b4. Low env intensity kills the white rotation flare (Jordan). O2.8 curved thread per the product photos.",
       "opacity": 1.0,
-      "alphaHash": false
+      "alphaHash": false,
+      "specularIntensity": 0.6
     }
   }
 }
