@@ -1558,6 +1558,15 @@ export default function ProductDetailClient({
                                 categoryLabel={`${group.category ?? "Glass Bottle"} · ${group.family ?? ""}`}
                                 inStock={inStock}
                                 caseQty={selectedVariant?.caseQuantity ?? null}
+                                neckSize={group.neckThreadSize}
+                                capacityText={group.capacity}
+                                skuLabel={selectedVariant?.graceSku ?? null}
+                                price10={selectedVariant?.webPrice10pc ?? null}
+                                price12={selectedVariant?.webPrice12pc ?? null}
+                                sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
+                                quoteHref={quoteHref}
+                                qty={qty}
+                                onQtyChange={setQty}
                             />
                         </div>
                     ) : null}

@@ -75,6 +75,8 @@ export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
   siblings, heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
+  neckSize, capacityText, skuLabel, price10, price12,
+  sampleHref, quoteHref, qty = 1, onQtyChange,
 }: {
   currentSlug: string;
   groupTitle: string;          // "Elegant 60 ml"
@@ -92,6 +94,17 @@ export default function ConfiguratorPdp({
   categoryLabel?: string;      // "Glass Bottle · Cylinder"
   inStock?: boolean;
   caseQty?: number | null;
+  /** transaction column (BuildDirect-pattern structure, our brand):
+      spec strip + tiered price + sample-first CTA stack */
+  neckSize?: string | null;    // "17-415"
+  capacityText?: string | null;// "9 ml (0.3 oz)"
+  skuLabel?: string | null;
+  price10?: number | null;     // 10+ tier unit price
+  price12?: number | null;     // 12+ tier unit price
+  sampleHref?: string;
+  quoteHref?: string;
+  qty?: number;
+  onQtyChange?: (n: number) => void;
 }) {
   const router = useRouter();
   const fam = familyForSlug(currentSlug);
@@ -296,90 +309,102 @@ export default function ConfiguratorPdp({
                      tracking-[-0.02em] text-obsidian mt-1.5">
         {displayName ?? `${groupTitle} · ${capacityLabel}`}
       </h1>
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 mt-3">
-        <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
-                          text-xs uppercase tracking-label font-semibold border
-                          ${inStock
-                            ? "text-[#1F6B49] border-[#2E9E6B]/30 bg-[#2E9E6B]/10"
-                            : "text-amber-700 border-amber-300 bg-amber-50"}`}>
-          <span className={`h-1.5 w-1.5 rounded-full
-                            ${inStock ? "bg-[#2E9E6B]" : "bg-amber-500"}`} />
-          {inStock ? "Available to order" : "Confirm availability"}
-        </span>
-        {caseQty ? (
-          <span className="text-ui text-slate">
-            Case of <span className="font-semibold text-obsidian">{caseQty}</span> · order any quantity
-          </span>
-        ) : null}
-      </div>
-      {priceEach != null && (
-        <p className="mt-3 text-[22px] font-semibold text-obsidian tabular-nums">
-          ${priceEach.toFixed(2)}
-          <span className="text-sm font-normal text-slate ml-1.5">each</span>
-        </p>
-      )}
     </header>
   );
 
-  /* ------------------------------------------------------- step panel */
-  const stepPanel = (
-    <div className="h-full overflow-y-auto px-6 lg:px-11 py-7">
-      {identity}
+  /* spec strip — the certainty facts inline (BuildDirect's dimension row,
+     recast for B2B packaging: fitment is the consequential spec) */
+  const specStrip = (
+    <div className="flex flex-wrap items-center gap-x-6 gap-y-1.5 border-y
+                    border-champagne/50 py-2.5 mt-4">
+      {neckSize && (
+        <span className="text-sm text-obsidian">
+          <span className="text-slate">Neck</span>{" "}
+          <span className="font-semibold">{neckSize}</span>
+        </span>
+      )}
+      {capacityText && (
+        <span className="text-sm text-obsidian">
+          <span className="text-slate">Capacity</span>{" "}
+          <span className="font-semibold">{capacityText}</span>
+        </span>
+      )}
+      {caseQty ? (
+        <span className="text-sm text-obsidian">
+          <span className="text-slate">Case</span>{" "}
+          <span className="font-semibold">{caseQty}</span>
+        </span>
+      ) : null}
+      {skuLabel && (
+        <span className="text-spec text-slate font-mono">{skuLabel}</span>
+      )}
+    </div>
+  );
 
-      {/* configuration section — the QUESTION is a section, not the page */}
-      <div className="flex items-baseline justify-between gap-4 mt-8 pt-6
-                      border-t border-champagne/50">
-        <h2 className="font-serif font-medium text-[22px] leading-tight
-                       tracking-[-0.02em] text-obsidian">
-          How will this bottle be used?
-        </h2>
-        <p className="shrink-0 text-ui text-slate border-b-2 border-muted-gold pb-0.5">
-          {stepCountLabel ?? "Step 2 of 4"}
+  /* price block — unit price leads; the tier teaser sells volume */
+  const tierPrice = qty >= 12 && price12 ? price12
+                  : qty >= 10 && price10 ? price10
+                  : priceEach;
+  const priceBlock = (
+    <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-4">
+      {priceEach != null && (
+        <p className="text-[28px] font-semibold text-obsidian tabular-nums leading-none">
+          ${priceEach.toFixed(2)}
+          <span className="text-sm font-normal text-slate ml-1.5">/each</span>
         </p>
+      )}
+      {price12 != null && price12 < (priceEach ?? Infinity) && (
+        <a href="#volume-pricing" className="text-ui text-gold-dim underline
+                                             underline-offset-2">
+          ${price12.toFixed(2)} at 12+ · volume by quote
+        </a>
+      )}
+      <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
+                        text-xs uppercase tracking-label font-semibold border
+                        ${inStock
+                          ? "text-[#1F6B49] border-[#2E9E6B]/30 bg-[#2E9E6B]/10"
+                          : "text-amber-700 border-amber-300 bg-amber-50"}`}>
+        <span className={`h-1.5 w-1.5 rounded-full
+                          ${inStock ? "bg-[#2E9E6B]" : "bg-amber-500"}`} />
+        {inStock ? "Available to order" : "Confirm availability"}
+      </span>
+    </div>
+  );
+
+  /* closure selector — compact tile row (their style swatches), with the
+     guided use-case helper folded behind a link */
+  const closureRow = (
+    <div className="mt-6">
+      <div className="flex items-baseline justify-between gap-3">
+        <p className="text-sm text-obsidian">
+          <span className="text-slate">Closure:</span>{" "}
+          <span className="font-semibold">{activeMeta?.name ?? "Bottle only"}</span>
+        </p>
+        <button type="button"
+                onClick={() => setMode(mode === "guided" ? "direct" : "guided")}
+                className="text-ui text-gold-dim underline underline-offset-2">
+          {mode === "guided" ? "Hide guide" : "Help me choose"}
+        </button>
       </div>
 
-      {/* mode toggle */}
-      <div className="grid grid-cols-2 border border-champagne rounded-[3px]
-                      overflow-hidden mt-6">
-        {([["guided","Help me choose"],["direct","I know the closure"]] as const)
-          .map(([id,label]) => (
-          <button key={id} type="button" aria-pressed={mode===id}
-                  onClick={() => { setMode(id); setShowAll(id==="direct"); }}
-                  className={`py-[13px] text-sm font-semibold transition-colors
-                              duration-200 ${mode===id
-                                ? "bg-obsidian text-white"
-                                : "bg-white text-slate hover:text-obsidian"}`}>
-            {label}
-          </button>
-        ))}
-      </div>
-
-      {/* use-case tiles */}
       {mode === "guided" && (
-        <div className="grid grid-cols-5 gap-2.5 mt-6">
+        <div className="grid grid-cols-5 gap-2 mt-3">
           {USE_CASES.map((u) => {
             const Icon = USE_CASE_ICON[u.icon];
             const active = useCase === u.id;
             return (
               <button key={u.id} type="button" onClick={() => setUseCase(u.id)}
                       aria-pressed={active}
-                      className={`relative bg-white rounded-[3px] px-2 py-[18px]
-                                  flex flex-col items-center gap-2 transition-colors
+                      className={`relative bg-white rounded-[3px] px-1.5 py-2.5
+                                  flex flex-col items-center gap-1.5 transition-colors
                                   duration-200 focus-visible:outline-2
                                   focus-visible:outline-offset-2
                                   focus-visible:outline-muted-gold
                                   ${active
                                     ? "border-[1.5px] border-obsidian"
                                     : "border border-champagne hover:border-muted-gold"}`}>
-                {active && (
-                  <span className="absolute -top-2 -right-2 h-[22px] w-[22px]
-                                   rounded-full bg-obsidian flex items-center
-                                   justify-center">
-                    <Check className="h-3 w-3 text-white" weight="bold" />
-                  </span>
-                )}
-                <Icon className="h-[30px] w-[30px] text-obsidian" />
-                <span className="text-ui leading-tight text-center text-obsidian">
+                <Icon className="h-5 w-5 text-obsidian" />
+                <span className="text-xs leading-tight text-center text-obsidian">
                   {u.label}
                 </span>
               </button>
@@ -388,129 +413,105 @@ export default function ConfiguratorPdp({
         </div>
       )}
 
-      <h3 className="font-serif font-medium text-xl text-obsidian mt-7">
-        {mode === "guided"
-          ? `Best matches for ${USE_CASES.find((u)=>u.id===useCase)?.label.toLowerCase()}`
-          : "All compatible closures"}
-      </h3>
-
-      {/* match cards */}
-      <div className="grid grid-cols-2 gap-3.5 mt-4">
-        {visible.map((base) => {
+      <div className="flex gap-2.5 mt-3 overflow-x-auto pb-1 [scrollbar-width:none]">
+        {ranked.map((base) => {
           const meta = base !== "none" ? CLOSURE_META[base] : null;
           const sib = siblingFor(base);
           const selected = activeBase === base;
           if (!meta) return null;
+          const Glyph = CLOSURE_GLYPH[base] ?? SprayBottle;
           return (
             <button key={base} type="button"
                     onClick={() => setPreviewBase(base === committedBase ? null : base)}
-                    aria-pressed={selected}
-                    className={`relative text-left bg-white rounded-[3px] overflow-hidden
-                                transition-colors duration-200 focus-visible:outline-2
-                                focus-visible:outline-offset-2 focus-visible:outline-muted-gold
-                                ${selected ? "border-[1.5px] border-obsidian"
-                                           : "border border-champagne hover:border-muted-gold"}`}>
-              <div className="aspect-[16/10] bg-product-well relative">
+                    aria-pressed={selected} title={meta.benefit}
+                    className="shrink-0 w-[86px] text-center group">
+              <div className={`relative aspect-square bg-product-well rounded-[3px]
+                               overflow-hidden transition-colors duration-200
+                               ${selected
+                                 ? "border-[1.5px] border-obsidian"
+                                 : "border border-champagne group-hover:border-muted-gold"}`}>
                 {sib?.heroImageUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
                   <img src={sib.heroImageUrl} alt={meta.name}
                        className="h-full w-full object-cover" />
-                ) : (() => {
-                  const Glyph = CLOSURE_GLYPH[base] ?? SprayBottle;
-                  return (
-                    <span className="absolute inset-0 flex items-center justify-center">
-                      <Glyph className="h-10 w-10 text-obsidian/25" />
-                    </span>
-                  );
-                })()}
-                <span className={`absolute top-2.5 right-2.5 h-6 w-6 rounded-full
-                                  flex items-center justify-center transition-colors
-                                  ${selected
-                                    ? "bg-obsidian"
-                                    : "bg-white/70 border-[1.5px] border-obsidian/25"}`}>
-                  {selected && <Check className="h-3.5 w-3.5 text-white" weight="bold" />}
-                </span>
+                ) : (
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <Glyph className="h-7 w-7 text-obsidian/25" />
+                  </span>
+                )}
+                {selected && (
+                  <span className="absolute top-1.5 right-1.5 h-5 w-5 rounded-full
+                                   bg-obsidian flex items-center justify-center">
+                    <Check className="h-3 w-3 text-white" weight="bold" />
+                  </span>
+                )}
               </div>
-              <div className="px-3.5 py-3">
-                <p className="text-md font-semibold text-obsidian">{meta.name}</p>
-                <p className="text-spec text-slate mt-0.5">{meta.benefit}</p>
-              </div>
-              <div className="flex items-center justify-between px-3.5 py-2.5
-                              border-t border-champagne/40">
-                <span className="flex items-center gap-1.5 text-spec font-medium text-slate">
-                  <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-                  Verified to fit
-                </span>
-                <span className="text-spec tabular-nums text-obsidian">
-                  {priceDelta(base) || "+$0.00"}
-                </span>
-              </div>
+              <span className={`block mt-1.5 text-spec leading-tight
+                                ${selected ? "font-semibold text-obsidian" : "text-slate"}`}>
+                {meta.name}
+              </span>
             </button>
           );
         })}
       </div>
+      <p className="mt-2 flex items-center gap-1.5 text-spec text-slate">
+        <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
+        All {ranked.length} closures shown are verified to fit this bottle.
+        {priceDelta(activeBase) && activeBase !== committedBase ? (
+          <span className="text-obsidian tabular-nums ml-1">
+            {priceDelta(activeBase)} vs current
+          </span>
+        ) : null}
+      </p>
+    </div>
+  );
 
-      {/* meta row */}
-      <div className="flex items-center justify-between mt-4">
-        <button type="button"
-                className="flex items-center gap-1.5 text-ui font-medium text-obsidian
-                           hover:text-muted-gold transition-colors duration-200">
-          <GitCompare className="h-4 w-4" />
-          Compare these two
-        </button>
-        <button type="button" onClick={() => setShowAll((v) => !v)}
-                className="flex items-center gap-1 text-ui font-medium text-obsidian
-                           hover:text-muted-gold transition-colors duration-200">
-          {showAll ? "Show best matches" : `View all ${ranked.length} compatible closures`}
-          <CaretRight className="h-3.5 w-3.5" />
-        </button>
-      </div>
-
-      <div className="mt-7">{finishRow()}</div>
-
-      {/* CTA */}
-      <button type="button"
-              onClick={() => commit(activeBase)}
-              className="w-full mt-7 py-4 bg-obsidian text-white text-md font-semibold
-                         rounded-[3px] transition-colors duration-200
-                         hover:bg-muted-gold hover:text-obsidian
-                         focus-visible:outline-2 focus-visible:outline-offset-2
-                         focus-visible:outline-muted-gold">
-        {activeMeta ? `Use ${activeMeta.name}` : "Continue"}
-      </button>
-
-      <div className="flex items-center justify-between mt-4">
-        <button type="button" onClick={() => router.back()}
-                className="flex items-center gap-1 text-ui text-obsidian
-                           hover:text-muted-gold transition-colors duration-200">
-          <CaretLeft className="h-3.5 w-3.5" />
-          Back to bottle
-        </button>
-        <span className="flex items-center gap-1.5 text-ui text-gold-dim">
-          Saved as you go
-          <CheckCircle className="h-4 w-4" />
-        </span>
-      </div>
-
-      {/* buy row — commerce stays in the panel (2026-08-31: the cart was a
-          full viewport below the hero; a desktop buyer never saw it) */}
-      <div className="mt-6 pt-5 border-t border-champagne/50 flex items-center
-                      justify-between gap-4">
-        <div>
-          {priceEach != null && (
-            <p className="text-lg font-semibold text-obsidian tabular-nums">
-              ${priceEach.toFixed(2)}
-              <span className="text-sm font-normal text-slate ml-1">each</span>
-            </p>
-          )}
-          <a href="#volume-pricing"
-             className="text-ui text-gold-dim underline underline-offset-2">
-            Volume pricing below
+  /* CTA stack — sample-first (B2B buyers sample before they order),
+     then quantity + add to cart, then the working price summary */
+  const linePrice = tierPrice != null ? tierPrice * qty : null;
+  const savings = priceEach != null && tierPrice != null && tierPrice < priceEach
+    ? (priceEach - tierPrice) * qty : 0;
+  const ctaStack = (
+    <div className="mt-7">
+      {sampleHref && (
+        <>
+          <a href={sampleHref}
+             className="block w-full py-3.5 bg-obsidian text-white text-md
+                        font-semibold text-center rounded-[3px] transition-colors
+                        duration-200 hover:bg-muted-gold hover:text-obsidian
+                        focus-visible:outline-2 focus-visible:outline-offset-2
+                        focus-visible:outline-muted-gold">
+            Request a free sample
           </a>
+          <p className="text-spec text-slate mt-2">
+            Samples ship fast — and Grace confirms fitment before you commit
+            a production run.{" "}
+            {onAskGrace && (
+              <button type="button" onClick={onAskGrace}
+                      className="text-gold-dim underline underline-offset-2">
+                Ask Grace
+              </button>
+            )}
+          </p>
+        </>
+      )}
+
+      <div className="flex items-stretch gap-3 mt-4">
+        <div className="flex items-center border border-champagne rounded-[3px]">
+          <button type="button" aria-label="Decrease quantity"
+                  onClick={() => onQtyChange?.(Math.max(1, qty - 1))}
+                  className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
+                             transition-colors duration-200">−</button>
+          <span className="min-w-[2.5rem] text-center text-md font-semibold
+                           text-obsidian tabular-nums">{qty}</span>
+          <button type="button" aria-label="Increase quantity"
+                  onClick={() => onQtyChange?.(qty + 1)}
+                  className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
+                             transition-colors duration-200">+</button>
         </div>
         <button type="button" onClick={onAddToCart}
-                className="flex items-center gap-2 min-h-[44px] px-6 border
-                           border-obsidian text-obsidian text-md font-semibold
+                className="flex-1 flex items-center justify-center gap-2 py-2.5
+                           border border-obsidian text-obsidian text-md font-semibold
                            rounded-[3px] transition-colors duration-200
                            hover:bg-obsidian hover:text-white
                            focus-visible:outline-2 focus-visible:outline-offset-2
@@ -519,6 +520,50 @@ export default function ConfiguratorPdp({
           Add to cart
         </button>
       </div>
+
+      {linePrice != null && (
+        <div className="mt-4 rounded-[3px] border border-champagne/60 bg-travertine/40
+                        px-4 py-3 space-y-1">
+          <div className="flex items-baseline justify-between">
+            <span className="text-sm text-slate">Your price</span>
+            <span className="text-md font-semibold text-obsidian tabular-nums">
+              ${linePrice.toFixed(2)}
+            </span>
+          </div>
+          {savings > 0 && (
+            <div className="flex items-baseline justify-between">
+              <span className="text-sm text-slate">Volume savings</span>
+              <span className="text-sm font-semibold text-[#1F6B49] tabular-nums">
+                −${savings.toFixed(2)}
+              </span>
+            </div>
+          )}
+          <div className="flex items-baseline justify-between pt-0.5">
+            <a href="#volume-pricing"
+               className="text-spec text-gold-dim underline underline-offset-2">
+              Full volume pricing
+            </a>
+            {quoteHref && (
+              <a href={quoteHref}
+                 className="text-spec text-gold-dim underline underline-offset-2">
+                Request a quote for 12+
+              </a>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
+  /* ------------------------------------------------------- step panel */
+  const stepPanel = (
+    <div className="h-full overflow-y-auto px-6 lg:px-11 py-7">
+      {identity}
+      {specStrip}
+      {priceBlock}
+      {closureRow}
+      <div className="mt-6">{finishRow()}</div>
+      {ctaStack}
     </div>
   );
 
