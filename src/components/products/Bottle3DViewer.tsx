@@ -29,7 +29,7 @@ import {
 
 export type ClosureMode =
   | "none" | "capped" | "roller" | "rollerCapped"
-  | "reducer" | "reducerCapped"
+  | "reducer" | "reducerCapped" | "antique" | "antiqueTassel"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
 /** cap MOULDINGS — different physical caps sharing one thread (18-415
@@ -78,6 +78,14 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
   const dipTube = useGLTF(`/models/closures/BB_DIP_TUBE_${fin}.glb`);
   const pumpBody = useGLTF(`/models/closures/BB_PMP_BODY_${fin}.glb`);
+  const anspCollar = useGLTF(has1841
+    ? "/models/closures/BB_ANSP_COLLAR_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const anspBulb = useGLTF(has1841
+    ? "/models/closures/BB_ANSP_BULB_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const anspFerrule = useGLTF(has1841
+    ? "/models/closures/BB_ANSP_FERRULE_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
+  const anspTassel = useGLTF(has1841
+    ? "/models/closures/BB_ANSP_TASSEL_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const reducer = useGLTF(has1841
     ? "/models/closures/BB_REDUCER_18415.glb"
     : `/models/closures/BB_CAP_${fin}.glb`);
@@ -215,6 +223,23 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         g.push(build(capDots, "PART_STUD_CHROME"));
       return g;
     }
+    if (mode === "antique" || mode === "antiqueTassel") {
+      // vintage bulb atomiser: chrome collar+stem in the metal (trimMat),
+      // mesh-net bulb (+tassel) in the fabric colourway (capMat), tube
+      g.push(build(anspCollar, trimMat), build(anspFerrule, trimMat),
+             build(anspBulb, capMat));
+      if (mode === "antiqueTassel") g.push(build(anspTassel, capMat));
+      const tube = build(dipTube, "PART_DIPTUBE_PP");
+      tube.traverse((o) => {
+        const mesh = o as THREE.Mesh;
+        if (mesh.isMesh)
+          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+      });
+      const nominal = fin === "18415" ? 0.08 : 0.062;
+      tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
+      g.push(tube);
+      return g;
+    }
     if (mode === "reducer" || mode === "reducerCapped") {
       // the pour-reducer seated in the neck; its cap goes over it
       g.push(build(reducer, "PART_ACTUATOR_PP"));
@@ -274,7 +299,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

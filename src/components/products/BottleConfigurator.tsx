@@ -68,10 +68,25 @@ const TRIMS: { id: string; label: string; swatch: string; pump: boolean }[] = [
     { id: "CAP_COPPER", label: "Copper", swatch: "linear-gradient(145deg,#e8b18b,#9c5c38)", pump: true },
 ];
 
+/** antique bulb colourways (9, SKU-derived): bulb fabric + collar metal */
+const ANSP_COLORS: { id: string; label: string; bulb: string; collar: string; swatch: string }[] = [
+    { id: "blk", label: "Black", bulb: "ANSP_BLACK", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#3a3a3a,#101010)" },
+    { id: "wht", label: "White", bulb: "ANSP_WHITE", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#f4f4f4,#d5d5d5)" },
+    { id: "red", label: "Red", bulb: "ANSP_RED", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#8d1c1c,#4a0a0b)" },
+    { id: "pnk", label: "Pink", bulb: "ANSP_PINK", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#ef7ba0,#b23a63)" },
+    { id: "lvn", label: "Lavender", bulb: "ANSP_LAVENDER", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#c489b4,#7c4070)" },
+    { id: "mtsl", label: "Silver", bulb: "ANSP_SILVER", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#e2e1e2,#a7a5a7)" },
+    { id: "ivysl", label: "Ivory / Silver", bulb: "ANSP_IVORY", collar: "CAP_SHINY_SILVER", swatch: "linear-gradient(145deg,#f2f0e6,#d3cdb2)" },
+    { id: "gl", label: "Gold", bulb: "ANSP_GOLD", collar: "CAP_SHINY_GOLD", swatch: "linear-gradient(145deg,#ecd784,#ab8339)" },
+    { id: "ivygl", label: "Ivory / Gold", bulb: "ANSP_IVORY", collar: "CAP_SHINY_GOLD", swatch: "linear-gradient(145deg,#f2f0e6,#cbb469)" },
+];
+
 const BASES = [
     { id: "none", label: "Bottle" },
     { id: "roller", label: "Roll-on" },
     { id: "reducer", label: "Reducer" },
+    { id: "antique", label: "Bulb" },
+    { id: "antiqueTassel", label: "Bulb+Tassel" },
     { id: "sprayer", label: "Spray" },
     { id: "pump", label: "Pump" },
 ] as const;
@@ -112,20 +127,25 @@ export default function BottleConfigurator({
     const [base, setBase] = useState<BaseId>(
         fam.closureFromSlug[slugClosure] ?? (fam.bases.includes("roller") ? "roller" : "sprayer"));
     const [withCap, setWithCap] = useState(false);
-    const [capMat, setCapMat] = useState("CAP_SHINY_GOLD");
+    const isAntiqueStart = (fam.closureFromSlug[currentSlug.split("-").pop() ?? ""] ?? "").startsWith("antique");
+    const [capMat, setCapMat] = useState(isAntiqueStart ? "ANSP_BLACK" : "CAP_SHINY_GOLD");
     const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
-    const [trimMat, setTrimMat] = useState("CAP_SHINY_BLACK");
+    const [trimMat, setTrimMat] = useState(isAntiqueStart ? "CAP_SHINY_SILVER" : "CAP_SHINY_BLACK");
     const capLabel = CAPS.find((c) => c.id === capMat)?.label ?? "";
     const closure =
         base === "none" ? "none"
         : base === "roller" ? (withCap ? "rollerCapped" : "roller")
         : base === "reducer" ? (withCap ? "reducerCapped" : "reducer")
+        : base === "antique" ? "antique"
+        : base === "antiqueTassel" ? "antiqueTassel"
         : base === "sprayer" ? (withCap ? "sprayerCapped" : "sprayer")
         : withCap ? "pumpCapped" : "pump";
     const closureLabel =
         base === "none" ? "Bottle only"
         : base === "roller" ? (withCap ? `Roll-on · ${capLabel} cap` : "Roll-on")
         : base === "reducer" ? (withCap ? `Reducer · ${capLabel} cap` : "Pour reducer")
+        : base === "antique" ? "Vintage bulb sprayer"
+        : base === "antiqueTassel" ? "Vintage bulb · Tassel"
         : base === "sprayer" ? (withCap ? "Fine-mist spray · Overcap" : "Fine-mist spray")
         : withCap ? "Lotion pump · Overcap" : "Lotion pump";
     const trimLabel = TRIMS.find((t) => t.id === trimMat)?.label ?? "";
@@ -213,6 +233,12 @@ export default function BottleConfigurator({
                                 type="button"
                                 onClick={() => {
                                     setBase(c.id);
+                                    if (c.id.startsWith("antique") && !capMat.startsWith("ANSP_")) {
+                                        setCapMat("ANSP_BLACK"); setTrimMat("CAP_SHINY_SILVER");
+                                    }
+                                    if (!c.id.startsWith("antique") && capMat.startsWith("ANSP_")) {
+                                        setCapMat("CAP_SHINY_GOLD"); setTrimMat("CAP_SHINY_BLACK");
+                                    }
                                     if (c.id !== "none") {
                                         const to = siblingSlug(fam, currentSlug, glass, c.id);
                                         if (to && to !== currentSlug) router.push(`/products/${to}`);
@@ -282,6 +308,27 @@ export default function BottleConfigurator({
                     </div>
                 ) : null}
 
+                {(base === "antique" || base === "antiqueTassel") ? (
+                    <div className="mt-1 flex flex-col items-center gap-1.5">
+                        <span className="text-[9px] uppercase tracking-[0.2em] text-muted-gold font-bold">
+                            Bulb · {ANSP_COLORS.find((c) => c.bulb === capMat)?.label ?? "Black"}
+                        </span>
+                        <div className="flex items-center gap-2 flex-wrap justify-center">
+                            {ANSP_COLORS.map((c) => (
+                                <button key={c.id} type="button"
+                                        onClick={() => { setCapMat(c.bulb); setTrimMat(c.collar); }}
+                                        aria-label={`${c.label} bulb`}
+                                        title={c.label}
+                                        className={`h-6 w-6 rounded-full transition-all duration-200 ${
+                                            capMat === c.bulb && trimMat === c.collar
+                                                ? "ring-2 ring-muted-gold ring-offset-2 ring-offset-bone scale-110"
+                                                : "ring-1 ring-champagne hover:ring-ash"
+                                        }`}
+                                        style={{ background: c.swatch }} />
+                            ))}
+                        </div>
+                    </div>
+                ) : null}
                 {/* cap finishes — only when capped */}
                 <AnimatePresence initial={false}>
                     {closure === "rollerCapped" || closure === "reducerCapped" ? (

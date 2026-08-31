@@ -534,6 +534,117 @@ def pump_body_builder(rig, finish, variant):
                 profile=prof, modulate=None)
 
 
+# ------------------------------------------------- antique bulb sprayer
+# Measured 2026-08-31 from Ansp18-415Blk.psd at 14.55 px/mm (collar
+# barrel = O21.3): chrome collar barrel 18.5 above the rim; ringed stem
+# to a bullet nozzle topping out ~38; the mesh-net bulb is an egg
+# 53.6 x 40 tilted ~30 deg, centred (-35, 0, +26), joined to the stem by
+# a chrome ferrule. Tassel variant hangs cord+crown+fringe from the far
+# tip. Bulb/tassel are SEPARATE parts (fabric colourway); collar+stem
+# one chrome part.
+
+def ansp_collar_builder(rig, finish, variant):
+    """Collar barrel + ringed stem + bullet nozzle, one chrome revolve."""
+    fm = rig.FINISH_MASTERS[finish]
+    skirt = fm["finish_h"] - 0.45
+    prof = [
+        (fm["bore_d"] / 2.0 - 0.2, -skirt),
+        (fm["bore_d"] / 2.0 - 0.2, 16.0),      # inner sleeve
+        (2.0, 17.0), (2.0, 38.0),              # stem core
+        (1.2, 38.2),                           # tip
+        (2.2, 37.6), (4.6, 33.0), (4.4, 28.5), # bullet nozzle
+        (2.6, 27.0), (2.6, 25.0),
+        (4.0, 24.2), (4.0, 23.2),              # ring
+        (2.8, 22.6), (2.8, 21.4),
+        (4.5, 20.6), (4.5, 19.6),              # ring
+        (9.0, 18.6),
+        (10.65, 18.5),                          # barrel top
+        (10.65, -skirt),                        # barrel wall to rim skirt
+    ]
+    return dict(spec=dict(asset_id=f"BB_ANSP_COLLAR_{finish.replace('-','')}",
+                          od=21.3, barrel_h=18.5, top=38.2),
+                profile=prof, modulate=None)
+
+
+def ansp_bulb_builder(rig, finish, variant):
+    import bmesh
+    from mathutils import Matrix
+    me = bpy.data.meshes.new("ansp_bulb")
+    bm = bmesh.new()
+    bmesh.ops.create_uvsphere(bm, u_segments=48, v_segments=32, radius=20.0)
+    bmesh.ops.scale(bm, verts=bm.verts, vec=(1.34, 1.0, 1.0))
+    bm.to_mesh(me); bm.free()
+    me.transform(Matrix.Rotation(-0.52, 4, "Y"))
+    me.transform(Matrix.Translation((-35.0, 0.0, 26.0)))
+    obj = bpy.data.objects.new("ansp_bulb", me)
+    bpy.context.scene.collection.objects.link(obj)
+    bpy.ops.object.select_all(action="DESELECT")
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    bpy.ops.object.shade_smooth()
+    return dict(spec=dict(asset_id=f"BB_ANSP_BULB_{finish.replace('-','')}",
+                          egg=(53.6, 40.0), centre=(-35, 0, 26)), object=obj)
+
+
+def ansp_ferrule_builder(rig, finish, variant):
+    """Chrome cone joining the bulb to the stem side."""
+    import bmesh
+    from mathutils import Matrix
+    me = bpy.data.meshes.new("ansp_ferrule")
+    bm = bmesh.new()
+    bmesh.ops.create_cone(bm, cap_ends=True, segments=32,
+                          radius1=6.0, radius2=2.4, depth=13.0)
+    bm.to_mesh(me); bm.free()
+    me.transform(Matrix.Rotation(1.5708, 4, "Y"))          # axis -> +X
+    me.transform(Matrix.Translation((-11.0, 0.0, 26.5)))
+    obj = bpy.data.objects.new("ansp_ferrule", me)
+    bpy.context.scene.collection.objects.link(obj)
+    bpy.ops.object.select_all(action="DESELECT")
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    bpy.ops.object.shade_smooth()
+    return dict(spec=dict(asset_id=f"BB_ANSP_FERRULE_{finish.replace('-','')}"),
+                object=obj)
+
+
+def ansp_tassel_builder(rig, finish, variant):
+    """Cord + crown + fringe hanging from the bulb's far tip."""
+    import bmesh
+    from mathutils import Matrix
+    me = bpy.data.meshes.new("ansp_tassel")
+    acc = bmesh.new()
+    def add(prim):
+        tmp = bmesh.new(); prim(tmp)
+        m2 = bpy.data.meshes.new("t"); tmp.to_mesh(m2); tmp.free()
+        acc.from_mesh(m2); bpy.data.meshes.remove(m2)
+    # cord
+    def cord(bm):
+        bmesh.ops.create_cone(bm, cap_ends=True, segments=12,
+                              radius1=0.8, radius2=0.8, depth=14.0)
+        bmesh.ops.translate(bm, verts=bm.verts, vec=(-57.0, 0.0, 30.0))
+    add(cord)
+    # crown ball
+    def crown(bm):
+        bmesh.ops.create_uvsphere(bm, u_segments=20, v_segments=14, radius=4.0)
+        bmesh.ops.translate(bm, verts=bm.verts, vec=(-57.0, 0.0, 21.5))
+    add(crown)
+    # fringe (tapered skirt)
+    def fringe(bm):
+        bmesh.ops.create_cone(bm, cap_ends=True, segments=28,
+                              radius1=4.6, radius2=3.4, depth=26.0)
+        bmesh.ops.translate(bm, verts=bm.verts, vec=(-57.0, 0.0, 4.5))
+    add(fringe)
+    acc.to_mesh(me); acc.free()
+    obj = bpy.data.objects.new("ansp_tassel", me)
+    bpy.context.scene.collection.objects.link(obj)
+    bpy.ops.object.select_all(action="DESELECT")
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    bpy.ops.object.shade_smooth()
+    return dict(spec=dict(asset_id=f"BB_ANSP_TASSEL_{finish.replace('-','')}"),
+                object=obj)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish, variant)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -558,6 +669,10 @@ PARTS = {
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
     ("18-415", "SPR_NOZZLE", None):        nozzle_insert_builder,
+    ("18-415", "ANSP_COLLAR", None):       ansp_collar_builder,
+    ("18-415", "ANSP_BULB", None):         ansp_bulb_builder,
+    ("18-415", "ANSP_FERRULE", None):      ansp_ferrule_builder,
+    ("18-415", "ANSP_TASSEL", None):       ansp_tassel_builder,
     ("18-415", "SPR_COLLAR", None):        collar_builder,
     ("18-415", "SPR_ACTUATOR", None):      actuator_builder,
     ("18-415", "SPR_OVERCAP", None):       overcap_builder,
