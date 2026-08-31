@@ -122,6 +122,12 @@ def main() -> None:
     # ---- bake attribute -> texture via a throwaway emission material
     img = bpy.data.images.new(f"{body_id}_thickness", width=args.res,
                               height=args.res, alpha=False, float_buffer=False)
+    # Pre-fill with the MEDIAN, not black: Cycles writes only island-covered
+    # texels, and bilinear sampling at island edges blends into the
+    # background. Black background = zero thickness = white unabsorbed
+    # speckles along every UV seam (seen as shoulder noise, 2026-08-31).
+    g_med = min(median / clamp, 1.0)
+    img.generated_color = (g_med, g_med, g_med, 1.0)
     img.colorspace_settings.name = "Non-Color"
     mat = bpy.data.materials.new("bb_bake_thickness")
     mat.use_nodes = True
