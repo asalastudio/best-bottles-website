@@ -128,10 +128,16 @@ def build():
         sky = 0.28 + 0.55 * smoothstep(-0.85, 0.95, up)
         floor = 0.22 * smoothstep(0.10, -1.00, up)
     elif PROFILE == "room":
-        # a touch darker than the tent so the window and key READ in the
-        # reflection; floor warmed toward the Aesop tan work surface
-        sky = 0.20 + 0.42 * smoothstep(-0.85, 0.95, up)
-        floor = 0.26 * smoothstep(0.10, -1.00, up)
+        # v9: base field cut to ~1/3. Measured against amber-studio.jpg, the
+        # v8 room rendered the amber at T = .242/.187/.183 - nearly NEUTRAL -
+        # where the real bottle measures .130/.035/.003. Surface reflection is
+        # colourless, so a glowing room washes the tint out and lifts blue
+        # ~60x. Darkening the base field is the only thing that restores
+        # saturation; it also triples the two top lights' relative punch, so
+        # the highlight strengthens for free. Floor kept relatively higher -
+        # it lights the cyclorama sweep, which must stay bone.
+        sky = 0.07 + 0.16 * smoothstep(-0.85, 0.95, up)
+        floor = 0.13 * smoothstep(0.10, -1.00, up)
     else:
         sky = 0.030 + 0.075 * smoothstep(-0.85, 0.95, up)
         floor = 0.020 * smoothstep(0.10, -1.00, up)
