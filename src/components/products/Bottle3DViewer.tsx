@@ -76,6 +76,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const overcap = useGLTF(`/models/closures/BB_SPR_OVERCAP_${fin}.glb`);
   const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
   const dipTube = useGLTF(`/models/closures/BB_DIP_TUBE_${fin}.glb`);
+  const pumpBody = useGLTF(`/models/closures/BB_PMP_BODY_${fin}.glb`);
   const nozzle = useGLTF(has1841
     ? "/models/closures/BB_SPR_NOZZLE_18415.glb"
     : `/models/closures/BB_DIP_TUBE_${fin}.glb`);
@@ -233,6 +234,10 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       const headMat = fin === "18415" ? trimMat : "PART_ACTUATOR_PP";
       g.push(build(collar, trimMat), build(actuator, headMat));
       if (fin === "18415") g.push(build(nozzle, "PART_ACTUATOR_PP"));
+      // the INTERNAL pump mechanism the tube hangs from — visible
+      // through the glass below the collar (professionals model the
+      // interior; an unanchored tube reads fake)
+      g.push(build(pumpBody, "PART_ACTUATOR_PP"));
       // DIP TUBE on every sprayer/pump — scaled from its nominal length
       // to reach near the bottle base (neckY = rim height in body space)
       const tube = build(dipTube, "PART_DIPTUBE_PP");
@@ -251,7 +256,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

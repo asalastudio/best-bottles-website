@@ -57,6 +57,8 @@ TRACKED_FILES = [
     "public/models/closures/BB_SPR_ACTUATOR_18415.glb",
     "public/models/closures/BB_SPR_OVERCAP_18415.glb",
     "public/models/closures/BB_PMP_SPOUT_18415.glb",
+    "public/models/closures/BB_PMP_BODY_17415.glb",
+    "public/models/closures/BB_PMP_BODY_18415.glb",
     "public/models/closures/BB_DIP_TUBE_17415.glb",
     "public/models/closures/BB_DIP_TUBE_18415.glb",
     "public/models/closures/BB_SPR_NOZZLE_18415.glb",

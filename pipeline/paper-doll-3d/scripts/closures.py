@@ -510,6 +510,30 @@ def nozzle_insert_builder(rig, finish, variant):
                           insert_d=d, z=z), object=obj)
 
 
+def pump_body_builder(rig, finish, variant):
+    """The INTERNAL pump mechanism visible through the glass below the
+    collar (Jordan's reference crop: the white housing/valve body the
+    tube hangs from). Professionals model the interior; a tube with no
+    mechanism reads unanchored. Stepped white PP: gasket flange at the
+    bore mouth -> housing barrel -> valve taper the tube exits from.
+    Origin = rim datum, descending -z inside the neck."""
+    fm = rig.FINISH_MASTERS[finish]
+    bore_r = fm["bore_d"] / 2.0 - 0.15
+    prof = [
+        (bore_r, 0.0),               # gasket flange at the rim mouth
+        (bore_r, -2.2),
+        (bore_r - 0.9, -2.8),        # step to the housing barrel
+        (bore_r - 0.9, -11.0),
+        (2.6, -13.0),                # valve taper
+        (2.6, -16.0),                # tube socket
+        (1.4, -16.0),
+        (1.4, 0.0),                  # inner bore back to datum
+    ]
+    return dict(spec=dict(asset_id=f"BB_PMP_BODY_{finish.replace('-','')}",
+                          bore_d=fm["bore_d"], depth=16.0),
+                profile=prof, modulate=None)
+
+
 def cap_part_builder(rig, finish, variant):
     cs, profile, modulate = cap_builder(rig, finish, variant)
     return dict(spec=cs, profile=profile, modulate=modulate)
@@ -522,6 +546,8 @@ PARTS = {
     ("17-415", "ROLL_HOUSING", "steel"):   roller_housing_builder,
     ("17-415", "ROLL_BALL", "plastic"):    roller_ball_builder,
     ("17-415", "ROLL_BALL", "steel"):      roller_ball_builder,
+    ("17-415", "PMP_BODY", None):          pump_body_builder,
+    ("18-415", "PMP_BODY", None):          pump_body_builder,
     ("17-415", "DIP_TUBE", None):          dip_tube_builder,
     ("18-415", "DIP_TUBE", None):          dip_tube_builder,
     ("17-415", "SPR_COLLAR", None):        collar_builder,
