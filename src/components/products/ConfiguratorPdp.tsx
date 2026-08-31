@@ -32,6 +32,8 @@ import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
 
+import { useGLTF } from "@react-three/drei";
+
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
   ssr: false,
   loading: () => (
@@ -160,6 +162,7 @@ export default function ConfiguratorPdp({
   // the slug (SKU/pricing truth) is replaced underneath without a reload
   const [glassOverride, setGlassOverride] = useState<GlassPresetId | null>(null);
   const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
+  const [withCap, setWithCap] = useState(false);
   useEffect(() => { setGlassOverride(null); }, [currentSlug]);
   const glass: GlassPresetId = glassOverride ?? slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
@@ -184,6 +187,20 @@ export default function ConfiguratorPdp({
   }, []);
 
   const activeBase = committedBase;
+
+  // warm the sibling colourway bodies: same family, so a swap should not
+  // hit a loader
+  useEffect(() => {
+    if (!fam) return;
+    const ids = new Set<string>([fam.bodyDefault]);
+    for (const g of fam.glasses) {
+      const b = fam.bodyForGlass?.[g];
+      if (b) ids.add(b);
+    }
+    for (const id of ids) {
+      try { useGLTF.preload(`/models/bodies-thickness/${id}.glb`); } catch {}
+    }
+  }, [fam]);
 
   // sibling lookup: slug token -> sibling row (price, photo)
   const siblingFor = useMemo(() => {
@@ -218,6 +235,7 @@ export default function ConfiguratorPdp({
   // lotion") — no use-case re-ranking layer
   const COMPONENT_ORDER: ClosureBase[] = [
     "sprayer", "roller", "pump", "dropper", "reducer", "antique", "antiqueTassel"];
+  void CLOSURE_META;
   const ranked = useMemo(
     () => COMPONENT_ORDER.filter((b) => sellableBases.includes(b)),
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -250,12 +268,19 @@ export default function ConfiguratorPdp({
 
   // antique maps to "none": the geometry is parked, the photo fallback
   // covers the stage (decision 2026-08-31)
-  const CLOSURE_MODE: Record<ClosureBase,
-    "none" | "roller" | "reducer" | "reducerCapped" | "dropper" | "sprayer" | "pump"> = {
+  const CLOSURE_MODE: Record<ClosureBase, string> = {
     none: "none", roller: "roller", reducer: "reducerCapped", dropper: "dropper",
     antique: "none", antiqueTassel: "none", sprayer: "sprayer", pump: "pump",
   };
-  const closureFor = (base: ClosureBase) => CLOSURE_MODE[base];
+  /** which closures can wear a cap/overcap on top */
+  const CAPPABLE: Partial<Record<ClosureBase, string>> = {
+    none: "capped", roller: "rollerCapped", reducer: "reducerCapped",
+    sprayer: "sprayerCapped", pump: "pumpCapped",
+  };
+  const canCap = CAPPABLE[activeBase] != null;
+  const closureFor = (base: ClosureBase) =>
+    ((withCap && CAPPABLE[base]) || CLOSURE_MODE[base]) as
+      import("./Bottle3DViewer").ClosureMode;
 
   const isAntiquePreview = activeBase === "antique" || activeBase === "antiqueTassel";
 
@@ -464,9 +489,23 @@ export default function ConfiguratorPdp({
             {activeMeta?.name ?? "Bottle only"}
           </span>
         </p>
-        {neckSize && (
-          <p className="text-spec text-slate shrink-0">{neckSize} neck</p>
-        )}
+        <div className="flex items-center gap-3 shrink-0">
+          {canCap && (
+            <button type="button" onClick={() => setWithCap((v) => !v)}
+                    aria-pressed={withCap}
+                    className={`rounded-full border px-2.5 py-1 text-2xs uppercase
+                                tracking-label font-semibold transition-colors
+                                duration-200 ${withCap
+                                  ? "border-obsidian bg-obsidian text-white"
+                                  : "border-champagne text-slate hover:border-muted-gold"}`}>
+              {withCap ? "✓ " : "+ "}
+              Overcap
+            </button>
+          )}
+          {neckSize && (
+            <p className="text-spec text-slate">{neckSize} neck</p>
+          )}
+        </div>
       </div>
 
       <div className="flex gap-2.5 mt-3 overflow-x-auto pb-1 [scrollbar-width:none]">

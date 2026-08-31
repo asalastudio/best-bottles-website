@@ -426,9 +426,15 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
 /** Entrance: the bottle is SET DOWN onto the stage — a decelerating spin
  *  while it eases from slightly above onto the floor, where the contact
  *  shadow catches it. Never rises from below (would clip the cove floor). */
+/** Plays once per page load, not per mount: colourway/closure switches are
+ *  route changes that remount the canvas, and replaying the set-down on
+ *  every swap reads as a jump rather than an entrance. */
+let entrancePlayed = false;
+
 function EntranceGroup({ children }: { children: React.ReactNode }) {
   const ref = useRef<THREE.Group | null>(null);
-  const t = useRef(0);
+  const t = useRef(entrancePlayed ? 1.5 : 0);
+  useEffect(() => { entrancePlayed = true; }, []);
   const DURATION = 1.5;
   const DROP = 0.008;                              // 8 mm settle
   useFrame((_, delta) => {
