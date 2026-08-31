@@ -785,7 +785,7 @@ export default function MaterialLab(
         </label>
         <div style={{ display: "flex", gap: 4, marginBottom: 10 }}>
           {[["bone", "#e9e6e0"], ["white", "#f7f7f7"], ["grey", "#8d8d94"],
-            ["dark", "#15151a"]].map(([n, c]) => (
+            ["brown", "#3b2f27"], ["dark", "#15151a"]].map(([n, c]) => (
             <button key={n} onClick={() => setBg(c)} style={btn(bg === c)}>{n}</button>
           ))}
         </div>
