@@ -107,12 +107,31 @@ Do not re-derive this; it is current as of 2026-08-31.
    PRODUCT.md for product truth.
 6. **A `/design-system` route** rendering every token and primitive in every
    state, so drift is visible rather than discovered in production.
+7. **Close the swatch seam — the highest-value fix on this list.** The
+   configurator UI hardcodes **32 `linear-gradient` swatches** and **55
+   distinct hex values, of which only 2 exist in `materials.json`.** The
+   dot a buyer clicks is a hand-drawn guess at the material it selects, so
+   an approved material change never reaches the swatch and the two drift
+   apart silently. This is a structural cause of the reported
+   inconsistency. Generate every swatch from its material token — read
+   `baseColor`, `roughness` and `metalness` and derive the CSS gradient —
+   so a token change moves the dot and the bottle together. The swatch is
+   the seam between the UI and render systems and it must be one-way:
+   material token → swatch, never the reverse.
 
 ## Constraints
 
-- **Do not touch the 3D lane.** `Bottle3DViewer.tsx`, `ProductStage.tsx`,
-  `src/lib/materials/*`, `public/models/*` are governed by a separate
-  render design system with locked, approved material values.
+- **Split the configurator at the canvas edge.** Everything *outside* the
+  `<Canvas>` is yours: the base pills (BOTTLE / REDUCER / DROPPER / SPRAY /
+  PUMP), the `+ OVERCAP` toggle, swatch rows, the eyebrow labels above them
+  ("BULB · BLACK", "FITMENT · SHINY SILVER"), the LIVE 3D badge, the
+  drag-to-rotate affordance, and the whole buy box around it. Everything
+  *inside* the canvas — materials, HDRI, camera, tone mapping — belongs to
+  the separate render design system
+  (`docs/configurator/RENDER-DESIGN-SYSTEM-PROPOSAL.md`) and its locked,
+  Jordan-approved values. Do not edit `src/lib/materials/*`,
+  `public/models/*`, or the material construction inside
+  `Bottle3DViewer.tsx` / `ProductStage.tsx`.
 - Do not change product data, pricing, fitment logic or copy that asserts
   fact. Ask before rewriting any claim.
 - No new dependencies without justification — CVA, clsx and tailwind-merge
@@ -131,6 +150,9 @@ Do not re-derive this; it is current as of 2026-08-31.
 - `/design-system` renders every token and primitive; a changed token
   visibly propagates there and across the site with no hand-editing.
 - A new PDP section can be built from primitives with no new CSS.
+- Zero hardcoded swatch colours: every swatch derives from a material
+  token, and changing that token visibly moves both the swatch and the 3D
+  part.
 - Lighthouse a11y ≥ 95 on home, catalogue and a PDP.
 
 ## Order of work
