@@ -3,43 +3,43 @@
   "note": "Authored in Blender, consumed by the browser. Values are Principled BSDF sliders; Cycles is not three.js, so expect one round trip.",
   "materials": {
     "CAP_COPPER": {
-      "color": "#c77e52",
+      "color": "#f7cfbf",
       "linear": [
         0.573,
         0.212,
         0.083
       ],
       "metalness": 1.0,
-      "roughness": 0.46,
+      "roughness": 0.32,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.5,
+      "envMapIntensity": 1.25,
       "env": "metal",
       "specularColor": "#fdf9f9",
-      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_MATTE_GOLD": {
-      "color": "#ffe29b",
+      "color": "#ffe496",
       "linear": [
         1.0,
         0.766,
         0.336
       ],
       "metalness": 1.0,
-      "roughness": 0.4,
+      "roughness": 0.38,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.5,
+      "envMapIntensity": 1.15,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_MATTE_SILVER": {
-      "color": "#fbf7ee",
+      "color": "#f5f6f6",
       "linear": [
         0.972,
         0.96,
@@ -54,7 +54,7 @@
       "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
     },
     "CAP_SHINY_BLACK": {
       "color": "#0b0b0b",
@@ -72,7 +72,7 @@
       "envMapIntensity": 0.65
     },
     "CAP_SHINY_GOLD": {
-      "color": "#fff2c9",
+      "color": "#ffe496",
       "linear": [
         0.9999999999999999,
         0.8926775272379572,
@@ -84,13 +84,13 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 2.4,
+      "envMapIntensity": 1.35,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_SHINY_SILVER": {
-      "color": "#fffefe",
+      "color": "#fefdfc",
       "linear": [
         0.9960333152256678,
         0.9933771717300072,
@@ -105,7 +105,7 @@
       "envMapIntensity": 2.0,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
     },
     "CAP_WHITE": {
       "color": "#f4f3f0",
@@ -423,42 +423,45 @@
       "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
     },
     "CAP_DOTS_BLACK": {
-      "color": "#161616",
+      "color": "#0b0b0b",
       "linear": [
         0.0069,
         0.0069,
         0.0069
       ],
-      "roughness": 0.3,
+      "roughness": 0.12,
       "metalness": 0.0,
-      "clearcoat": 0.35,
+      "clearcoat": 0.5,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+      "note": "Shell of the BlkDot cap: glossy black like CAP_SHINY_BLACK (CpRoll17-415BlkDot.psd); studs are PART_STUD_CHROME.",
+      "envMapIntensity": 0.65
     },
     "CAP_DOTS_PINK": {
-      "color": "#d98ba3",
+      "color": "#ddbfc8",
       "linear": [
         0.6866,
         0.2508,
         0.3712
       ],
       "roughness": 0.3,
-      "metalness": 0.0,
-      "clearcoat": 0.35,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+      "note": "Shell of the PnkDot cap: METALLIC pink satin (CpRoll17-415PnkDot.psd). Tint set one step deeper than the PSD mid #e2d3d6 because the neutral metal env washes saturation; studs are PART_STUD_CHROME.",
+      "envMapIntensity": 1.5,
+      "env": "metal"
     },
     "CAP_DOTS_SILVER": {
-      "color": "#fbf7ee",
+      "color": "#fefdfc",
       "linear": [
         0.972,
         0.96,
         0.915
       ],
       "metalness": 1.0,
-      "roughness": 0.42,
+      "roughness": 0.22,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
@@ -466,7 +469,25 @@
       "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "matte-silver finish on the DOTS cap geometry - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
+    },
+    "PART_STUD_CHROME": {
+      "color": "#d3d8da",
+      "linear": [
+        0.8289136787893979,
+        0.8461357050249962,
+        0.854846859663698
+      ],
+      "metalness": 1.0,
+      "roughness": 0.04,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 2.0,
+      "env": "metal",
+      "specularColor": "#b0bacc",
+      "note": "Chrome set-studs on the *Dot caps (library coats.chrome). The studs read silver on ALL dot colourways - shell takes the colour, studs stay chrome (CpRoll17-415*Dot.psd)."
     }
   }
 }

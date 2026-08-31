@@ -46,7 +46,7 @@ TRACKED_FILES = [
     "public/models/closures/BB_SPR_OVERCAP_17415.glb",
     "public/models/closures/BB_PMP_SPOUT_17415.glb",
 ]
-TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING", "SPRAY_")
+TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING", "PART_STUD", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
     "transmission", "roughness", "ior", "thickness", "attenuationColor",
     "attenuationDistance", "dispersion", "clearcoat", "clearcoatRoughness",

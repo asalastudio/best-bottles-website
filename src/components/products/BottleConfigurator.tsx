@@ -50,7 +50,7 @@ const CAPS: { id: string; label: string; swatch: string }[] = [
     { id: "CAP_MATTE_SILVER", label: "Matte silver", swatch: "linear-gradient(145deg,#e6e6e4,#a9adae)" },
     { id: "CAP_COPPER", label: "Matte copper", swatch: "linear-gradient(145deg,#d99a6c,#8f4f2c)" },
     { id: "CAP_DOTS_BLACK", label: "Black dot", swatch: "radial-gradient(circle at 35% 35%, #161616 42%, #efece3 46%)" },
-    { id: "CAP_DOTS_PINK", label: "Pink dot", swatch: "radial-gradient(circle at 35% 35%, #d98ba3 42%, #efece3 46%)" },
+    { id: "CAP_DOTS_PINK", label: "Pink dot", swatch: "radial-gradient(circle at 35% 35%, #dcc3ca 42%, #efece3 46%)" },
     { id: "CAP_DOTS_SILVER", label: "Silver dot", swatch: "radial-gradient(circle at 35% 35%, #b9bcbe 42%, #efece3 46%)" },
 ];
 

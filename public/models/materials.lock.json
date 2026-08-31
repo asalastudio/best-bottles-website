@@ -107,9 +107,9 @@
  "materials": {
   "CAP_COPPER": {
    "clearcoat": 0.0,
-   "color": "#c77e52",
+   "color": "#f7cfbf",
    "env": "metal",
-   "envMapIntensity": 1.5,
+   "envMapIntensity": 1.25,
    "ior": 1.5,
    "linear": [
     0.573,
@@ -118,13 +118,14 @@
    ],
    "maps": null,
    "metalness": 1.0,
-   "roughness": 0.46,
+   "roughness": 0.32,
    "specularColor": "#fdf9f9",
    "transmission": 0.0
   },
   "CAP_DOTS_BLACK": {
-   "clearcoat": 0.35,
-   "color": "#161616",
+   "clearcoat": 0.5,
+   "color": "#0b0b0b",
+   "envMapIntensity": 0.65,
    "ior": 1.5,
    "linear": [
     0.0069,
@@ -132,25 +133,27 @@
     0.0069
    ],
    "metalness": 0.0,
-   "roughness": 0.3,
+   "roughness": 0.12,
    "transmission": 0.0
   },
   "CAP_DOTS_PINK": {
-   "clearcoat": 0.35,
-   "color": "#d98ba3",
+   "clearcoat": 0.0,
+   "color": "#ddbfc8",
+   "env": "metal",
+   "envMapIntensity": 1.5,
    "ior": 1.5,
    "linear": [
     0.6866,
     0.2508,
     0.3712
    ],
-   "metalness": 0.0,
+   "metalness": 1.0,
    "roughness": 0.3,
    "transmission": 0.0
   },
   "CAP_DOTS_SILVER": {
    "clearcoat": 0.0,
-   "color": "#fbf7ee",
+   "color": "#fefdfc",
    "env": "metal",
    "envMapIntensity": 1.5,
    "ior": 1.5,
@@ -161,15 +164,15 @@
    ],
    "maps": null,
    "metalness": 1.0,
-   "roughness": 0.42,
+   "roughness": 0.22,
    "specularColor": "#fefeff",
    "transmission": 0.0
   },
   "CAP_MATTE_GOLD": {
    "clearcoat": 0.0,
-   "color": "#ffe29b",
+   "color": "#ffe496",
    "env": "metal",
-   "envMapIntensity": 1.5,
+   "envMapIntensity": 1.15,
    "ior": 1.5,
    "linear": [
     1.0,
@@ -178,13 +181,13 @@
    ],
    "maps": null,
    "metalness": 1.0,
-   "roughness": 0.4,
+   "roughness": 0.38,
    "specularColor": "#fcfffe",
    "transmission": 0.0
   },
   "CAP_MATTE_SILVER": {
    "clearcoat": 0.0,
-   "color": "#fbf7ee",
+   "color": "#f5f6f6",
    "env": "metal",
    "envMapIntensity": 1.5,
    "ior": 1.5,
@@ -215,9 +218,9 @@
   },
   "CAP_SHINY_GOLD": {
    "clearcoat": 0.0,
-   "color": "#fff2c9",
+   "color": "#ffe496",
    "env": "metal",
-   "envMapIntensity": 2.4,
+   "envMapIntensity": 1.35,
    "ior": 1.5,
    "linear": [
     0.9999999999999999,
@@ -232,7 +235,7 @@
   },
   "CAP_SHINY_SILVER": {
    "clearcoat": 0.0,
-   "color": "#fffefe",
+   "color": "#fefdfc",
    "env": "metal",
    "envMapIntensity": 2.0,
    "ior": 1.5,
@@ -315,6 +318,36 @@
    "metalness": 0.0,
    "roughness": 0.42,
    "transmission": 0.62
+  },
+  "PART_STUD_CHROME": {
+   "clearcoat": 0.0,
+   "color": "#d3d8da",
+   "env": "metal",
+   "envMapIntensity": 2.0,
+   "ior": 1.5,
+   "linear": [
+    0.8289136787893979,
+    0.8461357050249962,
+    0.854846859663698
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.04,
+   "specularColor": "#b0bacc",
+   "transmission": 0.0
+  },
+  "PART_STUD_STEEL": {
+   "clearcoat": 0.5,
+   "color": "#f2f4f6",
+   "ior": 1.5,
+   "linear": [
+    0.8879,
+    0.9047,
+    0.9216
+   ],
+   "metalness": 1.0,
+   "roughness": 0.06,
+   "transmission": 0.0
   },
   "SPRAY_RED": {
    "clearcoat": 0.35,

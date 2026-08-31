@@ -118,8 +118,14 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
         build(metal ? ballSteel : ballPlastic,
               metal ? "PART_BALL_STEEL" : "PART_BALL_PLASTIC"),
       );
-      if (mode === "rollerCapped")
-        g.push(build(capMat.startsWith("CAP_DOTS") ? capDots : cap, capMat));
+      if (mode === "rollerCapped") {
+        // *Dot caps = the normal shell in the colourway + the stud lattice
+        // as a separate chrome part (BB_CAP_DOTS is STUDS ONLY — same
+        // shell/jewel split as collar/actuator)
+        g.push(build(cap, capMat));
+        if (capMat.startsWith("CAP_DOTS"))
+          g.push(build(capDots, "PART_STUD_CHROME"));
+      }
     } else {
       // the actuator is ALWAYS white PP; only the collar wears the trim
       // colour (PSD reference, all six colourways)

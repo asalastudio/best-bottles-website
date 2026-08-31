@@ -62,6 +62,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat }: {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
   const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
+  const capDots = useGLTF("/models/closures/BB_CAP_DOTS_17415.glb");
   const collar = useGLTF("/models/closures/BB_SPR_COLLAR_17415.glb");
   const actuator = useGLTF("/models/closures/BB_SPR_ACTUATOR_17415.glb");
   const overcap = useGLTF("/models/closures/BB_SPR_OVERCAP_17415.glb");
@@ -221,7 +222,12 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat }: {
     if (mode === "roller" || mode === "rollerCapped") {
       g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
       g.push({ scene: build(ball, ballMat) });
-      if (mode === "rollerCapped") g.push({ scene: build(cap, capMat, capTune) });
+      if (mode === "rollerCapped") {
+        // *Dot caps: shell in the colourway + BB_CAP_DOTS studs in chrome
+        g.push({ scene: build(cap, capMat, capTune) });
+        if (capMat.startsWith("CAP_DOTS"))
+          g.push({ scene: build(capDots, "PART_STUD_CHROME") });
+      }
     } else {
       // the trim tune rides capTune so the same sliders serve sprays too
       g.push({ scene: build(collar, trimMat, capTune) });
@@ -232,7 +238,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat }: {
         g.push({ scene: build(overcap, "PART_OVERCAP_CLEAR") });
     }
     return g;
-  }, [mode, mats, build, housing, ball, cap, collar, actuator, overcap, spout,
+  }, [mode, mats, build, housing, ball, cap, capDots, collar, actuator, overcap, spout,
       capMat, ballMat, capTune, trimMat]);
   if (!parts) return null;
   return (
@@ -948,7 +954,8 @@ export default function MaterialLab(
               {[["black", "CAP_SHINY_BLACK"], ["white", "CAP_WHITE"],
                 ["gold", "CAP_SHINY_GOLD"], ["mt gold", "CAP_MATTE_GOLD"],
                 ["silver", "CAP_SHINY_SILVER"], ["mt silver", "CAP_MATTE_SILVER"],
-                ["copper", "CAP_COPPER"]].map(([n, m]) => (
+                ["copper", "CAP_COPPER"], ["blk dot", "CAP_DOTS_BLACK"],
+                ["pnk dot", "CAP_DOTS_PINK"], ["sl dot", "CAP_DOTS_SILVER"]].map(([n, m]) => (
                 <button key={m} onClick={() => setCapMat(m)} style={btn(capMat === m)}>{n}</button>
               ))}
             </>) : null}
