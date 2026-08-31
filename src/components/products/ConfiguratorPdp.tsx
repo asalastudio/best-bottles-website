@@ -75,6 +75,7 @@ function capTokenFor(name: string | null | undefined): string {
   if (n.includes("gold")) return n.includes("matte") ? "CAP_MATTE_GOLD" : "CAP_SHINY_GOLD";
   if (n.includes("silver")) return n.includes("matte") ? "CAP_MATTE_SILVER" : "CAP_SHINY_SILVER";
   if (n.includes("white") || n.includes("clear") || n.includes("ivory")) return "CAP_WHITE";
+  if (n.includes("pink")) return "CAP_PINK";
   if (n.includes("turquoise")) return "SPRAY_TURQUOISE";
   if (n.includes("red")) return "SPRAY_RED";
   return "CAP_SHINY_BLACK";

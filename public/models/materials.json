@@ -389,7 +389,7 @@
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 1.0,
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). clear plastic dip tube, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part \u5bfc\u7ba1)"
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). clear plastic dip tube, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part 导管)"
     },
     "PART_FILLER_LIQUID": {
       "color": "#fefefe",
@@ -404,7 +404,7 @@
       "ior": 1.5,
       "transmission": 1.0,
       "opacity": 0.0,
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). the liquid-fill mesh material, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part \u586b\u5145\u7269): ships at opacity 0 = empty bottle; set color+opacity to show contents"
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). the liquid-fill mesh material, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part 填充物): ships at opacity 0 = empty bottle; set color+opacity to show contents"
     },
     "SPRAY_TURQUOISE": {
       "color": "#2aa0a2",
@@ -737,6 +737,43 @@
       "env": "tent",
       "specularColor": null,
       "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
+    },
+    "CAP_PINK": {
+      "color": "#c9a7b5",
+      "linear": [
+        0.585,
+        0.386,
+        0.462
+      ],
+      "metalness": 1.0,
+      "roughness": 0.42,
+      "clearcoat": 0.6,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 1.15,
+      "env": "metal",
+      "specularColor": "#f6e9ef",
+      "note": "DRAFT 2026-08-31 — pending Jordan lab approval, NOT locked. The pearlescent pink shell (Jordan: 'metallic-coated matte with rhinestones'). Base = physicallybased coats.metallic_coat_matte (metalness 1, matte roughness) tinted with the shell midtone MEASURED from CpRoll17-415PnkDot.psd (#c2a5b1 median, lifted a touch rosier for ACES desaturation of coloured metals). clearcoat 0.6 gives the pearl sheen over the matte metal base; maps=matte pulls the library matte normal/roughness like the other matte finishes. Colored metal -> envMapIntensity BELOW silver per the ACES rule."
+    },
+    "PART_STUD_RHINESTONE": {
+      "color": "#fdfbfc",
+      "linear": [
+        0.984,
+        0.966,
+        0.975
+      ],
+      "metalness": 0.0,
+      "roughness": 0.03,
+      "clearcoat": 1.0,
+      "ior": 2.0,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 3.2,
+      "env": "metal",
+      "specularIntensity": 3.0,
+      "specularColor": "#ffffff",
+      "note": "DRAFT 2026-08-31 — pending Jordan lab approval, NOT locked. Rhinestone treatment for the dot-cap stud lattice (replaces the PART_STUD_CHROME stand-in on rhinestone caps). A rhinestone is foil-backed crystal: dielectric (metalness 0), near-mirror roughness, high-IOR sparkle via ior 2.0 + specularIntensity 3 + hot envMapIntensity so the tiny domes catch the studio as point-sparkle. The dark setting ring comes free from the stud sink geometry (BB_CAP_DOTS). If the read needs true facets, that is a later geometry pass, not more material."
     }
   }
 }
