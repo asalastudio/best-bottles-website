@@ -478,6 +478,9 @@ export interface ProductVariant {
     webPrice1pc: number | null;
     webPrice10pc: number | null;
     webPrice12pc: number | null;
+    /** the REAL ladder — 5 case-oriented steps (1/12/144/300/1500) from the
+     *  2026-08-06 site-truth sync. webPrice10pc/12pc understate it. */
+    priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     category: string;
     family: string | null;
     shape: string | null;
@@ -1506,6 +1509,7 @@ export default function ProductDetailClient({
             webPrice1pc: selectedVariant.webPrice1pc ?? null,
             webPrice10pc: selectedVariant.webPrice10pc ?? null,
             webPrice12pc: selectedVariant.webPrice12pc ?? null,
+            priceTiers: selectedVariant.priceTiers ?? null,
         }]);
         analytics.cartItemAdded({
             sku: selectedVariant.graceSku,
@@ -1563,6 +1567,7 @@ export default function ProductDetailClient({
                                 skuLabel={selectedVariant?.graceSku ?? null}
                                 price10={selectedVariant?.webPrice10pc ?? null}
                                 price12={selectedVariant?.webPrice12pc ?? null}
+                                priceTiers={selectedVariant?.priceTiers ?? null}
                                 sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
                                 quoteHref={quoteHref}
                                 qty={qty}

@@ -62,6 +62,10 @@ export const getAllForAudit = query({
                 webPrice1pc: p.webPrice1pc ?? null,
                 webPrice10pc: p.webPrice10pc ?? null,
                 webPrice12pc: p.webPrice12pc ?? null,
+                // the REAL ladder (site-truth sync 2026-08-06): 5 steps,
+                // case-oriented (1/12/144/300/1500). webPrice10pc/12pc
+                // understate it — only 53 SKUs have a true 10-unit break.
+                priceTiers: p.priceTiers ?? null,
                 stockStatus: p.stockStatus ?? null,
             })),
         };

@@ -207,27 +207,31 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     const p10 = item.webPrice10pc ?? null;
                                     const p12 = item.webPrice12pc ?? null;
 
+                                    // The REAL ladder drives the nudge when the
+                                    // item carries it (5 case-oriented steps:
+                                    // 1/12/144/300/1500); legacy 1/10/12 is the
+                                    // fallback for items added before the sync.
+                                    const ladder = item.priceTiers?.length
+                                        ? [...item.priceTiers]
+                                              .sort((a, b) => a.minQty - b.minQty)
+                                              .map((t) => ({ minQty: t.minQty, price: t.unitPrice }))
+                                        : [
+                                              { minQty: 1, price: p1 },
+                                              ...(p10 != null ? [{ minQty: 10, price: p10 }] : []),
+                                              ...(p12 != null ? [{ minQty: 12, price: p12 }] : []),
+                                          ];
+
                                     let nudge = null;
                                     if (p1 > 0) {
-                                        if (p12 != null && item.quantity < 12 && (p10 == null || item.quantity >= 10)) {
-                                            const unitsToNext = 12 - item.quantity;
-                                            const pct = Math.round((1 - p12 / p1) * 100);
+                                        const next = ladder.find(
+                                            (t) => t.minQty > item.quantity && t.price < p1);
+                                        if (next) {
+                                            const pct = Math.round((1 - next.price / p1) * 100);
                                             if (pct > 0) {
                                                 nudge = {
-                                                    units: unitsToNext,
-                                                    targetQty: 12,
-                                                    price: p12,
-                                                    savePct: pct,
-                                                };
-                                            }
-                                        } else if (p10 != null && item.quantity < 10) {
-                                            const unitsToNext = 10 - item.quantity;
-                                            const pct = Math.round((1 - p10 / p1) * 100);
-                                            if (pct > 0) {
-                                                nudge = {
-                                                    units: unitsToNext,
-                                                    targetQty: 10,
-                                                    price: p10,
+                                                    units: next.minQty - item.quantity,
+                                                    targetQty: next.minQty,
+                                                    price: next.price,
                                                     savePct: pct,
                                                 };
                                             }
@@ -306,13 +310,13 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                             {nudge && (
                                                 <div className="mt-3 p-2 bg-muted-gold/10 border border-muted-gold/20 rounded-lg flex items-center justify-between gap-2">
                                                     <p className="text-[11px] text-obsidian/85 leading-normal">
-                                                        Add <span className="font-semibold text-muted-gold">{nudge.units} more</span> to unlock <span className="font-semibold">{nudge.targetQty}+ pricing</span> at <span className="font-semibold">${nudge.price.toFixed(2)}/ea</span> (Save <span className="font-semibold text-emerald-700">{nudge.savePct}%</span>!)
+                                                        Add <span className="font-semibold text-muted-gold">{nudge.units.toLocaleString()} more</span> to unlock <span className="font-semibold">{nudge.targetQty.toLocaleString()}+ pricing</span> at <span className="font-semibold">${nudge.price.toFixed(2)}/ea</span> (Save <span className="font-semibold text-emerald-700">{nudge.savePct}%</span>!)
                                                     </p>
                                                     <button
                                                         onClick={() => updateQuantity(item.graceSku, nudge.targetQty)}
                                                         className="shrink-0 px-2 py-1 bg-muted-gold hover:bg-obsidian text-white text-[9px] uppercase font-bold tracking-wider rounded transition-colors cursor-pointer"
                                                     >
-                                                        + Add {nudge.units}
+                                                        + Add {nudge.units.toLocaleString()}
                                                     </button>
                                                 </div>
                                             )}

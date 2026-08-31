@@ -71,7 +71,7 @@ export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
   siblings, heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
-  neckSize, capacityText, skuLabel, price10, price12,
+  neckSize, capacityText, skuLabel, price10, price12, priceTiers,
   sampleHref, quoteHref, qty = 1, onQtyChange,
 }: {
   currentSlug: string;
@@ -97,6 +97,8 @@ export default function ConfiguratorPdp({
   skuLabel?: string | null;
   price10?: number | null;     // 10+ tier unit price
   price12?: number | null;     // 12+ tier unit price
+  /** the real 5-step ladder; when present it replaces price10/price12 */
+  priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
   sampleHref?: string;
   quoteHref?: string;
   qty?: number;
@@ -315,9 +317,23 @@ export default function ConfiguratorPdp({
   );
 
   /* price block — unit price leads; the tier teaser sells volume */
-  const tierPrice = qty >= 12 && price12 ? price12
-                  : qty >= 10 && price10 ? price10
-                  : priceEach;
+  // the ladder: real 5-step tiers when synced, else the legacy 1/10/12
+  const ladder = useMemo(() => {
+    if (priceTiers?.length) {
+      return [...priceTiers].sort((a, b) => a.minQty - b.minQty)
+        .map((t) => ({ minQty: t.minQty, price: t.unitPrice }));
+    }
+    const out = [{ minQty: 1, price: priceEach ?? 0 }];
+    if (price10 != null && priceEach != null && price10 < priceEach)
+      out.push({ minQty: 10, price: price10 });
+    if (price12 != null && priceEach != null && price12 < priceEach)
+      out.push({ minQty: 12, price: price12 });
+    return out;
+  }, [priceTiers, price10, price12, priceEach]);
+
+  const activeTier = [...ladder].reverse().find((t) => qty >= t.minQty) ?? ladder[0];
+  const nextTier = ladder.find((t) => t.minQty > qty) ?? null;
+  const tierPrice = activeTier?.price ?? priceEach;
   const priceBlock = (
     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
       {priceEach != null && (
@@ -326,10 +342,11 @@ export default function ConfiguratorPdp({
           <span className="text-sm font-normal text-slate ml-1.5">/each</span>
         </p>
       )}
-      {price12 != null && price12 < (priceEach ?? Infinity) && (
+      {ladder.length > 1 && (
         <a href="#volume-pricing" onClick={() => setTiersOpen(true)}
            className="text-ui text-gold-dim underline underline-offset-2">
-          ${price12.toFixed(2)} at 12+ · volume by quote
+          ${ladder[ladder.length - 1].price.toFixed(2)} at{" "}
+          {ladder[ladder.length - 1].minQty}+ · {ladder.length} volume tiers
         </a>
       )}
       <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
@@ -435,7 +452,7 @@ export default function ConfiguratorPdp({
         </button>
       </div>
 
-      {priceEach != null && (
+      {priceEach != null && ladder.length > 0 && (
         <div id="volume-pricing" style={{ scrollMarginTop: 120 }}
              className="mt-4 border-y border-champagne/50">
           <button type="button" onClick={() => setTiersOpen((v) => !v)}
@@ -445,35 +462,37 @@ export default function ConfiguratorPdp({
               Volume pricing · by quote
             </span>
             <span className="flex items-baseline gap-3">
-              {price12 != null && price12 < priceEach && (
+              {ladder.length > 1 && (
                 <span className="text-spec text-slate tabular-nums">
-                  from ${price12.toFixed(2)} ea
+                  from ${ladder[ladder.length - 1].price.toFixed(2)} ea
                 </span>
               )}
               <CaretDown className={`h-3.5 w-3.5 text-slate transition-transform
                                      duration-200 ${tiersOpen ? "rotate-180" : ""}`} />
             </span>
           </button>
+
           {tiersOpen && (<>
-          <div className="pb-1 space-y-1">
-            {([[1, priceEach], [10, price10], [12, price12]] as const)
-              .filter((t, i) => i === 0 || (t[1] != null && t[1]! < priceEach))
-              .map(([minQ, price]) => {
-                const active = qty >= minQ &&
-                  !([[10, price10], [12, price12]] as const).some(
-                    ([m, pp]) => m > minQ && pp != null && pp < priceEach && qty >= m);
-                const save = minQ > 1 && price != null
-                  ? Math.round((1 - price / priceEach) * 100) : 0;
+            <div className="pb-1 space-y-1">
+              {ladder.map((t) => {
+                const active = activeTier?.minQty === t.minQty;
+                const save = priceEach > 0
+                  ? Math.round((1 - t.price / priceEach) * 100) : 0;
                 return (
-                  <div key={minQ}
-                       className={`flex items-baseline justify-between rounded-[2px]
-                                   px-2.5 py-1.5 ${active ? "bg-white ring-1 ring-champagne/60" : ""}`}>
+                  <button key={t.minQty} type="button"
+                          onClick={() => onQtyChange?.(t.minQty)}
+                          aria-label={`Set quantity to ${t.minQty}`}
+                          className={`w-full flex items-baseline justify-between rounded-[2px]
+                                      px-2.5 py-2 text-left transition-colors duration-200
+                                      ${active
+                                        ? "bg-white ring-1 ring-champagne/60"
+                                        : "hover:bg-white/60"}`}>
                     <span className={`text-sm ${active ? "font-semibold text-obsidian" : "text-slate"}`}>
-                      {minQ}+ units
+                      {t.minQty.toLocaleString()}+ units
                     </span>
                     <span className="flex items-baseline gap-2">
                       <span className={`text-sm tabular-nums ${active ? "font-semibold text-obsidian" : "text-obsidian"}`}>
-                        ${price!.toFixed(2)} ea
+                        ${t.price.toFixed(2)} ea
                       </span>
                       {save > 0 && (
                         <span className="text-2xs uppercase tracking-label font-semibold
@@ -483,36 +502,55 @@ export default function ConfiguratorPdp({
                         </span>
                       )}
                     </span>
-                  </div>
+                  </button>
                 );
               })}
-          </div>
-          {linePrice != null && (
-            <div className="flex items-baseline justify-between mt-2 pt-2 border-t border-champagne/50">
-              <span className="text-sm text-slate">Your price · {qty} unit{qty === 1 ? "" : "s"}</span>
-              <span className="text-md font-semibold text-obsidian tabular-nums">
-                ${linePrice.toFixed(2)}
-              </span>
             </div>
-          )}
-          <p className="text-spec text-slate mt-2 pb-3">
-            Volume rates are confirmed on a quote — online checkout is billed
-            at the ${priceEach.toFixed(2)}/ea rate.{" "}
-            {quoteHref && (
-              <a href={quoteHref} className="font-semibold text-gold-dim underline underline-offset-2">
-                Request a quote
-              </a>
-            )}{" "}for 12+ pricing.
-          </p>
+            {linePrice != null && (
+              <div className="flex items-baseline justify-between mt-1 pt-2 border-t border-champagne/50">
+                <span className="text-sm text-slate">Your price · {qty.toLocaleString()} unit{qty === 1 ? "" : "s"}</span>
+                <span className="text-md font-semibold text-obsidian tabular-nums">
+                  ${linePrice.toFixed(2)}
+                </span>
+              </div>
+            )}
+            <p className="text-spec text-slate mt-2 pb-3">
+              Volume rates are confirmed on a quote — online checkout is billed
+              at the ${priceEach.toFixed(2)}/ea rate.{" "}
+              {quoteHref && (
+                <a href={quoteHref} className="font-semibold text-gold-dim underline underline-offset-2">
+                  Request a quote
+                </a>
+              )}
+            </p>
           </>)}
         </div>
+      )}
+
+      {/* next-tier nudge — one tap to the next price break */}
+      {nextTier && priceEach != null && nextTier.price < priceEach && (
+        <button type="button" onClick={() => onQtyChange?.(nextTier.minQty)}
+                className="w-full mt-3 flex items-center justify-between gap-3 rounded-[3px]
+                           border border-muted-gold/40 bg-muted-gold/10 px-3 py-2.5
+                           text-left transition-colors duration-200
+                           hover:bg-muted-gold hover:text-obsidian group">
+          <span className="text-spec text-obsidian">
+            Add <span className="font-semibold">{(nextTier.minQty - qty).toLocaleString()} more</span>{" "}
+            to reach <span className="font-semibold">{nextTier.minQty.toLocaleString()}+</span> at{" "}
+            <span className="font-semibold">${nextTier.price.toFixed(2)}/ea</span>
+          </span>
+          <span className="shrink-0 text-2xs uppercase tracking-label font-semibold text-gold-dim
+                           group-hover:text-obsidian">
+            Save {Math.round((1 - nextTier.price / priceEach) * 100)}%
+          </span>
+        </button>
       )}
     </div>
   );
 
   /* ------------------------------------------------------- step panel */
   const stepPanel = (
-    <div className="h-full overflow-y-auto pr-1">
+    <div className="h-full overflow-y-auto px-1.5">
       {identity}
       {specStrip}
       {priceBlock}
