@@ -218,8 +218,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     roughness: 0.55,
     ior: 1.54,
     thickness: 0.0165,
-    attenuationColor: "#f4f6f5",
-    attenuationDistance: 0.10,
+    attenuationColor: "#b6babd",
+    attenuationDistance: 0.028,
     dispersion: 0.5,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
@@ -228,18 +228,24 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     anisotropicBlur: 0.25,
     envRotationDeg: 18,
     provenance:
-      "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .727/.722/.709 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. Roughness 0.55 is this finish\u2019s entire identity and is NOT the amber\u2019s 0.02 - the reference measures perfectly NEUTRAL (saturation 0.00), confirming frosted has essentially no volume absorption: it is the same glass with an etched SURFACE." +
-      "Clearcoat 0.70/0.02 carried over from the approved amber (2026-08-31) - same physical glass surface. Roughness deliberately NOT carried over: it is this finish's identity. Absorption NOT approved. " +
-      "APPROVED BY EYE. The measurement still stands and is the useful " +
-      "finding: T = .896/.898/.899 — " +
-      "PERFECTLY NEUTRAL, saturation 0.00. That is the finding: frosted glass " +
-      "has essentially NO volume absorption. It is the same clear glass with " +
-      "an etched SURFACE, so almost all of its character lives in `roughness`, " +
-      "not in attenuation. Roughness 0.55 is eye-set and is the one value here " +
-      "that a photograph cannot give us — tune it in the Material Lab. " +
-      "Dropping transmission instead of raising roughness is what makes " +
-      "frosted read as grey plastic.",
+      "SOLVED 2026-08-31 by measurement, approved by Jordan ('keep it'). " +
+      "The earlier claim that the ratio method cannot apply to frosted was " +
+      "WRONG in one respect: the reference measures 27% DARKER than its " +
+      "backdrop (T .727/.722/.709), and that loss is SCATTERING, which a " +
+      "mild neutral-cool absorption models well. Sweep on the live canvas: " +
+      "#b6babd at attenuationDistance 0.028 -> T .725/.736/.742, within " +
+      ".004/.014/.033 of the reference. The lossless white (#f4f6f5 at 0.28, " +
+      "T .983) was exactly the 'white plastic' Jordan rejected - a frosted " +
+      "bottle with no transmission loss reads as plastic. " +
+      "frostMask: the reference shows CLEAR THREADS on the etched body - " +
+      "real acid-etching masks the finish so the closure seals; " +
+      "<bodyId>.frost.png (bake_thickness.py --frost-datum-mm 55) feeds the " +
+      "roughnessMap so one mesh carries both surfaces. Roughness 0.55 and " +
+      "anisotropicBlur 0.25 remain this finish's surface identity. " +
+      "Measured truth kept: the etch itself is neutral (sat 0.00); the " +
+      "attenuation here stands in for scatter loss, not colour.",
   },
+
 };
 
 /**
