@@ -15,10 +15,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.2,
+      "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fdf9f9",
-      "note": "Jordan-approved scorecard values restored 2026-08-31 (the library's matte MAPS regressed them: roughness-1.0 base x map pattern reads speckly-gloss on a 19mm cap). No maps; flat measured colour at matte roughness. Copper = the approved penny tone #c77e52, matte."
+      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
     },
     "CAP_MATTE_GOLD": {
       "color": "#ffe29b",
@@ -33,10 +33,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.2,
+      "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "Jordan-approved scorecard values restored 2026-08-31 (the library's matte MAPS regressed them: roughness-1.0 base x map pattern reads speckly-gloss on a 19mm cap). No maps; flat measured colour at matte roughness."
+      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
     },
     "CAP_MATTE_SILVER": {
       "color": "#fbf7ee",
@@ -51,10 +51,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.2,
+      "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "Jordan-approved scorecard values restored 2026-08-31 (the library's matte MAPS regressed them: roughness-1.0 base x map pattern reads speckly-gloss on a 19mm cap). No maps; flat measured colour at matte roughness."
+      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
     },
     "CAP_SHINY_BLACK": {
       "color": "#0b0b0b",
@@ -84,10 +84,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.6,
+      "envMapIntensity": 2.4,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "POLISHED showcase variant per Jordan ('apply that shiny gold/silver to the cap'): metal.gold/metal.silver measured colours at mirror roughness, NO maps - the brushed maps stay on the matte variants."
+      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
     },
     "CAP_SHINY_SILVER": {
       "color": "#fffefe",
@@ -102,10 +102,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.6,
+      "envMapIntensity": 2.0,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "POLISHED showcase variant per Jordan ('apply that shiny gold/silver to the cap'): metal.gold/metal.silver measured colours at mirror roughness, NO maps - the brushed maps stay on the matte variants."
+      "note": "Renormalized 2026-08-31: the caps' values never drifted (lock verified) but the field they were graded against changed twice - universal-studio field 3.4 -> 1.4 and the PDP stage umber -> taupe. Intensities scaled to restore the approved-era read."
     },
     "CAP_WHITE": {
       "color": "#f4f3f0",

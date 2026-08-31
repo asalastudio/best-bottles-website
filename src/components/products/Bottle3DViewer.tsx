@@ -26,7 +26,9 @@ import {
 } from "@/lib/materials/glassPresets";
 import { STUDIO_PRESETS, APPROVED_STUDIO } from "@/lib/materials/studioPresets";
 
-export type ClosureMode = "none" | "roller" | "rollerCapped";
+export type ClosureMode =
+  | "none" | "roller" | "rollerCapped"
+  | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
 type MatSpec = {
   color: string; roughness: number; metalness: number;
@@ -42,6 +44,12 @@ function Closure({ mode, neckY, capMat, ballMat }: {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
   const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
+  // fine-mist sprayer + lotion pump (Spry17-415 / Ltn17-415): every part
+  // origins at the neck rim per the closures manifest — zero transforms
+  const collar = useGLTF("/models/closures/BB_SPR_COLLAR_17415.glb");
+  const actuator = useGLTF("/models/closures/BB_SPR_ACTUATOR_17415.glb");
+  const overcap = useGLTF("/models/closures/BB_SPR_OVERCAP_17415.glb");
+  const spout = useGLTF("/models/closures/BB_PMP_SPOUT_17415.glb");
   const [mats, setMats] = useState<Record<string, MatSpec> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -79,10 +87,20 @@ function Closure({ mode, neckY, capMat, ballMat }: {
 
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
-    const g = [build(housing, "PART_HOUSING_PP_NATURAL"), build(ball, ballMat)];
-    if (mode === "rollerCapped") g.push(build(cap, capMat));
+    const g: THREE.Object3D[] = [];
+    if (mode === "roller" || mode === "rollerCapped") {
+      g.push(build(housing, "PART_HOUSING_PP_NATURAL"), build(ball, ballMat));
+      if (mode === "rollerCapped") g.push(build(cap, capMat));
+    } else {
+      g.push(build(collar, capMat), build(actuator, "PART_ACTUATOR_PP"));
+      if (mode === "pump" || mode === "pumpCapped")
+        g.push(build(spout, "PART_ACTUATOR_PP"));
+      if (mode === "sprayerCapped" || mode === "pumpCapped")
+        g.push(build(overcap, "PART_OVERCAP_CLEAR"));
+    }
     return g;
-  }, [mode, mats, build, housing, ball, cap, capMat, ballMat]);
+  }, [mode, mats, build, housing, ball, cap, collar, actuator, overcap, spout,
+      capMat, ballMat]);
 
   if (!parts) return null;
   return (

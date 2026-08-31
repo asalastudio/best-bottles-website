@@ -48,11 +48,13 @@ const CAPS: { id: string; label: string; swatch: string }[] = [
     { id: "CAP_COPPER", label: "Matte copper", swatch: "linear-gradient(145deg,#d99a6c,#8f4f2c)" },
 ];
 
-const CLOSURES: { id: "none" | "roller" | "rollerCapped"; label: string }[] = [
+const BASES = [
     { id: "none", label: "Bottle" },
     { id: "roller", label: "Roll-on" },
-    { id: "rollerCapped", label: "Capped" },
-];
+    { id: "sprayer", label: "Spray" },
+    { id: "pump", label: "Pump" },
+] as const;
+type BaseId = (typeof BASES)[number]["id"];
 
 /** colourways that live on their own mesh — the swirl's flutes are geometry */
 const BODY_FOR_GLASS: Partial<Record<GlassPresetId, string>> = {
@@ -69,13 +71,20 @@ export default function BottleConfigurator({
     className?: string;
 }) {
     const [glass, setGlass] = useState<GlassPresetId>(initialGlass);
-    const [closure, setClosure] = useState<"none" | "roller" | "rollerCapped">("roller");
+    const [base, setBase] = useState<BaseId>("roller");
+    const [withCap, setWithCap] = useState(false);
     const [capMat, setCapMat] = useState("CAP_SHINY_GOLD");
     const capLabel = CAPS.find((c) => c.id === capMat)?.label ?? "";
+    const closure =
+        base === "none" ? "none"
+        : base === "roller" ? (withCap ? "rollerCapped" : "roller")
+        : base === "sprayer" ? (withCap ? "sprayerCapped" : "sprayer")
+        : withCap ? "pumpCapped" : "pump";
     const closureLabel =
-        closure === "none" ? "Bottle only"
-        : closure === "roller" ? "Roll-on"
-        : `Roll-on · ${capLabel} cap`;
+        base === "none" ? "Bottle only"
+        : base === "roller" ? (withCap ? `Roll-on · ${capLabel} cap` : "Roll-on")
+        : base === "sprayer" ? (withCap ? "Fine-mist spray · Overcap" : "Fine-mist spray")
+        : withCap ? "Lotion pump · Overcap" : "Lotion pump";
 
     return (
         <div className={className}>
@@ -144,23 +153,39 @@ export default function BottleConfigurator({
                     ))}
                 </div>
 
-                {/* segmented closure control */}
-                <div className="inline-flex rounded-full border border-champagne bg-warm-white p-0.5">
-                    {CLOSURES.map((c) => (
+                {/* segmented closure control + cap toggle */}
+                <div className="flex items-center gap-2">
+                    <div className="inline-flex rounded-full border border-champagne bg-warm-white p-0.5">
+                        {BASES.map((c) => (
+                            <button
+                                key={c.id}
+                                type="button"
+                                onClick={() => setBase(c.id)}
+                                aria-pressed={base === c.id}
+                                className={`px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.16em] font-bold transition-colors duration-200 ${
+                                    base === c.id
+                                        ? "bg-obsidian text-bone"
+                                        : "text-ash hover:text-ink"
+                                }`}
+                            >
+                                {c.label}
+                            </button>
+                        ))}
+                    </div>
+                    {base !== "none" ? (
                         <button
-                            key={c.id}
                             type="button"
-                            onClick={() => setClosure(c.id)}
-                            aria-pressed={closure === c.id}
-                            className={`px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.16em] font-bold transition-colors duration-200 ${
-                                closure === c.id
-                                    ? "bg-obsidian text-bone"
-                                    : "text-ash hover:text-ink"
+                            onClick={() => setWithCap(!withCap)}
+                            aria-pressed={withCap}
+                            className={`px-3 py-1.5 rounded-full border text-[10px] uppercase tracking-[0.16em] font-bold transition-colors duration-200 ${
+                                withCap
+                                    ? "border-obsidian bg-obsidian text-bone"
+                                    : "border-champagne bg-warm-white text-ash hover:text-ink"
                             }`}
                         >
-                            {c.label}
+                            {base === "roller" ? "+ Cap" : "+ Overcap"}
                         </button>
-                    ))}
+                    ) : null}
                 </div>
 
                 {/* cap finishes — only when capped */}

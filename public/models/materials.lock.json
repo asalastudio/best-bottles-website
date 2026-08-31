@@ -64,20 +64,22 @@
    "transmission": "1.0"
   },
   "frosted": {
-   "anisotropicBlur": "0.12",
-   "attenuationColor": "#b6babd",
-   "attenuationDistance": "0.048",
-   "clearcoat": "0.70",
-   "clearcoatRoughness": "0.02",
-   "dispersion": "0.5",
+   "anisotropicBlur": "0.1",
+   "attenuationColor": "#fdfefe",
+   "attenuationDistance": "1.0",
+   "clearcoat": "0",
+   "clearcoatRoughness": "0",
+   "dispersion": "0.31",
    "distortion": "0.05",
-   "envMapIntensity": "1.15",
+   "envMapIntensity": "1.2",
    "envRotationDeg": "18",
    "frostMask": "true",
-   "ior": "1.54",
+   "ior": "1.52",
    "roughness": "0.45",
-   "thickness": "0.0165",
-   "transmission": "0.98"
+   "thickness": "0.0095",
+   "thicknessBake": "false",
+   "thinWall": "true",
+   "transmission": "1.0"
   },
   "swirl": {
    "anisotropicBlur": "0.05",

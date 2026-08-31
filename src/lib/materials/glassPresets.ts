@@ -275,41 +275,35 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
   frosted: {
     id: "frosted",
     label: "Frosted",
-    transmission: 0.98,
+    transmission: 1.0,
     roughness: 0.45,
-    ior: 1.54,
-    thickness: 0.0165,
-    attenuationColor: "#b6babd",
-    attenuationDistance: 0.048,
-    dispersion: 0.5,
-    clearcoat: 0.70,
-    clearcoatRoughness: 0.02,
-    envMapIntensity: 1.15,
+    ior: 1.52,
+    thickness: 0.0095,
+    attenuationColor: "#fdfefe",
+    attenuationDistance: 1.0,
+    dispersion: 0.31,
+    clearcoat: 0,
+    clearcoatRoughness: 0,
+    envMapIntensity: 1.2,
     frostMask: true,
+    thinWall: true,
+    thicknessBake: false,
     distortion: 0.05,
-    anisotropicBlur: 0.12,
+    anisotropicBlur: 0.1,
     envRotationDeg: 18,
     provenance:
-      "PDP STAGE ADJUSTMENT 2026-08-31: the measured scatter loss (#b6babd @ 0.028) was solved against the lab\u2019s BONE backdrop; on the PDP\u2019s warm taupe vitrine it rendered too dark with a heavy top gradient (Jordan: not accurate). attenuationDistance eased to 0.048 and envMapIntensity lifted to 1.15 so the white surface scatter carries more of the read. Re-verify against frosted.jpg if the stage changes again. " +
-      "BACK ON THE MTM PATH 2026-08-31 after the thin-wall detour: native transmission couples its screen-space blur to surface roughness, so the frosted body SMEARED the gold cap downward into the glass on pan (Jordan: colour pours into the bottle). MeshTransmissionMaterial decouples them - roughness 0.45 keeps the etch, anisotropicBlur 0.12 keeps the transmission calm. Measured scatter values restored: #b6babd @ 0.028 (T .725/.736/.742 vs reference .727/.722/.709). " +
-      "REBASED 2026-08-31 onto the Pacdora thin-wall recipe (Jordan: the rough-0.1 DoubleSide clear registered as frosted - so frosted claims it): thinWall + DoubleSide + thickness 0.0002, roughness 0.45 for the etch. NOTE the measured scatter-loss attenuation (#b6babd @ 0.028) cannot act at thin-wall thickness - the slight darkening now comes from the material colour path; re-tune by eye against frosted.jpg. " +
-      "SOLVED 2026-08-31 by measurement, approved by Jordan ('keep it'). " +
-      "The earlier claim that the ratio method cannot apply to frosted was " +
-      "WRONG in one respect: the reference measures 27% DARKER than its " +
-      "backdrop (T .727/.722/.709), and that loss is SCATTERING, which a " +
-      "mild neutral-cool absorption models well. Sweep on the live canvas: " +
-      "#b6babd at attenuationDistance 0.028 -> T .725/.736/.742, within " +
-      ".004/.014/.033 of the reference. The lossless white (#f4f6f5 at 0.28, " +
-      "T .983) was exactly the 'white plastic' Jordan rejected - a frosted " +
-      "bottle with no transmission loss reads as plastic. " +
-      "frostMask: the reference shows CLEAR THREADS on the etched body - " +
-      "real acid-etching masks the finish so the closure seals; " +
-      "<bodyId>.frost.png (bake_thickness.py --frost-datum-mm 55) feeds the " +
-      "roughnessMap so one mesh carries both surfaces. Roughness 0.55 and " +
-      "anisotropicBlur 0.25 remain this finish's surface identity. " +
-      "Measured truth kept: the etch itself is neutral (sat 0.00); the " +
-      "attenuation here stands in for scatter loss, not colour.",
+      "THE LIBRARY'S OWN FROSTED (Jordan 2026-08-31: look it up in the "
+      + "materials library): physicallybased ships no separate frosted entry "
+      + "- its glass() factory takes a ROUGHNESS OVERRIDE on the measured "
+      + "base, and 0.5 is its matte convention. So frosted = GLASS_BASE at "
+      + "roughness 0.45 on the thin-wall path, same architecture as clear "
+      + "and swirl: ONE canonical glass everywhere, roughness is this "
+      + "finish's whole identity (the measurement always agreed - the etch "
+      + "is neutral, saturation 0.00). frostMask keeps the threads clear. "
+      + "Supersedes the scatter-as-absorption MTM approach (#b6babd @ "
+      + "0.028/0.048) - recorded in git if the loss-model is ever wanted.",
   },
+
 
 };
 
@@ -336,7 +330,10 @@ export function applyGlassPreset(
     clearcoat: preset.clearcoat,
     clearcoatRoughness: preset.clearcoatRoughness,
     envMapIntensity: preset.envMapIntensity,
-    transparent: true,
+    // thin-wall stays OPAQUE-pipeline: transmission renders the see-through;
+    // transparent:true forced per-frame sorting across the hollow shell's
+    // four face layers and flickered during rotation (Jordan, 2026-08-31)
+    transparent: false,
     side: preset.thinWall ? THREE.DoubleSide : THREE.FrontSide,
   });
   const old = mesh.material;
