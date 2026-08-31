@@ -28,6 +28,7 @@ LOCK = ROOT / "public" / "models" / "materials.lock.json"
 TRACKED_FILES = [
     "public/models/studio-universal.hdr",
     "public/models/studio-mono.hdr",
+    "public/models/studio-metal-key.hdr",
     "public/models/studio-room.hdr",
     "public/models/studio-browser.hdr",
     "public/models/studio-metal.hdr",

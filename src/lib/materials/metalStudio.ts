@@ -30,7 +30,7 @@ import * as THREE from "three";
  *  procedural band ever matched; monochrome keeps silver silver. The
  *  procedural generator below remains as a tunable fallback. */
 export function useMetalStudioHdri(): THREE.Texture {
-  return useEnvironment({ files: "/models/studio-mono.hdr" });
+  return useEnvironment({ files: "/models/studio-metal-key.hdr" });
 }
 
 const W = 512, H = 256;
