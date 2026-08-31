@@ -228,37 +228,6 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
 
   if (preset.hdri) return <Environment files={preset.hdri} />;
 
-  if (studioId === "room") {
-    // A room for the glass to MIRROR — reflections come only from the env map,
-    // so the room is built here, not as scene meshes. Everything broad and
-    // moderate; the narrow-hot stripe shape is banned (see studioPresets.ts).
-    return (
-      <Environment resolution={1024}>
-        {/* ambient shell so the room is never pitch black between panels */}
-        <Lightformer form="rect" intensity={0.55} color="#cfcbc4"
-                     position={[0, 0.5, -3.5]} scale={[9, 6, 1]} />
-        <Lightformer form="rect" intensity={0.45} color="#c9c5be"
-                     position={[0, 0.5, 3.5]} rotation={[0, Math.PI, 0]}
-                     scale={[9, 6, 1]} />
-        <Lightformer form="rect" intensity={0.4} color="#d6d2ca"
-                     position={[0, 3.2, 0]} rotation={[Math.PI / 2, 0, 0]}
-                     scale={[9, 9, 1]} />
-        {/* key softbox — the big soft sheen that slides as the bottle turns */}
-        <Lightformer form="rect" intensity={3.5} color="#fff8ef"
-                     position={[-1.7, 1.0, 0.8]} rotation={[0, Math.PI / 2.6, 0]}
-                     scale={[2.0, 2.6, 1]} />
-        {/* window — the tall cool panel Pacdora-style glass mirrors */}
-        <Lightformer form="rect" intensity={2.2} color="#eef3fa"
-                     position={[1.8, 0.9, -0.2]} rotation={[0, -Math.PI / 2.2, 0]}
-                     scale={[1.1, 2.4, 1]} />
-        {/* warm floor bounce keeps the lower hemisphere alive */}
-        <Lightformer form="rect" intensity={0.8} color="#e8ddd0"
-                     position={[0, -1.6, 0.4]} rotation={[Math.PI / 2, 0, 0]}
-                     scale={[5, 5, 1]} />
-      </Environment>
-    );
-  }
-
   // legacy in-scene rig, kept only for A/B. Its narrow hot rim pair is what
   // paints hard vertical stripes down a cylinder.
   return (

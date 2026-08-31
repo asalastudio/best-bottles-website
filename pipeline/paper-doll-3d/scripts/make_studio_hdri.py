@@ -30,10 +30,12 @@ import math, pathlib, struct
 import numpy as np
 
 import sys
-PROFILE = "browser" if "--browser" in sys.argv else "cycles"
+PROFILE = ("room" if "--room" in sys.argv
+           else "browser" if "--browser" in sys.argv else "cycles")
 
 W, H = 1024, 512
-_name = "studio-browser.hdr" if PROFILE == "browser" else "studio.hdr"
+_name = {"browser": "studio-browser.hdr", "room": "studio-room.hdr",
+         "cycles": "studio.hdr"}[PROFILE]
 OUT = pathlib.Path(__file__).resolve().parents[1] / _name
 PUBLIC = pathlib.Path(__file__).resolve().parents[3] / "public" / "models" / _name
 
@@ -72,6 +74,25 @@ EMITTERS = [
     dict(theta=0.0, phi=0.18, wt=math.pi, wp=0.42, i=2.4, c=(1,1,1), soft=1.00),
     # overhead scrim - soft falloff down the shoulder
     dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.30, i=2.6, c=(1,1,1), soft=1.00),
+] if PROFILE == "browser" else [
+    # ROOM profile: the reflections themselves are the product feature
+    # (Aesop-style sheen). The tent's field is featureless on purpose; a room
+    # needs a FEW identifiable shapes - but the feathering law is identical:
+    # soft=1.0 on everything, nothing narrow-and-hot. An in-scene Lightformer
+    # version of this rig painted hard vertical lines down the cylinder
+    # (2026-08-30) because rects have no falloff - that is why the room is an
+    # HDRI and not JSX.
+    # key softbox: big, warm, front-left - the broad sheen that slides
+    dict(theta=-0.55, phi=0.75, wt=1.10, wp=0.90, i=6.5, c=(1.00,0.99,0.96), soft=1.00),
+    # window: tall cool panel front-right. WIDE enough to wrap (wt 0.55 =
+    # the tent's approved rim width), never a bar
+    dict(theta= 0.95, phi=0.95, wt=0.55, wp=1.25, i=4.5, c=(0.93,0.96,1.00), soft=1.00),
+    # broad dim front fill so the camera side of the room exists
+    dict(theta= 0.10, phi=1.05, wt=1.60, wp=1.00, i=1.4, c=(0.99,0.98,0.96), soft=1.00),
+    # behind: wide soft bounce, keeps the far wall alive through the glass
+    dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.8, c=(1.00,0.98,0.95), soft=1.00),
+    # overhead scrim
+    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=2.2, c=(1,1,1), soft=1.00),
 ]
 
 
@@ -96,12 +117,18 @@ def build():
     if PROFILE == "browser":
         sky = 0.28 + 0.55 * smoothstep(-0.85, 0.95, up)
         floor = 0.22 * smoothstep(0.10, -1.00, up)
+    elif PROFILE == "room":
+        # a touch darker than the tent so the window and key READ in the
+        # reflection; floor warmed toward the Aesop tan work surface
+        sky = 0.20 + 0.42 * smoothstep(-0.85, 0.95, up)
+        floor = 0.26 * smoothstep(0.10, -1.00, up)
     else:
         sky = 0.030 + 0.075 * smoothstep(-0.85, 0.95, up)
         floor = 0.020 * smoothstep(0.10, -1.00, up)
-    img = np.stack([sky * 0.97 + floor * 1.00,
-                    sky * 0.98 + floor * 0.96,
-                    sky * 1.00 + floor * 0.90], axis=-1)
+    fw = (1.00, 0.96, 0.90) if PROFILE != "room" else (1.06, 0.94, 0.80)
+    img = np.stack([sky * 0.97 + floor * fw[0],
+                    sky * 0.98 + floor * fw[1],
+                    sky * 1.00 + floor * fw[2]], axis=-1)
 
     for e in EMITTERS:
         dt = np.abs((T - e["theta"] + math.pi) % (2 * math.pi) - math.pi) / e["wt"]
