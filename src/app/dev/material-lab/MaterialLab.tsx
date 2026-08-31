@@ -407,6 +407,9 @@ export default function MaterialLab(
 
   const loadPreset = (id: GlassPresetId) => {
     setPresetId(id); setWorking({ ...GLASS_PRESETS[id] });
+    // each colourway carries its own studio angle so the finishes do not all
+    // catch the light in the same place (Jordan, 2026-08-31)
+    setEnvRot(GLASS_PRESETS[id].envRotationDeg);
   };
   const set = <K extends keyof GlassPreset>(k: K, v: GlassPreset[K]) =>
     setWorking((p) => ({ ...p, [k]: v }));

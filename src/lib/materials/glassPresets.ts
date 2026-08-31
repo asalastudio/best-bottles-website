@@ -67,6 +67,11 @@ export type GlassPreset = {
   clearcoatRoughness: number;
   /** how hard the studio shows in the surface. */
   envMapIntensity: number;
+  /** degrees. Per-colourway studio rotation, so the highlights land in a
+   *  different place on each finish instead of five identical bottles
+   *  (Jordan, 2026-08-31). It rotates the SAME approved room - no new
+   *  emitters, so it cannot reintroduce the horizon-line artefact. */
+  envRotationDeg: number;
   /** where the numbers came from, so nobody re-guesses them later. */
   provenance: string;
 };
@@ -78,14 +83,16 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 1.0,
     roughness: 0.02,
     ior: 1.54,
-    thickness: 0.012,
+    thickness: 0.0165,
     attenuationColor: "#eef6f2",
-    attenuationDistance: 0.42,
+    attenuationDistance: 0.06,
     dispersion: 1.4,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    envRotationDeg: 62,
     provenance:
+      "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .689/.686/.678 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. attenuationDistance 0.06 measures .974/.978/.974 - just enough for the thick heel and finish to pick up the faint soda-lime green." +
       "SURFACE ONLY carried over from the approved amber (2026-08-31): ior 1.54, roughness 0.02, clearcoat 0.70/0.02 - one physical glass, so the surface must not differ by colourway. The ABSORPTION below is NOT approved and still needs its own lab session. " +
       "Faintly green soda-lime, as flint glass actually is. Long attenuation " +
       "distance so only the thickest sections tint at all.",
@@ -103,6 +110,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    envRotationDeg: 0,
     provenance:
       "APPROVED 2026-08-31 BY JORDAN IN THE MATERIAL LAB - 'this is the " +
       "Aesop result that we want', held against public/references/9ml/" +
@@ -139,39 +147,48 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 1.0,
     roughness: 0.02,
     ior: 1.54,
-    thickness: 0.014,
-    attenuationColor: "#123f9e",
-    attenuationDistance: 0.026,
-    dispersion: 1.2,
+    thickness: 0.0165,
+    attenuationColor: "#060cc4",
+    attenuationDistance: 0.015,
+    dispersion: 0.95,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    envRotationDeg: 34,
     provenance:
-      "SURFACE ONLY carried over from the approved amber (2026-08-31): ior 1.54, roughness 0.02, clearcoat 0.70/0.02 - one physical glass, so the surface must not differ by colourway. The ABSORPTION below is NOT approved and still needs its own lab session. " +
-      "ART DIRECTION, not measurement. No physical cobalt bottle was " +
-      "available to photograph, so this is eye-set against a reference image " +
-      "of unknown origin (pure white background, no room in the reflections - " +
-      "likely a render or a retouched catalogue asset). " +
-      "Treat it as taste until a real bottle can be shot the way clear, " +
-      "frosted and amber were. " +
-      "A measurement from the OLD catalogue silhouette exists and is " +
-      "recorded for reference - sigma [286, 260, 19]/m, #6e77f2 at 0.014 - " +
-      "but it rendered near-black and is not what ships.",
+      "SOLVED 2026-08-31 by measurement against public/references/9ml/" +
+      "cobalt.jpg, same loop as the approved amber (see the " +
+      "bestbottles-glass-material-lab skill). Sweeping attenuationColor and " +
+      "reading the live canvas, body mid as a fraction of the backdrop:\n" +
+      "    #123f9e -> .017/.043/.288\n" +
+      "    #0810b4 -> .000/.035/.459\n" +
+      "    #060cc4 -> .000/.035/.592   <- shipping\n" +
+      "    target  -> .007/.066/.608\n" +
+      "Blue lands within .016 of the reference. GREEN IS FLOOR-LIMITED: " +
+      "#060cc4 through #0620c4 all measure .035 because that is the neutral " +
+      "surface-reflection floor, not the glass - do not chase it with more " +
+      "green, it does nothing. Surface and optical treatment are the amber's " +
+      "(ior 1.54, thickness 0.0165, attenuationDistance 0.015): one physical " +
+      "glass. Jordan approved it on sight. " +
+      "Superseded: eye-set #123f9e at 0.026, which measured .017/.043/.288 - " +
+      "far too pale and too green.",
   },
   swirl: {
     id: "swirl",
     label: "Swirl",
     transmission: 0.96,
     roughness: 0.30,
-    ior: 1.50,
-    thickness: 0.011,
+    ior: 1.54,
+    thickness: 0.0165,
     attenuationColor: "#e2d8c6",
     attenuationDistance: 0.16,
     dispersion: 0.9,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
+    envRotationDeg: 46,
     provenance:
+      "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = 1.108/1.160/1.208 - BRIGHTER than the backdrop of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. A value above 1.0 cannot come from absorption at all; the flutes CONCENTRATE light, which is geometry doing the work. Roughness 0.30 is kept as this finish\u2019s identity." +
       "Clearcoat 0.70/0.02 carried over from the approved amber (2026-08-31) - same physical glass surface. Roughness deliberately NOT carried over: it is this finish's identity. Absorption NOT approved. " +
       "ART DIRECTION, not measurement - no physical swirl bottle available. " +
       "IMPORTANT: the swirl is GEOMETRY, not a material. The flutes are a real " +
@@ -185,15 +202,17 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     label: "Frosted",
     transmission: 0.98,
     roughness: 0.55,
-    ior: 1.50,
-    thickness: 0.010,
+    ior: 1.54,
+    thickness: 0.0165,
     attenuationColor: "#f4f6f5",
-    attenuationDistance: 0.28,
+    attenuationDistance: 0.10,
     dispersion: 0.5,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 0.9,
+    envRotationDeg: 18,
     provenance:
+      "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = .727/.722/.709 of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. Roughness 0.55 is this finish\u2019s entire identity and is NOT the amber\u2019s 0.02 - the reference measures perfectly NEUTRAL (saturation 0.00), confirming frosted has essentially no volume absorption: it is the same glass with an etched SURFACE." +
       "Clearcoat 0.70/0.02 carried over from the approved amber (2026-08-31) - same physical glass surface. Roughness deliberately NOT carried over: it is this finish's identity. Absorption NOT approved. " +
       "APPROVED BY EYE. The measurement still stands and is the useful " +
       "finding: T = .896/.898/.899 — " +
