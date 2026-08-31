@@ -53,20 +53,24 @@ type Emitter = {
 };
 
 /** The four deliberate shapes. Descended from the handoff's Lightformer
- *  seeds (strips 3@z=+2 → 4.5@z=±1 → feathered); geometry unchanged. */
+ *  seeds, feathered, then LIFTED ABOVE THE BOTTLE per the lane law
+ *  ([[glass-env-no-horizon-sources]]): a source at bottle height reflects
+ *  on a cylinder at the SILHOUETTE for whichever camera azimuth faces away
+ *  from it — the broad horizon backlight wrapped amber/cobalt in a
+ *  full-height white halo the moment the orbit stopped near front
+ *  (Jordan), and horizon strips do the same at their own azimuths. All
+ *  punch now comes from elevation: edge/shoulder grades stay, full-height
+ *  wraps cannot form at ANY orbit angle. */
 const EMITTERS: Emitter[] = [
-  // left + right vertical strips: clear-glass edge highlights, graded
-  // sheens (not stripes) in the metal caps. z=+1.6: at z=+1 the strips sat
-  // nearly beside the bottle and grazing-angle Fresnel wrapped the DARK
-  // volume glasses (amber/cobalt) in a glowing outline — "halo around the
-  // bottle" (Jordan). Forward-biased, the line lands just inboard of the
-  // silhouette: clear keeps its edge definition, ambers stop haloing.
-  { position: [-4, 2, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
-  { position: [4, 2, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
+  // high left + right strips: clear-glass edge/shoulder highlights,
+  // graded sheens in the metal caps
+  { position: [-4, 5, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
+  { position: [4, 5, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
   // overhead softbox: cap tops and bottle shoulders
   { position: [0, 6, 0], scale: [6, 3], intensity: 2.5, sigma: [0.45, 0.45] },
-  // broad dim backlight: amber/cobalt transmit instead of reading black
-  { position: [0, 2, -6], scale: [8, 6], intensity: 1.4, sigma: [0.55, 0.55] },
+  // broad dim backlight, raised behind-above: amber/cobalt transmit
+  // instead of reading black, without a horizon-level silhouette wrap
+  { position: [0, 5, -6], scale: [8, 6], intensity: 1.4, sigma: [0.55, 0.55] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
