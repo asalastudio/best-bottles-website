@@ -88,14 +88,10 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     ? "/models/closures/BB_DRP_BULB_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const drpPipette = useGLTF(has1841
     ? "/models/closures/BB_DRP_PIPETTE_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
-  const anspAssembly = useGLTF(has1841
-    ? "/models/closures/BB_ANSP_ASSEMBLY_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspCollar = useGLTF(has1841
     ? "/models/closures/BB_ANSP_COLLAR_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspBulb = useGLTF(has1841
     ? "/models/closures/BB_ANSP_BULB_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
-  const anspFerrule = useGLTF(has1841
-    ? "/models/closures/BB_ANSP_FERRULE_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const anspTassel = useGLTF(has1841
     ? "/models/closures/BB_ANSP_TASSEL_18415.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const reducer = useGLTF(has1841
@@ -314,7 +310,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspAssembly, anspCollar, anspBulb, anspFerrule, anspTassel, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspTassel, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 

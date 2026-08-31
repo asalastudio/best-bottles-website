@@ -19,7 +19,7 @@ import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { CONFIGURATOR_FAMILIES, familyForSlug,
-         type ConfiguratorFamily } from "@/lib/configurator/families";
+         type ConfiguratorFamily, type FinishCode } from "@/lib/configurator/families";
 
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
     ssr: false,
@@ -43,7 +43,9 @@ const GLASS_SWATCH: Record<GlassPresetId, string> = {
 
 /** THE 10 CAPS — SKU-derived (BlkDot/Wht/MattCu/MattGl/MattSl/PnkDot/
  *  ShBlk/ShnGl/ShnSl/SlDot). Dot caps render on the DOTS geometry. */
-const CAPS: { id: string; label: string; swatch: string }[] = [
+const CAPS: { id: string; label: string; swatch: string;
+              /** omit = every finish; set = that finish only */
+              finish?: FinishCode }[] = [
     { id: "CAP_SHINY_BLACK", label: "Black", swatch: "linear-gradient(145deg,#3a3a3a,#0b0b0b)" },
     { id: "CAP_WHITE", label: "White", swatch: "linear-gradient(145deg,#ffffff,#e2e0da)" },
     { id: "CAP_SHINY_GOLD", label: "Shiny gold", swatch: "linear-gradient(145deg,#fff4d0,#c9a24a)" },
@@ -54,6 +56,15 @@ const CAPS: { id: string; label: string; swatch: string }[] = [
     { id: "CAP_DOTS_BLACK", label: "Black dot", swatch: "radial-gradient(circle at 35% 35%, #161616 42%, #efece3 46%)" },
     { id: "CAP_DOTS_PINK", label: "Pink dot", swatch: "radial-gradient(circle at 35% 35%, #dcc3ca 42%, #efece3 46%)" },
     { id: "CAP_DOTS_SILVER", label: "Silver dot", swatch: "radial-gradient(circle at 35% 35%, #b9bcbe 42%, #efece3 46%)" },
+    // Faux-leather caps ship on 18-415 only — they are their own moulding
+    // (BB_CAP_18415_LEATHER), and the viewer already routes LEATHER_* to it.
+    // They were missing from this list entirely, which left the whole leather
+    // lane unreachable: a "Black Leather Cap" SKU rendered a gold cap.
+    { id: "LEATHER_BLACK", label: "Black leather", finish: "18-415", swatch: "linear-gradient(145deg,#4a4a4a,#1b1b1b)" },
+    { id: "LEATHER_BROWN", label: "Brown leather", finish: "18-415", swatch: "linear-gradient(145deg,#b98a5e,#7d5533)" },
+    { id: "LEATHER_LIGHT_BROWN", label: "Light brown leather", finish: "18-415", swatch: "linear-gradient(145deg,#cfb08a,#96775a)" },
+    { id: "LEATHER_IVORY", label: "Ivory leather", finish: "18-415", swatch: "linear-gradient(145deg,#e6d5b8,#b9a07a)" },
+    { id: "LEATHER_PINK", label: "Pink leather", finish: "18-415", swatch: "linear-gradient(145deg,#e6aab6,#b3737f)" },
 ];
 
 /** spray collar colours (6, SKU-derived) — pump uses the first 3 */
@@ -374,7 +385,8 @@ export default function BottleConfigurator({
                                     Cap finish
                                 </span>
                                 <div className="flex items-center gap-2.5">
-                                    {CAPS.map((c) => (
+                                    {CAPS.filter((c) => !c.finish || c.finish === fam.finish)
+                                         .map((c) => (
                                         <button
                                             key={c.id}
                                             type="button"
