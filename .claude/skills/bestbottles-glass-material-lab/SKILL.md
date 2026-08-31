@@ -88,7 +88,25 @@ mild neutral-cool absorption: `#b6babd` @ 0.028 → T .725/.736/.742.
 in for scatter loss, not colour. Also structural: real acid-etching masks the
 finish, so bake a frost mask (`--frost-datum-mm`) and keep the threads clear.
 
-**Truly clear glass: the ratio is unreachable and that is fine.** Clear
+**Truly clear glass: PACDORA'S EXACT RECIPE, scraped from their model API**
+(`api/v2/models/details?mockupNameKey=...` — per-part `material` dict; the
+material database also lives at `api/v2/materials/science` and
+`api/v2/material_effect`). Their glass body is stock MeshPhysicalMaterial:
+
+    transmission 1 · thickness ABSENT (0) · roughness 0.1 · ior 1.5
+    clearcoat 0 · side DOUBLE · transparent true
+    no thicknessMap, no attenuation, no dispersion, no custom shader
+
+The three counter-intuitive keys: DoubleSide (both shell walls render —
+back wall and doubled edges for free, replacing all backside machinery),
+thickness exactly 0 (zero refraction offset), and roughness 0.1 NOT 0.02
+(the soft SPREAD sheen; polished gives sharp glints instead). Ground
+pairing is part of the recipe: clear on a bright ground is white-on-white —
+Pacdora stages clear on GREY; ours pairs with the umber (#3b2f27) sweep.
+Their parts list confirms the content principle: dip tube, liquid filler
+mesh and label are separate meshes behind the glass.
+
+**Where the old structural guidance still applies:** Clear
 bottoms out at .913 against a .689 reference; swirl measures above 1.0
 (flutes concentrate light — absorption cannot produce that). These get their
 presence from refraction, edges and reflection: judge them structurally, and
