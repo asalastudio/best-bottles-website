@@ -85,10 +85,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 1.35,
+      "envMapIntensity": 1.62,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
+      "note": "Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_SHINY_SILVER": {
       "color": "#fefdfc",
@@ -103,10 +103,10 @@
       "ior": 1.5,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 2.0,
+      "envMapIntensity": 2.4,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
+      "note": "Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
     },
     "CAP_WHITE": {
       "color": "#f4f3f0",

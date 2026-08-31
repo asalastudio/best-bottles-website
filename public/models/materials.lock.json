@@ -224,7 +224,7 @@
    "clearcoat": 0.0,
    "color": "#ffe496",
    "env": "metal",
-   "envMapIntensity": 1.35,
+   "envMapIntensity": 1.62,
    "ior": 1.5,
    "linear": [
     0.9999999999999999,
@@ -241,7 +241,7 @@
    "clearcoat": 0.0,
    "color": "#fefdfc",
    "env": "metal",
-   "envMapIntensity": 2.0,
+   "envMapIntensity": 2.4,
    "ior": 1.5,
    "linear": [
     0.9960333152256678,
