@@ -23,6 +23,7 @@ import {
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import BottleConfigurator from "@/components/products/BottleConfigurator";
+import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
@@ -1242,7 +1243,7 @@ export default function ProductDetailClient({
     }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
     // configurator families: the 3D IS the imagery — no variant tile rail
-    const is3dFamily = /cylinder-9ml-.*17-415/.test(group?.slug ?? "");
+    const is3dFamily = familyForSlug(group?.slug ?? "") !== null;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1563,20 +1564,18 @@ export default function ProductDetailClient({
                                 )}
                                 <div className="min-w-0">
                                     {(() => {
-                                        // 3D eligibility: ONLY where the whole chain is approved —
-                                        // hollow body GLB + thickness/frost bakes + locked glass
-                                        // preset. Today that is the 17-415 9 ml cylinder. Anything
-                                        // else keeps the photographic gallery.
+                                        // 3D eligibility comes from the configurator family
+                                        // registry — a family enters it only when its whole
+                                        // chain is approved (hollow body GLB + thickness bake +
+                                        // locked glass + closure GLBs). Anything else keeps the
+                                        // photographic gallery.
                                         const slug3d = group.slug ?? "";
+                                        const fam3d = familyForSlug(slug3d);
                                         const configurator3d: { bodyId: string; glass: GlassPresetId } | null =
-                                            /cylinder-9ml-.*17-415/.test(slug3d)
+                                            fam3d
                                                 ? {
-                                                    bodyId: "Cyl-round-17-415-70x20",
-                                                    glass: /cobalt/.test(slug3d) ? "cobalt"
-                                                         : /frosted/.test(slug3d) ? "frosted"
-                                                         : /clear/.test(slug3d) ? "clear"
-                                                         : /swirl/.test(slug3d) ? "swirl"
-                                                         : "amber",
+                                                    bodyId: fam3d.bodyDefault,
+                                                    glass: glassFromSlug(fam3d, slug3d),
                                                   }
                                                 : null;
 

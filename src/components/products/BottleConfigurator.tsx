@@ -18,6 +18,8 @@ import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
+import { CONFIGURATOR_FAMILIES, familyForSlug,
+         type ConfiguratorFamily } from "@/lib/configurator/families";
 
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
     ssr: false,
@@ -77,27 +79,16 @@ type BaseId = (typeof BASES)[number]["id"];
  *  change NAVIGATES to the sibling product so the SKU, price and fitment
  *  panel always match what is on screen — the configurator is the product
  *  selector, not a separate toy. */
-const SLUG_COLOUR: Record<GlassPresetId, string> = {
-    clear: "clear", amber: "amber", cobalt: "cobalt-blue",
-    frosted: "frosted", swirl: "swirl",
-};
-const SLUG_CLOSURE: Record<string, string> = {
-    roller: "rollon", sprayer: "finemist", pump: "lotionpump",
-};
-const CLOSURE_FROM_SLUG: Record<string, "roller" | "sprayer" | "pump"> = {
-    rollon: "roller", finemist: "sprayer", lotionpump: "pump",
-};
-function siblingSlug(current: string, glass: GlassPresetId, base: string): string | null {
-    const m = current.match(/^cylinder-9ml-(.+)-17-415-(rollon|finemist|lotionpump)$/);
-    if (!m) return null;
-    const closure = SLUG_CLOSURE[base] ?? m[2];
-    return `cylinder-9ml-${SLUG_COLOUR[glass]}-17-415-${closure}`;
+function siblingSlug(fam: ConfiguratorFamily, current: string,
+                     glass: GlassPresetId, base: string): string | null {
+    if (!fam.slugRe.test(current)) return null;
+    const currentToken = current.split("-").pop() ?? "";
+    const closure = fam.slugClosure[base as keyof typeof fam.slugClosure]
+        ?? currentToken;
+    const colour = fam.slugColour[glass];
+    if (!colour) return null;
+    return fam.buildSlug(colour, closure);
 }
-
-/** colourways that live on their own mesh — the swirl's flutes are geometry */
-const BODY_FOR_GLASS: Partial<Record<GlassPresetId, string>> = {
-    swirl: "CylSwrl-round-17-415-74x21",
-};
 
 export default function BottleConfigurator({
     bodyId = "Cyl-round-17-415-70x20",
@@ -112,10 +103,11 @@ export default function BottleConfigurator({
     className?: string;
 }) {
     const router = useRouter();
+    const fam = familyForSlug(currentSlug) ?? CONFIGURATOR_FAMILIES[0];
     const [glass, setGlass] = useState<GlassPresetId>(initialGlass);
-    const slugClosure = currentSlug.match(/-(rollon|finemist|lotionpump)$/)?.[1];
+    const slugClosure = currentSlug.split("-").pop() ?? "";
     const [base, setBase] = useState<BaseId>(
-        slugClosure ? CLOSURE_FROM_SLUG[slugClosure] : "roller");
+        fam.closureFromSlug[slugClosure] ?? (fam.bases.includes("roller") ? "roller" : "sprayer"));
     const [withCap, setWithCap] = useState(false);
     const [capMat, setCapMat] = useState("CAP_SHINY_GOLD");
     const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
@@ -138,7 +130,8 @@ export default function BottleConfigurator({
             {/* ------------------------------------------------ the vitrine */}
             <div className="relative">
                 <Bottle3DViewer
-                    bodyId={BODY_FOR_GLASS[glass] ?? bodyId}
+                    bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault ?? bodyId}
+                    finish={fam.finish}
                     glass={glass}
                     closure={closure}
                     capMat={capMat}
@@ -182,7 +175,7 @@ export default function BottleConfigurator({
             <div className="mt-4 flex flex-col items-center gap-4">
                 {/* glass swatches */}
                 <div className="flex items-center gap-2.5">
-                    {(Object.keys(GLASS_PRESETS) as GlassPresetId[])
+                    {fam.glasses
                         .filter((id) => GLASS_PRESETS[id].configuratorReady !== false)
                         .map((id) => (
                         <button
@@ -190,7 +183,7 @@ export default function BottleConfigurator({
                             type="button"
                             onClick={() => {
                                 setGlass(id);
-                                const to = siblingSlug(currentSlug, id, base);
+                                const to = siblingSlug(fam, currentSlug, id, base);
                                 if (to && to !== currentSlug) router.push(`/products/${to}`);
                             }}
                             aria-label={`${GLASS_PRESETS[id].label} glass`}
@@ -216,7 +209,7 @@ export default function BottleConfigurator({
                                 onClick={() => {
                                     setBase(c.id);
                                     if (c.id !== "none") {
-                                        const to = siblingSlug(currentSlug, glass, c.id);
+                                        const to = siblingSlug(fam, currentSlug, glass, c.id);
                                         if (to && to !== currentSlug) router.push(`/products/${to}`);
                                     }
                                 }}

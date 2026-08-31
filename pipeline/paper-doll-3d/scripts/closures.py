@@ -178,9 +178,14 @@ def roller_ball_builder(rig, finish, variant):
     return dict(spec=rs, sphere=(rs["ball_d"], rs["ball_z"]))
 
 
+
+def _fin_spec(c17, base, finish):
+    """COLLAR_17415 / COLLAR_18415 etc. — spec dict selected by finish."""
+    return getattr(c17, f"{base}_{finish.replace('-', '')}")
+
 def collar_builder(rig, finish, variant):
     c17 = _load_c17(rig)
-    cs = c17.COLLAR_17415
+    cs = _fin_spec(c17, "COLLAR", finish)
     bottle = rig.FINISH_MASTERS[finish]
     rig.resolve_thread(bottle)
     if "turns" not in bottle and "thread_band" in bottle:
@@ -191,7 +196,7 @@ def collar_builder(rig, finish, variant):
 
 def actuator_builder(rig, finish, variant):
     c17 = _load_c17(rig)
-    hs = c17.ACTUATOR_17415
+    hs = _fin_spec(c17, "ACTUATOR", finish)
     return dict(spec=hs, profile=c17.actuator_profile(hs), modulate=None)
 
 
@@ -205,8 +210,8 @@ def overcap_builder(rig, finish, variant):
     the one rule that all parts parent-and-zero to BB_ATTACH_NECK.
     """
     c17 = _load_c17(rig)
-    oc = c17.OVERCAP_17415
-    z0 = c17.COLLAR_17415["top_face_z"]
+    oc = _fin_spec(c17, "OVERCAP", finish)
+    z0 = _fin_spec(c17, "COLLAR", finish)["top_face_z"]
     prof = [(r, z + z0) for r, z in c17.overcap_profile(oc)]
     return dict(spec=oc, profile=prof, modulate=None)
 
@@ -291,7 +296,7 @@ def pump_spout_builder(rig, finish, variant):
     from mathutils import Matrix
 
     c17 = _load_c17(rig)
-    hs = c17.ACTUATOR_17415
+    hs = _fin_spec(c17, "ACTUATOR", finish)
     r_face = (hs["body_od_high"] / 2.0
               + (hs["body_od_low"] - hs["body_od_high"]) / 2.0 * 0.25)
     d, proud, z = hs["pump_spout_d"], hs["pump_spout_proud"], hs["pump_spout_z"]
@@ -424,6 +429,10 @@ PARTS = {
     ("17-415", "CAP_DOTS", None):          cap_dots_builder,
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,
+    ("18-415", "SPR_COLLAR", None):        collar_builder,
+    ("18-415", "SPR_ACTUATOR", None):      actuator_builder,
+    ("18-415", "SPR_OVERCAP", None):       overcap_builder,
+    ("18-415", "PMP_SPOUT", None):         pump_spout_builder,
     ("18-415", "REDUCER", None):           reducer_builder,
     ("18-415", "CAP", None):               cap_part_builder,
 }

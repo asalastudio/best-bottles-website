@@ -482,3 +482,42 @@ def component_audit(objs, neck, kind, catalog=None):
         if catalog:
             print(f"COMPONENT_AUDIT {kind}/CATALOG: listing {catalog}")
     return rows
+
+
+# ---------------------------------------------------------------- 18-415 set
+# MEASURED 2026-08-31 from "20. Closures .../7. 18-415 Sprayers/
+# 13. Spry18-415ShnBlk.psd" (content 214x391 px, scaled by the collar OD
+# 21.3): total 39.0, collar hood 65% (~25.4, rising ~10 above the rim),
+# two-tier head 35% (~13.7, O14.5). The 18-415 sprayer is a TALL-HOOD
+# design against the 17-415's short band. Thread engagement from
+# FINISH_MASTERS["18-415"]: T 17.5 / E 15.5, finish 15.8.
+COLLAR_18415 = dict(
+    asset_id="BB_SPR_COLLAR_18415_001",
+    od=21.3,
+    skirt_below_rim=15.35,       # finish is 15.8: stops 0.45 above the datum
+    top_face_z=10.0,             # tall hood; overcap seating plane
+    top_edge_r=0.6,
+    stem_hole_d=6.4,
+    liner_h=0.8,
+    wall_at_top=1.7,
+    thread_root_d=18.10, thread_crest_d=15.80,   # engages T 17.5 / clears E 15.5
+)
+
+ACTUATOR_18415 = dict(
+    asset_id="BB_SPR_HEAD_18415_001",
+    stem_d=6.0, stem_bottom_z=-2.0,
+    skirt_od=16.6, skirt_bottom_z=10.0, skirt_top_z=14.2, skirt_edge_r=0.4,
+    shoulder_top_z=15.0, body_od_low=14.5,
+    body_top_z=22.3, body_od_high=14.1,
+    top_z=23.7, top_edge_r=1.0,
+    wall=1.0, cavity_top_z=21.2,
+    orifice_z=20.4,
+    spray_insert_d=3.6, spray_insert_depth=0.3, spray_hole_d=0.4,
+    pump_spout_d=4.8, pump_spout_proud=1.3, pump_spout_z=20.0, pump_hole_d=1.6,
+)
+
+OVERCAP_18415 = dict(
+    asset_id="BB_SPR_OVERCAP_18415_001",
+    od_bottom=18.6, od_top=18.1, height=15.2,
+    wall=0.55, top_edge_r=1.2, bottom_edge_r=0.3,
+)

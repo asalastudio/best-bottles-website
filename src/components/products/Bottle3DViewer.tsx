@@ -39,8 +39,11 @@ type MatSpec = {
 
 /* --------------------------------------------------------------- closure */
 
-function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
+function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
+                   finish = "17-415" }: {
   mode: ClosureMode; neckY: number; capMat: string; ballMat: string;
+  /** neck finish — selects the closure GLB set (17-415 | 18-415) */
+  finish?: "17-415" | "18-415";
   /** metal (MtlRoll SKUs) or plastic (Roll SKUs) roll-on hardware */
   rollerVariant: "metal" | "plastic";
   /** spray/pump collar+actuator colour (SKU-derived: Blk/Gl/MattSl/ShSl/Tur/Rd) */
@@ -50,14 +53,16 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
   const housingPlastic = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_PLASTIC.glb");
   const ballSteel = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
   const ballPlastic = useGLTF("/models/closures/BB_ROLL_BALL_17415_PLASTIC.glb");
-  const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
+  const fin = finish.replace("-", "");
+  const cap = useGLTF(`/models/closures/BB_CAP_${fin}.glb`);
   const capDots = useGLTF("/models/closures/BB_CAP_DOTS_17415.glb");
-  // fine-mist sprayer + lotion pump (Spry17-415 / Ltn17-415): every part
-  // origins at the neck rim per the closures manifest — zero transforms
-  const collar = useGLTF("/models/closures/BB_SPR_COLLAR_17415.glb");
-  const actuator = useGLTF("/models/closures/BB_SPR_ACTUATOR_17415.glb");
-  const overcap = useGLTF("/models/closures/BB_SPR_OVERCAP_17415.glb");
-  const spout = useGLTF("/models/closures/BB_PMP_SPOUT_17415.glb");
+  // fine-mist sprayer + lotion pump: every part origins at the neck rim
+  // per the closures manifest — zero transforms. The whole set exists per
+  // finish (17-415 measured from Spry17-415, 18-415 from Spry18-415).
+  const collar = useGLTF(`/models/closures/BB_SPR_COLLAR_${fin}.glb`);
+  const actuator = useGLTF(`/models/closures/BB_SPR_ACTUATOR_${fin}.glb`);
+  const overcap = useGLTF(`/models/closures/BB_SPR_OVERCAP_${fin}.glb`);
+  const spout = useGLTF(`/models/closures/BB_PMP_SPOUT_${fin}.glb`);
   const [mats, setMats] = useState<Record<string, MatSpec> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -193,10 +198,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
 /* ------------------------------------------------------------------ body */
 
 function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
-                  trimMat, onHeight }: {
+                  trimMat, finish, onHeight }: {
   url: string; preset: GlassPreset; closure: ClosureMode;
   capMat: string; ballMat: string; rollerVariant: "metal" | "plastic";
-  trimMat: string; onHeight: (m: number) => void;
+  trimMat: string; finish: "17-415" | "18-415";
+  onHeight: (m: number) => void;
 }) {
   const gltf = useGLTF(url);
   const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
@@ -257,7 +263,7 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
     <group>
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
-               rollerVariant={rollerVariant} trimMat={trimMat} />
+               rollerVariant={rollerVariant} trimMat={trimMat} finish={finish} />
       {glass && !usePlain ? (
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
@@ -308,12 +314,14 @@ function EntranceGroup({ children }: { children: React.ReactNode }) {
 
 export default function Bottle3DViewer({
   bodyId = "Cyl-round-17-415-70x20",
+  finish = "17-415" as const,
   glass = "amber", closure = "roller",
   capMat = "CAP_SHINY_BLACK", ballMat = "PART_BALL_STEEL",
   rollerVariant = "metal", trimMat = "CAP_SHINY_BLACK",
   backdrop = STAGE.backdrop, className,
 }: {
-  bodyId?: string; glass?: GlassPresetId; closure?: ClosureMode;
+  bodyId?: string; finish?: "17-415" | "18-415";
+  glass?: GlassPresetId; closure?: ClosureMode;
   capMat?: string; ballMat?: string; rollerVariant?: "metal" | "plastic";
   trimMat?: string; backdrop?: string; className?: string;
 }) {
@@ -336,7 +344,7 @@ export default function Bottle3DViewer({
             <Bottle url={url} preset={preset} closure={closure}
                     capMat={capMat} ballMat={ballMat}
                     rollerVariant={rollerVariant} trimMat={trimMat}
-                    onHeight={onHeight} />
+                    finish={finish} onHeight={onHeight} />
           </Center>
         </EntranceGroup>
         {/* rotate-only: tilt LOCKED (min == max polar), no pan — the

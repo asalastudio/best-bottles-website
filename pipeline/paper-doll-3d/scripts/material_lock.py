@@ -49,6 +49,14 @@ TRACKED_FILES = [
     "public/models/closures/BB_SPR_ACTUATOR_17415.glb",
     "public/models/closures/BB_SPR_OVERCAP_17415.glb",
     "public/models/closures/BB_PMP_SPOUT_17415.glb",
+    "public/models/closures/BB_CAP_18415.glb",
+    "public/models/closures/BB_REDUCER_18415.glb",
+    "public/models/closures/BB_SPR_COLLAR_18415.glb",
+    "public/models/closures/BB_SPR_ACTUATOR_18415.glb",
+    "public/models/closures/BB_SPR_OVERCAP_18415.glb",
+    "public/models/closures/BB_PMP_SPOUT_18415.glb",
+    "public/models/bodies-thickness/Elegant-oval-18-415-87x55.glb",
+    "public/models/bodies-thickness/Elegant-oval-18-415-87x55.thickness.png",
 ]
 TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING", "PART_STUD", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
