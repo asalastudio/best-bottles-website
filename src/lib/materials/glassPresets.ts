@@ -76,16 +76,17 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     id: "clear",
     label: "Clear",
     transmission: 1.0,
-    roughness: 0.03,
-    ior: 1.52,
+    roughness: 0.02,
+    ior: 1.54,
     thickness: 0.012,
     attenuationColor: "#eef6f2",
     attenuationDistance: 0.42,
     dispersion: 1.4,
-    clearcoat: 0,
-    clearcoatRoughness: 0.05,
+    clearcoat: 0.70,
+    clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
     provenance:
+      "SURFACE ONLY carried over from the approved amber (2026-08-31): ior 1.54, roughness 0.02, clearcoat 0.70/0.02 - one physical glass, so the surface must not differ by colourway. The ABSORPTION below is NOT approved and still needs its own lab session. " +
       "Faintly green soda-lime, as flint glass actually is. Long attenuation " +
       "distance so only the thickest sections tint at all.",
   },
@@ -93,48 +94,51 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     id: "amber",
     label: "Amber",
     transmission: 1.0,
-    roughness: 0.04,
-    ior: 1.52,
-    thickness: 0.014,
-    attenuationColor: "#a8571a",
-    attenuationDistance: 0.030,
-    dispersion: 1.2,
-    clearcoat: 0,
-    clearcoatRoughness: 0.05,
+    roughness: 0.02,
+    ior: 1.54,
+    thickness: 0.0165,
+    attenuationColor: "#8f4a16",
+    attenuationDistance: 0.011,
+    dispersion: 0.95,
+    clearcoat: 0.70,
+    clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
     provenance:
-      "APPROVED BY EYE. These are the values that actually look right in the " +
-      "browser. A measured alternative exists and was tried: IMG_5040 gives " +
-      "sigma [208,300,497]/m -> #8b6a38 at distance 0.014, and it renders DARK " +
-      "and murky. Measurement is grounded, but it is not automatically better " +
-      "than the eye for APPEARANCE, and rasterized transmission is not the " +
-      "path-traced glass those numbers were solved against. Measured detail " +
-      "kept for reference: T = .260/.143/.040 over a " +
-      "ray-cast 3.24 mm x2 wall -> sigma [208,300,497]/m. attenuationDistance " +
-      "is set EQUAL to thickness, which collapses three.js' Beer-Lambert to " +
-      "exp(ln(c)) = c — so attenuationColor IS the transmitted colour and can " +
-      "be held against the photograph by eye. " +
-      "CAUTION — two photographs disagree: the catalogue studio shot " +
-      "(GBCylAmb9MtlRollMattSl) measures a PALER amber, sigma [85, 202, 320]/m, " +
-      "giving attenuationColor #c88e63. IMG_5040 was shot on a wall with known " +
-      "conditions and is the value used here; the catalogue shot is older and " +
-      "brighter-lit. If amber reads too dark in the product, #c88e63 is the " +
-      "documented alternative, not a guess.",
+      "APPROVED 2026-08-31 BY JORDAN IN THE MATERIAL LAB - 'this is the " +
+      "Aesop result that we want', held against public/references/9ml/" +
+      "amber-studio.jpg (IMG_5048, the real bottle on a seamless sweep). " +
+      "Read back out of the live lab session, not reconstructed. " +
+      "THIS PRESET IS ONLY HALF THE LOOK: approved against the 'room' " +
+      "studio (studio-room.hdr v8) at exposure 0.91, on the HOLLOW body " +
+      "with its baked thicknessMap, through MeshTransmissionMaterial. " +
+      "Swap any of those and the glass changes - these values read " +
+      "near-black on a solid mesh and as a flat slab without the bake. " +
+      "See studioPresets.ts APPROVED_STUDIO and public/models/" +
+      "bodies-thickness/. " +
+      "WHY SO DARK: measured off the reference, the real bottle transmits " +
+      "only .13/.035/.003 of the backdrop through its body - far darker " +
+      "than every earlier eye-set amber. attenuationDistance 0.011 against " +
+      "thickness 0.0165 lets the baked map thin the walls back out, which " +
+      "is what keeps it from going opaque. " +
+      "Superseded: eye-set #a8571a at 0.030 (too pale once the body was " +
+      "hollow); photographic solves #8b6a38 (IMG_5040 wall shot) and " +
+      "#c88e63 (catalogue studio shot).",
   },
   cobalt: {
     id: "cobalt",
     label: "Cobalt",
     transmission: 1.0,
-    roughness: 0.04,
-    ior: 1.52,
+    roughness: 0.02,
+    ior: 1.54,
     thickness: 0.014,
     attenuationColor: "#123f9e",
     attenuationDistance: 0.026,
     dispersion: 1.2,
-    clearcoat: 0,
-    clearcoatRoughness: 0.05,
+    clearcoat: 0.70,
+    clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
     provenance:
+      "SURFACE ONLY carried over from the approved amber (2026-08-31): ior 1.54, roughness 0.02, clearcoat 0.70/0.02 - one physical glass, so the surface must not differ by colourway. The ABSORPTION below is NOT approved and still needs its own lab session. " +
       "ART DIRECTION, not measurement. No physical cobalt bottle was " +
       "available to photograph, so this is eye-set against a reference image " +
       "of unknown origin (pure white background, no room in the reflections - " +
@@ -155,10 +159,11 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#e2d8c6",
     attenuationDistance: 0.16,
     dispersion: 0.9,
-    clearcoat: 0,
-    clearcoatRoughness: 0.05,
+    clearcoat: 0.70,
+    clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
     provenance:
+      "Clearcoat 0.70/0.02 carried over from the approved amber (2026-08-31) - same physical glass surface. Roughness deliberately NOT carried over: it is this finish's identity. Absorption NOT approved. " +
       "ART DIRECTION, not measurement - no physical swirl bottle available. " +
       "IMPORTANT: the swirl is GEOMETRY, not a material. The flutes are a real " +
       "0.970 mm relief on the mesh (catalogue O21 against the plain O20), so " +
@@ -176,10 +181,11 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     attenuationColor: "#f4f6f5",
     attenuationDistance: 0.28,
     dispersion: 0.5,
-    clearcoat: 0,
-    clearcoatRoughness: 0.05,
+    clearcoat: 0.70,
+    clearcoatRoughness: 0.02,
     envMapIntensity: 0.9,
     provenance:
+      "Clearcoat 0.70/0.02 carried over from the approved amber (2026-08-31) - same physical glass surface. Roughness deliberately NOT carried over: it is this finish's identity. Absorption NOT approved. " +
       "APPROVED BY EYE. The measurement still stands and is the useful " +
       "finding: T = .896/.898/.899 — " +
       "PERFECTLY NEUTRAL, saturation 0.00. That is the finding: frosted glass " +
