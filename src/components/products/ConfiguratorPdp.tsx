@@ -112,6 +112,7 @@ export default function ConfiguratorPdp({
   const [capMat, setCapMat] = useState("ANSP_BLACK");
   const [trimMat, setTrimMat] = useState(
     fam?.trims?.[0] ?? "CAP_SHINY_BLACK");
+  const [tiersOpen, setTiersOpen] = useState(false);
   const [mats, setMats] = useState<Record<string, SwatchableMaterial> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -318,7 +319,7 @@ export default function ConfiguratorPdp({
                   : qty >= 10 && price10 ? price10
                   : priceEach;
   const priceBlock = (
-    <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-4">
+    <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
       {priceEach != null && (
         <p className="text-[28px] font-semibold text-obsidian tabular-nums leading-none">
           ${priceEach.toFixed(2)}
@@ -326,8 +327,8 @@ export default function ConfiguratorPdp({
         </p>
       )}
       {price12 != null && price12 < (priceEach ?? Infinity) && (
-        <a href="#volume-pricing" className="text-ui text-gold-dim underline
-                                             underline-offset-2">
+        <a href="#volume-pricing" onClick={() => setTiersOpen(true)}
+           className="text-ui text-gold-dim underline underline-offset-2">
           ${price12.toFixed(2)} at 12+ · volume by quote
         </a>
       )}
@@ -377,7 +378,7 @@ export default function ConfiguratorPdp({
      then quantity + add to cart, then the working price summary */
   const linePrice = tierPrice != null ? tierPrice * qty : null;
   const ctaStack = (
-    <div className="mt-7">
+    <div className="mt-5">
       {sampleHref && (
         <>
           <a href={sampleHref}
@@ -428,11 +429,25 @@ export default function ConfiguratorPdp({
 
       {priceEach != null && (
         <div id="volume-pricing" style={{ scrollMarginTop: 120 }}
-             className="mt-4 rounded-[3px] border border-champagne/60 bg-travertine/40 px-4 py-3">
-          <p className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
-            Volume pricing · by quote
-          </p>
-          <div className="mt-2 space-y-1">
+             className="mt-4 border-y border-champagne/50">
+          <button type="button" onClick={() => setTiersOpen((v) => !v)}
+                  aria-expanded={tiersOpen}
+                  className="w-full flex items-center justify-between py-3">
+            <span className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
+              Volume pricing · by quote
+            </span>
+            <span className="flex items-baseline gap-3">
+              {price12 != null && price12 < priceEach && (
+                <span className="text-spec text-slate tabular-nums">
+                  from ${price12.toFixed(2)} ea
+                </span>
+              )}
+              <CaretDown className={`h-3.5 w-3.5 text-slate transition-transform
+                                     duration-200 ${tiersOpen ? "rotate-180" : ""}`} />
+            </span>
+          </button>
+          {tiersOpen && (<>
+          <div className="pb-1 space-y-1">
             {([[1, priceEach], [10, price10], [12, price12]] as const)
               .filter((t, i) => i === 0 || (t[1] != null && t[1]! < priceEach))
               .map(([minQ, price]) => {
@@ -444,7 +459,7 @@ export default function ConfiguratorPdp({
                 return (
                   <div key={minQ}
                        className={`flex items-baseline justify-between rounded-[2px]
-                                   px-2.5 py-1.5 ${active ? "bg-white" : ""}`}>
+                                   px-2.5 py-1.5 ${active ? "bg-white ring-1 ring-champagne/60" : ""}`}>
                     <span className={`text-sm ${active ? "font-semibold text-obsidian" : "text-slate"}`}>
                       {minQ}+ units
                     </span>
@@ -472,7 +487,7 @@ export default function ConfiguratorPdp({
               </span>
             </div>
           )}
-          <p className="text-spec text-slate mt-2">
+          <p className="text-spec text-slate mt-2 pb-3">
             Volume rates are confirmed on a quote — online checkout is billed
             at the ${priceEach.toFixed(2)}/ea rate.{" "}
             {quoteHref && (
@@ -481,6 +496,7 @@ export default function ConfiguratorPdp({
               </a>
             )}{" "}for 12+ pricing.
           </p>
+          </>)}
         </div>
       )}
     </div>
@@ -488,7 +504,7 @@ export default function ConfiguratorPdp({
 
   /* ------------------------------------------------------- step panel */
   const stepPanel = (
-    <div className="h-full overflow-y-auto px-6 lg:px-11 py-7">
+    <div className="h-full overflow-y-auto pr-1">
       {identity}
       {specStrip}
       {priceBlock}
@@ -629,11 +645,11 @@ export default function ConfiguratorPdp({
 
   return (
     <section className="w-full">
-      {/* desktop 50/50 */}
-      <div className="hidden lg:grid grid-cols-2 h-[calc(100vh-140px)]
-                      min-h-[620px] max-h-[860px] border border-champagne/40
-                      rounded-sm overflow-hidden bg-white">
-        <div className="relative">{stage}</div>
+      {/* desktop 50/50 — tone-on-background, no card chrome (Jordan:
+          "we don't need that card... give a little bit more width") */}
+      <div className="hidden lg:grid grid-cols-2 gap-10 h-[calc(100vh-150px)]
+                      min-h-[600px] max-h-[820px]">
+        <div className="relative rounded-sm overflow-hidden">{stage}</div>
         {stepPanel}
       </div>
       {mobile}
