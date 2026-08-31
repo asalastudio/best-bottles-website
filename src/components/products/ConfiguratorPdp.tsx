@@ -29,7 +29,7 @@ import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube }
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase }
   from "@/lib/configurator/families";
-import { USE_CASES, CLOSURE_META, type UseCaseId } from "@/lib/configurator/useCases";
+import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
 
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
@@ -43,10 +43,6 @@ const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
     </div>
   ),
 });
-
-const USE_CASE_ICON = {
-  SprayBottle, Drop, Eyedropper, HandSoap, TestTube,
-} as const;
 
 /** stand-in glyph when a sibling group has no hero photo yet */
 const CLOSURE_GLYPH: Record<string, typeof SprayBottle> = {
@@ -113,10 +109,7 @@ export default function ConfiguratorPdp({
   const committedBase: ClosureBase =
     fam?.closureFromSlug[committedToken] ?? "sprayer";
 
-  const [mode, setMode] = useState<"guided" | "direct">("guided");
-  const [useCase, setUseCase] = useState<UseCaseId>("fragrance");
   const [previewBase, setPreviewBase] = useState<ClosureBase | null>(null);
-  const [showAll, setShowAll] = useState(false);
   const [capMat, setCapMat] = useState("ANSP_BLACK");
   const [trimMat, setTrimMat] = useState(
     fam?.trims?.[0] ?? "CAP_SHINY_BLACK");
@@ -158,14 +151,16 @@ export default function ConfiguratorPdp({
     return out;
   }, [fam, glass, siblings]);
 
-  const ranked = useMemo(() => {
-    const order = USE_CASES.find((u) => u.id === useCase)?.ranked ?? [];
-    const inOrder = order.filter((b) => sellableBases.includes(b));
-    const rest = sellableBases.filter((b) => !inOrder.includes(b));
-    return [...inOrder, ...rest];
-  }, [useCase, sellableBases]);
+  // ONE row of actual components in a stable trade order (Jordan:
+  // "just one row ... the actual components ... reducer, roll-on, spray,
+  // lotion") — no use-case re-ranking layer
+  const COMPONENT_ORDER: ClosureBase[] = [
+    "sprayer", "roller", "pump", "dropper", "reducer", "antique", "antiqueTassel"];
+  const ranked = useMemo(
+    () => COMPONENT_ORDER.filter((b) => sellableBases.includes(b)),
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [sellableBases]);
 
-  const visible = showAll ? ranked : ranked.slice(0, 2);
   const activeMeta = activeBase !== "none" ? CLOSURE_META[activeBase] : null;
 
   const priceDelta = (base: ClosureBase): string => {
@@ -371,47 +366,13 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* closure selector — compact tile row (their style swatches), with the
-     guided use-case helper folded behind a link */
+  /* closure selector — ONE row of the actual closure components */
   const closureRow = (
     <div className="mt-6">
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="text-sm text-obsidian">
-          <span className="text-slate">Closure:</span>{" "}
-          <span className="font-semibold">{activeMeta?.name ?? "Bottle only"}</span>
-        </p>
-        <button type="button"
-                onClick={() => setMode(mode === "guided" ? "direct" : "guided")}
-                className="text-ui text-gold-dim underline underline-offset-2">
-          {mode === "guided" ? "Hide guide" : "Help me choose"}
-        </button>
-      </div>
-
-      {mode === "guided" && (
-        <div className="grid grid-cols-5 gap-2 mt-3">
-          {USE_CASES.map((u) => {
-            const Icon = USE_CASE_ICON[u.icon];
-            const active = useCase === u.id;
-            return (
-              <button key={u.id} type="button" onClick={() => setUseCase(u.id)}
-                      aria-pressed={active}
-                      className={`relative bg-white rounded-[3px] px-1.5 py-2.5
-                                  flex flex-col items-center gap-1.5 transition-colors
-                                  duration-200 focus-visible:outline-2
-                                  focus-visible:outline-offset-2
-                                  focus-visible:outline-muted-gold
-                                  ${active
-                                    ? "border-[1.5px] border-obsidian"
-                                    : "border border-champagne hover:border-muted-gold"}`}>
-                <Icon className="h-5 w-5 text-obsidian" />
-                <span className="text-xs leading-tight text-center text-obsidian">
-                  {u.label}
-                </span>
-              </button>
-            );
-          })}
-        </div>
-      )}
+      <p className="text-sm text-obsidian">
+        <span className="text-slate">Closure:</span>{" "}
+        <span className="font-semibold">{activeMeta?.name ?? "Bottle only"}</span>
+      </p>
 
       <div className="flex gap-2.5 mt-3 overflow-x-auto pb-1 [scrollbar-width:none]">
         {ranked.map((base) => {
@@ -419,38 +380,13 @@ export default function ConfiguratorPdp({
           const sib = siblingFor(base);
           const selected = activeBase === base;
           if (!meta) return null;
-          const Glyph = CLOSURE_GLYPH[base] ?? SprayBottle;
           return (
-            <button key={base} type="button"
-                    onClick={() => setPreviewBase(base === committedBase ? null : base)}
-                    aria-pressed={selected} title={meta.benefit}
-                    className="shrink-0 w-[86px] text-center group">
-              <div className={`relative aspect-square bg-product-well rounded-[3px]
-                               overflow-hidden transition-colors duration-200
-                               ${selected
-                                 ? "border-[1.5px] border-obsidian"
-                                 : "border border-champagne group-hover:border-muted-gold"}`}>
-                {sib?.heroImageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={sib.heroImageUrl} alt={meta.name}
-                       className="h-full w-full object-cover" />
-                ) : (
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <Glyph className="h-7 w-7 text-obsidian/25" />
-                  </span>
-                )}
-                {selected && (
-                  <span className="absolute top-1.5 right-1.5 h-5 w-5 rounded-full
-                                   bg-obsidian flex items-center justify-center">
-                    <Check className="h-3 w-3 text-white" weight="bold" />
-                  </span>
-                )}
-              </div>
-              <span className={`block mt-1.5 text-spec leading-tight
-                                ${selected ? "font-semibold text-obsidian" : "text-slate"}`}>
-                {meta.name}
-              </span>
-            </button>
+            <ClosureTile key={base} name={meta.name} benefit={meta.benefit}
+                         imageUrl={sib?.heroImageUrl ?? null}
+                         glyph={CLOSURE_GLYPH[base] ?? SprayBottle}
+                         selected={selected}
+                         onClick={() =>
+                           setPreviewBase(base === committedBase ? null : base)} />
           );
         })}
       </div>
@@ -582,10 +518,9 @@ export default function ConfiguratorPdp({
           {groupTitle} · {capacityLabel}
           {activeMeta ? ` · ${activeMeta.name}` : ""}
         </span>
-        <button type="button" onClick={() => setShowAll(true)}
-                className="shrink-0 text-sm font-semibold text-gold-dim">
-          Edit ›
-        </button>
+        <span className="shrink-0 text-sm font-semibold text-gold-dim">
+          Edit below
+        </span>
       </div>
 
       {/* step 2 rail */}
@@ -708,6 +643,45 @@ export default function ConfiguratorPdp({
       </div>
       {mobile}
     </section>
+  );
+}
+
+/* ------------------------------------------------------- ClosureTile */
+function ClosureTile({ name, benefit, imageUrl, glyph: Glyph, selected, onClick }: {
+  name: string; benefit: string; imageUrl: string | null;
+  glyph: typeof SprayBottle; selected: boolean; onClick: () => void;
+}) {
+  const [broken, setBroken] = useState(false);
+  const showImg = imageUrl && !broken;
+  return (
+    <button type="button" onClick={onClick} aria-pressed={selected}
+            title={benefit} className="shrink-0 w-[86px] text-center group">
+      <div className={`relative aspect-square bg-product-well rounded-[3px]
+                       overflow-hidden transition-colors duration-200
+                       ${selected
+                         ? "border-[1.5px] border-obsidian"
+                         : "border border-champagne group-hover:border-muted-gold"}`}>
+        {showImg ? (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={imageUrl} alt={name} onError={() => setBroken(true)}
+               className="h-full w-full object-cover" />
+        ) : (
+          <span className="absolute inset-0 flex items-center justify-center">
+            <Glyph className="h-7 w-7 text-obsidian/25" />
+          </span>
+        )}
+        {selected && (
+          <span className="absolute top-1.5 right-1.5 h-5 w-5 rounded-full
+                           bg-obsidian flex items-center justify-center">
+            <Check className="h-3 w-3 text-white" weight="bold" />
+          </span>
+        )}
+      </div>
+      <span className={`block mt-1.5 text-spec leading-tight
+                        ${selected ? "font-semibold text-obsidian" : "text-slate"}`}>
+        {name}
+      </span>
+    </button>
   );
 }
 

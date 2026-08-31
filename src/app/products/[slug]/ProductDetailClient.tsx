@@ -1571,7 +1571,7 @@ export default function ProductDetailClient({
                         </div>
                     ) : null}
                     <div className={is3dFamily
-                        ? "max-w-3xl mx-auto"
+                        ? "max-w-5xl mx-auto"
                         : "grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start"}>
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
@@ -2024,7 +2024,7 @@ export default function ProductDetailClient({
                                 <TrustStack variant={selectedVariant} inStock={inStock} />
                             )}
 
-                            {selectedVariantSummary && (
+                            {!is3dFamily && selectedVariantSummary && (
                                 <SelectedVariantSummary
                                     label={selectedVariantSummary.label}
                                     sku={selectedVariantSummary.sku}
@@ -2032,12 +2032,14 @@ export default function ProductDetailClient({
                                 />
                             )}
 
-                            <ProductConfidenceSummary
-                                group={group}
-                                variant={selectedVariant}
-                                compatibleCount={compatibleSiblings.length}
-                                onAskGrace={openGracePanel}
-                            />
+                            {!is3dFamily && (
+                                <ProductConfidenceSummary
+                                    group={group}
+                                    variant={selectedVariant}
+                                    compatibleCount={compatibleSiblings.length}
+                                    onAskGrace={openGracePanel}
+                                />
+                            )}
 
                             {/* Price + Tier Ladder */}
                             <div className="mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50">
@@ -2451,8 +2453,9 @@ export default function ProductDetailClient({
                                 )}
                             </div>
 
-                            {/* Compatibility belongs near the buying decision for B2B confidence. */}
-                            {compatibleSiblings.length > 0 && (
+                            {/* Compatibility belongs near the buying decision for B2B confidence.
+                                (3D families select closures in the panel — no duplicate list.) */}
+                            {!is3dFamily && compatibleSiblings.length > 0 && (
                                 <div className="mb-6 rounded-sm border border-champagne/60 bg-white p-4">
                                     <div className="flex items-start justify-between gap-4 mb-3">
                                         <div>
