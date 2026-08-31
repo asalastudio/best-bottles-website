@@ -109,7 +109,6 @@ export default function ConfiguratorPdp({
   const committedBase: ClosureBase =
     fam?.closureFromSlug[committedToken] ?? "sprayer";
 
-  const [previewBase, setPreviewBase] = useState<ClosureBase | null>(null);
   const [capMat, setCapMat] = useState("ANSP_BLACK");
   const [trimMat, setTrimMat] = useState(
     fam?.trims?.[0] ?? "CAP_SHINY_BLACK");
@@ -121,7 +120,7 @@ export default function ConfiguratorPdp({
     return () => { dead = true; };
   }, []);
 
-  const activeBase = previewBase ?? committedBase;
+  const activeBase = committedBase;
 
   // sibling lookup: slug token -> sibling row (price, photo)
   const siblingFor = useMemo(() => {
@@ -161,7 +160,7 @@ export default function ConfiguratorPdp({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [sellableBases]);
 
-  const activeMeta = activeBase !== "none" ? CLOSURE_META[activeBase] : null;
+  const activeMeta = CLOSURE_META[activeBase] ?? null;
 
   const priceDelta = (base: ClosureBase): string => {
     const sib = siblingFor(base);
@@ -184,7 +183,6 @@ export default function ConfiguratorPdp({
     if (!token || !colour) return;
     const to = fam.buildSlug(colour, token);
     if (to !== currentSlug) router.push(`/products/${to}`);
-    setPreviewBase(null);
   };
 
   // antique maps to "none": the geometry is parked, the photo fallback
@@ -228,27 +226,6 @@ export default function ConfiguratorPdp({
           {photoFallback ? "Product photo" : "Live 3D"}
         </span>
       </div>
-
-      {/* preview toast */}
-      <AnimatePresence>
-        {previewBase && previewBase !== committedBase && activeMeta && (
-          <motion.div
-            initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 8 }} transition={{ duration: 0.2 }}
-            className="absolute bottom-14 left-1/2 -translate-x-1/2 flex items-center
-                       gap-2 rounded-[3px] px-5 py-3 text-sm text-white whitespace-nowrap"
-            style={{ background: "rgba(29,29,31,.92)" }}
-          >
-            <Sparkle className="h-4 w-4 text-muted-gold" weight="fill" />
-            <span>Previewing {activeMeta.name}</span>
-            <span className="text-white/50">·</span>
-            <button type="button" onClick={() => setPreviewBase(null)}
-                    className="text-muted-gold underline underline-offset-[3px]">
-              Return to {CLOSURE_META[committedBase]?.name ?? "bottle"}
-            </button>
-          </motion.div>
-        )}
-      </AnimatePresence>
 
       {/* drag affordance */}
       {!photoFallback && (
@@ -385,19 +362,13 @@ export default function ConfiguratorPdp({
                          imageUrl={sib?.heroImageUrl ?? null}
                          glyph={CLOSURE_GLYPH[base] ?? SprayBottle}
                          selected={selected}
-                         onClick={() =>
-                           setPreviewBase(base === committedBase ? null : base)} />
+                         onClick={() => commit(base)} />
           );
         })}
       </div>
       <p className="mt-2 flex items-center gap-1.5 text-spec text-slate">
         <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
         All {ranked.length} closures shown are verified to fit this bottle.
-        {priceDelta(activeBase) && activeBase !== committedBase ? (
-          <span className="text-obsidian tabular-nums ml-1">
-            {priceDelta(activeBase)} vs current
-          </span>
-        ) : null}
       </p>
     </div>
   );
@@ -540,7 +511,7 @@ export default function ConfiguratorPdp({
             if (!meta) return null;
             return (
               <button key={base} type="button"
-                      onClick={() => setPreviewBase(base === committedBase ? null : base)}
+                      onClick={() => commit(base)}
                       className="shrink-0 w-[118px] text-left">
                 <div className={`relative aspect-square bg-product-well rounded-[3px]
                                  ${selected ? "border-[1.5px] border-obsidian"
