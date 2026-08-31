@@ -82,6 +82,13 @@ const WEB_ONLY = new Set(["envMapIntensity", "env", "maps", "alphaHash", "opacit
 function srgbToLinear(c) {
   return c <= 0.04045 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
 }
+function linearToSrgb(c) {
+  return c <= 0.0031308 ? 12.92 * c : 1.055 * Math.pow(c, 1 / 2.4) - 0.055;
+}
+function linearToHex(rgb) {
+  const v = rgb.map((c) => Math.max(0, Math.min(255, Math.round(linearToSrgb(c) * 255))));
+  return "#" + v.map((x) => x.toString(16).padStart(2, "0")).join("");
+}
 function hexToLinear(hex) {
   const n = parseInt(hex.replace("#", ""), 16);
   return [(n >> 16) & 255, (n >> 8) & 255, n & 255]
@@ -105,20 +112,53 @@ for (const [key, v] of Object.entries(src.materials)) {
   for (const [k, val] of Object.entries(v)) {
     if (val === null || val === undefined) continue;
     if (k === "note") continue;
-    if (k === "linear") continue;                  // recomputed below
+    if (k === "linear") {
+      // THE MEASURED ANCHOR. materials.json carries two colours: `color`,
+      // which the renderer actually uses, and `linear`, which recorded the
+      // physicallybased measurement the value was anchored to. Only the hex
+      // ever reached the screen, so the anchor was invisible — shiny gold
+      // renders #ffe496 while its anchor is the library's #fff3ca. Keep it
+      // explicitly, so a deviation from measured reality is a fact in the
+      // file rather than something you have to reverse-engineer.
+      core.measuredAnchor = { linear: val, hex: linearToHex(val),
+                              source: "physicallybased.info metal F0 (CC0)" };
+      continue;
+    }
     if (k === "color") { core.baseColorHex = val; core.baseColorLinear = hexToLinear(val); continue; }
     (WEB_ONLY.has(k) ? web : core)[k] = val;
+  }
+  if (core.measuredAnchor && core.baseColorHex &&
+      core.measuredAnchor.hex.toLowerCase() !== core.baseColorHex.toLowerCase()) {
+    const a = core.measuredAnchor.hex, b = core.baseColorHex;
+    const px = (h) => [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16));
+    const [ar, ag, ab] = px(a), [br, bg, bb] = px(b);
+    core.measuredAnchor.deltaRgb = [br - ar, bg - ag, bb - ab];
+    core.measuredAnchor.why =
+      "Rendered colour deviates from the measurement — approved in the lab " +
+      "under ACES, which desaturates. Blender renders 'Standard' and has no " +
+      "such desaturation, so the hero lane must NOT apply this push twice: " +
+      "emit the anchor there, or match Blender's view transform to ACES first.";
   }
   if (Object.keys(web).length) core.lanes = { web };
   if (v.note) core.provenance = v.note;
 
   if (materials[id]) {
     // a second legacy key claims this token — only legal if byte-identical
-    const a = JSON.stringify({ ...materials[id], provenance: 0 });
-    const b = JSON.stringify({ ...core, provenance: 0 });
+    // provenance and measuredAnchor are BOOKKEEPING, not render values —
+    // two keys may legitimately carry different records of the same
+    // rendered material. Compare only what reaches the screen.
+    const a = JSON.stringify({ ...materials[id], provenance: 0, measuredAnchor: 0 });
+    const b = JSON.stringify({ ...core, provenance: 0, measuredAnchor: 0 });
     if (a !== b) {
       conflicts.push(`CONFLICT ${id}: ${key} disagrees with the entry already there`);
-    } else if (core.provenance && !materials[id].provenance?.includes(core.provenance)) {
+    } else if (core.measuredAnchor && materials[id].measuredAnchor &&
+               core.measuredAnchor.hex !== materials[id].measuredAnchor.hex) {
+      // both keys render the same, but recorded different measurements.
+      // Surface the disagreement instead of silently keeping one.
+      (materials[id].measuredAnchor.disputed ??= []).push(
+        { key, hex: core.measuredAnchor.hex, linear: core.measuredAnchor.linear });
+    }
+    if (core.provenance && !materials[id].provenance?.includes(core.provenance)) {
       // KEEP BOTH approval records. Two legacy keys merging is a bookkeeping
       // change; an approval is evidence and must never be dropped by one.
       materials[id].provenance =
