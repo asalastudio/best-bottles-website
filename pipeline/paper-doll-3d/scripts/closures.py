@@ -338,6 +338,64 @@ def pump_spout_builder(rig, finish, variant):
                 object=obj)
 
 
+def spr_insert_builder(rig, finish, variant):
+    """The sprayer's discharge orifice — the visible hole the mist exits.
+
+    ADDED 2026-08-31 (Jordan: "we can't see the hole where the spray comes
+    out"). 18-415 has had its white nozzle insert from day one; 17-415
+    never got one, so the head read as a blank cylinder. Geometry does the
+    work: a slim flush ring with a counterbored hole — self-shadowing in
+    the recess reads as the dark orifice, no dedicated material needed.
+
+    Same off-axis pattern as pump_spout_builder: built along +Z, stood
+    along -Y, pushed out to the actuator face at orifice_z.
+    """
+    import bmesh
+    from mathutils import Matrix
+
+    c17 = _load_c17(rig)
+    hs = _fin_spec(c17, "ACTUATOR", finish)
+    r_face = hs["body_od_high"] / 2.0
+    d, depth, hole = hs["spray_insert_d"], hs["spray_insert_depth"], hs["spray_hole_d"]
+    z = hs["orifice_z"]
+
+    me = bpy.data.meshes.new(f"BB_SPR_INSERT_{finish.replace('-','')}")
+    bm = bmesh.new()
+    ro, rc, rh = d / 2.0, d / 2.0 - 0.35, hole / 2.0
+    SEG = 32
+    L = depth + 1.0                                # sits into the face
+    rings = [
+        (ro, 0.10),                                # flush outer lip, barely proud
+        (ro, -L + 0.4),
+        (rc, 0.10),                                # counterbore face
+        (rh, 0.10 - depth),                        # recess floor at the hole
+        (rh, -L),                                  # hole tube inward (shadow)
+    ]
+    ring_verts = []
+    for r, zz in rings:
+        ring_verts.append([bm.verts.new((r * math.cos(2 * math.pi * i / SEG),
+                                         r * math.sin(2 * math.pi * i / SEG), zz))
+                           for i in range(SEG)])
+    def lace(a, b):
+        for i in range(SEG):
+            j = (i + 1) % SEG
+            bm.faces.new((a[i], a[j], b[j], b[i]))
+    lace(ring_verts[0], ring_verts[1])             # outer wall (into the head)
+    lace(ring_verts[0], ring_verts[2])             # lip face
+    lace(ring_verts[2], ring_verts[3])             # counterbore cone
+    lace(ring_verts[3], ring_verts[4])             # hole bore
+    bm.normal_update()
+    bm.to_mesh(me); bm.free()
+    for poly in me.polygons: poly.use_smooth = True
+    obj = bpy.data.objects.new(f"BB_SPR_INSERT_{finish.replace('-','')}", me)
+    bpy.context.scene.collection.objects.link(obj)
+    obj.data.transform(Matrix.Rotation(math.radians(90.0), 4, "X"))
+    obj.data.transform(Matrix.Translation((0.0, -(r_face - 0.05), z)))
+    return dict(spec=dict(asset_id=f"BB_SPR_INSERT_{finish.replace('-','')}",
+                          insert_d=d, hole_d=hole, orifice_z=z),
+                object=obj)
+
+
 # Dot studs, measured in build-master-scene.py: ~1.4 mm domes on a STAGGERED
 # lattice, ~3.9 mm row pitch, 8 columns, extracted from CpRoll17-415*Dot.psd.
 DOTS_17415 = dict(
@@ -731,6 +789,7 @@ PARTS = {
     ("17-415", "SPR_ACTUATOR", None):      actuator_builder,
     ("17-415", "SPR_OVERCAP", None):       overcap_builder,
     ("17-415", "PMP_SPOUT", None):         pump_spout_builder,
+    ("17-415", "SPR_INSERT", None):        spr_insert_builder,
     ("17-415", "CAP_DOTS", None):          cap_dots_builder,
     ("17-415", "CAP", None):               cap_part_builder,
     ("13-415", "CAP", None):               cap_part_builder,

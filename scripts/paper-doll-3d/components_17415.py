@@ -109,16 +109,22 @@ COLLAR_17415 = dict(
 # lower tier Ø15.46 to z 10.39, upper tier Ø13.48 to z 21.88, crown 22.70
 # with a 0.82 edge break, discharge orifice Ø4.58 centred 3.72 below the
 # crown (z 18.98) on the FRONT face, near-flush rather than a proud nub.
+# RE-MEASURED 2026-08-31 (second pass, Jordan: "rebuild from the Photoshop
+# files"). Anchor: collar band 285px == COLLAR_17415 od 19.5 -> 14.615
+# px/mm. Spry17-415Blk and Ltn17-415Blk measure IDENTICALLY — one moulding,
+# confirming the shared-head architecture. Above the collar top (rim+3.0):
+# lower tier O15.5 x 5.8, step, upper tier O13.6 x 10.6, crown R~1.0,
+# top 22.0 above the rim. The prior spec ran the skirt 1.6mm tall.
 ACTUATOR_17415 = dict(
     asset_id="BB_SPR_HEAD_17415_001",
     stem_d=6.0, stem_bottom_z=-2.0,
-    skirt_od=15.5, skirt_bottom_z=3.0, skirt_top_z=10.4, skirt_edge_r=0.4,
-    shoulder_top_z=11.2, body_od_low=13.5,
-    body_top_z=21.9, body_od_high=13.5,
-    top_z=22.7, top_edge_r=0.82,
-    wall=1.0, cavity_top_z=20.6,
+    skirt_od=15.5, skirt_bottom_z=3.0, skirt_top_z=8.8, skirt_edge_r=0.4,
+    shoulder_top_z=9.7, body_od_low=13.7,
+    body_top_z=21.0, body_od_high=13.4,
+    top_z=22.0, top_edge_r=1.0,
+    wall=1.0, cavity_top_z=19.8,
     orifice_z=19.0,
-    spray_insert_d=3.6, spray_insert_depth=0.3, spray_hole_d=0.4,
+    spray_insert_d=3.6, spray_insert_depth=0.6, spray_hole_d=1.0,
     pump_spout_d=4.6, pump_spout_proud=0.45, pump_spout_z=19.0, pump_hole_d=1.9,
 )
 

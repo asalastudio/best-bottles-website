@@ -99,7 +99,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     : `/models/closures/BB_CAP_${fin}.glb`);
   const nozzle = useGLTF(has1841
     ? "/models/closures/BB_SPR_NOZZLE_18415.glb"
-    : `/models/closures/BB_DIP_TUBE_${fin}.glb`);
+    : "/models/closures/BB_SPR_INSERT_17415.glb");
   // ONE source of truth for every material — see lib/materials/registry.ts
   const [mats, setMats] = useState<TokenFile | null>(null);
   useEffect(() => {
@@ -285,7 +285,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       // and collar both in trim, only the tiny nozzle insert is white
       const headMat = fin === "18415" ? trimMat : "PART_ACTUATOR_PP";
       g.push(build(collar, trimMat), build(actuator, headMat));
+      // the DISCHARGE ORIFICE — 18-415's white nozzle insert, and 17-415's
+      // counterbored spray insert (sprayers only; the pump has its spout)
       if (fin === "18415") g.push(build(nozzle, "PART_ACTUATOR_PP"));
+      else if (mode === "sprayer" || mode === "sprayerCapped")
+        g.push(build(nozzle, "PART_ACTUATOR_PP"));
       // the INTERNAL pump mechanism the tube hangs from — visible
       // through the glass below the collar (professionals model the
       // interior; an unanchored tube reads fake)
