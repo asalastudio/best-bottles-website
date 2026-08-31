@@ -1668,6 +1668,7 @@ export default function ProductDetailClient({
                                                     key={`${group.slug}-${configurator3d.glass}`}
                                                     bodyId={configurator3d.bodyId}
                                                     initialGlass={configurator3d.glass}
+                                                    currentSlug={group.slug ?? ""}
                                                 />
                                             );
                                         }
@@ -2030,8 +2031,9 @@ export default function ProductDetailClient({
                                         </div>
                                     )}
 
-                                    {/* Glass color selector */}
-                                    {uniqueColorGroups.length > 1 && (
+                                    {/* Glass color selector — replaced by the configurator's
+                                        navigating swatches on 3D families */}
+                                    {!is3dFamily && uniqueColorGroups.length > 1 && (
                                         <div className="mb-6 relative">
                                             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                                                 Glass Color

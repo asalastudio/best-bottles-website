@@ -14,6 +14,7 @@
  */
 
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { AnimatePresence, motion } from "framer-motion";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
@@ -71,6 +72,28 @@ const BASES = [
 ] as const;
 type BaseId = (typeof BASES)[number]["id"];
 
+/** SKU-truth navigation: the family's 15 product groups are
+ *  cylinder-9ml-{colour}-17-415-{closure}. A glass swatch or closure-base
+ *  change NAVIGATES to the sibling product so the SKU, price and fitment
+ *  panel always match what is on screen — the configurator is the product
+ *  selector, not a separate toy. */
+const SLUG_COLOUR: Record<GlassPresetId, string> = {
+    clear: "clear", amber: "amber", cobalt: "cobalt-blue",
+    frosted: "frosted", swirl: "swirl",
+};
+const SLUG_CLOSURE: Record<string, string> = {
+    roller: "rollon", sprayer: "finemist", pump: "lotionpump",
+};
+const CLOSURE_FROM_SLUG: Record<string, "roller" | "sprayer" | "pump"> = {
+    rollon: "roller", finemist: "sprayer", lotionpump: "pump",
+};
+function siblingSlug(current: string, glass: GlassPresetId, base: string): string | null {
+    const m = current.match(/^cylinder-9ml-(.+)-17-415-(rollon|finemist|lotionpump)$/);
+    if (!m) return null;
+    const closure = SLUG_CLOSURE[base] ?? m[2];
+    return `cylinder-9ml-${SLUG_COLOUR[glass]}-17-415-${closure}`;
+}
+
 /** colourways that live on their own mesh — the swirl's flutes are geometry */
 const BODY_FOR_GLASS: Partial<Record<GlassPresetId, string>> = {
     swirl: "CylSwrl-round-17-415-74x21",
@@ -79,14 +102,20 @@ const BODY_FOR_GLASS: Partial<Record<GlassPresetId, string>> = {
 export default function BottleConfigurator({
     bodyId = "Cyl-round-17-415-70x20",
     initialGlass = "amber",
+    currentSlug = "",
     className = "",
 }: {
     bodyId?: string;
     initialGlass?: GlassPresetId;
+    /** enables SKU-truth navigation between sibling product groups */
+    currentSlug?: string;
     className?: string;
 }) {
+    const router = useRouter();
     const [glass, setGlass] = useState<GlassPresetId>(initialGlass);
-    const [base, setBase] = useState<BaseId>("roller");
+    const slugClosure = currentSlug.match(/-(rollon|finemist|lotionpump)$/)?.[1];
+    const [base, setBase] = useState<BaseId>(
+        slugClosure ? CLOSURE_FROM_SLUG[slugClosure] : "roller");
     const [withCap, setWithCap] = useState(false);
     const [capMat, setCapMat] = useState("CAP_SHINY_GOLD");
     const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
@@ -159,7 +188,11 @@ export default function BottleConfigurator({
                         <button
                             key={id}
                             type="button"
-                            onClick={() => setGlass(id)}
+                            onClick={() => {
+                                setGlass(id);
+                                const to = siblingSlug(currentSlug, id, base);
+                                if (to && to !== currentSlug) router.push(`/products/${to}`);
+                            }}
                             aria-label={`${GLASS_PRESETS[id].label} glass`}
                             aria-pressed={glass === id}
                             title={GLASS_PRESETS[id].label}
@@ -180,7 +213,13 @@ export default function BottleConfigurator({
                             <button
                                 key={c.id}
                                 type="button"
-                                onClick={() => setBase(c.id)}
+                                onClick={() => {
+                                    setBase(c.id);
+                                    if (c.id !== "none") {
+                                        const to = siblingSlug(currentSlug, glass, c.id);
+                                        if (to && to !== currentSlug) router.push(`/products/${to}`);
+                                    }
+                                }}
                                 aria-pressed={base === c.id}
                                 className={`px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.14em] font-bold transition-colors duration-200 ${
                                     base === c.id
