@@ -22,7 +22,7 @@
  * is what real studio glass does.
  */
 
-export type StudioPresetId = "softbox-tent" | "room" | "lightformer-rig";
+export type StudioPresetId = "softbox-tent" | "room" | "mono-studio" | "lightformer-rig";
 
 export type StudioPreset = {
   id: StudioPresetId;
@@ -75,6 +75,21 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "cut of this rig was in-scene Lightformer RECTS - and their hard edges " +
       "mirrored as vertical lines down the cylinder, the exact banned " +
       "artefact. Rooms are HDRIs here, never JSX panels.",
+  },
+  "mono-studio": {
+    id: "mono-studio",
+    label: "Mono studio (Poly Haven)",
+    hdri: "/models/studio-mono.hdr",
+    environmentIntensity: 1.0,
+    environmentRotation: 0,
+    toneMappingExposure: 0.95,
+    backdrop: "#e9e6e0",
+    provenance:
+      "Poly Haven monochrome_studio_02 (CC0, 2k), downloaded 2026-08-31 at " +
+      "Jordan's direction as a candidate glass studio: a real monochrome " +
+      "photo studio with broad soft sources. Staged for A/B against the " +
+      "approved room - NOT yet approved; switch APPROVED_STUDIO only after " +
+      "Jordan signs off on all five glass colourways under it.",
   },
   "lightformer-rig": {
     id: "lightformer-rig",

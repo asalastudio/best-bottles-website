@@ -15,6 +15,7 @@ import { OrbitControls, Environment, Lightformer, useGLTF, useTexture,
          useEnvironment, Center,
          MeshTransmissionMaterial, Caustics, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
+import { useMetalStudio } from "@/lib/materials/metalStudio";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
   type GlassPreset, type GlassPresetId,
@@ -126,7 +127,10 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat }: {
   // (drei's own "studio" preset): brown_photostudio_02 was warm and turned
   // mirror silver sepia ("the silver went wacky"). Mirrors have no colour
   // of their own - a neutral studio is what keeps silver silver.
-  const metalEnv = useEnvironment({ files: "/models/studio-universal.hdr" });
+  // metals bake three's RoomEnvironment — the threejs-materials library's
+  // "Studio mode" (Jordan: the beautiful shiny gold/silver were graded
+  // under it); broad area lights never stripe a cylinder
+  const metalEnv = useMetalStudio();
   // matcap for the BALL only: a chrome sphere in a soft-gradient env is
   // indistinguishable from glass (mirrors show only their surroundings);
   // "steel" is a baked PATTERN - bright sky, crisp horizon, dark floor,
@@ -1026,7 +1030,8 @@ export default function MaterialLab(
           {(Object.keys(STUDIO_PRESETS) as StudioPresetId[]).map((id) => (
             <button key={id} onClick={() => { setStudioId(id); setBg(STUDIO_PRESETS[id].backdrop); }}
                     style={btn(studioId === id)}>
-              {id === "softbox-tent" ? "tent" : id === "room" ? "room" : "rig (legacy)"}
+              {id === "softbox-tent" ? "tent" : id === "room" ? "room"
+                : id === "mono-studio" ? "mono" : "rig (legacy)"}
             </button>
           ))}
         </div>

@@ -17,6 +17,7 @@
   "public/models/matcaps/ball-steel-v3.png": "e03db93507f351cc",
   "public/models/studio-browser.hdr": "bcd4697b9946e2ec",
   "public/models/studio-metal.hdr": "6ae44e48e8625ffe",
+  "public/models/studio-mono.hdr": "d0b4d290fafd689e",
   "public/models/studio-room.hdr": "3189ffa2a28d8f09",
   "public/models/studio-universal.hdr": "34ae5a707f67caa4"
  },
@@ -179,7 +180,7 @@
     0.766,
     0.336
    ],
-   "maps": null,
+   "maps": "matte",
    "metalness": 1.0,
    "roughness": 0.38,
    "specularColor": "#fcfffe",
@@ -196,7 +197,7 @@
     0.96,
     0.915
    ],
-   "maps": null,
+   "maps": "matte",
    "metalness": 1.0,
    "roughness": 0.42,
    "specularColor": "#fefeff",

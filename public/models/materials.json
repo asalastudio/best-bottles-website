@@ -32,11 +32,11 @@
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "maps": null,
+      "maps": "matte",
       "envMapIntensity": 1.15,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
+      "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve. maps=matte pulls the library matte normal/roughness textures."
     },
     "CAP_MATTE_SILVER": {
       "color": "#f5f6f6",
@@ -50,11 +50,11 @@
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "maps": null,
+      "maps": "matte",
       "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
+      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). maps=matte pulls the library matte normal/roughness textures."
     },
     "CAP_SHINY_BLACK": {
       "color": "#0b0b0b",
@@ -87,7 +87,7 @@
       "envMapIntensity": 1.35,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
+      "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_SHINY_SILVER": {
       "color": "#fefdfc",

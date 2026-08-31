@@ -20,6 +20,7 @@ import {
   MeshTransmissionMaterial, Center,
 } from "@react-three/drei";
 import ProductStage, { STAGE, useStageQuality } from "./ProductStage";
+import { useMetalStudio } from "@/lib/materials/metalStudio";
 import * as THREE from "three";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
@@ -66,9 +67,24 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
   }, []);
 
   // three material classes, three environments — see the glass-material-lab
-  // skill: glass mirrors the room, plastics the tent, metals the studio
-  const metalEnv = useEnvironment({ files: "/models/studio-universal.hdr" });
+  // skill: glass mirrors the room, plastics the tent, metals the studio.
+  // Metals bake three's RoomEnvironment — the threejs-materials library's
+  // "Studio mode", whose broad area lights never stripe a cylinder.
+  const metalEnv = useMetalStudio();
   const plasticEnv = useEnvironment({ files: "/models/studio-browser.hdr" });
+  // library matte finish maps (physicallybased): maps:"matte" in the registry
+  const matteMaps = useTexture({
+    normal: "/models/pbr/matte/normal.png",
+    rough: "/models/pbr/matte/roughness.png",
+  });
+  useEffect(() => {
+    for (const t of Object.values(matteMaps)) {
+      t.colorSpace = THREE.NoColorSpace;
+      t.wrapS = t.wrapT = THREE.RepeatWrapping;
+      t.repeat.set(3, 1);
+      t.needsUpdate = true;
+    }
+  }, [matteMaps]);
 
   // materials are memoized per registry name and SHARED across every mesh
   // and clone that wears them — 20+ swappable parts per bottle makes
@@ -96,6 +112,25 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
         ior: m.ior ?? 1.5, transmission: m.transmission ?? 0,
       } : { color: 0x999999, roughness: 0.4, metalness: 0.4 });
       if ((m?.transmission ?? 0) > 0) mat.thickness = 0.002;
+      if ((m as { maps?: string } | undefined)?.maps === "matte") {
+        // closure GLBs carry no UVs — cylindrical unwrap for the maps
+        if (!mesh.geometry.getAttribute("uv")) {
+          const pos = mesh.geometry.getAttribute("position");
+          const uv = new Float32Array(pos.count * 2);
+          mesh.geometry.computeBoundingBox();
+          const bb = mesh.geometry.boundingBox as THREE.Box3;
+          const hh = Math.max(1e-6, bb.max.y - bb.min.y);
+          for (let i = 0; i < pos.count; i++) {
+            uv[i * 2] = Math.atan2(pos.getX(i), pos.getZ(i)) / (2 * Math.PI) + 0.5;
+            uv[i * 2 + 1] = (pos.getY(i) - bb.min.y) / hh;
+          }
+          mesh.geometry.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
+        }
+        mat.normalMap = matteMaps.normal;
+        mat.roughnessMap = matteMaps.rough;
+        mat.roughness = 1.0;                     // the map IS the roughness
+        mat.normalScale = new THREE.Vector2(0.6, 0.6);
+      }
       const glossy = (m?.metalness ?? 0) >= 0.85 || (m?.roughness ?? 1) <= 0.3;
       mat.envMap = m?.env === "tent" ? plasticEnv
                  : m?.env === "metal" ? metalEnv
@@ -106,7 +141,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat }: {
       matCache.set(name, mat);
     });
     return scene;
-  }, [mats, matCache, metalEnv, plasticEnv]);
+  }, [mats, matCache, metalEnv, plasticEnv, matteMaps]);
 
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
