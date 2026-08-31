@@ -489,23 +489,9 @@ export default function ConfiguratorPdp({
             {activeMeta?.name ?? "Bottle only"}
           </span>
         </p>
-        <div className="flex items-center gap-3 shrink-0">
-          {canCap && (
-            <button type="button" onClick={() => setWithCap((v) => !v)}
-                    aria-pressed={withCap}
-                    className={`rounded-full border px-2.5 py-1 text-2xs uppercase
-                                tracking-label font-semibold transition-colors
-                                duration-200 ${withCap
-                                  ? "border-obsidian bg-obsidian text-white"
-                                  : "border-champagne text-slate hover:border-muted-gold"}`}>
-              {withCap ? "✓ " : "+ "}
-              Overcap
-            </button>
-          )}
-          {neckSize && (
-            <p className="text-spec text-slate">{neckSize} neck</p>
-          )}
-        </div>
+        {neckSize && (
+          <p className="text-spec text-slate shrink-0">{neckSize} neck</p>
+        )}
       </div>
 
       <div className="flex gap-2.5 mt-3 overflow-x-auto pb-1 [scrollbar-width:none]">
@@ -703,6 +689,33 @@ export default function ConfiguratorPdp({
       {specStrip}
       {priceBlock}
       {closureRow}
+      {canCap && (
+        <div className="mt-6 pt-5 border-t border-champagne/50">
+          <p className="text-2xs font-semibold uppercase tracking-label">
+            <span className="text-slate">Overcap</span>
+            <span className="text-slate"> · </span>
+            <span className="text-obsidian normal-case tracking-normal text-caption">
+              {withCap ? "Included" : "Not included"}
+            </span>
+          </p>
+          <div className="grid grid-cols-2 gap-2.5 mt-2.5 max-w-xs">
+            {([[false, "Without overcap", "Ships as shown"],
+               [true, "With overcap", "Adds the protective cap"]] as const).map(
+              ([val, label, note]) => (
+                <button key={String(val)} type="button" onClick={() => setWithCap(val)}
+                        aria-pressed={withCap === val}
+                        className={`rounded-[3px] px-3 py-2 text-left transition-colors
+                                    duration-200 ${withCap === val
+                                      ? "border-[1.5px] border-obsidian bg-white"
+                                      : "border border-champagne hover:border-muted-gold"}`}>
+                  <span className="block text-spec font-semibold text-obsidian">{label}</span>
+                  <span className="block text-2xs text-slate mt-0.5">{note}</span>
+                </button>
+              ))}
+          </div>
+        </div>
+      )}
+
       {activeBase === "roller" && (
         <div className="mt-6 pt-5 border-t border-champagne/50">
           <p className="text-2xs font-semibold uppercase tracking-label">
