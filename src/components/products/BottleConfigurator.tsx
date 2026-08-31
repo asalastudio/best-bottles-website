@@ -204,7 +204,7 @@ export default function BottleConfigurator({
                 {/* segmented closure control + cap toggle */}
                 <div className="flex flex-wrap items-center justify-center gap-2 px-2">
                     <div className="inline-flex rounded-full border border-champagne bg-warm-white p-0.5">
-                        {BASES.map((c) => (
+                        {BASES.filter((c) => fam.bases.includes(c.id)).map((c) => (
                             <button
                                 key={c.id}
                                 type="button"

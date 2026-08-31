@@ -17,7 +17,7 @@
       "maps": null,
       "envMapIntensity": 1.3,
       "env": "metal",
-      "specularColor": "#fdf9f9",
+      "specularColor": "#faf1f1",
       "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: library F0 #f7cfbf read 'too much like a rose or light brown - needs to be more copper-colored'. Tint pulled toward the PSD truth (CpRoll17-415Cu.psd bright band #c0856c, mid #93533c): a satin penny-copper. ACES note: colored metals run lower envMapIntensity than silver."
     },
     "CAP_MATTE_GOLD": {
@@ -35,7 +35,7 @@
       "maps": "matte",
       "envMapIntensity": 1.15,
       "env": "metal",
-      "specularColor": "#fcfffe",
+      "specularColor": "#f8fffd",
       "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve. maps=matte pulls the library matte normal/roughness textures."
     },
     "CAP_MATTE_SILVER": {
@@ -53,7 +53,7 @@
       "maps": "matte",
       "envMapIntensity": 1.5,
       "env": "metal",
-      "specularColor": "#fefeff",
+      "specularColor": "#e8eff5",
       "note": "APPROVED by Jordan 2026-08-31 ('Matte silver is perfect. Lock it down'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). maps=matte pulls the library matte normal/roughness textures."
     },
     "CAP_SHINY_BLACK": {
@@ -87,7 +87,7 @@
       "maps": null,
       "envMapIntensity": 1.62,
       "env": "metal",
-      "specularColor": "#fcfffe",
+      "specularColor": "#f8fffd",
       "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_SHINY_SILVER": {
@@ -105,7 +105,7 @@
       "maps": null,
       "envMapIntensity": 2.4,
       "env": "metal",
-      "specularColor": "#fefeff",
+      "specularColor": "#fdfefe",
       "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
     },
     "CAP_WHITE": {
@@ -486,7 +486,7 @@
       "maps": "matte",
       "envMapIntensity": 1.5,
       "env": "metal",
-      "specularColor": "#fefeff",
+      "specularColor": "#fdfefe",
       "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the silver dot is a matte silver' - identical finish to APPROVED CAP_MATTE_SILVER. Studs are PART_STUD_CHROME, FLUSH-set."
     },
     "PART_STUD_CHROME": {

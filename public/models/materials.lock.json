@@ -142,7 +142,7 @@
    "maps": null,
    "metalness": 1.0,
    "roughness": 0.3,
-   "specularColor": "#fdf9f9",
+   "specularColor": "#faf1f1",
    "transmission": 0.0
   },
   "CAP_DOTS_BLACK": {
@@ -190,7 +190,7 @@
    "maps": "matte",
    "metalness": 1.0,
    "roughness": 0.42,
-   "specularColor": "#fefeff",
+   "specularColor": "#fdfefe",
    "transmission": 0.0
   },
   "CAP_MATTE_GOLD": {
@@ -207,7 +207,7 @@
    "maps": "matte",
    "metalness": 1.0,
    "roughness": 0.38,
-   "specularColor": "#fcfffe",
+   "specularColor": "#f8fffd",
    "transmission": 0.0
   },
   "CAP_MATTE_SILVER": {
@@ -224,7 +224,7 @@
    "maps": "matte",
    "metalness": 1.0,
    "roughness": 0.42,
-   "specularColor": "#fefeff",
+   "specularColor": "#e8eff5",
    "transmission": 0.0
   },
   "CAP_SHINY_BLACK": {
@@ -256,7 +256,7 @@
    "maps": null,
    "metalness": 1.0,
    "roughness": 0.09,
-   "specularColor": "#fcfffe",
+   "specularColor": "#f8fffd",
    "transmission": 0.0
   },
   "CAP_SHINY_SILVER": {
@@ -273,7 +273,7 @@
    "maps": null,
    "metalness": 1.0,
    "roughness": 0.09,
-   "specularColor": "#fefeff",
+   "specularColor": "#fdfefe",
    "transmission": 0.0
   },
   "CAP_WHITE": {
