@@ -41,9 +41,10 @@
     "materials:port": "node scripts/materials/port-tokens.mjs",
     "materials:verify": "node scripts/materials/verify-parity.mjs",
     "materials:validate": "node scripts/materials/validate-tokens.mjs",
-    "materials": "npm run materials:glass && npm run materials:port && npm run materials:verify && npm run materials:validate",
+    "materials": "npm run materials:glass && npm run materials:port && npm run materials:verify && npm run materials:validate && npm run materials:assets",
     "materials:glass": "tsx scripts/materials/extract-glass.mts",
-    "materials:maps": "node scripts/materials/fetch-pbr-maps.mjs"
+    "materials:maps": "node scripts/materials/fetch-pbr-maps.mjs",
+    "materials:assets": "node scripts/materials/check-assets.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",

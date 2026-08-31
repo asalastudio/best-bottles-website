@@ -23,6 +23,7 @@ import {
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import BottleConfigurator from "@/components/products/BottleConfigurator";
+import { Safe3D } from "@/components/products/Viewer3DBoundary";
 import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
@@ -1658,32 +1659,44 @@ export default function ProductDetailClient({
                                         // geometry, bake and materials are all approved (today: the
                                         // 17-415 9 ml cylinder). The gallery drops to thumbs-only
                                         // beneath it — the arrangement it was designed for.
+                                        // The photo gallery is built FIRST, because it is also
+                                        // the 3D viewer's safety net (see Viewer3DBoundary): a
+                                        // missing GLB must cost the customer the 3D, never the
+                                        // product page and its add-to-cart.
+                                        const galleryNode = galleryImages.length > 0 ? (
+                                            <ProductImageGallery
+                                                images={galleryImages}
+                                                primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
+                                                badge={variantBadge}
+                                                watermark={skuWatermark}
+                                                aspectRatio="10/11"
+                                                mainPadding="p-0"
+                                            />
+                                        ) : null;
+
                                         if (configurator3d) {
                                             // the configurator IS the product imagery — no static
                                             // thumbs beside it (Jordan: remove the side images, let
                                             // the 3D viewer use the space)
                                             return (
-                                                <BottleConfigurator
-                                                    key={`${group.slug}-${configurator3d.glass}`}
-                                                    bodyId={configurator3d.bodyId}
-                                                    initialGlass={configurator3d.glass}
-                                                    currentSlug={group.slug ?? ""}
-                                                />
+                                                <Safe3D
+                                                    label={group.slug ?? "product"}
+                                                    fallback={galleryNode ?? (
+                                                        <div className="aspect-[10/11] w-full rounded-sm bg-travertine
+                                                                        border border-champagne/50" />
+                                                    )}
+                                                >
+                                                    <BottleConfigurator
+                                                        key={`${group.slug}-${configurator3d.glass}`}
+                                                        bodyId={configurator3d.bodyId}
+                                                        initialGlass={configurator3d.glass}
+                                                        currentSlug={group.slug ?? ""}
+                                                    />
+                                                </Safe3D>
                                             );
                                         }
 
-                                        if (galleryImages.length > 0) {
-                                            return (
-                                                <ProductImageGallery
-                                                    images={galleryImages}
-                                                    primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
-                                                    badge={variantBadge}
-                                                    watermark={skuWatermark}
-                                                    aspectRatio="10/11"
-                                                    mainPadding="p-0"
-                                                />
-                                            );
-                                        }
+                                        if (galleryNode) return galleryNode;
 
                                         // Mode 2 — placeholder. Avoid falling back to legacy URLs or
                                         // paper-doll compositions for customer-facing product media.
