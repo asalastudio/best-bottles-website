@@ -29,11 +29,27 @@ tent does.
 import math, pathlib, struct
 import numpy as np
 
+import sys
+PROFILE = "browser" if "--browser" in sys.argv else "cycles"
+
 W, H = 1024, 512
-OUT = pathlib.Path(__file__).resolve().parents[1] / "studio.hdr"
-PUBLIC = pathlib.Path(__file__).resolve().parents[3] / "public" / "models" / "studio.hdr"
+_name = "studio-browser.hdr" if PROFILE == "browser" else "studio.hdr"
+OUT = pathlib.Path(__file__).resolve().parents[1] / _name
+PUBLIC = pathlib.Path(__file__).resolve().parents[3] / "public" / "models" / _name
 
 # theta = azimuth (0 = toward camera), phi = polar (0 = up)
+# TWO PROFILES, because the renderers need opposite things.
+#
+# cycles  : dark ambient, hot emitters. A bright full-sphere field backlights
+#           dense glass and floods it - measured, at density 5000 absorbing
+#           everything a bottle in a bright surround still rendered mid-grey.
+#
+# browser : brighter ambient, and crucially WIDER, DIMMER emitters. three.js
+#           shows the environment as a mirror on the surface, so a narrow hot
+#           source becomes a hard white STRIPE down a cylinder - and that stripe
+#           swims across the glass as the bottle rotates. Broad, feathered,
+#           lower-contrast sources give a moving gradient instead, which is what
+#           real studio glass looks like.
 EMITTERS = [
     # key: large, high, front-left - the main modelling light
     dict(theta=-0.45, phi=0.62, wt=0.95, wp=0.62, i=9.0,  c=(1.00, 0.99, 0.97), soft=0.90),
@@ -44,6 +60,16 @@ EMITTERS = [
     # "transparent". Narrow, but still feathered - never a hard bar.
     dict(theta= math.pi-0.62, phi=1.12, wt=0.13, wp=0.85, i=22.0, c=(1,1,1), soft=0.70),
     dict(theta=-(math.pi-0.62), phi=1.12, wt=0.13, wp=0.85, i=19.0, c=(1,1,1), soft=0.70),
+] if PROFILE == "cycles" else [
+    # key: very large and soft - a broad gradient across the whole face
+    dict(theta=-0.50, phi=0.70, wt=1.60, wp=1.00, i=5.5, c=(1.00,0.99,0.97), soft=1.00),
+    dict(theta= 1.90, phi=1.00, wt=1.50, wp=1.10, i=2.6, c=(0.94,0.96,1.00), soft=1.00),
+    dict(theta=-2.30, phi=1.00, wt=1.40, wp=1.00, i=2.2, c=(1.00,0.97,0.94), soft=1.00),
+    # rim: WIDE and dim, not narrow and hot. A wide source wraps the edge; a
+    # narrow one paints a stripe that swims when the bottle turns.
+    dict(theta= math.pi-0.75, phi=1.15, wt=0.55, wp=1.10, i=6.0, c=(1,1,1), soft=1.00),
+    dict(theta=-(math.pi-0.75), phi=1.15, wt=0.55, wp=1.10, i=5.0, c=(1,1,1), soft=1.00),
+    dict(theta=0.0, phi=0.18, wt=math.pi, wp=0.42, i=2.4, c=(1,1,1), soft=1.00),
     # overhead scrim - soft falloff down the shoulder
     dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.30, i=2.6, c=(1,1,1), soft=1.00),
 ]
@@ -67,8 +93,12 @@ def build():
     # material value can get under. Drop the ambient and the same material
     # reads as real amber.
     up = np.cos(P)
-    sky = 0.030 + 0.075 * smoothstep(-0.85, 0.95, up)
-    floor = 0.020 * smoothstep(0.10, -1.00, up)
+    if PROFILE == "browser":
+        sky = 0.28 + 0.55 * smoothstep(-0.85, 0.95, up)
+        floor = 0.22 * smoothstep(0.10, -1.00, up)
+    else:
+        sky = 0.030 + 0.075 * smoothstep(-0.85, 0.95, up)
+        floor = 0.020 * smoothstep(0.10, -1.00, up)
     img = np.stack([sky * 0.97 + floor * 1.00,
                     sky * 0.98 + floor * 0.96,
                     sky * 1.00 + floor * 0.90], axis=-1)

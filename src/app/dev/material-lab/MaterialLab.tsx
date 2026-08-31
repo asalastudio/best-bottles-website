@@ -18,6 +18,10 @@ import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
   type GlassPreset, type GlassPresetId,
 } from "@/lib/materials/glassPresets";
+import {
+  STUDIO_PRESETS, APPROVED_STUDIO,
+  type StudioPresetId,
+} from "@/lib/materials/studioPresets";
 
 type Body = {
   bodyId: string; family: string; shape: string;
@@ -129,42 +133,36 @@ function Model({
 
 /* ------------------------------------------------------------- environment */
 
-function StudioEnv({ intensity, rotationDeg }: { intensity: number; rotationDeg: number }) {
+function StudioEnv({ studioId, intensity, rotationDeg }:
+                   { studioId: StudioPresetId; intensity: number; rotationDeg: number }) {
   const { scene } = useThree();
+  const preset = STUDIO_PRESETS[studioId];
   useEffect(() => {
-    // three >= 0.163 — scene-level env controls, no deprecated APIs
     scene.environmentIntensity = intensity;
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
   }, [scene, intensity, rotationDeg]);
 
-  // THE SAME RIG that produces the good renders at /lab/bottle-3d. Copied
-  // deliberately rather than invented: glass is read almost entirely through
-  // what it MIRRORS, so a lab lit differently from the viewer would tune
-  // values that then look wrong in the product.
-  //
-  // NOT studio.hdr — that file is authored dark-ambient for Cycles, where a
-  // bright surround floods dense glass. three.js needs the opposite.
+  if (preset.hdri) return <Environment files={preset.hdri} />;
+
+  // legacy in-scene rig, kept only for A/B. Its narrow hot rim pair is what
+  // paints hard vertical stripes down a cylinder.
   return (
     <Environment resolution={1024}>
-      {/* key */}
       <Lightformer form="rect" intensity={10} color="#ffffff"
                    position={[0, 1.6, 0.9]} rotation={[-Math.PI / 3, 0, 0]}
                    scale={[3.5, 2.6, 1]} />
-      {/* fill */}
       <Lightformer form="rect" intensity={3.2} color="#eef2f6"
                    position={[-1.9, 0.5, 0.5]} rotation={[0, Math.PI / 2.4, 0]}
                    scale={[2.2, 3.2, 1]} />
       <Lightformer form="rect" intensity={2.4} color="#f6f2ee"
                    position={[1.9, 0.4, 0.4]} rotation={[0, -Math.PI / 2.4, 0]}
                    scale={[2.0, 3.0, 1]} />
-      {/* rim pair — narrow and hot; the bright outline that says "transparent" */}
       <Lightformer form="rect" intensity={22} color="#ffffff"
                    position={[-1.1, 0.7, -1.5]} rotation={[0, Math.PI / 4, 0]}
                    scale={[0.35, 3.0, 1]} />
       <Lightformer form="rect" intensity={18} color="#ffffff"
                    position={[1.1, 0.7, -1.5]} rotation={[0, -Math.PI / 4, 0]}
                    scale={[0.35, 3.0, 1]} />
-      {/* floor bounce */}
       <Lightformer form="rect" intensity={1.6} color="#ffffff"
                    position={[0, -1.4, 0.2]} rotation={[Math.PI / 2, 0, 0]}
                    scale={[4, 4, 1]} />
@@ -250,7 +248,8 @@ export default function MaterialLab(
   // render near-black - the values are fine, there is simply nothing behind the
   // bottle to see through it. /lab/bottle-3d gets this right with a light
   // studio backdrop, which is why the same values look rich there.
-  const [bg, setBg] = useState("#e9e6e0");
+  const [studioId, setStudioId] = useState<StudioPresetId>(APPROVED_STUDIO);
+  const [bg, setBg] = useState(STUDIO_PRESETS[APPROVED_STUDIO].backdrop);
   // MeshTransmissionMaterial renders the BACKSIDE through the front wall and
   // multi-samples; MeshPhysicalMaterial does a single flat backdrop lookup.
   // The difference is most of what separates "glass" from "tinted plastic".
@@ -335,7 +334,7 @@ export default function MaterialLab(
                     transmissionMat={transmissionMat}
                      onMeasure={onMeasure} />
             </Center>
-            <StudioEnv intensity={envIntensity} rotationDeg={envRot} />
+            <StudioEnv studioId={studioId} intensity={envIntensity} rotationDeg={envRot} />
           </Suspense>
           <Rig azimuth={azimuth} elevation={elevation} distance={distance}
                targetY={0} fov={fov} />
@@ -427,6 +426,18 @@ export default function MaterialLab(
         </div>
 
         <Section title="ENVIRONMENT" />
+        <div style={{ display: "flex", gap: 4, marginBottom: 4 }}>
+          {(Object.keys(STUDIO_PRESETS) as StudioPresetId[]).map((id) => (
+            <button key={id} onClick={() => { setStudioId(id); setBg(STUDIO_PRESETS[id].backdrop); }}
+                    style={btn(studioId === id)}>
+              {id === "softbox-tent" ? "tent" : "rig (legacy)"}
+            </button>
+          ))}
+        </div>
+        <div style={{ fontSize: 10, color: "#6f6f7d", marginBottom: 9 }}>
+          the legacy rig&apos;s narrow hot rim lights are what paint hard
+          vertical stripes down a cylinder
+        </div>
         <label style={{ display: "flex", justifyContent: "space-between",
                         alignItems: "center", marginBottom: 9 }}>
           <span style={{ color: "#b9b9c4", fontSize: 11 }}>backdrop</span>
