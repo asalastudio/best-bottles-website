@@ -24,8 +24,8 @@ import {
   Check, CaretRight, Sparkle, ChatCircle, ShoppingBag,
   SprayBottle, Drop, Eyedropper, GitCompare,
 } from "@/components/icons";
-import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube }
-  from "@phosphor-icons/react";
+import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube,
+         Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase }
   from "@/lib/configurator/families";
@@ -49,6 +49,34 @@ const CLOSURE_GLYPH: Record<string, typeof SprayBottle> = {
   sprayer: SprayBottle, antique: SprayBottle, antiqueTassel: SprayBottle,
   pump: HandSoap, dropper: Eyedropper, roller: Drop, reducer: TestTube,
 };
+
+/** fitment swatch name -> materials.json token. The PDP's cap options are
+ *  SKU-derived display names ("Pink", "Shiny Black", "Matte Silver"); the
+ *  renderer needs the token that carries the approved material values. */
+function capTokenFor(name: string | null | undefined): string {
+  const n = (name ?? "").toLowerCase()
+    .replace(/^(spray|screw cap|lotion pump|perfume (spray )?pump|roller|roll[-\s]on|dropper|atomizer|reducer|cap[/\s]*closure)\s+/i, "")
+    .replace(/\s+tall$/i, "").trim();
+  if (n.includes("leather")) {
+    if (n.includes("black")) return "LEATHER_BLACK";
+    if (n.includes("light brown")) return "LEATHER_LIGHT_BROWN";
+    if (n.includes("brown")) return "LEATHER_BROWN";
+    if (n.includes("ivory")) return "LEATHER_IVORY";
+    if (n.includes("pink")) return "LEATHER_PINK";
+  }
+  if (n.includes("dot")) {
+    if (n.includes("pink")) return "CAP_DOTS_PINK";
+    if (n.includes("silver")) return "CAP_DOTS_SILVER";
+    return "CAP_DOTS_BLACK";
+  }
+  if (n.includes("copper")) return "CAP_COPPER";
+  if (n.includes("gold")) return n.includes("matte") ? "CAP_MATTE_GOLD" : "CAP_SHINY_GOLD";
+  if (n.includes("silver")) return n.includes("matte") ? "CAP_MATTE_SILVER" : "CAP_SHINY_SILVER";
+  if (n.includes("white") || n.includes("clear") || n.includes("ivory")) return "CAP_WHITE";
+  if (n.includes("turquoise")) return "SPRAY_TURQUOISE";
+  if (n.includes("red")) return "SPRAY_RED";
+  return "CAP_SHINY_BLACK";
+}
 
 /** rail tile fills per colourway — glass reads as a gradient, not a dot */
 const GLASS_TILE: Record<string, string> = {
@@ -120,20 +148,32 @@ export default function ConfiguratorPdp({
   onCapOptionChange?: (name: string) => void;
   capSwatchStyle?: (name: string) => React.CSSProperties;
   /** glass colourways this family sells, for the stage-side rail */
-  glassOptions?: Array<{ id: string; label: string; href: string; active: boolean }>;
+  glassOptions?: Array<{ id: string; label: string; href: string;
+                        active: boolean; imageUrl?: string | null }>;
   qty?: number;
   onQtyChange?: (n: number) => void;
 }) {
   const router = useRouter();
   const fam = familyForSlug(currentSlug);
-  const glass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
+  const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
+  // optimistic: the canvas swaps the instant a colourway is picked, while
+  // the slug (SKU/pricing truth) is replaced underneath without a reload
+  const [glassOverride, setGlassOverride] = useState<GlassPresetId | null>(null);
+  const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
+  useEffect(() => { setGlassOverride(null); }, [currentSlug]);
+  const glass: GlassPresetId = glassOverride ?? slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
     fam?.closureFromSlug[committedToken] ?? "sprayer";
 
-  const [capMat, setCapMat] = useState("ANSP_BLACK");
-  const [trimMat, setTrimMat] = useState(
+  const [capMatLocal, setCapMat] = useState("ANSP_BLACK");
+  const [trimMatLocal, setTrimMat] = useState(
     fam?.trims?.[0] ?? "CAP_SHINY_BLACK");
+  // when the fitment row is SKU-driven, the selected colourway is the
+  // material for both the cap and the spray/pump trim
+  const skuToken = capOptions?.length ? capTokenFor(activeCapOption) : null;
+  const capMat = skuToken ?? capMatLocal;
+  const trimMat = skuToken ?? trimMatLocal;
   const [tiersOpen, setTiersOpen] = useState(false);
   const [mats, setMats] = useState<Record<string, SwatchableMaterial> | null>(null);
   useEffect(() => {
@@ -205,13 +245,14 @@ export default function ConfiguratorPdp({
     const colour = fam.slugColour[glass];
     if (!token || !colour) return;
     const to = fam.buildSlug(colour, token);
-    if (to !== currentSlug) router.push(`/products/${to}`);
+    if (to !== currentSlug) router.replace(`/products/${to}`, { scroll: false });
   };
 
   // antique maps to "none": the geometry is parked, the photo fallback
   // covers the stage (decision 2026-08-31)
-  const CLOSURE_MODE: Record<ClosureBase, "none" | "roller" | "reducer" | "dropper" | "sprayer" | "pump"> = {
-    none: "none", roller: "roller", reducer: "reducer", dropper: "dropper",
+  const CLOSURE_MODE: Record<ClosureBase,
+    "none" | "roller" | "reducer" | "reducerCapped" | "dropper" | "sprayer" | "pump"> = {
+    none: "none", roller: "roller", reducer: "reducerCapped", dropper: "dropper",
     antique: "none", antiqueTassel: "none", sprayer: "sprayer", pump: "pump",
   };
   const closureFor = (base: ClosureBase) => CLOSURE_MODE[base];
@@ -232,7 +273,7 @@ export default function ConfiguratorPdp({
           glass={glass}
           closure={closureFor(activeBase)}
           capMat={capMat}
-          rollerVariant="metal"
+          rollerVariant={rollerVariant}
           trimMat={trimMat}
           backdrop="#a29383"
           className="h-full w-full"
@@ -623,6 +664,32 @@ export default function ConfiguratorPdp({
       {specStrip}
       {priceBlock}
       {closureRow}
+      {activeBase === "roller" && (
+        <div className="mt-6 pt-5 border-t border-champagne/50">
+          <p className="text-2xs font-semibold uppercase tracking-label">
+            <span className="text-slate">Roller ball</span>
+            <span className="text-slate"> · </span>
+            <span className="text-obsidian normal-case tracking-normal text-caption">
+              {rollerVariant === "metal" ? "Stainless steel" : "Plastic"}
+            </span>
+          </p>
+          <div className="grid grid-cols-2 gap-2.5 mt-2.5 max-w-xs">
+            {([["metal", "Stainless steel", "Smooth, cooling glide"],
+               ["plastic", "Plastic", "Lighter, lower cost"]] as const).map(
+              ([id, label, note]) => (
+                <button key={id} type="button" onClick={() => setRollerVariant(id)}
+                        aria-pressed={rollerVariant === id}
+                        className={`rounded-[3px] px-3 py-2 text-left transition-colors
+                                    duration-200 ${rollerVariant === id
+                                      ? "border-[1.5px] border-obsidian bg-white"
+                                      : "border border-champagne hover:border-muted-gold"}`}>
+                  <span className="block text-spec font-semibold text-obsidian">{label}</span>
+                  <span className="block text-2xs text-slate mt-0.5">{note}</span>
+                </button>
+              ))}
+          </div>
+        </div>
+      )}
       <div className="mt-6 pt-5 border-t border-champagne/50">{finishRow()}</div>
       {ctaStack}
     </div>
@@ -761,22 +828,38 @@ export default function ConfiguratorPdp({
     <section className="w-full">
       {/* desktop — glass rail | stage | buy column. The rail runs down the
           left of the viewport (Jordan) and takes lifestyle tiles later. */}
-      <div className="hidden lg:grid grid-cols-[76px_1fr_1fr] gap-6 xl:gap-8
-                      h-[calc(100vh-150px)] min-h-[600px] max-h-[820px]">
+      <div className="hidden lg:grid grid-cols-[104px_minmax(0,1.15fr)_minmax(0,1fr)]
+                      gap-6 xl:gap-9 h-[calc(100vh-140px)] min-h-[620px] max-h-[880px]">
         <div className="flex flex-col gap-2.5 overflow-y-auto pr-0.5">
           {(glassOptions ?? []).map((g) => (
-            <a key={g.id} href={g.href} aria-current={g.active ? "true" : undefined}
-               className={`group block rounded-[3px] overflow-hidden transition-colors
-                           duration-200 ${g.active
+            <button key={g.id} type="button"
+               aria-pressed={g.id === glass}
+               onClick={() => {
+                 setGlassOverride(g.id as GlassPresetId);
+                 if (g.href && g.href !== "#") router.replace(g.href, { scroll: false });
+               }}
+               className={`group block w-full text-left rounded-[3px] overflow-hidden
+                           transition-colors duration-200 ${g.id === glass
                              ? "border-[1.5px] border-obsidian"
                              : "border border-champagne hover:border-muted-gold"}`}>
-              <span className="block aspect-square"
-                    style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }} />
-              <span className={`block px-1 py-1.5 text-center text-spec leading-tight
-                                ${g.active ? "font-semibold text-obsidian" : "text-slate"}`}>
+              {/* image well — real colourway photography drops in here */}
+              <span className="relative block aspect-square"
+                    style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
+                {g.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={g.imageUrl} alt={g.label}
+                       className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <BottleGlyph className="h-8 w-8 text-obsidian/25" />
+                  </span>
+                )}
+              </span>
+              <span className={`block px-1 py-2 text-center text-spec leading-tight
+                                ${g.id === glass ? "font-semibold text-obsidian" : "text-slate"}`}>
                 {g.label}
               </span>
-            </a>
+            </button>
           ))}
         </div>
         <div className="relative rounded-sm overflow-hidden">{stage}</div>

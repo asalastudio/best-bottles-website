@@ -1549,7 +1549,7 @@ export default function ProductDetailClient({
                         full-width 50/50 stage + step panel for 3D families;
                         the classic grid keeps everything else below the fold. */}
                     {is3dFamily && group.slug ? (
-                        <div className="mb-8 lg:mb-14">
+                        <div className="mb-8 lg:mb-14 lg:-mx-4 xl:-mx-10 2xl:-mx-16">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
@@ -1585,11 +1585,16 @@ export default function ProductDetailClient({
                                     const current = glassFromSlug(f, group.slug ?? "");
                                     return f.glasses.map((g) => {
                                         const colour = f.slugColour[g];
+                                        const slug = colour ? f.buildSlug(colour, token) : null;
+                                        const sib = slug === group.slug
+                                            ? group
+                                            : compatibleSiblings.find((x) => x.slug === slug);
                                         return {
                                             id: g,
                                             label: GLASS_PRESETS[g].label,
-                                            href: colour ? `/products/${f.buildSlug(colour, token)}` : "#",
+                                            href: slug ? `/products/${slug}` : "#",
                                             active: g === current,
+                                            imageUrl: sib?.heroImageUrl ?? null,
                                         };
                                     });
                                 })()}
@@ -2082,8 +2087,9 @@ export default function ProductDetailClient({
                                 <TierLadder variant={selectedVariant} qty={qty} />
                             </div>
 
-                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price) ── */}
-                            <div className="hidden lg:block">
+                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price).
+                                   3D families select roller/cap/trim in the panel. ── */}
+                            <div className={is3dFamily ? "hidden" : "hidden lg:block"}>
                                 {!isAtomizer && (
                                     <>
                                     {/* Roller type toggle — Metal vs Plastic for roll-on groups */}
