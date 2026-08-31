@@ -15,8 +15,8 @@ import { OrbitControls, Environment, Lightformer, useGLTF, useTexture,
          useEnvironment, Center,
          MeshTransmissionMaterial, Caustics, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
-import { useMetalStudioHdri, METAL_STUDIO_DEFAULTS,
-         type MetalStudioParams } from "@/lib/materials/metalStudio";
+import { useMetalStudioHdri, METAL_STUDIO_DEFAULTS, APPROVED_METAL_STUDIO,
+         type MetalStudioParams, type MetalStudioId } from "@/lib/materials/metalStudio";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
   type GlassPreset, type GlassPresetId,
@@ -57,10 +57,12 @@ export type MatOverride = {
 type LabClosure = "none" | "roller" | "rollerCapped"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
-function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune }: {
+function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
+                   metalStudioId }: {
   mode: LabClosure; neckY: number;
   capMat: string; ballMat: string; capTune: MatOverride; trimMat: string;
   metalTune?: Partial<MetalStudioParams>;
+  metalStudioId?: MetalStudioId;
 }) {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
@@ -132,7 +134,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune }: 
   // metals bake three's RoomEnvironment — the threejs-materials library's
   // "Studio mode" (Jordan: the beautiful shiny gold/silver were graded
   // under it); broad area lights never stripe a cylinder
-  const metalEnv = useMetalStudioHdri();
+  const metalEnv = useMetalStudioHdri(metalStudioId);
   // matcap for the BALL only: a chrome sphere in a soft-gradient env is
   // indistinguishable from glass (mirrors show only their surroundings);
   // "steel" is a baked PATTERN - bright sky, crisp horizon, dark floor,
@@ -261,7 +263,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune }: 
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
   thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, capTune, trimMat,
-  metalTune, onMeasure,
+  metalTune, metalStudioId, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
@@ -273,6 +275,7 @@ function Model({
   closure: LabClosure;
   capMat: string; ballMat: string; trimMat: string; capTune: MatOverride;
   metalTune?: Partial<MetalStudioParams>;
+  metalStudioId?: MetalStudioId;
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
@@ -375,7 +378,8 @@ function Model({
     <group>
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
-               capTune={capTune} trimMat={trimMat} metalTune={metalTune} />
+               capTune={capTune} trimMat={trimMat} metalTune={metalTune}
+               metalStudioId={metalStudioId} />
       {glass && transmissionMat && !preset.thinWall && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
@@ -633,6 +637,7 @@ export default function MaterialLab(
   // the metal STUDIO on sliders — Jordan dials the shine itself, then the
   // landed values get written into METAL_STUDIO_DEFAULTS and locked
   const [metalTune, setMetalTune] = useState<MetalStudioParams>(METAL_STUDIO_DEFAULTS);
+  const [metalStudioId, setMetalStudioId] = useState<MetalStudioId>(APPROVED_METAL_STUDIO);
   useEffect(() => { setCapTune(null); }, [capMat]);
   // Reference comparison. The photo is held LOCALLY (object URL) — nothing is
   // uploaded. Framing does not need to match: scale/offset/opacity exist so a
@@ -767,6 +772,7 @@ export default function MaterialLab(
                      bakeMax={bakeLive ? bakeMax : null}
                      closure={closure} capMat={capMat} ballMat={ballMat}
                      capTune={capTune} trimMat={trimMat} metalTune={metalTune}
+                     metalStudioId={metalStudioId}
                      frostUrl={uvModel && working.frostMask
                        ? `/models/bodies-thickness/${body.bodyId}.frost.png`
                        : null}
@@ -1046,6 +1052,12 @@ export default function MaterialLab(
         </label>
 
         <Section title="METAL STUDIO" />
+        <div style={{ display: "flex", gap: 4, marginBottom: 4 }}>
+          {([["key light", "key"], ["classic studio", "classic"]] as const).map(([n, id]) => (
+            <button key={id} onClick={() => setMetalStudioId(id)}
+                    style={btn(metalStudioId === id)}>{n}</button>
+          ))}
+        </div>
         <div style={{ fontSize: 10, color: "#8a8a94", marginBottom: 4 }}>
           the reflection itself — what shiny caps mirror. Dial it, then have
           the values locked.

@@ -24,13 +24,24 @@ import { useThree } from "@react-three/fiber";
 import { useEnvironment } from "@react-three/drei";
 import * as THREE from "three";
 
-/** THE metal environment: a REAL studio HDRI — Poly Haven
- *  monochrome_studio_02 (CC0), Jordan's pick ("we do need an HDRI").
- *  Real softboxes give metals genuine structured reflections that no
- *  procedural band ever matched; monochrome keeps silver silver. The
- *  procedural generator below remains as a tunable fallback. */
-export function useMetalStudioHdri(): THREE.Texture {
-  return useEnvironment({ files: "/models/studio-metal-key.hdr" });
+/** The metal environments — REAL studio HDRIs (Jordan: "we do need an
+ *  HDRI"). Two candidates, A/B-able in the lab:
+ *  - "key":     monochrome_studio_02 cut down to its one elevated softbox
+ *               (make_metal_key_hdri.py) — a single controlled key light;
+ *  - "classic": RAW studio_small_03, the HDRI behind drei's "studio"
+ *               preset and the threejs-materials sphere renders Jordan
+ *               pointed at — full room structure in the reflection.
+ *  The procedural generator below remains as a tunable fallback. */
+export type MetalStudioId = "key" | "classic";
+export const METAL_STUDIO_FILES: Record<MetalStudioId, string> = {
+  key: "/models/studio-metal-key.hdr",
+  classic: "/models/studio-classic.hdr",
+};
+/** which one the PDP ships — flip only on Jordan's approval */
+export const APPROVED_METAL_STUDIO: MetalStudioId = "classic";
+
+export function useMetalStudioHdri(id: MetalStudioId = APPROVED_METAL_STUDIO): THREE.Texture {
+  return useEnvironment({ files: METAL_STUDIO_FILES[id] });
 }
 
 const W = 512, H = 256;

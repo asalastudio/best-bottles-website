@@ -80,7 +80,7 @@
         0.5900005962166698
       ],
       "metalness": 1.0,
-      "roughness": 0.05,
+      "roughness": 0.09,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
@@ -88,7 +88,7 @@
       "envMapIntensity": 1.62,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
+      "note": "Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
     },
     "CAP_SHINY_SILVER": {
       "color": "#fefdfc",
@@ -98,7 +98,7 @@
         0.9884829524812248
       ],
       "metalness": 1.0,
-      "roughness": 0.05,
+      "roughness": 0.09,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
@@ -106,7 +106,7 @@
       "envMapIntensity": 2.4,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
+      "note": "Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
     },
     "CAP_WHITE": {
       "color": "#f4f3f0",
