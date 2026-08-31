@@ -175,7 +175,10 @@ export default function ConfiguratorPdp({
     const colour = fam.slugColour[glass];
     if (!token || !colour) return;
     const to = fam.buildSlug(colour, token);
-    if (to !== currentSlug) router.push(`/products/${to}`);
+    if (to !== currentSlug) // scroll:false — a material or closure change must not move the
+      // viewport. Without it Next scrolls the page and the swap reads
+      // as jumping to a different product.
+      router.push(`/products/${to}`, { scroll: false });
     setPreviewBase(null);
   };
 
