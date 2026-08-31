@@ -109,7 +109,10 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
   // line of the matcap into full-height smears (Jordan's gold cap close-up).
   // Cylindrical caps are PBR metal under the rhythmic metal env instead —
   // which is exactly what Pacdora's chrome cap is.
-  const metalEnv = useEnvironment({ files: "/models/studio-metal.hdr" });
+  // Poly Haven studio_small_08 (CC0): a REAL studio with softboxes, stands
+  // and a room - the structure that makes the showcase balls sing. Synthetic
+  // cards never matched it; metals mirror this now.
+  const metalEnv = useEnvironment({ files: "/models/studio-metal-ph.hdr" });
   // matcap for the BALL only: a chrome sphere in a soft-gradient env is
   // indistinguishable from glass (mirrors show only their surroundings);
   // "steel" is a baked PATTERN - bright sky, crisp horizon, dark floor,
