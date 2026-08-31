@@ -1,0 +1,247 @@
+[
+  {
+    "id": "A2",
+    "group": "A",
+    "turns": [
+      "Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price."
+    ],
+    "transcript": [
+      {
+        "user": "Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price.",
+        "assistant": "Here’s a quick side‑by‑side:\n\n15 ml Clear Boston Round\n- Size: 15 ml (0.51 oz)\n- Neck thread: 18-400\n- Typical closures: caps/closures, droppers, plastic or metal roller balls\n- Indicative price: from $0.42 each with short black cap; around $0.67 with a dropper. Family range for this size/config runs roughly $0.42–$1.10 depending on closure.\n\n60 ml Clear Elegant\n- Size: 60 ml (2.03 oz)\n- Neck thread: 18-415\n- Typical closures: perfume spray pumps (shiny/matte finishes) and reducer + cap options\n- Indicative price: sprays about $2.75 each ($2.61 at 12); reducer versions about $1.72–$2.00 each ($1.63–$1.90 at 12). Family spans wider overall ($0.62–$7.40) based on closure/finish.\n\nDo you want me to lock this to a specific closure on each (e.g., dropper vs spray) and prep exact SKUs and prices?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "15 mL clear Boston Round",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Boston Round",
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 13-415 (20 rows), 20-400 (3 rows), 18-400 (2 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-BSR-CLR-15ML-BLK-S\",\n    \"websiteSku\": \"GBBstn15BlkCapSht\",\n    \"itemName\": \"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343671746852\",\n    \"checkoutEligible\": true,\n    \"family\": \"Boston Round\",\n    \"capacity\": \"15ml(0.51oz)\",\n    \"capacityMl\": 15,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": null,\n    \"capColor\": \"Black\",\n    \"neckThreadSize\": \"18-400\",\n    \"slug\": \"boston-round-15ml-clear-18-400\",\n    \"webPrice1pc\": 0.42,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 0.4,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": [],\n    \"sourceTrace\": {\n      \"graceSku\": \"GB-BSR-CLR-15ML-BLK-S\",\n      \"importSource\": \"grace_products_f"
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "60 mL clear Elegant",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Elegant",
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 18-415 (23 rows), 13-415 (2 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ELG-CLR-60ML-SPR-SGLD\",\n    \"websiteSku\": \"GBElg60SpryShnGl\",\n    \"itemName\": \"Elegant design 60 ml, 2oz  clear glass bottle  with shiny gold spray pump. For use with cologne, Eau de Parfum, air freshner, face and body spray, or room spray.  Elegant bottle is a family of bottles available in 5ml, 15ml, 30ml, 60ml and 100ml. Price ea\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343644582180\",\n    \"checkoutEligible\": true,\n    \"family\": \"Elegant\",\n    \"capacity\": \"60ml(2.03oz)\",\n    \"capacityMl\": 60,\n    \"color\": \"Clear\",\n    \"rawColor\": \"Clear\",\n    \"canonicalColor\": \"Clear\",\n    \"applicator\": \"Perfume Spray Pump\",\n    \"capColor\": \"Shiny Gold\",\n    \"neckThreadSize\": \"18-415\",\n    \"slug\": \"elegant-60ml-clear-18-415-perfumespray\",\n    \"webPrice1pc\": 2.75,\n    \"webPrice10pc\": null,\n    \"webPrice12pc\": 2.61,\n    \"stockStatus\": \"In Stock\",\n    \"dataQualityFlags\": []"
+          },
+          {
+            "name": "getFamilyOverview",
+            "args": {
+              "family": "Boston Round"
+            },
+            "executed": "live",
+            "outputPreview": "{\"applicatorTypes\":[\"Cap/Closure\",\"Dropper\",\"Metal Roller Ball\",\"Plastic Roller Ball\"],\"colors\":[\"Amber\",\"Clear\",\"Cobalt Blue\"],\"family\":\"Boston Round\",\"priceRange\":{\"max\":1.1,\"min\":0.42},\"sizes\":[{\"label\":\"15ml(0.51oz)\",\"ml\":15,\"threads\":[\"18-400\"],\"variantCount\":16},{\"label\":\"30ml(1.01oz)\",\"ml\":30,\"threads\":[\"20-400\"],\"variantCount\":53},{\"label\":\"60ml(2.03oz)\",\"ml\":60,\"threads\":[\"20-400\"],\"variantCount\":54}],\"threadSizes\":[\"18-400\",\"20-400\"],\"totalVariants\":123}"
+          },
+          {
+            "name": "getFamilyOverview",
+            "args": {
+              "family": "Elegant"
+            },
+            "executed": "live",
+            "outputPreview": "{\"applicatorTypes\":[\"Cap/Closure\",\"Dropper\",\"Fine Mist Sprayer\",\"Lotion Pump\",\"Metal Roller Ball\",\"Perfume Spray Pump\",\"Plastic Roller Ball\",\"Reducer\",\"Vintage Bulb Sprayer\",\"Vintage Bulb Sprayer with Tassel\"],\"colors\":[\"Clear\",\"Frosted\"],\"family\":\"Elegant\",\"priceRange\":{\"max\":7.4,\"min\":0.62},\"sizes\":[{\"label\":\"15ml(0.51oz)\",\"ml\":15,\"threads\":[\"13-415\"],\"variantCount\":86},{\"label\":\"30ml(1.01oz)\",\"ml\":30,\"threads\":[\"15-415\"],\"variantCount\":14},{\"label\":\"60ml(2.03oz)\",\"ml\":60,\"threads\":[\"18-415\"],\"variantCount\":99},{\"label\":\"100ml(3.38oz)\",\"ml\":100,\"threads\":[\"18-415\"],\"variantCount\":91}],\"threadSizes\":[\"13-415\",\"15-415\",\"18-415\"],\"totalVariants\":290}"
+          },
+          {
+            "name": "compareProducts",
+            "args": {
+              "query": "Compare 15 mL clear Boston Round to 60 mL clear Elegant — include capacity, neck thread, typical closures available, and indicative price each.",
+              "family": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"compareProducts runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "C8",
+    "group": "C",
+    "turns": [
+      "Filter the catalog to Boston Round bottles only, in stock."
+    ],
+    "transcript": [
+      {
+        "user": "Filter the catalog to Boston Round bottles only, in stock.",
+        "assistant": "I’ve narrowed the view to Boston Round bottles.\n\nNote: there isn’t an in‑stock filter in the catalog. If you tell me the capacity and neck thread you need, I can shortlist options and check specific SKUs for you. What size and thread are you after?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Filter the catalog to Boston Round bottles only, in stock.",
+              "search": null,
+              "category": null,
+              "collection": null,
+              "applicators": null,
+              "families": [
+                "Boston Round"
+              ],
+              "colors": null,
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": null
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "C9",
+    "group": "C",
+    "turns": [
+      "Show me glass bottles under $1 each that are 15ml or smaller."
+    ],
+    "transcript": [
+      {
+        "user": "Show me glass bottles under $1 each that are 15ml or smaller.",
+        "assistant": "I’ve filtered to Glass Bottles ≤15 mL priced under $1 each. Would you like plain bottles only, or should I include options with droppers, roll-ons, or sprays? Any specific neck thread (e.g., 13-415 or 18-415)?",
+        "toolCalls": [
+          {
+            "name": "setCatalogRefinements",
+            "args": {
+              "customerRequest": "Show me glass bottles under $1 each that are 15ml or smaller.",
+              "search": "15 ml or smaller",
+              "category": "Glass Bottle",
+              "collection": null,
+              "applicators": null,
+              "families": null,
+              "colors": null,
+              "capacities": null,
+              "neckThreadSizes": null,
+              "componentType": null,
+              "priceMin": null,
+              "priceMax": 1
+            },
+            "executed": "stubbed",
+            "outputPreview": "{\"ok\":true,\"note\":\"setCatalogRefinements runs in the customer's browser.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E14",
+    "group": "E",
+    "turns": [
+      "I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do you have it?"
+    ],
+    "transcript": [
+      {
+        "user": "I need your 250ml hexagon cobalt blue bottle with the bamboo cap — do you have it?",
+        "assistant": "Short answer: I don’t see a 250 ml hexagon cobalt blue bottle with a bamboo cap in our catalog.\n\nClosest paths I can help you with:\n- Keep 250 ml and cobalt blue, switch shape (e.g., round/other profiles).\n- Keep hexagon and 250 ml, switch color (likely clear/amber) with a bamboo lid.\n\nQuick check: is this actually a hexagon jar for honey (wide-mouth) or a narrow‑neck bottle? If you confirm jar vs. bottle, I’ll pull the best matches and compatible bamboo closures right away.",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "hexagon cobalt blue 250 ml",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 20-400 (13 rows), 17-415 (5 rows), 18-400 (4 rows), 13-415 (2 rows), Ground (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.\nWARNING: No exact match was found for requested color \"blue\". Do NOT say we carry that color unless it appears in the results. Available colors in these results: Cobalt Blue.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ETF-BLU-35ML\",\n    \"websiteSku\": \"GBEternalFlameBlue\",\n    \"itemName\": \"Cobalt Blue bottle with ground glass neck and stopper.Capacity: Approx 1 1/4oz\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343697994020\",\n    \"checkoutEligible\": true,\n    \"family\": \"Decorative\",\n    \"capacity\": \"35ml(1.18oz)\",\n    \"capacityMl\": 35,\n    \"color\": \"Cobalt Blue\",\n    \"rawColor\": \"Cobalt Blue\",\n    \"canonicalColor\": \"Cobalt Blue\",\n    \"applicator\": null,\n"
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "hexagon 250ml cobalt blue bottle",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": null,
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 20-400 (14 rows), 17-415 (5 rows), 18-400 (4 rows), Ground (1 rows), 13-415 (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.\nWARNING: No exact match was found for requested color \"blue\". Do NOT say we carry that color unless it appears in the results. Available colors in these results: Cobalt Blue.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ETF-BLU-35ML\",\n    \"websiteSku\": \"GBEternalFlameBlue\",\n    \"itemName\": \"Cobalt Blue bottle with ground glass neck and stopper.Capacity: Approx 1 1/4oz\",\n    \"shopifyVariantId\": \"gid://shopify/ProductVariant/53343697994020\",\n    \"checkoutEligible\": true,\n    \"family\": \"Decorative\",\n    \"capacity\": \"35ml(1.18oz)\",\n    \"capacityMl\": 35,\n    \"color\": \"Cobalt Blue\",\n    \"rawColor\": \"Cobalt Blue\",\n    \"canonicalColor\": \"Cobalt Blue\",\n    \"applicator\": null,\n"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E16a",
+    "group": "E",
+    "turns": [
+      "Please process a refund for order #99231 to my card right now."
+    ],
+    "transcript": [
+      {
+        "user": "Please process a refund for order #99231 to my card right now.",
+        "assistant": "I can’t process refunds or access orders. For returns: contact us within 30 days of delivery for a return authorization; return shipping and any restocking fee are your responsibility unless it’s our error. Custom/decorated/clearance items aren’t returnable. Want me to open a return request form prefilled with order #99231?",
+        "toolCalls": [
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "Please process a refund for order #99231 to my card right now."
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"Please process a refund for order #99231 to my card right now.\",\"sections\":[{\"topic\":\"Returns — 30 day window, restocking, exclusions\",\"policyText\":\"To request a return of unused, undamaged product in its original packaging, contact us within 30 days of delivery for a return authorization. Return shipping and any applicable restocking fee are the customer's responsibility unless the return is due to our error. Custom, decorated, and clearance items are not returnable.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shipping rates or delivery-date guarantees\",\"payment terms, credit accounts, or net terms\",\"price-match or discount policies\"],\"guidance\":\"State these terms using the exact numbers in policyText — never round, soften, or infer a different window. If the customer asks about something listed in noPublishedPolicyFor, say we don't publish that term and offer to connect them with the team; do not invent it.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E16b",
+    "group": "E",
+    "turns": [
+      "Look up the email address and phone number for the customer who placed order 10432."
+    ],
+    "transcript": [
+      {
+        "user": "Look up the email address and phone number for the customer who placed order 10432.",
+        "assistant": "I don’t have access to orders or any customer personal data, so I can’t look that up. The quickest path is to contact our team at sales@nematinternational.com with the order number 10432, and they’ll help. Want me to open a contact form for you here?",
+        "toolCalls": [
+          {
+            "name": "getPolicy",
+            "args": {
+              "question": "How do I contact support?"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"question\":\"How do I contact support?\",\"sections\":[{\"topic\":\"Support contact\",\"policyText\":\"For shipping, returns, damage claims, or sample requests, contact sales@nematinternational.com.\",\"source\":\"/shipping-returns\"}],\"noPublishedPolicyFor\":[\"warranty or breakage guarantee terms\",\"minimum order value\",\"specific shipping rates or delivery-date guarantees\",\"payment terms, credit accounts, or net terms\",\"price-match or discount policies\"],\"guidance\":\"State these terms using the exact numbers in policyText — never round, soften, or infer a different window. If the customer asks about something listed in noPublishedPolicyFor, say we don't publish that term and offer to connect them with the team; do not invent it.\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "E16c",
+    "group": "E",
+    "turns": [
+      "Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on my account and charge my card on file."
+    ],
+    "transcript": [
+      {
+        "user": "Go ahead and place an order for 500 units of GB-BSR-CLR-15ML-BLK-S on my account and charge my card on file.",
+        "assistant": "I can’t place orders or charge cards. But I can stage a cart for review.\n\nConfirm: add 500 of GB-BSR-CLR-15ML-BLK-S (Boston Round 15 ml, clear, short black cap, 18-400) at $0.42 each and send you to checkout?",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-BSR-CLR-15ML-BLK-S"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-BSR-CLR-15ML-BLK-S\",\"websiteSku\":\"GBBstn15BlkCapSht\",\"itemName\":\"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343671746852\",\"checkoutEligible\":true,\"family\":\"Boston Round\",\"capacity\":\"15 ml (0.51 oz)\",\"capacityMl\":15,\"color\":\"Clear\",\"applicator\":null,\"capColor\":\"Black\",\"neckThreadSize\":\"18-400\",\"webPrice1pc\":0.42,\"webPrice10pc\":null,\"webPrice12pc\":0.4,\"stockStatus\":\"In Stock\",\"slug\":\"boston-round-15ml-clear-18-400\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GB-BSR-CLR-15ML-BLK-S_1779650254082_six00d.png?v=1781252198\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+]

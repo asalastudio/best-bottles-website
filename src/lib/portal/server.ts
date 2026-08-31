@@ -184,6 +184,31 @@ export async function createGraceProjectForViewer(name?: string) {
     });
 }
 
+export async function saveProductToGraceProjectForViewer(args: {
+    projectId?: string;
+    projectName?: string;
+    bottle: { description: string; sku?: string; notes?: string };
+}) {
+    const viewer = await requirePortalViewer();
+    let projectId = args.projectId;
+    if (!projectId) {
+        const created = await getConvex().mutation(api.portal.createGraceProject, {
+            writeToken: getConvexWriteToken(),
+            clerkOrgId: viewer.clerkOrgId,
+            name: args.projectName,
+        });
+        projectId = String(created.projectId);
+    }
+
+    const result = await getConvex().mutation(api.portal.saveBottleToGraceProject, {
+        writeToken: getConvexWriteToken(),
+        clerkOrgId: viewer.clerkOrgId,
+        projectId: projectId as never,
+        bottle: args.bottle,
+    });
+    return { ...result, projectId };
+}
+
 export async function askGraceForViewerProject(projectId: string, message: string) {
     const viewer = await requirePortalViewer();
 

@@ -248,6 +248,32 @@ export function ensureVerified9mlCylinderRollOnCoverage<T extends {
     return covered;
 }
 
+/**
+ * Ensures every neck thread present in the candidate pool survives the final
+ * slice. Text relevance can rank an entire minority thread line (e.g. the
+ * 13-415 9ml rollers) below the majority line, making Grace deny products that
+ * exist. Replaces tail rows of the picked slice with the top-ranked rows of
+ * each missing thread (up to minPerThread each).
+ */
+export function ensureThreadDiversity<
+    T extends SearchCandidate & { neckThreadSize?: string | null },
+>(pool: T[], picked: T[], limit: number, minPerThread = 2): T[] {
+    const pickedThreads = new Set(
+        picked.map((p) => p.neckThreadSize).filter((t): t is string => !!t),
+    );
+    const additions: T[] = [];
+    const handled = new Set<string>();
+    for (const row of pool) {
+        const thread = row.neckThreadSize;
+        if (!thread || pickedThreads.has(thread) || handled.has(thread)) continue;
+        handled.add(thread);
+        additions.push(...pool.filter((r) => r.neckThreadSize === thread).slice(0, minPerThread));
+    }
+    if (additions.length === 0) return picked;
+    const keep = picked.slice(0, Math.max(0, limit - additions.length));
+    return dedupeCatalogResults([...keep, ...additions]).slice(0, limit);
+}
+
 // ─── Deduplication ──────────────────────────────────────────────────────────
 
 export function dedupeCatalogResults<T extends SearchCandidate>(items: T[]): T[] {
@@ -393,6 +419,8 @@ export function buildSearchCatalogToolResult(
         itemName?: string | null;
         slug?: string | null;
         graceSku?: string | null;
+        neckThreadSize?: string | null;
+        capColor?: string | null;
         dataQualityFlags?: CanonicalProductDataQualityFlag[] | string[] | null;
     }>
 ): string {
@@ -428,7 +456,17 @@ export function buildSearchCatalogToolResult(
             && isVerified9mlCylinderRollOnColor(item.canonicalColor ?? item.color)
         )
         : data;
-    const coverage = summarizeCanonicalProductCoverage(coverageRows);
+    // A search for "1ml vial" returns neighbouring capacities too. Coverage
+    // statements must describe ONLY the capacity the customer asked about —
+    // otherwise 3ml/4ml colours get attributed to the 1ml, which is how a
+    // fix for under-reporting turns into over-claiming.
+    const capacityScopedRows = detectedCapMl !== null
+        ? data.filter((item) => item.capacityMl === detectedCapMl)
+        : data;
+    const coverageScope = capacityScopedRows.length > 0 ? capacityScopedRows : data;
+    const coverage = summarizeCanonicalProductCoverage(
+        is9mlCylinderRollOnContext ? coverageRows : coverageScope,
+    );
 
     if (is9mlCylinderRollOnContext) {
         warnings.push(
@@ -441,6 +479,43 @@ export function buildSearchCatalogToolResult(
             `${asksForColorCoverage ? "REQUIRED COVERAGE" : "CATALOG COVERAGE"}: The returned ${detectedCapMl}ml result set includes these canonical color options: ${coverage.colors.join(", ")}. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.`
         );
     }
+    const threadCounts = new Map<string, number>();
+    for (const item of data) {
+        if (item.neckThreadSize) {
+            threadCounts.set(item.neckThreadSize, (threadCounts.get(item.neckThreadSize) ?? 0) + 1);
+        }
+    }
+    if (threadCounts.size > 1) {
+        warnings.push(
+            `NECK THREAD COVERAGE: this result set spans multiple neck finishes — ${[...threadCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([t, n]) => `${t} (${n} rows)`)
+                .join(", ")}. Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.`,
+        );
+    }
+
+    // Closure/cap colour is a separate dimension from glass colour. Without an
+    // explicit nudge the model reports whichever cap it happened to see first:
+    // asked for a 1ml sample vial it answered "white plug only" while the result
+    // set also contained black and clear plugs. Same failure shape as neck
+    // threads, so it gets the same treatment.
+    const capColorCounts = new Map<string, number>();
+    for (const item of coverageScope) {
+        const cap = item.capColor?.trim();
+        if (cap && cap.toLowerCase() !== "n/a") {
+            capColorCounts.set(cap, (capColorCounts.get(cap) ?? 0) + 1);
+        }
+    }
+    if (capColorCounts.size > 1) {
+        const scopeLabel = detectedCapMl !== null && capacityScopedRows.length > 0 ? `${detectedCapMl}ml ` : "";
+        warnings.push(
+            `CLOSURE COLOR COVERAGE: the ${scopeLabel}products in this result set come with these cap/closure colors — ${[...capColorCounts.entries()]
+                .sort((a, b) => b[1] - a[1])
+                .map(([c, n]) => `${c} (${n} rows)`)
+                .join(", ")}. When the customer asks what a product comes with, list EVERY closure color in this sentence. Never name one and imply it is the only option, and never say a closure color is unavailable when it appears here. Do NOT attribute colors from other capacities to this one.`,
+        );
+    }
+
     if (coverage.dataQualityFlags.includes("color_derived_from_sku_swirl")) {
         warnings.push(
             "DATA QUALITY NOTE: At least one Swirl color is derived from SKU/name evidence because the raw source color may be marked Clear. Preserve this as Swirl in customer-facing color lists and flag it for source-sheet cleanup."

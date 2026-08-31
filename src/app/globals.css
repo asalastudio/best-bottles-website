@@ -3,6 +3,8 @@
 /* ── shadcn/ui radius token (used by shadcn components) ─────────────────── */
 :root {
   --radius: 0.375rem;
+  --mobile-tab-bar-height: calc(3.5rem + 1px); /* 56px rail + 1px top border */
+  --mobile-tab-bar-clearance: calc(var(--mobile-tab-bar-height) + env(safe-area-inset-bottom, 0px));
 }
 
 @theme {
@@ -103,9 +105,9 @@ body {
 
 /* ── Mobile Tab Bar spacing ────────────────────────────────────────────── */
 /* Add bottom padding on mobile so content isn't hidden behind the tab bar */
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   main {
-    padding-bottom: calc(3.5rem + env(safe-area-inset-bottom, 0px));
+    padding-bottom: calc(var(--mobile-tab-bar-clearance) + 0.75rem);
   }
 }
 

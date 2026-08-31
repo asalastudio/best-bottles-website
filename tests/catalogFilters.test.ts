@@ -24,6 +24,7 @@ import {
     classifyComponentType,
     filtersAreEmpty,
     filtersToParams,
+    normalizeApplicatorBuckets,
     paramsToFilters,
     type ApplicatorBucket,
     type CatalogFilters,
@@ -276,6 +277,19 @@ describe("URL round-trip serialization", () => {
 // ─── paramsToFilters edge cases ─────────────────────────────────────────────
 
 describe("paramsToFilters edge cases", () => {
+    it("normalizes Grace-facing applicator labels and product values to canonical buckets", () => {
+        expect(normalizeApplicatorBuckets([
+            "Roll-On",
+            "Metal Roller Ball",
+            "rollon",
+            "Fine Mist Sprayer",
+            "invalid",
+        ])).toEqual(["rollon", "finemist"]);
+
+        const parsed = paramsToFilters(new URLSearchParams("applicators=Roll-On"));
+        expect(parsed.filters.applicators).toEqual(["rollon"]);
+    });
+
     it("filters out invalid applicator values", () => {
         const params = new URLSearchParams("applicators=rollon,INVALID,dropper");
         const result = paramsToFilters(params);

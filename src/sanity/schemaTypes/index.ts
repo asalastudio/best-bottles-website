@@ -18,7 +18,13 @@ import { pdpFaqAccordion } from "./objects/pdpFaqAccordion";
 import { pdpTrustBadges } from "./objects/pdpTrustBadges";
 import { paperDollLayerAsset } from "./objects/paperDollLayerAsset";
 import { paperDollFamily } from "./documents/paperDollFamily";
+import { paperDollRelease } from "./documents/paperDollRelease";
+import { paperDollAssemblyRecipe } from "./objects/paperDollAssemblyRecipe";
+import { paperDollAssemblyMapping } from "./objects/paperDollAssemblyMapping";
+import { paperDollQaEvidence } from "./objects/paperDollQaEvidence";
+import { paperDollReleaseProvenance } from "./objects/paperDollReleaseProvenance";
 import { marketingHeroAsset } from "./documents/marketingHeroAsset";
+import { paperDollBeautyGallery } from "./documents/paperDollBeautyGallery";
 
 export const schemaTypes = [
     // Documents
@@ -28,7 +34,9 @@ export const schemaTypes = [
     productFamilyContent,
     productGroupContent,
     paperDollFamily,
+    paperDollRelease,
     marketingHeroAsset,
+    paperDollBeautyGallery,
     // Objects — Homepage
     heroBlock,
     startHereCard,
@@ -46,4 +54,8 @@ export const schemaTypes = [
     pdpTrustBadges,
     // Paper Doll
     paperDollLayerAsset,
+    paperDollAssemblyRecipe,
+    paperDollAssemblyMapping,
+    paperDollQaEvidence,
+    paperDollReleaseProvenance,
 ];

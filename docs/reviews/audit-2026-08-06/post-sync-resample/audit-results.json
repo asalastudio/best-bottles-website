@@ -1,0 +1,90 @@
+[
+  {
+    "id": "A2",
+    "group": "Product knowledge",
+    "title": "Two-product comparison states real specs",
+    "turns": [
+      "Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price."
+    ],
+    "expect": {
+      "mustAnswer": true,
+      "mustIncludeAll": [
+        "18-400"
+      ],
+      "mustIncludeAny": [
+        "0.42",
+        "$0.42"
+      ],
+      "mustNotInclude": [
+        "export",
+        "pdf"
+      ]
+    },
+    "transcript": [
+      {
+        "user": "Compare the 15ml clear Boston Round with the 60ml clear Elegant — size, closure, and price.",
+        "assistant": "Here’s a quick side‑by‑side using the exact items we stock:\n\n15 ml Clear Boston Round\n- Size/thread: 15 ml (0.5 oz), 18-400\n- Closures seen for this size:\n  - Short black cap (GB-BSR-CLR-15ML-BLK-S) — $0.42 each ($0.40 at 12+)\n  - Black dropper (GB-BSR-CLR-15ML-DRP-BLK) — $0.67 each ($0.64 at 12+)\n\n60 ml Clear Elegant\n- Size/thread: 60 ml (2 oz), 18-415\n- Closures seen for this size:\n  - Perfume spray pump (shiny black, shiny gold, matte gold, shiny silver, matte silver, copper) — $2.75 each ($2.61 at 12+)\n  - Reducer with cap (e.g., tall shiny black cap, black faux leather, white) — from $1.72–$2.00 each ($1.63–$1.90 at 12+)\n\nWant me to narrow to a specific closure on each (e.g., Boston Round with dropper vs Elegant with spray)?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "15 ml clear Boston Round",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Boston Round",
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 13-415 (20 rows), 20-400 (3 rows), 18-400 (2 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCLOSURE COLOR COVERAGE: the 15ml products in this result set come with these cap/closure colors — Black (2 rows), Shiny Black (2 rows), Matte Copper (2 rows), Matte Gold (2 rows), Shiny Gold (2 rows), Matte Silver (2 rows), Shiny Silver (2 rows), Pink Dotted (1 rows), Silver Dotted (1 rows), Matte Black (1 rows), Matte Blue (1 rows), Gold (1 rows), Silver (1 rows), White (1 rows). When the customer asks what a product comes with, list EVERY closure color in this sentence. Never name one and imply it is the only option, and never say a closure color is unavailable when it appears here. Do NOT attribute colors from other capacities to this one.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-BSR-CLR-15ML-BLK-S\",\n    \"websiteSku\": \"GBBstn15BlkCapSht\",\n    \"itemName\": \"Boston round design 15ml, 1/2 oz  Clear glass bottle with short black cap. For use with Perfume oils, essential oils, diffuser oils and arom"
+          },
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "60 ml clear Elegant",
+              "categoryLimit": "Glass Bottle",
+              "familyLimit": "Elegant",
+              "applicatorFilter": null
+            },
+            "executed": "live",
+            "outputPreview": "NECK THREAD COVERAGE: this result set spans multiple neck finishes — 18-415 (24 rows), 13-415 (1 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCLOSURE COLOR COVERAGE: the 60ml products in this result set come with these cap/closure colors — Matte Silver (4 rows), Shiny Gold (3 rows), Shiny Black (3 rows), Shiny Silver (2 rows), Pink (2 rows), Matte Gold (1 rows), Copper (1 rows), Black Leather (1 rows), White (1 rows), Ivory Leather (1 rows), Brown Leather (1 rows), Clear (1 rows), Lavender (1 rows), Ivory Silver (1 rows), Ivory Gold (1 rows). When the customer asks what a product comes with, list EVERY closure color in this sentence. Never name one and imply it is the only option, and never say a closure color is unavailable when it appears here. Do NOT attribute colors from other capacities to this one.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-ELG-CLR-60ML-SPR-SGLD\",\n    \"websiteSku\": \"GBElg60SpryShnGl\",\n    \"itemName\": \"Elegant design 60 ml, 2oz  clear glass bottle  with shiny gold spray pump. For use with cologne, Eau de Parfum, air freshner, face a"
+          }
+        ]
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "F17",
+    "group": "Resilience",
+    "title": "Contradictory + malformed input",
+    "turns": [
+      "I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; under $0.02 each"
+    ],
+    "expect": {
+      "mustAnswer": true,
+      "mustIncludeAny": [
+        "can't be both",
+        "cannot be both",
+        "not feasible",
+        "which capacity",
+        "isn't possible"
+      ]
+    },
+    "transcript": [
+      {
+        "user": "I need a 5ml bottle that is also 100ml, in matte clear glass, ;;;; under $0.02 each",
+        "assistant": "Thanks for the details—I see a couple conflicts I want to clear up so I can pull exact options.\n\n- Size: Do you need 5 ml or 100 ml? A bottle can’t be both.\n- Finish: By “matte clear,” do you mean frosted glass?\n- Budget: Our catalog floor is $0.13 per piece (that’s the lowest item we sell), so $0.02 each isn’t achievable. What’s your target price and at what quantity?\n\nOnce I have those, I’ll show you the best frosted clear options in the size you want.",
+        "toolCalls": [
+          {
+            "name": "getPriceStats",
+            "args": {
+              "family": null
+            },
+            "executed": "live",
+            "outputPreview": "{\"cheapestGroups\":[{\"displayName\":\"1 ml Clear Vial Bottle with Cap\",\"family\":\"Vial\",\"priceFrom\":0.13,\"priceTo\":0.13,\"slug\":\"vial-1ml-clear-Plug\"},{\"displayName\":\"1 ml Amber Vial Bottle with Cap\",\"family\":\"Vial\",\"priceFrom\":0.15,\"priceTo\":0.15,\"slug\":\"vial-1ml-amber-Plug\"},{\"displayName\":\"Cap & Closure — Thread 8-425\",\"family\":\"Cap/Closure\",\"priceFrom\":0.15,\"priceTo\":0.25,\"slug\":\"cap-closure-8-425\"}],\"familyPriceRanges\":{\"Aluminum Bottle\":{\"max\":3.65,\"min\":1.15},\"Apothecary\":{\"max\":4.5,\"min\":2.9},\"Atomizer\":{\"max\":3.4,\"min\":2.25},\"Bell\":{\"max\":0.9,\"min\":0.6},\"Boston Round\":{\"max\":1.1,\"min\":0.42},\"Cap/Closure\":{\"max\":5,\"min\":0.15},\"Circle\":{\"max\":7.15,\"min\":0.44},\"Cream Jar\":{\"max\":0.95,\"min\":0.3},\"Cylinder\":{\"max\":6.65,\"min\":0.31},\"Decorative\":{\"max\":7.7,\"min\":0.44},\"Diamond\":{\"max\":6.5,\"min\":1.87},\"Diva\":{\"max\":7.85,\"min\":2.02},\"Dropper\":{\"max\":0.6,\"min\":0.45},\"Elegant\":{\"max\":7.4,\"min\":0.62},\"Empire\":{\"max\":7.1,\"min\":2.27},\"Flair\":{\"max\":0.97,\"min\":0.44},\"Gift Bag\":{\"max\":0.88,\"min\":0.44},\"Gift Box\":{\"max\":0.75,\"min\":0.25},\"Grace\":{\"max\":6.3,\"min\":1.67},\"Internal\":{\"max\":1,\"min\":1},\"Lotion Bottle\":{\"max\":3.75,\"min\":0.35},\"Lotion Pump\":{\"max\":1.4,\"min\":1.4},\"Packaging Supply\":{\"max"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+]

@@ -126,6 +126,137 @@ export const JOURNAL_SLUGS_QUERY = `
 `;
 
 import { client, isSanityConfigured } from "./client";
+import { authenticatedServerClient, previewServerClient } from "./serverClient";
+import {
+    assertPreviewPaperDollFamily,
+    assertStorefrontPaperDollFamily,
+    selectStorefrontPaperDollReleaseCandidate,
+    type RenderablePaperDollFamily,
+    type StorefrontPaperDollFamily,
+} from "@/lib/paper-doll/sanity";
+import {
+    assertStorefrontCylinderBeautyGallery,
+    type StorefrontCylinderBeautyGallery,
+} from "@/lib/products/cylinder-beauty-gallery";
+
+export const STOREFRONT_PAPER_DOLL_FAMILY_QUERY = `
+  *[_type == "paperDollFamily" && familyKey == $familyKey][0] {
+    _id,
+    familyKey,
+    displayName,
+    canvasPreset,
+    canvasWidth,
+    canvasHeight,
+    pipelineVersion,
+    assetRevision,
+    storefrontReady,
+    layerOrderRollon,
+    layerOrderSpray,
+    layerOrderShortcap,
+    layerOrderLotion,
+    anchorsJson,
+    "currentReleaseReference": currentRelease._ref,
+    currentRelease->{
+      _id,
+      familyKey,
+      displayName,
+      canvasPreset,
+      canvasWidth,
+      canvasHeight,
+      pipelineVersion,
+      assetRevision,
+      storefrontReady,
+      layerOrderRollon,
+      layerOrderSpray,
+      layerOrderShortcap,
+      layerOrderLotion,
+      anchorsJson,
+      layerAssets[] {
+        _key,
+        slot,
+        variantKey,
+        sourceFilename,
+        "imageUrl": image.asset->url,
+        "imageWidth": image.asset->metadata.dimensions.width,
+        "imageHeight": image.asset->metadata.dimensions.height,
+        offsetX,
+        offsetY
+      },
+      assemblyMappings[] {
+        _key,
+        mappingKey,
+        recipeKey,
+        graceSku,
+        websiteSku,
+        bodyVariantKey,
+        fitmentVariantKey,
+        closureVariantKey,
+        overcapVariantKey
+      }
+    },
+    layerAssets[] {
+      _key,
+      slot,
+      variantKey,
+      sourceFilename,
+      "imageUrl": image.asset->url,
+      "imageWidth": image.asset->metadata.dimensions.width,
+      "imageHeight": image.asset->metadata.dimensions.height,
+      offsetX,
+      offsetY
+    },
+    assemblyMappings[] {
+      _key,
+      mappingKey,
+      recipeKey,
+      graceSku,
+      websiteSku,
+      bodyVariantKey,
+      fitmentVariantKey,
+      closureVariantKey,
+      overcapVariantKey
+    }
+  }
+`;
+
+export const STOREFRONT_CYLINDER_BEAUTY_GALLERY_QUERY = `
+  *[
+    _type == "paperDollBeautyGallery"
+    && familyKey == $familyKey
+    && storefrontReady == true
+  ][0] {
+    _id,
+    familyKey,
+    displayName,
+    canvasWidth,
+    canvasHeight,
+    referenceRoller,
+    referenceCapFinish,
+    generator,
+    assetRevision,
+    storefrontReady,
+    heroes[] {
+      glassKey,
+      glassLabel,
+      alt,
+      "imageUrl": image.asset->url,
+      "imageWidth": image.asset->metadata.dimensions.width,
+      "imageHeight": image.asset->metadata.dimensions.height
+    }
+  }
+`;
+
+export const PRODUCT_FAMILY_PAGE_QUERY = `
+  *[_type == "productFamilyContent" && family == $family][0] {
+    family,
+    "familyPageSlug": familyPageSlug.current,
+    familyPageEyebrow,
+    familyStory,
+    familyHeroAlt,
+    featuredCohortSlug,
+    "familyHeroImageUrl": familyHeroImage.asset->url
+  }
+`;
 
 // Mega menu panels only (for Navbar)
 export const MEGA_MENU_QUERY = `
@@ -157,6 +288,61 @@ export async function getMegaMenuPanels(): Promise<HomepageData["megaMenuPanels"
     } catch {
         return null;
     }
+}
+
+/**
+ * Fetch a Paper Doll family only through the strict storefront release gate.
+ * A present-but-invalid Sanity document throws with actionable diagnostics;
+ * it never silently falls back to legacy dimensions or partial layers.
+ */
+export async function getStorefrontPaperDollFamily(
+    familyKey: string,
+): Promise<StorefrontPaperDollFamily | null> {
+    if (!isSanityConfigured) return null;
+    const family = await client.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
+    if (!family) return null;
+    return assertStorefrontPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
+}
+
+/** Fetch a structurally valid Paper Doll draft through the private preview client. */
+export async function getPreviewPaperDollFamily(
+    familyKey: string,
+): Promise<RenderablePaperDollFamily | null> {
+    if (!previewServerClient) return null;
+    const family = await previewServerClient.fetch<unknown>(STOREFRONT_PAPER_DOLL_FAMILY_QUERY, { familyKey });
+    if (!family) return null;
+    return assertPreviewPaperDollFamily(selectStorefrontPaperDollReleaseCandidate(family));
+}
+
+/**
+ * Fetch the atomic five-image Cylinder beauty set. A partial or incorrectly
+ * sized set is rejected instead of leaking a mixed gallery to the storefront.
+ */
+export async function getStorefrontCylinderBeautyGallery(
+    familyKey: string,
+): Promise<StorefrontCylinderBeautyGallery | null> {
+    if (!isSanityConfigured) return null;
+    const galleryClient = authenticatedServerClient ?? client;
+    const gallery = await galleryClient.fetch<unknown>(STOREFRONT_CYLINDER_BEAUTY_GALLERY_QUERY, { familyKey });
+    if (!gallery) return null;
+    return assertStorefrontCylinderBeautyGallery(gallery);
+}
+
+export type ProductFamilyPageContent = {
+    family: string;
+    familyPageSlug?: string;
+    familyPageEyebrow?: string;
+    familyStory?: string;
+    familyHeroAlt?: string;
+    featuredCohortSlug?: string;
+    familyHeroImageUrl?: string;
+};
+
+export async function getProductFamilyPageContent(
+    family: string,
+): Promise<ProductFamilyPageContent | null> {
+    if (!isSanityConfigured) return null;
+    return client.fetch<ProductFamilyPageContent | null>(PRODUCT_FAMILY_PAGE_QUERY, { family });
 }
 
 export type HomepageData = {

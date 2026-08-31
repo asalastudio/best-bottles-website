@@ -13,6 +13,8 @@ import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RefineSection from "@/components/catalog/RefineSection";
+import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -33,12 +35,21 @@ import {
     catalogSearchRecoverySuggestions,
 } from "@/lib/catalogFilters";
 import {
+    buildAppliedFilterChips,
+    removeCatalogFilterChip,
+    toggleCatalogFacetValue,
+    type CatalogArrayFacet,
+} from "@/lib/catalogRefineModel";
+import {
     getProductCardVariantPreviews,
     type ProductCardVariantPreview,
     type ProductCardVariantPreviewSource,
 } from "@/lib/products/product-card-variant-previews";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
+import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
+import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
+import { analytics } from "@/lib/analytics";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -139,6 +150,7 @@ interface CatalogGroup {
     priceRangeMin: number | null;
     priceRangeMax: number | null;
     heroImageUrl?: string | null;
+    paperDollFamilyKey?: string | null;
     applicatorTypes?: string[] | null;
 }
 
@@ -204,7 +216,7 @@ function clampVisibleLimit(rawLimit: string | null): number {
 
 function SkeletonCard() {
     return (
-        <div className="flex flex-col h-full bg-white rounded-sm border border-champagne/40 overflow-hidden animate-pulse">
+        <div className="flex h-full flex-col overflow-hidden bg-white animate-pulse">
             <div className="aspect-[10/11] bg-champagne/20 w-full" />
             <div className="p-5 flex flex-col flex-1">
                 <div className="h-5 w-3/4 bg-champagne/30 rounded mb-2" />
@@ -217,11 +229,11 @@ function SkeletonCard() {
 
 function SkeletonGrid() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+        <CatalogProductGrid>
             {Array.from({ length: 12 }).map((_, i) => (
                 <SkeletonCard key={i} />
             ))}
-        </div>
+        </CatalogProductGrid>
     );
 }
 
@@ -299,7 +311,7 @@ function ProductGroupCard({
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-50px" }}
             transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
-            className="group/catalog-card flex h-full flex-col overflow-hidden rounded-sm border border-champagne/40 bg-white transition-all duration-300 hover:border-muted-gold hover:shadow-lg"
+            className="group/catalog-card flex h-full flex-col overflow-hidden bg-white focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]"
         >
             <ProductCardImagePreview
                 productTitle={customerDisplayName}
@@ -321,7 +333,7 @@ function ProductGroupCard({
             />
 
             <Link href={href} className="flex flex-1 flex-col p-5">
-                    <h4 className="font-serif text-lg text-obsidian font-medium leading-snug line-clamp-2 mb-3">{customerDisplayName}</h4>
+                    <h4 className="mb-3 font-serif text-lg font-medium leading-snug text-obsidian">{customerDisplayName}</h4>
                     <dl data-testid="catalog-card-specs" className="grid grid-cols-2 gap-x-3 gap-y-2 mb-4 text-[11px]">
                         {cardSpecs.map((spec) => (
                             <div key={spec.label} className="min-w-0">
@@ -333,55 +345,6 @@ function ProductGroupCard({
                     <span className="font-semibold text-obsidian text-lg mt-auto">from {formatPrice(group.priceRangeMin)}/ea</span>
             </Link>
         </motion.article>
-    );
-}
-
-// ─── Collapsible Filter Section ──────────────────────────────────────────────
-
-function FilterSection({
-    title,
-    defaultOpen = false,
-    expanded,
-    onToggle,
-    hasActiveFilters = false,
-    children,
-}: {
-    title: string;
-    defaultOpen?: boolean;
-    expanded?: boolean;
-    onToggle?: () => void;
-    hasActiveFilters?: boolean;
-    children: React.ReactNode;
-}) {
-    const [internalOpen, setInternalOpen] = useState(defaultOpen);
-    const isOpen = expanded ?? internalOpen;
-    const toggle = onToggle ?? (() => setInternalOpen((p) => !p));
-    const showGlow = hasActiveFilters && !isOpen;
-
-    return (
-        <div className={`border-b border-champagne/30 pb-4 mb-4 rounded-lg px-2 -mx-2 transition-all duration-200 ${showGlow ? "ring-1 ring-muted-gold/50 ring-offset-2 ring-offset-bone bg-muted-gold/5" : ""}`}>
-            <button
-                onClick={toggle}
-                className="flex min-h-11 items-center justify-between w-full text-xs uppercase tracking-wider font-bold text-slate hover:text-obsidian transition-colors py-2"
-                aria-expanded={isOpen}
-            >
-                <span className={hasActiveFilters ? "text-muted-gold font-semibold" : ""}>{title}</span>
-                <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isOpen ? "rotate-0" : "-rotate-90"}`} />
-            </button>
-            <AnimatePresence initial={false}>
-                {isOpen && (
-                    <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{ height: "auto", opacity: 1 }}
-                        exit={{ height: 0, opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="overflow-hidden"
-                    >
-                        <div className="pt-3">{children}</div>
-                    </motion.div>
-                )}
-            </AnimatePresence>
-        </div>
     );
 }
 
@@ -530,10 +493,9 @@ function FilterSidebarContent({
         filters.priceMin !== null ||
         filters.priceMax !== null;
 
-    const toggleArrayFilter = (key: keyof CatalogFilters, value: string) => {
-        const current = filters[key] as string[];
-        const next = current.includes(value) ? current.filter((v) => v !== value) : [...current, value];
-        onFilterChange({ [key]: next });
+    const toggleArrayFilter = (key: CatalogArrayFacet, value: string) => {
+        const next = toggleCatalogFacetValue(filters, key, value);
+        onFilterChange({ [key]: next[key] });
     };
 
     const sidebarCategories = useMemo(() => {
@@ -609,7 +571,7 @@ function FilterSidebarContent({
     };
 
     const applicatorSection = Object.keys(facets?.applicators ?? {}).length > 0 ? (
-        <FilterSection title="Product Type" defaultOpen hasActiveFilters={filters.applicators.length > 0}>
+        <RefineSection title="Product Type" defaultOpen hasActiveFilters={filters.applicators.length > 0}>
             <div className="space-y-0.5">
                 {APPLICATOR_BUCKETS.filter((b) => (facets?.applicators?.[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
                     <CheckboxItem
@@ -621,11 +583,11 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const familySection = sortedFamilies.length > 0 ? (
-        <FilterSection
+        <RefineSection
             title="Design Families"
             defaultOpen={mobileOptimized ? !hasNonFamilyFilter : true}
             hasActiveFilters={filters.families.length > 0}
@@ -641,11 +603,12 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const capacitySection = capacityRanges.length > 0 ? (
-        <FilterSection title="Capacity" defaultOpen hasActiveFilters={filters.capacities.length > 0}>
+        <RefineSection title="Capacity" defaultOpen hasActiveFilters={filters.capacities.length > 0}>
+            <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">Size ranges</p>
             <div className="space-y-0.5">
                 {capacityRanges.map((range) => (
                     <CheckboxItem
@@ -657,11 +620,25 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+            <div className="mt-3 border-t border-champagne/40 pt-3">
+                <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.16em] text-slate/70">Exact capacity</p>
+                <div className="max-h-[260px] space-y-0.5 overflow-y-auto pr-1 hide-scroll">
+                    {sortedCapacities.map((capacity) => (
+                        <CheckboxItem
+                            key={capacity.label}
+                            label={capacity.label}
+                            count={capacity.count}
+                            checked={filters.capacities.includes(capacity.label)}
+                            onChange={() => toggleArrayFilter("capacities", capacity.label)}
+                        />
+                    ))}
+                </div>
+            </div>
+        </RefineSection>
     ) : null;
 
     const colorSection = sortedColors.length > 0 ? (
-        <FilterSection title="Glass Color" defaultOpen={mobileOptimized} hasActiveFilters={filters.colors.length > 0}>
+        <RefineSection title="Glass Color" defaultOpen={mobileOptimized} hasActiveFilters={filters.colors.length > 0}>
             <div className="space-y-0.5 max-h-[240px] overflow-y-auto hide-scroll">
                 {sortedColors.map(([color, count]) => (
                     <CheckboxItem
@@ -674,11 +651,11 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const categorySection = (
-        <FilterSection title="Categories" defaultOpen={false} hasActiveFilters={!!(filters.category || filters.collection)}>
+        <RefineSection title="Categories" defaultOpen={false} hasActiveFilters={!!(filters.category || filters.collection)}>
                 {sidebarCategories.map((group) => (
                     <div key={group.category} className="mb-2">
                         <button
@@ -719,11 +696,11 @@ function FilterSidebarContent({
                         </AnimatePresence>
                     </div>
                 ))}
-        </FilterSection>
+        </RefineSection>
     );
 
     const componentTypeSection = isComponentCategory && sortedComponentTypes.length > 0 ? (
-        <FilterSection title="Component Type" defaultOpen={false} hasActiveFilters={!!filters.componentType}>
+        <RefineSection title="Component Type" defaultOpen={false} hasActiveFilters={!!filters.componentType}>
             <div className="space-y-0.5">
                 {sortedComponentTypes.map(([type, count]) => (
                     <button
@@ -735,11 +712,11 @@ function FilterSidebarContent({
                     </button>
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const neckThreadSection = sortedThreads.length > 0 ? (
-        <FilterSection title="Neck Thread Size" defaultOpen={mobileOptimized} hasActiveFilters={filters.neckThreadSizes.length > 0}>
+        <RefineSection title="Neck Thread Size" defaultOpen={mobileOptimized} hasActiveFilters={filters.neckThreadSizes.length > 0}>
             <div className="space-y-0.5 max-h-[200px] overflow-y-auto hide-scroll">
                 {sortedThreads.map(([thread, count]) => (
                     <CheckboxItem
@@ -751,11 +728,11 @@ function FilterSidebarContent({
                     />
                 ))}
             </div>
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const priceSection = facets && facets.priceRange.min < facets.priceRange.max ? (
-        <FilterSection title="Price Range" defaultOpen={false} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
+        <RefineSection title="Price Range" defaultOpen={false} hasActiveFilters={filters.priceMin !== null || filters.priceMax !== null}>
             <PriceRangeSlider
                 min={facets.priceRange.min}
                 max={facets.priceRange.max}
@@ -763,7 +740,7 @@ function FilterSidebarContent({
                 valueMax={filters.priceMax}
                 onChange={(min, max) => onFilterChange({ priceMin: min, priceMax: max })}
             />
-        </FilterSection>
+        </RefineSection>
     ) : null;
 
     const orderedSections = mobileOptimized
@@ -1341,6 +1318,21 @@ export default function CatalogClient({
     const [searchInput, setSearchInput] = useState(initialState.filters.search);
     const [activeResult, setActiveResult] = useState<CatalogSearchResult>(initialResult);
     const [isFetchingCatalog, setIsFetchingCatalog] = useState(false);
+    const [queryError, setQueryError] = useState<string | null>(null);
+    const [retryNonce, setRetryNonce] = useState(0);
+
+    // Sync externally-driven URL changes (including Grace) into the live grid.
+    // Local state is intentional for responsive interactions, but the URL is
+    // the authoritative cross-surface contract.
+    useEffect(() => {
+        const urlState = paramsToFilters(new URLSearchParams(initialSearchParams));
+        setFilters(urlState.filters); // eslint-disable-line react-hooks/set-state-in-effect
+        setSortBy(urlState.sort);
+        setViewMode(urlState.view);
+        setSearchInput(urlState.filters.search);
+        setVisibleCount(clampVisibleLimit(new URLSearchParams(initialSearchParams).get("limit")));
+        setActiveResult(initialResult);
+    }, [initialSearchParams, initialResult]);
 
     // Sync URL when filters/sort/view change
     const pushToUrl = useCallback(
@@ -1348,7 +1340,7 @@ export default function CatalogClient({
             const params = filtersToParams(f, s, v);
             if (limit && limit > PAGE_SIZE) params.set("limit", String(limit));
             const qs = params.toString();
-            router.replace(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
+            router.push(`${pathname}${qs ? `?${qs}` : ""}`, { scroll: false });
         },
         [router, pathname],
     );
@@ -1474,37 +1466,43 @@ export default function CatalogClient({
 
     useEffect(() => {
         const controller = new AbortController();
-        window.setTimeout(() => {
-            if (!controller.signal.aborted) setIsFetchingCatalog(true);
+        const loadingTimer = window.setTimeout(() => {
+            if (!controller.signal.aborted) {
+                setIsFetchingCatalog(true);
+                setQueryError(null);
+            }
         }, 0);
-        fetch("/api/catalog/search", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-                filters,
-                sort: sortBy,
-                view: viewMode,
-                limit: queryLimit,
-                cursor: null,
-            }),
-            signal: controller.signal,
-        })
-            .then((response) => {
-                if (!response.ok) throw new Error("Catalog search failed");
-                return response.json() as Promise<CatalogSearchResult>;
-            })
+        fetchCatalogSearch(buildCatalogSearchArgs({
+            surface: MASTER_CATALOG_SURFACE,
+            filters,
+            sort: sortBy,
+            view: viewMode,
+            limit: queryLimit,
+        }), controller.signal)
             .then((result) => {
-                setActiveResult(result);
+                setActiveResult(result as CatalogSearchResult);
             })
             .catch((error) => {
                 if (error instanceof DOMException && error.name === "AbortError") return;
                 console.error("[Catalog] Search failed:", error);
+                setQueryError("Unable to update these results. Your selected filters are still applied.");
+                analytics.catalogRefineIncident({
+                    surface: "master",
+                    status: "query_failure",
+                    capacityCount: filters.capacities.length,
+                    applicatorCount: filters.applicators.length,
+                    threadCount: filters.neckThreadSizes.length,
+                });
             })
             .finally(() => {
+                window.clearTimeout(loadingTimer);
                 if (!controller.signal.aborted) setIsFetchingCatalog(false);
             });
-        return () => controller.abort();
-    }, [filters, sortBy, viewMode, queryLimit]);
+        return () => {
+            controller.abort();
+            window.clearTimeout(loadingTimer);
+        };
+    }, [filters, sortBy, viewMode, queryLimit, retryNonce]);
 
     // ── Handler Functions ────────────────────────────────────────────────────
 
@@ -1570,44 +1568,16 @@ export default function CatalogClient({
         setExpandedCategories((prev) => ({ ...prev, [cat]: prev[cat] === false ? true : !prev[cat] ? false : !prev[cat] }));
     }, []);
 
-    // Build active filter chips
-    const chips: Array<{ label: string; onRemove: () => void }> = [];
-    if (filters.category) chips.push({ label: filters.category, onRemove: () => handleFilterChange({ category: null }) });
-    if (filters.collection) chips.push({ label: filters.collection, onRemove: () => handleFilterChange({ collection: null }) });
-    for (const a of filters.applicators) {
-        const label = APPLICATOR_BUCKETS.find((b) => b.value === a)?.label ?? a;
-        chips.push({ label, onRemove: () => handleFilterChange({ applicators: filters.applicators.filter((x) => x !== a) }) });
-    }
-    for (const f of filters.families) chips.push({ label: f, onRemove: () => handleFilterChange({ families: filters.families.filter((x) => x !== f) }) });
-    for (const c of filters.colors) chips.push({ label: c, onRemove: () => handleFilterChange({ colors: filters.colors.filter((x) => x !== c) }) });
-    const capacityChipLabels = new Set<string>();
-    if (facets) {
-        const allCapacities = Object.values(facets.capacities);
-        for (const range of CAPACITY_RANGES) {
-            const labels = allCapacities.filter((cap) => capacityInRange(cap.ml, range)).map((cap) => cap.label);
-            if (labels.length > 0 && labels.every((label) => filters.capacities.includes(label))) {
-                labels.forEach((label) => capacityChipLabels.add(label));
-                chips.push({
-                    label: `${range.label} — ${range.detail}`,
-                    onRemove: () => handleFilterChange({ capacities: filters.capacities.filter((x) => !labels.includes(x)) }),
-                });
-            }
-        }
-    }
-    for (const cap of filters.capacities) {
-        if (!capacityChipLabels.has(cap)) {
-            chips.push({ label: cap, onRemove: () => handleFilterChange({ capacities: filters.capacities.filter((x) => x !== cap) }) });
-        }
-    }
-    for (const t of filters.neckThreadSizes) chips.push({ label: `Thread ${t}`, onRemove: () => handleFilterChange({ neckThreadSizes: filters.neckThreadSizes.filter((x) => x !== t) }) });
-    if (filters.componentType) chips.push({ label: filters.componentType, onRemove: () => handleFilterChange({ componentType: null }) });
-    if (filters.priceMin !== null || filters.priceMax !== null) {
-        chips.push({
-            label: `${formatPrice(filters.priceMin ?? 0)} – ${formatPrice(filters.priceMax ?? 999)}`,
-            onRemove: () => handleFilterChange({ priceMin: null, priceMax: null }),
-        });
-    }
-    if (filters.search) chips.push({ label: `"${filters.search}"`, onRemove: () => { handleFilterChange({ search: "" }); setSearchInput(""); } });
+    const chips = buildAppliedFilterChips(filters).map((chip) => ({
+        label: chip.label,
+        onRemove: () => {
+            if (chip.facet === "search") setSearchInput("");
+            handleFilterChange(removeCatalogFilterChip(filters, chip));
+        },
+    }));
+    const activeConstraintSummary = buildAppliedFilterChips(filters)
+        .map((chip) => chip.label)
+        .join(" · ");
 
     const selectedApplicatorLabel = filters.applicators.length === 1
         ? APPLICATOR_BUCKETS.find((b) => b.value === filters.applicators[0])?.label ?? filters.applicators[0]
@@ -1637,7 +1607,7 @@ export default function CatalogClient({
             const allLabels = Object.values(facets?.capacities ?? {})
                 .filter((cap) => capacityInRange(cap.ml, range))
                 .map((cap) => cap.label);
-            if (allLabels.length > 0 && allLabels.every((label) => filters.capacities.includes(label))) {
+            if (allLabels.length > 1 && allLabels.every((label) => filters.capacities.includes(label))) {
                 return range.label;
             }
         }
@@ -1882,6 +1852,21 @@ export default function CatalogClient({
                     {/* Product Grid Content */}
                     <div className="flex-1 min-w-0 w-full pb-32 border-l-0 lg:border-l border-champagne/30 lg:pl-6">
 
+                        {selectedFamilyLabel === "Cylinder" && (
+                            <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
+                                <div>
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Cylinder V3</p>
+                                    <p className="mt-1 text-sm text-obsidian">Looking for the editorial family page and the 9 mL · 17-415 Paper Doll builder?</p>
+                                </div>
+                                <Link
+                                    href="/catalog/cylinder"
+                                    className="inline-flex min-h-11 shrink-0 items-center justify-center bg-obsidian px-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-white hover:bg-muted-gold hover:text-obsidian"
+                                >
+                                    {"Open the Cylinder family & builder"}
+                                </Link>
+                            </div>
+                        )}
+
                         {/* Family banner — shown when a single design family is filtered */}
                         {filters.families.length === 1 && !filters.search && (
                             <FamilyBanner family={filters.families[0]} />
@@ -1999,6 +1984,12 @@ export default function CatalogClient({
                         </div>
 
                         {/* Loading */}
+                        {queryError && (
+                            <div role="alert" className="mb-4 flex flex-col gap-3 border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-900 sm:flex-row sm:items-center sm:justify-between">
+                                <span>{queryError}</span>
+                                <button type="button" onClick={() => setRetryNonce((value) => value + 1)} className="min-h-11 border border-red-300 bg-white px-4 text-[10px] font-bold uppercase tracking-wider">Retry</button>
+                            </div>
+                        )}
                         {isLoading && <SkeletonGrid />}
 
                         {/* Empty State */}
@@ -2014,7 +2005,7 @@ export default function CatalogClient({
                                 </p>
                                 {chips.length > 0 && (
                                     <p className="text-slate text-xs mb-6">
-                                        Try removing {chips.length === 1 ? "your filter" : "some filters"} to see more results.
+                                        Active constraints: {activeConstraintSummary}. Remove one constraint or clear all to see more results.
                                     </p>
                                 )}
                                 {searchRecoverySuggestions.length > 0 && (
@@ -2083,9 +2074,9 @@ export default function CatalogClient({
                         </AnimatePresence>
 
                         {/* Product Display — Visual Grid or Line Items */}
-                        <div className={`transition-opacity duration-300 ${isFetchingCatalog && activeResult.items.length > 0 ? "opacity-50 pointer-events-none" : "opacity-100"}`}>
+                        <div aria-busy={isFetchingCatalog} className={`transition-opacity duration-300 ${isFetchingCatalog && activeResult.items.length > 0 ? "opacity-50 pointer-events-none" : "opacity-100"}`}>
                             {visibleProducts.length > 0 && viewMode === "visual" && (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+                                <CatalogProductGrid>
                                     {visibleProducts.map((group: CatalogGroup, pIndex: number) => (
                                         <ProductGroupCard
                                             key={group._id}
@@ -2099,7 +2090,7 @@ export default function CatalogClient({
                                             primaryWebsiteSku={primarySkuMetaMap.get(group._id)?.websiteSku}
                                         />
                                     ))}
-                                </div>
+                                </CatalogProductGrid>
                             )}
 
                             {/* Line Item View — Desktop Table */}

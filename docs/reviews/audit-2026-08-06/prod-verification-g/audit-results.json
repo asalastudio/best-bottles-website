@@ -1,0 +1,74 @@
+[
+  {
+    "id": "G20",
+    "group": "G",
+    "turns": [
+      "I'm sourcing for a perfume oil line. Budget is $1.00 per unit max, and I need roll-ons in 9ml.",
+      "What Boston Round sizes do you carry?",
+      "Given my constraints from earlier, which specific SKU do you recommend and why?"
+    ],
+    "transcript": [
+      {
+        "user": "I'm sourcing for a perfume oil line. Budget is $1.00 per unit max, and I need roll-ons in 9ml.",
+        "assistant": "You’re in great shape—plenty of 9 ml roll-ons land under $1.00 each.\n\nExamples under $1 (17-415 platform, Amber):\n- GB-CYL-AMB-9ML-MRL-WHT — metal roller, white cap — $0.66/ea\n- GB-CYL-AMB-9ML-MRL-SBLK — metal roller, shiny black cap — $0.66/ea\n- GB-CYL-AMB-9ML-ROL-BKDT — plastic roller, black dot cap — $0.73/ea\n- GB-CYL-AMB-9ML-MRL-MGLD — metal roller, matte gold cap — $0.74/ea\n- GB-CYL-AMB-9ML-MRL-MSLV — metal roller, matte silver cap — $0.74/ea\n- GB-CYL-AMB-9ML-MRL-PKDT — metal roller, pink dot cap — $0.82/ea\n\nNotes:\n- Available 9 ml colors include Amber, Clear, Cobalt Blue, and Frosted.\n- We stock two neck finishes in 9 ml roll-on: 17-415 and 13-415. Pricing varies by variant; one clear 13-415 option is $1.04, slightly above your cap, while the amber 17-415 options above fit your budget.\n\nWould you like 17-415 or 13-415 for your line?",
+        "toolCalls": [
+          {
+            "name": "searchCatalog",
+            "args": {
+              "searchTerm": "9 ml roll-on",
+              "categoryLimit": null,
+              "familyLimit": null,
+              "applicatorFilter": "rollon"
+            },
+            "executed": "live",
+            "outputPreview": "CATALOG COVERAGE: The returned 9ml result set includes these canonical color options: Amber, Clear, Cobalt Blue, Frosted. If the customer asks for all colors, list every color in this sentence and do not omit lower-ranked groups.\nNECK THREAD COVERAGE: this result set spans multiple neck finishes — 17-415 (16 rows), 13-415 (9 rows). Do NOT claim a single thread fits the whole line; every finish listed here is stocked. If the customer asked for one of these finishes specifically, confirm it exists.\nCONFIRMATION: These results include 9ml roll-on (roller ball) products. Summarize them positively. Do NOT say you were unable to find 9ml roll-on bottles, that the catalog returned none, or that you cannot locate them — they appear in the JSON below.\nFORBIDDEN: Results below include 9ml Cylinder bottle(s) with roll-on (roller ball). Do NOT tell the customer we do not have 9ml Cylinder bottles with roll-on or lotion pump — that contradicts this data.\n\nSEARCH RESULTS:\n[\n  {\n    \"graceSku\": \"GB-CYL-AMB-9ML-ROL-BKDT\",\n    \"websiteSku\": \"GBCylAmb9RollBlkDot\",\n    \"itemName\": \"Cylinder design 9ml,1/3 oz amber glass bottle with plastic roller ball plug and black dot cap. For use with perfume or f"
+          }
+        ]
+      },
+      {
+        "user": "What Boston Round sizes do you carry?",
+        "assistant": "Boston Round sizes we carry:\n- 15 ml (18-400)\n- 30 ml (20-400)\n- 60 ml (20-400)\n\nColors: Amber, Clear, Cobalt Blue. Applicators available include droppers and roller balls. Which size are you considering?",
+        "toolCalls": [
+          {
+            "name": "getFamilyOverview",
+            "args": {
+              "family": "Boston Round"
+            },
+            "executed": "live",
+            "outputPreview": "{\"applicatorTypes\":[\"Dropper\",\"Metal Roller Ball\",\"N/A\",\"Plastic Roller Ball\"],\"colors\":[\"Amber\",\"Clear\",\"Cobalt Blue\"],\"family\":\"Boston Round\",\"priceRange\":{\"max\":1.1,\"min\":0.42},\"sizes\":[{\"label\":\"15ml(0.51oz)\",\"ml\":15,\"threads\":[\"18-400\"],\"variantCount\":16},{\"label\":\"30ml(1.01oz)\",\"ml\":30,\"threads\":[\"20-400\"],\"variantCount\":53},{\"label\":\"60ml(2.03oz)\",\"ml\":60,\"threads\":[\"20-400\"],\"variantCount\":54}],\"threadSizes\":[\"18-400\",\"20-400\"],\"totalVariants\":123}"
+          }
+        ]
+      },
+      {
+        "user": "Given my constraints from earlier, which specific SKU do you recommend and why?",
+        "assistant": "Recommendation: GB-CYL-AMB-9ML-MRL-SBLK — 9 ml Cylinder, amber glass, metal roller ball, shiny black cap — $0.66 each.\n\nWhy:\n- Safely under your $1.00 cap\n- Metal roller gives a smoother, more premium glide for perfume oils\n- Amber glass protects fragrance from light\n- 17-415 platform with broad component support\n\nWould you like this in shiny black, or prefer a different cap finish at the same price?",
+        "toolCalls": []
+      }
+    ],
+    "error": null
+  },
+  {
+    "id": "G21",
+    "group": "G",
+    "turns": [
+      "Fresh session. What is the price and neck thread of GB-CYL-CLR-9ML-T-08?"
+    ],
+    "transcript": [
+      {
+        "user": "Fresh session. What is the price and neck thread of GB-CYL-CLR-9ML-T-08?",
+        "assistant": "GB-CYL-CLR-9ML-T-08 is $0.72 each, with a 17-415 neck thread. \nOptional: it’s $0.68 each at 12 pieces.",
+        "toolCalls": [
+          {
+            "name": "getProductBySku",
+            "args": {
+              "sku": "GB-CYL-CLR-9ML-T-08"
+            },
+            "executed": "live",
+            "outputPreview": "{\"found\":true,\"graceSku\":\"GB-CYL-CLR-9ML-T-08\",\"websiteSku\":\"GBCyl9MtlRollShnSl\",\"itemName\":\"Cylinder design 9ml,1/3 oz clear glass bottle with metal roller ball plug and shiny silver cap. For use with perfume or fragrance oil, essential oils, aromatic oils and aromatherapy. Price each\",\"shopifyVariantId\":\"gid://shopify/ProductVariant/53343680430372\",\"checkoutEligible\":true,\"family\":\"Cylinder\",\"capacity\":\"9 ml (0.3 oz)\",\"capacityMl\":9,\"color\":\"Clear\",\"applicator\":\"Metal Roller Ball\",\"capColor\":\"Clear\",\"neckThreadSize\":\"17-415\",\"webPrice1pc\":0.72,\"webPrice10pc\":null,\"webPrice12pc\":0.68,\"stockStatus\":\"In Stock\",\"slug\":\"cylinder-9ml-clear-17-415-rollon\",\"heroImageUrl\":\"https://cdn.shopify.com/s/files/1/0739/9420/7524/files/master_rigged_1784566085351_qnwqnp.png?v=1784566851\"}"
+          }
+        ]
+      }
+    ],
+    "error": null
+  }
+]

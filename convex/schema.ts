@@ -525,8 +525,147 @@ export default defineSchema({
         .index("by_blobId", ["blobId"]),
 
     // -------------------------------------------------------------------------
+    // GRACE KNOWLEDGE OPERATIONS — minimized traces + controlled corrections
+    // -------------------------------------------------------------------------
+
+    knowledgeTraces: defineTable({
+        requestId: v.string(),
+        conversationId: v.string(),
+        surface: v.union(
+            v.literal("storefront"),
+            v.literal("customer_portal"),
+            v.literal("employee_workspace"),
+            v.literal("executive_hub"),
+            v.literal("chatgpt_app"),
+        ),
+        role: v.union(
+            v.literal("public"),
+            v.literal("customer"),
+            v.literal("support"),
+            v.literal("employee"),
+            v.literal("executive"),
+            v.literal("admin"),
+        ),
+        model: v.string(),
+        startedAt: v.number(),
+        completedAt: v.number(),
+        durationMs: v.number(),
+        status: v.union(
+            v.literal("success"),
+            v.literal("no_match"),
+            v.literal("tool_error"),
+            v.literal("model_error"),
+            v.literal("blocked"),
+        ),
+        inputTokens: v.number(),
+        cachedInputTokens: v.number(),
+        outputTokens: v.number(),
+        audioInputTokens: v.number(),
+        audioOutputTokens: v.number(),
+        fileSearchCalls: v.number(),
+        estimatedCostUsd: v.number(),
+        rateCardVersion: v.string(),
+        toolCalls: v.array(v.object({
+            name: v.string(),
+            durationMs: v.number(),
+            status: v.union(v.literal("success"), v.literal("error"), v.literal("blocked")),
+        })),
+        sourceIds: v.array(v.string()),
+        rawContentStored: v.literal(false),
+    })
+        .index("by_completedAt", ["completedAt"])
+        .index("by_surface", ["surface"])
+        .index("by_status", ["status"]),
+
+    knowledgeCorrections: defineTable({
+        conversationId: v.string(),
+        messageId: v.string(),
+        requestId: v.optional(v.string()),
+        actorId: v.string(),
+        surface: v.union(
+            v.literal("storefront"),
+            v.literal("customer_portal"),
+            v.literal("employee_workspace"),
+            v.literal("executive_hub"),
+            v.literal("chatgpt_app"),
+        ),
+        category: v.union(
+            v.literal("product_truth"),
+            v.literal("compatibility"),
+            v.literal("policy"),
+            v.literal("behavior"),
+            v.literal("missing_knowledge"),
+        ),
+        correction: v.string(),
+        sourceUrl: v.union(v.string(), v.null()),
+        answerExcerpt: v.optional(v.string()),
+        sourceIds: v.optional(v.array(v.string())),
+        status: v.union(v.literal("pending"), v.literal("accepted"), v.literal("rejected")),
+        createdAt: v.number(),
+        updatedAt: v.number(),
+        reviewerId: v.optional(v.union(v.string(), v.null())),
+    })
+        .index("by_status", ["status"])
+        .index("by_requestId", ["requestId"])
+        .index("by_createdAt", ["createdAt"])
+        .index("by_actorId", ["actorId"]),
+
+    // -------------------------------------------------------------------------
     // GRACE PUBLIC ROUTE RATE LIMITS — server-side counters for anonymous flows
     // -------------------------------------------------------------------------
+
+    // -------------------------------------------------------------------------
+    // GRACE AUDIT — executive-hub initiated accuracy runs.
+    // A run is written scenario-by-scenario so the dashboard can render progress
+    // reactively and a long run never depends on one request staying alive.
+    // -------------------------------------------------------------------------
+
+    graceAuditRuns: defineTable({
+        kind: v.union(v.literal("conversation"), v.literal("integrity")),
+        status: v.union(v.literal("running"), v.literal("complete"), v.literal("failed"), v.literal("cancelled")),
+        startedAt: v.number(),
+        finishedAt: v.union(v.number(), v.null()),
+        triggeredBy: v.string(),          // Clerk user id or "system"
+        environment: v.string(),          // convex deployment URL under test
+        scenarioTotal: v.number(),
+        scenarioComplete: v.number(),
+        passCount: v.number(),
+        warnCount: v.number(),
+        failCount: v.number(),
+        scorePct: v.union(v.number(), v.null()),
+        notes: v.union(v.string(), v.null()),
+    })
+        .index("by_startedAt", ["startedAt"])
+        .index("by_kind_startedAt", ["kind", "startedAt"]),
+
+    graceAuditResults: defineTable({
+        runId: v.id("graceAuditRuns"),
+        scenarioId: v.string(),
+        group: v.string(),
+        title: v.string(),
+        verdict: v.union(v.literal("pass"), v.literal("warn"), v.literal("fail")),
+        checks: v.array(v.object({
+            label: v.string(),
+            passed: v.boolean(),
+            severity: v.union(v.literal("critical"), v.literal("soft")),
+            detail: v.string(),
+        })),
+        transcript: v.array(v.object({
+            user: v.string(),
+            assistant: v.string(),
+            toolCalls: v.array(v.object({
+                name: v.string(),
+                argsJson: v.string(),
+                executed: v.string(),
+            })),
+        })),
+        toolCallCount: v.number(),
+        durationMs: v.number(),
+        error: v.union(v.string(), v.null()),
+        createdAt: v.number(),
+    })
+        .index("by_runId", ["runId"])
+        .index("by_runId_scenarioId", ["runId", "scenarioId"]),
 
     graceRateLimits: defineTable({
         key: v.string(),

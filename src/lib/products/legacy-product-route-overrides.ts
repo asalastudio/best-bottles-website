@@ -9,6 +9,10 @@ const LEGACY_PRODUCT_ROUTE_OVERRIDES: Record<string, string> = {
     "cylinder-9ml-white-17-415-rollon": "cylinder-9ml-clear-17-415-rollon",
 };
 
+export function isLegacyProductRouteAlias(slug: string): boolean {
+    return Object.prototype.hasOwnProperty.call(LEGACY_PRODUCT_ROUTE_OVERRIDES, slug);
+}
+
 export function getLegacyProductRouteOverride(slug: string): string | null {
     return LEGACY_PRODUCT_ROUTE_OVERRIDES[slug] ?? null;
 }

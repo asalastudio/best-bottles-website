@@ -3,6 +3,7 @@ import {
     buildSearchCatalogToolResult,
     detectApplicatorIntent,
     ensureVerified9mlCylinderRollOnCoverage,
+    ensureThreadDiversity,
     is9mlCylinderRollOnTruthQuery,
     isVerified9mlCylinderRollOnColor,
     normalizeSearchTerm,
@@ -117,5 +118,36 @@ describe("9ml Cylinder roll-on product truth", () => {
         expect(covered).toHaveLength(25);
         expect([...colors].sort()).toEqual(["Amber", "Clear", "Cobalt Blue", "Frosted", "Swirl"]);
         expect(colors.has("White")).toBe(false);
+    });
+});
+
+describe("ensureThreadDiversity", () => {
+    const row = (sku: string, thread: string | null) => ({
+        graceSku: sku,
+        family: "Cylinder",
+        capacityMl: 9,
+        neckThreadSize: thread,
+    });
+
+    it("injects top rows of threads missing from the picked slice", () => {
+        const majority = Array.from({ length: 25 }, (_, i) => row(`a-${i}`, "17-415"));
+        const minority = [row("b-0", "13-415"), row("b-1", "13-415"), row("b-2", "13-415")];
+        const pool = [...majority, ...minority];
+        const out = ensureThreadDiversity(pool, majority, 25);
+        expect(out).toHaveLength(25);
+        expect(out.filter((r) => r.neckThreadSize === "13-415")).toHaveLength(2);
+        expect(out.filter((r) => r.neckThreadSize === "17-415")).toHaveLength(23);
+    });
+
+    it("returns picked unchanged when every pool thread is already represented", () => {
+        const picked = [row("a", "17-415"), row("b", "13-415")];
+        const out = ensureThreadDiversity([...picked, row("c", "17-415")], picked, 25);
+        expect(out).toEqual(picked);
+    });
+
+    it("ignores rows with no thread", () => {
+        const picked = [row("a", "17-415")];
+        const out = ensureThreadDiversity([...picked, row("x", null)], picked, 25);
+        expect(out).toEqual(picked);
     });
 });

@@ -9,6 +9,7 @@
  */
 
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import {
     APPLICATOR_BUCKETS,
     APPLICATOR_NAV,
@@ -253,6 +254,16 @@ describe("UX: URL structure and deep linking", () => {
 // ─── Accessibility of Data Constants ────────────────────────────────────────
 
 describe("UX: Accessibility of labels", () => {
+    it("keeps catalog preview controls touch-safe and cards denser on phones", () => {
+        const preview = readFileSync("src/components/products/ProductCardImagePreview.tsx", "utf8");
+        const home = readFileSync("src/components/HomePage.tsx", "utf8");
+
+        expect(preview).toContain("h-11 w-11");
+        expect(preview).toContain("aspect-[4/3] sm:aspect-[10/11]");
+        expect(preview).not.toContain('role="img"');
+        expect(home).toContain("from-obsidian/75 via-obsidian/40");
+    });
+
     it("applicator nav labels are screen-reader friendly (no abbreviations)", () => {
         for (const nav of APPLICATOR_NAV) {
             expect(nav.label.length).toBeGreaterThan(3);

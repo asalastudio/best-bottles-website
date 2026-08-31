@@ -74,7 +74,12 @@ export type PdpBlock =
 
 // ─── Icon map ─────────────────────────────────────────────────────────────────
 
-const ICON_MAP: Record<string, React.ElementType> = {
+// Typed as the icon component itself, not the far looser React.ElementType.
+// ElementType erases the props, so <Icon weight="regular" /> resolved to
+// `never` once @react-three/fiber's JSX augmentation entered the program
+// (it only does when 3D components are in the tree, which is why this
+// surfaced on the 3D merge and not on main).
+const ICON_MAP: Record<string, typeof Shield> = {
     Shield, Droplets, Sun, Leaf, Zap, Award, FlaskConical,
     Package, Recycle, Layers, Check, Star, Clock, Sparkles, Tag, Globe,
 };

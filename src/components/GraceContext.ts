@@ -3,12 +3,13 @@
 /**
  * Shared Grace context — the single source of truth for the Grace hook and types.
  *
- * This context is shared across the ElevenLabs provider and any 
+ * This context is shared across the Grace provider and any 
  * text-only fallbacks. Components call useGrace() from here and 
  * get the active provider state.
  */
 
 import { createContext, useContext } from "react";
+import type { GraceRefineState } from "@/lib/grace/refineState";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -153,6 +154,18 @@ export type GraceAction =
     | { type: "showProductPresentation"; products: ProductCard[]; headline?: string }
     | { type: "buildKit"; items: KitItem[]; totalPrice?: number }
     | { type: "proposeCartAdd"; confirmationId: string; products: PendingCartProduct[]; awaitingConfirmation: boolean }
+    | {
+        type: "proposeProjectSave";
+        confirmationId: string;
+        product: ProductCard;
+        projectId?: string;
+        projectName?: string;
+        notes?: string;
+        requiresSignIn: boolean;
+        awaitingConfirmation: boolean;
+        saved?: boolean;
+        error?: string;
+    }
     | { type: "navigateToPage"; path: string; title: string; description?: string; autoNavigate?: boolean }
     | { type: "prefillForm"; formType: "sample" | "quote" | "contact" | "newsletter"; fields: Record<string, string> }
     /* ── v3 inline display actions (PRD patterns A–L) ─── */
@@ -225,6 +238,16 @@ export interface PageContext {
     /** URL `category` filter when on /catalog */
     catalogCategory?: string;
     catalogSearch?: string;
+    /** Exact URL-backed Refine state. Grace inherits this unless the customer explicitly broadens it. */
+    refineState?: GraceRefineState;
+    /** URL-backed selection for the unified Paper Doll product workspace. */
+    paperDoll?: {
+        configurationSku: string | null;
+        view: "beauty" | "build";
+        family: "Cylinder";
+        capacityMl: 9;
+        neckThreadSize: "17-415";
+    };
     cartItems: Array<{ graceSku: string; name: string; quantity: number; unitPrice?: number | null }>;
     /** Total cart value in dollars */
     cartTotal?: number;
@@ -286,7 +309,7 @@ export interface GraceContextValue {
      * and parks a brief contextual hint beside the launcher for ~3 seconds. */
     minimizeWithTooltip: (message: string) => void;
     /** Append a message + optional action directly to the conversation,
-     * bypassing ElevenLabs. Used by client-side flows like image-upload
+     * bypassing the Realtime session. Used by client-side flows like image-upload
      * vision analysis that don't need round-trip narration. */
     appendInlineMessage: (msg: { role: "user" | "grace"; content: string; action?: GraceAction; actions?: GraceAction[]; attachments?: GraceAttachment[] }) => void;
     isOpen: boolean;

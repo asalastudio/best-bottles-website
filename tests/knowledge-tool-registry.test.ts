@@ -1,0 +1,121 @@
+import { describe, expect, it, vi } from "vitest";
+import {
+    KNOWLEDGE_TOOL_REGISTRY,
+    executeKnowledgeTool,
+    getAuthorizedKnowledgeTools,
+} from "../src/lib/knowledge/toolRegistry";
+import type { KnowledgeRequestContext } from "../src/lib/knowledge/contracts";
+import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/grace/openaiToolSpecs";
+
+const employeeContext: KnowledgeRequestContext = {
+    surface: "employee_workspace",
+    role: "employee",
+    actorId: "user_employee",
+    organizationId: "org_best_bottles",
+    conversationId: "conversation_registry",
+    projectId: null,
+    refineState: null,
+    requestId: "request_registry",
+};
+
+describe("knowledge tool registry", () => {
+    it("owns one policy record for every existing Grace schema", () => {
+        expect(Object.keys(KNOWLEDGE_TOOL_REGISTRY).sort()).toEqual(
+            GRACE_OPENAI_TOOL_SPECS.map((tool) => tool.name).sort(),
+        );
+        for (const definition of Object.values(KNOWLEDGE_TOOL_REGISTRY)) {
+            expect(definition.requiredScopes.length).toBeGreaterThan(0);
+            expect(definition.surfaces.length).toBeGreaterThan(0);
+            expect(["read", "propose", "write"]).toContain(definition.risk);
+        }
+    });
+
+    it("does not expose customer project tools to an employee surface", () => {
+        expect(getAuthorizedKnowledgeTools(employeeContext).map((tool) => tool.name)).not.toContain("listGraceProjects");
+    });
+
+    it("blocks execution before calling the handler", async () => {
+        const execute = vi.fn();
+        await expect(executeKnowledgeTool({
+            context: { ...employeeContext, role: "public", surface: "customer_portal" },
+            name: "listGraceProjects",
+            parameters: {},
+            execute,
+        })).rejects.toThrow("Knowledge tool blocked: missing_scope:customer_project.read.self");
+        expect(execute).not.toHaveBeenCalled();
+    });
+
+    it("authorizes exact 17-415 compatibility reads without broadening state", async () => {
+        const execute = vi.fn().mockResolvedValue({ threadSize: "17-415" });
+        await expect(executeKnowledgeTool({
+            context: employeeContext,
+            name: "checkCompatibility",
+            parameters: { threadSize: "17-415" },
+            execute,
+        })).resolves.toEqual({ threadSize: "17-415" });
+        expect(execute).toHaveBeenCalledWith("checkCompatibility", { threadSize: "17-415" });
+    });
+
+    it("rejects undeclared and incorrectly typed tool arguments before execution", async () => {
+        const execute = vi.fn();
+
+        await expect(executeKnowledgeTool({
+            context: { ...employeeContext, surface: "storefront", role: "customer" },
+            name: "getCatalogStats",
+            parameters: { unexpected: true },
+            execute,
+        })).rejects.toThrow("Invalid parameters for knowledge tool getCatalogStats");
+
+        await expect(executeKnowledgeTool({
+            context: { ...employeeContext, surface: "storefront", role: "customer" },
+            name: "setPaperDollSelection",
+            parameters: {
+                glass: null,
+                deliverySystem: "dropper",
+                rollerMaterial: null,
+                finish: null,
+                configurationSku: null,
+                view: "build",
+            },
+            execute,
+        })).rejects.toThrow("Invalid parameters for knowledge tool setPaperDollSelection");
+
+        expect(execute).not.toHaveBeenCalled();
+    });
+
+    it("bounds string payloads before they reach catalog handlers", async () => {
+        const execute = vi.fn();
+        await expect(executeKnowledgeTool({
+            context: employeeContext,
+            name: "getFamilyOverview",
+            parameters: { family: "x".repeat(2_001) },
+            execute,
+        })).rejects.toThrow("is too long");
+        expect(execute).not.toHaveBeenCalled();
+    });
+
+    it("rejects non-positive and fractional cart quantities", async () => {
+        const execute = vi.fn();
+        const product = {
+            itemName: "9 mL Amber Cylinder",
+            graceSku: "GB-CYL-AMB-9ML-MRL-MGLD",
+            quantity: -2,
+            webPrice1pc: 0.79,
+            websiteSku: "GBCylAmb9MtlRollMattGl",
+            shopifyVariantId: "gid://shopify/ProductVariant/1",
+            checkoutEligible: true,
+            webPrice10pc: null,
+            webPrice12pc: 0.71,
+        };
+
+        for (const quantity of [-2, 1.5]) {
+            await expect(executeKnowledgeTool({
+                context: { ...employeeContext, surface: "storefront", role: "customer" },
+                name: "proposeCartAdd",
+                parameters: { products: [{ ...product, quantity }] },
+                execute,
+            })).rejects.toThrow("Invalid parameters for knowledge tool proposeCartAdd");
+        }
+        expect(execute).not.toHaveBeenCalled();
+    });
+});
