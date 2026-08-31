@@ -78,6 +78,39 @@ chroma = img * ratio[..., None]
 neutral = np.repeat(lifted[..., None], 3, axis=2)
 out = w[..., None] * chroma + (1.0 - w[..., None]) * neutral
 
+# HORIZON MELT (Jordan: the wet look yes, "but that wide line is not going
+# to work"). Face-on, a vertical cylinder samples the env's EYE-LEVEL band;
+# any structured source there reads as a vertical band on the cap. So the
+# eye-level rows get a wide azimuthal blur — face-on reflections become
+# smooth wet gradients — while high elevations stay structured for the
+# tilted views and the sparkle. Elevation-weighted: full melt within
+# +-MELT_FULL deg of the horizon, fading out by +-MELT_END deg.
+MELT_FULL = 22.0
+MELT_END = 48.0
+SIGMA_DEG = 40.0
+# clip rows to this level BEFORE blurring: without it the 3000-luminance
+# softboxes smear their full wattage into a blinding uniform ring that
+# blew even the black cap out to silver. Clipped, the melt yields a
+# gentle wet gradient; the discarded energy stays in the upper rows.
+HORIZON_CLIP = 2.2
+
+H2, W2, _ = out.shape
+sigma_px = SIGMA_DEG / 360.0 * W2
+kx = np.arange(W2) - W2 // 2
+kernel = np.exp(-(kx ** 2) / (2 * sigma_px ** 2))
+kernel /= kernel.sum()
+fk = np.fft.rfft(np.fft.ifftshift(kernel))
+for y in range(H2):
+    el_deg = abs((y / (H2 - 1)) * 180.0 - 90.0)
+    if el_deg >= MELT_END:
+        continue
+    t = 1.0 if el_deg <= MELT_FULL else 1.0 - (el_deg - MELT_FULL) / (MELT_END - MELT_FULL)
+    t = t * t * (3 - 2 * t)
+    for c in range(3):
+        clipped = np.minimum(out[y, :, c], HORIZON_CLIP)
+        blurred = np.fft.irfft(np.fft.rfft(clipped) * fk, n=W2)
+        out[y, :, c] = t * blurred + (1 - t) * out[y, :, c]
+
 write_hdr(OUT, out.astype(np.float32))
 nl = 0.2126 * out[..., 0] + 0.7152 * out[..., 1] + 0.0722 * out[..., 2]
 qs = np.percentile(nl, [1, 25, 50, 75, 99])
