@@ -1,0 +1,398 @@
+<title>Configurator Build Board</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --ground:#FAF8F5; --surface:#FDFBF8; --well:#F1EBDF;
+    --ink:#1D1D1F; --ink-2:#57606C; --ink-3:#9A9590;
+    --hair:rgba(212,197,169,.55); --hair-strong:#D4C5A9;
+    --gold:#C5A065; --gold-text:#8B6F42;
+    --ok:#1F6B49; --ok-bg:rgba(46,158,107,.10); --ok-bd:rgba(46,158,107,.32);
+    --warn:#8A5A12; --warn-bg:rgba(183,121,31,.10); --warn-bd:rgba(183,121,31,.35);
+    --crit:#8C2B21; --crit-bg:rgba(179,58,44,.08); --crit-bd:rgba(179,58,44,.30);
+    --bar:#E4D9C2;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --ground:#1B1B1E; --surface:#232327; --well:#2C2A26;
+      --ink:#F0EDE7; --ink-2:#A9ADB4; --ink-3:#7A756E;
+      --hair:rgba(212,197,169,.22); --hair-strong:rgba(212,197,169,.4);
+      --gold:#C5A065; --gold-text:#D3B078;
+      --ok:#69C596; --ok-bg:rgba(46,158,107,.14); --ok-bd:rgba(105,197,150,.35);
+      --warn:#E0A94E; --warn-bg:rgba(224,169,78,.12); --warn-bd:rgba(224,169,78,.35);
+      --crit:#E4867B; --crit-bg:rgba(228,134,123,.10); --crit-bd:rgba(228,134,123,.35);
+      --bar:#3B382F;
+    }
+  }
+  :root[data-theme="dark"]{
+    --ground:#1B1B1E; --surface:#232327; --well:#2C2A26;
+    --ink:#F0EDE7; --ink-2:#A9ADB4; --ink-3:#7A756E;
+    --hair:rgba(212,197,169,.22); --hair-strong:rgba(212,197,169,.4);
+    --gold:#C5A065; --gold-text:#D3B078;
+    --ok:#69C596; --ok-bg:rgba(46,158,107,.14); --ok-bd:rgba(105,197,150,.35);
+    --warn:#E0A94E; --warn-bg:rgba(224,169,78,.12); --warn-bd:rgba(224,169,78,.35);
+    --crit:#E4867B; --crit-bg:rgba(228,134,123,.10); --crit-bd:rgba(228,134,123,.35);
+    --bar:#3B382F;
+  }
+  *{box-sizing:border-box;margin:0}
+  body{background:var(--ground);color:var(--ink);
+       font-family:Inter,ui-sans-serif,system-ui,sans-serif;font-size:14px;line-height:1.5;
+       padding:clamp(16px,4vw,48px)}
+  .wrap{max-width:1060px;margin:0 auto}
+  .eyebrow{font-size:10px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-text)}
+  h1{font-family:"EB Garamond",Georgia,serif;font-weight:500;font-size:clamp(28px,4.5vw,40px);
+     letter-spacing:-0.02em;line-height:1.08;margin-top:6px;text-wrap:balance}
+  .sub{color:var(--ink-2);margin-top:8px;max-width:64ch}
+  .sub b{color:var(--ink);font-weight:600}
+
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin-top:24px}
+  .tile{background:var(--surface);border:1px solid var(--hair);border-radius:4px;padding:14px 16px}
+  .tile .n{font-size:26px;font-weight:600;font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+  .tile .l{font-size:11px;color:var(--ink-2);margin-top:2px}
+  .tile.crit .n{color:var(--crit)} .tile.warn .n{color:var(--warn)} .tile.ok .n{color:var(--ok)}
+
+  .controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:26px 0 6px;
+            position:sticky;top:0;background:var(--ground);padding:10px 0;z-index:5;
+            border-bottom:1px solid var(--hair)}
+  .chip{border:1px solid var(--hair-strong);background:var(--surface);color:var(--ink-2);
+        border-radius:999px;padding:5px 12px;font-size:12px;font-weight:600;cursor:pointer}
+  .chip[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+  .chip:focus-visible,.row-check:focus-visible,#q:focus-visible,#sort:focus-visible{
+        outline:2px solid var(--gold);outline-offset:2px}
+  #q{margin-left:auto;border:1px solid var(--hair-strong);background:var(--surface);color:var(--ink);
+     border-radius:4px;padding:6px 10px;font:inherit;font-size:13px;min-width:170px}
+  #sort{border:1px solid var(--hair-strong);background:var(--surface);color:var(--ink-2);
+        border-radius:4px;padding:6px 8px;font:inherit;font-size:12px;font-weight:600;cursor:pointer}
+  .prog{font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+
+  .section{margin-top:30px}
+  .section>h2{font-family:"EB Garamond",Georgia,serif;font-weight:500;font-size:21px;
+              letter-spacing:-0.01em;display:flex;align-items:baseline;gap:10px}
+  .section>h2 .count{font-family:Inter;font-size:12px;color:var(--ink-2);font-variant-numeric:tabular-nums}
+  .section>p{color:var(--ink-2);font-size:13px;margin-top:2px;max-width:70ch}
+  .rows{margin-top:12px;display:flex;flex-direction:column;gap:8px}
+
+  .row{display:grid;grid-template-columns:44px minmax(0,1fr) 120px auto;gap:14px;align-items:center;
+       background:var(--surface);border:1px solid var(--hair);border-radius:4px;padding:12px 14px}
+  .row.done{opacity:.55}
+  .sw{width:36px;height:36px;border-radius:50%;border:1px solid var(--hair-strong);flex:none}
+  .sw.missing{border:1.5px dashed var(--crit);background:
+      repeating-linear-gradient(45deg,transparent 0 4px,var(--crit-bg) 4px 8px)}
+  .sw.geom{border-radius:4px;background:var(--well);display:flex;align-items:center;justify-content:center;
+           color:var(--ink-3);font-size:17px}
+  .name{font-weight:600;font-size:14px}
+  .meta{font-size:12px;color:var(--ink-2);margin-top:1px}
+  .meta code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:11px;color:var(--ink-3)}
+  .note{font-size:12px;color:var(--ink-2);margin-top:6px;max-width:64ch}
+  .chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+  .st{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+      border-radius:999px;padding:2.5px 8px;border:1px solid}
+  .st.ok{color:var(--ok);background:var(--ok-bg);border-color:var(--ok-bd)}
+  .st.warn{color:var(--warn);background:var(--warn-bg);border-color:var(--warn-bd)}
+  .st.crit{color:var(--crit);background:var(--crit-bg);border-color:var(--crit-bd)}
+  .impact{text-align:right}
+  .impact .n{font-weight:600;font-variant-numeric:tabular-nums;font-size:15px}
+  .impact .l{font-size:10px;color:var(--ink-3);letter-spacing:.08em;text-transform:uppercase}
+  .impact .bar{height:3px;background:var(--bar);border-radius:2px;margin-top:6px;overflow:hidden}
+  .impact .bar i{display:block;height:100%;background:var(--gold)}
+  .row-check{border:1px solid var(--hair-strong);background:none;color:var(--ink-2);border-radius:4px;
+             padding:7px 10px;font:inherit;font-size:11px;font-weight:600;letter-spacing:.06em;
+             text-transform:uppercase;cursor:pointer;white-space:nowrap}
+  .row-check[data-s="planned"]{color:var(--warn);border-color:var(--warn-bd);background:var(--warn-bg)}
+  .row-check[data-s="done"]{color:var(--ok);border-color:var(--ok-bd);background:var(--ok-bg)}
+  .libgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:8px;margin-top:14px}
+  .libcell{background:var(--surface);border:1px solid var(--hair);border-radius:4px;
+           padding:10px;display:flex;flex-direction:column;align-items:center;gap:6px;text-align:center}
+  .libcell .sw{width:34px;height:34px}
+  .libname{font-size:11px;font-weight:600;word-break:break-all}
+  .libvals{font-size:10px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+  .pickrow{display:flex;align-items:center;gap:8px;margin-top:8px;flex-wrap:wrap}
+  .picklab{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3)}
+  .pick{border:1px solid var(--hair-strong);background:var(--surface);color:var(--ink);
+        border-radius:4px;padding:4px 6px;font:inherit;font-size:12px;max-width:260px}
+  .foot{margin:40px 0 8px;padding-top:14px;border-top:1px solid var(--hair);
+        font-size:12px;color:var(--ink-3);max-width:76ch}
+  @media (max-width:640px){
+    .row{grid-template-columns:36px minmax(0,1fr);grid-auto-rows:auto}
+    .impact{grid-column:2;text-align:left;margin-top:4px}
+    .impact .bar{max-width:160px}
+    .row-check{grid-column:2;justify-self:start}
+    #q{margin-left:0;width:100%}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    .row{transition:opacity .2s ease}
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Best Bottles · 3D Configurator · 2026-08-31</p>
+    <h1>Configurator Build Board</h1>
+    <p class="sub">Every component the configurator needs, with its geometry and material status
+       measured from the live catalog (<b>2,474 SKUs</b>), the closure GLB library
+       (<b>32 parts</b>) and the locked material registry (<b>45 tokens</b>).
+       Tap a row's status to cycle <b>To&nbsp;do → Planned → Done</b> — the board remembers on this device.</p>
+  </header>
+
+  <div class="tiles">
+    <div class="tile crit"><div class="n">217</div><div class="l">SKUs whose cap colourway has <b>no material</b> (12 colourways)</div></div>
+    <div class="tile warn"><div class="n">~590</div><div class="l">SKUs on materials needing a <b>quality pass</b> (leather · rhinestones · head)</div></div>
+    <div class="tile crit"><div class="n">1,096</div><div class="l">SKUs waiting on <b>geometry</b> (8 component sets)</div></div>
+    <div class="tile ok"><div class="n">32 / 45</div><div class="l">closure GLBs / material tokens <b>shipped</b></div></div>
+  </div>
+
+  <div class="controls" id="controls">
+    <button class="chip" data-f="all" aria-pressed="true">All</button>
+    <button class="chip" data-f="material" aria-pressed="false">Materials to author</button>
+    <button class="chip" data-f="quality" aria-pressed="false">Quality passes</button>
+    <button class="chip" data-f="geometry" aria-pressed="false">Geometry to build</button>
+    <button class="chip" data-f="complete" aria-pressed="false">Complete</button>
+    <button class="chip" data-f="library" aria-pressed="false">Library</button>
+    <span class="prog" id="prog"></span>
+    <input id="q" type="search" placeholder="Search components…" aria-label="Search components">
+    <button id="sort" aria-pressed="true" title="Toggle sort">Sort: impact</button>
+  </div>
+
+  <section class="section" data-sec="material">
+    <h2>Materials to author <span class="count" data-count></span></h2>
+    <p>Cap colourways the catalog sells with <b>no token in materials.json</b> — today they silently
+       render as shiny black. Author in the material lab under the approved studio HDRI; lock on approval.</p>
+    <div class="rows"></div>
+  </section>
+
+  <section class="section" data-sec="quality">
+    <h2>Quality passes <span class="count" data-count></span></h2>
+    <p>Tokens that exist but don't yet tell the truth about the surface. Blender mimics the pattern;
+       three.js gives it life from the material library.</p>
+    <div class="rows"></div>
+  </section>
+
+  <section class="section" data-sec="geometry">
+    <h2>Geometry to build <span class="count" data-count></span></h2>
+    <p>Component sets the catalog sells with <b>no GLB</b>. Each row is one closures.py session:
+       measure the PSD (anchor on a spec dimension, never eyeballed), build, gate, export.</p>
+    <div class="rows"></div>
+  </section>
+
+  <section class="section" data-sec="complete">
+    <h2>Complete <span class="count" data-count></span></h2>
+    <p>Geometry and approved materials both shipped. Listed so the board is the whole inventory,
+       not just the debt.</p>
+    <div class="rows"></div>
+  </section>
+
+  <section class="section" data-sec="library">
+    <h2>Material library <span class="count">64 measured materials &middot; CC0 &middot; physicallybased.info</span></h2>
+    <p>The vendored authoring palette (<code>data/materials/physicallybased-library.json</code>) &mdash;
+       measured base values, already the anchor for the locked metals. Pick a starting point on any
+       missing colourway above; the choice is remembered on this device and shows on its row.</p>
+    <div class="libgrid" id="libgrid"></div>
+  </section>
+
+  <p class="foot">Sources: Convex <code>productGroups</code>/<code>products</code> (dev, 2026-08-31) ·
+     <code>public/models/closures/</code> · <code>public/models/materials.json</code> ·
+     PSD library “20. Closures — Cap, Sprayers, Lotion pumps”. Bottle <em>bodies</em> (Diva, Sleek, Slim,
+     Empire, Diamond, Grace) are a separate lane and not on this board. Colourways marked
+     “data fix” are catalog hygiene, not material work.</p>
+</div>
+
+<script>
+const LIB = [{"id": "chrome", "hex": "#ebedee", "m": 1.0, "r": 0.0}, {"id": "coat_matte", "hex": "#ffffff", "m": 0.0, "r": 0.5}, {"id": "coat_gloss", "hex": "#ffffff", "m": 0.0, "r": 0.12}, {"id": "metallic_coat_matte", "hex": "#ffffff", "m": 1.0, "r": 0.5}, {"id": "metallic_coat_gloss", "hex": "#ffffff", "m": 1.0, "r": 0.12}, {"id": "glass", "hex": "#feffff", "m": 0.0, "r": 0.0}, {"id": "aluminum", "hex": "#fbfbfb", "m": 1.0, "r": 0.0}, {"id": "aluminum_brushed", "hex": "#fbfbfb", "m": 1.0, "r": 1.0}, {"id": "aluminum_matte", "hex": "#fbfbfb", "m": 1.0, "r": 1.0}, {"id": "brass", "hex": "#faf3d7", "m": 1.0, "r": 0.0}, {"id": "brass_brushed", "hex": "#faf3d7", "m": 1.0, "r": 1.0}, {"id": "brass_matte", "hex": "#faf3d7", "m": 1.0, "r": 1.0}, {"id": "bronze", "hex": "#ebd9c3", "m": 1.0, "r": 0.08}, {"id": "bronze_brushed", "hex": "#ebd9c3", "m": 1.0, "r": 1.0}, {"id": "bronze_matte", "hex": "#ebd9c3", "m": 1.0, "r": 1.0}, {"id": "copper", "hex": "#fce9e1", "m": 1.0, "r": 0.0}, {"id": "copper_brushed", "hex": "#fce9e1", "m": 1.0, "r": 1.0}, {"id": "copper_matte", "hex": "#fce9e1", "m": 1.0, "r": 1.0}, {"id": "gold", "hex": "#fff3ca", "m": 1.0, "r": 0.0}, {"id": "gold_brushed", "hex": "#fff3ca", "m": 1.0, "r": 1.0}, {"id": "gold_matte", "hex": "#fff3ca", "m": 1.0, "r": 1.0}, {"id": "silver", "hex": "#fffefe", "m": 1.0, "r": 0.0}, {"id": "silver_brushed", "hex": "#fffefe", "m": 1.0, "r": 1.0}, {"id": "silver_matte", "hex": "#fffefe", "m": 1.0, "r": 1.0}, {"id": "nickel", "hex": "#eeeae4", "m": 1.0, "r": 0.0}, {"id": "nickel_brushed", "hex": "#eeeae4", "m": 1.0, "r": 1.0}, {"id": "nickel_matte", "hex": "#eeeae4", "m": 1.0, "r": 1.0}, {"id": "stainless", "hex": "#eceae7", "m": 1.0, "r": 0.0}, {"id": "stainless_brushed", "hex": "#eceae7", "m": 1.0, "r": 1.0}, {"id": "stainless_matte", "hex": "#eceae7", "m": 1.0, "r": 1.0}, {"id": "steel", "hex": "#e1e0de", "m": 1.0, "r": 0.0}, {"id": "steel_brushed", "hex": "#e1e0de", "m": 1.0, "r": 1.0}, {"id": "steel_matte", "hex": "#e1e0de", "m": 1.0, "r": 1.0}, {"id": "titanium", "hex": "#d9d5d1", "m": 1.0, "r": 0.0}, {"id": "titanium_brushed", "hex": "#d9d5d1", "m": 1.0, "r": 1.0}, {"id": "titanium_matte", "hex": "#d9d5d1", "m": 1.0, "r": 1.0}, {"id": "zinc", "hex": "#f5f7f8", "m": 1.0, "r": 0.0}, {"id": "zinc_brushed", "hex": "#f5f7f8", "m": 1.0, "r": 1.0}, {"id": "zinc_matte", "hex": "#f5f7f8", "m": 1.0, "r": 1.0}, {"id": "tin", "hex": "#e5e7e6", "m": 1.0, "r": 0.0}, {"id": "tin_brushed", "hex": "#e5e7e6", "m": 1.0, "r": 1.0}, {"id": "tin_matte", "hex": "#e5e7e6", "m": 1.0, "r": 1.0}, {"id": "aluminum_anodized", "hex": "#e70000", "m": 1.0, "r": 0.3}, {"id": "corrugated_cardboard", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "paper", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "foamboard", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "acrylic", "hex": "#ffffff", "m": 0.0, "r": 0.0}, {"id": "plastic_clean", "hex": "#ffffff", "m": 0.0, "r": 0.15}, {"id": "plastic_rough", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "carbon_fiber", "hex": "#ffffff", "m": 1.0, "r": 1.0}, {"id": "fabric_weave", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "felt", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "leather", "hex": "#b89a78", "m": 0.0, "r": 1.0}, {"id": "ash", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "beech", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "birch", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "cherry", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "maple", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "mdf", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "oak", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "osb", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "pine", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "spruce", "hex": "#ffffff", "m": 0.0, "r": 1.0}, {"id": "walnut", "hex": "#ffffff", "m": 0.0, "r": 1.0}];
+function libSwatch(e){
+  const hi = 18 + e.r*34, a = .85 - e.r*.55;
+  const hiC = e.m > .5 ? `color-mix(in srgb, ${e.hex} 45%, white)` : "#ffffff";
+  const rim = .18 + e.m*.22;
+  return [`radial-gradient(circle at 32% 26%, ${e.m>.5?`color-mix(in srgb, ${e.hex} 45%, white)`:"rgba(255,255,255,1)"} 0%, transparent ${hi}%)`,
+          e.m>.5?`linear-gradient(160deg, transparent 42%, rgba(255,255,255,${Math.max(0,.25-e.r*.18).toFixed(2)}) 50%, transparent 58%)`:null,
+          `radial-gradient(circle at 50% 115%, rgba(0,0,0,${rim.toFixed(2)}) 0%, transparent 55%)`,
+          e.hex].filter(Boolean).join(", ");
+}
+const DATA = [
+ // ---- materials to author (missing tokens) ----
+ {id:"mat-pink",sec:"material",name:"Pink cap",meta:"proposed token · ",tok:"CAP_PINK",skus:59,
+  chips:[["crit","No material"],["ok","Geometry ✓ (cap GLBs)"]],
+  note:"Plain pink caps + pink roll-on caps. Sample colour from the CpRoll/Cap PSD layers; gloss like the shiny set."},
+ {id:"mat-frosted",sec:"material",name:"Frosted cap",meta:"proposed token · ",tok:"CAP_FROSTED",skus:56,
+  chips:[["crit","No material"],["ok","Geometry ✓"]],
+  note:"Translucent frosted PP — needs a transmission/alpha treatment, not a solid colour. The one colourway that can't be faked with baseColor."},
+ {id:"mat-lavender",sec:"material",name:"Lavender cap",meta:"proposed token · ",tok:"CAP_LAVENDER",skus:54,
+  chips:[["crit","No material"],["ok","Geometry ✓"]],
+  note:"Sits mostly on roll-on caps. PSD source: 12. 17-415 Roll on colourway layers."},
+ {id:"mat-mblue",sec:"material",name:"Matte blue cap",meta:"proposed token · ",tok:"CAP_MATTE_BLUE",skus:14,
+  chips:[["crit","No material"],["ok","Geometry ✓"]],
+  note:"Matte treatment — reuse the library matte normal/roughness maps like matte gold/silver."},
+ {id:"mat-green",sec:"material",name:"Green cap",meta:"proposed token · ",tok:"CAP_GREEN",skus:11,
+  chips:[["crit","No material"],["ok","Geometry ✓"]],
+  note:"GLASS_GREEN exists for glass — the cap token does not."},
+ {id:"mat-blue",sec:"material",name:"Blue cap",meta:"proposed token · ",tok:"CAP_BLUE",skus:10,
+  chips:[["crit","No material"],["ok","Geometry ✓"]], note:"Gloss blue."},
+ {id:"mat-amber",sec:"material",name:"Amber cap",meta:"proposed token · ",tok:"CAP_AMBER",skus:4,
+  chips:[["crit","No material"],["ok","Geometry ✓"]],
+  note:"Likely translucent amber PP — pair with the frosted treatment decision."},
+ {id:"mat-purple",sec:"material",name:"Purple cap",meta:"proposed token · ",tok:"CAP_PURPLE",skus:2,
+  chips:[["crit","No material"],["ok","Geometry ✓"]], note:"Gloss purple."},
+ {id:"mat-brown",sec:"material",name:"Brown cap (non-leather)",meta:"proposed token · ",tok:"CAP_BROWN",skus:2,
+  chips:[["crit","No material"],["ok","Geometry ✓"]],
+  note:"Plain brown PP — distinct from the leather set."},
+ {id:"mat-natural",sec:"material",name:"“Natural”",meta:"catalog value · ",tok:"— data fix",skus:2,
+  chips:[["warn","Data fix"]],
+  note:"Ambiguous colour name. Decide what “Natural” means (natural PP?) or rename the rows — a material can't be authored for a word."},
+ {id:"mat-matte",sec:"material",name:"“Matte”",meta:"catalog value · ",tok:"— data fix",skus:2,
+  chips:[["warn","Data fix"]], note:"Colourway name with no colour. Catalog hygiene, not a token."},
+ {id:"mat-shiny",sec:"material",name:"“Shiny”",meta:"catalog value · ",tok:"— data fix",skus:1,
+  chips:[["warn","Data fix"]], note:"Same as “Matte” — needs a real name upstream."},
+
+ // ---- quality passes ----
+ {id:"q-leather",sec:"quality",name:"Leather caps ×5",meta:"LEATHER_BLACK · BROWN · LIGHT_BROWN · IVORY · PINK",tok:"",skus:82,
+  chips:[["ok","Geometry ✓ (BB_CAP_18415_LEATHER)"],["warn","Generic grain"]],
+  note:"Currently a generic CC0 grain. Jordan: mimic the real wrap pattern from the CP18-415*Lthr PSDs in Blender (stitching, seam, grain scale), then give it life in three.js from the material library — under the approved studio HDRI."},
+ {id:"q-dots",sec:"quality",name:"Rhinestone dot caps ×3",meta:"CAP_DOTS_BLACK · PINK · SILVER",tok:"",skus:30,
+  chips:[["ok","Geometry ✓ (stud lattice)"],["warn","Chrome stand-in"]],
+  note:"The studs are faceted rhinestones in the PSDs — need a gem treatment (dispersion/sparkle read), not PART_STUD_CHROME."},
+ {id:"q-actuator",sec:"quality",name:"Sprayer head striping",meta:"PART_ACTUATOR_PP · locked value",tok:"",skus:480,
+  chips:[["ok","Geometry rebuilt today"],["warn","Jordan decision"]],
+  note:"Crown rebuild reduced the vertical lines; the remaining lever is clearcoatRoughness on a LOCKED token (clearcoat .25, currently razor-sharp). One-line change once approved."},
+
+ // ---- geometry to build ----
+ {id:"g-13roll",sec:"geometry",name:"13-415 roll-on set",meta:"housings (metal + plastic) · balls · roll-on cap",tok:"",skus:304,
+  chips:[["crit","No GLBs"],["ok","Caps exist (BB_CAP_13415)"]],
+  note:"Biggest geometry gap. Same architecture as the shipped 17-415 roller set; PSD sources in the 13-415 folders. Anchor scale on the 13-415 finish spec."},
+ {id:"g-ansp",sec:"geometry",name:"Vintage bulb atomizer (18-415)",meta:"bulb + ferrule sculpt over the spec fitment",tok:"",skus:279,
+  chips:[["crit","Parked"],["ok","Fitment spec-built"],["ok","8 fabric tokens ready"]],
+  note:"Photo fallback live on PDPs. The spec collar (ansp_collar_builder) is done; the sculpted bulb needs a clean weld-first rebuild — the AI prototype's lesson is written into the closures module."},
+ {id:"g-tassel",sec:"geometry",name:"Bulb + tassel (18-415)",meta:"tassel cord · crown · fringe",tok:"",skus:199,
+  chips:[["crit","No usable GLB"],["warn","Depends on bulb"]],
+  note:"Old primitive tassel was withdrawn with the bulb. Build after the bulb lands."},
+ {id:"g-13spray",sec:"geometry",name:"13-415 fine mist set",meta:"collar · actuator · insert · overcap",tok:"",skus:150,
+  chips:[["crit","No GLBs"]],
+  note:"Mirror of the 17-415 set just rebuilt — measure Spry13-415 PSDs against the 13-415 collar spec."},
+ {id:"g-2040",sec:"geometry",name:"20-400 Boston Round set",meta:"dropper · rollers · cap",tok:"",skus:127,
+  chips:[["crit","No GLBs"],["warn","No fitment rows either"]],
+  note:"Rollers 69 · droppers 44 · caps 14. Also flagged in the catalog reconciliation: Grace can't verify 20-400/18-400 until fitments rows exist."},
+ {id:"g-1840",sec:"geometry",name:"18-400 dropper set",meta:"collar · bulb · pipette",tok:"",skus:18,
+  chips:[["crit","No GLBs"],["warn","No fitment rows"]],
+  note:"Boston Round 15ml droppers. Small set; shares dropper architecture with 18-415."},
+ {id:"g-15spray",sec:"geometry",name:"15-415 spray set",meta:"collar · actuator",tok:"",skus:15,
+  chips:[["crit","No GLBs"]],
+  note:"Elegant/Circle small sizes. Circle 30 body spec already carries the 15-415 finish numbers."},
+ {id:"g-17drp",sec:"geometry",name:"17-415 dropper component",meta:"single component SKU",tok:"",skus:1,
+  chips:[["crit","No GLB"],["warn","Fitments says no dropper"]],
+  note:"Catalog and fitments disagree — resolve the data question before building (reconciliation doc, drift #1)."},
+
+ // ---- complete ----
+ {id:"c-17",sec:"complete",name:"17-415 closure set",meta:"cap · dot studs · rollers ×2 · spray (rebuilt today, with orifice) · pump · overcap · dip tube",tok:"",skus:169,
+  chips:[["ok","Geometry ✓"],["ok","Materials ✓"]],
+  note:"Head re-measured from Spry/Ltn17-415Blk at 14.615 px/mm; discharge orifice added (BB_SPR_INSERT_17415)."},
+ {id:"c-18",sec:"complete",name:"18-415 closure set",meta:"caps short/tall/leather · monochrome spray + nozzle · pump · reducer · dropper · dip tube",tok:"",skus:1381,
+  chips:[["ok","Geometry ✓"],["ok","Materials ✓"],["warn","Leather → quality pass"]],
+  note:"The core of the catalog. Leather wears the generic grain until its quality pass."},
+ {id:"c-ansp-mats",sec:"complete",name:"Bulb fabric tokens ×8",meta:"ANSP_BLACK…GOLD — waiting on the bulb sculpt",tok:"",skus:279,
+  chips:[["ok","Materials ✓"],["warn","Geometry parked"]],
+  note:"Authored and approved; they light up the day the bulb geometry lands."},
+ {id:"c-glass",sec:"complete",name:"Glass + part materials",meta:"5 glass presets · PP/steel/rubber part tokens · studio HDRIs",tok:"",skus:2474,
+  chips:[["ok","Locked set"]],
+  note:"The 2026-08-31 full-set freeze. Every change goes through the material lab + lock."},
+];
+
+const state = { filter:"all", q:"", sort:"impact" };
+let marks = {}; let picks = {};
+try { picks = JSON.parse(localStorage.getItem("bb-build-board-picks-v1")||"{}") || {}; } catch(e){ picks = {}; }
+function savePicks(){ try{ localStorage.setItem("bb-build-board-picks-v1", JSON.stringify(picks)); }catch(e){} }
+try { marks = JSON.parse(localStorage.getItem("bb-build-board-v1")||"{}") || {}; } catch(e){ marks = {}; }
+function saveMarks(){ try{ localStorage.setItem("bb-build-board-v1", JSON.stringify(marks)); }catch(e){} }
+
+const GLYPH = {material:"◐", quality:"✦", geometry:"⬡", complete:"✓"};
+function swatchFor(d){
+  if(d.sec==="material"){
+    const pick = picks[d.id] && LIB.find(e=>e.id===picks[d.id]);
+    if(pick) return `<span class="sw" style="background:${libSwatch(pick)}" title="base: ${pick.id}"></span>`;
+    return `<span class="sw missing" aria-hidden="true"></span>`;
+  }
+  if(d.sec==="quality"||d.sec==="geometry"||d.sec==="complete")
+    return `<span class="sw geom" aria-hidden="true">${GLYPH[d.sec]}</span>`;
+  return `<span class="sw"></span>`;
+}
+const MAXSKU = 400; // bar scale cap so the 2,474 row doesn't flatten the rest
+
+function rowHtml(d){
+  const m = marks[d.id]||"todo";
+  const pct = Math.min(100, Math.round(100*Math.min(d.skus,MAXSKU)/MAXSKU));
+  return `<div class="row ${m==="done"?"done":""}" data-id="${d.id}" data-sec="${d.sec}"
+              data-text="${(d.name+" "+d.meta+" "+(d.tok||"")+" "+d.note).toLowerCase().replace(/"/g,"")}">
+    ${swatchFor(d)}
+    <div>
+      <div class="name">${d.name}</div>
+      <div class="meta">${d.meta}${d.tok?`<code>${d.tok}</code>`:""}</div>
+      <div class="chips">${d.chips.map(c=>`<span class="st ${c[0]}">${c[1]}</span>`).join("")}</div>
+      <div class="note">${d.note}</div>
+      ${d.sec==="material" && d.tok.indexOf("data fix")<0 ? `
+      <div class="pickrow">
+        <label class="picklab" for="pick-${d.id}">Base from library</label>
+        <select class="pick" id="pick-${d.id}" data-id="${d.id}">
+          <option value="">&mdash; choose a starting point &mdash;</option>
+          ${LIB.map(e=>`<option value="${e.id}" ${picks[d.id]===e.id?"selected":""}>${e.id}  (m ${e.m} · r ${e.r})</option>`).join("")}
+        </select>
+      </div>`:""}
+    </div>
+    <div class="impact"><div class="n">${d.skus.toLocaleString()}</div>
+      <div class="l">SKUs</div><div class="bar"><i style="width:${pct}%"></i></div></div>
+    <button class="row-check" data-s="${m}" aria-label="Cycle status for ${d.name}">
+      ${m==="todo"?"To do":m==="planned"?"Planned":"Done ✓"}</button>
+  </div>`;
+}
+
+function render(){
+  document.querySelectorAll(".section").forEach(sec=>{
+    const key = sec.dataset.sec;
+    let items = DATA.filter(d=>d.sec===key);
+    if(state.q) items = items.filter(d=>(d.name+d.meta+d.note+(d.tok||"")).toLowerCase().includes(state.q));
+    items.sort((a,b)=> state.sort==="impact" ? b.skus-a.skus : a.name.localeCompare(b.name));
+    sec.querySelector(".rows").innerHTML = items.map(rowHtml).join("");
+    sec.querySelector("[data-count]").textContent =
+      `${items.length} item${items.length===1?"":"s"} · ${items.reduce((s,d)=>s+d.skus,0).toLocaleString()} SKUs`;
+    sec.style.display = (state.filter==="all"||state.filter===key) && items.length ? "" : "none";
+  });
+  const total = DATA.filter(d=>d.sec!=="complete").length;
+  const done = DATA.filter(d=>d.sec!=="complete" && marks[d.id]==="done").length;
+  const planned = DATA.filter(d=>d.sec!=="complete" && marks[d.id]==="planned").length;
+  document.getElementById("prog").textContent = `${done}/${total} done · ${planned} planned`;
+}
+
+document.getElementById("controls").addEventListener("click", e=>{
+  const chip = e.target.closest(".chip");
+  if(chip){ state.filter = chip.dataset.f;
+    document.querySelectorAll(".chip").forEach(c=>c.setAttribute("aria-pressed", String(c===chip)));
+    render(); }
+});
+document.getElementById("q").addEventListener("input", e=>{ state.q = e.target.value.toLowerCase(); render(); });
+document.getElementById("sort").addEventListener("click", e=>{
+  state.sort = state.sort==="impact"?"name":"impact";
+  e.target.textContent = "Sort: "+state.sort; render();
+});
+document.addEventListener("change", e=>{
+  const sel = e.target.closest(".pick"); if(!sel) return;
+  if(sel.value) picks[sel.dataset.id] = sel.value; else delete picks[sel.dataset.id];
+  savePicks(); render();
+});
+document.addEventListener("click", e=>{
+  const b = e.target.closest(".row-check"); if(!b) return;
+  const id = b.closest(".row").dataset.id;
+  const next = {todo:"planned", planned:"done", done:"todo"}[marks[id]||"todo"];
+  marks[id]=next; saveMarks(); render();
+});
+function renderLib(){
+  const q = state.q;
+  const el = document.getElementById("libgrid");
+  el.innerHTML = LIB.filter(e=>!q || e.id.includes(q)).map(e=>`
+    <div class="libcell" title="metalness ${e.m} · roughness ${e.r}">
+      <span class="sw" style="background:${libSwatch(e)}"></span>
+      <span class="libname">${e.id}</span>
+      <span class="libvals">m ${e.m} · r ${e.r}</span>
+    </div>`).join("");
+  document.querySelector('[data-sec="library"]').style.display =
+    (state.filter==="all"||state.filter==="library") ? "" : "none";
+}
+const _render = render;
+render = function(){ _render(); renderLib(); };
+render();
+</script>
