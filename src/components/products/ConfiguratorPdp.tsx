@@ -347,10 +347,17 @@ export default function ConfiguratorPdp({
   /* closure selector — ONE row of the actual closure components */
   const closureRow = (
     <div className="mt-6">
-      <p className="text-sm text-obsidian">
-        <span className="text-slate">Closure:</span>{" "}
-        <span className="font-semibold">{activeMeta?.name ?? "Bottle only"}</span>
-      </p>
+      <div className="flex items-baseline justify-between gap-3">
+        <p className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
+          Compatible closures
+          <span className="normal-case tracking-normal text-caption text-obsidian ml-2">
+            {activeMeta?.name ?? "Bottle only"}
+          </span>
+        </p>
+        {neckSize && (
+          <p className="text-spec text-slate shrink-0">{neckSize} neck</p>
+        )}
+      </div>
 
       <div className="flex gap-2.5 mt-3 overflow-x-auto pb-1 [scrollbar-width:none]">
         {ranked.map((base) => {
@@ -369,7 +376,8 @@ export default function ConfiguratorPdp({
       </div>
       <p className="mt-2 flex items-center gap-1.5 text-spec text-slate">
         <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-        All {ranked.length} closures shown are verified to fit this bottle.
+        All {ranked.length} closures are verified to fit
+        {neckSize ? ` the ${neckSize} neck` : " this bottle"}.
       </p>
     </div>
   );
@@ -509,7 +517,7 @@ export default function ConfiguratorPdp({
       {specStrip}
       {priceBlock}
       {closureRow}
-      <div className="mt-6">{finishRow()}</div>
+      <div className="mt-6 pt-5 border-t border-champagne/50">{finishRow()}</div>
       {ctaStack}
     </div>
   );
@@ -666,16 +674,21 @@ function ClosureTile({ name, benefit, imageUrl, glyph: Glyph, selected, onClick 
   const showImg = imageUrl && !broken;
   return (
     <button type="button" onClick={onClick} aria-pressed={selected}
-            title={benefit} className="shrink-0 w-[86px] text-center group">
+            title={benefit} className="shrink-0 w-24 text-center group">
       <div className={`relative aspect-square bg-product-well rounded-[3px]
                        overflow-hidden transition-colors duration-200
                        ${selected
                          ? "border-[1.5px] border-obsidian"
                          : "border border-champagne group-hover:border-muted-gold"}`}>
         {showImg ? (
+          // the swatch shows the CLOSURE, not a shrunken bottle: the
+          // renders are 2080x2288 packshots with the closure at the top,
+          // so crop to the upper portion (Jordan: "the actual photo of
+          // that component, the top of it")
           // eslint-disable-next-line @next/next/no-img-element
           <img src={imageUrl} alt={name} onError={() => setBroken(true)}
-               className="h-full w-full object-cover" />
+               className="absolute left-1/2 top-0 max-w-none w-[185%]
+                          -translate-x-1/2 -translate-y-[4%]" />
         ) : (
           <span className="absolute inset-0 flex items-center justify-center">
             <Glyph className="h-7 w-7 text-obsidian/25" />
@@ -715,12 +728,12 @@ function SwatchRow({ eyebrow, options, names, value, onChange, mats }: {
           {names[value] ?? value}
         </span>
       </p>
-      <div className="flex items-center gap-2 flex-wrap mt-2">
+      <div className="flex items-center gap-3 flex-wrap mt-2.5">
         {options.map((id) => (
           <button key={id} type="button" onClick={() => onChange(id)}
                   aria-label={names[id] ?? id} aria-pressed={value === id}
                   title={names[id] ?? id}
-                  className={`h-[26px] w-[26px] rounded-full transition-all duration-200
+                  className={`h-8 w-8 rounded-full transition-all duration-200
                               focus-visible:outline-2 focus-visible:outline-offset-2
                               focus-visible:outline-muted-gold
                               ${value === id
