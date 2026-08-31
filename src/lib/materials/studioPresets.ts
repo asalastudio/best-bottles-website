@@ -22,7 +22,7 @@
  * is what real studio glass does.
  */
 
-export type StudioPresetId = "softbox-tent" | "lightformer-rig";
+export type StudioPresetId = "softbox-tent" | "room" | "lightformer-rig";
 
 export type StudioPreset = {
   id: StudioPresetId;
@@ -57,6 +57,24 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "NOTE the sibling profile (no --browser) is the CYCLES one: dark ambient, " +
       "hot emitters, range 0.046–23.6. The two renderers need opposite things " +
       "and the files must not be swapped.",
+  },
+  room: {
+    id: "room",
+    label: "Room",
+    hdri: null,
+    environmentIntensity: 1.0,
+    environmentRotation: 0,
+    toneMappingExposure: 1.05,
+    backdrop: "#e9e6e0",
+    provenance:
+      "In-scene room built for REFLECTIONS, after probing Pacdora's glass " +
+      "(2026-08-30): what sells their surface is a recognisable room mirrored " +
+      "in it — a broad softbox, a window, a dim ambient shell. Every panel " +
+      "here is BROAD and moderate (max intensity 3.5, min width 0.9) — the " +
+      "narrow-hot rim pair that painted swimming stripes is the one shape " +
+      "this rig must never contain. Rasterized reflections come ONLY from " +
+      "the environment map, so the room lives in <Environment> children, " +
+      "not scene meshes.",
   },
   "lightformer-rig": {
     id: "lightformer-rig",

@@ -11,7 +11,7 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, Environment, Lightformer, useGLTF, Center,
+import { OrbitControls, Environment, Lightformer, useGLTF, useTexture, Center,
          MeshTransmissionMaterial, Caustics, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import {
@@ -39,13 +39,31 @@ type Measured = {
 /* ------------------------------------------------------------------ model */
 
 function Model({
-  url, preset, envIntensity, transmissionMat, caustics, causticIntensity, onMeasure,
+  url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
+  thicknessUrl, bakeMax, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
+  /** baked per-texel thickness (Blender lane). null = identity 1x1 white,
+   *  which multiplies the scalar by 1 — a no-op that keeps hook order stable. */
+  thicknessUrl: string | null; bakeMax: number | null;
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
+  const thicknessTex = useTexture(
+    thicknessUrl ?? "/models/bodies-thickness/white-1x1.png");
+  useEffect(() => {
+    // glTF-convention UVs + linear data, not colour
+    thicknessTex.flipY = false;
+    thicknessTex.colorSpace = THREE.NoColorSpace;
+    thicknessTex.needsUpdate = true;
+  }, [thicknessTex]);
+  // when the bake is live, the thickness slider sets the map's CEILING and
+  // each texel scales down from it — the slider stays the tuning dial instead
+  // of the sidecar hardcoding the look. (The sidecar's maxThicknessM is the
+  // metric ceiling: at slider = maxThicknessM the map is metrically exact.)
+  const effThickness = preset.thickness;
+  const effBackside = bakeMax != null ? preset.thickness : preset.thickness * 2.6;
   const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
   const materialsInFile: number =
     (gltf as unknown as { parser?: { json?: { materials?: unknown[] } } })
@@ -98,9 +116,13 @@ function Model({
   useEffect(() => {
     if (!glass || transmissionMat) return;
     glass.visible = true;
-    applyGlassPreset(glass, { ...preset, envMapIntensity: envIntensity });
+    const m = applyGlassPreset(glass, { ...preset, envMapIntensity: envIntensity });
+    if (bakeMax != null) {
+      m.thicknessMap = thicknessTex;
+      m.needsUpdate = true;
+    }
     return () => { glass.visible = false; };
-  }, [glass, preset, envIntensity, transmissionMat]);
+  }, [glass, preset, envIntensity, transmissionMat, bakeMax, thicknessTex]);
 
   return (
     <group>
@@ -126,9 +148,10 @@ function Model({
               rotation={glass.rotation} scale={glass.scale}>
           <MeshTransmissionMaterial
             transmission={preset.transmission}
-            thickness={preset.thickness}
+            thickness={effThickness}
+            thicknessMap={thicknessTex}
             backside
-            backsideThickness={preset.thickness * 2.6}
+            backsideThickness={effBackside}
             samples={8}
             resolution={512}
             backsideResolution={256}
@@ -149,8 +172,9 @@ function Model({
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
           <MeshTransmissionMaterial
-            transmission={preset.transmission} thickness={preset.thickness}
-            backside backsideThickness={preset.thickness * 2.6}
+            transmission={preset.transmission} thickness={effThickness}
+            thicknessMap={thicknessTex}
+            backside backsideThickness={effBackside}
             samples={8} resolution={512} backsideResolution={256}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
@@ -169,6 +193,30 @@ function Model({
 
 /* ------------------------------------------------------------- environment */
 
+/** Cyclorama sweep: floor -> quarter fillet -> back wall, one smooth surface.
+ *  Module-level because it never changes; sized generously for a 0.22 m camera. */
+const CYC_GEOMETRY = (() => {
+  const FRONT = 0.9, BACK = -0.35, FILLET = 0.16, WALL_H = 1.4, W = 3.0, ARC = 24;
+  const profile: [number, number][] = [[FRONT, 0]];
+  for (let i = 0; i <= ARC; i++) {
+    const a = (i / ARC) * (Math.PI / 2);
+    profile.push([BACK + FILLET - Math.sin(a) * FILLET,
+                  FILLET - Math.cos(a) * FILLET]);
+  }
+  profile.push([BACK, WALL_H]);
+  const pos: number[] = [], idx: number[] = [];
+  profile.forEach(([z, y]) => { pos.push(-W / 2, y, z, W / 2, y, z); });
+  for (let i = 0; i < profile.length - 1; i++) {
+    const a = i * 2, b = a + 1, c = a + 2, d = a + 3;
+    idx.push(a, b, c, b, d, c);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.Float32BufferAttribute(pos, 3));
+  g.setIndex(idx);
+  g.computeVertexNormals();
+  return g;
+})();
+
 function StudioEnv({ studioId, intensity, rotationDeg }:
                    { studioId: StudioPresetId; intensity: number; rotationDeg: number }) {
   const { scene } = useThree();
@@ -179,6 +227,37 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
   }, [scene, intensity, rotationDeg]);
 
   if (preset.hdri) return <Environment files={preset.hdri} />;
+
+  if (studioId === "room") {
+    // A room for the glass to MIRROR — reflections come only from the env map,
+    // so the room is built here, not as scene meshes. Everything broad and
+    // moderate; the narrow-hot stripe shape is banned (see studioPresets.ts).
+    return (
+      <Environment resolution={1024}>
+        {/* ambient shell so the room is never pitch black between panels */}
+        <Lightformer form="rect" intensity={0.55} color="#cfcbc4"
+                     position={[0, 0.5, -3.5]} scale={[9, 6, 1]} />
+        <Lightformer form="rect" intensity={0.45} color="#c9c5be"
+                     position={[0, 0.5, 3.5]} rotation={[0, Math.PI, 0]}
+                     scale={[9, 6, 1]} />
+        <Lightformer form="rect" intensity={0.4} color="#d6d2ca"
+                     position={[0, 3.2, 0]} rotation={[Math.PI / 2, 0, 0]}
+                     scale={[9, 9, 1]} />
+        {/* key softbox — the big soft sheen that slides as the bottle turns */}
+        <Lightformer form="rect" intensity={3.5} color="#fff8ef"
+                     position={[-1.7, 1.0, 0.8]} rotation={[0, Math.PI / 2.6, 0]}
+                     scale={[2.0, 2.6, 1]} />
+        {/* window — the tall cool panel Pacdora-style glass mirrors */}
+        <Lightformer form="rect" intensity={2.2} color="#eef3fa"
+                     position={[1.8, 0.9, -0.2]} rotation={[0, -Math.PI / 2.2, 0]}
+                     scale={[1.1, 2.4, 1]} />
+        {/* warm floor bounce keeps the lower hemisphere alive */}
+        <Lightformer form="rect" intensity={0.8} color="#e8ddd0"
+                     position={[0, -1.6, 0.4]} rotation={[Math.PI / 2, 0, 0]}
+                     scale={[5, 5, 1]} />
+      </Environment>
+    );
+  }
 
   // legacy in-scene rig, kept only for A/B. Its narrow hot rim pair is what
   // paints hard vertical stripes down a cylinder.
@@ -307,11 +386,34 @@ export default function MaterialLab(
   const [refX, setRefX] = useState(0);
   const [refY, setRefY] = useState(0);
 
+  // Baked per-texel thickness (Pacdora's biggest trick, produced by the
+  // Blender lane: bake_thickness.py). Availability is per body — probe the
+  // sidecar. The baked GLB is the SAME threaded geometry plus UVs.
+  const [bakedMap, setBakedMap] = useState(true);
+  const [bakeMax, setBakeMax] = useState<number | null>(null);
+
   const body = bodies[bodyIdx];
   const hasThreaded = threadedIds.includes(body.bodyId);
-  const modelUrl = threaded && hasThreaded
-    ? `/models/bodies-threaded/${body.bodyId}.glb`
-    : body.url;
+
+  useEffect(() => {
+    let dead = false;
+    setBakeMax(null);
+    fetch(`/models/bodies-thickness/${body.bodyId}.thickness.json`)
+      .then((r) => (r.ok ? r.json() : null))
+      .then((j) => {
+        if (!dead && j && typeof j.maxThicknessM === "number")
+          setBakeMax(j.maxThicknessM);
+      })
+      .catch(() => {});
+    return () => { dead = true; };
+  }, [body.bodyId]);
+
+  const bakeLive = bakedMap && bakeMax != null;
+  const modelUrl = bakeLive
+    ? `/models/bodies-thickness/${body.bodyId}.glb`
+    : threaded && hasThreaded
+      ? `/models/bodies-threaded/${body.bodyId}.glb`
+      : body.url;
   const onMeasure = useCallback((x: Measured) => setM(x), []);
 
   const loadPreset = (id: GlassPresetId) => {
@@ -370,6 +472,10 @@ export default function MaterialLab(
           <Suspense fallback={null}>
             <Center key={modelUrl}>
               <Model url={modelUrl} preset={working} envIntensity={envIntensity}
+                     thicknessUrl={bakeLive
+                       ? `/models/bodies-thickness/${body.bodyId}.thickness.png`
+                       : null}
+                     bakeMax={bakeLive ? bakeMax : null}
                     transmissionMat={transmissionMat}
                     caustics={caustics} causticIntensity={causticIntensity}
                      onMeasure={onMeasure} />
@@ -378,9 +484,12 @@ export default function MaterialLab(
               <group position={[0, -(m.hMm / 1000) / 2, 0]}>
                 {/* caustics need a surface to land on, and a floating bottle
                     reads as a cut-out no matter how good the glass is */}
-                <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
-                  <planeGeometry args={[1, 1]} />
-                  <meshStandardMaterial color={bg} roughness={0.85} metalness={0} />
+                {/* seamless cyclorama: floor sweeps up into the back wall
+                    through a fillet, so no horizon line ever cuts through the
+                    glass. Profile runs front->back->up; swept across x. */}
+                <mesh position={[0, -0.0002, 0]} geometry={CYC_GEOMETRY}>
+                  <meshStandardMaterial color={bg} roughness={0.85} metalness={0}
+                                        side={THREE.DoubleSide} />
                 </mesh>
                 <ContactShadows opacity={0.42} scale={0.35} blur={2.4}
                                 far={0.06} resolution={1024} color="#3a3128" />
@@ -478,6 +587,21 @@ export default function MaterialLab(
                  onChange={(e) => setTransmissionMat(e.target.checked)} />
           <span>MeshTransmissionMaterial</span>
         </label>
+        <label style={{ display: "flex", gap: 6, alignItems: "center",
+                        margin: "2px 0 4px",
+                        cursor: bakeMax != null ? "pointer" : "default",
+                        opacity: bakeMax != null ? 1 : 0.45 }}>
+          <input type="checkbox" checked={bakeLive} disabled={bakeMax == null}
+                 onChange={(e) => setBakedMap(e.target.checked)} />
+          <span>thicknessMap (baked)</span>
+        </label>
+        <div style={{ fontSize: 10, color: "#6f6f7d", marginBottom: 6 }}>
+          {bakeMax != null
+            ? "per-texel thickness from Blender — thick heel darkens, thin " +
+              "threads lighten. The thickness slider sets the CEILING each " +
+              `texel scales from; ${(bakeMax * 1000).toFixed(1)} mm is metric-exact`
+            : "no bake exists for this body yet — run bake_thickness.py"}
+        </div>
         <div style={{ fontSize: 10, color: "#6f6f7d", marginBottom: 10 }}>
           backside refraction + 8-sample transmission. Off = plain
           MeshPhysicalMaterial, a single flat backdrop lookup.
@@ -505,7 +629,7 @@ export default function MaterialLab(
           {(Object.keys(STUDIO_PRESETS) as StudioPresetId[]).map((id) => (
             <button key={id} onClick={() => { setStudioId(id); setBg(STUDIO_PRESETS[id].backdrop); }}
                     style={btn(studioId === id)}>
-              {id === "softbox-tent" ? "tent" : "rig (legacy)"}
+              {id === "softbox-tent" ? "tent" : id === "room" ? "room" : "rig (legacy)"}
             </button>
           ))}
         </div>
