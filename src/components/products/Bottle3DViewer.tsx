@@ -13,8 +13,8 @@
  * designed for).
  */
 
-import { Suspense, useEffect, useMemo, useState, useCallback } from "react";
-import { Canvas } from "@react-three/fiber";
+import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
 import {
   OrbitControls, Environment, useGLTF, useTexture, useEnvironment,
   MeshTransmissionMaterial, ContactShadows, Center,
@@ -177,6 +177,29 @@ function Bottle({ url, preset, closure, capMat, ballMat, onHeight }: {
   );
 }
 
+/* -------------------------------------------------------------- entrance */
+
+/** The bottle settles into place on load — a rising, decelerating spin that
+ *  hands off into the idle auto-rotate (the Pacdora arrival). Pure easing,
+ *  no extra deps; runs once per mount. */
+function EntranceGroup({ children }: { children: React.ReactNode }) {
+  const ref = useRef<THREE.Group | null>(null);
+  const t = useRef(0);
+  const DURATION = 1.6;
+  useFrame((_, delta) => {
+    const g = ref.current;
+    if (!g || t.current >= DURATION) return;
+    t.current = Math.min(DURATION, t.current + delta);
+    const x = t.current / DURATION;
+    const e = 1 - Math.pow(1 - x, 3);              // easeOutCubic
+    const settle = 1 + 2.2 * Math.pow(1 - x, 3) * Math.sin(x * 9); // faint sway
+    g.position.y = (1 - e) * -0.028;
+    g.rotation.y = (1 - e) * -1.35 * settle;
+    g.scale.setScalar(0.94 + 0.06 * e);
+  });
+  return <group ref={ref}>{children}</group>;
+}
+
 /* ---------------------------------------------------------------- viewer */
 
 export default function Bottle3DViewer({
@@ -191,6 +214,8 @@ export default function Bottle3DViewer({
   const preset = GLASS_PRESETS[glass];
   const studio = STUDIO_PRESETS[APPROVED_STUDIO];
   const [h, setH] = useState(0.07);
+  // gentle showcase motion until the customer takes over
+  const [touched, setTouched] = useState(false);
   const onHeight = useCallback((v: number) => setH(v), []);
   const url = `/models/bodies-thickness/${bodyId}.glb`;
 
@@ -203,10 +228,12 @@ export default function Bottle3DViewer({
               dpr={[1, 2]}>
         <color attach="background" args={[new THREE.Color(backdrop).multiplyScalar(0.32)]} />
         <Suspense fallback={null}>
-          <Center disableY>
-            <Bottle url={url} preset={preset} closure={closure}
-                    capMat={capMat} ballMat={ballMat} onHeight={onHeight} />
-          </Center>
+          <EntranceGroup>
+            <Center disableY>
+              <Bottle url={url} preset={preset} closure={closure}
+                      capMat={capMat} ballMat={ballMat} onHeight={onHeight} />
+            </Center>
+          </EntranceGroup>
           <group>
             <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
               <planeGeometry args={[1.2, 1.2]} />
@@ -220,13 +247,12 @@ export default function Bottle3DViewer({
         <OrbitControls makeDefault target={[0, h / 2, 0]}
                        enablePan={false} minDistance={0.12} maxDistance={0.45}
                        minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 1.9}
-                       autoRotate={false} />
+                       autoRotate={!touched} autoRotateSpeed={0.9}
+                       onStart={() => setTouched(true)} />
       </Canvas>
-      <div style={{ position: "absolute", bottom: 8, left: 0, right: 0,
-                    textAlign: "center", fontSize: 11, letterSpacing: ".04em",
-                    color: "#8a8378", pointerEvents: "none" }}>
-        drag to rotate
-      </div>
+      {/* gallery vignette — depth without touching the render */}
+      <div style={{ position: "absolute", inset: 0, pointerEvents: "none",
+                    background: "radial-gradient(120% 90% at 50% 42%, transparent 55%, rgba(20,14,8,0.22) 100%)" }} />
     </div>
   );
 }
