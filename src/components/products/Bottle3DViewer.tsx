@@ -211,8 +211,12 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
     preset.thicknessBake === false
       ? "/models/bodies-thickness/white-1x1.png"
       : `/models/bodies-thickness/${bakeId}.thickness.png`);
+  // bodies that HAVE a baked frost mask (threads kept clear). Anything
+  // else frosts uniformly via the white fallback — a missing .frost.png
+  // must never 404-crash a family that sells frosted (Circle did).
+  const hasFrostMask = bakeId === "Cyl-round-17-415-70x20";
   const frostTex = useTexture(
-    preset.frostMask
+    preset.frostMask && hasFrostMask
       ? `/models/bodies-thickness/${bakeId}.frost.png`
       : "/models/bodies-thickness/white-1x1.png");
   useEffect(() => {

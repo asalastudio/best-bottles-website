@@ -1,5 +1,9 @@
 {
  "files": {
+  "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb": "6d0773f37bfee7eb",
+  "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png": "3f21a18fa6f5715b",
+  "public/models/bodies-thickness/Circle-disc-18-415-88x73.glb": "98de7941e2a6a5be",
+  "public/models/bodies-thickness/Circle-disc-18-415-88x73.thickness.png": "d92c4bb13189baaa",
   "public/models/bodies-thickness/Cyl-round-17-415-70x20.frost.png": "73cd00dd30471600",
   "public/models/bodies-thickness/Cyl-round-17-415-70x20.glb": "953c7c3aeaf08405",
   "public/models/bodies-thickness/Cyl-round-17-415-70x20.thickness.png": "0488ff78e7e53c03",

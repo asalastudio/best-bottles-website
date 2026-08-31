@@ -1,0 +1,11 @@
+{
+  "bodyId": "Circle-disc-18-415-111x94",
+  "maxThicknessM": 0.0581,
+  "clampPercentile": 98.0,
+  "medianThicknessM": 0.002789,
+  "resolution": 1024,
+  "channel": "green",
+  "source": "Circle-disc-18-415-111x94.glb",
+  "frostDatumM": null,
+  "note": "browser: material.thickness = maxThicknessM, material.thicknessMap = PNG (flipY=false, NoColorSpace)"
+}

@@ -57,6 +57,10 @@ TRACKED_FILES = [
     "public/models/closures/BB_PMP_SPOUT_18415.glb",
     "public/models/bodies-thickness/Elegant-oval-18-415-87x55.glb",
     "public/models/bodies-thickness/Elegant-oval-18-415-87x55.thickness.png",
+    "public/models/bodies-thickness/Circle-disc-18-415-88x73.glb",
+    "public/models/bodies-thickness/Circle-disc-18-415-88x73.thickness.png",
+    "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
+    "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png",
 ]
 TRACKED_MATERIALS_PREFIXES = ("CAP_", "PART_BALL", "PART_HOUSING", "PART_STUD", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [

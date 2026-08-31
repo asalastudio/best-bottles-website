@@ -71,6 +71,33 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     },
     buildSlug: (c, cl) => `elegant-60ml-${c}-18-415-${cl}`,
   },
+  {
+    key: "circle50",
+    finish: "18-415",
+    // SKU truth: clear + frosted; perfumespray + lotionpump renderable
+    // (antique bulb, dropper, reducer keep the photo gallery; the lone
+    // 18-400 reducer variant is a different finish entirely)
+    slugRe: /^circle-50ml-(clear|frosted)-18-415-(perfumespray|lotionpump)$/,
+    glasses: ["clear", "frosted"],
+    bases: ["none", "sprayer", "pump"],
+    bodyDefault: "Circle-disc-18-415-88x73",
+    slugColour: { clear: "clear", frosted: "frosted" },
+    slugClosure: { sprayer: "perfumespray", pump: "lotionpump" },
+    closureFromSlug: { perfumespray: "sprayer", lotionpump: "pump" },
+    buildSlug: (c, cl) => `circle-50ml-${c}-18-415-${cl}`,
+  },
+  {
+    key: "circle100",
+    finish: "18-415",
+    slugRe: /^circle-100ml-(clear|frosted)-18-415-(perfumespray|lotionpump)$/,
+    glasses: ["clear", "frosted"],
+    bases: ["none", "sprayer", "pump"],
+    bodyDefault: "Circle-disc-18-415-111x94",
+    slugColour: { clear: "clear", frosted: "frosted" },
+    slugClosure: { sprayer: "perfumespray", pump: "lotionpump" },
+    closureFromSlug: { perfumespray: "sprayer", lotionpump: "pump" },
+    buildSlug: (c, cl) => `circle-100ml-${c}-18-415-${cl}`,
+  },
 ];
 
 export function familyForSlug(slug: string): ConfiguratorFamily | null {
