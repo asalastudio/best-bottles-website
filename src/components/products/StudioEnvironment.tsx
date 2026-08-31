@@ -65,16 +65,13 @@ const EMITTERS: Emitter[] = [
   { position: [0, 2, -6], scale: [8, 6], intensity: 1.4, sigma: [0.55, 0.55] },
 ];
 
-/** Per-axis Gaussian × raised-cosine window, baked to a sprite. The window
- *  forces EXACT zero at the quad rim whatever the sigma, so no emitter can
- *  ever print a hard boundary. 8-bit is plenty after the 512px cubemap +
- *  PMREM blur. */
+/** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
+ *  window forces EXACT zero at the quad rim whatever the sigma, so no
+ *  emitter can ever print a hard boundary; float texels mean the ×6 HDR
+ *  intensity can never quantize the gradient into contour bands. */
 function makeFeatherTexture(sigma: [number, number]): THREE.Texture {
   const SIZE = 256;
-  const canvas = document.createElement("canvas");
-  canvas.width = canvas.height = SIZE;
-  const ctx = canvas.getContext("2d") as CanvasRenderingContext2D;
-  const img = ctx.createImageData(SIZE, SIZE);
+  const data = new Float32Array(SIZE * SIZE * 4);
   const window1 = (t: number) => {
     // 1 inside |t|<0.7, cosine roll to 0 at |t|=1
     const a = (Math.min(1, Math.abs(t)) - 0.7) / 0.3;
@@ -89,14 +86,14 @@ function makeFeatherTexture(sigma: [number, number]): THREE.Texture {
         Math.exp(-(v * v) / (2 * sigma[1] * sigma[1])) *
         window1(u) * window1(v);
       const i = (y * SIZE + x) * 4;
-      const b = Math.round(255 * g);
-      img.data[i] = img.data[i + 1] = img.data[i + 2] = b;
-      img.data[i + 3] = b;
+      data[i] = data[i + 1] = data[i + 2] = g;
+      data[i + 3] = g;
     }
   }
-  ctx.putImageData(img, 0, 0);
-  const tex = new THREE.CanvasTexture(canvas);
+  const tex = new THREE.DataTexture(data, SIZE, SIZE, THREE.RGBAFormat, THREE.FloatType);
+  tex.magFilter = tex.minFilter = THREE.LinearFilter;
   tex.colorSpace = THREE.NoColorSpace;
+  tex.needsUpdate = true;
   return tex;
 }
 
@@ -126,7 +123,14 @@ function SoftEmitter({ emitter }: { emitter: Emitter }) {
 
 export function StudioEnvironment() {
   return (
-    <Environment files="/env/studio_small_08_1k.hdr" resolution={512}>
+    // frames={1}: bake the cubemap ONCE — the environment is static, so
+    // nothing about the lighting can shimmer or re-resolve frame to frame.
+    // The HDRI is the PEAK-CLAMPED variant (luminance capped at 24,
+    // hue-preserving): the raw Poly Haven file peaks at ~97 and its hot
+    // bare-fixture texels rendered as firefly speckle — "miniature ants"
+    // (Jordan) — on the glossy glass. Pristine original kept alongside;
+    // clamp derivation in docs/configurator/lighting-test/.
+    <Environment files="/env/studio_small_08_1k_peak24.hdr" resolution={512} frames={1}>
       {EMITTERS.map((e, i) => (
         <SoftEmitter key={i} emitter={e} />
       ))}
