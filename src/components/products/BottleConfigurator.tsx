@@ -154,7 +154,7 @@ export default function BottleConfigurator({
                 </div>
 
                 {/* segmented closure control + cap toggle */}
-                <div className="flex items-center gap-2">
+                <div className="flex flex-wrap items-center justify-center gap-2 px-2">
                     <div className="inline-flex rounded-full border border-champagne bg-warm-white p-0.5">
                         {BASES.map((c) => (
                             <button
@@ -162,7 +162,7 @@ export default function BottleConfigurator({
                                 type="button"
                                 onClick={() => setBase(c.id)}
                                 aria-pressed={base === c.id}
-                                className={`px-4 py-1.5 rounded-full text-[10px] uppercase tracking-[0.16em] font-bold transition-colors duration-200 ${
+                                className={`px-3 py-1.5 rounded-full text-[10px] uppercase tracking-[0.14em] font-bold transition-colors duration-200 ${
                                     base === c.id
                                         ? "bg-obsidian text-bone"
                                         : "text-ash hover:text-ink"

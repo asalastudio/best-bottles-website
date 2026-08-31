@@ -1241,6 +1241,8 @@ export default function ProductDetailClient({
         return tiles;
     }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
+    // configurator families: the 3D IS the imagery — no variant tile rail
+    const is3dFamily = /cylinder-9ml-.*17-415/.test(group?.slug ?? "");
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1551,8 +1553,8 @@ export default function ProductDetailClient({
                             placeholder mode and passed as props to the gallery.
                         */}
                         <div className="lg:sticky lg:top-[120px]">
-                            <div className={hasVariantImagePicker ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
-                                {hasVariantImagePicker && (
+                            <div className={hasVariantImagePicker && !is3dFamily ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
+                                {hasVariantImagePicker && !is3dFamily && (
                                     <VariantImagePicker
                                         tiles={variantImageTiles}
                                         selectedVariantId={selectedVariant?._id}
@@ -1658,27 +1660,15 @@ export default function ProductDetailClient({
                                         // 17-415 9 ml cylinder). The gallery drops to thumbs-only
                                         // beneath it — the arrangement it was designed for.
                                         if (configurator3d) {
+                                            // the configurator IS the product imagery — no static
+                                            // thumbs beside it (Jordan: remove the side images, let
+                                            // the 3D viewer use the space)
                                             return (
-                                                <div>
-                                                    <BottleConfigurator
-                                                        key={`${group.slug}-${configurator3d.glass}`}
-                                                        bodyId={configurator3d.bodyId}
-                                                        initialGlass={configurator3d.glass}
-                                                    />
-                                                    {galleryImages.length > 0 ? (
-                                                        <div className="mt-5">
-                                                            <ProductImageGallery
-                                                                images={galleryImages}
-                                                                primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
-                                                                badge={variantBadge}
-                                                                watermark={skuWatermark}
-                                                                aspectRatio="10/11"
-                                                                mainPadding="p-0"
-                                                                mode="thumbs-only"
-                                                            />
-                                                        </div>
-                                                    ) : null}
-                                                </div>
+                                                <BottleConfigurator
+                                                    key={`${group.slug}-${configurator3d.glass}`}
+                                                    bodyId={configurator3d.bodyId}
+                                                    initialGlass={configurator3d.glass}
+                                                />
                                             );
                                         }
 
