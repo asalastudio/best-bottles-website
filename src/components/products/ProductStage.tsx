@@ -19,6 +19,7 @@ import { Canvas, useThree } from "@react-three/fiber";
 import { Environment, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import { STUDIO_PRESETS, APPROVED_STUDIO } from "@/lib/materials/studioPresets";
+import { GL_COLOR_SETTINGS } from "@/lib/materials/colorManagement";
 
 /** Stage-surface registry — the last inline PBR values, consolidated. */
 export const STAGE = {
@@ -117,7 +118,9 @@ export default function ProductStage({
   return (
     <QualityContext.Provider value={tier}>
       <Canvas camera={{ position: [0, targetY, 0.22], fov: 30, near: 0.01, far: 10 }}
-              gl={{ antialias: true, toneMappingExposure: studio.toneMappingExposure }}
+              // colour pipeline is PINNED, never inherited from a
+              // library default — see colorManagement.ts
+              gl={{ antialias: true, ...GL_COLOR_SETTINGS }}
               dpr={tier === "lite" ? [1, 1.5] : [1, 2]}
               onCreated={(state) => {
                 if (process.env.NODE_ENV !== "production")

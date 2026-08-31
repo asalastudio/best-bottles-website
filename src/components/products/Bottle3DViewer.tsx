@@ -21,6 +21,10 @@ import {
 } from "@react-three/drei";
 import ProductStage, { STAGE, useStageQuality } from "./ProductStage";
 import { useMetalStudioHdri } from "@/lib/materials/metalStudio";
+import {
+  loadTokens, getSpec, createMaterial, ensureCylindricalUV, needsCylindricalUV,
+  type TokenFile,
+} from "@/lib/materials/registry";
 import * as THREE from "three";
 import {
   GLASS_PRESETS, applyGlassPreset, roleOf,
@@ -100,11 +104,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const nozzle = useGLTF(has1841
     ? "/models/closures/BB_SPR_NOZZLE_18415.glb"
     : `/models/closures/BB_DIP_TUBE_${fin}.glb`);
-  const [mats, setMats] = useState<Record<string, MatSpec> | null>(null);
+  // ONE source of truth for every material — see lib/materials/registry.ts
+  const [mats, setMats] = useState<TokenFile | null>(null);
   useEffect(() => {
     let dead = false;
-    fetch("/models/materials.json").then((r) => r.json())
-      .then((j) => { if (!dead) setMats(j.materials); }).catch(() => {});
+    loadTokens().then((t) => { if (!dead) setMats(t); }).catch(() => {});
     return () => { dead = true; };
   }, []);
 
@@ -148,77 +152,18 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const matCache = useMemo(() => new Map<string, THREE.MeshPhysicalMaterial>(), []);
   const build = useCallback((gltf: { scene: THREE.Object3D }, name: string) => {
     const scene = gltf.scene.clone(true);
-    const m = mats?.[name];
-    const cached = matCache.get(name);
-    if (cached) {
-      scene.traverse((o) => {
-        const mesh = o as THREE.Mesh;
-        if (mesh.isMesh) mesh.material = cached;
-      });
-      return scene;
+    let mat = matCache.get(name) ?? null;
+    if (!mat) {
+      const spec = mats ? getSpec(mats, name) : null;
+      mat = createMaterial(spec, { metalEnv, plasticEnv, matteMaps });
+      matCache.set(name, mat);
     }
-    let firstMat: THREE.MeshPhysicalMaterial | null = null;
+    const uv = needsCylindricalUV(mats ? getSpec(mats, name) : null);
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
-      if (firstMat) { mesh.material = firstMat; return; }
-      const mat = new THREE.MeshPhysicalMaterial(m ? {
-        color: new THREE.Color(m.color), roughness: m.roughness,
-        metalness: m.metalness, clearcoat: m.clearcoat ?? 0,
-        ior: m.ior ?? 1.5, transmission: m.transmission ?? 0,
-      } : { color: 0x999999, roughness: 0.4, metalness: 0.4 });
-      if ((m?.transmission ?? 0) > 0) mat.thickness = 0.002;
-      // alpha translucency (dip tube et al): transparent objects DO render
-      // into three's transmission buffer, so translucent parts stay visible
-      // through transmissive glass — unlike transmissive-in-transmissive
-      const op = (m as { opacity?: number } | undefined)?.opacity;
-      const hash = (m as { alphaHash?: boolean } | undefined)?.alphaHash;
-      if (op != null && op < 1) {
-        if (hash) {
-          // stochastic transparency IN the opaque pass — the only
-          // translucency that survives three's transmission buffer
-          // (alpha-blended AND transmissive parts are both excluded)
-          mat.alphaHash = true;
-          mat.opacity = op;
-        } else {
-          mat.transparent = true;
-          mat.opacity = op;
-          mat.depthWrite = false;
-        }
-      }
-      // library reflectivity fields (Jordan's MeshPhongMaterial.reflectivity
-      // pointer): specularIntensity scales dielectric F0 — the pop a glossy
-      // black needs that roughness alone can't give
-      const spec = m as { specularIntensity?: number; specularColor?: string } | undefined;
-      if (spec?.specularIntensity != null) mat.specularIntensity = spec.specularIntensity;
-      if (spec?.specularColor) mat.specularColor = new THREE.Color(spec.specularColor);
-      if ((m as { maps?: string } | undefined)?.maps === "matte") {
-        // closure GLBs carry no UVs — cylindrical unwrap for the maps
-        if (!mesh.geometry.getAttribute("uv")) {
-          const pos = mesh.geometry.getAttribute("position");
-          const uv = new Float32Array(pos.count * 2);
-          mesh.geometry.computeBoundingBox();
-          const bb = mesh.geometry.boundingBox as THREE.Box3;
-          const hh = Math.max(1e-6, bb.max.y - bb.min.y);
-          for (let i = 0; i < pos.count; i++) {
-            uv[i * 2] = Math.atan2(pos.getX(i), pos.getZ(i)) / (2 * Math.PI) + 0.5;
-            uv[i * 2 + 1] = (pos.getY(i) - bb.min.y) / hh;
-          }
-          mesh.geometry.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
-        }
-        mat.normalMap = matteMaps.normal;
-        mat.roughnessMap = matteMaps.rough;
-        mat.roughness = 1.0;                     // the map IS the roughness
-        mat.normalScale = new THREE.Vector2(0.6, 0.6);
-      }
-      const glossy = (m?.metalness ?? 0) >= 0.85 || (m?.roughness ?? 1) <= 0.3;
-      mat.envMap = m?.env === "tent" ? plasticEnv
-                 : m?.env === "metal" ? metalEnv
-                 : glossy ? metalEnv : plasticEnv;
-      mat.envMapIntensity = m?.envMapIntensity ?? (glossy ? 1.15 : 0.9);
-      mesh.material = mat;
-      firstMat = mat;
-      matCache.set(name, mat);
+      if (uv) ensureCylindricalUV(mesh);     // closure GLBs carry no UVs
+      mesh.material = mat as THREE.Material;
     });
     return scene;
   }, [mats, matCache, metalEnv, plasticEnv, matteMaps]);
@@ -278,10 +223,10 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
           if (src) mesh.material = src;
         } else {
           // knit bulb: the baked weave stays, the colourway tints it
-          const fab = mats?.[capMat];
+          const fab = mats ? getSpec(mats, capMat) : null;
           if (fab) {
             const t = (mesh.material as THREE.MeshStandardMaterial).clone();
-            t.color = new THREE.Color(fab.color);
+            t.color = new THREE.Color(fab.baseColorHex ?? "#ffffff");
             mesh.material = t;
           }
         }
