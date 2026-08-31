@@ -128,7 +128,7 @@
   },
   "CAP_DOTS_BLACK": {
    "clearcoat": 1.0,
-   "color": "#0b0b0b",
+   "color": "#070707",
    "envMapIntensity": 1.15,
    "ior": 1.5,
    "linear": [
@@ -143,7 +143,7 @@
   },
   "CAP_DOTS_PINK": {
    "clearcoat": 0.0,
-   "color": "#ddbfc8",
+   "color": "#e2d3d6",
    "env": "metal",
    "envMapIntensity": 1.5,
    "ior": 1.5,
@@ -210,7 +210,7 @@
   },
   "CAP_SHINY_BLACK": {
    "clearcoat": 1.0,
-   "color": "#0b0b0b",
+   "color": "#070707",
    "envMapIntensity": 1.15,
    "ior": 1.5,
    "linear": [

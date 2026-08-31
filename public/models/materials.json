@@ -57,7 +57,7 @@
       "note": "APPROVED by Jordan 2026-08-31 ('Matte silver is perfect. Lock it down'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). maps=matte pulls the library matte normal/roughness textures."
     },
     "CAP_SHINY_BLACK": {
-      "color": "#0b0b0b",
+      "color": "#070707",
       "linear": [
         0.0033,
         0.0033,
@@ -68,7 +68,7 @@
       "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
       "envMapIntensity": 1.15,
       "specularIntensity": 1.5
     },
@@ -439,7 +439,7 @@
       "env": "metal"
     },
     "CAP_DOTS_BLACK": {
-      "color": "#0b0b0b",
+      "color": "#070707",
       "linear": [
         0.0069,
         0.0069,
@@ -450,12 +450,12 @@
       "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
       "envMapIntensity": 1.15,
       "specularIntensity": 1.5
     },
     "CAP_DOTS_PINK": {
-      "color": "#ddbfc8",
+      "color": "#e2d3d6",
       "linear": [
         0.6866,
         0.2508,
@@ -466,7 +466,7 @@
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'more of a matte, same sort of texture as the matte silver, but it's just pink' - finish params mirror CAP_MATTE_SILVER (matte metal + library matte maps), tint pink from CpRoll17-415PnkDot.psd. Studs are PART_STUD_CHROME, FLUSH-set.",
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement itself (CpRoll17-415PnkDot.psd body mid #e2d3d6) - Jordan: 'the colors need to be more accurate'. LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'more of a matte, same sort of texture as the matte silver, but it's just pink' - finish params mirror CAP_MATTE_SILVER (matte metal + library matte maps), tint pink from CpRoll17-415PnkDot.psd. Studs are PART_STUD_CHROME, FLUSH-set.",
       "envMapIntensity": 1.5,
       "env": "metal",
       "maps": "matte"
