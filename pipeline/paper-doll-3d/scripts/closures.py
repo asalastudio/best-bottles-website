@@ -327,11 +327,12 @@ DOTS_17415 = dict(
     # ~8.25) and the side columns at 9.85 / 18.42 — offset half a row, which is
     # the stagger.
     dot_d=1.2, row_pitch=8.4, columns=6,
-    # FLUSH-set (Jordan 2026-08-31: "they're not sticking out, they're
-    # flush with the surface" — all three dot colourways). The stud is a
-    # shallow spherical lens: visible disc dot_d, protruding only `proud`
-    # above the wall, sphere radius derived so the face sits level.
-    proud=0.12,
+    # FLUSH-set rhinestones (Jordan, twice): "they need to be flush...
+    # they need to sit inside". Even 0.12mm proud broke the silhouette at
+    # close zoom. Now the stone's table rises only `proud` (invisible at
+    # any zoom, kept nonzero solely to beat z-fighting) and the bezel is
+    # buried `sink` INSIDE the wall — the outline stays perfectly clean.
+    proud=0.04, sink=0.02,
     z_lo=-8.9, z_hi=9.6,    # measured span, referenced to the rim datum
 )
 
@@ -372,13 +373,15 @@ def cap_dots_builder(rig, finish, variant):
             t = (z - (-cs["skirt_below_rim"])) / cs["height"]
             r_wall = r_base + (r_top - r_base) * max(0.0, min(1.0, t))
             tmp = bmesh.new()
-            # RHINESTONE, flush-set (Jordan): a tiny faceted stone — flat
-            # octagonal table over angled bezel facets — rising only `proud`
-            # above the wall. Flat-shaded facets each catch their own glint,
-            # which is what makes a rhinestone sparkle; a smooth dome can't.
-            a, p_ = d["dot_d"] / 2.0, d["proud"]
+            # RHINESTONE, truly flush: a tiny faceted stone — octagonal
+            # table over bezel facets — whose table sits AT the wall
+            # (+proud, sub-visible) while the bezel is buried `sink`
+            # inside. Flat-shaded facets each catch their own glint; the
+            # silhouette never bumps because nothing meaningfully protrudes.
+            a, p_, s_ = d["dot_d"] / 2.0, d["proud"], d["sink"]
+            depth = p_ + s_
             bmesh.ops.create_cone(tmp, cap_ends=True, segments=8,
-                                  radius1=a, radius2=a * 0.58, depth=p_)
+                                  radius1=a, radius2=a * 0.62, depth=depth)
             # vary each stone's facet clocking so the glints don't repeat
             clock = math.radians((col * 37 + int(z * 7)) % 360)
             bmesh.ops.rotate(tmp, verts=tmp.verts,
@@ -389,7 +392,7 @@ def cap_dots_builder(rig, finish, variant):
                              matrix=Matrix.Rotation(math.pi / 2.0, 3, "Y"))
             bmesh.ops.rotate(tmp, verts=tmp.verts, cent=(0, 0, 0),
                              matrix=Matrix.Rotation(theta, 3, "Z"))
-            off = r_wall + p_ / 2.0
+            off = r_wall - s_ + depth / 2.0
             bmesh.ops.translate(tmp, verts=tmp.verts,
                                 vec=(off * math.cos(theta),
                                      off * math.sin(theta), z))

@@ -30,24 +30,45 @@ function smooth(x: number) {
   return t * t * (3 - 2 * t);
 }
 
-export function useMetalStudio(): THREE.Texture {
+/** Every dial of the studio, exposed so Jordan can tune the shine in the
+ *  lab the way the clear glass was tuned — then the numbers get locked. */
+export type MetalStudioParams = {
+  /** dark ground level */
+  floor: number;
+  /** eye-level wrap band: intensity, centre elevation (rad), gaussian width */
+  band: number;
+  bandEl: number;
+  bandWidth: number;
+  /** overhead dome intensity */
+  ceiling: number;
+  /** single broad azimuthal accent: strength 0..1 and direction (deg) */
+  lobe: number;
+  lobeDeg: number;
+};
+
+export const METAL_STUDIO_DEFAULTS: MetalStudioParams = {
+  floor: 0.055, band: 0.95, bandEl: 0.12, bandWidth: 0.2,
+  ceiling: 5.0, lobe: 0.32, lobeDeg: 130,
+};
+
+export function useMetalStudio(params?: Partial<MetalStudioParams>): THREE.Texture {
   const gl = useThree((s) => s.gl);
+  const p = { ...METAL_STUDIO_DEFAULTS, ...(params ?? {}) };
+  const { floor, band, bandEl, bandWidth, ceiling, lobe, lobeDeg } = p;
   const tex = useMemo(() => {
     const data = new Float32Array(W * H * 4);
+    const lobeRad = (lobeDeg * Math.PI) / 180;
     for (let y = 0; y < H; y++) {
       const el = (0.5 - y / (H - 1)) * Math.PI;      // +pi/2 top .. -pi/2
       for (let x = 0; x < W; x++) {
         const az = (x / W) * 2 * Math.PI;
-        // floor: dark, slightly warm-neutral
-        let L = 0.055;
-        // eye-level wrap band: gaussian in elevation, centred a touch above
-        // the horizon — the level-view sheen, continuous around 360 deg
-        L += 0.95 * Math.exp(-((el - 0.12) ** 2) / (2 * 0.20 ** 2));
-        // ceiling dome — the overhead sheen Jordan approved
-        L += 5.0 * smooth((el - 0.5) / 0.55);
-        // ONE broad azimuthal lobe (accent toward the left-front) — the
-        // lowest possible frequency, so it grades, never lines
-        L *= 1 + 0.32 * Math.cos(az - Math.PI * 0.72);
+        let L = floor;
+        // continuous 360-degree band — a smooth band cannot stripe
+        L += band * Math.exp(-((el - bandEl) ** 2) / (2 * bandWidth ** 2));
+        // ceiling dome — the overhead sheen
+        L += ceiling * smooth((el - 0.5) / 0.55);
+        // one broad azimuthal lobe — grades, never lines
+        L *= 1 + lobe * Math.cos(az - lobeRad);
         const i = (y * W + x) * 4;
         data[i] = data[i + 1] = data[i + 2] = L;
         data[i + 3] = 1;
@@ -61,7 +82,7 @@ export function useMetalStudio(): THREE.Texture {
     pmrem.dispose();
     dt.dispose();
     return t;
-  }, [gl]);
+  }, [gl, floor, band, bandEl, bandWidth, ceiling, lobe, lobeDeg]);
   useEffect(() => () => { tex.dispose(); }, [tex]);
   return tex;
 }
