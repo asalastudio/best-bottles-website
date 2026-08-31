@@ -22,13 +22,17 @@
  * is what real studio glass does.
  */
 
-export type StudioPresetId = "softbox-tent" | "room" | "mono-studio" | "lightformer-rig";
+export type StudioPresetId =
+  "softbox-tent" | "room" | "mono-studio" | "lightformer-rig" | "hybrid-small08";
 
 export type StudioPreset = {
   id: StudioPresetId;
   label: string;
   /** equirectangular HDR served from /public, or null to use in-scene lights */
   hdri: string | null;
+  /** true = the HDRI is COMBINED with Lightformers into one cubemap — the
+   *  scene shell mounts <StudioEnvironment/> instead of a bare hdri */
+  hybrid?: boolean;
   environmentIntensity: number;
   /** degrees */
   environmentRotation: number;
@@ -102,6 +106,27 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "The original in-scene rig from /lab/bottle-3d. Kept for comparison. " +
       "Its rim pair (intensity 22 and 18, scale [0.35, 3.0]) is narrow and hot " +
       "and is what produces the hard vertical stripes down a cylinder.",
+  },
+  "hybrid-small08": {
+    id: "hybrid-small08",
+    label: "Hybrid studio (Small 08 + formers)",
+    hdri: "/env/studio_small_08_1k.hdr",
+    hybrid: true,
+    environmentIntensity: 1.0,
+    environmentRotation: 0,
+    toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
+    backdrop: "#e9e6e0",
+    provenance:
+      "CANDIDATE single environment for the whole scene (2026-08-31 handoff): " +
+      "Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN preset) as " +
+      "the neutral coverage base, COMBINED in one cubemap with four " +
+      "Lightformers (StudioEnvironment.tsx): L/R vertical strips for " +
+      "clear-glass edges, overhead softbox for cap tops, broad dim backlight " +
+      "so amber/cobalt transmit. One env, no per-material envMap overrides; " +
+      "per-finish variation lives in material recipes (Convex). The strips " +
+      "knowingly test the banned-artefact law (narrow sources stripe " +
+      "cylinders) — Jordan judges at /dev/lighting-test before this can " +
+      "become APPROVED_STUDIO.",
   },
 };
 
