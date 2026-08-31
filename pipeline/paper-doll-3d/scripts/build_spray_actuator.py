@@ -39,8 +39,9 @@ n = len(prof)
 for s in range(SEG):
     th = 2 * math.pi * s / SEG
     c, sn = math.cos(th), math.sin(th)
+    # Blender is Z-up (same convention as closures.py); export_yup handles glTF
     for r, y in prof:
-        verts.append((r * MM * c, y * MM, r * MM * sn))
+        verts.append((r * MM * c, r * MM * sn, y * MM))
 for s in range(SEG):
     s2 = (s + 1) % SEG
     for i in range(n - 1):
@@ -63,10 +64,11 @@ if open_edges:
 bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
 bm.to_mesh(me); bm.free()
 
-# nozzle orifice: shallow recess on the head front, near the top
+# nozzle orifice: recess bored horizontally into the head front, near the
+# top (Blender -Y = glTF +Z = toward the default camera)
 noz = bpy.ops.mesh.primitive_cylinder_add(
     radius=1.15 * MM, depth=3.0 * MM,
-    location=(0, 15.2 * MM, 6.0 * MM), rotation=(math.pi / 2, 0, 0))
+    location=(0, -6.0 * MM, 15.2 * MM), rotation=(math.pi / 2, 0, 0))
 noz_obj = bpy.context.active_object
 mod = obj.modifiers.new("nozzle", "BOOLEAN")
 mod.operation = "DIFFERENCE"; mod.object = noz_obj; mod.solver = "EXACT"
