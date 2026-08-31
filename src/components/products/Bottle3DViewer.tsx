@@ -123,6 +123,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     normal: "/models/pbr/matte/normal.png",
     rough: "/models/pbr/matte/roughness.png",
   });
+  // leather grain (CC0 ambientCG Leather028) — without it the leather caps
+  // wore the generic matte maps and read as painted plastic
+  const leatherMaps = useTexture({
+    normal: "/models/pbr/leather/normal.png",
+    rough: "/models/pbr/leather/roughness.png",
+  });
   // matcap for the dip tube: view-dependent core/edge/sheen baked into one
   // image - the only way a translucent-plastic read survives the opaque
   // pass without env flare (matcaps ignore the environment entirely)
@@ -138,13 +144,17 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
   }, [tubeMatcap, glassMatcap]);
   useEffect(() => {
-    for (const t of Object.values(matteMaps)) {
-      t.colorSpace = THREE.NoColorSpace;
-      t.wrapS = t.wrapT = THREE.RepeatWrapping;
-      t.repeat.set(3, 1);
-      t.needsUpdate = true;
+    // normal/roughness are DATA, not colour — NoColorSpace or the lighting
+    // is subtly wrong in a way that reads as a bad material
+    for (const [set, rpt] of [[matteMaps, 3], [leatherMaps, 2]] as const) {
+      for (const t of Object.values(set)) {
+        t.colorSpace = THREE.NoColorSpace;
+        t.wrapS = t.wrapT = THREE.RepeatWrapping;
+        t.repeat.set(rpt as number, 1);
+        t.needsUpdate = true;
+      }
     }
-  }, [matteMaps]);
+  }, [matteMaps, leatherMaps]);
 
   // materials are memoized per registry name and SHARED across every mesh
   // and clone that wears them — 20+ swappable parts per bottle makes
@@ -155,7 +165,8 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     let mat = matCache.get(name) ?? null;
     if (!mat) {
       const spec = mats ? getSpec(mats, name) : null;
-      mat = createMaterial(spec, { metalEnv, plasticEnv, matteMaps });
+      mat = createMaterial(spec, { metalEnv, plasticEnv,
+                                   maps: { matte: matteMaps, leather: leatherMaps } });
       matCache.set(name, mat);
     }
     const uv = needsCylindricalUV(mats ? getSpec(mats, name) : null);
@@ -166,7 +177,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       mesh.material = mat as THREE.Material;
     });
     return scene;
-  }, [mats, matCache, metalEnv, plasticEnv, matteMaps]);
+  }, [mats, matCache, metalEnv, plasticEnv, matteMaps, leatherMaps]);
 
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;

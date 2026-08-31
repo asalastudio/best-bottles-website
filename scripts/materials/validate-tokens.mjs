@@ -57,8 +57,10 @@ const fam = {};
 for (const [id, m] of Object.entries(t.materials)) (fam[m.family] ??= []).push([id, m]);
 for (const [f, members] of Object.entries(fam)) {
   if (members.length < 2) continue;
-  // Colour MAY differ inside a family — that is what a colourway is. Every
-  // other property must match: same substance + same finish = same numbers.
+  // Colour MAY differ inside a family — that is what a colourway is. For
+  // glass the colour lives in the attenuation pair, not a base colour, so
+  // those are exempt too. Every other property must match: same substance
+  // + same finish = same numbers.
   const varying = ["roughness", "metalness", "clearcoat", "ior", "maps"].filter(
     (k) => new Set(members.map(([, m]) => JSON.stringify(m[k] ?? m.lanes?.web?.[k]))).size > 1);
   const eIs = new Set(members.map(([, m]) => m.lanes?.web?.envMapIntensity).filter((v) => v != null));

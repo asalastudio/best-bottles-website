@@ -17,6 +17,8 @@ const VESTIGIAL = new Set(["GLASS_CLEAR","GLASS_AMBER","GLASS_COBALT","GLASS_GRE
 const CORE = ["metalness","roughness","clearcoat","ior","transmission","specularIntensity","specularColor"];
 const WEB  = ["envMapIntensity","env","maps","opacity","alphaHash"];
 let checked = 0; const bad = [];
+// a field may differ ONLY if the port declared it, with a reason
+const allowed = new Set((t.intentionalChanges ?? []).map((c) => `${c.token}|${c.field}`));
 
 for (const [key, o] of Object.entries(old)) {
   if (VESTIGIAL.has(key)) continue;
@@ -33,7 +35,9 @@ for (const [key, o] of Object.entries(old)) {
   }
   for (const f of WEB) {
     const a = o[f] ?? null, b = n.lanes?.web?.[f] ?? null;
-    if (JSON.stringify(a) !== JSON.stringify(b)) bad.push(`${key}.${f}: ${a} -> ${b}`);
+    if (JSON.stringify(a) === JSON.stringify(b)) continue;
+    if (allowed.has(`${id}|lanes.web.${f}`)) continue;   // declared, with a reason
+    bad.push(`${key}.${f}: ${a} -> ${b}`);
   }
   // a merged token carries every contributing key's approval text
   if (o.note && !(n.provenance ?? "").includes(o.note))
@@ -42,5 +46,8 @@ for (const [key, o] of Object.entries(old)) {
 
 console.log(`compared ${checked} legacy materials against their tokens`);
 if (bad.length) { console.log("\nDRIFT:"); bad.forEach((b) => console.log("  ✗ " + b)); }
-console.log(bad.length ? "\nPARITY: FAIL" : "\nPARITY: PASS — no material value changed");
+const declared = (t.intentionalChanges ?? []).length;
+if (declared) console.log(`\n${declared} declared change(s):`);
+for (const c of t.intentionalChanges ?? []) console.log(`  • ${c.token}.${c.field}: ${c.from} -> ${c.to}`);
+console.log(bad.length ? "\nPARITY: FAIL" : `\nPARITY: PASS — no undeclared material value changed`);
 process.exit(bad.length ? 1 : 0);

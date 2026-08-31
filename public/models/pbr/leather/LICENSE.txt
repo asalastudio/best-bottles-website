@@ -1,0 +1,2 @@
+CC0 1.0 — ambientCG (https://ambientcg.com/view?id=Leather028)
+Fetched by scripts/materials/fetch-pbr-maps.mjs

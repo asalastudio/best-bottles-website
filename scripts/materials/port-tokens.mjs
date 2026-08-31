@@ -69,7 +69,9 @@ const MAP = {
   STUDIO_BONE:   ["stage.bone", "stage"],
 };
 
-/** Vestigial: real glass lives in glassPresets.ts; these are placeholders. */
+/** The old GLASS_* rows in materials.json were empty placeholders (all
+ *  #ffffff, no glass fields). Real glass is ported below from the
+ *  approved presets, and reclaims these alias names. */
 const DROP = new Set(["GLASS_CLEAR","GLASS_AMBER","GLASS_COBALT","GLASS_GREEN","GLASS_FROSTED"]);
 
 const CLASS_OF = (id) => id.split(".")[0];
@@ -127,6 +129,82 @@ for (const [key, v] of Object.entries(src.materials)) {
   }
 }
 
+
+// ---------------------------------------------------------------- glass
+// Ported from the SAME approved values the app already renders, extracted
+// exactly by scripts/materials/extract-glass.mts (no regex parsing — the
+// provenance strings are approval records and must survive verbatim).
+//
+// thickness stays PER-GEOMETRY. The flat `thickness` here is only the
+// thin-wall fallback; bodies with a bake use it, which is why the token
+// records the source rather than pretending one number fits every bottle.
+const GLASS_SRC = "data/materials/glass-presets.generated.json";
+let glassCount = 0;
+try {
+  const presets = JSON.parse(readFileSync(GLASS_SRC, "utf8"));
+  const GLASS_WEB = new Set([
+    "envMapIntensity", "distortion", "anisotropicBlur", "envRotationDeg",
+    "thinWall", "thicknessBake",
+  ]);
+  for (const [pid, g] of Object.entries(presets)) {
+    const id = `glass.${pid}`;
+    // family = substance + FINISH, same rule as the metals. clear/swirl are
+    // the same flint glass (swirl differs by BODY MESH, not material);
+    // amber/cobalt are one pigmented finish differing only in attenuation;
+    // frosted is a genuinely different, etched surface.
+    const GLASS_FAMILY = {
+      clear: "glass.flint", swirl: "glass.flint",
+      amber: "glass.pigmented", cobalt: "glass.pigmented",
+      frosted: "glass.etched",
+    };
+    const core = { class: "glass", family: GLASS_FAMILY[pid] ?? "glass" };
+    const web = {};
+    for (const [k, v] of Object.entries(g)) {
+      if (v === null || v === undefined) continue;
+      if (k === "id" || k === "label" || k === "provenance") continue;
+      if (k === "thickness") {
+        core.thickness = {
+          source: "geometry",
+          bake: "/models/bodies-thickness/{bodyId}.thickness.png",
+          fallbackM: v,
+          why: "real wall thickness per body; the flat value is the thin-wall path only",
+        };
+        continue;
+      }
+      (GLASS_WEB.has(k) ? web : core)[k] = v;
+    }
+    if (Object.keys(web).length) core.lanes = { web };
+    if (g.provenance) core.provenance = g.provenance;
+    core.label = g.label;
+    materials[id] = core;
+    aliases[`GLASS_${pid.toUpperCase()}`] = id;
+    glassCount++;
+  }
+} catch (e) {
+  conflicts.push(`GLASS NOT PORTED — run: npx tsx scripts/materials/extract-glass.mts (${e.message})`);
+}
+
+
+// ------------------------------------------------------- declared changes
+// The port is otherwise value-for-value. Anything deliberately CHANGED is
+// declared here with a reason, and verify-parity exempts exactly these and
+// nothing else — so "no material value changed" stays a real guarantee
+// instead of quietly eroding.
+const intentionalChanges = [];
+for (const [id, m] of Object.entries(materials)) {
+  if (!id.startsWith("polymer.leather.")) continue;
+  const from = m.lanes?.web?.maps ?? null;
+  (m.lanes ??= {}).web = { ...(m.lanes.web ?? {}), maps: "leather" };
+  intentionalChanges.push({
+    token: id, field: "lanes.web.maps", from, to: "leather",
+    why: "Leather wore the generic matte maps, so it read as painted plastic. " +
+         "Now uses the CC0 ambientCG Leather028 grain (normal + roughness at " +
+         "512, public/models/pbr/leather). Colour still comes from the token: " +
+         "the source colour map is brown and would overwrite all five approved " +
+         "colourways.",
+  });
+}
+
 const out = {
   schemaVersion: "1.0.0",
   generatedBy: "scripts/materials/port-tokens.mjs",
@@ -145,17 +223,11 @@ const out = {
       "Blender must render ACES (not 'Standard') at this exposure. " +
       "See docs/configurator/RENDER-DESIGN-SYSTEM-PROPOSAL.md §3.",
   },
-  glass: {
-    status: "pending-port",
-    source: "src/lib/materials/glassPresets.ts",
-    why: "Glass carries per-geometry thickness bakes and approved per-colourway " +
-         "env rotations; porting it alongside the metals would have put two " +
-         "approved surfaces at risk in one change. Ported next.",
-  },
+  intentionalChanges,
   aliases,
   materials,
 };
 
 writeFileSync(OUT, JSON.stringify(out, null, 2) + "\n");
-console.log(`wrote ${OUT}: ${Object.keys(materials).length} tokens, ${Object.keys(aliases).length} aliases`);
+console.log(`wrote ${OUT}: ${Object.keys(materials).length} tokens (${glassCount} glass), ${Object.keys(aliases).length} aliases`);
 if (conflicts.length) { console.log("\nISSUES:"); conflicts.forEach((c) => console.log("  " + c)); }

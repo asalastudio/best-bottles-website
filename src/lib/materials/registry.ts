@@ -61,15 +61,19 @@ export function getSpec(tokens: TokenFile, name: string): TokenSpec | null {
   return id ? tokens.materials[id] ?? null : null;
 }
 
+type MapSet = { normal: THREE.Texture; rough: THREE.Texture };
 export type Envs = {
   metalEnv?: THREE.Texture | null;
   plasticEnv?: THREE.Texture | null;
-  matteMaps?: { normal: THREE.Texture; rough: THREE.Texture };
+  /** keyed by the token's lanes.web.maps value: "matte" | "leather" | … */
+  maps?: Record<string, MapSet>;
+  /** @deprecated pass via `maps.matte` */
+  matteMaps?: MapSet;
 };
 
 /** True when the token's maps need a UV set the closure GLBs do not carry. */
 export function needsCylindricalUV(spec: TokenSpec | null): boolean {
-  return (spec?.lanes?.web as { maps?: string } | undefined)?.maps === "matte";
+  return Boolean((spec?.lanes?.web as { maps?: string } | undefined)?.maps);
 }
 
 /**
@@ -111,11 +115,18 @@ export function createMaterial(spec: TokenSpec | null, envs: Envs): THREE.MeshPh
   if (spec?.specularIntensity != null) mat.specularIntensity = spec.specularIntensity;
   if (spec?.specularColor) mat.specularColor = new THREE.Color(spec.specularColor);
 
-  if (web.maps === "matte" && envs.matteMaps) {
-    mat.normalMap = envs.matteMaps.normal;
-    mat.roughnessMap = envs.matteMaps.rough;
+  // any token naming a map set gets it — "matte" for the brushed metals,
+  // "leather" for the grain. One branch, so adding a set is data not code.
+  const set = web.maps
+    ? envs.maps?.[web.maps] ?? (web.maps === "matte" ? envs.matteMaps : undefined)
+    : undefined;
+  if (set) {
+    mat.normalMap = set.normal;
+    mat.roughnessMap = set.rough;
     mat.roughness = 1.0;                     // the map IS the roughness
-    mat.normalScale = new THREE.Vector2(0.6, 0.6);
+    // leather grain needs more relief than a brushed-metal micro-finish
+    const depth = web.maps === "leather" ? 1.0 : 0.6;
+    mat.normalScale = new THREE.Vector2(depth, depth);
   }
 
   const glossy = (spec?.metalness ?? 0) >= 0.85 || (spec?.roughness ?? 1) <= 0.3;
