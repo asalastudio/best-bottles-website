@@ -83,12 +83,17 @@ EMITTERS = [
     # (2026-08-30) because rects have no falloff - that is why the room is an
     # HDRI and not JSX.
     # key softbox: big, warm, front-left - the broad sheen that slides
-    dict(theta=-0.55, phi=0.75, wt=1.10, wp=0.90, i=6.5, c=(1.00,0.99,0.96), soft=1.00),
+    dict(theta=-0.55, phi=0.75, wt=1.10, wp=0.90, i=9.0, c=(1.00,0.99,0.96), soft=1.00),
     # window: tall cool panel front-right. WIDE enough to wrap (wt 0.55 =
     # the tent's approved rim width), never a bar
-    dict(theta= 0.95, phi=0.95, wt=0.55, wp=1.25, i=4.5, c=(0.93,0.96,1.00), soft=1.00),
-    # broad dim front fill so the camera side of the room exists
-    dict(theta= 0.10, phi=1.05, wt=1.60, wp=1.00, i=1.4, c=(0.99,0.98,0.96), soft=1.00),
+    dict(theta= 0.95, phi=0.95, wt=0.55, wp=1.25, i=7.0, c=(0.93,0.96,1.00), soft=1.00),
+    # THE SHEEN STRIP: the thin bright vertical reflection production glass
+    # carries (IMG_5048 has exactly one; Pacdora's glass lives on it). The
+    # front face mirrors the env BEHIND the camera, so it sits near theta 0.
+    # Narrow is allowed - HARD is not: soft=1.0, so it slides as a gradient.
+    dict(theta=-0.22, phi=1.00, wt=0.24, wp=1.40, i=16.0, c=(1,1,1), soft=1.00),
+    # dim front fill so the camera side of the room exists around the strip
+    dict(theta= 0.30, phi=1.05, wt=1.20, wp=1.00, i=0.9, c=(0.99,0.98,0.96), soft=1.00),
     # behind: wide soft bounce, keeps the far wall alive through the glass
     dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.8, c=(1.00,0.98,0.95), soft=1.00),
     # overhead scrim
@@ -129,6 +134,20 @@ def build():
     img = np.stack([sky * 0.97 + floor * fw[0],
                     sky * 0.98 + floor * fw[1],
                     sky * 1.00 + floor * fw[2]], axis=-1)
+
+    if PROFILE == "room":
+        # dark zones BEFORE the emitters: a cylinder's flanks mirror the
+        # sideways/behind directions, and reflections only read where the
+        # mirrored world is darker or brighter than the transmitted backdrop.
+        # A uniform bright field erases them - measured on the 9 ml amber,
+        # which rendered matte until these went in. Fully feathered.
+        for zt, zp, wt, wp, depth in [(2.10, 1.15, 0.90, 0.95, 0.70),
+                                      (-2.10, 1.15, 0.90, 0.95, 0.70),
+                                      (3.14159, 1.10, 0.80, 0.90, 0.55)]:
+            dt = np.abs((T - zt + math.pi) % (2 * math.pi) - math.pi) / wt
+            dp = np.abs(P - zp) / wp
+            f = smoothstep(1.0, 0.0, np.hypot(dt, dp))
+            img *= (1.0 - depth * f)[..., None]
 
     for e in EMITTERS:
         dt = np.abs((T - e["theta"] + math.pi) % (2 * math.pi) - math.pi) / e["wt"]
