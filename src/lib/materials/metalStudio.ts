@@ -20,7 +20,11 @@ export function useMetalStudio(): THREE.Texture {
   const gl = useThree((s) => s.gl);
   const tex = useMemo(() => {
     const pmrem = new THREE.PMREMGenerator(gl);
-    const t = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+    // sigma 0.28: bakes the room PRE-BLURRED. Level-on, a cylinder catches
+    // the room's several wall lights as hard line streaks (Jordan) — the
+    // blur melts them into the same broad sheen the top-down view gets
+    // from the big ceiling light, without losing energy.
+    const t = pmrem.fromScene(new RoomEnvironment(), 0.28).texture;
     pmrem.dispose();
     return t;
   }, [gl]);

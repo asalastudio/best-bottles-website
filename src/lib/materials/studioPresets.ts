@@ -85,11 +85,10 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     toneMappingExposure: 0.95,
     backdrop: "#e9e6e0",
     provenance:
-      "Poly Haven monochrome_studio_02 (CC0, 2k), downloaded 2026-08-31 at " +
-      "Jordan's direction as a candidate glass studio: a real monochrome " +
-      "photo studio with broad soft sources. Staged for A/B against the " +
-      "approved room - NOT yet approved; switch APPROVED_STUDIO only after " +
-      "Jordan signs off on all five glass colourways under it.",
+      "Poly Haven monochrome_studio_02 (CC0, 2k). Tried as the glass studio " +
+      "2026-08-31 and REJECTED within minutes (Jordan: 'the monochrome " +
+      "lighting is not going to work'). Kept as a lab A/B option only. " +
+      "4k EXR master: pipeline/paper-doll-3d/assets/hdri-sources/.",
   },
   "lightformer-rig": {
     id: "lightformer-rig",
