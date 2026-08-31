@@ -109,10 +109,13 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
   // line of the matcap into full-height smears (Jordan's gold cap close-up).
   // Cylindrical caps are PBR metal under the rhythmic metal env instead —
   // which is exactly what Pacdora's chrome cap is.
-  // Poly Haven studio_small_08 (CC0): a REAL studio with softboxes, stands
-  // and a room - the structure that makes the showcase balls sing. Synthetic
-  // cards never matched it; metals mirror this now.
-  const metalEnv = useEnvironment({ files: "/models/studio-metal-ph.hdr" });
+  // THE UNIVERSAL REFLECTION STUDIO (Jordan): one real studio for every
+  // reflective component, clean rather than busy - a 19mm cap cannot carry
+  // clutter. Now Poly Haven studio_small_03 (CC0), the NEUTRAL classic
+  // (drei's own "studio" preset): brown_photostudio_02 was warm and turned
+  // mirror silver sepia ("the silver went wacky"). Mirrors have no colour
+  // of their own - a neutral studio is what keeps silver silver.
+  const metalEnv = useEnvironment({ files: "/models/studio-universal.hdr" });
   // matcap for the BALL only: a chrome sphere in a soft-gradient env is
   // indistinguishable from glass (mirrors show only their surroundings);
   // "steel" is a baked PATTERN - bright sky, crisp horizon, dark floor,
@@ -680,7 +683,11 @@ export default function MaterialLab(
           <color attach="background"
                  args={[new THREE.Color(bg).multiplyScalar(0.32)]} />
           <Suspense fallback={null}>
-            <Center key={modelUrl}>
+            {/* disableY: the GLB contract puts the base at y=0 and the rig
+                targets h/2 above origin. Vertical centering re-centred the
+                WHOLE assembly when the closure mounted, sinking the bottle
+                foot through the floor. */}
+            <Center key={modelUrl} disableY>
               <Model url={modelUrl} preset={working} envIntensity={envIntensity}
                      thicknessUrl={bakeLive
                        ? `/models/bodies-thickness/${body.bodyId}.thickness.png`
@@ -696,7 +703,7 @@ export default function MaterialLab(
                      onMeasure={onMeasure} />
             </Center>
             {ground && m ? (
-              <group position={[0, -(m.hMm / 1000) / 2, 0]}>
+              <group position={[0, 0, 0]}>
                 {/* caustics need a surface to land on, and a floating bottle
                     reads as a cut-out no matter how good the glass is */}
                 {/* seamless cyclorama: floor sweeps up into the back wall

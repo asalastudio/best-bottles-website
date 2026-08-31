@@ -10,51 +10,51 @@
         0.083
       ],
       "metalness": 1.0,
-      "roughness": 1.0,
+      "roughness": 0.46,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "maps": "matte",
-      "envMapIntensity": 1.5,
+      "maps": null,
+      "envMapIntensity": 1.2,
       "env": "metal",
       "specularColor": "#fdf9f9",
-      "note": "metal.copper - physicallybased.info measured values (CC0) via bernhard-42/threejs-materials (Apache-2.0); brushed/matte finishes use the repo's real normal+roughness maps at /models/pbr/ COLOUR OVERRIDE kept per Jordan: measured F0 copper is pale-pink and 'lost its copperness'; the penny tone #c77e52 is the approved product colour."
+      "note": "Jordan-approved scorecard values restored 2026-08-31 (the library's matte MAPS regressed them: roughness-1.0 base x map pattern reads speckly-gloss on a 19mm cap). No maps; flat measured colour at matte roughness. Copper = the approved penny tone #c77e52, matte."
     },
     "CAP_MATTE_GOLD": {
-      "color": "#fff2c9",
+      "color": "#ffe29b",
       "linear": [
-        0.9999999999999999,
-        0.8926775272379572,
-        0.5900005962166698
+        1.0,
+        0.766,
+        0.336
       ],
       "metalness": 1.0,
-      "roughness": 1.0,
+      "roughness": 0.4,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "maps": "matte",
-      "envMapIntensity": 1.5,
+      "maps": null,
+      "envMapIntensity": 1.2,
       "env": "metal",
       "specularColor": "#fcfffe",
-      "note": "metal.gold - physicallybased.info measured values (CC0) via bernhard-42/threejs-materials (Apache-2.0); brushed/matte finishes use the repo's real normal+roughness maps at /models/pbr/"
+      "note": "Jordan-approved scorecard values restored 2026-08-31 (the library's matte MAPS regressed them: roughness-1.0 base x map pattern reads speckly-gloss on a 19mm cap). No maps; flat measured colour at matte roughness."
     },
     "CAP_MATTE_SILVER": {
-      "color": "#fffefe",
+      "color": "#fbf7ee",
       "linear": [
-        0.9960333152256678,
-        0.9933771717300072,
-        0.9884829524812248
+        0.972,
+        0.96,
+        0.915
       ],
       "metalness": 1.0,
-      "roughness": 1.0,
+      "roughness": 0.42,
       "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "maps": "matte",
-      "envMapIntensity": 1.5,
+      "maps": null,
+      "envMapIntensity": 1.2,
       "env": "metal",
       "specularColor": "#fefeff",
-      "note": "metal.silver - physicallybased.info measured values (CC0) via bernhard-42/threejs-materials (Apache-2.0); brushed/matte finishes use the repo's real normal+roughness maps at /models/pbr/"
+      "note": "Jordan-approved scorecard values restored 2026-08-31 (the library's matte MAPS regressed them: roughness-1.0 base x map pattern reads speckly-gloss on a 19mm cap). No maps; flat measured colour at matte roughness."
     },
     "CAP_SHINY_BLACK": {
       "color": "#0b0b0b",
