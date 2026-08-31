@@ -76,17 +76,28 @@ EMITTERS = [
     # overhead scrim - soft falloff down the shoulder
     dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.30, i=2.6, c=(1,1,1), soft=1.00),
 ] if PROFILE == "metal" else [
-    # METAL profile: chrome/gold sparkle = hard-edged bright cards over a
-    # dark field. This env is FOR COMPONENTS ONLY (balls, caps) — never for
-    # glass, where hard edges paint lines. A mirrored ball wants a studio
-    # full of crisp windows.
-    dict(theta=-0.55, phi=0.55, wt=0.55, wp=0.70, i=14.0, c=(1.00,0.99,0.97), soft=0.20),
-    dict(theta= 0.85, phi=0.65, wt=0.30, wp=0.90, i=10.0, c=(0.95,0.97,1.00), soft=0.15),
-    dict(theta= 2.30, phi=0.80, wt=0.40, wp=0.60, i=7.0,  c=(1.00,0.98,0.95), soft=0.25),
-    dict(theta=-2.40, phi=0.95, wt=0.25, wp=0.80, i=6.0,  c=(1,1,1),          soft=0.20),
-    dict(theta= 0.10, phi=0.18, wt=1.60, wp=0.28, i=9.0,  c=(1,1,1),          soft=0.30),
-    # low warm bounce so the underside is not dead
-    dict(theta= 0.0,  phi=2.30, wt=2.20, wp=0.60, i=1.2,  c=(1.00,0.96,0.90), soft=0.80),
+    # METAL profile v2: FOR COMPONENTS ONLY — never glass. A cylinder cap
+    # mirrors only the EQUATOR band, sweeping it into vertical streaks, so
+    # the equator must carry a RHYTHM of many alternating bright cards and
+    # narrow dark gaps (Pacdora's chrome cap look). v1's sparse cards left
+    # wide dark gaps that smeared into muddy blotches (Jordan: "terrible").
+    # Tall cards spanning the equator, varied width/intensity/softness:
+    dict(theta=-2.80, phi=1.00, wt=0.28, wp=1.20, i=5.0,  c=(1.00,0.99,0.97), soft=0.30),
+    dict(theta=-2.10, phi=1.00, wt=0.18, wp=1.20, i=8.0,  c=(1,1,1),          soft=0.20),
+    dict(theta=-1.45, phi=1.00, wt=0.40, wp=1.20, i=3.5,  c=(0.97,0.98,1.00), soft=0.45),
+    dict(theta=-0.75, phi=1.00, wt=0.22, wp=1.20, i=10.0, c=(1.00,0.99,0.96), soft=0.20),
+    dict(theta=-0.10, phi=1.00, wt=0.50, wp=1.20, i=4.5,  c=(1,1,1),          soft=0.40),
+    dict(theta= 0.60, phi=1.00, wt=0.20, wp=1.20, i=9.0,  c=(0.96,0.98,1.00), soft=0.18),
+    dict(theta= 1.30, phi=1.00, wt=0.35, wp=1.20, i=3.0,  c=(1.00,0.98,0.95), soft=0.50),
+    dict(theta= 2.05, phi=1.00, wt=0.16, wp=1.20, i=7.0,  c=(1,1,1),          soft=0.22),
+    dict(theta= 2.75, phi=1.00, wt=0.45, wp=1.20, i=2.5,  c=(0.98,0.98,0.99), soft=0.55),
+    # overhead pool for ball domes and cap tops — v3: calmed from i=9/soft
+    # 0.30. Every upward-tilted cap CHAMFER mirrors this card as a
+    # continuous white ring around the cap edge (Jordan: "white line around
+    # the cap"); moderate + soft keeps the top alive without the halo.
+    dict(theta= 0.10, phi=0.18, wt=1.60, wp=0.30, i=3.0,  c=(1,1,1),          soft=0.70),
+    # low warm bounce so undersides are not dead
+    dict(theta= 0.0,  phi=2.30, wt=2.20, wp=0.60, i=1.4,  c=(1.00,0.96,0.90), soft=0.80),
 ] if PROFILE == "browser" else [
     # ROOM profile: the reflections themselves are the product feature
     # (Aesop-style sheen). The tent's field is featureless on purpose; a room
@@ -157,9 +168,11 @@ def build():
     # reads as real amber.
     up = np.cos(P)
     if PROFILE == "metal":
-        # dark field: contrast IS the shine
-        sky = 0.05 + 0.10 * smoothstep(-0.85, 0.95, up)
-        floor = 0.07 * smoothstep(0.10, -1.00, up)
+        # dark-ISH field: contrast is the shine, but v1's near-black gaps
+        # smeared into mud on cylinders - lift the base so gaps read as
+        # graphite, not voids
+        sky = 0.10 + 0.14 * smoothstep(-0.85, 0.95, up)
+        floor = 0.12 * smoothstep(0.10, -1.00, up)
     elif PROFILE == "browser":
         sky = 0.28 + 0.55 * smoothstep(-0.85, 0.95, up)
         floor = 0.22 * smoothstep(0.10, -1.00, up)

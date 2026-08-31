@@ -48,9 +48,13 @@ type Measured = {
 const CLOSURE_MATS: Record<string, { color: string; roughness: number;
   metalness: number; clearcoat?: number }> = {} as never;
 
-function Closure({ mode, neckY, capMat, ballMat }: {
+export type MatOverride = {
+  color?: string; roughness?: number; envMapIntensity?: number;
+} | null;
+
+function Closure({ mode, neckY, capMat, ballMat, capTune }: {
   mode: "roller" | "rollerCapped" | "none"; neckY: number;
-  capMat: string; ballMat: string;
+  capMat: string; ballMat: string; capTune: MatOverride;
 }) {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
@@ -84,17 +88,18 @@ function Closure({ mode, neckY, capMat, ballMat }: {
       t.needsUpdate = true;
     }
   }, [matcaps]);
-  const MATCAP_FOR: Record<string, THREE.Texture> = {
-    PART_BALL_STEEL: matcaps.steel,
-    CAP_SHINY_SILVER: matcaps.steel,
-    CAP_SHINY_GOLD: matcaps.gold,
-    CAP_MATTE_GOLD: matcaps.goldMatte,
-    CAP_MATTE_SILVER: matcaps.silverMatte,
-    CAP_COPPER: matcaps.copperMatte,
-  };
-  const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string) => {
+  // matcap ONLY for the ball: spheres sample the whole baked studio, but a
+  // straight cylinder wall varies its normal only horizontally and drags one
+  // line of the matcap into full-height smears (Jordan's gold cap close-up).
+  // Cylindrical caps are PBR metal under the rhythmic metal env instead —
+  // which is exactly what Pacdora's chrome cap is.
+  const metalEnv = useEnvironment({ files: "/models/studio-metal.hdr" });
+  const MATCAP_FOR: Record<string, THREE.Texture> = {};
+  const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string,
+                             tune?: MatOverride) => {
     const scene = gltf.scene.clone(true);
-    const m = mats?.[matName];
+    const base = mats?.[matName];
+    const m = base ? { ...base, ...(tune || {}) } : base;
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
@@ -102,6 +107,21 @@ function Closure({ mode, neckY, capMat, ballMat }: {
       if (mc) {
         mesh.material = new THREE.MeshMatcapMaterial({ matcap: mc });
         return;
+      }
+      const aniso = (m as { anisotropy?: number } | undefined)?.anisotropy ?? 0;
+      if (aniso > 0 && !mesh.geometry.getAttribute("uv")) {
+        // anisotropy needs a tangent frame; the geometry-only closure GLBs
+        // carry no UVs, so generate a cylindrical unwrap on the fly
+        const pos = mesh.geometry.getAttribute("position");
+        const uv = new Float32Array(pos.count * 2);
+        mesh.geometry.computeBoundingBox();
+        const bb = mesh.geometry.boundingBox as THREE.Box3;
+        const h = Math.max(1e-6, bb.max.y - bb.min.y);
+        for (let i = 0; i < pos.count; i++) {
+          uv[i * 2] = (Math.atan2(pos.getX(i), pos.getZ(i)) / (2 * Math.PI)) + 0.5;
+          uv[i * 2 + 1] = (pos.getY(i) - bb.min.y) / h;
+        }
+        mesh.geometry.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
       }
       const phys = m ? {
         color: new THREE.Color(m.color), roughness: m.roughness,
@@ -118,21 +138,29 @@ function Closure({ mode, neckY, capMat, ballMat }: {
       // every closure part lights from the bright component env — the dark
       // glass room greys white phenolic and smokes chrome (both observed);
       // components get their own bounce light like any product shoot
-      // plastics light from the soft tent (the dark glass room greys them)
-      mat.envMap = plasticEnv;
-      mat.envMapIntensity = 0.9;
+      // metallized AND glossy surfaces mirror the rhythmic metal studio
+      // (glossy black under a featureless env goes flat); matte plastics
+      // light from the soft tent (the dark glass room greys them)
+      if (aniso > 0) {
+        mat.anisotropy = aniso;
+        mat.anisotropyRotation = Math.PI / 2;   // flash runs along the cap axis
+      }
+      const glossy = phys.metalness >= 0.85 || phys.roughness <= 0.3;
+      mat.envMap = glossy ? metalEnv : plasticEnv;
+      const envOverride = (m as { envMapIntensity?: number } | undefined)?.envMapIntensity;
+      mat.envMapIntensity = envOverride ?? (glossy ? 1.15 : 0.9);
       mesh.material = mat;
     });
     return scene;
-  }, [mats, plasticEnv, matcaps]);
+  }, [mats, plasticEnv, metalEnv, matcaps]);
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
     g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
     g.push({ scene: build(ball, ballMat) });
-    if (mode === "rollerCapped") g.push({ scene: build(cap, capMat) });
+    if (mode === "rollerCapped") g.push({ scene: build(cap, capMat, capTune) });
     return g;
-  }, [mode, mats, build, housing, ball, cap, capMat, ballMat]);
+  }, [mode, mats, build, housing, ball, cap, capMat, ballMat, capTune]);
   if (!parts) return null;
   return (
     <group position={[0, neckY, 0]}>
@@ -143,7 +171,7 @@ function Closure({ mode, neckY, capMat, ballMat }: {
 
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
-  thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, onMeasure,
+  thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, capTune, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
@@ -153,7 +181,7 @@ function Model({
   /** baked frost mask, or null for a uniformly finished colourway */
   frostUrl: string | null;
   closure: "roller" | "rollerCapped" | "none";
-  capMat: string; ballMat: string;
+  capMat: string; ballMat: string; capTune: MatOverride;
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
@@ -255,7 +283,8 @@ function Model({
   return (
     <group>
       <primitive object={scene} />
-      <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat} />
+      <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
+               capTune={capTune} />
       {glass && transmissionMat && !preset.thinWall && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
@@ -282,7 +311,7 @@ function Model({
             roughnessMap={frostUrl ? frostTex : null}
             backside={!preset.thinWall}
             backsideThickness={effBackside}
-            samples={8}
+            samples={16}
             resolution={1024}
             backsideResolution={512}
             roughness={preset.roughness}
@@ -308,7 +337,7 @@ function Model({
             thicknessMap={thicknessTex}
             roughnessMap={frostUrl ? frostTex : null}
             backside={!preset.thinWall} backsideThickness={effBackside}
-            samples={8} resolution={1024} backsideResolution={512}
+            samples={16} resolution={1024} backsideResolution={512}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
@@ -505,6 +534,10 @@ export default function MaterialLab(
   const [closure, setClosure] = useState<"roller" | "rollerCapped" | "none">("roller");
   const [capMat, setCapMat] = useState("CAP_SHINY_BLACK");
   const [ballMat, setBallMat] = useState("PART_BALL_STEEL");
+  // live overrides for the SELECTED cap finish — Jordan tunes caps the same
+  // way he tunes glass, then Copy hands back JSON for materials.json
+  const [capTune, setCapTune] = useState<MatOverride>(null);
+  useEffect(() => { setCapTune(null); }, [capMat]);
   // Reference comparison. The photo is held LOCALLY (object URL) — nothing is
   // uploaded. Framing does not need to match: scale/offset/opacity exist so a
   // hand-held shot can still be lined up for judging.
@@ -619,6 +652,7 @@ export default function MaterialLab(
                        : null}
                      bakeMax={bakeLive ? bakeMax : null}
                      closure={closure} capMat={capMat} ballMat={ballMat}
+                     capTune={capTune}
                      frostUrl={uvModel && working.frostMask
                        ? `/models/bodies-thickness/${body.bodyId}.frost.png`
                        : null}
@@ -811,6 +845,29 @@ export default function MaterialLab(
                 <button key={m} onClick={() => setCapMat(m)} style={btn(capMat === m)}>{n}</button>
               ))}
             </>) : null}
+          </div>
+        ) : null}
+        {closure === "rollerCapped" ? (
+          <div style={{ margin: "0 0 8px", padding: "6px 8px",
+                        border: "1px solid #26262c", borderRadius: 4 }}>
+            <div style={{ fontSize: 10, color: "#8a8a94", marginBottom: 4 }}>
+              cap tuning — {capMat}{capTune ? " (edited)" : ""}
+            </div>
+            <Slider label="cap roughness" value={capTune?.roughness ?? 0.2}
+                    min={0} max={0.8} step={0.01}
+                    onChange={(v) => setCapTune((t) => ({ ...t, roughness: v }))} />
+            <Slider label="cap env intensity" value={capTune?.envMapIntensity ?? 1.0}
+                    min={0} max={2.5} step={0.05}
+                    onChange={(v) => setCapTune((t) => ({ ...t, envMapIntensity: v }))} />
+            <div style={{ display: "flex", gap: 6, alignItems: "center" }}>
+              <span style={{ color: "#b9b9c4", fontSize: 11 }}>cap color</span>
+              <HexField value={capTune?.color ?? "#888888"}
+                        onValid={(v) => setCapTune((t) => ({ ...t, color: v }))} />
+              <button onClick={() => navigator.clipboard.writeText(
+                        JSON.stringify({ [capMat]: capTune }, null, 2))}
+                      style={btn(false)}>copy</button>
+              <button onClick={() => setCapTune(null)} style={btn(false)}>reset</button>
+            </div>
           </div>
         ) : null}
         <label style={{ display: "flex", gap: 6, alignItems: "center",

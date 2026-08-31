@@ -252,20 +252,19 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 0.98,
     roughness: 0.45,
     ior: 1.54,
-    thickness: 0.0002,
-    attenuationColor: "#dfe2e2",
+    thickness: 0.0165,
+    attenuationColor: "#b6babd",
     attenuationDistance: 0.028,
     dispersion: 0.5,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 0.9,
     frostMask: true,
-    thinWall: true,
-    thicknessBake: false,
     distortion: 0.05,
-    anisotropicBlur: 0.25,
+    anisotropicBlur: 0.12,
     envRotationDeg: 18,
     provenance:
+      "BACK ON THE MTM PATH 2026-08-31 after the thin-wall detour: native transmission couples its screen-space blur to surface roughness, so the frosted body SMEARED the gold cap downward into the glass on pan (Jordan: colour pours into the bottle). MeshTransmissionMaterial decouples them - roughness 0.45 keeps the etch, anisotropicBlur 0.12 keeps the transmission calm. Measured scatter values restored: #b6babd @ 0.028 (T .725/.736/.742 vs reference .727/.722/.709). " +
       "REBASED 2026-08-31 onto the Pacdora thin-wall recipe (Jordan: the rough-0.1 DoubleSide clear registered as frosted - so frosted claims it): thinWall + DoubleSide + thickness 0.0002, roughness 0.45 for the etch. NOTE the measured scatter-loss attenuation (#b6babd @ 0.028) cannot act at thin-wall thickness - the slight darkening now comes from the material colour path; re-tune by eye against frosted.jpg. " +
       "SOLVED 2026-08-31 by measurement, approved by Jordan ('keep it'). " +
       "The earlier claim that the ratio method cannot apply to frosted was " +
