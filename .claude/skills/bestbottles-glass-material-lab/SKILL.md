@@ -214,6 +214,25 @@ Hard-won component rules (Jordan's scorecard, 2026-08-31):
   smear - native transmission couples them and pours neighbours' colour
   into the glass on pan.
 
+## Measure the ASSET before tuning the material
+
+If a material "cannot" look right no matter what you change, stop tuning and
+**measure the geometry**. The roller ball resisted every metal treatment for
+an entire session — matcaps, five environments, F0 colours, env intensities —
+because `BB_ROLL_BALL_17415_*` shipped with **100% inverted normals**
+(`mean dot(normal, outward) = -1.000`): shading was lighting the sphere's
+inside. `fix_inverted_normals.py` fixed the asset in one command and plain
+PBR chrome worked immediately.
+
+```python
+# the check, on any GLB
+c = pos.mean(axis=0); rad = (pos - c); rad /= np.linalg.norm(rad, axis=1, keepdims=True)
+print((nrm * rad).sum(axis=1).mean())   # ~+1 outward, ~-1 INVERTED
+```
+
+Check normals, winding and scale first. A workaround that hides an asset bug
+(the matcap detour) costs more than the five minutes of measuring.
+
 ## Recording an approval
 
 Presets are DATA (`src/lib/materials/glassPresets.ts`), tuned in the lab and
