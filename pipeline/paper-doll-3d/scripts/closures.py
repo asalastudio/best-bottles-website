@@ -548,18 +548,18 @@ def ansp_collar_builder(rig, finish, variant):
     fm = rig.FINISH_MASTERS[finish]
     skirt = fm["finish_h"] - 0.45
     prof = [
-        (fm["bore_d"] / 2.0 - 0.2, -skirt),
-        (fm["bore_d"] / 2.0 - 0.2, 16.0),      # inner sleeve
-        (2.0, 17.0), (2.0, 38.0),              # stem core
-        (1.2, 38.2),                           # tip
-        (2.2, 37.6), (4.6, 33.0), (4.4, 28.5), # bullet nozzle
-        (2.6, 27.0), (2.6, 25.0),
-        (4.0, 24.2), (4.0, 23.2),              # ring
-        (2.8, 22.6), (2.8, 21.4),
-        (4.5, 20.6), (4.5, 19.6),              # ring
-        (9.0, 18.6),
+        (10.65, -skirt),                        # barrel wall bottom
         (10.65, 18.5),                          # barrel top
-        (10.65, -skirt),                        # barrel wall to rim skirt
+        (9.0, 18.6),
+        (4.5, 19.6), (4.5, 20.6),               # ring
+        (2.8, 21.4), (2.8, 22.6),
+        (4.0, 23.2), (4.0, 24.2),               # ring
+        (2.6, 25.0), (2.6, 27.0),
+        (4.4, 28.5), (4.6, 33.0), (2.2, 37.6),  # bullet nozzle
+        (1.2, 38.2),                            # tip
+        (2.0, 38.0), (2.0, 17.0),               # stem core
+        (fm["bore_d"] / 2.0 - 0.2, 16.0),       # inner sleeve
+        (fm["bore_d"] / 2.0 - 0.2, -skirt),
     ]
     return dict(spec=dict(asset_id=f"BB_ANSP_COLLAR_{finish.replace('-','')}",
                           od=21.3, barrel_h=18.5, top=38.2),

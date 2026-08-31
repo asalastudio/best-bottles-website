@@ -65,18 +65,17 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     // finemist (clear only) / perfumespray / lotionpump renderable today;
     // dropper, reducer and antique-bulb pages keep the photo gallery
     // until their geometry lands.
-    slugRe: /^elegant-60ml-(clear|frosted)-18-415-(finemist|perfumespray|lotionpump|reducer|antiquespray|antiquespray-tassel)$/,
+    slugRe: /^elegant-60ml-(clear|frosted)-18-415-(finemist|perfumespray|lotionpump|reducer)$/,
     glasses: ["clear", "frosted"],
-    bases: ["none", "reducer", "sprayer", "pump", "antique", "antiqueTassel"],
+    bases: ["none", "reducer", "sprayer", "pump"],
     bodyDefault: "Elegant-oval-18-415-87x55",
     slugColour: { clear: "clear", frosted: "frosted" },
     // perfumespray exists in BOTH colourways (finemist is clear-only), so
     // sibling navigation lands on the token every colourway has
-    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump",
-                   antique: "antiquespray", antiqueTassel: "antiquespray-tassel" },
+    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump" },
     closureFromSlug: {
       finemist: "sprayer", perfumespray: "sprayer", lotionpump: "pump",
-      reducer: "reducer", antiquespray: "antique", tassel: "antiqueTassel",
+      reducer: "reducer",
     },
     buildSlug: (c, cl) => `elegant-60ml-${c}-18-415-${cl}`,
   },
@@ -88,15 +87,13 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     // SKU truth: clear + frosted; perfumespray + lotionpump renderable
     // (antique bulb, dropper, reducer keep the photo gallery; the lone
     // 18-400 reducer variant is a different finish entirely)
-    slugRe: /^circle-50ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer|antiquespray|antiquespray-tassel)$/,
+    slugRe: /^circle-50ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer)$/,
     glasses: ["clear", "frosted"],
-    bases: ["none", "reducer", "sprayer", "pump", "antique", "antiqueTassel"],
+    bases: ["none", "reducer", "sprayer", "pump"],
     bodyDefault: "Circle-disc-18-415-88x73",
     slugColour: { clear: "clear", frosted: "frosted" },
-    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump",
-                   antique: "antiquespray", antiqueTassel: "antiquespray-tassel" },
-    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump",
-                       antiquespray: "antique", tassel: "antiqueTassel" },
+    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump" },
+    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump" },
     buildSlug: (c, cl) => `circle-50ml-${c}-18-415-${cl}`,
   },
   {
@@ -104,15 +101,13 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
     finish: "18-415",
     trims: ["CAP_SHINY_BLACK", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
             "CAP_MATTE_SILVER", "CAP_SHINY_SILVER", "CAP_COPPER"],
-    slugRe: /^circle-100ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer|antiquespray|antiquespray-tassel)$/,
+    slugRe: /^circle-100ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer)$/,
     glasses: ["clear", "frosted"],
-    bases: ["none", "reducer", "sprayer", "pump", "antique", "antiqueTassel"],
+    bases: ["none", "reducer", "sprayer", "pump"],
     bodyDefault: "Circle-disc-18-415-111x94",
     slugColour: { clear: "clear", frosted: "frosted" },
-    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump",
-                   antique: "antiquespray", antiqueTassel: "antiquespray-tassel" },
-    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump",
-                       antiquespray: "antique", tassel: "antiqueTassel" },
+    slugClosure: { reducer: "reducer", sprayer: "perfumespray", pump: "lotionpump" },
+    closureFromSlug: { reducer: "reducer", perfumespray: "sprayer", lotionpump: "pump" },
     buildSlug: (c, cl) => `circle-100ml-${c}-18-415-${cl}`,
   },
 ];
