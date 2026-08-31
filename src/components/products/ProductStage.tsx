@@ -67,11 +67,14 @@ export default function ProductStage({
   envRotationDeg = 0,
   targetY = 0.035,
   backdrop = STAGE.backdrop,
+  ground = true,
   children,
 }: {
   envRotationDeg?: number;
   targetY?: number;
   backdrop?: string;
+  /** false = the floating presentation: no sweep, no contact shadow */
+  ground?: boolean;
   children: React.ReactNode;
 }) {
   const studio = STUDIO_PRESETS[APPROVED_STUDIO];
@@ -89,16 +92,18 @@ export default function ProductStage({
         <color attach="background" args={[offFrame]} />
         <Suspense fallback={null}>
           {children}
-          <group>
-            <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
-              <planeGeometry args={[1.2, 1.2]} />
-              <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness} />
-            </mesh>
-            <ContactShadows opacity={STAGE.shadow.opacity} scale={STAGE.shadow.scale}
-                            blur={STAGE.shadow.blur} far={STAGE.shadow.far}
-                            resolution={tier === "lite" ? 512 : 1024}
-                            color={STAGE.shadow.color} />
-          </group>
+          {ground ? (
+            <group>
+              <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.0002, 0]}>
+                <planeGeometry args={[1.2, 1.2]} />
+                <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness} />
+              </mesh>
+              <ContactShadows opacity={STAGE.shadow.opacity} scale={STAGE.shadow.scale}
+                              blur={STAGE.shadow.blur} far={STAGE.shadow.far}
+                              resolution={tier === "lite" ? 512 : 1024}
+                              color={STAGE.shadow.color} />
+            </group>
+          ) : null}
           {studio.hdri ? <Environment files={studio.hdri} /> : null}
           <StudioContext rotationDeg={envRotationDeg} />
         </Suspense>

@@ -52,13 +52,20 @@ export type MatOverride = {
   color?: string; roughness?: number; envMapIntensity?: number;
 } | null;
 
-function Closure({ mode, neckY, capMat, ballMat, capTune }: {
-  mode: "roller" | "rollerCapped" | "none"; neckY: number;
-  capMat: string; ballMat: string; capTune: MatOverride;
+type LabClosure = "none" | "roller" | "rollerCapped"
+  | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
+
+function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat }: {
+  mode: LabClosure; neckY: number;
+  capMat: string; ballMat: string; capTune: MatOverride; trimMat: string;
 }) {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
   const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
+  const collar = useGLTF("/models/closures/BB_SPR_COLLAR_17415.glb");
+  const actuator = useGLTF("/models/closures/BB_SPR_ACTUATOR_17415.glb");
+  const overcap = useGLTF("/models/closures/BB_SPR_OVERCAP_17415.glb");
+  const spout = useGLTF("/models/closures/BB_PMP_SPOUT_17415.glb");
   const [mats, setMats] = useState<Record<string, {
     color: string; roughness: number; metalness: number; clearcoat?: number;
   }> | null>(null);
@@ -211,11 +218,22 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
-    g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
-    g.push({ scene: build(ball, ballMat) });
-    if (mode === "rollerCapped") g.push({ scene: build(cap, capMat, capTune) });
+    if (mode === "roller" || mode === "rollerCapped") {
+      g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
+      g.push({ scene: build(ball, ballMat) });
+      if (mode === "rollerCapped") g.push({ scene: build(cap, capMat, capTune) });
+    } else {
+      // the trim tune rides capTune so the same sliders serve sprays too
+      g.push({ scene: build(collar, trimMat, capTune) });
+      g.push({ scene: build(actuator, trimMat, capTune) });
+      if (mode === "pump" || mode === "pumpCapped")
+        g.push({ scene: build(spout, trimMat, capTune) });
+      if (mode === "sprayerCapped" || mode === "pumpCapped")
+        g.push({ scene: build(overcap, "PART_OVERCAP_CLEAR") });
+    }
     return g;
-  }, [mode, mats, build, housing, ball, cap, capMat, ballMat, capTune]);
+  }, [mode, mats, build, housing, ball, cap, collar, actuator, overcap, spout,
+      capMat, ballMat, capTune, trimMat]);
   if (!parts) return null;
   return (
     <group position={[0, neckY, 0]}>
@@ -226,7 +244,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune }: {
 
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
-  thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, capTune, onMeasure,
+  thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, capTune, trimMat, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
@@ -235,8 +253,8 @@ function Model({
   thicknessUrl: string | null; bakeMax: number | null;
   /** baked frost mask, or null for a uniformly finished colourway */
   frostUrl: string | null;
-  closure: "roller" | "rollerCapped" | "none";
-  capMat: string; ballMat: string; capTune: MatOverride;
+  closure: LabClosure;
+  capMat: string; ballMat: string; trimMat: string; capTune: MatOverride;
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
@@ -339,7 +357,7 @@ function Model({
     <group>
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
-               capTune={capTune} />
+               capTune={capTune} trimMat={trimMat} />
       {glass && transmissionMat && !preset.thinWall && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
@@ -587,7 +605,8 @@ export default function MaterialLab(
   const [threaded, setThreaded] = useState(true);
   // interior content: Pacdora's lesson — clear glass needs something of its
   // own to refract. Also the first live configurator joint.
-  const [closure, setClosure] = useState<"roller" | "rollerCapped" | "none">("roller");
+  const [closure, setClosure] = useState<LabClosure>("roller");
+  const [trimMat, setTrimMat] = useState("CAP_SHINY_BLACK");
   const [capMat, setCapMat] = useState("CAP_SHINY_BLACK");
   const [ballMat, setBallMat] = useState("PART_BALL_STEEL");
   // live overrides for the SELECTED cap finish — Jordan tunes caps the same
@@ -722,7 +741,7 @@ export default function MaterialLab(
                        : null}
                      bakeMax={bakeLive ? bakeMax : null}
                      closure={closure} capMat={capMat} ballMat={ballMat}
-                     capTune={capTune}
+                     capTune={capTune} trimMat={trimMat}
                      frostUrl={uvModel && working.frostMask
                        ? `/models/bodies-thickness/${body.bodyId}.frost.png`
                        : null}
@@ -897,12 +916,26 @@ export default function MaterialLab(
         </label>
         <div style={{ display: "flex", gap: 4, alignItems: "center", margin: "2px 0 8px" }}>
           <span style={{ color: "#b9b9c4", fontSize: 11, marginRight: 4 }}>closure</span>
-          {(["none", "roller", "rollerCapped"] as const).map((m) => (
+          {(["none", "roller", "rollerCapped", "sprayer", "sprayerCapped",
+             "pump", "pumpCapped"] as const).map((m) => (
             <button key={m} onClick={() => setClosure(m)} style={btn(closure === m)}>
-              {m === "rollerCapped" ? "roller+cap" : m}
+              {m === "rollerCapped" ? "roller+cap"
+               : m === "sprayerCapped" ? "spray+cap"
+               : m === "pumpCapped" ? "pump+cap" : m}
             </button>
           ))}
         </div>
+        {closure.startsWith("spray") || closure.startsWith("pump") ? (
+          <div style={{ display: "flex", gap: 4, alignItems: "center",
+                        margin: "0 0 6px", flexWrap: "wrap" }}>
+            <span style={{ color: "#b9b9c4", fontSize: 11, marginRight: 2 }}>trim</span>
+            {[["black", "CAP_SHINY_BLACK"], ["gold", "CAP_SHINY_GOLD"],
+              ["mt silver", "CAP_MATTE_SILVER"], ["sh silver", "CAP_SHINY_SILVER"],
+              ["turquoise", "SPRAY_TURQUOISE"], ["red", "SPRAY_RED"]].map(([n, m]) => (
+              <button key={m} onClick={() => setTrimMat(m)} style={btn(trimMat === m)}>{n}</button>
+            ))}
+          </div>
+        ) : null}
         {closure !== "none" ? (
           <div style={{ display: "flex", gap: 4, alignItems: "center",
                         margin: "0 0 6px", flexWrap: "wrap" }}>
@@ -921,11 +954,11 @@ export default function MaterialLab(
             </>) : null}
           </div>
         ) : null}
-        {closure === "rollerCapped" ? (
+        {closure === "rollerCapped" || closure.startsWith("spray") || closure.startsWith("pump") ? (
           <div style={{ margin: "0 0 8px", padding: "6px 8px",
                         border: "1px solid #26262c", borderRadius: 4 }}>
             <div style={{ fontSize: 10, color: "#8a8a94", marginBottom: 4 }}>
-              cap tuning — {capMat}{capTune ? " (edited)" : ""}
+              {closure === "rollerCapped" ? "cap" : "trim"} tuning — {closure === "rollerCapped" ? capMat : trimMat}{capTune ? " (edited)" : ""}
             </div>
             <Slider label="cap roughness" value={capTune?.roughness ?? 0.2}
                     min={0} max={0.8} step={0.01}

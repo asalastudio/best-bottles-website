@@ -234,23 +234,20 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
 
 /* -------------------------------------------------------------- entrance */
 
-/** The bottle settles into place on load — a rising, decelerating spin that
- *  hands off into the idle auto-rotate (the Pacdora arrival). Pure easing,
- *  no extra deps; runs once per mount. */
+/** The bottle SPINS into place on load — rotation only, no rise, no scale
+ *  pop (Jordan: "it just spins into place and doesn't rise up from
+ *  anywhere"). Decelerating spin hands off into the idle auto-rotate. */
 function EntranceGroup({ children }: { children: React.ReactNode }) {
   const ref = useRef<THREE.Group | null>(null);
   const t = useRef(0);
-  const DURATION = 1.6;
+  const DURATION = 1.5;
   useFrame((_, delta) => {
     const g = ref.current;
     if (!g || t.current >= DURATION) return;
     t.current = Math.min(DURATION, t.current + delta);
     const x = t.current / DURATION;
     const e = 1 - Math.pow(1 - x, 3);              // easeOutCubic
-    const settle = 1 + 2.2 * Math.pow(1 - x, 3) * Math.sin(x * 9); // faint sway
-    g.position.y = (1 - e) * -0.028;
-    g.rotation.y = (1 - e) * -1.35 * settle;
-    g.scale.setScalar(0.94 + 0.06 * e);
+    g.rotation.y = (1 - e) * -1.6;
   });
   return <group ref={ref}>{children}</group>;
 }
@@ -279,7 +276,8 @@ export default function Bottle3DViewer({
     <div className={className}
          style={{ position: "relative", width: "100%", aspectRatio: "10 / 11",
                   background: backdrop, borderRadius: 4, overflow: "hidden" }}>
-      <ProductStage envRotationDeg={preset.envRotationDeg} targetY={h / 2}
+      <ProductStage envRotationDeg={preset.envRotationDeg}
+                    targetY={h * 0.62} ground={false}
                     backdrop={backdrop}>
         <EntranceGroup>
           <Center disableY>
@@ -289,9 +287,12 @@ export default function Bottle3DViewer({
                     onHeight={onHeight} />
           </Center>
         </EntranceGroup>
-        <OrbitControls makeDefault target={[0, h / 2, 0]}
-                       enablePan={false} minDistance={0.12} maxDistance={0.45}
-                       minPolarAngle={Math.PI / 3.2} maxPolarAngle={Math.PI / 1.9}
+        {/* rotate-only: tilt LOCKED (min == max polar), no pan — the
+            floating bottle turns like a jewellery piece; target sits above
+            the bottle's middle so it rides lower in the viewport */}
+        <OrbitControls makeDefault target={[0, h * 0.62, 0]}
+                       enablePan={false} minDistance={0.14} maxDistance={0.4}
+                       minPolarAngle={Math.PI / 2.05} maxPolarAngle={Math.PI / 2.05}
                        autoRotate={!touched} autoRotateSpeed={0.9}
                        onStart={() => setTouched(true)} />
       </ProductStage>
