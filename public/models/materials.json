@@ -596,18 +596,20 @@
       "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
     },
     "PART_DIPTUBE_PP": {
-      "color": "#e9ebe8",
+      "color": "#f4f5f4",
       "linear": null,
       "metalness": 0.0,
-      "roughness": 0.45,
-      "clearcoat": 0.0,
+      "roughness": 0.18,
+      "clearcoat": 0.55,
       "ior": 1.49,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 0.7,
+      "envMapIntensity": 0.75,
       "env": "tent",
       "specularColor": null,
-      "note": "OPAQUE milky PP - transmission MUST stay 0: three.js transmissive materials sample only the OPAQUE pass, so a transmissive tube is invisible through transmissive glass (found live on Circle 100). Dip tube: milky translucent PP, visible through clear/frosted glass - the content that makes the vessel refract (Pacdora lesson; Jordan 2026-08-31)."
+      "note": "MEASURED from the PSD tube layer itself (GBCrcl100SpryCu Layer 2: rgb ~246, alpha ~93%, O2.8mm at 13.25px/mm): the real tube reads NEAR-OPAQUE WHITE and thin - the 'paper' failure was width+flatness, not whiteness. Opaque + clearcoat highlight; NO alpha hash (dither read as animation noise - Jordan). Curved bezier geometry per the product photos.",
+      "opacity": 1.0,
+      "alphaHash": false
     }
   }
 }

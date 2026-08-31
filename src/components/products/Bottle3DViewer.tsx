@@ -133,6 +133,24 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         ior: m.ior ?? 1.5, transmission: m.transmission ?? 0,
       } : { color: 0x999999, roughness: 0.4, metalness: 0.4 });
       if ((m?.transmission ?? 0) > 0) mat.thickness = 0.002;
+      // alpha translucency (dip tube et al): transparent objects DO render
+      // into three's transmission buffer, so translucent parts stay visible
+      // through transmissive glass — unlike transmissive-in-transmissive
+      const op = (m as { opacity?: number } | undefined)?.opacity;
+      const hash = (m as { alphaHash?: boolean } | undefined)?.alphaHash;
+      if (op != null && op < 1) {
+        if (hash) {
+          // stochastic transparency IN the opaque pass — the only
+          // translucency that survives three's transmission buffer
+          // (alpha-blended AND transmissive parts are both excluded)
+          mat.alphaHash = true;
+          mat.opacity = op;
+        } else {
+          mat.transparent = true;
+          mat.opacity = op;
+          mat.depthWrite = false;
+        }
+      }
       // library reflectivity fields (Jordan's MeshPhongMaterial.reflectivity
       // pointer): specularIntensity scales dielectric F0 — the pop a glossy
       // black needs that roughness alone can't give

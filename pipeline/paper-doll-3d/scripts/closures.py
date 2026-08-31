@@ -456,21 +456,36 @@ def leather_cap_builder(rig, finish, variant):
 
 
 def dip_tube_builder(rig, finish, variant):
-    """The DIP TUBE (Jordan: "we can't just go raw dog without them") — the
-    thin PP tube descending from the pump/spray stem to the bottle base.
-    Through clear or frosted glass it is what gives the vessel content to
-    refract (the Pacdora lesson). Nominal length per finish; the viewer
-    scales it to each body's interior depth. Angled tip like the real part.
-    Origin = rim datum; the tube runs DOWN (-z)."""
-    import math
-    ro, ri = 2.0, 1.5
+    """The DIP TUBE, Pacdora-grade (Jordan's reference,
+    pacdora.com/mockup-detail/510470): a THIN gently CURVED translucent
+    line whose tip drifts to the bottle wall — never a straight fat rod
+    ("looks like a piece of paper"). Swept O3 bezier, straight under the
+    stem then bowing sideways toward the base. Origin = rim datum,
+    descending -z; the viewer scales length to each body."""
     L = 62.0 if finish == "17-415" else 80.0
-    tip = 3.0                                     # 45-deg-ish angled tip
-    prof = [(ri, 0.0), (ri, -(L - tip - 0.5)), (ro * 0.45, -L),
-            (ro, -(L - tip)), (ro, 0.0)]
+    bow = 7.0
+    cu = bpy.data.curves.new("BB_DIP_TUBE", "CURVE")
+    cu.dimensions = "3D"
+    sp = cu.splines.new("BEZIER")
+    sp.bezier_points.add(2)
+    for bp, co in zip(sp.bezier_points,
+                      [(0.0, 0.0, 1.0), (0.6, 0.0, -L * 0.55),
+                       (bow, 0.0, -L + 1.0)]):
+        bp.co = co
+        bp.handle_left_type = bp.handle_right_type = "AUTO"
+    cu.bevel_depth = 1.4
+    cu.bevel_resolution = 6
+    cu.resolution_u = 32
+    cu.use_fill_caps = True
+    obj = bpy.data.objects.new("BB_DIP_TUBE", cu)
+    bpy.context.scene.collection.objects.link(obj)
+    bpy.ops.object.select_all(action="DESELECT")
+    obj.select_set(True)
+    bpy.context.view_layer.objects.active = obj
+    bpy.ops.object.convert(target="MESH")
+    obj = bpy.context.active_object
     return dict(spec=dict(asset_id=f"BB_DIP_TUBE_{finish.replace('-','')}",
-                          od=ro * 2, length=L),
-                profile=prof, modulate=None)
+                          od=2.8, length=L, bow=bow), object=obj)
 
 
 def nozzle_insert_builder(rig, finish, variant):
