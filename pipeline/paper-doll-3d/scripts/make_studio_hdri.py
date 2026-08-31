@@ -98,12 +98,12 @@ EMITTERS = [
     # top light 2: cooler, above right — the second accent
     dict(theta= 0.90, phi=0.40, wt=0.60, wp=0.40, i=5.0, c=(0.94,0.96,1.00), soft=0.70),
     # horizon band: one VERY wide, VERY gentle warm gradient for the body
-    dict(theta=-0.35, phi=0.95, wt=1.60, wp=1.10, i=1.5, c=(1.00,0.99,0.96), soft=1.00),
+    dict(theta=-0.35, phi=0.95, wt=1.60, wp=1.10, i=0.9, c=(1.00,0.99,0.96), soft=1.00),
     # behind: wide soft bounce, keeps the far wall alive through the glass
-    dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=1.4, c=(1.00,0.98,0.95), soft=1.00),
+    dict(theta= math.pi, phi=1.05, wt=1.30, wp=1.00, i=0.9, c=(1.00,0.98,0.95), soft=1.00),
     # overhead scrim - v10: calmed from 2.6. Pacdora's zenith band averages
     # 0.72 against our 2.53; a hot ceiling flattens clear glass.
-    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=1.6, c=(1,1,1), soft=0.90),
+    dict(theta=0.0, phi=0.16, wt=math.pi, wp=0.34, i=1.2, c=(1,1,1), soft=0.90),
     # ---- v10 STRUCTURE LAYER, learned from Pacdora's shipped env
     # (cdn 7c4487d5..., analysed 2026-08-31: 512x256, Photoshop-painted,
     # max 5.8x, 99.5% of pixels under 2.6x, mild structure at EVERY
@@ -155,8 +155,12 @@ def build():
         # saturation; it also triples the two top lights' relative punch, so
         # the highlight strengthens for free. Floor kept relatively higher -
         # it lights the cyclorama sweep, which must stay bone.
-        sky = 0.07 + 0.16 * smoothstep(-0.85, 0.95, up)
-        floor = 0.13 * smoothstep(0.10, -1.00, up)
+        # v11: matched to Pacdora's measured mean (0.44 vs our 0.80). The
+        # kill test on clear proved transmission was perfect (body/bg = 1.00)
+        # and the "white plastic" was OUR FACE SHEEN - ambient reflection
+        # blanketing the glass. Darker room, same two top lights.
+        sky = 0.05 + 0.11 * smoothstep(-0.85, 0.95, up)
+        floor = 0.11 * smoothstep(0.10, -1.00, up)
     else:
         sky = 0.030 + 0.075 * smoothstep(-0.85, 0.95, up)
         floor = 0.020 * smoothstep(0.10, -1.00, up)

@@ -222,7 +222,7 @@ function Model({
             thickness={effThickness}
             thicknessMap={thicknessTex}
             roughnessMap={frostUrl ? frostTex : null}
-            backside
+            backside={!preset.thinWall}
             backsideThickness={effBackside}
             samples={8}
             resolution={1024}
@@ -249,7 +249,7 @@ function Model({
             transmission={preset.transmission} thickness={effThickness}
             thicknessMap={thicknessTex}
             roughnessMap={frostUrl ? frostTex : null}
-            backside backsideThickness={effBackside}
+            backside={!preset.thinWall} backsideThickness={effBackside}
             samples={8} resolution={1024} backsideResolution={512}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
@@ -590,7 +590,7 @@ export default function MaterialLab(
                                             "#include <dithering_fragment>",
                                             "#include <dithering_fragment>\n" +
                                             "float g = smoothstep(-0.05, 1.05, vSweepY);\n" +
-                                            "gl_FragColor.rgb *= mix(1.06, 0.72, g);\n" +
+                                            "gl_FragColor.rgb *= mix(0.97, 0.80, g);\n" +
                                             // off-axis falloff: invisible behind the
                                             // bottle, but the silhouette's edge lens
                                             // compresses it into the dark bands real

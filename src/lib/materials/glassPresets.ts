@@ -67,6 +67,15 @@ export type GlassPreset = {
   clearcoatRoughness: number;
   /** how hard the studio shows in the surface. */
   envMapIntensity: number;
+  /** true = render as THIN-WALL glass: no backside pass, near-zero optical
+   *  path. MeshTransmissionMaterial's backside machinery is built for SOLID
+   *  volumes; on a hollow shell its "backside" is the INTERIOR surfaces, so
+   *  it literally draws the cavity's bore-to-wall transition into the glass
+   *  (the stubborn line below the shoulder) and fogs the body. Thin clear
+   *  glass barely refracts - Pacdora's clear passes the background through
+   *  almost undistorted. Tinted colourways MUST stay volume-mode: absorption
+   *  is their identity. */
+  thinWall?: boolean;
   /** false = skip the baked thicknessMap for this finish. The bake encodes
    *  ABSORPTION depth, which colourless glass has none of - all the map does
    *  on clear is modulate the refraction offset, drawing the bake's shoulder
@@ -104,7 +113,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 1.0,
     roughness: 0.02,
     ior: 1.54,
-    thickness: 0.002,
+    thickness: 0.004,
     attenuationColor: "#eef6f2",
     attenuationDistance: 0.06,
     dispersion: 1.4,
@@ -112,7 +121,8 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.15,
     thicknessBake: false,
-    distortion: 0.14,
+    thinWall: true,
+    distortion: 0.05,
     anisotropicBlur: 0.05,
     envRotationDeg: 62,
     provenance:
