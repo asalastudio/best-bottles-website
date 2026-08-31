@@ -111,7 +111,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     id: "clear",
     label: "Clear",
     transmission: 1.0,
-    roughness: 0.1,
+    roughness: 0.04,
     ior: 1.5,
     thickness: 0.0002,
     attenuationColor: "#eef6f2",
@@ -119,13 +119,14 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     dispersion: 0,
     clearcoat: 0,
     clearcoatRoughness: 0,
-    envMapIntensity: 1.0,
+    envMapIntensity: 1.2,
     thicknessBake: false,
     thinWall: true,
     distortion: 0.05,
     anisotropicBlur: 0.05,
     envRotationDeg: 62,
     provenance:
+      "Jordan 2026-08-31: the rough-0.1 recipe read as frosted-lite, so it moved to the FROSTED preset; clear sharpens to roughness 0.04 with envMapIntensity 1.2 (Pacdora themselves run the same recipe at two points - 0.1 on the spray model, 0.06 on the 550911 bottle). Stage on the umber/grey ground: on bone, colourless glass is white-on-white. " +
       "PACDORA'S EXACT RECIPE, scraped 2026-08-31 from their model API " +
       "(api/v2/models/details, mockup 510470, part '主体'/body): stock " +
       "MeshPhysicalMaterial - transmission 1, thickness ABSENT (0: zero " +
@@ -249,20 +250,23 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     id: "frosted",
     label: "Frosted",
     transmission: 0.98,
-    roughness: 0.55,
+    roughness: 0.45,
     ior: 1.54,
-    thickness: 0.0165,
-    attenuationColor: "#b6babd",
+    thickness: 0.0002,
+    attenuationColor: "#dfe2e2",
     attenuationDistance: 0.028,
     dispersion: 0.5,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 0.9,
     frostMask: true,
+    thinWall: true,
+    thicknessBake: false,
     distortion: 0.05,
     anisotropicBlur: 0.25,
     envRotationDeg: 18,
     provenance:
+      "REBASED 2026-08-31 onto the Pacdora thin-wall recipe (Jordan: the rough-0.1 DoubleSide clear registered as frosted - so frosted claims it): thinWall + DoubleSide + thickness 0.0002, roughness 0.45 for the etch. NOTE the measured scatter-loss attenuation (#b6babd @ 0.028) cannot act at thin-wall thickness - the slight darkening now comes from the material colour path; re-tune by eye against frosted.jpg. " +
       "SOLVED 2026-08-31 by measurement, approved by Jordan ('keep it'). " +
       "The earlier claim that the ratio method cannot apply to frosted was " +
       "WRONG in one respect: the reference measures 27% DARKER than its " +

@@ -11,7 +11,8 @@
 
 import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
 import { Canvas, useThree } from "@react-three/fiber";
-import { OrbitControls, Environment, Lightformer, useGLTF, useTexture, Center,
+import { OrbitControls, Environment, Lightformer, useGLTF, useTexture,
+         useEnvironment, Center,
          MeshTransmissionMaterial, Caustics, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
 import {
@@ -47,8 +48,10 @@ type Measured = {
 const CLOSURE_MATS: Record<string, { color: string; roughness: number;
   metalness: number; clearcoat?: number }> = {} as never;
 
-function Closure({ mode, neckY }: { mode: "roller" | "rollerCapped" | "none";
-                                    neckY: number }) {
+function Closure({ mode, neckY, capMat, ballMat }: {
+  mode: "roller" | "rollerCapped" | "none"; neckY: number;
+  capMat: string; ballMat: string;
+}) {
   const housing = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const ball = useGLTF("/models/closures/BB_ROLL_BALL_17415_STEEL.glb");
   const cap = useGLTF("/models/closures/BB_CAP_17415.glb");
@@ -59,6 +62,11 @@ function Closure({ mode, neckY }: { mode: "roller" | "rollerCapped" | "none";
     fetch("/models/materials.json").then(r => r.json())
       .then(j => setMats(j.materials)).catch(() => {});
   }, []);
+  // metals mirror whatever surrounds them, and the room is deliberately
+  // dark for the glass — so a chrome ball reads as a smoked-glass dome
+  // (Jordan's close-up). Metals get their OWN bright environment, the way
+  // a product shot gives jewellery its own bounce card.
+  const metalEnv = useEnvironment({ files: "/models/studio-browser.hdr" });
   const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string) => {
     const scene = gltf.scene.clone(true);
     const m = mats?.[matName];
@@ -77,19 +85,22 @@ function Closure({ mode, neckY }: { mode: "roller" | "rollerCapped" | "none";
         mat.thickness = 0.002;
         mat.transparent = false;
       }
-      if (phys.metalness >= 1) mat.envMapIntensity = 1.6;   // steel mirrors
+      if (phys.metalness >= 0.85) {                 // steel, gold: own env
+        mat.envMap = metalEnv;
+        mat.envMapIntensity = 1.1;
+      }
       mesh.material = mat;
     });
     return scene;
-  }, [mats]);
+  }, [mats, metalEnv]);
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
     g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
-    g.push({ scene: build(ball, "PART_BALL_STEEL") });
-    if (mode === "rollerCapped") g.push({ scene: build(cap, "CAP_SHINY_BLACK") });
+    g.push({ scene: build(ball, ballMat) });
+    if (mode === "rollerCapped") g.push({ scene: build(cap, capMat) });
     return g;
-  }, [mode, mats, build, housing, ball, cap]);
+  }, [mode, mats, build, housing, ball, cap, capMat, ballMat]);
   if (!parts) return null;
   return (
     <group position={[0, neckY, 0]}>
@@ -100,7 +111,7 @@ function Closure({ mode, neckY }: { mode: "roller" | "rollerCapped" | "none";
 
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
-  thicknessUrl, bakeMax, frostUrl, closure, onMeasure,
+  thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, onMeasure,
 }: {
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
@@ -110,6 +121,7 @@ function Model({
   /** baked frost mask, or null for a uniformly finished colourway */
   frostUrl: string | null;
   closure: "roller" | "rollerCapped" | "none";
+  capMat: string; ballMat: string;
   onMeasure: (m: Measured) => void;
 }) {
   const gltf = useGLTF(url);
@@ -194,8 +206,12 @@ function Model({
       m.thicknessMap = thicknessTex;
       m.needsUpdate = true;
     }
+    if (frostUrl) {
+      m.roughnessMap = frostTex;
+      m.needsUpdate = true;
+    }
     return () => { glass.visible = false; };
-  }, [glass, preset, envIntensity, transmissionMat, bakeMax, thicknessTex]);
+  }, [glass, preset, envIntensity, transmissionMat, bakeMax, thicknessTex, frostUrl, frostTex]);
 
   // rim datum from the GLB's own empty — the manifest contract
   const neckY = useMemo(() => {
@@ -207,7 +223,7 @@ function Model({
   return (
     <group>
       <primitive object={scene} />
-      <Closure mode={closure} neckY={neckY} />
+      <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat} />
       {glass && transmissionMat && !preset.thinWall && caustics ? (
         <Caustics
           // The closest real-time approximation of light focused THROUGH the
@@ -455,6 +471,8 @@ export default function MaterialLab(
   // interior content: Pacdora's lesson — clear glass needs something of its
   // own to refract. Also the first live configurator joint.
   const [closure, setClosure] = useState<"roller" | "rollerCapped" | "none">("roller");
+  const [capMat, setCapMat] = useState("CAP_SHINY_BLACK");
+  const [ballMat, setBallMat] = useState("PART_BALL_STEEL");
   // Reference comparison. The photo is held LOCALLY (object URL) — nothing is
   // uploaded. Framing does not need to match: scale/offset/opacity exist so a
   // hand-held shot can still be lined up for judging.
@@ -487,8 +505,11 @@ export default function MaterialLab(
     return () => { dead = true; };
   }, [body.bodyId]);
 
-  const bakeLive = bakedMap && bakeMax != null && working.thicknessBake !== false;
-  const modelUrl = bakeLive
+  // the UV'd GLB serves BOTH maps; a preset may want the frost mask (UVs)
+  // without consuming the thickness map (thinWall frosted does exactly that)
+  const uvModel = bakedMap && bakeMax != null;
+  const bakeLive = uvModel && working.thicknessBake !== false;
+  const modelUrl = uvModel
     ? `/models/bodies-thickness/${body.bodyId}.glb`
     : threaded && hasThreaded
       ? `/models/bodies-threaded/${body.bodyId}.glb`
@@ -565,8 +586,8 @@ export default function MaterialLab(
                        ? `/models/bodies-thickness/${body.bodyId}.thickness.png`
                        : null}
                      bakeMax={bakeLive ? bakeMax : null}
-                     closure={closure}
-                     frostUrl={bakeLive && working.frostMask
+                     closure={closure} capMat={capMat} ballMat={ballMat}
+                     frostUrl={uvModel && working.frostMask
                        ? `/models/bodies-thickness/${body.bodyId}.frost.png`
                        : null}
                     transmissionMat={transmissionMat}
@@ -742,6 +763,23 @@ export default function MaterialLab(
             </button>
           ))}
         </div>
+        {closure !== "none" ? (
+          <div style={{ display: "flex", gap: 4, alignItems: "center",
+                        margin: "0 0 6px", flexWrap: "wrap" }}>
+            <span style={{ color: "#b9b9c4", fontSize: 11, marginRight: 2 }}>ball</span>
+            {[["steel", "PART_BALL_STEEL"], ["plastic", "PART_BALL_PLASTIC"]].map(([n, m]) => (
+              <button key={m} onClick={() => setBallMat(m)} style={btn(ballMat === m)}>{n}</button>
+            ))}
+            {closure === "rollerCapped" ? (<>
+              <span style={{ color: "#b9b9c4", fontSize: 11, margin: "0 2px 0 8px" }}>cap</span>
+              {[["black", "CAP_SHINY_BLACK"], ["gold", "CAP_SHINY_GOLD"],
+                ["silver", "CAP_SHINY_SILVER"], ["white", "CAP_WHITE"],
+                ["copper", "CAP_COPPER"]].map(([n, m]) => (
+                <button key={m} onClick={() => setCapMat(m)} style={btn(capMat === m)}>{n}</button>
+              ))}
+            </>) : null}
+          </div>
+        ) : null}
         <label style={{ display: "flex", gap: 6, alignItems: "center",
                         margin: "2px 0 4px",
                         cursor: bakeMax != null ? "pointer" : "default",
