@@ -1,0 +1,56 @@
+diff --git a/pipeline/paper-doll-3d/scripts/materials.py b/pipeline/paper-doll-3d/scripts/materials.py
+index 8850232..1d4c7d9 100644
+--- a/pipeline/paper-doll-3d/scripts/materials.py
++++ b/pipeline/paper-doll-3d/scripts/materials.py
+@@ -39,6 +39,7 @@ the LOOK will still need a browser check. Expect to go back and forth once.
+ from __future__ import annotations
+ 
+ import json
++import math
+ import sys
+ from pathlib import Path
+ 
+@@ -403,12 +404,38 @@ def extract():
+             ior=round(float(g("IOR", 1.5)), 4),
+             transmission=round(float(g("Transmission Weight", 0.0)), 4),
+         )
+-        # attenuation is not a Principled slider, so it rides along from LIBRARY
++        # ---- glass colour: READ THE VOLUME, do not copy the LIBRARY ---------
++        # This used to hand the browser LIBRARY["atten_color"]/["atten_dist"]
++        # verbatim, which meant tuning Volume Absorption in Blender changed
++        # NOTHING downstream - extract simply rewrote the same constants. The
++        # authoring loop looked connected and was not.
++        #
++        # The transferable quantity is the absorption COEFFICIENT:
++        #     Blender    sigma = density x (1 - colour)
++        #     three.js   sigma = -ln(attenuationColor) / attenuationDistance
++        # Same physics, different parameterisation. So: read sigma out of the
++        # node, then re-express it for three.js.
+         key = m.name.replace("BB_MAT_", "")
+-        lib = LIBRARY.get(key, {})
+-        if "atten_dist" in lib:
+-            rec["attenuationDistance"] = lib["atten_dist"]
+-            rec["attenuationColor"] = lib["atten_color"]
++        vol = next((n for n in m.node_tree.nodes
++                    if n.type == "VOLUME_ABSORPTION"), None)
++        if vol is not None:
++            density = float(vol.inputs["Density"].default_value)
++            vcol = [float(c) for c in vol.inputs["Color"].default_value[:3]]
++            sigma = [density * (1.0 - c) for c in vcol]
++            # attenuationDistance is a free choice; 0.01 m keeps attenuationColor
++            # in a sane range for every glass we ship.
++            ad = 0.01
++            att = [math.exp(-s * ad) for s in sigma]
++            rec["attenuationDistance"] = ad
++            rec["attenuationColor"] = linear_to_hex(att + [1.0])
++            rec["absorptionCoefficient"] = [round(s, 1) for s in sigma]
++            rec["_blender"] = {"volume_density": round(density, 1),
++                               "volume_color": linear_to_hex(vcol + [1.0])}
++        else:
++            lib = LIBRARY.get(key, {})
++            if "atten_dist" in lib:
++                rec["attenuationDistance"] = lib["atten_dist"]
++                rec["attenuationColor"] = lib["atten_color"]
+         out[key] = rec
+ 
+     OUT.parent.mkdir(parents=True, exist_ok=True)

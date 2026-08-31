@@ -1,0 +1,272 @@
+{
+  "contract": {
+    "units": "metres",
+    "up": "Y",
+    "materials": 0,
+    "origin": "neck rim (BB_ATTACH_NECK) for EVERY part",
+    "seating": "parent to BB_ATTACH_NECK and zero the transform",
+    "exploded": "translate each part along +Y by its stack index"
+  },
+  "parts": [
+    {
+      "file": "BB_CAP_13415.glb",
+      "mesh": "BB_CAP_13415",
+      "finish": "13-415",
+      "part": "CAP",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_CAP_13415_001",
+      "non_manifold": 0,
+      "verts": 22370,
+      "height_mm": 24.0,
+      "max_diameter_mm": 17.0
+    },
+    {
+      "file": "BB_CAP_17415.glb",
+      "mesh": "BB_CAP_17415",
+      "finish": "17-415",
+      "part": "CAP",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_CAP_17415_001",
+      "non_manifold": 0,
+      "verts": 25250,
+      "height_mm": 27.0,
+      "max_diameter_mm": 19.0
+    },
+    {
+      "file": "BB_CAP_DOTS_17415.glb",
+      "mesh": "BB_CAP_DOTS_17415",
+      "finish": "17-415",
+      "part": "CAP_DOTS",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_CAP_DOTS_17415_001",
+      "non_manifold": 0,
+      "verts": 1290,
+      "height_mm": 18.0,
+      "max_diameter_mm": 20.61
+    },
+    {
+      "file": "BB_PMP_SPOUT_17415.glb",
+      "mesh": "BB_PMP_SPOUT_17415",
+      "finish": "17-415",
+      "part": "PMP_SPOUT",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_PMP_SPOUT_17415",
+      "non_manifold": 0,
+      "verts": 64,
+      "height_mm": 4.5,
+      "max_diameter_mm": 14.34
+    },
+    {
+      "file": "BB_ROLL_BALL_17415_PLASTIC.glb",
+      "mesh": "BB_ROLL_BALL_17415_PLASTIC",
+      "finish": "17-415",
+      "part": "ROLL_BALL",
+      "variant": "plastic",
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_ROLL_17415_PLASTIC_001",
+      "non_manifold": 0,
+      "verts": 1986,
+      "height_mm": 9.5,
+      "max_diameter_mm": 9.5
+    },
+    {
+      "file": "BB_ROLL_BALL_17415_STEEL.glb",
+      "mesh": "BB_ROLL_BALL_17415_STEEL",
+      "finish": "17-415",
+      "part": "ROLL_BALL",
+      "variant": "steel",
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_ROLL_17415_001",
+      "non_manifold": 0,
+      "verts": 1986,
+      "height_mm": 9.5,
+      "max_diameter_mm": 9.5
+    },
+    {
+      "file": "BB_ROLL_HOUSING_17415_PLASTIC.glb",
+      "mesh": "BB_ROLL_HOUSING_17415_PLASTIC",
+      "finish": "17-415",
+      "part": "ROLL_HOUSING",
+      "variant": "plastic",
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_ROLL_17415_PLASTIC_001",
+      "non_manifold": 0,
+      "verts": 1728,
+      "height_mm": 13.4,
+      "max_diameter_mm": 12.9
+    },
+    {
+      "file": "BB_ROLL_HOUSING_17415_STEEL.glb",
+      "mesh": "BB_ROLL_HOUSING_17415_STEEL",
+      "finish": "17-415",
+      "part": "ROLL_HOUSING",
+      "variant": "steel",
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_ROLL_17415_001",
+      "non_manifold": 0,
+      "verts": 1728,
+      "height_mm": 13.2,
+      "max_diameter_mm": 13.35
+    },
+    {
+      "file": "BB_SPR_ACTUATOR_17415.glb",
+      "mesh": "BB_SPR_ACTUATOR_17415",
+      "finish": "17-415",
+      "part": "SPR_ACTUATOR",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_SPR_HEAD_17415_001",
+      "non_manifold": 0,
+      "verts": 2594,
+      "height_mm": 23.85,
+      "max_diameter_mm": 15.6
+    },
+    {
+      "file": "BB_SPR_COLLAR_17415.glb",
+      "mesh": "BB_SPR_COLLAR_17415",
+      "finish": "17-415",
+      "part": "SPR_COLLAR",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_SPR_COLLAR_17415_001",
+      "non_manifold": 0,
+      "verts": 15552,
+      "height_mm": 16.3,
+      "max_diameter_mm": 19.5
+    },
+    {
+      "file": "BB_SPR_OVERCAP_17415.glb",
+      "mesh": "BB_SPR_OVERCAP_17415",
+      "finish": "17-415",
+      "part": "SPR_OVERCAP",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_SPR_OVERCAP_17415_001",
+      "non_manifold": 0,
+      "verts": 1250,
+      "height_mm": 21.85,
+      "max_diameter_mm": 16.94
+    },
+    {
+      "file": "BB_CAP_18415.glb",
+      "mesh": "BB_CAP_18415",
+      "finish": "18-415",
+      "part": "CAP",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_CAP_18415_001",
+      "non_manifold": 0,
+      "verts": 17570,
+      "height_mm": 19.0,
+      "max_diameter_mm": 21.0
+    },
+    {
+      "file": "BB_REDUCER_18415.glb",
+      "mesh": "BB_REDUCER_18415",
+      "finish": "18-415",
+      "part": "REDUCER",
+      "variant": null,
+      "attach": "BB_ATTACH_NECK",
+      "asset_id": "BB_RDCR_18415_001",
+      "non_manifold": 0,
+      "verts": 3840,
+      "height_mm": 12.95,
+      "max_diameter_mm": 11.63
+    }
+  ],
+  "assemblies": [
+    {
+      "finish": "13-415",
+      "kind": "cap",
+      "stack": [
+        "BB_CAP_13415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "cap",
+      "stack": [
+        "BB_CAP_17415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "cap-dot",
+      "stack": [
+        "BB_CAP_17415",
+        "BB_CAP_DOTS_17415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "lotion-pump",
+      "stack": [
+        "BB_SPR_COLLAR_17415",
+        "BB_SPR_ACTUATOR_17415",
+        "BB_PMP_SPOUT_17415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "lotion-pump-overcap",
+      "stack": [
+        "BB_SPR_COLLAR_17415",
+        "BB_SPR_ACTUATOR_17415",
+        "BB_PMP_SPOUT_17415",
+        "BB_SPR_OVERCAP_17415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "roller-plastic",
+      "stack": [
+        "BB_ROLL_HOUSING_17415_PLASTIC",
+        "BB_ROLL_BALL_17415_PLASTIC"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "roller-steel",
+      "stack": [
+        "BB_ROLL_HOUSING_17415_STEEL",
+        "BB_ROLL_BALL_17415_STEEL"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "sprayer",
+      "stack": [
+        "BB_SPR_COLLAR_17415",
+        "BB_SPR_ACTUATOR_17415"
+      ]
+    },
+    {
+      "finish": "17-415",
+      "kind": "sprayer-overcap",
+      "stack": [
+        "BB_SPR_COLLAR_17415",
+        "BB_SPR_ACTUATOR_17415",
+        "BB_SPR_OVERCAP_17415"
+      ]
+    },
+    {
+      "finish": "18-415",
+      "kind": "cap",
+      "stack": [
+        "BB_CAP_18415"
+      ]
+    },
+    {
+      "finish": "18-415",
+      "kind": "reducer",
+      "stack": [
+        "BB_REDUCER_18415",
+        "BB_CAP_18415"
+      ]
+    }
+  ]
+}

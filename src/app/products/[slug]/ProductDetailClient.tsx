@@ -22,6 +22,10 @@ import {
     type PdpBlock,
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
+import Bottle3DConfigurator from "@/components/products/Bottle3DConfigurator";
+import { Safe3D } from "@/components/products/Viewer3DBoundary";
+import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
+import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -1255,6 +1259,8 @@ export default function ProductDetailClient({
         return tiles;
     }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
+    // configurator families: the 3D IS the imagery — no variant tile rail
+    const is3dFamily = familyForSlug(group?.slug ?? "") !== null;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1565,8 +1571,8 @@ export default function ProductDetailClient({
                             placeholder mode and passed as props to the gallery.
                         */}
                         <div className="lg:sticky lg:top-[120px]">
-                            <div className={hasVariantImagePicker ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
-                                {hasVariantImagePicker && (
+                            <div className={hasVariantImagePicker && !is3dFamily ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
+                                {hasVariantImagePicker && !is3dFamily && (
                                     <VariantImagePicker
                                         tiles={variantImageTiles}
                                         selectedVariantId={selectedVariant?._id}
@@ -1575,6 +1581,21 @@ export default function ProductDetailClient({
                                 )}
                                 <div className="min-w-0">
                                     {(() => {
+                                        // 3D eligibility comes from the configurator family
+                                        // registry — a family enters it only when its whole
+                                        // chain is approved (hollow body GLB + thickness bake +
+                                        // locked glass + closure GLBs). Anything else keeps the
+                                        // photographic gallery.
+                                        const slug3d = group.slug ?? "";
+                                        const fam3d = familyForSlug(slug3d);
+                                        const configurator3d: { bodyId: string; glass: GlassPresetId } | null =
+                                            fam3d
+                                                ? {
+                                                    bodyId: fam3d.bodyDefault,
+                                                    glass: glassFromSlug(fam3d, slug3d),
+                                                  }
+                                                : null;
+
                                         const variantBadge = (
                                             <span className="inline-flex items-center px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-full bg-obsidian/80 text-white backdrop-blur-sm">
                                                 {group.variantCount} Variant{group.variantCount !== 1 ? "s" : ""}
@@ -1650,18 +1671,48 @@ export default function ProductDetailClient({
                                             });
                                         }
 
-                                        if (galleryImages.length > 0) {
+                                        // Mode 0 — LIVE 3D CONFIGURATOR. Only for families whose
+                                        // geometry, bake and materials are all approved (today: the
+                                        // 17-415 9 ml cylinder). The gallery drops to thumbs-only
+                                        // beneath it — the arrangement it was designed for.
+                                        // The photo gallery is built FIRST, because it is also
+                                        // the 3D viewer's safety net (see Viewer3DBoundary): a
+                                        // missing GLB must cost the customer the 3D, never the
+                                        // product page and its add-to-cart.
+                                        const galleryNode = galleryImages.length > 0 ? (
+                                            <ProductImageGallery
+                                                images={galleryImages}
+                                                primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
+                                                badge={variantBadge}
+                                                watermark={skuWatermark}
+                                                aspectRatio="10/11"
+                                                mainPadding="p-0"
+                                            />
+                                        ) : null;
+
+                                        if (configurator3d) {
+                                            // the configurator IS the product imagery — no static
+                                            // thumbs beside it (Jordan: remove the side images, let
+                                            // the 3D viewer use the space)
                                             return (
-                                                <ProductImageGallery
-                                                    images={galleryImages}
-                                                    primaryAlt={galleryImages[0]?.alt ?? customerDisplayName}
-                                                    badge={variantBadge}
-                                                    watermark={skuWatermark}
-                                                    aspectRatio="10/11"
-                                                    mainPadding="p-0"
-                                                />
+                                                <Safe3D
+                                                    label={group.slug ?? "product"}
+                                                    fallback={galleryNode ?? (
+                                                        <div className="aspect-[10/11] w-full rounded-sm bg-travertine
+                                                                        border border-champagne/50" />
+                                                    )}
+                                                >
+                                                    <Bottle3DConfigurator
+                                                        key={`${group.slug}-${configurator3d.glass}`}
+                                                        bodyId={configurator3d.bodyId}
+                                                        initialGlass={configurator3d.glass}
+                                                        currentSlug={group.slug ?? ""}
+                                                    />
+                                                </Safe3D>
                                             );
                                         }
+
+                                        if (galleryNode) return galleryNode;
 
                                         // Mode 2 — placeholder. Avoid falling back to legacy URLs or
                                         // paper-doll compositions for customer-facing product media.
@@ -2008,8 +2059,9 @@ export default function ProductDetailClient({
                                         </div>
                                     )}
 
-                                    {/* Glass color selector */}
-                                    {uniqueColorGroups.length > 1 && (
+                                    {/* Glass color selector — replaced by the configurator's
+                                        navigating swatches on 3D families */}
+                                    {!is3dFamily && uniqueColorGroups.length > 1 && (
                                         <div className="mb-6 relative">
                                             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                                                 Glass Color

@@ -1,0 +1,30 @@
+sku,kind,neck_finish,height_mm,diameter_mm,tol_mm,source,status,notes
+CP18-415MtSl,cap,18-415,19.0,21.0,0.5,bestbottles.com PDP,published,plain moulding — 483 SKUs; SQUAT h/d 0.90 vs 1.42 for 17/13-415
+CP18-415BlkLthr,cap-leather,18-415,30.0,25.0,0.5,bestbottles.com PDP,published,leather wrap adds height AND diameter — 82 SKUs; separate moulding
+Ltn18-415Cu,lotion-pump,18-415,41.0,23.0,0.5,bestbottles.com PDP,published,same envelope as the sprayer
+Spry18-415Cu,sprayer,18-415,41.0,23.0,0.5,bestbottles.com PDP,published,same envelope as the lotion pump — one moulding serves both (cf 17-415)
+18-415Reducer,reducer,18-415,13.06,11.63,,PSD trace scaled by the Ø10.3 bore,traced,flange 11.63 / body 10.10 / insert 10.71; orifice ASSUMED
+CP17-415,cap,17-415,27.0,19.0,0.5,Jordan listing 2026-08-09,published,h/d 1.42
+CP13-415,cap,13-415,24.0,17.0,0.5,Jordan listing 2026-08-09,published,h/d 1.41
+AnSp18-415Blk,bulb-sprayer,18-415,38.0,65.0,,bestbottles.com PDP,published-suspect,"SUSPECT: O65 is the sideways SPAN of collar plus bulb, not a diameter. Contradicts AnSpTsl's O21 — the tassel version cannot be smaller. The two listings measure different features."
+AnSpTsl18-415Blk,bulb-sprayer-tassel,18-415,36.0,21.0,,bestbottles.com PDP,published-suspect,"SUSPECT: listing describes the FITTING, not the product. O21 equals the 18-415 cap O21 exactly, i.e. the collar over the same neck. In the product photo the bulb alone measures ~26mm and the whole assembly ~90mm across, so 36x O21 cannot be the overall size. Do NOT use as an envelope; the collar IS usable as the mating diameter."
+CP18-415ShnBlkTall,cap-tall,18-415,26.0,21.0,0.5,bestbottles.com PDP,published,"same Ø21 as the plain cap — same thread and skirt, taller crown; 33 SKUs. PSD layer h/d 1.299 vs published 1.238, agreeing"
+18-400CpAppBlk,cap-applicator,18-400,45.0,21.0,0.5,bestbottles.com accessories page,published,
+20-400cp1ozShortBlk,cap-short,20-400,12.0,23.0,0.5,bestbottles.com accessories page,published,
+20-400Cp2ozShortBlk,cap-short,20-400,12.0,23.0,0.5,bestbottles.com accessories page,published,
+CP15-415ShnGl,cap,15-415,32.0,19.0,0.5,bestbottles.com accessories page,published,
+CpRoll17-415BlkDot,cap-rollon,17-415,27.0,19.0,0.5,bestbottles.com accessories page,published,
+CPRoll13-415BlackDot,cap-rollon,13-415,24.0,17.0,0.5,bestbottles.com accessories page,published,
+CPRoll20-400TallMattBlk,cap-rollon,20-400,35.0,23.0,0.5,bestbottles.com accessories page,published,
+8-425CpShortBlack,cap-short,8-425,9.0,12.0,0.5,bestbottles.com accessories page,published,
+CP8-425TallBlack,cap-tall,8-425,16.0,11.0,0.5,bestbottles.com accessories page,published,
+Drp18-40015mlBlckBulb,dropper,18-400,33.0,21.0,0.5,bestbottles.com accessories page,published,
+Drp20-4001ozBlckBulb,dropper,20-400,32.0,22.0,0.5,bestbottles.com accessories page,published,
+Drp20-4002ozBlckBulb,dropper,20-400,32.0,22.0,0.5,bestbottles.com accessories page,published,
+Drp18-415Cu,dropper,18-415,39.0,23.0,0.5,bestbottles.com accessories page,published,
+CP13-415BlkShShtMtl,cap,13-415,17.0,17.0,0.5,bestbottles.com accessories page,published,
+Ltn17-415Blk,lotion-pump,17-415,31.0,19.0,0.5,bestbottles.com accessories page,published,"VALIDATION GATE: photo splits this 31mm into 14.43 collar + 16.57 actuator (height-derived scale 13.52 px/mm, agrees with the O19 width scale to 9%). Built parts stack to 35.15mm (collar 16.30 + actuator 21.85 above rim) — 13% TOO TALL. components_17415.py is photo-solved and marked provisional; this published listing outranks it."
+Ltn18-415MtGl,lotion-pump,18-415,41.0,23.0,0.5,bestbottles.com accessories page,published,
+Spry17-415Blk,sprayer,17-415,31.0,19.0,0.5,bestbottles.com accessories page,published,"VALIDATION GATE: photo splits this 31mm into 14.43 collar + 16.57 actuator (height-derived scale 13.52 px/mm, agrees with the O19 width scale to 9%). Built parts stack to 35.15mm (collar 16.30 + actuator 21.85 above rim) — 13% TOO TALL. components_17415.py is photo-solved and marked provisional; this published listing outranks it."
+CP13-415SpryBlkMt,sprayer,13-415,32.0,17.0,0.5,bestbottles.com accessories page,published,
+Spry15-415Blk,sprayer,15-415,41.0,20.0,0.5,bestbottles.com accessories page,published,

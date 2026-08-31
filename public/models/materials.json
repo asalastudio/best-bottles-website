@@ -1,0 +1,742 @@
+{
+  "source": "pipeline/paper-doll-3d/materials.blend",
+  "note": "Authored in Blender, consumed by the browser. Values are Principled BSDF sliders; Cycles is not three.js, so expect one round trip.",
+  "materials": {
+    "CAP_COPPER": {
+      "color": "#cf855a",
+      "linear": [
+        0.573,
+        0.212,
+        0.083
+      ],
+      "metalness": 1.0,
+      "roughness": 0.3,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 1.3,
+      "env": "metal",
+      "specularColor": "#faf1f1",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: library F0 #f7cfbf read 'too much like a rose or light brown - needs to be more copper-colored'. Tint pulled toward the PSD truth (CpRoll17-415Cu.psd bright band #c0856c, mid #93533c): a satin penny-copper. ACES note: colored metals run lower envMapIntensity than silver."
+    },
+    "CAP_MATTE_GOLD": {
+      "color": "#ffe496",
+      "linear": [
+        1.0,
+        0.766,
+        0.336
+      ],
+      "metalness": 1.0,
+      "roughness": 0.38,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 1.15,
+      "env": "metal",
+      "specularColor": "#f8fffd",
+      "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve. maps=matte pulls the library matte normal/roughness textures."
+    },
+    "CAP_MATTE_SILVER": {
+      "color": "#f5f6f6",
+      "linear": [
+        0.972,
+        0.96,
+        0.915
+      ],
+      "metalness": 1.0,
+      "roughness": 0.42,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "specularColor": "#e8eff5",
+      "note": "APPROVED by Jordan 2026-08-31 ('Matte silver is perfect. Lock it down'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). maps=matte pulls the library matte normal/roughness textures."
+    },
+    "CAP_SHINY_BLACK": {
+      "color": "#070707",
+      "linear": [
+        0.0033,
+        0.0033,
+        0.0033
+      ],
+      "roughness": 0.1,
+      "metalness": 0.0,
+      "clearcoat": 1.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
+      "envMapIntensity": 1.15,
+      "specularIntensity": 1.5
+    },
+    "CAP_SHINY_GOLD": {
+      "color": "#ffe496",
+      "linear": [
+        0.9999999999999999,
+        0.8926775272379572,
+        0.5900005962166698
+      ],
+      "metalness": 1.0,
+      "roughness": 0.09,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 1.62,
+      "env": "metal",
+      "specularColor": "#f8fffd",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
+    },
+    "CAP_SHINY_SILVER": {
+      "color": "#fefdfc",
+      "linear": [
+        0.9960333152256678,
+        0.9933771717300072,
+        0.9884829524812248
+      ],
+      "metalness": 1.0,
+      "roughness": 0.09,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 2.4,
+      "env": "metal",
+      "specularColor": "#fdfefe",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
+    },
+    "CAP_WHITE": {
+      "color": "#f4f3f0",
+      "linear": [
+        0.9046,
+        0.8963,
+        0.8714
+      ],
+      "roughness": 0.38,
+      "metalness": 0.0,
+      "clearcoat": 0.15,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). white phenolic - must READ white; components carry their own bright env in the lab because the dark glass room greys it. Jordan 2026-08-31: caps are PHENOLIC/COMPOSITE PLASTIC; gold/silver/copper are METALLIZED finishes on plastic, not solid metal. Finish matrix: black+white phenolic, copper MATTE only, silver shiny+matte, gold shiny+matte."
+    },
+    "GLASS_AMBER": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.0,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#dcb189",
+      "absorptionCoefficient": [
+        33.6,
+        82.4,
+        138.6
+      ],
+      "_blender": {
+        "volume_density": 150.0,
+        "volume_color": "#e4b34e"
+      },
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "GLASS_CLEAR": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.0,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#fefefe",
+      "absorptionCoefficient": [
+        1.0,
+        0.6,
+        0.8
+      ],
+      "_blender": {
+        "volume_density": 7.1,
+        "volume_color": "#eef6f2"
+      },
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "GLASS_COBALT": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.0,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#4b58ff",
+      "absorptionCoefficient": [
+        265.0,
+        232.6,
+        0.0
+      ],
+      "_blender": {
+        "volume_density": 272.7,
+        "volume_color": "#2f6bff"
+      },
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "GLASS_FROSTED": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.55,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.98,
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#fefefe",
+      "absorptionCoefficient": [
+        1.0,
+        0.8,
+        0.9
+      ],
+      "_blender": {
+        "volume_density": 10.7,
+        "volume_color": "#f4f6f5"
+      },
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "GLASS_GREEN": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.0,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.52,
+      "transmission": 1.0,
+      "attenuationDistance": 0.01,
+      "attenuationColor": "#61b473",
+      "absorptionCoefficient": [
+        212.7,
+        78.8,
+        175.8
+      ],
+      "_blender": {
+        "volume_density": 230.8,
+        "volume_color": "#4fd486"
+      },
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "PART_ACTUATOR_PP": {
+      "color": "#f4f3f0",
+      "linear": [
+        0.9046,
+        0.8963,
+        0.8714
+      ],
+      "roughness": 0.3,
+      "metalness": 0.0,
+      "clearcoat": 0.25,
+      "ior": 1.49,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). the sprayer ACTUATOR IS ALWAYS WHITE PP - only the collar carries the trim colour (PSD reference 13. 17-415 Spray, all six colourways, 2026-08-31)."
+    },
+    "PART_BALL_PLASTIC": {
+      "color": "#eeece4",
+      "linear": [
+        0.855,
+        0.8388,
+        0.7758
+      ],
+      "roughness": 0.45,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "env": "tent",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "PART_BALL_STEEL": {
+      "color": "#e0dfdd",
+      "linear": [
+        0.7547806693306308,
+        0.7438551299770171,
+        0.7313912786073086
+      ],
+      "roughness": 0.1,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). metal.steel from the absorbed library (physicallybased.info, CC0): #e0dfdd - genuinely DARKER than silver, which is what gives a roller ball its dark flanks. Reflects the peak-capped universal studio: the uncapped version peaked at 3335x and any mirror blew to pure white (the 'transparent dome').",
+      "envMapIntensity": 1.0,
+      "env": "metal",
+      "maps": null
+    },
+    "PART_HOUSING_PP": {
+      "color": "#e8e6dd",
+      "linear": [
+        0.807,
+        0.7913,
+        0.7231
+      ],
+      "roughness": 0.4,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "PART_OVERCAP_CLEAR": {
+      "color": "#ffffff",
+      "linear": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness": 0.12,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.49,
+      "transmission": 0.94,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "PART_REDUCER_PP": {
+      "color": "#e9e7df",
+      "linear": [
+        0.8148,
+        0.7991,
+        0.7379
+      ],
+      "roughness": 0.42,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "PART_STUD_STEEL": {
+      "color": "#f2f4f6",
+      "linear": [
+        0.8879,
+        0.9047,
+        0.9216
+      ],
+      "roughness": 0.06,
+      "metalness": 1.0,
+      "clearcoat": 0.5,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "STUDIO_BONE": {
+      "color": "#b29878",
+      "linear": [
+        0.4452,
+        0.314,
+        0.1878
+      ],
+      "roughness": 0.95,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+    },
+    "PART_HOUSING_PP_NATURAL": {
+      "color": "#efece3",
+      "linear": [
+        0.8713,
+        0.8388,
+        0.7681
+      ],
+      "roughness": 0.42,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.49,
+      "transmission": 0.62,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). natural (undyed) PP: translucent milky, NOT white plastic. Jordan 2026-08-31 against the real roller housing."
+    },
+    "PART_DIPTUBE_CLEAR": {
+      "color": "#fefefe",
+      "linear": [
+        0.9911,
+        0.9911,
+        0.9911
+      ],
+      "roughness": 0.1,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 1.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). clear plastic dip tube, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part \u5bfc\u7ba1)"
+    },
+    "PART_FILLER_LIQUID": {
+      "color": "#fefefe",
+      "linear": [
+        0.9911,
+        0.9911,
+        0.9911
+      ],
+      "roughness": 0.0,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 1.0,
+      "opacity": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). the liquid-fill mesh material, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part \u586b\u5145\u7269): ships at opacity 0 = empty bottle; set color+opacity to show contents"
+    },
+    "SPRAY_TURQUOISE": {
+      "color": "#2aa0a2",
+      "linear": [
+        0.0126,
+        0.2415,
+        0.2503
+      ],
+      "roughness": 0.13,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'turquoise is okay, but it should be a little bit shiny as well' -> roughness 0.18->0.13, envMapIntensity 1.5->1.7. Jordan 2026-08-31: 'turquoise should be reflective, and red should be reflective' - anodized-aluminum collar: metal at low roughness under the metal studio; tint brightened one step because a metal's F0 IS its reflection colour (dark F0 = dark mirror).",
+      "envMapIntensity": 1.7,
+      "env": "metal"
+    },
+    "SPRAY_RED": {
+      "color": "#b31f2b",
+      "linear": [
+        0.3712,
+        0.0069,
+        0.0129
+      ],
+      "roughness": 0.18,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "APPROVED by Jordan 2026-08-31 ('that shine looks really good' - the red collar). Jordan 2026-08-31: 'turquoise should be reflective, and red should be reflective' - anodized-aluminum collar: metal at low roughness under the metal studio; tint brightened one step because a metal's F0 IS its reflection colour (dark F0 = dark mirror).",
+      "envMapIntensity": 1.5,
+      "env": "metal"
+    },
+    "CAP_DOTS_BLACK": {
+      "color": "#070707",
+      "linear": [
+        0.0069,
+        0.0069,
+        0.0069
+      ],
+      "roughness": 0.1,
+      "metalness": 0.0,
+      "clearcoat": 1.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
+      "envMapIntensity": 1.15,
+      "specularIntensity": 1.5
+    },
+    "CAP_DOTS_PINK": {
+      "color": "#e2d3d6",
+      "linear": [
+        0.6866,
+        0.2508,
+        0.3712
+      ],
+      "roughness": 0.42,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement itself (CpRoll17-415PnkDot.psd body mid #e2d3d6) - Jordan: 'the colors need to be more accurate'. LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'more of a matte, same sort of texture as the matte silver, but it's just pink' - finish params mirror CAP_MATTE_SILVER (matte metal + library matte maps), tint pink from CpRoll17-415PnkDot.psd. Studs are PART_STUD_CHROME, FLUSH-set.",
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "maps": "matte"
+    },
+    "CAP_DOTS_SILVER": {
+      "color": "#f5f6f6",
+      "linear": [
+        0.972,
+        0.96,
+        0.915
+      ],
+      "metalness": 1.0,
+      "roughness": 0.42,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 1.5,
+      "env": "metal",
+      "specularColor": "#fdfefe",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the silver dot is a matte silver' - identical finish to APPROVED CAP_MATTE_SILVER. Studs are PART_STUD_CHROME, FLUSH-set."
+    },
+    "PART_STUD_CHROME": {
+      "color": "#d3d8da",
+      "linear": [
+        0.8289136787893979,
+        0.8461357050249962,
+        0.854846859663698
+      ],
+      "metalness": 1.0,
+      "roughness": 0.04,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 2.0,
+      "env": "metal",
+      "specularColor": "#b0bacc",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Chrome set-studs on the *Dot caps (library coats.chrome). The studs read silver on ALL dot colourways - shell takes the colour, studs stay chrome (CpRoll17-415*Dot.psd)."
+    },
+    "PART_STUD_CHROME_BRIGHT": {
+      "color": "#d3d8da",
+      "linear": [
+        0.8289136787893979,
+        0.8461357050249962,
+        0.854846859663698
+      ],
+      "metalness": 1.0,
+      "roughness": 0.02,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 2.9,
+      "env": "metal",
+      "specularColor": "#b0bacc",
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Brighter stud variant for the SILVER dot cap only (Jordan 2026-08-31: 'make sure the rhinestones show up a little bit better on the matte silver dot'). Chrome-on-matte-silver is tone-on-tone; the extra env intensity + harder polish gives the stones their own sparkle contrast. Black/pink dots keep PART_STUD_CHROME."
+    },
+    "LEATHER_BLACK": {
+      "color": "#303030",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_BROWN": {
+      "color": "#a17249",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_LIGHT_BROWN": {
+      "color": "#b79875",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_IVORY": {
+      "color": "#cfb58f",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "LEATHER_PINK": {
+      "color": "#d092a0",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.62,
+      "clearcoat": 0.08,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Measured 2026-08-31 from 6. 18-415 Caps PSD mid band. Faux leather: dielectric, deep grain via the library matte maps (upgrade path: bernhard-42 ships real leather textures). Renders on the BB_CAP_18415_LEATHER moulding (30 x O25)."
+    },
+    "PART_DIPTUBE_PP": {
+      "color": "#c9c0b4",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.32,
+      "clearcoat": 0.3,
+      "ior": 1.49,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 0.3,
+      "env": "tent",
+      "specularColor": null,
+      "note": "RENDERS VIA MATCAP (matcaps/diptube.png), not PBR: the tube is DRAWN BY ITS EDGES like Jordan's reference photo - two soft grey edge lines, core melted to the stage-through-glass tone, one faint sheen line. View-dependent, env-free (no rotation flare), opaque pass (visible through transmissive glass). Regenerate via the numpy recipe in the matcap commit. TRANSLUCENCY IS PAINTED, NOT SIMULATED: three's transmission buffer excludes transparent AND transmissive parts, so the tube must be opaque - and a translucent object READS as its background seen through milk. The PSD tube layer is near-white because the photo background is white; on OUR taupe stage the same tube reads milky-taupe #c9c0b4. Low env intensity kills the white rotation flare (Jordan). O2.8 curved thread per the product photos.",
+      "opacity": 1.0,
+      "alphaHash": false,
+      "specularIntensity": 0.6
+    },
+    "ANSP_BLACK": {
+      "color": "#1f1f1f",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_WHITE": {
+      "color": "#e1e1e1",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_RED": {
+      "color": "#691312",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_PINK": {
+      "color": "#d2597d",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_LAVENDER": {
+      "color": "#aa6798",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_SILVER": {
+      "color": "#c5c3c5",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_IVORY": {
+      "color": "#eae7d8",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "ANSP_GOLD": {
+      "color": "#d7b964",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.85,
+      "clearcoat": 0.0,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": "matte",
+      "envMapIntensity": 0.9,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Antique-bulb mesh fabric, measured 2026-08-31 from 9. 18-415 Ansp PSD bulb bands (mid). Crochet-net read via matte maps; upgrade path: dedicated net normal/alpha texture."
+    },
+    "PART_DRP_RUBBER": {
+      "color": "#f2f1ee",
+      "linear": null,
+      "metalness": 0.0,
+      "roughness": 0.5,
+      "clearcoat": 0.05,
+      "ior": 1.5,
+      "transmission": 0.0,
+      "maps": null,
+      "envMapIntensity": 0.85,
+      "env": "tent",
+      "specularColor": null,
+      "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
+    }
+  }
+}

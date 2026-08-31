@@ -1,0 +1,86 @@
+{
+  "generated": "2026-08-10T03:21:39.515621+00:00",
+  "samples": 160,
+  "jobs": [
+    {
+      "tag": "circle50--bare",
+      "status": "OK",
+      "expected": {
+        "height": 87.7,
+        "diameter": 72.5,
+        "neck_t": 17.5
+      },
+      "measured": {
+        "bottle_h": 87.7,
+        "body_od": 72.5,
+        "crest_od": 17.5,
+        "assembly_h": 87.7,
+        "parts": [
+          "BB_BTL_CIRCLE_050ML_001"
+        ]
+      },
+      "render": "pipeline/paper-doll-3d/renders/circle50--bare.png",
+      "blend": "pipeline/paper-doll-3d/master/builds/circle50--bare.blend"
+    },
+    {
+      "tag": "circle30--bare",
+      "status": "OK",
+      "expected": {
+        "height": 74.0,
+        "diameter": 60.3,
+        "neck_t": 14.3
+      },
+      "measured": {
+        "bottle_h": 74.0,
+        "body_od": 60.3,
+        "crest_od": 14.3,
+        "assembly_h": 74.0,
+        "parts": [
+          "BB_BTL_CIRCLE_030ML_001"
+        ]
+      },
+      "render": "pipeline/paper-doll-3d/renders/circle30--bare.png",
+      "blend": "pipeline/paper-doll-3d/master/builds/circle30--bare.blend"
+    },
+    {
+      "tag": "circle100--bare",
+      "status": "OK",
+      "expected": {
+        "height": 111.0,
+        "diameter": 93.7,
+        "neck_t": 17.5
+      },
+      "measured": {
+        "bottle_h": 111.0,
+        "body_od": 93.7,
+        "crest_od": 17.5,
+        "assembly_h": 111.0,
+        "parts": [
+          "BB_BTL_CIRCLE_100ML_001"
+        ]
+      },
+      "render": "pipeline/paper-doll-3d/renders/circle100--bare.png",
+      "blend": "pipeline/paper-doll-3d/master/builds/circle100--bare.blend"
+    },
+    {
+      "tag": "circle15--bare",
+      "status": "OK",
+      "expected": {
+        "height": 59.3,
+        "diameter": 47.4,
+        "neck_t": 12.8
+      },
+      "measured": {
+        "bottle_h": 59.3,
+        "body_od": 47.4,
+        "crest_od": 12.8,
+        "assembly_h": 59.3,
+        "parts": [
+          "BB_BTL_CIRCLE_015ML_001"
+        ]
+      },
+      "render": "pipeline/paper-doll-3d/renders/circle15--bare.png",
+      "blend": "pipeline/paper-doll-3d/master/builds/circle15--bare.blend"
+    }
+  ]
+}

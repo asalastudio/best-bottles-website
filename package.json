@@ -41,7 +41,14 @@
     "paper-doll:recanvas:cylinder-9ml": "node scripts/paper-doll/recanvas-cylinder-9ml.mjs",
     "paper-doll:upload": "node scripts/paper-doll/upload-paper-doll-family.mjs",
     "paper-doll:import-madison-release": "tsx scripts/paper-doll/import-madison-release.ts",
-    "cylinder:beauty:publish-sanity": "node scripts/publish-cylinder-beauty-gallery-to-sanity.mjs"
+    "cylinder:beauty:publish-sanity": "node scripts/publish-cylinder-beauty-gallery-to-sanity.mjs",
+    "materials:port": "node scripts/materials/port-tokens.mjs",
+    "materials:verify": "node scripts/materials/verify-parity.mjs",
+    "materials:validate": "node scripts/materials/validate-tokens.mjs",
+    "materials": "npm run materials:glass && npm run materials:port && npm run materials:verify && npm run materials:validate && npm run materials:assets",
+    "materials:glass": "tsx scripts/materials/extract-glass.mts",
+    "materials:maps": "node scripts/materials/fetch-pbr-maps.mjs",
+    "materials:assets": "node scripts/materials/check-assets.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
@@ -58,6 +65,8 @@
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
     "@radix-ui/react-tooltip": "^1.2.16",
+    "@react-three/drei": "^10.7.8",
+    "@react-three/fiber": "^9.7.0",
     "@sanity/client": "^7.20.0",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",
@@ -82,6 +91,7 @@
     "sharp": "^0.34.5",
     "styled-components": "^6.3.11",
     "tailwind-merge": "^3.5.0",
+    "three": "^0.185.1",
     "zod": "^4.3.6"
   },
   "overrides": {
@@ -105,6 +115,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.185.4",
     "dotenv": "^17.3.1",
     "eslint": "^9",
     "eslint-config-next": "^16.2.12",

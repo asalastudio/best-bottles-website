@@ -125,6 +125,42 @@ __pycache__/
 # Local creative assets (84MB+, not for git)
 creative/
 
+# Paper Doll 3D lane — track the scripts and the written record, never the
+# binaries. Blend files and renders are build artifacts: a re-run of
+# scripts/paper-doll-3d/ regenerates them deterministically.
+!/pipeline/paper-doll-3d/
+!/pipeline/paper-doll-3d/**/
+!/pipeline/paper-doll-3d/**/*.md
+!/pipeline/paper-doll-3d/**/*.json
+!/pipeline/paper-doll-3d/**/.gitkeep
+/pipeline/paper-doll-3d/**/*.blend
+/pipeline/paper-doll-3d/**/*.blend[0-9]
+/pipeline/paper-doll-3d/**/*.glb
+/pipeline/paper-doll-3d/**/*.png
+/pipeline/paper-doll-3d/**/*.jpg
+
+# --- bottle-bodies 3D lane: regenerable outputs (see pipeline/paper-doll-3d/HANDOFF-2026-08-30.md)
+# Silhouette cache: ~529 MB, rebuilt by extract_psd_silhouette.py in ~19 min.
+pipeline/paper-doll-3d/silhouettes/
+# Working build output; the frozen copy in releases/ is the keeper.
+pipeline/paper-doll-3d/glb/
+pipeline/paper-doll-3d/logs-batch*.txt
+
+# --- bottle-bodies 3D lane: scratch build dirs from the 2026-08-30 threading
+# work. Every one is regenerable by bottle_bodies.py; the keeper set lives in
+# public/models/. glb-*/ contents are already covered by the *.glb rule above —
+# these lines catch the body_report.csv each run drops beside them.
+pipeline/paper-doll-3d/glb-*/
+# Product photos pulled from bestbottles.com by shape_truth.py — re-fetchable,
+# and not ours to vendor into the repo.
+pipeline/paper-doll-3d/cache/
+# Output of a tool that does not yet reproduce hand measurements; committing it
+# would dress unreliable numbers up as a record.
+pipeline/paper-doll-3d/shape-truth.csv
+
+# The material library IS source — it is hand-tuned and its values ship to the
+# browser — so it is exempt from the blanket *.blend rule above.
+!/pipeline/paper-doll-3d/materials.blend
 # Bulk local working assets — large, regenerable, not source of truth.
 # Audit *reports* under docs/reviews/ ARE committed; only the image-heavy
 # review galleries are excluded.

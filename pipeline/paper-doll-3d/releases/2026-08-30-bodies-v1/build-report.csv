@@ -1,0 +1,57 @@
+grace_sku,status,detail,measured
+GBAtom5Red,PASS,"glb/Atom-round-na-76x18.glb [round, from GBAtom5Red.png, 13536 faces]",height_mm=76.0 diameter_mm=18.0
+GBAtom10Blu,PASS,"glb/Atom-round-na-82x23.glb [round, from GBAtom10Blu.png, 13536 faces]",height_mm=82.0 diameter_mm=23.0
+GBAtom5SlimSl,PASS,"glb/Atom-round-na-92x15.glb [round, from GBAtom5SlimSl.png, 13536 faces]",height_mm=92.0 diameter_mm=15.0
+CJClr3,PASS,"glb/Clr-round-na-22x33.glb [round, from CJClr3.png, 13536 faces]",height_mm=22.0 diameter_mm=33.0
+GBCrcl30SpryBlk,PASS,"glb/Cr-boxy-15-415-74x60x20.glb [boxy, from GBCrcl30SpryBlk.png, 13536 faces]",height_mm=74.0 width_mm=60.0 depth_mm=20.0
+GBCrclFrst50RdcrIvyLthr,PASS,"glb/Cr-boxy-18-400-87x72x23.glb [boxy, from GBCrclFrst50RdcrIvyLthr.png, 13536 faces]",height_mm=87.0 width_mm=72.0 depth_mm=23.0
+GBCrclFrst100AnSpBlk,PASS,"glb/Cr-boxy-18-415-105x89x29.glb [boxy, from GBCrclFrst100AnSpBlk.png, 13536 faces]",height_mm=105.0 width_mm=89.0 depth_mm=29.0
+GBCrcl50AnSpBlk,PASS,"glb/Cr-boxy-18-415-87x72x23.glb [boxy, from GBCrcl50AnSpBlk.png, 13536 faces]",height_mm=87.0 width_mm=72.0 depth_mm=23.0
+GBCrcl15RollBlkSh,PASS,"glb/Cr-round-13-415-60x50x17.glb [round, from GBCrcl15RollBlkSh.png, 13536 faces]",height_mm=60.0 diameter_mm=50.0
+LBCrclFrst50LtnClOvrCap,PASS,"glb/Cr-round-18-415-87x72x23.glb [round, from LBCrclFrst50LtnClOvrCap.png, 13536 faces]",height_mm=87.0 diameter_mm=72.0
+GBCyl5RollBlkSh,PASS,"glb/Cyl-round-13-415-53x17.glb [round, from GBCyl5RollBlkSh.png, 13536 faces]",height_mm=53.0 diameter_mm=17.0
+LBCylAmb9LtnBlk,PASS,"glb/Cyl-round-17-415-70x20.glb [round, from LBCylAmb9LtnBlk.png, 13536 faces]",height_mm=70.0 diameter_mm=20.0
+LBCylFrst9LtnBlk,PASS,"glb/Cyl-round-17-415-74x20.glb [round, from LBCylFrst9LtnBlk.png, 13536 faces]",height_mm=74.0 diameter_mm=20.0
+GBCyl50AnSpBlk,PASS,"glb/Cyl-round-18-415-117x32.glb [round, from GBCyl50AnSpBlk.png, 13536 faces]",height_mm=117.0 diameter_mm=32.0
+GBCyl100RdcrBlkLthr,PASS,"glb/Cyl-round-18-415-154x35.glb [round, from GBCyl100RdcrBlkLthr.png, 13536 faces]",height_mm=154.0 diameter_mm=35.0
+GBCyl28MtlRollBlk,PASS,"glb/Cyl-round-na-81x31.glb [round, from GBCyl28MtlRollBlk.png, 13536 faces]",height_mm=81.0 diameter_mm=31.0
+GBCyl50MtlRollBlk,PASS,"glb/Cyl-round-na-98x37.glb [round, from GBCyl50MtlRollBlk.png, 13536 faces]",height_mm=98.0 diameter_mm=37.0
+LBCylSwrl9LtnBlk,PASS,"glb/CylSwrl-round-17-415-74x21.glb [round, from LBCylSwrl9LtnBlk.png, 13536 faces]",height_mm=74.0 diameter_mm=21.0
+GBDiva100SpryShnSl,SKIP,tier 3 sculpted - outside modeler per glb-contract.md,
+GBDiva30AnSpBlk,SKIP,tier 3 sculpted - outside modeler per glb-contract.md,
+GBDiva46AnSpBlk,SKIP,tier 3 sculpted - outside modeler per glb-contract.md,
+GBDmnd2ozAnSpBlk,SKIP,tier 3 sculpted - outside modeler per glb-contract.md,
+GBElg15RollBlkSh,PASS,"glb/Elg-boxy-13-415-61x36x18.glb [boxy, from GBElg15RollBlkSh.png, 13536 faces]",height_mm=61.0 width_mm=36.0 depth_mm=18.0
+GBElgFrst30GlCap,PASS,"glb/Elg-boxy-15-415-75x44x22.glb [boxy, from GBElgFrst30GlCap.png, 13536 faces]",height_mm=75.0 width_mm=44.0 depth_mm=22.0
+GBElg100AnSpBlk,PASS,"glb/Elg-boxy-18-415-109x61x30.glb [boxy, from GBElg100AnSpBlk.png, 13536 faces]",height_mm=109.0 width_mm=61.0 depth_mm=30.0
+LBElg60LtnClrOvrCap,PASS,"glb/Elg-boxy-18-415-86x54x27.glb [boxy, from LBElg60LtnClrOvrCap.png, 13536 faces]",height_mm=86.0 width_mm=54.0 depth_mm=27.0
+LBElgFrst100WhtClOvrCp,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+LBElg60WhtClOvrCp,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+GBEmp100AnSpBlk,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+LBEmp50LtnShnGl,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+GBEternalFlameClear,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+GBFlair15RollBlkSh,PASS,"glb/Flair-boxy-13-415-56x41x20.glb [boxy, from GBFlair15RollBlkSh.png, 13536 faces]",height_mm=56.0 width_mm=41.0 depth_mm=20.0
+GB1ozGenieCl,PASS,"glb/GenieBl-round-na-77x42.glb [round, from GB1ozGenieCl.png, 13536 faces]",height_mm=77.0 diameter_mm=42.0
+GBGrce55AnSpBlk,PASS,"glb/Grce-boxy-18-415-113x52x30.glb [boxy, from GBGrce55AnSpBlk.png, 13536 faces]",height_mm=113.0 width_mm=52.0 depth_mm=30.0
+GBHeartFrst4KeyGld,PASS,"glb/Heart-boxy-na-46x32x12.glb [boxy, from GBHeartFrst4KeyGld.png, 13536 faces]",height_mm=46.0 width_mm=32.0 depth_mm=12.0
+Alu65mlLotionPumpBlack,PASS,"glb/LotionPumpBl-round-20-410-94x36.glb [round, from Alu65mlLotionPumpBlack.png, 13536 faces]",height_mm=94.0 diameter_mm=36.0
+GBRect10RollBlkSh,PASS,"glb/Rect-boxy-13-415-50x29x19.glb [boxy, from GBRect10RollBlkSh.png, 13536 faces]",height_mm=50.0 width_mm=29.0 depth_mm=19.0
+GBRndFrst78AnSpBlk,PASS,"glb/Rnd-round-18-415-73x59.glb [round, from GBRndFrst78AnSpBlk.png, 13536 faces]",height_mm=73.0 diameter_mm=59.0
+GBRndFrst128AnSpBlk,PASS,"glb/Rnd-round-18-415-83x69.glb [round, from GBRndFrst128AnSpBlk.png, 13536 faces]",height_mm=83.0 diameter_mm=69.0
+GBRoyal13RollBlkSh,PASS,"glb/Royal-boxy-13-415-56x40x21.glb [boxy, from GBRoyal13RollBlkSh.png, 13536 faces]",height_mm=56.0 width_mm=40.0 depth_mm=21.0
+GBSQSTGREEN,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+GBSleek8RollBlkSh,PASS,"glb/Sleek-boxy-13-415-66x17x17.glb [boxy, from GBSleek8RollBlkSh.png, 13536 faces]",height_mm=66.0 width_mm=17.0 depth_mm=17.0
+LBSlk100LtnClOvrCap,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+GBSlk30AnSpBlk,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+LBSlm50LtnClOvrCap,PASS,"glb/Slm-boxy-18-415-121x31x31.glb [boxy, from LBSlm50LtnClOvrCap.png, 13536 faces]",height_mm=121.0 width_mm=31.0 depth_mm=31.0
+LBSlm30LtnClOvrCap,PASS,"glb/Slm-boxy-18-415-87x30x30.glb [boxy, from LBSlm30LtnClOvrCap.png, 13536 faces]",height_mm=87.0 width_mm=30.0 depth_mm=30.0
+GBSqr15RollBlkSh,PASS,"glb/Sqr-boxy-13-415-52x26x26.glb [boxy, from GBSqr15RollBlkSh.png, 13536 faces]",height_mm=52.0 width_mm=26.0 depth_mm=26.0
+GBTRDPClear,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+GBTallCyl9RollBlkSh,PASS,"glb/TallCyl-round-13-415-106x18.glb [round, from GBTallCyl9RollBlkSh.png, 13536 faces]",height_mm=106.0 diameter_mm=18.0
+GBTallRect10RollBlkSh,PASS,"glb/TallRect-boxy-13-415-101x17x17.glb [boxy, from GBTallRect10RollBlkSh.png, 13536 faces]",height_mm=101.0 width_mm=17.0 depth_mm=17.0
+GBTulipAmb5RollBlkSh,PASS,"glb/Tulip-round-13-415-45x23.glb [round, from GBTulipAmb5RollBlkSh.png, 13536 faces]",height_mm=45.0 diameter_mm=23.0
+GBVAmb1o5WhtCapSht,PASS,"glb/V-round-13-425-22x16.glb [round, from GBVAmb1o5WhtCapSht.png, 13536 faces]",height_mm=22.0 diameter_mm=16.0
+GBVBlu1DrmBlackCapSht,PASS,"glb/V-round-13-425-45x15.glb [round, from GBVBlu1DrmBlackCapSht.png, 13536 faces]",height_mm=45.0 diameter_mm=15.0
+GBVClr2mlBlackCap,PASS,"glb/V-round-8-425-35x12.glb [round, from GBVClr2mlBlackCap.png, 13536 faces]",height_mm=35.0 diameter_mm=12.0
+PB1ozClearcap,SKIP,shape unknown - catalogue publishes a width but no depth and no diameter; needs one caliper reading,
+CJFrstdPlsBlkPls2oz,PASS,"glb/dPlsBlkPls-round-na-51x59.glb [round, from CJFrstdPlsBlkPls2oz.png, 13536 faces]",height_mm=51.0 diameter_mm=59.0

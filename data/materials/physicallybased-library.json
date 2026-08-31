@@ -1,0 +1,1492 @@
+{
+ "coats.chrome": {
+  "id": "chrome",
+  "name": "chrome",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8289136787893979,
+    0.8461357050249962,
+    0.854846859663698
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.688,
+    0.728,
+    0.798
+   ]
+  },
+  "textures": {}
+ },
+ "coats.coat_matte": {
+  "id": "coat_matte",
+  "name": "coat_matte",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 0.5
+  },
+  "textures": {}
+ },
+ "coats.coat_gloss": {
+  "id": "coat_gloss",
+  "name": "coat_gloss",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 0.12
+  },
+  "textures": {}
+ },
+ "coats.metallic_coat_matte": {
+  "id": "metallic_coat_matte",
+  "name": "metallic_coat_matte",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 1.0,
+   "roughness": 0.5
+  },
+  "textures": {}
+ },
+ "coats.metallic_coat_gloss": {
+  "id": "metallic_coat_gloss",
+  "name": "metallic_coat_gloss",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 1.0,
+   "roughness": 0.12
+  },
+  "textures": {}
+ },
+ "glass.glass": {
+  "id": "glass",
+  "name": "glass",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.992933564381722,
+    0.9977988695523646,
+    0.9977988695523646
+   ],
+   "metalness": 0.0,
+   "roughness": 0.0,
+   "ior": 1.52,
+   "transmission": 1.0,
+   "attenuationColor": [
+    0.984,
+    0.995,
+    0.995
+   ],
+   "attenuationDistance": 1.0,
+   "thickness": 1.0,
+   "dispersion": 0.3125
+  },
+  "textures": {}
+ },
+ "metal.aluminum": {
+  "id": "aluminum",
+  "name": "aluminum",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.962127915014933,
+    0.9653593968226258,
+    0.965819868630574
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.91,
+    0.936,
+    0.959
+   ]
+  },
+  "textures": {}
+ },
+ "metal.aluminum_brushed": {
+  "id": "aluminum_brushed",
+  "name": "aluminum_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.962127915014933,
+    0.9653593968226258,
+    0.965819868630574
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.91,
+    0.936,
+    0.959
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.aluminum_matte": {
+  "id": "aluminum_matte",
+  "name": "aluminum_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.962127915014933,
+    0.9653593968226258,
+    0.965819868630574
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.91,
+    0.936,
+    0.959
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.brass": {
+  "id": "brass",
+  "name": "brass",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9593465889662697,
+    0.8952268365504931,
+    0.6821586160863968
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.952,
+    0.979,
+    1.021
+   ]
+  },
+  "textures": {}
+ },
+ "metal.brass_brushed": {
+  "id": "brass_brushed",
+  "name": "brass_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9593465889662697,
+    0.8952268365504931,
+    0.6821586160863968
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.952,
+    0.979,
+    1.021
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.brass_matte": {
+  "id": "brass_matte",
+  "name": "brass_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9593465889662697,
+    0.8952268365504931,
+    0.6821586160863968
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.952,
+    0.979,
+    1.021
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.bronze": {
+  "id": "bronze",
+  "name": "bronze",
+  "source": "gpuopen",
+  "url": "https://matlib.gpuopen.com/main/materials/all?id=74b24db8-adac-41a6-96a6-9172f72abab0",
+  "license": "MIT Public Domain",
+  "values": {
+   "color": [
+    0.833819316811031,
+    0.6965824523561795,
+    0.5457185180587919
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0784314,
+   "ior": 1.45,
+   "specularIntensity": 0.5,
+   "specularColor": [
+    0.662745,
+    0.443137,
+    0.258824
+   ]
+  },
+  "textures": {}
+ },
+ "metal.bronze_brushed": {
+  "id": "bronze_brushed",
+  "name": "bronze_brushed",
+  "source": "gpuopen",
+  "url": "https://matlib.gpuopen.com/main/materials/all?id=74b24db8-adac-41a6-96a6-9172f72abab0",
+  "license": "MIT Public Domain",
+  "values": {
+   "color": [
+    0.833819316811031,
+    0.6965824523561795,
+    0.5457185180587919
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "ior": 1.45,
+   "specularIntensity": 0.5,
+   "specularColor": [
+    0.662745,
+    0.443137,
+    0.258824
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.bronze_matte": {
+  "id": "bronze_matte",
+  "name": "bronze_matte",
+  "source": "gpuopen",
+  "url": "https://matlib.gpuopen.com/main/materials/all?id=74b24db8-adac-41a6-96a6-9172f72abab0",
+  "license": "MIT Public Domain",
+  "values": {
+   "color": [
+    0.833819316811031,
+    0.6965824523561795,
+    0.5457185180587919
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "ior": 1.45,
+   "specularIntensity": 0.5,
+   "specularColor": [
+    0.662745,
+    0.443137,
+    0.258824
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.copper": {
+  "id": "copper",
+  "name": "copper",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9694932227237055,
+    0.8112085757532148,
+    0.7496651069259223
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.982,
+    0.947,
+    0.945
+   ]
+  },
+  "textures": {}
+ },
+ "metal.copper_brushed": {
+  "id": "copper_brushed",
+  "name": "copper_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9694932227237055,
+    0.8112085757532148,
+    0.7496651069259223
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.982,
+    0.947,
+    0.945
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.copper_matte": {
+  "id": "copper_matte",
+  "name": "copper_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9694932227237055,
+    0.8112085757532148,
+    0.7496651069259223
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.982,
+    0.947,
+    0.945
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.gold": {
+  "id": "gold",
+  "name": "gold",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.8926775272379572,
+    0.5900005962166698
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.971,
+    1.018,
+    0.994
+   ]
+  },
+  "textures": {}
+ },
+ "metal.gold_brushed": {
+  "id": "gold_brushed",
+  "name": "gold_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.8926775272379572,
+    0.5900005962166698
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.971,
+    1.018,
+    0.994
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.gold_matte": {
+  "id": "gold_matte",
+  "name": "gold_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.8926775272379572,
+    0.5900005962166698
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.971,
+    1.018,
+    0.994
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.silver": {
+  "id": "silver",
+  "name": "silver",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9960333152256678,
+    0.9933771717300072,
+    0.9884829524812248
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.994,
+    0.995,
+    0.998
+   ]
+  },
+  "textures": {}
+ },
+ "metal.silver_brushed": {
+  "id": "silver_brushed",
+  "name": "silver_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9960333152256678,
+    0.9933771717300072,
+    0.9884829524812248
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.994,
+    0.995,
+    0.998
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.silver_matte": {
+  "id": "silver_matte",
+  "name": "silver_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9960333152256678,
+    0.9933771717300072,
+    0.9884829524812248
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.994,
+    0.995,
+    0.998
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.nickel": {
+  "id": "nickel",
+  "name": "nickel",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8526800368272145,
+    0.8215498880219183,
+    0.7754196632585052
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.815,
+    0.834,
+    0.871
+   ]
+  },
+  "textures": {}
+ },
+ "metal.nickel_brushed": {
+  "id": "nickel_brushed",
+  "name": "nickel_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8526800368272145,
+    0.8215498880219183,
+    0.7754196632585052
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.815,
+    0.834,
+    0.871
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.nickel_matte": {
+  "id": "nickel_matte",
+  "name": "nickel_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8526800368272145,
+    0.8215498880219183,
+    0.7754196632585052
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.815,
+    0.834,
+    0.871
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.stainless": {
+  "id": "stainless",
+  "name": "stainless",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8373050318261851,
+    0.8204092888324144,
+    0.7965522215794997
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.789,
+    0.823,
+    0.87
+   ]
+  },
+  "textures": {}
+ },
+ "metal.stainless_brushed": {
+  "id": "stainless_brushed",
+  "name": "stainless_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8373050318261851,
+    0.8204092888324144,
+    0.7965522215794997
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.789,
+    0.823,
+    0.87
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.stainless_matte": {
+  "id": "stainless_matte",
+  "name": "stainless_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.8373050318261851,
+    0.8204092888324144,
+    0.7965522215794997
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.789,
+    0.823,
+    0.87
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.steel": {
+  "id": "steel",
+  "name": "steel",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.7547806693306308,
+    0.7438551299770171,
+    0.7313912786073086
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.765,
+    0.767,
+    0.802
+   ]
+  },
+  "textures": {}
+ },
+ "metal.steel_brushed": {
+  "id": "steel_brushed",
+  "name": "steel_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.7547806693306308,
+    0.7438551299770171,
+    0.7313912786073086
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.765,
+    0.767,
+    0.802
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.steel_matte": {
+  "id": "steel_matte",
+  "name": "steel_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.7547806693306308,
+    0.7438551299770171,
+    0.7313912786073086
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.765,
+    0.767,
+    0.802
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.titanium": {
+  "id": "titanium",
+  "name": "titanium",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.6950701317088461,
+    0.6651850846308363,
+    0.6350498414533903
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.865,
+    0.906,
+    0.946
+   ]
+  },
+  "textures": {}
+ },
+ "metal.titanium_brushed": {
+  "id": "titanium_brushed",
+  "name": "titanium_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.6950701317088461,
+    0.6651850846308363,
+    0.6350498414533903
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.865,
+    0.906,
+    0.946
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.titanium_matte": {
+  "id": "titanium_matte",
+  "name": "titanium_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.6950701317088461,
+    0.6651850846308363,
+    0.6350498414533903
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.865,
+    0.906,
+    0.946
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.zinc": {
+  "id": "zinc",
+  "name": "zinc",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9103256807292641,
+    0.9280187744328082,
+    0.9381370204587529
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.762,
+    0.833,
+    0.896
+   ]
+  },
+  "textures": {}
+ },
+ "metal.zinc_brushed": {
+  "id": "zinc_brushed",
+  "name": "zinc_brushed",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9103256807292641,
+    0.9280187744328082,
+    0.9381370204587529
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.762,
+    0.833,
+    0.896
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.zinc_matte": {
+  "id": "zinc_matte",
+  "name": "zinc_matte",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9103256807292641,
+    0.9280187744328082,
+    0.9381370204587529
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.762,
+    0.833,
+    0.896
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.tin": {
+  "id": "tin",
+  "name": "tin",
+  "source": "physicallybased-approx",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.78,
+    0.8,
+    0.79
+   ],
+   "metalness": 1.0,
+   "roughness": 0.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.6038,
+    0.6383,
+    0.6739
+   ]
+  },
+  "textures": {}
+ },
+ "metal.tin_brushed": {
+  "id": "tin_brushed",
+  "name": "tin_brushed",
+  "source": "physicallybased-approx",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.78,
+    0.8,
+    0.79
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.6038,
+    0.6383,
+    0.6739
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.tin_matte": {
+  "id": "tin_matte",
+  "name": "tin_matte",
+  "source": "physicallybased-approx",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.78,
+    0.8,
+    0.79
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.6038,
+    0.6383,
+    0.6739
+   ]
+  },
+  "textures": {
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "metal.aluminum_anodized": {
+  "id": "aluminum_anodized",
+  "name": "aluminum_anodized",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.7977377330312598,
+    0.0,
+    0.0
+   ],
+   "metalness": 1.0,
+   "roughness": 0.3,
+   "specularIntensity": 1.0,
+   "specularColor": [
+    0.91,
+    0.936,
+    0.959
+   ]
+  },
+  "textures": {}
+ },
+ "paper.corrugated_cardboard": {
+  "id": "corrugated_cardboard",
+  "name": "corrugated_cardboard",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Cardboard 002",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "paper.paper": {
+  "id": "paper",
+  "name": "paper",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Paper 001",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "paper.foamboard": {
+  "id": "foamboard",
+  "name": "foamboard",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Styrofoam 004",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "plastic.acrylic": {
+  "id": "acrylic",
+  "name": "acrylic",
+  "source": "physicallybased",
+  "url": "https://physicallybased.info/",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 0.0,
+   "ior": 1.4905,
+   "transmission": 1.0,
+   "thickness": 1.0,
+   "dispersion": 0.376081233546446
+  },
+  "textures": {}
+ },
+ "plastic.plastic_clean": {
+  "id": "plastic_clean",
+  "name": "plastic_clean",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Plastic 013 A",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 0.15,
+   "ior": 1.5
+  },
+  "textures": {}
+ },
+ "plastic.plastic_rough": {
+  "id": "plastic_rough",
+  "name": "plastic_rough",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Plastic 013 A",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "plastic.carbon_fiber": {
+  "id": "carbon_fiber",
+  "name": "carbon_fiber",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Fabric 004",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 1.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "textile.fabric_weave": {
+  "id": "fabric_weave",
+  "name": "fabric_weave",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Fabric 060",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "textile.felt": {
+  "id": "felt",
+  "name": "felt",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Fabric 034",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.9999999999999999,
+    0.9999999999999999,
+    0.9999999999999999
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "textile.leather": {
+  "id": "leather",
+  "name": "leather",
+  "source": "ambientcg",
+  "url": "https://ambientcg.com/view?id=Leather 028",
+  "license": "CC0 1.0",
+  "values": {
+   "color": [
+    0.47843137254901963,
+    0.3215686274509804,
+    0.18823529411764706
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0,
+   "ior": 1.5
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.ash": {
+  "id": "ash",
+  "name": "ash",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.beech": {
+  "id": "beech",
+  "name": "beech",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.birch": {
+  "id": "birch",
+  "name": "birch",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.cherry": {
+  "id": "cherry",
+  "name": "cherry",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.maple": {
+  "id": "maple",
+  "name": "maple",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.mdf": {
+  "id": "mdf",
+  "name": "mdf",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.oak": {
+  "id": "oak",
+  "name": "oak",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.osb": {
+  "id": "osb",
+  "name": "osb",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.pine": {
+  "id": "pine",
+  "name": "pine",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.spruce": {
+  "id": "spruce",
+  "name": "spruce",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ },
+ "wood.walnut": {
+  "id": "walnut",
+  "name": "walnut",
+  "source": "custom",
+  "url": "",
+  "license": "",
+  "values": {
+   "color": [
+    1.0,
+    1.0,
+    1.0
+   ],
+   "metalness": 0.0,
+   "roughness": 1.0
+  },
+  "textures": {
+   "color": "color.png",
+   "normal": "normal.png",
+   "roughness": "roughness.png"
+  }
+ }
+}

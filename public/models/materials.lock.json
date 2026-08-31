@@ -1,0 +1,651 @@
+{
+ "files": {
+  "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb": "6d0773f37bfee7eb",
+  "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png": "3f21a18fa6f5715b",
+  "public/models/bodies-thickness/Circle-disc-18-415-88x73.glb": "98de7941e2a6a5be",
+  "public/models/bodies-thickness/Circle-disc-18-415-88x73.thickness.png": "d92c4bb13189baaa",
+  "public/models/bodies-thickness/Cyl-round-17-415-70x20.frost.png": "73cd00dd30471600",
+  "public/models/bodies-thickness/Cyl-round-17-415-70x20.glb": "953c7c3aeaf08405",
+  "public/models/bodies-thickness/Cyl-round-17-415-70x20.thickness.png": "0488ff78e7e53c03",
+  "public/models/bodies-thickness/Cyl-round-18-415-117x32.glb": "f8fe8d766f5587f6",
+  "public/models/bodies-thickness/Cyl-round-18-415-154x35.glb": "5baf65c6a054abbc",
+  "public/models/bodies-thickness/CylSwrl-round-17-415-74x21.glb": "4bcf2248d83daea8",
+  "public/models/bodies-thickness/Elegant-oval-18-415-109x61.glb": "f17a34af1fc3de1a",
+  "public/models/bodies-thickness/Elegant-oval-18-415-87x55.glb": "eacbd11e754e26d7",
+  "public/models/bodies-thickness/Elegant-oval-18-415-87x55.thickness.png": "880b42e75a1688ab",
+  "public/models/bodies-thickness/Round-sphere-18-415-73x59.glb": "f8f264f6cca0dacf",
+  "public/models/bodies-thickness/Round-sphere-18-415-83x69.glb": "ead230bacfb68256",
+  "public/models/bodies-threaded/Cyl-round-17-415-70x20.glb": "c63517d3900b6070",
+  "public/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb": "fd0b9eea0dea5886",
+  "public/models/closures/BB_ANSP_ASSEMBLY_18415.glb": "2b7380784b17a00d",
+  "public/models/closures/BB_ANSP_BULB_18415.glb": "f83b56c4713c6041",
+  "public/models/closures/BB_ANSP_COLLAR_18415.glb": "126cb5f5c02d1f10",
+  "public/models/closures/BB_ANSP_FERRULE_18415.glb": "abce45ef2e1169f2",
+  "public/models/closures/BB_ANSP_TASSEL_18415.glb": "1f966849b9851683",
+  "public/models/closures/BB_CAP_17415.glb": "17349331f59b76a8",
+  "public/models/closures/BB_CAP_18415.glb": "08d3040027c23ebd",
+  "public/models/closures/BB_CAP_18415_LEATHER.glb": "6826b00e2042d31c",
+  "public/models/closures/BB_CAP_18415_TALL.glb": "4c7df72927ce90c5",
+  "public/models/closures/BB_CAP_DOTS_17415.glb": "82ad240061d511e6",
+  "public/models/closures/BB_DIP_TUBE_17415.glb": "9554b48b56412350",
+  "public/models/closures/BB_DIP_TUBE_18415.glb": "89f74f7eeca16d22",
+  "public/models/closures/BB_DRP_BULB_18415.glb": "737b73f338abb8d0",
+  "public/models/closures/BB_DRP_COLLAR_18415.glb": "741b367709acff0a",
+  "public/models/closures/BB_DRP_PIPETTE_18415.glb": "ae7d18b966cc0e16",
+  "public/models/closures/BB_PMP_BODY_17415.glb": "3ad648ca7c7f7d49",
+  "public/models/closures/BB_PMP_BODY_18415.glb": "ab822b3c3bd4a6d8",
+  "public/models/closures/BB_PMP_SPOUT_17415.glb": "b8f3d37614dad918",
+  "public/models/closures/BB_PMP_SPOUT_18415.glb": "5ff0264bbc75f801",
+  "public/models/closures/BB_REDUCER_18415.glb": "d53cf2c0331a87c6",
+  "public/models/closures/BB_ROLL_BALL_17415_STEEL.glb": "24cd65d2e0c4c807",
+  "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb": "23caa8659874e952",
+  "public/models/closures/BB_SPR_ACTUATOR_17415.glb": "50f83ae4b1018b20",
+  "public/models/closures/BB_SPR_ACTUATOR_18415.glb": "f7552f7c688b420a",
+  "public/models/closures/BB_SPR_COLLAR_17415.glb": "523fdea82d18f552",
+  "public/models/closures/BB_SPR_COLLAR_18415.glb": "82e365f9794c8e04",
+  "public/models/closures/BB_SPR_NOZZLE_18415.glb": "c68ea0720c1e2614",
+  "public/models/closures/BB_SPR_OVERCAP_17415.glb": "80e66f1b1044fb36",
+  "public/models/closures/BB_SPR_OVERCAP_18415.glb": "b8c5a599872c35c7",
+  "public/models/matcaps/ball-steel-v3.png": "e03db93507f351cc",
+  "public/models/studio-browser.hdr": "bcd4697b9946e2ec",
+  "public/models/studio-classic-clean.hdr": "04c4733e9717829a",
+  "public/models/studio-classic.hdr": "156c2946a6cd0c1d",
+  "public/models/studio-metal-key.hdr": "fecf3ae0c6bdde0a",
+  "public/models/studio-metal.hdr": "6ae44e48e8625ffe",
+  "public/models/studio-mono.hdr": "d0b4d290fafd689e",
+  "public/models/studio-room.hdr": "3189ffa2a28d8f09",
+  "public/models/studio-universal.hdr": "34ae5a707f67caa4"
+ },
+ "glassPresets": {
+  "amber": {
+   "anisotropicBlur": "0.10",
+   "attenuationColor": "#8f4a16",
+   "attenuationDistance": "0.015",
+   "clearcoat": "0.70",
+   "clearcoatRoughness": "0.02",
+   "dispersion": "0.95",
+   "distortion": "0",
+   "envMapIntensity": "1.0",
+   "envRotationDeg": "0",
+   "ior": "1.54",
+   "roughness": "0.02",
+   "thickness": "0.0165",
+   "transmission": "1.0"
+  },
+  "clear": {
+   "anisotropicBlur": "0.05",
+   "attenuationColor": "#fdfefe",
+   "attenuationDistance": "1.0",
+   "clearcoat": "0",
+   "clearcoatRoughness": "0",
+   "dispersion": "0.31",
+   "distortion": "0.05",
+   "envMapIntensity": "1.2",
+   "envRotationDeg": "62",
+   "ior": "1.52",
+   "roughness": "0",
+   "thickness": "0.0095",
+   "thicknessBake": "false",
+   "thinWall": "true",
+   "transmission": "1.0"
+  },
+  "cobalt": {
+   "anisotropicBlur": "0.3",
+   "attenuationColor": "#060cc4",
+   "attenuationDistance": "0.013",
+   "clearcoat": "0.70",
+   "clearcoatRoughness": "0.02",
+   "dispersion": "0.95",
+   "distortion": "0",
+   "envMapIntensity": "1.0",
+   "envRotationDeg": "34",
+   "ior": "1.54",
+   "roughness": "0.02",
+   "thickness": "0.017",
+   "transmission": "1.0"
+  },
+  "frosted": {
+   "anisotropicBlur": "0.1",
+   "attenuationColor": "#fdfefe",
+   "attenuationDistance": "1.0",
+   "clearcoat": "0",
+   "clearcoatRoughness": "0",
+   "dispersion": "0.31",
+   "distortion": "0.05",
+   "envMapIntensity": "1.2",
+   "envRotationDeg": "18",
+   "frostMask": "true",
+   "ior": "1.52",
+   "roughness": "0.45",
+   "thickness": "0.0095",
+   "thicknessBake": "false",
+   "thinWall": "true",
+   "transmission": "1.0"
+  },
+  "swirl": {
+   "anisotropicBlur": "0.05",
+   "attenuationColor": "#fdfefe",
+   "attenuationDistance": "1.0",
+   "clearcoat": "0",
+   "clearcoatRoughness": "0",
+   "dispersion": "0.31",
+   "distortion": "0.05",
+   "envMapIntensity": "1.2",
+   "envRotationDeg": "46",
+   "ior": "1.52",
+   "roughness": "0",
+   "thickness": "0.0095",
+   "thicknessBake": "false",
+   "thinWall": "true",
+   "transmission": "1.0"
+  }
+ },
+ "materials": {
+  "ANSP_BLACK": {
+   "clearcoat": 0.0,
+   "color": "#1f1f1f",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_GOLD": {
+   "clearcoat": 0.0,
+   "color": "#d7b964",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_IVORY": {
+   "clearcoat": 0.0,
+   "color": "#eae7d8",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_LAVENDER": {
+   "clearcoat": 0.0,
+   "color": "#aa6798",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_PINK": {
+   "clearcoat": 0.0,
+   "color": "#d2597d",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_RED": {
+   "clearcoat": 0.0,
+   "color": "#691312",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#c5c3c5",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "ANSP_WHITE": {
+   "clearcoat": 0.0,
+   "color": "#e1e1e1",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.85,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "CAP_COPPER": {
+   "clearcoat": 0.0,
+   "color": "#cf855a",
+   "env": "metal",
+   "envMapIntensity": 1.3,
+   "ior": 1.5,
+   "linear": [
+    0.573,
+    0.212,
+    0.083
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.3,
+   "specularColor": "#faf1f1",
+   "transmission": 0.0
+  },
+  "CAP_DOTS_BLACK": {
+   "clearcoat": 1.0,
+   "color": "#070707",
+   "envMapIntensity": 1.15,
+   "ior": 1.5,
+   "linear": [
+    0.0069,
+    0.0069,
+    0.0069
+   ],
+   "metalness": 0.0,
+   "roughness": 0.1,
+   "specularIntensity": 1.5,
+   "transmission": 0.0
+  },
+  "CAP_DOTS_PINK": {
+   "clearcoat": 0.0,
+   "color": "#e2d3d6",
+   "env": "metal",
+   "envMapIntensity": 1.5,
+   "ior": 1.5,
+   "linear": [
+    0.6866,
+    0.2508,
+    0.3712
+   ],
+   "maps": "matte",
+   "metalness": 1.0,
+   "roughness": 0.42,
+   "transmission": 0.0
+  },
+  "CAP_DOTS_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#f5f6f6",
+   "env": "metal",
+   "envMapIntensity": 1.5,
+   "ior": 1.5,
+   "linear": [
+    0.972,
+    0.96,
+    0.915
+   ],
+   "maps": "matte",
+   "metalness": 1.0,
+   "roughness": 0.42,
+   "specularColor": "#fdfefe",
+   "transmission": 0.0
+  },
+  "CAP_MATTE_GOLD": {
+   "clearcoat": 0.0,
+   "color": "#ffe496",
+   "env": "metal",
+   "envMapIntensity": 1.15,
+   "ior": 1.5,
+   "linear": [
+    1.0,
+    0.766,
+    0.336
+   ],
+   "maps": "matte",
+   "metalness": 1.0,
+   "roughness": 0.38,
+   "specularColor": "#f8fffd",
+   "transmission": 0.0
+  },
+  "CAP_MATTE_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#f5f6f6",
+   "env": "metal",
+   "envMapIntensity": 1.5,
+   "ior": 1.5,
+   "linear": [
+    0.972,
+    0.96,
+    0.915
+   ],
+   "maps": "matte",
+   "metalness": 1.0,
+   "roughness": 0.42,
+   "specularColor": "#e8eff5",
+   "transmission": 0.0
+  },
+  "CAP_SHINY_BLACK": {
+   "clearcoat": 1.0,
+   "color": "#070707",
+   "envMapIntensity": 1.15,
+   "ior": 1.5,
+   "linear": [
+    0.0033,
+    0.0033,
+    0.0033
+   ],
+   "metalness": 0.0,
+   "roughness": 0.1,
+   "specularIntensity": 1.5,
+   "transmission": 0.0
+  },
+  "CAP_SHINY_GOLD": {
+   "clearcoat": 0.0,
+   "color": "#ffe496",
+   "env": "metal",
+   "envMapIntensity": 1.62,
+   "ior": 1.5,
+   "linear": [
+    0.9999999999999999,
+    0.8926775272379572,
+    0.5900005962166698
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.09,
+   "specularColor": "#f8fffd",
+   "transmission": 0.0
+  },
+  "CAP_SHINY_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#fefdfc",
+   "env": "metal",
+   "envMapIntensity": 2.4,
+   "ior": 1.5,
+   "linear": [
+    0.9960333152256678,
+    0.9933771717300072,
+    0.9884829524812248
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.09,
+   "specularColor": "#fdfefe",
+   "transmission": 0.0
+  },
+  "CAP_WHITE": {
+   "clearcoat": 0.15,
+   "color": "#f4f3f0",
+   "ior": 1.5,
+   "linear": [
+    0.9046,
+    0.8963,
+    0.8714
+   ],
+   "metalness": 0.0,
+   "roughness": 0.38,
+   "transmission": 0.0
+  },
+  "LEATHER_BLACK": {
+   "clearcoat": 0.08,
+   "color": "#303030",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.62,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "LEATHER_BROWN": {
+   "clearcoat": 0.08,
+   "color": "#a17249",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.62,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "LEATHER_IVORY": {
+   "clearcoat": 0.08,
+   "color": "#cfb58f",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.62,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "LEATHER_LIGHT_BROWN": {
+   "clearcoat": 0.08,
+   "color": "#b79875",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.62,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "LEATHER_PINK": {
+   "clearcoat": 0.08,
+   "color": "#d092a0",
+   "env": "tent",
+   "envMapIntensity": 0.9,
+   "ior": 1.5,
+   "linear": null,
+   "maps": "matte",
+   "metalness": 0.0,
+   "roughness": 0.62,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "PART_BALL_PLASTIC": {
+   "clearcoat": 0.0,
+   "color": "#eeece4",
+   "env": "tent",
+   "ior": 1.5,
+   "linear": [
+    0.855,
+    0.8388,
+    0.7758
+   ],
+   "metalness": 0.0,
+   "roughness": 0.45,
+   "transmission": 0.0
+  },
+  "PART_BALL_STEEL": {
+   "clearcoat": 0.0,
+   "color": "#e0dfdd",
+   "env": "metal",
+   "envMapIntensity": 1.0,
+   "ior": 1.5,
+   "linear": [
+    0.7547806693306308,
+    0.7438551299770171,
+    0.7313912786073086
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.1,
+   "transmission": 0.0
+  },
+  "PART_DIPTUBE_CLEAR": {
+   "clearcoat": 0.0,
+   "color": "#fefefe",
+   "ior": 1.5,
+   "linear": [
+    0.9911,
+    0.9911,
+    0.9911
+   ],
+   "metalness": 0.0,
+   "roughness": 0.1,
+   "transmission": 1.0
+  },
+  "PART_DIPTUBE_PP": {
+   "alphaHash": false,
+   "clearcoat": 0.3,
+   "color": "#c9c0b4",
+   "env": "tent",
+   "envMapIntensity": 0.3,
+   "ior": 1.49,
+   "linear": null,
+   "maps": null,
+   "metalness": 0.0,
+   "opacity": 1.0,
+   "roughness": 0.32,
+   "specularColor": null,
+   "specularIntensity": 0.6,
+   "transmission": 0.0
+  },
+  "PART_DRP_RUBBER": {
+   "clearcoat": 0.05,
+   "color": "#f2f1ee",
+   "env": "tent",
+   "envMapIntensity": 0.85,
+   "ior": 1.5,
+   "linear": null,
+   "maps": null,
+   "metalness": 0.0,
+   "roughness": 0.5,
+   "specularColor": null,
+   "transmission": 0.0
+  },
+  "PART_HOUSING_PP": {
+   "clearcoat": 0.0,
+   "color": "#e8e6dd",
+   "ior": 1.5,
+   "linear": [
+    0.807,
+    0.7913,
+    0.7231
+   ],
+   "metalness": 0.0,
+   "roughness": 0.4,
+   "transmission": 0.0
+  },
+  "PART_HOUSING_PP_NATURAL": {
+   "clearcoat": 0.0,
+   "color": "#efece3",
+   "ior": 1.49,
+   "linear": [
+    0.8713,
+    0.8388,
+    0.7681
+   ],
+   "metalness": 0.0,
+   "roughness": 0.42,
+   "transmission": 0.62
+  },
+  "PART_STUD_CHROME": {
+   "clearcoat": 0.0,
+   "color": "#d3d8da",
+   "env": "metal",
+   "envMapIntensity": 2.0,
+   "ior": 1.5,
+   "linear": [
+    0.8289136787893979,
+    0.8461357050249962,
+    0.854846859663698
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.04,
+   "specularColor": "#b0bacc",
+   "transmission": 0.0
+  },
+  "PART_STUD_CHROME_BRIGHT": {
+   "clearcoat": 0.0,
+   "color": "#d3d8da",
+   "env": "metal",
+   "envMapIntensity": 2.9,
+   "ior": 1.5,
+   "linear": [
+    0.8289136787893979,
+    0.8461357050249962,
+    0.854846859663698
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.02,
+   "specularColor": "#b0bacc",
+   "transmission": 0.0
+  },
+  "PART_STUD_STEEL": {
+   "clearcoat": 0.5,
+   "color": "#f2f4f6",
+   "ior": 1.5,
+   "linear": [
+    0.8879,
+    0.9047,
+    0.9216
+   ],
+   "metalness": 1.0,
+   "roughness": 0.06,
+   "transmission": 0.0
+  },
+  "SPRAY_RED": {
+   "clearcoat": 0.0,
+   "color": "#b31f2b",
+   "env": "metal",
+   "envMapIntensity": 1.5,
+   "ior": 1.5,
+   "linear": [
+    0.3712,
+    0.0069,
+    0.0129
+   ],
+   "metalness": 1.0,
+   "roughness": 0.18,
+   "transmission": 0.0
+  },
+  "SPRAY_TURQUOISE": {
+   "clearcoat": 0.0,
+   "color": "#2aa0a2",
+   "env": "metal",
+   "envMapIntensity": 1.7,
+   "ior": 1.5,
+   "linear": [
+    0.0126,
+    0.2415,
+    0.2503
+   ],
+   "metalness": 1.0,
+   "roughness": 0.13,
+   "transmission": 0.0
+  }
+ },
+ "note": "Locks the LOOK: file hashes + shipping values. verify before shipping; write only alongside a Jordan approval."
+}

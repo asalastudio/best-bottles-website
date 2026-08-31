@@ -1,0 +1,11 @@
+{
+  "bodyId": "Elegant-oval-18-415-87x55",
+  "maxThicknessM": 0.014249,
+  "clampPercentile": 98.0,
+  "medianThicknessM": 0.0026,
+  "resolution": 1024,
+  "channel": "green",
+  "source": "Elegant-oval-18-415-87x55.glb",
+  "frostDatumM": null,
+  "note": "browser: material.thickness = maxThicknessM, material.thicknessMap = PNG (flipY=false, NoColorSpace)"
+}
