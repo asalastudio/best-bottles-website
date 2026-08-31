@@ -949,7 +949,8 @@ export default function MaterialLab(
             {[["black", "CAP_SHINY_BLACK"], ["gold", "CAP_SHINY_GOLD"],
               ["mt silver", "CAP_MATTE_SILVER"], ["sh silver", "CAP_SHINY_SILVER"],
               ["turquoise", "SPRAY_TURQUOISE"], ["red", "SPRAY_RED"]].map(([n, m]) => (
-              <button key={m} onClick={() => setTrimMat(m)} style={btn(trimMat === m)}>{n}</button>
+              <button key={m} onClick={() => { setTrimMat(m); setCapTune(null); }}
+                      style={btn(trimMat === m)}>{n}</button>
             ))}
           </div>
         ) : null}
@@ -967,7 +968,11 @@ export default function MaterialLab(
                 ["silver", "CAP_SHINY_SILVER"], ["mt silver", "CAP_MATTE_SILVER"],
                 ["copper", "CAP_COPPER"], ["blk dot", "CAP_DOTS_BLACK"],
                 ["pnk dot", "CAP_DOTS_PINK"], ["sl dot", "CAP_DOTS_SILVER"]].map(([n, m]) => (
-                <button key={m} onClick={() => setCapMat(m)} style={btn(capMat === m)}>{n}</button>
+                // switching caps clears the tune override — every cap
+                // arrives showing REGISTRY truth (a leftover roughness
+                // override made shiny black read matte)
+                <button key={m} onClick={() => { setCapMat(m); setCapTune(null); }}
+                        style={btn(capMat === m)}>{n}</button>
               ))}
             </>) : null}
           </div>

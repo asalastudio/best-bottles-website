@@ -434,7 +434,7 @@
       "clearcoat": 0.5,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "Shell of the BlkDot cap: glossy black like CAP_SHINY_BLACK (CpRoll17-415BlkDot.psd); studs are PART_STUD_CHROME.",
+      "note": "Jordan 2026-08-31: 'the black dot is supposed to be a shiny black' - values mirror CAP_SHINY_BLACK EXACTLY (keep them in sync). Studs are PART_STUD_CHROME, flush-set rhinestones.",
       "envMapIntensity": 0.65
     },
     "CAP_DOTS_PINK": {
