@@ -110,6 +110,23 @@ export type GlassPreset = {
   provenance: string;
 };
 
+/**
+ * THE canonical glass — measured soda-lime from the absorbed library
+ * (data/materials/physicallybased-library.json, glass.glass; CC0 from
+ * physicallybased.info). Every colourway is THIS glass: clear ships it
+ * almost verbatim; the tinted colourways change ONLY absorption (their
+ * identity) and carry their Jordan-approved deviations explicitly.
+ * material_lock.py verifies clear stays anchored to these values.
+ */
+export const GLASS_BASE = {
+  transmission: 1.0,
+  roughness: 0,
+  ior: 1.52,
+  dispersion: 0.31,
+  attenuationColor: "#fdfefe",   // library linear [0.984, 0.995, 0.995]
+  attenuationDistance: 1.0,
+} as const;
+
 export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
   clear: {
     id: "clear",
@@ -117,7 +134,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 1.0,
     roughness: 0,
     ior: 1.52,
-    thickness: 0.0002,
+    thickness: 0.0095,
     attenuationColor: "#fdfefe",
     attenuationDistance: 1.0,
     dispersion: 0.31,
@@ -130,6 +147,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     anisotropicBlur: 0.05,
     envRotationDeg: 62,
     provenance:
+      "APPROVED 2026-08-31 BY JORDAN (pasted from his lab session verbatim: thickness 0.0095, up from 0.004 - more refractive presence through the thin-wall path). Held on the PDP taupe stage at envRotationDeg 62. " +
       "ADOPTED 2026-08-31 from the physicallybased.info measured glass (data/materials/physicallybased-library.json, glass.glass — the showcase ball Jordan pointed at): roughness 0, ior 1.52, dispersion 0.31, near-white attenuation @ 1.0m. Kept from our architecture: thinWall + DoubleSide + wall-scale thickness (their ball is a solid sphere; our bottle is a hollow shell). " +
       "Jordan 2026-08-31: the rough-0.1 recipe read as frosted-lite, so it moved to the FROSTED preset; clear sharpens to roughness 0.04 with envMapIntensity 1.2 (Pacdora themselves run the same recipe at two points - 0.1 on the spray model, 0.06 on the 550911 bottle). Stage on the umber/grey ground: on bone, colourless glass is white-on-white. " +
       "PACDORA'S EXACT RECIPE, scraped 2026-08-31 from their model API " +

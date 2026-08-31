@@ -1,0 +1,268 @@
+{
+ "files": {
+  "public/models/bodies-thickness/Cyl-round-17-415-70x20.frost.png": "73cd00dd30471600",
+  "public/models/bodies-thickness/Cyl-round-17-415-70x20.glb": "953c7c3aeaf08405",
+  "public/models/bodies-thickness/Cyl-round-17-415-70x20.thickness.png": "0488ff78e7e53c03",
+  "public/models/bodies-threaded/Cyl-round-17-415-70x20.glb": "c63517d3900b6070",
+  "public/models/closures/BB_CAP_17415.glb": "17349331f59b76a8",
+  "public/models/closures/BB_ROLL_BALL_17415_STEEL.glb": "24cd65d2e0c4c807",
+  "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb": "23caa8659874e952",
+  "public/models/matcaps/ball-steel-v3.png": "e03db93507f351cc",
+  "public/models/studio-browser.hdr": "bcd4697b9946e2ec",
+  "public/models/studio-metal.hdr": "6ae44e48e8625ffe",
+  "public/models/studio-room.hdr": "3189ffa2a28d8f09",
+  "public/models/studio-universal.hdr": "34ae5a707f67caa4"
+ },
+ "glassPresets": {
+  "amber": {
+   "anisotropicBlur": "0.10",
+   "attenuationColor": "#8f4a16",
+   "attenuationDistance": "0.015",
+   "clearcoat": "0.70",
+   "clearcoatRoughness": "0.02",
+   "dispersion": "0.95",
+   "distortion": "0",
+   "envMapIntensity": "1.0",
+   "envRotationDeg": "0",
+   "ior": "1.54",
+   "roughness": "0.02",
+   "thickness": "0.0165",
+   "transmission": "1.0"
+  },
+  "clear": {
+   "anisotropicBlur": "0.05",
+   "attenuationColor": "#fdfefe",
+   "attenuationDistance": "1.0",
+   "clearcoat": "0",
+   "clearcoatRoughness": "0",
+   "dispersion": "0.31",
+   "distortion": "0.05",
+   "envMapIntensity": "1.2",
+   "envRotationDeg": "62",
+   "ior": "1.52",
+   "roughness": "0",
+   "thickness": "0.0095",
+   "thicknessBake": "false",
+   "thinWall": "true",
+   "transmission": "1.0"
+  },
+  "cobalt": {
+   "anisotropicBlur": "0.3",
+   "attenuationColor": "#060cc4",
+   "attenuationDistance": "0.013",
+   "clearcoat": "0.70",
+   "clearcoatRoughness": "0.02",
+   "dispersion": "0.95",
+   "distortion": "0",
+   "envMapIntensity": "1.0",
+   "envRotationDeg": "34",
+   "ior": "1.54",
+   "roughness": "0.02",
+   "thickness": "0.017",
+   "transmission": "1.0"
+  },
+  "frosted": {
+   "anisotropicBlur": "0.12",
+   "attenuationColor": "#b6babd",
+   "attenuationDistance": "0.048",
+   "clearcoat": "0.70",
+   "clearcoatRoughness": "0.02",
+   "dispersion": "0.5",
+   "distortion": "0.05",
+   "envMapIntensity": "1.15",
+   "envRotationDeg": "18",
+   "frostMask": "true",
+   "ior": "1.54",
+   "roughness": "0.45",
+   "thickness": "0.0165",
+   "transmission": "0.98"
+  },
+  "swirl": {
+   "anisotropicBlur": "0.15",
+   "attenuationColor": "#e2d8c6",
+   "attenuationDistance": "0.16",
+   "clearcoat": "0.70",
+   "clearcoatRoughness": "0.02",
+   "configuratorReady": "false",
+   "dispersion": "0.9",
+   "distortion": "0.06",
+   "envMapIntensity": "1.0",
+   "envRotationDeg": "46",
+   "ior": "1.54",
+   "roughness": "0.30",
+   "thickness": "0.0165",
+   "transmission": "0.96"
+  }
+ },
+ "materials": {
+  "CAP_COPPER": {
+   "clearcoat": 0.0,
+   "color": "#c77e52",
+   "env": "metal",
+   "envMapIntensity": 1.2,
+   "ior": 1.5,
+   "linear": [
+    0.573,
+    0.212,
+    0.083
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.46,
+   "specularColor": "#fdf9f9",
+   "transmission": 0.0
+  },
+  "CAP_MATTE_GOLD": {
+   "clearcoat": 0.0,
+   "color": "#ffe29b",
+   "env": "metal",
+   "envMapIntensity": 1.2,
+   "ior": 1.5,
+   "linear": [
+    1.0,
+    0.766,
+    0.336
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.4,
+   "specularColor": "#fcfffe",
+   "transmission": 0.0
+  },
+  "CAP_MATTE_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#fbf7ee",
+   "env": "metal",
+   "envMapIntensity": 1.2,
+   "ior": 1.5,
+   "linear": [
+    0.972,
+    0.96,
+    0.915
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.42,
+   "specularColor": "#fefeff",
+   "transmission": 0.0
+  },
+  "CAP_SHINY_BLACK": {
+   "clearcoat": 0.5,
+   "color": "#0b0b0b",
+   "envMapIntensity": 0.65,
+   "ior": 1.5,
+   "linear": [
+    0.0033,
+    0.0033,
+    0.0033
+   ],
+   "metalness": 0.0,
+   "roughness": 0.12,
+   "transmission": 0.0
+  },
+  "CAP_SHINY_GOLD": {
+   "clearcoat": 0.0,
+   "color": "#fff2c9",
+   "env": "metal",
+   "envMapIntensity": 1.6,
+   "ior": 1.5,
+   "linear": [
+    0.9999999999999999,
+    0.8926775272379572,
+    0.5900005962166698
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.05,
+   "specularColor": "#fcfffe",
+   "transmission": 0.0
+  },
+  "CAP_SHINY_SILVER": {
+   "clearcoat": 0.0,
+   "color": "#fffefe",
+   "env": "metal",
+   "envMapIntensity": 1.6,
+   "ior": 1.5,
+   "linear": [
+    0.9960333152256678,
+    0.9933771717300072,
+    0.9884829524812248
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.05,
+   "specularColor": "#fefeff",
+   "transmission": 0.0
+  },
+  "CAP_WHITE": {
+   "clearcoat": 0.15,
+   "color": "#f4f3f0",
+   "ior": 1.5,
+   "linear": [
+    0.9046,
+    0.8963,
+    0.8714
+   ],
+   "metalness": 0.0,
+   "roughness": 0.38,
+   "transmission": 0.0
+  },
+  "PART_BALL_PLASTIC": {
+   "clearcoat": 0.0,
+   "color": "#eeece4",
+   "env": "tent",
+   "ior": 1.5,
+   "linear": [
+    0.855,
+    0.8388,
+    0.7758
+   ],
+   "metalness": 0.0,
+   "roughness": 0.45,
+   "transmission": 0.0
+  },
+  "PART_BALL_STEEL": {
+   "clearcoat": 0.0,
+   "color": "#e0dfdd",
+   "env": "metal",
+   "envMapIntensity": 1.0,
+   "ior": 1.5,
+   "linear": [
+    0.7547806693306308,
+    0.7438551299770171,
+    0.7313912786073086
+   ],
+   "maps": null,
+   "metalness": 1.0,
+   "roughness": 0.1,
+   "transmission": 0.0
+  },
+  "PART_HOUSING_PP": {
+   "clearcoat": 0.0,
+   "color": "#e8e6dd",
+   "ior": 1.5,
+   "linear": [
+    0.807,
+    0.7913,
+    0.7231
+   ],
+   "metalness": 0.0,
+   "roughness": 0.4,
+   "transmission": 0.0
+  },
+  "PART_HOUSING_PP_NATURAL": {
+   "clearcoat": 0.0,
+   "color": "#efece3",
+   "ior": 1.49,
+   "linear": [
+    0.8713,
+    0.8388,
+    0.7681
+   ],
+   "metalness": 0.0,
+   "roughness": 0.42,
+   "transmission": 0.62
+  }
+ },
+ "note": "Locks the LOOK: file hashes + shipping values. verify before shipping; write only alongside a Jordan approval."
+}

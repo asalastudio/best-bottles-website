@@ -14,7 +14,7 @@
  */
 
 import { Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import {
   OrbitControls, Environment, useGLTF, useTexture, useEnvironment,
   MeshTransmissionMaterial, ContactShadows, Center,
@@ -177,6 +177,20 @@ function Bottle({ url, preset, closure, capMat, ballMat, onHeight }: {
   );
 }
 
+/* ------------------------------------------------------- approved context */
+
+/** Each colourway was approved at ITS OWN studio rotation (envRotationDeg,
+ *  so the finishes do not all catch the light in the same place). The
+ *  material without its context is only half the approved look. */
+function StudioContext({ rotationDeg }: { rotationDeg: number }) {
+  const { scene } = useThree();
+  useEffect(() => {
+    scene.environmentIntensity = 1;
+    scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
+  }, [scene, rotationDeg]);
+  return null;
+}
+
 /* -------------------------------------------------------------- entrance */
 
 /** The bottle settles into place on load — a rising, decelerating spin that
@@ -243,6 +257,7 @@ export default function Bottle3DViewer({
                             far={0.06} resolution={1024} color="#3a3128" />
           </group>
           {studio.hdri ? <Environment files={studio.hdri} /> : null}
+          <StudioContext rotationDeg={preset.envRotationDeg} />
         </Suspense>
         <OrbitControls makeDefault target={[0, h / 2, 0]}
                        enablePan={false} minDistance={0.12} maxDistance={0.45}
