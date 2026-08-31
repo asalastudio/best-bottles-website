@@ -116,6 +116,16 @@ def main():
     bpy.ops.object.modifier_apply(modifier="hollow")
     bpy.data.objects.remove(cav, do_unlink=True)
 
+    # The boolean discards the source's custom split normals and recomputes
+    # smooth ones, which average across the shoulder ledge's hard crease and
+    # render as a serrated white fringe (Jordan's close-up, 2026-08-31).
+    # Rebuild shading: smooth faces, sharp edges by angle, and let the glTF
+    # exporter bake the evaluated normals out.
+    body.select_set(True)
+    bpy.ops.object.shade_auto_smooth(angle=math.radians(38.0))
+    for m in list(body.modifiers):
+        bpy.ops.object.modifier_apply(modifier=m.name)
+
     me = body.data
     me.update()
     me.calc_loop_triangles()
