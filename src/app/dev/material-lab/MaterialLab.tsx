@@ -153,8 +153,8 @@ function Model({
             backside
             backsideThickness={effBackside}
             samples={8}
-            resolution={512}
-            backsideResolution={256}
+            resolution={1024}
+            backsideResolution={512}
             roughness={preset.roughness}
             ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
@@ -175,7 +175,7 @@ function Model({
             transmission={preset.transmission} thickness={effThickness}
             thicknessMap={thicknessTex}
             backside backsideThickness={effBackside}
-            samples={8} resolution={512} backsideResolution={256}
+            samples={8} resolution={1024} backsideResolution={512}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
