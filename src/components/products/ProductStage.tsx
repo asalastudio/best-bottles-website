@@ -26,6 +26,12 @@ import { GL_COLOR_SETTINGS } from "@/lib/materials/colorManagement";
 export const STAGE = {
   backdrop: "#a29383",          // warm taupe vitrine (Jordan-approved stage)
   sweepRoughness: 0.85,
+  /** how strongly the sweep answers the studio. The hybrid studio's strip/
+   *  overhead emitters pooled on the semi-matte cove as a WHITE HALO hugging
+   *  the bottle (Jordan: "very bad") — the stage is scenery, so it takes the
+   *  same single environment at a fraction of the intensity and stays an
+   *  even ground for the product to pop from. */
+  sweepEnvIntensity: 0.35,
   /** only refracted rays that bend past the sweep ever see this */
   offFrameDim: 0.32,
   shadow: { color: "#3a3128", opacity: 0.42, blur: 2.4, scale: 0.35, far: 0.06 },
@@ -56,6 +62,7 @@ function CoveSweep({ backdrop }: { backdrop: string }) {
   return (
     <mesh geometry={geometry} position={[0, -0.0004, 0]}>
       <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness}
+                            envMapIntensity={STAGE.sweepEnvIntensity}
                             side={THREE.BackSide} />
     </mesh>
   );

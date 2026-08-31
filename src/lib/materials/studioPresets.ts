@@ -110,7 +110,7 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
   "hybrid-small08": {
     id: "hybrid-small08",
     label: "Hybrid studio (Small 08 + formers)",
-    hdri: "/env/studio_small_08_1k.hdr",
+    hdri: "/env/studio_small_08_1k_peak24.hdr",
     hybrid: true,
     environmentIntensity: 1.0,
     environmentRotation: 0,
@@ -121,7 +121,9 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "'the feathered softbox is much better' — glass colourways inherit). " +
       "The single environment for the whole scene, per the studio-lighting " +
       "handoff: Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN " +
-      "preset) as the neutral coverage base, COMBINED in one cubemap with " +
+      "preset; PEAK-CLAMPED at luminance 24 — the raw file's ~97 hot texels " +
+      "speckled the glass as fireflies) as the neutral coverage base, " +
+      "COMBINED in one cubemap with " +
       "four FEATHERED softbox emitters (StudioEnvironment.tsx EMITTERS — " +
       "Gaussian-windowed quads; the first cut used hard-edged drei " +
       "Lightformer rects and their edges printed razor lines down the " +

@@ -26,7 +26,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[3]
 LOCK = ROOT / "public" / "models" / "materials.lock.json"
 
 TRACKED_FILES = [
-    "public/env/studio_small_08_1k.hdr",
+    "public/env/studio_small_08_1k_peak24.hdr",
     "public/models/studio-universal.hdr",
     "public/models/studio-mono.hdr",
     "public/models/studio-metal-key.hdr",
