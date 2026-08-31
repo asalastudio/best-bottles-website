@@ -405,7 +405,10 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
             thicknessMap={preset.thicknessBake === false ? null : thicknessTex}
             roughnessMap={preset.frostMask ? frostTex : null}
             backside backsideThickness={preset.thickness}
-            samples={16} resolution={512} backsideResolution={256}
+            // backside at 256 aliased the thread helix into a crawling
+            // shimmer during auto-rotate ("weird movement in the neck",
+            // Jordan) — quality knobs, not look values
+            samples={16} resolution={768} backsideResolution={512}
             roughness={preset.roughness} ior={preset.ior}
             chromaticAberration={preset.dispersion * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
