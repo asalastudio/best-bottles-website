@@ -246,21 +246,23 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
   swirl: {
     id: "swirl",
     label: "Swirl",
-    transmission: 0.96,
-    roughness: 0.30,
-    ior: 1.54,
-    thickness: 0.0165,
-    attenuationColor: "#e2d8c6",
-    attenuationDistance: 0.16,
-    dispersion: 0.9,
-    clearcoat: 0.70,
-    clearcoatRoughness: 0.02,
-    envMapIntensity: 1.0,
-    configuratorReady: false,
-    distortion: 0.06,
-    anisotropicBlur: 0.15,
+    transmission: 1.0,
+    roughness: 0,
+    ior: 1.52,
+    thickness: 0.0095,
+    attenuationColor: "#fdfefe",
+    attenuationDistance: 1.0,
+    dispersion: 0.31,
+    clearcoat: 0,
+    clearcoatRoughness: 0,
+    envMapIntensity: 1.2,
+    thinWall: true,
+    thicknessBake: false,
+    distortion: 0.05,
+    anisotropicBlur: 0.05,
     envRotationDeg: 46,
     provenance:
+      "SWIRL = THE CANONICAL CLEAR GLASS ON FLUTED GEOMETRY (Jordan, 2026-08-31: add swirl, with the clear glass material). Every optical value here mirrors the approved clear preset / GLASS_BASE - the flutes are the identity, cut into the mesh (0.97 mm relief), not painted on. Body: CylSwrl-round-17-415-74x21, hollowed (wall 1.6, exterior gate 0.00um - flutes untouched) and baked 2026-08-31. envRotationDeg 46 keeps its own light angle. " +
       "THE RATIO METHOD DOES NOT APPLY TO THIS FINISH. Measured 2026-08-31: the reference sits at T = 1.108/1.160/1.208 - BRIGHTER than the backdrop of the backdrop, but sweeping absorption on the live canvas bottoms out at .913 even at attenuationDistance 0.012 - and going further just yields GREY PLASTIC, which is the documented anti-pattern. The gap is not absorption: a near-colourless bottle gets its presence from REFRACTION, EDGES and REFLECTION, and the reference photo was shot in a room with far more to refract than our studio. So this preset keeps absorption minimal by design and is judged STRUCTURALLY (are the edges, the far wall and the shoulder legible?), not by a transmission number. A value above 1.0 cannot come from absorption at all; the flutes CONCENTRATE light, which is geometry doing the work. Roughness 0.30 is kept as this finish\u2019s identity." +
       "Clearcoat 0.70/0.02 carried over from the approved amber (2026-08-31) - same physical glass surface. Roughness deliberately NOT carried over: it is this finish's identity. Absorption NOT approved. " +
       "ART DIRECTION, not measurement - no physical swirl bottle available. " +

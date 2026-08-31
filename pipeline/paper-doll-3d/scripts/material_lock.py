@@ -35,6 +35,8 @@ TRACKED_FILES = [
     "public/models/bodies-thickness/Cyl-round-17-415-70x20.thickness.png",
     "public/models/bodies-thickness/Cyl-round-17-415-70x20.frost.png",
     "public/models/bodies-threaded/Cyl-round-17-415-70x20.glb",
+    "public/models/bodies-thickness/CylSwrl-round-17-415-74x21.glb",
+    "public/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb",
     "public/models/closures/BB_ROLL_BALL_17415_STEEL.glb",
     "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb",
     "public/models/closures/BB_CAP_17415.glb",

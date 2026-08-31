@@ -54,6 +54,11 @@ const CLOSURES: { id: "none" | "roller" | "rollerCapped"; label: string }[] = [
     { id: "rollerCapped", label: "Capped" },
 ];
 
+/** colourways that live on their own mesh — the swirl's flutes are geometry */
+const BODY_FOR_GLASS: Partial<Record<GlassPresetId, string>> = {
+    swirl: "CylSwrl-round-17-415-74x21",
+};
+
 export default function BottleConfigurator({
     bodyId = "Cyl-round-17-415-70x20",
     initialGlass = "amber",
@@ -77,7 +82,7 @@ export default function BottleConfigurator({
             {/* ------------------------------------------------ the vitrine */}
             <div className="relative">
                 <Bottle3DViewer
-                    bodyId={bodyId}
+                    bodyId={BODY_FOR_GLASS[glass] ?? bodyId}
                     glass={glass}
                     closure={closure}
                     capMat={capMat}

@@ -1,0 +1,11 @@
+{
+  "bodyId": "CylSwrl-round-17-415-74x21",
+  "maxThicknessM": 0.01266,
+  "clampPercentile": 98.0,
+  "medianThicknessM": 0.00245,
+  "resolution": 1024,
+  "channel": "green",
+  "source": "CylSwrl-round-17-415-74x21.glb",
+  "frostDatumM": null,
+  "note": "browser: material.thickness = maxThicknessM, material.thicknessMap = PNG (flipY=false, NoColorSpace)"
+}
