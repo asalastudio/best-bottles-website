@@ -30,6 +30,7 @@ TRACKED_FILES = [
     "public/models/studio-mono.hdr",
     "public/models/studio-metal-key.hdr",
     "public/models/studio-classic.hdr",
+    "public/models/studio-classic-clean.hdr",
     "public/models/studio-room.hdr",
     "public/models/studio-browser.hdr",
     "public/models/studio-metal.hdr",

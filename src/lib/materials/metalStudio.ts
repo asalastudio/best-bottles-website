@@ -35,7 +35,7 @@ import * as THREE from "three";
 export type MetalStudioId = "key" | "classic";
 export const METAL_STUDIO_FILES: Record<MetalStudioId, string> = {
   key: "/models/studio-metal-key.hdr",
-  classic: "/models/studio-classic.hdr",
+  classic: "/models/studio-classic-clean.hdr",
 };
 /** which one the PDP ships — flip only on Jordan's approval */
 export const APPROVED_METAL_STUDIO: MetalStudioId = "classic";
