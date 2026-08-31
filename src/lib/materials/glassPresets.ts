@@ -159,33 +159,32 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     transmission: 1.0,
     roughness: 0.02,
     ior: 1.54,
-    thickness: 0.0165,
+    thickness: 0.017,
     attenuationColor: "#060cc4",
-    attenuationDistance: 0.015,
+    attenuationDistance: 0.013,
     dispersion: 0.95,
     clearcoat: 0.70,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
-    anisotropicBlur: 0.10,
+    anisotropicBlur: 0.3,
     envRotationDeg: 34,
     provenance:
-      "SOLVED 2026-08-31 by measurement against public/references/9ml/" +
-      "cobalt.jpg, same loop as the approved amber (see the " +
-      "bestbottles-glass-material-lab skill). Sweeping attenuationColor and " +
-      "reading the live canvas, body mid as a fraction of the backdrop:\n" +
-      "    #123f9e -> .017/.043/.288\n" +
-      "    #0810b4 -> .000/.035/.459\n" +
-      "    #060cc4 -> .000/.035/.592   <- shipping\n" +
-      "    target  -> .007/.066/.608\n" +
-      "Blue lands within .016 of the reference. GREEN IS FLOOR-LIMITED: " +
-      "#060cc4 through #0620c4 all measure .035 because that is the neutral " +
-      "surface-reflection floor, not the glass - do not chase it with more " +
-      "green, it does nothing. Surface and optical treatment are the amber's " +
-      "(ior 1.54, thickness 0.0165, attenuationDistance 0.015): one physical " +
-      "glass. Jordan approved it on sight. " +
-      "Superseded: eye-set #123f9e at 0.026, which measured .017/.043/.288 - " +
-      "far too pale and too green.",
+      "APPROVED 2026-08-31 BY JORDAN ('that cobalt looks really good', then " +
+      "hand-tuned and locked). Values pasted from his live session verbatim. " +
+      "Base colour #060cc4 was SOLVED by measurement against " +
+      "public/references/9ml/cobalt.jpg: sweeping attenuationColor and " +
+      "reading the live canvas, #060cc4 measures .000/.035/.592 vs the " +
+      "reference .007/.066/.608 - blue within .016. GREEN IS FLOOR-LIMITED " +
+      "(.035 for every value #060cc4..#0620c4): that is the neutral " +
+      "reflection floor, not the glass - do not chase it. Jordan then " +
+      "deepened it: thickness 0.017, attenuationDistance 0.013, and " +
+      "anisotropicBlur 0.3 - the SMOKY transmission is a deliberate look " +
+      "choice for cobalt (vs amber's 0.1); it softens what shows through " +
+      "the blue without frosting the surface. " +
+      "Superseded: eye-set #123f9e at 0.026 (measured .017/.043/.288 - " +
+      "far too pale and too green).",
   },
+
   swirl: {
     id: "swirl",
     label: "Swirl",
