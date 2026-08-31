@@ -189,6 +189,13 @@ export default function ConfiguratorPdp({
 
   const activeBase = committedBase;
 
+  // a roll-on SKU with a cap colourway IS a capped product ("Pink Dotted
+  // Cap") — render the cap by default; the toggle can still remove it
+  useEffect(() => {
+    setWithCap(committedBase === "roller" && (capOptions?.length ?? 0) > 0);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [currentSlug, committedBase]);
+
   // warm the sibling colourway bodies: same family, so a swap should not
   // hit a loader
   useEffect(() => {

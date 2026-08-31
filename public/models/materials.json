@@ -455,21 +455,23 @@
       "specularIntensity": 1.5
     },
     "CAP_DOTS_PINK": {
-      "color": "#e2d3d6",
+      "color": "#dfaec8",
       "linear": [
-        0.6866,
-        0.2508,
-        0.3712
+        0.748,
+        0.427,
+        0.578
       ],
+      "metalness": 0.0,
       "roughness": 0.42,
-      "metalness": 1.0,
-      "clearcoat": 0.0,
-      "ior": 1.5,
+      "clearcoat": 0.15,
+      "ior": 1.49,
       "transmission": 0.0,
-      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement itself (CpRoll17-415PnkDot.psd body mid #e2d3d6) - Jordan: 'the colors need to be more accurate'. LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'more of a matte, same sort of texture as the matte silver, but it's just pink' - finish params mirror CAP_MATTE_SILVER (matte metal + library matte maps), tint pink from CpRoll17-415PnkDot.psd. Studs are PART_STUD_CHROME, FLUSH-set.",
-      "envMapIntensity": 1.5,
-      "env": "metal",
-      "maps": "matte"
+      "maps": "matte",
+      "envMapIntensity": 0.8,
+      "env": "tent",
+      "specularIntensity": 1.2,
+      "specularColor": "#ffffff",
+      "note": "REVISED 2026-08-31 by Jordan's directive ('this is more of a FLAT pink' — supersedes the full-set-freeze value, which rendered as silvery rose METAL). Shell now shares the CAP_PINK flat-pale-pink dielectric recipe (metalness 0 per the three.js metalness contract Jordan cited: painted plastic is 0, only real metal is 1). Albedo #dfaec8 measured+compensated from CpRoll17-415PnkDot.psd. Studs render separately as PART_STUD_RHINESTONE (ring-sparkle). DRAFT pending lab approval."
     },
     "CAP_DOTS_SILVER": {
       "color": "#f5f6f6",
@@ -739,11 +741,11 @@
       "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
     },
     "CAP_PINK": {
-      "color": "#ddc6d1",
+      "color": "#dfaec8",
       "linear": [
-        0.718,
-        0.567,
-        0.638
+        0.748,
+        0.427,
+        0.578
       ],
       "metalness": 0.0,
       "roughness": 0.42,
@@ -751,11 +753,11 @@
       "ior": 1.49,
       "transmission": 0.0,
       "maps": "matte",
-      "envMapIntensity": 0.9,
+      "envMapIntensity": 0.8,
       "env": "tent",
       "specularIntensity": 1.2,
       "specularColor": "#ffffff",
-      "note": "DRAFT v2 2026-08-31 — pending Jordan lab approval, NOT locked. Jordan corrected v1: 'this is more of a FLAT pink', not pearl — so a flat pale pink DIELECTRIC (metalness 0), satin-matte with the library matte maps, a hair of clearcoat 0.15. Colour re-sampled from CpRoll17-415PnkDot.psd's lit face: flat band #f0e8e9 (near-highlight) to #c5a9b6 (mid-shade); albedo set between at #ddc6d1. Tent env like the other PP dielectrics."
+      "note": "DRAFT v3 2026-08-31 — pending Jordan lab approval, NOT locked. v2's #ddc6d1 rendered SILVER on the stage (Jordan: 'where is the pink cap?') — pale low-sat albedo + tent env + ACES collapses to grey. Same lesson as the coloured metals: compensate perceptually. Albedo pushed to a saturated pale rose #dfaec8, envMapIntensity 0.9 -> 0.8 so the env wash doesn't dilute it. Flat dielectric recipe unchanged (metalness 0, roughness 0.42 + matte maps, clearcoat 0.15). Source truth: CpRoll17-415PnkDot.psd flat shell."
     },
     "PART_STUD_RHINESTONE": {
       "color": "#6d7772",
