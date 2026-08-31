@@ -354,29 +354,33 @@
    "transmission": 0.0
   },
   "SPRAY_RED": {
-   "clearcoat": 0.35,
-   "color": "#a31621",
+   "clearcoat": 0.0,
+   "color": "#b31f2b",
+   "env": "metal",
+   "envMapIntensity": 1.5,
    "ior": 1.5,
    "linear": [
     0.3712,
     0.0069,
     0.0129
    ],
-   "metalness": 0.0,
-   "roughness": 0.22,
+   "metalness": 1.0,
+   "roughness": 0.18,
    "transmission": 0.0
   },
   "SPRAY_TURQUOISE": {
-   "clearcoat": 0.35,
-   "color": "#1f8a8c",
+   "clearcoat": 0.0,
+   "color": "#2aa0a2",
+   "env": "metal",
+   "envMapIntensity": 1.5,
    "ior": 1.5,
    "linear": [
     0.0126,
     0.2415,
     0.2503
    ],
-   "metalness": 0.0,
-   "roughness": 0.22,
+   "metalness": 1.0,
+   "roughness": 0.18,
    "transmission": 0.0
   }
  },

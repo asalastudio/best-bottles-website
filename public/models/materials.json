@@ -396,32 +396,36 @@
       "note": "the liquid-fill mesh material, scraped 2026-08-31 from Pacdora model API (mockups 510470/550911) (part \u586b\u5145\u7269): ships at opacity 0 = empty bottle; set color+opacity to show contents"
     },
     "SPRAY_TURQUOISE": {
-      "color": "#1f8a8c",
+      "color": "#2aa0a2",
       "linear": [
         0.0126,
         0.2415,
         0.2503
       ],
-      "roughness": 0.22,
-      "metalness": 0.0,
-      "clearcoat": 0.35,
+      "roughness": 0.18,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+      "note": "Jordan 2026-08-31: 'turquoise should be reflective, and red should be reflective' - anodized-aluminum collar: metal at low roughness under the metal studio; tint brightened one step because a metal's F0 IS its reflection colour (dark F0 = dark mirror).",
+      "envMapIntensity": 1.5,
+      "env": "metal"
     },
     "SPRAY_RED": {
-      "color": "#a31621",
+      "color": "#b31f2b",
       "linear": [
         0.3712,
         0.0069,
         0.0129
       ],
-      "roughness": 0.22,
-      "metalness": 0.0,
-      "clearcoat": 0.35,
+      "roughness": 0.18,
+      "metalness": 1.0,
+      "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "glossy coloured phenolic - catalog inventory build 2026-08-31 (SKU-derived: Tur/Rd spray collars, Dot caps)"
+      "note": "Jordan 2026-08-31: 'turquoise should be reflective, and red should be reflective' - anodized-aluminum collar: metal at low roughness under the metal studio; tint brightened one step because a metal's F0 IS its reflection colour (dark F0 = dark mirror).",
+      "envMapIntensity": 1.5,
+      "env": "metal"
     },
     "CAP_DOTS_BLACK": {
       "color": "#0b0b0b",
