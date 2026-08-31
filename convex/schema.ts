@@ -677,4 +677,31 @@ export default defineSchema({
     })
         .index("by_key", ["key"])
         .index("by_route_identifier", ["route", "identifier"]),
+
+    // -------------------------------------------------------------------------
+    // 3D CONFIGURATOR MATERIAL RECIPES — per-finish MeshPhysicalMaterial tunables
+    // -------------------------------------------------------------------------
+
+    // ONE studio environment lights the whole configurator scene; per-finish
+    // variation (envMapIntensity, roughness, attenuation…) lives HERE so the
+    // founder can tune a finish without a deploy — never in swapping
+    // environments. Seeded by materialRecipes.seedPilotFinishes from
+    // src/lib/materials/materialRecipes.ts; scale notes live in that module
+    // (thickness/attenuationDistance are metres at real product scale).
+    materialRecipes: defineTable({
+        finishKey: v.string(),                               // e.g. "amber-glass" — unique
+        label: v.string(),
+        kind: v.union(v.literal("glass"), v.literal("metal")),
+        color: v.string(),                                   // hex; glass stays white, tint via attenuation
+        metalness: v.number(),
+        roughness: v.number(),
+        ior: v.optional(v.number()),
+        transmission: v.optional(v.number()),
+        thickness: v.optional(v.number()),                   // metres ≈ real wall thickness
+        attenuationColor: v.optional(v.string()),
+        attenuationDistance: v.optional(v.number()),         // metres
+        envMapIntensity: v.number(),                         // default 1.0
+        updatedAt: v.number(),
+    })
+        .index("by_finishKey", ["finishKey"]),
 });
