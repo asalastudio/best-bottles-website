@@ -128,3 +128,18 @@ dots → Bottle/Roll-on/Spray/Pump pill + cap toggle → cap finishes only for
 the roller cap. On configurator PDPs the 3D IS the imagery — no static
 thumb rail beside it. Each colourway renders at its approved
 `envRotationDeg`; the material without its context is half the look.
+
+## Metal studio law (2026-08-31, gold APPROVED under it)
+- Metals (and glossy black) take their envMap from `useMetalStudio()` —
+  three's RoomEnvironment PMREM-baked, the threejs-materials "Studio mode".
+  NEVER swap it for an HDRI with any narrow source: a cylinder smears a
+  narrow source into a full-height stripe, and no material slider can move
+  a reflection.
+- Library color arrays in physicallybased-library.json are ALREADY sRGB
+  fractions (they match Filament's sRGB F0). Map *255 straight to hex;
+  re-encoding washes every metal to cream.
+- ACES desaturates clipped highlights: coloured metals run LOWER
+  envMapIntensity (gold 1.35, copper 1.25) than silver (2.0).
+- *Dot caps composite: normal shell in the colourway + BB_CAP_DOTS studs
+  (a STUDS-ONLY GLB) in PART_STUD_CHROME. Matte finishes declare
+  maps:"matte" (library matte normal/roughness, cylindrical unwrap).
