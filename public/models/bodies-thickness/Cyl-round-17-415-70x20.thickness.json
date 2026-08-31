@@ -1,8 +1,8 @@
 {
   "bodyId": "Cyl-round-17-415-70x20",
-  "maxThicknessM": 0.030477,
+  "maxThicknessM": 0.019731,
   "clampPercentile": 98.0,
-  "medianThicknessM": 0.002657,
+  "medianThicknessM": 0.0025,
   "resolution": 1024,
   "channel": "green",
   "source": "Cyl-round-17-415-70x20.glb",
