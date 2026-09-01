@@ -6,6 +6,7 @@ import {
     resolveVariantsBySkus,
 } from "@/lib/shopify";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
+import { resolveWholesaleCheckoutUrl } from "@/lib/portal/wholesaleCheckout";
 
 /**
  * POST /api/shopify/resolve-variants
@@ -99,8 +100,15 @@ export async function POST(req: NextRequest) {
             }));
         const checkoutItems = [...directCheckoutItems, ...resolvedCheckoutItems];
 
-        const checkoutUrl =
-            checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null;
+        // A signed-in wholesale account checks out through a draft order so the
+        // Shopify CUSTOMER is attached and an approved resale certificate can
+        // actually remove tax. Everyone else keeps the anonymous permalink.
+        const wholesale =
+            checkoutItems.length > 0 ? await resolveWholesaleCheckoutUrl(checkoutItems) : null;
+
+        const checkoutUrl = wholesale?.checkoutUrl
+            ?? (checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null);
+        const checkoutMode = wholesale?.checkoutUrl ? "wholesale" : "anonymous";
         const unmatchedSkus = [
             ...directItems
                 .filter((item) => !directStateById.has(item.shopifyVariantId as string))
@@ -114,6 +122,7 @@ export async function POST(req: NextRequest) {
                     error: "No checkout-ready Shopify variants found",
                     variants,
                     checkoutUrl,
+                    checkoutMode,
                     unmatchedSkus,
                     unavailableSkus,
                 },
@@ -124,6 +133,7 @@ export async function POST(req: NextRequest) {
         return Response.json({
             variants,
             checkoutUrl,
+            checkoutMode,
             unmatchedSkus,
             unavailableSkus,
         });

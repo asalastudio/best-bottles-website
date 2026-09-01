@@ -96,6 +96,7 @@ const navSections = [
     {
         items: [
             { href: "/portal/account", label: "Account", id: "account" },
+            { href: "/portal/tax-exemption", label: "Tax Exemption", id: "tax-exemption" },
             // Clerk <UserProfile /> embedded in the portal shell — customers
             // edit their details here instead of being sent to Clerk's hosted
             // Account Portal.
