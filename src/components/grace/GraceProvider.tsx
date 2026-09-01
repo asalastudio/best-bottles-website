@@ -1021,6 +1021,35 @@ function GraceProviderBase({
             } catch (e) { console.error("[Grace] getCatalogStats:", e); return "Stats lookup failed."; }
         },
 
+        getCatalogHealth: async (params: { families?: string[] | null }) => {
+            try {
+                const families = Array.isArray(params?.families)
+                    ? params.families.filter((f) => typeof f === "string" && f.trim() !== "")
+                    : [];
+                const data = await callGraceServerTool<Record<string, unknown>>(
+                    "getCatalogHealth", families.length ? { families } : {});
+                if (data.error) return `${data.error} I could not retrieve catalog health.`;
+                if (!data.result) return "Could not retrieve catalog health.";
+                const h = data.result as {
+                    scanned?: number; complete?: number; incomplete?: number;
+                    completionPct?: number;
+                    byFamily?: Array<{ family: string; total: number; completionPct: number; blockingIssues: number }>;
+                    topIssues?: Array<{ code: string; count: number; severity: string }>;
+                };
+                const lines = [
+                    `Catalog completeness: ${h.completionPct ?? "unknown"}% — ${h.complete ?? 0} of ${h.scanned ?? 0} records complete, ${h.incomplete ?? 0} with blocking gaps.`,
+                    "This measures DATA QUALITY, not availability: an incomplete record may still be buyable.",
+                ];
+                const worst = (h.byFamily ?? []).filter((f) => f.completionPct < 100).slice(0, 6);
+                if (worst.length)
+                    lines.push(`Weakest families: ${worst.map((f) => `${f.family} ${f.completionPct}% (${f.total} rows)`).join(", ")}`);
+                const blocking = (h.topIssues ?? []).filter((i) => i.severity === "blocking").slice(0, 4);
+                if (blocking.length)
+                    lines.push(`Most common blocking gaps: ${blocking.map((i) => `${i.code} (${i.count})`).join(", ")}`);
+                return lines.join("\n");
+            } catch (e) { console.error("[Grace] getCatalogHealth:", e); return "Catalog health lookup failed."; }
+        },
+
         getProductBySku: async (params: { sku?: string | null }) => {
             const sku = (params?.sku ?? "").trim();
             if (!sku) return "No SKU provided. Ask the customer for the exact code.";

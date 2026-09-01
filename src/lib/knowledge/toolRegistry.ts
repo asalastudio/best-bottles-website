@@ -55,6 +55,7 @@ const TOOL_POLICIES = {
     getBottleComponents: read(COMPATIBILITY_READ),
     checkCompatibility: read(COMPATIBILITY_READ),
     getCatalogStats: read(CATALOG_READ),
+    getCatalogHealth: read(CATALOG_READ),
     getPriceStats: read(CATALOG_READ),
     getCurrentPageContext: read(CATALOG_READ, CUSTOMER_SURFACES),
     getCartContents: read(CATALOG_READ, CUSTOMER_SURFACES),

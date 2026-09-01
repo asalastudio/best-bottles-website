@@ -123,6 +123,13 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         threadSize: string("GPI neck thread such as 17-415 or 18-415."),
     }),
     spec("getCatalogStats", "Return current catalog counts from Convex; never use a memorized catalog total."),
+    spec("getCatalogHealth", "Return live catalog COMPLETENESS from Convex — how many product records are complete vs missing required data, per family, with the most common gaps. Use for internal/staff questions like 'what is missing from the catalog', 'which family has the worst data', or 'how complete is our data'. This reports DATA QUALITY, not stock: a row counted incomplete may still be perfectly buyable. Never quote a completeness figure from memory. Optionally pass families to scope the scan; omit for a survey of the largest families.", {
+        families: {
+            type: "array",
+            items: { type: "string" },
+            description: "Exact family names to scan (e.g. ['Cylinder','Elegant']), or an empty array to survey the largest families.",
+        },
+    }),
     spec("getCurrentPageContext", "Read the customer's current page, product, active Refine state, and cart context."),
     spec("getCartContents", "Read current cart items and totals before proposing additions or moving to checkout."),
     spec("getBrowsingHistory", "Read recent in-session pages and searches to resolve references without asking the customer to repeat them."),

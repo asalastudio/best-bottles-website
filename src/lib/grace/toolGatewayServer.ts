@@ -280,6 +280,16 @@ export async function executeGraceServerTool({
                 break;
             }
 
+            case "getCatalogHealth": {
+                const families = Array.isArray(parameters.families)
+                    ? (parameters.families as unknown[]).filter(
+                          (f): f is string => typeof f === "string" && f.trim() !== "")
+                    : [];
+                result = await convex.query(api.wholesale.getCatalogHealth,
+                    families.length ? { families } : {});
+                break;
+            }
+
             case "getPolicy": {
                 result = buildPolicyToolResult(
                     typeof parameters.question === "string" ? parameters.question : "",

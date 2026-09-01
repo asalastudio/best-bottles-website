@@ -9,6 +9,7 @@ const EXISTING_GRACE_TOOLS = [
     "getBottleComponents",
     "checkCompatibility",
     "getCatalogStats",
+    "getCatalogHealth",
     "getPriceStats",
     "getCurrentPageContext",
     "getCartContents",
