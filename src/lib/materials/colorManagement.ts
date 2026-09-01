@@ -1,3 +1,26 @@
+/* ─────────────────────────────────────────────────────────────────────────
+ * GLOBAL — THIS FILE RETUNES EVERY GLASS FINISH AT ONCE.
+ *
+ * Clear, amber, cobalt, frosted and swirl all read through the values here.
+ * A change that improves one WILL move the other four, and they will move
+ * without anyone noticing, because the obvious place to look after an edit
+ * is the bottle you were already looking at.
+ *
+ * That is not hypothetical. On 2026-09-01 tone mapping, exposure, an
+ * environment rotation and two emitter edits all landed while judging a
+ * single amber bottle; four finishes drifted and it took three days and a
+ * founder's eye to catch. Jordan: "we keep falling back to the same
+ * bullshit again and again."
+ *
+ * BEFORE AND AFTER any edit here:
+ *     npm run look:sheet      # all five finishes, side by side
+ *     npm run look:verify     # the lock — also enforced in CI
+ *
+ * Per-finish work does NOT belong in this file:
+ *     one glass finish  -> src/lib/materials/glassPresets.ts
+ *     one part/material -> public/models/materials.json (+ npm run materials:port)
+ * ───────────────────────────────────────────────────────────────────────── */
+
 /**
  * Colour management — the single place both lanes agree on.
  *

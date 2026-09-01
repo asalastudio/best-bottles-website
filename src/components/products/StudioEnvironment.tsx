@@ -1,5 +1,29 @@
 "use client";
 
+/* ─────────────────────────────────────────────────────────────────────────
+ * GLOBAL — THIS FILE RETUNES EVERY GLASS FINISH AT ONCE.
+ *
+ * Clear, amber, cobalt, frosted and swirl all read through the values here.
+ * A change that improves one WILL move the other four, and they will move
+ * without anyone noticing, because the obvious place to look after an edit
+ * is the bottle you were already looking at.
+ *
+ * That is not hypothetical. On 2026-09-01 tone mapping, exposure, an
+ * environment rotation and two emitter edits all landed while judging a
+ * single amber bottle; four finishes drifted and it took three days and a
+ * founder's eye to catch. Jordan: "we keep falling back to the same
+ * bullshit again and again."
+ *
+ * BEFORE AND AFTER any edit here:
+ *     npm run look:sheet      # all five finishes, side by side
+ *     npm run look:verify     # the lock — also enforced in CI
+ *
+ * Per-finish work does NOT belong in this file:
+ *     one glass finish  -> src/lib/materials/glassPresets.ts
+ *     one part/material -> public/models/materials.json (+ npm run materials:port)
+ * ───────────────────────────────────────────────────────────────────────── */
+
+
 /**
  * StudioEnvironment — THE single hybrid environment (candidate).
  *
@@ -133,10 +157,18 @@ function makeFeatherTexture(sigma: [number, number]): THREE.Texture {
 }
 
 function SoftEmitter({ emitter }: { emitter: Emitter }) {
-  const { position, scale, intensity, sigma } = emitter;
+  const { position, scale, intensity } = emitter;
+  // sigma is destructured to SCALARS before the memo. Passing the tuple and
+  // then indexing it inside the dependency array (`[intensity, sigma[0],
+  // sigma[1]]`) is a member expression, which the React Compiler cannot
+  // prove stable — it bailed with "Existing memoization could not be
+  // preserved" and the eslint-disable on the line below did not silence it,
+  // because that disable names exhaustive-deps and this is a different rule.
+  const sigmaX = emitter.sigma[0];
+  const sigmaY = emitter.sigma[1];
   const material = useMemo(() => {
     const m = new THREE.MeshBasicMaterial({
-      map: makeFeatherTexture(sigma),
+      map: makeFeatherTexture([sigmaX, sigmaY]),
       transparent: true,
       blending: THREE.AdditiveBlending, // adds light over the base HDRI
       depthWrite: false,
@@ -145,8 +177,7 @@ function SoftEmitter({ emitter }: { emitter: Emitter }) {
     });
     m.color.setScalar(intensity); // HDR: the env portal renders half-float
     return m;
-    // sigma is a tuple literal from EMITTERS — stringify for stable deps
-  }, [intensity, sigma[0], sigma[1]]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [intensity, sigmaX, sigmaY]);
   return (
     <mesh position={position} scale={[scale[0], scale[1], 1]}
           onUpdate={(self) => self.lookAt(0, 0, 0)}>

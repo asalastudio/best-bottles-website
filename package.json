@@ -44,7 +44,10 @@
     "materials": "npm run materials:glass && npm run materials:port && npm run materials:verify && npm run materials:validate && npm run materials:assets",
     "materials:glass": "tsx scripts/materials/extract-glass.mts",
     "materials:maps": "node scripts/materials/fetch-pbr-maps.mjs",
-    "materials:assets": "node scripts/materials/check-assets.mjs"
+    "materials:assets": "node scripts/materials/check-assets.mjs",
+    "look:verify": "python3 pipeline/paper-doll-3d/scripts/material_lock.py verify",
+    "look:lock": "python3 pipeline/paper-doll-3d/scripts/material_lock.py write",
+    "look:sheet": "node scripts/materials/contact-sheet.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
@@ -115,6 +118,7 @@
     "dotenv": "^17.3.1",
     "eslint": "^9",
     "eslint-config-next": "^16.2.7",
+    "playwright": "^1.50.0",
     "shadcn": "^3.8.5",
     "tailwindcss": "^4",
     "typescript": "5.9.3",
