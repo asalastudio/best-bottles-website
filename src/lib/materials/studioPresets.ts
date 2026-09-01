@@ -129,15 +129,16 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
     backdrop: "#e9e6e0",
     provenance:
-      "RETIRED 2026-09-01, superseded by 'universal-cone'. Approved " +
-      "2026-08-31 (Jordan, at /dev/lighting-test: 'the feathered softbox is " +
-      "much better'), then rejected on the fine-mist render: 'there are too " +
-      "many lines — it needs to be a softbox, not individual, NO CARDS.' " +
-      "BOTH halves printed lines. The quads were small bright rectangles, and " +
-      "feathering softens a quad's EDGE without making the quad big; the " +
-      "photographed base carried a real ceiling — fixtures, a window, a " +
-      "doorway — each its own line, so deleting the quads alone would not " +
-      "have been enough. Kept for A/B. " +
+      "THE SHIPPING STUDIO. Approved 2026-08-31 (Jordan, at " +
+      "/dev/lighting-test: 'the feathered softbox is much better'), briefly " +
+      "replaced by 'universal-cone' on 2026-09-01 and RESTORED the same day " +
+      "when the cone was rejected: 'it doesn't have that nice sheen — it " +
+      "smothers the reflections where they're important.' " +
+      "OPEN ISSUE, unresolved: on the fine-mist render Jordan called this rig " +
+      "'too many lines'. That is NOT fixed by going back; it is the known " +
+      "cost of this rig and the reason the cone was tried. See " +
+      "'universal-cone' for what the two complaints have in common and why " +
+      "the fix is FEWER azimuthal features, not flatter ones. " +
       "The single environment for the whole scene, per the studio-lighting " +
       "handoff: Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN " +
       "preset; PEAK-CLAMPED at luminance 24 — the raw file's ~97 hot texels " +
@@ -163,7 +164,11 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
     backdrop: "#e9e6e0",
     provenance:
-      "THE SHIPPING STUDIO as of 2026-09-01. Generated end to end by " +
+      "REJECTED 2026-09-01 (Jordan: 'we're not approving the light cone — it " +
+      "doesn't have that nice sheen we were looking for, it smothers the " +
+      "reflections where they're important'). Kept for A/B and for the " +
+      "geometry note below, which is the most useful thing this lane has " +
+      "learned about why its studios fail. Generated end to end by " +
       "pipeline/paper-doll-3d/scripts/make_universal_softbox.py — no " +
       "photographed base and no in-scene emitters, which is the point. " +
       "Jordan's framing is the design: 'think of it like a light cone — it " +
@@ -187,4 +192,9 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
   },
 };
 
-export const APPROVED_STUDIO: StudioPresetId = "universal-cone";
+// RESTORED to the card rig 2026-09-01 after the cone was rejected. Neither
+// rig is right yet: the cone has no lines and no sheen, this one has sheen and
+// too many lines. Both follow from the same geometry (see 'universal-cone'):
+// on a cylinder a line and a sheen are the SAME azimuthal feature, so the
+// unexplored middle is FEWER, BROADER features — not a flatter world.
+export const APPROVED_STUDIO: StudioPresetId = "hybrid-small08";
