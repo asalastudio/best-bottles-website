@@ -186,7 +186,7 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     thicknessBake: false,
     backsideThickness: 0.0165,
     attenuationColor: "#8f4a16",
-    attenuationDistance: 0.00136,
+    attenuationDistance: 0.0024,
     dispersion: 0,
     clearcoat: 0,
     clearcoatRoughness: 0.02,

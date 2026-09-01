@@ -81,7 +81,23 @@ const EMITTERS: Emitter[] = [
   // mirrors azimuth 180 at HORIZON elevation, so a high backlight still
   // refracts through the body without being mirrored at the rim. Do not
   // simply put this one back.
-  { position: [-3.45, 2.40, -4.32], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
+  { position: [-4.2, 2.4, 3.6], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
+  // REAR EMITTER, RESTORED — and the reason it can come back matters.
+  //
+  // It was deleted because azimuth 180 maps to psi +/-90, the silhouette,
+  // and it was therefore the obvious cause of the rim halo. It was not.
+  // Removing it changed the rim not at all; the halo was a thickness scalar
+  // set to the body DIAMETER instead of the wall, and fixing that removed
+  // the rim in one frame. So the arithmetic was right and the attribution
+  // was wrong — a source CAN land on the silhouette without being what you
+  // are looking at.
+  //
+  // Deleting it did cost the thing it was there for: amber and cobalt
+  // transmit what is BEHIND them, and with nothing behind, amber read almost
+  // black. Absorption was ruled out as the cause first — opening
+  // attenuationDistance to 0.0055 (76% transmitted) barely moved it, which
+  // is what proves this is a lighting problem and not a material one.
+  { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The

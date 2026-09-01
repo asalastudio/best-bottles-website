@@ -328,7 +328,17 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBo
       if (mode === "sprayerCapped" || mode === "pumpCapped")
         // 18-415 overcaps ship as a KIT in the trim colour (the tall cap
         // beside the bottle in the legacy listings); 17-415's is clear
-        g.push(build(overcap, fin === "18415" ? trimMat : "PART_OVERCAP_CLEAR"));
+        // 17-415's overcap ships CLEAR in the catalogue, and that is what this
+        // was. Jordan, twice, on the render: "this cap is still not white...
+        // it needs to be a solid white, and it's not." The part is FLUTED
+        // (measured: 0.16 mm radius variation around the barrel), so a
+        // transmissive material shows every rib as a bright/dark pair and the
+        // cap reads as a bundle of lines rather than a cap. Opaque white PP
+        // shades those same ribs as a soft gradient instead.
+        // PRODUCT-ACCURACY NOTE: this now differs from the catalogue photo,
+        // which shows a clear overcap. Deliberate, on Jordan's instruction —
+        // revert to PART_OVERCAP_CLEAR if the clear part must be shown.
+        g.push(build(overcap, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
