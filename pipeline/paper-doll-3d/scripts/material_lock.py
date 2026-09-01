@@ -98,33 +98,25 @@ TRACKED_FILES = [
 #             the spreadsheet — but it must be written down, or "measured" and
 #             "hand-tuned" become indistinguishable a month later.
 MATERIAL_ANCHORS = {
+    # LIBRARY-EXACT. Not "anchored with deviations" — the material simply IS
+    # coats.coat_gloss, tinted. Every hand-tune was removed 2026-09-01 once
+    # the studio was correct (Jordan: "this is a round, glossy black, it's
+    # very simple — find that and the studio will take care of itself").
+    # The one remaining declaration is a field the library entry does not
+    # carry at all.
     "CAP_SHINY_BLACK": dict(
         library="coats.coat_gloss",
         tinted=True,
         declared={
-            "roughness": ("0.1 vs measured 0.12 — Jordan's approved piano-black "
-                          "gloss; harder polish than the generic coat"),
-            "clearcoat": ("1.0 — the library entry IS the coat layer; in "
-                          "MeshPhysicalMaterial that reads as clearcoat over the "
-                          "tinted base"),
-            "specularIntensity": ("1.0 — RENORMALISED 2026-09-01. It was 1.5 to "
-                                  "rescue the cap from the dark metal studio; "
-                                  "under the unified studio that boost overdrove "
-                                  "the collar into hard streaks, so it returns to "
-                                  "the library default"),
             "ior": "1.5 — MeshPhysicalMaterial default; the library coat omits ior",
         },
     ),
-    # CAP_DOTS_BLACK is documented to mirror CAP_SHINY_BLACK exactly; anchoring
-    # it to the same entry is what makes that promise checkable instead of a
-    # comment two files apart.
+    # Mirrors CAP_SHINY_BLACK by the sync rule; same anchor makes that
+    # promise enforced rather than a comment two files apart.
     "CAP_DOTS_BLACK": dict(
         library="coats.coat_gloss",
         tinted=True,
         declared={
-            "roughness": "0.1 — mirrors CAP_SHINY_BLACK by the sync rule",
-            "clearcoat": "1.0 — mirrors CAP_SHINY_BLACK",
-            "specularIntensity": "1.0 — mirrors CAP_SHINY_BLACK",
             "ior": "1.5 — MeshPhysicalMaterial default",
         },
     ),
