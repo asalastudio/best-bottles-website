@@ -23,14 +23,20 @@ REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 LIB = ("/Users/jordanrichter/Projects/Clients/Nemat-International/"
        "Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images")
 
-FAMILY = {
-    "id": "diva-46-clear",
-    "name": "Diva 46 ml — Clear",
-    "psd_glob": ("2. 18-415 Bottles", "25*", "1.*PSD"),
-    "reference": "13. GBDiva46SpryMtGl.psd",   # clean assembled plate, bottle centred
-    "template": (1250, 1660, 380, 660),        # y0,y1,x0,x1 of bottle lower body + foot
-    "neck_finish": "18-415",
-}
+# A family is a folder of PSDs plus the SKU stem that identifies its bottle.
+# Registration reference and template are derived from the plates themselves,
+# so adding a family is a config entry, not a hand-measured rectangle.
+FAMILIES = [
+    {"id": "diva-46-clear",     "name": "Diva 46 ml — Clear",
+     "psd_glob": ("2. 18-415 Bottles", "25*", "1.*PSD"),
+     "body": "Diva46",  "neck_finish": "18-415"},
+    {"id": "cylinder-50ml-clear", "name": "Cylinder 50 ml — Clear",
+     "psd_glob": ("2. 18-415 Bottles", "2. Cylindrical 50ml*", "1.*PSD*"),
+     "body": "Cyl50",   "neck_finish": "18-415"},
+    {"id": "cylinder-100ml-clear", "name": "Cylinder 100 ml — Clear",
+     "psd_glob": ("2. 18-415 Bottles", "3. Cylindrical 100ml*", "1.*PSD*"),
+     "body": "Cyl100",  "neck_finish": "18-415"},
+]
 
 OUT_W, OUT_H = 1000, 1100          # 10:11, matches the PDP hero aspect
 PAD = 40
@@ -60,11 +66,11 @@ COLORS = [
     ("Cu", "Copper", "#b06a3b"),
 ]
 
-def parse_sku(stem):
+def parse_sku(stem, body):
     """GBDiva46AnSpTslGl -> (closure_id, closure_label, color_label, swatch)."""
-    m = re.match(r"^(?:GB|LB)Diva46(.+)$", stem)
+    m = re.match(r"^(?:GB|LB)" + re.escape(body) + r"(.+)$", stem)
     if not m:
-        return None
+        return None                      # bare-bottle plates and other bodies
     rest = m.group(1)
     for token, cid, clabel in CLOSURES:
         if rest.startswith(token):
@@ -123,22 +129,61 @@ def price_of(row):
                 pass
     return None
 
-# ---------------------------------------------------------------- main
-def main():
-    psd_dir = glob.glob(os.path.join(LIB, *FAMILY["psd_glob"]))[0]
-    catalog = load_catalog()
+def closure_axis(gray):
+    """Horizontal centre of the closure -- i.e. the bottle's axis."""
+    ink = gray < 245
+    ys, _ = np.where(ink)
+    y0, y1 = ys.min(), ys.max()
+    band = ink[y0:y0 + max(8, int((y1 - y0) * 0.20))]
+    cols = np.where(band.any(axis=0))[0]
+    return (cols.min() + cols.max()) / 2.0
+
+
+def verify_output(out_dir, entries):
+    """Check the shipped plates against the spec they are framed to.
+
+    A plainly capped bottle is framed on its closure axis, so the check is
+    that the closure sits on the canvas centre line -- not that the bottle
+    lands at some fixed x. Bulb and tassel plates are framed as whole
+    compositions and are excluded by design.
+    """
+    bad, worst = [], 0.0
+    for e in entries:
+        if e["closure"] in ("bulb", "bulb-tassel"):
+            continue
+        a = np.array(Image.open(
+            os.path.join(out_dir, f"{e['sku']}.webp")).convert("L"))
+        off = abs(closure_axis(a) - OUT_W / 2)
+        worst = max(worst, off)
+        # The axis is read off a thresholded edge, so it quantises to half a
+        # pixel and moves a little on a soft-edged cap like faux leather. Two
+        # pixels on a 1000px canvas is a fifth of a percent -- below anything
+        # visible, and comfortably inside that noise.
+        if off > 2.0:
+            bad.append(e["sku"])
+    return bad, worst
+
+
+# ---------------------------------------------------------------- build
+def build_family(fam, catalog):
+    matches = glob.glob(os.path.join(LIB, *fam["psd_glob"]))
+    if not matches:
+        print(f"!! {fam['id']}: no PSD folder matched {fam['psd_glob']}", file=sys.stderr)
+        return None
+    psd_dir = matches[0]
 
     # 1. flatten every PSD once
     plates = {}   # stem -> dict(gray, rgb, blobs, source)
     for path in sorted(glob.glob(os.path.join(psd_dir, "*.psd"))):
         base = os.path.basename(path)
         stem = base[:-4].split(". ", 1)[-1].strip()
-        if parse_sku(stem) is None:
+        if parse_sku(stem, fam["body"]) is None:
             continue
         rgb = PSDImage.open(path).composite().convert("RGB")
         gray = np.array(rgb.convert("L"))
         blobs = blob_count(gray)
-        shot = {"rgb": rgb, "gray": gray, "blobs": blobs, "source": base}
+        shot = {"rgb": rgb, "gray": gray, "blobs": blobs, "source": base,
+                "closure": parse_sku(stem, fam["body"])[0]}
         # Pump SKUs ship two shots: the assembly under its overcap (one blob),
         # and the pump exposed with the overcap resting beside it (two blobs).
         # The second is the only way a buyer can see it really is a lotion pump,
@@ -157,24 +202,70 @@ def main():
     print(f"flattened {len(plates)} unique SKUs from {os.path.basename(psd_dir)}"
           f" ({pairs} with a cap-off shot)")
 
-    # 2. register every plate against the reference bottle-foot template
-    ref_path = os.path.join(psd_dir, FAMILY["reference"])
-    ref_gray = np.array(PSDImage.open(ref_path).composite().convert("L"))
-    ty0, ty1, tx0, tx1 = FAMILY["template"]
-    patch = ref_gray[ty0:ty1, tx0:tx1]
-
+    # 2. Register every plate against a bottle-foot template.
+    #    The reference is chosen, not configured: the narrowest assembled plate
+    #    is a plainly capped bottle with nothing hanging off it, so a band
+    #    across its lower body and foot is bottle and only bottle -- the one
+    #    feature every plate in the family shares.
     shots = [sh for v in plates.values() for sh in v.values()]
+    if not shots:
+        print(f"!! {fam['id']}: no plates parsed", file=sys.stderr)
+        return None
+    def width_of(sh):
+        x0, _, x1, _ = ink_bbox(sh["gray"])
+        return x1 - x0
+    assembled = [v["on"] for v in plates.values()]
+    # A bulb or tassel hangs off the bottle, so its plate is a poor reference.
+    plain = [sh for sh in assembled
+             if sh["closure"] not in ("bulb", "bulb-tassel")] or assembled
+    ref = min(plain, key=width_of)
+    rx0, ry0, rx1, ry1 = ink_bbox(ref["gray"])
+    rh = ry1 - ry0
+    H, W = ref["gray"].shape
+    # The template must straddle the base edge and both side walls. A band of
+    # bare body is not enough: a cylinder's lower wall is featureless, so a
+    # body-only template slides vertically and the match is meaningless. The
+    # glass-to-white boundary at the base plus the two vertical edges give a
+    # feature that pins both axes on a smooth bottle as well as a moulded one.
+    ty0 = max(0, ry1 - int(rh * 0.22))
+    ty1 = min(H, ry1 + max(8, int(rh * 0.02)))
+    tx0 = max(0, rx0 - 12)
+    tx1 = min(W, rx1 + 12)
+    patch = ref["gray"][ty0:ty1, tx0:tx1]
+    print(f"  registration reference: {ref['source']}")
     for sh in shots:
         iy, ix, score = ncc_offset(patch, sh["gray"])
         sh["dx"] = ix - tx0          # target = reference + (dx, dy)
         sh["dy"] = iy - ty0
         sh["score"] = score
-    scores = [sh["score"] for sh in shots]
-    spread = (max(scores) - min(scores)) / max(scores)
-    print(f"registration: NCC spread {spread:.6f} (0 = every bottle byte-identical)")
-    if spread > 0.02:
-        print("WARNING: plates are not a single photographic master; review before shipping",
-              file=sys.stderr)
+    # Gate on what actually matters: after alignment, does the reference's
+    # bottle region land on identical pixels in every plate? NCC score spread
+    # is not a proxy for that -- a template carrying white margin scores
+    # differently on plates that are nonetheless perfectly aligned.
+    ph, pw = patch.shape
+    resid = []
+    for sh in shots:
+        win = sh["gray"][ty0 + sh["dy"]:ty0 + sh["dy"] + ph,
+                         tx0 + sh["dx"]:tx0 + sh["dx"] + pw]
+        if win.shape != patch.shape:
+            resid.append(255.0)
+            continue
+        resid.append(float(np.abs(win.astype(np.int16)
+                                  - patch.astype(np.int16)).mean()))
+    worst = max(resid)
+    print(f"registration: worst post-alignment residual {worst:.2f}/255 "
+          f"(0 = bottle lands on identical pixels)")
+    if worst > 12.0:
+        # Every plate in a family is meant to be one photograph of one bottle,
+        # so a spread here means the assumption does not hold and the output
+        # would be silently misregistered. Refuse the family rather than ship
+        # art that drifts.
+        print(f"!! {fam['id']}: residual {worst:.2f}/255 -- plates are not a single "
+              f"photographic master. Family skipped, nothing written.", file=sys.stderr)
+        return None
+    # Residual alone is a soft signal: it also picks up genuine differences in
+    # the shadow under the bottle between shots. The hard check runs after the
+    # plates are written (verify_output), against the shipped files.
 
     # 3. Vertical framing is shared so the bottle never bobs: measure every
     #    shot's ink in reference space and keep one vertical band. Horizontal
@@ -190,7 +281,7 @@ def main():
     # 4. One scale for the whole family -- the bottle must be the same size on
     #    every plate -- sized so the widest plate (the tassel) still fits.
     scale = min((OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
-    out_dir = os.path.join(REPO, "public", "paper-doll", FAMILY["id"])
+    out_dir = os.path.join(REPO, "public", "paper-doll", fam["id"])
     os.makedirs(out_dir, exist_ok=True)
 
     def cap_axis(gray):
@@ -249,7 +340,7 @@ def main():
     entries = []
     for stem in sorted(plates):
         shots_for_sku = plates[stem]
-        cid, clabel, color, swatch = parse_sku(stem)
+        cid, clabel, color, swatch = parse_sku(stem, fam["body"])
         row = catalog.get(stem)
         if row is None:
             continue
@@ -269,11 +360,11 @@ def main():
             "closureLabel": clabel,
             "color": color,
             "swatch": swatch,
-            "image": f"/paper-doll/{FAMILY['id']}/{stem}.webp",
-            "thumb": f"/paper-doll/{FAMILY['id']}/{stem}.thumb.webp",
-            "imageCapOff": (f"/paper-doll/{FAMILY['id']}/{stem}-capoff.webp"
+            "image": f"/paper-doll/{fam['id']}/{stem}.webp",
+            "thumb": f"/paper-doll/{fam['id']}/{stem}.thumb.webp",
+            "imageCapOff": (f"/paper-doll/{fam['id']}/{stem}-capoff.webp"
                             if off else None),
-            "thumbCapOff": (f"/paper-doll/{FAMILY['id']}/{stem}-capoff.thumb.webp"
+            "thumbCapOff": (f"/paper-doll/{fam['id']}/{stem}-capoff.thumb.webp"
                             if off else None),
             "price": price_of(row),
             "stock": row.get("stockStatus") or None,
@@ -287,9 +378,9 @@ def main():
     order = [c[1] for c in CLOSURES]
     entries.sort(key=lambda e: (order.index(e["closure"]), e["color"]))
     manifest = {
-        "id": FAMILY["id"],
-        "name": FAMILY["name"],
-        "neckFinish": FAMILY["neck_finish"],
+        "id": fam["id"],
+        "name": fam["name"],
+        "neckFinish": fam["neck_finish"],
         "canvas": {"width": OUT_W, "height": OUT_H},
         "closures": [
             {"id": cid, "label": clabel,
@@ -302,9 +393,36 @@ def main():
     with open(os.path.join(out_dir, "manifest.json"), "w") as fh:
         json.dump(manifest, fh, indent=2)
 
-    print(f"\nwrote {len(entries)} plates -> public/paper-doll/{FAMILY['id']}/")
+    bad, worst_off = verify_output(out_dir, entries)
+    if bad:
+        print(f"!! {fam['id']}: {len(bad)} capped plates are off centre: "
+              f"{', '.join(bad[:5])}", file=sys.stderr)
+    print(f"  wrote {len(entries)} SKUs -> public/paper-doll/{fam['id']}/ "
+          f"(closure centred within {worst_off:.1f}px on every capped plate)")
     for c in manifest["closures"]:
-        print(f"  {c['label']:34s} {c['count']:>2} colourways")
+        print(f"    {c['label']:32s} {c['count']:>2} colourways")
+    return manifest
+
+
+def main():
+    catalog = load_catalog()
+    only = sys.argv[1:] or None
+    index = []
+    for fam in FAMILIES:
+        if only and fam["id"] not in only:
+            continue
+        print(f"\n=== {fam['name']} ({fam['id']}) ===")
+        man = build_family(fam, catalog)
+        if man:
+            index.append({"id": man["id"], "name": man["name"],
+                          "neckFinish": man["neckFinish"],
+                          "variantCount": len(man["variants"])})
+    out = os.path.join(REPO, "public", "paper-doll", "families.json")
+    os.makedirs(os.path.dirname(out), exist_ok=True)
+    with open(out, "w") as fh:
+        json.dump(index, fh, indent=2)
+    print(f"\nindex: {len(index)} families -> public/paper-doll/families.json")
+
 
 if __name__ == "__main__":
     main()
