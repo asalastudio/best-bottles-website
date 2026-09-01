@@ -378,9 +378,59 @@ export default defineSchema({
         taxExempt: v.boolean(),
         memberSince: v.string(),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
+
+        // ─── Identity bridge (Clerk org ↔ Shopify customer) ───────────────
+        // Tax exemption is a property of a Shopify CUSTOMER RECORD, so an
+        // anonymous cart can never be exempt. These fields record which record
+        // this account owns and how it was chosen.
+        billingEmail: v.optional(v.string()),           // email the Shopify customer is keyed on
+        shopifyCustomerLinkedAt: v.optional(v.number()),
+        shopifyCustomerLinkedBy: v.optional(v.string()), // Clerk user ID that triggered the link
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
-        .index("by_accountNumber", ["accountNumber"]),
+        .index("by_accountNumber", ["accountNumber"])
+        // Reverse lookup: Shopify order/customer webhooks arrive with a customer
+        // ID and must find the owning org without scanning every account.
+        .index("by_shopifyCustomerId", ["shopifyCustomerId"]),
+
+    // Resale certificates — the seller's-permit record behind tax exemption.
+    //
+    // `portalAccounts.taxExempt` is a bare boolean and is the WRONG model: a
+    // certificate is issued by a specific state, carries a permit number, is
+    // approved by a named employee, and EXPIRES. One row per submission, kept as
+    // history — never overwritten — so a lapsed certificate stays auditable.
+    resaleCertificates: defineTable({
+        clerkOrgId: v.string(),
+        legalBusinessName: v.string(),
+        issuingState: v.string(),                    // two-letter code, e.g. "CA"
+        permitNumber: v.string(),                    // CDTFA seller's permit no. or state equivalent
+        documentStorageId: v.optional(v.id("_storage")), // uploaded CDTFA-230 or equivalent
+
+        status: v.union(
+            v.literal("pending"),
+            v.literal("approved"),
+            v.literal("rejected"),
+            v.literal("expired"),
+            v.literal("revoked"),
+        ),
+
+        submittedAt: v.number(),
+        submittedBy: v.string(),                     // Clerk user ID
+        reviewedAt: v.optional(v.number()),
+        reviewedBy: v.optional(v.string()),          // Clerk user ID of the approving employee
+        reviewNote: v.optional(v.string()),          // rejection reason, shown to the customer
+        expiresAt: v.optional(v.number()),
+
+        // Shopify exemption code actually written, e.g. "US_CA_RESELLER_EXEMPTION".
+        // Null until the write succeeds — approval in Convex and exemption in
+        // Shopify are separate facts and must not be conflated.
+        shopifyExemptionCode: v.optional(v.string()),
+        shopifySyncedAt: v.optional(v.number()),
+    })
+        .index("by_orgId", ["clerkOrgId"])
+        .index("by_status", ["status"])
+        // Drives expiry sweeps: approved certificates ordered by expiry date.
+        .index("by_status_expiresAt", ["status", "expiresAt"]),
 
     // Order history — seeded from QuickBooks, later synced from Shopify webhooks.
     portalOrders: defineTable({

@@ -11,7 +11,7 @@ describe("Grace authenticated project writes", () => {
         expect(convex).toContain("project.clerkOrgId !== args.clerkOrgId");
         expect(convex).toContain("verifyWriteToken(args.writeToken)");
         expect(server).toContain("saveProductToGraceProjectForViewer");
-        expect(server).toContain("getConvexWriteToken()");
+        expect(server).toContain("getPortalConvexWriteToken()");
     });
 
     it("only calls the project write endpoint from the confirmation handler", () => {

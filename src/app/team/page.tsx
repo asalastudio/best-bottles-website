@@ -36,7 +36,10 @@ function getShopifyAdminHref() {
 }
 
 function getMadisonStudioHref() {
-    return process.env.NEXT_PUBLIC_MADISON_STUDIO_URL?.trim() || "https://madison-studio-cursor.vercel.app";
+    // Madison's own production domain, not the Vercel deployment URL that
+    // happens to serve it — the vercel.app host is an implementation detail and
+    // changes whenever the project is renamed or redeployed elsewhere.
+    return process.env.NEXT_PUBLIC_MADISON_STUDIO_URL?.trim() || "https://app.madisonstudio.io";
 }
 
 const tools = [
@@ -50,6 +53,30 @@ const tools = [
         name: "B2B Portal Admin",
         href: "/portal",
         description: "Customer accounts, draft quotes, and order tracking.",
+        badge: "B2B",
+    },
+    {
+        name: "Executive Hub",
+        href: "/executive",
+        description: "Business overview and Grace operations. Separate access list from the Team Hub.",
+        badge: "Exec",
+    },
+    {
+        name: "Grace Workspace",
+        href: "/grace-workspace",
+        description: "Staff see the employee knowledge workspace — ask Grace across live product truth, fitments, policies and operations, and feed her new sources.",
+        badge: "Grace",
+    },
+    {
+        name: "Certificate Review Queue",
+        href: "/team/resale-certificates",
+        description: "Approve or reject wholesale resale certificates. Approving removes sales tax for that account.",
+        badge: "Tax",
+    },
+    {
+        name: "Wholesale Accounts",
+        href: "/team/portal-accounts",
+        description: "Create and edit the accounts behind each wholesale customer — pricing tier, terms, billing email.",
         badge: "B2B",
     },
     {
