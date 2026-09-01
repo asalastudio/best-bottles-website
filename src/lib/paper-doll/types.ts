@@ -24,7 +24,7 @@ export interface PaperDollConfiguration {
     finishLabel: string;
     layerKeys: PaperDollLayerKeys;
     price1pc: number | null;
-    priceTiers: Array<{ minQty: number; totalPrice: number; unitPrice: number }>;
+    priceTiers: Array<{ minQty: number; unitPrice: number; totalPrice?: number }>;
     stockStatus: string | null;
     shopifyVariantId: string | null;
     shopifySellable: boolean | null;

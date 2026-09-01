@@ -22,13 +22,17 @@
  * is what real studio glass does.
  */
 
-export type StudioPresetId = "softbox-tent" | "room" | "mono-studio" | "lightformer-rig";
+export type StudioPresetId =
+  "softbox-tent" | "room" | "mono-studio" | "lightformer-rig" | "hybrid-small08";
 
 export type StudioPreset = {
   id: StudioPresetId;
   label: string;
   /** equirectangular HDR served from /public, or null to use in-scene lights */
   hdri: string | null;
+  /** true = the HDRI is COMBINED with Lightformers into one cubemap — the
+   *  scene shell mounts <StudioEnvironment/> instead of a bare hdri */
+  hybrid?: boolean;
   environmentIntensity: number;
   /** degrees */
   environmentRotation: number;
@@ -103,6 +107,32 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "Its rim pair (intensity 22 and 18, scale [0.35, 3.0]) is narrow and hot " +
       "and is what produces the hard vertical stripes down a cylinder.",
   },
+  "hybrid-small08": {
+    id: "hybrid-small08",
+    label: "Hybrid studio (Small 08 + formers)",
+    hdri: "/env/studio_small_08_1k_peak24.hdr",
+    hybrid: true,
+    environmentIntensity: 1.0,
+    environmentRotation: 0,
+    toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
+    backdrop: "#e9e6e0",
+    provenance:
+      "APPROVED STUDIO as of 2026-08-31 (Jordan, at /dev/lighting-test: " +
+      "'the feathered softbox is much better' — glass colourways inherit). " +
+      "The single environment for the whole scene, per the studio-lighting " +
+      "handoff: Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN " +
+      "preset; PEAK-CLAMPED at luminance 24 — the raw file's ~97 hot texels " +
+      "speckled the glass as fireflies) as the neutral coverage base, " +
+      "COMBINED in one cubemap with " +
+      "four FEATHERED softbox emitters (StudioEnvironment.tsx EMITTERS — " +
+      "Gaussian-windowed quads; the first cut used hard-edged drei " +
+      "Lightformer rects and their edges printed razor lines down the " +
+      "cylinders, the documented banned artefact): L/R vertical strips for " +
+      "clear-glass edges, overhead softbox for cap tops, broad dim backlight " +
+      "so amber/cobalt transmit. Per-finish variation lives in material " +
+      "recipes, never in swapping environments. material_lock.py pins the " +
+      "HDRI hash, the EMITTERS values, and this flip.",
+  },
 };
 
-export const APPROVED_STUDIO: StudioPresetId = "room";
+export const APPROVED_STUDIO: StudioPresetId = "hybrid-small08";

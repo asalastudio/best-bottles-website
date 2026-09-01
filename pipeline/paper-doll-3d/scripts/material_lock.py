@@ -26,6 +26,7 @@ ROOT = pathlib.Path(__file__).resolve().parents[3]
 LOCK = ROOT / "public" / "models" / "materials.lock.json"
 
 TRACKED_FILES = [
+    "public/env/studio_small_08_1k_peak24.hdr",
     "public/models/studio-universal.hdr",
     "public/models/studio-mono.hdr",
     "public/models/studio-metal-key.hdr",
@@ -107,6 +108,23 @@ def presets() -> dict:
         out[pid] = vals
     return out
 
+def studio_environment() -> dict:
+    """The hybrid studio's OTHER half: the emitter values live in TSX, not
+    an HDRI, so the lock pins them the way it pins glass-preset numbers —
+    plus which preset production ships (a silent flip is drift too)."""
+    out = {}
+    m = re.search(r'APPROVED_STUDIO: StudioPresetId = "([a-z0-9-]+)"',
+                  (ROOT / "src/lib/materials/studioPresets.ts").read_text())
+    out["approvedStudio"] = m.group(1) if m else "UNPARSEABLE"
+    env_src = (ROOT / "src/components/products/StudioEnvironment.tsx").read_text()
+    emitters = re.findall(
+        r"\{ position: \[([^\]]+)\], scale: \[([^\]]+)\], "
+        r"intensity: ([^,]+), sigma: \[([^\]]+)\] \}", env_src)
+    for i, (pos, scale, inten, sigma) in enumerate(emitters):
+        out[f"emitter{i}"] = (f"pos[{pos}] scale[{scale}] "
+                              f"intensity {inten.strip()} sigma[{sigma}]")
+    return out
+
 def snapshot() -> dict:
     mats = json.loads((ROOT / "public/models/materials.json").read_text())["materials"]
     return {
@@ -119,6 +137,7 @@ def snapshot() -> dict:
             if k.startswith(TRACKED_MATERIALS_PREFIXES)
         },
         "glassPresets": presets(),
+        "studioEnvironment": studio_environment(),
     }
 
 def main():
@@ -145,6 +164,11 @@ def main():
                            for kk in set(v) | set(cur or {})
                            if v.get(kk) != (cur or {}).get(kk)]
                 drift.append(f"{section}.{k}: " + "; ".join(changed))
+    # the hybrid studio's in-code half (older locks predate the section)
+    for k, v in old.get("studioEnvironment", {}).items():
+        cur = now["studioEnvironment"].get(k)
+        if cur != v:
+            drift.append(f"studioEnvironment.{k}: {v!r} -> {cur!r}")
     # library-anchor check: clear must remain THE canonical measured glass
     lib = json.loads((ROOT / "data/materials/physicallybased-library.json").read_text())
     g = lib["glass.glass"]["values"]

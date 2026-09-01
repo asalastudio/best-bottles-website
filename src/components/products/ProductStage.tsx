@@ -18,13 +18,20 @@ import { Suspense, createContext, useContext, useEffect, useMemo, useState } fro
 import { Canvas, useThree } from "@react-three/fiber";
 import { Environment, ContactShadows } from "@react-three/drei";
 import * as THREE from "three";
-import { STUDIO_PRESETS, APPROVED_STUDIO } from "@/lib/materials/studioPresets";
+import { STUDIO_PRESETS, APPROVED_STUDIO, type StudioPresetId } from "@/lib/materials/studioPresets";
+import { StudioEnvironment } from "./StudioEnvironment";
 import { GL_COLOR_SETTINGS } from "@/lib/materials/colorManagement";
 
 /** Stage-surface registry — the last inline PBR values, consolidated. */
 export const STAGE = {
   backdrop: "#a29383",          // warm taupe vitrine (Jordan-approved stage)
   sweepRoughness: 0.85,
+  /** how strongly the sweep answers the studio. The hybrid studio's strip/
+   *  overhead emitters pooled on the semi-matte cove as a WHITE HALO hugging
+   *  the bottle (Jordan: "very bad") — the stage is scenery, so it takes the
+   *  same single environment at a fraction of the intensity and stays an
+   *  even ground for the product to pop from. */
+  sweepEnvIntensity: 0.35,
   /** only refracted rays that bend past the sweep ever see this */
   offFrameDim: 0.32,
   shadow: { color: "#3a3128", opacity: 0.42, blur: 2.4, scale: 0.35, far: 0.06 },
@@ -55,6 +62,7 @@ function CoveSweep({ backdrop }: { backdrop: string }) {
   return (
     <mesh geometry={geometry} position={[0, -0.0004, 0]}>
       <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness}
+                            envMapIntensity={STAGE.sweepEnvIntensity}
                             side={THREE.BackSide} />
     </mesh>
   );
@@ -99,6 +107,8 @@ export default function ProductStage({
   targetY = 0.035,
   backdrop = STAGE.backdrop,
   ground = true,
+  studio: studioId = APPROVED_STUDIO,
+  cameraZ = 0.22,
   children,
 }: {
   envRotationDeg?: number;
@@ -106,9 +116,13 @@ export default function ProductStage({
   backdrop?: string;
   /** false = the floating presentation: no sweep, no contact shadow */
   ground?: boolean;
+  /** dev/lab surfaces may stage a CANDIDATE studio; production always
+   *  renders APPROVED_STUDIO (flipped only on Jordan's approval) */
+  studio?: StudioPresetId;
+  cameraZ?: number;
   children: React.ReactNode;
 }) {
-  const studio = STUDIO_PRESETS[APPROVED_STUDIO];
+  const studio = STUDIO_PRESETS[studioId];
   const tier = useQualityTier();
   const offFrame = useMemo(
     () => new THREE.Color(backdrop).multiplyScalar(STAGE.offFrameDim),
@@ -117,7 +131,7 @@ export default function ProductStage({
 
   return (
     <QualityContext.Provider value={tier}>
-      <Canvas camera={{ position: [0, targetY, 0.22], fov: 30, near: 0.01, far: 10 }}
+      <Canvas camera={{ position: [0, targetY, cameraZ], fov: 30, near: 0.01, far: 10 }}
               // colour pipeline is PINNED, never inherited from a
               // library default — see colorManagement.ts
               gl={{ antialias: true, ...GL_COLOR_SETTINGS }}
@@ -138,7 +152,10 @@ export default function ProductStage({
                               color={STAGE.shadow.color} />
             </group>
           ) : null}
-          {studio.hdri ? <Environment files={studio.hdri} /> : null}
+          {/* ONE environment, mounted once for the whole scene. A hybrid
+              preset renders its HDRI + Lightformers into a single cubemap. */}
+          {studio.hybrid ? <StudioEnvironment />
+            : studio.hdri ? <Environment files={studio.hdri} /> : null}
           <StudioContext rotationDeg={envRotationDeg} />
         </Suspense>
       </Canvas>

@@ -478,7 +478,7 @@ export interface ProductVariant {
     webPrice10pc: number | null;
     webPrice12pc: number | null;
     /** Full quantity-break ladder mirrored from bestbottles.com (minQty asc). */
-    priceTiers?: { minQty: number; totalPrice: number; unitPrice: number }[];
+    priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     category: string;
     family: string | null;
     shape: string | null;
