@@ -1,0 +1,809 @@
+{
+ "count": 134,
+ "references": [
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415lvn",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415lvn.png",
+   "colourway": "AnspTsl18-415Lvn",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415ivygl",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415ivygl.png",
+   "colourway": "AnspTsl18-415IvyGl",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415ivysl",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415ivysl.png",
+   "colourway": "AnspTsl18-415IvySl",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415wht",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415wht.png",
+   "colourway": "AnspTsl18-415Wht",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415pnk",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415pnk.png",
+   "colourway": "AnspTsl18-415Pnk",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415red",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415red.png",
+   "colourway": "AnspTsl18-415Red",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415blk",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415blk.png",
+   "colourway": "AnspTsl18-415Blk",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415mts",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415mts.png",
+   "colourway": "AnspTsl18-415MtS",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "10-18-415-ansp-tsl-ansptsl18-415gl",
+   "image": "/references/closures/10-18-415-ansp-tsl-ansptsl18-415gl.png",
+   "colourway": "AnspTsl18-415Gl",
+   "component": "bulb-tassel"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415mattsl",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415mattsl.png",
+   "colourway": "CpRoll17-415MattSl",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415white",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415white.png",
+   "colourway": "CpRoll17-415White",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415blkdot",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415blkdot.png",
+   "colourway": "CpRoll17-415BlkDot",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415sldot",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415sldot.png",
+   "colourway": "CpRoll17-415SlDot",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415pnkdot",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415pnkdot.png",
+   "colourway": "CpRoll17-415PnkDot",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415mattgl",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415mattgl.png",
+   "colourway": "CpRoll17-415MattGl",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415shngl",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415shngl.png",
+   "colourway": "CpRoll17-415ShnGl",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415shnsl",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415shnsl.png",
+   "colourway": "CpRoll17-415ShnSl",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415cu",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415cu.png",
+   "colourway": "CpRoll17-415Cu",
+   "component": "roller"
+  },
+  {
+   "slug": "12-17-415-roll-on-cproll17-415shnblk",
+   "image": "/references/closures/12-17-415-roll-on-cproll17-415shnblk.png",
+   "colourway": "CpRoll17-415ShnBlk",
+   "component": "roller"
+  },
+  {
+   "slug": "13-17-415-spray-spry17-415gl",
+   "image": "/references/closures/13-17-415-spray-spry17-415gl.png",
+   "colourway": "Spry17-415Gl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "13-17-415-spray-spry17-415mattsl",
+   "image": "/references/closures/13-17-415-spray-spry17-415mattsl.png",
+   "colourway": "Spry17-415MattSl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "13-17-415-spray-spry17-415blk",
+   "image": "/references/closures/13-17-415-spray-spry17-415blk.png",
+   "colourway": "Spry17-415Blk",
+   "component": "sprayer"
+  },
+  {
+   "slug": "13-17-415-spray-spry17-415shnsl",
+   "image": "/references/closures/13-17-415-spray-spry17-415shnsl.png",
+   "colourway": "Spry17-415ShnSl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "13-17-415-spray-spry17-415red",
+   "image": "/references/closures/13-17-415-spray-spry17-415red.png",
+   "colourway": "Spry17-415Red",
+   "component": "sprayer"
+  },
+  {
+   "slug": "13-17-415-spray-spry17-415tur",
+   "image": "/references/closures/13-17-415-spray-spry17-415tur.png",
+   "colourway": "Spry17-415Tur",
+   "component": "sprayer"
+  },
+  {
+   "slug": "14-17-415-lotion-ltn17-415mattsl",
+   "image": "/references/closures/14-17-415-lotion-ltn17-415mattsl.png",
+   "colourway": "Ltn17-415MattSl",
+   "component": "pump"
+  },
+  {
+   "slug": "14-17-415-lotion-ltn17-415gl",
+   "image": "/references/closures/14-17-415-lotion-ltn17-415gl.png",
+   "colourway": "Ltn17-415Gl",
+   "component": "pump"
+  },
+  {
+   "slug": "14-17-415-lotion-ltn17-415blk",
+   "image": "/references/closures/14-17-415-lotion-ltn17-415blk.png",
+   "colourway": "Ltn17-415Blk",
+   "component": "pump"
+  },
+  {
+   "slug": "15-15-415-caps-cp15-415shnsl",
+   "image": "/references/closures/15-15-415-caps-cp15-415shnsl.png",
+   "colourway": "CP15-415ShnSl",
+   "component": "cap"
+  },
+  {
+   "slug": "15-15-415-caps-cp15-415shngl",
+   "image": "/references/closures/15-15-415-caps-cp15-415shngl.png",
+   "colourway": "CP15-415ShnGl",
+   "component": "cap"
+  },
+  {
+   "slug": "16-15-415-sprayer-spry15-415blk",
+   "image": "/references/closures/16-15-415-sprayer-spry15-415blk.png",
+   "colourway": "Spry15-415Blk",
+   "component": "sprayer"
+  },
+  {
+   "slug": "16-15-415-sprayer-spry15-415shngl",
+   "image": "/references/closures/16-15-415-sprayer-spry15-415shngl.png",
+   "colourway": "Spry15-415ShnGl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "16-15-415-sprayer-spry15-415shnsl",
+   "image": "/references/closures/16-15-415-sprayer-spry15-415shnsl.png",
+   "colourway": "Spry15-415ShnSl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "16-15-415-sprayer-spry15-415mattsl",
+   "image": "/references/closures/16-15-415-sprayer-spry15-415mattsl.png",
+   "colourway": "Spry15-415MattSl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "16-15-415-sprayer-spry15-415mattgl",
+   "image": "/references/closures/16-15-415-sprayer-spry15-415mattgl.png",
+   "colourway": "Spry15-415MattGl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "17-13-415-caps-cp13-415blksht",
+   "image": "/references/closures/17-13-415-caps-cp13-415blksht.png",
+   "colourway": "CP13-415BlkSht",
+   "component": "cap"
+  },
+  {
+   "slug": "17-13-415-caps-cp13-415whtsht",
+   "image": "/references/closures/17-13-415-caps-cp13-415whtsht.png",
+   "colourway": "CP13-415WhtSht",
+   "component": "cap"
+  },
+  {
+   "slug": "17-13-415-caps-cp13-415sl",
+   "image": "/references/closures/17-13-415-caps-cp13-415sl.png",
+   "colourway": "CP13-415Sl",
+   "component": "cap"
+  },
+  {
+   "slug": "17-13-415-caps-cp13-415gl",
+   "image": "/references/closures/17-13-415-caps-cp13-415gl.png",
+   "colourway": "CP13-415Gl",
+   "component": "cap"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415blkmt",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415blkmt.png",
+   "colourway": "Spry13-415BlkMt",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415cumt",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415cumt.png",
+   "colourway": "Spry13-415CuMt",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415blksh",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415blksh.png",
+   "colourway": "Spry13-415BlkSh",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415blumt",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415blumt.png",
+   "colourway": "Spry13-415BluMt",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415glsh",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415glsh.png",
+   "colourway": "Spry13-415GlSh",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415glmt",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415glmt.png",
+   "colourway": "Spry13-415GlMt",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-spry13-415slmt",
+   "image": "/references/closures/18-13-415-sprayers-spry13-415slmt.png",
+   "colourway": "Spry13-415SlMt",
+   "component": "sprayer"
+  },
+  {
+   "slug": "18-13-415-sprayers-8-spry13-415slsh",
+   "image": "/references/closures/18-13-415-sprayers-8-spry13-415slsh.png",
+   "colourway": "8 Spry13-415SlSh",
+   "component": "sprayer"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415blackdot",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415blackdot.png",
+   "colourway": "CPRoll13-415BlackDot",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415sldot",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415sldot.png",
+   "colourway": "CPRoll13-415SlDot",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415slmt",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415slmt.png",
+   "colourway": "CPRoll13-415SlMt",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415pinkdot",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415pinkdot.png",
+   "colourway": "CPRoll13-415PinkDot",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415glmt",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415glmt.png",
+   "colourway": "CPRoll13-415GlMt",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415slsh",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415slsh.png",
+   "colourway": "CPRoll13-415SlSh",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415cu",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415cu.png",
+   "colourway": "CPRoll13-415Cu",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415glsh",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415glsh.png",
+   "colourway": "CPRoll13-415GlSh",
+   "component": "roller"
+  },
+  {
+   "slug": "19-13-415-roll-on-cproll13-415blksh",
+   "image": "/references/closures/19-13-415-roll-on-cproll13-415blksh.png",
+   "colourway": "CPRoll13-415BlkSh",
+   "component": "roller"
+  },
+  {
+   "slug": "2-20-400-cap-cp20-4002ozshortblk",
+   "image": "/references/closures/2-20-400-cap-cp20-4002ozshortblk.png",
+   "colourway": "CP20-4002ozShortBlk",
+   "component": "cap"
+  },
+  {
+   "slug": "2-20-400-cap-cp20-4001ozshortblk",
+   "image": "/references/closures/2-20-400-cap-cp20-4001ozshortblk.png",
+   "colourway": "CP20-4001ozShortBlk",
+   "component": "cap"
+  },
+  {
+   "slug": "20-8-245-caps-cp8-425shortblack",
+   "image": "/references/closures/20-8-245-caps-cp8-425shortblack.png",
+   "colourway": "CP8-425ShortBlack ",
+   "component": "cap"
+  },
+  {
+   "slug": "20-8-245-caps-cp8-425shortwhite",
+   "image": "/references/closures/20-8-245-caps-cp8-425shortwhite.png",
+   "colourway": "CP8-425ShortWhite",
+   "component": "cap"
+  },
+  {
+   "slug": "20-8-245-caps-cp8-425tallshnsl",
+   "image": "/references/closures/20-8-245-caps-cp8-425tallshnsl.png",
+   "colourway": "CP8-425TallShnSl",
+   "component": "cap"
+  },
+  {
+   "slug": "20-8-245-caps-cp8-425tallshngl",
+   "image": "/references/closures/20-8-245-caps-cp8-425tallshngl.png",
+   "colourway": "CP8-425TallShnGl",
+   "component": "cap"
+  },
+  {
+   "slug": "20-8-245-caps-cp8-425tallblack",
+   "image": "/references/closures/20-8-245-caps-cp8-425tallblack.png",
+   "colourway": "CP8-425TallBlack",
+   "component": "cap"
+  },
+  {
+   "slug": "21-hearts-8-245-caps-cp8-425blutslshortsilvercap",
+   "image": "/references/closures/21-hearts-8-245-caps-cp8-425blutslshortsilvercap.png",
+   "colourway": "CP8-425BluTslShortSilverCap",
+   "component": "cap"
+  },
+  {
+   "slug": "21-hearts-8-245-caps-cp8-425shortblack",
+   "image": "/references/closures/21-hearts-8-245-caps-cp8-425shortblack.png",
+   "colourway": "CP8-425ShortBlack ",
+   "component": "cap"
+  },
+  {
+   "slug": "21-hearts-8-245-caps-cp8-425glchainshortshnglcap",
+   "image": "/references/closures/21-hearts-8-245-caps-cp8-425glchainshortshnglcap.png",
+   "colourway": "CP8-425GlChainShortShnGlCap",
+   "component": "cap"
+  },
+  {
+   "slug": "21-hearts-8-245-caps-cp8-425slchainshortshnslcap",
+   "image": "/references/closures/21-hearts-8-245-caps-cp8-425slchainshortshnslcap.png",
+   "colourway": "CP8-425SlChainShortShnSlCap",
+   "component": "cap"
+  },
+  {
+   "slug": "21-hearts-8-245-caps-cp8-425redtslshortshnglcap",
+   "image": "/references/closures/21-hearts-8-245-caps-cp8-425redtslshortshnglcap.png",
+   "colourway": "CP8-425RedTslShortShnGlCap",
+   "component": "cap"
+  },
+  {
+   "slug": "22-vials-wand-vialwandblk",
+   "image": "/references/closures/22-vials-wand-vialwandblk.png",
+   "colourway": "VialWandBlk",
+   "component": "wand"
+  },
+  {
+   "slug": "22-vials-wand-vialwandclr",
+   "image": "/references/closures/22-vials-wand-vialwandclr.png",
+   "colourway": "VialWandClr",
+   "component": "wand"
+  },
+  {
+   "slug": "23-18-415-reducer-18-415reducer",
+   "image": "/references/closures/23-18-415-reducer-18-415reducer.png",
+   "colourway": "18-415Reducer",
+   "component": "reducer"
+  },
+  {
+   "slug": "24-13-415-roll-on-13-415plsticrollon",
+   "image": "/references/closures/24-13-415-roll-on-13-415plsticrollon.png",
+   "colourway": "13-415PlsticRollon",
+   "component": "roller"
+  },
+  {
+   "slug": "25-13-415-metal-roll-on-13-415mtlrollon",
+   "image": "/references/closures/25-13-415-metal-roll-on-13-415mtlrollon.png",
+   "colourway": "13-415MtlRollon",
+   "component": "roller"
+  },
+  {
+   "slug": "25-13-415-metal-roll-on-13-415plsticrollon",
+   "image": "/references/closures/25-13-415-metal-roll-on-13-415plsticrollon.png",
+   "colourway": "13-415PlsticRollon",
+   "component": "roller"
+  },
+  {
+   "slug": "26-18-400-cap-cp18-400shortblk",
+   "image": "/references/closures/26-18-400-cap-cp18-400shortblk.png",
+   "colourway": "CP18-400ShortBlk",
+   "component": "cap"
+  },
+  {
+   "slug": "27-18-400-cap-with-wand-cp18-400appblk",
+   "image": "/references/closures/27-18-400-cap-with-wand-cp18-400appblk.png",
+   "colourway": "CP18-400AppBlk",
+   "component": "cap"
+  },
+  {
+   "slug": "28-14-3-cap-cp14mmappshnslbluedot",
+   "image": "/references/closures/28-14-3-cap-cp14mmappshnslbluedot.png",
+   "colourway": "CP14mmAppShnSlBlueDot",
+   "component": "cap"
+  },
+  {
+   "slug": "28-14-3-cap-cp14mmappshnglreddot",
+   "image": "/references/closures/28-14-3-cap-cp14mmappshnglreddot.png",
+   "colourway": "CP14mmAppShnGlRedDot",
+   "component": "cap"
+  },
+  {
+   "slug": "29-18-415-droppers-drp18-415cu",
+   "image": "/references/closures/29-18-415-droppers-drp18-415cu.png",
+   "colourway": "Drp18-415Cu",
+   "component": "dropper"
+  },
+  {
+   "slug": "29-18-415-droppers-drp18-415gl",
+   "image": "/references/closures/29-18-415-droppers-drp18-415gl.png",
+   "colourway": "Drp18-415Gl",
+   "component": "dropper"
+  },
+  {
+   "slug": "29-18-415-droppers-drp18-415sl",
+   "image": "/references/closures/29-18-415-droppers-drp18-415sl.png",
+   "colourway": "Drp18-415Sl",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4001ozlshngltrimwhitebulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4001ozlshngltrimwhitebulb.png",
+   "colourway": "DRP20-4001ozlShnGlTrimWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4001ozshngltrimblkbulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4001ozshngltrimblkbulb.png",
+   "colourway": "DRP20-4001ozShnGlTrimBlkBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4001ozlshnsltrimwhitebulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4001ozlshnsltrimwhitebulb.png",
+   "colourway": "DRP20-4001ozlShnSlTrimWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4002ozwhitebulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4002ozwhitebulb.png",
+   "colourway": "DRP20-4002ozWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4002ozblckbulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4002ozblckbulb.png",
+   "colourway": "DRP20-4002ozBlckBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4002ozshnsltrimblkbulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4002ozshnsltrimblkbulb.png",
+   "colourway": "DRP20-4002ozShnSlTrimBlkBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4002ozlshngltrimwhitebulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4002ozlshngltrimwhitebulb.png",
+   "colourway": "DRP20-4002ozlShnGlTrimWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4002ozshngltrimblkbulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4002ozshngltrimblkbulb.png",
+   "colourway": "DRP20-4002ozShnGlTrimBlkBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4002ozlshnsltrimwhitebulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4002ozlshnsltrimwhitebulb.png",
+   "colourway": "DRP20-4002ozlShnSlTrimWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4001ozwhitebulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4001ozwhitebulb.png",
+   "colourway": "DRP20-4001ozWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4001ozblckbulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4001ozblckbulb.png",
+   "colourway": "DRP20-4001ozBlckBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "3-20-400-droppers-drp20-4001ozshnsltrimblkbulb",
+   "image": "/references/closures/3-20-400-droppers-drp20-4001ozshnsltrimblkbulb.png",
+   "colourway": "DRP20-4001ozShnSlTrimBlkBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "4-18-400-droppers-drp18-40015mlwhitebulb",
+   "image": "/references/closures/4-18-400-droppers-drp18-40015mlwhitebulb.png",
+   "colourway": "DRP18-40015mlWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "4-18-400-droppers-drp18-40015mlblckbulb",
+   "image": "/references/closures/4-18-400-droppers-drp18-40015mlblckbulb.png",
+   "colourway": "DRP18-40015mlBlckBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "4-18-400-droppers-drp18-40015mlshnsltrimblkbulb",
+   "image": "/references/closures/4-18-400-droppers-drp18-40015mlshnsltrimblkbulb.png",
+   "colourway": "DRP18-40015mlShnSlTrimBlkBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "4-18-400-droppers-drp18-40015mlshngltrimwhitebulb",
+   "image": "/references/closures/4-18-400-droppers-drp18-40015mlshngltrimwhitebulb.png",
+   "colourway": "DRP18-40015mlShnGlTrimWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "4-18-400-droppers-drp18-40015mlshngltrimblkbulb",
+   "image": "/references/closures/4-18-400-droppers-drp18-40015mlshngltrimblkbulb.png",
+   "colourway": "DRP18-40015mlShnGlTrimBlkBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "4-18-400-droppers-drp18-40015mlshnsltrimwhitebulb",
+   "image": "/references/closures/4-18-400-droppers-drp18-40015mlshnsltrimwhitebulb.png",
+   "colourway": "DRP18-40015mlShnSlTrimWhiteBulb",
+   "component": "dropper"
+  },
+  {
+   "slug": "5-18-400-cap-cp20-4002ozshortblk",
+   "image": "/references/closures/5-18-400-cap-cp20-4002ozshortblk.png",
+   "colourway": "CP20-4002ozShortBlk",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415shngl",
+   "image": "/references/closures/6-18-415-caps-cp18-415shngl.png",
+   "colourway": "CP18-415ShnGl",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415wh",
+   "image": "/references/closures/6-18-415-caps-cp18-415wh.png",
+   "colourway": "CP18-415Wh",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415shnblktall",
+   "image": "/references/closures/6-18-415-caps-cp18-415shnblktall.png",
+   "colourway": "CP18-415ShnBlkTall",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415shnblk",
+   "image": "/references/closures/6-18-415-caps-cp18-415shnblk.png",
+   "colourway": "CP18-415ShnBlk",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415blklthr",
+   "image": "/references/closures/6-18-415-caps-cp18-415blklthr.png",
+   "colourway": "CP18-415BlkLthr",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415livylthr",
+   "image": "/references/closures/6-18-415-caps-cp18-415livylthr.png",
+   "colourway": "CP18-415LIvyLthr",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415lpnklthr",
+   "image": "/references/closures/6-18-415-caps-cp18-415lpnklthr.png",
+   "colourway": "CP18-415LPnkLthr",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415brwnlthr",
+   "image": "/references/closures/6-18-415-caps-cp18-415brwnlthr.png",
+   "colourway": "CP18-415BrwnLthr",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415lbrwnlthr",
+   "image": "/references/closures/6-18-415-caps-cp18-415lbrwnlthr.png",
+   "colourway": "CP18-415LBrwnLthr",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415shnsl",
+   "image": "/references/closures/6-18-415-caps-cp18-415shnsl.png",
+   "colourway": "CP18-415ShnSl",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415mtsltall",
+   "image": "/references/closures/6-18-415-caps-cp18-415mtsltall.png",
+   "colourway": "CP18-415MtSlTall",
+   "component": "cap"
+  },
+  {
+   "slug": "6-18-415-caps-cp18-415mtsl",
+   "image": "/references/closures/6-18-415-caps-cp18-415mtsl.png",
+   "colourway": "CP18-415MtSl",
+   "component": "cap"
+  },
+  {
+   "slug": "7-18-415-sprayers-spry18-415mtgl",
+   "image": "/references/closures/7-18-415-sprayers-spry18-415mtgl.png",
+   "colourway": "Spry18-415MtGl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "7-18-415-sprayers-spry18-415shnblk",
+   "image": "/references/closures/7-18-415-sprayers-spry18-415shnblk.png",
+   "colourway": "Spry18-415ShnBlk",
+   "component": "sprayer"
+  },
+  {
+   "slug": "7-18-415-sprayers-spry18-415mtsl",
+   "image": "/references/closures/7-18-415-sprayers-spry18-415mtsl.png",
+   "colourway": "Spry18-415MtSl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "7-18-415-sprayers-spry18-415cu",
+   "image": "/references/closures/7-18-415-sprayers-spry18-415cu.png",
+   "colourway": "Spry18-415Cu",
+   "component": "sprayer"
+  },
+  {
+   "slug": "7-18-415-sprayers-spry18-415shnsl",
+   "image": "/references/closures/7-18-415-sprayers-spry18-415shnsl.png",
+   "colourway": "Spry18-415ShnSl",
+   "component": "sprayer"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415cu",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415cu.png",
+   "colourway": "Ltn18-415Cu",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415mtgl",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415mtgl.png",
+   "colourway": "Ltn18-415MtGl",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415mtsl",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415mtsl.png",
+   "colourway": "Ltn18-415MtSl",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415shngl",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415shngl.png",
+   "colourway": "Ltn18-415ShnGl",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415shnblk",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415shnblk.png",
+   "colourway": "Ltn18-415ShnBlk",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415mtslcl",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415mtslcl.png",
+   "colourway": "Ltn18-415MtSlCl",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415shnsl",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415shnsl.png",
+   "colourway": "Ltn18-415ShnSl",
+   "component": "pump"
+  },
+  {
+   "slug": "8-18-415-lotion-ltn18-415sqclr",
+   "image": "/references/closures/8-18-415-lotion-ltn18-415sqclr.png",
+   "colourway": "Ltn18-415SqClr",
+   "component": "pump"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415lvn",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415lvn.png",
+   "colourway": "Ansp18-415Lvn",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415pnk",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415pnk.png",
+   "colourway": "Ansp18-415Pnk",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415mtsl",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415mtsl.png",
+   "colourway": "Ansp18-415MtSl",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415ivysl",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415ivysl.png",
+   "colourway": "Ansp18-415IvySl",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415gl",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415gl.png",
+   "colourway": "Ansp18-415Gl",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415ivygl",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415ivygl.png",
+   "colourway": "Ansp18-415IvyGl",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415blk",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415blk.png",
+   "colourway": "Ansp18-415Blk",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415wht",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415wht.png",
+   "colourway": "Ansp18-415Wht",
+   "component": "bulb"
+  },
+  {
+   "slug": "9-18-415-ansp-ansp18-415red",
+   "image": "/references/closures/9-18-415-ansp-ansp18-415red.png",
+   "colourway": "Ansp18-415Red",
+   "component": "bulb"
+  }
+ ]
+}

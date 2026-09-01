@@ -175,3 +175,33 @@ Do not re-derive this; it is current as of 2026-08-31.
   extend into editorial and section headers, or stay product-only?
 - **Portal vs storefront:** one system with two densities, or a shared
   token layer with a distinct portal skin?
+
+---
+
+## Addendum 2026-08-31 — PDP pattern study (BuildDirect) and below-fold roadmap
+
+Jordan supplied BuildDirect's PDP as the structural reference (structure
+only — no brand tokens). What we adopted above the fold, in our language:
+spec strip under the title (Neck · Capacity · Case · SKU), unit price with
+a tier teaser, compact closure tiles in place of oversized match cards,
+sample-first CTA stack (samples + Grace ≈ their "text a flooring expert"),
+qty + add-to-cart, and a working your-price/savings card.
+
+Below-fold roadmap (Jordan-directed, in their scroll order):
+
+1. **Trust badge row** — 5 icon cards: Type III soda-lime glass · GCMI
+   standard necks · Case-pack ordering · Free shipping over $99 · US-based
+   support (Ulta/Sephora/Whole Foods pedigree).
+2. **Product Information accordion** — overview prose + Quick Specs list +
+   full three-column Specifications table (Dimensions / Details /
+   Ordering), plus **Download Product PDF** (generate from the spec data).
+3. **Accessories rail with SCHEMATIC DRAWINGS** — the closure components
+   (caps, sprayers, reducers, droppers) as sellable component SKUs, each
+   tile a clean engineering-drawing-style schematic with dimension
+   callouts + per-piece price. Source of truth for the drawings: the
+   Nemat engineering sheets + CYL_SPECS/closure specs — render clean
+   line-art (AI-assisted per Jordan), never invent dimensions.
+4. **You may also like** — sibling families rail (exists as related).
+5. **Reviews** — B2B verified-buyer reviews when the data exists.
+6. **Sticky product chip** — thumb + name + SKU + price following the
+   scroll with an add-to-cart shortcut.

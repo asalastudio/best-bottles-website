@@ -650,7 +650,15 @@ export default function MaterialLab(
   // own to refract. Also the first live configurator joint.
   const [closure, setClosure] = useState<LabClosure>("roller");
   const [trimMat, setTrimMat] = useState("CAP_SHINY_BLACK");
-  const [capMat, setCapMat] = useState("CAP_SHINY_BLACK");
+  // deep link from the Build Board: /dev/material-lab?mat=CAP_PINK opens
+  // with that token on the cap, ready to tune as a MeshPhysicalMaterial
+  const [capMat, setCapMat] = useState(() => {
+    if (typeof window !== "undefined") {
+      const m = new URLSearchParams(window.location.search).get("mat");
+      if (m) return m;
+    }
+    return "CAP_SHINY_BLACK";
+  });
   const [ballMat, setBallMat] = useState("PART_BALL_STEEL");
   // live overrides for the SELECTED cap finish — Jordan tunes caps the same
   // way he tunes glass, then Copy hands back JSON for materials.json

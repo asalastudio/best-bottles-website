@@ -28,7 +28,7 @@ const MAP = {
   CAP_SHINY_SILVER:        ["metal.silver.polished",     "metal.silver.polished"],
   CAP_MATTE_SILVER:        ["metal.silver.matte",        "metal.silver.matte"],
   CAP_DOTS_SILVER:         ["metal.silver.matte.dots",   "metal.silver.matte"],
-  CAP_DOTS_PINK:           ["metal.rose.matte",          "metal.rose"],
+  CAP_DOTS_PINK:           ["polymer.pp.pink_flat.dots", "polymer.pp"],
   CAP_COPPER:              ["metal.copper.polished",     "metal.copper"],
   PART_STUD_CHROME:        ["metal.chrome.polished",     "metal.chrome.polished"],
   PART_STUD_CHROME_BRIGHT: ["metal.chrome.bright",       "metal.chrome.bright"],
@@ -36,6 +36,9 @@ const MAP = {
   PART_STUD_STEEL:         ["metal.steel.stud",          "metal.steel.polished"],
   SPRAY_RED:               ["metal.anodised.red",        "metal.anodised"],
   SPRAY_TURQUOISE:         ["metal.anodised.turquoise",  "metal.anodised"],
+  // DRAFTS 2026-08-31 (pink dot cap session) — pending lab approval
+  CAP_PINK:                ["polymer.pp.pink_flat",      "polymer.pp"],
+  PART_STUD_RHINESTONE:    ["gem.rhinestone",            "gem.rhinestone"],
 
   CAP_SHINY_BLACK:         ["polymer.abs.gloss_black",   "polymer.abs"],
   CAP_DOTS_BLACK:          ["polymer.abs.gloss_black",   "polymer.abs"],  // identical -> merges

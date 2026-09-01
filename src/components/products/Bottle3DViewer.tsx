@@ -36,6 +36,15 @@ export type ClosureMode =
   | "reducer" | "reducerCapped" | "antique" | "antiqueTassel" | "dropper"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
+/** stud material per dot cap: PINK wears the rhinestone treatment
+ *  (Jordan 2026-08-31: flush but explicit, sparkly); black/silver keep
+ *  their APPROVED chrome studs */
+function studMatFor(capMat: string): string {
+  if (capMat === "CAP_DOTS_PINK") return "PART_STUD_RHINESTONE";
+  if (capMat === "CAP_DOTS_SILVER") return "PART_STUD_CHROME_BRIGHT";
+  return "PART_STUD_CHROME";
+}
+
 /** cap MOULDINGS — different physical caps sharing one thread (18-415
  *  ships short / tall / leather; leather materials force their moulding) */
 export type CapMoulding = "short" | "tall" | "leather";
@@ -99,7 +108,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     : `/models/closures/BB_CAP_${fin}.glb`);
   const nozzle = useGLTF(has1841
     ? "/models/closures/BB_SPR_NOZZLE_18415.glb"
-    : `/models/closures/BB_DIP_TUBE_${fin}.glb`);
+    : "/models/closures/BB_SPR_INSERT_17415.glb");
   // ONE source of truth for every material — see lib/materials/registry.ts
   const [mats, setMats] = useState<TokenFile | null>(null);
   useEffect(() => {
@@ -259,7 +268,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         g.push(build(moulding === "leather" ? capLeather
                    : moulding === "tall" ? capTall : cap, capMat));
         if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, "PART_STUD_CHROME"));
+          g.push(build(capDots, studMatFor(capMat)));
       }
       return g;
     }
@@ -276,8 +285,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         // shell/jewel split as collar/actuator)
         g.push(build(cap, capMat));
         if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, capMat === "CAP_DOTS_SILVER"
-                        ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME"));
+          g.push(build(capDots, studMatFor(capMat)));
       }
     } else {
       // material rule differs BY FINISH (PSD truth): 17-415 heads are
@@ -285,7 +293,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       // and collar both in trim, only the tiny nozzle insert is white
       const headMat = fin === "18415" ? trimMat : "PART_ACTUATOR_PP";
       g.push(build(collar, trimMat), build(actuator, headMat));
+      // the DISCHARGE ORIFICE — 18-415's white nozzle insert, and 17-415's
+      // counterbored spray insert (sprayers only; the pump has its spout)
       if (fin === "18415") g.push(build(nozzle, "PART_ACTUATOR_PP"));
+      else if (mode === "sprayer" || mode === "sprayerCapped")
+        g.push(build(nozzle, "PART_ACTUATOR_PP"));
       // the INTERNAL pump mechanism the tube hangs from — visible
       // through the glass below the collar (professionals model the
       // interior; an unanchored tube reads fake)
@@ -426,9 +438,15 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
 /** Entrance: the bottle is SET DOWN onto the stage — a decelerating spin
  *  while it eases from slightly above onto the floor, where the contact
  *  shadow catches it. Never rises from below (would clip the cove floor). */
+/** Plays once per page load, not per mount: colourway/closure switches are
+ *  route changes that remount the canvas, and replaying the set-down on
+ *  every swap reads as a jump rather than an entrance. */
+let entrancePlayed = false;
+
 function EntranceGroup({ children }: { children: React.ReactNode }) {
   const ref = useRef<THREE.Group | null>(null);
-  const t = useRef(0);
+  const t = useRef(entrancePlayed ? 1.5 : 0);
+  useEffect(() => { entrancePlayed = true; }, []);
   const DURATION = 1.5;
   const DROP = 0.008;                              // 8 mm settle
   useFrame((_, delta) => {

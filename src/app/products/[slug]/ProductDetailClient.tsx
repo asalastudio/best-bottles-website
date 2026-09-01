@@ -26,6 +26,7 @@ import Bottle3DConfigurator from "@/components/products/Bottle3DConfigurator";
 import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
 import { Safe3D } from "@/components/products/Viewer3DBoundary";
 import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
+import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
@@ -478,8 +479,9 @@ export interface ProductVariant {
     webPrice1pc: number | null;
     webPrice10pc: number | null;
     webPrice12pc: number | null;
-    /** Full quantity-break ladder mirrored from bestbottles.com (minQty asc). */
-    priceTiers?: { minQty: number; totalPrice: number; unitPrice: number }[];
+    /** the REAL ladder — 5 case-oriented steps (1/12/144/300/1500) from the
+     *  2026-08-06 site-truth sync. webPrice10pc/12pc understate it. */
+    priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     category: string;
     family: string | null;
     shape: string | null;
@@ -1522,6 +1524,7 @@ export default function ProductDetailClient({
             webPrice1pc: selectedVariant.webPrice1pc ?? null,
             webPrice10pc: selectedVariant.webPrice10pc ?? null,
             webPrice12pc: selectedVariant.webPrice12pc ?? null,
+            priceTiers: selectedVariant.priceTiers ?? null,
         }]);
         analytics.cartItemAdded({
             sku: selectedVariant.graceSku,
@@ -1560,7 +1563,7 @@ export default function ProductDetailClient({
                         full-width 50/50 stage + step panel for 3D families;
                         the classic grid keeps everything else below the fold. */}
                     {is3dFamily && group.slug ? (
-                        <div className="mb-8 lg:mb-14">
+                        <div className="mb-8 lg:mb-14 lg:-mx-4 xl:-mx-10 2xl:-mx-16">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
@@ -1574,11 +1577,50 @@ export default function ProductDetailClient({
                                 categoryLabel={`${group.category ?? "Glass Bottle"} · ${group.family ?? ""}`}
                                 inStock={inStock}
                                 caseQty={selectedVariant?.caseQuantity ?? null}
+                                neckSize={group.neckThreadSize}
+                                capacityText={group.capacity}
+                                skuLabel={selectedVariant?.graceSku ?? null}
+                                price10={selectedVariant?.webPrice10pc ?? null}
+                                price12={selectedVariant?.webPrice12pc ?? null}
+                                priceTiers={selectedVariant?.priceTiers ?? null}
+                                capOptions={capColorOptions}
+                                activeCapOption={activeCapColor}
+                                onCapOptionChange={(name) => {
+                                    setSelectedVariantId(null);
+                                    setSelectedCapColor(name);
+                                    setSelectedCapStyle(null);
+                                    setSelectedTrimColor(null);
+                                }}
+                                capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
+                                glassOptions={(() => {
+                                    const f = familyForSlug(group.slug ?? "");
+                                    if (!f) return [];
+                                    const token = (group.slug ?? "").split("-").pop() ?? "";
+                                    const current = glassFromSlug(f, group.slug ?? "");
+                                    return f.glasses.map((g) => {
+                                        const colour = f.slugColour[g];
+                                        const slug = colour ? f.buildSlug(colour, token) : null;
+                                        const sib = slug === group.slug
+                                            ? group
+                                            : compatibleSiblings.find((x) => x.slug === slug);
+                                        return {
+                                            id: g,
+                                            label: GLASS_PRESETS[g].label,
+                                            href: slug ? `/products/${slug}` : "#",
+                                            active: g === current,
+                                            imageUrl: sib?.heroImageUrl ?? null,
+                                        };
+                                    });
+                                })()}
+                                sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
+                                quoteHref={quoteHref}
+                                qty={qty}
+                                onQtyChange={setQty}
                             />
                         </div>
                     ) : null}
                     <div className={is3dFamily
-                        ? "max-w-3xl mx-auto"
+                        ? "max-w-5xl mx-auto"
                         : "grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start"}>
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
@@ -2031,7 +2073,7 @@ export default function ProductDetailClient({
                                 <TrustStack variant={selectedVariant} inStock={inStock} />
                             )}
 
-                            {selectedVariantSummary && (
+                            {!is3dFamily && selectedVariantSummary && (
                                 <SelectedVariantSummary
                                     label={selectedVariantSummary.label}
                                     sku={selectedVariantSummary.sku}
@@ -2039,15 +2081,17 @@ export default function ProductDetailClient({
                                 />
                             )}
 
-                            <ProductConfidenceSummary
-                                group={group}
-                                variant={selectedVariant}
-                                compatibleCount={compatibleSiblings.length}
-                                onAskGrace={openGracePanel}
-                            />
+                            {!is3dFamily && (
+                                <ProductConfidenceSummary
+                                    group={group}
+                                    variant={selectedVariant}
+                                    compatibleCount={compatibleSiblings.length}
+                                    onAskGrace={openGracePanel}
+                                />
+                            )}
 
-                            {/* Price + Tier Ladder */}
-                            <div className="mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50">
+                            {/* Price + Tier Ladder (panel carries these on 3D families) */}
+                            <div className={`mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50 ${is3dFamily ? "hidden" : ""}`}>
                                 <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                 <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian mb-4">
                                     {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
@@ -2057,8 +2101,9 @@ export default function ProductDetailClient({
                                 <TierLadder variant={selectedVariant} qty={qty} />
                             </div>
 
-                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price) ── */}
-                            <div className="hidden lg:block">
+                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price).
+                                   3D families select roller/cap/trim in the panel. ── */}
+                            <div className={is3dFamily ? "hidden" : "hidden lg:block"}>
                                 {!isAtomizer && (
                                     <>
                                     {/* Roller type toggle — Metal vs Plastic for roll-on groups */}
@@ -2364,7 +2409,7 @@ export default function ProductDetailClient({
                             <PdpInlinePromo blocks={pdpBlocks} />
 
                             {/* Quantity + Add to Cart */}
-                            <div ref={inlineCartRef} className="flex items-stretch space-x-3 mb-6">
+                            <div ref={inlineCartRef} className={`flex items-stretch space-x-3 mb-6 ${is3dFamily ? "hidden" : ""}`}>
                                 <div className="flex items-center border border-champagne rounded-sm bg-white">
                                     <button
                                         onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -2425,7 +2470,7 @@ export default function ProductDetailClient({
                             </div>
 
                             {/* Request a Quote CTA */}
-                            <div className="mb-6">
+                            <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`}>
                                 {qty >= 500 && checkoutReady ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
@@ -2458,8 +2503,9 @@ export default function ProductDetailClient({
                                 )}
                             </div>
 
-                            {/* Compatibility belongs near the buying decision for B2B confidence. */}
-                            {compatibleSiblings.length > 0 && (
+                            {/* Compatibility belongs near the buying decision for B2B confidence.
+                                (3D families select closures in the panel — no duplicate list.) */}
+                            {!is3dFamily && compatibleSiblings.length > 0 && (
                                 <div className="mb-6 rounded-sm border border-champagne/60 bg-white p-4">
                                     <div className="flex items-start justify-between gap-4 mb-3">
                                         <div>

@@ -29,10 +29,10 @@ export const CLOSURE_META: Record<Exclude<ClosureBase, "none">, {
   name: string; benefit: string;
 }> = {
   sprayer: { name: "Fine Mist Spray", benefit: "Even, everyday application" },
-  antique: { name: "Bulb Atomizer", benefit: "Premium presentation and display" },
-  antiqueTassel: { name: "Bulb Atomizer · Tassel", benefit: "Premium presentation and display" },
+  antique: { name: "Vintage Bulb", benefit: "Premium presentation and display" },
+  antiqueTassel: { name: "Vintage Bulb · Tassel", benefit: "Bulb sprayer with decorative tassel" },
   pump: { name: "Lotion Pump", benefit: "Measured dose for thicker product" },
   dropper: { name: "Glass Dropper", benefit: "Drop-precise for oils and serums" },
   roller: { name: "Roll-on", benefit: "Direct glide-on application" },
-  reducer: { name: "Pour Reducer", benefit: "Controlled pour, splash-free" },
+  reducer: { name: "Reducer", benefit: "Controlled pour, splash-free" },
 };

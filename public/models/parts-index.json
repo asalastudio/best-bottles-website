@@ -1,0 +1,496 @@
+{
+  "generatedBy": "index-parts.mjs",
+  "count": 70,
+  "parts": [
+    {
+      "id": "BB_ANSP_BULB_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_ANSP_BULB_18415.glb",
+      "neck": null,
+      "kb": 6365
+    },
+    {
+      "id": "BB_ANSP_COLLAR_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_ANSP_COLLAR_18415.glb",
+      "neck": null,
+      "kb": 40
+    },
+    {
+      "id": "BB_ANSP_FERRULE_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_ANSP_FERRULE_18415.glb",
+      "neck": null,
+      "kb": 3
+    },
+    {
+      "id": "BB_ANSP_TASSEL_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_ANSP_TASSEL_18415.glb",
+      "neck": null,
+      "kb": 13
+    },
+    {
+      "id": "BB_CAP_13415",
+      "kind": "closure",
+      "url": "/models/closures/BB_CAP_13415.glb",
+      "neck": null,
+      "kb": 787
+    },
+    {
+      "id": "BB_CAP_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_CAP_17415.glb",
+      "neck": null,
+      "kb": 889
+    },
+    {
+      "id": "BB_CAP_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_CAP_18415.glb",
+      "neck": null,
+      "kb": 619
+    },
+    {
+      "id": "BB_CAP_18415_LEATHER",
+      "kind": "closure",
+      "url": "/models/closures/BB_CAP_18415_LEATHER.glb",
+      "neck": null,
+      "kb": 40
+    },
+    {
+      "id": "BB_CAP_18415_TALL",
+      "kind": "closure",
+      "url": "/models/closures/BB_CAP_18415_TALL.glb",
+      "neck": null,
+      "kb": 882
+    },
+    {
+      "id": "BB_CAP_DOTS_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_CAP_DOTS_17415.glb",
+      "neck": null,
+      "kb": 60
+    },
+    {
+      "id": "BB_DIP_TUBE_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_DIP_TUBE_17415.glb",
+      "neck": null,
+      "kb": 49
+    },
+    {
+      "id": "BB_DIP_TUBE_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_DIP_TUBE_18415.glb",
+      "neck": null,
+      "kb": 49
+    },
+    {
+      "id": "BB_DRP_BULB_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_DRP_BULB_18415.glb",
+      "neck": null,
+      "kb": 34
+    },
+    {
+      "id": "BB_DRP_COLLAR_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_DRP_COLLAR_18415.glb",
+      "neck": null,
+      "kb": 23
+    },
+    {
+      "id": "BB_DRP_PIPETTE_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_DRP_PIPETTE_18415.glb",
+      "neck": null,
+      "kb": 48
+    },
+    {
+      "id": "BB_PMP_BODY_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_PMP_BODY_17415.glb",
+      "neck": null,
+      "kb": 27
+    },
+    {
+      "id": "BB_PMP_BODY_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_PMP_BODY_18415.glb",
+      "neck": null,
+      "kb": 27
+    },
+    {
+      "id": "BB_PMP_SPOUT_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_PMP_SPOUT_17415.glb",
+      "neck": null,
+      "kb": 6
+    },
+    {
+      "id": "BB_PMP_SPOUT_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_PMP_SPOUT_18415.glb",
+      "neck": null,
+      "kb": 6
+    },
+    {
+      "id": "BB_REDUCER_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_REDUCER_18415.glb",
+      "neck": null,
+      "kb": 136
+    },
+    {
+      "id": "BB_ROLL_BALL_17415_PLASTIC",
+      "kind": "closure",
+      "url": "/models/closures/BB_ROLL_BALL_17415_PLASTIC.glb",
+      "neck": null,
+      "kb": 71
+    },
+    {
+      "id": "BB_ROLL_BALL_17415_STEEL",
+      "kind": "closure",
+      "url": "/models/closures/BB_ROLL_BALL_17415_STEEL.glb",
+      "neck": null,
+      "kb": 71
+    },
+    {
+      "id": "BB_ROLL_HOUSING_17415_PLASTIC",
+      "kind": "closure",
+      "url": "/models/closures/BB_ROLL_HOUSING_17415_PLASTIC.glb",
+      "neck": null,
+      "kb": 62
+    },
+    {
+      "id": "BB_ROLL_HOUSING_17415_STEEL",
+      "kind": "closure",
+      "url": "/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb",
+      "neck": null,
+      "kb": 62
+    },
+    {
+      "id": "BB_SPR_ACTUATOR_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_ACTUATOR_17415.glb",
+      "neck": null,
+      "kb": 89
+    },
+    {
+      "id": "BB_SPR_ACTUATOR_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_ACTUATOR_18415.glb",
+      "neck": null,
+      "kb": 89
+    },
+    {
+      "id": "BB_SPR_COLLAR_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_COLLAR_17415.glb",
+      "neck": null,
+      "kb": 548
+    },
+    {
+      "id": "BB_SPR_COLLAR_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_COLLAR_18415.glb",
+      "neck": null,
+      "kb": 619
+    },
+    {
+      "id": "BB_SPR_INSERT_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_INSERT_17415.glb",
+      "neck": null,
+      "kb": 6
+    },
+    {
+      "id": "BB_SPR_NOZZLE_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_NOZZLE_18415.glb",
+      "neck": null,
+      "kb": 5
+    },
+    {
+      "id": "BB_SPR_OVERCAP_17415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_OVERCAP_17415.glb",
+      "neck": null,
+      "kb": 45
+    },
+    {
+      "id": "BB_SPR_OVERCAP_18415",
+      "kind": "closure",
+      "url": "/models/closures/BB_SPR_OVERCAP_18415.glb",
+      "neck": null,
+      "kb": 45
+    },
+    {
+      "id": "Cr-boxy-15-415-74x60x20",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cr-boxy-15-415-74x60x20.glb",
+      "neck": "15-415",
+      "kb": 3984
+    },
+    {
+      "id": "Cr-boxy-18-415-105x89x29",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cr-boxy-18-415-105x89x29.glb",
+      "neck": "18-415",
+      "kb": 4136
+    },
+    {
+      "id": "Cr-boxy-18-415-87x72x23",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cr-boxy-18-415-87x72x23.glb",
+      "neck": "18-415",
+      "kb": 4114
+    },
+    {
+      "id": "Cr-round-13-415-60x50x17",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cr-round-13-415-60x50x17.glb",
+      "neck": "13-415",
+      "kb": 2179
+    },
+    {
+      "id": "Cr-round-18-415-87x72x23",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cr-round-18-415-87x72x23.glb",
+      "neck": "18-415",
+      "kb": 4114
+    },
+    {
+      "id": "Cyl-round-13-415-53x17",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cyl-round-13-415-53x17.glb",
+      "neck": "13-415",
+      "kb": 2167
+    },
+    {
+      "id": "Cyl-round-17-415-70x20",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cyl-round-17-415-70x20.glb",
+      "neck": "17-415",
+      "kb": 3861
+    },
+    {
+      "id": "Cyl-round-17-415-74x20",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cyl-round-17-415-74x20.glb",
+      "neck": "17-415",
+      "kb": 3841
+    },
+    {
+      "id": "Cyl-round-18-415-117x32",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cyl-round-18-415-117x32.glb",
+      "neck": "18-415",
+      "kb": 4168
+    },
+    {
+      "id": "Cyl-round-18-415-154x35",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Cyl-round-18-415-154x35.glb",
+      "neck": "18-415",
+      "kb": 4186
+    },
+    {
+      "id": "CylSwrl-round-17-415-74x21",
+      "kind": "body",
+      "url": "/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb",
+      "neck": "17-415",
+      "kb": 4695
+    },
+    {
+      "id": "Elg-boxy-13-415-61x36x18",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Elg-boxy-13-415-61x36x18.glb",
+      "neck": "13-415",
+      "kb": 2180
+    },
+    {
+      "id": "Elg-boxy-15-415-75x44x22",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Elg-boxy-15-415-75x44x22.glb",
+      "neck": "15-415",
+      "kb": 3995
+    },
+    {
+      "id": "Elg-boxy-18-415-109x61x30",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Elg-boxy-18-415-109x61x30.glb",
+      "neck": "18-415",
+      "kb": 4136
+    },
+    {
+      "id": "Elg-boxy-18-415-86x54x27",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Elg-boxy-18-415-86x54x27.glb",
+      "neck": "18-415",
+      "kb": 4119
+    },
+    {
+      "id": "Flair-boxy-13-415-56x41x20",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Flair-boxy-13-415-56x41x20.glb",
+      "neck": "13-415",
+      "kb": 2173
+    },
+    {
+      "id": "Grce-boxy-18-415-113x52x30",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Grce-boxy-18-415-113x52x30.glb",
+      "neck": "18-415",
+      "kb": 4141
+    },
+    {
+      "id": "Rect-boxy-13-415-50x29x19",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Rect-boxy-13-415-50x29x19.glb",
+      "neck": "13-415",
+      "kb": 2163
+    },
+    {
+      "id": "Rnd-round-18-415-73x59",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Rnd-round-18-415-73x59.glb",
+      "neck": "18-415",
+      "kb": 4091
+    },
+    {
+      "id": "Rnd-round-18-415-83x69",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Rnd-round-18-415-83x69.glb",
+      "neck": "18-415",
+      "kb": 4109
+    },
+    {
+      "id": "Royal-boxy-13-415-56x40x21",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Royal-boxy-13-415-56x40x21.glb",
+      "neck": "13-415",
+      "kb": 2173
+    },
+    {
+      "id": "Sleek-boxy-13-415-66x17x17",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Sleek-boxy-13-415-66x17x17.glb",
+      "neck": "13-415",
+      "kb": 2183
+    },
+    {
+      "id": "Slm-boxy-18-415-121x31x31",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Slm-boxy-18-415-121x31x31.glb",
+      "neck": "18-415",
+      "kb": 4145
+    },
+    {
+      "id": "Slm-boxy-18-415-87x30x30",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Slm-boxy-18-415-87x30x30.glb",
+      "neck": "18-415",
+      "kb": 4114
+    },
+    {
+      "id": "Sqr-boxy-13-415-52x26x26",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Sqr-boxy-13-415-52x26x26.glb",
+      "neck": "13-415",
+      "kb": 2167
+    },
+    {
+      "id": "TallCyl-round-13-415-106x18",
+      "kind": "body",
+      "url": "/models/bodies-threaded/TallCyl-round-13-415-106x18.glb",
+      "neck": "13-415",
+      "kb": 2219
+    },
+    {
+      "id": "TallRect-boxy-13-415-101x17x17",
+      "kind": "body",
+      "url": "/models/bodies-threaded/TallRect-boxy-13-415-101x17x17.glb",
+      "neck": "13-415",
+      "kb": 2213
+    },
+    {
+      "id": "Tulip-round-13-415-45x23",
+      "kind": "body",
+      "url": "/models/bodies-threaded/Tulip-round-13-415-45x23.glb",
+      "neck": "13-415",
+      "kb": 2153
+    },
+    {
+      "id": "Circle-disc-18-415-111x94",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
+      "neck": "18-415",
+      "kb": 6987
+    },
+    {
+      "id": "Circle-disc-18-415-88x73",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Circle-disc-18-415-88x73.glb",
+      "neck": "18-415",
+      "kb": 6459
+    },
+    {
+      "id": "Cyl-round-17-415-70x20",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Cyl-round-17-415-70x20.glb",
+      "neck": "17-415",
+      "kb": 4784
+    },
+    {
+      "id": "Cyl-round-18-415-117x32",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Cyl-round-18-415-117x32.glb",
+      "neck": "18-415",
+      "kb": 4910
+    },
+    {
+      "id": "Cyl-round-18-415-154x35",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Cyl-round-18-415-154x35.glb",
+      "neck": "18-415",
+      "kb": 4920
+    },
+    {
+      "id": "CylSwrl-round-17-415-74x21",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/CylSwrl-round-17-415-74x21.glb",
+      "neck": "17-415",
+      "kb": 5910
+    },
+    {
+      "id": "Elegant-oval-18-415-109x61",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Elegant-oval-18-415-109x61.glb",
+      "neck": "18-415",
+      "kb": 4936
+    },
+    {
+      "id": "Elegant-oval-18-415-87x55",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Elegant-oval-18-415-87x55.glb",
+      "neck": "18-415",
+      "kb": 4919
+    },
+    {
+      "id": "Round-sphere-18-415-73x59",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Round-sphere-18-415-73x59.glb",
+      "neck": "18-415",
+      "kb": 6083
+    },
+    {
+      "id": "Round-sphere-18-415-83x69",
+      "kind": "body (thickness-baked)",
+      "url": "/models/bodies-thickness/Round-sphere-18-415-83x69.glb",
+      "neck": "18-415",
+      "kb": 6085
+    }
+  ]
+}
