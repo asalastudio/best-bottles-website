@@ -12,6 +12,8 @@ export type Variant = {
   swatch: string;
   image: string;
   thumb: string;
+  imageCapOff: string | null;
+  thumbCapOff: string | null;
   price: number | null;
   stock: string | null;
   applicator: string | null;
@@ -34,6 +36,7 @@ const money = (v: number | null) =>
 
 export default function PaperDollSwapper({ family }: { family: FamilyManifest }) {
   const [closure, setClosure] = useState(family.closures[0].id);
+  const [capOff, setCapOff] = useState(false);
   const [color, setColor] = useState(
     family.variants.find((v) => v.closure === family.closures[0].id)!.color,
   );
@@ -53,7 +56,13 @@ export default function PaperDollSwapper({ family }: { family: FamilyManifest })
     const pool = family.variants.filter((v) => v.closure === next);
     setClosure(next);
     if (!pool.some((v) => v.color === color)) setColor(pool[0].color);
+    setCapOff(false);
   }
+
+  // Only the pump SKUs were photographed with the overcap lifted off.
+  const capOffUrl = selected.imageCapOff;
+  const showingCapOff = capOff && capOffUrl !== null;
+  const heroUrl = showingCapOff ? capOffUrl! : selected.image;
 
   return (
     <main className="min-h-screen bg-bone">
@@ -100,9 +109,9 @@ export default function PaperDollSwapper({ family }: { family: FamilyManifest })
               <div className="min-w-0">
                 <div className="relative aspect-[10/11] overflow-hidden rounded-sm border border-champagne/50 bg-white">
                   <Image
-                    key={selected.sku}
-                    src={selected.image}
-                    alt={`${family.name} with ${selected.closureLabel}, ${selected.color}`}
+                    key={heroUrl}
+                    src={heroUrl}
+                    alt={`${family.name} with ${selected.closureLabel}, ${selected.color}${showingCapOff ? ", overcap removed" : ""}`}
                     fill
                     sizes="(max-width: 1024px) 100vw, 620px"
                     priority
@@ -119,6 +128,32 @@ export default function PaperDollSwapper({ family }: { family: FamilyManifest })
                     </span>
                   </div>
                 </div>
+
+                {capOffUrl && (
+                  <div className="mt-3 flex gap-2">
+                    {[
+                      { on: false, label: "Cap on", url: selected.thumb },
+                      { on: true, label: "Cap off", url: selected.thumbCapOff! },
+                    ].map((view) => (
+                      <button
+                        key={view.label}
+                        type="button"
+                        onClick={() => setCapOff(view.on)}
+                        aria-pressed={showingCapOff === view.on}
+                        className={`flex items-center gap-2 border py-1 pl-1 pr-3 text-[11px] transition ${
+                          showingCapOff === view.on
+                            ? "border-obsidian bg-white text-obsidian"
+                            : "border-champagne bg-white text-slate hover:border-muted-gold"
+                        }`}
+                      >
+                        <span className="relative block h-9 w-9 overflow-hidden bg-white">
+                          <Image src={view.url} alt="" fill sizes="36px" className="object-contain" />
+                        </span>
+                        {view.label}
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -131,9 +166,15 @@ export default function PaperDollSwapper({ family }: { family: FamilyManifest })
             <h1 className="mt-2 font-serif text-3xl leading-tight text-obsidian lg:text-4xl">
               {family.name}
             </h1>
-            <p className="mt-2 text-sm text-slate">
-              {selected.applicator ?? selected.closureLabel} · {selected.color}
+            <p className="mt-2 text-base font-medium text-obsidian">
+              {selected.closureLabel} — {selected.color}
             </p>
+            {selected.applicator &&
+              selected.applicator !== selected.closureLabel && (
+                <p className="mt-1 text-xs text-slate">
+                  Catalogue applicator: {selected.applicator}
+                </p>
+              )}
 
             <div className="mt-5 flex items-baseline gap-3">
               <span className="text-2xl font-semibold text-obsidian">

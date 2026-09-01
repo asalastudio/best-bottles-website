@@ -138,11 +138,24 @@ def main():
         rgb = PSDImage.open(path).composite().convert("RGB")
         gray = np.array(rgb.convert("L"))
         blobs = blob_count(gray)
-        prev = plates.get(stem)
-        # Prefer the assembled shot (one blob) over the "overcap resting beside" shot.
-        if prev is None or blobs < prev["blobs"]:
-            plates[stem] = {"rgb": rgb, "gray": gray, "blobs": blobs, "source": base}
-    print(f"flattened {len(plates)} unique SKUs from {os.path.basename(psd_dir)}")
+        shot = {"rgb": rgb, "gray": gray, "blobs": blobs, "source": base}
+        # Pump SKUs ship two shots: the assembly under its overcap (one blob),
+        # and the pump exposed with the overcap resting beside it (two blobs).
+        # The second is the only way a buyer can see it really is a lotion pump,
+        # so keep both and let the PDP toggle between them.
+        plates.setdefault(stem, []).append(shot)
+    # Within a SKU the shot with fewer separate objects is the assembled one;
+    # the extra object in the other shot is the overcap resting beside it.
+    # Compared relatively, not against a fixed count -- these plates carry a
+    # small constant retouch mark that also registers as its own component.
+    for stem, shot_list in plates.items():
+        shot_list.sort(key=lambda sh: sh["blobs"])
+        plates[stem] = {"on": shot_list[0]}
+        if len(shot_list) > 1 and shot_list[-1]["blobs"] > shot_list[0]["blobs"]:
+            plates[stem]["off"] = shot_list[-1]
+    pairs = sum(1 for v in plates.values() if "off" in v)
+    print(f"flattened {len(plates)} unique SKUs from {os.path.basename(psd_dir)}"
+          f" ({pairs} with a cap-off shot)")
 
     # 2. register every plate against the reference bottle-foot template
     ref_path = os.path.join(psd_dir, FAMILY["reference"])
@@ -150,69 +163,104 @@ def main():
     ty0, ty1, tx0, tx1 = FAMILY["template"]
     patch = ref_gray[ty0:ty1, tx0:tx1]
 
-    for stem, p in plates.items():
-        iy, ix, score = ncc_offset(patch, p["gray"])
-        p["dx"] = ix - tx0          # target = reference + (dx, dy)
-        p["dy"] = iy - ty0
-        p["score"] = score
-    scores = [p["score"] for p in plates.values()]
+    shots = [sh for v in plates.values() for sh in v.values()]
+    for sh in shots:
+        iy, ix, score = ncc_offset(patch, sh["gray"])
+        sh["dx"] = ix - tx0          # target = reference + (dx, dy)
+        sh["dy"] = iy - ty0
+        sh["score"] = score
+    scores = [sh["score"] for sh in shots]
     spread = (max(scores) - min(scores)) / max(scores)
     print(f"registration: NCC spread {spread:.6f} (0 = every bottle byte-identical)")
     if spread > 0.02:
         print("WARNING: plates are not a single photographic master; review before shipping",
               file=sys.stderr)
 
-    # 3. union of all ink, expressed in reference coordinates
-    ux0 = uy0 = 10**9; ux1 = uy1 = -10**9
-    for p in plates.values():
-        bb = ink_bbox(p["gray"])
-        x0, y0, x1, y1 = bb
-        ux0 = min(ux0, x0 - p["dx"]); uy0 = min(uy0, y0 - p["dy"])
-        ux1 = max(ux1, x1 - p["dx"]); uy1 = max(uy1, y1 - p["dy"])
-    uw, uh = ux1 - ux0, uy1 - uy0
-    print(f"union ink in reference space: {uw}x{uh}px")
+    # 3. Vertical framing is shared so the bottle never bobs: measure every
+    #    shot's ink in reference space and keep one vertical band. Horizontal
+    #    framing is per-plate (step 5) so plain closures sit centred.
+    uy0 = 10**9; uy1 = -10**9; max_w = 0
+    for sh in shots:
+        x0, y0, x1, y1 = ink_bbox(sh["gray"])
+        uy0 = min(uy0, y0 - sh["dy"]); uy1 = max(uy1, y1 - sh["dy"])
+        max_w = max(max_w, x1 - x0)
+    uh = uy1 - uy0
+    print(f"shared vertical band {uh}px; widest single plate {max_w}px")
 
-    # 4. one canvas for the whole family: contain the union, keep OUT_W:OUT_H
-    scale = min((OUT_W - 2 * PAD) / uw, (OUT_H - 2 * PAD) / uh)
+    # 4. One scale for the whole family -- the bottle must be the same size on
+    #    every plate -- sized so the widest plate (the tassel) still fits.
+    scale = min((OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
     out_dir = os.path.join(REPO, "public", "paper-doll", FAMILY["id"])
     os.makedirs(out_dir, exist_ok=True)
 
+    def cap_axis(gray):
+        """Horizontal centre of the closure itself.
+
+        The closure is a cylinder sitting on the neck, so its centre is the
+        bottle's axis. The moulded glass is not quite symmetric in these
+        photographs -- its bounding box runs a few px wide on the right -- so
+        centring the ink box leaves the cap visibly off-centre, and by a
+        different amount per closure, which reads as a shift when swapping.
+        """
+        ink = gray < 245
+        ys, xs = np.where(ink)
+        y0, y1 = ys.min(), ys.max()
+        band = ink[y0:y0 + max(8, int((y1 - y0) * 0.20))]
+        cols = np.where(band.any(axis=0))[0]
+        return (cols.min() + cols.max()) / 2.0
+
+    def render(sh, name, on_axis):
+        """Place one shot: vertical registered to the shared band. Horizontal
+        is centred on the closure axis for a plain capped bottle, and on the
+        whole composition when something hangs off the bottle (a bulb, a
+        tassel, or the overcap resting beside it)."""
+        if on_axis:
+            ox = OUT_W / 2 - cap_axis(sh["gray"]) * scale
+        else:
+            x0, _, x1, _ = ink_bbox(sh["gray"])
+            ox = (OUT_W - (x1 - x0) * scale) / 2 - x0 * scale
+        oy = (PAD - (uy0 + sh["dy"]) * scale
+              + ((OUT_H - 2 * PAD) - uh * scale) / 2)
+        inv = 1.0 / scale
+        # Scale and translate in ONE resampling pass -- resize-then-paste at an
+        # integer offset rounds the bottle 1px between plates, which reads as a
+        # twitch when the customer swaps.
+        canvas = sh["rgb"].transform(
+            (OUT_W, OUT_H), Image.AFFINE,
+            (inv, 0, -ox * inv, 0, inv, -oy * inv),
+            resample=Image.BICUBIC, fillcolor=(255, 255, 255))
+        canvas.save(os.path.join(out_dir, f"{name}.webp"), "WEBP",
+                    quality=88, method=6)
+
+        # Rail thumbnail: the plate is mostly whitespace, so at 58px the
+        # assembly is unreadable. Crop each plate to its own ink instead --
+        # the rail tells closures apart, it does not compare scale.
+        tx0, ty0, tx1, ty1 = ink_bbox(np.array(canvas.convert("L")))
+        side = max(tx1 - tx0, ty1 - ty0) + 24
+        cx, cy = (tx0 + tx1) // 2, (ty0 + ty1) // 2
+        # Crop onto an explicit white square: it usually overruns the plate
+        # edge, and PIL.crop pads out-of-bounds with black.
+        square = Image.new("RGB", (side, side), (255, 255, 255))
+        square.paste(canvas, (-(cx - side // 2), -(cy - side // 2)))
+        square.resize((240, 240), Image.LANCZOS).save(
+            os.path.join(out_dir, f"{name}.thumb.webp"), "WEBP",
+            quality=82, method=6)
+
     entries = []
     for stem in sorted(plates):
-        p = plates[stem]
+        shots_for_sku = plates[stem]
         cid, clabel, color, swatch = parse_sku(stem)
         row = catalog.get(stem)
         if row is None:
             continue
-        src = p["rgb"]
-        # Scale and translate in ONE resampling pass. Resizing and then pasting
-        # at an integer offset would round the bottle 1px between plates, which
-        # reads as a twitch when the customer swaps closures.
-        ox = (PAD - (ux0 + p["dx"]) * scale
-              + ((OUT_W - 2 * PAD) - uw * scale) / 2)
-        oy = (PAD - (uy0 + p["dy"]) * scale
-              + ((OUT_H - 2 * PAD) - uh * scale) / 2)
-        inv = 1.0 / scale
-        canvas = src.transform(
-            (OUT_W, OUT_H), Image.AFFINE,
-            (inv, 0, -ox * inv, 0, inv, -oy * inv),
-            resample=Image.BICUBIC, fillcolor=(255, 255, 255))
-        canvas.save(os.path.join(out_dir, f"{stem}.webp"), "WEBP", quality=88, method=6)
-
-        # Rail thumbnail: the registered plate is mostly whitespace, so at 58px
-        # the assembly is unreadable. Crop each plate to its own ink instead --
-        # the rail is for telling closures apart, not for comparing scale.
-        tb = ink_bbox(np.array(canvas.convert("L")))
-        tx0, ty0, tx1, ty1 = tb
-        side = max(tx1 - tx0, ty1 - ty0) + 24
-        cx, cy = (tx0 + tx1) // 2, (ty0 + ty1) // 2
-        # Crop onto an explicit white square: the square usually overruns the
-        # plate edge, and PIL.crop pads out-of-bounds with black.
-        square = Image.new("RGB", (side, side), (255, 255, 255))
-        square.paste(canvas, (-(cx - side // 2), -(cy - side // 2)))
-        thumb = square.resize((240, 240), Image.LANCZOS)
-        thumb.save(os.path.join(out_dir, f"{stem}.thumb.webp"),
-                   "WEBP", quality=82, method=6)
+        on = shots_for_sku.get("on") or shots_for_sku.get("off")
+        off = shots_for_sku.get("off") if "on" in shots_for_sku else None
+        # A bulb or tassel hangs well off the bottle, so those compose better
+        # centred as a whole; the user reads them as a different composition.
+        plain = cid not in ("bulb", "bulb-tassel")
+        render(on, stem, on_axis=plain)
+        if off:
+            render(off, f"{stem}-capoff", on_axis=False)
 
         entries.append({
             "sku": stem,
@@ -223,12 +271,17 @@ def main():
             "swatch": swatch,
             "image": f"/paper-doll/{FAMILY['id']}/{stem}.webp",
             "thumb": f"/paper-doll/{FAMILY['id']}/{stem}.thumb.webp",
+            "imageCapOff": (f"/paper-doll/{FAMILY['id']}/{stem}-capoff.webp"
+                            if off else None),
+            "thumbCapOff": (f"/paper-doll/{FAMILY['id']}/{stem}-capoff.thumb.webp"
+                            if off else None),
             "price": price_of(row),
             "stock": row.get("stockStatus") or None,
             "applicator": row.get("applicator") or None,
             "productUrl": row.get("productUrl") or None,
             "capacityMl": row.get("capacityMl") or None,
-            "sourcePsd": p["source"],
+            "sourcePsd": on["source"],
+
         })
 
     order = [c[1] for c in CLOSURES]
