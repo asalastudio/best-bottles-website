@@ -25,7 +25,8 @@
 
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
-import { Plus, Minus, WarningCircle } from "@/components/icons";
+import { Plus, Minus, WarningCircle, Check } from "@/components/icons";
+import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
 import { cn } from "@/lib/utils";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
@@ -38,6 +39,9 @@ type Component = {
     imageUrl: string | null;
     capColor: string | null;
     stockStatus: string | null;
+    /** which closure group it came from — carried so the chosen chip can keep
+     *  its icon after the type list collapses */
+    groupKey?: string;
 };
 
 export type MatrixRow = {
@@ -87,17 +91,47 @@ export default function MatrixClient({
 }) {
     const router = useRouter();
     const [configs, setConfigs] = useState<Record<string, Config>>({});
-    const [picker, setPicker] = useState<string | null>(null);
     const [search, setSearch] = useState("");
+    const [size, setSize] = useState("");
+    const [finish, setFinish] = useState("");
+    const [neck, setNeck] = useState("");
+    const [closure, setClosure] = useState("");
 
-    const rows = initialRows?.rows ?? [];
+    const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);
+
+    /* FILTERS ARE FAMILY-SCOPED, and their OPTIONS come from the loaded family
+       rather than the whole catalog. Jordan: "We should filter only at the
+       family level... when they filter, it'll be for the whole family." A
+       global option list would offer sizes and necks this family does not
+       sell, and every one of them would return nothing. */
+    const options = useMemo(() => {
+        const uniq = (xs: (string | null | undefined)[]) =>
+            [...new Set(xs.map((x) => (x ?? "").trim()).filter(Boolean))].sort();
+        return {
+            sizes: uniq(rows.map((r) => r.capacity))
+                // "9 ml" before "100 ml" — string sort would not
+                .sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0)),
+            finishes: uniq(rows.map((r) => r.color)),
+            necks: uniq(rows.map((r) => r.neckThreadSize)),
+            closures: uniq(rows.flatMap((r) => Object.keys(r.components))),
+        };
+    }, [rows]);
+
     const visible = useMemo(() => {
         const q = search.trim().toLowerCase();
-        if (!q) return rows;
-        return rows.filter((r) =>
-            `${r.itemName ?? ""} ${r.graceSku ?? ""} ${r.capacity ?? ""} ${r.color ?? ""}`
-                .toLowerCase().includes(q));
-    }, [rows, search]);
+        return rows.filter((r) => {
+            if (size && (r.capacity ?? "") !== size) return false;
+            if (finish && (r.color ?? "") !== finish) return false;
+            if (neck && (r.neckThreadSize ?? "") !== neck) return false;
+            if (closure && !(r.components[closure]?.length)) return false;
+            if (!q) return true;
+            return `${r.itemName ?? ""} ${r.graceSku ?? ""} ${r.capacity ?? ""} ${r.color ?? ""}`
+                .toLowerCase().includes(q);
+        });
+    }, [rows, search, size, finish, neck, closure]);
+
+    const filtered = Boolean(size || finish || neck || closure || search.trim());
+    const clearAll = () => { setSize(""); setFinish(""); setNeck(""); setClosure(""); setSearch(""); };
 
     /** Only rows with an EXPLICIT component decision count as configured. */
     const order = useMemo(() => {
@@ -145,33 +179,47 @@ export default function MatrixClient({
                 </a>
             </div>
 
-            {/* toolbar */}
-            <div className="bg-white border border-champagne/60 rounded-[3px] p-2.5 flex items-center gap-2.5 mb-3.5">
+            {/* toolbar — every filter is scoped to the open family */}
+            <div className="bg-white border border-champagne/60 rounded-[3px] p-2.5
+                            flex flex-wrap items-center gap-2 mb-3.5">
+                <select
+                    value={openFamily ?? ""}
+                    onChange={(e) => router.replace(`/matrix?family=${encodeURIComponent(e.target.value)}`)}
+                    className="bg-white border border-obsidian rounded-[3px] px-2.5 py-1.5
+                               text-spec font-semibold text-obsidian"
+                >
+                    {families.map((f) => (
+                        <option key={f.family} value={f.family}>{f.family}</option>
+                    ))}
+                </select>
+
+                <Filter label="All sizes" value={size} onChange={setSize} options={options.sizes} />
+                <Filter label="All finishes" value={finish} onChange={setFinish} options={options.finishes} />
+                <Filter label="All necks" value={neck} onChange={setNeck} options={options.necks} />
+                <Filter label="All closures" value={closure} onChange={setClosure} options={options.closures} />
+
                 <input
                     value={search}
                     onChange={(e) => setSearch(e.target.value)}
-                    placeholder="Search within results…"
-                    className="w-[230px] bg-warm-white border border-champagne rounded-[3px]
+                    placeholder="Search within family…"
+                    className="w-[190px] bg-warm-white border border-champagne rounded-[3px]
                                px-2.5 py-1.5 text-spec text-obsidian placeholder:text-ash
                                focus-visible:outline-2 focus-visible:outline-offset-2
                                focus-visible:outline-muted-gold"
                 />
-                <select
-                    value={openFamily ?? ""}
-                    onChange={(e) => router.replace(`/matrix?family=${encodeURIComponent(e.target.value)}`)}
-                    className="bg-warm-white border border-champagne rounded-[3px] px-2.5 py-1.5
-                               text-spec text-obsidian"
-                >
-                    {families.map((f) => (
-                        <option key={f.family} value={f.family}>
-                            {f.family} · {f.groups} groups
-                        </option>
-                    ))}
-                </select>
+
+                {filtered && (
+                    <button type="button" onClick={clearAll}
+                        className="text-spec font-semibold text-gold-dim underline
+                                   transition-colors duration-200 hover:text-muted-gold">
+                        Clear
+                    </button>
+                )}
+
                 <div className="flex-1" />
                 {initialRows && (
                     <span className="text-caption text-ash tabular-nums">
-                        {visible.length} of {initialRows.rowCount} rows
+                        {visible.length} of {initialRows.rowCount}
                         {initialRows.truncated && " · truncated"}
                     </span>
                 )}
@@ -206,8 +254,6 @@ export default function MatrixClient({
                         <Row
                             key={key(r)} row={r}
                             config={configs[key(r)]}
-                            pickerOpen={picker === key(r)}
-                            onTogglePicker={() => setPicker(picker === key(r) ? null : key(r))}
                             onChange={(patch) => setConfig(r, patch)}
                         />
                     ))}
@@ -223,11 +269,9 @@ export default function MatrixClient({
 
 /* -------------------------------------------------------------------- row */
 
-function Row({ row, config, pickerOpen, onTogglePicker, onChange }: {
+function Row({ row, config, onChange }: {
     row: MatrixRow;
     config?: Config;
-    pickerOpen: boolean;
-    onTogglePicker: () => void;
     onChange: (patch: Partial<Config>) => void;
 }) {
     const qty = config?.qty ?? 12;
@@ -262,8 +306,12 @@ function Row({ row, config, pickerOpen, onTogglePicker, onChange }: {
                     {row.neckThreadSize ?? "—"}
                 </span>
 
-                {/* component cell */}
-                <div className="relative">
+                {/* COMPONENT — inline, not a popover. Jordan: "The components
+                    would just be inline. We could probably just use icons."
+                    In a dense grid a popover hides the one thing being
+                    compared across rows; icons let the whole column be read
+                    at a glance. */}
+                <div className="min-w-0">
                     {unknown ? (
                         // NOT an empty list. Nothing is recorded for this bottle, and
                         // saying "no components" would read as "takes none".
@@ -272,32 +320,7 @@ function Row({ row, config, pickerOpen, onTogglePicker, onChange }: {
                             Compatibility not mapped — bottle only
                         </span>
                     ) : (
-                        <button
-                            type="button"
-                            onClick={onTogglePicker}
-                            aria-expanded={pickerOpen}
-                            className={cn(
-                                "w-full text-left rounded-[3px] px-2.5 py-1.5 truncate transition-colors duration-200",
-                                config?.component
-                                    ? "bg-white border border-obsidian font-semibold text-obsidian"
-                                    : config?.component === null
-                                    ? "bg-white border border-champagne text-slate"
-                                    : "border border-dashed border-muted-gold text-gold-dim font-semibold",
-                            )}
-                        >
-                            {config?.component
-                                ? shortName(config.component.itemName)
-                                : config?.component === null
-                                ? "Bottle Only — no component"
-                                : "+ Choose Component"}
-                        </button>
-                    )}
-                    {pickerOpen && (
-                        <Picker
-                            row={row}
-                            onPick={(c) => { onChange({ component: c }); onTogglePicker(); }}
-                            onClose={onTogglePicker}
-                        />
+                        <ComponentChips row={row} config={config} onChange={onChange} />
                     )}
                 </div>
 
@@ -321,86 +344,115 @@ function Row({ row, config, pickerOpen, onTogglePicker, onChange }: {
     );
 }
 
-/* ----------------------------------------------------------------- picker */
+/* ------------------------------------------------------- inline component */
 
-function Picker({ row, onPick, onClose }: {
+/**
+ * The closure choice, inline.
+ *
+ * One chip per closure type this bottle actually resolves to, plus Bottle
+ * Only. Choosing a type with a single variant selects it outright; a type with
+ * several opens its variants inline beneath, so the row never covers its
+ * neighbours the way a popover does.
+ *
+ * The list is whatever the server resolved and nothing else — precedence
+ * (exclusion → inclusion → exact fitment → family inference) lives in Convex,
+ * and unknown is never compatible.
+ */
+function ComponentChips({ row, config, onChange }: {
     row: MatrixRow;
-    onPick: (c: Component | null) => void;
-    onClose: () => void;
+    config?: Config;
+    onChange: (patch: Partial<Config>) => void;
 }) {
-    // only types that actually have a compatible variant
+    const [openType, setOpenType] = useState<string | null>(null);
     const types = Object.entries(row.components).filter(([, xs]) => xs.length > 0);
-    const total = types.reduce((n, [, xs]) => n + xs.length, 0);
-    const [type, setType] = useState<string | null>(types[0]?.[0] ?? null);
-    const items = type ? row.components[type] ?? [] : [];
+
+    if (config?.component) {
+        return (
+            <button type="button"
+                onClick={() => { onChange({ component: undefined }); setOpenType(null); }}
+                className="inline-flex items-center gap-1.5 max-w-full rounded-[3px]
+                           bg-white border border-obsidian px-2 py-1 text-caption
+                           font-semibold text-obsidian transition-colors duration-200
+                           hover:border-muted-gold">
+                <ClosureIcon type={config.component.groupKey ?? ""} size={15} />
+                <span className="truncate">{shortName(config.component.itemName)}</span>
+                <Check size={12} weight="bold" className="shrink-0 text-[#5B7B5D]" />
+            </button>
+        );
+    }
+    if (config?.component === null) {
+        return (
+            <button type="button" onClick={() => onChange({ component: undefined })}
+                className="inline-flex items-center gap-1.5 rounded-[3px] bg-white
+                           border border-champagne px-2 py-1 text-caption text-slate
+                           transition-colors duration-200 hover:border-muted-gold">
+                <BottleOnlyIcon size={15} />
+                Bottle only
+                <Check size={12} weight="bold" className="text-[#5B7B5D]" />
+            </button>
+        );
+    }
+
+    if (types.length === 0) {
+        return <span className="text-caption text-ash">No compatible components</span>;
+    }
+
+    const variants = openType ? row.components[openType] ?? [] : [];
 
     return (
-        <div
-            role="listbox"
-            aria-label="Compatible components"
-            onKeyDown={(e) => { if (e.key === "Escape") onClose(); }}
-            className="absolute z-30 left-0 top-[calc(100%+6px)] w-[300px] bg-white
-                       border border-champagne rounded-[3px] shadow-[0_18px_44px_rgba(29,29,31,.16)]"
-        >
-            <div className="px-3 py-2 border-b border-champagne/60 flex items-baseline gap-2">
-                <span className="text-caption font-semibold text-obsidian">Compatible components</span>
-                <span className="text-2xs text-ash ml-auto tabular-nums">
-                    {row.neckThreadSize ?? "—"} · resolved
-                </span>
+        <div className="flex flex-col gap-1.5">
+            <div className="flex flex-wrap items-center gap-1">
+                {types.map(([t, xs]) => (
+                    <button key={t} type="button"
+                        title={`${t} · ${xs.length} compatible`}
+                        onClick={() => {
+                            // one variant needs no second step
+                            if (xs.length === 1) onChange({ component: { ...xs[0], groupKey: t } });
+                            else setOpenType(openType === t ? null : t);
+                        }}
+                        className={cn(
+                            "inline-flex items-center gap-1 rounded-[3px] px-1.5 py-1",
+                            "text-2xs font-semibold transition-colors duration-200",
+                            openType === t
+                                ? "bg-obsidian text-white"
+                                : "border border-champagne text-slate hover:border-muted-gold hover:text-obsidian",
+                        )}>
+                        <ClosureIcon type={t} size={15} />
+                        <span className="tabular-nums">{xs.length}</span>
+                    </button>
+                ))}
+                <button type="button" title="Bottle only — no component"
+                    onClick={() => onChange({ component: null })}
+                    className="inline-flex items-center gap-1 rounded-[3px] px-1.5 py-1
+                               text-2xs font-semibold border border-dashed border-champagne
+                               text-ash transition-colors duration-200
+                               hover:border-muted-gold hover:text-gold-dim">
+                    <BottleOnlyIcon size={15} />
+                </button>
             </div>
 
-            {total === 0 ? (
-                <p className="px-3 py-4 text-caption text-slate">
-                    No compatible components.
-                </p>
-            ) : (
-                <>
-                    <div className="flex flex-wrap gap-1 px-3 py-2 border-b border-champagne/60">
-                        {types.map(([t, xs]) => (
-                            <button key={t} type="button" onClick={() => setType(t)}
-                                className={cn(
-                                    "rounded-[3px] px-2 py-1 text-2xs font-semibold transition-colors duration-200",
-                                    t === type
-                                        ? "bg-obsidian text-white"
-                                        : "border border-champagne text-slate hover:border-muted-gold",
-                                )}>
-                                {t} · {xs.length}
-                            </button>
-                        ))}
-                    </div>
-                    <ul className="max-h-[220px] overflow-auto">
-                        {items.map((c) => {
-                            const out = (c.stockStatus ?? "").toLowerCase().includes("out");
-                            return (
-                                <li key={c.graceSku}>
-                                    <button type="button" disabled={out} onClick={() => onPick(c)}
-                                        className={cn(
-                                            "w-full text-left px-3 py-2 text-caption transition-colors duration-200",
-                                            out ? "opacity-50 cursor-not-allowed"
-                                                : "hover:bg-warm-white",
-                                        )}>
-                                        <span className="block text-obsidian">
-                                            {shortName(c.itemName)}
-                                        </span>
-                                        <span className="block text-2xs text-ash">
-                                            {c.graceSku}
-                                            {out && " · Currently unavailable"}
-                                        </span>
-                                    </button>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </>
+            {openType && (
+                <ul className="flex flex-wrap gap-1">
+                    {variants.map((c) => {
+                        const out = (c.stockStatus ?? "").toLowerCase().includes("out");
+                        return (
+                            <li key={c.graceSku}>
+                                <button type="button" disabled={out}
+                                    onClick={() => onChange({ component: { ...c, groupKey: openType } })}
+                                    className={cn(
+                                        "rounded-[3px] border px-1.5 py-0.5 text-2xs transition-colors duration-200",
+                                        out
+                                            ? "border-champagne/60 text-ash line-through cursor-not-allowed"
+                                            : "border-champagne text-slate hover:border-obsidian hover:text-obsidian",
+                                    )}
+                                    title={out ? "Currently unavailable" : c.graceSku}>
+                                    {finishLabel(c)}
+                                </button>
+                            </li>
+                        );
+                    })}
+                </ul>
             )}
-
-            {/* Explicit, never implied — an unset field cannot be ordered. */}
-            <button type="button" onClick={() => onPick(null)}
-                className="w-full text-left px-3 py-2 border-t border-champagne/60
-                           text-caption font-semibold text-slate hover:bg-warm-white
-                           transition-colors duration-200">
-                Bottle Only — no component
-            </button>
         </div>
     );
 }
@@ -465,6 +517,30 @@ function OrderBar({ order }: {
     );
 }
 
+/** A family-scoped filter. Shows its own count so an option that would
+ *  return nothing is visible as such before it is chosen. */
+function Filter({ label, value, onChange, options }: {
+    label: string; value: string; onChange: (v: string) => void; options: string[];
+}) {
+    if (options.length <= 1) return null;   // a filter with one choice is furniture
+    return (
+        <select
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            aria-label={label}
+            className={cn(
+                "rounded-[3px] px-2.5 py-1.5 text-spec transition-colors duration-200",
+                value
+                    ? "bg-white border border-obsidian font-semibold text-obsidian"
+                    : "bg-warm-white border border-champagne text-slate",
+            )}
+        >
+            <option value="">{label}</option>
+            {options.map((o) => <option key={o} value={o}>{o}</option>)}
+        </select>
+    );
+}
+
 /** The row's photograph. A buying grid is scanned by eye before it is read,
  *  so the image well is reserved even when a product has no photo yet —
  *  otherwise rows jump horizontally as images load or fail. */
@@ -489,9 +565,22 @@ function BottleThumb({ row }: { row: MatrixRow }) {
  *  aluminum 250 ml bottle with black sprayer. For use with cologne...").
  *  A picker row needs a NAME, so take the first clause and let the SKU carry
  *  the precision underneath it. */
-function shortName(itemName: string) {
-    const first = itemName.split(/[.·—]|\bFor use\b/i)[0].trim();
-    return first.length > 46 ? `${first.slice(0, 45).trimEnd()}…` : first || itemName;
+function shortName(itemName: string, max = 46) {
+    const first = itemName.split(/[.,·—]|\bFor use\b/i)[0].trim();
+    return first.length > max ? `${first.slice(0, max - 1).trimEnd()}…` : first || itemName;
+}
+
+/** A variant chip is the SECOND step — the type is already chosen, so the
+ *  chip only has to say which finish. capColor when the catalog has it,
+ *  otherwise the distinguishing words before the boilerplate ("Brown Faux
+ *  Leather caps for glass bottles, Threaded…" is a finish plus a paragraph). */
+function finishLabel(c: { capColor: string | null; itemName: string }) {
+    if (c.capColor) return c.capColor;
+    const head = c.itemName.split(/[.,·—]/)[0]
+        .replace(/\s+(caps?|closures?|sprayers?|pumps?|droppers?)\s+for\b.*$/i, "")
+        .replace(/\s+for\s+glass\b.*$/i, "")
+        .trim();
+    return shortName(head || c.itemName, 24);
 }
 
 function key(r: MatrixRow) {
