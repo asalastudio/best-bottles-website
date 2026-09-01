@@ -49,6 +49,7 @@ export {
     Star,
     Truck,
     Package,
+    Cube,
     SlidersHorizontal,
     ArrowsDownUp,
     Rows,
