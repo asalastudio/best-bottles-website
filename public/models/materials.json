@@ -18,7 +18,8 @@
       "envMapIntensity": 1.3,
       "env": "metal",
       "specularColor": "#faf1f1",
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: library F0 #f7cfbf read 'too much like a rose or light brown - needs to be more copper-colored'. Tint pulled toward the PSD truth (CpRoll17-415Cu.psd bright band #c0856c, mid #93533c): a satin penny-copper. ACES note: colored metals run lower envMapIntensity than silver."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: library F0 #f7cfbf read 'too much like a rose or light brown - needs to be more copper-colored'. Tint pulled toward the PSD truth (CpRoll17-415Cu.psd bright band #c0856c, mid #93533c): a satin penny-copper. ACES note: colored metals run lower envMapIntensity than silver.",
+      "anchor": "metal.copper"
     },
     "CAP_MATTE_GOLD": {
       "color": "#ffe496",
@@ -36,7 +37,8 @@
       "envMapIntensity": 1.15,
       "env": "metal",
       "specularColor": "#f8fffd",
-      "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve. maps=matte pulls the library matte normal/roughness textures."
+      "note": "APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve. maps=matte pulls the library matte normal/roughness textures.",
+      "anchor": "metal.gold"
     },
     "CAP_MATTE_SILVER": {
       "color": "#f5f6f6",
@@ -54,7 +56,8 @@
       "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#e8eff5",
-      "note": "APPROVED by Jordan 2026-08-31 ('Matte silver is perfect. Lock it down'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). maps=matte pulls the library matte normal/roughness textures."
+      "note": "APPROVED by Jordan 2026-08-31 ('Matte silver is perfect. Lock it down'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). maps=matte pulls the library matte normal/roughness textures.",
+      "anchor": "metal.silver"
     },
     "CAP_SHINY_BLACK": {
       "color": "#070707",
@@ -88,7 +91,8 @@
       "envMapIntensity": 1.62,
       "env": "metal",
       "specularColor": "#f8fffd",
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. APPROVED by Jordan 2026-08-31 under the RoomEnvironment metal studio ('lock in gold. Matte gold is perfect'). Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out). ACES desaturates clipped highlights - coloured metals run LOWER envMapIntensity than silver so their hue survives the tone curve.",
+      "anchor": "metal.gold"
     },
     "CAP_SHINY_SILVER": {
       "color": "#fefdfc",
@@ -106,7 +110,8 @@
       "envMapIntensity": 2.4,
       "env": "metal",
       "specularColor": "#fdfefe",
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out)."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the reflection seems a little bit distorted' -> roughness 0.05 -> 0.09: a whisper of polish-softening melts the cylinder's anamorphic warp of the studio shapes into clean sheens. Jordan 2026-08-31: '+20% more reflective' -> envMapIntensity x1.2. Anchored 2026-08-31 to physicallybased-library metal F0. Library color arrays are ALREADY sRGB fractions (they match Filament's published sRGB F0) - map *255 directly, never re-encode (double-encoding washed the golds out).",
+      "anchor": "metal.silver"
     },
     "CAP_WHITE": {
       "color": "#f4f3f0",
@@ -291,7 +296,8 @@
       "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). metal.steel from the absorbed library (physicallybased.info, CC0): #e0dfdd - genuinely DARKER than silver, which is what gives a roller ball its dark flanks. Reflects the peak-capped universal studio: the uncapped version peaked at 3335x and any mirror blew to pure white (the 'transparent dome').",
       "envMapIntensity": 1.0,
       "env": "metal",
-      "maps": null
+      "maps": null,
+      "anchor": "metal.stainless"
     },
     "PART_HOUSING_PP": {
       "color": "#e8e6dd",
@@ -347,7 +353,8 @@
       "clearcoat": 0.5,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). "
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). ",
+      "anchor": "metal.steel"
     },
     "STUDIO_BONE": {
       "color": "#b29878",
@@ -489,7 +496,8 @@
       "envMapIntensity": 1.5,
       "env": "metal",
       "specularColor": "#fdfefe",
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the silver dot is a matte silver' - identical finish to APPROVED CAP_MATTE_SILVER. Studs are PART_STUD_CHROME, FLUSH-set."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Jordan 2026-08-31: 'the silver dot is a matte silver' - identical finish to APPROVED CAP_MATTE_SILVER. Studs are PART_STUD_CHROME, FLUSH-set.",
+      "anchor": "metal.silver"
     },
     "PART_STUD_CHROME": {
       "color": "#d3d8da",
@@ -507,7 +515,8 @@
       "envMapIntensity": 2.0,
       "env": "metal",
       "specularColor": "#b0bacc",
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Chrome set-studs on the *Dot caps (library coats.chrome). The studs read silver on ALL dot colourways - shell takes the colour, studs stay chrome (CpRoll17-415*Dot.psd)."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Chrome set-studs on the *Dot caps (library coats.chrome). The studs read silver on ALL dot colourways - shell takes the colour, studs stay chrome (CpRoll17-415*Dot.psd).",
+      "anchor": "coats.chrome"
     },
     "PART_STUD_CHROME_BRIGHT": {
       "color": "#d3d8da",
@@ -525,7 +534,8 @@
       "envMapIntensity": 2.9,
       "env": "metal",
       "specularColor": "#b0bacc",
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Brighter stud variant for the SILVER dot cap only (Jordan 2026-08-31: 'make sure the rhinestones show up a little bit better on the matte silver dot'). Chrome-on-matte-silver is tone-on-tone; the extra env intensity + harder polish gives the stones their own sparkle contrast. Black/pink dots keep PART_STUD_CHROME."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). Brighter stud variant for the SILVER dot cap only (Jordan 2026-08-31: 'make sure the rhinestones show up a little bit better on the matte silver dot'). Chrome-on-matte-silver is tone-on-tone; the extra env intensity + harder polish gives the stones their own sparkle contrast. Black/pink dots keep PART_STUD_CHROME.",
+      "anchor": "coats.chrome"
     },
     "LEATHER_BLACK": {
       "color": "#303030",

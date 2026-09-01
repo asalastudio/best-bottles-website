@@ -145,6 +145,57 @@ def main():
                            for kk in set(v) | set(cur or {})
                            if v.get(kk) != (cur or {}).get(kk)]
                 drift.append(f"{section}.{k}: " + "; ".join(changed))
+    # ---- LIBRARY ANCHORS -------------------------------------------------
+    # Until now exactly ONE material was checked against measured physics:
+    # clear glass, below. Everything else was "anchored" only in the sense
+    # that a person once read the library and typed a similar-looking number
+    # into a note. A note is not a check. Any material carrying an `anchor`
+    # names the library entry it CLAIMS to be, and that claim is now tested.
+    #
+    # COLOUR ONLY, deliberately. For a metalness-1 surface the base colour IS
+    # the reflectance at normal incidence, which is a physical constant of the
+    # metal -- gold is that colour or it is not gold, and no art direction gets
+    # a vote. ROUGHNESS is not checked, because the library does not measure
+    # it: every entry is either 0.0 (polished) or 1.0 (brushed/matte), a
+    # CATEGORY rather than a value. Anchoring roughness would fail
+    # CAP_MATTE_GOLD at 0.38 against metal.gold_matte at 1.0 while 0.38 is the
+    # correct value for an anodised cap -- a check that cries wolf gets
+    # switched off, and then nothing is checked at all.
+    lib_all = json.loads((ROOT / "data/materials/physicallybased-library.json").read_text())
+    mats_now = json.loads((ROOT / "public/models/materials.json").read_text())["materials"]
+
+    def _lab(hex_or_lin):
+        if isinstance(hex_or_lin, str):
+            h = hex_or_lin.lstrip("#")
+            c = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+            c = [((v + 0.055) / 1.055) ** 2.4 if v > 0.04045 else v / 12.92 for v in c]
+        else:
+            c = list(hex_or_lin)[:3]
+        X = 0.4124 * c[0] + 0.3576 * c[1] + 0.1805 * c[2]
+        Y = 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+        Z = 0.0193 * c[0] + 0.1192 * c[1] + 0.9505 * c[2]
+        X /= 0.95047; Z /= 1.08883
+        f = lambda t: t ** (1 / 3) if t > 0.008856 else 7.787 * t + 16 / 116
+        return (116 * f(Y) - 16, 500 * (f(X) - f(Y)), 200 * (f(Y) - f(Z)))
+
+    TOL = 6.0          # CIE76; ~the threshold where a difference reads by eye
+    for name, spec in sorted(mats_now.items()):
+        if not isinstance(spec, dict):
+            continue
+        a = spec.get("anchor")
+        if not a:
+            continue
+        if a not in lib_all:
+            drift.append(f"ANCHOR {name}: names '{a}', which is not in the library")
+            continue
+        ours, theirs = _lab(spec["color"]), _lab(lib_all[a]["values"]["color"])
+        dE = sum((x - y) ** 2 for x, y in zip(ours, theirs)) ** 0.5
+        if dE > TOL:
+            drift.append(
+                f"ANCHOR {name}: colour {spec['color']} is dE {dE:.1f} from "
+                f"measured {a} (tolerance {TOL}) — it claims to be that metal "
+                f"and is not")
+
     # library-anchor check: clear must remain THE canonical measured glass
     lib = json.loads((ROOT / "data/materials/physicallybased-library.json").read_text())
     g = lib["glass.glass"]["values"]
