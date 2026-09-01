@@ -1,496 +1,1213 @@
 {
   "generatedBy": "index-parts.mjs",
-  "count": 70,
+  "count": 71,
   "parts": [
     {
       "id": "BB_ANSP_BULB_18415",
       "kind": "closure",
       "url": "/models/closures/BB_ANSP_BULB_18415.glb",
       "neck": null,
-      "kb": 6365
+      "kb": 6365,
+      "center": [
+        -0.017032,
+        0.02,
+        -0.001135
+      ],
+      "size": [
+        0.052,
+        0.036179,
+        0.027031
+      ]
     },
     {
       "id": "BB_ANSP_COLLAR_18415",
       "kind": "closure",
       "url": "/models/closures/BB_ANSP_COLLAR_18415.glb",
       "neck": null,
-      "kb": 40
+      "kb": 40,
+      "center": [
+        0,
+        -0.002975,
+        0
+      ],
+      "size": [
+        0.0213,
+        0.02475,
+        0.0213
+      ]
     },
     {
       "id": "BB_ANSP_FERRULE_18415",
       "kind": "closure",
       "url": "/models/closures/BB_ANSP_FERRULE_18415.glb",
       "neck": null,
-      "kb": 3
+      "kb": 3,
+      "center": [
+        -0.011,
+        0.0265,
+        0
+      ],
+      "size": [
+        0.013,
+        0.012,
+        0.012
+      ]
     },
     {
       "id": "BB_ANSP_TASSEL_18415",
       "kind": "closure",
       "url": "/models/closures/BB_ANSP_TASSEL_18415.glb",
       "neck": null,
-      "kb": 13
+      "kb": 13,
+      "center": [
+        -0.057,
+        0.01425,
+        0
+      ],
+      "size": [
+        0.0092,
+        0.0455,
+        0.0092
+      ]
     },
     {
       "id": "BB_CAP_13415",
       "kind": "closure",
       "url": "/models/closures/BB_CAP_13415.glb",
       "neck": null,
-      "kb": 787
+      "kb": 787,
+      "center": [
+        0,
+        0.00106,
+        0
+      ],
+      "size": [
+        0.017,
+        0.024,
+        0.017
+      ]
     },
     {
       "id": "BB_CAP_17415",
       "kind": "closure",
       "url": "/models/closures/BB_CAP_17415.glb",
       "neck": null,
-      "kb": 889
+      "kb": 889,
+      "center": [
+        0,
+        -0.0012,
+        0
+      ],
+      "size": [
+        0.019,
+        0.027,
+        0.019
+      ]
     },
     {
       "id": "BB_CAP_18415",
       "kind": "closure",
       "url": "/models/closures/BB_CAP_18415.glb",
       "neck": null,
-      "kb": 619
+      "kb": 619,
+      "center": [
+        0,
+        -0.00724,
+        0
+      ],
+      "size": [
+        0.021,
+        0.019,
+        0.021
+      ]
     },
     {
       "id": "BB_CAP_18415_LEATHER",
       "kind": "closure",
       "url": "/models/closures/BB_CAP_18415_LEATHER.glb",
       "neck": null,
-      "kb": 40
+      "kb": 40,
+      "center": [
+        0,
+        -0.001925,
+        0
+      ],
+      "size": [
+        0.0245,
+        0.02965,
+        0.0245
+      ]
     },
     {
       "id": "BB_CAP_18415_TALL",
       "kind": "closure",
       "url": "/models/closures/BB_CAP_18415_TALL.glb",
       "neck": null,
-      "kb": 882
+      "kb": 882,
+      "center": [
+        0,
+        -0.00334,
+        0
+      ],
+      "size": [
+        0.021,
+        0.0268,
+        0.021
+      ]
     },
     {
       "id": "BB_CAP_DOTS_17415",
       "kind": "closure",
       "url": "/models/closures/BB_CAP_DOTS_17415.glb",
       "neck": null,
-      "kb": 60
+      "kb": 79,
+      "center": [
+        0,
+        -0.00203,
+        0
+      ],
+      "size": [
+        0.018954,
+        0.0185,
+        0.018954
+      ]
     },
     {
       "id": "BB_DIP_TUBE_17415",
       "kind": "closure",
       "url": "/models/closures/BB_DIP_TUBE_17415.glb",
       "neck": null,
-      "kb": 49
+      "kb": 49,
+      "center": [
+        0.003339,
+        -0.03015,
+        0
+      ],
+      "size": [
+        0.010046,
+        0.062348,
+        0.0028
+      ]
     },
     {
       "id": "BB_DIP_TUBE_18415",
       "kind": "closure",
       "url": "/models/closures/BB_DIP_TUBE_18415.glb",
       "neck": null,
-      "kb": 49
+      "kb": 49,
+      "center": [
+        0.003349,
+        -0.039117,
+        0
+      ],
+      "size": [
+        0.010057,
+        0.08027,
+        0.0028
+      ]
     },
     {
       "id": "BB_DRP_BULB_18415",
       "kind": "closure",
       "url": "/models/closures/BB_DRP_BULB_18415.glb",
       "neck": null,
-      "kb": 34
+      "kb": 34,
+      "center": [
+        0,
+        0.01115,
+        0
+      ],
+      "size": [
+        0.0098,
+        0.0183,
+        0.0098
+      ]
     },
     {
       "id": "BB_DRP_COLLAR_18415",
       "kind": "closure",
       "url": "/models/closures/BB_DRP_COLLAR_18415.glb",
       "neck": null,
-      "kb": 23
+      "kb": 23,
+      "center": [
+        0,
+        -0.006625,
+        0
+      ],
+      "size": [
+        0.0213,
+        0.01745,
+        0.0213
+      ]
     },
     {
       "id": "BB_DRP_PIPETTE_18415",
       "kind": "closure",
       "url": "/models/closures/BB_DRP_PIPETTE_18415.glb",
       "neck": null,
-      "kb": 48
+      "kb": 48,
+      "center": [
+        0,
+        -0.026075,
+        0
+      ],
+      "size": [
+        0.0067,
+        0.05415,
+        0.0067
+      ]
     },
     {
       "id": "BB_PMP_BODY_17415",
       "kind": "closure",
       "url": "/models/closures/BB_PMP_BODY_17415.glb",
       "neck": null,
-      "kb": 27
+      "kb": 27,
+      "center": [
+        0,
+        -0.008,
+        0
+      ],
+      "size": [
+        0.0095,
+        0.016,
+        0.0095
+      ]
     },
     {
       "id": "BB_PMP_BODY_18415",
       "kind": "closure",
       "url": "/models/closures/BB_PMP_BODY_18415.glb",
       "neck": null,
-      "kb": 27
+      "kb": 27,
+      "center": [
+        0,
+        -0.008,
+        0
+      ],
+      "size": [
+        0.01,
+        0.016,
+        0.01
+      ]
     },
     {
       "id": "BB_PMP_SPOUT_17415",
       "kind": "closure",
       "url": "/models/closures/BB_PMP_SPOUT_17415.glb",
       "neck": null,
-      "kb": 6
+      "kb": 6,
+      "center": [
+        0,
+        0.019,
+        0.00575
+      ],
+      "size": [
+        0.0046,
+        0.0046,
+        0.00145
+      ]
     },
     {
       "id": "BB_PMP_SPOUT_18415",
       "kind": "closure",
       "url": "/models/closures/BB_PMP_SPOUT_18415.glb",
       "neck": null,
-      "kb": 6
+      "kb": 6,
+      "center": [
+        0,
+        0.02,
+        0.0061
+      ],
+      "size": [
+        0.0048,
+        0.0048,
+        0.0023
+      ]
     },
     {
       "id": "BB_REDUCER_18415",
       "kind": "closure",
       "url": "/models/closures/BB_REDUCER_18415.glb",
       "neck": null,
-      "kb": 136
+      "kb": 136,
+      "center": [
+        0,
+        -0.004235,
+        0
+      ],
+      "size": [
+        0.01163,
+        0.01295,
+        0.01163
+      ]
     },
     {
       "id": "BB_ROLL_BALL_17415_PLASTIC",
       "kind": "closure",
       "url": "/models/closures/BB_ROLL_BALL_17415_PLASTIC.glb",
       "neck": null,
-      "kb": 71
+      "kb": 71,
+      "center": [
+        0,
+        0.0056,
+        0
+      ],
+      "size": [
+        0.0095,
+        0.0095,
+        0.0095
+      ]
     },
     {
       "id": "BB_ROLL_BALL_17415_STEEL",
       "kind": "closure",
       "url": "/models/closures/BB_ROLL_BALL_17415_STEEL.glb",
       "neck": null,
-      "kb": 71
+      "kb": 71,
+      "center": [
+        0,
+        0.0052,
+        0
+      ],
+      "size": [
+        0.0095,
+        0.0095,
+        0.0095
+      ]
     },
     {
       "id": "BB_ROLL_HOUSING_17415_PLASTIC",
       "kind": "closure",
       "url": "/models/closures/BB_ROLL_HOUSING_17415_PLASTIC.glb",
       "neck": null,
-      "kb": 62
+      "kb": 62,
+      "center": [
+        0,
+        0.0007,
+        0
+      ],
+      "size": [
+        0.0129,
+        0.0134,
+        0.0129
+      ]
     },
     {
       "id": "BB_ROLL_HOUSING_17415_STEEL",
       "kind": "closure",
       "url": "/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb",
       "neck": null,
-      "kb": 62
+      "kb": 62,
+      "center": [
+        0,
+        0.0006,
+        0
+      ],
+      "size": [
+        0.01335,
+        0.0132,
+        0.01335
+      ]
     },
     {
       "id": "BB_SPR_ACTUATOR_17415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_ACTUATOR_17415.glb",
       "neck": null,
-      "kb": 89
+      "kb": 89,
+      "center": [
+        0,
+        0.01,
+        0
+      ],
+      "size": [
+        0.0155,
+        0.024,
+        0.0155
+      ]
     },
     {
       "id": "BB_SPR_ACTUATOR_18415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_ACTUATOR_18415.glb",
       "neck": null,
-      "kb": 89
+      "kb": 89,
+      "center": [
+        0,
+        0.01085,
+        0
+      ],
+      "size": [
+        0.0145,
+        0.0257,
+        0.0145
+      ]
     },
     {
       "id": "BB_SPR_COLLAR_17415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_COLLAR_17415.glb",
       "neck": null,
-      "kb": 548
+      "kb": 548,
+      "center": [
+        0,
+        -0.00515,
+        0
+      ],
+      "size": [
+        0.0195,
+        0.0163,
+        0.0195
+      ]
     },
     {
       "id": "BB_SPR_COLLAR_18415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_COLLAR_18415.glb",
       "neck": null,
-      "kb": 619
+      "kb": 619,
+      "center": [
+        0,
+        -0.002675,
+        0
+      ],
+      "size": [
+        0.0213,
+        0.02535,
+        0.0213
+      ]
     },
     {
       "id": "BB_SPR_INSERT_17415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_INSERT_17415.glb",
       "neck": null,
-      "kb": 6
+      "kb": 6,
+      "center": [
+        0,
+        0.019,
+        0.0059
+      ],
+      "size": [
+        0.0036,
+        0.0036,
+        0.0017
+      ]
     },
     {
       "id": "BB_SPR_NOZZLE_18415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_NOZZLE_18415.glb",
       "neck": null,
-      "kb": 5
+      "kb": 5,
+      "center": [
+        0,
+        0.0213,
+        0.0069
+      ],
+      "size": [
+        0.0026,
+        0.0026,
+        0.0012
+      ]
     },
     {
       "id": "BB_SPR_OVERCAP_17415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_OVERCAP_17415.glb",
       "neck": null,
-      "kb": 45
+      "kb": 45,
+      "center": [
+        0,
+        0.013925,
+        0
+      ],
+      "size": [
+        0.01694,
+        0.02185,
+        0.01694
+      ]
     },
     {
       "id": "BB_SPR_OVERCAP_18415",
       "kind": "closure",
       "url": "/models/closures/BB_SPR_OVERCAP_18415.glb",
       "neck": null,
-      "kb": 45
+      "kb": 45,
+      "center": [
+        0,
+        0.0176,
+        0
+      ],
+      "size": [
+        0.0186,
+        0.0152,
+        0.0186
+      ]
+    },
+    {
+      "id": "CAP_PNKDOT",
+      "kind": "closure",
+      "url": "/models/closures/CAP_PNKDOT.glb",
+      "neck": null,
+      "kb": 173,
+      "center": [
+        0,
+        0.013613,
+        0.000019
+      ],
+      "size": [
+        0.019,
+        0.027227,
+        0.019038
+      ]
     },
     {
       "id": "Cr-boxy-15-415-74x60x20",
       "kind": "body",
       "url": "/models/bodies-threaded/Cr-boxy-15-415-74x60x20.glb",
       "neck": "15-415",
-      "kb": 3984
+      "kb": 3984,
+      "center": [
+        0,
+        0.037,
+        0
+      ],
+      "size": [
+        0.06,
+        0.074,
+        0.02
+      ]
     },
     {
       "id": "Cr-boxy-18-415-105x89x29",
       "kind": "body",
       "url": "/models/bodies-threaded/Cr-boxy-18-415-105x89x29.glb",
       "neck": "18-415",
-      "kb": 4136
+      "kb": 4136,
+      "center": [
+        0,
+        0.0525,
+        0
+      ],
+      "size": [
+        0.089,
+        0.105,
+        0.029
+      ]
     },
     {
       "id": "Cr-boxy-18-415-87x72x23",
       "kind": "body",
       "url": "/models/bodies-threaded/Cr-boxy-18-415-87x72x23.glb",
       "neck": "18-415",
-      "kb": 4114
+      "kb": 4114,
+      "center": [
+        0,
+        0.0435,
+        0
+      ],
+      "size": [
+        0.072,
+        0.087,
+        0.023
+      ]
     },
     {
       "id": "Cr-round-13-415-60x50x17",
       "kind": "body",
       "url": "/models/bodies-threaded/Cr-round-13-415-60x50x17.glb",
       "neck": "13-415",
-      "kb": 2179
+      "kb": 2179,
+      "center": [
+        0,
+        0.03,
+        0
+      ],
+      "size": [
+        0.05,
+        0.06,
+        0.05
+      ]
     },
     {
       "id": "Cr-round-18-415-87x72x23",
       "kind": "body",
       "url": "/models/bodies-threaded/Cr-round-18-415-87x72x23.glb",
       "neck": "18-415",
-      "kb": 4114
+      "kb": 4114,
+      "center": [
+        0,
+        0.0435,
+        0
+      ],
+      "size": [
+        0.072,
+        0.087,
+        0.072
+      ]
     },
     {
       "id": "Cyl-round-13-415-53x17",
       "kind": "body",
       "url": "/models/bodies-threaded/Cyl-round-13-415-53x17.glb",
       "neck": "13-415",
-      "kb": 2167
+      "kb": 2167,
+      "center": [
+        0,
+        0.0265,
+        0
+      ],
+      "size": [
+        0.017,
+        0.053,
+        0.017
+      ]
     },
     {
       "id": "Cyl-round-17-415-70x20",
       "kind": "body",
       "url": "/models/bodies-threaded/Cyl-round-17-415-70x20.glb",
       "neck": "17-415",
-      "kb": 3861
+      "kb": 3861,
+      "center": [
+        0,
+        0.0346,
+        0
+      ],
+      "size": [
+        0.019982,
+        0.0692,
+        0.019982
+      ]
     },
     {
       "id": "Cyl-round-17-415-74x20",
       "kind": "body",
       "url": "/models/bodies-threaded/Cyl-round-17-415-74x20.glb",
       "neck": "17-415",
-      "kb": 3841
+      "kb": 3841,
+      "center": [
+        0,
+        0.037,
+        0
+      ],
+      "size": [
+        0.02,
+        0.074,
+        0.02
+      ]
     },
     {
       "id": "Cyl-round-18-415-117x32",
       "kind": "body",
       "url": "/models/bodies-threaded/Cyl-round-18-415-117x32.glb",
       "neck": "18-415",
-      "kb": 4168
+      "kb": 4168,
+      "center": [
+        0,
+        0.0585,
+        0
+      ],
+      "size": [
+        0.032,
+        0.117,
+        0.032
+      ]
     },
     {
       "id": "Cyl-round-18-415-154x35",
       "kind": "body",
       "url": "/models/bodies-threaded/Cyl-round-18-415-154x35.glb",
       "neck": "18-415",
-      "kb": 4186
+      "kb": 4186,
+      "center": [
+        0,
+        0.077,
+        0
+      ],
+      "size": [
+        0.035,
+        0.154,
+        0.035
+      ]
     },
     {
       "id": "CylSwrl-round-17-415-74x21",
       "kind": "body",
       "url": "/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb",
       "neck": "17-415",
-      "kb": 4695
+      "kb": 4695,
+      "center": [
+        0,
+        0.037,
+        0
+      ],
+      "size": [
+        0.020994,
+        0.074,
+        0.020918
+      ]
     },
     {
       "id": "Elg-boxy-13-415-61x36x18",
       "kind": "body",
       "url": "/models/bodies-threaded/Elg-boxy-13-415-61x36x18.glb",
       "neck": "13-415",
-      "kb": 2180
+      "kb": 2180,
+      "center": [
+        0,
+        0.0305,
+        0
+      ],
+      "size": [
+        0.036,
+        0.061,
+        0.018
+      ]
     },
     {
       "id": "Elg-boxy-15-415-75x44x22",
       "kind": "body",
       "url": "/models/bodies-threaded/Elg-boxy-15-415-75x44x22.glb",
       "neck": "15-415",
-      "kb": 3995
+      "kb": 3995,
+      "center": [
+        0,
+        0.0375,
+        0
+      ],
+      "size": [
+        0.044,
+        0.075,
+        0.022
+      ]
     },
     {
       "id": "Elg-boxy-18-415-109x61x30",
       "kind": "body",
       "url": "/models/bodies-threaded/Elg-boxy-18-415-109x61x30.glb",
       "neck": "18-415",
-      "kb": 4136
+      "kb": 4136,
+      "center": [
+        0,
+        0.0545,
+        0
+      ],
+      "size": [
+        0.061,
+        0.109,
+        0.03
+      ]
     },
     {
       "id": "Elg-boxy-18-415-86x54x27",
       "kind": "body",
       "url": "/models/bodies-threaded/Elg-boxy-18-415-86x54x27.glb",
       "neck": "18-415",
-      "kb": 4119
+      "kb": 4119,
+      "center": [
+        0,
+        0.043,
+        0
+      ],
+      "size": [
+        0.054,
+        0.086,
+        0.027
+      ]
     },
     {
       "id": "Flair-boxy-13-415-56x41x20",
       "kind": "body",
       "url": "/models/bodies-threaded/Flair-boxy-13-415-56x41x20.glb",
       "neck": "13-415",
-      "kb": 2173
+      "kb": 2173,
+      "center": [
+        0,
+        0.028,
+        0
+      ],
+      "size": [
+        0.041,
+        0.056,
+        0.02
+      ]
     },
     {
       "id": "Grce-boxy-18-415-113x52x30",
       "kind": "body",
       "url": "/models/bodies-threaded/Grce-boxy-18-415-113x52x30.glb",
       "neck": "18-415",
-      "kb": 4141
+      "kb": 4141,
+      "center": [
+        0,
+        0.0565,
+        0
+      ],
+      "size": [
+        0.052,
+        0.113,
+        0.03
+      ]
     },
     {
       "id": "Rect-boxy-13-415-50x29x19",
       "kind": "body",
       "url": "/models/bodies-threaded/Rect-boxy-13-415-50x29x19.glb",
       "neck": "13-415",
-      "kb": 2163
+      "kb": 2163,
+      "center": [
+        0,
+        0.025,
+        0
+      ],
+      "size": [
+        0.029,
+        0.05,
+        0.019
+      ]
     },
     {
       "id": "Rnd-round-18-415-73x59",
       "kind": "body",
       "url": "/models/bodies-threaded/Rnd-round-18-415-73x59.glb",
       "neck": "18-415",
-      "kb": 4091
+      "kb": 4091,
+      "center": [
+        0,
+        0.0365,
+        0
+      ],
+      "size": [
+        0.059,
+        0.073,
+        0.059
+      ]
     },
     {
       "id": "Rnd-round-18-415-83x69",
       "kind": "body",
       "url": "/models/bodies-threaded/Rnd-round-18-415-83x69.glb",
       "neck": "18-415",
-      "kb": 4109
+      "kb": 4109,
+      "center": [
+        0,
+        0.0415,
+        0
+      ],
+      "size": [
+        0.069,
+        0.083,
+        0.069
+      ]
     },
     {
       "id": "Royal-boxy-13-415-56x40x21",
       "kind": "body",
       "url": "/models/bodies-threaded/Royal-boxy-13-415-56x40x21.glb",
       "neck": "13-415",
-      "kb": 2173
+      "kb": 2173,
+      "center": [
+        0,
+        0.028,
+        0
+      ],
+      "size": [
+        0.04,
+        0.056,
+        0.021
+      ]
     },
     {
       "id": "Sleek-boxy-13-415-66x17x17",
       "kind": "body",
       "url": "/models/bodies-threaded/Sleek-boxy-13-415-66x17x17.glb",
       "neck": "13-415",
-      "kb": 2183
+      "kb": 2183,
+      "center": [
+        0,
+        0.033,
+        0
+      ],
+      "size": [
+        0.017,
+        0.066,
+        0.017
+      ]
     },
     {
       "id": "Slm-boxy-18-415-121x31x31",
       "kind": "body",
       "url": "/models/bodies-threaded/Slm-boxy-18-415-121x31x31.glb",
       "neck": "18-415",
-      "kb": 4145
+      "kb": 4145,
+      "center": [
+        0,
+        0.0605,
+        0
+      ],
+      "size": [
+        0.031,
+        0.121,
+        0.031
+      ]
     },
     {
       "id": "Slm-boxy-18-415-87x30x30",
       "kind": "body",
       "url": "/models/bodies-threaded/Slm-boxy-18-415-87x30x30.glb",
       "neck": "18-415",
-      "kb": 4114
+      "kb": 4114,
+      "center": [
+        0,
+        0.0435,
+        0
+      ],
+      "size": [
+        0.03,
+        0.087,
+        0.03
+      ]
     },
     {
       "id": "Sqr-boxy-13-415-52x26x26",
       "kind": "body",
       "url": "/models/bodies-threaded/Sqr-boxy-13-415-52x26x26.glb",
       "neck": "13-415",
-      "kb": 2167
+      "kb": 2167,
+      "center": [
+        0,
+        0.026,
+        0
+      ],
+      "size": [
+        0.026,
+        0.052,
+        0.026
+      ]
     },
     {
       "id": "TallCyl-round-13-415-106x18",
       "kind": "body",
       "url": "/models/bodies-threaded/TallCyl-round-13-415-106x18.glb",
       "neck": "13-415",
-      "kb": 2219
+      "kb": 2219,
+      "center": [
+        0,
+        0.053,
+        0
+      ],
+      "size": [
+        0.018,
+        0.106,
+        0.018
+      ]
     },
     {
       "id": "TallRect-boxy-13-415-101x17x17",
       "kind": "body",
       "url": "/models/bodies-threaded/TallRect-boxy-13-415-101x17x17.glb",
       "neck": "13-415",
-      "kb": 2213
+      "kb": 2213,
+      "center": [
+        0,
+        0.0505,
+        0
+      ],
+      "size": [
+        0.017,
+        0.101,
+        0.017
+      ]
     },
     {
       "id": "Tulip-round-13-415-45x23",
       "kind": "body",
       "url": "/models/bodies-threaded/Tulip-round-13-415-45x23.glb",
       "neck": "13-415",
-      "kb": 2153
+      "kb": 2153,
+      "center": [
+        0,
+        0.0225,
+        0
+      ],
+      "size": [
+        0.023,
+        0.045,
+        0.023
+      ]
     },
     {
       "id": "Circle-disc-18-415-111x94",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
       "neck": "18-415",
-      "kb": 6987
+      "kb": 6987,
+      "center": [
+        0,
+        0.0555,
+        0
+      ],
+      "size": [
+        0.0937,
+        0.111,
+        0.0284
+      ]
     },
     {
       "id": "Circle-disc-18-415-88x73",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Circle-disc-18-415-88x73.glb",
       "neck": "18-415",
-      "kb": 6459
+      "kb": 6459,
+      "center": [
+        0,
+        0.04385,
+        0
+      ],
+      "size": [
+        0.072498,
+        0.0877,
+        0.0235
+      ]
     },
     {
       "id": "Cyl-round-17-415-70x20",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Cyl-round-17-415-70x20.glb",
       "neck": "17-415",
-      "kb": 4784
+      "kb": 4784,
+      "center": [
+        0,
+        0.0346,
+        0
+      ],
+      "size": [
+        0.019982,
+        0.0692,
+        0.019982
+      ]
     },
     {
       "id": "Cyl-round-18-415-117x32",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Cyl-round-18-415-117x32.glb",
       "neck": "18-415",
-      "kb": 4910
+      "kb": 4910,
+      "center": [
+        0,
+        0.0585,
+        0
+      ],
+      "size": [
+        0.032,
+        0.117,
+        0.032
+      ]
     },
     {
       "id": "Cyl-round-18-415-154x35",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Cyl-round-18-415-154x35.glb",
       "neck": "18-415",
-      "kb": 4920
+      "kb": 4920,
+      "center": [
+        0,
+        0.077,
+        0
+      ],
+      "size": [
+        0.035,
+        0.154,
+        0.035
+      ]
     },
     {
       "id": "CylSwrl-round-17-415-74x21",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/CylSwrl-round-17-415-74x21.glb",
       "neck": "17-415",
-      "kb": 5910
+      "kb": 5910,
+      "center": [
+        0,
+        0.037,
+        0
+      ],
+      "size": [
+        0.020994,
+        0.074,
+        0.020918
+      ]
     },
     {
       "id": "Elegant-oval-18-415-109x61",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Elegant-oval-18-415-109x61.glb",
       "neck": "18-415",
-      "kb": 4936
+      "kb": 4936,
+      "center": [
+        0,
+        0.0545,
+        0
+      ],
+      "size": [
+        0.061,
+        0.109,
+        0.03
+      ]
     },
     {
       "id": "Elegant-oval-18-415-87x55",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Elegant-oval-18-415-87x55.glb",
       "neck": "18-415",
-      "kb": 4919
+      "kb": 4919,
+      "center": [
+        0,
+        0.04335,
+        0
+      ],
+      "size": [
+        0.0545,
+        0.0867,
+        0.0275
+      ]
     },
     {
       "id": "Round-sphere-18-415-73x59",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Round-sphere-18-415-73x59.glb",
       "neck": "18-415",
-      "kb": 6083
+      "kb": 6083,
+      "center": [
+        0,
+        0.0367,
+        0
+      ],
+      "size": [
+        0.058991,
+        0.0726,
+        0.058991
+      ]
     },
     {
       "id": "Round-sphere-18-415-83x69",
       "kind": "body (thickness-baked)",
       "url": "/models/bodies-thickness/Round-sphere-18-415-83x69.glb",
       "neck": "18-415",
-      "kb": 6085
+      "kb": 6085,
+      "center": [
+        0,
+        0.0417,
+        0
+      ],
+      "size": [
+        0.068992,
+        0.0826,
+        0.068992
+      ]
     }
   ]
 }

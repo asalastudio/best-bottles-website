@@ -109,8 +109,21 @@ const DEFAULT_ENV: EnvRig = {
 
 /* --------------------------------------------------------------- rig */
 
-function Part({ url, vals, envs }: {
-  url: string; vals: Vals;
+/** Does this mesh belong to the STONES rather than the shell?
+ *
+ *  Older parts split shell and studs into two GLB files; the newer masters
+ *  (CAP_PNKDOT) carry the body AND its eight crystals in one, so the target
+ *  has to be decided per mesh or the crystals get painted pink along with
+ *  the cap. Mesh name is the signal the exporters already agree on.
+ */
+function isStone(name: string) {
+  const n = name.toUpperCase();
+  return n.includes("CRYSTAL") || n.includes("DOT") || n.includes("STUD")
+      || n.includes("STONE") || n.includes("RHINE");
+}
+
+function Part({ url, vals, studVals, envs }: {
+  url: string; vals: Vals; studVals?: Vals;
   envs: Record<"metal" | "tent", { tex: THREE.Texture; intensity: number; rotation: number }>;
 }) {
   const gltf = useGLTF(url);
@@ -140,12 +153,28 @@ function Part({ url, vals, envs }: {
     // -- that only turns scene.environment. Rotation has to be set per material
     // or the slider moves and nothing happens.
     m.envMapRotation = new THREE.Euler(0, (slot.rotation * Math.PI) / 180, 0);
+    // a second material, only when this GLB carries its own stones
+    let stone: THREE.MeshPhysicalMaterial | null = null;
+    if (studVals) {
+      const ss = envs[studVals.env];
+      stone = new THREE.MeshPhysicalMaterial({
+        color: new THREE.Color(studVals.color),
+        roughness: studVals.roughness, metalness: studVals.metalness,
+        clearcoat: studVals.clearcoat, clearcoatRoughness: studVals.clearcoatRoughness,
+        ior: studVals.ior,
+      });
+      stone.specularIntensity = studVals.specularIntensity;
+      stone.envMap = ss.tex;
+      stone.envMapIntensity = studVals.envMapIntensity * ss.intensity;
+      stone.envMapRotation = new THREE.Euler(0, (ss.rotation * Math.PI) / 180, 0);
+    }
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
-      if (mesh.isMesh) mesh.material = m;
+      if (!mesh.isMesh) return;
+      mesh.material = stone && isStone(mesh.name) ? stone : m;
     });
-    return () => m.dispose();
-  }, [scene, vals, envs]);
+    return () => { m.dispose(); stone?.dispose(); };
+  }, [scene, vals, studVals, envs]);
   return <primitive object={scene} />;
 }
 
@@ -216,7 +245,7 @@ function Rig({ parts, vals, studVals, lights, env, zoom, ball, onFrame }: {
                       intensity={activeSlot.intensity} rotation={activeSlot.rotation} />
         : (
           <group position={[0, 0.0012, 0]}>
-            <Part url={parts.shell} vals={vals} envs={envs} />
+            <Part url={parts.shell} vals={vals} studVals={studVals} envs={envs} />
             {parts.studs && <Part url={parts.studs} vals={studVals} envs={envs} />}
           </group>
         )}
