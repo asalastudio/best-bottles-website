@@ -83,6 +83,51 @@ TRACKED_FILES = [
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png",
 ]
+
+# ── MATERIAL ANCHORS ──────────────────────────────────────────────────────
+# A material is ANCHORED when its physical values are traceable to a measured
+# entry in data/materials/physicallybased-library.json (CC0, physicallybased.info)
+# rather than typed by eye. Glass has been anchored since 2026-08-31; this is
+# the same discipline for the closures.
+#
+#   library   the measured entry this material derives from
+#   tinted    True when the colourway may set its own baseColor. A library COAT
+#             is colourless white by definition: the tint IS the product.
+#   declared  fields that deliberately differ from the measurement, each with a
+#             reason. A deviation is legitimate — Jordan approves the LOOK, not
+#             the spreadsheet — but it must be written down, or "measured" and
+#             "hand-tuned" become indistinguishable a month later.
+MATERIAL_ANCHORS = {
+    "CAP_SHINY_BLACK": dict(
+        library="coats.coat_gloss",
+        tinted=True,
+        declared={
+            "roughness": ("0.1 vs measured 0.12 — Jordan's approved piano-black "
+                          "gloss; harder polish than the generic coat"),
+            "clearcoat": ("1.0 — the library entry IS the coat layer; in "
+                          "MeshPhysicalMaterial that reads as clearcoat over the "
+                          "tinted base"),
+            "specularIntensity": ("1.5 — boosts dielectric F0 so the 4% "
+                                  "reflection survives ACES; at library default "
+                                  "the cap read matte (Jordan, 2026-08-31)"),
+            "ior": "1.5 — MeshPhysicalMaterial default; the library coat omits ior",
+        },
+    ),
+    # CAP_DOTS_BLACK is documented to mirror CAP_SHINY_BLACK exactly; anchoring
+    # it to the same entry is what makes that promise checkable instead of a
+    # comment two files apart.
+    "CAP_DOTS_BLACK": dict(
+        library="coats.coat_gloss",
+        tinted=True,
+        declared={
+            "roughness": "0.1 — mirrors CAP_SHINY_BLACK by the sync rule",
+            "clearcoat": "1.0 — mirrors CAP_SHINY_BLACK",
+            "specularIntensity": "1.5 — mirrors CAP_SHINY_BLACK",
+            "ior": "1.5 — MeshPhysicalMaterial default",
+        },
+    ),
+}
+
 TRACKED_MATERIALS_PREFIXES = ("ANSP_", "CAP_", "LEATHER_", "PART_BALL", "PART_HOUSING", "PART_STUD", "PART_DIPTUBE", "PART_DRP", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
     "transmission", "roughness", "ior", "thickness", "attenuationColor",
@@ -187,6 +232,37 @@ def main():
         if not same:
             drift.append(f"ANCHOR clear.{k}: library says {want}, preset ships {have} "
                          "- clear must stay the canonical measured glass")
+    # ── anchored closure materials ────────────────────────────────────────
+    # Every anchored material must equal its measured library entry on every
+    # physical field, EXCEPT the fields it declares (with a reason) and the
+    # tint. An undeclared difference is drift, exactly like a changed hash.
+    ANCHOR_FIELDS = ("metalness", "roughness")
+    for name, spec in MATERIAL_ANCHORS.items():
+        have = now["materials"].get(name)
+        if have is None:
+            drift.append(f"ANCHOR {name}: anchored but missing from materials.json")
+            continue
+        entry = lib.get(spec["library"])
+        if entry is None:
+            drift.append(f"ANCHOR {name}: library entry {spec['library']} not found")
+            continue
+        want = entry["values"]
+        for f in ANCHOR_FIELDS:
+            if f in spec["declared"] or f not in want:
+                continue
+            a, b = have.get(f), want[f]
+            if a is None or abs(float(a) - float(b)) > 1e-6:
+                drift.append(
+                    f"ANCHOR {name}.{f}: {spec['library']} measures {b}, "
+                    f"material ships {a} - anchor it or declare the deviation")
+        # a colourless library coat may be tinted; a coloured entry may not
+        if not spec.get("tinted") and "color" in want:
+            lin = have.get("linear")
+            if lin and any(abs(float(x) - float(y)) > 0.01
+                           for x, y in zip(lin, want["color"])):
+                drift.append(f"ANCHOR {name}.color: differs from {spec['library']} "
+                             "and this material is not declared tinted")
+
     if drift:
         print("LOCK DRIFT - the approved look has changed:")
         for d in drift:
