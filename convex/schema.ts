@@ -375,12 +375,65 @@ export default defineSchema({
         tier: v.string(),                           // e.g. "The Scaler"
         accountManager: v.string(),
         netTerms: v.string(),                       // e.g. "Net 30"
+        // LEGACY SEED, not the authority. Seeded from QuickBooks before there
+        // was a certificate on file. The real answer is DERIVED from
+        // resaleCertificates -- see resaleCertificates.getExemptionStatus --
+        // because a certificate EXPIRES and nobody is going to remember to
+        // flip a boolean on the day it does. Kept so existing rows still read.
         taxExempt: v.boolean(),
         memberSince: v.string(),                    // e.g. "March 2021"
         shopifyCustomerId: v.optional(v.string()),  // nullable until Shopify sync
     })
         .index("by_clerkOrgId", ["clerkOrgId"])
         .index("by_accountNumber", ["accountNumber"]),
+
+    // RESALE CERTIFICATES — the document that makes an order tax-free.
+    //
+    // Jordan: "one price... if customers show a sales permit or sales license,
+    // they get tax-free." Price is identical for everyone; the ONLY thing an
+    // account changes is whether tax is charged. So this table is the whole
+    // wholesale-identity story, and it has to be right.
+    //
+    // Why a table and not the boolean it replaces:
+    //   - certificates EXPIRE. A boolean cannot go stale on a date.
+    //   - a buyer presents THEIR OWN state's certificate. California's
+    //     authority is CDTFA (seller's permits / resale certificates); a
+    //     Texas buyer brings a Texas form. So the state travels with it.
+    //   - approval is an EVENT with an approver, and rejection has a reason.
+    //   - an account can hold several: one per state, and renewals over time.
+    //
+    // EXPIRY IS NEVER STORED AS A STATUS. There is no "expired" literal here
+    // on purpose -- it is computed from expiresOn at read time. Storing it
+    // would need a cron to age rows, and between runs the database would be
+    // asserting an exemption that has already lapsed.
+    resaleCertificates: defineTable({
+        clerkOrgId: v.string(),
+        // the scan itself, in Convex storage (same lane as graceUploads)
+        blobId: v.optional(v.id("_storage")),
+        fileName: v.optional(v.string()),
+        mime: v.optional(v.string()),
+        // what the certificate asserts
+        permitNumber: v.string(),
+        issuingState: v.string(),                   // 2-letter; "CA" => CDTFA
+        issuedOn: v.optional(v.string()),           // ISO date
+        // absent = a blanket certificate with no stated expiry. Absent is NOT
+        // the same as expired, and the derivation below keeps them apart.
+        expiresOn: v.optional(v.string()),          // ISO date
+        // review — an employee approves, per Jordan's decision. An
+        // unapproved buyer is charged tax; they are never blocked from buying.
+        status: v.union(
+            v.literal("submitted"),
+            v.literal("approved"),
+            v.literal("rejected"),
+            v.literal("revoked"),
+        ),
+        submittedAt: v.number(),
+        reviewedAt: v.optional(v.number()),
+        reviewedBy: v.optional(v.string()),         // employee identity
+        reviewNote: v.optional(v.string()),         // required on reject
+    })
+        .index("by_clerkOrgId", ["clerkOrgId"])
+        .index("by_status", ["status"]),
 
     // Order history — seeded from QuickBooks, later synced from Shopify webhooks.
     portalOrders: defineTable({

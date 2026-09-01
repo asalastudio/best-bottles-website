@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { exemptionLabel } from "@/lib/portal/exemption";
 import { PortalTag, StatCard, PortalButton } from "@/components/portal/ui";
 import { getPortalDashboardData } from "@/lib/portal/server";
 import { createDraftAction } from "./actions";
@@ -40,7 +41,7 @@ function statusLabel(status: string) {
 }
 
 export default async function PortalDashboard() {
-    const { account, stats, activeOrders, recentOrders, drafts, quickReorder } = await getPortalDashboardData();
+    const { account, stats, activeOrders, recentOrders, drafts, quickReorder, exemption } = await getPortalDashboardData();
     const companyName = account?.companyName ?? "Your organization";
     const accountNumber = account?.accountNumber ?? "Awaiting sync";
 
@@ -54,7 +55,7 @@ export default async function PortalDashboard() {
                         Welcome back, {companyName}
                     </h1>
                     <p className="font-sans text-sm text-neutral-400 mt-0.5">
-                        {accountNumber} · {account?.netTerms ?? "Terms pending"} · {account?.taxExempt ? "Tax Exempt" : "Taxable"}
+                        {accountNumber} · {account?.netTerms ?? "Terms pending"} · {exemptionLabel(exemption)}
                     </p>
                 </div>
                 <div className="flex items-center gap-2">

@@ -90,6 +90,7 @@ export async function getPortalDashboardData() {
             recentOrders: [],
             drafts: [],
             quickReorder: [],
+            exemption: null,
         };
     }
 
@@ -97,7 +98,12 @@ export async function getPortalDashboardData() {
     const dashboard = await getConvex().query(api.portal.getDashboardData, {
         clerkOrgId: viewer.clerkOrgId,
     });
-    return { viewer, ...dashboard };
+    // derived, not the seeded boolean — see getPortalAccountData
+    const exemption = await getConvex().query(
+        api.resaleCertificates.getExemptionStatus,
+        { clerkOrgId: viewer.clerkOrgId },
+    );
+    return { viewer, ...dashboard, exemption };
 }
 
 export async function getPortalOrdersData() {
@@ -124,7 +130,16 @@ export async function getPortalAccountData() {
     const orders = await getConvex().query(api.portal.listOrdersByOrg, {
         clerkOrgId: viewer.clerkOrgId,
     });
-    return { viewer, account, orders };
+    // Exemption is DERIVED from the certificates on file, never read off
+    // portalAccounts.taxExempt. That boolean was seeded from QuickBooks and
+    // cannot expire; a resale certificate can, and the day one lapses a
+    // stored flag would keep asserting an exemption the business is no
+    // longer entitled to claim.
+    const exemption = await getConvex().query(
+        api.resaleCertificates.getExemptionStatus,
+        { clerkOrgId: viewer.clerkOrgId },
+    );
+    return { viewer, account, orders, exemption };
 }
 
 export async function getPortalDraftsData() {

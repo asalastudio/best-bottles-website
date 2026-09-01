@@ -1,6 +1,7 @@
 export const dynamic = "force-dynamic";
 import { PageHeader, PortalButton, PortalTag } from "@/components/portal/ui";
 import { getPortalAccountData } from "@/lib/portal/server";
+import { exemptionLabel, exemptionDetail, exemptionTone } from "@/lib/portal/exemption";
 
 function formatCurrency(value: number | null | undefined) {
     if (typeof value !== "number") return "—";
@@ -8,7 +9,7 @@ function formatCurrency(value: number | null | undefined) {
 }
 
 export default async function PortalAccount() {
-    const { account, orders } = await getPortalAccountData();
+    const { account, orders, exemption } = await getPortalAccountData();
     const deliveredSpend = orders
         .filter((order) => order.status === "delivered")
         .reduce((sum, order) => sum + (order.totalAmount ?? 0), 0);
@@ -23,8 +24,8 @@ export default async function PortalAccount() {
                         <div className="px-5 py-3 border-b border-neutral-200 flex items-center justify-between">
                             <h2 className="font-sans text-[14px] font-semibold text-neutral-900">Account Details</h2>
                             <div className="flex items-center gap-2">
-                                <PortalTag variant={account.taxExempt ? "green" : "muted"}>
-                                    {account.taxExempt ? "Tax Exempt" : "Taxable"}
+                                <PortalTag variant={exemptionTone(exemption)}>
+                                    {exemptionLabel(exemption)}
                                 </PortalTag>
                                 <PortalTag variant="muted">{account.netTerms}</PortalTag>
                             </div>
