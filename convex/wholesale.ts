@@ -11,6 +11,12 @@ import {
     type BottleFacts,
     type ComponentFacts,
 } from "../src/lib/wholesale/compatibility";
+import {
+    verdictFor,
+    summarizeFamily,
+    findDuplicateSkus,
+    type QaProductRow,
+} from "../src/lib/wholesale/catalogQa";
 
 /**
  * Wholesale Matrix query layer (PRD §54 phase 3).
@@ -417,6 +423,189 @@ export const validateBottleConfiguration = query({
             errors,
             resolvedFitment: bottle.neckThreadSize,
             compatibilitySource,
+        };
+    },
+});
+
+/* ------------------------------------------------------------------ QA --
+ * Catalog QA reads the SAME rows the customer matrix reads (PRD §36) and
+ * differs only by exposing diagnostics. Rules live in
+ * src/lib/wholesale/catalogQa.ts so this, the QA screen and Grace can never
+ * disagree about what "incomplete" means.
+ *
+ * PAGINATED BY DESIGN: a full products scan exceeds Convex's 16MB
+ * per-execution read limit (reproduced against production). Callers walk
+ * families, or pass a cursor.
+ */
+
+const qaFinding = v.object({
+    code: v.string(),
+    field: v.string(),
+    severity: v.string(),
+    message: v.string(),
+});
+
+const qaRow = v.object({
+    graceSku: v.string(),
+    websiteSku: v.string(),
+    itemName: v.string(),
+    family: v.union(v.string(), v.null()),
+    status: v.string(),
+    blocking: v.number(),
+    degraded: v.number(),
+    advisory: v.number(),
+    findings: v.array(qaFinding),
+});
+
+function toQaRow(p: Record<string, unknown>): QaProductRow {
+    return {
+        graceSku: (p.graceSku as string) ?? "",
+        websiteSku: (p.websiteSku as string) ?? "",
+        itemName: (p.itemName as string) ?? "",
+        family: (p.family as string | null) ?? null,
+        color: (p.color as string | null) ?? null,
+        capacity: (p.capacity as string | null) ?? null,
+        capacityMl: (p.capacityMl as number | null) ?? null,
+        neckThreadSize: (p.neckThreadSize as string | null) ?? null,
+        heightWithCap: (p.heightWithCap as string | null) ?? null,
+        diameter: (p.diameter as string | null) ?? null,
+        caseQuantity: (p.caseQuantity as number | null) ?? null,
+        webPrice1pc: (p.webPrice1pc as number | null) ?? null,
+        stockStatus: (p.stockStatus as string | null) ?? null,
+        imageUrl: (p.imageUrl as string | null) ?? null,
+        imageUrlCapOff: (p.imageUrlCapOff as string | null) ?? null,
+        components: p.components,
+        category: (p.category as string | null) ?? null,
+        assemblyType: (p.assemblyType as string | null) ?? null,
+        productGroupId: (p.productGroupId as string | null) ?? null,
+        shopifySellable: (p.shopifySellable as boolean | null) ?? null,
+        shopifyVariantId: (p.shopifyVariantId as string | null) ?? null,
+        paperDollBodyUrl: (p.paperDollBodyUrl as string | null) ?? null,
+    };
+}
+
+/** Per-row QA for one family — what the Catalog QA table renders. */
+export const getFamilyQa = query({
+    args: { family: v.string(), limit: v.optional(v.number()) },
+    returns: v.object({
+        family: v.string(),
+        total: v.number(),
+        complete: v.number(),
+        degraded: v.number(),
+        incomplete: v.number(),
+        completionPct: v.number(),
+        topIssues: v.array(v.object({
+            code: v.string(), count: v.number(), severity: v.string(),
+        })),
+        duplicateSkus: v.array(v.string()),
+        rows: v.array(qaRow),
+    }),
+    handler: async (ctx, { family, limit }) => {
+        const products = await ctx.db
+            .query("products")
+            .withIndex("by_family", (q) => q.eq("family", family))
+            .take(Math.min(limit ?? 300, 400));
+
+        const verdicts = products.map((p) =>
+            verdictFor(toQaRow(p as unknown as Record<string, unknown>)));
+        const health = summarizeFamily(family, verdicts);
+
+        return {
+            ...health,
+            duplicateSkus: findDuplicateSkus(products.map((p) => ({ graceSku: p.graceSku }))),
+            rows: verdicts.map((v) => {
+                const p = products.find((x) => x.graceSku === v.graceSku);
+                return {
+                    graceSku: v.graceSku,
+                    websiteSku: p?.websiteSku ?? "",
+                    itemName: p?.itemName ?? "",
+                    family: v.family,
+                    status: v.status,
+                    blocking: v.blocking,
+                    degraded: v.degraded,
+                    advisory: v.advisory,
+                    findings: v.findings,
+                };
+            }),
+        };
+    },
+});
+
+/**
+ * Catalog health for Grace and the QA header — counts only, no row bodies,
+ * so it stays inside the read limit for a whole family.
+ */
+export const getCatalogHealth = query({
+    args: { families: v.optional(v.array(v.string())) },
+    returns: v.object({
+        scanned: v.number(),
+        complete: v.number(),
+        degraded: v.number(),
+        incomplete: v.number(),
+        completionPct: v.number(),
+        byFamily: v.array(v.object({
+            family: v.string(),
+            total: v.number(),
+            complete: v.number(),
+            completionPct: v.number(),
+            blockingIssues: v.number(),
+        })),
+        topIssues: v.array(v.object({
+            code: v.string(), count: v.number(), severity: v.string(),
+        })),
+    }),
+    handler: async (ctx, { families }) => {
+        const targets = families?.length
+            ? families
+            : [...new Set(
+                (await ctx.db.query("productGroups").take(400))
+                    .map((g) => g.family)
+                    .filter((f): f is string => Boolean(f)),
+              )].slice(0, 12);
+
+        let scanned = 0, complete = 0, degraded = 0, incomplete = 0;
+        const codeCounts = new Map<string, { count: number; severity: string }>();
+        const byFamily: Array<{
+            family: string; total: number; complete: number;
+            completionPct: number; blockingIssues: number;
+        }> = [];
+
+        for (const family of targets) {
+            const products = await ctx.db
+                .query("products")
+                .withIndex("by_family", (q) => q.eq("family", family))
+                .take(150);
+            if (products.length === 0) continue;
+
+            const verdicts = products.map((p) =>
+                verdictFor(toQaRow(p as unknown as Record<string, unknown>)));
+            const health = summarizeFamily(family, verdicts);
+
+            scanned += health.total;
+            complete += health.complete;
+            degraded += health.degraded;
+            incomplete += health.incomplete;
+            for (const issue of health.topIssues) {
+                const e = codeCounts.get(issue.code) ?? { count: 0, severity: issue.severity };
+                e.count += issue.count;
+                codeCounts.set(issue.code, e);
+            }
+            byFamily.push({
+                family,
+                total: health.total,
+                complete: health.complete,
+                completionPct: health.completionPct,
+                blockingIssues: verdicts.reduce((n, v) => n + v.blocking, 0),
+            });
+        }
+
+        return {
+            scanned, complete, degraded, incomplete,
+            completionPct: scanned ? Math.round((complete / scanned) * 100) : 0,
+            byFamily: byFamily.sort((a, b) => a.completionPct - b.completionPct),
+            topIssues: [...codeCounts.entries()]
+                .map(([code, e]) => ({ code, count: e.count, severity: e.severity }))
+                .sort((a, b) => b.count - a.count),
         };
     },
 });
