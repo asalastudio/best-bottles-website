@@ -239,7 +239,10 @@ export default function BottleConfigurator({
                             onClick={() => {
                                 setGlass(id);
                                 const to = siblingSlug(fam, currentSlug, id, base);
-                                if (to && to !== currentSlug) router.push(`/products/${to}`);
+                                // scroll:false — a material or closure change must not
+                                // move the viewport, or the swap reads as jumping to
+                                // a different product.
+                                if (to && to !== currentSlug) router.replace(`/products/${to}`, { scroll: false });
                             }}
                             aria-label={`${GLASS_PRESETS[id].label} glass`}
                             aria-pressed={glass === id}
@@ -271,7 +274,10 @@ export default function BottleConfigurator({
                                     }
                                     if (c.id !== "none") {
                                         const to = siblingSlug(fam, currentSlug, glass, c.id);
-                                        if (to && to !== currentSlug) router.push(`/products/${to}`);
+                                        // scroll:false — a material or closure change must not
+                                // move the viewport, or the swap reads as jumping to
+                                // a different product.
+                                if (to && to !== currentSlug) router.replace(`/products/${to}`, { scroll: false });
                                     }
                                 }}
                                 aria-pressed={base === c.id}
