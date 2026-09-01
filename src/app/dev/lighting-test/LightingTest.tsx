@@ -30,7 +30,7 @@ import * as THREE from "three";
 import { ConvexHttpClient } from "convex/browser";
 import { makeFunctionReference } from "convex/server";
 import ProductStage from "@/components/products/ProductStage";
-import { STUDIO_PRESETS } from "@/lib/materials/studioPresets";
+import { STUDIO_PRESETS, APPROVED_STUDIO } from "@/lib/materials/studioPresets";
 import { roleOf } from "@/lib/materials/glassPresets";
 import {
   RECIPE_SEEDS_BY_KEY, type MaterialRecipe,
@@ -155,12 +155,12 @@ export default function LightingTest() {
   // glass TRANSMITS what is behind it — judge on the preset's light
   // backdrop (the lab lesson: a dark viewport makes correct amber read
   // near-black), standing on the cove like the production stage
-  const backdrop = STUDIO_PRESETS["hybrid-small08"].backdrop;
+  const backdrop = STUDIO_PRESETS[APPROVED_STUDIO].backdrop;
 
   return (
     <div style={{ position: "relative", width: "100%", height: "100dvh",
                   background: "#101014" }}>
-      <ProductStage studio="hybrid-small08" backdrop={backdrop}
+      <ProductStage studio={APPROVED_STUDIO} backdrop={backdrop}
                     targetY={0.035} cameraZ={0.36}>
         {ROW.map(({ finishKey, kind }, i) => {
           const recipe = recipes[finishKey];
@@ -181,7 +181,7 @@ export default function LightingTest() {
                     border: "1px solid #33333c", fontSize: 11,
                     lineHeight: 1.5, pointerEvents: "none" }}>
         <div style={{ fontSize: 12, fontWeight: 700, marginBottom: 4 }}>
-          Lighting acceptance — hybrid studio (Small 08 + formers)
+          Lighting acceptance — universal light cone
         </div>
         <div style={{ opacity: 0.85 }}>
           gold cap · silver cap · clear · amber · cobalt

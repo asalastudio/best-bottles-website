@@ -154,7 +154,7 @@ export default function ProductStage({
           ) : null}
           {/* ONE environment, mounted once for the whole scene. A hybrid
               preset renders its HDRI + Lightformers into a single cubemap. */}
-          {studio.hybrid ? <StudioEnvironment />
+          {studio.managedEnv ? <StudioEnvironment />
             : studio.hdri ? <Environment files={studio.hdri} /> : null}
           <StudioContext rotationDeg={envRotationDeg} />
         </Suspense>

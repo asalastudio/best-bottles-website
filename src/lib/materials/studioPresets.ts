@@ -23,16 +23,21 @@
  */
 
 export type StudioPresetId =
-  "softbox-tent" | "room" | "mono-studio" | "lightformer-rig" | "hybrid-small08";
+  "softbox-tent" | "room" | "mono-studio" | "lightformer-rig" | "hybrid-small08"
+  | "universal-cone";
 
 export type StudioPreset = {
   id: StudioPresetId;
   label: string;
   /** equirectangular HDR served from /public, or null to use in-scene lights */
   hdri: string | null;
-  /** true = the HDRI is COMBINED with Lightformers into one cubemap — the
-   *  scene shell mounts <StudioEnvironment/> instead of a bare hdri */
-  hybrid?: boolean;
+  /** true = the scene shell mounts <StudioEnvironment/> instead of passing
+   *  `hdri` straight to drei. Named for WHO OWNS the environment, not for what
+   *  it contains: this was `hybrid` while the rig was an HDRI with quads
+   *  composited over it, and kept that name for one commit after the quads
+   *  were deleted — at which point the flag was claiming a hybrid that no
+   *  longer existed. The shipping rig is a single generated cone. */
+  managedEnv?: boolean;
   /** true = glossy/metal parts inherit THIS environment instead of the
    *  separate metal studio. The handoff's actual architecture: exactly one
    *  environment, no per-material envMap overrides. A black dielectric
@@ -117,15 +122,22 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     id: "hybrid-small08",
     label: "Hybrid studio (Small 08 + formers)",
     hdri: "/env/studio_small_08_1k_peak24.hdr",
-    hybrid: true,
+    managedEnv: true,
     unifiedEnv: true,
     environmentIntensity: 1.0,
     environmentRotation: 0,
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
     backdrop: "#e9e6e0",
     provenance:
-      "APPROVED STUDIO as of 2026-08-31 (Jordan, at /dev/lighting-test: " +
-      "'the feathered softbox is much better' — glass colourways inherit). " +
+      "RETIRED 2026-09-01, superseded by 'universal-cone'. Approved " +
+      "2026-08-31 (Jordan, at /dev/lighting-test: 'the feathered softbox is " +
+      "much better'), then rejected on the fine-mist render: 'there are too " +
+      "many lines — it needs to be a softbox, not individual, NO CARDS.' " +
+      "BOTH halves printed lines. The quads were small bright rectangles, and " +
+      "feathering softens a quad's EDGE without making the quad big; the " +
+      "photographed base carried a real ceiling — fixtures, a window, a " +
+      "doorway — each its own line, so deleting the quads alone would not " +
+      "have been enough. Kept for A/B. " +
       "The single environment for the whole scene, per the studio-lighting " +
       "handoff: Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN " +
       "preset; PEAK-CLAMPED at luminance 24 — the raw file's ~97 hot texels " +
@@ -140,6 +152,39 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "recipes, never in swapping environments. material_lock.py pins the " +
       "HDRI hash, the EMITTERS values, and this flip.",
   },
+  "universal-cone": {
+    id: "universal-cone",
+    label: "Universal light cone",
+    hdri: "/env/studio-universal-softbox.hdr",
+    managedEnv: true,
+    unifiedEnv: true,
+    environmentIntensity: 1.0,
+    environmentRotation: 0,
+    toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
+    backdrop: "#e9e6e0",
+    provenance:
+      "THE SHIPPING STUDIO as of 2026-09-01. Generated end to end by " +
+      "pipeline/paper-doll-3d/scripts/make_universal_softbox.py — no " +
+      "photographed base and no in-scene emitters, which is the point. " +
+      "Jordan's framing is the design: 'think of it like a light cone — it " +
+      "really is.' That is the tabletop rig for shiny things: a cone of " +
+      "diffusion standing around the subject, open at the bottom, lit from " +
+      "outside, used on chrome and glass BECAUSE the fabric integrates every " +
+      "lamp behind it into one continuous wall. The rule it buys: a source " +
+      "CONTINUOUS IN AZIMUTH has no azimuth to be AT. A cylinder mirrors a " +
+      "vertical slice of the world, so a discrete source shows as a line at " +
+      "whichever orbit angle faces it — wrap it through 360 deg and no such " +
+      "angle exists, so lines cannot return at ANY orbit position. Softness " +
+      "becomes a property of the shape instead of a value to tune, which is " +
+      "why this ends a run of six rigs that each tried to feather their way " +
+      "out of having small sources. The generator's --check counts how many " +
+      "separate bright regions a cylinder could mirror; this passes at ONE, " +
+      "360 deg wide. Level is calibrated to the retired rig (0.746 " +
+      "sin-weighted mean) so the 45 material recipes, all at envMapIntensity " +
+      "1.0, keep meaning what they mean. Reference: Carl Taylor's glass " +
+      "lighting — large graded sources that drape, never sources you can " +
+      "count (Jordan).",
+  },
 };
 
-export const APPROVED_STUDIO: StudioPresetId = "hybrid-small08";
+export const APPROVED_STUDIO: StudioPresetId = "universal-cone";

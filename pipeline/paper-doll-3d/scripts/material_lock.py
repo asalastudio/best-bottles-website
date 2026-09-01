@@ -26,7 +26,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[3]
 LOCK = ROOT / "public" / "models" / "materials.lock.json"
 
 TRACKED_FILES = [
-    "public/env/studio_small_08_1k_peak24.hdr",
+    "public/env/studio-universal-softbox.hdr",   # THE shipping environment
+    "public/env/studio_small_08_1k_peak24.hdr",  # retired base, kept for A/B
     "public/models/studio-universal.hdr",
     "public/models/studio-mono.hdr",
     "public/models/studio-metal-key.hdr",
@@ -148,20 +149,31 @@ def presets() -> dict:
     return out
 
 def studio_environment() -> dict:
-    """The hybrid studio's OTHER half: the emitter values live in TSX, not
-    an HDRI, so the lock pins them the way it pins glass-preset numbers —
-    plus which preset production ships (a silent flip is drift too)."""
+    """The studio's parameters, pinned like the glass presets.
+
+    These used to be emitter literals scraped out of StudioEnvironment.tsx,
+    because the rig was quads-over-an-HDRI. The rig is now a generated light
+    cone with no in-scene geometry at all, so the values that decide the look
+    live in make_universal_softbox.py. Pinning the .hdr hash alone is not
+    enough: a regenerated file with different constants would hash differently
+    and tell you only THAT it changed, never which knob moved. Scraping the
+    constants makes `verify` name the parameter — which is the difference
+    between "the studio drifted" and "someone widened the key lobe"."""
     out = {}
     m = re.search(r'APPROVED_STUDIO: StudioPresetId = "([a-z0-9-]+)"',
                   (ROOT / "src/lib/materials/studioPresets.ts").read_text())
     out["approvedStudio"] = m.group(1) if m else "UNPARSEABLE"
-    env_src = (ROOT / "src/components/products/StudioEnvironment.tsx").read_text()
-    emitters = re.findall(
-        r"\{ position: \[([^\]]+)\], scale: \[([^\]]+)\], "
-        r"intensity: ([^,]+), sigma: \[([^\]]+)\] \}", env_src)
-    for i, (pos, scale, inten, sigma) in enumerate(emitters):
-        out[f"emitter{i}"] = (f"pos[{pos}] scale[{scale}] "
-                              f"intensity {inten.strip()} sigma[{sigma}]")
+    gen = (ROOT / "pipeline/paper-doll-3d/scripts/make_universal_softbox.py")
+    src = gen.read_text() if gen.exists() else ""
+    for name in ("CONE_PEAK", "CONE_UP", "CONE_DOWN", "CONE_I", "KEY_AZIMUTH",
+                 "KEY_AMOUNT", "KEY_SHAPE", "AMBIENT", "FLOOR_I", "EXPOSURE"):
+        m = re.search(rf"^{name}\s*=\s*([-\d.]+)", src, re.M)
+        out[f"cone.{name}"] = m.group(1) if m else "UNPARSEABLE"
+    # the retired rig mounted feathered quads; if any ever come back, the lock
+    # must see them rather than silently reporting a cone-only studio
+    quads = re.findall(r"\{ position: \[([^\]]+)\], scale: \[", 
+                       (ROOT / "src/components/products/StudioEnvironment.tsx").read_text())
+    out["inSceneEmitters"] = str(len(quads))
     return out
 
 def snapshot() -> dict:

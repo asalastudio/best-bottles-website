@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #1D1D1F; }
+    a { color: #8B6F42; text-decoration: none; }
+    a:hover { color: #C5A065; }
+  </style>
+</helmet>
+
+<div style="width: 1440px; height: 940px; background: #ECE5D8; padding: 26px 30px; display: flex; flex-direction: column; gap: 16px; overflow: hidden;">
+
+  <div style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 25px; font-weight: 600;">Wholesale Account &amp; Tax Exemption</span>
+    <span style="font-size: 12px; color: #637588;">Anyone can buy. Buying <b>untaxed</b> requires an approved resale certificate — reviewed by a Best Bottles employee.</span>
+  </div>
+
+  <!-- ── Customer-side states ── -->
+  <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px;">
+
+    <!-- 1 · Submit -->
+    <div style="background: #FFFFFF; border: 1px solid #D4C5A9; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 11px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 20px; height: 20px; border-radius: 999px; background: #1D1D1F; color: #F5F3EF; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">1</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 17px; font-weight: 600;">Submit resale certificate</span>
+      </div>
+      <span style="font-size: 11.5px; color: #637588; line-height: 1.5;">Collected during onboarding, or later from the portal. Nothing here blocks browsing or buying.</span>
+
+      <div style="display: flex; flex-direction: column; gap: 8px;">
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Legal business name</span>
+          <div style="border: 1px solid #D4C5A9; border-radius: 8px; padding: 8px 11px; font-size: 12px; background: #FDFBF8;">Lumière Atelier LLC</div>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Issuing state</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 8px; padding: 8px 11px; font-size: 12px; background: #FDFBF8;">California <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          </div>
+          <div style="flex: 1.3; display: flex; flex-direction: column; gap: 4px;">
+            <span style="font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Seller's permit no.</span>
+            <div style="border: 1px solid #D4C5A9; border-radius: 8px; padding: 8px 11px; font-size: 12px; background: #FDFBF8;">[CDTFA PERMIT NO.]</div>
+          </div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px;">
+          <span style="font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Certificate document</span>
+          <div style="border: 1.5px dashed #C5A065; border-radius: 10px; padding: 14px; display: flex; flex-direction: column; align-items: center; gap: 5px; background: #FDFBF8;">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="#8B6F42" stroke-width="1.4"><path d="M10 14 V4 M6 8 L10 4 L14 8"></path><path d="M3 13 V16 H17 V13"></path></svg>
+            <span style="font-size: 11.5px; font-weight: 600; color: #8B6F42;">Upload CDTFA-230 or state equivalent</span>
+            <span style="font-size: 10px; color: #9A9590;">PDF or image · stored in Convex file storage</span>
+          </div>
+        </div>
+      </div>
+      <div style="background: #1D1D1F; color: #F5F3EF; border-radius: 9px; padding: 10px 0; text-align: center; font-weight: 600; font-size: 12.5px;">Submit for review</div>
+    </div>
+
+    <!-- 2 · Under review -->
+    <div style="background: #FFFFFF; border: 1px solid #E8C98E; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 11px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 20px; height: 20px; border-radius: 999px; background: #B3822E; color: #FFFFFF; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 17px; font-weight: 600;">Under review</span>
+      </div>
+      <span style="font-size: 11.5px; color: #637588; line-height: 1.5;">A Best Bottles employee verifies the permit against the issuing state's registry. The customer is <b>not</b> blocked from ordering meanwhile.</span>
+
+      <div style="background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 10px; padding: 11px 13px; display: flex; gap: 9px; font-size: 11.5px; line-height: 1.5;">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.5" style="flex-shrink: 0; margin-top: 1px;"><circle cx="8" cy="8" r="6.2"></circle><path d="M8 4.6 V8.4 L10.4 9.8"></path></svg>
+        <span><b>Submitted 2 business days ago.</b> Orders placed now are charged sales tax. Once approved, tax comes off automatically at checkout — we'll email you.</span>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 7px; border-top: 1px solid #EEE6D4; padding-top: 11px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Order bar while pending</span>
+        <div style="display: flex; align-items: center; gap: 9px; background: #FDFBF8; border: 1px solid #EEE6D4; border-radius: 9px; padding: 9px 11px;">
+          <div style="display: flex; flex-direction: column; line-height: 1.3;">
+            <span style="font-size: 12px; font-weight: 700;">$96.84</span>
+            <span style="font-size: 9.5px; color: #B3822E; font-weight: 600;">+ sales tax · exemption pending</span>
+          </div>
+          <div style="margin-left: auto; background: #1D1D1F; color: #F5F3EF; border-radius: 8px; padding: 8px 16px; font-weight: 600; font-size: 11.5px;">Checkout</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 · Approved -->
+    <div style="background: #FFFFFF; border: 1px solid #C9D8C6; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 11px;">
+      <div style="display: flex; align-items: center; gap: 8px;">
+        <span style="width: 20px; height: 20px; border-radius: 999px; background: #5B7B5D; color: #FFFFFF; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center;">3</span>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 17px; font-weight: 600;">Approved — tax exempt</span>
+      </div>
+      <span style="font-size: 11.5px; color: #637588; line-height: 1.5;">Approval writes the exemption to the Shopify <b>customer record</b> — the only place it can actually come off at checkout.</span>
+
+      <div style="background: #F0F4EE; border: 1px solid #C9D8C6; border-radius: 10px; padding: 11px 13px; display: flex; flex-direction: column; gap: 7px; font-size: 11.5px;">
+        <div style="display: flex; align-items: center; gap: 8px; font-weight: 700; color: #3E5940;">
+          <svg width="14" height="14" viewBox="0 0 10 10" fill="none" stroke="#3E5940" stroke-width="2"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>
+          Resale certificate verified
+        </div>
+        <div style="display: flex; color: #637588;"><span>Permit no.</span><span style="margin-left: auto; color: #1D1D1F; font-weight: 600;">[PERMIT NO.]</span></div>
+        <div style="display: flex; color: #637588;"><span>Approved by</span><span style="margin-left: auto; color: #1D1D1F; font-weight: 600;">[STAFF NAME]</span></div>
+        <div style="display: flex; color: #637588;"><span>Expires</span><span style="margin-left: auto; color: #1D1D1F; font-weight: 600;">[EXPIRY DATE]</span></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 7px; border-top: 1px solid #EEE6D4; padding-top: 11px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Order bar once approved</span>
+        <div style="display: flex; align-items: center; gap: 9px; background: #FDFBF8; border: 1px solid #EEE6D4; border-radius: 9px; padding: 9px 11px;">
+          <div style="display: flex; flex-direction: column; line-height: 1.3;">
+            <span style="font-size: 12px; font-weight: 700;">$96.84</span>
+            <span style="font-size: 9.5px; color: #3E5940; font-weight: 600;">no tax · resale cert on file</span>
+          </div>
+          <div style="margin-left: auto; background: #1D1D1F; color: #F5F3EF; border-radius: 8px; padding: 8px 16px; font-weight: 600; font-size: 11.5px;">Checkout</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Staff review queue ── -->
+  <div style="background: #FFFFFF; border: 1px solid #D4C5A9; border-radius: 12px; overflow: hidden; flex: 1; display: flex; flex-direction: column;">
+    <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #EEE6D4;">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="#8B6F42" stroke-width="1.4"><path d="M3 2 H11 L13 4.5 V14 H3 Z"></path><path d="M5.5 7 H10.5 M5.5 10 H10.5"></path></svg>
+      <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 17px; font-weight: 600;">Certificate Review Queue</span>
+      <span style="font-size: 11px; color: #637588;">Staff only — same authorization gate as Catalog QA</span>
+      <div style="display: flex; align-items: center; gap: 5px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #8B6F42;">3 awaiting review</div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 130px 150px 130px 130px 150px 1fr; gap: 10px; align-items: center; padding: 7px 16px; background: #FDFBF8; border-bottom: 1px solid #EEE6D4; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">
+      <span>Business</span><span>State</span><span>Permit no.</span><span>Document</span><span>Submitted</span><span>Status</span><span></span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 130px 150px 130px 130px 150px 1fr; gap: 10px; align-items: center; padding: 9px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px; background: #FCF8EF;">
+      <span style="font-weight: 600;">Lumière Atelier LLC</span>
+      <span style="color: #637588;">California</span>
+      <span style="color: #637588;">[PERMIT NO.]</span>
+      <a href="#" style="font-weight: 600; display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="#8B6F42" stroke-width="1.4"><path d="M3 1.5 H9 L11.5 4 V12.5 H3 Z"></path></svg>View PDF</a>
+      <span style="color: #637588;">2 days ago</span>
+      <span style="display: flex; align-items: center; gap: 6px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #8B6F42; width: fit-content;">Awaiting review</span>
+      <span style="display: flex; gap: 7px; justify-content: flex-end;">
+        <span style="border: 1px solid #D4C5A9; border-radius: 7px; padding: 5px 12px; font-size: 11px; font-weight: 600; color: #A5432F;">Reject</span>
+        <span style="background: #5B7B5D; color: #FFFFFF; border-radius: 7px; padding: 5px 14px; font-size: 11px; font-weight: 600;">Approve</span>
+      </span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 130px 150px 130px 130px 150px 1fr; gap: 10px; align-items: center; padding: 9px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px; background: #FCF8EF;">
+      <span style="font-weight: 600;">[BUSINESS NAME]</span>
+      <span style="color: #637588;">Nevada</span>
+      <span style="color: #637588;">[PERMIT NO.]</span>
+      <a href="#" style="font-weight: 600; display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="#8B6F42" stroke-width="1.4"><path d="M3 1.5 H9 L11.5 4 V12.5 H3 Z"></path></svg>View PDF</a>
+      <span style="color: #637588;">4 days ago</span>
+      <span style="display: flex; align-items: center; gap: 6px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #8B6F42; width: fit-content;">Awaiting review</span>
+      <span style="display: flex; gap: 7px; justify-content: flex-end;">
+        <span style="border: 1px solid #D4C5A9; border-radius: 7px; padding: 5px 12px; font-size: 11px; font-weight: 600; color: #A5432F;">Reject</span>
+        <span style="background: #5B7B5D; color: #FFFFFF; border-radius: 7px; padding: 5px 14px; font-size: 11px; font-weight: 600;">Approve</span>
+      </span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 130px 150px 130px 130px 150px 1fr; gap: 10px; align-items: center; padding: 9px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+      <span style="font-weight: 600;">[BUSINESS NAME]</span>
+      <span style="color: #637588;">California</span>
+      <span style="color: #637588;">[PERMIT NO.]</span>
+      <a href="#" style="font-weight: 600; display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="#8B6F42" stroke-width="1.4"><path d="M3 1.5 H9 L11.5 4 V12.5 H3 Z"></path></svg>View PDF</a>
+      <span style="color: #637588;">Mar 2021</span>
+      <span style="display: flex; align-items: center; gap: 6px; background: #F0F4EE; border: 1px solid #C9D8C6; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #3E5940; width: fit-content;">Approved</span>
+      <span style="display: flex; gap: 7px; justify-content: flex-end; font-size: 11px; color: #9A9590;">Exemption synced to Shopify customer</span>
+    </div>
+
+    <div style="display: grid; grid-template-columns: 240px 130px 150px 130px 130px 150px 1fr; gap: 10px; align-items: center; padding: 9px 16px; font-size: 12px; background: #FDF2F0;">
+      <span style="font-weight: 600;">[BUSINESS NAME]</span>
+      <span style="color: #637588;">Texas</span>
+      <span style="color: #637588;">[PERMIT NO.]</span>
+      <a href="#" style="font-weight: 600; display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="#8B6F42" stroke-width="1.4"><path d="M3 1.5 H9 L11.5 4 V12.5 H3 Z"></path></svg>View PDF</a>
+      <span style="color: #637588;">Expired Jun 2026</span>
+      <span style="display: flex; align-items: center; gap: 6px; background: #FBEAE6; border: 1px solid #E0AFA3; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #A5432F; width: fit-content;">Expired</span>
+      <span style="display: flex; gap: 7px; justify-content: flex-end; font-size: 11px; color: #A5432F; font-weight: 600;">Exemption revoked — tax reapplied</span>
+    </div>
+  </div>
+
+  <div style="display: flex; gap: 22px; font-size: 11px; color: #637588;">
+    <span><b style="color: #1D1D1F;">Gate:</b> nothing here blocks purchase — it only decides whether tax is charged.</span>
+    <span><b style="color: #1D1D1F;">Enforcement point:</b> Shopify customer record. An anonymous cart cannot be tax-exempt.</span>
+    <span style="margin-left: auto;"><b style="color: #1D1D1F;">Expiry:</b> certificates lapse — the queue must re-flag them, not trust a one-time boolean.</span>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

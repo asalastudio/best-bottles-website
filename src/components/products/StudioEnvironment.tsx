@@ -1,174 +1,80 @@
 "use client";
 
 /**
- * StudioEnvironment — THE single hybrid environment (candidate).
+ * StudioEnvironment — THE single environment: one universal light cone.
  *
- * Exactly ONE environment lights the whole scene: a neutral base HDRI for
- * full mirror coverage (metals must never orbit into a dead-black void, and
- * silver only stays silver under strictly neutral light), plus in-scene
- * emitters for the deliberate shapes — vertical strips for clear-glass edge
- * definition, an overhead softbox for cap tops and shoulders, and a broad
- * dim backlight so amber/cobalt transmit their colour instead of reading
- * near-black. Everything renders into ONE cubemap; per-finish variation
- * lives in material recipes (envMapIntensity, roughness…), never in
- * swapping environments.
+ * Exactly ONE environment lights the whole scene, and it is now a single
+ * continuous source rather than a photographed room with emitters composited
+ * over it. Per-finish variation lives in material recipes (roughness,
+ * envMapIntensity…), never in swapping environments or per-material envMaps.
  *
- * WHY THESE ARE NOT drei <Lightformer>s: a Lightformer rect is a hard-edged
- * quad, and a hard edge mirrors off a cylinder as an abrupt razor line —
- * the exact "fake" read Jordan flagged (and the artefact the lane already
- * documented in studioPresets.ts). The lane's fix is WIDER, FEATHERED
- * sources: each emitter here is a quad carrying a Gaussian falloff texture
- * (bright core, soft skirts), additively blended over the base HDRI, so its
- * reflection is a gradient that slides as the bottle turns.
+ * WHY THERE IS NO JSX HERE ANY MORE
+ * ---------------------------------
+ * This component used to mount feathered quads over a photographed HDRI.
+ * Jordan, on the fine-mist render: "There are too many lines. It needs to be
+ * a softbox, not individual. NO CARDS." Both halves were printing lines:
  *
- * Base HDRI: Poly Haven "Studio Small 08" (CC0), 1k — lighting-only, never
- * shown as background — self-hosted at public/env/ (no runtime CDN
- * dependency). Same-family fallbacks if the look is rejected:
- * white_home_studio (more contrast), pav_studio_03 (softer).
+ *   - the QUADS were small bright rectangles in a dark room. Feathering
+ *     softens a quad's EDGE, but the quad is still discrete, so a cylinder
+ *     mirrors it as a band. There is no feather value that fixes a source
+ *     being small — five rigs proved that before this one.
+ *   - the PHOTOGRAPHED HDRI underneath (Poly Haven studio_small_08) carried a
+ *     real ceiling: bare fixtures, a window, a doorway. Each is its own bright
+ *     patch and its own line. Deleting the quads alone would have left those,
+ *     which is why the base had to go too.
  *
- * APPROVED 2026-08-31 (Jordan, at /dev/lighting-test: "the feathered
- * softbox is much better") — APPROVED_STUDIO points at "hybrid-small08",
- * so this IS the shipping environment for every glass colourway. The
- * EMITTERS values and the HDRI hash are pinned by material_lock.py: any
- * change here is drift until Jordan re-approves and the lock is rewritten
- * in the same commit. NOT allowed without a founder decision: a second
- * environment, per-material envMap overrides, or non-neutral
- * (coloured/warm) light colours.
+ * THE FIX IS A SHAPE, NOT A VALUE (Jordan: "think of it like a light cone —
+ * it really is"). The tabletop rig for shiny things is a cone of diffusion
+ * standing around the subject, open at the bottom, lit from outside; you use
+ * it on chrome and glass precisely because the fabric integrates every lamp
+ * behind it into one continuous wall. Stated as a rule:
+ *
+ *     a source that is CONTINUOUS IN AZIMUTH has no azimuth to be AT.
+ *
+ * A cylinder mirrors a vertical slice of the world, so a discrete source shows
+ * up as a line at whichever orbit angle faces it. Wrap the source through all
+ * 360 deg and no such angle exists — the lines cannot return at ANY orbit
+ * position, because nothing discrete remains to reflect. Softness stops being
+ * a number to tune and becomes a property of the geometry.
+ *
+ * The cone is generated, not painted, by
+ * pipeline/paper-doll-3d/scripts/make_universal_softbox.py — read its header
+ * for the shape parameters (wall elevation grade, the single cosine key, the
+ * sweep) and the reasoning behind each. Its --check mode is the acceptance
+ * test: it counts how many separate bright regions a cylinder could mirror.
+ * This file passes at ONE region, 360 deg wide — i.e. no discrete source at
+ * all. Any future rig must pass the same check before it ships.
+ *
+ * Level is calibrated to the environment it replaced (0.746 sin-weighted mean
+ * radiance) so that the 45 material recipes — all of which were just reset to
+ * envMapIntensity 1.0 — keep meaning what they mean. A brighter world would
+ * silently re-tune every one of them.
+ *
+ * NOT allowed without a founder decision: a second environment, per-material
+ * envMap overrides, non-neutral (coloured/warm) light on the cone wall, or
+ * re-introducing in-scene emitters. material_lock.py pins the HDRI hash and
+ * the cone parameters; changing them is drift until Jordan re-approves and the
+ * lock is rewritten in the same commit.
  */
 
-import { memo, useMemo } from "react";
+import { memo } from "react";
 import { Environment } from "@react-three/drei";
-import * as THREE from "three";
 
-type Emitter = {
-  /** direction from origin; the quad faces the origin */
-  position: [number, number, number];
-  /** quad size (world units in the env portal) */
-  scale: [number, number];
-  /** HDR peak brightness at the Gaussian core */
-  intensity: number;
-  /** Gaussian falloff (fraction of the quad's half-extent) per axis —
-   *  smaller = tighter hot core, larger = softer wash */
-  sigma: [number, number];
-};
-
-/** The four deliberate shapes. Descended from the handoff's Lightformer
- *  seeds, feathered, then LIFTED ABOVE THE BOTTLE per the lane law
- *  ([[glass-env-no-horizon-sources]]): a source at bottle height reflects
- *  on a cylinder at the SILHOUETTE for whichever camera azimuth faces away
- *  from it — the broad horizon backlight wrapped amber/cobalt in a
- *  full-height white halo the moment the orbit stopped near front
- *  (Jordan), and horizon strips do the same at their own azimuths. All
- *  punch now comes from elevation: edge/shoulder grades stay, full-height
- *  wraps cannot form at ANY orbit angle. */
-const EMITTERS: Emitter[] = [
-  // A REAL SOFTBOX, not a hot spot. sigma is the Gaussian's width as a
-  // fraction of the quad: at 0.66 the panel had a bright core and fell off
-  // fast, which is a spot light wearing a big frame — it still raked a hard
-  // band across the glass. At sigma >= 1.2 the Gaussian is essentially FLAT
-  // across the face, and the raised-cosine window (makeFeatherTexture) does
-  // the rim rolloff, so what the bottle mirrors is a broad even panel with
-  // a soft edge. That is what a softbox is.
-  //
-  // Bigger + dimmer for the same reason: apparent SIZE is what makes light
-  // soft, not intensity. A large panel at 2.2 wraps the shoulder; a small
-  // one at 4.0 punches a highlight. This has to flatter 126 different
-  // bottle shapes we have not modelled yet, and a big even source is the
-  // most shape-forgiving light there is — a hot narrow one has to be
-  // re-aimed per silhouette.
-  //
-  // LOWERED to y 2.4 (was 5.0) and made taller: high panels light the cap
-  // and shoulder and leave the body dark, so the sheen has to run DOWN the
-  // body. Note this deliberately sits nearer the horizon than the lane's
-  // no-horizon rule, which was written about NARROW HOT sources — those
-  // mirror off a cylinder as a hard full-height line (five failed rigs).
-  // A flat, panel-wide source at sigma 1.35 has no core to print, so it
-  // wraps as a gradient instead. Verified on the cylinder at several
-  // azimuths after the change; if a hard line ever returns here, raise it
-  // rather than narrowing it.
-  { position: [-4.2, 2.4, 3.6], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
-  // transmission source: amber/cobalt would read near-black without it.
-  // Wide, weak, behind and above — it grades, never prints a line.
-  { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
-];
-
-/** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
- *  window forces EXACT zero at the quad rim whatever the sigma, so no
- *  emitter can ever print a hard boundary; float texels mean the ×6 HDR
- *  intensity can never quantize the gradient into contour bands. */
-function makeFeatherTexture(sigma: [number, number]): THREE.Texture {
-  const SIZE = 256;
-  const data = new Float32Array(SIZE * SIZE * 4);
-  const window1 = (t: number) => {
-    // 1 inside |t|<0.7, cosine roll to 0 at |t|=1
-    const a = (Math.min(1, Math.abs(t)) - 0.7) / 0.3;
-    return a <= 0 ? 1 : 0.5 + 0.5 * Math.cos(Math.PI * a);
-  };
-  for (let y = 0; y < SIZE; y++) {
-    for (let x = 0; x < SIZE; x++) {
-      const u = (x / (SIZE - 1)) * 2 - 1;
-      const v = (y / (SIZE - 1)) * 2 - 1;
-      const g =
-        Math.exp(-(u * u) / (2 * sigma[0] * sigma[0])) *
-        Math.exp(-(v * v) / (2 * sigma[1] * sigma[1])) *
-        window1(u) * window1(v);
-      const i = (y * SIZE + x) * 4;
-      data[i] = data[i + 1] = data[i + 2] = g;
-      data[i + 3] = g;
-    }
-  }
-  const tex = new THREE.DataTexture(data, SIZE, SIZE, THREE.RGBAFormat, THREE.FloatType);
-  tex.magFilter = tex.minFilter = THREE.LinearFilter;
-  tex.colorSpace = THREE.NoColorSpace;
-  tex.needsUpdate = true;
-  return tex;
-}
-
-function SoftEmitter({ emitter }: { emitter: Emitter }) {
-  const { position, scale, intensity, sigma } = emitter;
-  const material = useMemo(() => {
-    const m = new THREE.MeshBasicMaterial({
-      map: makeFeatherTexture(sigma),
-      transparent: true,
-      blending: THREE.AdditiveBlending, // adds light over the base HDRI
-      depthWrite: false,
-      side: THREE.FrontSide,
-      toneMapped: false,
-    });
-    m.color.setScalar(intensity); // HDR: the env portal renders half-float
-    return m;
-    // sigma is a tuple literal from EMITTERS — stringify for stable deps
-  }, [intensity, sigma[0], sigma[1]]); // eslint-disable-line react-hooks/exhaustive-deps
-  return (
-    <mesh position={position} scale={[scale[0], scale[1], 1]}
-          onUpdate={(self) => self.lookAt(0, 0, 0)}>
-      <planeGeometry />
-      <primitive object={material} attach="material" />
-    </mesh>
-  );
-}
-
-/** memo + memoized children: the environment must be INERT to parent
- *  re-renders. Without this, any state flip in the viewer (the first
- *  click sets `touched`) recreated the children array, drei's Environment
- *  portal re-fired its bake effect, and the frames={1} re-bake caught the
- *  portal with its HDRI background unset — the scene snapped to "four
- *  bright quads over black": bottle goes dark, halo wraps it (Jordan's
- *  wet-bottle-until-I-click bug). One mount, one bake, ever. */
 export const StudioEnvironment = memo(function StudioEnvironment() {
-  const emitters = useMemo(
-    () => EMITTERS.map((e, i) => <SoftEmitter key={i} emitter={e} />),
-    [],
-  );
   return (
-    // frames={1}: bake the cubemap ONCE — the environment is static, so
-    // nothing about the lighting can shimmer or re-resolve frame to frame.
-    // The HDRI is the PEAK-CLAMPED variant (luminance capped at 24,
-    // hue-preserving): the raw Poly Haven file peaks at ~97 and its hot
-    // bare-fixture texels rendered as firefly speckle — "miniature ants"
-    // (Jordan) — on the glossy glass. Pristine original kept alongside.
-    <Environment files="/env/studio_small_08_1k_peak24.hdr" resolution={512} frames={1}>
-      {emitters}
-    </Environment>
+    // frames={1}: bake the cubemap ONCE. The environment is static, so nothing
+    // about the lighting can shimmer or re-resolve frame to frame.
+    //
+    // Having no children is also what retires the rebake race this component
+    // was memo()-wrapped for: a parent re-render used to rebuild the emitter
+    // array, drei's portal re-fired its bake effect, and the frames={1} rebake
+    // caught the portal mid-setup — the scene snapped to bright quads over
+    // black (bottle dark, halo around it) on the first click. With a bare HDRI
+    // there is no child array to rebuild. memo stays as belt and braces.
+    <Environment
+      files="/env/studio-universal-softbox.hdr"
+      resolution={512}
+      frames={1}
+    />
   );
 });

@@ -529,7 +529,7 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
 
   // hybrid = HDRI + Lightformers baked into ONE cubemap (the candidate
   // single-environment architecture) — same component the scene shell mounts
-  if (preset.hybrid) return <StudioEnvironment />;
+  if (preset.managedEnv) return <StudioEnvironment />;
   if (preset.hdri) return <Environment files={preset.hdri} />;
 
   // legacy in-scene rig, kept only for A/B. Its narrow hot rim pair is what
