@@ -62,17 +62,24 @@ type Emitter = {
  *  punch now comes from elevation: edge/shoulder grades stay, full-height
  *  wraps cannot form at ANY orbit angle. */
 const EMITTERS: Emitter[] = [
-  // ONE key. On a glossy cylinder EVERY emitter mirrors as its own vertical
-  // streak, so four emitters drew four hard lines down the black collar —
-  // "the specular highlights on the lines on the cap are too much"
-  // (Jordan). The peak-clamped base HDRI already supplies ambient coverage
-  // and cap-top light, so the fill and the overhead softbox were adding
-  // reflections without adding information. Glossy is enough with one key.
-  { position: [-5, 6, 3.2], scale: [3.4, 9], intensity: 4.0, sigma: [0.66, 0.82] },
-  // Kept, and only this: a broad DIM source behind-above is what lets amber
-  // and cobalt transmit instead of reading near-black. It is wide, weak and
-  // behind the bottle, so it grades rather than printing a line.
-  { position: [0, 5, -6], scale: [8.5, 6.5], intensity: 1.25, sigma: [0.68, 0.68] },
+  // A REAL SOFTBOX, not a hot spot. sigma is the Gaussian's width as a
+  // fraction of the quad: at 0.66 the panel had a bright core and fell off
+  // fast, which is a spot light wearing a big frame — it still raked a hard
+  // band across the glass. At sigma >= 1.2 the Gaussian is essentially FLAT
+  // across the face, and the raised-cosine window (makeFeatherTexture) does
+  // the rim rolloff, so what the bottle mirrors is a broad even panel with
+  // a soft edge. That is what a softbox is.
+  //
+  // Bigger + dimmer for the same reason: apparent SIZE is what makes light
+  // soft, not intensity. A large panel at 2.4 wraps the shoulder; a small
+  // one at 4.0 punches a highlight. This has to flatter 126 different
+  // bottle shapes we have not modelled yet, and a big even source is the
+  // most shape-forgiving light there is — a hot narrow one has to be
+  // re-aimed per silhouette.
+  { position: [-4.2, 5.0, 3.4], scale: [7.0, 11.0], intensity: 2.4, sigma: [1.35, 1.45] },
+  // transmission source: amber/cobalt would read near-black without it.
+  // Wide, weak, behind and above — it grades, never prints a line.
+  { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
