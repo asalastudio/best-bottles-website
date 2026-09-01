@@ -117,10 +117,10 @@
       ],
       "roughness": 0.38,
       "metalness": 0.0,
-      "clearcoat": 0.15,
+      "clearcoat": 0.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). white phenolic - must READ white; components carry their own bright env in the lab because the dark glass room greys it. Jordan 2026-08-31: caps are PHENOLIC/COMPOSITE PLASTIC; gold/silver/copper are METALLIZED finishes on plastic, not solid metal. Finish matrix: black+white phenolic, copper MATTE only, silver shiny+matte, gold shiny+matte."
+      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). white phenolic - must READ white; components carry their own bright env in the lab because the dark glass room greys it. Jordan 2026-08-31: caps are PHENOLIC/COMPOSITE PLASTIC; gold/silver/copper are METALLIZED finishes on plastic, not solid metal. Finish matrix: black+white phenolic, copper MATTE only, silver shiny+matte, gold shiny+matte. 2026-09-01: clearcoat 0.15 -> 0 (stacked second specular lobe on an uncoated moulded cap; same class of error as CAP_SHINY_BLACK)."
     },
     "GLASS_AMBER": {
       "color": "#ffffff",
@@ -254,12 +254,12 @@
         0.8963,
         0.8714
       ],
-      "roughness": 0.3,
+      "roughness": 0.15,
       "metalness": 0.0,
-      "clearcoat": 0.25,
-      "ior": 1.49,
+      "clearcoat": 0.0,
+      "ior": 1.5,
       "transmission": 0.0,
-      "note": "LOCKED 2026-08-31 full-set freeze (Jordan: 'the best that we can do for now'). the sprayer ACTUATOR IS ALWAYS WHITE PP - only the collar carries the trim colour (PSD reference 13. 17-415 Spray, all six colourways, 2026-08-31)."
+      "note": "LIBRARY-EXACT 2026-09-01: plastic.plastic_clean (roughness 0.15, metalness 0, ior 1.5). Was roughness 0.3 with clearcoat 0.25 \u2014 the same stacked-lobe bug as the black cap (a second specular layer on an uncoated moulded plastic), plus twice the library roughness, which is why the head read flat and pasted-on."
     },
     "PART_BALL_PLASTIC": {
       "color": "#eeece4",
