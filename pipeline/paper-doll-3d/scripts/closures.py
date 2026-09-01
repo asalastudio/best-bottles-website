@@ -497,10 +497,31 @@ def nozzle_insert_builder(rig, finish, variant):
     hs = _fin_spec(c17, "ACTUATOR", finish)
     d, z = hs["spray_insert_d"], hs["orifice_z"]
     r_face = hs["body_od_high"] / 2.0
+    # A REAL ORIFICE, not a solid disc. create_cone(cap_ends=True) gave a
+    # flat plug, which rendered as a painted white dot — the part whose one
+    # job is to restrict flow had no bore at all. Revolve a section with a
+    # blind hole instead, using the orifice_d the actuator spec already
+    # carries. A recessed bore catches its own shadow, so it reads as an
+    # opening at every angle instead of a decal.
+    ro = _fin_spec(c17, "ACTUATOR", finish).get("orifice_d", 1.6) / 2.0
+    ro = min(ro, d / 2.0 - 0.25)          # always leave a visible land
+    depth, bore_z = 1.2, 1.2 / 2.0
+    prof = [
+        (0.0,     -bore_z),               # back centre
+        (d / 2.0, -bore_z),               # back face out to the rim
+        (d / 2.0,  bore_z),               # outer wall up to the front
+        (ro,       bore_z),               # front land, inward to the bore lip
+        (ro,       bore_z - 0.62),        # down the bore wall (blind)
+        (0.0,      bore_z - 0.62),        # bore floor to the axis
+    ]
     me = bpy.data.meshes.new("noz")
     bm = bmesh.new()
-    bmesh.ops.create_cone(bm, cap_ends=True, segments=24,
-                          radius1=d / 2.0, radius2=d / 2.0, depth=1.2)
+    vs = [bm.verts.new((r, 0.0, z)) for r, z in prof]
+    es = [bm.edges.new((vs[i], vs[i + 1])) for i in range(len(vs) - 1)]
+    bmesh.ops.spin(bm, geom=vs + es, axis=(0.0, 0.0, 1.0), cent=(0.0, 0.0, 0.0),
+                   steps=24, angle=math.radians(360.0))
+    bmesh.ops.remove_doubles(bm, verts=bm.verts, dist=1e-5)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
     bm.to_mesh(me); bm.free()
     obj = bpy.data.objects.new("noz", me)
     bpy.context.scene.collection.objects.link(obj)
