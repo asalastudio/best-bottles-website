@@ -125,7 +125,15 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     managedEnv: true,
     unifiedEnv: true,
     environmentIntensity: 1.0,
-    environmentRotation: 0,
+    // 92 deg, chosen by MEASUREMENT, not taste. A cylinder's silhouette
+    // mirrors environment azimuth 180 at horizon elevation, so any bright
+    // feature there prints a rim halo. Scanning rotations for the one that
+    // minimises luminance in that window: 0 deg leaves 1.368 there, 92 deg
+    // leaves 0.032 — a 98% cut — and it RAISES front-face energy from 0.501
+    // to 0.829, so the sheen gets stronger at the same time. Rotating the
+    // environment also turns the baked emitters, so StudioEnvironment's key
+    // is pre-rotated to compensate; move one and you must move the other.
+    environmentRotation: 92,
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
     backdrop: "#e9e6e0",
     provenance:

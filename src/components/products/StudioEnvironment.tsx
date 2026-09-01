@@ -62,34 +62,26 @@ type Emitter = {
  *  punch now comes from elevation: edge/shoulder grades stay, full-height
  *  wraps cannot form at ANY orbit angle. */
 const EMITTERS: Emitter[] = [
-  // A REAL SOFTBOX, not a hot spot. sigma is the Gaussian's width as a
-  // fraction of the quad: at 0.66 the panel had a bright core and fell off
-  // fast, which is a spot light wearing a big frame — it still raked a hard
-  // band across the glass. At sigma >= 1.2 the Gaussian is essentially FLAT
-  // across the face, and the raised-cosine window (makeFeatherTexture) does
-  // the rim rolloff, so what the bottle mirrors is a broad even panel with
-  // a soft edge. That is what a softbox is.
+  // ONE KEY. That is the whole rig now (Jordan: "we need more simple key
+  // lighting", and before that "glossy is enough with maybe just one
+  // keylight").
   //
-  // Bigger + dimmer for the same reason: apparent SIZE is what makes light
-  // soft, not intensity. A large panel at 2.2 wraps the shoulder; a small
-  // one at 4.0 punches a highlight. This has to flatter 126 different
-  // bottle shapes we have not modelled yet, and a big even source is the
-  // most shape-forgiving light there is — a hot narrow one has to be
-  // re-aimed per silhouette.
+  // THE REAR EMITTER IS GONE, and it was not a judgement call — it was
+  // arithmetic. A cylinder reflects environment azimuth 2*psi, so a source at
+  // azimuth A lands at psi = A/2, and psi = +/-90 IS THE SILHOUETTE. The rear
+  // emitter sat at azimuth exactly 180.0, which maps to psi +/-90 and NOWHERE
+  // ELSE: it could only ever draw the outline. That is the "line halo effect
+  // around it" Jordan flagged, and no amount of softening it would have
+  // helped, because its position was the defect.
   //
-  // LOWERED to y 2.4 (was 5.0) and made taller: high panels light the cap
-  // and shoulder and leave the body dark, so the sheen has to run DOWN the
-  // body. Note this deliberately sits nearer the horizon than the lane's
-  // no-horizon rule, which was written about NARROW HOT sources — those
-  // mirror off a cylinder as a hard full-height line (five failed rigs).
-  // A flat, panel-wide source at sigma 1.35 has no core to print, so it
-  // wraps as a gradient instead. Verified on the cylinder at several
-  // azimuths after the change; if a hard line ever returns here, raise it
-  // rather than narrowing it.
-  { position: [-4.2, 2.4, 3.6], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
-  // transmission source: amber/cobalt would read near-black without it.
-  // Wide, weak, behind and above — it grades, never prints a line.
-  { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
+  // It was there to backlight amber and cobalt so they transmit rather than
+  // read black. That job now falls to the base HDRI, which still carries
+  // energy behind the bottle. If dark glass goes dead as a result, the fix is
+  // a rear source placed HIGH and kept SHORT in elevation — the silhouette
+  // mirrors azimuth 180 at HORIZON elevation, so a high backlight still
+  // refracts through the body without being mirrored at the rim. Do not
+  // simply put this one back.
+  { position: [-3.45, 2.40, -4.32], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
