@@ -14,24 +14,52 @@
  * with Blender, so it becomes a token here.
  *
  * BLENDER PARITY CONTRACT — the hero lane must match these exactly:
- *   view transform  ACES (three's ACESFilmic), NOT Blender's "Standard"
+ *   view transform  Khronos PBR Neutral (three's NeutralToneMapping)
  *   exposure        RENDER_EXPOSURE below
  *   output          sRGB
  * See docs/configurator/RENDER-DESIGN-SYSTEM-PROPOSAL.md §3.
+ *
+ * NOTE the parity target CHANGED with the tone mapper (see below). Blender has
+ * no built-in PBR Neutral view transform, so hero-lane parity now needs the
+ * Khronos OCIO config or a matching OCIO/LUT step. Until that is set up, hero
+ * stills and the web render are NOT byte-comparable — do not treat a
+ * side-by-side as a material discrepancy.
  */
 
 import * as THREE from "three";
 
 /**
- * The shared exposure. 0.91 is not a fresh choice — it is the value
- * APPROVED_STUDIO ("room") was already running in production, so adopting it
- * as the token is byte-identical for every approved look while removing the
- * per-preset drift. Blender must render at the equivalent exposure.
+ * The shared exposure. Was 0.91, inherited from the "room" preset so that
+ * adopting the token was byte-identical for every approved look. Moved to 1.0
+ * with the switch to Neutral: the two curves have different response, so 0.91
+ * was an ACES-specific anchor and carrying it over would have measured the
+ * wrong thing. 1.0 is the audit's Neutral baseline — tune environment energy
+ * first and only then touch global exposure.
  */
-export const RENDER_EXPOSURE = 0.91;
+export const RENDER_EXPOSURE = 1.0;
 
-/** Pinned explicitly so no library default can move it. */
-export const TONE_MAPPING = THREE.ACESFilmicToneMapping;
+/**
+ * Khronos PBR Neutral, not ACES.
+ *
+ * ACES is a FILM view transform. Its highlight rolloff desaturates as it
+ * compresses, so a bright saturated value is pushed toward white — which is
+ * fine for cinema and wrong for merchandising, where the job is to show the
+ * customer the colour of the actual product. Khronos published PBR Neutral
+ * specifically for e-commerce PBR: it preserves hue and saturation through the
+ * highlights and only compresses what would otherwise clip.
+ *
+ * This matters for the pale silhouette rim Jordan flagged. Six causes were
+ * tested and excluded — the rear emitter, the HDRI's silhouette peak (rotated
+ * 98% away), the amber's clearcoat, the cove sweep, the transmission backside
+ * pass, and the baked thickness map. The rim survived all six, which is the
+ * signature of a POST-PROCESS effect: a tone curve runs after every one of
+ * them, so nothing upstream can move it. ACES lifting a bright grazing
+ * reflection to white fits that evidence where no material cause did.
+ *
+ * Adopted on Jordan's reference (khronos.org PBR Neutral announcement) and the
+ * 2026-09-01 studio audit, which makes it the merchandising baseline.
+ */
+export const TONE_MAPPING = THREE.NeutralToneMapping;
 export const OUTPUT_COLOR_SPACE = THREE.SRGBColorSpace;
 
 /** Spread into <Canvas gl={...}>. One call site, one contract. */
