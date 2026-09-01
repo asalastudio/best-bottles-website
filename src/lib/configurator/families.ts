@@ -43,6 +43,15 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   {
     key: "cyl9",
     finish: "17-415",
+    // SKU truth, straight from the PSD library: "20. Closures .../12. 17-415
+    // Roll on" holds exactly ten colourways -- blkdot, cu, mattgl, mattsl,
+    // pnkdot, shnblk, shngl, shnsl, sldot, white -- and every one has a
+    // material token. Until now this family declared NO trims at all, so the
+    // storefront rendered a single hardcoded black cap and none of the ten
+    // was reachable, the pink dot cap included.
+    trims: ["CAP_SHINY_BLACK", "CAP_WHITE", "CAP_SHINY_GOLD", "CAP_MATTE_GOLD",
+            "CAP_SHINY_SILVER", "CAP_MATTE_SILVER", "CAP_COPPER",
+            "CAP_DOTS_PINK", "CAP_DOTS_SILVER", "CAP_DOTS_BLACK"],
     slugRe: /^cylinder-9ml-.*17-415-(rollon|finemist|lotionpump)$/,
     glasses: ["clear", "amber", "cobalt", "frosted", "swirl"],
     bases: ["none", "roller", "sprayer", "pump"],

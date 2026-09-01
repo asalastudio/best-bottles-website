@@ -194,8 +194,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       const capGltf = moulding === "leather" ? capLeather
                     : moulding === "tall" ? capTall : cap;
       g.push(build(capGltf, capMat));
+      // studMatFor, not a hardcoded chrome: the pink cap's stones are
+      // RHINESTONES and the silver cap's are brighter chrome. The other two
+      // stud call sites already ask; this one did not, so a pink cap on a
+      // capped SKU rendered plain chrome studs.
       if (capMat.startsWith("CAP_DOTS"))
-        g.push(build(capDots, "PART_STUD_CHROME"));
+        g.push(build(capDots, studMatFor(capMat)));
       return g;
     }
     if (mode === "dropper") {
