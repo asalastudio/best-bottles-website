@@ -455,14 +455,14 @@
       "specularIntensity": 1.5
     },
     "CAP_DOTS_PINK": {
-      "color": "#dfaec8",
+      "color": "#f0dae4",
       "linear": [
-        0.748,
-        0.427,
-        0.578
+        0.855,
+        0.678,
+        0.76
       ],
       "metalness": 0.0,
-      "roughness": 0.42,
+      "roughness": 0.38,
       "clearcoat": 0.15,
       "ior": 1.49,
       "transmission": 0.0,
@@ -471,7 +471,7 @@
       "env": "tent",
       "specularIntensity": 1.2,
       "specularColor": "#ffffff",
-      "note": "REVISED 2026-08-31 by Jordan's directive ('this is more of a FLAT pink' — supersedes the full-set-freeze value, which rendered as silvery rose METAL). Shell now shares the CAP_PINK flat-pale-pink dielectric recipe (metalness 0 per the three.js metalness contract Jordan cited: painted plastic is 0, only real metal is 1). Albedo #dfaec8 measured+compensated from CpRoll17-415PnkDot.psd. Studs render separately as PART_STUD_RHINESTONE (ring-sparkle). DRAFT pending lab approval."
+      "note": "DRAFT v4 2026-08-31 — shares the CAP_PINK flat pink shell; studs render separately as PART_STUD_RHINESTONE. Parity-driven."
     },
     "CAP_DOTS_SILVER": {
       "color": "#f5f6f6",
@@ -741,14 +741,14 @@
       "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
     },
     "CAP_PINK": {
-      "color": "#dfaec8",
+      "color": "#f0dae4",
       "linear": [
-        0.748,
-        0.427,
-        0.578
+        0.855,
+        0.678,
+        0.76
       ],
       "metalness": 0.0,
-      "roughness": 0.42,
+      "roughness": 0.38,
       "clearcoat": 0.15,
       "ior": 1.49,
       "transmission": 0.0,
@@ -757,26 +757,26 @@
       "env": "tent",
       "specularIntensity": 1.2,
       "specularColor": "#ffffff",
-      "note": "DRAFT v3 2026-08-31 — pending Jordan lab approval, NOT locked. v2's #ddc6d1 rendered SILVER on the stage (Jordan: 'where is the pink cap?') — pale low-sat albedo + tent env + ACES collapses to grey. Same lesson as the coloured metals: compensate perceptually. Albedo pushed to a saturated pale rose #dfaec8, envMapIntensity 0.9 -> 0.8 so the env wash doesn't dilute it. Flat dielectric recipe unchanged (metalness 0, roughness 0.42 + matte maps, clearcoat 0.15). Source truth: CpRoll17-415PnkDot.psd flat shell."
+      "note": "DRAFT v4 2026-08-31 — PARITY-DRIVEN, pending lab approval. parity-report vs 12-17-415-roll-on-cproll17-415pnkdot: v3 shell dE 9.02 (render #e4d2dd vs reference #efe7e8) — too dark, too magenta. Albedo lifted to #f0dae4, roughness 0.42->0.38. Flat dielectric recipe unchanged (metalness 0 per three.js contract)."
     },
     "PART_STUD_RHINESTONE": {
-      "color": "#6d7772",
+      "color": "#2a2f2d",
       "linear": [
-        0.155,
-        0.19,
-        0.172
+        0.0265,
+        0.0323,
+        0.0293
       ],
       "metalness": 0.0,
-      "roughness": 0.03,
+      "roughness": 0.02,
       "clearcoat": 1.0,
-      "ior": 2.2,
+      "ior": 2.4,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 4.0,
+      "envMapIntensity": 5.5,
       "env": "metal",
-      "specularIntensity": 3.5,
+      "specularIntensity": 4.0,
       "specularColor": "#ffffff",
-      "note": "DRAFT v2 2026-08-31 — pending Jordan lab approval, NOT locked. Matched to the PSD stone zoom: each rhinestone reads as a BRIGHT WHITE SPARKLE RING around a DARK GLASSY HEART (flush-set crystal). Recipe: dark glass-green heart colour + blazing rim specular — dielectric, roughness 0.03, ior 2.2, specular 3.5, envMapIntensity 4.0 on the metal studio so the dome edge catches hot ring highlights while the face stays dark. Flush geometry already true (stud sink); stones stay explicit by CONTRAST, not protrusion — exactly Jordan's spec."
+      "note": "DRAFT v4 2026-08-31 — PARITY-DRIVEN, pending approval. parity-report: reference stones are 18.6% bright AND 10.1% dark pixels; v3 gave 0.87% bright / 0.00% dark — barely visible. The dark half is the signature: a flush-set crystal reads as a DEEP DARK heart ringed by a blazing rim. Heart pushed to #2a2f2d, roughness 0.02, ior 2.4, specular 4.0, env 5.5. If bezel still reads 0, the remaining gap is GEOMETRY (the stud sink needs a true bezel ring), not material."
     }
   }
 }
