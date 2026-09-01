@@ -58,8 +58,10 @@ type LabClosure = "none" | "capped" | "roller" | "rollerCapped"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
 function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
-                   metalStudioId, capFinish = "17-415" }: {
+                   metalStudioId, capFinish = "17-415", useMaster = false }: {
   mode: LabClosure; neckY: number;
+  /** swap the legacy two-file cap for the traced CAP_PNKDOT master */
+  useMaster?: boolean;
   capMat: string; ballMat: string; capTune: MatOverride; trimMat: string;
   metalTune?: Partial<MetalStudioParams>;
   metalStudioId?: MetalStudioId;
@@ -76,6 +78,9 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
   const cap18Tall = useGLTF("/models/closures/BB_CAP_18415_TALL.glb");
   const cap18Leather = useGLTF("/models/closures/BB_CAP_18415_LEATHER.glb");
   const capDots = useGLTF("/models/closures/BB_CAP_DOTS_17415.glb");
+  // The traced master: one mesh set carrying the cap body AND its eight
+  // flush crystals, silhouette fitted to CpRoll17-415PnkDot.psd.
+  const capMaster = useGLTF("/models/closures/CAP_PNKDOT.glb");
   const collar = useGLTF(`/models/closures/BB_SPR_COLLAR_${labFin}.glb`);
   const actuator = useGLTF(`/models/closures/BB_SPR_ACTUATOR_${labFin}.glb`);
   const overcap = useGLTF(`/models/closures/BB_SPR_OVERCAP_${labFin}.glb`);
@@ -152,14 +157,20 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
   // universal studio is correct and consistent with every other component.
   // The baked matcaps stay in public/models/matcaps/ for future use.
   const MATCAP_FOR: Record<string, THREE.Texture> = {};
+  /** `only` restricts a pass to some meshes, so a single GLB carrying more
+   *  than one material can be assembled in two passes. The legacy parts put
+   *  shell and studs in separate FILES; the traced master carries both, and
+   *  without this its crystals would take the cap's colourway. */
   const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string,
-                             tune?: MatOverride) => {
+                             tune?: MatOverride,
+                             only?: (meshName: string) => boolean) => {
     const scene = gltf.scene.clone(true);
     const base = mats?.[matName];
     const m = base ? { ...base, ...(tune || {}) } : base;
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
+      if (only && !only(mesh.name)) { mesh.visible = false; return; }
       const mc = MATCAP_FOR[matName];
       if (mc) {
         mesh.material = new THREE.MeshMatcapMaterial({ matcap: mc });
@@ -236,6 +247,28 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
     });
     return scene;
   }, [mats, plasticEnv, metalEnv, matcaps, pbrMaps]);
+
+  /** Assemble the traced master: colourway on the body, chrome on the
+   *  crystals, seated so its base lands where the legacy cap's base does.
+   *
+   *  THE SEAT IS AN ASSUMPTION, not a measurement, and it is the one number
+   *  here that is not derived from the photograph. The master's origin is
+   *  its own BASE, deliberately: Jordan's brief is explicit that 17-415
+   *  names the neck interface and NOT this decorative shell, so the model
+   *  refuses to claim a rim datum it has never been measured against. To
+   *  show it on a bottle the lab has to pick one, so it borrows the legacy
+   *  cap's skirt. Correct that here the day a physical cap is measured. */
+  const SEAT_MM = 14.70;
+  const buildMaster = useCallback((shellMat: string, tune: MatOverride) => {
+    const isCrystal = (n: string) => n.toUpperCase().includes("CRYSTAL");
+    const g = new THREE.Group();
+    g.add(build(capMaster, shellMat, tune, (n) => !isCrystal(n)));
+    g.add(build(capMaster, shellMat === "CAP_DOTS_SILVER"
+                ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME",
+                undefined, isCrystal));
+    g.position.y = -SEAT_MM * 0.001;
+    return g;
+  }, [build, capMaster]);
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
@@ -253,11 +286,16 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
       g.push({ scene: build(housing, "PART_HOUSING_PP_NATURAL") });
       g.push({ scene: build(ball, ballMat) });
       if (mode === "rollerCapped") {
-        // *Dot caps: shell in the colourway + BB_CAP_DOTS studs in chrome
-        g.push({ scene: build(cap, capMat, capTune) });
-        if (capMat.startsWith("CAP_DOTS"))
-          g.push({ scene: build(capDots, capMat === "CAP_DOTS_SILVER"
-                        ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME") });
+        if (useMaster && capMat.startsWith("CAP_DOTS")) {
+          // the traced master already carries its own crystals
+          g.push({ scene: buildMaster(capMat, capTune) });
+        } else {
+          // legacy: shell in the colourway + BB_CAP_DOTS studs in chrome
+          g.push({ scene: build(cap, capMat, capTune) });
+          if (capMat.startsWith("CAP_DOTS"))
+            g.push({ scene: build(capDots, capMat === "CAP_DOTS_SILVER"
+                          ? "PART_STUD_CHROME_BRIGHT" : "PART_STUD_CHROME") });
+        }
       }
     } else {
       // the trim tune rides capTune so the same sliders serve sprays too
@@ -269,8 +307,8 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
         g.push({ scene: build(overcap, "PART_OVERCAP_CLEAR") });
     }
     return g;
-  }, [mode, mats, build, housing, ball, cap, cap18, cap18Tall, cap18Leather,
-      capDots, collar, actuator, overcap, spout,
+  }, [mode, mats, build, buildMaster, useMaster, housing, ball, cap, cap18,
+      cap18Tall, cap18Leather, capDots, collar, actuator, overcap, spout,
       capMat, ballMat, capTune, trimMat]);
   if (!parts) return null;
   return (
@@ -283,8 +321,10 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
 function Model({
   url, preset, envIntensity, transmissionMat, caustics, causticIntensity,
   thicknessUrl, bakeMax, frostUrl, closure, capMat, ballMat, capTune, trimMat,
-  metalTune, metalStudioId, capFinish, onMeasure,
+  metalTune, metalStudioId, capFinish, useMaster, onMeasure,
 }: {
+  /** swap the legacy two-file cap for the traced CAP_PNKDOT master */
+  useMaster?: boolean;
   url: string; preset: GlassPreset; envIntensity: number;
   transmissionMat: boolean; caustics: boolean; causticIntensity: number;
   /** baked per-texel thickness (Blender lane). null = identity 1x1 white,
@@ -398,7 +438,7 @@ function Model({
   return (
     <group>
       <primitive object={scene} />
-      <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
+      <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat} useMaster={useMaster}
                capTune={capTune} trimMat={trimMat} metalTune={metalTune}
                metalStudioId={metalStudioId} capFinish={capFinish} />
       {glass && transmissionMat && !preset.thinWall && caustics ? (
@@ -649,6 +689,10 @@ export default function MaterialLab(
   // interior content: Pacdora's lesson — clear glass needs something of its
   // own to refract. Also the first live configurator joint.
   const [closure, setClosure] = useState<LabClosure>("roller");
+  /** legacy two-file cap vs the traced CAP_PNKDOT master. A lab exists to
+   *  put two candidates side by side, and this is the pair that matters:
+   *  the old cap's crown is ~5x too square against the photograph. */
+  const [useMaster, setUseMaster] = useState(true);
   const [trimMat, setTrimMat] = useState("CAP_SHINY_BLACK");
   // deep link from the Build Board: /dev/material-lab?mat=CAP_PINK opens
   // with that token on the cap, ready to tune as a MeshPhysicalMaterial
@@ -800,6 +844,7 @@ export default function MaterialLab(
                        : null}
                      bakeMax={bakeLive ? bakeMax : null}
                      closure={closure} capMat={capMat} ballMat={ballMat}
+                     useMaster={useMaster}
                      capTune={capTune} trimMat={trimMat} metalTune={metalTune}
                      metalStudioId={metalStudioId}
                      capFinish={(body.bodyId.includes("18-415") ? "18-415" : "17-415")}
@@ -1009,7 +1054,18 @@ export default function MaterialLab(
             {[["steel", "PART_BALL_STEEL"], ["plastic", "PART_BALL_PLASTIC"]].map(([n, m]) => (
               <button key={m} onClick={() => setBallMat(m)} style={btn(ballMat === m)}>{n}</button>
             ))}
-            {closure === "rollerCapped" || closure === "capped" ? (<>
+            {closure === "rollerCapped" && capMat.startsWith("CAP_DOTS") ? (
+          <div style={{ display: "flex", gap: 4, alignItems: "center",
+                        margin: "0 0 6px", flexWrap: "wrap" }}>
+            <span style={{ color: "#b9b9c4", fontSize: 11, marginRight: 2 }}>cap geometry</span>
+            <button onClick={() => setUseMaster(false)} style={btn(!useMaster)}>legacy</button>
+            <button onClick={() => setUseMaster(true)} style={btn(useMaster)}>traced master</button>
+            <span style={{ color: "#6f6f7a", fontSize: 10 }}>
+              silhouette fitted to the psd; scale provisional
+            </span>
+          </div>
+        ) : null}
+        {closure === "rollerCapped" || closure === "capped" ? (<>
               <span style={{ color: "#b9b9c4", fontSize: 11, margin: "0 2px 0 8px" }}>cap</span>
               {[["black", "CAP_SHINY_BLACK"], ["white", "CAP_WHITE"],
                 ["gold", "CAP_SHINY_GOLD"], ["mt gold", "CAP_MATTE_GOLD"],
