@@ -135,6 +135,19 @@ export const getFamilyRows = query({
                 graceSku: b.graceSku,
                 websiteSku: b.websiteSku,
                 itemName: b.itemName,
+                // the fields getCustomerFacingProductName() composes a name
+                // from — capacity + colour + family, then product type. A row
+                // must be named the way the PDP names the same product, or
+                // the matrix invents a second vocabulary for one catalog.
+                family: b.family,
+                applicator: b.applicator,
+                category: b.category,
+                capColor: b.capColor,
+                capStyle: b.capStyle,
+                // the row's own photograph — the matrix is a buying surface,
+                // and a wall of text rows is far harder to scan than a wall
+                // of bottles
+                imageUrl: b.imageUrl,
                 capacity: b.capacity,
                 capacityMl: b.capacityMl,
                 neckThreadSize: b.neckThreadSize,

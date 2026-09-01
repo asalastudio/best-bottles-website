@@ -28,6 +28,7 @@ import { useRouter } from "next/navigation";
 import { Plus, Minus, WarningCircle } from "@/components/icons";
 import { cn } from "@/lib/utils";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
+import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
 /* ------------------------------------------------------------------ types */
 
@@ -43,6 +44,12 @@ export type MatrixRow = {
     graceSku?: string | null;
     websiteSku?: string | null;
     itemName?: string | null;
+    family?: string | null;
+    applicator?: string | null;
+    category?: string | null;
+    capColor?: string | null;
+    capStyle?: string | null;
+    imageUrl?: string | null;
     capacity?: string | null;
     capacityMl?: number | null;
     neckThreadSize?: string | null;
@@ -182,8 +189,8 @@ export default function MatrixClient({
                         </span>
                     </header>
 
-                    <div className="hidden lg:grid grid-cols-[190px_100px_100px_84px_1fr_120px_92px]
-                                    gap-2 px-4 py-2 bg-warm-white border-b border-champagne/60
+                    <div className="hidden lg:grid grid-cols-[356px_104px_104px_84px_1fr_120px_92px]
+                                    gap-3 px-4 py-2 bg-warm-white border-b border-champagne/60
                                     text-2xs uppercase tracking-label font-bold text-ash">
                         <span>Bottle</span><span>Size</span><span>Finish</span><span>Neck</span>
                         <span>Component</span><span>Qty</span><span />
@@ -233,13 +240,21 @@ function Row({ row, config, pickerOpen, onTogglePicker, onChange }: {
             "relative border-b border-bone last:border-b-0",
             decided && "bg-[#F0F4EE] border-l-[3px] border-l-[#5B7B5D]",
         )}>
-            <div className="grid grid-cols-1 lg:grid-cols-[190px_100px_100px_84px_1fr_120px_92px]
-                            gap-2 items-center px-4 py-2.5 text-spec">
-                <div className="min-w-0">
-                    <p className="font-semibold text-obsidian truncate">
-                        {row.color ?? ""} {row.shape ?? "Bottle"}
-                    </p>
-                    <p className="text-2xs text-ash truncate">{row.graceSku ?? row.websiteSku}</p>
+            <div className="grid grid-cols-1 lg:grid-cols-[356px_104px_104px_84px_1fr_120px_92px]
+                            gap-3 items-center px-4 py-2 text-spec">
+                <div className="flex items-center gap-2.5 min-w-0">
+                    <BottleThumb row={row} />
+                    <div className="min-w-0">
+                        {/* named the way the PDP names the same product —
+                            capacity + colour + family + type — so the matrix
+                            does not invent a second vocabulary for one catalog */}
+                        <p className="font-semibold text-obsidian truncate">
+                            {getCustomerFacingProductName({ variant: row }).displayName}
+                        </p>
+                        <p className="text-2xs text-ash truncate">
+                            {row.graceSku ?? row.websiteSku}
+                        </p>
+                    </div>
                 </div>
                 <span className="text-slate tabular-nums">{row.capacity ?? "—"}</span>
                 <span className="text-slate">{row.color ?? "—"}</span>
@@ -447,6 +462,26 @@ function OrderBar({ order }: {
                 </button>
             </div>
         </div>
+    );
+}
+
+/** The row's photograph. A buying grid is scanned by eye before it is read,
+ *  so the image well is reserved even when a product has no photo yet —
+ *  otherwise rows jump horizontally as images load or fail. */
+function BottleThumb({ row }: { row: MatrixRow }) {
+    const [broken, setBroken] = useState(false);
+    const src = row.imageUrl && !broken ? row.imageUrl : null;
+    return (
+        <span className="shrink-0 grid place-items-center w-11 h-14 rounded-[2px]
+                         bg-product-well overflow-hidden">
+            {src ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={src} alt="" loading="lazy" onError={() => setBroken(true)}
+                     className="w-full h-full object-contain mix-blend-multiply" />
+            ) : (
+                <span className="text-2xs text-ash">—</span>
+            )}
+        </span>
     );
 }
 
