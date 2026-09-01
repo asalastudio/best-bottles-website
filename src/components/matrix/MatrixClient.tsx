@@ -237,8 +237,8 @@ export default function MatrixClient({
                         </span>
                     </header>
 
-                    <div className="hidden lg:grid grid-cols-[356px_104px_104px_84px_1fr_120px_92px]
-                                    gap-3 px-4 py-2 bg-warm-white border-b border-champagne/60
+                    <div className="hidden lg:grid grid-cols-[400px_112px_112px_88px_1fr_132px_104px]
+                                    gap-4 px-5 py-2.5 bg-warm-white border-b border-champagne/60
                                     text-2xs uppercase tracking-label font-bold text-ash">
                         <span>Bottle</span><span>Size</span><span>Finish</span><span>Neck</span>
                         <span>Component</span><span>Qty</span><span />
@@ -284,18 +284,18 @@ function Row({ row, config, onChange }: {
             "relative border-b border-bone last:border-b-0",
             decided && "bg-[#F0F4EE] border-l-[3px] border-l-[#5B7B5D]",
         )}>
-            <div className="grid grid-cols-1 lg:grid-cols-[356px_104px_104px_84px_1fr_120px_92px]
-                            gap-3 items-center px-4 py-2 text-spec">
-                <div className="flex items-center gap-2.5 min-w-0">
+            <div className="grid grid-cols-1 lg:grid-cols-[400px_112px_112px_88px_1fr_132px_104px]
+                            gap-4 items-center px-5 py-3.5 text-ui">
+                <div className="flex items-center gap-3.5 min-w-0">
                     <BottleThumb row={row} />
                     <div className="min-w-0">
                         {/* named the way the PDP names the same product —
                             capacity + colour + family + type — so the matrix
                             does not invent a second vocabulary for one catalog */}
-                        <p className="font-semibold text-obsidian truncate">
+                        <p className="text-sm font-semibold leading-snug text-obsidian">
                             {getCustomerFacingProductName({ variant: row }).displayName}
                         </p>
-                        <p className="text-2xs text-ash truncate">
+                        <p className="text-caption text-ash truncate mt-0.5">
                             {row.graceSku ?? row.websiteSku}
                         </p>
                     </div>
@@ -331,7 +331,7 @@ function Row({ row, config, onChange }: {
                     disabled={!decided}
                     onClick={() => onChange({})}
                     className={cn(
-                        "rounded-[3px] px-3 py-1.5 text-spec font-semibold transition-colors duration-200",
+                        "rounded-[3px] px-4 py-2 text-ui font-semibold transition-colors duration-200",
                         decided
                             ? "bg-[#5B7B5D] text-white"
                             : "border border-obsidian text-obsidian hover:bg-obsidian hover:text-white disabled:opacity-40",
@@ -370,11 +370,11 @@ function ComponentChips({ row, config, onChange }: {
         return (
             <button type="button"
                 onClick={() => { onChange({ component: undefined }); setOpenType(null); }}
-                className="inline-flex items-center gap-1.5 max-w-full rounded-[3px]
-                           bg-white border border-obsidian px-2 py-1 text-caption
+                className="inline-flex items-center gap-2 max-w-full rounded-[3px]
+                           bg-white border border-obsidian px-2.5 py-1.5 text-caption
                            font-semibold text-obsidian transition-colors duration-200
                            hover:border-muted-gold">
-                <ClosureIcon type={config.component.groupKey ?? ""} size={15} />
+                <ClosureIcon type={config.component.groupKey ?? ""} size={20} />
                 <span className="truncate">{shortName(config.component.itemName)}</span>
                 <Check size={12} weight="bold" className="shrink-0 text-[#5B7B5D]" />
             </button>
@@ -383,10 +383,10 @@ function ComponentChips({ row, config, onChange }: {
     if (config?.component === null) {
         return (
             <button type="button" onClick={() => onChange({ component: undefined })}
-                className="inline-flex items-center gap-1.5 rounded-[3px] bg-white
-                           border border-champagne px-2 py-1 text-caption text-slate
+                className="inline-flex items-center gap-2 rounded-[3px] bg-white
+                           border border-champagne px-2.5 py-1.5 text-caption text-slate
                            transition-colors duration-200 hover:border-muted-gold">
-                <BottleOnlyIcon size={15} />
+                <BottleOnlyIcon size={20} />
                 Bottle only
                 <Check size={12} weight="bold" className="text-[#5B7B5D]" />
             </button>
@@ -411,23 +411,25 @@ function ComponentChips({ row, config, onChange }: {
                             else setOpenType(openType === t ? null : t);
                         }}
                         className={cn(
-                            "inline-flex items-center gap-1 rounded-[3px] px-1.5 py-1",
-                            "text-2xs font-semibold transition-colors duration-200",
+                            "inline-flex items-center gap-1.5 rounded-[3px] px-2 py-1.5",
+                            "text-caption font-semibold transition-colors duration-200",
                             openType === t
                                 ? "bg-obsidian text-white"
                                 : "border border-champagne text-slate hover:border-muted-gold hover:text-obsidian",
                         )}>
-                        <ClosureIcon type={t} size={15} />
-                        <span className="tabular-nums">{xs.length}</span>
+                        <ClosureIcon type={t} size={20} />
+                        <span>{t}</span>
+                        <span className="tabular-nums opacity-60">{xs.length}</span>
                     </button>
                 ))}
                 <button type="button" title="Bottle only — no component"
                     onClick={() => onChange({ component: null })}
-                    className="inline-flex items-center gap-1 rounded-[3px] px-1.5 py-1
-                               text-2xs font-semibold border border-dashed border-champagne
+                    className="inline-flex items-center gap-1.5 rounded-[3px] px-2 py-1.5
+                               text-caption font-semibold border border-dashed border-champagne
                                text-ash transition-colors duration-200
                                hover:border-muted-gold hover:text-gold-dim">
-                    <BottleOnlyIcon size={15} />
+                    <BottleOnlyIcon size={20} />
+                    <span>Bottle only</span>
                 </button>
             </div>
 
@@ -440,7 +442,7 @@ function ComponentChips({ row, config, onChange }: {
                                 <button type="button" disabled={out}
                                     onClick={() => onChange({ component: { ...c, groupKey: openType } })}
                                     className={cn(
-                                        "rounded-[3px] border px-1.5 py-0.5 text-2xs transition-colors duration-200",
+                                        "rounded-[3px] border px-2 py-1 text-caption transition-colors duration-200",
                                         out
                                             ? "border-champagne/60 text-ash line-through cursor-not-allowed"
                                             : "border-champagne text-slate hover:border-obsidian hover:text-obsidian",
@@ -464,14 +466,14 @@ function Stepper({ value, onChange }: { value: number; onChange: (v: number) => 
         <div className="inline-flex items-center border border-champagne rounded-[3px] overflow-hidden">
             <button type="button" aria-label="Decrease"
                 onClick={() => onChange(Math.max(1, value - 1))}
-                className="px-2 py-1.5 text-slate hover:bg-warm-white transition-colors duration-200">
-                <Minus size={11} />
+                className="px-2.5 py-2 text-slate hover:bg-warm-white transition-colors duration-200">
+                <Minus size={13} />
             </button>
-            <span className="px-2 text-spec font-semibold tabular-nums text-obsidian">{value}</span>
+            <span className="px-2.5 text-ui font-semibold tabular-nums text-obsidian">{value}</span>
             <button type="button" aria-label="Increase"
                 onClick={() => onChange(value + 1)}
-                className="px-2 py-1.5 text-slate hover:bg-warm-white transition-colors duration-200">
-                <Plus size={11} />
+                className="px-2.5 py-2 text-slate hover:bg-warm-white transition-colors duration-200">
+                <Plus size={13} />
             </button>
         </div>
     );
@@ -548,14 +550,14 @@ function BottleThumb({ row }: { row: MatrixRow }) {
     const [broken, setBroken] = useState(false);
     const src = row.imageUrl && !broken ? row.imageUrl : null;
     return (
-        <span className="shrink-0 grid place-items-center w-11 h-14 rounded-[2px]
+        <span className="shrink-0 grid place-items-center w-[76px] h-[96px] rounded-[3px]
                          bg-product-well overflow-hidden">
             {src ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img src={src} alt="" loading="lazy" onError={() => setBroken(true)}
                      className="w-full h-full object-contain mix-blend-multiply" />
             ) : (
-                <span className="text-2xs text-ash">—</span>
+                <BottleOnlyIcon size={34} className="text-ash/60" />
             )}
         </span>
     );
