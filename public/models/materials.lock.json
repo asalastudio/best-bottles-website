@@ -1,5 +1,6 @@
 {
  "files": {
+  "public/env/studio_small_08_1k_peak24.hdr": "a8d6a2064ad4cdf1",
   "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb": "6d0773f37bfee7eb",
   "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png": "3f21a18fa6f5715b",
   "public/models/bodies-thickness/Circle-disc-18-415-88x73.glb": "98de7941e2a6a5be",
@@ -17,9 +18,8 @@
   "public/models/bodies-thickness/Round-sphere-18-415-83x69.glb": "ead230bacfb68256",
   "public/models/bodies-threaded/Cyl-round-17-415-70x20.glb": "c63517d3900b6070",
   "public/models/bodies-threaded/CylSwrl-round-17-415-74x21.glb": "fd0b9eea0dea5886",
-  "public/models/closures/BB_ANSP_ASSEMBLY_18415.glb": "2b7380784b17a00d",
-  "public/models/closures/BB_ANSP_BULB_18415.glb": "f83b56c4713c6041",
-  "public/models/closures/BB_ANSP_COLLAR_18415.glb": "126cb5f5c02d1f10",
+  "public/models/closures/BB_ANSP_BULB_18415.glb": "d0ef45f8e96062c5",
+  "public/models/closures/BB_ANSP_COLLAR_18415.glb": "aa2dffd5211ec679",
   "public/models/closures/BB_ANSP_FERRULE_18415.glb": "abce45ef2e1169f2",
   "public/models/closures/BB_ANSP_TASSEL_18415.glb": "1f966849b9851683",
   "public/models/closures/BB_CAP_17415.glb": "17349331f59b76a8",
@@ -34,12 +34,12 @@
   "public/models/closures/BB_DRP_PIPETTE_18415.glb": "ae7d18b966cc0e16",
   "public/models/closures/BB_PMP_BODY_17415.glb": "3ad648ca7c7f7d49",
   "public/models/closures/BB_PMP_BODY_18415.glb": "ab822b3c3bd4a6d8",
-  "public/models/closures/BB_PMP_SPOUT_17415.glb": "b8f3d37614dad918",
+  "public/models/closures/BB_PMP_SPOUT_17415.glb": "9d68f830a2c77a02",
   "public/models/closures/BB_PMP_SPOUT_18415.glb": "5ff0264bbc75f801",
   "public/models/closures/BB_REDUCER_18415.glb": "d53cf2c0331a87c6",
   "public/models/closures/BB_ROLL_BALL_17415_STEEL.glb": "24cd65d2e0c4c807",
   "public/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb": "23caa8659874e952",
-  "public/models/closures/BB_SPR_ACTUATOR_17415.glb": "50f83ae4b1018b20",
+  "public/models/closures/BB_SPR_ACTUATOR_17415.glb": "c9ca652a07128615",
   "public/models/closures/BB_SPR_ACTUATOR_18415.glb": "f7552f7c688b420a",
   "public/models/closures/BB_SPR_COLLAR_17415.glb": "523fdea82d18f552",
   "public/models/closures/BB_SPR_COLLAR_18415.glb": "82e365f9794c8e04",
@@ -263,9 +263,9 @@
    "transmission": 0.0
   },
   "CAP_DOTS_BLACK": {
-   "clearcoat": 1.0,
+   "clearcoat": 0.0,
    "color": "#070707",
-   "envMapIntensity": 1.15,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.0069,
@@ -273,8 +273,8 @@
     0.0069
    ],
    "metalness": 0.0,
-   "roughness": 0.1,
-   "specularIntensity": 1.5,
+   "roughness": 0.12,
+   "specularIntensity": 1.0,
    "transmission": 0.0
   },
   "CAP_DOTS_PINK": {
@@ -345,9 +345,9 @@
    "transmission": 0.0
   },
   "CAP_SHINY_BLACK": {
-   "clearcoat": 1.0,
+   "clearcoat": 0.0,
    "color": "#070707",
-   "envMapIntensity": 1.15,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.0033,
@@ -355,8 +355,8 @@
     0.0033
    ],
    "metalness": 0.0,
-   "roughness": 0.1,
-   "specularIntensity": 1.5,
+   "roughness": 0.12,
+   "specularIntensity": 1.0,
    "transmission": 0.0
   },
   "CAP_SHINY_GOLD": {
@@ -647,5 +647,10 @@
    "transmission": 0.0
   }
  },
- "note": "Locks the LOOK: file hashes + shipping values. verify before shipping; write only alongside a Jordan approval."
+ "note": "Locks the LOOK: file hashes + shipping values. verify before shipping; write only alongside a Jordan approval.",
+ "studioEnvironment": {
+  "approvedStudio": "hybrid-small08",
+  "emitter0": "pos[-4.2, 2.4, 3.6] scale[7.0, 13.0] intensity 2.2 sigma[1.35, 1.5]",
+  "emitter1": "pos[0, 4.6, -6] scale[9.0, 7.0] intensity 1.05 sigma[1.2, 1.2]"
+ }
 }
