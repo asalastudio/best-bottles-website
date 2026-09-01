@@ -181,7 +181,7 @@ export default function LightingTest() {
                     border: "1px solid #33333c", fontSize: 11,
                     lineHeight: 1.5, pointerEvents: "none" }}>
         <div style={{ fontSize: 12, fontWeight: 700, marginBottom: 4 }}>
-          Lighting acceptance — universal light cone
+          {`Lighting acceptance — ${STUDIO_PRESETS[APPROVED_STUDIO].label}`}
         </div>
         <div style={{ opacity: 0.85 }}>
           gold cap · silver cap · clear · amber · cobalt
