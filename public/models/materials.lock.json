@@ -1,5 +1,6 @@
 {
  "files": {
+  "public/env/studio-universal-softbox.hdr": "d5b36d3c6a1d0f12",
   "public/env/studio_small_08_1k_peak24.hdr": "a8d6a2064ad4cdf1",
   "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb": "6d0773f37bfee7eb",
   "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png": "3f21a18fa6f5715b",
@@ -43,7 +44,7 @@
   "public/models/closures/BB_SPR_ACTUATOR_18415.glb": "f7552f7c688b420a",
   "public/models/closures/BB_SPR_COLLAR_17415.glb": "523fdea82d18f552",
   "public/models/closures/BB_SPR_COLLAR_18415.glb": "82e365f9794c8e04",
-  "public/models/closures/BB_SPR_NOZZLE_18415.glb": "c68ea0720c1e2614",
+  "public/models/closures/BB_SPR_NOZZLE_18415.glb": "5ec8e5868552d885",
   "public/models/closures/BB_SPR_OVERCAP_17415.glb": "80e66f1b1044fb36",
   "public/models/closures/BB_SPR_OVERCAP_18415.glb": "b8c5a599872c35c7",
   "public/models/matcaps/ball-steel-v3.png": "e03db93507f351cc",
@@ -61,15 +62,16 @@
    "anisotropicBlur": "0.10",
    "attenuationColor": "#8f4a16",
    "attenuationDistance": "0.015",
-   "clearcoat": "0.70",
+   "clearcoat": "0",
    "clearcoatRoughness": "0.02",
-   "dispersion": "0.95",
+   "dispersion": "0",
    "distortion": "0",
    "envMapIntensity": "1.0",
    "envRotationDeg": "0",
    "ior": "1.54",
-   "roughness": "0.02",
+   "roughness": "0.05",
    "thickness": "0.0165",
+   "thicknessBake": "false",
    "transmission": "1.0"
   },
   "clear": {
@@ -249,7 +251,7 @@
    "clearcoat": 0.0,
    "color": "#cf855a",
    "env": "metal",
-   "envMapIntensity": 1.3,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.573,
@@ -273,7 +275,7 @@
     0.0069
    ],
    "metalness": 0.0,
-   "roughness": 0.12,
+   "roughness": 0.2,
    "specularIntensity": 1.0,
    "transmission": 0.0
   },
@@ -314,7 +316,7 @@
    "clearcoat": 0.0,
    "color": "#ffe496",
    "env": "metal",
-   "envMapIntensity": 1.15,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     1.0,
@@ -331,7 +333,7 @@
    "clearcoat": 0.0,
    "color": "#f5f6f6",
    "env": "metal",
-   "envMapIntensity": 1.5,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.972,
@@ -355,7 +357,7 @@
     0.0033
    ],
    "metalness": 0.0,
-   "roughness": 0.12,
+   "roughness": 0.2,
    "specularIntensity": 1.0,
    "transmission": 0.0
   },
@@ -363,7 +365,7 @@
    "clearcoat": 0.0,
    "color": "#ffe496",
    "env": "metal",
-   "envMapIntensity": 1.62,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.9999999999999999,
@@ -380,7 +382,7 @@
    "clearcoat": 0.0,
    "color": "#fefdfc",
    "env": "metal",
-   "envMapIntensity": 2.4,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.9960333152256678,
@@ -394,7 +396,7 @@
    "transmission": 0.0
   },
   "CAP_WHITE": {
-   "clearcoat": 0.15,
+   "clearcoat": 0.0,
    "color": "#f4f3f0",
    "ior": 1.5,
    "linear": [
@@ -573,7 +575,7 @@
    "clearcoat": 0.0,
    "color": "#d3d8da",
    "env": "metal",
-   "envMapIntensity": 2.0,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.8289136787893979,
@@ -590,7 +592,7 @@
    "clearcoat": 0.0,
    "color": "#d3d8da",
    "env": "metal",
-   "envMapIntensity": 2.9,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.8289136787893979,
@@ -620,7 +622,7 @@
    "clearcoat": 0.0,
    "color": "#b31f2b",
    "env": "metal",
-   "envMapIntensity": 1.5,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.3712,
@@ -628,14 +630,14 @@
     0.0129
    ],
    "metalness": 1.0,
-   "roughness": 0.18,
+   "roughness": 0.3,
    "transmission": 0.0
   },
   "SPRAY_TURQUOISE": {
    "clearcoat": 0.0,
    "color": "#2aa0a2",
    "env": "metal",
-   "envMapIntensity": 1.7,
+   "envMapIntensity": 1.0,
    "ior": 1.5,
    "linear": [
     0.0126,
@@ -643,14 +645,25 @@
     0.2503
    ],
    "metalness": 1.0,
-   "roughness": 0.13,
+   "roughness": 0.3,
    "transmission": 0.0
   }
  },
  "note": "Locks the LOOK: file hashes + shipping values. verify before shipping; write only alongside a Jordan approval.",
  "studioEnvironment": {
   "approvedStudio": "hybrid-small08",
+  "cone.AMBIENT": "0.030",
+  "cone.CONE_DOWN": "0.28",
+  "cone.CONE_I": "1.0",
+  "cone.CONE_PEAK": "1.20",
+  "cone.CONE_UP": "0.45",
+  "cone.EXPOSURE": "0.338",
+  "cone.FLOOR_I": "0.17",
+  "cone.KEY_AMOUNT": "UNPARSEABLE",
+  "cone.KEY_AZIMUTH": "-0.62",
+  "cone.KEY_SHAPE": "UNPARSEABLE",
   "emitter0": "pos[-4.2, 2.4, 3.6] scale[7.0, 13.0] intensity 2.2 sigma[1.35, 1.5]",
-  "emitter1": "pos[0, 4.6, -6] scale[9.0, 7.0] intensity 1.05 sigma[1.2, 1.2]"
+  "emitter1": "pos[0, 4.6, -6] scale[9.0, 7.0] intensity 1.05 sigma[1.2, 1.2]",
+  "inSceneEmitters": "2"
  }
 }

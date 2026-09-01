@@ -110,6 +110,7 @@ MATERIAL_ANCHORS = {
         tinted=True,
         declared={
             "ior": "1.5 — MeshPhysicalMaterial default; the library coat omits ior",
+            "roughness": "0.2 vs the library's 0.12 — the measurement is of a FLAT coated sample. On the CURVED collar a near-mirror resolves every environment feature as its own vertical line (Jordan: 'visible lines on the cap'); 0.2 merges them into one sheen. Fourth part this session where a flat-sample roughness failed on curved geometry — the value is a property of the SAMPLE, and the part's shape decides whether it is usable.",
         },
     ),
     # Mirrors CAP_SHINY_BLACK by the sync rule; same anchor makes that
@@ -119,6 +120,7 @@ MATERIAL_ANCHORS = {
         tinted=True,
         declared={
             "ior": "1.5 — MeshPhysicalMaterial default",
+            "roughness": "0.2 vs the library's 0.12 — the measurement is of a FLAT coated sample. On the CURVED collar a near-mirror resolves every environment feature as its own vertical line (Jordan: 'visible lines on the cap'); 0.2 merges them into one sheen. Fourth part this session where a flat-sample roughness failed on curved geometry — the value is a property of the SAMPLE, and the part's shape decides whether it is usable.",
         },
     ),
 }
