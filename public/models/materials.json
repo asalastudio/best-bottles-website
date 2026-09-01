@@ -455,11 +455,11 @@
       "specularIntensity": 1.5
     },
     "CAP_DOTS_PINK": {
-      "color": "#e8bcd0",
+      "color": "#e0a8c2",
       "linear": [
-        0.8,
-        0.5,
-        0.638
+        0.76,
+        0.4,
+        0.56
       ],
       "metalness": 0.0,
       "roughness": 0.34,
@@ -467,7 +467,7 @@
       "ior": 1.49,
       "transmission": 0.0,
       "maps": "matte",
-      "envMapIntensity": 1.35,
+      "envMapIntensity": 0.12,
       "env": "metal",
       "specularIntensity": 1.2,
       "specularColor": "#ffffff",
@@ -741,11 +741,11 @@
       "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
     },
     "CAP_PINK": {
-      "color": "#e8bcd0",
+      "color": "#e0a8c2",
       "linear": [
-        0.8,
-        0.5,
-        0.638
+        0.76,
+        0.4,
+        0.56
       ],
       "metalness": 0.0,
       "roughness": 0.34,
@@ -753,7 +753,7 @@
       "ior": 1.49,
       "transmission": 0.0,
       "maps": "matte",
-      "envMapIntensity": 1.35,
+      "envMapIntensity": 0.12,
       "env": "metal",
       "specularIntensity": 1.2,
       "specularColor": "#ffffff",
@@ -767,16 +767,17 @@
         0.0293
       ],
       "metalness": 0.0,
-      "roughness": 0.015,
+      "roughness": 0.07,
       "clearcoat": 1.0,
       "ior": 2.4,
       "transmission": 0.0,
       "maps": null,
-      "envMapIntensity": 0.85,
+      "envMapIntensity": 1.6,
       "env": "metal",
       "specularIntensity": 5.0,
       "specularColor": "#ffffff",
-      "note": "DRAFT v5 2026-08-31 — PARITY-DRIVEN. v4 added the bezel socket geometry but bezel stayed 0.00: envMapIntensity 5.5 was FLOODING the whole stud mesh (stone + socket) to white, so the dark heart could never survive. A real flush crystal is DARK across its face with fire only in the specular lobe — so env drops to 0.85 and the sparkle comes from specularIntensity 5.0 + clearcoat 1.0 + roughness 0.015 instead. Heart #2a2f2d, ior 2.4."
+      "note": "DRAFT v7 2026-08-31 — PARITY-DRIVEN, pending approval. With the key light in, the stones finally sit dark in their sockets, but roughness 0.015 put the specular hotspot BELOW ONE PIXEL on a ~25px stone — mathematically bright, visually absent. Roughness 0.07 spreads the lobe to a few pixels so each facet actually throws a visible glint; env 1.6 restores the rim fire, clearcoat 1.0/0.02 adds the second surface a foil-backed crystal has. Heart #2a2f2d, ior 2.4.",
+      "clearcoatRoughness": 0.02
     }
   }
 }

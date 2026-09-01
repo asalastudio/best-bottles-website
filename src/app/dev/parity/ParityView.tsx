@@ -86,6 +86,15 @@ function Rig({ shell, part, studs, mat, zoom, tokens }: {
                           near={0.001} far={1}
                           left={-zoom * 0.75} right={zoom * 0.75}
                           top={zoom} bottom={-zoom} />
+      {/* KEY LIGHT (Jordan: "we need the light to reflect the shine of the
+          stones"). HDRI alone leaves a metalness-0 dielectric flat — the
+          reference photograph spans 169 luminance levels, our HDRI-only
+          render spanned 18. A product-photography key from upper-front-left
+          plus a soft opposite fill restores the falloff, and gives every
+          faceted stone a hotspot to throw. */}
+      <directionalLight position={[-0.9, 1.1, 1.4]} intensity={5.0} />
+      <directionalLight position={[1.3, 0.3, 0.7]} intensity={0.55} />
+      <ambientLight intensity={0.06} />
       <group position={[0, 0.0012, 0]}>
         <Part url={`/models/closures/${shell}.glb`} matName={mat}
               tokens={tokens} envs={envs} />
