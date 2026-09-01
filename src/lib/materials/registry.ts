@@ -32,6 +32,28 @@ export type TokenSpec = {
   transmission?: number;
   specularIntensity?: number;
   specularColor?: string;
+  // --- layers MeshPhysicalMaterial implements and our tokens can now ask
+  // for. Optional throughout: a token that names none builds exactly what
+  // it built before, so nothing already approved moves.
+  clearcoatRoughness?: number;
+  /** thin-film pearl. The hue SHIFTS with angle -- this is what pearl IS. */
+  iridescence?: number;
+  iridescenceIOR?: number;
+  /** nanometres of film; the range decides WHICH hues the shift runs through */
+  iridescenceThicknessRange?: [number, number];
+  /** directional highlight: spun and brushed aluminium stretch along the grain */
+  anisotropy?: number;
+  anisotropyRotation?: number;
+  /** retro-reflective fuzz at grazing angles: the tassel, soft-touch finishes */
+  sheen?: number;
+  sheenRoughness?: number;
+  sheenColor?: string;
+  /** wavelength-split refraction -- the FIRE in a rhinestone */
+  dispersion?: number;
+  /** how far light travels before the glass tints it: amber vs brown plastic */
+  attenuationDistance?: number;
+  attenuationColor?: string;
+  thickness?: number;
   provenance?: string;
   lanes?: { web?: Record<string, unknown> };
 };
@@ -114,6 +136,50 @@ export function createMaterial(spec: TokenSpec | null, envs: Envs): THREE.MeshPh
   // glossy black needs that roughness alone cannot give
   if (spec?.specularIntensity != null) mat.specularIntensity = spec.specularIntensity;
   if (spec?.specularColor) mat.specularColor = new THREE.Color(spec.specularColor);
+
+  // ---------------------------------------------------------------- layers
+  // Everything below is physics MeshPhysicalMaterial already implements and
+  // our tokens simply never asked for. Each one exists because a real Best
+  // Bottles finish needs it and cannot be faked with roughness and colour:
+  //
+  //   iridescence   a thin film over the basecoat. This is what "pearl" IS
+  //                 — the hue SHIFTS with viewing angle. A pearl cap
+  //                 approximated with a flat pink and a clearcoat looks
+  //                 like painted plastic from every angle, because it is.
+  //   anisotropy    a directional highlight. Spun and brushed aluminium
+  //                 stretch their reflection ALONG the grain; an isotropic
+  //                 lobe renders a machined cap as a smooth grey tube.
+  //   sheen         retro-reflective fuzz at grazing angles — the tassel,
+  //                 and anything soft-touch.
+  //   dispersion    wavelength-split refraction: the FIRE in a rhinestone.
+  //                 Without it a crystal is a grey lens.
+  //   attenuation   how far light travels before the glass tints it, which
+  //                 is what separates amber glass from brown plastic.
+  //
+  // All are opt-in: a token that names none of them builds exactly the
+  // material it built before, so nothing already approved moves.
+  if (spec?.clearcoatRoughness != null) mat.clearcoatRoughness = spec.clearcoatRoughness;
+  if (spec?.iridescence != null) {
+    mat.iridescence = spec.iridescence;
+    if (spec.iridescenceIOR != null) mat.iridescenceIOR = spec.iridescenceIOR;
+    if (spec.iridescenceThicknessRange)
+      mat.iridescenceThicknessRange = spec.iridescenceThicknessRange;
+  }
+  if (spec?.anisotropy != null) {
+    mat.anisotropy = spec.anisotropy;
+    if (spec.anisotropyRotation != null) mat.anisotropyRotation = spec.anisotropyRotation;
+  }
+  if (spec?.sheen != null) {
+    mat.sheen = spec.sheen;
+    if (spec.sheenRoughness != null) mat.sheenRoughness = spec.sheenRoughness;
+    if (spec.sheenColor) mat.sheenColor = new THREE.Color(spec.sheenColor);
+  }
+  if (spec?.dispersion != null) mat.dispersion = spec.dispersion;
+  if (spec?.attenuationDistance != null) {
+    mat.attenuationDistance = spec.attenuationDistance;
+    if (spec.attenuationColor) mat.attenuationColor = new THREE.Color(spec.attenuationColor);
+  }
+  if (spec?.thickness != null) mat.thickness = spec.thickness;
 
   // any token naming a map set gets it — "matte" for the brushed metals,
   // "leather" for the grain. One branch, so adding a set is data not code.
