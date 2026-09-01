@@ -82,6 +82,10 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   const capLeather = useGLTF(has1841
     ? "/models/closures/BB_CAP_18415_LEATHER.glb" : `/models/closures/BB_CAP_${fin}.glb`);
   const capDots = useGLTF("/models/closures/BB_CAP_DOTS_17415.glb");
+  // The traced master: cap body + eight flush crystals in one file, its
+  // silhouette fitted to CpRoll17-415PnkDot.psd. Replaces the legacy pair
+  // for 17-415 dot caps -- see capDotAssembly below.
+  const capMaster = useGLTF("/models/closures/CAP_PNKDOT.glb");
   // fine-mist sprayer + lotion pump: every part origins at the neck rim
   // per the closures manifest — zero transforms. The whole set exists per
   // finish (17-415 measured from Spry17-415, 18-415 from Spry18-415).
@@ -165,7 +169,8 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   // and clone that wears them — 20+ swappable parts per bottle makes
   // per-render reconstruction real cost (audit item C)
   const matCache = useMemo(() => new Map<string, THREE.MeshPhysicalMaterial>(), []);
-  const build = useCallback((gltf: { scene: THREE.Object3D }, name: string) => {
+  const build = useCallback((gltf: { scene: THREE.Object3D }, name: string,
+                             only?: (meshName: string) => boolean) => {
     const scene = gltf.scene.clone(true);
     let mat = matCache.get(name) ?? null;
     if (!mat) {
@@ -178,11 +183,38 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     scene.traverse((o) => {
       const mesh = o as THREE.Mesh;
       if (!mesh.isMesh) return;
+      // one GLB, two materials: the master carries its own crystals
+      if (only && !only(mesh.name)) { mesh.visible = false; return; }
       if (uv) ensureCylindricalUV(mesh);     // closure GLBs carry no UVs
       mesh.material = mat as THREE.Material;
     });
     return scene;
   }, [mats, matCache, metalEnv, plasticEnv, matteMaps, leatherMaps]);
+
+  /** A 17-415 dot cap, built from the TRACED master.
+   *
+   *  The legacy pair (BB_CAP_17415 + BB_CAP_DOTS_17415) is a squarish crown
+   *  carrying twenty small studs; the master is the silhouette measured off
+   *  CpRoll17-415PnkDot.psd -- bevel fitted to 2.85 mm, and EIGHT seated
+   *  crystals in the reference's 3-2-3, which is the pattern every dotted
+   *  bottle in the library actually shows.
+   *
+   *  SEAT_MM is the one number here not derived from the photograph. The
+   *  master's origin is its own BASE on purpose: 17-415 names the neck
+   *  interface, not this decorative shell's exterior, so the model refuses
+   *  to claim a rim datum it has never been measured against. The storefront
+   *  has to stand it on a bottle, so it borrows the legacy cap's skirt.
+   *  Correct it the day a physical cap is measured.
+   */
+  const capDotAssembly = useCallback((capMat: string) => {
+    const SEAT_MM = 14.70;
+    const isCrystal = (n: string) => n.toUpperCase().includes("CRYSTAL");
+    const g = new THREE.Group();
+    g.add(build(capMaster, capMat, (n) => !isCrystal(n)));
+    g.add(build(capMaster, studMatFor(capMat), isCrystal));
+    g.position.y = -SEAT_MM * 0.001;
+    return g;
+  }, [build, capMaster]);
 
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
@@ -193,13 +225,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       const moulding = capMat.startsWith("LEATHER_") ? "leather" : capMoulding;
       const capGltf = moulding === "leather" ? capLeather
                     : moulding === "tall" ? capTall : cap;
-      g.push(build(capGltf, capMat));
-      // studMatFor, not a hardcoded chrome: the pink cap's stones are
-      // RHINESTONES and the silver cap's are brighter chrome. The other two
-      // stud call sites already ask; this one did not, so a pink cap on a
-      // capped SKU rendered plain chrome studs.
-      if (capMat.startsWith("CAP_DOTS"))
-        g.push(build(capDots, studMatFor(capMat)));
+      if (capMat.startsWith("CAP_DOTS") && fin === "17415") {
+        g.push(capDotAssembly(capMat));
+      } else {
+        g.push(build(capGltf, capMat));
+      }
       return g;
     }
     if (mode === "dropper") {
@@ -269,10 +299,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       g.push(build(reducer, "PART_ACTUATOR_PP"));
       if (mode === "reducerCapped") {
         const moulding = capMat.startsWith("LEATHER_") ? "leather" : capMoulding;
-        g.push(build(moulding === "leather" ? capLeather
-                   : moulding === "tall" ? capTall : cap, capMat));
-        if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, studMatFor(capMat)));
+        if (capMat.startsWith("CAP_DOTS") && fin === "17415") {
+          g.push(capDotAssembly(capMat));
+        } else {
+          g.push(build(moulding === "leather" ? capLeather
+                     : moulding === "tall" ? capTall : cap, capMat));
+        }
       }
       return g;
     }
@@ -284,12 +316,13 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
               metal ? "PART_BALL_STEEL" : "PART_BALL_PLASTIC"),
       );
       if (mode === "rollerCapped") {
-        // *Dot caps = the normal shell in the colourway + the stud lattice
-        // as a separate chrome part (BB_CAP_DOTS is STUDS ONLY — same
-        // shell/jewel split as collar/actuator)
-        g.push(build(cap, capMat));
-        if (capMat.startsWith("CAP_DOTS"))
-          g.push(build(capDots, studMatFor(capMat)));
+        // *Dot caps come from the TRACED master, which carries its own
+        // eight crystals; everything else is the plain shell.
+        if (capMat.startsWith("CAP_DOTS") && fin === "17415") {
+          g.push(capDotAssembly(capMat));
+        } else {
+          g.push(build(cap, capMat));
+        }
       }
     } else {
       // material rule differs BY FINISH (PSD truth): 17-415 heads are
@@ -325,7 +358,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
         g.push(build(overcap, fin === "18415" ? trimMat : "PART_OVERCAP_CLEAR"));
     }
     return g;
-  }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
+  }, [mode, mats, build, capDotAssembly, housingSteel, housingPlastic, ballSteel, ballPlastic,
       cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspTassel, nozzle, tubeMatcap, fin, neckY,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
