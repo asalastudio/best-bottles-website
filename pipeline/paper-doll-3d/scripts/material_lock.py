@@ -169,11 +169,22 @@ def studio_environment() -> dict:
                  "KEY_AMOUNT", "KEY_SHAPE", "AMBIENT", "FLOOR_I", "EXPOSURE"):
         m = re.search(rf"^{name}\s*=\s*([-\d.]+)", src, re.M)
         out[f"cone.{name}"] = m.group(1) if m else "UNPARSEABLE"
-    # the retired rig mounted feathered quads; if any ever come back, the lock
-    # must see them rather than silently reporting a cone-only studio
-    quads = re.findall(r"\{ position: \[([^\]]+)\], scale: \[", 
-                       (ROOT / "src/components/products/StudioEnvironment.tsx").read_text())
-    out["inSceneEmitters"] = str(len(quads))
+    # BOTH RIGS, ALWAYS. The cone briefly replaced the quads and this function
+    # was repointed at the generator's constants — which silently dropped the
+    # emitter VALUES from the lock. When the cone was rejected the same day and
+    # the quads came back, the lock was pinning a studio it no longer described:
+    # `verify` reported emitter0 -> None and would have passed any edit to the
+    # shipping emitters. Scrape both unconditionally; whichever rig
+    # APPROVED_STUDIO points at, its numbers are covered, and a swap between
+    # them shows up as drift instead of as an absence.
+    emitters = re.findall(
+        r"\{ position: \[([^\]]+)\], scale: \[([^\]]+)\], "
+        r"intensity: ([^,]+), sigma: \[([^\]]+)\] \}",
+        (ROOT / "src/components/products/StudioEnvironment.tsx").read_text())
+    out["inSceneEmitters"] = str(len(emitters))
+    for i, (pos, scale, inten, sigma) in enumerate(emitters):
+        out[f"emitter{i}"] = (f"pos[{pos}] scale[{scale}] "
+                              f"intensity {inten.strip()} sigma[{sigma}]")
     return out
 
 def snapshot() -> dict:
