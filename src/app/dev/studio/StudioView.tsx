@@ -75,6 +75,15 @@ const HDRIS: Array<{ file: string; label: string }> = [
   { file: "/models/studio-room.hdr", label: "room" },
   { file: "/models/studio-mono.hdr", label: "mono" },
   { file: "/models/studio.hdr", label: "studio" },
+  // DERIVED FROM THE PHOTOGRAPH by absorb-reference.py --shading. On a
+  // cylinder shot square on, screen x gives the surface normal azimuth
+  // directly, so the reference's horizontal brightness profile IS a
+  // measurement of reflected radiance against angle -- the sheen down the
+  // middle and the pale reflections down the sides, at the angles the real
+  // studio put them. CAVEAT: the measured profile still carries the cap's
+  // own colour and its lobe, so a coloured material lit by this env
+  // double-counts both. Judge it with a NEUTRAL base colour.
+  { file: "/models/env-from-ref-pnkdot.hdr", label: "derived from PnkDot reference" },
 ];
 
 const DEFAULT_VALS: Vals = {
