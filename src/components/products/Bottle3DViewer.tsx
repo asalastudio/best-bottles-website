@@ -175,6 +175,13 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBo
   // materials are memoized per registry name and SHARED across every mesh
   // and clone that wears them — 20+ swappable parts per bottle makes
   // per-render reconstruction real cost (audit item C)
+  // A material cache, deliberately a useMemo'd Map.
+  //
+  // useRef reads better for mutable storage and was tried first — it trades
+  // one rule for another: react-hooks/refs forbids reading `.current` during
+  // render, and build() is called from render, so the single immutability
+  // error became 23 refs errors. The memo is the shape that fits; only the
+  // write below needs an exemption.
   const matCache = useMemo(() => new Map<string, THREE.MeshPhysicalMaterial>(), []);
   const build = useCallback((gltf: { scene: THREE.Object3D }, name: string) => {
     const scene = gltf.scene.clone(true);
@@ -183,6 +190,9 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBo
       const spec = mats ? getSpec(mats, name) : null;
       mat = createMaterial(spec, { metalEnv, plasticEnv,
                                    maps: { matte: matteMaps, leather: leatherMaps } });
+      // populating a cache IS a mutation, and that is the point of a cache:
+      // the alternative is rebuilding every material on every render.
+      // eslint-disable-next-line react-hooks/immutability
       matCache.set(name, mat);
     }
     const uv = needsCylindricalUV(mats ? getSpec(mats, name) : null);
@@ -421,6 +431,12 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
   const usePlain = preset.thinWall || quality === "lite";
   useEffect(() => {
     if (!glass || !usePlain) return;
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
+    // eslint-disable-next-line react-hooks/immutability
     glass.visible = true;
     const m = applyGlassPreset(glass, preset);
     if (preset.frostMask) { m.roughnessMap = frostTex; m.needsUpdate = true; }

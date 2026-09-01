@@ -6,6 +6,10 @@
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
+    // scripts/materials/*.mts run through tsx and import source
+    // modules by their real ".ts" path. Legal only with noEmit, which is
+    // already set — this is a typecheck-only project.
+    "allowImportingTsExtensions": true,
     "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",

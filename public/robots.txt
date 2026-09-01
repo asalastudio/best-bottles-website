@@ -29,8 +29,8 @@ User-agent: anthropic-ai
 Allow: /
 
 # Host
-Host: https://www.bestbottles.com
+Host: https://ci.example.com
 
 # Sitemaps
-Sitemap: https://www.bestbottles.com/sitemap.xml
-Sitemap: https://www.bestbottles.com/server-sitemap.xml
+Sitemap: https://ci.example.com/sitemap.xml
+Sitemap: https://ci.example.com/server-sitemap.xml

@@ -237,6 +237,11 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
     });
     return scene;
   }, [mats, plasticEnv, metalEnv, matcaps, pbrMaps]);
+  // This memo BUILDS three.js scenes — it clones GLTFs and assigns materials
+  // onto their meshes. The compiler cannot preserve a memo whose body mutates
+  // hook-returned objects, and rebuilding these scenes every render is exactly
+  // what the memo exists to prevent.
+  // eslint-disable-next-line react-hooks/preserve-manual-memoization
   const parts = useMemo(() => {
     if (mode === "none" || !mats) return null;
     const g: { scene: THREE.Object3D }[] = [];
@@ -309,12 +314,24 @@ function Model({
   const frostTex = useTexture(
     frostUrl ?? "/models/bodies-thickness/white-1x1.png");
   useEffect(() => {
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
+    // eslint-disable-next-line react-hooks/immutability
     frostTex.flipY = false;
     frostTex.colorSpace = THREE.NoColorSpace;
     frostTex.needsUpdate = true;
   }, [frostTex]);
   useEffect(() => {
     // glTF-convention UVs + linear data, not colour
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
+    // eslint-disable-next-line react-hooks/immutability
     thicknessTex.flipY = false;
     thicknessTex.colorSpace = THREE.NoColorSpace;
     thicknessTex.needsUpdate = true;
@@ -376,6 +393,12 @@ function Model({
   // the fallback path, for A/B against the better material
   useEffect(() => {
     if (!glass || (transmissionMat && !preset.thinWall)) return;
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
+    // eslint-disable-next-line react-hooks/immutability
     glass.visible = true;
     const m = applyGlassPreset(glass, { ...preset, envMapIntensity: envIntensity });
     if (bakeMax != null) {
@@ -523,6 +546,12 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
   const { scene } = useThree();
   const preset = STUDIO_PRESETS[studioId];
   useEffect(() => {
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
+    // eslint-disable-next-line react-hooks/immutability
     scene.environmentIntensity = intensity;
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
   }, [scene, intensity, rotationDeg]);
@@ -576,7 +605,13 @@ function Rig({ azimuth, elevation, distance, targetY, fov, nonce }: {
   const { camera } = useThree();
   useEffect(() => {
     const cam = camera as THREE.PerspectiveCamera;
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
     if (cam.isPerspectiveCamera && cam.fov !== fov) {
+      // eslint-disable-next-line react-hooks/immutability
       cam.fov = fov; cam.updateProjectionMatrix();
     }
     const a = (azimuth * Math.PI) / 180, e = (elevation * Math.PI) / 180;
@@ -663,7 +698,9 @@ export default function MaterialLab(
   // landed values get written into METAL_STUDIO_DEFAULTS and locked
   const [metalTune, setMetalTune] = useState<MetalStudioParams>(METAL_STUDIO_DEFAULTS);
   const [metalStudioId, setMetalStudioId] = useState<MetalStudioId>(APPROVED_METAL_STUDIO);
-  useEffect(() => { setCapTune(null); }, [capMat]);
+  // reset during render, not in an effect — see BottleViewer for the rationale
+  const [prevCapMat, setPrevCapMat] = useState(capMat);
+  if (prevCapMat !== capMat) { setPrevCapMat(capMat); setCapTune(null); }
   // Reference comparison. The photo is held LOCALLY (object URL) — nothing is
   // uploaded. Framing does not need to match: scale/offset/opacity exist so a
   // hand-held shot can still be lined up for judging.
@@ -683,9 +720,13 @@ export default function MaterialLab(
   const body = bodies[bodyIdx];
   const hasThreaded = threadedIds.includes(body.bodyId);
 
+  // the CLEAR is a reset-on-prop-change and belongs in render; only the
+  // fetch belongs in the effect. Doing both in the effect meant the previous
+  // body's bake ceiling was live for one render after switching bodies.
+  const [prevBakeBody, setPrevBakeBody] = useState(body.bodyId);
+  if (prevBakeBody !== body.bodyId) { setPrevBakeBody(body.bodyId); setBakeMax(null); }
   useEffect(() => {
     let dead = false;
-    setBakeMax(null);
     fetch(`/models/bodies-thickness/${body.bodyId}.thickness.json`)
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => {

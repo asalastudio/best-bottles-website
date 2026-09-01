@@ -74,7 +74,16 @@ export type PdpBlock =
 
 // ─── Icon map ─────────────────────────────────────────────────────────────────
 
-const ICON_MAP: Record<string, React.ElementType> = {
+// Phosphor icons take className/size/weight. Typing the map as the generic
+// React.ElementType erases that: TS resolves the component's props to `never`,
+// so `size={20}` and `weight="regular"` below are errors. Name the props the
+// icons actually accept.
+type PhosphorIconProps = {
+    className?: string;
+    size?: number | string;
+    weight?: "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
+};
+const ICON_MAP: Record<string, React.ComponentType<PhosphorIconProps>> = {
     Shield, Droplets, Sun, Leaf, Zap, Award, FlaskConical,
     Package, Recycle, Layers, Check, Star, Clock, Sparkles, Tag, Globe,
 };
