@@ -406,18 +406,54 @@ DOTS_17415 = dict(
     # ("1.4 mm, 3.9 mm pitch, 8 columns"), which gives ~3x too many studs and
     # reads as a dense speckle instead of the sparse jewels the product has.
     #
-    # The front face shows THREE columns, so six around the circumference at
-    # 60 deg. Centre column studs sit at y 5.92 / 14.24 / 22.41 mm (pitch
-    # ~8.25) and the side columns at 9.85 / 18.42 — offset half a row, which is
-    # the stagger.
-    dot_d=1.2, row_pitch=8.4, columns=6,
+    # RE-MEASURED 2026-08-31 from the PINK reference PNG by blob detection
+    # (scripts/materials/find-stones.py), because the earlier read of the
+    # BLACK psd got the phase inverted and the column count wrong. Jordan,
+    # looking at the render: "three rhinestones down the left side, two in
+    # the middle, and three on the right. That is the pattern that every
+    # bottle is showing."
+    #
+    # WHAT THE REFERENCE ACTUALLY MEASURES. Eight stones on the visible
+    # face, in three columns at azimuth -46.2 / -0.8 / +45.6 deg:
+    #     left   3 stones   4.42, 12.67, 21.02 mm above the cap's bottom
+    #     centre 2 stones   8.65, 17.04
+    #     right  3 stones   4.45, 12.75, 21.15
+    # Two independent checks say that mapping is sound: the cap's bbox
+    # measures 27.08 mm against the published 27.0, and apparent stone
+    # width tracks cos(azimuth) — 1.74 mm face-on against 1.16-1.23 mm at
+    # 46 deg, ratio 0.67-0.71 vs cos 46 = 0.69.
+    #
+    # COLUMN SPACING is 45.4 and 46.4 deg, so 45 deg -> EIGHT columns, not
+    # six. Six would sit them 60 deg apart and push the outer pair onto the
+    # silhouette, which is not what the photograph shows.
+    #
+    # 3-2-3 IS NOT AUTHORED, IT FALLS OUT. One staggered lattice (pitch
+    # 8.30, alternate columns offset half a row) clipped to a band that
+    # keeps every stone clear of both rims gives the unstaggered columns
+    # three rows and the staggered one two. Predicted -6.18/+2.12 against
+    # measured -6.05/+2.34. So the pattern is a consequence of pitch and
+    # band, and changing either changes the count — do not "fix" a count by
+    # hand.
+    dot_d=1.2, row_pitch=8.30, columns=8,
+    # z of a stone in an UNSTAGGERED column, on the rim datum. The lattice
+    # is built outward from here rather than from the band edge, so the
+    # stones stay put when the band is trimmed.
+    row_anchor=-2.03,
+    # the front-facing column (the one the camera sees at theta 270 deg in
+    # Blender, +Z after glTF conversion) must be a STAGGERED one, or the
+    # cap renders 2-3-2 and reads as the wrong product.
+    front_is_staggered=True,
     # FLUSH-set rhinestones (Jordan, twice): "they need to be flush...
     # they need to sit inside". Even 0.12mm proud broke the silhouette at
     # close zoom. Now the stone's table rises only `proud` (invisible at
     # any zoom, kept nonzero solely to beat z-fighting) and the bezel is
     # buried `sink` INSIDE the wall — the outline stays perfectly clean.
     proud=0.04, sink=0.02,
-    z_lo=-8.9, z_hi=9.6,    # measured span, referenced to the rim datum
+    # BAND, on the rim datum. Set at the midpoint between the last stone
+    # that IS on the product and the lattice row just outside it, so the
+    # clip is not sitting on a knife edge: +8.40 falls between +6.27 (kept)
+    # and +10.42 (dropped), -12.35 between -10.33 (kept) and -14.48.
+    z_lo=-12.35, z_hi=8.40,
     # BEZEL SOCKET, added 2026-08-31 after the parity gate measured the
     # reference at 10.1% DARK pixels against our 0.00%. A flush stone on a
     # bright cap has nothing to shade; the real product's dark heart is the
@@ -426,6 +462,34 @@ DOTS_17415 = dict(
     bezel_d=1.9,            # socket mouth, wider than the O1.2 stone
     bezel_depth=0.55,       # how deep the wall is cut
 )
+
+
+# MEASURED 2026-08-31, NOT YET BUILT. The 13-415 roll-on set is backlog
+# (304 SKUs), but the pattern was measured in the same pass as 17-415 and
+# is recorded here so it does not have to be re-derived later.
+#
+# Same 3-2-3 motif, same 45 deg columns, TIGHTER pitch on the smaller cap.
+# Two references agree to ~0.15 mm, which is why this is data and not a
+# guess:
+#   CPRoll13-415PinkDot  -44.6 deg: 3.37, 9.81, 16.35 | +1.4 deg: 6.69, 13.20
+#   CPRoll13-415SlDot    -43.9 deg: 3.28, 9.69, 16.20 | +1.6 deg: 6.68, 13.18
+# Heights are above the cap's bottom edge; row_anchor below is on the rim
+# datum and needs the 13-415 skirt, which is NOT in MEASURED_SKIRT yet --
+# so this stays unregistered rather than shipping a derived datum.
+DOTS_13415_MEASURED = dict(
+    row_pitch=6.48, columns=8, front_is_staggered=True,
+    dot_d=1.2, proud=0.04, sink=0.02, bezel_d=1.9, bezel_depth=0.55,
+    # above the cap's BOTTOM EDGE, not the rim -- convert once the 13-415
+    # skirt is measured, the same way 17-415's -2.03 came from 12.67-14.70
+    mid_row_above_base=9.75,
+    band_above_base=(1.8, 18.0),
+)
+
+
+# Keyed by finish so a second dotted family is a DATA change. 13-415 is
+# measured (DOTS_13415_MEASURED) but not listed here: it still needs a
+# measured skirt to put its rows on the rim datum.
+DOTS_BY_FINISH = {"17-415": DOTS_17415}
 
 
 def cap_dots_builder(rig, finish, variant):
@@ -444,23 +508,42 @@ def cap_dots_builder(rig, finish, variant):
     import bmesh
     from mathutils import Matrix
 
-    d = DOTS_17415
+    d = DOTS_BY_FINISH[finish]
     # Reuse cap_builder so the wall this sits on is the SAME wall the shell
     # builds — deriving skirt_below_rim twice is how the two drift apart.
     cs, _prof, _mod = cap_builder(rig, finish)
     r_base, r_top = cs["od_base"] / 2.0, cs["od_top"] / 2.0
     z_lo, z_hi = d["z_lo"], d["z_hi"]
-    span = z_hi - z_lo
-    rows = int(span // d["row_pitch"]) + 1
+    pitch = d["row_pitch"]
+
+    # THE LATTICE, not a run from the band edge. Rows sit at
+    # row_anchor + k*pitch (+ half a pitch on staggered columns) and the
+    # band only decides which of them survive -- so trimming the band can
+    # never slide the whole column, which is how the 3-2-3 count stays a
+    # consequence of the geometry instead of something tuned by hand.
+    def column_rows(staggered):
+        z0 = d["row_anchor"] + (pitch / 2.0 if staggered else 0.0)
+        k0 = math.ceil((z_lo - z0) / pitch)
+        out, k = [], k0
+        while z0 + k * pitch <= z_hi:
+            out.append(z0 + k * pitch)
+            k += 1
+        return out
+
+    # Blender -Y faces the camera (it becomes +Z through the glTF axis
+    # conversion), i.e. theta = 270 deg. Phase the stagger so THAT column
+    # is the two-stone one.
+    front_col = round(270.0 / (360.0 / d["columns"])) % d["columns"]
+    stagger_parity = (front_col % 2) if d["front_is_staggered"] else ((front_col + 1) % 2)
 
     me = bpy.data.meshes.new("BB_CAP_DOTS_17415")
     acc = bmesh.new()
+    n_studs = 0
     for col in range(d["columns"]):
         theta = 2.0 * math.pi * col / d["columns"]
-        # stagger every other column by half a row, as the photo shows
-        z0 = z_lo + (d["row_pitch"] / 2.0 if col % 2 else 0.0)
-        z = z0
-        while z <= z_hi:
+        rows_z = column_rows(col % 2 == stagger_parity)
+        n_studs += len(rows_z)
+        for z in rows_z:
             t = (z - (-cs["skirt_below_rim"])) / cs["height"]
             r_wall = r_base + (r_top - r_base) * max(0.0, min(1.0, t))
             tmp = bmesh.new()
@@ -519,11 +602,10 @@ def cap_dots_builder(rig, finish, variant):
                                      off * math.sin(theta), z))
             me2 = bpy.data.meshes.new("t"); tmp.to_mesh(me2); tmp.free()
             acc.from_mesh(me2); bpy.data.meshes.remove(me2)
-            z += d["row_pitch"]
     acc.to_mesh(me); acc.free()
     obj = bpy.data.objects.new("BB_CAP_DOTS_17415", me)
     bpy.context.scene.collection.objects.link(obj)
-    return dict(spec=dict(d, count=rows * d["columns"]), object=obj)
+    return dict(spec=dict(d, count=n_studs), object=obj)
 
 
 def leather_cap_builder(rig, finish, variant):
