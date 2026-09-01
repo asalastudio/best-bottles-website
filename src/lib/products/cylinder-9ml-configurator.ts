@@ -21,7 +21,7 @@ export interface CylinderConfigurationSourceVariant {
     capStyle?: string | null;
     itemName?: string | null;
     webPrice1pc: number | null;
-    priceTiers?: Array<{ minQty: number; totalPrice: number; unitPrice: number }>;
+    priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
     stockStatus: string | null;
     shopifyVariantId?: string | null;
     shopifySellable?: boolean | null;
