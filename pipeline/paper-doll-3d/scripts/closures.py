@@ -513,29 +513,6 @@ def cap_dots_builder(rig, finish, variant):
     # builds — deriving skirt_below_rim twice is how the two drift apart.
     cs, _prof, _mod = cap_builder(rig, finish)
     r_base, r_top = cs["od_base"] / 2.0, cs["od_top"] / 2.0
-
-    # THE WALL THE SHELL ACTUALLY HAS. Deriving it a second time from
-    # od_base/od_top is how the studs and the shell drift apart -- and they
-    # did, the moment the shell moved to a traced silhouette: the studs
-    # floated off a wall that no longer went where the linear taper said.
-    # Sample the SAME profile the shell is lathed from.
-    _outer = None
-    _traced = cs.get("traced_profile")
-    if _traced:
-        import json as _json, pathlib as _pl
-        _pts = _json.loads((RIG_DIR.parents[1] / _traced).read_text())["profile"]
-        _pts.sort(key=lambda q: q[1])
-        _zs = [-cs["skirt_below_rim"] + q[1] for q in _pts]
-        _rs = [q[0] for q in _pts]
-
-        def _outer(z):
-            if z <= _zs[0]:
-                return _rs[0]
-            for i in range(1, len(_zs)):
-                if z <= _zs[i]:
-                    f = (z - _zs[i - 1]) / max(1e-9, _zs[i] - _zs[i - 1])
-                    return _rs[i - 1] + f * (_rs[i] - _rs[i - 1])
-            return _rs[-1]
     z_lo, z_hi = d["z_lo"], d["z_hi"]
     pitch = d["row_pitch"]
 
@@ -567,11 +544,8 @@ def cap_dots_builder(rig, finish, variant):
         rows_z = column_rows(col % 2 == stagger_parity)
         n_studs += len(rows_z)
         for z in rows_z:
-            if _outer is not None:
-                r_wall = _outer(z)
-            else:
-                t = (z - (-cs["skirt_below_rim"])) / cs["height"]
-                r_wall = r_base + (r_top - r_base) * max(0.0, min(1.0, t))
+            t = (z - (-cs["skirt_below_rim"])) / cs["height"]
+            r_wall = r_base + (r_top - r_base) * max(0.0, min(1.0, t))
             tmp = bmesh.new()
             # RHINESTONE, truly flush: a tiny faceted stone — octagonal
             # table over bezel facets — whose table sits AT the wall

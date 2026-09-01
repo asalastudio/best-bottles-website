@@ -34,7 +34,6 @@ Dimensional sources:
 
 import argparse
 import math
-import pathlib
 import sys
 from pathlib import Path
 
@@ -485,19 +484,6 @@ ROLLER_17415 = dict(
 CAPS_BY_FINISH = {
     "17-415": dict(asset_id="BB_CAP_17415_001", height=27.0,
                    od_top=18.60, od_base=19.0,
-                   # MEASURED 2026-08-31 off CpRoll17-415PnkDot (Jordan: "the
-                   # cap seems a little too square"). The silhouette narrows
-                   # over the last 1.74 mm; the BOTTOM rim, which is a sharp
-                   # moulded cut with no roundover, curves 0.19 mm from the
-                   # same photograph, so the camera sits 1.2 deg above square
-                   # and contributes that much everywhere. Backing it out
-                   # leaves ~1.55 mm of real geometry: a 0.90 shoulder radius
-                   # and a shallow domed crown. The old 0.45 flat top ran
-                   # 5.6 mm too wide 0.13 mm below the crown, which is the
-                   # squareness. Do NOT fit the full 1.74 -- that bakes the
-                   # photographer's camera angle into the mesh, and it would
-                   # then be wrong under our square-on render.
-                   traced_profile="data/profiles/BB_CAP_17415.json",
                    thread_root_d=16.90, thread_crest_d=15.10),
     "13-415": dict(asset_id="BB_CAP_13415_001", height=24.0,
                    od_top=16.65, od_base=17.0,
@@ -2015,9 +2001,6 @@ def roller_profile(rs, bore_r):
     return out
 
 
-_ROOT = pathlib.Path(__file__).resolve().parents[2]
-
-
 def cap_profile(cs):
     """Closed (r,z) outline of the closure, z=0 on the neck rim (its mating
     datum, same as the roller). Outside runs bottom-to-top with a drafted
@@ -2027,62 +2010,12 @@ def cap_profile(cs):
     r_top, r_base = cs["od_top"] / 2.0, cs["od_base"] / 2.0
     er = cs["top_edge_r"]
     ir = cs["thread_root_d"] / 2.0                 # inner land (thread root)
-
-    # TRACED OUTER WALL. Jordan: "we need to recreate this exact silhouette
-    # in Blender". A cap is a surface of revolution, so its photographed
-    # outline IS its lathe profile -- fitting a corner radius to that throws
-    # the measurement away, and 0.45 mm of corner radius ran 5.6 mm too wide
-    # just under the crown, which is the squareness he could see.
-    # absorb-reference.py does the tracing (and removes the photographer's
-    # camera tilt using the bottom rim, which on a moulded cap is a sharp cut
-    # and therefore pure camera). The BORE is not visible in a photograph and
-    # is still generated below.
-    traced = cs.get("traced_profile")
-    if traced:
-        import json as _json, pathlib as _pl
-        pts = _json.loads(_pl.Path(_ROOT / traced).read_text())["profile"]
-        pts.sort(key=lambda q: q[1])
-        p = [(pts[0][0], z_lo)]
-        for r_, z_ in pts:
-            p.append((r_, z_lo + z_))
-        # Near the apex the surface is nearly horizontal, so one pixel row
-        # spans a wide radius; the trace stops at r ~3.4. Close it flat --
-        # the apex is at r=0 within a single pixel of z (0.065 mm).
-        if p[-1][0] > 1e-3:
-            p.append((0.0, p[-1][1]))
-        p.append((0.0, z_hi - cs["top_th"]))       # underside of the crown
-        z = z_hi - cs["top_th"]
-        while z > z_lo + 0.12:
-            p.append((ir, z))
-            z -= 0.10
-        p.append((ir, z_lo))
-        p.append((p[0][0], z_lo))
-        out = [p[0]]
-        for q in p[1:]:
-            if abs(q[0] - out[-1][0]) > 1e-4 or abs(q[1] - out[-1][1]) > 1e-4:
-                out.append(q)
-        return out
-
     p = [(r_base - 0.35, z_lo)]                    # skirt bottom face, outer edge
     p += arc(r_base - 0.35, z_lo + 0.35, 0.35, 270, 360, 4)
     p.append((r_base, z_lo + 0.35))
-    # CROWN. Flat by default; `crown_dome` sinks the SHOULDER by that many mm
-    # so the apex still lands on z_hi -- the cap's overall height is a
-    # published dimension and doming must not add to it. A real moulded cap
-    # is not a disc with a corner radius, and the silhouette shows it: the
-    # apex is the highest point and the shoulder sits below.
-    dome = cs.get("crown_dome", 0.0)
-    z_sh = z_hi - dome                             # where the roundover ends
-    p.append((r_top, z_sh - er))                   # drafted skirt
-    p += arc(r_top - er, z_sh - er, er, 0, 90)     # rounded top edge
-    if dome > 0:
-        r_sh = r_top - er
-        for i in range(1, 9):                      # shoulder -> apex
-            f = i / 8.0
-            p.append((r_sh * (1.0 - f),
-                      z_sh + dome * math.sqrt(max(0.0, 1.0 - (1.0 - f) ** 2))))
-    else:
-        p.append((0.0, z_hi))                      # across the crown
+    p.append((r_top, z_hi - er))                   # drafted skirt
+    p += arc(r_top - er, z_hi - er, er, 0, 90)     # rounded top edge
+    p.append((0.0, z_hi))                          # across the crown
     p.append((0.0, z_hi - cs["top_th"]))           # underside of the crown
     z = z_hi - cs["top_th"]
     while z > z_lo + 0.12:                         # threaded bore, densely sampled
