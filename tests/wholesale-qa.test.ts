@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import {
     checkProduct, verdictFor, summarizeFamily, findDuplicateSkus,
-    expectsComponents, type QaProductRow,
+    expectsComponents, expectsFitment, type QaProductRow,
 } from "../src/lib/wholesale/catalogQa";
 
 const good = (over: Partial<QaProductRow> = {}): QaProductRow => ({
@@ -26,7 +26,6 @@ const good = (over: Partial<QaProductRow> = {}): QaProductRow => ({
     productGroupId: "grp_1",
     shopifySellable: true,
     shopifyVariantId: "gid://shopify/ProductVariant/1",
-    paperDollBodyUrl: "https://example.test/body.glb",
     ...over,
 });
 
@@ -80,11 +79,11 @@ describe("QA: severity and status", () => {
         expect(v.findings.map((f) => f.code)).toContain("not_sellable");
     });
 
-    it("only expects 3D for families that ship a configurator", () => {
-        expect(checkProduct(good({ family: "Vial", paperDollBodyUrl: null }))
-            .map((f) => f.code)).not.toContain("missing_3d");
-        expect(checkProduct(good({ family: "Cylinder", paperDollBodyUrl: null }))
-            .map((f) => f.code)).toContain("missing_3d");
+    it("does not invent a 3D finding from an unpopulated column", () => {
+        // paperDoll* is written on 0 of 400 sampled rows; a check on it would
+        // fire on every product in every configurator family, forever
+        expect(checkProduct(good({ family: "Cylinder" })).map((f) => f.code))
+            .not.toContain("missing_3d");
     });
 });
 
@@ -104,5 +103,28 @@ describe("QA: aggregation", () => {
     it("finds duplicate SKUs across rows", () => {
         expect(findDuplicateSkus([{ graceSku: "A" }, { graceSku: "B" }, { graceSku: "A" }]))
             .toEqual(["A"]);
+    });
+});
+
+describe("QA: fitment is only expected of things with a neck", () => {
+    it("does not flag packaging for having no neck thread", () => {
+        const giftBag = good({
+            family: "Gift Bag", category: "Packaging",
+            assemblyType: null, neckThreadSize: null, components: [],
+        });
+        expect(checkProduct(giftBag).map((f) => f.code)).not.toContain("missing_fitment");
+    });
+
+    it("does not flag an accessory (funnel) for having no neck thread", () => {
+        const funnel = good({
+            family: "Tool", category: "Accessory",
+            assemblyType: "accessory", neckThreadSize: null, components: [],
+        });
+        expect(checkProduct(funnel).map((f) => f.code)).not.toContain("missing_fitment");
+    });
+
+    it("DOES still flag a real bottle with no fitment", () => {
+        expect(checkProduct(good({ neckThreadSize: null })).map((f) => f.code))
+            .toContain("missing_fitment");
     });
 });

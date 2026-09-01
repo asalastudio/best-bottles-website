@@ -53,8 +53,6 @@ export interface QaProductRow {
     productGroupId?: string | null;
     shopifySellable?: boolean | null;
     shopifyVariantId?: string | null;
-    /** 3D is only EXPECTED for families the configurator actually ships */
-    paperDollBodyUrl?: string | null;
 }
 
 function blank(v: string | null | undefined): boolean {
@@ -66,10 +64,10 @@ function componentCount(components: unknown): number {
 }
 
 /**
- * Families with a live 3D configurator. Only these are held to the
- * 3D-asset check — flagging the other ~97% of the catalog for missing 3D
- * would be noise, not a finding (nothing was ever built for them).
- * Derived from src/lib/configurator/families.ts.
+ * Families with a live 3D configurator, mirrored from
+ * src/lib/configurator/families.ts. Not used by checkProduct (see the 3D
+ * note there) — exported so a future family-level 3D report can ask
+ * "which families ship a configurator" without re-deriving it.
  */
 export const CONFIGURATOR_3D_FAMILIES = new Set<string>([
     "Cylinder", "Elegant", "Circle", "Round",
@@ -87,6 +85,20 @@ export function expectsComponents(row: QaProductRow): boolean {
     // unmarked: fall back to the category, and stay silent when unsure
     const cat = (row.category ?? "").trim().toLowerCase();
     return cat.includes("bottle") && !cat.includes("atomizer");
+}
+
+/**
+ * Which rows have a neck at all. Packaging (gift bags, cartons, resealable
+ * bags) and accessories (funnels) are sold alongside bottles but attach to
+ * nothing — production data flagged 51 of them for "missing fitment", which
+ * is not a data gap, it is a category error in the check.
+ */
+export function expectsFitment(row: QaProductRow): boolean {
+    const kind = (row.assemblyType ?? "").trim().toLowerCase();
+    if (kind === "accessory") return false;
+    const cat = (row.category ?? "").trim().toLowerCase();
+    if (cat === "packaging" || cat === "accessory") return false;
+    return true;
 }
 
 export function checkProduct(row: QaProductRow): QaFinding[] {
@@ -108,7 +120,7 @@ export function checkProduct(row: QaProductRow): QaFinding[] {
         add("missing_family", "family", "blocking", "No family — the row cannot be grouped.");
 
     // ---- fitment + compatibility ---------------------------------------
-    if (blank(row.neckThreadSize))
+    if (expectsFitment(row) && blank(row.neckThreadSize))
         add("missing_fitment", "neckThreadSize", "blocking",
             "No neck/fitment — compatibility cannot be resolved.");
     // Only a CONFIGURABLE bottle needs a component list. The catalog marks
@@ -146,10 +158,13 @@ export function checkProduct(row: QaProductRow): QaFinding[] {
         add("orphaned", "productGroupId", "advisory",
             "Not linked to a product group — orphaned from the catalog tree.");
 
-    // ---- 3D, only where it is actually expected -------------------------
-    if (row.family && CONFIGURATOR_3D_FAMILIES.has(row.family) && blank(row.paperDollBodyUrl))
-        add("missing_3d", "paperDollBodyUrl", "advisory",
-            "Family ships a 3D configurator but this variant has no body asset.");
+    // ---- 3D: deliberately NOT checked here ------------------------------
+    // PRD §34 asks for a missing-3D-asset check, but products.paperDollBodyUrl
+    // (and every sibling paperDoll* field) is populated on 0 of 400 rows
+    // sampled across the configurator families. 3D coverage actually lives in
+    // code — src/lib/configurator/families.ts — not in this column. Checking
+    // the column would flag 100% of every family forever, which trains people
+    // to ignore the validator. Track 3D from the family registry instead.
 
     return out;
 }

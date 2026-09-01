@@ -480,7 +480,6 @@ function toQaRow(p: Record<string, unknown>): QaProductRow {
         productGroupId: (p.productGroupId as string | null) ?? null,
         shopifySellable: (p.shopifySellable as boolean | null) ?? null,
         shopifyVariantId: (p.shopifyVariantId as string | null) ?? null,
-        paperDollBodyUrl: (p.paperDollBodyUrl as string | null) ?? null,
     };
 }
 
