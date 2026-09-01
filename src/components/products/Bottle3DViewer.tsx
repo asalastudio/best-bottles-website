@@ -335,10 +335,14 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBo
         // transmissive material shows every rib as a bright/dark pair and the
         // cap reads as a bundle of lines rather than a cap. Opaque white PP
         // shades those same ribs as a soft gradient instead.
-        // Opaque then failed the OTHER way: a solid tube hides what it
-        // covers, so the actuator's step went with the lines. Frosted keeps
-        // the smooth-plastic read AND passes the stepped silhouette through.
-        g.push(build(overcap, fin === "18415" ? trimMat : "PART_OVERCAP_FROSTED"));
+        // OPAQUE WHITE PP, and this is the settled answer. Frosted
+        // (transmission 0.62) was tried to let the actuator's step read
+        // through, and it brought the flute lines back with it — Jordan:
+        // "we've lost the nice white cap... we have the lines again."
+        // The step is not worth the lines. PART_OVERCAP_FROSTED is kept in
+        // materials.json with its range documented, unused, in case the
+        // trade is ever wanted the other way round.
+        g.push(build(overcap, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
