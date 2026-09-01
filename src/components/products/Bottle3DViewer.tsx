@@ -116,9 +116,18 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   // Under a unified studio the glossy parts take the SCENE environment
   // (envMap null => three.js falls back to scene.environment), which is the
   // one-environment architecture. The hook runs unconditionally either way.
+  const unified = STUDIO_PRESETS[APPROVED_STUDIO].unifiedEnv === true;
   const metalHdri = useMetalStudioHdri();
-  const metalEnv = STUDIO_PRESETS[APPROVED_STUDIO].unifiedEnv ? null : metalHdri;
-  const plasticEnv = useEnvironment({ files: "/models/studio-browser.hdr" });
+  const plasticHdri = useEnvironment({ files: "/models/studio-browser.hdr" });
+  // ONE studio, for real: both the metal HDRI and the softbox tent drop out
+  // and every lit part inherits scene.environment. Two environments meant a
+  // white PP actuator was lit by the tent while the glass and metal beside
+  // it were lit by the studio — parts lit by different rigs never sit
+  // together, which is what made the white sprayer head read pasted-on.
+  // (Matcap parts — dip tube, pipette — ignore the environment by design and
+  // are deliberately unaffected.)
+  const metalEnv = unified ? null : metalHdri;
+  const plasticEnv = unified ? null : plasticHdri;
   // library matte finish maps (physicallybased): maps:"matte" in the registry
   const matteMaps = useTexture({
     normal: "/models/pbr/matte/normal.png",
