@@ -314,12 +314,12 @@
         1.0,
         1.0
       ],
-      "roughness": 0.0,
+      "roughness": 0.1,
       "metalness": 0.0,
       "clearcoat": 0.0,
-      "ior": 1.4905,
-      "transmission": 1.0,
-      "note": "LIBRARY-EXACT 2026-09-01: plastic.acrylic verbatim \u2014 roughness 0.0, ior 1.4905, transmission 1.0. Jordan on the moulded-texture argument: 'I like that plastic acrylic, optically smooth. The matte caps won't be, but these will.' The clear parts take the measurement as-is; the matte finishes keep their own roughness. Was 0.12 (milky \u2014 a transmissive material at that roughness blurs its own refraction into frost), briefly 0.04."
+      "ior": 1.48,
+      "transmission": 0.93,
+      "note": "CLEAR OVERCAP, audit recipe 2026-09-01. Was library-exact plastic.acrylic (roughness 0.0, ior 1.4905, transmission 1.0), approved by Jordan on the moulded-texture argument: 'I like that plastic acrylic, optically smooth.' That holds for a SMOOTH clear part and fails on this one, because this overcap is FLUTED: at roughness 0 every rib is a perfect mirror returning its own sharp highlight, so the part reads as a bundle of hard lines rather than as acrylic (Jordan: 'the actual spray top, which has a bunch of lines on it'). Roughness 0.10 is the audit's clear-overcap range (0.08-0.14); it merges the per-rib highlights into one soft sheen without frosting the part. ior 1.48 and transmission 0.93 are the same recipe's values for moulded PP/acrylic rather than idealised glass. The measured library entry is not wrong \u2014 it is a measurement of a FLAT acrylic sample, and geometry decides whether roughness 0 is usable."
     },
     "PART_REDUCER_PP": {
       "color": "#e9e7df",
