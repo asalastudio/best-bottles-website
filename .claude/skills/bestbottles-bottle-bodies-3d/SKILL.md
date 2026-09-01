@@ -19,10 +19,34 @@ lighting, render setup) does not exist in this lane.
 
 ## LOCKED: one GLB per BODY, never per SKU
 
-**58 distinct bodies**, not 1,345 SKUs (40 round / 18 boxy; 47 built, 11 blocked).
-Glass colour and closure are chosen in the browser, so `GBCyl9MtlRollMattSl` and
-`GBCyl9SpryBlk` are the SAME piece of glass. Batching the SKU-level CSV emits
-1,143 near-duplicates at 531 MB instead of 47 files at 22 MB.
+One GLB per BODY, never per SKU. Glass colour and closure are chosen in the
+browser, so `GBCyl9MtlRollMattSl` and `GBCyl9SpryBlk` are the SAME piece of
+glass. Batching the SKU-level CSV emits 1,143 near-duplicates at 531 MB instead
+of a few dozen files at ~22 MB.
+
+**Do NOT trust a body count written down here — measure it:**
+
+```bash
+python3 scripts/body_coverage.py            # summary + the round queue
+python3 scripts/body_coverage.py --unmatched --all
+```
+
+This file used to assert "58 distinct bodies, 47 built, 11 blocked" and
+BODY-COUNT-LOCK.md still does. That was grouped from `bodies.csv`, whose
+dimension sweep covered 1,345 SKUs — a SUBSET of the catalogue. Measured
+against the whole catalogue (2026-09-01) it is **122 bodies, 35 built**, and
+the remainder splits:
+
+| | bodies | SKUs | |
+|---|---|---|---|
+| round | 43 | 316 | lathe, unblocked |
+| boxy | 27 | 509 | girth axis unsettled, see below |
+| sculpted | 5 | 386 | outside modeler |
+| unresolved | 12 | 62 | shape unknown |
+
+A ledger that is a subset of the catalogue will always report completion it
+has not earned. `body_coverage.py` reads demand from Convex and supply from
+the GLBs on disk, so neither side can drift into being self-reported.
 
 A body is `(shape, neck_finish, height, width-or-diameter, depth)`. Always run
 `group_bodies.py` before building, and always ship `sku-to-body.csv` with the
@@ -34,11 +58,24 @@ Full rationale: `pipeline/paper-doll-3d/BODY-COUNT-LOCK.md`.
 ```bash
 cd pipeline/paper-doll-3d
 
-# 1. dimensions — from the live catalogue, never from pixels
+# 0. WHAT IS ACTUALLY LEFT. Start here, every time — the counts written in
+#    prose go stale, this does not. Prints the round queue, biggest first.
+python3 scripts/body_coverage.py
+
+# 1. dimensions — from the live catalogue, never from pixels.
+#    Convex already carries these more completely than this scrape does
+#    (2,290/2,299 vs 2,078/2,288); re-run it only when you need the SHAPE,
+#    which Convex flattens away. See "Convex CANNOT give you the SHAPE".
 python3 scripts/harvest_live_dims.py --all --out bodies-3d-dims.csv
 
 # 2. silhouettes — from the PSD body layer (system Python; Blender has no psd_tools)
 python3 scripts/extract_psd_silhouette.py --from-csv bodies-3d-dims.csv
+#    ...or, when the FILENAMES are destroyed but the folder names survived
+#    (Boston Round's 8.3 truncations), address one file directly:
+python3 scripts/extract_psd_silhouette.py \
+    --psd "$SRC/1. Amber Bottle (2 ounce"$'\uf022'"60 ml) Roll on/10GBBS~1.PSD" \
+    --as BSR-round-20-400-94x39 --aspect 2.41
+#    THEN VERIFY THE ASPECT against the catalogue before building on it.
 
 # 3. collapse SKUs -> BODIES (never skip this)
 python3 scripts/group_bodies.py
@@ -171,13 +208,45 @@ default welds the whole body into its own axis. Set it to 1 micron.
 
 **Dimensions come from the live site, not the silhouette.** The PDPs publish
 *Item Height without Cap*, *Item Width*, *Item Depth*, *Item Diameter* and the
-neck thread size. 1,840 of 2,288 SKUs are dimensionally complete this way. A
-photo cannot reveal depth — the live site can, so boxy bodies are not blocked
-on caliper measurement.
+neck thread size. A photo cannot reveal depth — the live site can, so boxy
+bodies are not blocked on caliper measurement.
 
-**The live site also states the shape.** A PDP that prints a Diameter is a body
-of revolution; one that prints Width and Depth is a box. No hand-filled
-`shape_class` column, and no guessing from the family name.
+**Convex is now the better source than the CSV, for dimensions only.** It holds
+usable height AND girth for **2,290 of 2,299 containers (99.6%)**, against the
+CSV's 2,078 of 2,288, and carries richer fields: `heightWithCap`,
+`heightWithoutCap`, `diameter`, `widthMm`, `depthMm`, `neckThreadSize`. Heights
+parse out of strings like `"104 ±2 mm"`. Do not re-scrape for dimensions.
+
+**But Convex CANNOT give you the SHAPE, and this is a trap.** The live-site
+rule — a PDP printing a Diameter is a body of revolution, one printing Width
+and Depth is a box — is true of the SITE and does not survive the mirror:
+
+  * `shape` is populated on 4 products out of 1,783.
+  * `widthMm` never once differs from `depthMm` in the entire catalogue.
+  * `GB-SQR-CLR-15ML` — the SQUARE family — publishes diameter `"30 ±0.5 mm"`,
+    width 30, depth 30.
+
+One girth figure is copied into all three fields, so a square bottle is
+indistinguishable from a cylinder by dimension alone. Classifying on
+`diameter != null` returns ROUND for **every** body — a rule that never says
+"no" is not measuring anything, which is how this was caught.
+
+Two consequences:
+
+1. `body_coverage.py` takes shape from the FAMILY, which the GLB filenames
+   already encode the same way (Sqr-boxy, Rect-boxy, Elg-boxy vs Cyl-round,
+   Tulip-round, Atom-round). Empire, Teardrop, Decorative, Bell and Pillar are
+   left explicitly UNRESOLVED rather than guessed — `bodies.csv` calls Empire
+   `Emp-unknown` too, and a wrong guess sends someone to lathe a box.
+2. For a real answer, scrape the PDPs. `data/shape-clarification-queue.csv`
+   is that work queue: 44 bodies / 991 SKUs, ranked by SKU count, each with a
+   live product URL taken from Convex's `productUrl`.
+
+This also explains why boxy bodies fail to reconcile against built GLBs: for a
+rectangular bottle Convex is not publishing a face width at all. Several look
+like a DIAGONAL (TallRect 101x17x17 -> 101x23, diagonal 24.0), but Cr-boxy
+105x89 -> 105x78 goes the other way, so one rule does not cover them. Treat
+`body_coverage.py` as authoritative for ROUND and indicative for boxy.
 
 **Take the outline from the PSD body layer**, not a cutout of a composite. The
 layered sources carry true per-layer alpha, so the silhouette is exact — no
@@ -319,6 +388,34 @@ A skip is almost never one SKU's problem - group them by BODY first.
 202 skips collapsed into 5 bodies: 4 boxy ones needing one depth measurement
 each (159 SKUs), and one faceted body (36 SKUs) that belongs to an outside
 modeler. See `pipeline/paper-doll-3d/OPEN-ITEMS.md`.
+
+**A missing silhouette is not always a missing source.** Boston Round showed
+zero silhouettes while holding 120 SKUs across three bodies, and the PSDs were
+there the whole time. Two separate causes, and neither is "no source":
+
+1. Its 97 PSDs carry DOS 8.3 truncations — `10GBBS~1.PSD`, `6GBBST~1.PSD` — so
+   `build_index()` keys them `10gbbs1` and no SKU can ever match. Searching the
+   library for `*bstn*` or `*boston*` finds nothing and looks like proof of
+   absence. It is not. Use `--psd FILE --as BODY_ID` to bypass the index: the
+   FOLDER names survived and carry what matters, since one silhouette per BODY
+   is all the lane needs ("(2 ounce/60 ml) Roll on" IS body 94x39 20-400).
+2. Those particular PSDs are FLATTENED COMPOSITES anyway — Background with no
+   alpha, one full-canvas layer, two fragments at aspect 0.80 and 1.50, nothing
+   near the catalogue's 2.41. `psd_tools` cannot split what was never separate.
+   Boston Round must come from the Shopify renders instead; Convex holds an
+   `imageUrl` for all 114 of its products and none without.
+
+**Check the extracted aspect against the catalogue before you build on a
+silhouette.** Given `--aspect`, the layer picker returned the full canvas,
+wrote three clean-looking PNGs and reported success — silhouettes 34%, 37% and
+45% wrong. Nothing looked broken. Straight to Blender and three bodies would
+have been built to the wrong proportions and passed a bounding-box check. This
+is "measure the measurement before you fix the model" again, on the input side.
+
+**Folder names in the PSD library contain U+F022 where a `/` belongs** — a Mac
+slash substitution, e.g. `1. Amber Bottle (1 ounce<U+F022>30 ml) Roll on`. A
+typed path silently matches nothing while `find` works, which reads as a
+missing folder. Match by prefix through `os.listdir`; never retype the name.
 
 Faceted bodies are invisible to this lane by construction: a silhouette carries
 the front outline and nothing about surface relief. `GBDmnd2oz*` has a diamond

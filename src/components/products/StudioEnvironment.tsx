@@ -1,5 +1,29 @@
 "use client";
 
+/* ─────────────────────────────────────────────────────────────────────────
+ * GLOBAL — THIS FILE RETUNES EVERY GLASS FINISH AT ONCE.
+ *
+ * Clear, amber, cobalt, frosted and swirl all read through the values here.
+ * A change that improves one WILL move the other four, and they will move
+ * without anyone noticing, because the obvious place to look after an edit
+ * is the bottle you were already looking at.
+ *
+ * That is not hypothetical. On 2026-09-01 tone mapping, exposure, an
+ * environment rotation and two emitter edits all landed while judging a
+ * single amber bottle; four finishes drifted and it took three days and a
+ * founder's eye to catch. Jordan: "we keep falling back to the same
+ * bullshit again and again."
+ *
+ * BEFORE AND AFTER any edit here:
+ *     npm run look:sheet      # all five finishes, side by side
+ *     npm run look:verify     # the lock — also enforced in CI
+ *
+ * Per-finish work does NOT belong in this file:
+ *     one glass finish  -> src/lib/materials/glassPresets.ts
+ *     one part/material -> public/models/materials.json (+ npm run materials:port)
+ * ───────────────────────────────────────────────────────────────────────── */
+
+
 /**
  * StudioEnvironment — THE single hybrid environment (candidate).
  *
@@ -62,15 +86,42 @@ type Emitter = {
  *  punch now comes from elevation: edge/shoulder grades stay, full-height
  *  wraps cannot form at ANY orbit angle. */
 const EMITTERS: Emitter[] = [
-  // high left + right strips: clear-glass edge/shoulder highlights,
-  // graded sheens in the metal caps
-  { position: [-4, 5, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
-  { position: [4, 5, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
-  // overhead softbox: cap tops and bottle shoulders
-  { position: [0, 6, 0], scale: [6, 3], intensity: 2.5, sigma: [0.45, 0.45] },
-  // broad dim backlight, raised behind-above: amber/cobalt transmit
-  // instead of reading black, without a horizon-level silhouette wrap
-  { position: [0, 5, -6], scale: [8, 6], intensity: 1.4, sigma: [0.55, 0.55] },
+  // ONE KEY. That is the whole rig now (Jordan: "we need more simple key
+  // lighting", and before that "glossy is enough with maybe just one
+  // keylight").
+  //
+  // THE REAR EMITTER IS GONE, and it was not a judgement call — it was
+  // arithmetic. A cylinder reflects environment azimuth 2*psi, so a source at
+  // azimuth A lands at psi = A/2, and psi = +/-90 IS THE SILHOUETTE. The rear
+  // emitter sat at azimuth exactly 180.0, which maps to psi +/-90 and NOWHERE
+  // ELSE: it could only ever draw the outline. That is the "line halo effect
+  // around it" Jordan flagged, and no amount of softening it would have
+  // helped, because its position was the defect.
+  //
+  // It was there to backlight amber and cobalt so they transmit rather than
+  // read black. That job now falls to the base HDRI, which still carries
+  // energy behind the bottle. If dark glass goes dead as a result, the fix is
+  // a rear source placed HIGH and kept SHORT in elevation — the silhouette
+  // mirrors azimuth 180 at HORIZON elevation, so a high backlight still
+  // refracts through the body without being mirrored at the rim. Do not
+  // simply put this one back.
+  { position: [-4.2, 2.4, 3.6], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
+  // REAR EMITTER, RESTORED — and the reason it can come back matters.
+  //
+  // It was deleted because azimuth 180 maps to psi +/-90, the silhouette,
+  // and it was therefore the obvious cause of the rim halo. It was not.
+  // Removing it changed the rim not at all; the halo was a thickness scalar
+  // set to the body DIAMETER instead of the wall, and fixing that removed
+  // the rim in one frame. So the arithmetic was right and the attribution
+  // was wrong — a source CAN land on the silhouette without being what you
+  // are looking at.
+  //
+  // Deleting it did cost the thing it was there for: amber and cobalt
+  // transmit what is BEHIND them, and with nothing behind, amber read almost
+  // black. Absorption was ruled out as the cause first — opening
+  // attenuationDistance to 0.0055 (76% transmitted) barely moved it, which
+  // is what proves this is a lighting problem and not a material one.
+  { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
@@ -106,10 +157,18 @@ function makeFeatherTexture(sigma: [number, number]): THREE.Texture {
 }
 
 function SoftEmitter({ emitter }: { emitter: Emitter }) {
-  const { position, scale, intensity, sigma } = emitter;
+  const { position, scale, intensity } = emitter;
+  // sigma is destructured to SCALARS before the memo. Passing the tuple and
+  // then indexing it inside the dependency array (`[intensity, sigma[0],
+  // sigma[1]]`) is a member expression, which the React Compiler cannot
+  // prove stable — it bailed with "Existing memoization could not be
+  // preserved" and the eslint-disable on the line below did not silence it,
+  // because that disable names exhaustive-deps and this is a different rule.
+  const sigmaX = emitter.sigma[0];
+  const sigmaY = emitter.sigma[1];
   const material = useMemo(() => {
     const m = new THREE.MeshBasicMaterial({
-      map: makeFeatherTexture(sigma),
+      map: makeFeatherTexture([sigmaX, sigmaY]),
       transparent: true,
       blending: THREE.AdditiveBlending, // adds light over the base HDRI
       depthWrite: false,
@@ -118,8 +177,7 @@ function SoftEmitter({ emitter }: { emitter: Emitter }) {
     });
     m.color.setScalar(intensity); // HDR: the env portal renders half-float
     return m;
-    // sigma is a tuple literal from EMITTERS — stringify for stable deps
-  }, [intensity, sigma[0], sigma[1]]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [intensity, sigmaX, sigmaY]);
   return (
     <mesh position={position} scale={[scale[0], scale[1], 1]}
           onUpdate={(self) => self.lookAt(0, 0, 0)}>

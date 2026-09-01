@@ -1,0 +1,20 @@
+{
+  "artboards": [
+    { "file": "Main.dc.html", "x": 0, "y": 0, "w": 1600, "h": 1000, "title": "Wholesale Matrix — Customer" },
+    { "file": "CatalogQA.dc.html", "x": 1720, "y": 0, "w": 1600, "h": 1000, "title": "Catalog QA — Staff" },
+    { "file": "WholesaleOnboarding.dc.html", "x": 0, "y": 1160, "w": 1440, "h": 940, "title": "Wholesale Account & Tax Exemption" },
+    { "file": "ComponentPicker.dc.html", "x": 1560, "y": 1160, "w": 1240, "h": 800, "title": "Component Picker — States" },
+    { "file": "MobileFlow.dc.html", "x": 2920, "y": 1160, "w": 390, "h": 844, "title": "Mobile — Sequential Flow" }
+  ],
+  "annotations": [
+    { "id": "note-canonical", "x": 0, "y": -190, "w": 330, "text": "ONE canonical Convex catalog drives everything.\nCustomer matrix and Catalog QA are the same family structure and the same rows — QA only exposes extra diagnostics. No separate matrixProducts dataset." },
+    { "id": "note-simple", "x": 380, "y": -190, "w": 330, "text": "Customer surface stays: Bottle → Size → Finish → Component → Qty.\nVariant resolution, fitment (17-415 / 18-415 / roller / stopper), compatibility and validation all happen server-side. Fitment shows only as secondary text." },
+    { "id": "note-compat", "x": 760, "y": -190, "w": 330, "text": "The picker is a real picker (P0): it only ever receives server-resolved compatible components. Precedence: exclusion > inclusion > exact fitment > family inference. Unknown ≠ compatible. Bottle Only is explicit, never implied." },
+    { "id": "note-decisions", "x": 1140, "y": -190, "w": 330, "text": "DECIDED 2026-08-31 (Jordan):\n• No Request Quote — people buy or they don't. Questions route to Grace instead. Revisit later.\n• Order minimum is $50 per ORDER, not a per-SKU MOQ — so the MOQ column is gone and the minimum lives in the order bar.\n• Catalog QA scans the FULL catalog." },
+    { "id": "note-tax", "x": 1520, "y": -190, "w": 330, "text": "TAX GATE — see the onboarding artboard below.\nAnyone may purchase; buying UNTAXED requires a resale certificate approved by a Best Bottles employee. Today only a bare taxExempt boolean exists on portalAccounts — no document, no approver, no expiry, and checkout attaches no Shopify customer, so exemption cannot yet be applied." },
+    { "id": "note-real-data", "x": 1900, "y": -190, "w": 330, "text": "Sample content uses real catalog grammar: GB-CYL-AMB-9ML SKUs, real finishes (Clear · Amber · Cobalt · Frosted · Swirl), real trims, real prices (the $0.69 12+ step exists in the catalog but is not displayed \u2014 see the volume note). Family list must be derived from Convex at build time — never from this mockup. Bracketed values are placeholders for real records." },
+    { "id": "note-volume-risk", "x": 2280, "y": -190, "w": 330, "text": "VOLUME PRICING — resolved mechanism, not an open question.\nsrc/lib/volumePricing.ts already ships resolveChargedUnitPrice() vs resolveQuotedUnitPrice() behind VOLUME_TIERS_HONORED_AT_CHECKOUT (default off, because Shopify charges the flat variant price — proven in production: a box advertised $0.23/ea at 10+ checked out at $0.35). So the matrix shows ONE price, from resolveChargedUnitPrice. The 12+ ladder returns automatically when Shopify volume rules are configured and scripts/audit_price_parity.mjs passes." },
+    { "id": "note-mobile", "x": 2920, "y": 2050, "w": 390, "text": "Mobile reuses the configuration engine as sequential steps — the matrix itself is desktop-first (≥1280px). No fake status bar: real device chrome renders above this layout." }
+  ],
+  "launch": { "view": "canvas" }
+}

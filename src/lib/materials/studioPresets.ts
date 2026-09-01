@@ -1,3 +1,26 @@
+/* ─────────────────────────────────────────────────────────────────────────
+ * GLOBAL — THIS FILE RETUNES EVERY GLASS FINISH AT ONCE.
+ *
+ * Clear, amber, cobalt, frosted and swirl all read through the values here.
+ * A change that improves one WILL move the other four, and they will move
+ * without anyone noticing, because the obvious place to look after an edit
+ * is the bottle you were already looking at.
+ *
+ * That is not hypothetical. On 2026-09-01 tone mapping, exposure, an
+ * environment rotation and two emitter edits all landed while judging a
+ * single amber bottle; four finishes drifted and it took three days and a
+ * founder's eye to catch. Jordan: "we keep falling back to the same
+ * bullshit again and again."
+ *
+ * BEFORE AND AFTER any edit here:
+ *     npm run look:sheet      # all five finishes, side by side
+ *     npm run look:verify     # the lock — also enforced in CI
+ *
+ * Per-finish work does NOT belong in this file:
+ *     one glass finish  -> src/lib/materials/glassPresets.ts
+ *     one part/material -> public/models/materials.json (+ npm run materials:port)
+ * ───────────────────────────────────────────────────────────────────────── */
+
 /**
  * Studio environment presets — versioned data, like the glass.
  *
@@ -23,16 +46,27 @@
  */
 
 export type StudioPresetId =
-  "softbox-tent" | "room" | "mono-studio" | "lightformer-rig" | "hybrid-small08";
+  "softbox-tent" | "room" | "mono-studio" | "lightformer-rig" | "hybrid-small08"
+  | "universal-cone";
 
 export type StudioPreset = {
   id: StudioPresetId;
   label: string;
   /** equirectangular HDR served from /public, or null to use in-scene lights */
   hdri: string | null;
-  /** true = the HDRI is COMBINED with Lightformers into one cubemap — the
-   *  scene shell mounts <StudioEnvironment/> instead of a bare hdri */
-  hybrid?: boolean;
+  /** true = the scene shell mounts <StudioEnvironment/> instead of passing
+   *  `hdri` straight to drei. Named for WHO OWNS the environment, not for what
+   *  it contains: this was `hybrid` while the rig was an HDRI with quads
+   *  composited over it, and kept that name for one commit after the quads
+   *  were deleted — at which point the flag was claiming a hybrid that no
+   *  longer existed. The shipping rig is a single generated cone. */
+  managedEnv?: boolean;
+  /** true = glossy/metal parts inherit THIS environment instead of the
+   *  separate metal studio. The handoff's actual architecture: exactly one
+   *  environment, no per-material envMap overrides. A black dielectric
+   *  reflects ~4% — under the dark metal studio it has nothing to catch and
+   *  reads matte, which is what "the shiny black cap is matte" was. */
+  unifiedEnv?: boolean;
   environmentIntensity: number;
   /** degrees */
   environmentRotation: number;
@@ -111,14 +145,32 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     id: "hybrid-small08",
     label: "Hybrid studio (Small 08 + formers)",
     hdri: "/env/studio_small_08_1k_peak24.hdr",
-    hybrid: true,
+    managedEnv: true,
+    unifiedEnv: true,
     environmentIntensity: 1.0,
+    // Back to 0. It was set to 92 deg to swing the HDRI's bright horizon
+    // feature off the silhouette, which is sound arithmetic and did cut
+    // silhouette-band energy by 98% — but the halo it was aimed at turned
+    // out to be a thickness scalar, so the rotation was paying for a fix it
+    // never delivered. It DID cost something real: azimuth ~180 is both what
+    // the silhouette mirrors AND what amber and cobalt transmit, so rotating
+    // that energy away starved the dark glass. Absorption was excluded first
+    // (opening attenuationDistance to 76% transmitted barely moved it), which
+    // is what identified the rotation as the cause.
     environmentRotation: 0,
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
     backdrop: "#e9e6e0",
     provenance:
-      "APPROVED STUDIO as of 2026-08-31 (Jordan, at /dev/lighting-test: " +
-      "'the feathered softbox is much better' — glass colourways inherit). " +
+      "THE SHIPPING STUDIO. Approved 2026-08-31 (Jordan, at " +
+      "/dev/lighting-test: 'the feathered softbox is much better'), briefly " +
+      "replaced by 'universal-cone' on 2026-09-01 and RESTORED the same day " +
+      "when the cone was rejected: 'it doesn't have that nice sheen — it " +
+      "smothers the reflections where they're important.' " +
+      "OPEN ISSUE, unresolved: on the fine-mist render Jordan called this rig " +
+      "'too many lines'. That is NOT fixed by going back; it is the known " +
+      "cost of this rig and the reason the cone was tried. See " +
+      "'universal-cone' for what the two complaints have in common and why " +
+      "the fix is FEWER azimuthal features, not flatter ones. " +
       "The single environment for the whole scene, per the studio-lighting " +
       "handoff: Poly Haven studio_small_08 (CC0, 1k, self-hosted — no CDN " +
       "preset; PEAK-CLAMPED at luminance 24 — the raw file's ~97 hot texels " +
@@ -133,6 +185,48 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
       "recipes, never in swapping environments. material_lock.py pins the " +
       "HDRI hash, the EMITTERS values, and this flip.",
   },
+  "universal-cone": {
+    id: "universal-cone",
+    label: "Universal light cone",
+    hdri: "/env/studio-universal-softbox.hdr",
+    managedEnv: true,
+    unifiedEnv: true,
+    environmentIntensity: 1.0,
+    environmentRotation: 0,
+    toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally
+    backdrop: "#e9e6e0",
+    provenance:
+      "REJECTED 2026-09-01 (Jordan: 'we're not approving the light cone — it " +
+      "doesn't have that nice sheen we were looking for, it smothers the " +
+      "reflections where they're important'). Kept for A/B and for the " +
+      "geometry note below, which is the most useful thing this lane has " +
+      "learned about why its studios fail. Generated end to end by " +
+      "pipeline/paper-doll-3d/scripts/make_universal_softbox.py — no " +
+      "photographed base and no in-scene emitters, which is the point. " +
+      "Jordan's framing is the design: 'think of it like a light cone — it " +
+      "really is.' That is the tabletop rig for shiny things: a cone of " +
+      "diffusion standing around the subject, open at the bottom, lit from " +
+      "outside, used on chrome and glass BECAUSE the fabric integrates every " +
+      "lamp behind it into one continuous wall. The rule it buys: a source " +
+      "CONTINUOUS IN AZIMUTH has no azimuth to be AT. A cylinder mirrors a " +
+      "vertical slice of the world, so a discrete source shows as a line at " +
+      "whichever orbit angle faces it — wrap it through 360 deg and no such " +
+      "angle exists, so lines cannot return at ANY orbit position. Softness " +
+      "becomes a property of the shape instead of a value to tune, which is " +
+      "why this ends a run of six rigs that each tried to feather their way " +
+      "out of having small sources. The generator's --check counts how many " +
+      "separate bright regions a cylinder could mirror; this passes at ONE, " +
+      "360 deg wide. Level is calibrated to the retired rig (0.746 " +
+      "sin-weighted mean) so the 45 material recipes, all at envMapIntensity " +
+      "1.0, keep meaning what they mean. Reference: Carl Taylor's glass " +
+      "lighting — large graded sources that drape, never sources you can " +
+      "count (Jordan).",
+  },
 };
 
+// RESTORED to the card rig 2026-09-01 after the cone was rejected. Neither
+// rig is right yet: the cone has no lines and no sheen, this one has sheen and
+// too many lines. Both follow from the same geometry (see 'universal-cone'):
+// on a cylinder a line and a sheen are the SAME azimuthal feature, so the
+// unexplored middle is FEWER, BROADER features — not a flatter world.
 export const APPROVED_STUDIO: StudioPresetId = "hybrid-small08";

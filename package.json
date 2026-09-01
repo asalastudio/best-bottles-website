@@ -48,7 +48,10 @@
     "materials": "npm run materials:glass && npm run materials:port && npm run materials:verify && npm run materials:validate && npm run materials:assets",
     "materials:glass": "tsx scripts/materials/extract-glass.mts",
     "materials:maps": "node scripts/materials/fetch-pbr-maps.mjs",
-    "materials:assets": "node scripts/materials/check-assets.mjs"
+    "materials:assets": "node scripts/materials/check-assets.mjs",
+    "look:verify": "python3 pipeline/paper-doll-3d/scripts/material_lock.py verify",
+    "look:lock": "python3 pipeline/paper-doll-3d/scripts/material_lock.py write",
+    "look:sheet": "node scripts/materials/contact-sheet.mjs"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
