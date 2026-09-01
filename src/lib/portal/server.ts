@@ -238,3 +238,84 @@ export async function askGraceForViewerProject(projectId: string, message: strin
 
     return { assistantMessage };
 }
+
+/** Certificates on file for the signed-in org, newest first, each with a
+ *  short-lived URL for the scan. */
+export async function getPortalCertificates() {
+    if (!CLERK_ENABLED) {
+        return { viewer: DISABLED_VIEWER, certificates: [], exemption: null };
+    }
+    const viewer = await requirePortalViewer();
+    const [certificates, exemption] = await Promise.all([
+        getConvex().query(api.resaleCertificates.listForOrg, {
+            clerkOrgId: viewer.clerkOrgId,
+        }),
+        getConvex().query(api.resaleCertificates.getExemptionStatus, {
+            clerkOrgId: viewer.clerkOrgId,
+        }),
+    ]);
+    return { viewer, certificates, exemption };
+}
+
+/** ACCEPTED SCANS. A resale certificate is a document, not a photo library:
+ *  PDF is what a state issues, and a phone photo of one is the common real
+ *  alternative. Anything else is a mistake worth catching at the door. */
+const CERT_MIME = new Set([
+    "application/pdf", "image/jpeg", "image/png", "image/heic", "image/webp",
+]);
+const CERT_MAX_BYTES = 8 * 1024 * 1024;
+
+/**
+ * Submit a resale certificate for the signed-in org.
+ *
+ * Uploads through the SERVER, following the graceUploads precedent: the
+ * browser never holds a Convex write token, and the file is validated before
+ * a storage URL is ever minted.
+ */
+export async function submitResaleCertificateForViewer(input: {
+    file: File | null;
+    permitNumber: string;
+    issuingState: string;
+    issuedOn?: string;
+    expiresOn?: string;
+}) {
+    const viewer = await requirePortalViewer();
+    const convex = getConvex();
+
+    let blobId: string | undefined;
+    let fileName: string | undefined;
+    let mime: string | undefined;
+
+    if (input.file && input.file.size > 0) {
+        if (input.file.size > CERT_MAX_BYTES) {
+            throw new Error("Certificate exceeds the 8MB limit.");
+        }
+        const type = input.file.type.toLowerCase();
+        if (!CERT_MIME.has(type)) {
+            throw new Error(`Unsupported file type: ${input.file.type || "unknown"}.`);
+        }
+        const uploadUrl = await convex.mutation(
+            api.resaleCertificates.generateUploadUrl, {},
+        );
+        const upload = await fetch(uploadUrl, {
+            method: "POST",
+            headers: { "Content-Type": type },
+            body: input.file,
+        });
+        if (!upload.ok) throw new Error("Storage upload failed.");
+        ({ storageId: blobId } = await upload.json() as { storageId: string });
+        fileName = input.file.name;
+        mime = type;
+    }
+
+    return await convex.mutation(api.resaleCertificates.submit, {
+        clerkOrgId: viewer.clerkOrgId,
+        permitNumber: input.permitNumber,
+        issuingState: input.issuingState,
+        blobId: blobId as never,
+        fileName,
+        mime,
+        issuedOn: input.issuedOn || undefined,
+        expiresOn: input.expiresOn || undefined,
+    });
+}

@@ -1,5 +1,8 @@
 export const dynamic = "force-dynamic";
 import { PageHeader, PortalButton } from "@/components/portal/ui";
+import { ResaleCertificateCard } from "@/components/portal/ResaleCertificateCard";
+import { getPortalCertificates } from "@/lib/portal/server";
+import { submitResaleCertificateAction } from "../actions";
 
 const categories = [
     {
@@ -26,20 +29,34 @@ const categories = [
     {
         label: "Agreements",
         docs: [
-            { name: "Account Agreement — Lumière Atelier", desc: "Terms, net terms, tax exemption certificate", date: "Mar 2021", size: "612 KB" },
+            // "tax exemption certificate" removed from this demo row: the real one
+            // now lives in the card above, and two contradicting answers on one
+            // page is worse than one honest one.
+            { name: "Account Agreement — Lumière Atelier", desc: "Terms and net terms", date: "Mar 2021", size: "612 KB" },
         ],
     },
 ] as const;
 
 const colClass = "grid grid-cols-[1fr_180px_80px_100px] gap-4 items-center";
 
-export default function PortalDocuments() {
+export default async function PortalDocuments() {
+    // The ONLY real data on this page. Everything below it is still the
+    // hard-coded demo vault that shipped with the portal shell -- including,
+    // until now, a fake row claiming a tax exemption certificate was on file.
+    const { certificates, exemption } = await getPortalCertificates();
+
     return (
         <div className="px-6 py-6 max-w-[1200px]">
             <PageHeader
                 eyebrow="Document Vault"
                 title="Documents"
                 subtitle="Invoices, spec sheets, SDS documents, and agreements."
+            />
+
+            <ResaleCertificateCard
+                exemption={exemption}
+                certificates={certificates as never}
+                action={submitResaleCertificateAction}
             />
 
             <div className="flex flex-col gap-5">
