@@ -314,12 +314,12 @@
         1.0,
         1.0
       ],
-      "roughness": 0.04,
+      "roughness": 0.0,
       "metalness": 0.0,
       "clearcoat": 0.0,
       "ior": 1.4905,
       "transmission": 1.0,
-      "note": "Anchored toward plastic.acrylic 2026-09-01 (ior 1.4905, transmission 1.0). Roughness 0.12 -> 0.04, NOT the library's 0.0: that entry is CAST acrylic, optically smooth, while this is an injection-moulded PS/PP overcap which really does carry faint tool texture. 0.12 was blurring the refraction into frost and reading milky-white instead of clear."
+      "note": "LIBRARY-EXACT 2026-09-01: plastic.acrylic verbatim \u2014 roughness 0.0, ior 1.4905, transmission 1.0. Jordan on the moulded-texture argument: 'I like that plastic acrylic, optically smooth. The matte caps won't be, but these will.' The clear parts take the measurement as-is; the matte finishes keep their own roughness. Was 0.12 (milky \u2014 a transmissive material at that roughness blurs its own refraction into frost), briefly 0.04."
     },
     "PART_REDUCER_PP": {
       "color": "#e9e7df",
