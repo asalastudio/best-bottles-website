@@ -71,12 +71,22 @@ const EMITTERS: Emitter[] = [
   // a soft edge. That is what a softbox is.
   //
   // Bigger + dimmer for the same reason: apparent SIZE is what makes light
-  // soft, not intensity. A large panel at 2.4 wraps the shoulder; a small
+  // soft, not intensity. A large panel at 2.2 wraps the shoulder; a small
   // one at 4.0 punches a highlight. This has to flatter 126 different
   // bottle shapes we have not modelled yet, and a big even source is the
   // most shape-forgiving light there is — a hot narrow one has to be
   // re-aimed per silhouette.
-  { position: [-4.2, 5.0, 3.4], scale: [7.0, 11.0], intensity: 2.4, sigma: [1.35, 1.45] },
+  //
+  // LOWERED to y 2.4 (was 5.0) and made taller: high panels light the cap
+  // and shoulder and leave the body dark, so the sheen has to run DOWN the
+  // body. Note this deliberately sits nearer the horizon than the lane's
+  // no-horizon rule, which was written about NARROW HOT sources — those
+  // mirror off a cylinder as a hard full-height line (five failed rigs).
+  // A flat, panel-wide source at sigma 1.35 has no core to print, so it
+  // wraps as a gradient instead. Verified on the cylinder at several
+  // azimuths after the change; if a hard line ever returns here, raise it
+  // rather than narrowing it.
+  { position: [-4.2, 2.4, 3.6], scale: [7.0, 13.0], intensity: 2.2, sigma: [1.35, 1.5] },
   // transmission source: amber/cobalt would read near-black without it.
   // Wide, weak, behind and above — it grades, never prints a line.
   { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
