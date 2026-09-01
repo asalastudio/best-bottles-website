@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #1D1D1F; }
+    a { color: #8B6F42; text-decoration: none; }
+    a:hover { color: #C5A065; }
+  </style>
+</helmet>
+
+<div style="width: 1240px; height: 800px; background: #ECE5D8; padding: 28px 32px; display: flex; flex-direction: column; gap: 20px; overflow: hidden; position: relative;">
+
+  <div style="display: flex; align-items: baseline; gap: 14px;">
+    <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 24px; font-weight: 600;">Component Picker — States</span>
+    <span style="font-size: 12px; color: #637588;">The picker only ever receives server-resolved compatible components. Fitment stays secondary.</span>
+  </div>
+
+  <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; flex: 1;">
+
+    <!-- 1 · Empty / default -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #8B6F42;">1 · Default (nothing chosen)</span>
+      <div style="background: #FFFFFF; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; border: 1px solid #D4C5A9;">
+        <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 8px; padding: 9px 12px; color: #8B6F42; font-weight: 600; font-size: 12.5px;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6" style="margin-left: auto;"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+        <span style="font-size: 11px; color: #9A9590; line-height: 1.5;">A component is never implied. "Bottle Only" is an explicit choice — an unset field cannot be added to an order.</span>
+      </div>
+      <div style="background: #FFFFFF; border-radius: 12px; border: 1px solid #D4C5A9; overflow: hidden;">
+        <div style="padding: 11px 14px 9px; border-bottom: 1px solid #EEE6D4; display: flex; align-items: baseline; gap: 8px;">
+          <span style="font-weight: 700; font-size: 12.5px;">Compatible components</span>
+          <span style="font-size: 10px; color: #9A9590;">17-415 · resolved</span>
+        </div>
+        <div style="display: flex; gap: 6px; padding: 10px 12px; font-size: 10.5px; font-weight: 600; color: #637588; flex-wrap: wrap;">
+          <span style="border: 1px solid #EEE6D4; border-radius: 999px; padding: 5px 12px;">Spray</span>
+          <span style="border: 1px solid #EEE6D4; border-radius: 999px; padding: 5px 12px;">Cap</span>
+          <span style="border: 1px solid #EEE6D4; border-radius: 999px; padding: 5px 12px;">Roller</span>
+          <span style="border: 1px solid #EEE6D4; border-radius: 999px; padding: 5px 12px;">Pump</span>
+          <span style="border: 1px solid #EEE6D4; border-radius: 999px; padding: 5px 12px;">Reducer</span>
+        </div>
+        <div style="padding: 0 12px 12px; font-size: 11px; color: #9A9590;">Types shown are only those with ≥1 compatible variant.</div>
+      </div>
+    </div>
+
+    <!-- 2 · Type chosen -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #8B6F42;">2 · Type selected → exact SKUs</span>
+      <div style="background: #FFFFFF; border-radius: 12px; border: 1px solid #D4C5A9; overflow: hidden;">
+        <div style="padding: 11px 14px 9px; border-bottom: 1px solid #EEE6D4;"><span style="font-weight: 700; font-size: 12.5px;">Spray · 6 compatible</span></div>
+        <div style="display: flex; flex-direction: column; padding: 6px 8px;">
+          <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px;">
+            <div style="width: 24px; height: 30px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#2C2C2E"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#2C2C2E"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#2C2C2E"></rect></svg></div>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-size: 12px; font-weight: 600;">Fine Mist Sprayer — Black</span><span style="font-size: 9.5px; color: #9A9590;">SPR-17415-BLK</span></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px;">
+            <div style="width: 24px; height: 30px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#C5A065"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#C5A065"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#8B6F42"></rect></svg></div>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-size: 12px; font-weight: 600;">Fine Mist Sprayer — Gold</span><span style="font-size: 9.5px; color: #9A9590;">SPR-17415-GLD</span></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px;">
+            <div style="width: 24px; height: 30px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#3E8E96"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#3E8E96"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#2C6B72"></rect></svg></div>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-size: 12px; font-weight: 600;">Fine Mist Sprayer — Turquoise</span><span style="font-size: 9.5px; color: #9A9590;">SPR-17415-TUR</span></div>
+          </div>
+          <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px; border-top: 1px dashed #EEE6D4; margin-top: 4px;">
+            <div style="width: 24px; height: 30px; border: 1px dashed #C5A065; border-radius: 5px;"></div>
+            <span style="font-size: 12px; color: #8B6F42; font-weight: 600;">Bottle Only — no component</span>
+          </div>
+        </div>
+        <div style="padding: 9px 14px; border-top: 1px solid #EEE6D4; font-size: 11.5px; font-weight: 600; color: #8B6F42;">View all compatible components (12) →</div>
+      </div>
+    </div>
+
+    <!-- 3 · Selected + finish -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #8B6F42;">3 · Selected · finish follows</span>
+      <div style="background: #FFFFFF; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 12px; border: 1px solid #D4C5A9;">
+        <div style="display: flex; align-items: center; gap: 9px; border: 1px solid #1D1D1F; border-radius: 8px; padding: 6px 11px 6px 6px;">
+          <div style="width: 24px; height: 30px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="10" height="20" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#2C2C2E"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#2C2C2E"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#2C2C2E"></rect></svg></div>
+          <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-size: 12px; font-weight: 600;">Fine Mist Sprayer</span><span style="font-size: 10px; color: #637588;">Black</span></div>
+          <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6" style="margin-left: auto;"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+        </div>
+        <span style="font-size: 10.5px; color: #9A9590;">Click again to replace — reopens the picker.</span>
+        <div style="border-top: 1px solid #EEE6D4; padding-top: 11px; display: flex; flex-direction: column; gap: 8px;">
+          <span style="font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Component finish — actual variants only</span>
+          <div style="display: flex; gap: 7px;">
+            <div style="display: flex; align-items: center; gap: 6px; border: 1.5px solid #1D1D1F; border-radius: 999px; padding: 5px 11px; font-size: 11px; font-weight: 600;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #1D1D1F;"></span>Black</div>
+            <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 999px; padding: 5px 11px; font-size: 11px;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #C5A065;"></span>Gold</div>
+            <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 999px; padding: 5px 11px; font-size: 11px;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #B8B6B2;"></span>Matte Silver</div>
+          </div>
+          <div style="display: flex; gap: 7px;">
+            <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 999px; padding: 5px 11px; font-size: 11px;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #E4E2DE; border: 1px solid #C7C2BA;"></span>Shiny Silver</div>
+            <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 999px; padding: 5px 11px; font-size: 11px;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #3E8E96;"></span>Turquoise</div>
+            <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 999px; padding: 5px 11px; font-size: 11px;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #A5432F;"></span>Red</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 · Validation + bulk -->
+    <div style="display: flex; flex-direction: column; gap: 10px;">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #8B6F42;">4 · Validation &amp; bulk apply</span>
+      <div style="background: #FFFFFF; border-radius: 12px; padding: 14px; display: flex; flex-direction: column; gap: 9px; border: 1px solid #D4C5A9;">
+        <div style="display: flex; gap: 9px; background: #FBEAE6; border: 1px solid #E0AFA3; border-radius: 9px; padding: 9px 11px; font-size: 11px; line-height: 1.45;">
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#A5432F" stroke-width="1.7" style="flex-shrink: 0; margin-top: 1px;"><circle cx="7" cy="7" r="5.4"></circle><path d="M4.8 4.8 L9.2 9.2 M9.2 4.8 L4.8 9.2"></path></svg>
+          <span><b>Not compatible.</b> This component doesn't fit the selected bottle. Server validation rejects it even if the UI is bypassed.</span>
+        </div>
+        <div style="display: flex; gap: 9px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 9px; padding: 9px 11px; font-size: 11px; line-height: 1.45;">
+          <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.6" style="flex-shrink: 0; margin-top: 1px;"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>
+          <span><b>Currently unavailable.</b> This component went out of stock — please choose another option.</span>
+        </div>
+        <div style="display: flex; gap: 9px; background: #FDFBF8; border: 1px solid #EEE6D4; border-radius: 9px; padding: 9px 11px; font-size: 11px; line-height: 1.45; color: #637588;">
+          <span><b style="color: #1D1D1F;">No compatible components.</b> Customer sees this copy; Catalog QA sees "Compatibility mapping missing" on the same row.</span>
+        </div>
+      </div>
+      <div style="background: #1D1D1F; color: #F5F3EF; border-radius: 12px; padding: 12px 14px; display: flex; flex-direction: column; gap: 9px;">
+        <div style="display: flex; align-items: center; gap: 10px; font-size: 11.5px; font-weight: 600;">4 rows selected
+          <span style="margin-left: auto; display: flex; gap: 6px; font-size: 10.5px;">
+            <span style="border: 1px solid #4A4A4E; border-radius: 7px; padding: 4px 9px;">Apply Finish</span>
+            <span style="border: 1px solid #4A4A4E; border-radius: 7px; padding: 4px 9px;">Apply Component</span>
+            <span style="background: #C5A065; color: #1D1D1F; border-radius: 7px; padding: 4px 9px; font-weight: 700;">Add Selected</span>
+          </span>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 4px; font-size: 10.5px; border-top: 1px solid #3A3A3E; padding-top: 8px;">
+          <span style="display: flex; align-items: center; gap: 6px;"><svg width="11" height="11" viewBox="0 0 10 10" fill="none" stroke="#8FBF92" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>3 configurations updated</span>
+          <span style="display: flex; align-items: center; gap: 6px; color: #E8C98E;"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#E8C98E" stroke-width="1.6"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>1 not compatible with this component — left unchanged</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size: 11px; color: #637588; display: flex; gap: 24px;">
+    <span><b style="color: #1D1D1F;">Precedence:</b> explicit exclusion → explicit inclusion → exact fitment → family inference. Unknown ≠ compatible.</span>
+    <span style="margin-left: auto;">Keyboard: picker is a focus-trapped listbox · Esc closes · arrows navigate · Enter selects.</span>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>
