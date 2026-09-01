@@ -25,6 +25,7 @@ import {
   STUDIO_PRESETS, APPROVED_STUDIO,
   type StudioPresetId,
 } from "@/lib/materials/studioPresets";
+import { StudioEnvironment } from "@/components/products/StudioEnvironment";
 
 type Body = {
   bodyId: string; family: string; shape: string;
@@ -526,6 +527,9 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
   }, [scene, intensity, rotationDeg]);
 
+  // hybrid = HDRI + Lightformers baked into ONE cubemap (the candidate
+  // single-environment architecture) — same component the scene shell mounts
+  if (preset.hybrid) return <StudioEnvironment />;
   if (preset.hdri) return <Environment files={preset.hdri} />;
 
   // legacy in-scene rig, kept only for A/B. Its narrow hot rim pair is what
