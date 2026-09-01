@@ -418,6 +418,13 @@ DOTS_17415 = dict(
     # buried `sink` INSIDE the wall — the outline stays perfectly clean.
     proud=0.04, sink=0.02,
     z_lo=-8.9, z_hi=9.6,    # measured span, referenced to the rim datum
+    # BEZEL SOCKET, added 2026-08-31 after the parity gate measured the
+    # reference at 10.1% DARK pixels against our 0.00%. A flush stone on a
+    # bright cap has nothing to shade; the real product's dark heart is the
+    # recess it sits in. The socket goes INWARD only — the silhouette is
+    # untouched, so Jordan's flush rule holds.
+    bezel_d=1.9,            # socket mouth, wider than the O1.2 stone
+    bezel_depth=0.55,       # how deep the wall is cut
 )
 
 
@@ -464,6 +471,36 @@ def cap_dots_builder(rig, finish, variant):
             # silhouette never bumps because nothing meaningfully protrudes.
             a, p_, s_ = d["dot_d"] / 2.0, d["proud"], d["sink"]
             depth = p_ + s_
+
+            # --- BEZEL SOCKET: a short truncated cone cut INTO the wall,
+            # open at the surface and narrowing inward. Its inner wall
+            # faces away from the studio, so it renders as the dark ring
+            # the reference shows around every stone.
+            bez = bmesh.new()
+            br_o, br_i = d["bezel_d"] / 2.0, d["dot_d"] / 2.0 * 0.92
+            bd = d["bezel_depth"]
+            SEG = 16
+            rings = []
+            for rr, zz in ((br_o, 0.0), (br_i, -bd), (br_i * 0.86, -bd)):
+                rings.append([bez.verts.new((rr * math.cos(2 * math.pi * i / SEG),
+                                             rr * math.sin(2 * math.pi * i / SEG), zz))
+                              for i in range(SEG)])
+            for ra, rb in zip(rings, rings[1:]):
+                for i in range(SEG):
+                    jx = (i + 1) % SEG
+                    bez.faces.new((ra[i], ra[jx], rb[jx], rb[i]))
+            bez.normal_update()
+            # same orientation chain as the stone, seated at the wall
+            bmesh.ops.rotate(bez, verts=bez.verts, cent=(0, 0, 0),
+                             matrix=Matrix.Rotation(math.pi / 2.0, 3, "Y"))
+            bmesh.ops.rotate(bez, verts=bez.verts, cent=(0, 0, 0),
+                             matrix=Matrix.Rotation(theta, 3, "Z"))
+            b_off = r_wall - 0.01
+            bmesh.ops.translate(bez, verts=bez.verts,
+                                vec=(b_off * math.cos(theta),
+                                     b_off * math.sin(theta), z))
+            me_b = bpy.data.meshes.new("b"); bez.to_mesh(me_b); bez.free()
+            acc.from_mesh(me_b); bpy.data.meshes.remove(me_b)
             bmesh.ops.create_cone(tmp, cap_ends=True, segments=8,
                                   radius1=a, radius2=a * 0.62, depth=depth)
             # vary each stone's facet clocking so the glints don't repeat

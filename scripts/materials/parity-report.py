@@ -81,7 +81,12 @@ def main():
     d_bright = d["brightPx"] / d["coveredPx"]
     d_dark = d["darkPx"] / d["coveredPx"]
 
-    d_shell = np.array(hex_to_rgb(d["meanColor"]), dtype=float)
+    # LIKE FOR LIKE. An earlier version compared the reference's 70-85th
+    # percentile HIGHLIGHT band against the render's overall MEAN, which
+    # scored a washed-out white cap as dE 2.00 PASS. Always the same
+    # statistic on both sides, and always report tonal RANGE — a flat
+    # render can match a midtone while looking nothing like the product.
+    d_shell = np.array(hex_to_rgb(d.get("band70_85") or d["meanColor"]), dtype=float)
     dE = float(np.linalg.norm(srgb_to_lab(r["shell"]) - srgb_to_lab(d_shell)))
 
     def ratio(a, b):
@@ -98,6 +103,14 @@ def main():
     print(f"            shell {hexs}  bright {r_bright*100:5.2f}%  dark {r_dark*100:5.2f}%")
     print(f"render    : shell {d['meanColor']}  bright {d_bright*100:5.2f}%  dark {d_dark*100:5.2f}%")
     print()
+    r_range = None
+    if "lumP5" in d and "lumP95" in d:
+        r_lum = np.array(Image.open(f"{REF_DIR}/{args.ref}.png").convert("L"), dtype=float)
+        rl = r_lum[r_lum < 248]
+        ref_range = float(np.percentile(rl, 95) - np.percentile(rl, 5))
+        r_range = (d["lumP95"] - d["lumP5"]) / ref_range if ref_range else 0
+        print(f"  tonal range {r_range:6.2f}x  {verdict(r_range, 0.6, 1.4)}   "
+              f"(render {d['lumP95']-d['lumP5']:.0f} vs reference {ref_range:.0f})")
     print(f"  shell dE    {dE:6.2f}   {verdict(dE, 0, 6)}   (target <= 6)")
     print(f"  sparkle     {sparkle:6.2f}x  {verdict(sparkle, 0.6, 1.4)}   (target 0.6-1.4x)")
     print(f"  bezel       {bezel:6.2f}x  {verdict(bezel, 0.6, 1.4)}   (target 0.6-1.4x)")
