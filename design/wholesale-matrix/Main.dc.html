@@ -1,0 +1,394 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #1D1D1F; }
+    a { color: #8B6F42; text-decoration: none; }
+    a:hover { color: #C5A065; }
+  </style>
+</helmet>
+
+<div style="width: 1600px; height: 1000px; background: #FAF8F5; position: relative; overflow: hidden; display: flex; flex-direction: column;">
+
+  <!-- ═══ Site navbar (matches storefront) ═══ -->
+  <div style="height: 62px; background: #FDFBF8; border-bottom: 1px solid #EEE6D4; display: flex; align-items: center; gap: 28px; padding: 0 32px; flex-shrink: 0;">
+    <div style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; letter-spacing: 0.06em; font-weight: 600;">BEST BOTTLES</div>
+    <div style="display: flex; gap: 22px; font-size: 13px; color: #2C2C2E;">
+      <span>Bottles</span><span>Closures</span><span>Specialty</span><span>Catalog</span><span>Journal</span><span>About</span>
+    </div>
+    <div style="flex: 1;"></div>
+    <div style="display: flex; align-items: center; gap: 8px; background: #FFFFFF; border: 1px solid #D4C5A9; border-radius: 999px; padding: 7px 14px; width: 300px; color: #9A9590; font-size: 12.5px;">
+      <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#9A9590" stroke-width="1.5"><circle cx="7" cy="7" r="5"></circle><path d="M11 11 L14 14"></path></svg>
+      Search bottles, sizes, components, SKUs…
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: #2C2C2E;">
+      <div style="position: relative; display: flex; align-items: center; gap: 7px; border: 1px solid #D4C5A9; border-radius: 8px; padding: 7px 12px; background: #FFFFFF;">
+        <svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="#1D1D1F" stroke-width="1.4"><path d="M2 3 H4 L5.5 11 H12.5 L14 5 H4.5"></path><circle cx="6" cy="13.4" r="1.1" fill="#1D1D1F" stroke="none"></circle><circle cx="12" cy="13.4" r="1.1" fill="#1D1D1F" stroke="none"></circle></svg>
+        <div style="display: flex; flex-direction: column; line-height: 1.15;">
+          <span style="font-weight: 600;">My Order</span><span style="color: #9A9590; font-size: 10.5px;">84 units</span>
+        </div>
+        <div style="position: absolute; top: -7px; left: -7px; background: #1D1D1F; color: #F5F3EF; border-radius: 999px; font-size: 9.5px; font-weight: 700; padding: 2px 5.5px;">5</div>
+      </div>
+      <span style="color: #637588;">Account</span>
+    </div>
+  </div>
+
+  <!-- ═══ Page body: main column + configuration drawer ═══ -->
+  <div style="flex: 1; display: flex; min-height: 0;">
+
+    <!-- ── Main column ── -->
+    <div style="flex: 1; display: flex; flex-direction: column; padding: 20px 28px 0 32px; min-width: 0;">
+
+      <!-- Title + view switch -->
+      <div style="display: flex; align-items: flex-end; gap: 24px; margin-bottom: 14px;">
+        <div style="display: flex; flex-direction: column; gap: 3px;">
+          <div style="font-family: 'EB Garamond', Georgia, serif; font-size: 32px; font-weight: 500; line-height: 1;">Wholesale Matrix</div>
+          <div style="font-size: 12.5px; color: #637588;">Configure bottles and compatible components quickly.</div>
+        </div>
+        <div style="flex: 1;"></div>
+        <div style="display: flex; border: 1px solid #D4C5A9; border-radius: 8px; overflow: hidden; font-size: 12px; font-weight: 600;">
+          <div style="padding: 8px 16px; background: #FFFFFF; color: #637588;">Visual Catalog</div>
+          <div style="padding: 8px 16px; background: #1D1D1F; color: #F5F3EF;">Wholesale Matrix</div>
+        </div>
+      </div>
+
+      <!-- Primary toolbar -->
+      <div style="display: flex; align-items: center; gap: 10px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 12px; margin-bottom: 14px; font-size: 12px;">
+        <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #D4C5A9; border-radius: 8px; padding: 7px 11px; width: 230px; color: #9A9590; background: #FDFBF8;">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#9A9590" stroke-width="1.5"><circle cx="7" cy="7" r="5"></circle><path d="M11 11 L14 14"></path></svg>
+          Search within results…
+        </div>
+        <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 8px; padding: 7px 11px; background: #FDFBF8;">All Families <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+        <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 8px; padding: 7px 11px; background: #FDFBF8;">All Sizes <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+        <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 8px; padding: 7px 11px; background: #FDFBF8;">All Finishes <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+        <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 8px; padding: 7px 11px; background: #FDFBF8;">All Component Types <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+        <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #1D1D1F; border-radius: 8px; padding: 7px 12px; font-weight: 600;">
+          <svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#1D1D1F" stroke-width="1.5"><path d="M2 4 H14 M4.5 8 H11.5 M6.5 12 H9.5"></path></svg>
+          Filters
+        </div>
+        <div style="flex: 1;"></div>
+        <span style="color: #9A9590; font-size: 11px;">Density</span>
+        <div style="display: flex; border: 1px solid #D4C5A9; border-radius: 8px; overflow: hidden; font-size: 11.5px; font-weight: 600;">
+          <div style="padding: 6px 12px; background: #FFFFFF; color: #637588;">Comfortable</div>
+          <div style="padding: 6px 12px; background: #EEE6D4; color: #1D1D1F;">Compact</div>
+        </div>
+      </div>
+
+      <!-- ── Cylinder family (expanded) ── -->
+      <div style="background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 12px; overflow: hidden; margin-bottom: 10px;">
+        <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #EEE6D4;">
+          <svg width="16" height="22" viewBox="0 0 16 24" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3.5" rx="0.8"></rect><rect x="3" y="6.5" width="10" height="16" rx="2.4"></rect></svg>
+          <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 18px; font-weight: 600;">Cylinder Family</span>
+          <span style="font-size: 11.5px; color: #637588;">21 variants&nbsp;&nbsp;·&nbsp;&nbsp;3 ml – 100 ml&nbsp;&nbsp;·&nbsp;&nbsp;Clear · Amber · Cobalt · Frosted · Swirl</span>
+          <div style="flex: 1;"></div>
+          <div style="display: flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #637588;">Collapse <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 7.5 L6 4 L9.5 7.5"></path></svg></div>
+        </div>
+
+        <!-- column header -->
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 7px 16px; background: #FDFBF8; border-bottom: 1px solid #EEE6D4; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">
+          <span></span><span>Bottle</span><span>Size</span><span>Finish</span><span style="display: flex; align-items: center; gap: 3px;">Neck <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#C5A065" stroke-width="1.4"><circle cx="6" cy="6" r="4.6"></circle><path d="M6 5.4 V8.6 M6 3.4 V4.2"></path></svg></span><span>Component</span><span>Comp. Finish</span><span>Qty</span><span></span>
+        </div>
+
+        <!-- row: 3 ml -->
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+          <div style="width: 15px; height: 15px; border: 1.5px solid #D4C5A9; border-radius: 4px; background: #FFFFFF;"></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#C7C2BA" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#FDFCFA" stroke="#C7C2BA" stroke-width="1.2"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-CLR-3ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">3 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">Clear <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #9A9590; font-size: 11px;">17-415</span>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 7px; padding: 6px 10px; color: #8B6F42; font-weight: 600;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #C7C2BA;">—</span>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #D4C5A9; border-radius: 7px; overflow: hidden;"><div style="padding: 5px 9px; color: #9A9590; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 600;">12</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="border: 1px solid #1D1D1F; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600;">Add</div>
+        </div>
+
+        <!-- row: 5 ml -->
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+          <div style="width: 15px; height: 15px; border: 1.5px solid #D4C5A9; border-radius: 4px; background: #FFFFFF;"></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#C7C2BA" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#FDFCFA" stroke="#C7C2BA" stroke-width="1.2"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-CLR-5ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">5 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">Clear <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #9A9590; font-size: 11px;">17-415</span>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 7px; padding: 6px 10px; color: #8B6F42; font-weight: 600;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #C7C2BA;">—</span>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #D4C5A9; border-radius: 7px; overflow: hidden;"><div style="padding: 5px 9px; color: #9A9590; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 600;">12</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="border: 1px solid #1D1D1F; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600;">Add</div>
+        </div>
+
+        <!-- row: 9 ml — SELECTED, picker open -->
+        <div style="position: relative; display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px 8px 13px; border-bottom: 1px solid #F5F3EF; font-size: 12px; background: #F0F4EE; border-left: 3px solid #5B7B5D;">
+          <div style="width: 15px; height: 15px; border-radius: 4px; background: #5B7B5D; display: flex; align-items: center; justify-content: center;"><svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#6E3E17" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#7A4A1F" stroke="#5E3512" stroke-width="1.2"></rect><rect x="6" y="9" width="2.4" height="15" rx="1.2" fill="#9A6A38"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-AMB-9ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #5B7B5D; border-radius: 7px; padding: 6px 10px; background: #FFFFFF; font-weight: 600;">9 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#1D1D1F" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #5B7B5D; border-radius: 7px; padding: 6px 10px; background: #FFFFFF; font-weight: 600;">Amber <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#1D1D1F" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #637588; font-size: 11px; font-weight: 600;">17-415</span>
+          <div style="display: flex; align-items: center; gap: 8px; border: 1px solid #1D1D1F; border-radius: 7px; padding: 4px 10px 4px 5px; background: #FFFFFF;">
+            <div style="width: 22px; height: 26px; background: #EEE6D4; border-radius: 4px; display: flex; align-items: center; justify-content: center;"><svg width="10" height="18" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#2C2C2E"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#2C2C2E"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#2C2C2E"></rect></svg></div>
+            <div style="display: flex; flex-direction: column; line-height: 1.2;"><span style="font-weight: 600; font-size: 11.5px;">Fine Mist Sprayer</span><span style="font-size: 10px; color: #637588;">Black</span></div>
+            <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6" style="margin-left: auto;"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+          </div>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FFFFFF;"><span style="width: 10px; height: 10px; border-radius: 999px; background: #1D1D1F;"></span> Black <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6" style="margin-left: auto;"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #5B7B5D; border-radius: 7px; overflow: hidden; background: #FFFFFF;"><div style="padding: 5px 9px; color: #637588; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 700;">24</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="background: #5B7B5D; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600; color: #FFFFFF; display: flex; align-items: center; justify-content: center; gap: 5px;"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" stroke="#FFFFFF" stroke-width="2"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg> Added</div>
+        </div>
+
+        <!-- rows: 15 / 30 / 50 / 100 ml -->
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+          <div style="width: 15px; height: 15px; border: 1.5px solid #D4C5A9; border-radius: 4px; background: #FFFFFF;"></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#C7C2BA" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#FDFCFA" stroke="#C7C2BA" stroke-width="1.2"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-CLR-15ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">15 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">Clear <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #9A9590; font-size: 11px;">17-415</span>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 7px; padding: 6px 10px; color: #8B6F42; font-weight: 600;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #C7C2BA;">—</span>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #D4C5A9; border-radius: 7px; overflow: hidden;"><div style="padding: 5px 9px; color: #9A9590; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 600;">12</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="border: 1px solid #1D1D1F; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600;">Add</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+          <div style="width: 15px; height: 15px; border: 1.5px solid #D4C5A9; border-radius: 4px; background: #FFFFFF;"></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#B9BCC9" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#F1F0EC" stroke="#B9BCC9" stroke-width="1.2"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-FRO-30ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">30 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">Frosted <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #9A9590; font-size: 11px;">17-415</span>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 7px; padding: 6px 10px; color: #8B6F42; font-weight: 600;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #C7C2BA;">—</span>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #D4C5A9; border-radius: 7px; overflow: hidden;"><div style="padding: 5px 9px; color: #9A9590; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 600;">12</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="border: 1px solid #1D1D1F; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600;">Add</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+          <div style="width: 15px; height: 15px; border: 1.5px solid #D4C5A9; border-radius: 4px; background: #FFFFFF;"></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#20337F" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#26409E" stroke="#1B2E75" stroke-width="1.2"></rect><rect x="6" y="9" width="2.4" height="15" rx="1.2" fill="#4A63C2"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-CBL-50ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">50 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">Cobalt <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #9A9590; font-size: 11px;">18-415</span>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 7px; padding: 6px 10px; color: #8B6F42; font-weight: 600;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #C7C2BA;">—</span>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #D4C5A9; border-radius: 7px; overflow: hidden;"><div style="padding: 5px 9px; color: #9A9590; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 600;">12</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="border: 1px solid #1D1D1F; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600;">Add</div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 34px 190px 108px 108px 84px 210px 120px 108px 92px; gap: 8px; align-items: center; padding: 8px 16px; font-size: 12px;">
+          <div style="width: 15px; height: 15px; border: 1.5px solid #D4C5A9; border-radius: 4px; background: #FFFFFF;"></div>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <svg width="18" height="30" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#6E3E17" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#7A4A1F" stroke="#5E3512" stroke-width="1.2"></rect><rect x="6" y="9" width="2.4" height="15" rx="1.2" fill="#9A6A38"></rect></svg>
+            <div style="display: flex; flex-direction: column; line-height: 1.25;"><span style="font-weight: 600;">Cylinder Bottle</span><span style="font-size: 10px; color: #9A9590;">GB-CYL-AMB-100ML</span></div>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">100 ml <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border: 1px solid #D4C5A9; border-radius: 7px; padding: 6px 10px; background: #FDFBF8;">Amber <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #9A9590; font-size: 11px;">18-415</span>
+          <div style="display: flex; align-items: center; gap: 6px; border: 1px dashed #C5A065; border-radius: 7px; padding: 6px 10px; color: #8B6F42; font-weight: 600;">+ Choose Component <svg width="10" height="10" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg></div>
+          <span style="color: #C7C2BA;">—</span>          <div style="display: flex; align-items: center; gap: 0; border: 1px solid #D4C5A9; border-radius: 7px; overflow: hidden;"><div style="padding: 5px 9px; color: #9A9590; border-right: 1px solid #EEE6D4;">–</div><div style="padding: 5px 11px; font-weight: 600;">12</div><div style="padding: 5px 9px; color: #637588; border-left: 1px solid #EEE6D4;">+</div></div>
+          <div style="border: 1px solid #1D1D1F; border-radius: 7px; padding: 6px 0; text-align: center; font-weight: 600;">Add</div>
+        </div>
+
+        <!-- anchored component picker (over the selected row's component column) -->
+        <div style="position: absolute; left: 613px; top: 415px; width: 300px; background: #FFFFFF; border: 1px solid #D4C5A9; border-radius: 12px; box-shadow: 0 18px 44px rgba(29,29,31,0.16); z-index: 30; overflow: hidden;">
+          <div style="padding: 11px 14px 9px; border-bottom: 1px solid #EEE6D4; display: flex; align-items: baseline; gap: 8px;">
+            <span style="font-weight: 700; font-size: 12.5px;">Compatible components</span>
+            <span style="font-size: 10px; color: #9A9590;">17-415 · resolved</span>
+          </div>
+          <div style="display: flex; gap: 6px; padding: 10px 14px 4px; font-size: 10.5px; font-weight: 600;">
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 7px 0; width: 52px; border-radius: 8px; background: #EEE6D4; color: #1D1D1F;"><svg width="12" height="18" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" stroke="#1D1D1F" stroke-width="1.3"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" stroke="#1D1D1F" stroke-width="1.3"></rect><rect x="5.5" y="0.8" width="3.4" height="1.7" rx="0.8" fill="#1D1D1F"></rect></svg>Spray</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 7px 0; width: 52px; border-radius: 8px; color: #637588;"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="#637588" stroke-width="1.3"><rect x="2" y="4" width="10" height="12" rx="2"></rect><path d="M4 4 V2.5 H10 V4"></path></svg>Cap</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 7px 0; width: 52px; border-radius: 8px; color: #637588;"><svg width="12" height="18" viewBox="0 0 12 18" fill="none" stroke="#637588" stroke-width="1.3"><ellipse cx="6" cy="3.4" rx="3" ry="2.4"></ellipse><path d="M5 6 H7 L6.6 16 L6 17 L5.4 16 Z"></path></svg>Roller</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 7px 0; width: 52px; border-radius: 8px; color: #637588;"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="#637588" stroke-width="1.3"><path d="M4 6 H10 V16 H4 Z"></path><path d="M6 6 V3 H11 V1.5"></path></svg>Pump</div>
+            <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 7px 0; width: 52px; border-radius: 8px; color: #637588;"><svg width="14" height="18" viewBox="0 0 14 18" fill="none" stroke="#637588" stroke-width="1.3"><circle cx="7" cy="4" r="2.4"></circle><path d="M5.5 7 H8.5 V11 L7 16 L5.5 11 Z"></path></svg>Reducer</div>
+          </div>
+          <div style="display: flex; flex-direction: column; padding: 6px 8px;">
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px; background: #F0F4EE;">
+              <div style="width: 26px; height: 32px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="11" height="22" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#2C2C2E"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#2C2C2E"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#2C2C2E"></rect></svg></div>
+              <span style="font-size: 12px; font-weight: 600;">Fine Mist Sprayer — Black</span>
+              <svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="2" style="margin-left: auto;"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px;">
+              <div style="width: 26px; height: 32px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="11" height="22" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#C5A065"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#C5A065"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#8B6F42"></rect></svg></div>
+              <span style="font-size: 12px;">Fine Mist Sprayer — Gold</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px;">
+              <div style="width: 26px; height: 32px; background: #EEE6D4; border-radius: 5px; display: flex; align-items: center; justify-content: center;"><svg width="11" height="22" viewBox="0 0 10 20" fill="none"><rect x="2" y="6" width="6" height="13" rx="1.4" fill="#B8B6B2"></rect><rect x="3" y="2.5" width="4" height="3" rx="0.7" fill="#B8B6B2"></rect><rect x="5.5" y="0.5" width="3.4" height="2" rx="0.8" fill="#8A8884"></rect></svg></div>
+              <span style="font-size: 12px;">Fine Mist Sprayer — Matte Silver</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; padding: 7px 8px; border-radius: 8px; border-top: 1px dashed #EEE6D4; margin-top: 4px;">
+              <div style="width: 26px; height: 32px; border: 1px dashed #C5A065; border-radius: 5px;"></div>
+              <span style="font-size: 12px; color: #8B6F42; font-weight: 600;">Bottle Only — no component</span>
+            </div>
+          </div>
+          <div style="padding: 9px 14px; border-top: 1px solid #EEE6D4; font-size: 11.5px; font-weight: 600; color: #8B6F42; display: flex; align-items: center; justify-content: space-between;">
+            View all compatible components (12)
+            <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="#8B6F42" stroke-width="1.6"><path d="M4.5 2.5 L8 6 L4.5 9.5"></path></svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Collapsed families ── -->
+      <div style="display: flex; flex-direction: column; gap: 7px;">
+        <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+          <svg width="15" height="20" viewBox="0 0 16 22" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3" rx="0.8"></rect><path d="M4 8 C4 5.8 5.6 4.5 8 4.5 C10.4 4.5 12 5.8 12 8 L12 18 C12 19.6 10.8 20.5 8 20.5 C5.2 20.5 4 19.6 4 18 Z"></path></svg>
+          <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Boston Round Family</span>
+          <span style="font-size: 11px; color: #637588;">14 variants&nbsp;·&nbsp;5 ml – 60 ml&nbsp;·&nbsp;Clear · Amber · Cobalt</span>
+          <div style="flex: 1;"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+          <svg width="15" height="20" viewBox="0 0 16 22" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3" rx="0.8"></rect><ellipse cx="8" cy="13" rx="5" ry="7.5"></ellipse></svg>
+          <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Elegant Family</span>
+          <span style="font-size: 11px; color: #637588;">12 variants&nbsp;·&nbsp;15 ml – 100 ml&nbsp;·&nbsp;Clear · Frosted</span>
+          <div style="flex: 1;"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+          <svg width="15" height="20" viewBox="0 0 16 22" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3" rx="0.8"></rect><circle cx="8" cy="13.5" r="7"></circle></svg>
+          <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Circle Family</span>
+          <span style="font-size: 11px; color: #637588;">8 variants&nbsp;·&nbsp;30 ml – 100 ml&nbsp;·&nbsp;Clear · Amber</span>
+          <div style="flex: 1;"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+          <svg width="15" height="20" viewBox="0 0 16 22" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3" rx="0.8"></rect><rect x="3.5" y="5.5" width="9" height="15" rx="1.6"></rect></svg>
+          <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Royal Family</span>
+          <span style="font-size: 11px; color: #637588;">9 variants&nbsp;·&nbsp;5 ml – 50 ml&nbsp;·&nbsp;Clear · Frosted · Amber</span>
+          <div style="flex: 1;"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+          <svg width="15" height="20" viewBox="0 0 16 22" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="6.2" y="1.5" width="3.6" height="3" rx="0.8"></rect><rect x="5" y="5.5" width="6" height="15" rx="1.4"></rect></svg>
+          <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Sleek &amp; Slim Family</span>
+          <span style="font-size: 11px; color: #637588;">11 variants&nbsp;·&nbsp;3 ml – 30 ml&nbsp;·&nbsp;Clear · Cobalt</span>
+          <div style="flex: 1;"></div>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── Configuration drawer ── -->
+    <div style="width: 356px; flex-shrink: 0; background: #FFFFFF; border-left: 1px solid #EEE6D4; display: flex; flex-direction: column; padding: 18px 20px 14px; overflow: hidden;">
+      <div style="display: flex; align-items: center; margin-bottom: 10px;">
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 20px; font-weight: 600;">Your Configuration</span>
+        <div style="flex: 1;"></div>
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#9A9590" stroke-width="1.6"><path d="M2 2 L12 12 M12 2 L2 12"></path></svg>
+      </div>
+
+      <!-- relationship strip -->
+      <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 4px; margin-bottom: 12px; font-size: 10px; font-weight: 600;">
+        <span style="background: #EEE6D4; border-radius: 999px; padding: 3px 9px;">Cylinder</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="#C5A065" stroke-width="1.5"><path d="M2 5 H8 M5.5 2.5 L8 5 L5.5 7.5"></path></svg>
+        <span style="background: #EEE6D4; border-radius: 999px; padding: 3px 9px;">9 ml</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="#C5A065" stroke-width="1.5"><path d="M2 5 H8 M5.5 2.5 L8 5 L5.5 7.5"></path></svg>
+        <span style="background: #EEE6D4; border-radius: 999px; padding: 3px 9px;">Amber</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="#C5A065" stroke-width="1.5"><path d="M2 5 H8 M5.5 2.5 L8 5 L5.5 7.5"></path></svg>
+        <span style="background: #FDFBF8; border: 1px solid #EEE6D4; border-radius: 999px; padding: 3px 9px; color: #9A9590;">17-415</span>
+        <svg width="9" height="9" viewBox="0 0 10 10" fill="none" stroke="#C5A065" stroke-width="1.5"><path d="M2 5 H8 M5.5 2.5 L8 5 L5.5 7.5"></path></svg>
+        <span style="background: #EEE6D4; border-radius: 999px; padding: 3px 9px;">Fine Mist Sprayer</span>
+      </div>
+
+      <!-- preview -->
+      <div style="height: 208px; background: #EEE6D4; border-radius: 12px; display: flex; align-items: flex-end; justify-content: center; gap: 18px; padding-bottom: 16px; margin-bottom: 14px;">
+        <svg width="64" height="150" viewBox="0 0 64 150" fill="none">
+          <rect x="24" y="2" width="16" height="26" rx="2.5" fill="#2C2C2E"></rect>
+          <rect x="30" y="-2" width="17" height="9" rx="3" fill="#2C2C2E" transform="rotate(0 30 2)"></rect>
+          <rect x="20" y="28" width="24" height="12" rx="2" fill="#3B3B3D"></rect>
+          <rect x="14" y="40" width="36" height="106" rx="9" fill="#7A4A1F" stroke="#5E3512" stroke-width="2"></rect>
+          <rect x="21" y="50" width="7" height="84" rx="3.5" fill="#9A6A38"></rect>
+        </svg>
+        <svg width="34" height="74" viewBox="0 0 34 74" fill="none">
+          <rect x="6" y="14" width="22" height="56" rx="5" fill="#2C2C2E"></rect>
+          <rect x="10" y="6" width="14" height="8" rx="2" fill="#2C2C2E"></rect>
+          <rect x="17" y="1" width="12" height="5.5" rx="2.5" fill="#3B3B3D"></rect>
+        </svg>
+      </div>
+
+      <!-- spec list -->
+      <div style="display: flex; flex-direction: column; font-size: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0; border-bottom: 1px solid #F5F3EF;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center;">1</span><span style="color: #637588; width: 104px;">Bottle</span><span style="font-weight: 600;">Cylinder Bottle</span><a href="#" style="margin-left: auto; font-size: 10.5px; font-weight: 600;">Edit</a></div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0; border-bottom: 1px solid #F5F3EF;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center;">2</span><span style="color: #637588; width: 104px;">Capacity</span><span style="font-weight: 600;">9 ml</span><a href="#" style="margin-left: auto; font-size: 10.5px; font-weight: 600;">Edit</a></div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0; border-bottom: 1px solid #F5F3EF;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center;">3</span><span style="color: #637588; width: 104px;">Colour / Finish</span><span style="font-weight: 600;">Amber</span><a href="#" style="margin-left: auto; font-size: 10.5px; font-weight: 600;">Edit</a></div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0; border-bottom: 1px solid #F5F3EF;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #FDFBF8; border: 1px solid #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center; color: #9A9590;">·</span><span style="color: #9A9590; width: 104px;">Neck / Fitment</span><span style="color: #637588;">17-415 · resolved</span></div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0; border-bottom: 1px solid #F5F3EF;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center;">4</span><span style="color: #637588; width: 104px;">Component</span><span style="font-weight: 600;">Fine Mist Sprayer</span><a href="#" style="margin-left: auto; font-size: 10.5px; font-weight: 600;">Edit</a></div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0; border-bottom: 1px solid #F5F3EF;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center;">5</span><span style="color: #637588; width: 104px;">Component Finish</span><span style="display: flex; align-items: center; gap: 6px; font-weight: 600;"><span style="width: 9px; height: 9px; border-radius: 999px; background: #1D1D1F;"></span>Black</span><a href="#" style="margin-left: auto; font-size: 10.5px; font-weight: 600;">Edit</a></div>
+        <div style="display: flex; align-items: center; gap: 10px; padding: 6.5px 0;"><span style="width: 16px; height: 16px; border-radius: 999px; background: #EEE6D4; font-size: 9px; font-weight: 700; display: flex; align-items: center; justify-content: center;">6</span><span style="color: #637588; width: 104px;">Quantity</span><span style="font-weight: 600;">24 units</span><a href="#" style="margin-left: auto; font-size: 10.5px; font-weight: 600;">Edit</a></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 3px; border-top: 1px solid #EEE6D4; margin-top: 8px; padding-top: 9px; font-size: 12px;">
+        <div style="display: flex;"><span style="color: #637588;">Unit price · charged at checkout</span><span style="margin-left: auto;">$0.73</span></div>
+        <div style="display: flex; font-size: 14.5px; font-weight: 700;"><span>Subtotal (24 units)</span><span style="margin-left: auto;">$17.52</span></div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 7px; margin-top: 11px;">
+        <div style="background: #1D1D1F; color: #F5F3EF; border-radius: 9px; padding: 10.5px 0; text-align: center; font-weight: 600; font-size: 13px;">Add Configuration to Order</div>
+        <div style="border: 1px solid #1D1D1F; border-radius: 9px; padding: 9.5px 0; text-align: center; font-weight: 600; font-size: 12.5px;">Add &amp; Keep Browsing</div>
+      </div>
+
+      <div style="margin-top: 13px;">
+        <div style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #C5A065; margin-bottom: 7px;">Also compatible with 17-415</div>
+        <div style="display: flex; gap: 8px;">
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; border: 1px solid #EEE6D4; border-radius: 9px; padding: 8px 0 6px; font-size: 9.5px; color: #637588; text-align: center;"><svg width="14" height="20" viewBox="0 0 12 18" fill="none" stroke="#2C2C2E" stroke-width="1.3"><ellipse cx="6" cy="3.4" rx="3" ry="2.4"></ellipse><path d="M4.6 6 H7.4 V10 H4.6 Z"></path></svg>Metal<br>Roll-On</div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; border: 1px solid #EEE6D4; border-radius: 9px; padding: 8px 0 6px; font-size: 9.5px; color: #637588; text-align: center;"><svg width="14" height="20" viewBox="0 0 14 18" fill="none" stroke="#2C2C2E" stroke-width="1.3"><path d="M4 6 H10 V16 H4 Z"></path><path d="M6 6 V3 H11 V1.5"></path></svg>Lotion<br>Pump</div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; border: 1px solid #EEE6D4; border-radius: 9px; padding: 8px 0 6px; font-size: 9.5px; color: #637588; text-align: center;"><svg width="14" height="20" viewBox="0 0 14 18" fill="none"><rect x="2.5" y="4.5" width="9" height="11.5" rx="2" fill="#1D1D1F"></rect><path d="M4.5 4.5 V2.8 H9.5 V4.5" stroke="#1D1D1F" stroke-width="1.3" fill="none"></path></svg>Shiny Black<br>Cap</div>
+          <div style="flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; border: 1px solid #EEE6D4; border-radius: 9px; padding: 8px 0 6px; font-size: 9.5px; color: #637588; text-align: center;"><svg width="14" height="20" viewBox="0 0 14 18" fill="none"><rect x="2.5" y="4.5" width="9" height="11.5" rx="2" fill="#C5A065"></rect><path d="M4.5 4.5 V2.8 H9.5 V4.5" stroke="#C5A065" stroke-width="1.3" fill="none"></path></svg>Matte Gold<br>Cap</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ Sticky wholesale order bar ═══ -->
+  <div style="height: 62px; background: #FDFBF8; border-top: 1px solid #D4C5A9; display: flex; align-items: center; gap: 16px; padding: 0 28px; flex-shrink: 0;">
+    <div style="position: relative;">
+      <div style="width: 38px; height: 38px; border-radius: 999px; background: #1D1D1F; display: flex; align-items: center; justify-content: center;"><svg width="17" height="17" viewBox="0 0 16 16" fill="none" stroke="#F5F3EF" stroke-width="1.4"><path d="M2 3 H4 L5.5 11 H12.5 L14 5 H4.5"></path><circle cx="6" cy="13.4" r="1.1" fill="#F5F3EF" stroke="none"></circle><circle cx="12" cy="13.4" r="1.1" fill="#F5F3EF" stroke="none"></circle></svg></div>
+      <div style="position: absolute; top: -4px; right: -4px; background: #C5A065; color: #1D1D1F; border-radius: 999px; font-size: 9px; font-weight: 700; padding: 2px 5px;">5</div>
+    </div>
+    <div style="display: flex; flex-direction: column; line-height: 1.25;">
+      <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15px; font-weight: 600;">Wholesale Order</span>
+      <span style="font-size: 10.5px; color: #637588;">5 configurations · 84 total units</span>
+    </div>
+    <div style="display: flex; gap: 7px; margin-left: 10px;">
+      <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #EEE6D4; border-radius: 8px; padding: 5px 10px; background: #FFFFFF; font-size: 10px; line-height: 1.25;">
+        <svg width="10" height="17" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#6E3E17" stroke-width="1.6"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#7A4A1F"></rect></svg>
+        <div style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Cylinder 9 ml Amber</span><span style="color: #9A9590;">Fine Mist Sprayer Black · 24</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #EEE6D4; border-radius: 8px; padding: 5px 10px; background: #FFFFFF; font-size: 10px; line-height: 1.25;">
+        <svg width="10" height="17" viewBox="0 0 16 22" fill="none" stroke="#2C2C2E" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3" rx="0.8"></rect><path d="M4 8 C4 5.8 5.6 4.5 8 4.5 C10.4 4.5 12 5.8 12 8 L12 18 C12 19.6 10.8 20.5 8 20.5 C5.2 20.5 4 19.6 4 18 Z"></path></svg>
+        <div style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Boston Round 15 ml</span><span style="color: #9A9590;">Dropper Black · 12</span></div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 7px; border: 1px solid #EEE6D4; border-radius: 8px; padding: 5px 10px; background: #FFFFFF; font-size: 10px; line-height: 1.25;">
+        <svg width="10" height="17" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#20337F" stroke-width="1.6"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#26409E"></rect></svg>
+        <div style="display: flex; flex-direction: column;"><span style="font-weight: 600;">Cylinder 50 ml Cobalt</span><span style="color: #9A9590;">Lotion Pump Gold · 24</span></div>
+      </div>
+      <div style="display: flex; align-items: center; border: 1px dashed #D4C5A9; border-radius: 8px; padding: 5px 12px; font-size: 11px; font-weight: 600; color: #637588;">+2 more</div>
+    </div>
+    <div style="flex: 1;"></div>
+    <div style="display: flex; align-items: center; gap: 6px; background: #F0F4EE; border: 1px solid #C9D8C6; border-radius: 999px; padding: 5px 12px; font-size: 10.5px; font-weight: 700; color: #3E5940;">
+      <svg width="11" height="11" viewBox="0 0 10 10" fill="none" stroke="#3E5940" stroke-width="1.9"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>
+      Tax-exempt · resale cert on file
+    </div>
+    <div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.25;">
+      <span style="font-size: 17px; font-weight: 700;">$96.84</span>
+      <span style="font-size: 9.5px; color: #3E5940; font-weight: 600;">$50 order minimum met</span>
+    </div>
+    <div style="border: 1px solid #1D1D1F; border-radius: 9px; padding: 9px 16px; font-weight: 600; font-size: 12.5px;">Review Order</div>
+    <div style="background: #1D1D1F; color: #F5F3EF; border-radius: 9px; padding: 10px 22px; font-weight: 600; font-size: 12.5px;">Checkout</div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

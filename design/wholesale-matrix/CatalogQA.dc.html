@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <style>
+    body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; color: #1D1D1F; }
+    a { color: #8B6F42; text-decoration: none; }
+    a:hover { color: #C5A065; }
+  </style>
+</helmet>
+
+<div style="width: 1600px; height: 1000px; background: #FAF8F5; position: relative; overflow: hidden; display: flex; flex-direction: column;">
+
+  <!-- navbar -->
+  <div style="height: 62px; background: #FDFBF8; border-bottom: 1px solid #EEE6D4; display: flex; align-items: center; gap: 28px; padding: 0 32px; flex-shrink: 0;">
+    <div style="font-family: 'EB Garamond', Georgia, serif; font-size: 21px; letter-spacing: 0.06em; font-weight: 600;">BEST BOTTLES</div>
+    <div style="display: flex; gap: 22px; font-size: 13px; color: #2C2C2E;">
+      <span>Bottles</span><span>Closures</span><span>Specialty</span><span>Catalog</span><span>Journal</span><span>About</span>
+    </div>
+    <div style="flex: 1;"></div>
+    <div style="display: flex; align-items: center; gap: 7px; background: #1D1D1F; color: #F5F3EF; border-radius: 999px; padding: 6px 13px; font-size: 11px; font-weight: 600;">
+      <svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="#C5A065" stroke-width="1.5"><path d="M7 1.5 L8.6 5 L12.5 5.4 L9.6 8 L10.5 12 L7 10 L3.5 12 L4.4 8 L1.5 5.4 L5.4 5 Z"></path></svg>
+      Staff · Catalog Manager
+    </div>
+    <span style="font-size: 12px; color: #637588;">Account</span>
+  </div>
+
+  <div style="flex: 1; display: flex; flex-direction: column; padding: 20px 32px 0; min-height: 0;">
+
+    <!-- title + mode switch -->
+    <div style="display: flex; align-items: flex-end; gap: 24px; margin-bottom: 14px;">
+      <div style="display: flex; flex-direction: column; gap: 3px;">
+        <div style="font-family: 'EB Garamond', Georgia, serif; font-size: 32px; font-weight: 500; line-height: 1;">Wholesale Matrix</div>
+        <div style="font-size: 12.5px; color: #637588;">Catalog QA — same canonical rows, internal diagnostics exposed.</div>
+      </div>
+      <div style="flex: 1;"></div>
+      <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 5px;">
+        <div style="display: flex; border: 1px solid #D4C5A9; border-radius: 8px; overflow: hidden; font-size: 12px; font-weight: 600;">
+          <div style="padding: 8px 16px; background: #FFFFFF; color: #637588;">Customer View</div>
+          <div style="padding: 8px 16px; background: #8B6F42; color: #FDFBF8;">Catalog QA</div>
+        </div>
+        <span style="font-size: 10px; color: #9A9590;">Visible to authorized staff only</span>
+      </div>
+    </div>
+
+    <!-- catalog health strip -->
+    <div style="display: flex; gap: 10px; margin-bottom: 14px;">
+      <div style="flex: 1; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 11px 16px; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Catalog</span>
+        <span style="font-size: 18px; font-weight: 700;">356 groups · 2,330 SKUs</span>
+      </div>
+      <div style="flex: 1; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 11px 16px; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Complete records</span>
+        <span style="font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 8px;">91%
+          <span style="flex: 1; height: 5px; background: #EEE6D4; border-radius: 999px; overflow: hidden; max-width: 130px;"><span style="display: block; width: 91%; height: 5px; background: #5B7B5D;"></span></span>
+        </span>
+      </div>
+      <div style="flex: 1; background: #FFFFFF; border: 1px solid #E8C98E; border-radius: 10px; padding: 11px 16px; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #8B6F42;">Open issues</span>
+        <span style="font-size: 18px; font-weight: 700; display: flex; align-items: center; gap: 7px;"><svg width="15" height="15" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.5"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>31 issues</span>
+      </div>
+      <div style="flex: 1; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 11px 16px; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Missing compatibility</span>
+        <span style="font-size: 18px; font-weight: 700;">7 variants</span>
+      </div>
+      <div style="flex: 1; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 11px 16px; display: flex; flex-direction: column; gap: 2px;">
+        <span style="font-size: 9.5px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">Missing 3D assets</span>
+        <span style="font-size: 18px; font-weight: 700;">12 variants</span>
+      </div>
+    </div>
+
+    <!-- Cylinder family — QA expanded -->
+    <div style="background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 12px; overflow: hidden; margin-bottom: 10px;">
+      <div style="display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-bottom: 1px solid #EEE6D4;">
+        <svg width="16" height="22" viewBox="0 0 16 24" fill="none" stroke="#8B6F42" stroke-width="1.4"><rect x="5.5" y="1.5" width="5" height="3.5" rx="0.8"></rect><rect x="3" y="6.5" width="10" height="16" rx="2.4"></rect></svg>
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 18px; font-weight: 600;">Cylinder Family</span>
+        <span style="font-size: 11.5px; color: #637588;">19 / 21 variants complete</span>
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="width: 110px; height: 6px; background: #EEE6D4; border-radius: 999px; overflow: hidden;"><span style="display: block; width: 90%; height: 6px; background: #5B7B5D;"></span></span>
+          <span style="font-size: 11.5px; font-weight: 700;">90%</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 5px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 999px; padding: 4px 11px; font-size: 11px; font-weight: 700; color: #8B6F42;">
+          <svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.5"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>
+          2 issues — view
+        </div>
+        <div style="flex: 1;"></div>
+        <div style="display: flex; align-items: center; gap: 5px; font-size: 11.5px; font-weight: 600; color: #637588;">Collapse <svg width="11" height="11" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 7.5 L6 4 L9.5 7.5"></path></svg></div>
+      </div>
+
+      <!-- QA column header -->
+      <div style="display: grid; grid-template-columns: 220px 150px 96px 120px 110px 140px 96px 96px 96px 160px 1fr; gap: 8px; align-items: center; padding: 7px 16px; background: #FDFBF8; border-bottom: 1px solid #EEE6D4; font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; color: #9A9590;">
+        <span>Bottle</span><span>SKU</span><span>Capacity</span><span>Finishes</span><span>Fitment</span><span>Compatibility</span><span>Image</span><span>3D Asset</span><span>Price</span><span>Status</span><span></span>
+      </div>
+
+      <!-- QA row: complete -->
+      <div style="display: grid; grid-template-columns: 220px 150px 96px 120px 110px 140px 96px 96px 96px 160px 1fr; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="16" height="27" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#6E3E17" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#7A4A1F"></rect></svg>
+          <span style="font-weight: 600;">Cylinder 9 ml Amber</span>
+        </div>
+        <span style="color: #637588; font-size: 11px;">GB-CYL-AMB-9ML</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>9 ml</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>5 of 5</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>17-415</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>12 mapped</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Yes</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Live</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Tiered</span>
+        <span style="display: flex; align-items: center; gap: 6px; background: #F0F4EE; border: 1px solid #C9D8C6; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #3E5940; width: fit-content;">Complete</span>
+        <span></span>
+      </div>
+
+      <!-- QA row: missing 3D -->
+      <div style="display: grid; grid-template-columns: 220px 150px 96px 120px 110px 140px 96px 96px 96px 160px 1fr; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px; background: #FCF8EF;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="16" height="27" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#B9BCC9" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#F1F0EC" stroke="#B9BCC9" stroke-width="1.2"></rect></svg>
+          <span style="font-weight: 600;">Cylinder 30 ml Frosted</span>
+        </div>
+        <span style="color: #637588; font-size: 11px;">GB-CYL-FRO-30ML</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>30 ml</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>3 of 5</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>17-415</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>12 mapped</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Yes</span>
+        <span style="display: flex; align-items: center; gap: 5px; font-weight: 600; color: #8B6F42;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.6"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>None</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Tiered</span>
+        <span style="display: flex; align-items: center; gap: 6px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #8B6F42; width: fit-content;">Missing 3D</span>
+        <a href="#" style="font-size: 11px; font-weight: 700;">Fix →</a>
+      </div>
+
+      <!-- QA row: incomplete fitment -->
+      <div style="display: grid; grid-template-columns: 220px 150px 96px 120px 110px 140px 96px 96px 96px 160px 1fr; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px; background: #FDF2F0;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="16" height="27" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#20337F" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#26409E"></rect></svg>
+          <span style="font-weight: 600;">Cylinder 100 ml Cobalt</span>
+        </div>
+        <span style="color: #637588; font-size: 11px;">GB-CYL-CBL-100ML</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>100 ml</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>2 of 2</span>
+        <span style="display: flex; align-items: center; gap: 5px; font-weight: 600; color: #A5432F;"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="#A5432F" stroke-width="1.7"><circle cx="7" cy="7" r="5.4"></circle><path d="M4.8 4.8 L9.2 9.2 M9.2 4.8 L4.8 9.2"></path></svg>Missing</span>
+        <span style="display: flex; align-items: center; gap: 5px; font-weight: 600; color: #A5432F;"><svg width="13" height="13" viewBox="0 0 14 14" fill="none" stroke="#A5432F" stroke-width="1.7"><circle cx="7" cy="7" r="5.4"></circle><path d="M4.8 4.8 L9.2 9.2 M9.2 4.8 L4.8 9.2"></path></svg>0 mapped</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Yes</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Live</span>
+        <span style="display: flex; align-items: center; gap: 5px; font-weight: 600; color: #8B6F42;"><svg width="13" height="13" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.6"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>No MOQ</span>
+        <span style="display: flex; align-items: center; gap: 6px; background: #FBEAE6; border: 1px solid #E0AFA3; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #A5432F; width: fit-content;">Incomplete</span>
+        <a href="#" style="font-size: 11px; font-weight: 700;">Fix →</a>
+      </div>
+
+      <!-- QA rows: complete (condensed) -->
+      <div style="display: grid; grid-template-columns: 220px 150px 96px 120px 110px 140px 96px 96px 96px 160px 1fr; gap: 8px; align-items: center; padding: 8px 16px; border-bottom: 1px solid #F5F3EF; font-size: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="16" height="27" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#C7C2BA" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#FDFCFA" stroke="#C7C2BA" stroke-width="1.2"></rect></svg>
+          <span style="font-weight: 600;">Cylinder 5 ml Clear</span>
+        </div>
+        <span style="color: #637588; font-size: 11px;">GB-CYL-CLR-5ML</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>5 ml</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>4 of 4</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>17-415</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>12 mapped</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Yes</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Live</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Tiered</span>
+        <span style="display: flex; align-items: center; gap: 6px; background: #F0F4EE; border: 1px solid #C9D8C6; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #3E5940; width: fit-content;">Complete</span>
+        <span></span>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 220px 150px 96px 120px 110px 140px 96px 96px 96px 160px 1fr; gap: 8px; align-items: center; padding: 8px 16px; font-size: 12px;">
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <svg width="16" height="27" viewBox="0 0 18 30" fill="none"><rect x="6.5" y="1.5" width="5" height="4" rx="0.8" stroke="#6E3E17" stroke-width="1.2"></rect><rect x="4" y="6.5" width="10" height="21" rx="2.6" fill="#7A4A1F"></rect><path d="M5.5 9 C8 12 10.5 15 8 18 C6 21 9 24 11 26" stroke="#9A6A38" stroke-width="1" fill="none"></path></svg>
+          <span style="font-weight: 600;">Cylinder Swirl 9 ml</span>
+        </div>
+        <span style="color: #637588; font-size: 11px;">GB-CYLSW-CLR-9ML</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>9 ml</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>1 of 1</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>17-415</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>12 mapped</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Yes</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Live</span>
+        <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Tiered</span>
+        <span style="display: flex; align-items: center; gap: 6px; background: #F0F4EE; border: 1px solid #C9D8C6; border-radius: 999px; padding: 3px 11px; font-size: 10.5px; font-weight: 700; color: #3E5940; width: fit-content;">Complete</span>
+        <span></span>
+      </div>
+    </div>
+
+    <!-- collapsed families with health -->
+    <div style="display: flex; flex-direction: column; gap: 7px;">
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Boston Round Family</span>
+        <span style="font-size: 11px; color: #637588;">14 / 14 complete</span>
+        <span style="width: 90px; height: 5px; background: #EEE6D4; border-radius: 999px; overflow: hidden;"><span style="display: block; width: 100%; height: 5px; background: #5B7B5D;"></span></span>
+        <span style="font-size: 11px; font-weight: 700;">100%</span>
+        <div style="flex: 1;"></div>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Elegant Family</span>
+        <span style="font-size: 11px; color: #637588;">9 / 12 complete</span>
+        <span style="width: 90px; height: 5px; background: #EEE6D4; border-radius: 999px; overflow: hidden;"><span style="display: block; width: 75%; height: 5px; background: #B3822E;"></span></span>
+        <span style="font-size: 11px; font-weight: 700;">75%</span>
+        <div style="display: flex; align-items: center; gap: 4px; background: #FBF3E2; border: 1px solid #E8C98E; border-radius: 999px; padding: 3px 10px; font-size: 10.5px; font-weight: 700; color: #8B6F42;">3 issues</div>
+        <div style="flex: 1;"></div>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; background: #FFFFFF; border: 1px solid #EEE6D4; border-radius: 10px; padding: 10px 16px;">
+        <span style="font-family: 'EB Garamond', Georgia, serif; font-size: 15.5px; font-weight: 600;">Circle Family</span>
+        <span style="font-size: 11px; color: #637588;">6 / 8 complete</span>
+        <span style="width: 90px; height: 5px; background: #EEE6D4; border-radius: 999px; overflow: hidden;"><span style="display: block; width: 75%; height: 5px; background: #B3822E;"></span></span>
+        <span style="font-size: 11px; font-weight: 700;">75%</span>
+        <div style="display: flex; align-items: center; gap: 4px; background: #FBEAE6; border: 1px solid #E0AFA3; border-radius: 999px; padding: 3px 10px; font-size: 10.5px; font-weight: 700; color: #A5432F;">2 orphaned</div>
+        <div style="flex: 1;"></div>
+        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="#637588" stroke-width="1.6"><path d="M2.5 4.5 L6 8 L9.5 4.5"></path></svg>
+      </div>
+    </div>
+
+    <!-- legend -->
+    <div style="display: flex; align-items: center; gap: 18px; padding: 12px 4px; font-size: 10.5px; color: #637588;">
+      <span style="display: flex; align-items: center; gap: 5px;"><svg width="11" height="11" viewBox="0 0 10 10" fill="none" stroke="#5B7B5D" stroke-width="1.8"><path d="M1.5 5.5 L4 8 L8.5 2.5"></path></svg>Populated + valid</span>
+      <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 16 16" fill="none" stroke="#B3822E" stroke-width="1.6"><path d="M8 2 L15 14 H1 Z"></path><path d="M8 6.5 V10 M8 11.8 V12.2"></path></svg>Present but flagged</span>
+      <span style="display: flex; align-items: center; gap: 5px;"><svg width="12" height="12" viewBox="0 0 14 14" fill="none" stroke="#A5432F" stroke-width="1.7"><circle cx="7" cy="7" r="5.4"></circle><path d="M4.8 4.8 L9.2 9.2 M9.2 4.8 L4.8 9.2"></path></svg>Missing / broken relationship</span>
+      <span style="margin-left: auto; color: #9A9590;">Same canonical Convex rows as the customer matrix — no separate QA dataset.</span>
+    </div>
+  </div>
+</div>
+</x-dc>
+</body>
+</html>

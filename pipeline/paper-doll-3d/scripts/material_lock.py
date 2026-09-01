@@ -26,7 +26,8 @@ ROOT = pathlib.Path(__file__).resolve().parents[3]
 LOCK = ROOT / "public" / "models" / "materials.lock.json"
 
 TRACKED_FILES = [
-    "public/env/studio_small_08_1k_peak24.hdr",
+    "public/env/studio-universal-softbox.hdr",   # THE shipping environment
+    "public/env/studio_small_08_1k_peak24.hdr",  # retired base, kept for A/B
     "public/models/studio-universal.hdr",
     "public/models/studio-mono.hdr",
     "public/models/studio-metal-key.hdr",
@@ -83,6 +84,47 @@ TRACKED_FILES = [
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.glb",
     "public/models/bodies-thickness/Circle-disc-18-415-111x94.thickness.png",
 ]
+
+# ── MATERIAL ANCHORS ──────────────────────────────────────────────────────
+# A material is ANCHORED when its physical values are traceable to a measured
+# entry in data/materials/physicallybased-library.json (CC0, physicallybased.info)
+# rather than typed by eye. Glass has been anchored since 2026-08-31; this is
+# the same discipline for the closures.
+#
+#   library   the measured entry this material derives from
+#   tinted    True when the colourway may set its own baseColor. A library COAT
+#             is colourless white by definition: the tint IS the product.
+#   declared  fields that deliberately differ from the measurement, each with a
+#             reason. A deviation is legitimate — Jordan approves the LOOK, not
+#             the spreadsheet — but it must be written down, or "measured" and
+#             "hand-tuned" become indistinguishable a month later.
+MATERIAL_ANCHORS = {
+    # LIBRARY-EXACT. Not "anchored with deviations" — the material simply IS
+    # coats.coat_gloss, tinted. Every hand-tune was removed 2026-09-01 once
+    # the studio was correct (Jordan: "this is a round, glossy black, it's
+    # very simple — find that and the studio will take care of itself").
+    # The one remaining declaration is a field the library entry does not
+    # carry at all.
+    "CAP_SHINY_BLACK": dict(
+        library="coats.coat_gloss",
+        tinted=True,
+        declared={
+            "ior": "1.5 — MeshPhysicalMaterial default; the library coat omits ior",
+            "roughness": "0.2 vs the library's 0.12 — the measurement is of a FLAT coated sample. On the CURVED collar a near-mirror resolves every environment feature as its own vertical line (Jordan: 'visible lines on the cap'); 0.2 merges them into one sheen. Fourth part this session where a flat-sample roughness failed on curved geometry — the value is a property of the SAMPLE, and the part's shape decides whether it is usable.",
+        },
+    ),
+    # Mirrors CAP_SHINY_BLACK by the sync rule; same anchor makes that
+    # promise enforced rather than a comment two files apart.
+    "CAP_DOTS_BLACK": dict(
+        library="coats.coat_gloss",
+        tinted=True,
+        declared={
+            "ior": "1.5 — MeshPhysicalMaterial default",
+            "roughness": "0.2 vs the library's 0.12 — the measurement is of a FLAT coated sample. On the CURVED collar a near-mirror resolves every environment feature as its own vertical line (Jordan: 'visible lines on the cap'); 0.2 merges them into one sheen. Fourth part this session where a flat-sample roughness failed on curved geometry — the value is a property of the SAMPLE, and the part's shape decides whether it is usable.",
+        },
+    ),
+}
+
 TRACKED_MATERIALS_PREFIXES = ("ANSP_", "CAP_", "LEATHER_", "PART_BALL", "PART_HOUSING", "PART_STUD", "PART_DIPTUBE", "PART_DRP", "SPRAY_")
 NUMERIC_PRESET_FIELDS = [
     "transmission", "roughness", "ior", "thickness", "attenuationColor",
@@ -109,17 +151,39 @@ def presets() -> dict:
     return out
 
 def studio_environment() -> dict:
-    """The hybrid studio's OTHER half: the emitter values live in TSX, not
-    an HDRI, so the lock pins them the way it pins glass-preset numbers —
-    plus which preset production ships (a silent flip is drift too)."""
+    """The studio's parameters, pinned like the glass presets.
+
+    These used to be emitter literals scraped out of StudioEnvironment.tsx,
+    because the rig was quads-over-an-HDRI. The rig is now a generated light
+    cone with no in-scene geometry at all, so the values that decide the look
+    live in make_universal_softbox.py. Pinning the .hdr hash alone is not
+    enough: a regenerated file with different constants would hash differently
+    and tell you only THAT it changed, never which knob moved. Scraping the
+    constants makes `verify` name the parameter — which is the difference
+    between "the studio drifted" and "someone widened the key lobe"."""
     out = {}
     m = re.search(r'APPROVED_STUDIO: StudioPresetId = "([a-z0-9-]+)"',
                   (ROOT / "src/lib/materials/studioPresets.ts").read_text())
     out["approvedStudio"] = m.group(1) if m else "UNPARSEABLE"
-    env_src = (ROOT / "src/components/products/StudioEnvironment.tsx").read_text()
+    gen = (ROOT / "pipeline/paper-doll-3d/scripts/make_universal_softbox.py")
+    src = gen.read_text() if gen.exists() else ""
+    for name in ("CONE_PEAK", "CONE_UP", "CONE_DOWN", "CONE_I", "KEY_AZIMUTH",
+                 "KEY_AMOUNT", "KEY_SHAPE", "AMBIENT", "FLOOR_I", "EXPOSURE"):
+        m = re.search(rf"^{name}\s*=\s*([-\d.]+)", src, re.M)
+        out[f"cone.{name}"] = m.group(1) if m else "UNPARSEABLE"
+    # BOTH RIGS, ALWAYS. The cone briefly replaced the quads and this function
+    # was repointed at the generator's constants — which silently dropped the
+    # emitter VALUES from the lock. When the cone was rejected the same day and
+    # the quads came back, the lock was pinning a studio it no longer described:
+    # `verify` reported emitter0 -> None and would have passed any edit to the
+    # shipping emitters. Scrape both unconditionally; whichever rig
+    # APPROVED_STUDIO points at, its numbers are covered, and a swap between
+    # them shows up as drift instead of as an absence.
     emitters = re.findall(
         r"\{ position: \[([^\]]+)\], scale: \[([^\]]+)\], "
-        r"intensity: ([^,]+), sigma: \[([^\]]+)\] \}", env_src)
+        r"intensity: ([^,]+), sigma: \[([^\]]+)\] \}",
+        (ROOT / "src/components/products/StudioEnvironment.tsx").read_text())
+    out["inSceneEmitters"] = str(len(emitters))
     for i, (pos, scale, inten, sigma) in enumerate(emitters):
         out[f"emitter{i}"] = (f"pos[{pos}] scale[{scale}] "
                               f"intensity {inten.strip()} sigma[{sigma}]")
@@ -187,6 +251,37 @@ def main():
         if not same:
             drift.append(f"ANCHOR clear.{k}: library says {want}, preset ships {have} "
                          "- clear must stay the canonical measured glass")
+    # ── anchored closure materials ────────────────────────────────────────
+    # Every anchored material must equal its measured library entry on every
+    # physical field, EXCEPT the fields it declares (with a reason) and the
+    # tint. An undeclared difference is drift, exactly like a changed hash.
+    ANCHOR_FIELDS = ("metalness", "roughness")
+    for name, spec in MATERIAL_ANCHORS.items():
+        have = now["materials"].get(name)
+        if have is None:
+            drift.append(f"ANCHOR {name}: anchored but missing from materials.json")
+            continue
+        entry = lib.get(spec["library"])
+        if entry is None:
+            drift.append(f"ANCHOR {name}: library entry {spec['library']} not found")
+            continue
+        want = entry["values"]
+        for f in ANCHOR_FIELDS:
+            if f in spec["declared"] or f not in want:
+                continue
+            a, b = have.get(f), want[f]
+            if a is None or abs(float(a) - float(b)) > 1e-6:
+                drift.append(
+                    f"ANCHOR {name}.{f}: {spec['library']} measures {b}, "
+                    f"material ships {a} - anchor it or declare the deviation")
+        # a colourless library coat may be tinted; a coloured entry may not
+        if not spec.get("tinted") and "color" in want:
+            lin = have.get("linear")
+            if lin and any(abs(float(x) - float(y)) > 0.01
+                           for x, y in zip(lin, want["color"])):
+                drift.append(f"ANCHOR {name}.color: differs from {spec['library']} "
+                             "and this material is not declared tinted")
+
     if drift:
         print("LOCK DRIFT - the approved look has changed:")
         for d in drift:

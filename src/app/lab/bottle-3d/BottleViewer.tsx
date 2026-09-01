@@ -587,9 +587,23 @@ export default function BottleViewer({
   }, [closures.parts]);
   const stack = fits.find((a) => a.kind === closureKind)?.stack ?? [];
 
-  useEffect(() => setM(null), [i]);
-  // A closure chosen for one finish cannot seat on the next body.
-  useEffect(() => setClosureKind("none"), [body.neckFinish]);
+  // RESET-ON-PROP-CHANGE, adjusted during render rather than in an effect.
+  // `useEffect(() => setM(null), [i])` renders the stale value once, then
+  // re-renders — which is what set-state-in-effect flags. Comparing to the
+  // previous value during render discards the stale pass entirely; this is
+  // React's documented "adjusting state when a prop changes".
+  const [prevBody, setPrevBody] = useState(i);
+  if (prevBody !== i) {
+    setPrevBody(i);
+    setM(null);
+    // A closure chosen for one finish cannot seat on the next body.
+    setClosureKind("none");
+  }
+  const [prevNeck, setPrevNeck] = useState(body.neckFinish);
+  if (prevNeck !== body.neckFinish) {
+    setPrevNeck(body.neckFinish);
+    setClosureKind("none");
+  }
 
   const expected =
     body.shape === "round"

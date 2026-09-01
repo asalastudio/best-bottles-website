@@ -96,6 +96,12 @@ function useQualityTier(): "high" | "lite" {
 function StudioContext({ rotationDeg }: { rotationDeg: number }) {
   const { scene } = useThree();
   useEffect(() => {
+    // three.js objects are MUTABLE BY DESIGN and r3f hands them to you
+    // through hooks; assigning to them is the documented way to drive a
+    // scene. The React Compiler cannot know that, so the rule is disabled
+    // at the site rather than the file — a real immutability bug elsewhere
+    // in this component should still fail.
+    // eslint-disable-next-line react-hooks/immutability
     scene.environmentIntensity = 1;
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
   }, [scene, rotationDeg]);
@@ -154,7 +160,7 @@ export default function ProductStage({
           ) : null}
           {/* ONE environment, mounted once for the whole scene. A hybrid
               preset renders its HDRI + Lightformers into a single cubemap. */}
-          {studio.hybrid ? <StudioEnvironment />
+          {studio.managedEnv ? <StudioEnvironment />
             : studio.hdri ? <Environment files={studio.hdri} /> : null}
           <StudioContext rotationDeg={envRotationDeg} />
         </Suspense>

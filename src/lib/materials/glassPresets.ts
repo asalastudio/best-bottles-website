@@ -50,6 +50,17 @@ export type GlassPreset = {
   ior: number;
   /** metres. A stand-in for average optical path — see the note above. */
   thickness: number;
+  /** Optical path for the BACKSIDE pass, which is light that crossed the
+   *  whole body rather than one wall. Defaults to `thickness` when absent —
+   *  correct only while thickness was body-scale. Once thickness is
+   *  wall-scale the two diverge, and tying them together renders the inner
+   *  cavity surface as a visible second bottle. */
+  backsideThickness?: number;
+  /** true = load the SOLID body mesh instead of the hollow one. The hollow
+   *  mesh's inner wall becomes visible the moment the glass transmits
+   *  properly, and it reads as a second, narrower bottle — which misreports
+   *  capacity to the customer. Solid has no inner surface to show. */
+  solidBody?: boolean;
   /** what SURVIVES the glass. Keep it bright; a dark value double-darkens. */
   attenuationColor: string;
   /** metres. Distance over which light falls to attenuationColor. */
@@ -168,13 +179,16 @@ export const GLASS_PRESETS: Record<GlassPresetId, GlassPreset> = {
     id: "amber",
     label: "Amber",
     transmission: 1.0,
-    roughness: 0.02,
+    roughness: 0.05,
     ior: 1.54,
     thickness: 0.0165,
+    solidBody: true,
+    thicknessBake: false,
+    backsideThickness: 0.0165,
     attenuationColor: "#8f4a16",
     attenuationDistance: 0.015,
-    dispersion: 0.95,
-    clearcoat: 0.70,
+    dispersion: 0,
+    clearcoat: 0,
     clearcoatRoughness: 0.02,
     envMapIntensity: 1.0,
     distortion: 0,
