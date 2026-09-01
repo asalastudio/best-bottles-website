@@ -33,6 +33,12 @@ export type StudioPreset = {
   /** true = the HDRI is COMBINED with Lightformers into one cubemap — the
    *  scene shell mounts <StudioEnvironment/> instead of a bare hdri */
   hybrid?: boolean;
+  /** true = glossy/metal parts inherit THIS environment instead of the
+   *  separate metal studio. The handoff's actual architecture: exactly one
+   *  environment, no per-material envMap overrides. A black dielectric
+   *  reflects ~4% — under the dark metal studio it has nothing to catch and
+   *  reads matte, which is what "the shiny black cap is matte" was. */
+  unifiedEnv?: boolean;
   environmentIntensity: number;
   /** degrees */
   environmentRotation: number;
@@ -112,6 +118,7 @@ export const STUDIO_PRESETS: Record<StudioPresetId, StudioPreset> = {
     label: "Hybrid studio (Small 08 + formers)",
     hdri: "/env/studio_small_08_1k_peak24.hdr",
     hybrid: true,
+    unifiedEnv: true,
     environmentIntensity: 1.0,
     environmentRotation: 0,
     toneMappingExposure: 0.91, // = RENDER_EXPOSURE; exposure is pinned globally

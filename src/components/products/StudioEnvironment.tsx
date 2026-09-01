@@ -64,13 +64,18 @@ type Emitter = {
 const EMITTERS: Emitter[] = [
   // high left + right strips: clear-glass edge/shoulder highlights,
   // graded sheens in the metal caps
-  { position: [-4, 5, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
-  { position: [4, 5, 1.6], scale: [1.6, 8], intensity: 6, sigma: [0.3, 0.55] },
+  // WIDER + DIMMER than the first cut. Once glossy parts joined this
+  // environment (unifiedEnv), the tight sigma 0.3 / intensity 6 cores
+  // mirrored off the thread helix as abrupt bright bands — "those lines are
+  // too abrupt, needs to be feathery, a little bit lighter" (Jordan). A
+  // broad low source grades across a curve; a tight hot one prints an edge.
+  { position: [-4, 5, 1.6], scale: [2.6, 9], intensity: 3.6, sigma: [0.58, 0.78] },
+  { position: [4, 5, 1.6], scale: [2.6, 9], intensity: 3.6, sigma: [0.58, 0.78] },
   // overhead softbox: cap tops and bottle shoulders
-  { position: [0, 6, 0], scale: [6, 3], intensity: 2.5, sigma: [0.45, 0.45] },
+  { position: [0, 6, 0], scale: [7, 3.6], intensity: 2.1, sigma: [0.62, 0.62] },
   // broad dim backlight, raised behind-above: amber/cobalt transmit
   // instead of reading black, without a horizon-level silhouette wrap
-  { position: [0, 5, -6], scale: [8, 6], intensity: 1.4, sigma: [0.55, 0.55] },
+  { position: [0, 5, -6], scale: [8.5, 6.5], intensity: 1.25, sigma: [0.68, 0.68] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The

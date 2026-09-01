@@ -20,6 +20,7 @@ import {
   MeshTransmissionMaterial, Center,
 } from "@react-three/drei";
 import ProductStage, { STAGE, useStageQuality } from "./ProductStage";
+import { STUDIO_PRESETS, APPROVED_STUDIO } from "@/lib/materials/studioPresets";
 import { useMetalStudioHdri } from "@/lib/materials/metalStudio";
 import {
   loadTokens, getSpec, createMaterial, ensureCylindricalUV, needsCylindricalUV,
@@ -112,7 +113,11 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   // skill: glass mirrors the room, plastics the tent, metals a REAL studio
   // HDRI (Poly Haven monochrome_studio_02): actual softboxes give metals
   // genuine structured reflections; monochrome keeps silver silver.
-  const metalEnv = useMetalStudioHdri();
+  // Under a unified studio the glossy parts take the SCENE environment
+  // (envMap null => three.js falls back to scene.environment), which is the
+  // one-environment architecture. The hook runs unconditionally either way.
+  const metalHdri = useMetalStudioHdri();
+  const metalEnv = STUDIO_PRESETS[APPROVED_STUDIO].unifiedEnv ? null : metalHdri;
   const plasticEnv = useEnvironment({ files: "/models/studio-browser.hdr" });
   // library matte finish maps (physicallybased): maps:"matte" in the registry
   const matteMaps = useTexture({
