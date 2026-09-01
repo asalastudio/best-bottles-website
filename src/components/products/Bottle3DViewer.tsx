@@ -49,7 +49,7 @@ type MatSpec = {
 
 /* --------------------------------------------------------------- closure */
 
-function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
+function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBody,
                    finish = "17-415", capMoulding = "short" }: {
   mode: ClosureMode; neckY: number; capMat: string; ballMat: string;
   /** neck finish — selects the closure GLB set (17-415 | 18-415) */
@@ -59,6 +59,12 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
   rollerVariant: "metal" | "plastic";
   /** spray/pump collar+actuator colour (SKU-derived: Blk/Gl/MattSl/ShSl/Tur/Rd) */
   trimMat: string;
+  /** true = the glass is a SOLID mesh, so there is no cavity for an interior
+   *  part to sit in. A dip tube modelled inside solid glass is refracted
+   *  through the whole body and arrives as a bent orange streak — it is not a
+   *  shading bug, the tube is geometrically embedded in glass. Interior parts
+   *  are dropped rather than drawn wrong. */
+  solidBody?: boolean;
 }) {
   const housingSteel = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_STEEL.glb");
   const housingPlastic = useGLTF("/models/closures/BB_ROLL_HOUSING_17415_PLASTIC.glb");
@@ -255,7 +261,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       g.push(bulb);
       // the works inside the bottle: the proven pump body + dip tube
       g.push(build(pumpBody, "PART_ACTUATOR_PP"));
-      const at = build(dipTube, "PART_DIPTUBE_PP");
+      const at = build(dipTube, "PART_DIPTUBE_PP");   // roller: sits in the neck, not the body
       at.traverse((n) => {
         const mesh = n as THREE.Mesh;
         if (mesh.isMesh)
@@ -306,15 +312,17 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       g.push(build(pumpBody, "PART_ACTUATOR_PP"));
       // DIP TUBE on every sprayer/pump — scaled from its nominal length
       // to reach near the bottle base (neckY = rim height in body space)
-      const tube = build(dipTube, "PART_DIPTUBE_PP");
-      tube.traverse((o) => {
-        const mesh = o as THREE.Mesh;
-        if (mesh.isMesh)
-          mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
-      });
-      const nominal = fin === "18415" ? 0.08 : 0.062;
-      tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
-      g.push(tube);
+      if (!solidBody) {
+        const tube = build(dipTube, "PART_DIPTUBE_PP");
+        tube.traverse((o) => {
+          const mesh = o as THREE.Mesh;
+          if (mesh.isMesh)
+            mesh.material = new THREE.MeshMatcapMaterial({ matcap: tubeMatcap });
+        });
+        const nominal = fin === "18415" ? 0.08 : 0.062;
+        tube.scale.y = Math.max(0.3, (neckY - 0.006) / nominal);
+        g.push(tube);
+      }
       if (mode === "pump" || mode === "pumpCapped")
         g.push(build(spout, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
       if (mode === "sprayerCapped" || mode === "pumpCapped")
@@ -324,7 +332,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,
-      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspTassel, nozzle, tubeMatcap, fin, neckY,
+      cap, capTall, capLeather, capDots, collar, actuator, overcap, spout, dipTube, pumpBody, reducer, drpCollar, drpBulb, drpPipette, glassMatcap, anspCollar, anspBulb, anspTassel, nozzle, tubeMatcap, fin, neckY, solidBody,
       capMat, capMoulding, ballMat,
       rollerVariant, trimMat]);
 
@@ -410,7 +418,7 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
       <primitive object={scene} />
       <Closure mode={closure} neckY={neckY} capMat={capMat} ballMat={ballMat}
                rollerVariant={rollerVariant} trimMat={trimMat} finish={finish}
-               capMoulding={capMoulding} />
+               capMoulding={capMoulding} solidBody={preset.solidBody} />
       {glass && !usePlain ? (
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
@@ -488,7 +496,15 @@ export default function Bottle3DViewer({
   // gentle showcase motion until the customer takes over
   const [touched, setTouched] = useState(false);
   const onHeight = useCallback((v: number) => setH(v), []);
-  const url = `/models/bodies-thickness/${bodyId}.glb`;
+  // SOLID vs HOLLOW is a look decision, so it lives in the preset.
+  // A hollow body has a real inner surface, and once the glass actually
+  // transmits you SEE it — Jordan: "another layer of the bottle inside the
+  // bottle... customers are going to think this bottle is smaller than it
+  // is." That last part is why this is not a taste call: the inner wall
+  // misreports the product's capacity.
+  const url = preset.solidBody
+    ? `/models/bodies/${bodyId}.glb`
+    : `/models/bodies-thickness/${bodyId}.glb`;
 
   return (
     <div className={className}
