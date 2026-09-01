@@ -7,14 +7,16 @@ import { useRouter, useSearchParams } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { useCart } from "@/components/CartProvider";
-import { ArrowRight, Check, Package, ShoppingBag, Truck } from "@/components/icons";
+import { ArrowRight, Check, Cube, Package, ShoppingBag, Truck } from "@/components/icons";
 import BottleConfigurator, { MODE_LABELS } from "./BottleConfigurator";
-import PaperDollCanvas from "./PaperDollCanvas";
+import { Safe3D } from "./Viewer3DBoundary";
+import Bottle3DConfigurator from "./Bottle3DConfigurator";
+import { CONFIGURATOR_FAMILIES } from "@/lib/configurator/families";
+import type { GlassPresetId } from "@/lib/materials/glassPresets";
+import type { PlateFamilyManifest, PlateVariant } from "@/lib/paper-doll/plates";
 import ProductImageGallery, { type GalleryImage } from "./ProductImageGallery";
 import { analytics } from "@/lib/analytics";
 import { isCheckoutReady } from "@/lib/checkout";
-import type { RenderablePaperDollFamily } from "@/lib/paper-doll/sanity";
-import { resolvePaperDollLayersResult } from "@/lib/paper-doll/render";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
     GRACE_PAPER_DOLL_SELECT_EVENT,
@@ -22,7 +24,6 @@ import {
     type GracePaperDollSelectionRequest,
 } from "@/lib/grace/paperDollController";
 import {
-    isUnifiedCylinderBuildReady,
     resolveCylinderConfigurationFromQuery,
     resolveUnifiedPdpView,
     selectCylinderConfiguration,
@@ -58,32 +59,47 @@ function initialFromSearch(
     return selected;
 }
 
+/** The 9 mL cylinder's 3D entry. The configuration names its glass the way
+ *  the catalogue does; the renderer names it the way glassPresets does. */
+const CYL9_3D = CONFIGURATOR_FAMILIES.find((f) => f.key === "cyl9") ?? null;
+const GLASS_PRESET_FOR_LABEL: Record<string, GlassPresetId> = {
+    Clear: "clear", Amber: "amber", "Cobalt Blue": "cobalt", Frosted: "frosted", Swirl: "swirl",
+};
+
 function formatPrice(value: number | null | undefined): string {
     return value == null ? "Request quote" : `$${value.toFixed(2)}`;
 }
 
 export default function UnifiedBottlePdp({
     configurations,
-    paperDollFamily,
+    plates,
     beautyGallery,
-    paperDollPreview = false,
 }: {
     configurations: PaperDollConfiguration[];
-    paperDollFamily: RenderablePaperDollFamily | null;
+    /** Static plates for this family (public/paper-doll); null until built. */
+    plates: PlateFamilyManifest | null;
     beautyGallery: StorefrontCylinderBeautyGallery | null;
-    paperDollPreview?: boolean;
 }) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const { addItems } = useCart();
-    const buildReady = paperDollPreview
-        ? Boolean(paperDollFamily)
-        : isUnifiedCylinderBuildReady(configurations, Boolean(paperDollFamily));
+    // One static plate per configuration, keyed by graceSku. "Ready" means
+    // every configuration the picker can reach has its photograph on disk;
+    // a partial build still shows what it has, it never blanks the page.
+    const plateBySku = useMemo(() => {
+        const map = new Map<string, PlateVariant>();
+        for (const v of plates?.variants ?? []) if (v.graceSku) map.set(v.graceSku, v);
+        return map;
+    }, [plates]);
+    const plateCount = configurations.filter((c) => plateBySku.has(c.graceSku)).length;
+    const buildReady = plateCount === configurations.length && plateCount > 0;
     const view = resolveUnifiedPdpView(searchParams.get("view"));
     const [selectedSku, setSelectedSku] = useState(() => initialFromSearch(configurations, new URLSearchParams(searchParams.toString())).graceSku);
     const [qty, setQty] = useState(1);
     const [added, setAdded] = useState(false);
     const [canvasFailed, setCanvasFailed] = useState(false);
+    // Photographs and the build lead; 3D opens only when asked for.
+    const [show3d, setShow3d] = useState(false);
     // Cap-off view: lifts the roll-on overcap so the metal/plastic roller
     // fitment underneath is visible. Auto-lifts when the shopper changes the
     // roller material, auto-replaces when they pick a finish.
@@ -96,10 +112,7 @@ export default function UnifiedBottlePdp({
     const selected = queryResolution && !queryResolution.invalidConfiguration
         ? queryResolution.configuration
         : configurations.find((configuration) => configuration.graceSku === selectedSku) ?? configurations[0];
-    const layerResolution = useMemo(
-        () => paperDollFamily ? resolvePaperDollLayersResult(paperDollFamily, selected) : null,
-        [paperDollFamily, selected],
-    );
+    const plate = plateBySku.get(selected.graceSku) ?? null;
 
     useEffect(() => {
         if (queryResolution?.invalidConfiguration) {
@@ -263,36 +276,63 @@ export default function UnifiedBottlePdp({
                     <h2 className="mt-1 font-serif text-3xl font-medium text-obsidian">Choose the exact components</h2>
                 </div>
 
-                <div className={buildReady ? "grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12" : "mx-auto max-w-[820px]"}>
-                    {buildReady && <div className="min-w-0">
+                <div className="grid items-start gap-8 lg:grid-cols-[minmax(0,1.08fr)_minmax(420px,0.92fr)] xl:gap-12">
+                    <div className="min-w-0">
                         <div className="mb-3 flex border-b border-champagne" role="tablist" aria-label="Product media view">
                             <button type="button" role="tab" aria-selected={view === "beauty"} onClick={() => updateView("beauty")} className={`min-h-12 border-b-2 px-4 text-xs font-bold ${view === "beauty" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}>Product photos</button>
-                            <button
-                                type="button"
-                                role="tab"
-                                aria-selected={view === "build"}
-                                onClick={() => updateView("build")}
-                                className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}
-                            >
-                                <span className="block">Build preview · 145 configurations</span>
-                            </button>
+                            {plateCount > 0 && (
+                                <button
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={view === "build"}
+                                    onClick={() => updateView("build")}
+                                    className={`min-h-12 border-b-2 px-4 text-left text-xs font-bold ${view === "build" ? "border-obsidian text-obsidian" : "border-transparent text-slate"}`}
+                                >
+                                    <span className="block">Build preview · {plateCount} configurations</span>
+                                </button>
+                            )}
                         </div>
-                        {paperDollPreview && (
-                            <div className="mb-3 border border-muted-gold bg-[#fff4d8] px-4 py-3 text-[10px] font-bold uppercase tracking-[0.14em] text-obsidian" role="status">
-                                Draft preview — not publicly released
-                            </div>
-                        )}
-                        {view === "build" && buildReady && paperDollFamily && layerResolution?.ok && !canvasFailed ? (
-                            <div className="relative">
-                                <PaperDollCanvas
-                                    family={paperDollFamily}
-                                    selected={selected}
-                                    preview={paperDollPreview}
-                                    capOff={capOff && selected.mode === "rollon"}
-                                    className="aspect-[10/11] max-lg:aspect-auto max-lg:h-[38vh]"
-                                    onFailure={() => setCanvasFailed(true)}
+                        {show3d && CYL9_3D && GLASS_PRESET_FOR_LABEL[selected.glassLabel] ? (
+                            <Safe3D
+                                label="cylinder-9ml-17-415"
+                                fallback={<ProductImageGallery images={images} primaryAlt={productName} fallbackUrl="/assets/Cylinder-BB.png" aspectRatio="10/11" mainPadding="p-3 sm:p-8" />}
+                            >
+                                {/* A viewer, not a product selector: the picker beside it
+                                    owns the SKU, and an empty slug keeps the configurator
+                                    from navigating out of this page and straight back in. */}
+                                <Bottle3DConfigurator
+                                    key={selected.glassLabel}
+                                    bodyId={CYL9_3D.bodyForGlass?.[GLASS_PRESET_FOR_LABEL[selected.glassLabel]] ?? CYL9_3D.bodyDefault}
+                                    initialGlass={GLASS_PRESET_FOR_LABEL[selected.glassLabel]}
+                                    currentSlug=""
                                 />
-                                {selected.mode === "rollon" && (
+                            </Safe3D>
+                        ) : view === "build" && plate && !canvasFailed ? (
+                            <div className="relative">
+                                {/* The plate is the finished photograph of this exact
+                                    configuration, composited once on disk from the
+                                    family's layers. Cap-off is its own plate. */}
+                                <div
+                                    className="relative aspect-[10/11] overflow-hidden border border-champagne/60 bg-white max-lg:aspect-auto max-lg:h-[38vh]"
+                                    role="img"
+                                    aria-label={capOff && plate.imageCapOff
+                                        ? `${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel}, cap removed to show the roller fitment`
+                                        : `${selected.glassLabel} 9 mL Cylinder with ${selected.applicatorLabel} and ${selected.finishLabel} finish`}
+                                    data-paper-doll-cap={capOff && plate.imageCapOff ? "off" : "on"}
+                                >
+                                    <Image
+                                        key={capOff && plate.imageCapOff ? plate.imageCapOff : plate.image}
+                                        src={capOff && plate.imageCapOff ? plate.imageCapOff : plate.image}
+                                        alt=""
+                                        fill
+                                        unoptimized
+                                        priority
+                                        sizes="(min-width: 1024px) 52vw, 100vw"
+                                        className="object-contain"
+                                        onError={() => setCanvasFailed(true)}
+                                    />
+                                </div>
+                                {selected.mode === "rollon" && plate.imageCapOff && (
                                     <button
                                         type="button"
                                         onClick={() => {
@@ -318,32 +358,33 @@ export default function UnifiedBottlePdp({
                             <div className="flex aspect-[10/11] min-h-[360px] sm:min-h-[420px] flex-col items-center justify-center border border-champagne bg-bone px-6 text-center">
                                 <Package className="h-10 w-10 text-muted-gold" />
                                 <h2 className="mt-4 font-serif text-2xl text-obsidian">
-                                    {layerResolution && !layerResolution.ok
-                                        ? "Draft configuration incomplete"
-                                        : canvasFailed
-                                            ? "Layered preview temporarily unavailable"
-                                            : "Layered preview in preparation"}
+                                    {canvasFailed ? "Preview temporarily unavailable" : "No plate for this configuration yet"}
                                 </h2>
-                                {layerResolution && !layerResolution.ok ? (
-                                    <p className="mt-2 max-w-md text-sm leading-6 text-slate" role="alert">
-                                        Missing {layerResolution.missing.slot} layer: {layerResolution.missing.variantKey ?? "unassigned"}
-                                    </p>
-                                ) : (
-                                    <p className="mt-2 max-w-md text-sm leading-6 text-slate">
-                                        You can still choose among all verified 9 mL · 17-415 configurations. The composited component view appears only after every 2080×2288 layer passes release checks.
-                                    </p>
-                                )}
+                                <p className="mt-2 max-w-md text-sm leading-6 text-slate">
+                                    {plates ? `${plateCount} of ${configurations.length} configurations have been built.` : "This family's plates have not been built."} Product photographs are still available.
+                                </p>
                                 <button type="button" onClick={() => updateView("beauty")} className="mt-5 min-h-11 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-wider text-obsidian hover:bg-obsidian hover:text-white">View product photos</button>
                             </div>
                         ) : (
                             <ProductImageGallery images={images} primaryAlt={productName} fallbackUrl="/assets/Cylinder-BB.png" aspectRatio="10/11" mainPadding="p-3 sm:p-8" />
+                        )}
+                        {CYL9_3D && GLASS_PRESET_FOR_LABEL[selected.glassLabel] && (
+                            <button
+                                type="button"
+                                onClick={() => setShow3d((on) => !on)}
+                                aria-pressed={show3d}
+                                className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 border border-obsidian px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-obsidian transition-colors hover:bg-obsidian hover:text-white"
+                            >
+                                <Cube className="h-4 w-4" weight="light" />
+                                {show3d ? "Back to images" : "View in 3D"}
+                            </button>
                         )}
                         <div className="mt-4 hidden grid-cols-3 border border-champagne bg-bone text-center lg:grid">
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Glass</p><p className="mt-1 text-xs font-semibold">{selected.glassLabel}</p></div>
                             <div className="border-x border-champagne p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Applicator</p><p className="mt-1 text-xs font-semibold">{MODE_LABELS[selected.mode]}</p></div>
                             <div className="p-3"><p className="text-[10px] font-bold uppercase tracking-wider text-muted-gold">Finish</p><p className="mt-1 text-xs font-semibold">{selected.finishLabel}</p></div>
                         </div>
-                    </div>}
+                    </div>
 
                     <aside className="border border-champagne bg-bone p-4 sm:p-6 lg:sticky lg:top-32">
                         <div className="flex items-start justify-between gap-4 border-b border-champagne pb-5">
@@ -357,7 +398,7 @@ export default function UnifiedBottlePdp({
 
                         {!buildReady && (
                             <p className="mt-4 border-l-2 border-muted-gold pl-3 text-xs leading-5 text-slate">
-                                Choose from every verified component below. The exact layered preview will appear after the complete 2080 × 2288 component set passes its release check.
+                                Choose from every verified component below. {plateCount} of {configurations.length} configurations have a build preview so far.
                             </p>
                         )}
 

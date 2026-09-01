@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
-import { draftMode } from "next/headers";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
@@ -20,12 +19,8 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import UnifiedBottlePdp from "@/components/products/UnifiedBottlePdp";
-import {
-    getPreviewPaperDollFamily,
-    getStorefrontCylinderBeautyGallery,
-    getStorefrontPaperDollFamily,
-} from "@/sanity/lib/queries";
-import { isPaperDollDraftPreviewAllowed } from "@/lib/paper-doll/preview";
+import { getStorefrontCylinderBeautyGallery } from "@/sanity/lib/queries";
+import { PLATE_FAMILY_CYL9, loadPlateFamily } from "@/lib/paper-doll/plates";
 import {
     buildCylinder9mlConfigurations,
     type CylinderConfigurationSourceGroup,
@@ -120,17 +115,6 @@ async function getUnifiedCylinderData() {
         return { group, variant };
     });
     return buildCylinder9mlConfigurations(rows);
-}
-
-async function getReleasedCylinderPaperDoll(preview: boolean) {
-    try {
-        return preview
-            ? await getPreviewPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey)
-            : await getStorefrontPaperDollFamily(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
-    } catch (error) {
-        console.warn(`CYL-9ML Paper Doll ${preview ? "draft preview" : "release gate"} rejected the Sanity document`, error);
-        return null;
-    }
 }
 
 async function getReleasedCylinderBeautyGallery() {
@@ -295,28 +279,21 @@ export default async function ProductPage({
 
     const activeSlug = legacyRouteOverride ?? slug;
     if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        const previewValue = Array.isArray(resolvedSearchParams.paperDollPreview)
-            ? resolvedSearchParams.paperDollPreview[0]
-            : resolvedSearchParams.paperDollPreview;
-        const previewRequested = previewValue === "1" || previewValue === "true";
-        const paperDollPreviewAllowed = isPaperDollDraftPreviewAllowed({
-            requested: previewRequested,
-            draftModeEnabled: (await draftMode()).isEnabled,
-            nodeEnv: process.env.NODE_ENV,
-        });
-        const [configurations, paperDollFamily, beautyGallery] = await Promise.all([
+        // The 9 mL's build previews are static plates shipped with the app
+        // (public/paper-doll), composited once from the family's layer PNGs.
+        // Nothing here is gated on a CMS release: if the folder is on disk,
+        // the previews are on the page.
+        const [configurations, plates, beautyGallery] = await Promise.all([
             getUnifiedCylinderData(),
-            getReleasedCylinderPaperDoll(paperDollPreviewAllowed),
+            loadPlateFamily(PLATE_FAMILY_CYL9),
             getReleasedCylinderBeautyGallery(),
         ]);
-        const paperDollPreview = paperDollPreviewAllowed && Boolean(paperDollFamily);
         return (
             <>
                 <UnifiedBottlePdp
                     configurations={configurations}
-                    paperDollFamily={paperDollFamily}
+                    plates={plates}
                     beautyGallery={beautyGallery}
-                    paperDollPreview={paperDollPreview}
                 />
                 <SanityLiveVisualEditing />
                 <Footer />

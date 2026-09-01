@@ -3,33 +3,10 @@
 import Image from "next/image";
 import { useMemo, useState } from "react";
 
-export type Variant = {
-  sku: string;
-  graceSku: string | null;
-  closure: string;
-  closureLabel: string;
-  color: string;
-  swatch: string;
-  image: string;
-  thumb: string;
-  imageCapOff: string | null;
-  thumbCapOff: string | null;
-  price: number | null;
-  stock: string | null;
-  applicator: string | null;
-  productUrl: string | null;
-  capacityMl: string | null;
-  sourcePsd: string;
-};
-
-export type FamilyManifest = {
-  id: string;
-  name: string;
-  neckFinish: string;
-  canvas: { width: number; height: number };
-  closures: { id: string; label: string; count: number }[];
-  variants: Variant[];
-};
+// One contract for every plate family, shared with the storefront PDP.
+import type { PlateFamilyManifest, PlateVariant } from "@/lib/paper-doll/plates";
+export type Variant = PlateVariant;
+export type FamilyManifest = PlateFamilyManifest;
 
 const money = (v: number | null) =>
   v === null ? "—" : `$${v.toFixed(2)}`;
