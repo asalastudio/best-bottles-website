@@ -335,10 +335,10 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat, solidBo
         // transmissive material shows every rib as a bright/dark pair and the
         // cap reads as a bundle of lines rather than a cap. Opaque white PP
         // shades those same ribs as a soft gradient instead.
-        // PRODUCT-ACCURACY NOTE: this now differs from the catalogue photo,
-        // which shows a clear overcap. Deliberate, on Jordan's instruction —
-        // revert to PART_OVERCAP_CLEAR if the clear part must be shown.
-        g.push(build(overcap, fin === "18415" ? trimMat : "PART_ACTUATOR_PP"));
+        // Opaque then failed the OTHER way: a solid tube hides what it
+        // covers, so the actuator's step went with the lines. Frosted keeps
+        // the smooth-plastic read AND passes the stepped silhouette through.
+        g.push(build(overcap, fin === "18415" ? trimMat : "PART_OVERCAP_FROSTED"));
     }
     return g;
   }, [mode, mats, build, housingSteel, housingPlastic, ballSteel, ballPlastic,

@@ -737,6 +737,15 @@
       "env": "tent",
       "specularColor": null,
       "note": "Dropper squeeze bulb: soft white rubber (Drp18-415Sl.psd). Gold/copper variants keep the white bulb; the collar carries the metal."
+    },
+    "PART_OVERCAP_FROSTED": {
+      "color": "#f4f3f0",
+      "roughness": 0.32,
+      "metalness": 0.0,
+      "clearcoat": 0.0,
+      "ior": 1.48,
+      "transmission": 0.62,
+      "note": "FROSTED NATURAL PP OVERCAP. Three attempts converge here and the two failures bracket it exactly. CLEAR (transmission 0.93, roughness 0.10) showed the sprayer's step correctly but rendered each of the barrel's flutes as a bright/dark pair \u2014 0.16 mm of real radius variation is enough, at low roughness, to read as a bundle of lines (Jordan: 'still lines in it'). OPAQUE white PP killed every line and looked like clean moulded plastic, but a solid tube hides what it covers, so the actuator and its step vanished (Jordan: 'missing that step, and then we would need to add the actuator'). Frosted is the only setting that satisfies both: roughness 0.32 blurs the flute highlights into one soft sheen, while transmission 0.62 still carries the actuator's stepped silhouette through as a soft shadow. That is also what a natural-PP overcap actually is \u2014 the real part is not optical acrylic. RANGE: below ~0.20 roughness the flutes come back; above ~0.75 transmission the lines return with them; below ~0.45 transmission the step disappears again."
     }
   }
 }
