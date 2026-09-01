@@ -97,7 +97,7 @@ const EMITTERS: Emitter[] = [
   // black. Absorption was ruled out as the cause first — opening
   // attenuationDistance to 0.0055 (76% transmitted) barely moved it, which
   // is what proves this is a lighting problem and not a material one.
-  { position: [0, 4.6, -6], scale: [9.0, 7.0], intensity: 1.05, sigma: [1.2, 1.2] },
+  { position: [0, 4.6, -6], scale: [17.0, 9.0], intensity: 0.85, sigma: [1.5, 1.4] },
 ];
 
 /** Per-axis Gaussian × raised-cosine window, baked to a FLOAT sprite. The
