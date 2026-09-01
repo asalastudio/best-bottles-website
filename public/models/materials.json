@@ -68,9 +68,9 @@
       "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. ",
-      "envMapIntensity": 1.15,
-      "specularIntensity": 1.5
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte.  RENORMALISED 2026-09-01 for the unified studio: specularIntensity 1.5 -> 1.0 and envMapIntensity 1.15 -> 0.9. Both were compensation for the DARK metal studio (at library default the cap read matte); under the bright single studio the same boost overdrove the collar into hard white streaks. Values x environment - the environment changed, so the compensation had to go.",
+      "envMapIntensity": 0.9,
+      "specularIntensity": 1.0
     },
     "CAP_SHINY_GOLD": {
       "color": "#ffe496",
@@ -450,9 +450,9 @@
       "clearcoat": 1.0,
       "ior": 1.5,
       "transmission": 0.0,
-      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones.",
-      "envMapIntensity": 1.15,
-      "specularIntensity": 1.5
+      "note": "COLOR re-anchored 2026-08-31 to the PSD measurement (CpRoll17-415BlkDot/ShnBlk body mid #060606, deep pure black) - Jordan accuracy pass. APPROVED by Jordan 2026-08-31 ('lock the black with dots in'). Glossy 'piano' black (specularIntensity 1.5 boosts dielectric F0 - Jordan's reflectivity pointer) per the library recipe (coats.coat_gloss: dielectric, roughness ~0.1, UNITY env intensity + full clearcoat). The old envMapIntensity 0.65 starved the 4% dielectric reflection and read matte. Values mirror CAP_SHINY_BLACK EXACTLY (keep in sync); studs are PART_STUD_CHROME flush rhinestones. RENORMALISED 2026-09-01 for the unified studio: specularIntensity 1.5 -> 1.0 and envMapIntensity 1.15 -> 0.9. Both were compensation for the DARK metal studio (at library default the cap read matte); under the bright single studio the same boost overdrove the collar into hard white streaks. Values x environment - the environment changed, so the compensation had to go.",
+      "envMapIntensity": 0.9,
+      "specularIntensity": 1.0
     },
     "CAP_DOTS_PINK": {
       "color": "#e2d3d6",

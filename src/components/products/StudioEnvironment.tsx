@@ -62,27 +62,16 @@ type Emitter = {
  *  punch now comes from elevation: edge/shoulder grades stay, full-height
  *  wraps cannot form at ANY orbit angle. */
 const EMITTERS: Emitter[] = [
-  // high left + right strips: clear-glass edge/shoulder highlights,
-  // graded sheens in the metal caps
-  // WIDER + DIMMER than the first cut. Once glossy parts joined this
-  // environment (unifiedEnv), the tight sigma 0.3 / intensity 6 cores
-  // mirrored off the thread helix as abrupt bright bands — "those lines are
-  // too abrupt, needs to be feathery, a little bit lighter" (Jordan). A
-  // broad low source grades across a curve; a tight hot one prints an edge.
-  // KEY — upper LEFT, raked forward (classic 45/45). Equal strips lit the
-  // bottle from both sides at once, which is flat and formless: nothing
-  // tells you where the light is. A dominant key with a dimmer fill is what
-  // gives a cylinder a bright side, a turning edge and a shadow side.
-  // Ratio ~2.9:1 — enough modelling to read as a studio, soft enough
-  // (sigma 0.62) that the falloff stays a gradient, never an edge.
-  { position: [-5, 6, 3.2], scale: [3.0, 9], intensity: 5.2, sigma: [0.62, 0.8] },
-  // FILL — opposite side, deliberately weak: it only opens the shadow so
-  // the dark side keeps detail instead of going black.
-  { position: [4.4, 4.6, 1.2], scale: [2.6, 9], intensity: 1.8, sigma: [0.62, 0.8] },
-  // overhead softbox: cap tops and bottle shoulders
-  { position: [0, 6, 0], scale: [7, 3.6], intensity: 2.1, sigma: [0.62, 0.62] },
-  // broad dim backlight, raised behind-above: amber/cobalt transmit
-  // instead of reading black, without a horizon-level silhouette wrap
+  // ONE key. On a glossy cylinder EVERY emitter mirrors as its own vertical
+  // streak, so four emitters drew four hard lines down the black collar —
+  // "the specular highlights on the lines on the cap are too much"
+  // (Jordan). The peak-clamped base HDRI already supplies ambient coverage
+  // and cap-top light, so the fill and the overhead softbox were adding
+  // reflections without adding information. Glossy is enough with one key.
+  { position: [-5, 6, 3.2], scale: [3.4, 9], intensity: 4.0, sigma: [0.66, 0.82] },
+  // Kept, and only this: a broad DIM source behind-above is what lets amber
+  // and cobalt transmit instead of reading near-black. It is wide, weak and
+  // behind the bottle, so it grades rather than printing a line.
   { position: [0, 5, -6], scale: [8.5, 6.5], intensity: 1.25, sigma: [0.68, 0.68] },
 ];
 

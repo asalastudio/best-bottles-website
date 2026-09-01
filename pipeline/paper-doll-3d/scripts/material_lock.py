@@ -107,9 +107,11 @@ MATERIAL_ANCHORS = {
             "clearcoat": ("1.0 — the library entry IS the coat layer; in "
                           "MeshPhysicalMaterial that reads as clearcoat over the "
                           "tinted base"),
-            "specularIntensity": ("1.5 — boosts dielectric F0 so the 4% "
-                                  "reflection survives ACES; at library default "
-                                  "the cap read matte (Jordan, 2026-08-31)"),
+            "specularIntensity": ("1.0 — RENORMALISED 2026-09-01. It was 1.5 to "
+                                  "rescue the cap from the dark metal studio; "
+                                  "under the unified studio that boost overdrove "
+                                  "the collar into hard streaks, so it returns to "
+                                  "the library default"),
             "ior": "1.5 — MeshPhysicalMaterial default; the library coat omits ior",
         },
     ),
@@ -122,7 +124,7 @@ MATERIAL_ANCHORS = {
         declared={
             "roughness": "0.1 — mirrors CAP_SHINY_BLACK by the sync rule",
             "clearcoat": "1.0 — mirrors CAP_SHINY_BLACK",
-            "specularIntensity": "1.5 — mirrors CAP_SHINY_BLACK",
+            "specularIntensity": "1.0 — mirrors CAP_SHINY_BLACK",
             "ior": "1.5 — MeshPhysicalMaterial default",
         },
     ),
