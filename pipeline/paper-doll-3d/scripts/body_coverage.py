@@ -65,6 +65,43 @@ import argparse, csv, glob, json, os, pathlib, re, sys
 TOL_MM = 2.0
 ROOT = pathlib.Path(__file__).resolve().parents[1]
 DEMAND = ROOT / "data" / "body-demand-merged.json"
+FAMILIES = ROOT / "data" / "body-families-merged.json"
+
+# SHAPE COMES FROM THE FAMILY, because nothing else in Convex can supply it.
+#
+# The skill's rule is "a PDP printing a Diameter is a body of revolution; one
+# printing Width and Depth is a box." That rule is about the LIVE SITE, and it
+# does not survive the mirror into Convex:
+#   * `shape` is populated on 4 products out of 1,783.
+#   * `widthMm` never once differs from `depthMm` in the whole catalogue.
+#   * GB-SQR-CLR-15ML — the SQUARE family — publishes diameter "30 ±0.5 mm"
+#     with width 30 and depth 30.
+# Convex copies one girth figure into all three fields, so a square bottle is
+# indistinguishable from a cylinder by dimensions alone. Classifying on
+# `diameter != null` returns ROUND for literally every body, which is how this
+# was caught.
+#
+# Family is the only signal left, and it is a good one: the GLB filenames the
+# lane already produced encode the same split (Sqr-boxy, Rect-boxy, Elg-boxy,
+# Cyl-round, Tulip-round, Atom-round...).
+ROUND = {"Cylinder", "Tall Cylinder", "Round", "Circle", "Tulip", "Atomizer",
+         "Boston Round", "Vial", "Cream Jar", "Aluminum Bottle", "Lotion Bottle",
+         "Plastic Bottle", "Apothecary"}
+BOXY = {"Square", "Rectangle", "Elegant", "Flair", "Royal", "Sleek", "Slim",
+        "Grace", "Heart"}
+SCULPTED = {"Diva", "Diamond"}       # relief is invisible in a silhouette
+NOT_A_BOTTLE = {"Gift Box", "Gift Bag", "Packaging Supply"}
+# Deliberately NOT guessed. Empire is `Emp-unknown` in bodies.csv — the lane
+# never resolved it either. A wrong guess here sends someone to lathe a box.
+UNKNOWN_OK = {"Empire", "Teardrop", "Decorative", "Bell", "Pillar"}
+
+
+def shape_of(family: str) -> str:
+    if family in ROUND: return "round"
+    if family in BOXY: return "boxy"
+    if family in SCULPTED: return "sculpted"
+    if family in NOT_A_BOTTLE: return "skip"
+    return "?"
 GLB_DIR = ROOT.parents[1] / "public" / "models" / "bodies"
 
 # Sculpted families cannot be lathed or extruded from a silhouette: surface
@@ -119,7 +156,19 @@ def main():
         sys.exit(f"missing {DEMAND}\n"
                  "Refresh it from Convex (products: heightWithoutCap/heightWithCap,\n"
                  "diameter/widthMm, neckThreadSize) — see this file's header.")
-    bodies = cluster(json.loads(DEMAND.read_text()))
+    demand = json.loads(DEMAND.read_text())
+    fams = json.loads(FAMILIES.read_text()) if FAMILIES.exists() else {}
+    # drop gift boxes, bags and packaging supplies: they carry dimensions and
+    # a neck-less key, so they group as "bodies" and inflate the board with
+    # work nobody will ever model.
+    dropped = {k: n for k, n in demand.items() if shape_of(fams.get(k, "?")) == "skip"}
+    demand = {k: n for k, n in demand.items() if k not in dropped}
+    bodies = cluster(demand)
+    for b in bodies:
+        b.append(None)  # placeholder for built flag, filled below
+    for b in bodies:
+        b[5] = max((shape_of(fams.get(k, "?")) for k in b[4]),
+                   key=lambda s2: {"sculpted": 3, "boxy": 2, "round": 1, "?": 0}[s2])
     built_specs = [s for s in (parse_glb(os.path.basename(p)[:-4])
                                for p in glob.glob(str(GLB_DIR / "*.glb"))) if s]
 
@@ -134,26 +183,34 @@ def main():
     for b in bodies:
         b.append(any(same(h, g, n, b[2], b) for h, g, n in built_specs))
 
-    built = [b for b in bodies if b[5]]
-    miss = sorted([b for b in bodies if not b[5]], key=lambda b: -b[3])
-    sculpt = [b for b in miss if f"{round(b[0])}x{round(b[1])}" in SCULPTED_HINTS]
+    built = [b for b in bodies if b[6]]
+    miss = sorted([b for b in bodies if not b[6]], key=lambda b: -b[3])
+    by_shape = {s2: [b for b in miss if b[5] == s2] for s2 in ("round", "boxy", "sculpted", "?")}
     tot = sum(b[3] for b in bodies)
 
     print(f"distinct bodies the catalogue needs : {len(bodies):4d}   ({tot} SKUs)")
     print(f"  BUILT                            : {len(built):4d}   "
           f"({sum(b[3] for b in built)} SKUs, {sum(b[3] for b in built)/tot*100:.0f}%)")
     print(f"  REMAINING                        : {len(miss):4d}   ({sum(b[3] for b in miss)} SKUs)")
-    print(f"     lathe/extrude-able            : {len(miss)-len(sculpt):4d}")
-    print(f"     sculpted, needs outside model : {len(sculpt):4d}   "
-          f"({sum(b[3] for b in sculpt)} SKUs)")
+    for s2, label in (("round", "ROUND  — lathe, unblocked"),
+                      ("boxy", "boxy   — extrude, needs depth"),
+                      ("sculpted", "sculpted — outside modeler"),
+                      ("?", "shape unresolved")):
+        g2 = by_shape[s2]
+        print(f"     {label:<28s}: {len(g2):4d}   ({sum(b[3] for b in g2)} SKUs)")
+    print(f"  non-bottles dropped (gift/packaging): {len(dropped)}")
     print(f"  GLBs on disk                     : {len(built_specs):4d}\n")
 
-    show = miss if a.all else miss[:20]
-    print(f"{'SKUs':>5}  {'body':<16} {'neck':<10} note")
-    for b in show:
-        tag = SCULPTED_HINTS.get(f"{round(b[0])}x{round(b[1])}", "")
-        print(f"{b[3]:5d}  {round(b[0])}x{round(b[1]):<11} {b[2]:<10} "
-              f"{'SCULPTED (' + tag + ')' if tag else ''}")
+    print("\nROUND bodies remaining — the buildable queue, biggest first:")
+    print(f"{'SKUs':>5}  {'body':<14} {'neck':<9} family")
+    rnd = by_shape["round"]
+    for b in (rnd if a.all else rnd[:20]):
+        print(f"{b[3]:5d}  {round(b[0])}x{round(b[1]):<9} {b[2]:<9} "
+              f"{fams.get(b[4][0], '?')}")
+    if not a.all and len(rnd) > 20:
+        print(f"       ... {len(rnd)-20} more round, together "
+              f"{sum(b[3] for b in rnd[20:])} SKUs   (--all)")
+    show = miss
     if not a.all and len(miss) > 20:
         print(f"       ... {len(miss)-20} more, together {sum(b[3] for b in miss[20:])} SKUs"
               f"   (--all to list)")
