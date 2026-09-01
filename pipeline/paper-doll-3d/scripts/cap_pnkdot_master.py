@@ -67,7 +67,19 @@ DIAMETER_IS_VERIFIED = False
 
 RATIO = dict(
     height=1.4330,          # measured: 417 / 291 px of opaque alpha
-    bevel=0.055,            # of the RADIUS. Small, per the reference.
+    # FITTED 2026-08-31 against the PSD alpha, not chosen. 0.055 was my own
+    # over-correction after Jordan said "do not exaggerate the bevel", and
+    # it left the crown 5x too square: the reference is at 92% of radius
+    # 3% down from the top where we were still at 100%. Sweeping the ratio
+    # and rendering a true orthographic silhouette each time bottoms out at
+    # 0.300 (rms 0.032 across h = 0.950-0.984, against 0.107 at 0.08).
+    #
+    # 30% of the radius is a LARGE "small bevel", so it was worth proving
+    # the measurement rather than trusting it: the layer's alpha feathers
+    # 2.82 px at the top against 2.88 px down the side walls. The mask is
+    # uniformly tight, so the narrowing is the cap's own geometry and not a
+    # soft edge over a blown highlight.
+    bevel=0.300,            # of the RADIUS
     crystal_d=0.0966,       # of the cap diameter
     seat_depth=0.030,       # of the cap diameter -- a shallow seat, not a socket
     crystal_proud=0.0015,   # of the cap diameter; ~0 but nonzero to beat z-fighting
