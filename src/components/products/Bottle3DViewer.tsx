@@ -418,7 +418,13 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
             transmission={preset.transmission} thickness={preset.thickness}
             thicknessMap={preset.thicknessBake === false ? null : thicknessTex}
             roughnessMap={preset.frostMask ? frostTex : null}
-            backside backsideThickness={preset.thickness}
+            // backsideThickness is DELIBERATELY NOT preset.thickness.
+            // thickness is now the WALL (0.0015 m); the backside pass is
+            // light that crossed the whole BODY, so it needs the body-scale
+            // path. Tying them together made the inner cavity wall render
+            // almost clear and crisp — Jordan: "another bottle inside it...
+            // a double bottle". Same physical quantity, two different paths.
+            backside backsideThickness={preset.backsideThickness ?? preset.thickness}
             // backside at 256 aliased the thread helix into a crawling
             // shimmer during auto-rotate ("weird movement in the neck",
             // Jordan) — quality knobs, not look values
