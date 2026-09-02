@@ -160,3 +160,6 @@ pipeline/paper-doll-3d/shape-truth.csv
 # The material library IS source — it is hand-tuned and its values ship to the
 # browser — so it is exempt from the blanket *.blend rule above.
 !/pipeline/paper-doll-3d/materials.blend
+
+.claude/settings.local.json
+.superpowers/
