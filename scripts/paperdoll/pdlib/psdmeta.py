@@ -39,7 +39,8 @@ def psd_header(path: str) -> ImageMeta:
         if len(head) < 26 or head[:4] != b"8BPS":
             meta.error = "not_a_psd"
             return meta
-        _, channels, height, width, depth, _mode = struct.unpack(">4sxxxxxxHIIHH", head[:26])
+        # signature(4) version(2) reserved(6) channels(2) height(4) width(4) depth(2) mode(2) = 26 bytes
+        _, _version, channels, height, width, depth, _mode = struct.unpack(">4sH6xHIIHH", head[:26])
         meta.channels, meta.height, meta.width, meta.depth = channels, height, width, depth
         meta.has_alpha_channel = channels >= 4
     except OSError as error:

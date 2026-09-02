@@ -36,10 +36,12 @@ JUNK_RULES: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("PUA_SLASH", re.compile(r"/")),                             # a mapped U+F022 inside a stem
 )
 
-ORDINAL = re.compile(r"^\d+\.?\s+(?=[A-Za-z]|\d{1,2}-\d{3})")     # "11. " / "1 " only before a letter or a neck-finish prefix (8-425…)
+ORDINAL = re.compile(r"^\d+\.?\s+(?=[A-Za-z]|\d{1,2}-\d{3}|\d+\.?\s+[A-Za-z])")     # "11. " / "1 " before a letter, a neck-finish prefix (8-425…) or a second ordinal ("1. 1. GBCyl30")
 VIEW_ORDINAL = re.compile(r"^\d(?=(GB|LB|BO)[A-Z])")             # 1GBCyl50measured, 3GBElg100Depth
 COPY_SUFFIX = re.compile(r"\s*copy(\s*\d+)?$", re.I)
 PAREN_SUFFIX = re.compile(r"\s*\(\d+\)$")
+TRAIL_NUMBER = re.compile(r"\s+\d{1,2}$")                          # "GBGrce55RdcrShnGl 2": a copy number without the word
+CAP_SUFFIX = re.compile(r"\s*[\(\)]?\s*(?P<state>un)?capped\s*\)?$", re.I)   # "GBMtlCylGl (uncapped)", ")uncapped)"
 WHITESPACE = re.compile(r"\s+")
 
 
@@ -50,7 +52,7 @@ class StemResult:
     normalisations: list[str] = field(default_factory=list)
     junk_reason: str | None = None
     view_token: str | None = None
-
+    cap_state: str | None = None          # "on" / "off" when the FILENAME says so
 
 def map_pua(name: str) -> str:
     """Map the SMB private-use characters to what they stood for. Applied to directory and file names."""
@@ -60,7 +62,7 @@ def map_pua(name: str) -> str:
     return out
 
 
-def normalise_stem(filename: str, *, is_view_folder: bool = False, known_prefixes: tuple[str, ...] = ()) -> StemResult:
+def normalise_stem(filename: str, *, is_view_folder: bool = False, known_prefixes: tuple[str, ...] = (), is_component: bool = False) -> StemResult:
     """Turn a filename into a candidate stem, recording every step."""
     steps: list[str] = []
     base = filename
@@ -72,11 +74,18 @@ def normalise_stem(filename: str, *, is_view_folder: bool = False, known_prefixe
     if mapped != base:
         steps.append("pua")
     stem = mapped
+    cap_state = None
 
     def strip_suffixes(value: str) -> str:
-        # "copy", "copy 7", "(2)" and "copy(2)" stack in every order; strip until stable
+        # "copy", "copy 7", "(2)", "copy(2)", " 2" and "(uncapped)" stack in every order; strip until stable
+        nonlocal cap_state
         while True:
+            cap = CAP_SUFFIX.search(value)
+            if cap:
+                cap_state = "off" if cap.group("state") else "on"
+                value = value[: cap.start()]
             stripped = PAREN_SUFFIX.sub("", COPY_SUFFIX.sub("", value)).rstrip(". ")
+            stripped = TRAIL_NUMBER.sub("", stripped)
             if stripped == value:
                 return value
             value = stripped
@@ -86,10 +95,13 @@ def normalise_stem(filename: str, *, is_view_folder: bool = False, known_prefixe
     stem = strip_suffixes(stem)
     if stem != before:
         steps.append("copy-suffix")
+    if cap_state:
+        steps.append(f"cap-suffix:{cap_state}")
 
-    if ORDINAL.match(stem):
+    while ORDINAL.match(stem):                      # "1. 1. GBCyl30" carries two
         stem = ORDINAL.sub("", stem, count=1)
-        steps.append("ordinal")
+        if "ordinal" not in steps:
+            steps.append("ordinal")
 
     view_token = None
     low = stem.lower()
@@ -106,22 +118,31 @@ def normalise_stem(filename: str, *, is_view_folder: bool = False, known_prefixe
     if stem != before:
         steps.append("trailing-punct")
 
-    junk = classify_junk(stem, known_prefixes)
-    return StemResult(stem=stem, stem_key=stem.casefold(), normalisations=steps, junk_reason=junk, view_token=view_token)
+    # one stray space inside an otherwise well-formed SKU ("GBDmnd 2ozAnSpTslMtSl"): repaired and recorded,
+    # never silently — the cross-reference still has to find the closed-up form in the catalogue
+    if known_prefixes and stem.count(" ") == 1:
+        closed = stem.replace(" ", "")
+        if any(closed.startswith(prefix) for prefix in known_prefixes) and not stem.split(" ")[0].isdigit():
+            stem = closed
+            steps.append("internal-space")
+
+    junk = classify_junk(stem, () if is_component else known_prefixes, allow_descriptive=is_component)
+    return StemResult(stem=stem, stem_key=stem.casefold(), normalisations=steps, junk_reason=junk, view_token=view_token, cap_state=cap_state)
 
 
-def classify_junk(stem: str, known_prefixes: tuple[str, ...] = ()) -> str | None:
+def classify_junk(stem: str, known_prefixes: tuple[str, ...] = (), *, allow_descriptive: bool = False) -> str | None:
+    """Hard junk (DOS names, camera names, letters, bare numbers) applies everywhere; the two
+    'this is not a SKU' rules are skipped inside component folders, whose part names are not SKUs."""
     if not stem:
         return "EMPTY"
     for reason, pattern in JUNK_RULES:
         if pattern.search(stem):
             return reason
-    if " " in stem:
+    if " " in stem and not allow_descriptive:
         return "DESCRIPTIVE_NAME"                                  # "Circle 100ml frst", "Plastic funnel"
     if known_prefixes and not any(stem.startswith(prefix) for prefix in known_prefixes):
         return "NO_SKU_PREFIX"
     return None
-
 
 def strip_ring(stem: str) -> str:
     """The decorative-ring modifier is a variant of the same photograph family; matching keeps it, labels strip it."""
