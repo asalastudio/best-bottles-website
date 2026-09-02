@@ -36,7 +36,39 @@ This audit reads; it changes nothing and relaxes no gate. Every number below is 
 | ambiguous body tokens | 14 |
 | human-review items | 188 |
 
-**Determinism verdict: the publishing path PASSES.** 1967 SKUs resolve to exactly one Convex document, one familyId and at most one plate row. The 153 duplicated website SKUs remain blocked, as does every near-miss.
+**Determinism verdict: the publishing path PASSES**, and see §0 — measured against production, only 2 SKUs are duplicated there rather than 153.
+
+**Detail:** 1967 SKUs resolve to exactly one Convex document, one familyId and at most one plate row. The 153 duplicated website SKUs remain blocked, as does every near-miss.
+
+## 0. The duplicates are dev drift, not a catalogue defect
+
+Compared against the production deployment (`precise-raccoon-123`, 2,330 products) on 2026-09-02:
+
+| | dev `helpful-elephant-638` | prod `precise-raccoon-123` |
+|---|---:|---:|
+| products | 2,477 | 2,330 |
+| distinct website SKUs | 2,320 | 2,324 |
+| **duplicated website SKUs** | **153** | **2** |
+
+**147 of the 153 dev duplicates appear exactly once on production**, and in every one of those 147 cases
+exactly one of the two dev documents carries a grace SKU production has ever seen. The other is surplus.
+Dev holds 147 more products than prod — the same number — and 158 dev documents carry a grace SKU prod
+has never seen (the 147 surplus, plus 11 belonging to genuinely dev-only products including the three
+frosted droppers created on 2026-09-02).
+
+So the duplicate population is **an artifact of an import run applied to dev and never to prod**, not a
+defect Nemat needs to adjudicate. That changes the remedy completely:
+
+- **147** — engineering cleanup. The surplus document is identifiable without judgement: its grace SKU
+  does not exist in production. Safest route is to re-sync dev from prod rather than delete row by row.
+- **2** — genuinely duplicated in production and needing a catalogue decision: `GBBell10RollBlkDot`
+  and `GBBell10MtlRollBlkDot`, each claimed by both `bell-10ml-clear-13-415` and its `-rollon` sub-group.
+- **4** — dev-only products production has never carried: `GBCyl5WhtSht`, `GBCylSwrl9MtlRollWht`,
+  `GBCylSwrl9RollWht`, `GBTallCyl9WhtSht`.
+
+The clusters in §1 and the review pack remain accurate as a description of *how* the dev records differ;
+they simply do not represent 153 questions for the catalogue owner. Publishing to production is blocked
+for 2 SKUs, not 306.
 
 ## 1. Duplicate SKU report
 
