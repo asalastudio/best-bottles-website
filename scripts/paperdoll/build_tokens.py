@@ -158,6 +158,15 @@ def parse_tail(tail: str) -> tuple[list[str], list[str], str]:
 
 FINISH_QUALIFIERS = ("Matte", "Shiny")
 
+# Reviewed merges: one finish the catalogue spells two ways. "Matte Copper"
+# (CuMatt x51, MattCu x10, CuMt x2) and "Copper" (Cu x77) are the same copper
+# closure — there is no matte-copper bottle, the qualifier was describing the
+# cap, and the only copper components ever photographed are the plain Cu ones
+# (CpRoll17-415Cu, CPRoll13-415Cu, Drp/Ltn/Spry18-415Cu). No product group
+# carries both spellings, so nothing collides. Jordan, 2026-09-02: "there is
+# no Matt copper bottle, only a copper component, so it should be Cu."
+FINISH_MERGES = {"Matte Copper": "Copper"}
+
 
 def canonical_finish(finishes: list[str]) -> str | None:
     """One label per finish, whichever way the SKU spells it.
@@ -176,12 +185,12 @@ def canonical_finish(finishes: list[str]) -> str | None:
     qualifier = next((l for l in labels if l in FINISH_QUALIFIERS), None)
     rest = [l for l in labels if l != qualifier]
     if qualifier and len(rest) == 1:
-        return f"{qualifier} {rest[0]}"
+        return FINISH_MERGES.get(f"{qualifier} {rest[0]}", f"{qualifier} {rest[0]}")
     if len(labels) == 2 and labels[0] == "Ivory":
         return f"Ivory + {labels[1]}"
     if qualifier and not rest:
         return qualifier
-    return " ".join(labels)
+    return FINISH_MERGES.get(" ".join(labels), " ".join(labels))
 
 
 def main():
