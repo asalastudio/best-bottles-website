@@ -1,0 +1,238 @@
+#!/usr/bin/env node
+// Publish paper-doll plates: bytes to the store, rows to the Convex index.
+//
+//   node scripts/paperdoll/publish.mjs --from public/paper-doll            # the four legacy families
+//   node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json  # pipeline output
+//   add --family <id> to limit, --apply to actually write (dry run by default)
+//
+// Order of operations per plate, and the reason it is this order: hash the
+// bytes → upload under a content-addressed key → HEAD-verify the PUBLIC url
+// (200, image/webp, length, CORS, cache) → only then write the row. A row is
+// the page's readiness, so a row is never written for bytes a browser could
+// not fetch. Nothing is ever overwritten or deleted.
+//
+// Env: BLOB_READ_WRITE_TOKEN (store), BEST_BOTTLES_CONVEX_WRITE_TOKEN (index),
+// NEXT_PUBLIC_CONVEX_URL (which deployment). Run from the repo root after
+// `set -a; source .env.local; set +a`.
+import { createHash } from "node:crypto";
+import { readFile, readdir, stat } from "node:fs/promises";
+import { join, resolve } from "node:path";
+import { ConvexHttpClient } from "convex/browser";
+import { api } from "../../convex/_generated/api.js";
+import { createBlobStore, verifyPublicUrl } from "./lib/store-blob.mjs";
+
+const BUILDER = { name: "publish.mjs", version: "1.0.0" };
+const CANVAS = { width: 1000, height: 1100 };
+const THUMB = { width: 240, height: 240 };
+
+// The four families shipped from the repo used ad-hoc ids; the index uses
+// <family>-<capacityMl>ml-<color>-<neck>. The 9 mL folder held five glasses
+// under one id and splits by each row's `glass`.
+const LEGACY_FAMILY = {
+    "diva-46-clear": { familyId: "diva-46ml-clear-18-415", name: "Diva 46 ml — Clear", neck: "18-415" },
+    "diva-46-frosted": { familyId: "diva-46ml-frosted-18-415", name: "Diva 46 ml — Frosted", neck: "18-415" },
+    "cylinder-50ml-clear": { familyId: "cylinder-50ml-clear-18-415", name: "Cylinder 50 ml — Clear", neck: "18-415" },
+    "cylinder-9ml-17-415": {
+        neck: "17-415",
+        byGlass: {
+            Clear: { familyId: "cylinder-9ml-clear-17-415", name: "Cylinder 9 mL — Clear" },
+            Amber: { familyId: "cylinder-9ml-amber-17-415", name: "Cylinder 9 mL — Amber" },
+            "Cobalt Blue": { familyId: "cylinder-9ml-cobalt-blue-17-415", name: "Cylinder 9 mL — Cobalt Blue" },
+            Frosted: { familyId: "cylinder-9ml-frosted-17-415", name: "Cylinder 9 mL — Frosted" },
+            Swirl: { familyId: "cylinder-9ml-swirl-17-415", name: "Cylinder 9 mL — Swirl" },
+        },
+    },
+};
+
+const args = parseArgs(process.argv.slice(2));
+const apply = Boolean(args.apply);
+const onlyFamily = args.family ?? null;
+
+async function main() {
+    const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
+    const writeToken = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
+    if (!convexUrl) fail("NEXT_PUBLIC_CONVEX_URL is not set");
+    if (apply && !writeToken) fail("BEST_BOTTLES_CONVEX_WRITE_TOKEN is not set");
+
+    const plan = args.from ? await planFromLegacy(resolve(args.from)) : args.dist ? await planFromDist(resolve(args.dist)) : fail("pass --from <public/paper-doll> or --dist <manifest.json>");
+    const families = onlyFamily ? plan.families.filter((f) => f.familyId === onlyFamily) : plan.families;
+    if (families.length === 0) fail(`no family matched ${onlyFamily}`);
+
+    console.log(`${apply ? "PUBLISH" : "DRY RUN"} → ${convexUrl}`);
+    for (const family of families) {
+        console.log(`\n=== ${family.name} (${family.familyId}) — ${family.rows.length} SKUs, ${family.rows.reduce((n, r) => n + r.assets.length, 0)} objects ===`);
+    }
+    if (!apply) {
+        const sample = families[0].rows[0];
+        console.log(`\nexample key: ${sample.assets[0].key}`);
+        console.log("re-run with --apply to upload, verify and index.");
+        return;
+    }
+
+    const store = createBlobStore();
+    const convex = new ConvexHttpClient(convexUrl);
+    const buildId = new Date().toISOString().replace(/[:.]/g, "-");
+    const report = { buildId, builder: BUILDER, convexUrl, families: [] };
+
+    for (const family of families) {
+        const familyReport = { familyId: family.familyId, uploaded: 0, existed: 0, verified: 0, written: 0, unchanged: 0, errors: [] };
+        const rows = [];
+        for (const row of family.rows) {
+            const assets = {};
+            let ok = true;
+            for (const asset of row.assets) {
+                const bytes = await readFile(asset.path);
+                const sha256 = createHash("sha256").update(bytes).digest("hex");
+                if (sha256 !== asset.sha256) fail(`hash drift for ${asset.path}`);
+                const { url, existed } = await store.putObject(asset.key, bytes, "image/webp");
+                existed ? familyReport.existed++ : familyReport.uploaded++;
+                const verdict = await verifyPublicUrl(url, { expectedBytes: bytes.length, expectedContentType: "image/webp" });
+                if (!verdict.ok) {
+                    familyReport.errors.push({ sku: row.sku, key: asset.key, problems: verdict.problems });
+                    ok = false;
+                    break;
+                }
+                familyReport.verified++;
+                assets[asset.role] = { url, key: asset.key, sha256, bytes: bytes.length, width: asset.width, height: asset.height };
+            }
+            if (!ok) continue;
+            rows.push({
+                sku: row.sku,
+                websiteSku: row.websiteSku,
+                graceSku: row.graceSku,
+                familyId: family.familyId,
+                front: assets.front,
+                frontCapOff: assets.frontCapOff ?? null,
+                thumb: assets.thumb,
+                thumbCapOff: assets.thumbCapOff ?? null,
+                views: [],
+                source: row.source,
+                builder: { ...BUILDER, builtAt: Date.now() },
+                storageProvider: store.provider,
+            });
+        }
+        for (let i = 0; i < rows.length; i += 50) {
+            const results = await convex.mutation(api.productPlates.upsertMany, { writeToken, rows: rows.slice(i, i + 50) });
+            for (const result of results) {
+                if (result.outcome === "error") familyReport.errors.push({ sku: result.sku, error: result.error });
+                else if (result.outcome === "unchanged") familyReport.unchanged++;
+                else familyReport.written++;
+            }
+        }
+        await convex.mutation(api.productPlates.upsertFamilies, {
+            writeToken,
+            families: [{
+                familyId: family.familyId,
+                name: family.name,
+                neckFinish: family.neck,
+                canvas: CANVAS,
+                closures: family.closures,
+                bodyMask: null,
+                variantCount: rows.length,
+                buildId,
+            }],
+        });
+        report.families.push(familyReport);
+        console.log(`  uploaded ${familyReport.uploaded}, existed ${familyReport.existed}, verified ${familyReport.verified}, rows written ${familyReport.written}, unchanged ${familyReport.unchanged}, errors ${familyReport.errors.length}`);
+        for (const error of familyReport.errors.slice(0, 10)) console.log("   !!", JSON.stringify(error));
+    }
+
+    // the immutable record of what this run did, beside the plates
+    const record = Buffer.from(JSON.stringify(report, null, 2));
+    const key = `plates/_builds/${buildId}-${families.map((f) => f.familyId).join("+").slice(0, 120)}.json`;
+    await store.putObject(key, record, "application/json");
+    console.log(`\nbuild record: ${key}`);
+    const failed = report.families.some((f) => f.errors.length > 0);
+    console.log(failed ? "\nFINISHED WITH ERRORS — run scripts/paperdoll/verify.mjs and read the record" : "\nOK — now run scripts/paperdoll/verify.mjs");
+    process.exit(failed ? 1 : 0);
+}
+
+/** The repo's four legacy families, straight from their manifests. */
+async function planFromLegacy(root) {
+    const families = [];
+    for (const dir of await readdir(root)) {
+        const legacy = LEGACY_FAMILY[dir];
+        if (!legacy) continue;
+        const manifestPath = join(root, dir, "manifest.json");
+        let manifest;
+        try { manifest = JSON.parse(await readFile(manifestPath, "utf8")); } catch { continue; }
+        const groups = new Map(); // familyId -> { name, neck, closures, rows }
+        for (const variant of manifest.variants) {
+            const target = legacy.byGlass ? legacy.byGlass[variant.glass] : legacy;
+            if (!target) fail(`no family for glass ${variant.glass} in ${dir}`);
+            const websiteSku = variant.websiteSku ?? (legacy.byGlass ? null : variant.sku);
+            if (!websiteSku) fail(`no websiteSku for ${variant.sku} in ${dir}`);
+            const sku = websiteSku;
+            const assets = [];
+            const push = async (role, rel, size) => {
+                if (!rel) return;
+                const path = join(root, "..", rel.replace(/^\//, ""));
+                const bytes = await readFile(path);
+                const sha256 = createHash("sha256").update(bytes).digest("hex");
+                const cap = role.endsWith("CapOff") ? "off" : "on";
+                const dims = role.startsWith("thumb") ? THUMB : CANVAS;
+                assets.push({ role, path, sha256, width: dims.width, height: dims.height, key: `plates/${target.familyId}/${safeKey(sku)}/${sha256}.front-${cap}-${dims.width}x${dims.height}.webp` });
+            };
+            await push("front", variant.image);
+            await push("thumb", variant.thumb);
+            await push("frontCapOff", variant.imageCapOff);
+            await push("thumbCapOff", variant.thumbCapOff);
+            const group = groups.get(target.familyId) ?? { familyId: target.familyId, name: target.name, neck: legacy.neck, closures: new Map(), rows: [] };
+            group.closures.set(variant.closure, { id: variant.closure, label: variant.closureLabel, count: (group.closures.get(variant.closure)?.count ?? 0) + 1 });
+            group.rows.push({
+                sku, websiteSku, graceSku: variant.graceSku ?? null,
+                assets,
+                source: { library: "public-paper-doll", path: `${dir}/${variant.sourcePsd ?? ""}`, psdSha256: null, psdSha256CapOff: null },
+            });
+            groups.set(target.familyId, group);
+        }
+        for (const group of groups.values()) families.push({ ...group, closures: [...group.closures.values()] });
+    }
+    return { families };
+}
+
+/** Pipeline output (dist/paper-doll/manifest.json) — rows already carry keys and hashes. */
+async function planFromDist(manifestPath) {
+    const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
+    const root = join(manifestPath, "..");
+    const byFamily = new Map();
+    for (const row of manifest.rows) {
+        if (!row.publishable) continue;
+        const assets = [];
+        for (const [role, asset] of Object.entries({ front: row.plate, thumb: row.thumb, frontCapOff: row.plateCapOff, thumbCapOff: row.thumbCapOff })) {
+            if (!asset) continue;
+            const path = join(root, asset.key);
+            await stat(path);
+            assets.push({ role, path, sha256: asset.sha256, width: asset.width, height: asset.height, key: asset.storeKey ?? asset.key });
+        }
+        const family = byFamily.get(row.familyId) ?? { familyId: row.familyId, name: row.familyName ?? row.familyId, neck: row.neck ?? "", closures: [], rows: [] };
+        family.rows.push({ sku: row.websiteSku, websiteSku: row.websiteSku, graceSku: row.graceSku ?? null, assets, source: { library: row.plate.sourceLibrary ?? "dist", path: row.plate.sourceRelPath ?? "", psdSha256: row.plate.sourceSha256 ?? null, psdSha256CapOff: row.plateCapOff?.sourceSha256 ?? null } });
+        byFamily.set(row.familyId, family);
+    }
+    return { families: [...byFamily.values()] };
+}
+
+function safeKey(sku) {
+    if (!/^[A-Za-z0-9._-]+$/.test(sku)) fail(`KEY_UNSAFE: ${sku}`);
+    return sku;
+}
+
+function parseArgs(argv) {
+    const out = {};
+    for (let i = 0; i < argv.length; i++) {
+        const a = argv[i];
+        if (a.startsWith("--")) {
+            const key = a.slice(2);
+            const next = argv[i + 1];
+            if (next && !next.startsWith("--")) { out[key] = next; i++; } else out[key] = true;
+        }
+    }
+    return out;
+}
+
+function fail(message) {
+    console.error(`publish: ${message}`);
+    process.exit(1);
+}
+
+main().catch((error) => { console.error(error); process.exit(1); });
