@@ -1605,7 +1605,7 @@ export default function ProductDetailClient({
                         full-width 50/50 stage + step panel for 3D families;
                         the classic grid keeps everything else below the fold. */}
                     {is3dFamily && group.slug ? (
-                        <div className="mb-8 lg:mb-14 lg:-mx-4 xl:-mx-10 2xl:-mx-16">
+                        <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
                                 variantImageUrl={usableProductImageUrl(selectedVariant?.imageUrl) ?? null}

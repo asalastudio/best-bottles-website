@@ -25,7 +25,7 @@ import {
   SprayBottle, Drop, Eyedropper, GitCompare,
 } from "@/components/icons";
 import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube, Cube,
-         Flask as BottleGlyph } from "@phosphor-icons/react";
+         Camera, Stack, Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase }
   from "@/lib/configurator/families";
@@ -228,6 +228,11 @@ export default function ConfiguratorPdp({
   // re-applied on mount; the server always renders the photograph, so
   // there is nothing to mismatch on hydration.
   const [show3d, setShow3dState] = useState(false);
+  // Exploded: the kit's parts slide apart along the axis by the offsets the
+  // builder recorded (`exploded.dx/dy`, plate pixels). Only a kitted SKU has
+  // them, so the mode is offered only when the stack is on screen.
+  const [exploded, setExploded] = useState(false);
+  const [skuCopied, setSkuCopied] = useState(false);
   // URLs whose <img> fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
@@ -476,8 +481,17 @@ export default function ConfiguratorPdp({
             <img key={part.slot} src={part.image.url}
                  alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}
                  width={part.image.width} height={part.image.height} decoding="async"
-                 style={{ zIndex: part.zOrder }}
-                 className="absolute inset-0 h-full w-full object-contain motion-safe:animate-[kitIn_180ms_ease-out]" />
+                 style={{
+                   zIndex: part.zOrder,
+                   // offsets are plate pixels on a 1000x1100 canvas; the image IS the
+                   // canvas here, so a percentage of its own box is the same distance
+                   transform: exploded
+                     ? `translate(${(part.exploded.dx / 10).toFixed(2)}%, ${(part.exploded.dy / 11).toFixed(2)}%)`
+                     : "translate(0, 0)",
+                 }}
+                 className="absolute inset-0 h-full w-full object-contain transition-transform
+                            duration-500 ease-[cubic-bezier(.4,0,.2,1)]
+                            motion-safe:animate-[kitIn_180ms_ease-out]" />
           ))}
         </div>
       ) : showPhoto ? (
@@ -499,14 +513,32 @@ export default function ConfiguratorPdp({
         />
       ) : null}
 
-      {/* LIVE 3D badge */}
-      <div className="absolute top-4 left-4 flex items-center gap-1.5 rounded-[3px]
-                      px-2.5 py-1.5 backdrop-blur"
-           style={{ background: "rgba(29,29,31,.55)" }}>
-        <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
-        <span className="text-xs font-semibold uppercase tracking-label text-white">
-          {showLive3d ? "Live 3D" : "Product photo"}
+      {/* mode badge, and the cap pill opposite it — both on the stage, where
+          the design puts them; the pill is the same withCap the panel drives */}
+      <div className="absolute top-3.5 left-3.5 right-3.5 z-[40] flex items-center justify-between gap-3 pointer-events-none">
+        <span className="flex items-center gap-1.5 rounded-[3px] px-2.5 py-1.5 backdrop-blur"
+              style={{ background: "rgba(29,29,31,.85)" }}>
+          <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
+          <span className="text-2xs font-semibold uppercase tracking-label text-white whitespace-nowrap">
+            {showLive3d ? "Live 3D" : exploded && kitReady ? "Exploded view" : "Product photo"}
+          </span>
         </span>
+        {canCap && (
+          <button type="button" onClick={() => setWithCap((v) => !v)}
+                  aria-pressed={withCap} aria-label="Cap on or off"
+                  className="pointer-events-auto flex items-center gap-2.5">
+            <span className="text-2xs font-semibold uppercase tracking-label text-obsidian whitespace-nowrap">
+              {withCap ? "Cap on" : "Cap off"}
+            </span>
+            <span className={`relative block h-[30px] w-[52px] rounded-full border border-champagne/80
+                              transition-colors duration-200
+                              ${withCap ? "bg-obsidian" : "bg-linen/95"}`}>
+              <span className={`absolute top-[2px] block h-6 w-6 rounded-full bg-white shadow-[0_1px_3px_rgba(29,29,31,.3)]
+                                transition-[left] duration-200 ease-[cubic-bezier(.4,0,.2,1)]
+                                ${withCap ? "left-[24px]" : "left-[2px]"}`} />
+            </span>
+          </button>
+        )}
       </div>
 
       {/* drag affordance */}
@@ -522,34 +554,47 @@ export default function ConfiguratorPdp({
 
   // 3D is opt-in, and the switch sits right below the image (Jordan,
   // 2026-09-01) -- never in front of the photograph
-  const stageToggle = has3d && (plateImage || photoFallback) ? (
-    <button
-      type="button"
-      onClick={() => setShow3d((on) => !on)}
-      aria-pressed={show3d}
-      className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 border
-                 border-obsidian px-5 text-xs font-semibold uppercase tracking-label
-                 text-obsidian transition-colors hover:bg-obsidian hover:text-white"
-    >
-      <Cube className="h-4 w-4" weight="light" />
-      {show3d ? "Back to photo" : "View in 3D"}
-    </button>
+  // Photo | 3D | Exploded — one configuration, three ways of looking at it.
+  // 3D is offered when the family has approved geometry; Exploded when the
+  // SKU's kit is on screen (the parts carry their own offsets).
+  const stageMode: "photo" | "3d" | "exploded" =
+    show3d && has3d ? "3d" : exploded && kitReady ? "exploded" : "photo";
+  const pickMode = (m: "photo" | "3d" | "exploded") => {
+    setShow3d(m === "3d");
+    setExploded(m === "exploded");
+  };
+  const modes: Array<{ id: "photo" | "3d" | "exploded"; label: string; icon: React.ReactNode; enabled: boolean; why?: string }> = [
+    { id: "photo", label: "Photo", icon: <Camera className="h-4 w-4" />, enabled: true },
+    { id: "3d", label: "3D", icon: <Cube className="h-4 w-4" />, enabled: has3d, why: "3D is on its way for this family" },
+    { id: "exploded", label: "Exploded", icon: <Stack className="h-4 w-4" />, enabled: kitReady, why: "Exploded view comes with the component kit" },
+  ];
+  const stageToggle = (plateImage || photoFallback || has3d) ? (
+    <div className="flex border border-champagne/60" role="tablist" aria-label="Stage mode">
+      {modes.map((m) => (
+        <button key={m.id} type="button" role="tab" aria-selected={stageMode === m.id}
+                disabled={!m.enabled} title={m.enabled ? undefined : m.why}
+                onClick={() => pickMode(m.id)}
+                className={`flex flex-1 items-center justify-center gap-2 -ml-px border-l border-champagne/60
+                            px-2 py-3.5 text-2xs font-semibold uppercase tracking-label transition-colors duration-200
+                            first:ml-0 first:border-l-0 disabled:cursor-not-allowed disabled:opacity-40
+                            ${stageMode === m.id ? "bg-obsidian text-white" : "bg-white text-slate hover:text-obsidian"}`}>
+          {m.icon}{m.label}
+        </button>
+      ))}
+    </div>
   ) : null;
 
   /* ----------------------------------------------- swatch rows (seam) */
-  const finishRow = (compact = false) => {
+  const finishRow = (compact = false, eyebrow = "3. Closure Finish") => {
     // SKU truth first: what this closure actually ships in
     if (capOptions && capOptions.length > 0) {
       return (
         <div>
           <p className="text-2xs font-semibold uppercase tracking-label">
-            <span className="text-slate">Fitment</span>
+            <span className="text-slate">{eyebrow}</span>
             <span className="text-slate"> · </span>
             <span className="text-obsidian normal-case tracking-normal text-caption">
               {activeCapOption ?? capOptions[0]}
-            </span>
-            <span className="text-slate normal-case tracking-normal text-caption ml-2">
-              ({capOptions.length})
             </span>
           </p>
           <div className="flex items-center gap-3 flex-wrap mt-2.5">
@@ -701,14 +746,15 @@ export default function ConfiguratorPdp({
   const closureRow = (
     <div className="mt-6">
       <div className="flex items-baseline justify-between gap-3">
-        <p className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
-          Compatible closures
-          <span className="normal-case tracking-normal text-caption text-obsidian ml-2">
-            {activeMeta?.name ?? "Bottle only"}
+        <p className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-2xs uppercase tracking-label font-semibold text-slate">
+          2. Closure Type
+          <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
+          <span className="normal-case tracking-normal text-caption text-obsidian ml-0.5">
+            · {activeMeta?.name ?? "Bottle only"}
           </span>
         </p>
         {neckSize && (
-          <p className="text-spec text-slate shrink-0">{neckSize} neck</p>
+          <p className="min-w-0 text-right text-spec text-slate">All closures verified for {neckSize} neck</p>
         )}
       </div>
 
@@ -729,11 +775,6 @@ export default function ConfiguratorPdp({
           );
         })}
       </div>
-      <p className="mt-2 flex items-center gap-1.5 text-spec text-slate">
-        <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-        All {ranked.length} closures are verified to fit
-        {neckSize ? ` the ${neckSize} neck` : " this bottle"}.
-      </p>
     </div>
   );
 
@@ -902,6 +943,110 @@ export default function ConfiguratorPdp({
     </div>
   );
 
+  /* ------------------------------------------------- guided column */
+  const glassLabel = glassOptions?.find((g) => g.id === glass)?.label ?? GLASS_PRESETS[glass]?.label ?? glass;
+  const finishLabel = activeCapOption ?? capOptions?.[0] ?? null;
+  const resolvedSku = websiteSku ?? skuLabel ?? null;
+  const copySku = () => {
+    if (!resolvedSku) return;
+    try { void navigator.clipboard.writeText(resolvedSku); setSkuCopied(true); setTimeout(() => setSkuCopied(false), 1400); } catch {}
+  };
+
+  /* 1. Glass Finish — the colourways this family sells, as cards */
+  const glassStep = (glassOptions?.length ?? 0) > 0 ? (
+    <div>
+      <p className="mb-3 flex items-center gap-1.5 text-2xs font-semibold uppercase tracking-label text-slate">
+        1. Glass Finish
+        <span className="normal-case tracking-normal text-caption text-obsidian ml-0.5">· {glassLabel}</span>
+      </p>
+      <div className="grid grid-cols-3 gap-2.5 lg:grid-cols-[repeat(auto-fit,minmax(64px,1fr))]">
+        {(glassOptions ?? []).map((g) => {
+          const on = g.id === glass;
+          return (
+            <button key={g.id} type="button" aria-pressed={on}
+               onClick={() => {
+                 setGlassOverride(g.id as GlassPresetId);
+                 if (g.href && g.href !== "#") router.replace(g.href, { scroll: false });
+               }}
+               className={`group relative block w-full rounded-[2px] bg-white text-center transition-colors duration-200
+                           ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>
+              <span className="relative block aspect-[4/3] overflow-hidden rounded-t-[2px]"
+                    style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
+                {g.imageUrl ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={g.imageUrl} alt={g.label} className="absolute inset-0 h-full w-full object-cover" />
+                ) : (
+                  <span className="absolute inset-0 flex items-center justify-center">
+                    <BottleGlyph className="h-8 w-8 text-obsidian/25" />
+                  </span>
+                )}
+              </span>
+              <span className={`block px-1 py-2 text-spec leading-tight ${on ? "font-semibold text-obsidian" : "text-slate"}`}>
+                {g.label}
+              </span>
+              {on && (
+                <span className="absolute -top-2 -right-2 flex h-5 w-5 items-center justify-center rounded-full bg-obsidian">
+                  <Check className="h-2.5 w-2.5 text-white" weight="bold" />
+                </span>
+              )}
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  ) : null;
+
+  /* the summary strip under the title: what is configured, in one line */
+  const summaryStrip = (
+    <div className="mt-4 flex items-center gap-3 border-t border-champagne/50 pt-4">
+      <div className="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 border border-champagne/50 bg-linen px-4 py-2.5 text-sm text-obsidian">
+        <span>{glassLabel} glass</span>
+        <span className="text-muted-gold">·</span>
+        <span>{activeMeta?.name ?? "Bottle only"}</span>
+        {finishLabel && (<><span className="text-muted-gold">·</span><span>{finishLabel}</span></>)}
+      </div>
+    </div>
+  );
+
+  /* Your Configuration — the spec card with the resolved SKU */
+  const configRows: Array<[string, string]> = [
+    ["Family", groupTitle],
+    ["Glass Finish", glassLabel],
+    ...(neckSize ? [["Neck Finish", neckSize] as [string, string]] : []),
+    ["Closure", activeMeta?.name ?? "Bottle only"],
+    ...(finishLabel ? [["Closure Finish", finishLabel] as [string, string]] : []),
+    ...(canCap ? [["View", withCap ? "Cap on" : "Cap off"] as [string, string]] : []),
+  ];
+  const configCard = (
+    <div className="border border-champagne/50 bg-linen p-5">
+      <div className="mb-3 flex items-center justify-between">
+        <span className="text-2xs font-semibold uppercase tracking-label text-slate">Your Configuration</span>
+        <span className={`flex items-center gap-1.5 text-spec font-medium ${inStock ? "text-obsidian" : "text-amber-700"}`}>
+          {inStock ? "In stock" : "Confirm availability"}
+          <span className={`inline-block h-[7px] w-[7px] rounded-full ${inStock ? "bg-[#2F7D5B]" : "bg-amber-500"}`} />
+        </span>
+      </div>
+      <div className="flex flex-col">
+        {configRows.map(([k, v]) => (
+          <div key={k} className="flex justify-between gap-3 border-b border-champagne/35 py-2 text-sm">
+            <span className="text-slate">{k}</span>
+            <span className="text-right font-medium tabular-nums text-obsidian">{v}</span>
+          </div>
+        ))}
+      </div>
+      {resolvedSku && (
+        <div className="mt-4">
+          <button type="button" onClick={copySku}
+                  className="flex items-center gap-1.5 text-2xs font-semibold uppercase tracking-label text-slate hover:text-gold-dim">
+            Resolved SKU <Copy className="h-3.5 w-3.5" />
+            {skuCopied && <span className="normal-case tracking-normal text-caption text-gold-dim">copied</span>}
+          </button>
+          <p className="mt-1.5 font-serif text-[22px] tracking-[.01em] tabular-nums text-obsidian">{resolvedSku}</p>
+        </div>
+      )}
+    </div>
+  );
+
   /* ------------------------------------------------------- step panel */
   const stepPanel = (
     <div className="h-full overflow-y-auto px-1.5">
@@ -970,31 +1115,29 @@ export default function ConfiguratorPdp({
   /* --------------------------------------------------------- mobile */
   const mobile = (
     <div className="lg:hidden">
-      <div className="px-4 pb-4">{identity}</div>
-      <div className="mx-4 aspect-[10/13] rounded-[2px] overflow-hidden relative">
+      <div className="px-4 pb-3.5">
+        {identity}
+        <p className="mt-2 flex gap-2 text-caption text-slate tabular-nums">
+          {neckSize && <span>{neckSize} Neck</span>}
+          {neckSize && capacityText && <span className="text-muted-gold">·</span>}
+          {capacityText && <span>{capacityText}</span>}
+        </p>
+      </div>
+      <div className="mx-4 relative aspect-[4/5] overflow-hidden border border-champagne/50 bg-travertine">
         {stage}
       </div>
-      {stageToggle ? <div className="mx-4">{stageToggle}</div> : null}
+      {stageToggle ? <div className="mx-4 border-t-0">{stageToggle}</div> : null}
 
-      {/* summary chip */}
-      <div className="mx-4 mt-4 flex items-center justify-between gap-3 bg-white
-                      border border-champagne/55 rounded-md p-3.5">
-        <span className="text-md text-obsidian min-w-0 truncate">
-          {groupTitle} · {capacityLabel}
-          {activeMeta ? ` · ${activeMeta.name}` : ""}
-        </span>
-        <span className="shrink-0 text-sm font-semibold text-gold-dim">
-          Edit below
-        </span>
-      </div>
+      {/* 1. glass */}
+      {glassStep && <div className="mt-7 px-4">{glassStep}</div>}
 
-      {/* step 2 rail */}
-      <div className="mt-6 px-4">
+      {/* 2. closure */}
+      <div className="mt-7 px-4">
         <div className="flex items-center justify-between">
-          <h2 className="text-[17px] font-semibold text-obsidian">
-            2. Choose how it dispenses
-          </h2>
-          <CaretDown className="h-4 w-4 text-slate" />
+          <p className="flex items-center gap-1.5 text-2xs font-semibold uppercase tracking-label text-slate">
+            2. Closure Type <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
+          </p>
+          {neckSize && <span className="text-spec text-slate">Verified for {neckSize}</span>}
         </div>
         <div className="mt-3 -mx-4 px-4 flex gap-2.5 overflow-x-auto pb-1
                         [scrollbar-width:none]">
@@ -1044,14 +1187,21 @@ export default function ConfiguratorPdp({
             );
           })}
         </div>
-        <p className="mt-3 flex items-center gap-2 text-sm text-slate">
-          <CheckCircle className="h-4 w-4 text-gold-dim" />
-          All {ranked.length} options shown are verified to fit this bottle.
-        </p>
       </div>
 
-      {/* finish swatches */}
-      <div className="mt-5 px-4">{finishRow(true)}</div>
+      {/* 3. finish */}
+      <div className="mt-7 px-4">{finishRow(true)}</div>
+
+      {/* the configuration, resolved */}
+      <div className="mt-8 px-4">{configCard}</div>
+      <div className="mt-4 px-4 flex items-center justify-between text-caption text-slate">
+        {ladder.length > 1 ? (
+          <a href="#volume-pricing" onClick={() => setTiersOpen(true)} className="text-gold-dim underline underline-offset-2">
+            ${ladder[ladder.length - 1].price.toFixed(2)} at {ladder[ladder.length - 1].minQty.toLocaleString()}+ · {ladder.length} volume tiers
+          </a>
+        ) : <span />}
+        {sampleHref && <a href={sampleHref} className="text-obsidian">Request a sample</a>}
+      </div>
 
       {/* Grace hook */}
       {onAskGrace && (
@@ -1065,34 +1215,10 @@ export default function ConfiguratorPdp({
         </p>
       )}
 
-      {/* sticky buy bar */}
-      <div className="fixed bottom-3 left-3 right-3 z-40 flex items-center gap-3
-                      bg-white border border-champagne/50 rounded-[10px] p-2.5"
-           style={{ boxShadow: "var(--shadow-drawer)" }}>
-        <div className="h-[52px] w-[52px] rounded-md bg-product-well overflow-hidden
-                        shrink-0">
-          {heroImageUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img src={heroImageUrl} alt="" className="h-full w-full object-cover" />
-          ) : null}
-        </div>
-        <div className="min-w-0 flex-1">
-          <p className="text-sm text-slate">Your bottle</p>
-          {priceEach != null && (
-            <p className="text-[17px] font-semibold text-obsidian tabular-nums">
-              ${priceEach.toFixed(2)} <span className="text-sm font-normal">each</span>
-            </p>
-          )}
-        </div>
-        <button type="button" onClick={onAddToCart}
-                className="flex items-center gap-2 min-h-[44px] px-5 bg-obsidian
-                           text-white text-base font-semibold rounded-lg
-                           transition-colors duration-200 hover:bg-muted-gold
-                           hover:text-obsidian">
-          <ShoppingBag className="h-4 w-4" />
-          Add to cart
-        </button>
-      </div>
+      {/* No sticky bar of its own: the site already fixes a buy bar and the
+          bottom navigation to the viewport on mobile, and a third layer sat
+          on top of both (seen 2 Sep). The spacer keeps the last step clear
+          of them. */}
       <div className="h-24" />
     </div>
   );
@@ -1101,49 +1227,100 @@ export default function ConfiguratorPdp({
     <section className="w-full">
       {/* desktop — glass rail | stage | buy column. The rail runs down the
           left of the viewport (Jordan) and takes lifestyle tiles later. */}
-      <div className="hidden lg:grid grid-cols-[96px_minmax(0,1fr)_minmax(0,1.2fr)]
-                      gap-6 xl:gap-9 h-[calc(100vh-140px)] min-h-[620px] max-h-[880px]">
-        <div className="flex flex-col gap-2.5 overflow-y-auto pr-0.5">
-          {(glassOptions ?? []).map((g) => (
-            <button key={g.id} type="button"
-               aria-pressed={g.id === glass}
-               onClick={() => {
-                 setGlassOverride(g.id as GlassPresetId);
-                 if (g.href && g.href !== "#") router.replace(g.href, { scroll: false });
-               }}
-               className={`group block w-full text-left rounded-[3px] overflow-hidden
-                           transition-colors duration-200 ${g.id === glass
-                             ? "border-[1.5px] border-obsidian"
-                             : "border border-champagne hover:border-muted-gold"}`}>
-              {/* image well — real colourway photography drops in here */}
-              <span className="relative block aspect-square"
-                    style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
-                {g.imageUrl ? (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={g.imageUrl} alt={g.label}
-                       className="absolute inset-0 h-full w-full object-cover" />
-                ) : (
-                  <span className="absolute inset-0 flex items-center justify-center">
-                    <BottleGlyph className="h-8 w-8 text-obsidian/25" />
-                  </span>
-                )}
-              </span>
-              <span className={`block px-1 py-2 text-center text-spec leading-tight
-                                ${g.id === glass ? "font-semibold text-obsidian" : "text-slate"}`}>
-                {g.label}
-              </span>
-            </button>
-          ))}
-        </div>
-        <div>
-          {/* The stage owns its height. It used to borrow the grid row's,
-              which the toggle's wrapper cut off -- and the 3D viewer fills
-              its parent, so it collapsed to a strip. 10/11 is the plate's
-              aspect, so photo and 3D are always the same size. */}
-          <div className="relative aspect-[10/11] rounded-sm overflow-hidden">{stage}</div>
+      {/* desktop — stage panel | guided steps | configuration + price.
+          The proportions are the approved design's (2 Sep 2026); the
+          tokens are ours, which is what the design was drawn in. */}
+      {/* 40 px page gutters, as the design has them (the host gives 24). The
+          global Grace button is fixed 56 px wide at the bottom-right, so the
+          right gutter is wider: "Add to cart" must never sit underneath it
+          (measured 2 Sep: button x 1362-1418 on a 1440 viewport). */}
+      <div className="hidden lg:grid grid-cols-[minmax(400px,1fr)_minmax(360px,470px)_300px] gap-5 items-start"
+           style={{ paddingLeft: 16, paddingRight: 96 }}>
+        <section className="flex flex-col gap-3 border border-champagne/50 bg-linen p-4">
+          {/* 10/11 is the plate's aspect, so photo, kit and 3D are always the same size */}
+          <div className="relative aspect-[10/11] overflow-hidden bg-travertine">{stage}</div>
           {stageToggle}
-        </div>
-        {stepPanel}
+          <p className="flex items-center justify-center gap-1.5 text-center text-caption text-slate">
+            <Sparkle className="h-3.5 w-3.5 text-muted-gold" weight="fill" />
+            Same configuration across all modes. Changes update in real time.
+          </p>
+        </section>
+
+        <section className="min-w-0 px-2 pt-1.5">
+          {identity}
+          <p className="mt-2.5 flex gap-2.5 text-sm text-slate tabular-nums">
+            {neckSize && <span>{neckSize} Neck</span>}
+            {neckSize && capacityText && <span>·</span>}
+            {capacityText && <span>{capacityText}</span>}
+          </p>
+          {summaryStrip}
+          <div className="mt-6">{glassStep}</div>
+          {closureRow}
+          <div className="mt-6">{finishRow()}</div>
+          {canCap && (
+            <div className="mt-6 border-t border-champagne/50 pt-5">
+              <p className="text-2xs font-semibold uppercase tracking-label">
+                <span className="text-slate">Overcap</span>
+                <span className="text-slate"> · </span>
+                <span className="text-obsidian normal-case tracking-normal text-caption">
+                  {withCap ? "Included" : "Not included"}
+                </span>
+              </p>
+              <div className="mt-2.5 grid max-w-xs grid-cols-2 gap-2.5">
+                {([[false, "Without overcap", "Ships as shown"],
+                   [true, "With overcap", "Adds the protective cap"]] as const).map(
+                  ([val, label, note]) => (
+                    <button key={String(val)} type="button" onClick={() => setWithCap(val)}
+                            aria-pressed={withCap === val}
+                            className={`rounded-[3px] px-3 py-2 text-left transition-colors duration-200
+                                        ${withCap === val
+                                          ? "border-[1.5px] border-obsidian bg-white"
+                                          : "border border-champagne hover:border-muted-gold"}`}>
+                      <span className="block text-spec font-semibold text-obsidian">{label}</span>
+                      <span className="block text-2xs text-slate mt-0.5">{note}</span>
+                    </button>
+                  ))}
+              </div>
+            </div>
+          )}
+          {activeBase === "roller" && (
+            <div className="mt-6 border-t border-champagne/50 pt-5">
+              <p className="text-2xs font-semibold uppercase tracking-label">
+                <span className="text-slate">Roller ball</span>
+                <span className="text-slate"> · </span>
+                <span className="text-obsidian normal-case tracking-normal text-caption">
+                  {rollerVariant === "metal" ? "Stainless steel" : "Plastic"}
+                </span>
+              </p>
+              <div className="mt-2.5 grid max-w-xs grid-cols-2 gap-2.5">
+                {([["metal", "Stainless steel", "Smooth, cooling glide"],
+                   ["plastic", "Plastic", "Lighter, lower cost"]] as const).map(
+                  ([id, label, note]) => (
+                    <button key={id} type="button" onClick={() => setRollerVariant(id)}
+                            aria-pressed={rollerVariant === id}
+                            className={`rounded-[3px] px-3 py-2 text-left transition-colors duration-200
+                                        ${rollerVariant === id
+                                          ? "border-[1.5px] border-obsidian bg-white"
+                                          : "border border-champagne hover:border-muted-gold"}`}>
+                      <span className="block text-spec font-semibold text-obsidian">{label}</span>
+                      <span className="block text-2xs text-slate mt-0.5">{note}</span>
+                    </button>
+                  ))}
+              </div>
+            </div>
+          )}
+        </section>
+
+        <aside className="flex flex-col gap-3.5">
+          {configCard}
+          <div className="border border-champagne/50 bg-linen p-5">
+            {priceBlock}
+            {ctaStack}
+            <div className="mt-4 flex justify-between text-caption text-slate">
+              <span>Secure checkout</span><span>30-day returns</span>
+            </div>
+          </div>
+        </aside>
       </div>
       {mobile}
     </section>
