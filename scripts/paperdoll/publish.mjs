@@ -5,6 +5,7 @@
 //   node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json  # pipeline output
 //   add --family <id> to limit, --apply to actually write (dry run by default),
 //   --allow-orphans to index SKUs the catalogue does not carry yet (normally skipped)
+//   --dist publishing requires tokens.json.reviewedAt (Jordan's sign-off); --skip-token-review for dev only
 //
 // Order of operations per plate, and the reason it is this order: hash the
 // bytes → upload under a content-addressed key → HEAD-verify the PUBLIC url
@@ -56,6 +57,11 @@ async function main() {
     if (apply && !writeToken) fail("BEST_BOTTLES_CONVEX_WRITE_TOKEN is not set");
 
     const plan = args.from ? await planFromLegacy(resolve(args.from)) : args.dist ? await planFromDist(resolve(args.dist)) : fail("pass --from <public/paper-doll> or --dist <manifest.json>");
+    if (args.dist && apply) {
+        // the pipeline's vocabulary (finish labels, body -> family) is a publish precondition: Jordan signs tokens.json
+        const tokens = JSON.parse(await readFile(resolve("data/paper-doll/tokens.json"), "utf8"));
+        if (!tokens.reviewedAt && !args["skip-token-review"]) fail("data/paper-doll/tokens.json has no reviewedAt — review it first (or pass --skip-token-review for a dev-only publish)");
+    }
     const families = onlyFamily ? plan.families.filter((f) => f.familyId === onlyFamily) : plan.families;
     if (families.length === 0) fail(`no family matched ${onlyFamily}`);
 

@@ -284,7 +284,7 @@ def build_family(fam, catalog):
     # 4. One scale for the whole family -- the bottle must be the same size on
     #    every plate -- sized so the widest plate (the tassel) still fits.
     scale = min((OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
-    out_dir = os.path.join(REPO, "public", "paper-doll", fam["id"])
+    out_dir = os.path.join(REPO, "dist", "paper-doll", "legacy", fam["id"])
     os.makedirs(out_dir, exist_ok=True)
 
     def cap_axis(gray):
@@ -423,9 +423,9 @@ def main():
                           "variantCount": len(man["variants"])})
     # The index lists every family ON DISK, not just the ones this run
     # built -- a single-family rebuild must never hide the others.
-    out = os.path.join(REPO, "public", "paper-doll", "families.json")
+    out = os.path.join(REPO, "dist", "paper-doll", "legacy", "families.json")
     index = []
-    for mp in sorted(glob.glob(os.path.join(REPO, "public", "paper-doll", "*", "manifest.json"))):
+    for mp in sorted(glob.glob(os.path.join(REPO, "dist", "paper-doll", "legacy", "*", "manifest.json"))):
         man = json.load(open(mp))
         index.append({"id": man["id"], "name": man["name"],
                       "neckFinish": man["neckFinish"],

@@ -16,9 +16,15 @@ dist/ or legacy manifests ──publish.mjs──▶ Blob objects + productPlate
 
 | step | command | needs |
 |---|---|---|
-| inventory | `python3 scripts/paperdoll/inventory.py` (`--no-hash`, `--limit N`, `--library original\|bbuat`, `--out DIR`) | psd-tools, Pillow |
+| 1 inventory | `python3 scripts/paperdoll/inventory.py` (`--no-hash`, `--limit N`, `--library original\|bbuat`, `--out DIR`) → `inventory.json` | psd-tools, Pillow |
 | naming tests | `python3 scripts/paperdoll/tests/test_naming.py` | |
-| publish (dry run) | `node scripts/paperdoll/publish.mjs --from dist/paper-doll/legacy [--family <familyId>]` | `NEXT_PUBLIC_CONVEX_URL` |
+| 2 dedupe | `python3 scripts/paperdoll/dedupe.py` (`--no-image` skips the composites) → `selection.json`, `phash-cache.json` | |
+| 3a snapshot | `npx tsx scripts/paperdoll/export-convex-products.ts` → `convex-snapshot.json` | `NEXT_PUBLIC_CONVEX_URL` |
+| 3b cross-reference | `python3 scripts/paperdoll/xref.py` → `xref.json`, `alias-candidates.json` | |
+| 3c tokens | `python3 scripts/paperdoll/build_tokens.py` → `tokens.json` (Jordan sets `reviewedAt`) | |
+| 3d kit audit | `python3 scripts/paperdoll/kit_audit.py [--family <id>] [--limit N]` → `kit-audit.json` | |
+| 4 render | `python3 scripts/paperdoll/build_plates.py [--family <id>]* [--neck 18-415] [--limit N] [--plan]` → `dist/paper-doll/<familyId>/…`, `dist/paper-doll/manifest.json` | scipy |
+| publish (dry run) | `node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json [--family <familyId>]` (legacy families: `--from dist/paper-doll/legacy`) | `NEXT_PUBLIC_CONVEX_URL` |
 | publish (write) | `… --apply` | + `BLOB_READ_WRITE_TOKEN`, `BEST_BOTTLES_CONVEX_WRITE_TOKEN` |
 | verify | `node scripts/paperdoll/verify.mjs [--sample 40] [--all-urls] [--strict]` | `NEXT_PUBLIC_CONVEX_URL` |
 | prune rows | `node scripts/paperdoll/prune.mjs --orphans` / `--sku A,B` (`--apply` to delete) | write token for `--apply` |

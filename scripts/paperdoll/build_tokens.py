@@ -112,12 +112,18 @@ def parse_sku(sku: str) -> dict:
     if m:
         out["prefix"] = m.group(1)
         rest = sku[m.end():]
-    cm = CLOSURE_RE.search(rest)
+    # a finish token that ends the SKU may contain a closure word (ClOvrCp, ClOvrCap): keep it out of the search
+    search_end = len(rest)
+    for token in FINISH_TOKENS:
+        if CLOSURE_RE.search(token) and rest.endswith(token) and len(token) < search_end:
+            search_end = len(rest) - len(token)
+            break
+    cm = CLOSURE_RE.search(rest[:search_end])
     if cm and cm.start() == 0:
         # a closure word at the very start names a bottle TYPE (Atom5Slim, Spry3ml, MtlRoll28): keep it in
         # the body and look for a real closure after it
         out["bodyType"] = cm.group(1)
-        later = CLOSURE_RE.search(rest, cm.end())
+        later = CLOSURE_RE.search(rest[:search_end], cm.end())
         cm = later if later and later.start() > cm.end() else None
     if cm:
         out["body"] = rest[: cm.start()]
