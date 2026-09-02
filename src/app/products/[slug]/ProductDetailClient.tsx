@@ -171,8 +171,10 @@ function isAntiqueBulbVariant(v: ProductVariant): boolean {
 function getAntiqueBulbVisualIdentity(v: ProductVariant): { label: string; swatchName: string } | null {
     const text = `${v.websiteSku ?? ""} ${v.graceSku ?? ""} ${v.itemName ?? ""}`;
     const tokens: Array<[RegExp, { label: string; swatchName: string }]> = [
-        [/IVSL|IVYSL|IVSL|IVORY.*SILVER/i, { label: "Ivory Bulb Sprayer", swatchName: "Ivory" }],
-        [/IVGD|IVYGL|GDIV|IVGL|IVORY.*GOLD/i, { label: "Ivory Bulb Sprayer", swatchName: "Ivory" }],
+        // the collar metal is what tells the two ivory bulbs apart (IVSL /
+        // IVGD); one shared swatch name left the second SKU unreachable
+        [/IVSL|IVYSL|IVORY.*SILVER/i, { label: "Ivory Bulb Sprayer · Silver collar", swatchName: "Ivory + Silver" }],
+        [/IVGD|IVYGL|GDIV|IVGL|IVORY.*GOLD/i, { label: "Ivory Bulb Sprayer · Gold collar", swatchName: "Ivory + Gold" }],
         [/MSLV|MTSL|MATTE SILVER/i, { label: "Matte Silver Bulb Sprayer", swatchName: "Matte Silver" }],
         [/LVN|LAVENDER|LAVENDAR/i, { label: "Lavender Bulb Sprayer", swatchName: "Lavender" }],
         [/PNK|PINK/i, { label: "Pink Bulb Sprayer", swatchName: "Pink" }],
@@ -244,6 +246,9 @@ const COLOR_SWATCH: Record<string, string> = {
     "Red": "#C41E3A",
     "Ivory Gold": "#D4AF37",
     "Ivory Silver": "#C8C8C8",
+    // ivory bulb sprayers, told apart by collar (the plates use the same names)
+    "Ivory + Gold": "#efe3cb",
+    "Ivory + Silver": "#eceae4",
     "Turquoise": "#40C4AA",
     "Standard": "#AAAAAA",
     "Black with Dots": "#1D1D1F",
@@ -379,7 +384,7 @@ const LIGHT_SWATCHES = new Set([
     "Silver", "Shiny Silver", "Matte Silver", "Silver with Dots",
     "Standard",
     "Pink", "Pink with Dots", "Rose Gold", "Lavender",
-    "Ivory Gold", "Ivory Silver",
+    "Ivory Gold", "Ivory Silver", "Ivory + Gold", "Ivory + Silver",
     "Ivory Leather",
     "Spray White", "Spray Pink", "Spray Lavender",
     "Spray Shiny Silver", "Spray Matte Silver", "Spray Silver",

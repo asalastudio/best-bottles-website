@@ -31,6 +31,11 @@
       "id": "lotion",
       "label": "Lotion Pump",
       "count": 7
+    },
+    {
+      "id": "dropper",
+      "label": "Glass Dropper",
+      "count": 3
     }
   ],
   "variants": [
@@ -807,6 +812,60 @@
       "productUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-shiny-silver-lotion-pump-and-cap",
       "capacityMl": "46",
       "sourcePsd": "32. LBDivaFrst46LtnShnSl.psd"
+    },
+    {
+      "sku": "GBDivaFrst46DrpCu",
+      "graceSku": null,
+      "closure": "dropper",
+      "closureLabel": "Glass Dropper",
+      "color": "Copper",
+      "swatch": "#b06a3b",
+      "image": "/paper-doll/diva-46-frosted/GBDivaFrst46DrpCu.webp",
+      "thumb": "/paper-doll/diva-46-frosted/GBDivaFrst46DrpCu.thumb.webp",
+      "imageCapOff": null,
+      "thumbCapOff": null,
+      "price": null,
+      "stock": null,
+      "applicator": null,
+      "productUrl": null,
+      "capacityMl": null,
+      "sourcePsd": "53. GBDivaFrst46DrpCu.psd"
+    },
+    {
+      "sku": "GBDivaFrst46DrpGl",
+      "graceSku": null,
+      "closure": "dropper",
+      "closureLabel": "Glass Dropper",
+      "color": "Gold",
+      "swatch": "#c9a227",
+      "image": "/paper-doll/diva-46-frosted/GBDivaFrst46DrpGl.webp",
+      "thumb": "/paper-doll/diva-46-frosted/GBDivaFrst46DrpGl.thumb.webp",
+      "imageCapOff": null,
+      "thumbCapOff": null,
+      "price": null,
+      "stock": null,
+      "applicator": null,
+      "productUrl": null,
+      "capacityMl": null,
+      "sourcePsd": "52. GBDivaFrst46DrpGl.psd"
+    },
+    {
+      "sku": "GBDivaFrst46DrpSl",
+      "graceSku": null,
+      "closure": "dropper",
+      "closureLabel": "Glass Dropper",
+      "color": "Silver",
+      "swatch": "#cfd3d7",
+      "image": "/paper-doll/diva-46-frosted/GBDivaFrst46DrpSl.webp",
+      "thumb": "/paper-doll/diva-46-frosted/GBDivaFrst46DrpSl.thumb.webp",
+      "imageCapOff": null,
+      "thumbCapOff": null,
+      "price": null,
+      "stock": null,
+      "applicator": null,
+      "productUrl": null,
+      "capacityMl": null,
+      "sourcePsd": "51. GBDivaFrst46DrpSl.psd"
     }
   ]
 }

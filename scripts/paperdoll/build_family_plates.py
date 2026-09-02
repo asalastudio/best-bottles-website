@@ -344,9 +344,10 @@ def build_family(fam, catalog):
     for stem in sorted(plates):
         shots_for_sku = plates[stem]
         cid, clabel, color, swatch = parse_sku(stem, fam["body"])
-        row = catalog.get(stem)
-        if row is None:
-            continue
+        # A plate without a catalogue row still ships: the photograph is
+        # real, and it matches by website SKU the moment the catalogue
+        # carries the product (the frosted Diva droppers, 2026-09-01).
+        row = catalog.get(stem) or {}
         on = shots_for_sku.get("on") or shots_for_sku.get("off")
         off = shots_for_sku.get("off") if "on" in shots_for_sku else None
         # A bulb or tassel hangs well off the bottle, so those compose better
