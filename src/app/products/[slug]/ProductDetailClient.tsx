@@ -76,6 +76,45 @@ function getFinishFromGraceSku(graceSku: string | null | undefined): { label: st
     return null;
 }
 
+/** The finish read off the WEBSITE SKU stem. Many rows carry nothing else:
+ *  the frosted Diva's lotion pumps are capColor "Clear", graceSku
+ *  "LB-DVA-FRS-46ML-02" and itemName "... Clear Lotion Bottle", while the
+ *  website SKU says LBDivaFrst46LtnMtGl. The trailing token is the finish;
+ *  a "Rng" (decorative ring) suffix is stripped first. Names match the
+ *  plate manifests and the clear group's capColor values, so the two
+ *  groups dedupe alike. */
+const WEBSITE_SKU_FINISHES: Array<[string, { label: string; swatchName: string }]> = [
+    ["LBrwnLthr", { label: "Light Brown Leather", swatchName: "Light Brown Leather" }],
+    ["BlkLthr", { label: "Black Leather", swatchName: "Black Leather" }],
+    ["IvyLthr", { label: "Ivory Leather", swatchName: "Ivory Leather" }],
+    ["PnkLthr", { label: "Pink Leather", swatchName: "Pink Leather" }],
+    ["ClOvrCap", { label: "Clear Overcap", swatchName: "Clear Overcap" }],
+    ["ShnBlk", { label: "Shiny Black", swatchName: "Shiny Black" }],
+    ["ShnGl", { label: "Shiny Gold", swatchName: "Shiny Gold" }],
+    ["ShnSl", { label: "Shiny Silver", swatchName: "Shiny Silver" }],
+    ["MtGl", { label: "Matte Gold", swatchName: "Matte Gold" }],
+    ["MtSl", { label: "Matte Silver", swatchName: "Matte Silver" }],
+    ["MtCu", { label: "Matte Copper", swatchName: "Matte Copper" }],
+    ["IvyGl", { label: "Ivory + Gold", swatchName: "Ivory + Gold" }],
+    ["IvySl", { label: "Ivory + Silver", swatchName: "Ivory + Silver" }],
+    ["Lvn", { label: "Lavender", swatchName: "Lavender" }],
+    ["Pnk", { label: "Pink", swatchName: "Pink" }],
+    ["Red", { label: "Red", swatchName: "Red" }],
+    ["Wht", { label: "White", swatchName: "White" }],
+    ["Blk", { label: "Black", swatchName: "Black" }],
+    ["Cu", { label: "Copper", swatchName: "Copper" }],
+    ["Gl", { label: "Gold", swatchName: "Gold" }],
+    ["Sl", { label: "Silver", swatchName: "Silver" }],
+];
+function getFinishFromWebsiteSku(websiteSku: string | null | undefined): { label: string; swatchName: string } | null {
+    if (!websiteSku) return null;
+    const stem = websiteSku.trim().replace(/Rng$/, "");
+    for (const [token, finish] of WEBSITE_SKU_FINISHES) {
+        if (stem.endsWith(token) && stem.length > token.length) return finish;
+    }
+    return null;
+}
+
 function getCapFinishFromItemName(itemName: string | null | undefined): { label: string; swatchName: string } | null {
     const name = (itemName ?? "").toLowerCase();
     if (!name) return null;
@@ -201,7 +240,7 @@ function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName
         if (isAntiqueBulbVariant(v) && normalized === "clear") return null;
         return { label: v.capColor, swatchName: v.capColor };
     })();
-    const finish = fromCapColor ?? getFinishFromGraceSku(v.graceSku) ?? getCapFinishFromItemName(v.itemName);
+    const finish = fromCapColor ?? getFinishFromWebsiteSku(v.websiteSku) ?? getFinishFromGraceSku(v.graceSku) ?? getCapFinishFromItemName(v.itemName);
     const prefix = getVariantOptionPrefix(v);
 
     if (finish) {
