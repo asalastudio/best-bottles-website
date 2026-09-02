@@ -1638,6 +1638,152 @@ export const setProductGroupPrimarySku = mutation({
  * and propagates the primary view to the productGroup's heroImageUrl when
  * the SKU is the group's primaryWebsiteSku.
  */
+/**
+ * Move a product into another product group, by website SKU and group slug.
+ *
+ * The catalogue has no other way to correct a misfiled product, and misfiling
+ * is a real defect: GBDiva46DrpSl is a clear-glass dropper (bestbottles.com
+ * describes all three Diva droppers as clear and links them as one family)
+ * that sat in the frosted group, so the clear dropper page showed two of its
+ * three colourways and the frosted page showed a clear bottle. Write-token
+ * gated, one product per call, and it reports what it changed.
+ */
+export const moveProductToGroup = mutation({
+    args: {
+        writeToken: v.string(),
+        websiteSku: v.string(),
+        groupSlug: v.string(),
+        setColorFromGroup: v.optional(v.boolean()),
+    },
+    returns: v.object({
+        moved: v.boolean(),
+        detail: v.string(),
+        from: v.union(v.string(), v.null()),
+        to: v.string(),
+        color: v.union(v.string(), v.null()),
+    }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const products = await ctx.db
+            .query("products")
+            .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
+            .collect();
+        if (products.length === 0) return { moved: false, detail: "no product carries this websiteSku", from: null, to: args.groupSlug, color: null };
+        if (products.length > 1) return { moved: false, detail: `${products.length} products share this websiteSku — resolve the duplicate first`, from: null, to: args.groupSlug, color: null };
+        const groups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_slug", (q) => q.eq("slug", args.groupSlug))
+            .collect();
+        if (groups.length !== 1) return { moved: false, detail: `${groups.length} groups match this slug`, from: null, to: args.groupSlug, color: null };
+        const product = products[0];
+        const group = groups[0];
+        if (product.productGroupId === group._id) return { moved: false, detail: "already in this group", from: args.groupSlug, to: args.groupSlug, color: product.color ?? null };
+        const previous = product.productGroupId ? await ctx.db.get(product.productGroupId) : null;
+        const patch: { productGroupId: Id<"productGroups">; color?: string } = { productGroupId: group._id };
+        if (args.setColorFromGroup && group.color) patch.color = group.color;
+        await ctx.db.patch(product._id, patch);
+        return {
+            moved: true,
+            detail: "moved",
+            from: previous?.slug ?? null,
+            to: group.slug,
+            color: patch.color ?? product.color ?? null,
+        };
+    },
+});
+
+/**
+ * Correct a product's grace SKU. Shopify is linked by variant GID, not by SKU,
+ * so a rename does not touch checkout; the plate index stores the grace SKU and
+ * its integrity sweep will flag the rows until they are republished.
+ */
+export const setGraceSku = mutation({
+    args: { writeToken: v.string(), websiteSku: v.string(), graceSku: v.string() },
+    returns: v.object({ changed: v.boolean(), detail: v.string(), from: v.union(v.string(), v.null()) }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect();
+        if (products.length !== 1) return { changed: false, detail: `${products.length} products carry this websiteSku`, from: null };
+        const clash = await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect();
+        if (clash.some((c) => c._id !== products[0]._id)) return { changed: false, detail: `grace SKU already used by ${clash[0].websiteSku}`, from: products[0].graceSku };
+        const from = products[0].graceSku;
+        if (from === args.graceSku) return { changed: false, detail: "already set", from };
+        await ctx.db.patch(products[0]._id, { graceSku: args.graceSku });
+        return { changed: true, detail: "renamed", from };
+    },
+});
+
+/**
+ * Create a product that the catalogue sells but Convex never imported, from a
+ * twin that shares its mould. The Diva frosted dropper is the case this was
+ * written for: bestbottles.com lists GBDivaFrst46DrpCu with its own price
+ * ladder, but has no detail page for it, so the import missed it entirely.
+ *
+ * Everything physical (dimensions, weights, case quantity, components) is
+ * copied from the twin, because a frosted bottle is the same mould as its
+ * clear sibling. Everything commercial — SKUs, glass colour, description,
+ * prices — must be given, and is never inferred. Shopify linkage is NOT
+ * copied: inheriting the twin's variant GID would put the twin in the cart.
+ */
+export const createProductFromTwin = mutation({
+    args: {
+        writeToken: v.string(),
+        twinWebsiteSku: v.string(),
+        websiteSku: v.string(),
+        graceSku: v.string(),
+        groupSlug: v.string(),
+        color: v.string(),
+        capColor: v.union(v.string(), v.null()),
+        itemName: v.string(),
+        itemDescription: v.string(),
+        priceTiers: v.array(v.object({ minQty: v.number(), unitPrice: v.number(), totalPrice: v.optional(v.number()) })),
+        source: v.string(),
+    },
+    returns: v.object({ created: v.boolean(), detail: v.string() }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const existing = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect();
+        if (existing.length > 0) return { created: false, detail: "a product already carries this websiteSku" };
+        const clash = await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect();
+        if (clash.length > 0) return { created: false, detail: `grace SKU already used by ${clash[0].websiteSku}` };
+        const twins = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.twinWebsiteSku)).collect();
+        if (twins.length !== 1) return { created: false, detail: `${twins.length} products carry the twin websiteSku` };
+        const groups = await ctx.db.query("productGroups").withIndex("by_slug", (q) => q.eq("slug", args.groupSlug)).collect();
+        if (groups.length !== 1) return { created: false, detail: `${groups.length} groups match this slug` };
+
+        const { _id, _creationTime, ...twin } = twins[0];
+        const first = [...args.priceTiers].sort((a, b) => a.minQty - b.minQty)[0];
+        const tierAt = (qty: number) => args.priceTiers.find((t) => t.minQty === qty)?.unitPrice ?? null;
+        await ctx.db.insert("products", {
+            ...twin,
+            productId: null,                       // assigned from the master sheet, never invented here
+            websiteSku: args.websiteSku,
+            graceSku: args.graceSku,
+            productGroupId: groups[0]._id,
+            color: args.color,
+            capColor: args.capColor,
+            itemName: args.itemName,
+            itemDescription: args.itemDescription,
+            priceTiers: args.priceTiers,
+            webPrice1pc: first?.unitPrice ?? null,
+            webPrice12pc: tierAt(12),
+            webPrice10pc: tierAt(10),
+            qbPrice: null,
+            // this product has no Shopify variant of its own yet: quote-only until it is synced
+            shopifyVariantId: null,
+            shopifyInventoryItemId: null,
+            shopifySellable: false,
+            shopifySellableReason: "NOT_IN_SHOPIFY",
+            shopifyUpdatedAt: undefined,
+            imageUrl: null,
+            productUrl: null,
+            importSource: args.source,
+            verified: false,
+        });
+        return { created: true, detail: "created" };
+    },
+});
+
 export const setImageUrl = mutation({
     args: {
         websiteSku: v.string(),

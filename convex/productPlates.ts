@@ -274,21 +274,23 @@ export const upsertFamilies = mutation({
 });
 
 /**
- * How many product documents carry each website SKU. The importer refuses to
- * index a plate whose SKU no product carries (an orphan would be a row the
- * page can never reach), and reports duplicates so they can be held.
+ * What the catalogue says about each website SKU: how many documents carry it,
+ * and the grace SKU on the first of them. The importer refuses to index a plate
+ * no product carries (an orphan is a row the page can never reach), reports
+ * duplicates so they can be held, and stamps the grace SKU from HERE rather
+ * than from a spreadsheet — the product document is the only source for it.
  */
 export const productPresence = query({
     args: { skus: v.array(v.string()) },
-    returns: v.record(v.string(), v.number()),
+    returns: v.record(v.string(), v.object({ count: v.number(), graceSku: v.union(v.string(), v.null()) })),
     handler: async (ctx, args) => {
-        const counts: Record<string, number> = {};
+        const out: Record<string, { count: number; graceSku: string | null }> = {};
         const wanted = Array.from(new Set(args.skus.map((s) => s.trim()).filter(Boolean))).slice(0, MAX_SKUS_PER_LOOKUP);
         for (const sku of wanted) {
             const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect();
-            counts[sku] = products.length;
+            out[sku] = { count: products.length, graceSku: products[0]?.graceSku ?? null };
         }
-        return counts;
+        return out;
     },
 });
 

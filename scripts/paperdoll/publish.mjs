@@ -75,8 +75,8 @@ async function main() {
         console.log(`\nexample key: ${sample.assets[0].key}`);
         for (const family of families) {
             const presence = await productPresence(convex, family.rows.map((r) => r.sku));
-            const orphans = family.rows.filter((r) => (presence[r.sku] ?? 0) === 0).map((r) => r.sku);
-            const duplicated = family.rows.filter((r) => (presence[r.sku] ?? 0) > 1).length;
+            const orphans = family.rows.filter((r) => (presence[r.sku]?.count ?? 0) === 0).map((r) => r.sku);
+            const duplicated = family.rows.filter((r) => (presence[r.sku]?.count ?? 0) > 1).length;
             console.log(`${family.familyId}: ${orphans.length} SKU(s) no product carries${orphans.length ? ` (${orphans.join(", ")})` : ""}; ${duplicated} on duplicated catalogue SKUs`);
         }
         console.log("re-run with --apply to upload, verify and index.");
@@ -88,7 +88,7 @@ async function main() {
     const report = { buildId, builder: BUILDER, convexUrl, families: [] };
 
     for (const family of families) {
-        const familyReport = { familyId: family.familyId, uploaded: 0, existed: 0, verified: 0, written: 0, unchanged: 0, skipped: [], duplicateSku: 0, errors: [] };
+        const familyReport = { familyId: family.familyId, uploaded: 0, existed: 0, verified: 0, written: 0, unchanged: 0, skipped: [], duplicateSku: 0, graceRestamped: 0, errors: [] };
         const rows = [];
         for (const row of family.rows) {
             const assets = {};
@@ -130,9 +130,13 @@ async function main() {
         const presence = await productPresence(convex, rows.map((r) => r.sku));
         const indexable = [];
         for (const row of rows) {
-            const count = presence[row.sku] ?? 0;
-            if (count === 0 && !args["allow-orphans"]) { familyReport.skipped.push({ sku: row.sku, reason: "no_product" }); continue; }
-            if (count > 1) familyReport.duplicateSku++;
+            const found = presence[row.sku] ?? { count: 0, graceSku: null };
+            if (found.count === 0 && !args["allow-orphans"]) { familyReport.skipped.push({ sku: row.sku, reason: "no_product" }); continue; }
+            if (found.count > 1) familyReport.duplicateSku++;
+            // the grace SKU is whatever the product document says today, never what a
+            // manifest or a spreadsheet remembers
+            if (found.graceSku !== row.graceSku) familyReport.graceRestamped++;
+            row.graceSku = found.graceSku;
             indexable.push(row);
         }
         for (let i = 0; i < indexable.length; i += 50) {
@@ -157,7 +161,7 @@ async function main() {
             }],
         });
         report.families.push(familyReport);
-        console.log(`  uploaded ${familyReport.uploaded}, existed ${familyReport.existed}, verified ${familyReport.verified}, rows written ${familyReport.written}, unchanged ${familyReport.unchanged}, skipped ${familyReport.skipped.length} (no product), on duplicated SKUs ${familyReport.duplicateSku}, errors ${familyReport.errors.length}`);
+        console.log(`  uploaded ${familyReport.uploaded}, existed ${familyReport.existed}, verified ${familyReport.verified}, rows written ${familyReport.written}, unchanged ${familyReport.unchanged}, skipped ${familyReport.skipped.length} (no product), on duplicated SKUs ${familyReport.duplicateSku}, grace SKUs restamped ${familyReport.graceRestamped}, errors ${familyReport.errors.length}`);
         for (const skip of familyReport.skipped.slice(0, 10)) console.log(`   -- ${skip.sku}: ${skip.reason}`);
         for (const error of familyReport.errors.slice(0, 10)) console.log("   !!", JSON.stringify(error));
     }
@@ -188,10 +192,19 @@ async function planFromLegacy(root) {
             const websiteSku = variant.websiteSku ?? (legacy.byGlass ? null : variant.sku);
             if (!websiteSku) fail(`no websiteSku for ${variant.sku} in ${dir}`);
             const sku = websiteSku;
+            // a stray Photoshop "copy" file can reach a legacy manifest as a SKU with a space in
+            // it; it is not a catalogue SKU, so skip the row rather than refusing the whole plan
+            if (!/^[A-Za-z0-9._-]+$/.test(sku)) {
+                console.log(`   -- ${dir}: skipping "${sku}" (not a SKU)`);
+                continue;
+            }
             const assets = [];
             const push = async (role, rel, size) => {
                 if (!rel) return;
-                const path = join(root, "..", rel.replace(/^\//, ""));
+                // the manifests store site-absolute paths ("/paper-doll/<family>/<sku>.webp") from
+                // when these plates were served out of public/. Resolve by the file's own name inside
+                // the family folder we are reading, so the output can live anywhere.
+                const path = join(root, dir, rel.split("/").pop());
                 const bytes = await readFile(path);
                 const sha256 = createHash("sha256").update(bytes).digest("hex");
                 const cap = role.endsWith("CapOff") ? "off" : "on";
