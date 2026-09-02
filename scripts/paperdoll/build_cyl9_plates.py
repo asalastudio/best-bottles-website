@@ -7,7 +7,7 @@ The 9 mL was photographed as LAYERS (5 bodies, 10 caps, 2 rollers, 6 sprayers,
 3 pumps), all on one shared 1000x1300 canvas, so a configuration is a straight
 alpha-over stack in the family's layer order -- exactly what the storefront
 canvas did at runtime from Sanity. Here it is done once, on disk, into the same
-public/paper-doll/<family>/ shape the Diva and Cylinder 50 plates use:
+dist/paper-doll/legacy/<family>/ shape the Diva and Cylinder 50 plates use:
 
     <graceSku>.webp             the configuration, 1000x1100, on white
     <graceSku>.thumb.webp       240px ink-cropped rail thumbnail
@@ -34,7 +34,7 @@ CONFIGS = os.path.join(REPO, "data/paper-doll/CYL-9ML/configurations.json")
 
 FAMILY_ID = "cylinder-9ml-17-415"
 FAMILY_NAME = "Cylinder 9 mL — 17-415"
-OUT_DIR = os.path.join(REPO, "public/paper-doll", FAMILY_ID)
+OUT_DIR = os.path.join(REPO, "dist/paper-doll/legacy", FAMILY_ID)
 SRC_W, SRC_H = 1000, 1300
 OUT_W, OUT_H = 1000, 1100          # 10:11, the PDP plate aspect (same as Diva)
 PAD = 40
@@ -199,7 +199,7 @@ def main():
     }
     json.dump(manifest, open(os.path.join(OUT_DIR, "manifest.json"), "w"), indent=2)
 
-    idx_path = os.path.join(REPO, "public/paper-doll/families.json")
+    idx_path = os.path.join(REPO, "dist/paper-doll/legacy/families.json")
     index = json.load(open(idx_path)) if os.path.exists(idx_path) else []
     index = [f for f in index if f["id"] != FAMILY_ID]
     index.append({"id": FAMILY_ID, "name": FAMILY_NAME, "neckFinish": "17-415", "variantCount": len(entries)})
@@ -207,7 +207,7 @@ def main():
 
     n_files = len([f for f in os.listdir(OUT_DIR) if f.endswith(".webp")])
     size = sum(os.path.getsize(os.path.join(OUT_DIR, f)) for f in os.listdir(OUT_DIR)) / 1e6
-    print(f"wrote {len(entries)} configurations ({n_files} webp, {size:.1f} MB) -> public/paper-doll/{FAMILY_ID}/")
+    print(f"wrote {len(entries)} configurations ({n_files} webp, {size:.1f} MB) -> dist/paper-doll/legacy/{FAMILY_ID}/")
     print(f"neck datum centred within {worst_axis:.2f}px on every plate")
     for cl in manifest["closures"]:
         print(f"    {cl['label']:28s} {cl['count']:>3}")

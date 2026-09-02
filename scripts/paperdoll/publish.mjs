@@ -3,7 +3,8 @@
 //
 //   node scripts/paperdoll/publish.mjs --from public/paper-doll            # the four legacy families
 //   node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json  # pipeline output
-//   add --family <id> to limit, --apply to actually write (dry run by default)
+//   add --family <id> to limit, --apply to actually write (dry run by default),
+//   --allow-orphans to index SKUs the catalogue does not carry yet (normally skipped)
 //
 // Order of operations per plate, and the reason it is this order: hash the
 // bytes → upload under a content-addressed key → HEAD-verify the PUBLIC url
@@ -62,20 +63,26 @@ async function main() {
     for (const family of families) {
         console.log(`\n=== ${family.name} (${family.familyId}) — ${family.rows.length} SKUs, ${family.rows.reduce((n, r) => n + r.assets.length, 0)} objects ===`);
     }
+    const convex = new ConvexHttpClient(convexUrl);
     if (!apply) {
         const sample = families[0].rows[0];
         console.log(`\nexample key: ${sample.assets[0].key}`);
+        for (const family of families) {
+            const presence = await productPresence(convex, family.rows.map((r) => r.sku));
+            const orphans = family.rows.filter((r) => (presence[r.sku] ?? 0) === 0).map((r) => r.sku);
+            const duplicated = family.rows.filter((r) => (presence[r.sku] ?? 0) > 1).length;
+            console.log(`${family.familyId}: ${orphans.length} SKU(s) no product carries${orphans.length ? ` (${orphans.join(", ")})` : ""}; ${duplicated} on duplicated catalogue SKUs`);
+        }
         console.log("re-run with --apply to upload, verify and index.");
         return;
     }
 
     const store = createBlobStore();
-    const convex = new ConvexHttpClient(convexUrl);
     const buildId = new Date().toISOString().replace(/[:.]/g, "-");
     const report = { buildId, builder: BUILDER, convexUrl, families: [] };
 
     for (const family of families) {
-        const familyReport = { familyId: family.familyId, uploaded: 0, existed: 0, verified: 0, written: 0, unchanged: 0, errors: [] };
+        const familyReport = { familyId: family.familyId, uploaded: 0, existed: 0, verified: 0, written: 0, unchanged: 0, skipped: [], duplicateSku: 0, errors: [] };
         const rows = [];
         for (const row of family.rows) {
             const assets = {};
@@ -111,8 +118,19 @@ async function main() {
                 storageProvider: store.provider,
             });
         }
-        for (let i = 0; i < rows.length; i += 50) {
-            const results = await convex.mutation(api.productPlates.upsertMany, { writeToken, rows: rows.slice(i, i + 50) });
+        // never index a plate no product can reach: the page keys by the catalogue's SKUs, so an
+        // orphan row is dead weight the integrity sweep would flag. Objects are uploaded regardless
+        // (content-addressed; the row appears the moment the catalogue carries the SKU).
+        const presence = await productPresence(convex, rows.map((r) => r.sku));
+        const indexable = [];
+        for (const row of rows) {
+            const count = presence[row.sku] ?? 0;
+            if (count === 0 && !args["allow-orphans"]) { familyReport.skipped.push({ sku: row.sku, reason: "no_product" }); continue; }
+            if (count > 1) familyReport.duplicateSku++;
+            indexable.push(row);
+        }
+        for (let i = 0; i < indexable.length; i += 50) {
+            const results = await convex.mutation(api.productPlates.upsertMany, { writeToken, rows: indexable.slice(i, i + 50) });
             for (const result of results) {
                 if (result.outcome === "error") familyReport.errors.push({ sku: result.sku, error: result.error });
                 else if (result.outcome === "unchanged") familyReport.unchanged++;
@@ -128,12 +146,13 @@ async function main() {
                 canvas: CANVAS,
                 closures: family.closures,
                 bodyMask: null,
-                variantCount: rows.length,
+                variantCount: indexable.length,
                 buildId,
             }],
         });
         report.families.push(familyReport);
-        console.log(`  uploaded ${familyReport.uploaded}, existed ${familyReport.existed}, verified ${familyReport.verified}, rows written ${familyReport.written}, unchanged ${familyReport.unchanged}, errors ${familyReport.errors.length}`);
+        console.log(`  uploaded ${familyReport.uploaded}, existed ${familyReport.existed}, verified ${familyReport.verified}, rows written ${familyReport.written}, unchanged ${familyReport.unchanged}, skipped ${familyReport.skipped.length} (no product), on duplicated SKUs ${familyReport.duplicateSku}, errors ${familyReport.errors.length}`);
+        for (const skip of familyReport.skipped.slice(0, 10)) console.log(`   -- ${skip.sku}: ${skip.reason}`);
         for (const error of familyReport.errors.slice(0, 10)) console.log("   !!", JSON.stringify(error));
     }
 
@@ -215,6 +234,14 @@ async function planFromDist(manifestPath) {
 function safeKey(sku) {
     if (!/^[A-Za-z0-9._-]+$/.test(sku)) fail(`KEY_UNSAFE: ${sku}`);
     return sku;
+}
+
+async function productPresence(convex, skus) {
+    const counts = {};
+    for (let i = 0; i < skus.length; i += 200) {
+        Object.assign(counts, await convex.query(api.productPlates.productPresence, { skus: skus.slice(i, i + 200) }));
+    }
+    return counts;
 }
 
 function parseArgs(argv) {

@@ -3,8 +3,13 @@
 // plus a network sample of the URLs the page will actually use. Exits
 // non-zero on ANY issue, so a dirty index cannot be left behind quietly.
 //
-//   node scripts/paperdoll/verify.mjs [--sample 40] [--all-urls]
+//   node scripts/paperdoll/verify.mjs [--sample 40] [--all-urls] [--strict]
 //   env: NEXT_PUBLIC_CONVEX_URL
+//
+// Two kinds of issue: INDEX issues (duplicate rows, orphan plates, bad hosts,
+// missing fronts, stale kits) always fail. CATALOGUE issues (a website SKU that
+// appears on more than one product document) are the catalogue's defect, not
+// the index's: they are listed and counted, and fail only under --strict.
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api.js";
 import { verifyPublicUrl } from "./lib/store-blob.mjs";
@@ -12,6 +17,8 @@ import { verifyPublicUrl } from "./lib/store-blob.mjs";
 const argv = process.argv.slice(2);
 const sampleSize = Number(argv[argv.indexOf("--sample") + 1] || 40);
 const allUrls = argv.includes("--all-urls");
+const strict = argv.includes("--strict");
+const CATALOGUE_ISSUES = new Set(["products_duplicate_websiteSku"]);
 
 async function sweep(convex, fn, label) {
     let cursor = null;
@@ -24,9 +31,12 @@ async function sweep(convex, fn, label) {
         if (result.isDone) break;
         cursor = result.continueCursor;
     }
-    console.log(`${label}: ${checked} rows, ${issues.length} issues`);
-    for (const issue of issues.slice(0, 25)) console.log(`   !! ${issue.sku}: ${issue.issue} ${issue.detail}`);
-    return { checked, issues };
+    const indexIssues = issues.filter((issue) => !CATALOGUE_ISSUES.has(issue.issue));
+    const catalogueIssues = issues.filter((issue) => CATALOGUE_ISSUES.has(issue.issue));
+    console.log(`${label}: ${checked} rows, ${indexIssues.length} index issues, ${catalogueIssues.length} catalogue issues`);
+    for (const issue of indexIssues.slice(0, 25)) console.log(`   !! ${issue.sku}: ${issue.issue} ${issue.detail}`);
+    for (const issue of catalogueIssues.slice(0, 60)) console.log(`   ~~ ${issue.sku}: ${issue.issue} ${issue.detail}`);
+    return { checked, issues: strict ? issues : indexIssues, catalogueIssues };
 }
 
 async function main() {
@@ -61,7 +71,8 @@ async function main() {
     console.log(`urls: ${picked.length} checked of ${urls.length}, ${urlFailures} failing`);
 
     const failed = plates.issues.length + kits.issues.length + urlFailures;
-    console.log(failed ? `\nFAILED: ${failed} issue(s)` : "\nOK");
+    const warned = plates.catalogueIssues.length + kits.catalogueIssues.length;
+    console.log(failed ? `\nFAILED: ${failed} issue(s)` : warned ? `\nOK (index clean; ${warned} catalogue issue(s) listed above — the products table, not the plates)` : "\nOK");
     process.exit(failed ? 1 : 0);
 }
 

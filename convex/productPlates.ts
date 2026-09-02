@@ -273,6 +273,51 @@ export const upsertFamilies = mutation({
     },
 });
 
+/**
+ * How many product documents carry each website SKU. The importer refuses to
+ * index a plate whose SKU no product carries (an orphan would be a row the
+ * page can never reach), and reports duplicates so they can be held.
+ */
+export const productPresence = query({
+    args: { skus: v.array(v.string()) },
+    returns: v.record(v.string(), v.number()),
+    handler: async (ctx, args) => {
+        const counts: Record<string, number> = {};
+        const wanted = Array.from(new Set(args.skus.map((s) => s.trim()).filter(Boolean))).slice(0, MAX_SKUS_PER_LOOKUP);
+        for (const sku of wanted) {
+            const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).collect();
+            counts[sku] = products.length;
+        }
+        return counts;
+    },
+});
+
+/**
+ * The only delete path. Publishing never deletes; `scripts/paperdoll/prune.mjs`
+ * calls this explicitly (dry-run by default) for rows the integrity sweep has
+ * named. Objects in the store are never touched — keys are content-addressed
+ * and a later publish reuses them.
+ */
+export const removeRows = mutation({
+    args: { writeToken: v.string(), skus: v.array(v.string()) },
+    returns: v.object({ removed: v.number(), missing: v.array(v.string()) }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        if (args.skus.length > 50) throw new Error("removeRows accepts at most 50 SKUs per call");
+        let removed = 0;
+        const missing: string[] = [];
+        for (const sku of args.skus) {
+            const rows = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", sku)).collect();
+            if (rows.length === 0) missing.push(sku);
+            for (const row of rows) {
+                await ctx.db.delete(row._id);
+                removed += 1;
+            }
+        }
+        return { removed, missing };
+    },
+});
+
 const ALLOWED_URL_HOSTS = [/\.public\.blob\.vercel-storage\.com$/, /\.r2\.dev$/, /^images\.bestbottles\.com$/];
 
 function hostAllowed(url: string): boolean {

@@ -401,7 +401,7 @@ def build_family(fam, catalog):
     if bad:
         print(f"!! {fam['id']}: {len(bad)} capped plates are off centre: "
               f"{', '.join(bad[:5])}", file=sys.stderr)
-    print(f"  wrote {len(entries)} SKUs -> public/paper-doll/{fam['id']}/ "
+    print(f"  wrote {len(entries)} SKUs -> dist/paper-doll/legacy/{fam['id']}/ "
           f"(closure centred within {worst_off:.1f}px on every capped plate)")
     for c in manifest["closures"]:
         print(f"    {c['label']:32s} {c['count']:>2} colourways")
@@ -432,7 +432,7 @@ def main():
                       "variantCount": len(man["variants"])})
     with open(out, "w") as fh:
         json.dump(index, fh, indent=2)
-    print(f"\nindex: {len(index)} families -> public/paper-doll/families.json")
+    print(f"\nindex: {len(index)} families -> dist/paper-doll/legacy/families.json")
 
 
 if __name__ == "__main__":

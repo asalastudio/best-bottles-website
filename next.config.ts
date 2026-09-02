@@ -41,6 +41,12 @@ const nextConfig: NextConfig = {
                 protocol: "https",
                 hostname: "www.bestbottles.com",
             },
+            {
+                protocol: "https",
+                // The paper-doll plate store (Vercel Blob, public). Pinned to our
+                // store id, not the wildcard, for the same reason as Supabase above.
+                hostname: "yzy7l20k4yt6znzz.public.blob.vercel-storage.com",
+            },
         ],
     },
 

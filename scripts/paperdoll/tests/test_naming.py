@@ -44,5 +44,31 @@ def test_pua_dir_names():
 def test_case_fold_key():
     assert normalise_stem("GBCyl100RdcrShnBlkTall..psd").stem_key == "gbcyl100rdcrshnblktall"
 
+PREFIXES_2 = PREFIXES + ("Cp", "18-400", "8-245")
+
+CASES_2 = [
+    # filename, kwargs, expected stem, expected junk, expected cap state, expected normalisation steps
+    ("GBMtlCylGl (uncapped).psd", {}, "GBMtlCylGl", None, "off", ["copy-suffix", "cap-suffix:off"]),
+    ("GBMtlMrblSmall )uncapped).psd", {}, "GBMtlMrblSmall", None, "off", ["copy-suffix", "cap-suffix:off"]),
+    ("1. 1. GBCyl30.psd", {}, "GBCyl30", None, None, ["ordinal"]),
+    ("49. GBDmnd 2ozAnSpTslMtSl.psd", {}, "GBDmnd2ozAnSpTslMtSl", None, None, ["ordinal", "internal-space"]),
+    ("1. GBGrce55RdcrShnGl 2.psd", {}, "GBGrce55RdcrShnGl", None, None, ["copy-suffix", "ordinal"]),
+    ("5. CpRoll17-415MattGl.psd", {}, "CpRoll17-415MattGl", None, None, ["ordinal"]),
+    ("3. 18-400Drp15mlShnSlTrimBlkBulb.psd", {}, "18-400Drp15mlShnSlTrimBlkBulb", None, None, ["ordinal"]),
+    ("IvoryRng.psd", {"is_component": True}, "IvoryRng", None, None, []),
+    ("Plastic Roller Ball.psd", {"is_component": True}, "Plastic Roller Ball", None, None, []),
+    ("29.psd", {"is_component": True}, "29", "BARE_NUMBER", None, []),
+    ("Slim 30ml...psd", {}, "Slim 30ml", "DESCRIPTIVE_NAME", None, ["copy-suffix"]),
+    ("Bell.psd", {}, "Bell", "NO_SKU_PREFIX", None, []),
+]
+
+def test_cases_2():
+    for filename, kwargs, stem, junk, cap, steps in CASES_2:
+        r = normalise_stem(filename, known_prefixes=PREFIXES_2, **kwargs)
+        assert r.stem == stem, (filename, r)
+        assert r.junk_reason == junk, (filename, r)
+        assert r.cap_state == cap, (filename, r)
+        assert r.normalisations == steps, (filename, r)
+
 if __name__ == "__main__":
-    test_cases(); test_pua_dir_names(); test_case_fold_key(); print("naming tests: OK")
+    test_cases(); test_cases_2(); test_pua_dir_names(); test_case_fold_key(); print("naming tests: OK")

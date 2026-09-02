@@ -120,7 +120,7 @@ export default function ConfiguratorPdp({
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
 }: {
   currentSlug: string;
-  /** static paper-doll plate for the SELECTED SKU (public/paper-doll): the
+  /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
    *  stage leads with this photograph; 3D is a toggle on top of it */
   plateImage?: string | null;
   plateImageCapOff?: string | null;

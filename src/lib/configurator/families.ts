@@ -204,7 +204,7 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
   },
   {
     // Diva 46 ml: a PHOTO-ONLY guided family. Its 46 clear-glass plates
-    // (public/paper-doll/diva-46-clear) cover every closure it sells --
+    // (the diva-46ml-clear-18-415 plates) cover every closure it sells --
     // reducer, spray pump, lotion pump, dropper, vintage bulb, bulb + tassel.
     // No geometry exists, so this entry carries no body and never shows 3D;
     // it is here so Diva sells through the same guided page as the 9 mL.

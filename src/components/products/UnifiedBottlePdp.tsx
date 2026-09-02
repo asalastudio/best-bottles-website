@@ -76,7 +76,7 @@ export default function UnifiedBottlePdp({
     beautyGallery,
 }: {
     configurations: PaperDollConfiguration[];
-    /** Static plates for this family (public/paper-doll); null until built. */
+    /** Plates for this family (productPlates index); null until published. */
     plates: PlateFamilyManifest | null;
     beautyGallery: StorefrontCylinderBeautyGallery | null;
 }) {

@@ -1047,7 +1047,7 @@ export default function ProductDetailClient({
     initialApplicatorSiblings: ApplicatorSibling[];
     initialPdpBlocks?: PdpBlock[];
     siblingGroups?: SiblingGroup[];
-    /** static paper-doll plates for this catalogue, keyed by graceSku (public/paper-doll) */
+    /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
     platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
     const router = useRouter();
@@ -1262,7 +1262,7 @@ export default function ProductDetailClient({
         );
     }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, activeCapStyle, activeTrimColor, capStyleOptions, platesBySku]);
 
-    // the static plate for the selected SKU (public/paper-doll), by graceSku
+    // the plate for the selected SKU (productPlates index), by graceSku then websiteSku
     // first and websiteSku second -- the two keys the plate manifests carry
     const selectedPlate = selectedVariant
         ? platesBySku[selectedVariant.graceSku]
