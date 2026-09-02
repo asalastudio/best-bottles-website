@@ -99,7 +99,7 @@ describe("unified Cylinder PDP state", () => {
         expect(source).not.toContain('next.set("view", "beauty");\n            router.replace');
     });
 
-    it("uses the Sanity beauty gallery for the glass-level hero without replacing exact builder truth", () => {
+    it("keeps the beauty hero inside the unified component; the product page reads plates, not the gallery", () => {
         const component = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
         const page = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
         const queries = readFileSync("src/sanity/lib/queries.ts", "utf8");
@@ -111,8 +111,11 @@ describe("unified Cylinder PDP state", () => {
         expect(component).toContain("Beauty reference · Metal roller · Matte silver");
         expect(component).not.toContain('rows.push({\n                url: beautyHero.imageUrl');
         expect(component).toContain("<PaperDollCanvas");
-        expect(page).toContain("getStorefrontCylinderBeautyGallery");
-        expect(page).toContain("beautyGallery={beautyGallery}");
+        // The guided product page sells through plates from the Convex index;
+        // the Sanity beauty gallery is no longer wired into the page.
+        expect(page).toContain("loadPlatesForVariants(");
+        expect(page).not.toContain("getStorefrontCylinderBeautyGallery");
+        expect(page).not.toContain("beautyGallery=");
         expect(queries).toContain("authenticatedServerClient ?? client");
         expect(serverClient).toContain('import "server-only"');
         expect(serverClient).toContain("SANITY_API_READ_TOKEN");

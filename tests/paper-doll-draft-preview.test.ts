@@ -93,7 +93,7 @@ describe("Paper Doll draft preview contract", () => {
         });
     });
 
-    it("keeps draft reads server-only and explicitly gated by the product page", () => {
+    it("keeps draft reads server-only; the product page reads plates from the index, never a Sanity draft", () => {
         const serverClientSource = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
         const queriesSource = readFileSync("src/sanity/lib/queries.ts", "utf8");
         const productPageSource = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
@@ -103,8 +103,13 @@ describe("Paper Doll draft preview contract", () => {
         expect(serverClientSource).toContain("SANITY_API_READ_TOKEN");
         expect(serverClientSource).not.toContain("NEXT_PUBLIC_SANITY_API_READ_TOKEN");
         expect(queriesSource).toContain("getPreviewPaperDollFamily");
-        expect(productPageSource).toContain("isPaperDollDraftPreviewAllowed");
-        expect(productPageSource).toContain("paperDollPreview={paperDollPreview}");
+        // The plates a product page shows come from the Convex index (bytes on
+        // Blob); the page has no draft path at all, so nothing can leak one.
+        expect(productPageSource).toContain('from "@/lib/paper-doll/plates"');
+        expect(productPageSource).toContain("loadPlatesForVariants(");
+        expect(productPageSource).toContain("platesBySku={platesBySku}");
+        expect(productPageSource).not.toContain("isPaperDollDraftPreviewAllowed");
+        expect(productPageSource).not.toContain("paperDollPreview");
     });
 
     it("preflights each draft configuration without throwing or substituting layers", () => {
