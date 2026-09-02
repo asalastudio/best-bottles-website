@@ -32,6 +32,11 @@ export type ConfiguratorFamily = {
   /** sells through the guided page on its PLATES alone -- no approved
    *  geometry, so the stage never offers 3D and preloads nothing */
   photoOnly?: boolean;
+  /** not in this file: read off the product-group slug because the group's
+   *  SKUs carry plates. Everything a derived family knows it read from the
+   *  slug grammar; the page prunes its closures and colourways by the
+   *  siblings the catalogue actually has. */
+  derived?: true;
   /** colourways that live on their own mesh (flutes etc.) */
   bodyForGlass?: Partial<Record<GlassPresetId, string>>;
   slugColour: Partial<Record<GlassPresetId, string>>;
@@ -231,6 +236,80 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
 
 export function familyForSlug(slug: string): ConfiguratorFamily | null {
   return CONFIGURATOR_FAMILIES.find((f) => f.slugRe.test(slug)) ?? null;
+}
+
+/**
+ * The product-group slug grammar the catalogue uses:
+ *   <family>-<capacity>ml-<colour>-<neck>[-<closure>]
+ *   cylinder-5ml-cobalt-blue-13-415-rollon · boston-round-30ml-amber-20-400
+ *   apothecary-30ml-green-ground · cylinder-3ml-clear-12mm-finemist
+ * A slug outside it (cylinder-9ml-clear, cylinder-118ml-clear) derives nothing.
+ */
+const SLUG_GRAMMAR =
+  /^([a-z]+(?:-[a-z]+)*?)-(\d+(?:\.\d+)?ml)-([a-z]+(?:-[a-z]+)*?)-(\d+-\d+|\d+mm|ground)(?:-([a-z]+(?:-[a-z]+)*))?$/;
+// groups: 1 family · 2 capacity · 3 colour · 4 neck · 5 closure (optional)
+
+/** slug colour token -> glass preset, where one exists; other colours keep
+ *  their token as the id and take their label from the group */
+export const PRESET_FOR_COLOUR: Record<string, GlassPresetId> = {
+  clear: "clear", amber: "amber", "cobalt-blue": "cobalt", cobalt: "cobalt", frosted: "frosted", swirl: "swirl",
+};
+
+/** every closure token the catalogue writes into a slug, by base. The first
+ *  is what a derived family writes when it navigates; the page tries the
+ *  others when a sibling only exists under one of them. */
+export const CLOSURE_TOKENS: Record<Exclude<ClosureBase, "none">, string[]> = {
+  roller: ["rollon"],
+  sprayer: ["finemist", "perfumespray"],
+  pump: ["lotionpump"],
+  reducer: ["reducer"],
+  dropper: ["dropper"],
+  antique: ["antiquespray"],
+  antiqueTassel: ["antiquespray-tassel"],
+};
+
+/**
+ * A photo-only family read off the slug, for a group that sells through its
+ * plates but has no entry above. Same contract as a registered family, so the
+ * guided page needs no second code path: it shows the plate, offers the
+ * closures and colourways its siblings prove exist, and never 3D.
+ */
+export function deriveFamily(slug: string): ConfiguratorFamily | null {
+  const m = SLUG_GRAMMAR.exec(slug);
+  if (!m) return null;
+  const [, fam, cap, colour, neck] = m;
+  const preset = PRESET_FOR_COLOUR[colour] ?? "clear";
+  const closureFromSlug: Record<string, Exclude<ClosureBase, "none">> = {};
+  const slugClosure: Partial<Record<ClosureBase, string>> = {};
+  for (const [base, tokens] of Object.entries(CLOSURE_TOKENS) as Array<[Exclude<ClosureBase, "none">, string[]]>) {
+    slugClosure[base] = tokens[0];
+    for (const t of tokens) closureFromSlug[t.split("-").pop() ?? t] = base;
+  }
+  return {
+    key: `${fam}-${cap}-${neck}`,
+    // photo-only: the finish only ever reaches the 3D closures, which never mount
+    finish: neck === "17-415" ? "17-415" : "18-415",
+    slugRe: new RegExp(`^${fam}-${cap}-[a-z-]+-${neck}(?:-[a-z-]+)?$`),
+    glasses: [preset],
+    bases: ["none", "roller", "reducer", "dropper", "sprayer", "pump", "antique", "antiqueTassel"],
+    bodyDefault: "",
+    photoOnly: true,
+    derived: true,
+    slugColour: { [preset]: colour },
+    slugClosure,
+    closureFromSlug,
+    buildSlug: (c, cl) => (cl ? `${fam}-${cap}-${c}-${neck}-${cl}` : `${fam}-${cap}-${c}-${neck}`),
+  };
+}
+
+/** a registered family first, else one derived from the slug */
+export function familyForSlugOrDerived(slug: string): ConfiguratorFamily | null {
+  return familyForSlug(slug) ?? deriveFamily(slug);
+}
+
+/** the colour token in a slug, or null when the slug is outside the grammar */
+export function colourTokenFromSlug(slug: string): string | null {
+  return SLUG_GRAMMAR.exec(slug)?.[3] ?? null;
 }
 
 /** The closure token a sibling slug must carry for this family, read from

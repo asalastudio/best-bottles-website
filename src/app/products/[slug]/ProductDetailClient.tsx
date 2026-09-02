@@ -24,7 +24,8 @@ import {
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
-import { closureTokenFromSlug, familyForSlug, glassFromSlug } from "@/lib/configurator/families";
+import { closureTokenFromSlug, familyForSlug, familyForSlugOrDerived, glassFromSlug, colourTokenFromSlug, PRESET_FOR_COLOUR }
+  from "@/lib/configurator/families";
 import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
@@ -1304,8 +1305,16 @@ export default function ProductDetailClient({
         return tiles;
     }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
-    // configurator families: the 3D IS the imagery — no variant tile rail
-    const is3dFamily = familyForSlug(group?.slug ?? "") !== null;
+    // configurator families: the 3D IS the imagery — no variant tile rail.
+    // A registered family always takes the guided page; any other group whose
+    // SKUs carry plates takes it too, as a photo-only family read off its slug
+    // (2 Sep: 13-415 went live on prod and its pages still showed the Shopify
+    // photo, because the guided page was gated on the hand-kept registry).
+    const groupHasPlates = useMemo(
+        () => variants.some((v) => Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined))),
+        [variants, platesBySku]);
+    const is3dFamily = familyForSlug(group?.slug ?? "") !== null
+        || (groupHasPlates && familyForSlugOrDerived(group?.slug ?? "") !== null);
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1640,8 +1649,26 @@ export default function ProductDetailClient({
                                 }}
                                 capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
                                 glassOptions={(() => {
-                                    const f = familyForSlug(group.slug ?? "");
+                                    const f = familyForSlugOrDerived(group.slug ?? "");
                                     if (!f) return [];
+                                    if (f.derived) {
+                                        // the colourways are the sibling groups the catalogue has,
+                                        // labelled by their own colour, this group first
+                                        const here = colourTokenFromSlug(group.slug ?? "") ?? "clear";
+                                        const seen = new Set<string>();
+                                        const out: Array<{ id: string; label: string; href: string; active: boolean; imageUrl?: string | null }> = [];
+                                        const push = (slug: string, color: string | null, imageUrl: string | null, active: boolean) => {
+                                            const token = colourTokenFromSlug(slug) ?? slug;
+                                            if (seen.has(token)) return;
+                                            seen.add(token);
+                                            out.push({ id: PRESET_FOR_COLOUR[token] ?? token, label: color ?? "Clear",
+                                                       href: `/products/${slug}`, active, imageUrl });
+                                        };
+                                        push(group.slug ?? "", group.color ?? null, group.heroImageUrl ?? null, true);
+                                        for (const sib of siblingGroups) push(sib.slug, sib.color, null, false);
+                                        void here;
+                                        return out;
+                                    }
                                     const token = closureTokenFromSlug(f, group.slug ?? "");
                                     const current = glassFromSlug(f, group.slug ?? "");
                                     return f.glasses.map((g) => {

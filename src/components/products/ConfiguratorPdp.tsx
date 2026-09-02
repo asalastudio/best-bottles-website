@@ -27,7 +27,8 @@ import {
 import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube, Cube,
          Camera, Stack, Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
-import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase }
+import { familyForSlugOrDerived, glassFromSlug, CLOSURE_TOKENS,
+         type ConfiguratorFamily, type ClosureBase }
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
@@ -36,6 +37,13 @@ import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 
 import { useGLTF } from "@react-three/drei";
+
+/** every slug token a base may carry in this family, the family's own first */
+function tokensFor(fam: ConfiguratorFamily, base: ClosureBase): string[] {
+  const own = fam.slugClosure[base];
+  const all = base === "none" ? [] : CLOSURE_TOKENS[base] ?? [];
+  return [...new Set([...(own ? [own] : []), ...all])];
+}
 
 /** kit slots that come off when the customer lifts the cap; everything else is fitted */
 const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
@@ -210,7 +218,7 @@ export default function ConfiguratorPdp({
   onQtyChange?: (n: number) => void;
 }) {
   const router = useRouter();
-  const fam = familyForSlug(currentSlug);
+  const fam = familyForSlugOrDerived(currentSlug);
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
   // optimistic: the canvas swaps the instant a colourway is picked, while
   // the slug (SKU/pricing truth) is replaced underneath without a reload
@@ -302,7 +310,7 @@ export default function ConfiguratorPdp({
   const glass: GlassPresetId = glassOverride ?? slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
-    fam?.closureFromSlug[committedToken] ?? "sprayer";
+    fam?.closureFromSlug[committedToken] ?? (fam?.derived ? "none" : "sprayer");
 
   const [capMatLocal, setCapMat] = useState("ANSP_BLACK");
   const [trimMatLocal, setTrimMat] = useState(
@@ -351,10 +359,14 @@ export default function ConfiguratorPdp({
     for (const s of siblings) if (s.slug) bySlug.set(s.slug, s);
     return (base: ClosureBase): Sibling | null => {
       if (!fam) return null;
-      const token = fam.slugClosure[base];
-      if (!token) return null;
       const colour = fam.slugColour[glass] ?? "clear";
-      return bySlug.get(fam.buildSlug(colour, token)) ?? null;
+      // a sibling may live under any of the tokens the catalogue writes for
+      // this base (perfumespray beside finemist): take the one that exists
+      for (const token of tokensFor(fam, base)) {
+        const hit = bySlug.get(fam.buildSlug(colour, token));
+        if (hit) return hit;
+      }
+      return null;
     };
   }, [siblings, fam, glass]);
 
@@ -364,6 +376,10 @@ export default function ConfiguratorPdp({
     const out: ClosureBase[] = [];
     if (!fam) return out;
     for (const b of fam.bases) if (b !== "none") out.push(b);
+    if (fam.derived) {
+      // read off a slug, so it claims every base; keep the ones that exist
+      return out.filter((b) => b === activeBase || siblingFor(b) !== null);
+    }
     // antique sells as a photo-only group even where 3D is parked
     if (!out.includes("antique")) {
       const colour = fam.slugColour[glass] ?? "clear";
@@ -384,7 +400,7 @@ export default function ConfiguratorPdp({
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [sellableBases]);
 
-  const activeMeta = CLOSURE_META[activeBase] ?? null;
+  const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;
 
   const priceDelta = (base: ClosureBase): string => {
     const sib = siblingFor(base);
@@ -405,10 +421,11 @@ export default function ConfiguratorPdp({
 
   const commit = (base: ClosureBase) => {
     if (!fam) return;
-    const token = fam.slugClosure[base];
     const colour = fam.slugColour[glass];
+    const token = tokensFor(fam, base).find((t) => colour && siblings.some((sb) => sb.slug === fam.buildSlug(colour, t)))
+      ?? fam.slugClosure[base];
     if (!token || !colour) return;
-    const to = fam.buildSlug(colour, token);
+    const to = fam.buildSlug(colour ?? "clear", token ?? "");
     if (to !== currentSlug) router.replace(`/products/${to}`, { scroll: false });
   };
 
@@ -949,7 +966,7 @@ export default function ConfiguratorPdp({
   );
 
   /* ------------------------------------------------- guided column */
-  const glassLabel = glassOptions?.find((g) => g.id === glass)?.label ?? GLASS_PRESETS[glass]?.label ?? glass;
+  const glassLabel = glassOptions?.find((g) => g.active)?.label ?? GLASS_PRESETS[glass]?.label ?? glass;
   const finishLabel = activeCapOption ?? capOptions?.[0] ?? null;
   const resolvedSku = websiteSku ?? skuLabel ?? null;
   const copySku = () => {
@@ -966,11 +983,11 @@ export default function ConfiguratorPdp({
       </p>
       <div className="grid grid-cols-3 gap-2.5 lg:grid-cols-[repeat(auto-fit,minmax(64px,1fr))]">
         {(glassOptions ?? []).map((g) => {
-          const on = g.id === glass;
+          const on = g.active;
           return (
             <button key={g.id} type="button" aria-pressed={on}
                onClick={() => {
-                 setGlassOverride(g.id as GlassPresetId);
+                 if (g.id in GLASS_PRESETS) setGlassOverride(g.id as GlassPresetId);
                  if (g.href && g.href !== "#") router.replace(g.href, { scroll: false });
                }}
                className={`group relative block w-full rounded-[2px] bg-white text-center transition-colors duration-200
