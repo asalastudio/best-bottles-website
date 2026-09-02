@@ -1,0 +1,20 @@
+{
+  "pxPerMm": 10.3604,
+  "maxThicknessMm": 19.9798,
+  "medianWallMm": 2.45,
+  "baseMm": 12.7,
+  "diameterMm": 19.98,
+  "bounds": {
+    "top": 282,
+    "bottom": 1059,
+    "left": 399,
+    "right": 609
+  },
+  "canvas": {
+    "width": 1000,
+    "height": 1100
+  },
+  "channels": "R thickness (mm = R/255 * maxThicknessMm), G curvature (sin of the surface angle, remapped to 0..1), B solidity (1 = the ray misses the cavity), A coverage",
+  "note": "flipY=false, NoColorSpace -- these are data, not colour.",
+  "source": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-9ml-17-415/3a45bcfe5c7d64f4244c28400419054fd7a5e9f298a71e77677b79155d0bcf87.body-1000x1100.webp"
+}
