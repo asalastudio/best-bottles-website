@@ -47,11 +47,14 @@ import type * as portalAuth from "../portalAuth.js";
 import type * as pricing from "../pricing.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
+import type * as productKits from "../productKits.js";
+import type * as productPlates from "../productPlates.js";
 import type * as products from "../products.js";
 import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as resaleCertificates from "../resaleCertificates.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
+import type * as writeToken from "../writeToken.js";
 
 import type {
   ApiFromModules,
@@ -99,11 +102,14 @@ declare const fullApi: ApiFromModules<{
   pricing: typeof pricing;
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
+  productKits: typeof productKits;
+  productPlates: typeof productPlates;
   products: typeof products;
   repairCylinderPilot: typeof repairCylinderPilot;
   resaleCertificates: typeof resaleCertificates;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
+  writeToken: typeof writeToken;
 }>;
 
 /**

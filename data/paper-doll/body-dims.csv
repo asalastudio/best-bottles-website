@@ -1,0 +1,145 @@
+body_key,samples,cross_section,height_bare_mm,height_capped_mm,diameter_mm,width_mm,depth_mm,major_axis_mm,body_ratio,dims_confidence,dims_source,notes
+aluminum-bottle-100ml-20-410,1,round,127.8,150.0,50.0,,,50.0,2.56,low,convex export (no live data),single page
+aluminum-bottle-120ml-20-410,2,round,114.0,147.0,45.0,,,45.0,2.53,high,live bestbottles.com,
+aluminum-bottle-250ml-20-410,1,round,155.0,178.0,50.0,,,50.0,3.1,low,live bestbottles.com,single page
+aluminum-bottle-500ml-20-410,1,round,178.0,186.0,74.0,,,74.0,2.41,low,live bestbottles.com,single page
+aluminum-bottle-65ml-20-410,2,round,94.0,127.0,36.0,,,36.0,2.61,high,live bestbottles.com,
+apothecary-118ml-ground,1,round,52.2,77.3,27.4,,,27.4,1.91,low,convex export (no live data),single page
+apothecary-15ml-ground,1,round,58.0,82.0,30.0,,,30.0,1.93,low,convex export (no live data),single page
+apothecary-15ml-ground-glass-neck-with-glass-stopper,1,round,58.0,82.0,30.0,,,30.0,1.93,low,live bestbottles.com,single page
+apothecary-30ml-ground,3,round,58.0,98.0,37.0,,,37.0,1.57,high,convex export (no live data),
+apothecary-30ml-ground-glass-neck-with-glass-stopper,0,unknown,,,,,,,,none,convex export (no live data),
+atomizer-10ml-17mm,11,round,82.0,89.0,23.0,,,23.0,3.57,high,live bestbottles.com,
+atomizer-5ml-10mm,3,round,92.0,104.0,15.0,,,15.0,6.13,high,live bestbottles.com,
+atomizer-5ml-13-415,9,round,76.0,81.0,18.0,,,18.0,4.22,high,convex export (no live data),
+atomizer-5ml-13mm,8,round,76.0,81.0,18.0,,,18.0,4.22,high,live bestbottles.com,
+bell-10ml-13-415,3,round,55.0,66.0,27.0,,,27.0,2.04,high,live bestbottles.com,
+boston-round-15ml-18-400,16,round,68.0,91.0,25.0,,,25.0,2.72,high,live bestbottles.com,
+boston-round-30ml-20-400,53,round,78.0,97.0,33.0,,73.0,33.0,2.36,low,live bestbottles.com,bare height spread 68.0-78.0mm
+boston-round-60ml-20-400,54,round,94.0,111.0,39.0,,88.0,39.0,2.41,high,live bestbottles.com,
+cap-closure-0ml-13-415,0,round,,32.0,17.0,,,17.0,,none,convex export (no live data),
+cap-closure-0ml-13-425,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+cap-closure-0ml-15-415,0,unknown,,,,,,,,none,convex export (no live data),
+cap-closure-0ml-18-400,0,round,,11.0,21.0,,,21.0,,none,convex export (no live data),
+cap-closure-0ml-18-415,0,round,,30.0,21.0,,,21.0,,none,convex export (no live data),
+cap-closure-0ml-20-400,0,round,,12.0,23.0,,,23.0,,none,convex export (no live data),
+cap-closure-0ml-22-400,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+cap-closure-0ml-24-400,1,round,93.8,74.8,23.7,,,23.7,3.96,low,convex export (no live data),single page
+cap-closure-0ml-8-425,2,round,93.8,16.0,11.0,,,11.0,8.53,medium,convex export (no live data),
+cap-closure-0ml-specialty,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+cap-closure-30ml-45mm,1,round,35.0,40.0,52.0,,,52.0,0.67,low,live bestbottles.com,single page
+cap-closure-30ml-press-fit,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+cap-closure-40ml-48-400,1,round,42.0,47.0,56.0,,,56.0,0.75,low,live bestbottles.com,single page
+cap-closure-40ml-press-fit,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+cap-closure-5ml-press-fit,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+cap-component-0ml-13-415,0,unknown,,17.0,,,,,,none,convex export (no live data),
+cap-component-0ml-17-415,0,unknown,,27.0,,,,,,none,convex export (no live data),
+circle-100ml-18-415,86,flat,105.0,130.0,,89.0,29.0,89.0,1.18,high,live bestbottles.com,
+circle-15ml-13-415,30,round,60.0,72.0,50.0,,17.0,50.0,1.2,high,live bestbottles.com,
+circle-30ml-15-415,7,flat,74.0,100.0,,60.0,20.0,60.0,1.23,high,live bestbottles.com,
+circle-50ml-18-400,1,flat,87.0,101.0,,72.0,23.0,72.0,1.21,low,live bestbottles.com,single page
+circle-50ml-18-415,81,flat,87.0,115.0,72.0,72.0,23.0,72.0,1.21,verified,live bestbottles.com GBCrcl50AnSpBlk,convex mode matched exactly
+cream-jar-15ml-37mm,2,flat,31.0,31.0,48.0,48.0,,48.0,0.65,low,live bestbottles.com,bare height spread 26.0-31.0mm; diameter spread 48.0-55.0mm; width spread 48.0-55.0mm
+cream-jar-20ml-40mm,1,round,33.9,29.0,55.0,,,55.0,0.62,low,convex export (no live data),single page
+cream-jar-30ml-45mm,3,flat,35.0,40.0,52.0,52.0,,52.0,0.67,high,live bestbottles.com,
+cream-jar-3ml-20mm,2,flat,18.0,20.0,35.0,35.0,,35.0,0.51,low,live bestbottles.com,bare height spread 18.0-22.0mm
+cream-jar-40ml-48-400,3,flat,42.0,47.0,56.0,56.0,,56.0,0.75,high,live bestbottles.com,
+cream-jar-5ml-27mm,2,flat,16.0,18.0,31.0,31.0,,31.0,0.52,low,live bestbottles.com,bare height spread 16.0-24.0mm
+cream-jar-5ml-37mm,1,flat,24.0,28.0,31.0,31.0,,31.0,0.77,low,live bestbottles.com,single page
+cream-jar-5ml-press-fit,1,round,24.0,28.0,31.0,,,31.0,0.77,low,convex export (no live data),single page
+cream-jar-60ml-58mm,1,round,51.0,57.0,59.0,,,59.0,0.86,low,live bestbottles.com,single page
+cream-jar-63ml-58mm,1,round,51.0,57.0,59.0,,,59.0,0.86,low,convex export (no live data),single page
+cylinder-100ml-18-415,43,round,154.0,195.0,35.0,,,35.0,4.4,high,live bestbottles.com,
+cylinder-118ml-nofinish,1,round,116.0,124.0,41.0,,,41.0,2.83,low,live bestbottles.com,single page
+cylinder-227ml-nofinish,1,round,156.0,159.0,51.0,,,51.0,3.06,low,live bestbottles.com,single page
+cylinder-25ml-18-415,7,round,83.0,108.0,32.0,,,32.0,2.59,high,live bestbottles.com,
+cylinder-28ml-16mm,4,round,81.0,100.0,31.0,,,31.0,2.61,high,live bestbottles.com,
+cylinder-30ml-18-415,2,round,50.8,70.7,42.0,,,42.0,1.21,high,convex export (no live data),
+cylinder-3ml-12mm,2,round,37.0,54.0,14.0,,,14.0,2.64,high,live bestbottles.com,
+cylinder-454ml-nofinish,1,round,195.0,194.0,62.0,,,62.0,3.15,low,live bestbottles.com,single page
+cylinder-4ml-12mm,2,round,49.0,67.0,14.0,,,14.0,3.5,high,live bestbottles.com,
+cylinder-50ml-16mm,4,round,98.0,116.0,37.0,,,37.0,2.65,high,live bestbottles.com,
+cylinder-50ml-18-415,43,round,117.0,142.0,32.0,,,32.0,3.66,high,live bestbottles.com,
+cylinder-5ml-13-415,60,round,53.0,65.0,17.0,,,17.0,3.12,high,live bestbottles.com,
+cylinder-9ml-17-415,145,round,70.0,83.0,20.0,,,20.0,3.5,verified,live bestbottles.com GBCyl9RollMattSl,convex mode gave dia 21; live says 20
+decorative-10ml-17-52mm,1,flat,80.0,102.0,,28.0,,28.0,2.86,low,live bestbottles.com,single page
+decorative-32ml-ground,2,round,77.0,105.0,42.0,,,42.0,1.83,high,convex export (no live data),
+decorative-32ml-ground-glass-neck-with-glass-stopper,2,round,77.0,105.0,42.0,,,42.0,1.83,high,live bestbottles.com,
+decorative-355ml-ground,1,round,52.2,192.0,92.0,,,92.0,0.57,low,convex export (no live data),single page
+decorative-355ml-ground-glass-neck-with-glass-stopper,0,unknown,,,,,,,,none,convex export (no live data),
+decorative-35ml-ground,3,round,44.0,81.0,25.4,,,25.4,1.73,medium,convex export (no live data),
+decorative-35ml-ground-glass-neck-with-glass-stopper,3,flat,44.0,81.0,,63.0,,63.0,0.7,medium,live bestbottles.com,
+decorative-3ml-14-3mm,1,flat,42.0,53.0,18.0,18.0,,18.0,2.33,low,live bestbottles.com,single page
+decorative-4ml-8mm,2,flat,46.0,53.0,,32.0,12.0,32.0,1.44,high,live bestbottles.com,
+decorative-5ml-17-52mm,1,flat,66.0,87.0,,26.0,,26.0,2.54,low,live bestbottles.com,single page
+decorative-6ml-14-3mm,1,round,48.0,59.0,22.0,,,22.0,2.18,low,live bestbottles.com,single page
+diamond-60ml-18-415,43,flat,88.0,114.0,,41.0,,41.0,2.15,high,live bestbottles.com,
+diva-100ml-18-415,43,round,113.0,138.0,64.0,,,64.0,1.77,high,live bestbottles.com,
+diva-30ml-18-415,34,round,81.0,104.0,43.0,,,43.0,1.88,high,live bestbottles.com,
+diva-46ml-18-415,99,round,89.0,115.0,49.0,,,49.0,1.82,verified,live bestbottles.com GBDivaFrst46AnSpBlk,convex mode matched exactly
+dropper-0ml-18-400,6,round,93.8,33.0,21.0,,,21.0,4.47,high,convex export (no live data),
+dropper-0ml-18-415,3,round,93.8,39.0,23.0,,,23.0,4.08,high,convex export (no live data),
+dropper-0ml-20-400,11,round,93.8,32.0,23.0,,,23.0,4.08,medium,convex export (no live data),
+dropper-10ml-17-415,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+dropper-10ml-18-400,0,unknown,,,,,,,,none,convex export (no live data),
+elegant-100ml-18-415,87,flat,109.0,135.0,,61.0,30.0,61.0,1.79,high,live bestbottles.com,
+elegant-15ml-13-415,59,flat,61.0,63.0,,36.0,18.0,36.0,1.69,verified,live bestbottles.com GBElg15BlkSht,convex row for this SKU said dia 30 - transcription error; live says 36
+elegant-30ml-15-415,4,flat,75.0,100.0,,44.0,22.0,44.0,1.7,high,live bestbottles.com,
+elegant-60ml-18-415,94,flat,86.0,112.0,,54.0,27.0,54.0,1.59,verified,live bestbottles.com GBElg60AnSpBlk,convex mode gave dia 39 - WRONG by 15mm; live authoritative
+empire-100ml-18-415,44,flat,107.0,132.0,,46.0,,46.0,2.33,high,live bestbottles.com,
+empire-50ml-18-415,47,flat,88.0,114.0,,37.0,,37.0,2.38,high,live bestbottles.com,
+flair-15ml-13-415,30,flat,56.0,68.0,,41.0,20.0,41.0,1.37,high,live bestbottles.com,
+gift-bag-0ml-nofinish,21,round,93.8,144.0,23.7,,,23.7,3.96,high,convex export (no live data),
+gift-box-0ml-nofinish,14,flat,89.0,,,57.0,19.0,57.0,1.56,low,live bestbottles.com,bare height spread 51.0-150.0mm; width spread 25.0-127.0mm
+grace-55ml-18-415,43,flat,113.0,139.0,,52.0,30.0,52.0,2.17,high,live bestbottles.com,
+lotion-bottle-30ml-18mm,1,round,118.0,124.0,33.0,,,33.0,3.58,low,convex export (no live data),single page
+lotion-bottle-30ml-nofinish,2,round,118.0,124.0,33.0,,,33.0,3.58,high,convex export (no live data),
+lotion-bottle-3ml-snap-on,1,round,118.0,124.0,33.0,,,33.0,3.58,low,convex export (no live data),single page
+lotion-pump-0ml-18-415,0,round,,41.0,23.0,,,23.0,,none,convex export (no live data),
+packaging-supply-0ml-nofinish,12,round,93.8,74.8,23.7,,,23.7,3.96,low,convex export (no live data),diameter spread 23.7-76.2mm
+pillar-9ml-13-415,3,round,57.0,70.0,21.0,,,21.0,2.71,high,live bestbottles.com,
+pillar-9ml-17-415,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+plastic-bottle-10ml-nofinish,1,round,93.8,74.8,23.7,,,23.7,3.96,low,convex export (no live data),single page
+plastic-bottle-30ml-13-415,1,flat,68.0,82.0,,28.0,,28.0,2.43,low,live bestbottles.com,single page
+rectangle-10ml-13-415,60,flat,101.0,113.0,,17.0,17.0,17.0,5.94,low,live bestbottles.com,bare height spread 50.0-101.0mm; width spread 17.0-29.0mm
+rectangle-9ml-ground,3,round,47.0,64.0,20.0,,,20.0,2.35,high,convex export (no live data),
+rectangle-9ml-ground-glass-neck-with-glass-stopper,3,flat,47.0,64.0,,24.0,,24.0,1.96,high,live bestbottles.com,
+roll-on-cap-0ml-13-415,0,round,,24.0,17.0,,,17.0,,none,convex export (no live data),
+roll-on-cap-0ml-15-415,0,round,,32.0,19.0,,,19.0,,none,convex export (no live data),
+roll-on-cap-0ml-17-415,0,round,,27.0,19.0,,,19.0,,none,convex export (no live data),
+roll-on-cap-0ml-20-400,0,round,,35.0,23.0,,,23.0,,none,convex export (no live data),
+roll-on-cap-30ml-13-415,0,unknown,,,,,,,,none,convex export (no live data),
+roll-on-cap-30ml-nofinish,0,round,,27.6,19.2,,,19.2,,none,convex export (no live data),
+round-128ml-18-415,92,round,83.0,111.0,69.0,,,69.0,1.2,verified,live bestbottles.com GBRnd128AnSpBlk,convex mode matched exactly
+round-78ml-18-415,86,round,73.0,87.0,59.0,,,59.0,1.24,high,live bestbottles.com,
+royal-13ml-13-415,29,flat,56.0,69.0,,40.0,21.0,40.0,1.4,high,live bestbottles.com,
+royal-14ml-11mm,1,flat,64.0,92.0,,32.0,,32.0,2.0,low,live bestbottles.com,single page
+sleek-100ml-18-415,44,flat,149.0,191.0,,36.0,,36.0,4.14,high,live bestbottles.com,
+sleek-30ml-18-415,38,flat,98.0,123.0,28.0,28.0,,28.0,3.5,high,live bestbottles.com,
+sleek-50ml-18-415,44,flat,139.0,167.0,28.0,28.0,,28.0,4.96,high,live bestbottles.com,
+sleek-5ml-13-415,30,flat,45.0,57.0,,17.0,17.0,17.0,2.65,high,live bestbottles.com,
+sleek-8ml-13-415,30,flat,66.0,78.0,,17.0,17.0,17.0,3.88,high,live bestbottles.com,
+slim-100ml-18-415,43,flat,154.0,180.0,37.0,37.0,37.0,37.0,4.16,high,live bestbottles.com,
+slim-30ml-18-415,37,flat,87.0,112.0,30.0,30.0,30.0,30.0,2.9,high,live bestbottles.com,
+slim-50ml-18-415,43,flat,121.0,143.0,31.0,31.0,31.0,31.0,3.9,high,live bestbottles.com,
+sprayer-0ml-13-415,0,round,,32.0,17.0,,,17.0,,none,convex export (no live data),
+sprayer-0ml-15-415,5,round,93.8,41.0,20.0,,,20.0,4.69,high,convex export (no live data),
+sprayer-0ml-17-415,6,round,93.8,31.0,19.0,,,19.0,4.94,high,convex export (no live data),
+sprayer-0ml-18-415,6,round,93.8,36.0,21.0,,,21.0,4.47,low,convex export (no live data),diameter spread 21.0-65.0mm
+sprayer-0ml-nofinish,1,round,93.8,74.8,23.7,,,23.7,3.96,low,convex export (no live data),single page
+sprayer-5ml-13-415,0,round,,20.0,22.0,,,22.0,,none,convex export (no live data),
+square-15ml-13-415,29,flat,52.0,65.0,,26.0,26.0,26.0,2.0,high,live bestbottles.com,
+tall-cylinder-9ml-13-415,60,round,106.0,118.0,18.0,,,18.0,5.89,high,live bestbottles.com,
+tall-tall-cylinder-9ml-13-415,1,round,106.0,109.0,18.0,,,18.0,5.89,low,convex export (no live data),single page
+teardrop-9ml-ground,3,round,43.0,68.0,20.0,,,20.0,2.15,high,convex export (no live data),
+teardrop-9ml-ground-glass-neck-with-glass-stopper,3,flat,43.0,68.0,,31.0,,31.0,1.39,high,live bestbottles.com,
+tool-0ml-nofinish,3,round,50.8,35.0,25.0,,,25.0,2.03,low,convex export (no live data),bare height spread 50.8-93.8mm
+tulip-5ml-13-415,30,round,45.0,57.0,23.0,,,23.0,1.96,high,live bestbottles.com,
+tulip-6ml-13-415,30,round,45.0,57.0,23.0,,,23.0,1.96,high,live bestbottles.com,
+unknown-0ml-nofinish,1,unknown,102.0,,,,,,,low,convex export (no live data),single page; no diameter or width on any page
+vial-1ml-plug,4,round,35.0,44.0,8.0,,,8.0,4.38,high,live bestbottles.com,
+vial-2ml-13-425,1,round,22.0,24.0,16.0,,,16.0,1.38,low,live bestbottles.com,single page
+vial-2ml-8-425,4,round,35.0,37.0,12.0,,,12.0,2.92,high,live bestbottles.com,
+vial-3ml-13-425,2,round,29.0,32.0,14.0,,,14.0,2.07,high,live bestbottles.com,
+vial-4ml-13-425,12,round,45.0,47.0,15.0,,,15.0,3.0,high,live bestbottles.com,
+vial-9ml-18-400,2,round,79.4,50.0,20.0,,,20.0,3.97,medium,convex export (no live data),

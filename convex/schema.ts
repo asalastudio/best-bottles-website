@@ -1,6 +1,22 @@
 import { defineSchema, defineTable } from "convex/server";
 import { v } from "convex/values";
 
+/** One stored image: an absolute, public, permanent URL plus what the importer verified about it. */
+const plateAssetV = v.object({
+    url: v.string(),
+    key: v.string(),
+    sha256: v.string(),
+    bytes: v.number(),
+    width: v.number(),
+    height: v.number(),
+});
+
+const kitSlotV = v.union(
+    v.literal("body"), v.literal("fitment"), v.literal("roller"), v.literal("cap"), v.literal("overcap"),
+    v.literal("sprayer"), v.literal("pump"), v.literal("diptube"), v.literal("collar"), v.literal("bulb"),
+    v.literal("tassel"), v.literal("reducer"), v.literal("pipette"),
+);
+
 export default defineSchema({
     // ── Product Groups (Phase 1) ─────────────────────────────────────────────
     // ~230 parent groups. Each group = unique (family + capacityMl + color).
@@ -754,4 +770,112 @@ export default defineSchema({
         updatedAt: v.number(),
     })
         .index("by_finishKey", ["finishKey"]),
+
+    // -------------------------------------------------------------------------
+    // PAPER-DOLL PLATES AND COMPONENT KITS — the storefront's product imagery
+    // -------------------------------------------------------------------------
+    //
+    // Bytes live on object storage (Vercel Blob today); these rows are the
+    // index. A row's EXISTENCE is its readiness: there is no ready flag, no
+    // release, no draft. The importer writes a row only after it has uploaded
+    // the object and HEAD-verified its public URL, so nothing between "file
+    // exists" and "page shows it" can silently fail. Never reuse the legacy
+    // products.paperDoll* columns for this lane.
+    productPlates: defineTable({
+        sku: v.string(),                              // canonical lookup key: websiteSku as Convex spells it
+        websiteSku: v.union(v.string(), v.null()),
+        graceSku: v.union(v.string(), v.null()),      // looked up in products — NEVER derived
+        familyId: v.string(),                         // <family>-<capacityMl>ml-<color>-<neck>
+        front: plateAssetV,                           // cap-on plate; a row without one is not a row
+        frontCapOff: v.union(plateAssetV, v.null()),
+        thumb: plateAssetV,
+        thumbCapOff: v.union(plateAssetV, v.null()),
+        views: v.array(v.object({
+            view: v.union(v.literal("side"), v.literal("aerial"), v.literal("depth"), v.literal("measured"), v.literal("exploded")),
+            cap: v.union(v.literal("on"), v.literal("off")),
+            source: v.union(v.literal("photo"), v.literal("composite")),
+            kitSha256: v.union(v.string(), v.null()),
+            plate: plateAssetV,
+            thumb: v.union(plateAssetV, v.null()),
+        })),
+        source: v.object({
+            library: v.string(),                      // "original" | "bbuat" | "layers" | "public-paper-doll"
+            path: v.string(),
+            psdSha256: v.union(v.string(), v.null()),
+            psdSha256CapOff: v.union(v.string(), v.null()),
+        }),
+        builder: v.object({ name: v.string(), version: v.string(), builtAt: v.number() }),
+        storageProvider: v.union(v.literal("vercel-blob"), v.literal("r2")),
+        revision: v.number(),
+        importedAt: v.number(),
+    })
+        .index("by_sku", ["sku"])
+        .index("by_websiteSku", ["websiteSku"])
+        .index("by_graceSku", ["graceSku"])
+        .index("by_familyId", ["familyId"]),
+
+    // Per-part alpha layers with anchors, registered pixel-for-pixel to the
+    // SKU's plate. Read only on interaction (enhance / exploded), never in the
+    // product page payload — hence its own table.
+    productKits: defineTable({
+        sku: v.string(),
+        websiteSku: v.union(v.string(), v.null()),
+        graceSku: v.union(v.string(), v.null()),
+        familyId: v.string(),
+        plateSha256: v.string(),                      // productPlates.front.sha256 this kit is registered to
+        canvas: v.object({ width: v.number(), height: v.number() }),
+        anchors: v.object({
+            axisX: v.number(),                        // the closure axis the plate was framed on
+            neckAxisX: v.union(v.number(), v.null()), // the body's own neck axis (may differ by a few px)
+            seatY: v.number(),                        // closure seat — the 2D BB_ATTACH_NECK
+            baselineY: v.number(),                    // bottle foot
+            pxPerMm: v.union(v.number(), v.null()),
+        }),
+        completeness: v.union(v.literal("full"), v.literal("capSplit"), v.literal("bodyOnly")),
+        parts: v.array(v.object({
+            slot: kitSlotV,
+            variantKey: v.union(v.string(), v.null()),
+            zOrder: v.number(),
+            explodeIndex: v.number(),
+            bounds: v.object({ left: v.number(), top: v.number(), right: v.number(), bottom: v.number() }),
+            assembled: v.object({ x: v.number(), y: v.number() }),
+            exploded: v.object({ dx: v.number(), dy: v.number() }),
+            image: plateAssetV,
+            image2x: v.union(plateAssetV, v.null()),
+            mask: v.union(plateAssetV, v.null()),
+            derivation: v.union(v.literal("psd-layer"), v.literal("madison"), v.literal("pair-difference"), v.literal("background-matte")),
+        })),
+        three: v.union(v.null(), v.object({           // ids only, resolved through the shipped registries
+            bodyId: v.string(),
+            glass: v.string(),
+            finish: v.union(v.literal("13-415"), v.literal("15-415"), v.literal("17-415"), v.literal("18-415")),
+            closureAssemblyKind: v.union(v.string(), v.null()),
+            capMaterialId: v.union(v.string(), v.null()),
+            trimMaterialId: v.union(v.string(), v.null()),
+            rollerVariant: v.union(v.literal("metal"), v.literal("plastic"), v.null()),
+        })),
+        source: v.object({ library: v.string(), path: v.string(), releaseVersion: v.union(v.string(), v.null()) }),
+        builder: v.object({ name: v.string(), version: v.string(), builtAt: v.number() }),
+        storageProvider: v.union(v.literal("vercel-blob"), v.literal("r2")),
+        revision: v.number(),
+        importedAt: v.number(),
+    })
+        .index("by_sku", ["sku"])
+        .index("by_websiteSku", ["websiteSku"])
+        .index("by_graceSku", ["graceSku"])
+        .index("by_familyId", ["familyId"]),
+
+    // Family registry for the lab and rails. Metadata, not a gate.
+    plateFamilies: defineTable({
+        familyId: v.string(),
+        name: v.string(),
+        neckFinish: v.string(),
+        canvas: v.object({ width: v.number(), height: v.number() }),
+        closures: v.array(v.object({ id: v.string(), label: v.string(), count: v.number() })),
+        bodyMask: v.union(plateAssetV, v.null()),
+        variantCount: v.number(),
+        publishedAt: v.number(),
+        buildId: v.string(),
+    })
+        .index("by_familyId", ["familyId"]),
 });

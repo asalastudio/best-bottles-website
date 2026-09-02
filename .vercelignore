@@ -17,3 +17,4 @@ Best-Bottles-Orphan-urls/
 
 # Test/report outputs
 coverage/
+dist/

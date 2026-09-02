@@ -117,6 +117,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/three": "^0.185.4",
+    "@vercel/blob": "^2.8.0",
     "convex-test": "^0.0.56",
     "dotenv": "^17.3.1",
     "eslint": "^9",
