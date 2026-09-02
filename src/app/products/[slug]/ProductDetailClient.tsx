@@ -1218,22 +1218,25 @@ export default function ProductDetailClient({
         if (explicit) return explicit;
         const hasPlate = (v: ProductVariant) =>
             Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined));
-        const matches = variants.filter(
-            (v) =>
-                v.applicator === activeApplicator &&
-                resolveVariantCapFinish(v).swatchName === activeCapColor &&
-                (capStyleOptions.length === 0 || v.capStyle === activeCapStyle) &&
-                (v.trimColor || "Standard") === activeTrimColor
-        );
-        return (
-            matches.find(hasPlate) ??
-            matches[0] ??
-            variants.find((v) => v.applicator === activeApplicator && hasPlate(v)) ??
-            variants.find((v) => v.applicator === activeApplicator) ??
-            variants[0] ??
-            null
-        );
-    }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, activeCapStyle, activeTrimColor, capStyleOptions, platesBySku]);
+        // The colourway the customer just clicked is authoritative. Cap style and
+        // trim narrow the choice only when the customer picked those too: their
+        // defaults are derived from whichever colourway was selected before, and
+        // several Diva bulb colourways are shared between a plain SKU and a
+        // decorative-ring SKU that was never photographed (capColor "Clear",
+        // capStyle "Tall"). Filtering on the derived default handed back the ring
+        // SKU, so clicking Lavender, Red, Ivory or White changed nothing on the
+        // stage. Among the colourway's variants, prefer one we can actually show.
+        const narrow = (pool: ProductVariant[], keep: (v: ProductVariant) => boolean) => {
+            const next = pool.filter(keep);
+            return next.length > 0 ? next : pool;
+        };
+        let pool = variants.filter((v) => v.applicator === activeApplicator);
+        if (pool.length === 0) pool = variants;
+        pool = narrow(pool, (v) => resolveVariantCapFinish(v).swatchName === activeCapColor);
+        if (selectedCapStyle) pool = narrow(pool, (v) => v.capStyle === selectedCapStyle);
+        if (selectedTrimColor) pool = narrow(pool, (v) => (v.trimColor || "Standard") === selectedTrimColor);
+        return pool.find(hasPlate) ?? pool.find((v) => usableProductImageUrl(v.imageUrl)) ?? pool[0] ?? variants[0] ?? null;
+    }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
 
     // the plate for the selected SKU (productPlates index), by graceSku then websiteSku
     // first and websiteSku second -- the two keys the plate manifests carry
