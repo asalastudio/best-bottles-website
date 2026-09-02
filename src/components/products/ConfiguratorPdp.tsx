@@ -36,6 +36,9 @@ import { api } from "../../../convex/_generated/api";
 
 import { useGLTF } from "@react-three/drei";
 
+/** kit slots that come off when the customer lifts the cap; everything else is fitted */
+const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
+
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
   ssr: false,
   loading: () => (
@@ -229,10 +232,16 @@ export default function ConfiguratorPdp({
   useEffect(() => { if (kitQuery !== undefined) setHeldKit(kitQuery); }, [kitQuery]);
   const kit = kitQuery === undefined ? heldKit : kitQuery;
 
-  const targetParts = useMemo(
-    () => (kit?.parts?.length ? [...kit.parts].sort((a, b) => a.zOrder - b.zOrder) : null),
-    [kit],
-  );
+  // "Without cap" on a kitted SKU removes the cap PART. The cap-off PLATE swap
+  // below still happens, but the kit stacks above the plate, so with the cap
+  // part left in the stack the toggle did nothing visible (Jordan, 2 Sep).
+  // The body and fitment stay exactly where they were — that is the whole
+  // point of a kit — and only the removable closure leaves.
+  const targetParts = useMemo(() => {
+    if (!kit?.parts?.length) return null;
+    const parts = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
+    return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
+  }, [kit, withCap]);
   // what is actually on screen: only ever a fully decoded set
   const [shownParts, setShownParts] = useState<typeof targetParts>(null);
   useEffect(() => {
@@ -388,8 +397,9 @@ export default function ConfiguratorPdp({
     none: "capped", roller: "rollerCapped", reducer: "reducerCapped",
     sprayer: "sprayerCapped", pump: "pumpCapped",
   };
+  const kitHasCap = Boolean(kit?.parts?.some((p) => REMOVABLE_SLOTS.has(p.slot)));
   const canCap = CAPPABLE[activeBase] != null
-    && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff));
+    && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff) || kitHasCap);
   const closureFor = (base: ClosureBase) =>
     ((withCap && CAPPABLE[base]) || CLOSURE_MODE[base]) as
       import("./Bottle3DViewer").ClosureMode;
