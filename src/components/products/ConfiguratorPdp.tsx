@@ -24,7 +24,7 @@ import {
   Check, CaretRight, Sparkle, ChatCircle, ShoppingBag,
   SprayBottle, Drop, Eyedropper, GitCompare,
 } from "@/components/icons";
-import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube,
+import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube, Cube,
          Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase }
@@ -114,8 +114,13 @@ export default function ConfiguratorPdp({
   neckSize, capacityText, skuLabel, price10, price12, priceTiers,
   sampleHref, quoteHref, qty = 1, onQtyChange,
   capOptions, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
+  plateImage = null, plateImageCapOff = null,
 }: {
   currentSlug: string;
+  /** static paper-doll plate for the SELECTED SKU (public/paper-doll): the
+   *  stage leads with this photograph; 3D is a toggle on top of it */
+  plateImage?: string | null;
+  plateImageCapOff?: string | null;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -164,6 +169,10 @@ export default function ConfiguratorPdp({
   const [glassOverride, setGlassOverride] = useState<GlassPresetId | null>(null);
   const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
   const [withCap, setWithCap] = useState(false);
+  // Photographs lead; the 3D viewer is opened by the customer, never for
+  // them. Nothing about it -- its chunk, a WebGL context, the GLB -- is
+  // paid for until this flips.
+  const [show3d, setShow3d] = useState(false);
   useEffect(() => { setGlassOverride(null); }, [currentSlug]);
   const glass: GlassPresetId = glassOverride ?? slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
@@ -293,13 +302,21 @@ export default function ConfiguratorPdp({
   const isAntiquePreview = activeBase === "antique" || activeBase === "antiqueTassel";
 
   /* ---------------------------------------------------------- the stage */
+  // the plate for the selected SKU; cap-off plate when the cap is lifted
+  const plate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
+  const showPlate = !photoFallback && !show3d && Boolean(plate);
+  const showLive3d = !photoFallback && fam && !showPlate;
   const stage = (
     <div className="relative h-full w-full overflow-hidden">
       {photoFallback ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={photoFallback} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
              className="h-full w-full object-cover" />
-      ) : fam ? (
+      ) : showPlate ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+             className="h-full w-full object-contain bg-white" />
+      ) : showLive3d ? (
         <Bottle3DViewer
           bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault}
           finish={fam.finish}
@@ -320,12 +337,29 @@ export default function ConfiguratorPdp({
            style={{ background: "rgba(29,29,31,.55)" }}>
         <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
         <span className="text-xs font-semibold uppercase tracking-label text-white">
-          {photoFallback ? "Product photo" : "Live 3D"}
+          {showLive3d ? "Live 3D" : "Product photo"}
         </span>
       </div>
 
+      {/* 3D is opt-in: a toggle on the photograph, never in front of it */}
+      {!photoFallback && fam && plateImage ? (
+        <button
+          type="button"
+          onClick={() => setShow3d((on) => !on)}
+          aria-pressed={show3d}
+          className="absolute top-4 right-4 flex min-h-10 items-center gap-2 rounded-[3px]
+                     border border-white/40 px-3 text-xs font-semibold uppercase
+                     tracking-label text-white backdrop-blur transition-colors
+                     hover:bg-white hover:text-obsidian"
+          style={{ background: show3d ? "rgba(29,29,31,.55)" : "rgba(29,29,31,.35)" }}
+        >
+          <Cube className="h-4 w-4" weight="light" />
+          {show3d ? "Back to photo" : "View in 3D"}
+        </button>
+      ) : null}
+
       {/* drag affordance */}
-      {!photoFallback && (
+      {showLive3d && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center
                         gap-2 text-sm text-white/85 pointer-events-none">
           <HandGrabbing className="h-4 w-4" />

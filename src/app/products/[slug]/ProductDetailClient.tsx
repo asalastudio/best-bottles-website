@@ -6,7 +6,7 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
     ShoppingBag, ArrowLeft, ChevronRight, Package,
-    Check, Truck, ChatCircle, Cube,
+    Check, Truck, ChatCircle,
 } from "@/components/icons";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -22,8 +22,7 @@ import {
     type PdpBlock,
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
-import Bottle3DConfigurator from "@/components/products/Bottle3DConfigurator";
-import { Safe3D } from "@/components/products/Viewer3DBoundary";
+import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
 import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
 import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
@@ -992,6 +991,7 @@ export interface SiblingGroup {
 }
 
 export default function ProductDetailClient({
+    platesBySku = {},
     slug,
     initialData,
     initialApplicatorSiblings,
@@ -1003,6 +1003,8 @@ export default function ProductDetailClient({
     initialApplicatorSiblings: ApplicatorSibling[];
     initialPdpBlocks?: PdpBlock[];
     siblingGroups?: SiblingGroup[];
+    /** static paper-doll plates for this catalogue, keyed by graceSku (public/paper-doll) */
+    platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
     const router = useRouter();
     const searchParams = useSearchParams();
@@ -1026,8 +1028,6 @@ export default function ProductDetailClient({
 
     const [qty, setQty] = useState(qtyParam);
     const [addedFlash, setAddedFlash] = useState(false);
-    // Photographs lead; the 3D viewer is opened by the customer, never for them.
-    const [show3d, setShow3d] = useState(false);
     const [pdpBlocks, setPdpBlocks] = useState<PdpBlock[]>(initialPdpBlocks);
     const [stickyBarVisible, setStickyBarVisible] = useState(false);
     const inlineCartRef = useRef<HTMLDivElement>(null);
@@ -1264,6 +1264,7 @@ export default function ProductDetailClient({
     }, [activeSlug, group?.slug, variantsForApplicator]);
     const hasVariantImagePicker = variantImageTiles.length > 1;
     // configurator families: the 3D IS the imagery — no variant tile rail
+    const is3dFamily = familyForSlug(group?.slug ?? "") !== null;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1559,7 +1560,71 @@ export default function ProductDetailClient({
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
                 <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start">
+                    {/* Guided configurator hero (design handoff 2026-08-31):
+                        full-width 50/50 stage + step panel for 3D families;
+                        the classic grid keeps everything else below the fold. */}
+                    {is3dFamily && group.slug ? (
+                        <div className="mb-8 lg:mb-14 lg:-mx-4 xl:-mx-10 2xl:-mx-16">
+                            <ConfiguratorPdp
+                                currentSlug={group.slug}
+                                plateImage={selectedVariant?.graceSku ? platesBySku[selectedVariant.graceSku]?.image ?? null : null}
+                                plateImageCapOff={selectedVariant?.graceSku ? platesBySku[selectedVariant.graceSku]?.imageCapOff ?? null : null}
+                                groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
+                                capacityLabel={`${group.color ?? "Clear"} glass`}
+                                priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin ?? null}
+                                siblings={compatibleSiblings}
+                                heroImageUrl={group.heroImageUrl}
+                                onAddToCart={handleAddToCart}
+                                onAskGrace={openGracePanel}
+                                displayName={customerDisplayName}
+                                categoryLabel={`${group.category ?? "Glass Bottle"} · ${group.family ?? ""}`}
+                                inStock={inStock}
+                                caseQty={selectedVariant?.caseQuantity ?? null}
+                                neckSize={group.neckThreadSize}
+                                capacityText={group.capacity}
+                                skuLabel={selectedVariant?.graceSku ?? null}
+                                price10={selectedVariant?.webPrice10pc ?? null}
+                                price12={selectedVariant?.webPrice12pc ?? null}
+                                priceTiers={selectedVariant?.priceTiers ?? null}
+                                capOptions={capColorOptions}
+                                activeCapOption={activeCapColor}
+                                onCapOptionChange={(name) => {
+                                    setSelectedVariantId(null);
+                                    setSelectedCapColor(name);
+                                    setSelectedCapStyle(null);
+                                    setSelectedTrimColor(null);
+                                }}
+                                capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
+                                glassOptions={(() => {
+                                    const f = familyForSlug(group.slug ?? "");
+                                    if (!f) return [];
+                                    const token = (group.slug ?? "").split("-").pop() ?? "";
+                                    const current = glassFromSlug(f, group.slug ?? "");
+                                    return f.glasses.map((g) => {
+                                        const colour = f.slugColour[g];
+                                        const slug = colour ? f.buildSlug(colour, token) : null;
+                                        const sib = slug === group.slug
+                                            ? group
+                                            : compatibleSiblings.find((x) => x.slug === slug);
+                                        return {
+                                            id: g,
+                                            label: GLASS_PRESETS[g].label,
+                                            href: slug ? `/products/${slug}` : "#",
+                                            active: g === current,
+                                            imageUrl: sib?.heroImageUrl ?? null,
+                                        };
+                                    });
+                                })()}
+                                sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
+                                quoteHref={quoteHref}
+                                qty={qty}
+                                onQtyChange={setQty}
+                            />
+                        </div>
+                    ) : null}
+                    <div className={is3dFamily
+                        ? "max-w-5xl mx-auto"
+                        : "grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start"}>
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
                         {/*
@@ -1574,9 +1639,9 @@ export default function ProductDetailClient({
                             Variant-count badge and SKU watermark are shared overlays in
                             placeholder mode and passed as props to the gallery.
                         */}
-                        <div className="lg:sticky lg:top-[120px]">
-                            <div className={hasVariantImagePicker ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
-                                {hasVariantImagePicker && (
+                        <div className={is3dFamily ? "hidden" : "lg:sticky lg:top-[120px]"}>
+                            <div className={hasVariantImagePicker && !is3dFamily ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
+                                {hasVariantImagePicker && !is3dFamily && (
                                     <VariantImagePicker
                                         tiles={variantImageTiles}
                                         selectedVariantId={selectedVariant?._id}
@@ -1585,21 +1650,6 @@ export default function ProductDetailClient({
                                 )}
                                 <div className="min-w-0">
                                     {(() => {
-                                        // 3D eligibility comes from the configurator family
-                                        // registry — a family enters it only when its whole
-                                        // chain is approved (hollow body GLB + thickness bake +
-                                        // locked glass + closure GLBs). Anything else keeps the
-                                        // photographic gallery.
-                                        const slug3d = group.slug ?? "";
-                                        const fam3d = familyForSlug(slug3d);
-                                        const configurator3d: { bodyId: string; glass: GlassPresetId } | null =
-                                            fam3d
-                                                ? {
-                                                    bodyId: fam3d.bodyDefault,
-                                                    glass: glassFromSlug(fam3d, slug3d),
-                                                  }
-                                                : null;
-
                                         const variantBadge = (
                                             <span className="inline-flex items-center px-2.5 py-1 text-[10px] uppercase tracking-wider font-bold rounded-full bg-obsidian/80 text-white backdrop-blur-sm">
                                                 {group.variantCount} Variant{group.variantCount !== 1 ? "s" : ""}
@@ -1675,11 +1725,14 @@ export default function ProductDetailClient({
                                             });
                                         }
 
-                                        // The photographs are built FIRST. They are what the page
-                                        // leads with, and they are also the 3D viewer's safety net
-                                        // (see Viewer3DBoundary): a missing GLB must cost the
-                                        // customer the 3D, never the product page and its
-                                        // add-to-cart.
+                                        // Mode 0 — LIVE 3D CONFIGURATOR. Only for families whose
+                                        // geometry, bake and materials are all approved (today: the
+                                        // 17-415 9 ml cylinder). The gallery drops to thumbs-only
+                                        // beneath it — the arrangement it was designed for.
+                                        // The photo gallery is built FIRST, because it is also
+                                        // the 3D viewer's safety net (see Viewer3DBoundary): a
+                                        // missing GLB must cost the customer the 3D, never the
+                                        // product page and its add-to-cart.
                                         const galleryNode = galleryImages.length > 0 ? (
                                             <ProductImageGallery
                                                 images={galleryImages}
@@ -1691,9 +1744,15 @@ export default function ProductDetailClient({
                                             />
                                         ) : null;
 
+                                        // On 3D families this whole panel is display:none -- the
+                                        // guided stage above owns the imagery -- so nothing 3D is
+                                        // ever mounted here. (It was: a WebGL context and a GLB
+                                        // download inside a hidden subtree, for nobody.)
+                                        if (galleryNode) return galleryNode;
+
                                         // Mode 2 — placeholder. Avoid falling back to legacy URLs or
                                         // paper-doll compositions for customer-facing product media.
-                                        const stageNode = galleryNode ?? (
+                                        return (
                                             <motion.div
                                                 key="placeholder"
                                                 initial={{ opacity: 0.6 }}
@@ -1709,46 +1768,6 @@ export default function ProductDetailClient({
                                                 </div>
                                                 <div className="absolute top-4 left-4 pointer-events-none">{variantBadge}</div>
                                             </motion.div>
-                                        );
-
-                                        // No approved geometry for this family — photography is the
-                                        // whole stage and there is nothing to offer.
-                                        if (!configurator3d) return stageNode;
-
-                                        // Mode 0 — LIVE 3D, ON REQUEST. Only for families whose
-                                        // geometry, bake and materials are all approved. It sits
-                                        // behind a button rather than in front of the photographs:
-                                        // nothing about the viewer — its dynamic import, a WebGL
-                                        // context, the GLB download — is paid for by a customer who
-                                        // never asks for it, and the photograph is the thing most
-                                        // people came to see.
-                                        return (
-                                            <>
-                                                {show3d ? (
-                                                    <Safe3D
-                                                        label={group.slug ?? "product"}
-                                                        fallback={stageNode}
-                                                    >
-                                                        <Bottle3DConfigurator
-                                                            key={`${group.slug}-${configurator3d.glass}`}
-                                                            bodyId={configurator3d.bodyId}
-                                                            initialGlass={configurator3d.glass}
-                                                            currentSlug={group.slug ?? ""}
-                                                        />
-                                                    </Safe3D>
-                                                ) : stageNode}
-                                                <button
-                                                    type="button"
-                                                    onClick={() => setShow3d((on) => !on)}
-                                                    aria-pressed={show3d}
-                                                    className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 border border-obsidian
-                                                               px-5 text-[10px] font-bold uppercase tracking-[0.16em] text-obsidian
-                                                               transition-colors hover:bg-obsidian hover:text-white"
-                                                >
-                                                    <Cube className="h-4 w-4" weight="light" />
-                                                    {show3d ? "View photographs" : "View in 3D"}
-                                                </button>
-                                            </>
                                         );
                                     })()}
                                 </div>
@@ -2000,23 +2019,31 @@ export default function ProductDetailClient({
 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
                         <div className="px-2 sm:px-0">
-                            {/* Category · Family */}
-                            <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-1 sm:mb-2">
-                                {group.category} · {group.family}
-                            </p>
+                            {/* Identity lives in the configurator hero for 3D
+                                families (single h1); repeat nothing here. */}
+                            {!is3dFamily && (
+                                <>
+                                    {/* Category · Family */}
+                                    <p className="text-[10px] sm:text-xs uppercase tracking-[0.2em] text-muted-gold font-bold mb-1 sm:mb-2">
+                                        {group.category} · {group.family}
+                                    </p>
 
-                            {/* Title */}
-                            <h1 className="font-serif text-xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-2 sm:mb-3">
-                                {customerDisplayName}
-                            </h1>
+                                    {/* Title */}
+                                    <h1 className="font-serif text-xl sm:text-4xl lg:text-5xl font-medium text-obsidian leading-[1.1] mb-2 sm:mb-3">
+                                        {customerDisplayName}
+                                    </h1>
+                                </>
+                            )}
 
                             {/* Sanity trust badges */}
                             <PdpInlineBadges blocks={pdpBlocks} />
 
                             {/* Trust Stack — stock, case pack, shipping */}
-                            <TrustStack variant={selectedVariant} inStock={inStock} />
+                            {!is3dFamily && (
+                                <TrustStack variant={selectedVariant} inStock={inStock} />
+                            )}
 
-                            {selectedVariantSummary && (
+                            {!is3dFamily && selectedVariantSummary && (
                                 <SelectedVariantSummary
                                     label={selectedVariantSummary.label}
                                     sku={selectedVariantSummary.sku}
@@ -2024,15 +2051,17 @@ export default function ProductDetailClient({
                                 />
                             )}
 
+                            {!is3dFamily && (
                                 <ProductConfidenceSummary
                                     group={group}
                                     variant={selectedVariant}
                                     compatibleCount={compatibleSiblings.length}
                                     onAskGrace={openGracePanel}
                                 />
+                            )}
 
-                            {/* Price + Tier Ladder */}
-                            <div className="mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50">
+                            {/* Price + Tier Ladder (panel carries these on 3D families) */}
+                            <div className={`mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50 ${is3dFamily ? "hidden" : ""}`}>
                                 <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                 <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian mb-4">
                                     {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
@@ -2042,8 +2071,9 @@ export default function ProductDetailClient({
                                 <TierLadder variant={selectedVariant} qty={qty} />
                             </div>
 
-                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price). ── */}
-                            <div className="hidden lg:block">
+                            {/* ── Variant Selectors (desktop; mobile has a compact tray above price).
+                                   3D families select roller/cap/trim in the panel. ── */}
+                            <div className={is3dFamily ? "hidden" : "hidden lg:block"}>
                                 {!isAtomizer && (
                                     <>
                                     {/* Roller type toggle — Metal vs Plastic for roll-on groups */}
@@ -2076,8 +2106,9 @@ export default function ProductDetailClient({
                                         </div>
                                     )}
 
-                                    {/* Glass color selector */}
-                                    {uniqueColorGroups.length > 1 && (
+                                    {/* Glass color selector — replaced by the configurator's
+                                        navigating swatches on 3D families */}
+                                    {!is3dFamily && uniqueColorGroups.length > 1 && (
                                         <div className="mb-6 relative">
                                             <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
                                                 Glass Color
@@ -2348,7 +2379,7 @@ export default function ProductDetailClient({
                             <PdpInlinePromo blocks={pdpBlocks} />
 
                             {/* Quantity + Add to Cart */}
-                            <div ref={inlineCartRef} className="flex items-stretch space-x-3 mb-6">
+                            <div ref={inlineCartRef} className={`flex items-stretch space-x-3 mb-6 ${is3dFamily ? "hidden" : ""}`}>
                                 <div className="flex items-center border border-champagne rounded-sm bg-white">
                                     <button
                                         onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -2409,7 +2440,7 @@ export default function ProductDetailClient({
                             </div>
 
                             {/* Request a Quote CTA */}
-                            <div className="mb-6">
+                            <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`}>
                                 {qty >= 500 && checkoutReady ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
@@ -2442,8 +2473,9 @@ export default function ProductDetailClient({
                                 )}
                             </div>
 
-                            {/* Compatibility belongs near the buying decision for B2B confidence. */}
-                            {compatibleSiblings.length > 0 && (
+                            {/* Compatibility belongs near the buying decision for B2B confidence.
+                                (3D families select closures in the panel — no duplicate list.) */}
+                            {!is3dFamily && compatibleSiblings.length > 0 && (
                                 <div className="mb-6 rounded-sm border border-champagne/60 bg-white p-4">
                                     <div className="flex items-start justify-between gap-4 mb-3">
                                         <div>

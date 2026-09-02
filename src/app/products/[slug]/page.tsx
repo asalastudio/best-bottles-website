@@ -18,16 +18,8 @@ import { getCustomerFacingProductName } from "@/lib/products/customer-facing-nam
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
-import UnifiedBottlePdp from "@/components/products/UnifiedBottlePdp";
-import { getStorefrontCylinderBeautyGallery } from "@/sanity/lib/queries";
-import { PLATE_FAMILY_CYL9, loadPlateFamily } from "@/lib/paper-doll/plates";
-import {
-    buildCylinder9mlConfigurations,
-    type CylinderConfigurationSourceGroup,
-    type CylinderConfigurationSourceVariant,
-} from "@/lib/products/cylinder-9ml-configurator";
-import { CYLINDER_9ML_17415_COHORT, isCylinder9ml17415Group } from "@/lib/products/product-cohorts";
-import { searchCatalogServer } from "@/lib/catalogServer";
+import { loadPlateFamilies, loadPlateFamily } from "@/lib/paper-doll/plates";
+import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -64,66 +56,18 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
     };
 }
 
-type CylinderCohortGroup = CylinderConfigurationSourceGroup & { _id: string };
-type CylinderCohortVariant = CylinderConfigurationSourceVariant & { productGroupId?: string };
-
-async function getUnifiedCylinderData() {
-    let cohort: { groups: CylinderCohortGroup[]; variants: CylinderCohortVariant[] };
-    try {
-        cohort = await getConvexClient().query(api.products.getProductCohort, {
-            family: CYLINDER_9ML_17415_COHORT.family,
-            capacityMl: CYLINDER_9ML_17415_COHORT.capacityMl,
-            neckThreadSize: CYLINDER_9ML_17415_COHORT.neckThreadSize,
-            paperDollFamilyKey: CYLINDER_9ML_17415_COHORT.paperDollFamilyKey,
-        }) as { groups: CylinderCohortGroup[]; variants: CylinderCohortVariant[] };
-    } catch {
-        // The storefront Convex deployment can lag the web branch. Rebuild the
-        // exact cohort through the already-deployed group reads, preserving the
-        // same family/capacity/neck/family-key boundary and complete commerce rows.
-        const catalog = await searchCatalogServer({
-            filters: { families: [CYLINDER_9ML_17415_COHORT.family] },
-            sort: "capacity-asc",
-            view: "visual",
-            limit: 240,
-            cursor: null,
-        });
-        const exactGroups = catalog.items.filter((group) => isCylinder9ml17415Group({
-            family: group.family,
-            capacityMl: group.capacityMl,
-            neckThreadSize: group.neckThreadSize,
-            paperDollFamilyKey: group.paperDollFamilyKey ?? null,
-        }));
-        const payloads = await Promise.all(exactGroups.map((group) => getProductData(group.slug)));
-        cohort = {
-            groups: exactGroups.map((group) => ({
-                ...group,
-                family: group.family,
-                paperDollFamilyKey: group.paperDollFamilyKey ?? null,
-            })) as CylinderCohortGroup[],
-            variants: payloads.flatMap((payload, index) =>
-                (payload?.variants ?? []).map((variant) => ({
-                    ...variant,
-                    productGroupId: exactGroups[index]._id,
-                })),
-            ),
-        };
+/** Every static plate on disk, keyed by graceSku. A plate is one finished
+ *  photograph of one configuration (public/paper-doll); the guided stage
+ *  leads with it and offers 3D on top. */
+async function loadPlatesBySku(): Promise<Record<string, { image: string; imageCapOff: string | null }>> {
+    const out: Record<string, { image: string; imageCapOff: string | null }> = {};
+    for (const family of await loadPlateFamilies()) {
+        const manifest = await loadPlateFamily(family.id);
+        for (const v of manifest?.variants ?? []) {
+            if (v.graceSku) out[v.graceSku] = { image: v.image, imageCapOff: v.imageCapOff };
+        }
     }
-    const groups = new Map(cohort.groups.map((group) => [String(group._id), group]));
-    const rows = cohort.variants.map((variant) => {
-        const group = groups.get(String(variant.productGroupId ?? ""));
-        if (!group) throw new Error(`CYL-9ML product ${variant.graceSku} is missing its cohort group`);
-        return { group, variant };
-    });
-    return buildCylinder9mlConfigurations(rows);
-}
-
-async function getReleasedCylinderBeautyGallery() {
-    try {
-        return await getStorefrontCylinderBeautyGallery(CYLINDER_9ML_17415_COHORT.paperDollFamilyKey);
-    } catch (error) {
-        console.warn("CYL-9ML beauty gallery release gate rejected the Sanity document", error);
-        return null;
-    }
+    return out;
 }
 
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
@@ -279,45 +223,20 @@ export default async function ProductPage({
 
     const activeSlug = legacyRouteOverride ?? slug;
     if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        // The 9 mL's build previews are static plates shipped with the app
-        // (public/paper-doll), composited once from the family's layer PNGs.
-        // Nothing here is gated on a CMS release: if the folder is on disk,
-        // the previews are on the page.
-        const [configurations, plates, beautyGallery] = await Promise.all([
-            getUnifiedCylinderData(),
-            loadPlateFamily(PLATE_FAMILY_CYL9),
-            getReleasedCylinderBeautyGallery(),
-        ]);
-        return (
-            <>
-                <UnifiedBottlePdp
-                    configurations={configurations}
-                    plates={plates}
-                    beautyGallery={beautyGallery}
-                />
-                <SanityLiveVisualEditing />
-                <Footer />
-            </>
-        );
+        // The unified "cohort" page is retired: the 9 mL sells through the
+        // guided product page like every other 3D family. Old links land on
+        // the clear roll-on, carrying any deep-linked configuration through.
+        const next = new URLSearchParams();
+        const configuration = resolvedSearchParams.configuration;
+        if (typeof configuration === "string") next.set("configuration", configuration);
+        redirect(`/products/cylinder-9ml-clear-17-415-rollon${next.size ? `?${next.toString()}` : ""}`);
     }
     const data = await getProductData(activeSlug);
-    const productGroupWithFamilyKey = data?.group as (ProductGroupPayload["group"] & { paperDollFamilyKey?: string | null }) | undefined;
-    if (productGroupWithFamilyKey && isCylinder9ml17415Group({
-        family: productGroupWithFamilyKey.family ?? null,
-        capacityMl: productGroupWithFamilyKey.capacityMl ?? null,
-        neckThreadSize: productGroupWithFamilyKey.neckThreadSize ?? null,
-        paperDollFamilyKey: productGroupWithFamilyKey.paperDollFamilyKey ?? null,
-    })) {
-        const primary = getPrimaryVariant(data);
-        const next = new URLSearchParams();
-        next.set("view", "beauty");
-        if (primary?.graceSku) next.set("configuration", primary.graceSku);
-        redirect(`/products/${CYLINDER_9ML_17415_COHORT.slug}?${next.toString()}`);
-    }
-    const [siblings, siblingGroups, pdpBlocks] = await Promise.all([
+    const [siblings, siblingGroups, pdpBlocks, platesBySku] = await Promise.all([
         getApplicatorSiblings(data, activeSlug),
         getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
+        loadPlatesBySku(),
     ]);
     const group = data?.group;
     const variant = getPrimaryVariant(data);
@@ -378,6 +297,7 @@ export default async function ProductPage({
                 initialApplicatorSiblings={siblings}
                 initialPdpBlocks={pdpBlocks}
                 siblingGroups={siblingGroups}
+                platesBySku={platesBySku}
             />
             <SanityLiveVisualEditing />
             <Footer />
