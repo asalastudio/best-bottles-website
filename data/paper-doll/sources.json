@@ -1,0 +1,24 @@
+{
+  "_comment": "Source libraries for the plate pipeline. B (pipeline/paper-doll/reference-images) is a byte-identical copy of A plus 28 derivative composites and is deliberately not listed. Component folders are an explicit allowlist: never a substring heuristic.",
+  "libraries": {
+    "original": { "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Original-Photoshop-Sources", "role": "master" },
+    "bbuat": { "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/BBUAT-Upload-Files", "role": "curated" }
+  },
+  "bbuatFolders": { "uncapped": "1. PSD Uncapped ", "capped": "2. PSD Capped ", "views": "3. PSD Additional Images Views" },
+  "componentFolders": [
+    "20. Closures - Cap, Sprayers, Lotion pumps, etc",
+    "2. 18-415 Bottles/32. 18415 Caps",
+    "17-415 Bottles/17415 Caps Sprayers Lotionpumps",
+    "17-415 Bottles/17415 Cap Thumbnails",
+    "5. 13-415 Bottles PSD/Caps 13-415",
+    "15-415 Bottles/16. 15-415 Sprayer",
+    "15-415 Bottles/15-415 Cap Thumbails",
+    "6.   8-425 Bottles - CB/8245 Caps",
+    "6.   8-425 Bottles - CB/8245 Thumbnail Caps",
+    "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/20-400 and 18-400 Droppers only images",
+    "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/20-400 and 18-400 Caps only images",
+    "Accessories - Funnels droppers rollon plugs caps"
+  ],
+  "viewFolderPatterns": ["side ?views?", "aerial and side views", "measured, side, depth, aerial views"],
+  "skipPathSegments": ["composites", "_archive", "01 Archive", "_backups"]
+}
