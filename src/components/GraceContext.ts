@@ -144,8 +144,46 @@ export interface GraceContextValue {
 
 export const GraceContext = createContext<GraceContextValue | null>(null);
 
+const noop = () => {};
+const noopAsync = async () => {};
+
+const GRACE_DEFAULTS: GraceContextValue = {
+    panelMode: "closed",
+    openPanel: noop,
+    closePanel: noop,
+    minimizeToStrip: noop,
+    isOpen: false,
+    open: noop,
+    close: noop,
+    status: "idle",
+    messages: [],
+    input: "",
+    setInput: noop,
+    voiceEnabled: false,
+    toggleVoice: noop,
+    send: noopAsync,
+    startDictation: noopAsync,
+    stopDictation: noop,
+    stopSpeaking: noop,
+    errorMessage: "",
+    conversationActive: false,
+    startConversation: noop,
+    endConversation: noop,
+    confirmAction: noop,
+    dismissAction: noop,
+    onNavigate: noop,
+    pendingNavigation: null,
+    clearPendingNavigation: noop,
+    activeForm: null,
+    updateFormField: noop,
+    submitActiveForm: noopAsync,
+    dismissActiveForm: noop,
+    voiceFailed: false,
+    graceQuery: "",
+    pageContext: null,
+};
+
 export function useGrace() {
     const ctx = useContext(GraceContext);
-    if (!ctx) throw new Error("useGrace must be used within a Grace provider (GraceProviderSwitch)");
-    return ctx;
+    return ctx ?? GRACE_DEFAULTS;
 }

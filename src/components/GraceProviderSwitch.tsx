@@ -16,6 +16,11 @@ interface Props {
 }
 
 export default function GraceProviderSwitch({ children }: Props) {
+    // Skip Grace when Convex isn't configured
+    if (!process.env.NEXT_PUBLIC_CONVEX_URL) {
+        return <>{children}</>;
+    }
+
     // Voice provider is ElevenLabs. The only opt-out is setting
     // NEXT_PUBLIC_GRACE_VOICE_PROVIDER=text to get text-only mode.
     const isTextOnly = process.env.NEXT_PUBLIC_GRACE_VOICE_PROVIDER === "text";

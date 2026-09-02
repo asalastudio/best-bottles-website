@@ -1,12 +1,10 @@
-import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
+import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
 
-const isPortalRoute = createRouteMatcher(["/portal(.*)"]);
-
-export default clerkMiddleware(async (auth, req) => {
-    if (isPortalRoute(req)) {
-        await auth.protect();
-    }
-});
+// Clerk auth disabled — re-enable when portal auth is needed
+export default function middleware(_req: NextRequest) {
+    return NextResponse.next();
+}
 
 export const config = {
     matcher: [

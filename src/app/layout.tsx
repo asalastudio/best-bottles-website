@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { EB_Garamond, Inter } from "next/font/google";
 import "./globals.css";
-import { ClerkProvider } from "@clerk/nextjs";
+// Clerk disabled — re-enable when portal auth is needed
+// import { ClerkProvider } from "@clerk/nextjs";
 import ConvexClientProvider from "@/components/ConvexClientProvider";
 import { CartProvider } from "@/components/CartProvider";
 import GraceProviderSwitch from "@/components/GraceProviderSwitch";
@@ -32,26 +33,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
-          <ConvexClientProvider>
-            <CartProvider>
-              <Suspense fallback={
-                <div className="min-h-screen bg-bone flex items-center justify-center">
-                  <div className="w-10 h-10 border-2 border-muted-gold/30 border-t-muted-gold rounded-full animate-spin" />
-                </div>
-              }>
-                <GraceProviderSwitch>
-                  <MegaMenuLayoutWrapper>
-                    {children}
-                  </MegaMenuLayoutWrapper>
-                </GraceProviderSwitch>
-              </Suspense>
-            </CartProvider>
-          </ConvexClientProvider>
-        </body>
-      </html>
-    </ClerkProvider>
+    <html lang="en">
+      <body className={`${ebGaramond.variable} ${inter.variable} antialiased selection:bg-muted-gold/20 selection:text-obsidian`}>
+        <ConvexClientProvider>
+          <CartProvider>
+            <Suspense fallback={
+              <div className="min-h-screen bg-bone flex items-center justify-center">
+                <div className="w-10 h-10 border-2 border-muted-gold/30 border-t-muted-gold rounded-full animate-spin" />
+              </div>
+            }>
+              <GraceProviderSwitch>
+                <MegaMenuLayoutWrapper>
+                  {children}
+                </MegaMenuLayoutWrapper>
+              </GraceProviderSwitch>
+            </Suspense>
+          </CartProvider>
+        </ConvexClientProvider>
+      </body>
+    </html>
   );
 }
