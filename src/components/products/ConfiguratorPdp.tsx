@@ -31,6 +31,7 @@ import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
+import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 
@@ -38,6 +39,26 @@ import { useGLTF } from "@react-three/drei";
 
 /** kit slots that come off when the customer lifts the cap; everything else is fitted */
 const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
+
+/**
+ * Fitment swatches are photographs, not colour dots, wherever the closure has
+ * been rendered as a component plate (Jordan, 2 Sep: the component contact
+ * sheets "would be ideal to use for selecting the fitments"). A bottle SKU and
+ * a component SKU meet on the FINISH the reviewed vocabulary reads off each —
+ * GBCyl9MtlRollShBlk and CpRoll17-415ShnBlk both say "Shiny Black" — so no new
+ * SKU rule is invented here; when no component plate exists the dot stays.
+ *
+ * Component families are `<closure>-<neck>`; the closure comes from the base
+ * the customer is on. A family can carry a neighbour's parts (roll-on-cap-17-415
+ * also holds the three lotion pumps), so a swatch never borrows a photograph
+ * whose SKU begins with another closure's prefix.
+ */
+const COMPONENT_FAMILY: Partial<Record<ClosureBase, string>> = {
+  roller: "roll-on-cap", sprayer: "sprayer", pump: "lotion-pump", dropper: "dropper", none: "cap-closure",
+};
+const FOREIGN_PREFIX: Partial<Record<ClosureBase, RegExp>> = {
+  roller: /^(Ltn|Spry|Drp)/i, sprayer: /^(Ltn|Drp|CpRoll)/i, pump: /^(Spry|Drp|CpRoll)/i, dropper: /^(Ltn|Spry|CpRoll)/i,
+};
 
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
   ssr: false,
@@ -398,6 +419,22 @@ export default function ConfiguratorPdp({
     sprayer: "sprayerCapped", pump: "pumpCapped",
   };
   const kitHasCap = Boolean(kit?.parts?.some((p) => REMOVABLE_SLOTS.has(p.slot)));
+
+  // photographed fitment swatches for this closure at this neck (see COMPONENT_FAMILY)
+  const componentFamilyId = neckSize && COMPONENT_FAMILY[activeBase]
+    ? `${COMPONENT_FAMILY[activeBase]}-${neckSize}` : null;
+  const componentPlates = useQuery(api.productPlates.byFamily,
+    componentFamilyId ? { familyId: componentFamilyId, limit: 200 } : "skip");
+  const thumbBySwatch = useMemo(() => {
+    const out = new Map<string, string>();
+    const foreign = FOREIGN_PREFIX[activeBase];
+    for (const row of componentPlates?.page ?? []) {
+      if (!row.websiteSku || (foreign && foreign.test(row.websiteSku))) continue;
+      const finish = getFinishFromWebsiteSku(row.websiteSku);
+      if (finish && !out.has(finish.swatchName)) out.set(finish.swatchName, row.thumb);
+    }
+    return out;
+  }, [componentPlates, activeBase]);
   const canCap = CAPPABLE[activeBase] != null
     && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff) || kitHasCap);
   const closureFor = (base: ClosureBase) =>
@@ -516,19 +553,28 @@ export default function ConfiguratorPdp({
             </span>
           </p>
           <div className="flex items-center gap-3 flex-wrap mt-2.5">
-            {capOptions.map((name) => (
-              <button key={name} type="button"
-                      onClick={() => onCapOptionChange?.(name)}
-                      aria-label={name} aria-pressed={activeCapOption === name}
-                      title={name}
-                      className={`h-8 w-8 rounded-full transition-all duration-200
-                                  focus-visible:outline-2 focus-visible:outline-offset-2
-                                  focus-visible:outline-muted-gold
-                                  ${activeCapOption === name
-                                    ? "outline outline-2 outline-offset-2 outline-obsidian"
-                                    : "ring-1 ring-champagne hover:ring-ash"}`}
-                      style={capSwatchStyle?.(name)} />
-            ))}
+            {capOptions.map((name) => {
+              const photo = thumbBySwatch.get(name);
+              return (
+                <button key={name} type="button"
+                        onClick={() => onCapOptionChange?.(name)}
+                        aria-label={name} aria-pressed={activeCapOption === name}
+                        title={name} data-swatch={photo ? "photo" : "colour"}
+                        className={`h-8 w-8 rounded-full overflow-hidden transition-all duration-200
+                                    focus-visible:outline-2 focus-visible:outline-offset-2
+                                    focus-visible:outline-muted-gold
+                                    ${activeCapOption === name
+                                      ? "outline outline-2 outline-offset-2 outline-obsidian"
+                                      : "ring-1 ring-champagne hover:ring-ash"}`}
+                        style={photo ? { background: "#ffffff" } : capSwatchStyle?.(name)}>
+                  {photo && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={photo} alt="" decoding="async"
+                         className="h-full w-full object-cover scale-[1.35]" />
+                  )}
+                </button>
+              );
+            })}
           </div>
         </div>
       );
