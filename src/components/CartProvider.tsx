@@ -44,6 +44,8 @@ export interface CartItem {
     webPrice1pc?: number | null;
     webPrice10pc?: number | null;
     webPrice12pc?: number | null;
+    /** real 5-step ladder (site-truth); drives the cart's tier nudge */
+    priceTiers?: Array<{ minQty: number; unitPrice: number }> | null;
 }
 
 /**
@@ -137,6 +139,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                     const webPrice1pc = item.webPrice1pc ?? existing.webPrice1pc ?? existing.unitPrice;
                     const webPrice10pc = item.webPrice10pc ?? existing.webPrice10pc ?? null;
                     const webPrice12pc = item.webPrice12pc ?? existing.webPrice12pc ?? null;
+                    const priceTiers = item.priceTiers ?? existing.priceTiers ?? null;
                     const shopifyVariantId = item.shopifyVariantId ?? existing.shopifyVariantId ?? null;
                     const websiteSku = item.websiteSku ?? existing.websiteSku ?? null;
                     // A synced `false` is authoritative — a DRAFT Shopify
@@ -164,6 +167,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                         webPrice1pc,
                         webPrice10pc,
                         webPrice12pc,
+                        priceTiers,
                     });
                 } else {
                     const shopifyVariantId = item.shopifyVariantId ?? null;

@@ -22,6 +22,10 @@ import { STUDIO_PRESETS, APPROVED_STUDIO, type StudioPresetId } from "@/lib/mate
 import { StudioEnvironment } from "./StudioEnvironment";
 import { GL_COLOR_SETTINGS } from "@/lib/materials/colorManagement";
 
+/** The contact shadow under a product. Named so a surface can weigh it
+ *  differently without re-declaring what a shadow is. */
+export type StageShadow = { color: string; opacity: number; blur: number; scale: number; far: number };
+
 /** Stage-surface registry — the last inline PBR values, consolidated. */
 export const STAGE = {
   backdrop: "#a29383",          // warm taupe vitrine (Jordan-approved stage)
@@ -34,7 +38,7 @@ export const STAGE = {
   sweepEnvIntensity: 0.35,
   /** only refracted rays that bend past the sweep ever see this */
   offFrameDim: 0.32,
-  shadow: { color: "#3a3128", opacity: 0.42, blur: 2.4, scale: 0.35, far: 0.06 },
+  shadow: { color: "#3a3128", opacity: 0.42, blur: 2.4, scale: 0.35, far: 0.06 } as StageShadow,
   /** Aesop-photo cove: floor radius, fillet radius, wall height (m) */
   cove: { radius: 0.55, fillet: 0.14, wall: 0.7 },
 } as const;
@@ -44,7 +48,7 @@ export const STAGE = {
  *  lathe: flat floor -> quarter-round fillet -> vertical wall, viewed from
  *  inside (BackSide). The studio HDRI's overhead punch lights the floor
  *  and lets the wall fall off naturally toward the top. */
-function CoveSweep({ backdrop }: { backdrop: string }) {
+function CoveSweep({ backdrop, envIntensity }: { backdrop: string; envIntensity: number }) {
   const geometry = useMemo(() => {
     const { radius, fillet, wall } = STAGE.cove;
     const pts: THREE.Vector2[] = [new THREE.Vector2(0.001, 0)];
@@ -62,7 +66,7 @@ function CoveSweep({ backdrop }: { backdrop: string }) {
   return (
     <mesh geometry={geometry} position={[0, -0.0004, 0]}>
       <meshStandardMaterial color={backdrop} roughness={STAGE.sweepRoughness}
-                            envMapIntensity={STAGE.sweepEnvIntensity}
+                            envMapIntensity={envIntensity}
                             side={THREE.BackSide} />
     </mesh>
   );
@@ -96,8 +100,10 @@ function useQualityTier(): "high" | "lite" {
 function StudioContext({ rotationDeg }: { rotationDeg: number }) {
   const { scene } = useThree();
   useEffect(() => {
+    /* eslint-disable react-hooks/immutability -- R3F's scene is imperative; <Environment> sets these the same way */
     scene.environmentIntensity = 1;
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
+    /* eslint-enable react-hooks/immutability */
   }, [scene, rotationDeg]);
   return null;
 }
@@ -109,6 +115,8 @@ export default function ProductStage({
   ground = true,
   studio: studioId = APPROVED_STUDIO,
   cameraZ = 0.22,
+  shadow,
+  sweep,
   children,
 }: {
   envRotationDeg?: number;
@@ -116,6 +124,16 @@ export default function ProductStage({
   backdrop?: string;
   /** false = the floating presentation: no sweep, no contact shadow */
   ground?: boolean;
+  /** override the stage's contact shadow. STAGE.shadow is the approved
+   *  packshot value; a lighter ground wants a different weight under the
+   *  glass, and that is a look decision, not a new shadow system. */
+  shadow?: Partial<StageShadow>;
+  /** How brightly the cove answers the studio, and how far the off-frame
+   *  surround is dimmed below it. STAGE's values were approved against the
+   *  taupe vitrine; a pale ground rendered at them comes out grey, because
+   *  0.35 env intensity under ACES is most of a stop down. A surface that
+   *  wants its ground to READ as the colour it passed says so here. */
+  sweep?: { envIntensity?: number; dim?: number };
   /** dev/lab surfaces may stage a CANDIDATE studio; production always
    *  renders APPROVED_STUDIO (flipped only on Jordan's approval) */
   studio?: StudioPresetId;
@@ -124,9 +142,12 @@ export default function ProductStage({
 }) {
   const studio = STUDIO_PRESETS[studioId];
   const tier = useQualityTier();
+  const shade = { ...STAGE.shadow, ...shadow };
+  const sweepEnv = sweep?.envIntensity ?? STAGE.sweepEnvIntensity;
+  const sweepDim = sweep?.dim ?? STAGE.offFrameDim;
   const offFrame = useMemo(
-    () => new THREE.Color(backdrop).multiplyScalar(STAGE.offFrameDim),
-    [backdrop],
+    () => new THREE.Color(backdrop).multiplyScalar(sweepDim),
+    [backdrop, sweepDim],
   );
 
   return (
@@ -145,11 +166,11 @@ export default function ProductStage({
           {children}
           {ground ? (
             <group>
-              <CoveSweep backdrop={backdrop} />
-              <ContactShadows opacity={STAGE.shadow.opacity} scale={STAGE.shadow.scale}
-                              blur={STAGE.shadow.blur} far={STAGE.shadow.far}
+              <CoveSweep backdrop={backdrop} envIntensity={sweepEnv} />
+              <ContactShadows opacity={shade.opacity} scale={shade.scale}
+                              blur={shade.blur} far={shade.far}
                               resolution={tier === "lite" ? 512 : 1024}
-                              color={STAGE.shadow.color} />
+                              color={shade.color} />
             </group>
           ) : null}
           {/* ONE environment, mounted once for the whole scene. A hybrid

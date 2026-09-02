@@ -19,7 +19,7 @@ import {
   OrbitControls, useGLTF, useTexture, useEnvironment,
   MeshTransmissionMaterial, Center,
 } from "@react-three/drei";
-import ProductStage, { STAGE, useStageQuality } from "./ProductStage";
+import ProductStage, { STAGE, useStageQuality, type StageShadow } from "./ProductStage";
 import { useMetalStudioHdri } from "@/lib/materials/metalStudio";
 import {
   loadTokens, getSpec, createMaterial, ensureCylindricalUV, needsCylindricalUV,
@@ -39,6 +39,21 @@ export type ClosureMode =
 /** cap MOULDINGS — different physical caps sharing one thread (18-415
  *  ships short / tall / leather; leather materials force their moulding) */
 export type CapMoulding = "short" | "tall" | "leather";
+
+/**
+ * Which glass pipeline a body renders through.
+ *
+ * "auto" is production: a preset marked thinWall (and every glass on the lite
+ * tier) takes the plain MeshPhysicalMaterial path. That path has no backside
+ * pass and no thickness, so a hollow shell shows nothing of its own volume —
+ * which is correct for the scraped Pacdora recipe and wrong whenever the
+ * question is "why does this glass look empty".
+ *
+ * "volume" forces MeshTransmissionMaterial with the backside pass: light
+ * refracts through the far wall as well as the near one. Costlier, and a look
+ * change, so it is opt-in and belongs in a lab until it is approved.
+ */
+export type GlassPath = "auto" | "volume" | "plain";
 
 type MatSpec = {
   color: string; roughness: number; metalness: number;
@@ -163,6 +178,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       const spec = mats ? getSpec(mats, name) : null;
       mat = createMaterial(spec, { metalEnv, plasticEnv,
                                    maps: { matte: matteMaps, leather: leatherMaps } });
+      // eslint-disable-next-line react-hooks/immutability -- the cache is a memoized Map filled once per material name
       matCache.set(name, mat);
     }
     const uv = needsCylindricalUV(mats ? getSpec(mats, name) : null);
@@ -325,12 +341,14 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
 /* ------------------------------------------------------------------ body */
 
 function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
-                  trimMat, finish, capMoulding, onHeight }: {
+                  trimMat, finish, capMoulding, onHeight,
+                  glassPath = "auto", glassThickness, dispersion }: {
   url: string; preset: GlassPreset; closure: ClosureMode;
   capMat: string; ballMat: string; rollerVariant: "metal" | "plastic";
   trimMat: string; finish: "17-415" | "18-415";
   capMoulding?: CapMoulding;
   onHeight: (m: number) => void;
+  glassPath?: GlassPath; glassThickness?: number; dispersion?: number;
 }) {
   const gltf = useGLTF(url);
   const scene = useMemo(() => gltf.scene.clone(true), [gltf.scene]);
@@ -382,12 +400,18 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
   // On the lite tier (coarse pointer / small screen) EVERY glass takes the
   // plain path — transmission is the expensive pipeline.
   const quality = useStageQuality();
-  const usePlain = preset.thinWall || quality === "lite";
+  const usePlain = glassPath === "plain" ? true
+    : glassPath === "volume" ? false
+    : preset.thinWall || quality === "lite";
+  const thickness = glassThickness ?? preset.thickness;
+  const disp = dispersion ?? preset.dispersion;
   useEffect(() => {
     if (!glass || !usePlain) return;
+    /* eslint-disable react-hooks/immutability -- a three.js mesh; the effect that shows it also hides it */
     glass.visible = true;
     const m = applyGlassPreset(glass, preset);
     if (preset.frostMask) { m.roughnessMap = frostTex; m.needsUpdate = true; }
+    /* eslint-enable react-hooks/immutability */
     return () => { glass.visible = false; };
   }, [glass, preset, frostTex, usePlain]);
 
@@ -401,16 +425,16 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
         <mesh geometry={glass.geometry} position={glass.position}
               rotation={glass.rotation} scale={glass.scale}>
           <MeshTransmissionMaterial
-            transmission={preset.transmission} thickness={preset.thickness}
+            transmission={preset.transmission} thickness={thickness}
             thicknessMap={preset.thicknessBake === false ? null : thicknessTex}
             roughnessMap={preset.frostMask ? frostTex : null}
-            backside backsideThickness={preset.thickness}
+            backside backsideThickness={thickness}
             // backside at 256 aliased the thread helix into a crawling
             // shimmer during auto-rotate ("weird movement in the neck",
             // Jordan) — quality knobs, not look values
             samples={16} resolution={768} backsideResolution={512}
             roughness={preset.roughness} ior={preset.ior}
-            chromaticAberration={preset.dispersion * 0.055}
+            chromaticAberration={disp * 0.055}
             clearcoat={preset.clearcoat} clearcoatRoughness={preset.clearcoatRoughness}
             anisotropicBlur={preset.anisotropicBlur} distortion={preset.distortion}
             distortionScale={0.5} temporalDistortion={0}
@@ -455,13 +479,34 @@ export default function Bottle3DViewer({
   glass = "amber", closure = "roller",
   capMat = "CAP_SHINY_BLACK", ballMat = "PART_BALL_STEEL",
   rollerVariant = "metal", trimMat = "CAP_SHINY_BLACK",
-  backdrop = STAGE.backdrop, className,
+  backdrop = STAGE.backdrop, className, fill = false,
+  spin = true, orbit = true, vignette = true, shadow, sweep,
+  glassPath = "auto", glassThickness, dispersion,
 }: {
   bodyId?: string; finish?: "17-415" | "18-415";
   capMoulding?: CapMoulding;
   glass?: GlassPresetId; closure?: ClosureMode;
   capMat?: string; ballMat?: string; rollerVariant?: "metal" | "plastic";
   trimMat?: string; backdrop?: string; className?: string;
+  /** fill the parent (the guided-PDP stage owns its own aspect) instead of the 10/11 box */
+  fill?: boolean;
+  /** false = the bottle holds still. A packshot is a photograph, not a
+   *  carousel; motion is for the surface that invites a customer to turn it. */
+  spin?: boolean;
+  /** false = the customer cannot turn it either — a locked still */
+  orbit?: boolean;
+  /** the gallery vignette. A pale ground does not want a dark rim. */
+  vignette?: boolean;
+  /** contact-shadow override, passed to the stage */
+  shadow?: Partial<StageShadow>;
+  /** cove brightness override, passed to the stage */
+  sweep?: { envIntensity?: number; dim?: number };
+  /** force the volume (or plain) glass pipeline — see GlassPath */
+  glassPath?: GlassPath;
+  /** metres of glass light travels through; defaults to the preset's */
+  glassThickness?: number;
+  /** override the preset's dispersion (drives chromatic aberration) */
+  dispersion?: number;
 }) {
   const preset = GLASS_PRESETS[glass];
   const [h, setH] = useState(0.07);
@@ -472,18 +517,20 @@ export default function Bottle3DViewer({
 
   return (
     <div className={className}
-         style={{ position: "relative", width: "100%", aspectRatio: "10 / 11",
+         style={{ position: "relative", width: "100%",
+                  ...(fill ? { height: "100%" } : { aspectRatio: "10 / 11" }),
                   background: backdrop, borderRadius: 4, overflow: "hidden" }}>
       <ProductStage envRotationDeg={preset.envRotationDeg}
                     targetY={h * 0.62} ground
-                    backdrop={backdrop}>
+                    backdrop={backdrop} shadow={shadow} sweep={sweep}>
         <EntranceGroup>
           <Center disableY>
             <Bottle url={url} preset={preset} closure={closure}
                     capMat={capMat} ballMat={ballMat}
                     rollerVariant={rollerVariant} trimMat={trimMat}
                     finish={finish} capMoulding={capMoulding}
-                    onHeight={onHeight} />
+                    onHeight={onHeight} glassPath={glassPath}
+                    glassThickness={glassThickness} dispersion={dispersion} />
           </Center>
         </EntranceGroup>
         {/* rotate-only: tilt LOCKED (min == max polar), no pan — the
@@ -498,13 +545,16 @@ export default function Bottle3DViewer({
                        minDistance={Math.max(0.22, h * 3.15)}
                        maxDistance={Math.max(0.22, h * 3.15)}
                        enablePan={false} enableZoom={false}
+                       enableRotate={orbit}
                        minPolarAngle={Math.PI / 2.05} maxPolarAngle={Math.PI / 2.05}
-                       autoRotate={!touched} autoRotateSpeed={0.9}
+                       autoRotate={spin && !touched} autoRotateSpeed={0.9}
                        onStart={() => setTouched(true)} />
       </ProductStage>
       {/* gallery vignette — depth without touching the render */}
-      <div style={{ position: "absolute", inset: 0, pointerEvents: "none",
-                    background: "radial-gradient(120% 90% at 50% 42%, transparent 55%, rgba(20,14,8,0.22) 100%)" }} />
+      {vignette ? (
+        <div style={{ position: "absolute", inset: 0, pointerEvents: "none",
+                      background: "radial-gradient(120% 90% at 50% 42%, transparent 55%, rgba(20,14,8,0.22) 100%)" }} />
+      ) : null}
     </div>
   );
 }

@@ -3,7 +3,8 @@
 //
 //   node scripts/paperdoll/publish.mjs --from public/paper-doll            # the four legacy families
 //   node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json  # pipeline output
-//   add --family <id> to limit, --apply to actually write (dry run by default),
+//   add --family <id> or --neck <id> (e.g. 13-415) to limit, --apply to actually write (dry run by default),
+//   a SKU that already carries a plate on the target is SKIPPED unless --replace is passed,
 //   --allow-orphans to index SKUs the catalogue does not carry yet (normally skipped)
 //   --dist publishing requires tokens.json.reviewedAt (Jordan's sign-off); --skip-token-review for dev only
 //
@@ -49,6 +50,9 @@ const LEGACY_FAMILY = {
 const args = parseArgs(process.argv.slice(2));
 const apply = Boolean(args.apply);
 const onlyFamily = args.family ?? null;
+// Jordan publishes by NECK, not by family: closures and registration references
+// are shared per neck, and a neck going live is one command, not nineteen.
+const onlyNeck = args.neck ?? null;
 
 async function main() {
     const convexUrl = process.env.NEXT_PUBLIC_CONVEX_URL;
@@ -62,14 +66,42 @@ async function main() {
         const tokens = JSON.parse(await readFile(resolve("data/paper-doll/tokens.json"), "utf8"));
         if (!tokens.reviewedAt && !args["skip-token-review"]) fail("data/paper-doll/tokens.json has no reviewedAt — review it first (or pass --skip-token-review for a dev-only publish)");
     }
-    const families = onlyFamily ? plan.families.filter((f) => f.familyId === onlyFamily) : plan.families;
-    if (families.length === 0) fail(`no family matched ${onlyFamily}`);
+    const families = onlyFamily ? plan.families.filter((f) => f.familyId === onlyFamily)
+        : onlyNeck ? plan.families.filter((f) => f.familyId.endsWith(`-${onlyNeck}`))
+        : plan.families;
+    if (families.length === 0) fail(`no family matched ${onlyFamily ?? onlyNeck}`);
+    if (onlyNeck) console.log(`neck ${onlyNeck}: ${families.length} families, ${families.reduce((n, f) => n + f.rows.length, 0)} SKUs`);
 
     console.log(`${apply ? "PUBLISH" : "DRY RUN"} → ${convexUrl}`);
-    for (const family of families) {
-        console.log(`\n=== ${family.name} (${family.familyId}) — ${family.rows.length} SKUs, ${family.rows.reduce((n, r) => n + r.assets.length, 0)} objects ===`);
-    }
     const convex = new ConvexHttpClient(convexUrl);
+
+    // A SKU that already has a plate on the target is left alone unless --replace
+    // says otherwise. --neck 17-415 would otherwise have re-published the five
+    // live 9 mL colour families beside the 19 new components (2 Sep): different
+    // bytes from the layered renders the kits were cut from, nobody's review,
+    // and every kit's plate-parity check broken. "Publish a neck" means what is
+    // NEW at that neck; replacing something live is a separate, named decision.
+    const replace = Boolean(args.replace);
+    let held = 0;
+    for (const family of families) {
+        const onTarget = await platePresence(convex, family.rows.flatMap((r) => [r.sku, r.graceSku].filter(Boolean)));
+        const existing = family.rows.filter((r) => onTarget.has(r.sku) || (r.graceSku && onTarget.has(r.graceSku)));
+        family.existing = existing.length;
+        if (!replace && existing.length) {
+            held += existing.length;
+            family.rows = family.rows.filter((r) => !existing.includes(r));
+        }
+    }
+    const live = families.filter((f) => f.rows.length);
+    for (const family of families) {
+        const note = family.existing
+            ? (replace ? ` (replacing ${family.existing} already on the target)` : ` (${family.existing} already on the target, held)`)
+            : "";
+        console.log(`\n=== ${family.name} (${family.familyId}) — ${family.rows.length} SKUs, ${family.rows.reduce((n, r) => n + r.assets.length, 0)} objects${note} ===`);
+    }
+    if (held) console.log(`\n${held} SKU(s) already carry a plate on ${convexUrl} and are held; pass --replace to re-publish them.`);
+    if (!live.length) { console.log("nothing to publish."); return; }
+    families.length = 0; families.push(...live);
     if (!apply) {
         const sample = families[0].rows[0];
         console.log(`\nexample key: ${sample.assets[0].key}`);
@@ -274,6 +306,17 @@ function parseArgs(argv) {
         }
     }
     return out;
+}
+
+/** which of these SKUs already have a plate row on the target deployment */
+async function platePresence(convex, skus) {
+    const found = new Set();
+    const unique = [...new Set(skus)];
+    for (let i = 0; i < unique.length; i += 200) {
+        const page = await convex.query(api.productPlates.forSkus, { skus: unique.slice(i, i + 200) });
+        for (const sku of Object.keys(page.plates ?? {})) found.add(sku);
+    }
+    return found;
 }
 
 function fail(message) {

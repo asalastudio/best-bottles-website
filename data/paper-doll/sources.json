@@ -8,6 +8,11 @@
     "bbuat": {
       "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/BBUAT-Upload-Files",
       "role": "curated"
+    },
+    "bbmaster": {
+      "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
+      "role": "supplement",
+      "note": "BB-PSD-Files-Master (5,931 PSD): A re-organised plus 786 basenames neither A nor C carries. Lowest dedupe precedence: it fills gaps and never displaces a choice the two curated libraries already made."
     }
   },
   "bbuatFolders": {
@@ -28,7 +33,20 @@
     "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/20-400 and 18-400 Droppers only images",
     "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/20-400 and 18-400 Caps only images",
     "Accessories - Funnels droppers rollon plugs caps",
-    "2. 18-415 Bottles/Diva Bottle Rings"
+    "2. 18-415 Bottles/Diva Bottle Rings",
+    "20. Caps",
+    "21. Tassels",
+    "2.  18-415 Bottles /32. 18415 Caps ",
+    "2.  18-415 Bottles /Diva Bottle Rings",
+    "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/2. 20-400 High Res Caps",
+    "3.  17-415 Bottles/17415 Cap ",
+    "4.  15-415 Bottles/16. 15-415 Sprayer",
+    "5.  13-415 Bottles/25. Caps 13-415",
+    "16. 14.3mm/14.3mm Cap",
+    "13. 16 mm/Alternating Caps",
+    "15. 18:400/Alternating cap",
+    "7.   8-425 5ml Elegant/5ml Elegant Alternating caps",
+    "9.   8mm Deco Hearts /2. Alternating Cap"
   ],
   "viewFolderPatterns": [
     "side ?views?",
