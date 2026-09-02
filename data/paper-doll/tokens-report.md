@@ -1,7 +1,7 @@
-# Tokens report — 2026-09-01T22:36:34
+# Tokens report — 2026-09-01T23:38:55
 
-SKUs parsed 2429 / 2470  (unparsed 41)
-prefixes 19  closures 13  finishes 35  modifiers 12  bodies 228  (ambiguous familyId: 15)
+SKUs parsed 2432 / 2473  (unparsed 41)
+prefixes 19  closures 13  finishes 35  modifiers 12  bodies 228  (ambiguous familyId: 14)
 reviewedAt: None
 
 closures:
@@ -15,7 +15,7 @@ closures:
   Ltn        224  lotion pump                      applicators: {"Lotion Pump": 224}
   Rdcr       395  reducer                          applicators: {"Reducer": 383, "?": 12}
   Drpr        16  glass dropper                    applicators: {"Dropper": 16}
-  Drp         37  glass dropper                    applicators: {"Dropper": 36, "N/A": 1}
+  Drp         40  glass dropper                    applicators: {"Dropper": 39, "N/A": 1}
   Stpr         1  stopper                          applicators: {"?": 1}
   Cap         52  cap                              applicators: {"?": 42, "Cap/Closure": 6, "Lotion Pump": 3, "Glass Rod": 1}
 
@@ -26,8 +26,8 @@ finishes:
   Brown Leather             30  spellings {"BrwnLthr": 30}  capColor {"Brown Leather": 29, "Brown": 1}
   Clear                      5  spellings {"Clear": 4, "Cl": 1}  capColor {"Clear": 5}
   Clear Overcap             29  spellings {"ClOvrCap": 28, "ClrOvrCap": 1}  capColor {"Clear Overcap": 23, "Clear": 5, "Frosted": 1}
-  Copper                    76  spellings {"Cu": 76}  capColor {"Copper": 70, "Clear": 4, "Frosted": 1, "Matte Copper": 1}
-  Gold                     120  spellings {"Gl": 120}  capColor {"Gold": 83, "Shiny Gold": 21, "Clear": 10, "Frosted": 2, "White": 2, "Black": 2}
+  Copper                    77  spellings {"Cu": 77}  capColor {"Copper": 71, "Clear": 4, "Frosted": 1, "Matte Copper": 1}
+  Gold                     121  spellings {"Gl": 121}  capColor {"Gold": 84, "Shiny Gold": 21, "Clear": 10, "Frosted": 2, "White": 2, "Black": 2}
   Green                      4  spellings {"Green": 3, "Gr": 1}  capColor {"Green": 2, "Clear": 2}
   Ivory + Gold              58  spellings {"IvyGl": 58}  capColor {"Ivory": 51, "Clear": 4, "Ivory Gold": 2, "Frosted": 1}
   Ivory + Silver            60  spellings {"IvySl": 60}  capColor {"Ivory": 49, "Clear": 7, "Frosted": 2, "Ivory Silver": 2}
@@ -51,7 +51,7 @@ finishes:
   Shiny Silver             189  spellings {"ShnSl": 128, "SlSh": 54, "ShSl": 7}  capColor {"Shiny Silver": 159, "Silver": 11, "Clear": 7, "White": 5, "Frosted": 4, "Black": 2}
   Shiny Silver Black         3  spellings {"ShnSlBlk": 3}  capColor {"Black": 3}
   Shiny Silver White         3  spellings {"ShnSlWhite": 3}  capColor {"White": 3}
-  Silver                    89  spellings {"Sl": 89}  capColor {"Silver": 42, "Silver Dotted": 32, "Silver with Dots": 4, "Frosted": 3, "Shiny Silver": 2
+  Silver                    90  spellings {"Sl": 90}  capColor {"Silver": 43, "Silver Dotted": 32, "Silver with Dots": 4, "Frosted": 3, "Shiny Silver": 2
   Turquoise                  6  spellings {"Tur": 6}  capColor {"Turquoise": 3, "Clear": 2, "Shiny": 1}
   White                    142  spellings {"Wht": 131, "White": 8, "ClWht": 1, "ClWh": 1, "Wh": 1}  capColor {"White": 121, "Clear": 14, "Frosted": 4, "Short White": 3}
   White Clear Overcap        6  spellings {"WhtClOvrCp": 6}  capColor {"Clear Overcap": 6}
@@ -64,8 +64,7 @@ ambiguous bodies (one body token, several familyIds):
   CrclFrst50       {"circle-50ml-frosted-18-415": 36, "circle-50ml-frosted-18-400": 1}
   Cyl50            {"cylinder-50ml-clear-18-415": 45, "cylinder-50ml-clear-16mm": 4}
   CylSwrl9         {"cylinder-9ml-swirl-17-415": 28, "cylinder-9ml-clear-17-415": 2}
-  Diva46           {"diva-46ml-clear-18-415": 57, "diva-46ml-frosted-18-415": 1}
-  DivaFrst46       {"diva-46ml-frosted-18-415": 43, "diva-46ml-clear-18-415": 43}
+  DivaFrst46       {"diva-46ml-frosted-18-415": 46, "diva-46ml-clear-18-415": 43}
   ElgFrst100       {"elegant-100ml-frosted-18-415": 44, "elegant-100ml-clear-18-415": 1}
   ElgFrst15        {"elegant-15ml-frosted-13-415": 28, "elegant-15ml-clear-13-415": 27}
   ElgFrst60        {"elegant-60ml-frosted-18-415": 49, "elegant-60ml-clear-18-415": 1}

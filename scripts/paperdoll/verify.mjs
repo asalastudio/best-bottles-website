@@ -47,6 +47,7 @@ async function main() {
 
     const plates = await sweep(convex, api.productPlates.integrity, "productPlates");
     const kits = await sweep(convex, api.productKits.integrity, "productKits");
+    const components = await componentSweep(convex);
 
     // the network sample: what a browser will get
     const urls = [];
@@ -70,10 +71,39 @@ async function main() {
     }
     console.log(`urls: ${picked.length} checked of ${urls.length}, ${urlFailures} failing`);
 
-    const failed = plates.issues.length + kits.issues.length + urlFailures;
-    const warned = plates.catalogueIssues.length + kits.catalogueIssues.length;
+    const failed = plates.issues.length + kits.issues.length + urlFailures + components.issues.length;
+    const warned = plates.catalogueIssues.length + kits.catalogueIssues.length + components.catalogueIssues.length;
     console.log(failed ? `\nFAILED: ${failed} issue(s)` : warned ? `\nOK (index clean; ${warned} catalogue issue(s) listed above — the products table, not the plates)` : "\nOK");
     process.exit(failed ? 1 : 0);
+}
+
+/**
+ * Component edges: a component whose thread contradicts the bottle's neck cannot
+ * fit it, and a component SKU no product document defines is an orphan reference.
+ * Both are catalogue defects rather than index defects, so they are reported
+ * always and fail the run under --strict — never silently downgraded to nothing.
+ */
+async function componentSweep(convex) {
+    let cursor = null;
+    let checked = 0;
+    let edges = 0;
+    const issues = [];
+    const referenced = new Set();
+    for (let page = 0; page < 200; page++) {
+        const result = await convex.query(api.products.componentIntegrity, { cursor, pageSize: 300 });
+        checked += result.checked;
+        edges += result.edges;
+        issues.push(...result.issues);
+        for (const sku of result.referenced) referenced.add(sku);
+        if (result.isDone) break;
+        cursor = result.continueCursor;
+    }
+    const known = await convex.query(api.products.graceSkusExist, { skus: [...referenced] });
+    const orphans = [...referenced].filter((sku) => !known[sku]);
+    for (const sku of orphans) issues.push({ sku, issue: "component_reference_unknown", detail: "no product document defines this component" });
+    console.log(`components: ${checked} products, ${edges} edges, ${referenced.size} distinct components, ${issues.length} catalogue issues`);
+    for (const issue of issues.slice(0, 25)) console.log(`   ~~ ${issue.sku}: ${issue.issue} ${issue.detail}`);
+    return strict ? { issues, catalogueIssues: [] } : { issues: [], catalogueIssues: issues };
 }
 
 function shuffle(list) {

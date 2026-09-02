@@ -1,25 +1,25 @@
 {
- "generatedAt": "2026-09-01T22:22:18",
+ "generatedAt": "2026-09-01T23:38:54",
  "builderVersion": "xref 1.0.0",
  "inputs": {
   "selection": "2026-09-01T22:22:18",
-  "snapshot": "2026-09-02T05:14:17.361Z",
+  "snapshot": "2026-09-02T06:38:54.731Z",
   "deployment": "https://helpful-elephant-638.convex.cloud",
   "aliasDirection": "stem->sku (inverted for use)",
   "aliases": 88
  },
  "summary": {
-  "products": 2474,
+  "products": 2477,
   "matchKinds": {
-   "exact": 2254,
+   "exact": 2257,
    "no-psd": 167,
    "near-miss:case": 49,
    "no-website-sku": 4
   },
   "convexDuplicates": 306,
-  "publishable": 1964,
-  "matchedWithBothStates": 1590,
-  "psdOnlyStems": 1117,
+  "publishable": 1967,
+  "matchedWithBothStates": 1593,
+  "psdOnlyStems": 1114,
   "familyIds": 129,
   "blockers": {
    "convex_duplicate_websiteSku": 306,
@@ -12064,20 +12064,18 @@
   },
   {
    "websiteSku": "GBDiva46DrpSl",
-   "graceSku": "GB-DVA-FRS-46ML-DRP-SLV",
+   "graceSku": "GB-DVA-CLR-46ML-DRP-SLV",
    "productId": "BB-GB-046-0031",
    "category": "Glass Bottle",
    "family": "Diva",
    "applicator": "Dropper",
    "capColor": "Silver",
-   "groupSlug": "diva-46ml-frosted-18-415-dropper",
-   "familyId": "diva-46ml-frosted-18-415",
+   "groupSlug": "diva-46ml-clear-18-415-dropper",
+   "familyId": "diva-46ml-clear-18-415",
    "familyIdReason": null,
    "convexDuplicate": false,
    "renderMode": "registered",
-   "warnings": [
-    "catalogue_says_frosted_sku_does_not"
-   ],
+   "warnings": [],
    "matchKind": "exact",
    "stemKey": "gbdiva46drpsl",
    "stemSpelling": "GBDiva46DrpSl",
@@ -12232,7 +12230,7 @@
   },
   {
    "websiteSku": "GBDiva46DrpGl",
-   "graceSku": "GB-DVA-FRS-46ML-DRP-GLD",
+   "graceSku": "GB-DVA-CLR-46ML-DRP-GLD",
    "productId": "BB-GB-046-0030",
    "category": "Glass Bottle",
    "family": "Diva",
@@ -45588,7 +45586,7 @@
   },
   {
    "websiteSku": "GBDiva46DrpCu",
-   "graceSku": "GB-DVA-FRS-46ML-DRP-CPR",
+   "graceSku": "GB-DVA-CLR-46ML-DRP-CPR",
    "productId": "BB-GB-046-0029",
    "category": "Glass Bottle",
    "family": "Diva",
@@ -59438,6 +59436,78 @@
     "convex_duplicate_websiteSku"
    ],
    "publishable": false
+  },
+  {
+   "websiteSku": "GBDivaFrst46DrpCu",
+   "graceSku": "GB-DVA-FRS-46ML-DRP-CPR",
+   "productId": null,
+   "category": "Glass Bottle",
+   "family": "Diva",
+   "applicator": "Dropper",
+   "capColor": "Copper",
+   "groupSlug": "diva-46ml-frosted-18-415-dropper",
+   "familyId": "diva-46ml-frosted-18-415",
+   "familyIdReason": null,
+   "convexDuplicate": false,
+   "renderMode": "registered",
+   "warnings": [],
+   "matchKind": "exact",
+   "stemKey": "gbdivafrst46drpcu",
+   "stemSpelling": "GBDivaFrst46DrpCu",
+   "states": [
+    "off",
+    "on"
+   ],
+   "blockReasons": [],
+   "publishable": true
+  },
+  {
+   "websiteSku": "GBDivaFrst46DrpGl",
+   "graceSku": "GB-DVA-FRS-46ML-DRP-GLD",
+   "productId": null,
+   "category": "Glass Bottle",
+   "family": "Diva",
+   "applicator": "Dropper",
+   "capColor": "Gold",
+   "groupSlug": "diva-46ml-frosted-18-415-dropper",
+   "familyId": "diva-46ml-frosted-18-415",
+   "familyIdReason": null,
+   "convexDuplicate": false,
+   "renderMode": "registered",
+   "warnings": [],
+   "matchKind": "exact",
+   "stemKey": "gbdivafrst46drpgl",
+   "stemSpelling": "GBDivaFrst46DrpGl",
+   "states": [
+    "off",
+    "on"
+   ],
+   "blockReasons": [],
+   "publishable": true
+  },
+  {
+   "websiteSku": "GBDivaFrst46DrpSl",
+   "graceSku": "GB-DVA-FRS-46ML-DRP-SLV",
+   "productId": null,
+   "category": "Glass Bottle",
+   "family": "Diva",
+   "applicator": "Dropper",
+   "capColor": "Silver",
+   "groupSlug": "diva-46ml-frosted-18-415-dropper",
+   "familyId": "diva-46ml-frosted-18-415",
+   "familyIdReason": null,
+   "convexDuplicate": false,
+   "renderMode": "registered",
+   "warnings": [],
+   "matchKind": "exact",
+   "stemKey": "gbdivafrst46drpsl",
+   "stemSpelling": "GBDivaFrst46DrpSl",
+   "states": [
+    "off",
+    "on"
+   ],
+   "blockReasons": [],
+   "publishable": true
   }
  ],
  "psdOnly": [
@@ -70173,57 +70243,6 @@
    },
    "topFolder": "2. PSD Capped ",
    "hint": null
-  },
-  {
-   "stemKey": "gbdivafrst46drpcu",
-   "stems": [
-    "GBDivaFrst46DrpCu"
-   ],
-   "role": "product",
-   "states": [
-    "off",
-    "on"
-   ],
-   "chosenPaths": {
-    "on": "2. PSD Capped /2.  18-415 Bottles Capped/26. Diva 46ml frosted/1. Diva Frst 46ml PSD/53. GBDivaFrst46DrpCu.psd",
-    "off": "1. PSD Uncapped /2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/53. GBDivaFrst46DrpCu.psd"
-   },
-   "topFolder": "2. PSD Capped ",
-   "hint": "frosted twin of GBDiva46DrpCu"
-  },
-  {
-   "stemKey": "gbdivafrst46drpgl",
-   "stems": [
-    "GBDivaFrst46DrpGl"
-   ],
-   "role": "product",
-   "states": [
-    "off",
-    "on"
-   ],
-   "chosenPaths": {
-    "on": "2. PSD Capped /2.  18-415 Bottles Capped/26. Diva 46ml frosted/1. Diva Frst 46ml PSD/52. GBDivaFrst46DrpGl.psd",
-    "off": "1. PSD Uncapped /2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/52. GBDivaFrst46DrpGl.psd"
-   },
-   "topFolder": "2. PSD Capped ",
-   "hint": "frosted twin of GBDiva46DrpGl"
-  },
-  {
-   "stemKey": "gbdivafrst46drpsl",
-   "stems": [
-    "GBDivaFrst46DrpSl"
-   ],
-   "role": "product",
-   "states": [
-    "off",
-    "on"
-   ],
-   "chosenPaths": {
-    "on": "2. PSD Capped /2.  18-415 Bottles Capped/26. Diva 46ml frosted/1. Diva Frst 46ml PSD/51. GBDivaFrst46DrpSl.psd",
-    "off": "1. PSD Uncapped /2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/51. GBDivaFrst46DrpSl.psd"
-   },
-   "topFolder": "2. PSD Capped ",
-   "hint": "frosted twin of GBDiva46DrpSl"
   },
   {
    "stemKey": "gbdivafrst46sprymtgl",

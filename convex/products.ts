@@ -103,6 +103,128 @@ export const getAllGroupsForPlates = query({
     },
 });
 
+/**
+ * Component relationships for the data audit: which component grace SKUs each
+ * product declares, and the neck the product actually has. Only the SKUs are
+ * returned, not the component objects — the audit checks thread compatibility,
+ * and the full objects would push the page past the read limit.
+ */
+/**
+ * Component-edge integrity, paginated. Neck finish is a first-order
+ * compatibility attribute: a component whose own thread designation
+ * contradicts the bottle's neck cannot fit it, whatever the picture looks
+ * like. Compatibility is never inferred from colour, wording or proximity.
+ *
+ * Returns the mismatches plus the distinct component SKUs the page referenced,
+ * so the caller can resolve those references once instead of per edge.
+ */
+export const componentIntegrity = query({
+    args: { cursor: v.union(v.string(), v.null()), pageSize: v.optional(v.number()) },
+    returns: v.object({
+        isDone: v.boolean(),
+        continueCursor: v.string(),
+        checked: v.number(),
+        edges: v.number(),
+        referenced: v.array(v.string()),
+        issues: v.array(v.object({ sku: v.string(), issue: v.string(), detail: v.string() })),
+    }),
+    handler: async (ctx, args) => {
+        const page = await ctx.db.query("products").paginate({
+            cursor: args.cursor,
+            numItems: Math.min(Math.max(args.pageSize ?? 300, 1), 800),
+        });
+        const thread = (value: string | null | undefined): string | null => {
+            const m = /(?<!\d)(\d{1,2})-?(\d{3})(?!\d)/.exec(String(value ?? ""));
+            return m ? `${m[1]}-${m[2]}` : null;
+        };
+        const issues: Array<{ sku: string; issue: string; detail: string }> = [];
+        const referenced = new Set<string>();
+        let edges = 0;
+        for (const product of page.page) {
+            const bottle = thread(product.neckThreadSize);
+            const components = Array.isArray(product.components) ? (product.components as Array<Record<string, unknown>>) : [];
+            for (const component of components) {
+                const sku = typeof component?.grace_sku === "string" ? component.grace_sku : null;
+                if (!sku) continue;
+                edges += 1;
+                referenced.add(sku);
+                const other = thread(sku);
+                if (bottle && other && other !== bottle) {
+                    issues.push({ sku: product.websiteSku, issue: "component_thread_mismatch", detail: `${sku} is ${other}, bottle is ${bottle}` });
+                }
+            }
+        }
+        return {
+            isDone: page.isDone,
+            continueCursor: page.continueCursor,
+            checked: page.page.length,
+            edges,
+            referenced: [...referenced],
+            issues,
+        };
+    },
+});
+
+/** Which of these grace SKUs exist as product documents. Used to find orphan component references. */
+export const graceSkusExist = query({
+    args: { skus: v.array(v.string()) },
+    returns: v.record(v.string(), v.boolean()),
+    handler: async (ctx, args) => {
+        const out: Record<string, boolean> = {};
+        for (const sku of args.skus.slice(0, 300)) {
+            const hit = await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).first();
+            out[sku] = Boolean(hit);
+        }
+        return out;
+    },
+});
+
+export const getComponentsForAudit = query({
+    args: { limit: v.optional(v.number()), cursor: v.optional(v.union(v.string(), v.null())) },
+    handler: async (ctx, args) => {
+        const result = await ctx.db
+            .query("products")
+            .order("asc")
+            .paginate({ numItems: Math.min(args.limit ?? 400, 800), cursor: args.cursor ?? null });
+        return {
+            isDone: result.isDone,
+            continueCursor: result.continueCursor,
+            page: result.page.map((p) => ({
+                websiteSku: p.websiteSku,
+                graceSku: p.graceSku,
+                neckThreadSize: p.neckThreadSize ?? null,
+                category: p.category,
+                family: p.family ?? null,
+                applicator: p.applicator ?? null,
+                shopifyVariantId: p.shopifyVariantId ?? null,
+                shopifySellable: p.shopifySellable ?? null,
+                componentSkus: Array.isArray(p.components)
+                    ? (p.components as Array<Record<string, unknown>>)
+                        .map((c) => (typeof c?.grace_sku === "string" ? c.grace_sku : null))
+                        .filter((c): c is string => Boolean(c))
+                    : [],
+            })),
+        };
+    },
+});
+
+/** The fitment rules, for the compatibility audit. ~dozens of rows. */
+export const getFitmentsForAudit = query({
+    args: {},
+    handler: async (ctx) => {
+        const rows = await ctx.db.query("fitments").withIndex("by_threadSize").take(500);
+        return rows.map((f) => ({
+            threadSize: f.threadSize,
+            bottleName: f.bottleName,
+            bottleCode: f.bottleCode,
+            familyHint: f.familyHint,
+            capacityMl: f.capacityMl,
+            componentTypes: f.components && typeof f.components === "object" ? Object.keys(f.components as Record<string, unknown>) : [],
+            componentCount: Array.isArray(f.components) ? f.components.length : null,
+        }));
+    },
+});
+
 export const getAllForAudit = query({
     args: {
         limit: v.optional(v.number()),
