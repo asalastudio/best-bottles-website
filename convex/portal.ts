@@ -1,6 +1,7 @@
 import { mutation, query } from "./_generated/server";
 import { v } from "convex/values";
 import type { Doc, Id } from "./_generated/dataModel";
+import { verifyWriteToken } from "./portalAuth";
 
 function orderTotal(order: Doc<"portalOrders">): number | null {
     if (typeof order.totalAmount === "number") return order.totalAmount;
@@ -44,12 +45,6 @@ function sortByNewest<T extends { updatedAt?: number; orderDate?: number; create
     });
 }
 
-function verifyWriteToken(writeToken: string) {
-    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!expected) throw new Error("convex_write_token_not_configured");
-    if (writeToken !== expected) throw new Error("unauthorized_convex_write");
-}
-
 export const getShellData = query({
     args: { clerkOrgId: v.string() },
     handler: async (ctx, args) => {
@@ -83,6 +78,153 @@ export const getAccountByOrg = query({
             .query("portalAccounts")
             .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
             .unique();
+    },
+});
+
+/** Every wholesale account. Staff-only — the caller must gate before using it. */
+export const listPortalAccounts = query({
+    args: {},
+    handler: async (ctx) => {
+        const accounts = await ctx.db.query("portalAccounts").collect();
+        return accounts.sort((a, b) => a.companyName.localeCompare(b.companyName));
+    },
+});
+
+// ─── Account provisioning ───────────────────────────────────────────────────
+
+/**
+ * Create or update the wholesale account behind a Clerk organization.
+ *
+ * Accounts were previously inserted by hand into the Convex dashboard, which
+ * left no way to onboard one from code and no record of the shape a valid
+ * account takes. Upsert rather than insert so re-running with the same org is
+ * safe, and so `shopifyCustomerId` — once linked — is never clobbered by a
+ * later detail edit.
+ */
+export const upsertPortalAccount = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        accountNumber: v.string(),
+        companyName: v.string(),
+        tier: v.string(),
+        accountManager: v.string(),
+        netTerms: v.string(),
+        memberSince: v.string(),
+        taxExempt: v.optional(v.boolean()),
+        billingEmail: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const existing = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
+            .unique();
+
+        const fields = {
+            accountNumber: args.accountNumber,
+            companyName: args.companyName,
+            tier: args.tier,
+            accountManager: args.accountManager,
+            netTerms: args.netTerms,
+            memberSince: args.memberSince,
+            billingEmail: args.billingEmail,
+        };
+
+        if (existing) {
+            // taxExempt is owned by the certificate flow once an account exists —
+            // an admin edit must not silently grant or revoke an exemption.
+            await ctx.db.patch(existing._id, fields);
+            return { accountId: existing._id, created: false };
+        }
+
+        const accountId = await ctx.db.insert("portalAccounts", {
+            clerkOrgId: args.clerkOrgId,
+            taxExempt: args.taxExempt ?? false,
+            ...fields,
+        });
+
+        return { accountId, created: true };
+    },
+});
+
+// ─── Identity bridge (Clerk org ↔ Shopify customer) ─────────────────────────
+
+// Reverse lookup for Shopify webhooks, which arrive carrying a customer ID and
+// no notion of a Clerk organization.
+export const getAccountByShopifyCustomerId = query({
+    args: { shopifyCustomerId: v.string() },
+    handler: async (ctx, args) => {
+        return await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_shopifyCustomerId", (q) =>
+                q.eq("shopifyCustomerId", args.shopifyCustomerId),
+            )
+            .unique();
+    },
+});
+
+/**
+ * Bind a wholesale account to the Shopify customer record that will carry its
+ * tax exemption.
+ *
+ * Re-linking to a DIFFERENT customer is refused: an approved resale certificate
+ * is written onto the Shopify customer, so silently repointing the account would
+ * strand the exemption on the old record and leave the new one taxable — or, in
+ * the other direction, hand exemption to a record nobody approved. Unlinking is a
+ * deliberate, separate act.
+ */
+export const linkShopifyCustomer = mutation({
+    args: {
+        writeToken: v.string(),
+        clerkOrgId: v.string(),
+        shopifyCustomerId: v.string(),
+        billingEmail: v.string(),
+        clerkUserId: v.optional(v.string()),
+    },
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+
+        const account = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_clerkOrgId", (q) => q.eq("clerkOrgId", args.clerkOrgId))
+            .unique();
+
+        if (!account) throw new Error("portal_account_not_found");
+
+        if (
+            account.shopifyCustomerId &&
+            account.shopifyCustomerId !== args.shopifyCustomerId
+        ) {
+            throw new Error("shopify_customer_already_linked");
+        }
+
+        // Another org holding this customer would mean two accounts sharing one
+        // exemption; the reverse index makes that cheap to rule out.
+        const conflicting = await ctx.db
+            .query("portalAccounts")
+            .withIndex("by_shopifyCustomerId", (q) =>
+                q.eq("shopifyCustomerId", args.shopifyCustomerId),
+            )
+            .unique();
+
+        if (conflicting && conflicting.clerkOrgId !== args.clerkOrgId) {
+            throw new Error("shopify_customer_claimed_by_another_account");
+        }
+
+        await ctx.db.patch(account._id, {
+            shopifyCustomerId: args.shopifyCustomerId,
+            billingEmail: args.billingEmail,
+            shopifyCustomerLinkedAt: account.shopifyCustomerLinkedAt ?? Date.now(),
+            shopifyCustomerLinkedBy: account.shopifyCustomerLinkedBy ?? args.clerkUserId,
+        });
+
+        return {
+            accountId: account._id,
+            shopifyCustomerId: args.shopifyCustomerId,
+            alreadyLinked: account.shopifyCustomerId === args.shopifyCustomerId,
+        };
     },
 });
 
