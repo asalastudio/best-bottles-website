@@ -10,13 +10,19 @@ Inputs: data/paper-doll/{selection,xref,tokens}.json. Output: dist/paper-doll/<f
 and dist/paper-doll/manifest.json (rows in the contract publish.mjs --dist reads).
 
 Two render modes:
-  registered — bottles. A family's PSDs are one photographic master (same
-      pixel scale, byte-identical bottle body, only the crop moves), so
-      registration is a pure translation recovered by normalised
-      cross-correlation against a bottle-foot template taken from the
-      narrowest plain plate. Gates, unchanged from the shipping builder:
-      post-alignment residual ≤ 12/255 or the whole group is refused;
-      closure axis on the canvas centre line within 2 px on every capped plate.
+  registered — bottles. Within one photographic session a family's PSDs are
+      one master (same pixel scale, byte-identical bottle body, only the crop
+      moves), so registration there is a pure translation recovered by
+      normalised cross-correlation against a bottle-foot template from the
+      narrowest plain plate. A family is often photographed more than once,
+      though — Circle frosted 100 ml carries bodies 494 px and 1,062 px wide,
+      Cylinder 100 ml 497 px and 686 px — so shots are first clustered into
+      sessions (each cluster is the set that registers against its own
+      reference within the residual gate), and every cluster is then scaled by
+      its own body width so the bottle is the same size on every plate and its
+      base lands on the same line. Gates, unchanged from the shipping builder:
+      post-alignment residual ≤ 12/255 WITHIN a session, closure axis on the
+      canvas centre line within 2 px on every capped plate.
       Registration groups by (familyId, body token): a frosted body filed
       under a clear group is still its own photograph.
   standalone — components. One scale per family, ink box centred, the part
@@ -55,6 +61,7 @@ OUT_W, OUT_H, PAD = 1000, 1100, 40
 RESIDUAL_MAX = 12.0          # /255, family residual gate
 AXIS_MAX = 2.0               # px, closure axis vs canvas centre
 STANDALONE_HEIGHT = 0.62     # a component's tallest part fills this much of the canvas height
+WIDTH_TOLERANCE = 0.03       # body widths within 3 % are the same photographic session
 BUILDER = {"name": "build_plates.py", "version": "1.0.0"}
 HANGING_CLOSURES = {"AnSp", "AnSpTsl"}   # a bulb or tassel hangs off the bottle: framed as a composition
 
@@ -80,6 +87,25 @@ def ink_bbox(gray, thr=245):
     if len(ys) == 0:
         return None
     return int(xs.min()), int(ys.min()), int(xs.max()), int(ys.max())
+
+
+def body_metrics(gray):
+    """Body width and base: the widest run in the lower 60 % of the ink, and the ink's bottom.
+
+    The body is the one thing every plate in a family shares; the closure is
+    not (a tassel is three times the width of a roll-on cap), so scale is
+    carried across photographic sessions by the body and nothing else.
+    """
+    ink = gray < 245
+    ys, xs = np.where(ink)
+    if len(ys) == 0:
+        return None
+    y0, y1 = int(ys.min()), int(ys.max())
+    lower = ink[y0 + int(0.40 * (y1 - y0)):y1 + 1]
+    cols = np.where(lower.any(axis=0))[0]
+    if len(cols) == 0:
+        return None
+    return {"bodyWidth": int(cols.max() - cols.min()), "base": y1, "top": y0}
 
 
 def cap_axis(gray):
@@ -200,65 +226,153 @@ def build_registered(fid, body, skus, out_dir: Path, log):
         x0, _, x1, _ = ink_bbox(sh["gray"])
         return x1 - x0
 
+    def register_against(ref, candidates):
+        """NCC every candidate against a base-edge + side-wall template cut from `ref`."""
+        rx0, ry0, rx1, ry1 = ink_bbox(ref["gray"])
+        rh = ry1 - ry0
+        H, W = ref["gray"].shape
+        ty0 = max(0, ry1 - int(rh * 0.22))
+        ty1 = min(H, ry1 + max(8, int(rh * 0.02)))
+        tx0 = max(0, rx0 - 12)
+        tx1 = min(W, rx1 + 12)
+        patch = ref["gray"][ty0:ty1, tx0:tx1]
+        ph, pw = patch.shape
+        out = {}
+        for sh in candidates:
+            # a template cut from a larger session cannot be searched inside a smaller
+            # canvas; that shot belongs to another session and gets its own round
+            if sh["gray"].shape[0] < ph or sh["gray"].shape[1] < pw:
+                out[id(sh)] = (0, 0, 255.0, 255.0)
+                continue
+            iy, ix, _ = ncc_offset(patch, sh["gray"])
+            dx, dy = ix - tx0, iy - ty0
+            win = sh["gray"][ty0 + dy:ty0 + dy + ph, tx0 + dx:tx0 + dx + pw]
+            if win.shape != patch.shape:
+                out[id(sh)] = (dx, dy, 255.0, 255.0)
+                continue
+            diff = np.abs(win.astype(np.int16) - patch.astype(np.int16))
+            # A bulb or tassel lies across one side of the base band. The clean half of
+            # the template still measures the alignment honestly, so the half residual
+            # is what a hanging closure is judged on — the same threshold, not a looser one.
+            half = pw // 2
+            out[id(sh)] = (dx, dy, float(diff.mean()), float(min(diff[:, :half].mean(), diff[:, half:].mean())))
+        return {"ref": ref, "template": [tx0, ty0, tx1, ty1], "refBase": ry1, "fits": out}
+
+    # --- sessions. Group by the ONE thing every plate in a session shares: the
+    # measured width of the bottle body. Residual alone cannot do it — a frosted
+    # wall is nearly featureless, so a base template matches a differently scaled
+    # photograph of the same bottle at a low residual, and Circle frosted 100 ml
+    # came out with two scales inside one "session". Width first, then NCC for
+    # the translation, then the residual gate inside the session.
     assembled = [e["on"] for e in per_sku.values()]
-    plain = [sh for sh in assembled if sh["closure"] not in HANGING_CLOSURES] or assembled
-    ref = min(plain, key=width_of)
-    rx0, ry0, rx1, ry1 = ink_bbox(ref["gray"])
-    rh = ry1 - ry0
-    H, W = ref["gray"].shape
-    ty0 = max(0, ry1 - int(rh * 0.22))
-    ty1 = min(H, ry1 + max(8, int(rh * 0.02)))
-    tx0 = max(0, rx0 - 12)
-    tx1 = min(W, rx1 + 12)
-    patch = ref["gray"][ty0:ty1, tx0:tx1]
-    ph, pw = patch.shape
-    worst = 0.0
     for sh in shots:
-        iy, ix, score = ncc_offset(patch, sh["gray"])
-        sh["dx"], sh["dy"], sh["score"] = ix - tx0, iy - ty0, score
-        win = sh["gray"][ty0 + sh["dy"]:ty0 + sh["dy"] + ph, tx0 + sh["dx"]:tx0 + sh["dx"] + pw]
-        sh["residual"] = 255.0 if win.shape != patch.shape else float(np.abs(win.astype(np.int16) - patch.astype(np.int16)).mean())
-        worst = max(worst, sh["residual"])
+        m = body_metrics(sh["gray"])
+        sh["bodyWidth"] = m["bodyWidth"] if m else None
+    # a bulb or tassel lies beside the bottle and widens the lower band, so those
+    # shots never define a session; they join the one whose template fits them best
+    definers = [sh for sh in shots if sh in assembled and sh["closure"] not in HANGING_CLOSURES and sh["bodyWidth"]]
+    if not definers:
+        definers = [sh for sh in shots if sh["bodyWidth"]]
+    groups: list[list] = []
+    for sh in sorted(definers, key=lambda s: s["bodyWidth"]):
+        if groups and sh["bodyWidth"] <= groups[-1][-1]["bodyWidth"] * (1 + WIDTH_TOLERANCE):
+            groups[-1].append(sh)
+        else:
+            groups.append([sh])
+    clusters = []
+    for members in groups:
+        ref = min(members, key=width_of)
+        reg = register_against(ref, members)
+        kept = [sh for sh in members if reg["fits"][id(sh)][2] <= RESIDUAL_MAX]
+        if ref not in kept:
+            kept.append(ref)
+        for sh in kept:
+            sh["dx"], sh["dy"], sh["residual"], sh["halfResidual"] = reg["fits"][id(sh)]
+            sh["cluster"] = len(clusters)
+        widths = [sh["bodyWidth"] for sh in kept if sh["bodyWidth"]]
+        clusters.append({"index": len(clusters), "ref": ref, "refBase": reg["refBase"], "template": reg["template"], "members": kept,
+                         "bodyWidth": float(np.median(widths)) if widths else None,
+                         "worstResidual": max((sh["residual"] for sh in kept), default=0.0)})
+    # everything else — hanging closures, and any definer its own group rejected —
+    # joins the session whose template fits it best
+    placed = {id(sh) for c in clusters for sh in c["members"]}
+    for sh in shots:
+        if id(sh) in placed:
+            continue
+        best = None
+        for c in clusters:
+            fit = register_against(c["ref"], [sh])["fits"][id(sh)]
+            if best is None or fit[2] < best[1][2]:
+                best = (c, fit)
+        hanging = sh["closure"] in HANGING_CLOSURES
+        score = (lambda fit: fit[3]) if hanging else (lambda fit: fit[2])
+        if best:
+            best = min(((c, register_against(c["ref"], [sh])["fits"][id(sh)]) for c in clusters), key=lambda cf: score(cf[1]))
+        if best and score(best[1]) <= RESIDUAL_MAX:
+            c, (dx, dy, residual, half) = best
+            sh["dx"], sh["dy"], sh["residual"], sh["halfResidual"], sh["cluster"] = dx, dy, residual, half, c["index"]
+            sh["judgedOnHalf"] = hanging
+            c["members"].append(sh)
+            c["worstResidual"] = max(c["worstResidual"], score(best[1]))
+        else:
+            sh["cluster"] = None
+            sh["residual"] = best[1][2] if best else 255.0
+            sh["dx"] = sh["dy"] = 0
+    worst = max((c["worstResidual"] for c in clusters), default=255.0)
+    primary = max(clusters, key=lambda c: len(c["members"])) if clusters else None
+    if primary and primary["bodyWidth"]:
+        for c in clusters:                     # every session is scaled by its own body width
+            c["k"] = (primary["bodyWidth"] / c["bodyWidth"]) if c["bodyWidth"] else 1.0
+    ref = primary["ref"] if primary else shots[0]
+    tx0, ty0, tx1, ty1 = primary["template"] if primary else (0, 0, 0, 0)
     registration = {"familyId": fid, "body": body, "reference": ref["src"]["relPath"], "template": [tx0, ty0, tx1, ty1], "worstResidual": round(worst, 2),
-                    "residuals": {f"{sh['sku']}.front-{sh['state']}": round(sh["residual"], 2) for sh in shots}, "excluded": {}, "plates": {}}
-    # one stray shot (a different crop, a re-shoot, a ring variant) must not refuse the family: shots that
-    # fail the residual gate are set aside and blocked individually, as long as they are the minority
-    outliers = [sh for sh in shots if sh["residual"] > RESIDUAL_MAX]
-    if outliers and len(outliers) <= max(1, len(shots) // 4):
+                    "sessions": [{"index": c["index"], "reference": c["ref"]["src"]["relPath"], "shots": len(c["members"]),
+                                  "bodyWidth": c["bodyWidth"], "scaleFactor": round(c.get("k", 1.0), 4), "worstResidual": round(c["worstResidual"], 2)} for c in clusters],
+                    "residuals": {f"{sh['sku']}.front-{sh['state']}": round(sh["residual"], 2) for sh in shots},
+                    "judgedOnHalfTemplate": [f"{sh['sku']}.front-{sh['state']}" for sh in shots if sh.get("judgedOnHalf")], "excluded": {}, "plates": {}}
+    # what no session could register (a different bottle, a re-shoot nothing else matches) is set aside
+    outliers = [sh for sh in shots if sh.get("cluster") is None]
+    if outliers:
         for sh in outliers:
-            registration["excluded"][f"{sh['sku']}.front-{sh['state']}"] = f"registration_residual:{sh['residual']:.1f}"
-            log(f"   -- {sh['sku']} [{sh['state']}]: residual {sh['residual']:.2f}/255, set aside")
+            registration["excluded"][f"{sh['sku']}.front-{sh['state']}"] = "registration_unmatched"
+            log(f"   -- {sh['sku']} [{sh['state']}]: matches no session, set aside")
         excluded_skus = {sh["sku"] for sh in outliers if sh["state"] == "on"}
         shots = [sh for sh in shots if sh not in outliers]
-        for sh in list(per_sku.values()):
-            if "off" in sh and sh["off"] in outliers:
-                del sh["off"]
+        for entry in list(per_sku.values()):
+            if "off" in entry and entry["off"] in outliers:
+                del entry["off"]
         per_sku = {sku: e for sku, e in per_sku.items() if sku not in excluded_skus}
-        worst = max(sh["residual"] for sh in shots) if shots else 0.0
-        registration["worstResidual"] = round(worst, 2)
-    if worst > RESIDUAL_MAX or not shots:
-        log(f"   !! refused: residual {worst:.2f}/255 > {RESIDUAL_MAX} on {len(outliers)} of {len(shots) + len(outliers)} shots — not one photographic master")
-        registration["refused"] = f"registration_residual:{worst:.1f}"
+    if not shots or primary is None:
+        log("   !! refused: nothing registered")
+        registration["refused"] = "registration_unmatched"
         return [], registration
 
-    uy0, uy1, max_w = 10**9, -10**9, 0
+    # one output scale for the family, measured in the primary session's pixels
+    max_w, uy0, uy1 = 0, 10**9, -10**9
     for sh in shots:
+        c = clusters[sh["cluster"]]
+        k = c.get("k", 1.0)
         x0, y0, x1, y1 = ink_bbox(sh["gray"])
-        uy0 = min(uy0, y0 - sh["dy"])
-        uy1 = max(uy1, y1 - sh["dy"])
-        max_w = max(max_w, x1 - x0)
+        max_w = max(max_w, (x1 - x0) * k)
+        base_rel_top = (c["refBase"] + sh["dy"] - y0) * k        # bottle base above the ink top
+        base_rel_bot = (c["refBase"] + sh["dy"] - y1) * k        # …and below the ink bottom
+        uy0 = min(uy0, -base_rel_top)
+        uy1 = max(uy1, -base_rel_bot)
     uh = uy1 - uy0
     scale = min((OUT_W - 2 * PAD) / max_w, (OUT_H - 2 * PAD) / uh)
-    registration.update({"scale": scale, "band": [uy0, uy1]})
+    base_out = PAD - uy0 * scale + ((OUT_H - 2 * PAD) - uh * scale) / 2   # where every bottle's base lands
+    registration.update({"scale": scale, "band": [round(uy0, 1), round(uy1, 1)], "baseOut": round(base_out, 1)})
 
     def render(sh, on_axis):
+        c = clusters[sh["cluster"]]
+        s_c = scale * c.get("k", 1.0)
         if on_axis:
-            ox = OUT_W / 2 - cap_axis(sh["gray"]) * scale
+            ox = OUT_W / 2 - cap_axis(sh["gray"]) * s_c
         else:
             x0, _, x1, _ = ink_bbox(sh["gray"])
-            ox = (OUT_W - (x1 - x0) * scale) / 2 - x0 * scale
-        oy = PAD - (uy0 + sh["dy"]) * scale + ((OUT_H - 2 * PAD) - uh * scale) / 2
-        inv = 1.0 / scale
+            ox = (OUT_W - (x1 - x0) * s_c) / 2 - x0 * s_c
+        oy = base_out - (c["refBase"] + sh["dy"]) * s_c
+        inv = 1.0 / s_c
         canvas = sh["rgb"].transform((OUT_W, OUT_H), Image.AFFINE, (inv, 0, -ox * inv, 0, inv, -oy * inv), resample=Image.BICUBIC, fillcolor=(255, 255, 255))
         return canvas, ox, oy
 
@@ -284,7 +398,7 @@ def build_registered(fid, body, skus, out_dir: Path, log):
         name_on = f"{sku}.front-on"
         plate = save_webp(canvas_on, out_dir / f"{name_on}.webp", 88)
         thumb = save_webp(thumb_of(canvas_on), out_dir / f"{name_on}-thumb.webp", 82)
-        registration["plates"][name_on] = {"dx": on["dx"], "dy": on["dy"], "ox": round(ox, 3), "oy": round(oy, 3), "residual": round(on["residual"], 2), "axisOffset": None if axis_off is None else round(axis_off, 2)}
+        registration["plates"][name_on] = {"session": on["cluster"], "dx": on["dx"], "dy": on["dy"], "ox": round(ox, 3), "oy": round(oy, 3), "residual": round(on["residual"], 2), "axisOffset": None if axis_off is None else round(axis_off, 2)}
         row = {
             "websiteSku": sku, "graceSku": item["graceSku"], "familyId": fid, "familyName": family_name(fid), "neck": "-".join(fid.split("-")[-2:]),
             "body": body, "closure": on["closure"], "mode": "registered", "warnings": item["warnings"],
@@ -298,7 +412,7 @@ def build_registered(fid, body, skus, out_dir: Path, log):
             name_off = f"{sku}.front-off"
             plate2 = save_webp(canvas_off, out_dir / f"{name_off}.webp", 88)
             thumb2 = save_webp(thumb_of(canvas_off), out_dir / f"{name_off}-thumb.webp", 82)
-            registration["plates"][name_off] = {"dx": off["dx"], "dy": off["dy"], "ox": round(ox2, 3), "oy": round(oy2, 3), "residual": round(off["residual"], 2)}
+            registration["plates"][name_off] = {"session": off["cluster"], "dx": off["dx"], "dy": off["dy"], "ox": round(ox2, 3), "oy": round(oy2, 3), "residual": round(off["residual"], 2)}
             row["plateCapOff"] = asset_row(plate2, fid, sku, name_off, "front-off", off["src"])
             row["thumbCapOff"] = asset_row(thumb2, fid, sku, f"{name_off}-thumb", "front-off-240x240", off["src"], thumb=True)
         rows.append(row)
