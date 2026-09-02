@@ -244,9 +244,19 @@ def build_registered(fid, body, skus, out_dir: Path, log):
             if sh["gray"].shape[0] < ph or sh["gray"].shape[1] < pw:
                 out[id(sh)] = (0, 0, 255.0, 255.0)
                 continue
-            iy, ix, _ = ncc_offset(patch, sh["gray"])
+            # The template reaches a little BELOW the base (ty1 = base + 2 % of the
+            # body). A shot exported on a tighter canvas — the 100 ml reducers end
+            # 17 px under the base where the reference has 141 — put the window off
+            # the bottom, and the shape test below scored it 255 as if it were a
+            # different bottle. Nothing is under a base but background, so the
+            # canvas is extended with white to where the template can land.
+            g = sh["gray"]
+            pad_b = max(0, (ry1 - ty0) + (ty1 - ry1) + 8 - (g.shape[0] - (ink_bbox(g)[3] - (ry1 - ty0))))
+            if pad_b > 0 and not os.environ.get("PLATES_NO_PAD"):     # NO_PAD: the pre-fix behaviour, for A/B proof only
+                g = np.pad(g, ((0, pad_b), (0, 0)), constant_values=255)
+            iy, ix, _ = ncc_offset(patch, g)
             dx, dy = ix - tx0, iy - ty0
-            win = sh["gray"][ty0 + dy:ty0 + dy + ph, tx0 + dx:tx0 + dx + pw]
+            win = g[ty0 + dy:ty0 + dy + ph, tx0 + dx:tx0 + dx + pw]
             if win.shape != patch.shape:
                 out[id(sh)] = (dx, dy, 255.0, 255.0)
                 continue
@@ -318,6 +328,43 @@ def build_registered(fid, body, skus, out_dir: Path, log):
             sh["cluster"] = None
             sh["residual"] = best[1][2] if best else 255.0
             sh["dx"] = sh["dy"] = 0
+    # A re-shoot nothing else matches. The 100 ml antique sprays are a 0.39x export
+    # of the same bottle: hanging closures, so they may not DEFINE a session, and no
+    # session at their scale existed for them to JOIN — every one was set aside. Let
+    # the unplaced shots try to agree among themselves: the narrowest is the least
+    # contaminated by a bulb or tassel, so it is the reference; anything that
+    # registers against it within the same residual gate (the half template for a
+    # hanging closure) forms a session with it. Three members at least — a
+    # re-shoot is never one photograph, and a lone stray must stay set aside.
+    RESCUE_MIN = 3
+    while True:
+        unplaced = [sh for sh in shots if sh.get("cluster") is None and sh["bodyWidth"]]
+        if len(unplaced) < RESCUE_MIN:
+            break
+        ref = min(unplaced, key=width_of)
+        reg = register_against(ref, unplaced)
+        members = []
+        for sh in unplaced:
+            fit = reg["fits"][id(sh)]
+            hanging = sh["closure"] in HANGING_CLOSURES
+            if (fit[3] if hanging else fit[2]) <= RESIDUAL_MAX:
+                members.append((sh, fit, hanging))
+        if len(members) < RESCUE_MIN:
+            break
+        idx = len(clusters)
+        for sh, (dx, dy, residual, half), hanging in members:
+            sh["dx"], sh["dy"], sh["residual"], sh["halfResidual"], sh["cluster"] = dx, dy, residual, half, idx
+            sh["judgedOnHalf"] = hanging
+        # The session's width is its narrowest member's BODY width: a bulb or tassel
+        # only ever adds to the lower band, so the minimum is the bare bottle. The
+        # first cut used the reference's ink width (bottle plus bulb, 405 px where
+        # the body is 196) and would have drawn every antique spray at half size.
+        bare = [sh["bodyWidth"] for sh, _, _ in members if sh["bodyWidth"]] or [width_of(ref)]
+        clusters.append({"index": idx, "ref": ref, "refBase": reg["refBase"], "template": reg["template"],
+                         "members": [m[0] for m in members], "bodyWidth": float(min(bare)), "rescued": True,
+                         "worstResidual": max((m[1][3] if m[2] else m[1][2]) for m in members)})
+        log(f"   ++ session {idx} rescued: {len(members)} shots at body width {min(bare):.0f}px, ref {ref['sku']}")
+
     worst = max((c["worstResidual"] for c in clusters), default=255.0)
     primary = max(clusters, key=lambda c: len(c["members"])) if clusters else None
     if primary and primary["bodyWidth"]:
@@ -327,7 +374,8 @@ def build_registered(fid, body, skus, out_dir: Path, log):
     tx0, ty0, tx1, ty1 = primary["template"] if primary else (0, 0, 0, 0)
     registration = {"familyId": fid, "body": body, "reference": ref["src"]["relPath"], "template": [tx0, ty0, tx1, ty1], "worstResidual": round(worst, 2),
                     "sessions": [{"index": c["index"], "reference": c["ref"]["src"]["relPath"], "shots": len(c["members"]),
-                                  "bodyWidth": c["bodyWidth"], "scaleFactor": round(c.get("k", 1.0), 4), "worstResidual": round(c["worstResidual"], 2)} for c in clusters],
+                                  "bodyWidth": c["bodyWidth"], "scaleFactor": round(c.get("k", 1.0), 4), "worstResidual": round(c["worstResidual"], 2),
+                                  "rescued": bool(c.get("rescued"))} for c in clusters],
                     "residuals": {f"{sh['sku']}.front-{sh['state']}": round(sh["residual"], 2) for sh in shots},
                     "judgedOnHalfTemplate": [f"{sh['sku']}.front-{sh['state']}" for sh in shots if sh.get("judgedOnHalf")], "excluded": {}, "plates": {}}
     # what no session could register (a different bottle, a re-shoot nothing else matches) is set aside

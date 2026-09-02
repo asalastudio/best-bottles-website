@@ -139,6 +139,8 @@ def precedence(f: dict) -> tuple[int, str]:
     d = f["dirKey"]
     if f["library"] == "bbuat":
         return (0, d)
+    if f["library"] == "bbmaster":
+        return (5, d)          # the supplement: fills gaps, never outranks A or C
     if "31. Capped & Uncapped" in d:
         return (2, d)
     if "Updated Tassels" in d:

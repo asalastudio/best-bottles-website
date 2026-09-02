@@ -1,19 +1,25 @@
-# Dedupe report — 2026-09-01T22:22:18
+# Dedupe report — 2026-09-02T09:54:58
 
-product files: 8160  distinct assets (sha256): 5046  stems: 3140
-(stem, state) slots: {'part': 269, 'on': 2499, 'off': 2273}  stems with both on and off: 1901
-cap-state evidence per asset: {'blob-count': 635, 'explicit': 4235, 'component-folder': 176}  heuristic results: {'off': 528, 'on': 107}
-conflicts (SAME_STEM_DIFFERENT_PHOTOGRAPH): 25
-hi-res files set aside: 9
-image facts computed this run: 0 (cache 1347)
+product files: 13781  distinct assets (sha256): 5198  stems: 3170
+(stem, state) slots: {'part': 271, 'off': 2340, 'on': 2532}  stems with both on and off: 1972
+cap-state evidence per asset: {'blob-count': 682, 'explicit': 4337, 'component-folder': 179}  heuristic results: {'off': 564, 'on': 118}
+conflicts (SAME_STEM_DIFFERENT_PHOTOGRAPH): 32
+hi-res files set aside: 16
+image facts computed this run: 131 (cache 1478)
+  - cp13-415rollpinkdot [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/19. 13-415 Roll on/4. CPRoll13-415PinkDot.psd | 5. 13-415 Bottles PSD/Caps 13-415/13415/5. CP13-415RollPinkDot.psd
+  - cp13-415rollsldot [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/19. 13-415 Roll on/2. CPRoll13-415SlDot.psd | 5. 13-415 Bottles PSD/Caps 13-415/13415/3. CP13-415RollSlDot.psd
   - cp13-415spryglsh [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/18. 13-415 Sprayers/5. Spry13-415GlSh.psd | 5. 13-415 Bottles PSD/Caps 13-415/New Folder With Items/13. CP13-415SpryGlSh.psd
   - cp13-415spryslmt [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/18. 13-415 Sprayers/7. Spry13-415SlMt.psd | 5. 13-415 Bottles PSD/Caps 13-415/New Folder With Items/15. CP13-415SprySlMt.psd
   - cp13-415spryslsh [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/18. 13-415 Sprayers/8 Spry13-415SlSh.psd | 5. 13-415 Bottles PSD/Caps 13-415/New Folder With Items/16. CP13-415SprySlSh.psd
+  - cp8-425shortblack [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/17. 13-415 Caps/1. CP13-415BlkSht.psd | 6.   8-425 Bottles - CB/8245 Caps/1. CP8-425ShortBlack.psd
   - gb09blackcapapp [on]: 2. PSD Capped /18. 18:400/1. Clear 18:400 Capped/2. GB09BlackCapApp.psd | 12. Vials/0. All Vials/Capped/GB09BlackCapApp..psd
   - gb10ozplain [on]: 2. PSD Capped /10. Apothecary/6. 10oz Apoth/GB10ozPlain..psd | 2. PSD Capped /10. Apothecary/6. 10oz Apoth/GB10ozPlain.psd
   - gb2ozapth [on]: 2. PSD Capped /10. Apothecary/7. 2oz Apth/GB2ozApth..psd | 2. PSD Capped /10. Apothecary/7. 2oz Apth/GB2ozApth.psd
   - gb4ozcobltbl [on]: 2. PSD Capped /10. Apothecary/3. 4oz Apoth/GB4ozCobltBl.psd | 2. PSD Capped /10. Apothecary/3. 4oz Apoth/GB4ozCobltBl..psd
   - gb6tplsl [on]: 2. PSD Capped /19. 14.3mm/14.3mm/Capped/GB6TPlSl..psd | 2. PSD Capped /19. 14.3mm/14.3mm/Capped/GB6TPlSl...psd
+  - gbelgfrst15blksht [on]: 2. PSD Capped /5.  13-415 Bottles/26. Frosted Elegant 15ml Clear/2. Frosted Elegant 15ml (Capped) PSD/1. GBElgFrst15BlkSht.psd | 5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/1. GBElgFrst15BlkSht.psd
+  - gbelgfrst15whtsht [on]: 2. PSD Capped /5.  13-415 Bottles/26. Frosted Elegant 15ml Clear/2. Frosted Elegant 15ml (Capped) PSD/2. GBElgFrst15WhtSht.psd | 5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/2. GBElgFrst15WhtSht.psd
+  - gbpillar9rollblk [on]: 12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk..psd | 12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk.psd
   - gbrndfrst128sprymtsl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/26. LBRndFrst128LtnMtSl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/26. LBRndFrst128LtnMtSl.psd
   - gbrndfrst128spryshnblk [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/22. LBRndFrst128LtnShnBlk.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/22. LBRndFrst128LtnShnBlk.psd
   - gbrndfrst128spryshngl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/17. GBRndFrst128SpryShnGl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/17. GBRndFrst128SpryShnGl.psd
@@ -27,7 +33,6 @@ image facts computed this run: 0 (cache 1347)
   - gbslk50ansptslpnk [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/46. GBSlk50AnSpTslPnk.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/46. GBSlk50AnSpTslPnk.psd
   - gbslk50ansptslred [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/47. GBSlk50AnSpTslRed.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/47. GBSlk50AnSpTslRed.psd
   - gbslk50ansptslwht [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/45. GBSlk50AnSpTslWht.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/45. GBSlk50AnSpTslWht.psd
+  - gbspry4mlclblk [on]: Small spray bottles 3ml and 4ml/GBSpry4mlClBlk..psd | Small spray bottles 3ml and 4ml/GBSpry4mlClBlk.psd | 18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClBlk...psd | 18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClBlk..psd
   - lbrndfrst128ltnmtsl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/26. LBRndFrst128LtnMtSl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/26. LBRndFrst128LtnMtSl.psd
   - lbrndfrst128ltnshnblk [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/22. LBRndFrst128LtnShnBlk.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/22. LBRndFrst128LtnShnBlk.psd
-  - lbrndfrst128ltnshngl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/17. GBRndFrst128SpryShnGl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/17. GBRndFrst128SpryShnGl.psd
-  - lbrndfrst128shsl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/32. LBRndFrst128ShSl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/30. GBRndFrst128SpSlShn.psd

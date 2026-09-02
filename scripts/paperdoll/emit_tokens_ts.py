@@ -34,19 +34,6 @@ SWATCH_ALIASES = {
 }
 
 
-# A modifier can sit AFTER the finish in a website SKU: GBCyl9RollSlDot is a
-# silver dotted cap, not an unreadable one. Matching the finish at the end of the
-# string missed every dotted and tall cap in the catalogue, and because those rows
-# also carry capColor "Clear" the page had nothing else to fall back on — the pink
-# and silver dotted caps simply never appeared as colourways.
-MODIFIER_SUFFIXES = [
-    ("Dot", "Dotted"),
-    ("Tall", "Tall"),
-    ("Short", "Short"),
-    ("Sht", "Short"),
-]
-
-
 def emit() -> str:
     tokens = json.loads((DATA / "tokens.json").read_text())
     rows = []
@@ -76,27 +63,11 @@ def emit() -> str:
         " * The finish a website SKU spells, or null. The decorative-ring modifier is",
         " * stripped first: a ring variant is the same closure in the same finish.",
         " */",
-        "/** Modifiers that may follow the finish, with how they read in a label. */",
-        "const MODIFIER_SUFFIXES: Array<[string, string]> = [",
-    ] + [f'    ["{tok}", "{label}"],' for tok, label in MODIFIER_SUFFIXES] + [
-        "];",
-        "",
         "export function getFinishFromWebsiteSku(websiteSku: string | null | undefined): FinishToken | null {",
         "    if (!websiteSku) return null;",
-        '    // the decorative-ring modifier is a variant of the same closure in the same finish',
-        '    let stem = websiteSku.trim().replace(/Rng$/, "");',
-        "    // a modifier can follow the finish (SlDot, ShnBlkTall); take it off, then read",
-        "    // the finish underneath and put the modifier back into the label",
-        "    let suffix: string | null = null;",
-        "    for (const [token, label] of MODIFIER_SUFFIXES) {",
-        "        if (stem.endsWith(token) && stem.length > token.length) { stem = stem.slice(0, -token.length); suffix = label; break; }",
-        "    }",
+        '    const stem = websiteSku.trim().replace(/Rng$/, "");',
         "    for (const [token, finish] of WEBSITE_SKU_FINISHES) {",
-        "        if (stem.endsWith(token) && stem.length > token.length) {",
-        "            return suffix",
-        '                ? { label: `${finish.label} ${suffix}`, swatchName: finish.swatchName }',
-        "                : finish;",
-        "        }",
+        "        if (stem.endsWith(token) && stem.length > token.length) return finish;",
         "    }",
         "    return null;",
         "}",
