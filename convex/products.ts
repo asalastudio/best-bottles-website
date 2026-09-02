@@ -1,6 +1,7 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import { verifyWriteToken } from "./writeToken";
 import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
@@ -47,6 +48,61 @@ export const listAll = query({
 // table per call, and once every product carried a full priceTiers ladder the
 // table crossed Convex's 16MB per-execution read limit. Loop with
 // `cursor: continueCursor` until `isDone`.
+/**
+ * Everything the paper-doll plate pipeline joins on, paginated. Kept
+ * narrow on purpose: identity, the fields familyId is derived from, and the
+ * group link. Nothing here is a URL.
+ */
+export const getAllForPlates = query({
+    args: {
+        limit: v.optional(v.number()),
+        cursor: v.optional(v.union(v.string(), v.null())),
+    },
+    handler: async (ctx, args) => {
+        const result = await ctx.db
+            .query("products")
+            .order("asc")
+            .paginate({ numItems: Math.min(args.limit ?? 500, 1000), cursor: args.cursor ?? null });
+        return {
+            isDone: result.isDone,
+            continueCursor: result.continueCursor,
+            page: result.page.map((p) => ({
+                _id: p._id,
+                productId: p.productId ?? null,
+                websiteSku: p.websiteSku,
+                graceSku: p.graceSku,
+                family: p.family ?? null,
+                category: p.category,
+                capacityMl: p.capacityMl ?? null,
+                color: p.color ?? null,
+                neckThreadSize: p.neckThreadSize ?? null,
+                applicator: p.applicator ?? null,
+                capColor: p.capColor ?? null,
+                itemName: p.itemName,
+                productGroupId: p.productGroupId ?? null,
+            })),
+        };
+    },
+});
+
+export const getAllGroupsForPlates = query({
+    args: {},
+    handler: async (ctx) => {
+        // ~230 groups; bounded rather than collected
+        const groups = await ctx.db.query("productGroups").withIndex("by_slug").take(5000);
+        return groups.map((g) => ({
+            _id: g._id,
+            slug: g.slug,
+            family: g.family,
+            capacityMl: g.capacityMl ?? null,
+            color: g.color ?? null,
+            neckThreadSize: g.neckThreadSize ?? null,
+            category: g.category,
+            paperDollFamilyKey: g.paperDollFamilyKey ?? null,
+        }));
+    },
+});
+
 export const getAllForAudit = query({
     args: {
         limit: v.optional(v.number()),
@@ -1479,13 +1535,7 @@ export const updateProductGroupHeroImage = internalMutation({
 });
 
 function verifyProductImageWriteToken(writeToken: string) {
-    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!expected) {
-        throw new Error("product_image_write_token_not_configured");
-    }
-    if (writeToken !== expected) {
-        throw new Error("unauthorized_product_image_write");
-    }
+    verifyWriteToken(writeToken);
 }
 
 /**

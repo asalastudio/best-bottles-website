@@ -1,14 +1,21 @@
-import fs from "node:fs/promises";
-import path from "node:path";
+import type { ConvexHttpClient } from "convex/browser";
+import type { FunctionReturnType } from "convex/server";
+import { api } from "../../../convex/_generated/api";
+
+type ByFamilyPage = FunctionReturnType<typeof api.productPlates.byFamily>;
 
 /**
  * Static paper-doll plates.
  *
- * A plate is one finished photograph of one configuration, written to
- * public/paper-doll/<family>/ by scripts/paperdoll/build_*.py and shipped
- * with the app. There is no CMS, no release gate and no runtime compositing:
- * a family is present when its manifest is on disk, and a configuration is
- * present when its row is in that manifest. The storefront reads the file.
+ * A plate is one finished photograph of one configuration. The bytes live on
+ * object storage; the index lives in Convex (productPlates). There is no
+ * CMS, no release gate and no runtime compositing: a row exists when its
+ * object has been uploaded and verified, and the page reads the row.
+ *
+ * Every loader here degrades to "no plates" rather than throwing, because a
+ * missing photograph must cost the customer the photograph — never the
+ * product page and its add-to-cart. The stage already falls back to the
+ * SKU's catalogue photo, then the group hero.
  */
 
 export type PlateVariant = {
@@ -46,25 +53,96 @@ export type PlateFamilySummary = {
     variantCount: number;
 };
 
-/** The 9 mL · 17-415 Cylinder, composited from its 26 layer PNGs. */
+/** What the product page needs per SKU. */
+export type PlateRef = {
+    image: string;
+    imageCapOff: string | null;
+    thumb?: string;
+    thumbCapOff?: string | null;
+};
+
+/** The 9 mL · 17-415 Cylinder's family id (legacy id kept as an alias in the registry). */
 export const PLATE_FAMILY_CYL9 = "cylinder-9ml-17-415";
 
-const ROOT = () => path.join(process.cwd(), "public", "paper-doll");
-
-export async function loadPlateFamilies(): Promise<PlateFamilySummary[]> {
+/**
+ * Plates for a product group's variants, keyed by the SKU strings passed in
+ * (grace and website SKUs both resolve). Returns {} on any failure after
+ * logging it: the page renders photographs, never nothing.
+ */
+export async function loadPlatesForVariants(
+    convex: ConvexHttpClient,
+    skus: Array<string | null | undefined>,
+    context = "product-page",
+): Promise<Record<string, PlateRef>> {
+    const wanted = Array.from(new Set(skus.filter((s): s is string => Boolean(s && s.trim())).map((s) => s.trim())));
+    if (wanted.length === 0) return {};
     try {
-        return JSON.parse(await fs.readFile(path.join(ROOT(), "families.json"), "utf8"));
-    } catch {
+        const result = await convex.query(api.productPlates.forSkus, { skus: wanted });
+        if (result.conflicts.length > 0) {
+            console.error(`[plates] duplicate index rows for ${result.conflicts.join(", ")} (${context})`);
+        }
+        return result.plates;
+    } catch (error) {
+        console.error(`[plates] lookup failed (${context}); rendering without plates`, error);
+        return {};
+    }
+}
+
+export async function loadPlateFamilies(convex: ConvexHttpClient): Promise<PlateFamilySummary[]> {
+    try {
+        const families = await convex.query(api.productPlates.families, {});
+        return families.map((f) => ({ id: f.familyId, name: f.name, neckFinish: f.neckFinish, variantCount: f.variantCount }));
+    } catch (error) {
+        console.error("[plates] families lookup failed", error);
         return [];
     }
 }
 
-/** Null when the family has not been built -- never a throw, never a blank page. */
-export async function loadPlateFamily(id: string): Promise<PlateFamilyManifest | null> {
+/** A whole family for the lab swapper. Null when the family is not in the index — never a throw. */
+export async function loadPlateFamily(convex: ConvexHttpClient, id: string): Promise<PlateFamilyManifest | null> {
     if (!/^[a-z0-9-]+$/.test(id)) return null;
     try {
-        return JSON.parse(await fs.readFile(path.join(ROOT(), id, "manifest.json"), "utf8"));
-    } catch {
+        const families = await convex.query(api.productPlates.families, {});
+        const family = families.find((f) => f.familyId === id);
+        if (!family) return null;
+        const variants: PlateVariant[] = [];
+        let cursor: string | null = null;
+        for (let page = 0; page < 50; page++) {
+            const result: ByFamilyPage = await convex.query(api.productPlates.byFamily, { familyId: id, cursor, limit: 500 });
+            for (const row of result.page) {
+                const closure = row.sku;
+                variants.push({
+                    sku: row.sku,
+                    graceSku: row.graceSku,
+                    closure,
+                    closureLabel: closure,
+                    color: row.sku,
+                    swatch: "#cccccc",
+                    image: row.image,
+                    thumb: row.thumb,
+                    imageCapOff: row.imageCapOff,
+                    thumbCapOff: row.thumbCapOff,
+                    price: null,
+                    stock: null,
+                    applicator: null,
+                    productUrl: null,
+                    capacityMl: null,
+                    sourcePsd: row.sourcePath,
+                });
+            }
+            if (result.isDone) break;
+            cursor = result.continueCursor;
+        }
+        return {
+            id: family.familyId,
+            name: family.name,
+            neckFinish: family.neckFinish,
+            canvas: family.canvas,
+            closures: family.closures,
+            variants,
+        };
+    } catch (error) {
+        console.error(`[plates] family ${id} lookup failed`, error);
         return null;
     }
 }

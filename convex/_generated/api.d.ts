@@ -37,6 +37,7 @@ import type * as imageReconciliation from "../imageReconciliation.js";
 import type * as importMissingLiveProducts from "../importMissingLiveProducts.js";
 import type * as knowledge from "../knowledge.js";
 import type * as knowledgeOperations from "../knowledgeOperations.js";
+import type * as materialRecipes from "../materialRecipes.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
 import type * as paperDoll from "../paperDoll.js";
@@ -45,10 +46,13 @@ import type * as portal from "../portal.js";
 import type * as pricing from "../pricing.js";
 import type * as productGroups from "../productGroups.js";
 import type * as productGroupsRebuild from "../productGroupsRebuild.js";
+import type * as productKits from "../productKits.js";
+import type * as productPlates from "../productPlates.js";
 import type * as products from "../products.js";
 import type * as repairCylinderPilot from "../repairCylinderPilot.js";
 import type * as seedProducts from "../seedProducts.js";
 import type * as shopifySync from "../shopifySync.js";
+import type * as writeToken from "../writeToken.js";
 
 import type {
   ApiFromModules,
@@ -86,6 +90,7 @@ declare const fullApi: ApiFromModules<{
   importMissingLiveProducts: typeof importMissingLiveProducts;
   knowledge: typeof knowledge;
   knowledgeOperations: typeof knowledgeOperations;
+  materialRecipes: typeof materialRecipes;
   measurements: typeof measurements;
   migrations: typeof migrations;
   paperDoll: typeof paperDoll;
@@ -94,10 +99,13 @@ declare const fullApi: ApiFromModules<{
   pricing: typeof pricing;
   productGroups: typeof productGroups;
   productGroupsRebuild: typeof productGroupsRebuild;
+  productKits: typeof productKits;
+  productPlates: typeof productPlates;
   products: typeof products;
   repairCylinderPilot: typeof repairCylinderPilot;
   seedProducts: typeof seedProducts;
   shopifySync: typeof shopifySync;
+  writeToken: typeof writeToken;
 }>;
 
 /**

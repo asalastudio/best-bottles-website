@@ -18,7 +18,7 @@ import { getCustomerFacingProductName } from "@/lib/products/customer-facing-nam
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
-import { loadPlateFamilies, loadPlateFamily } from "@/lib/paper-doll/plates";
+import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
 import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
 
 export const dynamic = "force-dynamic";
@@ -54,23 +54,6 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
         ...data,
         variants: filterVariantsForProductGroup(data.group, data.variants),
     };
-}
-
-/** Every static plate on disk, keyed by graceSku. A plate is one finished
- *  photograph of one configuration (public/paper-doll); the guided stage
- *  leads with it and offers 3D on top. */
-async function loadPlatesBySku(): Promise<Record<string, { image: string; imageCapOff: string | null }>> {
-    const out: Record<string, { image: string; imageCapOff: string | null }> = {};
-    for (const family of await loadPlateFamilies()) {
-        const manifest = await loadPlateFamily(family.id);
-        for (const v of manifest?.variants ?? []) {
-            const plate = { image: v.image, imageCapOff: v.imageCapOff };
-            if (v.graceSku) out[v.graceSku] = plate;
-            // the plate's own name is the website SKU (the PSD stem)
-            if (v.sku && !out[v.sku]) out[v.sku] = plate;
-        }
-    }
-    return out;
 }
 
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
@@ -239,7 +222,14 @@ export default async function ProductPage({
         getApplicatorSiblings(data, activeSlug),
         getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
-        loadPlatesBySku(),
+        // The plates for THIS group's variants, from the Convex index -- never
+        // the whole catalogue, and never a throw: a missing plate costs the
+        // customer the plate, not the page.
+        loadPlatesForVariants(
+            getConvexClient(),
+            (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
+            activeSlug,
+        ),
     ]);
     const group = data?.group;
     const variant = getPrimaryVariant(data);

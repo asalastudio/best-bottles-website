@@ -186,6 +186,13 @@ export default function ConfiguratorPdp({
   // re-applied on mount; the server always renders the photograph, so
   // there is nothing to mismatch on hydration.
   const [show3d, setShow3dState] = useState(false);
+  // URLs whose <img> fired onError this session: the stage falls through to
+  // the catalogue photograph instead of showing a broken image on white.
+  const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
+  const markPlateBroken = (url: string) => {
+    console.error("[plates] image failed to load", url);
+    setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
+  };
   useEffect(() => {
     try { if (window.sessionStorage.getItem(STAGE_MODE_KEY) === "3d") setShow3dState(true); } catch {}
   }, []);
@@ -331,7 +338,8 @@ export default function ConfiguratorPdp({
 
   /* ---------------------------------------------------------- the stage */
   // the plate for the selected SKU; cap-off plate when the cap is lifted
-  const plate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
+  const wantedPlate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
+  const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -344,6 +352,8 @@ export default function ConfiguratorPdp({
       {showPlate ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+             width={1000} height={1100} decoding="async"
+             onError={() => markPlateBroken(plate!)}
              className="h-full w-full object-contain bg-white" />
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
