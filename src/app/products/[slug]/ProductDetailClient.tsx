@@ -1625,6 +1625,8 @@ export default function ProductDetailClient({
                                 neckSize={group.neckThreadSize}
                                 capacityText={group.capacity}
                                 skuLabel={selectedVariant?.graceSku ?? null}
+                                graceSku={selectedVariant?.graceSku ?? null}
+                                websiteSku={selectedVariant?.websiteSku ?? null}
                                 price10={selectedVariant?.webPrice10pc ?? null}
                                 price12={selectedVariant?.webPrice12pc ?? null}
                                 priceTiers={selectedVariant?.priceTiers ?? null}

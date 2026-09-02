@@ -31,6 +31,8 @@ import { familyForSlug, glassFromSlug, type ConfiguratorFamily, type ClosureBase
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
+import { useQuery } from "convex/react";
+import { api } from "../../../convex/_generated/api";
 
 import { useGLTF } from "@react-three/drei";
 
@@ -114,7 +116,7 @@ export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
   siblings, heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
-  neckSize, capacityText, skuLabel, price10, price12, priceTiers,
+  neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
   sampleHref, quoteHref, qty = 1, onQtyChange,
   capOptions, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
@@ -147,6 +149,10 @@ export default function ConfiguratorPdp({
   neckSize?: string | null;    // "17-415"
   capacityText?: string | null;// "9 ml (0.3 oz)"
   skuLabel?: string | null;
+  /** the selected SKU, for the component kit — the stage stacks the kit's
+   *  parts when one exists, so changing a cap changes the cap and nothing else */
+  graceSku?: string | null;
+  websiteSku?: string | null;
   price10?: number | null;     // 10+ tier unit price
   price12?: number | null;     // 12+ tier unit price
   /** the real 5-step ladder; when present it replaces price10/price12 */
@@ -189,6 +195,40 @@ export default function ConfiguratorPdp({
   // URLs whose <img> fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
+  // The component kit for this SKU. The plate is still the LCP image and still
+  // the fallback; the kit is an upgrade that arrives when it arrives. Once its
+  // parts have decoded the stage stacks them instead, and from then on changing
+  // a cap changes one URL: the body and fitment keep the URLs they already had,
+  // so the browser serves them from cache and never refetches or repaints the
+  // bottle. Measured on the 9 mL roll-on: two cap changes issued one request for
+  // the body, one for the roller, and three for the cap.
+  const kit = useQuery(
+    api.productKits.forSku,
+    graceSku || websiteSku ? { graceSku: graceSku ?? null, websiteSku: websiteSku ?? null } : "skip",
+  );
+  const kitParts = useMemo(
+    () => (kit?.parts ? [...kit.parts].sort((a, b) => a.zOrder - b.zOrder) : null),
+    [kit],
+  );
+  // Readiness is sticky on purpose. It gates the FIRST swap from the flat plate
+  // to the layered stack; after that the parts stay on screen and a cap change
+  // is just a new src on the same <img>, which the browser paints only once the
+  // replacement has decoded. Re-gating on every change would flash the plate
+  // back between colourways -- the exact flicker the kit exists to remove.
+  const [kitShown, setKitShown] = useState(false);
+  const [decoded, setDecoded] = useState<ReadonlySet<string>>(() => new Set());
+  useEffect(() => {
+    if (!kitParts?.length) { setKitShown(false); return; }
+    if (kitParts.every((p) => decoded.has(p.image.url))) setKitShown(true);
+  }, [kitParts, decoded]);
+  const markDecoded = (url: string) =>
+    setDecoded((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
+  // a cached image can finish loading before React attaches onLoad, so the ref
+  // asks the element directly instead of waiting for an event that already fired
+  const partRef = (url: string) => (el: HTMLImageElement | null) => {
+    if (el?.complete && el.naturalWidth > 0) markDecoded(url);
+  };
+  const kitReady = kitShown;
   const markPlateBroken = (url: string) => {
     console.error("[plates] image failed to load", url);
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
@@ -350,11 +390,29 @@ export default function ConfiguratorPdp({
   const stage = (
     <div className="relative h-full w-full overflow-hidden">
       {showPlate ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
-             width={1000} height={1100} decoding="async"
-             onError={() => markPlateBroken(plate!)}
-             className="h-full w-full object-contain bg-white" />
+        <div className="relative h-full w-full bg-white">
+          {/* the flat plate: first paint, and what stays if the kit never arrives */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+               width={1000} height={1100} decoding="async"
+               onError={() => markPlateBroken(plate!)}
+               className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200
+                           ${kitReady ? "opacity-0" : "opacity-100"}`} />
+          {/* the kit, stacked in z-order. Every part was written on the plate's
+              own canvas, so they need no positioning here -- they line up by
+              construction, which is what keeps the bottle still. */}
+          {kitParts?.map((part) => (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={part.slot} src={part.image.url}
+                 alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}
+                 width={part.image.width} height={part.image.height} decoding="async"
+                 ref={partRef(part.image.url)}
+                 onLoad={() => markDecoded(part.image.url)}
+                 style={{ zIndex: part.zOrder }}
+                 className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200
+                             ${kitReady ? "opacity-100" : "opacity-0"}`} />
+          ))}
+        </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img src={photoFallback!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
