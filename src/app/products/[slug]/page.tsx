@@ -64,7 +64,10 @@ async function loadPlatesBySku(): Promise<Record<string, { image: string; imageC
     for (const family of await loadPlateFamilies()) {
         const manifest = await loadPlateFamily(family.id);
         for (const v of manifest?.variants ?? []) {
-            if (v.graceSku) out[v.graceSku] = { image: v.image, imageCapOff: v.imageCapOff };
+            const plate = { image: v.image, imageCapOff: v.imageCapOff };
+            if (v.graceSku) out[v.graceSku] = plate;
+            // the plate's own name is the website SKU (the PSD stem)
+            if (v.sku && !out[v.sku]) out[v.sku] = plate;
         }
     }
     return out;

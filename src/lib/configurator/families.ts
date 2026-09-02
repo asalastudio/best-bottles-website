@@ -29,6 +29,9 @@ export type ConfiguratorFamily = {
    *  turquoise/red only on 17-415 (Spry PSD folders per finish). */
   trims?: string[];
   bodyDefault: string;
+  /** sells through the guided page on its PLATES alone -- no approved
+   *  geometry, so the stage never offers 3D and preloads nothing */
+  photoOnly?: boolean;
   /** colourways that live on their own mesh (flutes etc.) */
   bodyForGlass?: Partial<Record<GlassPresetId, string>>;
   slugColour: Partial<Record<GlassPresetId, string>>;
@@ -199,10 +202,45 @@ export const CONFIGURATOR_FAMILIES: ConfiguratorFamily[] = [
                        lotionpump: "pump", reducer: "reducer" },
     buildSlug: (c, cl) => `elegant-100ml-${c}-18-415-${cl}`,
   },
+  {
+    // Diva 46 ml: a PHOTO-ONLY guided family. Its 46 clear-glass plates
+    // (public/paper-doll/diva-46-clear) cover every closure it sells --
+    // reducer, spray pump, lotion pump, dropper, vintage bulb, bulb + tassel.
+    // No geometry exists, so this entry carries no body and never shows 3D;
+    // it is here so Diva sells through the same guided page as the 9 mL.
+    key: "diva46",
+    finish: "18-415",
+    photoOnly: true,
+    slugRe: /^diva-46ml-(clear|frosted)-18-415-(perfumespray|lotionpump|reducer|dropper|antiquespray|antiquespray-tassel)$/,
+    glasses: ["clear", "frosted"],
+    bases: ["none", "reducer", "dropper", "sprayer", "pump", "antique", "antiqueTassel"],
+    bodyDefault: "",
+    slugColour: { clear: "clear", frosted: "frosted" },
+    slugClosure: { reducer: "reducer", dropper: "dropper", sprayer: "perfumespray",
+                   pump: "lotionpump", antique: "antiquespray",
+                   antiqueTassel: "antiquespray-tassel" },
+    // the committed closure is read off the LAST slug token, so the tassel
+    // page reads as "tassel"
+    closureFromSlug: {
+      perfumespray: "sprayer", lotionpump: "pump", reducer: "reducer",
+      dropper: "dropper", antiquespray: "antique", tassel: "antiqueTassel",
+    },
+    buildSlug: (c, cl) => `diva-46ml-${c}-18-415-${cl}`,
+  },
 ];
 
 export function familyForSlug(slug: string): ConfiguratorFamily | null {
   return CONFIGURATOR_FAMILIES.find((f) => f.slugRe.test(slug)) ?? null;
+}
+
+/** The closure token a sibling slug must carry for this family, read from
+ *  the current slug. Tokens are not always one word (Diva's tassel page is
+ *  "...-antiquespray-tassel"), so the last word only identifies the BASE;
+ *  the registry writes the full token back. */
+export function closureTokenFromSlug(f: ConfiguratorFamily, slug: string): string {
+  const last = slug.split("-").pop() ?? "";
+  const base = f.closureFromSlug[last];
+  return (base && f.slugClosure[base]) || last;
 }
 
 export function glassFromSlug(f: ConfiguratorFamily, slug: string): GlassPresetId {

@@ -1,11 +1,5 @@
 [
   {
-    "id": "diva-46-clear",
-    "name": "Diva 46 ml \u2014 Clear",
-    "neckFinish": "18-415",
-    "variantCount": 46
-  },
-  {
     "id": "cylinder-50ml-clear",
     "name": "Cylinder 50 ml \u2014 Clear",
     "neckFinish": "18-415",
@@ -16,5 +10,17 @@
     "name": "Cylinder 9 mL \u2014 17-415",
     "neckFinish": "17-415",
     "variantCount": 145
+  },
+  {
+    "id": "diva-46-clear",
+    "name": "Diva 46 ml \u2014 Clear",
+    "neckFinish": "18-415",
+    "variantCount": 46
+  },
+  {
+    "id": "diva-46-frosted",
+    "name": "Diva 46 ml \u2014 Frosted",
+    "neckFinish": "18-415",
+    "variantCount": 43
   }
 ]

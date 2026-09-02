@@ -23,7 +23,7 @@ import {
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
-import { familyForSlug, glassFromSlug } from "@/lib/configurator/families";
+import { closureTokenFromSlug, familyForSlug, glassFromSlug } from "@/lib/configurator/families";
 import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
@@ -1096,8 +1096,16 @@ export default function ProductDetailClient({
             (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
             (primaryGraceSku && variant.graceSku === primaryGraceSku)
         );
-        return explicitPrimary ?? variants.find(hasPreferredProductImage) ?? null;
-    }, [variants, group?.primaryWebsiteSku, group?.primaryGraceSku]);
+        // The guided stage leads with the plate for the selected SKU. When
+        // the group's nominal primary has none (the Diva tassel's primary is
+        // a decorative-ring SKU that was never photographed), open on the
+        // first variant that does, so the customer meets a photograph, not
+        // a fallback.
+        const hasPlate = (variant: ProductVariant) =>
+            Boolean(platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined));
+        if (explicitPrimary && hasPlate(explicitPrimary)) return explicitPrimary;
+        return variants.find(hasPlate) ?? explicitPrimary ?? variants.find(hasPreferredProductImage) ?? null;
+    }, [variants, group?.primaryWebsiteSku, group?.primaryGraceSku, platesBySku]);
 
     // Guard stale deep links like ?applicator=spray on non-spray groups (e.g. decorative cap bottles).
     useEffect(() => {
@@ -1191,19 +1199,32 @@ export default function ProductDetailClient({
             ? variantsForApplicator.find((v) => v._id === selectedVariantId)
             : null;
         if (explicit) return explicit;
+        const hasPlate = (v: ProductVariant) =>
+            Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined));
+        const matches = variants.filter(
+            (v) =>
+                v.applicator === activeApplicator &&
+                resolveVariantCapFinish(v).swatchName === activeCapColor &&
+                (capStyleOptions.length === 0 || v.capStyle === activeCapStyle) &&
+                (v.trimColor || "Standard") === activeTrimColor
+        );
         return (
-            variants.find(
-                (v) =>
-                    v.applicator === activeApplicator &&
-                    resolveVariantCapFinish(v).swatchName === activeCapColor &&
-                    (capStyleOptions.length === 0 || v.capStyle === activeCapStyle) &&
-                    (v.trimColor || "Standard") === activeTrimColor
-            ) ??
+            matches.find(hasPlate) ??
+            matches[0] ??
+            variants.find((v) => v.applicator === activeApplicator && hasPlate(v)) ??
             variants.find((v) => v.applicator === activeApplicator) ??
             variants[0] ??
             null
         );
-    }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, activeCapStyle, activeTrimColor, capStyleOptions]);
+    }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, activeCapStyle, activeTrimColor, capStyleOptions, platesBySku]);
+
+    // the static plate for the selected SKU (public/paper-doll), by graceSku
+    // first and websiteSku second -- the two keys the plate manifests carry
+    const selectedPlate = selectedVariant
+        ? platesBySku[selectedVariant.graceSku]
+            ?? (selectedVariant.websiteSku ? platesBySku[selectedVariant.websiteSku] : undefined)
+            ?? null
+        : null;
 
     const productDescription = chooseCanonicalProductDescription({
         groupDescription: group?.groupDescription ?? null,
@@ -1567,8 +1588,9 @@ export default function ProductDetailClient({
                         <div className="mb-8 lg:mb-14 lg:-mx-4 xl:-mx-10 2xl:-mx-16">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
-                                plateImage={selectedVariant?.graceSku ? platesBySku[selectedVariant.graceSku]?.image ?? null : null}
-                                plateImageCapOff={selectedVariant?.graceSku ? platesBySku[selectedVariant.graceSku]?.imageCapOff ?? null : null}
+                                variantImageUrl={usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
+                                plateImage={selectedPlate?.image ?? null}
+                                plateImageCapOff={selectedPlate?.imageCapOff ?? null}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
                                 priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin ?? null}
@@ -1598,7 +1620,7 @@ export default function ProductDetailClient({
                                 glassOptions={(() => {
                                     const f = familyForSlug(group.slug ?? "");
                                     if (!f) return [];
-                                    const token = (group.slug ?? "").split("-").pop() ?? "";
+                                    const token = closureTokenFromSlug(f, group.slug ?? "");
                                     const current = glassFromSlug(f, group.slug ?? "");
                                     return f.glasses.map((g) => {
                                         const colour = f.slugColour[g];

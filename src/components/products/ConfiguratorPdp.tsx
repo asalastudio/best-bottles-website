@@ -107,6 +107,9 @@ type Sibling = {
   displayName?: string | null;
 };
 
+/** sessionStorage key for the stage mode ("3d" | "photo") */
+const STAGE_MODE_KEY = "bb:pdp-stage";
+
 export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
   siblings, heroImageUrl, onAddToCart, onAskGrace,
@@ -114,13 +117,16 @@ export default function ConfiguratorPdp({
   neckSize, capacityText, skuLabel, price10, price12, priceTiers,
   sampleHref, quoteHref, qty = 1, onQtyChange,
   capOptions, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
-  plateImage = null, plateImageCapOff = null,
+  plateImage = null, plateImageCapOff = null, variantImageUrl = null,
 }: {
   currentSlug: string;
   /** static paper-doll plate for the SELECTED SKU (public/paper-doll): the
    *  stage leads with this photograph; 3D is a toggle on top of it */
   plateImage?: string | null;
   plateImageCapOff?: string | null;
+  /** the selected SKU's catalogue photograph: the stage's fallback when the
+   *  SKU has no plate (never photographed as a plate, or not built yet) */
+  variantImageUrl?: string | null;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -172,7 +178,24 @@ export default function ConfiguratorPdp({
   // Photographs lead; the 3D viewer is opened by the customer, never for
   // them. Nothing about it -- its chunk, a WebGL context, the GLB -- is
   // paid for until this flips.
-  const [show3d, setShow3d] = useState(false);
+  //
+  // The choice outlives the page. A glass or closure swap NAVIGATES to the
+  // sibling slug, and Next remounts the [slug] segment, so plain state would
+  // drop the customer back to the photograph every time they changed
+  // colour in 3D (Jordan, 2026-09-01). The mode is kept for the session and
+  // re-applied on mount; the server always renders the photograph, so
+  // there is nothing to mismatch on hydration.
+  const [show3d, setShow3dState] = useState(false);
+  useEffect(() => {
+    try { if (window.sessionStorage.getItem(STAGE_MODE_KEY) === "3d") setShow3dState(true); } catch {}
+  }, []);
+  const setShow3d = (next: boolean | ((on: boolean) => boolean)) => {
+    setShow3dState((on) => {
+      const value = typeof next === "function" ? next(on) : next;
+      try { window.sessionStorage.setItem(STAGE_MODE_KEY, value ? "3d" : "photo"); } catch {}
+      return value;
+    });
+  };
   useEffect(() => { setGlassOverride(null); }, [currentSlug]);
   const glass: GlassPresetId = glassOverride ?? slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
@@ -201,14 +224,15 @@ export default function ConfiguratorPdp({
   // a roll-on SKU with a cap colourway IS a capped product ("Pink Dotted
   // Cap") — render the cap by default; the toggle can still remove it
   useEffect(() => {
-    setWithCap(committedBase === "roller" && (capOptions?.length ?? 0) > 0);
+    setWithCap((committedBase === "roller" || committedBase === "reducer")
+      && (capOptions?.length ?? 0) > 0);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSlug, committedBase]);
 
   // warm the sibling colourway bodies: same family, so a swap should not
   // hit a loader
   useEffect(() => {
-    if (!fam) return;
+    if (!fam || fam.photoOnly) return;
     const ids = new Set<string>([fam.bodyDefault]);
     for (const g of fam.glasses) {
       const b = fam.bodyForGlass?.[g];
@@ -269,10 +293,13 @@ export default function ConfiguratorPdp({
 
   const antiqueSibling = siblingFor("antique");
   // bulb has no live 3D (parked): the stage shows the product photo
+  // Without a plate the stage shows a photograph, never nothing: the SKU's
+  // own catalogue image first, then the group's hero.
   const photoFallback =
-    activeBase === "antique" || activeBase === "antiqueTassel"
+    variantImageUrl
+    ?? (activeBase === "antique" || activeBase === "antiqueTassel"
       ? (antiqueSibling?.heroImageUrl ?? heroImageUrl ?? null)
-      : null;
+      : (heroImageUrl ?? null));
 
   const commit = (base: ClosureBase) => {
     if (!fam) return;
@@ -294,7 +321,8 @@ export default function ConfiguratorPdp({
     none: "capped", roller: "rollerCapped", reducer: "reducerCapped",
     sprayer: "sprayerCapped", pump: "pumpCapped",
   };
-  const canCap = CAPPABLE[activeBase] != null;
+  const canCap = CAPPABLE[activeBase] != null
+    && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff));
   const closureFor = (base: ClosureBase) =>
     ((withCap && CAPPABLE[base]) || CLOSURE_MODE[base]) as
       import("./Bottle3DViewer").ClosureMode;
@@ -304,19 +332,24 @@ export default function ConfiguratorPdp({
   /* ---------------------------------------------------------- the stage */
   // the plate for the selected SKU; cap-off plate when the cap is lifted
   const plate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
-  const showPlate = !photoFallback && !show3d && Boolean(plate);
-  const showLive3d = !photoFallback && fam && !showPlate;
+  // A photo-only family (no approved geometry) never shows 3D; otherwise the
+  // customer opens it. A plate outranks the catalogue photo: it is the exact
+  // configuration, the photo is the group's hero.
+  const has3d = Boolean(fam) && !fam?.photoOnly;
+  const showPlate = !(show3d && has3d) && Boolean(plate);
+  const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
+  const showLive3d = !showPlate && !showPhoto && has3d;
   const stage = (
     <div className="relative h-full w-full overflow-hidden">
-      {photoFallback ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={photoFallback} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
-             className="h-full w-full object-cover" />
-      ) : showPlate ? (
+      {showPlate ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
              className="h-full w-full object-contain bg-white" />
-      ) : showLive3d ? (
+      ) : showPhoto ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img src={photoFallback!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+             className="h-full w-full object-cover" />
+      ) : showLive3d && fam ? (
         <Bottle3DViewer
           bodyId={fam.bodyForGlass?.[glass] ?? fam.bodyDefault}
           finish={fam.finish}
@@ -341,23 +374,6 @@ export default function ConfiguratorPdp({
         </span>
       </div>
 
-      {/* 3D is opt-in: a toggle on the photograph, never in front of it */}
-      {!photoFallback && fam && plateImage ? (
-        <button
-          type="button"
-          onClick={() => setShow3d((on) => !on)}
-          aria-pressed={show3d}
-          className="absolute top-4 right-4 flex min-h-10 items-center gap-2 rounded-[3px]
-                     border border-white/40 px-3 text-xs font-semibold uppercase
-                     tracking-label text-white backdrop-blur transition-colors
-                     hover:bg-white hover:text-obsidian"
-          style={{ background: show3d ? "rgba(29,29,31,.55)" : "rgba(29,29,31,.35)" }}
-        >
-          <Cube className="h-4 w-4" weight="light" />
-          {show3d ? "Back to photo" : "View in 3D"}
-        </button>
-      ) : null}
-
       {/* drag affordance */}
       {showLive3d && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center
@@ -368,6 +384,22 @@ export default function ConfiguratorPdp({
       )}
     </div>
   );
+
+  // 3D is opt-in, and the switch sits right below the image (Jordan,
+  // 2026-09-01) -- never in front of the photograph
+  const stageToggle = has3d && (plateImage || photoFallback) ? (
+    <button
+      type="button"
+      onClick={() => setShow3d((on) => !on)}
+      aria-pressed={show3d}
+      className="mt-3 flex min-h-11 w-full items-center justify-center gap-2 border
+                 border-obsidian px-5 text-xs font-semibold uppercase tracking-label
+                 text-obsidian transition-colors hover:bg-obsidian hover:text-white"
+    >
+      <Cube className="h-4 w-4" weight="light" />
+      {show3d ? "Back to photo" : "View in 3D"}
+    </button>
+  ) : null;
 
   /* ----------------------------------------------- swatch rows (seam) */
   const finishRow = (compact = false) => {
@@ -536,7 +568,9 @@ export default function ConfiguratorPdp({
         )}
       </div>
 
-      <div className="flex gap-2.5 mt-3 overflow-x-auto pb-1 [scrollbar-width:none]">
+      {/* every closure the family sells sits on ONE row: the panel is wide
+          enough for six (the Diva) because the stage yields width to it */}
+      <div className="flex gap-2.5 mt-3 pb-1">
         {ranked.map((base) => {
           const meta = base !== "none" ? CLOSURE_META[base] : null;
           const sib = siblingFor(base);
@@ -796,6 +830,7 @@ export default function ConfiguratorPdp({
       <div className="mx-4 aspect-[10/13] rounded-[2px] overflow-hidden relative">
         {stage}
       </div>
+      {stageToggle ? <div className="mx-4">{stageToggle}</div> : null}
 
       {/* summary chip */}
       <div className="mx-4 mt-4 flex items-center justify-between gap-3 bg-white
@@ -922,7 +957,7 @@ export default function ConfiguratorPdp({
     <section className="w-full">
       {/* desktop — glass rail | stage | buy column. The rail runs down the
           left of the viewport (Jordan) and takes lifestyle tiles later. */}
-      <div className="hidden lg:grid grid-cols-[104px_minmax(0,1.15fr)_minmax(0,1fr)]
+      <div className="hidden lg:grid grid-cols-[96px_minmax(0,1fr)_minmax(0,1.2fr)]
                       gap-6 xl:gap-9 h-[calc(100vh-140px)] min-h-[620px] max-h-[880px]">
         <div className="flex flex-col gap-2.5 overflow-y-auto pr-0.5">
           {(glassOptions ?? []).map((g) => (
@@ -956,7 +991,14 @@ export default function ConfiguratorPdp({
             </button>
           ))}
         </div>
-        <div className="relative rounded-sm overflow-hidden">{stage}</div>
+        <div>
+          {/* The stage owns its height. It used to borrow the grid row's,
+              which the toggle's wrapper cut off -- and the 3D viewer fills
+              its parent, so it collapsed to a strip. 10/11 is the plate's
+              aspect, so photo and 3D are always the same size. */}
+          <div className="relative aspect-[10/11] rounded-sm overflow-hidden">{stage}</div>
+          {stageToggle}
+        </div>
         {stepPanel}
       </div>
       {mobile}

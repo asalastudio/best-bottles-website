@@ -30,6 +30,9 @@ FAMILIES = [
     {"id": "diva-46-clear",     "name": "Diva 46 ml — Clear",
      "psd_glob": ("2. 18-415 Bottles", "25*", "1.*PSD"),
      "body": "Diva46",  "neck_finish": "18-415"},
+    {"id": "diva-46-frosted",   "name": "Diva 46 ml — Frosted",
+     "psd_glob": ("2. 18-415 Bottles", "26*", "1.*PSD"),
+     "body": "DivaFrst46", "neck_finish": "18-415"},
     {"id": "cylinder-50ml-clear", "name": "Cylinder 50 ml — Clear",
      "psd_glob": ("2. 18-415 Bottles", "2. Cylindrical 50ml*", "1.*PSD*"),
      "body": "Cyl50",   "neck_finish": "18-415"},
@@ -417,8 +420,15 @@ def main():
             index.append({"id": man["id"], "name": man["name"],
                           "neckFinish": man["neckFinish"],
                           "variantCount": len(man["variants"])})
+    # The index lists every family ON DISK, not just the ones this run
+    # built -- a single-family rebuild must never hide the others.
     out = os.path.join(REPO, "public", "paper-doll", "families.json")
-    os.makedirs(os.path.dirname(out), exist_ok=True)
+    index = []
+    for mp in sorted(glob.glob(os.path.join(REPO, "public", "paper-doll", "*", "manifest.json"))):
+        man = json.load(open(mp))
+        index.append({"id": man["id"], "name": man["name"],
+                      "neckFinish": man["neckFinish"],
+                      "variantCount": len(man["variants"])})
     with open(out, "w") as fh:
         json.dump(index, fh, indent=2)
     print(f"\nindex: {len(index)} families -> public/paper-doll/families.json")
