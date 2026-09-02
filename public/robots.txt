@@ -1,9 +1,6 @@
 # *
 User-agent: *
 Allow: /
-
-# *
-User-agent: *
 Disallow: /api/
 Disallow: /portal/
 Disallow: /studio/
@@ -29,8 +26,8 @@ User-agent: anthropic-ai
 Allow: /
 
 # Host
-Host: https://www.bestbottles.com
+Host: https://best-bottles-website.vercel.app
 
 # Sitemaps
-Sitemap: https://www.bestbottles.com/sitemap.xml
-Sitemap: https://www.bestbottles.com/server-sitemap.xml
+Sitemap: https://best-bottles-website.vercel.app/sitemap.xml
+Sitemap: https://best-bottles-website.vercel.app/server-sitemap.xml

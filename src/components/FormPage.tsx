@@ -90,8 +90,8 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
                 setRfqLineItems(normalized);
                 setValues((current) => ({
                     ...current,
-                    products: current.products || normalized.map((item) => `${item.name} (SKU: ${item.websiteSku ?? item.sku})`).join("\n"),
-                    quantities: current.quantities || normalized.map((item) => `${item.websiteSku ?? item.sku}: ${item.quantity}`).join("\n"),
+                    products: current.products || normalized.map((item) => `${item.name} (SKU: ${item.sku ?? item.websiteSku})`).join("\n"),
+                    quantities: current.quantities || normalized.map((item) => `${item.sku ?? item.websiteSku}: ${item.quantity}`).join("\n"),
                 }));
             }, 0);
         } catch {
@@ -116,8 +116,8 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
         e.preventDefault();
         setStatus("submitting");
         setErrorMsg("");
-        const structuredProducts = rfqLineItems.map((item) => `${item.name} (SKU: ${item.websiteSku ?? item.sku})`).join("\n");
-        const structuredQuantities = rfqLineItems.map((item) => `${item.websiteSku ?? item.sku}: ${item.quantity}${item.notes ? ` - ${item.notes}` : ""}`).join("\n");
+        const structuredProducts = rfqLineItems.map((item) => `${item.name} (SKU: ${item.sku ?? item.websiteSku})`).join("\n");
+        const structuredQuantities = rfqLineItems.map((item) => `${item.sku ?? item.websiteSku}: ${item.quantity}${item.notes ? ` - ${item.notes}` : ""}`).join("\n");
 
         try {
             await submitForm({
@@ -243,7 +243,7 @@ export default function FormPage({ formType, title, subtitle, fields }: FormPage
                                                     <div className="min-w-0">
                                                         <p className="text-sm font-semibold text-obsidian leading-snug">{item.name}</p>
                                                         <p className="mt-1 text-[10px] uppercase tracking-wider text-slate font-mono">
-                                                            SKU {item.websiteSku ?? item.sku}
+                                                            SKU {item.sku ?? item.websiteSku}
                                                         </p>
                                                         <p className="mt-1 text-xs text-slate">
                                                             {[item.family, item.capacity, item.color, item.applicator, item.capColor].filter(Boolean).join(" · ")}

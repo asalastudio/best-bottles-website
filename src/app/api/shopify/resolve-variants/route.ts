@@ -5,8 +5,10 @@ import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
 /**
  * POST /api/shopify/resolve-variants
  *
- * Takes an array of { sku, websiteSku, shopifyVariantId, quantity } items and returns:
- * - resolved variant info for fallback SKU lines
+ * Takes an array of { sku, websiteSku, shopifyVariantId, quantity } items.
+ * `sku` is the canonical Grace SKU; `websiteSku` is legacy context only.
+ * Returns:
+ * - resolved variant info for fallback Grace SKU lines
  * - a ready-to-use Shopify checkout URL
  */
 export async function POST(req: NextRequest) {

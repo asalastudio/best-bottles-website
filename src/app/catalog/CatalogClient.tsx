@@ -1379,7 +1379,7 @@ export default function CatalogClient({
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
         for (const row of activeResult.primarySkus ?? []) {
-            next.set(row.groupId, row.websiteSku ?? row.graceSku ?? "—");
+            next.set(row.groupId, row.graceSku ?? row.websiteSku ?? "—");
         }
         return next;
     }, [activeResult.primarySkus]);

@@ -26,6 +26,7 @@ import {
     type GraceContextValue,
     type GraceStatus,
     type GraceMessage,
+    type GraceAction,
     type PanelMode,
     type PageContext,
     type BrowsingHistoryEntry,
@@ -380,6 +381,33 @@ function nextMsgId(): string {
     return `grace-msg-${Date.now()}-${++msgCounter}`;
 }
 
+function graceMessageActions(message: GraceMessage): GraceAction[] {
+    return message.actions ?? (message.action ? [message.action] : []);
+}
+
+function mergeGraceActions(message: GraceMessage, actions: GraceAction[]): GraceMessage {
+    if (actions.length === 0) return message;
+    const mergedActions = [...graceMessageActions(message), ...actions];
+    return { ...message, action: mergedActions[0], actions: mergedActions };
+}
+
+function findPendingCartProposal(message: GraceMessage): Extract<GraceAction, { type: "proposeCartAdd" }> | undefined {
+    return graceMessageActions(message).find(
+        (action): action is Extract<GraceAction, { type: "proposeCartAdd" }> =>
+            action.type === "proposeCartAdd" && action.awaitingConfirmation,
+    );
+}
+
+function updateCartProposalAction(
+    message: GraceMessage,
+    updater: (action: Extract<GraceAction, { type: "proposeCartAdd" }>) => GraceAction | null,
+): GraceMessage {
+    const updatedActions = graceMessageActions(message)
+        .map((action) => action.type === "proposeCartAdd" ? updater(action) : action)
+        .filter((action): action is GraceAction => Boolean(action));
+    return { ...message, action: updatedActions[0], actions: updatedActions.length ? updatedActions : undefined };
+}
+
 const GRACE_TOOL_TIMEOUT_MS = 12000;
 
 async function fetchJsonWithTimeout<T>(
@@ -494,14 +522,16 @@ function GraceProviderBase({
 
     // Direct message injection (bypass ElevenLabs) — used by client-side flows
     // like the image-upload vision analysis that don't need agent narration.
-    const appendInlineMessage = useCallback((msg: { role: "user" | "grace"; content: string; action?: import("@/components/GraceContext").GraceAction; attachments?: import("@/components/GraceContext").GraceAttachment[] }) => {
+    const appendInlineMessage = useCallback((msg: { role: "user" | "grace"; content: string; action?: import("@/components/GraceContext").GraceAction; actions?: import("@/components/GraceContext").GraceAction[]; attachments?: import("@/components/GraceContext").GraceAttachment[] }) => {
+        const actions = msg.actions ?? (msg.action ? [msg.action] : undefined);
         setMessages((prev) => [
             ...prev,
             {
                 role: msg.role,
                 content: msg.content,
                 id: nextMsgId(),
-                action: msg.action,
+                action: actions?.[0],
+                actions,
                 attachments: msg.attachments,
             },
         ]);
@@ -1746,20 +1776,17 @@ function GraceProviderBase({
             return;
         }
 
-        // Assistant message finalization — attach the OLDEST queued GraceAction.
-        // FIFO so parallel tool calls (e.g. two displayProductCard calls in one
-        // turn) each get attached to a successive Grace message instead of the
-        // later call overwriting the earlier one.
+        // Assistant message finalization — attach every queued GraceAction for
+        // this turn. ElevenLabs can call several display tools before emitting
+        // one final assistant message, so a single-action slot strands later UI.
         streamingFinalizedRef.current = true;
         setIsAwaitingReply(false);
         setStreamingText("");
-        const action = pendingActionsRef.current.shift() ?? null;
-        if (action) {
+        const actions = pendingActionsRef.current.splice(0);
+        if (actions.length) {
             console.log(
-                "[Grace] handleMessage attaching action:",
-                action.type,
-                "remaining in queue:",
-                pendingActionsRef.current.length,
+                "[Grace] handleMessage attaching actions:",
+                actions.map((action) => action.type).join(", "),
                 "to message:",
                 text.slice(0, 60),
             );
@@ -1770,16 +1797,15 @@ function GraceProviderBase({
                 last?.role === "grace"
                 && normalizeGraceMessageText(last.content) === norm
             ) {
-                // Same content already finalized — but the action might be new.
-                // Attach it to the existing message if it doesn't already carry one.
-                if (action && !last.action) {
-                    return prev.map((m, i) => i === prev.length - 1 ? { ...m, action } : m);
+                // Same content already finalized — but actions might be new.
+                if (actions.length) {
+                    return prev.map((m, i) => i === prev.length - 1 ? mergeGraceActions(m, actions) : m);
                 }
                 return prev;
             }
             return [
                 ...prev,
-                { role, content: text, id: nextMsgId(), action: action ?? undefined },
+                { role, content: text, id: nextMsgId(), action: actions[0], actions: actions.length ? actions : undefined },
             ];
         });
     }, []);
@@ -1799,13 +1825,11 @@ function GraceProviderBase({
                         const final = (prev + stopText).trim();
                         if (final) {
                             const n = normalizeGraceMessageText(final);
-                            const action = pendingActionsRef.current.shift() ?? null;
-                            if (action) {
+                            const actions = pendingActionsRef.current.splice(0);
+                            if (actions.length) {
                                 console.log(
-                                    "[Grace] handleAgentChatResponsePart(stop) attaching action:",
-                                    action.type,
-                                    "remaining in queue:",
-                                    pendingActionsRef.current.length,
+                                    "[Grace] handleAgentChatResponsePart(stop) attaching actions:",
+                                    actions.map((action) => action.type).join(", "),
                                     "to:",
                                     final.slice(0, 60),
                                 );
@@ -1813,14 +1837,14 @@ function GraceProviderBase({
                             setMessages((msgs) => {
                                 const last = msgs[msgs.length - 1];
                                 if (last?.role === "grace" && normalizeGraceMessageText(last.content) === n) {
-                                    if (action && !last.action) {
-                                        return msgs.map((m, i) => i === msgs.length - 1 ? { ...m, action } : m);
+                                    if (actions.length) {
+                                        return msgs.map((m, i) => i === msgs.length - 1 ? mergeGraceActions(m, actions) : m);
                                     }
                                     return msgs;
                                 }
                                 return [
                                     ...msgs,
-                                    { role: "grace" as const, content: final, id: nextMsgId(), action: action ?? undefined },
+                                    { role: "grace" as const, content: final, id: nextMsgId(), action: actions[0], actions: actions.length ? actions : undefined },
                                 ];
                             });
                         }
@@ -2029,8 +2053,10 @@ function GraceProviderBase({
 
     const confirmAction = useCallback((messageId: string) => {
         const message = messagesRef.current.find((m) => m.id === messageId);
-        if (!message?.action || message.action.type !== "proposeCartAdd" || !message.action.awaitingConfirmation) return;
-        const products = message.action.products;
+        if (!message) return;
+        const cartProposal = findPendingCartProposal(message);
+        if (!cartProposal) return;
+        const products = cartProposal.products;
         addToCart(products.map((p) => ({
             graceSku: p.graceSku,
             websiteSku: p.websiteSku ?? null,
@@ -2070,22 +2096,20 @@ function GraceProviderBase({
             });
         }
         setMessages((prev) => prev.map((m) => {
-            if (m.id !== messageId || m.action?.type !== "proposeCartAdd") return m;
+            if (m.id !== messageId) return m;
             return {
-                ...m,
+                ...updateCartProposalAction(m, (action) => ({ ...action, awaitingConfirmation: false })),
                 content: `${m.content}\n\nAdded to cart.`,
-                action: { ...m.action, awaitingConfirmation: false },
             };
         }));
     }, [addToCart]);
 
     const dismissAction = useCallback((messageId: string) => {
         setMessages((prev) => prev.map((m) => {
-            if (m.id !== messageId || m.action?.type !== "proposeCartAdd") return m;
+            if (m.id !== messageId || !findPendingCartProposal(m)) return m;
             return {
-                ...m,
+                ...updateCartProposalAction(m, () => null),
                 content: `${m.content}\n\nCart add dismissed.`,
-                action: undefined,
             };
         }));
     }, []);

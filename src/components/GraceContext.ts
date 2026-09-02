@@ -182,7 +182,10 @@ export interface GraceMessage {
     role: "user" | "grace";
     content: string;
     id: string;
+    /** Back-compat single action. Prefer `actions` for new rendering paths. */
     action?: GraceAction;
+    /** Rich UI actions emitted for this Grace turn, in the same order tools fired. */
+    actions?: GraceAction[];
     /** Pinned voice notes (Pattern K). Renders with a 2px gold left border. */
     pinned?: boolean;
     attachments?: GraceAttachment[];
@@ -285,7 +288,7 @@ export interface GraceContextValue {
     /** Append a message + optional action directly to the conversation,
      * bypassing ElevenLabs. Used by client-side flows like image-upload
      * vision analysis that don't need round-trip narration. */
-    appendInlineMessage: (msg: { role: "user" | "grace"; content: string; action?: GraceAction; attachments?: GraceAttachment[] }) => void;
+    appendInlineMessage: (msg: { role: "user" | "grace"; content: string; action?: GraceAction; actions?: GraceAction[]; attachments?: GraceAttachment[] }) => void;
     isOpen: boolean;
     open: () => void;
     close: () => void;

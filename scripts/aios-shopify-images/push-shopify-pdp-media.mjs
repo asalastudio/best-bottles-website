@@ -31,6 +31,7 @@
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --manifest path/to.csv --apply
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --family Cylinder --replace --apply
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --replace --limit 1   # dry-run replace plan
+ *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --manifest path/to.csv --allow-shopify-cdn-evidence --apply
  *   node scripts/aios-shopify-images/push-shopify-pdp-media.mjs --json > report.json
  */
 
@@ -122,6 +123,7 @@ const REPLACE = process.argv.includes("--replace");
 // op, so opt in explicitly once you trust the replace plan.
 const DELETE_OLD_MEDIA = process.argv.includes("--delete-old-media");
 const JSON_MODE = process.argv.includes("--json");
+const ALLOW_SHOPIFY_CDN_EVIDENCE = process.argv.includes("--allow-shopify-cdn-evidence");
 // Bone-background QA gate: on by default; rejects non-cream/bone canvases before
 // they reach Shopify. --skip-bg-gate bypasses it; --bg-gate-allow-review lets
 // ambiguous/undecodable images through instead of holding them back.
@@ -316,13 +318,15 @@ async function deleteProductMedia(productId, mediaIds) {
 async function main() {
     const manifestRows = parseCsv(readFileSync(MANIFEST, "utf8"));
     const convex = new ConvexHttpClient(CONVEX_URL);
+    const trustedEvidenceHosts = new Set(ALLOWED_EVIDENCE_HOSTS);
+    if (ALLOW_SHOPIFY_CDN_EVIDENCE) trustedEvidenceHosts.add("cdn.shopify.com");
 
     // Filter manifest to trusted generated evidence.
     const skippedUntrustedSource = [];
     let rows = manifestRows.filter((r) => {
         if (FAMILY && r.family !== FAMILY) return false;
         const h = host(r.coverageEvidenceUrl);
-        if (!h || !ALLOWED_EVIDENCE_HOSTS.has(h)) {
+        if (!h || !trustedEvidenceHosts.has(h)) {
             skippedUntrustedSource.push({ graceSku: r.graceSku, family: r.family, evidenceHost: h });
             return false;
         }
@@ -517,6 +521,7 @@ async function main() {
         family: FAMILY ?? "ALL",
         replace: REPLACE,
         deleteOldMedia: DELETE_OLD_MEDIA,
+        allowShopifyCdnEvidence: ALLOW_SHOPIFY_CDN_EVIDENCE,
         manifest: MANIFEST,
         convexUrl: CONVEX_URL,
         shopifyDomain: SHOPIFY_DOMAIN,

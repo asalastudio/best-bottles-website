@@ -34,8 +34,10 @@ export default function GraceChatMessage({ message }: GraceChatMessageProps) {
         );
     }
 
-    if (message.action) {
-        console.log("[Grace] GraceChatMessage rendering action:", message.action.type, "for message:", message.id);
+    const actions = message.actions ?? (message.action ? [message.action] : []);
+
+    if (actions.length) {
+        console.log("[Grace] GraceChatMessage rendering actions:", actions.map((action) => action.type).join(", "), "for message:", message.id);
     }
     return (
         <div
@@ -45,13 +47,14 @@ export default function GraceChatMessage({ message }: GraceChatMessageProps) {
             <p className="text-[14.5px] leading-[1.65] text-obsidian/85 whitespace-pre-wrap font-sans">
                 {message.content}
             </p>
-            {message.action && (
+            {actions.map((action, index) => (
                 <GraceActionRenderer
-                    action={message.action}
+                    key={`${message.id}-${action.type}-${index}`}
+                    action={action}
                     onConfirmAction={() => confirmAction(message.id)}
                     onDismissAction={() => dismissAction(message.id)}
                 />
-            )}
+            ))}
         </div>
     );
 }

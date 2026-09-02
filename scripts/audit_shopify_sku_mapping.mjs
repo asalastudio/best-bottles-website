@@ -137,6 +137,10 @@ function isPurchasable(product) {
     return Boolean(product?.graceSku) && typeof product.webPrice1pc === "number" && product.webPrice1pc > 0;
 }
 
+function isCanonicalGraceSku(value) {
+    return /^[A-Z]{2,3}(?:-[A-Z0-9.]+){2,}$/.test(String(value ?? "").trim());
+}
+
 function sample(rows, count = 25) {
     return rows.slice(0, count);
 }
@@ -163,11 +167,19 @@ async function main() {
     const mismatchedStoredShopifyVariantId = [];
     const duplicateShopifySkuMatches = [];
     const orderableButNotCheckoutReady = [];
+    const nonCanonicalGraceSku = [];
 
     for (const product of purchasableProducts) {
+        const hasCanonicalGraceSku = isCanonicalGraceSku(product.graceSku);
         const matches = shopifyBySku.get(product.graceSku) ?? [];
         const storedId = product.shopifyVariantId ?? null;
         const isOrderable = product.stockStatus === "In Stock" || product.stockStatus == null;
+
+        if (!hasCanonicalGraceSku) {
+            nonCanonicalGraceSku.push(product);
+            if (isOrderable) orderableButNotCheckoutReady.push(product);
+            continue;
+        }
 
         if (matches.length === 0) {
             unmatched.push(product);
@@ -205,9 +217,16 @@ async function main() {
             productsWithShopifyVariantIdMissing: missingStoredShopifyVariantId.length,
             productsWithShopifyVariantIdMismatch: mismatchedStoredShopifyVariantId.length,
             productsMarkedOrderableButNotCheckoutReady: orderableButNotCheckoutReady.length,
+            productsWithNonCanonicalGraceSku: nonCanonicalGraceSku.length,
         },
         samples: {
             unmatchedSkus: sample(unmatched).map((p) => ({ graceSku: p.graceSku, websiteSku: p.websiteSku, itemName: p.itemName })),
+            nonCanonicalGraceSku: sample(nonCanonicalGraceSku).map((p) => ({
+                graceSku: p.graceSku,
+                websiteSku: p.websiteSku,
+                itemName: p.itemName,
+                stockStatus: p.stockStatus,
+            })),
             duplicateShopifySkuMatches: sample(duplicateShopifySkuMatches).map((row) => ({
                 graceSku: row.product.graceSku,
                 websiteSku: row.product.websiteSku,

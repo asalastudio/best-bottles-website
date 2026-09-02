@@ -3,7 +3,7 @@
  * Push Convex catalog → Shopify Plus.
  *
  * One Shopify product per Convex productGroup; each Convex product in the
- * group becomes a Shopify variant keyed on `graceSku` or `websiteSku`
+ * group becomes a Shopify variant keyed on canonical Codex `graceSku`
  * (checkout later uses the backfilled Shopify variant ID, not this SKU).
  *
  * v1 scope (deliberately minimal — goal: make checkout work, not perfect UX):
@@ -156,7 +156,8 @@ function buildProductSetInput(group, variants, status) {
     const missingSkuVariants = [];
     const variantKeyCounts = new Map();
     const shopifyVariants = variants.map((v) => {
-        const variantKey = v.graceSku || v.websiteSku;
+        const rawGraceSku = String(v.graceSku ?? "").trim();
+        const variantKey = isCanonicalGraceSku(rawGraceSku) ? rawGraceSku : "";
         const priceNum = v.webPrice1pc ?? null;
         if (priceNum == null) priceIssues.push(variantKey);
         if (!variantKey) missingSkuVariants.push(v._id ?? v.id ?? v.name ?? "(unknown variant)");
@@ -215,7 +216,12 @@ function manifestVariant(v) {
 }
 
 function variantSku(v) {
-    return v.graceSku ?? v.websiteSku ?? null;
+    const sku = String(v.graceSku ?? "").trim();
+    return isCanonicalGraceSku(sku) ? sku : null;
+}
+
+function isCanonicalGraceSku(value) {
+    return /^[A-Z]{2,3}(?:-[A-Z0-9.]+){2,}$/.test(String(value ?? "").trim());
 }
 
 function manifestVariantsWithShopifyIds(variants, syncedVariants) {
@@ -456,14 +462,14 @@ for (let i = 0; i < groups.length; i++) {
     summary.duplicateSkus.push(...duplicateSkus);
 
     if (missingSkuVariants.length) {
-        warn(`${idx} ${g.slug} — variants missing graceSku/websiteSku: ${missingSkuVariants.slice(0, 5).join(", ")}`);
+        warn(`${idx} ${g.slug} — variants missing/invalid canonical graceSku: ${missingSkuVariants.slice(0, 5).join(", ")}`);
         summary.failed++;
         recordRow(manifest, {
             slug: g.slug,
             displayName: g.displayName,
             status: "failed",
             operation,
-            reason: "missing_skus",
+            reason: "missing_or_invalid_canonical_grace_skus",
             missingSkuVariants,
             variantCount: variants.length,
             variants: variants.map(manifestVariant),
@@ -622,7 +628,7 @@ if (summary.priceIssues.length) {
     if (summary.priceIssues.length > 10) info(`  ...and ${summary.priceIssues.length - 10} more`);
 }
 if (summary.missingSkuVariants.length) {
-    warn(`${summary.missingSkuVariants.length} variants missing graceSku/websiteSku blocked sync:`);
+    warn(`${summary.missingSkuVariants.length} variants missing/invalid canonical graceSku blocked sync:`);
     for (const variant of summary.missingSkuVariants.slice(0, 10)) info(`  ${variant}`);
     if (summary.missingSkuVariants.length > 10) info(`  ...and ${summary.missingSkuVariants.length - 10} more`);
 }

@@ -1,6 +1,13 @@
+// Canonical site URL. Mirrors the resolution logic in src/lib/seo.ts so the
+// sitemap, robots.txt, and on-page canonical/OG tags always agree on ONE domain.
+// Set NEXT_PUBLIC_SITE_URL in the environment (Vercel project settings + .env.local).
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "") ||
+  "https://www.bestbottles.com";
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.bestbottles.com",
+  siteUrl: SITE_URL,
   generateRobotsTxt: true,
   generateIndexSitemap: true,
   changefreq: "weekly",
@@ -8,10 +15,12 @@ module.exports = {
   sitemapSize: 5000,
 
   robotsTxtOptions: {
+    // One consolidated "*" record (allow + disallow together) avoids the
+    // duplicate "User-agent: *" blocks the previous config produced.
     policies: [
-      { userAgent: "*", allow: "/" },
       {
         userAgent: "*",
+        allow: "/",
         disallow: [
           "/api/",
           "/portal/",
@@ -31,7 +40,7 @@ module.exports = {
       { userAgent: "anthropic-ai", allow: "/" },
     ],
     additionalSitemaps: [
-      "https://www.bestbottles.com/server-sitemap.xml",
+      `${SITE_URL}/server-sitemap.xml`,
     ],
   },
 

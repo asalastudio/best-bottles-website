@@ -52,6 +52,20 @@ describe("Grace hardening contracts", () => {
     expect(source).toContain("analytics.graceCartProposalConfirmed");
   });
 
+  it("renders every Grace tool action emitted in a single assistant turn", () => {
+    const source = provider();
+    const messageType = readFileSync("src/components/GraceContext.ts", "utf8");
+    const chatMessage = readFileSync("src/components/grace/GraceChatMessage.tsx", "utf8");
+
+    expect(messageType).toContain("actions?: GraceAction[]");
+    expect(source).toContain("const actions = pendingActionsRef.current.splice(0)");
+    expect(source).toContain("mergeGraceActions");
+    expect(chatMessage).toContain("const actions = message.actions");
+    expect(chatMessage).toContain("actions.map");
+    expect(source).toContain("findPendingCartProposal");
+    expect(source).toContain("updateCartProposalAction");
+  });
+
   it("preserves Shopify checkout metadata through Grace cart proposals", () => {
     const source = provider();
     const proposeStart = source.indexOf("proposeCartAdd:");

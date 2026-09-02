@@ -5,15 +5,22 @@
  * logic so every page stays consistent without duplication.
  */
 
+// Fallback used only when NEXT_PUBLIC_SITE_URL is not set (e.g. local dev).
+// The live canonical domain is controlled entirely by NEXT_PUBLIC_SITE_URL,
+// set per environment in Vercel project settings (and .env.local for local dev).
+// Today the canonical domain is the staging URL (https://best-bottles-website.vercel.app);
+// switch it to the production domain by changing that one env var — no code change.
 export const PRODUCTION_SITE_URL = "https://www.bestbottles.com";
 
 const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim().replace(/\/+$/, "");
 
 export const SITE_URL = configuredSiteUrl || PRODUCTION_SITE_URL;
 
-if (process.env.VERCEL_ENV === "production" && SITE_URL !== PRODUCTION_SITE_URL) {
+// Safety net: a real production deployment must declare its canonical URL
+// explicitly rather than silently falling back to the default above.
+if (process.env.VERCEL_ENV === "production" && !configuredSiteUrl) {
   throw new Error(
-    `NEXT_PUBLIC_SITE_URL must be https://www.bestbottles.com for production builds. Received: ${SITE_URL}`,
+    "NEXT_PUBLIC_SITE_URL must be set for production builds so canonical/OG/sitemap URLs use the intended domain.",
   );
 }
 export const SITE_NAME = "Best Bottles";
