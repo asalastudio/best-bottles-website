@@ -63,9 +63,13 @@ const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
  */
 const COMPONENT_FAMILY: Partial<Record<ClosureBase, string>> = {
   roller: "roll-on-cap", sprayer: "sprayer", pump: "lotion-pump", dropper: "dropper", none: "cap-closure",
+  // a reducer's cap is a plain screw cap: the 18-415 reducer caps
+  // (18-415CpRdcr…) are published in the cap-closure family
+  reducer: "cap-closure",
 };
 const FOREIGN_PREFIX: Partial<Record<ClosureBase, RegExp>> = {
   roller: /^(Ltn|Spry|Drp)/i, sprayer: /^(Ltn|Drp|CpRoll)/i, pump: /^(Spry|Drp|CpRoll)/i, dropper: /^(Ltn|Spry|CpRoll)/i,
+  reducer: /^(Ltn|Spry|Drp|CpRoll)/i, none: /^(Ltn|Spry|Drp)/i,
 };
 
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
