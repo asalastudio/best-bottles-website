@@ -574,14 +574,20 @@ export default function ConfiguratorPdp({
   // Photo | 3D | Exploded — one configuration, three ways of looking at it.
   // 3D is offered when the family has approved geometry; Exploded when the
   // SKU's kit is on screen (the parts carry their own offsets).
+  // The bar reports what the stage is SHOWING, not what was asked for. A SKU
+  // with no plate and no catalogue photograph in a family that has geometry
+  // falls through to Live 3D; the bar used to keep "Photo" lit while the 3D
+  // rendered, and a closure click that landed on a sibling with a plate then
+  // flipped it back (Jordan, 2 Sep, the 100 ml reducer mid-publish).
   const stageMode: "photo" | "3d" | "exploded" =
-    show3d && has3d ? "3d" : exploded && kitReady ? "exploded" : "photo";
+    showLive3d ? "3d" : exploded && kitReady ? "exploded" : "photo";
   const pickMode = (m: "photo" | "3d" | "exploded") => {
     setShow3d(m === "3d");
     setExploded(m === "exploded");
   };
   const modes: Array<{ id: "photo" | "3d" | "exploded"; label: string; icon: React.ReactNode; enabled: boolean; why?: string }> = [
-    { id: "photo", label: "Photo", icon: <Camera className="h-4 w-4" />, enabled: true },
+    { id: "photo", label: "Photo", icon: <Camera className="h-4 w-4" />,
+      enabled: Boolean(plate || photoFallback), why: "No photograph for this configuration yet" },
     { id: "3d", label: "3D", icon: <Cube className="h-4 w-4" />, enabled: has3d, why: "3D is on its way for this family" },
     { id: "exploded", label: "Exploded", icon: <Stack className="h-4 w-4" />, enabled: kitReady, why: "Exploded view comes with the component kit" },
   ];
