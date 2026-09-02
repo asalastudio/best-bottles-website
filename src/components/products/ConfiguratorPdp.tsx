@@ -601,21 +601,26 @@ export default function ConfiguratorPdp({
             {capOptions.map((name) => {
               const photo = thumbBySwatch.get(name);
               return (
+                // A photographed closure is a tall, narrow thing: in a 32 px circle it
+                // read as a stripe (the cap fills a third of its square thumb). So a
+                // photo chip is a small cap-shaped tile with the whole cap in frame,
+                // the way the design draws its finish swatches; a colour stays a dot.
                 <button key={name} type="button"
                         onClick={() => onCapOptionChange?.(name)}
                         aria-label={name} aria-pressed={activeCapOption === name}
                         title={name} data-swatch={photo ? "photo" : "colour"}
-                        className={`h-8 w-8 rounded-full overflow-hidden transition-all duration-200
+                        className={`overflow-hidden transition-all duration-200
                                     focus-visible:outline-2 focus-visible:outline-offset-2
                                     focus-visible:outline-muted-gold
+                                    ${photo ? "h-14 w-11 rounded-[3px] bg-white" : "h-8 w-8 rounded-full"}
                                     ${activeCapOption === name
                                       ? "outline outline-2 outline-offset-2 outline-obsidian"
                                       : "ring-1 ring-champagne hover:ring-ash"}`}
-                        style={photo ? { background: "#ffffff" } : capSwatchStyle?.(name)}>
+                        style={photo ? undefined : capSwatchStyle?.(name)}>
                   {photo && (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img src={photo} alt="" decoding="async"
-                         className="h-full w-full object-cover scale-[1.35]" />
+                         className="h-full w-full object-contain scale-[1.9] translate-y-[4%]" />
                   )}
                 </button>
               );
