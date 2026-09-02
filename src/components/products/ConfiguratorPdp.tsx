@@ -981,7 +981,7 @@ export default function ConfiguratorPdp({
         1. Glass Finish
         <span className="normal-case tracking-normal text-caption text-obsidian ml-0.5">· {glassLabel}</span>
       </p>
-      <div className="grid grid-cols-3 gap-2.5 lg:grid-cols-[repeat(auto-fit,minmax(64px,1fr))]">
+      <div className="grid grid-cols-3 gap-2.5 lg:grid-cols-[repeat(auto-fill,minmax(64px,92px))]">
         {(glassOptions ?? []).map((g) => {
           const on = g.active;
           return (
