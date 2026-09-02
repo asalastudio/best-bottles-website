@@ -100,8 +100,10 @@ function useQualityTier(): "high" | "lite" {
 function StudioContext({ rotationDeg }: { rotationDeg: number }) {
   const { scene } = useThree();
   useEffect(() => {
+    /* eslint-disable react-hooks/immutability -- R3F's scene is imperative; <Environment> sets these the same way */
     scene.environmentIntensity = 1;
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
+    /* eslint-enable react-hooks/immutability */
   }, [scene, rotationDeg]);
   return null;
 }

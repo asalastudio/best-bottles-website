@@ -107,6 +107,8 @@ function Glass({ master, glass, stage, overrides }: {
     }), []);
 
     // drive the uniforms in place; a new material per render would recompile
+    /* eslint-disable react-hooks/immutability -- three.js uniforms are mutated by design;
+       the memoized object is the one the compiled shader is bound to */
     const u = uniforms;
     u.uThickness.value = map;
     u.uThicknessMaxMm.value = maxMm;
@@ -128,6 +130,7 @@ function Glass({ master, glass, stage, overrides }: {
     u.uBaseBoost.value = overrides.baseBoost ?? 0;
     // GL uv puts y at the BOTTOM; the master's anchors are plate coordinates
     u.uFoot.value.set(master.anchors.baseline.x, 1 - master.anchors.baseline.y, halfW);
+    /* eslint-enable react-hooks/immutability */
 
     // frameloop is "demand", so a uniform change draws nothing until asked
     const invalidate = useThree((s) => s.invalidate);

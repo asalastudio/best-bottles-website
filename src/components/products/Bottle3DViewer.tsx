@@ -178,6 +178,7 @@ function Closure({ mode, neckY, capMat, ballMat, rollerVariant, trimMat,
       const spec = mats ? getSpec(mats, name) : null;
       mat = createMaterial(spec, { metalEnv, plasticEnv,
                                    maps: { matte: matteMaps, leather: leatherMaps } });
+      // eslint-disable-next-line react-hooks/immutability -- the cache is a memoized Map filled once per material name
       matCache.set(name, mat);
     }
     const uv = needsCylindricalUV(mats ? getSpec(mats, name) : null);
@@ -406,9 +407,11 @@ function Bottle({ url, preset, closure, capMat, ballMat, rollerVariant,
   const disp = dispersion ?? preset.dispersion;
   useEffect(() => {
     if (!glass || !usePlain) return;
+    /* eslint-disable react-hooks/immutability -- a three.js mesh; the effect that shows it also hides it */
     glass.visible = true;
     const m = applyGlassPreset(glass, preset);
     if (preset.frostMask) { m.roughnessMap = frostTex; m.needsUpdate = true; }
+    /* eslint-enable react-hooks/immutability */
     return () => { glass.visible = false; };
   }, [glass, preset, frostTex, usePlain]);
 

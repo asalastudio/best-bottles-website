@@ -96,7 +96,7 @@ export default function Bottle25Lab() {
                             behind the bottle to be seen through it.</li>
                         <li>Curvature is the across-row position of a solid of revolution. A bottle
                             that is not round front-on needs a normal map, which the master can carry.</li>
-                        <li>Wall and base thickness are the GLB bake's measured 2.45 mm and 12.7 mm;
+                        <li>Wall and base thickness are the GLB bake&apos;s measured 2.45 mm and 12.7 mm;
                             the bake sidecar records them, nothing is estimated.</li>
                         <li>Closures are photographs on their own layer. Recolouring a cap is a
                             different closure, never a change to the glass.</li>
