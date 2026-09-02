@@ -1736,7 +1736,9 @@ export const createProductFromTwin = mutation({
         capColor: v.union(v.string(), v.null()),
         itemName: v.string(),
         itemDescription: v.string(),
-        priceTiers: v.array(v.object({ minQty: v.number(), unitPrice: v.number(), totalPrice: v.optional(v.number()) })),
+        // the schema stores a full ladder: every tier carries its total, so the page
+        // can show "$33.06 (12 pcs)" without recomputing money
+        priceTiers: v.array(v.object({ minQty: v.number(), unitPrice: v.number(), totalPrice: v.number() })),
         source: v.string(),
     },
     returns: v.object({ created: v.boolean(), detail: v.string() }),
