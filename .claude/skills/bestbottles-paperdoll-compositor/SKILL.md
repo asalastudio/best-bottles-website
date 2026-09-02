@@ -5,6 +5,13 @@ description: Use when compositing Best Bottles catalogue imagery from the layere
 
 # Best Bottles Paper-Doll Compositor
 
+> **Which lane is this?** This skill produces catalogue photography for the
+> Shopify/PDP media library, composited onto the studio canvas. If the job is
+> the guided product page — plates and component kits on Vercel Blob, indexed in
+> Convex — use **`bestbottles-plate-kit-lane`** instead. Different scripts
+> (`scripts/paperdoll/`), different destination, different gates. The Sanity
+> upload step below is historical: that lane was retired.
+
 One family at a time, always in this order. Each step has a command and a gate.
 Do not skip the gates: every defect this pipeline has shipped was caught by one
 of them, and every one that reached the founder was a gate that had not been

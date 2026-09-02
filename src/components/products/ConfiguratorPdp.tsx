@@ -110,6 +110,18 @@ type Sibling = {
 };
 
 /** sessionStorage key for the stage mode ("3d" | "photo") */
+/** Resolve once the bytes are ready to paint. A cached part resolves immediately,
+ *  which is why swapping a cap costs one frame and not a fade. */
+function decodeImage(url: string): Promise<void> {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.decoding = "async";
+    img.onload = () => (img.decode ? img.decode().then(() => resolve(), () => resolve()) : resolve());
+    img.onerror = () => reject(new Error(url));
+    img.src = url;
+  });
+}
+
 const STAGE_MODE_KEY = "bb:pdp-stage";
 
 export default function ConfiguratorPdp({
@@ -195,40 +207,48 @@ export default function ConfiguratorPdp({
   // URLs whose <img> fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
-  // The component kit for this SKU. The plate is still the LCP image and still
-  // the fallback; the kit is an upgrade that arrives when it arrives. Once its
-  // parts have decoded the stage stacks them instead, and from then on changing
-  // a cap changes one URL: the body and fitment keep the URLs they already had,
-  // so the browser serves them from cache and never refetches or repaints the
-  // bottle. Measured on the 9 mL roll-on: two cap changes issued one request for
-  // the body, one for the roller, and three for the cap.
-  const kit = useQuery(
+  // The component kit for this SKU.
+  //
+  // Two things make a colourway change seamless, and both are about NOT letting
+  // the stage go empty:
+  //
+  //   1. useQuery returns undefined while the next SKU's kit loads. Treating
+  //      that as "no kit" tears the whole stack down — measured at 30 ms after a
+  //      cap click: three part images unmounted, the flat plate faded back in,
+  //      then the parts faded in again. The entire bottle flashed to change a
+  //      cap. So the last resolved kit is held until the next one resolves.
+  //   2. The new parts are decoded BEFORE they go on screen. Body and fitment
+  //      keep the URLs they already had, so they come from cache instantly and
+  //      only the cap is genuinely new; when its bytes are ready the whole set
+  //      swaps in one frame. No fade, because there is nothing to hide.
+  const kitQuery = useQuery(
     api.productKits.forSku,
     graceSku || websiteSku ? { graceSku: graceSku ?? null, websiteSku: websiteSku ?? null } : "skip",
   );
-  const kitParts = useMemo(
-    () => (kit?.parts ? [...kit.parts].sort((a, b) => a.zOrder - b.zOrder) : null),
+  const [heldKit, setHeldKit] = useState<typeof kitQuery>(undefined);
+  useEffect(() => { if (kitQuery !== undefined) setHeldKit(kitQuery); }, [kitQuery]);
+  const kit = kitQuery === undefined ? heldKit : kitQuery;
+
+  const targetParts = useMemo(
+    () => (kit?.parts?.length ? [...kit.parts].sort((a, b) => a.zOrder - b.zOrder) : null),
     [kit],
   );
-  // Readiness is sticky on purpose. It gates the FIRST swap from the flat plate
-  // to the layered stack; after that the parts stay on screen and a cap change
-  // is just a new src on the same <img>, which the browser paints only once the
-  // replacement has decoded. Re-gating on every change would flash the plate
-  // back between colourways -- the exact flicker the kit exists to remove.
-  const [kitShown, setKitShown] = useState(false);
-  const [decoded, setDecoded] = useState<ReadonlySet<string>>(() => new Set());
+  // what is actually on screen: only ever a fully decoded set
+  const [shownParts, setShownParts] = useState<typeof targetParts>(null);
   useEffect(() => {
-    if (!kitParts?.length) { setKitShown(false); return; }
-    if (kitParts.every((p) => decoded.has(p.image.url))) setKitShown(true);
-  }, [kitParts, decoded]);
-  const markDecoded = (url: string) =>
-    setDecoded((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
-  // a cached image can finish loading before React attaches onLoad, so the ref
-  // asks the element directly instead of waiting for an event that already fired
-  const partRef = (url: string) => (el: HTMLImageElement | null) => {
-    if (el?.complete && el.naturalWidth > 0) markDecoded(url);
-  };
-  const kitReady = kitShown;
+    // Still loading: keep whatever is on screen rather than emptying the stage.
+    if (kitQuery === undefined) return;
+    // Resolved with no kit — a SKU that was never kitted. The stale stack would
+    // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
+    if (!targetParts?.length) { setShownParts(null); return; }
+    let cancelled = false;
+    Promise.all(targetParts.map((part) => decodeImage(part.image.url)))
+      .then(() => { if (!cancelled) setShownParts(targetParts); })
+      .catch(() => { if (!cancelled) setShownParts(null); });   // fall back to the plate
+    return () => { cancelled = true; };
+  }, [kitQuery, targetParts]);
+  const kitReady = Boolean(shownParts?.length);
+  const kitParts = shownParts;
   const markPlateBroken = (url: string) => {
     console.error("[plates] image failed to load", url);
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
@@ -391,13 +411,16 @@ export default function ConfiguratorPdp({
     <div className="relative h-full w-full overflow-hidden">
       {showPlate ? (
         <div className="relative h-full w-full bg-white">
-          {/* the flat plate: first paint, and what stays if the kit never arrives */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
-               width={1000} height={1100} decoding="async"
-               onError={() => markPlateBroken(plate!)}
-               className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200
-                           ${kitReady ? "opacity-0" : "opacity-100"}`} />
+          {/* The flat plate: first paint, and what stays if the kit never arrives.
+              Once the stack is up the plate is dropped entirely — leaving it
+              mounted made every colourway change refetch a plate nobody sees. */}
+          {!kitReady && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
+                 width={1000} height={1100} decoding="async"
+                 onError={() => markPlateBroken(plate!)}
+                 className="absolute inset-0 h-full w-full object-contain" />
+          )}
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
@@ -406,11 +429,8 @@ export default function ConfiguratorPdp({
             <img key={part.slot} src={part.image.url}
                  alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}
                  width={part.image.width} height={part.image.height} decoding="async"
-                 ref={partRef(part.image.url)}
-                 onLoad={() => markDecoded(part.image.url)}
                  style={{ zIndex: part.zOrder }}
-                 className={`absolute inset-0 h-full w-full object-contain transition-opacity duration-200
-                             ${kitReady ? "opacity-100" : "opacity-0"}`} />
+                 className="absolute inset-0 h-full w-full object-contain motion-safe:animate-[kitIn_180ms_ease-out]" />
           ))}
         </div>
       ) : showPhoto ? (

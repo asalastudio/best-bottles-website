@@ -452,3 +452,11 @@ body {
   box-shadow: inset 0 0 0 1px var(--color-muted-gold) !important;
   background: var(--color-bone) !important;
 }
+
+/* The component kit's first appearance on the stage. It runs on mount only —
+   the part elements persist across colourway changes, so swapping a cap does
+   not re-trigger it and costs a single frame with no fade. */
+@keyframes kitIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
