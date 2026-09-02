@@ -169,3 +169,15 @@ Best-Bottles-Orphan-urls/
 /data/audits/canonical-truth-2026-07-12/
 /data/audits/image-generation-coverage-2026-08-05/
 /docs/reviews/cylinder-beauty-gallery-v1/
+
+# paper-doll pipeline output (published to object storage, never committed)
+dist/
+
+# point-in-time copies of the Convex catalogue — the deployment is the source of
+# truth, not a JSON dump in git. Regenerate with:
+#   npx tsx scripts/paperdoll/export-convex-products.ts
+#   npx tsx scripts/paperdoll/export-component-snapshot.ts
+#   node scripts/paperdoll/export-plate-index.mjs
+data/paper-doll/convex-snapshot.json
+data/paper-doll/component-snapshot.json
+data/paper-doll/plates-snapshot.json

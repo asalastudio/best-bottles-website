@@ -1,6 +1,7 @@
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { internal } from "./_generated/api";
 import { v } from "convex/values";
+import { verifyWriteToken } from "./writeToken";
 import { isLegacyProductRouteAlias } from "../src/lib/products/legacy-product-route-overrides";
 import type { Doc, Id } from "./_generated/dataModel";
 import {
@@ -47,6 +48,183 @@ export const listAll = query({
 // table per call, and once every product carried a full priceTiers ladder the
 // table crossed Convex's 16MB per-execution read limit. Loop with
 // `cursor: continueCursor` until `isDone`.
+/**
+ * Everything the paper-doll plate pipeline joins on, paginated. Kept
+ * narrow on purpose: identity, the fields familyId is derived from, and the
+ * group link. Nothing here is a URL.
+ */
+export const getAllForPlates = query({
+    args: {
+        limit: v.optional(v.number()),
+        cursor: v.optional(v.union(v.string(), v.null())),
+    },
+    handler: async (ctx, args) => {
+        const result = await ctx.db
+            .query("products")
+            .order("asc")
+            .paginate({ numItems: Math.min(args.limit ?? 500, 1000), cursor: args.cursor ?? null });
+        return {
+            isDone: result.isDone,
+            continueCursor: result.continueCursor,
+            page: result.page.map((p) => ({
+                _id: p._id,
+                productId: p.productId ?? null,
+                websiteSku: p.websiteSku,
+                graceSku: p.graceSku,
+                family: p.family ?? null,
+                category: p.category,
+                capacityMl: p.capacityMl ?? null,
+                color: p.color ?? null,
+                neckThreadSize: p.neckThreadSize ?? null,
+                applicator: p.applicator ?? null,
+                capColor: p.capColor ?? null,
+                itemName: p.itemName,
+                productGroupId: p.productGroupId ?? null,
+            })),
+        };
+    },
+});
+
+export const getAllGroupsForPlates = query({
+    args: {},
+    handler: async (ctx) => {
+        // ~230 groups; bounded rather than collected
+        const groups = await ctx.db.query("productGroups").withIndex("by_slug").take(5000);
+        return groups.map((g) => ({
+            _id: g._id,
+            slug: g.slug,
+            family: g.family,
+            capacityMl: g.capacityMl ?? null,
+            color: g.color ?? null,
+            neckThreadSize: g.neckThreadSize ?? null,
+            category: g.category,
+            paperDollFamilyKey: g.paperDollFamilyKey ?? null,
+        }));
+    },
+});
+
+/**
+ * Component relationships for the data audit: which component grace SKUs each
+ * product declares, and the neck the product actually has. Only the SKUs are
+ * returned, not the component objects — the audit checks thread compatibility,
+ * and the full objects would push the page past the read limit.
+ */
+/**
+ * Component-edge integrity, paginated. Neck finish is a first-order
+ * compatibility attribute: a component whose own thread designation
+ * contradicts the bottle's neck cannot fit it, whatever the picture looks
+ * like. Compatibility is never inferred from colour, wording or proximity.
+ *
+ * Returns the mismatches plus the distinct component SKUs the page referenced,
+ * so the caller can resolve those references once instead of per edge.
+ */
+export const componentIntegrity = query({
+    args: { cursor: v.union(v.string(), v.null()), pageSize: v.optional(v.number()) },
+    returns: v.object({
+        isDone: v.boolean(),
+        continueCursor: v.string(),
+        checked: v.number(),
+        edges: v.number(),
+        referenced: v.array(v.string()),
+        issues: v.array(v.object({ sku: v.string(), issue: v.string(), detail: v.string() })),
+    }),
+    handler: async (ctx, args) => {
+        const page = await ctx.db.query("products").paginate({
+            cursor: args.cursor,
+            numItems: Math.min(Math.max(args.pageSize ?? 300, 1), 800),
+        });
+        const thread = (value: string | null | undefined): string | null => {
+            const m = /(?<!\d)(\d{1,2})-?(\d{3})(?!\d)/.exec(String(value ?? ""));
+            return m ? `${m[1]}-${m[2]}` : null;
+        };
+        const issues: Array<{ sku: string; issue: string; detail: string }> = [];
+        const referenced = new Set<string>();
+        let edges = 0;
+        for (const product of page.page) {
+            const bottle = thread(product.neckThreadSize);
+            const components = Array.isArray(product.components) ? (product.components as Array<Record<string, unknown>>) : [];
+            for (const component of components) {
+                const sku = typeof component?.grace_sku === "string" ? component.grace_sku : null;
+                if (!sku) continue;
+                edges += 1;
+                referenced.add(sku);
+                const other = thread(sku);
+                if (bottle && other && other !== bottle) {
+                    issues.push({ sku: product.websiteSku, issue: "component_thread_mismatch", detail: `${sku} is ${other}, bottle is ${bottle}` });
+                }
+            }
+        }
+        return {
+            isDone: page.isDone,
+            continueCursor: page.continueCursor,
+            checked: page.page.length,
+            edges,
+            referenced: [...referenced],
+            issues,
+        };
+    },
+});
+
+/** Which of these grace SKUs exist as product documents. Used to find orphan component references. */
+export const graceSkusExist = query({
+    args: { skus: v.array(v.string()) },
+    returns: v.record(v.string(), v.boolean()),
+    handler: async (ctx, args) => {
+        const out: Record<string, boolean> = {};
+        for (const sku of args.skus.slice(0, 300)) {
+            const hit = await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).first();
+            out[sku] = Boolean(hit);
+        }
+        return out;
+    },
+});
+
+export const getComponentsForAudit = query({
+    args: { limit: v.optional(v.number()), cursor: v.optional(v.union(v.string(), v.null())) },
+    handler: async (ctx, args) => {
+        const result = await ctx.db
+            .query("products")
+            .order("asc")
+            .paginate({ numItems: Math.min(args.limit ?? 400, 800), cursor: args.cursor ?? null });
+        return {
+            isDone: result.isDone,
+            continueCursor: result.continueCursor,
+            page: result.page.map((p) => ({
+                websiteSku: p.websiteSku,
+                graceSku: p.graceSku,
+                neckThreadSize: p.neckThreadSize ?? null,
+                category: p.category,
+                family: p.family ?? null,
+                applicator: p.applicator ?? null,
+                shopifyVariantId: p.shopifyVariantId ?? null,
+                shopifySellable: p.shopifySellable ?? null,
+                componentSkus: Array.isArray(p.components)
+                    ? (p.components as Array<Record<string, unknown>>)
+                        .map((c) => (typeof c?.grace_sku === "string" ? c.grace_sku : null))
+                        .filter((c): c is string => Boolean(c))
+                    : [],
+            })),
+        };
+    },
+});
+
+/** The fitment rules, for the compatibility audit. ~dozens of rows. */
+export const getFitmentsForAudit = query({
+    args: {},
+    handler: async (ctx) => {
+        const rows = await ctx.db.query("fitments").withIndex("by_threadSize").take(500);
+        return rows.map((f) => ({
+            threadSize: f.threadSize,
+            bottleName: f.bottleName,
+            bottleCode: f.bottleCode,
+            familyHint: f.familyHint,
+            capacityMl: f.capacityMl,
+            componentTypes: f.components && typeof f.components === "object" ? Object.keys(f.components as Record<string, unknown>) : [],
+            componentCount: Array.isArray(f.components) ? f.components.length : null,
+        }));
+    },
+});
+
 export const getAllForAudit = query({
     args: {
         limit: v.optional(v.number()),
@@ -1476,13 +1654,7 @@ export const updateProductGroupHeroImage = internalMutation({
 });
 
 function verifyProductImageWriteToken(writeToken: string) {
-    const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
-    if (!expected) {
-        throw new Error("product_image_write_token_not_configured");
-    }
-    if (writeToken !== expected) {
-        throw new Error("unauthorized_product_image_write");
-    }
+    verifyWriteToken(writeToken);
 }
 
 /**
@@ -1588,6 +1760,154 @@ export const setProductGroupPrimarySku = mutation({
  * and propagates the primary view to the productGroup's heroImageUrl when
  * the SKU is the group's primaryWebsiteSku.
  */
+/**
+ * Move a product into another product group, by website SKU and group slug.
+ *
+ * The catalogue has no other way to correct a misfiled product, and misfiling
+ * is a real defect: GBDiva46DrpSl is a clear-glass dropper (bestbottles.com
+ * describes all three Diva droppers as clear and links them as one family)
+ * that sat in the frosted group, so the clear dropper page showed two of its
+ * three colourways and the frosted page showed a clear bottle. Write-token
+ * gated, one product per call, and it reports what it changed.
+ */
+export const moveProductToGroup = mutation({
+    args: {
+        writeToken: v.string(),
+        websiteSku: v.string(),
+        groupSlug: v.string(),
+        setColorFromGroup: v.optional(v.boolean()),
+    },
+    returns: v.object({
+        moved: v.boolean(),
+        detail: v.string(),
+        from: v.union(v.string(), v.null()),
+        to: v.string(),
+        color: v.union(v.string(), v.null()),
+    }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const products = await ctx.db
+            .query("products")
+            .withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku))
+            .collect();
+        if (products.length === 0) return { moved: false, detail: "no product carries this websiteSku", from: null, to: args.groupSlug, color: null };
+        if (products.length > 1) return { moved: false, detail: `${products.length} products share this websiteSku — resolve the duplicate first`, from: null, to: args.groupSlug, color: null };
+        const groups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_slug", (q) => q.eq("slug", args.groupSlug))
+            .collect();
+        if (groups.length !== 1) return { moved: false, detail: `${groups.length} groups match this slug`, from: null, to: args.groupSlug, color: null };
+        const product = products[0];
+        const group = groups[0];
+        if (product.productGroupId === group._id) return { moved: false, detail: "already in this group", from: args.groupSlug, to: args.groupSlug, color: product.color ?? null };
+        const previous = product.productGroupId ? await ctx.db.get(product.productGroupId) : null;
+        const patch: { productGroupId: Id<"productGroups">; color?: string } = { productGroupId: group._id };
+        if (args.setColorFromGroup && group.color) patch.color = group.color;
+        await ctx.db.patch(product._id, patch);
+        return {
+            moved: true,
+            detail: "moved",
+            from: previous?.slug ?? null,
+            to: group.slug,
+            color: patch.color ?? product.color ?? null,
+        };
+    },
+});
+
+/**
+ * Correct a product's grace SKU. Shopify is linked by variant GID, not by SKU,
+ * so a rename does not touch checkout; the plate index stores the grace SKU and
+ * its integrity sweep will flag the rows until they are republished.
+ */
+export const setGraceSku = mutation({
+    args: { writeToken: v.string(), websiteSku: v.string(), graceSku: v.string() },
+    returns: v.object({ changed: v.boolean(), detail: v.string(), from: v.union(v.string(), v.null()) }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const products = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect();
+        if (products.length !== 1) return { changed: false, detail: `${products.length} products carry this websiteSku`, from: null };
+        const clash = await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect();
+        if (clash.some((c) => c._id !== products[0]._id)) return { changed: false, detail: `grace SKU already used by ${clash[0].websiteSku}`, from: products[0].graceSku };
+        const from = products[0].graceSku;
+        if (from === args.graceSku) return { changed: false, detail: "already set", from };
+        await ctx.db.patch(products[0]._id, { graceSku: args.graceSku });
+        return { changed: true, detail: "renamed", from };
+    },
+});
+
+/**
+ * Create a product that the catalogue sells but Convex never imported, from a
+ * twin that shares its mould. The Diva frosted dropper is the case this was
+ * written for: bestbottles.com lists GBDivaFrst46DrpCu with its own price
+ * ladder, but has no detail page for it, so the import missed it entirely.
+ *
+ * Everything physical (dimensions, weights, case quantity, components) is
+ * copied from the twin, because a frosted bottle is the same mould as its
+ * clear sibling. Everything commercial — SKUs, glass colour, description,
+ * prices — must be given, and is never inferred. Shopify linkage is NOT
+ * copied: inheriting the twin's variant GID would put the twin in the cart.
+ */
+export const createProductFromTwin = mutation({
+    args: {
+        writeToken: v.string(),
+        twinWebsiteSku: v.string(),
+        websiteSku: v.string(),
+        graceSku: v.string(),
+        groupSlug: v.string(),
+        color: v.string(),
+        capColor: v.union(v.string(), v.null()),
+        itemName: v.string(),
+        itemDescription: v.string(),
+        // the schema stores a full ladder: every tier carries its total, so the page
+        // can show "$33.06 (12 pcs)" without recomputing money
+        priceTiers: v.array(v.object({ minQty: v.number(), unitPrice: v.number(), totalPrice: v.number() })),
+        source: v.string(),
+    },
+    returns: v.object({ created: v.boolean(), detail: v.string() }),
+    handler: async (ctx, args) => {
+        verifyWriteToken(args.writeToken);
+        const existing = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.websiteSku)).collect();
+        if (existing.length > 0) return { created: false, detail: "a product already carries this websiteSku" };
+        const clash = await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", args.graceSku)).collect();
+        if (clash.length > 0) return { created: false, detail: `grace SKU already used by ${clash[0].websiteSku}` };
+        const twins = await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", args.twinWebsiteSku)).collect();
+        if (twins.length !== 1) return { created: false, detail: `${twins.length} products carry the twin websiteSku` };
+        const groups = await ctx.db.query("productGroups").withIndex("by_slug", (q) => q.eq("slug", args.groupSlug)).collect();
+        if (groups.length !== 1) return { created: false, detail: `${groups.length} groups match this slug` };
+
+        const { _id, _creationTime, ...twin } = twins[0];
+        const first = [...args.priceTiers].sort((a, b) => a.minQty - b.minQty)[0];
+        const tierAt = (qty: number) => args.priceTiers.find((t) => t.minQty === qty)?.unitPrice ?? null;
+        await ctx.db.insert("products", {
+            ...twin,
+            productId: null,                       // assigned from the master sheet, never invented here
+            websiteSku: args.websiteSku,
+            graceSku: args.graceSku,
+            productGroupId: groups[0]._id,
+            color: args.color,
+            capColor: args.capColor,
+            itemName: args.itemName,
+            itemDescription: args.itemDescription,
+            priceTiers: args.priceTiers,
+            webPrice1pc: first?.unitPrice ?? null,
+            webPrice12pc: tierAt(12),
+            webPrice10pc: tierAt(10),
+            qbPrice: null,
+            // this product has no Shopify variant of its own yet: quote-only until it is synced
+            shopifyVariantId: null,
+            shopifyInventoryItemId: null,
+            shopifySellable: false,
+            shopifySellableReason: "NOT_IN_SHOPIFY",
+            shopifyUpdatedAt: undefined,
+            imageUrl: null,
+            productUrl: null,
+            importSource: args.source,
+            verified: false,
+        });
+        return { created: true, detail: "created" };
+    },
+});
+
 export const setImageUrl = mutation({
     args: {
         websiteSku: v.string(),
