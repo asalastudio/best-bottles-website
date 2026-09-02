@@ -9,16 +9,18 @@
 import { writeFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { ConvexHttpClient } from "convex/browser";
+import type { FunctionReturnType } from "convex/server";
 import { api } from "../../convex/_generated/api";
 
 async function main() {
     const url = process.env.NEXT_PUBLIC_CONVEX_URL;
     if (!url) throw new Error("NEXT_PUBLIC_CONVEX_URL is not set");
     const convex = new ConvexHttpClient(url);
-    const products: Array<Record<string, unknown>> = [];
+    type ProductsPage = FunctionReturnType<typeof api.products.getAllForPlates>;
+    const products: ProductsPage["page"] = [];
     let cursor: string | null = null;
     for (let page = 0; page < 100; page++) {
-        const result = await convex.query(api.products.getAllForPlates, { limit: 1000, cursor });
+        const result: ProductsPage = await convex.query(api.products.getAllForPlates, { limit: 1000, cursor });
         products.push(...result.page);
         if (result.isDone) break;
         cursor = result.continueCursor;

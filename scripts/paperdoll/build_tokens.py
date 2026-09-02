@@ -156,15 +156,31 @@ def parse_tail(tail: str) -> tuple[list[str], list[str], str]:
     return finishes, modifiers, ""
 
 
+FINISH_QUALIFIERS = ("Matte", "Shiny")
+
+
 def canonical_finish(finishes: list[str]) -> str | None:
-    """'Mt','Gl' -> 'Matte Gold'; 'ShnBlk' -> 'Shiny Black'; ['Ivy','Gl'] -> 'Ivory + Gold'."""
+    """One label per finish, whichever way the SKU spells it.
+
+    'Mt','Gl' and 'MtGl' and 'GlMt' and 'MattGl' all read "Matte Gold": the
+    qualifier leads regardless of where the SKU puts it, so BlkSh and ShnBlk
+    are one finish and not two. ['Ivy','Gl'] is the two-part ivory collar.
+    """
     if not finishes:
         return None
     labels = [FINISH_LABEL[f] for f in finishes]
-    if len(labels) == 2 and labels[0] in ("Matte", "Shiny"):
-        return f"{labels[0]} {labels[1]}"
+    # a bare "Clear" beside another colour describes the GLASS, not the closure
+    # (GBSpry3mlClBlk is a clear bottle with a black sprayer); "Clear Overcap" is its own part
+    if len(labels) > 1:
+        labels = [l for l in labels if l != "Clear"] or labels
+    qualifier = next((l for l in labels if l in FINISH_QUALIFIERS), None)
+    rest = [l for l in labels if l != qualifier]
+    if qualifier and len(rest) == 1:
+        return f"{qualifier} {rest[0]}"
     if len(labels) == 2 and labels[0] == "Ivory":
         return f"Ivory + {labels[1]}"
+    if qualifier and not rest:
+        return qualifier
     return " ".join(labels)
 
 

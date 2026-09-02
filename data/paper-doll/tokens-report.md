@@ -1,7 +1,7 @@
-# Tokens report — 2026-09-01T22:27:31
+# Tokens report — 2026-09-01T22:36:34
 
 SKUs parsed 2429 / 2470  (unparsed 41)
-prefixes 19  closures 13  finishes 45  modifiers 12  bodies 228  (ambiguous familyId: 15)
+prefixes 19  closures 13  finishes 35  modifiers 12  bodies 228  (ambiguous familyId: 15)
 reviewedAt: None
 
 closures:
@@ -20,50 +20,40 @@ closures:
   Cap         52  cap                              applicators: {"?": 42, "Cap/Closure": 6, "Lotion Pump": 3, "Glass Rod": 1}
 
 finishes:
-  Black                    170  spellings {"Blk": 162, "Black": 5, "Blck": 3}  capColor {"Black": 104, "Black Dotted": 32, "Clear": 18, "Frosted": 5, "Black with Dots": 4, "Short
+  Black                    172  spellings {"Blk": 162, "Black": 5, "Blck": 3, "ClBlk": 2}  capColor {"Black": 104, "Black Dotted": 32, "Clear": 20, "Frosted": 5, "Black with Dots": 4, "Short
   Black Leather             30  spellings {"BlkLthr": 30}  capColor {"Black Leather": 29, "Black": 1}
-  Black Matte               16  spellings {"BlkMatt": 14, "BlkMt": 2}  capColor {"Matte Black": 11, "Black": 4, "Frosted": 1}
-  Black Shiny               60  spellings {"BlkSh": 60}  capColor {"Shiny Black": 45, "Black": 9, "Frosted": 3, "Clear": 2, "?": 1}
   Blue                       7  spellings {"Blue": 5, "Blu": 2}  capColor {"Blue": 4, "Clear": 3}
-  Blue Matte                19  spellings {"BluMatt": 17, "BluMt": 2}  capColor {"Matte Blue": 14, "Blue": 2, "Clear": 2, "Frosted": 1}
   Brown Leather             30  spellings {"BrwnLthr": 30}  capColor {"Brown Leather": 29, "Brown": 1}
   Clear                      5  spellings {"Clear": 4, "Cl": 1}  capColor {"Clear": 5}
-  Clear Black                2  spellings {"ClBlk": 2}  capColor {"Clear": 2}
   Clear Overcap             29  spellings {"ClOvrCap": 28, "ClrOvrCap": 1}  capColor {"Clear Overcap": 23, "Clear": 5, "Frosted": 1}
-  Clear White                2  spellings {"ClWht": 1, "ClWh": 1}  capColor {"Clear": 2}
   Copper                    76  spellings {"Cu": 76}  capColor {"Copper": 70, "Clear": 4, "Frosted": 1, "Matte Copper": 1}
-  Copper Matte              53  spellings {"CuMatt": 51, "CuMt": 2}  capColor {"Matte Copper": 49, "Frosted": 3, "Copper": 1}
   Gold                     120  spellings {"Gl": 120}  capColor {"Gold": 83, "Shiny Gold": 21, "Clear": 10, "Frosted": 2, "White": 2, "Black": 2}
-  Gold Matte                48  spellings {"GlMatt": 45, "GlMt": 3}  capColor {"Matte Gold": 42, "Shiny Gold": 3, "Frosted": 3}
-  Gold Shiny                55  spellings {"GlSh": 55}  capColor {"Shiny Gold": 52, "Frosted": 3}
   Green                      4  spellings {"Green": 3, "Gr": 1}  capColor {"Green": 2, "Clear": 2}
   Ivory + Gold              58  spellings {"IvyGl": 58}  capColor {"Ivory": 51, "Clear": 4, "Ivory Gold": 2, "Frosted": 1}
   Ivory + Silver            60  spellings {"IvySl": 60}  capColor {"Ivory": 49, "Clear": 7, "Frosted": 2, "Ivory Silver": 2}
   Ivory Leather             30  spellings {"IvyLthr": 30}  capColor {"Ivory Leather": 29, "Ivory": 1}
   Lavender                  61  spellings {"Lvn": 60, "Lv": 1}  capColor {"Lavender": 52, "Clear": 7, "Frosted": 2}
   Light Brown Leather       30  spellings {"LBrwnLthr": 30}  capColor {"Light Brown Leather": 29, "Brown": 1}
-  Matte Black               13  spellings {"MattBlk": 13}  capColor {"Matte Black": 12, "Black": 1}
-  Matte Copper              10  spellings {"MattCu": 10}  capColor {"Matte Copper": 8, "Clear": 2}
-  Matte Gold                91  spellings {"MtGl": 63, "MattGl": 28}  capColor {"Matte Gold": 83, "Clear": 6, "Gold": 1, "Frosted": 1}
-  Matte Silver             241  spellings {"MtSl": 203, "MattSl": 36, "MtS": 2}  capColor {"Matte Silver": 225, "Clear": 13, "Frosted": 2, "Silver": 1}
-  Matte Silver Clear         1  spellings {"MtSlCl": 1}  capColor {"Matte Silver": 1}
+  Matte Black               29  spellings {"BlkMatt": 14, "MattBlk": 13, "BlkMt": 2}  capColor {"Matte Black": 23, "Black": 5, "Frosted": 1}
+  Matte Blue                19  spellings {"BluMatt": 17, "BluMt": 2}  capColor {"Matte Blue": 14, "Blue": 2, "Clear": 2, "Frosted": 1}
+  Matte Copper              63  spellings {"CuMatt": 51, "MattCu": 10, "CuMt": 2}  capColor {"Matte Copper": 57, "Frosted": 3, "Clear": 2, "Copper": 1}
+  Matte Gold               139  spellings {"MtGl": 63, "GlMatt": 45, "MattGl": 28, "GlMt": 3}  capColor {"Matte Gold": 125, "Clear": 6, "Frosted": 4, "Shiny Gold": 3, "Gold": 1}
+  Matte Silver             297  spellings {"MtSl": 203, "SlMatt": 51, "MattSl": 36, "SlMt": 4, "MtS": 2, "MtSlCl  capColor {"Matte Silver": 275, "Clear": 13, "Frosted": 5, "Silver": 4}
   Matte Silver Clear Overcap     1  spellings {"MtSlClOvrCap": 1}  capColor {"Matte Silver": 1}
   Natural                    2  spellings {"Nat": 2}  capColor {"Natural": 2}
   Pink                     106  spellings {"Pnk": 72, "Pink": 34}  capColor {"Pink": 57, "Pink Dotted": 31, "Clear": 10, "Frosted": 4, "Pink with Dots": 4}
   Pink Leather              30  spellings {"PnkLthr": 30}  capColor {"Pink Leather": 29, "Pink": 1}
   Red                       65  spellings {"Red": 65}  capColor {"Red": 55, "Clear": 8, "Frosted": 2}
-  Shiny Black              166  spellings {"ShnBlk": 155, "ShBlk": 11}  capColor {"Shiny Black": 158, "Clear": 6, "Black": 1, "Frosted": 1}
-  Shiny Gold               122  spellings {"ShnGl": 120, "ShGl": 2}  capColor {"Shiny Gold": 101, "Clear": 6, "Black": 5, "White": 5, "Gold": 2, "Shiny Gold Trim": 2}
+  Shiny Black              226  spellings {"ShnBlk": 155, "BlkSh": 60, "ShBlk": 11}  capColor {"Shiny Black": 203, "Black": 10, "Clear": 8, "Frosted": 4, "?": 1}
+  Shiny Gold               177  spellings {"ShnGl": 120, "GlSh": 55, "ShGl": 2}  capColor {"Shiny Gold": 153, "Clear": 6, "Black": 5, "White": 5, "Frosted": 4, "Gold": 2}
   Shiny Gold Black           3  spellings {"ShnGlBlk": 3}  capColor {"Black": 3}
   Shiny Gold White           3  spellings {"ShnGlWhite": 3}  capColor {"White": 3}
-  Shiny Silver             135  spellings {"ShnSl": 128, "ShSl": 7}  capColor {"Shiny Silver": 117, "Clear": 7, "White": 5, "Silver": 2, "Black": 2, "Shiny Silver Trim"
+  Shiny Silver             189  spellings {"ShnSl": 128, "SlSh": 54, "ShSl": 7}  capColor {"Shiny Silver": 159, "Silver": 11, "Clear": 7, "White": 5, "Frosted": 4, "Black": 2}
   Shiny Silver Black         3  spellings {"ShnSlBlk": 3}  capColor {"Black": 3}
   Shiny Silver White         3  spellings {"ShnSlWhite": 3}  capColor {"White": 3}
   Silver                    89  spellings {"Sl": 89}  capColor {"Silver": 42, "Silver Dotted": 32, "Silver with Dots": 4, "Frosted": 3, "Shiny Silver": 2
-  Silver Matte              55  spellings {"SlMatt": 51, "SlMt": 4}  capColor {"Matte Silver": 49, "Silver": 3, "Frosted": 3}
-  Silver Shiny              54  spellings {"SlSh": 54}  capColor {"Shiny Silver": 42, "Silver": 9, "Frosted": 3}
   Turquoise                  6  spellings {"Tur": 6}  capColor {"Turquoise": 3, "Clear": 2, "Shiny": 1}
-  White                    140  spellings {"Wht": 131, "White": 8, "Wh": 1}  capColor {"White": 121, "Clear": 12, "Frosted": 4, "Short White": 3}
+  White                    142  spellings {"Wht": 131, "White": 8, "ClWht": 1, "ClWh": 1, "Wh": 1}  capColor {"White": 121, "Clear": 14, "Frosted": 4, "Short White": 3}
   White Clear Overcap        6  spellings {"WhtClOvrCp": 6}  capColor {"Clear Overcap": 6}
 
 ambiguous bodies (one body token, several familyIds):
