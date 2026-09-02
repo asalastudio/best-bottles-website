@@ -40,6 +40,14 @@ This audit reads; it changes nothing and relaxes no gate. Every number below is 
 
 ## 1. Duplicate SKU report
 
+**None of these can be resolved automatically.** Every one of the 153 was checked against the live
+deployment: in all 153 cases *both* documents carry a Shopify variant and read "In Stock". They are two
+sellable products, not a live record and an import skeleton, so there is no structural property that says
+which is correct and retiring either could unpublish something Nemat sells. `resolve-duplicates.mjs`
+therefore classifies and reports; it has no write path. The grouped decisions are in
+[duplicate-sku-review-pack.md](duplicate-sku-review-pack.md): 5 clusters, not 153 rows.
+
+
 153 website SKUs resolve to more than one Convex product document. Publishing to any of them
 is blocked by `publish.mjs` (it refuses a SKU whose presence count is not exactly one) and reported by
 `productPlates.integrity` as `products_duplicate_websiteSku`. None were merged or deleted by this audit.
