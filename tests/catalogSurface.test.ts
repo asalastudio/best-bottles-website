@@ -48,4 +48,14 @@ describe("catalog surface manifests", () => {
         });
         expect(applicationCatalogSurface("spray").visibleFacets).not.toContain("rollerMaterials");
     });
+
+    it("clears stale roller-material constraints on applications that do not expose that facet", () => {
+        expect(applyCatalogSurface(
+            { ...EMPTY_FILTERS, rollerMaterials: ["metal"] },
+            applicationCatalogSurface("spray"),
+        )).toMatchObject({
+            applicators: ["finemist", "perfumespray"],
+            rollerMaterials: [],
+        });
+    });
 });

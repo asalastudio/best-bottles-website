@@ -71,7 +71,10 @@ export function applicationCatalogSurface(application: ApplicatorNavValue): Cata
     const isRollOn = application === "rollon";
     return {
         id: "application",
-        fixedFilters: { applicators: [...nav.buckets] },
+        fixedFilters: {
+            applicators: [...nav.buckets],
+            ...(isRollOn ? {} : { rollerMaterials: [] }),
+        },
         visibleFacets: [
             "capacities",
             ...(isRollOn ? ["rollerMaterials" as const] : []),
