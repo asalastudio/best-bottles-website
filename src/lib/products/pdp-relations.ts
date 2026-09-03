@@ -180,3 +180,24 @@ export function buildFocusedPdpRelations(
     otherApplications.sort(compareRelations);
     return { currentApplication, sameApplicationSizes, otherApplications };
 }
+
+/** One size chip per milliliter so 15 ml and 15 ml (0.51 oz) do not become two destinations. */
+export function uniqueSameApplicationSizes(
+    relations: readonly ProductGroupRelation[],
+): ProductGroupRelation[] {
+    const byMl = new Map<number, ProductGroupRelation>();
+    const unlabeled: ProductGroupRelation[] = [];
+    for (const relation of relations) {
+        const ml = relation.capacityMl ?? parseCapacityLabelMl(relation.capacity ?? "");
+        if (ml == null) {
+            unlabeled.push(relation);
+            continue;
+        }
+        const existing = byMl.get(ml);
+        if (!existing || relation.isCurrent) byMl.set(ml, relation);
+    }
+    return [
+        ...[...byMl.entries()].sort((a, b) => a[0] - b[0]).map(([, relation]) => relation),
+        ...unlabeled,
+    ];
+}

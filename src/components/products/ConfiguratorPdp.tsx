@@ -14,7 +14,7 @@
  * cross-application comparison belongs in the below-fold discovery section.
  */
 
-import { useMemo, useState, useEffect } from "react";
+import { useMemo, useState, useEffect, type ReactNode } from "react";
 import dynamic from "next/dynamic";
 import {
   Check, ChatCircle, ShoppingBag,
@@ -135,7 +135,7 @@ export default function ConfiguratorPdp({
   heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, websiteSku,
-  quoteHref, checkoutReady = true, qty = 1, onQtyChange,
+  quoteHref, checkoutReady = true, qty = 1, onQtyChange, volumePricing,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
@@ -209,6 +209,8 @@ export default function ConfiguratorPdp({
                         active: boolean; imageUrl?: string | null }>;
   qty?: number;
   onQtyChange?: (n: number) => void;
+  /** Compact volume ladder rendered directly under Add to Cart. */
+  volumePricing?: ReactNode;
 }) {
   const fam = familyForSlugOrDerived(currentSlug);
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
@@ -239,7 +241,7 @@ export default function ConfiguratorPdp({
   // them, so the mode is offered only when the stack is on screen.
   const exploded = requestedStageMode === "exploded";
   const [skuCopied, setSkuCopied] = useState(false);
-  // URLs whose <img> fired onError this session: the stage falls through to
+  // URLs whose image element fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
   // A pending next-SKU query never inherits a prior kit. The preferred mode
@@ -757,7 +759,7 @@ export default function ConfiguratorPdp({
           </a>
         )}
       </div>
-
+      {volumePricing ? <div className="mt-4" data-testid="pdp-volume-under-atc">{volumePricing}</div> : null}
     </div>
   );
 

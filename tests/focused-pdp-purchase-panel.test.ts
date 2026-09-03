@@ -85,11 +85,13 @@ describe("focused PDP purchase panel", () => {
         expect(configurator).toContain("checkoutReady ? (");
     });
 
-    it("keeps full tier pricing out of the focused buy panel and in lower PDP ordering details", () => {
-        expect(configurator).not.toContain("Volume pricing · by quote");
+    it("places volume pricing immediately under Add to Cart on both purchase shells", () => {
+        expect(configurator).toContain("volumePricing?: ReactNode");
+        expect(configurator).toContain('data-testid="pdp-volume-under-atc"');
         expect(configurator).not.toContain("const [tiersOpen");
         expect(configurator).not.toContain("ladder.map((t)");
-        expect(configurator).not.toContain("next-tier nudge");
+        expect(pdp).toContain("volumePricing={<TierLadder variant={selectedVariant} qty={qty} />}");
+        expect(pdp).toContain('data-testid="pdp-volume-under-atc"');
         expect(pdp).toContain('data-testid="pdp-volume-fulfillment"');
         expect(pdp).toContain("<TierLadder variant={selectedVariant} qty={qty} />");
     });

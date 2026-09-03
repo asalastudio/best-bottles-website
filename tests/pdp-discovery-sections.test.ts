@@ -29,6 +29,22 @@ const relations = {
             isCurrent: true,
         },
         {
+            slug: "cylinder-15ml-rollon-oz",
+            displayName: "15 ml Clear Cylinder Roll-On 18-415",
+            family: "Cylinder",
+            capacity: "15 ml (0.51 oz)",
+            capacityMl: 15,
+            color: "Clear",
+            application: "rollon" as const,
+            applicationLabel: "Roll-On",
+            neckThreadSize: "18-400",
+            neckThreadLabel: "18-400 neck finish",
+            heroImageUrl: null,
+            priceRangeMin: 1.4,
+            variantCount: 1,
+            isCurrent: false,
+        },
+        {
             slug: "cylinder-15ml-rollon",
             displayName: "15 ml Clear Cylinder Roll-On",
             family: "Cylinder",
@@ -197,6 +213,14 @@ describe("PdpDiscoverySections", () => {
         expect(markup).toContain("Also available as");
         expect(markup).not.toMatch(/comes with/i);
         expect(markup).toContain("Fine Mist &amp; Spray");
+        expect(markup).toContain("Roll-On");
+        expect(markup).toContain("Dropper");
+        expect(markup).toContain("Lotion Pump");
+        expect(markup).toContain("Reducer");
+        expect(markup).toContain("/catalog?applicators=finemist%2Cperfumespray&amp;families=Cylinder");
+        expect(markup).toContain(">9 ml<");
+        expect(markup).toContain(">15 ml<");
+        expect(markup).not.toContain("15 ml Clear Cylinder Roll-On 18-415");
     });
 
     it("renders fitment-resolved component truth and an honest media fallback", () => {

@@ -1889,6 +1889,7 @@ export default function ProductDetailClient({
                                 quoteHref={quoteHref}
                                 qty={qty}
                                 onQtyChange={setQty}
+                                volumePricing={<TierLadder variant={selectedVariant} qty={qty} />}
                             />
                         </div>
                     ) : null}
@@ -2734,6 +2735,10 @@ export default function ProductDetailClient({
                                 )}
                             </div>
 
+                            <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`} data-testid="pdp-volume-under-atc">
+                                <TierLadder variant={selectedVariant} qty={qty} />
+                            </div>
+
                             {/* Product Description — canonical copy avoids showing applicator-mismatched group text. */}
                             {pdpBlocks.every((b) => b._type !== "pdpRichDescription") && productDescription && (
                                 <div className="mb-6 pt-5 border-t border-champagne/60">
@@ -2805,6 +2810,7 @@ export default function ProductDetailClient({
                             <div className="max-w-2xl">
                                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Ordering details</p>
                                 <h2 className="mt-1 font-serif text-2xl text-obsidian">Volume pricing and fulfillment</h2>
+                                <p className="mt-2 text-sm text-slate">Volume rates sit next to Add to Cart. Case quantity and shipping remain here for fulfillment planning.</p>
                                 <div className="mt-4 grid gap-3 text-sm sm:grid-cols-3">
                                     <div className="rounded-sm border border-champagne/50 bg-white p-3">
                                         <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Availability</p>
@@ -2818,9 +2824,6 @@ export default function ProductDetailClient({
                                         <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Shipping</p>
                                         <p className="mt-1 font-semibold text-obsidian">Free over $99</p>
                                     </div>
-                                </div>
-                                <div className="mt-5">
-                                    <TierLadder variant={selectedVariant} qty={qty} />
                                 </div>
                             </div>
                         </div>
