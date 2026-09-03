@@ -1,3 +1,4 @@
+import { detectCanonicalGlassColor, detectCatalogFamily } from "../src/lib/catalogFilters";
 /**
  * Grace AI — Search utilities for catalog queries.
  *
@@ -115,14 +116,9 @@ export function normalizeApplicatorValue(value: string | null | undefined): stri
 
 // ─── Detection functions ────────────────────────────────────────────────────
 
+/** Canonical glass colour named in a search term — same vocabulary the sidebar filters on. */
 export function detectCatalogColor(term: string): string | null {
-    const t = term.toLowerCase();
-    if (t.includes("cobalt blue")) return "Cobalt Blue";
-    if (t.includes("clear")) return "Clear";
-    if (t.includes("amber")) return "Amber";
-    if (t.includes("frosted")) return "Frosted";
-    if (t.includes("swirl")) return "Swirl";
-    return null;
+    return detectCanonicalGlassColor(term);
 }
 
 export function detectRequestedColorToken(term: string): string | null {
@@ -430,8 +426,7 @@ export function buildSearchCatalogToolResult(
     const termForCap = normalizeSearchTerm(term) || term;
     const detectedFamily =
         input.familyLimit
-        ?? ["Apothecary", "Atomizer", "Bell", "Boston Round", "Circle", "Cylinder", "Diamond", "Diva", "Elegant", "Empire", "Grace", "Rectangle", "Round", "Sleek", "Slim", "Tulip", "Vial"]
-            .find((family) => termLower.includes(family.toLowerCase()))
+        ?? detectCatalogFamily(termLower)
         ?? null;
     const capMatch = termForCap.match(/\b(\d+)\s*ml\b/i);
     const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;

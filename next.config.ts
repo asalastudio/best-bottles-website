@@ -1,4 +1,7 @@
 import type { NextConfig } from "next";
+// The /config subpath is the supported import for build-time wiring; importing
+// withSentryConfig from the package root is deprecated and breaks in v11.
+import { withSentryConfig } from "@sentry/nextjs/config";
 
 const projectRoot = process.cwd();
 
@@ -115,4 +118,23 @@ const nextConfig: NextConfig = {
     },
 };
 
-export default nextConfig;
+// ── Sentry ─────────────────────────────────────────────────────────────────
+// The SDK itself is a no-op until NEXT_PUBLIC_SENTRY_DSN is set (see
+// src/instrumentation*.ts). withSentryConfig only adds build-time work — and
+// only uploads source maps when SENTRY_AUTH_TOKEN is present, so local and
+// preview builds stay exactly as fast as before.
+export default withSentryConfig(nextConfig, {
+    org: process.env.SENTRY_ORG,
+    project: process.env.SENTRY_PROJECT,
+    authToken: process.env.SENTRY_AUTH_TOKEN,
+    silent: !process.env.CI,
+    telemetry: false,
+    widenClientFileUpload: true,
+    sourcemaps: {
+        disable: !process.env.SENTRY_AUTH_TOKEN,
+        deleteSourcemapsAfterUpload: true,
+    },
+    // Route browser events through our own origin so ad blockers cannot hide
+    // storefront errors from us. Excluded from the Clerk proxy in src/proxy.ts.
+    tunnelRoute: "/monitoring-tunnel",
+});

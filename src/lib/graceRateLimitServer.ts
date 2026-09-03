@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api";
+import { reportError } from "@/lib/observability/report";
 
 export interface GraceRateLimitConfig {
   route: string;
@@ -49,7 +50,9 @@ export async function enforceGraceRateLimit(
       },
     );
   } catch (err) {
-    console.error("[Grace rate limit] Failed open:", err);
+    // Fail open on purpose (a Convex blip must not take Grace down) — but a
+    // silent fail-open means no rate limiting at all, so make it visible.
+    reportError(err, { area: "grace-rate-limit", level: "warning", tags: { route: config.route, failOpen: true } });
     return null;
   }
 }

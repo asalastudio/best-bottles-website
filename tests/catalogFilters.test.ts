@@ -211,7 +211,8 @@ describe("URL round-trip serialization", () => {
             applicators: ["rollon", "finemist"] as ApplicatorBucket[],
             families: ["Cylinder", "Elegant"],
             colors: ["Clear", "Amber"],
-            capacities: ["30 ml (1 oz)", "100 ml (3.38 oz)"],
+            // Facet labels are "<ml> ml"; oz suffixes from older links are folded on parse.
+            capacities: ["30 ml", "100 ml"],
             neckThreadSizes: ["18-415"],
             componentType: "Sprayer",
             priceMin: 1.5,

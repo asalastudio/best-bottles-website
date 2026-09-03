@@ -15,9 +15,160 @@ export const APPLICATOR_BUCKETS = [
     { value: "lotionpump", label: "Lotion Pump", productValues: ["Lotion Pump"] },
     { value: "antiquespray", label: "Vintage Bulb Spray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
     { value: "antiquespray-tassel", label: "Vintage Bulb Spray with Tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
+    // Bottles sold with a plain screw cap and no dispensing applicator. 95 of
+    // 362 catalogue groups carry this value (2026-09-02 dev snapshot), so
+    // without a bucket the Product Type facet could not reach a quarter of the
+    // catalogue — a Baymard "filters for all displayed list item info" gap.
+    { value: "capclosure", label: "Cap / Closure", productValues: ["Cap/Closure"] },
+    { value: "glassstopper", label: "Glass Stopper / Rod", productValues: ["Glass Stopper", "Glass Rod"] },
 ] as const;
 
 export type ApplicatorBucket = (typeof APPLICATOR_BUCKETS)[number]["value"];
+
+/** Canonical bucket slugs — the ONLY applicator vocabulary Grace's refine tool accepts. */
+export const APPLICATOR_BUCKET_VALUES: readonly ApplicatorBucket[] = APPLICATOR_BUCKETS.map((bucket) => bucket.value);
+
+/** Historic `products.applicator` spellings a bucket still accepts; never offered to Grace or shown in UI. */
+export const LEGACY_APPLICATOR_VALUES = [
+    "Metal Roller", "Plastic Roller", "Antique Bulb Sprayer", "Antique Bulb Sprayer with Tassel",
+] as const;
+
+/** Every current `products.applicator` value a bucket reaches — Grace's searchCatalog.applicatorFilter vocabulary. */
+export const PRODUCT_APPLICATOR_VALUES: readonly string[] = Array.from(
+    new Set(APPLICATOR_BUCKETS.flatMap((bucket) => [...bucket.productValues])),
+).filter((value) => !(LEGACY_APPLICATOR_VALUES as readonly string[]).includes(value));
+
+/**
+ * `products.applicator` schema literals that are deliberately NOT a Product
+ * Type bucket. tests/catalog-vocabulary-alignment.test.ts fails if the schema
+ * grows a value that is neither bucketed nor listed here.
+ */
+export const UNBUCKETED_APPLICATOR_VALUES = ["Applicator Cap", "Metal Atomizer", "N/A"] as const;
+
+// ─── Catalogue vocabulary (single source of truth) ────────────────────────────
+// Convex (convex/products.ts, convex/grace*.ts), the client fallback, the
+// sidebar, and Grace's OpenAI tool schemas all import these. Values mirror the
+// distinct productGroups rows on the dev deployment (362 groups, 2026-09-02);
+// `npm run audit:catalog-vocabulary` diffs them against live data.
+
+/** `productGroups.category` values, in sidebar display order (bottles first). "Internal" is never listed. */
+export const CATALOG_CATEGORY_VALUES = [
+    "Glass Bottle",
+    "Glass Jar",
+    "Cream Jar",
+    "Aluminum Bottle",
+    "Plastic Bottle",
+    "Metal Atomizer",
+    "Roll-On Bottle",
+    "Component",
+    "Cap/Closure",
+    "Accessory",
+    "Packaging",
+] as const;
+
+export type CatalogCategoryValue = (typeof CATALOG_CATEGORY_VALUES)[number];
+
+/** Sidebar order for the Categories facet; categories present in data but absent here render last. */
+export const CATEGORY_ORDER: readonly string[] = CATALOG_CATEGORY_VALUES;
+
+/** Categories whose groups are bottles/jars — sorted first under "By Design Family". */
+export const BOTTLE_CATEGORIES: ReadonlySet<string> = new Set([
+    "Glass Bottle", "Glass Jar", "Cream Jar", "Aluminum Bottle", "Plastic Bottle", "Roll-On Bottle", "Lotion Bottle",
+]);
+
+/** Categories that are components/packaging — excluded from the Design Families facet. */
+export const COMPONENT_CATEGORIES: ReadonlySet<string> = new Set([
+    "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
+    "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
+]);
+
+/** Bottle design families in "By Design Family" order. Families absent here sort last. */
+export const FAMILY_ORDER: readonly string[] = [
+    "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
+    "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
+    "Tulip", "Bell", "Grace", "Vial", "Apothecary", "Decorative", "Teardrop",
+    "Pillar", "Atomizer", "Tall Cylinder",
+];
+
+/** Product-type lines that live in the `family` column but are not design families. */
+export const PRODUCT_TYPE_FAMILIES = ["Cream Jar", "Aluminum Bottle", "Lotion Bottle", "Plastic Bottle"] as const;
+
+/** Every family Grace may name or filter on — design families first, then product-type lines. */
+export const CATALOG_FAMILIES: readonly string[] = [...FAMILY_ORDER, ...PRODUCT_TYPE_FAMILIES];
+
+/** Family values that are component or packaging lines — never offered as bottle families. */
+export const COMPONENT_FAMILIES: readonly string[] = [
+    "Cap/Closure", "Roll-On Cap", "Sprayer", "Dropper", "Lotion Pump",
+    "Gift Box", "Gift Bag", "Tool", "Packaging Supply", "Unknown",
+];
+
+/** Longest name first so "Tall Cylinder" / "Boston Round" win over "Cylinder" / "Round" in free text. */
+export const CATALOG_FAMILIES_LONGEST_FIRST: readonly string[] = [...CATALOG_FAMILIES].sort((a, b) => b.length - a.length);
+
+/** Detect a family name inside free text (Grace search terms). */
+export function detectCatalogFamily(text: string): string | null {
+    const lower = text.toLowerCase();
+    return CATALOG_FAMILIES_LONGEST_FIRST.find((family) => lower.includes(family.toLowerCase())) ?? null;
+}
+
+/**
+ * Canonical glass colours as the sidebar, chips, URLs and Grace speak them.
+ * Raw rows still say "Blue" or "Cobalt" for some groups; `canonicalGlassColor`
+ * folds those into the canonical label so a Grace refine of ["Cobalt Blue"]
+ * and a sidebar tick of "Cobalt Blue" match the same rows.
+ */
+export const CANONICAL_GLASS_COLORS = [
+    "Clear", "Frosted", "Amber", "Cobalt Blue", "Green", "Swirl", "White", "Black", "Gold", "Silver",
+] as const;
+
+const GLASS_COLOR_ALIASES: Record<string, string> = {
+    blue: "Cobalt Blue",
+    cobalt: "Cobalt Blue",
+    "cobalt blue": "Cobalt Blue",
+    frost: "Frosted",
+    frosted: "Frosted",
+    brown: "Amber",
+    amber: "Amber",
+    clear: "Clear",
+    green: "Green",
+    swirl: "Swirl",
+    white: "White",
+    black: "Black",
+    gold: "Gold",
+    silver: "Silver",
+};
+
+export function canonicalGlassColor(value: string | null | undefined): string | null {
+    if (!value) return null;
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    return GLASS_COLOR_ALIASES[trimmed.toLowerCase()] ?? trimmed;
+}
+
+/** Detect a canonical glass colour inside free text (longest alias first). */
+export function detectCanonicalGlassColor(text: string): string | null {
+    const lower = text.toLowerCase();
+    const aliases = Object.keys(GLASS_COLOR_ALIASES).sort((a, b) => b.length - a.length);
+    const hit = aliases.find((alias) => new RegExp(`\\b${alias}\\b`).test(lower));
+    return hit ? GLASS_COLOR_ALIASES[hit] : null;
+}
+
+/** "30ml", "30 ml (1 oz)", " 30 ML " → "30 ml" — the exact facet label. Non-ml strings pass through trimmed. */
+export function normalizeCapacityFilterValue(value: string): string {
+    const trimmed = value.trim();
+    const match = trimmed.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
+    if (!match) return trimmed;
+    const ml = Number(match[1]);
+    return Number.isFinite(ml) ? `${ml} ml` : trimmed;
+}
+
+/** "9 ml", "9ml (0.3 oz)" → 9; anything else → null. Shared by Convex, the fallback and the integrity audit. */
+export function parseCapacityLabelMl(label: string): number | null {
+    const match = label.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
+    if (!match) return null;
+    const parsed = Number(match[1]);
+    return Number.isFinite(parsed) ? parsed : null;
+}
 
 // ─── Navigation-level applicator categories (single source of truth) ─────────
 // Used by: HomePage start-here cards, GuidedSelector dispensers, Navbar mega menu.
@@ -390,8 +541,11 @@ export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters;
             applicators: validApplicators,
             // Accept both ?families=Cylinder,Elegant (multi) and ?family=Cylinder (singular, used by Grace)
             families: familiesParam.length > 0 ? familiesParam : getMultiParam(sp, "family"),
-            colors: getMultiParam(sp, "colors"),
-            capacities: getMultiParam(sp, "capacities"),
+            colors: Array.from(new Set(
+                getMultiParam(sp, "colors").map((value) => canonicalGlassColor(value)).filter((value): value is string => Boolean(value)),
+            )),
+            // Mega-menu links carry "1 ml (0.03 oz)"; facet labels are "1 ml".
+            capacities: Array.from(new Set(getMultiParam(sp, "capacities").map(normalizeCapacityFilterValue))),
             neckThreadSizes: getMultiParam(sp, "threads"),
             componentType: sp.get("componentType") || null,
             priceMin: getNonNegativeNumberParam(sp, "priceMin"),

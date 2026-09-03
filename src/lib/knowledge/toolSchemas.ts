@@ -1,4 +1,14 @@
+import {
+    APPLICATOR_BUCKET_VALUES,
+    CANONICAL_GLASS_COLORS,
+    CATALOG_CATEGORY_VALUES as CANONICAL_CATALOG_CATEGORY_VALUES,
+    CATALOG_FAMILIES,
+    PRODUCT_APPLICATOR_VALUES,
+} from "../catalogFilters";
+
 type JsonSchemaProperty = Record<string, unknown>;
+
+const quoteList = (values: readonly string[]) => values.map((value) => `'${value}'`).join(", ");
 
 export type GraceOpenAIToolSpec = {
     name: string;
@@ -31,18 +41,11 @@ const nullableStringArray = (description: string): JsonSchemaProperty => ({
  *
  * The catalog also contains an "Internal" category; it is intentionally omitted
  * so Grace can never surface internal-only rows to a customer.
+ *
+ * The list itself lives in src/lib/catalogFilters.ts so the sidebar, Convex and
+ * this schema cannot disagree (tests/catalog-vocabulary-alignment.test.ts).
  */
-export const CATALOG_CATEGORY_VALUES = [
-    "Glass Bottle",
-    "Component",
-    "Packaging",
-    "Metal Atomizer",
-    "Glass Jar",
-    "Cream Jar",
-    "Aluminum Bottle",
-    "Plastic Bottle",
-    "Accessory",
-] as const;
+export const CATALOG_CATEGORY_VALUES = CANONICAL_CATALOG_CATEGORY_VALUES;
 
 const nullableCategory = (description: string): JsonSchemaProperty => ({
     type: ["string", "null"],
@@ -54,9 +57,9 @@ const nullableApplicatorArray = (description: string): JsonSchemaProperty => ({
     type: ["array", "null"],
     items: {
         type: "string",
-        enum: ["rollon", "finemist", "perfumespray", "reducer", "dropper", "lotionpump", "antiquespray", "antiquespray-tassel"],
+        enum: [...APPLICATOR_BUCKET_VALUES],
     },
-    maxItems: 8,
+    maxItems: APPLICATOR_BUCKET_VALUES.length,
     description,
 });
 
@@ -101,8 +104,8 @@ export const GRACE_OPENAI_TOOL_SPECS = [
     spec("searchCatalog", "Search live Best Bottles product truth before making any product, price, stock, size, color, or SKU claim.", {
         searchTerm: string("Natural-language product request including known size, family, color, or applicator."),
         categoryLimit: nullableCategory("Exact category constraint — must be one of the listed exact values, or null."),
-        familyLimit: nullableString("Exact family constraint, or null."),
-        applicatorFilter: nullableString("Comma-separated EXACT catalog applicator values, or null. Valid values: 'Metal Roller Ball', 'Plastic Roller Ball', 'Fine Mist Sprayer', 'Perfume Spray Pump', 'Vintage Bulb Sprayer', 'Vintage Bulb Sprayer with Tassel', 'Lotion Pump', 'Dropper', 'Reducer', 'Cap/Closure'. Do NOT pass the canonical Refine bucket slugs here (rollon, finemist, perfumespray, antiquespray, antiquespray-tassel, lotionpump) — those belong to setCatalogRefinements.applicators and match NOTHING in this tool, silently filtering out the products you are looking for. When unsure, pass null and read the applicator field on the returned rows."),
+        familyLimit: nullableString(`Exact family constraint, or null. Valid values: ${quoteList(CATALOG_FAMILIES)}. Any other spelling matches nothing.`),
+        applicatorFilter: nullableString(`Comma-separated EXACT catalog applicator values, or null. Valid values: ${quoteList(PRODUCT_APPLICATOR_VALUES)}. Do NOT pass the canonical Refine bucket slugs here (${APPLICATOR_BUCKET_VALUES.join(", ")}) — those belong to setCatalogRefinements.applicators and match NOTHING in this tool, silently filtering out the products you are looking for. When unsure, pass null and read the applicator field on the returned rows.`),
     }),
     spec("getProductBySku", "Look up ONE exact product by its SKU code. REQUIRED whenever the customer names or types a SKU (e.g. GB-CYL-CLR-9ML-T-08, CMP-CAP-SBLK-13-415) — searchCatalog is a name search and does NOT reliably match SKU codes. Accepts Grace or website SKUs. Also REQUIRED for any quantity/volume price quote: the result's priceTiers array is the full published quantity-break ladder (minQty/unitPrice/totalPrice, typically 5 breaks up to 1000+ pcs) — quote tiers from it verbatim and never extrapolate a bulk price. A null/found:false result means the code was not found as written; it does NOT mean the product is unavailable.", {
         sku: string("The exact SKU code the customer supplied, e.g. 'GB-CYL-CLR-9ML-T-08'."),
@@ -198,8 +201,8 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         category: nullableCategory("Requested category — must be one of the listed exact values, or null. There is NO stock/availability filter: never claim results were limited to in-stock items."),
         collection: nullableString("Requested collection, or null."),
         applicators: nullableApplicatorArray("Requested canonical Refine applicator buckets, or null."),
-        families: nullableStringArray("Requested exact family values, or null."),
-        colors: nullableStringArray("Requested exact GLASS color values, or null. This facet filters the BOTTLE GLASS only — cap, closure, plug, applicator, and trim colors are NOT refinable and a closure color placed here matches nothing (e.g. colors:['Black'] for a 'black plug' request returns zero groups because the glass is amber or clear). When the customer's color word describes the cap/plug/applicator, pass null here and use searchCatalog instead, answering from the rows' cap/closure colors."),
+        families: nullableStringArray(`Requested exact family values, or null. Valid values: ${quoteList(CATALOG_FAMILIES)}.`),
+        colors: nullableStringArray(`Requested exact GLASS color values, or null. Canonical values: ${quoteList(CANONICAL_GLASS_COLORS)} ('Blue' and 'Cobalt' fold into 'Cobalt Blue'). This facet filters the BOTTLE GLASS only — cap, closure, plug, applicator, and trim colors are NOT refinable and a closure color placed here matches nothing (e.g. colors:['Black'] for a 'black plug' request returns zero groups because the glass is amber or clear). When the customer's color word describes the cap/plug/applicator, pass null here and use searchCatalog instead, answering from the rows' cap/closure colors.`),
         capacities: nullableStringArray("Requested exact capacity labels, or null. This is an EXACT SET, not a range: to honour 'under 15ml' or '15ml and smaller' you must enumerate every qualifying capacity (e.g. ['1 ml','3 ml','5 ml','9 ml','15 ml']). If you do not enumerate them, the size constraint is NOT applied — do not tell the customer the results are limited by size."),
         neckThreadSizes: nullableStringArray("Requested exact GPI neck threads, or null."),
         componentType: nullableString("Requested component type, or null."),

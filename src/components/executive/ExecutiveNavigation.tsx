@@ -25,7 +25,7 @@ const executiveLanes = [
     { short: "FI", label: "Financial", href: "#financial", available: true },
     { short: "EC", label: "Ecommerce", available: false },
     { short: "GR", label: "Grace", available: false },
-    { short: "PL", label: "Platform", available: false },
+    { short: "PL", label: "Platform", href: "#platform", available: true },
 ] as const;
 
 function LaneList({ mobile = false }: { mobile?: boolean }) {

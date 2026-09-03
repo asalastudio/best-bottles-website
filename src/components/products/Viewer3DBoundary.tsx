@@ -20,6 +20,7 @@
  * should degrade quietly rather than throw on first frame.
  */
 
+import { reportError } from "@/lib/observability/report";
 import React from "react";
 
 /** Cheap, cached probe — creating a GL context is not free, so do it once. */
@@ -57,13 +58,14 @@ export default class Viewer3DBoundary extends React.Component<Props, State> {
   }
 
   componentDidCatch(error: Error) {
-    // Deliberately console.error and swallow: a 3D failure is a degraded
-    // experience, not a page fault. Surfacing it keeps it diagnosable
-    // without letting it reach the route boundary.
-    console.error(
-      `[Viewer3DBoundary] 3D viewer failed${this.props.label ? ` for ${this.props.label}` : ""} ` +
-      `— falling back to product photography.`, error,
-    );
+    // Deliberately swallow: a 3D failure is a degraded experience, not a page
+    // fault. Report it so the Platform Health panel shows which products trip
+    // the configurator without letting it reach the route boundary.
+    reportError(error, {
+      area: "viewer-3d",
+      level: "warning",
+      tags: { product: this.props.label ?? "unknown" },
+    });
   }
 
   render() {

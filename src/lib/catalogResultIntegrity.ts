@@ -1,5 +1,6 @@
 import {
     applicatorBucketMatchesProductValues,
+    canonicalGlassColor,
     type CatalogFilters,
 } from "@/lib/catalogFilters";
 
@@ -37,8 +38,10 @@ function violatesFilters(group: AuditableCatalogGroup, filters: CatalogFilters):
     if (filters.families.length > 0 && (!group.family || !filters.families.includes(group.family))) {
         return true;
     }
-    if (filters.colors.length > 0 && (!group.color || !filters.colors.includes(group.color))) {
-        return true;
+    if (filters.colors.length > 0) {
+        // Rows may still say "Blue"/"Cobalt"; compare on the canonical label the filter uses.
+        const wanted = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
+        if (!wanted.has(canonicalGlassColor(group.color))) return true;
     }
     if (filters.neckThreadSizes.length > 0 && (
         !group.neckThreadSize || !filters.neckThreadSizes.includes(group.neckThreadSize)

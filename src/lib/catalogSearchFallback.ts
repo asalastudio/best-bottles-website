@@ -1,26 +1,24 @@
 import {
     APPLICATOR_BUCKETS,
+    BOTTLE_CATEGORIES,
+    COMPONENT_CATEGORIES,
+    FAMILY_ORDER,
     type CatalogFilters,
     type SortValue,
     type ViewMode,
     applicatorBucketMatchesProductValues,
+    canonicalGlassColor,
     catalogSearchMatches,
     catalogSearchResultTieBreak,
     catalogSearchScore,
     classifyComponentType,
+    parseCapacityLabelMl,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 
-const COMPONENT_CATEGORIES = new Set([
-    "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
-    "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
-]);
-const BOTTLE_CATEGORIES = new Set(["Glass Bottle", "Cream Jar", "Lotion Bottle"]);
-const FAMILY_ORDER = [
-    "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
-    "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
-    "Tulip", "Queen", "Bell", "Swirl", "Grace",
-];
+// This file mirrors convex/products.ts::searchCatalog for the no-backend
+// fallback. Vocabulary and semantics come from catalogFilters so the two
+// cannot drift; tests/catalog-vocabulary-alignment.test.ts guards it.
 
 export interface CatalogSearchGroup {
     _id: string;
@@ -94,10 +92,6 @@ function countBy<T>(items: T[], keyFn: (item: T) => string | null | undefined): 
     return counts;
 }
 
-function parseCapacityMl(label: string): number | null {
-    const match = label.match(/^(\d+(?:\.\d+)?)\s*ml/i);
-    return match ? Number(match[1]) : null;
-}
 
 export function buildCatalogSearchResult(input: {
     groups: CatalogSearchGroup[];
@@ -132,8 +126,8 @@ export function buildCatalogSearchResult(input: {
                 skuMap.get(group._id),
             ]));
         }
-        if (filters.category) rows = rows.filter((group) => group.category === filters.category);
-        if (filters.collection) rows = rows.filter((group) => group.bottleCollection === filters.collection);
+        if (!skipKeys.has("category") && filters.category) rows = rows.filter((group) => group.category === filters.category);
+        if (!skipKeys.has("collection") && filters.collection) rows = rows.filter((group) => group.bottleCollection === filters.collection);
         if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
             rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
         }
@@ -142,11 +136,11 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => group.family != null && set.has(group.family));
         }
         if (!skipKeys.has("colors") && filters.colors.length > 0) {
-            const set = new Set(filters.colors);
-            rows = rows.filter((group) => group.color != null && set.has(group.color));
+            const set = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
+            rows = rows.filter((group) => set.has(canonicalGlassColor(group.color)));
         }
         if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
-            const selectedMls = new Set(filters.capacities.map(parseCapacityMl).filter((value): value is number => value != null));
+            const selectedMls = new Set(filters.capacities.map(parseCapacityLabelMl).filter((value): value is number => value != null));
             rows = rows.filter((group) => group.capacityMl != null && selectedMls.has(group.capacityMl));
         }
         if (!skipKeys.has("neckThreadSizes") && filters.neckThreadSizes.length > 0) {
@@ -154,7 +148,12 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => group.neckThreadSize != null && set.has(group.neckThreadSize));
         }
         if (filters.componentType) rows = rows.filter((group) => classifyComponentType(group.displayName, group.family) === filters.componentType);
-        if (filters.priceMin !== null) rows = rows.filter((group) => group.priceRangeMin !== null && group.priceRangeMin >= filters.priceMin!);
+        if (filters.priceMin !== null) {
+            rows = rows.filter((group) => {
+                const top = group.priceRangeMax ?? group.priceRangeMin;
+                return top !== null && top >= filters.priceMin!;
+            });
+        }
         if (filters.priceMax !== null) rows = rows.filter((group) => group.priceRangeMin !== null && group.priceRangeMin <= filters.priceMax!);
         return rows;
     };
@@ -178,17 +177,21 @@ export function buildCatalogSearchResult(input: {
             capacities[label].count++;
         }
     }
-    const priceValues = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
+    const categoryFacetBase = runFilters(new Set(["category", "collection"]));
+    const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
+    const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
     const facets = {
-        categories: countBy(result, (group) => group.category),
-        collections: countBy(result, (group) => group.bottleCollection),
+        categories: countBy(categoryFacetBase, (group) => group.category),
+        collections: countBy(categoryFacetBase, (group) => group.bottleCollection),
         applicators,
         families: countBy(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-        colors: countBy(colorFacetBase, (group) => group.color),
+        colors: countBy(colorFacetBase, (group) => canonicalGlassColor(group.color)),
         capacities,
         neckThreadSizes: countBy(threadFacetBase, (group) => group.neckThreadSize),
         componentTypes: countBy(result, (group) => classifyComponentType(group.displayName, group.family)),
-        priceRange: priceValues.length > 0 ? { min: Math.min(...priceValues), max: Math.max(...priceValues) } : { min: 0, max: 0 },
+        priceRange: priceFloors.length > 0
+            ? { min: Math.min(...priceFloors), max: Math.max(...priceCeilings, ...priceFloors) }
+            : { min: 0, max: 0 },
     };
     const sorted = [...result];
     if (input.sort === "best-match" && filters.search) {

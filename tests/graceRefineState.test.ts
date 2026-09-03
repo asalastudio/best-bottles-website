@@ -49,7 +49,9 @@ describe("Grace Refine state", () => {
 
         expect(state.filters).toEqual(expect.objectContaining({
             families: ["Cylinder"],
-            capacities: ["9 ml (0.3 oz)"],
+            // "9 ml (0.3 oz)" in the URL is folded to the facet label so the
+            // sidebar checkbox, the chip and Grace all agree.
+            capacities: ["9 ml"],
             colors: ["Amber"],
             neckThreadSizes: ["17-415"],
             applicators: ["rollon"],
@@ -69,7 +71,7 @@ describe("Grace Refine state", () => {
         }, "Show me amber options");
 
         expect(next.filters.neckThreadSizes).toEqual(["17-415"]);
-        expect(next.filters.capacities).toEqual(["9 ml (0.3 oz)"]);
+        expect(next.filters.capacities).toEqual(["9 ml"]);
         expect(next.filters.colors).toEqual(["Amber"]);
         expect(next.filters.search).toBe("amber cylinder");
     });

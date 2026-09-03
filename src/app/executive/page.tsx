@@ -5,6 +5,7 @@ import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
 import { ExecutiveDashboard } from "@/components/executive/ExecutiveDashboard";
 import { EXECUTIVE_HUB_FIXTURE } from "@/lib/executive/fixture";
 import { getGraceOperationsSnapshot } from "@/lib/executive/graceOperations";
+import { getPlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 import { getUserEmailAddresses, hasExecutiveHubAccess } from "@/lib/teamAccess";
 
 export const dynamic = "force-dynamic";
@@ -51,12 +52,16 @@ export default async function ExecutivePage({ searchParams }: ExecutivePageProps
 
     const accessFallback = await getExecutiveAccessFallback(previewMode);
     if (accessFallback) return accessFallback;
-    const graceOperations = await getGraceOperationsSnapshot();
+    const [graceOperations, platformHealth] = await Promise.all([
+        getGraceOperationsSnapshot(),
+        getPlatformHealthSnapshot(),
+    ]);
 
     return (
         <ExecutiveDashboard
             snapshot={EXECUTIVE_HUB_FIXTURE}
             graceOperations={graceOperations}
+            platformHealth={platformHealth}
             previewMode={previewMode}
         />
     );

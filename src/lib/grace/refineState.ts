@@ -1,11 +1,35 @@
 import {
     EMPTY_FILTERS,
+    canonicalGlassColor,
     filtersToParams,
+    normalizeApplicatorBuckets,
+    normalizeCapacityFilterValue,
     paramsToFilters,
     type CatalogFilters,
     type SortValue,
     type ViewMode,
 } from "@/lib/catalogFilters";
+
+/**
+ * Grace speaks the customer's words; the facets speak exact labels. Fold the
+ * proposal into the same canonical vocabulary the sidebar and URL use so a
+ * "Cobalt Blue" / "9 ml (0.3 oz)" / "Roll-On" request lands on real rows.
+ */
+function canonicalizeProposal(proposal: GraceRefinementProposal): GraceRefinementProposal {
+    const out: GraceRefinementProposal = { ...proposal };
+    if (Array.isArray(proposal.capacities)) {
+        out.capacities = Array.from(new Set(proposal.capacities.map((value) => normalizeCapacityFilterValue(String(value)))));
+    }
+    if (Array.isArray(proposal.colors)) {
+        out.colors = Array.from(new Set(
+            proposal.colors.map((value) => canonicalGlassColor(String(value))).filter((value): value is string => Boolean(value)),
+        ));
+    }
+    if (Array.isArray(proposal.applicators)) {
+        out.applicators = normalizeApplicatorBuckets(proposal.applicators.map((value) => String(value)));
+    }
+    return out;
+}
 
 export type GraceRefineState = {
     filters: CatalogFilters;
@@ -110,14 +134,15 @@ export function applyGraceRefinementRequest(
     proposal: GraceRefinementProposal,
     customerRequest: string,
 ): GraceRefineState {
-    const exactCapacity = exactCapacityFacet(proposal.search);
+    const canonical = canonicalizeProposal(proposal);
+    const exactCapacity = exactCapacityFacet(canonical.search);
     const effectiveProposal: GraceRefinementProposal = exactCapacity
         ? {
-            ...proposal,
-            capacities: proposal.capacities?.length ? proposal.capacities : [exactCapacity],
+            ...canonical,
+            capacities: canonical.capacities?.length ? canonical.capacities : [normalizeCapacityFilterValue(exactCapacity)],
             search: "",
         }
-        : proposal;
+        : canonical;
     const broaden = inferGraceBroadenScope(customerRequest);
     const filters = broaden === "all" ? cloneFilters(EMPTY_FILTERS) : cloneFilters(current.filters);
 
