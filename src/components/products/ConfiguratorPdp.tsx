@@ -256,25 +256,27 @@ export default function ConfiguratorPdp({
     const parts = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
     return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
   }, [kit, withCap]);
-  // what is actually on screen: only ever a fully decoded set
-  const [shownParts, setShownParts] = useState<typeof targetParts>(null);
+  // What is actually on screen: a fully decoded set owned by the current kit.
+  // The synchronous SKU gate below prevents an old state value from painting
+  // between render and effect cleanup during a variant transition.
+  const [shownKit, setShownKit] = useState<{ sku: string; parts: NonNullable<typeof targetParts> } | null>(null);
   useEffect(() => {
     // Pending or no exact kit: never keep another SKU's layers on this stage.
-    if (kitQuery === undefined) { setShownParts(null); return; }
+    if (kitQuery === undefined) { setShownKit(null); return; }
     // Resolved with no kit — a SKU that was never kitted. The stale stack would
     // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
-    if (!targetParts?.length) { setShownParts(null); return; }
+    if (!kit?.sku || !targetParts?.length) { setShownKit(null); return; }
     let cancelled = false;
     Promise.all(targetParts.map((part) => decodeImage(part.image.url)))
-      .then(() => { if (!cancelled) setShownParts(targetParts); })
-      .catch(() => { if (!cancelled) setShownParts(null); });   // fall back to the plate
+      .then(() => { if (!cancelled) setShownKit({ sku: kit.sku, parts: targetParts }); })
+      .catch(() => { if (!cancelled) setShownKit(null); });   // fall back to the plate
     return () => { cancelled = true; };
-  }, [kitQuery, targetParts]);
+  }, [kit, kitQuery, targetParts]);
   // A published kit for this exact SKU is capability truth; decoding only
   // controls when its layers are safe to paint.
   const releasedKitAvailable = Boolean(kit?.parts?.length);
-  const kitReady = Boolean(shownParts?.length);
-  const kitParts = shownParts;
+  const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts.length);
+  const kitParts = kitReady ? shownKit!.parts : null;
   const markPlateBroken = (url: string) => {
     console.error("[plates] image failed to load", url);
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));

@@ -66,6 +66,7 @@ import {
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
     resolveGraceRecommendationHref,
+    resolveVerifiedGracePdpHref,
     type PdpContextChange,
 } from "@/lib/grace/pageContextEvents";
 
@@ -1373,8 +1374,22 @@ function GraceProviderBase({
                     navPath = `/products/${canonicalSlug}${query}`;
                 }
                 try {
-                    const checkData = await callGraceServerTool<{ group?: unknown } | null>("getProductGroup", { slug: canonicalSlug });
-                    if (!checkData.result || !(checkData.result as { group?: unknown }).group) {
+                    const checkData = await callGraceServerTool<{
+                        group?: { slug?: string | null } | null;
+                        variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }>;
+                    } | null>("getProductGroup", { slug: canonicalSlug });
+                    const verifiedHref = resolveVerifiedGracePdpHref({
+                        requestedPath: navPath,
+                        finderHref: buildCatalogPath([], params.title || slugToSearchTerm(rawSlug)),
+                        verifiedGroup: checkData.result,
+                    });
+                    if (verifiedHref) {
+                        navPath = verifiedHref;
+                    } else if (checkData.result?.group) {
+                        // A known group without an exact stored SKU is broad or
+                        // malformed navigation, not a safe PDP transaction.
+                        navPath = buildCatalogPath([], params.title || slugToSearchTerm(rawSlug));
+                    } else {
                         const searchTerm = params.title && params.title.length > 3 ? params.title : slugToSearchTerm(rawSlug);
                         const searchData = await callGraceServerTool<ProductCard[]>("searchCatalog", {
                             searchTerm,

@@ -58,3 +58,39 @@ export function resolveGraceRecommendationHref({
     const slug = getCanonicalProductSlug(exactProduct.slug);
     return `/products/${slug}?${new URLSearchParams({ sku }).toString()}`;
 }
+
+type GraceVerifiedPdpGroup = {
+    group?: { slug?: string | null } | null;
+    variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }> | null;
+} | null;
+
+/**
+ * A raw PDP navigation is valid only when the requested SKU is a stored
+ * variant of the verified group. Group existence alone is not transaction
+ * identity; absent, mismatched, and broad routes must return to the finder.
+ */
+export function resolveVerifiedGracePdpHref({
+    requestedPath,
+    finderHref,
+    verifiedGroup,
+}: {
+    requestedPath: string;
+    finderHref: string;
+    verifiedGroup: GraceVerifiedPdpGroup;
+}): string | null {
+    const requested = new URL(requestedPath, "https://bestbottles.local");
+    const rawSlug = requested.pathname.replace(/^\/products\//, "");
+    if (!rawSlug || requested.pathname !== `/products/${rawSlug}`) return null;
+    const canonicalSlug = getCanonicalProductSlug(rawSlug);
+    const groupSlug = verifiedGroup?.group?.slug ? getCanonicalProductSlug(verifiedGroup.group.slug) : null;
+    const sku = requested.searchParams.get("sku")?.trim();
+    if (!sku || !groupSlug || canonicalSlug !== groupSlug) return null;
+    const exactVariant = verifiedGroup?.variants?.find((variant) => (
+        variant.websiteSku?.trim() === sku || variant.graceSku?.trim() === sku
+    ));
+    if (!exactVariant) return null;
+    return resolveGraceRecommendationHref({
+        finderHref,
+        exactProduct: { slug: groupSlug, websiteSku: exactVariant.websiteSku, graceSku: exactVariant.graceSku },
+    });
+}

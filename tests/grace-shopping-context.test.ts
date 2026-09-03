@@ -4,6 +4,7 @@ import {
     buildGraceFinderContext,
     mergePdpContextChange,
     resolveGraceRecommendationHref,
+    resolveVerifiedGracePdpHref,
     type PdpContextChange,
 } from "@/lib/grace/pageContextEvents";
 
@@ -89,5 +90,35 @@ describe("Grace shopping context", () => {
         })).toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=GB-CYL-9-17-415");
         expect(provider).toContain("exactProduct: directProduct");
         expect(provider).toContain("const canonicalSlug = getCanonicalProductSlug(rawSlug)");
+    });
+
+    it("accepts only an exact stored SKU for a verified canonical PDP group", () => {
+        const verifiedGroup = {
+            group: { slug: "cylinder-9ml-clear-17-415-rollon" },
+            variants: [
+                { websiteSku: null, graceSku: "GRACE-A" },
+                { websiteSku: "WEB-B", graceSku: "GRACE-B" },
+            ],
+        };
+        expect(resolveVerifiedGracePdpHref({
+            requestedPath: "/products/cylinder-9ml-clear-17-415-rollon?sku=WEB-B",
+            finderHref: "/catalog?grace=1",
+            verifiedGroup,
+        })).toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=WEB-B");
+        expect(resolveVerifiedGracePdpHref({
+            requestedPath: "/products/cylinder-9ml-clear-17-415-rollon",
+            finderHref: "/catalog?grace=1",
+            verifiedGroup,
+        })).toBeNull();
+        expect(resolveVerifiedGracePdpHref({
+            requestedPath: "/products/cylinder-9ml-clear-17-415-rollon?sku=NOT-A-VARIANT",
+            finderHref: "/catalog?grace=1",
+            verifiedGroup,
+        })).toBeNull();
+        expect(resolveVerifiedGracePdpHref({
+            requestedPath: "/products/cylinder-9ml-17-415?sku=GRACE-A",
+            finderHref: "/catalog?grace=1",
+            verifiedGroup,
+        })).toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=GRACE-A");
     });
 });

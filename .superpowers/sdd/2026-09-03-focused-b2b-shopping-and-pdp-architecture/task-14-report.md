@@ -181,3 +181,49 @@ GREEN:
 - `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
 - Safety audit found no inventory/selection/xref or legacy PSD path change; no
   network, Convex CLI/deploy/data action, or media regeneration occurred.
+
+## Fix round 3 (base `5582b720`)
+
+### Exact Grace PDP verification
+
+- Added production `resolveVerifiedGracePdpHref`, used by Grace's generic PDP
+  navigation path after `getProductGroup`. It accepts a destination only when
+  the requested SKU exactly matches a stored website or Grace SKU in that exact
+  group's variants, then rebuilds the canonical URL through
+  `resolveGraceRecommendationHref`.
+- Canonical PDP routes with no SKU, wrong SKU, or an ambiguous/broad request
+  now fall back to the focused finder. Legacy aliases remain canonicalized
+  before verification. Regression coverage includes canonical/no-SKU rejection,
+  wrong-SKU rejection, exact stored-SKU acceptance, and alias acceptance.
+
+### Synchronous selected-kit transition safety
+
+- `ProductDetailClient` now passes raw kit-query state to the stage so pending
+  (`undefined`) remains distinct from resolved no-kit (`null`). The stage keeps
+  a decoded `{ sku, parts }` record and synchronously renders it only when its
+  SKU equals the current selected kit. This prevents an A layer from painting
+  during B's first pending render, while preserving requested Exploded intent
+  until an exact B kit arrives.
+- A DOM transition test covers A-kit → B-pending → B-kit and B-no-kit: pending
+  and no-kit show B's plate without A/B stale parts or Exploded; only exact B
+  restores the mode.
+
+### Real focused-shell mobile measurement
+
+- Replaced echoed root width properties with a test-only deterministic geometry
+  shim over the mounted `.focused-pdp-shell` tree. It derives inherited widths
+  from actual node classes/styles, excludes the rail's contained overflow, and
+  proves an intentionally widened shell fails the 390px page/root/shell check.
+
+### Fix-round 3 RED → GREEN and verification
+
+RED: verified-PDP helper expectations and the A→B actual DOM transition failed
+before the new validation and synchronous SKU render gate.
+
+GREEN:
+
+- Focused Grace/PDP/protected suites: **9 files, 46 tests passed**.
+- Full Vitest: **122 files, 853 tests passed; 2 live files / 7 tests skipped**.
+- `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
+- Safety scan found no inventory/selection/xref or legacy PSD path change; no
+  network, Convex CLI/deploy/data action, or media generation occurred.

@@ -47,7 +47,8 @@ describe("PDP stage mode capabilities", () => {
         expect(configuratorSource).not.toContain("api.productKits.forSku,");
         expect(productDetailSource).toContain("const selectedKitQuery = useQuery(");
         expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKit?.parts?.length)");
-        expect(productDetailSource).toContain("kitQuery={selectedKit}");
+        expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
+        expect(productDetailSource).toContain("selectedGraceSku={selectedVariant?.graceSku ?? null}");
     });
 
     it("accepts approved 3D availability as a field from the focused rollout gate", () => {

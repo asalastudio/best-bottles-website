@@ -1810,7 +1810,7 @@ export default function ProductDetailClient({
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
-                                kitQuery={selectedKit}
+                                kitQuery={selectedKitQuery}
                                 selectedGraceSku={selectedVariant?.graceSku ?? null}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
