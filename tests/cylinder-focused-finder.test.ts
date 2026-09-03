@@ -164,6 +164,46 @@ describe("Cylinder family-first server route", () => {
             }),
         }));
     });
+
+    it.each(["family", "families"])(
+        "removes inbound %s aliases before SSR state and exact PDP return URLs",
+        async (familyParam) => {
+            const element = await CylinderFamilyPage({
+                searchParams: Promise.resolve({
+                    [familyParam]: "Cylinder",
+                    applicators: "rollon",
+                    roller: "metal",
+                    colors: "Amber",
+                    capacities: "9 ml",
+                    threads: "17-415",
+                    sort: "price-asc",
+                }),
+            });
+            const html = renderToStaticMarkup(element);
+            const parsed = new DOMParser().parseFromString(html, "text/html");
+            const productHref = parsed.querySelector('a[href^="/products/cylinder-9ml-roll-on"]')
+                ?.getAttribute("href");
+            const returnPath = productHref
+                ? new URL(productHref, "https://bestbottles.com").searchParams.get("from")
+                : null;
+
+            expect(returnPath).toBe(
+                "/catalog/cylinder?applicators=rollon&roller=metal&colors=Amber&capacities=9+ml&threads=17-415&sort=price-asc",
+            );
+            expect(returnPath).not.toContain("family");
+            expect(mocks.serverSearch).toHaveBeenCalledWith(expect.objectContaining({
+                filters: expect.objectContaining({
+                    families: ["Cylinder"],
+                    applicators: ["rollon"],
+                    rollerMaterials: ["metal"],
+                    colors: ["Amber"],
+                    capacities: ["9 ml"],
+                    neckThreadSizes: ["17-415"],
+                }),
+                sort: "price-asc",
+            }));
+        },
+    );
 });
 
 describe("Cylinder family-first client", () => {

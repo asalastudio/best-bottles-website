@@ -36,6 +36,8 @@ export default async function CylinderFamilyPage({
 }) {
     const resolvedSearchParams = await searchParams;
     const urlSearchParams = toURLSearchParams(resolvedSearchParams);
+    urlSearchParams.delete("family");
+    urlSearchParams.delete("families");
     const parsedState = paramsToFilters(urlSearchParams);
     const baseArgs = buildCatalogSearchArgs({
         surface: CYLINDER_CATALOG_SURFACE,
