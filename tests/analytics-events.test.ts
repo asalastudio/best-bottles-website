@@ -52,12 +52,17 @@ describe("focused shopping analytics", () => {
       ["Finder Entered", { entryMode: "application", application: "rollon", family: "Cylinder", resultCount: 4 }],
       ["Finder Refined", { entryMode: "family", dimension: "capacity", action: "selected", value: "9 ml", resultCount: 2 }],
       ["Finder Zero Result Recovered", { entryMode: "family", removedDimension: "rollerMaterial" }],
-      ["Finder Result Opened", { entryMode: "application", family: "Cylinder", application: "rollon", slug: "cylinder-9ml-roll-on" }],
+      ["Finder Result Opened", {
+        entryMode: "application",
+        family: "Cylinder",
+        application: "rollon",
+        slug: expect.stringMatching(/^slug_[a-f0-9]{16}$/),
+      }],
       ["Matrix Opened", { source: "finder", family: "Cylinder" }],
       ["Grace Opened From Shopping", { source: "pdp", family: "Cylinder", application: "rollon" }],
     ]);
     expect(track.mock.calls[6]).toEqual(["PDP Variant Resolved", {
-      slug: "cylinder-9ml-roll-on",
+      slug: expect.stringMatching(/^slug_[a-f0-9]{16}$/),
       sku: expect.stringMatching(/^sku_[a-f0-9]{16}$/),
       application: "rollon",
       dimension: "capFinish",
@@ -115,6 +120,20 @@ describe("focused shopping analytics", () => {
       } as never);
     }
 
+    for (const slug of [
+      "Jane-Doe-1",
+      "john-smith-9ml",
+      "Jane-Doe-17-415",
+      "Jane-Middle-Doe-9ml",
+    ]) {
+      analytics.finderResultOpened({
+        entryMode: "application",
+        family: "Cylinder",
+        application: "rollon",
+        slug,
+      } as never);
+    }
+
     analytics.finderResultOpened({
       entryMode: "application",
       family: "Cylinder",
@@ -134,42 +153,46 @@ describe("focused shopping analytics", () => {
       slug: "pear-118ml-clear-Ground-stopper",
     });
     analytics.pdpVariantResolved({
-      slug: "boston-round-30ml-amber-dropper",
+      slug: "eternal-flame-35ml-clear-Ground",
       sku: "CYL9CLRROL",
       application: "dropper",
     });
 
     const emitted = JSON.stringify(track.mock.calls);
-    for (const identifier of ["Jane-Doe", "jane-doe", "Jane Doe", "jane@example.com", "private notes", "シリンダー-9ml"]) {
+    for (const identifier of [
+      "Jane-Doe",
+      "jane-doe",
+      "Jane Doe",
+      "jane@example.com",
+      "private notes",
+      "シリンダー-9ml",
+      "Jane-Doe-1",
+      "john-smith-9ml",
+      "Jane-Doe-17-415",
+      "Jane-Middle-Doe-9ml",
+      "cylinder-9ml-clear-17-415-rollon",
+      "eternal-flame-35ml-clear-Ground",
+      "pear-118ml-clear-Ground-stopper",
+    ]) {
       expect(emitted).not.toContain(identifier);
     }
-    expect(track.mock.calls.filter(([event]) => event === "Finder Result Opened")).toEqual([
-      ["Finder Result Opened", {
+    const finderResultEvents = track.mock.calls.filter(([event]) => event === "Finder Result Opened");
+    expect(finderResultEvents).toHaveLength(3);
+    for (const [, properties] of finderResultEvents) {
+      expect(properties).toEqual(expect.objectContaining({
         entryMode: "application",
         family: "Cylinder",
         application: "rollon",
-        slug: "cylinder-9ml-clear-17-415-rollon",
-      }],
-      ["Finder Result Opened", {
-        entryMode: "application",
-        family: "Cylinder",
-        application: "rollon",
-        slug: "eternal-flame-35ml-clear-Ground",
-      }],
-      ["Finder Result Opened", {
-        entryMode: "application",
-        family: "Cylinder",
-        application: "rollon",
-        slug: "pear-118ml-clear-Ground-stopper",
-      }],
-    ]);
-    expect(track.mock.calls.filter(([event]) => event === "PDP Variant Resolved")).toEqual([[
-      "PDP Variant Resolved", expect.objectContaining({
-        slug: "boston-round-30ml-amber-dropper",
-        application: "dropper",
-        sku: expect.stringMatching(/^sku_[a-f0-9]{16}$/),
-      }),
-    ]]);
+        slug: expect.stringMatching(/^slug_[a-f0-9]{16}$/),
+      }));
+    }
+    const pdpEvents = track.mock.calls.filter(([event]) => event === "PDP Variant Resolved");
+    expect(pdpEvents).toHaveLength(1);
+    expect(pdpEvents[0][1]).toEqual(expect.objectContaining({
+      application: "dropper",
+      slug: finderResultEvents[1][1].slug,
+      sku: expect.stringMatching(/^sku_[a-f0-9]{16}$/),
+    }));
   });
 
   it("wires shopping events to explicit interaction boundaries without referrer reads", () => {

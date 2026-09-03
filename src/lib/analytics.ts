@@ -90,6 +90,10 @@ type ShoppingGraceSource = "finder" | "pdp";
 
 const ANALYTICS_APPLICATIONS = new Set<string>(APPLICATOR_NAV.map(({ value }) => value));
 const ANALYTICS_FAMILIES = new Set<string>(CATALOG_FAMILIES);
+const ANALYTICS_SLUG_VOCABULARY = new Set([
+  ...CATALOG_FAMILIES,
+  ...APPLICATOR_NAV.flatMap(({ value, label }) => [value, label]),
+].map((value) => value.toLowerCase().replace(/[^a-z0-9]+/g, "-")));
 
 function safeApplication(value: unknown): ApplicatorNavValue | undefined {
   return typeof value === "string" && ANALYTICS_APPLICATIONS.has(value)
@@ -107,7 +111,7 @@ function safeResultCount(value: unknown): number | undefined {
     : undefined;
 }
 
-function slugToken(value: string): string {
+function opaqueProductToken(prefix: "sku" | "slug", value: string): string {
   let left = 0x811c9dc5;
   let right = 0x01000193;
   for (let index = 0; index < value.length; index += 1) {
@@ -115,19 +119,35 @@ function slugToken(value: string): string {
     left = Math.imul(left ^ code, 0x01000193);
     right = Math.imul(right ^ code, 0x27d4eb2d);
   }
-  return `sku_${(left >>> 0).toString(16).padStart(8, "0")}${(right >>> 0).toString(16).padStart(8, "0")}`;
+  return `${prefix}_${(left >>> 0).toString(16).padStart(8, "0")}${(right >>> 0).toString(16).padStart(8, "0")}`;
+}
+
+function containsCanonicalSlugVocabulary(value: string): boolean {
+  const lower = value.toLowerCase();
+  return [...ANALYTICS_SLUG_VOCABULARY].some((token) => (
+    lower === token || lower.startsWith(`${token}-`) || lower.endsWith(`-${token}`) || lower.includes(`-${token}-`)
+ ));
+}
+
+function isObviousNameWithNumericSuffix(value: string): boolean {
+  const segments = value.split("-");
+  const firstNumericSegment = segments.findIndex((segment) => /^\d+(?:ml)?$/i.test(segment));
+  if (firstNumericSegment < 2 || firstNumericSegment > 3) return false;
+  if (!segments.slice(0, firstNumericSegment).every((segment) => /^[A-Za-z]+$/.test(segment))) return false;
+  return segments.slice(firstNumericSegment + 1).every((segment) => /^\d+(?:ml)?$/i.test(segment));
 }
 
 function safeProductSlug(value: unknown): string | undefined {
   if (typeof value !== "string" || value.length > 120 || !/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+){2,}$/.test(value)) return undefined;
   if (!/(?:^|-)\d+(?:ml)?(?:-|$)|(?:^|-)\d+-\d+(?:-|$)/.test(value)) return undefined;
-  return value;
+  if (isObviousNameWithNumericSuffix(value) && !containsCanonicalSlugVocabulary(value)) return undefined;
+  return opaqueProductToken("slug", value);
 }
 
 function safeProductSku(value: unknown): string | undefined {
   if (typeof value !== "string" || value.length > 96 || !/^[A-Za-z0-9_-]+$/.test(value)) return undefined;
   if (!/[A-Za-z]/.test(value) || !/\d/.test(value)) return undefined;
-  return slugToken(value);
+  return opaqueProductToken("sku", value);
 }
 
 function safeCapacity(value: unknown): string | undefined {
