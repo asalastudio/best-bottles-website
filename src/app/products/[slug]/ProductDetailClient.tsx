@@ -16,6 +16,7 @@ import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
+import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import {
     PdpInlineBadges,
     PdpInlinePromo,
@@ -1158,6 +1159,18 @@ export default function ProductDetailClient({
             });
     }, [variants, activeApplicator]);
 
+    // Photographs of closures live in per-neck component families keyed by
+    // SKU token; pills are keyed by catalogue colourway. Carry the token keys
+    // each pill's variants spell so the guided page can join the two.
+    const capOptionPhotoKeys = useMemo(
+        () => buildCapOptionPhotoKeys(
+            capColorOptions,
+            variants.filter((v) => v.applicator === activeApplicator),
+            (v) => resolveVariantCapFinish(v).swatchName,
+        ),
+        [capColorOptions, variants, activeApplicator],
+    );
+
     const primaryCapColor = primaryVariant?.applicator === activeApplicator
         ? resolveVariantCapFinish(primaryVariant).swatchName
         : null;
@@ -1640,6 +1653,7 @@ export default function ProductDetailClient({
                                 price12={selectedVariant?.webPrice12pc ?? null}
                                 priceTiers={selectedVariant?.priceTiers ?? null}
                                 capOptions={capColorOptions}
+                                capOptionPhotoKeys={capOptionPhotoKeys}
                                 activeCapOption={activeCapColor}
                                 onCapOptionChange={(name) => {
                                     setSelectedVariantId(null);
@@ -1686,7 +1700,6 @@ export default function ProductDetailClient({
                                         };
                                     });
                                 })()}
-                                sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
                                 quoteHref={quoteHref}
                                 qty={qty}
                                 onQtyChange={setQty}

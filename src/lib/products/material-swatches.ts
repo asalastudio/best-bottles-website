@@ -52,6 +52,11 @@ const MATERIAL_BACKGROUNDS: Record<string, string> = {
     "light brown leather": "linear-gradient(135deg, #dfb27d 0%, #ad7745 48%, #6f4526 100%)",
     "ivory leather": "linear-gradient(135deg, #fff4dd 0%, #e6d6bb 48%, #bda989 100%)",
     "pink leather": "linear-gradient(135deg, #f3c5c3 0%, #d89b98 48%, #a76866 100%)",
+    // The "with Dots" colourways (5 ml / 9 ml roll-on caps): the base finish
+    // with a fine dot field, so the dot fallback never renders blank.
+    "black with dots": "radial-gradient(circle at 30% 30%, #ffffff 0 1.5px, transparent 2px) 0 0/6px 6px, radial-gradient(circle at 30% 24%, #4a4a4a 0 10%, #151515 46%, #050505 100%)",
+    "silver with dots": "radial-gradient(circle at 30% 30%, #ffffff 0 1.5px, transparent 2px) 0 0/6px 6px, radial-gradient(circle at 28% 22%, #fbfbfb 0 12%, #d7dbde 31%, #969da3 63%, #eeeeee 100%)",
+    "pink with dots": "radial-gradient(circle at 30% 30%, #ffffff 0 1.5px, transparent 2px) 0 0/6px 6px, radial-gradient(circle at 30% 24%, #ffe0e7 0 15%, #f4a7b9 48%, #c46d82 100%)",
 };
 
 function normalizeMaterialLabel(label: string | null | undefined): string | null {

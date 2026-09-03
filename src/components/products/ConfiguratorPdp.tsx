@@ -33,6 +33,7 @@ import { familyForSlugOrDerived, glassFromSlug, CLOSURE_TOKENS,
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 
@@ -165,8 +166,8 @@ export default function ConfiguratorPdp({
   siblings, heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
-  sampleHref, quoteHref, qty = 1, onQtyChange,
-  capOptions, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
+  quoteHref, qty = 1, onQtyChange,
+  capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
 }: {
   currentSlug: string;
@@ -205,13 +206,16 @@ export default function ConfiguratorPdp({
   price12?: number | null;     // 12+ tier unit price
   /** the real 5-step ladder; when present it replaces price10/price12 */
   priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
-  sampleHref?: string;
   quoteHref?: string;
   /** SKU TRUTH for the fitment row: the cap/trim colourways this closure
    *  actually ships in, derived from the group's own variants. A reducer
    *  has ~14 caps, a lotion pump far fewer, a bulb its own colourways —
    *  a single hardcoded palette was wrong for every closure but spray. */
   capOptions?: string[];
+  /** per pill, the token swatch names its variants' website SKUs spell — the
+   *  component families are keyed by token ("Pink"), the pills by catalogue
+   *  colourway ("Pink with Dots"); see src/lib/products/closure-swatch-keys.ts */
+  capOptionPhotoKeys?: Record<string, string[]>;
   activeCapOption?: string | null;
   onCapOptionChange?: (name: string) => void;
   capSwatchStyle?: (name: string) => React.CSSProperties;
@@ -451,17 +455,36 @@ export default function ConfiguratorPdp({
     ? `${COMPONENT_FAMILY[activeBase]}-${neckSize}` : null;
   const componentPlates = useQuery(api.productPlates.byFamily,
     componentFamilyId ? { familyId: componentFamilyId, limit: 200 } : "skip");
+  // At some necks the plain screw caps were published into the roll-on-cap
+  // family (13-415: CP13-415Gl, CP13-415Sl, … beside CPRoll13-415…), so a
+  // bottle on its cap has no cap-closure family to draw from. Read the
+  // roll-on-cap family too and keep only its non-roll-on rows.
+  const wantsCapFallback = (activeBase === "none" || activeBase === "reducer") && Boolean(neckSize)
+    && componentPlates !== undefined && (componentPlates?.page.length ?? 0) === 0;
+  const fallbackCapPlates = useQuery(api.productPlates.byFamily,
+    wantsCapFallback ? { familyId: `roll-on-cap-${neckSize}`, limit: 200 } : "skip");
   const thumbBySwatch = useMemo(() => {
     const out = new Map<string, string>();
     const foreign = FOREIGN_PREFIX[activeBase];
-    for (const row of componentPlates?.page ?? []) {
+    const rows = [
+      ...(componentPlates?.page ?? []),
+      ...(fallbackCapPlates?.page ?? []).filter((row) => row.websiteSku && /^CP(?!Roll)/i.test(row.websiteSku)),
+    ];
+    for (const row of rows) {
       if (!row.websiteSku || (foreign && foreign.test(row.websiteSku))) continue;
       const finish = getFinishFromWebsiteSku(row.websiteSku);
       if (finish && !out.has(finish.swatchName)) out.set(finish.swatchName, row.thumb);
     }
     return out;
-  }, [componentPlates, activeBase]);
-  const canCap = CAPPABLE[activeBase] != null
+  }, [componentPlates, fallbackCapPlates, activeBase]);
+  // The toggle is offered for every closure that can wear a cap; whether it
+  // can actually show both states depends on a cap-off photograph (or live
+  // geometry / a kit) existing for the selected colourway. It never vanishes
+  // between colourways — it disables and says why (2026-09-02: on 5 ml
+  // cobalt roll-on, 8 of 18 colourways have no cap-off plate yet, and the
+  // control disappearing read as "the toggle is broken").
+  const canCap = CAPPABLE[activeBase] != null;
+  const capToggleLive = canCap
     && ((show3d && Boolean(fam) && !fam?.photoOnly) || Boolean(plateImageCapOff) || kitHasCap);
   const closureFor = (base: ClosureBase) =>
     ((withCap && CAPPABLE[base]) || CLOSURE_MODE[base]) as
@@ -537,17 +560,23 @@ export default function ConfiguratorPdp({
       {/* mode badge, and the cap pill opposite it — both on the stage, where
           the design puts them; the pill is the same withCap the panel drives */}
       <div className="absolute top-3.5 left-3.5 right-3.5 z-[40] flex items-center justify-between gap-3 pointer-events-none">
-        <span className="flex items-center gap-1.5 rounded-[3px] px-2.5 py-1.5 backdrop-blur"
-              style={{ background: "rgba(29,29,31,.85)" }}>
-          <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
-          <span className="text-2xs font-semibold uppercase tracking-label text-white whitespace-nowrap">
-            {showLive3d ? "Live 3D" : exploded && kitReady ? "Exploded view" : "Product photo"}
+        {/* The plain photograph carries no badge: the mode bar below the stage
+            already says so, and the chip read as a label on the product. */}
+        {(showLive3d || (exploded && kitReady)) ? (
+          <span className="flex items-center gap-1.5 rounded-[3px] px-2.5 py-1.5 backdrop-blur"
+                style={{ background: "rgba(29,29,31,.85)" }}>
+            <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
+            <span className="text-2xs font-semibold uppercase tracking-label text-white whitespace-nowrap">
+              {showLive3d ? "Live 3D" : "Exploded view"}
+            </span>
           </span>
-        </span>
+        ) : <span />}
         {canCap && (
           <button type="button" onClick={() => setWithCap((v) => !v)}
                   aria-pressed={withCap} aria-label="Cap on or off"
-                  className="pointer-events-auto flex items-center gap-2.5">
+                  disabled={!capToggleLive}
+                  title={capToggleLive ? undefined : "Cap-off photograph not published for this colourway yet"}
+                  className="pointer-events-auto flex items-center gap-2.5 disabled:cursor-not-allowed disabled:opacity-40">
             <span className="text-2xs font-semibold uppercase tracking-label text-obsidian whitespace-nowrap">
               {withCap ? "Cap on" : "Cap off"}
             </span>
@@ -626,7 +655,7 @@ export default function ConfiguratorPdp({
           </p>
           <div className="flex items-center gap-3 flex-wrap mt-2.5">
             {capOptions.map((name) => {
-              const photo = thumbBySwatch.get(name);
+              const photo = resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
               return (
                 // A photographed closure is a tall, narrow thing: in a 32 px circle it
                 // read as a stripe (the cap fills a third of its square thumb). So a
@@ -810,35 +839,13 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* CTA stack — sample-first (B2B buyers sample before they order),
-     then quantity + add to cart, then the working price summary */
+  /* CTA stack — quantity + add to cart, then the working price summary.
+     The sample CTA was retired 2026-09-02: samples go through the quote
+     flow and Grace, not a second button competing with the cart. */
   const linePrice = tierPrice != null ? tierPrice * qty : null;
   const ctaStack = (
     <div className="mt-5">
-      {sampleHref && (
-        <>
-          <a href={sampleHref}
-             className="block w-full py-3.5 bg-obsidian text-white text-md
-                        font-semibold text-center rounded-[3px] transition-colors
-                        duration-200 hover:bg-muted-gold hover:text-obsidian
-                        focus-visible:outline-2 focus-visible:outline-offset-2
-                        focus-visible:outline-muted-gold">
-            Request a free sample
-          </a>
-          <p className="text-spec text-slate mt-2">
-            Samples ship fast — and Grace confirms fitment before you commit
-            a production run.{" "}
-            {onAskGrace && (
-              <button type="button" onClick={onAskGrace}
-                      className="text-gold-dim underline underline-offset-2">
-                Ask Grace
-              </button>
-            )}
-          </p>
-        </>
-      )}
-
-      <div className="flex items-stretch gap-3 mt-4">
+      <div className="flex items-stretch gap-3">
         <div className="flex items-center border border-champagne rounded-[3px]">
           <button type="button" aria-label="Decrease quantity"
                   onClick={() => onQtyChange?.(Math.max(1, qty - 1))}
@@ -1086,33 +1093,9 @@ export default function ConfiguratorPdp({
       {specStrip}
       {priceBlock}
       {closureRow}
-      {canCap && (
-        <div className="mt-6 pt-5 border-t border-champagne/50">
-          <p className="text-2xs font-semibold uppercase tracking-label">
-            <span className="text-slate">Overcap</span>
-            <span className="text-slate"> · </span>
-            <span className="text-obsidian normal-case tracking-normal text-caption">
-              {withCap ? "Included" : "Not included"}
-            </span>
-          </p>
-          <div className="grid grid-cols-2 gap-2.5 mt-2.5 max-w-xs">
-            {([[false, "Without overcap", "Ships as shown"],
-               [true, "With overcap", "Adds the protective cap"]] as const).map(
-              ([val, label, note]) => (
-                <button key={String(val)} type="button" onClick={() => setWithCap(val)}
-                        aria-pressed={withCap === val}
-                        className={`rounded-[3px] px-3 py-2 text-left transition-colors
-                                    duration-200 ${withCap === val
-                                      ? "border-[1.5px] border-obsidian bg-white"
-                                      : "border border-champagne hover:border-muted-gold"}`}>
-                  <span className="block text-spec font-semibold text-obsidian">{label}</span>
-                  <span className="block text-2xs text-slate mt-0.5">{note}</span>
-                </button>
-              ))}
-          </div>
-        </div>
-      )}
-
+      {/* The overcap chooser is gone: the stage's cap-on/off toggle is the one
+          cap control (decision 2026-09-02). Roller material now sits here,
+          above the fold. */}
       {activeBase === "roller" && (
         <div className="mt-6 pt-5 border-t border-champagne/50">
           <p className="text-2xs font-semibold uppercase tracking-label">
@@ -1232,7 +1215,6 @@ export default function ConfiguratorPdp({
             ${ladder[ladder.length - 1].price.toFixed(2)} at {ladder[ladder.length - 1].minQty.toLocaleString()}+ · {ladder.length} volume tiers
           </a>
         ) : <span />}
-        {sampleHref && <a href={sampleHref} className="text-obsidian">Request a sample</a>}
       </div>
 
       {/* Grace hook */}
@@ -1288,33 +1270,6 @@ export default function ConfiguratorPdp({
           {summaryStrip}
           <div className="mt-6">{glassStep}</div>
           {closureRow}
-          <div className="mt-6">{finishRow()}</div>
-          {canCap && (
-            <div className="mt-6 border-t border-champagne/50 pt-5">
-              <p className="text-2xs font-semibold uppercase tracking-label">
-                <span className="text-slate">Overcap</span>
-                <span className="text-slate"> · </span>
-                <span className="text-obsidian normal-case tracking-normal text-caption">
-                  {withCap ? "Included" : "Not included"}
-                </span>
-              </p>
-              <div className="mt-2.5 grid max-w-xs grid-cols-2 gap-2.5">
-                {([[false, "Without overcap", "Ships as shown"],
-                   [true, "With overcap", "Adds the protective cap"]] as const).map(
-                  ([val, label, note]) => (
-                    <button key={String(val)} type="button" onClick={() => setWithCap(val)}
-                            aria-pressed={withCap === val}
-                            className={`rounded-[3px] px-3 py-2 text-left transition-colors duration-200
-                                        ${withCap === val
-                                          ? "border-[1.5px] border-obsidian bg-white"
-                                          : "border border-champagne hover:border-muted-gold"}`}>
-                      <span className="block text-spec font-semibold text-obsidian">{label}</span>
-                      <span className="block text-2xs text-slate mt-0.5">{note}</span>
-                    </button>
-                  ))}
-              </div>
-            </div>
-          )}
           {activeBase === "roller" && (
             <div className="mt-6 border-t border-champagne/50 pt-5">
               <p className="text-2xs font-semibold uppercase tracking-label">
@@ -1341,6 +1296,7 @@ export default function ConfiguratorPdp({
               </div>
             </div>
           )}
+          <div className="mt-6">{finishRow()}</div>
         </section>
 
         <aside className="flex flex-col gap-3.5">
