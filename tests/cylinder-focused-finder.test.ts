@@ -4,8 +4,8 @@ import { act, createElement, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import CylinderFamilyPageClient from "@/app/catalog/cylinder/CylinderFamilyPageClient";
-import CylinderFamilyPage from "@/app/catalog/cylinder/page";
+import FamilyPageClient from "@/app/catalog/[family]/FamilyPageClient";
+import FamilyLandingPage from "@/app/catalog/[family]/page";
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import type { CatalogSearchArgs } from "@/lib/catalogServer";
 
@@ -24,6 +24,9 @@ const mocks = vi.hoisted(() => ({
 }));
 
 vi.mock("next/navigation", () => ({
+    notFound: () => {
+        throw new Error("NEXT_NOT_FOUND");
+    },
     useRouter: () => ({ push: mocks.routerPush, replace: mocks.routerReplace }),
 }));
 
@@ -166,7 +169,8 @@ afterEach(() => {
 
 describe("Cylinder family-first server route", () => {
     it("fixes Cylinder in the route and honors canonical application refinements on first render", async () => {
-        const element = await CylinderFamilyPage({
+        const element = await FamilyLandingPage({
+            params: Promise.resolve({ family: "cylinder" }),
             searchParams: Promise.resolve({ applicators: "rollon", capacities: "9 ml", roller: "metal" }),
         });
         const html = renderToStaticMarkup(element);
@@ -187,7 +191,8 @@ describe("Cylinder family-first server route", () => {
     it.each(["family", "families"])(
         "removes inbound %s aliases before SSR state and exact PDP return URLs",
         async (familyParam) => {
-            const element = await CylinderFamilyPage({
+            const element = await FamilyLandingPage({
+                params: Promise.resolve({ family: "cylinder" }),
                 searchParams: Promise.resolve({
                     [familyParam]: "Cylinder",
                     applicators: "rollon",
@@ -233,7 +238,7 @@ describe("Cylinder family-first client", () => {
         const root = createRoot(container);
 
         await act(async () => {
-            root.render(createElement(StrictMode, null, createElement(CylinderFamilyPageClient, {
+            root.render(createElement(StrictMode, null, createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
                 baseCatalog: allCylinderResult,
                 initialResult: allCylinderResult,
                 search: "",
@@ -255,7 +260,7 @@ describe("Cylinder family-first client", () => {
     });
 
     it("shows only application cards verified by live Cylinder facets", () => {
-        const html = renderToStaticMarkup(createElement(CylinderFamilyPageClient, {
+        const html = renderToStaticMarkup(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
             baseCatalog: allCylinderResult,
             initialResult: allCylinderResult,
             search: "",
@@ -278,7 +283,7 @@ describe("Cylinder family-first client", () => {
         const root = createRoot(container);
 
         await act(async () => {
-            root.render(createElement(CylinderFamilyPageClient, {
+            root.render(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
                 baseCatalog: allCylinderResult,
                 initialResult: allCylinderResult,
                 search: "?roller=metal&colors=Amber&capacities=9+ml&threads=13-415",
@@ -306,7 +311,7 @@ describe("Cylinder family-first client", () => {
     });
 
     it("keeps one exact result on the page and links it directly to its PDP with safe return state", () => {
-        const html = renderToStaticMarkup(createElement(CylinderFamilyPageClient, {
+        const html = renderToStaticMarkup(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
             baseCatalog: allCylinderResult,
             initialResult: rollOnResult,
             search: "?applicators=rollon",
@@ -330,7 +335,7 @@ describe("Cylinder family-first client", () => {
         const root = createRoot(container);
 
         await act(async () => {
-            root.render(createElement(CylinderFamilyPageClient, {
+            root.render(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
                 baseCatalog: allCylinderResult,
                 initialResult: allCylinderResult,
                 search: "",
@@ -339,7 +344,7 @@ describe("Cylinder family-first client", () => {
         });
         await act(async () => buttonWithText(container, "Roll-On").click());
         await act(async () => {
-            root.render(createElement(CylinderFamilyPageClient, {
+            root.render(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
                 baseCatalog: allCylinderResult,
                 initialResult: rollOnResult,
                 search: "?applicators=rollon",
@@ -354,7 +359,7 @@ describe("Cylinder family-first client", () => {
     });
 
     it("keeps Build a Bottle as the secondary action", () => {
-        const html = renderToStaticMarkup(createElement(CylinderFamilyPageClient, {
+        const html = renderToStaticMarkup(createElement(FamilyPageClient, { family: "Cylinder", heroFallback: "/assets/Cylinder-BB.png",
             baseCatalog: allCylinderResult,
             initialResult: allCylinderResult,
             search: "",

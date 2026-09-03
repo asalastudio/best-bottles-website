@@ -1,5 +1,6 @@
 import {
     APPLICATOR_NAV,
+    CATALOG_FAMILIES,
     filtersToParams,
     normalizeCapacityFilterValue,
     paramsToFilters,
@@ -48,11 +49,38 @@ function isApplicationRoute(pathname: string): boolean {
     return /^\/catalog\/application\/[^/]+$/.test(pathname);
 }
 
+export function familyToSlug(family: string): string {
+    return family.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+}
+
+const FAMILY_BY_SLUG = new Map(
+    CATALOG_FAMILIES.map((family) => [familyToSlug(family), family] as const),
+);
+
+export function familyFromSlug(slug: string): string | undefined {
+    return FAMILY_BY_SLUG.get(slug.trim().toLowerCase());
+}
+
+export function isFamilyLandingFamily(family: string): boolean {
+    return familyFromSlug(familyToSlug(family)) === family;
+}
+
+export function familyFinderPath(family: string): string {
+    return `/catalog/${familyToSlug(family)}`;
+}
+
+function familyForRoute(pathname: string): string | undefined {
+    const route = pathname.replace(/\/+$/, "");
+    const match = route.match(/^\/catalog\/([^/]+)$/);
+    if (!match || match[1] === "application") return undefined;
+    return familyFromSlug(match[1]);
+}
+
 export function parseBrowseContext(pathname: string, params: URLSearchParams): BrowseContext {
     const route = pathname.replace(/\/+$/, "");
     const { filters, sort } = paramsToFilters(params);
     const routeApplication = applicationForRoute(route);
-    const family = route === "/catalog/cylinder" ? "Cylinder" : undefined;
+    const family = familyForRoute(route);
     const application = routeApplication ?? (isApplicationRoute(route) ? undefined : applicationForBuckets(filters.applicators));
     const entryMode: BrowseEntryMode = routeApplication
         ? "application"
@@ -95,8 +123,8 @@ export function applicationFinderHref(application: ApplicatorNavValue): string {
 
 export function familyFinderHref(family: string, context: Partial<BrowseContext> = {}): string {
     const filters = browseContextToFilters({ ...context, entryMode: "family", family });
-    const isCylinder = family === "Cylinder";
-    if (isCylinder) delete filters.families;
+    const hasLanding = isFamilyLandingFamily(family);
+    if (hasLanding) delete filters.families;
     const query = filtersToParams({
         category: null,
         collection: null,
@@ -112,6 +140,6 @@ export function familyFinderHref(family: string, context: Partial<BrowseContext>
         search: "",
         ...filters,
     }, context.sort ?? "featured").toString();
-    const pathname = isCylinder ? "/catalog/cylinder" : "/catalog";
+    const pathname = hasLanding ? familyFinderPath(family) : "/catalog";
     return `${pathname}${query ? `?${query}` : ""}`;
 }

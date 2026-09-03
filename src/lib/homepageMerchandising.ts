@@ -1,4 +1,4 @@
-import { applicationFinderHref } from "@/lib/products/focused-shopping";
+import { applicationFinderHref, familyFinderHref } from "@/lib/products/focused-shopping";
 
 export type HomepageFamilyCard = {
     family: string;
@@ -39,9 +39,7 @@ export const HOME_FAMILY_MOSAIC: readonly HomepageFamilyCard[] = [
 ] as const;
 
 export function homepageFamilyHref(family: string): string {
-    if (family === "Cylinder") return "/catalog/cylinder";
-    const query = new URLSearchParams({ families: family });
-    return `/catalog?${query.toString()}`;
+    return familyFinderHref(family);
 }
 
 export const HOME_APPLICATION_LINKS = [

@@ -38,9 +38,11 @@ describe("Grace Refine state", () => {
         expect(source).toContain("Verified ${verifiedCount} matching");
     });
 
-    it("bridges Cylinder discovery to the fixed family finder", () => {
+    it("bridges family discovery to the dedicated family finder", () => {
         const state = getGraceRefineState(new URLSearchParams("families=Cylinder"));
         expect(graceRefineDestination(state)).toBe("/catalog/cylinder");
+        expect(graceRefineDestination(getGraceRefineState(new URLSearchParams("families=Boston+Round"))))
+            .toBe("/catalog/boston-round");
     });
 
     it("inherits every active catalog constraint exactly", () => {

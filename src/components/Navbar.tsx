@@ -6,13 +6,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
     MagnifyingGlass, User, ShoppingBag, CaretDown, List, X,
-    Sparkle, Flask, Diamond, ArrowRight, SprayBottle,
+    Flask, Diamond, ArrowRight, SprayBottle,
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
 import { useMegaMenuPanels } from "./SanityMegaMenuProvider";
 import { urlFor } from "@/sanity/lib/image";
-import { APPLICATOR_NAV, applicatorNavHref } from "@/lib/catalogFilters";
+import { MEGA_MENU_PANELS, type MegaMenuId, type MegaMenuPanelContent } from "@/lib/megaMenu";
 
 interface NavbarProps {
     variant?: "home" | "catalog";
@@ -24,157 +24,39 @@ interface NavbarProps {
 
 // ─── Mega Menu Data ──────────────────────────────────────────────────────────
 
-type MegaMenuId = "bottles" | "closures" | "specialty";
-
-interface MenuColumn {
-    heading: string;
-    links: Array<{ label: string; href: string; badge?: string }>;
-}
-
 type IconWeight = "thin" | "light" | "regular" | "bold" | "fill" | "duotone";
 
-interface FeaturedCard {
-    title: string;
-    subtitle: string;
-    href: string;
-    placeholderIcon: React.ComponentType<{ className?: string; size?: number; weight?: IconWeight }>;
-    accentColor: string;
-}
-
-interface MegaPanel {
-    columns: MenuColumn[];
-    featured: FeaturedCard;
-    footerLinks: Array<{ label: string; href: string }>;
-}
+type MegaPanel = MegaMenuPanelContent & {
+    featured: MegaMenuPanelContent["featured"] & {
+        placeholderIcon: React.ComponentType<{ className?: string; size?: number; weight?: IconWeight }>;
+        accentColor: string;
+    };
+};
 
 const MEGA_PANELS: Record<MegaMenuId, MegaPanel> = {
     bottles: {
-        columns: [
-            {
-                heading: "Applicator Type",
-                links: APPLICATOR_NAV.map((nav) => ({
-                    label: nav.label,
-                    href: applicatorNavHref(nav.value),
-                })),
-            },
-            {
-                heading: "Design Families",
-                links: [
-                    { label: "Diva", href: "/catalog?families=Diva" },
-                    { label: "Slim", href: "/catalog?families=Slim" },
-                    { label: "Sleek", href: "/catalog?families=Sleek" },
-                    { label: "Circle", href: "/catalog?families=Circle" },
-                    { label: "Empire", href: "/catalog?families=Empire" },
-                    { label: "Elegant", href: "/catalog?families=Elegant" },
-                    { label: "Cylinder", href: "/catalog?families=Cylinder" },
-                    { label: "Boston Round", href: "/catalog?families=Boston+Round" },
-                    { label: "View All Families", href: "/catalog?category=Glass+Bottle" },
-                ],
-            },
-            {
-                heading: "Capacity",
-                links: [
-                    { label: "Miniature — 1 to 5 ml", href: "/catalog?capacities=1+ml+(0.03+oz)&capacities=2+ml+(0.07+oz)&capacities=3+ml+(0.1+oz)&capacities=4+ml+(0.14+oz)&capacities=5+ml+(0.17+oz)" },
-                    { label: "Small — 6 to 15 ml", href: "/catalog?capacities=6+ml+(0.2+oz)&capacities=8+ml+(0.27+oz)&capacities=9+ml+(0.3+oz)&capacities=10+ml+(0.34+oz)&capacities=13+ml+(0.44+oz)&capacities=14+ml+(0.47+oz)&capacities=15+ml+(0.51+oz)" },
-                    { label: "Medium — 25 to 50 ml", href: "/catalog?capacities=25+ml+(0.85+oz)&capacities=28+ml+(0.95+oz)&capacities=30+ml+(1.01+oz)&capacities=46+ml+(1.56+oz)&capacities=50+ml+(1.69+oz)" },
-                    { label: "Large — 55 to 120 ml", href: "/catalog?capacities=55+ml+(1.86+oz)&capacities=60+ml+(2.03+oz)&capacities=78+ml+(2.64+oz)&capacities=100+ml+(3.38+oz)&capacities=118+ml+(3.99+oz)&capacities=120+ml+(4.06+oz)" },
-                    { label: "Bulk — 128 ml+", href: "/catalog?capacities=128+ml+(4.33+oz)&capacities=355+ml+(12+oz)&capacities=500+ml+(16.91+oz)" },
-                ],
-            },
-        ],
+        ...MEGA_MENU_PANELS.bottles,
         featured: {
-            title: "New: Grace Collection",
-            subtitle: "Refined 55 ml silhouette with premium spray, reducer, and lotion pump options.",
-            href: "/catalog?families=Grace",
+            ...MEGA_MENU_PANELS.bottles.featured,
             placeholderIcon: SprayBottle,
             accentColor: "bg-gradient-to-br from-muted-gold/20 to-champagne/40",
         },
-        footerLinks: [
-            { label: "Browse All 276 Products", href: "/catalog" },
-            { label: "Shop by Glass Color", href: "/catalog" },
-        ],
     },
     closures: {
-        columns: [
-            {
-                heading: "Spray & Pump Mechanisms",
-                links: [
-                    { label: "Fine Mist Sprayers", href: "/catalog?category=Component&search=fine+mist", badge: "26" },
-                    { label: "Antique Bulb Atomizers", href: "/catalog?category=Component&search=antique+bulb", badge: "18" },
-                    { label: "Treatment & Lotion Pumps", href: "/catalog?category=Component&search=lotion+pump", badge: "11" },
-                ],
-            },
-            {
-                heading: "Caps, Rollers & Droppers",
-                links: [
-                    { label: "Screw Caps", href: "/catalog?category=Component&search=closure", badge: "26" },
-                    { label: "Dropper Assemblies", href: "/catalog?category=Component&search=dropper", badge: "21" },
-                    { label: "Glass Stoppers & Rods", href: "/catalog?search=stopper" },
-                    { label: "Roll-On Fitments & Caps", href: "/catalog?category=Component&search=roll-on+fitment", badge: "25" },
-                ],
-            },
-            {
-                heading: "Helpful Resources",
-                links: [
-                    { label: "How Assemblies Work", href: "/catalog" },
-                    { label: "Thread Size Reference", href: "/catalog" },
-                    { label: "Fitment Compatibility Guide", href: "/catalog" },
-                ],
-            },
-        ],
+        ...MEGA_MENU_PANELS.closures,
         featured: {
-            title: "Find Compatible Parts",
-            subtitle: "Every bottle page shows its compatible closures. Or ask Grace to match parts by thread size.",
-            href: "/catalog?category=Component",
+            ...MEGA_MENU_PANELS.closures.featured,
             placeholderIcon: Flask,
             accentColor: "bg-gradient-to-br from-slate/10 to-champagne/30",
         },
-        footerLinks: [
-            { label: "All Components & Closures", href: "/catalog?category=Component" },
-            { label: "Talk with Grace for Help", href: "/catalog" },
-        ],
     },
     specialty: {
-        columns: [
-            {
-                heading: "Unique & Artisan Bottles",
-                links: [
-                    { label: "Metal Atomizers", href: "/catalog?families=Atomizer", badge: "25" },
-                    { label: "Aluminum Bottles", href: "/catalog?category=Aluminum+Bottle" },
-                    { label: "Plastic Spray Bottles", href: "/catalog?families=Plastic+Bottle" },
-                    { label: "Apothecary Collection", href: "/catalog?families=Apothecary" },
-                    { label: "Decorative & Shaped Glass", href: "/catalog?families=Decorative" },
-                ],
-            },
-            {
-                heading: "Skincare & Body Care",
-                links: [
-                    { label: "Cream & Cosmetic Jars", href: "/catalog?families=Cream+Jar", badge: "17" },
-                    { label: "Sample Vials & Testers", href: "/catalog?families=Vial", badge: "23" },
-                    { label: "Lotion & Serum Bottles", href: "/catalog?families=Lotion+Bottle" },
-                ],
-            },
-            {
-                heading: "Packaging & Presentation",
-                links: [
-                    { label: "Gift Bags", href: "/catalog?search=gift+bag", badge: "21" },
-                    { label: "Gift Boxes", href: "/catalog?search=gift+box", badge: "14" },
-                    { label: "Packaging Supplies", href: "/catalog?search=packaging+supply", badge: "12" },
-                    { label: "Tools & Filling Accessories", href: "/catalog?search=tool" },
-                ],
-            },
-        ],
+        ...MEGA_MENU_PANELS.specialty,
         featured: {
-            title: "Decorative Collection",
-            subtitle: "Heart, Tola, Marble, Genie, Eternal Flame, and Pear — exquisite artisan shapes.",
-            href: "/catalog?families=Decorative",
+            ...MEGA_MENU_PANELS.specialty.featured,
             placeholderIcon: Diamond,
             accentColor: "bg-gradient-to-br from-rose-50 to-champagne/40",
         },
-        footerLinks: [
-            { label: "Browse Full Catalog", href: "/catalog" },
-            { label: "Request Custom Quote", href: "/contact" },
-        ],
     },
 };
 

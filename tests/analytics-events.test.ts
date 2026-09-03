@@ -197,7 +197,7 @@ describe("focused shopping analytics", () => {
 
   it("wires shopping events to explicit interaction boundaries without referrer reads", () => {
     const applicationFinder = readFileSync("src/app/catalog/application/[application]/ApplicationFinderClient.tsx", "utf8");
-    const cylinderFinder = readFileSync("src/app/catalog/cylinder/CylinderFamilyPageClient.tsx", "utf8");
+    const cylinderFinder = readFileSync("src/app/catalog/[family]/FamilyPageClient.tsx", "utf8");
     const pdp = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
     const discovery = readFileSync("src/components/products/PdpDiscoverySections.tsx", "utf8");
     const matrix = readFileSync("src/components/matrix/MatrixClient.tsx", "utf8");

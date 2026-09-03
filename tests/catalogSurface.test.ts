@@ -5,6 +5,7 @@ import {
     MASTER_CATALOG_SURFACE,
     applyCatalogSurface,
     applicationCatalogSurface,
+    familyCatalogSurface,
 } from "@/lib/catalogSurface";
 
 describe("catalog surface manifests", () => {
@@ -38,6 +39,24 @@ describe("catalog surface manifests", () => {
             "neckThreadSizes",
         ]);
         expect(CYLINDER_CATALOG_SURFACE.defaultOpenFacets).toEqual(["capacities"]);
+    });
+
+    it("locks any design family into the same finder surface Cylinder uses", () => {
+        expect(familyCatalogSurface("Boston Round")).toMatchObject({
+            id: "family",
+            fixedFilters: { families: ["Boston Round"] },
+            visibleFacets: CYLINDER_CATALOG_SURFACE.visibleFacets,
+            defaultSort: "capacity-asc",
+            resultLabel: "Boston Round groups",
+        });
+        expect(applyCatalogSurface({
+            ...EMPTY_FILTERS,
+            families: ["Cylinder"],
+            capacities: ["30 ml"],
+        }, familyCatalogSurface("Boston Round"))).toMatchObject({
+            families: ["Boston Round"],
+            capacities: ["30 ml"],
+        });
     });
 
     it("scopes application finders to their canonical buckets and exposes roller material only for Roll-On", () => {

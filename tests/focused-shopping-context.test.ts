@@ -51,6 +51,25 @@ describe("focused shopping browse context", () => {
         });
     });
 
+    it("round-trips Boston Round through a dedicated family landing path", () => {
+        expect(familyFinderHref("Boston Round")).toBe("/catalog/boston-round");
+        const context = parseBrowseContext(
+            "/catalog/boston-round",
+            new URLSearchParams("applicators=dropper&capacities=30+ml"),
+        );
+        expect(context).toMatchObject({
+            entryMode: "family",
+            family: "Boston Round",
+            application: "dropper",
+            capacities: ["30 ml"],
+        });
+        expect(browseContextToFilters(context)).toMatchObject({
+            families: ["Boston Round"],
+            applicators: ["dropper"],
+            capacities: ["30 ml"],
+        });
+    });
+
     it("rejects unknown application routes and roller materials", () => {
         const context = parseBrowseContext(
             "/catalog/application/unknown-application",

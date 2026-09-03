@@ -10,9 +10,11 @@ import {
 import { readFileSync } from "node:fs";
 
 describe("family-first homepage merchandising", () => {
-    it("gives Cylinder its dedicated family landing page", () => {
+    it("sends every shop-by-family tile to its dedicated landing page", () => {
         expect(homepageFamilyHref("Cylinder")).toBe("/catalog/cylinder");
-        expect(homepageFamilyHref("Boston Round")).toBe("/catalog?families=Boston+Round");
+        expect(homepageFamilyHref("Elegant")).toBe("/catalog/elegant");
+        expect(homepageFamilyHref("Circle")).toBe("/catalog/circle");
+        expect(homepageFamilyHref("Boston Round")).toBe("/catalog/boston-round");
     });
 
     it("uses the approved editorial family mosaic", () => {
