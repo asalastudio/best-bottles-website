@@ -25,11 +25,14 @@ export function createMatrixFamilyState<TConfigs>(
 
 /** Change only the family-owned refinements; configured bottle rows remain
  * available to the order and cart across family navigation. */
-export function switchMatrixFamily<TConfigs>(
-    state: MatrixFamilyState<TConfigs>,
+export function switchMatrixFamily<
+    TConfigs,
+    TState extends MatrixFamilyState<TConfigs>,
+>(
+    state: TState,
     family: string | null,
-): MatrixFamilyState<TConfigs> {
-    return { ...state, family, filters: emptyMatrixFilters() };
+): TState {
+    return { ...state, family, filters: emptyMatrixFilters() } as TState;
 }
 
 /** Incoming route changes can render before an event handler runs. In that

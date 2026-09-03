@@ -12,6 +12,12 @@ import {
     emptyMatrixFilters,
     switchMatrixFamily,
 } from "@/lib/matrix/filters";
+import {
+    reconcileRetainedMatrixRows,
+    retainMatrixConfiguration,
+    retainedMatrixCartLines,
+} from "@/lib/matrix/order-state";
+import { summarizeMatrixOrder } from "@/lib/matrix/cart";
 import { matrixProductHref } from "@/lib/matrix/product-identity";
 
 const modules = import.meta.glob("../convex/**/*.ts");
@@ -172,6 +178,57 @@ describe("matrix family and product identity helpers", () => {
         expect(sleek.filters).toEqual(emptyMatrixFilters());
         expect(activeMatrixFilters(cylinder, "Sleek")).toEqual(emptyMatrixFilters());
         expect(activeMatrixFilters(sleek, "Sleek")).toEqual(emptyMatrixFilters());
+    });
+
+    it("retains configured rows from both families in order totals and cart lines", () => {
+        const cylinderRow = {
+            graceSku: "GB-CYL-10",
+            itemName: "10 ml Cylinder bottle",
+            family: "Cylinder",
+            capacity: "10 ml",
+            color: "Clear",
+            neckThreadSize: "18-415",
+            category: "Glass Bottle",
+            webPrice1pc: 4,
+        };
+        const sleekRow = {
+            graceSku: "GB-SLK-30",
+            itemName: "30 ml Sleek bottle",
+            family: "Sleek",
+            capacity: "30 ml",
+            color: "Amber",
+            neckThreadSize: "20-410",
+            category: "Glass Bottle",
+            webPrice1pc: 3,
+        };
+        const cylinderComponent = {
+            graceSku: "CMP-CYL-CAP",
+            itemName: "Cylinder cap",
+            webPrice1pc: 1,
+        };
+        const sleekComponent = {
+            graceSku: "CMP-SLK-SPR",
+            itemName: "Sleek sprayer",
+            webPrice1pc: 2,
+        };
+
+        const cylinderConfigured = retainMatrixConfiguration({}, "GB-CYL-10", cylinderRow, {
+            component: cylinderComponent,
+            qty: 10,
+        });
+        const bothFamilies = retainMatrixConfiguration(cylinderConfigured, "GB-SLK-30", sleekRow, {
+            component: sleekComponent,
+            qty: 10,
+        });
+        const refreshedCylinder = { ...cylinderRow, webPrice1pc: 5 };
+        const reconciled = reconcileRetainedMatrixRows(bothFamilies, [refreshedCylinder], (row) => row.graceSku);
+        const summary = summarizeMatrixOrder(retainedMatrixCartLines(reconciled), 50);
+
+        expect(summary.items.map((item) => item.graceSku)).toEqual([
+            "GB-CYL-10", "CMP-CYL-CAP", "GB-SLK-30", "CMP-SLK-SPR",
+        ]);
+        expect(summary.subtotal).toBe(110);
+        expect(summary.meetsMinimum).toBe(true);
     });
 
     it("links a non-primary variant to its real group PDP and exact SKU", () => {

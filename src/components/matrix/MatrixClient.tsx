@@ -38,6 +38,12 @@ import {
     switchMatrixFamily,
 } from "@/lib/matrix/filters";
 import { matrixProductHref } from "@/lib/matrix/product-identity";
+import {
+    reconcileRetainedMatrixRows,
+    retainMatrixConfiguration,
+    retainedMatrixCartLines,
+    type RetainedMatrixConfigurations,
+} from "@/lib/matrix/order-state";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
 /* ------------------------------------------------------------------ types */
@@ -97,6 +103,8 @@ type Config = {
     qty: number;
 };
 
+type RetainedConfigurations = RetainedMatrixConfigurations<MatrixRow, Component>;
+
 const MIN_ORDER = 50;
 
 /* ------------------------------------------------------------------- page */
@@ -111,12 +119,21 @@ export default function MatrixClient({
     const router = useRouter();
     const { addItems } = useCart();
     const [matrixState, setMatrixState] = useState(() =>
-        createMatrixFamilyState(openFamily, {} as Record<string, Config>));
+        ({
+            ...createMatrixFamilyState(openFamily, {} as Record<string, Config>),
+            retainedConfigurations: {} as RetainedConfigurations,
+        }));
     const [cartMessage, setCartMessage] = useState<{ kind: "success" | "error"; text: string } | null>(null);
 
     const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);
     const configs = matrixState.configs;
     const filters = activeMatrixFilters(matrixState, openFamily);
+    const retainedConfigurations = useMemo(() => reconcileRetainedMatrixRows(
+        matrixState.retainedConfigurations,
+        rows,
+        key,
+        resolveCurrentComponent,
+    ), [matrixState.retainedConfigurations, rows]);
     const { search, size, finish, neck, closure } = filters;
     const updateFilters = (patch: Partial<typeof filters>) => {
         setMatrixState((state) => ({
@@ -173,15 +190,8 @@ export default function MatrixClient({
 
     /** Only rows with an EXPLICIT component decision count as configured. */
     const order = useMemo(() => {
-        const configurations = rows
-            .map((r) => ({ row: r, cfg: configs[key(r)] }))
-            .filter((l): l is { row: MatrixRow; cfg: Config } =>
-                Boolean(l.cfg) && l.cfg!.component !== undefined && l.cfg!.qty > 0);
-        const cartLines: MatrixCartLine[] = configurations.map(({ row, cfg }) => ({
-            row,
-            component: cfg.component ?? null,
-            quantity: cfg.qty,
-        }));
+        const cartLines = retainedMatrixCartLines(retainedConfigurations) as MatrixCartLine[];
+        const configurations = cartLines;
         try {
             return {
                 configurations,
@@ -199,16 +209,23 @@ export default function MatrixClient({
                 error: error instanceof Error ? error.message : "Unable to price this configuration.",
             };
         }
-    }, [rows, configs]);
+    }, [retainedConfigurations]);
 
     const setConfig = (r: MatrixRow, patch: Partial<Config>) =>
         setMatrixState((state) => {
             // 12 is the starting quantity for a row nobody has touched; once a
             // row HAS a quantity it must survive a component change
             const prev = state.configs[key(r)] ?? { qty: 12 };
+            const configuration = { ...prev, ...patch };
             return {
                 ...state,
-                configs: { ...state.configs, [key(r)]: { ...prev, ...patch } },
+                configs: { ...state.configs, [key(r)]: configuration },
+                retainedConfigurations: retainMatrixConfiguration(
+                    state.retainedConfigurations,
+                    key(r),
+                    r,
+                    configuration,
+                ),
             };
         });
 
@@ -699,4 +716,15 @@ function finishLabel(c: { capColor: string | null; itemName: string }) {
 
 function key(r: MatrixRow) {
     return r.graceSku ?? r.websiteSku ?? r.itemName ?? Math.random().toString();
+}
+
+function resolveCurrentComponent(row: MatrixRow, selected: Component): Component | undefined {
+    for (const [groupKey, components] of Object.entries(row.components)) {
+        const current = components.find((component) => (
+            (Boolean(selected.graceSku) && component.graceSku === selected.graceSku)
+            || (Boolean(selected.websiteSku) && component.websiteSku === selected.websiteSku)
+        ));
+        if (current) return { ...current, groupKey };
+    }
+    return undefined;
 }
