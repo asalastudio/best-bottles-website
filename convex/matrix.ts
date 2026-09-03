@@ -148,6 +148,20 @@ export const getFamilyRows = query({
                     .first(),
             ] as const),
         ));
+        const productGroupIds = new Set([
+            ...bottles.map((bottle) => bottle.productGroupId),
+            ...[...componentProducts.values()].map((product) => product?.productGroupId),
+        ].filter((groupId): groupId is NonNullable<typeof groupId> => Boolean(groupId)));
+        const productGroups = new Map(await Promise.all(
+            [...productGroupIds].map(async (groupId) => [
+                String(groupId),
+                await ctx.db.get(groupId),
+            ] as const),
+        ));
+        const productGroupSlug = (product: { productGroupId?: unknown | null }) => {
+            const groupId = product.productGroupId;
+            return groupId ? productGroups.get(String(groupId))?.slug ?? null : null;
+        };
 
         const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
@@ -171,6 +185,7 @@ export const getFamilyRows = query({
                         return {
                             ...component,
                             websiteSku: product?.websiteSku ?? null,
+                            productGroupSlug: product ? productGroupSlug(product) : null,
                             shopifyVariantId: product?.shopifyVariantId ?? null,
                             shopifySellable: product?.shopifySellable ?? null,
                         };
@@ -181,6 +196,7 @@ export const getFamilyRows = query({
             return {
                 graceSku: b.graceSku,
                 websiteSku: b.websiteSku,
+                productGroupSlug: productGroupSlug(b),
                 itemName: b.itemName,
                 // the fields getCustomerFacingProductName() composes a name
                 // from — capacity + colour + family, then product type. A row

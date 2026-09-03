@@ -6,6 +6,8 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import schema from "../convex/schema";
 import { api } from "../convex/_generated/api";
+import { emptyMatrixFilters } from "@/lib/matrix/filters";
+import { matrixProductHref } from "@/lib/matrix/product-identity";
 
 const modules = import.meta.glob("../convex/**/*.ts");
 
@@ -84,6 +86,75 @@ describe("customer Product Compatibility Matrix families", () => {
             { family: "Unknown", groups: 1 },
         ]);
     });
+
+    it("carries canonical product group slugs for the bottle and server-resolved components", async () => {
+        const t = convexTest(schema, modules);
+        const bottleGroup = await t.run(async (ctx) => ctx.db.insert("productGroups", group("Cylinder")));
+        const componentGroup = await t.run(async (ctx) => ctx.db.insert("productGroups", {
+            ...group("Closure"),
+            slug: "closure-18-415",
+            category: "Component",
+        }));
+
+        await t.run(async (ctx) => {
+            await ctx.db.insert("products", {
+                ...product("Cylinder", "GB-CYL-NONPRIMARY"),
+                productGroupId: bottleGroup,
+                components: {
+                    Cap: [{
+                        graceSku: "COMP-NONPRIMARY",
+                        itemName: "18-415 Cap",
+                        imageUrl: null,
+                        webPrice1pc: 0.25,
+                        webPrice12pc: null,
+                        capColor: "Black",
+                        stockStatus: "In Stock",
+                    }],
+                },
+            });
+            await ctx.db.insert("products", {
+                ...product("Closure", "COMP-NONPRIMARY"),
+                category: "Component",
+                productGroupId: componentGroup,
+            });
+        });
+
+        const result = await t.query(api.matrix.getFamilyRows, { family: "Cylinder" });
+        expect(result.rows).toHaveLength(1);
+        expect(result.rows[0]).toMatchObject({
+            productGroupSlug: "cylinder",
+            graceSku: "GB-CYL-NONPRIMARY",
+        });
+        expect(result.rows[0].components.Cap[0]).toMatchObject({
+            productGroupSlug: "closure-18-415",
+            graceSku: "COMP-NONPRIMARY",
+        });
+    });
+});
+
+describe("matrix family and product identity helpers", () => {
+    it("creates an atomic empty state for switching to a family with disjoint filters", () => {
+        expect(emptyMatrixFilters()).toEqual({
+            search: "",
+            size: "",
+            finish: "",
+            neck: "",
+            closure: "",
+        });
+    });
+
+    it("links a non-primary variant to its real group PDP and exact SKU", () => {
+        expect(matrixProductHref({
+            productGroupSlug: "cylinder-10ml-clear",
+            websiteSku: "GB-CYL-NONPRIMARY-WEB",
+            graceSku: "GB-CYL-NONPRIMARY",
+        })).toBe("/products/cylinder-10ml-clear?sku=GB-CYL-NONPRIMARY-WEB");
+        expect(matrixProductHref({
+            productGroupSlug: null,
+            websiteSku: "GB-UNMAPPED-WEB",
+            graceSku: "GB-UNMAPPED",
+        })).toBeNull();
+    });
 });
 
 describe("Build a Bottle presentation contract", () => {
@@ -94,6 +165,7 @@ describe("Build a Bottle presentation contract", () => {
     const matrix = readFileSync("convex/matrix.ts", "utf8");
     const componentUtils = readFileSync("convex/componentUtils.ts", "utf8");
     const pdpDiscovery = readFileSync("src/components/products/PdpDiscoverySections.tsx", "utf8");
+    const productDetail = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
 
     it("presents the public matrix as Build a Bottle with Product Compatibility Matrix metadata", () => {
         expect(client).toMatch(/<h1[^>]*>\s*Build a Bottle\s*<\/h1>/);
@@ -110,7 +182,9 @@ describe("Build a Bottle presentation contract", () => {
         expect(page).toContain('alternates: { canonical: `${SITE_URL}/matrix` }');
         expect(page).toContain("searchParams: Promise<{ family?: string }>");
         expect(page).toContain("families.some((f) => f.family === familyParam)");
-        expect(client).toContain("router.replace(`/matrix?family=${encodeURIComponent(e.target.value)}`)");
+        expect(page).toContain('key={openFamily ?? "no-family"}');
+        expect(client).toContain("setFilters(emptyMatrixFilters());");
+        expect(client).toContain("router.replace(`/matrix?family=${encodeURIComponent(family)}`)");
         expect(client).toContain("const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);");
         for (const label of ["All sizes", "All finishes", "All necks", "All closures"]) {
             expect(client).toContain(`label="${label}"`);
@@ -135,11 +209,16 @@ describe("Build a Bottle presentation contract", () => {
         expect(client).not.toContain("comes with");
     });
 
-    it("links each exact bottle and selected component to its catalog identity", () => {
-        expect(client).toContain("function catalogIdentityHref");
-        expect(client).toContain("href={catalogIdentityHref(row.websiteSku ?? row.graceSku)}");
-        expect(client).toContain("href={catalogIdentityHref(config.component.websiteSku ?? config.component.graceSku)}");
+    it("links each exact bottle and selected component to its canonical PDP identity", () => {
+        expect(client).toContain("matrixProductHref(row)");
+        expect(client).toContain("matrixProductHref(config.component)");
+        expect(productDetail).toContain("variant.websiteSku === selectedVariantParam || variant.graceSku === selectedVariantParam");
         expect(client).not.toContain("components are included");
+    });
+
+    it("uses Build a Bottle in the structured-data breadcrumb", () => {
+        expect(page).toContain('{ name: "Build a Bottle", url: `${SITE_URL}/matrix` }');
+        expect(page).not.toContain('{ name: "Order Matrix", url: `${SITE_URL}/matrix` }');
     });
 
     it("keeps one Build a Bottle utility entry in each Navbar variant and one in the Footer", () => {

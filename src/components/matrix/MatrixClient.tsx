@@ -31,6 +31,8 @@ import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
 import { useCart } from "@/components/CartProvider";
 import { cn } from "@/lib/utils";
 import { summarizeMatrixOrder, type MatrixCartLine } from "@/lib/matrix/cart";
+import { emptyMatrixFilters } from "@/lib/matrix/filters";
+import { matrixProductHref } from "@/lib/matrix/product-identity";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
 /* ------------------------------------------------------------------ types */
@@ -44,6 +46,7 @@ type Component = {
     websiteSku?: string | null;
     shopifyVariantId?: string | null;
     shopifySellable?: boolean | null;
+    productGroupSlug?: string | null;
     webPrice1pc?: number | null;
     webPrice10pc?: number | null;
     webPrice12pc?: number | null;
@@ -74,6 +77,7 @@ export type MatrixRow = {
     webPrice12pc?: number | null;
     shopifyVariantId?: string | null;
     shopifySellable?: boolean | null;
+    productGroupSlug?: string | null;
     components: Record<string, Component[]>;
     resolution: "fitment_rule" | "bottle_listed" | "unknown";
     bottleOnly: boolean;
@@ -102,14 +106,11 @@ export default function MatrixClient({
     const router = useRouter();
     const { addItems } = useCart();
     const [configs, setConfigs] = useState<Record<string, Config>>({});
-    const [search, setSearch] = useState("");
-    const [size, setSize] = useState("");
-    const [finish, setFinish] = useState("");
-    const [neck, setNeck] = useState("");
-    const [closure, setClosure] = useState("");
+    const [filters, setFilters] = useState(emptyMatrixFilters);
     const [cartMessage, setCartMessage] = useState<{ kind: "success" | "error"; text: string } | null>(null);
 
     const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);
+    const { search, size, finish, neck, closure } = filters;
 
     /* FILTERS ARE FAMILY-SCOPED, and their OPTIONS come from the loaded family
        rather than the whole catalog. Jordan: "We should filter only at the
@@ -143,7 +144,13 @@ export default function MatrixClient({
     }, [rows, search, size, finish, neck, closure]);
 
     const filtered = Boolean(size || finish || neck || closure || search.trim());
-    const clearAll = () => { setSize(""); setFinish(""); setNeck(""); setClosure(""); setSearch(""); };
+    const clearAll = () => setFilters(emptyMatrixFilters());
+    const selectFamily = (family: string) => {
+        // Clear all family-scoped values in one state update before routing so
+        // no stale selection can apply while new server rows arrive.
+        setFilters(emptyMatrixFilters());
+        router.replace(`/matrix?family=${encodeURIComponent(family)}`);
+    };
 
     /** Only rows with an EXPLICIT component decision count as configured. */
     const order = useMemo(() => {
@@ -228,7 +235,7 @@ export default function MatrixClient({
                             flex flex-wrap items-center gap-2 mb-3.5">
                 <select
                     value={openFamily ?? ""}
-                    onChange={(e) => router.replace(`/matrix?family=${encodeURIComponent(e.target.value)}`)}
+                    onChange={(e) => selectFamily(e.target.value)}
                     className="bg-white border border-obsidian rounded-[3px] px-2.5 py-1.5
                                text-spec font-semibold text-obsidian"
                 >
@@ -237,14 +244,14 @@ export default function MatrixClient({
                     ))}
                 </select>
 
-                <Filter label="All sizes" value={size} onChange={setSize} options={options.sizes} />
-                <Filter label="All finishes" value={finish} onChange={setFinish} options={options.finishes} />
-                <Filter label="All necks" value={neck} onChange={setNeck} options={options.necks} />
-                <Filter label="All closures" value={closure} onChange={setClosure} options={options.closures} />
+                <Filter label="All sizes" value={size} onChange={(value) => setFilters((current) => ({ ...current, size: value }))} options={options.sizes} />
+                <Filter label="All finishes" value={finish} onChange={(value) => setFilters((current) => ({ ...current, finish: value }))} options={options.finishes} />
+                <Filter label="All necks" value={neck} onChange={(value) => setFilters((current) => ({ ...current, neck: value }))} options={options.necks} />
+                <Filter label="All closures" value={closure} onChange={(value) => setFilters((current) => ({ ...current, closure: value }))} options={options.closures} />
 
                 <input
                     value={search}
-                    onChange={(e) => setSearch(e.target.value)}
+                    onChange={(e) => setFilters((current) => ({ ...current, search: e.target.value }))}
                     placeholder="Search within family…"
                     className="w-[190px] bg-warm-white border border-champagne rounded-[3px]
                                px-2.5 py-1.5 text-spec text-obsidian placeholder:text-ash
@@ -322,6 +329,7 @@ function Row({ row, config, onChange }: {
     // undefined = undecided; null = Bottle Only, chosen on purpose
     const decided = config?.component !== undefined;
     const unknown = row.resolution === "unknown";
+    const productHref = matrixProductHref(row);
 
     return (
         <div className={cn(
@@ -336,12 +344,15 @@ function Row({ row, config, onChange }: {
                         {/* named the way the PDP names the same product —
                             capacity + colour + family + type — so the matrix
                             does not invent a second vocabulary for one catalog */}
-                        <Link
-                            href={catalogIdentityHref(row.websiteSku ?? row.graceSku)}
-                            className="text-sm font-semibold leading-snug text-obsidian hover:text-muted-gold"
-                        >
-                            {getCustomerFacingProductName({ variant: row }).displayName}
-                        </Link>
+                        {productHref ? (
+                            <Link href={productHref} className="text-sm font-semibold leading-snug text-obsidian hover:text-muted-gold">
+                                {getCustomerFacingProductName({ variant: row }).displayName}
+                            </Link>
+                        ) : (
+                            <p className="text-sm font-semibold leading-snug text-obsidian">
+                                {getCustomerFacingProductName({ variant: row }).displayName}
+                            </p>
+                        )}
                         <p className="text-caption text-ash truncate mt-0.5">
                             {row.graceSku ?? row.websiteSku}
                         </p>
@@ -414,6 +425,7 @@ function ComponentChips({ row, config, onChange }: {
     const types = Object.entries(row.components).filter(([, xs]) => xs.length > 0);
 
     if (config?.component) {
+        const componentHref = matrixProductHref(config.component);
         return (
             <div className="inline-flex items-center gap-2 max-w-full rounded-[3px]
                            bg-white border border-obsidian px-2.5 py-1.5 text-caption
@@ -427,12 +439,13 @@ function ComponentChips({ row, config, onChange }: {
                 >
                     <ClosureIcon type={config.component.groupKey ?? ""} size={20} />
                 </button>
-                <Link
-                    href={catalogIdentityHref(config.component.websiteSku ?? config.component.graceSku)}
-                    className="truncate hover:text-muted-gold"
-                >
-                    {shortName(config.component.itemName)}
-                </Link>
+                {componentHref ? (
+                    <Link href={componentHref} className="truncate hover:text-muted-gold">
+                        {shortName(config.component.itemName)}
+                    </Link>
+                ) : (
+                    <span className="truncate">{shortName(config.component.itemName)}</span>
+                )}
                 <Check size={12} weight="bold" className="shrink-0 text-[#5B7B5D]" />
             </div>
         );
@@ -664,11 +677,4 @@ function finishLabel(c: { capColor: string | null; itemName: string }) {
 
 function key(r: MatrixRow) {
     return r.graceSku ?? r.websiteSku ?? r.itemName ?? Math.random().toString();
-}
-
-/** The matrix owns no second product inventory. Exact SKU search resolves to
- * the canonical catalog item, from which the shopper can open its PDP. */
-function catalogIdentityHref(identity: string | null | undefined) {
-    const exactIdentity = identity?.trim();
-    return exactIdentity ? `/catalog?search=${encodeURIComponent(exactIdentity)}` : "/catalog";
 }

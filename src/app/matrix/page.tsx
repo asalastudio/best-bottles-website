@@ -58,7 +58,7 @@ export default async function MatrixPage({
 
     const breadcrumb = buildBreadcrumbJsonLd([
         { name: "Home", url: SITE_URL },
-        { name: "Order Matrix", url: `${SITE_URL}/matrix` },
+        { name: "Build a Bottle", url: `${SITE_URL}/matrix` },
     ]);
 
     return (
@@ -70,6 +70,7 @@ export default async function MatrixPage({
             <Navbar />
             <main className="min-h-screen bg-bone pt-[104px] sm:pt-[120px]">
                 <MatrixClient
+                    key={openFamily ?? "no-family"}
                     families={families}
                     openFamily={openFamily}
                     initialRows={initialRows}
