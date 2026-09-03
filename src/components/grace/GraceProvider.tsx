@@ -66,6 +66,7 @@ import {
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
     resolveGraceRecommendationHref,
+    resolveGraceDirectHitHref,
     resolveVerifiedGracePdpHref,
     type PdpContextChange,
 } from "@/lib/grace/pageContextEvents";
@@ -1398,15 +1399,26 @@ function GraceProviderBase({
                         const hits: ProductCard[] = Array.isArray(searchData.result) ? searchData.result : [];
                         if (hits.length > 0) {
                             const directHit = selectDirectProductMatch(hits, searchTerm);
-                            navPath = resolveGraceRecommendationHref({
-                                finderHref: buildBrowsePath(hits, searchTerm),
-                                exactProduct: directHit,
+                            const finderHref = buildBrowsePath(hits, searchTerm);
+                            navPath = await resolveGraceDirectHitHref({
+                                directHit,
+                                finderHref,
+                                fetchGroup: async (slug) => {
+                                    const exactGroup = await callGraceServerTool<{
+                                        group?: { slug?: string | null } | null;
+                                        variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }>;
+                                    } | null>("getProductGroup", { slug });
+                                    return exactGroup.result;
+                                },
                             });
                         } else {
                             navPath = buildCatalogPath([], searchTerm);
                         }
                     }
-                } catch (e) { console.error("[Grace] slug validation:", e); }
+                } catch (e) {
+                    console.error("[Grace] slug validation:", e);
+                    navPath = buildCatalogPath([], params.title || slugToSearchTerm(rawSlug));
+                }
             }
 
             if (navPath.startsWith("/catalog")) {

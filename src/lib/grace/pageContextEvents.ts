@@ -94,3 +94,28 @@ export function resolveVerifiedGracePdpHref({
         exactProduct: { slug: groupSlug, websiteSku: exactVariant.websiteSku, graceSku: exactVariant.graceSku },
     });
 }
+
+/** Reverify a search direct-hit against its own canonical group before a PDP navigation. */
+export async function resolveGraceDirectHitHref({
+    directHit,
+    finderHref,
+    fetchGroup,
+}: {
+    directHit: { slug?: string | null; websiteSku?: string | null; graceSku?: string | null } | null;
+    finderHref: string;
+    fetchGroup: (slug: string) => Promise<GraceVerifiedPdpGroup>;
+}): Promise<string> {
+    const slug = directHit?.slug ? getCanonicalProductSlug(directHit.slug) : null;
+    const sku = directHit?.websiteSku?.trim() || directHit?.graceSku?.trim();
+    if (!slug || !sku) return finderHref;
+    try {
+        const verifiedGroup = await fetchGroup(slug);
+        return resolveVerifiedGracePdpHref({
+            requestedPath: `/products/${slug}?${new URLSearchParams({ sku }).toString()}`,
+            finderHref,
+            verifiedGroup,
+        }) ?? finderHref;
+    } catch {
+        return finderHref;
+    }
+}

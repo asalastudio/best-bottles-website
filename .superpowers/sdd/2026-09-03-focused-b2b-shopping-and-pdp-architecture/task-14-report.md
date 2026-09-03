@@ -227,3 +227,32 @@ GREEN:
 - `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
 - Safety scan found no inventory/selection/xref or legacy PSD path change; no
   network, Convex CLI/deploy/data action, or media generation occurred.
+
+## Fix round 4 (base `ac29c05a`)
+
+### Fail-closed search direct-hit navigation
+
+- Added the production `resolveGraceDirectHitHref` path used by Grace's generic
+  PDP navigation. A search direct hit is re-fetched by its canonical group slug
+  and accepted only through the same exact group-variant SKU verification used
+  for explicit PDP requests.
+- Missing group data, an unverified SKU, and thrown direct-hit validation now
+  return the focused finder URL. The outer generic validation/search catch also
+  assigns the finder route, so it cannot continue with the original raw PDP
+  path after an error.
+
+### Fix-round 4 RED → GREEN and verification
+
+RED: the new direct-hit regression failed on `ac29c05a`, which could build a
+PDP URL from search-hit data without validating that hit against the exact
+canonical group's variants.
+
+GREEN:
+
+- Regression coverage verifies missing-group and thrown lookup fallback to the
+  finder plus exact stored-SKU acceptance through the production helper.
+- Focused Grace suites: **3 files, 27 tests passed**.
+- Full Vitest: **122 files, 854 tests passed; 2 live files / 7 tests skipped**.
+- `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
+- Safety scan found no inventory/selection/xref, media, or PSD-path change; no
+  network, Convex CLI/deploy/data action, or media generation occurred.

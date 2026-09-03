@@ -4,6 +4,7 @@ import {
     buildGraceFinderContext,
     mergePdpContextChange,
     resolveGraceRecommendationHref,
+    resolveGraceDirectHitHref,
     resolveVerifiedGracePdpHref,
     type PdpContextChange,
 } from "@/lib/grace/pageContextEvents";
@@ -120,5 +121,24 @@ describe("Grace shopping context", () => {
             finderHref: "/catalog?grace=1",
             verifiedGroup,
         })).toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=GRACE-A");
+    });
+
+    it("fails closed to the finder when a missing-group direct hit cannot be reverified or lookup throws", async () => {
+        const directHit = { slug: "cylinder-9ml-clear-17-415-rollon", websiteSku: "WEB-B", graceSku: "GRACE-B" };
+        await expect(resolveGraceDirectHitHref({
+            directHit,
+            finderHref: "/catalog?grace=1",
+            fetchGroup: async () => null,
+        })).resolves.toBe("/catalog?grace=1");
+        await expect(resolveGraceDirectHitHref({
+            directHit,
+            finderHref: "/catalog?grace=1",
+            fetchGroup: async () => { throw new Error("lookup failed"); },
+        })).resolves.toBe("/catalog?grace=1");
+        await expect(resolveGraceDirectHitHref({
+            directHit,
+            finderHref: "/catalog?grace=1",
+            fetchGroup: async () => ({ group: { slug: directHit.slug }, variants: [directHit] }),
+        })).resolves.toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=WEB-B");
     });
 });
