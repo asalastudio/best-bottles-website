@@ -256,3 +256,38 @@ GREEN:
 - `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
 - Safety scan found no inventory/selection/xref, media, or PSD-path change; no
   network, Convex CLI/deploy/data action, or media generation occurred.
+
+## Fix round 5 — final allowed pass (base `9d7fe0c6`)
+
+### Universal Grace exact-product navigation
+
+- `showProducts` now sends a direct search hit through
+  `resolveGraceDirectHitHref`, the same canonical-group and exact stored-SKU
+  verification path used by generic Grace PDP navigation. Missing, wrong,
+  ambiguous, or lookup-error direct hits resolve to the focused finder.
+- Search/tool failures in `showProducts` now also recover to the focused
+  finder instead of leaving a partially resolved product route.
+- Grace product cards no longer manufacture a PDP URL from `slug`. Cards use
+  only an explicitly supplied `verifiedPdpHref` with `?sku=`; otherwise they
+  link to their supplied finder route (or the focused finder default). The
+  `showProducts` action annotates its exact verified result with that URL and
+  explicitly leaves broad result cards finder-oriented.
+
+### Fix-round 5 RED → GREEN and verification
+
+RED: the new mounted Grace card assertions failed on `9d7fe0c6`: both a
+preverified canonical URL and an unverified card were rendered as the raw
+slug-only PDP route.
+
+GREEN:
+
+- DOM coverage verifies exact canonical SKU-card links and finder fallback for
+  missing or slug-only destinations. Direct-hit coverage verifies missing,
+  wrong-SKU, and thrown lookup fallback plus exact stored-SKU acceptance.
+- Focused Grace suites: **4 files, 30 tests passed**.
+- Full Vitest: **123 files, 857 tests passed; 2 live files / 7 tests skipped**.
+- `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
+- Grace UI `/products/` scan found only the verified URL construction and the
+  generic validation path; no customer-visible slug-only PDP builder remains.
+- Safety scan found no inventory/selection/xref, media, or PSD-path change; no
+  network, Convex CLI/deploy/data action, or media generation occurred.

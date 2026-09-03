@@ -76,7 +76,6 @@ describe("Grace shopping context", () => {
     });
 
     it("keeps broad Grace recommendations in the finder and sends exact resolved products to their PDP", () => {
-        const provider = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
         expect(resolveGraceRecommendationHref({
             finderHref: "/catalog/application/roll-on",
             exactProduct: null,
@@ -89,8 +88,6 @@ describe("Grace shopping context", () => {
             finderHref: "/catalog",
             exactProduct: { slug: "cylinder-9ml-17-415", graceSku: "GB-CYL-9-17-415" },
         })).toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=GB-CYL-9-17-415");
-        expect(provider).toContain("exactProduct: directProduct");
-        expect(provider).toContain("const canonicalSlug = getCanonicalProductSlug(rawSlug)");
     });
 
     it("accepts only an exact stored SKU for a verified canonical PDP group", () => {
@@ -129,6 +126,11 @@ describe("Grace shopping context", () => {
             directHit,
             finderHref: "/catalog?grace=1",
             fetchGroup: async () => null,
+        })).resolves.toBe("/catalog?grace=1");
+        await expect(resolveGraceDirectHitHref({
+            directHit,
+            finderHref: "/catalog?grace=1",
+            fetchGroup: async () => ({ group: { slug: directHit.slug }, variants: [{ websiteSku: "WEB-OTHER" }] }),
         })).resolves.toBe("/catalog?grace=1");
         await expect(resolveGraceDirectHitHref({
             directHit,

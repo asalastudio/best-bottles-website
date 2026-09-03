@@ -45,6 +45,10 @@ export interface ProductCard {
     checkoutEligible?: boolean;
     stockStatus?: string | null;
     slug?: string;
+    /** Assigned only after Grace verifies this exact group and stored SKU. */
+    verifiedPdpHref?: string | null;
+    /** Finder recovery route used when a card has no verified PDP destination. */
+    finderHref?: string | null;
     dataQualityFlags?: string[];
 }
 

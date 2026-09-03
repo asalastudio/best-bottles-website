@@ -61,7 +61,10 @@ export default function GraceProductCard({
     tierLabel,
 }: GraceProductCardProps) {
     const hero = product.heroImageUrl;
-    const pdpHref = product.slug ? `/products/${product.slug}` : null;
+    const finderHref = product.finderHref ?? "/catalog?grace=1";
+    const pdpHref = product.verifiedPdpHref?.startsWith("/products/") && new URL(product.verifiedPdpHref, "https://bestbottles.local").searchParams.has("sku")
+        ? product.verifiedPdpHref
+        : finderHref;
     const customerDisplayName = getCustomerFacingProductName({
         variant: product,
         fallbackName: product.itemName,

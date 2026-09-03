@@ -65,7 +65,6 @@ import {
     buildGraceFinderContext,
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
-    resolveGraceRecommendationHref,
     resolveGraceDirectHitHref,
     resolveVerifiedGracePdpHref,
     type PdpContextChange,
@@ -1147,14 +1146,23 @@ function GraceProviderBase({
 
         showProducts: async (params: { query: string; family?: string }) => {
             try {
+                const fallbackFinderHref = buildCatalogPath([], params.query, params.family);
                 const data = await callGraceServerTool<ProductCard[]>("searchCatalog", {
                     searchTerm: params.query ?? "",
                     familyLimit: params.family,
                     returnRaw: true,
                 });
-                if (data.error) return `${data.error} I could not search the catalog right now.`;
+                if (data.error) {
+                    routerRef.current.push(fallbackFinderHref);
+                    completeGraceNavigationRef.current("I opened the focused finder");
+                    return `${data.error} I could not search the catalog right now.`;
+                }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
-                if (products.length === 0) return "No products found. Try a different description.";
+                if (products.length === 0) {
+                    routerRef.current.push(fallbackFinderHref);
+                    completeGraceNavigationRef.current("I opened the focused finder");
+                    return "No products found. Try a different description.";
+                }
 
                 const capMatch = params.query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
                 const requestedMl = capMatch ? parseFloat(capMatch[1]) : null;
@@ -1163,9 +1171,27 @@ function GraceProviderBase({
 
                 const sizeWarning = checkSizeWarning(products, params.query);
                 const exactSizeFound = !sizeWarning;
-                const directProduct = selectDirectProductMatch(products, params.query);
+                const directProduct = exactSizeFound ? selectDirectProductMatch(products, params.query) : null;
                 const displayProducts = directProduct ? [directProduct] : products;
-                const tileProducts = selectGraceTileProducts(displayProducts, params.query);
+                const finderHref = buildCatalogPath(displayProducts, params.query, params.family);
+                const redirectUrl = directProduct
+                    ? await resolveGraceDirectHitHref({
+                        directHit: directProduct,
+                        finderHref,
+                        fetchGroup: async (slug) => {
+                            const exactGroup = await callGraceServerTool<{
+                                group?: { slug?: string | null } | null;
+                                variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }>;
+                            } | null>("getProductGroup", { slug });
+                            return exactGroup.result;
+                        },
+                    })
+                    : finderHref;
+                const tileProducts = selectGraceTileProducts(displayProducts, params.query).map((product) => ({
+                    ...product,
+                    verifiedPdpHref: directProduct === product ? redirectUrl : finderHref,
+                    finderHref,
+                }));
                 const summary = displayProducts.slice(0, 3).map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" ")).join(", ");
 
                 sessionMetricsRef.current.toolsCalled++;
@@ -1186,10 +1212,6 @@ function GraceProviderBase({
                     return `${sizeWarning} I found confirmed nearby alternatives: ${summary}. Ask whether the customer wants to open those results.`;
                 }
 
-                const redirectUrl = resolveGraceRecommendationHref({
-                    finderHref: buildCatalogPath(displayProducts, params.query, params.family),
-                    exactProduct: directProduct,
-                });
                 sessionMetricsRef.current.navigations++;
                 analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
                 setTimeout(() => {
@@ -1200,7 +1222,13 @@ function GraceProviderBase({
                     return `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
                 }
                 return `${sizeWarning} Opening the catalog with the closest matches: ${summary}.`;
-            } catch (e) { console.error("[Grace] showProducts:", e); return "Catalog search failed."; }
+            } catch (e) {
+                console.error("[Grace] showProducts:", e);
+                const finderHref = buildCatalogPath([], params.query, params.family);
+                routerRef.current.push(finderHref);
+                completeGraceNavigationRef.current("I opened the focused finder");
+                return "Catalog search failed.";
+            }
         },
 
         compareProducts: async (params: { query: string; family?: string }) => {
