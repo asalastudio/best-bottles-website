@@ -8,6 +8,9 @@
  */
 
 import type OpenAI from "openai";
+import { CATALOG_CATEGORY_VALUES, CATALOG_FAMILIES, PRODUCT_APPLICATOR_VALUES } from "../src/lib/catalogFilters";
+
+const quoteList = (values: readonly string[]) => values.map((value) => `'${value}'`).join(", ");
 
 // ─── Models ───────────────────────────────────────────────────────────────────
 
@@ -36,21 +39,21 @@ export const GRACE_TOOLS: OpenAI.Chat.Completions.ChatCompletionTool[] = [
                     categoryLimit: {
                         type: ["string", "null"],
                         description:
-                            "Optional: restrict to a category — 'Glass Bottle', 'Component', 'Aluminum Bottle', 'Plastic Bottle', 'Specialty', 'Cream Jar', 'Lotion Bottle', 'Metal Atomizer', etc. Pass null to omit.",
+                            `Optional: restrict to a category. Valid values (exact): ${quoteList(CATALOG_CATEGORY_VALUES)}. Pass null to omit.`,
                     },
                     familyLimit: {
                         type: ["string", "null"],
                         description:
-                            "Optional: restrict to a bottle family. Valid values: 'Cylinder', 'Elegant', 'Boston Round', 'Circle', 'Diva', 'Empire', 'Slim', 'Diamond', 'Sleek', 'Round', 'Royal', 'Square', 'Rectangle', 'Bell', 'Flair', 'Pillar', 'Teardrop', 'Tulip', 'Vial', 'Apothecary', 'Decorative', 'Atomizer', 'Aluminum Bottle', 'Cream Jar', 'Lotion Bottle', 'Plastic Bottle'. Use 'Apothecary' for apothecary-style glass stopper bottles. Use 'Decorative' for marble-crystal-cap, genie, heart, octagonal, and ornate collectible bottles. Pass null to omit.",
+                            `Optional: restrict to a bottle family. Valid values (exact): ${quoteList(CATALOG_FAMILIES)}. Use 'Apothecary' for apothecary-style glass stopper bottles. Use 'Decorative' for marble-crystal-cap, genie, heart, octagonal, and ornate collectible bottles. Pass null to omit.`,
                     },
                     applicatorFilter: {
                         type: ["string", "null"],
                         description:
-                            "Optional: restrict to products with a specific applicator type. Comma-separated list of EXACT values from the catalog. " +
+                            `Optional: restrict to products with a specific applicator type. Comma-separated list of EXACT values from the catalog: ${quoteList(PRODUCT_APPLICATOR_VALUES)}. ` +
                             "For **9ml Cylinder roll-on** specifically, use searchTerm like '9ml cylinder roller' with familyLimit 'Cylinder' — do not rely on a vague 'roll-on' search with the wrong family. " +
                             "Customer language → applicator values to use: " +
                             "'roll-on / roller' → 'Metal Roller Ball,Plastic Roller Ball'; " +
-                            "'spray / sprayer / perfume spray' → 'Fine Mist Sprayer,Atomizer,Antique Bulb Sprayer,Antique Bulb Sprayer with Tassel'; " +
+                            "'spray / sprayer / perfume spray' → 'Fine Mist Sprayer,Perfume Spray Pump,Atomizer,Vintage Bulb Sprayer,Vintage Bulb Sprayer with Tassel'; " +
                             "'splash-on / cologne / open mouth' → 'Reducer'; " +
                             "'dropper / eye dropper' → 'Dropper'; " +
                             "'lotion pump / pump' → 'Lotion Pump'; " +
@@ -76,7 +79,7 @@ export const GRACE_TOOLS: OpenAI.Chat.Completions.ChatCompletionTool[] = [
                     family: {
                         type: "string",
                         description:
-                            "The bottle family name. Must match exactly: 'Cylinder', 'Elegant', 'Boston Round', 'Circle', 'Diva', 'Empire', 'Slim', 'Diamond', 'Sleek', 'Round', 'Royal', 'Square', 'Vial', 'Grace', 'Rectangle', 'Flair'",
+                            `The bottle family name. Must match exactly one of: ${quoteList(CATALOG_FAMILIES)}`,
                     },
                 },
                 required: ["family"],

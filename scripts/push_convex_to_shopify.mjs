@@ -170,11 +170,24 @@ function buildProductSetInput(group, variants, status) {
         };
     });
 
+    // Plain tags stay for the collections Shopify already has. The prefixed
+    // tags carry the SAME strings Convex, the storefront filters and Grace use
+    // (family / category / glass colour / collection / capacity / neck /
+    // applicator), so Shopify collections, search and any future Shopify-side
+    // filtering are built on one vocabulary — see src/lib/catalogFilters.ts.
+    const applicatorTypes = Array.isArray(group.applicatorTypes) ? group.applicatorTypes : [];
     const tags = [
         group.family,
         group.color,
         group.bottleCollection,
         group.category,
+        group.family && `family:${group.family}`,
+        group.category && `category:${group.category}`,
+        group.color && `glass:${group.color}`,
+        group.bottleCollection && `collection:${group.bottleCollection}`,
+        group.capacity && `capacity:${group.capacity}`,
+        group.neckThreadSize && `neck:${group.neckThreadSize}`,
+        ...applicatorTypes.map((type) => `applicator:${type}`),
     ].filter(Boolean);
 
     return {

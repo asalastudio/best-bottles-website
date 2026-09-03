@@ -10,9 +10,11 @@ import { ExecutiveNavigation } from "@/components/executive/ExecutiveNavigation"
 import { ExecutiveOperatingPanels, ExecutiveUnavailablePanels } from "@/components/executive/ExecutiveOperatingPanels";
 import { GraceAuditPanel } from "@/components/executive/GraceAuditPanel";
 import { GraceOperationsPanel } from "@/components/executive/GraceOperationsPanel";
+import { PlatformHealthPanel } from "@/components/executive/PlatformHealthPanel";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import type { ExecutiveDashboardSnapshot, ExecutiveDateRange } from "@/lib/executive/contracts";
 import type { GraceOperationsSnapshot } from "@/lib/executive/graceOperations";
+import type { PlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 import { getExecutiveMetric } from "@/lib/executive/fixture";
 import { cn } from "@/lib/utils";
 
@@ -27,10 +29,11 @@ const ranges: Array<{ value: ExecutiveDateRange; label: string }> = [
 type ExecutiveDashboardProps = {
     snapshot: ExecutiveDashboardSnapshot;
     graceOperations?: GraceOperationsSnapshot;
+    platformHealth?: PlatformHealthSnapshot;
     previewMode?: boolean;
 };
 
-export function ExecutiveDashboard({ snapshot, graceOperations, previewMode = false }: ExecutiveDashboardProps) {
+export function ExecutiveDashboard({ snapshot, graceOperations, platformHealth, previewMode = false }: ExecutiveDashboardProps) {
     const [range, setRange] = useState<ExecutiveDateRange>(snapshot.range);
     const [selection, setSelection] = useState<ExecutiveDetailSelection>(null);
     const visibleGraceOperations: GraceOperationsSnapshot = graceOperations ?? {
@@ -148,6 +151,17 @@ export function ExecutiveDashboard({ snapshot, graceOperations, previewMode = fa
                 <GraceOperationsPanel snapshot={visibleGraceOperations} />
 
                 <GraceAuditPanel />
+
+                <PlatformHealthPanel
+                    snapshot={platformHealth ?? {
+                        status: "not-connected",
+                        asOf: null,
+                        data: null,
+                        awaitingFirstDelivery: true,
+                        message: "Platform Health data is not connected.",
+                        sentryIssuesUrl: null,
+                    }}
+                />
 
                 {range === snapshot.range ? (
                     <ExecutiveOperatingPanels

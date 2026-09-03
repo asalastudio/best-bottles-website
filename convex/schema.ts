@@ -745,6 +745,77 @@ export default defineSchema({
         .index("by_route_identifier", ["route", "identifier"]),
 
     // -------------------------------------------------------------------------
+    // OBSERVABILITY — Sentry issues mirrored into Convex so the Team Hub can
+    // show what is breaking without handing every employee a Sentry seat.
+    // Sentry stays the source of record; these tables are a projection of it,
+    // fed by the signed webhook in convex/http.ts and the 15-minute API sync
+    // in convex/observability.ts. Never write to them from the storefront.
+    // -------------------------------------------------------------------------
+
+    errorIssues: defineTable({
+        source: v.literal("sentry"),
+        rawContentStored: v.literal(false),         // schema-enforced: no stack traces, bodies or user records here
+        sentryIssueId: v.string(),                   // Sentry's numeric issue id, as a string
+        shortId: v.union(v.string(), v.null()),      // e.g. "BEST-BOTTLES-WEB-1A"
+        projectSlug: v.string(),                     // "best-bottles-web" | "best-bottles-convex"
+        projectName: v.union(v.string(), v.null()),
+        environment: v.union(v.string(), v.null()),  // production | preview | development
+        title: v.string(),
+        culprit: v.union(v.string(), v.null()),
+        level: v.string(),                           // fatal | error | warning | info | debug
+        platform: v.union(v.string(), v.null()),
+        status: v.string(),                          // unresolved | resolved | ignored
+        substatus: v.union(v.string(), v.null()),    // new | escalating | ongoing | regressed | archived_*
+        priority: v.union(v.string(), v.null()),     // high | medium | low
+        isUnhandled: v.boolean(),
+        count: v.number(),
+        userCount: v.number(),
+        firstSeenAt: v.number(),
+        lastSeenAt: v.number(),
+        webUrl: v.union(v.string(), v.null()),       // deep link into Sentry
+        release: v.union(v.string(), v.null()),
+        tags: v.array(v.object({ key: v.string(), value: v.string() })),
+        lastAction: v.string(),                      // created | resolved | assigned | archived | unresolved | triggered | occurred | synced
+        lastActorName: v.union(v.string(), v.null()),
+        lastTriggeredRule: v.union(v.string(), v.null()),
+        lastEventId: v.union(v.string(), v.null()),
+        lastEventWebUrl: v.union(v.string(), v.null()),
+        updatedAt: v.number(),
+    })
+        .index("by_sentryIssueId", ["sentryIssueId"])
+        .index("by_lastSeenAt", ["lastSeenAt"])
+        .index("by_status_lastSeenAt", ["status", "lastSeenAt"])
+        .index("by_projectSlug_lastSeenAt", ["projectSlug", "lastSeenAt"]),
+
+    // Journal of every delivery we accepted (webhook or sync transition), so the
+    // dashboard has an activity feed and a Sentry retry can never double-apply.
+    errorIssueEvents: defineTable({
+        issueId: v.id("errorIssues"),
+        sentryIssueId: v.string(),
+        resource: v.string(),                        // issue | event_alert | error | sync
+        action: v.string(),
+        requestId: v.union(v.string(), v.null()),    // Sentry's Request-ID header, for idempotency
+        actorName: v.union(v.string(), v.null()),
+        summary: v.string(),
+        receivedAt: v.number(),
+    })
+        .index("by_issueId_receivedAt", ["issueId", "receivedAt"])
+        .index("by_receivedAt", ["receivedAt"])
+        .index("by_requestId", ["requestId"]),
+
+    // One row per sync attempt; the dashboard reads the latest to say
+    // "synced 4 min ago" or to surface a bad token loudly.
+    errorSyncRuns: defineTable({
+        startedAt: v.number(),
+        finishedAt: v.number(),
+        outcome: v.union(v.literal("ok"), v.literal("skipped"), v.literal("failed")),
+        issuesSeen: v.number(),
+        issuesChanged: v.number(),
+        detail: v.union(v.string(), v.null()),
+    })
+        .index("by_startedAt", ["startedAt"]),
+
+    // -------------------------------------------------------------------------
     // 3D CONFIGURATOR MATERIAL RECIPES — per-finish MeshPhysicalMaterial tunables
     // -------------------------------------------------------------------------
 

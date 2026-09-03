@@ -17,7 +17,7 @@ describe("catalog filters smoke", () => {
             collection: "Cylinder",
             families: ["Cylinder"],
             colors: ["Clear", "Amber"],
-            capacities: ["100 ml (3.38 oz)"],
+            capacities: ["100 ml"],
             neckThreadSizes: ["18-415"],
             componentType: "Sprayer",
             priceMin: 1.5,

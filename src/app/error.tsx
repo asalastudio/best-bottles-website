@@ -1,15 +1,23 @@
 "use client";
 
+import * as Sentry from "@sentry/nextjs";
 import Link from "next/link";
+import { useEffect } from "react";
 
-export default function GlobalError({
+export default function RouteError({
     error,
     reset,
 }: {
     error: Error & { digest?: string };
     reset: () => void;
 }) {
-    console.error("[GlobalError]", error?.message, error?.digest);
+    useEffect(() => {
+        // Logged from an effect (not the render body) so StrictMode does not
+        // double-report, and forwarded to Sentry with the Next.js digest.
+        console.error("[RouteError]", error?.message, error?.digest);
+        Sentry.captureException(error);
+    }, [error]);
+
     return (
         <main className="min-h-screen bg-bone flex items-center justify-center px-4">
             <div className="max-w-md text-center">

@@ -1,5 +1,6 @@
 "use client";
 
+import { reportError } from "@/lib/observability/report";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Component, type ErrorInfo, type ReactNode } from "react";
@@ -29,7 +30,11 @@ class RailSectionErrorBoundary extends Component<
         return { hasError: true };
     }
     componentDidCatch(err: Error, info: ErrorInfo) {
-        console.warn("[Grace] PopularFamiliesStrip failed — falling back gracefully:", err.message, info.componentStack);
+        reportError(err, {
+            area: "grace-workspace-rail",
+            level: "warning",
+            extra: { componentStack: info.componentStack ?? null },
+        });
     }
     render() {
         return this.state.hasError ? this.props.fallback : this.props.children;

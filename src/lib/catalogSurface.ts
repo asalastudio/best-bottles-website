@@ -8,27 +8,46 @@ import {
 export type CatalogSurfaceManifest = {
     id: "master" | "cylinder";
     fixedFilters: Partial<CatalogFilters>;
+    /**
+     * Sidebar order. This IS the render order on the master catalogue — the
+     * sidebar maps over it, so reordering here reorders the UI and tests.
+     */
     visibleFacets: CatalogFacetKey[];
+    /** Facets expanded on first paint (desktop). A facet with an active value is always expanded. */
     defaultOpenFacets: CatalogFacetKey[];
+    /** Facets expanded on first paint inside the mobile drawer — fewer, so the sheet stays scannable. */
+    mobileDefaultOpenFacets: CatalogFacetKey[];
+    /** Facet values shown before "Show more" (Baymard: truncate long lists, never hide them in a scroll box). */
+    truncateAfter: number;
     defaultSort: SortValue;
     resultLabel: string;
 };
 
+/**
+ * Master catalogue hierarchy, ordered the way a packaging buyer narrows a
+ * list (Baymard product-list research, 2025): scope first (what kind of
+ * product), then the category-specific attributes that decide fit (dispensing
+ * type, capacity, neck finish), then look (glass colour), then price and the
+ * aesthetic line. Component Type only appears once a component category is
+ * chosen, so it sits last.
+ */
 export const MASTER_CATALOG_SURFACE: CatalogSurfaceManifest = {
     id: "master",
     fixedFilters: {},
     visibleFacets: [
-        "applicators",
-        "families",
-        "capacities",
-        "colors",
         "category",
         "collection",
-        "componentType",
+        "applicators",
+        "capacities",
         "neckThreadSizes",
+        "colors",
         "price",
+        "families",
+        "componentType",
     ],
-    defaultOpenFacets: ["applicators", "families", "capacities"],
+    defaultOpenFacets: ["category", "applicators", "capacities", "neckThreadSizes", "colors"],
+    mobileDefaultOpenFacets: ["applicators", "capacities"],
+    truncateAfter: 8,
     defaultSort: "featured",
     resultLabel: "products",
 };
@@ -38,6 +57,8 @@ export const CYLINDER_CATALOG_SURFACE: CatalogSurfaceManifest = {
     fixedFilters: { families: ["Cylinder"] },
     visibleFacets: ["capacities", "colors", "applicators", "neckThreadSizes"],
     defaultOpenFacets: ["capacities"],
+    mobileDefaultOpenFacets: ["capacities"],
+    truncateAfter: 8,
     defaultSort: "capacity-asc",
     resultLabel: "Cylinder groups",
 };

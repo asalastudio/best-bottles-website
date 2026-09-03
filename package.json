@@ -48,7 +48,9 @@
     "materials": "npm run materials:glass && npm run materials:port && npm run materials:verify && npm run materials:validate && npm run materials:assets",
     "materials:glass": "tsx scripts/materials/extract-glass.mts",
     "materials:maps": "node scripts/materials/fetch-pbr-maps.mjs",
-    "materials:assets": "node scripts/materials/check-assets.mjs"
+    "materials:assets": "node scripts/materials/check-assets.mjs",
+    "audit:catalog-vocabulary": "tsx scripts/audit_catalog_vocabulary.ts",
+    "test:alignment": "vitest run tests/catalog-vocabulary-alignment.test.ts tests/catalog-price-filter-semantics.test.ts tests/observability-sentry-issues.test.ts tests/sentry-webhook-verification.test.ts tests/observability-wiring.test.ts"
   },
   "dependencies": {
     "@ai-sdk/anthropic": "^3.0.64",
@@ -71,6 +73,7 @@
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.2.0",
     "@sanity/vision": "^5.18.0",
+    "@sentry/nextjs": "^10.73.0",
     "@sparticuz/chromium": "^148.0.0",
     "ai": "^6.0.138",
     "class-variance-authority": "^0.7.1",

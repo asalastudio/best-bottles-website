@@ -1,3 +1,4 @@
+import { detectCatalogFamily } from "../src/lib/catalogFilters";
 import { query, mutation, internalMutation, action } from "./_generated/server";
 import { v } from "convex/values";
 import { api } from "./_generated/api";
@@ -136,14 +137,11 @@ export const searchCatalog = query({
         // or shape-based queries like "flat bottle" / "cylindrical 30ml".
         // Parse family name, capacity, and shape vocabulary from the search term
         // and cross-check productGroups so we never miss an obvious match.
-        const KNOWN_FAMILIES = [
-            "Apothecary", "Atomizer", "Bell", "Boston Round", "Circle", "Cylinder",
-            "Diamond", "Diva", "Elegant", "Empire", "Flair", "Grace", "Pillar",
-            "Rectangle", "Round", "Royal", "Sleek", "Slim", "Square", "Teardrop",
-            "Tulip", "Vial",
-        ];
+        // Family vocabulary is shared with the storefront filters and the tool
+        // schemas (src/lib/catalogFilters.ts) — longest name wins, so "Tall
+        // Cylinder" and "Boston Round" are not swallowed by "Cylinder"/"Round".
         const detectedFamily = args.familyLimit
-            ?? KNOWN_FAMILIES.find((f) => termLower.includes(f.toLowerCase()))
+            ?? detectCatalogFamily(termLower)
             ?? null;
         const capMatch = searchTermToUse.match(/\b(\d+)\s*ml\b/i);
         const detectedCapMl = capMatch ? parseInt(capMatch[1]) : null;

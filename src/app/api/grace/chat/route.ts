@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../../convex/_generated/api";
 import { enforceGraceRateLimit } from "@/lib/graceRateLimitServer";
+import { reportError } from "@/lib/observability/report";
 
 type ChatMessage = { role: "user" | "assistant"; content: string };
 
@@ -49,7 +50,7 @@ export async function POST(req: NextRequest) {
         });
         return NextResponse.json({ message });
     } catch (error) {
-        console.error("[grace/chat]", error);
+        reportError(error, { area: "grace-chat", tags: { mode: "text" } });
         return NextResponse.json({ error: "Grace is temporarily unavailable." }, { status: 502 });
     }
 }

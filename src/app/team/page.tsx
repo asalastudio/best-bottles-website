@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { auth, currentUser } from "@clerk/nextjs/server";
 import { SwitchAccountButton } from "@/components/auth/SwitchAccountButton";
+import { PlatformStatusCard } from "@/components/team/PlatformStatusCard";
+import { getPlatformHealthSnapshot } from "@/lib/executive/platformHealth";
 import { getUserEmailAddresses, hasTeamHubAccess } from "@/lib/teamAccess";
 
 export const dynamic = "force-dynamic";
@@ -123,6 +125,8 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
         }
     }
 
+    const platformHealth = await getPlatformHealthSnapshot({ issueLimit: 3, activityLimit: 0 });
+
     return (
         <main className="min-h-screen bg-bone px-6 py-20 sm:py-24">
             <div className="mx-auto max-w-5xl">
@@ -142,6 +146,8 @@ export default async function TeamPage({ searchParams }: TeamPageProps) {
                         </p>
                     ) : null}
                 </header>
+
+                <PlatformStatusCard snapshot={platformHealth} />
 
                 <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
                     {tools.map((tool) => (

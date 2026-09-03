@@ -10,6 +10,17 @@ import {
     selectBestFitmentRule,
 } from "./componentUtils";
 import { buildFamilyPageData } from "../src/lib/products/family-page-data";
+import {
+    APPLICATOR_BUCKETS,
+    BOTTLE_CATEGORIES,
+    COMPONENT_CATEGORIES,
+    FAMILY_ORDER,
+    canonicalGlassColor,
+    catalogSearchMatches,
+    catalogSearchScore,
+    classifyComponentType as classifyCatalogComponentType,
+    parseCapacityLabelMl as parseCapacityMl,
+} from "../src/lib/catalogFilters";
 
 function isSanityCdnUrl(value: string) {
     try {
@@ -695,97 +706,8 @@ export const getAllCatalogGroups = query({
     },
 });
 
-const SEARCH_STOP_WORDS = new Set(["a", "an", "and", "for", "of", "the", "with"]);
-const APPLICATOR_BUCKETS = [
-    { value: "rollon", productValues: ["Metal Roller Ball", "Plastic Roller Ball", "Metal Roller", "Plastic Roller"] },
-    { value: "finemist", productValues: ["Fine Mist Sprayer", "Atomizer"] },
-    { value: "perfumespray", productValues: ["Perfume Spray Pump"] },
-    { value: "reducer", productValues: ["Reducer"] },
-    { value: "dropper", productValues: ["Dropper"] },
-    { value: "lotionpump", productValues: ["Lotion Pump"] },
-    { value: "antiquespray", productValues: ["Vintage Bulb Sprayer", "Antique Bulb Sprayer"] },
-    { value: "antiquespray-tassel", productValues: ["Vintage Bulb Sprayer with Tassel", "Antique Bulb Sprayer with Tassel"] },
-] as const;
-const COMPONENT_CATEGORIES = new Set([
-    "Component", "Cap/Closure", "Roll-On Cap", "Accessory",
-    "Packaging", "Packaging Supply", "Tool", "Gift Box", "Gift Bag",
-]);
-const BOTTLE_CATEGORIES = new Set(["Glass Bottle", "Cream Jar", "Lotion Bottle"]);
-const FAMILY_ORDER = [
-    "Cylinder", "Elegant", "Circle", "Sleek", "Diva", "Empire", "Boston Round",
-    "Slim", "Diamond", "Royal", "Round", "Square", "Rectangle", "Flair",
-    "Tulip", "Queen", "Bell", "Swirl", "Grace",
-];
-
-function normalizeCatalogSearchText(value: string | null | undefined): string {
-    if (!value) return "";
-    return value
-        .toLowerCase()
-        .normalize("NFKD")
-        .replace(/[–—]/g, "-")
-        .replace(/(\d{1,4})\s*ml\b/g, "$1ml $1 ml")
-        .replace(/\b(\d{1,3})\s*[-/]\s*(\d{3,4})\b/g, "$1-$2 $1/$2")
-        .replace(/\broll[\s-]?on\b/g, "rollon roll-on roller rollerball roller ball")
-        .replace(/\bfine[\s-]?mist\b/g, "finemist fine mist spray sprayer")
-        .replace(/\bperfume\s*spray\b/g, "perfumespray perfume spray sprayer")
-        .replace(/\bbulb\b/g, "bulb vintage antique")
-        .replace(/\bsprayers?\b/g, "sprayer spray")
-        .replace(/\bauto?mizers?\b/g, "atomizer automizer automizers")
-        .replace(/\batomizers?\b/g, "atomizer automizer automizers")
-        .replace(/\bdroppers?\b/g, "dropper pipette")
-        .replace(/\breducers?\b/g, "reducer orifice plug")
-        .replace(/\blotion\s*pumps?\b/g, "lotionpump lotion pump")
-        .replace(/\bvials?\b/g, "vial vials sample")
-        .replace(/\bbottles?\b/g, "bottle bottles")
-        .replace(/\bcaps?\b/g, "cap closure lid")
-        .replace(/\bclosures?\b/g, "closure cap lid")
-        .replace(/\bamber\b/g, "amber brown")
-        .replace(/\bbrown\b/g, "brown amber")
-        .replace(/\bcobalt\b/g, "cobalt blue")
-        .replace(/\bfrost(ed)?\b/g, "frosted frost")
-        .replace(/[^\w\s/-]/g, " ")
-        .replace(/\s+/g, " ")
-        .trim()
-        .replace(/\b(\d{1,4})\s+ml\b/g, "$1ml $1 ml");
-}
-
-function catalogSearchTokens(queryText: string): string[] {
-    const normalized = normalizeCatalogSearchText(queryText);
-    if (!normalized) return [];
-    return Array.from(new Set(normalized.split(/\s+/).filter((token) => token && !SEARCH_STOP_WORDS.has(token))));
-}
-
-function catalogSearchMatches(queryText: string, fields: Array<string | number | null | undefined>): boolean {
-    const tokens = catalogSearchTokens(queryText);
-    if (tokens.length === 0) return true;
-    const haystack = normalizeCatalogSearchText(fields.filter((value) => value != null).join(" "));
-    return tokens.every((token) => haystack.includes(token));
-}
-
-function catalogSearchScore(queryText: string, weightedFields: Array<{ value: string | number | null | undefined; weight: number }>): number {
-    const tokens = catalogSearchTokens(queryText);
-    if (tokens.length === 0) return 0;
-    return weightedFields.reduce((score, field) => {
-        const text = normalizeCatalogSearchText(field.value == null ? null : String(field.value));
-        if (!text) return score;
-        const matchedTokens = tokens.filter((token) => text.includes(token)).length;
-        const exactPhraseBoost = text.includes(normalizeCatalogSearchText(queryText)) ? field.weight : 0;
-        return score + matchedTokens * field.weight + exactPhraseBoost;
-    }, 0);
-}
-
-function classifyCatalogComponentType(displayName: string, family: string | null): string | null {
-    const name = displayName.toLowerCase();
-    const fam = (family ?? "").toLowerCase();
-    if (name.includes("sprayer") || name.includes("atomizer") || name.includes("bulb") || fam.includes("sprayer")) return "Sprayer";
-    if (name.includes("dropper") || fam.includes("dropper")) return "Dropper";
-    if ((name.includes("lotion") && name.includes("pump")) || fam.includes("lotion pump")) return "Lotion Pump";
-    if (name.includes("roll-on") || name.includes("roll on") || fam.includes("roll-on")) return "Roll-On";
-    if (name.includes("roller") || fam.includes("roller")) return "Roller";
-    if (name.includes("reducer") || fam.includes("reducer")) return "Reducer";
-    if (name.includes("cap") || name.includes("closure") || fam.includes("cap")) return "Cap";
-    return null;
-}
+// Catalogue vocabulary and search helpers are shared with the storefront —
+// see src/lib/catalogFilters.ts (imported above). Do not re-declare them here.
 
 function countByCatalogGroup<T extends { [key: string]: unknown }>(items: T[], keyFn: (item: T) => string | null | undefined): Record<string, number> {
     const counts: Record<string, number> = {};
@@ -794,11 +716,6 @@ function countByCatalogGroup<T extends { [key: string]: unknown }>(items: T[], k
         if (key) counts[key] = (counts[key] ?? 0) + 1;
     }
     return counts;
-}
-
-function parseCapacityMl(label: string): number | null {
-    const match = label.match(/^(\d+(?:\.\d+)?)\s*ml/i);
-    return match ? Number(match[1]) : null;
 }
 
 /**
@@ -873,8 +790,8 @@ export const searchCatalog = query({
                     skuMap.get(String(group._id)),
                 ]));
             }
-            if (filters.category) rows = rows.filter((group) => group.category === filters.category);
-            if (filters.collection) rows = rows.filter((group) => group.bottleCollection === filters.collection);
+            if (!skipKeys.has("category") && filters.category) rows = rows.filter((group) => group.category === filters.category);
+            if (!skipKeys.has("collection") && filters.collection) rows = rows.filter((group) => group.bottleCollection === filters.collection);
             if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
                 rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
             }
@@ -883,8 +800,9 @@ export const searchCatalog = query({
                 rows = rows.filter((group) => group.family != null && familySet.has(group.family));
             }
             if (!skipKeys.has("colors") && filters.colors.length > 0) {
-                const colorSet = new Set(filters.colors);
-                rows = rows.filter((group) => group.color != null && colorSet.has(group.color));
+                // Rows still say "Blue"/"Cobalt" for some groups; match on the canonical label.
+                const colorSet = new Set(filters.colors.map((color) => canonicalGlassColor(color)));
+                rows = rows.filter((group) => colorSet.has(canonicalGlassColor(group.color)));
             }
             if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
                 const selectedMls = new Set(filters.capacities.map(parseCapacityMl).filter((value): value is number => value != null));
@@ -895,7 +813,15 @@ export const searchCatalog = query({
                 rows = rows.filter((group) => group.neckThreadSize != null && threadSet.has(group.neckThreadSize));
             }
             if (filters.componentType) rows = rows.filter((group) => classifyCatalogComponentType(group.displayName, group.family) === filters.componentType);
-            if (filters.priceMin !== null) rows = rows.filter((group) => group.priceRangeMin !== null && group.priceRangeMin >= filters.priceMin!);
+            // A group matches a price window when ANY of its variants falls inside
+            // it (Baymard: grouped products must not vanish because their cheapest
+            // variant is under the floor). 120 of 362 groups span a range.
+            if (filters.priceMin !== null) {
+                rows = rows.filter((group) => {
+                    const top = group.priceRangeMax ?? group.priceRangeMin;
+                    return top !== null && top >= filters.priceMin!;
+                });
+            }
             if (filters.priceMax !== null) rows = rows.filter((group) => group.priceRangeMin !== null && group.priceRangeMin <= filters.priceMax!);
             return rows;
         };
@@ -923,17 +849,23 @@ export const searchCatalog = query({
             }
         }
 
-        const priceValues = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
+        const categoryFacetBase = runFilters(new Set(["category", "collection"]));
+        const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
+        const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
         const facets = {
-            categories: countByCatalogGroup(result, (group) => group.category),
-            collections: countByCatalogGroup(result, (group) => group.bottleCollection),
+            // Counted with the category/collection constraint lifted so the sidebar
+            // can show sibling scopes instead of a single lonely row.
+            categories: countByCatalogGroup(categoryFacetBase, (group) => group.category),
+            collections: countByCatalogGroup(categoryFacetBase, (group) => group.bottleCollection),
             applicators: applicatorCounts,
             families: countByCatalogGroup(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
-            colors: countByCatalogGroup(colorFacetBase, (group) => group.color),
+            colors: countByCatalogGroup(colorFacetBase, (group) => canonicalGlassColor(group.color)),
             capacities,
             neckThreadSizes: countByCatalogGroup(threadFacetBase, (group) => group.neckThreadSize),
             componentTypes: countByCatalogGroup(result, (group) => classifyCatalogComponentType(group.displayName, group.family)),
-            priceRange: priceValues.length > 0 ? { min: Math.min(...priceValues), max: Math.max(...priceValues) } : { min: 0, max: 0 },
+            priceRange: priceFloors.length > 0
+                ? { min: Math.min(...priceFloors), max: Math.max(...priceCeilings, ...priceFloors) }
+                : { min: 0, max: 0 },
         };
 
         const sorted = [...result];

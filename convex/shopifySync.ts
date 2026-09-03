@@ -13,6 +13,25 @@ import { v } from "convex/values";
  * Convex-owned fields like components, paperDollFamilyKey, or fitmentStatus.
  */
 
+/**
+ * scripts/push_convex_to_shopify.mjs writes `family:` / `category:` / `glass:` /
+ * `collection:` / `capacity:` / `neck:` tags alongside the plain ones. Read
+ * them back here so a Shopify-originated update carries the same vocabulary
+ * Convex already holds instead of guessing from productType.
+ */
+function parsePrefixedTags(tags: string): Partial<Record<"family" | "category" | "glass" | "collection" | "capacity" | "neck", string>> {
+    const out: Partial<Record<"family" | "category" | "glass" | "collection" | "capacity" | "neck", string>> = {};
+    for (const raw of tags.split(",")) {
+        const tag = raw.trim();
+        const match = tag.match(/^(family|category|glass|collection|capacity|neck):(.+)$/);
+        if (!match) continue;
+        const key = match[1] as keyof typeof out;
+        const value = match[2].trim();
+        if (value && !out[key]) out[key] = value;
+    }
+    return out;
+}
+
 function verifyWriteToken(writeToken: string) {
     const expected = process.env.BEST_BOTTLES_CONVEX_WRITE_TOKEN;
     if (!expected) throw new Error("convex_write_token_not_configured");
@@ -81,9 +100,19 @@ export const syncProduct = mutation({
         );
         const applicatorTypes = applicatorOption?.values ?? [];
 
+        const tagged = parsePrefixedTags(args.tags);
         const groupPatch = {
             displayName: args.title,
-            category: args.productType || "Glass Bottle",
+            // Shopify's productType carries the FAMILY on push (see
+            // scripts/push_convex_to_shopify.mjs). It must never overwrite
+            // `category` — that silently broke the category filter and Grace's
+            // categoryLimit. Category only moves when a `category:` tag says so.
+            ...(tagged.category ? { category: tagged.category } : {}),
+            ...(tagged.family ? { family: tagged.family } : {}),
+            ...(tagged.glass ? { color: tagged.glass } : {}),
+            ...(tagged.collection ? { bottleCollection: tagged.collection } : {}),
+            ...(tagged.capacity ? { capacity: tagged.capacity } : {}),
+            ...(tagged.neck ? { neckThreadSize: tagged.neck } : {}),
             variantCount: args.variants.length,
             priceRangeMin: priceMin,
             priceRangeMax: priceMax,
@@ -101,12 +130,13 @@ export const syncProduct = mutation({
         } else {
             groupId = await ctx.db.insert("productGroups", {
                 slug: args.handle,
-                family: args.productType || "Uncategorized",
-                capacity: null,
+                category: tagged.category ?? "Glass Bottle",
+                family: tagged.family ?? args.productType ?? "Uncategorized",
+                capacity: tagged.capacity ?? null,
                 capacityMl: null,
-                color: null,
-                bottleCollection: null,
-                neckThreadSize: null,
+                color: tagged.glass ?? null,
+                bottleCollection: tagged.collection ?? null,
+                neckThreadSize: tagged.neck ?? null,
                 ...groupPatch,
             });
         }
