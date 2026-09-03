@@ -16,6 +16,7 @@ import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
+import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import {
     PdpInlineBadges,
     PdpInlinePromo,
@@ -1158,6 +1159,18 @@ export default function ProductDetailClient({
             });
     }, [variants, activeApplicator]);
 
+    // Photographs of closures live in per-neck component families keyed by
+    // SKU token; pills are keyed by catalogue colourway. Carry the token keys
+    // each pill's variants spell so the guided page can join the two.
+    const capOptionPhotoKeys = useMemo(
+        () => buildCapOptionPhotoKeys(
+            capColorOptions,
+            variants.filter((v) => v.applicator === activeApplicator),
+            (v) => resolveVariantCapFinish(v).swatchName,
+        ),
+        [capColorOptions, variants, activeApplicator],
+    );
+
     const primaryCapColor = primaryVariant?.applicator === activeApplicator
         ? resolveVariantCapFinish(primaryVariant).swatchName
         : null;
@@ -1425,6 +1438,28 @@ export default function ProductDetailClient({
         }));
     }, [isRollonGroup, applicatorOptions]);
 
+    // The guided page's Stainless / Plastic chooser drives the same applicator
+    // switch as the classic roller chips: metal and plastic rollers are
+    // separate SKUs, so the plate, price and resolved SKU must follow.
+    const rollerVariantForGuided: "metal" | "plastic" | undefined =
+        /metal/i.test(activeApplicator ?? "") ? "metal" : /plastic/i.test(activeApplicator ?? "") ? "plastic" : undefined;
+    const rollerVariantsAvailable = useMemo<Array<"metal" | "plastic">>(
+        () => rollerTypeOptions.map((opt) => (/metal/i.test(opt.value) ? "metal" : "plastic")),
+        [rollerTypeOptions],
+    );
+    const handleRollerVariantChange = useCallback((variant: "metal" | "plastic") => {
+        const opt = rollerTypeOptions.find((o) => (variant === "metal") === /metal/i.test(o.value));
+        if (!opt) return;
+        // Pin the finish the customer is looking at, then switch material: the
+        // resolver narrows to that colourway in the other material when it
+        // exists (Shiny Black metal → Shiny Black plastic) and falls back to
+        // the pool when it does not. Without the pin the switch landed on the
+        // other material's first colourway.
+        if (activeCapColor) setSelectedCapColor(activeCapColor);
+        setSelectedApplicator(opt.value);
+        setSelectedVariantId(null);
+    }, [rollerTypeOptions, activeCapColor]);
+
     // ── Product view analytics ───────────────────────────────────────────────
     useEffect(() => {
         if (group) {
@@ -1639,7 +1674,11 @@ export default function ProductDetailClient({
                                 price10={selectedVariant?.webPrice10pc ?? null}
                                 price12={selectedVariant?.webPrice12pc ?? null}
                                 priceTiers={selectedVariant?.priceTiers ?? null}
+                                rollerVariant={rollerVariantForGuided}
+                                rollerVariantsAvailable={rollerVariantsAvailable}
+                                onRollerVariantChange={handleRollerVariantChange}
                                 capOptions={capColorOptions}
+                                capOptionPhotoKeys={capOptionPhotoKeys}
                                 activeCapOption={activeCapColor}
                                 onCapOptionChange={(name) => {
                                     setSelectedVariantId(null);
@@ -1686,7 +1725,6 @@ export default function ProductDetailClient({
                                         };
                                     });
                                 })()}
-                                sampleHref={`/request-sample?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}`}
                                 quoteHref={quoteHref}
                                 qty={qty}
                                 onQtyChange={setQty}
