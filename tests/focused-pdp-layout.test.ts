@@ -6,6 +6,8 @@ import FocusedPdpLayout from "../src/components/products/FocusedPdpLayout";
 vi.mock("convex/react", () => ({ useQuery: () => [] }));
 vi.mock("@react-three/drei", () => ({ useGLTF: () => ({}) }));
 
+const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
+
 describe("focused PDP layout", () => {
     const renderShell = () => renderToStaticMarkup(createElement(FocusedPdpLayout, {
         stage: createElement("div", null, "Bottle stage"),
@@ -42,8 +44,7 @@ describe("focused PDP layout", () => {
         expect(html).toMatch(/@container focused-pdp \(min-width: 960px\)[\s\S]*\.pdp-mobile-sticky-summary\{display:none\}/);
     });
 
-    it("renders the real focused purchase surface at 390px with contained closure controls", async () => {
-        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
+    it("renders the real focused purchase surface at 390px with contained closure controls", () => {
         const html = renderToStaticMarkup(createElement("div", { style: { width: 390 } },
             createElement(ConfiguratorPdp, {
                 currentSlug: "cylinder-9ml-clear-17-415-rollon", groupTitle: "Cylinder 9 mL", capacityLabel: "Clear glass",

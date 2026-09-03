@@ -1,8 +1,8 @@
 # Focused B2B Shopping and Split PDP Architecture
 
-**Date:** 2026-09-03  
+**Date:** 2026-09-03
 **Status:** Approved for implementation
-**Implementation base:** `codex/restore-pdp-image-pipeline` at `3df2b635`  
+**Implementation base:** `codex/restore-pdp-image-pipeline` at `3df2b635`
 **Working branch:** `codex/focused-pdp-shopping-architecture`
 
 ## 1. Decision
@@ -333,7 +333,7 @@ When Grace recommends or opens a product:
 
 The existing `/matrix` capability remains a dedicated advanced buying tool. Its customer-facing name becomes:
 
-**Build a Bottle**  
+**Build a Bottle**
 **Product Compatibility Matrix**
 
 The matrix is for buyers who need to compare multiple bottle and component relationships at once. It may expose more technical density than the regular finder or PDP.
