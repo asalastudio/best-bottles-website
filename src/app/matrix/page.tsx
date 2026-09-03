@@ -12,15 +12,15 @@ export const revalidate = 0;
 
 export const metadata: Metadata = {
     // the root layout applies a "%s | Best Bottles" template, so absolute
-    title: { absolute: "Order Matrix | Best Bottles" },
+    title: { absolute: "Build a Bottle — Product Compatibility Matrix | Best Bottles" },
     description:
-        "Configure bottles and compatible components quickly. Everyone pays the same "
+        "Product Compatibility Matrix for comparing bottles and compatible components. Everyone pays the same "
         + "price; businesses with an approved resale certificate are not charged tax.",
     alternates: { canonical: `${SITE_URL}/matrix` },
 };
 
 /**
- * /matrix — the Order Matrix.
+ * /matrix — Build a Bottle, the Product Compatibility Matrix.
  *
  * NOT "Wholesale". Jordan: "it's not really called wholesale Matrix because
  * they sell for the same price... it's just that for business owners, they

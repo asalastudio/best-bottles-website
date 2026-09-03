@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * The Order Matrix — family accordion, compact configurable rows, an anchored
+ * Build a Bottle — Product Compatibility Matrix, with a family accordion, compact configurable rows, an anchored
  * component picker, and a sticky order bar.
  *
  * ONE PRICE, AND THAT IS WHY IT IS NOT CALLED "WHOLESALE". Jordan: "they sell
@@ -24,6 +24,7 @@
  */
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Plus, Minus, WarningCircle, Check } from "@/components/icons";
 import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
@@ -207,10 +208,10 @@ export default function MatrixClient({
             <div className="flex items-end gap-4 pt-2 pb-4">
                 <div>
                     <h1 className="font-serif font-medium text-[32px] leading-[1.12] tracking-[-0.02em] text-obsidian">
-                        Order Matrix
+                        Build a Bottle
                     </h1>
                     <p className="text-spec text-slate mt-1">
-                        Configure bottles and compatible components quickly.
+                        Product Compatibility Matrix. Compare bottles and compatible components.
                         {" "}Everyone pays the same price.
                     </p>
                 </div>
@@ -335,9 +336,12 @@ function Row({ row, config, onChange }: {
                         {/* named the way the PDP names the same product —
                             capacity + colour + family + type — so the matrix
                             does not invent a second vocabulary for one catalog */}
-                        <p className="text-sm font-semibold leading-snug text-obsidian">
+                        <Link
+                            href={catalogIdentityHref(row.websiteSku ?? row.graceSku)}
+                            className="text-sm font-semibold leading-snug text-obsidian hover:text-muted-gold"
+                        >
                             {getCustomerFacingProductName({ variant: row }).displayName}
-                        </p>
+                        </Link>
                         <p className="text-caption text-ash truncate mt-0.5">
                             {row.graceSku ?? row.websiteSku}
                         </p>
@@ -411,16 +415,26 @@ function ComponentChips({ row, config, onChange }: {
 
     if (config?.component) {
         return (
-            <button type="button"
-                onClick={() => { onChange({ component: undefined }); setOpenType(null); }}
-                className="inline-flex items-center gap-2 max-w-full rounded-[3px]
+            <div className="inline-flex items-center gap-2 max-w-full rounded-[3px]
                            bg-white border border-obsidian px-2.5 py-1.5 text-caption
                            font-semibold text-obsidian transition-colors duration-200
                            hover:border-muted-gold">
-                <ClosureIcon type={config.component.groupKey ?? ""} size={20} />
-                <span className="truncate">{shortName(config.component.itemName)}</span>
+                <button
+                    type="button"
+                    aria-label={`Change ${shortName(config.component.itemName)}`}
+                    onClick={() => { onChange({ component: undefined }); setOpenType(null); }}
+                    className="shrink-0"
+                >
+                    <ClosureIcon type={config.component.groupKey ?? ""} size={20} />
+                </button>
+                <Link
+                    href={catalogIdentityHref(config.component.websiteSku ?? config.component.graceSku)}
+                    className="truncate hover:text-muted-gold"
+                >
+                    {shortName(config.component.itemName)}
+                </Link>
                 <Check size={12} weight="bold" className="shrink-0 text-[#5B7B5D]" />
-            </button>
+            </div>
         );
     }
     if (config?.component === null) {
@@ -650,4 +664,11 @@ function finishLabel(c: { capColor: string | null; itemName: string }) {
 
 function key(r: MatrixRow) {
     return r.graceSku ?? r.websiteSku ?? r.itemName ?? Math.random().toString();
+}
+
+/** The matrix owns no second product inventory. Exact SKU search resolves to
+ * the canonical catalog item, from which the shopper can open its PDP. */
+function catalogIdentityHref(identity: string | null | undefined) {
+    const exactIdentity = identity?.trim();
+    return exactIdentity ? `/catalog?search=${encodeURIComponent(exactIdentity)}` : "/catalog";
 }
