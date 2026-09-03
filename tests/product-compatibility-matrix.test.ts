@@ -6,7 +6,12 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import schema from "../convex/schema";
 import { api } from "../convex/_generated/api";
-import { emptyMatrixFilters } from "@/lib/matrix/filters";
+import {
+    activeMatrixFilters,
+    createMatrixFamilyState,
+    emptyMatrixFilters,
+    switchMatrixFamily,
+} from "@/lib/matrix/filters";
 import { matrixProductHref } from "@/lib/matrix/product-identity";
 
 const modules = import.meta.glob("../convex/**/*.ts");
@@ -143,6 +148,32 @@ describe("matrix family and product identity helpers", () => {
         });
     });
 
+    it("switches families without discarding configured rows or cart state", () => {
+        const configs = {
+            "GB-CYL-10": {
+                component: { graceSku: "CMP-CAP-18" },
+                qty: 50,
+            },
+        };
+        const cylinder = {
+            ...createMatrixFamilyState("Cylinder", configs),
+            filters: {
+                search: "Cylinder",
+                size: "10 ml",
+                finish: "Clear",
+                neck: "18-415",
+                closure: "Cap",
+            },
+        };
+
+        const sleek = switchMatrixFamily(cylinder, "Sleek");
+
+        expect(sleek.configs).toBe(configs);
+        expect(sleek.filters).toEqual(emptyMatrixFilters());
+        expect(activeMatrixFilters(cylinder, "Sleek")).toEqual(emptyMatrixFilters());
+        expect(activeMatrixFilters(sleek, "Sleek")).toEqual(emptyMatrixFilters());
+    });
+
     it("links a non-primary variant to its real group PDP and exact SKU", () => {
         expect(matrixProductHref({
             productGroupSlug: "cylinder-10ml-clear",
@@ -182,8 +213,9 @@ describe("Build a Bottle presentation contract", () => {
         expect(page).toContain('alternates: { canonical: `${SITE_URL}/matrix` }');
         expect(page).toContain("searchParams: Promise<{ family?: string }>");
         expect(page).toContain("families.some((f) => f.family === familyParam)");
-        expect(page).toContain('key={openFamily ?? "no-family"}');
-        expect(client).toContain("setFilters(emptyMatrixFilters());");
+        expect(page).not.toContain('key={openFamily ?? "no-family"}');
+        expect(client).toContain("setMatrixState((state) => switchMatrixFamily(state, family));");
+        expect(client).toContain("switchMatrixFamily(state, family)");
         expect(client).toContain("router.replace(`/matrix?family=${encodeURIComponent(family)}`)");
         expect(client).toContain("const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);");
         for (const label of ["All sizes", "All finishes", "All necks", "All closures"]) {

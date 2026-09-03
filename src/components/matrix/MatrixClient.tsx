@@ -31,7 +31,12 @@ import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
 import { useCart } from "@/components/CartProvider";
 import { cn } from "@/lib/utils";
 import { summarizeMatrixOrder, type MatrixCartLine } from "@/lib/matrix/cart";
-import { emptyMatrixFilters } from "@/lib/matrix/filters";
+import {
+    activeMatrixFilters,
+    createMatrixFamilyState,
+    emptyMatrixFilters,
+    switchMatrixFamily,
+} from "@/lib/matrix/filters";
 import { matrixProductHref } from "@/lib/matrix/product-identity";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
@@ -105,12 +110,21 @@ export default function MatrixClient({
 }) {
     const router = useRouter();
     const { addItems } = useCart();
-    const [configs, setConfigs] = useState<Record<string, Config>>({});
-    const [filters, setFilters] = useState(emptyMatrixFilters);
+    const [matrixState, setMatrixState] = useState(() =>
+        createMatrixFamilyState(openFamily, {} as Record<string, Config>));
     const [cartMessage, setCartMessage] = useState<{ kind: "success" | "error"; text: string } | null>(null);
 
     const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);
+    const configs = matrixState.configs;
+    const filters = activeMatrixFilters(matrixState, openFamily);
     const { search, size, finish, neck, closure } = filters;
+    const updateFilters = (patch: Partial<typeof filters>) => {
+        setMatrixState((state) => ({
+            ...state,
+            family: openFamily,
+            filters: { ...activeMatrixFilters(state, openFamily), ...patch },
+        }));
+    };
 
     /* FILTERS ARE FAMILY-SCOPED, and their OPTIONS come from the loaded family
        rather than the whole catalog. Jordan: "We should filter only at the
@@ -144,11 +158,16 @@ export default function MatrixClient({
     }, [rows, search, size, finish, neck, closure]);
 
     const filtered = Boolean(size || finish || neck || closure || search.trim());
-    const clearAll = () => setFilters(emptyMatrixFilters());
+    const clearAll = () => setMatrixState((state) => ({
+        ...state,
+        family: openFamily,
+        filters: emptyMatrixFilters(),
+    }));
     const selectFamily = (family: string) => {
         // Clear all family-scoped values in one state update before routing so
-        // no stale selection can apply while new server rows arrive.
-        setFilters(emptyMatrixFilters());
+        // no stale selection can apply while new server rows arrive, while
+        // preserving configured rows and cart/minimum-order state.
+        setMatrixState((state) => switchMatrixFamily(state, family));
         router.replace(`/matrix?family=${encodeURIComponent(family)}`);
     };
 
@@ -183,11 +202,14 @@ export default function MatrixClient({
     }, [rows, configs]);
 
     const setConfig = (r: MatrixRow, patch: Partial<Config>) =>
-        setConfigs((c) => {
+        setMatrixState((state) => {
             // 12 is the starting quantity for a row nobody has touched; once a
             // row HAS a quantity it must survive a component change
-            const prev = c[key(r)] ?? { qty: 12 };
-            return { ...c, [key(r)]: { ...prev, ...patch } };
+            const prev = state.configs[key(r)] ?? { qty: 12 };
+            return {
+                ...state,
+                configs: { ...state.configs, [key(r)]: { ...prev, ...patch } },
+            };
         });
 
     const addOrderToCart = () => {
@@ -244,14 +266,14 @@ export default function MatrixClient({
                     ))}
                 </select>
 
-                <Filter label="All sizes" value={size} onChange={(value) => setFilters((current) => ({ ...current, size: value }))} options={options.sizes} />
-                <Filter label="All finishes" value={finish} onChange={(value) => setFilters((current) => ({ ...current, finish: value }))} options={options.finishes} />
-                <Filter label="All necks" value={neck} onChange={(value) => setFilters((current) => ({ ...current, neck: value }))} options={options.necks} />
-                <Filter label="All closures" value={closure} onChange={(value) => setFilters((current) => ({ ...current, closure: value }))} options={options.closures} />
+                <Filter label="All sizes" value={size} onChange={(value) => updateFilters({ size: value })} options={options.sizes} />
+                <Filter label="All finishes" value={finish} onChange={(value) => updateFilters({ finish: value })} options={options.finishes} />
+                <Filter label="All necks" value={neck} onChange={(value) => updateFilters({ neck: value })} options={options.necks} />
+                <Filter label="All closures" value={closure} onChange={(value) => updateFilters({ closure: value })} options={options.closures} />
 
                 <input
                     value={search}
-                    onChange={(e) => setFilters((current) => ({ ...current, search: e.target.value }))}
+                    onChange={(e) => updateFilters({ search: e.target.value })}
                     placeholder="Search within family…"
                     className="w-[190px] bg-warm-white border border-champagne rounded-[3px]
                                px-2.5 py-1.5 text-spec text-obsidian placeholder:text-ash

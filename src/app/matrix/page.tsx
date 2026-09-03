@@ -70,7 +70,6 @@ export default async function MatrixPage({
             <Navbar />
             <main className="min-h-screen bg-bone pt-[104px] sm:pt-[120px]">
                 <MatrixClient
-                    key={openFamily ?? "no-family"}
                     families={families}
                     openFamily={openFamily}
                     initialRows={initialRows}
