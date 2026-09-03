@@ -960,6 +960,11 @@ export const searchCatalog = query({
                     capStyle: variant.capStyle ?? null,
                     capHeight: variant.capHeight ?? null,
                     ballMaterial: variant.ballMaterial ?? null,
+                    stockStatus: variant.stockStatus ?? null,
+                    caseQuantity: variant.caseQuantity ?? null,
+                    webPrice1pc: variant.webPrice1pc ?? null,
+                    shopifyVariantId: variant.shopifyVariantId ?? null,
+                    shopifySellable: variant.shopifySellable ?? null,
                 })),
             };
         }));
@@ -1100,6 +1105,11 @@ export const getCatalogGroupVariantPreviewData = query({
                 capStyle: string | null;
                 capHeight: string | null;
                 ballMaterial: string | null;
+                stockStatus: string | null;
+                caseQuantity: number | null;
+                webPrice1pc: number | null;
+                shopifyVariantId: string | null;
+                shopifySellable: boolean | null;
             }>;
         }[] = [];
 
@@ -1132,6 +1142,11 @@ export const getCatalogGroupVariantPreviewData = query({
                             capStyle: variant.capStyle ?? null,
                             capHeight: variant.capHeight ?? null,
                             ballMaterial: variant.ballMaterial ?? null,
+                            stockStatus: variant.stockStatus ?? null,
+                            caseQuantity: variant.caseQuantity ?? null,
+                            webPrice1pc: variant.webPrice1pc ?? null,
+                            shopifyVariantId: variant.shopifyVariantId ?? null,
+                            shopifySellable: variant.shopifySellable ?? null,
                         })),
                     };
                 }),

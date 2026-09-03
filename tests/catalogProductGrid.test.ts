@@ -3,6 +3,16 @@ import { join } from "node:path";
 import { describe, expect, it } from "vitest";
 
 describe("continuous catalog product grid", () => {
+    it("keeps B2B exact-result decision fields aligned between fallback and Convex preview producers", () => {
+        const fallback = readFileSync(join(process.cwd(), "src/lib/catalogSearchFallback.ts"), "utf8");
+        const convex = readFileSync(join(process.cwd(), "convex/products.ts"), "utf8");
+
+        for (const field of ["stockStatus", "caseQuantity", "webPrice1pc", "shopifyVariantId", "shopifySellable"]) {
+            expect(fallback).toContain(`${field}:`);
+            expect(convex).toContain(`${field}: variant.${field} ?? null`);
+        }
+    });
+
     it("owns the hairline dividers and responsive columns", () => {
         const source = readFileSync(
             join(process.cwd(), "src/components/catalog/CatalogProductGrid.tsx"),

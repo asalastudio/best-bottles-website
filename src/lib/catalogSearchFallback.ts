@@ -63,6 +63,11 @@ export interface CatalogSearchVariantPreviewRow {
         capStyle: string | null;
         capHeight: string | null;
         ballMaterial: string | null;
+        stockStatus: string | null;
+        caseQuantity: number | null;
+        webPrice1pc: number | null;
+        shopifyVariantId: string | null;
+        shopifySellable: boolean | null;
     }>;
 }
 
