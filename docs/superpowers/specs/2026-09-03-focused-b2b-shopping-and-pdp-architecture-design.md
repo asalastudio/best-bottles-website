@@ -1,7 +1,7 @@
 # Focused B2B Shopping and Split PDP Architecture
 
 **Date:** 2026-09-03  
-**Status:** Approved direction; written specification awaiting final review  
+**Status:** Approved for implementation
 **Implementation base:** `codex/restore-pdp-image-pipeline` at `3df2b635`  
 **Working branch:** `codex/focused-pdp-shopping-architecture`
 
