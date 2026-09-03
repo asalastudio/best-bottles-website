@@ -698,7 +698,11 @@ export const getFamilyOverview = query({
  * compatibility data. Resolves by graceSku or websiteSku.
  */
 export const getBottleComponents = query({
-    args: { bottleSku: v.string() },
+    args: {
+        bottleSku: v.optional(v.string()),
+        websiteSku: v.optional(v.string()),
+        graceSku: v.optional(v.string()),
+    },
     returns: v.union(v.object({
         bottle: v.object({
             graceSku: v.string(),
@@ -743,10 +747,17 @@ export const getBottleComponents = query({
         }))),
     }), v.null()),
     handler: async (ctx, args) => {
-        const sku = args.bottleSku.trim();
-        const bottle =
-            (await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", sku)).first()) ??
-            (await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", sku)).first());
+        const websiteSku = args.websiteSku?.trim() || null;
+        const graceSku = args.graceSku?.trim() || null;
+        const legacySku = args.bottleSku?.trim() || null;
+        const bottle = websiteSku
+            ? await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", websiteSku)).first()
+            : graceSku
+                ? await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku)).first()
+                : legacySku
+                    ? (await ctx.db.query("products").withIndex("by_websiteSku", (q) => q.eq("websiteSku", legacySku)).first())
+                        ?? (await ctx.db.query("products").withIndex("by_graceSku", (q) => q.eq("graceSku", legacySku)).first())
+                    : null;
 
         if (!bottle) return null;
 

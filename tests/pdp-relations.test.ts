@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { buildFocusedPdpRelations, type ProductGroupRelationSource } from "@/lib/products/pdp-relations";
+import {
+    buildFocusedPdpRelations,
+    selectPrimaryProductVariant,
+    type ProductGroupRelationSource,
+} from "@/lib/products/pdp-relations";
 
 function group(overrides: Partial<ProductGroupRelationSource> = {}): ProductGroupRelationSource {
     return {
@@ -35,6 +39,20 @@ describe("buildFocusedPdpRelations", () => {
             current.slug,
             larger.slug,
         ]);
+        expect(result.otherApplications).toEqual([]);
+    });
+
+    it("excludes a non-current same-application group at the current capacity", () => {
+        const current = group();
+        const otherColor = group({
+            slug: "elegant-30ml-amber-rollon",
+            displayName: "Elegant 30 ml Amber Roll-On",
+            color: "Amber",
+        });
+
+        const result = buildFocusedPdpRelations(current, [current, otherColor]);
+
+        expect(result.sameApplicationSizes.map((relation) => relation.slug)).toEqual([current.slug]);
         expect(result.otherApplications).toEqual([]);
     });
 
@@ -149,5 +167,40 @@ describe("buildFocusedPdpRelations", () => {
             current.slug,
             larger.slug,
         ]);
+    });
+});
+
+describe("selectPrimaryProductVariant", () => {
+    it("selects the explicit primary website SKU before an earlier Grace-primary variant", () => {
+        const gracePrimary = {
+            websiteSku: "OTHER-WEB",
+            graceSku: "PRIMARY-GRACE",
+            imageUrl: "https://cdn.shopify.com/wrong-but-photographed.jpg",
+        };
+        const websitePrimary = {
+            websiteSku: "PRIMARY-WEB",
+            graceSku: "OTHER-GRACE",
+            imageUrl: null,
+        };
+
+        const selected = selectPrimaryProductVariant({
+            primaryWebsiteSku: "PRIMARY-WEB",
+            primaryGraceSku: "PRIMARY-GRACE",
+        }, [gracePrimary, websitePrimary]);
+
+        expect(selected).toBe(websitePrimary);
+    });
+
+    it("falls back by identity without using optional media as evidence", () => {
+        const firstIdentity = { websiteSku: "FIRST-WEB", graceSku: "FIRST-GRACE", imageUrl: null };
+        const photographedLater = {
+            websiteSku: "SECOND-WEB",
+            graceSku: "SECOND-GRACE",
+            imageUrl: "https://cdn.shopify.com/photographed.jpg",
+        };
+
+        const selected = selectPrimaryProductVariant({}, [firstIdentity, photographedLater]);
+
+        expect(selected).toBe(firstIdentity);
     });
 });

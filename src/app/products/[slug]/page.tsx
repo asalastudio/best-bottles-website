@@ -21,7 +21,10 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
 import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
-import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
+import {
+    selectPrimaryProductVariant,
+    type FocusedPdpRelations,
+} from "@/lib/products/pdp-relations";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -45,10 +48,6 @@ function isPreferredProductImageUrl(value: string | null | undefined): boolean {
     return isShopifyCdnImageUrl(value) && !isLegacyBestBottlesImageUrl(value);
 }
 
-function hasPreferredProductImage(variant: ProductVariant): boolean {
-    return isPreferredProductImageUrl(variant.imageUrl) || isPreferredProductImageUrl(variant.imageUrlCapOff);
-}
-
 async function getProductData(slug: string): Promise<ProductGroupPayload | null> {
     const data = await getConvexClient().query(api.products.getProductGroup, { slug }) as ProductGroupPayload | null;
     if (!data) return null;
@@ -60,13 +59,7 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
 
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
     if (!data) return null;
-    const primaryWebsiteSku = data.group.primaryWebsiteSku?.trim();
-    const primaryGraceSku = data.group.primaryGraceSku?.trim();
-    const explicitPrimary = data.variants.find((variant) =>
-        (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
-        (primaryGraceSku && variant.graceSku === primaryGraceSku)
-    );
-    return explicitPrimary ?? data.variants.find(hasPreferredProductImage) ?? data.variants[0] ?? null;
+    return selectPrimaryProductVariant(data.group, data.variants);
 }
 
 async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlug: string): Promise<ApplicatorSibling[]> {
@@ -100,10 +93,16 @@ async function getFocusedPdpRelations(activeSlug: string): Promise<FocusedPdpRel
 
 async function getPrimaryCompatibility(data: ProductGroupPayload | null): Promise<PdpCompatibilityPayload | null> {
     const primaryVariant = getPrimaryVariant(data);
-    const primarySku = primaryVariant?.websiteSku?.trim() || primaryVariant?.graceSku?.trim();
-    if (!primarySku) return null;
+    const primaryWebsiteSku = primaryVariant?.websiteSku?.trim();
+    if (primaryWebsiteSku) {
+        return await getConvexClient().query(api.grace.getBottleComponents, {
+            websiteSku: primaryWebsiteSku,
+        }) as PdpCompatibilityPayload | null;
+    }
+    const primaryGraceSku = primaryVariant?.graceSku?.trim();
+    if (!primaryGraceSku) return null;
     return await getConvexClient().query(api.grace.getBottleComponents, {
-        bottleSku: primarySku,
+        graceSku: primaryGraceSku,
     }) as PdpCompatibilityPayload | null;
 }
 

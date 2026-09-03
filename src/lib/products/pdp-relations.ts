@@ -1,6 +1,7 @@
 import {
     APPLICATOR_NAV,
     normalizeApplicatorBuckets,
+    parseCapacityLabelMl,
     type ApplicatorNavValue,
 } from "@/lib/catalogFilters";
 
@@ -40,6 +41,41 @@ export type FocusedPdpRelations = {
     sameApplicationSizes: ProductGroupRelation[];
     otherApplications: ProductGroupRelation[];
 };
+
+type PrimaryProductGroupIdentity = {
+    primaryWebsiteSku?: string | null;
+    primaryGraceSku?: string | null;
+};
+
+type ProductVariantIdentity = {
+    websiteSku?: string | null;
+    graceSku?: string | null;
+};
+
+/**
+ * Resolve the group's primary product from catalog identity only. Website SKU
+ * is authoritative; optional media must never change the selected product.
+ */
+export function selectPrimaryProductVariant<T extends ProductVariantIdentity>(
+    group: PrimaryProductGroupIdentity,
+    variants: readonly T[],
+): T | null {
+    const primaryWebsiteSku = group.primaryWebsiteSku?.trim();
+    if (primaryWebsiteSku) {
+        const websitePrimary = variants.find((variant) => variant.websiteSku === primaryWebsiteSku);
+        if (websitePrimary) return websitePrimary;
+    }
+
+    const primaryGraceSku = group.primaryGraceSku?.trim();
+    if (primaryGraceSku) {
+        const gracePrimary = variants.find((variant) => variant.graceSku === primaryGraceSku);
+        if (gracePrimary) return gracePrimary;
+    }
+
+    return variants.find((variant) => Boolean(variant.websiteSku?.trim()))
+        ?? variants.find((variant) => Boolean(variant.graceSku?.trim()))
+        ?? null;
+}
 
 /** Resolve raw product applicator values through the catalog's one canonical application vocabulary. */
 export function canonicalApplicationForGroup(
@@ -91,6 +127,26 @@ function compareRelations(a: ProductGroupRelation, b: ProductGroupRelation): num
     return a.slug.localeCompare(b.slug);
 }
 
+function hasGenuineCapacityDifference(
+    currentGroup: ProductGroupRelationSource,
+    candidate: ProductGroupRelationSource,
+): boolean {
+    const numericCapacity = (group: ProductGroupRelationSource) => (
+        typeof group.capacityMl === "number" && Number.isFinite(group.capacityMl)
+            ? group.capacityMl
+            : group.capacity
+                ? parseCapacityLabelMl(group.capacity)
+                : null
+    );
+    const currentMl = numericCapacity(currentGroup);
+    const candidateMl = numericCapacity(candidate);
+    if (currentMl != null && candidateMl != null) return currentMl !== candidateMl;
+
+    const currentLabel = currentGroup.capacity?.trim().toLowerCase() || null;
+    const candidateLabel = candidate.capacity?.trim().toLowerCase() || null;
+    return currentLabel != null && candidateLabel != null && currentLabel !== candidateLabel;
+}
+
 /**
  * Partition one family's canonical product groups by purchasing intent.
  * A neck finish is descriptive relation metadata here; it never establishes compatibility.
@@ -111,8 +167,13 @@ export function buildFocusedPdpRelations(
     const otherApplications: ProductGroupRelation[] = [];
     for (const group of byCanonicalSlug.values()) {
         const relation = relationForGroup(group, currentGroup.slug);
-        if (relation.application === currentApplication) sameApplicationSizes.push(relation);
-        else otherApplications.push(relation);
+        if (relation.application === currentApplication) {
+            if (relation.isCurrent || hasGenuineCapacityDifference(currentGroup, group)) {
+                sameApplicationSizes.push(relation);
+            }
+        } else {
+            otherApplications.push(relation);
+        }
     }
 
     sameApplicationSizes.sort(compareRelations);
