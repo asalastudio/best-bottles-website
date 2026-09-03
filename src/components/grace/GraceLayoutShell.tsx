@@ -1,31 +1,45 @@
 "use client";
 
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, type CSSProperties, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { useGrace } from "@/components/useGrace";
-import { DRAWER_WIDTH } from "./GraceChatDrawer";
+import {
+    GRACE_DESKTOP_DRAWER_WIDTH,
+    gracePushEligiblePathname,
+    resolveGraceSurface,
+} from "@/lib/grace/pushLayout";
 
 export default function GraceLayoutShell({ children }: { children: ReactNode }) {
     const { panelMode } = useGrace();
     const pathname = usePathname();
-    const isOpen = panelMode === "open";
-
-    const [isMobile, setIsMobile] = useState(false);
+    const [viewportWidth, setViewportWidth] = useState(1440);
     useEffect(() => {
-        const mq = window.matchMedia("(max-width: 768px)");
-        const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-        setIsMobile(mq.matches); // eslint-disable-line react-hooks/set-state-in-effect -- sync initial media query state
-        mq.addEventListener("change", handler);
-        return () => mq.removeEventListener("change", handler);
+        const update = () => setViewportWidth(window.innerWidth);
+        update();
+        window.addEventListener("resize", update, { passive: true });
+        return () => window.removeEventListener("resize", update);
     }, []);
 
-    // The drawer floats above the page (Copilot-style) — no layout push.
-    // This wrapper is kept as a no-op so callers can reintroduce a push
-    // behind a flag without restructuring the provider tree.
-    void isOpen;
-    void pathname;
-    void isMobile;
-    void DRAWER_WIDTH;
+    const ownsViewport = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
+    const surface = resolveGraceSurface({
+        isOpen: panelMode === "open",
+        viewportWidth,
+        ownsViewport,
+        pushEligible: gracePushEligiblePathname(pathname),
+    });
+    const inset = surface.contentIsInset ? GRACE_DESKTOP_DRAWER_WIDTH : "0px";
+    const style = {
+        "--grace-content-inset": inset,
+        width: surface.contentIsInset ? `calc(100% - ${GRACE_DESKTOP_DRAWER_WIDTH})` : "100%",
+    } as CSSProperties;
 
-    return <div>{children}</div>;
+    return (
+        <div
+            data-grace-layout={surface.mode}
+            style={style}
+            className="min-h-screen min-w-0 transition-[width] duration-300 ease-out"
+        >
+            {children}
+        </div>
+    );
 }

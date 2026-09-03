@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState, type FormEvent } from "react";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     X,
@@ -19,30 +19,22 @@ import { useGrace } from "@/components/useGrace";
 import { useIsAuthenticated } from "@/lib/useIsAuthenticated";
 import { useGraceImageUpload } from "@/lib/useGraceImageUpload";
 import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
+import {
+    GRACE_DESKTOP_DRAWER_WIDTH,
+    graceConversationDisposition,
+    gracePushEligiblePathname,
+    resolveGraceSurface,
+} from "@/lib/grace/pushLayout";
 
-/**
- * Desktop drawer width — PRD v3 spec: 440–480px.
- * Anchored bottom-right with 22px breathing room; height clamps to ~50vh
- * (480 min, 760 max) so it feels like a refined floating object, not a
- * full-height column.
- *
- * Constant is exported for `GraceLayoutShell`, which no longer pushes the
- * page (drawer floats), but the value remains available for any future
- * layout that wants to know the drawer's footprint.
- */
-const DRAWER_WIDTH = "clamp(500px, 36vw, 540px)";
-const DRAWER_HEIGHT = "clamp(520px, 54vh, 800px)";
-
-function useIsMobile() {
-    const [mobile, setMobile] = useState(false);
+function useViewportWidth() {
+    const [width, setWidth] = useState(1440);
     useEffect(() => {
-        const mq = window.matchMedia("(max-width: 768px)");
-        const handler = (e: MediaQueryListEvent) => setMobile(e.matches);
-        setMobile(mq.matches); // eslint-disable-line react-hooks/set-state-in-effect -- sync initial media query state
-        mq.addEventListener("change", handler);
-        return () => mq.removeEventListener("change", handler);
+        const update = () => setWidth(window.innerWidth);
+        update();
+        window.addEventListener("resize", update, { passive: true });
+        return () => window.removeEventListener("resize", update);
     }, []);
-    return mobile;
+    return width;
 }
 
 // Anonymous discovery chip set — PRD v3 spec.
@@ -117,6 +109,7 @@ export default function GraceChatDrawer() {
     })();
 
     const router = useRouter();
+    const pathname = usePathname();
     const isAuthed = useIsAuthenticated();
     const fileRef = useRef<HTMLInputElement>(null);
     const { uploadAndAnalyze, status: uploadStatus } = useGraceImageUpload();
@@ -131,7 +124,16 @@ export default function GraceChatDrawer() {
         setInput("");
     };
     const isOpen = panelMode === "open";
-    const isMobile = useIsMobile();
+    const viewportWidth = useViewportWidth();
+    const ownsViewport = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
+    const surface = resolveGraceSurface({
+        isOpen,
+        viewportWidth,
+        ownsViewport,
+        pushEligible: gracePushEligiblePathname(pathname),
+    });
+    const isOverlay = surface.mode === "overlay";
+    const isMobile = viewportWidth <= 768;
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -172,12 +174,16 @@ export default function GraceChatDrawer() {
     };
 
     const handleClose = () => {
-        if (conversationActive) endConversation();
+        if (conversationActive && graceConversationDisposition("close") === "reset") {
+            void endConversation();
+        }
         closePanel();
     };
 
     const handleNewChat = () => {
-        if (conversationActive) endConversation();
+        if (conversationActive && graceConversationDisposition("new-chat") === "reset") {
+            void endConversation();
+        }
         setInput("");
     };
 
@@ -193,12 +199,12 @@ export default function GraceChatDrawer() {
 
     return (
         <AnimatePresence>
-            {isOpen && (
+            {isOpen && surface.mode !== "owned" && (
                 <>
-                    {isMobile && (
+                    {isOverlay && (
                         <motion.div
                             key="grace-backdrop"
-                            initial={{ opacity: 0 }}
+                            initial={false}
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.25 }}
@@ -211,26 +217,22 @@ export default function GraceChatDrawer() {
 
                     <motion.aside
                         key="grace-drawer"
-                        initial={{ opacity: 0, scale: isMobile ? 1 : 0.96, x: isMobile ? "100%" : 0, y: isMobile ? 0 : 8 }}
-                        animate={{ opacity: 1, scale: 1, x: 0, y: 0 }}
-                        exit={{ opacity: 0, scale: isMobile ? 1 : 0.96, x: isMobile ? "100%" : 0, y: isMobile ? 0 : 8 }}
+                        initial={false}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: "100%" }}
                         transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                        className={`fixed z-[61] flex flex-col ${isMobile ? "top-0 right-0 w-full" : ""}`}
+                        className="fixed top-0 right-0 z-[61] flex flex-col"
                         style={{
-                            width: isMobile ? "100%" : DRAWER_WIDTH,
-                            height: isMobile ? "calc(100dvh - 4rem - env(safe-area-inset-bottom, 0px))" : DRAWER_HEIGHT,
-                            // Bottom-right anchor with 22px breathing room (PRD v3).
-                            ...(isMobile ? {} : {
-                                right: "max(22px, env(safe-area-inset-right))",
-                                bottom: "max(22px, calc(env(safe-area-inset-bottom) + 22px))",
-                            }),
+                            width: surface.mode === "push"
+                                ? GRACE_DESKTOP_DRAWER_WIDTH
+                                : isMobile
+                                    ? "100%"
+                                    : "min(440px, 100vw)",
+                            height: "100dvh",
                             background: "var(--color-bone)",
-                            border: isMobile ? "none" : "1px solid rgba(212, 197, 169, 0.55)",
-                            borderLeft: isMobile ? "1px solid rgba(212, 197, 169, 0.45)" : undefined,
-                            borderRadius: isMobile ? 0 : 3, // PRD: max 3px radius on containers
-                            boxShadow: isMobile
-                                ? "-12px 0 48px rgba(29, 29, 31, 0.08)"
-                                : "0 24px 60px rgba(29, 29, 31, 0.18), 0 4px 16px rgba(29, 29, 31, 0.08)",
+                            borderLeft: "1px solid rgba(212, 197, 169, 0.55)",
+                            borderRadius: 0,
+                            boxShadow: "-12px 0 48px rgba(29, 29, 31, 0.09)",
                             overflow: "hidden",
                         }}
                         role="complementary"
@@ -289,6 +291,14 @@ export default function GraceChatDrawer() {
                                     icon={<X size={15} />}
                                 />
                             </div>
+                        </div>
+
+                        <div
+                            className="shrink-0 border-b border-champagne/40 bg-white/60 px-4 py-2.5 text-[11px] leading-snug text-slate"
+                            aria-live="polite"
+                        >
+                            <span className="font-semibold text-obsidian">Seeing:</span>{" "}
+                            {pageMicrocopy || "Best Bottles homepage"}
                         </div>
 
                         {/* ── Sub-header disclaimer ───────────────────── */}
@@ -475,5 +485,3 @@ function EmptyState({ onChip }: { onChip: (q: string) => void }) {
         </div>
     );
 }
-
-export { DRAWER_WIDTH };

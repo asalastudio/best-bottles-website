@@ -558,9 +558,6 @@ function GraceProviderBase({
         return () => clearTimeout(t);
     }, [launcherTooltip]);
 
-    const minimizeWithTooltipRef = useRef(minimizeWithTooltip);
-    useEffect(() => { minimizeWithTooltipRef.current = minimizeWithTooltip; }, [minimizeWithTooltip]);
-
     // Direct message injection (bypass the Realtime session) — used by client-side flows
     // like the image-upload vision analysis that don't need agent narration.
     const appendInlineMessage = useCallback((msg: { role: "user" | "grace"; content: string; action?: import("@/components/GraceContext").GraceAction; actions?: import("@/components/GraceContext").GraceAction[]; attachments?: import("@/components/GraceContext").GraceAttachment[] }) => {
@@ -871,12 +868,13 @@ function GraceProviderBase({
     useEffect(() => { closePanelRef.current = closePanel; }, [closePanel]);
 
     const completeGraceNavigation = useCallback((message: string) => {
-        if (pathnameRef.current.startsWith("/grace-workspace")) {
-            setPanelMode("open");
-            setLauncherTooltip(null);
-            return;
-        }
-        minimizeWithTooltipRef.current(message);
+        // Keep the companion visible while Grace navigates. The route-aware
+        // shell changes from an overlay on editorial pages to a pushed
+        // workspace on catalog, family, and PDP routes without remounting the
+        // provider or losing conversation state.
+        void message;
+        setPanelMode("open");
+        setLauncherTooltip(null);
     }, []);
     const completeGraceNavigationRef = useRef(completeGraceNavigation);
     useEffect(() => { completeGraceNavigationRef.current = completeGraceNavigation; }, [completeGraceNavigation]);
