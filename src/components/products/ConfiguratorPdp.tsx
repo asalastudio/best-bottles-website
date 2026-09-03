@@ -168,6 +168,7 @@ export default function ConfiguratorPdp({
   neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
   quoteHref, qty = 1, onQtyChange,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
+  rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
 }: {
   currentSlug: string;
@@ -211,6 +212,13 @@ export default function ConfiguratorPdp({
    *  actually ships in, derived from the group's own variants. A reducer
    *  has ~14 caps, a lotion pump far fewer, a bulb its own colourways —
    *  a single hardcoded palette was wrong for every closure but spray. */
+  /** Roller material is a separate catalogue SKU (Metal Roller Ball vs
+   *  Plastic Roller Ball), so the chooser is CONTROLLED by the product page:
+   *  picking Plastic switches the applicator, and the SKU, plate and price
+   *  follow. Uncontrolled (3D-only) when the page passes nothing. */
+  rollerVariant?: "metal" | "plastic";
+  rollerVariantsAvailable?: Array<"metal" | "plastic">;
+  onRollerVariantChange?: (variant: "metal" | "plastic") => void;
   capOptions?: string[];
   /** per pill, the token swatch names its variants' website SKUs spell — the
    *  component families are keyed by token ("Pink"), the pills by catalogue
@@ -231,7 +239,14 @@ export default function ConfiguratorPdp({
   // optimistic: the canvas swaps the instant a colourway is picked, while
   // the slug (SKU/pricing truth) is replaced underneath without a reload
   const [glassOverride, setGlassOverride] = useState<GlassPresetId | null>(null);
-  const [rollerVariant, setRollerVariant] = useState<"metal" | "plastic">("metal");
+  const [rollerLocal, setRollerLocal] = useState<"metal" | "plastic">("metal");
+  const rollerVariant = rollerVariantProp ?? rollerLocal;
+  const setRollerVariant = (variant: "metal" | "plastic") => {
+    setRollerLocal(variant);
+    onRollerVariantChange?.(variant);
+  };
+  const rollerOffered = (variant: "metal" | "plastic") =>
+    !rollerVariantsAvailable || rollerVariantsAvailable.includes(variant);
   const [withCap, setWithCap] = useState(false);
   // Photographs lead; the 3D viewer is opened by the customer, never for
   // them. Nothing about it -- its chunk, a WebGL context, the GLB -- is
@@ -1111,8 +1126,10 @@ export default function ConfiguratorPdp({
               ([id, label, note]) => (
                 <button key={id} type="button" onClick={() => setRollerVariant(id)}
                         aria-pressed={rollerVariant === id}
+                        disabled={!rollerOffered(id)}
+                        title={rollerOffered(id) ? undefined : "Not offered for this bottle"}
                         className={`rounded-[3px] px-3 py-2 text-left transition-colors
-                                    duration-200 ${rollerVariant === id
+                                    duration-200 disabled:cursor-not-allowed disabled:opacity-40 ${rollerVariant === id
                                       ? "border-[1.5px] border-obsidian bg-white"
                                       : "border border-champagne hover:border-muted-gold"}`}>
                   <span className="block text-spec font-semibold text-obsidian">{label}</span>
@@ -1285,8 +1302,10 @@ export default function ConfiguratorPdp({
                   ([id, label, note]) => (
                     <button key={id} type="button" onClick={() => setRollerVariant(id)}
                             aria-pressed={rollerVariant === id}
+                            disabled={!rollerOffered(id)}
+                            title={rollerOffered(id) ? undefined : "Not offered for this bottle"}
                             className={`rounded-[3px] px-3 py-2 text-left transition-colors duration-200
-                                        ${rollerVariant === id
+                                        disabled:cursor-not-allowed disabled:opacity-40 ${rollerVariant === id
                                           ? "border-[1.5px] border-obsidian bg-white"
                                           : "border border-champagne hover:border-muted-gold"}`}>
                       <span className="block text-spec font-semibold text-obsidian">{label}</span>

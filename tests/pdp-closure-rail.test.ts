@@ -37,6 +37,15 @@ describe("closure rail photographs", () => {
     });
 });
 
+describe("roller material switches the SKU", () => {
+    it("the guided chooser is controlled by the product page's applicator switch", () => {
+        expect(configurator).toContain("onRollerVariantChange?: (variant: \"metal\" | \"plastic\") => void");
+        expect(configurator).toContain("disabled={!rollerOffered(id)}");
+        expect(pdp).toContain("onRollerVariantChange={handleRollerVariantChange}");
+        expect(pdp).toMatch(/handleRollerVariantChange[\s\S]*setSelectedApplicator\(opt\.value\)/);
+    });
+});
+
 describe("guided PDP simplification", () => {
     it("the stage toggle is the only cap control — the overcap chooser is gone", () => {
         expect(configurator).not.toContain("Without overcap");
