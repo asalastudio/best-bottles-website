@@ -17,7 +17,7 @@ describe("guided finder result model", () => {
                     bottleCollection: "Bottles",
                     neckThreadSize: "20-410",
                     variantCount: 1,
-                    priceRangeMin: 99,
+                    priceRangeMin: 2.75,
                     priceRangeMax: 99,
                     heroImageUrl: "https://cdn.shopify.com/elegant-group.png",
                     applicatorTypes: ["Metal Roller Ball"],
@@ -82,7 +82,7 @@ describe("guided finder result model", () => {
                 _id: "cylinder-9", slug: "cylinder-9ml-amber", displayName: "9 ml Amber Cylinder",
                 family: "Cylinder", capacity: "9 ml (0.3 oz)", capacityMl: 9, color: "Amber",
                 category: "Glass Bottle", bottleCollection: null, neckThreadSize: "17-415", variantCount: 1,
-                priceRangeMin: null, priceRangeMax: null, heroImageUrl: "https://cdn.shopify.com/cylinder-group.png", applicatorTypes: ["Plastic Roller Ball"],
+                priceRangeMin: 1.5, priceRangeMax: 1.5, heroImageUrl: "https://cdn.shopify.com/cylinder-group.png", applicatorTypes: ["Plastic Roller Ball"],
             }],
             facets: {
                 categories: {}, collections: {}, applicators: {}, rollerMaterials: { metal: 0, plastic: 1 },
@@ -134,5 +134,41 @@ describe("guided finder result model", () => {
                 families: {}, colors: { Amber: 0 }, capacities: {}, neckThreadSizes: { "17-415": 1 }, componentTypes: {}, priceRange: { min: 0, max: 0 },
             },
         )).toBe("glassColors");
+    });
+
+    it("keeps OR-selected refinements valid when any selected facet still has results", () => {
+        const facets = {
+            categories: {}, collections: {}, applicators: {}, rollerMaterials: { metal: 0, plastic: 1 },
+            families: {}, colors: { Amber: 0, Clear: 1 },
+            capacities: { "3 ml": { label: "3 ml", ml: 3, count: 0 }, "9 ml": { label: "9 ml", ml: 9, count: 1 } },
+            neckThreadSizes: { "13-415": 0, "17-415": 1 }, componentTypes: {}, priceRange: { min: 0, max: 0 },
+        };
+
+        expect(conflictingRefinement({ entryMode: "search", capacities: ["3 ml", "9 ml"] }, facets)).toBeNull();
+        expect(conflictingRefinement({ entryMode: "search", rollerMaterials: ["metal", "plastic"] }, facets)).toBeNull();
+        expect(conflictingRefinement({ entryMode: "search", glassColors: ["Amber", "Clear"] }, facets)).toBeNull();
+        expect(conflictingRefinement({ entryMode: "search", neckThreads: ["13-415", "17-415"] }, facets)).toBeNull();
+    });
+
+    it("uses the group minimum for starting price regardless of variant collection order", () => {
+        const variant = (id: string, webPrice1pc: number) => ({
+            id, itemName: `9 ml Clear Cylinder ${id}`, websiteSku: id, graceSku: id,
+            imageUrl: null, imageUrlCapOff: null, color: "Clear", applicator: "Metal Roller Ball",
+            capColor: null, trimColor: null, capStyle: null, capHeight: null, ballMaterial: "Stainless Steel",
+            stockStatus: null, caseQuantity: null, webPrice1pc, shopifyVariantId: null, shopifySellable: null,
+        });
+        const result = (variants: ReturnType<typeof variant>[]) => buildGuidedFinderFamilies({
+            items: [{
+                _id: "cylinder-9", slug: "cylinder-9ml-clear", displayName: "9 ml Clear Cylinder",
+                family: "Cylinder", capacity: "9 ml", capacityMl: 9, color: "Clear", category: "Glass Bottle",
+                bottleCollection: null, neckThreadSize: "17-415", variantCount: 2,
+                priceRangeMin: 1.2, priceRangeMax: 3.5, heroImageUrl: null, applicatorTypes: ["Metal Roller Ball"],
+            }],
+            facets: { categories: {}, collections: {}, applicators: {}, rollerMaterials: { metal: 1, plastic: 0 }, families: {}, colors: {}, capacities: {}, neckThreadSizes: {}, componentTypes: {}, priceRange: { min: 1.2, max: 3.5 } },
+            totalCount: 1, nextCursor: null, primarySkus: [], variantPreviewRows: [{ groupId: "cylinder-9", variants }],
+        });
+
+        expect(result([variant("expensive", 3.5), variant("starting", 1.2)])[0]?.exactProducts[0]?.startingUnitPrice).toBe(1.2);
+        expect(result([variant("starting", 1.2), variant("expensive", 3.5)])[0]?.exactProducts[0]?.startingUnitPrice).toBe(1.2);
     });
 });

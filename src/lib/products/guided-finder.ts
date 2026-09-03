@@ -60,6 +60,14 @@ function availabilityFor(stockStatus: string | null): GuidedFinderAvailability {
     return stockStatus?.trim().toLowerCase() === "in stock" ? "in-stock" : "confirm-availability";
 }
 
+function allFacetValuesEmpty<T>(
+    values: readonly T[] | undefined,
+    countFor: (value: T) => number,
+): boolean {
+    if (!values?.length) return false;
+    return values.every((value) => countFor(value) === 0);
+}
+
 function imageFor(
     group: CatalogSearchResultShape["items"][number],
     variant: CatalogSearchVariantPreviewRow["variants"][number] | null,
@@ -118,7 +126,7 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
             availability: availabilityFor(variant?.stockStatus ?? null),
             caseQuantity: variant?.caseQuantity ?? null,
             webPrice1pc: variant?.webPrice1pc ?? null,
-            startingUnitPrice: variant?.webPrice1pc ?? null,
+            startingUnitPrice: group.priceRangeMin,
             shopifyVariantId: variant?.shopifyVariantId ?? null,
             shopifySellable: variant?.shopifySellable ?? null,
             checkoutReady: variant ? isCheckoutReady({
@@ -158,9 +166,9 @@ export function conflictingRefinement(
         const application = APPLICATOR_NAV.find((candidate) => candidate.value === context.application);
         if (application && application.buckets.every((bucket) => (facets.applicators[bucket] ?? 0) === 0)) return "application";
     }
-    if (context.capacities?.some((capacity) => (facets.capacities[normalizeCapacityFilterValue(capacity)]?.count ?? 0) === 0)) return "capacities";
-    if (context.rollerMaterials?.some((material) => (facets.rollerMaterials[material] ?? 0) === 0)) return "rollerMaterials";
-    if (context.glassColors?.some((color) => (facets.colors[color] ?? 0) === 0)) return "glassColors";
-    if (context.neckThreads?.some((thread) => (facets.neckThreadSizes[thread] ?? 0) === 0)) return "neckThreads";
+    if (allFacetValuesEmpty(context.capacities, (capacity) => facets.capacities[normalizeCapacityFilterValue(capacity)]?.count ?? 0)) return "capacities";
+    if (allFacetValuesEmpty(context.rollerMaterials, (material) => facets.rollerMaterials[material] ?? 0)) return "rollerMaterials";
+    if (allFacetValuesEmpty(context.glassColors, (color) => facets.colors[color] ?? 0)) return "glassColors";
+    if (allFacetValuesEmpty(context.neckThreads, (thread) => facets.neckThreadSizes[thread] ?? 0)) return "neckThreads";
     return null;
 }
