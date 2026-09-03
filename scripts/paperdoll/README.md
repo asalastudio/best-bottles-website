@@ -6,8 +6,8 @@ consults is the `productPlates` table in Convex, one row per SKU, whose
 existence is its readiness. There is no draft, release or ready flag.
 
 ```
-PSD libraries ──inventory.py──▶ data/paper-doll/inventory.json      (audit trail, committed)
-                └──(tokens, dedupe, xref, build_*)──▶ dist/paper-doll/…   (git-ignored)
+PSD master ──inventory.py──▶ data/paper-doll/inventory.json      (audit trail, committed)
+           └──(tokens, dedupe, xref, build_*)──▶ dist/paper-doll/…   (git-ignored)
 dist/ or legacy manifests ──publish.mjs──▶ Blob objects + productPlates rows
                                     └──verify.mjs──▶ zero index issues, or it exits 1
 ```
@@ -16,14 +16,14 @@ dist/ or legacy manifests ──publish.mjs──▶ Blob objects + productPlate
 
 | step | command | needs |
 |---|---|---|
-| 1 inventory | `python3 scripts/paperdoll/inventory.py` (`--no-hash`, `--limit N`, `--library original\|bbuat`, `--out DIR`) → `inventory.json` | psd-tools, Pillow |
+| 1 inventory | `python3 scripts/paperdoll/inventory.py` (`--no-hash`, `--limit N`, `--library master`, `--out DIR`) → `inventory.json` | psd-tools, Pillow |
 | naming tests | `python3 scripts/paperdoll/tests/test_naming.py` | |
 | 2 dedupe | `python3 scripts/paperdoll/dedupe.py` (`--no-image` skips the composites) → `selection.json`, `phash-cache.json` | |
 | 3a snapshot | `npx tsx scripts/paperdoll/export-convex-products.ts` → `convex-snapshot.json` | `NEXT_PUBLIC_CONVEX_URL` |
 | 3b cross-reference | `python3 scripts/paperdoll/xref.py` → `xref.json`, `alias-candidates.json` | |
 | 3c tokens | `python3 scripts/paperdoll/build_tokens.py` → `tokens.json` (Jordan sets `reviewedAt`) | |
 | 3d kit audit | `python3 scripts/paperdoll/kit_audit.py [--family <id>] [--limit N]` → `kit-audit.json` | |
-| 4 render | `python3 scripts/paperdoll/build_plates.py [--family <id>]* [--neck 18-415] [--limit N] [--plan]` → `dist/paper-doll/<familyId>/…`, `dist/paper-doll/manifest.json` | scipy |
+| 4 render | `python3 scripts/paperdoll/build_plates.py [--sku <websiteSku>]* [--family <id>]* [--neck 18-415] [--limit N] [--plan]` → `dist/paper-doll/<familyId>/…`, `dist/paper-doll/manifest.json` | scipy |
 | publish (dry run) | `node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json [--family <familyId>]` (legacy families: `--from dist/paper-doll/legacy`) | `NEXT_PUBLIC_CONVEX_URL` |
 | publish (write) | `… --apply` | + `BLOB_READ_WRITE_TOKEN`, `BEST_BOTTLES_CONVEX_WRITE_TOKEN` |
 | verify | `node scripts/paperdoll/verify.mjs [--sample 40] [--all-urls] [--strict]` | `NEXT_PUBLIC_CONVEX_URL` |
@@ -32,6 +32,10 @@ dist/ or legacy manifests ──publish.mjs──▶ Blob objects + productPlate
 `set -a; source .env.local; set +a` before any of them. Which deployment they
 touch is decided by `NEXT_PUBLIC_CONVEX_URL` alone; production needs the
 production write token (`npx convex env get BEST_BOTTLES_CONVEX_WRITE_TOKEN --prod`).
+
+The only permitted PSD source is
+`/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master`.
+Inventory, dedupe, rendering, and verification refuse any other source lineage.
 
 ## Rules the tooling enforces
 
@@ -48,6 +52,9 @@ production write token (`npx convex env get BEST_BOTTLES_CONVEX_WRITE_TOKEN --pr
 - **One row per SKU** is enforced inside the serializable `upsertMany`;
   `integrity` audits it, plus orphan rows, grace-SKU disagreement, URL host
   allow-list and missing fronts.
+- **Master-only source lineage** is enforced by `verify.mjs`: the front PSD must
+  resolve physically inside the master, must not come from an uncapped folder,
+  and its numbered basename must match the row's website SKU.
 - `familyId` is `<family>-<capacityMl>ml-<color>-<neck>` from product-group
   fields (`diva-46ml-frosted-18-415`), never a folder name.
 

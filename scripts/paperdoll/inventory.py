@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Inventory the Photoshop libraries: every file, its normalised stem, its role
-and its hash, with the reason for every exclusion. Nothing is rendered here;
-this is the audit trail every later decision cites by assetId.
+Inventory the one permitted Photoshop master: every file, its normalised stem,
+its role and its hash, with the reason for every exclusion. Nothing is rendered
+here; this is the audit trail every later decision cites by assetId.
 
     python3 scripts/paperdoll/inventory.py            -> data/paper-doll/inventory.json, inventory-report.md
     python3 scripts/paperdoll/inventory.py --no-hash  -> fast pass without sha256 (structure only)
@@ -25,7 +25,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 from pdlib.naming import map_pua, normalise_stem  # noqa: E402
-from pdlib.psdmeta import png_header, psd_header, psd_layers, sha256_of  # noqa: E402
+from pdlib.psdmeta import psd_layers, sha256_of  # noqa: E402
 
 REPO = HERE.parents[1]
 DATA = REPO / "data" / "paper-doll"
@@ -71,7 +71,7 @@ def classify(library: str, rel_dir: str, filename: str, ext: str, meta) -> dict:
     low_dir = dir_key.lower()
     is_component = _is_component_dir(dir_key)
 
-    is_view_folder = bool(VIEW_FOLDER.search(low_dir)) or (library == "bbuat" and bool(segments) and segments[0] == SOURCES["bbuatFolders"]["views"].strip())
+    is_view_folder = bool(VIEW_FOLDER.search(low_dir))
     result = normalise_stem(filename, is_view_folder=is_view_folder, known_prefixes=KNOWN_PREFIXES, is_component=is_component)
     evidence = {"folder": None, "token": result.view_token, "prefix": None}
     row = {
@@ -124,16 +124,10 @@ def classify(library: str, rel_dir: str, filename: str, ext: str, meta) -> dict:
         evidence["folder"] = "component-allowlist"
         return row
 
-    # cap state: the filename outranks the folder; UAT top folders outrank labels deeper down
+    # cap state: the filename outranks the nearest single-state folder label
     if result.cap_state:
         row["capStateEvidence"].append(f"filename:{result.cap_state}")
-    if library == "bbuat" and segments:
-        top = segments[0]
-        if top == SOURCES["bbuatFolders"]["capped"].strip():
-            row["capStateEvidence"].append("bbuat-folder:on")
-        elif top == SOURCES["bbuatFolders"]["uncapped"].strip():
-            row["capStateEvidence"].append("bbuat-folder:off")
-    folder_state, folder_segment = _folder_cap_state(segments[1:] if library == "bbuat" else segments)
+    folder_state, _ = _folder_cap_state(segments)
     if folder_state:
         row["capStateEvidence"].append(f"folder-label:{folder_state}")
     states = [e.split(":")[1] for e in row["capStateEvidence"]]
@@ -157,12 +151,10 @@ def walk(library: str, root: Path, do_hash: bool):
             if filename.startswith("._") or filename == ".DS_Store":
                 continue
             ext = filename.rsplit(".", 1)[-1].lower() if "." in filename else ""
-            if ext not in ("psd", "png"):
+            if ext != "psd":
                 continue
             path = Path(dirpath) / filename
-            if ext == "png" and not (library == "bbuat" and rel_dir.startswith(SOURCES["bbuatFolders"]["views"].strip())):
-                continue  # PNGs count only inside the UAT views folder
-            meta = psd_layers(str(path)) if ext == "psd" else png_header(str(path))
+            meta = psd_layers(str(path))
             row = classify(library, rel_dir, filename, ext, meta)
             try:
                 stat = path.stat()
@@ -191,7 +183,7 @@ def walk(library: str, root: Path, do_hash: bool):
 
 
 def parse_args(argv):
-    """--no-hash, --limit N (per library), --library NAME (repeatable), --out DIR."""
+    """--no-hash, --limit N, --library master, --out DIR."""
     opts = {"hash": True, "limit": None, "libraries": None, "out": DATA}
     it = iter(argv)
     for arg in it:
@@ -205,6 +197,8 @@ def parse_args(argv):
             opts["out"] = Path(next(it))
         else:
             raise SystemExit(f"unknown argument {arg}")
+    if opts["libraries"] and set(opts["libraries"]) != {"master"}:
+        raise SystemExit("the only permitted library is master")
     return opts
 
 
@@ -245,7 +239,7 @@ def main():
 
     out_dir.mkdir(parents=True, exist_ok=True)
     out = {"generatedAt": time.strftime("%Y-%m-%dT%H:%M:%S"), "builderVersion": "inventory 1.0.0", "hashed": do_hash,
-           "partial": bool(opts["limit"] or opts["libraries"]),
+           "partial": bool(opts["limit"]),
            "sources": {k: {"root": v["root"], "files": sum(1 for f in files if f["library"] == k)} for k, v in SOURCES["libraries"].items()},
            "files": files, "stems": stems_out}
     with (out_dir / "inventory.json").open("w") as fh:          # one file per line: diffable, still valid JSON
@@ -262,14 +256,11 @@ def main():
     lines.append("|---|---|---:|")
     for (lib, role), n in sorted(by_lib_role.items()):
         lines.append(f"| {lib} | {role} | {n} |")
-    bb_on = {f["stemKey"] for f in files if f["library"] == "bbuat" and f["role"] == "capped"}
-    bb_off = {f["stemKey"] for f in files if f["library"] == "bbuat" and f["role"] == "uncapped"}
-    lines += ["", f"bbuat capped stems: {len(bb_on)}  uncapped stems: {len(bb_off)}  pairs (both): {len(bb_on & bb_off)}"]
     views = {f['stemKey'] for f in files if f['role'] == 'view'}
+    lines.append("")
     lines.append(f"view stems: {len(views)}")
     lines.append(f"view kind status: {dict(Counter(f['viewKindStatus'] for f in files if f['role'] == 'view'))}")
-    lines.append(f"cap state (original): {dict(Counter(f['capState'] for f in files if f['library'] == 'original' and f['role'] in ('front', 'capped', 'uncapped')))}")
-    lines.append(f"cap state (bbuat): {dict(Counter(f['capState'] for f in files if f['library'] == 'bbuat' and f['role'] in ('front', 'capped', 'uncapped')))}")
+    lines.append(f"cap state: {dict(Counter(f['capState'] for f in files if f['role'] in ('front', 'capped', 'uncapped')))}")
     canvas = Counter(f['canvasClass'] for f in files)
     lines.append(f"canvas classes: {dict(canvas)}")
     errors = Counter(f['metaError'] for f in files if f['metaError'])

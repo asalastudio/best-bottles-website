@@ -37,6 +37,7 @@ import argparse
 import hashlib
 import json
 import os
+import re
 import sys
 import time
 from collections import defaultdict
@@ -154,8 +155,27 @@ def source_of(entry: dict, state: str):
     rec = entry["states"].get(state)
     if not rec or not rec.get("chosen"):
         return None
-    root = SOURCES["libraries"][rec["chosenLibrary"]]["root"]
-    return {"library": rec["chosenLibrary"], "relPath": rec["chosenPath"], "path": Path(root) / rec["chosenPath"], "sha256": rec["chosen"], "stateEvidence": rec["stateEvidence"]}
+    if rec["chosenLibrary"] != "master":
+        raise RuntimeError("selection is not master-only; rebuild inventory and selection before rendering")
+    root = Path(SOURCES["libraries"]["master"]["root"]).resolve(strict=True)
+    candidate = Path(os.path.abspath(root / rec["chosenPath"]))
+    if os.path.commonpath((root, candidate)) != str(root):
+        raise RuntimeError(f"source path escapes the PSD master: {rec['chosenPath']}")
+    source_path = candidate.resolve(strict=True)
+    if os.path.commonpath((root, source_path)) != str(root):
+        raise RuntimeError(f"source path resolves outside the PSD master: {rec['chosenPath']}")
+    return {"library": "master", "relPath": rec["chosenPath"], "path": source_path, "sha256": rec["chosen"], "stateEvidence": rec["stateEvidence"]}
+
+
+def validate_front_source(src: dict, website_sku: str):
+    """Refuse the two source-selection defects that previously reached production."""
+    rel_path = src["relPath"]
+    if any("uncapped" in part.lower() for part in Path(rel_path).parts):
+        raise RuntimeError(f"uncapped PSD cannot be the front source for {website_sku}")
+    source_sku = re.sub(r"^\s*\d+[.-]?\s*", "", Path(rel_path).stem).rstrip(".").strip()
+    sku_key = lambda value: re.sub(r"[^a-z0-9]", "", value.lower())  # noqa: E731
+    if sku_key(source_sku) != sku_key(website_sku):
+        raise RuntimeError(f"front source basename {source_sku!r} does not match website SKU {website_sku!r}")
 
 
 def plan_groups(selection, xref, args):
@@ -163,6 +183,8 @@ def plan_groups(selection, xref, args):
     groups = defaultdict(lambda: {"skus": []})
     for rec in xref["products"]:
         if not rec["publishable"]:
+            continue
+        if args.sku and rec["websiteSku"] not in args.sku:
             continue
         fid = rec["familyId"]
         if args.family and fid not in args.family:
@@ -178,10 +200,11 @@ def plan_groups(selection, xref, args):
             key = (fid, parsed["body"] or rec["websiteSku"])
         on = source_of(entry, "on") or source_of(entry, "part") or source_of(entry, "unknown")
         off = source_of(entry, "off")
-        if on is None and off is not None:      # only the uncapped shot exists: it is the plate
-            on, off = off, None
         if on is None:
+            if off is not None:
+                raise RuntimeError(f"only an uncapped source exists for {rec['websiteSku']}; refusing to use it as the front")
             continue
+        validate_front_source(on, rec["websiteSku"])
         closure = parse_sku(rec["websiteSku"])["closure"]
         groups[key]["skus"].append({"sku": rec["websiteSku"], "graceSku": rec["graceSku"], "familyId": fid, "family": rec["family"],
                                     "closure": closure, "warnings": rec["warnings"], "on": on, "off": off, "mode": mode})
@@ -566,6 +589,7 @@ def merge_manifest(new_rows: list, built_families: set, groups_report: list):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--sku", action="append", help="website SKU to build (repeatable)")
     ap.add_argument("--family", action="append", help="familyId to build (repeatable)")
     ap.add_argument("--neck", help="only families whose id ends with this neck, e.g. 18-415")
     ap.add_argument("--limit", type=int, help="build at most N render groups (largest first)")

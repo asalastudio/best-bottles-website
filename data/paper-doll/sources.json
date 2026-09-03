@@ -1,39 +1,12 @@
 {
-  "_comment": "Source libraries for the plate pipeline. B (pipeline/paper-doll/reference-images) is a byte-identical copy of A plus 28 derivative composites and is deliberately not listed. Component folders are an explicit allowlist: never a substring heuristic.",
+  "_comment": "The PSD master is the only permitted source for the plate pipeline. Component folders are an explicit allowlist: never a substring heuristic.",
   "libraries": {
-    "original": {
-      "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Original-Photoshop-Sources",
-      "role": "master"
-    },
-    "bbuat": {
-      "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/BBUAT-Upload-Files",
-      "role": "curated"
-    },
-    "bbmaster": {
+    "master": {
       "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master",
-      "role": "supplement",
-      "note": "BB-PSD-Files-Master (5,931 PSD): A re-organised plus 786 basenames neither A nor C carries. Lowest dedupe precedence: it fills gaps and never displaces a choice the two curated libraries already made."
+      "role": "master"
     }
   },
-  "bbuatFolders": {
-    "uncapped": "1. PSD Uncapped ",
-    "capped": "2. PSD Capped ",
-    "views": "3. PSD Additional Images Views"
-  },
   "componentFolders": [
-    "20. Closures - Cap, Sprayers, Lotion pumps, etc",
-    "2. 18-415 Bottles/32. 18415 Caps.",
-    "17-415 Bottles/17415 Caps Sprayers Lotionpumps",
-    "17-415 Bottles/17415 Cap Thumbnails",
-    "5. 13-415 Bottles PSD/Caps 13-415",
-    "15-415 Bottles/16. 15-415 Sprayer",
-    "15-415 Bottles/15-415 Cap Thumbails",
-    "6.   8-425 Bottles - CB/8245 Caps",
-    "6.   8-425 Bottles - CB/8245 Thumbnail Caps",
-    "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/20-400 and 18-400 Droppers only images",
-    "Boston Rnd Bottles 20-400 (1oz and 2oz) + 18-400 half oz/20-400 and 18-400 Caps only images",
-    "Accessories - Funnels droppers rollon plugs caps",
-    "2. 18-415 Bottles/Diva Bottle Rings",
     "20. Caps",
     "21. Tassels",
     "2.  18-415 Bottles /32. 18415 Caps ",
