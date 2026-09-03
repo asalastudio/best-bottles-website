@@ -23,6 +23,8 @@ import {
 import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import { applyCatalogSurface, CYLINDER_CATALOG_SURFACE } from "@/lib/catalogSurface";
+import { analytics } from "@/lib/analytics";
+import { useGrace } from "@/components/useGrace";
 import { buildGuidedFinderFamilies, conflictingRefinement } from "@/lib/products/guided-finder";
 import { buildCylinderApplicationOptions } from "@/lib/products/cylinder-family-page";
 import { parseBrowseContext } from "@/lib/products/focused-shopping";
@@ -126,6 +128,8 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
     const focusResultsAfterUpdate = useRef(false);
     const pendingFocusRoute = useRef<string | null>(null);
     const lastIncomingRoute = useRef(finderUrl(search));
+    const trackedEntryRoutes = useRef(new Set<string>());
+    const { openPanel: openGracePanel } = useGrace();
 
     const activeApplication = applicationFromFilters(filters);
     const applicationOptions = useMemo(
@@ -142,6 +146,19 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
     }, [activeResult]);
 
     useEffect(() => () => requestController.current?.abort(), []);
+
+    useEffect(() => {
+        if (isUpdating) return;
+        const route = finderUrl(activeSearch);
+        if (trackedEntryRoutes.current.has(route)) return;
+        trackedEntryRoutes.current.add(route);
+        analytics.finderEntered({
+            entryMode: "family",
+            family: "Cylinder",
+            ...(activeApplication ? { application: activeApplication } : {}),
+            resultCount: activeResult.totalCount,
+        });
+    }, [activeApplication, activeResult.totalCount, activeSearch, isUpdating]);
 
     useEffect(() => {
         const incomingRoute = finderUrl(search);
@@ -165,6 +182,14 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
         sort: SortValue;
         search: string;
         focusResults: boolean;
+        tracking?: {
+            refinement?: {
+                dimension: "application" | "capacity" | "rollerMaterial";
+                action: "selected" | "removed";
+                value: string;
+            };
+            recoveredDimension?: "application" | "capacity" | "rollerMaterial" | "family" | "glassColor" | "neckThread";
+        };
     }) => {
         requestController.current?.abort();
         const controller = new AbortController();
@@ -194,6 +219,19 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
                 focusResultsAfterUpdate.current = true;
             }
             setActiveResult(nextResult);
+            if (input.tracking?.refinement) {
+                analytics.finderRefined({
+                    entryMode: "family",
+                    ...input.tracking.refinement,
+                    resultCount: nextResult.totalCount,
+                });
+            }
+            if (input.tracking?.recoveredDimension) {
+                analytics.finderZeroResultRecovered({
+                    entryMode: "family",
+                    removedDimension: input.tracking.recoveredDimension,
+                });
+            }
             setExpandedFamily("Cylinder");
         } catch (error) {
             if (controller.signal.aborted) return;
@@ -208,9 +246,16 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
         }
     }, [router]);
 
-    const navigateWithFilters = useCallback((nextFilters: CatalogFilters, focusResults = false) => {
+    const navigateWithFilters = useCallback((nextFilters: CatalogFilters, focusResults = false, tracking?: {
+        refinement?: {
+            dimension: "application" | "capacity" | "rollerMaterial";
+            action: "selected" | "removed";
+            value: string;
+        };
+        recoveredDimension?: "application" | "capacity" | "rollerMaterial" | "family" | "glassColor" | "neckThread";
+    }) => {
         const nextSearch = serializeFinderSearch(nextFilters, sort);
-        void runSearch({ filters: nextFilters, sort, search: nextSearch, focusResults });
+        void runSearch({ filters: nextFilters, sort, search: nextSearch, focusResults, tracking });
     }, [runSearch, sort]);
 
     const handleApplicationChange = useCallback((nextApplication: ApplicatorNavValue) => {
@@ -221,25 +266,29 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
             applicators: [...application.buckets],
             capacities: filters.capacities,
             rollerMaterials: nextApplication === "rollon" ? filters.rollerMaterials : [],
-        }, CYLINDER_CATALOG_SURFACE), true);
+        }, CYLINDER_CATALOG_SURFACE), true, {
+            refinement: { dimension: "application", action: "selected", value: nextApplication },
+        });
     }, [activeApplication, filters, navigateWithFilters]);
 
     const toggleCapacity = useCallback((capacity: string) => {
+        const action = filters.capacities.includes(capacity) ? "removed" : "selected";
         navigateWithFilters({
             ...filters,
             capacities: filters.capacities.includes(capacity)
                 ? filters.capacities.filter((value) => value !== capacity)
                 : [...filters.capacities, capacity],
-        });
+        }, false, { refinement: { dimension: "capacity", action, value: capacity } });
     }, [filters, navigateWithFilters]);
 
     const toggleRollerMaterial = useCallback((material: RollerMaterial) => {
+        const action = filters.rollerMaterials.includes(material) ? "removed" : "selected";
         navigateWithFilters({
             ...filters,
             rollerMaterials: filters.rollerMaterials.includes(material)
                 ? filters.rollerMaterials.filter((value) => value !== material)
                 : [...filters.rollerMaterials, material],
-        });
+        }, false, { refinement: { dimension: "rollerMaterial", action, value: material } });
     }, [filters, navigateWithFilters]);
 
     const capacityOptions = useMemo<FocusedFinderOption[]>(() => {
@@ -280,8 +329,32 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
         : null;
     const conflictLabel = recoveryLabel(conflict, filters);
     const removeConflict = useCallback(() => {
-        navigateWithFilters(removeConflictingFilter(conflict, filters));
+        const recoveredDimension = conflict === "application" ? "application"
+            : conflict === "capacities" ? "capacity"
+                : conflict === "rollerMaterials" ? "rollerMaterial"
+                    : conflict === "glassColors" ? "glassColor"
+                        : conflict === "neckThreads" ? "neckThread"
+                            : undefined;
+        navigateWithFilters(removeConflictingFilter(conflict, filters), false, recoveredDimension ? { recoveredDimension } : undefined);
     }, [conflict, filters, navigateWithFilters]);
+    const openGraceFromFinder = useCallback(() => {
+        analytics.graceOpenedFromShopping({
+            source: "finder",
+            family: "Cylinder",
+            ...(activeApplication ? { application: activeApplication } : {}),
+        });
+        openGracePanel();
+    }, [activeApplication, openGracePanel]);
+    const openFinderResult = useCallback((product: { family: string; href: string }) => {
+        const slug = product.href.match(/^\/products\/([a-z0-9-]+)(?:[/?#]|$)/i)?.[1];
+        if (!slug) return;
+        analytics.finderResultOpened({
+            entryMode: "family",
+            family: product.family,
+            ...(activeApplication ? { application: activeApplication } : {}),
+            slug,
+        });
+    }, [activeApplication]);
     const restoreExpandedFamily = useCallback((family: string | null) => {
         setExpandedFamily(family);
     }, []);
@@ -312,7 +385,7 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
                                     Find Cylinder products
                                 </a>
                                 <Link
-                                    href="/matrix"
+                                    href="/matrix?family=Cylinder&from=finder"
                                     className="inline-flex min-h-11 items-center justify-center border border-obsidian px-5 text-sm font-semibold text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
                                 >
                                     Build a Bottle
@@ -351,6 +424,9 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
                             {refinementSummary(filters)}
                         </p>
                         {requestError ? <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p> : null}
+                        <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
+                            Ask Grace for help choosing
+                        </button>
                     </div>
                 </section>
 
@@ -362,6 +438,7 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
                         expandedFamily={expandedFamily}
                         onExpandedFamilyChange={setExpandedFamily}
                         isUpdating={isUpdating}
+                        onProductOpen={openFinderResult}
                         recovery={conflict && conflictLabel ? {
                             filterLabel: conflictLabel,
                             onRemove: removeConflict,

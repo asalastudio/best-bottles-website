@@ -3,7 +3,7 @@
 import type { ReactNode } from "react";
 import Link from "next/link";
 import FocusedProductCard from "@/components/catalog/FocusedProductCard";
-import type { GuidedFinderFamily } from "@/lib/products/guided-finder";
+import type { GuidedFinderFamily, GuidedFinderProduct } from "@/lib/products/guided-finder";
 
 type FocusedFinderRecovery = {
     filterLabel: string;
@@ -19,6 +19,7 @@ type FocusedFinderResultsProps = {
     expandedFamily?: string | null;
     onExpandedFamilyChange?: (family: string | null) => void;
     isUpdating?: boolean;
+    onProductOpen?: (product: GuidedFinderProduct) => void;
     className?: string;
 };
 
@@ -35,6 +36,7 @@ export default function FocusedFinderResults({
     expandedFamily,
     onExpandedFamilyChange,
     isUpdating = false,
+    onProductOpen,
     className = "",
 }: FocusedFinderResultsProps) {
     const hasControlledExpansion = expandedFamily !== undefined;
@@ -90,7 +92,7 @@ export default function FocusedFinderResults({
                                                 className="grid grid-cols-1 gap-px border border-champagne/70 bg-champagne/70 sm:grid-cols-2 xl:grid-cols-3"
                                             >
                                                 {family.exactProducts.map((product) => (
-                                                    <FocusedProductCard key={product.id} product={product} finderUrl={finderUrl} />
+                                                    <FocusedProductCard key={product.id} product={product} finderUrl={finderUrl} onOpen={onProductOpen} />
                                                 ))}
                                             </div>
                                         ) : null}

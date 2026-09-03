@@ -188,7 +188,7 @@ describe("PdpDiscoverySections", () => {
         expect(components).toBeGreaterThan(applications);
         expect(specifications).toBeGreaterThan(components);
         expect(matrix).toBeGreaterThan(specifications);
-        expect(markup).toContain('href="/matrix?family=Cylinder"');
+        expect(markup).toContain('href="/matrix?family=Cylinder&amp;from=pdp"');
     });
 
     it("labels product-intent alternatives without claiming they come with the bottle", () => {

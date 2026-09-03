@@ -14,7 +14,7 @@ import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
+import { APPLICATOR_BUCKETS, APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import {
     PdpInlineBadges,
@@ -45,6 +45,14 @@ import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
 
 export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
+
+function analyticsApplicationForApplicator(applicator: string | null | undefined): ApplicatorNavValue | null {
+    if (!applicator) return null;
+    return APPLICATOR_NAV.find((navigation) => navigation.buckets.some((bucket) => {
+        const definition = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
+        return (definition?.productValues as readonly string[] | undefined)?.includes(applicator) ?? false;
+    }))?.value ?? null;
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -1532,6 +1540,27 @@ export default function ProductDetailClient({
         dispatchPdpContextChange(change);
     }, [group?.color, selectedPdpPageUrl, selectedVariant]);
 
+    const lastTrackedPdpVariantSignature = useRef<string | null>(null);
+    useEffect(() => {
+        const sku = selectedVariant?.websiteSku ?? selectedVariant?.graceSku;
+        const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
+        if (!sku || !application) return;
+        const signature = `${activeSlug}:${sku}:${application}`;
+        if (lastTrackedPdpVariantSignature.current === signature) return;
+        lastTrackedPdpVariantSignature.current = signature;
+        analytics.pdpVariantResolved({ slug: activeSlug, sku, application });
+    }, [activeSlug, selectedVariant]);
+
+    const openGraceFromPdp = useCallback(() => {
+        const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
+        analytics.graceOpenedFromShopping({
+            source: "pdp",
+            ...(group?.family ? { family: group.family } : {}),
+            ...(application ? { application } : {}),
+        });
+        openGracePanel();
+    }, [group?.family, openGracePanel, selectedVariant?.applicator]);
+
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so
     // they carry draft content + stega click-to-edit overlays inside Presentation.
@@ -1701,7 +1730,7 @@ export default function ProductDetailClient({
                                 priceEach={selectedVariant?.webPrice1pc ?? null}
                                 heroImageUrl={group.heroImageUrl}
                                 onAddToCart={handleAddToCart}
-                                onAskGrace={openGracePanel}
+                                onAskGrace={openGraceFromPdp}
                                 displayName={customerDisplayName}
                                 categoryLabel={`${group.category ?? "Glass Bottle"} · ${group.family ?? ""}`}
                                 inStock={inStock}
@@ -2643,7 +2672,7 @@ export default function ProductDetailClient({
                     initialCompatibility={initialCompatibility}
                     selectedWebsiteSku={selectedVariant?.websiteSku}
                     selectedGraceSku={selectedVariant?.graceSku}
-                    onAskGrace={openGracePanel}
+                    onAskGrace={openGraceFromPdp}
                     onAddComponent={handleAddCompatibleComponent}
                 />
 

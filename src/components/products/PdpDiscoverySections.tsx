@@ -243,7 +243,7 @@ export function PdpDiscoveryMatrixLink({ family }: { family: string }) {
         <div className="border-t border-champagne/50 bg-bone">
             <div className="mx-auto flex max-w-[1440px] flex-col items-start justify-between gap-3 px-4 py-8 sm:flex-row sm:items-center sm:px-6">
                 <p className="text-sm text-slate">Technical specifications, volume pricing, fulfillment details, and editorial guidance appear above this advanced comparison tool.</p>
-                <Link href={`/matrix?family=${encodeURIComponent(family)}`} className="inline-flex min-h-11 items-center rounded-sm bg-obsidian px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-muted-gold">
+                <Link href={`/matrix?family=${encodeURIComponent(family)}&from=pdp`} className="inline-flex min-h-11 items-center rounded-sm bg-obsidian px-4 py-2 text-xs font-bold uppercase tracking-wider text-white transition-colors hover:bg-muted-gold">
                     Compare all compatible combinations
                 </Link>
             </div>

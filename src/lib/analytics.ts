@@ -7,6 +7,7 @@
  */
 
 import mixpanel from "mixpanel-browser";
+import { APPLICATOR_NAV, CATALOG_FAMILIES, type ApplicatorNavValue } from "@/lib/catalogFilters";
 
 // ─── Adapter interface ───────────────────────────────────────────────────────
 // Swap `activeAdapter` to change providers without touching call sites.
@@ -67,6 +68,74 @@ const adapter: AnalyticsAdapter = mixpanelAdapter;
 // ─── Initialization guard ────────────────────────────────────────────────────
 
 let _initialized = false;
+const pendingFocusedShoppingEvents: Array<{ event: string; properties: Props }> = [];
+
+function trackFocusedShopping(event: string, properties: Props) {
+  try {
+    adapter.track(event, properties);
+  } catch (error) {
+    if (_initialized) throw error;
+    pendingFocusedShoppingEvents.push({ event, properties });
+  }
+}
+
+// ─── Focused shopping privacy boundary ──────────────────────────────────────
+
+type FinderEntryMode = "application" | "family";
+type FinderRefinementDimension = "application" | "capacity" | "rollerMaterial";
+type FinderRecoveryDimension = FinderRefinementDimension | "family" | "glassColor" | "neckThread";
+type PdpResolutionDimension = "application" | "capFinish" | "capStyle" | "trimColor" | "rollerMaterial";
+type MatrixSource = "finder" | "pdp" | "nav" | "grace";
+type ShoppingGraceSource = "finder" | "pdp";
+
+const ANALYTICS_APPLICATIONS = new Set<string>(APPLICATOR_NAV.map(({ value }) => value));
+const ANALYTICS_FAMILIES = new Set<string>(CATALOG_FAMILIES);
+
+function safeApplication(value: unknown): ApplicatorNavValue | undefined {
+  return typeof value === "string" && ANALYTICS_APPLICATIONS.has(value)
+    ? value as ApplicatorNavValue
+    : undefined;
+}
+
+function safeFamily(value: unknown): string | undefined {
+  return typeof value === "string" && ANALYTICS_FAMILIES.has(value) ? value : undefined;
+}
+
+function safeResultCount(value: unknown): number | undefined {
+  return typeof value === "number" && Number.isSafeInteger(value) && value >= 0 && value <= 10_000
+    ? value
+    : undefined;
+}
+
+function safeIdentifier(value: unknown): string | undefined {
+  return typeof value === "string" && /^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$/.test(value)
+    ? value
+    : undefined;
+}
+
+function safeCapacity(value: unknown): string | undefined {
+  return typeof value === "string" && /^\d{1,4}(?:\.\d{1,2})? ml$/.test(value) ? value : undefined;
+}
+
+function safeEntryMode(value: unknown): FinderEntryMode | undefined {
+  return value === "application" || value === "family" ? value : undefined;
+}
+
+function safeRefinementDimension(value: unknown): FinderRefinementDimension | undefined {
+  return value === "application" || value === "capacity" || value === "rollerMaterial" ? value : undefined;
+}
+
+function safeRecoveryDimension(value: unknown): FinderRecoveryDimension | undefined {
+  return safeRefinementDimension(value)
+    ?? (value === "family" || value === "glassColor" || value === "neckThread" ? value : undefined);
+}
+
+function safePdpResolutionDimension(value: unknown): PdpResolutionDimension | undefined {
+  return value === "application" || value === "capFinish" || value === "capStyle"
+    || value === "trimColor" || value === "rollerMaterial"
+    ? value
+    : undefined;
+}
 
 // ─── Public API ──────────────────────────────────────────────────────────────
 
@@ -77,6 +146,9 @@ export const analytics = {
     if (_initialized) return;
     _initialized = true;
     adapter.init(token, options);
+    for (const pending of pendingFocusedShoppingEvents.splice(0)) {
+      adapter.track(pending.event, pending.properties);
+    }
   },
 
   identify(userId: string, traits?: Props) {
@@ -206,6 +278,127 @@ export const analytics = {
   },
 
   // ── Products ─────────────────────────────────────────────────────────────
+
+  finderEntered(properties: {
+    entryMode: FinderEntryMode;
+    application?: ApplicatorNavValue;
+    family?: string;
+    resultCount: number;
+  }) {
+    const entryMode = safeEntryMode(properties.entryMode);
+    const resultCount = safeResultCount(properties.resultCount);
+    if (!entryMode || resultCount === undefined) return;
+    const application = safeApplication(properties.application);
+    const family = safeFamily(properties.family);
+    trackFocusedShopping("Finder Entered", {
+      entryMode,
+      ...(application ? { application } : {}),
+      ...(family ? { family } : {}),
+      resultCount,
+    });
+  },
+
+  finderRefined(properties: {
+    entryMode: FinderEntryMode;
+    dimension: FinderRefinementDimension;
+    action: "selected" | "removed";
+    value: string;
+    resultCount: number;
+  }) {
+    const entryMode = safeEntryMode(properties.entryMode);
+    const dimension = safeRefinementDimension(properties.dimension);
+    const resultCount = safeResultCount(properties.resultCount);
+    const value = dimension === "application"
+      ? safeApplication(properties.value)
+      : dimension === "capacity"
+        ? safeCapacity(properties.value)
+        : properties.value === "metal" || properties.value === "plastic"
+          ? properties.value
+          : undefined;
+    if (!entryMode || !dimension || !value || resultCount === undefined
+      || (properties.action !== "selected" && properties.action !== "removed")) return;
+    trackFocusedShopping("Finder Refined", {
+      entryMode,
+      dimension,
+      action: properties.action,
+      value,
+      resultCount,
+    });
+  },
+
+  finderZeroResultRecovered(properties: {
+    entryMode: FinderEntryMode;
+    removedDimension: FinderRecoveryDimension;
+  }) {
+    const entryMode = safeEntryMode(properties.entryMode);
+    const removedDimension = safeRecoveryDimension(properties.removedDimension);
+    if (!entryMode || !removedDimension) return;
+    trackFocusedShopping("Finder Zero Result Recovered", { entryMode, removedDimension });
+  },
+
+  finderResultOpened(properties: {
+    entryMode: FinderEntryMode;
+    family: string;
+    application?: ApplicatorNavValue;
+    slug: string;
+  }) {
+    const entryMode = safeEntryMode(properties.entryMode);
+    const family = safeFamily(properties.family);
+    const application = safeApplication(properties.application);
+    const slug = safeIdentifier(properties.slug);
+    if (!entryMode || !family || !slug) return;
+    trackFocusedShopping("Finder Result Opened", {
+      entryMode,
+      family,
+      ...(application ? { application } : {}),
+      slug,
+    });
+  },
+
+  matrixOpened(properties: { source: MatrixSource; family?: string }) {
+    const source = properties.source === "finder" || properties.source === "pdp"
+      || properties.source === "nav" || properties.source === "grace"
+      ? properties.source
+      : undefined;
+    const family = safeFamily(properties.family);
+    if (!source) return;
+    trackFocusedShopping("Matrix Opened", { source, ...(family ? { family } : {}) });
+  },
+
+  graceOpenedFromShopping(properties: {
+    source: ShoppingGraceSource;
+    family?: string;
+    application?: ApplicatorNavValue;
+  }) {
+    const source = properties.source === "finder" || properties.source === "pdp" ? properties.source : undefined;
+    const family = safeFamily(properties.family);
+    const application = safeApplication(properties.application);
+    if (!source) return;
+    trackFocusedShopping("Grace Opened From Shopping", {
+      source,
+      ...(family ? { family } : {}),
+      ...(application ? { application } : {}),
+    });
+  },
+
+  pdpVariantResolved(properties: {
+    slug: string;
+    sku: string;
+    application: ApplicatorNavValue;
+    dimension?: PdpResolutionDimension;
+  }) {
+    const slug = safeIdentifier(properties.slug);
+    const sku = safeIdentifier(properties.sku);
+    const application = safeApplication(properties.application);
+    const dimension = properties.dimension === undefined ? undefined : safePdpResolutionDimension(properties.dimension);
+    if (!slug || !sku || !application || (properties.dimension !== undefined && !dimension)) return;
+    trackFocusedShopping("PDP Variant Resolved", {
+      slug,
+      sku,
+      application,
+      ...(dimension ? { dimension } : {}),
+    });
+  },
 
   productViewed(properties: {
     name: string;

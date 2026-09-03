@@ -23,9 +23,9 @@
  * family inference, and unknown is never compatible.
  */
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { Plus, Minus, WarningCircle, Check } from "@/components/icons";
 import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
 import { useCart } from "@/components/CartProvider";
@@ -45,6 +45,7 @@ import {
     type RetainedMatrixConfigurations,
 } from "@/lib/matrix/order-state";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { analytics } from "@/lib/analytics";
 
 /* ------------------------------------------------------------------ types */
 
@@ -117,13 +118,25 @@ export default function MatrixClient({
     initialRows: { family: string; rowCount: number; truncated: boolean; rows: MatrixRow[] } | null;
 }) {
     const router = useRouter();
+    const searchParams = useSearchParams();
     const { addItems } = useCart();
+    const trackedMatrixOpen = useRef(false);
     const [matrixState, setMatrixState] = useState(() =>
         ({
             ...createMatrixFamilyState(openFamily, {} as Record<string, Config>),
             retainedConfigurations: {} as RetainedConfigurations,
         }));
     const [cartMessage, setCartMessage] = useState<{ kind: "success" | "error"; text: string } | null>(null);
+
+    useEffect(() => {
+        if (trackedMatrixOpen.current) return;
+        trackedMatrixOpen.current = true;
+        const routeSource = searchParams.get("from");
+        const source = routeSource === "finder" || routeSource === "pdp" || routeSource === "grace"
+            ? routeSource
+            : "nav";
+        analytics.matrixOpened({ source, ...(openFamily ? { family: openFamily } : {}) });
+    }, [openFamily, searchParams]);
 
     const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);
     const configs = matrixState.configs;

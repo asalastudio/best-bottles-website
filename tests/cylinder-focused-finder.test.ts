@@ -314,10 +314,10 @@ describe("Cylinder family-first client", () => {
             editorial: null,
         }));
         const parsed = new DOMParser().parseFromString(html, "text/html");
-        const buildLink = [...parsed.querySelectorAll('main a[href="/matrix"]')]
+        const buildLink = [...parsed.querySelectorAll("main a")]
             .find((link) => link.textContent?.trim() === "Build a Bottle");
 
-        expect(buildLink?.getAttribute("href")).toBe("/matrix");
+        expect(buildLink?.getAttribute("href")).toBe("/matrix?family=Cylinder&from=finder");
         expect(buildLink?.className).toContain("border-obsidian");
         expect(buildLink?.className).not.toContain("bg-obsidian");
     });

@@ -21,6 +21,8 @@ import {
 import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
 import type { CatalogSearchResultShape } from "@/lib/catalogSearchFallback";
 import { applicationCatalogSurface } from "@/lib/catalogSurface";
+import { analytics } from "@/lib/analytics";
+import { useGrace } from "@/components/useGrace";
 import {
     buildGuidedFinderFamilies,
     conflictingRefinement,
@@ -133,6 +135,8 @@ export default function ApplicationFinderClient({
     const focusResultsAfterUpdate = useRef(false);
     const pendingFocusRoute = useRef<string | null>(null);
     const lastIncomingRoute = useRef(finderUrl(pathname, search));
+    const trackedEntryRoutes = useRef(new Set<string>());
+    const { openPanel: openGracePanel } = useGrace();
 
     const families = useMemo(() => buildGuidedFinderFamilies(activeResult), [activeResult]);
     const exactFinderUrl = finderUrl(activePathname, activeSearch);
@@ -144,6 +148,18 @@ export default function ApplicationFinderClient({
     }, [activeResult]);
 
     useEffect(() => () => requestController.current?.abort(), []);
+
+    useEffect(() => {
+        if (isUpdating) return;
+        const route = finderUrl(activePathname, activeSearch);
+        if (trackedEntryRoutes.current.has(route)) return;
+        trackedEntryRoutes.current.add(route);
+        analytics.finderEntered({
+            entryMode: "application",
+            application: activeApplication,
+            resultCount: activeResult.totalCount,
+        });
+    }, [activeApplication, activePathname, activeResult.totalCount, activeSearch, isUpdating]);
 
     useEffect(() => {
         const incomingRoute = finderUrl(pathname, search);
@@ -185,6 +201,14 @@ export default function ApplicationFinderClient({
         search: string;
         refreshFacetSource: boolean;
         focusResults: boolean;
+        tracking?: {
+            refinement?: {
+                dimension: "application" | "capacity" | "rollerMaterial";
+                action: "selected" | "removed";
+                value: string;
+            };
+            recoveredDimension?: "application" | "capacity" | "rollerMaterial" | "family" | "glassColor" | "neckThread";
+        };
     }) => {
         requestController.current?.abort();
         const controller = new AbortController();
@@ -231,6 +255,19 @@ export default function ApplicationFinderClient({
                 focusResultsAfterUpdate.current = true;
             }
             setActiveResult(nextResult);
+            if (input.tracking?.refinement) {
+                analytics.finderRefined({
+                    entryMode: "application",
+                    ...input.tracking.refinement,
+                    resultCount: nextResult.totalCount,
+                });
+            }
+            if (input.tracking?.recoveredDimension) {
+                analytics.finderZeroResultRecovered({
+                    entryMode: "application",
+                    removedDimension: input.tracking.recoveredDimension,
+                });
+            }
             const nextFamilies = buildGuidedFinderFamilies(nextResult);
             setExpandedFamily((current) => (
                 current === null || nextFamilies.some((family) => family.family === current)
@@ -250,7 +287,14 @@ export default function ApplicationFinderClient({
         }
     }, [router]);
 
-    const navigateWithFilters = useCallback((nextFilters: CatalogFilters) => {
+    const navigateWithFilters = useCallback((nextFilters: CatalogFilters, tracking?: {
+        refinement?: {
+            dimension: "application" | "capacity" | "rollerMaterial";
+            action: "selected" | "removed";
+            value: string;
+        };
+        recoveredDimension?: "application" | "capacity" | "rollerMaterial" | "family" | "glassColor" | "neckThread";
+    }) => {
         const nextSearch = serializeFinderSearch(activeApplication, nextFilters, sort);
         void runSearch({
             application: activeApplication,
@@ -260,6 +304,7 @@ export default function ApplicationFinderClient({
             search: nextSearch,
             refreshFacetSource: false,
             focusResults: false,
+            tracking,
         });
     }, [activeApplication, activePathname, runSearch, sort]);
 
@@ -281,25 +326,30 @@ export default function ApplicationFinderClient({
             search: nextSearch,
             refreshFacetSource: true,
             focusResults: true,
+            tracking: {
+                refinement: { dimension: "application", action: "selected", value: nextApplication },
+            },
         });
     }, [activeApplication, filters, runSearch]);
 
     const toggleCapacity = useCallback((capacity: string) => {
+        const action = filters.capacities.includes(capacity) ? "removed" : "selected";
         navigateWithFilters({
             ...filters,
             capacities: filters.capacities.includes(capacity)
                 ? filters.capacities.filter((value) => value !== capacity)
                 : [...filters.capacities, capacity],
-        });
+        }, { refinement: { dimension: "capacity", action, value: capacity } });
     }, [filters, navigateWithFilters]);
 
     const toggleRollerMaterial = useCallback((material: RollerMaterial) => {
+        const action = filters.rollerMaterials.includes(material) ? "removed" : "selected";
         navigateWithFilters({
             ...filters,
             rollerMaterials: filters.rollerMaterials.includes(material)
                 ? filters.rollerMaterials.filter((value) => value !== material)
                 : [...filters.rollerMaterials, material],
-        });
+        }, { refinement: { dimension: "rollerMaterial", action, value: material } });
     }, [filters, navigateWithFilters]);
 
     const capacityOptions = useMemo<FocusedFinderOption[]>(() => {
@@ -341,8 +391,28 @@ export default function ApplicationFinderClient({
         : null;
     const conflictLabel = recoveryLabel(conflict, filters);
     const removeConflict = useCallback(() => {
-        navigateWithFilters(removeConflictingFilter(conflict, filters));
+        const recoveredDimension = conflict === "capacities" ? "capacity"
+            : conflict === "rollerMaterials" ? "rollerMaterial"
+                : conflict === "glassColors" ? "glassColor"
+                    : conflict === "neckThreads" ? "neckThread"
+                        : conflict === "family" ? "family"
+                            : undefined;
+        navigateWithFilters(removeConflictingFilter(conflict, filters), recoveredDimension ? { recoveredDimension } : undefined);
     }, [conflict, filters, navigateWithFilters]);
+    const openGraceFromFinder = useCallback(() => {
+        analytics.graceOpenedFromShopping({ source: "finder", application: activeApplication });
+        openGracePanel();
+    }, [activeApplication, openGracePanel]);
+    const openFinderResult = useCallback((product: { family: string; href: string }) => {
+        const slug = product.href.match(/^\/products\/([a-z0-9-]+)(?:[/?#]|$)/i)?.[1];
+        if (!slug) return;
+        analytics.finderResultOpened({
+            entryMode: "application",
+            family: product.family,
+            application: activeApplication,
+            slug,
+        });
+    }, [activeApplication]);
     const restoreExpandedFamily = useCallback((family: string | null) => {
         setExpandedFamily(family);
     }, []);
@@ -374,6 +444,9 @@ export default function ApplicationFinderClient({
                         <p className="mt-5 border-l-2 border-muted-gold pl-4 text-sm font-medium text-obsidian" aria-label="Current bottle specification">
                             {refinementSummary(activeApplication, filters)}
                         </p>
+                        <button type="button" onClick={openGraceFromFinder} className="mt-4 text-sm font-semibold text-obsidian underline underline-offset-4">
+                            Ask Grace for help choosing
+                        </button>
                         {requestError ? (
                             <p className="mt-3 text-sm text-red-800" role="status">{requestError}</p>
                         ) : null}
@@ -388,6 +461,7 @@ export default function ApplicationFinderClient({
                         expandedFamily={expandedFamily}
                         onExpandedFamilyChange={setExpandedFamily}
                         isUpdating={isUpdating}
+                        onProductOpen={openFinderResult}
                         recovery={conflict && conflictLabel ? {
                             filterLabel: conflictLabel,
                             onRemove: removeConflict,
