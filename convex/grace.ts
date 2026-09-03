@@ -699,6 +699,49 @@ export const getFamilyOverview = query({
  */
 export const getBottleComponents = query({
     args: { bottleSku: v.string() },
+    returns: v.union(v.object({
+        bottle: v.object({
+            graceSku: v.string(),
+            websiteSku: v.string(),
+            itemName: v.string(),
+            imageUrl: v.union(v.string(), v.null()),
+            shopifyVariantId: v.union(v.string(), v.null()),
+            shopifySellable: v.union(v.boolean(), v.null()),
+            category: v.string(),
+            family: v.union(v.string(), v.null()),
+            capacity: v.union(v.string(), v.null()),
+            color: v.union(v.string(), v.null()),
+            neckThreadSize: v.union(v.string(), v.null()),
+            applicator: v.union(v.string(), v.null()),
+            capColor: v.union(v.string(), v.null()),
+            capStyle: v.union(v.string(), v.null()),
+            heightWithCap: v.union(v.string(), v.null()),
+            heightWithoutCap: v.union(v.string(), v.null()),
+            diameter: v.union(v.string(), v.null()),
+            bottleWeightG: v.union(v.number(), v.null()),
+            caseWeightG: v.union(v.number(), v.null()),
+            caseQuantity: v.union(v.number(), v.null()),
+            useCaseDescription: v.union(v.string(), v.null()),
+            webPrice1pc: v.union(v.number(), v.null()),
+            webPrice10pc: v.union(v.number(), v.null()),
+            webPrice12pc: v.union(v.number(), v.null()),
+            stockStatus: v.union(v.string(), v.null()),
+        }),
+        componentTypes: v.array(v.string()),
+        totalComponents: v.number(),
+        components: v.record(v.string(), v.array(v.object({
+            graceSku: v.string(),
+            websiteSku: v.union(v.string(), v.null()),
+            itemName: v.string(),
+            imageUrl: v.union(v.string(), v.null()),
+            shopifyVariantId: v.union(v.string(), v.null()),
+            shopifySellable: v.union(v.boolean(), v.null()),
+            webPrice1pc: v.union(v.number(), v.null()),
+            webPrice12pc: v.union(v.number(), v.null()),
+            capColor: v.union(v.string(), v.null()),
+            stockStatus: v.union(v.string(), v.null()),
+        }))),
+    }), v.null()),
     handler: async (ctx, args) => {
         const sku = args.bottleSku.trim();
         const bottle =
@@ -721,8 +764,9 @@ export const getBottleComponents = query({
             graceSku: string;
             websiteSku: string | null;
             itemName: string;
+            imageUrl: string | null;
             shopifyVariantId: string | null;
-            checkoutEligible: boolean;
+            shopifySellable: boolean | null;
             webPrice1pc: number | null;
             webPrice12pc: number | null;
             capColor: string | null;
@@ -738,8 +782,9 @@ export const getBottleComponents = query({
                     graceSku: item.graceSku,
                     websiteSku: product?.websiteSku ?? null,
                     itemName: item.itemName,
+                    imageUrl: product?.imageUrl ?? item.imageUrl,
                     shopifyVariantId: product?.shopifyVariantId ?? null,
-                    checkoutEligible: Boolean(product?.shopifyVariantId),
+                    shopifySellable: product?.shopifySellable ?? null,
                     webPrice1pc: item.webPrice1pc,
                     webPrice12pc: item.webPrice12pc,
                     capColor: item.capColor,
@@ -753,8 +798,9 @@ export const getBottleComponents = query({
                 graceSku: bottle.graceSku,
                 websiteSku: bottle.websiteSku,
                 itemName: bottle.itemName,
+                imageUrl: bottle.imageUrl ?? null,
                 shopifyVariantId: bottle.shopifyVariantId ?? null,
-                checkoutEligible: Boolean(bottle.shopifyVariantId),
+                shopifySellable: bottle.shopifySellable ?? null,
                 category: bottle.category,
                 family: bottle.family,
                 capacity: bottle.capacity

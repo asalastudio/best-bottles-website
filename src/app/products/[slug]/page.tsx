@@ -4,6 +4,7 @@ import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
     type ApplicatorSibling,
+    type PdpCompatibilityPayload,
     type ProductGroupPayload,
     type SiblingGroup,
     type ProductVariant,
@@ -20,6 +21,7 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
 import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
+import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -88,6 +90,21 @@ async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: st
         excludeSlug: activeSlug,
         neckThreadSize: group.neckThreadSize ?? undefined,
     }) as SiblingGroup[];
+}
+
+async function getFocusedPdpRelations(activeSlug: string): Promise<FocusedPdpRelations | null> {
+    return await getConvexClient().query(api.products.getFocusedPdpRelations, {
+        slug: activeSlug,
+    }) as FocusedPdpRelations | null;
+}
+
+async function getPrimaryCompatibility(data: ProductGroupPayload | null): Promise<PdpCompatibilityPayload | null> {
+    const primaryVariant = getPrimaryVariant(data);
+    const primarySku = primaryVariant?.websiteSku?.trim() || primaryVariant?.graceSku?.trim();
+    if (!primarySku) return null;
+    return await getConvexClient().query(api.grace.getBottleComponents, {
+        bottleSku: primarySku,
+    }) as PdpCompatibilityPayload | null;
 }
 
 async function getPdpBlocks(activeSlug: string, family: string | null | undefined): Promise<PdpBlock[]> {
@@ -218,7 +235,8 @@ export default async function ProductPage({
         redirect(`/products/cylinder-9ml-clear-17-415-rollon${next.size ? `?${next.toString()}` : ""}`);
     }
     const data = await getProductData(activeSlug);
-    const [siblings, siblingGroups, pdpBlocks, platesBySku] = await Promise.all([
+    const primaryVariant = getPrimaryVariant(data);
+    const [siblings, siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
         getApplicatorSiblings(data, activeSlug),
         getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
@@ -230,9 +248,11 @@ export default async function ProductPage({
             (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
             activeSlug,
         ),
+        getFocusedPdpRelations(activeSlug),
+        getPrimaryCompatibility(data),
     ]);
     const group = data?.group;
-    const variant = getPrimaryVariant(data);
+    const variant = primaryVariant;
     const customerName = group
         ? getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName
         : "";
@@ -289,6 +309,8 @@ export default async function ProductPage({
                 initialData={data}
                 initialApplicatorSiblings={siblings}
                 initialPdpBlocks={pdpBlocks}
+                initialRelations={relations}
+                initialCompatibility={compatibility}
                 siblingGroups={siblingGroups}
                 platesBySku={platesBySku}
             />

@@ -37,6 +37,7 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
+import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -1009,22 +1010,76 @@ export interface SiblingGroup {
     displayName: string;
 }
 
+export interface PdpCompatibilityComponent {
+    graceSku: string;
+    websiteSku: string | null;
+    itemName: string;
+    imageUrl: string | null;
+    shopifyVariantId: string | null;
+    shopifySellable: boolean | null;
+    webPrice1pc: number | null;
+    webPrice12pc: number | null;
+    capColor: string | null;
+    stockStatus: string | null;
+}
+
+export interface PdpCompatibilityPayload {
+    bottle: {
+        graceSku: string;
+        websiteSku: string;
+        itemName: string;
+        imageUrl: string | null;
+        shopifyVariantId: string | null;
+        shopifySellable: boolean | null;
+        category: string;
+        family: string | null;
+        capacity: string | null;
+        color: string | null;
+        neckThreadSize: string | null;
+        applicator: string | null;
+        capColor: string | null;
+        capStyle: string | null;
+        heightWithCap: string | null;
+        heightWithoutCap: string | null;
+        diameter: string | null;
+        bottleWeightG: number | null;
+        caseWeightG: number | null;
+        caseQuantity: number | null;
+        useCaseDescription: string | null;
+        webPrice1pc: number | null;
+        webPrice10pc: number | null;
+        webPrice12pc: number | null;
+        stockStatus: string | null;
+    };
+    componentTypes: string[];
+    totalComponents: number;
+    components: Record<string, PdpCompatibilityComponent[]>;
+}
+
 export default function ProductDetailClient({
     platesBySku = {},
     slug,
     initialData,
     initialApplicatorSiblings,
     initialPdpBlocks = [],
+    initialRelations = null,
+    initialCompatibility = null,
     siblingGroups = [],
 }: {
     slug: string;
     initialData: ProductGroupPayload | null;
     initialApplicatorSiblings: ApplicatorSibling[];
     initialPdpBlocks?: PdpBlock[];
+    initialRelations?: FocusedPdpRelations | null;
+    initialCompatibility?: PdpCompatibilityPayload | null;
     siblingGroups?: SiblingGroup[];
     /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
     platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
+    // Task 10 consumes these server-initialized models in the discovery sections.
+    // Keeping them on this boundary now prevents an initially empty client fetch.
+    void initialRelations;
+    void initialCompatibility;
     const router = useRouter();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();

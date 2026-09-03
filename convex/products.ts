@@ -10,6 +10,7 @@ import {
     selectBestFitmentRule,
 } from "./componentUtils";
 import { buildFamilyPageData } from "../src/lib/products/family-page-data";
+import { buildFocusedPdpRelations } from "../src/lib/products/pdp-relations";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
@@ -40,6 +41,43 @@ function isShopifyCdnUrl(value: string | null | undefined) {
         return value.includes("cdn.shopify.com/");
     }
 }
+
+const productGroupRelationV = v.object({
+    slug: v.string(),
+    displayName: v.string(),
+    family: v.string(),
+    capacity: v.union(v.string(), v.null()),
+    capacityMl: v.union(v.number(), v.null()),
+    color: v.union(v.string(), v.null()),
+    application: v.union(
+        v.literal("rollon"),
+        v.literal("spray"),
+        v.literal("dropper"),
+        v.literal("lotionpump"),
+        v.literal("reducer"),
+        v.null(),
+    ),
+    applicationLabel: v.union(v.string(), v.null()),
+    neckThreadSize: v.union(v.string(), v.null()),
+    neckThreadLabel: v.union(v.string(), v.null()),
+    heroImageUrl: v.union(v.string(), v.null()),
+    priceRangeMin: v.union(v.number(), v.null()),
+    variantCount: v.number(),
+    isCurrent: v.boolean(),
+});
+
+const focusedPdpRelationsV = v.object({
+    currentApplication: v.union(
+        v.literal("rollon"),
+        v.literal("spray"),
+        v.literal("dropper"),
+        v.literal("lotionpump"),
+        v.literal("reducer"),
+        v.null(),
+    ),
+    sameApplicationSizes: v.array(productGroupRelationV),
+    otherApplications: v.array(productGroupRelationV),
+});
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PRODUCT QUERIES — Powers the Homepage + Catalog + PDP
@@ -1229,6 +1267,47 @@ export const getProductGroup = query({
             .collect();
 
         return { group, variants };
+    },
+});
+
+/**
+ * Narrow, server-initialized relation cards for the focused PDP.
+ * The family index supplies the bounded candidate set; canonical route aliases
+ * and groups without real variants never become shopping alternatives.
+ */
+export const getFocusedPdpRelations = query({
+    args: { slug: v.string() },
+    returns: v.union(focusedPdpRelationsV, v.null()),
+    handler: async (ctx, args) => {
+        const currentGroup = await ctx.db
+            .query("productGroups")
+            .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+            .first();
+        if (
+            !currentGroup
+            || currentGroup.variantCount <= 0
+            || isLegacyProductRouteAlias(currentGroup.slug)
+        ) return null;
+
+        const familyGroups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", currentGroup.family))
+            .collect();
+        const declaredGroups = familyGroups.filter((group) => (
+            group.variantCount > 0 && !isLegacyProductRouteAlias(group.slug)
+        ));
+        const groupsWithLiveVariants = await Promise.all(declaredGroups.map(async (group) => ({
+            group,
+            variant: await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                .first(),
+        })));
+        const eligibleGroups = groupsWithLiveVariants.flatMap(({ group, variant }) => (
+            variant ? [group] : []
+        ));
+        if (!eligibleGroups.some((group) => group._id === currentGroup._id)) return null;
+        return buildFocusedPdpRelations(currentGroup, eligibleGroups);
     },
 });
 

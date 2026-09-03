@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import { buildMatrixCartItems, summarizeMatrixOrder } from "@/lib/matrix/cart";
 
 describe("Product Compatibility Matrix cart contract", () => {
@@ -105,5 +106,27 @@ describe("Product Compatibility Matrix cart contract", () => {
         expect(summary.subtotal).toBe(50);
         expect(summary.priced).toBe(true);
         expect(summary.meetsMinimum).toBe(true);
+    });
+});
+
+describe("compatibility resolver parity", () => {
+    it("routes Matrix, Grace, and the server-initialized PDP through the shared fitment chain", () => {
+        const matrix = readFileSync("convex/matrix.ts", "utf8");
+        const grace = readFileSync("convex/grace.ts", "utf8");
+        const products = readFileSync("convex/products.ts", "utf8");
+        const productPage = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
+        const chain = [
+            "normalizeComponentsByType",
+            "selectBestFitmentRule",
+            "filterGroupedComponentsByFitmentRule",
+        ];
+
+        for (const source of [matrix, grace, products]) {
+            for (const functionName of chain) {
+                expect(source).toContain(`${functionName}(`);
+            }
+        }
+        expect(productPage).toContain("api.grace.getBottleComponents");
+        expect(productPage).toContain("initialCompatibility");
     });
 });
