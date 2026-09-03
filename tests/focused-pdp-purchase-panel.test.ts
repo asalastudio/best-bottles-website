@@ -73,4 +73,12 @@ describe("focused PDP purchase panel", () => {
         expect(pdp).not.toContain("priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin");
         expect(pdp).toContain("selectedVariant?.webPrice1pc != null");
     });
+
+    it("keeps a missing selected-variant price quote-only without fabricating zero pricing", () => {
+        expect(configurator).not.toContain("priceEach ?? 0");
+        expect(configurator).toContain("if (priceEach == null) return []");
+        expect(configurator).toContain('"Price on request"');
+        expect(configurator).toContain("caseQty && tierPrice != null");
+        expect(configurator).toContain("checkoutReady ? (");
+    });
 });

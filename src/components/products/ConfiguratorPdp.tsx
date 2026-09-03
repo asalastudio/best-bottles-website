@@ -702,11 +702,14 @@ export default function ConfiguratorPdp({
   /* price block — unit price leads; the tier teaser sells volume */
   // the ladder: real 5-step tiers when synced, else the legacy 1/10/12
   const ladder = useMemo(() => {
+    // A missing selected-variant price is quote-only. Preserve numeric zero as
+    // a real price, but never manufacture a transactional $0.00 value.
+    if (priceEach == null) return [];
     if (priceTiers?.length) {
       return [...priceTiers].sort((a, b) => a.minQty - b.minQty)
         .map((t) => ({ minQty: t.minQty, price: t.unitPrice }));
     }
-    const out = [{ minQty: 1, price: priceEach ?? 0 }];
+    const out = [{ minQty: 1, price: priceEach }];
     if (price10 != null && priceEach != null && price10 < priceEach)
       out.push({ minQty: 10, price: price10 });
     if (price12 != null && priceEach != null && price12 < priceEach)
