@@ -27,7 +27,9 @@ import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Plus, Minus, WarningCircle, Check } from "@/components/icons";
 import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
+import { useCart } from "@/components/CartProvider";
 import { cn } from "@/lib/utils";
+import { buildMatrixCartItems, type MatrixCartLine } from "@/lib/matrix/cart";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
@@ -39,6 +41,12 @@ type Component = {
     imageUrl: string | null;
     capColor: string | null;
     stockStatus: string | null;
+    websiteSku?: string | null;
+    shopifyVariantId?: string | null;
+    shopifySellable?: boolean | null;
+    webPrice1pc?: number | null;
+    webPrice10pc?: number | null;
+    webPrice12pc?: number | null;
     /** which closure group it came from — carried so the chosen chip can keep
      *  its icon after the type list collapses */
     groupKey?: string;
@@ -64,6 +72,8 @@ export type MatrixRow = {
     webPrice1pc?: number | null;
     webPrice10pc?: number | null;
     webPrice12pc?: number | null;
+    shopifyVariantId?: string | null;
+    shopifySellable?: boolean | null;
     components: Record<string, Component[]>;
     resolution: "fitment_rule" | "bottle_listed" | "unknown";
     bottleOnly: boolean;
@@ -90,12 +100,14 @@ export default function MatrixClient({
     initialRows: { family: string; rowCount: number; truncated: boolean; rows: MatrixRow[] } | null;
 }) {
     const router = useRouter();
+    const { addItems } = useCart();
     const [configs, setConfigs] = useState<Record<string, Config>>({});
     const [search, setSearch] = useState("");
     const [size, setSize] = useState("");
     const [finish, setFinish] = useState("");
     const [neck, setNeck] = useState("");
     const [closure, setClosure] = useState("");
+    const [cartMessage, setCartMessage] = useState<{ kind: "success" | "error"; text: string } | null>(null);
 
     const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);
 
@@ -157,6 +169,28 @@ export default function MatrixClient({
             const prev = c[key(r)] ?? { qty: 12 };
             return { ...c, [key(r)]: { ...prev, ...patch } };
         });
+
+    const addOrderToCart = () => {
+        try {
+            const cartLines: MatrixCartLine[] = order.lines.map(({ row, cfg }) => ({
+                row,
+                component: cfg.component ?? null,
+                quantity: cfg.qty,
+            }));
+            const items = buildMatrixCartItems(cartLines);
+            if (items.length === 0) throw new Error("Choose a bottle configuration before adding it to the cart.");
+            addItems(items);
+            setCartMessage({
+                kind: "success",
+                text: `${items.length} item${items.length === 1 ? "" : "s"} added to your cart.`,
+            });
+        } catch (error) {
+            setCartMessage({
+                kind: "error",
+                text: error instanceof Error ? error.message : "Unable to add this configuration to the cart.",
+            });
+        }
+    };
 
     return (
         <div className="max-w-[1440px] mx-auto px-4 sm:px-6 pb-40">
@@ -262,7 +296,7 @@ export default function MatrixClient({
                 <p className="text-spec text-slate">No families available.</p>
             )}
 
-            <OrderBar order={order} />
+            <OrderBar order={order} onAddToCart={addOrderToCart} cartMessage={cartMessage} />
         </div>
     );
 }
@@ -479,8 +513,10 @@ function Stepper({ value, onChange }: { value: number; onChange: (v: number) => 
     );
 }
 
-function OrderBar({ order }: {
+function OrderBar({ order, onAddToCart, cartMessage }: {
     order: { lines: unknown[]; subtotal: number; units: number; priced: boolean };
+    onAddToCart: () => void;
+    cartMessage: { kind: "success" | "error"; text: string } | null;
 }) {
     const met = order.subtotal >= MIN_ORDER;
     return (
@@ -508,7 +544,15 @@ function OrderBar({ order }: {
                             : `$${(MIN_ORDER - order.subtotal).toFixed(2)} to reach the $50 minimum`}
                     </p>
                 </div>
-                <button type="button" disabled={!met || order.lines.length === 0}
+                {cartMessage && (
+                    <p role="status" aria-live="polite" className={cn(
+                        "text-caption max-w-[220px]",
+                        cartMessage.kind === "success" ? "text-[#5B7B5D]" : "text-gold-dim",
+                    )}>
+                        {cartMessage.text}
+                    </p>
+                )}
+                <button type="button" disabled={!met || order.lines.length === 0} onClick={onAddToCart}
                     className="rounded-[3px] bg-obsidian text-white px-5 py-2.5 text-spec font-semibold
                                transition-colors duration-200 hover:bg-muted-gold hover:text-obsidian
                                disabled:opacity-40 disabled:hover:bg-obsidian disabled:hover:text-white">

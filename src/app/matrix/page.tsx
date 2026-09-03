@@ -46,8 +46,8 @@ export default async function MatrixPage({
     const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
     const families = await convex.query(api.matrix.listFamilies, {});
-    // Open the requested family, else the largest one we know sells — never a
-    // family that would open to an empty drawer.
+    // `listFamilies` returns only customer families with products, so the
+    // requested family is verified and the default cannot open an empty drawer.
     const openFamily = familyParam && families.some((f) => f.family === familyParam)
         ? familyParam
         : families[0]?.family ?? null;

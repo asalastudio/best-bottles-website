@@ -66,11 +66,9 @@ const MAX_GROUPS = 1500;
  * says which it wants: the customer matrix asks for families that sell,
  * Catalog QA asks for all of them BECAUSE the empty ones are a finding.
  *
- * Emptiness is not resolved here. Counting products per family means reading
- * all 2,330 of them, which is the read that already forced getAllForAudit onto
- * a cursor after hitting Convex's 16MB limit. The row query answers it per
- * family, and a cached aggregate is the right home for the catalog-wide number
- * when someone needs it — not a scan on every page load.
+ * The customer path verifies each candidate through the indexed product query.
+ * That is at most one tiny indexed read per family, not a whole-catalog scan;
+ * it prevents a customer from landing on an empty buying surface.
  */
 export const listFamilies = query({
     args: { includeEmpty: v.optional(v.boolean()) },
@@ -86,11 +84,21 @@ export const listFamilies = query({
         }
         const families = [...byFamily.values()]
             .sort((a, b) => a.family.localeCompare(b.family));
+        if (args.includeEmpty) return families;
+
         // "Unknown" is a data defect wearing a family name. QA should see it;
-        // a customer never should.
-        return args.includeEmpty
-            ? families
-            : families.filter((f) => f.family.toLowerCase() !== "unknown");
+        // a customer never should. Every remaining entry has a product behind
+        // it, checked with the existing family index rather than a full scan.
+        const availability = await Promise.all(families.map(async (family) => ({
+            family,
+            product: await ctx.db
+                .query("products")
+                .withIndex("by_family", (q) => q.eq("family", family.family))
+                .first(),
+        })));
+        return availability
+            .filter(({ family, product }) => family.family.toLowerCase() !== "unknown" && Boolean(product))
+            .map(({ family }) => family);
     },
 });
 
@@ -121,7 +129,27 @@ export const getFamilyRows = query({
                 .collect());
         }
 
-        const rows = bottles.map((b) => {
+        // Components recur across a family. Fetch checkout metadata once per
+        // component SKU rather than once per bottle/component occurrence.
+        const componentSkus = new Set<string>();
+        for (const bottle of bottles) {
+            for (const components of Object.values(normalizeComponentsByType(bottle.components))) {
+                for (const component of components) {
+                    if (component.graceSku) componentSkus.add(component.graceSku);
+                }
+            }
+        }
+        const componentProducts = new Map(await Promise.all(
+            [...componentSkus].map(async (graceSku) => [
+                graceSku,
+                await ctx.db
+                    .query("products")
+                    .withIndex("by_graceSku", (q) => q.eq("graceSku", graceSku))
+                    .first(),
+            ] as const),
+        ));
+
+        const rows = await Promise.all(bottles.map(async (b) => {
             const thread = (b.neckThreadSize ?? "").toString().trim();
             const grouped = normalizeComponentsByType(b.components);
             const rule = selectBestFitmentRule(rulesByThread.get(thread) ?? [], b);
@@ -130,6 +158,25 @@ export const getFamilyRows = query({
             const listed = Object.values(grouped).reduce((n, xs) => n + xs.length, 0);
             const resolution: Resolution =
                 listed === 0 ? "unknown" : rule ? "fitment_rule" : "bottle_listed";
+
+            // The compatibility source carries component identity and price,
+            // while the component product record is the source of checkout
+            // eligibility. Enrich the already-resolved list without changing
+            // its fitment decision.
+            const resolvedForCart = Object.fromEntries(await Promise.all(
+                Object.entries(resolved).map(async ([type, components]) => [
+                    type,
+                    components.map((component) => {
+                        const product = componentProducts.get(component.graceSku) ?? null;
+                        return {
+                            ...component,
+                            websiteSku: product?.websiteSku ?? null,
+                            shopifyVariantId: product?.shopifyVariantId ?? null,
+                            shopifySellable: product?.shopifySellable ?? null,
+                        };
+                    }),
+                ] as const),
+            ));
 
             return {
                 graceSku: b.graceSku,
@@ -159,7 +206,9 @@ export const getFamilyRows = query({
                 webPrice1pc: b.webPrice1pc,
                 webPrice10pc: b.webPrice10pc,
                 webPrice12pc: b.webPrice12pc,
-                components: resolved,
+                shopifyVariantId: b.shopifyVariantId ?? null,
+                shopifySellable: b.shopifySellable ?? null,
+                components: resolvedForCart,
                 resolution,
                 // Bottle Only is an EXPLICIT choice, never inferred from an
                 // empty list. A row whose components are unknown offers it as
@@ -186,7 +235,7 @@ export const getFamilyRows = query({
                     },
                 } : {}),
             };
-        });
+        }));
 
         return {
             family: args.family,
