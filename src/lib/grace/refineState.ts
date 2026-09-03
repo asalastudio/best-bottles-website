@@ -79,7 +79,6 @@ export function graceRefineStateToParams(state: GraceRefineState): URLSearchPara
 }
 
 export function graceRefineDestination(state: GraceRefineState): string {
-    const query = graceRefineStateToParams(state).toString();
     const filters = state.filters;
     const cylinderFamilySurface =
         filters.families.length === 1
@@ -90,8 +89,11 @@ export function graceRefineDestination(state: GraceRefineState): string {
         && !filters.search
         && filters.priceMin === null
         && filters.priceMax === null;
+    const params = graceRefineStateToParams(state);
+    if (cylinderFamilySurface) params.delete("families");
+    const query = params.toString();
     const base = cylinderFamilySurface ? "/catalog/cylinder" : "/catalog";
-    return `${base}${query ? `?${query}` : ""}${cylinderFamilySurface ? "#ready-made" : ""}`;
+    return `${base}${query ? `?${query}` : ""}`;
 }
 
 export function inferGraceBroadenScope(customerRequest: string): GraceBroadenScope {

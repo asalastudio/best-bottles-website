@@ -6,6 +6,7 @@ import {
     getGraceRefineState,
     inferGraceBroadenScope,
 } from "../src/lib/grace/refineState";
+import { familyFinderHref } from "@/lib/products/focused-shopping";
 import { readFileSync } from "node:fs";
 
 describe("Grace Refine state", () => {
@@ -22,11 +23,12 @@ describe("Grace Refine state", () => {
         expect(source).toContain("toggleArrayFilter(\"capacities\", capacity.label)");
     });
 
-    it("uses the shared accordion Refine presentation on the Cylinder family page", () => {
-        const source = readFileSync("src/app/catalog/cylinder/CylinderFamilyPageClient.tsx", "utf8");
-        expect(source).toContain('import RefineSection from "@/components/catalog/RefineSection"');
-        expect(source).toContain('label: "Capacity", values: options.capacities, defaultOpen: true');
-        expect(source).toContain("activeCount={state[group.dimension].length}");
+    it("uses the focused Cylinder route without repeating family as a required choice", () => {
+        expect(familyFinderHref("Cylinder", {
+            application: "rollon",
+            capacities: ["9 ml"],
+            rollerMaterials: ["metal"],
+        })).toBe("/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml");
     });
 
     it("verifies Grace refinements against the catalog before reporting success", () => {
@@ -36,10 +38,9 @@ describe("Grace Refine state", () => {
         expect(source).toContain("Verified ${verifiedCount} matching");
     });
 
-    it("bridges Cylinder master-catalog results to the V3 family builder", () => {
-        const source = readFileSync("src/app/catalog/CatalogClient.tsx", "utf8");
-        expect(source).toContain('href="/catalog/cylinder"');
-        expect(source).toContain("Open the Cylinder family & builder");
+    it("bridges Cylinder discovery to the fixed family finder", () => {
+        const state = getGraceRefineState(new URLSearchParams("families=Cylinder"));
+        expect(graceRefineDestination(state)).toBe("/catalog/cylinder");
     });
 
     it("inherits every active catalog constraint exactly", () => {
@@ -96,7 +97,7 @@ describe("Grace Refine state", () => {
         ));
 
         expect(graceRefineDestination(state)).toBe(
-            "/catalog/cylinder?applicators=rollon&families=Cylinder&capacities=9+ml&threads=17-415#ready-made",
+            "/catalog/cylinder?applicators=rollon&capacities=9+ml&threads=17-415",
         );
     });
 
