@@ -58,6 +58,13 @@ import {
 } from "@/lib/grace/openaiRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
+import {
+    buildGraceFinderContext,
+    mergePdpContextChange,
+    PDP_CONTEXT_CHANGE_EVENT,
+    resolveGraceRecommendationHref,
+    type PdpContextChange,
+} from "@/lib/grace/pageContextEvents";
 
 // ─── Core product intelligence injected into the Realtime session ───────────
 
@@ -115,6 +122,15 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         );
     } else if (ctx.pageType === "catalog") {
         lines.push(`Page: Product Catalog`);
+        if (ctx.browseContext) {
+            const browse = ctx.browseContext;
+            lines.push(`Finder entry: ${browse.entryMode}`);
+            if (browse.family) lines.push(`Finder family: ${browse.family}`);
+            if (browse.application) lines.push(`Finder application: ${browse.application}`);
+            if (browse.capacities?.length) lines.push(`Finder capacity: ${browse.capacities.join(", ")}`);
+            if (browse.rollerMaterials?.length) lines.push(`Finder roller material: ${browse.rollerMaterials.join(", ")}`);
+            lines.push(`Finder results URL: ${browse.resultUrl}`);
+        }
         if (ctx.catalogCategory) lines.push(`Category filter: ${ctx.catalogCategory}`);
         if (ctx.currentCollection) lines.push(`Active Family Filter: ${ctx.currentCollection}`);
         if (ctx.catalogSearch) lines.push(`Active Search: "${ctx.catalogSearch}"`);
@@ -130,6 +146,15 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         lines.push(`CONTEXT NOTE: Customer is on the homepage. Greet them briefly and wait for their question.`);
     } else {
         lines.push(`Page: ${ctx.pathname}`);
+    }
+
+    if (ctx.pdpSelection) {
+        const selection = ctx.pdpSelection;
+        lines.push(`Selected website SKU: ${selection.websiteSku}`);
+        if (selection.application) lines.push(`Selected application: ${selection.application}`);
+        if (selection.glass) lines.push(`Selected glass: ${selection.glass}`);
+        if (selection.rollerMaterial) lines.push(`Selected roller material: ${selection.rollerMaterial}`);
+        if (selection.finish) lines.push(`Selected finish: ${selection.finish}`);
     }
 
     if (ctx.paperDoll) {
@@ -251,7 +276,6 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
 }
 
 function buildBrowsePath(products: ProductCard[], query?: string, family?: string): string {
-    if (products.length === 1 && products[0].slug) return `/products/${products[0].slug}`;
     return buildCatalogPath(products, query, family);
 }
 
@@ -638,6 +662,17 @@ function GraceProviderBase({
 
     const productSlug = pageType === "pdp" ? (pathname.split("/products/")[1] ?? null) : null;
     const productGroupResult = useQuery(api.products.getProductGroup, productSlug ? { slug: productSlug } : "skip");
+    const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(null);
+
+    useEffect(() => {
+        const receive = (event: Event) => {
+            const change = (event as CustomEvent<PdpContextChange>).detail;
+            if (!change?.websiteSku || !change.pageUrl.startsWith("/products/")) return;
+            setPdpContextChange(change);
+        };
+        window.addEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
+        return () => window.removeEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
+    }, []);
 
     const pageUrl = useMemo(() => {
         const q = searchParams.toString();
@@ -660,7 +695,7 @@ function GraceProviderBase({
             const fromVariants = [...new Set(variants.map((v) => v.applicator).filter(Boolean))] as string[];
             const applicatorTypes = fromGroup.length > 0 ? fromGroup : fromVariants;
             const capsSummary = summarizeCapsFromVariants(variants);
-            return {
+            const baseContext: PageContext = {
                 pageType,
                 pathname,
                 pageUrl,
@@ -689,6 +724,9 @@ function GraceProviderBase({
                     neckThreadSize: "17-415",
                 } : undefined,
             };
+            return pdpContextChange && pdpContextChange.pageUrl.startsWith(pathname)
+                ? mergePdpContextChange(baseContext, pdpContextChange)
+                : baseContext;
         }
         if (pageType === "pdp" && productSlug === CYLINDER_9ML_17415_COHORT.slug) {
             return {
@@ -718,10 +756,11 @@ function GraceProviderBase({
                 currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
                 refineState: getGraceRefineState(new URLSearchParams(searchParams.toString())),
+                browseContext: buildGraceFinderContext(pathname, new URLSearchParams(searchParams.toString())),
             };
         }
         return { pageType, pathname, pageUrl, cartItems: cartSummary, cartTotal };
-    }, [pageType, pathname, pageUrl, productGroupResult, productSlug, searchParams, cartItems]);
+    }, [pageType, pathname, pageUrl, productGroupResult, productSlug, searchParams, cartItems, pdpContextChange]);
 
     const pageContextRef = useRef<PageContext>(pageContext);
     useEffect(() => { pageContextRef.current = pageContext; }, [pageContext]);
@@ -754,6 +793,7 @@ function GraceProviderBase({
             JSON.stringify({
                 pageUrl: pageContext.pageUrl,
                 pdpSku: pageContext.currentProduct?.graceSku,
+                pdpSelection: pageContext.pdpSelection,
                 applicators: pageContext.currentProduct?.applicatorTypes,
                 caps: pageContext.currentProduct?.capsSummary,
                 catalogCategory: pageContext.catalogCategory,
@@ -1163,7 +1203,10 @@ function GraceProviderBase({
                     return `${sizeWarning} I found confirmed nearby alternatives: ${summary}. Ask whether the customer wants to open those results.`;
                 }
 
-                const redirectUrl = buildBrowsePath(displayProducts, params.query, params.family);
+                const redirectUrl = resolveGraceRecommendationHref({
+                    finderHref: buildCatalogPath(displayProducts, params.query, params.family),
+                    exactProduct: directProduct,
+                });
                 sessionMetricsRef.current.navigations++;
                 analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
                 setTimeout(() => {
@@ -2346,6 +2389,16 @@ function GraceProviderBase({
         pendingActionsRef.current = [];
     }, []);
 
+    const resetConversation = useCallback(async () => {
+        await endConversation();
+        setMessages([]);
+        messagesRef.current = [];
+        setInput("");
+        setErrorMessage("");
+        setBrowsingHistory([]);
+        browsingHistoryRef.current = [];
+    }, [endConversation]);
+
     useEffect(() => {
         return () => {
             try { conversationRef.current?.endSession(); } catch { /* ignore */ }
@@ -2621,6 +2674,7 @@ function GraceProviderBase({
         conversationActive,
         startConversation,
         endConversation,
+        resetConversation,
         confirmAction,
         dismissAction,
         onNavigate,
@@ -2638,7 +2692,7 @@ function GraceProviderBase({
         panelMode, openPanel, closePanel, minimizeToStrip, isOpen,
         launcherTooltip, minimizeWithTooltip, appendInlineMessage,
         graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
-        send, errorMessage, conversationActive, startConversation, endConversation,
+        send, errorMessage, conversationActive, startConversation, endConversation, resetConversation,
         onNavigate, pendingNavigation, clearPendingNavigation, confirmAction, dismissAction,
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,
         voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking,

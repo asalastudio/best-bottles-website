@@ -20,9 +20,10 @@ import { useIsAuthenticated } from "@/lib/useIsAuthenticated";
 import { useGraceImageUpload } from "@/lib/useGraceImageUpload";
 import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
 import {
-    GRACE_DESKTOP_DRAWER_WIDTH,
+    GRACE_MINIMUM_CONTENT_WIDTH_PX,
     graceConversationDisposition,
     gracePushEligiblePathname,
+    resolveGraceDrawerWidth,
     resolveGraceSurface,
 } from "@/lib/grace/pushLayout";
 
@@ -87,8 +88,7 @@ export default function GraceChatDrawer() {
         input,
         setInput,
         send,
-        conversationActive,
-        endConversation,
+        resetConversation,
         errorMessage,
         toggleVoice,
         voiceEnabled,
@@ -129,6 +129,8 @@ export default function GraceChatDrawer() {
     const surface = resolveGraceSurface({
         isOpen,
         viewportWidth,
+        drawerWidth: resolveGraceDrawerWidth(viewportWidth),
+        minimumContentWidth: GRACE_MINIMUM_CONTENT_WIDTH_PX,
         ownsViewport,
         pushEligible: gracePushEligiblePathname(pathname),
     });
@@ -174,15 +176,12 @@ export default function GraceChatDrawer() {
     };
 
     const handleClose = () => {
-        if (conversationActive && graceConversationDisposition("close") === "reset") {
-            void endConversation();
-        }
         closePanel();
     };
 
     const handleNewChat = () => {
-        if (conversationActive && graceConversationDisposition("new-chat") === "reset") {
-            void endConversation();
+        if (graceConversationDisposition("new-chat") === "reset") {
+            void resetConversation();
         }
         setInput("");
     };
@@ -224,7 +223,7 @@ export default function GraceChatDrawer() {
                         className="fixed top-0 right-0 z-[61] flex flex-col"
                         style={{
                             width: surface.mode === "push"
-                                ? GRACE_DESKTOP_DRAWER_WIDTH
+                                ? `${surface.drawerWidth}px`
                                 : isMobile
                                     ? "100%"
                                     : "min(440px, 100vw)",

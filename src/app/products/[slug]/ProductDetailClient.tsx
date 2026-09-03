@@ -42,6 +42,7 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
+import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
 
 export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 
@@ -1496,6 +1497,34 @@ export default function ProductDetailClient({
             delete globalWindow.__GRACE_THREAD_SIZE__;
         };
     }, [customerDisplayName, selectedVariant]);
+
+    const lastGracePdpContextSignature = useRef<string | null>(null);
+    useEffect(() => {
+        if (!selectedVariant?.websiteSku || typeof window === "undefined") return;
+        const rollerMaterial = /metal/i.test(selectedVariant.applicator ?? "")
+            ? "metal"
+            : /plastic/i.test(selectedVariant.applicator ?? "")
+                ? "plastic"
+                : undefined;
+        const change = {
+            websiteSku: selectedVariant.websiteSku,
+            application: selectedVariant.applicator ?? undefined,
+            glass: group?.color ?? undefined,
+            rollerMaterial,
+            finish: resolveVariantCapFinish(selectedVariant).label,
+            pageUrl: `${window.location.pathname}${window.location.search}`,
+        } as const;
+        const signature = JSON.stringify({
+            websiteSku: change.websiteSku,
+            application: change.application,
+            glass: change.glass,
+            rollerMaterial: change.rollerMaterial,
+            finish: change.finish,
+        });
+        if (lastGracePdpContextSignature.current === signature) return;
+        lastGracePdpContextSignature.current = signature;
+        dispatchPdpContextChange(change);
+    }, [group?.color, selectedVariant]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so

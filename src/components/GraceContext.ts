@@ -10,6 +10,7 @@
 
 import { createContext, useContext } from "react";
 import type { GraceRefineState } from "@/lib/grace/refineState";
+import type { GraceFinderContext, PdpContextChange } from "@/lib/grace/pageContextEvents";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -238,6 +239,10 @@ export interface PageContext {
     /** URL `category` filter when on /catalog */
     catalogCategory?: string;
     catalogSearch?: string;
+    /** Canonical finder state parsed from the route and query parameters. */
+    browseContext?: GraceFinderContext;
+    /** Exact resolved PDP state emitted by the PDP; safe for Grace grounding. */
+    pdpSelection?: PdpContextChange;
     /** Exact URL-backed Refine state. Grace inherits this unless the customer explicitly broadens it. */
     refineState?: GraceRefineState;
     /** URL-backed selection for the unified Paper Doll product workspace. */
@@ -333,6 +338,8 @@ export interface GraceContextValue {
     conversationActive: boolean;
     startConversation: (forceTextOnly?: boolean) => void | Promise<boolean>;
     endConversation: () => void;
+    /** Starts a fresh explicit chat while keeping the current shopping page state. */
+    resetConversation: () => void;
     confirmAction: (messageId: string) => void;
     dismissAction: (messageId: string) => void;
     onNavigate: (path: string) => void;
@@ -382,6 +389,7 @@ const GRACE_NOOP: GraceContextValue = {
     conversationActive: false,
     startConversation: NOOP,
     endConversation: NOOP,
+    resetConversation: NOOP,
     confirmAction: NOOP,
     dismissAction: NOOP,
     onNavigate: NOOP,
