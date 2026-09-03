@@ -30,6 +30,7 @@ import { componentPhotoSkuBelongsToBase, photoKeysForVariant, resolveCapOptionPh
 import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
+import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 
 import { useGLTF } from "@react-three/drei";
 import FocusedPdpLayout from "./FocusedPdpLayout";
@@ -139,7 +140,7 @@ export default function ConfiguratorPdp({
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
-  heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery,
+  heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -156,6 +157,7 @@ export default function ConfiguratorPdp({
   hasApproved3d?: boolean;
   /** Exact selected-SKU kit truth supplied by the focused PDP boundary. */
   kitQuery?: FunctionReturnType<typeof api.productKits.forSku>;
+  selectedGraceSku?: string | null;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -240,23 +242,9 @@ export default function ConfiguratorPdp({
   // URLs whose <img> fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
-  // The component kit for this SKU.
-  //
-  // Two things make a colourway change seamless, and both are about NOT letting
-  // the stage go empty:
-  //
-  //   1. useQuery returns undefined while the next SKU's kit loads. Treating
-  //      that as "no kit" tears the whole stack down — measured at 30 ms after a
-  //      cap click: three part images unmounted, the flat plate faded back in,
-  //      then the parts faded in again. The entire bottle flashed to change a
-  //      cap. So the last resolved kit is held until the next one resolves.
-  //   2. The new parts are decoded BEFORE they go on screen. Body and fitment
-  //      keep the URLs they already had, so they come from cache instantly and
-  //      only the cap is genuinely new; when its bytes are ready the whole set
-  //      swaps in one frame. No fade, because there is nothing to hide.
-  const [heldKit, setHeldKit] = useState<typeof kitQuery>(undefined);
-  useEffect(() => { if (kitQuery !== undefined) setHeldKit(kitQuery); }, [kitQuery]);
-  const kit = kitQuery === undefined ? heldKit : kitQuery;
+  // A pending next-SKU query never inherits a prior kit. The preferred mode
+  // may survive loading, but only this SKU's stored kit can expose its layers.
+  const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, kitQuery);
 
   // "Without cap" on a kitted SKU removes the cap PART. The cap-off PLATE swap
   // below still happens, but the kit stacks above the plate, so with the cap
@@ -271,8 +259,8 @@ export default function ConfiguratorPdp({
   // what is actually on screen: only ever a fully decoded set
   const [shownParts, setShownParts] = useState<typeof targetParts>(null);
   useEffect(() => {
-    // Still loading: keep whatever is on screen rather than emptying the stage.
-    if (kitQuery === undefined) return;
+    // Pending or no exact kit: never keep another SKU's layers on this stage.
+    if (kitQuery === undefined) { setShownParts(null); return; }
     // Resolved with no kit — a SKU that was never kitted. The stale stack would
     // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
     if (!targetParts?.length) { setShownParts(null); return; }
@@ -282,9 +270,8 @@ export default function ConfiguratorPdp({
       .catch(() => { if (!cancelled) setShownParts(null); });   // fall back to the plate
     return () => { cancelled = true; };
   }, [kitQuery, targetParts]);
-  // A published kit is capability truth; decoding only controls when its
-  // layers are safe to paint. Keeping these separate preserves Exploded while
-  // the next valid in-intent variant's image bytes are still arriving.
+  // A published kit for this exact SKU is capability truth; decoding only
+  // controls when its layers are safe to paint.
   const releasedKitAvailable = Boolean(kit?.parts?.length);
   const kitReady = Boolean(shownParts?.length);
   const kitParts = shownParts;

@@ -18,7 +18,10 @@ describe("focused PDP mobile purchase surface", () => {
         const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         const container = document.createElement("div");
         containers.push(container);
-        Object.defineProperty(container, "clientWidth", { configurable: true, value: 390 });
+        Object.defineProperties(container, {
+            clientWidth: { configurable: true, value: 390 },
+            scrollWidth: { configurable: true, value: 390 },
+        });
         document.body.append(container);
 
         await act(async () => {
@@ -40,6 +43,12 @@ describe("focused PDP mobile purchase surface", () => {
         expect(rail!.scrollWidth).toBeGreaterThan(rail!.clientWidth);
         expect(rail!.className).toContain("overflow-x-auto");
         expect(container.clientWidth).toBe(390);
+        expect(container.scrollWidth).toBeLessThanOrEqual(390);
+        Object.defineProperties(document.documentElement, {
+            clientWidth: { configurable: true, value: 390 },
+            scrollWidth: { configurable: true, value: 390 },
+        });
+        expect(document.documentElement.scrollWidth).toBeLessThanOrEqual(document.documentElement.clientWidth);
         expect(container.querySelector('[data-pdp-stage-plate="10:11"]')).not.toBeNull();
         expect(container.querySelector('[aria-label="Quantity"]')).not.toBeNull();
         expect(container.textContent).toContain("Add to cart");

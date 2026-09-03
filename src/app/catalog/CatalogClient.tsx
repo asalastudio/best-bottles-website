@@ -2000,13 +2000,13 @@ export default function CatalogClient({
                             <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
                                 <div>
                                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Cylinder V3</p>
-                                    <p className="mt-1 text-sm text-obsidian">Looking for the editorial family page and the 9 mL · 17-415 Paper Doll builder?</p>
+                                    <p className="mt-1 text-sm text-obsidian">Looking for the editorial family page and the 9 mL · 17-415 focused product page?</p>
                                 </div>
                                 <Link
                                     href="/catalog/cylinder"
                                     className="inline-flex min-h-11 shrink-0 items-center justify-center bg-obsidian px-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-white hover:bg-muted-gold hover:text-obsidian"
                                 >
-                                    {"Open the Cylinder family & builder"}
+                                    {"Open the Cylinder family page"}
                                 </Link>
                             </div>
                         )}

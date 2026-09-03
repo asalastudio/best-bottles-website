@@ -40,13 +40,14 @@ describe("PDP stage mode capabilities", () => {
     });
 
     it("wires Exploded capability to released kit truth rather than decoded presentation state", () => {
+        expect(configuratorSource).toContain("const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, kitQuery)");
         expect(configuratorSource).toContain("const releasedKitAvailable = Boolean(kit?.parts?.length)");
         expect(configuratorSource).toContain("hasReleasedExplodedKit: releasedKitAvailable");
         expect(configuratorSource).not.toContain("hasReleasedExplodedKit: kitReady");
         expect(configuratorSource).not.toContain("api.productKits.forSku,");
         expect(productDetailSource).toContain("const selectedKitQuery = useQuery(");
-        expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKitQuery?.parts?.length)");
-        expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
+        expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKit?.parts?.length)");
+        expect(productDetailSource).toContain("kitQuery={selectedKit}");
     });
 
     it("accepts approved 3D availability as a field from the focused rollout gate", () => {

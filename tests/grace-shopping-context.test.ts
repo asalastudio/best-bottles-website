@@ -74,13 +74,20 @@ describe("Grace shopping context", () => {
     });
 
     it("keeps broad Grace recommendations in the finder and sends exact resolved products to their PDP", () => {
+        const provider = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
         expect(resolveGraceRecommendationHref({
             finderHref: "/catalog/application/roll-on",
             exactProduct: null,
         })).toBe("/catalog/application/roll-on");
         expect(resolveGraceRecommendationHref({
             finderHref: "/catalog/application/roll-on",
-            exactProduct: { slug: "cylinder-9ml-clear-metal-roll-on" },
-        })).toBe("/products/cylinder-9ml-clear-metal-roll-on");
+            exactProduct: { slug: "cylinder-9ml-clear-metal-roll-on", websiteSku: "WEB-9ML-BLK" },
+        })).toBe("/products/cylinder-9ml-clear-metal-roll-on?sku=WEB-9ML-BLK");
+        expect(resolveGraceRecommendationHref({
+            finderHref: "/catalog",
+            exactProduct: { slug: "cylinder-9ml-17-415", graceSku: "GB-CYL-9-17-415" },
+        })).toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=GB-CYL-9-17-415");
+        expect(provider).toContain("exactProduct: directProduct");
+        expect(provider).toContain("const canonicalSlug = getCanonicalProductSlug(rawSlug)");
     });
 });

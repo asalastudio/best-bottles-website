@@ -53,6 +53,7 @@ import {
 } from "@/lib/grace/openaiRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
+import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
 import {
     GRACE_MINIMUM_CONTENT_WIDTH_PX,
     gracePushEligiblePathname,
@@ -1366,8 +1367,13 @@ function GraceProviderBase({
 
             if (navPath.startsWith("/products/")) {
                 const rawSlug = navPath.replace(/^\/products\//, "").split("?")[0];
+                const canonicalSlug = getCanonicalProductSlug(rawSlug);
+                if (canonicalSlug !== rawSlug) {
+                    const query = navPath.includes("?") ? navPath.slice(navPath.indexOf("?")) : "";
+                    navPath = `/products/${canonicalSlug}${query}`;
+                }
                 try {
-                    const checkData = await callGraceServerTool<{ group?: unknown } | null>("getProductGroup", { slug: rawSlug });
+                    const checkData = await callGraceServerTool<{ group?: unknown } | null>("getProductGroup", { slug: canonicalSlug });
                     if (!checkData.result || !(checkData.result as { group?: unknown }).group) {
                         const searchTerm = params.title && params.title.length > 3 ? params.title : slugToSearchTerm(rawSlug);
                         const searchData = await callGraceServerTool<ProductCard[]>("searchCatalog", {
@@ -1377,7 +1383,10 @@ function GraceProviderBase({
                         const hits: ProductCard[] = Array.isArray(searchData.result) ? searchData.result : [];
                         if (hits.length > 0) {
                             const directHit = selectDirectProductMatch(hits, searchTerm);
-                            navPath = directHit ? `/products/${directHit.slug}` : buildBrowsePath(hits, searchTerm);
+                            navPath = resolveGraceRecommendationHref({
+                                finderHref: buildBrowsePath(hits, searchTerm),
+                                exactProduct: directHit,
+                            });
                         } else {
                             navPath = buildCatalogPath([], searchTerm);
                         }

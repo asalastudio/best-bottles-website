@@ -44,7 +44,7 @@ describe("focused PDP layout", () => {
 
     it("renders the real focused purchase surface at 390px with contained closure controls", async () => {
         const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
-        const html = renderToStaticMarkup(createElement("div", { style: { width: 390, overflow: "hidden" } },
+        const html = renderToStaticMarkup(createElement("div", { style: { width: 390 } },
             createElement(ConfiguratorPdp, {
                 currentSlug: "cylinder-9ml-clear-17-415-rollon", groupTitle: "Cylinder 9 mL", capacityLabel: "Clear glass",
                 displayName: "9 mL Clear Cylinder", priceEach: 0.72, inStock: true, checkoutReady: true,

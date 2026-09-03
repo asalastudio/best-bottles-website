@@ -136,3 +136,48 @@ GREEN:
 - `npx tsc --noEmit` and `git diff --check` passed.
 - No network, Convex CLI/deploy/data action, media regeneration, or PSD-path
   change occurred.
+
+## Fix round 2 (base `5dd6dead`)
+
+### Customer/editor terminology and Grace navigation
+
+- Replaced Catalog Cylinder copy that advertised a Paper Doll builder with a
+  focused product-page callout. Kept the existing `featuredCohortSlug` storage
+  key for content compatibility, but renamed its Studio title and description
+  to canonical focused PDP terminology. Internal Paper Doll media records stay
+  named for the asset pipeline; their editorial descriptions now reference the
+  focused PDP stage rather than a builder.
+- `resolveGraceRecommendationHref` is now production truth for exact results:
+  it canonicalizes legacy group aliases, requires a verified stored SKU, and
+  emits `/products/<canonical>?sku=<websiteSku|graceSku>`. Broad or ambiguous
+  results still use the finder path. The generic navigation validation path now
+  canonicalizes aliases and uses the same resolver when a verified direct hit
+  is found.
+- Extracted the operative server redirect target into `pdp-redirect.ts`; page
+  routing uses it, and tests verify SKU/query preservation and no canonical
+  loop without relying on client source text.
+
+### Exact selected-SKU kits and mobile containment
+
+- Added `resolveSelectedSkuKit`: stage capability accepts a kit only when its
+  stored `sku` matches the selected website or Grace SKU. `ProductDetailClient`
+  and `ConfiguratorPdp` both consume it. A pending B query clears A's parts and
+  never advertises Exploded; the requested Exploded intent remains available
+  for a later exact B kit and falls back honestly when B has none.
+- The real 390px Configurator DOM test now instruments rail, root container,
+  and document widths. It proves only the closure rail overflows; page/root
+  remain at or below 390px with real stage, controls, quantity, and CTA.
+
+### Fix-round 2 RED → GREEN and verification
+
+RED: exact-Grace-SKU, alias canonicalization, pure server redirect, selected
+kit transition, mobile root-overflow, and retired-language regressions failed
+against `5dd6dead`.
+
+GREEN:
+
+- Focused Grace/PDP/protected suites: **10 files, 45 tests passed**.
+- Full Vitest: **122 files, 851 tests passed; 2 live files / 7 tests skipped**.
+- `npx tsc --noEmit`, changed-file ESLint, and `git diff --check` passed.
+- Safety audit found no inventory/selection/xref or legacy PSD path change; no
+  network, Convex CLI/deploy/data action, or media regeneration occurred.

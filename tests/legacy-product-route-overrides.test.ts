@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
 import { getCanonicalProductSlug, getLegacyProductRouteOverride } from "../src/lib/products/legacy-product-route-overrides";
+import { resolveProductPageRedirectTarget } from "../src/lib/products/pdp-redirect";
 import { safePdpReturnPath } from "../src/app/products/[slug]/ProductDetailClient";
 
 describe("legacy product route overrides", () => {
@@ -23,10 +23,10 @@ describe("legacy product route overrides", () => {
         expect(getCanonicalProductSlug("cylinder-9ml-white-17-415-rollon")).toBe("cylinder-9ml-clear-17-415-rollon");
     });
 
-    it("preserves a direct PDP SKU query through the page-level alias redirect without looping", () => {
-        const source = readFileSync(new URL("../src/app/products/[slug]/ProductDetailClient.tsx", import.meta.url), "utf8");
-        expect(source).toContain("const activeSlug = legacyRouteOverride ?? slug");
-        expect(source).toContain("router.replace(`/products/${legacyRouteOverride}${qs ? `?${qs}` : \"\"}`)");
+    it("preserves a direct PDP SKU query through the operative server redirect without looping", () => {
+        expect(resolveProductPageRedirectTarget("cylinder-9ml-17-415", { sku: "WEB-9ML", from: "grace" }))
+            .toBe("/products/cylinder-9ml-clear-17-415-rollon?sku=WEB-9ML&from=grace");
+        expect(resolveProductPageRedirectTarget("cylinder-9ml-clear-17-415-rollon", { sku: "WEB-9ML" })).toBeNull();
         expect(getLegacyProductRouteOverride("cylinder-9ml-clear-17-415-rollon")).toBeNull();
     });
 

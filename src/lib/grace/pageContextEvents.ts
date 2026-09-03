@@ -1,4 +1,5 @@
 import { parseBrowseContext, type BrowseContext } from "@/lib/products/focused-shopping";
+import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
 
 export const PDP_CONTEXT_CHANGE_EVENT = "bestbottles:pdp-context-change" as const;
 
@@ -49,7 +50,11 @@ export function resolveGraceRecommendationHref({
     exactProduct,
 }: {
     finderHref: string;
-    exactProduct: { slug?: string | null } | null;
+    exactProduct: { slug?: string | null; websiteSku?: string | null; graceSku?: string | null } | null;
 }): string {
-    return exactProduct?.slug ? `/products/${exactProduct.slug}` : finderHref;
+    if (!exactProduct?.slug) return finderHref;
+    const sku = exactProduct.websiteSku?.trim() || exactProduct.graceSku?.trim();
+    if (!sku) return finderHref;
+    const slug = getCanonicalProductSlug(exactProduct.slug);
+    return `/products/${slug}?${new URLSearchParams({ sku }).toString()}`;
 }

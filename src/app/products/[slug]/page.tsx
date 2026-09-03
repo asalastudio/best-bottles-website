@@ -16,6 +16,7 @@ import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
+import { resolveProductPageRedirectTarget } from "@/lib/products/pdp-redirect";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
@@ -117,18 +118,6 @@ async function getPdpBlocks(activeSlug: string, family: string | null | undefine
     }
 }
 
-function searchParamsToString(input: Record<string, string | string[] | undefined>): string {
-    const params = new URLSearchParams();
-    for (const [key, value] of Object.entries(input)) {
-        if (Array.isArray(value)) {
-            for (const item of value) params.append(key, item);
-        } else if (value != null) {
-            params.set(key, value);
-        }
-    }
-    return params.toString();
-}
-
 export async function generateMetadata({
     params,
 }: {
@@ -190,11 +179,9 @@ export default async function ProductPage({
     searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
     const [{ slug }, resolvedSearchParams] = await Promise.all([params, searchParams]);
+    const redirectTarget = resolveProductPageRedirectTarget(slug, resolvedSearchParams);
+    if (redirectTarget) redirect(redirectTarget);
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
-    if (legacyRouteOverride) {
-        const qs = searchParamsToString(resolvedSearchParams);
-        redirect(`/products/${legacyRouteOverride}${qs ? `?${qs}` : ""}`);
-    }
 
     const activeSlug = legacyRouteOverride ?? slug;
     const data = await getProductData(activeSlug);

@@ -45,6 +45,7 @@ import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
+import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import {
     createPendingPdpAnalyticsNavigation,
     resolveAndConsumePdpAnalyticsNavigation,
@@ -1236,6 +1237,10 @@ export default function ProductDetailClient({
             ? { graceSku: selectedVariant.graceSku ?? null, websiteSku: selectedVariant.websiteSku ?? null }
             : "skip",
     );
+    const selectedKit = resolveSelectedSkuKit({
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    }, selectedKitQuery);
 
     const productDescription = chooseCanonicalProductDescription({
         groupDescription: group?.groupDescription ?? null,
@@ -1314,13 +1319,13 @@ export default function ProductDetailClient({
         hasApproved3d,
         // A pending kit query is not negative truth. Once it resolves, this same
         // selected-SKU value governs both the shell and its stage modes.
-        hasReleasedKit: Boolean(selectedKitQuery?.parts?.length),
+        hasReleasedKit: Boolean(selectedKit?.parts?.length),
         hasDimensions: variants.some((variant) => Boolean(
             variant.heightWithCap?.trim()
             || variant.heightWithoutCap?.trim()
             || variant.diameter?.trim(),
         )),
-    }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, selectedKitQuery, variants]);
+    }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, selectedKit, variants]);
     const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
@@ -1805,7 +1810,8 @@ export default function ProductDetailClient({
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
-                                kitQuery={selectedKitQuery}
+                                kitQuery={selectedKit}
+                                selectedGraceSku={selectedVariant?.graceSku ?? null}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
                                 priceEach={selectedVariant?.webPrice1pc ?? null}
