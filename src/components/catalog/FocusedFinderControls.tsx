@@ -29,13 +29,22 @@ function RefinementButton({
     selected: boolean;
     onClick: () => void;
 }) {
+    const unavailable = count === 0 && !selected;
+
     return (
         <button
             type="button"
             aria-pressed={selected}
+            aria-disabled={unavailable}
+            disabled={unavailable}
+            title={unavailable ? `${label} is not available with the current selections.` : undefined}
             onClick={onClick}
             className={`flex min-h-11 w-full items-center justify-between gap-3 border-b border-champagne/45 px-3 text-left text-sm transition-colors last:border-b-0 focus-visible:relative focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold motion-reduce:transition-none ${
-                selected ? "bg-obsidian text-bone" : "bg-linen text-obsidian hover:bg-bone"
+                selected
+                    ? "bg-obsidian text-bone"
+                    : unavailable
+                        ? "cursor-not-allowed bg-linen text-slate/45"
+                        : "bg-linen text-obsidian hover:bg-bone"
             }`}
         >
             <span>{label}</span>
@@ -56,9 +65,11 @@ export default function FocusedFinderControls({
     return (
         <div className={`border border-champagne/70 bg-linen ${className}`}>
             <p className="border-b border-champagne/70 px-4 py-3 text-sm leading-relaxed text-slate">
-                Refine these results if capacity or roller construction matters to your order.
+                {rollerMaterialOptions.length
+                    ? "Refine these results if capacity or roller construction matters to your order."
+                    : "Refine these results if capacity matters to your order."}
             </p>
-            <fieldset className="border-b border-champagne/70 p-3">
+            <fieldset className={`${rollerMaterialOptions.length ? "border-b" : ""} border-champagne/70 p-3`}>
                 <legend className="px-1 font-serif text-lg text-obsidian">Capacity</legend>
                 <div className="mt-2 border border-champagne/60">
                     {capacityOptions.map((option) => (
@@ -72,20 +83,22 @@ export default function FocusedFinderControls({
                     ))}
                 </div>
             </fieldset>
-            <fieldset className="p-3">
-                <legend className="px-1 font-serif text-lg text-obsidian">Roller Material</legend>
-                <div className="mt-2 border border-champagne/60">
-                    {rollerMaterialOptions.map((option) => (
-                        <RefinementButton
-                            key={option.value}
-                            label={option.label}
-                            count={option.count}
-                            selected={selectedRollerMaterials.includes(option.value)}
-                            onClick={() => onToggleRollerMaterial(option.value)}
-                        />
-                    ))}
-                </div>
-            </fieldset>
+            {rollerMaterialOptions.length ? (
+                <fieldset className="p-3">
+                    <legend className="px-1 font-serif text-lg text-obsidian">Roller Material</legend>
+                    <div className="mt-2 border border-champagne/60">
+                        {rollerMaterialOptions.map((option) => (
+                            <RefinementButton
+                                key={option.value}
+                                label={option.label}
+                                count={option.count}
+                                selected={selectedRollerMaterials.includes(option.value)}
+                                onClick={() => onToggleRollerMaterial(option.value)}
+                            />
+                        ))}
+                    </div>
+                </fieldset>
+            ) : null}
         </div>
     );
 }

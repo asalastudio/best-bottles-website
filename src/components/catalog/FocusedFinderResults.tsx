@@ -42,7 +42,11 @@ export default function FocusedFinderResults({
     return (
         <section className={className} aria-labelledby="focused-finder-results-heading">
             <header className="mb-5 flex items-end justify-between gap-4 border-b border-champagne/70 pb-3">
-                <h2 id="focused-finder-results-heading" className="font-serif text-3xl font-medium leading-none text-obsidian">
+                <h2
+                    id="focused-finder-results-heading"
+                    tabIndex={-1}
+                    className="font-serif text-3xl font-medium leading-none text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold"
+                >
                     Matching bottles
                 </h2>
                 <p aria-live="polite" aria-atomic="true" className="shrink-0 text-sm tabular-nums text-slate">

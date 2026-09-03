@@ -1,4 +1,4 @@
-import { applicatorNavHref } from "@/lib/catalogFilters";
+import { applicationFinderHref } from "@/lib/products/focused-shopping";
 
 export type HomepageFamilyCard = {
     family: string;
@@ -48,35 +48,35 @@ export const HOME_APPLICATION_LINKS = [
     {
         key: "rollon",
         label: "Roll-On",
-        href: applicatorNavHref("rollon"),
+        href: applicationFinderHref("rollon"),
         image: "/assets/applicator-sketches/roll-on-pencil.webp",
         description: "Controlled, direct application",
     },
     {
         key: "spray",
         label: "Fine Mist Sprayer",
-        href: applicatorNavHref("spray"),
+        href: applicationFinderHref("spray"),
         image: "/assets/applicator-sketches/fine-mist-pencil.webp",
         description: "Even, atomized coverage",
     },
     {
         key: "lotionpump",
         label: "Lotion Pump",
-        href: applicatorNavHref("lotionpump"),
+        href: applicationFinderHref("lotionpump"),
         image: "/assets/applicator-sketches/lotion-pump-treatment-pencil.webp",
         description: "Measured dispensing for creams",
     },
     {
         key: "dropper",
         label: "Dropper",
-        href: applicatorNavHref("dropper"),
+        href: applicationFinderHref("dropper"),
         image: "/assets/applicator-sketches/dropper-pencil.webp",
         description: "Precise, measured application",
     },
     {
         key: "reducer",
         label: "Reducer",
-        href: applicatorNavHref("reducer"),
+        href: applicationFinderHref("reducer"),
         image: "/assets/applicator-sketches/reducer-pencil.webp",
         description: "Controlled oil dispensing",
     },

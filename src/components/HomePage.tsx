@@ -16,8 +16,9 @@ import Footer from "@/components/Footer";
 import { useGrace } from "@/components/useGrace";
 import { urlFor } from "@/sanity/lib/image";
 import type { HomepageData } from "@/sanity/lib/queries";
-import { APPLICATOR_NAV, applicatorNavHref } from "@/lib/catalogFilters";
+import { APPLICATOR_NAV } from "@/lib/catalogFilters";
 import type { ApplicatorNavValue } from "@/lib/catalogFilters";
+import { applicationFinderHref } from "@/lib/products/focused-shopping";
 import {
     HOME_ACCESSORY_STORY,
     HOME_APPLICATION_LINKS,
@@ -284,11 +285,11 @@ function MobilePostHeroSearch() {
 /* ─── Mobile Category Grid: replaces Hero on mobile ─── */
 
 const DEFAULT_MOBILE_CATEGORIES = [
-    { label: "Roll-On Bottles", href: applicatorNavHref("rollon"), img: "/assets/vintage-spray.png" },
-    { label: "Spray Bottles", href: applicatorNavHref("spray"), img: "/assets/Cylinder-BB.png" },
-    { label: "Dropper Bottles", href: applicatorNavHref("dropper"), img: "/assets/collection_amber.png" },
-    { label: "Lotion Pumps", href: applicatorNavHref("lotionpump"), img: "/assets/collection_amber.png" },
-    { label: "Reducer Bottles", href: applicatorNavHref("reducer"), img: "/references/9ml/clear.jpg" },
+    { label: "Roll-On Bottles", href: applicationFinderHref("rollon"), img: "/assets/vintage-spray.png" },
+    { label: "Spray Bottles", href: applicationFinderHref("spray"), img: "/assets/Cylinder-BB.png" },
+    { label: "Dropper Bottles", href: applicationFinderHref("dropper"), img: "/assets/collection_amber.png" },
+    { label: "Lotion Pumps", href: applicationFinderHref("lotionpump"), img: "/assets/collection_amber.png" },
+    { label: "Reducer Bottles", href: applicationFinderHref("reducer"), img: "/references/9ml/clear.jpg" },
     { label: "Shop All 2,300+", href: "/catalog", img: "/assets/Hero-BB.png" },
 ];
 
@@ -457,7 +458,7 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
     const router = useRouter();
     const [step, setStep] = useState(1);
     const [useCase, setUseCase] = useState<string | null>(null);
-    const [applicator, setApplicator] = useState<string | null>(null);
+    const [applicator, setApplicator] = useState<ApplicatorNavValue | null>(null);
 
     const selectedUseCase = USE_CASES.find((u) => u.id === useCase);
     const availableDispensers = selectedUseCase?.applicators.length
@@ -474,18 +475,17 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
         setStep(2);
     }, [router, onClose]);
 
-    const handleDispenserSelect = useCallback((value: string) => {
+    const handleDispenserSelect = useCallback((value: ApplicatorNavValue) => {
         setApplicator(value);
         setStep(3);
     }, []);
 
     const handleSizeSelect = useCallback((sizeParams: string) => {
-        // Resolve nav-level applicator to actual bucket values via shared config
-        const nav = applicator ? APPLICATOR_NAV.find((n) => n.value === applicator) : null;
-        const params = new URLSearchParams();
-        if (nav) params.set("applicators", nav.buckets.join(","));
+        const pathname = applicator ? applicationFinderHref(applicator) : "/catalog";
+        const params = new URLSearchParams(sizeParams);
         if (sizeParams) params.set("sort", "capacity-asc");
-        const url = `/catalog?${params.toString()}${sizeParams ? `&${sizeParams}` : ""}`;
+        const query = params.toString();
+        const url = `${pathname}${query ? `?${query}` : ""}`;
         router.push(url);
         onClose();
     }, [applicator, router, onClose]);
