@@ -46,6 +46,7 @@ function resultFixture(): CatalogSearchResultShape {
             categories: { "Glass Bottle": 300, Component: 67 },
             collections: { Bottles: 300 },
             applicators: { rollon: 30, finemist: 80, lotionpump: 20 },
+            rollerMaterials: { metal: 25, plastic: 5 },
             families: { Cylinder: 22, Elegant: 20, "Boston Round": 18 },
             colors: { Clear: 180, Amber: 70, "Cobalt Blue": 30 },
             capacities: {

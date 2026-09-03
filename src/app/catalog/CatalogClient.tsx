@@ -170,6 +170,7 @@ interface Facets {
     categories: Record<string, number>;
     collections: Record<string, number>;
     applicators: Record<string, number>;
+    rollerMaterials: Record<"metal" | "plastic", number>;
     families: Record<string, number>;
     colors: Record<string, number>;
     capacities: Record<string, { label: string; ml: number | null; count: number }>;
@@ -614,6 +615,22 @@ function FilterSidebarContent({
         return Object.entries(facets.componentTypes).sort(([, a], [, b]) => b - a);
     }, [facets]);
 
+    const rollerMaterialSection = facets && (facets.rollerMaterials.metal > 0 || facets.rollerMaterials.plastic > 0) ? (
+        <RefineSection title="Roller Material" defaultOpen={openByDefault("rollerMaterials")} hasActiveFilters={filters.rollerMaterials.length > 0}>
+            <div className="space-y-0.5">
+                {(["metal", "plastic"] as const).map((material) => (
+                    <CheckboxItem
+                        key={material}
+                        label={`${material[0].toUpperCase()}${material.slice(1)} roller`}
+                        count={facets.rollerMaterials[material]}
+                        checked={filters.rollerMaterials.includes(material)}
+                        onChange={() => toggleArrayFilter("rollerMaterials", material)}
+                    />
+                ))}
+            </div>
+        </RefineSection>
+    ) : null;
+
     const toggleCapacityRange = (labels: string[]) => {
         const selected = new Set(filters.capacities);
         const allSelected = labels.every((label) => selected.has(label));
@@ -848,6 +865,7 @@ function FilterSidebarContent({
         category: categorySection,
         collection: null,
         applicators: applicatorSection,
+        rollerMaterials: rollerMaterialSection,
         capacities: capacitySection,
         neckThreadSizes: neckThreadSection,
         colors: colorSection,

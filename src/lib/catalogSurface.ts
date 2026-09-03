@@ -1,4 +1,6 @@
 import {
+    APPLICATOR_NAV,
+    type ApplicatorNavValue,
     EMPTY_FILTERS,
     type CatalogFacetKey,
     type CatalogFilters,
@@ -6,7 +8,7 @@ import {
 } from "@/lib/catalogFilters";
 
 export type CatalogSurfaceManifest = {
-    id: "master" | "cylinder";
+    id: "master" | "cylinder" | "application";
     fixedFilters: Partial<CatalogFilters>;
     /**
      * Sidebar order. This IS the render order on the master catalogue — the
@@ -62,6 +64,28 @@ export const CYLINDER_CATALOG_SURFACE: CatalogSurfaceManifest = {
     defaultSort: "capacity-asc",
     resultLabel: "Cylinder groups",
 };
+
+export function applicationCatalogSurface(application: ApplicatorNavValue): CatalogSurfaceManifest {
+    const nav = APPLICATOR_NAV.find((candidate) => candidate.value === application);
+    if (!nav) throw new Error(`Unknown application surface: ${application}`);
+    const isRollOn = application === "rollon";
+    return {
+        id: "application",
+        fixedFilters: { applicators: [...nav.buckets] },
+        visibleFacets: [
+            "capacities",
+            ...(isRollOn ? ["rollerMaterials" as const] : []),
+            "colors",
+            "neckThreadSizes",
+            "families",
+        ],
+        defaultOpenFacets: ["capacities"],
+        mobileDefaultOpenFacets: ["capacities"],
+        truncateAfter: 8,
+        defaultSort: "capacity-asc",
+        resultLabel: `${nav.label} groups`,
+    };
+}
 
 export function applyCatalogSurface(
     filters: Partial<CatalogFilters>,

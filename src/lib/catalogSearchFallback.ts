@@ -4,9 +4,11 @@ import {
     COMPONENT_CATEGORIES,
     FAMILY_ORDER,
     type CatalogFilters,
+    type RollerMaterial,
     type SortValue,
     type ViewMode,
     applicatorBucketMatchesProductValues,
+    rollerMaterialMatchesProductValues,
     canonicalGlassColor,
     catalogSearchMatches,
     catalogSearchResultTieBreak,
@@ -70,6 +72,7 @@ export interface CatalogSearchResultShape {
         categories: Record<string, number>;
         collections: Record<string, number>;
         applicators: Record<string, number>;
+        rollerMaterials: Record<RollerMaterial, number>;
         families: Record<string, number>;
         colors: Record<string, number>;
         capacities: Record<string, { label: string; ml: number | null; count: number }>;
@@ -131,6 +134,9 @@ export function buildCatalogSearchResult(input: {
         if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
             rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
         }
+        if (!skipKeys.has("rollerMaterials") && filters.rollerMaterials.length > 0) {
+            rows = rows.filter((group) => filters.rollerMaterials.some((material) => rollerMaterialMatchesProductValues(material, group.applicatorTypes ?? [])));
+        }
         if (!skipKeys.has("families") && filters.families.length > 0) {
             const set = new Set(filters.families);
             rows = rows.filter((group) => group.family != null && set.has(group.family));
@@ -160,6 +166,7 @@ export function buildCatalogSearchResult(input: {
 
     const result = runFilters();
     const applicatorFacetBase = runFilters(new Set(["applicators"]));
+    const rollerMaterialFacetBase = runFilters(new Set(["rollerMaterials"]));
     const familyFacetBase = runFilters(new Set(["families"]));
     const colorFacetBase = runFilters(new Set(["colors"]));
     const capacityFacetBase = runFilters(new Set(["capacities"]));
@@ -177,6 +184,10 @@ export function buildCatalogSearchResult(input: {
             capacities[label].count++;
         }
     }
+    const rollerMaterials = {
+        metal: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("metal", group.applicatorTypes ?? [])).length,
+        plastic: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("plastic", group.applicatorTypes ?? [])).length,
+    } satisfies Record<RollerMaterial, number>;
     const categoryFacetBase = runFilters(new Set(["category", "collection"]));
     const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
     const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
@@ -184,6 +195,7 @@ export function buildCatalogSearchResult(input: {
         categories: countBy(categoryFacetBase, (group) => group.category),
         collections: countBy(categoryFacetBase, (group) => group.bottleCollection),
         applicators,
+        rollerMaterials,
         families: countBy(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
         colors: countBy(colorFacetBase, (group) => canonicalGlassColor(group.color)),
         capacities,

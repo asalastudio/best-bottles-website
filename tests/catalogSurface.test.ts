@@ -4,6 +4,7 @@ import {
     CYLINDER_CATALOG_SURFACE,
     MASTER_CATALOG_SURFACE,
     applyCatalogSurface,
+    applicationCatalogSurface,
 } from "@/lib/catalogSurface";
 
 describe("catalog surface manifests", () => {
@@ -37,5 +38,14 @@ describe("catalog surface manifests", () => {
             "neckThreadSizes",
         ]);
         expect(CYLINDER_CATALOG_SURFACE.defaultOpenFacets).toEqual(["capacities"]);
+    });
+
+    it("scopes application finders to their canonical buckets and exposes roller material only for Roll-On", () => {
+        expect(applicationCatalogSurface("rollon")).toMatchObject({
+            fixedFilters: { applicators: ["rollon"] },
+            visibleFacets: ["capacities", "rollerMaterials", "colors", "neckThreadSizes", "families"],
+            defaultSort: "capacity-asc",
+        });
+        expect(applicationCatalogSurface("spray").visibleFacets).not.toContain("rollerMaterials");
     });
 });

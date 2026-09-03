@@ -6,6 +6,7 @@ import {
 } from "@/lib/catalogSearchFallback";
 import {
     EMPTY_FILTERS,
+    normalizeRollerMaterials,
     SORT_OPTIONS,
     VIEW_MODES,
     type CatalogFilters,
@@ -94,6 +95,7 @@ function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSearchArgs 
             category: typeof filters.category === "string" ? filters.category : null,
             collection: typeof filters.collection === "string" ? filters.collection : null,
             applicators: asStringArray(filters.applicators) as CatalogFilters["applicators"],
+            rollerMaterials: normalizeRollerMaterials(asStringArray(filters.rollerMaterials)),
             families: asStringArray(filters.families),
             colors: asStringArray(filters.colors),
             capacities: asStringArray(filters.capacities),

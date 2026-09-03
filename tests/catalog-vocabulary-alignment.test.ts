@@ -190,6 +190,11 @@ describe("no duplicated vocabulary in consumers", () => {
         expect(client).not.toContain("useQuery(api.products.getCatalogTaxonomy)");
     });
 
+    it("the catalog fallback and Convex search share the roller-material matcher", () => {
+        expect(read("src/lib/catalogSearchFallback.ts")).toContain("rollerMaterialMatchesProductValues");
+        expect(read("convex/products.ts")).toContain("rollerMaterialMatchesProductValues");
+    });
+
     it("Grace's Convex search detects families and colours through the shared helpers", () => {
         expect(read("convex/grace.ts")).toContain("detectCatalogFamily(");
         expect(read("convex/grace.ts")).not.toContain("const KNOWN_FAMILIES");

@@ -6,6 +6,7 @@ import {
 
 export type CatalogArrayFacet =
     | "applicators"
+    | "rollerMaterials"
     | "families"
     | "capacities"
     | "colors"
@@ -43,6 +44,9 @@ export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterC
         const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value;
         chips.push({ facet: "applicators", value, label: `Applicator: ${label}` });
     }
+    for (const value of filters.rollerMaterials) {
+        chips.push({ facet: "rollerMaterials", value, label: `Roller: ${value}` });
+    }
     for (const value of filters.families) {
         chips.push({ facet: "families", value, label: `Family: ${value}` });
     }
@@ -73,6 +77,7 @@ export function removeCatalogFilterChip(
 ): CatalogFilters {
     if (
         chip.facet === "applicators"
+        || chip.facet === "rollerMaterials"
         || chip.facet === "families"
         || chip.facet === "capacities"
         || chip.facet === "colors"

@@ -24,6 +24,8 @@ export const APPLICATOR_BUCKETS = [
 ] as const;
 
 export type ApplicatorBucket = (typeof APPLICATOR_BUCKETS)[number]["value"];
+export const ROLLER_MATERIALS = ["metal", "plastic"] as const;
+export type RollerMaterial = (typeof ROLLER_MATERIALS)[number];
 
 /** Canonical bucket slugs — the ONLY applicator vocabulary Grace's refine tool accepts. */
 export const APPLICATOR_BUCKET_VALUES: readonly ApplicatorBucket[] = APPLICATOR_BUCKETS.map((bucket) => bucket.value);
@@ -381,6 +383,18 @@ export function applicatorBucketMatchesProductValues(bucket: ApplicatorBucket, p
     return productApplicatorTypes.some((a) => (def.productValues as readonly string[]).includes(a));
 }
 
+/** Match the canonical roller facet against real product-group applicator values. */
+export function rollerMaterialMatchesProductValues(material: RollerMaterial, productApplicatorTypes: string[]): boolean {
+    const productValue = material === "metal" ? ["Metal Roller Ball", "Metal Roller"] : ["Plastic Roller Ball", "Plastic Roller"];
+    return productApplicatorTypes.some((value) => productValue.includes(value));
+}
+
+export function normalizeRollerMaterials(values: readonly string[]): RollerMaterial[] {
+    return Array.from(new Set(values.map((value) => value.trim().toLowerCase()).filter(
+        (value): value is RollerMaterial => (ROLLER_MATERIALS as readonly string[]).includes(value),
+    )));
+}
+
 export const SORT_OPTIONS = [
     { value: "featured", label: "By Design Family" },
     { value: "best-match", label: "Best Match" },
@@ -402,6 +416,7 @@ export interface CatalogFilters {
     category: string | null;
     collection: string | null;
     applicators: ApplicatorBucket[];
+    rollerMaterials: RollerMaterial[];
     families: string[];
     colors: string[];
     capacities: string[];
@@ -414,6 +429,7 @@ export interface CatalogFilters {
 
 export type CatalogFacetKey =
     | "applicators"
+    | "rollerMaterials"
     | "families"
     | "capacities"
     | "colors"
@@ -427,6 +443,7 @@ export const EMPTY_FILTERS: CatalogFilters = {
     category: null,
     collection: null,
     applicators: [],
+    rollerMaterials: [],
     families: [],
     colors: [],
     capacities: [],
@@ -453,6 +470,7 @@ export function classifyComponentType(displayName: string, family: string | null
 export function filtersAreEmpty(f: CatalogFilters): boolean {
     return (
         !f.category && !f.collection && f.applicators.length === 0 &&
+        f.rollerMaterials.length === 0 &&
         f.families.length === 0 && f.colors.length === 0 && f.capacities.length === 0 &&
         f.neckThreadSizes.length === 0 && !f.componentType &&
         f.priceMin === null && f.priceMax === null && !f.search
@@ -464,6 +482,7 @@ export function activeFilterCount(f: CatalogFilters): number {
     if (f.category) n++;
     if (f.collection) n++;
     n += f.applicators.length;
+    n += f.rollerMaterials.length;
     n += f.families.length;
     n += f.colors.length;
     n += f.capacities.length;
@@ -483,6 +502,7 @@ export const CATALOG_FACET_PARAM_KEYS = [
     "category",
     "collection",
     "applicators",
+    "roller",
     "families",
     "family",
     "colors",
@@ -498,6 +518,7 @@ export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMo
     if (f.category) p.set("category", f.category);
     if (f.collection) p.set("collection", f.collection);
     if (f.applicators.length) p.set("applicators", f.applicators.join(","));
+    if (f.rollerMaterials.length) p.set("roller", f.rollerMaterials.join(","));
     if (f.families.length) p.set("families", f.families.join(","));
     if (f.colors.length) p.set("colors", f.colors.join(","));
     if (f.capacities.length) p.set("capacities", f.capacities.join(","));
@@ -539,6 +560,7 @@ export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters;
             category: sp.get("category") || null,
             collection: sp.get("collection") || null,
             applicators: validApplicators,
+            rollerMaterials: normalizeRollerMaterials(getMultiParam(sp, "roller")),
             // Accept both ?families=Cylinder,Elegant (multi) and ?family=Cylinder (singular, used by Grace)
             families: familiesParam.length > 0 ? familiesParam : getMultiParam(sp, "family"),
             colors: Array.from(new Set(

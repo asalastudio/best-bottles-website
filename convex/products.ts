@@ -19,7 +19,9 @@ import {
     catalogSearchMatches,
     catalogSearchScore,
     classifyComponentType as classifyCatalogComponentType,
+    normalizeRollerMaterials,
     parseCapacityLabelMl as parseCapacityMl,
+    rollerMaterialMatchesProductValues,
 } from "../src/lib/catalogFilters";
 
 function isSanityCdnUrl(value: string) {
@@ -729,6 +731,7 @@ export const searchCatalog = query({
             category: v.optional(v.union(v.string(), v.null())),
             collection: v.optional(v.union(v.string(), v.null())),
             applicators: v.optional(v.array(v.string())),
+            rollerMaterials: v.optional(v.array(v.string())),
             families: v.optional(v.array(v.string())),
             colors: v.optional(v.array(v.string())),
             capacities: v.optional(v.array(v.string())),
@@ -748,6 +751,7 @@ export const searchCatalog = query({
             category: args.filters.category ?? null,
             collection: args.filters.collection ?? null,
             applicators: args.filters.applicators ?? [],
+            rollerMaterials: normalizeRollerMaterials(args.filters.rollerMaterials ?? []),
             families: args.filters.families ?? [],
             colors: args.filters.colors ?? [],
             capacities: args.filters.capacities ?? [],
@@ -795,6 +799,9 @@ export const searchCatalog = query({
             if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
                 rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
             }
+            if (!skipKeys.has("rollerMaterials") && filters.rollerMaterials.length > 0) {
+                rows = rows.filter((group) => filters.rollerMaterials.some((material) => rollerMaterialMatchesProductValues(material, group.applicatorTypes ?? [])));
+            }
             if (!skipKeys.has("families") && filters.families.length > 0) {
                 const familySet = new Set(filters.families);
                 rows = rows.filter((group) => group.family != null && familySet.has(group.family));
@@ -828,6 +835,7 @@ export const searchCatalog = query({
 
         const result = runFilters();
         const applicatorFacetBase = runFilters(new Set(["applicators"]));
+        const rollerMaterialFacetBase = runFilters(new Set(["rollerMaterials"]));
         const familyFacetBase = runFilters(new Set(["families"]));
         const colorFacetBase = runFilters(new Set(["colors"]));
         const capacityFacetBase = runFilters(new Set(["capacities"]));
@@ -849,6 +857,11 @@ export const searchCatalog = query({
             }
         }
 
+        const rollerMaterials = {
+            metal: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("metal", group.applicatorTypes ?? [])).length,
+            plastic: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("plastic", group.applicatorTypes ?? [])).length,
+        };
+
         const categoryFacetBase = runFilters(new Set(["category", "collection"]));
         const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
         const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
@@ -858,6 +871,7 @@ export const searchCatalog = query({
             categories: countByCatalogGroup(categoryFacetBase, (group) => group.category),
             collections: countByCatalogGroup(categoryFacetBase, (group) => group.bottleCollection),
             applicators: applicatorCounts,
+            rollerMaterials,
             families: countByCatalogGroup(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
             colors: countByCatalogGroup(colorFacetBase, (group) => canonicalGlassColor(group.color)),
             capacities,
