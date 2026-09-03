@@ -1,6 +1,9 @@
-import { createElement } from "react";
+// @vitest-environment jsdom
+
+import { act, createElement } from "react";
+import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 import FocusedApplicationCards from "@/components/catalog/FocusedApplicationCards";
 import FocusedFinderControls from "@/components/catalog/FocusedFinderControls";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
@@ -8,6 +11,7 @@ import {
     buildFocusedProductHref,
 } from "@/components/catalog/FocusedProductCard";
 import {
+    default as FinderNavigationMemory,
     clampFinderScrollPosition,
     finderNavigationMemoryKey,
     parseFinderNavigationMemory,
@@ -40,6 +44,13 @@ const product: GuidedFinderProduct = {
 };
 
 const families: GuidedFinderFamily[] = [{ family: "Cylinder", exactProducts: [product] }];
+
+(globalThis as typeof globalThis & { IS_REACT_ACT_ENVIRONMENT: boolean }).IS_REACT_ACT_ENVIRONMENT = true;
+
+afterEach(() => {
+    document.body.replaceChildren();
+    window.sessionStorage.clear();
+});
 
 describe("focused finder navigation safety", () => {
     it.each([
@@ -75,6 +86,60 @@ describe("focused finder navigation safety", () => {
         expect(parseFinderNavigationMemory(stored, otherRoute)).toBeNull();
         expect(clampFinderScrollPosition(780, 1000, 500)).toBe(500);
         expect(clampFinderScrollPosition(-40, 1000, 500)).toBe(0);
+    });
+
+    it("saves the latest scroll position when SPA navigation unmounts the finder", () => {
+        const pathname = "/catalog/application/roll-on";
+        const search = "?capacity=9+ml";
+        const container = document.createElement("div");
+        document.body.append(container);
+        const root = createRoot(container);
+        Object.defineProperty(window, "scrollY", { configurable: true, value: 120, writable: true });
+
+        act(() => {
+            root.render(createElement(FinderNavigationMemory, {
+                pathname,
+                search,
+                expandedFamily: "Cylinder",
+                onRestoreExpandedFamily: () => undefined,
+            }));
+        });
+        Object.defineProperty(window, "scrollY", { configurable: true, value: 740, writable: true });
+        act(() => root.unmount());
+
+        expect(JSON.parse(window.sessionStorage.getItem(
+            finderNavigationMemoryKey(pathname, search),
+        ) ?? "null")).toEqual({
+            route: "/catalog/application/roll-on?capacity=9+ml",
+            expandedFamily: "Cylinder",
+            scrollY: 740,
+        });
+    });
+
+    it("restores an intentionally collapsed family state through the callback", () => {
+        const pathname = "/catalog/application/roll-on";
+        const search = "?capacity=9+ml";
+        const route = `${pathname}${search}`;
+        const restored: Array<string | null> = [];
+        window.sessionStorage.setItem(
+            finderNavigationMemoryKey(pathname, search),
+            JSON.stringify({ route, expandedFamily: null, scrollY: 0 }),
+        );
+        const container = document.createElement("div");
+        document.body.append(container);
+        const root = createRoot(container);
+
+        act(() => {
+            root.render(createElement(FinderNavigationMemory, {
+                pathname,
+                search,
+                expandedFamily: "Cylinder",
+                onRestoreExpandedFamily: (family) => restored.push(family),
+            }));
+        });
+
+        expect(restored).toEqual([null]);
+        act(() => root.unmount());
     });
 });
 

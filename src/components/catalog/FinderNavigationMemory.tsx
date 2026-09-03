@@ -14,7 +14,7 @@ type FinderNavigationMemoryProps = {
     pathname: string;
     search: string;
     expandedFamily: string | null;
-    onRestoreExpandedFamily: (family: string) => void;
+    onRestoreExpandedFamily: (family: string | null) => void;
 };
 
 export function safeCatalogReturnPath(value: string | null): string | null {
@@ -72,7 +72,7 @@ export default function FinderNavigationMemory({
         const state = parseFinderNavigationMemory(window.sessionStorage.getItem(storageKey), route);
         if (!state) return;
         skipInitialSave.current = route;
-        if (state.expandedFamily) onRestoreExpandedFamily(state.expandedFamily);
+        onRestoreExpandedFamily(state.expandedFamily);
         if (state.scrollY <= 0) return;
 
         window.requestAnimationFrame(() => {
@@ -99,7 +99,10 @@ export default function FinderNavigationMemory({
         skipInitialSave.current = null;
         if (shouldSaveImmediately) save();
         window.addEventListener("pagehide", save);
-        return () => window.removeEventListener("pagehide", save);
+        return () => {
+            window.removeEventListener("pagehide", save);
+            save();
+        };
     }, [expandedFamily, route, storageKey]);
 
     return null;
