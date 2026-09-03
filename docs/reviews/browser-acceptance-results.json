@@ -1,0 +1,227 @@
+{
+  "timestamp": "2026-09-03T15:58:06.376Z",
+  "passes": 22,
+  "fails": 22,
+  "results": [
+    {
+      "status": "PASS",
+      "label": "/catalog loads",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "/catalog has filter sidebar",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "/catalog shows products",
+      "detail": "0 cards"
+    },
+    {
+      "status": "PASS",
+      "label": "roll-on route loads",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "roll-on shows products before refinement",
+      "detail": "0"
+    },
+    {
+      "status": "PASS",
+      "label": "capacity/roller controls visible",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "no mandatory application wizard step",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "Cylinder heading present",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "application cards visible",
+      "detail": "0"
+    },
+    {
+      "status": "FAIL",
+      "label": "Cylinder products visible",
+      "detail": "0"
+    },
+    {
+      "status": "PASS",
+      "label": "PDP stage present",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "No application switcher above fold",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Price visible",
+      "detail": "not found"
+    },
+    {
+      "status": "PASS",
+      "label": "Primary CTA present",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "Quantity input present",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "'Also available in these sizes' section",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "'Other ways to dispense' section",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "'Compatible components' section",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "Link to /matrix present below fold",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "H1 is 'Build a Bottle'",
+      "detail": "Build a Bottle"
+    },
+    {
+      "status": "PASS",
+      "label": "'Product Compatibility Matrix' subtitle present",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Matrix client rendered",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Grace button not found on PDP desktop",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "PASS",
+      "label": "No horizontal overflow on application finder",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Mobile finder shows products",
+      "detail": "0"
+    },
+    {
+      "status": "FAIL",
+      "label": "No page-level horizontal overflow on PDP",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "Stage visible mobile",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Price visible mobile",
+      "detail": "missing"
+    },
+    {
+      "status": "PASS",
+      "label": "CTA visible mobile",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "Closure rail present",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Grace overlay opens on mobile PDP",
+      "detail": ""
+    },
+    {
+      "status": "PASS",
+      "label": "URL/state preserved after closing Grace",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Back navigation restores finder URL",
+      "detail": "http://localhost:3001/products/cylinder-9ml-clear-17-415-rollon"
+    },
+    {
+      "status": "PASS",
+      "label": "Direct PDP URL is purchasable without finder history",
+      "detail": ""
+    },
+    {
+      "status": "FAIL",
+      "label": "Mobile console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Mobile console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Mobile console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Mobile console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "status": "FAIL",
+      "label": "Mobile console error",
+      "detail": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    }
+  ]
+}
