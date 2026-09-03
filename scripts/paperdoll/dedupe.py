@@ -7,13 +7,12 @@ Collapse the inventory into one candidate source per (stem, cap state).
 
 Rules (plan §2):
   1. byte-identical files are ONE asset with every location kept (provenance, nothing "dropped");
-  2. cap state: the filename, then the UAT top folders (C/2 on, C/1 off), then a single-state
-     label deeper in the path; a file whose bytes also sit in a folder with a known state
+  2. cap state: the filename, then a single-state label in the master path; a file whose
+     bytes also sit in a folder with a known state
      inherits that state ("sha sibling"); what is left goes to the blob-count heuristic and is
      tagged as such (a photographed cap beside the bottle is a second ink blob);
-  3. precedence when several distinct files share (stem, state):
-     C/2 or C/1 > A family folder > A "31. Capped & Uncapped" copies > A Tassels (Updated over
-     Original); thumbnails and views are never candidates;
+  3. when several distinct master files share (stem, state), prefer explicit cap-state evidence
+     and the larger canvas; thumbnails and views are never candidates;
   4. two distinct PHOTOGRAPHS for one (stem, state) -> SAME_STEM_DIFFERENT_PHOTOGRAPH, nothing
      chosen, both listed. Re-saves (perceptual hash within 6 bits) are the same photograph;
   5. a hi-res file in a family whose other files are standard size is set aside before
@@ -135,22 +134,17 @@ class ImageFacts:
 
 # ---------------------------------------------------------------- precedence
 def precedence(f: dict) -> tuple[int, str]:
-    """Lower is better. The UAT set is curated; inside A the family folder beats its copies."""
+    """Prefer organized master components; the path is the stable tie-breaker."""
     d = f["dirKey"]
-    if f["library"] == "bbuat":
-        return (0, d)
-    if f["library"] == "bbmaster":
-        return (5, d)          # the supplement: fills gaps, never outranks A or C
-    if "31. Capped & Uncapped" in d:
-        return (2, d)
-    if "Updated Tassels" in d:
-        return (3, d)
-    if "Original Tassels" in d:
-        return (4, d)
-    return (1, d)
+    if f["library"] != "master":
+        raise ValueError(f"non-master source in inventory: {f['library']}")
+    organized_component = f.get("role") == "component" and f["relPath"].startswith("20. Caps/")
+    return (0 if organized_component else 1, d)
 
 
 def library_root(f: dict) -> str:
+    if f["library"] != "master":
+        raise ValueError(f"non-master source in inventory: {f['library']}")
     return SOURCES["libraries"][f["library"]]["root"]
 
 
@@ -158,6 +152,9 @@ def main():
     no_image = "--no-image" in sys.argv
     started = time.time()
     inv = json.loads((DATA / "inventory.json").read_text())
+    unexpected_libraries = sorted({f["library"] for f in inv["files"] if f["library"] != "master"})
+    if unexpected_libraries:
+        raise SystemExit("inventory is not master-only; rerun inventory.py before dedupe.py")
     files = [f for f in inv["files"] if not f["junkReason"] and f["role"] in PRODUCT_ROLES]
     facts = ImageFacts(enabled=not no_image)
 

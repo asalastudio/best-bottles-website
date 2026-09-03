@@ -20,8 +20,7 @@ from scipy.signal import fftconvolve
 from scipy import ndimage
 
 REPO = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-LIB = ("/Users/jordanrichter/Projects/Clients/Nemat-International/"
-       "Best-Bottles-Website-02-20-2026/pipeline/paper-doll/reference-images")
+LIB = "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master"
 
 # A family is a folder of PSDs plus the SKU stem that identifies its bottle.
 # Registration reference and template are derived from the plates themselves,

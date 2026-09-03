@@ -6,7 +6,12 @@
  * page pin the join.
  */
 import { describe, expect, it } from "vitest";
-import { buildCapOptionPhotoKeys, photoKeysForVariant, resolveCapOptionPhoto } from "../src/lib/products/closure-swatch-keys";
+import {
+    buildCapOptionPhotoKeys,
+    componentPhotoSkuBelongsToBase,
+    photoKeysForVariant,
+    resolveCapOptionPhoto,
+} from "../src/lib/products/closure-swatch-keys";
 import { getFinishFromWebsiteSku } from "../src/lib/paper-doll/tokens.generated";
 
 // catalogue variants (websiteSku, capColor) and the component rows that photograph them
@@ -26,11 +31,25 @@ for (const sku of componentRows) {
 }
 
 describe("closure swatch photo join", () => {
+    it("does not let an antique bulb supply a fine-mist finish photograph", () => {
+        expect(componentPhotoSkuBelongsToBase("sprayer", "AnSp18-415MtSl")).toBe(false);
+        expect(componentPhotoSkuBelongsToBase("sprayer", "AnSpTsl18-415MtS")).toBe(false);
+        expect(componentPhotoSkuBelongsToBase("sprayer", "CP18-415AnSpPnk")).toBe(false);
+        expect(componentPhotoSkuBelongsToBase("sprayer", "Spry18-415MtSl")).toBe(true);
+        expect(componentPhotoSkuBelongsToBase("sprayer", "Spry18-415ShnBlk")).toBe(true);
+    });
+
     it("the variant's website-SKU token names what the component family keys on", () => {
         expect(photoKeysForVariant(variants[0])).toEqual(["Copper"]);
         expect(photoKeysForVariant(variants[1])).toEqual(["Pink"]);
         expect(photoKeysForVariant(variants[2])).toEqual(["Silver"]);
         expect(photoKeysForVariant(variants[3])).toEqual(["Black"]);
+    });
+
+    it("separates the clear-overcap lotion pump from the plain matte-silver pump", () => {
+        expect(photoKeysForVariant({ websiteSku: "Ltn18-415MtSl" })).toEqual(["Matte Silver"]);
+        expect(photoKeysForVariant({ websiteSku: "Ltn18-415MtSlCl" })).toEqual(["Clear Overcap"]);
+        expect(photoKeysForVariant({ websiteSku: "LBDiva46LtnClOvrCap" })).toEqual(["Clear Overcap"]);
     });
 
     it("every catalogue pill on the page resolves to its photograph", () => {

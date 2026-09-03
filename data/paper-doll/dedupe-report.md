@@ -1,38 +1,38 @@
-# Dedupe report — 2026-09-02T09:54:58
+# Dedupe report — 2026-09-03T00:59:47
 
-product files: 13781  distinct assets (sha256): 5198  stems: 3170
-(stem, state) slots: {'part': 271, 'off': 2340, 'on': 2532}  stems with both on and off: 1972
-cap-state evidence per asset: {'blob-count': 682, 'explicit': 4337, 'component-folder': 179}  heuristic results: {'off': 564, 'on': 118}
-conflicts (SAME_STEM_DIFFERENT_PHOTOGRAPH): 32
-hi-res files set aside: 16
-image facts computed this run: 131 (cache 1478)
-  - cp13-415rollpinkdot [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/19. 13-415 Roll on/4. CPRoll13-415PinkDot.psd | 5. 13-415 Bottles PSD/Caps 13-415/13415/5. CP13-415RollPinkDot.psd
-  - cp13-415rollsldot [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/19. 13-415 Roll on/2. CPRoll13-415SlDot.psd | 5. 13-415 Bottles PSD/Caps 13-415/13415/3. CP13-415RollSlDot.psd
-  - cp13-415spryglsh [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/18. 13-415 Sprayers/5. Spry13-415GlSh.psd | 5. 13-415 Bottles PSD/Caps 13-415/New Folder With Items/13. CP13-415SpryGlSh.psd
-  - cp13-415spryslmt [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/18. 13-415 Sprayers/7. Spry13-415SlMt.psd | 5. 13-415 Bottles PSD/Caps 13-415/New Folder With Items/15. CP13-415SprySlMt.psd
-  - cp13-415spryslsh [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/18. 13-415 Sprayers/8 Spry13-415SlSh.psd | 5. 13-415 Bottles PSD/Caps 13-415/New Folder With Items/16. CP13-415SprySlSh.psd
-  - cp8-425shortblack [part]: 20. Closures - Cap, Sprayers, Lotion pumps, etc/17. 13-415 Caps/1. CP13-415BlkSht.psd | 6.   8-425 Bottles - CB/8245 Caps/1. CP8-425ShortBlack.psd
-  - gb09blackcapapp [on]: 2. PSD Capped /18. 18:400/1. Clear 18:400 Capped/2. GB09BlackCapApp.psd | 12. Vials/0. All Vials/Capped/GB09BlackCapApp..psd
-  - gb10ozplain [on]: 2. PSD Capped /10. Apothecary/6. 10oz Apoth/GB10ozPlain..psd | 2. PSD Capped /10. Apothecary/6. 10oz Apoth/GB10ozPlain.psd
-  - gb2ozapth [on]: 2. PSD Capped /10. Apothecary/7. 2oz Apth/GB2ozApth..psd | 2. PSD Capped /10. Apothecary/7. 2oz Apth/GB2ozApth.psd
-  - gb4ozcobltbl [on]: 2. PSD Capped /10. Apothecary/3. 4oz Apoth/GB4ozCobltBl.psd | 2. PSD Capped /10. Apothecary/3. 4oz Apoth/GB4ozCobltBl..psd
-  - gb6tplsl [on]: 2. PSD Capped /19. 14.3mm/14.3mm/Capped/GB6TPlSl..psd | 2. PSD Capped /19. 14.3mm/14.3mm/Capped/GB6TPlSl...psd
-  - gbelgfrst15blksht [on]: 2. PSD Capped /5.  13-415 Bottles/26. Frosted Elegant 15ml Clear/2. Frosted Elegant 15ml (Capped) PSD/1. GBElgFrst15BlkSht.psd | 5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/1. GBElgFrst15BlkSht.psd
-  - gbelgfrst15whtsht [on]: 2. PSD Capped /5.  13-415 Bottles/26. Frosted Elegant 15ml Clear/2. Frosted Elegant 15ml (Capped) PSD/2. GBElgFrst15WhtSht.psd | 5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/2. GBElgFrst15WhtSht.psd
-  - gbpillar9rollblk [on]: 12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk..psd | 12. Vials/0. All Vials/Capped/27. GBPillar9RollBlk.psd
-  - gbrndfrst128sprymtsl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/26. LBRndFrst128LtnMtSl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/26. LBRndFrst128LtnMtSl.psd
-  - gbrndfrst128spryshnblk [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/22. LBRndFrst128LtnShnBlk.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/22. LBRndFrst128LtnShnBlk.psd
-  - gbrndfrst128spryshngl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/17. GBRndFrst128SpryShnGl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/17. GBRndFrst128SpryShnGl.psd
-  - gbrndfrst128spslshn [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/30. GBRndFrst128SpSlShn.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/30. GBRndFrst128SpSlShn.psd
-  - gbslk50ansptslblk [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/48. GBSlk50AnSpTslBlk.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/48. GBSlk50AnSpTslBlk.psd
-  - gbslk50ansptslgl [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/50. GBSlk50AnSpTslGl.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/50. GBSlk50AnSpTslGl.psd
-  - gbslk50ansptslivygl [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/43. GBSlk50AnSpTslIvyGl.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/43. GBSlk50AnSpTslIvyGl.psd
-  - gbslk50ansptslivysl [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/44. GBSlk50AnSpTslIvySl.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/44. GBSlk50AnSpTslIvySl.psd
-  - gbslk50ansptsllvn [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/42. GBSlk50AnSpTslLvn.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/42. GBSlk50AnSpTslLvn.psd
-  - gbslk50ansptslmtsl [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/49. GBSlk50AnSpTslMtSl.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/49. GBSlk50AnSpTslMtSl.psd
-  - gbslk50ansptslpnk [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/46. GBSlk50AnSpTslPnk.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/46. GBSlk50AnSpTslPnk.psd
-  - gbslk50ansptslred [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/47. GBSlk50AnSpTslRed.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/47. GBSlk50AnSpTslRed.psd
-  - gbslk50ansptslwht [off]: 2. 18-415 Bottles/12. Sleek 50ml/1. Sleek 50ml PSD/45. GBSlk50AnSpTslWht.psd | 21. 18-415 Bottle with Bulb sprayers and Tassels/Updated Tassels/45. GBSlk50AnSpTslWht.psd
-  - gbspry4mlclblk [on]: Small spray bottles 3ml and 4ml/GBSpry4mlClBlk..psd | Small spray bottles 3ml and 4ml/GBSpry4mlClBlk.psd | 18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClBlk...psd | 18. Perfume Glass Bottles with Metal Decoration/GBSpry4mlClBlk..psd
-  - lbrndfrst128ltnmtsl [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/26. LBRndFrst128LtnMtSl.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/26. LBRndFrst128LtnMtSl.psd
-  - lbrndfrst128ltnshnblk [on]: 2. PSD Capped /2.  18-415 Bottles Capped/10. Round Frosted 128ml/1. Round Frst 128ml PSD/22. LBRndFrst128LtnShnBlk.psd | 2. 18-415 Bottles/31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/22. LBRndFrst128LtnShnBlk.psd
+product files: 5622  distinct assets (sha256): 4333  stems: 2801
+(stem, state) slots: {'part': 417, 'off': 2265, 'on': 1659}  stems with both on and off: 1376
+cap-state evidence per asset: {'blob-count': 1836, 'component-folder': 326, 'explicit': 2171}  heuristic results: {'off': 1525, 'on': 311}
+conflicts (SAME_STEM_DIFFERENT_PHOTOGRAPH): 181
+hi-res files set aside: 6
+image facts computed this run: 0 (cache 2687)
+  - cp13-415rollpinkdot [part]: 20. Caps/19. 13-415 Roll on/4. CPRoll13-415PinkDot.psd | 5.  13-415 Bottles/25. Caps 13-415/13415/4. CP13-415RollPinkDot.psd
+  - cp13-415rollsldot [part]: 20. Caps/19. 13-415 Roll on/2. CPRoll13-415SlDot.psd | 5.  13-415 Bottles/25. Caps 13-415/13415/3. CP13-415RollSlDot.psd
+  - cp13-415spryglsh [part]: 20. Caps/18. 13-415 Sprayers/5. Spry13-415GlSh.psd | 5.  13-415 Bottles/25. Caps 13-415/13415/13. CP13-415SpryGlSh copy.psd
+  - cp13-415spryslmt [part]: 20. Caps/18. 13-415 Sprayers/7. Spry13-415SlMt.psd | 5.  13-415 Bottles/25. Caps 13-415/13415/15. CP13-415SprySlMt copy.psd
+  - cp13-415spryslsh [part]: 20. Caps/18. 13-415 Sprayers/8 Spry13-415SlSh.psd | 5.  13-415 Bottles/25. Caps 13-415/13415/16. CP13-415SprySlSh copy.psd
+  - gb6tplsl [on]: 16. 14.3mm/14.3mm/Capped/GB6TPlSl..psd | 16. 14.3mm/14.3mm/Capped/GB6TPlSl...psd
+  - gbcrclfrst50sprycu [off]: 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/57. GBCrclFrst50SpryCu.psd | 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/56. GBCrclFrst50SpryCu.psd
+  - gbcrclfrst50sprymtgl [off]: 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/13. GBCrclFrst50SpryMtGl.psd | 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/11. GBCrclFrst50SpryMtGl.psd
+  - gbcrclfrst50sprymtsl [off]: 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/24. GBCrclFrst50SpryMtSl.psd | 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/23. GBCrclFrst50SpryMtSl.psd
+  - gbcrclfrst50spryshnblk [off]: 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/19. GBCrclFrst50SpryShnBlk.psd | 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/21. GBCrclFrst50SpryShnBlk.psd
+  - gbcrclfrst50spryshngl [off]: 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/17. GBCrclFrst50SpryShnGl.psd | 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/15. GBCrclFrst50SpryShnGl.psd
+  - gbcrclfrst50spryshnsl [off]: 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/29. GBCrclFrst50SpryShnSl.psd | 2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/30. GBCrclFrst50SpryShnSl.psd
+  - gbdmnd2ozsprycu [off]: 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/53. GBDmnd2ozSpryCu.psd | 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/54. GBDmnd2ozSpryCu.psd
+  - gbdmnd2ozsprymtgl [off]: 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/13. GBDmnd2ozSpryMtGl.psd | 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/11. GBDmnd2ozSpryMtGl.psd
+  - gbdmnd2ozsprymtsl [off]: 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/24. GBDmnd2ozSpryMtSl.psd | 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/23. GBDmnd2ozSpryMtSl.psd
+  - gbdmnd2ozspryshnblk [off]: 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/21. GBDmnd2ozSpryShnBlk.psd | 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/19. GBDmnd2ozSpryShnBlk.psd
+  - gbdmnd2ozspryshngl [off]: 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/15. GBDmnd2ozSpryShnGl.psd | 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/17. GBDmnd2ozSpryShnGl.psd
+  - gbdmnd2ozspryshnsl [off]: 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/30. GBDmnd2ozSpryShnSl.psd | 2.  18-415 Bottles /28. Diamond 60ml/1. Diamond 60ml  PSD/29. GBDmnd2ozSpryShnSl.psd
+  - gbelg100sprycu [off]: 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/56. GBElg100SpryCu.psd | 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/55. GBElg100SpryCu.psd
+  - gbelg100sprymtgl [off]: 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/13. GBElg100SpryMtGl.psd | 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/11. GBElg100SpryMtGl.psd
+  - gbelg100sprymtsl [off]: 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/23. GBElg100SpryMtSl.psd | 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/24. GBElg100SpryMtSl.psd
+  - gbelg100spryshnblk [off]: 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/19. GBElg100SpryShnBlk.psd | 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/21. GBElg100SpryShnBlk.psd
+  - gbelg100spryshngl [off]: 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/15. GBElg100SpryShnGl.psd | 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/17. GBElg100SpryShnGl.psd
+  - gbelg100spryshnsl [off]: 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/29. GBElg100SpryShnSl.psd | 2.  18-415 Bottles /18. Elegant 100ml/1. Elegant 100ml PSD/30. GBElg100SpryShnSl.psd
+  - gbelg60sprycu [off]: 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/58. GBElg60SpryCu.psd | 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/59. GBElg60SpryCu.psd
+  - gbelg60sprymtgl [off]: 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/13. GBElg60SpryMtGl.psd | 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/11. GBElg60SpryMtGl.psd
+  - gbelg60sprymtsl [off]: 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/24. GBElg60SpryMtSl.psd | 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/23. GBElg60SpryMtSl.psd
+  - gbelg60spryshnblk [off]: 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/21. GBElg60SpryShnBlk.psd | 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/19. GBElg60SpryShnBlk.psd
+  - gbelg60spryshngl [off]: 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/17. GBElg60SpryShnGl.psd | 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/15. GBElg60SpryShnGl.psd
+  - gbelg60spryshnsl [off]: 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/29. GBElg60SpryShnSl.psd | 2.  18-415 Bottles /17. Elegant 60ml/1. Elegant 60ml PSD/30. GBElg60SpryShnSl.psd

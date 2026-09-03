@@ -13,11 +13,13 @@
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../convex/_generated/api.js";
 import { verifyPublicUrl } from "./lib/store-blob.mjs";
+import { PSD_MASTER_ROOT, validatePlateSource } from "./lib/source-lineage.mjs";
 
 const argv = process.argv.slice(2);
 const sampleSize = Number(argv[argv.indexOf("--sample") + 1] || 40);
 const allUrls = argv.includes("--all-urls");
 const strict = argv.includes("--strict");
+const sourceRoot = PSD_MASTER_ROOT;
 const CATALOGUE_ISSUES = new Set(["products_duplicate_websiteSku"]);
 
 async function sweep(convex, fn, label) {
@@ -51,11 +53,17 @@ async function main() {
 
     // the network sample: what a browser will get
     const urls = [];
+    const sourceIssues = [];
+    let sourceRows = 0;
     for (const family of await convex.query(api.productPlates.families, {})) {
         let cursor = null;
         for (let page = 0; page < 50; page++) {
             const result = await convex.query(api.productPlates.byFamily, { familyId: family.familyId, cursor, limit: 500 });
             for (const row of result.page) {
+                sourceRows++;
+                for (const issue of validatePlateSource(row, { masterRoot: sourceRoot })) {
+                    sourceIssues.push({ sku: row.sku, ...issue });
+                }
                 urls.push(row.image, row.thumb);
                 if (row.imageCapOff) urls.push(row.imageCapOff);
             }
@@ -63,6 +71,8 @@ async function main() {
             cursor = result.continueCursor;
         }
     }
+    console.log(`sources: ${sourceRows} rows, ${sourceIssues.length} lineage issue(s) against ${sourceRoot}`);
+    for (const issue of sourceIssues.slice(0, 60)) console.log(`   !! ${issue.sku}: ${issue.issue} ${issue.detail}`);
     const picked = allUrls ? urls : shuffle(urls).slice(0, sampleSize);
     let urlFailures = 0;
     for (const target of picked) {
@@ -71,7 +81,7 @@ async function main() {
     }
     console.log(`urls: ${picked.length} checked of ${urls.length}, ${urlFailures} failing`);
 
-    const failed = plates.issues.length + kits.issues.length + urlFailures + components.issues.length;
+    const failed = plates.issues.length + kits.issues.length + urlFailures + components.issues.length + sourceIssues.length;
     const warned = plates.catalogueIssues.length + kits.catalogueIssues.length + components.catalogueIssues.length;
     console.log(failed ? `\nFAILED: ${failed} issue(s)` : warned ? `\nOK (index clean; ${warned} catalogue issue(s) listed above — the products table, not the plates)` : "\nOK");
     process.exit(failed ? 1 : 0);
