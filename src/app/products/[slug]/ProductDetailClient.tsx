@@ -6,13 +6,12 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
-    ShoppingBag, ArrowLeft, ChevronRight, Package,
+    ShoppingBag, ArrowLeft, Package,
     Check, Truck, ChatCircle,
 } from "@/components/icons";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
-import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
@@ -26,6 +25,11 @@ import {
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
 import FocusedPdpLayout from "@/components/products/FocusedPdpLayout";
+import PdpDiscoverySections, {
+    PdpDiscoveryMatrixLink,
+    type PdpCompatibilityComponent,
+    type PdpCompatibilityPayload,
+} from "@/components/products/PdpDiscoverySections";
 import { closureTokenFromSlug, familyForSlug, familyForSlugOrDerived, glassFromSlug, colourTokenFromSlug, PRESET_FOR_COLOUR }
   from "@/lib/configurator/families";
 import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
@@ -38,6 +42,8 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
+
+export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -1014,52 +1020,6 @@ export interface SiblingGroup {
     displayName: string;
 }
 
-export interface PdpCompatibilityComponent {
-    graceSku: string;
-    websiteSku: string | null;
-    itemName: string;
-    imageUrl: string | null;
-    shopifyVariantId: string | null;
-    shopifySellable: boolean | null;
-    webPrice1pc: number | null;
-    webPrice12pc: number | null;
-    capColor: string | null;
-    stockStatus: string | null;
-}
-
-export interface PdpCompatibilityPayload {
-    bottle: {
-        graceSku: string;
-        websiteSku: string;
-        itemName: string;
-        imageUrl: string | null;
-        shopifyVariantId: string | null;
-        shopifySellable: boolean | null;
-        category: string;
-        family: string | null;
-        capacity: string | null;
-        color: string | null;
-        neckThreadSize: string | null;
-        applicator: string | null;
-        capColor: string | null;
-        capStyle: string | null;
-        heightWithCap: string | null;
-        heightWithoutCap: string | null;
-        diameter: string | null;
-        bottleWeightG: number | null;
-        caseWeightG: number | null;
-        caseQuantity: number | null;
-        useCaseDescription: string | null;
-        webPrice1pc: number | null;
-        webPrice10pc: number | null;
-        webPrice12pc: number | null;
-        stockStatus: string | null;
-    };
-    componentTypes: string[];
-    totalComponents: number;
-    components: Record<string, PdpCompatibilityComponent[]>;
-}
-
 export default function ProductDetailClient({
     platesBySku = {},
     slug,
@@ -1080,10 +1040,6 @@ export default function ProductDetailClient({
     /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
     platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
-    // Task 10 consumes these server-initialized models in the discovery sections.
-    // Keeping them on this boundary now prevents an initially empty client fetch.
-    void initialRelations;
-    void initialCompatibility;
     const router = useRouter();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();
@@ -1097,7 +1053,6 @@ export default function ProductDetailClient({
     const data = initialData;
 
     const { addItems } = useCart();
-    const [fitmentDrawerOpen, setFitmentDrawerOpen] = useState(false);
 
     const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
     const [selectedApplicator, setSelectedApplicator] = useState<string | null>(null);
@@ -1758,18 +1713,34 @@ export default function ProductDetailClient({
         window.dispatchEvent(new Event("open-cart-drawer"));
     };
 
+    const handleAddCompatibleComponent = (component: PdpCompatibilityComponent) => {
+        const componentCheckoutReady = isCheckoutReady({
+            graceSku: component.graceSku,
+            shopifyVariantId: component.shopifyVariantId,
+            shopifySellable: component.shopifySellable,
+        });
+        if (!componentCheckoutReady || component.webPrice1pc == null) return;
+
+        addItems([{
+            graceSku: component.graceSku,
+            websiteSku: component.websiteSku,
+            itemName: component.itemName,
+            quantity: 1,
+            unitPrice: component.webPrice1pc,
+            webPrice1pc: component.webPrice1pc,
+            webPrice12pc: component.webPrice12pc,
+            checkoutEligible: componentCheckoutReady,
+            shopifyVariantId: component.shopifyVariantId,
+            shopifySellable: component.shopifySellable,
+            family: group.family,
+            category: "Component",
+            neckThreadSize: selectedVariant?.neckThreadSize ?? group.neckThreadSize ?? null,
+        }]);
+    };
+
     return (
         <main className="min-h-screen bg-bone">
             <Navbar hideMobileSearch />
-            {selectedVariant?.graceSku && (
-                <FitmentDrawer
-                    isOpen={fitmentDrawerOpen}
-                    onClose={() => setFitmentDrawerOpen(false)}
-                    bottleSku={selectedVariant.graceSku}
-                    quantity={qty}
-                />
-            )}
-
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]">
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
                 <Breadcrumbs steps={breadcrumbsSteps} />
@@ -2726,63 +2697,6 @@ export default function ProductDetailClient({
                                 )}
                             </div>
 
-                            {/* Compatibility belongs near the buying decision for B2B confidence.
-                                (3D families select closures in the panel — no duplicate list.) */}
-                            {!is3dFamily && compatibleSiblings.length > 0 && (
-                                <div className="mb-6 rounded-sm border border-champagne/60 bg-white p-4">
-                                    <div className="flex items-start justify-between gap-4 mb-3">
-                                        <div>
-                                            <p className="text-[9px] uppercase tracking-[0.18em] font-sans text-muted-gold mb-1">
-                                                Compatible Options
-                                            </p>
-                                            <h3 className="font-serif text-lg text-obsidian">This bottle also takes</h3>
-                                        </div>
-                                        <button
-                                            onClick={() => setFitmentDrawerOpen(true)}
-                                            className="shrink-0 text-xs text-muted-gold hover:underline transition-colors"
-                                        >
-                                            View all →
-                                        </button>
-                                    </div>
-                                    <button
-                                        type="button"
-                                        onClick={openGracePanel}
-                                        className="mb-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-muted-gold/40 bg-muted-gold/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-muted-gold transition-colors hover:bg-muted-gold hover:text-white"
-                                    >
-                                        <ChatCircle className="h-4 w-4" />
-                                        Ask Grace which option fits
-                                    </button>
-                                    <div className="space-y-2">
-                                        {compatibleSiblings.slice(0, 4).map((sib) => {
-                                            const applicatorLabel = (sib.applicatorTypes ?? []).join(", ") || "Cap & Closure";
-                                            return (
-                                                <Link
-                                                    key={sib._id}
-                                                    href={`/products/${sib.slug}`}
-                                                    className="group flex items-center gap-3 rounded-sm border border-champagne/40 bg-bone/40 p-3 hover:border-muted-gold transition-colors"
-                                                >
-                                                    <div className="w-12 h-12 shrink-0 bg-travertine rounded-sm border border-champagne/30 flex items-center justify-center overflow-hidden">
-                                                        {sib.heroImageUrl ? (
-                                                            <Image src={sib.heroImageUrl} alt={sib.displayName} width={48} height={48} className="w-full h-full object-contain p-1" />
-                                                        ) : (
-                                                            <Package className="w-5 h-5 text-champagne" strokeWidth={1} />
-                                                        )}
-                                                    </div>
-                                                    <div className="min-w-0 flex-1">
-                                                        <p className="text-[10px] uppercase tracking-wider text-muted-gold font-semibold mb-0.5">{applicatorLabel}</p>
-                                                        <p className="text-sm text-obsidian font-medium truncate group-hover:text-muted-gold transition-colors">{sib.displayName}</p>
-                                                        {sib.priceRangeMin != null && (
-                                                            <p className="text-xs text-slate mt-0.5">From {formatPrice(sib.priceRangeMin)}</p>
-                                                        )}
-                                                    </div>
-                                                    <ChevronRight className="w-4 h-4 text-champagne group-hover:text-muted-gold transition-colors shrink-0" />
-                                                </Link>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            )}
-
                             {/* Product Description — canonical copy avoids showing applicator-mismatched group text. */}
                             {pdpBlocks.every((b) => b._type !== "pdpRichDescription") && productDescription && (
                                 <div className="mb-6 pt-5 border-t border-champagne/60">
@@ -2800,6 +2714,16 @@ export default function ProductDetailClient({
                     />
                     ) : null}
                 </section>
+
+                <PdpDiscoverySections
+                    family={group.family}
+                    relations={initialRelations}
+                    initialCompatibility={initialCompatibility}
+                    selectedWebsiteSku={selectedVariant?.websiteSku}
+                    selectedGraceSku={selectedVariant?.graceSku}
+                    onAskGrace={openGracePanel}
+                    onAddComponent={handleAddCompatibleComponent}
+                />
 
                 {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
                 <PdpEditorialZone blocks={pdpBlocks} />
@@ -2840,6 +2764,8 @@ export default function ProductDetailClient({
                         </div>
                     </section>
                 )}
+
+                <PdpDiscoveryMatrixLink family={group.family} />
 
                 {/* Footer spacer */}
                 <div className="h-32 bg-linen border-t border-champagne/30"></div>
