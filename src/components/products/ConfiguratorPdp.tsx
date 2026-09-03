@@ -9,24 +9,20 @@
  * Everything INSIDE the <Canvas> belongs to the render design system; this
  * component owns everything outside it.
  *
- * Architecture (decision 2026-08-31): a VENEER over the one-URL-per-closure
- * catalogue. Committing a closure navigates to the sibling product group,
- * so SEO, Shopify SKU binding, pricing and cart wiring are untouched.
- * Selection before commit only PREVIEWS on the stage (previewBase), with
- * the "Previewing X · Return to Y" toast.
+ * The buy panel is intentionally scoped to the current product application.
+ * Glass and real SKU selections resolve through the canonical PDP route; a
+ * cross-application comparison belongs in the below-fold discovery section.
  */
 
 import { useMemo, useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import {
-  Check, ChatCircle, ShoppingBag, SprayBottle, Drop, Eyedropper,
+  Check, ChatCircle, ShoppingBag,
 } from "@/components/icons";
-import { HandSoap, HandGrabbing, CaretDown, CheckCircle, TestTube,
+import { HandGrabbing, CaretDown,
          Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
-import { familyForSlugOrDerived, glassFromSlug, CLOSURE_TOKENS,
-         type ConfiguratorFamily, type ClosureBase }
+import { familyForSlugOrDerived, glassFromSlug, type ClosureBase }
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
@@ -43,13 +39,6 @@ import {
   preservePdpStageMode,
   type PdpStageMode,
 } from "@/lib/products/pdp-stage-modes";
-
-/** every slug token a base may carry in this family, the family's own first */
-function tokensFor(fam: ConfiguratorFamily, base: ClosureBase): string[] {
-  const own = fam.slugClosure[base];
-  const all = base === "none" ? [] : CLOSURE_TOKENS[base] ?? [];
-  return [...new Set([...(own ? [own] : []), ...all])];
-}
 
 /** kit slots that come off when the customer lifts the cap; everything else is fitted */
 const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
@@ -84,12 +73,6 @@ const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
     </div>
   ),
 });
-
-/** stand-in glyph when a sibling group has no hero photo yet */
-const CLOSURE_GLYPH: Record<string, typeof SprayBottle> = {
-  sprayer: SprayBottle, antique: SprayBottle, antiqueTassel: SprayBottle,
-  pump: HandSoap, dropper: Eyedropper, roller: Drop, reducer: TestTube,
-};
 
 /** fitment swatch name -> materials.json token. The PDP's cap options are
  *  SKU-derived display names ("Pink", "Shiny Black", "Matte Silver"); the
@@ -129,14 +112,6 @@ const GLASS_TILE: Record<string, string> = {
   swirl: "linear-gradient(150deg,#efe7d8 0%,#dccfb4 55%,#c3b392 100%)",
 };
 
-type Sibling = {
-  slug?: string | null;
-  priceRangeMin?: number | null;
-  applicatorTypes?: string[] | null;
-  heroImageUrl?: string | null;
-  displayName?: string | null;
-};
-
 /** sessionStorage key for the customer's current stage mode. */
 /** Resolve once the bytes are ready to paint. A cached part resolves immediately,
  *  which is why swapping a cap costs one frame and not a fade. */
@@ -154,12 +129,13 @@ const STAGE_MODE_KEY = "bb:pdp-stage";
 
 export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach,
-  siblings, heroImageUrl, onAddToCart, onAskGrace,
+  heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
-  quoteHref, qty = 1, onQtyChange,
+  quoteHref, checkoutReady = true, qty = 1, onQtyChange,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
-  rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange,
+  rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
+  onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null,
 }: {
@@ -177,7 +153,6 @@ export default function ConfiguratorPdp({
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
-  siblings: Sibling[];         // applicator siblings incl. prices (deltas)
   heroImageUrl?: string | null;
   onAddToCart?: () => void;
   onAskGrace?: () => void;
@@ -202,6 +177,8 @@ export default function ConfiguratorPdp({
   /** the real 5-step ladder; when present it replaces price10/price12 */
   priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
   quoteHref?: string;
+  /** False means the selected Shopify variant cannot check out and must quote. */
+  checkoutReady?: boolean;
   /** SKU TRUTH for the fitment row: the cap/trim colourways this closure
    *  actually ships in, derived from the group's own variants. A reducer
    *  has ~14 caps, a lotion pump far fewer, a bulb its own colourways —
@@ -213,6 +190,10 @@ export default function ConfiguratorPdp({
   rollerVariant?: "metal" | "plastic";
   rollerVariantsAvailable?: Array<"metal" | "plastic">;
   onRollerVariantChange?: (variant: "metal" | "plastic") => void;
+  /** Resolves a real in-intent variant at the product-route boundary. */
+  onVariantSelectionChange?: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
+  /** A glass sibling is another real product group, never a local preview. */
+  onProductUrlChange?: (href: string) => void;
   capOptions?: string[];
   /** per pill, the token swatch names its variants' website SKUs spell — the
    *  component families are keyed by token ("Pink"), the pills by catalogue
@@ -227,17 +208,14 @@ export default function ConfiguratorPdp({
   qty?: number;
   onQtyChange?: (n: number) => void;
 }) {
-  const router = useRouter();
   const fam = familyForSlugOrDerived(currentSlug);
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
-  // optimistic: the canvas swaps the instant a colourway is picked, while
-  // the slug (SKU/pricing truth) is replaced underneath without a reload
-  const [glassOverride, setGlassOverride] = useState<GlassPresetId | null>(null);
   const [rollerLocal, setRollerLocal] = useState<"metal" | "plastic">("metal");
   const rollerVariant = rollerVariantProp ?? rollerLocal;
   const setRollerVariant = (variant: "metal" | "plastic") => {
     setRollerLocal(variant);
     onRollerVariantChange?.(variant);
+    onVariantSelectionChange?.({ rollerVariant: variant });
   };
   const rollerOffered = (variant: "metal" | "plastic") =>
     !rollerVariantsAvailable || rollerVariantsAvailable.includes(variant);
@@ -330,8 +308,7 @@ export default function ConfiguratorPdp({
     setRequestedStageMode(mode);
     try { window.sessionStorage.setItem(STAGE_MODE_KEY, mode); } catch {}
   };
-  useEffect(() => { setGlassOverride(null); }, [currentSlug]);
-  const glass: GlassPresetId = glassOverride ?? slugGlass;
+  const glass: GlassPresetId = slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
     fam?.closureFromSlug[committedToken] ?? (fam?.derived ? "none" : "sprayer");
@@ -377,74 +354,14 @@ export default function ConfiguratorPdp({
     }
   }, [fam]);
 
-  // sibling lookup: slug token -> sibling row (price, photo)
-  const siblingFor = useMemo(() => {
-    const bySlug = new Map<string, Sibling>();
-    for (const s of siblings) if (s.slug) bySlug.set(s.slug, s);
-    return (base: ClosureBase): Sibling | null => {
-      if (!fam) return null;
-      const colour = fam.slugColour[glass] ?? "clear";
-      // a sibling may live under any of the tokens the catalogue writes for
-      // this base (perfumespray beside finemist): take the one that exists
-      for (const token of tokensFor(fam, base)) {
-        const hit = bySlug.get(fam.buildSlug(colour, token));
-        if (hit) return hit;
-      }
-      return null;
-    };
-  }, [siblings, fam, glass]);
-
-  /** every closure this family SELLS in this colourway (registry ∪ catalog
-   *  antique photo groups — decision: bulb selectable, photo fallback) */
-  const sellableBases = useMemo(() => {
-    const out: ClosureBase[] = [];
-    if (!fam) return out;
-    for (const b of fam.bases) if (b !== "none") out.push(b);
-    if (fam.derived) {
-      // read off a slug, so it claims every base; keep the ones that exist
-      return out.filter((b) => b === activeBase || siblingFor(b) !== null);
-    }
-    // antique sells as a photo-only group even where 3D is parked
-    if (!out.includes("antique")) {
-      const colour = fam.slugColour[glass] ?? "clear";
-      const antiqueSlug = fam.buildSlug(colour, "antiquespray");
-      if (siblings.some((s) => s.slug === antiqueSlug)) out.push("antique");
-    }
-    return out;
-  }, [activeBase, fam, glass, siblingFor, siblings]);
-
-  // ONE row of actual components in a stable trade order (Jordan:
-  // "just one row ... the actual components ... reducer, roll-on, spray,
-  // lotion") — no use-case re-ranking layer
-  const COMPONENT_ORDER: ClosureBase[] = [
-    "sprayer", "roller", "pump", "dropper", "reducer", "antique", "antiqueTassel"];
-  void CLOSURE_META;
-  const ranked = useMemo(
-    () => COMPONENT_ORDER.filter((b) => sellableBases.includes(b)),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [sellableBases]);
-
   const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;
-
-  const antiqueSibling = siblingFor("antique");
   // bulb has no live 3D (parked): the stage shows the product photo
   // Without a plate the stage shows a photograph, never nothing: the SKU's
   // own catalogue image first, then the group's hero.
   const photoFallback =
     variantImageUrl
-    ?? (activeBase === "antique" || activeBase === "antiqueTassel"
-      ? (antiqueSibling?.heroImageUrl ?? heroImageUrl ?? null)
-      : (heroImageUrl ?? null));
-
-  const commit = (base: ClosureBase) => {
-    if (!fam) return;
-    const colour = fam.slugColour[glass];
-    const token = tokensFor(fam, base).find((t) => colour && siblings.some((sb) => sb.slug === fam.buildSlug(colour, t)))
-      ?? fam.slugClosure[base];
-    if (!token || !colour) return;
-    const to = fam.buildSlug(colour ?? "clear", token ?? "");
-    if (to !== currentSlug) router.replace(`/products/${to}`, { scroll: false });
-  };
+    ?? heroImageUrl
+    ?? null;
 
   // antique maps to "none": the geometry is parked, the photo fallback
   // covers the stage (decision 2026-08-31)
@@ -682,7 +599,10 @@ export default function ConfiguratorPdp({
                 // photo chip is a small cap-shaped tile with the whole cap in frame,
                 // the way the design draws its finish swatches; a colour stays a dot.
                 <button key={name} type="button"
-                        onClick={() => onCapOptionChange?.(name)}
+                        onClick={() => {
+                          onCapOptionChange?.(name);
+                          onVariantSelectionChange?.({ capOption: name });
+                        }}
                         aria-label={name} aria-pressed={activeCapOption === name}
                         title={name} data-swatch={photo ? "photo" : "colour"}
                         className={`overflow-hidden transition-all duration-200
@@ -823,74 +743,57 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* closure selector — ONE row of the actual closure components */
-  const closureRow = (
-    <div className="mt-6">
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-2xs uppercase tracking-label font-semibold text-slate">
-          2. Closure Type
-          <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-          <span className="normal-case tracking-normal text-caption text-obsidian ml-0.5">
-            · {activeMeta?.name ?? "Bottle only"}
-          </span>
-        </p>
-        {neckSize && (
-          <p className="min-w-0 text-right text-spec text-slate">All closures verified for {neckSize} neck</p>
-        )}
-      </div>
-
-      {/* Fixed-width fitment photography remains legible at 390 px inside a
-          contained rail; the page itself never inherits the rail's width. */}
-      <div
-        data-testid="pdp-closure-rail"
-        className="mt-3 flex max-w-full gap-2.5 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:thin]"
-      >
-        {ranked.map((base) => {
-          const meta = base !== "none" ? CLOSURE_META[base] : null;
-          const sib = siblingFor(base);
-          const selected = activeBase === base;
-          if (!meta) return null;
-          return (
-            <ClosureTile key={base} name={meta.name} benefit={meta.benefit}
-                         imageUrl={sib?.heroImageUrl ?? null}
-                         glyph={CLOSURE_GLYPH[base] ?? SprayBottle}
-                         selected={selected}
-                         onClick={() => commit(base)} />
-          );
-        })}
-      </div>
-    </div>
-  );
-
   /* CTA stack — quantity + add to cart, then the working price summary.
      The sample CTA was retired 2026-09-02: samples go through the quote
      flow and Grace, not a second button competing with the cart. */
   const linePrice = tierPrice != null ? tierPrice * qty : null;
   const ctaStack = (
     <div className="mt-5">
+      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
+        <span className="font-semibold tabular-nums text-obsidian">
+          {tierPrice != null ? `$${tierPrice.toFixed(2)} /ea` : "Price on request"}
+        </span>
+        {caseQty && tierPrice != null ? (
+          <span className="text-slate">
+            ${ (tierPrice * caseQty).toFixed(2) } per case of {caseQty.toLocaleString()}
+          </span>
+        ) : null}
+      </div>
       <div className="flex items-stretch gap-3">
         <div className="flex items-center border border-champagne rounded-[3px]">
           <button type="button" aria-label="Decrease quantity"
                   onClick={() => onQtyChange?.(Math.max(1, qty - 1))}
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
                              transition-colors duration-200">−</button>
-          <span className="min-w-[2.5rem] text-center text-md font-semibold
-                           text-obsidian tabular-nums">{qty}</span>
+          <input type="number" min={1} inputMode="numeric" aria-label="Quantity"
+                 value={qty}
+                 onChange={(event) => {
+                   const next = Number(event.target.value);
+                   onQtyChange?.(Number.isFinite(next) ? Math.max(1, Math.floor(next)) : 1);
+                 }}
+                 className="min-w-[3rem] bg-transparent text-center text-md font-semibold text-obsidian tabular-nums outline-none" />
           <button type="button" aria-label="Increase quantity"
                   onClick={() => onQtyChange?.(qty + 1)}
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
                              transition-colors duration-200">+</button>
         </div>
-        <button type="button" onClick={onAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5
-                           border border-obsidian text-obsidian text-md font-semibold
-                           rounded-[3px] transition-colors duration-200
-                           hover:bg-obsidian hover:text-white
-                           focus-visible:outline-2 focus-visible:outline-offset-2
-                           focus-visible:outline-muted-gold">
-          <ShoppingBag className="h-4 w-4" />
-          Add to cart
-        </button>
+        {checkoutReady ? (
+          <button type="button" onClick={onAddToCart}
+                  className="flex-1 flex items-center justify-center gap-2 py-2.5
+                             border border-obsidian text-obsidian text-md font-semibold
+                             rounded-[3px] transition-colors duration-200
+                             hover:bg-obsidian hover:text-white
+                             focus-visible:outline-2 focus-visible:outline-offset-2
+                             focus-visible:outline-muted-gold">
+            <ShoppingBag className="h-4 w-4" />
+            Add to cart
+          </button>
+        ) : (
+          <a href={quoteHref ?? "#"}
+             className="flex-1 flex items-center justify-center py-2.5 border border-obsidian bg-obsidian text-md font-semibold text-white rounded-[3px] hover:bg-muted-gold">
+            Request Quote
+          </a>
+        )}
       </div>
 
       {priceEach != null && ladder.length > 0 && (
@@ -944,7 +847,7 @@ export default function ConfiguratorPdp({
                       ? "font-semibold text-obsidian" : "text-obsidian"}`}>
                       ${t.price.toFixed(2)} ea
                     </span>
-                    {active ? (
+                    {active && checkoutReady ? (
                       <button type="button" onClick={onAddToCart}
                               className="text-2xs uppercase tracking-label font-semibold
                                          bg-obsidian text-white rounded-[2px] py-1.5
@@ -952,6 +855,11 @@ export default function ConfiguratorPdp({
                                          hover:bg-muted-gold hover:text-obsidian">
                         Add to cart
                       </button>
+                    ) : active ? (
+                      <a href={quoteHref ?? "#"}
+                         className="text-2xs uppercase tracking-label font-semibold bg-obsidian text-white rounded-[2px] py-1.5 text-center hover:bg-muted-gold hover:text-obsidian">
+                        Request Quote
+                      </a>
                     ) : (
                       <button type="button" onClick={() => onQtyChange?.(t.minQty)}
                               className="text-2xs uppercase tracking-label font-semibold
@@ -1027,8 +935,7 @@ export default function ConfiguratorPdp({
           return (
             <button key={g.id} type="button" aria-pressed={on}
                onClick={() => {
-                 if (g.id in GLASS_PRESETS) setGlassOverride(g.id as GlassPresetId);
-                 if (g.href && g.href !== "#") router.replace(g.href, { scroll: false });
+                 if (g.href && g.href !== "#") onProductUrlChange?.(g.href);
                }}
                className={`group relative block w-full rounded-[2px] bg-white text-center transition-colors duration-200
                            ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>
@@ -1117,7 +1024,6 @@ export default function ConfiguratorPdp({
       {priceBlock}
       {summaryStrip}
       {glassStep ? <div className="mt-6">{glassStep}</div> : null}
-      {closureRow}
       {/* The overcap chooser is gone: the stage's cap-on/off toggle is the one
           cap control (decision 2026-09-02). Roller material now sits here,
           above the fold. */}
@@ -1177,65 +1083,7 @@ export default function ConfiguratorPdp({
       {/* 1. glass */}
       {glassStep && <div className="mt-7 px-4">{glassStep}</div>}
 
-      {/* 2. closure */}
-      <div className="mt-7 px-4">
-        <div className="flex items-center justify-between">
-          <p className="flex items-center gap-1.5 text-2xs font-semibold uppercase tracking-label text-slate">
-            2. Closure Type <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-          </p>
-          {neckSize && <span className="text-spec text-slate">Verified for {neckSize}</span>}
-        </div>
-        <div className="mt-3 -mx-4 px-4 flex gap-2.5 overflow-x-auto pb-1
-                        [scrollbar-width:none]">
-          {ranked.map((base) => {
-            const meta = base !== "none" ? CLOSURE_META[base] : null;
-            const sib = siblingFor(base);
-            const selected = activeBase === base;
-            if (!meta) return null;
-            return (
-              <button key={base} type="button"
-                      onClick={() => commit(base)}
-                      className="shrink-0 w-[118px] text-left">
-                <div className={`relative aspect-square bg-product-well rounded-[3px]
-                                 ${selected ? "border-[1.5px] border-obsidian"
-                                            : "border border-champagne"}`}>
-                  {sib?.heroImageUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={sib.heroImageUrl} alt={meta.name}
-                         className="h-full w-full object-cover rounded-[2px]" />
-                  ) : (() => {
-                    const Glyph = CLOSURE_GLYPH[base] ?? SprayBottle;
-                    return (
-                      <span className="absolute inset-0 flex items-center justify-center">
-                        <Glyph className="h-8 w-8 text-obsidian/25" />
-                      </span>
-                    );
-                  })()}
-                  {selected && (
-                    <span className="absolute top-1.5 right-1.5 h-[22px] w-[22px]
-                                     rounded-full bg-obsidian flex items-center
-                                     justify-center">
-                      <Check className="h-3 w-3 text-white" weight="bold" />
-                    </span>
-                  )}
-                </div>
-                <div className={`mt-0 px-2 py-1.5 bg-white border border-t-0
-                                 border-champagne rounded-b-[3px] text-md
-                                 ${selected ? "font-semibold border-obsidian" : ""}`}>
-                  {meta.name.split(" ")[0] === "Fine" ? "Spray"
-                    : meta.name.split(" ")[0] === "Bulb" ? "Bulb"
-                    : meta.name.split(" ")[0] === "Glass" ? "Dropper"
-                    : meta.name.split(" ")[0] === "Pour" ? "Reducer"
-                    : meta.name.split(" ")[0] === "Lotion" ? "Pump"
-                    : meta.name.split(" ")[0]}
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* 3. finish */}
+      {/* 2. finish */}
       <div className="mt-7 px-4">{finishRow(true)}</div>
 
       {/* the configuration, resolved */}
@@ -1291,50 +1139,6 @@ function DimensionRow({ label, value }: { label: string; value: string }) {
       <dt className="text-slate">{label}</dt>
       <dd className="font-semibold tabular-nums text-obsidian">{value}</dd>
     </div>
-  );
-}
-
-/* ------------------------------------------------------- ClosureTile */
-function ClosureTile({ name, benefit, imageUrl, glyph: Glyph, selected, onClick }: {
-  name: string; benefit: string; imageUrl: string | null;
-  glyph: typeof SprayBottle; selected: boolean; onClick: () => void;
-}) {
-  const [broken, setBroken] = useState(false);
-  const showImg = imageUrl && !broken;
-  return (
-    <button type="button" onClick={onClick} aria-pressed={selected}
-            title={benefit} className="min-h-11 shrink-0 w-24 text-center group">
-      <div className={`relative aspect-square bg-product-well rounded-[3px]
-                       overflow-hidden transition-colors duration-200
-                       ${selected
-                         ? "border-[1.5px] border-obsidian"
-                         : "border border-champagne group-hover:border-muted-gold"}`}>
-        {showImg ? (
-          // the swatch shows the CLOSURE, not a shrunken bottle: the
-          // renders are 2080x2288 packshots with the closure at the top,
-          // so crop to the upper portion (Jordan: "the actual photo of
-          // that component, the top of it")
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={imageUrl} alt={name} onError={() => setBroken(true)}
-               className="absolute left-1/2 top-0 max-w-none w-[185%]
-                          -translate-x-1/2 -translate-y-[4%]" />
-        ) : (
-          <span className="absolute inset-0 flex items-center justify-center">
-            <Glyph className="h-7 w-7 text-obsidian/25" />
-          </span>
-        )}
-        {selected && (
-          <span className="absolute top-1.5 right-1.5 h-5 w-5 rounded-full
-                           bg-obsidian flex items-center justify-center">
-            <Check className="h-3 w-3 text-white" weight="bold" />
-          </span>
-        )}
-      </div>
-      <span className={`block mt-1.5 text-spec leading-tight
-                        ${selected ? "font-semibold text-obsidian" : "text-slate"}`}>
-        {name}
-      </span>
-    </button>
   );
 }
 

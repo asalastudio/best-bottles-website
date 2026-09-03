@@ -1,9 +1,7 @@
 /**
- * Guided PDP closure rail — the 5 ml cobalt 13-415 findings (2026-09-02):
- * pill photographs join on the variant's SKU token, the plain caps published
- * into roll-on-cap-<neck> still reach a bottle on its cap, the dotted
- * colourways never fall back to a blank dot, and the panel is simplified —
- * no overcap chooser, no "Product photo" chip, no sample CTA.
+ * Focused PDP finish selection — photographed pills join on the variant's SKU
+ * token, including the plain caps published into roll-on-cap-<neck>. The PDP
+ * deliberately has no cross-application rail above the fold.
  */
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
@@ -38,12 +36,20 @@ describe("closure rail photographs", () => {
     });
 });
 
-describe("roller material switches the SKU", () => {
-    it("the guided chooser is controlled by the product page's applicator switch", () => {
+describe("focused intent selection", () => {
+    it("keeps roller material inside the current Roll-On intent and resolves it at the product route", () => {
         expect(configurator).toContain("onRollerVariantChange?: (variant: \"metal\" | \"plastic\") => void");
         expect(configurator).toContain("disabled={!rollerOffered(id)}");
         expect(pdp).toContain("onRollerVariantChange={handleRollerVariantChange}");
-        expect(pdp).toMatch(/handleRollerVariantChange[\s\S]*setSelectedApplicator\(opt\.value\)/);
+        expect(pdp).toContain("onVariantSelectionChange={handleGuidedVariantSelection}");
+        expect(pdp).toContain("const canonicalVariantUrl");
+    });
+
+    it("does not offer a cross-application switcher in the purchase panel", () => {
+        expect(configurator).not.toContain("Closure Type");
+        expect(configurator).not.toContain("const closureRow");
+        expect(configurator).not.toContain("const ranked");
+        expect(configurator).not.toContain("const commit =");
     });
 });
 

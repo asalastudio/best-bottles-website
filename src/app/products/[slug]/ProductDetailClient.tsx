@@ -529,6 +529,10 @@ function canonicalSku(variant: ProductVariant | null | undefined): string | null
     return variant?.graceSku?.trim() || variant?.websiteSku?.trim() || null;
 }
 
+function safePdpReturnPath(value: string | null): string | null {
+    return value && value.startsWith("/") && !value.startsWith("//") ? value : null;
+}
+
 function supportsSecondaryPdpImage(variant: ProductVariant): boolean {
     const isEmpire =
         variant.family === "Empire" ||
@@ -1086,6 +1090,8 @@ export default function ProductDetailClient({
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
     const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
+    const selectedVariantParam = searchParams.get("sku");
+    const safeFrom = safePdpReturnPath(searchParams.get("from"));
     const qtyParam = Math.max(1, Math.min(9999, parseInt(searchParams.get("qty") ?? "1") || 1));
 
     const data = initialData;
@@ -1117,6 +1123,12 @@ export default function ProductDetailClient({
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
         return filterVariantsForProductGroup(data?.group, rawVariants);
     }, [data?.group, data?.variants]);
+    const variantFromUrl = useMemo(
+        () => selectedVariantParam
+            ? variants.find((variant) => variant.websiteSku === selectedVariantParam || variant.graceSku === selectedVariantParam) ?? null
+            : null,
+        [selectedVariantParam, variants],
+    );
 
     // Applicator siblings — same bottle shape + size + color, different applicator.
     const applicatorSiblings = initialApplicatorSiblings;
@@ -1190,7 +1202,7 @@ export default function ProductDetailClient({
 
     const activeApplicator = selectedApplicator && applicatorOptions.includes(selectedApplicator)
         ? selectedApplicator
-        : defaultFromUrl ??
+        : variantFromUrl?.applicator ?? defaultFromUrl ??
             (primaryVariant?.applicator && (applicatorOptions.includes(primaryVariant.applicator) || primaryVariant.applicator === "Cap/Closure")
                 ? primaryVariant.applicator
                 : null) ??
@@ -1283,7 +1295,7 @@ export default function ProductDetailClient({
     const selectedVariant = useMemo(() => {
         const explicit = selectedVariantId
             ? variantsForApplicator.find((v) => v._id === selectedVariantId)
-            : null;
+            : variantFromUrl;
         if (explicit) return explicit;
         const hasPlate = (v: ProductVariant) =>
             Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined));
@@ -1305,7 +1317,7 @@ export default function ProductDetailClient({
         if (selectedCapStyle) pool = narrow(pool, (v) => v.capStyle === selectedCapStyle);
         if (selectedTrimColor) pool = narrow(pool, (v) => (v.trimColor || "Standard") === selectedTrimColor);
         return pool.find(hasPlate) ?? pool.find((v) => usableProductImageUrl(v.imageUrl)) ?? pool[0] ?? variants[0] ?? null;
-    }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
+    }, [variants, variantsForApplicator, selectedVariantId, variantFromUrl, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
 
     // the plate for the selected SKU (productPlates index), by graceSku then websiteSku
     // first and websiteSku second -- the two keys the plate manifests carry
@@ -1515,6 +1527,45 @@ export default function ProductDetailClient({
         setSelectedVariantId(null);
     }, [rollerTypeOptions, activeCapColor]);
 
+    const canonicalVariantUrl = useCallback((variant: ProductVariant) => {
+        const sku = canonicalSku(variant);
+        if (!sku) return null;
+        const params = new URLSearchParams();
+        params.set("sku", sku);
+        if (qty > 1) params.set("qty", String(qty));
+        if (safeFrom) params.set("from", safeFrom);
+        return `/products/${activeSlug}?${params.toString()}`;
+    }, [activeSlug, qty, safeFrom]);
+
+    const handleGuidedVariantSelection = useCallback((selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => {
+        const nextApplicator = selection.rollerVariant
+            ? rollerTypeOptions.find((option) => (selection.rollerVariant === "metal") === /metal/i.test(option.value))?.value ?? activeApplicator
+            : activeApplicator;
+        const nextCapOption = selection.capOption ?? activeCapColor;
+        const resolved = variants.find((variant) =>
+            variant.applicator === nextApplicator &&
+            (!nextCapOption || resolveVariantCapFinish(variant).swatchName === nextCapOption),
+        );
+        if (!resolved) return;
+
+        setSelectedApplicator(nextApplicator ?? null);
+        setSelectedVariantId(resolved._id);
+        setSelectedCapColor(resolveVariantCapFinish(resolved).swatchName);
+        setSelectedCapStyle(resolved.capStyle ?? null);
+        setSelectedTrimColor(resolved.trimColor || "Standard");
+
+        const nextUrl = canonicalVariantUrl(resolved);
+        if (nextUrl) router.replace(nextUrl, { scroll: false });
+    }, [activeApplicator, activeCapColor, canonicalVariantUrl, rollerTypeOptions, router, variants]);
+
+    const handleGuidedProductUrlChange = useCallback((href: string) => {
+        const target = new URL(href, "https://bestbottles.local");
+        if (!target.pathname.startsWith("/products/")) return;
+        if (safeFrom) target.searchParams.set("from", safeFrom);
+        if (qty > 1) target.searchParams.set("qty", String(qty));
+        router.replace(`${target.pathname}${target.search}`, { scroll: false });
+    }, [qty, router, safeFrom]);
+
     // ── Product view analytics ───────────────────────────────────────────────
     useEffect(() => {
         if (group) {
@@ -1716,7 +1767,6 @@ export default function ProductDetailClient({
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
                                 priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin ?? null}
-                                siblings={compatibleSiblings}
                                 heroImageUrl={group.heroImageUrl}
                                 onAddToCart={handleAddToCart}
                                 onAskGrace={openGracePanel}
@@ -1732,9 +1782,12 @@ export default function ProductDetailClient({
                                 price10={selectedVariant?.webPrice10pc ?? null}
                                 price12={selectedVariant?.webPrice12pc ?? null}
                                 priceTiers={selectedVariant?.priceTiers ?? null}
+                                checkoutReady={canAddToCart}
                                 rollerVariant={rollerVariantForGuided}
                                 rollerVariantsAvailable={rollerVariantsAvailable}
                                 onRollerVariantChange={handleRollerVariantChange}
+                                onVariantSelectionChange={handleGuidedVariantSelection}
+                                onProductUrlChange={handleGuidedProductUrlChange}
                                 capOptions={capColorOptions}
                                 capOptionPhotoKeys={capOptionPhotoKeys}
                                 activeCapOption={activeCapColor}
