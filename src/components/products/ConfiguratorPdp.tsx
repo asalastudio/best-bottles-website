@@ -19,7 +19,7 @@ import dynamic from "next/dynamic";
 import {
   Check, ChatCircle, ShoppingBag,
 } from "@/components/icons";
-import { HandGrabbing, CaretDown,
+import { HandGrabbing,
          Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlugOrDerived, glassFromSlug, type ClosureBase }
@@ -131,7 +131,7 @@ export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach,
   heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
-  neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
+  neckSize, capacityText, skuLabel, graceSku, websiteSku,
   quoteHref, checkoutReady = true, qty = 1, onQtyChange,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
@@ -163,8 +163,7 @@ export default function ConfiguratorPdp({
   categoryLabel?: string;      // "Glass Bottle · Cylinder"
   inStock?: boolean;
   caseQty?: number | null;
-  /** transaction column (BuildDirect-pattern structure, our brand):
-      spec strip + tiered price + sample-first CTA stack */
+  /** concise transaction facts beside the purchase CTA */
   neckSize?: string | null;    // "17-415"
   capacityText?: string | null;// "9 ml (0.3 oz)"
   skuLabel?: string | null;
@@ -172,10 +171,6 @@ export default function ConfiguratorPdp({
    *  parts when one exists, so changing a cap changes the cap and nothing else */
   graceSku?: string | null;
   websiteSku?: string | null;
-  price10?: number | null;     // 10+ tier unit price
-  price12?: number | null;     // 12+ tier unit price
-  /** the real 5-step ladder; when present it replaces price10/price12 */
-  priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
   quoteHref?: string;
   /** False means the selected Shopify variant cannot check out and must quote. */
   checkoutReady?: boolean;
@@ -322,7 +317,6 @@ export default function ConfiguratorPdp({
   const skuToken = capOptions?.length ? capTokenFor(activeCapOption) : null;
   const capMat = skuToken ?? capMatLocal;
   const trimMat = skuToken ?? trimMatLocal;
-  const [tiersOpen, setTiersOpen] = useState(false);
   const [mats, setMats] = useState<Record<string, SwatchableMaterial> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -699,27 +693,9 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* price block — unit price leads; the tier teaser sells volume */
-  // the ladder: real 5-step tiers when synced, else the legacy 1/10/12
-  const ladder = useMemo(() => {
-    // A missing selected-variant price is quote-only. Preserve numeric zero as
-    // a real price, but never manufacture a transactional $0.00 value.
-    if (priceEach == null) return [];
-    if (priceTiers?.length) {
-      return [...priceTiers].sort((a, b) => a.minQty - b.minQty)
-        .map((t) => ({ minQty: t.minQty, price: t.unitPrice }));
-    }
-    const out = [{ minQty: 1, price: priceEach }];
-    if (price10 != null && priceEach != null && price10 < priceEach)
-      out.push({ minQty: 10, price: price10 });
-    if (price12 != null && priceEach != null && price12 < priceEach)
-      out.push({ minQty: 12, price: price12 });
-    return out;
-  }, [priceTiers, price10, price12, priceEach]);
-
-  const activeTier = [...ladder].reverse().find((t) => qty >= t.minQty) ?? ladder[0];
-  const nextTier = ladder.find((t) => t.minQty > qty) ?? null;
-  const tierPrice = activeTier?.price ?? priceEach;
+  /* The focused panel shows only selected-SKU price and case essentials.
+     Full tier information is intentionally below the discovery sections. */
+  const tierPrice = priceEach;
   const priceBlock = (
     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
       {priceEach != null && (
@@ -727,13 +703,6 @@ export default function ConfiguratorPdp({
           ${priceEach.toFixed(2)}
           <span className="text-sm font-normal text-slate ml-1.5">/each</span>
         </p>
-      )}
-      {ladder.length > 1 && (
-        <a href="#volume-pricing" onClick={() => setTiersOpen(true)}
-           className="text-ui text-gold-dim underline underline-offset-2">
-          ${ladder[ladder.length - 1].price.toFixed(2)} at{" "}
-          {ladder[ladder.length - 1].minQty}+ · {ladder.length} volume tiers
-        </a>
       )}
       <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
                         text-xs uppercase tracking-label font-semibold border
@@ -750,7 +719,6 @@ export default function ConfiguratorPdp({
   /* CTA stack — quantity + add to cart, then the working price summary.
      The sample CTA was retired 2026-09-02: samples go through the quote
      flow and Grace, not a second button competing with the cart. */
-  const linePrice = tierPrice != null ? tierPrice * qty : null;
   const ctaStack = (
     <div className="mt-5">
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
@@ -800,120 +768,6 @@ export default function ConfiguratorPdp({
         )}
       </div>
 
-      {priceEach != null && ladder.length > 0 && (
-        <div id="volume-pricing" style={{ scrollMarginTop: 120 }}
-             className="mt-4 border-y border-champagne/50">
-          <button type="button" onClick={() => setTiersOpen((v) => !v)}
-                  aria-expanded={tiersOpen}
-                  className="w-full flex items-center justify-between py-3">
-            <span className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
-              Volume pricing · by quote
-            </span>
-            <span className="flex items-baseline gap-3">
-              {ladder.length > 1 && (
-                <span className="text-spec text-slate tabular-nums">
-                  from ${ladder[ladder.length - 1].price.toFixed(2)} ea
-                </span>
-              )}
-              <CaretDown className={`h-3.5 w-3.5 text-slate transition-transform
-                                     duration-200 ${tiersOpen ? "rotate-180" : ""}`} />
-            </span>
-          </button>
-
-          {tiersOpen && (<>
-            <div className="pb-1 space-y-1">
-              {ladder.map((t) => {
-                const active = activeTier?.minQty === t.minQty;
-                const save = priceEach > 0
-                  ? Math.round((1 - t.price / priceEach) * 100) : 0;
-                return (
-                  <div key={t.minQty}
-                       className={`grid grid-cols-[1fr_auto_auto_92px] items-center gap-2
-                                   rounded-[2px] px-2.5 py-1.5 transition-colors duration-200
-                                   ${active ? "bg-white ring-1 ring-champagne/60" : ""}`}>
-                    <button type="button" onClick={() => onQtyChange?.(t.minQty)}
-                            aria-label={`Set quantity to ${t.minQty}`}
-                            className={`text-left text-sm ${active
-                              ? "font-semibold text-obsidian"
-                              : "text-slate hover:text-obsidian"}`}>
-                      {t.minQty.toLocaleString()}+ units
-                    </button>
-                    <span>
-                      {save > 0 && (
-                        <span className="text-2xs uppercase tracking-label font-semibold
-                                         text-[#1F6B49] bg-[#2E9E6B]/10 border border-[#2E9E6B]/30
-                                         rounded-full px-1.5 py-0.5">
-                          Save {save}%
-                        </span>
-                      )}
-                    </span>
-                    <span className={`text-sm tabular-nums text-right ${active
-                      ? "font-semibold text-obsidian" : "text-obsidian"}`}>
-                      ${t.price.toFixed(2)} ea
-                    </span>
-                    {active && checkoutReady ? (
-                      <button type="button" onClick={onAddToCart}
-                              className="text-2xs uppercase tracking-label font-semibold
-                                         bg-obsidian text-white rounded-[2px] py-1.5
-                                         transition-colors duration-200
-                                         hover:bg-muted-gold hover:text-obsidian">
-                        Add to cart
-                      </button>
-                    ) : active ? (
-                      <a href={quoteHref ?? "#"}
-                         className="text-2xs uppercase tracking-label font-semibold bg-obsidian text-white rounded-[2px] py-1.5 text-center hover:bg-muted-gold hover:text-obsidian">
-                        Request Quote
-                      </a>
-                    ) : (
-                      <button type="button" onClick={() => onQtyChange?.(t.minQty)}
-                              className="text-2xs uppercase tracking-label font-semibold
-                                         text-slate hover:text-gold-dim py-1.5">
-                        Select
-                      </button>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            {linePrice != null && (
-              <div className="flex items-baseline justify-between mt-1 pt-2 border-t border-champagne/50">
-                <span className="text-sm text-slate">Your price · {qty.toLocaleString()} unit{qty === 1 ? "" : "s"}</span>
-                <span className="text-md font-semibold text-obsidian tabular-nums">
-                  ${linePrice.toFixed(2)}
-                </span>
-              </div>
-            )}
-            <p className="text-spec text-slate mt-2 pb-3">
-              Volume rates are confirmed on a quote — online checkout is billed
-              at the ${priceEach.toFixed(2)}/ea rate.{" "}
-              {quoteHref && (
-                <a href={quoteHref} className="font-semibold text-gold-dim underline underline-offset-2">
-                  Request a quote
-                </a>
-              )}
-            </p>
-          </>)}
-        </div>
-      )}
-
-      {/* next-tier nudge — one tap to the next price break */}
-      {nextTier && priceEach != null && nextTier.price < priceEach && (
-        <button type="button" onClick={() => onQtyChange?.(nextTier.minQty)}
-                className="w-full mt-3 flex items-center justify-between gap-3 rounded-[3px]
-                           border border-muted-gold/40 bg-muted-gold/10 px-3 py-2.5
-                           text-left transition-colors duration-200
-                           hover:bg-muted-gold hover:text-obsidian group">
-          <span className="text-spec text-obsidian">
-            Add <span className="font-semibold">{(nextTier.minQty - qty).toLocaleString()} more</span>{" "}
-            to reach <span className="font-semibold">{nextTier.minQty.toLocaleString()}+</span> at{" "}
-            <span className="font-semibold">${nextTier.price.toFixed(2)}/ea</span>
-          </span>
-          <span className="shrink-0 text-2xs uppercase tracking-label font-semibold text-gold-dim
-                           group-hover:text-obsidian">
-            Save {Math.round((1 - nextTier.price / priceEach) * 100)}%
-          </span>
-        </button>
-      )}
     </div>
   );
 
@@ -1092,14 +946,6 @@ export default function ConfiguratorPdp({
 
       {/* the configuration, resolved */}
       <div className="mt-8 px-4">{configCard}</div>
-      <div className="mt-4 px-4 flex items-center justify-between text-caption text-slate">
-        {ladder.length > 1 ? (
-          <a href="#volume-pricing" onClick={() => setTiersOpen(true)} className="text-gold-dim underline underline-offset-2">
-            ${ladder[ladder.length - 1].price.toFixed(2)} at {ladder[ladder.length - 1].minQty.toLocaleString()}+ · {ladder.length} volume tiers
-          </a>
-        ) : <span />}
-      </div>
-
       {/* Grace hook */}
       {onAskGrace && (
         <p className="mt-6 px-4 flex items-center gap-2 text-sm text-slate">

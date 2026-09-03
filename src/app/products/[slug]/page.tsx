@@ -3,7 +3,6 @@ import { redirect } from "next/navigation";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
-    type ApplicatorSibling,
     type PdpCompatibilityPayload,
     type ProductGroupPayload,
     type SiblingGroup,
@@ -60,18 +59,6 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
     if (!data) return null;
     return selectPrimaryProductVariant(data.group, data.variants);
-}
-
-async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlug: string): Promise<ApplicatorSibling[]> {
-    const group = data?.group;
-    if (!group) return [];
-    return await getConvexClient().query(api.products.getApplicatorSiblings, {
-        family: group.family,
-        capacityMl: group.capacityMl ?? 0,
-        color: group.color ?? "",
-        excludeSlug: activeSlug,
-        neckThreadSize: group.neckThreadSize ?? undefined,
-    }) as ApplicatorSibling[];
 }
 
 async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: string): Promise<SiblingGroup[]> {
@@ -235,8 +222,7 @@ export default async function ProductPage({
     }
     const data = await getProductData(activeSlug);
     const primaryVariant = getPrimaryVariant(data);
-    const [siblings, siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
-        getApplicatorSiblings(data, activeSlug),
+    const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
         getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
         // The plates for THIS group's variants, from the Convex index -- never
@@ -306,7 +292,6 @@ export default async function ProductPage({
             <ProductDetailClient
                 slug={activeSlug}
                 initialData={data}
-                initialApplicatorSiblings={siblings}
                 initialPdpBlocks={pdpBlocks}
                 initialRelations={relations}
                 initialCompatibility={compatibility}

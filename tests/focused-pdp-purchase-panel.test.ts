@@ -5,6 +5,7 @@ import { describe, expect, it } from "vitest";
 const read = (path: string) => readFileSync(resolve(process.cwd(), path), "utf8");
 const configurator = read("src/components/products/ConfiguratorPdp.tsx");
 const pdp = read("src/app/products/[slug]/ProductDetailClient.tsx");
+const productPage = read("src/app/products/[slug]/page.tsx");
 
 describe("focused PDP purchase panel", () => {
     it("keeps the above-fold buy panel inside one applicator intent", () => {
@@ -76,9 +77,27 @@ describe("focused PDP purchase panel", () => {
 
     it("keeps a missing selected-variant price quote-only without fabricating zero pricing", () => {
         expect(configurator).not.toContain("priceEach ?? 0");
-        expect(configurator).toContain("if (priceEach == null) return []");
+        expect(configurator).toContain("const tierPrice = priceEach");
         expect(configurator).toContain('"Price on request"');
         expect(configurator).toContain("caseQty && tierPrice != null");
         expect(configurator).toContain("checkoutReady ? (");
+    });
+
+    it("keeps full tier pricing out of the focused buy panel and in lower PDP ordering details", () => {
+        expect(configurator).not.toContain("Volume pricing · by quote");
+        expect(configurator).not.toContain("const [tiersOpen");
+        expect(configurator).not.toContain("ladder.map((t)");
+        expect(configurator).not.toContain("next-tier nudge");
+        expect(pdp).toContain('data-testid="pdp-volume-fulfillment"');
+        expect(pdp).toContain("<TierLadder variant={selectedVariant} qty={qty} />");
+    });
+
+    it("builds primary glass choices from same-application groups rather than cross-application siblings", () => {
+        expect(pdp).not.toContain("initialApplicatorSiblings");
+        expect(pdp).not.toContain("applicationSiblings.find");
+        expect(pdp).toContain("const sameApplicationGroups");
+        expect(pdp).toContain("sameApplicationGroups.find");
+        expect(productPage).not.toContain("getApplicatorSiblings");
+        expect(productPage).not.toContain("initialApplicatorSiblings");
     });
 });

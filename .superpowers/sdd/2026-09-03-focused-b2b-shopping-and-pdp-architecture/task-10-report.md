@@ -151,3 +151,58 @@ Exit 0
 
 No network, Convex CLI, deployment, data mutation, production action, or
 inventory/media regeneration was performed.
+
+## Fix round 2 — focused-panel tier removal and same-application glass truth
+
+Base reviewed: `f4cc11d3`.
+
+### RED
+
+Added two focused-PDP regressions before production edits.
+
+```text
+npx vitest run tests/focused-pdp-purchase-panel.test.ts tests/pdp-discovery-sections.test.ts
+
+FAIL keeps full tier pricing out of the focused buy panel and in lower PDP ordering details
+ConfiguratorPdp still contained “Volume pricing · by quote”.
+
+FAIL builds primary glass choices from same-application groups rather than cross-application siblings
+ProductDetailClient still contained initialApplicatorSiblings.
+```
+
+### Fix
+
+- Removed ConfiguratorPdp's expandable multi-tier ladder, tier-change controls,
+  next-tier nudge, tier prop surface, and mobile tier teaser. It now keeps only
+  the selected SKU's unit price, case amount, quantity, and real cart/quote
+  action in the focused buy panel.
+- The only full tier display is the existing lower `TierLadder` inside
+  `pdp-volume-fulfillment`, after technical specifications.
+- Removed `getApplicatorSiblings` from the server PDP request, the
+  `initialApplicatorSiblings` prop/type, and all primary-selector consumption.
+  Fixed-family glass options now intersect canonical candidate slugs with the
+  real `getSiblingGroups` same-application data; unavailable groups are omitted
+  rather than turned into a display-name/color fallback or a dead link.
+- Derived and classic Roll-On color controls continue to use the same truthful
+  `siblingGroups` relation, preserving real same-application color options.
+
+### GREEN
+
+```text
+npx vitest run tests/focused-pdp-purchase-panel.test.ts tests/pdp-closure-rail.test.ts tests/pdp-discovery-sections.test.ts tests/pdp-relations.test.ts tests/compatibility-resolver-parity.test.ts tests/product-image-fallback.test.ts tests/closure-swatch-keys.test.ts tests/paper-doll-mapping-resolver.test.ts tests/checkout-readiness.test.ts
+
+Test Files  9 passed (9)
+Tests       66 passed (66)
+
+npx tsc --noEmit --pretty false
+Exit 0
+
+npx eslint src/components/products/ConfiguratorPdp.tsx 'src/app/products/[slug]/ProductDetailClient.tsx' 'src/app/products/[slug]/page.tsx' tests/focused-pdp-purchase-panel.test.ts tests/pdp-discovery-sections.test.ts
+Exit 0
+
+git diff --check
+Exit 0
+```
+
+No network, Convex CLI, deployment, data mutation, production action, or
+inventory/media regeneration was performed.

@@ -478,15 +478,6 @@ export interface ProductComponent {
     price_12?: number | null;
 }
 
-export interface ApplicatorSibling {
-    _id: string;
-    slug: string;
-    displayName: string;
-    applicatorTypes?: string[];
-    heroImageUrl?: string | null;
-    priceRangeMin?: number | null;
-}
-
 export interface ProductVariant {
     _id: string;
     graceSku: string;
@@ -938,7 +929,6 @@ export default function ProductDetailClient({
     platesBySku = {},
     slug,
     initialData,
-    initialApplicatorSiblings,
     initialPdpBlocks = [],
     initialRelations = null,
     initialCompatibility = null,
@@ -946,7 +936,6 @@ export default function ProductDetailClient({
 }: {
     slug: string;
     initialData: ProductGroupPayload | null;
-    initialApplicatorSiblings: ApplicatorSibling[];
     initialPdpBlocks?: PdpBlock[];
     initialRelations?: FocusedPdpRelations | null;
     initialCompatibility?: PdpCompatibilityPayload | null;
@@ -1018,10 +1007,6 @@ export default function ProductDetailClient({
         setSelectedTrimColor(variantFromUrl.trimColor || "Standard");
         setSelectedCapComponentSku(null);
     }, [selectedVariantParam, variantFromUrl]);
-
-    // These product-intent siblings support canonical product navigation only.
-    // Fitment belongs exclusively to the selected-SKU discovery query.
-    const applicationSiblings = initialApplicatorSiblings;
 
     // Atomizer family flag — these remain simplified until variant/color data is normalized.
     const isAtomizer = useMemo(() =>
@@ -1369,6 +1354,14 @@ export default function ProductDetailClient({
         return list;
     }, [group, activeSlug, siblingGroups]);
 
+    const sameApplicationGroups = useMemo(() => {
+        if (!group) return [];
+        return [
+            { slug: group.slug, color: group.color, heroImageUrl: group.heroImageUrl ?? null },
+            ...siblingGroups.map((sibling) => ({ slug: sibling.slug, color: sibling.color, heroImageUrl: null })),
+        ];
+    }, [group, siblingGroups]);
+
 
     const selectedVariantSummary = useMemo(() => {
         if (!selectedVariant || !hasVariantImagePicker) return null;
@@ -1683,9 +1676,6 @@ export default function ProductDetailClient({
                                 skuLabel={selectedVariant?.graceSku ?? null}
                                 graceSku={selectedVariant?.graceSku ?? null}
                                 websiteSku={selectedVariant?.websiteSku ?? null}
-                                price10={selectedVariant?.webPrice10pc ?? null}
-                                price12={selectedVariant?.webPrice12pc ?? null}
-                                priceTiers={selectedVariant?.priceTiers ?? null}
                                 checkoutReady={canAddToCart}
                                 rollerVariant={rollerVariantForGuided}
                                 rollerVariantsAvailable={rollerVariantsAvailable}
@@ -1732,19 +1722,18 @@ export default function ProductDetailClient({
                                     }
                                     const token = closureTokenFromSlug(f, group.slug ?? "");
                                     const current = glassFromSlug(f, group.slug ?? "");
-                                    return f.glasses.map((g) => {
+                                    return f.glasses.flatMap((g) => {
                                         const colour = f.slugColour[g];
                                         const slug = colour ? f.buildSlug(colour, token) : null;
-                                        const sib = slug === group.slug
-                                            ? group
-                                            : applicationSiblings.find((x) => x.slug === slug);
-                                        return {
+                                        const sibling = sameApplicationGroups.find((candidate) => candidate.slug === slug);
+                                        if (!slug || !sibling) return [];
+                                        return [{
                                             id: g,
                                             label: GLASS_PRESETS[g].label,
-                                            href: slug ? `/products/${slug}` : "#",
+                                            href: `/products/${slug}`,
                                             active: g === current,
-                                            imageUrl: sib?.heroImageUrl ?? null,
-                                        };
+                                            imageUrl: sibling.heroImageUrl,
+                                        }];
                                     });
                                 })()}
                                 quoteHref={quoteHref}
