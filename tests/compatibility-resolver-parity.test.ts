@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { buildMatrixCartItems } from "@/lib/matrix/cart";
+import { buildMatrixCartItems, summarizeMatrixOrder } from "@/lib/matrix/cart";
 
 describe("Product Compatibility Matrix cart contract", () => {
     it("adds the configured bottle and its server-resolved component as separate cart lines", () => {
@@ -82,5 +82,28 @@ describe("Product Compatibility Matrix cart contract", () => {
             component: null,
             quantity: 12,
         }])).toThrow("missing a catalog SKU");
+    });
+
+    it("counts a selected component toward the same $50 eligibility total that reaches the cart", () => {
+        const lines = [{
+            row: {
+                graceSku: "GB-CYL-100",
+                itemName: "100 ml clear Cylinder bottle",
+                webPrice1pc: 4,
+            },
+            component: {
+                graceSku: "CMP-SPR-100",
+                itemName: "Fine mist sprayer",
+                webPrice1pc: 1,
+            },
+            quantity: 10,
+        }];
+
+        const summary = summarizeMatrixOrder(lines, 50);
+
+        expect(summary.items).toEqual(buildMatrixCartItems(lines));
+        expect(summary.subtotal).toBe(50);
+        expect(summary.priced).toBe(true);
+        expect(summary.meetsMinimum).toBe(true);
     });
 });

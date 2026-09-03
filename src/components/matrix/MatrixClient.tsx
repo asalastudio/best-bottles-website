@@ -29,8 +29,7 @@ import { Plus, Minus, WarningCircle, Check } from "@/components/icons";
 import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
 import { useCart } from "@/components/CartProvider";
 import { cn } from "@/lib/utils";
-import { buildMatrixCartItems, type MatrixCartLine } from "@/lib/matrix/cart";
-import { resolveChargedUnitPrice } from "@/lib/volumePricing";
+import { summarizeMatrixOrder, type MatrixCartLine } from "@/lib/matrix/cart";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 
 /* ------------------------------------------------------------------ types */
@@ -147,19 +146,32 @@ export default function MatrixClient({
 
     /** Only rows with an EXPLICIT component decision count as configured. */
     const order = useMemo(() => {
-        const lines = rows
+        const configurations = rows
             .map((r) => ({ row: r, cfg: configs[key(r)] }))
             .filter((l): l is { row: MatrixRow; cfg: Config } =>
                 Boolean(l.cfg) && l.cfg!.component !== undefined && l.cfg!.qty > 0);
-        let subtotal = 0;
-        let priced = true;
-        for (const { row, cfg } of lines) {
-            const unit = resolveChargedUnitPrice(cfg.qty, row);
-            if (unit == null) { priced = false; continue; }
-            subtotal += unit * cfg.qty;
+        const cartLines: MatrixCartLine[] = configurations.map(({ row, cfg }) => ({
+            row,
+            component: cfg.component ?? null,
+            quantity: cfg.qty,
+        }));
+        try {
+            return {
+                configurations,
+                ...summarizeMatrixOrder(cartLines, MIN_ORDER),
+                error: null as string | null,
+            };
+        } catch (error) {
+            return {
+                configurations,
+                items: [],
+                subtotal: 0,
+                priced: false,
+                units: 0,
+                meetsMinimum: false,
+                error: error instanceof Error ? error.message : "Unable to price this configuration.",
+            };
         }
-        const units = lines.reduce((n, l) => n + l.cfg.qty, 0);
-        return { lines, subtotal, units, priced };
     }, [rows, configs]);
 
     const setConfig = (r: MatrixRow, patch: Partial<Config>) =>
@@ -171,25 +183,22 @@ export default function MatrixClient({
         });
 
     const addOrderToCart = () => {
-        try {
-            const cartLines: MatrixCartLine[] = order.lines.map(({ row, cfg }) => ({
-                row,
-                component: cfg.component ?? null,
-                quantity: cfg.qty,
-            }));
-            const items = buildMatrixCartItems(cartLines);
-            if (items.length === 0) throw new Error("Choose a bottle configuration before adding it to the cart.");
-            addItems(items);
-            setCartMessage({
-                kind: "success",
-                text: `${items.length} item${items.length === 1 ? "" : "s"} added to your cart.`,
-            });
-        } catch (error) {
+        if (order.error) {
             setCartMessage({
                 kind: "error",
-                text: error instanceof Error ? error.message : "Unable to add this configuration to the cart.",
+                text: order.error,
             });
+            return;
         }
+        if (order.items.length === 0) {
+            setCartMessage({ kind: "error", text: "Choose a bottle configuration before adding it to the cart." });
+            return;
+        }
+        addItems(order.items);
+        setCartMessage({
+            kind: "success",
+            text: `${order.items.length} item${order.items.length === 1 ? "" : "s"} added to your cart.`,
+        });
     };
 
     return (
@@ -514,18 +523,26 @@ function Stepper({ value, onChange }: { value: number; onChange: (v: number) => 
 }
 
 function OrderBar({ order, onAddToCart, cartMessage }: {
-    order: { lines: unknown[]; subtotal: number; units: number; priced: boolean };
+    order: {
+        configurations: unknown[];
+        items: unknown[];
+        subtotal: number;
+        units: number;
+        priced: boolean;
+        meetsMinimum: boolean;
+        error: string | null;
+    };
     onAddToCart: () => void;
     cartMessage: { kind: "success" | "error"; text: string } | null;
 }) {
-    const met = order.subtotal >= MIN_ORDER;
+    const met = order.meetsMinimum;
     return (
         <div className="fixed bottom-0 left-0 right-0 z-40 bg-warm-white border-t border-champagne">
             <div className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 flex items-center gap-4">
                 <div>
                     <p className="font-serif text-[15px] font-semibold text-obsidian">Your order</p>
                     <p className="text-caption text-slate tabular-nums">
-                        {order.lines.length} configuration{order.lines.length === 1 ? "" : "s"}
+                        {order.configurations.length} configuration{order.configurations.length === 1 ? "" : "s"}
                         {" · "}{order.units} units
                     </p>
                 </div>
@@ -539,7 +556,9 @@ function OrderBar({ order, onAddToCart, cartMessage }: {
                     {/* the $50 rule is per ORDER, not per SKU — there is no MOQ */}
                     <p className={cn("text-caption tabular-nums",
                                      met ? "text-slate" : "text-gold-dim")}>
-                        {met
+                        {!order.priced
+                            ? "Price unavailable — check item details"
+                            : met
                             ? "$50 order minimum met"
                             : `$${(MIN_ORDER - order.subtotal).toFixed(2)} to reach the $50 minimum`}
                     </p>
@@ -552,7 +571,7 @@ function OrderBar({ order, onAddToCart, cartMessage }: {
                         {cartMessage.text}
                     </p>
                 )}
-                <button type="button" disabled={!met || order.lines.length === 0} onClick={onAddToCart}
+                <button type="button" disabled={!met || order.configurations.length === 0} onClick={onAddToCart}
                     className="rounded-[3px] bg-obsidian text-white px-5 py-2.5 text-spec font-semibold
                                transition-colors duration-200 hover:bg-muted-gold hover:text-obsidian
                                disabled:opacity-40 disabled:hover:bg-obsidian disabled:hover:text-white">

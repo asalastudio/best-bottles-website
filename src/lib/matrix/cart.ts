@@ -86,3 +86,29 @@ export function buildMatrixCartItems(lines: MatrixCartLine[]): CartItem[] {
         ];
     });
 }
+
+/**
+ * The Matrix order bar and cart handoff must agree on the exact same priced
+ * lines. An unknown price remains unknown; it never becomes a zero-price line
+ * just to make an eligibility calculation convenient.
+ */
+export function summarizeMatrixOrder(lines: MatrixCartLine[], minimum: number) {
+    const items = buildMatrixCartItems(lines);
+    let subtotal = 0;
+    let priced = true;
+    for (const item of items) {
+        if (item.unitPrice == null) {
+            priced = false;
+            continue;
+        }
+        subtotal += item.unitPrice * item.quantity;
+    }
+
+    return {
+        items,
+        subtotal,
+        priced,
+        units: items.reduce((total, item) => total + item.quantity, 0),
+        meetsMinimum: priced && subtotal >= minimum,
+    };
+}
