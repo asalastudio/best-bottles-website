@@ -15,10 +15,10 @@ describe("focused PDP layout", () => {
         mobileStickySummary: createElement("div", null, "Sticky summary"),
     }));
 
-    it("exposes exactly two primary desktop columns with a dominant stage", () => {
+    it("exposes exactly two primary desktop columns at a 50/50 split", () => {
         const html = renderShell();
 
-        expect(html).toContain("grid-template-columns:minmax(0, 1.6fr) minmax(360px, 0.95fr)");
+        expect(html).toContain("grid-template-columns:minmax(0, 1fr) minmax(320px, 1fr)");
         expect(html.match(/data-pdp-primary-panel=/g)).toHaveLength(2);
         expect(html).toContain('data-pdp-primary-panel="stage"');
         expect(html).toContain('data-pdp-primary-panel="purchase"');
@@ -31,6 +31,7 @@ describe("focused PDP layout", () => {
 
         expect(html).toContain('data-pdp-stage-plate="10:11"');
         expect(html).toContain("aspect-ratio:10 / 11");
+        expect(html).toContain("max-height:min(72vh,720px)");
         expect(stage).toBeGreaterThan(-1);
         expect(stage).toBeLessThan(purchase);
     });
@@ -39,9 +40,17 @@ describe("focused PDP layout", () => {
         const html = renderShell();
 
         expect(html).toContain("container-type:inline-size");
-        expect(html).toContain("@container focused-pdp (min-width: 960px)");
+        expect(html).toContain("@container focused-pdp (min-width: 720px)");
         expect(html).toContain("pdp-mobile-sticky-summary");
-        expect(html).toMatch(/@container focused-pdp \(min-width: 960px\)[\s\S]*\.pdp-mobile-sticky-summary\{display:none\}/);
+        expect(html).toMatch(/@container focused-pdp \(min-width: 720px\)[\s\S]*\.pdp-mobile-sticky-summary\{display:none\}/);
+    });
+
+    it("shrinks only the stage when Grace insets the page and keeps two columns", () => {
+        const html = renderShell();
+
+        expect(html).toContain('[data-grace-layout="push"] .focused-pdp-grid{grid-template-columns:minmax(0, 0.72fr) minmax(280px, 1.28fr)');
+        expect(html).toContain('[data-grace-layout="push"] .focused-pdp-stage-plate{max-height:min(52vh,520px)}');
+        expect(html).not.toContain("focused-pdp-purchase{display:none");
     });
 
     it("renders the real focused purchase surface at 390px with contained closure controls", () => {
@@ -51,6 +60,7 @@ describe("focused PDP layout", () => {
                 displayName: "9 mL Clear Cylinder", priceEach: 0.72, inStock: true, checkoutReady: true,
                 qty: 1, plateImage: "https://example.test/plate.png", neckSize: "17-415", capacityText: "9 mL",
                 capOptions: ["Black", "Gold", "Silver", "White", "Pink", "Copper"], activeCapOption: "Black",
+                glassOptions: [{ id: "clear", label: "Clear", href: "#", active: true }],
             }),
         ));
 
@@ -65,6 +75,8 @@ describe("focused PDP layout", () => {
         expect(html).toContain("$0.72");
         expect(html).toContain('aria-label="Quantity"');
         expect(html).toContain("Add to cart");
+        expect(html.indexOf("1. Glass Finish")).toBeLessThan(html.indexOf("Add to cart"));
+        expect(html).toContain('data-pdp-cta-cluster="above-fold"');
     });
 
     it("renders mobile purchase controls after the stage instead of inside its bounded slot", () => {

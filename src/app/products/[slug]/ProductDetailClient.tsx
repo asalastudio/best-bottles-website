@@ -42,7 +42,12 @@ import { getCustomerFacingProductName } from "@/lib/products/customer-facing-nam
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { isCheckoutReady } from "@/lib/checkout";
-import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
+import {
+    VOLUME_TIERS_HONORED_AT_CHECKOUT,
+    activeVolumeTierIndex,
+    buildDisplayVolumeTiers,
+    formatVolumeQtyRange,
+} from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
@@ -788,87 +793,188 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
     );
 }
 
-function TierLadder({ variant, qty }: { variant: ProductVariant | null | undefined; qty: number }) {
+function VolumeTeaser({ variant }: { variant: ProductVariant | null | undefined }) {
+    if (!variant?.webPrice1pc) return null;
+    const tiers = buildDisplayVolumeTiers({
+        webPrice1pc: variant.webPrice1pc,
+        webPrice10pc: variant.webPrice10pc,
+        webPrice12pc: variant.webPrice12pc,
+        priceTiers: variant.priceTiers ?? null,
+    });
+    const quote = tiers.find((tier) => !tier.appliesAtCheckout);
+    if (!quote) return null;
+
+    return (
+        <a
+            href="#volume-pricing"
+            data-testid="pdp-volume-teaser"
+            className="mt-3 inline-flex flex-wrap items-baseline gap-x-2 text-sm text-slate hover:text-obsidian underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+        >
+            <span>Volume from {quote.minQty.toLocaleString("en-US")}+</span>
+            <span className="tabular-nums font-semibold text-obsidian">
+                {formatPrice(quote.unitPrice)}/ea
+            </span>
+            <span>on quote</span>
+        </a>
+    );
+}
+
+function TierLadder({
+    variant,
+    qty,
+    compact = false,
+    onQtyChange,
+}: {
+    variant: ProductVariant | null | undefined;
+    qty: number;
+    compact?: boolean;
+    onQtyChange?: (qty: number) => void;
+}) {
     if (!variant?.webPrice1pc) return null;
 
     const p1 = variant.webPrice1pc;
+    const tiers = buildDisplayVolumeTiers({
+        webPrice1pc: variant.webPrice1pc,
+        webPrice10pc: variant.webPrice10pc,
+        webPrice12pc: variant.webPrice12pc,
+        priceTiers: variant.priceTiers ?? null,
+    });
+    if (tiers.length === 0) return null;
 
-    type Tier = { minQty: number; price: number; savePct: number };
-    // Prefer the full published ladder (mirrored from bestbottles.com); the
-    // flat webPrice10pc/12pc pair is the fallback for rows not yet synced.
-    const ladder = (variant.priceTiers ?? [])
-        .filter((t) => t.unitPrice > 0)
-        .sort((a, b) => a.minQty - b.minQty);
-    let tiers: Tier[];
-    if (ladder.length >= 2 && ladder[0].minQty === 1) {
-        tiers = ladder.map((t) => ({
-            minQty: t.minQty,
-            price: t.unitPrice,
-            savePct: t.minQty === 1 ? 0 : Math.max(0, Math.round((1 - t.unitPrice / ladder[0].unitPrice) * 100)),
-        }));
-    } else {
-        const p10 = variant.webPrice10pc && variant.webPrice10pc < p1 ? variant.webPrice10pc : null;
-        const p12 = variant.webPrice12pc && variant.webPrice12pc < p1 ? variant.webPrice12pc : null;
-        tiers = [{ minQty: 1, price: p1, savePct: 0 }];
-        if (p10) tiers.push({ minQty: 10, price: p10, savePct: Math.round((1 - p10 / p1) * 100) });
-        if (p12) tiers.push({ minQty: 12, price: p12, savePct: Math.round((1 - p12 / p1) * 100) });
-    }
-
-    if (tiers.length === 1) return null; // no discount tiers — hide ladder entirely
-
-    const activeIdx = tiers.reduce((acc, t, i) => (qty >= t.minQty ? i : acc), 0);
+    const activeIdx = activeVolumeTierIndex(tiers, qty);
     const next = tiers[activeIdx + 1];
     const unitsToNext = next ? next.minQty - qty : 0;
+    const firstQuoteQty = tiers.find((tier) => !tier.appliesAtCheckout)?.minQty ?? null;
+    const caseQty = variant.caseQuantity && variant.caseQuantity > 1 ? variant.caseQuantity : null;
+    const quotedCaseUnit = caseQty
+        ? tiers.reduce((price, tier) => (caseQty >= tier.minQty ? tier.unitPrice : price), p1)
+        : null;
+
+    const cell = compact ? "px-1.5 py-1.5" : "px-2 py-2.5";
 
     return (
-        <div id="volume-pricing" style={{ scrollMarginTop: 120 }} className="bg-travertine border border-champagne/60 p-4 sm:p-5 rounded-sm">
-            <p className="text-xs uppercase tracking-wider font-bold text-slate mb-3">
-                {VOLUME_TIERS_HONORED_AT_CHECKOUT ? "Volume Pricing" : "Volume Pricing · By Quote"}
-            </p>
-            <div className="space-y-1">
-                {tiers.map((t, i) => {
-                    const active = i === activeIdx;
-                    return (
-                        <div
-                            key={t.minQty}
-                            className={`flex items-center justify-between px-2 py-2 rounded-sm transition-colors ${active ? "bg-white border border-muted-gold/40" : ""
-                                }`}
-                        >
-                            <span className={`text-sm ${active ? "text-obsidian font-semibold" : "text-obsidian"}`}>
-                                {t.minQty}+ units
-                            </span>
-                            <div className="flex items-center gap-2">
-                                <span className={`${active ? "font-bold text-obsidian" : "font-semibold text-obsidian"}`}>
-                                    {formatPrice(t.price)} ea
-                                </span>
-                                {t.savePct > 0 && (
-                                    <span className="text-[10px] text-emerald-700 font-bold uppercase bg-emerald-50 px-1.5 py-0.5 rounded-full border border-emerald-200">
-                                        Save {t.savePct}%
-                                    </span>
-                                )}
-                            </div>
-                        </div>
-                    );
-                })}
+        <div
+            id="volume-pricing"
+            style={{ scrollMarginTop: 120 }}
+            className={`bg-travertine border border-champagne/60 rounded-sm ${compact ? "p-3" : "p-4 sm:p-5"}`}
+        >
+            <div className={`flex items-baseline justify-between gap-3 ${compact ? "mb-2" : "mb-3"}`}>
+                <p className="text-xs uppercase tracking-wider font-bold text-slate">Volume pricing</p>
+                {firstQuoteQty != null && (
+                    <p className="text-[11px] text-slate">Quote {firstQuoteQty.toLocaleString("en-US")}+</p>
+                )}
             </div>
+
+            <table className="w-full border-collapse" data-testid="pdp-volume-tier-table">
+                <caption className="sr-only">
+                    Quantity breaks with price per unit. Checkout uses the 1-unit rate
+                    {firstQuoteQty != null ? `; ${firstQuoteQty}+ rates are confirmed on a quote` : ""}.
+                </caption>
+                <thead>
+                    <tr className="text-[10px] uppercase tracking-wider text-slate border-b border-champagne/70">
+                        <th scope="col" className={`${cell} text-left font-semibold`}>Quantity</th>
+                        <th scope="col" className={`${cell} text-right font-semibold`}>Price / unit</th>
+                        {!compact ? <th scope="col" className={`${cell} text-right font-semibold`}>At break</th> : null}
+                        <th scope="col" className={`${cell} text-right font-semibold`}>Save</th>
+                        <th scope="col" className={`${cell} text-right font-semibold`}>Path</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tiers.map((tier, index) => {
+                        const active = index === activeIdx;
+                        const range = formatVolumeQtyRange(tier.minQty, tier.maxQty);
+                        const rowClass = `border-b border-champagne/40 last:border-b-0 ${active ? "bg-white" : ""}`;
+                        const qtyControl = onQtyChange ? (
+                            <button
+                                type="button"
+                                onClick={() => onQtyChange(tier.minQty)}
+                                aria-current={active ? "true" : undefined}
+                                aria-label={`Set quantity to ${tier.minQty.toLocaleString("en-US")}`}
+                                className={`text-left tabular-nums underline-offset-2 hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold ${
+                                    active ? "font-semibold text-obsidian" : "text-obsidian"
+                                }`}
+                            >
+                                {range}
+                            </button>
+                        ) : (
+                            <span className={`tabular-nums ${active ? "font-semibold text-obsidian" : "text-obsidian"}`}>
+                                {range}
+                            </span>
+                        );
+
+                        return (
+                            <tr key={tier.minQty} className={rowClass} data-volume-tier-active={active ? "true" : "false"}>
+                                <th scope="row" className={`${cell} text-left text-sm font-normal`}>
+                                    {qtyControl}
+                                </th>
+                                <td className={`${cell} text-right text-sm tabular-nums ${active ? "font-bold text-obsidian" : "font-semibold text-obsidian"}`}>
+                                    {formatPrice(tier.unitPrice)}
+                                    <span className="ml-0.5 font-normal text-slate">/ea</span>
+                                </td>
+                                {!compact ? (
+                                    <td className={`${cell} text-right text-sm tabular-nums text-obsidian`}>
+                                        {formatPrice(tier.unitPrice * tier.minQty)}
+                                    </td>
+                                ) : null}
+                                <td className={`${cell} text-right text-xs tabular-nums ${tier.savePct > 0 ? "text-emerald-800" : "text-slate"}`}>
+                                    {tier.savePct > 0
+                                        ? compact
+                                            ? `${tier.savePct}%`
+                                            : `${tier.savePct}% · ${formatPrice(tier.saveEach)}`
+                                        : "—"}
+                                </td>
+                                <td className={`${cell} text-right text-[10px] uppercase tracking-wider font-semibold ${
+                                    tier.appliesAtCheckout ? "text-obsidian" : "text-slate"
+                                }`}>
+                                    {tier.appliesAtCheckout ? "Checkout" : "Quote"}
+                                </td>
+                            </tr>
+                        );
+                    })}
+                </tbody>
+            </table>
+
+            {caseQty && quotedCaseUnit != null && onQtyChange ? (
+                <button
+                    type="button"
+                    onClick={() => onQtyChange(caseQty)}
+                    data-testid="pdp-volume-case-shortcut"
+                    className={`mt-2 w-full text-left rounded-sm border border-champagne/70 bg-white hover:border-muted-gold/70 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold ${
+                        compact ? "px-2 py-1.5" : "px-3 py-2.5"
+                    }`}
+                >
+                    <span className="flex items-baseline justify-between gap-3">
+                        <span className="text-sm text-obsidian">
+                            1 case
+                            <span className="text-slate"> · {caseQty.toLocaleString("en-US")} units</span>
+                        </span>
+                        <span className="text-sm tabular-nums text-obsidian">
+                            {formatPrice(quotedCaseUnit)}
+                            <span className="ml-0.5 text-slate">/ea</span>
+                            <span className="ml-2 text-slate">{formatPrice(quotedCaseUnit * caseQty)}</span>
+                        </span>
+                    </span>
+                </button>
+            ) : null}
 
             {VOLUME_TIERS_HONORED_AT_CHECKOUT ? (
                 next && unitsToNext > 0 && unitsToNext <= 11 && (
                     <p className="text-xs text-muted-gold mt-3 leading-relaxed">
-                        Add <span className="font-bold">{unitsToNext}</span> more to unlock {formatPrice(next.price)}/ea
+                        Add <span className="font-bold">{unitsToNext}</span> more to unlock {formatPrice(next.unitPrice)}/ea
                         <span className="text-slate"> · save {next.savePct}%</span>
                     </p>
                 )
             ) : (
-                // Shopify's cart-permalink checkout charges the flat 1pc price,
-                // so we must not imply the ladder applies online. Verified
-                // 2026-07-29 — see src/lib/volumePricing.ts.
-                <p className="text-xs text-slate mt-3 leading-relaxed">
-                    Volume rates are confirmed on a quote — online checkout is billed at
-                    the {formatPrice(p1)}/ea rate.{" "}
-                    <span className="font-semibold text-obsidian">Request a quote</span> for
-                    {tiers.length > 1 ? ` ${tiers[1].minQty}+ ` : " volume "}
-                    pricing.
+                <p className={`text-xs text-slate leading-relaxed ${compact ? "mt-2" : "mt-3"}`}>
+                    {compact
+                        ? `Checkout bills ${formatPrice(p1)}/ea. Quote ${firstQuoteQty != null ? `${firstQuoteQty}+` : "volume"} rates.`
+                        : <>
+                            Volume rates are confirmed on a quote — online checkout is billed at
+                            the {formatPrice(p1)}/ea rate.{" "}
+                            <span className="font-semibold text-obsidian">Request a quote</span> for
+                            {firstQuoteQty != null ? ` ${firstQuoteQty}+ ` : " volume "}
+                            pricing.
+                        </>}
                 </p>
             )}
         </div>
@@ -1889,7 +1995,8 @@ export default function ProductDetailClient({
                                 quoteHref={quoteHref}
                                 qty={qty}
                                 onQtyChange={setQty}
-                                volumePricing={<TierLadder variant={selectedVariant} qty={qty} />}
+                                ctaAnchorRef={inlineCartRef}
+                                volumePricing={<VolumeTeaser variant={selectedVariant} />}
                             />
                         </div>
                     ) : null}
@@ -2736,7 +2843,7 @@ export default function ProductDetailClient({
                             </div>
 
                             <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`} data-testid="pdp-volume-under-atc">
-                                <TierLadder variant={selectedVariant} qty={qty} />
+                                <VolumeTeaser variant={selectedVariant} />
                             </div>
 
                             {/* Product Description — canonical copy avoids showing applicator-mismatched group text. */}
@@ -2810,7 +2917,12 @@ export default function ProductDetailClient({
                             <div className="max-w-2xl">
                                 <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Ordering details</p>
                                 <h2 className="mt-1 font-serif text-2xl text-obsidian">Volume pricing and fulfillment</h2>
-                                <p className="mt-2 text-sm text-slate">Volume rates sit next to Add to Cart. Case quantity and shipping remain here for fulfillment planning.</p>
+                                <p className="mt-2 text-sm text-slate">
+                                    Checkout uses the 1-unit price next to Add to Cart. Quantity breaks below are for quote planning.
+                                </p>
+                                <div className="mt-6">
+                                    <TierLadder variant={selectedVariant} qty={qty} onQtyChange={setQty} />
+                                </div>
                                 <div className="mt-4 grid gap-3 text-sm sm:grid-cols-3">
                                     <div className="rounded-sm border border-champagne/50 bg-white p-3">
                                         <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Availability</p>

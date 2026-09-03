@@ -28,6 +28,75 @@ export interface TierPrices {
     webPrice12pc?: number | null;
 }
 
+export type PublishedTier = {
+    minQty: number;
+    unitPrice: number;
+};
+
+export type DisplayVolumeTier = {
+    minQty: number;
+    maxQty: number | null;
+    unitPrice: number;
+    savePct: number;
+    saveEach: number;
+    appliesAtCheckout: boolean;
+};
+
+/**
+ * Baymard-ready quantity-break rows: closed ranges, unit price, savings vs 1-pc,
+ * and whether Shopify checkout will honor the rate.
+ */
+export function buildDisplayVolumeTiers(prices: TierPrices & {
+    priceTiers?: PublishedTier[] | null;
+}): DisplayVolumeTier[] {
+    const p1 = prices.webPrice1pc ?? null;
+    if (p1 == null || p1 <= 0) return [];
+
+    const published = (prices.priceTiers ?? [])
+        .filter((tier) => tier.unitPrice > 0)
+        .sort((a, b) => a.minQty - b.minQty);
+
+    let raw: PublishedTier[];
+    if (published.length >= 2 && published[0]?.minQty === 1) {
+        raw = published;
+    } else {
+        raw = [{ minQty: 1, unitPrice: p1 }];
+        if (prices.webPrice10pc && prices.webPrice10pc < p1) {
+            raw.push({ minQty: 10, unitPrice: prices.webPrice10pc });
+        }
+        if (prices.webPrice12pc && prices.webPrice12pc < p1) {
+            raw.push({ minQty: 12, unitPrice: prices.webPrice12pc });
+        }
+    }
+
+    if (raw.length < 2) return [];
+
+    const list = raw[0]?.unitPrice ?? p1;
+    return raw.map((tier, index) => {
+        const next = raw[index + 1];
+        const saveEach = Math.max(0, Math.round((list - tier.unitPrice) * 100) / 100);
+        return {
+            minQty: tier.minQty,
+            maxQty: next ? next.minQty - 1 : null,
+            unitPrice: tier.unitPrice,
+            savePct: list > 0 && tier.minQty > 1 ? Math.max(0, Math.round((saveEach / list) * 100)) : 0,
+            saveEach,
+            appliesAtCheckout: VOLUME_TIERS_HONORED_AT_CHECKOUT || tier.minQty === 1,
+        };
+    });
+}
+
+export function formatVolumeQtyRange(minQty: number, maxQty: number | null): string {
+    const min = minQty.toLocaleString("en-US");
+    if (maxQty == null) return `${min}+`;
+    if (maxQty === minQty) return min;
+    return `${min}–${maxQty.toLocaleString("en-US")}`;
+}
+
+export function activeVolumeTierIndex(tiers: DisplayVolumeTier[], qty: number): number {
+    return tiers.reduce((acc, tier, index) => (qty >= tier.minQty ? index : acc), 0);
+}
+
 /**
  * The price a customer will ACTUALLY be charged per unit at this quantity.
  *
