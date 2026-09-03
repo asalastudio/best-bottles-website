@@ -4,10 +4,10 @@
  * ConfiguratorPdp — the guided configurator hero (design handoff
  * `design_handoff_configurator_pdp`, approved 2026-08-31).
  *
- * Desktop: 50/50 split — 3D stage left, step panel right. Mobile: stacked
- * flow with summary chip, closure rail, accordion steps and a sticky buy
- * bar. Everything INSIDE the <Canvas> belongs to the render design system;
- * this component owns everything outside it.
+ * The shared focused shell keeps one 10:11 stage beside one coherent purchase
+ * panel, then stacks them stage-first when its own container gets narrow.
+ * Everything INSIDE the <Canvas> belongs to the render design system; this
+ * component owns everything outside it.
  *
  * Architecture (decision 2026-08-31): a VENEER over the one-URL-per-closure
  * catalogue. Committing a closure navigates to the sibling product group,
@@ -19,13 +19,11 @@
 import { useMemo, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
-import { AnimatePresence, motion } from "framer-motion";
 import {
-  Check, CaretRight, Sparkle, ChatCircle, ShoppingBag,
-  SprayBottle, Drop, Eyedropper, GitCompare,
+  Check, ChatCircle, ShoppingBag, SprayBottle, Drop, Eyedropper,
 } from "@/components/icons";
-import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube, Cube,
-         Camera, Stack, Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
+import { HandSoap, HandGrabbing, CaretDown, CheckCircle, TestTube,
+         Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlugOrDerived, glassFromSlug, CLOSURE_TOKENS,
          type ConfiguratorFamily, type ClosureBase }
@@ -37,6 +35,14 @@ import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 
 import { useGLTF } from "@react-three/drei";
+import FocusedPdpLayout from "./FocusedPdpLayout";
+import PdpStageModeDock from "./PdpStageModeDock";
+import {
+  getPdpStageModes,
+  hasRealPdpDimensions,
+  preservePdpStageMode,
+  type PdpStageMode,
+} from "@/lib/products/pdp-stage-modes";
 
 /** every slug token a base may carry in this family, the family's own first */
 function tokensFor(fam: ConfiguratorFamily, base: ClosureBase): string[] {
@@ -123,15 +129,6 @@ const GLASS_TILE: Record<string, string> = {
   swirl: "linear-gradient(150deg,#efe7d8 0%,#dccfb4 55%,#c3b392 100%)",
 };
 
-/** glass tint approximations for the GLASS swatches (attenuation-derived) */
-const GLASS_TONE: Record<string, SwatchableMaterial> = {
-  clear: { color: "#e9edeb", roughness: 0.06 },
-  amber: { color: "#8a4c16", roughness: 0.06 },
-  cobalt: { color: "#1d3aa8", roughness: 0.06 },
-  frosted: { color: "#dfe3e2", roughness: 0.55 },
-  swirl: { color: "#e3d9c2", roughness: 0.2 },
-};
-
 type Sibling = {
   slug?: string | null;
   priceRangeMin?: number | null;
@@ -140,7 +137,7 @@ type Sibling = {
   displayName?: string | null;
 };
 
-/** sessionStorage key for the stage mode ("3d" | "photo") */
+/** sessionStorage key for the customer's current stage mode. */
 /** Resolve once the bytes are ready to paint. A cached part resolves immediately,
  *  which is why swapping a cap costs one frame and not a fade. */
 function decodeImage(url: string): Promise<void> {
@@ -156,7 +153,7 @@ function decodeImage(url: string): Promise<void> {
 const STAGE_MODE_KEY = "bb:pdp-stage";
 
 export default function ConfiguratorPdp({
-  currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
+  currentSlug, groupTitle, capacityLabel, priceEach,
   siblings, heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
@@ -164,6 +161,7 @@ export default function ConfiguratorPdp({
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
+  heightWithCap = null, heightWithoutCap = null, diameter = null,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -173,10 +171,12 @@ export default function ConfiguratorPdp({
   /** the selected SKU's catalogue photograph: the stage's fallback when the
    *  SKU has no plate (never photographed as a plate, or not built yet) */
   variantImageUrl?: string | null;
+  heightWithCap?: string | null;
+  heightWithoutCap?: string | null;
+  diameter?: string | null;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
-  stepCountLabel?: string;
   siblings: Sibling[];         // applicator siblings incl. prices (deltas)
   heroImageUrl?: string | null;
   onAddToCart?: () => void;
@@ -252,11 +252,12 @@ export default function ConfiguratorPdp({
   // colour in 3D (Jordan, 2026-09-01). The mode is kept for the session and
   // re-applied on mount; the server always renders the photograph, so
   // there is nothing to mismatch on hydration.
-  const [show3d, setShow3dState] = useState(false);
+  const [requestedStageMode, setRequestedStageMode] = useState<PdpStageMode>("photo");
+  const show3d = requestedStageMode === "3d";
   // Exploded: the kit's parts slide apart along the axis by the offsets the
   // builder recorded (`exploded.dx/dy`, plate pixels). Only a kitted SKU has
   // them, so the mode is offered only when the stack is on screen.
-  const [exploded, setExploded] = useState(false);
+  const exploded = requestedStageMode === "exploded";
   const [skuCopied, setSkuCopied] = useState(false);
   // URLs whose <img> fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
@@ -314,14 +315,16 @@ export default function ConfiguratorPdp({
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
   };
   useEffect(() => {
-    try { if (window.sessionStorage.getItem(STAGE_MODE_KEY) === "3d") setShow3dState(true); } catch {}
+    try {
+      const saved = window.sessionStorage.getItem(STAGE_MODE_KEY);
+      if (saved === "photo" || saved === "3d" || saved === "exploded" || saved === "dimensions") {
+        setRequestedStageMode(saved);
+      }
+    } catch {}
   }, []);
-  const setShow3d = (next: boolean | ((on: boolean) => boolean)) => {
-    setShow3dState((on) => {
-      const value = typeof next === "function" ? next(on) : next;
-      try { window.sessionStorage.setItem(STAGE_MODE_KEY, value ? "3d" : "photo"); } catch {}
-      return value;
-    });
+  const pickMode = (mode: PdpStageMode) => {
+    setRequestedStageMode(mode);
+    try { window.sessionStorage.setItem(STAGE_MODE_KEY, mode); } catch {}
   };
   useEffect(() => { setGlassOverride(null); }, [currentSlug]);
   const glass: GlassPresetId = glassOverride ?? slugGlass;
@@ -404,7 +407,7 @@ export default function ConfiguratorPdp({
       if (siblings.some((s) => s.slug === antiqueSlug)) out.push("antique");
     }
     return out;
-  }, [fam, glass, siblings]);
+  }, [activeBase, fam, glass, siblingFor, siblings]);
 
   // ONE row of actual components in a stable trade order (Jordan:
   // "just one row ... the actual components ... reducer, roll-on, spray,
@@ -418,13 +421,6 @@ export default function ConfiguratorPdp({
     [sellableBases]);
 
   const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;
-
-  const priceDelta = (base: ClosureBase): string => {
-    const sib = siblingFor(base);
-    if (sib?.priceRangeMin == null || priceEach == null) return "";
-    const d = sib.priceRangeMin - priceEach;
-    return `${d >= 0 ? "+" : "−"}$${Math.abs(d).toFixed(2)}`;
-  };
 
   const antiqueSibling = siblingFor("antique");
   // bulb has no live 3D (parked): the stage shows the product photo
@@ -508,12 +504,25 @@ export default function ConfiguratorPdp({
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
   const has3d = Boolean(fam) && !fam?.photoOnly;
+  const dimensions = { heightWithCap, heightWithoutCap, diameter };
+  const showDimensions = requestedStageMode === "dimensions" && hasRealPdpDimensions(dimensions);
   const showPlate = !(show3d && has3d) && Boolean(plate);
   const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
   const showLive3d = !showPlate && !showPhoto && has3d;
   const stage = (
     <div className="relative h-full w-full overflow-hidden">
-      {showPlate ? (
+      {showDimensions ? (
+        <div className="flex h-full w-full items-center justify-center bg-linen px-8 py-10">
+          <div className="w-full max-w-sm border-y border-champagne/70">
+            <p className="py-4 font-serif text-2xl text-obsidian">Product dimensions</p>
+            <dl>
+              {heightWithCap?.trim() ? <DimensionRow label="Height with cap" value={heightWithCap} /> : null}
+              {heightWithoutCap?.trim() ? <DimensionRow label="Height without cap" value={heightWithoutCap} /> : null}
+              {diameter?.trim() ? <DimensionRow label="Diameter" value={diameter} /> : null}
+            </dl>
+          </div>
+        </div>
+      ) : showPlate ? (
         <div className="relative h-full w-full bg-white">
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
@@ -570,7 +579,7 @@ export default function ConfiguratorPdp({
       <div className="absolute top-3.5 left-3.5 right-3.5 z-[40] flex items-center justify-between gap-3 pointer-events-none">
         {/* The plain photograph carries no badge: the mode bar below the stage
             already says so, and the chip read as a label on the product. */}
-        {(showLive3d || (exploded && kitReady)) ? (
+        {(!showDimensions && (showLive3d || (exploded && kitReady))) ? (
           <span className="flex items-center gap-1.5 rounded-[3px] px-2.5 py-1.5 backdrop-blur"
                 style={{ background: "rgba(29,29,31,.85)" }}>
             <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
@@ -600,7 +609,7 @@ export default function ConfiguratorPdp({
       </div>
 
       {/* drag affordance */}
-      {showLive3d && (
+      {showLive3d && !showDimensions && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center
                         gap-2 text-sm text-white/85 pointer-events-none">
           <HandGrabbing className="h-4 w-4" />
@@ -620,33 +629,32 @@ export default function ConfiguratorPdp({
   // falls through to Live 3D; the bar used to keep "Photo" lit while the 3D
   // rendered, and a closure click that landed on a sibling with a plate then
   // flipped it back (Jordan, 2 Sep, the 100 ml reducer mid-publish).
-  const stageMode: "photo" | "3d" | "exploded" =
-    showLive3d ? "3d" : exploded && kitReady ? "exploded" : "photo";
-  const pickMode = (m: "photo" | "3d" | "exploded") => {
-    setShow3d(m === "3d");
-    setExploded(m === "exploded");
-  };
-  const modes: Array<{ id: "photo" | "3d" | "exploded"; label: string; icon: React.ReactNode; enabled: boolean; why?: string }> = [
-    { id: "photo", label: "Photo", icon: <Camera className="h-4 w-4" />,
-      enabled: Boolean(plate || photoFallback), why: "No photograph for this configuration yet" },
-    { id: "3d", label: "3D", icon: <Cube className="h-4 w-4" />, enabled: has3d, why: "3D is on its way for this family" },
-    { id: "exploded", label: "Exploded", icon: <Stack className="h-4 w-4" />, enabled: kitReady, why: "Exploded view comes with the component kit" },
-  ];
-  const stageToggle = (plateImage || photoFallback || has3d) ? (
-    <div className="flex border border-champagne/60" role="tablist" aria-label="Stage mode">
-      {modes.map((m) => (
-        <button key={m.id} type="button" role="tab" aria-selected={stageMode === m.id}
-                disabled={!m.enabled} title={m.enabled ? undefined : m.why}
-                onClick={() => pickMode(m.id)}
-                className={`flex flex-1 items-center justify-center gap-2 -ml-px border-l border-champagne/60
-                            px-2 py-3.5 text-2xs font-semibold uppercase tracking-label transition-colors duration-200
-                            first:ml-0 first:border-l-0 disabled:cursor-not-allowed disabled:opacity-40
-                            ${stageMode === m.id ? "bg-obsidian text-white" : "bg-white text-slate hover:text-obsidian"}`}>
-          {m.icon}{m.label}
-        </button>
-      ))}
-    </div>
-  ) : null;
+  const modes = getPdpStageModes({
+    hasApprovedImageOrPlate: Boolean(plate || photoFallback),
+    hasApprovedGeometry: has3d,
+    hasReleasedExplodedKit: kitReady,
+    dimensions,
+    photoOnly: fam?.photoOnly,
+    productFamily: displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0],
+  });
+  const stageMode: PdpStageMode | null = showDimensions
+    ? "dimensions"
+    : showLive3d
+      ? "3d"
+      : exploded && kitReady
+        ? "exploded"
+        : preservePdpStageMode("photo", modes);
+  useEffect(() => {
+    if (kitQuery === undefined) return;
+    const preserved = preservePdpStageMode(requestedStageMode, modes);
+    if (preserved && preserved !== requestedStageMode) pickMode(preserved);
+    // Mode capabilities are primitive truth values; keeping the array out of
+    // this dependency list prevents an effect on every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requestedStageMode, has3d, kitReady, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery]);
+  const stageToggle = (
+    <PdpStageModeDock modes={modes} activeMode={stageMode} onModeChange={pickMode} />
+  );
 
   /* ----------------------------------------------- swatch rows (seam) */
   const finishRow = (compact = false, eyebrow = "3. Closure Finish") => {
@@ -1096,10 +1104,12 @@ export default function ConfiguratorPdp({
 
   /* ------------------------------------------------------- step panel */
   const stepPanel = (
-    <div className="h-full overflow-y-auto px-1.5">
+    <div className="min-w-0">
       {identity}
       {specStrip}
       {priceBlock}
+      {summaryStrip}
+      {glassStep ? <div className="mt-6">{glassStep}</div> : null}
       {closureRow}
       {/* The overcap chooser is gone: the stage's cap-on/off toggle is the one
           cap control (decision 2026-09-02). Roller material now sits here,
@@ -1133,7 +1143,11 @@ export default function ConfiguratorPdp({
         </div>
       )}
       <div className="mt-6 pt-5 border-t border-champagne/50">{finishRow()}</div>
+      <div className="mt-6">{configCard}</div>
       {ctaStack}
+      <div className="mt-4 flex justify-between text-caption text-slate">
+        <span>Secure checkout</span><span>30-day returns</span>
+      </div>
     </div>
   );
 
@@ -1246,84 +1260,30 @@ export default function ConfiguratorPdp({
       <div className="h-24" />
     </div>
   );
+  void mobile;
 
   return (
     <section className="w-full">
-      {/* desktop — glass rail | stage | buy column. The rail runs down the
-          left of the viewport (Jordan) and takes lifestyle tiles later. */}
-      {/* desktop — stage panel | guided steps | configuration + price.
-          The proportions are the approved design's (2 Sep 2026); the
-          tokens are ours, which is what the design was drawn in. */}
-      {/* 40 px page gutters, as the design has them (the host gives 24). The
-          global Grace button is fixed 56 px wide at the bottom-right, so the
-          right gutter is wider: "Add to cart" must never sit underneath it
-          (measured 2 Sep: button x 1362-1418 on a 1440 viewport). */}
-      <div className="hidden lg:grid grid-cols-[minmax(400px,1fr)_minmax(360px,470px)_300px] gap-5 items-start"
-           style={{ paddingLeft: 16, paddingRight: 96 }}>
-        <section className="flex flex-col gap-3 border border-champagne/50 bg-linen p-4">
-          {/* 10/11 is the plate's aspect, so photo, kit and 3D are always the same size */}
-          <div className="relative aspect-[10/11] overflow-hidden bg-travertine">{stage}</div>
-          {stageToggle}
-          <p className="flex items-center justify-center gap-1.5 text-center text-caption text-slate">
-            <Sparkle className="h-3.5 w-3.5 text-muted-gold" weight="fill" />
-            Same configuration across all modes. Changes update in real time.
-          </p>
-        </section>
-
-        <section className="min-w-0 px-2 pt-1.5">
-          {identity}
-          <p className="mt-2.5 flex gap-2.5 text-sm text-slate tabular-nums">
-            {neckSize && <span>{neckSize} Neck</span>}
-            {neckSize && capacityText && <span>·</span>}
-            {capacityText && <span>{capacityText}</span>}
-          </p>
-          {summaryStrip}
-          <div className="mt-6">{glassStep}</div>
-          {closureRow}
-          {activeBase === "roller" && (
-            <div className="mt-6 border-t border-champagne/50 pt-5">
-              <p className="text-2xs font-semibold uppercase tracking-label">
-                <span className="text-slate">Roller ball</span>
-                <span className="text-slate"> · </span>
-                <span className="text-obsidian normal-case tracking-normal text-caption">
-                  {rollerVariant === "metal" ? "Stainless steel" : "Plastic"}
-                </span>
-              </p>
-              <div className="mt-2.5 grid max-w-xs grid-cols-2 gap-2.5">
-                {([["metal", "Stainless steel", "Smooth, cooling glide"],
-                   ["plastic", "Plastic", "Lighter, lower cost"]] as const).map(
-                  ([id, label, note]) => (
-                    <button key={id} type="button" onClick={() => setRollerVariant(id)}
-                            aria-pressed={rollerVariant === id}
-                            disabled={!rollerOffered(id)}
-                            title={rollerOffered(id) ? undefined : "Not offered for this bottle"}
-                            className={`rounded-[3px] px-3 py-2 text-left transition-colors duration-200
-                                        disabled:cursor-not-allowed disabled:opacity-40 ${rollerVariant === id
-                                          ? "border-[1.5px] border-obsidian bg-white"
-                                          : "border border-champagne hover:border-muted-gold"}`}>
-                      <span className="block text-spec font-semibold text-obsidian">{label}</span>
-                      <span className="block text-2xs text-slate mt-0.5">{note}</span>
-                    </button>
-                  ))}
-              </div>
-            </div>
-          )}
-          <div className="mt-6">{finishRow()}</div>
-        </section>
-
-        <aside className="flex flex-col gap-3.5">
-          {configCard}
-          <div className="border border-champagne/50 bg-linen p-5">
-            {priceBlock}
-            {ctaStack}
-            <div className="mt-4 flex justify-between text-caption text-slate">
-              <span>Secure checkout</span><span>30-day returns</span>
-            </div>
+      <FocusedPdpLayout
+        className="px-4 sm:px-0"
+        stage={(
+          <div className="relative h-full w-full border border-champagne/50 bg-travertine">
+            {stage}
+            <div className="absolute inset-x-[-1px] top-full">{stageToggle}</div>
           </div>
-        </aside>
-      </div>
-      {mobile}
+        )}
+        purchase={stepPanel}
+      />
     </section>
+  );
+}
+
+function DimensionRow({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="flex min-h-11 items-center justify-between gap-5 border-t border-champagne/50 py-3 text-sm">
+      <dt className="text-slate">{label}</dt>
+      <dd className="font-semibold tabular-nums text-obsidian">{value}</dd>
+    </div>
   );
 }
 
