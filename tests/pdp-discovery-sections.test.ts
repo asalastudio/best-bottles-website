@@ -1,4 +1,5 @@
 import { describe, expect, it } from "vitest";
+import { readFileSync } from "node:fs";
 import { createElement, Fragment } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import {
@@ -149,6 +150,30 @@ function renderPageOrder() {
 }
 
 describe("PdpDiscoverySections", () => {
+    it("places the real PDP's lower content in the binding buying order", () => {
+        const page = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
+        const discovery = page.indexOf("<PdpDiscoverySections");
+        const specifications = page.indexOf("Specifications", discovery);
+        const volumeFulfillment = page.indexOf('data-testid="pdp-volume-fulfillment"', discovery);
+        const editorial = page.indexOf("<PdpEditorialZone", discovery);
+        const matrix = page.indexOf("<PdpDiscoveryMatrixLink", discovery);
+
+        expect(discovery).toBeGreaterThan(-1);
+        expect(specifications).toBeGreaterThan(discovery);
+        expect(volumeFulfillment).toBeGreaterThan(specifications);
+        expect(editorial).toBeGreaterThan(volumeFulfillment);
+        expect(matrix).toBeGreaterThan(editorial);
+    });
+
+    it("keeps fitment claims out of the legacy sibling-derived buy-panel summary", () => {
+        const page = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
+
+        expect(page).not.toContain("ProductConfidenceSummary");
+        expect(page).not.toContain("Compatibility Snapshot");
+        expect(page).not.toContain("Fitment ready");
+        expect(page).not.toContain("Use neck size to match caps, rollers, sprayers, reducers, and droppers.");
+    });
+
     it("keeps the three buying sections ahead of specifications and the matrix escape hatch", () => {
         const markup = renderPageOrder();
 

@@ -99,3 +99,55 @@ Exit 0
 - The focused tests render the real discovery components with hand-checked
   relation and fitment fixtures. Interactive browser coverage remains outside
   the required command set.
+
+## Fix round 1 — lower-page order and fitment truth
+
+Base reviewed: `1846d8d0`.
+
+### RED
+
+Added two regressions to `tests/pdp-discovery-sections.test.ts` against the
+real `ProductDetailClient` composition boundary, not a synthetic wrapper.
+
+```text
+npx vitest run tests/pdp-discovery-sections.test.ts
+
+FAIL places the real PDP's lower content in the binding buying order
+Expected lower-page volume/fulfillment marker after Specifications; received -1.
+
+FAIL keeps fitment claims out of the legacy sibling-derived buy-panel summary
+ProductDetailClient still contained ProductConfidenceSummary.
+```
+
+### Fix
+
+- The actual page now composes: `PdpDiscoverySections` → specifications →
+  `pdp-volume-fulfillment` → `PdpEditorialZone` → matrix action.
+- The concise selected unit price remains beside the purchase CTA. The fuller
+  lower section now presents availability, case quantity, shipping, and the
+  real volume-price ladder after technical specifications.
+- Removed `ProductConfidenceSummary`, its “Fitment ready” empty state, its
+  neck-size-as-fitment copy, sibling-derived related count, and the obsolete
+  sibling sorting path. Remaining application siblings only support canonical
+  product navigation; they are not used to make a fitment claim.
+
+### GREEN
+
+```text
+npx vitest run tests/pdp-discovery-sections.test.ts tests/pdp-relations.test.ts tests/compatibility-resolver-parity.test.ts tests/product-image-fallback.test.ts
+
+Test Files  4 passed (4)
+Tests       25 passed (25)
+
+npx tsc --noEmit --pretty false
+Exit 0
+
+npx eslint src/components/products/PdpDiscoverySections.tsx 'src/app/products/[slug]/ProductDetailClient.tsx' tests/pdp-discovery-sections.test.ts
+Exit 0
+
+git diff --check
+Exit 0
+```
+
+No network, Convex CLI, deployment, data mutation, production action, or
+inventory/media regeneration was performed.

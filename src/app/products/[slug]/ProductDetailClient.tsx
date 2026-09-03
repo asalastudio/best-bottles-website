@@ -7,7 +7,7 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import {
     ShoppingBag, ArrowLeft, Package,
-    Check, Truck, ChatCircle,
+    Check, Truck,
 } from "@/components/icons";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
@@ -732,29 +732,6 @@ function SelectedVariantSummary({
     );
 }
 
-function compatibleApplicatorPriority(sibling: ApplicatorSibling, currentFamily?: string | null): number {
-    const text = `${sibling.displayName} ${(sibling.applicatorTypes ?? []).join(" ")}`.toLowerCase();
-    const isEmpire = currentFamily === "Empire";
-
-    if (/reducer/.test(text)) return 0;
-    if (/lotion\s*pump/.test(text)) return 1;
-    if (/dropper/.test(text)) return 2;
-    if (/fine\s*mist|perfume\s*spray/.test(text)) return isEmpire ? 4 : 3;
-    if (/vintage|antique|bulb/.test(text)) return isEmpire ? 5 : 4;
-    return 3;
-}
-
-function sortCompatibleApplicatorSiblings(
-    siblings: ApplicatorSibling[],
-    currentFamily?: string | null,
-): ApplicatorSibling[] {
-    return [...siblings].sort((a, b) => {
-        const priorityDelta = compatibleApplicatorPriority(a, currentFamily) - compatibleApplicatorPriority(b, currentFamily);
-        if (priorityDelta !== 0) return priorityDelta;
-        return a.displayName.localeCompare(b.displayName);
-    });
-}
-
 // ── Spec Row ──────────────────────────────────────────────────────────────────
 
 function TrustStack({ variant, inStock }: { variant: ProductVariant | null | undefined; inStock: boolean }) {
@@ -792,69 +769,6 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
                 </div>
             </div>
         </div>
-    );
-}
-
-function ProductConfidenceSummary({
-    group,
-    variant,
-    compatibleCount,
-    onAskGrace,
-}: {
-    group: {
-        displayName?: string | null;
-        capacity?: string | null;
-        neckThreadSize?: string | null;
-        variantCount?: number | null;
-    };
-    variant: ProductVariant | null | undefined;
-    compatibleCount: number;
-    onAskGrace: () => void;
-}) {
-    const rows = [
-        { label: "Neck size", value: group.neckThreadSize ?? variant?.neckThreadSize ?? "Unable to verify" },
-        { label: "Capacity", value: group.capacity ?? variant?.capacity ?? "Unable to verify" },
-        { label: "Case quantity", value: variant?.caseQuantity ? `${variant.caseQuantity} units/case` : "Confirm before ordering" },
-        { label: "Selected SKU", value: canonicalSku(variant) ?? "Unable to verify" },
-    ];
-
-    return (
-        <section
-            className="mb-5 rounded-sm border border-champagne/60 bg-white p-4 sm:p-5"
-            aria-label="Compatibility and ordering summary"
-            data-testid="pdp-confidence-summary"
-        >
-            <div className="mb-3 flex items-start justify-between gap-4">
-                <div>
-                    <p className="text-[9px] uppercase tracking-[0.18em] font-bold text-muted-gold mb-1">
-                        Compatibility Snapshot
-                    </p>
-                    <h2 className="font-serif text-lg text-obsidian">Confirm fit before you buy</h2>
-                </div>
-                <span className="shrink-0 rounded-full border border-champagne bg-bone px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate">
-                    {compatibleCount > 0 ? `${compatibleCount} related` : "Fitment ready"}
-                </span>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-                {rows.map((row) => (
-                    <div key={row.label} className="rounded-sm bg-bone/70 px-3 py-2">
-                        <p className="text-[9px] uppercase tracking-wider text-slate font-bold">{row.label}</p>
-                        <p className="mt-0.5 text-[13px] text-obsidian font-semibold leading-snug">{row.value}</p>
-                    </div>
-                ))}
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-slate">
-                Use neck size to match caps, rollers, sprayers, reducers, and droppers. If a value is missing, treat it as unable to verify before ordering.
-            </p>
-            <button
-                type="button"
-                onClick={onAskGrace}
-                className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-muted-gold/50 bg-muted-gold/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-muted-gold transition-colors hover:bg-muted-gold hover:text-white sm:w-auto"
-            >
-                <ChatCircle className="h-4 w-4" />
-                Ask Grace to confirm fitment
-            </button>
-        </section>
     );
 }
 
@@ -1105,8 +1019,9 @@ export default function ProductDetailClient({
         setSelectedCapComponentSku(null);
     }, [selectedVariantParam, variantFromUrl]);
 
-    // Applicator siblings — same bottle shape + size + color, different applicator.
-    const applicatorSiblings = initialApplicatorSiblings;
+    // These product-intent siblings support canonical product navigation only.
+    // Fitment belongs exclusively to the selected-SKU discovery query.
+    const applicationSiblings = initialApplicatorSiblings;
 
     // Atomizer family flag — these remain simplified until variant/color data is normalized.
     const isAtomizer = useMemo(() =>
@@ -1628,11 +1543,6 @@ export default function ProductDetailClient({
         };
     }, [data, selectedVariant?._id]);
 
-    const compatibleSiblings = useMemo(
-        () => sortCompatibleApplicatorSiblings((applicatorSiblings ?? []) as ApplicatorSibling[], group?.family),
-        [applicatorSiblings, group?.family],
-    );
-
     // ── Loading state ────────────────────────────────────────────────────────
 
     if (data === undefined) {
@@ -1692,7 +1602,6 @@ export default function ProductDetailClient({
             capColor: selectedVariant.capColor,
             category: group?.category,
             neckThreadSize: selectedVariant.neckThreadSize ?? group?.neckThreadSize ?? null,
-            compatibleCount: compatibleSiblings.length,
             webPrice1pc: selectedVariant.webPrice1pc ?? null,
             webPrice10pc: selectedVariant.webPrice10pc ?? null,
             webPrice12pc: selectedVariant.webPrice12pc ?? null,
@@ -1828,7 +1737,7 @@ export default function ProductDetailClient({
                                         const slug = colour ? f.buildSlug(colour, token) : null;
                                         const sib = slug === group.slug
                                             ? group
-                                            : compatibleSiblings.find((x) => x.slug === slug);
+                                            : applicationSiblings.find((x) => x.slug === slug);
                                         return {
                                             id: g,
                                             label: GLASS_PRESETS[g].label,
@@ -2275,24 +2184,13 @@ export default function ProductDetailClient({
                                 />
                             )}
 
-                            {!is3dFamily && (
-                                <ProductConfidenceSummary
-                                    group={group}
-                                    variant={selectedVariant}
-                                    compatibleCount={compatibleSiblings.length}
-                                    onAskGrace={openGracePanel}
-                                />
-                            )}
-
-                            {/* Price + Tier Ladder (panel carries these on 3D families) */}
+                            {/* Concise unit price remains beside the CTA. Full volume and fulfillment details follow the buying sections. */}
                             <div className={`mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50 ${is3dFamily ? "hidden" : ""}`}>
                                 <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                 <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian mb-4">
                                     {formatPrice(selectedVariant?.webPrice1pc)}
                                     <span className="text-lg font-normal text-slate ml-1">/ea</span>
                                 </p>
-
-                                <TierLadder variant={selectedVariant} qty={qty} />
                             </div>
 
                             {/* ── Variant Selectors (desktop; mobile has a compact tray above price).
@@ -2725,9 +2623,6 @@ export default function ProductDetailClient({
                     onAddComponent={handleAddCompatibleComponent}
                 />
 
-                {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
-                <PdpEditorialZone blocks={pdpBlocks} />
-
                 {/* ── Specifications ──────────────────────────────────────────── */}
                 {selectedVariant && (
                     <section className="border-t border-champagne/50 bg-linen">
@@ -2764,6 +2659,37 @@ export default function ProductDetailClient({
                         </div>
                     </section>
                 )}
+
+                {selectedVariant && (
+                    <section data-testid="pdp-volume-fulfillment" className="border-t border-champagne/50 bg-bone">
+                        <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-6">
+                            <div className="max-w-2xl">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Ordering details</p>
+                                <h2 className="mt-1 font-serif text-2xl text-obsidian">Volume pricing and fulfillment</h2>
+                                <div className="mt-4 grid gap-3 text-sm sm:grid-cols-3">
+                                    <div className="rounded-sm border border-champagne/50 bg-white p-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Availability</p>
+                                        <p className="mt-1 font-semibold text-obsidian">{selectedVariant.stockStatus ?? "Confirm availability"}</p>
+                                    </div>
+                                    <div className="rounded-sm border border-champagne/50 bg-white p-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Case quantity</p>
+                                        <p className="mt-1 font-semibold text-obsidian">{selectedVariant.caseQuantity ? `${selectedVariant.caseQuantity} units/case` : "Confirm before ordering"}</p>
+                                    </div>
+                                    <div className="rounded-sm border border-champagne/50 bg-white p-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Shipping</p>
+                                        <p className="mt-1 font-semibold text-obsidian">Free over $99</p>
+                                    </div>
+                                </div>
+                                <div className="mt-5">
+                                    <TierLadder variant={selectedVariant} qty={qty} />
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
+                <PdpEditorialZone blocks={pdpBlocks} />
 
                 <PdpDiscoveryMatrixLink family={group.family} />
 
