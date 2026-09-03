@@ -138,7 +138,7 @@ export default function ConfiguratorPdp({
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
-  heightWithCap = null, heightWithoutCap = null, diameter = null,
+  heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -151,6 +151,8 @@ export default function ConfiguratorPdp({
   heightWithCap?: string | null;
   heightWithoutCap?: string | null;
   diameter?: string | null;
+  /** Product-group geometry approval from the focused PDP capability gate. */
+  hasApproved3d?: boolean;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -420,7 +422,7 @@ export default function ConfiguratorPdp({
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
-  const has3d = Boolean(fam) && !fam?.photoOnly;
+  const has3d = hasApproved3d && Boolean(fam) && !fam?.photoOnly;
   const dimensions = { heightWithCap, heightWithoutCap, diameter };
   const showDimensions = requestedStageMode === "dimensions" && hasRealPdpDimensions(dimensions);
   const showPlate = !(show3d && has3d) && Boolean(plate);

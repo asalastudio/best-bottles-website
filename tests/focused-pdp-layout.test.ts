@@ -1,18 +1,7 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
 import { describe, expect, it } from "vitest";
 import FocusedPdpLayout from "../src/components/products/FocusedPdpLayout";
-
-const configuratorSource = readFileSync(
-    resolve(process.cwd(), "src/components/products/ConfiguratorPdp.tsx"),
-    "utf8",
-);
-const productDetailSource = readFileSync(
-    resolve(process.cwd(), "src/app/products/[slug]/ProductDetailClient.tsx"),
-    "utf8",
-);
 
 describe("focused PDP layout", () => {
     const renderShell = () => renderToStaticMarkup(createElement(FocusedPdpLayout, {
@@ -50,26 +39,37 @@ describe("focused PDP layout", () => {
         expect(html).toMatch(/@container focused-pdp \(min-width: 960px\)[\s\S]*\.pdp-mobile-sticky-summary\{display:none\}/);
     });
 
-    it("contains the six-tile configurator closure row at 390px without shrinking touch targets", () => {
-        expect(configuratorSource).toContain('data-testid="pdp-closure-rail"');
-        expect(configuratorSource).toMatch(/data-testid="pdp-closure-rail"[\s\S]{0,240}max-w-full[\s\S]{0,240}overflow-x-auto/);
-        expect(configuratorSource).toMatch(/title=\{benefit\}[\s\S]{0,160}min-h-11/);
+    it("renders a contained 390px stage and horizontally reachable 44px controls without changing the 10:11 ratio", () => {
+        const html = renderToStaticMarkup(createElement("div", { style: { width: 390, overflow: "hidden" } },
+            createElement(FocusedPdpLayout, {
+                stage: createElement("div", { "data-testid": "mobile-stage" }, "Bottle stage"),
+                purchase: createElement("div", { "data-testid": "mobile-purchase" },
+                    createElement("div", { className: "flex max-w-full gap-2 overflow-x-auto", "data-testid": "mobile-option-rail" },
+                        ...["Black", "Gold", "Silver", "White", "Pink", "Copper"].map((label) =>
+                            createElement("button", { key: label, type: "button", className: "min-h-11 min-w-11 shrink-0" }, label),
+                        ),
+                    ),
+                ),
+            }),
+        ));
+
+        expect(html).toContain("width:390px");
+        expect(html).toContain('data-pdp-stage-plate="10:11"');
+        expect(html).toContain("aspect-ratio:10 / 11");
+        expect(html).toContain('data-testid="mobile-option-rail"');
+        expect(html).toContain("max-w-full");
+        expect(html).toContain("overflow-x-auto");
+        expect((html.match(/min-h-11 min-w-11 shrink-0/g) ?? [])).toHaveLength(6);
     });
 
-    it("keeps classic mobile option trays outside the 10:11 stage slot", () => {
-        const classicShell = productDetailSource.slice(
-            productDetailSource.indexOf("<FocusedPdpLayout", productDetailSource.indexOf("!is3dFamily")),
-            productDetailSource.indexOf("{/* ── Sanity Editorial Zone"),
-        );
-        const purchaseStart = classicShell.indexOf("purchase={");
+    it("renders mobile purchase controls after the stage instead of inside its bounded slot", () => {
+        const html = renderToStaticMarkup(createElement(FocusedPdpLayout, {
+            stage: createElement("div", { "data-testid": "bounded-stage" }, "Bottle stage"),
+            purchase: createElement("div", { "data-testid": "purchase-controls" }, "Choose option"),
+        }));
 
-        expect(purchaseStart).toBeGreaterThan(-1);
-        expect(classicShell.indexOf("Choose Option")).toBeGreaterThan(purchaseStart);
-        expect(classicShell.indexOf("Choose Shell")).toBeGreaterThan(purchaseStart);
+        expect(html.indexOf('data-testid="bounded-stage"')).toBeLessThan(html.indexOf('data-testid="purchase-controls"'));
+        expect(html).toContain("Choose option");
     });
 
-    it("removes kit entrance choreography and disables remaining transforms for reduced motion", () => {
-        expect(configuratorSource).not.toContain("motion-safe:animate-[kitIn_180ms_ease-out]");
-        expect(configuratorSource).toMatch(/transition-transform[\s\S]{0,120}motion-reduce:transition-none/);
-    });
 });

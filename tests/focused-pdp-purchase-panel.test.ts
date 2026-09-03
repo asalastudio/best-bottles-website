@@ -48,11 +48,13 @@ describe("focused PDP purchase panel", () => {
         expect(pdp).toContain("selectedVariantParam");
     });
 
-    it("uses the focused buy panel for classic Roll-On PDPs without requiring 3D media", () => {
-        expect(pdp).toContain("const isFocusedPurchasePdp = is3dFamily || isRollonGroup");
+    it("uses the focused buy panel for any photo-backed real group without requiring 3D media", () => {
+        expect(pdp).toContain('import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout"');
+        expect(pdp).toContain("const focusedPdpCapabilities = useMemo(() => resolveFocusedPdpCapabilities({");
+        expect(pdp).toContain("const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell");
         expect(pdp).toContain("{isFocusedPurchasePdp && group.slug ?");
         expect(pdp).toContain("{!isFocusedPurchasePdp ?");
-        expect(configurator).toContain("activeBase === \"roller\"");
+        expect(configurator).toContain("hasApproved3d = false");
     });
 
     it("lets a valid URL SKU override and synchronize stale local selection state", () => {

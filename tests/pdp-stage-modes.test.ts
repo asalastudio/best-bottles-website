@@ -41,6 +41,11 @@ describe("PDP stage mode capabilities", () => {
         expect(configuratorSource).not.toContain("hasReleasedExplodedKit: kitReady");
     });
 
+    it("accepts approved 3D availability as a field from the focused rollout gate", () => {
+        expect(configuratorSource).toContain("hasApproved3d = false");
+        expect(configuratorSource).toContain("const has3d = hasApproved3d && Boolean(fam) && !fam?.photoOnly");
+    });
+
     it("offers Dimensions only when at least one real dimension field is present", () => {
         expect(hasRealPdpDimensions({ heightWithCap: " ", heightWithoutCap: null, diameter: undefined })).toBe(false);
         expect(hasRealPdpDimensions({ heightWithCap: null, heightWithoutCap: "74 mm", diameter: null })).toBe(true);
@@ -62,6 +67,21 @@ describe("PDP stage mode capabilities", () => {
         expect(html).not.toContain("Exploded");
         expect(html).toContain("Dimensions");
         expect(html).not.toContain("disabled");
+    });
+
+    it("uses pressed-button semantics for independently selectable stage views", () => {
+        const html = renderToStaticMarkup(createElement(PdpStageModeDock, {
+            modes: getPdpStageModes({ hasApprovedImageOrPlate: true, hasApprovedGeometry: true }),
+            activeMode: "photo",
+            onModeChange: vi.fn(),
+        }));
+
+        expect(html).not.toContain('role="tablist"');
+        expect(html).not.toContain('role="tab"');
+        expect(html).toContain('aria-pressed="true"');
+        expect(html).toContain('aria-pressed="false"');
+        expect(html).toContain("min-h-11");
+        expect(html).toContain("motion-reduce:transition-none");
     });
 
     it("preserves the active mode across an in-intent variant change while it remains available", () => {

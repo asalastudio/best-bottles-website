@@ -42,6 +42,7 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
+import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
 import {
     createPendingPdpAnalyticsNavigation,
     resolveAndConsumePdpAnalyticsNavigation,
@@ -541,8 +542,14 @@ function canonicalSku(variant: ProductVariant | null | undefined): string | null
     return variant?.graceSku?.trim() || variant?.websiteSku?.trim() || null;
 }
 
-function safePdpReturnPath(value: string | null): string | null {
-    return value && value.startsWith("/") && !value.startsWith("//") ? value : null;
+export function safePdpReturnPath(value: string | null): string | null {
+    if (!value || !value.startsWith("/") || value.startsWith("//") || value.includes("\\")) return null;
+    try {
+        const parsed = new URL(value, "https://bestbottles.invalid");
+        return parsed.origin === "https://bestbottles.invalid" ? value : null;
+    } catch {
+        return null;
+    }
 }
 
 function supportsSecondaryPdpImage(variant: ProductVariant): boolean {
@@ -1249,9 +1256,8 @@ export default function ProductDetailClient({
         });
     }, [variantsForApplicator]);
 
-    // Cap swatches: only show actual buyable variants. Component-only options (compatible caps
-    // from fitment data) are surfaced in the "Also Fits This Bottle" section and Fitment Drawer,
-    // not here — they would show as selectable but wouldn't change add-to-cart behavior.
+    // Cap swatches contain only actual buyable variants, so every selection
+    // resolves to the selected SKU's price, availability, and transaction path.
     const capSwatchPreview = useMemo(() => variantSwatchPreview, [variantSwatchPreview]);
 
     const variantImageTiles = useMemo<VariantImageTile[]>(() => {
@@ -1288,12 +1294,26 @@ export default function ProductDetailClient({
     const groupHasPlates = useMemo(
         () => variants.some((v) => Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined))),
         [variants, platesBySku]);
-    const is3dFamily = familyForSlug(group?.slug ?? "") !== null
+    const approvedGeometryFamily = familyForSlug(group?.slug ?? "");
+    const is3dFamily = approvedGeometryFamily !== null
         || (groupHasPlates && familyForSlugOrDerived(group?.slug ?? "") !== null);
-    // Roll-On is the only classic path that now shares the focused purchase
-    // contract before Task 14's broader capability rollout. It does not need
-    // geometry or a released kit: ConfiguratorPdp has an honest photo stage.
-    const isFocusedPurchasePdp = is3dFamily || isRollonGroup;
+    const hasApproved3d = Boolean(approvedGeometryFamily && !approvedGeometryFamily.photoOnly);
+    const focusedPdpCapabilities = useMemo(() => resolveFocusedPdpCapabilities({
+        hasVariants: variants.length > 0,
+        hasApprovedPhoto: Boolean(usableProductImageUrl(group?.heroImageUrl))
+            || variants.some((variant) => Boolean(usableProductImageUrl(variant.imageUrl))),
+        hasPlate: groupHasPlates,
+        hasApproved3d,
+        // Released-kit truth remains inside ConfiguratorPdp's exact-SKU query.
+        // It enhances the shell, never determines whether a product can sell.
+        hasReleasedKit: false,
+        hasDimensions: variants.some((variant) => Boolean(
+            variant.heightWithCap?.trim()
+            || variant.heightWithoutCap?.trim()
+            || variant.diameter?.trim(),
+        )),
+    }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, variants]);
+    const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1740,8 +1760,8 @@ export default function ProductDetailClient({
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
                 <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
-                    {/* The focused panel applies to approved 3D families and all
-                        Roll-On PDPs. Roll-On may use its honest photo stage. */}
+                    {/* Real purchasable groups with an approved photo or plate share
+                        this shell; missing optional media never removes purchase. */}
                     {isFocusedPurchasePdp && group.slug ? (
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
@@ -1752,6 +1772,7 @@ export default function ProductDetailClient({
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
+                                hasApproved3d={focusedPdpCapabilities.has3dMode}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
                                 priceEach={selectedVariant?.webPrice1pc ?? null}

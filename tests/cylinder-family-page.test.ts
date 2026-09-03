@@ -1,12 +1,10 @@
 import { describe, expect, it } from "vitest";
 import {
-    buildCylinderBuilderHref,
     buildCylinderApplicationOptions,
-    buildCylinderConfigurationPreviewHref,
     buildCylinderFamilyPageModel,
-    buildCylinderReadyMadeHref,
     classifyCylinderApplicatorSystem,
 } from "@/lib/products/cylinder-family-page";
+import { readFileSync } from "node:fs";
 
 const groups = [
     {
@@ -144,34 +142,10 @@ describe("Cylinder family page model", () => {
         ]);
     });
 
-    it("builds a specific unified-PDP builder URL", () => {
-        expect(buildCylinderBuilderHref({
-            glass: "Amber",
-            applicator: "Roll-On",
-            rollerMaterial: "Metal",
-            finish: "Shiny Gold",
-        })).toBe(
-            "/products/cylinder-9ml-17-415?view=build&glass=Amber&applicator=Roll-On&roller=Metal&finish=Shiny+Gold",
-        );
-    });
+    it("does not retain builder URL helpers after the family surface moved to direct PDP links", () => {
+        const source = readFileSync("src/lib/products/cylinder-family-page.ts", "utf8");
 
-    it("builds an honest Beauty preview URL before the layered release is ready", () => {
-        expect(buildCylinderConfigurationPreviewHref({
-            glass: "Amber",
-            applicator: "Roll-On",
-            rollerMaterial: "Metal",
-            finish: "Shiny Gold",
-        })).toBe(
-            "/products/cylinder-9ml-17-415?view=beauty&glass=Amber&applicator=Roll-On&roller=Metal&finish=Shiny+Gold",
-        );
-    });
-
-    it("routes only 9 ml 17-415 cards into the unified PDP", () => {
-        expect(buildCylinderReadyMadeHref(groups[0], "GB-CYL-CLR-9ML-T-11")).toBe(
-            "/products/cylinder-9ml-17-415?view=beauty&configuration=GB-CYL-CLR-9ML-T-11",
-        );
-        expect(buildCylinderReadyMadeHref(groups[2], "GB-TALLCYL-CLR-9ML-T-11")).toBe(
-            "/products/tall-cylinder-9ml-clear-13-415-rollon",
-        );
+        expect(source).not.toContain("buildCylinderBuilderHref");
+        expect(source).not.toContain("buildCylinderReadyMadeHref");
     });
 });

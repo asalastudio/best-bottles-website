@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { getCanonicalProductSlug, getLegacyProductRouteOverride } from "../src/lib/products/legacy-product-route-overrides";
+import { safePdpReturnPath } from "../src/app/products/[slug]/ProductDetailClient";
 
 describe("legacy product route overrides", () => {
     it("routes the old Diva catch-all PDP to the canonical perfume spray PDP", () => {
@@ -14,6 +15,7 @@ describe("legacy product route overrides", () => {
     });
 
     it("routes duplicate 9 ml Cylinder drift records to canonical clear Cylinder PDPs", () => {
+        expect(getLegacyProductRouteOverride("cylinder-9ml-17-415")).toBe("cylinder-9ml-clear-17-415-rollon");
         expect(getLegacyProductRouteOverride("cylinder-9ml-clear")).toBe("cylinder-9ml-clear-17-415-rollon");
         expect(getLegacyProductRouteOverride("cylinder-9ml-white-13-415")).toBe("cylinder-9ml-clear-13-415");
         expect(getLegacyProductRouteOverride("cylinder-9ml-white-17-415-rollon")).toBe("cylinder-9ml-clear-17-415-rollon");
@@ -29,5 +31,12 @@ describe("legacy product route overrides", () => {
     it("leaves canonical slugs unchanged", () => {
         expect(getLegacyProductRouteOverride("diva-46ml-clear-18-415-perfumespray")).toBeNull();
         expect(getCanonicalProductSlug("diva-46ml-clear-18-415-perfumespray")).toBe("diva-46ml-clear-18-415-perfumespray");
+    });
+
+    it("accepts only same-origin PDP return paths", () => {
+        expect(safePdpReturnPath("/catalog/cylinder?application=rollon")).toBe("/catalog/cylinder?application=rollon");
+        expect(safePdpReturnPath("//malicious.example/pdp")).toBeNull();
+        expect(safePdpReturnPath("/\\malicious.example/pdp")).toBeNull();
+        expect(safePdpReturnPath("https://malicious.example/pdp")).toBeNull();
     });
 });

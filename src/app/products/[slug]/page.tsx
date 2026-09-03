@@ -19,7 +19,6 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
-import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
 import {
     selectPrimaryProductVariant,
     type FocusedPdpRelations,
@@ -137,19 +136,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { slug } = await params;
     const activeSlug = getLegacyProductRouteOverride(slug) ?? slug;
-    if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        return {
-            title: { absolute: `9 mL Cylinder Bottle — 17-415 | ${SITE_NAME}` },
-            description: "Configure one 9 mL 17-415 Cylinder bottle across compatible glass colors, roll-on fitments, fine mist sprayers, lotion pumps, and finishes.",
-            alternates: { canonical: `${SITE_URL}/products/${CYLINDER_9ML_17415_COHORT.slug}` },
-            openGraph: {
-                title: `9 mL Cylinder Bottle — 17-415 | ${SITE_NAME}`,
-                description: "Choose the glass, delivery system, roller material, and finish for the exact 9 mL 17-415 Cylinder platform.",
-                url: `${SITE_URL}/products/${CYLINDER_9ML_17415_COHORT.slug}`,
-                type: "website",
-            },
-        };
-    }
     const data = await getProductData(activeSlug);
     const group = data?.group;
     const variant = getPrimaryVariant(data);
@@ -211,15 +197,6 @@ export default async function ProductPage({
     }
 
     const activeSlug = legacyRouteOverride ?? slug;
-    if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        // The unified "cohort" page is retired: the 9 mL sells through the
-        // guided product page like every other 3D family. Old links land on
-        // the clear roll-on, carrying any deep-linked configuration through.
-        const next = new URLSearchParams();
-        const configuration = resolvedSearchParams.configuration;
-        if (typeof configuration === "string") next.set("configuration", configuration);
-        redirect(`/products/cylinder-9ml-clear-17-415-rollon${next.size ? `?${next.toString()}` : ""}`);
-    }
     const data = await getProductData(activeSlug);
     const primaryVariant = getPrimaryVariant(data);
     const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
