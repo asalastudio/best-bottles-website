@@ -48,15 +48,20 @@ describe("focused shopping analytics", () => {
     analytics.graceOpenedFromShopping({ source: "pdp", family: "Cylinder", application: "rollon" });
     analytics.pdpVariantResolved({ slug: "cylinder-9ml-roll-on", sku: "CYL9CLRROL", application: "rollon", dimension: "capFinish" });
 
-    expect(track.mock.calls).toEqual([
+    expect(track.mock.calls.slice(0, 6)).toEqual([
       ["Finder Entered", { entryMode: "application", application: "rollon", family: "Cylinder", resultCount: 4 }],
       ["Finder Refined", { entryMode: "family", dimension: "capacity", action: "selected", value: "9 ml", resultCount: 2 }],
       ["Finder Zero Result Recovered", { entryMode: "family", removedDimension: "rollerMaterial" }],
       ["Finder Result Opened", { entryMode: "application", family: "Cylinder", application: "rollon", slug: "cylinder-9ml-roll-on" }],
       ["Matrix Opened", { source: "finder", family: "Cylinder" }],
       ["Grace Opened From Shopping", { source: "pdp", family: "Cylinder", application: "rollon" }],
-      ["PDP Variant Resolved", { slug: "cylinder-9ml-roll-on", sku: "CYL9CLRROL", application: "rollon", dimension: "capFinish" }],
     ]);
+    expect(track.mock.calls[6]).toEqual(["PDP Variant Resolved", {
+      slug: "cylinder-9ml-roll-on",
+      sku: expect.stringMatching(/^sku_[a-f0-9]{16}$/),
+      application: "rollon",
+      dimension: "capFinish",
+    }]);
   });
 
   it("constructs allowlisted payloads and rejects customer-entered values", () => {
@@ -86,6 +91,61 @@ describe("focused shopping analytics", () => {
     expect(track.mock.calls).toEqual([
       ["Finder Entered", { entryMode: "application", application: "rollon", resultCount: 3 }],
     ]);
+  });
+
+  it("never emits plaintext name-like identifiers while retaining canonical product identities", () => {
+    for (const identifier of [
+      "Jane-Doe",
+      "jane-doe",
+      "Jane Doe",
+      "jane@example.com",
+      "cylinder-9ml-clear-17-415-rollon with private notes",
+      "シリンダー-9ml",
+    ]) {
+      analytics.finderResultOpened({
+        entryMode: "application",
+        family: "Cylinder",
+        application: "rollon",
+        slug: identifier,
+      } as never);
+      analytics.pdpVariantResolved({
+        slug: "cylinder-9ml-clear-17-415-rollon",
+        sku: identifier,
+        application: "rollon",
+      } as never);
+    }
+
+    analytics.finderResultOpened({
+      entryMode: "application",
+      family: "Cylinder",
+      application: "rollon",
+      slug: "cylinder-9ml-clear-17-415-rollon",
+    });
+    analytics.pdpVariantResolved({
+      slug: "boston-round-30ml-amber-dropper",
+      sku: "GB-CYL",
+      application: "dropper",
+    });
+
+    const emitted = JSON.stringify(track.mock.calls);
+    for (const identifier of ["Jane-Doe", "jane-doe", "Jane Doe", "jane@example.com", "private notes", "シリンダー-9ml"]) {
+      expect(emitted).not.toContain(identifier);
+    }
+    expect(track.mock.calls.filter(([event]) => event === "Finder Result Opened")).toEqual([[
+      "Finder Result Opened", {
+        entryMode: "application",
+        family: "Cylinder",
+        application: "rollon",
+        slug: "cylinder-9ml-clear-17-415-rollon",
+      },
+    ]]);
+    expect(track.mock.calls.filter(([event]) => event === "PDP Variant Resolved")).toEqual(expect.arrayContaining([[
+      "PDP Variant Resolved", expect.objectContaining({
+        slug: "boston-round-30ml-amber-dropper",
+        application: "dropper",
+        sku: expect.stringMatching(/^sku_[a-f0-9]{16}$/),
+      }),
+    ]]));
   });
 
   it("wires shopping events to explicit interaction boundaries without referrer reads", () => {

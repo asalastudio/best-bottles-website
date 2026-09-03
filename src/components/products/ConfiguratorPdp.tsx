@@ -39,6 +39,7 @@ import {
   preservePdpStageMode,
   type PdpStageMode,
 } from "@/lib/products/pdp-stage-modes";
+import type { PdpAnalyticsDimension } from "@/lib/products/pdp-analytics";
 
 /** kit slots that come off when the customer lifts the cap; everything else is fitted */
 const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
@@ -188,7 +189,7 @@ export default function ConfiguratorPdp({
   /** Resolves a real in-intent variant at the product-route boundary. */
   onVariantSelectionChange?: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
   /** A glass sibling is another real product group, never a local preview. */
-  onProductUrlChange?: (href: string) => void;
+  onProductUrlChange?: (href: string, dimension?: PdpAnalyticsDimension) => void;
   capOptions?: string[];
   /** per pill, the token swatch names its variants' website SKUs spell — the
    *  component families are keyed by token ("Pink"), the pills by catalogue
@@ -793,7 +794,7 @@ export default function ConfiguratorPdp({
           return (
             <button key={g.id} type="button" aria-pressed={on}
                onClick={() => {
-                 if (g.href && g.href !== "#") onProductUrlChange?.(g.href);
+                 if (g.href && g.href !== "#") onProductUrlChange?.(g.href, "glass");
                }}
                className={`group relative block w-full rounded-[2px] bg-white text-center transition-colors duration-200
                            ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>

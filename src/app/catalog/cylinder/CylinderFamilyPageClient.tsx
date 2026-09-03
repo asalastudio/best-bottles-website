@@ -149,7 +149,7 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
 
     useEffect(() => {
         if (isUpdating) return;
-        const route = finderUrl(activeSearch);
+        const route = "family:Cylinder";
         if (trackedEntryRoutes.current.has(route)) return;
         trackedEntryRoutes.current.add(route);
         analytics.finderEntered({
@@ -158,7 +158,7 @@ export default function CylinderFamilyPageClient({ baseCatalog, initialResult, s
             ...(activeApplication ? { application: activeApplication } : {}),
             resultCount: activeResult.totalCount,
         });
-    }, [activeApplication, activeResult.totalCount, activeSearch, isUpdating]);
+    }, [activeApplication, activeResult.totalCount, isUpdating]);
 
     useEffect(() => {
         const incomingRoute = finderUrl(search);

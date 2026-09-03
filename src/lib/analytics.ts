@@ -84,7 +84,7 @@ function trackFocusedShopping(event: string, properties: Props) {
 type FinderEntryMode = "application" | "family";
 type FinderRefinementDimension = "application" | "capacity" | "rollerMaterial";
 type FinderRecoveryDimension = FinderRefinementDimension | "family" | "glassColor" | "neckThread";
-type PdpResolutionDimension = "application" | "capFinish" | "capStyle" | "trimColor" | "rollerMaterial";
+type PdpResolutionDimension = "application" | "capFinish" | "capStyle" | "glass" | "trimColor" | "rollerMaterial";
 type MatrixSource = "finder" | "pdp" | "nav" | "grace";
 type ShoppingGraceSource = "finder" | "pdp";
 
@@ -107,10 +107,30 @@ function safeResultCount(value: unknown): number | undefined {
     : undefined;
 }
 
-function safeIdentifier(value: unknown): string | undefined {
-  return typeof value === "string" && /^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$/.test(value)
-    ? value
-    : undefined;
+function slugToken(value: string): string {
+  let left = 0x811c9dc5;
+  let right = 0x01000193;
+  for (let index = 0; index < value.length; index += 1) {
+    const code = value.charCodeAt(index);
+    left = Math.imul(left ^ code, 0x01000193);
+    right = Math.imul(right ^ code, 0x27d4eb2d);
+  }
+  return `sku_${(left >>> 0).toString(16).padStart(8, "0")}${(right >>> 0).toString(16).padStart(8, "0")}`;
+}
+
+function safeProductSlug(value: unknown): string | undefined {
+  if (typeof value !== "string" || value.length > 120 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)) return undefined;
+  const canonicalFamilyPrefix = [...ANALYTICS_FAMILIES]
+    .map((family) => family.toLowerCase().replace(/[^a-z0-9]+/g, "-"))
+    .sort((left, right) => right.length - left.length)
+    .find((family) => value.startsWith(`${family}-`));
+  if (!canonicalFamilyPrefix || !/(?:^|-)\d+(?:ml)?(?:-|$)|\d+-\d+(?:-|$)/.test(value)) return undefined;
+  return value;
+}
+
+function safeProductSku(value: unknown): string | undefined {
+  if (typeof value !== "string" || value.length > 96 || !/^[A-Za-z0-9_-]+$/.test(value)) return undefined;
+  return slugToken(value);
 }
 
 function safeCapacity(value: unknown): string | undefined {
@@ -132,7 +152,7 @@ function safeRecoveryDimension(value: unknown): FinderRecoveryDimension | undefi
 
 function safePdpResolutionDimension(value: unknown): PdpResolutionDimension | undefined {
   return value === "application" || value === "capFinish" || value === "capStyle"
-    || value === "trimColor" || value === "rollerMaterial"
+    || value === "glass" || value === "trimColor" || value === "rollerMaterial"
     ? value
     : undefined;
 }
@@ -345,7 +365,7 @@ export const analytics = {
     const entryMode = safeEntryMode(properties.entryMode);
     const family = safeFamily(properties.family);
     const application = safeApplication(properties.application);
-    const slug = safeIdentifier(properties.slug);
+    const slug = safeProductSlug(properties.slug);
     if (!entryMode || !family || !slug) return;
     trackFocusedShopping("Finder Result Opened", {
       entryMode,
@@ -387,8 +407,8 @@ export const analytics = {
     application: ApplicatorNavValue;
     dimension?: PdpResolutionDimension;
   }) {
-    const slug = safeIdentifier(properties.slug);
-    const sku = safeIdentifier(properties.sku);
+    const slug = safeProductSlug(properties.slug);
+    const sku = safeProductSku(properties.sku);
     const application = safeApplication(properties.application);
     const dimension = properties.dimension === undefined ? undefined : safePdpResolutionDimension(properties.dimension);
     if (!slug || !sku || !application || (properties.dimension !== undefined && !dimension)) return;

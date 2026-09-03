@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { act, createElement } from "react";
+import { act, createElement, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -21,6 +21,11 @@ const mocks = vi.hoisted(() => ({
     routerPush: vi.fn(),
     routerReplace: vi.fn(),
     serverSearch: vi.fn(),
+    finderEntered: vi.fn(),
+    finderRefined: vi.fn(),
+    finderZeroResultRecovered: vi.fn(),
+    finderResultOpened: vi.fn(),
+    graceOpenedFromShopping: vi.fn(),
 }));
 
 vi.mock("next/navigation", () => ({
@@ -47,6 +52,15 @@ vi.mock("@/components/CartProvider", () => ({
 
 vi.mock("@/components/CartDrawer", () => ({ default: () => null }));
 vi.mock("@/components/Footer", () => ({ default: () => createElement("footer", null, "Footer") }));
+vi.mock("@/lib/analytics", () => ({
+    analytics: {
+        finderEntered: mocks.finderEntered,
+        finderRefined: mocks.finderRefined,
+        finderZeroResultRecovered: mocks.finderZeroResultRecovered,
+        finderResultOpened: mocks.finderResultOpened,
+        graceOpenedFromShopping: mocks.graceOpenedFromShopping,
+    },
+}));
 
 function catalogResult(input: {
     id: string;
@@ -149,6 +163,11 @@ beforeEach(() => {
     mocks.routerPush.mockReset();
     mocks.routerReplace.mockReset();
     mocks.serverSearch.mockReset().mockResolvedValue(rollOnResult);
+    mocks.finderEntered.mockReset();
+    mocks.finderRefined.mockReset();
+    mocks.finderZeroResultRecovered.mockReset();
+    mocks.finderResultOpened.mockReset();
+    mocks.graceOpenedFromShopping.mockReset();
 });
 
 afterEach(() => {
@@ -204,6 +223,41 @@ describe("application-first finder server route", () => {
 });
 
 describe("application-first finder client", () => {
+    it("records one entry for a StrictMode route despite rerenders and refinements", async () => {
+        mocks.clientSearch.mockResolvedValue(rollOnResult);
+        const container = document.createElement("div");
+        document.body.append(container);
+        const root = createRoot(container);
+
+        await act(async () => {
+            root.render(createElement(StrictMode, null, createElement(ApplicationFinderClient, {
+                application: "rollon",
+                pathname: "/catalog/application/roll-on",
+                search: "",
+                unrefinedFacetSource: rollOnResult,
+                initialResult: rollOnResult,
+            })));
+        });
+        expect(mocks.finderEntered).toHaveBeenCalledTimes(1);
+        expect(mocks.finderEntered).toHaveBeenLastCalledWith({
+            entryMode: "application",
+            application: "rollon",
+            resultCount: 1,
+        });
+
+        await act(async () => buttonWithText(container, "9 ml").click());
+        expect(mocks.finderRefined).toHaveBeenCalledWith({
+            entryMode: "application",
+            dimension: "capacity",
+            action: "selected",
+            value: "9 ml",
+            resultCount: 1,
+        });
+        expect(mocks.finderEntered).toHaveBeenCalledTimes(1);
+
+        await act(async () => root.unmount());
+    });
+
     it("updates capacity and roller refinements in the URL and search request without Apply or Next", async () => {
         mocks.clientSearch.mockResolvedValue(rollOnResult);
         const container = document.createElement("div");

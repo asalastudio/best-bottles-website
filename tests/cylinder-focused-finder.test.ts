@@ -1,6 +1,6 @@
 // @vitest-environment jsdom
 
-import { act, createElement } from "react";
+import { act, createElement, StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -16,6 +16,11 @@ const mocks = vi.hoisted(() => ({
     routerPush: vi.fn(),
     routerReplace: vi.fn(),
     serverSearch: vi.fn(),
+    finderEntered: vi.fn(),
+    finderRefined: vi.fn(),
+    finderZeroResultRecovered: vi.fn(),
+    finderResultOpened: vi.fn(),
+    graceOpenedFromShopping: vi.fn(),
 }));
 
 vi.mock("next/navigation", () => ({
@@ -41,6 +46,15 @@ vi.mock("@/components/CartProvider", () => ({
 }));
 vi.mock("@/components/CartDrawer", () => ({ default: () => null }));
 vi.mock("@/components/Footer", () => ({ default: () => createElement("footer", null, "Footer") }));
+vi.mock("@/lib/analytics", () => ({
+    analytics: {
+        finderEntered: mocks.finderEntered,
+        finderRefined: mocks.finderRefined,
+        finderZeroResultRecovered: mocks.finderZeroResultRecovered,
+        finderResultOpened: mocks.finderResultOpened,
+        graceOpenedFromShopping: mocks.graceOpenedFromShopping,
+    },
+}));
 
 function result(input: {
     id: string;
@@ -138,6 +152,11 @@ beforeEach(() => {
     mocks.serverSearch.mockReset().mockImplementation((args: CatalogSearchArgs) => (
         (args.filters.applicators ?? []).includes("rollon") ? rollOnResult : allCylinderResult
     ));
+    mocks.finderEntered.mockReset();
+    mocks.finderRefined.mockReset();
+    mocks.finderZeroResultRecovered.mockReset();
+    mocks.finderResultOpened.mockReset();
+    mocks.graceOpenedFromShopping.mockReset();
 });
 
 afterEach(() => {
@@ -207,6 +226,34 @@ describe("Cylinder family-first server route", () => {
 });
 
 describe("Cylinder family-first client", () => {
+    it("records one family entry in StrictMode after an in-place refinement", async () => {
+        mocks.clientSearch.mockResolvedValue(allCylinderResult);
+        const container = document.createElement("div");
+        document.body.append(container);
+        const root = createRoot(container);
+
+        await act(async () => {
+            root.render(createElement(StrictMode, null, createElement(CylinderFamilyPageClient, {
+                baseCatalog: allCylinderResult,
+                initialResult: allCylinderResult,
+                search: "",
+                editorial: null,
+            })));
+        });
+        expect(mocks.finderEntered).toHaveBeenCalledTimes(1);
+        expect(mocks.finderEntered).toHaveBeenLastCalledWith({
+            entryMode: "family",
+            family: "Cylinder",
+            resultCount: 1,
+        });
+
+        await act(async () => buttonWithText(container, "9 ml").click());
+        expect(mocks.finderRefined).toHaveBeenCalledTimes(1);
+        expect(mocks.finderEntered).toHaveBeenCalledTimes(1);
+
+        await act(async () => root.unmount());
+    });
+
     it("shows only application cards verified by live Cylinder facets", () => {
         const html = renderToStaticMarkup(createElement(CylinderFamilyPageClient, {
             baseCatalog: allCylinderResult,

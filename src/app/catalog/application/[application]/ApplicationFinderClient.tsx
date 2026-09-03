@@ -151,7 +151,7 @@ export default function ApplicationFinderClient({
 
     useEffect(() => {
         if (isUpdating) return;
-        const route = finderUrl(activePathname, activeSearch);
+        const route = `application:${activePathname}`;
         if (trackedEntryRoutes.current.has(route)) return;
         trackedEntryRoutes.current.add(route);
         analytics.finderEntered({
@@ -159,7 +159,7 @@ export default function ApplicationFinderClient({
             application: activeApplication,
             resultCount: activeResult.totalCount,
         });
-    }, [activeApplication, activePathname, activeResult.totalCount, activeSearch, isUpdating]);
+    }, [activeApplication, activePathname, activeResult.totalCount, isUpdating]);
 
     useEffect(() => {
         const incomingRoute = finderUrl(pathname, search);

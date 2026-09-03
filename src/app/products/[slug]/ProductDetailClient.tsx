@@ -42,6 +42,11 @@ import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/li
 import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
+import {
+    resolveUrlAuthoritativePdpAnalytics,
+    type PdpAnalyticsDimension,
+    type PendingPdpAnalyticsNavigation,
+} from "@/lib/products/pdp-analytics";
 import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
 
 export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
@@ -983,6 +988,7 @@ export default function ProductDetailClient({
     const [pdpBlocks, setPdpBlocks] = useState<PdpBlock[]>(initialPdpBlocks);
     const [stickyBarVisible, setStickyBarVisible] = useState(false);
     const inlineCartRef = useRef<HTMLDivElement>(null);
+    const pendingPdpAnalyticsNavigation = useRef<PendingPdpAnalyticsNavigation | null>(null);
 
     useEffect(() => {
         if (!legacyRouteOverride) return;
@@ -1457,14 +1463,24 @@ export default function ProductDetailClient({
         setSelectedTrimColor(resolved.trimColor || "Standard");
 
         const nextUrl = canonicalVariantUrl(resolved);
-        if (nextUrl) router.replace(nextUrl, { scroll: false });
-    }, [activeApplicator, activeCapColor, canonicalVariantUrl, rollerTypeOptions, router, variants]);
+        if (nextUrl) {
+            const dimension: PdpAnalyticsDimension = selection.rollerVariant ? "rollerMaterial" : "capFinish";
+            pendingPdpAnalyticsNavigation.current = {
+                slug: activeSlug,
+                sku: canonicalSku(resolved) ?? undefined,
+                dimension,
+            };
+            router.replace(nextUrl, { scroll: false });
+        }
+    }, [activeApplicator, activeCapColor, activeSlug, canonicalVariantUrl, rollerTypeOptions, router, variants]);
 
-    const handleGuidedProductUrlChange = useCallback((href: string) => {
+    const handleGuidedProductUrlChange = useCallback((href: string, dimension: PdpAnalyticsDimension = "glass") => {
         const target = new URL(href, "https://bestbottles.local");
         if (!target.pathname.startsWith("/products/")) return;
         if (safeFrom) target.searchParams.set("from", safeFrom);
         if (qty > 1) target.searchParams.set("qty", String(qty));
+        const targetSlug = target.pathname.slice("/products/".length);
+        pendingPdpAnalyticsNavigation.current = { slug: targetSlug, dimension };
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
     }, [qty, router, safeFrom]);
 
@@ -1542,14 +1558,23 @@ export default function ProductDetailClient({
 
     const lastTrackedPdpVariantSignature = useRef<string | null>(null);
     useEffect(() => {
-        const sku = selectedVariant?.websiteSku ?? selectedVariant?.graceSku;
+        const sku = selectedVariant ? canonicalSku(selectedVariant) : null;
         const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
-        if (!sku || !application) return;
-        const signature = `${activeSlug}:${sku}:${application}`;
+        const event = resolveUrlAuthoritativePdpAnalytics({
+            slug: activeSlug,
+            resolvedSku: sku,
+            application,
+            canonicalDefaultSku: primaryVariant ? canonicalSku(primaryVariant) : null,
+            urlResolvedSku: variantFromUrl ? canonicalSku(variantFromUrl) : null,
+            pendingNavigation: pendingPdpAnalyticsNavigation.current,
+        });
+        if (!event) return;
+        const signature = `${event.slug}:${event.sku}:${event.application}`;
         if (lastTrackedPdpVariantSignature.current === signature) return;
         lastTrackedPdpVariantSignature.current = signature;
-        analytics.pdpVariantResolved({ slug: activeSlug, sku, application });
-    }, [activeSlug, selectedVariant]);
+        analytics.pdpVariantResolved(event);
+        pendingPdpAnalyticsNavigation.current = null;
+    }, [activeSlug, primaryVariant, selectedVariant, variantFromUrl]);
 
     const openGraceFromPdp = useCallback(() => {
         const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
