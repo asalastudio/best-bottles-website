@@ -32,8 +32,7 @@ import { familyForSlugOrDerived, glassFromSlug, CLOSURE_TOKENS,
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
-import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
-import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
+import { componentPhotoSkuBelongsToBase, photoKeysForVariant, resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { useQuery } from "convex/react";
 import { api } from "../../../convex/_generated/api";
 
@@ -68,11 +67,6 @@ const COMPONENT_FAMILY: Partial<Record<ClosureBase, string>> = {
   // (18-415CpRdcr…) are published in the cap-closure family
   reducer: "cap-closure",
 };
-const FOREIGN_PREFIX: Partial<Record<ClosureBase, RegExp>> = {
-  roller: /^(Ltn|Spry|Drp)/i, sprayer: /^(Ltn|Drp|CpRoll)/i, pump: /^(Spry|Drp|CpRoll)/i, dropper: /^(Ltn|Spry|CpRoll)/i,
-  reducer: /^(Ltn|Spry|Drp|CpRoll)/i, none: /^(Ltn|Spry|Drp)/i,
-};
-
 const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
   ssr: false,
   loading: () => (
@@ -480,15 +474,14 @@ export default function ConfiguratorPdp({
     wantsCapFallback ? { familyId: `roll-on-cap-${neckSize}`, limit: 200 } : "skip");
   const thumbBySwatch = useMemo(() => {
     const out = new Map<string, string>();
-    const foreign = FOREIGN_PREFIX[activeBase];
     const rows = [
       ...(componentPlates?.page ?? []),
       ...(fallbackCapPlates?.page ?? []).filter((row) => row.websiteSku && /^CP(?!Roll)/i.test(row.websiteSku)),
     ];
     for (const row of rows) {
-      if (!row.websiteSku || (foreign && foreign.test(row.websiteSku))) continue;
-      const finish = getFinishFromWebsiteSku(row.websiteSku);
-      if (finish && !out.has(finish.swatchName)) out.set(finish.swatchName, row.thumb);
+      if (!row.websiteSku || !componentPhotoSkuBelongsToBase(activeBase, row.websiteSku)) continue;
+      const finish = photoKeysForVariant({ websiteSku: row.websiteSku })[0];
+      if (finish && !out.has(finish)) out.set(finish, row.thumb);
     }
     return out;
   }, [componentPlates, fallbackCapPlates, activeBase]);

@@ -16,7 +16,8 @@ const pdp = read("src/app/products/[slug]/ProductDetailClient.tsx");
 
 describe("closure rail photographs", () => {
     it("pills resolve their photo through the token join, not by catalogue name alone", () => {
-        expect(configurator).toContain('import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys"');
+        expect(configurator).toContain('from "@/lib/products/closure-swatch-keys"');
+        expect(configurator).toContain("componentPhotoSkuBelongsToBase(activeBase, row.websiteSku)");
         expect(configurator).toContain("resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys)");
         expect(configurator).not.toContain("const photo = thumbBySwatch.get(name);");
         expect(pdp).toContain("buildCapOptionPhotoKeys(");

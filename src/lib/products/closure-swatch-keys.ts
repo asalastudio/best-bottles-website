@@ -9,6 +9,28 @@
  * Pure so it can be unit-tested with real SKUs; Convex and React never see it.
  */
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import type { ClosureBase } from "@/lib/configurator/families";
+
+/**
+ * Component plates are grouped by merchandising family, and the sprayer
+ * family contains fine-mist, vintage-bulb, tassel, and overcap SKUs together.
+ * A finish name alone is therefore not enough to choose a photograph. Keep
+ * the component prefix aligned with the closure the PDP is configuring.
+ */
+const COMPONENT_PHOTO_SKU_BY_BASE: Record<ClosureBase, RegExp> = {
+    roller: /^CPRoll/i,
+    sprayer: /^Spry/i,
+    pump: /^Ltn/i,
+    dropper: /^Drp/i,
+    reducer: /^CP(?!Roll)/i,
+    none: /^CP(?!Roll)/i,
+    antique: /^(?:AnSp(?!Tsl)|CP\d{2,3}-\d{3}AnSp(?!Tsl))/i,
+    antiqueTassel: /^(?:AnSpTsl|CP\d{2,3}-\d{3}AnSpTsl)/i,
+};
+
+export function componentPhotoSkuBelongsToBase(base: ClosureBase, websiteSku: string): boolean {
+    return COMPONENT_PHOTO_SKU_BY_BASE[base].test(websiteSku);
+}
 
 export type SwatchKeyVariant = {
     websiteSku?: string | null;
@@ -18,6 +40,14 @@ export type SwatchKeyVariant = {
 /** Token-vocabulary swatch names a variant's SKUs spell, most specific first. */
 export function photoKeysForVariant(variant: SwatchKeyVariant): string[] {
     const keys: string[] = [];
+    // The treatment-pump suffix describes a matte-silver collar WITH a clear
+    // overcap. The catalogue offers that assembly as "Clear Overcap", beside
+    // a different plain matte-silver pump, so those two photos must not share
+    // the same swatch key.
+    if (/Ltn(?:18-415)?MtSlCl$/i.test(variant.websiteSku?.trim() ?? "")) {
+        keys.push("Clear Overcap");
+        return keys;
+    }
     const fromWebsite = getFinishFromWebsiteSku(variant.websiteSku)?.swatchName;
     if (fromWebsite) keys.push(fromWebsite);
     return keys;
