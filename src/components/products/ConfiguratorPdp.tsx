@@ -28,6 +28,7 @@ import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
 import { componentPhotoSkuBelongsToBase, photoKeysForVariant, resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { useQuery } from "convex/react";
+import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 
 import { useGLTF } from "@react-three/drei";
@@ -132,13 +133,13 @@ export default function ConfiguratorPdp({
   currentSlug, groupTitle, capacityLabel, priceEach,
   heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
-  neckSize, capacityText, skuLabel, graceSku, websiteSku,
+  neckSize, capacityText, skuLabel, websiteSku,
   quoteHref, checkoutReady = true, qty = 1, onQtyChange,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
-  heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false,
+  heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -153,6 +154,8 @@ export default function ConfiguratorPdp({
   diameter?: string | null;
   /** Product-group geometry approval from the focused PDP capability gate. */
   hasApproved3d?: boolean;
+  /** Exact selected-SKU kit truth supplied by the focused PDP boundary. */
+  kitQuery?: FunctionReturnType<typeof api.productKits.forSku>;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -172,7 +175,6 @@ export default function ConfiguratorPdp({
   skuLabel?: string | null;
   /** the selected SKU, for the component kit — the stage stacks the kit's
    *  parts when one exists, so changing a cap changes the cap and nothing else */
-  graceSku?: string | null;
   websiteSku?: string | null;
   quoteHref?: string;
   /** False means the selected Shopify variant cannot check out and must quote. */
@@ -252,10 +254,6 @@ export default function ConfiguratorPdp({
   //      keep the URLs they already had, so they come from cache instantly and
   //      only the cap is genuinely new; when its bytes are ready the whole set
   //      swaps in one frame. No fade, because there is nothing to hide.
-  const kitQuery = useQuery(
-    api.productKits.forSku,
-    graceSku || websiteSku ? { graceSku: graceSku ?? null, websiteSku: websiteSku ?? null } : "skip",
-  );
   const [heldKit, setHeldKit] = useState<typeof kitQuery>(undefined);
   useEffect(() => { if (kitQuery !== undefined) setHeldKit(kitQuery); }, [kitQuery]);
   const kit = kitQuery === undefined ? heldKit : kitQuery;
@@ -588,7 +586,7 @@ export default function ConfiguratorPdp({
               {activeCapOption ?? capOptions[0]}
             </span>
           </p>
-          <div className="flex items-center gap-3 flex-wrap mt-2.5">
+          <div data-testid="pdp-closure-rail" className="mt-2.5 flex max-w-full items-center gap-3 overflow-x-auto pb-1">
             {capOptions.map((name) => {
               const photo = resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
               return (
@@ -606,7 +604,7 @@ export default function ConfiguratorPdp({
                         className={`overflow-hidden transition-all duration-200
                                     focus-visible:outline-2 focus-visible:outline-offset-2
                                     focus-visible:outline-muted-gold
-                                    ${photo ? "h-14 w-11 rounded-[3px] bg-white" : "h-8 w-8 rounded-full"}
+                                    ${photo ? "min-h-11 min-w-11 h-14 w-11 rounded-[3px] bg-white" : "min-h-11 min-w-11 h-11 w-11 rounded-full"}
                                     ${activeCapOption === name
                                       ? "outline outline-2 outline-offset-2 outline-obsidian"
                                       : "ring-1 ring-champagne hover:ring-ash"}`}

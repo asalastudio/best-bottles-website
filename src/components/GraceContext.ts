@@ -246,14 +246,6 @@ export interface PageContext {
     pdpSelection?: PdpContextChange;
     /** Exact URL-backed Refine state. Grace inherits this unless the customer explicitly broadens it. */
     refineState?: GraceRefineState;
-    /** URL-backed selection for the unified Paper Doll product workspace. */
-    paperDoll?: {
-        configurationSku: string | null;
-        view: "beauty" | "build";
-        family: "Cylinder";
-        capacityMl: 9;
-        neckThreadSize: "17-415";
-    };
     cartItems: Array<{ graceSku: string; name: string; quantity: number; unitPrice?: number | null }>;
     /** Total cart value in dollars */
     cartTotal?: number;

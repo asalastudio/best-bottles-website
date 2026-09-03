@@ -32,7 +32,7 @@ const STUBBED = new Set([
     "displayComparison", "displayCatalogStrip", "compareProducts",
     "getCurrentPageContext", "getCartContents", "getBrowsingHistory",
     "proposeCartAdd", "proceedToCheckout", "prefillForm", "updateFormField",
-    "submitForm", "setCatalogRefinements", "setPaperDollSelection",
+    "submitForm", "setCatalogRefinements",
     "saveShortlist", "shareShortlist", "prepareQuote", "confirmQuote",
     "createProject", "saveToProject", "uploadImage",
 ]);
@@ -117,14 +117,12 @@ describe.skipIf(!LIVE)("Grace accuracy + tool-execution audit (LIVE)", () => {
         const selected = only?.length ? SCENARIOS.filter((s) => only.includes(s.id)) : SCENARIOS;
         const results: unknown[] = [];
         for (const sc of selected) {
-            // eslint-disable-next-line no-console
             console.log(`[${sc.id}] running…`);
             try {
                 const transcript = await runConversation(sc.turns);
                 results.push({ ...sc, transcript, error: null });
             } catch (e) {
                 results.push({ ...sc, transcript: null, error: String(e).slice(0, 400) });
-                // eslint-disable-next-line no-console
                 console.log(`[${sc.id}] ERROR ${String(e).slice(0, 200)}`);
             }
             writeFileSync(`${OUT_DIR}/audit-results.json`, JSON.stringify(results, null, 2));

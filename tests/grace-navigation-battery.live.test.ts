@@ -26,7 +26,7 @@ const CLIENT_STUBS = new Set([
     "navigateToPage", "showProducts", "showProductPresentation",
     "getCurrentPageContext", "getCartContents", "getBrowsingHistory",
     "proposeCartAdd", "proceedToCheckout", "prefillForm", "updateFormField",
-    "submitForm", "setCatalogRefinements", "setPaperDollSelection",
+    "submitForm", "setCatalogRefinements",
 ]);
 
 type RecordedCall = { name: string; args: Record<string, unknown> };

@@ -38,7 +38,7 @@ const STUBBED_TOOLS = new Set([
     "displayComparison", "displayCatalogStrip", "displayShortlist", "compareProducts",
     "getCurrentPageContext", "getCartContents", "getBrowsingHistory",
     "proposeCartAdd", "proceedToCheckout", "prefillForm", "updateFormField",
-    "submitForm", "setCatalogRefinements", "setPaperDollSelection",
+    "submitForm", "setCatalogRefinements",
     "prepareQuoteRequest", "listGraceProjects", "proposeProjectSave",
 ]);
 
@@ -276,4 +276,3 @@ export async function runAuditScenario(scenarioId: string): Promise<AuditScenari
         error,
     };
 }
-

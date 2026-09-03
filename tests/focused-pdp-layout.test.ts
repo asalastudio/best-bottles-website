@@ -1,7 +1,10 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import FocusedPdpLayout from "../src/components/products/FocusedPdpLayout";
+
+vi.mock("convex/react", () => ({ useQuery: () => [] }));
+vi.mock("@react-three/drei", () => ({ useGLTF: () => ({}) }));
 
 describe("focused PDP layout", () => {
     const renderShell = () => renderToStaticMarkup(createElement(FocusedPdpLayout, {
@@ -39,27 +42,28 @@ describe("focused PDP layout", () => {
         expect(html).toMatch(/@container focused-pdp \(min-width: 960px\)[\s\S]*\.pdp-mobile-sticky-summary\{display:none\}/);
     });
 
-    it("renders a contained 390px stage and horizontally reachable 44px controls without changing the 10:11 ratio", () => {
+    it("renders the real focused purchase surface at 390px with contained closure controls", async () => {
+        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         const html = renderToStaticMarkup(createElement("div", { style: { width: 390, overflow: "hidden" } },
-            createElement(FocusedPdpLayout, {
-                stage: createElement("div", { "data-testid": "mobile-stage" }, "Bottle stage"),
-                purchase: createElement("div", { "data-testid": "mobile-purchase" },
-                    createElement("div", { className: "flex max-w-full gap-2 overflow-x-auto", "data-testid": "mobile-option-rail" },
-                        ...["Black", "Gold", "Silver", "White", "Pink", "Copper"].map((label) =>
-                            createElement("button", { key: label, type: "button", className: "min-h-11 min-w-11 shrink-0" }, label),
-                        ),
-                    ),
-                ),
+            createElement(ConfiguratorPdp, {
+                currentSlug: "cylinder-9ml-clear-17-415-rollon", groupTitle: "Cylinder 9 mL", capacityLabel: "Clear glass",
+                displayName: "9 mL Clear Cylinder", priceEach: 0.72, inStock: true, checkoutReady: true,
+                qty: 1, plateImage: "https://example.test/plate.png", neckSize: "17-415", capacityText: "9 mL",
+                capOptions: ["Black", "Gold", "Silver", "White", "Pink", "Copper"], activeCapOption: "Black",
             }),
         ));
 
         expect(html).toContain("width:390px");
         expect(html).toContain('data-pdp-stage-plate="10:11"');
         expect(html).toContain("aspect-ratio:10 / 11");
-        expect(html).toContain('data-testid="mobile-option-rail"');
+        expect(html).toContain('data-testid="pdp-closure-rail"');
         expect(html).toContain("max-w-full");
         expect(html).toContain("overflow-x-auto");
-        expect((html.match(/min-h-11 min-w-11 shrink-0/g) ?? [])).toHaveLength(6);
+        expect((html.match(/min-h-11 min-w-11/g) ?? []).length).toBeGreaterThanOrEqual(6);
+        expect(html).toContain("9 mL Clear Cylinder");
+        expect(html).toContain("$0.72");
+        expect(html).toContain('aria-label="Quantity"');
+        expect(html).toContain("Add to cart");
     });
 
     it("renders mobile purchase controls after the stage instead of inside its bounded slot", () => {

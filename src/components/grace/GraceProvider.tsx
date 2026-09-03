@@ -46,11 +46,6 @@ import {
     type GraceRefinementProposal,
 } from "@/lib/grace/refineState";
 import {
-    requestGracePaperDollSelection,
-    type GracePaperDollSelectionRequest,
-} from "@/lib/grace/paperDollController";
-import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
-import {
     createGraceOpenAIRealtimeAdapter,
     GraceRealtimeConnectionCancelledError,
     type GraceOpenAIRealtimeAdapter,
@@ -164,11 +159,6 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         if (selection.finish) lines.push(`Selected finish: ${selection.finish}`);
     }
 
-    if (ctx.paperDoll) {
-        lines.push(`Paper Doll: ${ctx.paperDoll.family} ${ctx.paperDoll.capacityMl} mL ${ctx.paperDoll.neckThreadSize} (${ctx.paperDoll.view} view)`);
-        if (ctx.paperDoll.configurationSku) lines.push(`Selected Paper Doll SKU: ${ctx.paperDoll.configurationSku}`);
-        lines.push("PLATFORM LOCK: Never mix this Paper Doll with 9 mL 13-415 products or components.");
-    }
 
     if (ctx.cartItems.length > 0) {
         lines.push(`Cart (${ctx.cartItems.length} item${ctx.cartItems.length > 1 ? "s" : ""}${ctx.cartTotal ? `, ~$${ctx.cartTotal.toFixed(2)} total` : ""}):`);
@@ -752,33 +742,10 @@ function GraceProviderBase({
                     capsSummary: capsSummary || undefined,
                     slug: productSlug ?? undefined,
                 },
-                paperDoll: productSlug === CYLINDER_9ML_17415_COHORT.slug ? {
-                    configurationSku: searchParams.get("configuration"),
-                    view: searchParams.get("view") === "build" ? "build" : "beauty",
-                    family: "Cylinder",
-                    capacityMl: 9,
-                    neckThreadSize: "17-415",
-                } : undefined,
             };
             return pdpContextChange
                 ? mergePdpContextChange(baseContext, pdpContextChange)
                 : baseContext;
-        }
-        if (pageType === "pdp" && productSlug === CYLINDER_9ML_17415_COHORT.slug) {
-            return {
-                pageType,
-                pathname,
-                pageUrl,
-                cartItems: cartSummary,
-                cartTotal,
-                paperDoll: {
-                    configurationSku: searchParams.get("configuration"),
-                    view: searchParams.get("view") === "build" ? "build" : "beauty",
-                    family: "Cylinder",
-                    capacityMl: 9,
-                    neckThreadSize: "17-415",
-                },
-            };
         }
         if (pageType === "catalog") {
             const familiesParam = searchParams.get("families") ?? searchParams.get("family");
@@ -836,7 +803,6 @@ function GraceProviderBase({
                 catalogSearch: pageContext.catalogSearch,
                 collection: pageContext.currentCollection,
                 refine: pageContext.refineState,
-                paperDoll: pageContext.paperDoll,
                 cart: pageContext.cartItems.map((i) => `${i.graceSku}:${i.quantity}`).join(","),
                 hist: browsingHistory.slice(-6).map((h) => h.pathname).join("|"),
             }),
@@ -867,22 +833,6 @@ function GraceProviderBase({
         if (pageContext.pageType === "catalog" && pageContext.catalogSearch) entry.searchTerm = pageContext.catalogSearch;
         setBrowsingHistory((prev) => [...prev.slice(-49), entry]);
     }, [pageContext]);
-
-    const proactiveHintKeyRef = useRef<string | null>(null);
-    useEffect(() => {
-        const paperDoll = pageContext.paperDoll;
-        if (!paperDoll || paperDoll.view !== "beauty" || panelMode !== "closed" || messagesRef.current.length > 0) return;
-        const key = `${paperDoll.family}:${paperDoll.capacityMl}:${paperDoll.neckThreadSize}`;
-        if (proactiveHintKeyRef.current === key) return;
-        proactiveHintKeyRef.current = key;
-        const timer = window.setTimeout(() => {
-            setLauncherTooltip({
-                message: "This 9 mL 17-415 bottle can be configured by glass, applicator, roller, and finish.",
-                expiresAt: Date.now() + 7000,
-            });
-        }, 1500);
-        return () => window.clearTimeout(timer);
-    }, [pageContext.paperDoll, panelMode]);
 
     // ── Form state ───────────────────────────────────────────────────────────
     const [activeForm, setActiveForm] = useState<ActiveForm | null>(null);
@@ -1150,12 +1100,6 @@ function GraceProviderBase({
                 if (ctx.currentCollection) lines.push(`  Family filter: ${ctx.currentCollection}`);
                 if (ctx.catalogSearch) lines.push(`  Search: "${ctx.catalogSearch}"`);
                 if (ctx.refineState) lines.push(formatGraceRefineState(ctx.refineState));
-            }
-            if (ctx.paperDoll) {
-                lines.push(`\nPaper Doll platform: ${ctx.paperDoll.family} ${ctx.paperDoll.capacityMl} mL ${ctx.paperDoll.neckThreadSize}`);
-                lines.push(`  View: ${ctx.paperDoll.view}`);
-                if (ctx.paperDoll.configurationSku) lines.push(`  Selected configuration SKU: ${ctx.paperDoll.configurationSku}`);
-                lines.push("  Never mix this platform with 9 mL 13-415 products or components.");
             }
             if (ctx.cartItems.length > 0) {
                 lines.push(`\nCart (${ctx.cartItems.length} items):`);
@@ -1903,37 +1847,6 @@ function GraceProviderBase({
             return `Verified ${verifiedCount} matching product group${verifiedCount === 1 ? "" : "s"} and updated the visible Refine state. ${formatGraceRefineState(next)}`;
         },
 
-        setPaperDollSelection: (params: GracePaperDollSelectionRequest) => {
-            const request: GracePaperDollSelectionRequest = {
-                glass: params.glass ?? null,
-                deliverySystem: params.deliverySystem ?? null,
-                rollerMaterial: params.rollerMaterial ?? null,
-                finish: params.finish ?? null,
-                configurationSku: params.configurationSku ?? null,
-                view: params.view === "beauty" ? "beauty" : "build",
-            };
-            const canonicalPath = `/products/${CYLINDER_9ML_17415_COHORT.slug}`;
-            if (pathnameRef.current !== canonicalPath) {
-                const next = new URLSearchParams();
-                next.set("view", request.view);
-                if (request.configurationSku) next.set("configuration", request.configurationSku);
-                if (request.glass) next.set("glass", request.glass);
-                if (request.deliverySystem) {
-                    next.set("applicator", request.deliverySystem === "spray" ? "Fine Mist Spray" : request.deliverySystem === "lotion" ? "Lotion Pump" : "Roll-On");
-                }
-                if (request.rollerMaterial) next.set("roller", request.rollerMaterial);
-                if (request.finish) next.set("finish", request.finish);
-                routerRef.current.push(`${canonicalPath}?${next.toString()}`);
-                completeGraceNavigationRef.current("Grace is opening the 9 mL 17-415 bottle builder.");
-            } else if (!requestGracePaperDollSelection(request)) {
-                return "The Paper Doll is not available on this page.";
-            }
-            sessionMetricsRef.current.toolsCalled++;
-            sessionMetricsRef.current.toolsUsed.add("setPaperDollSelection");
-            analytics.graceToolCalled({ toolName: "setPaperDollSelection", success: true });
-            return "The 9 mL 17-415 Paper Doll selection request was applied to the visible builder. Do not describe it as a 13-415 bottle.";
-        },
-
         prepareQuoteRequest: async (params: {
             products: PendingCartProduct[] | string;
             name?: string | null;
@@ -2022,13 +1935,13 @@ function GraceProviderBase({
 
         displayAnatomy: async (params: { graceSku: string }) => {
             try {
-                const data = await callGraceServerTool<ProductCard & { heroImageUrl?: string | null; paperDollBodyUrl?: string | null; capColor?: string | null } | null>("getProductBySku", { graceSku: params.graceSku });
+                const data = await callGraceServerTool<ProductCard & { heroImageUrl?: string | null; capColor?: string | null } | null>("getProductBySku", { graceSku: params.graceSku });
                 if (data.error) return `${data.error} Could not render anatomy view.`;
                 const product = data.result;
                 if (!product) return `No product found for SKU "${params.graceSku}".`;
 
-                // v1 stub: 4 fixed-percentage pins. Per-family precise anchors
-                // land in a follow-up via Sanity-stored `paperDollFamilyKey` presets.
+                // v1 stub: four fixed-percentage pins; per-family anchors are
+                // intentionally deferred until verified product data is available.
                 const pins = [
                     { x: 0.5, y: 0.08, label: "Cap", value: product.capColor ?? undefined },
                     { x: 0.5, y: 0.22, label: "Neck", value: product.neckThreadSize ?? undefined },

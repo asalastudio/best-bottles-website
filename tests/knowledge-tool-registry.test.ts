@@ -68,17 +68,10 @@ describe("knowledge tool registry", () => {
 
         await expect(executeKnowledgeTool({
             context: { ...employeeContext, surface: "storefront", role: "customer" },
-            name: "setPaperDollSelection",
-            parameters: {
-                glass: null,
-                deliverySystem: "dropper",
-                rollerMaterial: null,
-                finish: null,
-                configurationSku: null,
-                view: "build",
-            },
+            name: "setPaperDollSelection" as never,
+            parameters: {},
             execute,
-        })).rejects.toThrow("Invalid parameters for knowledge tool setPaperDollSelection");
+        })).rejects.toThrow("unknown_tool:setPaperDollSelection");
 
         expect(execute).not.toHaveBeenCalled();
     });

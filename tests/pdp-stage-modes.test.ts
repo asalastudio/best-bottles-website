@@ -17,6 +17,10 @@ const configuratorSource = readFileSync(
     resolve(process.cwd(), "src/components/products/ConfiguratorPdp.tsx"),
     "utf8",
 );
+const productDetailSource = readFileSync(
+    resolve(process.cwd(), "src/app/products/[slug]/ProductDetailClient.tsx"),
+    "utf8",
+);
 
 describe("PDP stage mode capabilities", () => {
     it("offers Photo only when an approved image or plate exists", () => {
@@ -39,6 +43,10 @@ describe("PDP stage mode capabilities", () => {
         expect(configuratorSource).toContain("const releasedKitAvailable = Boolean(kit?.parts?.length)");
         expect(configuratorSource).toContain("hasReleasedExplodedKit: releasedKitAvailable");
         expect(configuratorSource).not.toContain("hasReleasedExplodedKit: kitReady");
+        expect(configuratorSource).not.toContain("api.productKits.forSku,");
+        expect(productDetailSource).toContain("const selectedKitQuery = useQuery(");
+        expect(productDetailSource).toContain("hasReleasedKit: Boolean(selectedKitQuery?.parts?.length)");
+        expect(productDetailSource).toContain("kitQuery={selectedKitQuery}");
     });
 
     it("accepts approved 3D availability as a field from the focused rollout gate", () => {

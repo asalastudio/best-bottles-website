@@ -5,6 +5,8 @@ import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useQuery } from "convex/react";
+import { api } from "../../../../convex/_generated/api";
 import {
     ShoppingBag, ArrowLeft, Package,
     Check, Truck,
@@ -1228,6 +1230,12 @@ export default function ProductDetailClient({
             ?? (selectedVariant.websiteSku ? platesBySku[selectedVariant.websiteSku] : undefined)
             ?? null
         : null;
+    const selectedKitQuery = useQuery(
+        api.productKits.forSku,
+        selectedVariant?.graceSku || selectedVariant?.websiteSku
+            ? { graceSku: selectedVariant.graceSku ?? null, websiteSku: selectedVariant.websiteSku ?? null }
+            : "skip",
+    );
 
     const productDescription = chooseCanonicalProductDescription({
         groupDescription: group?.groupDescription ?? null,
@@ -1304,15 +1312,15 @@ export default function ProductDetailClient({
             || variants.some((variant) => Boolean(usableProductImageUrl(variant.imageUrl))),
         hasPlate: groupHasPlates,
         hasApproved3d,
-        // Released-kit truth remains inside ConfiguratorPdp's exact-SKU query.
-        // It enhances the shell, never determines whether a product can sell.
-        hasReleasedKit: false,
+        // A pending kit query is not negative truth. Once it resolves, this same
+        // selected-SKU value governs both the shell and its stage modes.
+        hasReleasedKit: Boolean(selectedKitQuery?.parts?.length),
         hasDimensions: variants.some((variant) => Boolean(
             variant.heightWithCap?.trim()
             || variant.heightWithoutCap?.trim()
             || variant.diameter?.trim(),
         )),
-    }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, variants]);
+    }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, selectedKitQuery, variants]);
     const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
@@ -1674,6 +1682,30 @@ export default function ProductDetailClient({
         );
     }
 
+    // A valid route can still resolve to no valid purchasable variants after
+    // integrity filtering. Keep the recovery path honest: optional media is
+    // irrelevant here, but cart, quote, quantity, and sticky purchase controls
+    // cannot represent a product that does not exist to transact against.
+    if (!focusedPdpCapabilities.isPurchasable) {
+        return (
+            <main className="min-h-screen bg-bone" data-testid="pdp-unavailable-state">
+                <Navbar hideMobileSearch />
+                <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
+                    <h1 className="font-serif text-4xl text-obsidian mb-4">Product currently unavailable</h1>
+                    <p className="text-slate mb-8 text-sm">We could not find a purchasable configuration for this product. Grace can help you find the right bottle.</p>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        <button type="button" onClick={openGraceFromPdp} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
+                            Ask Grace
+                        </button>
+                        <Link href="/catalog" className="inline-flex items-center px-6 py-3 border border-obsidian text-obsidian uppercase text-xs font-bold tracking-wider hover:bg-obsidian hover:text-white transition-colors">
+                            Browse Catalog
+                        </Link>
+                    </div>
+                </div>
+            </main>
+        );
+    }
+
     const inStock = selectedVariant?.stockStatus === "In Stock";
     // A variant ID alone does not mean Shopify will sell it — a DRAFT or
     // unpublished parent product 410s at the /cart permalink. Respect the
@@ -1773,6 +1805,7 @@ export default function ProductDetailClient({
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}
                                 hasApproved3d={focusedPdpCapabilities.has3dMode}
+                                kitQuery={selectedKitQuery}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
                                 priceEach={selectedVariant?.webPrice1pc ?? null}
@@ -1786,7 +1819,6 @@ export default function ProductDetailClient({
                                 neckSize={group.neckThreadSize}
                                 capacityText={group.capacity}
                                 skuLabel={selectedVariant?.graceSku ?? null}
-                                graceSku={selectedVariant?.graceSku ?? null}
                                 websiteSku={selectedVariant?.websiteSku ?? null}
                                 checkoutReady={canAddToCart}
                                 rollerVariant={rollerVariantForGuided}

@@ -17,9 +17,8 @@ fields: `hasVariants`, `hasApprovedPhoto`, `hasPlate`, `hasApproved3d`,
 
 The 9 mL Clear Cylinder 17-415 Roll-On is covered only as an acceptance fixture.
 It does not affect eligibility. Diva 46 stays photo-only because its approved
-geometry field is false; mode availability is passed through the capability
-gate, while released-kit state continues to come from the exact selected-SKU
-kit record.
+geometry field is false; both geometry and released-kit availability are passed
+through the capability gate from the exact selected-SKU kit record.
 
 ## Route and redirect audit
 
@@ -87,3 +86,53 @@ GREEN:
   Sentry-secret diagnostics; it exits successfully.
 - `git diff --name-only 45c2e284 | rg 'data/.+(inventory|selection|xref)|legacy.+PSD|BB-PSD'`
   returned no matches.
+
+## Fix round 1 (base `ba8f8351`)
+
+### Grace navigation and retired-builder cleanup
+
+- Removed `setPaperDollSelection` from Grace's realtime schema, policy registry,
+  provider implementation, session context, audit stubs, and live audit
+  manifests. The obsolete controller and its focused unit test were deleted.
+- Grace now states one navigation rule: broad or ambiguous shopping requests go
+  to the focused finder; an exact verified product/configuration goes only to
+  its canonical PDP with its stored website SKU when present (otherwise its
+  verified Grace SKU). It does not dispatch through aliases or a builder.
+- Added regression coverage proving no customer-facing Grace tool, provider
+  path, or instruction advertises the retired flow.
+
+### Selected-SKU capability truth and fallbacks
+
+- The PDP alone queries `productKits.forSku` for the exact selected variant and
+  supplies that one result to `ConfiguratorPdp`. `hasReleasedKit` and Exploded
+  mode now share that field-driven result; a pending query remains non-negative
+  and does not hide the shell. The 9 mL released-kit fixture enables Exploded;
+  a no-kit group remains photo-only.
+- An empty or invalid filtered group now exits to an unavailable/Ask Grace
+  recovery surface before any quantity, cart, quote, or sticky purchase markup.
+  A real variant with no optional media remains purchasable.
+
+### Mobile and redirect regressions
+
+- Replaced the fabricated 390px rail fixture with rendered `ConfiguratorPdp`
+  purchase surfaces, mocking only Convex/three data hooks. The DOM regression
+  instruments the actual rail's `clientWidth`/`scrollWidth` and proves overflow
+  is contained there rather than the 390px page; it also covers stage, selected
+  variant controls, price, quantity, primary CTA, and 44px touch targets.
+  Browser-level physical layout remains Task 15 scope.
+- Added page-source redirect coverage for preserving an alias URL query into the
+  canonical PDP and proving the canonical destination has no further override.
+
+### Fix-round RED → GREEN and verification
+
+RED: schema/registry/provider tests failed against the old paper-doll tool;
+the selected-kit and 390px surface assertions failed before wiring/mocking; the
+purchasability recovery assertion failed before the early return.
+
+GREEN:
+
+- Focused Grace/PDP/protected suites: **10 files, 50 tests passed**.
+- Full Vitest: **119 files, 847 tests passed; 2 live files / 7 tests skipped**.
+- `npx tsc --noEmit` and `git diff --check` passed.
+- No network, Convex CLI/deploy/data action, media regeneration, or PSD-path
+  change occurred.
