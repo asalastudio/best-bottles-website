@@ -1939,6 +1939,9 @@ export default function ProductDetailClient({
                                     })()}
                                 </div>
                             </div>
+                        </div>
+                        </>)}
+                        purchase={(<>
 
                             {!isAtomizer && (
                                 <div className="lg:hidden mt-3 rounded-sm border border-champagne/50 bg-white p-3 shadow-sm">
@@ -2182,9 +2185,6 @@ export default function ProductDetailClient({
                                     </div>
                                 </div>
                             )}
-                        </div>
-                        </>)}
-                        purchase={(<>
 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
                         <div className="px-2 sm:px-0">

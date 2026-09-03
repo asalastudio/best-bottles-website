@@ -308,6 +308,10 @@ export default function ConfiguratorPdp({
       .catch(() => { if (!cancelled) setShownParts(null); });   // fall back to the plate
     return () => { cancelled = true; };
   }, [kitQuery, targetParts]);
+  // A published kit is capability truth; decoding only controls when its
+  // layers are safe to paint. Keeping these separate preserves Exploded while
+  // the next valid in-intent variant's image bytes are still arriving.
+  const releasedKitAvailable = Boolean(kit?.parts?.length);
   const kitReady = Boolean(shownParts?.length);
   const kitParts = shownParts;
   const markPlateBroken = (url: string) => {
@@ -552,7 +556,7 @@ export default function ConfiguratorPdp({
                  }}
                  className="absolute inset-0 h-full w-full object-contain transition-transform
                             duration-500 ease-[cubic-bezier(.4,0,.2,1)]
-                            motion-safe:animate-[kitIn_180ms_ease-out]" />
+                            motion-reduce:transition-none motion-reduce:duration-0" />
           ))}
         </div>
       ) : showPhoto ? (
@@ -632,18 +636,18 @@ export default function ConfiguratorPdp({
   const modes = getPdpStageModes({
     hasApprovedImageOrPlate: Boolean(plate || photoFallback),
     hasApprovedGeometry: has3d,
-    hasReleasedExplodedKit: kitReady,
+    hasReleasedExplodedKit: releasedKitAvailable,
     dimensions,
     photoOnly: fam?.photoOnly,
     productFamily: displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0],
   });
   const stageMode: PdpStageMode | null = showDimensions
     ? "dimensions"
+    : requestedStageMode === "exploded" && releasedKitAvailable
+      ? "exploded"
     : showLive3d
       ? "3d"
-      : exploded && kitReady
-        ? "exploded"
-        : preservePdpStageMode("photo", modes);
+      : preservePdpStageMode("photo", modes);
   useEffect(() => {
     if (kitQuery === undefined) return;
     const preserved = preservePdpStageMode(requestedStageMode, modes);
@@ -651,7 +655,7 @@ export default function ConfiguratorPdp({
     // Mode capabilities are primitive truth values; keeping the array out of
     // this dependency list prevents an effect on every render.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [requestedStageMode, has3d, kitReady, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery]);
+  }, [requestedStageMode, has3d, releasedKitAvailable, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery]);
   const stageToggle = (
     <PdpStageModeDock modes={modes} activeMode={stageMode} onModeChange={pickMode} />
   );
@@ -835,9 +839,12 @@ export default function ConfiguratorPdp({
         )}
       </div>
 
-      {/* every closure the family sells sits on ONE row: the panel is wide
-          enough for six (the Diva) because the stage yields width to it */}
-      <div className="flex gap-2.5 mt-3 pb-1">
+      {/* Fixed-width fitment photography remains legible at 390 px inside a
+          contained rail; the page itself never inherits the rail's width. */}
+      <div
+        data-testid="pdp-closure-rail"
+        className="mt-3 flex max-w-full gap-2.5 overflow-x-auto overscroll-x-contain pb-2 [scrollbar-width:thin]"
+      >
         {ranked.map((base) => {
           const meta = base !== "none" ? CLOSURE_META[base] : null;
           const sib = siblingFor(base);
@@ -1296,7 +1303,7 @@ function ClosureTile({ name, benefit, imageUrl, glyph: Glyph, selected, onClick 
   const showImg = imageUrl && !broken;
   return (
     <button type="button" onClick={onClick} aria-pressed={selected}
-            title={benefit} className="shrink-0 w-24 text-center group">
+            title={benefit} className="min-h-11 shrink-0 w-24 text-center group">
       <div className={`relative aspect-square bg-product-well rounded-[3px]
                        overflow-hidden transition-colors duration-200
                        ${selected

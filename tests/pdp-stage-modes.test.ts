@@ -1,5 +1,7 @@
 import { createElement } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { describe, expect, it, vi } from "vitest";
 import PdpStageModeDock from "../src/components/products/PdpStageModeDock";
 import {
@@ -11,6 +13,10 @@ import {
 
 const modeIds = (input: Parameters<typeof getPdpStageModes>[0]) =>
     getPdpStageModes(input).map((mode) => mode.id);
+const configuratorSource = readFileSync(
+    resolve(process.cwd(), "src/components/products/ConfiguratorPdp.tsx"),
+    "utf8",
+);
 
 describe("PDP stage mode capabilities", () => {
     it("offers Photo only when an approved image or plate exists", () => {
@@ -27,6 +33,12 @@ describe("PDP stage mode capabilities", () => {
     it("offers Exploded only for a released kit", () => {
         expect(modeIds({ hasReleasedExplodedKit: false })).not.toContain("exploded");
         expect(modeIds({ hasReleasedExplodedKit: true })).toContain("exploded");
+    });
+
+    it("wires Exploded capability to released kit truth rather than decoded presentation state", () => {
+        expect(configuratorSource).toContain("const releasedKitAvailable = Boolean(kit?.parts?.length)");
+        expect(configuratorSource).toContain("hasReleasedExplodedKit: releasedKitAvailable");
+        expect(configuratorSource).not.toContain("hasReleasedExplodedKit: kitReady");
     });
 
     it("offers Dimensions only when at least one real dimension field is present", () => {
@@ -56,6 +68,11 @@ describe("PDP stage mode capabilities", () => {
         const before: PdpStageMode = "3d";
         const nextModes = getPdpStageModes({ hasApprovedImageOrPlate: true, hasApprovedGeometry: true });
         expect(preservePdpStageMode(before, nextModes)).toBe("3d");
+    });
+
+    it("does not normalize Exploded away while released kit images are still decoding", () => {
+        expect(configuratorSource).toContain("requestedStageMode === \"exploded\" && releasedKitAvailable");
+        expect(configuratorSource).not.toMatch(/preservePdpStageMode\(requestedStageMode, modes\)[\s\S]{0,400}\[requestedStageMode, has3d, kitReady/);
     });
 
     it("falls back to Photo, then the first supported mode, when the active capability disappears", () => {
