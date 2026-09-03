@@ -119,17 +119,14 @@ function slugToken(value: string): string {
 }
 
 function safeProductSlug(value: unknown): string | undefined {
-  if (typeof value !== "string" || value.length > 120 || !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value)) return undefined;
-  const canonicalFamilyPrefix = [...ANALYTICS_FAMILIES]
-    .map((family) => family.toLowerCase().replace(/[^a-z0-9]+/g, "-"))
-    .sort((left, right) => right.length - left.length)
-    .find((family) => value.startsWith(`${family}-`));
-  if (!canonicalFamilyPrefix || !/(?:^|-)\d+(?:ml)?(?:-|$)|\d+-\d+(?:-|$)/.test(value)) return undefined;
+  if (typeof value !== "string" || value.length > 120 || !/^[A-Za-z0-9]+(?:-[A-Za-z0-9]+){2,}$/.test(value)) return undefined;
+  if (!/(?:^|-)\d+(?:ml)?(?:-|$)|(?:^|-)\d+-\d+(?:-|$)/.test(value)) return undefined;
   return value;
 }
 
 function safeProductSku(value: unknown): string | undefined {
   if (typeof value !== "string" || value.length > 96 || !/^[A-Za-z0-9_-]+$/.test(value)) return undefined;
+  if (!/[A-Za-z]/.test(value) || !/\d/.test(value)) return undefined;
   return slugToken(value);
 }
 

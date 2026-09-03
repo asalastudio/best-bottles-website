@@ -93,7 +93,7 @@ describe("focused shopping analytics", () => {
     ]);
   });
 
-  it("never emits plaintext name-like identifiers while retaining canonical product identities", () => {
+  it("drops obvious name-like or blob-like product identifiers while retaining legitimate design-name routes", () => {
     for (const identifier of [
       "Jane-Doe",
       "jane-doe",
@@ -121,9 +121,21 @@ describe("focused shopping analytics", () => {
       application: "rollon",
       slug: "cylinder-9ml-clear-17-415-rollon",
     });
+    analytics.finderResultOpened({
+      entryMode: "application",
+      family: "Cylinder",
+      application: "rollon",
+      slug: "eternal-flame-35ml-clear-Ground",
+    });
+    analytics.finderResultOpened({
+      entryMode: "application",
+      family: "Cylinder",
+      application: "rollon",
+      slug: "pear-118ml-clear-Ground-stopper",
+    });
     analytics.pdpVariantResolved({
       slug: "boston-round-30ml-amber-dropper",
-      sku: "GB-CYL",
+      sku: "CYL9CLRROL",
       application: "dropper",
     });
 
@@ -131,21 +143,33 @@ describe("focused shopping analytics", () => {
     for (const identifier of ["Jane-Doe", "jane-doe", "Jane Doe", "jane@example.com", "private notes", "シリンダー-9ml"]) {
       expect(emitted).not.toContain(identifier);
     }
-    expect(track.mock.calls.filter(([event]) => event === "Finder Result Opened")).toEqual([[
-      "Finder Result Opened", {
+    expect(track.mock.calls.filter(([event]) => event === "Finder Result Opened")).toEqual([
+      ["Finder Result Opened", {
         entryMode: "application",
         family: "Cylinder",
         application: "rollon",
         slug: "cylinder-9ml-clear-17-415-rollon",
-      },
-    ]]);
-    expect(track.mock.calls.filter(([event]) => event === "PDP Variant Resolved")).toEqual(expect.arrayContaining([[
+      }],
+      ["Finder Result Opened", {
+        entryMode: "application",
+        family: "Cylinder",
+        application: "rollon",
+        slug: "eternal-flame-35ml-clear-Ground",
+      }],
+      ["Finder Result Opened", {
+        entryMode: "application",
+        family: "Cylinder",
+        application: "rollon",
+        slug: "pear-118ml-clear-Ground-stopper",
+      }],
+    ]);
+    expect(track.mock.calls.filter(([event]) => event === "PDP Variant Resolved")).toEqual([[
       "PDP Variant Resolved", expect.objectContaining({
         slug: "boston-round-30ml-amber-dropper",
         application: "dropper",
         sku: expect.stringMatching(/^sku_[a-f0-9]{16}$/),
       }),
-    ]]));
+    ]]);
   });
 
   it("wires shopping events to explicit interaction boundaries without referrer reads", () => {

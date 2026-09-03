@@ -43,7 +43,8 @@ import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import {
-    resolveUrlAuthoritativePdpAnalytics,
+    createPendingPdpAnalyticsNavigation,
+    resolveAndConsumePdpAnalyticsNavigation,
     type PdpAnalyticsDimension,
     type PendingPdpAnalyticsNavigation,
 } from "@/lib/products/pdp-analytics";
@@ -1465,22 +1466,22 @@ export default function ProductDetailClient({
         const nextUrl = canonicalVariantUrl(resolved);
         if (nextUrl) {
             const dimension: PdpAnalyticsDimension = selection.rollerVariant ? "rollerMaterial" : "capFinish";
-            pendingPdpAnalyticsNavigation.current = {
-                slug: activeSlug,
-                sku: canonicalSku(resolved) ?? undefined,
+            pendingPdpAnalyticsNavigation.current = createPendingPdpAnalyticsNavigation({
+                currentSlug: activeSlug,
+                currentSku: variantFromUrl ? canonicalSku(variantFromUrl) : primaryVariant ? canonicalSku(primaryVariant) : null,
+                targetSlug: activeSlug,
+                targetSku: canonicalSku(resolved),
                 dimension,
-            };
+            });
             router.replace(nextUrl, { scroll: false });
         }
-    }, [activeApplicator, activeCapColor, activeSlug, canonicalVariantUrl, rollerTypeOptions, router, variants]);
+    }, [activeApplicator, activeCapColor, activeSlug, canonicalVariantUrl, primaryVariant, rollerTypeOptions, router, variantFromUrl, variants]);
 
-    const handleGuidedProductUrlChange = useCallback((href: string, dimension: PdpAnalyticsDimension = "glass") => {
+    const handleGuidedProductUrlChange = useCallback((href: string) => {
         const target = new URL(href, "https://bestbottles.local");
         if (!target.pathname.startsWith("/products/")) return;
         if (safeFrom) target.searchParams.set("from", safeFrom);
         if (qty > 1) target.searchParams.set("qty", String(qty));
-        const targetSlug = target.pathname.slice("/products/".length);
-        pendingPdpAnalyticsNavigation.current = { slug: targetSlug, dimension };
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
     }, [qty, router, safeFrom]);
 
@@ -1560,7 +1561,7 @@ export default function ProductDetailClient({
     useEffect(() => {
         const sku = selectedVariant ? canonicalSku(selectedVariant) : null;
         const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
-        const event = resolveUrlAuthoritativePdpAnalytics({
+        const resolution = resolveAndConsumePdpAnalyticsNavigation({
             slug: activeSlug,
             resolvedSku: sku,
             application,
@@ -1568,12 +1569,13 @@ export default function ProductDetailClient({
             urlResolvedSku: variantFromUrl ? canonicalSku(variantFromUrl) : null,
             pendingNavigation: pendingPdpAnalyticsNavigation.current,
         });
+        const { event } = resolution;
         if (!event) return;
+        pendingPdpAnalyticsNavigation.current = resolution.pendingNavigation;
         const signature = `${event.slug}:${event.sku}:${event.application}`;
         if (lastTrackedPdpVariantSignature.current === signature) return;
         lastTrackedPdpVariantSignature.current = signature;
         analytics.pdpVariantResolved(event);
-        pendingPdpAnalyticsNavigation.current = null;
     }, [activeSlug, primaryVariant, selectedVariant, variantFromUrl]);
 
     const openGraceFromPdp = useCallback(() => {

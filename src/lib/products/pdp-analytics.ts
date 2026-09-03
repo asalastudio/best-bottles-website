@@ -4,9 +4,25 @@ export type PdpAnalyticsDimension = "application" | "capFinish" | "capStyle" | "
 
 export type PendingPdpAnalyticsNavigation = {
     slug: string;
-    sku?: string;
+    sku: string;
     dimension: PdpAnalyticsDimension;
 };
+
+export function createPendingPdpAnalyticsNavigation(input: {
+    currentSlug: string;
+    currentSku: string | null | undefined;
+    targetSlug: string;
+    targetSku: string | null | undefined;
+    dimension: PdpAnalyticsDimension;
+}): PendingPdpAnalyticsNavigation | null {
+    if (!input.targetSku) return null;
+    if (input.currentSlug === input.targetSlug && input.currentSku === input.targetSku) return null;
+    return {
+        slug: input.targetSlug,
+        sku: input.targetSku,
+        dimension: input.dimension,
+    };
+}
 
 export function resolveUrlAuthoritativePdpAnalytics(input: {
     slug: string;
@@ -21,11 +37,23 @@ export function resolveUrlAuthoritativePdpAnalytics(input: {
     if (input.resolvedSku !== authoritativeSku) return null;
     const pending = input.pendingNavigation;
     const matchesPendingNavigation = pending?.slug === input.slug
-        && (!pending.sku || pending.sku === input.resolvedSku);
+        && pending.sku === input.resolvedSku;
     return {
         slug: input.slug,
         sku: input.resolvedSku,
         application: input.application,
         ...(matchesPendingNavigation ? { dimension: pending.dimension } : {}),
+    };
+}
+
+export function resolveAndConsumePdpAnalyticsNavigation(input: Parameters<typeof resolveUrlAuthoritativePdpAnalytics>[0]) {
+    const event = resolveUrlAuthoritativePdpAnalytics(input);
+    const pendingNavigation = input.pendingNavigation ?? null;
+    const consumesPendingNavigation = event !== null
+        && pendingNavigation?.slug === event.slug
+        && pendingNavigation.sku === event.sku;
+    return {
+        event,
+        pendingNavigation: consumesPendingNavigation ? null : pendingNavigation,
     };
 }
