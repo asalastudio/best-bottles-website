@@ -14,7 +14,7 @@ import {
     catalogSearchResultTieBreak,
     catalogSearchScore,
     classifyComponentType,
-    parseCapacityLabelMl,
+    capacitySelectionMatches,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 
@@ -69,6 +69,33 @@ export interface CatalogSearchVariantPreviewRow {
         shopifyVariantId: string | null;
         shopifySellable: boolean | null;
     }>;
+}
+
+type CatalogSkuPreviewRow = {
+    groupId: string;
+    variants: Array<{
+        websiteSku?: string | null;
+        graceSku?: string | null;
+    }>;
+};
+
+export function resolveCatalogGroupSku(
+    groupId: string,
+    primarySkus: CatalogSearchPrimarySku[],
+    variantPreviewRows: CatalogSkuPreviewRow[],
+): CatalogSearchPrimarySku {
+    const primary = primarySkus.find((row) => row.groupId === groupId);
+    const variants = variantPreviewRows.find((row) => row.groupId === groupId)?.variants ?? [];
+    const variant = variants.find((row) => row.websiteSku || row.graceSku) ?? variants[0];
+    return {
+        groupId,
+        websiteSku: primary?.websiteSku || variant?.websiteSku || null,
+        graceSku: primary?.graceSku || variant?.graceSku || null,
+    };
+}
+
+export function catalogGroupSkuLabel(sku: CatalogSearchPrimarySku): string {
+    return sku.websiteSku || sku.graceSku || "—";
 }
 
 export interface CatalogSearchResultShape {
@@ -151,8 +178,7 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => set.has(canonicalGlassColor(group.color)));
         }
         if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
-            const selectedMls = new Set(filters.capacities.map(parseCapacityLabelMl).filter((value): value is number => value != null));
-            rows = rows.filter((group) => group.capacityMl != null && selectedMls.has(group.capacityMl));
+            rows = rows.filter((group) => capacitySelectionMatches(group.capacityMl, filters.capacities));
         }
         if (!skipKeys.has("neckThreadSizes") && filters.neckThreadSizes.length > 0) {
             const set = new Set(filters.neckThreadSizes);
@@ -256,7 +282,9 @@ export function buildCatalogSearchResult(input: {
         facets,
         totalCount: sorted.length,
         nextCursor: offset + items.length < sorted.length ? String(offset + items.length) : null,
-        primarySkus: input.primarySkus.filter((row) => visibleIds.has(row.groupId)),
+        primarySkus: items.map((group) =>
+            resolveCatalogGroupSku(group._id, input.primarySkus, input.variantPreviewRows)
+        ),
         variantPreviewRows: input.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)),
     };
 }

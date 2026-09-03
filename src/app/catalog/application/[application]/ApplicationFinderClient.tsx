@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import FinderNavigationMemory from "@/components/catalog/FinderNavigationMemory";
 import FocusedApplicationCards from "@/components/catalog/FocusedApplicationCards";
-import FocusedFinderControls, { type FocusedFinderOption } from "@/components/catalog/FocusedFinderControls";
+import FocusedFinderControls, { exclusiveFacetValue, type FocusedFinderOption } from "@/components/catalog/FocusedFinderControls";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import {
     APPLICATOR_NAV,
@@ -333,23 +333,19 @@ export default function ApplicationFinderClient({
     }, [activeApplication, filters, runSearch]);
 
     const toggleCapacity = useCallback((capacity: string) => {
-        const action = filters.capacities.includes(capacity) ? "removed" : "selected";
+        const capacities = exclusiveFacetValue(filters.capacities, capacity);
         navigateWithFilters({
             ...filters,
-            capacities: filters.capacities.includes(capacity)
-                ? filters.capacities.filter((value) => value !== capacity)
-                : [...filters.capacities, capacity],
-        }, { refinement: { dimension: "capacity", action, value: capacity } });
+            capacities,
+        }, { refinement: { dimension: "capacity", action: capacities.length ? "selected" : "removed", value: capacity } });
     }, [filters, navigateWithFilters]);
 
     const toggleRollerMaterial = useCallback((material: RollerMaterial) => {
-        const action = filters.rollerMaterials.includes(material) ? "removed" : "selected";
+        const rollerMaterials = exclusiveFacetValue(filters.rollerMaterials, material);
         navigateWithFilters({
             ...filters,
-            rollerMaterials: filters.rollerMaterials.includes(material)
-                ? filters.rollerMaterials.filter((value) => value !== material)
-                : [...filters.rollerMaterials, material],
-        }, { refinement: { dimension: "rollerMaterial", action, value: material } });
+            rollerMaterials,
+        }, { refinement: { dimension: "rollerMaterial", action: rollerMaterials.length ? "selected" : "removed", value: material } });
     }, [filters, navigateWithFilters]);
 
     const capacityOptions = useMemo<FocusedFinderOption[]>(() => {

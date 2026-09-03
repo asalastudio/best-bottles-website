@@ -18,6 +18,11 @@ type FocusedFinderControlsProps = {
     className?: string;
 };
 
+/** One-click finder refinement: select this value, or clear it if already selected. */
+export function exclusiveFacetValue<T extends string>(current: readonly T[], value: T): T[] {
+    return current.length === 1 && current[0] === value ? [] : [value];
+}
+
 function RefinementButton({
     label,
     count,
@@ -34,21 +39,30 @@ function RefinementButton({
     return (
         <button
             type="button"
-            aria-pressed={selected}
+            role="radio"
+            aria-checked={selected}
             aria-disabled={unavailable}
             disabled={unavailable}
             title={unavailable ? `${label} is not available with the current selections.` : undefined}
             onClick={onClick}
             className={`flex min-h-11 w-full items-center justify-between gap-3 border-b border-champagne/45 px-3 text-left text-sm transition-colors last:border-b-0 focus-visible:relative focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold motion-reduce:transition-none ${
                 selected
-                    ? "bg-obsidian text-bone"
+                    ? "bg-bone font-semibold text-obsidian"
                     : unavailable
                         ? "cursor-not-allowed bg-linen text-slate/45"
                         : "bg-linen text-obsidian hover:bg-bone"
             }`}
         >
-            <span>{label}</span>
-            <span className={`text-xs tabular-nums ${selected ? "text-champagne" : "text-slate"}`}>{count}</span>
+            <span className="flex items-center gap-2.5">
+                <span
+                    aria-hidden="true"
+                    className={`h-3.5 w-3.5 shrink-0 rounded-full border ${
+                        selected ? "border-obsidian bg-obsidian" : "border-champagne bg-white"
+                    }`}
+                />
+                <span>{label}</span>
+            </span>
+            <span className="text-xs tabular-nums text-slate">{count}</span>
         </button>
     );
 }
@@ -71,7 +85,7 @@ export default function FocusedFinderControls({
             </p>
             <fieldset className={`${rollerMaterialOptions.length ? "border-b" : ""} border-champagne/70 p-3`}>
                 <legend className="px-1 font-serif text-lg text-obsidian">Capacity</legend>
-                <div className="mt-2 border border-champagne/60">
+                <div role="radiogroup" aria-label="Capacity" className="mt-2 border border-champagne/60">
                     {capacityOptions.map((option) => (
                         <RefinementButton
                             key={option.value}
@@ -86,7 +100,7 @@ export default function FocusedFinderControls({
             {rollerMaterialOptions.length ? (
                 <fieldset className="p-3">
                     <legend className="px-1 font-serif text-lg text-obsidian">Roller Material</legend>
-                    <div className="mt-2 border border-champagne/60">
+                    <div role="radiogroup" aria-label="Roller Material" className="mt-2 border border-champagne/60">
                         {rollerMaterialOptions.map((option) => (
                             <RefinementButton
                                 key={option.value}

@@ -10,6 +10,8 @@ import {
     activeMatrixFilters,
     createMatrixFamilyState,
     emptyMatrixFilters,
+    matrixCapacityMatches,
+    matrixSizeOptions,
     switchMatrixFamily,
 } from "@/lib/matrix/filters";
 import {
@@ -231,6 +233,34 @@ describe("matrix family and product identity helpers", () => {
         expect(summary.meetsMinimum).toBe(true);
     });
 
+    it("keeps an explicit bottle-only or unmatched component instead of wiping the order line", () => {
+        const bottleOnly = retainMatrixConfiguration({}, "GB-CYL-10", { graceSku: "GB-CYL-10" }, {
+            component: null,
+            qty: 12,
+        });
+        const unmatched = retainMatrixConfiguration({}, "GB-CYL-11", { graceSku: "GB-CYL-11" }, {
+            component: { graceSku: "CMP-OLD" },
+            qty: 12,
+        });
+        const resolvedBottleOnly = reconcileRetainedMatrixRows(
+            bottleOnly,
+            [{ graceSku: "GB-CYL-10" }],
+            (row) => row.graceSku,
+            () => undefined,
+        );
+        const resolvedUnmatched = reconcileRetainedMatrixRows(
+            unmatched,
+            [{ graceSku: "GB-CYL-11" }],
+            (row) => row.graceSku,
+            () => undefined,
+        );
+
+        expect(resolvedBottleOnly["GB-CYL-10"]?.configuration.component).toBeNull();
+        expect(resolvedUnmatched["GB-CYL-11"]?.configuration.component).toEqual({ graceSku: "CMP-OLD" });
+        expect(retainedMatrixCartLines(resolvedBottleOnly)).toHaveLength(1);
+        expect(retainedMatrixCartLines(resolvedUnmatched)).toHaveLength(1);
+    });
+
     it("links a non-primary variant to its real group PDP and exact SKU", () => {
         expect(matrixProductHref({
             productGroupSlug: "cylinder-10ml-clear",
@@ -296,6 +326,8 @@ describe("Build a Bottle presentation contract", () => {
         expect(client).toContain("Compatibility not mapped — bottle only");
         expect(client).not.toContain("includes a component");
         expect(client).not.toContain("comes with");
+        expect(client).toContain('window.dispatchEvent(new CustomEvent("open-cart-drawer"))');
+        expect(client).toContain("Add to cart");
     });
 
     it("links each exact bottle and selected component to its canonical PDP identity", () => {
@@ -315,5 +347,38 @@ describe("Build a Bottle presentation contract", () => {
         expect(navigation.match(/label: "Build a Bottle", href: "\/matrix"/g)).toHaveLength(2);
         expect(navigation.match(/label: "Catalog", href: "\/catalog"/g)).toHaveLength(2);
         expect(footer.match(/\["Build a Bottle", "\/matrix"\]/g)).toHaveLength(1);
+    });
+});
+
+describe("matrix capacity filters", () => {
+    it("collapses equivalent milliliter labels into one size option", () => {
+        expect(matrixSizeOptions([
+            "9 ml (0.3 oz)",
+            "9 ml (0.30 oz)",
+            "9 ml (1/3 oz)",
+            "5 ml (0.17 oz)",
+            "5.0 ml",
+            "5 ml (1/6 oz)",
+            "15 ml (0.51 oz)",
+            "15 ml",
+            "15ml(0.51oz)",
+            "0.51 oz (15 ml)",
+        ])).toEqual(["5 ml", "9 ml", "15 ml"]);
+    });
+
+    it("matches rows whose capacity label uses a different ounce spelling of the same milliliters", () => {
+        expect(matrixCapacityMatches("9 ml (1/3 oz)", "9 ml")).toBe(true);
+        expect(matrixCapacityMatches("5.0 ml", "5 ml")).toBe(true);
+        expect(matrixCapacityMatches({ capacity: "15 ml (0.51 oz)", capacityMl: 15 }, "15 ml")).toBe(true);
+        expect(matrixCapacityMatches("13 ml (0.44 oz)", "9 ml")).toBe(false);
+    });
+
+    it("does not treat neck threads or leftover 2400-style labels as bottle sizes", () => {
+        expect(matrixSizeOptions([
+            { capacity: "15 ml (0.51 oz)", capacityMl: 15 },
+            { capacity: "20-400", capacityMl: null },
+            { capacity: "2400", capacityMl: null },
+            { capacity: "30 ml", capacityMl: 30 },
+        ])).toEqual(["15 ml", "30 ml"]);
     });
 });

@@ -51,9 +51,10 @@ export function reconcileRetainedMatrixRows<TRow, TComponent>(
             continue;
         }
         const selectedComponent = entry.configuration.component;
-        const component = selectedComponent && resolveComponent
+        const resolved = selectedComponent && resolveComponent
             ? resolveComponent(currentRow, selectedComponent)
-            : selectedComponent;
+            : undefined;
+        const component = resolved ?? selectedComponent;
         next[identity] = {
             row: currentRow,
             configuration: { ...entry.configuration, component },

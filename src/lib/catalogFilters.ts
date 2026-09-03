@@ -238,6 +238,48 @@ export function capacityInRange(ml: number | null | undefined, range: (typeof CA
     return ml >= range.min && (range.max == null || ml <= range.max);
 }
 
+export function resolveCapacityRange(value: string): (typeof CAPACITY_RANGES)[number] | null {
+    const token = value.trim().toLowerCase();
+    if (!token) return null;
+    return CAPACITY_RANGES.find((range) => (
+        range.value === token
+        || range.label.toLowerCase() === token
+    )) ?? null;
+}
+
+/** Exact milliliter labels and mega-menu range tokens (`miniature`) both match `capacityMl`. */
+export function capacitySelectionMatches(
+    capacityMl: number | null | undefined,
+    selected: readonly string[],
+): boolean {
+    if (selected.length === 0) return true;
+    if (capacityMl == null) return false;
+    return selected.some((value) => {
+        const range = resolveCapacityRange(value);
+        if (range) return capacityInRange(capacityMl, range);
+        const ml = parseCapacityLabelMl(value);
+        return ml != null && ml === capacityMl;
+    });
+}
+
+/** Expand range tokens for Convex searchCatalog, which still matches exact milliliters. */
+export function expandCapacityFilterValues(selected: readonly string[]): string[] {
+    const labels: string[] = [];
+    for (const value of selected) {
+        const range = resolveCapacityRange(value);
+        if (!range) {
+            labels.push(value);
+            continue;
+        }
+        const max = range.max ?? 2000;
+        const step = range.max == null ? 1 : 0.1;
+        for (let ml = range.min; ml <= max + 1e-9; ml = Number((ml + step).toFixed(1))) {
+            labels.push(`${ml} ml`);
+        }
+    }
+    return Array.from(new Set(labels));
+}
+
 export function normalizeCatalogSearchText(value: string | null | undefined): string {
     if (!value) return "";
     let normalized = value
@@ -530,6 +572,14 @@ export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMo
     if (sort !== "featured") p.set("sort", sort);
     if (view !== "visual") p.set("view", view);
     return p;
+}
+
+export function catalogHref(
+    partial: Partial<CatalogFilters> = {},
+    sort: SortValue = "featured",
+): string {
+    const qs = filtersToParams({ ...EMPTY_FILTERS, ...partial }, sort).toString();
+    return qs ? `/catalog?${qs}` : "/catalog";
 }
 
 function getMultiParam(sp: URLSearchParams, key: string): string[] {

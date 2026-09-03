@@ -1,5 +1,6 @@
 import {
     APPLICATOR_BUCKETS,
+    resolveCapacityRange,
     type CatalogFacetKey,
     type CatalogFilters,
 } from "@/lib/catalogFilters";
@@ -21,6 +22,8 @@ export type CatalogFilterChip = {
 };
 
 export function formatCatalogCapacityLabel(value: string): string {
+    const range = resolveCapacityRange(value);
+    if (range) return `${range.label} — ${range.detail}`;
     if (/\boz\b/i.test(value)) return value;
     const match = value.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
     if (!match) return value;

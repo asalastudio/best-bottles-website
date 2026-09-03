@@ -550,18 +550,18 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
                             <h2 className="font-serif text-3xl lg:text-4xl text-obsidian font-medium">How should it dispense?</h2>
                             <p className="text-slate text-sm mt-2">Choose a dispensing method for your {selectedUseCase?.label.toLowerCase()} products.</p>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
+                        <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-4">
                             {availableDispensers.map((d) => (
                                 <button
                                     key={d.value}
                                     onClick={() => handleDispenserSelect(d.value)}
-                                    className="group flex flex-col h-full bg-bone border border-champagne/50 rounded-sm p-6 hover:border-muted-gold hover:shadow-md transition-all duration-300"
+                                    className="group flex h-full w-full max-w-[240px] flex-col bg-bone border border-champagne/50 rounded-sm p-6 text-center hover:border-muted-gold hover:shadow-md transition-all duration-300 sm:w-[220px]"
                                 >
-                                    <div className="text-obsidian/40 group-hover:text-muted-gold transition-colors duration-300 mb-4">
+                                    <div className="mb-4 flex justify-center text-obsidian/40 transition-colors duration-300 group-hover:text-muted-gold">
                                         {APPLICATOR_ICONS[d.value]}
                                     </div>
-                                    <h3 className="font-serif text-lg text-obsidian font-medium mb-1 leading-snug">{d.label}</h3>
-                                    <p className="text-xs text-slate leading-relaxed">{d.subtitle}</p>
+                                    <h3 className="mb-1 font-serif text-lg font-medium leading-snug text-obsidian">{d.label}</h3>
+                                    <p className="text-xs leading-relaxed text-slate">{d.subtitle}</p>
                                 </button>
                             ))}
                         </div>

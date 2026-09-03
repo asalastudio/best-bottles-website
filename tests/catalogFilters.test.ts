@@ -21,7 +21,10 @@ import {
     catalogSearchRecoverySuggestions,
     catalogSearchResultTieBreak,
     catalogSearchScore,
+    capacitySelectionMatches,
+    catalogHref,
     classifyComponentType,
+    expandCapacityFilterValues,
     filtersAreEmpty,
     filtersToParams,
     normalizeApplicatorBuckets,
@@ -658,5 +661,34 @@ describe("UX: real user journey filter scenarios", () => {
         const params = filtersToParams(filters, "featured");
         const result = paramsToFilters(params);
         expect(result.filters.neckThreadSizes).toEqual(["18-415", "20-400", "24-410"]);
+    });
+});
+
+describe("capacity range tokens", () => {
+    it("matches milliliter values inside a mega-menu range token", () => {
+        expect(capacitySelectionMatches(3, ["miniature"])).toBe(true);
+        expect(capacitySelectionMatches(9, ["miniature"])).toBe(false);
+        expect(capacitySelectionMatches(9, ["small"])).toBe(true);
+        expect(capacitySelectionMatches(30, ["medium"])).toBe(true);
+        expect(capacitySelectionMatches(9, ["9 ml"])).toBe(true);
+        expect(capacitySelectionMatches(null, ["miniature"])).toBe(false);
+        expect(capacitySelectionMatches(3, [])).toBe(true);
+    });
+
+    it("expands range tokens into milliliter labels Convex can parse", () => {
+        const expanded = expandCapacityFilterValues(["miniature"]);
+        expect(expanded).toContain("1 ml");
+        expect(expanded).toContain("5 ml");
+        expect(expanded).not.toContain("9 ml");
+        expect(expandCapacityFilterValues(["9 ml"])).toEqual(["9 ml"]);
+    });
+
+    it("round-trips a mega-menu capacity URL through catalogHref", () => {
+        const href = catalogHref({ category: "Glass Bottle", capacities: ["miniature"] });
+        const url = new URL(href, "https://bestbottles.com");
+        expect(url.pathname).toBe("/catalog");
+        expect(url.searchParams.get("category")).toBe("Glass Bottle");
+        expect(url.searchParams.get("capacities")).toBe("miniature");
+        expect(paramsToFilters(url.searchParams).filters.capacities).toEqual(["miniature"]);
     });
 });

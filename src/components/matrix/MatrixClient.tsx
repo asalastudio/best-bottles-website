@@ -23,10 +23,10 @@
  * family inference, and unknown is never compatible.
  */
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useCallback } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Plus, Minus, WarningCircle, Check } from "@/components/icons";
+import { Plus, Minus, WarningCircle, Check, X } from "@/components/icons";
 import { ClosureIcon, BottleOnlyIcon } from "./ClosureIcon";
 import { useCart } from "@/components/CartProvider";
 import { cn } from "@/lib/utils";
@@ -35,6 +35,8 @@ import {
     activeMatrixFilters,
     createMatrixFamilyState,
     emptyMatrixFilters,
+    matrixCapacityMatches,
+    matrixSizeOptions,
     switchMatrixFamily,
 } from "@/lib/matrix/filters";
 import { matrixProductHref } from "@/lib/matrix/product-identity";
@@ -165,9 +167,7 @@ export default function MatrixClient({
         const uniq = (xs: (string | null | undefined)[]) =>
             [...new Set(xs.map((x) => (x ?? "").trim()).filter(Boolean))].sort();
         return {
-            sizes: uniq(rows.map((r) => r.capacity))
-                // "9 ml" before "100 ml" — string sort would not
-                .sort((a, b) => (parseFloat(a) || 0) - (parseFloat(b) || 0)),
+            sizes: matrixSizeOptions(rows),
             finishes: uniq(rows.map((r) => r.color)),
             necks: uniq(rows.map((r) => r.neckThreadSize)),
             closures: uniq(rows.flatMap((r) => Object.keys(r.components))),
@@ -177,7 +177,7 @@ export default function MatrixClient({
     const visible = useMemo(() => {
         const q = search.trim().toLowerCase();
         return rows.filter((r) => {
-            if (size && (r.capacity ?? "") !== size) return false;
+            if (size && !matrixCapacityMatches(r, size)) return false;
             if (finish && (r.color ?? "") !== finish) return false;
             if (neck && (r.neckThreadSize ?? "") !== neck) return false;
             if (closure && !(r.components[closure]?.length)) return false;
@@ -259,6 +259,9 @@ export default function MatrixClient({
             kind: "success",
             text: `${order.items.length} item${order.items.length === 1 ? "" : "s"} added to your cart.`,
         });
+        if (typeof window !== "undefined") {
+            window.dispatchEvent(new CustomEvent("open-cart-drawer"));
+        }
     };
 
     return (
@@ -358,6 +361,8 @@ export default function MatrixClient({
                             key={key(r)} row={r}
                             config={configs[key(r)]}
                             onChange={(patch) => setConfig(r, patch)}
+                            canAddOrder={order.meetsMinimum && order.configurations.length > 0 && !order.error}
+                            onAddOrder={addOrderToCart}
                         />
                     ))}
                 </section>
@@ -372,10 +377,12 @@ export default function MatrixClient({
 
 /* -------------------------------------------------------------------- row */
 
-function Row({ row, config, onChange }: {
+function Row({ row, config, onChange, canAddOrder, onAddOrder }: {
     row: MatrixRow;
     config?: Config;
     onChange: (patch: Partial<Config>) => void;
+    canAddOrder: boolean;
+    onAddOrder: () => void;
 }) {
     const qty = config?.qty ?? 12;
     // undefined = undecided; null = Bottle Only, chosen on purpose
@@ -438,16 +445,18 @@ function Row({ row, config, onChange }: {
 
                 <button
                     type="button"
-                    disabled={!decided}
-                    onClick={() => onChange({})}
+                    disabled={!decided || !canAddOrder}
+                    onClick={onAddOrder}
                     className={cn(
                         "rounded-[3px] px-4 py-2 text-ui font-semibold transition-colors duration-200",
-                        decided
-                            ? "bg-[#5B7B5D] text-white"
-                            : "border border-obsidian text-obsidian hover:bg-obsidian hover:text-white disabled:opacity-40",
+                        decided && canAddOrder
+                            ? "bg-obsidian text-white hover:bg-muted-gold hover:text-obsidian"
+                            : decided
+                                ? "bg-[#5B7B5D] text-white disabled:opacity-100"
+                                : "border border-obsidian text-obsidian hover:bg-obsidian hover:text-white disabled:opacity-40",
                     )}
                 >
-                    {decided ? "Added" : "Add"}
+                    {decided ? (canAddOrder ? "Add to cart" : "In order") : "Choose a closure"}
                 </button>
             </div>
         </div>
@@ -460,34 +469,39 @@ function Row({ row, config, onChange }: {
  * The closure choice, inline.
  *
  * One chip per closure type this bottle actually resolves to, plus Bottle
- * Only. Choosing a type with a single variant selects it outright; a type with
- * several opens its variants inline beneath, so the row never covers its
- * neighbours the way a popover does.
- *
- * The list is whatever the server resolved and nothing else — precedence
- * (exclusion → inclusion → exact fitment → family inference) lives in Convex,
- * and unknown is never compatible.
+ * Only. Choosing a type with a single variant selects it immediately; a type
+ * with several opens a focused modal so the row stays readable.
  */
 function ComponentChips({ row, config, onChange }: {
     row: MatrixRow;
     config?: Config;
     onChange: (patch: Partial<Config>) => void;
 }) {
-    const [openType, setOpenType] = useState<string | null>(null);
+    const [modalType, setModalType] = useState<string | null>(null);
     const types = Object.entries(row.components).filter(([, xs]) => xs.length > 0);
 
+    const closeModal = useCallback(() => setModalType(null), []);
+    const pickComponent = useCallback((c: Component, groupKey: string) => {
+        onChange({ component: { ...c, groupKey } });
+        setModalType(null);
+    }, [onChange]);
+
+    // ── Chosen state ────────────────────────────────────────────────────────
     if (config?.component) {
         const componentHref = matrixProductHref(config.component);
         return (
             <div className="inline-flex items-center gap-2 max-w-full rounded-[3px]
                            bg-white border border-obsidian px-2.5 py-1.5 text-caption
-                           font-semibold text-obsidian transition-colors duration-200
-                           hover:border-muted-gold">
+                           font-semibold text-obsidian">
                 <button
                     type="button"
-                    aria-label={`Change ${shortName(config.component.itemName)}`}
-                    onClick={() => { onChange({ component: undefined }); setOpenType(null); }}
-                    className="shrink-0"
+                    aria-label={`Change component — currently ${shortName(config.component.itemName)}`}
+                    title="Click to change component"
+                    onClick={() => {
+                        // Re-open to the same type so the customer swaps finish, not type
+                        setModalType(config.component!.groupKey ?? null);
+                    }}
+                    className="shrink-0 hover:opacity-70 transition-opacity"
                 >
                     <ClosureIcon type={config.component.groupKey ?? ""} size={20} />
                 </button>
@@ -499,9 +513,22 @@ function ComponentChips({ row, config, onChange }: {
                     <span className="truncate">{shortName(config.component.itemName)}</span>
                 )}
                 <Check size={12} weight="bold" className="shrink-0 text-[#5B7B5D]" />
+                {/* modal re-opens to the selected type for a finish swap */}
+                {modalType && (
+                    <ComponentPickerModal
+                        row={row}
+                        initialType={modalType}
+                        currentComponent={config.component}
+                        onSelect={pickComponent}
+                        onClose={closeModal}
+                        onBottleOnly={() => { onChange({ component: null }); closeModal(); }}
+                        onClear={() => { onChange({ component: undefined }); closeModal(); }}
+                    />
+                )}
             </div>
         );
     }
+
     if (config?.component === null) {
         return (
             <button type="button" onClick={() => onChange({ component: undefined })}
@@ -519,25 +546,21 @@ function ComponentChips({ row, config, onChange }: {
         return <span className="text-caption text-ash">No compatible components</span>;
     }
 
-    const variants = openType ? row.components[openType] ?? [] : [];
-
     return (
-        <div className="flex flex-col gap-1.5">
+        <>
             <div className="flex flex-wrap items-center gap-1">
                 {types.map(([t, xs]) => (
                     <button key={t} type="button"
                         title={`${t} · ${xs.length} compatible`}
                         onClick={() => {
-                            // one variant needs no second step
+                            // single variant: select immediately, no modal needed
                             if (xs.length === 1) onChange({ component: { ...xs[0], groupKey: t } });
-                            else setOpenType(openType === t ? null : t);
+                            else setModalType(t);
                         }}
                         className={cn(
                             "inline-flex items-center gap-1.5 rounded-[3px] px-2 py-1.5",
                             "text-caption font-semibold transition-colors duration-200",
-                            openType === t
-                                ? "bg-obsidian text-white"
-                                : "border border-champagne text-slate hover:border-muted-gold hover:text-obsidian",
+                            "border border-champagne text-slate hover:border-obsidian hover:text-obsidian",
                         )}>
                         <ClosureIcon type={t} size={20} />
                         <span>{t}</span>
@@ -555,28 +578,285 @@ function ComponentChips({ row, config, onChange }: {
                 </button>
             </div>
 
-            {openType && (
-                <ul className="flex flex-wrap gap-1">
-                    {variants.map((c) => {
-                        const out = (c.stockStatus ?? "").toLowerCase().includes("out");
-                        return (
-                            <li key={c.graceSku}>
-                                <button type="button" disabled={out}
-                                    onClick={() => onChange({ component: { ...c, groupKey: openType } })}
-                                    className={cn(
-                                        "rounded-[3px] border px-2 py-1 text-caption transition-colors duration-200",
-                                        out
-                                            ? "border-champagne/60 text-ash line-through cursor-not-allowed"
-                                            : "border-champagne text-slate hover:border-obsidian hover:text-obsidian",
-                                    )}
-                                    title={out ? "Currently unavailable" : c.graceSku}>
-                                    {finishLabel(c)}
-                                </button>
-                            </li>
-                        );
-                    })}
-                </ul>
+            {modalType && (
+                <ComponentPickerModal
+                    row={row}
+                    initialType={modalType}
+                    currentComponent={config?.component}
+                    onSelect={pickComponent}
+                    onClose={closeModal}
+                    onBottleOnly={() => { onChange({ component: null }); closeModal(); }}
+                    onClear={() => { onChange({ component: undefined }); closeModal(); }}
+                />
             )}
+        </>
+    );
+}
+
+/* ------------------------------------------------- component picker modal */
+
+/**
+ * Full-screen modal for picking a component.
+ *
+ * Layout:
+ *   Header  — bottle identity (name, SKU, neck size)
+ *   Type tabs — one per closure group (Cap, Sprayer, Lotion Pump, …) + Bottle Only
+ *   Grid — one card per variant in the active tab, showing thumbnail,
+ *           finish name, SKU, price, stock badge
+ *   Footer — selected preview + Confirm / Cancel
+ *
+ * The modal never shows ALL variants at once; it is always scoped to one
+ * type tab. Types with 1 variant skip the modal entirely (chips select them).
+ */
+function ComponentPickerModal({
+    row,
+    initialType,
+    currentComponent,
+    onSelect,
+    onClose,
+    onBottleOnly,
+    onClear,
+}: {
+    row: MatrixRow;
+    initialType: string;
+    currentComponent?: Component | null;
+    onSelect: (c: Component, groupKey: string) => void;
+    onClose: () => void;
+    onBottleOnly: () => void;
+    onClear: () => void;
+}) {
+    const [activeType, setActiveType] = useState(initialType);
+    const [pending, setPending] = useState<Component | null>(
+        // pre-select current if it belongs to this type
+        currentComponent?.groupKey === initialType ? currentComponent : null,
+    );
+
+    const types = Object.entries(row.components).filter(([, xs]) => xs.length > 0);
+    const variants = row.components[activeType] ?? [];
+    const bottleName = row.itemName ?? row.graceSku ?? "This bottle";
+
+    // Trap focus + Escape
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => { if (e.key === "Escape") onClose(); };
+        document.addEventListener("keydown", onKey);
+        document.body.style.overflow = "hidden";
+        return () => {
+            document.removeEventListener("keydown", onKey);
+            document.body.style.overflow = "";
+        };
+    }, [onClose]);
+
+    const confirm = () => {
+        if (pending) onSelect(pending, activeType);
+    };
+
+    const inStock = (c: Component) => !(c.stockStatus ?? "").toLowerCase().includes("out");
+
+    return (
+        // Backdrop
+        <div
+            className="fixed inset-0 z-50 flex items-end sm:items-center justify-center
+                       bg-obsidian/40 backdrop-blur-[2px]"
+            onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+            role="dialog"
+            aria-modal="true"
+            aria-label={`Choose component for ${bottleName}`}
+        >
+            {/* Panel */}
+            <div className="relative w-full sm:w-[640px] max-h-[90dvh] flex flex-col
+                            bg-warm-white rounded-t-[8px] sm:rounded-[8px]
+                            shadow-[0_8px_48px_rgba(0,0,0,0.18)]
+                            overflow-hidden">
+
+                {/* ── Header ── */}
+                <div className="flex items-start gap-3 px-5 pt-5 pb-4 border-b border-champagne/60">
+                    <div className="flex-1 min-w-0">
+                        <p className="text-caption text-ash uppercase tracking-label font-bold mb-0.5">
+                            Choose component
+                        </p>
+                        <p className="text-sm font-semibold text-obsidian leading-snug truncate">
+                            {shortName(bottleName, 60)}
+                        </p>
+                        <p className="text-caption text-ash mt-0.5 tabular-nums">
+                            {row.capacity && <span>{row.capacity} · </span>}
+                            {row.color && <span>{row.color} · </span>}
+                            {row.neckThreadSize && <span>{row.neckThreadSize} neck</span>}
+                        </p>
+                    </div>
+                    <button
+                        type="button"
+                        onClick={onClose}
+                        aria-label="Close component picker"
+                        className="shrink-0 p-1.5 rounded-[3px] text-ash
+                                   hover:bg-champagne/40 transition-colors duration-150"
+                    >
+                        <X size={18} />
+                    </button>
+                </div>
+
+                {/* ── Type tabs ── */}
+                <div className="flex items-center gap-1.5 px-5 pt-3 pb-0 flex-wrap">
+                    {types.map(([t, xs]) => (
+                        <button
+                            key={t}
+                            type="button"
+                            onClick={() => {
+                                setActiveType(t);
+                                // keep pending if it belongs to the new tab, else clear
+                                setPending((prev) => prev?.groupKey === t ? prev : null);
+                            }}
+                            className={cn(
+                                "inline-flex items-center gap-1.5 rounded-[3px] px-3 py-1.5",
+                                "text-caption font-semibold transition-colors duration-150",
+                                activeType === t
+                                    ? "bg-obsidian text-white"
+                                    : "border border-champagne text-slate hover:border-obsidian hover:text-obsidian",
+                            )}
+                        >
+                            <ClosureIcon type={t} size={16} />
+                            {t}
+                            <span className="opacity-50 tabular-nums">{xs.length}</span>
+                        </button>
+                    ))}
+                    <button
+                        type="button"
+                        onClick={onBottleOnly}
+                        className="inline-flex items-center gap-1.5 rounded-[3px] px-3 py-1.5
+                                   text-caption font-semibold border border-dashed border-champagne
+                                   text-ash hover:border-muted-gold hover:text-gold-dim
+                                   transition-colors duration-150"
+                    >
+                        <BottleOnlyIcon size={16} />
+                        Bottle only
+                    </button>
+                </div>
+
+                {/* ── Variant grid ── */}
+                <div className="flex-1 overflow-y-auto px-5 py-3">
+                    {variants.length === 0 ? (
+                        <p className="text-caption text-ash py-6 text-center">
+                            No compatible {activeType.toLowerCase()} options for this bottle.
+                        </p>
+                    ) : (
+                        <ul className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                            {variants.map((c) => {
+                                const available = inStock(c);
+                                const chosen = pending?.graceSku === c.graceSku;
+                                const href = matrixProductHref(c);
+                                return (
+                                    <li key={c.graceSku}>
+                                        <button
+                                            type="button"
+                                            disabled={!available}
+                                            onClick={() => setPending({ ...c, groupKey: activeType })}
+                                            className={cn(
+                                                "w-full text-left rounded-[4px] border p-2.5",
+                                                "transition-colors duration-150 group",
+                                                chosen
+                                                    ? "border-obsidian bg-white ring-1 ring-obsidian"
+                                                    : available
+                                                    ? "border-champagne bg-white hover:border-obsidian"
+                                                    : "border-champagne/40 bg-warm-white cursor-not-allowed opacity-50",
+                                            )}
+                                        >
+                                            {/* thumbnail */}
+                                            <div className="w-full aspect-square rounded-[3px] bg-product-well
+                                                            overflow-hidden mb-2 flex items-center justify-center">
+                                                {c.imageUrl ? (
+                                                    // eslint-disable-next-line @next/next/no-img-element
+                                                    <img
+                                                        src={c.imageUrl}
+                                                        alt=""
+                                                        className="w-full h-full object-contain mix-blend-multiply"
+                                                    />
+                                                ) : (
+                                                    <ClosureIcon type={activeType} size={32}
+                                                        className="text-ash/40" />
+                                                )}
+                                            </div>
+                                            {/* name */}
+                                            <p className="text-caption font-semibold text-obsidian
+                                                          leading-snug line-clamp-2 mb-0.5">
+                                                {finishLabel(c)}
+                                            </p>
+                                            {/* SKU */}
+                                            <p className="text-[10px] text-ash tabular-nums truncate">
+                                                {c.graceSku ?? c.websiteSku}
+                                            </p>
+                                            {/* price */}
+                                            {c.webPrice1pc != null && (
+                                                <p className="text-[10px] text-slate tabular-nums mt-0.5">
+                                                    {c.webPrice1pc.toLocaleString("en-US", {
+                                                        style: "currency", currency: "USD",
+                                                    })} / pc
+                                                </p>
+                                            )}
+                                            {/* stock */}
+                                            {!available && (
+                                                <span className="inline-block mt-1 text-[10px] font-semibold
+                                                                 text-gold-dim bg-gold-dim/10 rounded px-1 py-0.5">
+                                                    Out of stock
+                                                </span>
+                                            )}
+                                            {/* PDP link */}
+                                            {href && (
+                                                <a
+                                                    href={href}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    onClick={(e) => e.stopPropagation()}
+                                                    className="hidden group-hover:block mt-1
+                                                               text-[10px] text-muted-gold underline"
+                                                >
+                                                    View product ↗
+                                                </a>
+                                            )}
+                                        </button>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    )}
+                </div>
+
+                {/* ── Footer ── */}
+                <div className="flex items-center gap-3 px-5 py-4 border-t border-champagne/60 bg-white">
+                    {pending ? (
+                        <div className="flex-1 min-w-0">
+                            <p className="text-caption text-ash">Selected</p>
+                            <p className="text-sm font-semibold text-obsidian truncate">
+                                {finishLabel(pending)}
+                            </p>
+                        </div>
+                    ) : (
+                        <p className="flex-1 text-caption text-ash">
+                            Select a {activeType.toLowerCase()} above
+                        </p>
+                    )}
+                    <button
+                        type="button"
+                        onClick={onClear}
+                        className="text-caption text-slate underline hover:text-obsidian
+                                   transition-colors duration-150"
+                    >
+                        Clear
+                    </button>
+                    <button
+                        type="button"
+                        disabled={!pending}
+                        onClick={confirm}
+                        className={cn(
+                            "rounded-[3px] px-5 py-2 text-spec font-semibold",
+                            "transition-colors duration-150",
+                            pending
+                                ? "bg-obsidian text-white hover:bg-muted-gold hover:text-obsidian"
+                                : "bg-champagne/40 text-ash cursor-not-allowed",
+                        )}
+                    >
+                        Confirm
+                    </button>
+                </div>
+            </div>
         </div>
     );
 }
@@ -654,7 +934,7 @@ function OrderBar({ order, onAddToCart, cartMessage }: {
                     className="rounded-[3px] bg-obsidian text-white px-5 py-2.5 text-spec font-semibold
                                transition-colors duration-200 hover:bg-muted-gold hover:text-obsidian
                                disabled:opacity-40 disabled:hover:bg-obsidian disabled:hover:text-white">
-                    Add order to cart
+                    Add to cart
                 </button>
             </div>
         </div>

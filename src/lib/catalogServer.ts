@@ -6,6 +6,7 @@ import {
 } from "@/lib/catalogSearchFallback";
 import {
     EMPTY_FILTERS,
+    expandCapacityFilterValues,
     normalizeRollerMaterials,
     SORT_OPTIONS,
     VIEW_MODES,
@@ -114,8 +115,15 @@ function normalizeCatalogSearchArgs(args: CatalogSearchArgs): CatalogSearchArgs 
 export async function searchCatalogServer(args: CatalogSearchArgs): Promise<CatalogSearchResultShape> {
     const normalizedArgs = normalizeCatalogSearchArgs(args);
     const convex = getCatalogConvexClient();
+    const convexArgs = {
+        ...normalizedArgs,
+        filters: {
+            ...normalizedArgs.filters,
+            capacities: expandCapacityFilterValues(normalizedArgs.filters.capacities),
+        },
+    };
     try {
-        const result = await convex.query(api.products.searchCatalog, normalizedArgs) as CatalogSearchResultShape;
+        const result = await convex.query(api.products.searchCatalog, convexArgs) as CatalogSearchResultShape;
         return sanitizeCatalogResult(await withCatalogMediaPreviewRows(convex, result));
     } catch (error) {
         const message = error instanceof Error ? error.message : "";

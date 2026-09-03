@@ -5,7 +5,7 @@ import { createRoot } from "react-dom/client";
 import { renderToStaticMarkup } from "react-dom/server";
 import { afterEach, describe, expect, it } from "vitest";
 import FocusedApplicationCards from "@/components/catalog/FocusedApplicationCards";
-import FocusedFinderControls from "@/components/catalog/FocusedFinderControls";
+import FocusedFinderControls, { exclusiveFacetValue } from "@/components/catalog/FocusedFinderControls";
 import FocusedFinderResults from "@/components/catalog/FocusedFinderResults";
 import {
     buildFocusedProductHref,
@@ -176,6 +176,16 @@ describe("focused finder presentation", () => {
         expect(html).toContain("Roller Material");
         expect(html.match(/min-h-11/g)?.length).toBeGreaterThanOrEqual(2);
         expect(html).not.toContain("Next step");
+        expect(html).toContain('role="radiogroup"');
+        expect(html).toContain('role="radio"');
+        expect(html).not.toContain("bg-obsidian text-bone");
+    });
+
+    it("treats capacity and roller material as one-click exclusive refinements", () => {
+        expect(exclusiveFacetValue([], "9 ml")).toEqual(["9 ml"]);
+        expect(exclusiveFacetValue(["9 ml"], "13 ml")).toEqual(["13 ml"]);
+        expect(exclusiveFacetValue(["9 ml"], "9 ml")).toEqual([]);
+        expect(exclusiveFacetValue(["8 ml", "9 ml"], "13 ml")).toEqual(["13 ml"]);
     });
 
     it("renders count and exact family results before optional refinements", () => {
