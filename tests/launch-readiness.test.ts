@@ -107,10 +107,10 @@ describe("June 15 launch readiness guardrails", () => {
     });
 
     it("keeps launch accessibility labels on key lead and catalog controls", () => {
-        const home = readRepoFile("src/components/HomePage.tsx");
+        const footer = readRepoFile("src/components/Footer.tsx");
         const catalog = readRepoFile("src/app/catalog/CatalogClient.tsx");
 
-        expect(home).toContain('aria-label="Email address"');
+        expect(footer).toContain('aria-label="Email address"');
         expect(catalog).toContain('aria-label={`Filter by ${label}`}');
         expect(catalog).toContain('aria-label="Sort catalog results"');
         expect(catalog).toContain('aria-label="Sort visible catalog results"');

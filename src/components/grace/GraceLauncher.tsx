@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { useGrace } from "@/components/useGrace";
@@ -25,33 +24,24 @@ export default function GraceLauncher() {
     const { panelMode, openPanel, conversationActive, launcherTooltip } = useGrace();
     const isOpen = panelMode === "open";
     const pathname = usePathname();
-    const [isMobile, setIsMobile] = useState(false);
-
-    useEffect(() => {
-        const mq = window.matchMedia("(max-width: 768px)");
-        const onResize = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-        setIsMobile(mq.matches); // eslint-disable-line react-hooks/set-state-in-effect -- sync initial
-        mq.addEventListener("change", onResize);
-        return () => mq.removeEventListener("change", onResize);
-    }, []);
 
     // Workspace and the executive hub own the viewport — no launcher there.
     const ownsViewport = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
-    const visible = !isOpen && !isMobile && !ownsViewport;
+    const visible = !isOpen && !ownsViewport;
 
     return (
         <AnimatePresence>
             {visible && (
                 <motion.button
                     key="grace-launcher"
-                    initial={{ opacity: 0, scale: 0.9, y: 8 }}
+                    initial={false}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9, y: 8 }}
                     transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
                     onClick={openPanel}
                     aria-label="Open Grace AI"
                     title="Ask Grace — AI bottling concierge"
-                    className="fixed z-[55] flex items-center justify-center cursor-pointer group"
+                    className="fixed z-[55] hidden cursor-pointer items-center justify-center group xl:flex"
                     style={{
                         right: "max(22px, env(safe-area-inset-right))",
                         bottom: "max(22px, calc(env(safe-area-inset-bottom) + 22px))",

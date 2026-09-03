@@ -27,7 +27,7 @@ const TABS: Tab[] = [
     { key: "home", label: "Home", icon: House, href: "/" },
     { key: "catalog", label: "Catalog", icon: GridFour, href: "/catalog" },
     { key: "cart", label: "Cart", icon: ShoppingBag, action: "cart" },
-    { key: "grace", label: "Ask Grace AI", icon: Microphone, action: "grace" },
+    { key: "grace", label: "Grace", icon: Microphone, action: "grace" },
     { key: "account", label: "Account", icon: User, href: "/sign-in" },
 ];
 
@@ -102,13 +102,12 @@ export default function MobileTabBar() {
                     const inner = (
                         <span className="flex flex-col items-center gap-1.5 relative">
                             {tab.key === "grace" ? (
-                                <div className={`w-12 h-12 -mt-6 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 ${active ? "bg-muted-gold" : "bg-obsidian hover:bg-black hover:scale-105 active:scale-95"} ${showGraceTooltip ? "ring-4 ring-muted-gold/20 animate-grace-pulse" : ""}`}>
+                                <span className="flex h-6 w-6 items-center justify-center text-muted-gold transition-colors duration-200 group-hover:text-obsidian animate-grace-pulse-subtle motion-reduce:animate-none">
                                     <Icon
-                                        className="text-white"
-                                        size={24}
-                                        weight="fill"
+                                        size={22}
+                                        weight="regular"
                                     />
-                                </div>
+                                </span>
                             ) : (
                                 <span className="relative">
                                     <Icon
@@ -124,7 +123,7 @@ export default function MobileTabBar() {
                                 </span>
                             )}
                             <span
-                                className={`text-[8px] leading-tight font-bold uppercase tracking-tight transition-colors duration-150 text-center ${tab.key === "grace" ? "text-obsidian mt-0.5" : (active ? "text-muted-gold" : "text-slate")}`}
+                                className={`text-[8px] leading-tight font-bold uppercase tracking-tight transition-colors duration-150 text-center ${tab.key === "grace" ? "text-obsidian" : (active ? "text-muted-gold" : "text-slate")}`}
                                 style={{ maxWidth: "60px" }}
                             >
                                 {tab.label}
@@ -164,6 +163,7 @@ export default function MobileTabBar() {
                                 <button
                                     role="tab"
                                     aria-selected={false}
+                                    aria-label={isGrace ? "Ask Grace AI" : tab.label}
                                     onClick={() => handleAction(tab.action!)}
                                     className="group w-full flex items-center justify-center h-full min-w-[44px] cursor-pointer"
                                 >
