@@ -46,4 +46,31 @@ describe("focused PDP purchase panel", () => {
         expect(pdp).toContain("router.replace(nextUrl");
         expect(pdp).toContain("selectedVariantParam");
     });
+
+    it("uses the focused buy panel for classic Roll-On PDPs without requiring 3D media", () => {
+        expect(pdp).toContain("const isFocusedPurchasePdp = is3dFamily || isRollonGroup");
+        expect(pdp).toContain("{isFocusedPurchasePdp && group.slug ?");
+        expect(pdp).toContain("{!isFocusedPurchasePdp ?");
+        expect(configurator).toContain("activeBase === \"roller\"");
+    });
+
+    it("lets a valid URL SKU override and synchronize stale local selection state", () => {
+        expect(pdp).toContain("const explicit = variantFromUrl ??");
+        expect(pdp).toContain("setSelectedVariantId(variantFromUrl._id)");
+        expect(pdp).toContain("if (!selectedVariantParam)");
+    });
+
+    it("canonically navigates to a deterministic real roller fallback when a finish is unavailable", () => {
+        expect(pdp).toContain("const candidates = variants");
+        expect(pdp).toContain("const resolved = nextCapOption");
+        expect(pdp).toContain("resolveVariantCapFinish(variant).swatchName === nextCapOption");
+        expect(pdp).toContain("?? candidates[0] ?? null");
+        expect(pdp).toContain("router.replace(nextUrl");
+    });
+
+    it("never uses a group starting price as selected-SKU transaction price", () => {
+        expect(pdp).toContain("priceEach={selectedVariant?.webPrice1pc ?? null}");
+        expect(pdp).not.toContain("priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin");
+        expect(pdp).toContain("selectedVariant?.webPrice1pc != null");
+    });
 });

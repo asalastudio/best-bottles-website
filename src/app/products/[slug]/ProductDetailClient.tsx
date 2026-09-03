@@ -1123,12 +1123,32 @@ export default function ProductDetailClient({
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
         return filterVariantsForProductGroup(data?.group, rawVariants);
     }, [data?.group, data?.variants]);
+    const isRollonGroup = /roll-?on/.test(activeSlug);
     const variantFromUrl = useMemo(
         () => selectedVariantParam
             ? variants.find((variant) => variant.websiteSku === selectedVariantParam || variant.graceSku === selectedVariantParam) ?? null
             : null,
         [selectedVariantParam, variants],
     );
+    useEffect(() => {
+        if (!selectedVariantParam) {
+            setSelectedVariantId(null);
+            setSelectedApplicator(null);
+            setSelectedCapColor(null);
+            setSelectedCapStyle(null);
+            setSelectedTrimColor(null);
+            setSelectedCapComponentSku(null);
+            return;
+        }
+        if (!variantFromUrl) return;
+        const finish = resolveVariantCapFinish(variantFromUrl);
+        setSelectedVariantId(variantFromUrl._id);
+        setSelectedApplicator(variantFromUrl.applicator ?? null);
+        setSelectedCapColor(finish.swatchName);
+        setSelectedCapStyle(variantFromUrl.capStyle ?? null);
+        setSelectedTrimColor(variantFromUrl.trimColor || "Standard");
+        setSelectedCapComponentSku(null);
+    }, [selectedVariantParam, variantFromUrl]);
 
     // Applicator siblings — same bottle shape + size + color, different applicator.
     const applicatorSiblings = initialApplicatorSiblings;
@@ -1146,7 +1166,6 @@ export default function ProductDetailClient({
     const applicatorOptions = useMemo(() => {
         const seen = new Set<string>();
         const bottleThread = group?.neckThreadSize ?? "";
-        const isRollonGroup = activeSlug.includes("rollon");
         return variants
             .map((v) => v.applicator)
             .filter((a): a is string => !!a && a !== "Cap/Closure")
@@ -1157,7 +1176,7 @@ export default function ProductDetailClient({
                 seen.add(a);
                 return true;
             });
-    }, [variants, group?.neckThreadSize, activeSlug]);
+    }, [variants, group?.neckThreadSize, isRollonGroup]);
 
     // Whether any variant has no applicator (plain cap closure)
     const hasCapClosure = useMemo(() =>
@@ -1293,9 +1312,9 @@ export default function ProductDetailClient({
 
     // Resolved variant — 4-way match with graceful fallback
     const selectedVariant = useMemo(() => {
-        const explicit = selectedVariantId
+        const explicit = variantFromUrl ?? (selectedVariantId
             ? variantsForApplicator.find((v) => v._id === selectedVariantId)
-            : variantFromUrl;
+            : null);
         if (explicit) return explicit;
         const hasPlate = (v: ProductVariant) =>
             Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined));
@@ -1395,6 +1414,10 @@ export default function ProductDetailClient({
         [variants, platesBySku]);
     const is3dFamily = familyForSlug(group?.slug ?? "") !== null
         || (groupHasPlates && familyForSlugOrDerived(group?.slug ?? "") !== null);
+    // Roll-On is the only classic path that now shares the focused purchase
+    // contract before Task 14's broader capability rollout. It does not need
+    // geometry or a released kit: ConfiguratorPdp has an honest photo stage.
+    const isFocusedPurchasePdp = is3dFamily || isRollonGroup;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1495,7 +1518,6 @@ export default function ProductDetailClient({
     }, [trimColorOptions, hasCompleteVariantImagePicker]);
 
     // ── Roller type toggle for roll-on groups ─────────────────────────────────
-    const isRollonGroup = activeSlug.includes("rollon");
     const rollerTypeOptions = useMemo(() => {
         if (!isRollonGroup || applicatorOptions.length < 2) return [];
         // Normalize to "Metal" / "Plastic" labels
@@ -1542,10 +1564,13 @@ export default function ProductDetailClient({
             ? rollerTypeOptions.find((option) => (selection.rollerVariant === "metal") === /metal/i.test(option.value))?.value ?? activeApplicator
             : activeApplicator;
         const nextCapOption = selection.capOption ?? activeCapColor;
-        const resolved = variants.find((variant) =>
-            variant.applicator === nextApplicator &&
-            (!nextCapOption || resolveVariantCapFinish(variant).swatchName === nextCapOption),
-        );
+        const candidates = variants
+            .filter((variant) => variant.applicator === nextApplicator)
+            .sort((a, b) => (canonicalSku(a) ?? "").localeCompare(canonicalSku(b) ?? ""));
+        const resolved = nextCapOption
+            ? candidates.find((variant) => resolveVariantCapFinish(variant).swatchName === nextCapOption)
+                ?? candidates[0] ?? null
+            : candidates[0] ?? null;
         if (!resolved) return;
 
         setSelectedApplicator(nextApplicator ?? null);
@@ -1691,7 +1716,7 @@ export default function ProductDetailClient({
             shopifySellable: selectedVariant.shopifySellable ?? undefined,
         })
         : false;
-    const canAddToCart = inStock && checkoutReady;
+    const canAddToCart = inStock && checkoutReady && selectedVariant?.webPrice1pc != null;
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}&quantities=${encodeURIComponent(`${qty} units`)}`;
     const handleAddToCart = () => {
         if (!selectedVariant || !canAddToCart) return;
@@ -1751,10 +1776,9 @@ export default function ProductDetailClient({
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
                 <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
-                    {/* Guided configurator hero (design handoff 2026-08-31):
-                        full-width 50/50 stage + step panel for 3D families;
-                        the classic grid keeps everything else below the fold. */}
-                    {is3dFamily && group.slug ? (
+                    {/* The focused panel applies to approved 3D families and all
+                        Roll-On PDPs. Roll-On may use its honest photo stage. */}
+                    {isFocusedPurchasePdp && group.slug ? (
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
@@ -1766,7 +1790,7 @@ export default function ProductDetailClient({
                                 diameter={selectedVariant?.diameter ?? null}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
-                                priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin ?? null}
+                                priceEach={selectedVariant?.webPrice1pc ?? null}
                                 heroImageUrl={group.heroImageUrl}
                                 onAddToCart={handleAddToCart}
                                 onAskGrace={openGracePanel}
@@ -1800,7 +1824,14 @@ export default function ProductDetailClient({
                                 capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
                                 glassOptions={(() => {
                                     const f = familyForSlugOrDerived(group.slug ?? "");
-                                    if (!f) return [];
+                                    if (!f) {
+                                        return uniqueColorGroups.map((item) => ({
+                                            id: item.color.toLowerCase(),
+                                            label: item.color,
+                                            href: `/products/${item.slug}`,
+                                            active: item.isActive,
+                                        }));
+                                    }
                                     if (f.derived) {
                                         // the colourways are the sibling groups the catalogue has,
                                         // labelled by their own colour, this group first
@@ -1842,7 +1873,7 @@ export default function ProductDetailClient({
                             />
                         </div>
                     ) : null}
-                    {!is3dFamily ? (
+                    {!isFocusedPurchasePdp ? (
                     <FocusedPdpLayout
                         stage={(<>
 
@@ -2286,7 +2317,7 @@ export default function ProductDetailClient({
                             <div className={`mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50 ${is3dFamily ? "hidden" : ""}`}>
                                 <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                 <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian mb-4">
-                                    {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
+                                    {formatPrice(selectedVariant?.webPrice1pc)}
                                     <span className="text-lg font-normal text-slate ml-1">/ea</span>
                                 </p>
 
@@ -2627,7 +2658,7 @@ export default function ProductDetailClient({
                                     >
                                         Request Quote
                                     </Link>
-                                ) : checkoutReady ? (
+                                ) : canAddToCart ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
                                         onClick={handleAddToCart}
@@ -2663,7 +2694,7 @@ export default function ProductDetailClient({
 
                             {/* Request a Quote CTA */}
                             <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`}>
-                                {qty >= 500 && checkoutReady ? (
+                                {qty >= 500 && canAddToCart ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
                                         onClick={handleAddToCart}
@@ -2824,7 +2855,7 @@ export default function ProductDetailClient({
                     <div className="min-w-0">
                         <p className="text-[10px] uppercase tracking-wider text-slate font-semibold">From</p>
                         <p className="font-semibold text-obsidian truncate">
-                            {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
+                            {formatPrice(selectedVariant?.webPrice1pc)}
                             <span className="text-xs text-slate ml-1">/ea</span>
                         </p>
                     </div>
@@ -2853,7 +2884,7 @@ export default function ProductDetailClient({
                         >
                             Request Quote
                         </Link>
-                    ) : checkoutReady ? (
+                    ) : canAddToCart ? (
                         <button
                             disabled={!canAddToCart || addedFlash}
                             onClick={handleAddToCart}

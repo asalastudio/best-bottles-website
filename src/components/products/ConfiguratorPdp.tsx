@@ -311,7 +311,8 @@ export default function ConfiguratorPdp({
   const glass: GlassPresetId = slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
-    fam?.closureFromSlug[committedToken] ?? (fam?.derived ? "none" : "sprayer");
+    fam?.closureFromSlug[committedToken]
+    ?? (/roll-?on/.test(currentSlug) ? "roller" : fam?.derived ? "none" : "sprayer");
 
   const [capMatLocal, setCapMat] = useState("ANSP_BLACK");
   const [trimMatLocal, setTrimMat] = useState(
