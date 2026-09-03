@@ -59,6 +59,13 @@ import {
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
 import {
+    GRACE_MINIMUM_CONTENT_WIDTH_PX,
+    gracePushEligiblePathname,
+    resolveGraceDrawerWidth,
+    resolveGraceSurface,
+    resolveGraceViewportWidth,
+} from "@/lib/grace/pushLayout";
+import {
     buildGraceFinderContext,
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
@@ -552,6 +559,29 @@ function GraceProviderBase({
     // ── Panel state ──────────────────────────────────────────────────────────
     const [panelMode, setPanelMode] = useState<PanelMode>("closed");
     const isOpen = panelMode === "open";
+    const [viewportWidth, setViewportWidth] = useState(0);
+    useEffect(() => {
+        const update = () => setViewportWidth(resolveGraceViewportWidth({
+            innerWidth: window.innerWidth,
+            clientWidth: document.documentElement.clientWidth,
+        }));
+        update();
+        window.addEventListener("resize", update, { passive: true });
+        const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(update);
+        observer?.observe(document.documentElement);
+        return () => {
+            window.removeEventListener("resize", update);
+            observer?.disconnect();
+        };
+    }, []);
+    const surface = useMemo(() => resolveGraceSurface({
+        isOpen,
+        viewportWidth,
+        drawerWidth: resolveGraceDrawerWidth(viewportWidth),
+        minimumContentWidth: GRACE_MINIMUM_CONTENT_WIDTH_PX,
+        ownsViewport: pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive"),
+        pushEligible: gracePushEligiblePathname(pathname),
+    }), [isOpen, pathname, viewportWidth]);
 
     const openPanel = useCallback(() => {
         setPanelMode("open");
@@ -662,22 +692,28 @@ function GraceProviderBase({
 
     const productSlug = pageType === "pdp" ? (pathname.split("/products/")[1] ?? null) : null;
     const productGroupResult = useQuery(api.products.getProductGroup, productSlug ? { slug: productSlug } : "skip");
+
+    const pageUrl = useMemo(() => {
+        const q = searchParams.toString();
+        return q ? `${pathname}?${q}` : pathname;
+    }, [pathname, searchParams]);
+    const pageUrlRef = useRef(pageUrl);
+    pageUrlRef.current = pageUrl;
     const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(null);
 
     useEffect(() => {
         const receive = (event: Event) => {
             const change = (event as CustomEvent<PdpContextChange>).detail;
-            if (!change?.websiteSku || !change.pageUrl.startsWith("/products/")) return;
+            if (!change?.websiteSku || change.pageUrl !== pageUrlRef.current) return;
             setPdpContextChange(change);
         };
         window.addEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
         return () => window.removeEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
     }, []);
 
-    const pageUrl = useMemo(() => {
-        const q = searchParams.toString();
-        return q ? `${pathname}?${q}` : pathname;
-    }, [pathname, searchParams]);
+    useEffect(() => {
+        setPdpContextChange((current) => current?.pageUrl === pageUrl ? current : null);
+    }, [pageUrl]);
 
     const pageContext = useMemo((): PageContext => {
         const cartSummary = cartItems.map((i) => ({
@@ -724,7 +760,7 @@ function GraceProviderBase({
                     neckThreadSize: "17-415",
                 } : undefined,
             };
-            return pdpContextChange && pdpContextChange.pageUrl.startsWith(pathname)
+            return pdpContextChange
                 ? mergePdpContextChange(baseContext, pdpContextChange)
                 : baseContext;
         }
@@ -2649,6 +2685,7 @@ function GraceProviderBase({
 
     const contextValue = useMemo((): GraceContextValue => ({
         panelMode,
+        surface,
         openPanel,
         closePanel,
         minimizeToStrip,
@@ -2689,7 +2726,7 @@ function GraceProviderBase({
         pageContext,
         browsingHistory,
     }), [
-        panelMode, openPanel, closePanel, minimizeToStrip, isOpen,
+        panelMode, surface, openPanel, closePanel, minimizeToStrip, isOpen,
         launcherTooltip, minimizeWithTooltip, appendInlineMessage,
         graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
         send, errorMessage, conversationActive, startConversation, endConversation, resetConversation,

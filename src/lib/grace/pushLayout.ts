@@ -1,4 +1,3 @@
-export const GRACE_DESKTOP_DRAWER_WIDTH = "clamp(400px, 30vw, 480px)";
 export const GRACE_MINIMUM_CONTENT_WIDTH_PX = 920;
 
 /** Mirrors the drawer's CSS clamp so layout decisions use its resolved pixel width. */
@@ -6,7 +5,27 @@ export function resolveGraceDrawerWidth(viewportWidth: number): number {
     return Math.min(480, Math.max(400, viewportWidth * 0.3));
 }
 
+/** Use the layout viewport consistently; `innerWidth` includes the scrollbar. */
+export function resolveGraceViewportWidth({
+    innerWidth,
+    clientWidth,
+}: {
+    innerWidth: number;
+    clientWidth: number;
+}): number {
+    return clientWidth > 0 ? clientWidth : innerWidth;
+}
+
 export type GraceSurfaceMode = "closed" | "push" | "overlay" | "owned";
+
+export type GraceSurface = {
+    mode: GraceSurfaceMode;
+    showBackdrop: boolean;
+    contentIsInset: boolean;
+    availableContentWidth: number;
+    drawerWidth: number;
+    viewportWidth: number;
+};
 
 export function resolveGraceSurface({
     isOpen,
@@ -22,7 +41,7 @@ export function resolveGraceSurface({
     minimumContentWidth?: number;
     ownsViewport: boolean;
     pushEligible?: boolean;
-}) {
+}): GraceSurface {
     const availableContentWidth = Math.max(0, viewportWidth - drawerWidth);
     const mode: GraceSurfaceMode = ownsViewport
         ? "owned"
@@ -38,7 +57,8 @@ export function resolveGraceSurface({
         contentIsInset: mode === "push",
         availableContentWidth,
         drawerWidth,
-    } as const;
+        viewportWidth,
+    };
 }
 
 export function gracePushEligiblePathname(pathname: string): boolean {

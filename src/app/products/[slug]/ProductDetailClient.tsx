@@ -4,7 +4,7 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import {
     ShoppingBag, ArrowLeft, Package,
     Check, Truck,
@@ -945,12 +945,17 @@ export default function ProductDetailClient({
     platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
     const router = useRouter();
+    const pathname = usePathname();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
     const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
     const selectedVariantParam = searchParams.get("sku");
+    const selectedPdpPageUrl = useMemo(() => {
+        const query = searchParams.toString();
+        return `${pathname}${query ? `?${query}` : ""}`;
+    }, [pathname, searchParams]);
     const safeFrom = safePdpReturnPath(searchParams.get("from"));
     const qtyParam = Math.max(1, Math.min(9999, parseInt(searchParams.get("qty") ?? "1") || 1));
 
@@ -1512,7 +1517,7 @@ export default function ProductDetailClient({
             glass: group?.color ?? undefined,
             rollerMaterial,
             finish: resolveVariantCapFinish(selectedVariant).label,
-            pageUrl: `${window.location.pathname}${window.location.search}`,
+            pageUrl: selectedPdpPageUrl,
         } as const;
         const signature = JSON.stringify({
             websiteSku: change.websiteSku,
@@ -1520,11 +1525,12 @@ export default function ProductDetailClient({
             glass: change.glass,
             rollerMaterial: change.rollerMaterial,
             finish: change.finish,
+            pageUrl: change.pageUrl,
         });
         if (lastGracePdpContextSignature.current === signature) return;
         lastGracePdpContextSignature.current = signature;
         dispatchPdpContextChange(change);
-    }, [group?.color, selectedVariant]);
+    }, [group?.color, selectedPdpPageUrl, selectedVariant]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so

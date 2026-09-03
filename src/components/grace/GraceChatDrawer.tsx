@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useEffect, useState, type FormEvent } from "react";
-import { usePathname, useRouter } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
     X,
@@ -19,24 +19,7 @@ import { useGrace } from "@/components/useGrace";
 import { useIsAuthenticated } from "@/lib/useIsAuthenticated";
 import { useGraceImageUpload } from "@/lib/useGraceImageUpload";
 import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
-import {
-    GRACE_MINIMUM_CONTENT_WIDTH_PX,
-    graceConversationDisposition,
-    gracePushEligiblePathname,
-    resolveGraceDrawerWidth,
-    resolveGraceSurface,
-} from "@/lib/grace/pushLayout";
-
-function useViewportWidth() {
-    const [width, setWidth] = useState(1440);
-    useEffect(() => {
-        const update = () => setWidth(window.innerWidth);
-        update();
-        window.addEventListener("resize", update, { passive: true });
-        return () => window.removeEventListener("resize", update);
-    }, []);
-    return width;
-}
+import { graceConversationDisposition } from "@/lib/grace/pushLayout";
 
 // Anonymous discovery chip set — PRD v3 spec.
 // (Auth-aware swap to "in project" / "no project" sets lights up once Clerk
@@ -81,6 +64,7 @@ function GraceMark({ size = 56, glow = false }: { size?: number; glow?: boolean 
 export default function GraceChatDrawer() {
     const {
         panelMode,
+        surface,
         closePanel,
         messages,
         streamingText,
@@ -109,7 +93,6 @@ export default function GraceChatDrawer() {
     })();
 
     const router = useRouter();
-    const pathname = usePathname();
     const isAuthed = useIsAuthenticated();
     const fileRef = useRef<HTMLInputElement>(null);
     const { uploadAndAnalyze, status: uploadStatus } = useGraceImageUpload();
@@ -124,18 +107,8 @@ export default function GraceChatDrawer() {
         setInput("");
     };
     const isOpen = panelMode === "open";
-    const viewportWidth = useViewportWidth();
-    const ownsViewport = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
-    const surface = resolveGraceSurface({
-        isOpen,
-        viewportWidth,
-        drawerWidth: resolveGraceDrawerWidth(viewportWidth),
-        minimumContentWidth: GRACE_MINIMUM_CONTENT_WIDTH_PX,
-        ownsViewport,
-        pushEligible: gracePushEligiblePathname(pathname),
-    });
     const isOverlay = surface.mode === "overlay";
-    const isMobile = viewportWidth <= 768;
+    const isMobile = surface.viewportWidth <= 768;
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLTextAreaElement>(null);
 

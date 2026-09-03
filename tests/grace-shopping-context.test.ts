@@ -1,3 +1,4 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
     buildGraceFinderContext,
@@ -31,13 +32,45 @@ describe("Grace shopping context", () => {
             pageUrl: "/products/cylinder-9ml?sku=W-CYL-9-ML-MBLK",
         };
 
-        expect(mergePdpContextChange({ pathname: "/products/cylinder-9ml" }, change)).toEqual({
+        expect(mergePdpContextChange({
+            pathname: "/products/cylinder-9ml",
+            pageUrl: "/products/cylinder-9ml?sku=W-CYL-9-ML-MBLK",
+        }, change)).toEqual({
             pathname: "/products/cylinder-9ml",
             pageUrl: "/products/cylinder-9ml?sku=W-CYL-9-ML-MBLK",
             pdpSelection: change,
         });
         expect(Object.keys(change)).not.toContain("messages");
         expect(Object.keys(change)).not.toContain("customer");
+    });
+
+    it("keeps the current route and query authoritative over stale or prefix-related PDP events", () => {
+        const current = {
+            pathname: "/products/cylinder-9ml",
+            pageUrl: "/products/cylinder-9ml?sku=CURRENT",
+        };
+        const staleQuery: PdpContextChange = {
+            websiteSku: "OLD",
+            pageUrl: "/products/cylinder-9ml?sku=OLD",
+        };
+        const prefixRelated: PdpContextChange = {
+            websiteSku: "PREFIX",
+            pageUrl: "/products/cylinder-9ml-deluxe?sku=PREFIX",
+        };
+
+        expect(mergePdpContextChange(current, staleQuery)).toEqual(current);
+        expect(mergePdpContextChange(current, prefixRelated)).toEqual(current);
+    });
+
+    it("redelivers PDP context when an unchanged selection receives a current URL", () => {
+        const productClient = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
+        const provider = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
+
+        expect(productClient).toContain("pageUrl: change.pageUrl");
+        expect(productClient).toContain("[group?.color, selectedPdpPageUrl, selectedVariant]");
+        expect(provider).toContain("const pageUrlRef = useRef(pageUrl);\n    pageUrlRef.current = pageUrl;");
+        expect(provider).toContain("current?.pageUrl === pageUrl ? current : null");
+        expect(provider).not.toContain("pdpContextChange.pageUrl.startsWith(pathname)");
     });
 
     it("keeps broad Grace recommendations in the finder and sends exact resolved products to their PDP", () => {

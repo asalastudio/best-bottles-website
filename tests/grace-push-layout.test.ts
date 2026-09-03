@@ -1,8 +1,10 @@
+import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
     graceConversationDisposition,
     gracePushEligiblePathname,
     resolveGraceSurface,
+    resolveGraceViewportWidth,
 } from "@/lib/grace/pushLayout";
 
 describe("Grace parallel workspace layout", () => {
@@ -45,6 +47,36 @@ describe("Grace parallel workspace layout", () => {
             ownsViewport: false,
             pushEligible: true,
         })).toMatchObject({ mode: "push", availableContentWidth: 960 });
+    });
+
+    it("uses one client-width measurement for shell and drawer when scrollbars disagree with innerWidth", () => {
+        const viewportWidth = resolveGraceViewportWidth({ innerWidth: 1400, clientWidth: 1399 });
+        const surface = resolveGraceSurface({
+            isOpen: true,
+            viewportWidth,
+            drawerWidth: 480,
+            minimumContentWidth: 920,
+            ownsViewport: false,
+            pushEligible: true,
+        });
+
+        expect(viewportWidth).toBe(1399);
+        expect(surface).toMatchObject({
+            mode: "overlay",
+            showBackdrop: true,
+            contentIsInset: false,
+        });
+    });
+
+    it("has the provider publish one surface decision to both the shell and drawer", () => {
+        const shell = readFileSync("src/components/grace/GraceLayoutShell.tsx", "utf8");
+        const drawer = readFileSync("src/components/grace/GraceChatDrawer.tsx", "utf8");
+
+        expect(shell).toContain("const { surface } = useGrace()");
+        expect(drawer).toContain("surface,");
+        expect(shell).not.toContain("resolveGraceSurface(");
+        expect(drawer).not.toContain("resolveGraceSurface(");
+        expect(drawer).not.toContain("useViewportWidth");
     });
 
     it("does not push routes that already belong to Grace", () => {

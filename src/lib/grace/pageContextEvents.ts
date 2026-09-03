@@ -27,10 +27,14 @@ export function buildGraceFinderContext(pathname: string, params: URLSearchParam
 export function mergePdpContextChange<T extends { pathname: string }>(
     context: T,
     change: PdpContextChange,
-): T & { pageUrl: string; pdpSelection: PdpContextChange } {
+): T | (T & { pdpSelection: PdpContextChange }) {
+    if (!("pageUrl" in context) || typeof context.pageUrl !== "string" || context.pageUrl !== change.pageUrl) {
+        return context;
+    }
+    const eventPathname = new URL(change.pageUrl, "https://bestbottles.local").pathname;
+    if (eventPathname !== context.pathname) return context;
     return {
         ...context,
-        pageUrl: change.pageUrl,
         pdpSelection: change,
     };
 }

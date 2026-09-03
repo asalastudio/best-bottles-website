@@ -11,6 +11,7 @@
 import { createContext, useContext } from "react";
 import type { GraceRefineState } from "@/lib/grace/refineState";
 import type { GraceFinderContext, PdpContextChange } from "@/lib/grace/pageContextEvents";
+import type { GraceSurface } from "@/lib/grace/pushLayout";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -305,6 +306,8 @@ export interface LauncherTooltip {
 
 export interface GraceContextValue {
     panelMode: PanelMode;
+    /** One provider-owned responsive decision shared by the shell and drawer. */
+    surface: GraceSurface;
     openPanel: () => void;
     closePanel: () => void;
     minimizeToStrip: () => void;
@@ -364,6 +367,14 @@ const NOOP_ASYNC = async () => {};
 
 const GRACE_NOOP: GraceContextValue = {
     panelMode: "closed",
+    surface: {
+        mode: "closed",
+        showBackdrop: false,
+        contentIsInset: false,
+        availableContentWidth: 0,
+        drawerWidth: 400,
+        viewportWidth: 0,
+    },
     openPanel: NOOP,
     closePanel: NOOP,
     minimizeToStrip: NOOP,

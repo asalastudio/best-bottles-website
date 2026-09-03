@@ -39,7 +39,7 @@ Result: all exit 0; changed-file lint had no warnings or errors, and the diff ha
 - Drawer CSS remains `clamp(400px, 30vw, 480px)`; the matching resolver yields its actual pixel width for the current viewport.
 - `availableContentWidth = max(0, viewportWidth - drawerWidth)`.
 - Push requires an open, eligible shopping route and `availableContentWidth >= 920`; otherwise Grace is an overlay with a backdrop and zero content inset.
-- `GraceLayoutShell` observes `document.documentElement` with `ResizeObserver` plus window resize and publishes `--grace-content-inset` in pixels. It no longer uses the old 1100 px breakpoint.
+- The provider observes `document.documentElement` with `ResizeObserver` plus window resize and publishes one surface decision to both `GraceLayoutShell` and `GraceChatDrawer`; the shell exposes `--grace-content-inset` in pixels. It no longer uses the old 1100 px breakpoint.
 - Homepage/editorial and non-shopping pages stay overlay-only. `/catalog`, family and application finder routes, and `/products/*` are eligible when the measured width is safe.
 - Mobile remains a full-width overlay that does not reserve tab-bar/page space.
 
@@ -73,3 +73,34 @@ Grace recommendation routing now keeps broad results in their finder and routes 
 - Preserved Task 8's responsive two-panel shell and Task 9's URL-authoritative variant selection; no product data, Convex calls, or deployment actions were changed.
 - The drawer width calculation intentionally mirrors the current CSS clamp. If the CSS width expression changes later, update `resolveGraceDrawerWidth` in the same change so layout math and visual width remain identical.
 - A variant without a real website SKU does not emit a fabricated substitute; this keeps the exact-website-SKU contract truthful.
+
+## Fix round 1 — shared authority and stale PDP events
+
+### RED
+
+Added regression tests, then ran:
+
+```text
+npx vitest run tests/grace-push-layout.test.ts tests/grace-shopping-context.test.ts
+```
+
+Result: exit 1. The tests found that no shared viewport resolver existed, the shell and drawer each resolved a surface independently, stale query and prefix-related PDP events overwrote the active page context, and an unchanged selected SKU did not re-dispatch after its URL changed.
+
+### GREEN
+
+- `GraceProvider` is now the sole `ResizeObserver`/window-resize owner. It uses `document.documentElement.clientWidth` (with `innerWidth` only as a zero-width fallback), resolves the drawer and surface once, and provides that immutable decision to both consumers. This makes a 1400 px `innerWidth` / 1399 px layout viewport select one overlay decision: backdrop on, zero inset, overlay drawer.
+- The obsolete exported CSS-clamp constant was removed; the resolved width function is the remaining authoritative calculation.
+- `ProductDetailClient` derives the current pathname/query URL reactively and includes it in the selection signature. Therefore unchanged options with a changed URL dispatch a current event.
+- The provider updates its current URL ref during render, accepts only an event whose full route/query equals that URL, and clears stale event state after route/query changes. `mergePdpContextChange` independently requires exact pathname and URL equality, rejecting both stale queries and prefix-related product slugs.
+
+```text
+npx vitest run tests/grace-push-layout.test.ts tests/grace-shopping-context.test.ts tests/grace-catalog-navigation.test.ts tests/graceRefineState.test.ts tests/responsive-shell-contract.test.ts tests/pdp-stage-modes.test.ts tests/cylinder-v3-acceptance.test.ts tests/focused-pdp-purchase-panel.test.ts tests/pdp-discovery-sections.test.ts tests/pdp-relations.test.ts
+```
+
+Result: exit 0 — 10 files, 74 tests passed.
+
+`npx tsc --noEmit`, changed-file ESLint, and `git diff --check` also exit 0.
+
+### Existing unrelated test concern
+
+The requested wider PDP command also ran `tests/focused-pdp-layout.test.ts`; it has two existing source-contract failures in untouched `src/components/products/ConfiguratorPdp.tsx` (`pdp-closure-rail` and `purchase={` expectations). The Task 8 report already identifies that suite's source-contract drift as deferred work. No Task 11 file touches that component, so this fix round preserves the behavior and records the failure rather than changing unrelated PDP layout code.
