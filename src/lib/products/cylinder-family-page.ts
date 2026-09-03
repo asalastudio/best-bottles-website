@@ -1,4 +1,5 @@
 import type { CatalogSearchGroup } from "@/lib/catalogSearchFallback";
+import { APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import {
     buildFamilyPageData,
     type FamilyPageCohort,
@@ -27,25 +28,29 @@ export type CylinderFamilyPageModel = {
     cards: CylinderFamilyCardModel[];
 };
 
-export const CYLINDER_9ML_BUILDER_OPTIONS = Object.freeze({
-    glassColors: ["Clear", "Amber", "Frosted", "Cobalt Blue", "Swirl"],
-    applicatorSystems: ["Roll-On", "Fine Mist Spray", "Lotion Pump"] as CylinderApplicatorSystem[],
-    rollerMaterials: ["Metal", "Plastic"],
-    rollonFinishes: [
-        "Black Dotted",
-        "Matte Copper",
-        "Matte Gold",
-        "Matte Silver",
-        "Pink Dotted",
-        "Shiny Black",
-        "Shiny Gold",
-        "Shiny Silver",
-        "Silver Dotted",
-        "White",
-    ],
-    sprayFinishes: ["Black", "Gold", "Matte Silver", "Red", "Shiny Silver", "Turquoise"],
-    lotionFinishes: ["Black", "Gold", "Matte Silver"],
-});
+export type CylinderApplicationOption = {
+    value: ApplicatorNavValue;
+    label: string;
+    description: string;
+    count: number;
+};
+
+export function buildCylinderApplicationOptions(
+    applicatorFacets: Readonly<Record<string, number>>,
+): CylinderApplicationOption[] {
+    return APPLICATOR_NAV.flatMap((application) => {
+        const count = application.buckets.reduce(
+            (total, bucket) => total + (applicatorFacets[bucket] ?? 0),
+            0,
+        );
+        return count > 0 ? [{
+            value: application.value,
+            label: application.label,
+            description: application.subtitle,
+            count,
+        }] : [];
+    });
+}
 
 export function classifyCylinderApplicatorSystem(
     applicator: string | null | undefined,

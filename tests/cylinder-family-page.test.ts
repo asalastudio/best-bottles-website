@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import {
     buildCylinderBuilderHref,
+    buildCylinderApplicationOptions,
     buildCylinderConfigurationPreviewHref,
     buildCylinderFamilyPageModel,
     buildCylinderReadyMadeHref,
@@ -127,6 +128,20 @@ describe("Cylinder family page model", () => {
         expect(classifyCylinderApplicatorSystem("Plastic Roller Ball")).toBe("Roll-On");
         expect(classifyCylinderApplicatorSystem("Fine Mist Sprayer")).toBe("Fine Mist Spray");
         expect(classifyCylinderApplicatorSystem("Lotion Pump")).toBe("Lotion Pump");
+    });
+
+    it("derives only verified application choices from live Cylinder facets", () => {
+        expect(buildCylinderApplicationOptions({
+            rollon: 7,
+            finemist: 2,
+            perfumespray: 1,
+            dropper: 0,
+            lotionpump: 0,
+            reducer: 0,
+        })).toEqual([
+            expect.objectContaining({ value: "rollon", label: "Roll-On", count: 7 }),
+            expect.objectContaining({ value: "spray", label: "Fine Mist & Spray", count: 3 }),
+        ]);
     });
 
     it("builds a specific unified-PDP builder URL", () => {
