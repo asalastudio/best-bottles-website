@@ -172,11 +172,23 @@ describe("mobile PDP wiring", () => {
         expect(mobile).not.toMatch(/fixed[^"]*data-testid="mobile-pdp-ask-grace"/);
         // The row lives between Add to Cart and volume pricing, never floating.
         const purchase = mobile.indexOf('data-testid="mobile-pdp-add-to-cart"');
-        const grace = mobile.indexOf('data-testid="mobile-pdp-ask-grace"');
-        const volume = mobile.indexOf('data-testid="mobile-pdp-volume-pricing"');
+        const grace = mobile.indexOf('data-testid="mobile-pdp-ask-grace"', purchase);
+        const volume = mobile.indexOf('data-testid="mobile-pdp-volume-pricing"', grace);
         expect(purchase).toBeGreaterThan(-1);
         expect(grace).toBeGreaterThan(purchase);
         expect(volume).toBeGreaterThan(grace);
+        expect(mobile).toContain("openPanel({ anchor: { element: heroRef.current } })");
+        expect(mobile).toContain("bringHeroToTop");
+        const mobileOpen = pdp.slice(pdp.indexOf("const openGraceFromMobilePdp"), pdp.indexOf("}, [customerDisplayName"));
+        expect(mobileOpen).not.toContain("openGracePanel");
+        expect(mobileOpen).not.toContain("openGraceFromPdp");
+        const drawer = read("src/components/grace/GraceChatDrawer.tsx");
+        expect(drawer).toContain("measureGraceDockedSheet");
+        expect(drawer).toContain('"grace-pdp-sheet"');
+        expect(drawer).toContain("visualViewport");
+        const context = read("src/components/GraceContext.ts");
+        expect(context).toContain("openPanel: (options?: GracePanelOpenOptions) => void");
+        expect(read("src/components/grace/GraceProvider.tsx")).toContain("options?: GracePanelOpenOptions");
     });
 
     it("hides route chrome only below the breakpoint and only while mounted", () => {

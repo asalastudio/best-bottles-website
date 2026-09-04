@@ -29,6 +29,8 @@ import {
     type GraceMessage,
     type GraceAction,
     type PanelMode,
+    type GracePanelOpenOptions,
+    type GracePanelPresentation,
     type PageContext,
     type BrowsingHistoryEntry,
     type ActiveForm,
@@ -551,6 +553,9 @@ function GraceProviderBase({
     // ── Panel state ──────────────────────────────────────────────────────────
     const [panelMode, setPanelMode] = useState<PanelMode>("closed");
     const isOpen = panelMode === "open";
+    const dockAnchorRef = useRef<HTMLElement | null>(null);
+    const [panelPresentation, setPanelPresentation] = useState<GracePanelPresentation>("overlay");
+    const getDockAnchor = useCallback(() => dockAnchorRef.current, []);
     const [viewportWidth, setViewportWidth] = useState(0);
     useEffect(() => {
         const update = () => setViewportWidth(resolveGraceViewportWidth({
@@ -575,15 +580,22 @@ function GraceProviderBase({
         pushEligible: gracePushEligiblePathname(pathname),
     }), [isOpen, pathname, viewportWidth]);
 
-    const openPanel = useCallback(() => {
+    const openPanel = useCallback((options?: GracePanelOpenOptions) => {
+        const element = options?.anchor?.element ?? null;
+        dockAnchorRef.current = element;
+        setPanelPresentation(element ? "docked" : "overlay");
         setPanelMode("open");
     }, []);
 
     const closePanel = useCallback(() => {
+        dockAnchorRef.current = null;
+        setPanelPresentation("overlay");
         setPanelMode("closed");
     }, []);
 
     const minimizeToStrip = useCallback(() => {
+        dockAnchorRef.current = null;
+        setPanelPresentation("overlay");
         setPanelMode("strip");
     }, []);
 
@@ -593,6 +605,8 @@ function GraceProviderBase({
     const [launcherTooltip, setLauncherTooltip] = useState<{ message: string; expiresAt: number } | null>(null);
 
     const minimizeWithTooltip = useCallback((message: string) => {
+        dockAnchorRef.current = null;
+        setPanelPresentation("overlay");
         setPanelMode("closed");
         setLauncherTooltip({ message, expiresAt: Date.now() + 3500 });
     }, []);
@@ -2663,6 +2677,8 @@ function GraceProviderBase({
     const contextValue = useMemo((): GraceContextValue => ({
         panelMode,
         surface,
+        panelPresentation,
+        getDockAnchor,
         openPanel,
         closePanel,
         minimizeToStrip,
@@ -2703,7 +2719,7 @@ function GraceProviderBase({
         pageContext,
         browsingHistory,
     }), [
-        panelMode, surface, openPanel, closePanel, minimizeToStrip, isOpen,
+        panelMode, surface, panelPresentation, getDockAnchor, openPanel, closePanel, minimizeToStrip, isOpen,
         launcherTooltip, minimizeWithTooltip, appendInlineMessage,
         graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
         send, errorMessage, conversationActive, startConversation, endConversation, resetConversation,

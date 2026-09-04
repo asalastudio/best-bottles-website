@@ -11,4 +11,6 @@ export {
     type ProductCard,
     type KitItem,
     type PanelMode,
+    type GracePanelPresentation,
+    type GracePanelOpenOptions,
 } from "./GraceContext";
