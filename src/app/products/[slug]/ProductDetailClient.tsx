@@ -2077,7 +2077,11 @@ export default function ProductDetailClient({
                             onCommitGlass={handleGuidedProductUrlChange}
                             onPickerOpenChange={setMobilePickerOpen}
                             onAskGrace={openGraceFromMobilePdp}
-                            volumePricing={<VolumeTeaser variant={selectedVariant} />}
+                            description={productDescription}
+                            relations={initialRelations}
+                            initialCompatibility={initialCompatibility}
+                            volumePricing={<TierLadder variant={selectedVariant} qty={qty} compact onQtyChange={setQty} />}
+                            onAddComponent={handleAddCompatibleComponent}
                         />
                     </div>
                 ) : null}
@@ -3002,6 +3006,9 @@ export default function ProductDetailClient({
                     ) : null}
                 </section>
 
+                {/* Below md the mobile PDP folds these into compact disclosures
+                    under the configurator; desktop keeps the full sections. */}
+                <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined} data-testid="pdp-desktop-secondary">
                 <PdpDiscoverySections
                     family={group.family}
                     relations={initialRelations}
@@ -3079,6 +3086,7 @@ export default function ProductDetailClient({
                         </div>
                     </section>
                 )}
+                </div>
 
                 {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
                 <PdpEditorialZone blocks={pdpBlocks} />

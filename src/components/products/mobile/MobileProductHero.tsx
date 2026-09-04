@@ -7,77 +7,39 @@
  * `visualViewport.offsetTop` so iOS Safari's overlay URL bar cannot cover the
  * cap. The plate box keeps a fixed 10:11 ratio so a layer swap or picker
  * opening never moves it.
+ *
+ * The stage always paints the currently configured bottle. Its only control is
+ * View Larger (PRD §3); Cap On / Cap Off and Dimensions live in the expanded
+ * viewer and the details disclosures respectively.
  */
 import Link from "next/link";
 import { forwardRef, useLayoutEffect, useRef, type ReactNode } from "react";
-import { ArrowLeft, ShoppingBag } from "@/components/icons";
+import { ArrowLeft, ArrowsOutSimple, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
-import type { ProductViewMode } from "@/lib/products/mobile-pdp-view-modes";
-
-export type PdpDimensions = {
-    heightWithCap?: string | null;
-    heightWithoutCap?: string | null;
-    diameter?: string | null;
-};
-
-function DimensionRow({ label, value }: { label: string; value: string }) {
-    return (
-        <div className="flex items-baseline justify-between gap-4 border-t border-champagne/70 py-2.5 first:border-t-0">
-            <dt className="text-2xs font-semibold uppercase tracking-label text-slate">{label}</dt>
-            <dd className="shrink-0 whitespace-nowrap text-right font-serif text-base text-obsidian tabular-nums">{value}</dd>
-        </div>
-    );
-}
-
-export function PdpDimensionsPanel({ dimensions, capacity, neckSize }: { dimensions: PdpDimensions; capacity?: string | null; neckSize?: string | null }) {
-    const rows = [
-        dimensions.heightWithCap?.trim() ? { label: "Height with cap", value: dimensions.heightWithCap } : null,
-        dimensions.heightWithoutCap?.trim() ? { label: "Height without cap", value: dimensions.heightWithoutCap } : null,
-        dimensions.diameter?.trim() ? { label: "Diameter", value: dimensions.diameter } : null,
-    ].filter((row): row is { label: string; value: string } => row !== null);
-    return (
-        <div
-            className="flex h-full w-full flex-col justify-center bg-linen px-6 py-6"
-            data-testid="mobile-pdp-dimensions"
-        >
-            <p className="text-2xs font-semibold uppercase tracking-label text-muted-gold">Dimensions</p>
-            <dl className="mt-2 border-y border-champagne/70">
-                {rows.map((row) => <DimensionRow key={row.label} label={row.label} value={row.value} />)}
-            </dl>
-            {(neckSize?.trim() || capacity?.trim()) ? (
-                <p className="mt-3 text-xs text-slate">
-                    {[neckSize?.trim() ? `Neck ${neckSize}` : null, capacity?.trim() ?? null].filter(Boolean).join(" · ")}
-                </p>
-            ) : null}
-        </div>
-    );
-}
 
 type MobileProductHeroProps = {
-    viewMode: ProductViewMode;
     plateUrl: string | null;
     kitParts: KitPart[] | null;
     /** Catalogue photograph shown only when no plate can be painted. */
     fallbackImageUrl: string | null;
     alt: string;
-    dimensions: PdpDimensions;
-    capacity?: string | null;
-    neckSize?: string | null;
     backHref: string;
     cartCount: number;
     onOpenCart: () => void;
     onPlateError?: (url: string) => void;
+    /** Opens the full-screen expanded viewer. Hidden when nothing can be shown. */
+    onViewLarger?: () => void;
     /** Live-preview badge while a picker is open. */
     overlay?: ReactNode;
 };
 
 const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(function MobileProductHero(
-    { viewMode, plateUrl, kitParts, fallbackImageUrl, alt, dimensions, capacity, neckSize, backHref, cartCount, onOpenCart, onPlateError, overlay },
+    { plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay },
     ref,
 ) {
-    const showDimensions = viewMode === "dimensions";
     const hasStack = Boolean(plateUrl || kitParts?.length);
+    const hasVisual = hasStack || Boolean(fallbackImageUrl);
     const toolbarRef = useRef<HTMLDivElement>(null);
     useLayoutEffect(() => {
         const el = toolbarRef.current;
@@ -126,12 +88,11 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 </button>
             </div>
             <div
+                data-testid="mobile-pdp-stage"
                 className="relative mx-auto overflow-hidden"
                 style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
-                {showDimensions ? (
-                    <PdpDimensionsPanel dimensions={dimensions} capacity={capacity} neckSize={neckSize} />
-                ) : hasStack ? (
+                {hasStack ? (
                     <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} />
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
@@ -141,6 +102,20 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 )}
                 {overlay}
             </div>
+            {onViewLarger && hasVisual ? (
+                <div className="flex justify-center px-4 pb-3 pt-1">
+                    <button
+                        type="button"
+                        onClick={onViewLarger}
+                        aria-haspopup="dialog"
+                        data-testid="mobile-pdp-view-larger"
+                        className="inline-flex min-h-11 items-center gap-2 rounded-full border border-champagne bg-white px-4 text-xs font-semibold text-obsidian shadow-[0_1px_2px_rgba(29,29,31,.06)] transition-colors hover:border-muted-gold hover:bg-bone focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                    >
+                        <ArrowsOutSimple className="h-4 w-4" aria-hidden />
+                        View Larger
+                    </button>
+                </div>
+            ) : null}
         </div>
     );
 });

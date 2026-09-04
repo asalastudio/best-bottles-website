@@ -20,34 +20,123 @@ import {
     type MobilePickerState,
 } from "@/lib/products/mobile-pdp-picker";
 import {
+    STICKY_CTA_ANIMATION_MS,
+    STICKY_CTA_TRIGGER_OFFSET_PX,
+    stickyCtaFacts,
+    stickyCtaRootMargin,
+    stickyCtaVisible,
+} from "@/lib/products/mobile-pdp-sticky-cta";
+import {
     coerceMobileViewMode,
     getMobileViewModes,
     preferredViewForPicker,
 } from "@/lib/products/mobile-pdp-view-modes";
+import {
+    DOUBLE_TAP_SCALE,
+    IDENTITY_TRANSFORM,
+    PINCH_MAX_SCALE,
+    PINCH_MIN_SCALE,
+    clampScale,
+    clampTranslate,
+    panBy,
+    toggleDoubleTap,
+    transformToCss,
+    zoomAround,
+} from "@/lib/products/pinch-zoom-math";
 
 const read = (path: string) => readFileSync(resolve(process.cwd(), path), "utf8");
 
 describe("mobile PDP view modes", () => {
-    it("only offers views the configured product can render", () => {
-        expect(getMobileViewModes({ hasCapOffAsset: false, hasDimensions: false }).map((m) => m.id)).toEqual(["assembled"]);
-        expect(getMobileViewModes({ hasCapOffAsset: true, hasDimensions: true }).map((m) => m.id)).toEqual(["assembled", "capOff", "dimensions"]);
-        expect(getMobileViewModes({ hasCapOffAsset: false, hasDimensions: true })[0]?.label).toBe("Product");
-        expect(getMobileViewModes({ hasCapOffAsset: true, hasDimensions: false })[0]?.label).toBe("Cap On");
+    it("only offers Cap On | Cap Off when the configured product has a cap-off asset", () => {
+        expect(getMobileViewModes({ hasCapOffAsset: false }).map((m) => m.id)).toEqual(["assembled"]);
+        expect(getMobileViewModes({ hasCapOffAsset: true }).map((m) => m.id)).toEqual(["assembled", "capOff"]);
+        expect(getMobileViewModes({ hasCapOffAsset: false })[0]?.label).toBe("Product");
+        expect(getMobileViewModes({ hasCapOffAsset: true })[0]?.label).toBe("Cap On");
+        expect(getMobileViewModes({ hasCapOffAsset: true })[1]?.label).toBe("Cap Off");
     });
 
-    it("falls back to the assembled view when a stored mode has no asset", () => {
-        expect(coerceMobileViewMode("capOff", { hasCapOffAsset: false, hasDimensions: true })).toBe("assembled");
-        expect(coerceMobileViewMode("dimensions", { hasCapOffAsset: true, hasDimensions: false })).toBe("assembled");
-        expect(coerceMobileViewMode("capOff", { hasCapOffAsset: true, hasDimensions: false })).toBe("capOff");
+    it("falls back to the assembled view when a mode has no asset", () => {
+        expect(coerceMobileViewMode("capOff", { hasCapOffAsset: false })).toBe("assembled");
+        expect(coerceMobileViewMode("capOff", { hasCapOffAsset: true })).toBe("capOff");
+        expect(coerceMobileViewMode("assembled", { hasCapOffAsset: true })).toBe("assembled");
     });
 
     it("picks the most informative view per picker and preserves the customer's view for glass", () => {
-        const caps = { hasCapOffAsset: true, hasDimensions: true };
+        const caps = { hasCapOffAsset: true };
         expect(preferredViewForPicker("roller", "assembled", caps)).toBe("capOff");
-        expect(preferredViewForPicker("roller", "assembled", { ...caps, hasCapOffAsset: false })).toBe("assembled");
+        expect(preferredViewForPicker("roller", "assembled", { hasCapOffAsset: false })).toBe("assembled");
         expect(preferredViewForPicker("capFinish", "capOff", caps)).toBe("assembled");
         expect(preferredViewForPicker("glass", "capOff", caps)).toBeNull();
-        expect(preferredViewForPicker("glass", "dimensions", caps)).toBe("assembled");
+        expect(preferredViewForPicker("glass", "assembled", caps)).toBeNull();
+    });
+});
+
+describe("mobile PDP sticky Add to Cart trigger", () => {
+    it("stays hidden while the configurator is visible and shows once the last row starts leaving", () => {
+        // sentinel well below the top edge — configurator fully visible
+        expect(stickyCtaVisible({ sentinelTop: 620, maxScrollRemaining: 4000 })).toBe(false);
+        // last row (72px) has begun to slide under the top edge
+        expect(stickyCtaVisible({ sentinelTop: 60, maxScrollRemaining: 4000 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: -400, maxScrollRemaining: 4000 })).toBe(true);
+        // scrolling back up past the trigger hides it again
+        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX + 1, maxScrollRemaining: 4000 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX, maxScrollRemaining: 4000 })).toBe(true);
+    });
+
+    it("never competes with an open picker or the expanded viewer", () => {
+        expect(stickyCtaVisible({ sentinelTop: -100, maxScrollRemaining: 4000, overlayOpen: true })).toBe(false);
+    });
+
+    it("shows when the page can never scroll far enough for the sentinel to cross", () => {
+        expect(stickyCtaVisible({ sentinelTop: 500, maxScrollRemaining: 100 })).toBe(true);
+        // exactly enough scroll left to reach the trigger — it will cross on its own
+        expect(stickyCtaVisible({ sentinelTop: 500, maxScrollRemaining: 436 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 500, maxScrollRemaining: 435.5 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: Number.NaN, maxScrollRemaining: 0 })).toBe(false);
+    });
+
+    it("keeps the trigger band and animation inside the PRD's envelope", () => {
+        expect(stickyCtaRootMargin()).toBe(`-${STICKY_CTA_TRIGGER_OFFSET_PX}px 0px 0px 0px`);
+        expect(stickyCtaRootMargin(12.4)).toBe("-12px 0px 0px 0px");
+        expect(STICKY_CTA_ANIMATION_MS).toBeGreaterThanOrEqual(150);
+        expect(STICKY_CTA_ANIMATION_MS).toBeLessThanOrEqual(220);
+    });
+
+    it("describes the bar with per-unit price, case quantity, and a non-default quantity", () => {
+        expect(stickyCtaFacts({ priceEach: 0.73, caseQuantity: 724, qty: 1 })).toBe("$0.73/ea · 724/case");
+        expect(stickyCtaFacts({ priceEach: 0.73, caseQuantity: 724, qty: 12 })).toBe("$0.73/ea · 724/case · Qty 12");
+        expect(stickyCtaFacts({ priceEach: null, caseQuantity: 1, qty: 1 })).toBe("Price on request");
+    });
+});
+
+describe("expanded viewer pinch-to-zoom geometry", () => {
+    const container = { width: 400, height: 600 };
+
+    it("clamps scale and keeps the content covering the container", () => {
+        expect(clampScale(0.2)).toBe(PINCH_MIN_SCALE);
+        expect(clampScale(99)).toBe(PINCH_MAX_SCALE);
+        expect(clampTranslate({ scale: 1, tx: 50, ty: -50 }, container)).toEqual({ scale: 1, tx: 0, ty: 0 });
+        expect(clampTranslate({ scale: 2, tx: 10, ty: -5000 }, container)).toEqual({ scale: 2, tx: 0, ty: -600 });
+    });
+
+    it("zooms around the anchor so the point under the fingers does not move", () => {
+        const anchor = { x: 200, y: 300 };
+        const zoomed = zoomAround(IDENTITY_TRANSFORM, 2, anchor, container);
+        expect(zoomed).toEqual({ scale: 2, tx: -200, ty: -300 });
+        // the content point under the anchor is unchanged
+        const before = { x: (anchor.x - 0) / 1, y: (anchor.y - 0) / 1 };
+        const after = { x: (anchor.x - zoomed.tx) / zoomed.scale, y: (anchor.y - zoomed.ty) / zoomed.scale };
+        expect(after).toEqual(before);
+    });
+
+    it("pans within bounds and double-tap toggles between rest and inspection zoom", () => {
+        const zoomed = zoomAround(IDENTITY_TRANSFORM, 2, { x: 200, y: 300 }, container);
+        expect(panBy(zoomed, { x: -1000, y: 1000 }, container)).toEqual({ scale: 2, tx: -400, ty: 0 });
+        const tapped = toggleDoubleTap(IDENTITY_TRANSFORM, { x: 0, y: 0 }, container);
+        expect(tapped.scale).toBe(DOUBLE_TAP_SCALE);
+        expect(tapped).toMatchObject({ tx: 0, ty: 0 });
+        expect(toggleDoubleTap(tapped, { x: 0, y: 0 }, container)).toEqual(IDENTITY_TRANSFORM);
+        expect(transformToCss({ scale: 2, tx: -10, ty: 5 })).toBe("translate(-10px, 5px) scale(2)");
     });
 });
 
@@ -202,13 +291,15 @@ describe("mobile PDP wiring", () => {
         expect(pdp).toContain("analytics.graceMobilePdpOpened({");
         expect(mobile).toContain('data-testid="mobile-pdp-ask-grace"');
         expect(mobile).not.toMatch(/fixed[^"]*data-testid="mobile-pdp-ask-grace"/);
-        // The row lives between Add to Cart and volume pricing, never floating.
-        const purchase = mobile.indexOf('data-testid="mobile-pdp-add-to-cart"');
-        const grace = mobile.indexOf('data-testid="mobile-pdp-ask-grace"', purchase);
-        const volume = mobile.indexOf('data-testid="mobile-pdp-volume-pricing"', grace);
+        // The row lives in the identity block after quantity, before the details disclosures — never floating.
+        const purchase = mobile.indexOf('data-testid="mobile-pdp-purchase"');
+        const quantity = mobile.indexOf('aria-label="Quantity"', purchase);
+        const grace = mobile.indexOf('data-testid="mobile-pdp-ask-grace"', quantity);
+        const details = mobile.indexOf("<MobileProductDetails", grace);
         expect(purchase).toBeGreaterThan(-1);
-        expect(grace).toBeGreaterThan(purchase);
-        expect(volume).toBeGreaterThan(grace);
+        expect(quantity).toBeGreaterThan(purchase);
+        expect(grace).toBeGreaterThan(quantity);
+        expect(details).toBeGreaterThan(grace);
         expect(mobile).toContain("onClick={onAskGrace}");
         expect(mobile).not.toContain("openPanel({ anchor");
         expect(pdp).toContain("openGraceFromPdp({ enableVoice: true });");
@@ -274,12 +365,95 @@ describe("mobile PDP wiring", () => {
         expect(config).toContain("Tap a row to change an option");
         expect(config).toContain("Change");
         expect(config).toContain("other option");
-        const view = mobile.indexOf("<ProductViewSelector");
+        const hero = mobile.indexOf("<MobileProductHero");
         const configure = mobile.indexOf("<MobileConfigurationSummary");
+        const sentinel = mobile.indexOf('data-testid="mobile-pdp-cta-sentinel"');
         const title = mobile.indexOf('id="mobile-pdp-title"');
-        expect(view).toBeGreaterThan(-1);
-        expect(configure).toBeGreaterThan(view);
-        expect(title).toBeGreaterThan(configure);
+        expect(hero).toBeGreaterThan(-1);
+        expect(configure).toBeGreaterThan(hero);
+        // Nothing (no title, no price) sits between the stage and the configurator.
+        expect(mobile.slice(hero, configure)).not.toContain("mobile-pdp-title");
+        expect(mobile.slice(hero, configure)).not.toContain("mobile-pdp-price");
+        // The sentinel is immediately after the final configurator row.
+        expect(sentinel).toBeGreaterThan(configure);
+        expect(title).toBeGreaterThan(sentinel);
+    });
+
+    it("keeps the stage to a single View Larger control and moves Cap Off / Dimensions out of it", () => {
+        const hero = read("src/components/products/mobile/MobileProductHero.tsx").replace(/\/\*[\s\S]*?\*\//g, "");
+        expect(hero).toContain('data-testid="mobile-pdp-view-larger"');
+        expect(hero).toContain("View Larger");
+        expect(hero).not.toContain("Cap On");
+        expect(hero).not.toContain("Cap Off");
+        expect(hero).not.toContain("Dimensions");
+        expect(hero).not.toContain("PdpDimensionsPanel");
+        expect(mobile).not.toContain("ProductViewSelector");
+        expect(mobile).not.toContain("sessionStorage");
+        expect(mobile).toContain("onViewLarger={openViewer}");
+    });
+
+    it("opens a full-screen viewer that shares the configured bottle and offers Cap On | Cap Off", () => {
+        const viewer = read("src/components/products/mobile/MobileProductViewer.tsx");
+        expect(viewer).toContain('from "@radix-ui/react-dialog"');
+        expect(viewer).toContain("modal={false}");
+        expect(viewer).toContain('data-testid="mobile-pdp-viewer-close"');
+        expect(viewer).toContain('data-testid="mobile-pdp-viewer-cap-toggle"');
+        expect(viewer).toContain('role="radiogroup"');
+        expect(viewer).toContain("touch-none");
+        expect(viewer).toContain("onPointerDown");
+        expect(viewer).toContain("zoomAround");
+        expect(viewer).toContain("<PaperDollLayers");
+        // The viewer paints the same shown variant / plate the stage does, with its own cap state.
+        expect(mobile).toContain("const viewerMode = coerceMobileViewMode(viewerView, viewCaps)");
+        expect(mobile).toContain("viewerOpen ? plateUrlFor(viewerMode) : null");
+        expect(mobile).toContain("viewerOpen ? shownKitQuery : undefined");
+        expect(mobile).toContain("onRestoreFocus={restoreViewerFocus}");
+        // No scroll repositioning around open/close: the page is never moved.
+        expect(viewer).not.toContain("scrollTo");
+        expect(mobile).not.toMatch(/openViewer[\s\S]{0,200}scrollTo/);
+    });
+
+    it("drives the sticky Add to Cart from a sentinel after the last configurator row with an IntersectionObserver", () => {
+        const bar = read("src/components/products/mobile/MobileStickyPurchaseBar.tsx");
+        expect(mobile).toContain("new IntersectionObserver(");
+        expect(mobile).toContain("rootMargin: stickyCtaRootMargin()");
+        expect(mobile).toContain("stickyCtaVisible({ sentinelTop, maxScrollRemaining, overlayOpen })");
+        expect(mobile).not.toMatch(/setStickyVisible\([^)]*window\.scrollY\s*[<>]/);
+        expect(mobile).toContain("<MobileStickyPurchaseBar");
+        expect(mobile).toContain("visible={stickyVisible}");
+        // Same canonical props as the configurator: no duplicated product state in the bar.
+        expect(bar).not.toContain("useState");
+        expect(bar).not.toContain("useQuery");
+        expect(bar).toContain('data-testid="mobile-pdp-add-to-cart"');
+        expect(bar).toContain('data-testid="mobile-pdp-request-quote"');
+        expect(bar).toContain("env(safe-area-inset-bottom, 0px)");
+        expect(bar).toContain("translateY(100%)");
+        expect(bar).toContain("STICKY_CTA_ANIMATION_MS");
+        expect(bar).toContain("inert={!visible}");
+        expect(bar).toContain("h-[68px]");
+        // The inline block keeps quantity only; the bar is the single Add to Cart.
+        const purchase = mobile.slice(mobile.indexOf('data-testid="mobile-pdp-purchase"'), mobile.indexOf("<MobileProductDetails"));
+        expect(purchase).not.toContain("mobile-pdp-add-to-cart");
+        expect(purchase).toContain('aria-label="Quantity"');
+    });
+
+    it("folds secondary information into disclosures on mobile and hides the desktop sections below md", () => {
+        const details = read("src/components/products/mobile/MobileProductDetails.tsx");
+        expect(details).toContain("<details");
+        expect(details).toContain("<summary");
+        for (const label of ["Specifications", "Dimensions", "Volume Pricing", "Compatible Components", "Uses & Applications", "Shipping & Fulfillment"]) {
+            expect(details).toContain(`label: "${label}"`);
+        }
+        expect(details).toContain('testId: "mobile-pdp-volume-pricing"');
+        expect(details).toContain("useDiscoveryCompatibility(");
+        expect(pdp).toContain('<div className={isFocusedPurchasePdp ? "hidden md:block" : undefined} data-testid="pdp-desktop-secondary">');
+        expect(pdp).toContain("volumePricing={<TierLadder variant={selectedVariant} qty={qty} compact onQtyChange={setQty} />}");
+        expect(pdp).toContain("onAddComponent={handleAddCompatibleComponent}\n                        />");
+        // Desktop still renders the full discovery rail through the shared blocks.
+        const discovery = read("src/components/products/PdpDiscoverySections.tsx");
+        expect(discovery).toContain("export function PdpCompatibleComponentList");
+        expect(discovery).toContain("export function useDiscoveryCompatibility");
+        expect(discovery).toContain('data-testid="pdp-discovery-sections"');
     });
 
     it("never starts a 3D or GLB warm-up for the hidden desktop stage on mobile", () => {
