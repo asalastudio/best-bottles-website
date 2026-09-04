@@ -133,6 +133,11 @@ export default defineSchema({
         // Kept optional + nullable to preserve back-compat with rows that lack them.
         depthMm: v.optional(v.union(v.number(), v.null())),
         widthMm: v.optional(v.union(v.number(), v.null())),
+        // Provenance stamp for the dimension fields above, written by the
+        // canonical-truth measurement audit (2026-09) directly to production,
+        // e.g. "best-bottles-master-truth@2026-07-12:f2b25bbe4ffe". 2,024 of
+        // 2,444 prod rows carry it; deploys fail schema validation without it.
+        measurementSource: v.optional(v.union(v.string(), v.null())),
         bottleWeightG: v.union(v.number(), v.null()),
         caseQuantity: v.union(v.number(), v.null()),
         caseWeightG: v.optional(v.union(v.number(), v.null())),
