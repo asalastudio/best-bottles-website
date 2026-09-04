@@ -37,6 +37,7 @@ export type ProductOptionSheetProps = {
     top: number;
     title: string;
     hint?: string;
+    showScrollHint?: boolean;
     confirmLabel: string;
     confirmDisabled?: boolean;
     onConfirm: () => void;
@@ -48,7 +49,7 @@ export type ProductOptionSheetProps = {
 };
 
 export default function ProductOptionSheet({
-    open, top, title, hint, confirmLabel, confirmDisabled, onConfirm, onCancel, onRestoreFocus, testId, children,
+    open, top, title, hint, showScrollHint, confirmLabel, confirmDisabled, onConfirm, onCancel, onRestoreFocus, testId, children,
 }: ProductOptionSheetProps) {
     const contentRef = useRef<HTMLDivElement>(null);
     const headingRef = useRef<HTMLHeadingElement>(null);
@@ -75,6 +76,8 @@ export default function ProductOptionSheet({
     }, [onRestoreFocus]);
 
     const onHandlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
+        // Let the close button receive its click instead of capturing it as a drag.
+        if ((event.target as HTMLElement).closest("button")) return;
         if (event.pointerType === "mouse" && event.button !== 0) return;
         drag.current = { startY: event.clientY, pointerId: event.pointerId };
         event.currentTarget.setPointerCapture(event.pointerId);
@@ -137,18 +140,22 @@ export default function ProductOptionSheet({
                     style={{ top: sheetTop }}
                 >
                     <div
+                        data-picker-header=""
                         className="shrink-0 touch-none select-none px-4 pb-2 pt-2"
                         onPointerDown={onHandlePointerDown}
                         onPointerMove={onHandlePointerMove}
                         onPointerUp={(event) => endDrag(event, false)}
                         onPointerCancel={(event) => endDrag(event, true)}
                     >
-                        <div className="mx-auto mb-2 h-1 w-10 rounded-full bg-ash/60" aria-hidden />
+                        <div data-picker-handle="" className="mx-auto mb-2 h-1 w-10 rounded-full bg-ash/60" aria-hidden />
                         <div className="flex items-start justify-between gap-3">
                             <div className="min-w-0">
-                                <Dialog.Title ref={headingRef} tabIndex={-1} className="font-serif text-xl leading-tight text-obsidian outline-none">
-                                    {title}
-                                </Dialog.Title>
+                                <div className="flex items-baseline gap-3">
+                                    <Dialog.Title ref={headingRef} tabIndex={-1} className="font-serif text-xl leading-tight text-obsidian outline-none">
+                                        {title}
+                                    </Dialog.Title>
+                                    {showScrollHint ? <span className="shrink-0 text-[10px] text-slate">Swipe →</span> : null}
+                                </div>
                                 {hint ? (
                                     <Dialog.Description id={hintId} data-mobile-picker-hint="" className="mt-1 text-xs text-slate">
                                         {hint}
@@ -168,11 +175,12 @@ export default function ProductOptionSheet({
                         </div>
                     </div>
 
-                    <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain pb-3 pt-1">
+                    <div data-picker-options="" className="min-h-0 flex-1 overflow-y-auto overscroll-contain pb-3 pt-1">
                         {children}
                     </div>
 
                     <div
+                        data-picker-footer=""
                         className="shrink-0 border-t border-champagne/70 bg-bone px-4 pt-2.5"
                         style={{ paddingBottom: "calc(0.625rem + env(safe-area-inset-bottom, 0px))" }}
                     >

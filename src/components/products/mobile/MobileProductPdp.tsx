@@ -645,6 +645,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 top={sheetTop}
                 title={activeRow?.title ?? ""}
                 hint={activeRow?.hint}
+                showScrollHint={activeRow?.layout === "grid"}
                 confirmLabel={activeRow ? confirmLabelFor(activeRow, picker.previewSelectionId) : ""}
                 confirmDisabled={!activeRow}
                 onConfirm={confirmPicker}

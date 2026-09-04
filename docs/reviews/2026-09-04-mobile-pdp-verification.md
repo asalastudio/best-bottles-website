@@ -94,3 +94,15 @@ The repair branch starts at the exact PR #89 head above. It is a separate contin
 - Preserve dotted cap identity from website SKU, legacy Grace token, or explicit cap wording. Black with Dots, Silver with Dots, and Pink with Dots remain distinct from solid/shiny finishes.
 - Use the shared dotted identity in product titles and the PDP finish resolver, which supplies configuration rows, specifications, and new cart lines. Keep the existing component-photo lookup vocabulary separate.
 - Optimized build and 72 focused tests passed, covering naming, SKU/photo mappings, mobile models, and purchase controls. Small-screen pointer opening confirms the image does not shrink; all ten finish options remain accessible by horizontal scrolling.
+
+### Two-row cap picker — phone-review follow-up
+
+Jordan requested two rows at the existing picker width so more cap choices are immediately visible. This supersedes the single-row short-phone workaround above.
+
+- Retain two rows at every phone height, with unchanged card widths and bottle-stage dimensions. Compact the drawer header/footer and cap thumbnails on shorter screens; use larger thumbnails when more height is available.
+- Keep the confirmation button visible and add a small `Swipe →` cue for the remaining columns. All ten options remain accessible.
+- Exclude the close button from the header's drag capture so Cancel receives the tap reliably.
+- Rendered Chrome checks passed at 320×568, 390×664, 390×724, 390×844, and 430×932: exactly two rows, all cards fit vertically, no page overflow, unchanged bottle dimensions, last-option confirmation and cancel restoration.
+- At 320×568: bottle stage remains 216.86×238.53 px; two 72 px rows fit within the 268 px drawer; the 44 px confirmation button is fully visible. At 390×724 and 390×844, cards use two 88 px rows.
+- 51 focused mobile/naming/editorial tests pass; TypeScript, changed-file ESLint, and diff whitespace checks pass.
+- Evidence: `screenshots/mobile-pdp-repair-small-picker.png` and `screenshots/mobile-pdp-two-row-picker.png`. Phone checks use browser emulation, not physical iOS Safari. No catalog/backend changes are included.

@@ -124,7 +124,9 @@ export function ClosureOptionGrid({ options, selectedId, onSelect, groupLabel, f
                             on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"
                         }`}
                     >
-                        <OptionThumb option={option} size="lg" className="!h-14 !w-14" />
+                        <div data-picker-thumb="" className="h-14 w-14 shrink-0">
+                            <OptionThumb option={option} size="lg" className="!h-full !w-full" />
+                        </div>
                         <span className={`line-clamp-2 w-full text-[11px] leading-tight ${on ? "font-semibold text-obsidian" : "text-obsidian"}`}>{option.label}</span>
                         <span className="absolute right-1.5 top-1.5">
                             <SelectedMark on={on} />
