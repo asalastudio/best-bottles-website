@@ -445,9 +445,9 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* ── quantity + add to cart ───────────────────────────────────── */}
             <section ref={cartAnchorRef} className="px-4 pb-6 pt-5" data-testid="mobile-pdp-purchase">
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="text-2xs font-semibold uppercase tracking-label text-slate">Quantity</span>
-                    <div className="flex items-stretch gap-2">
+                    <div className="flex flex-wrap items-stretch justify-end gap-2">
                         <div className="flex items-center rounded-[3px] border border-champagne bg-white">
                             <button type="button" aria-label="Decrease quantity" onClick={() => onQtyChange(Math.max(1, qty - 1))}
                                     className="min-h-11 min-w-11 px-3 text-obsidian transition-colors hover:text-muted-gold">−</button>
@@ -462,7 +462,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         </div>
                         {caseQty ? (
                             <button type="button" aria-label={`Set quantity to one case of ${caseQty}`} onClick={() => onQtyChange(caseQty)}
-                                    className="min-h-11 rounded-[3px] border border-champagne bg-white px-3 text-sm font-semibold text-obsidian hover:border-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
+                                    className="min-h-11 whitespace-nowrap rounded-[3px] border border-champagne bg-white px-3 text-sm font-semibold text-obsidian hover:border-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
                                 1 case
                             </button>
                         ) : null}
@@ -510,8 +510,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         </span>
                         <span className="min-w-0 flex-1">
                             <span className="block text-sm font-medium text-obsidian">Ask Grace about fit and bulk pricing</span>
-                            <span className="block truncate text-xs text-slate">
-                                {neckSize ? `Closures for a ${neckSize} neck, ` : "Compatible closures, "}case quantities, quotes
+                            <span className="block text-xs leading-snug text-slate">
+                                {neckSize ? `${neckSize} closures` : "Compatible closures"} · case quantities · quotes
                             </span>
                         </span>
                         <CaretRight className="h-4 w-4 shrink-0 text-slate" aria-hidden />
