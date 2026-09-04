@@ -78,7 +78,10 @@ describe("volume pricing honesty", () => {
     it("labels the PDP ladder as quote pricing while tiers are unhonored", () => {
         const pdp = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
         expect(pdp).toContain("VOLUME_TIERS_HONORED_AT_CHECKOUT");
-        expect(pdp).toContain("Volume Pricing · By Quote");
+        // Every tier row carries its own Checkout / Quote path label, and the
+        // table header names the first quote-only quantity.
+        expect(pdp).toContain('tier.appliesAtCheckout ? "Checkout" : "Quote"');
+        expect(pdp).toContain("Quote {firstQuoteQty.toLocaleString(\"en-US\")}+");
         expect(pdp).toContain("online checkout is billed at");
     });
 
