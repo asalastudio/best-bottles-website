@@ -89,6 +89,13 @@ describe("Grace OpenAI Realtime adapter", () => {
             }),
         );
         expect(session.connect).toHaveBeenCalledWith({ apiKey: "ek_test" });
+
+        const merchandiser = createAgent.mock.calls.find((call) => call[0].name === "Grace")?.[0];
+        const merchandiserToolNames = (merchandiser?.tools ?? []).map((tool) => {
+            const named = tool as { name?: string };
+            return named.name;
+        });
+        expect(merchandiserToolNames).toContain("configureCurrentProduct");
     });
 
     it("sends typed turns and updates context without triggering a response", async () => {

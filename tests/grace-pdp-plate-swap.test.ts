@@ -1,6 +1,11 @@
 import { describe, expect, it } from "vitest";
 import { readFileSync } from "node:fs";
 import {
+    buildMerchandiserInstructions,
+    splitToolsForGraceRole,
+} from "@/lib/grace/realtimeAgents";
+import { GRACE_OPENAI_TOOL_SPECS } from "@/lib/knowledge/toolSchemas";
+import {
     dispatchGracePdpPlateCommand,
     isGracePdpPlateCommand,
     matchListedOption,
@@ -36,5 +41,17 @@ describe("Grace current-PDP plate swap", () => {
         expect(provider).toContain("configureCurrentProduct");
         expect(provider).not.toContain("setPaperDollSelection");
         expect(mobile).toContain("GRACE_PDP_PLATE_EVENT");
+    });
+
+    it("gives merchandiser Grace the plate-swap tool so PDP Q&A can change the cap without a Navigator hop", () => {
+        const merchTools = splitToolsForGraceRole(GRACE_OPENAI_TOOL_SPECS, "merchandiser").map((tool) => tool.name);
+        const merchInstructions = buildMerchandiserInstructions();
+        const provider = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
+
+        expect(merchTools).toContain("configureCurrentProduct");
+        expect(merchInstructions).toContain("configureCurrentProduct");
+        expect(merchInstructions).toMatch(/Do not hand off for a plate swap/i);
+        expect(provider).toContain("COMPANION: Product Q&A");
+        expect(provider).toMatch(/Product Q&A[\s\S]*configureCurrentProduct/);
     });
 });

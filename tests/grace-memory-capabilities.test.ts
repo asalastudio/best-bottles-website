@@ -50,6 +50,7 @@ describe("Grace memory, capabilities, and closed-loop evals", () => {
         expect(merch).toContain("searchCatalog");
         expect(merch).not.toContain("navigateToPage");
         expect(nav).toContain("navigateToPage");
+        expect(merch).toContain("configureCurrentProduct");
         expect(nav).toContain("configureCurrentProduct");
         expect(nav).not.toContain("searchCatalog");
     });

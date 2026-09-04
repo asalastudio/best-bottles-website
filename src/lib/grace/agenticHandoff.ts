@@ -121,9 +121,9 @@ export function agenticHandoffHidesChat(): boolean {
 
 /**
  * The mobile PDP pickers (cap finish, roller, glass) are page-owned.
- * Grace has no tool that confirms a picker or patches that React state.
- * She can talk about fit, show compatible components in chat, or navigate
- * to a verified `?sku=` / sibling URL — she cannot swap a cap in place.
+ * Grace does not confirm a picker or patch React state.
+ * Cap / roller / cap-on-off on THIS PDP go through configureCurrentProduct
+ * (same kit layers as the picker). Glass color and applicator are navigation.
  */
 export function graceCanMutatePdpPickers(): false {
     return false;
