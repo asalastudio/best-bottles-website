@@ -13,7 +13,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type CSS
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
-import { Check, ShoppingBag } from "@/components/icons";
+import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
@@ -102,6 +102,9 @@ export type MobileProductPdpProps = {
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
     onCommitGlass: (href: string) => void;
     onPickerOpenChange: (open: boolean) => void;
+    /** Opens Grace. The tab bar (her usual mobile entry) is hidden on this
+        route, so the purchase block carries an inline row instead. */
+    onAskGrace?: () => void;
     volumePricing?: ReactNode;
 };
 
@@ -123,7 +126,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, resolveCapFinish, variantSku,
-        onCommitVariant, onCommitGlass, onPickerOpenChange, volumePricing,
+        onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, volumePricing,
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -492,6 +495,28 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         </Link>
                     )}
                 </div>
+                {/* Grace sits at the decision point, not in a floating disc: the
+                    questions she answers (fit, bulk pricing) arise right here,
+                    and nothing floats over the hero or the picker's confirm. */}
+                {onAskGrace ? (
+                    <button
+                        type="button"
+                        onClick={onAskGrace}
+                        data-testid="mobile-pdp-ask-grace"
+                        className="mt-4 flex min-h-[56px] w-full items-center gap-3 rounded-[3px] border border-champagne bg-white px-3 py-2.5 text-left transition-colors hover:border-muted-gold hover:bg-linen/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                    >
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-obsidian text-white" aria-hidden>
+                            <Microphone className="h-4 w-4" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                            <span className="block text-sm font-medium text-obsidian">Ask Grace about fit and bulk pricing</span>
+                            <span className="block truncate text-xs text-slate">
+                                {neckSize ? `Closures for a ${neckSize} neck, ` : "Compatible closures, "}case quantities, quotes
+                            </span>
+                        </span>
+                        <CaretRight className="h-4 w-4 shrink-0 text-slate" aria-hidden />
+                    </button>
+                ) : null}
                 {volumePricing ? <div className="mt-5" data-testid="mobile-pdp-volume-pricing">{volumePricing}</div> : null}
             </section>
 
