@@ -3,8 +3,8 @@
 **20 questions to test Grace in real time against production.**
 
 **When:** After any migration, deployment, or knowledge-base change.
-**Where:** `https://bestbottles.company` (Next.js prod, reads from Convex `precise-raccoon-123`).
-**How:** Open the Grace chat, ask each question verbatim, score against the criteria. Voice mode uses GPT-4.1 via ElevenLabs; text mode uses Claude Sonnet 4.6 — **run the set on both** to catch divergence.
+**Where:** `https://bestbottles.com` (Next.js prod, reads from Convex).
+**How:** Open Grace on the storefront and ask each question verbatim. Voice and text both use OpenAI Realtime (`gpt-realtime-2.1`, Marin) on the same session. Production traces in `graceSessionTraces` feed the amber/roller closed-loop script.
 
 **Scoring:** ✅ pass = meets all "good answer" criteria. ⚠️ partial = mostly right, one nuance off. ❌ fail = hits a red flag.
 **Target:** 18/20 passes (90%). Three or more ❌ in the same category = investigate that system prompt section.
@@ -169,12 +169,23 @@ VOICE MODE score:
 - **15–17/20** → Ship but file tickets for specific fails. Re-run after fix.
 - **<15/20** → Regression — check which deploy broke things (compare to prior eval runs in `data/grace-evals/results/`).
 
-**Voice-vs-text divergence** — if text passes and voice fails on the same question, the ElevenLabs agent is missing a tool or its system prompt drifted. Check `tool_ids` on the agent config and compare to what text-mode Grace has in `GRACE_TOOLS` inside `convex/grace.ts`.
+**Voice-vs-text divergence** — both modes now share `GRACE_REALTIME_INSTRUCTIONS` and the same tool set. If they diverge, check session compression, the navigator handoff, and the latest `graceSessionTraces` row.
+
+---
+
+## N. Agentic navigation (live amber/roller script)
+
+### 21. Fine-mist PDP → amber roll-on
+**Ask, while already on a fine-mist PDP:** "Take me to an amber bottle with a roller."
+- ✅ **Good:** Navigates immediately to an amber roll-on PDP. Drawer may close; voice stays on. Later cap requests use `configureCurrentProduct` on the new page.
+- ❌ **Red flag:** Drops an in-chat card and waits for a tap. After a tap, still describes the fine mist. Tries to plate-swap glass or applicator on the current page.
+
+Closed-loop: `evaluateGraceSessionTrace` + `AMBER_ROLLER_EVAL_SCRIPT` against the persisted `graceSessionTraces` row.
 
 ---
 
 ## Appendix — how to test voice specifically
 
-Voice tests require a microphone. Use the Grace side panel, click the mic, and speak each question. Because voice LLM is `gpt-4.1` (OpenAI) and text is `claude-sonnet-4-6` (Anthropic), wording and behavior will differ slightly — that's expected. Score against the same criteria.
+Voice tests require a microphone. Use the Grace launcher or the mobile PDP Ask Grace row, then speak each question. Storefront voice is `gpt-realtime-2.1` with Marin on WebRTC — the same constitution as text mode.
 
-**If voice gives wildly different answers than text on the same question**, the text-mode constitution (`buildSystemPrompt()` in `gracePrompt.ts`) and the ElevenLabs agent prompt have drifted out of sync. Re-sync with: `npx convex run knowledge:seedConstitution` (dev) + copy the constitution text into the ElevenLabs agent's system prompt via the ElevenLabs dashboard.
+**If she will not leave the current PDP**, check navigator handoff and `shouldAutoNavigateFromGraceTool`. Production traces should show `navigateToPage` or `showProducts`, not only `displayProductCard`.

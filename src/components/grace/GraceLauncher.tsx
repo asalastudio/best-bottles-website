@@ -44,6 +44,7 @@ export default function GraceLauncher() {
                     aria-label="Open Grace AI"
                     title="Ask Grace — AI bottling concierge"
                     className={`fixed z-[55] cursor-pointer items-center justify-center group ${agentic ? "flex" : "hidden xl:flex"}`}
+                    data-grace-agentic={agentic ? "true" : "false"}
                     style={{
                         right: "max(22px, env(safe-area-inset-right))",
                         bottom: "max(22px, calc(env(safe-area-inset-bottom) + 22px))",
@@ -51,11 +52,21 @@ export default function GraceLauncher() {
                         height: 56,
                         borderRadius: "50%",
                         background: "var(--color-bone)",
-                        border: "1px solid rgba(29, 29, 31, 0.12)",
-                        boxShadow:
-                            "0 1px 2px rgba(29, 29, 31, 0.04), 0 12px 32px rgba(29, 29, 31, 0.12), 0 0 0 1px rgba(212, 197, 169, 0.4)",
+                        border: agentic
+                            ? "1px solid rgba(197, 160, 101, 0.55)"
+                            : "1px solid rgba(29, 29, 31, 0.12)",
+                        boxShadow: agentic
+                            ? "0 1px 2px rgba(29, 29, 31, 0.04), 0 12px 32px rgba(29, 29, 31, 0.12), 0 0 0 1px rgba(197, 160, 101, 0.35)"
+                            : "0 1px 2px rgba(29, 29, 31, 0.04), 0 12px 32px rgba(29, 29, 31, 0.12), 0 0 0 1px rgba(212, 197, 169, 0.4)",
                     }}
                 >
+                    {agentic && (
+                        <span className="grace-launcher-agentic-rim" aria-hidden>
+                            <span className="grace-launcher-agentic-rim__glow" />
+                            <span className="grace-launcher-agentic-rim__spin" />
+                        </span>
+                    )}
+
                     {/* Breathing pulse — adagio, only on idle */}
                     {(!conversationActive || agentic) && (
                         <span

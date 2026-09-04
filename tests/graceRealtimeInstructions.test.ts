@@ -11,7 +11,12 @@ describe("Grace Realtime instructions", () => {
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("9 mL 17-415");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("Never start speaking proactively");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("40 words");
-        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("in-chat cards and links");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("in-chat cards");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("configureCurrentProduct");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("move them immediately");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("CATALOG HINT");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("getProductMeasurements");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("getSiteCapabilities");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("Hand off to Navigator");
     });
 });

@@ -155,6 +155,20 @@ export function parsePublicGraceToolCall(body: unknown): PublicGraceToolCall {
     let authorizationParameters = parameters;
     let gatewayParameters = parameters;
     let refineState: GraceRefineState | null = null;
+    if (authorizationName === "getProductMeasurements") {
+        const pick = (key: string) =>
+            typeof parameters[key] === "string" && (parameters[key] as string).trim()
+                ? (parameters[key] as string).trim()
+                : "";
+        const sku = pick("sku") || pick("graceSku") || pick("websiteSku");
+        if (!sku) {
+            throw new Error("Invalid parameters for public Grace tool getProductMeasurements: a SKU is required");
+        }
+        authorizationParameters = { sku };
+        gatewayParameters = { sku };
+        assertKnowledgeToolParameters(authorizationName, authorizationParameters);
+        return { authorizationName, authorizationParameters, gatewayName: name, gatewayParameters, refineState };
+    }
     if (authorizationName === "getProductBySku") {
         // Accept the agent shape `{ sku }` and the legacy inline-card shape
         // `{ graceSku }` / `{ websiteSku }`; the schema declares `sku`.

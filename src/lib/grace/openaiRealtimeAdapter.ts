@@ -13,6 +13,18 @@ import {
     assertKnowledgeToolParameters,
     getAuthorizedKnowledgeTools,
 } from "@/lib/knowledge/toolRegistry";
+import {
+    GRACE_MERCHANDISER_NAME,
+    GRACE_NAVIGATOR_NAME,
+    buildMerchandiserInstructions,
+    buildNavigatorInstructions,
+    splitToolsForGraceRole,
+} from "./realtimeAgents";
+import {
+    compressRealtimeHistory,
+    mergeSessionContextBlocks,
+    type CompressibleHistoryItem,
+} from "./sessionCompression";
 
 export type GraceConversationMode = "voice" | "text";
 export type GraceRealtimeRole = "user" | "assistant";
@@ -32,10 +44,11 @@ export type GraceRealtimeCallbacks = {
 };
 
 export type GraceRealtimeAgentConfig = {
-    name: "Grace";
+    name: string;
     voice: typeof GRACE_REALTIME_VOICE;
     instructions: string;
     tools: FunctionTool[];
+    handoffs?: unknown[];
 };
 
 export type GraceRealtimeSessionConfig = {
@@ -65,6 +78,7 @@ export type GraceRealtimeSessionLike = {
     connect(options: { apiKey: string }): Promise<void>;
     sendMessage(message: string): void;
     updateAgent(agent: unknown): Promise<unknown>;
+    updateHistory?(history: CompressibleHistoryItem[] | ((history: CompressibleHistoryItem[]) => CompressibleHistoryItem[])): void;
     interrupt(): void;
     close(): void;
 };
@@ -82,6 +96,7 @@ export type GraceOpenAIRealtimeAdapter = {
     isConnected(): boolean;
     sendContext(context: string): Promise<void>;
     sendText(text: string): void;
+    compressSession(catalogNote: string): Promise<void>;
 };
 
 export class GraceRealtimeConnectionCancelledError extends Error {
@@ -130,7 +145,12 @@ function toError(value: unknown): Error {
 }
 
 const defaultDependencies: GraceRealtimeDependencies = {
-    createAgent: (config) => new RealtimeAgent(config),
+    createAgent: (config) => new RealtimeAgent({
+        name: config.name,
+        voice: config.voice,
+        instructions: config.instructions,
+        tools: config.tools,
+    }),
     createSession: (agent, config) => new RealtimeSession(
         agent as RealtimeAgent,
         config,
@@ -164,17 +184,58 @@ export function createGraceOpenAIRealtimeAdapter({
     dependencies?: GraceRealtimeDependencies;
     knowledgeContext?: KnowledgeRequestContext;
 }): GraceOpenAIRealtimeAdapter {
-    const tools = buildGraceRealtimeTools(getGraceRealtimeToolSpecs(knowledgeContext), toolImplementations);
+    const authorizedSpecs = getGraceRealtimeToolSpecs(knowledgeContext);
+    const merchandiserTools = buildGraceRealtimeTools(
+        splitToolsForGraceRole(authorizedSpecs, "merchandiser"),
+        toolImplementations,
+    );
+    const navigatorTools = buildGraceRealtimeTools(
+        splitToolsForGraceRole(authorizedSpecs, "navigator"),
+        toolImplementations,
+    );
     let session: GraceRealtimeSessionLike | null = null;
     let connected = false;
     let currentContext = "";
+    let catalogNote = "";
+    let currentRole: "merchandiser" | "navigator" = "merchandiser";
 
-    const createAgent = () => dependencies.createAgent({
-        name: "Grace",
-        voice: GRACE_REALTIME_VOICE,
-        instructions: buildInstructions(baseInstructions, currentContext),
-        tools,
-    });
+    const composedContext = () => mergeSessionContextBlocks(currentContext, catalogNote || null);
+
+    const attachHandoffs = (merchandiser: unknown, navigator: unknown) => {
+        if (merchandiser && typeof merchandiser === "object" && navigator && typeof navigator === "object") {
+            (merchandiser as { handoffs: unknown[] }).handoffs = [navigator];
+            (navigator as { handoffs: unknown[] }).handoffs = [merchandiser];
+        }
+    };
+
+    const createTeam = () => {
+        const context = composedContext();
+        const merchandiser = dependencies.createAgent({
+            name: GRACE_MERCHANDISER_NAME,
+            voice: GRACE_REALTIME_VOICE,
+            instructions: buildInstructions(buildMerchandiserInstructions(baseInstructions), context),
+            tools: merchandiserTools,
+        });
+        const navigator = dependencies.createAgent({
+            name: GRACE_NAVIGATOR_NAME,
+            voice: GRACE_REALTIME_VOICE,
+            instructions: buildInstructions(buildNavigatorInstructions(baseInstructions), context),
+            tools: navigatorTools,
+        });
+        attachHandoffs(merchandiser, navigator);
+        return { merchandiser, navigator };
+    };
+
+    const createCurrentAgent = () => {
+        const team = createTeam();
+        return currentRole === "navigator" ? team.navigator : team.merchandiser;
+    };
+
+    const refreshSession = async () => {
+        if (!session) return;
+        await session.updateAgent(createCurrentAgent());
+        session.updateHistory?.((history) => compressRealtimeHistory(history));
+    };
 
     const notifyConnected = () => {
         if (connected) return;
@@ -202,6 +263,12 @@ export function createGraceOpenAIRealtimeAdapter({
             if (typeof output === "string" && output.trim()) {
                 callbacks.onMessage?.({ role: "assistant", text: output.trim() });
             }
+        });
+        activeSession.on("agent_handoff", (...args: unknown[]) => {
+            if (!isCurrentSession()) return;
+            const toAgent = args[2] as { name?: string } | undefined;
+            if (toAgent?.name === GRACE_NAVIGATOR_NAME) currentRole = "navigator";
+            if (toAgent?.name === GRACE_MERCHANDISER_NAME) currentRole = "merchandiser";
         });
         activeSession.on("error", (...args: unknown[]) => {
             if (!isCurrentSession()) return;
@@ -244,7 +311,8 @@ export function createGraceOpenAIRealtimeAdapter({
             if (!clientSecret.trim()) throw new Error("A Realtime client secret is required.");
             if (session) session.close();
 
-            const agent = createAgent();
+            currentRole = "merchandiser";
+            const agent = createCurrentAgent();
             const activeSession = dependencies.createSession(agent, {
                 model: GRACE_REALTIME_MODEL,
                 transport: "webrtc",
@@ -306,8 +374,12 @@ export function createGraceOpenAIRealtimeAdapter({
 
         async sendContext(context) {
             currentContext = context;
-            if (!session) return;
-            await session.updateAgent(createAgent());
+            await refreshSession();
+        },
+
+        async compressSession(nextCatalogNote) {
+            catalogNote = nextCatalogNote.trim();
+            await refreshSession();
         },
 
         sendText(text) {

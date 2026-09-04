@@ -39,6 +39,7 @@ describe("responsive shell contract", () => {
     it("keeps the Grace mobile action centered inside the tab bar", () => {
         const mobileTabs = read("src/components/mobile/MobileTabBar.tsx");
         const launcher = read("src/components/grace/GraceLauncher.tsx");
+        const globals = read("src/app/globals.css");
 
         expect(mobileTabs).toContain("animate-grace-pulse-subtle");
         expect(mobileTabs).not.toContain("-mt-6");
@@ -48,5 +49,9 @@ describe("responsive shell contract", () => {
         expect(launcher).toContain('agentic ? "flex" : "hidden xl:flex"');
         expect(launcher).toContain("xl:flex");
         expect(launcher).not.toContain("isMobile");
+        expect(launcher).toContain("grace-launcher-agentic-rim");
+        expect(launcher).toContain("data-grace-agentic");
+        expect(globals).toContain("@keyframes grace-launcher-agentic-spin");
+        expect(globals).toContain("prefers-reduced-motion: reduce");
     });
 });

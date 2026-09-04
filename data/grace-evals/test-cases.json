@@ -501,6 +501,16 @@
         "expectedTools": ["searchCatalog"],
         "shouldPivot": true
       }
+    },
+    {
+      "id": "amber-roller-from-fine-mist",
+      "category": "agentic_navigation",
+      "question": "I'm on a fine mist bottle. Take me to an amber bottle with a roller.",
+      "expect": {
+        "mustMentionAny": ["amber", "roll"],
+        "mustNotMention": ["I dropped a link", "tap the card"],
+        "expectedTools": ["navigateToPage", "showProducts", "searchCatalog"]
+      }
     }
   ]
 }

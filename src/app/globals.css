@@ -225,6 +225,92 @@ body {
   50% { box-shadow: 0 0 0 10px rgba(197, 160, 101, 0.18); }
 }
 
+/* Agentic follow-along — thin gold shine around the G monogram */
+@keyframes grace-launcher-agentic-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes grace-launcher-agentic-glow {
+  0%, 100% { opacity: 0.42; }
+  50% { opacity: 1; }
+}
+
+@keyframes grace-launcher-agentic-spark {
+  0%, 100% { opacity: 0.2; }
+  45% { opacity: 1; }
+}
+
+.grace-launcher-agentic-rim {
+  position: absolute;
+  inset: -5px;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.grace-launcher-agentic-rim__glow {
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  box-shadow:
+    0 0 0 1px rgba(197, 160, 101, 0.28),
+    0 0 12px 2px rgba(197, 160, 101, 0.32),
+    0 0 26px 6px rgba(212, 197, 169, 0.16);
+  animation: grace-launcher-agentic-glow 2.8s ease-in-out infinite;
+}
+
+.grace-launcher-agentic-rim__spin {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  animation: grace-launcher-agentic-spin 9s linear infinite;
+}
+
+.grace-launcher-agentic-rim__spin::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg 32deg,
+    rgba(197, 160, 101, 0.18) 58deg,
+    rgba(212, 197, 169, 0.78) 86deg,
+    rgba(255, 244, 214, 0.98) 102deg,
+    rgba(197, 160, 101, 0.88) 118deg,
+    rgba(197, 160, 101, 0.18) 158deg,
+    transparent 198deg 360deg
+  );
+  -webkit-mask: radial-gradient(farthest-side, transparent calc(100% - 1.5px), #000 calc(100% - 1.35px));
+  mask: radial-gradient(farthest-side, transparent calc(100% - 1.5px), #000 calc(100% - 1.35px));
+}
+
+.grace-launcher-agentic-rim__spin::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background:
+    radial-gradient(circle at 86% 28%, rgba(255, 248, 230, 1) 0 1.15px, transparent 2.3px),
+    radial-gradient(circle at 78% 16%, rgba(255, 248, 230, 0.75) 0 0.65px, transparent 1.45px);
+  animation: grace-launcher-agentic-spark 2.4s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .grace-launcher-agentic-rim__spin,
+  .grace-launcher-agentic-rim__glow,
+  .grace-launcher-agentic-rim__spin::after {
+    animation: none;
+  }
+
+  .grace-launcher-agentic-rim__spin {
+    transform: rotate(38deg);
+  }
+
+  .grace-launcher-agentic-rim__glow {
+    opacity: 0.72;
+  }
+}
+
 /* Voice wave glyph — animates per-bar when voice mode is active */
 @keyframes grace-wave-bar {
   0%, 100% { transform: scaleY(0.55); }

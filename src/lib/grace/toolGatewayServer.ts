@@ -50,6 +50,7 @@ const familyCardCache = new Map<string, { cachedAt: number; result: unknown }>()
 export type GraceServerToolName = GraceOpenAIToolName
     | "getProductGroup"
     | "getProductBySku"
+    | "getProductMeasurements"
     | "getFamilyForCard"
     | "getCatalogStrip"
     | "getProductsForComparison";
@@ -359,8 +360,52 @@ export async function executeGraceServerTool({
                         // Hero image from product group (catalog renders this);
                         // fall back to per-product imageUrl when group hero missing.
                         heroImageUrl: data.imageUrl ?? null,
+                        heightWithCap: data.heightWithCap ?? null,
+                        heightWithoutCap: data.heightWithoutCap ?? null,
+                        diameter: data.diameter ?? null,
+                        measurementSource: data.measurementSource ?? null,
                     };
                 }
+                break;
+            }
+
+            case "getProductMeasurements": {
+                const sku = String(
+                    (parameters.sku as string)
+                    ?? (parameters.graceSku as string)
+                    ?? (parameters.websiteSku as string)
+                    ?? "",
+                ).trim();
+                if (!sku) {
+                    result = { found: false, requestedSku: "", guidance: "A SKU is required for measurements." };
+                    break;
+                }
+                const found = await convex.query(api.products.lookupSku, { sku });
+                const data = found?.product ?? null;
+                if (!data) {
+                    result = {
+                        found: false,
+                        requestedSku: sku,
+                        guidance:
+                            `No catalog record matches "${sku}". Do not invent millimeters. Offer to search by description.`,
+                    };
+                    break;
+                }
+                result = {
+                    found: true,
+                    graceSku: data.graceSku,
+                    websiteSku: data.websiteSku,
+                    itemName: data.itemName,
+                    slug: found?.slug ?? null,
+                    neckThreadSize: data.neckThreadSize ?? null,
+                    heightWithCap: data.heightWithCap ?? null,
+                    heightWithoutCap: data.heightWithoutCap ?? null,
+                    diameter: data.diameter ?? null,
+                    widthMm: data.widthMm ?? null,
+                    depthMm: data.depthMm ?? null,
+                    bottleWeightG: data.bottleWeightG ?? null,
+                    measurementSource: data.measurementSource ?? null,
+                };
                 break;
             }
 
