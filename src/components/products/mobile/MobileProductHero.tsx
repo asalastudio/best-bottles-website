@@ -20,26 +20,39 @@ export type PdpDimensions = {
 
 function DimensionRow({ label, value }: { label: string; value: string }) {
     return (
-        <div className="flex items-baseline justify-between gap-4 border-t border-champagne/70 py-3 first:border-t-0">
+        <div className="flex items-baseline justify-between gap-4 border-t border-champagne/70 py-2.5 first:border-t-0">
             <dt className="text-2xs font-semibold uppercase tracking-label text-slate">{label}</dt>
-            <dd className="font-serif text-lg text-obsidian">{value}</dd>
+            <dd className="shrink-0 whitespace-nowrap text-right font-serif text-base text-obsidian tabular-nums">{value}</dd>
         </div>
     );
 }
 
+/**
+ * The three physical measurements, in the hero's box. Neck finish and capacity
+ * already sit in the identity block below, so they are not repeated here; the
+ * top padding clears the back/cart controls that float over the hero.
+ */
 export function PdpDimensionsPanel({ dimensions, capacity, neckSize }: { dimensions: PdpDimensions; capacity?: string | null; neckSize?: string | null }) {
+    const rows = [
+        dimensions.heightWithCap?.trim() ? { label: "Height with cap", value: dimensions.heightWithCap } : null,
+        dimensions.heightWithoutCap?.trim() ? { label: "Height without cap", value: dimensions.heightWithoutCap } : null,
+        dimensions.diameter?.trim() ? { label: "Diameter", value: dimensions.diameter } : null,
+    ].filter((row): row is { label: string; value: string } => row !== null);
     return (
-        <div className="flex h-full w-full items-center justify-center bg-linen px-6 py-8" data-testid="mobile-pdp-dimensions">
-            <div className="w-full max-w-sm border-y border-champagne/70">
-                <p className="py-3 font-serif text-xl text-obsidian">Product dimensions</p>
-                <dl>
-                    {dimensions.heightWithCap?.trim() ? <DimensionRow label="Height with cap" value={dimensions.heightWithCap} /> : null}
-                    {dimensions.heightWithoutCap?.trim() ? <DimensionRow label="Height without cap" value={dimensions.heightWithoutCap} /> : null}
-                    {dimensions.diameter?.trim() ? <DimensionRow label="Diameter" value={dimensions.diameter} /> : null}
-                    {neckSize?.trim() ? <DimensionRow label="Neck finish" value={neckSize} /> : null}
-                    {capacity?.trim() ? <DimensionRow label="Capacity" value={capacity} /> : null}
-                </dl>
-            </div>
+        <div
+            className="flex h-full w-full flex-col justify-center bg-linen px-6 pb-6"
+            style={{ paddingTop: "calc(3.75rem + env(safe-area-inset-top, 0px))" }}
+            data-testid="mobile-pdp-dimensions"
+        >
+            <p className="text-2xs font-semibold uppercase tracking-label text-muted-gold">Dimensions</p>
+            <dl className="mt-2 border-y border-champagne/70">
+                {rows.map((row) => <DimensionRow key={row.label} label={row.label} value={row.value} />)}
+            </dl>
+            {(neckSize?.trim() || capacity?.trim()) ? (
+                <p className="mt-3 text-xs text-slate">
+                    {[neckSize?.trim() ? `Neck ${neckSize}` : null, capacity?.trim() ?? null].filter(Boolean).join(" · ")}
+                </p>
+            ) : null}
         </div>
     );
 }

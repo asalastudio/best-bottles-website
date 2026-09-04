@@ -57,7 +57,7 @@ const ROLLER_NOTES: Array<[RegExp, string]> = [
 const chromeCss = `
 @media (max-width: 767px){
 [data-site-header],[data-mobile-tab-bar]{display:none}
-main[data-mobile-pdp]{padding-bottom:0}
+main[data-mobile-pdp]{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px))}
 main[data-mobile-pdp] > [data-mobile-pdp-frame]{padding-top:0}
 main[data-mobile-pdp] [data-testid="pdp-sticky-cart-bar"]{bottom:env(safe-area-inset-bottom,0px)}
 main[data-mobile-pdp][data-mobile-picker-open] [data-testid="pdp-sticky-cart-bar"]{display:none}
@@ -454,7 +454,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                                        const next = Number(event.target.value);
                                        onQtyChange(Number.isFinite(next) ? Math.max(1, Math.floor(next)) : 1);
                                    }}
-                                   className="min-w-[3.25rem] bg-transparent text-center text-md font-semibold tabular-nums text-obsidian outline-none" />
+                                   className="w-14 min-w-0 bg-transparent text-center text-md font-semibold tabular-nums text-obsidian outline-none" />
                             <button type="button" aria-label="Increase quantity" onClick={() => onQtyChange(qty + 1)}
                                     className="min-h-11 min-w-11 px-3 text-obsidian transition-colors hover:text-muted-gold">+</button>
                         </div>

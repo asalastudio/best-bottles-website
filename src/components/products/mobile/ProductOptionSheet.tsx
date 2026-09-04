@@ -56,6 +56,8 @@ export default function ProductOptionSheet({
         const selected = root?.querySelector<HTMLElement>('[role="radio"][aria-checked="true"]')
             ?? root?.querySelector<HTMLElement>('[role="radio"]');
         (selected ?? headingRef.current)?.focus({ preventScroll: true });
+        // Long finish grids scroll horizontally: bring the current choice into view.
+        selected?.scrollIntoView({ block: "nearest", inline: "center" });
     }, []);
 
     const restoreFocus = useCallback((event: Event) => {
@@ -103,9 +105,13 @@ export default function ProductOptionSheet({
     }, [open]);
 
     return (
+        <>
+            {/* Outside the portal: Radix wraps each portal child in its own
+                Presence, so a style element there would unmount the moment the
+                dialog closes and take the exit animation with it. */}
+            <style dangerouslySetInnerHTML={{ __html: sheetCss }} />
         <Dialog.Root open={open} onOpenChange={(next) => { if (!next) onCancel(); }}>
             <Dialog.Portal>
-                <style dangerouslySetInnerHTML={{ __html: sheetCss }} />
                 {/* Transparent: the hero above the sheet must stay fully legible. */}
                 <Dialog.Overlay className="fixed inset-0 z-[69] bg-transparent" data-testid="mobile-pdp-sheet-overlay" />
                 <Dialog.Content
@@ -122,16 +128,16 @@ export default function ProductOptionSheet({
                     style={{ top: `${Math.max(0, Math.round(top))}px` }}
                 >
                     <div
-                        className="shrink-0 touch-none select-none px-4 pb-3 pt-2"
+                        className="shrink-0 touch-none select-none px-4 pb-2 pt-2"
                         onPointerDown={onHandlePointerDown}
                         onPointerMove={onHandlePointerMove}
                         onPointerUp={(event) => endDrag(event, false)}
                         onPointerCancel={(event) => endDrag(event, true)}
                     >
-                        <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-ash/60" aria-hidden />
+                        <div className="mx-auto mb-2 h-1 w-10 rounded-full bg-ash/60" aria-hidden />
                         <div className="flex items-start justify-between gap-3">
                             <div className="min-w-0">
-                                <Dialog.Title ref={headingRef} tabIndex={-1} className="font-serif text-2xl leading-tight text-obsidian outline-none">
+                                <Dialog.Title ref={headingRef} tabIndex={-1} className="font-serif text-xl leading-tight text-obsidian outline-none">
                                     {title}
                                 </Dialog.Title>
                                 {hint ? (
@@ -158,8 +164,8 @@ export default function ProductOptionSheet({
                     </div>
 
                     <div
-                        className="shrink-0 border-t border-champagne/70 bg-bone px-4 pt-3"
-                        style={{ paddingBottom: "calc(0.75rem + env(safe-area-inset-bottom, 0px))" }}
+                        className="shrink-0 border-t border-champagne/70 bg-bone px-4 pt-2.5"
+                        style={{ paddingBottom: "calc(0.625rem + env(safe-area-inset-bottom, 0px))" }}
                     >
                         <button
                             type="button"
@@ -174,5 +180,6 @@ export default function ProductOptionSheet({
                 </Dialog.Content>
             </Dialog.Portal>
         </Dialog.Root>
+        </>
     );
 }

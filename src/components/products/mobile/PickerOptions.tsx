@@ -107,8 +107,8 @@ export function ClosureOptionGrid({ options, selectedId, onSelect, groupLabel, f
             aria-label={groupLabel}
             data-picker-layout="grid"
             data-testid="mobile-pdp-closure-grid"
-            className="grid grid-flow-col grid-rows-2 gap-2 overflow-x-auto overscroll-x-contain px-4 pb-2 [scroll-snap-type:x_proximity] [scrollbar-width:thin]"
-            style={{ gridAutoColumns: "minmax(104px, 28vw)" }}
+            className="grid grid-flow-col grid-rows-2 gap-2 overflow-x-auto overscroll-x-contain px-4 pb-2 [scroll-padding-inline:1rem] [scroll-snap-type:x_proximity] [scrollbar-width:thin]"
+            style={{ gridAutoColumns: "minmax(96px, 26vw)" }}
         >
             {options.map((option, index) => {
                 const on = option.id === selectedId;
@@ -120,11 +120,11 @@ export function ClosureOptionGrid({ options, selectedId, onSelect, groupLabel, f
                         aria-checked={on}
                         ref={index === 0 ? firstOptionRef : undefined}
                         onClick={() => onSelect(option.id)}
-                        className={`relative flex min-h-[124px] flex-col items-center justify-start gap-1.5 rounded-[3px] bg-white p-2 text-center transition-colors [scroll-snap-align:start] motion-reduce:transition-none ${OPTION_FOCUS} ${
+                        className={`relative flex min-h-[104px] flex-col items-center justify-start gap-1 rounded-[3px] bg-white p-2 text-center transition-colors [scroll-snap-align:start] motion-reduce:transition-none ${OPTION_FOCUS} ${
                             on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"
                         }`}
                     >
-                        <OptionThumb option={option} size="lg" className="!h-16 !w-16" />
+                        <OptionThumb option={option} size="lg" className="!h-14 !w-14" />
                         <span className={`line-clamp-2 w-full text-[11px] leading-tight ${on ? "font-semibold text-obsidian" : "text-obsidian"}`}>{option.label}</span>
                         <span className="absolute right-1.5 top-1.5">
                             <SelectedMark on={on} />
