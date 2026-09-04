@@ -14,7 +14,7 @@
  * cross-application comparison belongs in the below-fold discovery section.
  */
 
-import { useMemo, useState, useEffect, type ReactNode } from "react";
+import { useMemo, useState, useEffect, type ReactNode, type Ref } from "react";
 import dynamic from "next/dynamic";
 import {
   Check, ChatCircle, ShoppingBag,
@@ -135,7 +135,7 @@ export default function ConfiguratorPdp({
   heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, websiteSku,
-  quoteHref, checkoutReady = true, qty = 1, onQtyChange, volumePricing,
+  quoteHref, checkoutReady = true, qty = 1, onQtyChange, volumePricing, ctaAnchorRef,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
@@ -179,6 +179,8 @@ export default function ConfiguratorPdp({
    *  parts when one exists, so changing a cap changes the cap and nothing else */
   websiteSku?: string | null;
   quoteHref?: string;
+  /** Lets the product page observe this CTA for the site-level mobile sticky bar. */
+  ctaAnchorRef?: Ref<HTMLDivElement>;
   /** False means the selected Shopify variant cannot check out and must quote. */
   checkoutReady?: boolean;
   /** SKU TRUTH for the fitment row: the cap/trim colourways this closure
@@ -209,7 +211,7 @@ export default function ConfiguratorPdp({
                         active: boolean; imageUrl?: string | null }>;
   qty?: number;
   onQtyChange?: (n: number) => void;
-  /** Compact volume ladder rendered directly under Add to Cart. */
+  /** One-line volume teaser under Add to Cart; the full table is below the fold. */
   volumePricing?: ReactNode;
 }) {
   const fam = familyForSlugOrDerived(currentSlug);
@@ -685,8 +687,8 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* The focused panel shows only selected-SKU price and case essentials.
-     Full tier information is intentionally below the discovery sections. */
+  /* Selected-SKU unit and case price stay in the buy column. The full
+     volume table lives below the fold so configurators stay visible. */
   const tierPrice = priceEach;
   const priceBlock = (
     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
@@ -712,7 +714,7 @@ export default function ConfiguratorPdp({
      The sample CTA was retired 2026-09-02: samples go through the quote
      flow and Grace, not a second button competing with the cart. */
   const ctaStack = (
-    <div className="mt-5">
+    <div ref={ctaAnchorRef} className="mt-4" data-testid="pdp-focused-cta">
       <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
         <span className="font-semibold tabular-nums text-obsidian">
           {tierPrice != null ? `$${tierPrice.toFixed(2)} /ea` : "Price on request"}
@@ -741,6 +743,16 @@ export default function ConfiguratorPdp({
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
                              transition-colors duration-200">+</button>
         </div>
+        {caseQty && caseQty > 1 ? (
+          <button type="button"
+                  aria-label={`Set quantity to one case of ${caseQty}`}
+                  onClick={() => onQtyChange?.(caseQty)}
+                  className="px-3 text-sm font-semibold text-obsidian border border-champagne rounded-[3px]
+                             hover:border-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2
+                             focus-visible:outline-muted-gold">
+            1 case
+          </button>
+        ) : null}
         {checkoutReady ? (
           <button type="button" onClick={onAddToCart}
                   className="flex-1 flex items-center justify-center gap-2 py-2.5
@@ -779,7 +791,7 @@ export default function ConfiguratorPdp({
         1. Glass Finish
         <span className="normal-case tracking-normal text-caption text-obsidian ml-0.5">· {glassLabel}</span>
       </p>
-      <div className="grid grid-cols-3 gap-2.5 lg:grid-cols-[repeat(auto-fill,minmax(64px,92px))]">
+      <div className="grid grid-cols-4 gap-2 lg:grid-cols-[repeat(auto-fill,minmax(56px,72px))]">
         {(glassOptions ?? []).map((g) => {
           const on = g.active;
           return (
@@ -789,7 +801,7 @@ export default function ConfiguratorPdp({
                }}
                className={`group relative block w-full rounded-[2px] bg-white text-center transition-colors duration-200
                            ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>
-              <span className="relative block aspect-[4/3] overflow-hidden rounded-t-[2px]"
+              <span className="relative block aspect-square overflow-hidden rounded-t-[2px]"
                     style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
                 {g.imageUrl ? (
                   // eslint-disable-next-line @next/next/no-img-element
@@ -815,18 +827,6 @@ export default function ConfiguratorPdp({
     </div>
   ) : null;
 
-  /* the summary strip under the title: what is configured, in one line */
-  const summaryStrip = (
-    <div className="mt-4 flex items-center gap-3 border-t border-champagne/50 pt-4">
-      <div className="flex flex-1 flex-wrap items-center gap-x-3 gap-y-1 border border-champagne/50 bg-linen px-4 py-2.5 text-sm text-obsidian">
-        <span>{glassLabel} glass</span>
-        <span className="text-muted-gold">·</span>
-        <span>{activeMeta?.name ?? "Bottle only"}</span>
-        {finishLabel && (<><span className="text-muted-gold">·</span><span>{finishLabel}</span></>)}
-      </div>
-    </div>
-  );
-
   /* Your Configuration — the spec card with the resolved SKU */
   const configRows: Array<[string, string]> = [
     ["Family", groupTitle],
@@ -837,8 +837,8 @@ export default function ConfiguratorPdp({
     ...(canCap ? [["View", withCap ? "Cap on" : "Cap off"] as [string, string]] : []),
   ];
   const configCard = (
-    <div className="border border-champagne/50 bg-linen p-5">
-      <div className="mb-3 flex items-center justify-between">
+    <div className="border border-champagne/50 bg-linen p-3">
+      <div className="mb-2 flex items-center justify-between">
         <span className="text-2xs font-semibold uppercase tracking-label text-slate">Your Configuration</span>
         <span className={`flex items-center gap-1.5 text-spec font-medium ${inStock ? "text-obsidian" : "text-amber-700"}`}>
           {inStock ? "In stock" : "Confirm availability"}
@@ -847,7 +847,7 @@ export default function ConfiguratorPdp({
       </div>
       <div className="flex flex-col">
         {configRows.map(([k, v]) => (
-          <div key={k} className="flex justify-between gap-3 border-b border-champagne/35 py-2 text-sm">
+          <div key={k} className="flex justify-between gap-3 border-b border-champagne/35 py-1.5 text-sm">
             <span className="text-slate">{k}</span>
             <span className="text-right font-medium tabular-nums text-obsidian">{v}</span>
           </div>
@@ -860,54 +860,54 @@ export default function ConfiguratorPdp({
             Resolved SKU <Copy className="h-3.5 w-3.5" />
             {skuCopied && <span className="normal-case tracking-normal text-caption text-gold-dim">copied</span>}
           </button>
-          <p className="mt-1.5 font-serif text-[22px] tracking-[.01em] tabular-nums text-obsidian">{resolvedSku}</p>
+          <p className="mt-1 font-serif text-lg tracking-[.01em] tabular-nums text-obsidian">{resolvedSku}</p>
         </div>
       )}
     </div>
   );
 
   /* ------------------------------------------------------- step panel */
+  const rollerStep = activeBase === "roller" ? (
+    <div className="mt-5 pt-4 border-t border-champagne/50">
+      <p className="text-2xs font-semibold uppercase tracking-label">
+        <span className="text-slate">Roller ball</span>
+        <span className="text-slate"> · </span>
+        <span className="text-obsidian normal-case tracking-normal text-caption">
+          {rollerVariant === "metal" ? "Stainless steel" : "Plastic"}
+        </span>
+      </p>
+      <div className="grid grid-cols-2 gap-2.5 mt-2.5 max-w-xs">
+        {([["metal", "Stainless steel", "Smooth, cooling glide"],
+           ["plastic", "Plastic", "Lighter, lower cost"]] as const).map(
+          ([id, label, note]) => (
+            <button key={id} type="button" onClick={() => setRollerVariant(id)}
+                    aria-pressed={rollerVariant === id}
+                    disabled={!rollerOffered(id)}
+                    title={rollerOffered(id) ? undefined : "Not offered for this bottle"}
+                    className={`rounded-[3px] px-3 py-2 text-left transition-colors
+                                duration-200 disabled:cursor-not-allowed disabled:opacity-40 ${rollerVariant === id
+                                  ? "border-[1.5px] border-obsidian bg-white"
+                                  : "border border-champagne hover:border-muted-gold"}`}>
+              <span className="block text-spec font-semibold text-obsidian">{label}</span>
+              <span className="block text-2xs text-slate mt-0.5">{note}</span>
+            </button>
+          ))}
+      </div>
+    </div>
+  ) : null;
+
   const stepPanel = (
     <div className="min-w-0">
       {identity}
       {specStrip}
       {priceBlock}
-      {summaryStrip}
-      {glassStep ? <div className="mt-6">{glassStep}</div> : null}
-      {/* The overcap chooser is gone: the stage's cap-on/off toggle is the one
-          cap control (decision 2026-09-02). Roller material now sits here,
-          above the fold. */}
-      {activeBase === "roller" && (
-        <div className="mt-6 pt-5 border-t border-champagne/50">
-          <p className="text-2xs font-semibold uppercase tracking-label">
-            <span className="text-slate">Roller ball</span>
-            <span className="text-slate"> · </span>
-            <span className="text-obsidian normal-case tracking-normal text-caption">
-              {rollerVariant === "metal" ? "Stainless steel" : "Plastic"}
-            </span>
-          </p>
-          <div className="grid grid-cols-2 gap-2.5 mt-2.5 max-w-xs">
-            {([["metal", "Stainless steel", "Smooth, cooling glide"],
-               ["plastic", "Plastic", "Lighter, lower cost"]] as const).map(
-              ([id, label, note]) => (
-                <button key={id} type="button" onClick={() => setRollerVariant(id)}
-                        aria-pressed={rollerVariant === id}
-                        disabled={!rollerOffered(id)}
-                        title={rollerOffered(id) ? undefined : "Not offered for this bottle"}
-                        className={`rounded-[3px] px-3 py-2 text-left transition-colors
-                                    duration-200 disabled:cursor-not-allowed disabled:opacity-40 ${rollerVariant === id
-                                      ? "border-[1.5px] border-obsidian bg-white"
-                                      : "border border-champagne hover:border-muted-gold"}`}>
-                  <span className="block text-spec font-semibold text-obsidian">{label}</span>
-                  <span className="block text-2xs text-slate mt-0.5">{note}</span>
-                </button>
-              ))}
-          </div>
-        </div>
-      )}
-      <div className="mt-6 pt-5 border-t border-champagne/50">{finishRow()}</div>
-      <div className="mt-6">{configCard}</div>
-      {ctaStack}
+      {glassStep ? <div className="mt-5">{glassStep}</div> : null}
+      {rollerStep}
+      <div className="mt-5 pt-4 border-t border-champagne/50">{finishRow()}</div>
+      <div className="focused-pdp-cta-cluster mt-5" data-pdp-cta-cluster="above-fold">
+        {ctaStack}
+      </div>
+      <div className="mt-5">{configCard}</div>
       <div className="mt-4 flex justify-between text-caption text-slate">
         <span>Secure checkout</span><span>30-day returns</span>
       </div>

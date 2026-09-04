@@ -85,15 +85,32 @@ describe("focused PDP purchase panel", () => {
         expect(configurator).toContain("checkoutReady ? (");
     });
 
-    it("places volume pricing immediately under Add to Cart on both purchase shells", () => {
+    it("keeps glass, roller, and closure configuration above Add to Cart", () => {
+        const step = configurator.slice(configurator.indexOf("const stepPanel"));
+        expect(step.indexOf("{glassStep")).toBeGreaterThan(-1);
+        expect(step.indexOf("{glassStep")).toBeLessThan(step.indexOf("{ctaStack}"));
+        expect(step.indexOf("{rollerStep}")).toBeLessThan(step.indexOf("{ctaStack}"));
+        expect(step.indexOf("{finishRow()")).toBeLessThan(step.indexOf("{ctaStack}"));
+        expect(step).toContain('data-pdp-cta-cluster="above-fold"');
+        expect(configurator).toContain("ctaAnchorRef");
+        expect(pdp).toContain("ctaAnchorRef={inlineCartRef}");
+    });
+
+    it("keeps a volume teaser under Add to Cart and the full ladder below the fold", () => {
         expect(configurator).toContain("volumePricing?: ReactNode");
         expect(configurator).toContain('data-testid="pdp-volume-under-atc"');
+        expect(configurator).toContain('aria-label={`Set quantity to one case of ${caseQty}`}');
         expect(configurator).not.toContain("const [tiersOpen");
         expect(configurator).not.toContain("ladder.map((t)");
-        expect(pdp).toContain("volumePricing={<TierLadder variant={selectedVariant} qty={qty} />}");
+        expect(pdp).toContain("volumePricing={<VolumeTeaser variant={selectedVariant} />}");
+        expect(pdp).toContain('data-testid="pdp-volume-teaser"');
         expect(pdp).toContain('data-testid="pdp-volume-under-atc"');
         expect(pdp).toContain('data-testid="pdp-volume-fulfillment"');
-        expect(pdp).toContain("<TierLadder variant={selectedVariant} qty={qty} />");
+        expect(pdp).toContain("<TierLadder variant={selectedVariant} qty={qty} onQtyChange={setQty} />");
+        expect(pdp).toContain('data-testid="pdp-volume-tier-table"');
+        expect(pdp).toContain("Price / unit");
+        expect(pdp).toContain("formatVolumeQtyRange");
+        expect(pdp).toContain("pdp-volume-case-shortcut");
     });
 
     it("builds primary glass choices from same-application groups rather than cross-application siblings", () => {
