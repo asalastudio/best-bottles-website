@@ -1782,6 +1782,18 @@ export default function ProductDetailClient({
         openGracePanel();
     }, [group?.family, openGracePanel, selectedVariant?.applicator]);
 
+    // The mobile PDP hides the tab bar (Grace's usual mobile entry), so its inline
+    // row is the only way in. Keep the tab bar's "Grace Mobile PDP Opened" series
+    // continuous by firing it here with the product context the tab never had.
+    const openGraceFromMobilePdp = useCallback(() => {
+        analytics.graceMobilePdpOpened({
+            pathname,
+            ...(customerDisplayName ? { productName: customerDisplayName } : {}),
+            ...(group?.family ? { productFamily: group.family } : {}),
+        });
+        openGraceFromPdp();
+    }, [customerDisplayName, group?.family, openGraceFromPdp, pathname]);
+
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so
     // they carry draft content + stega click-to-edit overlays inside Presentation.
@@ -2008,6 +2020,7 @@ export default function ProductDetailClient({
                             onCommitVariant={handleGuidedVariantSelection}
                             onCommitGlass={handleGuidedProductUrlChange}
                             onPickerOpenChange={setMobilePickerOpen}
+                            onAskGrace={openGraceFromMobilePdp}
                             volumePricing={<VolumeTeaser variant={selectedVariant} />}
                         />
                     </div>

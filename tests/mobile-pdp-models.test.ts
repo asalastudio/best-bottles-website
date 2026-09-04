@@ -165,6 +165,20 @@ describe("mobile PDP wiring", () => {
         expect(pdp).toContain('data-mobile-pdp={isFocusedPurchasePdp ? "focused" : undefined}');
     });
 
+    it("gives Grace an inline entry in the purchase block since the tab bar is hidden here", () => {
+        expect(pdp).toContain("onAskGrace={openGraceFromMobilePdp}");
+        expect(pdp).toContain("analytics.graceMobilePdpOpened({");
+        expect(mobile).toContain('data-testid="mobile-pdp-ask-grace"');
+        expect(mobile).not.toMatch(/fixed[^"]*data-testid="mobile-pdp-ask-grace"/);
+        // The row lives between Add to Cart and volume pricing, never floating.
+        const purchase = mobile.indexOf('data-testid="mobile-pdp-add-to-cart"');
+        const grace = mobile.indexOf('data-testid="mobile-pdp-ask-grace"');
+        const volume = mobile.indexOf('data-testid="mobile-pdp-volume-pricing"');
+        expect(purchase).toBeGreaterThan(-1);
+        expect(grace).toBeGreaterThan(purchase);
+        expect(volume).toBeGreaterThan(grace);
+    });
+
     it("hides route chrome only below the breakpoint and only while mounted", () => {
         expect(mobile).toContain("@media (max-width: 767px)");
         expect(mobile).toContain("[data-site-header],[data-mobile-tab-bar]{display:none}");
