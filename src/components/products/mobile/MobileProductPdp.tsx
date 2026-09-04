@@ -369,13 +369,15 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     }, [slug]);
 
     // Safari's dynamic chrome and orientation changes move the hero's edge.
+    // Measure after paint — setState in the effect body is a cascading render.
     useEffect(() => {
         if (!picker.activePicker) return;
-        measureSheetTop();
+        const frame = window.requestAnimationFrame(measureSheetTop);
         window.addEventListener("resize", measureSheetTop);
         window.visualViewport?.addEventListener("resize", measureSheetTop);
         window.visualViewport?.addEventListener("scroll", measureSheetTop);
         return () => {
+            window.cancelAnimationFrame(frame);
             window.removeEventListener("resize", measureSheetTop);
             window.visualViewport?.removeEventListener("resize", measureSheetTop);
             window.visualViewport?.removeEventListener("scroll", measureSheetTop);

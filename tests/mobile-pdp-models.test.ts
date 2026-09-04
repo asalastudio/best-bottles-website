@@ -215,6 +215,12 @@ describe("mobile PDP wiring", () => {
         expect(sheet).not.toContain("inset-0 z-[69]");
     });
 
+    it("measures the picker sheet after paint instead of setState in the effect body", () => {
+        expect(mobile).toContain("requestAnimationFrame(measureSheetTop)");
+        expect(mobile).toContain("cancelAnimationFrame(frame)");
+        expect(mobile).not.toMatch(/if \(!picker\.activePicker\) return;\s*measureSheetTop\(\);/);
+    });
+
     it("does not decode a kit on every preview tap", () => {
         expect(mobile).not.toContain("previewKitQuery");
         expect(mobile).not.toContain("previewSiblingKitQuery");
