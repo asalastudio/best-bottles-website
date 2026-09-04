@@ -1791,13 +1791,8 @@ export default function ProductDetailClient({
             ...(customerDisplayName ? { productName: customerDisplayName } : {}),
             ...(group?.family ? { productFamily: group.family } : {}),
         });
-        const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
-        analytics.graceOpenedFromShopping({
-            source: "pdp",
-            ...(group?.family ? { family: group.family } : {}),
-            ...(application ? { application } : {}),
-        });
-    }, [customerDisplayName, group?.family, pathname, selectedVariant?.applicator]);
+        openGraceFromPdp();
+    }, [customerDisplayName, group?.family, openGraceFromPdp, pathname]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so

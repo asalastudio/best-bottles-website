@@ -14,7 +14,6 @@ import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
-import { useGrace } from "@/components/useGrace";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
@@ -103,8 +102,8 @@ export type MobileProductPdpProps = {
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
     onCommitGlass: (href: string) => void;
     onPickerOpenChange: (open: boolean) => void;
-    /** Analytics only — this tree opens Grace itself, passing the hero as the
-        dock anchor so the drawer can sit under the bottle. */
+    /** Opens the full Grace overlay. The tab bar (her usual mobile entry) is
+        hidden on this route, so the purchase block carries an inline row. */
     onAskGrace?: () => void;
     volumePricing?: ReactNode;
 };
@@ -131,7 +130,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     } = props;
 
     const isMobile = useViewportIsMobile();
-    const { openPanel, panelMode } = useGrace();
     const closureBase = useMemo(() => closureBaseFromSlug(slug), [slug]);
     const thumbBySwatch = useClosureThumbnails(closureBase, group.neckThreadSize);
     const deps = useMemo<GuidedVariantDeps<ProductVariant>>(() => ({
@@ -147,8 +145,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const rowRefs = useRef(new Map<MobilePickerType, HTMLButtonElement>());
     const savedScroll = useRef<number | null>(null);
     const lastPickerRef = useRef<MobilePickerType | null>(null);
-    const graceScroll = useRef<number | null>(null);
-    const prevPanelMode = useRef(panelMode);
     const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
     const markPlateBroken = useCallback((url: string) => {
         console.error("[plates] image failed to load", url);
@@ -371,22 +367,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         row?.focus({ preventScroll: true });
     }, []);
 
-    const askGrace = () => {
-        graceScroll.current = window.scrollY;
-        bringHeroToTop();
-        onAskGrace?.();
-        openPanel({ anchor: { element: heroRef.current } });
-    };
-
-    useEffect(() => {
-        const wasOpen = prevPanelMode.current === "open";
-        prevPanelMode.current = panelMode;
-        if (!wasOpen || panelMode === "open" || graceScroll.current === null) return;
-        window.scrollTo({ top: graceScroll.current, behavior: "instant" as ScrollBehavior });
-        graceScroll.current = null;
-        document.querySelector<HTMLButtonElement>('[data-testid="mobile-pdp-ask-grace"]')?.focus({ preventScroll: true });
-    }, [panelMode]);
-
     // Safari's dynamic chrome and orientation changes move the hero's edge.
     useEffect(() => {
         if (!picker.activePicker) return;
@@ -523,7 +503,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 {onAskGrace ? (
                     <button
                         type="button"
-                        onClick={askGrace}
+                        onClick={onAskGrace}
                         data-testid="mobile-pdp-ask-grace"
                         className="mt-4 flex min-h-[56px] w-full items-center gap-3 rounded-[3px] border border-champagne bg-white px-3 py-2.5 text-left transition-colors hover:border-muted-gold hover:bg-linen/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
                     >

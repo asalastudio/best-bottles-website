@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect, useLayoutEffect, useState, type FormEvent } from "react";
+import { useRef, useEffect, useState, type FormEvent } from "react";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -20,10 +20,6 @@ import { useIsAuthenticated } from "@/lib/useIsAuthenticated";
 import { useGraceImageUpload } from "@/lib/useGraceImageUpload";
 import GraceChatMessage, { StreamingMessage, ThinkingIndicator } from "./GraceChatMessage";
 import { graceConversationDisposition } from "@/lib/grace/pushLayout";
-import {
-    measureGraceDockedSheet,
-    type GraceDockedSheetLayout,
-} from "@/lib/grace/dockedSheet";
 
 // Anonymous discovery chip set — PRD v3 spec.
 // (Auth-aware swap to "in project" / "no project" sets lights up once Clerk
@@ -69,8 +65,6 @@ export default function GraceChatDrawer() {
     const {
         panelMode,
         surface,
-        panelPresentation,
-        getDockAnchor,
         closePanel,
         messages,
         streamingText,
@@ -115,45 +109,8 @@ export default function GraceChatDrawer() {
     const isOpen = panelMode === "open";
     const isOverlay = surface.mode === "overlay";
     const isMobile = surface.viewportWidth <= 768;
-    const [dockLayout, setDockLayout] = useState<GraceDockedSheetLayout | null>(null);
-    const isDocked = isOpen && panelPresentation === "docked" && dockLayout !== null && dockLayout.height > 0;
     const messagesEndRef = useRef<HTMLDivElement>(null);
     const inputRef = useRef<HTMLTextAreaElement>(null);
-
-    useLayoutEffect(() => {
-        if (!isOpen || panelPresentation !== "docked") return;
-        const measure = () => {
-            const anchor = getDockAnchor();
-            if (!anchor || anchor.getClientRects().length === 0) {
-                setDockLayout(null);
-                return;
-            }
-            const visual = window.visualViewport;
-            setDockLayout(measureGraceDockedSheet(anchor, {
-                layoutHeight: window.innerHeight,
-                visualHeight: visual?.height ?? window.innerHeight,
-                visualOffsetTop: visual?.offsetTop ?? 0,
-            }));
-        };
-        const frame = window.requestAnimationFrame(measure);
-        const visual = window.visualViewport;
-        visual?.addEventListener("resize", measure);
-        visual?.addEventListener("scroll", measure);
-        window.addEventListener("resize", measure);
-        return () => {
-            window.cancelAnimationFrame(frame);
-            visual?.removeEventListener("resize", measure);
-            visual?.removeEventListener("scroll", measure);
-            window.removeEventListener("resize", measure);
-        };
-    }, [getDockAnchor, isOpen, panelPresentation]);
-
-    useEffect(() => {
-        if (!isDocked) return;
-        const previous = document.body.style.overflow;
-        document.body.style.overflow = "hidden";
-        return () => { document.body.style.overflow = previous; };
-    }, [isDocked]);
 
     const handleExpand = () => {
         closePanel();
@@ -211,42 +168,12 @@ export default function GraceChatDrawer() {
 
     const userHasInteracted = chipsUsed || messages.some((m) => m.role === "user");
     const showEmptyState = messages.length === 0 && !userHasInteracted;
-    const awaitingDockMeasure = isOpen && panelPresentation === "docked" && !isDocked;
-
-    const dockedStyle = isDocked && dockLayout ? {
-        top: dockLayout.top,
-        height: dockLayout.height,
-        left: 0,
-        right: 0,
-        width: "100%",
-        borderTopLeftRadius: 10,
-        borderTopRightRadius: 10,
-        borderLeft: "1px solid rgba(212, 197, 169, 0.55)",
-        borderTop: "1px solid rgba(212, 197, 169, 0.55)",
-        boxShadow: "0 -8px 32px rgba(29, 29, 31, 0.18)",
-        background: "var(--color-bone)",
-        overflow: "hidden",
-    } as const : null;
-
-    const overlayStyle = {
-        width: surface.mode === "push"
-            ? `${surface.drawerWidth}px`
-            : isMobile
-                ? "100%"
-                : "min(440px, 100vw)",
-        height: "100dvh",
-        background: "var(--color-bone)",
-        borderLeft: "1px solid rgba(212, 197, 169, 0.55)",
-        borderRadius: 0,
-        boxShadow: "-12px 0 48px rgba(29, 29, 31, 0.09)",
-        overflow: "hidden",
-    } as const;
 
     return (
         <AnimatePresence>
-            {isOpen && !awaitingDockMeasure && surface.mode !== "owned" && (
+            {isOpen && surface.mode !== "owned" && (
                 <>
-                    {isOverlay && !isDocked && (
+                    {isOverlay && (
                         <motion.div
                             key="grace-backdrop"
                             initial={false}
@@ -263,39 +190,39 @@ export default function GraceChatDrawer() {
                     <motion.aside
                         key="grace-drawer"
                         initial={false}
-                        animate={isDocked ? { opacity: 1, y: 0 } : { opacity: 1, x: 0 }}
-                        exit={isDocked ? { opacity: 0, y: "100%" } : { opacity: 0, x: "100%" }}
+                        animate={{ opacity: 1, x: 0 }}
+                        exit={{ opacity: 0, x: "100%" }}
                         transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                        className={isDocked ? "fixed z-[61] flex flex-col" : "fixed top-0 right-0 z-[61] flex flex-col"}
-                        style={dockedStyle ?? overlayStyle}
-                        data-testid={isDocked ? "grace-pdp-sheet" : undefined}
-                        data-grace-dock-detent={isDocked ? dockLayout?.detent : undefined}
+                        className="fixed top-0 right-0 z-[61] flex flex-col"
+                        style={{
+                            width: surface.mode === "push"
+                                ? `${surface.drawerWidth}px`
+                                : isMobile
+                                    ? "100%"
+                                    : "min(440px, 100vw)",
+                            height: "100dvh",
+                            background: "var(--color-bone)",
+                            borderLeft: "1px solid rgba(212, 197, 169, 0.55)",
+                            borderRadius: 0,
+                            boxShadow: "-12px 0 48px rgba(29, 29, 31, 0.09)",
+                            overflow: "hidden",
+                        }}
                         role="complementary"
                         aria-label="Grace AI chat"
                     >
                         {/* ── Top bar ─────────────────────────────────── */}
                         <div
                             className="flex items-center justify-between px-4 py-3 shrink-0 relative"
-                            style={{
-                                borderBottom: "1px solid rgba(212, 197, 169, 0.35)",
-                                paddingTop: isDocked ? 18 : undefined,
-                            }}
+                            style={{ borderBottom: "1px solid rgba(212, 197, 169, 0.35)" }}
                         >
-                            {isDocked ? (
-                                <div
-                                    className="absolute left-1/2 top-0 flex h-5 w-16 -translate-x-1/2 cursor-pointer items-end justify-center"
-                                    onClick={handleClose}
-                                >
-                                    <div className="h-1 w-10 rounded-full bg-ash/60 grace-sheet-handle" aria-hidden />
-                                </div>
-                            ) : isMobile ? (
+                            {isMobile && (
                                 <div
                                     className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1.5 cursor-pointer pb-4 pr-4 pl-4"
                                     onClick={handleClose}
                                 >
                                     <div className="w-10 h-1.5 rounded-full bg-white/30 backdrop-blur-md grace-sheet-handle" />
                                 </div>
-                            ) : null}
+                            )}
 
                             <div className="flex items-center gap-2.5">
                                 <GraceMark size={26} />
@@ -338,29 +265,26 @@ export default function GraceChatDrawer() {
                             </div>
                         </div>
 
-                        {!isDocked ? (
-                            <div
-                                className="shrink-0 border-b border-champagne/40 bg-white/60 px-4 py-2.5 text-[11px] leading-snug text-slate"
-                                aria-live="polite"
-                            >
-                                <span className="font-semibold text-obsidian">Seeing:</span>{" "}
-                                {pageMicrocopy || "Best Bottles homepage"}
-                            </div>
-                        ) : null}
+                        <div
+                            className="shrink-0 border-b border-champagne/40 bg-white/60 px-4 py-2.5 text-[11px] leading-snug text-slate"
+                            aria-live="polite"
+                        >
+                            <span className="font-semibold text-obsidian">Seeing:</span>{" "}
+                            {pageMicrocopy || "Best Bottles homepage"}
+                        </div>
 
-                        {!isDocked ? (
-                            <div
-                                className="shrink-0 px-4 py-2 text-center text-[10.5px] italic text-slate"
-                                style={{ background: "rgba(245, 243, 239, 0.6)" }}
-                            >
-                                Grace uses real catalog data. Verify before ordering.
-                            </div>
-                        ) : null}
+                        {/* ── Sub-header disclaimer ───────────────────── */}
+                        <div
+                            className="shrink-0 px-4 py-2 text-center text-[10.5px] italic text-slate"
+                            style={{ background: "rgba(245, 243, 239, 0.6)" }}
+                        >
+                            Grace uses real catalog data. Verify before ordering.
+                        </div>
 
                         {/* ── Body — empty state OR conversation ──────── */}
                         <div className="flex-1 min-h-0 flex flex-col overflow-hidden">
                             {showEmptyState ? (
-                                <EmptyState onChip={handleChipClick} compact={isDocked} />
+                                <EmptyState onChip={handleChipClick} />
                             ) : (
                                 <div className="flex-1 overflow-y-auto px-5 py-4">
                                     {messages.map((msg) => (
@@ -383,7 +307,7 @@ export default function GraceChatDrawer() {
                         {/* ── Composer ────────────────────────────────── */}
                         <div
                             className="shrink-0 px-4 py-3"
-                            style={{ paddingBottom: isDocked || !isMobile ? "max(0.75rem, env(safe-area-inset-bottom))" : "1rem" }}
+                            style={{ paddingBottom: isMobile ? "1rem" : "max(0.75rem, env(safe-area-inset-bottom))" }}
                         >
                             <form
                                 onSubmit={handleSubmit}
@@ -403,7 +327,7 @@ export default function GraceChatDrawer() {
                                     placeholder={
                                         voiceEnabled ? "Listening…" : "Ask Grace anything…"
                                     }
-                                    rows={isDocked ? 1 : 2}
+                                    rows={2}
                                     className="w-full bg-transparent text-[14px] text-obsidian placeholder:text-slate/60 outline-none font-sans resize-none px-3.5 pt-3 pb-2 leading-relaxed"
                                     autoComplete="off"
                                 />
@@ -488,31 +412,26 @@ function IconBtn({
     );
 }
 
-function EmptyState({ onChip, compact = false }: { onChip: (q: string) => void; compact?: boolean }) {
+function EmptyState({ onChip }: { onChip: (q: string) => void }) {
     // Compact spacing — drawer is now PRD-spec 480px tall, so the empty
     // state has to fit hero mark + chips + section label without scroll.
-    const chips = compact
-        ? QUICK_CHIPS.filter((chip) => chip.label !== "Browse families")
-        : QUICK_CHIPS;
     return (
-        <div className={`flex-1 flex flex-col items-center justify-start px-5 ${compact ? "pt-3 pb-2" : "pt-5 pb-3"} overflow-y-auto`}>
-            <GraceMark size={compact ? 36 : 44} glow />
-            <div className={compact ? "mt-2 text-center" : "mt-3 text-center"}>
+        <div className="flex-1 flex flex-col items-center justify-start px-5 pt-5 pb-3 overflow-y-auto">
+            <GraceMark size={44} glow />
+            <div className="mt-3 text-center">
                 <div className="font-serif text-[19px] font-medium text-obsidian tracking-[0.01em] leading-tight">
                     How can I help?
                 </div>
                 <div className="mt-1 text-[11.5px] text-slate leading-relaxed max-w-[300px] mx-auto">
-                    {compact
-                        ? "Ask about fit, case quantities, or a quote for this bottle."
-                        : "Browse families, check fitments, or describe what you're packaging."}
+                    Browse families, check fitments, or describe what you&rsquo;re packaging.
                 </div>
             </div>
 
-            <div className={`${compact ? "mt-3" : "mt-4"} w-full max-w-[340px] flex flex-col gap-1`}>
+            <div className="mt-4 w-full max-w-[340px] flex flex-col gap-1">
                 <div className="text-[9px] font-semibold uppercase tracking-[0.2em] text-slate/80 px-1 mb-0.5">
                     Try asking about
                 </div>
-                {chips.map((chip) => (
+                {QUICK_CHIPS.map((chip) => (
                     <button
                         key={chip.label}
                         onClick={() => onChip(chip.query)}

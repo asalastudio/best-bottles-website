@@ -212,16 +212,6 @@ export interface GraceMessage {
 
 export type PanelMode = "closed" | "strip" | "open";
 
-/** How the open panel is presented. Overlay is the default drawer; docked is
- *  a bottom sheet whose top edge is measured from an anchor (the PDP hero). */
-export type GracePanelPresentation = "overlay" | "docked";
-
-export type GracePanelOpenOptions = {
-    /** When `element` is a live node, Grace docks under its box instead of
-     *  covering the viewport. Callers without an anchor omit this. */
-    anchor?: { element: HTMLElement | null };
-};
-
 // ─── Page context (what the customer is currently viewing) ───────────────────
 
 export interface PageContext {
@@ -314,11 +304,7 @@ export interface GraceContextValue {
     panelMode: PanelMode;
     /** One provider-owned responsive decision shared by the shell and drawer. */
     surface: GraceSurface;
-    /** Overlay drawer, or a docked sheet when the opener passed an anchor. */
-    panelPresentation: GracePanelPresentation;
-    /** Live anchor for the docked sheet; null when overlay. */
-    getDockAnchor: () => HTMLElement | null;
-    openPanel: (options?: GracePanelOpenOptions) => void;
+    openPanel: () => void;
     closePanel: () => void;
     minimizeToStrip: () => void;
     /** Tooltip currently displayed beside the launcher disc, or null. */
@@ -385,8 +371,6 @@ const GRACE_NOOP: GraceContextValue = {
         drawerWidth: 400,
         viewportWidth: 0,
     },
-    panelPresentation: "overlay",
-    getDockAnchor: () => null,
     openPanel: NOOP,
     closePanel: NOOP,
     minimizeToStrip: NOOP,

@@ -177,18 +177,14 @@ describe("mobile PDP wiring", () => {
         expect(purchase).toBeGreaterThan(-1);
         expect(grace).toBeGreaterThan(purchase);
         expect(volume).toBeGreaterThan(grace);
-        expect(mobile).toContain("openPanel({ anchor: { element: heroRef.current } })");
-        expect(mobile).toContain("bringHeroToTop");
-        const mobileOpen = pdp.slice(pdp.indexOf("const openGraceFromMobilePdp"), pdp.indexOf("}, [customerDisplayName"));
-        expect(mobileOpen).not.toContain("openGracePanel");
-        expect(mobileOpen).not.toContain("openGraceFromPdp");
+        expect(mobile).toContain("onClick={onAskGrace}");
+        expect(mobile).not.toContain("openPanel({ anchor");
+        expect(pdp).toContain("openGraceFromPdp();\n    }, [customerDisplayName");
         const drawer = read("src/components/grace/GraceChatDrawer.tsx");
-        expect(drawer).toContain("measureGraceDockedSheet");
-        expect(drawer).toContain('"grace-pdp-sheet"');
-        expect(drawer).toContain("visualViewport");
-        const context = read("src/components/GraceContext.ts");
-        expect(context).toContain("openPanel: (options?: GracePanelOpenOptions) => void");
-        expect(read("src/components/grace/GraceProvider.tsx")).toContain("options?: GracePanelOpenOptions");
+        expect(drawer).toContain('height: "100dvh"');
+        expect(drawer).toContain('background: "rgba(29, 29, 31, 0.35)"');
+        expect(drawer).not.toContain("measureGraceDockedSheet");
+        expect(drawer).not.toContain("visualViewport");
     });
 
     it("hides route chrome only below the breakpoint and only while mounted", () => {
