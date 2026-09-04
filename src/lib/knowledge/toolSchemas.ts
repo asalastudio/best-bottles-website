@@ -129,7 +129,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
     spec("getCurrentPageContext", "Read the customer's current page, product, active Refine state, and cart context."),
     spec("getCartContents", "Read current cart items and totals before proposing additions or moving to checkout."),
     spec("getBrowsingHistory", "Read recent in-session pages and searches to resolve references without asking the customer to repeat them."),
-    spec("showProducts", "Search and move the customer to a verified filtered catalog or a single matching product page.", {
+    spec("showProducts", "Search and move the customer to a verified filtered catalog or a single matching product page. You have this tool even when the chat drawer is open. Never tell the customer to search themselves.", {
         query: string("Natural-language product query."),
         family: nullableString("Exact family constraint, or null."),
     }),
@@ -141,7 +141,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         products: { type: "array", items: productProposal, minItems: 1, maxItems: 12 },
     }),
     spec("proceedToCheckout", "Open the cart review flow after explicit customer intent; never place an order directly and require the customer to confirm checkout in the visible cart."),
-    spec("navigateToPage", "Navigate to a verified Best Bottles path after explicit customer movement intent.", {
+    spec("navigateToPage", "Navigate to a verified Best Bottles path after explicit take-me / go-to / show-me / open intent. You have this tool even when the chat drawer is open. Prefer autoNavigate true. If you cannot move the page, call with autoNavigate false so a tappable link appears — never tell the customer to search themselves.", {
         path: string("Verified site-relative path."),
         title: string("Customer-facing destination title."),
         description: nullableString("Optional destination description, or null."),
@@ -163,7 +163,7 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         value: string("Exact customer-supplied value."),
     }),
     spec("submitForm", "Open the completed draft in a visible review form; never submit the form directly and require the customer to press Submit."),
-    spec("displayProductCard", "Render one verified product inline without navigating away from Grace.", {
+    spec("displayProductCard", "Render one verified product inline. Fallback when you cannot navigate: the customer can tap the card to open that product page. Never tell them to search the catalog themselves.", {
         graceSku: string("Exact Grace SKU returned by a catalog tool."),
     }),
     spec("displayFamilyCard", "Render a verified bottle-family card with selectable variants.", {

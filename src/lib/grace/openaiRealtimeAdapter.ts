@@ -25,6 +25,10 @@ import {
     mergeSessionContextBlocks,
     type CompressibleHistoryItem,
 } from "./sessionCompression";
+import {
+    GRACE_VOICE_ECHO_TAIL_MS,
+    shouldIgnoreVoiceUserTranscript,
+} from "./voiceEchoGuard";
 
 export type GraceConversationMode = "voice" | "text";
 export type GraceRealtimeRole = "user" | "assistant";
@@ -63,7 +67,9 @@ export type GraceRealtimeSessionConfig = {
                 turnDetection: {
                     type: "semantic_vad";
                     eagerness: "auto";
-                    interrupt_response: true;
+                    // Speakerphone echo on phones looks like barge-in. Mute +
+                    // this flag keep Grace from answering her own TTS.
+                    interrupt_response: boolean;
                 };
             };
             output: { voice: typeof GRACE_REALTIME_VOICE };
@@ -79,9 +85,34 @@ export type GraceRealtimeSessionLike = {
     sendMessage(message: string): void;
     updateAgent(agent: unknown): Promise<unknown>;
     updateHistory?(history: CompressibleHistoryItem[] | ((history: CompressibleHistoryItem[]) => CompressibleHistoryItem[])): void;
+    mute?(muted: boolean): void;
     interrupt(): void;
     close(): void;
-};
+}
+
+function muteRealtimeMicrophone(session: GraceRealtimeSessionLike, muted: boolean): void {
+    try {
+        session.mute?.(muted);
+    } catch {
+        // Transport may not expose mute (tests, websocket).
+    }
+}
+
+function assistantTextFromTransportEvent(event: Record<string, unknown>): string | null {
+    if (
+        (event.type === "response.output_audio_transcript.done"
+            || event.type === "response.audio_transcript.done"
+            || event.type === "response.output_text.done")
+        && typeof event.transcript === "string"
+        && event.transcript.trim()
+    ) {
+        return event.transcript.trim();
+    }
+    if (typeof event.text === "string" && event.text.trim() && event.type === "response.output_text.done") {
+        return event.text.trim();
+    }
+    return null;
+}
 
 type GraceRealtimeDependencies = {
     createAgent(config: GraceRealtimeAgentConfig): unknown;
@@ -198,6 +229,15 @@ export function createGraceOpenAIRealtimeAdapter({
     let currentContext = "";
     let catalogNote = "";
     let currentRole: "merchandiser" | "navigator" = "merchandiser";
+    let echoUnmuteTimer: ReturnType<typeof setTimeout> | null = null;
+
+    const releaseMicrophone = (target: GraceRealtimeSessionLike | null) => {
+        if (echoUnmuteTimer) {
+            clearTimeout(echoUnmuteTimer);
+            echoUnmuteTimer = null;
+        }
+        if (target) muteRealtimeMicrophone(target, false);
+    };
 
     const composedContext = () => mergeSessionContextBlocks(currentContext, catalogNote || null);
 
@@ -251,16 +291,48 @@ export function createGraceOpenAIRealtimeAdapter({
 
     const bindEvents = (activeSession: GraceRealtimeSessionLike) => {
         const isCurrentSession = () => session === activeSession;
+        let assistantSpeaking = false;
+        let echoGuardUntil = 0;
+        let lastAssistantText = "";
+
+        const rememberAssistantText = (text: string) => {
+            const trimmed = text.trim();
+            if (trimmed) lastAssistantText = trimmed;
+        };
+
+        const beginSpeakingGuard = () => {
+            assistantSpeaking = true;
+            if (echoUnmuteTimer) {
+                clearTimeout(echoUnmuteTimer);
+                echoUnmuteTimer = null;
+            }
+            muteRealtimeMicrophone(activeSession, true);
+            callbacks.onModeChange?.("speaking");
+        };
+
+        const endSpeakingGuard = () => {
+            assistantSpeaking = false;
+            echoGuardUntil = Date.now() + GRACE_VOICE_ECHO_TAIL_MS;
+            callbacks.onModeChange?.("listening");
+            echoUnmuteTimer = setTimeout(() => {
+                echoUnmuteTimer = null;
+                if (isCurrentSession() && !assistantSpeaking) {
+                    muteRealtimeMicrophone(activeSession, false);
+                }
+            }, GRACE_VOICE_ECHO_TAIL_MS);
+        };
+
         activeSession.on("audio_start", () => {
-            if (isCurrentSession()) callbacks.onModeChange?.("speaking");
+            if (isCurrentSession()) beginSpeakingGuard();
         });
         activeSession.on("audio_stopped", () => {
-            if (isCurrentSession()) callbacks.onModeChange?.("listening");
+            if (isCurrentSession()) endSpeakingGuard();
         });
         activeSession.on("agent_end", (...args: unknown[]) => {
             if (!isCurrentSession()) return;
             const output = args[2];
             if (typeof output === "string" && output.trim()) {
+                rememberAssistantText(output);
                 callbacks.onMessage?.({ role: "assistant", text: output.trim() });
             }
         });
@@ -291,8 +363,22 @@ export function createGraceOpenAIRealtimeAdapter({
                 && typeof event.transcript === "string"
                 && event.transcript.trim()
             ) {
+                if (shouldIgnoreVoiceUserTranscript({
+                    now: Date.now(),
+                    assistantSpeaking,
+                    echoGuardUntil,
+                    transcript: event.transcript,
+                    lastAssistantText,
+                })) {
+                    return;
+                }
                 callbacks.onMessage?.({ role: "user", text: event.transcript.trim() });
                 return;
+            }
+
+            const assistantText = assistantTextFromTransportEvent(event);
+            if (assistantText) {
+                rememberAssistantText(assistantText);
             }
 
             if (
@@ -309,7 +395,10 @@ export function createGraceOpenAIRealtimeAdapter({
     return {
         async connect({ clientSecret, mode }) {
             if (!clientSecret.trim()) throw new Error("A Realtime client secret is required.");
-            if (session) session.close();
+            if (session) {
+                releaseMicrophone(session);
+                session.close();
+            }
 
             currentRole = "merchandiser";
             const agent = createCurrentAgent();
@@ -325,7 +414,7 @@ export function createGraceOpenAIRealtimeAdapter({
                             turnDetection: {
                                 type: "semantic_vad",
                                 eagerness: "auto",
-                                interrupt_response: true,
+                                interrupt_response: false,
                             },
                         },
                         output: { voice: GRACE_REALTIME_VOICE },
@@ -355,6 +444,7 @@ export function createGraceOpenAIRealtimeAdapter({
         },
 
         disconnect() {
+            releaseMicrophone(session);
             session?.close();
             session = null;
             notifyDisconnected();

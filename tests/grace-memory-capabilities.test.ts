@@ -9,6 +9,7 @@ import {
 import {
     GRACE_MERCHANDISER_TOOL_NAMES,
     GRACE_NAVIGATOR_TOOL_NAMES,
+    buildMerchandiserInstructions,
     splitToolsForGraceRole,
 } from "../src/lib/grace/realtimeAgents";
 import { GRACE_OPENAI_TOOL_SPECS } from "../src/lib/knowledge/toolSchemas";
@@ -48,11 +49,20 @@ describe("Grace memory, capabilities, and closed-loop evals", () => {
         expect(merch).toEqual(expect.arrayContaining([...GRACE_MERCHANDISER_TOOL_NAMES]));
         expect(nav).toEqual(expect.arrayContaining([...GRACE_NAVIGATOR_TOOL_NAMES]));
         expect(merch).toContain("searchCatalog");
-        expect(merch).not.toContain("navigateToPage");
+        expect(merch).toContain("navigateToPage");
+        expect(merch).toContain("showProducts");
         expect(nav).toContain("navigateToPage");
         expect(merch).toContain("configureCurrentProduct");
         expect(nav).toContain("configureCurrentProduct");
         expect(nav).not.toContain("searchCatalog");
+    });
+
+    it("tells the merchandiser to navigate take-me requests herself", () => {
+        const instructions = buildMerchandiserInstructions();
+        expect(instructions).toContain("You HAVE navigateToPage");
+        expect(instructions).toContain("Never tell them to search the catalog themselves");
+        expect(instructions).toContain("displayProductCard");
+        expect(instructions).toContain("Hand off to Navigator only for cart");
     });
 
     it("fails the amber/roller script when Grace only dropped a chat card", () => {
