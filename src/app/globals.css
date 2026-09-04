@@ -83,6 +83,9 @@ body {
    The hero carries its own back/cart bar. While a picker is open, freeze the
    page with overflow only — never Radix's position:fixed body lock. */
 @media (max-width: 767px) {
+  html:has(main[data-mobile-pdp]) {
+    overflow-anchor: none;
+  }
   main[data-mobile-pdp] {
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }

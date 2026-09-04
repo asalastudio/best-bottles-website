@@ -8,6 +8,10 @@ import {
     confirmLabelFor,
 } from "@/lib/products/mobile-pdp-config-rows";
 import {
+    mobilePdpToolbarPaddingTop,
+    visualViewportOverlayTop,
+} from "@/lib/products/mobile-pdp-chrome";
+import {
     initialMobilePickerState,
     mobilePickerReducer,
     pickerHasPendingChange,
@@ -44,6 +48,21 @@ describe("mobile PDP view modes", () => {
         expect(preferredViewForPicker("capFinish", "capOff", caps)).toBe("assembled");
         expect(preferredViewForPicker("glass", "capOff", caps)).toBeNull();
         expect(preferredViewForPicker("glass", "dimensions", caps)).toBe("assembled");
+    });
+});
+
+describe("mobile PDP chrome inset", () => {
+    it("ignores invalid visualViewport offsets and rounds a real overlay", () => {
+        expect(visualViewportOverlayTop(undefined)).toBe(0);
+        expect(visualViewportOverlayTop(null)).toBe(0);
+        expect(visualViewportOverlayTop(-12)).toBe(0);
+        expect(visualViewportOverlayTop(Number.NaN)).toBe(0);
+        expect(visualViewportOverlayTop(47.6)).toBe(48);
+    });
+
+    it("pads the toolbar by the larger of a minimum, safe-area, and the Safari overlay", () => {
+        expect(mobilePdpToolbarPaddingTop(0)).toBe("max(0.75rem, env(safe-area-inset-top, 0px), 0px)");
+        expect(mobilePdpToolbarPaddingTop(52)).toBe("max(0.75rem, env(safe-area-inset-top, 0px), 52px)");
     });
 });
 
@@ -236,10 +255,31 @@ describe("mobile PDP wiring", () => {
     it("gives the bottle a real toolbar above the plate so the cap is not under the chrome", () => {
         const hero = read("src/components/products/mobile/MobileProductHero.tsx");
         expect(hero).toContain('data-testid="mobile-pdp-hero-toolbar"');
+        expect(hero).toContain("sticky top-0");
+        expect(hero).toContain("mobilePdpToolbarPaddingTop");
+        expect(hero).toContain("visualViewport");
         expect(hero).not.toContain("pointer-events-none absolute inset-x-2 top-2");
+        expect(mobile).toContain("useLayoutEffect");
+        expect(mobile).toContain('window.history.scrollRestoration = "manual"');
         expect(read("src/app/globals.css")).toContain("body:has(main[data-mobile-pdp]) [data-site-header]");
+        expect(read("src/app/globals.css")).toContain("html:has(main[data-mobile-pdp])");
+        expect(read("src/app/globals.css")).toContain("overflow-anchor: none");
         expect(read("src/app/globals.css")).toContain("html:has(main[data-mobile-picker-open])");
         expect(read("src/app/globals.css")).toContain("overscroll-behavior: none");
+    });
+
+    it("puts configure under the bottle with a heading and Change label, not a spec list", () => {
+        const config = read("src/components/products/mobile/MobileConfigurationSummary.tsx");
+        expect(config).toContain("Configure this bottle");
+        expect(config).toContain("Tap a row to change an option");
+        expect(config).toContain("Change");
+        expect(config).toContain("other option");
+        const view = mobile.indexOf("<ProductViewSelector");
+        const configure = mobile.indexOf("<MobileConfigurationSummary");
+        const title = mobile.indexOf('id="mobile-pdp-title"');
+        expect(view).toBeGreaterThan(-1);
+        expect(configure).toBeGreaterThan(view);
+        expect(title).toBeGreaterThan(configure);
     });
 
     it("never starts a 3D or GLB warm-up for the hidden desktop stage on mobile", () => {

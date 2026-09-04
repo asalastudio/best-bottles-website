@@ -9,7 +9,7 @@
  * hero until the customer confirms.
  */
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
+import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
@@ -362,9 +362,21 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     }, []);
 
     // Catalog → PDP in the app router can keep the grid's scroll offset, which
-    // tucks the bottle under the browser chrome on first land.
-    useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+    // tucks the bottle under the browser chrome on first land. Reset before
+    // paint so the first frame is not already scrolled under Safari.
+    useLayoutEffect(() => {
+        const previous = window.history.scrollRestoration;
+        if ("scrollRestoration" in window.history) {
+            window.history.scrollRestoration = "manual";
+        }
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+        return () => {
+            if ("scrollRestoration" in window.history) {
+                window.history.scrollRestoration = previous;
+            }
+        };
     }, [slug]);
 
     // Safari's dynamic chrome and orientation changes move the hero's edge.
@@ -427,6 +439,10 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             <ProductViewSelector modes={viewModes} activeMode={viewMode} onModeChange={setView} />
 
+            {/* Configure sits under the bottle, before the title, so first-time
+                visitors see that glass / roller / cap are choices — not specs. */}
+            <MobileConfigurationSummary rows={rows} facts={facts} onOpen={openPicker} registerRow={registerRow} />
+
             {/* ── identity + price ─────────────────────────────────────────── */}
             <section className="px-4 pb-4 pt-5" aria-labelledby="mobile-pdp-title">
                 <p className="text-2xs font-semibold uppercase tracking-label text-muted-gold">
@@ -451,8 +467,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                     {resolvedSku ? <div className="flex gap-1.5"><dt className="font-semibold uppercase tracking-label text-2xs">SKU</dt><dd className="text-obsidian">{resolvedSku}</dd></div> : null}
                 </dl>
             </section>
-
-            <MobileConfigurationSummary rows={rows} facts={facts} onOpen={openPicker} registerRow={registerRow} />
 
             {/* ── quantity + add to cart ───────────────────────────────────── */}
             <section ref={cartAnchorRef} className="px-4 pb-6 pt-5" data-testid="mobile-pdp-purchase">

@@ -3,13 +3,16 @@
 /**
  * The permanent product workspace at the top of the mobile PDP. The back/cart
  * bar is a real row above the plate — not an overlay — so the bottle cap is
- * never tucked under the browser chrome or the controls. The plate box keeps
- * a fixed 10:11 ratio so a layer swap or picker opening never moves it.
+ * never tucked under the browser chrome or the controls. Padding tracks
+ * `visualViewport.offsetTop` so iOS Safari's overlay URL bar cannot cover the
+ * cap. The plate box keeps a fixed 10:11 ratio so a layer swap or picker
+ * opening never moves it.
  */
 import Link from "next/link";
-import { forwardRef, type ReactNode } from "react";
+import { forwardRef, useLayoutEffect, useRef, type ReactNode } from "react";
 import { ArrowLeft, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
+import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
 import type { ProductViewMode } from "@/lib/products/mobile-pdp-view-modes";
 
 export type PdpDimensions = {
@@ -75,12 +78,29 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
 ) {
     const showDimensions = viewMode === "dimensions";
     const hasStack = Boolean(plateUrl || kitParts?.length);
+    const toolbarRef = useRef<HTMLDivElement>(null);
+    useLayoutEffect(() => {
+        const el = toolbarRef.current;
+        const viewport = window.visualViewport;
+        if (!el) return;
+        const sync = () => {
+            el.style.paddingTop = mobilePdpToolbarPaddingTop(viewport?.offsetTop ?? 0);
+        };
+        sync();
+        viewport?.addEventListener("resize", sync);
+        viewport?.addEventListener("scroll", sync);
+        return () => {
+            viewport?.removeEventListener("resize", sync);
+            viewport?.removeEventListener("scroll", sync);
+        };
+    }, []);
     return (
         <div ref={ref} data-testid="mobile-pdp-hero" className="relative w-full bg-white">
             <div
+                ref={toolbarRef}
                 data-testid="mobile-pdp-hero-toolbar"
-                className="relative z-10 flex items-center justify-between px-2"
-                style={{ paddingTop: "max(0.5rem, env(safe-area-inset-top, 0px))" }}
+                className="sticky top-0 z-20 flex items-center justify-between border-b border-champagne/60 bg-white px-2 pb-1"
+                style={{ paddingTop: mobilePdpToolbarPaddingTop(0) }}
             >
                 <Link
                     href={backHref}
@@ -107,7 +127,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
             </div>
             <div
                 className="relative mx-auto overflow-hidden"
-                style={{ aspectRatio: "10 / 11", width: "min(100%, calc(46svh * 10 / 11))" }}
+                style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
                 {showDimensions ? (
                     <PdpDimensionsPanel dimensions={dimensions} capacity={capacity} neckSize={neckSize} />
