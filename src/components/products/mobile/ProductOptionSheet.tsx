@@ -19,6 +19,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { useCallback, useEffect, useId, useRef, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
 import { X } from "@/components/icons";
+import { sheetTopCss } from "@/lib/products/mobile-pdp-picker";
 
 const sheetCss = `
 @keyframes bb-option-sheet-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
@@ -53,7 +54,7 @@ export default function ProductOptionSheet({
     const headingRef = useRef<HTMLHeadingElement>(null);
     const drag = useRef<{ startY: number; pointerId: number } | null>(null);
     const hintId = useId();
-    const sheetTop = Math.max(0, Math.round(top));
+    const sheetTop = sheetTopCss(top);
 
     const focusInitial = useCallback((event: Event) => {
         event.preventDefault();
@@ -119,7 +120,7 @@ export default function ProductOptionSheet({
                 <Dialog.Overlay
                     className="fixed inset-x-0 bottom-0 z-[69] bg-transparent"
                     data-testid="mobile-pdp-sheet-overlay"
-                    style={{ top: `${sheetTop}px` }}
+                    style={{ top: sheetTop }}
                 />
                 <Dialog.Content
                     ref={contentRef}
@@ -133,7 +134,7 @@ export default function ProductOptionSheet({
                     onPointerDownOutside={(event) => event.preventDefault()}
                     onInteractOutside={(event) => event.preventDefault()}
                     className="fixed inset-x-0 bottom-0 z-[70] flex flex-col overflow-hidden rounded-t-[10px] border-t border-champagne bg-bone shadow-[0_-8px_32px_rgba(29,29,31,.18)] focus:outline-none"
-                    style={{ top: `${sheetTop}px` }}
+                    style={{ top: sheetTop }}
                 >
                     <div
                         className="shrink-0 touch-none select-none px-4 pb-2 pt-2"

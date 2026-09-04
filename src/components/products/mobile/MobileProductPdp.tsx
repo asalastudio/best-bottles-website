@@ -295,7 +295,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         savedScroll.current = window.scrollY;
         lastPickerRef.current = type;
         window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
-        measureSheetTop();
         dispatch({
             type: "open",
             picker: type,

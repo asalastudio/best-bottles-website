@@ -11,6 +11,7 @@ import {
     initialMobilePickerState,
     mobilePickerReducer,
     pickerHasPendingChange,
+    sheetTopCss,
     sheetTopFromHero,
     type MobilePickerState,
 } from "@/lib/products/mobile-pdp-picker";
@@ -51,6 +52,9 @@ describe("mobile PDP sheet geometry", () => {
         expect(sheetTopFromHero(412, 844)).toBe(412);
         expect(sheetTopFromHero(0, 844)).toBe(Math.round(844 * 0.48));
         expect(sheetTopFromHero(4, 700)).toBe(Math.round(700 * 0.48));
+        expect(sheetTopCss(412)).toBe("412px");
+        expect(sheetTopCss(0)).toBe("48svh");
+        expect(sheetTopCss(4)).toBe("48svh");
     });
 });
 
@@ -210,7 +214,8 @@ describe("mobile PDP wiring", () => {
         expect(sheet).toContain("onOpenChange={(next) => { if (!next) onCancel(); }}");
         expect(sheet).toContain("onPointerDownOutside={(event) => event.preventDefault()}");
         expect(sheet).toContain("onEscapeKeyDown={() => onCancel()}");
-        expect(sheet).toContain("style={{ top: `${sheetTop}px` }}");
+        expect(sheet).toContain("style={{ top: sheetTop }}");
+        expect(sheet).toContain("sheetTopCss");
         expect(sheet).not.toContain("scrollIntoView");
         expect(sheet).not.toContain("inset-0 z-[69]");
     });
@@ -234,6 +239,7 @@ describe("mobile PDP wiring", () => {
         expect(hero).not.toContain("pointer-events-none absolute inset-x-2 top-2");
         expect(read("src/app/globals.css")).toContain("body:has(main[data-mobile-pdp]) [data-site-header]");
         expect(read("src/app/globals.css")).toContain("html:has(main[data-mobile-picker-open])");
+        expect(read("src/app/globals.css")).toContain("overscroll-behavior: none");
     });
 
     it("never starts a 3D or GLB warm-up for the hidden desktop stage on mobile", () => {
