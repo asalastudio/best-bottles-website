@@ -89,6 +89,7 @@ export default function MobileTabBar() {
 
     return (
         <nav
+            data-mobile-tab-bar=""
             className="fixed bottom-0 inset-x-0 z-50 xl:hidden bg-bone/95 backdrop-blur-md border-t border-champagne/60"
             style={{ paddingBottom: "env(safe-area-inset-bottom, 0px)" }}
             role="tablist"

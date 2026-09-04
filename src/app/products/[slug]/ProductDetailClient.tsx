@@ -50,7 +50,9 @@ import {
 } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
+import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import MobileProductPdp from "@/components/products/mobile/MobileProductPdp";
 import {
     createPendingPdpAnalyticsNavigation,
     resolveAndConsumePdpAnalyticsNavigation,
@@ -549,6 +551,13 @@ export interface ProductVariant {
 function canonicalSku(variant: ProductVariant | null | undefined): string | null {
     return variant?.graceSku?.trim() || variant?.websiteSku?.trim() || null;
 }
+
+/** How the guided resolver reads a variant; shared by the desktop commit and the mobile preview. */
+const GUIDED_VARIANT_DEPS: GuidedVariantDeps<ProductVariant> = {
+    sku: canonicalSku,
+    capFinish: (variant) => resolveVariantCapFinish(variant).swatchName,
+    applicator: (variant) => variant.applicator,
+};
 
 export function safePdpReturnPath(value: string | null): string | null {
     if (!value || !value.startsWith("/") || value.startsWith("//") || value.includes("\\")) return null;
@@ -1091,7 +1100,7 @@ export default function ProductDetailClient({
 
     const data = initialData;
 
-    const { addItems } = useCart();
+    const { addItems, itemCount } = useCart();
 
     const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
     const [selectedApplicator, setSelectedApplicator] = useState<string | null>(null);
@@ -1522,6 +1531,56 @@ export default function ProductDetailClient({
         ];
     }, [group, siblingGroups]);
 
+    // The glass colourways this family sells, this group first. One list feeds
+    // the desktop configurator's glass step and the mobile glass picker.
+    const guidedGlassOptions = useMemo(() => {
+        if (!group?.slug) return [];
+        const f = familyForSlugOrDerived(group.slug);
+        if (!f) {
+            return uniqueColorGroups.map((item) => ({
+                id: item.color.toLowerCase(),
+                label: item.color,
+                href: `/products/${item.slug}`,
+                active: item.isActive,
+            }));
+        }
+        if (f.derived) {
+            // the colourways are the sibling groups the catalogue has,
+            // labelled by their own colour, this group first
+            const seen = new Set<string>();
+            const out: Array<{ id: string; label: string; href: string; active: boolean; imageUrl?: string | null }> = [];
+            const push = (slug: string, color: string | null, imageUrl: string | null, active: boolean) => {
+                const token = colourTokenFromSlug(slug) ?? slug;
+                if (seen.has(token)) return;
+                seen.add(token);
+                out.push({ id: PRESET_FOR_COLOUR[token] ?? token, label: color ?? "Clear", href: `/products/${slug}`, active, imageUrl });
+            };
+            push(group.slug, group.color ?? null, group.heroImageUrl ?? null, true);
+            for (const sib of siblingGroups) push(sib.slug, sib.color, null, false);
+            return out;
+        }
+        const token = closureTokenFromSlug(f, group.slug);
+        const current = glassFromSlug(f, group.slug);
+        return f.glasses.flatMap((g) => {
+            const colour = f.slugColour[g];
+            const slug = colour ? f.buildSlug(colour, token) : null;
+            const sibling = sameApplicationGroups.find((candidate) => candidate.slug === slug);
+            if (!slug || !sibling) return [];
+            return [{
+                id: g,
+                label: GLASS_PRESETS[g].label,
+                href: `/products/${slug}`,
+                active: g === current,
+                imageUrl: sibling.heroImageUrl,
+            }];
+        });
+    }, [group?.slug, group?.color, group?.heroImageUrl, siblingGroups, uniqueColorGroups, sameApplicationGroups]);
+
+    // Mobile PDP: the sticky bar hides while a picker is open, and its anchor is
+    // the mobile purchase block (the desktop anchor is display:none below md).
+    const [mobilePickerOpen, setMobilePickerOpen] = useState(false);
+    const mobileCartRef = useRef<HTMLDivElement>(null);
+
 
     const selectedVariantSummary = useMemo(() => {
         if (!selectedVariant || !hasVariantImagePicker) return null;
@@ -1587,13 +1646,9 @@ export default function ProductDetailClient({
             ? rollerTypeOptions.find((option) => (selection.rollerVariant === "metal") === /metal/i.test(option.value))?.value ?? activeApplicator
             : activeApplicator;
         const nextCapOption = selection.capOption ?? activeCapColor;
-        const candidates = variants
-            .filter((variant) => variant.applicator === nextApplicator)
-            .sort((a, b) => (canonicalSku(a) ?? "").localeCompare(canonicalSku(b) ?? ""));
-        const resolved = nextCapOption
-            ? candidates.find((variant) => resolveVariantCapFinish(variant).swatchName === nextCapOption)
-                ?? candidates[0] ?? null
-            : candidates[0] ?? null;
+        // The same rule the mobile picker previews with, so a preview and its
+        // confirmation land on the same variant.
+        const resolved = resolveGuidedVariant(variants, { applicator: nextApplicator, capOption: nextCapOption }, GUIDED_VARIANT_DEPS);
         if (!resolved) return;
 
         setSelectedApplicator(nextApplicator ?? null);
@@ -1740,9 +1795,20 @@ export default function ProductDetailClient({
     useEffect(() => {
         let frame = 0;
         const updateStickyBar = () => {
-            const el = inlineCartRef.current;
+            // Both purchase blocks are mounted; only the one the breakpoint shows
+            // has a box. A display:none anchor has no client rects.
+            const el = [inlineCartRef.current, mobileCartRef.current]
+                .find((candidate): candidate is HTMLDivElement => Boolean(candidate && candidate.getClientRects().length > 0))
+                ?? inlineCartRef.current;
             if (!el) return;
             const rect = el.getBoundingClientRect();
+            if (el === mobileCartRef.current) {
+                // Mobile PDP: one Add to Cart. The purchase block sits directly
+                // under the configuration rows, so a second sticky button only
+                // covers the rows it would lead to.
+                setStickyBarVisible(false);
+                return;
+            }
             const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
             const bottomSafeArea = window.matchMedia("(max-width: 1023px)").matches ? 156 : 0;
             const headerSafeArea = 96;
@@ -1895,14 +1961,60 @@ export default function ProductDetailClient({
     };
 
     return (
-        <main className="min-h-screen bg-bone">
+        <main
+            className="min-h-screen bg-bone"
+            data-mobile-pdp={isFocusedPurchasePdp ? "focused" : undefined}
+            data-mobile-picker-open={isFocusedPurchasePdp && mobilePickerOpen ? "" : undefined}
+        >
             <Navbar hideMobileSearch />
-            <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]">
+            <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]" data-mobile-pdp-frame="">
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
-                <Breadcrumbs steps={breadcrumbsSteps} />
+                <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined}>
+                    <Breadcrumbs steps={breadcrumbsSteps} />
+                </div>
+
+                {/* ── Mobile PDP (below md): product-first, one property at a time.
+                    Both trees are server-rendered and CSS-gated so there is nothing
+                    to mismatch on hydration; the mobile tree only does work on the
+                    mobile viewport and the desktop stage warms nothing there. ── */}
+                {isFocusedPurchasePdp && group.slug ? (
+                    <div className="md:hidden">
+                        <MobileProductPdp
+                            slug={group.slug}
+                            group={group}
+                            variants={variants}
+                            selectedVariant={selectedVariant ?? null}
+                            platesBySku={platesBySku}
+                            selectedKitQuery={selectedKitQuery}
+                            displayName={customerDisplayName}
+                            inStock={inStock}
+                            canAddToCart={canAddToCart}
+                            addedFlash={addedFlash}
+                            onAddToCart={handleAddToCart}
+                            quoteHref={quoteHref}
+                            qty={qty}
+                            onQtyChange={setQty}
+                            cartCount={itemCount}
+                            backHref={safeFrom ?? "/catalog"}
+                            cartAnchorRef={mobileCartRef}
+                            glassOptions={guidedGlassOptions}
+                            rollerOptions={rollerTypeOptions}
+                            activeApplicator={activeApplicator ?? null}
+                            capOptions={capColorOptions}
+                            activeCapOption={activeCapColor}
+                            capOptionPhotoKeys={capOptionPhotoKeys}
+                            resolveCapFinish={resolveVariantCapFinish}
+                            variantSku={canonicalSku}
+                            onCommitVariant={handleGuidedVariantSelection}
+                            onCommitGlass={handleGuidedProductUrlChange}
+                            onPickerOpenChange={setMobilePickerOpen}
+                            volumePricing={<VolumeTeaser variant={selectedVariant} />}
+                        />
+                    </div>
+                ) : null}
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
-                <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
+                <section className={`max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16 ${isFocusedPurchasePdp ? "hidden md:block" : ""}`}>
                     {/* Real purchasable groups with an approved photo or plate share
                         this shell; missing optional media never removes purchase. */}
                     {isFocusedPurchasePdp && group.slug ? (
@@ -1948,50 +2060,7 @@ export default function ProductDetailClient({
                                     setSelectedTrimColor(null);
                                 }}
                                 capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
-                                glassOptions={(() => {
-                                    const f = familyForSlugOrDerived(group.slug ?? "");
-                                    if (!f) {
-                                        return uniqueColorGroups.map((item) => ({
-                                            id: item.color.toLowerCase(),
-                                            label: item.color,
-                                            href: `/products/${item.slug}`,
-                                            active: item.isActive,
-                                        }));
-                                    }
-                                    if (f.derived) {
-                                        // the colourways are the sibling groups the catalogue has,
-                                        // labelled by their own colour, this group first
-                                        const here = colourTokenFromSlug(group.slug ?? "") ?? "clear";
-                                        const seen = new Set<string>();
-                                        const out: Array<{ id: string; label: string; href: string; active: boolean; imageUrl?: string | null }> = [];
-                                        const push = (slug: string, color: string | null, imageUrl: string | null, active: boolean) => {
-                                            const token = colourTokenFromSlug(slug) ?? slug;
-                                            if (seen.has(token)) return;
-                                            seen.add(token);
-                                            out.push({ id: PRESET_FOR_COLOUR[token] ?? token, label: color ?? "Clear",
-                                                       href: `/products/${slug}`, active, imageUrl });
-                                        };
-                                        push(group.slug ?? "", group.color ?? null, group.heroImageUrl ?? null, true);
-                                        for (const sib of siblingGroups) push(sib.slug, sib.color, null, false);
-                                        void here;
-                                        return out;
-                                    }
-                                    const token = closureTokenFromSlug(f, group.slug ?? "");
-                                    const current = glassFromSlug(f, group.slug ?? "");
-                                    return f.glasses.flatMap((g) => {
-                                        const colour = f.slugColour[g];
-                                        const slug = colour ? f.buildSlug(colour, token) : null;
-                                        const sibling = sameApplicationGroups.find((candidate) => candidate.slug === slug);
-                                        if (!slug || !sibling) return [];
-                                        return [{
-                                            id: g,
-                                            label: GLASS_PRESETS[g].label,
-                                            href: `/products/${slug}`,
-                                            active: g === current,
-                                            imageUrl: sibling.heroImageUrl,
-                                        }];
-                                    });
-                                })()}
+                                glassOptions={guidedGlassOptions}
                                 quoteHref={quoteHref}
                                 qty={qty}
                                 onQtyChange={setQty}

@@ -42,6 +42,8 @@ import {
   type PdpStageMode,
 } from "@/lib/products/pdp-stage-modes";
 import type { PdpAnalyticsDimension } from "@/lib/products/pdp-analytics";
+import { decodeImage } from "@/lib/paper-doll/decode-image";
+import { viewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
 
 /** kit slots that come off when the customer lifts the cap; everything else is fitted */
 const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
@@ -116,18 +118,6 @@ const GLASS_TILE: Record<string, string> = {
 };
 
 /** sessionStorage key for the customer's current stage mode. */
-/** Resolve once the bytes are ready to paint. A cached part resolves immediately,
- *  which is why swapping a cap costs one frame and not a fade. */
-function decodeImage(url: string): Promise<void> {
-  return new Promise((resolve, reject) => {
-    const img = new Image();
-    img.decoding = "async";
-    img.onload = () => (img.decode ? img.decode().then(() => resolve(), () => resolve()) : resolve());
-    img.onerror = () => reject(new Error(url));
-    img.src = url;
-  });
-}
-
 const STAGE_MODE_KEY = "bb:pdp-stage";
 
 export default function ConfiguratorPdp({
@@ -288,6 +278,9 @@ export default function ConfiguratorPdp({
   useEffect(() => {
     try {
       const saved = window.sessionStorage.getItem(STAGE_MODE_KEY);
+      // Below the mobile PDP breakpoint this stage is display:none; never
+      // mount a hidden WebGL viewer there (the mobile PDP has no 3D phase).
+      if (saved === "3d" && viewportIsMobile()) return;
       if (saved === "photo" || saved === "3d" || saved === "exploded" || saved === "dimensions") {
         setRequestedStageMode(saved);
       }
@@ -333,6 +326,8 @@ export default function ConfiguratorPdp({
   // hit a loader
   useEffect(() => {
     if (!fam || fam.photoOnly) return;
+    // The mobile PDP never shows 3D: no GLB warming for a stage nobody sees.
+    if (viewportIsMobile()) return;
     const ids = new Set<string>([fam.bodyDefault]);
     for (const g of fam.glasses) {
       const b = fam.bodyForGlass?.[g];
