@@ -1,6 +1,10 @@
 "use client";
 
+import Link from "next/link";
+import type { MouseEvent } from "react";
 import type { GraceAction, ProductCard } from "@/components/GraceContext";
+import { useGrace } from "@/components/useGrace";
+import { isGraceProductPageHref } from "@/lib/grace/agenticHandoff";
 import PatternA_SingleSku from "./patterns/PatternA_SingleSku";
 import PatternB_FamilyCard from "./patterns/PatternB_FamilyCard";
 import PatternC_ComponentsTray from "./patterns/PatternC_ComponentsTray";
@@ -175,6 +179,37 @@ function ProjectSaveProposal({
     );
 }
 
+function GracePageLink({
+    action,
+}: {
+    action: Extract<GraceAction, { type: "navigateToPage" }>;
+}) {
+    const { followSurfacedProduct } = useGrace();
+    const href = action.path;
+    const productHandoff = followSurfacedProduct && isGraceProductPageHref(href)
+        ? (event: MouseEvent<HTMLAnchorElement>) => {
+            event.preventDefault();
+            followSurfacedProduct({ href });
+        }
+        : undefined;
+
+    return (
+        <Link
+            href={href}
+            onClick={productHandoff}
+            data-testid="grace-page-link"
+            data-grace-product-handoff={productHandoff ? "true" : undefined}
+            className="mt-2 inline-flex items-center rounded-[2px] px-3 py-2 text-[13px] font-medium text-obsidian transition-colors hover:text-gold-dim"
+            style={{
+                background: "var(--color-linen)",
+                border: "1px solid rgba(212, 197, 169, 0.55)",
+            }}
+        >
+            {action.title || "Open page"}
+        </Link>
+    );
+}
+
 export default function GraceActionRenderer({ action, onAddToShortlist, tierLabel, onConfirmAction, onDismissAction }: GraceActionRendererProps) {
     switch (action.type) {
         case "displayProductCard":
@@ -267,6 +302,7 @@ export default function GraceActionRenderer({ action, onAddToShortlist, tierLabe
                 />
             );
         case "navigateToPage":
+            return <GracePageLink action={action} />;
         case "prefillForm":
             return null;
 

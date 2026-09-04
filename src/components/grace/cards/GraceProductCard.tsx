@@ -2,7 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import type { MouseEvent } from "react";
 import type { ProductCard } from "@/components/GraceContext";
+import { useGrace } from "@/components/useGrace";
+import { isGraceProductPageHref } from "@/lib/grace/agenticHandoff";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import GraceCtaRow from "./GraceCtaRow";
 
@@ -69,6 +72,13 @@ export default function GraceProductCard({
         variant: product,
         fallbackName: product.itemName,
     }).displayName;
+    const { followSurfacedProduct } = useGrace();
+    const productHandoff = pdpHref && followSurfacedProduct && isGraceProductPageHref(pdpHref)
+        ? (event: MouseEvent<HTMLAnchorElement>) => {
+            event.preventDefault();
+            followSurfacedProduct({ href: pdpHref });
+        }
+        : undefined;
 
     if (mode === "shortlist-tile") {
         return (
@@ -104,6 +114,8 @@ export default function GraceProductCard({
         return (
             <Link
                 href={pdpHref ?? "#"}
+                onClick={productHandoff}
+                data-grace-product-handoff={productHandoff ? "true" : undefined}
                 className="rounded-[2px] overflow-hidden flex flex-col cursor-pointer transition-colors group"
                 style={{
                     background: "var(--color-linen)",
@@ -143,6 +155,8 @@ export default function GraceProductCard({
                 {pdpHref ? (
                     <Link
                         href={pdpHref}
+                        onClick={productHandoff}
+                        data-grace-product-handoff={productHandoff ? "true" : undefined}
                         className="relative shrink-0 rounded-[2px] overflow-hidden bg-travertine cursor-pointer"
                         style={{ width: 84, height: 105 }}
                         title="Open product page"
@@ -166,6 +180,8 @@ export default function GraceProductCard({
                     {linkToPdp && pdpHref ? (
                         <Link
                             href={pdpHref}
+                            onClick={productHandoff}
+                            data-grace-product-handoff={productHandoff ? "true" : undefined}
                             className="font-serif text-[15px] font-medium text-obsidian tracking-[0.01em] leading-tight hover:text-gold-dim transition-colors"
                         >
                             {customerDisplayName}

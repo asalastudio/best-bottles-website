@@ -1772,14 +1772,14 @@ export default function ProductDetailClient({
         analytics.pdpVariantResolved(event);
     }, [activeSlug, primaryVariant, selectedVariant, variantFromUrl]);
 
-    const openGraceFromPdp = useCallback(() => {
+    const openGraceFromPdp = useCallback((options?: { enableVoice?: boolean }) => {
         const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
         analytics.graceOpenedFromShopping({
             source: "pdp",
             ...(group?.family ? { family: group.family } : {}),
             ...(application ? { application } : {}),
         });
-        openGracePanel();
+        openGracePanel({ source: "pdp", enableVoice: options?.enableVoice });
     }, [group?.family, openGracePanel, selectedVariant?.applicator]);
 
     // The mobile PDP hides the tab bar (Grace's usual mobile entry), so its inline
@@ -1791,7 +1791,7 @@ export default function ProductDetailClient({
             ...(customerDisplayName ? { productName: customerDisplayName } : {}),
             ...(group?.family ? { productFamily: group.family } : {}),
         });
-        openGraceFromPdp();
+        openGraceFromPdp({ enableVoice: true });
     }, [customerDisplayName, group?.family, openGraceFromPdp, pathname]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
@@ -1883,7 +1883,7 @@ export default function ProductDetailClient({
                     <h1 className="font-serif text-4xl text-obsidian mb-4">Product currently unavailable</h1>
                     <p className="text-slate mb-8 text-sm">We could not find a purchasable configuration for this product. Grace can help you find the right bottle.</p>
                     <div className="flex flex-wrap justify-center gap-3">
-                        <button type="button" onClick={openGraceFromPdp} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
+                        <button type="button" onClick={() => openGraceFromPdp()} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
                             Ask Grace
                         </button>
                         <Link href="/catalog" className="inline-flex items-center px-6 py-3 border border-obsidian text-obsidian uppercase text-xs font-bold tracking-wider hover:bg-obsidian hover:text-white transition-colors">

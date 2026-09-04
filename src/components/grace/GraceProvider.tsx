@@ -62,6 +62,15 @@ import {
     resolveGraceViewportWidth,
 } from "@/lib/grace/pushLayout";
 import {
+    GRACE_AGENTIC_HANDOFF_MESSAGE,
+    isGraceProductPageHref,
+    resolveCompanionModeOnOpen,
+    shouldAutoNavigateFromGraceTool,
+    shouldEnterAgenticOnProductLink,
+    type GraceCompanionMode,
+    type GraceOpenPanelOptions,
+} from "@/lib/grace/agenticHandoff";
+import {
     buildGraceFinderContext,
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
@@ -101,10 +110,23 @@ function summarizeCapsFromVariants(
     return parts.join(" | ");
 }
 
-function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHistoryEntry[]): string {
+function formatPageContextForGrace(
+    ctx: PageContext | null,
+    history?: BrowsingHistoryEntry[],
+    companion?: { mode: GraceCompanionMode },
+): string {
     if (!ctx) return "";
     const lines: string[] = ["=== CURRENT SESSION CONTEXT ==="];
     if (ctx.pageUrl) lines.push(`URL: ${ctx.pageUrl}`);
+    if (companion?.mode === "agentic") {
+        lines.push(
+            "COMPANION: Agentic mode. The customer tapped a product you surfaced. The chat is hidden and voice is on. You may search and navigate the whole site. You cannot flip the live PDP cap/roller/glass pickers — to change a configuration, navigate to that variant's verified product URL with its exact sku.",
+        );
+    } else if (companion?.mode === "product" && ctx.pageType === "pdp") {
+        lines.push(
+            "COMPANION: Product Q&A. Stay on this PDP. Answer with in-chat cards and links. Do not navigate them away unless they tap a link or explicitly say to take them there.",
+        );
+    }
 
     if (ctx.pageType === "pdp" && ctx.currentProduct) {
         const p = ctx.currentProduct;
@@ -550,8 +572,13 @@ function GraceProviderBase({
 
     // ── Panel state ──────────────────────────────────────────────────────────
     const [panelMode, setPanelMode] = useState<PanelMode>("closed");
+    const [companionMode, setCompanionMode] = useState<GraceCompanionMode>("assist");
+    const companionModeRef = useRef<GraceCompanionMode>("assist");
     const isOpen = panelMode === "open";
+    const enableVoiceFromGestureRef = useRef<() => Promise<void>>(async () => {});
     const [viewportWidth, setViewportWidth] = useState(0);
+    const viewportWidthRef = useRef(0);
+    useEffect(() => { viewportWidthRef.current = viewportWidth; }, [viewportWidth]);
     useEffect(() => {
         const update = () => setViewportWidth(resolveGraceViewportWidth({
             innerWidth: window.innerWidth,
@@ -575,8 +602,14 @@ function GraceProviderBase({
         pushEligible: gracePushEligiblePathname(pathname),
     }), [isOpen, pathname, viewportWidth]);
 
-    const openPanel = useCallback(() => {
+    const openPanel = useCallback((options?: GraceOpenPanelOptions) => {
         setPanelMode("open");
+        const nextMode = resolveCompanionModeOnOpen(companionModeRef.current, options?.source);
+        companionModeRef.current = nextMode;
+        setCompanionMode(nextMode);
+        if (options?.enableVoice) {
+            void enableVoiceFromGestureRef.current();
+        }
     }, []);
 
     const closePanel = useCallback(() => {
@@ -776,7 +809,9 @@ function GraceProviderBase({
 
     /** Push full page intelligence to the Realtime session (retries until session id exists). */
     const sendPageContextToAgent = useCallback(() => {
-        const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current);
+        const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current, {
+            mode: companionModeRef.current,
+        });
         if (!contextBlock) return;
         let attempts = 0;
         const trySend = () => {
@@ -896,15 +931,51 @@ function GraceProviderBase({
     useEffect(() => { closePanelRef.current = closePanel; }, [closePanel]);
 
     const completeGraceNavigation = useCallback((message: string) => {
-        // Keep the companion visible while Grace navigates. The route-aware
-        // shell changes from an overlay on editorial pages to a pushed
-        // workspace on catalog, family, and PDP routes without remounting the
-        // provider or losing conversation state.
+        // Agentic mobile follow-along keeps the overlay hidden so the customer
+        // can see the page she just opened. Other sessions stay visible.
         void message;
+        if (companionModeRef.current === "agentic") {
+            setPanelMode("closed");
+            return;
+        }
         setPanelMode("open");
         setLauncherTooltip(null);
     }, []);
     const completeGraceNavigationRef = useRef(completeGraceNavigation);
+
+    const followSurfacedProduct = useCallback((args: { href: string }) => {
+        const href = args.href.trim();
+        if (!href || href === "#") return;
+
+        if (isGraceProductPageHref(href)) {
+            appendInlineMessage({
+                role: "grace",
+                content: GRACE_AGENTIC_HANDOFF_MESSAGE,
+            });
+            try {
+                conversationRef.current?.sendContextualUpdate(
+                    `The customer just opened a product you recommended. Speak this once, then wait: ${GRACE_AGENTIC_HANDOFF_MESSAGE}`,
+                );
+            } catch {
+                /* session may not be live yet */
+            }
+        }
+
+        if (shouldEnterAgenticOnProductLink({ href, viewportWidth: viewportWidthRef.current })) {
+            companionModeRef.current = "agentic";
+            setCompanionMode("agentic");
+            setPanelMode("closed");
+            setLauncherTooltip({
+                message: GRACE_AGENTIC_HANDOFF_MESSAGE,
+                expiresAt: Date.now() + 7000,
+            });
+            analytics.graceAgenticOpened({ destination: href, source: "product_link" });
+        }
+
+        sessionMetricsRef.current.navigations++;
+        analytics.graceNavigation({ destination: href, triggeredBy: "product_link" });
+        routerRef.current.push(href);
+    }, [appendInlineMessage]);
     useEffect(() => { completeGraceNavigationRef.current = completeGraceNavigation; }, [completeGraceNavigation]);
 
     // ── Client tools ─────────────────────────────────────────────────────────
@@ -1212,6 +1283,13 @@ function GraceProviderBase({
                     return `${sizeWarning} I found confirmed nearby alternatives: ${summary}. Ask whether the customer wants to open those results.`;
                 }
 
+                if (!shouldAutoNavigateFromGraceTool({
+                    mode: companionModeRef.current,
+                    pageType: pageContextRef.current?.pageType,
+                })) {
+                    return `Found ${products.length} options — top matches: ${summary}. I dropped the cards in chat. Stay on this product page until the customer taps one.`;
+                }
+
                 sessionMetricsRef.current.navigations++;
                 analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
                 setTimeout(() => {
@@ -1478,10 +1556,24 @@ function GraceProviderBase({
 
             sessionMetricsRef.current.toolsCalled++;
             sessionMetricsRef.current.toolsUsed.add("navigateToPage");
-            sessionMetricsRef.current.navigations++;
             analytics.graceToolCalled({ toolName: "navigateToPage", success: true });
-            analytics.graceNavigation({ destination: navPath, triggeredBy: "navigateToPage" });
             const navTitle = params.title?.trim() || "where you asked";
+            if (!shouldAutoNavigateFromGraceTool({
+                mode: companionModeRef.current,
+                pageType: pageContextRef.current?.pageType,
+                autoNavigate: params.autoNavigate,
+            })) {
+                pendingActionsRef.current.push({
+                    type: "navigateToPage",
+                    path: navPath,
+                    title: params.title,
+                    description: params.description,
+                    autoNavigate: false,
+                });
+                return `I dropped a link to ${navTitle} in the chat. The customer is still on this product page until they tap it.`;
+            }
+            sessionMetricsRef.current.navigations++;
+            analytics.graceNavigation({ destination: navPath, triggeredBy: "navigateToPage" });
             setTimeout(() => {
                 routerRef.current.push(navPath);
                 completeGraceNavigationRef.current(`Took you to ${navTitle}`);
@@ -2351,7 +2443,9 @@ function GraceProviderBase({
             if (!res.ok) throw new Error(res.error ?? "Failed to initialize OpenAI Realtime.");
             const clientSecret = res.data?.clientSecret;
             if (!clientSecret) throw new Error("OpenAI did not return a valid Realtime client secret.");
-            await openAIAdapter.sendContext(formatPageContextForGrace(page, browsingHistoryRef.current));
+            await openAIAdapter.sendContext(formatPageContextForGrace(page, browsingHistoryRef.current, {
+                mode: companionModeRef.current,
+            }));
             await openAIAdapter.connect({ clientSecret, mode: useTextOnly ? "text" : "voice" });
             console.log("[Grace] Session started successfully.");
             setConversationActive(true);
@@ -2390,6 +2484,8 @@ function GraceProviderBase({
     const endConversation = useCallback(async () => {
         // User-initiated end — disable voice + zero out reconnect budget so
         // handleDisconnect doesn't try to bring the session back.
+        companionModeRef.current = "assist";
+        setCompanionMode("assist");
         voiceEnabledRef.current = false;
         setVoiceEnabled(false);
         reconnectAttemptsRef.current = MAX_RECONNECTS;
@@ -2461,6 +2557,37 @@ function GraceProviderBase({
 
     toggleVoiceRef.current = toggleVoice;
 
+    const enableVoiceFromGesture = useCallback(async () => {
+        if (voiceEnabledRef.current && conversationRef.current?.getId?.()) return;
+
+        setVoiceEnabled(true);
+        voiceEnabledRef.current = true;
+        setErrorMessage("");
+        setVoiceFailed(false);
+
+        if (conversationRef.current?.getId?.()) {
+            intentionalEndRef.current = true;
+            try { await conversationRef.current.endSession(); } catch { /* ignore */ }
+            setConversationActive(false);
+            setGraceStatus("idle");
+            connectingRef.current = false;
+        }
+
+        const success = await startConversation(false);
+        if (!success) {
+            console.warn("[Grace] Voice failed on open, falling back to text mode.");
+            analytics.graceMicFallback({ reason: "voice_session_failed" });
+            setVoiceEnabled(false);
+            voiceEnabledRef.current = false;
+            setVoiceFailed(true);
+            setErrorMessage("Microphone access is blocked. Grace is still available in text mode.");
+            setGraceStatus("idle");
+            connectingRef.current = false;
+            await startConversation(true);
+        }
+    }, [startConversation]);
+    enableVoiceFromGestureRef.current = enableVoiceFromGesture;
+
     // ── Send text message ────────────────────────────────────────────────────
 
     const pendingMessageRef = useRef<string | null>(null);
@@ -2481,7 +2608,9 @@ function GraceProviderBase({
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({
                     messages: history,
-                    pageContextBlock: formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current),
+                    pageContextBlock: formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current, {
+                        mode: companionModeRef.current,
+                    }),
                 }),
             },
             30_000,
@@ -2662,8 +2791,10 @@ function GraceProviderBase({
 
     const contextValue = useMemo((): GraceContextValue => ({
         panelMode,
+        companionMode,
         surface,
         openPanel,
+        followSurfacedProduct,
         closePanel,
         minimizeToStrip,
         launcherTooltip,
@@ -2703,7 +2834,7 @@ function GraceProviderBase({
         pageContext,
         browsingHistory,
     }), [
-        panelMode, surface, openPanel, closePanel, minimizeToStrip, isOpen,
+        panelMode, companionMode, surface, openPanel, followSurfacedProduct, closePanel, minimizeToStrip, isOpen,
         launcherTooltip, minimizeWithTooltip, appendInlineMessage,
         graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
         send, errorMessage, conversationActive, startConversation, endConversation, resetConversation,

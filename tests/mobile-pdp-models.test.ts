@@ -179,7 +179,8 @@ describe("mobile PDP wiring", () => {
         expect(volume).toBeGreaterThan(grace);
         expect(mobile).toContain("onClick={onAskGrace}");
         expect(mobile).not.toContain("openPanel({ anchor");
-        expect(pdp).toContain("openGraceFromPdp();\n    }, [customerDisplayName");
+        expect(pdp).toContain("openGraceFromPdp({ enableVoice: true });");
+        expect(pdp).toContain('openGracePanel({ source: "pdp", enableVoice: options?.enableVoice });');
         const drawer = read("src/components/grace/GraceChatDrawer.tsx");
         expect(drawer).toContain('height: "100dvh"');
         expect(drawer).toContain('background: "rgba(29, 29, 31, 0.35)"');

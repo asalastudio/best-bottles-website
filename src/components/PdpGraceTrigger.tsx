@@ -27,7 +27,7 @@ export default function PdpGraceTrigger() {
         } catch {
             /* ignore */
         }
-        openPanel();
+        openPanel({ source: "pdp" });
     };
 
     return (

@@ -310,6 +310,13 @@ export const analytics = {
     adapter.track("Grace Mobile PDP Opened", properties);
   },
 
+  graceAgenticOpened(properties: {
+    destination: string;
+    source: "product_link";
+  }) {
+    adapter.track("Grace Agentic Opened", properties);
+  },
+
   graceMultiActionRendered(properties: {
     messageId: string;
     actionCount: number;
