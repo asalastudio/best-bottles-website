@@ -11,6 +11,7 @@ import {
     initialMobilePickerState,
     mobilePickerReducer,
     pickerHasPendingChange,
+    sheetTopFromHero,
     type MobilePickerState,
 } from "@/lib/products/mobile-pdp-picker";
 import {
@@ -42,6 +43,14 @@ describe("mobile PDP view modes", () => {
         expect(preferredViewForPicker("capFinish", "capOff", caps)).toBe("assembled");
         expect(preferredViewForPicker("glass", "capOff", caps)).toBeNull();
         expect(preferredViewForPicker("glass", "dimensions", caps)).toBe("assembled");
+    });
+});
+
+describe("mobile PDP sheet geometry", () => {
+    it("uses the hero bottom when it is laid out, otherwise half the viewport", () => {
+        expect(sheetTopFromHero(412, 844)).toBe(412);
+        expect(sheetTopFromHero(0, 844)).toBe(Math.round(844 * 0.48));
+        expect(sheetTopFromHero(4, 700)).toBe(Math.round(700 * 0.48));
     });
 });
 
@@ -197,10 +206,28 @@ describe("mobile PDP wiring", () => {
 
     it("keeps the picker a real modal dialog that cancels on dismissal and never closes from a hero tap", () => {
         expect(sheet).toContain('from "@radix-ui/react-dialog"');
+        expect(sheet).toContain("modal={false}");
         expect(sheet).toContain("onOpenChange={(next) => { if (!next) onCancel(); }}");
         expect(sheet).toContain("onPointerDownOutside={(event) => event.preventDefault()}");
         expect(sheet).toContain("onEscapeKeyDown={() => onCancel()}");
-        expect(sheet).toContain("top: `${Math.max(0, Math.round(top))}px`");
+        expect(sheet).toContain("style={{ top: `${sheetTop}px` }}");
+        expect(sheet).not.toContain("scrollIntoView");
+        expect(sheet).not.toContain("inset-0 z-[69]");
+    });
+
+    it("does not decode a kit on every preview tap", () => {
+        expect(mobile).not.toContain("previewKitQuery");
+        expect(mobile).not.toContain("previewSiblingKitQuery");
+        expect(mobile).toContain("picker.activePicker === \"glass\"");
+        expect(mobile).toContain("const previewing = Boolean");
+    });
+
+    it("gives the bottle a real toolbar above the plate so the cap is not under the chrome", () => {
+        const hero = read("src/components/products/mobile/MobileProductHero.tsx");
+        expect(hero).toContain('data-testid="mobile-pdp-hero-toolbar"');
+        expect(hero).not.toContain("pointer-events-none absolute inset-x-2 top-2");
+        expect(read("src/app/globals.css")).toContain("body:has(main[data-mobile-pdp]) [data-site-header]");
+        expect(read("src/app/globals.css")).toContain("html:has(main[data-mobile-picker-open])");
     });
 
     it("never starts a 3D or GLB warm-up for the hidden desktop stage on mobile", () => {

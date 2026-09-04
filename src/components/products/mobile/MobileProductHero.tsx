@@ -1,10 +1,10 @@
 "use client";
 
 /**
- * The permanent product workspace at the top of the mobile PDP. Fixed
- * dimensions (10:11 plate canvas, capped by viewport height) so a layer swap,
- * a view change, or a picker opening never moves the bottle. Renders the
- * plate/kit stack, or the dimension specification in the same box.
+ * The permanent product workspace at the top of the mobile PDP. The back/cart
+ * bar is a real row above the plate — not an overlay — so the bottle cap is
+ * never tucked under the browser chrome or the controls. The plate box keeps
+ * a fixed 10:11 ratio so a layer swap or picker opening never moves it.
  */
 import Link from "next/link";
 import { forwardRef, type ReactNode } from "react";
@@ -27,11 +27,6 @@ function DimensionRow({ label, value }: { label: string; value: string }) {
     );
 }
 
-/**
- * The three physical measurements, in the hero's box. Neck finish and capacity
- * already sit in the identity block below, so they are not repeated here; the
- * top padding clears the back/cart controls that float over the hero.
- */
 export function PdpDimensionsPanel({ dimensions, capacity, neckSize }: { dimensions: PdpDimensions; capacity?: string | null; neckSize?: string | null }) {
     const rows = [
         dimensions.heightWithCap?.trim() ? { label: "Height with cap", value: dimensions.heightWithCap } : null,
@@ -40,8 +35,7 @@ export function PdpDimensionsPanel({ dimensions, capacity, neckSize }: { dimensi
     ].filter((row): row is { label: string; value: string } => row !== null);
     return (
         <div
-            className="flex h-full w-full flex-col justify-center bg-linen px-6 pb-6"
-            style={{ paddingTop: "calc(3.75rem + env(safe-area-inset-top, 0px))" }}
+            className="flex h-full w-full flex-col justify-center bg-linen px-6 py-6"
             data-testid="mobile-pdp-dimensions"
         >
             <p className="text-2xs font-semibold uppercase tracking-label text-muted-gold">Dimensions</p>
@@ -84,29 +78,15 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
     return (
         <div ref={ref} data-testid="mobile-pdp-hero" className="relative w-full bg-white">
             <div
-                className="relative mx-auto overflow-hidden"
-                style={{ aspectRatio: "10 / 11", width: "min(100%, calc(52svh * 10 / 11))" }}
+                data-testid="mobile-pdp-hero-toolbar"
+                className="relative z-10 flex items-center justify-between px-2"
+                style={{ paddingTop: "max(0.5rem, env(safe-area-inset-top, 0px))" }}
             >
-                {showDimensions ? (
-                    <PdpDimensionsPanel dimensions={dimensions} capacity={capacity} neckSize={neckSize} />
-                ) : hasStack ? (
-                    <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} />
-                ) : fallbackImageUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={fallbackImageUrl} alt={alt} className="absolute inset-0 h-full w-full object-contain" />
-                ) : (
-                    <div className="absolute inset-0 bg-linen" aria-hidden />
-                )}
-            </div>
-
-            {/* The standard header is gone on this route, so the route back to
-                browsing and the cart live on the hero. 44px targets. */}
-            <div className="pointer-events-none absolute inset-x-2 top-2 flex items-start justify-between" style={{ paddingTop: "env(safe-area-inset-top, 0px)" }}>
                 <Link
                     href={backHref}
                     aria-label="Back to catalog"
                     data-testid="mobile-pdp-back"
-                    className="pointer-events-auto flex h-11 w-11 items-center justify-center rounded-full bg-bone/90 text-obsidian shadow-sm backdrop-blur transition-colors hover:bg-bone focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                    className="flex h-11 w-11 items-center justify-center rounded-full bg-bone text-obsidian transition-colors hover:bg-linen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
                 >
                     <ArrowLeft className="h-5 w-5" weight="regular" aria-hidden />
                 </Link>
@@ -115,7 +95,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                     onClick={onOpenCart}
                     aria-label={cartCount > 0 ? `Open cart, ${cartCount} ${cartCount === 1 ? "item" : "items"}` : "Open cart"}
                     data-testid="mobile-pdp-cart"
-                    className="pointer-events-auto relative flex h-11 w-11 items-center justify-center rounded-full bg-bone/90 text-obsidian shadow-sm backdrop-blur transition-colors hover:bg-bone focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                    className="relative flex h-11 w-11 items-center justify-center rounded-full bg-bone text-obsidian transition-colors hover:bg-linen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
                 >
                     <ShoppingBag className="h-5 w-5" weight="regular" aria-hidden />
                     {cartCount > 0 ? (
@@ -125,7 +105,22 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                     ) : null}
                 </button>
             </div>
-            {overlay}
+            <div
+                className="relative mx-auto overflow-hidden"
+                style={{ aspectRatio: "10 / 11", width: "min(100%, calc(46svh * 10 / 11))" }}
+            >
+                {showDimensions ? (
+                    <PdpDimensionsPanel dimensions={dimensions} capacity={capacity} neckSize={neckSize} />
+                ) : hasStack ? (
+                    <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} />
+                ) : fallbackImageUrl ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={fallbackImageUrl} alt={alt} className="absolute inset-0 h-full w-full object-contain object-center" />
+                ) : (
+                    <div className="absolute inset-0 bg-linen" aria-hidden />
+                )}
+                {overlay}
+            </div>
         </div>
     );
 });

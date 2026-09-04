@@ -78,3 +78,13 @@ export function pickerHasPendingChange(state: MobilePickerState): boolean {
         && state.previewSelectionId !== null
         && state.previewSelectionId !== state.committedSelectionId;
 }
+
+/**
+ * The sheet's top edge is the hero's bottom. If the hero has not been laid
+ * out yet (first open, iOS chrome collapsing), fall back to ~half the
+ * viewport so the sheet never covers the whole screen at `top: 0`.
+ */
+export function sheetTopFromHero(heroBottom: number, viewportHeight: number): number {
+    if (heroBottom > 8) return Math.round(heroBottom);
+    return Math.round(Math.max(120, viewportHeight * 0.48));
+}
