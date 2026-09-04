@@ -223,6 +223,16 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         phone: nullableString("Customer phone already supplied, or null."),
         message: nullableString("Customer quote notes already supplied, or null."),
     }),
+    spec("getProductMeasurements", "Return published physical measurements for one exact SKU: height with/without cap, diameter, width, depth, neck thread, and measurementSource. REQUIRED before stating a dimension. A miss means that SKU has no published measurements — do not invent millimeters.", {
+        sku: string("Exact Grace or website SKU returned by a catalog tool."),
+    }),
+    spec("getSiteCapabilities", "Return what Grace can and cannot do on the current page: navigation, cap/roller plate swaps, glass/applicator URL changes, kits, payment, and agentic follow-along. REQUIRED before claiming a capability."),
+    spec("rememberCustomerNote", "Store a short structured memory note for this customer: a brand/use-case profile, a correction they just made, or the last destination you moved them to. Never store payment data or personal identifiers.", {
+        kind: string("One of profile, correction, or destination."),
+        text: string("Short note in the customer's words, or a destination title."),
+        href: nullableString("Site-relative path when kind is destination, or null."),
+        sku: nullableString("Verified SKU for a destination note, or null."),
+    }),
     spec("listGraceProjects", "List the authenticated customer's existing Grace packaging projects; guests must be invited to sign in."),
     spec("proposeProjectSave", "Prepare a confirmation-gated save of one verified bottle to an authenticated Grace project; this tool must never write directly.", {
         graceSku: string("Exact verified Grace SKU to save."),

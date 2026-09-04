@@ -33,6 +33,9 @@ const EXISTING_GRACE_TOOLS = [
     "configureCurrentProduct",
     "setCatalogRefinements",
     "prepareQuoteRequest",
+    "getProductMeasurements",
+    "getSiteCapabilities",
+    "rememberCustomerNote",
     "listGraceProjects",
     "proposeProjectSave",
 ] as const;

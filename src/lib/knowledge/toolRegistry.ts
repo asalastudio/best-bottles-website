@@ -79,6 +79,9 @@ const TOOL_POLICIES = {
     configureCurrentProduct: propose(NAVIGATION_PROPOSAL),
     setCatalogRefinements: propose(NAVIGATION_PROPOSAL),
     prepareQuoteRequest: propose(CART_PROPOSAL),
+    getProductMeasurements: read(CATALOG_READ),
+    getSiteCapabilities: read(CATALOG_READ, CUSTOMER_SURFACES),
+    rememberCustomerNote: propose(NAVIGATION_PROPOSAL),
     listGraceProjects: read(["customer_project.read.self"], CUSTOMER_SURFACES),
     proposeProjectSave: propose(["customer_project.write.self"], CUSTOMER_SURFACES),
 } satisfies Record<GraceOpenAIToolName, PolicyWithoutSchema>;

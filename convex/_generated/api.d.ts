@@ -31,6 +31,8 @@ import type * as gracePrompt from "../gracePrompt.js";
 import type * as graceRateLimits from "../graceRateLimits.js";
 import type * as graceSearchUtils from "../graceSearchUtils.js";
 import type * as graceShortlists from "../graceShortlists.js";
+import type * as graceMemory from "../graceMemory.js";
+import type * as graceSessionTraces from "../graceSessionTraces.js";
 import type * as graceToolDefs from "../graceToolDefs.js";
 import type * as graceUploads from "../graceUploads.js";
 import type * as imageCleanup from "../imageCleanup.js";
@@ -89,6 +91,8 @@ declare const fullApi: ApiFromModules<{
   graceRateLimits: typeof graceRateLimits;
   graceSearchUtils: typeof graceSearchUtils;
   graceShortlists: typeof graceShortlists;
+  graceMemory: typeof graceMemory;
+  graceSessionTraces: typeof graceSessionTraces;
   graceToolDefs: typeof graceToolDefs;
   graceUploads: typeof graceUploads;
   imageCleanup: typeof imageCleanup;

@@ -52,6 +52,12 @@ import {
     type GraceRealtimeToolImplementations,
 } from "@/lib/grace/openaiRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
+import { formatGraceMemoryLines, normalizeRememberNoteKind, type GraceMemoryNote } from "@/lib/grace/memoryNotes";
+import { buildGraceSiteCapabilities } from "@/lib/grace/siteCapabilities";
+import {
+    buildCatalogSessionNote,
+    shouldCompressAfterCatalogResult,
+} from "@/lib/grace/sessionCompression";
 import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
 import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
 import {
@@ -122,7 +128,7 @@ function summarizeCapsFromVariants(
 function formatPageContextForGrace(
     ctx: PageContext | null,
     history?: BrowsingHistoryEntry[],
-    companion?: { mode: GraceCompanionMode },
+    companion?: { mode: GraceCompanionMode; memory?: GraceMemoryNote | null },
 ): string {
     if (!ctx) return "";
     const lines: string[] = ["=== CURRENT SESSION CONTEXT ==="];
@@ -210,6 +216,8 @@ function formatPageContextForGrace(
             }
         }
     }
+
+    lines.push(...formatGraceMemoryLines(companion?.memory));
 
     lines.push("=== END CONTEXT ===");
     return lines.join("\n");
@@ -568,12 +576,64 @@ function GraceProviderBase({
     const submitFormMutation = useMutation(api.forms.submit);
     const createShortlistMutation = useMutation(api.graceShortlists.create);
     const mintShortlistShareTokenMutation = useMutation(api.graceShortlists.mintShareToken);
+    const upsertMemoryMutation = useMutation(api.graceMemory.upsertNote);
+    const recordSessionTraceMutation = useMutation(api.graceSessionTraces.record);
+    const memoryNote = useQuery(api.graceMemory.getByOwner, { ownerKey: getAnonOwnerKey() });
     const submitFormRef = useRef(submitFormMutation);
     useEffect(() => { submitFormRef.current = submitFormMutation; }, [submitFormMutation]);
     const createShortlistRef = useRef(createShortlistMutation);
     const mintShortlistShareTokenRef = useRef(mintShortlistShareTokenMutation);
     useEffect(() => { createShortlistRef.current = createShortlistMutation; }, [createShortlistMutation]);
     useEffect(() => { mintShortlistShareTokenRef.current = mintShortlistShareTokenMutation; }, [mintShortlistShareTokenMutation]);
+    const upsertMemoryRef = useRef(upsertMemoryMutation);
+    const recordSessionTraceRef = useRef(recordSessionTraceMutation);
+    const memoryNoteRef = useRef(memoryNote ?? null);
+    useEffect(() => { upsertMemoryRef.current = upsertMemoryMutation; }, [upsertMemoryMutation]);
+    useEffect(() => { recordSessionTraceRef.current = recordSessionTraceMutation; }, [recordSessionTraceMutation]);
+    useEffect(() => { memoryNoteRef.current = memoryNote ?? null; }, [memoryNote]);
+    const openAIAdapterRef = useRef<GraceOpenAIRealtimeAdapter | null>(null);
+    const catalogCallsSinceCompressRef = useRef(0);
+    const sessionStartedAtRef = useRef(0);
+    const sessionTraceRef = useRef<{
+        sessionId: string;
+        tools: Array<{ name: string; at: number; ok: boolean; summary?: string }>;
+        destinations: Array<{ href: string; at: number }>;
+    }>({ sessionId: "", tools: [], destinations: [] });
+
+    const rememberDestination = useCallback((href: string, title: string, sku?: string) => {
+        sessionTraceRef.current.destinations.push({ href, at: Date.now() });
+        void upsertMemoryRef.current({
+            ownerKey: getAnonOwnerKey(),
+            kind: "destination",
+            text: title,
+            href,
+            sku,
+        }).catch((error: unknown) => {
+            console.warn("[Grace] memory destination failed", error);
+        });
+    }, []);
+
+    const noteCatalogTool = useCallback((toolName: string, summary: string, resultCount?: number, ok = true) => {
+        sessionTraceRef.current.tools.push({
+            name: toolName,
+            at: Date.now(),
+            ok,
+            summary: summary.slice(0, 240),
+        });
+        catalogCallsSinceCompressRef.current += 1;
+        if (!shouldCompressAfterCatalogResult({
+            resultChars: summary.length,
+            catalogCallsSinceCompress: catalogCallsSinceCompressRef.current,
+        })) {
+            return;
+        }
+        catalogCallsSinceCompressRef.current = 0;
+        void openAIAdapterRef.current?.compressSession(buildCatalogSessionNote({
+            toolName,
+            summary,
+            resultCount,
+        }));
+    }, []);
 
     // ── Panel state ──────────────────────────────────────────────────────────
     const [panelMode, setPanelMode] = useState<PanelMode>("closed");
@@ -818,6 +878,7 @@ function GraceProviderBase({
     const sendPageContextToAgent = useCallback(() => {
         const contextBlock = formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current, {
             mode: companionModeRef.current,
+            memory: memoryNoteRef.current,
         });
         if (!contextBlock) return;
         let attempts = 0;
@@ -998,11 +1059,12 @@ function GraceProviderBase({
         }
 
         enterAgenticFollowAlong(href, "product_link");
+        rememberDestination(href, "the bottle they tapped");
 
         sessionMetricsRef.current.navigations++;
         analytics.graceNavigation({ destination: href, triggeredBy: "product_link" });
         routerRef.current.push(href);
-    }, [announceDestinationToAgent, appendInlineMessage, enterAgenticFollowAlong]);
+    }, [announceDestinationToAgent, appendInlineMessage, enterAgenticFollowAlong, rememberDestination]);
     useEffect(() => { completeGraceNavigationRef.current = completeGraceNavigation; }, [completeGraceNavigation]);
 
     // ── Client tools ─────────────────────────────────────────────────────────
@@ -1048,6 +1110,7 @@ function GraceProviderBase({
                             suggestedQueries: data.result.suggestedQueries?.join(", "),
                         });
                     }
+                    noteCatalogTool("searchCatalog", data.result.message, undefined, data.result.status === "ok");
                     return data.result.message;
                 }
                 if (typeof data.result === "string") {
@@ -1059,6 +1122,7 @@ function GraceProviderBase({
                         family: params.familyLimit,
                         success: !data.result.startsWith("No products found"),
                     });
+                    noteCatalogTool("searchCatalog", data.result);
                     return data.result;
                 }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
@@ -1086,7 +1150,9 @@ function GraceProviderBase({
                         headline: graceTileHeadline(params.searchTerm),
                     });
                 }
-                return `Found ${products.length} products.${sizeNote ? ` ${sizeNote}` : ""} Top matches: ${summary}`;
+                const found = `Found ${products.length} products.${sizeNote ? ` ${sizeNote}` : ""} Top matches: ${summary}`;
+                noteCatalogTool("searchCatalog", found, products.length);
+                return found;
             } catch (e) { console.error("[Grace] searchCatalog:", e); return "Search failed. Please try again."; }
         },
 
@@ -1096,7 +1162,9 @@ function GraceProviderBase({
                 if (data.error) return `${data.error} I could not load the ${params.family} family details.`;
                 if (!data.result) return `No data found for the ${params.family} family.`;
                 const v = data.result as { sizes?: Array<{ label: string }>; colors?: string[]; applicatorTypes?: string[]; threadSizes?: string[] };
-                return `${params.family} family — Sizes: ${(v.sizes || []).map((s) => s.label).join(", ")}. Colors: ${(v.colors || []).join(", ")}. Applicators: ${(v.applicatorTypes || []).join(", ")}. Thread sizes: ${(v.threadSizes || []).join(", ")}.`;
+                const overview = `${params.family} family — Sizes: ${(v.sizes || []).map((s) => s.label).join(", ")}. Colors: ${(v.colors || []).join(", ")}. Applicators: ${(v.applicatorTypes || []).join(", ")}. Thread sizes: ${(v.threadSizes || []).join(", ")}.`;
+                noteCatalogTool("getFamilyOverview", overview);
+                return overview;
             } catch (e) { console.error("[Grace] getFamilyOverview:", e); return "Lookup failed."; }
         },
 
@@ -1152,7 +1220,9 @@ function GraceProviderBase({
                 const data = await callGraceServerTool<Record<string, unknown>>("getProductBySku", { sku });
                 if (data.error) return `${data.error} I could not look up that SKU.`;
                 if (!data.result) return `No catalog record matches "${sku}" as written. Do not say we don't carry it — offer to search by description or have the team verify the code.`;
-                return JSON.stringify(data.result);
+                const payload = JSON.stringify(data.result);
+                noteCatalogTool("getProductBySku", payload);
+                return payload;
             } catch (e) { console.error("[Grace] getProductBySku:", e); return "SKU lookup failed."; }
         },
 
@@ -1626,6 +1696,7 @@ function GraceProviderBase({
             if (isGraceProductPageHref(navPath)) {
                 enterAgenticFollowAlong(navPath, "voice_navigation");
             }
+            rememberDestination(navPath, navTitle);
             setTimeout(() => {
                 routerRef.current.push(navPath);
                 completeGraceNavigationRef.current(`Took you to ${navTitle}`);
@@ -2206,6 +2277,57 @@ function GraceProviderBase({
             return `Updating the bottle they are looking at (${bits.join(", ")}). The bottle stays still; only the requested plate layer changes.`;
         },
 
+        getProductMeasurements: async (params: { sku?: string | null }) => {
+            const sku = (params?.sku ?? "").trim();
+            if (!sku) return "No SKU provided. Ask the customer for the exact code.";
+            try {
+                const data = await callGraceServerTool<Record<string, unknown>>("getProductMeasurements", { sku });
+                if (data.error) return `${data.error} I could not load measurements for that SKU.`;
+                if (!data.result) return `No published measurements for "${sku}". Do not invent millimeters.`;
+                const payload = JSON.stringify(data.result);
+                noteCatalogTool("getProductMeasurements", payload);
+                return payload;
+            } catch (e) {
+                console.error("[Grace] getProductMeasurements:", e);
+                return "Measurement lookup failed.";
+            }
+        },
+
+        getSiteCapabilities: async () => {
+            const capabilities = buildGraceSiteCapabilities({
+                pageType: pageContextRef.current?.pageType,
+                companionMode: companionModeRef.current,
+            });
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("getSiteCapabilities");
+            return JSON.stringify(capabilities);
+        },
+
+        rememberCustomerNote: async (params: { kind?: string | null; text?: string | null; href?: string | null; sku?: string | null }) => {
+            const kind = normalizeRememberNoteKind(params.kind);
+            const text = (params.text ?? "").trim();
+            if (!kind || !text) return "A kind (profile, correction, or destination) and a short note are required.";
+            try {
+                await upsertMemoryRef.current({
+                    ownerKey: getAnonOwnerKey(),
+                    kind,
+                    text,
+                    href: params.href ?? undefined,
+                    sku: params.sku ?? undefined,
+                });
+                sessionTraceRef.current.tools.push({
+                    name: "rememberCustomerNote",
+                    at: Date.now(),
+                    ok: true,
+                    summary: `${kind}: ${text.slice(0, 120)}`,
+                });
+                return `Saved the ${kind} note.`;
+            } catch (e) {
+                console.error("[Grace] rememberCustomerNote:", e);
+                return "I could not save that note.";
+            }
+        },
+
         // ── End provider-neutral client tools ───────────────────────────────
     }), []);
 
@@ -2216,6 +2338,15 @@ function GraceProviderBase({
         setGraceStatus("listening");
         setConversationActive(true);
         sessionMetricsRef.current = { toolsCalled: 0, toolsUsed: new Set(), cartItemsAdded: 0, navigations: 0 };
+        sessionStartedAtRef.current = Date.now();
+        catalogCallsSinceCompressRef.current = 0;
+        sessionTraceRef.current = {
+            sessionId: typeof crypto !== "undefined" && typeof crypto.randomUUID === "function"
+                ? crypto.randomUUID()
+                : `grace-${Date.now()}`,
+            tools: [],
+            destinations: [],
+        };
         const ctx = pageContextRef.current;
         analytics.graceConversationStarted({
             pageType: ctx?.pageType ?? "unknown",
@@ -2269,6 +2400,26 @@ function GraceProviderBase({
             cartItemsAdded: m.cartItemsAdded,
             navigationsTriggered: m.navigations,
         });
+        const trace = sessionTraceRef.current;
+        if (trace.sessionId) {
+            void recordSessionTraceRef.current({
+                ownerKey: getAnonOwnerKey(),
+                sessionId: trace.sessionId,
+                startedAt: sessionStartedAtRef.current || Date.now(),
+                endedAt: Date.now(),
+                companionMode: companionModeRef.current,
+                lastPageUrl: ctx?.pageUrl,
+                tools: trace.tools,
+                destinations: trace.destinations,
+                metrics: {
+                    toolsCalled: m.toolsCalled,
+                    cartItemsAdded: m.cartItemsAdded,
+                    navigations: m.navigations,
+                },
+            }).catch((error: unknown) => {
+                console.warn("[Grace] session trace persist failed", error);
+            });
+        }
         setConversationActive(false);
         setStreamingText("");
         setIsAwaitingReply(false);
@@ -2489,6 +2640,10 @@ function GraceProviderBase({
         }),
     [clientTools, handleAgentChatResponsePart, handleConnect, handleDisconnect, handleError, handleMessage, handleModeChange, userId]);
 
+    useEffect(() => {
+        openAIAdapterRef.current = openAIAdapter;
+    }, [openAIAdapter]);
+
     // Close the exact adapter created for the previous Clerk identity. Without
     // adapter-scoped cleanup, a guest-to-customer transition can orphan an
     // active WebRTC connection and microphone stream.
@@ -2538,6 +2693,7 @@ function GraceProviderBase({
             if (!clientSecret) throw new Error("OpenAI did not return a valid Realtime client secret.");
             await openAIAdapter.sendContext(formatPageContextForGrace(page, browsingHistoryRef.current, {
                 mode: companionModeRef.current,
+                memory: memoryNoteRef.current,
             }));
             await openAIAdapter.connect({ clientSecret, mode: useTextOnly ? "text" : "voice" });
             console.log("[Grace] Session started successfully.");
@@ -2703,6 +2859,7 @@ function GraceProviderBase({
                     messages: history,
                     pageContextBlock: formatPageContextForGrace(pageContextRef.current, browsingHistoryRef.current, {
                         mode: companionModeRef.current,
+                        memory: memoryNoteRef.current,
                     }),
                 }),
             },
