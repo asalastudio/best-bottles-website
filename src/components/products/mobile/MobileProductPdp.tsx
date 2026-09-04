@@ -57,10 +57,9 @@ const ROLLER_NOTES: Array<[RegExp, string]> = [
 const chromeCss = `
 @media (max-width: 767px){
 [data-site-header],[data-mobile-tab-bar]{display:none}
-main[data-mobile-pdp]{padding-bottom:calc(4.5rem + env(safe-area-inset-bottom,0px))}
+main[data-mobile-pdp]{padding-bottom:env(safe-area-inset-bottom,0px)}
 main[data-mobile-pdp] > [data-mobile-pdp-frame]{padding-top:0}
-main[data-mobile-pdp] [data-testid="pdp-sticky-cart-bar"]{bottom:env(safe-area-inset-bottom,0px)}
-main[data-mobile-pdp][data-mobile-picker-open] [data-testid="pdp-sticky-cart-bar"]{display:none}
+main[data-mobile-pdp] [data-testid="pdp-sticky-cart-bar"]{display:none}
 }`;
 
 export type MobileGlassOption = { id: string; label: string; href: string; active: boolean; imageUrl?: string | null };

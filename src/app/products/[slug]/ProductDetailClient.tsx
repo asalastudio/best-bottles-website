@@ -1802,6 +1802,13 @@ export default function ProductDetailClient({
                 ?? inlineCartRef.current;
             if (!el) return;
             const rect = el.getBoundingClientRect();
+            if (el === mobileCartRef.current) {
+                // Mobile PDP: one Add to Cart. The purchase block sits directly
+                // under the configuration rows, so a second sticky button only
+                // covers the rows it would lead to.
+                setStickyBarVisible(false);
+                return;
+            }
             const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
             const bottomSafeArea = window.matchMedia("(max-width: 1023px)").matches ? 156 : 0;
             const headerSafeArea = 96;
