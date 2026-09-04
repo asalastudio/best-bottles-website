@@ -1,7 +1,12 @@
 import { readFileSync } from "node:fs";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { isCheckoutReady, splitCheckoutItems } from "../src/lib/checkout";
-import { resolveChargedUnitPrice, resolveQuotedUnitPrice, VOLUME_TIERS_HONORED_AT_CHECKOUT } from "../src/lib/volumePricing";
+import {
+    resolveChargedUnitPrice,
+    resolveQuotedUnitPrice,
+    resolveVolumeTierUnitPrice,
+    VOLUME_TIERS_HONORED_AT_CHECKOUT,
+} from "../src/lib/volumePricing";
 
 /**
  * Regression guards for the 2026-07-29 launch audit findings:
@@ -59,6 +64,23 @@ describe("Shopify sellability gate", () => {
 
 describe("volume pricing honesty", () => {
     const prices = { webPrice1pc: 0.35, webPrice10pc: 0.23, webPrice12pc: null };
+    const cylinderPrices = {
+        webPrice1pc: 1.04,
+        webPrice10pc: null,
+        webPrice12pc: 0.99,
+        priceTiers: [
+            { minQty: 1, unitPrice: 1.04 },
+            { minQty: 12, unitPrice: 0.99 },
+            { minQty: 144, unitPrice: 0.94 },
+            { minQty: 288, unitPrice: 0.88 },
+            { minQty: 1440, unitPrice: 0.81 },
+        ],
+    };
+
+    afterEach(() => {
+        vi.unstubAllEnvs();
+        vi.resetModules();
+    });
 
     it("defaults to NOT claiming Shopify honors quantity breaks", () => {
         expect(VOLUME_TIERS_HONORED_AT_CHECKOUT).toBe(false);
@@ -73,6 +95,21 @@ describe("volume pricing honesty", () => {
     it("still exposes the quoted tier price for display", () => {
         expect(resolveQuotedUnitPrice(10, prices)).toBe(0.23);
         expect(resolveQuotedUnitPrice(1, prices)).toBe(0.35);
+    });
+
+    it("resolves every published live-site tier instead of stopping at 10/12", () => {
+        expect(resolveVolumeTierUnitPrice(143, cylinderPrices)).toBe(0.99);
+        expect(resolveVolumeTierUnitPrice(144, cylinderPrices)).toBe(0.94);
+        expect(resolveQuotedUnitPrice(288, cylinderPrices)).toBe(0.88);
+        expect(resolveQuotedUnitPrice(1440, cylinderPrices)).toBe(0.81);
+    });
+
+    it("charges from the complete ladder when checkout tier honoring is enabled", async () => {
+        vi.resetModules();
+        vi.stubEnv("NEXT_PUBLIC_VOLUME_TIERS_HONORED_AT_CHECKOUT", "true");
+        const enabledPolicy = await import("../src/lib/volumePricing");
+
+        expect(enabledPolicy.resolveChargedUnitPrice(1440, cylinderPrices)).toBe(0.81);
     });
 
     it("labels the PDP ladder as quote pricing while tiers are unhonored", () => {

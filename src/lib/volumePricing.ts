@@ -1,9 +1,10 @@
 /**
  * Volume-tier pricing policy.
  *
- * The catalog carries three price points per SKU (webPrice1pc / webPrice10pc /
- * webPrice12pc). Shopify's cart-permalink checkout, however, charges the flat
- * variant price — it has no knowledge of our quantity breaks.
+ * The catalog carries the complete published `priceTiers` ladder plus legacy
+ * webPrice1pc / webPrice10pc / webPrice12pc columns. Shopify's cart-permalink
+ * checkout, however, charges the flat variant price — it has no knowledge of
+ * our quantity breaks.
  *
  * Verified against production on 2026-07-29:
  *   PKG-BOX-WHT-4X4X4 — PDP advertised $0.23/ea at 10+ ("save 34%")
@@ -26,6 +27,7 @@ export interface TierPrices {
     webPrice1pc?: number | null;
     webPrice10pc?: number | null;
     webPrice12pc?: number | null;
+    priceTiers?: PublishedTier[] | null;
 }
 
 export type PublishedTier = {
@@ -107,11 +109,7 @@ export function resolveChargedUnitPrice(quantity: number, prices: TierPrices): n
     const p1 = prices.webPrice1pc ?? null;
     if (!VOLUME_TIERS_HONORED_AT_CHECKOUT) return p1;
 
-    const p10 = prices.webPrice10pc ?? null;
-    const p12 = prices.webPrice12pc ?? null;
-    if (p12 != null && quantity >= 12) return p12;
-    if (p10 != null && quantity >= 10) return p10;
-    return p1;
+    return resolveVolumeTierUnitPrice(quantity, prices);
 }
 
 /**
@@ -119,7 +117,27 @@ export function resolveChargedUnitPrice(quantity: number, prices: TierPrices): n
  * display only. Never feed this into a Shopify checkout total.
  */
 export function resolveQuotedUnitPrice(quantity: number, prices: TierPrices): number | null {
+    return resolveVolumeTierUnitPrice(quantity, prices);
+}
+
+/**
+ * Resolve the published unit rate at a quantity from the complete site-truth
+ * ladder. Older rows without `priceTiers` retain the 10/12-column fallback.
+ */
+export function resolveVolumeTierUnitPrice(quantity: number, prices: TierPrices): number | null {
     const p1 = prices.webPrice1pc ?? null;
+    const published = (prices.priceTiers ?? [])
+        .filter((tier) =>
+            Number.isFinite(tier.minQty)
+            && tier.minQty >= 1
+            && Number.isFinite(tier.unitPrice)
+            && tier.unitPrice > 0
+            && tier.minQty <= quantity
+        )
+        .sort((a, b) => a.minQty - b.minQty);
+    const activePublished = published[published.length - 1];
+    if (activePublished) return activePublished.unitPrice;
+
     const p10 = prices.webPrice10pc ?? null;
     const p12 = prices.webPrice12pc ?? null;
     if (p12 != null && quantity >= 12) return p12;
