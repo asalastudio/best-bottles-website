@@ -25,19 +25,73 @@ export function buildGraceFinderContext(pathname: string, params: URLSearchParam
     };
 }
 
-export function mergePdpContextChange<T extends { pathname: string }>(
+export function parseGracePageUrl(pageUrl: string): { pathname: string; sku: string | null } {
+    try {
+        const parsed = new URL(pageUrl, "https://bestbottles.local");
+        return {
+            pathname: parsed.pathname,
+            sku: parsed.searchParams.get("sku")?.trim() || null,
+        };
+    } catch {
+        const [path = "", query = ""] = pageUrl.split("?");
+        const sku = new URLSearchParams(query).get("sku")?.trim() || null;
+        return { pathname: path, sku };
+    }
+}
+
+/** Same PDP identity even when `from`, `qty`, or other extra params differ. */
+export function pdpContextUrlsAlign(contextUrl: string, eventUrl: string): boolean {
+    const context = parseGracePageUrl(contextUrl);
+    const event = parseGracePageUrl(eventUrl);
+    if (context.pathname !== event.pathname) return false;
+    if (context.sku && event.sku) return context.sku === event.sku;
+    return true;
+}
+
+export function mergePdpContextChange<T extends { pathname: string; pageUrl?: string }>(
     context: T,
     change: PdpContextChange,
 ): T | (T & { pdpSelection: PdpContextChange }) {
-    if (!("pageUrl" in context) || typeof context.pageUrl !== "string" || context.pageUrl !== change.pageUrl) {
-        return context;
-    }
-    const eventPathname = new URL(change.pageUrl, "https://bestbottles.local").pathname;
+    const contextUrl = typeof context.pageUrl === "string" ? context.pageUrl : context.pathname;
+    if (!pdpContextUrlsAlign(contextUrl, change.pageUrl)) return context;
+    const eventPathname = parseGracePageUrl(change.pageUrl).pathname;
     if (eventPathname !== context.pathname) return context;
     return {
         ...context,
         pdpSelection: change,
     };
+}
+
+export function formatGraceNowViewingLines(args: {
+    productName?: string;
+    family?: string;
+    capacity?: string;
+    glass?: string;
+    applicator?: string;
+    applicatorTypes?: string[];
+    rollerMaterial?: "metal" | "plastic";
+    finish?: string;
+    selectedWebsiteSku?: string;
+    primarySku?: string;
+    pageUrl?: string;
+}): string[] {
+    const lines = ["NOW VIEWING (this is the current bottle — previous pages are history):"];
+    if (args.productName) lines.push(`  Product: ${args.productName}`);
+    if (args.family || args.capacity) {
+        lines.push(`  Family: ${args.family ?? ""} | Size: ${args.capacity ?? ""}`.replace(/\s+\|/g, " |").trim());
+    }
+    if (args.glass) lines.push(`  Glass on screen: ${args.glass}`);
+    if (args.applicator) lines.push(`  Applicator on screen: ${args.applicator}`);
+    if (args.rollerMaterial) lines.push(`  Roller: ${args.rollerMaterial}`);
+    if (args.finish) lines.push(`  Cap finish: ${args.finish}`);
+    if (args.selectedWebsiteSku) lines.push(`  Selected website SKU: ${args.selectedWebsiteSku}`);
+    else if (args.primarySku) lines.push(`  Primary SKU for tools: ${args.primarySku}`);
+    if (args.pageUrl) lines.push(`  URL: ${args.pageUrl}`);
+    if (args.applicatorTypes?.length) {
+        lines.push(`  Other applicators in this group (not what is on screen unless listed above): ${args.applicatorTypes.join(", ")}`);
+    }
+    lines.push("  Glass color and applicator (roller vs fine mist vs pump) are different product pages. Call navigateToPage or showProducts to go there. configureCurrentProduct only swaps the cap/roller plate on THIS page.");
+    return lines;
 }
 
 export function dispatchPdpContextChange(change: PdpContextChange): void {

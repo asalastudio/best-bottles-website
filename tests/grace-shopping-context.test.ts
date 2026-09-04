@@ -2,7 +2,9 @@ import { readFileSync } from "node:fs";
 import { describe, expect, it } from "vitest";
 import {
     buildGraceFinderContext,
+    formatGraceNowViewingLines,
     mergePdpContextChange,
+    pdpContextUrlsAlign,
     resolveGraceRecommendationHref,
     resolveGraceDirectHitHref,
     resolveVerifiedGracePdpHref,
@@ -62,6 +64,37 @@ describe("Grace shopping context", () => {
 
         expect(mergePdpContextChange(current, staleQuery)).toEqual(current);
         expect(mergePdpContextChange(current, prefixRelated)).toEqual(current);
+        expect(pdpContextUrlsAlign(
+            "/products/cylinder-9ml-amber-17-415-rollon?sku=WEB&from=/catalog",
+            "/products/cylinder-9ml-amber-17-415-rollon?sku=WEB",
+        )).toBe(true);
+        expect(mergePdpContextChange({
+            pathname: "/products/cylinder-9ml",
+            pageUrl: "/products/cylinder-9ml?sku=CURRENT&from=/catalog",
+        }, {
+            websiteSku: "CURRENT",
+            application: "Metal Roll-On Ball",
+            pageUrl: "/products/cylinder-9ml?sku=CURRENT",
+        })).toMatchObject({
+            pdpSelection: { websiteSku: "CURRENT", application: "Metal Roll-On Ball" },
+        });
+    });
+
+    it("names the bottle on screen so a previous sprayer is not treated as current", () => {
+        const lines = formatGraceNowViewingLines({
+            productName: "Cylinder 9 ml Amber Roll-On",
+            family: "Cylinder",
+            capacity: "9 ml",
+            glass: "Amber",
+            applicator: "Metal Roller Ball",
+            applicatorTypes: ["Metal Roller Ball", "Plastic Roller Ball"],
+            selectedWebsiteSku: "GBCylAmb9RollGld",
+            pageUrl: "/products/cylinder-9ml-amber-17-415-rollon?sku=GBCylAmb9RollGld",
+        });
+        expect(lines.join("\n")).toContain("NOW VIEWING");
+        expect(lines.join("\n")).toContain("Glass on screen: Amber");
+        expect(lines.join("\n")).toContain("Applicator on screen: Metal Roller Ball");
+        expect(lines.join("\n")).toContain("different product pages");
     });
 
     it("redelivers PDP context when an unchanged selection receives a current URL", () => {
@@ -70,8 +103,11 @@ describe("Grace shopping context", () => {
 
         expect(productClient).toContain("pageUrl: change.pageUrl");
         expect(productClient).toContain("[group?.color, selectedPdpPageUrl, selectedVariant]");
+        expect(productClient).toContain("lastGracePdpContextSignature.current = null");
         expect(provider).toContain("const pageUrlRef = useRef(pageUrl);\n    pageUrlRef.current = pageUrl;");
-        expect(provider).toContain("current?.pageUrl === pageUrl ? current : null");
+        expect(provider).toContain("pdpContextUrlsAlign(pageUrl, current.pageUrl)");
+        expect(provider).toContain("announceDestinationToAgent");
+        expect(provider).toContain("PAGE CHANGE:");
         expect(provider).not.toContain("pdpContextChange.pageUrl.startsWith(pathname)");
     });
 

@@ -1,11 +1,11 @@
 /**
- * Mobile Grace companion: product Q&A stays in chat until the customer taps
- * a product she surfaced. That tap hides the drawer, opens the PDP, and
- * unlocks agentic site navigation. Voice is approved when Grace opens.
+ * Mobile Grace companion: product Q&A can stay in chat for options, but an
+ * explicit "take me there" must move the page. A product-link tap or a voice
+ * navigation to another PDP hides the drawer and unlocks agentic follow-along.
+ * Voice is approved when Grace opens from the mobile PDP.
  *
- * Grace cannot drive the live PDP pickers (cap, roller, glass). Those commits
- * stay on the page. A same-slug `?sku=` navigation is how a different
- * configuration reaches the customer — the same path the picker already uses.
+ * Cap / roller plate swaps stay on the current PDP. Glass color and applicator
+ * (roller vs sprayer vs pump) are different product URLs — those are navigation.
  */
 
 export type GraceCompanionMode = "assist" | "product" | "agentic";
@@ -49,14 +49,55 @@ export function isExplicitAutoNavigate(value: boolean | string | null | undefine
     return value === true || value === "true";
 }
 
+export function isExplicitStayInChat(value: boolean | string | null | undefined): boolean {
+    return value === false || value === "false";
+}
+
+export function parseGraceDestination(href: string): { pathname: string; sku: string | null } {
+    const [path = "", query = ""] = href.split("?");
+    const sku = new URLSearchParams(query).get("sku")?.trim() || null;
+    return { pathname: path.split("#")[0] ?? "", sku };
+}
+
+export function isDifferentGraceDestination(currentPageUrl: string | undefined, destination: string): boolean {
+    const current = parseGraceDestination(currentPageUrl ?? "");
+    const next = parseGraceDestination(destination);
+    if (!next.pathname) return false;
+    if (current.pathname !== next.pathname) return true;
+    if (next.sku && current.sku && next.sku !== current.sku) return true;
+    return false;
+}
+
 export function shouldAutoNavigateFromGraceTool(args: {
     mode: GraceCompanionMode;
     pageType: string | undefined;
     autoNavigate?: boolean | string | null;
+    currentPageUrl?: string;
+    destination?: string;
 }): boolean {
+    if (isExplicitStayInChat(args.autoNavigate)) return false;
     if (isExplicitAutoNavigate(args.autoNavigate)) return true;
-    if (shouldKeepPdpAnswersInChat(args.mode, args.pageType)) return false;
-    return true;
+    if (args.mode === "agentic" || args.mode === "assist") return true;
+    if (
+        shouldKeepPdpAnswersInChat(args.mode, args.pageType)
+        && args.destination
+        && isDifferentGraceDestination(args.currentPageUrl, args.destination)
+    ) {
+        return true;
+    }
+    return !shouldKeepPdpAnswersInChat(args.mode, args.pageType);
+}
+
+/** Product-mode showProducts may leave the PDP only for a different product URL. */
+export function shouldAutoNavigateShowProducts(args: {
+    mode: GraceCompanionMode;
+    pageType: string | undefined;
+    currentPageUrl?: string;
+    destination: string;
+}): boolean {
+    if (args.mode === "agentic" || args.mode === "assist") return true;
+    return isGraceProductPageHref(args.destination)
+        && isDifferentGraceDestination(args.currentPageUrl, args.destination);
 }
 
 export function shouldEnterAgenticOnProductLink(args: {
@@ -64,6 +105,13 @@ export function shouldEnterAgenticOnProductLink(args: {
     viewportWidth: number;
 }): boolean {
     return isGraceProductPageHref(args.href) && isGraceMobileViewport(args.viewportWidth);
+}
+
+export function shouldEnterAgenticOnVoiceNavigation(args: {
+    href: string;
+    viewportWidth: number;
+}): boolean {
+    return shouldEnterAgenticOnProductLink(args);
 }
 
 /** Agentic Grace stays listening; the overlay hides so the destination is visible. */

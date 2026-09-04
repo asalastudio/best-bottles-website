@@ -312,7 +312,7 @@ export const analytics = {
 
   graceAgenticOpened(properties: {
     destination: string;
-    source: "product_link";
+    source: "product_link" | "voice_navigation";
   }) {
     adapter.track("Grace Agentic Opened", properties);
   },

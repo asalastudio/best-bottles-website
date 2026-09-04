@@ -1150,7 +1150,15 @@ export default function ProductDetailClient({
             setSelectedCapComponentSku(null);
             return;
         }
-        if (!variantFromUrl) return;
+        if (!variantFromUrl) {
+            setSelectedVariantId(null);
+            setSelectedApplicator(null);
+            setSelectedCapColor(null);
+            setSelectedCapStyle(null);
+            setSelectedTrimColor(null);
+            setSelectedCapComponentSku(null);
+            return;
+        }
         const finish = resolveVariantCapFinish(variantFromUrl);
         setSelectedVariantId(variantFromUrl._id);
         setSelectedApplicator(variantFromUrl.applicator ?? null);
@@ -1759,6 +1767,9 @@ export default function ProductDetailClient({
     }, [customerDisplayName, selectedVariant]);
 
     const lastGracePdpContextSignature = useRef<string | null>(null);
+    useEffect(() => {
+        lastGracePdpContextSignature.current = null;
+    }, [activeSlug]);
     useEffect(() => {
         if (!selectedVariant?.websiteSku || typeof window === "undefined") return;
         const rollerMaterial = /metal/i.test(selectedVariant.applicator ?? "")

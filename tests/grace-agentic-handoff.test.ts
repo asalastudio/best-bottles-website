@@ -10,7 +10,10 @@ import {
     resolveCompanionModeOnOpen,
     shouldAutoNavigateFromGraceTool,
     shouldEnterAgenticOnProductLink,
+    shouldAutoNavigateShowProducts,
+    shouldEnterAgenticOnVoiceNavigation,
     shouldKeepPdpAnswersInChat,
+    isDifferentGraceDestination,
 } from "@/lib/grace/agenticHandoff";
 
 describe("Grace mobile agentic handoff", () => {
@@ -21,7 +24,7 @@ describe("Grace mobile agentic handoff", () => {
         expect(isGraceProductPageHref("/")).toBe(false);
     });
 
-    it("keeps PDP Q&A in chat until the customer taps a product she surfaced", () => {
+    it("keeps PDP Q&A in chat unless they ask to go to a different product", () => {
         expect(shouldKeepPdpAnswersInChat("product", "pdp")).toBe(true);
         expect(shouldAutoNavigateFromGraceTool({ mode: "product", pageType: "pdp" })).toBe(false);
         expect(shouldAutoNavigateFromGraceTool({
@@ -29,8 +32,40 @@ describe("Grace mobile agentic handoff", () => {
             pageType: "pdp",
             autoNavigate: true,
         })).toBe(true);
+        expect(shouldAutoNavigateFromGraceTool({
+            mode: "product",
+            pageType: "pdp",
+            currentPageUrl: "/products/cylinder-9ml-clear-17-415-finemist",
+            destination: "/products/cylinder-9ml-amber-17-415-rollon?sku=WEB-AMB",
+        })).toBe(true);
+        expect(shouldAutoNavigateFromGraceTool({
+            mode: "product",
+            pageType: "pdp",
+            autoNavigate: false,
+            destination: "/products/cylinder-9ml-amber-17-415-rollon",
+        })).toBe(false);
         expect(shouldAutoNavigateFromGraceTool({ mode: "agentic", pageType: "pdp" })).toBe(true);
         expect(shouldAutoNavigateFromGraceTool({ mode: "assist", pageType: "catalog" })).toBe(true);
+        expect(isDifferentGraceDestination(
+            "/products/cylinder-9ml-clear-17-415-finemist",
+            "/products/cylinder-9ml-amber-17-415-rollon",
+        )).toBe(true);
+        expect(shouldAutoNavigateShowProducts({
+            mode: "product",
+            pageType: "pdp",
+            currentPageUrl: "/products/cylinder-9ml-clear-17-415-finemist",
+            destination: "/products/cylinder-9ml-amber-17-415-rollon?sku=WEB-AMB",
+        })).toBe(true);
+        expect(shouldAutoNavigateShowProducts({
+            mode: "product",
+            pageType: "pdp",
+            currentPageUrl: "/products/cylinder-9ml-clear-17-415-finemist",
+            destination: "/catalog?search=amber+roller&grace=1",
+        })).toBe(false);
+        expect(shouldEnterAgenticOnVoiceNavigation({
+            href: "/products/cylinder-9ml-amber-17-415-rollon",
+            viewportWidth: 390,
+        })).toBe(true);
     });
 
     it("opens from a PDP in product mode and never downgrades an agentic session", () => {
