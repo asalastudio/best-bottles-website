@@ -181,7 +181,7 @@ export default function ProductOptionSheet({
                             onClick={onConfirm}
                             disabled={confirmDisabled}
                             data-testid="mobile-pdp-sheet-confirm"
-                            className="flex min-h-12 w-full items-center justify-center rounded-[3px] bg-obsidian px-4 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-muted-gold disabled:cursor-not-allowed disabled:opacity-40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                            className="flex min-h-12 w-full touch-manipulation cursor-pointer items-center justify-center rounded-[3px] bg-obsidian px-4 text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-muted-gold active:scale-[0.99] disabled:cursor-not-allowed disabled:opacity-40 disabled:active:scale-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
                         >
                             {confirmLabel}
                         </button>

@@ -1243,7 +1243,7 @@ export default function ProductDetailClient({
             applicatorOptions[0] ??
             (hasCapClosure ? "Cap/Closure" : null);
     const variantsForApplicator = useMemo(
-        () => variants.filter((v) => v.applicator === activeApplicator),
+        () => variants.filter((v) => (v.applicator ?? null) === (activeApplicator ?? null)),
         [variants, activeApplicator]
     );
 
@@ -1251,7 +1251,7 @@ export default function ProductDetailClient({
     const capColorOptions = useMemo(() => {
         const seen = new Set<string>();
         return variants
-            .filter((v) => v.applicator === activeApplicator)
+            .filter((v) => (v.applicator ?? null) === (activeApplicator ?? null))
             .map((v) => resolveVariantCapFinish(v).swatchName)
             .filter((c) => {
                 if (seen.has(c)) return false;
@@ -1266,13 +1266,13 @@ export default function ProductDetailClient({
     const capOptionPhotoKeys = useMemo(
         () => buildCapOptionPhotoKeys(
             capColorOptions,
-            variants.filter((v) => v.applicator === activeApplicator),
+            variants.filter((v) => (v.applicator ?? null) === (activeApplicator ?? null)),
             (v) => resolveVariantCapFinish(v).swatchName,
         ),
         [capColorOptions, variants, activeApplicator],
     );
 
-    const primaryCapColor = primaryVariant?.applicator === activeApplicator
+    const primaryCapColor = primaryVariant && (primaryVariant.applicator ?? null) === (activeApplicator ?? null)
         ? resolveVariantCapFinish(primaryVariant).swatchName
         : null;
     const activeCapColor = selectedCapColor ?? (primaryCapColor && capColorOptions.includes(primaryCapColor) ? primaryCapColor : null) ?? capColorOptions[0] ?? null;
@@ -1283,7 +1283,7 @@ export default function ProductDetailClient({
         return variants
             .filter(
                 (v) =>
-                    v.applicator === activeApplicator &&
+                    (v.applicator ?? null) === (activeApplicator ?? null) &&
                     resolveVariantCapFinish(v).swatchName === activeCapColor,
             )
             .map((v) => v.capStyle)
@@ -1295,7 +1295,8 @@ export default function ProductDetailClient({
             });
     }, [variants, activeApplicator, activeCapColor]);
 
-    const primaryCapStyle = primaryVariant?.applicator === activeApplicator &&
+    const primaryCapStyle = primaryVariant &&
+        (primaryVariant.applicator ?? null) === (activeApplicator ?? null) &&
         resolveVariantCapFinish(primaryVariant).swatchName === activeCapColor
         ? primaryVariant.capStyle
         : null;
@@ -1306,7 +1307,7 @@ export default function ProductDetailClient({
         const seen = new Set<string>();
         return variants
             .filter((v) =>
-                v.applicator === activeApplicator &&
+                (v.applicator ?? null) === (activeApplicator ?? null) &&
                 resolveVariantCapFinish(v).swatchName === activeCapColor &&
                 (capStyleOptions.length === 0 || v.capStyle === activeCapStyle)
             )
@@ -1318,7 +1319,8 @@ export default function ProductDetailClient({
             });
     }, [variants, activeApplicator, activeCapColor, activeCapStyle, capStyleOptions]);
 
-    const primaryTrimColor = primaryVariant?.applicator === activeApplicator &&
+    const primaryTrimColor = primaryVariant &&
+        (primaryVariant.applicator ?? null) === (activeApplicator ?? null) &&
         resolveVariantCapFinish(primaryVariant).swatchName === activeCapColor &&
         (capStyleOptions.length === 0 || primaryVariant.capStyle === activeCapStyle)
         ? primaryVariant.trimColor || "Standard"
@@ -1328,7 +1330,7 @@ export default function ProductDetailClient({
     // Resolved variant — 4-way match with graceful fallback
     const selectedVariant = useMemo(() => {
         const explicit = variantFromUrl ?? (selectedVariantId
-            ? variantsForApplicator.find((v) => v._id === selectedVariantId)
+            ? variants.find((v) => v._id === selectedVariantId) ?? null
             : null);
         if (explicit) return explicit;
         const hasPlate = (v: ProductVariant) =>
@@ -1345,13 +1347,13 @@ export default function ProductDetailClient({
             const next = pool.filter(keep);
             return next.length > 0 ? next : pool;
         };
-        let pool = variants.filter((v) => v.applicator === activeApplicator);
+        let pool = variants.filter((v) => (v.applicator ?? null) === (activeApplicator ?? null));
         if (pool.length === 0) pool = variants;
         pool = narrow(pool, (v) => resolveVariantCapFinish(v).swatchName === activeCapColor);
         if (selectedCapStyle) pool = narrow(pool, (v) => v.capStyle === selectedCapStyle);
         if (selectedTrimColor) pool = narrow(pool, (v) => (v.trimColor || "Standard") === selectedTrimColor);
         return pool.find(hasPlate) ?? pool.find((v) => usableProductImageUrl(v.imageUrl)) ?? pool[0] ?? variants[0] ?? null;
-    }, [variants, variantsForApplicator, selectedVariantId, variantFromUrl, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
+    }, [variants, selectedVariantId, variantFromUrl, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
 
     // the plate for the selected SKU (productPlates index), by graceSku then websiteSku
     // first and websiteSku second -- the two keys the plate manifests carry
@@ -1655,10 +1657,10 @@ export default function ProductDetailClient({
         return `/products/${activeSlug}?${params.toString()}`;
     }, [activeSlug, qty, safeFrom]);
 
-    const handleGuidedVariantSelection = useCallback((selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => {
-        const nextApplicator = selection.rollerVariant
+    const handleGuidedVariantSelection = useCallback((selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => {
+        const nextApplicator = selection.applicator ?? (selection.rollerVariant
             ? rollerTypeOptions.find((option) => (selection.rollerVariant === "metal") === /metal/i.test(option.value))?.value ?? activeApplicator
-            : activeApplicator;
+            : activeApplicator);
         const nextCapOption = selection.capOption ?? activeCapColor;
         // The same rule the mobile picker previews with, so a preview and its
         // confirmation land on the same variant.
@@ -1688,10 +1690,17 @@ export default function ProductDetailClient({
     const handleGuidedProductUrlChange = useCallback((href: string) => {
         const target = new URL(href, "https://bestbottles.local");
         if (!target.pathname.startsWith("/products/")) return;
+        if (selectedVariant && !target.searchParams.has("sku")) {
+            const sku = canonicalSku(selectedVariant);
+            if (sku) target.searchParams.set("sku", sku);
+            const finish = resolveVariantCapFinish(selectedVariant);
+            if (finish.swatchName) target.searchParams.set("cap", finish.swatchName);
+            if (selectedVariant.applicator) target.searchParams.set("applicator", selectedVariant.applicator);
+        }
         if (safeFrom) target.searchParams.set("from", safeFrom);
         if (qty > 1) target.searchParams.set("qty", String(qty));
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
-    }, [qty, router, safeFrom]);
+    }, [qty, router, safeFrom, selectedVariant]);
 
     useEffect(() => {
         const onPlate = (event: Event) => {

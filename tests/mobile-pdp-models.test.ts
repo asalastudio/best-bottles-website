@@ -287,4 +287,19 @@ describe("mobile PDP wiring", () => {
         expect(configurator).toContain('if (saved === "3d" && viewportIsMobile()) return;');
         expect(configurator).toContain("if (viewportIsMobile()) return;\n    const ids = new Set<string>([fam.bodyDefault]);");
     });
+
+    it("removes obstructive previewing badge and prevents confirm button disablement", () => {
+        expect(mobile).toContain("overlay={null}");
+        expect(mobile).not.toContain("Previewing ·");
+        expect(mobile).toContain("confirmDisabled={!activeRow}");
+        expect(mobile).not.toContain("previewSibling?.pending");
+        expect(sheet).toContain("touch-manipulation");
+        expect(sheet).toContain("data-testid=\"mobile-pdp-sheet-confirm\"");
+    });
+
+    it("commits chosen option reliably and passes applicator and sku context", () => {
+        expect(mobile).toContain("onCommitVariant({ rollerVariant: material, applicator: chosen })");
+        expect(mobile).toContain("const href = sku ? `${option.href}?sku=${encodeURIComponent(sku)}` : option.href");
+        expect(pdp).toContain("selection.applicator ?? (selection.rollerVariant");
+    });
 });
