@@ -48,7 +48,7 @@ export function StandardOptionList({ options, selectedId, onSelect, groupLabel, 
                         aria-checked={on}
                         ref={index === 0 ? firstOptionRef : undefined}
                         onClick={() => onSelect(option.id)}
-                        className={`flex min-h-14 w-full items-center gap-3 rounded-[3px] bg-white px-3 py-2 text-left transition-colors motion-reduce:transition-none ${OPTION_FOCUS} ${
+                        className={`flex min-h-14 w-full items-center gap-3 rounded-[3px] bg-white px-3 py-2 text-left touch-manipulation transition-colors motion-reduce:transition-none ${OPTION_FOCUS} ${
                             on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"
                         }`}
                     >
@@ -78,7 +78,7 @@ export function LargeOptionCards({ options, selectedId, onSelect, groupLabel, fi
                         aria-checked={on}
                         ref={index === 0 ? firstOptionRef : undefined}
                         onClick={() => onSelect(option.id)}
-                        className={`flex min-h-24 w-full items-center gap-4 rounded-[3px] bg-white p-3 text-left transition-colors motion-reduce:transition-none ${OPTION_FOCUS} ${
+                        className={`flex min-h-24 w-full items-center gap-4 rounded-[3px] bg-white p-3 text-left touch-manipulation transition-colors motion-reduce:transition-none ${OPTION_FOCUS} ${
                             on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"
                         }`}
                     >
@@ -120,7 +120,7 @@ export function ClosureOptionGrid({ options, selectedId, onSelect, groupLabel, f
                         aria-checked={on}
                         ref={index === 0 ? firstOptionRef : undefined}
                         onClick={() => onSelect(option.id)}
-                        className={`relative flex min-h-[104px] flex-col items-center justify-start gap-1 rounded-[3px] bg-white p-2 text-center transition-colors [scroll-snap-align:start] motion-reduce:transition-none ${OPTION_FOCUS} ${
+                        className={`relative flex min-h-[104px] flex-col items-center justify-start gap-1 rounded-[3px] bg-white p-2 text-center touch-manipulation transition-colors [scroll-snap-align:start] motion-reduce:transition-none ${OPTION_FOCUS} ${
                             on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"
                         }`}
                     >

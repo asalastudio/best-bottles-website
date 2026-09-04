@@ -78,3 +78,19 @@ export function pickerHasPendingChange(state: MobilePickerState): boolean {
         && state.previewSelectionId !== null
         && state.previewSelectionId !== state.committedSelectionId;
 }
+
+/**
+ * The sheet's top edge is the hero's bottom. If the hero has not been laid
+ * out yet (first open, iOS chrome collapsing), fall back to ~half the
+ * viewport so the sheet never covers the whole screen at `top: 0`.
+ */
+export function sheetTopFromHero(heroBottom: number, viewportHeight: number): number {
+    if (heroBottom > 8) return Math.round(heroBottom);
+    return Math.round(Math.max(120, viewportHeight * 0.48));
+}
+
+/** CSS `top` for the sheet. `0` would cover the bottle until the hero is measured. */
+export function sheetTopCss(top: number): string {
+    if (top > 8) return `${Math.round(top)}px`;
+    return "48svh";
+}

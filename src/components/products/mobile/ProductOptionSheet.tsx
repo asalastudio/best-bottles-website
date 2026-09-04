@@ -3,24 +3,29 @@
 /**
  * The one picker shell every mobile configuration property uses. Built on the
  * repository's accessible dialog primitive (@radix-ui/react-dialog, the same
- * one behind ui/sheet): modal focus trap, Escape, body scroll lock, focus
- * restoration. What is specific here is the geometry — the sheet rises from
- * the viewport bottom and stops at the hero's bottom edge, so the product stays
- * visible above it as a live preview while everything else is covered.
+ * one behind ui/sheet): focus trap opt-in via aria-modal, Escape, focus
+ * restoration. Modal={false} on purpose — Radix's default RemoveScroll uses
+ * position:fixed on the body, which is what made the PDP freeze and feel
+ * sticky on iOS. Background scroll is frozen with overflow:hidden on html
+ * (see globals.css :has(main[data-mobile-picker-open])).
+ *
+ * The sheet rises from the viewport bottom and stops at the hero's bottom
+ * edge, so the product stays visible above it as a live preview. The overlay
+ * covers only that lower region; tapping the hero does not dismiss.
  *
  * Dismissal without confirming is a cancel: the caller restores the committed
- * configuration. Tapping the hero does not dismiss — the customer is looking
- * at the preview, not asking to leave it.
+ * configuration.
  */
 import * as Dialog from "@radix-ui/react-dialog";
 import { useCallback, useEffect, useId, useRef, type PointerEvent as ReactPointerEvent, type ReactNode } from "react";
 import { X } from "@/components/icons";
+import { sheetTopCss } from "@/lib/products/mobile-pdp-picker";
 
 const sheetCss = `
 @keyframes bb-option-sheet-in{from{transform:translateY(100%)}to{transform:translateY(0)}}
 @keyframes bb-option-sheet-out{from{transform:translateY(0)}to{transform:translateY(100%)}}
-[data-mobile-option-sheet][data-state="open"]{animation:bb-option-sheet-in 260ms cubic-bezier(.4,0,.2,1)}
-[data-mobile-option-sheet][data-state="closed"]{animation:bb-option-sheet-out 200ms cubic-bezier(.4,0,.2,1) forwards}
+[data-mobile-option-sheet][data-state="open"]{animation:bb-option-sheet-in 180ms cubic-bezier(.4,0,.2,1)}
+[data-mobile-option-sheet][data-state="closed"]{animation:bb-option-sheet-out 140ms cubic-bezier(.4,0,.2,1) forwards}
 @media (prefers-reduced-motion: reduce){[data-mobile-option-sheet][data-state="open"],[data-mobile-option-sheet][data-state="closed"]{animation-duration:1ms}}
 `;
 
@@ -49,6 +54,7 @@ export default function ProductOptionSheet({
     const headingRef = useRef<HTMLHeadingElement>(null);
     const drag = useRef<{ startY: number; pointerId: number } | null>(null);
     const hintId = useId();
+    const sheetTop = sheetTopCss(top);
 
     const focusInitial = useCallback((event: Event) => {
         event.preventDefault();
@@ -56,8 +62,11 @@ export default function ProductOptionSheet({
         const selected = root?.querySelector<HTMLElement>('[role="radio"][aria-checked="true"]')
             ?? root?.querySelector<HTMLElement>('[role="radio"]');
         (selected ?? headingRef.current)?.focus({ preventScroll: true });
-        // Long finish grids scroll horizontally: bring the current choice into view.
-        selected?.scrollIntoView({ block: "nearest", inline: "center" });
+        const scroller = root?.querySelector<HTMLElement>("[data-picker-layout]");
+        if (selected && scroller && scroller.contains(selected)) {
+            const left = selected.offsetLeft - scroller.clientWidth / 2 + selected.offsetWidth / 2;
+            scroller.scrollTo({ left: Math.max(0, left), behavior: "auto" });
+        }
     }, []);
 
     const restoreFocus = useCallback((event: Event) => {
@@ -65,8 +74,6 @@ export default function ProductOptionSheet({
         onRestoreFocus();
     }, [onRestoreFocus]);
 
-    // Swipe down on the header to cancel. The options region keeps its own
-    // scrolling, so only the handle/title area is a drag surface.
     const onHandlePointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
         if (event.pointerType === "mouse" && event.button !== 0) return;
         drag.current = { startY: event.clientY, pointerId: event.pointerId };
@@ -96,7 +103,6 @@ export default function ProductOptionSheet({
         window.setTimeout(clear, 240);
     };
 
-    // If the sheet closes mid-drag (Escape while holding), drop any inline offset.
     useEffect(() => {
         if (open) return;
         drag.current = null;
@@ -106,18 +112,21 @@ export default function ProductOptionSheet({
 
     return (
         <>
-            {/* Outside the portal: Radix wraps each portal child in its own
-                Presence, so a style element there would unmount the moment the
-                dialog closes and take the exit animation with it. */}
             <style dangerouslySetInnerHTML={{ __html: sheetCss }} />
-        <Dialog.Root open={open} onOpenChange={(next) => { if (!next) onCancel(); }}>
+        <Dialog.Root open={open} modal={false} onOpenChange={(next) => { if (!next) onCancel(); }}>
             <Dialog.Portal>
-                {/* Transparent: the hero above the sheet must stay fully legible. */}
-                <Dialog.Overlay className="fixed inset-0 z-[69] bg-transparent" data-testid="mobile-pdp-sheet-overlay" />
+                {/* Only the region the sheet occupies — the hero stays tappable-looking
+                    and is not covered by an invisible full-screen overlay. */}
+                <Dialog.Overlay
+                    className="fixed inset-x-0 bottom-0 z-[69] bg-transparent"
+                    data-testid="mobile-pdp-sheet-overlay"
+                    style={{ top: sheetTop }}
+                />
                 <Dialog.Content
                     ref={contentRef}
                     data-mobile-option-sheet=""
                     data-testid={testId ?? "mobile-pdp-option-sheet"}
+                    aria-modal="true"
                     aria-describedby={hint ? hintId : undefined}
                     onOpenAutoFocus={focusInitial}
                     onCloseAutoFocus={restoreFocus}
@@ -125,7 +134,7 @@ export default function ProductOptionSheet({
                     onPointerDownOutside={(event) => event.preventDefault()}
                     onInteractOutside={(event) => event.preventDefault()}
                     className="fixed inset-x-0 bottom-0 z-[70] flex flex-col overflow-hidden rounded-t-[10px] border-t border-champagne bg-bone shadow-[0_-8px_32px_rgba(29,29,31,.18)] focus:outline-none"
-                    style={{ top: `${Math.max(0, Math.round(top))}px` }}
+                    style={{ top: sheetTop }}
                 >
                     <div
                         className="shrink-0 touch-none select-none px-4 pb-2 pt-2"

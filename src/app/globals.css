@@ -78,6 +78,30 @@ body {
   }
 }
 
+/* Mobile PDP: hide the site header and tab bar from first paint so the bottle
+   is not laid out under a 104px spacer and then yanked up after hydration.
+   The hero carries its own back/cart bar. While a picker is open, freeze the
+   page with overflow only — never Radix's position:fixed body lock. */
+@media (max-width: 767px) {
+  main[data-mobile-pdp] {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  main[data-mobile-pdp] > [data-mobile-pdp-frame] {
+    padding-top: 0;
+  }
+  body:has(main[data-mobile-pdp]) [data-site-header],
+  body:has(main[data-mobile-pdp]) [data-mobile-tab-bar] {
+    display: none;
+  }
+  main[data-mobile-pdp] [data-testid="pdp-sticky-cart-bar"] {
+    display: none;
+  }
+  html:has(main[data-mobile-picker-open]) {
+    overflow: hidden;
+    overscroll-behavior: none;
+  }
+}
+
 /* Animations */
 @media (prefers-reduced-motion: no-preference) {
   .animate-fade-up {

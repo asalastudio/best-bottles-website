@@ -10,8 +10,6 @@
  */
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
-import { useQuery } from "convex/react";
-import { api } from "../../../../convex/_generated/api";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
@@ -26,7 +24,7 @@ import {
     type MobileConfigDimension,
     type MobileConfigOption,
 } from "@/lib/products/mobile-pdp-config-rows";
-import { initialMobilePickerState, mobilePickerReducer, pickerHasPendingChange } from "@/lib/products/mobile-pdp-picker";
+import { initialMobilePickerState, mobilePickerReducer, pickerHasPendingChange, sheetTopFromHero } from "@/lib/products/mobile-pdp-picker";
 import {
     coerceMobileViewMode,
     getMobileViewModes,
@@ -178,12 +176,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             : { applicator: activeApplicator, capOption: picker.previewSelectionId };
         return resolveGuidedVariant(variants, selection, deps);
     }, [picker, variants, deps, activeApplicator, activeCapOption]);
-    const previewKitQuery = useQuery(
-        api.productKits.forSku,
-        previewInGroup && previewInGroup._id !== selectedVariant?._id
-            ? { graceSku: previewInGroup.graceSku ?? null, websiteSku: previewInGroup.websiteSku ?? null }
-            : "skip",
-    );
 
     /* ── preview selection (glass: sibling group) ────────────────────────── */
     const siblingSlugs = useMemo(
@@ -192,7 +184,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     );
     const glassSelection = useMemo(() => ({ applicator: activeApplicator, capOption: activeCapOption }), [activeApplicator, activeCapOption]);
     const siblingPreviews = useGlassSiblingPreviews({
-        enabled: isMobile && siblingSlugs.length > 0,
+        enabled: isMobile && siblingSlugs.length > 0 && picker.activePicker === "glass",
         siblingSlugs,
         selection: glassSelection,
         deps,
@@ -201,21 +193,14 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         ? glassOptions.find((option) => option.id === picker.previewSelectionId) ?? null
         : null;
     const previewSibling = previewGlassOption ? siblingPreviews[slugFromHref(previewGlassOption.href)] ?? null : null;
-    const previewSiblingKitQuery = useQuery(
-        api.productKits.forSku,
-        previewSibling?.variant
-            ? { graceSku: previewSibling.variant.graceSku ?? null, websiteSku: previewSibling.variant.websiteSku ?? null }
-            : "skip",
-    );
 
     /* ── what the hero shows ─────────────────────────────────────────────── */
+    // Preview swaps the already-loaded plate only. Fetching and decoding a
+    // full kit on every tap is what froze the sheet on a phone.
     const shownVariant = previewSibling?.variant ?? previewInGroup ?? selectedVariant;
     const shownPlate = previewSibling ? previewSibling.plate : previewInGroup ? plateFor(platesBySku, previewInGroup) : committedPlate;
-    const shownKitQuery: KitQueryResult = previewSibling?.variant
-        ? previewSiblingKitQuery
-        : previewInGroup && previewInGroup._id !== selectedVariant?._id
-            ? previewKitQuery
-            : selectedKitQuery;
+    const previewing = Boolean(previewSibling?.variant || (previewInGroup && previewInGroup._id !== selectedVariant?._id));
+    const shownKitQuery: KitQueryResult = previewing ? undefined : selectedKitQuery;
     const { kit: shownKit, parts: kitPartsWithCap } = useDecodedKitParts(
         { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
         shownKitQuery,
@@ -299,15 +284,9 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
     /* ── picker flows ────────────────────────────────────────────────────── */
     const measureSheetTop = useCallback(() => {
-        const hero = heroRef.current;
-        if (!hero) return;
-        setSheetTop(hero.getBoundingClientRect().bottom);
-    }, []);
-
-    const bringHeroToTop = useCallback(() => {
-        const hero = heroRef.current;
-        if (!hero) return;
-        window.scrollTo({ top: window.scrollY + hero.getBoundingClientRect().top, behavior: "instant" as ScrollBehavior });
+        const heroBottom = heroRef.current?.getBoundingClientRect().bottom ?? 0;
+        const viewportHeight = window.visualViewport?.height ?? window.innerHeight;
+        setSheetTop(sheetTopFromHero(heroBottom, viewportHeight));
     }, []);
 
     const openPicker = (type: MobilePickerType) => {
@@ -315,8 +294,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         if (!row) return;
         savedScroll.current = window.scrollY;
         lastPickerRef.current = type;
-        bringHeroToTop();
-        measureSheetTop();
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
         dispatch({
             type: "open",
             picker: type,
@@ -325,6 +303,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         });
         analytics.mobilePdpPickerOpened({ slug, sku: currentSku, pickerType: type, viewMode });
         onPickerOpenChange(true);
+        window.requestAnimationFrame(measureSheetTop);
     };
 
     const previewOption = (id: string) => {
@@ -382,11 +361,26 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         row?.focus({ preventScroll: true });
     }, []);
 
+    // Catalog → PDP in the app router can keep the grid's scroll offset, which
+    // tucks the bottle under the browser chrome on first land.
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "instant" as ScrollBehavior });
+    }, [slug]);
+
     // Safari's dynamic chrome and orientation changes move the hero's edge.
+    // Measure after paint — setState in the effect body is a cascading render.
     useEffect(() => {
         if (!picker.activePicker) return;
+        const frame = window.requestAnimationFrame(measureSheetTop);
         window.addEventListener("resize", measureSheetTop);
-        return () => window.removeEventListener("resize", measureSheetTop);
+        window.visualViewport?.addEventListener("resize", measureSheetTop);
+        window.visualViewport?.addEventListener("scroll", measureSheetTop);
+        return () => {
+            window.cancelAnimationFrame(frame);
+            window.removeEventListener("resize", measureSheetTop);
+            window.visualViewport?.removeEventListener("resize", measureSheetTop);
+            window.visualViewport?.removeEventListener("scroll", measureSheetTop);
+        };
     }, [picker.activePicker, measureSheetTop]);
 
     const registerRow = useCallback((type: MobilePickerType, el: HTMLButtonElement | null) => {
