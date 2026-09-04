@@ -105,6 +105,17 @@ body {
   }
 }
 
+/* Short phones need room for both option rows and the confirmation button.
+   Keep a smaller live bottle preview above the sheet while it is open. */
+@media (max-width: 767px) and (max-height: 700px) {
+  main[data-mobile-picker-open] {
+    --mobile-pdp-stage-width: min(100%, calc(max(80px, calc(100svh - 461px - env(safe-area-inset-bottom, 0px))) * 10 / 11));
+  }
+  main[data-mobile-picker-open] [data-mobile-pdp-viewer-entry] {
+    display: none;
+  }
+}
+
 /* Animations */
 @media (prefers-reduced-motion: no-preference) {
   .animate-fade-up {

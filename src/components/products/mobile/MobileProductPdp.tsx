@@ -596,6 +596,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductDetails
                 variant={selectedVariant}
                 sku={resolvedSku}
+                capFinish={selectedVariant ? resolveCapFinish(selectedVariant).swatchName : ""}
                 neckSize={neckSize}
                 family={group.family}
                 description={description ?? null}

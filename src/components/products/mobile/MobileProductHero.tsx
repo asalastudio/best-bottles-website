@@ -90,7 +90,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
             <div
                 data-testid="mobile-pdp-stage"
                 className="relative mx-auto overflow-hidden"
-                style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
+                style={{ aspectRatio: "10 / 11", width: "var(--mobile-pdp-stage-width, min(100%, calc(42svh * 10 / 11)))" }}
             >
                 {hasStack ? (
                     <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} />
@@ -103,7 +103,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 {overlay}
             </div>
             {onViewLarger && hasVisual ? (
-                <div className="flex justify-center px-4 pb-3 pt-1">
+                <div data-mobile-pdp-viewer-entry="" className="flex justify-center px-4 pb-3 pt-1">
                     <button
                         type="button"
                         onClick={onViewLarger}

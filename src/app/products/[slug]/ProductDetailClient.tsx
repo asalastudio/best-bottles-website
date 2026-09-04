@@ -18,6 +18,7 @@ import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
+import { reconcilePdpEditorialDescriptions } from "@/lib/products/pdp-editorial-description";
 import {
     PdpInlineBadges,
     PdpInlinePromo,
@@ -1381,6 +1382,11 @@ export default function ProductDetailClient({
             ? [selectedVariant.applicator]
             : group?.applicatorTypes ?? [],
     });
+    const resolvedPdpBlocks = reconcilePdpEditorialDescriptions(
+        pdpBlocks,
+        selectedVariant?.applicator ? [selectedVariant.applicator] : group?.applicatorTypes ?? [],
+        productDescription,
+    );
 
     const variantSwatchPreview = useMemo(() => {
         return variantsForApplicator.map((v) => {
@@ -1980,7 +1986,7 @@ export default function ProductDetailClient({
             capacity: group?.capacity ?? undefined,
             color: group?.color ?? undefined,
             applicator: selectedVariant.applicator,
-            capColor: selectedVariant.capColor,
+            capColor: resolveVariantCapFinish(selectedVariant).swatchName,
             category: group?.category,
             neckThreadSize: selectedVariant.neckThreadSize ?? group?.neckThreadSize ?? null,
             webPrice1pc: selectedVariant.webPrice1pc ?? null,
@@ -2989,7 +2995,7 @@ export default function ProductDetailClient({
                             </div>
 
                             {/* Product Description — canonical copy avoids showing applicator-mismatched group text. */}
-                            {pdpBlocks.every((b) => b._type !== "pdpRichDescription") && productDescription && (
+                            {resolvedPdpBlocks.every((b) => b._type !== "pdpRichDescription") && productDescription && (
                                 <div className="mb-6 pt-5 border-t border-champagne/60">
                                     <p className="text-[9px] uppercase tracking-[0.18em] font-sans text-muted-gold mb-3">
                                         About This Product
@@ -3044,7 +3050,7 @@ export default function ProductDetailClient({
                                     <SpecRow label="Cap Style" value={selectedVariant.capStyle} />
                                     <SpecRow label="Cap Height" value={selectedVariant.capHeight} />
                                     <SpecRow label="Trim Finish" value={selectedVariant.trimColor} />
-                                    <SpecRow label="Cap Color" value={selectedVariant.capColor} />
+                                    <SpecRow label="Cap Color" value={resolveVariantCapFinish(selectedVariant).swatchName} />
                                     <SpecRow label="Shape" value={selectedVariant.shape} />
                                     <SpecRow label="Assembly Type" value={selectedVariant.assemblyType} />
                                     <SpecRow label="Component Group" value={selectedVariant.componentGroup} />
@@ -3089,7 +3095,7 @@ export default function ProductDetailClient({
                 </div>
 
                 {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
-                <PdpEditorialZone blocks={pdpBlocks} />
+                <PdpEditorialZone blocks={resolvedPdpBlocks} />
 
                 <PdpDiscoveryMatrixLink family={group.family} />
 

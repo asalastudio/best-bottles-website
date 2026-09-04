@@ -37,6 +37,7 @@ import {
     type PendingCartProduct,
 } from "@/components/GraceContext";
 import { getAnonOwnerKey } from "@/lib/graceAnonOwnerKey";
+import { useGraceMemory } from "@/lib/grace/useGraceMemory";
 import { isGraceToolResult } from "@/lib/graceToolResults";
 import {
     applyGraceRefinementRequest,
@@ -578,7 +579,7 @@ function GraceProviderBase({
     const mintShortlistShareTokenMutation = useMutation(api.graceShortlists.mintShareToken);
     const upsertMemoryMutation = useMutation(api.graceMemory.upsertNote);
     const recordSessionTraceMutation = useMutation(api.graceSessionTraces.record);
-    const memoryNote = useQuery(api.graceMemory.getByOwner, { ownerKey: getAnonOwnerKey() });
+    const memoryNote = useGraceMemory(getAnonOwnerKey());
     const submitFormRef = useRef(submitFormMutation);
     useEffect(() => { submitFormRef.current = submitFormMutation; }, [submitFormMutation]);
     const createShortlistRef = useRef(createShortlistMutation);
