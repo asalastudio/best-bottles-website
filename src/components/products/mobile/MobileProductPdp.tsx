@@ -13,7 +13,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState, type CSS
 import { useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
-import { Check, ShoppingBag } from "@/components/icons";
+import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
@@ -38,6 +38,10 @@ import {
 import { hasRealPdpDimensions } from "@/lib/products/pdp-stage-modes";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
+import {
+    GRACE_PDP_PLATE_EVENT,
+    type GracePdpPlateCommand,
+} from "@/lib/grace/pdpPlateSwap";
 import MobileConfigurationSummary from "./MobileConfigurationSummary";
 import MobileProductHero from "./MobileProductHero";
 import { PickerOptions } from "./PickerOptions";
@@ -102,6 +106,9 @@ export type MobileProductPdpProps = {
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
     onCommitGlass: (href: string) => void;
     onPickerOpenChange: (open: boolean) => void;
+    /** Opens the full Grace overlay. The tab bar (her usual mobile entry) is
+        hidden on this route, so the purchase block carries an inline row. */
+    onAskGrace?: () => void;
     volumePricing?: ReactNode;
 };
 
@@ -123,7 +130,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, resolveCapFinish, variantSku,
-        onCommitVariant, onCommitGlass, onPickerOpenChange, volumePricing,
+        onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, volumePricing,
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -146,6 +153,17 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const markPlateBroken = useCallback((url: string) => {
         console.error("[plates] image failed to load", url);
         setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
+    }, []);
+
+    useEffect(() => {
+        const onPlate = (event: Event) => {
+            const viewMode = (event as CustomEvent<GracePdpPlateCommand>).detail?.viewMode;
+            if (viewMode === "assembled" || viewMode === "capOff") {
+                dispatch({ type: "setView", view: viewMode });
+            }
+        };
+        window.addEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
+        return () => window.removeEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
     }, []);
 
     /* ── committed selection ─────────────────────────────────────────────── */
@@ -286,16 +304,18 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         setSheetTop(hero.getBoundingClientRect().bottom);
     }, []);
 
+    const bringHeroToTop = useCallback(() => {
+        const hero = heroRef.current;
+        if (!hero) return;
+        window.scrollTo({ top: window.scrollY + hero.getBoundingClientRect().top, behavior: "instant" as ScrollBehavior });
+    }, []);
+
     const openPicker = (type: MobilePickerType) => {
         const row = rows.find((candidate) => candidate.picker === type);
         if (!row) return;
         savedScroll.current = window.scrollY;
         lastPickerRef.current = type;
-        const hero = heroRef.current;
-        if (hero) {
-            // Bring the hero to the top so the sheet can start at its bottom edge.
-            window.scrollTo({ top: window.scrollY + hero.getBoundingClientRect().top, behavior: "instant" as ScrollBehavior });
-        }
+        bringHeroToTop();
         measureSheetTop();
         dispatch({
             type: "open",
@@ -442,9 +462,9 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* ── quantity + add to cart ───────────────────────────────────── */}
             <section ref={cartAnchorRef} className="px-4 pb-6 pt-5" data-testid="mobile-pdp-purchase">
-                <div className="flex items-center justify-between gap-3">
+                <div className="flex flex-wrap items-center justify-between gap-3">
                     <span className="text-2xs font-semibold uppercase tracking-label text-slate">Quantity</span>
-                    <div className="flex items-stretch gap-2">
+                    <div className="flex flex-wrap items-stretch justify-end gap-2">
                         <div className="flex items-center rounded-[3px] border border-champagne bg-white">
                             <button type="button" aria-label="Decrease quantity" onClick={() => onQtyChange(Math.max(1, qty - 1))}
                                     className="min-h-11 min-w-11 px-3 text-obsidian transition-colors hover:text-muted-gold">−</button>
@@ -459,7 +479,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         </div>
                         {caseQty ? (
                             <button type="button" aria-label={`Set quantity to one case of ${caseQty}`} onClick={() => onQtyChange(caseQty)}
-                                    className="min-h-11 rounded-[3px] border border-champagne bg-white px-3 text-sm font-semibold text-obsidian hover:border-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
+                                    className="min-h-11 whitespace-nowrap rounded-[3px] border border-champagne bg-white px-3 text-sm font-semibold text-obsidian hover:border-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
                                 1 case
                             </button>
                         ) : null}
@@ -492,6 +512,28 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         </Link>
                     )}
                 </div>
+                {/* Grace sits at the decision point, not in a floating disc: the
+                    questions she answers (fit, bulk pricing) arise right here,
+                    and nothing floats over the hero or the picker's confirm. */}
+                {onAskGrace ? (
+                    <button
+                        type="button"
+                        onClick={onAskGrace}
+                        data-testid="mobile-pdp-ask-grace"
+                        className="mt-4 flex min-h-[56px] w-full items-center gap-3 rounded-[3px] border border-champagne bg-white px-3 py-2.5 text-left transition-colors hover:border-muted-gold hover:bg-linen/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                    >
+                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-obsidian text-white" aria-hidden>
+                            <Microphone className="h-4 w-4" />
+                        </span>
+                        <span className="min-w-0 flex-1">
+                            <span className="block text-sm font-medium text-obsidian">Ask Grace about fit and bulk pricing</span>
+                            <span className="block text-xs leading-snug text-slate">
+                                {neckSize ? `${neckSize} closures` : "Compatible closures"} · case quantities · quotes
+                            </span>
+                        </span>
+                        <CaretRight className="h-4 w-4 shrink-0 text-slate" aria-hidden />
+                    </button>
+                ) : null}
                 {volumePricing ? <div className="mt-5" data-testid="mobile-pdp-volume-pricing">{volumePricing}</div> : null}
             </section>
 

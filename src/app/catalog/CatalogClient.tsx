@@ -2236,7 +2236,7 @@ export default function CatalogClient({
                                         Reset Filters
                                     </button>
                                     <button
-                                        onClick={openGrace}
+                                        onClick={() => openGrace()}
                                         className="px-6 py-3 border border-muted-gold text-muted-gold uppercase text-xs font-bold tracking-wider hover:bg-muted-gold hover:text-white transition-colors rounded-sm flex items-center gap-2"
                                     >
                                         <MessageCircle className="w-3.5 h-3.5" />

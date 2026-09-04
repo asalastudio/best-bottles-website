@@ -12,6 +12,7 @@ import { createContext, useContext } from "react";
 import type { GraceRefineState } from "@/lib/grace/refineState";
 import type { GraceFinderContext, PdpContextChange } from "@/lib/grace/pageContextEvents";
 import type { GraceSurface } from "@/lib/grace/pushLayout";
+import type { GraceCompanionMode, GraceOpenPanelOptions } from "@/lib/grace/agenticHandoff";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -304,7 +305,11 @@ export interface GraceContextValue {
     panelMode: PanelMode;
     /** One provider-owned responsive decision shared by the shell and drawer. */
     surface: GraceSurface;
-    openPanel: () => void;
+    /** `product` = PDP Q&A in chat. `agentic` = mobile follow-along after a product-link tap. */
+    companionMode: GraceCompanionMode;
+    openPanel: (options?: GraceOpenPanelOptions) => void;
+    /** Persist the thread, open a surfaced product, and on mobile hide chat + go agentic. */
+    followSurfacedProduct?: (args: { href: string }) => void;
     closePanel: () => void;
     minimizeToStrip: () => void;
     /** Tooltip currently displayed beside the launcher disc, or null. */
@@ -363,6 +368,7 @@ const NOOP_ASYNC = async () => {};
 
 const GRACE_NOOP: GraceContextValue = {
     panelMode: "closed",
+    companionMode: "assist",
     surface: {
         mode: "closed",
         showBackdrop: false,

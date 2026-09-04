@@ -38,7 +38,7 @@ const STUBBED_TOOLS = new Set([
     "displayComparison", "displayCatalogStrip", "displayShortlist", "compareProducts",
     "getCurrentPageContext", "getCartContents", "getBrowsingHistory",
     "proposeCartAdd", "proceedToCheckout", "prefillForm", "updateFormField",
-    "submitForm", "setCatalogRefinements",
+    "submitForm", "setCatalogRefinements", "configureCurrentProduct",
     "prepareQuoteRequest", "listGraceProjects", "proposeProjectSave",
 ]);
 

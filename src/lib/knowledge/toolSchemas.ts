@@ -195,6 +195,12 @@ export const GRACE_OPENAI_TOOL_SPECS = [
     spec("displayAnatomy", "Render technical callouts for one verified product.", {
         graceSku: string("Exact Grace SKU returned by a catalog tool."),
     }),
+    spec("configureCurrentProduct", "On the product page the customer is already viewing, swap the visible plate (cap finish, roller, or cap on/off) using the same kit layers the picker uses. Never a catalog-wide builder. No-op when they are not on a PDP.", {
+        sku: nullableString("Exact website or Grace SKU of a variant in the current group, or null."),
+        capOption: nullableString("Cap finish the customer asked to see, e.g. Gold or Black, or null."),
+        rollerVariant: nullableString("metal or plastic when they asked to change the roller, or null."),
+        viewMode: nullableString("assembled (cap on) or capOff, or null."),
+    }),
     spec("setCatalogRefinements", "Update the visible catalog while inheriting every active Refine constraint unless the customer's exact words explicitly broaden one dimension.", {
         customerRequest: string("The customer's exact current request; used to authorize any broadening."),
         search: nullableString("New search phrase, or null to preserve the active search."),

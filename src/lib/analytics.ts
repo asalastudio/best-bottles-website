@@ -310,6 +310,22 @@ export const analytics = {
     adapter.track("Grace Mobile PDP Opened", properties);
   },
 
+  graceAgenticOpened(properties: {
+    destination: string;
+    source: "product_link";
+  }) {
+    adapter.track("Grace Agentic Opened", properties);
+  },
+
+  gracePdpPlateSwapped(properties: {
+    sku: string;
+    capOption: string;
+    rollerVariant: string;
+    viewMode: string;
+  }) {
+    adapter.track("Grace PDP Plate Swapped", properties);
+  },
+
   graceMultiActionRendered(properties: {
     messageId: string;
     actionCount: number;

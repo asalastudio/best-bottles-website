@@ -21,11 +21,13 @@ import { useGrace } from "@/components/useGrace";
  * is rendered beside the disc as a brief contextual hint that fades after ~3s.
  */
 export default function GraceLauncher() {
-    const { panelMode, openPanel, conversationActive, launcherTooltip } = useGrace();
+    const { panelMode, openPanel, conversationActive, launcherTooltip, companionMode } = useGrace();
     const isOpen = panelMode === "open";
     const pathname = usePathname();
+    const agentic = companionMode === "agentic";
 
     // Workspace and the executive hub own the viewport — no launcher there.
+    // Agentic mobile follow-along shows the disc on phones too (tab bar is hidden on the PDP).
     const ownsViewport = pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive");
     const visible = !isOpen && !ownsViewport;
 
@@ -38,10 +40,10 @@ export default function GraceLauncher() {
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.9, y: 8 }}
                     transition={{ duration: 0.32, ease: [0.22, 1, 0.36, 1] }}
-                    onClick={openPanel}
+                    onClick={() => openPanel()}
                     aria-label="Open Grace AI"
                     title="Ask Grace — AI bottling concierge"
-                    className="fixed z-[55] hidden cursor-pointer items-center justify-center group xl:flex"
+                    className={`fixed z-[55] cursor-pointer items-center justify-center group ${agentic ? "flex" : "hidden xl:flex"}`}
                     style={{
                         right: "max(22px, env(safe-area-inset-right))",
                         bottom: "max(22px, calc(env(safe-area-inset-bottom) + 22px))",
@@ -55,7 +57,7 @@ export default function GraceLauncher() {
                     }}
                 >
                     {/* Breathing pulse — adagio, only on idle */}
-                    {!conversationActive && (
+                    {(!conversationActive || agentic) && (
                         <span
                             aria-hidden
                             className="absolute inset-0 rounded-full pointer-events-none"

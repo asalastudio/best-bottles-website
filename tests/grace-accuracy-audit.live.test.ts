@@ -32,7 +32,7 @@ const STUBBED = new Set([
     "displayComparison", "displayCatalogStrip", "compareProducts",
     "getCurrentPageContext", "getCartContents", "getBrowsingHistory",
     "proposeCartAdd", "proceedToCheckout", "prefillForm", "updateFormField",
-    "submitForm", "setCatalogRefinements",
+    "submitForm", "setCatalogRefinements", "configureCurrentProduct",
     "saveShortlist", "shareShortlist", "prepareQuote", "confirmQuote",
     "createProject", "saveToProject", "uploadImage",
 ]);

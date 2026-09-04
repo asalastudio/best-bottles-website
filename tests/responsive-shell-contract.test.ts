@@ -43,7 +43,9 @@ describe("responsive shell contract", () => {
         expect(mobileTabs).toContain("animate-grace-pulse-subtle");
         expect(mobileTabs).not.toContain("-mt-6");
         expect(mobileTabs).not.toContain("w-12 h-12");
-        expect(launcher).toContain("hidden cursor-pointer");
+        // Desktop-only until agentic follow-along, when the disc must appear
+        // on phones because the PDP hides the tab bar.
+        expect(launcher).toContain('agentic ? "flex" : "hidden xl:flex"');
         expect(launcher).toContain("xl:flex");
         expect(launcher).not.toContain("isMobile");
     });

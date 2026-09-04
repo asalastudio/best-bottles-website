@@ -165,6 +165,29 @@ describe("mobile PDP wiring", () => {
         expect(pdp).toContain('data-mobile-pdp={isFocusedPurchasePdp ? "focused" : undefined}');
     });
 
+    it("gives Grace an inline entry in the purchase block since the tab bar is hidden here", () => {
+        expect(pdp).toContain("onAskGrace={openGraceFromMobilePdp}");
+        expect(pdp).toContain("analytics.graceMobilePdpOpened({");
+        expect(mobile).toContain('data-testid="mobile-pdp-ask-grace"');
+        expect(mobile).not.toMatch(/fixed[^"]*data-testid="mobile-pdp-ask-grace"/);
+        // The row lives between Add to Cart and volume pricing, never floating.
+        const purchase = mobile.indexOf('data-testid="mobile-pdp-add-to-cart"');
+        const grace = mobile.indexOf('data-testid="mobile-pdp-ask-grace"', purchase);
+        const volume = mobile.indexOf('data-testid="mobile-pdp-volume-pricing"', grace);
+        expect(purchase).toBeGreaterThan(-1);
+        expect(grace).toBeGreaterThan(purchase);
+        expect(volume).toBeGreaterThan(grace);
+        expect(mobile).toContain("onClick={onAskGrace}");
+        expect(mobile).not.toContain("openPanel({ anchor");
+        expect(pdp).toContain("openGraceFromPdp({ enableVoice: true });");
+        expect(pdp).toContain('openGracePanel({ source: "pdp", enableVoice: options?.enableVoice });');
+        const drawer = read("src/components/grace/GraceChatDrawer.tsx");
+        expect(drawer).toContain('height: "100dvh"');
+        expect(drawer).toContain('background: "rgba(29, 29, 31, 0.35)"');
+        expect(drawer).not.toContain("measureGraceDockedSheet");
+        expect(drawer).not.toContain("visualViewport");
+    });
+
     it("hides route chrome only below the breakpoint and only while mounted", () => {
         expect(mobile).toContain("@media (max-width: 767px)");
         expect(mobile).toContain("[data-site-header],[data-mobile-tab-bar]{display:none}");

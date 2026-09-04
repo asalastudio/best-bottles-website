@@ -666,7 +666,7 @@ function PathChooser() {
 
                         <button
                             type="button"
-                            onClick={openGrace}
+                            onClick={() => openGrace()}
                             className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 p-7 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
                         >
                             <span className="flex h-11 w-11 items-center justify-center rounded-full border border-champagne text-slate group-hover:border-muted-gold group-hover:text-obsidian">

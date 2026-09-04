@@ -60,6 +60,12 @@ import {
     type PendingPdpAnalyticsNavigation,
 } from "@/lib/products/pdp-analytics";
 import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
+import {
+    GRACE_PDP_PLATE_EVENT,
+    isGracePdpPlateCommand,
+    matchListedOption,
+    type GracePdpPlateCommand,
+} from "@/lib/grace/pdpPlateSwap";
 
 export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 
@@ -1679,6 +1685,36 @@ export default function ProductDetailClient({
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
     }, [qty, router, safeFrom]);
 
+    useEffect(() => {
+        const onPlate = (event: Event) => {
+            const command = (event as CustomEvent<GracePdpPlateCommand>).detail;
+            if (!isGracePdpPlateCommand(command)) return;
+
+            if (command.sku) {
+                const wanted = command.sku.trim();
+                const resolved = variants.find((variant) =>
+                    variant.websiteSku === wanted || variant.graceSku === wanted
+                );
+                if (!resolved) return;
+                const nextUrl = canonicalVariantUrl(resolved);
+                if (nextUrl) router.replace(nextUrl, { scroll: false });
+                return;
+            }
+
+            if (command.capOption || command.rollerVariant) {
+                const cap = command.capOption
+                    ? matchListedOption(command.capOption, capColorOptions) ?? command.capOption
+                    : undefined;
+                handleGuidedVariantSelection({
+                    rollerVariant: command.rollerVariant ?? undefined,
+                    capOption: cap,
+                });
+            }
+        };
+        window.addEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
+        return () => window.removeEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
+    }, [canonicalVariantUrl, capColorOptions, handleGuidedVariantSelection, router, variants]);
+
     // ── Product view analytics ───────────────────────────────────────────────
     useEffect(() => {
         if (group) {
@@ -1772,15 +1808,27 @@ export default function ProductDetailClient({
         analytics.pdpVariantResolved(event);
     }, [activeSlug, primaryVariant, selectedVariant, variantFromUrl]);
 
-    const openGraceFromPdp = useCallback(() => {
+    const openGraceFromPdp = useCallback((options?: { enableVoice?: boolean }) => {
         const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
         analytics.graceOpenedFromShopping({
             source: "pdp",
             ...(group?.family ? { family: group.family } : {}),
             ...(application ? { application } : {}),
         });
-        openGracePanel();
+        openGracePanel({ source: "pdp", enableVoice: options?.enableVoice });
     }, [group?.family, openGracePanel, selectedVariant?.applicator]);
+
+    // The mobile PDP hides the tab bar (Grace's usual mobile entry), so its inline
+    // row is the only way in. Keep the tab bar's "Grace Mobile PDP Opened" series
+    // continuous by firing it here with the product context the tab never had.
+    const openGraceFromMobilePdp = useCallback(() => {
+        analytics.graceMobilePdpOpened({
+            pathname,
+            ...(customerDisplayName ? { productName: customerDisplayName } : {}),
+            ...(group?.family ? { productFamily: group.family } : {}),
+        });
+        openGraceFromPdp({ enableVoice: true });
+    }, [customerDisplayName, group?.family, openGraceFromPdp, pathname]);
 
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so
@@ -1871,7 +1919,7 @@ export default function ProductDetailClient({
                     <h1 className="font-serif text-4xl text-obsidian mb-4">Product currently unavailable</h1>
                     <p className="text-slate mb-8 text-sm">We could not find a purchasable configuration for this product. Grace can help you find the right bottle.</p>
                     <div className="flex flex-wrap justify-center gap-3">
-                        <button type="button" onClick={openGraceFromPdp} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
+                        <button type="button" onClick={() => openGraceFromPdp()} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
                             Ask Grace
                         </button>
                         <Link href="/catalog" className="inline-flex items-center px-6 py-3 border border-obsidian text-obsidian uppercase text-xs font-bold tracking-wider hover:bg-obsidian hover:text-white transition-colors">
@@ -2008,6 +2056,7 @@ export default function ProductDetailClient({
                             onCommitVariant={handleGuidedVariantSelection}
                             onCommitGlass={handleGuidedProductUrlChange}
                             onPickerOpenChange={setMobilePickerOpen}
+                            onAskGrace={openGraceFromMobilePdp}
                             volumePricing={<VolumeTeaser variant={selectedVariant} />}
                         />
                     </div>
