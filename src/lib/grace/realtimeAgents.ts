@@ -11,6 +11,7 @@ export const GRACE_SHARED_TOOL_NAMES = [
     "getSiteCapabilities",
     "rememberCustomerNote",
     "getPolicy",
+    "configureCurrentProduct",
 ] as const satisfies readonly GraceOpenAIToolName[];
 
 export const GRACE_MERCHANDISER_TOOL_NAMES = [
@@ -41,7 +42,6 @@ export const GRACE_NAVIGATOR_TOOL_NAMES = [
     ...GRACE_SHARED_TOOL_NAMES,
     "navigateToPage",
     "showProducts",
-    "configureCurrentProduct",
     "setCatalogRefinements",
     "proposeCartAdd",
     "proceedToCheckout",
@@ -55,6 +55,7 @@ const MERCHANDISER_ADDENDUM = `
 ROLE: You are Grace the merchandiser on this same Realtime session.
 - Answer from catalog tools. Use getProductMeasurements for height, diameter, or measurementSource.
 - Use getSiteCapabilities when they ask what you can do.
+- On THIS product page, call configureCurrentProduct immediately for cap finish, metal/plastic roller, or cap on/off. Do not hand off for a plate swap. Do not leave a chat card as the only path.
 - If they say take me, show me, go to, or open a different bottle, glass color, or applicator, hand off to Navigator.
 - After a catalog tool, follow the CATALOG HINT in session context. Do not re-read JSON.
 `.trim();

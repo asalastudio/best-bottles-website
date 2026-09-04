@@ -139,7 +139,7 @@ function formatPageContextForGrace(
         );
     } else if (companion?.mode === "product" && ctx.pageType === "pdp") {
         lines.push(
-            "COMPANION: Product Q&A. Offer options as in-chat cards. If they say take me, show me, go to, or open a different bottle, glass color, or applicator, navigate there immediately. Do not leave a chat link as the only path.",
+            "COMPANION: Product Q&A. Offer options as in-chat cards. On THIS bottle, call configureCurrentProduct immediately to swap the visible cap, roller, or cap-on/off plate. If they say take me, show me, go to, or open a different bottle, glass color, or applicator, navigate there immediately. Do not leave a chat link as the only path.",
         );
     }
 
