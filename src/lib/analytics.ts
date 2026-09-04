@@ -317,6 +317,15 @@ export const analytics = {
     adapter.track("Grace Agentic Opened", properties);
   },
 
+  gracePdpPlateSwapped(properties: {
+    sku: string;
+    capOption: string;
+    rollerVariant: string;
+    viewMode: string;
+  }) {
+    adapter.track("Grace PDP Plate Swapped", properties);
+  },
+
   graceMultiActionRendered(properties: {
     messageId: string;
     actionCount: number;

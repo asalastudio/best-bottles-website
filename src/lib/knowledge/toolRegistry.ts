@@ -76,6 +76,7 @@ const TOOL_POLICIES = {
     displayCatalogStrip: read(CATALOG_READ),
     displayShortlist: read(CATALOG_READ, CUSTOMER_SURFACES),
     displayAnatomy: read(CATALOG_READ),
+    configureCurrentProduct: propose(NAVIGATION_PROPOSAL),
     setCatalogRefinements: propose(NAVIGATION_PROPOSAL),
     prepareQuoteRequest: propose(CART_PROPOSAL),
     listGraceProjects: read(["customer_project.read.self"], CUSTOMER_SURFACES),

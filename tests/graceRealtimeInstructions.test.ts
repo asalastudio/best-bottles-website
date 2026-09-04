@@ -12,6 +12,6 @@ describe("Grace Realtime instructions", () => {
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("Never start speaking proactively");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("40 words");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("in-chat cards and links");
-        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("cannot flip the live PDP");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("configureCurrentProduct");
     });
 });

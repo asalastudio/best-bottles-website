@@ -30,6 +30,7 @@ const EXISTING_GRACE_TOOLS = [
     "displayCatalogStrip",
     "displayShortlist",
     "displayAnatomy",
+    "configureCurrentProduct",
     "setCatalogRefinements",
     "prepareQuoteRequest",
     "listGraceProjects",

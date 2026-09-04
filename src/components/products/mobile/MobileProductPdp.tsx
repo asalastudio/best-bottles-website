@@ -38,6 +38,10 @@ import {
 import { hasRealPdpDimensions } from "@/lib/products/pdp-stage-modes";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
+import {
+    GRACE_PDP_PLATE_EVENT,
+    type GracePdpPlateCommand,
+} from "@/lib/grace/pdpPlateSwap";
 import MobileConfigurationSummary from "./MobileConfigurationSummary";
 import MobileProductHero from "./MobileProductHero";
 import { PickerOptions } from "./PickerOptions";
@@ -149,6 +153,17 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const markPlateBroken = useCallback((url: string) => {
         console.error("[plates] image failed to load", url);
         setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
+    }, []);
+
+    useEffect(() => {
+        const onPlate = (event: Event) => {
+            const viewMode = (event as CustomEvent<GracePdpPlateCommand>).detail?.viewMode;
+            if (viewMode === "assembled" || viewMode === "capOff") {
+                dispatch({ type: "setView", view: viewMode });
+            }
+        };
+        window.addEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
+        return () => window.removeEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
     }, []);
 
     /* ── committed selection ─────────────────────────────────────────────── */

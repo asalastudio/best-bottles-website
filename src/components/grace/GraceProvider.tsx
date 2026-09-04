@@ -71,6 +71,12 @@ import {
     type GraceOpenPanelOptions,
 } from "@/lib/grace/agenticHandoff";
 import {
+    dispatchGracePdpPlateCommand,
+    isGracePdpPlateCommand,
+    parsePlateViewMode,
+    parseRollerVariant,
+} from "@/lib/grace/pdpPlateSwap";
+import {
     buildGraceFinderContext,
     mergePdpContextChange,
     PDP_CONTEXT_CHANGE_EVENT,
@@ -120,7 +126,7 @@ function formatPageContextForGrace(
     if (ctx.pageUrl) lines.push(`URL: ${ctx.pageUrl}`);
     if (companion?.mode === "agentic") {
         lines.push(
-            "COMPANION: Agentic mode. The customer tapped a product you surfaced. The chat is hidden and voice is on. You may search and navigate the whole site. You cannot flip the live PDP cap/roller/glass pickers — to change a configuration, navigate to that variant's verified product URL with its exact sku.",
+            "COMPANION: Agentic mode. The customer tapped a product you surfaced. The chat is hidden and voice is on. You may search and navigate the whole site. On this PDP, call configureCurrentProduct to swap the visible cap, roller, or cap-on/off plate — the bottle stays still. That is not a catalog-wide builder.",
         );
     } else if (companion?.mode === "product" && ctx.pageType === "pdp") {
         lines.push(
@@ -2111,6 +2117,47 @@ function GraceProviderBase({
                 analytics.graceToolCalled({ toolName: "displayAnatomy", success: true });
                 return `Showing the anatomy of ${product.itemName} with ${pins.length} callouts.`;
             } catch (e) { console.error("[Grace] displayAnatomy:", e); return "Could not render anatomy view."; }
+        },
+
+        configureCurrentProduct: (params: {
+            sku?: string | null;
+            capOption?: string | null;
+            rollerVariant?: string | null;
+            viewMode?: string | null;
+        }) => {
+            const ctx = pageContextRef.current;
+            if (ctx?.pageType !== "pdp") {
+                return "The customer is not on a product page. I can only swap the cap, roller, or cap-on/off plate on the bottle they are already looking at.";
+            }
+            const command = {
+                sku: params.sku?.trim() || null,
+                capOption: params.capOption?.trim() || null,
+                rollerVariant: parseRollerVariant(params.rollerVariant),
+                viewMode: parsePlateViewMode(params.viewMode),
+            };
+            if (!isGracePdpPlateCommand(command)) {
+                return "I need a cap finish, roller (metal or plastic), a variant SKU in this group, or cap on/off to change what they are looking at.";
+            }
+            const dispatched = dispatchGracePdpPlateCommand(command);
+            if (!dispatched) {
+                return "I could not reach the product page to change the plate.";
+            }
+            sessionMetricsRef.current.toolsCalled++;
+            sessionMetricsRef.current.toolsUsed.add("configureCurrentProduct");
+            analytics.graceToolCalled({ toolName: "configureCurrentProduct", success: true });
+            analytics.gracePdpPlateSwapped({
+                sku: command.sku ?? "",
+                capOption: command.capOption ?? "",
+                rollerVariant: command.rollerVariant ?? "",
+                viewMode: command.viewMode ?? "",
+            });
+            const bits: string[] = [];
+            if (command.sku) bits.push(`SKU ${command.sku}`);
+            if (command.capOption) bits.push(`${command.capOption} cap`);
+            if (command.rollerVariant) bits.push(`${command.rollerVariant} roller`);
+            if (command.viewMode === "capOff") bits.push("cap off");
+            if (command.viewMode === "assembled") bits.push("cap on");
+            return `Updating the bottle they are looking at (${bits.join(", ")}). The bottle stays still; only the requested plate layer changes.`;
         },
 
         // ── End provider-neutral client tools ───────────────────────────────

@@ -60,6 +60,12 @@ import {
     type PendingPdpAnalyticsNavigation,
 } from "@/lib/products/pdp-analytics";
 import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
+import {
+    GRACE_PDP_PLATE_EVENT,
+    isGracePdpPlateCommand,
+    matchListedOption,
+    type GracePdpPlateCommand,
+} from "@/lib/grace/pdpPlateSwap";
 
 export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 
@@ -1678,6 +1684,36 @@ export default function ProductDetailClient({
         if (qty > 1) target.searchParams.set("qty", String(qty));
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
     }, [qty, router, safeFrom]);
+
+    useEffect(() => {
+        const onPlate = (event: Event) => {
+            const command = (event as CustomEvent<GracePdpPlateCommand>).detail;
+            if (!isGracePdpPlateCommand(command)) return;
+
+            if (command.sku) {
+                const wanted = command.sku.trim();
+                const resolved = variants.find((variant) =>
+                    variant.websiteSku === wanted || variant.graceSku === wanted
+                );
+                if (!resolved) return;
+                const nextUrl = canonicalVariantUrl(resolved);
+                if (nextUrl) router.replace(nextUrl, { scroll: false });
+                return;
+            }
+
+            if (command.capOption || command.rollerVariant) {
+                const cap = command.capOption
+                    ? matchListedOption(command.capOption, capColorOptions) ?? command.capOption
+                    : undefined;
+                handleGuidedVariantSelection({
+                    rollerVariant: command.rollerVariant ?? undefined,
+                    capOption: cap,
+                });
+            }
+        };
+        window.addEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
+        return () => window.removeEventListener(GRACE_PDP_PLATE_EVENT, onPlate);
+    }, [canonicalVariantUrl, capColorOptions, handleGuidedVariantSelection, router, variants]);
 
     // ── Product view analytics ───────────────────────────────────────────────
     useEffect(() => {
