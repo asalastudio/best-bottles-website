@@ -29,6 +29,13 @@ describe("dotted cap identity", () => {
         expect(decoratedCapFinish({ capColor: "Pink with Dots" })).toBe("Pink with Dots");
     });
 
+    it.each(["GBCyl9RollShBlk", "GBCyl9MtlRollShnBlk"])("uses the canonical shiny finish for %s in product titles", (websiteSku) => {
+        expect(getCustomerFacingProductName({
+            group: { family: "Cylinder", capacityMl: 9, color: "Clear", category: "Glass Bottle" },
+            variant: { websiteSku, capColor: "Clear", applicator: "Plastic Roller Ball" },
+        }).displayName).toBe("9 ml Clear Cylinder Roll-On Bottle - Shiny Black Cap");
+    });
+
     it("retains the existing photo lookup key separately from the customer label", () => {
         const variant = { websiteSku: "GBCyl9RollBlkDot" };
         expect(decoratedCapFinish(variant)).toBe("Black with Dots");
