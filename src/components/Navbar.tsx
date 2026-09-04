@@ -335,6 +335,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
     return (
         <>
             <header
+                data-site-header=""
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
                     } ${variant === "catalog" ? "border-b border-champagne" : ""}`}
                 style={{ right: "var(--grace-content-inset, 0px)" }}
