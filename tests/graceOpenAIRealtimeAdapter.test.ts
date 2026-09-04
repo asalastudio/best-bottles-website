@@ -17,6 +17,7 @@ class FakeSession implements GraceRealtimeSessionLike {
     updateAgent = vi.fn(async (agent: unknown) => agent);
     updateHistory = vi.fn();
     interrupt = vi.fn();
+    mute = vi.fn();
     close = vi.fn();
 
     on(event: string, handler: (...args: unknown[]) => void) {
@@ -85,6 +86,13 @@ describe("Grace OpenAI Realtime adapter", () => {
                 config: expect.objectContaining({
                     outputModalities: ["audio"],
                     voice: GRACE_REALTIME_VOICE,
+                    audio: expect.objectContaining({
+                        input: expect.objectContaining({
+                            turnDetection: expect.objectContaining({
+                                interrupt_response: false,
+                            }),
+                        }),
+                    }),
                 }),
             }),
         );
@@ -96,6 +104,9 @@ describe("Grace OpenAI Realtime adapter", () => {
             return named.name;
         });
         expect(merchandiserToolNames).toContain("configureCurrentProduct");
+        expect(merchandiserToolNames).toContain("navigateToPage");
+        expect(merchandiserToolNames).toContain("showProducts");
+        expect(merchandiser?.instructions).toContain("You HAVE navigateToPage");
     });
 
     it("sends typed turns and updates context without triggering a response", async () => {
@@ -175,6 +186,59 @@ describe("Grace OpenAI Realtime adapter", () => {
         });
         expect(onError).toHaveBeenCalledWith(expect.any(Error));
         expect(onDisconnect).toHaveBeenCalledTimes(1);
+    });
+
+    it("mutes the microphone while Grace is speaking and drops speakerphone echo", async () => {
+        vi.useFakeTimers();
+        const session = new FakeSession();
+        const onModeChange = vi.fn();
+        const onMessage = vi.fn();
+        const adapter = createGraceOpenAIRealtimeAdapter({
+            baseInstructions: "Truth first.",
+            toolImplementations: Object.fromEntries(
+                GRACE_OPENAI_TOOL_SPECS.map(({ name }) => [name, vi.fn()]),
+            ),
+            callbacks: { onModeChange, onMessage },
+            dependencies: {
+                createAgent: (config) => config,
+                createSession: () => session,
+            },
+        });
+        await adapter.connect({ clientSecret: "ek_test", mode: "voice" });
+
+        session.emit("agent_end", {}, {}, "Want me to open the 28 milliliter bottle?");
+        session.emit("audio_start");
+        expect(session.mute).toHaveBeenCalledWith(true);
+        expect(onModeChange).toHaveBeenCalledWith("speaking");
+
+        session.emit("transport_event", {
+            type: "conversation.item.input_audio_transcription.completed",
+            transcript: "Want me to open the 28 milliliter bottle?",
+        });
+        expect(onMessage).not.toHaveBeenCalledWith(expect.objectContaining({ role: "user" }));
+
+        session.emit("audio_stopped");
+        expect(onModeChange).toHaveBeenCalledWith("listening");
+        session.emit("transport_event", {
+            type: "conversation.item.input_audio_transcription.completed",
+            transcript: "Want me to open the 28 milliliter bottle?",
+        });
+        expect(onMessage).not.toHaveBeenCalledWith(expect.objectContaining({ role: "user" }));
+
+        await vi.advanceTimersByTimeAsync(450);
+        expect(session.mute).toHaveBeenCalledWith(false);
+
+        session.emit("transport_event", {
+            type: "conversation.item.input_audio_transcription.completed",
+            transcript: "Take us to the 28 ml bottle",
+        });
+        expect(onMessage).toHaveBeenCalledWith({
+            role: "user",
+            text: "Take us to the 28 ml bottle",
+        });
+
+        adapter.disconnect();
+        vi.useRealTimers();
     });
 
     it("executes the matching deterministic client implementation", async () => {

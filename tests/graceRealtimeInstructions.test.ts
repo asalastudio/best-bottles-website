@@ -17,7 +17,9 @@ describe("Grace Realtime instructions", () => {
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("CATALOG HINT");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("getProductMeasurements");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("getSiteCapabilities");
-        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("Hand off to Navigator");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("never tell the customer to search the catalog themselves");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("tappable displayProductCard");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain("Never answer a question you just asked");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain(
             "Use configureCurrentProduct for current-PDP cap, roller, or cap-on/off plate swaps",
         );

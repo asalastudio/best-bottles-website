@@ -41,6 +41,12 @@ describe("Grace mobile agentic handoff", () => {
         expect(shouldAutoNavigateFromGraceTool({
             mode: "product",
             pageType: "pdp",
+            currentPageUrl: "/products/cylinder-9ml-cobalt-17-415-rollon",
+            destination: "/products/cylinder-28ml-clear-18-415-rollon",
+        })).toBe(true);
+        expect(shouldAutoNavigateFromGraceTool({
+            mode: "product",
+            pageType: "pdp",
             autoNavigate: false,
             destination: "/products/cylinder-9ml-amber-17-415-rollon",
         })).toBe(false);

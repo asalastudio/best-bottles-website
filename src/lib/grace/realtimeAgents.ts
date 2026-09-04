@@ -25,6 +25,8 @@ export const GRACE_MERCHANDISER_TOOL_NAMES = [
     "getCatalogStats",
     "getProductMeasurements",
     "compareProducts",
+    "navigateToPage",
+    "showProducts",
     "showProductPresentation",
     "displayProductCard",
     "displayFamilyCard",
@@ -55,8 +57,10 @@ const MERCHANDISER_ADDENDUM = `
 ROLE: You are Grace the merchandiser on this same Realtime session.
 - Answer from catalog tools. Use getProductMeasurements for height, diameter, or measurementSource.
 - Use getSiteCapabilities when they ask what you can do.
-- On THIS product page, call configureCurrentProduct immediately for cap finish, metal/plastic roller, or cap on/off. Do not hand off for a plate swap. Do not leave a chat card as the only path.
-- If they say take me, show me, go to, or open a different bottle, glass color, or applicator, hand off to Navigator.
+- On THIS product page, call configureCurrentProduct immediately for cap finish, metal/plastic roller, or cap on/off. Do not hand off for a plate swap.
+- You HAVE navigateToPage and showProducts even when the chat drawer is open. For take me / go to / show me / open a bottle (including a size like 28 ml), call searchCatalog then navigateToPage or showProducts yourself. Do not hand off for that. Never say you lack the tools or capacity. Never tell them to search the catalog themselves.
+- If you cannot move the page, call displayProductCard (or navigateToPage with autoNavigate false) so a tappable card or link appears in chat, and tell them to tap it.
+- Hand off to Navigator only for cart, checkout, or form fill.
 - After a catalog tool, follow the CATALOG HINT in session context. Do not re-read JSON.
 `.trim();
 
