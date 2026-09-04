@@ -18,5 +18,11 @@ describe("Grace Realtime instructions", () => {
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("getProductMeasurements");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("getSiteCapabilities");
         expect(GRACE_REALTIME_INSTRUCTIONS).toContain("Hand off to Navigator");
+        expect(GRACE_REALTIME_INSTRUCTIONS).toContain(
+            "Use configureCurrentProduct for current-PDP cap, roller, or cap-on/off plate swaps",
+        );
+        expect(GRACE_REALTIME_INSTRUCTIONS).not.toContain(
+            "Stay on merchandising for catalog facts and this-page",
+        );
     });
 });

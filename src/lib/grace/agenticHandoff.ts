@@ -121,7 +121,7 @@ export function agenticHandoffHidesChat(): boolean {
 
 /**
  * The mobile PDP pickers (cap finish, roller, glass) are page-owned.
- * Grace does not confirm a picker or patch that React state.
+ * Grace does not confirm a picker or patch React state.
  * Cap / roller / cap-on-off on THIS PDP go through configureCurrentProduct
  * (same kit layers as the picker). Glass color and applicator are navigation.
  */
