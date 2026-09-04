@@ -90,7 +90,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
             <div
                 data-testid="mobile-pdp-stage"
                 className="relative mx-auto overflow-hidden"
-                style={{ aspectRatio: "10 / 11", width: "var(--mobile-pdp-stage-width, min(100%, calc(42svh * 10 / 11)))" }}
+                style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
                 {hasStack ? (
                     <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} />

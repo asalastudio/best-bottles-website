@@ -1,3 +1,5 @@
+import { decoratedCapFinish } from "./decorated-cap-finish";
+
 export type CustomerFacingNameConfidence = "high" | "medium" | "fallback";
 
 export type CustomerFacingNameGroupInput = {
@@ -249,6 +251,7 @@ function usableFinish(value: string | null | undefined): string | null {
 function resolveFinish(variant?: CustomerFacingNameVariantInput | null): string | null {
     if (!variant) return null;
     return (
+        decoratedCapFinish(variant) ??
         usableFinish(variant.capColor) ??
         usableFinish(variant.trimColor) ??
         finishFromGraceSku(variant.graceSku) ??

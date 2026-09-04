@@ -69,7 +69,7 @@ The repair branch starts at the exact PR #89 head above. It is a separate contin
 - Optional Grace-memory failures return an unavailable state instead of unmounting the storefront.
 - Mobile and desktop specifications, plus new cart lines, use the same resolved cap finish as the selector. Shared catalog rows are not modified.
 - Editorial rich descriptions now use the existing applicator-consistency check. Incompatible text uses a compatible canonical product description, or is omitted if none exists. The stale source is Sanity document `productGroupContent-cylinder-9ml-clear-17-415-rollon`, block `desc-cylinder-9ml-clear-1`. That shared document is unchanged.
-- While a picker is open on a screen at most 700 px tall, the bottle preview contracts to leave usable space for the option cards and confirmation button. Closing restores the ordinary hero.
+- On screens at most 700 px tall, the cap picker uses one horizontally scrolling row. The bottle keeps exactly its normal scale; the View Larger entry is temporarily hidden while the picker is open.
 - The desktop quantity input is constrained to 48 px and purchase controls can wrap, resolving the 768 px overflow.
 - An inactive, branch-level preview-build opt-in accepts only preview-scoped Convex keys. This repair preview uses the existing backend; the opt-in is not enabled and no new deploy credential is issued.
 
@@ -77,7 +77,7 @@ The repair branch starts at the exact PR #89 head above. It is a separate contin
 
 - 62 tests pass, including the existing mobile/purchase checks, actual Convex-hook failure recovery, editorial conflict cases, and preview-build guards.
 - TypeScript and changed-file ESLint pass; `git diff --check` passes.
-- At 320 × 568, the cap sheet is y=168–568 (400 px tall); both option rows fit at y=246–470, with the confirmation button visible. The original sheet was only 208 px tall.
+- After the scale correction, at 320 × 568 the bottle stage is 216.86 × 238.53 px both before and after opening. The sheet is y=300–568, and its complete single row is y=373–486.5 with the confirmation button visible. This supersedes the earlier compressed-bottle/two-row repair.
 - Document width matches viewport at 320, 390, 430, and 768 px. The corrected tablet quantity input measures 48 px.
 - Pointer selection of Shiny Gold works, and Specifications displays Shiny Gold. The visible roll-on editorial copy no longer says it is built for fine mist sprayers.
 - Selecting Metal Roller preserves Shiny Gold and resolves `GBCyl9MtlRollShnGl`, $0.72. A 12-unit cart addition totals $8.64. No checkout or order is submitted.
@@ -88,3 +88,9 @@ The repair branch starts at the exact PR #89 head above. It is a separate contin
 - Complete checkout handoff and confirm production catalog/pricing parity.
 - Verify Grace voice/chat and memory on a backend that contains the matching functions. Grace memory remains optional and unavailable on the existing test backend.
 - The existing shared Sanity record still contains stale sprayer copy; the repair renders compatible catalog copy instead. An editorial source correction can be reviewed separately.
+
+### Cap naming and image-scale follow-up
+
+- Preserve dotted cap identity from website SKU, legacy Grace token, or explicit cap wording. Black with Dots, Silver with Dots, and Pink with Dots remain distinct from solid/shiny finishes.
+- Use the shared dotted identity in product titles and the PDP finish resolver, which supplies configuration rows, specifications, and new cart lines. Keep the existing component-photo lookup vocabulary separate.
+- Optimized build and 72 focused tests passed, covering naming, SKU/photo mappings, mobile models, and purchase controls. Small-screen pointer opening confirms the image does not shrink; all ten finish options remain accessible by horizontal scrolling.

@@ -105,13 +105,16 @@ body {
   }
 }
 
-/* Short phones need room for both option rows and the confirmation button.
-   Keep a smaller live bottle preview above the sheet while it is open. */
+/* Keep the bottle at its normal scale on short phones. A single finish row
+   leaves room for readable labels and confirmation without shrinking it. */
 @media (max-width: 767px) and (max-height: 700px) {
-  main[data-mobile-picker-open] {
-    --mobile-pdp-stage-width: min(100%, calc(max(80px, calc(100svh - 461px - env(safe-area-inset-bottom, 0px))) * 10 / 11));
-  }
   main[data-mobile-picker-open] [data-mobile-pdp-viewer-entry] {
+    display: none;
+  }
+  [data-mobile-option-sheet] [data-picker-layout="grid"] {
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+  }
+  [data-mobile-picker-hint] {
     display: none;
   }
 }

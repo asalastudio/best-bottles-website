@@ -19,6 +19,7 @@ import { useGrace } from "@/components/useGrace";
 import { APPLICATOR_BUCKETS, APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import { reconcilePdpEditorialDescriptions } from "@/lib/products/pdp-editorial-description";
+import { decoratedCapFinish } from "@/lib/products/decorated-cap-finish";
 import {
     PdpInlineBadges,
     PdpInlinePromo,
@@ -242,6 +243,8 @@ function getAntiqueBulbVisualIdentity(v: ProductVariant): { label: string; swatc
 
 /** Resolved cap finish for PDP selectors — must match variantSwatchPreview so sparse capColor rows still appear. */
 function resolveVariantCapFinish(v: ProductVariant): { label: string; swatchName: string } {
+    const decorated = decoratedCapFinish(v);
+    if (decorated) return { label: decorated, swatchName: decorated };
     if (isAntiqueBulbVariant(v)) {
         const bulbIdentity = getAntiqueBulbVisualIdentity(v);
         if (bulbIdentity) return bulbIdentity;

@@ -150,7 +150,7 @@ export default function ProductOptionSheet({
                                     {title}
                                 </Dialog.Title>
                                 {hint ? (
-                                    <Dialog.Description id={hintId} className="mt-1 text-xs text-slate">
+                                    <Dialog.Description id={hintId} data-mobile-picker-hint="" className="mt-1 text-xs text-slate">
                                         {hint}
                                     </Dialog.Description>
                                 ) : null}
