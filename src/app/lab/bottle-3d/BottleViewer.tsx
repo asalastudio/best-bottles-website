@@ -23,7 +23,7 @@
  * which reads like a material bug and is not one.
  */
 
-import { Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
   OrbitControls,
@@ -543,7 +543,10 @@ export default function BottleViewer({
   const [glass, setGlass] = useState<GlassKey>("clear");
   const [showDatum, setShowDatum] = useState(true);
   const [threaded, setThreaded] = useState(true);
-  const [closureKind, setClosureKind] = useState<string>("none");
+  // Keyed by neck finish: a closure chosen for one finish cannot seat on the
+  // next body, so the selection derives back to "none" when the finish changes.
+  const [closureSel, setClosureSel] =
+    useState<{ finish: string | null | undefined; kind: string }>({ finish: undefined, kind: "none" });
   const [explodeMm, setExplodeMm] = useState(0);
   // Clear glass cannot be judged against near-black: with nothing bright behind
   // it, transmission has nothing to carry and it reads as smoked glass. A light
@@ -552,8 +555,13 @@ export default function BottleViewer({
   const [transmissionModel, setTransmissionModel] = useState(false);
   const [closureFinish, setClosureFinish] =
     useState<ClosureFinishKey>("shiny-black");
-  const [m, setM] = useState<Measured | null>(null);
+  // Keyed by body index so a stale measurement never describes the next body.
+  const [measured, setMeasured] = useState<{ i: number; m: Measured } | null>(null);
   const body = bodies[i];
+  const m = measured?.i === i ? measured.m : null;
+  const setM = useCallback((x: Measured) => setMeasured({ i, m: x }), [i]);
+  const closureKind = closureSel.finish === body.neckFinish ? closureSel.kind : "none";
+  const setClosureKind = (kind: string) => setClosureSel({ finish: body.neckFinish, kind });
 
   // The threaded build carries the drawing-exact finish master (real helix)
   // grafted on; the original has a smooth silhouette-traced neck. Only some
@@ -586,10 +594,6 @@ export default function BottleViewer({
     return m;
   }, [closures.parts]);
   const stack = fits.find((a) => a.kind === closureKind)?.stack ?? [];
-
-  useEffect(() => setM(null), [i]);
-  // A closure chosen for one finish cannot seat on the next body.
-  useEffect(() => setClosureKind("none"), [body.neckFinish]);
 
   const expected =
     body.shape === "round"

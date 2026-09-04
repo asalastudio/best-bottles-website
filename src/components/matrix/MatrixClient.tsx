@@ -278,11 +278,11 @@ export default function MatrixClient({
                     </p>
                 </div>
                 <div className="flex-1" />
-                <a href="/catalog"
-                   className="text-spec font-semibold text-slate border border-champagne rounded-[3px]
-                              px-3 py-1.5 transition-colors duration-200 hover:border-muted-gold">
+                <Link href="/catalog"
+                      className="text-spec font-semibold text-slate border border-champagne rounded-[3px]
+                                 px-3 py-1.5 transition-colors duration-200 hover:border-muted-gold">
                     Visual Catalog
-                </a>
+                </Link>
             </div>
 
             {/* toolbar — every filter is scoped to the open family */}
