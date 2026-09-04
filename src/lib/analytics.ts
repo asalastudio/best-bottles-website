@@ -174,6 +174,38 @@ function safePdpResolutionDimension(value: unknown): PdpResolutionDimension | un
     : undefined;
 }
 
+type MobilePdpPickerType = "glass" | "roller" | "capFinish";
+type MobilePdpViewMode = "assembled" | "capOff" | "dimensions";
+
+function safeMobilePdpPickerType(value: unknown): MobilePdpPickerType | undefined {
+  return value === "glass" || value === "roller" || value === "capFinish" ? value : undefined;
+}
+
+function safeMobilePdpViewMode(value: unknown): MobilePdpViewMode | undefined {
+  return value === "assembled" || value === "capOff" || value === "dimensions" ? value : undefined;
+}
+
+/** Option ids are catalogue vocabulary (finish names, glass presets, roller material), never SKUs. */
+function safeMobilePdpOptionId(value: unknown): string | undefined {
+  if (typeof value !== "string") return undefined;
+  const trimmed = value.trim();
+  if (!trimmed || trimmed.length > 60 || !/^[A-Za-z0-9][A-Za-z0-9 _.\-/&()]*$/.test(trimmed)) return undefined;
+  // A finish name never spells a SKU: anything that reads as one is dropped.
+  if (/^[A-Za-z]{2,}\d/.test(trimmed) && !/\s/.test(trimmed)) return undefined;
+  return trimmed;
+}
+
+function safeMobilePdpBase(properties: {
+  slug: string; sku: string | null; pickerType: MobilePdpPickerType; viewMode: MobilePdpViewMode;
+}): Props | undefined {
+  const slug = safeProductSlug(properties.slug);
+  const pickerType = safeMobilePdpPickerType(properties.pickerType);
+  const viewMode = safeMobilePdpViewMode(properties.viewMode);
+  if (!slug || !pickerType || !viewMode) return undefined;
+  const sku = safeProductSku(properties.sku);
+  return { slug, ...(sku ? { sku } : {}), pickerType, viewMode };
+}
+
 // ─── Public API ──────────────────────────────────────────────────────────────
 
 export const analytics = {
@@ -434,6 +466,75 @@ export const analytics = {
       sku,
       application,
       ...(dimension ? { dimension } : {}),
+    });
+  },
+
+  // ── Mobile PDP configuration (picker) events ────────────────────────────
+  // Presentation-only interactions on the mobile PDP. The canonical commerce
+  // events (Product Viewed, PDP Variant Resolved, Cart Item Added) stay
+  // authoritative and are never duplicated here. Slugs and SKUs cross the
+  // same privacy boundary as the other focused-shopping events; option ids
+  // are catalogue vocabulary (finish names, glass presets, roller material).
+  mobilePdpPickerOpened(properties: { slug: string; sku: string | null; pickerType: MobilePdpPickerType; viewMode: MobilePdpViewMode }) {
+    const base = safeMobilePdpBase(properties);
+    if (!base) return;
+    trackFocusedShopping("Mobile PDP Picker Opened", base);
+  },
+
+  mobilePdpOptionPreviewed(properties: {
+    slug: string; sku: string | null; pickerType: MobilePdpPickerType; viewMode: MobilePdpViewMode;
+    previousOptionId: string | null; previewOptionId: string;
+  }) {
+    const base = safeMobilePdpBase(properties);
+    const previewOptionId = safeMobilePdpOptionId(properties.previewOptionId);
+    if (!base || !previewOptionId) return;
+    const previousOptionId = safeMobilePdpOptionId(properties.previousOptionId);
+    trackFocusedShopping("Mobile PDP Option Previewed", {
+      ...base,
+      previewOptionId,
+      ...(previousOptionId ? { previousOptionId } : {}),
+    });
+  },
+
+  mobilePdpOptionConfirmed(properties: {
+    slug: string; sku: string | null; pickerType: MobilePdpPickerType; viewMode: MobilePdpViewMode;
+    previousOptionId: string | null; confirmedOptionId: string;
+  }) {
+    const base = safeMobilePdpBase(properties);
+    const confirmedOptionId = safeMobilePdpOptionId(properties.confirmedOptionId);
+    if (!base || !confirmedOptionId) return;
+    const previousOptionId = safeMobilePdpOptionId(properties.previousOptionId);
+    trackFocusedShopping("Mobile PDP Option Confirmed", {
+      ...base,
+      confirmedOptionId,
+      ...(previousOptionId ? { previousOptionId } : {}),
+    });
+  },
+
+  mobilePdpPickerCancelled(properties: {
+    slug: string; sku: string | null; pickerType: MobilePdpPickerType; viewMode: MobilePdpViewMode;
+    previewOptionId: string | null;
+  }) {
+    const base = safeMobilePdpBase(properties);
+    if (!base) return;
+    const previewOptionId = safeMobilePdpOptionId(properties.previewOptionId);
+    trackFocusedShopping("Mobile PDP Picker Cancelled", {
+      ...base,
+      ...(previewOptionId ? { previewOptionId } : {}),
+    });
+  },
+
+  mobilePdpViewChanged(properties: { slug: string; sku: string | null; viewMode: MobilePdpViewMode; previousViewMode: MobilePdpViewMode }) {
+    const slug = safeProductSlug(properties.slug);
+    const viewMode = safeMobilePdpViewMode(properties.viewMode);
+    const previousViewMode = safeMobilePdpViewMode(properties.previousViewMode);
+    if (!slug || !viewMode || !previousViewMode) return;
+    const sku = safeProductSku(properties.sku);
+    trackFocusedShopping("Mobile PDP View Changed", {
+      slug,
+      ...(sku ? { sku } : {}),
+      viewMode,
+      previousViewMode,
     });
   },
 
