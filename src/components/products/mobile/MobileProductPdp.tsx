@@ -11,8 +11,9 @@
  * Add to Cart). Commerce state lives in exactly one place — the parent.
  */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
+import Link from "next/link";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
-import { CaretRight, Microphone } from "@/components/icons";
+import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
 import type { PdpCompatibilityComponent, PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 import { analytics } from "@/lib/analytics";
@@ -39,6 +40,7 @@ import {
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
+import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
     GRACE_PDP_PLATE_EVENT,
     type GracePdpPlateCommand,
@@ -433,29 +435,25 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         if (!sentinel || !isMobile || typeof IntersectionObserver === "undefined") return;
         const evaluate = (top?: number) => {
             const sentinelTop = top ?? sentinel.getBoundingClientRect().top;
-            const maxScrollRemaining = document.documentElement.scrollHeight - window.innerHeight - window.scrollY;
-            setStickyVisible(stickyCtaVisible({ sentinelTop, maxScrollRemaining, overlayOpen }));
+            setStickyVisible(stickyCtaVisible({ sentinelTop, overlayOpen }));
         };
         const observer = new IntersectionObserver((entries) => {
             const entry = entries[entries.length - 1];
             evaluate(entry?.boundingClientRect.top);
         }, { rootMargin: stickyCtaRootMargin(), threshold: 0 });
         observer.observe(sentinel);
-        // Content height changes (kits, compatibility, editorial) move the
-        // "can this page ever scroll far enough" fallback without a crossing.
-        const resize = typeof ResizeObserver !== "undefined" ? new ResizeObserver(() => evaluate()) : null;
-        resize?.observe(document.documentElement);
         const onResize = () => evaluate();
         window.addEventListener("resize", onResize);
         return () => {
             observer.disconnect();
-            resize?.disconnect();
             window.removeEventListener("resize", onResize);
         };
     }, [isMobile, overlayOpen, rows.length]);
 
     /* ── purchase facts ──────────────────────────────────────────────────── */
-    const priceEach = selectedVariant?.webPrice1pc ?? null;
+    const priceEach = selectedVariant
+        ? resolveChargedUnitPrice(qty, selectedVariant)
+        : null;
     const caseQty = selectedVariant?.caseQuantity && selectedVariant.caseQuantity > 1 ? selectedVariant.caseQuantity : null;
     const neckSize = selectedVariant?.neckThreadSize ?? group.neckThreadSize ?? null;
     const resolvedSku = selectedVariant?.websiteSku || selectedVariant?.graceSku || null;
@@ -510,8 +508,9 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                     {resolvedSku ? <div className="flex gap-1.5"><dt className="font-semibold uppercase tracking-label text-2xs">SKU</dt><dd className="text-obsidian">{resolvedSku}</dd></div> : null}
                 </dl>
 
-                {/* ── quantity: the only purchase control inline. Add to Cart is
-                    the sticky bar, which follows the configurator out of view. ── */}
+                {/* ── quantity + primary action. Keeping the purchase action
+                    inline makes short pages complete without bypassing the
+                    sentinel; the compact bar follows the configurator later. ── */}
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-champagne/60 pt-4">
                     <span className="text-2xs font-semibold uppercase tracking-label text-slate">Quantity</span>
                     <div className="flex flex-wrap items-stretch justify-end gap-2">
@@ -540,6 +539,34 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">${(priceEach * qty).toFixed(2)}</span>
                     </p>
                 ) : null}
+                {qty >= 500 || !canAddToCart ? (
+                    <Link
+                        href={quoteHref}
+                        data-testid="mobile-pdp-inline-request-quote"
+                        className="mt-4 flex min-h-12 w-full items-center justify-center rounded-[3px] bg-obsidian px-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                    >
+                        Request Quote
+                    </Link>
+                ) : (
+                    <button
+                        type="button"
+                        disabled={!canAddToCart || addedFlash}
+                        onClick={onAddToCart}
+                        data-testid="mobile-pdp-inline-add-to-cart"
+                        className={`mt-4 flex min-h-12 w-full items-center justify-center gap-2 rounded-[3px] px-4 text-sm font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold disabled:cursor-not-allowed ${
+                            addedFlash ? "bg-emerald-600 text-white" : "bg-obsidian text-white hover:bg-muted-gold disabled:opacity-40"
+                        }`}
+                    >
+                        {addedFlash ? (
+                            <><Check className="h-4 w-4" weight="bold" aria-hidden /><span>Added to Cart</span></>
+                        ) : (
+                            <>
+                                <ShoppingBag className="h-4 w-4" aria-hidden />
+                                <span>Add to Cart{priceEach != null ? ` · $${(priceEach * qty).toFixed(2)}` : ""}</span>
+                            </>
+                        )}
+                    </button>
+                )}
 
                 {/* Grace sits at the decision point, not in a floating disc: the
                     questions she answers (fit, bulk pricing) arise right here,

@@ -25,29 +25,24 @@ export function stickyCtaRootMargin(triggerOffset: number = STICKY_CTA_TRIGGER_O
 export type StickyCtaInput = {
     /** Sentinel top edge relative to the viewport (boundingClientRect.top). */
     sentinelTop: number;
-    /** Pixels the document can still scroll down: scrollHeight - innerHeight - scrollY. */
-    maxScrollRemaining: number;
     /** A picker sheet or the expanded viewer is open; the bar never competes with those. */
     overlayOpen?: boolean;
     triggerOffset?: number;
 };
 
 /**
- * Show once the sentinel has passed the trigger band. If the page can never
- * scroll far enough for that to happen (a short page on a tall phone) the bar
- * is the only Add to Cart, so it shows rather than never becoming reachable.
+ * Show only once the sentinel has passed the trigger band. Short pages never
+ * bypass this element-relative trigger because the purchase block carries its
+ * own inline Add to Cart action.
  */
 export function stickyCtaVisible({
     sentinelTop,
-    maxScrollRemaining,
     overlayOpen = false,
     triggerOffset = STICKY_CTA_TRIGGER_OFFSET_PX,
 }: StickyCtaInput): boolean {
     if (overlayOpen) return false;
     if (!Number.isFinite(sentinelTop)) return false;
-    if (sentinelTop <= triggerOffset) return true;
-    const distanceToTrigger = sentinelTop - triggerOffset;
-    return Number.isFinite(maxScrollRemaining) && maxScrollRemaining < distanceToTrigger;
+    return sentinelTop <= triggerOffset;
 }
 
 /** Secondary line of the compact bar: "$0.73/ea · 724/case · Qty 12". */

@@ -74,25 +74,22 @@ describe("mobile PDP view modes", () => {
 describe("mobile PDP sticky Add to Cart trigger", () => {
     it("stays hidden while the configurator is visible and shows once the last row starts leaving", () => {
         // sentinel well below the top edge — configurator fully visible
-        expect(stickyCtaVisible({ sentinelTop: 620, maxScrollRemaining: 4000 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 620 })).toBe(false);
         // last row (72px) has begun to slide under the top edge
-        expect(stickyCtaVisible({ sentinelTop: 60, maxScrollRemaining: 4000 })).toBe(true);
-        expect(stickyCtaVisible({ sentinelTop: -400, maxScrollRemaining: 4000 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: 60 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: -400 })).toBe(true);
         // scrolling back up past the trigger hides it again
-        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX + 1, maxScrollRemaining: 4000 })).toBe(false);
-        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX, maxScrollRemaining: 4000 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX + 1 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX })).toBe(true);
     });
 
     it("never competes with an open picker or the expanded viewer", () => {
-        expect(stickyCtaVisible({ sentinelTop: -100, maxScrollRemaining: 4000, overlayOpen: true })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: -100, overlayOpen: true })).toBe(false);
     });
 
-    it("shows when the page can never scroll far enough for the sentinel to cross", () => {
-        expect(stickyCtaVisible({ sentinelTop: 500, maxScrollRemaining: 100 })).toBe(true);
-        // exactly enough scroll left to reach the trigger — it will cross on its own
-        expect(stickyCtaVisible({ sentinelTop: 500, maxScrollRemaining: 436 })).toBe(false);
-        expect(stickyCtaVisible({ sentinelTop: 500, maxScrollRemaining: 435.5 })).toBe(true);
-        expect(stickyCtaVisible({ sentinelTop: Number.NaN, maxScrollRemaining: 0 })).toBe(false);
+    it("never bypasses the sentinel on a short page because the inline CTA remains available", () => {
+        expect(stickyCtaVisible({ sentinelTop: 500 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: Number.NaN })).toBe(false);
     });
 
     it("keeps the trigger band and animation inside the PRD's envelope", () => {
@@ -417,7 +414,7 @@ describe("mobile PDP wiring", () => {
         const bar = read("src/components/products/mobile/MobileStickyPurchaseBar.tsx");
         expect(mobile).toContain("new IntersectionObserver(");
         expect(mobile).toContain("rootMargin: stickyCtaRootMargin()");
-        expect(mobile).toContain("stickyCtaVisible({ sentinelTop, maxScrollRemaining, overlayOpen })");
+        expect(mobile).toContain("stickyCtaVisible({ sentinelTop, overlayOpen })");
         expect(mobile).not.toMatch(/setStickyVisible\([^)]*window\.scrollY\s*[<>]/);
         expect(mobile).toContain("<MobileStickyPurchaseBar");
         expect(mobile).toContain("visible={stickyVisible}");
@@ -431,9 +428,12 @@ describe("mobile PDP wiring", () => {
         expect(bar).toContain("STICKY_CTA_ANIMATION_MS");
         expect(bar).toContain("inert={!visible}");
         expect(bar).toContain("h-[68px]");
-        // The inline block keeps quantity only; the bar is the single Add to Cart.
+        // A full inline purchase action keeps checkout reachable on short pages;
+        // the sticky bar remains the same action after the configurator leaves.
         const purchase = mobile.slice(mobile.indexOf('data-testid="mobile-pdp-purchase"'), mobile.indexOf("<MobileProductDetails"));
-        expect(purchase).not.toContain("mobile-pdp-add-to-cart");
+        expect(purchase).toContain('data-testid="mobile-pdp-inline-add-to-cart"');
+        expect(purchase).toContain("onClick={onAddToCart}");
+        expect(purchase).toContain("addedFlash");
         expect(purchase).toContain('aria-label="Quantity"');
     });
 
