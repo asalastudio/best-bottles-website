@@ -166,7 +166,17 @@ pipeline/paper-doll-3d/shape-truth.csv
 # review galleries are excluded.
 reference_images/
 Best-Bottles-Orphan-urls/
-/data/audits/canonical-truth-2026-07-12/
+# The canonical measurement truth IS source: production `products` rows are
+# stamped `measurementSource: best-bottles-master-truth@2026-07-12:<sha256[:12]>`
+# and that hash resolves to the CSV below. Keep the four source files and the
+# prod sync-back ledger; ignore any scratch dropped alongside them.
+/data/audits/canonical-truth-2026-07-12/*
+!/data/audits/canonical-truth-2026-07-12/AGENT-HANDOFF.md
+!/data/audits/canonical-truth-2026-07-12/BEST-BOTTLES-CANONICAL-TRUTH.md
+!/data/audits/canonical-truth-2026-07-12/best-bottles-body-geometry.csv
+!/data/audits/canonical-truth-2026-07-12/best-bottles-master-truth.csv
+!/data/audits/canonical-truth-2026-07-12/PROD-SYNC-BACK-2026-09-04.md
+!/data/audits/canonical-truth-2026-07-12/prod-sync-back-snapshot-2026-09-04.csv
 /data/audits/image-generation-coverage-2026-08-05/
 /docs/reviews/cylinder-beauty-gallery-v1/
 
