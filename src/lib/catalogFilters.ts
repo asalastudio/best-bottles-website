@@ -273,7 +273,8 @@ export function expandCapacityFilterValues(selected: readonly string[]): string[
         }
         const max = range.max ?? 2000;
         const step = range.max == null ? 1 : 0.1;
-        for (let ml = range.min; ml <= max + 1e-9; ml = Number((ml + step).toFixed(1))) {
+        // `range.min` is a const literal union; widen so the loop can increment.
+        for (let ml: number = range.min; ml <= max + 1e-9; ml = Number((ml + step).toFixed(1))) {
             labels.push(`${ml} ml`);
         }
     }
