@@ -1,9 +1,10 @@
 "use client";
 
 /**
- * Compact configuration rows: the active choice for every property the family
- * lets the customer decide, each opening its picker. Properties with one
- * compatible option are listed as facts, not controls.
+ * Configuration controls for the mobile PDP. First-time visitors must be able
+ * to tell these rows change the bottle, not that they are a spec list: a
+ * section heading, an explicit Change label, and a card treatment. Properties
+ * with one compatible option stay facts, not controls.
  */
 import type { CSSProperties } from "react";
 import { CaretRight } from "@/components/icons";
@@ -39,9 +40,24 @@ export default function MobileConfigurationSummary({
 }) {
     if (rows.length === 0 && facts.length === 0) return null;
     return (
-        <div data-testid="mobile-pdp-configuration" className="border-y border-champagne/60 bg-white">
+        <section
+            data-testid="mobile-pdp-configuration"
+            aria-labelledby={rows.length > 0 ? "mobile-pdp-configure-heading" : undefined}
+            className="border-y border-champagne/60 bg-linen"
+        >
+            {rows.length > 0 ? (
+                <header className="px-4 pb-2 pt-4">
+                    <h2 id="mobile-pdp-configure-heading" className="font-serif text-[22px] font-medium leading-tight text-obsidian">
+                        Configure this bottle
+                    </h2>
+                    <p className="mt-1 text-xs leading-snug text-slate">
+                        Tap a row to change an option. The bottle updates above.
+                    </p>
+                </header>
+            ) : null}
             {rows.map((row) => {
                 const selected = row.options.find((option) => option.id === row.selectedId) ?? row.options[0];
+                const extraCount = Math.max(0, row.options.length - 1);
                 return (
                     <button
                         key={row.picker}
@@ -51,19 +67,27 @@ export default function MobileConfigurationSummary({
                         aria-haspopup="dialog"
                         aria-label={`${row.label}: ${selected?.label ?? ""}. Change`}
                         data-testid={`mobile-pdp-row-${row.picker}`}
-                        className="flex min-h-[64px] w-full items-center gap-3 border-t border-champagne/60 px-4 py-3 text-left transition-colors first:border-t-0 hover:bg-linen/60 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
+                        className="flex min-h-[72px] w-full items-center gap-3 border-t border-champagne/60 bg-white px-4 py-3 text-left transition-colors hover:bg-bone focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
                     >
                         <OptionThumb option={selected} />
                         <span className="min-w-0 flex-1">
                             <span className="block text-2xs font-semibold uppercase tracking-label text-slate">{row.label}</span>
                             <span className="block truncate text-sm font-medium text-obsidian">{selected?.label}</span>
+                            {extraCount > 0 ? (
+                                <span className="mt-0.5 block text-2xs text-slate">
+                                    {extraCount} {extraCount === 1 ? "other option" : "other options"}
+                                </span>
+                            ) : null}
                         </span>
-                        <CaretRight className="h-4 w-4 shrink-0 text-slate" aria-hidden />
+                        <span className="flex shrink-0 items-center gap-0.5 text-sm font-semibold text-obsidian">
+                            Change
+                            <CaretRight className="h-4 w-4 text-slate" aria-hidden />
+                        </span>
                     </button>
                 );
             })}
             {facts.length > 0 ? (
-                <dl className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-champagne/60 px-4 py-3 first:border-t-0">
+                <dl className="grid grid-cols-2 gap-x-4 gap-y-2 border-t border-champagne/60 bg-white px-4 py-3">
                     {facts.map((fact) => (
                         <div key={fact.label} className="min-w-0">
                             <dt className="text-2xs font-semibold uppercase tracking-label text-slate">{fact.label}</dt>
@@ -72,6 +96,6 @@ export default function MobileConfigurationSummary({
                     ))}
                 </dl>
             ) : null}
-        </div>
+        </section>
     );
 }
