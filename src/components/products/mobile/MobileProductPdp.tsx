@@ -101,7 +101,7 @@ export type MobileProductPdpProps = {
     capOptionPhotoKeys: Record<string, string[]>;
     resolveCapFinish: (variant: ProductVariant) => { label: string; swatchName: string };
     variantSku: (variant: ProductVariant) => string | null;
-    onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
+    onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => void;
     onCommitGlass: (href: string) => void;
     onPickerOpenChange: (open: boolean) => void;
     /** Opens the full Grace overlay. The tab bar (her usual mobile entry) is
@@ -137,7 +137,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const deps = useMemo<GuidedVariantDeps<ProductVariant>>(() => ({
         sku: variantSku,
         capFinish: (variant) => resolveCapFinish(variant).swatchName,
-        applicator: (variant) => variant.applicator,
+        applicator: (variant) => variant.applicator ?? null,
     }), [variantSku, resolveCapFinish]);
 
     /* ── picker + view state ─────────────────────────────────────────────── */
@@ -322,18 +322,23 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const confirmPicker = () => {
         if (!picker.activePicker || !activeRow) return;
         const chosen = picker.previewSelectionId ?? picker.committedSelectionId;
-        const changed = chosen !== null && chosen !== picker.committedSelectionId;
-        if (changed && chosen) {
+        if (chosen) {
             analytics.mobilePdpOptionConfirmed({
                 slug, sku: currentSku, pickerType: picker.activePicker, viewMode,
                 previousOptionId: picker.committedSelectionId, confirmedOptionId: chosen,
             });
             if (picker.activePicker === "glass") {
                 const option = glassOptions.find((candidate) => candidate.id === chosen);
-                if (option) onCommitGlass(option.href);
+                if (option) {
+                    const siblingSlug = slugFromHref(option.href);
+                    const siblingVariant = siblingPreviews[siblingSlug]?.variant;
+                    const sku = siblingVariant ? (siblingVariant.websiteSku || siblingVariant.graceSku) : null;
+                    const href = sku ? `${option.href}?sku=${encodeURIComponent(sku)}` : option.href;
+                    onCommitGlass(href);
+                }
             } else if (picker.activePicker === "roller") {
                 const material: "metal" | "plastic" | undefined = /metal/i.test(chosen) ? "metal" : /plastic/i.test(chosen) ? "plastic" : undefined;
-                if (material) onCommitVariant({ rollerVariant: material });
+                onCommitVariant({ rollerVariant: material, applicator: chosen });
             } else {
                 onCommitVariant({ capOption: chosen });
             }
@@ -353,10 +358,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     };
 
     const restoreAfterClose = useCallback(() => {
-        if (savedScroll.current !== null) {
-            window.scrollTo({ top: savedScroll.current, behavior: "instant" as ScrollBehavior });
-            savedScroll.current = null;
-        }
+        savedScroll.current = null;
         const row = lastPickerRef.current ? rowRefs.current.get(lastPickerRef.current) : null;
         row?.focus({ preventScroll: true });
     }, []);
@@ -427,14 +429,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 cartCount={cartCount}
                 onOpenCart={() => window.dispatchEvent(new Event("open-cart-drawer"))}
                 onPlateError={markPlateBroken}
-                overlay={previewingLabel ? (
-                    <span
-                        data-testid="mobile-pdp-preview-badge"
-                        className="pointer-events-none absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-obsidian/85 px-3 py-1 text-2xs font-semibold uppercase tracking-label text-white backdrop-blur"
-                    >
-                        Previewing · {previewingLabel}
-                    </span>
-                ) : null}
+                overlay={null}
             />
 
             <ProductViewSelector modes={viewModes} activeMode={viewMode} onModeChange={setView} />
@@ -552,7 +547,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 title={activeRow?.title ?? ""}
                 hint={activeRow?.hint}
                 confirmLabel={activeRow ? confirmLabelFor(activeRow, picker.previewSelectionId) : ""}
-                confirmDisabled={!activeRow || (picker.activePicker === "glass" && Boolean(previewSibling?.pending))}
+                confirmDisabled={!activeRow}
                 onConfirm={confirmPicker}
                 onCancel={cancelPicker}
                 onRestoreFocus={restoreAfterClose}

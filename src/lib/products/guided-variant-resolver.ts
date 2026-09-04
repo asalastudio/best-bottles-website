@@ -25,9 +25,13 @@ export function resolveGuidedVariant<V>(
     selection: GuidedVariantSelection,
     deps: GuidedVariantDeps<V>,
 ): V | null {
-    const candidates = variants
-        .filter((variant) => deps.applicator(variant) === selection.applicator)
-        .sort((a, b) => (deps.sku(a) ?? "").localeCompare(deps.sku(b) ?? ""));
+    if (variants.length === 0) return null;
+    const targetApplicator = selection.applicator ?? null;
+    let candidates = variants.filter((variant) => (deps.applicator(variant) ?? null) === targetApplicator);
+    if (candidates.length === 0 && targetApplicator === null) {
+        candidates = [...variants];
+    }
+    candidates.sort((a, b) => (deps.sku(a) ?? "").localeCompare(deps.sku(b) ?? ""));
     if (selection.capOption) {
         return candidates.find((variant) => deps.capFinish(variant) === selection.capOption) ?? candidates[0] ?? null;
     }
@@ -41,6 +45,7 @@ export function guidedSelectionIsExact<V>(
     deps: GuidedVariantDeps<V>,
 ): boolean {
     if (!selection.capOption) return true;
+    const targetApplicator = selection.applicator ?? null;
     return variants.some((variant) =>
-        deps.applicator(variant) === selection.applicator && deps.capFinish(variant) === selection.capOption);
+        (deps.applicator(variant) ?? null) === targetApplicator && deps.capFinish(variant) === selection.capOption);
 }
