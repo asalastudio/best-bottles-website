@@ -15,6 +15,7 @@ class FakeSession implements GraceRealtimeSessionLike {
     connect = vi.fn<GraceRealtimeSessionLike["connect"]>(async () => undefined);
     sendMessage = vi.fn();
     updateAgent = vi.fn(async (agent: unknown) => agent);
+    updateHistory = vi.fn();
     interrupt = vi.fn();
     close = vi.fn();
 
@@ -72,6 +73,10 @@ describe("Grace OpenAI Realtime adapter", () => {
             name: "Grace",
             voice: GRACE_REALTIME_VOICE,
         }));
+        expect(createAgent).toHaveBeenCalledWith(expect.objectContaining({
+            name: "Navigator",
+            voice: GRACE_REALTIME_VOICE,
+        }));
         expect(createSession).toHaveBeenCalledWith(
             expect.anything(),
             expect.objectContaining({
@@ -107,6 +112,18 @@ describe("Grace OpenAI Realtime adapter", () => {
             instructions: expect.stringContaining("Active Refine thread: 17-415"),
         }));
         expect(session.updateAgent).toHaveBeenCalledTimes(1);
+
+        await adapter.compressSession("LAST CATALOG RESULT: searchCatalog\namber roller");
+        expect(session.updateAgent).toHaveBeenCalledTimes(2);
+        expect(session.updateHistory).toHaveBeenCalled();
+        expect(createAgent).toHaveBeenCalledWith(expect.objectContaining({
+            name: "Grace",
+            instructions: expect.stringContaining("LAST CATALOG RESULT: searchCatalog"),
+        }));
+        expect(createAgent).toHaveBeenCalledWith(expect.objectContaining({
+            name: "Navigator",
+            instructions: expect.stringContaining("LAST CATALOG RESULT: searchCatalog"),
+        }));
     });
 
     it("maps transcripts, response completion, connection, and errors to callbacks", async () => {

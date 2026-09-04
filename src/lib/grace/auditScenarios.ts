@@ -286,6 +286,18 @@ export const GRACE_AUDIT_SCENARIOS: AuditScenario[] = [
         },
     },
     {
+        id: "N22", group: "Agentic navigation", title: "Fine-mist PDP — take me to amber roll-on",
+        turns: [
+            "I'm looking at a fine mist bottle. Take me to an amber bottle with a roller.",
+        ],
+        expect: {
+            mustAnswer: true,
+            mustCallAnyTool: ["navigateToPage", "showProducts", "searchCatalog"],
+            mustIncludeAny: ["amber", "roll"],
+            mustNotInclude: ["configureCurrentProduct is swapping the glass"],
+        },
+    },
+    {
         id: "G21", group: "State continuity", title: "Fresh-session SKU lookup",
         turns: ["Fresh session. What is the price and neck thread of GB-CYL-CLR-9ML-T-08?"],
         expect: {

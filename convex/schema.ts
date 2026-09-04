@@ -578,6 +578,51 @@ export default defineSchema({
         .index("by_owner", ["ownerKey"])
         .index("by_shareToken", ["shareToken"]),
 
+    // Storefront Realtime memory — one row per anonymous ownerKey or Clerk id.
+    // Profile, last correction, and last destination only. Never embed the catalog.
+    graceMemoryNotes: defineTable({
+        ownerKey: v.string(),
+        profile: v.optional(v.string()),
+        lastCorrection: v.optional(v.object({
+            text: v.string(),
+            at: v.number(),
+        })),
+        lastDestination: v.optional(v.object({
+            href: v.string(),
+            title: v.string(),
+            sku: v.optional(v.string()),
+            at: v.number(),
+        })),
+        updatedAt: v.number(),
+    }).index("by_owner", ["ownerKey"]),
+
+    // Compact production traces for closed-loop evals. No raw transcripts.
+    graceSessionTraces: defineTable({
+        ownerKey: v.string(),
+        sessionId: v.string(),
+        startedAt: v.number(),
+        endedAt: v.number(),
+        companionMode: v.string(),
+        lastPageUrl: v.optional(v.string()),
+        tools: v.array(v.object({
+            name: v.string(),
+            at: v.number(),
+            ok: v.boolean(),
+            summary: v.optional(v.string()),
+        })),
+        destinations: v.array(v.object({
+            href: v.string(),
+            at: v.number(),
+        })),
+        metrics: v.object({
+            toolsCalled: v.number(),
+            cartItemsAdded: v.number(),
+            navigations: v.number(),
+        }),
+    })
+        .index("by_owner", ["ownerKey"])
+        .index("by_endedAt", ["endedAt"]),
+
     // -------------------------------------------------------------------------
     // GRACE AI UPLOADS — user-supplied images for reference match + brand mockup
     // -------------------------------------------------------------------------
