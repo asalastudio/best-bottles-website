@@ -9,11 +9,13 @@
  * taps behind the page.
  */
 import Link from "next/link";
+import type { RefObject } from "react";
 import { Check, ShoppingBag } from "@/components/icons";
 import { STICKY_CTA_ANIMATION_MS, stickyCtaFacts } from "@/lib/products/mobile-pdp-sticky-cta";
 
 export type MobileStickyPurchaseBarProps = {
     visible: boolean;
+    barRef?: RefObject<HTMLDivElement | null>;
     title: string;
     thumbUrl: string | null;
     priceEach: number | null;
@@ -27,12 +29,13 @@ export type MobileStickyPurchaseBarProps = {
 };
 
 export default function MobileStickyPurchaseBar({
-    visible, title, thumbUrl, priceEach, caseQuantity, qty, inStock, canAddToCart, addedFlash, quoteHref, onAddToCart,
+    visible, barRef, title, thumbUrl, priceEach, caseQuantity, qty, inStock, canAddToCart, addedFlash, quoteHref, onAddToCart,
 }: MobileStickyPurchaseBarProps) {
     const facts = stickyCtaFacts({ priceEach, caseQuantity, qty });
     const cta = "flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-[3px] px-4 text-xs font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold";
     return (
         <div
+            ref={barRef}
             data-testid="mobile-pdp-sticky-cta"
             data-visible={visible ? "true" : "false"}
             role="region"

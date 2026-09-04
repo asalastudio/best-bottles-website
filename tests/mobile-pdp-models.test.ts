@@ -72,29 +72,41 @@ describe("mobile PDP view modes", () => {
 });
 
 describe("mobile PDP sticky Add to Cart trigger", () => {
-    it("stays hidden while the configurator is visible and shows once the last row starts leaving", () => {
-        // sentinel well below the top edge — configurator fully visible
-        expect(stickyCtaVisible({ sentinelTop: 620 })).toBe(false);
-        // last row (72px) has begun to slide under the top edge
-        expect(stickyCtaVisible({ sentinelTop: 60 })).toBe(true);
-        expect(stickyCtaVisible({ sentinelTop: -400 })).toBe(true);
-        // scrolling back up past the trigger hides it again
-        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX + 1 })).toBe(false);
-        expect(stickyCtaVisible({ sentinelTop: STICKY_CTA_TRIGGER_OFFSET_PX })).toBe(true);
+    it("appears as the gap after the final component row opens at the bottom edge", () => {
+        expect(stickyCtaVisible({ sentinelTop: 759, viewportBottom: 664 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 659, viewportBottom: 664 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 595, viewportBottom: 664 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: 559, viewportBottom: 664 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: -400, viewportBottom: 664 })).toBe(true);
+        // Scrolling back above the boundary hides the bar again.
+        expect(stickyCtaVisible({ sentinelTop: 596, viewportBottom: 664 })).toBe(false);
+    });
+
+    it("uses the visible viewport bottom when browser chrome changes height", () => {
+        expect(stickyCtaVisible({ sentinelTop: 640, viewportBottom: 664 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 640, viewportBottom: 724 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: 655, viewportBottom: 724 })).toBe(true);
+    });
+
+    it("includes the safe area so the bar never obscures the cap row", () => {
+        expect(stickyCtaVisible({ sentinelTop: 580, viewportBottom: 664, triggerOffset: 103 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 561, viewportBottom: 664, triggerOffset: 103 })).toBe(true);
     });
 
     it("never competes with an open picker or the expanded viewer", () => {
-        expect(stickyCtaVisible({ sentinelTop: -100, overlayOpen: true })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 559, viewportBottom: 664, overlayOpen: true })).toBe(false);
     });
 
-    it("never bypasses the sentinel on a short page because the inline CTA remains available", () => {
-        expect(stickyCtaVisible({ sentinelTop: 500 })).toBe(false);
-        expect(stickyCtaVisible({ sentinelTop: Number.NaN })).toBe(false);
+    it("uses geometry even on short pages and rejects missing viewport measurements", () => {
+        expect(stickyCtaVisible({ sentinelTop: 500, viewportBottom: 664 })).toBe(true);
+        expect(stickyCtaVisible({ sentinelTop: Number.NaN, viewportBottom: 664 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 500, viewportBottom: 0 })).toBe(false);
+        expect(stickyCtaVisible({ sentinelTop: 500, viewportBottom: Number.NaN })).toBe(false);
     });
 
     it("keeps the trigger band and animation inside the PRD's envelope", () => {
-        expect(stickyCtaRootMargin()).toBe(`-${STICKY_CTA_TRIGGER_OFFSET_PX}px 0px 0px 0px`);
-        expect(stickyCtaRootMargin(12.4)).toBe("-12px 0px 0px 0px");
+        expect(stickyCtaRootMargin()).toBe(`0px 0px -${STICKY_CTA_TRIGGER_OFFSET_PX}px 0px`);
+        expect(stickyCtaRootMargin(12.4)).toBe("0px 0px -12px 0px");
         expect(STICKY_CTA_ANIMATION_MS).toBeGreaterThanOrEqual(150);
         expect(STICKY_CTA_ANIMATION_MS).toBeLessThanOrEqual(220);
     });
@@ -414,10 +426,10 @@ describe("mobile PDP wiring", () => {
         const bar = read("src/components/products/mobile/MobileStickyPurchaseBar.tsx");
         expect(mobile).toContain("new IntersectionObserver(");
         expect(mobile).toContain("rootMargin: stickyCtaRootMargin()");
-        expect(mobile).toContain("stickyCtaVisible({ sentinelTop, overlayOpen })");
+        expect(mobile).toContain("stickyCtaVisible({ sentinelTop, viewportBottom, triggerOffset, overlayOpen })");
         expect(mobile).not.toMatch(/setStickyVisible\([^)]*window\.scrollY\s*[<>]/);
         expect(mobile).toContain("<MobileStickyPurchaseBar");
-        expect(mobile).toContain("visible={stickyVisible}");
+        expect(mobile).toContain("visible={stickyVisible && !overlayOpen}");
         // Same canonical props as the configurator: no duplicated product state in the bar.
         expect(bar).not.toContain("useState");
         expect(bar).not.toContain("useQuery");

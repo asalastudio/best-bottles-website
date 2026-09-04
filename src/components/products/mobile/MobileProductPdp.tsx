@@ -28,7 +28,7 @@ import {
     type MobileConfigOption,
 } from "@/lib/products/mobile-pdp-config-rows";
 import { initialMobilePickerState, mobilePickerReducer, pickerHasPendingChange, sheetTopFromHero } from "@/lib/products/mobile-pdp-picker";
-import { stickyCtaRootMargin, stickyCtaVisible } from "@/lib/products/mobile-pdp-sticky-cta";
+import { STICKY_CTA_TRIGGER_OFFSET_PX, stickyCtaRootMargin, stickyCtaVisible } from "@/lib/products/mobile-pdp-sticky-cta";
 import {
     coerceMobileViewMode,
     getMobileViewModes,
@@ -161,6 +161,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const [stickyVisible, setStickyVisible] = useState(false);
     const heroRef = useRef<HTMLDivElement>(null);
     const sentinelRef = useRef<HTMLDivElement>(null);
+    const stickyBarRef = useRef<HTMLDivElement>(null);
     const rowRefs = useRef(new Map<MobilePickerType, HTMLButtonElement>());
     const savedScroll = useRef<number | null>(null);
     const lastPickerRef = useRef<MobilePickerType | null>(null);
@@ -428,25 +429,42 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
     /* ── sticky Add to Cart: element-relative, never scroll coordinates ──── */
     // The sentinel sits right after the final configurator row. The observer
-    // is the trigger; the pure helper decides from the sentinel's own rect.
+    // and visual viewport define when the gap below the configuration appears.
     const overlayOpen = Boolean(picker.activePicker) || viewerOpen;
     useEffect(() => {
         const sentinel = sentinelRef.current;
-        if (!sentinel || !isMobile || typeof IntersectionObserver === "undefined") return;
-        const evaluate = (top?: number) => {
-            const sentinelTop = top ?? sentinel.getBoundingClientRect().top;
-            setStickyVisible(stickyCtaVisible({ sentinelTop, overlayOpen }));
+        if (!sentinel || !isMobile) return;
+        const viewport = window.visualViewport;
+        const evaluate = () => {
+            const sentinelTop = sentinel.getBoundingClientRect().top;
+            const viewportBottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+            // Include the rendered safe-area padding so the bar fits below the cap row.
+            const triggerOffset = stickyBarRef.current?.getBoundingClientRect().height || STICKY_CTA_TRIGGER_OFFSET_PX;
+            setStickyVisible(stickyCtaVisible({ sentinelTop, viewportBottom, triggerOffset, overlayOpen }));
         };
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[entries.length - 1];
-            evaluate(entry?.boundingClientRect.top);
-        }, { rootMargin: stickyCtaRootMargin(), threshold: 0 });
-        observer.observe(sentinel);
-        const onResize = () => evaluate();
-        window.addEventListener("resize", onResize);
+        let frame = 0;
+        const schedule = () => {
+            if (frame) return;
+            frame = window.requestAnimationFrame(() => { frame = 0; evaluate(); });
+        };
+        const observer = typeof IntersectionObserver === "undefined" ? null : new IntersectionObserver(
+            schedule, { rootMargin: stickyCtaRootMargin(), threshold: 0 },
+        );
+        observer?.observe(sentinel);
+        // Recheck on scroll as well: Safari's visible bottom can differ from
+        // the IntersectionObserver root while its address bar expands/collapses.
+        window.addEventListener("scroll", schedule, { passive: true });
+        window.addEventListener("resize", schedule);
+        viewport?.addEventListener("scroll", schedule, { passive: true });
+        viewport?.addEventListener("resize", schedule);
+        schedule();
         return () => {
-            observer.disconnect();
-            window.removeEventListener("resize", onResize);
+            observer?.disconnect();
+            window.cancelAnimationFrame(frame);
+            window.removeEventListener("scroll", schedule);
+            window.removeEventListener("resize", schedule);
+            viewport?.removeEventListener("scroll", schedule);
+            viewport?.removeEventListener("resize", schedule);
         };
     }, [isMobile, overlayOpen, rows.length]);
 
@@ -609,7 +627,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* ── sticky Add to Cart: the same variant, price, and qty as above ── */}
             <MobileStickyPurchaseBar
-                visible={stickyVisible}
+                barRef={stickyBarRef}
+                visible={stickyVisible && !overlayOpen}
                 title={displayName}
                 thumbUrl={stickyThumb}
                 priceEach={priceEach}

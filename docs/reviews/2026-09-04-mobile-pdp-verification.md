@@ -106,3 +106,14 @@ Jordan requested two rows at the existing picker width so more cap choices are i
 - At 320×568: bottle stage remains 216.86×238.53 px; two 72 px rows fit within the 268 px drawer; the 44 px confirmation button is fully visible. At 390×724 and 390×844, cards use two 88 px rows.
 - 51 focused mobile/naming/editorial tests pass; TypeScript, changed-file ESLint, and diff whitespace checks pass.
 - Evidence: `screenshots/mobile-pdp-repair-small-picker.png` and `screenshots/mobile-pdp-two-row-picker.png`. Phone checks use browser emulation, not physical iOS Safari. No catalog/backend changes are included.
+
+### Sticky Add to Cart — corrected exposed-gap trigger
+
+The phone review clarified that the bar should appear when the space below the final configuration row is exposed at the viewport bottom. The previous implementation instead waited for that row to reach the viewport top. Reproduced at 390×664: the bar stayed hidden with the sentinel at y=559, 459, and 259, only appearing near y=59.
+
+- Trigger from the visual viewport bottom minus the rendered bar height, including safe-area padding. This is the first position where the bar fits in the exposed space without covering the cap row.
+- Preserve the existing 180 ms slide/fade. Hide immediately during the picker or expanded viewer, and re-evaluate on passive scroll plus window/visual-viewport resize events. Scroll evaluation is animation-frame throttled and remains available without IntersectionObserver.
+- Browser checks passed at 320×568, 390×664, 390×844, and 430×932: hidden before the boundary, visible after it, fully opaque/untranslated after the animation, hidden on reverse scrolling, suppressed during the picker, correct re-evaluation after closing, and working sticky Add to Cart. A 390×664→390×724 viewport resize also passed.
+- At 320×568, the corrected trigger is visible with the sentinel at y=496 and the cap row ending at y=495; the bar begins at y=499, so it does not obscure the last component.
+- 40 focused mobile tests pass, including new bottom-edge, resize, invalid geometry, overlay, and safe-area threshold cases. TypeScript, changed-file ESLint, and diff whitespace checks pass.
+- Screenshot: `screenshots/mobile-pdp-sticky-gap-trigger.png`. Physical iOS browser-chrome behavior still requires a phone check. Test cart additions stayed in disposable browser sessions; no checkout or order was submitted.
