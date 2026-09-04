@@ -46,11 +46,6 @@ import {
     type GraceRefinementProposal,
 } from "@/lib/grace/refineState";
 import {
-    requestGracePaperDollSelection,
-    type GracePaperDollSelectionRequest,
-} from "@/lib/grace/paperDollController";
-import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
-import {
     createGraceOpenAIRealtimeAdapter,
     GraceRealtimeConnectionCancelledError,
     type GraceOpenAIRealtimeAdapter,
@@ -58,6 +53,22 @@ import {
 } from "@/lib/grace/openaiRealtimeAdapter";
 import { GRACE_REALTIME_INSTRUCTIONS } from "@/lib/grace/realtimeInstructions";
 import { normalizeApplicatorBuckets } from "@/lib/catalogFilters";
+import { getCanonicalProductSlug } from "@/lib/products/legacy-product-route-overrides";
+import {
+    GRACE_MINIMUM_CONTENT_WIDTH_PX,
+    gracePushEligiblePathname,
+    resolveGraceDrawerWidth,
+    resolveGraceSurface,
+    resolveGraceViewportWidth,
+} from "@/lib/grace/pushLayout";
+import {
+    buildGraceFinderContext,
+    mergePdpContextChange,
+    PDP_CONTEXT_CHANGE_EVENT,
+    resolveGraceDirectHitHref,
+    resolveVerifiedGracePdpHref,
+    type PdpContextChange,
+} from "@/lib/grace/pageContextEvents";
 
 // ─── Core product intelligence injected into the Realtime session ───────────
 
@@ -115,6 +126,15 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         );
     } else if (ctx.pageType === "catalog") {
         lines.push(`Page: Product Catalog`);
+        if (ctx.browseContext) {
+            const browse = ctx.browseContext;
+            lines.push(`Finder entry: ${browse.entryMode}`);
+            if (browse.family) lines.push(`Finder family: ${browse.family}`);
+            if (browse.application) lines.push(`Finder application: ${browse.application}`);
+            if (browse.capacities?.length) lines.push(`Finder capacity: ${browse.capacities.join(", ")}`);
+            if (browse.rollerMaterials?.length) lines.push(`Finder roller material: ${browse.rollerMaterials.join(", ")}`);
+            lines.push(`Finder results URL: ${browse.resultUrl}`);
+        }
         if (ctx.catalogCategory) lines.push(`Category filter: ${ctx.catalogCategory}`);
         if (ctx.currentCollection) lines.push(`Active Family Filter: ${ctx.currentCollection}`);
         if (ctx.catalogSearch) lines.push(`Active Search: "${ctx.catalogSearch}"`);
@@ -132,11 +152,15 @@ function formatPageContextForGrace(ctx: PageContext | null, history?: BrowsingHi
         lines.push(`Page: ${ctx.pathname}`);
     }
 
-    if (ctx.paperDoll) {
-        lines.push(`Paper Doll: ${ctx.paperDoll.family} ${ctx.paperDoll.capacityMl} mL ${ctx.paperDoll.neckThreadSize} (${ctx.paperDoll.view} view)`);
-        if (ctx.paperDoll.configurationSku) lines.push(`Selected Paper Doll SKU: ${ctx.paperDoll.configurationSku}`);
-        lines.push("PLATFORM LOCK: Never mix this Paper Doll with 9 mL 13-415 products or components.");
+    if (ctx.pdpSelection) {
+        const selection = ctx.pdpSelection;
+        lines.push(`Selected website SKU: ${selection.websiteSku}`);
+        if (selection.application) lines.push(`Selected application: ${selection.application}`);
+        if (selection.glass) lines.push(`Selected glass: ${selection.glass}`);
+        if (selection.rollerMaterial) lines.push(`Selected roller material: ${selection.rollerMaterial}`);
+        if (selection.finish) lines.push(`Selected finish: ${selection.finish}`);
     }
+
 
     if (ctx.cartItems.length > 0) {
         lines.push(`Cart (${ctx.cartItems.length} item${ctx.cartItems.length > 1 ? "s" : ""}${ctx.cartTotal ? `, ~$${ctx.cartTotal.toFixed(2)} total` : ""}):`);
@@ -251,7 +275,6 @@ function buildCatalogPath(products: ProductCard[], query?: string, family?: stri
 }
 
 function buildBrowsePath(products: ProductCard[], query?: string, family?: string): string {
-    if (products.length === 1 && products[0].slug) return `/products/${products[0].slug}`;
     return buildCatalogPath(products, query, family);
 }
 
@@ -528,6 +551,29 @@ function GraceProviderBase({
     // ── Panel state ──────────────────────────────────────────────────────────
     const [panelMode, setPanelMode] = useState<PanelMode>("closed");
     const isOpen = panelMode === "open";
+    const [viewportWidth, setViewportWidth] = useState(0);
+    useEffect(() => {
+        const update = () => setViewportWidth(resolveGraceViewportWidth({
+            innerWidth: window.innerWidth,
+            clientWidth: document.documentElement.clientWidth,
+        }));
+        update();
+        window.addEventListener("resize", update, { passive: true });
+        const observer = typeof ResizeObserver === "undefined" ? null : new ResizeObserver(update);
+        observer?.observe(document.documentElement);
+        return () => {
+            window.removeEventListener("resize", update);
+            observer?.disconnect();
+        };
+    }, []);
+    const surface = useMemo(() => resolveGraceSurface({
+        isOpen,
+        viewportWidth,
+        drawerWidth: resolveGraceDrawerWidth(viewportWidth),
+        minimumContentWidth: GRACE_MINIMUM_CONTENT_WIDTH_PX,
+        ownsViewport: pathname.startsWith("/grace-workspace") || pathname.startsWith("/executive"),
+        pushEligible: gracePushEligiblePathname(pathname),
+    }), [isOpen, pathname, viewportWidth]);
 
     const openPanel = useCallback(() => {
         setPanelMode("open");
@@ -557,9 +603,6 @@ function GraceProviderBase({
         const t = setTimeout(() => setLauncherTooltip(null), remaining);
         return () => clearTimeout(t);
     }, [launcherTooltip]);
-
-    const minimizeWithTooltipRef = useRef(minimizeWithTooltip);
-    useEffect(() => { minimizeWithTooltipRef.current = minimizeWithTooltip; }, [minimizeWithTooltip]);
 
     // Direct message injection (bypass the Realtime session) — used by client-side flows
     // like the image-upload vision analysis that don't need agent narration.
@@ -646,6 +689,23 @@ function GraceProviderBase({
         const q = searchParams.toString();
         return q ? `${pathname}?${q}` : pathname;
     }, [pathname, searchParams]);
+    const pageUrlRef = useRef(pageUrl);
+    pageUrlRef.current = pageUrl;
+    const [pdpContextChange, setPdpContextChange] = useState<PdpContextChange | null>(null);
+
+    useEffect(() => {
+        const receive = (event: Event) => {
+            const change = (event as CustomEvent<PdpContextChange>).detail;
+            if (!change?.websiteSku || change.pageUrl !== pageUrlRef.current) return;
+            setPdpContextChange(change);
+        };
+        window.addEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
+        return () => window.removeEventListener(PDP_CONTEXT_CHANGE_EVENT, receive);
+    }, []);
+
+    useEffect(() => {
+        setPdpContextChange((current) => current?.pageUrl === pageUrl ? current : null);
+    }, [pageUrl]);
 
     const pageContext = useMemo((): PageContext => {
         const cartSummary = cartItems.map((i) => ({
@@ -663,7 +723,7 @@ function GraceProviderBase({
             const fromVariants = [...new Set(variants.map((v) => v.applicator).filter(Boolean))] as string[];
             const applicatorTypes = fromGroup.length > 0 ? fromGroup : fromVariants;
             const capsSummary = summarizeCapsFromVariants(variants);
-            return {
+            const baseContext: PageContext = {
                 pageType,
                 pathname,
                 pageUrl,
@@ -684,30 +744,10 @@ function GraceProviderBase({
                     capsSummary: capsSummary || undefined,
                     slug: productSlug ?? undefined,
                 },
-                paperDoll: productSlug === CYLINDER_9ML_17415_COHORT.slug ? {
-                    configurationSku: searchParams.get("configuration"),
-                    view: searchParams.get("view") === "build" ? "build" : "beauty",
-                    family: "Cylinder",
-                    capacityMl: 9,
-                    neckThreadSize: "17-415",
-                } : undefined,
             };
-        }
-        if (pageType === "pdp" && productSlug === CYLINDER_9ML_17415_COHORT.slug) {
-            return {
-                pageType,
-                pathname,
-                pageUrl,
-                cartItems: cartSummary,
-                cartTotal,
-                paperDoll: {
-                    configurationSku: searchParams.get("configuration"),
-                    view: searchParams.get("view") === "build" ? "build" : "beauty",
-                    family: "Cylinder",
-                    capacityMl: 9,
-                    neckThreadSize: "17-415",
-                },
-            };
+            return pdpContextChange
+                ? mergePdpContextChange(baseContext, pdpContextChange)
+                : baseContext;
         }
         if (pageType === "catalog") {
             const familiesParam = searchParams.get("families") ?? searchParams.get("family");
@@ -721,10 +761,11 @@ function GraceProviderBase({
                 currentCollection: familiesParam ?? searchParams.get("collection") ?? undefined,
                 catalogSearch: searchParams.get("search") ?? undefined,
                 refineState: getGraceRefineState(new URLSearchParams(searchParams.toString())),
+                browseContext: buildGraceFinderContext(pathname, new URLSearchParams(searchParams.toString())),
             };
         }
         return { pageType, pathname, pageUrl, cartItems: cartSummary, cartTotal };
-    }, [pageType, pathname, pageUrl, productGroupResult, productSlug, searchParams, cartItems]);
+    }, [pageType, pathname, pageUrl, productGroupResult, productSlug, searchParams, cartItems, pdpContextChange]);
 
     const pageContextRef = useRef<PageContext>(pageContext);
     useEffect(() => { pageContextRef.current = pageContext; }, [pageContext]);
@@ -757,13 +798,13 @@ function GraceProviderBase({
             JSON.stringify({
                 pageUrl: pageContext.pageUrl,
                 pdpSku: pageContext.currentProduct?.graceSku,
+                pdpSelection: pageContext.pdpSelection,
                 applicators: pageContext.currentProduct?.applicatorTypes,
                 caps: pageContext.currentProduct?.capsSummary,
                 catalogCategory: pageContext.catalogCategory,
                 catalogSearch: pageContext.catalogSearch,
                 collection: pageContext.currentCollection,
                 refine: pageContext.refineState,
-                paperDoll: pageContext.paperDoll,
                 cart: pageContext.cartItems.map((i) => `${i.graceSku}:${i.quantity}`).join(","),
                 hist: browsingHistory.slice(-6).map((h) => h.pathname).join("|"),
             }),
@@ -794,22 +835,6 @@ function GraceProviderBase({
         if (pageContext.pageType === "catalog" && pageContext.catalogSearch) entry.searchTerm = pageContext.catalogSearch;
         setBrowsingHistory((prev) => [...prev.slice(-49), entry]);
     }, [pageContext]);
-
-    const proactiveHintKeyRef = useRef<string | null>(null);
-    useEffect(() => {
-        const paperDoll = pageContext.paperDoll;
-        if (!paperDoll || paperDoll.view !== "beauty" || panelMode !== "closed" || messagesRef.current.length > 0) return;
-        const key = `${paperDoll.family}:${paperDoll.capacityMl}:${paperDoll.neckThreadSize}`;
-        if (proactiveHintKeyRef.current === key) return;
-        proactiveHintKeyRef.current = key;
-        const timer = window.setTimeout(() => {
-            setLauncherTooltip({
-                message: "This 9 mL 17-415 bottle can be configured by glass, applicator, roller, and finish.",
-                expiresAt: Date.now() + 7000,
-            });
-        }, 1500);
-        return () => window.clearTimeout(timer);
-    }, [pageContext.paperDoll, panelMode]);
 
     // ── Form state ───────────────────────────────────────────────────────────
     const [activeForm, setActiveForm] = useState<ActiveForm | null>(null);
@@ -871,12 +896,13 @@ function GraceProviderBase({
     useEffect(() => { closePanelRef.current = closePanel; }, [closePanel]);
 
     const completeGraceNavigation = useCallback((message: string) => {
-        if (pathnameRef.current.startsWith("/grace-workspace")) {
-            setPanelMode("open");
-            setLauncherTooltip(null);
-            return;
-        }
-        minimizeWithTooltipRef.current(message);
+        // Keep the companion visible while Grace navigates. The route-aware
+        // shell changes from an overlay on editorial pages to a pushed
+        // workspace on catalog, family, and PDP routes without remounting the
+        // provider or losing conversation state.
+        void message;
+        setPanelMode("open");
+        setLauncherTooltip(null);
     }, []);
     const completeGraceNavigationRef = useRef(completeGraceNavigation);
     useEffect(() => { completeGraceNavigationRef.current = completeGraceNavigation; }, [completeGraceNavigation]);
@@ -1077,12 +1103,6 @@ function GraceProviderBase({
                 if (ctx.catalogSearch) lines.push(`  Search: "${ctx.catalogSearch}"`);
                 if (ctx.refineState) lines.push(formatGraceRefineState(ctx.refineState));
             }
-            if (ctx.paperDoll) {
-                lines.push(`\nPaper Doll platform: ${ctx.paperDoll.family} ${ctx.paperDoll.capacityMl} mL ${ctx.paperDoll.neckThreadSize}`);
-                lines.push(`  View: ${ctx.paperDoll.view}`);
-                if (ctx.paperDoll.configurationSku) lines.push(`  Selected configuration SKU: ${ctx.paperDoll.configurationSku}`);
-                lines.push("  Never mix this platform with 9 mL 13-415 products or components.");
-            }
             if (ctx.cartItems.length > 0) {
                 lines.push(`\nCart (${ctx.cartItems.length} items):`);
                 for (const item of ctx.cartItems) lines.push(`  • ${item.name} ×${item.quantity}${item.unitPrice ? ` @ $${item.unitPrice.toFixed(2)}/pc` : ""}`);
@@ -1126,14 +1146,23 @@ function GraceProviderBase({
 
         showProducts: async (params: { query: string; family?: string }) => {
             try {
+                const fallbackFinderHref = buildCatalogPath([], params.query, params.family);
                 const data = await callGraceServerTool<ProductCard[]>("searchCatalog", {
                     searchTerm: params.query ?? "",
                     familyLimit: params.family,
                     returnRaw: true,
                 });
-                if (data.error) return `${data.error} I could not search the catalog right now.`;
+                if (data.error) {
+                    routerRef.current.push(fallbackFinderHref);
+                    completeGraceNavigationRef.current("I opened the focused finder");
+                    return `${data.error} I could not search the catalog right now.`;
+                }
                 const products: ProductCard[] = Array.isArray(data.result) ? data.result : [];
-                if (products.length === 0) return "No products found. Try a different description.";
+                if (products.length === 0) {
+                    routerRef.current.push(fallbackFinderHref);
+                    completeGraceNavigationRef.current("I opened the focused finder");
+                    return "No products found. Try a different description.";
+                }
 
                 const capMatch = params.query?.match(/\b(\d+(?:\.\d+)?)\s*ml\b/i);
                 const requestedMl = capMatch ? parseFloat(capMatch[1]) : null;
@@ -1142,9 +1171,27 @@ function GraceProviderBase({
 
                 const sizeWarning = checkSizeWarning(products, params.query);
                 const exactSizeFound = !sizeWarning;
-                const directProduct = selectDirectProductMatch(products, params.query);
+                const directProduct = exactSizeFound ? selectDirectProductMatch(products, params.query) : null;
                 const displayProducts = directProduct ? [directProduct] : products;
-                const tileProducts = selectGraceTileProducts(displayProducts, params.query);
+                const finderHref = buildCatalogPath(displayProducts, params.query, params.family);
+                const redirectUrl = directProduct
+                    ? await resolveGraceDirectHitHref({
+                        directHit: directProduct,
+                        finderHref,
+                        fetchGroup: async (slug) => {
+                            const exactGroup = await callGraceServerTool<{
+                                group?: { slug?: string | null } | null;
+                                variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }>;
+                            } | null>("getProductGroup", { slug });
+                            return exactGroup.result;
+                        },
+                    })
+                    : finderHref;
+                const tileProducts = selectGraceTileProducts(displayProducts, params.query).map((product) => ({
+                    ...product,
+                    verifiedPdpHref: directProduct === product ? redirectUrl : finderHref,
+                    finderHref,
+                }));
                 const summary = displayProducts.slice(0, 3).map((p) => [p.itemName, p.capacity, p.color].filter(Boolean).join(" ")).join(", ");
 
                 sessionMetricsRef.current.toolsCalled++;
@@ -1165,7 +1212,6 @@ function GraceProviderBase({
                     return `${sizeWarning} I found confirmed nearby alternatives: ${summary}. Ask whether the customer wants to open those results.`;
                 }
 
-                const redirectUrl = buildBrowsePath(displayProducts, params.query, params.family);
                 sessionMetricsRef.current.navigations++;
                 analytics.graceNavigation({ destination: redirectUrl, triggeredBy: "showProducts", query: params.query });
                 setTimeout(() => {
@@ -1176,7 +1222,13 @@ function GraceProviderBase({
                     return `Found ${products.length} options — top matches: ${summary}. Navigating the customer there now.`;
                 }
                 return `${sizeWarning} Opening the catalog with the closest matches: ${summary}.`;
-            } catch (e) { console.error("[Grace] showProducts:", e); return "Catalog search failed."; }
+            } catch (e) {
+                console.error("[Grace] showProducts:", e);
+                const finderHref = buildCatalogPath([], params.query, params.family);
+                routerRef.current.push(finderHref);
+                completeGraceNavigationRef.current("I opened the focused finder");
+                return "Catalog search failed.";
+            }
         },
 
         compareProducts: async (params: { query: string; family?: string }) => {
@@ -1345,9 +1397,28 @@ function GraceProviderBase({
 
             if (navPath.startsWith("/products/")) {
                 const rawSlug = navPath.replace(/^\/products\//, "").split("?")[0];
+                const canonicalSlug = getCanonicalProductSlug(rawSlug);
+                if (canonicalSlug !== rawSlug) {
+                    const query = navPath.includes("?") ? navPath.slice(navPath.indexOf("?")) : "";
+                    navPath = `/products/${canonicalSlug}${query}`;
+                }
                 try {
-                    const checkData = await callGraceServerTool<{ group?: unknown } | null>("getProductGroup", { slug: rawSlug });
-                    if (!checkData.result || !(checkData.result as { group?: unknown }).group) {
+                    const checkData = await callGraceServerTool<{
+                        group?: { slug?: string | null } | null;
+                        variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }>;
+                    } | null>("getProductGroup", { slug: canonicalSlug });
+                    const verifiedHref = resolveVerifiedGracePdpHref({
+                        requestedPath: navPath,
+                        finderHref: buildCatalogPath([], params.title || slugToSearchTerm(rawSlug)),
+                        verifiedGroup: checkData.result,
+                    });
+                    if (verifiedHref) {
+                        navPath = verifiedHref;
+                    } else if (checkData.result?.group) {
+                        // A known group without an exact stored SKU is broad or
+                        // malformed navigation, not a safe PDP transaction.
+                        navPath = buildCatalogPath([], params.title || slugToSearchTerm(rawSlug));
+                    } else {
                         const searchTerm = params.title && params.title.length > 3 ? params.title : slugToSearchTerm(rawSlug);
                         const searchData = await callGraceServerTool<ProductCard[]>("searchCatalog", {
                             searchTerm,
@@ -1356,12 +1427,26 @@ function GraceProviderBase({
                         const hits: ProductCard[] = Array.isArray(searchData.result) ? searchData.result : [];
                         if (hits.length > 0) {
                             const directHit = selectDirectProductMatch(hits, searchTerm);
-                            navPath = directHit ? `/products/${directHit.slug}` : buildBrowsePath(hits, searchTerm);
+                            const finderHref = buildBrowsePath(hits, searchTerm);
+                            navPath = await resolveGraceDirectHitHref({
+                                directHit,
+                                finderHref,
+                                fetchGroup: async (slug) => {
+                                    const exactGroup = await callGraceServerTool<{
+                                        group?: { slug?: string | null } | null;
+                                        variants?: Array<{ websiteSku?: string | null; graceSku?: string | null }>;
+                                    } | null>("getProductGroup", { slug });
+                                    return exactGroup.result;
+                                },
+                            });
                         } else {
                             navPath = buildCatalogPath([], searchTerm);
                         }
                     }
-                } catch (e) { console.error("[Grace] slug validation:", e); }
+                } catch (e) {
+                    console.error("[Grace] slug validation:", e);
+                    navPath = buildCatalogPath([], params.title || slugToSearchTerm(rawSlug));
+                }
             }
 
             if (navPath.startsWith("/catalog")) {
@@ -1826,37 +1911,6 @@ function GraceProviderBase({
             return `Verified ${verifiedCount} matching product group${verifiedCount === 1 ? "" : "s"} and updated the visible Refine state. ${formatGraceRefineState(next)}`;
         },
 
-        setPaperDollSelection: (params: GracePaperDollSelectionRequest) => {
-            const request: GracePaperDollSelectionRequest = {
-                glass: params.glass ?? null,
-                deliverySystem: params.deliverySystem ?? null,
-                rollerMaterial: params.rollerMaterial ?? null,
-                finish: params.finish ?? null,
-                configurationSku: params.configurationSku ?? null,
-                view: params.view === "beauty" ? "beauty" : "build",
-            };
-            const canonicalPath = `/products/${CYLINDER_9ML_17415_COHORT.slug}`;
-            if (pathnameRef.current !== canonicalPath) {
-                const next = new URLSearchParams();
-                next.set("view", request.view);
-                if (request.configurationSku) next.set("configuration", request.configurationSku);
-                if (request.glass) next.set("glass", request.glass);
-                if (request.deliverySystem) {
-                    next.set("applicator", request.deliverySystem === "spray" ? "Fine Mist Spray" : request.deliverySystem === "lotion" ? "Lotion Pump" : "Roll-On");
-                }
-                if (request.rollerMaterial) next.set("roller", request.rollerMaterial);
-                if (request.finish) next.set("finish", request.finish);
-                routerRef.current.push(`${canonicalPath}?${next.toString()}`);
-                completeGraceNavigationRef.current("Grace is opening the 9 mL 17-415 bottle builder.");
-            } else if (!requestGracePaperDollSelection(request)) {
-                return "The Paper Doll is not available on this page.";
-            }
-            sessionMetricsRef.current.toolsCalled++;
-            sessionMetricsRef.current.toolsUsed.add("setPaperDollSelection");
-            analytics.graceToolCalled({ toolName: "setPaperDollSelection", success: true });
-            return "The 9 mL 17-415 Paper Doll selection request was applied to the visible builder. Do not describe it as a 13-415 bottle.";
-        },
-
         prepareQuoteRequest: async (params: {
             products: PendingCartProduct[] | string;
             name?: string | null;
@@ -1945,13 +1999,13 @@ function GraceProviderBase({
 
         displayAnatomy: async (params: { graceSku: string }) => {
             try {
-                const data = await callGraceServerTool<ProductCard & { heroImageUrl?: string | null; paperDollBodyUrl?: string | null; capColor?: string | null } | null>("getProductBySku", { graceSku: params.graceSku });
+                const data = await callGraceServerTool<ProductCard & { heroImageUrl?: string | null; capColor?: string | null } | null>("getProductBySku", { graceSku: params.graceSku });
                 if (data.error) return `${data.error} Could not render anatomy view.`;
                 const product = data.result;
                 if (!product) return `No product found for SKU "${params.graceSku}".`;
 
-                // v1 stub: 4 fixed-percentage pins. Per-family precise anchors
-                // land in a follow-up via Sanity-stored `paperDollFamilyKey` presets.
+                // v1 stub: four fixed-percentage pins; per-family anchors are
+                // intentionally deferred until verified product data is available.
                 const pins = [
                     { x: 0.5, y: 0.08, label: "Cap", value: product.capColor ?? undefined },
                     { x: 0.5, y: 0.22, label: "Neck", value: product.neckThreadSize ?? undefined },
@@ -2348,6 +2402,16 @@ function GraceProviderBase({
         pendingActionsRef.current = [];
     }, []);
 
+    const resetConversation = useCallback(async () => {
+        await endConversation();
+        setMessages([]);
+        messagesRef.current = [];
+        setInput("");
+        setErrorMessage("");
+        setBrowsingHistory([]);
+        browsingHistoryRef.current = [];
+    }, [endConversation]);
+
     useEffect(() => {
         return () => {
             try { conversationRef.current?.endSession(); } catch { /* ignore */ }
@@ -2598,6 +2662,7 @@ function GraceProviderBase({
 
     const contextValue = useMemo((): GraceContextValue => ({
         panelMode,
+        surface,
         openPanel,
         closePanel,
         minimizeToStrip,
@@ -2623,6 +2688,7 @@ function GraceProviderBase({
         conversationActive,
         startConversation,
         endConversation,
+        resetConversation,
         confirmAction,
         dismissAction,
         onNavigate,
@@ -2637,10 +2703,10 @@ function GraceProviderBase({
         pageContext,
         browsingHistory,
     }), [
-        panelMode, openPanel, closePanel, minimizeToStrip, isOpen,
+        panelMode, surface, openPanel, closePanel, minimizeToStrip, isOpen,
         launcherTooltip, minimizeWithTooltip, appendInlineMessage,
         graceStatus, messages, streamingText, isAwaitingReply, input, voiceEnabled,
-        send, errorMessage, conversationActive, startConversation, endConversation,
+        send, errorMessage, conversationActive, startConversation, endConversation, resetConversation,
         onNavigate, pendingNavigation, clearPendingNavigation, confirmAction, dismissAction,
         activeForm, updateFormField, submitActiveForm, dismissActiveForm,
         voiceFailed, graceQuery, pageContext, browsingHistory, stopSpeaking,

@@ -209,26 +209,6 @@ export const GRACE_OPENAI_TOOL_SPECS = [
         priceMin: nullableNumber("Requested minimum price, or null."),
         priceMax: nullableNumber("Requested maximum price, or null. Price IS a true range filter."),
     }),
-    spec("setPaperDollSelection", "Open and control the visible 9 mL 17-415 Cylinder Paper Doll using only an exact compatible configuration.", {
-        glass: nullableString("Exact available glass label, or null to preserve it."),
-        deliverySystem: {
-            type: ["string", "null"],
-            enum: ["rollon", "spray", "lotion", null],
-            description: "Exact delivery system, or null to preserve it.",
-        },
-        rollerMaterial: {
-            type: ["string", "null"],
-            enum: ["Metal", "Plastic", null],
-            description: "Roller material for roll-on configurations, or null.",
-        },
-        finish: nullableString("Exact compatible finish label, or null to preserve it."),
-        configurationSku: nullableString("Exact verified 9 mL 17-415 configuration SKU, or null."),
-        view: {
-            type: "string",
-            enum: ["beauty", "build"],
-            description: "The media view to show after applying the selection.",
-        },
-    }),
     spec("prepareQuoteRequest", "Verify line items, prepare a structured RFQ, and move the customer to a reviewable quote form without submitting it.", {
         products: { type: "array", items: productProposal, minItems: 1, maxItems: 12 },
         name: nullableString("Customer name already supplied, or null."),

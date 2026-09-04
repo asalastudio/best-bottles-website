@@ -58,6 +58,10 @@ export type MatOverride = {
 type LabClosure = "none" | "capped" | "roller" | "rollerCapped"
   | "sprayer" | "sprayerCapped" | "pump" | "pumpCapped";
 
+// Matcaps are RETIRED (see Closure); the map stays so a finish can opt back
+// in without re-plumbing. Module-level so it is stable across renders.
+const MATCAP_FOR: Record<string, THREE.Texture> = {};
+
 function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
                    metalStudioId, capFinish = "17-415" }: {
   mode: LabClosure; neckY: number;
@@ -152,7 +156,6 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
   // normals (the real bug, fixed in the asset). Real PBR metal under the
   // universal studio is correct and consistent with every other component.
   // The baked matcaps stay in public/models/matcaps/ for future use.
-  const MATCAP_FOR: Record<string, THREE.Texture> = {};
   const build = useCallback((gltf: { scene: THREE.Object3D }, matName: string,
                              tune?: MatOverride) => {
     const scene = gltf.scene.clone(true);
@@ -272,7 +275,7 @@ function Closure({ mode, neckY, capMat, ballMat, capTune, trimMat, metalTune,
     return g;
   }, [mode, mats, build, housing, ball, cap, cap18, cap18Tall, cap18Leather,
       capDots, collar, actuator, overcap, spout,
-      capMat, ballMat, capTune, trimMat]);
+      capMat, ballMat, capTune, trimMat, capFinish]);
   if (!parts) return null;
   return (
     <group position={[0, neckY, 0]}>
@@ -309,16 +312,11 @@ function Model({
   const frostTex = useTexture(
     frostUrl ?? "/models/bodies-thickness/white-1x1.png");
   useEffect(() => {
-    frostTex.flipY = false;
-    frostTex.colorSpace = THREE.NoColorSpace;
-    frostTex.needsUpdate = true;
-  }, [frostTex]);
-  useEffect(() => {
     // glTF-convention UVs + linear data, not colour
-    thicknessTex.flipY = false;
-    thicknessTex.colorSpace = THREE.NoColorSpace;
-    thicknessTex.needsUpdate = true;
-  }, [thicknessTex]);
+    for (const t of [frostTex, thicknessTex]) {
+      t.flipY = false; t.colorSpace = THREE.NoColorSpace; t.needsUpdate = true;
+    }
+  }, [frostTex, thicknessTex]);
   // when the bake is live, the thickness slider sets the map's CEILING and
   // each texel scales down from it — the slider stays the tuning dial instead
   // of the sidecar hardcoding the look. (The sidecar's maxThicknessM is the
@@ -376,6 +374,7 @@ function Model({
   // the fallback path, for A/B against the better material
   useEffect(() => {
     if (!glass || (transmissionMat && !preset.thinWall)) return;
+    /* eslint-disable react-hooks/immutability -- a three.js mesh; the effect that shows it also hides it */
     glass.visible = true;
     const m = applyGlassPreset(glass, { ...preset, envMapIntensity: envIntensity });
     if (bakeMax != null) {
@@ -386,6 +385,7 @@ function Model({
       m.roughnessMap = frostTex;
       m.needsUpdate = true;
     }
+    /* eslint-enable react-hooks/immutability */
     return () => { glass.visible = false; };
   }, [glass, preset, envIntensity, transmissionMat, bakeMax, thicknessTex, frostUrl, frostTex]);
 
@@ -523,8 +523,10 @@ function StudioEnv({ studioId, intensity, rotationDeg }:
   const { scene } = useThree();
   const preset = STUDIO_PRESETS[studioId];
   useEffect(() => {
+    /* eslint-disable react-hooks/immutability -- R3F's scene is imperative; <Environment> sets these the same way */
     scene.environmentIntensity = intensity;
     scene.environmentRotation = new THREE.Euler(0, (rotationDeg * Math.PI) / 180, 0);
+    /* eslint-enable react-hooks/immutability */
   }, [scene, intensity, rotationDeg]);
 
   // hybrid = HDRI + Lightformers baked into ONE cubemap (the candidate
@@ -576,9 +578,11 @@ function Rig({ azimuth, elevation, distance, targetY, fov, nonce }: {
   const { camera } = useThree();
   useEffect(() => {
     const cam = camera as THREE.PerspectiveCamera;
+    /* eslint-disable react-hooks/immutability -- R3F's camera is imperative; this rig IS the camera controller */
     if (cam.isPerspectiveCamera && cam.fov !== fov) {
       cam.fov = fov; cam.updateProjectionMatrix();
     }
+    /* eslint-enable react-hooks/immutability */
     const a = (azimuth * Math.PI) / 180, e = (elevation * Math.PI) / 180;
     cam.position.set(
       distance * Math.cos(e) * Math.sin(a),
@@ -663,7 +667,7 @@ export default function MaterialLab(
   // landed values get written into METAL_STUDIO_DEFAULTS and locked
   const [metalTune, setMetalTune] = useState<MetalStudioParams>(METAL_STUDIO_DEFAULTS);
   const [metalStudioId, setMetalStudioId] = useState<MetalStudioId>(APPROVED_METAL_STUDIO);
-  useEffect(() => { setCapTune(null); }, [capMat]);
+  // capTune is reset alongside setCapMat at the picker, never via an effect.
   // Reference comparison. The photo is held LOCALLY (object URL) — nothing is
   // uploaded. Framing does not need to match: scale/offset/opacity exist so a
   // hand-held shot can still be lined up for judging.
@@ -678,19 +682,22 @@ export default function MaterialLab(
   // Blender lane: bake_thickness.py). Availability is per body — probe the
   // sidecar. The baked GLB is the SAME threaded geometry plus UVs.
   const [bakedMap, setBakedMap] = useState(true);
-  const [bakeMax, setBakeMax] = useState<number | null>(null);
+  // Keyed by body so a previous body's ceiling never leaks onto the next one
+  // while its sidecar is still loading.
+  const [bake, setBake] = useState<{ bodyId: string; max: number } | null>(null);
 
   const body = bodies[bodyIdx];
   const hasThreaded = threadedIds.includes(body.bodyId);
+  const bakeMax = bake?.bodyId === body.bodyId ? bake.max : null;
 
   useEffect(() => {
     let dead = false;
-    setBakeMax(null);
-    fetch(`/models/bodies-thickness/${body.bodyId}.thickness.json`)
+    const bodyId = body.bodyId;
+    fetch(`/models/bodies-thickness/${bodyId}.thickness.json`)
       .then((r) => (r.ok ? r.json() : null))
       .then((j) => {
         if (!dead && j && typeof j.maxThicknessM === "number")
-          setBakeMax(j.maxThicknessM);
+          setBake({ bodyId, max: j.maxThicknessM });
       })
       .catch(() => {});
     return () => { dead = true; };

@@ -20,6 +20,7 @@ import { urlFor } from "@/sanity/lib/image";
 import {
     SORT_OPTIONS,
     APPLICATOR_BUCKETS,
+    CATALOG_FAMILIES,
     CAPACITY_RANGES,
     CATEGORY_ORDER,
     COMPONENT_CATEGORIES,
@@ -49,8 +50,10 @@ import {
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { buildCatalogSearchArgs, fetchCatalogSearch } from "@/lib/catalogSearchClient";
+import { catalogGroupSkuLabel, resolveCatalogGroupSku } from "@/lib/catalogSearchFallback";
 import { MASTER_CATALOG_SURFACE } from "@/lib/catalogSurface";
 import { analytics } from "@/lib/analytics";
+import { familyFinderHref } from "@/lib/products/focused-shopping";
 
 // ─── Constants ───────────────────────────────────────────────────────────────
 
@@ -170,6 +173,7 @@ interface Facets {
     categories: Record<string, number>;
     collections: Record<string, number>;
     applicators: Record<string, number>;
+    rollerMaterials: Record<"metal" | "plastic", number>;
     families: Record<string, number>;
     colors: Record<string, number>;
     capacities: Record<string, { label: string; ml: number | null; count: number }>;
@@ -573,15 +577,16 @@ function FilterSidebarContent({
     const capacityRanges = useMemo(() => {
         return CAPACITY_RANGES.map((range) => {
             const capacities = sortedCapacities.filter((cap) => capacityInRange(cap.ml, range));
+            const rangeTokenSelected = filters.capacities.includes(range.value);
             const selectedCount = capacities.filter((cap) => filters.capacities.includes(cap.label)).length;
             return {
                 ...range,
                 capacities,
                 count: capacities.reduce((sum, cap) => sum + cap.count, 0),
-                checked: capacities.length > 0 && selectedCount === capacities.length,
-                partiallyChecked: selectedCount > 0 && selectedCount < capacities.length,
+                checked: rangeTokenSelected || (capacities.length > 0 && selectedCount === capacities.length),
+                partiallyChecked: !rangeTokenSelected && selectedCount > 0 && selectedCount < capacities.length,
             };
-        }).filter((range) => range.capacities.length > 0);
+        }).filter((range) => range.capacities.length > 0 || filters.capacities.includes(range.value));
     }, [filters.capacities, sortedCapacities]);
 
     const sortedColors = useMemo(() => {
@@ -614,12 +619,32 @@ function FilterSidebarContent({
         return Object.entries(facets.componentTypes).sort(([, a], [, b]) => b - a);
     }, [facets]);
 
-    const toggleCapacityRange = (labels: string[]) => {
+    const rollerMaterialSection = facets && (facets.rollerMaterials.metal > 0 || facets.rollerMaterials.plastic > 0) ? (
+        <RefineSection title="Roller Material" defaultOpen={openByDefault("rollerMaterials")} hasActiveFilters={filters.rollerMaterials.length > 0}>
+            <div className="space-y-0.5">
+                {(["metal", "plastic"] as const).map((material) => (
+                    <CheckboxItem
+                        key={material}
+                        label={`${material[0].toUpperCase()}${material.slice(1)} roller`}
+                        count={facets.rollerMaterials[material]}
+                        checked={filters.rollerMaterials.includes(material)}
+                        onChange={() => toggleArrayFilter("rollerMaterials", material)}
+                    />
+                ))}
+            </div>
+        </RefineSection>
+    ) : null;
+
+    const toggleCapacityRange = (rangeValue: string, labels: string[]) => {
         const selected = new Set(filters.capacities);
-        const allSelected = labels.every((label) => selected.has(label));
-        for (const label of labels) {
-            if (allSelected) selected.delete(label);
-            else selected.add(label);
+        const allLabelsSelected = labels.length > 0 && labels.every((label) => selected.has(label));
+        const active = selected.has(rangeValue) || allLabelsSelected;
+        if (active) {
+            selected.delete(rangeValue);
+            for (const label of labels) selected.delete(label);
+        } else {
+            for (const label of labels) selected.delete(label);
+            selected.add(rangeValue);
         }
         onFilterChange({ capacities: [...selected] });
     };
@@ -675,7 +700,7 @@ function FilterSidebarContent({
                         count={range.count}
                         checked={range.checked}
                         indeterminate={range.partiallyChecked}
-                        onChange={() => toggleCapacityRange(range.capacities.map((cap) => cap.label))}
+                        onChange={() => toggleCapacityRange(range.value, range.capacities.map((cap) => cap.label))}
                     />
                 ))}
             </div>
@@ -848,6 +873,7 @@ function FilterSidebarContent({
         category: categorySection,
         collection: null,
         applicators: applicatorSection,
+        rollerMaterials: rollerMaterialSection,
         capacities: capacitySection,
         neckThreadSizes: neckThreadSection,
         colors: colorSection,
@@ -914,6 +940,25 @@ function ViewToggle({
 
 // ─── Line Item Row (Desktop) ─────────────────────────────────────────────────
 
+function lineItemProductHref({
+    slug,
+    applicatorParam,
+    quantity,
+    sku,
+}: {
+    slug: string;
+    applicatorParam?: string | null;
+    quantity: number;
+    sku?: string | null;
+}): string {
+    const params = new URLSearchParams();
+    if (applicatorParam) params.set("applicator", applicatorParam);
+    if (sku && sku !== "—") params.set("sku", sku);
+    if (quantity > 1) params.set("qty", String(quantity));
+    const qs = params.toString();
+    return `/products/${slug}${qs ? `?${qs}` : ""}`;
+}
+
 function LineItemRow({
     group,
     sku,
@@ -935,13 +980,12 @@ function LineItemRow({
 }) {
     const [quantity, setQuantity] = useState(1);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
-    const href = (() => {
-        const params = new URLSearchParams();
-        if (applicatorParam) params.set("applicator", applicatorParam);
-        if (quantity > 1) params.set("qty", String(quantity));
-        const qs = params.toString();
-        return `/products/${group.slug}${qs ? `?${qs}` : ""}`;
-    })();
+    const href = lineItemProductHref({
+        slug: group.slug,
+        applicatorParam,
+        quantity,
+        sku: primaryWebsiteSku || sku,
+    });
 
     const incrementQty = () => setQuantity((q) => Math.min(q + 1, 9999));
     const decrementQty = () => setQuantity((q) => Math.max(q - 1, 1));
@@ -1030,7 +1074,7 @@ function LineItemRow({
                 <div className="flex flex-col items-end">
                     <span className="text-xs text-slate">from</span>
                     <span className="font-semibold text-obsidian">
-                        {group.priceRangeMin ? `$${group.priceRangeMin.toFixed(2)}` : "—"}
+                        {group.priceRangeMin != null ? `$${group.priceRangeMin.toFixed(2)}` : "—"}
                     </span>
                 </div>
             </td>
@@ -1040,6 +1084,7 @@ function LineItemRow({
                 <div className="flex items-center justify-end gap-2">
                     <div className="flex items-center border border-champagne rounded-lg bg-white">
                         <button
+                            type="button"
                             onClick={decrementQty}
                             className="min-h-11 min-w-11 flex items-center justify-center hover:bg-travertine transition-colors rounded-l-lg"
                             aria-label="Decrease quantity"
@@ -1055,6 +1100,7 @@ function LineItemRow({
                             max={9999}
                         />
                         <button
+                            type="button"
                             onClick={incrementQty}
                             className="min-h-11 min-w-11 flex items-center justify-center hover:bg-travertine transition-colors rounded-r-lg"
                             aria-label="Increase quantity"
@@ -1099,13 +1145,12 @@ function LineItemMobileCard({
     const [expanded, setExpanded] = useState(false);
     const [quantity, setQuantity] = useState(1);
     const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
-    const href = (() => {
-        const params = new URLSearchParams();
-        if (applicatorParam) params.set("applicator", applicatorParam);
-        if (quantity > 1) params.set("qty", String(quantity));
-        const qs = params.toString();
-        return `/products/${group.slug}${qs ? `?${qs}` : ""}`;
-    })();
+    const href = lineItemProductHref({
+        slug: group.slug,
+        applicatorParam,
+        quantity,
+        sku: primaryWebsiteSku || sku,
+    });
 
     const incrementQty = () => setQuantity((q) => Math.min(q + 1, 9999));
     const decrementQty = () => setQuantity((q) => Math.max(q - 1, 1));
@@ -1161,7 +1206,7 @@ function LineItemMobileCard({
                             {sku}
                         </span>
                         <span className="text-xs font-semibold text-obsidian">
-                            {group.priceRangeMin ? `$${group.priceRangeMin.toFixed(2)}` : "—"}
+                            {group.priceRangeMin != null ? `$${group.priceRangeMin.toFixed(2)}` : "—"}
                         </span>
                         <span className="text-[10px] text-slate bg-bone px-1.5 py-0.5 rounded">
                             {group.variantCount} variant{group.variantCount !== 1 ? "s" : ""}
@@ -1216,6 +1261,7 @@ function LineItemMobileCard({
                                 {/* Quantity */}
                                 <div className="flex items-center border border-champagne rounded-lg bg-bone">
                                     <button
+                                        type="button"
                                         onClick={decrementQty}
                                         className="p-2 hover:bg-champagne/30 transition-colors rounded-l-lg"
                                         aria-label="Decrease quantity"
@@ -1231,6 +1277,7 @@ function LineItemMobileCard({
                                         max={9999}
                                     />
                                     <button
+                                        type="button"
                                         onClick={incrementQty}
                                         className="p-2 hover:bg-champagne/30 transition-colors rounded-r-lg"
                                         aria-label="Increase quantity"
@@ -1491,18 +1538,42 @@ export default function CatalogClient({
     const variantPreviewRows = activeResult.variantPreviewRows;
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
-        for (const row of activeResult.primarySkus ?? []) {
-            next.set(row.groupId, row.websiteSku ?? row.graceSku ?? "—");
+        const groupIds = new Set<string>();
+        for (const row of activeResult.primarySkus ?? []) groupIds.add(row.groupId);
+        for (const row of activeResult.variantPreviewRows ?? []) groupIds.add(row.groupId);
+        for (const group of activeResult.items) groupIds.add(group._id);
+        for (const groupId of groupIds) {
+            next.set(
+                groupId,
+                catalogGroupSkuLabel(
+                    resolveCatalogGroupSku(
+                        groupId,
+                        activeResult.primarySkus ?? [],
+                        activeResult.variantPreviewRows ?? [],
+                    ),
+                ),
+            );
         }
         return next;
-    }, [activeResult.primarySkus]);
+    }, [activeResult.items, activeResult.primarySkus, activeResult.variantPreviewRows]);
     const primarySkuMetaMap = useMemo(() => {
         const next = new Map<string, CatalogGroupPrimarySku>();
-        for (const row of activeResult.primarySkus ?? []) {
-            next.set(row.groupId, row);
+        const groupIds = new Set<string>();
+        for (const row of activeResult.primarySkus ?? []) groupIds.add(row.groupId);
+        for (const row of activeResult.variantPreviewRows ?? []) groupIds.add(row.groupId);
+        for (const group of activeResult.items) groupIds.add(group._id);
+        for (const groupId of groupIds) {
+            next.set(
+                groupId,
+                resolveCatalogGroupSku(
+                    groupId,
+                    activeResult.primarySkus ?? [],
+                    activeResult.variantPreviewRows ?? [],
+                ),
+            );
         }
         return next;
-    }, [activeResult.primarySkus]);
+    }, [activeResult.items, activeResult.primarySkus, activeResult.variantPreviewRows]);
     const variantPreviewMap = useMemo(() => {
         const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
         const next = new Map<string, ProductCardVariantPreview[]>();
@@ -1725,6 +1796,7 @@ export default function CatalogClient({
     const capacityQuickLabel = (() => {
         if (filters.capacities.length === 0) return "Size";
         for (const range of CAPACITY_RANGES) {
+            if (filters.capacities.includes(range.value)) return range.label;
             const allLabels = Object.values(facets?.capacities ?? {})
                 .filter((cap) => capacityInRange(cap.ml, range))
                 .map((cap) => cap.label);
@@ -1978,17 +2050,17 @@ export default function CatalogClient({
                     {/* Product Grid Content */}
                     <div className="flex-1 min-w-0 w-full pb-32 border-l-0 lg:border-l border-champagne/30 lg:pl-6">
 
-                        {selectedFamilyLabel === "Cylinder" && (
+                        {selectedFamilyLabel && CATALOG_FAMILIES.includes(selectedFamilyLabel) && (
                             <div className="mb-4 flex flex-col gap-3 border border-muted-gold/40 bg-muted-gold/10 p-4 sm:flex-row sm:items-center sm:justify-between">
                                 <div>
-                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Cylinder V3</p>
-                                    <p className="mt-1 text-sm text-obsidian">Looking for the editorial family page and the 9 mL · 17-415 Paper Doll builder?</p>
+                                    <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Family finder</p>
+                                    <p className="mt-1 text-sm text-obsidian">Looking for the {selectedFamilyLabel} family page with application cards and exact products?</p>
                                 </div>
                                 <Link
-                                    href="/catalog/cylinder"
+                                    href={familyFinderHref(selectedFamilyLabel)}
                                     className="inline-flex min-h-11 shrink-0 items-center justify-center bg-obsidian px-4 text-center text-[10px] font-bold uppercase tracking-[0.14em] text-white hover:bg-muted-gold hover:text-obsidian"
                                 >
-                                    {"Open the Cylinder family & builder"}
+                                    {`Open the ${selectedFamilyLabel} family page`}
                                 </Link>
                             </div>
                         )}

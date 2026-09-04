@@ -39,6 +39,7 @@ import type * as importMissingLiveProducts from "../importMissingLiveProducts.js
 import type * as knowledge from "../knowledge.js";
 import type * as knowledgeOperations from "../knowledgeOperations.js";
 import type * as materialRecipes from "../materialRecipes.js";
+import type * as matrix from "../matrix.js";
 import type * as measurements from "../measurements.js";
 import type * as migrations from "../migrations.js";
 import type * as observability from "../observability.js";
@@ -96,6 +97,7 @@ declare const fullApi: ApiFromModules<{
   knowledge: typeof knowledge;
   knowledgeOperations: typeof knowledgeOperations;
   materialRecipes: typeof materialRecipes;
+  matrix: typeof matrix;
   measurements: typeof measurements;
   migrations: typeof migrations;
   observability: typeof observability;

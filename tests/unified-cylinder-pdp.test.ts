@@ -1,11 +1,7 @@
 import { describe, expect, it } from "vitest";
-import { readFileSync } from "node:fs";
+import { existsSync } from "node:fs";
 import type { PaperDollConfiguration } from "@/lib/paper-doll/types";
 import {
-    getCylinderConfiguratorOptions,
-    isUnifiedCylinderBuildReady,
-    resolveCylinderConfigurationFromQuery,
-    resolveUnifiedPdpView,
     selectCylinderConfiguration,
 } from "@/lib/products/unified-cylinder-pdp";
 import { buildCylinder9mlConfigurations } from "@/lib/products/cylinder-9ml-configurator";
@@ -82,64 +78,9 @@ const configurations = [
 ] as const;
 
 describe("unified Cylinder PDP state", () => {
-    it("preserves an explicitly requested Build view while the release is still preparing", () => {
-        expect(resolveUnifiedPdpView("build")).toBe("build");
-        expect(resolveUnifiedPdpView(null)).toBe("beauty");
-    });
-
-    it("keeps unreleased layered media out of the configurator while preserving its future release path", () => {
-        const source = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
-
-        expect(source).toContain("Product photos");
-        expect(source).toContain("Build preview · 145 configurations");
-        expect(source).toContain("min-h-[360px] sm:min-h-[420px]");
-        expect(source).toContain('{buildReady && <div className="min-w-0">');
-        expect(source).toContain('"mx-auto max-w-[820px]"');
-        expect(source).toContain("Choose from every verified component below");
-        expect(source).not.toContain('next.set("view", "beauty");\n            router.replace');
-    });
-
-    it("keeps the beauty hero inside the unified component; the product page reads plates, not the gallery", () => {
-        const component = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
-        const page = readFileSync("src/app/products/[slug]/page.tsx", "utf8");
-        const queries = readFileSync("src/sanity/lib/queries.ts", "utf8");
-        const serverClient = readFileSync("src/sanity/lib/serverClient.ts", "utf8");
-
-        expect(component).toContain("resolveCylinderBeautyHero(beautyGallery, selected.glassKey)");
-        expect(component).toContain('className="object-cover"');
-        expect(component).toContain("max-w-[1040px]");
-        expect(component).toContain("Beauty reference · Metal roller · Matte silver");
-        expect(component).not.toContain('rows.push({\n                url: beautyHero.imageUrl');
-        expect(component).toContain("<PaperDollCanvas");
-        // The guided product page sells through plates from the Convex index;
-        // the Sanity beauty gallery is no longer wired into the page.
-        expect(page).toContain("loadPlatesForVariants(");
-        expect(page).not.toContain("getStorefrontCylinderBeautyGallery");
-        expect(page).not.toContain("beautyGallery=");
-        expect(queries).toContain("authenticatedServerClient ?? client");
-        expect(serverClient).toContain('import "server-only"');
-        expect(serverClient).toContain("SANITY_API_READ_TOKEN");
-        expect(serverClient).not.toContain("NEXT_PUBLIC_SANITY_API_READ_TOKEN");
-    });
-
-    it("selects a valid configuration SKU and flags an invalid SKU for URL cleanup", () => {
-        expect(resolveCylinderConfigurationFromQuery(configurations, "GB-CYL-AMB-9ML-MRL-SGLD")).toMatchObject({
-            configuration: { graceSku: "GB-CYL-AMB-9ML-MRL-SGLD" },
-            invalidConfiguration: false,
-        });
-        expect(resolveCylinderConfigurationFromQuery(configurations, "NOT-A-REAL-SKU")).toMatchObject({
-            configuration: { graceSku: "GB-CYL-CLR-9ML-MRL-WHT" },
-            invalidConfiguration: true,
-        });
-    });
-
-    it("uses a Clear Roll-On as the default even when data arrives in another order", () => {
-        const result = resolveCylinderConfigurationFromQuery(
-            [configurations[4], configurations[1], configurations[0]],
-            null,
-        );
-
-        expect(result.configuration.graceSku).toBe("GB-CYL-CLR-9ML-MRL-WHT");
+    it("retires the unused unified builder UI in favor of canonical focused PDP routes", () => {
+        expect(existsSync("src/components/products/UnifiedBottlePdp.tsx")).toBe(false);
+        expect(existsSync("src/components/products/BottleConfigurator.tsx")).toBe(false);
     });
 
     it("preserves compatible downstream choices when glass changes", () => {
@@ -167,11 +108,6 @@ describe("unified Cylinder PDP state", () => {
             mode: "spray",
             finishLabel: "Black",
         });
-    });
-
-    it("shows roller material only for Roll-On paths", () => {
-        expect(getCylinderConfiguratorOptions(configurations, configurations[1]).rollerMaterials).toEqual(["Metal", "Plastic"]);
-        expect(getCylinderConfiguratorOptions(configurations, configurations[4]).rollerMaterials).toEqual([]);
     });
 
     it("resolves both Swirl white-cap roller materials to their exact SKUs", () => {
@@ -235,15 +171,6 @@ describe("unified Cylinder PDP state", () => {
         });
     });
 
-    it("requires 145 unique configurations and released assets before showing the Paper Doll tab", () => {
-        const complete = Array.from({ length: 145 }, (_, index) => configuration({ graceSku: `CYL-${index + 1}` }));
-
-        expect(isUnifiedCylinderBuildReady(complete, true)).toBe(true);
-        expect(isUnifiedCylinderBuildReady(complete.slice(0, 143), true)).toBe(false);
-        expect(isUnifiedCylinderBuildReady(complete, false)).toBe(false);
-        expect(isUnifiedCylinderBuildReady([...complete.slice(0, 144), complete[0]], true)).toBe(false);
-    });
-
     it("renders full-canvas Paper Doll layers in the explicit mode order", () => {
         const family = {
             layerOrderRollon: ["body", "roller", "cap"],
@@ -285,12 +212,4 @@ describe("unified Cylinder PDP state", () => {
         });
     });
 
-    it("labels draft preview and exposes exact missing-layer diagnostics", () => {
-        const source = readFileSync("src/components/products/UnifiedBottlePdp.tsx", "utf8");
-
-        expect(source).toContain("Draft preview — not publicly released");
-        expect(source).toContain("resolvePaperDollLayersResult");
-        expect(source).toContain("layerResolution.missing.slot");
-        expect(source).toContain("layerResolution.missing.variantKey");
-    });
 });

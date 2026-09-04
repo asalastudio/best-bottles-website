@@ -1,4 +1,5 @@
 import type { CatalogSearchGroup } from "@/lib/catalogSearchFallback";
+import { APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import {
     buildFamilyPageData,
     type FamilyPageCohort,
@@ -27,25 +28,29 @@ export type CylinderFamilyPageModel = {
     cards: CylinderFamilyCardModel[];
 };
 
-export const CYLINDER_9ML_BUILDER_OPTIONS = Object.freeze({
-    glassColors: ["Clear", "Amber", "Frosted", "Cobalt Blue", "Swirl"],
-    applicatorSystems: ["Roll-On", "Fine Mist Spray", "Lotion Pump"] as CylinderApplicatorSystem[],
-    rollerMaterials: ["Metal", "Plastic"],
-    rollonFinishes: [
-        "Black Dotted",
-        "Matte Copper",
-        "Matte Gold",
-        "Matte Silver",
-        "Pink Dotted",
-        "Shiny Black",
-        "Shiny Gold",
-        "Shiny Silver",
-        "Silver Dotted",
-        "White",
-    ],
-    sprayFinishes: ["Black", "Gold", "Matte Silver", "Red", "Shiny Silver", "Turquoise"],
-    lotionFinishes: ["Black", "Gold", "Matte Silver"],
-});
+export type CylinderApplicationOption = {
+    value: ApplicatorNavValue;
+    label: string;
+    description: string;
+    count: number;
+};
+
+export function buildCylinderApplicationOptions(
+    applicatorFacets: Readonly<Record<string, number>>,
+): CylinderApplicationOption[] {
+    return APPLICATOR_NAV.flatMap((application) => {
+        const count = application.buckets.reduce(
+            (total, bucket) => total + (applicatorFacets[bucket] ?? 0),
+            0,
+        );
+        return count > 0 ? [{
+            value: application.value,
+            label: application.label,
+            description: application.subtitle,
+            count,
+        }] : [];
+    });
+}
 
 export function classifyCylinderApplicatorSystem(
     applicator: string | null | undefined,
@@ -128,44 +133,4 @@ export function summarizeCylinderRefineResults(cards: readonly CylinderFamilyCar
         groupCount: cards.length,
         configurationCount: cards.reduce((total, card) => total + card.variantCount, 0),
     };
-}
-
-type CylinderFamilySelection = {
-    glass?: string;
-    applicator?: CylinderApplicatorSystem;
-    rollerMaterial?: string;
-    finish?: string;
-};
-
-function buildCylinderConfigurationHref(view: "beauty" | "build", selection?: CylinderFamilySelection): string {
-    const params = new URLSearchParams({ view });
-    if (selection?.glass) params.set("glass", selection.glass);
-    if (selection?.applicator) params.set("applicator", selection.applicator);
-    if (selection?.rollerMaterial && selection.applicator === "Roll-On") {
-        params.set("roller", selection.rollerMaterial);
-    }
-    if (selection?.finish) params.set("finish", selection.finish);
-    return `/products/${CYLINDER_9ML_17415_COHORT.slug}?${params.toString()}`;
-}
-
-export function buildCylinderBuilderHref(selection?: CylinderFamilySelection): string {
-    return buildCylinderConfigurationHref("build", selection);
-}
-
-export function buildCylinderConfigurationPreviewHref(selection?: CylinderFamilySelection): string {
-    return buildCylinderConfigurationHref("beauty", selection);
-}
-
-export function buildCylinderReadyMadeHref(
-    group: Pick<CatalogSearchGroup, "slug" | "family" | "capacityMl" | "neckThreadSize" | "paperDollFamilyKey">,
-    graceSku?: string | null,
-): string {
-    const isUnifiedCohort = group.family === CYLINDER_9ML_17415_COHORT.family
-        && group.capacityMl === CYLINDER_9ML_17415_COHORT.capacityMl
-        && group.neckThreadSize === CYLINDER_9ML_17415_COHORT.neckThreadSize
-        && group.paperDollFamilyKey === CYLINDER_9ML_17415_COHORT.paperDollFamilyKey;
-    if (!isUnifiedCohort) return `/products/${group.slug}`;
-    const params = new URLSearchParams({ view: "beauty" });
-    if (graceSku) params.set("configuration", graceSku);
-    return `/products/${CYLINDER_9ML_17415_COHORT.slug}?${params.toString()}`;
 }

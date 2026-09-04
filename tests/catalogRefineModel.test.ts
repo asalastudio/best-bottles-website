@@ -42,4 +42,13 @@ describe("canonical Refine view model", () => {
         expect(filters.colors).toEqual([]);
         expect(toggleCatalogFacetValue(next, "colors", "Amber").colors).toEqual([]);
     });
+
+    it("labels mega-menu capacity range tokens as customer-facing ranges", () => {
+        expect(buildAppliedFilterChips({
+            ...EMPTY_FILTERS,
+            capacities: ["miniature"],
+        })).toEqual([
+            { facet: "capacities", value: "miniature", label: "Capacity: Miniature — 1-5 ml" },
+        ]);
+    });
 });

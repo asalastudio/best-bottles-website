@@ -10,6 +10,7 @@ import {
     selectBestFitmentRule,
 } from "./componentUtils";
 import { buildFamilyPageData } from "../src/lib/products/family-page-data";
+import { buildFocusedPdpRelations } from "../src/lib/products/pdp-relations";
 import {
     APPLICATOR_BUCKETS,
     BOTTLE_CATEGORIES,
@@ -19,7 +20,9 @@ import {
     catalogSearchMatches,
     catalogSearchScore,
     classifyComponentType as classifyCatalogComponentType,
+    normalizeRollerMaterials,
     parseCapacityLabelMl as parseCapacityMl,
+    rollerMaterialMatchesProductValues,
 } from "../src/lib/catalogFilters";
 
 function isSanityCdnUrl(value: string) {
@@ -38,6 +41,43 @@ function isShopifyCdnUrl(value: string | null | undefined) {
         return value.includes("cdn.shopify.com/");
     }
 }
+
+const productGroupRelationV = v.object({
+    slug: v.string(),
+    displayName: v.string(),
+    family: v.string(),
+    capacity: v.union(v.string(), v.null()),
+    capacityMl: v.union(v.number(), v.null()),
+    color: v.union(v.string(), v.null()),
+    application: v.union(
+        v.literal("rollon"),
+        v.literal("spray"),
+        v.literal("dropper"),
+        v.literal("lotionpump"),
+        v.literal("reducer"),
+        v.null(),
+    ),
+    applicationLabel: v.union(v.string(), v.null()),
+    neckThreadSize: v.union(v.string(), v.null()),
+    neckThreadLabel: v.union(v.string(), v.null()),
+    heroImageUrl: v.union(v.string(), v.null()),
+    priceRangeMin: v.union(v.number(), v.null()),
+    variantCount: v.number(),
+    isCurrent: v.boolean(),
+});
+
+const focusedPdpRelationsV = v.object({
+    currentApplication: v.union(
+        v.literal("rollon"),
+        v.literal("spray"),
+        v.literal("dropper"),
+        v.literal("lotionpump"),
+        v.literal("reducer"),
+        v.null(),
+    ),
+    sameApplicationSizes: v.array(productGroupRelationV),
+    otherApplications: v.array(productGroupRelationV),
+});
 
 // ─────────────────────────────────────────────────────────────────────────────
 // PRODUCT QUERIES — Powers the Homepage + Catalog + PDP
@@ -729,6 +769,7 @@ export const searchCatalog = query({
             category: v.optional(v.union(v.string(), v.null())),
             collection: v.optional(v.union(v.string(), v.null())),
             applicators: v.optional(v.array(v.string())),
+            rollerMaterials: v.optional(v.array(v.string())),
             families: v.optional(v.array(v.string())),
             colors: v.optional(v.array(v.string())),
             capacities: v.optional(v.array(v.string())),
@@ -748,6 +789,7 @@ export const searchCatalog = query({
             category: args.filters.category ?? null,
             collection: args.filters.collection ?? null,
             applicators: args.filters.applicators ?? [],
+            rollerMaterials: normalizeRollerMaterials(args.filters.rollerMaterials ?? []),
             families: args.filters.families ?? [],
             colors: args.filters.colors ?? [],
             capacities: args.filters.capacities ?? [],
@@ -795,6 +837,9 @@ export const searchCatalog = query({
             if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
                 rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
             }
+            if (!skipKeys.has("rollerMaterials") && filters.rollerMaterials.length > 0) {
+                rows = rows.filter((group) => filters.rollerMaterials.some((material) => rollerMaterialMatchesProductValues(material, group.applicatorTypes ?? [])));
+            }
             if (!skipKeys.has("families") && filters.families.length > 0) {
                 const familySet = new Set(filters.families);
                 rows = rows.filter((group) => group.family != null && familySet.has(group.family));
@@ -828,6 +873,7 @@ export const searchCatalog = query({
 
         const result = runFilters();
         const applicatorFacetBase = runFilters(new Set(["applicators"]));
+        const rollerMaterialFacetBase = runFilters(new Set(["rollerMaterials"]));
         const familyFacetBase = runFilters(new Set(["families"]));
         const colorFacetBase = runFilters(new Set(["colors"]));
         const capacityFacetBase = runFilters(new Set(["capacities"]));
@@ -849,6 +895,11 @@ export const searchCatalog = query({
             }
         }
 
+        const rollerMaterials = {
+            metal: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("metal", group.applicatorTypes ?? [])).length,
+            plastic: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("plastic", group.applicatorTypes ?? [])).length,
+        };
+
         const categoryFacetBase = runFilters(new Set(["category", "collection"]));
         const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
         const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
@@ -858,6 +909,7 @@ export const searchCatalog = query({
             categories: countByCatalogGroup(categoryFacetBase, (group) => group.category),
             collections: countByCatalogGroup(categoryFacetBase, (group) => group.bottleCollection),
             applicators: applicatorCounts,
+            rollerMaterials,
             families: countByCatalogGroup(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
             colors: countByCatalogGroup(colorFacetBase, (group) => canonicalGlassColor(group.color)),
             capacities,
@@ -946,6 +998,11 @@ export const searchCatalog = query({
                     capStyle: variant.capStyle ?? null,
                     capHeight: variant.capHeight ?? null,
                     ballMaterial: variant.ballMaterial ?? null,
+                    stockStatus: variant.stockStatus ?? null,
+                    caseQuantity: variant.caseQuantity ?? null,
+                    webPrice1pc: variant.webPrice1pc ?? null,
+                    shopifyVariantId: variant.shopifyVariantId ?? null,
+                    shopifySellable: variant.shopifySellable ?? null,
                 })),
             };
         }));
@@ -1086,6 +1143,11 @@ export const getCatalogGroupVariantPreviewData = query({
                 capStyle: string | null;
                 capHeight: string | null;
                 ballMaterial: string | null;
+                stockStatus: string | null;
+                caseQuantity: number | null;
+                webPrice1pc: number | null;
+                shopifyVariantId: string | null;
+                shopifySellable: boolean | null;
             }>;
         }[] = [];
 
@@ -1118,6 +1180,11 @@ export const getCatalogGroupVariantPreviewData = query({
                             capStyle: variant.capStyle ?? null,
                             capHeight: variant.capHeight ?? null,
                             ballMaterial: variant.ballMaterial ?? null,
+                            stockStatus: variant.stockStatus ?? null,
+                            caseQuantity: variant.caseQuantity ?? null,
+                            webPrice1pc: variant.webPrice1pc ?? null,
+                            shopifyVariantId: variant.shopifyVariantId ?? null,
+                            shopifySellable: variant.shopifySellable ?? null,
                         })),
                     };
                 }),
@@ -1200,6 +1267,47 @@ export const getProductGroup = query({
             .collect();
 
         return { group, variants };
+    },
+});
+
+/**
+ * Narrow, server-initialized relation cards for the focused PDP.
+ * The family index supplies the bounded candidate set; canonical route aliases
+ * and groups without real variants never become shopping alternatives.
+ */
+export const getFocusedPdpRelations = query({
+    args: { slug: v.string() },
+    returns: v.union(focusedPdpRelationsV, v.null()),
+    handler: async (ctx, args) => {
+        const currentGroup = await ctx.db
+            .query("productGroups")
+            .withIndex("by_slug", (q) => q.eq("slug", args.slug))
+            .first();
+        if (
+            !currentGroup
+            || currentGroup.variantCount <= 0
+            || isLegacyProductRouteAlias(currentGroup.slug)
+        ) return null;
+
+        const familyGroups = await ctx.db
+            .query("productGroups")
+            .withIndex("by_family", (q) => q.eq("family", currentGroup.family))
+            .collect();
+        const declaredGroups = familyGroups.filter((group) => (
+            group.variantCount > 0 && !isLegacyProductRouteAlias(group.slug)
+        ));
+        const groupsWithLiveVariants = await Promise.all(declaredGroups.map(async (group) => ({
+            group,
+            variant: await ctx.db
+                .query("products")
+                .withIndex("by_productGroupId", (q) => q.eq("productGroupId", group._id))
+                .first(),
+        })));
+        const eligibleGroups = groupsWithLiveVariants.flatMap(({ group, variant }) => (
+            variant ? [group] : []
+        ));
+        if (!eligibleGroups.some((group) => group._id === currentGroup._id)) return null;
+        return buildFocusedPdpRelations(currentGroup, eligibleGroups);
     },
 });
 

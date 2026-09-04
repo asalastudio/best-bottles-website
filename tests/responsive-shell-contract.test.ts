@@ -35,4 +35,16 @@ describe("responsive shell contract", () => {
         expect(cartDrawer).toContain("xl:bottom-0");
         expect(footer).toContain("pb-[calc(2rem+var(--mobile-tab-bar-clearance))] xl:pb-8");
     });
+
+    it("keeps the Grace mobile action centered inside the tab bar", () => {
+        const mobileTabs = read("src/components/mobile/MobileTabBar.tsx");
+        const launcher = read("src/components/grace/GraceLauncher.tsx");
+
+        expect(mobileTabs).toContain("animate-grace-pulse-subtle");
+        expect(mobileTabs).not.toContain("-mt-6");
+        expect(mobileTabs).not.toContain("w-12 h-12");
+        expect(launcher).toContain("hidden cursor-pointer");
+        expect(launcher).toContain("xl:flex");
+        expect(launcher).not.toContain("isMobile");
+    });
 });

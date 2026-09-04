@@ -29,12 +29,13 @@ describe("Mizan UX recovery guardrails", () => {
         expect(mobileTabBar).toContain("data-testid={`mobile-tab-${tab.key}`}");
     });
 
-    it("renders PDP confidence content and avoids a generic loading-only PDP state", () => {
+    it("renders PDP decision content and avoids a generic loading-only PDP state", () => {
         const pdp = readRepoFile("src/app/products/[slug]/ProductDetailClient.tsx");
         const gallery = readRepoFile("src/components/products/ProductImageGallery.tsx");
 
-        expect(pdp).toContain("ProductConfidenceSummary");
-        expect(pdp).toContain('data-testid="pdp-confidence-summary"');
+        expect(pdp).toContain("PdpDiscoverySections");
+        expect(pdp).toContain('data-testid="pdp-volume-fulfillment"');
+        expect(pdp).not.toContain("ProductConfidenceSummary");
         expect(pdp).toContain("Preparing product details and fitment data");
         expect(pdp).not.toContain("Loading product...");
         expect(gallery).toContain('loading="eager"');
@@ -92,7 +93,8 @@ describe("Mizan UX recovery guardrails", () => {
         expect(graceRenderer).toContain('data-testid="grace-product-tile-grid"');
         expect(graceRenderer).toContain("GraceProductCard");
 
-        expect(pdp).toContain("sortCompatibleApplicatorSiblings");
-        expect(pdp).toContain("compatibleApplicatorPriority");
+        expect(pdp).toContain("PdpDiscoverySections");
+        expect(pdp).toContain("initialCompatibility={initialCompatibility}");
+        expect(pdp).not.toContain("sortCompatibleApplicatorSiblings");
     });
 });

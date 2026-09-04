@@ -5,6 +5,7 @@ const LEGACY_PRODUCT_ROUTE_OVERRIDES: Record<string, string> = {
     "cylinder-9ml-clear": "cylinder-9ml-clear-17-415-rollon",
     "cylinder-9ml-clear-18-400": "vial-9ml-clear-18-400",
     "cylinder-9ml-clear-18-400-glasswand": "vial-9ml-clear-18-400-glasswand",
+    "cylinder-9ml-17-415": "cylinder-9ml-clear-17-415-rollon",
     "cylinder-9ml-white-13-415": "cylinder-9ml-clear-13-415",
     "cylinder-9ml-white-17-415-rollon": "cylinder-9ml-clear-17-415-rollon",
 };

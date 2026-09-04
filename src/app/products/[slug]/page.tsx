@@ -3,7 +3,7 @@ import { redirect } from "next/navigation";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../../convex/_generated/api";
 import ProductDetailClient, {
-    type ApplicatorSibling,
+    type PdpCompatibilityPayload,
     type ProductGroupPayload,
     type SiblingGroup,
     type ProductVariant,
@@ -16,10 +16,14 @@ import { SITE_NAME, SITE_URL, buildBreadcrumbJsonLd, buildProductJsonLd } from "
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
+import { resolveProductPageRedirectTarget } from "@/lib/products/pdp-redirect";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import type { PdpBlock } from "@/components/PdpBlocks";
 import { loadPlatesForVariants } from "@/lib/paper-doll/plates";
-import { CYLINDER_9ML_17415_COHORT } from "@/lib/products/product-cohorts";
+import {
+    selectPrimaryProductVariant,
+    type FocusedPdpRelations,
+} from "@/lib/products/pdp-relations";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -43,10 +47,6 @@ function isPreferredProductImageUrl(value: string | null | undefined): boolean {
     return isShopifyCdnImageUrl(value) && !isLegacyBestBottlesImageUrl(value);
 }
 
-function hasPreferredProductImage(variant: ProductVariant): boolean {
-    return isPreferredProductImageUrl(variant.imageUrl) || isPreferredProductImageUrl(variant.imageUrlCapOff);
-}
-
 async function getProductData(slug: string): Promise<ProductGroupPayload | null> {
     const data = await getConvexClient().query(api.products.getProductGroup, { slug }) as ProductGroupPayload | null;
     if (!data) return null;
@@ -58,25 +58,7 @@ async function getProductData(slug: string): Promise<ProductGroupPayload | null>
 
 function getPrimaryVariant(data: ProductGroupPayload | null): ProductVariant | null {
     if (!data) return null;
-    const primaryWebsiteSku = data.group.primaryWebsiteSku?.trim();
-    const primaryGraceSku = data.group.primaryGraceSku?.trim();
-    const explicitPrimary = data.variants.find((variant) =>
-        (primaryWebsiteSku && variant.websiteSku === primaryWebsiteSku) ||
-        (primaryGraceSku && variant.graceSku === primaryGraceSku)
-    );
-    return explicitPrimary ?? data.variants.find(hasPreferredProductImage) ?? data.variants[0] ?? null;
-}
-
-async function getApplicatorSiblings(data: ProductGroupPayload | null, activeSlug: string): Promise<ApplicatorSibling[]> {
-    const group = data?.group;
-    if (!group) return [];
-    return await getConvexClient().query(api.products.getApplicatorSiblings, {
-        family: group.family,
-        capacityMl: group.capacityMl ?? 0,
-        color: group.color ?? "",
-        excludeSlug: activeSlug,
-        neckThreadSize: group.neckThreadSize ?? undefined,
-    }) as ApplicatorSibling[];
+    return selectPrimaryProductVariant(data.group, data.variants);
 }
 
 async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: string): Promise<SiblingGroup[]> {
@@ -88,6 +70,27 @@ async function getSiblingGroups(data: ProductGroupPayload | null, activeSlug: st
         excludeSlug: activeSlug,
         neckThreadSize: group.neckThreadSize ?? undefined,
     }) as SiblingGroup[];
+}
+
+async function getFocusedPdpRelations(activeSlug: string): Promise<FocusedPdpRelations | null> {
+    return await getConvexClient().query(api.products.getFocusedPdpRelations, {
+        slug: activeSlug,
+    }) as FocusedPdpRelations | null;
+}
+
+async function getPrimaryCompatibility(data: ProductGroupPayload | null): Promise<PdpCompatibilityPayload | null> {
+    const primaryVariant = getPrimaryVariant(data);
+    const primaryWebsiteSku = primaryVariant?.websiteSku?.trim();
+    if (primaryWebsiteSku) {
+        return await getConvexClient().query(api.grace.getBottleComponents, {
+            websiteSku: primaryWebsiteSku,
+        }) as PdpCompatibilityPayload | null;
+    }
+    const primaryGraceSku = primaryVariant?.graceSku?.trim();
+    if (!primaryGraceSku) return null;
+    return await getConvexClient().query(api.grace.getBottleComponents, {
+        graceSku: primaryGraceSku,
+    }) as PdpCompatibilityPayload | null;
 }
 
 async function getPdpBlocks(activeSlug: string, family: string | null | undefined): Promise<PdpBlock[]> {
@@ -115,18 +118,6 @@ async function getPdpBlocks(activeSlug: string, family: string | null | undefine
     }
 }
 
-function searchParamsToString(input: Record<string, string | string[] | undefined>): string {
-    const params = new URLSearchParams();
-    for (const [key, value] of Object.entries(input)) {
-        if (Array.isArray(value)) {
-            for (const item of value) params.append(key, item);
-        } else if (value != null) {
-            params.set(key, value);
-        }
-    }
-    return params.toString();
-}
-
 export async function generateMetadata({
     params,
 }: {
@@ -134,19 +125,6 @@ export async function generateMetadata({
 }): Promise<Metadata> {
     const { slug } = await params;
     const activeSlug = getLegacyProductRouteOverride(slug) ?? slug;
-    if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        return {
-            title: { absolute: `9 mL Cylinder Bottle — 17-415 | ${SITE_NAME}` },
-            description: "Configure one 9 mL 17-415 Cylinder bottle across compatible glass colors, roll-on fitments, fine mist sprayers, lotion pumps, and finishes.",
-            alternates: { canonical: `${SITE_URL}/products/${CYLINDER_9ML_17415_COHORT.slug}` },
-            openGraph: {
-                title: `9 mL Cylinder Bottle — 17-415 | ${SITE_NAME}`,
-                description: "Choose the glass, delivery system, roller material, and finish for the exact 9 mL 17-415 Cylinder platform.",
-                url: `${SITE_URL}/products/${CYLINDER_9ML_17415_COHORT.slug}`,
-                type: "website",
-            },
-        };
-    }
     const data = await getProductData(activeSlug);
     const group = data?.group;
     const variant = getPrimaryVariant(data);
@@ -201,25 +179,14 @@ export default async function ProductPage({
     searchParams: Promise<Record<string, string | string[] | undefined>>;
 }) {
     const [{ slug }, resolvedSearchParams] = await Promise.all([params, searchParams]);
+    const redirectTarget = resolveProductPageRedirectTarget(slug, resolvedSearchParams);
+    if (redirectTarget) redirect(redirectTarget);
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
-    if (legacyRouteOverride) {
-        const qs = searchParamsToString(resolvedSearchParams);
-        redirect(`/products/${legacyRouteOverride}${qs ? `?${qs}` : ""}`);
-    }
 
     const activeSlug = legacyRouteOverride ?? slug;
-    if (activeSlug === CYLINDER_9ML_17415_COHORT.slug) {
-        // The unified "cohort" page is retired: the 9 mL sells through the
-        // guided product page like every other 3D family. Old links land on
-        // the clear roll-on, carrying any deep-linked configuration through.
-        const next = new URLSearchParams();
-        const configuration = resolvedSearchParams.configuration;
-        if (typeof configuration === "string") next.set("configuration", configuration);
-        redirect(`/products/cylinder-9ml-clear-17-415-rollon${next.size ? `?${next.toString()}` : ""}`);
-    }
     const data = await getProductData(activeSlug);
-    const [siblings, siblingGroups, pdpBlocks, platesBySku] = await Promise.all([
-        getApplicatorSiblings(data, activeSlug),
+    const primaryVariant = getPrimaryVariant(data);
+    const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
         getSiblingGroups(data, activeSlug),
         getPdpBlocks(activeSlug, data?.group.family),
         // The plates for THIS group's variants, from the Convex index -- never
@@ -230,9 +197,11 @@ export default async function ProductPage({
             (data?.variants ?? []).flatMap((variant) => [variant.graceSku, variant.websiteSku]),
             activeSlug,
         ),
+        getFocusedPdpRelations(activeSlug),
+        getPrimaryCompatibility(data),
     ]);
     const group = data?.group;
-    const variant = getPrimaryVariant(data);
+    const variant = primaryVariant;
     const customerName = group
         ? getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName
         : "";
@@ -287,8 +256,9 @@ export default async function ProductPage({
             <ProductDetailClient
                 slug={activeSlug}
                 initialData={data}
-                initialApplicatorSiblings={siblings}
                 initialPdpBlocks={pdpBlocks}
+                initialRelations={relations}
+                initialCompatibility={compatibility}
                 siblingGroups={siblingGroups}
                 platesBySku={platesBySku}
             />

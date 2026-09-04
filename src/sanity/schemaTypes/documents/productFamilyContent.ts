@@ -82,9 +82,9 @@ export const productFamilyContent = defineType({
         }),
         defineField({
             name: "featuredCohortSlug",
-            title: "Featured Builder Cohort Slug",
+            title: "Featured Focused PDP Slug",
             type: "string",
-            description: "Convex-owned unified PDP slug, e.g. cylinder-9ml-17-415. This is editorial routing only; it does not define compatibility.",
+            description: "Canonical focused PDP slug, e.g. cylinder-9ml-clear-17-415-rollon. This is editorial routing only; it does not define compatibility.",
         }),
         defineField({
             name: "pageBlocks",

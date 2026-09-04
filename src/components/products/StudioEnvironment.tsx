@@ -118,8 +118,7 @@ function SoftEmitter({ emitter }: { emitter: Emitter }) {
     });
     m.color.setScalar(intensity); // HDR: the env portal renders half-float
     return m;
-    // sigma is a tuple literal from EMITTERS — stringify for stable deps
-  }, [intensity, sigma[0], sigma[1]]); // eslint-disable-line react-hooks/exhaustive-deps
+  }, [intensity, sigma]);
   return (
     <mesh position={position} scale={[scale[0], scale[1], 1]}
           onUpdate={(self) => self.lookAt(0, 0, 0)}>

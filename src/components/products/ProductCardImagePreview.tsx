@@ -20,6 +20,7 @@ type ProductCardImagePreviewProps = {
     placeholderLabel?: string | null;
     variantPreviews?: ProductCardVariantPreview[];
     productHref: string;
+    onOpen?: () => void;
     maxVisibleSwatches?: number;
     auditMeta?: {
         surface: string;
@@ -171,6 +172,7 @@ export default function ProductCardImagePreview({
     placeholderLabel,
     variantPreviews = [],
     productHref,
+    onOpen,
     maxVisibleSwatches = 3,
     auditMeta,
 }: ProductCardImagePreviewProps) {
@@ -237,6 +239,7 @@ export default function ProductCardImagePreview({
             >
                 <Link
                     href={productHref}
+                    onClick={onOpen}
                     className="absolute inset-0 z-10"
                     aria-label={`View ${productTitle}`}
                 />

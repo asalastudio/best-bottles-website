@@ -1,5 +1,6 @@
 import {
     EMPTY_FILTERS,
+    CATALOG_FAMILIES,
     canonicalGlassColor,
     filtersToParams,
     normalizeApplicatorBuckets,
@@ -9,6 +10,7 @@ import {
     type SortValue,
     type ViewMode,
 } from "@/lib/catalogFilters";
+import { familyFinderPath, isFamilyLandingFamily } from "@/lib/products/focused-shopping";
 
 /**
  * Grace speaks the customer's words; the facets speak exact labels. Fold the
@@ -28,6 +30,9 @@ function canonicalizeProposal(proposal: GraceRefinementProposal): GraceRefinemen
     if (Array.isArray(proposal.applicators)) {
         out.applicators = normalizeApplicatorBuckets(proposal.applicators.map((value) => String(value)));
     }
+    if (Array.isArray(proposal.rollerMaterials)) {
+        out.rollerMaterials = proposal.rollerMaterials.filter((value): value is "metal" | "plastic" => value === "metal" || value === "plastic");
+    }
     return out;
 }
 
@@ -42,6 +47,7 @@ export type GraceBroadenScope =
     | "category"
     | "collection"
     | "applicators"
+    | "rollerMaterials"
     | "families"
     | "colors"
     | "capacities"
@@ -59,6 +65,7 @@ function exactCapacityFacet(search: string | undefined): string | null {
 
 const ARRAY_FILTERS = [
     "applicators",
+    "rollerMaterials",
     "families",
     "colors",
     "capacities",
@@ -74,19 +81,25 @@ export function graceRefineStateToParams(state: GraceRefineState): URLSearchPara
 }
 
 export function graceRefineDestination(state: GraceRefineState): string {
-    const query = graceRefineStateToParams(state).toString();
     const filters = state.filters;
-    const cylinderFamilySurface =
-        filters.families.length === 1
-        && filters.families[0] === "Cylinder"
+    const landingFamily = filters.families.length === 1 && isFamilyLandingFamily(filters.families[0] ?? "")
+        ? filters.families[0]
+        : undefined;
+    const familyLandingSurface = Boolean(
+        landingFamily
         && !filters.category
         && !filters.collection
         && !filters.componentType
         && !filters.search
         && filters.priceMin === null
-        && filters.priceMax === null;
-    const base = cylinderFamilySurface ? "/catalog/cylinder" : "/catalog";
-    return `${base}${query ? `?${query}` : ""}${cylinderFamilySurface ? "#ready-made" : ""}`;
+        && filters.priceMax === null
+        && CATALOG_FAMILIES.includes(landingFamily),
+    );
+    const params = graceRefineStateToParams(state);
+    if (familyLandingSurface) params.delete("families");
+    const query = params.toString();
+    const base = familyLandingSurface && landingFamily ? familyFinderPath(landingFamily) : "/catalog";
+    return `${base}${query ? `?${query}` : ""}`;
 }
 
 export function inferGraceBroadenScope(customerRequest: string): GraceBroadenScope {
@@ -109,6 +122,7 @@ function cloneFilters(filters: CatalogFilters): CatalogFilters {
     return {
         ...filters,
         applicators: [...filters.applicators],
+        rollerMaterials: [...filters.rollerMaterials],
         families: [...filters.families],
         colors: [...filters.colors],
         capacities: [...filters.capacities],
@@ -175,6 +189,7 @@ export function formatGraceRefineState(state: GraceRefineState): string {
     if (filters.capacities.length) lines.push(`Capacity: ${filters.capacities.join(", ")}`);
     if (filters.neckThreadSizes.length) lines.push(`Neck thread: ${filters.neckThreadSizes.join(", ")}`);
     if (filters.applicators.length) lines.push(`Applicator: ${filters.applicators.join(", ")}`);
+    if (filters.rollerMaterials.length) lines.push(`Roller material: ${filters.rollerMaterials.join(", ")}`);
     if (filters.componentType) lines.push(`Component type: ${filters.componentType}`);
     if (filters.priceMin !== null || filters.priceMax !== null) lines.push(`Price: ${filters.priceMin ?? "any"}–${filters.priceMax ?? "any"}`);
     if (filters.search) lines.push(`Search: ${filters.search}`);

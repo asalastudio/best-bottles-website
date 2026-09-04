@@ -1,11 +1,13 @@
 import {
     APPLICATOR_BUCKETS,
+    resolveCapacityRange,
     type CatalogFacetKey,
     type CatalogFilters,
 } from "@/lib/catalogFilters";
 
 export type CatalogArrayFacet =
     | "applicators"
+    | "rollerMaterials"
     | "families"
     | "capacities"
     | "colors"
@@ -20,6 +22,8 @@ export type CatalogFilterChip = {
 };
 
 export function formatCatalogCapacityLabel(value: string): string {
+    const range = resolveCapacityRange(value);
+    if (range) return `${range.label} — ${range.detail}`;
     if (/\boz\b/i.test(value)) return value;
     const match = value.match(/^(\d+(?:\.\d+)?)\s*ml\b/i);
     if (!match) return value;
@@ -42,6 +46,9 @@ export function buildAppliedFilterChips(filters: CatalogFilters): CatalogFilterC
     for (const value of filters.applicators) {
         const label = APPLICATOR_BUCKETS.find((bucket) => bucket.value === value)?.label ?? value;
         chips.push({ facet: "applicators", value, label: `Applicator: ${label}` });
+    }
+    for (const value of filters.rollerMaterials) {
+        chips.push({ facet: "rollerMaterials", value, label: `Roller: ${value}` });
     }
     for (const value of filters.families) {
         chips.push({ facet: "families", value, label: `Family: ${value}` });
@@ -73,6 +80,7 @@ export function removeCatalogFilterChip(
 ): CatalogFilters {
     if (
         chip.facet === "applicators"
+        || chip.facet === "rollerMaterials"
         || chip.facet === "families"
         || chip.facet === "capacities"
         || chip.facet === "colors"

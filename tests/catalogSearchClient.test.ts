@@ -9,6 +9,7 @@ describe("buildCatalogSearchArgs", () => {
             filters: {
                 capacities: ["9 ml"],
                 applicators: ["rollon"],
+                rollerMaterials: ["metal"],
                 neckThreadSizes: ["17-415"],
             },
             sort: "capacity-asc",
@@ -19,6 +20,7 @@ describe("buildCatalogSearchArgs", () => {
                 families: ["Cylinder"],
                 capacities: ["9 ml"],
                 applicators: ["rollon"],
+                rollerMaterials: ["metal"],
                 neckThreadSizes: ["17-415"],
             },
             sort: "capacity-asc",

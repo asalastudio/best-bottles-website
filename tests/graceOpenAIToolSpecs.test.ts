@@ -31,7 +31,6 @@ const EXISTING_GRACE_TOOLS = [
     "displayShortlist",
     "displayAnatomy",
     "setCatalogRefinements",
-    "setPaperDollSelection",
     "prepareQuoteRequest",
     "listGraceProjects",
     "proposeProjectSave",
@@ -62,18 +61,14 @@ describe("Grace OpenAI tool contract", () => {
         expect(search?.parameters.properties.familyLimit.type).toEqual(["string", "null"]);
     });
 
-    it("exposes exact Refine and Paper Doll controls", () => {
+    it("exposes exact Refine controls without a retired builder contract", () => {
         const refine = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "setCatalogRefinements");
-        const paperDoll = GRACE_OPENAI_TOOL_SPECS.find((tool) => tool.name === "setPaperDollSelection");
 
         expect(refine?.parameters.required).toContain("customerRequest");
         expect(refine?.parameters.properties.neckThreadSizes).toEqual(expect.objectContaining({
             type: ["array", "null"],
         }));
-        expect(paperDoll?.parameters.properties.configurationSku.type).toEqual(["string", "null"]);
-        expect(paperDoll?.parameters.properties.deliverySystem).toEqual(expect.objectContaining({
-            enum: ["rollon", "spray", "lotion", null],
-        }));
+        expect(GRACE_OPENAI_TOOL_SPECS.map((tool) => tool.name)).not.toContain("setPaperDollSelection");
     });
 
     it("supports quote preparation and confirmation-gated authenticated projects", () => {

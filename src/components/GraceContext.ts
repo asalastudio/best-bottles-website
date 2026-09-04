@@ -10,6 +10,8 @@
 
 import { createContext, useContext } from "react";
 import type { GraceRefineState } from "@/lib/grace/refineState";
+import type { GraceFinderContext, PdpContextChange } from "@/lib/grace/pageContextEvents";
+import type { GraceSurface } from "@/lib/grace/pushLayout";
 
 // ─── Types ────────────────────────────────────────────────────────────────────
 
@@ -43,6 +45,10 @@ export interface ProductCard {
     checkoutEligible?: boolean;
     stockStatus?: string | null;
     slug?: string;
+    /** Assigned only after Grace verifies this exact group and stored SKU. */
+    verifiedPdpHref?: string | null;
+    /** Finder recovery route used when a card has no verified PDP destination. */
+    finderHref?: string | null;
     dataQualityFlags?: string[];
 }
 
@@ -238,16 +244,12 @@ export interface PageContext {
     /** URL `category` filter when on /catalog */
     catalogCategory?: string;
     catalogSearch?: string;
+    /** Canonical finder state parsed from the route and query parameters. */
+    browseContext?: GraceFinderContext;
+    /** Exact resolved PDP state emitted by the PDP; safe for Grace grounding. */
+    pdpSelection?: PdpContextChange;
     /** Exact URL-backed Refine state. Grace inherits this unless the customer explicitly broadens it. */
     refineState?: GraceRefineState;
-    /** URL-backed selection for the unified Paper Doll product workspace. */
-    paperDoll?: {
-        configurationSku: string | null;
-        view: "beauty" | "build";
-        family: "Cylinder";
-        capacityMl: 9;
-        neckThreadSize: "17-415";
-    };
     cartItems: Array<{ graceSku: string; name: string; quantity: number; unitPrice?: number | null }>;
     /** Total cart value in dollars */
     cartTotal?: number;
@@ -300,6 +302,8 @@ export interface LauncherTooltip {
 
 export interface GraceContextValue {
     panelMode: PanelMode;
+    /** One provider-owned responsive decision shared by the shell and drawer. */
+    surface: GraceSurface;
     openPanel: () => void;
     closePanel: () => void;
     minimizeToStrip: () => void;
@@ -333,6 +337,8 @@ export interface GraceContextValue {
     conversationActive: boolean;
     startConversation: (forceTextOnly?: boolean) => void | Promise<boolean>;
     endConversation: () => void;
+    /** Starts a fresh explicit chat while keeping the current shopping page state. */
+    resetConversation: () => void;
     confirmAction: (messageId: string) => void;
     dismissAction: (messageId: string) => void;
     onNavigate: (path: string) => void;
@@ -357,6 +363,14 @@ const NOOP_ASYNC = async () => {};
 
 const GRACE_NOOP: GraceContextValue = {
     panelMode: "closed",
+    surface: {
+        mode: "closed",
+        showBackdrop: false,
+        contentIsInset: false,
+        availableContentWidth: 0,
+        drawerWidth: 400,
+        viewportWidth: 0,
+    },
     openPanel: NOOP,
     closePanel: NOOP,
     minimizeToStrip: NOOP,
@@ -382,6 +396,7 @@ const GRACE_NOOP: GraceContextValue = {
     conversationActive: false,
     startConversation: NOOP,
     endConversation: NOOP,
+    resetConversation: NOOP,
     confirmAction: NOOP,
     dismissAction: NOOP,
     onNavigate: NOOP,

@@ -4,18 +4,19 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useQuery } from "convex/react";
+import { api } from "../../../../convex/_generated/api";
 import {
-    ShoppingBag, ArrowLeft, ChevronRight, Package,
-    Check, Truck, ChatCircle,
+    ShoppingBag, ArrowLeft, Package,
+    Check, Truck,
 } from "@/components/icons";
 import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs, { type BreadcrumbStep } from "@/components/Breadcrumbs";
-import FitmentDrawer from "@/components/FitmentDrawer";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { APPLICATOR_BUCKETS } from "@/lib/catalogFilters";
+import { APPLICATOR_BUCKETS, APPLICATOR_NAV, type ApplicatorNavValue } from "@/lib/catalogFilters";
 import { buildCapOptionPhotoKeys } from "@/lib/products/closure-swatch-keys";
 import {
     PdpInlineBadges,
@@ -25,10 +26,15 @@ import {
 } from "@/components/PdpBlocks";
 import ProductImageGallery, { type GalleryImage } from "@/components/products/ProductImageGallery";
 import ConfiguratorPdp from "@/components/products/ConfiguratorPdp";
+import FocusedPdpLayout from "@/components/products/FocusedPdpLayout";
+import PdpDiscoverySections, {
+    PdpDiscoveryMatrixLink,
+    type PdpCompatibilityComponent,
+    type PdpCompatibilityPayload,
+} from "@/components/products/PdpDiscoverySections";
 import { closureTokenFromSlug, familyForSlug, familyForSlugOrDerived, glassFromSlug, colourTokenFromSlug, PRESET_FOR_COLOUR }
   from "@/lib/configurator/families";
 import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
-import type { GlassPresetId } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -37,6 +43,26 @@ import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-rou
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
 import { isCheckoutReady } from "@/lib/checkout";
 import { VOLUME_TIERS_HONORED_AT_CHECKOUT } from "@/lib/volumePricing";
+import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
+import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
+import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import {
+    createPendingPdpAnalyticsNavigation,
+    resolveAndConsumePdpAnalyticsNavigation,
+    type PdpAnalyticsDimension,
+    type PendingPdpAnalyticsNavigation,
+} from "@/lib/products/pdp-analytics";
+import { dispatchPdpContextChange } from "@/lib/grace/pageContextEvents";
+
+export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
+
+function analyticsApplicationForApplicator(applicator: string | null | undefined): ApplicatorNavValue | null {
+    if (!applicator) return null;
+    return APPLICATOR_NAV.find((navigation) => navigation.buckets.some((bucket) => {
+        const definition = APPLICATOR_BUCKETS.find((candidate) => candidate.value === bucket);
+        return (definition?.productValues as readonly string[] | undefined)?.includes(applicator) ?? false;
+    }))?.value ?? null;
+}
 
 // ── Helpers ───────────────────────────────────────────────────────────────────
 
@@ -471,15 +497,6 @@ export interface ProductComponent {
     price_12?: number | null;
 }
 
-export interface ApplicatorSibling {
-    _id: string;
-    slug: string;
-    displayName: string;
-    applicatorTypes?: string[];
-    heroImageUrl?: string | null;
-    priceRangeMin?: number | null;
-}
-
 export interface ProductVariant {
     _id: string;
     graceSku: string;
@@ -526,6 +543,16 @@ export interface ProductVariant {
 
 function canonicalSku(variant: ProductVariant | null | undefined): string | null {
     return variant?.graceSku?.trim() || variant?.websiteSku?.trim() || null;
+}
+
+export function safePdpReturnPath(value: string | null): string | null {
+    if (!value || !value.startsWith("/") || value.startsWith("//") || value.includes("\\")) return null;
+    try {
+        const parsed = new URL(value, "https://bestbottles.invalid");
+        return parsed.origin === "https://bestbottles.invalid" ? value : null;
+    } catch {
+        return null;
+    }
 }
 
 function supportsSecondaryPdpImage(variant: ProductVariant): boolean {
@@ -721,29 +748,6 @@ function SelectedVariantSummary({
     );
 }
 
-function compatibleApplicatorPriority(sibling: ApplicatorSibling, currentFamily?: string | null): number {
-    const text = `${sibling.displayName} ${(sibling.applicatorTypes ?? []).join(" ")}`.toLowerCase();
-    const isEmpire = currentFamily === "Empire";
-
-    if (/reducer/.test(text)) return 0;
-    if (/lotion\s*pump/.test(text)) return 1;
-    if (/dropper/.test(text)) return 2;
-    if (/fine\s*mist|perfume\s*spray/.test(text)) return isEmpire ? 4 : 3;
-    if (/vintage|antique|bulb/.test(text)) return isEmpire ? 5 : 4;
-    return 3;
-}
-
-function sortCompatibleApplicatorSiblings(
-    siblings: ApplicatorSibling[],
-    currentFamily?: string | null,
-): ApplicatorSibling[] {
-    return [...siblings].sort((a, b) => {
-        const priorityDelta = compatibleApplicatorPriority(a, currentFamily) - compatibleApplicatorPriority(b, currentFamily);
-        if (priorityDelta !== 0) return priorityDelta;
-        return a.displayName.localeCompare(b.displayName);
-    });
-}
-
 // ── Spec Row ──────────────────────────────────────────────────────────────────
 
 function TrustStack({ variant, inStock }: { variant: ProductVariant | null | undefined; inStock: boolean }) {
@@ -781,69 +785,6 @@ function TrustStack({ variant, inStock }: { variant: ProductVariant | null | und
                 </div>
             </div>
         </div>
-    );
-}
-
-function ProductConfidenceSummary({
-    group,
-    variant,
-    compatibleCount,
-    onAskGrace,
-}: {
-    group: {
-        displayName?: string | null;
-        capacity?: string | null;
-        neckThreadSize?: string | null;
-        variantCount?: number | null;
-    };
-    variant: ProductVariant | null | undefined;
-    compatibleCount: number;
-    onAskGrace: () => void;
-}) {
-    const rows = [
-        { label: "Neck size", value: group.neckThreadSize ?? variant?.neckThreadSize ?? "Unable to verify" },
-        { label: "Capacity", value: group.capacity ?? variant?.capacity ?? "Unable to verify" },
-        { label: "Case quantity", value: variant?.caseQuantity ? `${variant.caseQuantity} units/case` : "Confirm before ordering" },
-        { label: "Selected SKU", value: canonicalSku(variant) ?? "Unable to verify" },
-    ];
-
-    return (
-        <section
-            className="mb-5 rounded-sm border border-champagne/60 bg-white p-4 sm:p-5"
-            aria-label="Compatibility and ordering summary"
-            data-testid="pdp-confidence-summary"
-        >
-            <div className="mb-3 flex items-start justify-between gap-4">
-                <div>
-                    <p className="text-[9px] uppercase tracking-[0.18em] font-bold text-muted-gold mb-1">
-                        Compatibility Snapshot
-                    </p>
-                    <h2 className="font-serif text-lg text-obsidian">Confirm fit before you buy</h2>
-                </div>
-                <span className="shrink-0 rounded-full border border-champagne bg-bone px-2.5 py-1 text-[10px] font-semibold uppercase tracking-wider text-slate">
-                    {compatibleCount > 0 ? `${compatibleCount} related` : "Fitment ready"}
-                </span>
-            </div>
-            <div className="grid grid-cols-2 gap-2">
-                {rows.map((row) => (
-                    <div key={row.label} className="rounded-sm bg-bone/70 px-3 py-2">
-                        <p className="text-[9px] uppercase tracking-wider text-slate font-bold">{row.label}</p>
-                        <p className="mt-0.5 text-[13px] text-obsidian font-semibold leading-snug">{row.value}</p>
-                    </div>
-                ))}
-            </div>
-            <p className="mt-3 text-xs leading-relaxed text-slate">
-                Use neck size to match caps, rollers, sprayers, reducers, and droppers. If a value is missing, treat it as unable to verify before ordering.
-            </p>
-            <button
-                type="button"
-                onClick={onAskGrace}
-                className="mt-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-muted-gold/50 bg-muted-gold/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-muted-gold transition-colors hover:bg-muted-gold hover:text-white sm:w-auto"
-            >
-                <ChatCircle className="h-4 w-4" />
-                Ask Grace to confirm fitment
-            </button>
-        </section>
     );
 }
 
@@ -1013,30 +954,38 @@ export default function ProductDetailClient({
     platesBySku = {},
     slug,
     initialData,
-    initialApplicatorSiblings,
     initialPdpBlocks = [],
+    initialRelations = null,
+    initialCompatibility = null,
     siblingGroups = [],
 }: {
     slug: string;
     initialData: ProductGroupPayload | null;
-    initialApplicatorSiblings: ApplicatorSibling[];
     initialPdpBlocks?: PdpBlock[];
+    initialRelations?: FocusedPdpRelations | null;
+    initialCompatibility?: PdpCompatibilityPayload | null;
     siblingGroups?: SiblingGroup[];
     /** static paper-doll plates for this catalogue, keyed by graceSku or websiteSku (the productPlates index; bytes on Vercel Blob) */
     platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
     const router = useRouter();
+    const pathname = usePathname();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
     const activeSlug = legacyRouteOverride ?? slug;
     const applicatorParam = searchParams.get("applicator");
+    const selectedVariantParam = searchParams.get("sku");
+    const selectedPdpPageUrl = useMemo(() => {
+        const query = searchParams.toString();
+        return `${pathname}${query ? `?${query}` : ""}`;
+    }, [pathname, searchParams]);
+    const safeFrom = safePdpReturnPath(searchParams.get("from"));
     const qtyParam = Math.max(1, Math.min(9999, parseInt(searchParams.get("qty") ?? "1") || 1));
 
     const data = initialData;
 
     const { addItems } = useCart();
-    const [fitmentDrawerOpen, setFitmentDrawerOpen] = useState(false);
 
     const [selectedVariantId, setSelectedVariantId] = useState<string | null>(null);
     const [selectedApplicator, setSelectedApplicator] = useState<string | null>(null);
@@ -1050,6 +999,7 @@ export default function ProductDetailClient({
     const [pdpBlocks, setPdpBlocks] = useState<PdpBlock[]>(initialPdpBlocks);
     const [stickyBarVisible, setStickyBarVisible] = useState(false);
     const inlineCartRef = useRef<HTMLDivElement>(null);
+    const pendingPdpAnalyticsNavigation = useRef<PendingPdpAnalyticsNavigation | null>(null);
 
     useEffect(() => {
         if (!legacyRouteOverride) return;
@@ -1062,9 +1012,32 @@ export default function ProductDetailClient({
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
         return filterVariantsForProductGroup(data?.group, rawVariants);
     }, [data?.group, data?.variants]);
-
-    // Applicator siblings — same bottle shape + size + color, different applicator.
-    const applicatorSiblings = initialApplicatorSiblings;
+    const isRollonGroup = /roll-?on/.test(activeSlug);
+    const variantFromUrl = useMemo(
+        () => selectedVariantParam
+            ? variants.find((variant) => variant.websiteSku === selectedVariantParam || variant.graceSku === selectedVariantParam) ?? null
+            : null,
+        [selectedVariantParam, variants],
+    );
+    useEffect(() => {
+        if (!selectedVariantParam) {
+            setSelectedVariantId(null);
+            setSelectedApplicator(null);
+            setSelectedCapColor(null);
+            setSelectedCapStyle(null);
+            setSelectedTrimColor(null);
+            setSelectedCapComponentSku(null);
+            return;
+        }
+        if (!variantFromUrl) return;
+        const finish = resolveVariantCapFinish(variantFromUrl);
+        setSelectedVariantId(variantFromUrl._id);
+        setSelectedApplicator(variantFromUrl.applicator ?? null);
+        setSelectedCapColor(finish.swatchName);
+        setSelectedCapStyle(variantFromUrl.capStyle ?? null);
+        setSelectedTrimColor(variantFromUrl.trimColor || "Standard");
+        setSelectedCapComponentSku(null);
+    }, [selectedVariantParam, variantFromUrl]);
 
     // Atomizer family flag — these remain simplified until variant/color data is normalized.
     const isAtomizer = useMemo(() =>
@@ -1079,7 +1052,6 @@ export default function ProductDetailClient({
     const applicatorOptions = useMemo(() => {
         const seen = new Set<string>();
         const bottleThread = group?.neckThreadSize ?? "";
-        const isRollonGroup = activeSlug.includes("rollon");
         return variants
             .map((v) => v.applicator)
             .filter((a): a is string => !!a && a !== "Cap/Closure")
@@ -1090,7 +1062,7 @@ export default function ProductDetailClient({
                 seen.add(a);
                 return true;
             });
-    }, [variants, group?.neckThreadSize, activeSlug]);
+    }, [variants, group?.neckThreadSize, isRollonGroup]);
 
     // Whether any variant has no applicator (plain cap closure)
     const hasCapClosure = useMemo(() =>
@@ -1135,7 +1107,7 @@ export default function ProductDetailClient({
 
     const activeApplicator = selectedApplicator && applicatorOptions.includes(selectedApplicator)
         ? selectedApplicator
-        : defaultFromUrl ??
+        : variantFromUrl?.applicator ?? defaultFromUrl ??
             (primaryVariant?.applicator && (applicatorOptions.includes(primaryVariant.applicator) || primaryVariant.applicator === "Cap/Closure")
                 ? primaryVariant.applicator
                 : null) ??
@@ -1226,9 +1198,9 @@ export default function ProductDetailClient({
 
     // Resolved variant — 4-way match with graceful fallback
     const selectedVariant = useMemo(() => {
-        const explicit = selectedVariantId
+        const explicit = variantFromUrl ?? (selectedVariantId
             ? variantsForApplicator.find((v) => v._id === selectedVariantId)
-            : null;
+            : null);
         if (explicit) return explicit;
         const hasPlate = (v: ProductVariant) =>
             Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined));
@@ -1250,7 +1222,7 @@ export default function ProductDetailClient({
         if (selectedCapStyle) pool = narrow(pool, (v) => v.capStyle === selectedCapStyle);
         if (selectedTrimColor) pool = narrow(pool, (v) => (v.trimColor || "Standard") === selectedTrimColor);
         return pool.find(hasPlate) ?? pool.find((v) => usableProductImageUrl(v.imageUrl)) ?? pool[0] ?? variants[0] ?? null;
-    }, [variants, variantsForApplicator, selectedVariantId, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
+    }, [variants, variantsForApplicator, selectedVariantId, variantFromUrl, activeApplicator, activeCapColor, selectedCapStyle, selectedTrimColor, platesBySku]);
 
     // the plate for the selected SKU (productPlates index), by graceSku then websiteSku
     // first and websiteSku second -- the two keys the plate manifests carry
@@ -1259,6 +1231,16 @@ export default function ProductDetailClient({
             ?? (selectedVariant.websiteSku ? platesBySku[selectedVariant.websiteSku] : undefined)
             ?? null
         : null;
+    const selectedKitQuery = useQuery(
+        api.productKits.forSku,
+        selectedVariant?.graceSku || selectedVariant?.websiteSku
+            ? { graceSku: selectedVariant.graceSku ?? null, websiteSku: selectedVariant.websiteSku ?? null }
+            : "skip",
+    );
+    const selectedKit = resolveSelectedSkuKit({
+        websiteSku: selectedVariant?.websiteSku,
+        graceSku: selectedVariant?.graceSku,
+    }, selectedKitQuery);
 
     const productDescription = chooseCanonicalProductDescription({
         groupDescription: group?.groupDescription ?? null,
@@ -1287,9 +1269,8 @@ export default function ProductDetailClient({
         });
     }, [variantsForApplicator]);
 
-    // Cap swatches: only show actual buyable variants. Component-only options (compatible caps
-    // from fitment data) are surfaced in the "Also Fits This Bottle" section and Fitment Drawer,
-    // not here — they would show as selectable but wouldn't change add-to-cart behavior.
+    // Cap swatches contain only actual buyable variants, so every selection
+    // resolves to the selected SKU's price, availability, and transaction path.
     const capSwatchPreview = useMemo(() => variantSwatchPreview, [variantSwatchPreview]);
 
     const variantImageTiles = useMemo<VariantImageTile[]>(() => {
@@ -1326,8 +1307,26 @@ export default function ProductDetailClient({
     const groupHasPlates = useMemo(
         () => variants.some((v) => Boolean(platesBySku[v.graceSku] ?? (v.websiteSku ? platesBySku[v.websiteSku] : undefined))),
         [variants, platesBySku]);
-    const is3dFamily = familyForSlug(group?.slug ?? "") !== null
+    const approvedGeometryFamily = familyForSlug(group?.slug ?? "");
+    const is3dFamily = approvedGeometryFamily !== null
         || (groupHasPlates && familyForSlugOrDerived(group?.slug ?? "") !== null);
+    const hasApproved3d = Boolean(approvedGeometryFamily && !approvedGeometryFamily.photoOnly);
+    const focusedPdpCapabilities = useMemo(() => resolveFocusedPdpCapabilities({
+        hasVariants: variants.length > 0,
+        hasApprovedPhoto: Boolean(usableProductImageUrl(group?.heroImageUrl))
+            || variants.some((variant) => Boolean(usableProductImageUrl(variant.imageUrl))),
+        hasPlate: groupHasPlates,
+        hasApproved3d,
+        // A pending kit query is not negative truth. Once it resolves, this same
+        // selected-SKU value governs both the shell and its stage modes.
+        hasReleasedKit: Boolean(selectedKit?.parts?.length),
+        hasDimensions: variants.some((variant) => Boolean(
+            variant.heightWithCap?.trim()
+            || variant.heightWithoutCap?.trim()
+            || variant.diameter?.trim(),
+        )),
+    }), [group?.heroImageUrl, groupHasPlates, hasApproved3d, selectedKit, variants]);
+    const isFocusedPurchasePdp = focusedPdpCapabilities.canRenderFocusedShell;
     const hasCompleteVariantImagePicker =
         hasVariantImagePicker && variantImageTiles.length === variantsForApplicator.length;
 
@@ -1409,6 +1408,14 @@ export default function ProductDetailClient({
         return list;
     }, [group, activeSlug, siblingGroups]);
 
+    const sameApplicationGroups = useMemo(() => {
+        if (!group) return [];
+        return [
+            { slug: group.slug, color: group.color, heroImageUrl: group.heroImageUrl ?? null },
+            ...siblingGroups.map((sibling) => ({ slug: sibling.slug, color: sibling.color, heroImageUrl: null })),
+        ];
+    }, [group, siblingGroups]);
+
 
     const selectedVariantSummary = useMemo(() => {
         if (!selectedVariant || !hasVariantImagePicker) return null;
@@ -1428,7 +1435,6 @@ export default function ProductDetailClient({
     }, [trimColorOptions, hasCompleteVariantImagePicker]);
 
     // ── Roller type toggle for roll-on groups ─────────────────────────────────
-    const isRollonGroup = activeSlug.includes("rollon");
     const rollerTypeOptions = useMemo(() => {
         if (!isRollonGroup || applicatorOptions.length < 2) return [];
         // Normalize to "Metal" / "Plastic" labels
@@ -1459,6 +1465,58 @@ export default function ProductDetailClient({
         setSelectedApplicator(opt.value);
         setSelectedVariantId(null);
     }, [rollerTypeOptions, activeCapColor]);
+
+    const canonicalVariantUrl = useCallback((variant: ProductVariant) => {
+        const sku = canonicalSku(variant);
+        if (!sku) return null;
+        const params = new URLSearchParams();
+        params.set("sku", sku);
+        if (qty > 1) params.set("qty", String(qty));
+        if (safeFrom) params.set("from", safeFrom);
+        return `/products/${activeSlug}?${params.toString()}`;
+    }, [activeSlug, qty, safeFrom]);
+
+    const handleGuidedVariantSelection = useCallback((selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => {
+        const nextApplicator = selection.rollerVariant
+            ? rollerTypeOptions.find((option) => (selection.rollerVariant === "metal") === /metal/i.test(option.value))?.value ?? activeApplicator
+            : activeApplicator;
+        const nextCapOption = selection.capOption ?? activeCapColor;
+        const candidates = variants
+            .filter((variant) => variant.applicator === nextApplicator)
+            .sort((a, b) => (canonicalSku(a) ?? "").localeCompare(canonicalSku(b) ?? ""));
+        const resolved = nextCapOption
+            ? candidates.find((variant) => resolveVariantCapFinish(variant).swatchName === nextCapOption)
+                ?? candidates[0] ?? null
+            : candidates[0] ?? null;
+        if (!resolved) return;
+
+        setSelectedApplicator(nextApplicator ?? null);
+        setSelectedVariantId(resolved._id);
+        setSelectedCapColor(resolveVariantCapFinish(resolved).swatchName);
+        setSelectedCapStyle(resolved.capStyle ?? null);
+        setSelectedTrimColor(resolved.trimColor || "Standard");
+
+        const nextUrl = canonicalVariantUrl(resolved);
+        if (nextUrl) {
+            const dimension: PdpAnalyticsDimension = selection.rollerVariant ? "rollerMaterial" : "capFinish";
+            pendingPdpAnalyticsNavigation.current = createPendingPdpAnalyticsNavigation({
+                currentSlug: activeSlug,
+                currentSku: variantFromUrl ? canonicalSku(variantFromUrl) : primaryVariant ? canonicalSku(primaryVariant) : null,
+                targetSlug: activeSlug,
+                targetSku: canonicalSku(resolved),
+                dimension,
+            });
+            router.replace(nextUrl, { scroll: false });
+        }
+    }, [activeApplicator, activeCapColor, activeSlug, canonicalVariantUrl, primaryVariant, rollerTypeOptions, router, variantFromUrl, variants]);
+
+    const handleGuidedProductUrlChange = useCallback((href: string) => {
+        const target = new URL(href, "https://bestbottles.local");
+        if (!target.pathname.startsWith("/products/")) return;
+        if (safeFrom) target.searchParams.set("from", safeFrom);
+        if (qty > 1) target.searchParams.set("qty", String(qty));
+        router.replace(`${target.pathname}${target.search}`, { scroll: false });
+    }, [qty, router, safeFrom]);
 
     // ── Product view analytics ───────────────────────────────────────────────
     useEffect(() => {
@@ -1503,6 +1561,66 @@ export default function ProductDetailClient({
         };
     }, [customerDisplayName, selectedVariant]);
 
+    const lastGracePdpContextSignature = useRef<string | null>(null);
+    useEffect(() => {
+        if (!selectedVariant?.websiteSku || typeof window === "undefined") return;
+        const rollerMaterial = /metal/i.test(selectedVariant.applicator ?? "")
+            ? "metal"
+            : /plastic/i.test(selectedVariant.applicator ?? "")
+                ? "plastic"
+                : undefined;
+        const change = {
+            websiteSku: selectedVariant.websiteSku,
+            application: selectedVariant.applicator ?? undefined,
+            glass: group?.color ?? undefined,
+            rollerMaterial,
+            finish: resolveVariantCapFinish(selectedVariant).label,
+            pageUrl: selectedPdpPageUrl,
+        } as const;
+        const signature = JSON.stringify({
+            websiteSku: change.websiteSku,
+            application: change.application,
+            glass: change.glass,
+            rollerMaterial: change.rollerMaterial,
+            finish: change.finish,
+            pageUrl: change.pageUrl,
+        });
+        if (lastGracePdpContextSignature.current === signature) return;
+        lastGracePdpContextSignature.current = signature;
+        dispatchPdpContextChange(change);
+    }, [group?.color, selectedPdpPageUrl, selectedVariant]);
+
+    const lastTrackedPdpVariantSignature = useRef<string | null>(null);
+    useEffect(() => {
+        const sku = selectedVariant ? canonicalSku(selectedVariant) : null;
+        const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
+        const resolution = resolveAndConsumePdpAnalyticsNavigation({
+            slug: activeSlug,
+            resolvedSku: sku,
+            application,
+            canonicalDefaultSku: primaryVariant ? canonicalSku(primaryVariant) : null,
+            urlResolvedSku: variantFromUrl ? canonicalSku(variantFromUrl) : null,
+            pendingNavigation: pendingPdpAnalyticsNavigation.current,
+        });
+        const { event } = resolution;
+        if (!event) return;
+        pendingPdpAnalyticsNavigation.current = resolution.pendingNavigation;
+        const signature = `${event.slug}:${event.sku}:${event.application}`;
+        if (lastTrackedPdpVariantSignature.current === signature) return;
+        lastTrackedPdpVariantSignature.current = signature;
+        analytics.pdpVariantResolved(event);
+    }, [activeSlug, primaryVariant, selectedVariant, variantFromUrl]);
+
+    const openGraceFromPdp = useCallback(() => {
+        const application = analyticsApplicationForApplicator(selectedVariant?.applicator);
+        analytics.graceOpenedFromShopping({
+            source: "pdp",
+            ...(group?.family ? { family: group.family } : {}),
+            ...(application ? { application } : {}),
+        });
+        openGracePanel();
+    }, [group?.family, openGracePanel, selectedVariant?.applicator]);
+
     // ── Sanity two-tier content (family template + product override) ──────────
     // Blocks are fetched server-side (page.tsx -> getPdpBlocks via sanityFetch) so
     // they carry draft content + stega click-to-edit overlays inside Presentation.
@@ -1542,11 +1660,6 @@ export default function ProductDetailClient({
         };
     }, [data, selectedVariant?._id]);
 
-    const compatibleSiblings = useMemo(
-        () => sortCompatibleApplicatorSiblings((applicatorSiblings ?? []) as ApplicatorSibling[], group?.family),
-        [applicatorSiblings, group?.family],
-    );
-
     // ── Loading state ────────────────────────────────────────────────────────
 
     if (data === undefined) {
@@ -1574,6 +1687,30 @@ export default function ProductDetailClient({
         );
     }
 
+    // A valid route can still resolve to no valid purchasable variants after
+    // integrity filtering. Keep the recovery path honest: optional media is
+    // irrelevant here, but cart, quote, quantity, and sticky purchase controls
+    // cannot represent a product that does not exist to transact against.
+    if (!focusedPdpCapabilities.isPurchasable) {
+        return (
+            <main className="min-h-screen bg-bone" data-testid="pdp-unavailable-state">
+                <Navbar hideMobileSearch />
+                <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px] max-w-[1440px] mx-auto px-4 sm:px-6 py-32 text-center">
+                    <h1 className="font-serif text-4xl text-obsidian mb-4">Product currently unavailable</h1>
+                    <p className="text-slate mb-8 text-sm">We could not find a purchasable configuration for this product. Grace can help you find the right bottle.</p>
+                    <div className="flex flex-wrap justify-center gap-3">
+                        <button type="button" onClick={openGraceFromPdp} className="inline-flex items-center px-6 py-3 bg-obsidian text-white uppercase text-xs font-bold tracking-wider hover:bg-muted-gold transition-colors">
+                            Ask Grace
+                        </button>
+                        <Link href="/catalog" className="inline-flex items-center px-6 py-3 border border-obsidian text-obsidian uppercase text-xs font-bold tracking-wider hover:bg-obsidian hover:text-white transition-colors">
+                            Browse Catalog
+                        </Link>
+                    </div>
+                </div>
+            </main>
+        );
+    }
+
     const inStock = selectedVariant?.stockStatus === "In Stock";
     // A variant ID alone does not mean Shopify will sell it — a DRAFT or
     // unpublished parent product 410s at the /cart permalink. Respect the
@@ -1585,7 +1722,7 @@ export default function ProductDetailClient({
             shopifySellable: selectedVariant.shopifySellable ?? undefined,
         })
         : false;
-    const canAddToCart = inStock && checkoutReady;
+    const canAddToCart = inStock && checkoutReady && selectedVariant?.webPrice1pc != null;
     const quoteHref = `/request-quote?products=${encodeURIComponent(`${customerDisplayName} (SKU: ${selectedVariant?.graceSku ?? ""})`)}&quantities=${encodeURIComponent(`${qty} units`)}`;
     const handleAddToCart = () => {
         if (!selectedVariant || !canAddToCart) return;
@@ -1606,7 +1743,6 @@ export default function ProductDetailClient({
             capColor: selectedVariant.capColor,
             category: group?.category,
             neckThreadSize: selectedVariant.neckThreadSize ?? group?.neckThreadSize ?? null,
-            compatibleCount: compatibleSiblings.length,
             webPrice1pc: selectedVariant.webPrice1pc ?? null,
             webPrice10pc: selectedVariant.webPrice10pc ?? null,
             webPrice12pc: selectedVariant.webPrice12pc ?? null,
@@ -1627,41 +1763,61 @@ export default function ProductDetailClient({
         window.dispatchEvent(new Event("open-cart-drawer"));
     };
 
+    const handleAddCompatibleComponent = (component: PdpCompatibilityComponent) => {
+        const componentCheckoutReady = isCheckoutReady({
+            graceSku: component.graceSku,
+            shopifyVariantId: component.shopifyVariantId,
+            shopifySellable: component.shopifySellable,
+        });
+        if (!componentCheckoutReady || component.webPrice1pc == null) return;
+
+        addItems([{
+            graceSku: component.graceSku,
+            websiteSku: component.websiteSku,
+            itemName: component.itemName,
+            quantity: 1,
+            unitPrice: component.webPrice1pc,
+            webPrice1pc: component.webPrice1pc,
+            webPrice12pc: component.webPrice12pc,
+            checkoutEligible: componentCheckoutReady,
+            shopifyVariantId: component.shopifyVariantId,
+            shopifySellable: component.shopifySellable,
+            family: group.family,
+            category: "Component",
+            neckThreadSize: selectedVariant?.neckThreadSize ?? group.neckThreadSize ?? null,
+        }]);
+    };
+
     return (
         <main className="min-h-screen bg-bone">
             <Navbar hideMobileSearch />
-            {selectedVariant?.graceSku && (
-                <FitmentDrawer
-                    isOpen={fitmentDrawerOpen}
-                    onClose={() => setFitmentDrawerOpen(false)}
-                    bottleSku={selectedVariant.graceSku}
-                    quantity={qty}
-                />
-            )}
-
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]">
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
                 <Breadcrumbs steps={breadcrumbsSteps} />
 
                 {/* ── Hero Section ──────────────────────────────────────────────── */}
                 <section className="max-w-[1440px] mx-auto px-4 sm:px-6 py-3 sm:py-8 lg:py-16">
-                    {/* Guided configurator hero (design handoff 2026-08-31):
-                        full-width 50/50 stage + step panel for 3D families;
-                        the classic grid keeps everything else below the fold. */}
-                    {is3dFamily && group.slug ? (
+                    {/* Real purchasable groups with an approved photo or plate share
+                        this shell; missing optional media never removes purchase. */}
+                    {isFocusedPurchasePdp && group.slug ? (
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
                                 variantImageUrl={usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
                                 plateImageCapOff={selectedPlate?.imageCapOff ?? null}
+                                heightWithCap={selectedVariant?.heightWithCap ?? null}
+                                heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
+                                diameter={selectedVariant?.diameter ?? null}
+                                hasApproved3d={focusedPdpCapabilities.has3dMode}
+                                kitQuery={selectedKitQuery}
+                                selectedGraceSku={selectedVariant?.graceSku ?? null}
                                 groupTitle={`${group.family ?? ""} ${(group.capacity ?? "").split(" (")[0]}`.trim()}
                                 capacityLabel={`${group.color ?? "Clear"} glass`}
-                                priceEach={selectedVariant?.webPrice1pc ?? group.priceRangeMin ?? null}
-                                siblings={compatibleSiblings}
+                                priceEach={selectedVariant?.webPrice1pc ?? null}
                                 heroImageUrl={group.heroImageUrl}
                                 onAddToCart={handleAddToCart}
-                                onAskGrace={openGracePanel}
+                                onAskGrace={openGraceFromPdp}
                                 displayName={customerDisplayName}
                                 categoryLabel={`${group.category ?? "Glass Bottle"} · ${group.family ?? ""}`}
                                 inStock={inStock}
@@ -1669,14 +1825,13 @@ export default function ProductDetailClient({
                                 neckSize={group.neckThreadSize}
                                 capacityText={group.capacity}
                                 skuLabel={selectedVariant?.graceSku ?? null}
-                                graceSku={selectedVariant?.graceSku ?? null}
                                 websiteSku={selectedVariant?.websiteSku ?? null}
-                                price10={selectedVariant?.webPrice10pc ?? null}
-                                price12={selectedVariant?.webPrice12pc ?? null}
-                                priceTiers={selectedVariant?.priceTiers ?? null}
+                                checkoutReady={canAddToCart}
                                 rollerVariant={rollerVariantForGuided}
                                 rollerVariantsAvailable={rollerVariantsAvailable}
                                 onRollerVariantChange={handleRollerVariantChange}
+                                onVariantSelectionChange={handleGuidedVariantSelection}
+                                onProductUrlChange={handleGuidedProductUrlChange}
                                 capOptions={capColorOptions}
                                 capOptionPhotoKeys={capOptionPhotoKeys}
                                 activeCapOption={activeCapColor}
@@ -1689,7 +1844,14 @@ export default function ProductDetailClient({
                                 capSwatchStyle={(name) => getMaterialSwatchStyle(name, {})}
                                 glassOptions={(() => {
                                     const f = familyForSlugOrDerived(group.slug ?? "");
-                                    if (!f) return [];
+                                    if (!f) {
+                                        return uniqueColorGroups.map((item) => ({
+                                            id: item.color.toLowerCase(),
+                                            label: item.color,
+                                            href: `/products/${item.slug}`,
+                                            active: item.isActive,
+                                        }));
+                                    }
                                     if (f.derived) {
                                         // the colourways are the sibling groups the catalogue has,
                                         // labelled by their own colour, this group first
@@ -1710,30 +1872,30 @@ export default function ProductDetailClient({
                                     }
                                     const token = closureTokenFromSlug(f, group.slug ?? "");
                                     const current = glassFromSlug(f, group.slug ?? "");
-                                    return f.glasses.map((g) => {
+                                    return f.glasses.flatMap((g) => {
                                         const colour = f.slugColour[g];
                                         const slug = colour ? f.buildSlug(colour, token) : null;
-                                        const sib = slug === group.slug
-                                            ? group
-                                            : compatibleSiblings.find((x) => x.slug === slug);
-                                        return {
+                                        const sibling = sameApplicationGroups.find((candidate) => candidate.slug === slug);
+                                        if (!slug || !sibling) return [];
+                                        return [{
                                             id: g,
                                             label: GLASS_PRESETS[g].label,
-                                            href: slug ? `/products/${slug}` : "#",
+                                            href: `/products/${slug}`,
                                             active: g === current,
-                                            imageUrl: sib?.heroImageUrl ?? null,
-                                        };
+                                            imageUrl: sibling.heroImageUrl,
+                                        }];
                                     });
                                 })()}
                                 quoteHref={quoteHref}
                                 qty={qty}
                                 onQtyChange={setQty}
+                                volumePricing={<TierLadder variant={selectedVariant} qty={qty} />}
                             />
                         </div>
                     ) : null}
-                    <div className={is3dFamily
-                        ? "max-w-5xl mx-auto"
-                        : "grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-8 lg:gap-20 items-start"}>
+                    {!isFocusedPurchasePdp ? (
+                    <FocusedPdpLayout
+                        stage={(<>
 
                         {/* ── Image Panel ──────────────────────────────────────────── */}
                         {/*
@@ -1748,7 +1910,7 @@ export default function ProductDetailClient({
                             Variant-count badge and SKU watermark are shared overlays in
                             placeholder mode and passed as props to the gallery.
                         */}
-                        <div className={is3dFamily ? "hidden" : "lg:sticky lg:top-[120px]"}>
+                        <div className="lg:sticky lg:top-[120px]">
                             <div className={hasVariantImagePicker && !is3dFamily ? "space-y-3 lg:space-y-0 lg:grid lg:grid-cols-[58px_minmax(0,1fr)] lg:gap-3" : ""}>
                                 {hasVariantImagePicker && !is3dFamily && (
                                     <VariantImagePicker
@@ -1881,6 +2043,9 @@ export default function ProductDetailClient({
                                     })()}
                                 </div>
                             </div>
+                        </div>
+                        </>)}
+                        purchase={(<>
 
                             {!isAtomizer && (
                                 <div className="lg:hidden mt-3 rounded-sm border border-champagne/50 bg-white p-3 shadow-sm">
@@ -2124,7 +2289,6 @@ export default function ProductDetailClient({
                                     </div>
                                 </div>
                             )}
-                        </div>
 
                         {/* ── Config Panel ─────────────────────────────────────────── */}
                         <div className="px-2 sm:px-0">
@@ -2160,24 +2324,13 @@ export default function ProductDetailClient({
                                 />
                             )}
 
-                            {!is3dFamily && (
-                                <ProductConfidenceSummary
-                                    group={group}
-                                    variant={selectedVariant}
-                                    compatibleCount={compatibleSiblings.length}
-                                    onAskGrace={openGracePanel}
-                                />
-                            )}
-
-                            {/* Price + Tier Ladder (panel carries these on 3D families) */}
+                            {/* Concise unit price remains beside the CTA. Full volume and fulfillment details follow the buying sections. */}
                             <div className={`mb-4 sm:mb-8 pb-4 sm:pb-8 border-b border-champagne/50 ${is3dFamily ? "hidden" : ""}`}>
                                 <p className="text-xs text-slate uppercase tracking-wider mb-1">From</p>
                                 <p className="font-serif text-3xl sm:text-4xl font-medium text-obsidian mb-4">
-                                    {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
+                                    {formatPrice(selectedVariant?.webPrice1pc)}
                                     <span className="text-lg font-normal text-slate ml-1">/ea</span>
                                 </p>
-
-                                <TierLadder variant={selectedVariant} qty={qty} />
                             </div>
 
                             {/* ── Variant Selectors (desktop; mobile has a compact tray above price).
@@ -2514,7 +2667,7 @@ export default function ProductDetailClient({
                                     >
                                         Request Quote
                                     </Link>
-                                ) : checkoutReady ? (
+                                ) : canAddToCart ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
                                         onClick={handleAddToCart}
@@ -2550,7 +2703,7 @@ export default function ProductDetailClient({
 
                             {/* Request a Quote CTA */}
                             <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`}>
-                                {qty >= 500 && checkoutReady ? (
+                                {qty >= 500 && canAddToCart ? (
                                     <button
                                         disabled={!canAddToCart || addedFlash}
                                         onClick={handleAddToCart}
@@ -2582,62 +2735,9 @@ export default function ProductDetailClient({
                                 )}
                             </div>
 
-                            {/* Compatibility belongs near the buying decision for B2B confidence.
-                                (3D families select closures in the panel — no duplicate list.) */}
-                            {!is3dFamily && compatibleSiblings.length > 0 && (
-                                <div className="mb-6 rounded-sm border border-champagne/60 bg-white p-4">
-                                    <div className="flex items-start justify-between gap-4 mb-3">
-                                        <div>
-                                            <p className="text-[9px] uppercase tracking-[0.18em] font-sans text-muted-gold mb-1">
-                                                Compatible Options
-                                            </p>
-                                            <h3 className="font-serif text-lg text-obsidian">This bottle also takes</h3>
-                                        </div>
-                                        <button
-                                            onClick={() => setFitmentDrawerOpen(true)}
-                                            className="shrink-0 text-xs text-muted-gold hover:underline transition-colors"
-                                        >
-                                            View all →
-                                        </button>
-                                    </div>
-                                    <button
-                                        type="button"
-                                        onClick={openGracePanel}
-                                        className="mb-3 inline-flex min-h-11 w-full items-center justify-center gap-2 rounded-sm border border-muted-gold/40 bg-muted-gold/10 px-3 py-2 text-xs font-bold uppercase tracking-wider text-muted-gold transition-colors hover:bg-muted-gold hover:text-white"
-                                    >
-                                        <ChatCircle className="h-4 w-4" />
-                                        Ask Grace which option fits
-                                    </button>
-                                    <div className="space-y-2">
-                                        {compatibleSiblings.slice(0, 4).map((sib) => {
-                                            const applicatorLabel = (sib.applicatorTypes ?? []).join(", ") || "Cap & Closure";
-                                            return (
-                                                <Link
-                                                    key={sib._id}
-                                                    href={`/products/${sib.slug}`}
-                                                    className="group flex items-center gap-3 rounded-sm border border-champagne/40 bg-bone/40 p-3 hover:border-muted-gold transition-colors"
-                                                >
-                                                    <div className="w-12 h-12 shrink-0 bg-travertine rounded-sm border border-champagne/30 flex items-center justify-center overflow-hidden">
-                                                        {sib.heroImageUrl ? (
-                                                            <Image src={sib.heroImageUrl} alt={sib.displayName} width={48} height={48} className="w-full h-full object-contain p-1" />
-                                                        ) : (
-                                                            <Package className="w-5 h-5 text-champagne" strokeWidth={1} />
-                                                        )}
-                                                    </div>
-                                                    <div className="min-w-0 flex-1">
-                                                        <p className="text-[10px] uppercase tracking-wider text-muted-gold font-semibold mb-0.5">{applicatorLabel}</p>
-                                                        <p className="text-sm text-obsidian font-medium truncate group-hover:text-muted-gold transition-colors">{sib.displayName}</p>
-                                                        {sib.priceRangeMin != null && (
-                                                            <p className="text-xs text-slate mt-0.5">From {formatPrice(sib.priceRangeMin)}</p>
-                                                        )}
-                                                    </div>
-                                                    <ChevronRight className="w-4 h-4 text-champagne group-hover:text-muted-gold transition-colors shrink-0" />
-                                                </Link>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            )}
+                            <div className={`mb-6 ${is3dFamily ? "hidden" : ""}`} data-testid="pdp-volume-under-atc">
+                                <TierLadder variant={selectedVariant} qty={qty} />
+                            </div>
 
                             {/* Product Description — canonical copy avoids showing applicator-mismatched group text. */}
                             {pdpBlocks.every((b) => b._type !== "pdpRichDescription") && productDescription && (
@@ -2652,11 +2752,20 @@ export default function ProductDetailClient({
                             )}
 
                         </div>
-                    </div>
+                        </>)}
+                    />
+                    ) : null}
                 </section>
 
-                {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
-                <PdpEditorialZone blocks={pdpBlocks} />
+                <PdpDiscoverySections
+                    family={group.family}
+                    relations={initialRelations}
+                    initialCompatibility={initialCompatibility}
+                    selectedWebsiteSku={selectedVariant?.websiteSku}
+                    selectedGraceSku={selectedVariant?.graceSku}
+                    onAskGrace={openGraceFromPdp}
+                    onAddComponent={handleAddCompatibleComponent}
+                />
 
                 {/* ── Specifications ──────────────────────────────────────────── */}
                 {selectedVariant && (
@@ -2695,6 +2804,37 @@ export default function ProductDetailClient({
                     </section>
                 )}
 
+                {selectedVariant && (
+                    <section data-testid="pdp-volume-fulfillment" className="border-t border-champagne/50 bg-bone">
+                        <div className="mx-auto max-w-[1440px] px-4 py-10 sm:px-6">
+                            <div className="max-w-2xl">
+                                <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Ordering details</p>
+                                <h2 className="mt-1 font-serif text-2xl text-obsidian">Volume pricing and fulfillment</h2>
+                                <p className="mt-2 text-sm text-slate">Volume rates sit next to Add to Cart. Case quantity and shipping remain here for fulfillment planning.</p>
+                                <div className="mt-4 grid gap-3 text-sm sm:grid-cols-3">
+                                    <div className="rounded-sm border border-champagne/50 bg-white p-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Availability</p>
+                                        <p className="mt-1 font-semibold text-obsidian">{selectedVariant.stockStatus ?? "Confirm availability"}</p>
+                                    </div>
+                                    <div className="rounded-sm border border-champagne/50 bg-white p-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Case quantity</p>
+                                        <p className="mt-1 font-semibold text-obsidian">{selectedVariant.caseQuantity ? `${selectedVariant.caseQuantity} units/case` : "Confirm before ordering"}</p>
+                                    </div>
+                                    <div className="rounded-sm border border-champagne/50 bg-white p-3">
+                                        <p className="text-[10px] font-bold uppercase tracking-wider text-slate">Shipping</p>
+                                        <p className="mt-1 font-semibold text-obsidian">Free over $99</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                )}
+
+                {/* ── Sanity Editorial Zone (feature strip, gallery, FAQ, rich desc) ── */}
+                <PdpEditorialZone blocks={pdpBlocks} />
+
+                <PdpDiscoveryMatrixLink family={group.family} />
+
                 {/* Footer spacer */}
                 <div className="h-32 bg-linen border-t border-champagne/30"></div>
             </div>
@@ -2709,7 +2849,7 @@ export default function ProductDetailClient({
                     <div className="min-w-0">
                         <p className="text-[10px] uppercase tracking-wider text-slate font-semibold">From</p>
                         <p className="font-semibold text-obsidian truncate">
-                            {formatPrice(selectedVariant?.webPrice1pc ?? group.priceRangeMin)}
+                            {formatPrice(selectedVariant?.webPrice1pc)}
                             <span className="text-xs text-slate ml-1">/ea</span>
                         </p>
                     </div>
@@ -2738,7 +2878,7 @@ export default function ProductDetailClient({
                         >
                             Request Quote
                         </Link>
-                    ) : checkoutReady ? (
+                    ) : canAddToCart ? (
                         <button
                             disabled={!canAddToCart || addedFlash}
                             onClick={handleAddToCart}

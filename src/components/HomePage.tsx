@@ -9,19 +9,28 @@ import {
     Flower, Drop, SprayBottle, Gift, Flask, Sparkle,
 } from "@/components/icons";
 import { motion } from "framer-motion";
-import { useQuery, useMutation } from "convex/react";
+import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useGrace } from "@/components/useGrace";
 import { urlFor } from "@/sanity/lib/image";
 import type { HomepageData } from "@/sanity/lib/queries";
-import { APPLICATOR_NAV, applicatorNavHref } from "@/lib/catalogFilters";
+import { APPLICATOR_NAV } from "@/lib/catalogFilters";
 import type { ApplicatorNavValue } from "@/lib/catalogFilters";
+import { applicationFinderHref } from "@/lib/products/focused-shopping";
+import {
+    HOME_ACCESSORY_STORY,
+    HOME_APPLICATION_LINKS,
+    HOME_EDITORIAL_STORIES,
+    HOME_FAMILY_MOSAIC,
+    HOME_SAMPLE_FEATURE,
+    homepageFamilyHref,
+} from "@/lib/homepageMerchandising";
 
 const FadeUp = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
     <motion.div
-        initial={{ opacity: 0, y: 30 }}
+        initial={false}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-100px" }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay }}
@@ -31,21 +40,9 @@ const FadeUp = ({ children, delay = 0, className = "" }: { children: React.React
     </motion.div>
 );
 
-const DEFAULT_FAMILIES = [
-    { family: "Cylinder", title: "Cylinder", img: "/assets/Cylinder-BB.png" },
-    { family: "Diva", title: "Diva", img: "/assets/collection_perfume.png" },
-    { family: "Elegant", title: "Elegant", img: "/assets/vintage-spray.png" },
-    { family: "Empire", title: "Empire", img: "/assets/collection_amber.png" },
-    { family: "Boston Round", title: "Boston Round", img: "/assets/bottle_screwcap.png" },
-    { family: "Round", title: "Round", img: "/assets/collection_skincare.png" },
-    { family: "Sleek", title: "Sleek", img: "/assets/Slim-BB.png" },
-    { family: "Circle", title: "Circle", img: "/assets/collection_skincare.png" },
-    { family: "Atomizer", title: "Atomizers", img: "/assets/vintage-spray.png" },
-];
-
 const DEFAULT_ARTICLES = [
-    { title: "Glass vs. Plastic: Why Material Matters for Your Brand", category: "Materials", excerpt: "Compare material choices for fragrance, beauty, and wellness packaging so your bottle supports the product and the brand promise.", img: "/assets/collection_perfume.png", slug: "/blog" },
-    { title: "Finding Your Thread: A Complete Neck Size Compatibility Guide", category: "Technical", excerpt: "Understand neck finishes, thread sizes, and fitment language before pairing bottles with caps, droppers, rollers, or sprayers.", img: "/assets/family_cylinder.png", slug: "/blog" },
+    { title: "Glass vs. Plastic: Why Material Matters for Your Brand", category: "Materials", excerpt: "Compare material choices for fragrance, beauty, and wellness packaging so your bottle supports the product and the brand promise.", img: "/assets/Slim-BB.png", slug: "/blog" },
+    { title: "Finding Your Thread: A Complete Neck Size Compatibility Guide", category: "Technical", excerpt: "Understand neck finishes, thread sizes, and fitment language before pairing bottles with caps, droppers, rollers, or sprayers.", img: "/assets/Assorted Closers.png", slug: "/blog" },
     { title: "From Etsy to Retail: Scaling Your Packaging Strategy", category: "Growth", excerpt: "Plan the packaging shift from small-batch sales to retail-ready quantities, consistency, and reorder confidence.", img: "/assets/collection_amber.png", slug: "/blog" },
 ];
 
@@ -114,7 +111,7 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     const showVideo = mediaType === "video" && videoUrl;
 
     return (
-        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative w-full h-[78dvh] min-h-[620px] max-h-[700px] lg:h-[100dvh] lg:min-h-0 lg:max-h-none pt-[168px] lg:pt-[120px] pb-10 lg:pb-0 items-start lg:items-center bg-bone overflow-hidden`}>
+        <section className={`${showOnMobile ? "flex" : "hidden lg:flex"} relative h-[78dvh] min-h-[620px] max-h-[700px] w-full items-end overflow-hidden bg-bone pb-12 pt-[96px] lg:h-[100dvh] lg:min-h-0 lg:max-h-none lg:items-center lg:pb-0 lg:pt-[120px]`}>
             <div className="absolute inset-0 z-0 bg-travertine">
                 {isMultiSlide ? (
                     slides.map((s, i) => {
@@ -252,14 +249,47 @@ function Hero({ heroSlides, mobileHeroMode }: { heroSlides?: HomepageData["heroS
     );
 }
 
+function MobilePostHeroSearch() {
+    const router = useRouter();
+    const [searchValue, setSearchValue] = useState("");
+
+    const handleSubmit = useCallback((event: React.FormEvent) => {
+        event.preventDefault();
+        const query = searchValue.trim();
+        router.push(query ? `/catalog?search=${encodeURIComponent(query)}` : "/catalog");
+    }, [router, searchValue]);
+
+    return (
+        <section id="mobile-home-search" className="border-b border-champagne/55 bg-warm-white px-5 py-5 xl:hidden">
+            <form onSubmit={handleSubmit} className="mx-auto flex max-w-xl items-center border border-champagne bg-white focus-within:border-muted-gold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-muted-gold/25">
+                <MagnifyingGlass className="ml-4 shrink-0 text-slate" size={17} />
+                <input
+                    type="search"
+                    name="search"
+                    autoComplete="search"
+                    enterKeyHint="search"
+                    value={searchValue}
+                    onChange={(event) => setSearchValue(event.target.value)}
+                    placeholder="Search bottles, closures, families…"
+                    aria-label="Search products"
+                    className="min-w-0 flex-1 bg-transparent px-3 py-3.5 text-sm text-obsidian placeholder:text-slate/55 focus:outline-none"
+                />
+                <button type="submit" aria-label="Submit product search" className="flex h-12 w-12 shrink-0 items-center justify-center text-muted-gold transition-colors hover:bg-linen hover:text-obsidian focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold">
+                    <ArrowRight size={16} />
+                </button>
+            </form>
+        </section>
+    );
+}
+
 /* ─── Mobile Category Grid: replaces Hero on mobile ─── */
 
 const DEFAULT_MOBILE_CATEGORIES = [
-    { label: "Roll-On Bottles", href: applicatorNavHref("rollon"), img: "/assets/vintage-spray.png" },
-    { label: "Spray Bottles", href: applicatorNavHref("spray"), img: "/assets/Cylinder-BB.png" },
-    { label: "Dropper Bottles", href: applicatorNavHref("dropper"), img: "/assets/collection_skincare.png" },
-    { label: "Lotion Pumps", href: applicatorNavHref("lotionpump"), img: "/assets/collection_amber.png" },
-    { label: "Reducer Bottles", href: applicatorNavHref("reducer"), img: "/assets/bottle_screwcap.png" },
+    { label: "Roll-On Bottles", href: applicationFinderHref("rollon"), img: "/assets/vintage-spray.png" },
+    { label: "Spray Bottles", href: applicationFinderHref("spray"), img: "/assets/Cylinder-BB.png" },
+    { label: "Dropper Bottles", href: applicationFinderHref("dropper"), img: "/assets/collection_amber.png" },
+    { label: "Lotion Pumps", href: applicationFinderHref("lotionpump"), img: "/assets/collection_amber.png" },
+    { label: "Reducer Bottles", href: applicationFinderHref("reducer"), img: "/references/9ml/clear.jpg" },
     { label: "Shop All 2,300+", href: "/catalog", img: "/assets/Hero-BB.png" },
 ];
 
@@ -306,78 +336,6 @@ function MobileCategoryGrid({ data }: { data?: HomepageData | null }) {
                             <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-obsidian/15 to-transparent" />
                             <div className="absolute bottom-0 left-0 right-0 p-3">
                                 <h3 className="font-serif text-[15px] text-white leading-tight">{card.label}</h3>
-                            </div>
-                        </Link>
-                    );
-                })}
-            </div>
-        </section>
-    );
-}
-
-const MOBILE_FAMILY_DETAILS: Record<string, string> = {
-    Cylinder: "Clean everyday formats",
-    Diva: "Perfume-ready silhouettes",
-    Elegant: "Slim premium profiles",
-    Empire: "Vintage spray formats",
-    "Boston Round": "Apothecary classics",
-    Round: "Soft beauty shapes",
-    Sleek: "Modern shelf presence",
-    Circle: "Compact rounded forms",
-    Slim: "Travel and discovery",
-    Atomizer: "Statement fragrance pieces",
-};
-
-function MobileFamilySwitcher({ designFamilyCards }: { designFamilyCards?: HomepageData["designFamilyCards"] }) {
-    const stats = useQuery(api.products.getHomepageStats);
-    const families = (designFamilyCards?.length
-        ? designFamilyCards.map((f) => ({ family: f.family, title: f.title, img: f.image ? urlFor(f.image) : "" }))
-        : DEFAULT_FAMILIES
-    ).slice(0, 10);
-
-    return (
-        <section className="lg:hidden bg-warm-white border-b border-champagne/40 pt-6 pb-5">
-            <div className="px-5 mb-4 flex items-end justify-between gap-4">
-                <div>
-                    <p className="text-[10px] uppercase tracking-[0.24em] text-muted-gold font-bold mb-1">Shop by Family</p>
-                    <h2 className="font-serif text-2xl text-obsidian font-medium">Choose a bottle style</h2>
-                </div>
-                <Link href="/catalog" className="shrink-0 text-[11px] uppercase tracking-wider font-bold text-slate hover:text-muted-gold">
-                    All
-                </Link>
-            </div>
-            <div className="flex gap-3 overflow-x-auto hide-scroll snap-x snap-mandatory px-5 pb-1">
-                {families.map((fam) => {
-                    const count = stats?.familyCounts?.[fam.family] ?? 0;
-                    const imgSrc = fam.img || (DEFAULT_FAMILIES.find((d) => d.family === fam.family)?.img ?? "/assets/Cylinder-BB.png");
-                    return (
-                        <Link
-                            key={fam.family}
-                            href={`/catalog?families=${encodeURIComponent(fam.family)}`}
-                            className="group relative h-[420px] w-[calc(100vw-2.5rem)] max-w-[390px] shrink-0 snap-start overflow-hidden rounded-sm bg-travertine shadow-sm"
-                        >
-                            <Image
-                                src={imgSrc}
-                                alt={fam.title}
-                                fill
-                                sizes="calc(100vw - 40px)"
-                                className="object-cover object-center transition-transform duration-700 group-active:scale-[1.02]"
-                                unoptimized={imgSrc.startsWith("http")}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/72 via-obsidian/18 to-transparent" />
-                            <div className="absolute left-5 right-5 bottom-5">
-                                <h3 className="font-serif text-[32px] leading-none text-white">{fam.title}</h3>
-                                <p className="mt-2 text-[13px] leading-snug text-bone/90">
-                                    {MOBILE_FAMILY_DETAILS[fam.family] ?? "Explore available formats"}
-                                </p>
-                                <div className="mt-5 flex items-center justify-between">
-                                    <span className="text-[11px] font-semibold uppercase tracking-wider text-bone/80">
-                                        {count > 0 ? `${count} products` : "Explore"}
-                                    </span>
-                                    <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white/90 text-obsidian">
-                                        <ArrowRight size={15} />
-                                    </span>
-                                </div>
                             </div>
                         </Link>
                     );
@@ -500,7 +458,7 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
     const router = useRouter();
     const [step, setStep] = useState(1);
     const [useCase, setUseCase] = useState<string | null>(null);
-    const [applicator, setApplicator] = useState<string | null>(null);
+    const [applicator, setApplicator] = useState<ApplicatorNavValue | null>(null);
 
     const selectedUseCase = USE_CASES.find((u) => u.id === useCase);
     const availableDispensers = selectedUseCase?.applicators.length
@@ -517,18 +475,17 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
         setStep(2);
     }, [router, onClose]);
 
-    const handleDispenserSelect = useCallback((value: string) => {
+    const handleDispenserSelect = useCallback((value: ApplicatorNavValue) => {
         setApplicator(value);
         setStep(3);
     }, []);
 
     const handleSizeSelect = useCallback((sizeParams: string) => {
-        // Resolve nav-level applicator to actual bucket values via shared config
-        const nav = applicator ? APPLICATOR_NAV.find((n) => n.value === applicator) : null;
-        const params = new URLSearchParams();
-        if (nav) params.set("applicators", nav.buckets.join(","));
+        const pathname = applicator ? applicationFinderHref(applicator) : "/catalog";
+        const params = new URLSearchParams(sizeParams);
         if (sizeParams) params.set("sort", "capacity-asc");
-        const url = `/catalog?${params.toString()}${sizeParams ? `&${sizeParams}` : ""}`;
+        const query = params.toString();
+        const url = `${pathname}${query ? `?${query}` : ""}`;
         router.push(url);
         onClose();
     }, [applicator, router, onClose]);
@@ -593,18 +550,18 @@ function GuidedSelector({ onClose }: { onClose: () => void }) {
                             <h2 className="font-serif text-3xl lg:text-4xl text-obsidian font-medium">How should it dispense?</h2>
                             <p className="text-slate text-sm mt-2">Choose a dispensing method for your {selectedUseCase?.label.toLowerCase()} products.</p>
                         </div>
-                        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-4xl mx-auto">
+                        <div className="mx-auto flex max-w-4xl flex-wrap justify-center gap-4">
                             {availableDispensers.map((d) => (
                                 <button
                                     key={d.value}
                                     onClick={() => handleDispenserSelect(d.value)}
-                                    className="group flex flex-col h-full bg-bone border border-champagne/50 rounded-sm p-6 hover:border-muted-gold hover:shadow-md transition-all duration-300"
+                                    className="group flex h-full w-full max-w-[240px] flex-col bg-bone border border-champagne/50 rounded-sm p-6 text-center hover:border-muted-gold hover:shadow-md transition-all duration-300 sm:w-[220px]"
                                 >
-                                    <div className="text-obsidian/40 group-hover:text-muted-gold transition-colors duration-300 mb-4">
+                                    <div className="mb-4 flex justify-center text-obsidian/40 transition-colors duration-300 group-hover:text-muted-gold">
                                         {APPLICATOR_ICONS[d.value]}
                                     </div>
-                                    <h3 className="font-serif text-lg text-obsidian font-medium mb-1 leading-snug">{d.label}</h3>
-                                    <p className="text-xs text-slate leading-relaxed">{d.subtitle}</p>
+                                    <h3 className="mb-1 font-serif text-lg font-medium leading-snug text-obsidian">{d.label}</h3>
+                                    <p className="text-xs leading-relaxed text-slate">{d.subtitle}</p>
                                 </button>
                             ))}
                         </div>
@@ -650,7 +607,6 @@ function PathChooser() {
     const { open: openGrace } = useGrace();
     const router = useRouter();
     const [showGuided, setShowGuided] = useState(false);
-    const [searchFocused, setSearchFocused] = useState(false);
     const [searchValue, setSearchValue] = useState("");
 
     const handleSearchSubmit = useCallback((e: React.FormEvent) => {
@@ -665,87 +621,64 @@ function PathChooser() {
     }
 
     return (
-        <section className="bg-white border-b border-champagne/40 py-14 lg:py-16">
-            <div className="max-w-[1440px] mx-auto px-6">
-                <FadeUp className="text-center mb-10">
-                    <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-2">Find Your Bottle</p>
-                    <h2 className="font-serif text-3xl lg:text-4xl text-obsidian font-medium tracking-tight">How would you like to start?</h2>
-                </FadeUp>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto">
-                    {/* Path 1: I Know What I Need — search-first */}
-                    <FadeUp delay={0.1}>
-                        <div className="group flex flex-col items-center text-center p-8 bg-bone border border-champagne/50 rounded-sm hover:border-muted-gold hover:shadow-lg transition-all duration-300">
-                            <div className="w-14 h-14 rounded-full bg-white border border-champagne/40 flex items-center justify-center mb-5 group-hover:border-muted-gold transition-colors">
-                                <MagnifyingGlass className="w-6 h-6 text-obsidian/50 group-hover:text-muted-gold transition-colors" size={24} />
+        <section id="find-your-bottle" className="bg-linen py-14 lg:py-20">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <FadeUp className="grid border border-champagne/60 bg-warm-white lg:grid-cols-2">
+                    <div className="border-b border-champagne/60 p-7 sm:p-10 lg:border-b-0 lg:border-r lg:p-12">
+                        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Know What You Need?</p>
+                        <h2 className="font-display text-[34px] font-medium leading-none text-obsidian lg:text-[42px]">Search the catalog</h2>
+                        <p className="mt-4 max-w-md text-sm leading-relaxed text-slate">Find bottles, closures, and packaging by name, SKU, size, or color.</p>
+                        <form onSubmit={handleSearchSubmit} className="mt-8 max-w-lg">
+                            <label htmlFor="homepage-catalog-search" className="sr-only">Search the Best Bottles catalog</label>
+                            <div className="flex border border-obsidian/20 bg-white focus-within:border-muted-gold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-muted-gold/30">
+                                <input
+                                    id="homepage-catalog-search"
+                                    type="search"
+                                    name="search"
+                                    autoComplete="off"
+                                    value={searchValue}
+                                    onChange={(event) => setSearchValue(event.target.value)}
+                                    placeholder="e.g. 9 ml clear cylinder…"
+                                    className="min-w-0 flex-1 bg-transparent px-4 py-4 text-sm text-obsidian placeholder:text-slate/55 focus:outline-none"
+                                />
+                                <button type="submit" className="flex w-14 items-center justify-center bg-obsidian text-white transition-colors hover:bg-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold" aria-label="Search products">
+                                    <MagnifyingGlass size={18} />
+                                </button>
                             </div>
-                            <h3 className="font-serif text-xl text-obsidian font-medium mb-2">I Know What I Need</h3>
-                            <p className="text-xs text-slate leading-relaxed mb-5">Search by name, SKU, size, or color.</p>
-                            <form onSubmit={handleSearchSubmit} className="w-full">
-                                <div className={`flex border rounded-full overflow-hidden transition-all duration-300 ${searchFocused ? "border-muted-gold ring-2 ring-muted-gold/20" : "border-champagne"}`}>
-                                    <input
-                                        type="text"
-                                        name="search"
-                                        autoComplete="search"
-                                        value={searchValue}
-                                        onChange={(e) => setSearchValue(e.target.value)}
-                                        onFocus={() => setSearchFocused(true)}
-                                        onBlur={() => setSearchFocused(false)}
-                                        placeholder="e.g. 9ml clear cylinder roll-on"
-                                        className="flex-1 px-4 py-2.5 text-sm bg-white focus:outline-none placeholder-slate/50 text-obsidian min-w-0"
-                                        aria-label="Search products"
-                                    />
-                                    <button type="submit" className="px-4 bg-obsidian text-white hover:bg-muted-gold transition-colors" aria-label="Search products">
-                                        <ArrowRight size={16} />
-                                    </button>
-                                </div>
-                            </form>
-                        </div>
-                    </FadeUp>
+                        </form>
+                    </div>
 
-                    {/* Path 2: Help Me Choose */}
-                    <FadeUp delay={0.2}>
+                    <div className="grid grid-rows-2">
                         <button
+                            type="button"
                             onClick={() => setShowGuided(true)}
-                            className="group flex flex-col items-center text-center p-8 bg-bone border border-champagne/50 rounded-sm hover:border-muted-gold hover:shadow-lg transition-all duration-300 w-full"
+                            className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 border-b border-champagne/60 p-7 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
                         >
-                            <div className="w-14 h-14 rounded-full bg-white border border-champagne/40 flex items-center justify-center mb-5 group-hover:border-muted-gold transition-colors">
-                                <Compass className="text-obsidian/50 group-hover:text-muted-gold transition-colors" size={24} />
-                            </div>
-                            <h3 className="font-serif text-xl text-obsidian font-medium mb-2">Help Me Choose</h3>
-                            <p className="text-xs text-slate leading-relaxed mb-5">3 quick questions to find your perfect bottle.</p>
-                            <span className="text-xs font-semibold text-muted-gold uppercase tracking-wider flex items-center group-hover:gap-2 transition-all duration-300">
-                                Start <ArrowRight className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={12} />
+                            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-champagne text-slate group-hover:border-muted-gold group-hover:text-obsidian">
+                                <Compass size={20} />
                             </span>
+                            <span>
+                                <span className="block font-display text-2xl text-obsidian">Help me choose</span>
+                                <span className="mt-1 block text-xs leading-relaxed text-slate">3 quick questions to narrow the catalog.</span>
+                            </span>
+                            <ArrowRight size={19} className="text-muted-gold transition-transform group-hover:translate-x-1" />
                         </button>
-                    </FadeUp>
 
-                    {/* Path 3: Talk to Grace */}
-                    <FadeUp delay={0.3}>
                         <button
+                            type="button"
                             onClick={openGrace}
-                            className="group flex flex-col items-center text-center p-8 bg-bone border border-champagne/50 rounded-sm hover:border-muted-gold hover:shadow-lg transition-all duration-300 w-full"
+                            className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 p-7 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
                         >
-                            <div className="w-14 h-14 rounded-full bg-white border border-champagne/40 flex items-center justify-center mb-5 group-hover:border-muted-gold transition-colors">
-                                <ChatCircle className="w-6 h-6 text-obsidian/50 group-hover:text-muted-gold transition-colors" size={24} />
-                            </div>
-                            <h3 className="font-serif text-xl text-obsidian font-medium mb-2">Talk with Grace</h3>
-                            <p className="text-xs text-slate leading-relaxed mb-5">Your AI bottling specialist for fitment and product guidance.</p>
-                            <span className="text-xs font-semibold text-muted-gold uppercase tracking-wider flex items-center group-hover:gap-2 transition-all duration-300">
-                                Talk Now <ArrowRight className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300" size={12} />
+                            <span className="flex h-11 w-11 items-center justify-center rounded-full border border-champagne text-slate group-hover:border-muted-gold group-hover:text-obsidian">
+                                <ChatCircle size={20} />
                             </span>
+                            <span>
+                                <span className="block font-display text-2xl text-obsidian">Talk with Grace</span>
+                                <span className="mt-1 block text-xs leading-relaxed text-slate">Fitment and product guidance without leaving the page.</span>
+                            </span>
+                            <ArrowRight size={19} className="text-muted-gold transition-transform group-hover:translate-x-1" />
                         </button>
-                    </FadeUp>
-                </div>
-
-                {/* Browse All CTA */}
-                <FadeUp delay={0.4} className="text-center mt-8">
-                    <Link
-                        href="/catalog"
-                        className="inline-flex items-center gap-2 text-sm text-slate hover:text-obsidian transition-colors font-medium underline underline-offset-4 decoration-champagne hover:decoration-muted-gold"
-                    >
-                        Browse All Products <ArrowRight size={16} />
-                    </Link>
+                    </div>
                 </FadeUp>
             </div>
         </section>
@@ -753,49 +686,239 @@ function PathChooser() {
 }
 
 function DesignFamilies({ designFamilyCards }: { designFamilyCards?: HomepageData["designFamilyCards"] }) {
-    const stats = useQuery(api.products.getHomepageStats);
-    const families = designFamilyCards?.length
-        ? designFamilyCards.map((f) => ({ family: f.family, title: f.title, img: f.image ? urlFor(f.image) : "" }))
-        : DEFAULT_FAMILIES;
+    const sanityFamilies = new Map(
+        designFamilyCards?.map((family) => [family.family, family]) ?? [],
+    );
+    const families = HOME_FAMILY_MOSAIC.map((family) => {
+        const sanity = sanityFamilies.get(family.family);
+        return {
+            ...family,
+            title: sanity?.title || family.title,
+            image: sanity?.image ? urlFor(sanity.image) : family.image,
+        };
+    });
+
+    const layoutClass: Record<(typeof families)[number]["layout"], string> = {
+        feature: "col-span-2 lg:col-span-6 lg:row-span-2 min-h-[440px] lg:min-h-0",
+        standard: "col-span-1 lg:col-span-3 min-h-[220px] lg:min-h-0",
+        wide: "col-span-2 lg:col-span-6 min-h-[230px] lg:min-h-0",
+    };
 
     return (
-        <section className="hidden lg:block py-24 bg-warm-white overflow-hidden">
-            <div className="pl-6 lg:pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))]">
-                <FadeUp className="mb-12">
-                    <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-3">Already Know Your Style?</p>
-                    <h2 className="font-serif text-4xl text-obsidian font-medium">Shop by design family</h2>
+        <section id="families" className="bg-warm-white py-14 lg:py-20">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <FadeUp className="mb-7 flex items-end justify-between gap-6 lg:mb-9">
+                    <div>
+                        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Find Your Shape</p>
+                        <h2 className="text-balance font-display text-[34px] font-medium leading-none text-obsidian lg:text-[46px]">Shop by bottle family</h2>
+                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate">Start with the silhouette that fits your brand, then choose how it dispenses.</p>
+                    </div>
+                    <Link href="/catalog?category=Glass+Bottle" className="hidden shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian sm:inline-flex">
+                        View All Families <ArrowRight size={15} />
+                    </Link>
                 </FadeUp>
-                <div className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory hide-scroll pr-[10vw]">
-                    {families.map((fam, i) => {
-                        const count = stats?.familyCounts?.[fam.family] ?? 0;
-                        const imgSrc = fam.img || (DEFAULT_FAMILIES.find((d) => d.family === fam.family)?.img ?? "/assets/Cylinder-BB.png");
+
+                <div className="grid grid-cols-2 gap-2.5 lg:h-[650px] lg:grid-cols-12 lg:grid-rows-2 lg:gap-3">
+                    {families.map((family, index) => (
+                        <FadeUp key={family.family} delay={index * 0.06} className={layoutClass[family.layout]}>
+                            <Link
+                                href={homepageFamilyHref(family.family)}
+                                className="group relative block h-full overflow-hidden bg-travertine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
+                            >
+                                <Image
+                                    src={family.image}
+                                    alt={`${family.title} bottle family`}
+                                    fill
+                                    sizes={family.layout === "feature" ? "(min-width: 1024px) 48vw, 100vw" : "(min-width: 1024px) 24vw, 50vw"}
+                                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]"
+                                    unoptimized={family.image.startsWith("http")}
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/72 via-obsidian/10 to-transparent" />
+                                <div className={`absolute inset-x-0 bottom-0 ${family.layout === "feature" ? "p-6 lg:p-8" : "p-4 lg:p-5"}`}>
+                                    <h3 className={`font-display font-medium leading-none text-white ${family.layout === "feature" ? "text-4xl lg:text-5xl" : "text-2xl lg:text-3xl"}`}>
+                                        {family.title}
+                                    </h3>
+                                    {family.layout === "feature" && (
+                                        <>
+                                            <p className="mt-3 max-w-[310px] text-sm leading-relaxed text-white/86">{family.description}</p>
+                                            <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75">
+                                                {family.applications?.join(" · ")}
+                                            </p>
+                                            <span className="mt-5 inline-flex items-center gap-2 border border-white/65 bg-obsidian px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-colors group-hover:bg-white group-hover:text-obsidian">
+                                                Explore Cylinder <ArrowRight size={13} />
+                                            </span>
+                                        </>
+                                    )}
+                                </div>
+                            </Link>
+                        </FadeUp>
+                    ))}
+                </div>
+
+                <Link href="/catalog?category=Glass+Bottle" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold sm:hidden">
+                    View All Families <ArrowRight size={15} />
+                </Link>
+            </div>
+        </section>
+    );
+}
+
+function ApplicationShowcase() {
+    return (
+        <section className="border-y border-champagne/45 bg-white py-14 lg:py-18">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <FadeUp className="mb-8">
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Start With Function</p>
+                    <h2 className="text-balance font-display text-[32px] font-medium leading-none text-obsidian lg:text-[42px]">Choose your applicator</h2>
+                    <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">Select how your formula should be dispensed, then explore bottles with verified fitment.</p>
+                </FadeUp>
+
+                <div className="flex snap-x snap-mandatory gap-px overflow-x-auto border border-champagne/50 bg-champagne/50 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden sm:grid sm:grid-cols-2 sm:overflow-visible lg:grid-cols-5">
+                    {HOME_APPLICATION_LINKS.map((application, index) => (
+                        <FadeUp key={application.key} delay={index * 0.05} className="min-w-[82%] snap-start sm:min-w-0">
+                            <Link
+                                href={application.href}
+                                className="group block h-full bg-warm-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
+                            >
+                                <div className="relative aspect-[4/3] overflow-hidden bg-[#f5efe3] sm:aspect-square">
+                                    <Image
+                                        src={application.image}
+                                        alt={`${application.label} bottle application`}
+                                        fill
+                                        sizes="(min-width: 1024px) 19vw, (min-width: 640px) 50vw, 100vw"
+                                        className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                                    />
+                                </div>
+                                <div className="flex items-center justify-between gap-4 px-5 py-5 lg:min-h-[116px] lg:px-5 lg:py-5">
+                                    <span>
+                                        <span className="block font-display text-[22px] leading-none text-obsidian lg:text-[21px]">{application.label}</span>
+                                        <span className="mt-2 block text-[11px] leading-relaxed text-slate">{application.description}</span>
+                                    </span>
+                                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-champagne text-muted-gold transition-colors group-hover:border-muted-gold group-hover:bg-muted-gold group-hover:text-white">
+                                        <ArrowRight size={15} className="transition-transform group-hover:translate-x-0.5" />
+                                    </span>
+                                </div>
+                            </Link>
+                        </FadeUp>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
+function SampleTestersFeature() {
+    return (
+        <section className="border-t border-champagne/45 bg-linen py-10 lg:py-14">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <FadeUp>
+                    <Link
+                        href={HOME_SAMPLE_FEATURE.href}
+                        className="group grid overflow-hidden border border-champagne/60 bg-warm-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold md:grid-cols-[0.82fr_1.18fr]"
+                    >
+                        <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
+                            <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{HOME_SAMPLE_FEATURE.eyebrow}</p>
+                            <h2 className="text-balance font-display text-[32px] font-medium leading-none text-obsidian lg:text-[42px]">{HOME_SAMPLE_FEATURE.title}</h2>
+                            <p className="mt-4 max-w-md text-sm leading-relaxed text-slate">{HOME_SAMPLE_FEATURE.description}</p>
+                            <span className="mt-7 inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-gold transition-colors group-hover:text-obsidian">
+                                Explore Small Formats <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                            </span>
+                        </div>
+                        <div className="relative min-h-[270px] overflow-hidden sm:min-h-[330px] md:min-h-[380px]" style={{ backgroundColor: HOME_SAMPLE_FEATURE.matte }}>
+                            <Image
+                                src={HOME_SAMPLE_FEATURE.image}
+                                alt={HOME_SAMPLE_FEATURE.imageAlt}
+                                fill
+                                sizes="(min-width: 768px) 58vw, 100vw"
+                                className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                            />
+                        </div>
+                    </Link>
+                </FadeUp>
+            </div>
+        </section>
+    );
+}
+
+function EditorialStories() {
+    return (
+        <section className="border-b border-champagne/45 bg-warm-white py-14 lg:py-20">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <FadeUp className="mb-9 lg:mb-12">
+                    <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Stories From the Collection</p>
+                    <h2 className="text-balance font-display text-[34px] font-medium leading-none text-obsidian lg:text-[46px]">Distinctive objects for the ritual</h2>
+                    <p className="mt-3 max-w-2xl text-sm leading-relaxed text-slate">Beyond everyday formats, discover the small vessels and finishing details that make packaging feel personal.</p>
+                </FadeUp>
+
+                <div className="space-y-7 lg:space-y-10">
+                    {HOME_EDITORIAL_STORIES.map((story, index) => {
+                        const imageOnRight = index % 2 === 1;
                         return (
-                            <FadeUp key={fam.family} delay={i * 0.08} className="w-[85vw] sm:w-[400px] lg:w-[400px] xl:w-[420px] shrink-0 snap-center lg:snap-start">
-                                <Link href={`/catalog?families=${encodeURIComponent(fam.family)}`}>
-                                    <div className="group relative aspect-[3/4] rounded-[10px] overflow-hidden bg-travertine cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500">
+                            <FadeUp key={story.key} delay={index * 0.06}>
+                                <article className="grid overflow-hidden border border-champagne/55 bg-linen lg:grid-cols-12">
+                                    <Link
+                                        href={story.href}
+                                        className={`${imageOnRight ? "lg:order-2" : ""} group relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:col-span-7 lg:aspect-auto lg:min-h-[410px] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold`}
+                                        style={{ backgroundColor: story.matte }}
+                                    >
                                         <Image
-                                            src={imgSrc}
-                                            alt={fam.title}
+                                            src={story.image}
+                                            alt={story.imageAlt}
                                             fill
-                                            className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
-                                            unoptimized={imgSrc.startsWith("http")}
+                                            sizes="(min-width: 1024px) 58vw, 100vw"
+                                            className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                                            style={{ objectPosition: story.imagePosition }}
                                         />
-                                        <div className="absolute inset-0 bg-gradient-to-t from-obsidian/70 via-obsidian/20 to-transparent" />
-                                        <div className="absolute bottom-8 left-8 right-8">
-                                            <h3 className="font-serif text-[26px] text-white leading-tight mb-2">{fam.title}</h3>
-                                            <div className="flex items-center justify-between">
-                                                <p className="text-[14px] text-bone/90 font-medium">{count > 0 ? `${count} products` : "Loading..."}</p>
-                                                <span className="flex items-center text-muted-gold text-sm font-semibold opacity-0 -translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
-                                                    Explore <ArrowRight className="ml-1" size={16} />
-                                                </span>
-                                            </div>
-                                        </div>
+                                    </Link>
+                                    <div className={`${imageOnRight ? "lg:order-1" : ""} flex flex-col justify-center p-7 sm:p-10 lg:col-span-5 lg:p-12 xl:p-14`}>
+                                        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{story.eyebrow}</p>
+                                        <h3 className="text-balance font-display text-[34px] font-medium leading-[0.98] text-obsidian lg:text-[44px]">{story.title}</h3>
+                                        <p className="mt-5 max-w-md text-sm leading-[1.75] text-slate">{story.description}</p>
+                                        <Link href={story.href} className="group mt-7 inline-flex w-fit items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.15em] text-muted-gold transition-colors hover:text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold">
+                                            Explore the Collection <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
+                                        </Link>
                                     </div>
-                                </Link>
+                                </article>
                             </FadeUp>
                         );
                     })}
                 </div>
+            </div>
+        </section>
+    );
+}
+
+function PackagingAccessoriesStory() {
+    return (
+        <section className="bg-linen pb-14 lg:pb-20">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <FadeUp className="grid overflow-hidden border border-champagne/60 bg-warm-white md:grid-cols-[1.08fr_0.92fr]">
+                    <Link
+                        href={HOME_ACCESSORY_STORY.href}
+                        className="group relative min-h-[290px] overflow-hidden sm:min-h-[350px] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
+                        style={{ backgroundColor: HOME_ACCESSORY_STORY.matte }}
+                    >
+                        <Image
+                            src={HOME_ACCESSORY_STORY.image}
+                            alt={HOME_ACCESSORY_STORY.imageAlt}
+                            fill
+                            sizes="(min-width: 768px) 54vw, 100vw"
+                            className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                        />
+                    </Link>
+                    <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
+                        <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{HOME_ACCESSORY_STORY.eyebrow}</p>
+                        <h3 className="text-balance font-display text-[34px] font-medium leading-none text-obsidian lg:text-[42px]">{HOME_ACCESSORY_STORY.title}</h3>
+                        <p className="mt-5 max-w-lg text-sm leading-[1.75] text-slate">{HOME_ACCESSORY_STORY.description}</p>
+                        <div className="mt-7 flex flex-wrap gap-x-5 gap-y-3">
+                            {HOME_ACCESSORY_STORY.links.map((link) => (
+                                <Link key={link.label} href={link.href} className="group inline-flex items-center gap-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-muted-gold transition-colors hover:text-obsidian focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold">
+                                    {link.label} <ArrowRight size={12} className="transition-transform group-hover:translate-x-0.5" />
+                                </Link>
+                            ))}
+                        </div>
+                    </div>
+                </FadeUp>
             </div>
         </section>
     );
@@ -809,29 +932,21 @@ function SocialProof() {
     ];
 
     return (
-        <section className="bg-parchment/20 py-24 overflow-hidden border-b border-champagne/40">
-            <div className="max-w-[1440px] mx-auto px-6">
-                <FadeUp className="text-center mb-16">
-                    <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-3">Who Trusts Best Bottles</p>
-                    <h2 className="font-serif text-4xl text-obsidian font-medium mb-4">Serving 500+ Brands</h2>
-                    <p className="text-slate max-w-2xl mx-auto">From boutique indie perfumers to enterprise retail labels.</p>
+        <section className="border-b border-champagne/45 bg-warm-white py-14 lg:py-18">
+            <div className="mx-auto grid max-w-[1440px] gap-10 px-5 sm:px-6 lg:grid-cols-[0.8fr_2.2fr] lg:px-10">
+                <FadeUp>
+                    <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Who Trusts Best Bottles</p>
+                    <h2 className="text-balance font-display text-[34px] font-medium leading-[1.05] text-obsidian lg:text-[42px]">Serving 500+ brands</h2>
+                    <p className="mt-4 max-w-sm text-sm leading-relaxed text-slate">From boutique indie perfumers to enterprise retail labels.</p>
                 </FadeUp>
-                <div className="flex overflow-x-auto gap-6 pb-12 snap-x snap-mandatory hide-scroll">
+                <div className="grid gap-0 border-y border-champagne/55 md:grid-cols-3">
                     {testimonials.map((test, i) => (
-                        <FadeUp key={i} delay={i * 0.1} className="w-[85vw] sm:w-[400px] shrink-0 snap-center">
-                            <div className="bg-white p-8 rounded-sm shadow-sm border border-champagne/50 h-full flex flex-col justify-between hover:border-muted-gold transition-colors duration-300">
-                                <p className="font-serif italic text-[20px] text-obsidian leading-relaxed mb-8">&quot;{test.quote}&quot;</p>
+                        <FadeUp key={test.name} delay={i * 0.07} className="border-b border-champagne/55 last:border-b-0 md:border-b-0 md:border-r md:last:border-r-0">
+                            <div className="flex h-full flex-col justify-between px-0 py-7 md:px-7 lg:px-8">
+                                <p className="font-display text-[18px] leading-[1.45] text-obsidian">&ldquo;{test.quote}&rdquo;</p>
                                 <div>
-                                    <div className="flex items-center space-x-3 mb-2">
-                                        <div className="w-10 h-10 rounded-full bg-travertine flex items-center justify-center text-sm font-semibold text-muted-gold">
-                                            {test.name.split(' ').map(n => n[0]).join('')}
-                                        </div>
-                                        <div>
-                                            <p className="text-sm font-semibold text-obsidian">{test.name}</p>
-                                            <p className="text-xs text-slate">{test.brand}</p>
-                                        </div>
-                                    </div>
-                                    <span className="inline-block mt-2 px-3 py-1 bg-muted-gold/10 text-muted-gold text-[10px] uppercase tracking-wider font-bold rounded-full">{test.segment}</span>
+                                    <p className="mt-7 text-[11px] font-semibold uppercase tracking-[0.14em] text-obsidian">{test.name}</p>
+                                    <p className="mt-1 text-[11px] text-slate">{test.brand} · {test.segment}</p>
                                 </div>
                             </div>
                         </FadeUp>
@@ -848,7 +963,7 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
             title: a.title,
             category: a.category ? (CATEGORY_LABELS[a.category] ?? a.category) : "Insights",
             excerpt: a.excerpt ?? fallbackArticleExcerpt(a.title, a.category ? (CATEGORY_LABELS[a.category] ?? a.category) : "Packaging"),
-            img: a.image ? urlFor(a.image) : "/assets/collection_perfume.png",
+            img: a.image ? urlFor(a.image) : "/assets/Cylinder-BB.png",
             slug: a.slug ? `/blog/${a.slug}` : "#",
         }))
         : DEFAULT_ARTICLES;
@@ -858,37 +973,37 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
     const viewAllHref = edu?.viewAllHref ?? "/blog";
 
     return (
-        <section className="bg-linen py-24">
-            <div className="max-w-[1440px] mx-auto px-6">
-                <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <section className="bg-linen py-14 lg:py-20">
+            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
+                <div className="mb-9 flex flex-col justify-between gap-5 md:flex-row md:items-end">
                     <FadeUp>
-                        <p className="text-xs uppercase tracking-[0.25em] text-slate font-semibold mb-3">{sectionEyebrow}</p>
-                        <h2 className="font-serif text-4xl text-obsidian font-medium">{sectionTitle}</h2>
+                        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{sectionEyebrow}</p>
+                        <h2 className="font-display text-[34px] font-medium leading-none text-obsidian lg:text-[42px]">{sectionTitle}</h2>
                     </FadeUp>
-                    <FadeUp delay={0.2} className="mt-6 md:mt-0">
-                        <Link href={viewAllHref} className="text-sm font-semibold text-muted-gold hover:text-obsidian transition-colors uppercase tracking-widest flex items-center">
-                            View All Articles <ArrowRight className="ml-2" size={16} />
+                    <FadeUp delay={0.12}>
+                        <Link href={viewAllHref} className="flex items-center text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian">
+                            View All Articles <ArrowRight className="ml-2" size={15} />
                         </Link>
                     </FadeUp>
                 </div>
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-5">
                     {articles.map((article, i) => (
-                        <FadeUp key={i} delay={i * 0.1}>
-                            <Link href={article.slug} className="group cursor-pointer block">
-                                <div className="relative aspect-[16/9] bg-travertine rounded-sm overflow-hidden mb-6 shadow-sm">
+                        <FadeUp key={article.title} delay={i * 0.07}>
+                            <Link href={article.slug} className="group block focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold">
+                                <div className="relative mb-4 aspect-[16/10] overflow-hidden bg-travertine">
                                     <Image
                                         src={article.img}
                                         alt={article.title}
                                         fill
-                                        className="object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-in-out"
+                                        className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]"
                                         unoptimized={article.img.startsWith("http")}
                                     />
                                 </div>
-                                <span className="inline-block mb-4 px-3 py-1 bg-bone text-muted-gold text-[11px] uppercase tracking-wider font-bold rounded-full border border-champagne/50">{article.category}</span>
-                                <h3 className="font-serif text-2xl text-obsidian leading-tight mb-3 group-hover:text-muted-gold transition-colors">{article.title}</h3>
-                                <p className="text-sm text-slate mb-4">{article.excerpt}</p>
-                                <span className="text-sm font-medium text-obsidian flex items-center group-hover:text-muted-gold transition-colors">
-                                    Read More <ArrowRight className="ml-1 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" size={16} />
+                                <span className="mb-2 block text-[9px] font-semibold uppercase tracking-[0.17em] text-muted-gold">{article.category}</span>
+                                <h3 className="text-balance font-display text-[22px] leading-[1.05] text-obsidian transition-colors group-hover:text-muted-gold">{article.title}</h3>
+                                <p className="mt-3 text-xs leading-relaxed text-slate">{article.excerpt}</p>
+                                <span className="mt-4 flex items-center text-[11px] font-semibold uppercase tracking-[0.13em] text-obsidian transition-colors group-hover:text-muted-gold">
+                                    Read More <ArrowRight className="ml-2 transition-transform group-hover:translate-x-1" size={13} />
                                 </span>
                             </Link>
                         </FadeUp>
@@ -899,74 +1014,22 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
     );
 }
 
-function Newsletter() {
-    const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
-    const [errorMsg, setErrorMsg] = useState("");
-    const submitForm = useMutation(api.forms.submit);
-
-    const handleSubmit = useCallback(async (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        const form = e.currentTarget;
-        const email = new FormData(form).get("email") as string;
-        if (email?.trim()) {
-            setStatus("submitting");
-            setErrorMsg("");
-            try {
-                await submitForm({
-                    formType: "newsletter",
-                    email: email.trim(),
-                    source: "Homepage Newsletter"
-                });
-                setStatus("success");
-            } catch (err) {
-                console.error("Newsletter subscription error:", err);
-                setErrorMsg(err instanceof Error ? err.message : "Failed to subscribe. Please try again.");
-                setStatus("error");
-            }
-        }
-    }, [submitForm]);
-
-    return (
-        <section className="bg-linen py-24 border-t border-champagne/30 text-center">
-            <div className="max-w-xl mx-auto px-6">
-                <FadeUp>
-                    <h2 className="font-serif text-3xl text-obsidian font-medium mb-4">Stay in the Know</h2>
-                    <p className="text-slate mb-8">Packaging insights, new arrivals, and scaling strategies. No spam—just expertise.</p>
-                    {status === "success" ? (
-                        <p className="text-muted-gold font-semibold text-sm">Thanks for subscribing! We&apos;ll be in touch.</p>
-                    ) : (
-                        <>
-                            <form onSubmit={handleSubmit} className="flex w-full items-center border border-champagne bg-white p-1 rounded-full shadow-sm hover:border-muted-gold transition-colors focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/20">
-                                <input type="email" name="email" placeholder="Your email address" aria-label="Email address" className="flex-1 px-6 py-3 bg-transparent text-sm focus:outline-none placeholder-slate/60 text-obsidian" required disabled={status === "submitting"} />
-                                <button type="submit" disabled={status === "submitting"} className="px-6 py-3 bg-muted-gold text-white uppercase text-xs font-bold tracking-wider rounded-full hover:bg-obsidian disabled:bg-slate transition-colors duration-300 cursor-pointer">
-                                    {status === "submitting" ? "Subscribing..." : "Subscribe"}
-                                </button>
-                            </form>
-                            {status === "error" && (
-                                <p className="text-red-500 text-xs mt-2 font-semibold">{errorMsg}</p>
-                            )}
-                        </>
-                    )}
-                </FadeUp>
-            </div>
-        </section>
-    );
-}
-
-
 export default function HomePage({ homepageData }: { homepageData: HomepageData | null }) {
     return (
         <main className="min-h-screen">
-            <Navbar variant="home" />
+            <Navbar variant="home" hideMobileSearch />
             <Hero heroSlides={homepageData?.heroSlides} mobileHeroMode={homepageData?.mobileHeroMode} />
             <MobileCategoryGrid data={homepageData} />
-            <MobileFamilySwitcher designFamilyCards={homepageData?.designFamilyCards} />
-            <TrustBar />
-            <PathChooser />
+            <MobilePostHeroSearch />
             <DesignFamilies designFamilyCards={homepageData?.designFamilyCards} />
+            <TrustBar />
+            <SampleTestersFeature />
+            <ApplicationShowcase />
+            <EditorialStories />
+            <PackagingAccessoriesStory />
+            <PathChooser />
             <SocialProof />
             <EducationPreview educationPreview={homepageData?.educationPreview} />
-            <Newsletter />
             <Footer />
         </main>
     );

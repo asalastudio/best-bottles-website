@@ -24,6 +24,8 @@ export const APPLICATOR_BUCKETS = [
 ] as const;
 
 export type ApplicatorBucket = (typeof APPLICATOR_BUCKETS)[number]["value"];
+export const ROLLER_MATERIALS = ["metal", "plastic"] as const;
+export type RollerMaterial = (typeof ROLLER_MATERIALS)[number];
 
 /** Canonical bucket slugs — the ONLY applicator vocabulary Grace's refine tool accepts. */
 export const APPLICATOR_BUCKET_VALUES: readonly ApplicatorBucket[] = APPLICATOR_BUCKETS.map((bucket) => bucket.value);
@@ -236,6 +238,49 @@ export function capacityInRange(ml: number | null | undefined, range: (typeof CA
     return ml >= range.min && (range.max == null || ml <= range.max);
 }
 
+export function resolveCapacityRange(value: string): (typeof CAPACITY_RANGES)[number] | null {
+    const token = value.trim().toLowerCase();
+    if (!token) return null;
+    return CAPACITY_RANGES.find((range) => (
+        range.value === token
+        || range.label.toLowerCase() === token
+    )) ?? null;
+}
+
+/** Exact milliliter labels and mega-menu range tokens (`miniature`) both match `capacityMl`. */
+export function capacitySelectionMatches(
+    capacityMl: number | null | undefined,
+    selected: readonly string[],
+): boolean {
+    if (selected.length === 0) return true;
+    if (capacityMl == null) return false;
+    return selected.some((value) => {
+        const range = resolveCapacityRange(value);
+        if (range) return capacityInRange(capacityMl, range);
+        const ml = parseCapacityLabelMl(value);
+        return ml != null && ml === capacityMl;
+    });
+}
+
+/** Expand range tokens for Convex searchCatalog, which still matches exact milliliters. */
+export function expandCapacityFilterValues(selected: readonly string[]): string[] {
+    const labels: string[] = [];
+    for (const value of selected) {
+        const range = resolveCapacityRange(value);
+        if (!range) {
+            labels.push(value);
+            continue;
+        }
+        const max = range.max ?? 2000;
+        const step = range.max == null ? 1 : 0.1;
+        // `range.min` is a const literal union; widen so the loop can increment.
+        for (let ml: number = range.min; ml <= max + 1e-9; ml = Number((ml + step).toFixed(1))) {
+            labels.push(`${ml} ml`);
+        }
+    }
+    return Array.from(new Set(labels));
+}
+
 export function normalizeCatalogSearchText(value: string | null | undefined): string {
     if (!value) return "";
     let normalized = value
@@ -381,6 +426,18 @@ export function applicatorBucketMatchesProductValues(bucket: ApplicatorBucket, p
     return productApplicatorTypes.some((a) => (def.productValues as readonly string[]).includes(a));
 }
 
+/** Match the canonical roller facet against real product-group applicator values. */
+export function rollerMaterialMatchesProductValues(material: RollerMaterial, productApplicatorTypes: string[]): boolean {
+    const productValue = material === "metal" ? ["Metal Roller Ball", "Metal Roller"] : ["Plastic Roller Ball", "Plastic Roller"];
+    return productApplicatorTypes.some((value) => productValue.includes(value));
+}
+
+export function normalizeRollerMaterials(values: readonly string[]): RollerMaterial[] {
+    return Array.from(new Set(values.map((value) => value.trim().toLowerCase()).filter(
+        (value): value is RollerMaterial => (ROLLER_MATERIALS as readonly string[]).includes(value),
+    )));
+}
+
 export const SORT_OPTIONS = [
     { value: "featured", label: "By Design Family" },
     { value: "best-match", label: "Best Match" },
@@ -402,6 +459,7 @@ export interface CatalogFilters {
     category: string | null;
     collection: string | null;
     applicators: ApplicatorBucket[];
+    rollerMaterials: RollerMaterial[];
     families: string[];
     colors: string[];
     capacities: string[];
@@ -414,6 +472,7 @@ export interface CatalogFilters {
 
 export type CatalogFacetKey =
     | "applicators"
+    | "rollerMaterials"
     | "families"
     | "capacities"
     | "colors"
@@ -427,6 +486,7 @@ export const EMPTY_FILTERS: CatalogFilters = {
     category: null,
     collection: null,
     applicators: [],
+    rollerMaterials: [],
     families: [],
     colors: [],
     capacities: [],
@@ -453,6 +513,7 @@ export function classifyComponentType(displayName: string, family: string | null
 export function filtersAreEmpty(f: CatalogFilters): boolean {
     return (
         !f.category && !f.collection && f.applicators.length === 0 &&
+        f.rollerMaterials.length === 0 &&
         f.families.length === 0 && f.colors.length === 0 && f.capacities.length === 0 &&
         f.neckThreadSizes.length === 0 && !f.componentType &&
         f.priceMin === null && f.priceMax === null && !f.search
@@ -464,6 +525,7 @@ export function activeFilterCount(f: CatalogFilters): number {
     if (f.category) n++;
     if (f.collection) n++;
     n += f.applicators.length;
+    n += f.rollerMaterials.length;
     n += f.families.length;
     n += f.colors.length;
     n += f.capacities.length;
@@ -483,6 +545,7 @@ export const CATALOG_FACET_PARAM_KEYS = [
     "category",
     "collection",
     "applicators",
+    "roller",
     "families",
     "family",
     "colors",
@@ -498,6 +561,7 @@ export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMo
     if (f.category) p.set("category", f.category);
     if (f.collection) p.set("collection", f.collection);
     if (f.applicators.length) p.set("applicators", f.applicators.join(","));
+    if (f.rollerMaterials.length) p.set("roller", f.rollerMaterials.join(","));
     if (f.families.length) p.set("families", f.families.join(","));
     if (f.colors.length) p.set("colors", f.colors.join(","));
     if (f.capacities.length) p.set("capacities", f.capacities.join(","));
@@ -509,6 +573,14 @@ export function filtersToParams(f: CatalogFilters, sort: SortValue, view: ViewMo
     if (sort !== "featured") p.set("sort", sort);
     if (view !== "visual") p.set("view", view);
     return p;
+}
+
+export function catalogHref(
+    partial: Partial<CatalogFilters> = {},
+    sort: SortValue = "featured",
+): string {
+    const qs = filtersToParams({ ...EMPTY_FILTERS, ...partial }, sort).toString();
+    return qs ? `/catalog?${qs}` : "/catalog";
 }
 
 function getMultiParam(sp: URLSearchParams, key: string): string[] {
@@ -539,6 +611,7 @@ export function paramsToFilters(sp: URLSearchParams): { filters: CatalogFilters;
             category: sp.get("category") || null,
             collection: sp.get("collection") || null,
             applicators: validApplicators,
+            rollerMaterials: normalizeRollerMaterials(getMultiParam(sp, "roller")),
             // Accept both ?families=Cylinder,Elegant (multi) and ?family=Cylinder (singular, used by Grace)
             families: familiesParam.length > 0 ? familiesParam : getMultiParam(sp, "family"),
             colors: Array.from(new Set(

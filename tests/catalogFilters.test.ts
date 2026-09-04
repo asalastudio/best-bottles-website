@@ -21,11 +21,15 @@ import {
     catalogSearchRecoverySuggestions,
     catalogSearchResultTieBreak,
     catalogSearchScore,
+    capacitySelectionMatches,
+    catalogHref,
     classifyComponentType,
+    expandCapacityFilterValues,
     filtersAreEmpty,
     filtersToParams,
     normalizeApplicatorBuckets,
     paramsToFilters,
+    rollerMaterialMatchesProductValues,
     type ApplicatorBucket,
     type CatalogFilters,
     type SortValue,
@@ -70,6 +74,7 @@ describe("constants integrity", () => {
             category: null,
             collection: null,
             applicators: [],
+            rollerMaterials: [],
             families: [],
             colors: [],
             capacities: [],
@@ -123,6 +128,10 @@ describe("filtersAreEmpty", () => {
         expect(filtersAreEmpty({ ...EMPTY_FILTERS, colors: ["Clear"] })).toBe(false);
     });
 
+    it("returns false when roller material is selected", () => {
+        expect(filtersAreEmpty({ ...EMPTY_FILTERS, rollerMaterials: ["metal"] })).toBe(false);
+    });
+
     it("returns false when priceMin is set", () => {
         expect(filtersAreEmpty({ ...EMPTY_FILTERS, priceMin: 0 })).toBe(false);
     });
@@ -159,6 +168,10 @@ describe("activeFilterCount", () => {
         ).toBe(3);
     });
 
+    it("counts each roller material individually", () => {
+        expect(activeFilterCount({ ...EMPTY_FILTERS, rollerMaterials: ["metal", "plastic"] })).toBe(2);
+    });
+
     it("counts price range as 1 when only min set", () => {
         expect(activeFilterCount({ ...EMPTY_FILTERS, priceMin: 2.0 })).toBe(1);
     });
@@ -180,6 +193,7 @@ describe("activeFilterCount", () => {
             category: "Glass Bottle",     // 1
             collection: "Cylinder",        // 1
             applicators: ["rollon", "dropper"] as ApplicatorBucket[], // 2
+            rollerMaterials: ["metal", "plastic"], // 2
             families: ["Cylinder", "Diva"], // 2
             colors: ["Clear", "Amber", "Green"], // 3
             capacities: ["100 ml (3.38 oz)"], // 1
@@ -189,7 +203,7 @@ describe("activeFilterCount", () => {
             priceMax: 50.0,
             search: "dropper",             // 1
         };
-        expect(activeFilterCount(f)).toBe(15);
+        expect(activeFilterCount(f)).toBe(17);
     });
 });
 
@@ -209,6 +223,7 @@ describe("URL round-trip serialization", () => {
             category: "Glass Bottle",
             collection: "Cylinder",
             applicators: ["rollon", "finemist"] as ApplicatorBucket[],
+            rollerMaterials: ["metal", "plastic"],
             families: ["Cylinder", "Elegant"],
             colors: ["Clear", "Amber"],
             // Facet labels are "<ml> ml"; oz suffixes from older links are folded on parse.
@@ -297,6 +312,11 @@ describe("paramsToFilters edge cases", () => {
         expect(result.filters.applicators).toEqual(["rollon", "dropper"]);
     });
 
+    it("filters out invalid roller values", () => {
+        const result = paramsToFilters(new URLSearchParams("roller=metal,titanium,plastic"));
+        expect(result.filters.rollerMaterials).toEqual(["metal", "plastic"]);
+    });
+
     it("accepts ?family= as alias for ?families= (Grace AI compatibility)", () => {
         const params = new URLSearchParams("family=Cylinder");
         const result = paramsToFilters(params);
@@ -333,6 +353,17 @@ describe("paramsToFilters edge cases", () => {
         const result = paramsToFilters(new URLSearchParams("priceMin=-5&priceMax=abc"));
         expect(result.filters.priceMin).toBeNull();
         expect(result.filters.priceMax).toBeNull();
+    });
+});
+
+describe("roller material matching", () => {
+    it("matches metal and plastic only against their canonical product values", () => {
+        expect(rollerMaterialMatchesProductValues("metal", ["Metal Roller Ball"])).toBe(true);
+        expect(rollerMaterialMatchesProductValues("metal", ["Metal Roller"])).toBe(true);
+        expect(rollerMaterialMatchesProductValues("metal", ["Plastic Roller Ball"])).toBe(false);
+        expect(rollerMaterialMatchesProductValues("plastic", ["Plastic Roller Ball"])).toBe(true);
+        expect(rollerMaterialMatchesProductValues("plastic", ["Plastic Roller"])).toBe(true);
+        expect(rollerMaterialMatchesProductValues("plastic", ["Metal Roller"])).toBe(false);
     });
 });
 
@@ -630,5 +661,34 @@ describe("UX: real user journey filter scenarios", () => {
         const params = filtersToParams(filters, "featured");
         const result = paramsToFilters(params);
         expect(result.filters.neckThreadSizes).toEqual(["18-415", "20-400", "24-410"]);
+    });
+});
+
+describe("capacity range tokens", () => {
+    it("matches milliliter values inside a mega-menu range token", () => {
+        expect(capacitySelectionMatches(3, ["miniature"])).toBe(true);
+        expect(capacitySelectionMatches(9, ["miniature"])).toBe(false);
+        expect(capacitySelectionMatches(9, ["small"])).toBe(true);
+        expect(capacitySelectionMatches(30, ["medium"])).toBe(true);
+        expect(capacitySelectionMatches(9, ["9 ml"])).toBe(true);
+        expect(capacitySelectionMatches(null, ["miniature"])).toBe(false);
+        expect(capacitySelectionMatches(3, [])).toBe(true);
+    });
+
+    it("expands range tokens into milliliter labels Convex can parse", () => {
+        const expanded = expandCapacityFilterValues(["miniature"]);
+        expect(expanded).toContain("1 ml");
+        expect(expanded).toContain("5 ml");
+        expect(expanded).not.toContain("9 ml");
+        expect(expandCapacityFilterValues(["9 ml"])).toEqual(["9 ml"]);
+    });
+
+    it("round-trips a mega-menu capacity URL through catalogHref", () => {
+        const href = catalogHref({ category: "Glass Bottle", capacities: ["miniature"] });
+        const url = new URL(href, "https://bestbottles.com");
+        expect(url.pathname).toBe("/catalog");
+        expect(url.searchParams.get("category")).toBe("Glass Bottle");
+        expect(url.searchParams.get("capacities")).toBe("miniature");
+        expect(paramsToFilters(url.searchParams).filters.capacities).toEqual(["miniature"]);
     });
 });

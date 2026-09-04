@@ -15,7 +15,7 @@ const REQUIRED_GLASS_KEYS = GLASS_OPTIONS.map((option) => option.value);
  * Atomic editorial gallery for a buildable Paper Doll family.
  *
  * Shopify remains the source of exact sellable variant media. This document
- * owns the glass-level beauty view shown beside the exact Paper Doll builder.
+ * owns the glass-level beauty view shown beside the exact focused PDP stage.
  */
 export const paperDollBeautyGallery = defineType({
     name: "paperDollBeautyGallery",
@@ -27,7 +27,7 @@ export const paperDollBeautyGallery = defineType({
             name: "familyKey",
             title: "Paper Doll family key",
             type: "string",
-            description: "Stable builder-family key. The first release is CYL-9ML.",
+            description: "Stable internal media-family key. The first release is CYL-9ML.",
             validation: (Rule) => Rule.required(),
         }),
         defineField({
@@ -57,7 +57,7 @@ export const paperDollBeautyGallery = defineType({
             initialValue: "metal-roller",
             options: { list: [{ title: "Metal roller", value: "metal-roller" }] },
             validation: (Rule) => Rule.required(),
-            description: "Editorial reference only; the builder continues to show the selected applicator.",
+            description: "Editorial reference only; the focused PDP continues to show the selected applicator.",
         }),
         defineField({
             name: "referenceCapFinish",
@@ -66,7 +66,7 @@ export const paperDollBeautyGallery = defineType({
             initialValue: "matte-silver",
             options: { list: [{ title: "Matte silver", value: "matte-silver" }] },
             validation: (Rule) => Rule.required(),
-            description: "Editorial reference only; the builder continues to show the selected cap finish.",
+            description: "Editorial reference only; the focused PDP continues to show the selected cap finish.",
         }),
         defineField({
             name: "generator",

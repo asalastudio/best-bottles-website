@@ -77,7 +77,6 @@ const TOOL_POLICIES = {
     displayShortlist: read(CATALOG_READ, CUSTOMER_SURFACES),
     displayAnatomy: read(CATALOG_READ),
     setCatalogRefinements: propose(NAVIGATION_PROPOSAL),
-    setPaperDollSelection: propose(["catalog.read", "compatibility.read"]),
     prepareQuoteRequest: propose(CART_PROPOSAL),
     listGraceProjects: read(["customer_project.read.self"], CUSTOMER_SURFACES),
     proposeProjectSave: propose(["customer_project.write.self"], CUSTOMER_SURFACES),

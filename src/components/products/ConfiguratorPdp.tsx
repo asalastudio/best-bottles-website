@@ -4,46 +4,44 @@
  * ConfiguratorPdp — the guided configurator hero (design handoff
  * `design_handoff_configurator_pdp`, approved 2026-08-31).
  *
- * Desktop: 50/50 split — 3D stage left, step panel right. Mobile: stacked
- * flow with summary chip, closure rail, accordion steps and a sticky buy
- * bar. Everything INSIDE the <Canvas> belongs to the render design system;
- * this component owns everything outside it.
+ * The shared focused shell keeps one 10:11 stage beside one coherent purchase
+ * panel, then stacks them stage-first when its own container gets narrow.
+ * Everything INSIDE the <Canvas> belongs to the render design system; this
+ * component owns everything outside it.
  *
- * Architecture (decision 2026-08-31): a VENEER over the one-URL-per-closure
- * catalogue. Committing a closure navigates to the sibling product group,
- * so SEO, Shopify SKU binding, pricing and cart wiring are untouched.
- * Selection before commit only PREVIEWS on the stage (previewBase), with
- * the "Previewing X · Return to Y" toast.
+ * The buy panel is intentionally scoped to the current product application.
+ * Glass and real SKU selections resolve through the canonical PDP route; a
+ * cross-application comparison belongs in the below-fold discovery section.
  */
 
-import { useMemo, useState, useEffect } from "react";
-import { useRouter } from "next/navigation";
+import { useMemo, useState, useEffect, type ReactNode } from "react";
 import dynamic from "next/dynamic";
-import { AnimatePresence, motion } from "framer-motion";
 import {
-  Check, CaretRight, Sparkle, ChatCircle, ShoppingBag,
-  SprayBottle, Drop, Eyedropper, GitCompare,
+  Check, ChatCircle, ShoppingBag,
 } from "@/components/icons";
-import { HandSoap, HandGrabbing, CaretLeft, CaretDown, CheckCircle, TestTube, Cube,
-         Camera, Stack, Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
+import { HandGrabbing,
+         Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
-import { familyForSlugOrDerived, glassFromSlug, CLOSURE_TOKENS,
-         type ConfiguratorFamily, type ClosureBase }
+import { familyForSlugOrDerived, glassFromSlug, type ClosureBase }
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
 import { componentPhotoSkuBelongsToBase, photoKeysForVariant, resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { useQuery } from "convex/react";
+import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
+import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 
 import { useGLTF } from "@react-three/drei";
-
-/** every slug token a base may carry in this family, the family's own first */
-function tokensFor(fam: ConfiguratorFamily, base: ClosureBase): string[] {
-  const own = fam.slugClosure[base];
-  const all = base === "none" ? [] : CLOSURE_TOKENS[base] ?? [];
-  return [...new Set([...(own ? [own] : []), ...all])];
-}
+import FocusedPdpLayout from "./FocusedPdpLayout";
+import PdpStageModeDock from "./PdpStageModeDock";
+import {
+  getPdpStageModes,
+  hasRealPdpDimensions,
+  preservePdpStageMode,
+  type PdpStageMode,
+} from "@/lib/products/pdp-stage-modes";
+import type { PdpAnalyticsDimension } from "@/lib/products/pdp-analytics";
 
 /** kit slots that come off when the customer lifts the cap; everything else is fitted */
 const REMOVABLE_SLOTS = new Set(["cap", "overcap"]);
@@ -78,12 +76,6 @@ const Bottle3DViewer = dynamic(() => import("./Bottle3DViewer"), {
     </div>
   ),
 });
-
-/** stand-in glyph when a sibling group has no hero photo yet */
-const CLOSURE_GLYPH: Record<string, typeof SprayBottle> = {
-  sprayer: SprayBottle, antique: SprayBottle, antiqueTassel: SprayBottle,
-  pump: HandSoap, dropper: Eyedropper, roller: Drop, reducer: TestTube,
-};
 
 /** fitment swatch name -> materials.json token. The PDP's cap options are
  *  SKU-derived display names ("Pink", "Shiny Black", "Matte Silver"); the
@@ -123,24 +115,7 @@ const GLASS_TILE: Record<string, string> = {
   swirl: "linear-gradient(150deg,#efe7d8 0%,#dccfb4 55%,#c3b392 100%)",
 };
 
-/** glass tint approximations for the GLASS swatches (attenuation-derived) */
-const GLASS_TONE: Record<string, SwatchableMaterial> = {
-  clear: { color: "#e9edeb", roughness: 0.06 },
-  amber: { color: "#8a4c16", roughness: 0.06 },
-  cobalt: { color: "#1d3aa8", roughness: 0.06 },
-  frosted: { color: "#dfe3e2", roughness: 0.55 },
-  swirl: { color: "#e3d9c2", roughness: 0.2 },
-};
-
-type Sibling = {
-  slug?: string | null;
-  priceRangeMin?: number | null;
-  applicatorTypes?: string[] | null;
-  heroImageUrl?: string | null;
-  displayName?: string | null;
-};
-
-/** sessionStorage key for the stage mode ("3d" | "photo") */
+/** sessionStorage key for the customer's current stage mode. */
 /** Resolve once the bytes are ready to paint. A cached part resolves immediately,
  *  which is why swapping a cap costs one frame and not a fade. */
 function decodeImage(url: string): Promise<void> {
@@ -156,14 +131,16 @@ function decodeImage(url: string): Promise<void> {
 const STAGE_MODE_KEY = "bb:pdp-stage";
 
 export default function ConfiguratorPdp({
-  currentSlug, groupTitle, capacityLabel, priceEach, stepCountLabel,
-  siblings, heroImageUrl, onAddToCart, onAskGrace,
+  currentSlug, groupTitle, capacityLabel, priceEach,
+  heroImageUrl, onAddToCart, onAskGrace,
   displayName, categoryLabel, inStock = true, caseQty,
-  neckSize, capacityText, skuLabel, graceSku, websiteSku, price10, price12, priceTiers,
-  quoteHref, qty = 1, onQtyChange,
+  neckSize, capacityText, skuLabel, websiteSku,
+  quoteHref, checkoutReady = true, qty = 1, onQtyChange, volumePricing,
   capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
-  rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange,
+  rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
+  onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
+  heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -173,11 +150,17 @@ export default function ConfiguratorPdp({
   /** the selected SKU's catalogue photograph: the stage's fallback when the
    *  SKU has no plate (never photographed as a plate, or not built yet) */
   variantImageUrl?: string | null;
+  heightWithCap?: string | null;
+  heightWithoutCap?: string | null;
+  diameter?: string | null;
+  /** Product-group geometry approval from the focused PDP capability gate. */
+  hasApproved3d?: boolean;
+  /** Exact selected-SKU kit truth supplied by the focused PDP boundary. */
+  kitQuery?: FunctionReturnType<typeof api.productKits.forSku>;
+  selectedGraceSku?: string | null;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
-  stepCountLabel?: string;
-  siblings: Sibling[];         // applicator siblings incl. prices (deltas)
   heroImageUrl?: string | null;
   onAddToCart?: () => void;
   onAskGrace?: () => void;
@@ -188,20 +171,16 @@ export default function ConfiguratorPdp({
   categoryLabel?: string;      // "Glass Bottle · Cylinder"
   inStock?: boolean;
   caseQty?: number | null;
-  /** transaction column (BuildDirect-pattern structure, our brand):
-      spec strip + tiered price + sample-first CTA stack */
+  /** concise transaction facts beside the purchase CTA */
   neckSize?: string | null;    // "17-415"
   capacityText?: string | null;// "9 ml (0.3 oz)"
   skuLabel?: string | null;
   /** the selected SKU, for the component kit — the stage stacks the kit's
    *  parts when one exists, so changing a cap changes the cap and nothing else */
-  graceSku?: string | null;
   websiteSku?: string | null;
-  price10?: number | null;     // 10+ tier unit price
-  price12?: number | null;     // 12+ tier unit price
-  /** the real 5-step ladder; when present it replaces price10/price12 */
-  priceTiers?: Array<{ minQty: number; unitPrice: number; totalPrice?: number }> | null;
   quoteHref?: string;
+  /** False means the selected Shopify variant cannot check out and must quote. */
+  checkoutReady?: boolean;
   /** SKU TRUTH for the fitment row: the cap/trim colourways this closure
    *  actually ships in, derived from the group's own variants. A reducer
    *  has ~14 caps, a lotion pump far fewer, a bulb its own colourways —
@@ -213,6 +192,10 @@ export default function ConfiguratorPdp({
   rollerVariant?: "metal" | "plastic";
   rollerVariantsAvailable?: Array<"metal" | "plastic">;
   onRollerVariantChange?: (variant: "metal" | "plastic") => void;
+  /** Resolves a real in-intent variant at the product-route boundary. */
+  onVariantSelectionChange?: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string }) => void;
+  /** A glass sibling is another real product group, never a local preview. */
+  onProductUrlChange?: (href: string, dimension?: PdpAnalyticsDimension) => void;
   capOptions?: string[];
   /** per pill, the token swatch names its variants' website SKUs spell — the
    *  component families are keyed by token ("Pink"), the pills by catalogue
@@ -226,18 +209,17 @@ export default function ConfiguratorPdp({
                         active: boolean; imageUrl?: string | null }>;
   qty?: number;
   onQtyChange?: (n: number) => void;
+  /** Compact volume ladder rendered directly under Add to Cart. */
+  volumePricing?: ReactNode;
 }) {
-  const router = useRouter();
   const fam = familyForSlugOrDerived(currentSlug);
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
-  // optimistic: the canvas swaps the instant a colourway is picked, while
-  // the slug (SKU/pricing truth) is replaced underneath without a reload
-  const [glassOverride, setGlassOverride] = useState<GlassPresetId | null>(null);
   const [rollerLocal, setRollerLocal] = useState<"metal" | "plastic">("metal");
   const rollerVariant = rollerVariantProp ?? rollerLocal;
   const setRollerVariant = (variant: "metal" | "plastic") => {
     setRollerLocal(variant);
     onRollerVariantChange?.(variant);
+    onVariantSelectionChange?.({ rollerVariant: variant });
   };
   const rollerOffered = (variant: "metal" | "plastic") =>
     !rollerVariantsAvailable || rollerVariantsAvailable.includes(variant);
@@ -252,36 +234,19 @@ export default function ConfiguratorPdp({
   // colour in 3D (Jordan, 2026-09-01). The mode is kept for the session and
   // re-applied on mount; the server always renders the photograph, so
   // there is nothing to mismatch on hydration.
-  const [show3d, setShow3dState] = useState(false);
+  const [requestedStageMode, setRequestedStageMode] = useState<PdpStageMode>("photo");
+  const show3d = requestedStageMode === "3d";
   // Exploded: the kit's parts slide apart along the axis by the offsets the
   // builder recorded (`exploded.dx/dy`, plate pixels). Only a kitted SKU has
   // them, so the mode is offered only when the stack is on screen.
-  const [exploded, setExploded] = useState(false);
+  const exploded = requestedStageMode === "exploded";
   const [skuCopied, setSkuCopied] = useState(false);
-  // URLs whose <img> fired onError this session: the stage falls through to
+  // URLs whose image element fired onError this session: the stage falls through to
   // the catalogue photograph instead of showing a broken image on white.
   const [brokenPlates, setBrokenPlates] = useState<ReadonlySet<string>>(() => new Set());
-  // The component kit for this SKU.
-  //
-  // Two things make a colourway change seamless, and both are about NOT letting
-  // the stage go empty:
-  //
-  //   1. useQuery returns undefined while the next SKU's kit loads. Treating
-  //      that as "no kit" tears the whole stack down — measured at 30 ms after a
-  //      cap click: three part images unmounted, the flat plate faded back in,
-  //      then the parts faded in again. The entire bottle flashed to change a
-  //      cap. So the last resolved kit is held until the next one resolves.
-  //   2. The new parts are decoded BEFORE they go on screen. Body and fitment
-  //      keep the URLs they already had, so they come from cache instantly and
-  //      only the cap is genuinely new; when its bytes are ready the whole set
-  //      swaps in one frame. No fade, because there is nothing to hide.
-  const kitQuery = useQuery(
-    api.productKits.forSku,
-    graceSku || websiteSku ? { graceSku: graceSku ?? null, websiteSku: websiteSku ?? null } : "skip",
-  );
-  const [heldKit, setHeldKit] = useState<typeof kitQuery>(undefined);
-  useEffect(() => { if (kitQuery !== undefined) setHeldKit(kitQuery); }, [kitQuery]);
-  const kit = kitQuery === undefined ? heldKit : kitQuery;
+  // A pending next-SKU query never inherits a prior kit. The preferred mode
+  // may survive loading, but only this SKU's stored kit can expose its layers.
+  const kit = resolveSelectedSkuKit({ websiteSku, graceSku: selectedGraceSku }, kitQuery);
 
   // "Without cap" on a kitted SKU removes the cap PART. The cap-off PLATE swap
   // below still happens, but the kit stacks above the plate, so with the cap
@@ -293,41 +258,48 @@ export default function ConfiguratorPdp({
     const parts = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
     return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
   }, [kit, withCap]);
-  // what is actually on screen: only ever a fully decoded set
-  const [shownParts, setShownParts] = useState<typeof targetParts>(null);
+  // What is actually on screen: a fully decoded set owned by the current kit.
+  // The synchronous SKU gate below prevents an old state value from painting
+  // between render and effect cleanup during a variant transition.
+  const [shownKit, setShownKit] = useState<{ sku: string; parts: NonNullable<typeof targetParts> } | null>(null);
   useEffect(() => {
-    // Still loading: keep whatever is on screen rather than emptying the stage.
-    if (kitQuery === undefined) return;
+    // Pending or no exact kit: never keep another SKU's layers on this stage.
+    if (kitQuery === undefined) { setShownKit(null); return; }
     // Resolved with no kit — a SKU that was never kitted. The stale stack would
     // otherwise keep showing the PREVIOUS bottle, which is worse than a flat plate.
-    if (!targetParts?.length) { setShownParts(null); return; }
+    if (!kit?.sku || !targetParts?.length) { setShownKit(null); return; }
     let cancelled = false;
     Promise.all(targetParts.map((part) => decodeImage(part.image.url)))
-      .then(() => { if (!cancelled) setShownParts(targetParts); })
-      .catch(() => { if (!cancelled) setShownParts(null); });   // fall back to the plate
+      .then(() => { if (!cancelled) setShownKit({ sku: kit.sku, parts: targetParts }); })
+      .catch(() => { if (!cancelled) setShownKit(null); });   // fall back to the plate
     return () => { cancelled = true; };
-  }, [kitQuery, targetParts]);
-  const kitReady = Boolean(shownParts?.length);
-  const kitParts = shownParts;
+  }, [kit, kitQuery, targetParts]);
+  // A published kit for this exact SKU is capability truth; decoding only
+  // controls when its layers are safe to paint.
+  const releasedKitAvailable = Boolean(kit?.parts?.length);
+  const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts.length);
+  const kitParts = kitReady ? shownKit!.parts : null;
   const markPlateBroken = (url: string) => {
     console.error("[plates] image failed to load", url);
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
   };
   useEffect(() => {
-    try { if (window.sessionStorage.getItem(STAGE_MODE_KEY) === "3d") setShow3dState(true); } catch {}
+    try {
+      const saved = window.sessionStorage.getItem(STAGE_MODE_KEY);
+      if (saved === "photo" || saved === "3d" || saved === "exploded" || saved === "dimensions") {
+        setRequestedStageMode(saved);
+      }
+    } catch {}
   }, []);
-  const setShow3d = (next: boolean | ((on: boolean) => boolean)) => {
-    setShow3dState((on) => {
-      const value = typeof next === "function" ? next(on) : next;
-      try { window.sessionStorage.setItem(STAGE_MODE_KEY, value ? "3d" : "photo"); } catch {}
-      return value;
-    });
+  const pickMode = (mode: PdpStageMode) => {
+    setRequestedStageMode(mode);
+    try { window.sessionStorage.setItem(STAGE_MODE_KEY, mode); } catch {}
   };
-  useEffect(() => { setGlassOverride(null); }, [currentSlug]);
-  const glass: GlassPresetId = glassOverride ?? slugGlass;
+  const glass: GlassPresetId = slugGlass;
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
-    fam?.closureFromSlug[committedToken] ?? (fam?.derived ? "none" : "sprayer");
+    fam?.closureFromSlug[committedToken]
+    ?? (/roll-?on/.test(currentSlug) ? "roller" : fam?.derived ? "none" : "sprayer");
 
   const [capMatLocal, setCapMat] = useState("ANSP_BLACK");
   const [trimMatLocal, setTrimMat] = useState(
@@ -337,7 +309,6 @@ export default function ConfiguratorPdp({
   const skuToken = capOptions?.length ? capTokenFor(activeCapOption) : null;
   const capMat = skuToken ?? capMatLocal;
   const trimMat = skuToken ?? trimMatLocal;
-  const [tiersOpen, setTiersOpen] = useState(false);
   const [mats, setMats] = useState<Record<string, SwatchableMaterial> | null>(null);
   useEffect(() => {
     let dead = false;
@@ -370,81 +341,14 @@ export default function ConfiguratorPdp({
     }
   }, [fam]);
 
-  // sibling lookup: slug token -> sibling row (price, photo)
-  const siblingFor = useMemo(() => {
-    const bySlug = new Map<string, Sibling>();
-    for (const s of siblings) if (s.slug) bySlug.set(s.slug, s);
-    return (base: ClosureBase): Sibling | null => {
-      if (!fam) return null;
-      const colour = fam.slugColour[glass] ?? "clear";
-      // a sibling may live under any of the tokens the catalogue writes for
-      // this base (perfumespray beside finemist): take the one that exists
-      for (const token of tokensFor(fam, base)) {
-        const hit = bySlug.get(fam.buildSlug(colour, token));
-        if (hit) return hit;
-      }
-      return null;
-    };
-  }, [siblings, fam, glass]);
-
-  /** every closure this family SELLS in this colourway (registry ∪ catalog
-   *  antique photo groups — decision: bulb selectable, photo fallback) */
-  const sellableBases = useMemo(() => {
-    const out: ClosureBase[] = [];
-    if (!fam) return out;
-    for (const b of fam.bases) if (b !== "none") out.push(b);
-    if (fam.derived) {
-      // read off a slug, so it claims every base; keep the ones that exist
-      return out.filter((b) => b === activeBase || siblingFor(b) !== null);
-    }
-    // antique sells as a photo-only group even where 3D is parked
-    if (!out.includes("antique")) {
-      const colour = fam.slugColour[glass] ?? "clear";
-      const antiqueSlug = fam.buildSlug(colour, "antiquespray");
-      if (siblings.some((s) => s.slug === antiqueSlug)) out.push("antique");
-    }
-    return out;
-  }, [fam, glass, siblings]);
-
-  // ONE row of actual components in a stable trade order (Jordan:
-  // "just one row ... the actual components ... reducer, roll-on, spray,
-  // lotion") — no use-case re-ranking layer
-  const COMPONENT_ORDER: ClosureBase[] = [
-    "sprayer", "roller", "pump", "dropper", "reducer", "antique", "antiqueTassel"];
-  void CLOSURE_META;
-  const ranked = useMemo(
-    () => COMPONENT_ORDER.filter((b) => sellableBases.includes(b)),
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [sellableBases]);
-
   const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;
-
-  const priceDelta = (base: ClosureBase): string => {
-    const sib = siblingFor(base);
-    if (sib?.priceRangeMin == null || priceEach == null) return "";
-    const d = sib.priceRangeMin - priceEach;
-    return `${d >= 0 ? "+" : "−"}$${Math.abs(d).toFixed(2)}`;
-  };
-
-  const antiqueSibling = siblingFor("antique");
   // bulb has no live 3D (parked): the stage shows the product photo
   // Without a plate the stage shows a photograph, never nothing: the SKU's
   // own catalogue image first, then the group's hero.
   const photoFallback =
     variantImageUrl
-    ?? (activeBase === "antique" || activeBase === "antiqueTassel"
-      ? (antiqueSibling?.heroImageUrl ?? heroImageUrl ?? null)
-      : (heroImageUrl ?? null));
-
-  const commit = (base: ClosureBase) => {
-    if (!fam) return;
-    const colour = fam.slugColour[glass];
-    const token = tokensFor(fam, base).find((t) => colour && siblings.some((sb) => sb.slug === fam.buildSlug(colour, t)))
-      ?? fam.slugClosure[base];
-    if (!token || !colour) return;
-    const to = fam.buildSlug(colour ?? "clear", token ?? "");
-    if (to !== currentSlug) router.replace(`/products/${to}`, { scroll: false });
-  };
+    ?? heroImageUrl
+    ?? null;
 
   // antique maps to "none": the geometry is parked, the photo fallback
   // covers the stage (decision 2026-08-31)
@@ -507,13 +411,26 @@ export default function ConfiguratorPdp({
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
-  const has3d = Boolean(fam) && !fam?.photoOnly;
+  const has3d = hasApproved3d && Boolean(fam) && !fam?.photoOnly;
+  const dimensions = { heightWithCap, heightWithoutCap, diameter };
+  const showDimensions = requestedStageMode === "dimensions" && hasRealPdpDimensions(dimensions);
   const showPlate = !(show3d && has3d) && Boolean(plate);
   const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
   const showLive3d = !showPlate && !showPhoto && has3d;
   const stage = (
     <div className="relative h-full w-full overflow-hidden">
-      {showPlate ? (
+      {showDimensions ? (
+        <div className="flex h-full w-full items-center justify-center bg-linen px-8 py-10">
+          <div className="w-full max-w-sm border-y border-champagne/70">
+            <p className="py-4 font-serif text-2xl text-obsidian">Product dimensions</p>
+            <dl>
+              {heightWithCap?.trim() ? <DimensionRow label="Height with cap" value={heightWithCap} /> : null}
+              {heightWithoutCap?.trim() ? <DimensionRow label="Height without cap" value={heightWithoutCap} /> : null}
+              {diameter?.trim() ? <DimensionRow label="Diameter" value={diameter} /> : null}
+            </dl>
+          </div>
+        </div>
+      ) : showPlate ? (
         <div className="relative h-full w-full bg-white">
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
@@ -543,7 +460,7 @@ export default function ConfiguratorPdp({
                  }}
                  className="absolute inset-0 h-full w-full object-contain transition-transform
                             duration-500 ease-[cubic-bezier(.4,0,.2,1)]
-                            motion-safe:animate-[kitIn_180ms_ease-out]" />
+                            motion-reduce:transition-none motion-reduce:duration-0" />
           ))}
         </div>
       ) : showPhoto ? (
@@ -570,7 +487,7 @@ export default function ConfiguratorPdp({
       <div className="absolute top-3.5 left-3.5 right-3.5 z-[40] flex items-center justify-between gap-3 pointer-events-none">
         {/* The plain photograph carries no badge: the mode bar below the stage
             already says so, and the chip read as a label on the product. */}
-        {(showLive3d || (exploded && kitReady)) ? (
+        {(!showDimensions && (showLive3d || (exploded && kitReady))) ? (
           <span className="flex items-center gap-1.5 rounded-[3px] px-2.5 py-1.5 backdrop-blur"
                 style={{ background: "rgba(29,29,31,.85)" }}>
             <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
@@ -600,7 +517,7 @@ export default function ConfiguratorPdp({
       </div>
 
       {/* drag affordance */}
-      {showLive3d && (
+      {showLive3d && !showDimensions && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center
                         gap-2 text-sm text-white/85 pointer-events-none">
           <HandGrabbing className="h-4 w-4" />
@@ -620,33 +537,32 @@ export default function ConfiguratorPdp({
   // falls through to Live 3D; the bar used to keep "Photo" lit while the 3D
   // rendered, and a closure click that landed on a sibling with a plate then
   // flipped it back (Jordan, 2 Sep, the 100 ml reducer mid-publish).
-  const stageMode: "photo" | "3d" | "exploded" =
-    showLive3d ? "3d" : exploded && kitReady ? "exploded" : "photo";
-  const pickMode = (m: "photo" | "3d" | "exploded") => {
-    setShow3d(m === "3d");
-    setExploded(m === "exploded");
-  };
-  const modes: Array<{ id: "photo" | "3d" | "exploded"; label: string; icon: React.ReactNode; enabled: boolean; why?: string }> = [
-    { id: "photo", label: "Photo", icon: <Camera className="h-4 w-4" />,
-      enabled: Boolean(plate || photoFallback), why: "No photograph for this configuration yet" },
-    { id: "3d", label: "3D", icon: <Cube className="h-4 w-4" />, enabled: has3d, why: "3D is on its way for this family" },
-    { id: "exploded", label: "Exploded", icon: <Stack className="h-4 w-4" />, enabled: kitReady, why: "Exploded view comes with the component kit" },
-  ];
-  const stageToggle = (plateImage || photoFallback || has3d) ? (
-    <div className="flex border border-champagne/60" role="tablist" aria-label="Stage mode">
-      {modes.map((m) => (
-        <button key={m.id} type="button" role="tab" aria-selected={stageMode === m.id}
-                disabled={!m.enabled} title={m.enabled ? undefined : m.why}
-                onClick={() => pickMode(m.id)}
-                className={`flex flex-1 items-center justify-center gap-2 -ml-px border-l border-champagne/60
-                            px-2 py-3.5 text-2xs font-semibold uppercase tracking-label transition-colors duration-200
-                            first:ml-0 first:border-l-0 disabled:cursor-not-allowed disabled:opacity-40
-                            ${stageMode === m.id ? "bg-obsidian text-white" : "bg-white text-slate hover:text-obsidian"}`}>
-          {m.icon}{m.label}
-        </button>
-      ))}
-    </div>
-  ) : null;
+  const modes = getPdpStageModes({
+    hasApprovedImageOrPlate: Boolean(plate || photoFallback),
+    hasApprovedGeometry: has3d,
+    hasReleasedExplodedKit: releasedKitAvailable,
+    dimensions,
+    photoOnly: fam?.photoOnly,
+    productFamily: displayName?.toLowerCase().includes("diva") ? "Diva" : groupTitle.split(" ")[0],
+  });
+  const stageMode: PdpStageMode | null = showDimensions
+    ? "dimensions"
+    : requestedStageMode === "exploded" && releasedKitAvailable
+      ? "exploded"
+    : showLive3d
+      ? "3d"
+      : preservePdpStageMode("photo", modes);
+  useEffect(() => {
+    if (kitQuery === undefined) return;
+    const preserved = preservePdpStageMode(requestedStageMode, modes);
+    if (preserved && preserved !== requestedStageMode) pickMode(preserved);
+    // Mode capabilities are primitive truth values; keeping the array out of
+    // this dependency list prevents an effect on every render.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requestedStageMode, has3d, releasedKitAvailable, plate, photoFallback, heightWithCap, heightWithoutCap, diameter, kitQuery]);
+  const stageToggle = (
+    <PdpStageModeDock modes={modes} activeMode={stageMode} onModeChange={pickMode} />
+  );
 
   /* ----------------------------------------------- swatch rows (seam) */
   const finishRow = (compact = false, eyebrow = "3. Closure Finish") => {
@@ -661,7 +577,7 @@ export default function ConfiguratorPdp({
               {activeCapOption ?? capOptions[0]}
             </span>
           </p>
-          <div className="flex items-center gap-3 flex-wrap mt-2.5">
+          <div data-testid="pdp-closure-rail" className="mt-2.5 flex max-w-full items-center gap-3 overflow-x-auto pb-1">
             {capOptions.map((name) => {
               const photo = resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
               return (
@@ -670,13 +586,16 @@ export default function ConfiguratorPdp({
                 // photo chip is a small cap-shaped tile with the whole cap in frame,
                 // the way the design draws its finish swatches; a colour stays a dot.
                 <button key={name} type="button"
-                        onClick={() => onCapOptionChange?.(name)}
+                        onClick={() => {
+                          onCapOptionChange?.(name);
+                          onVariantSelectionChange?.({ capOption: name });
+                        }}
                         aria-label={name} aria-pressed={activeCapOption === name}
                         title={name} data-swatch={photo ? "photo" : "colour"}
                         className={`overflow-hidden transition-all duration-200
                                     focus-visible:outline-2 focus-visible:outline-offset-2
                                     focus-visible:outline-muted-gold
-                                    ${photo ? "h-14 w-11 rounded-[3px] bg-white" : "h-8 w-8 rounded-full"}
+                                    ${photo ? "min-h-11 min-w-11 h-14 w-11 rounded-[3px] bg-white" : "min-h-11 min-w-11 h-11 w-11 rounded-full"}
                                     ${activeCapOption === name
                                       ? "outline outline-2 outline-offset-2 outline-obsidian"
                                       : "ring-1 ring-champagne hover:ring-ash"}`}
@@ -766,24 +685,9 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* price block — unit price leads; the tier teaser sells volume */
-  // the ladder: real 5-step tiers when synced, else the legacy 1/10/12
-  const ladder = useMemo(() => {
-    if (priceTiers?.length) {
-      return [...priceTiers].sort((a, b) => a.minQty - b.minQty)
-        .map((t) => ({ minQty: t.minQty, price: t.unitPrice }));
-    }
-    const out = [{ minQty: 1, price: priceEach ?? 0 }];
-    if (price10 != null && priceEach != null && price10 < priceEach)
-      out.push({ minQty: 10, price: price10 });
-    if (price12 != null && priceEach != null && price12 < priceEach)
-      out.push({ minQty: 12, price: price12 });
-    return out;
-  }, [priceTiers, price10, price12, priceEach]);
-
-  const activeTier = [...ladder].reverse().find((t) => qty >= t.minQty) ?? ladder[0];
-  const nextTier = ladder.find((t) => t.minQty > qty) ?? null;
-  const tierPrice = activeTier?.price ?? priceEach;
+  /* The focused panel shows only selected-SKU price and case essentials.
+     Full tier information is intentionally below the discovery sections. */
+  const tierPrice = priceEach;
   const priceBlock = (
     <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1 mt-3.5">
       {priceEach != null && (
@@ -791,13 +695,6 @@ export default function ConfiguratorPdp({
           ${priceEach.toFixed(2)}
           <span className="text-sm font-normal text-slate ml-1.5">/each</span>
         </p>
-      )}
-      {ladder.length > 1 && (
-        <a href="#volume-pricing" onClick={() => setTiersOpen(true)}
-           className="text-ui text-gold-dim underline underline-offset-2">
-          ${ladder[ladder.length - 1].price.toFixed(2)} at{" "}
-          {ladder[ladder.length - 1].minQty}+ · {ladder.length} volume tiers
-        </a>
       )}
       <span className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full
                         text-xs uppercase tracking-label font-semibold border
@@ -811,182 +708,58 @@ export default function ConfiguratorPdp({
     </div>
   );
 
-  /* closure selector — ONE row of the actual closure components */
-  const closureRow = (
-    <div className="mt-6">
-      <div className="flex items-baseline justify-between gap-3">
-        <p className="flex shrink-0 items-center gap-1.5 whitespace-nowrap text-2xs uppercase tracking-label font-semibold text-slate">
-          2. Closure Type
-          <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-          <span className="normal-case tracking-normal text-caption text-obsidian ml-0.5">
-            · {activeMeta?.name ?? "Bottle only"}
-          </span>
-        </p>
-        {neckSize && (
-          <p className="min-w-0 text-right text-spec text-slate">All closures verified for {neckSize} neck</p>
-        )}
-      </div>
-
-      {/* every closure the family sells sits on ONE row: the panel is wide
-          enough for six (the Diva) because the stage yields width to it */}
-      <div className="flex gap-2.5 mt-3 pb-1">
-        {ranked.map((base) => {
-          const meta = base !== "none" ? CLOSURE_META[base] : null;
-          const sib = siblingFor(base);
-          const selected = activeBase === base;
-          if (!meta) return null;
-          return (
-            <ClosureTile key={base} name={meta.name} benefit={meta.benefit}
-                         imageUrl={sib?.heroImageUrl ?? null}
-                         glyph={CLOSURE_GLYPH[base] ?? SprayBottle}
-                         selected={selected}
-                         onClick={() => commit(base)} />
-          );
-        })}
-      </div>
-    </div>
-  );
-
   /* CTA stack — quantity + add to cart, then the working price summary.
      The sample CTA was retired 2026-09-02: samples go through the quote
      flow and Grace, not a second button competing with the cart. */
-  const linePrice = tierPrice != null ? tierPrice * qty : null;
   const ctaStack = (
     <div className="mt-5">
+      <div className="mb-3 flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 text-sm">
+        <span className="font-semibold tabular-nums text-obsidian">
+          {tierPrice != null ? `$${tierPrice.toFixed(2)} /ea` : "Price on request"}
+        </span>
+        {caseQty && tierPrice != null ? (
+          <span className="text-slate">
+            ${ (tierPrice * caseQty).toFixed(2) } per case of {caseQty.toLocaleString()}
+          </span>
+        ) : null}
+      </div>
       <div className="flex items-stretch gap-3">
         <div className="flex items-center border border-champagne rounded-[3px]">
           <button type="button" aria-label="Decrease quantity"
                   onClick={() => onQtyChange?.(Math.max(1, qty - 1))}
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
                              transition-colors duration-200">−</button>
-          <span className="min-w-[2.5rem] text-center text-md font-semibold
-                           text-obsidian tabular-nums">{qty}</span>
+          <input type="number" min={1} inputMode="numeric" aria-label="Quantity"
+                 value={qty}
+                 onChange={(event) => {
+                   const next = Number(event.target.value);
+                   onQtyChange?.(Number.isFinite(next) ? Math.max(1, Math.floor(next)) : 1);
+                 }}
+                 className="min-w-[3rem] bg-transparent text-center text-md font-semibold text-obsidian tabular-nums outline-none" />
           <button type="button" aria-label="Increase quantity"
                   onClick={() => onQtyChange?.(qty + 1)}
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
                              transition-colors duration-200">+</button>
         </div>
-        <button type="button" onClick={onAddToCart}
-                className="flex-1 flex items-center justify-center gap-2 py-2.5
-                           border border-obsidian text-obsidian text-md font-semibold
-                           rounded-[3px] transition-colors duration-200
-                           hover:bg-obsidian hover:text-white
-                           focus-visible:outline-2 focus-visible:outline-offset-2
-                           focus-visible:outline-muted-gold">
-          <ShoppingBag className="h-4 w-4" />
-          Add to cart
-        </button>
-      </div>
-
-      {priceEach != null && ladder.length > 0 && (
-        <div id="volume-pricing" style={{ scrollMarginTop: 120 }}
-             className="mt-4 border-y border-champagne/50">
-          <button type="button" onClick={() => setTiersOpen((v) => !v)}
-                  aria-expanded={tiersOpen}
-                  className="w-full flex items-center justify-between py-3">
-            <span className="text-xs uppercase tracking-eyebrow font-semibold text-slate">
-              Volume pricing · by quote
-            </span>
-            <span className="flex items-baseline gap-3">
-              {ladder.length > 1 && (
-                <span className="text-spec text-slate tabular-nums">
-                  from ${ladder[ladder.length - 1].price.toFixed(2)} ea
-                </span>
-              )}
-              <CaretDown className={`h-3.5 w-3.5 text-slate transition-transform
-                                     duration-200 ${tiersOpen ? "rotate-180" : ""}`} />
-            </span>
+        {checkoutReady ? (
+          <button type="button" onClick={onAddToCart}
+                  className="flex-1 flex items-center justify-center gap-2 py-2.5
+                             border border-obsidian text-obsidian text-md font-semibold
+                             rounded-[3px] transition-colors duration-200
+                             hover:bg-obsidian hover:text-white
+                             focus-visible:outline-2 focus-visible:outline-offset-2
+                             focus-visible:outline-muted-gold">
+            <ShoppingBag className="h-4 w-4" />
+            Add to cart
           </button>
-
-          {tiersOpen && (<>
-            <div className="pb-1 space-y-1">
-              {ladder.map((t) => {
-                const active = activeTier?.minQty === t.minQty;
-                const save = priceEach > 0
-                  ? Math.round((1 - t.price / priceEach) * 100) : 0;
-                return (
-                  <div key={t.minQty}
-                       className={`grid grid-cols-[1fr_auto_auto_92px] items-center gap-2
-                                   rounded-[2px] px-2.5 py-1.5 transition-colors duration-200
-                                   ${active ? "bg-white ring-1 ring-champagne/60" : ""}`}>
-                    <button type="button" onClick={() => onQtyChange?.(t.minQty)}
-                            aria-label={`Set quantity to ${t.minQty}`}
-                            className={`text-left text-sm ${active
-                              ? "font-semibold text-obsidian"
-                              : "text-slate hover:text-obsidian"}`}>
-                      {t.minQty.toLocaleString()}+ units
-                    </button>
-                    <span>
-                      {save > 0 && (
-                        <span className="text-2xs uppercase tracking-label font-semibold
-                                         text-[#1F6B49] bg-[#2E9E6B]/10 border border-[#2E9E6B]/30
-                                         rounded-full px-1.5 py-0.5">
-                          Save {save}%
-                        </span>
-                      )}
-                    </span>
-                    <span className={`text-sm tabular-nums text-right ${active
-                      ? "font-semibold text-obsidian" : "text-obsidian"}`}>
-                      ${t.price.toFixed(2)} ea
-                    </span>
-                    {active ? (
-                      <button type="button" onClick={onAddToCart}
-                              className="text-2xs uppercase tracking-label font-semibold
-                                         bg-obsidian text-white rounded-[2px] py-1.5
-                                         transition-colors duration-200
-                                         hover:bg-muted-gold hover:text-obsidian">
-                        Add to cart
-                      </button>
-                    ) : (
-                      <button type="button" onClick={() => onQtyChange?.(t.minQty)}
-                              className="text-2xs uppercase tracking-label font-semibold
-                                         text-slate hover:text-gold-dim py-1.5">
-                        Select
-                      </button>
-                    )}
-                  </div>
-                );
-              })}
-            </div>
-            {linePrice != null && (
-              <div className="flex items-baseline justify-between mt-1 pt-2 border-t border-champagne/50">
-                <span className="text-sm text-slate">Your price · {qty.toLocaleString()} unit{qty === 1 ? "" : "s"}</span>
-                <span className="text-md font-semibold text-obsidian tabular-nums">
-                  ${linePrice.toFixed(2)}
-                </span>
-              </div>
-            )}
-            <p className="text-spec text-slate mt-2 pb-3">
-              Volume rates are confirmed on a quote — online checkout is billed
-              at the ${priceEach.toFixed(2)}/ea rate.{" "}
-              {quoteHref && (
-                <a href={quoteHref} className="font-semibold text-gold-dim underline underline-offset-2">
-                  Request a quote
-                </a>
-              )}
-            </p>
-          </>)}
-        </div>
-      )}
-
-      {/* next-tier nudge — one tap to the next price break */}
-      {nextTier && priceEach != null && nextTier.price < priceEach && (
-        <button type="button" onClick={() => onQtyChange?.(nextTier.minQty)}
-                className="w-full mt-3 flex items-center justify-between gap-3 rounded-[3px]
-                           border border-muted-gold/40 bg-muted-gold/10 px-3 py-2.5
-                           text-left transition-colors duration-200
-                           hover:bg-muted-gold hover:text-obsidian group">
-          <span className="text-spec text-obsidian">
-            Add <span className="font-semibold">{(nextTier.minQty - qty).toLocaleString()} more</span>{" "}
-            to reach <span className="font-semibold">{nextTier.minQty.toLocaleString()}+</span> at{" "}
-            <span className="font-semibold">${nextTier.price.toFixed(2)}/ea</span>
-          </span>
-          <span className="shrink-0 text-2xs uppercase tracking-label font-semibold text-gold-dim
-                           group-hover:text-obsidian">
-            Save {Math.round((1 - nextTier.price / priceEach) * 100)}%
-          </span>
-        </button>
-      )}
+        ) : (
+          <a href={quoteHref ?? "#"}
+             className="flex-1 flex items-center justify-center py-2.5 border border-obsidian bg-obsidian text-md font-semibold text-white rounded-[3px] hover:bg-muted-gold">
+            Request Quote
+          </a>
+        )}
+      </div>
+      {volumePricing ? <div className="mt-4" data-testid="pdp-volume-under-atc">{volumePricing}</div> : null}
     </div>
   );
 
@@ -1012,8 +785,7 @@ export default function ConfiguratorPdp({
           return (
             <button key={g.id} type="button" aria-pressed={on}
                onClick={() => {
-                 if (g.id in GLASS_PRESETS) setGlassOverride(g.id as GlassPresetId);
-                 if (g.href && g.href !== "#") router.replace(g.href, { scroll: false });
+                 if (g.href && g.href !== "#") onProductUrlChange?.(g.href, "glass");
                }}
                className={`group relative block w-full rounded-[2px] bg-white text-center transition-colors duration-200
                            ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>
@@ -1096,11 +868,12 @@ export default function ConfiguratorPdp({
 
   /* ------------------------------------------------------- step panel */
   const stepPanel = (
-    <div className="h-full overflow-y-auto px-1.5">
+    <div className="min-w-0">
       {identity}
       {specStrip}
       {priceBlock}
-      {closureRow}
+      {summaryStrip}
+      {glassStep ? <div className="mt-6">{glassStep}</div> : null}
       {/* The overcap chooser is gone: the stage's cap-on/off toggle is the one
           cap control (decision 2026-09-02). Roller material now sits here,
           above the fold. */}
@@ -1133,7 +906,11 @@ export default function ConfiguratorPdp({
         </div>
       )}
       <div className="mt-6 pt-5 border-t border-champagne/50">{finishRow()}</div>
+      <div className="mt-6">{configCard}</div>
       {ctaStack}
+      <div className="mt-4 flex justify-between text-caption text-slate">
+        <span>Secure checkout</span><span>30-day returns</span>
+      </div>
     </div>
   );
 
@@ -1156,77 +933,11 @@ export default function ConfiguratorPdp({
       {/* 1. glass */}
       {glassStep && <div className="mt-7 px-4">{glassStep}</div>}
 
-      {/* 2. closure */}
-      <div className="mt-7 px-4">
-        <div className="flex items-center justify-between">
-          <p className="flex items-center gap-1.5 text-2xs font-semibold uppercase tracking-label text-slate">
-            2. Closure Type <CheckCircle className="h-3.5 w-3.5 text-gold-dim" />
-          </p>
-          {neckSize && <span className="text-spec text-slate">Verified for {neckSize}</span>}
-        </div>
-        <div className="mt-3 -mx-4 px-4 flex gap-2.5 overflow-x-auto pb-1
-                        [scrollbar-width:none]">
-          {ranked.map((base) => {
-            const meta = base !== "none" ? CLOSURE_META[base] : null;
-            const sib = siblingFor(base);
-            const selected = activeBase === base;
-            if (!meta) return null;
-            return (
-              <button key={base} type="button"
-                      onClick={() => commit(base)}
-                      className="shrink-0 w-[118px] text-left">
-                <div className={`relative aspect-square bg-product-well rounded-[3px]
-                                 ${selected ? "border-[1.5px] border-obsidian"
-                                            : "border border-champagne"}`}>
-                  {sib?.heroImageUrl ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img src={sib.heroImageUrl} alt={meta.name}
-                         className="h-full w-full object-cover rounded-[2px]" />
-                  ) : (() => {
-                    const Glyph = CLOSURE_GLYPH[base] ?? SprayBottle;
-                    return (
-                      <span className="absolute inset-0 flex items-center justify-center">
-                        <Glyph className="h-8 w-8 text-obsidian/25" />
-                      </span>
-                    );
-                  })()}
-                  {selected && (
-                    <span className="absolute top-1.5 right-1.5 h-[22px] w-[22px]
-                                     rounded-full bg-obsidian flex items-center
-                                     justify-center">
-                      <Check className="h-3 w-3 text-white" weight="bold" />
-                    </span>
-                  )}
-                </div>
-                <div className={`mt-0 px-2 py-1.5 bg-white border border-t-0
-                                 border-champagne rounded-b-[3px] text-md
-                                 ${selected ? "font-semibold border-obsidian" : ""}`}>
-                  {meta.name.split(" ")[0] === "Fine" ? "Spray"
-                    : meta.name.split(" ")[0] === "Bulb" ? "Bulb"
-                    : meta.name.split(" ")[0] === "Glass" ? "Dropper"
-                    : meta.name.split(" ")[0] === "Pour" ? "Reducer"
-                    : meta.name.split(" ")[0] === "Lotion" ? "Pump"
-                    : meta.name.split(" ")[0]}
-                </div>
-              </button>
-            );
-          })}
-        </div>
-      </div>
-
-      {/* 3. finish */}
+      {/* 2. finish */}
       <div className="mt-7 px-4">{finishRow(true)}</div>
 
       {/* the configuration, resolved */}
       <div className="mt-8 px-4">{configCard}</div>
-      <div className="mt-4 px-4 flex items-center justify-between text-caption text-slate">
-        {ladder.length > 1 ? (
-          <a href="#volume-pricing" onClick={() => setTiersOpen(true)} className="text-gold-dim underline underline-offset-2">
-            ${ladder[ladder.length - 1].price.toFixed(2)} at {ladder[ladder.length - 1].minQty.toLocaleString()}+ · {ladder.length} volume tiers
-          </a>
-        ) : <span />}
-      </div>
-
       {/* Grace hook */}
       {onAskGrace && (
         <p className="mt-6 px-4 flex items-center gap-2 text-sm text-slate">
@@ -1246,128 +957,30 @@ export default function ConfiguratorPdp({
       <div className="h-24" />
     </div>
   );
+  void mobile;
 
   return (
     <section className="w-full">
-      {/* desktop — glass rail | stage | buy column. The rail runs down the
-          left of the viewport (Jordan) and takes lifestyle tiles later. */}
-      {/* desktop — stage panel | guided steps | configuration + price.
-          The proportions are the approved design's (2 Sep 2026); the
-          tokens are ours, which is what the design was drawn in. */}
-      {/* 40 px page gutters, as the design has them (the host gives 24). The
-          global Grace button is fixed 56 px wide at the bottom-right, so the
-          right gutter is wider: "Add to cart" must never sit underneath it
-          (measured 2 Sep: button x 1362-1418 on a 1440 viewport). */}
-      <div className="hidden lg:grid grid-cols-[minmax(400px,1fr)_minmax(360px,470px)_300px] gap-5 items-start"
-           style={{ paddingLeft: 16, paddingRight: 96 }}>
-        <section className="flex flex-col gap-3 border border-champagne/50 bg-linen p-4">
-          {/* 10/11 is the plate's aspect, so photo, kit and 3D are always the same size */}
-          <div className="relative aspect-[10/11] overflow-hidden bg-travertine">{stage}</div>
-          {stageToggle}
-          <p className="flex items-center justify-center gap-1.5 text-center text-caption text-slate">
-            <Sparkle className="h-3.5 w-3.5 text-muted-gold" weight="fill" />
-            Same configuration across all modes. Changes update in real time.
-          </p>
-        </section>
-
-        <section className="min-w-0 px-2 pt-1.5">
-          {identity}
-          <p className="mt-2.5 flex gap-2.5 text-sm text-slate tabular-nums">
-            {neckSize && <span>{neckSize} Neck</span>}
-            {neckSize && capacityText && <span>·</span>}
-            {capacityText && <span>{capacityText}</span>}
-          </p>
-          {summaryStrip}
-          <div className="mt-6">{glassStep}</div>
-          {closureRow}
-          {activeBase === "roller" && (
-            <div className="mt-6 border-t border-champagne/50 pt-5">
-              <p className="text-2xs font-semibold uppercase tracking-label">
-                <span className="text-slate">Roller ball</span>
-                <span className="text-slate"> · </span>
-                <span className="text-obsidian normal-case tracking-normal text-caption">
-                  {rollerVariant === "metal" ? "Stainless steel" : "Plastic"}
-                </span>
-              </p>
-              <div className="mt-2.5 grid max-w-xs grid-cols-2 gap-2.5">
-                {([["metal", "Stainless steel", "Smooth, cooling glide"],
-                   ["plastic", "Plastic", "Lighter, lower cost"]] as const).map(
-                  ([id, label, note]) => (
-                    <button key={id} type="button" onClick={() => setRollerVariant(id)}
-                            aria-pressed={rollerVariant === id}
-                            disabled={!rollerOffered(id)}
-                            title={rollerOffered(id) ? undefined : "Not offered for this bottle"}
-                            className={`rounded-[3px] px-3 py-2 text-left transition-colors duration-200
-                                        disabled:cursor-not-allowed disabled:opacity-40 ${rollerVariant === id
-                                          ? "border-[1.5px] border-obsidian bg-white"
-                                          : "border border-champagne hover:border-muted-gold"}`}>
-                      <span className="block text-spec font-semibold text-obsidian">{label}</span>
-                      <span className="block text-2xs text-slate mt-0.5">{note}</span>
-                    </button>
-                  ))}
-              </div>
-            </div>
-          )}
-          <div className="mt-6">{finishRow()}</div>
-        </section>
-
-        <aside className="flex flex-col gap-3.5">
-          {configCard}
-          <div className="border border-champagne/50 bg-linen p-5">
-            {priceBlock}
-            {ctaStack}
-            <div className="mt-4 flex justify-between text-caption text-slate">
-              <span>Secure checkout</span><span>30-day returns</span>
-            </div>
+      <FocusedPdpLayout
+        className="px-4 sm:px-0"
+        stage={(
+          <div className="relative h-full w-full border border-champagne/50 bg-travertine">
+            {stage}
+            <div className="absolute inset-x-[-1px] top-full">{stageToggle}</div>
           </div>
-        </aside>
-      </div>
-      {mobile}
+        )}
+        purchase={stepPanel}
+      />
     </section>
   );
 }
 
-/* ------------------------------------------------------- ClosureTile */
-function ClosureTile({ name, benefit, imageUrl, glyph: Glyph, selected, onClick }: {
-  name: string; benefit: string; imageUrl: string | null;
-  glyph: typeof SprayBottle; selected: boolean; onClick: () => void;
-}) {
-  const [broken, setBroken] = useState(false);
-  const showImg = imageUrl && !broken;
+function DimensionRow({ label, value }: { label: string; value: string }) {
   return (
-    <button type="button" onClick={onClick} aria-pressed={selected}
-            title={benefit} className="shrink-0 w-24 text-center group">
-      <div className={`relative aspect-square bg-product-well rounded-[3px]
-                       overflow-hidden transition-colors duration-200
-                       ${selected
-                         ? "border-[1.5px] border-obsidian"
-                         : "border border-champagne group-hover:border-muted-gold"}`}>
-        {showImg ? (
-          // the swatch shows the CLOSURE, not a shrunken bottle: the
-          // renders are 2080x2288 packshots with the closure at the top,
-          // so crop to the upper portion (Jordan: "the actual photo of
-          // that component, the top of it")
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={imageUrl} alt={name} onError={() => setBroken(true)}
-               className="absolute left-1/2 top-0 max-w-none w-[185%]
-                          -translate-x-1/2 -translate-y-[4%]" />
-        ) : (
-          <span className="absolute inset-0 flex items-center justify-center">
-            <Glyph className="h-7 w-7 text-obsidian/25" />
-          </span>
-        )}
-        {selected && (
-          <span className="absolute top-1.5 right-1.5 h-5 w-5 rounded-full
-                           bg-obsidian flex items-center justify-center">
-            <Check className="h-3 w-3 text-white" weight="bold" />
-          </span>
-        )}
-      </div>
-      <span className={`block mt-1.5 text-spec leading-tight
-                        ${selected ? "font-semibold text-obsidian" : "text-slate"}`}>
-        {name}
-      </span>
-    </button>
+    <div className="flex min-h-11 items-center justify-between gap-5 border-t border-champagne/50 py-3 text-sm">
+      <dt className="text-slate">{label}</dt>
+      <dd className="font-semibold tabular-nums text-obsidian">{value}</dd>
+    </div>
   );
 }
 

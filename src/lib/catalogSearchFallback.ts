@@ -4,15 +4,17 @@ import {
     COMPONENT_CATEGORIES,
     FAMILY_ORDER,
     type CatalogFilters,
+    type RollerMaterial,
     type SortValue,
     type ViewMode,
     applicatorBucketMatchesProductValues,
+    rollerMaterialMatchesProductValues,
     canonicalGlassColor,
     catalogSearchMatches,
     catalogSearchResultTieBreak,
     catalogSearchScore,
     classifyComponentType,
-    parseCapacityLabelMl,
+    capacitySelectionMatches,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 
@@ -61,7 +63,39 @@ export interface CatalogSearchVariantPreviewRow {
         capStyle: string | null;
         capHeight: string | null;
         ballMaterial: string | null;
+        stockStatus: string | null;
+        caseQuantity: number | null;
+        webPrice1pc: number | null;
+        shopifyVariantId: string | null;
+        shopifySellable: boolean | null;
     }>;
+}
+
+type CatalogSkuPreviewRow = {
+    groupId: string;
+    variants: Array<{
+        websiteSku?: string | null;
+        graceSku?: string | null;
+    }>;
+};
+
+export function resolveCatalogGroupSku(
+    groupId: string,
+    primarySkus: CatalogSearchPrimarySku[],
+    variantPreviewRows: CatalogSkuPreviewRow[],
+): CatalogSearchPrimarySku {
+    const primary = primarySkus.find((row) => row.groupId === groupId);
+    const variants = variantPreviewRows.find((row) => row.groupId === groupId)?.variants ?? [];
+    const variant = variants.find((row) => row.websiteSku || row.graceSku) ?? variants[0];
+    return {
+        groupId,
+        websiteSku: primary?.websiteSku || variant?.websiteSku || null,
+        graceSku: primary?.graceSku || variant?.graceSku || null,
+    };
+}
+
+export function catalogGroupSkuLabel(sku: CatalogSearchPrimarySku): string {
+    return sku.websiteSku || sku.graceSku || "—";
 }
 
 export interface CatalogSearchResultShape {
@@ -70,6 +104,7 @@ export interface CatalogSearchResultShape {
         categories: Record<string, number>;
         collections: Record<string, number>;
         applicators: Record<string, number>;
+        rollerMaterials: Record<RollerMaterial, number>;
         families: Record<string, number>;
         colors: Record<string, number>;
         capacities: Record<string, { label: string; ml: number | null; count: number }>;
@@ -131,6 +166,9 @@ export function buildCatalogSearchResult(input: {
         if (!skipKeys.has("applicators") && filters.applicators.length > 0) {
             rows = rows.filter((group) => filters.applicators.some((bucket) => matchesApplicatorBucket(group, bucket)));
         }
+        if (!skipKeys.has("rollerMaterials") && filters.rollerMaterials.length > 0) {
+            rows = rows.filter((group) => filters.rollerMaterials.some((material) => rollerMaterialMatchesProductValues(material, group.applicatorTypes ?? [])));
+        }
         if (!skipKeys.has("families") && filters.families.length > 0) {
             const set = new Set(filters.families);
             rows = rows.filter((group) => group.family != null && set.has(group.family));
@@ -140,8 +178,7 @@ export function buildCatalogSearchResult(input: {
             rows = rows.filter((group) => set.has(canonicalGlassColor(group.color)));
         }
         if (!skipKeys.has("capacities") && filters.capacities.length > 0) {
-            const selectedMls = new Set(filters.capacities.map(parseCapacityLabelMl).filter((value): value is number => value != null));
-            rows = rows.filter((group) => group.capacityMl != null && selectedMls.has(group.capacityMl));
+            rows = rows.filter((group) => capacitySelectionMatches(group.capacityMl, filters.capacities));
         }
         if (!skipKeys.has("neckThreadSizes") && filters.neckThreadSizes.length > 0) {
             const set = new Set(filters.neckThreadSizes);
@@ -160,6 +197,7 @@ export function buildCatalogSearchResult(input: {
 
     const result = runFilters();
     const applicatorFacetBase = runFilters(new Set(["applicators"]));
+    const rollerMaterialFacetBase = runFilters(new Set(["rollerMaterials"]));
     const familyFacetBase = runFilters(new Set(["families"]));
     const colorFacetBase = runFilters(new Set(["colors"]));
     const capacityFacetBase = runFilters(new Set(["capacities"]));
@@ -177,6 +215,10 @@ export function buildCatalogSearchResult(input: {
             capacities[label].count++;
         }
     }
+    const rollerMaterials = {
+        metal: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("metal", group.applicatorTypes ?? [])).length,
+        plastic: rollerMaterialFacetBase.filter((group) => rollerMaterialMatchesProductValues("plastic", group.applicatorTypes ?? [])).length,
+    } satisfies Record<RollerMaterial, number>;
     const categoryFacetBase = runFilters(new Set(["category", "collection"]));
     const priceFloors = result.map((group) => group.priceRangeMin).filter((value): value is number => value != null);
     const priceCeilings = result.map((group) => group.priceRangeMax ?? group.priceRangeMin).filter((value): value is number => value != null);
@@ -184,6 +226,7 @@ export function buildCatalogSearchResult(input: {
         categories: countBy(categoryFacetBase, (group) => group.category),
         collections: countBy(categoryFacetBase, (group) => group.bottleCollection),
         applicators,
+        rollerMaterials,
         families: countBy(familyFacetBase.filter((group) => !COMPONENT_CATEGORIES.has(group.category)), (group) => group.family),
         colors: countBy(colorFacetBase, (group) => canonicalGlassColor(group.color)),
         capacities,
@@ -239,7 +282,9 @@ export function buildCatalogSearchResult(input: {
         facets,
         totalCount: sorted.length,
         nextCursor: offset + items.length < sorted.length ? String(offset + items.length) : null,
-        primarySkus: input.primarySkus.filter((row) => visibleIds.has(row.groupId)),
+        primarySkus: items.map((group) =>
+            resolveCatalogGroupSku(group._id, input.primarySkus, input.variantPreviewRows)
+        ),
         variantPreviewRows: input.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)),
     };
 }

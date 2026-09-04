@@ -1,4 +1,6 @@
 import {
+    APPLICATOR_NAV,
+    type ApplicatorNavValue,
     EMPTY_FILTERS,
     type CatalogFacetKey,
     type CatalogFilters,
@@ -6,7 +8,7 @@ import {
 } from "@/lib/catalogFilters";
 
 export type CatalogSurfaceManifest = {
-    id: "master" | "cylinder";
+    id: "master" | "cylinder" | "family" | "application";
     fixedFilters: Partial<CatalogFilters>;
     /**
      * Sidebar order. This IS the render order on the master catalogue — the
@@ -52,16 +54,45 @@ export const MASTER_CATALOG_SURFACE: CatalogSurfaceManifest = {
     resultLabel: "products",
 };
 
-export const CYLINDER_CATALOG_SURFACE: CatalogSurfaceManifest = {
-    id: "cylinder",
-    fixedFilters: { families: ["Cylinder"] },
-    visibleFacets: ["capacities", "colors", "applicators", "neckThreadSizes"],
-    defaultOpenFacets: ["capacities"],
-    mobileDefaultOpenFacets: ["capacities"],
-    truncateAfter: 8,
-    defaultSort: "capacity-asc",
-    resultLabel: "Cylinder groups",
-};
+export function familyCatalogSurface(family: string): CatalogSurfaceManifest {
+    return {
+        id: family === "Cylinder" ? "cylinder" : "family",
+        fixedFilters: { families: [family] },
+        visibleFacets: ["capacities", "colors", "applicators", "neckThreadSizes"],
+        defaultOpenFacets: ["capacities"],
+        mobileDefaultOpenFacets: ["capacities"],
+        truncateAfter: 8,
+        defaultSort: "capacity-asc",
+        resultLabel: `${family} groups`,
+    };
+}
+
+export const CYLINDER_CATALOG_SURFACE: CatalogSurfaceManifest = familyCatalogSurface("Cylinder");
+
+export function applicationCatalogSurface(application: ApplicatorNavValue): CatalogSurfaceManifest {
+    const nav = APPLICATOR_NAV.find((candidate) => candidate.value === application);
+    if (!nav) throw new Error(`Unknown application surface: ${application}`);
+    const isRollOn = application === "rollon";
+    return {
+        id: "application",
+        fixedFilters: {
+            applicators: [...nav.buckets],
+            ...(isRollOn ? {} : { rollerMaterials: [] }),
+        },
+        visibleFacets: [
+            "capacities",
+            ...(isRollOn ? ["rollerMaterials" as const] : []),
+            "colors",
+            "neckThreadSizes",
+            "families",
+        ],
+        defaultOpenFacets: ["capacities"],
+        mobileDefaultOpenFacets: ["capacities"],
+        truncateAfter: 8,
+        defaultSort: "capacity-asc",
+        resultLabel: `${nav.label} groups`,
+    };
+}
 
 export function applyCatalogSurface(
     filters: Partial<CatalogFilters>,
