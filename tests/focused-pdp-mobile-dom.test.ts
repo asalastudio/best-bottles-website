@@ -55,6 +55,35 @@ afterEach(() => {
 });
 
 describe("focused PDP mobile purchase surface", () => {
+    it("keeps the reviewed cap-off photograph after kit decode and retains kit rendering for cap-on", async () => {
+        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
+        installInstantImageDecode();
+        sessionStorage.removeItem("bb:pdp-stage");
+        const container = document.createElement("div");
+        containers.push(container);
+        document.body.append(container);
+        const root = createRoot(container);
+        await act(async () => {
+            root.render(createElement(ConfiguratorPdp, {
+                currentSlug: "cylinder-25ml-clear-18-415-finemist", groupTitle: "Cylinder 25 mL", capacityLabel: "Clear glass",
+                qty: 1, priceEach: 2.5, websiteSku: "WEB-25", selectedGraceSku: "GRACE-25",
+                plateImage: "https://example.test/capped.webp", plateImageCapOff: "https://example.test/recovered-off.webp",
+                kitQuery: kitFor("WEB-25", "https://example.test/old-kit.webp"),
+            }));
+            await Promise.resolve();
+            await Promise.resolve();
+        });
+        expect(container.querySelector('img[src="https://example.test/recovered-off.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).toBeNull();
+        await act(async () => {
+            container.querySelector<HTMLButtonElement>('[aria-label="Cap on or off"]')!.click();
+            await Promise.resolve();
+            await Promise.resolve();
+        });
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/recovered-off.webp"]')).toBeNull();
+        await act(async () => { root.unmount(); });
+    });
     it("contains option overflow at the real closure rail rather than the 390px page", async () => {
         const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         const container = document.createElement("div");

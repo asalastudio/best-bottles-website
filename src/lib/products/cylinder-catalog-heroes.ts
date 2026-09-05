@@ -1,31 +1,23 @@
 import heroRows from "./cylinder-catalog-heroes.json";
 
 export type CylinderCatalogHero = (typeof heroRows)[number];
+export const CYLINDER_HERO_BASELINE = 0.91;
 
-export const CYLINDER_HERO_BASELINE = 0.9;
-
-/** Anchor the photographed bottle, rather than the whitespace in its canvas. */
-export function getCylinderHeroFraming(hero: CylinderCatalogHero) {
-    const { baselineY, anchorTopY, targetHeight } = hero.framing;
-    const imageHeightFraction = Math.min(1, (10 / 11) / (hero.width / hero.height));
-    const inset = (1 - imageHeightFraction) / 2;
-    const scale = anchorTopY != null && targetHeight != null
-        ? targetHeight / ((baselineY - anchorTopY) * imageHeightFraction)
-        : 1;
-    const translateY = CYLINDER_HERO_BASELINE - (inset + baselineY * imageHeightFraction) * scale;
-    const background = `linear-gradient(to bottom, ${hero.framing.backgroundStops.map(({ offset, color }) =>
-        `${color} ${(translateY + (inset + offset * imageHeightFraction) * scale) * 100}%`,
-    ).join(", ")})`;
-    return { scale, translateY, imageHeightFraction, inset, background };
+/** Preserve the whole-image registration from the approved interactive review. */
+export function getCylinderHeroStyle(hero: CylinderCatalogHero, state: "empty" | "filled" = "empty") {
+    const f = state === "filled" ? hero.hoverFraming : hero.framing;
+    return {
+        transformOrigin: "0 0",
+        transform: `translate(${f.translateXPercent}%, ${f.translateYPercent}%) scale(${f.scale})`,
+    };
 }
 
 const heroesBySlug = new Map(heroRows.map((hero) => [hero.groupSlug, hero]));
-// The refreshed preview snapshot uses this route for the same two exact 30 mL SKUs.
 const verifiedPreviewRoutes: Readonly<Record<string, string>> = {
     "cylinder-30ml-clear-18-415-finemist": "cylinder-30ml-clear-18-415",
 };
 
-/** Use a studio image only while its exact assembly still belongs to this result. */
+/** A filtered result must still contain the exact pictured assembly. */
 export function getCylinderCatalogHero(
     groupSlug: string,
     variants: readonly { websiteSku?: string | null }[],
@@ -34,4 +26,12 @@ export function getCylinderCatalogHero(
     return hero && variants.some((variant) => variant.websiteSku === hero.websiteSku)
         ? { ...hero, groupSlug }
         : null;
+}
+
+/** Open the pictured SKU while retaining finder and applicator context. */
+export function getCylinderHeroProductHref(hero: CylinderCatalogHero | null | undefined, href: string): string {
+    if (!hero) return href;
+    const url = new URL(href, "https://bestbottles.com");
+    url.searchParams.set("sku", hero.websiteSku);
+    return `${url.pathname}${url.search}${url.hash}`;
 }

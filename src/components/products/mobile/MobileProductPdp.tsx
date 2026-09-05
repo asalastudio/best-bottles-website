@@ -489,7 +489,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductHero
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={kitPartsWithCap}
+                kitParts={viewMode === "capOff" && decodedPlate.url === shownPlate?.imageCapOff && decodedPlate.url ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -621,7 +621,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={viewerKitParts}
+                kitParts={viewerMode === "capOff" && viewerPlate.url === shownPlate?.imageCapOff && viewerPlate.url ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}

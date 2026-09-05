@@ -4,7 +4,7 @@ import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
 import type { BrowseContext } from "@/lib/products/focused-shopping";
-import { getCylinderCatalogHero, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
+import { getCylinderCatalogHero, getCylinderHeroProductHref, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
 
 type GuidedFinderAvailability = "in-stock" | "confirm-availability";
 
@@ -139,7 +139,7 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
                 shopifyVariantId: variant.shopifyVariantId,
                 shopifySellable: variant.shopifySellable,
             }) : false,
-            href: `/products/${group.slug}`,
+            href: getCylinderHeroProductHref(catalogHero, `/products/${group.slug}`),
         };
         const products = grouped.get(family) ?? [];
         products.push(product);

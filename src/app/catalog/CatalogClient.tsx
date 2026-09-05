@@ -15,7 +15,7 @@ import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
-import { getCylinderCatalogHero, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
+import { getCylinderCatalogHero, getCylinderHeroProductHref, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -290,7 +290,7 @@ function ProductGroupCard({
     primaryWebsiteSku?: string | null;
     catalogHero?: CylinderCatalogHero | null;
 }) {
-    const href = productGroupHref(group, applicatorParam);
+    const href = getCylinderHeroProductHref(catalogHero, productGroupHref(group, applicatorParam));
     const customerDisplayName = catalogHero?.alt ?? displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         usableProductImageUrl(group.heroImageUrl) ??

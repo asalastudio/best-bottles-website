@@ -1,0 +1,48 @@
+{
+  "base": "http://localhost:3002",
+  "at": "2026-09-05T18:34:46.452Z",
+  "errors": [],
+  "failedHoverFallback": {
+    "emptyVisible": true,
+    "filledRemoved": true,
+    "ready": "false"
+  },
+  "views": [
+    {
+      "name": "catalog-desktop",
+      "cards": 52,
+      "overflow": false,
+      "reducedMotion": true
+    },
+    {
+      "name": "family-desktop",
+      "cards": 52,
+      "overflow": false,
+      "reducedMotion": true
+    },
+    {
+      "name": "catalog-mobile",
+      "cards": 52,
+      "overflow": false,
+      "reducedMotion": true
+    },
+    {
+      "name": "family-mobile",
+      "cards": 52,
+      "overflow": false,
+      "reducedMotion": true
+    }
+  ],
+  "totalCardChecks": 208,
+  "explodedViewVerification": {
+    "route": "/products/cylinder-100ml-clear-18-415-lotionpump?sku=LB-CYL-CLR-100ML-LPM-CPR",
+    "order": [
+      "overcap",
+      "pump",
+      "diptube",
+      "body"
+    ],
+    "visuallyVerified": true,
+    "focusedTestsPassed": 6
+  }
+}
