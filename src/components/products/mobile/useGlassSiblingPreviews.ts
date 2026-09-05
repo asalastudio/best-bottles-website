@@ -13,7 +13,7 @@ import { api } from "../../../../convex/_generated/api";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import { filterVariantsForProductGroup } from "@/lib/productVariantIntegrity";
-import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
+import { resolveGlassSiblingVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 
 export type GlassSiblingPreview = {
     slug: string;
@@ -24,28 +24,6 @@ export type GlassSiblingPreview = {
 };
 
 type SiblingGroupResult = { group: { color?: string | null } | null; variants: ProductVariant[] } | null | undefined | Error;
-
-/**
- * Same applicator + same finish when the sibling offers it; otherwise the
- * sibling's variant in the same roller material; otherwise its first variant.
- * Never null for a sibling that has any variant, so every glass option can be
- * previewed and confirmed.
- */
-function resolveSiblingVariant(
-    variants: ProductVariant[],
-    selection: { applicator: string | null; capOption: string | null },
-    deps: GuidedVariantDeps<ProductVariant>,
-): ProductVariant | null {
-    if (variants.length === 0) return null;
-    const exact = resolveGuidedVariant(variants, selection, deps);
-    if (exact) return exact;
-    const material = /metal/i.test(selection.applicator ?? "") ? /metal/i : /plastic/i.test(selection.applicator ?? "") ? /plastic/i : null;
-    const sameMaterial = material
-        ? variants.find((variant) => material.test(deps.applicator(variant) ?? ""))
-        : null;
-    const applicator = sameMaterial ? deps.applicator(sameMaterial) : deps.applicator(variants[0]!);
-    return resolveGuidedVariant(variants, { applicator, capOption: selection.capOption }, deps) ?? variants[0] ?? null;
-}
 
 export function useGlassSiblingPreviews(params: {
     enabled: boolean;
@@ -68,7 +46,7 @@ export function useGlassSiblingPreviews(params: {
             if (result === undefined) { out[slug] = { variant: null, pending: enabled }; continue; }
             if (result === null || result instanceof Error) { out[slug] = { variant: null, pending: false }; continue; }
             const variants = filterVariantsForProductGroup(result.group, result.variants);
-            out[slug] = { variant: resolveSiblingVariant(variants, selection, deps), pending: false };
+            out[slug] = { variant: resolveGlassSiblingVariant(variants, selection, deps), pending: false };
         }
         return out;
     }, [siblingSlugs, groupResults, selection, deps, enabled]);

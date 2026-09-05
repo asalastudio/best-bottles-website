@@ -49,3 +49,17 @@ export function guidedSelectionIsExact<V>(
     return variants.some((variant) =>
         (deps.applicator(variant) ?? null) === targetApplicator && deps.capFinish(variant) === selection.capOption);
 }
+
+/** Preserve the dispensing assembly and finish across glass sibling groups. */
+export function resolveGlassSiblingVariant<V>(
+    variants: readonly V[], selection: GuidedVariantSelection, deps: GuidedVariantDeps<V>,
+): V | null {
+    const exact = resolveGuidedVariant(variants, selection, deps);
+    if (exact) return exact;
+    const material = /metal/i.test(selection.applicator ?? "") ? /metal/i
+        : /plastic/i.test(selection.applicator ?? "") ? /plastic/i : null;
+    const sameMaterial = material ? variants.find(v => material.test(deps.applicator(v) ?? "")) : null;
+    const fallback = sameMaterial ?? variants[0];
+    if (!fallback) return null;
+    return resolveGuidedVariant(variants, { applicator: deps.applicator(fallback), capOption: selection.capOption }, deps);
+}
