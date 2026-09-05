@@ -1,5 +1,7 @@
 # Cylinder master-source plate and kit batch
 
+Latest plate result: [436 completed local Cylinder plates](2026-09-04-cylinder-plates-complete.md). The earlier counts below are retained as batch history.
+
 September 4, 2026. Local preparation only; **the complete Cylinder release is not finished**.
 
 ## Scope and result

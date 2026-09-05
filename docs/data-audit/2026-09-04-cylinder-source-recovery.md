@@ -1,5 +1,7 @@
 # Cylinder source recovery and remaining work
 
+Latest plate result: [436 completed local Cylinder plates](2026-09-04-cylinder-plates-complete.md). The earlier counts below are retained as batch history.
+
 Follow-up to the September 4 batch. This corrects the interpretation of the
 initial 40 `no-psd` matches. A failed exact filename match is not evidence that
 a bottle image is absent. The master inventory contains 6,073 files (5,934 PSDs);

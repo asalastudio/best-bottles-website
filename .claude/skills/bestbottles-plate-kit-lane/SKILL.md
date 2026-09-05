@@ -118,6 +118,21 @@ current readiness. Read `scripts/paperdoll/README.md` in the active repository f
 publisher options and implementation details; the source policy above supersedes
 older master-only sourcing instructions, without pretending code already supports it.
 
+A reviewed completion plan can now join accepted baseline plates with exact legacy
+rasters and visually verified alternate master filenames:
+
+```bash
+python3 scripts/paperdoll/complete_family_plates.py --plan BATCH/source-plan.json --batch BATCH
+```
+
+Supply every exact scope SKU once, hashed exact-SKU HTML evidence, and either a
+validated baseline receipt or an assembled source with explicit review lineage.
+Review body regions for hanging bulbs/tassels; their lowest or widest pixels may
+belong to the tassel, not the bottle. This local adapter preserves source hashes,
+validates outputs, and produces a searchable gallery and CSV. It deliberately
+leaves publication disabled and does not replace the guarded publisher. See the
+September 4 Cylinder completion report for the worked batch and evidence layout.
+
 Shopify studio-canvas photo composition can use the repository's
 `bestbottles-paperdoll-compositor` skill when relevant; the same legacy-first
 product-truth and source rules still apply.
