@@ -1,0 +1,43 @@
+{
+  "family": "Cylinder",
+  "confirmedAt": "2026-09-04",
+  "evidence": [
+    "Jordan confirmed that the three plastic flip-top Cylinders are complete standalone products, with no interchangeable-component kit requirement.",
+    "https://www.bestbottles.com/all-bottles/Perfume-vials-glass-bottles/large-dropper-bottles.php"
+  ],
+  "standaloneAssemblies": [
+    "PbClear4ozFlpWh",
+    "PbClear8ozFlpWh",
+    "PbNat16ozFlpWh"
+  ],
+  "frontSourceHolds": {
+    "GBSpry4mlClWh": {
+      "sourceSha256": "bdb1553385148221c84a8e7c14b66b7ed64d2af4585a59151362da30ae30d5ed",
+      "reason": "Source depicts the overcap beside the bottle, not an assembled front-on view.",
+      "evidence": "2026-09-04 visual review of the rendered plate and 17. Additional Bottles/GBSpry4mlClWh..psd"
+    }
+  },
+  "capacityConstraints": {
+    "GBCyl5BlkShSht": 5,
+    "GBCyl5BlkSht": 5,
+    "GBCyl5CuSht": 5,
+    "GBCyl5Gl": 5,
+    "GBCyl5GlMattSht": 5,
+    "GBCyl5GlSht": 5,
+    "GBCyl5Sl": 5,
+    "GBCyl5SlMattSht": 5,
+    "GBCyl5SlSht": 5,
+    "GBCyl5WhtSht": 5,
+    "GBCylBlu5BlkShSht": 5,
+    "GBCylBlu5BlkSht": 5,
+    "GBCylBlu5CuSht": 5,
+    "GBCylBlu5Gl": 5,
+    "GBCylBlu5GlMattSht": 5,
+    "GBCylBlu5GlSht": 5,
+    "GBCylBlu5Sl": 5,
+    "GBCylBlu5SlMattSht": 5,
+    "GBCylBlu5SlSht": 5,
+    "GBCylBlu5WhtSht": 5
+  },
+  "capacityEvidence": "September 4, 2026 5ml-cylinder-stage1-complete-reconciliation.md and bb-twenty-options.json establish these exact 20 assemblies as 5 mL / 13-415. The audit resolves legacy clear-bottle description wording of 5.5 mL in favor of exact product specifications and Jordan's confirmed identity. Conflicting current catalog values are held, not rewritten."
+}
