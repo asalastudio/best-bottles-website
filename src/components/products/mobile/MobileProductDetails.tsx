@@ -44,7 +44,7 @@ function DetailRow({ label, value }: { label: string; value: string | number | n
 
 export function specificationRows(variant: ProductVariant, sku: string | null, capFinish: string): Array<{ label: string; value: string | number | null | undefined }> {
     return [
-        { label: "SKU", value: sku },
+        { label: "SKU", value: variant.websiteSku || sku },
         { label: "Capacity", value: variant.capacity },
         { label: "Glass Color", value: variant.color },
         { label: "Neck Thread Size", value: variant.neckThreadSize },
@@ -53,7 +53,7 @@ export function specificationRows(variant: ProductVariant, sku: string | null, c
         { label: "Cap Style", value: variant.capStyle },
         { label: "Cap Color", value: capFinish },
         { label: "Trim Finish", value: variant.trimColor },
-        { label: "Cap Height", value: variant.capHeight },
+        { label: "Cap Profile", value: variant.componentProfile || variant.capHeight },
         { label: "Bottle Weight", value: variant.bottleWeightG ? `${variant.bottleWeightG}g` : null },
         { label: "Case Quantity", value: variant.caseQuantity ? `${variant.caseQuantity} units/case` : "Confirm before ordering" },
         { label: "Shape", value: variant.shape },

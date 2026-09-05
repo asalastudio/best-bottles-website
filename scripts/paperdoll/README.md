@@ -1,5 +1,21 @@
 # Paper-doll plates: index, store, pipeline
 
+## Source and cutover policy
+
+Use [the repeatable plate-and-kit skill](../../.claude/skills/bestbottles-plate-kit-lane/SKILL.md)
+for every family. Current legacy Best Bottles products and selectable variants
+define the cutover scope. Exact legacy evidence takes precedence over conflicting
+imported catalog values, subject to documented explicit corrections and approved
+display naming/formatting. Compare copy, dimensions, weight, price tiers and media
+as well as SKU identity. Preserve original values and source evidence.
+
+The master artwork folder and the current legacy website are the complete source
+set. Recover unmatched assets/information through Firecrawl or Agent Reach;
+failed filename matching is not missing artwork. The PSD lane's guards described
+below remain enforced: recovered legacy media needs an explicit supported
+integration path, not a fabricated master path or disabled identity check.
+Policy coverage must not be confused with current pipeline capabilities.
+
 The product page shows one finished photograph ("plate") per SKU, cap on and
 cap off. The bytes live on a public Vercel Blob store; the only thing the page
 consults is the `productPlates` table in Convex, one row per SKU, whose

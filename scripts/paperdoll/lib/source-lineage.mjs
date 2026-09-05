@@ -46,7 +46,17 @@ export function validatePlateSource(row, { masterRoot = PSD_MASTER_ROOT } = {}) 
         }
     }
 
-    if (/(^|[/\\])[^/\\]*uncapped[^/\\]*([/\\]|$)/i.test(sourcePath)) {
+    let folderState = null;
+    for (const segment of sourcePath.split(/[/\\]/).slice(0, -1).reverse()) {
+        const capped = /\bcapped\b/i.test(segment);
+        const uncapped = /\buncapped\b/i.test(segment);
+        if (capped !== uncapped) {
+            folderState = uncapped ? "off" : "on";
+            break;
+        }
+        if (capped) folderState = "ambiguous";
+    }
+    if (folderState === "off" || folderState === "ambiguous") {
         issues.push({ issue: "front_source_uncapped", detail: `${displayName} is filed in an uncapped folder` });
     }
 

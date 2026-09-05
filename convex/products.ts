@@ -340,8 +340,11 @@ export const lookupSku = query({
         if (!raw) return null;
 
         const candidates = Array.from(new Set([raw, raw.toUpperCase()]));
-        let product = null;
+        // A currently sold exact website SKU must beat a retired Grace alias.
+        let product = await ctx.db.query("products")
+            .withIndex("by_websiteSku", (q) => q.eq("websiteSku", raw)).first();
         for (const candidate of candidates) {
+            if (product) break;
             product = await ctx.db
                 .query("products")
                 .withIndex("by_graceSku", (q) => q.eq("graceSku", candidate))

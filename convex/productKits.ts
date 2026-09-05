@@ -85,8 +85,8 @@ const kitViewV = v.object({
 });
 
 /**
- * One kit for one SKU, fetched by the stage on interaction. Grace SKU first,
- * website SKU second, newest row wins, duplicates reported never thrown.
+ * One kit for one SKU, fetched by the stage on interaction. Exact website SKU first,
+ * Grace SKU second, newest row wins, duplicates reported never thrown.
  */
 export const forSku = query({
     args: { graceSku: v.union(v.string(), v.null()), websiteSku: v.union(v.string(), v.null()) },
@@ -98,7 +98,14 @@ export const forSku = query({
         const seen = new Set<string>();
         const unique = rows.filter((row) => { if (seen.has(row._id)) return false; seen.add(row._id); return true; });
         if (unique.length === 0) return null;
-        const newest = unique.sort((a, b) => b.importedAt - a.importedAt)[0];
+        // An exact website SKU is stronger evidence than an old Grace alias.
+        const exact = args.websiteSku ? unique.filter((row) => row.websiteSku === args.websiteSku) : [];
+        const newest = (exact.length ? exact : unique).sort((a, b) => b.importedAt - a.importedAt)[0];
+        const plates = await ctx.db.query("productPlates").withIndex("by_sku", (q) => q.eq("sku", newest.sku)).collect();
+        const plate = plates.length === 1 ? plates[0] : null;
+        // Publication can replace a plate before its kit. During that interval
+        // return the photograph rather than layering stale, misregistered parts.
+        if (!plate || plate.front.sha256 !== newest.plateSha256) return null;
         return {
             sku: newest.sku,
             familyId: newest.familyId,
@@ -137,11 +144,8 @@ export const upsertMany = mutation({
                 continue;
             }
             const current = existing[0];
-            const unchanged =
-                current.plateSha256 === row.plateSha256 &&
-                current.parts.length === row.parts.length &&
-                current.parts.every((part, i) => part.image.sha256 === row.parts[i]?.image.sha256 && part.slot === row.parts[i]?.slot) &&
-                current.completeness === row.completeness;
+            const unchanged = ["plateSha256", "parts", "completeness", "anchors", "canvas", "three", "source", "websiteSku", "graceSku", "familyId"].every(key =>
+                JSON.stringify(current[key as keyof typeof current]) === JSON.stringify(row[key as keyof typeof row]));
             if (unchanged) {
                 results.push({ sku: row.sku, outcome: "unchanged" });
                 continue;

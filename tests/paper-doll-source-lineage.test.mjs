@@ -73,6 +73,20 @@ test("rejects a front PSD whose basename belongs to another SKU", () => {
     );
 });
 
+test("uses the capped child of a mixed capped-and-uncapped parent", () => {
+    const sourcePath = "31. Capped & Uncapped/Capped/56. LBCyl100LtnCu.psd";
+    addMasterFile(sourcePath);
+    assert.deepEqual(validatePlateSource({ sku: "LBCyl100LtnCu", sourcePath }, { masterRoot }), []);
+});
+
+test("still rejects the uncapped child of a mixed parent and an ambiguous parent alone", () => {
+    for (const dir of ["31. Capped & Uncapped/Uncapped", "31. Capped & Uncapped"]) {
+        const sourcePath = `${dir}/56. LBCyl100LtnCu.psd`;
+        addMasterFile(sourcePath);
+        assert.deepEqual(validatePlateSource({ sku: "LBCyl100LtnCu", sourcePath }, { masterRoot }).map(x => x.issue), ["front_source_uncapped"]);
+    }
+});
+
 test("rejects a symlink that escapes the master", () => {
     const outside = join(scratch, "outside.psd");
     writeFileSync(outside, "outside fixture");

@@ -1,0 +1,23 @@
+[
+  {
+    "alreadyPresent": 0,
+    "groupsInserted": 5,
+    "groupsPatched": 7,
+    "inserted": 30,
+    "patched": 40
+  },
+  {
+    "alreadyPresent": 0,
+    "groupsInserted": 0,
+    "groupsPatched": 0,
+    "inserted": 30,
+    "patched": 16
+  },
+  {
+    "alreadyPresent": 0,
+    "groupsInserted": 0,
+    "groupsPatched": 0,
+    "inserted": 1,
+    "patched": 0
+  }
+]

@@ -1,0 +1,23 @@
+{
+  "scope": 436,
+  "platesPublishedBothEnvironments": 436,
+  "kitsPublishedBothEnvironments": 420,
+  "kitsHeld": 13,
+  "kitsNotApplicable": 3,
+  "plateAssetsVerified": 1416,
+  "kitAssetsVerified": 1105,
+  "exactSkuRoutesVerifiedProduction": 436,
+  "exactSkuRoutesVerifiedDevelopment": 436,
+  "existingIdsPreserved": true,
+  "existingShopifyLinksPreserved": true,
+  "productionProductCounts": {
+    "before": 2444,
+    "after": 2481
+  },
+  "unitTests": {
+    "passed": 934,
+    "skipped": 7
+  },
+  "build": "webpack production passed",
+  "frontendDeployment": "pending PR merge verification"
+}

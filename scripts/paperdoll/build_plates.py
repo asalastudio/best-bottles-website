@@ -170,7 +170,18 @@ def source_of(entry: dict, state: str):
 def validate_front_source(src: dict, website_sku: str):
     """Refuse the two source-selection defects that previously reached production."""
     rel_path = src["relPath"]
-    if any("uncapped" in part.lower() for part in Path(rel_path).parts):
+    # Shared parent folders can say "Capped & Uncapped". The nearest
+    # unambiguous folder decides the state; an explicitly capped child is valid.
+    folder_state = None
+    for part in reversed(Path(rel_path).parent.parts):
+        capped = bool(re.search(r"\bcapped\b", part, re.I))
+        uncapped = bool(re.search(r"\buncapped\b", part, re.I))
+        if capped != uncapped:
+            folder_state = "off" if uncapped else "on"
+            break
+        if capped:
+            folder_state = "ambiguous"
+    if folder_state in {"off", "ambiguous"}:
         raise RuntimeError(f"uncapped PSD cannot be the front source for {website_sku}")
     source_sku = re.sub(r"^\s*\d+[.-]?\s*", "", Path(rel_path).stem).rstrip(".").strip()
     sku_key = lambda value: re.sub(r"[^a-z0-9]", "", value.lower())  # noqa: E731

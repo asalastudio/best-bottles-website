@@ -1,0 +1,6 @@
+interface:
+  display_name: "Best Bottles Plates and Kits"
+  short_description: "Legacy-first family catalog and media production"
+  default_prompt: "Use $bestbottles-plate-kit-lane to reconcile a Best Bottles family against current legacy products and produce verified plates and component kits."
+policy:
+  allow_implicit_invocation: true

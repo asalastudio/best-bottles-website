@@ -1,0 +1,5042 @@
+[
+ {
+  "sku": "GBCyl100AnSpBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3238,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/39. GBCyl100AnSpBlk.psd",
+   "releaseVersion": "3d8627e16fc63883093f4f008f8913bf1d400c585cb562783b4f317712e755ad"
+  },
+  "plateSha256": "0103375db6fc790cbcc9640be83c0bf2b848400a4b35ff803e8d160786b8899a"
+ },
+ {
+  "sku": "GBCyl100AnSpGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.7157,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/37. GBCyl100AnSpGl.psd",
+   "releaseVersion": "4dda23e6665665f870dc639c7fb97b4b0e4ea818964633c264c462779c10049a"
+  },
+  "plateSha256": "bfcb00cd590c12b55b9930de96fcfb6bbe16eab49b4a579ff1f40aa7b14e6a63"
+ },
+ {
+  "sku": "GBCyl100AnSpIvyGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5263,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/38. GBCyl100AnSpIvyGl.psd",
+   "releaseVersion": "99f00fe4e221f09c73ad90fe6e35c5d460898cf1a0030d02d47e624d6b22daca"
+  },
+  "plateSha256": "94633cfd9df7c413a054ac6ae2bfb8f63397313863c708d8f6d30260a1965e91"
+ },
+ {
+  "sku": "GBCyl100AnSpIvySl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5383,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/36. GBCyl100AnSpIvySl.psd",
+   "releaseVersion": "105b4846380a5a353a9237c37d034d9fe9d21be0321206c0591384757b72636e"
+  },
+  "plateSha256": "983a53a2437a3df2e79b38bf4dd628a122dc79845913c87154afc119c6c2c2dc"
+ },
+ {
+  "sku": "GBCyl100AnSpLvn",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.7147,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/33. GBCyl100AnSpLvn.psd",
+   "releaseVersion": "758f1abf2c3856819e1de95962079186e18f9c5a6e962b20e698b93c3045b4d8"
+  },
+  "plateSha256": "9fb61794d6cce4a671ae4dc4f2c7679c5f88e7f1f41e333f2aa78c278d258bae"
+ },
+ {
+  "sku": "GBCyl100AnSpMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3279,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/35. GBCyl100AnSpMtSl.psd",
+   "releaseVersion": "9bdb5e8a7f2c7c07155d8cdeff3229be25f29676c42e6e1c97a8fe3a110fe315"
+  },
+  "plateSha256": "7d2bf645cbd430ef9fd25d1d637da65d79427eaa2ac5199e3da1b5a286358f30"
+ },
+ {
+  "sku": "GBCyl100AnSpPnk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.6806,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/34. GBCyl100AnSpPnk.psd",
+   "releaseVersion": "0dbfc5a25a0708ac051b3fbfa08295125784eb86fb66fa068fa6a2d3ca9eb858"
+  },
+  "plateSha256": "3c638a94116a5d5ee835450dbdc12c58278bca5ef9cea2f60133ff7975310456"
+ },
+ {
+  "sku": "GBCyl100AnSpRed",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.487,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/41. GBCyl100AnSpRed.psd",
+   "releaseVersion": "bfc00436ce8c57c37dcc3c09d30d4daef84abcd1f5e0a9eedd54723f2f648746"
+  },
+  "plateSha256": "baf2f7abdf46d3761ee9203a44f30120e4b1b048b0fa43aed9843cf57599fc7d"
+ },
+ {
+  "sku": "GBCyl100AnSpTslBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3707,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/48. GBCyl100AnSpTslBlk.psd",
+   "releaseVersion": "8ffdce54600ab1c0842cd29689cbde4294240c5f22e10b7ba9791056bdad4f8e"
+  },
+  "plateSha256": "97e0cc51e5b313b9504a889c9527358f5c60d2135d8de2633a304c86dad1610c"
+ },
+ {
+  "sku": "GBCyl100AnSpTslGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 3.0482,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/50. GBCyl100AnSpTslGl.psd",
+   "releaseVersion": "a76d90a71b939837834e6ef33a219d2401eace006d3de9b0b2a7894b0008ef36"
+  },
+  "plateSha256": "c5e08e04496a68cdc626c974830a83639f6e48ae7bd603dda394bc7a31da9470"
+ },
+ {
+  "sku": "GBCyl100AnSpTslIvyGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.8481,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/43. GBCyl100AnSpTslIvyGl.psd",
+   "releaseVersion": "1f864ffb2c946bc3d8db15b3a3abc4c603730550fe1d8ffcdf108624da323a60"
+  },
+  "plateSha256": "184e1fa27920f500c74ea49094dee83e3a669790881e23a9a5e32e96e550c4be"
+ },
+ {
+  "sku": "GBCyl100AnSpTslIvySl",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 5.0216,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/44. GBCyl100AnSpTslIvySl.psd",
+   "releaseVersion": "2aa97b09878289da049f72eacb14dc718ff0e9ef01bd7a96d8e0ab02842c250b"
+  },
+  "plateSha256": "78c5cd43788672655d75667c6a71554edfd6f9cbf232e88e12790149f1a8cd98"
+ },
+ {
+  "sku": "GBCyl100AnSpTslLvn",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 3.0241,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/42. GBCyl100AnSpTslLvn..psd",
+   "releaseVersion": "b1f64f434893ba009e29cbd662766b017d345f99d545a3cb3874060cd5dc641a"
+  },
+  "plateSha256": "b2ccfbe51149e3b5a3a20d3b7c9d37fc19763a77f432043048ce8adba46cdb24"
+ },
+ {
+  "sku": "GBCyl100AnSpTslMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5028,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/49. GBCyl100AnSpTslMtSl.psd",
+   "releaseVersion": "6f40a6eae57f796975d65b3049eb15a59bc834a4e59a14243e7b8d93ae79220d"
+  },
+  "plateSha256": "31aa26d063c19c473f4ae8316ba05dd490c047924da155e601f789809da547f3"
+ },
+ {
+  "sku": "GBCyl100AnSpTslPnk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.927,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/46. GBCyl100AnSpTslPnk.psd",
+   "releaseVersion": "af91dbef95d4834348c81da8f9bd3a85888ce707a6951b09c6b156478a31d3ec"
+  },
+  "plateSha256": "7afdfb71d711d0b2547b014a54d09dbaf3e48169d6721885a7a189dbd3a7d27f"
+ },
+ {
+  "sku": "GBCyl100AnSpTslRed",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.8111,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/47. GBCyl100AnSpTslRed.psd",
+   "releaseVersion": "3088c1ce26fb47e1ef084406ec59f4860a37b21618b09a0ee6714c870f28d125"
+  },
+  "plateSha256": "aeb7fd22dd4d459ba8db95cd3db3ad4d21fba22f39c8a74b9ee7718838ca7fa0"
+ },
+ {
+  "sku": "GBCyl100AnSpTslWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3644,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/45. GBCyl100AnSpTslWht.psd",
+   "releaseVersion": "8494d90b713dedb369a218484d442db4ee5344a7d555e204d54e209059847ff1"
+  },
+  "plateSha256": "d279c0a97b604e2d6d21bfec9d375b529be5a5aa2f88e13d92c915734a72fcb6"
+ },
+ {
+  "sku": "GBCyl100AnSpWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.394,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/40. GBCyl100AnSpWht.psd",
+   "releaseVersion": "8e4db99a8779f2067b50a2907b7da597a3e6a57a08f74c57537bf2869fc24cac"
+  },
+  "plateSha256": "c8a673c0bd6517b383ad7f1d0e7da4d2d7ee755c74133a02b62c8be769ca123f"
+ },
+ {
+  "sku": "GBCyl100RdcrBlkLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.801,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/4. GBCyl100RdcrBlkLthr.psd",
+   "releaseVersion": "1288f7542f255188ce8ff914634bc352dd20e63663f970df7fc967e6bdedad7f"
+  },
+  "plateSha256": "8e1180dae8f4e8c9b0223877b33ffc6b98207cefec296373cdd733c667b94669"
+ },
+ {
+  "sku": "GBCyl100RdcrBrwnLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.1359,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/5. GBCyl100RdcrBrwnLthr.psd",
+   "releaseVersion": "7d916e985863d7e28e9c4ef6798a07cc5a60ce4b280e24d570a68ca29654bb69"
+  },
+  "plateSha256": "e51523f656d6a6fa359b8153b430fbdaf316f93861818c4fab809904e74c5d28"
+ },
+ {
+  "sku": "GBCyl100RdcrIvyLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.9321,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/52. GBCyl100RdcrIvyLthr.psd",
+   "releaseVersion": "aa0c287d503dc435e31909aa5c704f8086ae2379036c6c4406bd015d6e3d1737"
+  },
+  "plateSha256": "9a20ed26ff0172a1449a3b1d65077ae2ee7600e63255e81b6ae7c7903ed50730"
+ },
+ {
+  "sku": "GBCyl100RdcrLBrwnLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.1522,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/6. GBCyl100RdcrLBrwnLthr.psd",
+   "releaseVersion": "6b4254596c98eaad46226818c859d4bc1c2e697cd739eba6c15e5152fc418f90"
+  },
+  "plateSha256": "972c64df931436a66f2fb34c0cf8f614ea535eef095e83b2c3f217171d55a1dc"
+ },
+ {
+  "sku": "GBCyl100RdcrMtSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3018,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/9. GBCyl100RdcrMtSl.psd",
+   "releaseVersion": "a5cd550691a63ef6f96218889e281cce0bb5525429879c5ed763d30774d26c04"
+  },
+  "plateSha256": "6c7521ec559f74f341c26c557103f8d04be1d6f231883cb029421039e8407c07"
+ },
+ {
+  "sku": "GBCyl100RdcrMtSlTall",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3945,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/8. GBCyl100RdcrMtSlTall.psd",
+   "releaseVersion": "f1b58c9e1921bf45fca58f5d502596fc3009d46d0c9c356c66c218284192d436"
+  },
+  "plateSha256": "76cb0f9f099bb15672f5c61b91b4779c26fd58a24eaf2fa7ecc06d68dc449481"
+ },
+ {
+  "sku": "GBCyl100RdcrPnkLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.0027,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/51. GBCyl100RdcrPnkLthr.psd",
+   "releaseVersion": "024c18835cc78dff70404d0e7f6b7e2883565791f31a81bdf69457ccce894c3d"
+  },
+  "plateSha256": "d8cb8e2b743433188810c31a50505ceec026e9a6323bb1375f91666add31fdf6"
+ },
+ {
+  "sku": "GBCyl100RdcrShnBlk",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3136,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/3. GBCyl100RdcrShnBlk.psd",
+   "releaseVersion": "f23c96a38a421412c0438a0c0aff4c78a096d4d1e3892e222c150a9ab777bdf3"
+  },
+  "plateSha256": "3f2fbd2f683cba28a7a24db995fb195c04cbc93c24f5a8d98c35c54052f75175"
+ },
+ {
+  "sku": "GBCyl100RdcrShnBlkTall",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1818,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/2. GBCyl100RdcrShnBlkTall...psd",
+   "releaseVersion": "d67076d43a0257e747878d024293d5c4020b7bf8ababbf6b07ca770482709f4a"
+  },
+  "plateSha256": "65011ea00cde7879f32cd9410a46263e31d24287c1f2dc91598cdf2c352dedca"
+ },
+ {
+  "sku": "GBCyl100RdcrShnGl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.46,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/1. GBCyl100RdcrShnGl.psd",
+   "releaseVersion": "3467b34ff3728c5ba28ada53894c8bcdacead4c84e26640f813d3eb154785c5c"
+  },
+  "plateSha256": "0cdc41b90f8901516d0cdf6044e578beb0ae17f3ad20f2e8b4372cf780e8fd52"
+ },
+ {
+  "sku": "GBCyl100RdcrShnSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3843,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/7. GBCyl100RdcrShnSl.psd",
+   "releaseVersion": "e47d41ce11f30342c8a89bb7aa132dfbd3d4add69d91d27d6559fd53a3027170"
+  },
+  "plateSha256": "41a0525b1fd286339dc8adeaa438617956be395ee62360390ccae4102d16bf95"
+ },
+ {
+  "sku": "GBCyl100RdcrWht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3655,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /3. Cylindrical 100ml/1. Cylindrical 100ml PSD/10. GBCyl100RdcrWht.psd",
+   "releaseVersion": "94f9a3288e11d5eb2669894984c24c14ed83c757cf12c861f04594de93772f61"
+  },
+  "plateSha256": "c2fe04a80229f8091ef475fe7fffb7499e0fd905da748f15c8a93f6c392fbb97"
+ },
+ {
+  "sku": "GBCyl100SpryCu",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3884,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/53. GBCyl100SpryCu.psd",
+   "releaseVersion": "42ad5111adf6edeb503b3fa16268462d9ec5be4a490d3092e78067e95eeafc76"
+  },
+  "plateSha256": "691bfad8f543b9b64268c66767cb4f2b7bedca2166f2764b12700222f7d80dbd"
+ },
+ {
+  "sku": "GBCyl100SpryMtGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.9376,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/11. GBCyl100SpryMtGl.psd",
+   "releaseVersion": "e9c417fcd433abf0da67b4efdb1a0f16481ce106546201c5970312dd8e09aed9"
+  },
+  "plateSha256": "e0b01c2d9a3c8d5a3d2392dc474cefbe32bd1a8fc1fb8e24c536256b19ffe933"
+ },
+ {
+  "sku": "GBCyl100SpryMtSl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 2.7058,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/24. GBCyl100SpryMtSl.psd",
+   "releaseVersion": "93ec581b71fdb13068fbbf46835bbc0fc2c607677904cf6b8e54ee1a4d09d685"
+  },
+  "plateSha256": "92258905cee574aa0807c338d455f318b09b15140147fcb12c09d60110031911"
+ },
+ {
+  "sku": "GBCyl100SpryShnBlk",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 8.3786,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/21. GBCyl100SpryShnBlk.psd",
+   "releaseVersion": "59865359a7529a8644e169c35f9bfcb5fcbed2a403dbeff2bc871f5c777ad183"
+  },
+  "plateSha256": "5c8931cf147a7bbacedec327ff8c3d6dcb61ef3ec9ad0b97b63c7bd0402242e5"
+ },
+ {
+  "sku": "GBCyl100SpryShnGl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 3.7815,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/17. GBCyl100SpryShnGl.psd",
+   "releaseVersion": "4ba13d9ee7b77e574c12a81ce88922bf6203ddaee7d797156936a1a956a28484"
+  },
+  "plateSha256": "a4d329fedcc5432b9742c571fcc675d858fd7d372f7402a085e592143027a22a"
+ },
+ {
+  "sku": "GBCyl100SpryShnSl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 4.7478,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/30. GBCyl100SpryShnSl.psd",
+   "releaseVersion": "538c368102451d433adf467d901de469ce2a1970f17be367cc6a24b21ce1c6c7"
+  },
+  "plateSha256": "eb1e2c0c482ab68d060ca64c71a6d6f6947747e8c91f7c1afc0251b4d67eb854"
+ },
+ {
+  "sku": "LBCyl100LtnClOvrCap",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3798,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/28. LBCyl100LtnClOvrCap.psd",
+   "releaseVersion": "923ce8bf0cb8ad0366f7f30951f81c04e5330b580c10532ceac7eb324de8b5ed"
+  },
+  "plateSha256": "9512d23807674f49430c40a6450b8d643ce180a82937f5151d558e6a49f968a1"
+ },
+ {
+  "sku": "LBCyl100LtnCu",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3467,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/56. LBCyl100LtnCu.psd",
+   "releaseVersion": "39f0d224274b08f01b7f2a0a73c72fa8182f6135e447d870639f78f2bf451e15"
+  },
+  "plateSha256": "56ed23a01cdfd14480c8e5296dbecd266fbe9deca63788c220c14aaff5106a74"
+ },
+ {
+  "sku": "LBCyl100LtnMtGl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 3.7595,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/12. LBCyl100LtnMtGl.psd",
+   "releaseVersion": "2bc6c86e2fc479f9de9de65d448c54ab4d61bbccd32694f1241e3f2be8bcd1de"
+  },
+  "plateSha256": "afd2408dc484e0c6ceb3498879637b1fade70cced04e2ffe6abb5d6ae03a301a"
+ },
+ {
+  "sku": "LBCyl100LtnMtSl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 3.0509,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/26. LBCyl100LtnMtSl.psd",
+   "releaseVersion": "057c8758eb08c543386eca1680eaa6b3e8bd226f0af8f265716302c193ca0c8b"
+  },
+  "plateSha256": "55d8cc3cbc35ac314388c7695a948d8b63fa4e7db2b5904fd50019c128857ad5"
+ },
+ {
+  "sku": "LBCyl100LtnShnBlk",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 7.7822,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/22. LBCyl100LtnShnBlk.psd",
+   "releaseVersion": "f86b54f9a3653d5a821c0746a42828b0ff80ddac4aa640372de867bbfe7d0499"
+  },
+  "plateSha256": "ee414f8da3d3dd7ede4791aea6b5e74b03d3ca3b7c00cbf7e3030bea32f9c6b1"
+ },
+ {
+  "sku": "LBCyl100LtnShnGl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 3.6181,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/18. LBCyl100LtnShnGl.psd",
+   "releaseVersion": "8075398c5309518b11d1712ad3b34d63a4aaa46e86eb3a4940846d5345916fa3"
+  },
+  "plateSha256": "cc0a2d2a8f5255d7cafccbd6978426cf3d9157f468e7f4b7fe00f9457e7bdb42"
+ },
+ {
+  "sku": "LBCyl100LtnShnSl",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 4.8825,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/3.  100ml Cyl, Ltn & Spry Capped/32. LBCyl100LtnShnSl.psd",
+   "releaseVersion": "b41913fc9162e3629e02b3a787d87b0925f7407df28424e84597e00b81ee2f2a"
+  },
+  "plateSha256": "3bd564de1d20a1ab221fd61784922bb7045e19a907cb1e6860358eb0245a31ff"
+ },
+ {
+  "sku": "GBCyl25AnSpBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.1525,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /39. GBCyl30AnSpBlk.psd",
+   "releaseVersion": "cdfcfccef6e8f82d0d3be42fc5c8f396fde7523aaa45404ab38f7396e044e8e9"
+  },
+  "plateSha256": "b918c1b4d0b8ebcb8683f448c7cf45c4c2818830adcd04aadf51d94852268572"
+ },
+ {
+  "sku": "GBCyl25AnSpGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.4837,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /37. GBCyl30AnSpGl.psd",
+   "releaseVersion": "0d76afc16da23804c374bd207abc0204711f3c151ccba083566670ba7b5d6054"
+  },
+  "plateSha256": "c6639904bdd95af60c241989ce2f5ee7a891710a4cd060aef6ad304703b6d1a2"
+ },
+ {
+  "sku": "GBCyl25AnSpTslIvySl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.6726,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/44. GBCyl30AnSpTslIvySl.psd",
+   "releaseVersion": "433fd793b8096525dc28161e97a62f5b00cd550bfb6d09adbbedbbba5bd6deb7"
+  },
+  "plateSha256": "71ff73c391753039acff9738f25bc3e4fafa8ac116dc5e575efe68bf8e980508"
+ },
+ {
+  "sku": "GBCyl25AnSpTslMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.4102,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/47. GBCyl30AnSpTslMtSl.psd",
+   "releaseVersion": "c6d1132b53c9f5034ca6949df470262795a7fa8cb221dad296359c81daf588e2"
+  },
+  "plateSha256": "0d912ca95096718107c3e398a4cdf63ea15216a9bf50dde06ef22fdd8c8bd8f8"
+ },
+ {
+  "sku": "GBCyl25AnSpTslRed",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.7814,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/48. GBCyl30AnSpTslRed.psd",
+   "releaseVersion": "e692bc9ebccebf308e9da847dc3bfd25de92844c65dc0fddc201d091470fe9f3"
+  },
+  "plateSha256": "213d1049267ce145f6ac0be7310b71ab8c07094fcba7de729bdfa564a22c95ea"
+ },
+ {
+  "sku": "GBCyl25AnSpTslWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.1211,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/45. GBCyl30AnSpTslWht.psd",
+   "releaseVersion": "ea1c3823ddea42e506afb13c64eef208d5e6d9a74f5e1f67f787163a5c3a7a39"
+  },
+  "plateSha256": "aecd8af7514ebab51112fb12972c48b1c1447d633df8c98a3ed72771b9fc283d"
+ },
+ {
+  "sku": "GBCyl25DrpCu",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5621,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /56. GBCyl30DrpCu.psd",
+   "releaseVersion": "d609ddccdd4f0a01e6af5b343c0dca81354c2f58f0eb2de659c43b10ee96f059"
+  },
+  "plateSha256": "b9c277105bee32d3e6b807427de6cd36ea5812a7fba3bf2e3694f363be53d9d5"
+ },
+ {
+  "sku": "GBCyl25DrpGl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5732,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /55. GBCyl30DrpGl.psd",
+   "releaseVersion": "28abed59508957a6e3063d18fe0d6032087494da9fb522cf301142fab50f3b1d"
+  },
+  "plateSha256": "99b8ddd926a96b053557b451f0ec070ef6836c3080d4dd3573fc7b1e065f1a1b"
+ },
+ {
+  "sku": "GBCyl25DrpSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1978,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /57. GBCyl30DrpSl.psd",
+   "releaseVersion": "5bc689a850340585fae929a335f02f0bf351a25db3c0f176438f48ac8678ba6d"
+  },
+  "plateSha256": "3cbbf85763bc6b07c29fb9b2314a5aeea8d4219448c16bdd11c8f2c83d26e449"
+ },
+ {
+  "sku": "GBCyl25RdcrIvyLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.0013,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /59. GBCyl30RdcrIvyLthr.psd",
+   "releaseVersion": "b90aa308739f14093792ebd8c59c1d9b935b321aa8e40952bb4c8ade0d475d06"
+  },
+  "plateSha256": "1f4e682f174f6a86cf5fbad813e956f0fa7610483b6bf6e97dbd3c39f5342727"
+ },
+ {
+  "sku": "GBCyl25RdcrShnGl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4121,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /1. GBCyl30RdcrShnGl.psd",
+   "releaseVersion": "00e3540017067199590550801c0044372a66304d257ffde333277b48a9961bf8"
+  },
+  "plateSha256": "9fc5e30d5c646fb053d936f852842572df423166676938c901242b011fbab5cd"
+ },
+ {
+  "sku": "GBcyl25AnSpIvyGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3594,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /38. GBCyl30AnSpIvyGl.psd",
+   "releaseVersion": "2295cca165f1527b2f1f5536b56e3e1b0f4bed49c5dd26df5d0aee17f2551443"
+  },
+  "plateSha256": "c56d737b962267f5d870b12e569b33194cd704bb2099cdaa7f82cd222f6b2ee2"
+ },
+ {
+  "sku": "GBcyl25AnSpIvySl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3981,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /36. GBCyl30AnSpIvySl.psd",
+   "releaseVersion": "dc619699b1c4571452457f2397767430c13865256ab76cd235985d60160ba128"
+  },
+  "plateSha256": "dc833454fb505e8eb47c93728688eef42e9bb42531527a194f560b32e622bf21"
+ },
+ {
+  "sku": "GBcyl25AnSpLvn",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.6151,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /33. GBCyl30AnSpLvn.psd",
+   "releaseVersion": "0a2332ca369d42988cbf263d7c940809c81598fbd0a1904e8fa748847f8f9c3e"
+  },
+  "plateSha256": "949581c6510bd00ee3aa1ebf31f7a0fc537234b8014e5dc7d571736b0bf25931"
+ },
+ {
+  "sku": "GBcyl25AnSpMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.192,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /35. GBCyl30AnSpMtSl.psd",
+   "releaseVersion": "16565794e4583cfe197ec0091ace4a65e3c5f553c9adee29f84f4a533068f0a4"
+  },
+  "plateSha256": "5d1a3ece4eda697f20648c6925eba84cf9c29533efc8f65b459713529a503fb5"
+ },
+ {
+  "sku": "GBcyl25AnSpPnk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5089,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /34. GBCyl30AnSpPnk.psd",
+   "releaseVersion": "2e6510c122f30b047fb0b149ef0fc74060e7605ee96e0f6e8abc81ebc3233229"
+  },
+  "plateSha256": "696f00eeb15976d71e76547b2c14eeadae6f725743d645f616d13c784115ff99"
+ },
+ {
+  "sku": "GBcyl25AnSpRed",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.336,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /41. GBCyl30AnSpRed.psd",
+   "releaseVersion": "32ff43279d7752f433259c36a58e64be8d47a8221eb4dbe2cd7c3f16721fc56c"
+  },
+  "plateSha256": "f2e0d4212ac517851a5ce3ce6eef84f9e9eafba6a7a135fc80e59a9654d9d55c"
+ },
+ {
+  "sku": "GBcyl25AnSpTslBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.2636,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/49. GBCyl30AnSpTslBlk.psd",
+   "releaseVersion": "898b18facf4cf432c7fba794cf82d3feca4f015f9dff636de4c84b32577aa7a0"
+  },
+  "plateSha256": "ae963f6a728e2405454f7ad51a97a9c1e32de7965fcc5ae600f86b55c06a0fc4"
+ },
+ {
+  "sku": "GBcyl25AnSpTslGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.7936,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/50. GBCyl30AnSpTslGl.psd",
+   "releaseVersion": "ab48f253a4c6b13ee384ccbcf27ac5acb86de1c25685280bb893797f5279aa28"
+  },
+  "plateSha256": "5b270d3577dd44690f471284d979404d75d2a4d3233a22589ace02b594854076"
+ },
+ {
+  "sku": "GBcyl25AnSpTslIvyGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.6607,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/43. GBCyl30AnSpTslIvyGl.psd",
+   "releaseVersion": "3af7ffcf8836100df58e332d00a2dfb31719fa411d3b41abde822c321c192ca0"
+  },
+  "plateSha256": "a1306c91643a3960e9f30209ee5eb32e01e4d0dbf2aeead927ebef125be67c8a"
+ },
+ {
+  "sku": "GBcyl25AnSpTslLvn",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.7469,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/42. GBCyl30AnSpTslLvn.psd",
+   "releaseVersion": "87093032b61931d032f428b16d1c203129dd6d912af311a51ca101c2c112ec0a"
+  },
+  "plateSha256": "7979ff866d3ac5e289f9b4e0a0894e4de3242d6cd620dfe287e6a190dc35f9b0"
+ },
+ {
+  "sku": "GBcyl25AnSpTslPnk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.7274,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/46. GBCyl30AnSpTslPnk.psd",
+   "releaseVersion": "915c8dde7504fb4cd009efdba6433f2376491baf2fbaeffe0a08b178a23e650d"
+  },
+  "plateSha256": "68c9a4dad2f8f4e9f5ba84cd5f49abec1cd2c7cd432258aaba94d4b4835138e2"
+ },
+ {
+  "sku": "GBcyl25AnSpWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.0756,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /40. GBCyl30AnSpWht.psd",
+   "releaseVersion": "7777e91be0dc5105469b1a19d3abd4ef46e7704c8a57fa83cad7af0f5df0a9fa"
+  },
+  "plateSha256": "97f552c1531bad9a95ab02842de9003cfab5716640d6bb6f61f7e76ad4e59fb1"
+ },
+ {
+  "sku": "GBcyl25RdcrBlkLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.7809,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /4. GBCyl30RdcrBlkLthr.psd",
+   "releaseVersion": "a39ef0c54224ff61fd28108b07000c7e4ca8cb4eb84a070e7a9f7d95052f6fe3"
+  },
+  "plateSha256": "eae158e4bedc78b9fa908a9d138e606adc4a3907e501ab3a958ef77fdad87de0"
+ },
+ {
+  "sku": "GBcyl25RdcrBrwnLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.2796,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /5. GBCyl30RdcrBrwnLthr.psd",
+   "releaseVersion": "b258bd5af49869ce7253b637a8d00013cac294b1ebd10b688598143461b99289"
+  },
+  "plateSha256": "20f0efd2ad772a387a77669370f16dd412752236cd961fb3567fa73be0064379"
+ },
+ {
+  "sku": "GBcyl25RdcrLBrwnLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.2654,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /6. GBCyl30RdcrLBrwnLthr.psd",
+   "releaseVersion": "91c0ceea7822210268307535735f767ff66d78fd0ec358df1ca296c83414d626"
+  },
+  "plateSha256": "29a6102c39abb3b68273cd612f6453c0ad5997196106bf92076ba870928afd60"
+ },
+ {
+  "sku": "GBcyl25RdcrMtSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1055,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /9. GBCyl30RdcrMtSl.psd",
+   "releaseVersion": "a1966d6f1226fce3c81d2954e95c71cdfb6e2d0dcf6299805ee98a02f00ba03c"
+  },
+  "plateSha256": "7603cf3cea8f7c85b3ba9bc024b3d4ef13ad8cf5ed1a63efa642c0bee04aa859"
+ },
+ {
+  "sku": "GBcyl25RdcrMtSlTall",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4264,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /8. GBCyl30RdcrMtSlTall.psd",
+   "releaseVersion": "139115a9200810aa22146ad22b1a58a127a9c8a96a64326455e6f0ff0bc039cb"
+  },
+  "plateSha256": "4c6371d9314b4a7d20d51cbf52198c12d21ff91411ca1ad440dae3198a7a92dc"
+ },
+ {
+  "sku": "GBcyl25RdcrPnkLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.025,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /58. GBCyl30RdcrPnkLthr.psd",
+   "releaseVersion": "c510d654c96d40d0f057081bbd60a16e18d1b0f6f3c2c13416aee55c9a652c4d"
+  },
+  "plateSha256": "2815b7cf073c6ec2261eccc89459029763ba632a84b82e6e8620be07e062351e"
+ },
+ {
+  "sku": "GBcyl25RdcrShnBlk",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.155,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /3. GBCyl30RdcrShnBlk.psd",
+   "releaseVersion": "92b912063fea4c11594c28e31593362972c590ffe1cccee488fda13100e7dca3"
+  },
+  "plateSha256": "09092609dbf9a91e3cfab7a1970175c147c48476005ce74da6b80ca21affd99f"
+ },
+ {
+  "sku": "GBcyl25RdcrShnBlkTall",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.0873,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /2. GBCyl30RdcrShnBlkTall.psd",
+   "releaseVersion": "78bc29888e811ce0d62cce83a34668f3754475b088658459b0e0c426c700d1d2"
+  },
+  "plateSha256": "bc7ee5afbc94b222309b177be007f9be1cee412df66e9dc3958c8feeb65cdef9"
+ },
+ {
+  "sku": "GBcyl25RdcrShnSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2943,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /7. GBCyl30RdcrShnSl.psd",
+   "releaseVersion": "efc7a948fde4368800238f73271a2191faf6577cf46f5e244bc5183edbfcbb83"
+  },
+  "plateSha256": "5772b8c6f1652977d1cb46141682fbdeeb6eac8af989b3f49fa3f600e2277a96"
+ },
+ {
+  "sku": "GBcyl25RdcrWht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2565,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /1. Cylindrical 25ml /1. Cylindrical 30ml PSD /10. GBCyl30RdcrWht.psd",
+   "releaseVersion": "8af109efe5ad6d5f6754d9c1b1620b10b0a64586e7490db909666e185738aedd"
+  },
+  "plateSha256": "a2a0939d9056112faeb4c33bba5b7245ab631d019501a168124e4e285636ebac"
+ },
+ {
+  "sku": "GBcyl25SpryCu",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.2885,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/54. GBCyl30SpryCu.psd",
+   "releaseVersion": "21eab53f38a95d5fee872921a97811a8bace51008d4475ea18d73ee3496299f1"
+  },
+  "plateSha256": "9c2363bbc7ca52cff855cd7cab670ac1726495b06d431fcd0709ade2cfffa140"
+ },
+ {
+  "sku": "GBcyl25SpryMtGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2207,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/11. GBCyl30SpryMtGl.psd",
+   "releaseVersion": "f4a8fd07f8b135d6b521d60a1a5b8f1ad0bb5e17767aefaf389bddaa0fdef0a1"
+  },
+  "plateSha256": "6bc290cbdb799798b63fe077d1af0151ee6103fae047ffa30777b31166c499bf"
+ },
+ {
+  "sku": "GBcyl25SpryShnBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.9568,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/21. GBCyl30SpryShnBlk.psd",
+   "releaseVersion": "5b6712113b89796628700e445b8bf2de81b9bf2704c3253cbb19fbdb22c9fa14"
+  },
+  "plateSha256": "2a56353111e03b4c801593d19642b33215170f74e7f25980b519c14948089377"
+ },
+ {
+  "sku": "GBcyl25SpryShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.409,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/17. GBCyl30SpryShnGl.psd",
+   "releaseVersion": "df74926e9c9f40cc3df6040d6fe6d4ef5caa7987d4ad4d9dce351a0e9ddc5a29"
+  },
+  "plateSha256": "8d30fc9d3991ce298fd61898649f192dabd3faacca493ebe9c740b7ab35d5178"
+ },
+ {
+  "sku": "GBcyl25SpryShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3279,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/30. GBCyl30SpryShnSl.psd",
+   "releaseVersion": "af5282682b8396b6efe0925eed409e5d2fcf7b9ffe1e2c06c860caa1592d29b1"
+  },
+  "plateSha256": "29760aa2950ef17fbfe71cc28b4f3dfc598319c6d4b25be5c6a3fa3572f7ee6a"
+ },
+ {
+  "sku": "LBCyl25LtnCu",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3027,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/51. LBCyl30LtnCu.psd",
+   "releaseVersion": "fcf5afe93ab3acc0db8b1bad73942a74d470dcd1bf3544dca14f76f63f8d8795"
+  },
+  "plateSha256": "4a0ceaa1f71055e63e6cfcb0827e027204b71297f76c59176e3bfef90b8634bf"
+ },
+ {
+  "sku": "LBCyl25LtnMtGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2929,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/12. LBCyl30LtnMtGl.psd",
+   "releaseVersion": "33ad80b1488d53e48d6d26e99b5dc413b94ef017a4aff238c515158b5d4a53b5"
+  },
+  "plateSha256": "66488fa9c6234ec8294a78fd929fb6f9706c50381c79144c28ddd80e210aaccb"
+ },
+ {
+  "sku": "LBCyl25LtnMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.0236,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/26. LBCyl30LtnMtSl.psd",
+   "releaseVersion": "7fb3f5a50103329e3e35280b72d3faacb11cf7e6aa582e737b484bb7d138fb43"
+  },
+  "plateSha256": "4313545a8d2e88eb60e4a802a1785cc699054bafa85ca8f199ac2d68ff74318f"
+ },
+ {
+  "sku": "LBCyl25LtnShnBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.031,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/22. LBCyl30LtnShnBlk.psd",
+   "releaseVersion": "cd3b223ae716e3e441048148b829e157123826decc47665cb6502e82ad73f2c5"
+  },
+  "plateSha256": "1f1a578d87c0490dd9b9c78d23d92ce11c9385763447222b7c158d75dd13f76e"
+ },
+ {
+  "sku": "LBCyl25LtnShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4613,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/18. LBCyl30LtnShnGl.psd",
+   "releaseVersion": "ebd27fd1af47710ef5ca1fbb4a05de87949125d6f8c6ff2a08e0380a467d5ba1"
+  },
+  "plateSha256": "c901db6e99aa7cb764bff4bd93aba2ccd6ed00015699ebcf397fb0261dc60a89"
+ },
+ {
+  "sku": "LBCyl25LtnShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3382,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/32. LBCyl30LtnShnSl.psd",
+   "releaseVersion": "9caac95e4f553d8178a125410ca97ed8d273a7ec693ed19ecaf14d063731e8fc"
+  },
+  "plateSha256": "67d38d0da0099926ed665b3bc4345b50f196864a98fe5cac64681c5154378a58"
+ },
+ {
+  "sku": "LBcyl25LtnClOvrCap",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2642,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/1.  30ml Cyl, Ltn & Spry, capped/28. LBCyl30LtnClOvrCap.psd",
+   "releaseVersion": "b033764fbc0a5d6e2c3a595a57c4384673c1001e60dc56567dcdefcb788ac9ee"
+  },
+  "plateSha256": "5bc47b433f3669b62008d3c41ad89108757b9c9f5be547326f9916f10a400644"
+ },
+ {
+  "sku": "GBCyl1ozRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1969,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/1. 28ml Capped/4.  GBCyl28RollWht.psd",
+   "releaseVersion": "a6a88ec3fe6e0bd7081d0fb0dc7043621c59e34a9bd0c64547ae25fb364f666c"
+  },
+  "plateSha256": "e1b5663e5ed2045effd3971c4cd08a9b1fdfa6b776a0f6df82ebd1648b277d16"
+ },
+ {
+  "sku": "GBMtlRoll28Blk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.9649,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/1. 28ml Capped/1. GBCyl28MtlRollBlk.psd",
+   "releaseVersion": "cdb8551b2ea5caeb4469e01ad4626f277738ec12938fb653131cd4c0d4dfe288"
+  },
+  "plateSha256": "a64c1b259fe0629ce45ae4741a1b20dd7ec3eaba15ac0935642e1b2fcfabcc80"
+ },
+ {
+  "sku": "GBMtlRoll28Wht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1791,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/1. 28ml Capped/2.  GBCyl28MtlRollWht.psd",
+   "releaseVersion": "c3b5c9232ca208819699e6c3dd97ae1b70257df7cc4181c3387da279886861c9"
+  },
+  "plateSha256": "1dac9f8c63fa64183174f6eaba4bd1f1be0c02f049d577504be55439aabb30ed"
+ },
+ {
+  "sku": "GBRoll28Blk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.9435,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/1. 28ml Capped/3. GBCyl28RollBlk.psd",
+   "releaseVersion": "2bf146e961717d721e0b317932cc0538a7760a68400d8b684caf68237e426479"
+  },
+  "plateSha256": "6c0edcabb89c277606e67fa93cf7c8e6eb3f08795c97ad75371f3dfc4363b6f2"
+ },
+ {
+  "sku": "GBSpry3mlClWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.8731,
+  "source": {
+   "library": "master",
+   "path": "17. Additional Bottles/GBSpry3mlClWht..psd",
+   "releaseVersion": "1c3b17e52c49f6b7a9c6801a30f9fe76030ec3737f72a2df7b2e614cb2c75859"
+  },
+  "plateSha256": "2a594a9028b0bd66c32045eafa85b852fede2c18029d82ca1fc7f6bc20790e99"
+ },
+ {
+  "sku": "GBSpry1ozGl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.8655,
+  "source": {
+   "library": "legacy-exact-pair",
+   "path": "https://www.bestbottles.com/images/store/capped/GBSpry1ozGl.gif",
+   "releaseVersion": "6565ef229c179dc9a45c3d875291bcb953164e187ce95a736b1bc88104f70b29"
+  },
+  "plateSha256": "bd18c4b7cb777a3eeac5820316fcd82cf332c07b9f212b92ef77e1736f913aa7"
+ },
+ {
+  "sku": "GBSpry1ozSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5907,
+  "source": {
+   "library": "legacy-exact-pair",
+   "path": "https://www.bestbottles.com/images/store/capped/GBSpry1ozSl.gif",
+   "releaseVersion": "563363352df67a764da6cfdaae44a44a3edc927d2142979ce9fff2fd949eeefc"
+  },
+  "plateSha256": "f86fb5c0dd860b8567751fab3c395e9872edb6c9d9509784567bbff6f4227280"
+ },
+ {
+  "sku": "GBSpry4mlClBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.9595,
+  "source": {
+   "library": "master",
+   "path": "17. Additional Bottles/GBSpry4mlClBlk.psd",
+   "releaseVersion": "df4a28c21ae7a5dba2e659d6b0641ce0bb742181c737a17f99a9d935f32032ea"
+  },
+  "plateSha256": "4830f4ba9fa6aa42ad187772fc193cd48ca1e15908566fb51afea4065c88579a"
+ },
+ {
+  "sku": "GBSpry4mlClWh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2422,
+  "source": {
+   "library": "master",
+   "path": "17. Additional Bottles/GBSpry4mlClWh.psd",
+   "releaseVersion": "e19dbc706e02350cf0e953dc467f0fd71fbe6639bfe0a7a9d361b785cd098aa0"
+  },
+  "plateSha256": "b680d7c6963627e472c2d2ee30704557e6b50bb7f8b5300b3a2719749fc0da6c"
+ },
+ {
+  "sku": "GBCyl5SpryBlkMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.0209,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/3. GBCyl5SpryBlkMatt.psd",
+   "releaseVersion": "58f3b9216edf03c6e90f30fc1c2a3036d117dd1d8d00563ac22b37141a5a0216"
+  },
+  "plateSha256": "fdedce7d645fa93b9f3b11ad8e1ede58d3d72398bc76319fdda47ac146fd1a70"
+ },
+ {
+  "sku": "GBCyl50MtlRollBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.9829,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/3. 50ml Capped/3. GBCyl50MtlRollBlk.psd",
+   "releaseVersion": "b22324d16e9273c6757d006365723041b0fba30abd0856fc7fdbfb8bab38f2bf"
+  },
+  "plateSha256": "7a6e1d385b13f64f62f7cf81344e3b02c2d000aa015e596fb9d717ef31bf592e"
+ },
+ {
+  "sku": "GBCyl50MtlRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.0851,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/3. 50ml Capped/4. GBCyl50MtlRollWht.psd",
+   "releaseVersion": "87acc86f2961c9daf9ee5e85193afdb298790f384cf09ae2d9f1ef3533d36ae0"
+  },
+  "plateSha256": "f76067ffb6ccfddd403fac62cdb5d73f63216e48b8a1f03db11b066e60dca7da"
+ },
+ {
+  "sku": "GBCyl50RollBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.9719,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/3. 50ml Capped/1. GBCyl50RollBlk.psd",
+   "releaseVersion": "ee26a52d78ab668d19edac58fd266a6bdc58c221226b09b672f6dd006f228c2c"
+  },
+  "plateSha256": "27c5ec8a425c742c9152d911f5735e9e66fd8a81b67d2cf1fbeb2c750e3a743f"
+ },
+ {
+  "sku": "GBCyl50RollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.0952,
+  "source": {
+   "library": "master",
+   "path": "13. 16 mm/3. 50ml Capped/2. GBCyl50RollWht.psd",
+   "releaseVersion": "528b3ac7e3dfe742fffc60f1b01d61508bf6535e46f3bb31c1636977dd814c5d"
+  },
+  "plateSha256": "f5317ce279475bed29eb0e62952614e752a307b76c5b79b45bc9fee14fe49863"
+ },
+ {
+  "sku": "GBCyl50AnSpBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.203,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/39. GBCyl50AnSpBlk.psd",
+   "releaseVersion": "8c0cee4af3e19ad538c727c80bf6e78e5802e8e30c6a76d60c4846847a0140be"
+  },
+  "plateSha256": "690f590478fb63aafcda235135fbaffb8affdf9bdef1eef4df283934f60c72a6"
+ },
+ {
+  "sku": "GBCyl50AnSpGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.591,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/37. GBCyl50AnSpGl.psd",
+   "releaseVersion": "55dd75a95d7b09af3bf3d9c34f61aa0015a6e84b31e3fa776a24dc1c7393b704"
+  },
+  "plateSha256": "372c36dce2544894810f3fd9f5d696207f9e9068447bee0f44b316fd5f501bd5"
+ },
+ {
+  "sku": "GBCyl50AnSpIvyGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.4307,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/38. GBCyl50AnSpIvyGl.psd",
+   "releaseVersion": "0dc6629e11caebf412198073203de35b01fa4dbff7ce4b471b8616113e749d86"
+  },
+  "plateSha256": "3c63b3e4465c8c5fa1ceac7530a6dabcf5f9a9fcbd3c6c0361dcbd3b4a1adfb1"
+ },
+ {
+  "sku": "GBCyl50AnSpIvySl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.4156,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/36. GBCyl50AnSpIvySl.psd",
+   "releaseVersion": "49ffb83f8a74912f80fcbcc00c6806c61956c6fadf3eddba324372e0e26012f9"
+  },
+  "plateSha256": "73c0621b39c6febc1df048b5e0e40e2b310f54c3d46dbf395b4a67480d7e9de5"
+ },
+ {
+  "sku": "GBCyl50AnSpLvn",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5813,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/33. GBCyl50AnSpLvn.psd",
+   "releaseVersion": "55c50b3b5390b702c5a7f736241354bb205fbd1b7c86ade45a9cdf5531122dbc"
+  },
+  "plateSha256": "80565e917e57b90c7ded801dddc1882d54bac69a62149e89ae2826993ca9ccaf"
+ },
+ {
+  "sku": "GBCyl50AnSpMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.2082,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/35. GBCyl50AnSpMtSl.psd",
+   "releaseVersion": "272fbe43b85a81b763f595471229062c8680304f5663d656ba9b08e30ca8a18a"
+  },
+  "plateSha256": "0589f69a642e3a3ac46d514ae697587bc1c8ffde6712cd861847c455fbc1f579"
+ },
+ {
+  "sku": "GBCyl50AnSpPnk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5464,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/34. GBCyl50AnSpPnk.psd",
+   "releaseVersion": "af0c4a0bab07043a125689c3fbbbab41da47336ad405575ee1dfe0d2b7c7965b"
+  },
+  "plateSha256": "e6431dfd01f74d2206a64498a98291241414f04a4a3433cf86ac9e3883c8cee5"
+ },
+ {
+  "sku": "GBCyl50AnSpRed",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3873,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/41. GBCyl50AnSpRed.psd",
+   "releaseVersion": "acc63477e4f29298c3b0716da05d9bb81bcb2fbcbf785d8f65c0ca7dda7dcae1"
+  },
+  "plateSha256": "e71c3f3dac1ec138650c6fa843a51559bd0cef2e88dd41190688cff41905f5ae"
+ },
+ {
+  "sku": "GBCyl50AnSpTslBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.3819,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/48. GBCyl50AnSpTslBlk.psd",
+   "releaseVersion": "6f6ab4de7afdf81ca10eeb72d9b7694cd229f96f675b0432173b2ce6887cf8b6"
+  },
+  "plateSha256": "bc4ab25d57a94ff44464a3d05442efe34715bda0012e82b85c5c74fb090d568f"
+ },
+ {
+  "sku": "GBCyl50AnSpTslGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.98,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/50. GBCyl50AnSpTslGl.psd",
+   "releaseVersion": "bcfd50cb78df3064a44c979e905bf652f2fd3f143dc2476a91a61cc1a2da2423"
+  },
+  "plateSha256": "86385b15745e16255cccdb65b121500c99c3b6b6018b31dd80be6276499448ad"
+ },
+ {
+  "sku": "GBCyl50AnSpTslIvyGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.783,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/43. GBCyl50AnSpTslIvyGl.psd",
+   "releaseVersion": "40c47bac0cf3d2866d2605bd6fbb2ada9157c7399a9ca7bd57137a5f6b0f1664"
+  },
+  "plateSha256": "01e712c3d727f63f4b2f07cb243b9fc175877841d5505b493dad442080f1c587"
+ },
+ {
+  "sku": "GBCyl50AnSpTslIvySl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.8054,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/44. GBCyl50AnSpTslIvySl.psd",
+   "releaseVersion": "332aee719faf20a5ec87f0fa35471828ab721fb0f44e14246bafa7201b18417a"
+  },
+  "plateSha256": "d9498802a84f1a07780c2f8062090b136ca90402ce3c43774b2bebf4e828cd8f"
+ },
+ {
+  "sku": "GBCyl50AnSpTslLvn",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.9903,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/42. GBCyl50AnSpTslLvn.psd",
+   "releaseVersion": "2821b7f659225c6cfdb2fff46fd98e813fdc1a321e8220a72cfeb14c1a1b6b19"
+  },
+  "plateSha256": "327035c52757b1d232fe326ea65db38fee77ab2397021be439904d3b550eee61"
+ },
+ {
+  "sku": "GBCyl50AnSpTslMtSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.5574,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/49. GBCyl50AnSpTslMtSl.psd",
+   "releaseVersion": "8ee0708e6bef2b1b47d36d65693350956f24301cb292060d389a11e6d946b08b"
+  },
+  "plateSha256": "cafb39111ceec2d05770004e823d59f6fdfb12dc920feccc8e2e5337ffecd521"
+ },
+ {
+  "sku": "GBCyl50AnSpTslPnk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.8978,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/46. GBCyl50AnSpTslPnk.psd",
+   "releaseVersion": "425f9c58f047bed8ca32c43e9f1b40c88f92dacd4d835d871bdb4a460cf5caa3"
+  },
+  "plateSha256": "5445a692b1981c5a0bb4e3f9647a0797e22f1263665b886df5efcc74ebb018aa"
+ },
+ {
+  "sku": "GBCyl50AnSpTslRed",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.9348,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/47. GBCyl50AnSpTslRed.psd",
+   "releaseVersion": "756f7aadb7c9cfed8cfa28cd54b0d17c7243d9867f835e0cd1ad791153b115dd"
+  },
+  "plateSha256": "506db8291ff72267256faf8e3f3135a9922b2537e809a2a4eb0250525eb363e6"
+ },
+ {
+  "sku": "GBCyl50AnSpTslWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.4121,
+  "source": {
+   "library": "master",
+   "path": "21. Tassels/Updated Tassels/45. GBCyl50AnSpTslWht.psd",
+   "releaseVersion": "c9aee54cb672a351920db40f34449e1c9a46f6af1423f46d1f078c8fd5feafbe"
+  },
+  "plateSha256": "59871d8f675bf3b121674e7831e96e1c63eaf53ac442e601f1e572100af2f119"
+ },
+ {
+  "sku": "GBCyl50AnSpWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.0959,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/40. GBCyl50AnSpWht.psd",
+   "releaseVersion": "e57597530f423404ca951dfcd0cdaa992fd9edf7150a98e134ea67ed70d98ec1"
+  },
+  "plateSha256": "0af874ac5a2685749d99916379b856155feba10388b2ffe957cf977144045678"
+ },
+ {
+  "sku": "GBCyl50RdcrBlkLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.8061,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/4. GBCyl50RdcrBlkLthr.psd",
+   "releaseVersion": "1cc94d6ca944e2b05aabffe907915e38f1fdf9e429afad4482c86bc1309bc09a"
+  },
+  "plateSha256": "a190daade148335c982bb03f6c734ec7c3c4e51b6eee311e52a1a2779a7b2f5c"
+ },
+ {
+  "sku": "GBCyl50RdcrBrwnLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.2589,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/5. GBCyl50RdcrBrwnLthr.psd",
+   "releaseVersion": "c101a888365bd3796ac309e4b461b8b3e342994c4a3a396b6deeaec00a282b12"
+  },
+  "plateSha256": "7eed0e8e15ea47f35261140e27caa1cf257ee941e79116da71efa73a7e07624f"
+ },
+ {
+  "sku": "GBCyl50RdcrIvyLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.0579,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/52. GBCyl50RdcrIvyLthr.psd",
+   "releaseVersion": "be715c687ed27d408c536b1251b3385421a09d300f57b30e341220f61711e7a0"
+  },
+  "plateSha256": "56a8eb9199ebe435c4e0fa9eb46c9ad2f3ac17b1e3d19f3289ee74b54567474a"
+ },
+ {
+  "sku": "GBCyl50RdcrLBrwnLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.3011,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/6. GBCyl50RdcrLBrwnLthr.psd",
+   "releaseVersion": "d794e6b8ac8ae28d2c611a437ebc3f51373fd0f0e7472a572eb28ca3b9e861af"
+  },
+  "plateSha256": "7912327344267193d2a664b49eb0221b12cf4a0b0975b5f9c06c3a6151c57210"
+ },
+ {
+  "sku": "GBCyl50RdcrMtSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2504,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/9. GBCyl50RdcrMtSl.psd",
+   "releaseVersion": "e74bfd9325fdcb699452a1bc4f2d067111d4eeac51f038936421b3f144349985"
+  },
+  "plateSha256": "aa79a483dda058fde7f62cf3248d400aa11db5f8464bfebcd567f54bb5296d2e"
+ },
+ {
+  "sku": "GBCyl50RdcrMtSlTall",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4708,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/8. GBCyl50RdcrMtSlTall.psd",
+   "releaseVersion": "4943028e23dfa77dc6b9e96ac2f82f675f2daaf989ad22fcfc336a9c9e507a86"
+  },
+  "plateSha256": "1a89572896e5ed3cc532894ed981aaa8a2de91f3d1a0f3993e2a34200eea065f"
+ },
+ {
+  "sku": "GBCyl50RdcrPnkLthr",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 2.0668,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/51. GBCyl50RdcrPnkLthr.psd",
+   "releaseVersion": "74f43bca4b679147f0bf46e350981e1417646be6b74c61f49e1549c9825757e9"
+  },
+  "plateSha256": "f0d31b7d5a486e5f7d8f7d147c5423b611a457eab82c3bf2c2ae6ac0fb40d469"
+ },
+ {
+  "sku": "GBCyl50RdcrShnBlk",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2813,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/3. GBCyl50RdcrShnBlk.psd",
+   "releaseVersion": "273ad087e2044693833ab19e93a77353f2029daf4d211b07e0387d615c3a0235"
+  },
+  "plateSha256": "ca9715710f4e82a25d316ea2c2575dd206790ad6d35f566ad137f97fba02ea4d"
+ },
+ {
+  "sku": "GBCyl50RdcrShnBlkTall",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1651,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/2. GBCyl50RdcrShnBlkTall.psd",
+   "releaseVersion": "738b0b9eb48ddf644f48abbe887e3ad23a14cf450557f888314b14ef37e0ea65"
+  },
+  "plateSha256": "4785d3abc5e6abbd465c70138cbae4226887879c9e4e36fef95418981dc1c4e7"
+ },
+ {
+  "sku": "GBCyl50RdcrShnGl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5139,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/1. GBCyl50RdcrShnGl.psd",
+   "releaseVersion": "e9d1643dc53e143fba778471067b0364be9a0e786022a566494af55ce3a28864"
+  },
+  "plateSha256": "f717a99eb23d3c1669ef8b486810923dd05aff93310e9814034c801829d1ece7"
+ },
+ {
+  "sku": "GBCyl50RdcrShnSl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4544,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/7. GBCyl50RdcrShnSl.psd",
+   "releaseVersion": "dbdad21e678ddea99695665770c6dd4d4b8746cb43a0db916ac4f7d5999a9ed2"
+  },
+  "plateSha256": "5394d5c7c58200a949bad0ba4b7cd63df5398b858282e039e35ccbc700cafc14"
+ },
+ {
+  "sku": "GBCyl50RdcrWht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3008,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /2. Cylindrical 50ml /1. Cylindrical 50ml PSD/10. GBCyl50RdcrWht.psd",
+   "releaseVersion": "9bd9ab6585d778dcfde0545196ea6e7f23b06470b373206fd053c0a7b1584bc7"
+  },
+  "plateSha256": "177a91bc05d8f77f231620120636ab1ef37d35bb6a8dbbc8ce6c8a092850baaa"
+ },
+ {
+  "sku": "GBCyl50SpryCu",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.351,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/54. GBCyl50SpryCu.psd",
+   "releaseVersion": "42118bdc327b4c4be276f51fe73081f95eb972410006f82f10bf00d09171ba72"
+  },
+  "plateSha256": "b8c45f68d7d2ed41bbc49e2d7937ac4a75939214a2acf37e77b908be9cd13be7"
+ },
+ {
+  "sku": "GBCyl50SpryMtGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3991,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/11. GBCyl50SpryMtGl.psd",
+   "releaseVersion": "e5971a9dd4256c7e68f27fcee5502a7e0b8402584b895abb049b57f6b2ac2d33"
+  },
+  "plateSha256": "a47a6199e2a98327fd03274019cc1a36b663ee766c66132d1d118a61e96c8853"
+ },
+ {
+  "sku": "GBCyl50SpryMtSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.1324,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/24. GBCyl50SpryMtSl.psd",
+   "releaseVersion": "906d299a659d42f6acdeeeeac578bdcb0768a9da7283f1eb3f54610aa317313e"
+  },
+  "plateSha256": "59a8ca88de406b4dca4e4acefd625ec40faf1139ffce61ef15278cf3e3cd1bb4"
+ },
+ {
+  "sku": "GBCyl50SpryShnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3489,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/21. GBCyl50SpryShnBlk.psd",
+   "releaseVersion": "c96158ba03561cb0a5caa9d43522fc16ad4e93e7275875898c013c6e34d2e14d"
+  },
+  "plateSha256": "83452c60228eb94cccfbbc91cde15ad1992cd96171d7d4e9ac7bdeefca8f7d45"
+ },
+ {
+  "sku": "GBCyl50SpryShnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.8852,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/17. GBCyl50SpryShnGl.psd",
+   "releaseVersion": "fb01ffa90638223762640893f14bb5b88adb8f8a0f97a18f20739924e09144ca"
+  },
+  "plateSha256": "517ce60acca3b51906dbae6e99280dfd0bbaa56f2a74e816f68b450f68e4c596"
+ },
+ {
+  "sku": "GBCyl50SpryShnSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4987,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/30. GBCyl50SpryShnSl.psd",
+   "releaseVersion": "636ffeff9910354a76371ffc84a6d6c5a9a400370acadd47bbd9354aebfe74c1"
+  },
+  "plateSha256": "ac590007ff0bc2e8ba31ba32cea3ea36cf070fe28a3449eada68b60c7c470280"
+ },
+ {
+  "sku": "LBCyl50LtnClOvrCap",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3279,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/28. LBCyl50LtnClOvrCap.psd",
+   "releaseVersion": "ee6febdb9fb5fa12d1a7df7d095118c0274a3505156971ed57c733b14120e509"
+  },
+  "plateSha256": "0a4bc7908ad91d23907c1719660819d41a73556b0886bd01e7bfe3d066445b98"
+ },
+ {
+  "sku": "LBCyl50LtnCu",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4488,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/56. LBCyl50LtnCu.psd",
+   "releaseVersion": "de7d0f6e38912d38045b1b7129f3bb0602c5e02a8cbcc9819448fadbf883777a"
+  },
+  "plateSha256": "b82a6a6ad668ec4ccf2fb430dbb9b4e35fb8a26d680c7d31842a5146fffebc7a"
+ },
+ {
+  "sku": "LBCyl50LtnMtGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5854,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/12. LBCyl50LtnMtGl.psd",
+   "releaseVersion": "70caba92fc056aece8a00b539d7f8cdde5a4485db886f44ad4dac1fd2cc5e028"
+  },
+  "plateSha256": "9d210105f2451b7c8bb8b8421154a464f8badbbfbcc326fbb9ee45a490a28841"
+ },
+ {
+  "sku": "LBCyl50LtnMtSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5751,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/26. LBCyl50LtnMtSl.psd",
+   "releaseVersion": "45680a3719272bcd5af79bfd1d2feec7cbdefb114e4e15b1574a182cfb4b6f5e"
+  },
+  "plateSha256": "50297d508212a0a264df4edc8ede5c33bac8384f7fcb52fc61cced6d4be8759b"
+ },
+ {
+  "sku": "LBCyl50LtnShnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3582,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/22. LBCyl50LtnShnBlk.psd",
+   "releaseVersion": "a49227462651da4dd1eee52d874b5e07b1cb5bdbe703c2fa2060e06e53c8d1ea"
+  },
+  "plateSha256": "73fc6a310ed896219150b37037edf3961b0c0eaa9f94877f55f81e3672c68630"
+ },
+ {
+  "sku": "LBCyl50LtnShnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.9817,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/18. LBCyl50LtnShnGl.psd",
+   "releaseVersion": "2b57d75fc50920bd52a10d4f13a3e801ee7d8dc5881e6d4eb553ded2d2e5216a"
+  },
+  "plateSha256": "c6779f25727e1f3a285276c33bfe49bc78c66c77b55a31b4c8aa89968645dce0"
+ },
+ {
+  "sku": "LBCyl50LtnShnSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6876,
+  "source": {
+   "library": "master",
+   "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/2.  50ml Cyl, Ltn & Spry, capped/32. LBCyl50LtnShnSl.psd",
+   "releaseVersion": "963db0d9ab0eb882e36cb00fc4e675ea7749d72b6e34b5e51e7f1c77d96ca755"
+  },
+  "plateSha256": "d796843fa6cc4320cc1cff00e46f7aa7c94b6f5370687d65159b074d10835d8b"
+ },
+ {
+  "sku": "GBCyl5BlkShSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3933,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCyl5BlkShSht.png",
+   "releaseVersion": "3b3ec60e34f4d3e576756ac9a378a5e5cbeaba122df9ee9caffdab41fe604e9c"
+  },
+  "plateSha256": "821c67e457246679d6704027471a91d5bdacf98a43cadf9eeaf3fe578bb7b879"
+ },
+ {
+  "sku": "GBCyl5BlkSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5575,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/1. GBCyl5BlkSht.psd",
+   "releaseVersion": "e2b0b85826c0d8374f15fe42f1976873272e716ffa46a0828aacad5924405f9d"
+  },
+  "plateSha256": "52567c630e26b7d24c83764a491a4d8fda8d0656d292ef63f05e8528e2a4bffa"
+ },
+ {
+  "sku": "GBCyl5CuSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.6231,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCyl5CuSht.png",
+   "releaseVersion": "c52b237a0f138686a85391dc101c1a91a96966927a6dba4385f8ee00691359a6"
+  },
+  "plateSha256": "1f996a5f37c44214cd0fe47249a869a0c66a92caeda8e9cfc737fe2229203985"
+ },
+ {
+  "sku": "GBCyl5Gl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4219,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/28. GBCyl5Gl.psd",
+   "releaseVersion": "98216e0c95cfc35ad38c7ff678571412129ac0e3604c9b0e37e31be433f55ea4"
+  },
+  "plateSha256": "aae36ca0a6d2a9ec8faf32702aef4fd3a1a80917647377a720f24a89594acce5"
+ },
+ {
+  "sku": "GBCyl5GlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5948,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCyl5GlMattSht.png",
+   "releaseVersion": "eb9f0d5e45dfe348dedb6abb6b18da9f8c531889a08527157f79adeee9940e55"
+  },
+  "plateSha256": "b8eff513e161f8668d1dc287bd3d6d78a2797f3c29a92dad1a86b258f27a1fce"
+ },
+ {
+  "sku": "GBCyl5GlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.619,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCyl5GlSht.png",
+   "releaseVersion": "508a046cacbd34c7e01633a5c5c8db8258421425aee58f614440f21ec136cd3f"
+  },
+  "plateSha256": "5f089eaecb82dd3cbf30dc48dadfaa6e08e9f414906e65dbd07fdac2fd95235a"
+ },
+ {
+  "sku": "GBCyl5MtlRollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.0891,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/26. GBCyl5MtlRollBlkDot.psd",
+   "releaseVersion": "588c3155cd4974ed17143818703220066388d92f09443a3de4781f80772dd0b3"
+  },
+  "plateSha256": "4cae232a9d2f13d42200202e21cdb4d105fed304ec2c92ea71ebcd086b4243dc"
+ },
+ {
+  "sku": "GBCyl5MtlRollBlkSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.9803,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/24. GBCyl5MtlRollBlkSh.psd",
+   "releaseVersion": "e371531e20f31aa4710c058af51461f69531a4795d7d4d1a7ab3369492d143e7"
+  },
+  "plateSha256": "67c3597d387e098df50037857dbf44543b65c22f56ea2e55bc30e1a275acf9f0"
+ },
+ {
+  "sku": "GBCyl5MtlRollCuMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4234,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/22. GBCyl5MtlRollCuMatt.psd",
+   "releaseVersion": "4ef2813e392a2b0c636bcd56ada335971eb8d09c9c4da71fbe6c0afa955539c6"
+  },
+  "plateSha256": "a7325ad7abe9210d043b125727475ec72c67cdb175444307a334cfc0392cd2bb"
+ },
+ {
+  "sku": "GBCyl5MtlRollGlMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3537,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/16. GBCyl5MtlRollGlMatt.psd",
+   "releaseVersion": "f871b19b635bf4879a8d7ae68210b9d9c70c68686556b82cc4d8514d7ffa4359"
+  },
+  "plateSha256": "7d4c41a93f9c80a4d1c91f466e9997915a7fad9ee7118272354682944153358e"
+ },
+ {
+  "sku": "GBCyl5MtlRollGlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3903,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/18. GBCyl5MtlRollGlSh.psd",
+   "releaseVersion": "b067e2c5341265174c09c4cd053dd4f389c26a8d3e847a05f4b6a2d6e68629e8"
+  },
+  "plateSha256": "6e3c7e91a74775e40ec0c96dffc054aceca5e867feb2a6401434063c25d9344e"
+ },
+ {
+  "sku": "GBCyl5MtlRollPinkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3336,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/12. GBCyl5MtlRollPinkDot.psd",
+   "releaseVersion": "aba28366d40d6170ae8496a6942cbe74e25d1c6a6ee9724de24e1243b7112989"
+  },
+  "plateSha256": "a8caa6ed12a6544764a5c22b7fc0e1edee5f92cde2cce2b143df80512e681bf0"
+ },
+ {
+  "sku": "GBCyl5MtlRollSlDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.023,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/10. GBCyl5MtlRollSlDot.psd",
+   "releaseVersion": "b8b76937a7199acba8e39db83d9a39877ce0852ce2fb54073aa3d7b5f7c98d72"
+  },
+  "plateSha256": "fca29efeac4528ff271c5583d94dc4977d362259151abf865154549a1cc6252b"
+ },
+ {
+  "sku": "GBCyl5MtlRollSlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.0847,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/14. GBCyl5MtlRollSlMatt.psd",
+   "releaseVersion": "516a49e59ef030134c47e56352ea3a412fda675af16db4f3f8f6f16c1897f898"
+  },
+  "plateSha256": "247390ece63fc694882b9a403f01560692c607d4d999a2756f82773f4aca77a9"
+ },
+ {
+  "sku": "GBCyl5MtlRollSlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3808,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/20. GBCyl5MtlRollSlSh.psd",
+   "releaseVersion": "7ed5ee801be70e42f4498398efde703da4ecda030ffccaf46932e0044219e58a"
+  },
+  "plateSha256": "caa3d53b3ae7dcb74525c33bd823fa60aeda0dfba399057f2d2772a6d05134ae"
+ },
+ {
+  "sku": "GBCyl5RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1332,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/27. GBCyl5RollBlkDot.psd",
+   "releaseVersion": "d59eb0d226383791602ebc578aa23873c012e2e58a267e1e4a85a89968703a04"
+  },
+  "plateSha256": "3d25892b8c0752860977980a5fc82f64585e70f2735717c405d7149acf0e0f73"
+ },
+ {
+  "sku": "GBCyl5RollBlkSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 3.8435,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/25. GBCyl5RollBlkSh.psd",
+   "releaseVersion": "e371531e20f31aa4710c058af51461f69531a4795d7d4d1a7ab3369492d143e7"
+  },
+  "plateSha256": "e049bf9635e69d6224a18346dde0e27378ad283bb00e705ed747c6b82ca70f90"
+ },
+ {
+  "sku": "GBCyl5RollCuMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 3.4332,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/23. GBCyl5RollCuMatt.psd",
+   "releaseVersion": "4ef2813e392a2b0c636bcd56ada335971eb8d09c9c4da71fbe6c0afa955539c6"
+  },
+  "plateSha256": "fac6752784f1c4bf714a0b7474f08eabb298d11a858ddcdff74337e34532b398"
+ },
+ {
+  "sku": "GBCyl5RollGlMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 7.134,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/17. GBCyl5RollGlMatt.psd",
+   "releaseVersion": "f871b19b635bf4879a8d7ae68210b9d9c70c68686556b82cc4d8514d7ffa4359"
+  },
+  "plateSha256": "2d7e1e65544060ab2bd8ae446317fffbbaf42f8155658bce8f7488f0a9618c7b"
+ },
+ {
+  "sku": "GBCyl5RollGlSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 7.2963,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/19. GBCyl5RollGlSh.psd",
+   "releaseVersion": "b067e2c5341265174c09c4cd053dd4f389c26a8d3e847a05f4b6a2d6e68629e8"
+  },
+  "plateSha256": "b05009c22fc7521b7779751cf2ceb7f4772d89a9adce745d52884b0c6caf0a44"
+ },
+ {
+  "sku": "GBCyl5RollPinkDot",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 7.3747,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/13. GBCyl5RollPinkDot.psd",
+   "releaseVersion": "aba28366d40d6170ae8496a6942cbe74e25d1c6a6ee9724de24e1243b7112989"
+  },
+  "plateSha256": "e6f43b955b35959d8922aac8f418b752b85caebdcba28c7dd95e0c2c5aa9bfac"
+ },
+ {
+  "sku": "GBCyl5RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.0236,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/11. GBCyl5RollSlDot.psd",
+   "releaseVersion": "a596df70ef8ba7ac15e6d6cc7597b8f4604838746c12d0536db1de87f2029318"
+  },
+  "plateSha256": "6dadafb58af28f4a21227d7bf0622ff8bf6ef12e7b2118cccbd86c350397fb85"
+ },
+ {
+  "sku": "GBCyl5RollSlMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 3.6767,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/15. GBCyl5RollSlMatt.psd",
+   "releaseVersion": "516a49e59ef030134c47e56352ea3a412fda675af16db4f3f8f6f16c1897f898"
+  },
+  "plateSha256": "d9031fd5f263ae79457ad7c005d2d267da3af25f3e70784fa4ea264709e8d16b"
+ },
+ {
+  "sku": "GBCyl5RollSlSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 6.0421,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/21. GBCyl5RollSlSh.psd",
+   "releaseVersion": "7ed5ee801be70e42f4498398efde703da4ecda030ffccaf46932e0044219e58a"
+  },
+  "plateSha256": "01e9bb4ae28437b5bf7e500ccfd9c1c5990183541ee2e8ec051f113c648bbbb2"
+ },
+ {
+  "sku": "GBCyl5Sl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3752,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/29. GBCyl5Sl.psd",
+   "releaseVersion": "cbfa397ac085b6c30f1032c50826f8fe41ef5b8e997501ca6c1f6534d36a0152"
+  },
+  "plateSha256": "185de365efe3d1669fdbe3e2c152fec6b58e46819d6e3337a37f17e4c5b9c30b"
+ },
+ {
+  "sku": "GBCyl5SlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3532,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCyl5SlMattSht.png",
+   "releaseVersion": "ec0ece0ef6948022a486d53b061c9dcdb2e15f16bda26a14210cc68c4254559e"
+  },
+  "plateSha256": "f2dc80f5b1b6680e75c62b57d4d5cd4c610f76f3965d7599c42e14059d89f7d1"
+ },
+ {
+  "sku": "GBCyl5SlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.505,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCyl5SlSht.png",
+   "releaseVersion": "9cdabceb657d2f1886693f9e2220a20aba0132d5d7544f7bdb709451413f2649"
+  },
+  "plateSha256": "ae6659c17dc72198f4c30684c5303f5e84e190bfc610c6f8ddf58f140097ae43"
+ },
+ {
+  "sku": "GBCyl5SpryBlkSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.0272,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/4. GBCyl5SpryBlkSh.psd",
+   "releaseVersion": "8307234e84a5c8535a70a438708d044dcfd3fda89aeb90f8d3efee6e5b106608"
+  },
+  "plateSha256": "0e24ae71efc6bfde84b8fb1e4a91478f746cc5cc838e914232d8b8bacb56cbf9"
+ },
+ {
+  "sku": "GBCyl5SpryBluMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5037,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/5. GBCyl5SpryBluMatt.psd",
+   "releaseVersion": "527a6ae0ed674fcd380381d34f96e9c437dae7bcd96161a0b5186574853a9ca7"
+  },
+  "plateSha256": "5ce5dec8561b5e7df75d27c561843c440adbc928c2a48ec4cebc5b4330897d6b"
+ },
+ {
+  "sku": "GBCyl5SpryCuMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3559,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/30. GBCyl5SpryCuMatt.psd",
+   "releaseVersion": "ffec258e824e3e7c2b0a1f6ee44e1aa8bcd1f3889077a52eae7d0ff7de3a086a"
+  },
+  "plateSha256": "7d37246383dd3157cd72053c8a22a184314defe239f995918fda1099860f3a64"
+ },
+ {
+  "sku": "GBCyl5SpryGlMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5075,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/7. GBCyl5SpryGlMatt.psd",
+   "releaseVersion": "6edfe5d6caaa85aac2705679f87e407e9cbb6b4cf0a9e25de2b9905fd5e78916"
+  },
+  "plateSha256": "e94b86af0d98fbf8db41f49d0e8af7c1ebcc3f80b49ad7dc3235949fb73cb2e7"
+ },
+ {
+  "sku": "GBCyl5SpryGlSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5046,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/6. GBCyl5SpryGlSh.psd",
+   "releaseVersion": "db2ea65d2e0154de3dc03980ee72a5153bfbff5c7d9c1d31ed05515af81445fc"
+  },
+  "plateSha256": "e1ef1c889bcac9f86d84f2a8bbb7535aa2decb02cc456d6ef6eed122268b2b86"
+ },
+ {
+  "sku": "GBCyl5SprySlMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.1368,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/8. GBCyl5SprySlMatt.psd",
+   "releaseVersion": "aa9bc3f8e419eaf48c05f4265c5ea2391e17288d2ca7be035a5f5d394385a2b3"
+  },
+  "plateSha256": "4a61c9257d7df4ff6ba291e986f318c41b427544573885d5b0f08e2bcd22a591"
+ },
+ {
+  "sku": "GBCyl5SprySlSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5533,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/9. GBCyl5SprySlSh.psd",
+   "releaseVersion": "e3009b44b511acdfa7d662129ebc1a2056b8169eb5bc0267638fd8693b49e1c8"
+  },
+  "plateSha256": "da26697d7525544e687a901ce871d562779d6d52b7a4310c650b718a198e14e3"
+ },
+ {
+  "sku": "GBCyl5WhtSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.615,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/2. Clear 5ml Cylinder/2. Clear 5ml Cly (Capped) PSD/2. GBCyl5WhtSht.psd",
+   "releaseVersion": "720894b15434b6bd6b3b6088b52b85aa81930d75d2856416e5524d57d8ce6c29"
+  },
+  "plateSha256": "33cd973f44bea137d299ae491d504bbe584c598b7c80f7094af1a32db40c4d94"
+ },
+ {
+  "sku": "GBCylBlu5BlkShSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3691,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCylBlu5BlkShSht.png",
+   "releaseVersion": "e76bda83b5838d3eaecc0d501f0f186e64ae3faa3602755c731a4689ddd78bb6"
+  },
+  "plateSha256": "2c1a440842346ba63e602d003fdf5075fc38a2c359d4c0736ef9f5670dc100e3"
+ },
+ {
+  "sku": "GBCylBlu5BlkSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.518,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/1. GBCylBlu5BlkSht.psd",
+   "releaseVersion": "df958b77a57a0962343d3a98f0ab6b50f665247befd74178d1426b51d4ceb265"
+  },
+  "plateSha256": "cb96f610928212563b59f86d36202f89d16c9876938b1ecb1e059c2cf69de160"
+ },
+ {
+  "sku": "GBCylBlu5CuSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5206,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCylBlu5CuSht.png",
+   "releaseVersion": "cbab471be73a5623cbf3b6b8fdb7f2a00d79c97212724fd047a791289bd4d0e6"
+  },
+  "plateSha256": "fe11a3879335e050c3760de58a625a6f2b29ba36e250c23f40e35b428d633b16"
+ },
+ {
+  "sku": "GBCylBlu5Gl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4469,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/28. GBCylBlu5Gl.psd",
+   "releaseVersion": "836ec1efc274af18c9a581d1bdacded060a35e825fb729a83ec569ea35be672f"
+  },
+  "plateSha256": "1a34086ad617ae17cb1706c522fdfffbf83f8dd6218e9147d2271e4a69f3ffe0"
+ },
+ {
+  "sku": "GBCylBlu5GlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5315,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCylBlu5GlMattSht.png",
+   "releaseVersion": "ba1616984f08d868f570c3c0068ec49e05e544b0d967cf3570085a1724c383d7"
+  },
+  "plateSha256": "2eb881967380bcc33e19def595eb48fad74e87883e778e5e2eba01333015e964"
+ },
+ {
+  "sku": "GBCylBlu5GlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5763,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCylBlu5GlSht.png",
+   "releaseVersion": "c569ce6f576e427e14987b752e614e379a7b63ae9e5604d0af7363ab6dd3b594"
+  },
+  "plateSha256": "791d4c9b76a8b31ddd59c114d8bb765691c9122deaee80c0e846cee48e6e40bc"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollBlkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2468,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/26. GBCylBlu5MtlRollBlkDot.psd",
+   "releaseVersion": "67a2b82caed19582916edc6b4cb66703b31b27c55cf3b0631b16049159685d02"
+  },
+  "plateSha256": "aac4412c689b0c719e2eee3fc13e372b6e32acb7a87cd7e8b86b408c59578ae6"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollBlkSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1663,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/24. GBCylBlu5MtlRollBlkSh.psd",
+   "releaseVersion": "b5509660c6f8febe00299b6a9877423dbc8a3b099ba1a32a88b30a98e745cd59"
+  },
+  "plateSha256": "bc4dea29cd66362d5a698b883813de1c3d2a2160bd41d7a965635a1e06d9f43d"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollCuMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4323,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/22. GBCylBlu5MtlRollCuMatt.psd",
+   "releaseVersion": "ee65855174890d827f78f97e55822ef78372185fa08cae397caa45e02f682907"
+  },
+  "plateSha256": "2f234ae47154bbca7b416038042020657bdbf5a76f66008e9afdaf3f6a1b3660"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollGlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3897,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/16. GBCylBlu5MtlRollGlMatt.psd",
+   "releaseVersion": "f7485b72bc2034461cc2e7a95b756161cfee1cf2c4d8a76bd19c7b5cb50e3588"
+  },
+  "plateSha256": "5bfe0fe549df7b37b411371d74f5d5a991fe93462260d40a4cf251250f3ec272"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollGlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4469,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/18. GBCylBlu5MtlRollGlSh.psd",
+   "releaseVersion": "66b2e010579c7ddb78d6917fecdf32aec00b65bb684916a2b64a6fb3b4c81af8"
+  },
+  "plateSha256": "1a34086ad617ae17cb1706c522fdfffbf83f8dd6218e9147d2271e4a69f3ffe0"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollPinkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3597,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/12. GBCylBlu5MtlRollPinkDot.psd",
+   "releaseVersion": "a9b4cd32c1ca4af24281101b6c886084df38a7f8ac1418c752eaf5e54f0fd8a7"
+  },
+  "plateSha256": "842e73f2a05dc265d298cf2590b4d6d078b93c442c5cc7604809d7b0c9756669"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollSlDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2587,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/10. GBCylBlu5MtlRollSlDot.psd",
+   "releaseVersion": "aef183f62b49e0690bb75c2b3e0eb379ac03acc47ce23e25110fba6c563ebc33"
+  },
+  "plateSha256": "df0cc76c519646692989693f2bc936b3acabd816314b5f557a26bc735df5648b"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollSlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2304,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/14. GBCylBlu5MtlRollSlMatt.psd",
+   "releaseVersion": "1fae330bd9cb7bd52f83a5d4713d729b378c6fd65df9f1ea47c88bf9e2d8ea2f"
+  },
+  "plateSha256": "61372cc3c0876557d74818952eb3b0f60650e56e943f41f64a345d5c95ee903a"
+ },
+ {
+  "sku": "GBCylBlu5MtlRollSlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3999,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/20. GBCylBlu5MtlRollSlSh.psd",
+   "releaseVersion": "78d05dc0a691ee9b1468df981577477311642258e66b3fa1d3dfaf3580450126"
+  },
+  "plateSha256": "a68e1f6792eed2265dc14ff999ab560dd9c4409948cb61c966a24872e214e107"
+ },
+ {
+  "sku": "GBCylBlu5RollBlkDot",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 5.839,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/27. GBCylBlu5RollBlkDot.psd",
+   "releaseVersion": "67a2b82caed19582916edc6b4cb66703b31b27c55cf3b0631b16049159685d02"
+  },
+  "plateSha256": "aaf1bb4b9abb9090926df92ed7c344e2247bc19aa11cb5746d965619e3b43acb"
+ },
+ {
+  "sku": "GBCylBlu5RollBlkSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 4.6792,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/25. GBCylBlu5RollBlkSh.psd",
+   "releaseVersion": "b5509660c6f8febe00299b6a9877423dbc8a3b099ba1a32a88b30a98e745cd59"
+  },
+  "plateSha256": "bef83c5a6221cd09b6d87027e6c2b83b515a2874e307656e8ee004dd2f100bc2"
+ },
+ {
+  "sku": "GBCylBlu5RollCuMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 4.4413,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/23. GBCylBlu5RollCuMatt.psd",
+   "releaseVersion": "ee65855174890d827f78f97e55822ef78372185fa08cae397caa45e02f682907"
+  },
+  "plateSha256": "132b0833224147aad42180dd6d2e77a3634a68c0a2f01b4a0ee3a92a15f2e5dc"
+ },
+ {
+  "sku": "GBCylBlu5RollGlMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 4.0245,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/17. GBCylBlu5RollGlMatt.psd",
+   "releaseVersion": "f7485b72bc2034461cc2e7a95b756161cfee1cf2c4d8a76bd19c7b5cb50e3588"
+  },
+  "plateSha256": "245bf92b428a0d476424fb8359f7fea486e71b51eab4c73532bd08dd2235f79b"
+ },
+ {
+  "sku": "GBCylBlu5RollGlSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 7.4902,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/19. GBCylBlu5RollGlSh.psd",
+   "releaseVersion": "66b2e010579c7ddb78d6917fecdf32aec00b65bb684916a2b64a6fb3b4c81af8"
+  },
+  "plateSha256": "0261392c3c6da08b67cae2357cce3a0d039f2ed20dec1cc8a6d2891cf454b807"
+ },
+ {
+  "sku": "GBCylBlu5RollPinkDot",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 4.2647,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/13. GBCylBlu5RollPinkDot.psd",
+   "releaseVersion": "a9b4cd32c1ca4af24281101b6c886084df38a7f8ac1418c752eaf5e54f0fd8a7"
+  },
+  "plateSha256": "316cf6e41cfc7b311f0be36996dae4494262a35ba6a91543146667f0850743f5"
+ },
+ {
+  "sku": "GBCylBlu5RollSlDot",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 5.9083,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/11. GBCylBlu5RollSlDot.psd",
+   "releaseVersion": "aef183f62b49e0690bb75c2b3e0eb379ac03acc47ce23e25110fba6c563ebc33"
+  },
+  "plateSha256": "b787f846979b38f7828e3bf15fbed353eb02de285d69f7f2399738346aaf52e5"
+ },
+ {
+  "sku": "GBCylBlu5RollSlMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 3.4605,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/15. GBCylBlu5RollSlMatt.psd",
+   "releaseVersion": "1fae330bd9cb7bd52f83a5d4713d729b378c6fd65df9f1ea47c88bf9e2d8ea2f"
+  },
+  "plateSha256": "9a7b3f640872fa98e721e5b848a64df99aa0747c435d761274ea612ef1d9bd61"
+ },
+ {
+  "sku": "GBCylBlu5RollSlSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 4.32,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/3. Blue 5ml Cylinder/2. Blue 5ml Cyl (Capped) PSD/21. GBCylBlu5RollSlSh.psd",
+   "releaseVersion": "78d05dc0a691ee9b1468df981577477311642258e66b3fa1d3dfaf3580450126"
+  },
+  "plateSha256": "d0d518891d1794a06bb86e32bb51647b5f4320f3734eea605273903191302b2e"
+ },
+ {
+  "sku": "GBCylBlu5Sl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3861,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/29. GBCylBlu5Sl.psd",
+   "releaseVersion": "663855a1d497ae558af56c0336df494961cde0fdfed94450b814bcb0a07de9e5"
+  },
+  "plateSha256": "c14cd139342cbcf94bc2d8aedbb4dbbe47d32772ae663508f2df5edf3fb2009f"
+ },
+ {
+  "sku": "GBCylBlu5SlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.399,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCylBlu5SlMattSht.png",
+   "releaseVersion": "44b4b493cd88f5a4291e7faa6d8e39fd81d5cf48568164535a1a45c43cc0b98f"
+  },
+  "plateSha256": "5d3fb01718a4e163343665bebf6a4e0dc3b8b94c65858b5760847c7bfe6cc980"
+ },
+ {
+  "sku": "GBCylBlu5SlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5253,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBCylBlu5SlSht.png",
+   "releaseVersion": "5d4d771730f4ce0552a9d0987f290c150a47327f4323d0a04c71da43a8056e26"
+  },
+  "plateSha256": "7796d9e4d75c9be39bbbf6acfef6d81378f233658fa39fcb4ce885974dc7e1a8"
+ },
+ {
+  "sku": "GBCylBlu5SpryBlkSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1319,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/4. GBCylBlu5SpryBlkSh.psd",
+   "releaseVersion": "22e803154572d816746f49d2962ea0136892797f2bf16f41301c2a69b3eb60c8"
+  },
+  "plateSha256": "db2b5d5b51b32ce53fe50512b6e71c2de4d3b954fadcd5c750a4236aa1c6fa72"
+ },
+ {
+  "sku": "GBCylBlu5SpryBluMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4726,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/5. GBCylBlu5SpryBluMatt.psd",
+   "releaseVersion": "9a80088593108ad9c21302972f97b9bf07c4be810554525eeb9234a4ae071956"
+  },
+  "plateSha256": "309e3f57d5412ce22df1dab30f4062e7560afa08c5b9776ccfa1827e82a0b87f"
+ },
+ {
+  "sku": "GBCylBlu5SpryCuMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4068,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/30. GBCylBlu5SpryCuMatt.psd",
+   "releaseVersion": "0792fa91919a4feacfc23a85527af51049e4ad00caac29f6521054e774059167"
+  },
+  "plateSha256": "9435b9a18425fda799a5d90df03d28cb61f96d9f73a6ee7f571e2e619bac117a"
+ },
+ {
+  "sku": "GBCylBlu5SpryGlMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4889,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/7. GBCylBlu5SpryGlMatt.psd",
+   "releaseVersion": "2805e5b51f3e05f3b0b57a21a2bd952e31eb86bc82ede30f9bcbd0698d9f1518"
+  },
+  "plateSha256": "9803ce72d2427bd9578adfefd4078e38d360109f4a20377ada61c57991a924a7"
+ },
+ {
+  "sku": "GBCylBlu5SpryGlSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5278,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/6. GBCylBlu5SpryGlSh.psd",
+   "releaseVersion": "52943657d77c4ae508b34c7d38926d5fd11f7ead72abcfd0bfc8725a3c73cf87"
+  },
+  "plateSha256": "51c7820d4da152953da65d03e716052753f7a6b3d7f635ca93d473ca41fcc829"
+ },
+ {
+  "sku": "GBCylBlu5SprySlMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2541,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/8. GBCylBlu5SprySlMatt.psd",
+   "releaseVersion": "d23390b65159db5592aebf63de8f648afad5ca8079279ec197b3b98c99c85e06"
+  },
+  "plateSha256": "74964793f88a8d6f664c99ed39f4af6a4855de899c46178ce18c1e5c16161f48"
+ },
+ {
+  "sku": "GBCylBlu5SprySlSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5141,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/9. GBCylBlu5SprySlSh.psd",
+   "releaseVersion": "7a742a0767db76f982841c2cb947148448bd4d14b802a23d45fc0a10bc3f5669"
+  },
+  "plateSha256": "594f7aea43e5fc1ae7db432d82b95970f29a6e206e9dca0e20c9acca421da2fe"
+ },
+ {
+  "sku": "GBCylBlu5WhtSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5279,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Blue 5ml Cyl (Capped) PSD/2. GBCylBlu5WhtSht.psd",
+   "releaseVersion": "78b0e56957acf6554a5da95bb692f36c306fd1eaf3529aa8ad76e7fb06d3daa6"
+  },
+  "plateSha256": "0fbe5bfca6e4b6da2f6716b8790a3d1a219e5496f492b4a05df8a02ad2b26cfd"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2625,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/2. GBCylAmb9MtlRollBlkDot.psd",
+   "releaseVersion": "877310d3a6d93324523eb7f0ee4971dde4562f221c79fefc997116fd46a8d515"
+  },
+  "plateSha256": "cfe181bb370737f4aa032cc16c0b52a2de8d4f908bdb582341607b44eeeac762"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4618,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/8. GBCylAmb9MtlRollMattCu.psd",
+   "releaseVersion": "f91de2b031119766d17c5e243740849c167d56c4236f852350a61663ca147650"
+  },
+  "plateSha256": "de2939d3e46f5859dab91a53084b05b82a6466377a0c32eeee4f7ae308f43a91"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4292,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/5. GBCylAmb9MtlRollMattGl.psd",
+   "releaseVersion": "fdc5463aa17102d7dd9573f104744b263fb5122acfe329afb66015589a1edd30"
+  },
+  "plateSha256": "950a98b27d3d02a4e4405cd898282488ecd48a263fdc8865129cd69a6e8b1720"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3774,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/1. GBCylAmb9MtlRollMattSl.psd",
+   "releaseVersion": "f01d65763b64edfe286daae6653ed50d244be2220be8891ec13ee28740ce03b4"
+  },
+  "plateSha256": "bbf04a855c3d918d046c8243dfdd6eb9844c8a7b6dca87386ff11f41ae060cb7"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4428,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/4. GBCylAmb9MtlRollPnkDot.psd",
+   "releaseVersion": "1f00617851c331fd570524286ac93a9a1c6640b7eabb3005c3aed1400b8a8fd3"
+  },
+  "plateSha256": "5ddff60f862a56d047162a62df8aa640c227e494a0f1830b9549b9c94ad3dbf9"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2952,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/9. GBCylAmb9MtlRollShBlk.psd",
+   "releaseVersion": "0abba36c40260846f017577f46577ea646dc689cd5a90ab025fce7a1d9111e13"
+  },
+  "plateSha256": "dda59238ccdb896b882a000c733a743500fbf945eebcc180bb70e0343a945690"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4831,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/6. GBCylAmb9MtlRollShnGl.psd",
+   "releaseVersion": "5ce5b4df75f9efd47029cd6d4d167742217a8bbe518b8bc3b446edd78f385a94"
+  },
+  "plateSha256": "c798727b5f9d2fb3d3fc722f21ff20c3f9cceca1eae36058aa3b892eb009be13"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3948,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/7. GBCylAmb9MtlRollShnSl.psd",
+   "releaseVersion": "1dc63785c7d50ac7fae534680b6dd42ea7ee0ed32b151832cee1c438bf091c4d"
+  },
+  "plateSha256": "ee0c0c69e08d8c649eb24f1f991624a7208d3bfef626e996a5517f3f414b8a64"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3117,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/3. GBCylAmb9MtlRollSlDot.psd",
+   "releaseVersion": "4fdb984143257e6386c528be4274622e075aa70d0448abc4c71c1c3e9e4a5edd"
+  },
+  "plateSha256": "d59c119a796699461b4b48e10d288ef3bb9a4a99ff18b3c3fd23448d25487496"
+ },
+ {
+  "sku": "GBCylAmb9MtlRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3435,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/10. GBCylAmb9MtlRollWht.psd",
+   "releaseVersion": "0bb2fb1cf510abd11d9b27b4adbf13e68a06a77f69738d6fce68549f5be5b647"
+  },
+  "plateSha256": "fcb41e3b241018a9cdad25606c0b0cfee8ccbb06b40477433a4a621ff026fe25"
+ },
+ {
+  "sku": "GBCylAmb9RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2753,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/12. GBCylAmb9RollBlkDot.psd",
+   "releaseVersion": "7309b1f03442f501ad5cb8f81f5fe76aa12b263f773810a5d1f81ba71565339c"
+  },
+  "plateSha256": "d8f73345fee83e5d6e4f9c70ba8f3d0f715e16a07a6efc8e97cd275f33c7dfc0"
+ },
+ {
+  "sku": "GBCylAmb9RollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5048,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/18. GBCylAmb9RollMattCu.psd",
+   "releaseVersion": "ac9ad139882da2f7d09e2d5b87a3c49f76acee7212e366e91ae16dc770d8a919"
+  },
+  "plateSha256": "475a93e09518b98a3fc86eff655052f396c6238e94f973fb9ad1ae1514a456a6"
+ },
+ {
+  "sku": "GBCylAmb9RollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4658,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/15. GBCylAmb9RollMattGl.psd",
+   "releaseVersion": "c0fa0766532318a7615ddc52466ea241155ae71bae1388251863351d3c585022"
+  },
+  "plateSha256": "3c2aee1780395032eb05c524b53df15a5d3075fa486ea6309bd203ee56624674"
+ },
+ {
+  "sku": "GBCylAmb9RollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.353,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/11. GBCylAmb9RollMattSl.psd",
+   "releaseVersion": "57011f67497c48519b5867e19eafc542bdc9060a1e305890dea263ce72a8cd04"
+  },
+  "plateSha256": "dc55a37593ec8618a8d48ea26e601cb12137675f5c11635f4b4ed480b7c0b92a"
+ },
+ {
+  "sku": "GBCylAmb9RollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.454,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/14. GBCylAmb9RollPnkDot.psd",
+   "releaseVersion": "e98795f9cefc18cd99845bc10d3f26ea1d9573573e94986e857cd83c69c3c0e0"
+  },
+  "plateSha256": "3a294d48ab134a98891301111384ea57c2c4a782a189fa8a05a32e35af5cb46a"
+ },
+ {
+  "sku": "GBCylAmb9RollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3035,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/19. GBCylAmb9RollShBlk.psd",
+   "releaseVersion": "f55d536410e2363f2cef0bf9556e3e291a3a3069e9d651247b49e449f59cd12e"
+  },
+  "plateSha256": "a94a65bb8e5432a7f10ff2e6e38bfbdff7f28d715560ce6750c336beb9cfe161"
+ },
+ {
+  "sku": "GBCylAmb9RollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5635,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/16. GBCylAmb9RollShnGl.psd",
+   "releaseVersion": "35214823d92bd073ccc21c970c09fbfbde45a431052b405465498d8fe96ce90a"
+  },
+  "plateSha256": "019d39af9ad4205ad0df4c3cab57258af14d35e091a60573ac96473c455d45e2"
+ },
+ {
+  "sku": "GBCylAmb9RollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4525,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/17. GBCylAmb9RollShnSl.psd",
+   "releaseVersion": "5a0be2064cd2806c04da034b760c890c7262a9e03bfb53bf6c6c9ee38faf7dde"
+  },
+  "plateSha256": "7d75481bfafa0ccfe8dac6e37b61ffd99ecebc6ca27781c58d33ade0e990b00b"
+ },
+ {
+  "sku": "GBCylAmb9RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2964,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/13. GBCylAmb9RollSlDot.psd",
+   "releaseVersion": "8473fd6e7f595a552edbcc81fd780174e9071f7e350270b2a52f04bc398a863b"
+  },
+  "plateSha256": "89fdad1d6b246ad1320160c81b26dcd690a0af3dfd506f8473a5221e8a1474e6"
+ },
+ {
+  "sku": "GBCylAmb9RollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.321,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/20. GBCylAmb9RollWht.psd",
+   "releaseVersion": "e4e9bed13ad7eed0b2c96180d1f53b3acf21e2f7cc3c459d96432220bd2c193d"
+  },
+  "plateSha256": "f80959de17d142c332555c38689a62b3b7ad6446b726655ba5d3039130855632"
+ },
+ {
+  "sku": "GBCylAmb9SpryBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3292,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/23. GBCylAmb9SpryBlk.psd",
+   "releaseVersion": "9819745e6dad0ceb2acf97e4bf80670a2d2cd1ce4748bd82e161ebb11bfe0afb"
+  },
+  "plateSha256": "6566579ded3eaac38a381a8bf2d75b8f8f60e9c87166d70b07d45656b266b39a"
+ },
+ {
+  "sku": "GBCylAmb9SpryGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4459,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/21. GBCylAmb9SpryGl.psd",
+   "releaseVersion": "e7d55629f20c4ac85d75bc8b884f3cf9302c438a72ece98ce9aab8013cd8b50a"
+  },
+  "plateSha256": "5b8aa4bbbe7d6503e2cce4a185102d3b69ce34ddcaad7ccbb385016693954c61"
+ },
+ {
+  "sku": "GBCylAmb9SpryMattSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3101,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/22. GBCylAmb9SpryMattSl.psd",
+   "releaseVersion": "f5254afebd586c891fd83d26a19fbb7c3c578c0378f27f5f3787ec01c93abc30"
+  },
+  "plateSha256": "bf175bbaa2c2f17c00348e26d822e0dd048c5a73ad89a37ee2ef6071ded89af9"
+ },
+ {
+  "sku": "GBCylAmb9SpryRd",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4596,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/25. GBCylAmb9SpryRd.psd",
+   "releaseVersion": "111178a64ac51fadede1d1ce2b9d2187b9503fbf1e1e63d7d7c9ec5b2b04b641"
+  },
+  "plateSha256": "9d7f029a5d327ba969c7792fb533375efdfd023fff4f222066904071945cdd29"
+ },
+ {
+  "sku": "GBCylAmb9SpryShSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3975,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/24. GBCylAmb9SpryShSl.psd",
+   "releaseVersion": "daa538df4b7b43026bf836ddd8d00a6d06525ae93333af358b948bdd16410316"
+  },
+  "plateSha256": "58bb35fae7cd88d085b8c1d9f0115b568f5a985e948da165563be2415e945ffd"
+ },
+ {
+  "sku": "GBCylAmb9SpryTur",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4853,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/26. GBCylAmb9SpryTur.psd",
+   "releaseVersion": "f31632e9dd027d4b57d551d3aab534f111a4b341291e83cce42f874bbab5764b"
+  },
+  "plateSha256": "48c811ebfe3b939879e08c4cebdc1a33ac018ba5b4a0d84b39264e7b66113ef2"
+ },
+ {
+  "sku": "LBCylAmb9LtnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3261,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/29. LBCylAmb9LtnBlk.psd",
+   "releaseVersion": "33b8b8b87935e2fe874ea4b166d530a82605f54422db0f3e2e893fd4cf10b51f"
+  },
+  "plateSha256": "2056583b6b1cdd3ebcc64c12b4c0d351efc444ead9a297e2fdd942df870733c8"
+ },
+ {
+  "sku": "LBCylAmb9LtnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4572,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/28. LBCylAmb9LtnGl.psd",
+   "releaseVersion": "733a24f8887d0c4d3824386debae46d6c31ed596e1369a65fe504d386e890e5f"
+  },
+  "plateSha256": "af9d74d97da8ba4100694be9fb8c50f10d1659f2d0fbb9a33a375d85e71430e7"
+ },
+ {
+  "sku": "LBCylAmb9LtnMtSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.375,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/4. Amber 9ml (Capped)/27. LBCylAmb9LtnMtSl.psd",
+   "releaseVersion": "c44734c458d780d2522c76e49d0a9da2a56878b7dccbe061ec522e74b5bc9d5a"
+  },
+  "plateSha256": "29d3dd4f90ff5ef9febb88b469f12c114bbb360f24315c8ee28d04f66b191a12"
+ },
+ {
+  "sku": "GBTallCyl9BlkShSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4312,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCyl9BlkShSht.png",
+   "releaseVersion": "88892c81324b9f13b6d079bbcf51a328b707a2934a892daa06f313c8e88392b6"
+  },
+  "plateSha256": "f81afa36b5b75819bab1d5384403b7e22529796c1c3d657bcaa67c8465d82ec3"
+ },
+ {
+  "sku": "GBTallCyl9BlkSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3424,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /1. GBTallCyl9BlkSht.psd",
+   "releaseVersion": "1b97231006b2462b01852bf4f7da316bbb599f1cbf6cd210b511473a5710ad9f"
+  },
+  "plateSha256": "278a9984948dd381095194b54687233eeb79458a6199430e3b58df382e785bda"
+ },
+ {
+  "sku": "GBTallCyl9CuSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5357,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCyl9CuSht.png",
+   "releaseVersion": "9feaa809846b2a3639113810a65f94dda854ce84f7ad73f395cc7a10e0941d27"
+  },
+  "plateSha256": "bb0c04d4d2357c8833905f52aad474ab82512d303cca830729ddb5d695f6b2e9"
+ },
+ {
+  "sku": "GBTallCyl9Gl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4087,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /28. GBTallCyl9Gl.psd",
+   "releaseVersion": "4645e1ee1bdfb244394cf17032f7f9ad5e37c544c193d6a3babf91e826fc8314"
+  },
+  "plateSha256": "5df75c1bbb38b498da6386547c3ed6f4fca25d10a5d0de00f25ab9d89ac87d7f"
+ },
+ {
+  "sku": "GBTallCyl9GlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5369,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCyl9GlMattSht.png",
+   "releaseVersion": "8e2f8f7d8326900c9984a277da8c23a3b595b1568ccc1147e81adb4d12dad4f0"
+  },
+  "plateSha256": "8364a43f00c749b95b326344173f4d784ad9c54e19d0c0b9655af5aa151ce0fe"
+ },
+ {
+  "sku": "GBTallCyl9GlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5971,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCyl9GlSht.png",
+   "releaseVersion": "66c62aae479525b8392094aed97a7242f0221837c4c8e4a893ca3c606961e99b"
+  },
+  "plateSha256": "0acba5f300d1abf7b0f4cad8a3d50ea1260b88e674db4371248d208298a0d6bf"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollBlkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1831,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /26. GBTallCyl9MtlRollBlkDot copy.psd",
+   "releaseVersion": "dd6ca75525ac33adc50a64e5efe42aa960d67fadec088d689d4466dc3cf8b062"
+  },
+  "plateSha256": "1949d4e961464b33f50cb27f36663a366581e1228658a9bcefd8a7e3308c08b7"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollBlkSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1497,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /24. GBTallCyl9MtlRollBlkSh.psd",
+   "releaseVersion": "ac08cd7d18782bb7a83c53e3e49001cc5758003075fa5fddda53efc03a2cf306"
+  },
+  "plateSha256": "d084bb557e319b571936296fbe5b91a7d73b0caeeaa04849260b0eb9a57e32c5"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollCuMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.391,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /22. GBTallCyl9MtlRollCuMatt.psd",
+   "releaseVersion": "fea1d56d7c2f0f4d632983a1ac6878e3ede0ec34c55cfa94c5c9f1baabd923c6"
+  },
+  "plateSha256": "a4e24993a268e6ce9bc5ae784ce055079754ab569ddad0002a5b2f419435da49"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollGlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3591,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /16. GBTallCyl9MtlRollGlMatt.psd",
+   "releaseVersion": "ae8217dd00b6e06b73effd6cfb14cd41e386e7fa7856c71b6987acf4d1c55c12"
+  },
+  "plateSha256": "6f4c395d60d55674c94e52c1c2ef0f827a82d103dc86dbd8b09e954c44e1cb05"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollGlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4006,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /18. GBTallCyl9MtlRollGlSh.psd",
+   "releaseVersion": "dce0086aa105b007dc31bfb68883ac1ba077d3e4f5d6c5eb62c9baf32f07b8e4"
+  },
+  "plateSha256": "22553ff302d63a19b57d3e8b45872438b0aa736a10c1e2ef1c1968c3be0e884b"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollPinkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2398,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /12. GBTallCyl9MtlRollPinkDot.psd",
+   "releaseVersion": "a02d034cf655ceb2499b5b2292fd92c0cc76dcd81f8935216fb970e450525453"
+  },
+  "plateSha256": "098ff09084b5320cb7231a633ccac1665fb69b38924c68f0b8296bd249a883a6"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollSlDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1262,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /10. GBTallCyl9MtlRollSlDot.psd",
+   "releaseVersion": "ac16a05ee88a45402bde2f3dc80e1aefd8ade004200a0e2c56c8f3ec220cc026"
+  },
+  "plateSha256": "c3233f1b43c1ef3a57db91f93cdd35d2cf44e86665b9452ed43e391fcf926ee5"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollSlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.1417,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /14. GBTallCyl9MtlRollSlMatt.psd",
+   "releaseVersion": "392f7c0c914e23972680ea44979bafa089183666b8470c55db94bd180f2bcf61"
+  },
+  "plateSha256": "0e83482d059822e75c548988b27874029f07bb867c8a83f46403aded345fc168"
+ },
+ {
+  "sku": "GBTallCyl9MtlRollSlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2329,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /20. GBTallCyl9MtlRollSlSh.psd",
+   "releaseVersion": "d41b3a5e9e5f6adb280f0454087d1de496cf9300877bced86c4e300246c18b46"
+  },
+  "plateSha256": "1a9428e38e3787acc47187f461daf3b1cc4a9370a9e37990d76cb11ac65f2c10"
+ },
+ {
+  "sku": "GBTallCyl9RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.218,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /27. GBTallCyl9RollBlkDot.psd",
+   "releaseVersion": "18c0cb29ce17a80caa9341d62b68883d34fb9ff73eadd34dd64c603a395597d4"
+  },
+  "plateSha256": "656492fca8a403e787f45bf638569361e8609156afdf77f1a36c35fda11b1220"
+ },
+ {
+  "sku": "GBTallCyl9RollBlkSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 6.9928,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /25. GBTallCyl9RollBlkSh.psd",
+   "releaseVersion": "ac08cd7d18782bb7a83c53e3e49001cc5758003075fa5fddda53efc03a2cf306"
+  },
+  "plateSha256": "46a716523e47f4999663fb618ded8db18a314d2e9afd7edd0c47667bcddf55fc"
+ },
+ {
+  "sku": "GBTallCyl9RollCuMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 8.6232,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /23. GBTallCyl9RollCuMatt.psd",
+   "releaseVersion": "fea1d56d7c2f0f4d632983a1ac6878e3ede0ec34c55cfa94c5c9f1baabd923c6"
+  },
+  "plateSha256": "bce6192388a44de70be498dc70a396e0ec5378e18b31da2cf7989247c4774662"
+ },
+ {
+  "sku": "GBTallCyl9RollGlMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 4.5405,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /17. GBTallCyl9RollGlMatt.psd",
+   "releaseVersion": "ae8217dd00b6e06b73effd6cfb14cd41e386e7fa7856c71b6987acf4d1c55c12"
+  },
+  "plateSha256": "175ff055aebe8af9d68d4308137e20476c6a2335e61d4488d49fde6847276b49"
+ },
+ {
+  "sku": "GBTallCyl9RollGlSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 10.1225,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /19. GBTallCyl9RollGlSh.psd",
+   "releaseVersion": "dce0086aa105b007dc31bfb68883ac1ba077d3e4f5d6c5eb62c9baf32f07b8e4"
+  },
+  "plateSha256": "a637ea75a88eaa8fc1c123f26dd0b313369132e9ade236776a21e765c3d351a9"
+ },
+ {
+  "sku": "GBTallCyl9RollPinkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2398,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /13. GBTallCyl9RollPinkDot.psd",
+   "releaseVersion": "00efca1194da6e140c231c62f56cd6799d2eb1e3ae79c518abc9b12564d637f1"
+  },
+  "plateSha256": "098ff09084b5320cb7231a633ccac1665fb69b38924c68f0b8296bd249a883a6"
+ },
+ {
+  "sku": "GBTallCyl9RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1262,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /11. GBTallCyl9RollSlDot.psd",
+   "releaseVersion": "3af36dd8f206c26893dfaf26633d130c9f55d09177b3b176475931bd9a24caa0"
+  },
+  "plateSha256": "c3233f1b43c1ef3a57db91f93cdd35d2cf44e86665b9452ed43e391fcf926ee5"
+ },
+ {
+  "sku": "GBTallCyl9RollSlMatt",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 5.2675,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /15. GBTallCyl9RollSlMatt.psd",
+   "releaseVersion": "392f7c0c914e23972680ea44979bafa089183666b8470c55db94bd180f2bcf61"
+  },
+  "plateSha256": "609b99de8715fda56b03f723e7ec96db4c29112151fe61c8da0528c6d0051345"
+ },
+ {
+  "sku": "GBTallCyl9RollSlSh",
+  "parts": 3,
+  "strictParity": false,
+  "meanError": 11.8207,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /21. GBTallCyl9RollSlSh.psd",
+   "releaseVersion": "d41b3a5e9e5f6adb280f0454087d1de496cf9300877bced86c4e300246c18b46"
+  },
+  "plateSha256": "290516311b4e901a3034bcfd7bdab5bd0038eaaf33ccb17b9a0709c0a6ac7602"
+ },
+ {
+  "sku": "GBTallCyl9Sl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.2774,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /29. GBTallCyl9Sl.psd",
+   "releaseVersion": "6501a7a7de464017d797809c0f95091b08e675d8d75df6dc9a7795a539925528"
+  },
+  "plateSha256": "98379cfb18a711213ad7fe20c9bd3163696bb9d52a6ba265808e0496f1063e79"
+ },
+ {
+  "sku": "GBTallCyl9SlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.4303,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCyl9SlMattSht.png",
+   "releaseVersion": "ee30da06c2de717a35f0e3f3a9beeb95dbaf7b91d3173e5d2a3e9bbf60f57384"
+  },
+  "plateSha256": "c5ffefa022e264102217bc190236518bebaa01e1ba0b08156f0d41285883ec15"
+ },
+ {
+  "sku": "GBTallCyl9SlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.5368,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCyl9SlSht.png",
+   "releaseVersion": "57406e4612e2624c03bb14ba62790da7bb5aeef2de9af4d038a5f46d405fa772"
+  },
+  "plateSha256": "7a86ea673dabe3db7e0efd0ba48198da298169cefc2bb32682fac4449d5548cc"
+ },
+ {
+  "sku": "GBTallCyl9SpryBlkMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 2.0277,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /3. GBTallCyl9SpryBlkMatt.psd",
+   "releaseVersion": "9a9f205c86aaef1e81a1341887a8d4a60011e5b910edc7c77acd90f71019cf99"
+  },
+  "plateSha256": "a418620e69558ff016ff89866bb094b6d1c3a90aac26a43d5325bedf7ef15cf0"
+ },
+ {
+  "sku": "GBTallCyl9SpryBlkSh",
+  "parts": 4,
+  "strictParity": false,
+  "meanError": 3.0297,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /4. GBTallCyl9SpryBlkSh.psd",
+   "releaseVersion": "c1d41bf7e9ad4a1bfff08cd8c76bd8a9b267bcb16eb2ebb3620ff4e5fcada758"
+  },
+  "plateSha256": "6051b505184e1198b59078bd13b03a8b9133bd68f94436bfc191e098cda84964"
+ },
+ {
+  "sku": "GBTallCyl9SpryBluMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4607,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /5. GBTallCyl9SpryBluMatt.psd",
+   "releaseVersion": "ff3bf8bfc300158863c24d84405be24cd7eccd350a49f29623a0a3ffa86b99e6"
+  },
+  "plateSha256": "e7fdc06b7e16a742fab7395c541f2701f634deb3f1da0cc4caaaa49ad29d2bb7"
+ },
+ {
+  "sku": "GBTallCyl9SpryCuMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5536,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /30. GBTallCyl9SpryCuMatt.psd",
+   "releaseVersion": "b7edd1e5a62092250209eb4ce6df736524cb98f4979687cc02b5107905d65122"
+  },
+  "plateSha256": "bfc2393bf1a70f23b88966dc2ed52d5eb10aa76d061ff5beeb0c11999d2836f3"
+ },
+ {
+  "sku": "GBTallCyl9SpryGlMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4745,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /7. GBTallCyl9SpryGlMatt.psd",
+   "releaseVersion": "6c052f52ab93cc118b463ee8cc2d7091c5de4abe93ff8a50aadd94ba29e51243"
+  },
+  "plateSha256": "b934c6341952f2a3d2f629d185ceca61e3f035b8ffb912a807589edeba50eca9"
+ },
+ {
+  "sku": "GBTallCyl9SpryGlSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4208,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /6. GBTallCyl9SpryGlSh.psd",
+   "releaseVersion": "85d13295d2e8613b522103235ae6556b8d83866636309cb9fa9ba2b6828d79e7"
+  },
+  "plateSha256": "e3d95a594129a75055a34049016b4499617628df97c57f763d98ef0f37a9b284"
+ },
+ {
+  "sku": "GBTallCyl9SprySlMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3393,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /8. GBTallCyl9SprySlMatt.psd",
+   "releaseVersion": "66e387256a058408102bb1c013c302dcc4af7598c7ac2ae4c1844c89a96e7079"
+  },
+  "plateSha256": "3d2af2a50898e5cd00e95afbed2e76663cd5780be20fd585bd65e9f549e3a6a1"
+ },
+ {
+  "sku": "GBTallCyl9SprySlSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5996,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /9. GBTallCyl9SprySlSh.psd",
+   "releaseVersion": "9647590819e0e0a1681a3710a3fdadcd2dcbb58ce784bf132c5435ff7c2cf515"
+  },
+  "plateSha256": "cfd1a8236889d6a6eb27fb6069dd737f353e8e88de26c48e50e787261656e881"
+ },
+ {
+  "sku": "GBTallCyl9WhtSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 1.3266,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/13. Tall Cylinder 9ml/2. Tall Cyl 9ml (capped) PSD /2. GBTallCyl9WhtSht.psd",
+   "releaseVersion": "f43651b431e405bc0078543732b2839b30f852213410163e8f6ffe3e2bad83e4"
+  },
+  "plateSha256": "1611b55c5bd3f2333d04cbc7d16321fde17cefbc079b5d219626d526569e3a12"
+ },
+ {
+  "sku": "GBCyl9MtlRollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3288,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/2. GBCyl9MtlRollBlkDot.psd",
+   "releaseVersion": "26c1da2b19f43e21de637ec94c1f02116723df9408e3b0337a3a8fc9b92c356b"
+  },
+  "plateSha256": "f4d457b4a43ee00db1ff923d54b162303adc808894cbb2270875919b2e275623"
+ },
+ {
+  "sku": "GBCyl9MtlRollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.7118,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/8. GBCyl9MtlRollMattCu.psd",
+   "releaseVersion": "935620ec8e7850e6f4729bb6f74736b5b9a11e1955d2c193ebac97e506a58b35"
+  },
+  "plateSha256": "9ae6065851ed13fe9e54d384e5344be215d15e113c363b0613c526bf5f15f363"
+ },
+ {
+  "sku": "GBCyl9MtlRollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4407,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/5. GBCyl9MtlRollMattGl.psd",
+   "releaseVersion": "1281e4ae205b34aed2e407bb23f7c1ac8160b4f5cf7a9303b9084bbf844cbca1"
+  },
+  "plateSha256": "8082ad1a5b10ccdf854115566614326b9b3823ded6e7cc2c3ff51725de56b319"
+ },
+ {
+  "sku": "GBCyl9MtlRollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3268,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/1. GBCyl9MtlRollMattSl.psd",
+   "releaseVersion": "e990fdd23c3cb3c96862621253bea4709ca8d242f4268dd748e2ce8eb3638939"
+  },
+  "plateSha256": "4b02c75b08152d362c50a8edcc0440675f6675ac75f6b248f61a4b0f48e0be69"
+ },
+ {
+  "sku": "GBCyl9MtlRollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5167,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/4. GBCyl9MtlRollPnkDot.psd",
+   "releaseVersion": "2eff91cc251fea8933ff16a0ffe5f7f6432f391fe505339de07b5f8be4ade7f2"
+  },
+  "plateSha256": "cc9d08571e0e87fa85f53b13f7f82a6adbc22a5fdd3af81bc1498c089c676eef"
+ },
+ {
+  "sku": "GBCyl9MtlRollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1985,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/9. GBCyl9MtlRollShBlk.psd",
+   "releaseVersion": "629cd35a18418a8fbca7114be959c2a42722d27dbd5f039bc47737223373c82d"
+  },
+  "plateSha256": "a6894e36117ed46c378209b4842ad55e8c69f5a5fe7c75a63a99de880f19360b"
+ },
+ {
+  "sku": "GBCyl9MtlRollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5698,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/6. GBCyl9MtlRollShnGl.psd",
+   "releaseVersion": "0c67e1d9baf52221d15221f16df75d9602eb6260cd273d048994766046712804"
+  },
+  "plateSha256": "4362345644b2d8002cd3e523b003801924ec364e8df881ecc041b6c3c513efa1"
+ },
+ {
+  "sku": "GBCyl9MtlRollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.406,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/7. GBCyl9MtlRollShnSl.psd",
+   "releaseVersion": "7b507f6f7e9a074c2628e3b54908b36c279f20890f09c89ca544cc61a52c471a"
+  },
+  "plateSha256": "437688cf5df65ed6cb4e7b63046bdcca743fe9a71cd35d2583c5b0a8d2adee0a"
+ },
+ {
+  "sku": "GBCyl9MtlRollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2384,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/3. GBCyl9MtlRollSlDot.psd",
+   "releaseVersion": "b67a391dc4d17addf269275f67c77177b3f34cfeb3b393549a80ad99bb441d70"
+  },
+  "plateSha256": "8d306fab7768d36a2f3eaf330ab769c87ea3cfca95e224df3dfce46aab9d90e1"
+ },
+ {
+  "sku": "GBCyl9MtlRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1821,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/10. GBCyl9MtlRollWht.psd",
+   "releaseVersion": "1c9ea40b4bb886af3b61502b1d9c9e3168d0974d4a8aa622636ee9d79590bcef"
+  },
+  "plateSha256": "a4d297ecfb7dcbe2765ba40ac161142808844b46dea9bf4a2ed7ad165c0fa569"
+ },
+ {
+  "sku": "GBCyl9RollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5742,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/18. GBCyl9RollMattCu.psd",
+   "releaseVersion": "252fef2b7b4b2255aa7fac1c4dff28413ade4bab2e7867c7a443ce341d5e4124"
+  },
+  "plateSha256": "d7db2009e158122fda9891b249db1b00c89eeaf474f6c0c1875e3621ec330200"
+ },
+ {
+  "sku": "GBCyl9RollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4788,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/15. GBCyl9RollMattGl.psd",
+   "releaseVersion": "3b713bb83032282c53c08f4fe5357b77d29f598e75d4e60ad981c6d92801a2ab"
+  },
+  "plateSha256": "2535d92bd039121561de003239f143fa7b473058ae15431d59657b7d67ec8b32"
+ },
+ {
+  "sku": "GBCyl9RollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.357,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/11. GBCyl9RollMattSl.psd",
+   "releaseVersion": "1524e8b5064b81baec6c2b60dde85e31d63e5ba4d08867d249effd31e251415d"
+  },
+  "plateSha256": "26afb736fe4cb4cfb25ada4548f381da939991590b6a70e82be81999a91ac032"
+ },
+ {
+  "sku": "GBCyl9RollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2688,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/19. GBCyl9RollShBlk.psd",
+   "releaseVersion": "82ec01abc06892fbea988fd96d82bc095adc4676ed7ebaa12fe8d2490daa69bc"
+  },
+  "plateSha256": "d74862d1cd55e9424100d0ee88540b1fb23425c118ebf225373fe55ac21d2e00"
+ },
+ {
+  "sku": "GBCyl9RollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5926,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/16. GBCyl9RollShnGl.psd",
+   "releaseVersion": "64a900f2052b616970232f72d43decefa9bf01270dafb632819a09478ddcc8c3"
+  },
+  "plateSha256": "2d1fa0dcad5bff5fd41a38fd82c9e8c592caebb867cb13706bbb34f92466f8c6"
+ },
+ {
+  "sku": "GBCyl9RollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4112,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/17. GBCyl9RollShnSl.psd",
+   "releaseVersion": "5720b4f5ac796fa56434925246a8ed0bc0bba706ed7d49285b122ea42107f5e4"
+  },
+  "plateSha256": "7870f1ced4b0a24e6b7cea9be3e108579a917392f52d6ece0970922a35e83197"
+ },
+ {
+  "sku": "GBCyl9RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3305,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/13. GBCyl9RollSlDot.psd",
+   "releaseVersion": "ba9cbb72c9eb90e830562eec676b1c9f261a922f437f4ee7450d4bf15eb865b5"
+  },
+  "plateSha256": "08bbf1f700f490b349335661c63157d793a8240637cfc1467cfa1c1dcfb46a6f"
+ },
+ {
+  "sku": "GBCyl9RollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.1977,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/20. GBCyl9RollWht.psd",
+   "releaseVersion": "da031cd9a06efc5e177a6e541b33c64d5816e30df211e44b675519177304b711"
+  },
+  "plateSha256": "8e7840d214ad4e3ce0b0d7ee7d74f91722a458ac2f2714dfb59db67f512c9b41"
+ },
+ {
+  "sku": "GBCyl9SpryBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3272,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/23. GBCyl9SpryBlk.psd",
+   "releaseVersion": "9a6ddf6d737e4bb929928bd92fb4fe382e0a5f5cbc9a3161fc1e89fc176b7a16"
+  },
+  "plateSha256": "f0620ab49b262d1d90753317ceacfc82a4ce0a003dcb661fb85bf2efe59633b3"
+ },
+ {
+  "sku": "GBCyl9SpryGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4714,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/21. GBCyl9SpryGl.psd",
+   "releaseVersion": "21a13f7f98c797cd8dfb894e1f11008a25a248286ad17b46b4e48f07b3abad58"
+  },
+  "plateSha256": "1376028a69d053be1f01192a63933087bcb955eac203f90034724277869f52c0"
+ },
+ {
+  "sku": "GBCyl9SpryMattSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3327,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/22. GBCyl9SpryMattSl.psd",
+   "releaseVersion": "1189572ba0b9b2d953c721497cc8c4e28aaa98fcd609e6c4285f82a2bc17408d"
+  },
+  "plateSha256": "c0288afc1077b9b7e4ca2d6e14254e2cc53da6a05ec5184f83b8b69c268f8f83"
+ },
+ {
+  "sku": "GBCyl9SpryRd",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4435,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/25. GBCyl9SpryRd.psd",
+   "releaseVersion": "2941055a9d95a774a23cc0a1235a8cdacdbfed7ac4b5ca67648b9da6c122500b"
+  },
+  "plateSha256": "02abb3d3fc7df6f3dbc30f94791aca29c76a322b41293e4a8d63ebe350c3811d"
+ },
+ {
+  "sku": "GBCyl9SpryTur",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.558,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/26. GBCyl9SpryTur.psd",
+   "releaseVersion": "8dcee53eb5b46078f08754d58cd2e4c7ad5338e0cdc784f42c205a8f70af9d0d"
+  },
+  "plateSha256": "55594e9024fba432ca6a03124a264f2a047cb0b2b1e0d332b2b3cbbd246b387e"
+ },
+ {
+  "sku": "LBCyl9LtnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.27,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/29. LBCyl9LtnBlk.psd",
+   "releaseVersion": "2519260a01f3d356f9709198df3fdb93fd7e01e62b54afb618f33929088bde73"
+  },
+  "plateSha256": "9f978a6a0e933f4a3b2bfabd434bc012488a83e6ab29249fb85bb2237de8060b"
+ },
+ {
+  "sku": "LBCyl9LtnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4021,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/28. LBCyl9LtnGl.psd",
+   "releaseVersion": "e4772bdd91184555fbd74d92046724d423b2652eaaf501142b3ebb4da5064dcb"
+  },
+  "plateSha256": "422bf7d85ae5d764227a55622a2a14a5bd4a2700592cd3a339480a0d2d5e290e"
+ },
+ {
+  "sku": "LBCyl9LtnMtSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3478,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/10. Clear  (Capped)/27. LBCyl9LtnMtSl.psd",
+   "releaseVersion": "643f0c6b39ddb8471c6fa6cb8b3f9e9c0a0ae00a8be39c60d312eed763fba1af"
+  },
+  "plateSha256": "df1a66afe57324944ae69e0d2aed838e8afce7af529b15217a2a675e13f68fe4"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.33,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/2. GBCylBlu9MtlRollBlkDot.psd",
+   "releaseVersion": "c887282ae1eb37256756e2f0afa540874f92e3b9b81f662e52fdf2dd6276350c"
+  },
+  "plateSha256": "0ba8322ccd8747052eb34b931156e05ecaefb46b98d6ff6020b2ab5ea849246e"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4348,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/8. GBCylBlu9MtlRollMattCu.psd",
+   "releaseVersion": "de76f8156d81d6897be8bb835a870e51c4a5a873aa3213ab7790a2eccf3b67bb"
+  },
+  "plateSha256": "930fededfc9d0d8873dc4c8dce4b04d6bd65bf96ccc01c6d60fd532d1029973c"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4046,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/5. GBCylBlu9MtlRollMattGl.psd",
+   "releaseVersion": "8d1797f864e169d8fcfc49426f660288976520214b71b4e0fdf2a1fec8265af8"
+  },
+  "plateSha256": "18ebeca45f64601cad421e8126c5e14a2c1e8e7e458cab55e31cc522bcd0c85c"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2888,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/1. GBCylBlu9MtlRollMattSl.psd",
+   "releaseVersion": "ae67d5ab5f1cd8d4175692be0ba440a9f87cc36da835cd1c934ed70dd441eab6"
+  },
+  "plateSha256": "f953680f6300f1abf6e8b1a9547a33f18baa135fe0867145c44aea5af2cc93b4"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3519,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/4. GBCylBlu9MtlRollPnkDot.psd",
+   "releaseVersion": "5eb4797ac37288e3a7879e8ea98c6471d03e89c72d7def274f6dcc8661b02526"
+  },
+  "plateSha256": "66230f94d1febb157b28ac887bf61ffc87750864ad10af9767ea5cba6c3df834"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2363,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/9. GBCylBlu9MtlRollShBlk.psd",
+   "releaseVersion": "5544f9c393e93060205e0dc6d1c27a27944d01134e4eeb55bd09d7d9349b1ecd"
+  },
+  "plateSha256": "52031baf82569b79bcaedefe19287c3b64140e99e8fa27174b33e896a555139a"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5078,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/6. GBCylBlu9MtlRollShnGl.psd",
+   "releaseVersion": "4ef25b8a3a7720df482d3426ea832a53d65c4e1924aaed6e5f48f768195cbb55"
+  },
+  "plateSha256": "fff2231e926f71551d2df0b2dc8cb994c333ea9d00e622f76abd86a65a066c13"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3757,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/7. GBCylBlu9MtlRollShnSl.psd",
+   "releaseVersion": "5d5b6157c132cb34e21af9d7e7d57985fe33a286707f097b3df888ec69ba4267"
+  },
+  "plateSha256": "77d17b3ce9d0f4cab71c6995dabf3ee29654959953e584c16069e9d247cd945f"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2616,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/3. GBCylBlu9MtlRollSlDot.psd",
+   "releaseVersion": "4d9df14f937fe110aef7c895b4ec960153a1b43ae8c70ce152a908e050eaa6d4"
+  },
+  "plateSha256": "e4d6e08908bcb1836daaa1b49978a686048d404c69118667655c90dc7bb51414"
+ },
+ {
+  "sku": "GBCylBlu9MtlRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2426,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/10. GBCylBlu9MtlRollWht.psd",
+   "releaseVersion": "b38478d1e6c41351430e068066105e7f8f77659fa6d8cc1a383c7ec2fe19a243"
+  },
+  "plateSha256": "51b4a63480003e5e14701470018be2b9f18f72cadd16a623f2aa0c3891c44018"
+ },
+ {
+  "sku": "GBCylBlu9RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.3121,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/12. GBCylBlu9RollBlkDot.psd",
+   "releaseVersion": "91093affd68caec705e14be69f80adb3d86bf1ce05f6f73dbc578999a17ad216"
+  },
+  "plateSha256": "50501fc6fe46e7ee5b90a8094fd6e9d025732476598d42e2fe9ebf695eee54e3"
+ },
+ {
+  "sku": "GBCylBlu9RollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4507,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/18. GBCylBlu9RollMattCu.psd",
+   "releaseVersion": "d9bf21909d5b22796ada30ecca92c17d6ae8ef366939d6313e488097f7746325"
+  },
+  "plateSha256": "12821f7c3c376bbf4756e7518f9b8497f0b8351faaa5e4cf07472b0fad894715"
+ },
+ {
+  "sku": "GBCylBlu9RollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.4314,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/15. GBCylBlu9RollMattGl.psd",
+   "releaseVersion": "09e3b2578d4e9131c89a52584eb0691bd713e0143a8a89a616e8630418992bcf"
+  },
+  "plateSha256": "8716604821ae88512a58dc36ffba2f9bf9469a90a86070f184142bfd407ff0ce"
+ },
+ {
+  "sku": "GBCylBlu9RollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.288,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/11. GBCylBlu9RollMattSl.psd",
+   "releaseVersion": "5b69f65bec6e7db81f279075f63f2dfa2f7a23d87ff06b79a476e7996032bf09"
+  },
+  "plateSha256": "a18333b2e05eb8bd089b382329cdc80aa98659455272c25425f30ee73efedc6f"
+ },
+ {
+  "sku": "GBCylBlu9RollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2652,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/19. GBCylBlu9RollShBlk.psd",
+   "releaseVersion": "c6f4a89318bc7bd958023f8ac413e15439253d6fe3b5e1cffa8300cfa7364bb8"
+  },
+  "plateSha256": "aa9026cd8f58de08c5590187661bf8f3da7225a308b32df2c3963cc1983260b8"
+ },
+ {
+  "sku": "GBCylBlu9RollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5155,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/16. GBCylBlu9RollShnGl.psd",
+   "releaseVersion": "42ed792167f2b644f3e88cf0431de0c9307271ced732995eadfd31f7e67f6ff6"
+  },
+  "plateSha256": "1f884646e713612e4c1b0affc3b2d1bef3f597ad45e996435c23516cda29c770"
+ },
+ {
+  "sku": "GBCylBlu9RollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.372,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/17. GBCylBlu9RollShnSl.psd",
+   "releaseVersion": "eeba44623229211cce8542332ce22ad04910e723bfd877426f32087295239535"
+  },
+  "plateSha256": "05ebabc47e5c243486c50f576cfbbbe7cf414e102644e41e74d0544d31e8e167"
+ },
+ {
+  "sku": "GBCylBlu9RollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.2758,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/20. GBCylBlu9RollWht.psd",
+   "releaseVersion": "11d3cbb1ff9d14c60c81293c4f5928e03c1701b09ac4ff820b614b249ed81b0f"
+  },
+  "plateSha256": "645ecd236fc7c3c6edbe66bc629ec607ea924695889f7641a3ba7b76587296c8"
+ },
+ {
+  "sku": "GBCylBlu9SpryBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 2.211,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/23. GBCylBlu9SpryBlk.psd",
+   "releaseVersion": "96dfe0aa808f91eb5cc658883d56ae589f9229ba29e428cf8f483f2fe7542c10"
+  },
+  "plateSha256": "89e469ea5c744af33df86800f7420adb0d2fb5bf38314dd82adab5986ede4b66"
+ },
+ {
+  "sku": "GBCylBlu9SpryGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4025,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/21. GBCylBlu9SpryGl.psd",
+   "releaseVersion": "aedd1bb9739673a48a2cfe53bd382745b6ee6831b5ac2597bec7bff6b68cddaa"
+  },
+  "plateSha256": "4e9ef01cf2ea6b25e846820f748a5a40887f2ad7de60e1abc6b162a42c77c0a3"
+ },
+ {
+  "sku": "GBCylBlu9SpryMattSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3102,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/22. GBCylBlu9SpryMattSl.psd",
+   "releaseVersion": "1d8c5b0cf75272812ecbf7f73ec611cf0da27f0e92d249a0c0fb747ee0cf12f9"
+  },
+  "plateSha256": "ea80973ee05c4d4b0894b7811d4bf6b1c1d78e5ea0c19208d717f9d3c67bf96e"
+ },
+ {
+  "sku": "GBCylBlu9SpryRd",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4105,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/25. GBCylBlu9SpryRd.psd",
+   "releaseVersion": "fa5d04d27a5045c4a77d130524e6eab54be15ff06b635339986c0ce1d06c4426"
+  },
+  "plateSha256": "3bfaccd47148aca379e46894a510f7e57ed6a8c65c618c77df76f0d3771cf80d"
+ },
+ {
+  "sku": "GBCylBlu9SpryShSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3184,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/24. GBCylBlu9SpryShSl.psd",
+   "releaseVersion": "741fa28e6c37a1b7073941725f1f466f52a05e0a8101fbaeb24d255b74ad8928"
+  },
+  "plateSha256": "928fce8ec2bfc6644f1dda90a19947b01ae5f28ad3bda17f41812a591db5cd40"
+ },
+ {
+  "sku": "GBCylBlu9SpryTur",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.4247,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/26. GBCylBlu9SpryTur.psd",
+   "releaseVersion": "3bdebb766009fee54cc1c2872601cedda1c1d376e6aa420f8da62cccdab305d6"
+  },
+  "plateSha256": "e69b99c9009136826320097999417f3400741a2f147d2fa7d85f33bfdbb8d69c"
+ },
+ {
+  "sku": "LBCylBlu9LtnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.2728,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/29. LBCylBlu9LtnBlk.psd",
+   "releaseVersion": "6b78e425ca5ab6c0b3c19071d108d6589ad115615f3bdef3feb7909f0cbca422"
+  },
+  "plateSha256": "9a6b2aeb2cd242a25e00f360e19e4e55a616ea52c8ce003f57c429c394e9d653"
+ },
+ {
+  "sku": "LBCylBlu9LtnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3906,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/28. LBCylBlu9LtnGl.psd",
+   "releaseVersion": "06effaabd52468fd524a43f7a942af68026f3848cf73bf435d20998bc33f1370"
+  },
+  "plateSha256": "532c4b38f93d89da24799f1ceb3b6b13c3d0764aeb904c9925695eaf5f906124"
+ },
+ {
+  "sku": "LBCylBlu9LtnMattSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.307,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/2. Cobalt Blue 9ml  (Capped)/27. LBCylBlu9LtnMattSl.psd",
+   "releaseVersion": "599ac5798207b59818faafd8e9bad118dcee00615427059174c1d46ec463aebc"
+  },
+  "plateSha256": "d922c7e4c9602f34af6f91c63c0aabc200a7c9141bf8098fc88814ccb8f5b4df"
+ },
+ {
+  "sku": "GBTallCylFrst9BlkShSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.701,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCylFrst9BlkShSht.png",
+   "releaseVersion": "095cf25c4e032750234730638ba0d3e8f9f4011df8fa63f83ad0932dfa0250f9"
+  },
+  "plateSha256": "4fb1000dbc4d39fa90db991b44b1d7ae420a6e7fcfa35ec56e085d8602d8af12"
+ },
+ {
+  "sku": "GBTallCylFrst9BlkSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5375,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /1. GBTallCylFrst9BlkSht.psd",
+   "releaseVersion": "334b12f147c615342edefcecc155c643c4f13d83987f60bf080bd5dee297138e"
+  },
+  "plateSha256": "c38ca4c2c63cc22d048120bd4f338c1ab797f436fbf5fa9b41bbbd909258ceeb"
+ },
+ {
+  "sku": "GBTallCylFrst9CuSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6734,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCylFrst9CuSht.png",
+   "releaseVersion": "69406ea5796e6fde842fa4252f914b8f2ac78a5d474546e81c1fe15c9f1f6e11"
+  },
+  "plateSha256": "58c6bed1712e73a76798779e6e946137dfe7d0d6241c8903af4c0d403fec301d"
+ },
+ {
+  "sku": "GBTallCylFrst9Gl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.639,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /28. GBTallCylFrst9Gl.psd",
+   "releaseVersion": "8207621355a72bcfc40235073cd2fa18064e1b21e32d67f0ecfac10dc6caf765"
+  },
+  "plateSha256": "7ca58491e38bbd33ce051fcf25c13e4208ac9ade5f9ec1bed08aefdf1698d2ca"
+ },
+ {
+  "sku": "GBTallCylFrst9GlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6655,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCylFrst9GlMattSht.png",
+   "releaseVersion": "def467a9a82c2d4f988e63c5b8e44b547af8839105b56499f16c451d708f4b57"
+  },
+  "plateSha256": "731daa1a80a94e5416e34afb38f6bffe6bed6d09592ba8339c11e6cdbf677693"
+ },
+ {
+  "sku": "GBTallCylFrst9GlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6665,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCylFrst9GlSht.png",
+   "releaseVersion": "a119ebb43ddf5d78e582e2fd8af715843054e16a5b5cdf3f2ad51c4790f36e75"
+  },
+  "plateSha256": "97226a11e145e5c1e03873f76439e8696e5e4013b5d98d3eb91bdccae0c3acae"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollBlkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5021,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /26. GBTallCylFrst9MtlRollBlkDot copy.psd",
+   "releaseVersion": "f4e8b7ade6c318c6a8931e52a01a965f3d08c57d21f2e58afc0ef6c5803a6df8"
+  },
+  "plateSha256": "de1a226b280e70713d8b0c5b79840159c644b3ec58a67e397925b29eb0a5e1b5"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollBlkSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5009,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /24. GBTallCylFrst9MtlRollBlkSh.psd",
+   "releaseVersion": "c4beafd282dfdb6ce6e08f0aa40d1ae0039894215ad6d8d1a63190ae28f1825d"
+  },
+  "plateSha256": "79f54be6bece481d1c1fd94817e13ea73ae83c04042dcf06b1b20d901fd693f4"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollCuMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6349,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /22. GBTallCylFrst9MtlRollCuMatt.psd",
+   "releaseVersion": "cda3c7b7e535eeaa6755fcc3b34db0767bf9f2c6123d96557be87e03542533ff"
+  },
+  "plateSha256": "31bc7e067da041f9a6c70155347770c3f451361d26f2ac2564d633f8e136e20a"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollGlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6062,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /16. GBTallCylFrst9MtlRollGlMatt.psd",
+   "releaseVersion": "58062e0a924f3152fb1ab4bc6335e67238abce74c8069f214647de0977852f28"
+  },
+  "plateSha256": "746ef8f2d195af15e2527bd26ff6965c952852439b555b04d3adb1b6169c8731"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollGlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6362,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /18. GBTallCylFrst9MtlRollGlSh.psd",
+   "releaseVersion": "8fb4a91befeb757be7c32902281547ede6ec024f304c2f34638dac7bb330be68"
+  },
+  "plateSha256": "22b2e1492aa2cc7670b715eec15c14af38d10d201c9f2eef34d50127dae61cd4"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollPinkDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5543,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /12. GBTallCylFrst9MtlRollPinkDot.psd",
+   "releaseVersion": "b3c370278265401920ceb8f94ef443967453aadc9fabc8e706b4bbb794853f3c"
+  },
+  "plateSha256": "d94bbf5976f6cf96f1461c1c55fdd557ee4f6f626310536958edf9ca02559124"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollSlDot",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5033,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /10. GBTallCylFrst9MtlRollSlDot.psd",
+   "releaseVersion": "6f106c5a3069dc6f889670282cf6534f571c44a456bfabb6fe17dc5407f6086d"
+  },
+  "plateSha256": "f9c38016f70b61e17a5eedf5eac0b723d0c57a057214fa7b1774e8a913626608"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollSlMatt",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5035,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /14. GBTallCylFrst9MtlRollSlMatt.psd",
+   "releaseVersion": "ab48c69eeae58a38744f515a556152c87131c85a162181d56a46a9c85034a594"
+  },
+  "plateSha256": "df71c6694bbc59c547d7dac9f511cee979103704a050dbd70e34b50bcd6174bf"
+ },
+ {
+  "sku": "GBTallCylFrst9MtlRollSlSh",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.5277,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /20. GBTallCylFrst9MtlRollSlSh.psd",
+   "releaseVersion": "33dde82cd1c64aec509ac7f3a6e0902205d0647b50bb9c2556df81a8c4638830"
+  },
+  "plateSha256": "9284b97f1014f536d3ef8d953fa126beffab7fa7d6dd34b654c46c9d3349f846"
+ },
+ {
+  "sku": "GBTallCylFrst9RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5401,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /27. GBTallCylFrst9RollBlkDot.psd",
+   "releaseVersion": "a1cbc6614cc9a852fafa299599e808e71611455eeb1008d2d1f3b83fbb4d089e"
+  },
+  "plateSha256": "90ffc33e438d105b812715ab2eca1d6277da7ddffff3cef3b765531fda53e20f"
+ },
+ {
+  "sku": "GBTallCylFrst9RollBlkSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5009,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /25. GBTallCylFrst9RollBlkSh.psd",
+   "releaseVersion": "097da7ba11e4a625ce77dac11c28423a60e3c9afc00c94769dcefd16b06d1570"
+  },
+  "plateSha256": "79f54be6bece481d1c1fd94817e13ea73ae83c04042dcf06b1b20d901fd693f4"
+ },
+ {
+  "sku": "GBTallCylFrst9RollCuMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6349,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /23. GBTallCylFrst9RollCuMatt.psd",
+   "releaseVersion": "6d855a35284b5088aed8225109fcc62b9f983aae92df6ff284052587f4e9f5ca"
+  },
+  "plateSha256": "31bc7e067da041f9a6c70155347770c3f451361d26f2ac2564d633f8e136e20a"
+ },
+ {
+  "sku": "GBTallCylFrst9RollGlMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6062,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /17. GBTallCylFrst9RollGlMatt.psd",
+   "releaseVersion": "689dd90be52167972ee559adf95cee20f55fd3813d4f661e7048f32cff8c5b23"
+  },
+  "plateSha256": "746ef8f2d195af15e2527bd26ff6965c952852439b555b04d3adb1b6169c8731"
+ },
+ {
+  "sku": "GBTallCylFrst9RollGlSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6362,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /19. GBTallCylFrst9RollGlSh.psd",
+   "releaseVersion": "08abdbb37b86caceee09d4c1e618a596730da8bbdb32f9112e262c2becf4b1f2"
+  },
+  "plateSha256": "22b2e1492aa2cc7670b715eec15c14af38d10d201c9f2eef34d50127dae61cd4"
+ },
+ {
+  "sku": "GBTallCylFrst9RollPinkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5751,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /13. GBTallCylFrst9RollPinkDot.psd",
+   "releaseVersion": "000d8e35e980fa9fa3d880d3a4d5244b36a02e7de2d22735d430ccbe54ff03a0"
+  },
+  "plateSha256": "a4b317aabb4dc6f1f463cca32c882a0c9ea8486a0d78b6b4dc3ca9089aa11d08"
+ },
+ {
+  "sku": "GBTallCylFrst9RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5033,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /11. GBTallCylFrst9RollSlDot.psd",
+   "releaseVersion": "2d94f06a3c8ca7a357229de5ba00d5f107bbb56de9c47ccc445f43cdb0b945e3"
+  },
+  "plateSha256": "f9c38016f70b61e17a5eedf5eac0b723d0c57a057214fa7b1774e8a913626608"
+ },
+ {
+  "sku": "GBTallCylFrst9RollSlMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5038,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /15. GBTallCylFrst9RollSlMatt.psd",
+   "releaseVersion": "3c8d6c4697e9aba8bb536962c9b582bd0346f87eaba7b190cddcd8770f57f28d"
+  },
+  "plateSha256": "321de20a2bc73cae98d847e11426081af6e0e904e97b55a9c99b9378b3890bb5"
+ },
+ {
+  "sku": "GBTallCylFrst9RollSlSh",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5277,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /21. GBTallCylFrst9RollSlSh.psd",
+   "releaseVersion": "4c7d6d7e4e7c1e5c8192f5468670d9709441e926161aac920f1f016a408fd1d9"
+  },
+  "plateSha256": "9284b97f1014f536d3ef8d953fa126beffab7fa7d6dd34b654c46c9d3349f846"
+ },
+ {
+  "sku": "GBTallCylFrst9Sl",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.4956,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /29. GBTallCylFrst9Sl.psd",
+   "releaseVersion": "47dc71dadf50515e9667fa0b4430bca13fb9ac859a85d313a5d1e731e7f091bb"
+  },
+  "plateSha256": "9388d7b25cc4ecf147498fadc652ae9753260d7618a931f69ccd39bf7a8c04c3"
+ },
+ {
+  "sku": "GBTallCylFrst9SlMattSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6253,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCylFrst9SlMattSht.png",
+   "releaseVersion": "ba1864f80edab935b8bf5b1a902a0536d0d23622b91b41502cb00228de35a64f"
+  },
+  "plateSha256": "d36e9686995287fe6891b34f36c05db7ed033717011c8d45547e23d09d56c83b"
+ },
+ {
+  "sku": "GBTallCylFrst9SlSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.6563,
+  "source": {
+   "library": "legacy-exact+verified-master-neck",
+   "path": "https://www.bestbottles.com/images/store/GBTallCylFrst9SlSht.png",
+   "releaseVersion": "1439441023d585cec7bd29ec28dceec84772a048bf48c1bb4ec72ecf9ddefafa"
+  },
+  "plateSha256": "7f3973171e453a17f9b1abfc2b2d89efbc89e2ea48c264557d7c6a57d5914261"
+ },
+ {
+  "sku": "GBTallCylFrst9SpryBlkMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.1763,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /3. GBTallCylFrst9SpryBlkMatt.psd",
+   "releaseVersion": "38dcebf3d60bc4434f7722404ee23908226e683be2c2503e7cc049460b32dfef"
+  },
+  "plateSha256": "4935f0c2186293ce1c74c54c64768e7c5649bd31826183ed5ed2aa289c7fe300"
+ },
+ {
+  "sku": "GBTallCylFrst9SpryBlkSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.1944,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /4. GBTallCylFrst9SpryBlkSh.psd",
+   "releaseVersion": "21c5564877c280c100c99f4c3996c99a8225ce6c1cc30989459909d08dd56602"
+  },
+  "plateSha256": "348031ec723efcc7ac8505cc5a21d8ad90e421ac3e35ac600092b7f7a1183db1"
+ },
+ {
+  "sku": "GBTallCylFrst9SpryBluMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3193,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /5. GBTallCylFrst9SpryBluMatt.psd",
+   "releaseVersion": "d9b376c3712216c6cfa5567873544d612279c69cffa1f3865e9d404f632a551d"
+  },
+  "plateSha256": "4e21d671f3293a93221d6ffa561a90e84fac489275fbfd4fe3389a7622c30f51"
+ },
+ {
+  "sku": "GBTallCylFrst9SpryCuMatt",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6221,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /30. GBTallCylFrst9SpryCuMatt.psd",
+   "releaseVersion": "322a44a2110b84bd3f7eb92218effc61580edc8ecc846f190a5a77608bfdcfa4"
+  },
+  "plateSha256": "0141880c4cfb466e3101a8ba83d8b95c099a6c73c34975b5ee20975a88893b6c"
+ },
+ {
+  "sku": "GBTallCylFrst9SpryGlMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.2802,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /7. GBTallCylFrst9SpryGlMatt.psd",
+   "releaseVersion": "ae312583920590047c6ee5b67588ba70cf1862d2a4067bc6c50ae71994a92dc2"
+  },
+  "plateSha256": "b0745ceb43ca2ddd7a378c4a994b2f71929ce0236d0eb5d797177fb35211d4a3"
+ },
+ {
+  "sku": "GBTallCylFrst9SpryGlSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3273,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /6. GBTallCylFrst9SpryGlSh.psd",
+   "releaseVersion": "e300bc98a7a5f28d22fc6f1d29a10e0f945c2ac1b7eb24086d6ff79e80f68cff"
+  },
+  "plateSha256": "1b8071a54a4e72ed4fa3506621dff53b56a22e8c1af5bf37cdc84a23db64f7ce"
+ },
+ {
+  "sku": "GBTallCylFrst9SprySlMatt",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.1383,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /8. GBTallCylFrst9SprySlMatt.psd",
+   "releaseVersion": "710b7ace97566b842164ce89add71af07229692b83852b17f0eceedf7128e4be"
+  },
+  "plateSha256": "12ac293a951e4c57203700c8a53f6db287e9ccde76475743121c8e6342a8e933"
+ },
+ {
+  "sku": "GBTallCylFrst9SprySlSh",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.3287,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /9. GBTallCylFrst9SprySlSh.psd",
+   "releaseVersion": "d68e8c1027412ce1c3ffc2ec590f07cf83929ae13d4ac2990cbac2d8f74d109b"
+  },
+  "plateSha256": "909eb7933295106b230bce507b73b27ad086a2c3bad513a81cb7f02783b73c2c"
+ },
+ {
+  "sku": "GBTallCylFrst9WhtSht",
+  "parts": 2,
+  "strictParity": true,
+  "meanError": 0.4596,
+  "source": {
+   "library": "master",
+   "path": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /2. Frosted Tall Cyl 9ml (capped) PSD /2. GBTallCylFrst9WhtSht.psd",
+   "releaseVersion": "96ccddaad1e4bfa7b36a6242394bb7cc5af7215266b1f9e9370bbaa1187c095c"
+  },
+  "plateSha256": "dd530cd73496a0a7b5ecd69032a223f963f21117bcdb30bf6895b35600e030a9"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7007,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/2. GBCylFrst9MtlRollBlkDot.psd",
+   "releaseVersion": "c4a23523a465286a7546d89d85552f90ee4bc7eafd8eb691bae0e4f0eedfa731"
+  },
+  "plateSha256": "59dbffe2109893eb4bf70d1f04e462d52addbe1fbd9f382a48fbd32f02fbd0f9"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.8218,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/8. GBCylFrst9MtlRollMattCu.psd",
+   "releaseVersion": "dccd03f44f9ac82e126804bdf226875a877eeec2f8bd0531aaf84b3ae24dfd06"
+  },
+  "plateSha256": "79bfb4d7c20de22a560124af530d1550d69d0d9bec7eaa775c54067cbde72911"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7766,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/5. GBCylFrst9MtlRollMattGl.psd",
+   "releaseVersion": "0c6abaa99f6529381f4aca20efac4b8e412a08f5116a70267210ca9e459e65db"
+  },
+  "plateSha256": "85d0fc1fa85daf4ed88d23e4da0d09b96e7697462b657747c687b276af01ab86"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6481,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/1. GBCylFrst9MtlRollMattSl.psd",
+   "releaseVersion": "422c3d9ed8e18332fa50363503515996e943e8608165a5bac2029bcafc511332"
+  },
+  "plateSha256": "3bcfb9f35e26e07f5eafcf7df63858bbcfb558b22f049a4046e676a6757d8971"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7809,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/4. GBCylFrst9MtlRollPnkDot.psd",
+   "releaseVersion": "b08b8f3bf7c8cad357c1208d0471f30a4ba1c771fa2b2cc2cc74f5d9b9996629"
+  },
+  "plateSha256": "b31ead1b84020fc9aa8d1498e59a075454d179a906c0c2635f17f7655a128cb4"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6428,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/9. GBCylFrst9MtlRollShBlk.psd",
+   "releaseVersion": "4189ffe9b372046ce15d4ad316df09e937fa3bf71c5a636c5dbc020e93d387ee"
+  },
+  "plateSha256": "054a5b77ac93aaef0c6e9c21976ba169f379f58978a3fdd032d70cb49b22a194"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.8235,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/6. GBCylFrst9MtlRollShnGl.psd",
+   "releaseVersion": "f055f8502c0e3cc00565c966daae9d18a854aa4e26a80ae12184666363f95d83"
+  },
+  "plateSha256": "3908b43f13879becb7f7b0b86b31f79f79ca0020fbf459363653fb7053b83899"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7215,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/7. GBCylFrst9MtlRollShnSl.psd",
+   "releaseVersion": "98c49a62303e07de254aeb9dc25b962324143f18ad926d6452d1efcb9403b93a"
+  },
+  "plateSha256": "77d702ffeda48d54c141ab89391cac9f5988abb8846c4f546097659a511c1b66"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6839,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/3. GBCylFrst9MtlRollSlDot.psd",
+   "releaseVersion": "012fb70677fae0e3e4724ed2cd5013157b19286bbeb0c692502dcea642c2256c"
+  },
+  "plateSha256": "fe82d42e4c05fe3e52fa33ee49f0fa53e35db42b883c9c737681710214f7b524"
+ },
+ {
+  "sku": "GBCylFrst9MtlRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5687,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/10. GBCylFrst9MtlRollWht.psd",
+   "releaseVersion": "0e08947b97f61d6379cff8a9cabcb0d94e564ce58c3c27ed4e1385c0d716b1d5"
+  },
+  "plateSha256": "aa77fa2e858cf2c9a58316d8001bfc311afd973a161cd741e91396e66c0f29de"
+ },
+ {
+  "sku": "GBCylFrst9RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6948,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/12. GBCylFrst9RollBlkDot.psd",
+   "releaseVersion": "0ac219fce9049f85beafacbce1718cc09b8224a7b5812f68f4a3f9743f731ae0"
+  },
+  "plateSha256": "d078e8b728d2e14cf03b73b30c2c00e7b54cbbf1ad1acc7cd9b27551826e3680"
+ },
+ {
+  "sku": "GBCylFrst9RollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.8385,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/18. GBCylFrst9RollMattCu.psd",
+   "releaseVersion": "9bab9d6a7b88919a2da1106d130f5e800a1906ff548f4547d23a962a88319754"
+  },
+  "plateSha256": "7831d64177271cb2e336fa793aeb4ce3c021d851e8175c50f2c6f2fe4488bebd"
+ },
+ {
+  "sku": "GBCylFrst9RollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7696,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/15. GBCylFrst9RollMattGl.psd",
+   "releaseVersion": "a40062ed3b93f33bda67806268c4cf3234035a9fb04160f37acf7a93146ad3fd"
+  },
+  "plateSha256": "a1217ed806cd90424d117140ad7c9aa95f2d97eab3e59ff3c3f59b852287e804"
+ },
+ {
+  "sku": "GBCylFrst9RollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.677,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/11. GBCylFrst9RollMattSl.psd",
+   "releaseVersion": "90e1d5737602be88b000e8931f51d1d802cf64326644505ce53e334d435dc305"
+  },
+  "plateSha256": "e30ed9a7891caf5091de9384de9420e1b922a1d0db9c2e8f6f1b4cdb65c08385"
+ },
+ {
+  "sku": "GBCylFrst9RollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7974,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/14. GBCylFrst9RollPnkDot.psd",
+   "releaseVersion": "e44838c58ae3353e9ad96b67f0ff76d0bee360099626ce0127a5b9a56d1c9d0e"
+  },
+  "plateSha256": "8f4143ef90fb4aeed53b9b5f7eb7556bd225b1d15cdc963f0af5b97097fc5b6f"
+ },
+ {
+  "sku": "GBCylFrst9RollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6669,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/19. GBCylFrst9RollShBlk.psd",
+   "releaseVersion": "386f9a01565cea97cc0d4828a07c21fee09502cab5b4627cac6e4615e8f3877d"
+  },
+  "plateSha256": "d3f427b523d19c89f591bcbfbff218fd67358d7f52f2cef18ece55b36329d9c5"
+ },
+ {
+  "sku": "GBCylFrst9RollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.8321,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/16. GBCylFrst9RollShnGl.psd",
+   "releaseVersion": "cb8d777707999d066cd3f64f33a7837be4565bff6bb657bfdaccba9d50832064"
+  },
+  "plateSha256": "7fb6e54a8b9071da1d7452ee20f848765436e4a4111969dc9f65f0c93598f093"
+ },
+ {
+  "sku": "GBCylFrst9RollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.7462,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/17. GBCylFrst9RollShnSl.psd",
+   "releaseVersion": "9ff84e0bd2831a8d8c9b5b680f5dbb961de0f8716f7091ad70e74f6869b44f57"
+  },
+  "plateSha256": "0748aa65c23b77b5f506e4f0883941e9b98456be3775cfd332b8271d3f280451"
+ },
+ {
+  "sku": "GBCylFrst9RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.6873,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/13. GBCylFrst9RollSlDot.psd",
+   "releaseVersion": "908dd16f5c9d5af54206da3ebc8804363690779f2ebab0f16a666081f69c5307"
+  },
+  "plateSha256": "ba04c8bf9fec19df4a5d7ae597554e1155c83101714be4ddd3368efccce2b77e"
+ },
+ {
+  "sku": "GBCylFrst9RollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 0.5839,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/20. GBCylFrst9RollWht.psd",
+   "releaseVersion": "c96927deb51cee267698a3e9103f2e6d9bc379fe58e091109d4c4ca5a64a2991"
+  },
+  "plateSha256": "18daf7fa0026a5e27d8f51e7e31d4545ebc2fdd18a99f061d112a346af054b46"
+ },
+ {
+  "sku": "GBCylFrst9SpryBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6681,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/23. GBCylFrst9SpryBlk.psd",
+   "releaseVersion": "a46ed02ee1670e7ba77c31be6f86ee91aabdca987c5d6616777eda156a79f827"
+  },
+  "plateSha256": "df29a28917381f56dce294d2f20d63ba09c3a1f990eb2c3189828d398c4f56df"
+ },
+ {
+  "sku": "GBCylFrst9SpryGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.8039,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/21. GBCylFrst9SpryGl.psd",
+   "releaseVersion": "4ce6ab24bca33df5144f1747f7146622e14eec4ba2b4ea131bc78018a37d923d"
+  },
+  "plateSha256": "0bb40a4ec201ce192291564e23f3eccb1d97a42bb791deab3dbe743729ce3699"
+ },
+ {
+  "sku": "GBCylFrst9SpryMattSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.7188,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/22. GBCylFrst9SpryMattSl.psd",
+   "releaseVersion": "9d9b7c1bef706311354704443121baac74df023b0bf7bb5deaef12684c36aebc"
+  },
+  "plateSha256": "907d5cba5cd1029a3c462758ddf2809bcd610e85bd4aad348b3db796f1532a7d"
+ },
+ {
+  "sku": "GBCylFrst9SpryRd",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.8131,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/25. GBCylFrst9SpryRd.psd",
+   "releaseVersion": "ee843b272369117e2e92573f95a6c650c8a8d8a0be5785a86ab209167b090dca"
+  },
+  "plateSha256": "577406c6d3062a476a4cf0f66e02bf5c8c93699b84822ddf540f8762e479a471"
+ },
+ {
+  "sku": "GBCylFrst9SpryShSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.7459,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/24. GBCylFrst9SpryShSl.psd",
+   "releaseVersion": "0563cb11bb2944b050b56099838252a4f96773d682359860443135c50b094ead"
+  },
+  "plateSha256": "558061876544bd92343e9fbcb8d480bf53ebb1ca89eaeaf27de724f2d364bbf7"
+ },
+ {
+  "sku": "GBCylFrst9SpryTur",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.8599,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/26. GBCylFrst9SpryTur.psd",
+   "releaseVersion": "ccdb97417ab927fd98b8c1c9322afeca8ac66889c6df2609ace5b6094e2a0b9d"
+  },
+  "plateSha256": "7e92cf0b655d6b82d68fc9079885a0194c59a7e9494ea3b974446e6bb2bde6b8"
+ },
+ {
+  "sku": "LBCylFrst9LtnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6698,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/29. LBCylFrst9LtnBlk.psd",
+   "releaseVersion": "2c0e10f1174fca9077c1462b507ddf96fe1a143923787cb8ba8f3b9b98016652"
+  },
+  "plateSha256": "9140fa566ec8731bca51a9b7890d0847f7b41f32b6210f078b2c3ab103f9d129"
+ },
+ {
+  "sku": "LBCylFrst9LtnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.8375,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/28. LBCylFrst9LtnGl.psd",
+   "releaseVersion": "829f54222deea096eaae49b39d65b5786ea504d88b02adf391c9c0e53029b7b7"
+  },
+  "plateSha256": "59998887bf6ae1a3b726028692dd35dd60bcf18e3e4b639e9f59c05bbe7d37f4"
+ },
+ {
+  "sku": "LBCylFrst9LtnMtSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 0.7462,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/6. Frosted 9ml (Capped)/27. LBCylFrst9LtnMtSl.psd",
+   "releaseVersion": "dfc9c5f401bf43578b87d8d8ee2f5aa40113c45ac41ef9604d1ea5776f7edb70"
+  },
+  "plateSha256": "23b4f238b0ce53eec221589b7d540c21201368d78347fc4cc61da3b521105048"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.6358,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/2. GBCylSwrl9MtlRollBlkDot.psd",
+   "releaseVersion": "5546e4d79a79f91e6b4da540d985ec342d02ed62c9b56324559763aebd9a51dd"
+  },
+  "plateSha256": "0ffef9520e1faa2cbccce47054affee78ae3b8ab4bc9ecefa0a541b7d0af1191"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollMattCu",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.8498,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/8. GBCylSwrl9MtlRollMattCu.psd",
+   "releaseVersion": "bb7f3cb738b8bf5c0286b701258814987ee48109d4d9f6c59ef19b14b07621f5"
+  },
+  "plateSha256": "b65ed51deaff9745932edcc77e1fd4ff35177f56c67a04688f2eb553f62d336f"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollMattGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.7218,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/5. GBCylSwrl9MtlRollMattGl.psd",
+   "releaseVersion": "de2d1242a2c432f8f35e686bdc969d870af63810a65f19824ef027ac910c2bf7"
+  },
+  "plateSha256": "48d5c71b4fd66e4b915b282ec8d52f36226fc32000c38c7820892b13e9776f58"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollMattSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.6401,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/1. GBCylSwrl9MtlRollMattSl.psd",
+   "releaseVersion": "72ab2d59c6c42c52118bb62b6672c0f36a1a51756bd97ea14f9e399150d21141"
+  },
+  "plateSha256": "46e312969f2aef9955b23de935f5bae30a6d9b3758ba50c0348807b6e5063a2e"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.6666,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/4. GBCylSwrl9MtlRollPnkDot.psd",
+   "releaseVersion": "8d0f3a58b53b6761e23a0bc9fc2c42dd6ce69cebcad1ab5c6dfdb5ba43d31df7"
+  },
+  "plateSha256": "fe5a0c23bcd58484fbcd2d95586e4a94c1c11fd817ba683552989b5f6246c5a1"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollShBlk",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5565,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/9. GBCylSwrl9MtlRollShBlk.psd",
+   "releaseVersion": "3d5cfc64281f35e26c26b3e6501f9b02114ca7bde052512c718e1ac98fb83912"
+  },
+  "plateSha256": "b76c6d4ca20eb5456f135b7f5b8964ec49563d9037c22e58c5d35973cc39c49a"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollShnGl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.8135,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/6. GBCylSwrl9MtlRollShnGl.psd",
+   "releaseVersion": "4422fc91c3ee443e504d3df0878217f5bfd2653798dd639e465b5f37ace89d8f"
+  },
+  "plateSha256": "593175769fb3a1e559a34118aee180ae53e6c15f5c52b19f9943abb05b630bf3"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollShnSl",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.7524,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/7. GBCylSwrl9MtlRollShnSl.psd",
+   "releaseVersion": "f6ee2a90980c561f6ddf21c7cc8515ae03900994ae5f6f07998ccb7b1bbb3a9e"
+  },
+  "plateSha256": "b87aa7ffd34bb935b648f1d7d0a07f8d07fd88bebd88d5afe615f5a97011a4ac"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.568,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/3. GBCylSwrl9MtlRollSlDot.psd",
+   "releaseVersion": "1fc48992a8bfa6332c5218d46d6d9fc38db13b7eb4c3927db0fd41f71254683c"
+  },
+  "plateSha256": "3e26ddcbfef01a41c2e48d44bb56f33499c7da8e44acb48fad63181df071f8f2"
+ },
+ {
+  "sku": "GBCylSwrl9MtlRollWht",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 2.2159,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/10. GBCylSwrl9MtlRollWht.psd",
+   "releaseVersion": "cde5776dd0c21589fb0eaafad34c26dffceb4698e8a4674d20c177b3debdaf14"
+  },
+  "plateSha256": "c83055b117abd7b9c622ce92eb36b7b751caa4a62447e8ebe9ae25db00a10d32"
+ },
+ {
+  "sku": "GBCylSwrl9RollBlkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.6158,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/12. GBCylSwrl9RollBlkDot.psd",
+   "releaseVersion": "3c76ad3b9eedac26e3a2615f6cddd18278c986df54c11f9ce4da9c0e053cc36d"
+  },
+  "plateSha256": "54043bcbc6de71652bd9fca468638549fe68d34d181f7df747600f71c8d4c354"
+ },
+ {
+  "sku": "GBCylSwrl9RollPnkDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.7263,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/14. GBCylSwrl9RollPnkDot.psd",
+   "releaseVersion": "da34436c6c0918a63e41dbc344eba773d19f8fcdaf0a72bfee5bf42da4314199"
+  },
+  "plateSha256": "a5df7646d4bd9b4aeb69f1603bdbcdb4179789abb3cf5720a209e34019a3265b"
+ },
+ {
+  "sku": "GBCylSwrl9RollSlDot",
+  "parts": 3,
+  "strictParity": true,
+  "meanError": 1.5861,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/13. GBCylSwrl9RollSlDot.psd",
+   "releaseVersion": "292ca433d82f9ed9b2fb7ce99a2c40961dc5a88712409a4cc16eed8127a515a5"
+  },
+  "plateSha256": "167a9a5001d1b64f389a5a83c54cb8d4c97a33891ddbfec26fe4c0b22b423348"
+ },
+ {
+  "sku": "GBCylSwrl9SpryBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 2.6215,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/23. GBCylSwrl9SpryBlk.psd",
+   "releaseVersion": "80e2023100efedfed4deba729816c37a871758ecd123306c5ca71cb0ad0df79f"
+  },
+  "plateSha256": "d4e46c42159dd66e08508082407f3bf834c3ea26c86af42924a517e63f08c13e"
+ },
+ {
+  "sku": "GBCylSwrl9SpryGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6728,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/21. GBCylSwrl9SpryGl.psd",
+   "releaseVersion": "9efdead91ac81caec366b0364227200d95a7758b9e5dedb15c00d8712c09a548"
+  },
+  "plateSha256": "33763486a424db107893ce2d3aea13a73935adcdc0eb6ddba39b55ff6219d311"
+ },
+ {
+  "sku": "GBCylSwrl9SpryMattSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5704,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/22. GBCylSwrl9SpryMattSl.psd",
+   "releaseVersion": "aa603b0899fdc99e0ad8807610a2a0f17321f063e628762fb3db9d1f76f63ef3"
+  },
+  "plateSha256": "ee1df37683b1bcf9a16f8b5a46536976c6d2459727003261b0d26bc5f03791e7"
+ },
+ {
+  "sku": "GBCylSwrl9SpryRd",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6611,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/25. GBCylSwrl9SpryRd.psd",
+   "releaseVersion": "c2161199d50f138f9d9d0f2d676743b9baf90f31f59fe6cdaa983592510c32d7"
+  },
+  "plateSha256": "45a91592a6e9c4380d88be0191878f76964e42877da02dbded32c59e259e6c82"
+ },
+ {
+  "sku": "GBCylSwrl9SpryShSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6226,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/24. GBCylSwrl9SpryShSl.psd",
+   "releaseVersion": "1f6f5ad3fbfb063705c41540e6eaf1ad28383d8678bf8681377c42083331a333"
+  },
+  "plateSha256": "a2b1a50810f77372c6ee0220b0902d3918617ebcf5353f00edd59eea6aeffa3e"
+ },
+ {
+  "sku": "GBCylSwrl9SpryTur",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.7049,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/26. GBCylSwrl9SpryTur.psd",
+   "releaseVersion": "a2728c20613fa03340c29d7fbaaaa6cad49d731c50799dcbffbf7d867667b4ea"
+  },
+  "plateSha256": "c4cfaa728a5b56923c69f7a267b0fc443992f40df7da93e7e816ec1480826206"
+ },
+ {
+  "sku": "LBCylSwrl9LtnBlk",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 2.5506,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/29. LBCylSwrl9LtnBlk.psd",
+   "releaseVersion": "933513d0a17966fb91c23a0b79caf76074df97a9af4df4e9607d481889f406af"
+  },
+  "plateSha256": "f5946bb0e09a4f4a4ed90cd27a55d0ef19ab58c365fa1c7013c8a52b64e34b09"
+ },
+ {
+  "sku": "LBCylSwrl9LtnGl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.6712,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/28. LBCylSwrl9LtnGl.psd",
+   "releaseVersion": "1b4066dfd2b0c502911fd2f3ecfd21edbb591ac30d57bec36bb088d8a1595037"
+  },
+  "plateSha256": "8ed984c344a5167133147aaea464c0d06f76e535363d356ce3fcfe949df9daa0"
+ },
+ {
+  "sku": "LBCylSwrl9LtnMtSl",
+  "parts": 4,
+  "strictParity": true,
+  "meanError": 1.5796,
+  "source": {
+   "library": "master",
+   "path": "3.  17-415 Bottles/8. Swirl 9ml (Capped)/27. LBCylSwrl9LtnMtSl.psd",
+   "releaseVersion": "b59706d8e3b86af9a51e72195cb17ec750d7594e4c97ade10905ddc124283db0"
+  },
+  "plateSha256": "cc394f0c0b5ed6917fb10520edf9e3df8ffacbeea96a74dff80906a67a721240"
+ }
+]

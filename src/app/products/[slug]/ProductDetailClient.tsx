@@ -40,6 +40,7 @@ import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import cylinderCapThumbnails from "@/lib/products/cylinder-cap-thumbnails.generated.json";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
@@ -550,6 +551,7 @@ export interface ProductVariant {
     capColor: string | null;
     trimColor: string | null;
     capHeight?: string | null;
+    componentProfile?: string | null;
     ballMaterial?: string | null;
     assemblyType?: string | null;
     componentGroup?: string | null;
@@ -1275,6 +1277,13 @@ export default function ProductDetailClient({
         ),
         [capColorOptions, variants, activeApplicator],
     );
+    const capOptionThumbnails = useMemo(() => {
+        const exactPhotos: Record<string, string> = cylinderCapThumbnails;
+        return Object.fromEntries(variantsForApplicator.flatMap((variant) => {
+            const photo = variant.websiteSku ? exactPhotos[variant.websiteSku] : undefined;
+            return photo ? [[resolveVariantCapFinish(variant).swatchName, photo]] : [];
+        }));
+    }, [variantsForApplicator]);
 
     const primaryCapColor = primaryVariant && (primaryVariant.applicator ?? null) === (activeApplicator ?? null)
         ? resolveVariantCapFinish(primaryVariant).swatchName
@@ -1960,7 +1969,7 @@ export default function ProductDetailClient({
         );
     }
 
-    const inStock = selectedVariant?.stockStatus === "In Stock";
+    const inStock = selectedVariant?.stockStatus === "In Stock" || selectedVariant?.stockStatus === "Available to order";
     // A variant ID alone does not mean Shopify will sell it — a DRAFT or
     // unpublished parent product 410s at the /cart permalink. Respect the
     // synced sellability flag so these fall back to the quote path.
@@ -2080,6 +2089,7 @@ export default function ProductDetailClient({
                             capOptions={capColorOptions}
                             activeCapOption={activeCapColor}
                             capOptionPhotoKeys={capOptionPhotoKeys}
+                            capOptionThumbnails={capOptionThumbnails}
                             resolveCapFinish={resolveVariantCapFinish}
                             variantSku={canonicalSku}
                             onCommitVariant={handleGuidedVariantSelection}
@@ -2134,6 +2144,7 @@ export default function ProductDetailClient({
                                 onProductUrlChange={handleGuidedProductUrlChange}
                                 capOptions={capColorOptions}
                                 capOptionPhotoKeys={capOptionPhotoKeys}
+                                capOptionThumbnails={capOptionThumbnails}
                                 activeCapOption={activeCapColor}
                                 onCapOptionChange={(name) => {
                                     setSelectedVariantId(null);
@@ -3039,7 +3050,7 @@ export default function ProductDetailClient({
                             </div>
                             <div className="py-10 max-w-2xl">
                                 <dl>
-                                    <SpecRow label="SKU" value={canonicalSku(selectedVariant)} />
+                                    <SpecRow label="SKU" value={selectedVariant.websiteSku || canonicalSku(selectedVariant)} />
                                     <SpecRow label="Height (with cap)" value={selectedVariant.heightWithCap} />
                                     <SpecRow label="Height (without cap)" value={selectedVariant.heightWithoutCap} />
                                     <SpecRow label="Diameter" value={selectedVariant.diameter} />
@@ -3051,7 +3062,7 @@ export default function ProductDetailClient({
                                     <SpecRow label="Applicator" value={selectedVariant.applicator} />
                                     <SpecRow label="Ball Material" value={selectedVariant.ballMaterial} />
                                     <SpecRow label="Cap Style" value={selectedVariant.capStyle} />
-                                    <SpecRow label="Cap Height" value={selectedVariant.capHeight} />
+                                    <SpecRow label="Cap Profile" value={selectedVariant.componentProfile || selectedVariant.capHeight} />
                                     <SpecRow label="Trim Finish" value={selectedVariant.trimColor} />
                                     <SpecRow label="Cap Color" value={resolveVariantCapFinish(selectedVariant).swatchName} />
                                     <SpecRow label="Shape" value={selectedVariant.shape} />

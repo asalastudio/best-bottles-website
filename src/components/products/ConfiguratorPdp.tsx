@@ -31,6 +31,7 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import { explodedKitFrame } from "@/lib/products/kit-frame";
 
 import { useGLTF } from "@react-three/drei";
 import FocusedPdpLayout from "./FocusedPdpLayout";
@@ -126,7 +127,7 @@ export default function ConfiguratorPdp({
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, websiteSku,
   quoteHref, checkoutReady = true, qty = 1, onQtyChange, volumePricing, ctaAnchorRef,
-  capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
+  capOptions, capOptionPhotoKeys, capOptionThumbnails, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
@@ -193,6 +194,7 @@ export default function ConfiguratorPdp({
    *  component families are keyed by token ("Pink"), the pills by catalogue
    *  colourway ("Pink with Dots"); see src/lib/products/closure-swatch-keys.ts */
   capOptionPhotoKeys?: Record<string, string[]>;
+  capOptionThumbnails?: Record<string, string>;
   activeCapOption?: string | null;
   onCapOptionChange?: (name: string) => void;
   capSwatchStyle?: (name: string) => React.CSSProperties;
@@ -271,6 +273,7 @@ export default function ConfiguratorPdp({
   const releasedKitAvailable = Boolean(kit?.parts?.length);
   const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts.length);
   const kitParts = kitReady ? shownKit!.parts : null;
+  const explodedFrame = explodedKitFrame(kitParts ?? []);
   const markPlateBroken = (url: string) => {
     console.error("[plates] image failed to load", url);
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
@@ -442,6 +445,8 @@ export default function ConfiguratorPdp({
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
+          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
+               style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
           {kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}
@@ -459,6 +464,7 @@ export default function ConfiguratorPdp({
                             duration-500 ease-[cubic-bezier(.4,0,.2,1)]
                             motion-reduce:transition-none motion-reduce:duration-0" />
           ))}
+          </div>
         </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -576,7 +582,7 @@ export default function ConfiguratorPdp({
           </p>
           <div data-testid="pdp-closure-rail" className="mt-2.5 flex max-w-full items-center gap-3 overflow-x-auto pb-1">
             {capOptions.map((name) => {
-              const photo = resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
+              const photo = capOptionThumbnails?.[name] ?? resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
               return (
                 // A photographed closure is a tall, narrow thing: in a 32 px circle it
                 // read as a stripe (the cap fills a third of its square thumb). So a
@@ -836,7 +842,7 @@ export default function ConfiguratorPdp({
       <div className="mb-2 flex items-center justify-between">
         <span className="text-2xs font-semibold uppercase tracking-label text-slate">Your Configuration</span>
         <span className={`flex items-center gap-1.5 text-spec font-medium ${inStock ? "text-obsidian" : "text-amber-700"}`}>
-          {inStock ? "In stock" : "Confirm availability"}
+          {inStock ? "Available to order" : "Confirm availability"}
           <span className={`inline-block h-[7px] w-[7px] rounded-full ${inStock ? "bg-[#2F7D5B]" : "bg-amber-500"}`} />
         </span>
       </div>

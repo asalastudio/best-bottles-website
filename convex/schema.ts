@@ -123,6 +123,10 @@ export default defineSchema({
             v.null()
         )),
         ballMaterial: v.optional(v.union(v.string(), v.null())),
+        componentProfile: v.optional(v.union(v.string(), v.null())),
+        componentFinish: v.optional(v.union(v.string(), v.null())),
+        componentTexture: v.optional(v.union(v.string(), v.null())),
+        componentColor: v.optional(v.union(v.string(), v.null())),
 
         // ── Physical dimensions ─────────────────────────────────────
         neckThreadSize: v.union(v.string(), v.null()),
