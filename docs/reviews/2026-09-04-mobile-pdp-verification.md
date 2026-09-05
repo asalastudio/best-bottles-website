@@ -117,3 +117,9 @@ The phone review clarified that the bar should appear when the space below the f
 - At 320×568, the corrected trigger is visible with the sentinel at y=496 and the cap row ending at y=495; the bar begins at y=499, so it does not obscure the last component.
 - 40 focused mobile tests pass, including new bottom-edge, resize, invalid geometry, overlay, and safe-area threshold cases. TypeScript, changed-file ESLint, and diff whitespace checks pass.
 - Screenshot: `screenshots/mobile-pdp-sticky-gap-trigger.png`. Physical iOS browser-chrome behavior still requires a phone check. Test cart additions stayed in disposable browser sessions; no checkout or order was submitted.
+
+### Single mobile purchase action and Grace placement
+
+- Remove the inline mobile Add to Cart / Request Quote block. The existing sticky bar is the sole mobile purchase action; Grace follows the quantity controls and any quantity subtotal directly.
+- Rendered checks at 320×568 and 390×664 confirm no inline cart/quote action, Grace below quantity, no page overflow, a visible sticky action when scrolled to the purchase area, quantity updates reflected in the sticky bar, a successful two-unit cart addition, and the sticky Request Quote action at quantity 500.
+- Forty focused mobile tests, TypeScript, changed-file ESLint, and diff checks pass. Screenshot: `screenshots/mobile-pdp-single-purchase-action.png`.

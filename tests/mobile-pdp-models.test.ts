@@ -440,12 +440,12 @@ describe("mobile PDP wiring", () => {
         expect(bar).toContain("STICKY_CTA_ANIMATION_MS");
         expect(bar).toContain("inert={!visible}");
         expect(bar).toContain("h-[68px]");
-        // A full inline purchase action keeps checkout reachable on short pages;
-        // the sticky bar remains the same action after the configurator leaves.
+        // Keep one mobile purchase action, with quantity and Grace in the page.
         const purchase = mobile.slice(mobile.indexOf('data-testid="mobile-pdp-purchase"'), mobile.indexOf("<MobileProductDetails"));
-        expect(purchase).toContain('data-testid="mobile-pdp-inline-add-to-cart"');
-        expect(purchase).toContain("onClick={onAddToCart}");
-        expect(purchase).toContain("addedFlash");
+        expect(purchase).not.toContain('data-testid="mobile-pdp-inline-add-to-cart"');
+        expect(purchase).not.toContain('data-testid="mobile-pdp-inline-request-quote"');
+        expect(purchase).not.toContain("onClick={onAddToCart}");
+        expect(purchase).toContain('data-testid="mobile-pdp-ask-grace"');
         expect(purchase).toContain('aria-label="Quantity"');
     });
 
