@@ -1,0 +1,2082 @@
+[
+  {
+    "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+    "websiteSku": "GBSpry3mlClBlk",
+    "graceSku": "GB-SPR-CLR-3ML-BLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618236708",
+    "url": "/images/catalog/cylinder/cylinder-3.3ml-clear-12mm-finemist.c03c85d47ddb.png",
+    "alt": "3.3 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9181818181818182,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d2c6ba",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d2c6ba"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d2c6ba"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d2c6ba"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d2c6ba"
+        },
+        {
+          "offset": 1,
+          "color": "#d2c6ba"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+    "websiteSku": "GBSpry4mlClBlk",
+    "graceSku": "GB-SPR-CLR-4ML-BLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343618335012",
+    "url": "/images/catalog/cylinder/cylinder-4ml-clear-12mm-finemist.32aeea6047c3.png",
+    "alt": "4 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8984848484848484,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d0c3b8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d0c3b8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d0c3b8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d0c3b8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d0c3b8"
+        },
+        {
+          "offset": 1,
+          "color": "#d0c3b8"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415",
+    "websiteSku": "GBCyl5GlMattSht",
+    "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194667675940",
+    "url": "/images/catalog/cylinder/cylinder-5ml-clear-13-415.14b020395ce8.png",
+    "alt": "5 ml Clear Cylinder Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9121212121212121,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d6c8bb",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6c8bb"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6c8bb"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6c8bb"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6c8bb"
+        },
+        {
+          "offset": 1,
+          "color": "#d6c8bb"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+    "websiteSku": "GBCyl5SpryGlMatt",
+    "graceSku": "GB-CYL-CLR-5ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343620038948",
+    "url": "/images/catalog/cylinder/cylinder-5ml-clear-13-415-finemist.b6c000499605.png",
+    "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9030303030303031,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d9ccbc",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d9ccbc"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d9ccbc"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d9ccbc"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d9ccbc"
+        },
+        {
+          "offset": 1,
+          "color": "#d9ccbc"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+    "websiteSku": "GBCyl5MtlRollGlMatt",
+    "graceSku": "GB-CYL-CLR-5ML-MRL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343648973092",
+    "url": "/images/catalog/cylinder/cylinder-5ml-clear-13-415-rollon.49d2853313f3.png",
+    "alt": "5 ml Clear Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9166666666666666,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d4c6b8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d4c6b8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d4c6b8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d4c6b8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d4c6b8"
+        },
+        {
+          "offset": 1,
+          "color": "#d4c6b8"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+    "websiteSku": "GBCylBlu5SlMattSht",
+    "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194668101924",
+    "url": "/images/catalog/cylinder/cylinder-5ml-cobalt-blue-13-415.3330db4fba2a.png",
+    "alt": "5 ml Cobalt Blue Cylinder Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Cobalt Blue",
+    "framing": {
+      "baselineY": 0.8619119878603946,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#c2b6b6",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#c2b6b6"
+        },
+        {
+          "offset": 0.25,
+          "color": "#c2b6b6"
+        },
+        {
+          "offset": 0.5,
+          "color": "#c2b6b6"
+        },
+        {
+          "offset": 0.75,
+          "color": "#c2b6b6"
+        },
+        {
+          "offset": 1,
+          "color": "#c2b6b6"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+    "websiteSku": "GBCylBlu5SprySlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-SPR-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343670337828",
+    "url": "/images/catalog/cylinder/cylinder-5ml-cobalt-blue-13-415-finemist.0e9ec0ed5cca.png",
+    "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Cobalt Blue",
+    "framing": {
+      "baselineY": 0.8787878787878788,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#c7bab7",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#c7bab7"
+        },
+        {
+          "offset": 0.25,
+          "color": "#c7bab7"
+        },
+        {
+          "offset": 0.5,
+          "color": "#c7bab7"
+        },
+        {
+          "offset": 0.75,
+          "color": "#c7bab7"
+        },
+        {
+          "offset": 1,
+          "color": "#c7bab7"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+    "websiteSku": "GBCylBlu5MtlRollSlMatt",
+    "graceSku": "GB-CYL-BLU-5ML-MRL-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343663063332",
+    "url": "/images/catalog/cylinder/cylinder-5ml-cobalt-blue-13-415-rollon.6c4f836ae70b.png",
+    "alt": "5 ml Cobalt Blue Cylinder Roll-On Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Cobalt Blue",
+    "framing": {
+      "baselineY": 0.9044006069802731,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#bcb3b8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#bcb3b8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#bcb3b8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#bcb3b8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#bcb3b8"
+        },
+        {
+          "offset": 1,
+          "color": "#bcb3b8"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+    "websiteSku": "GBCyl5SpryBlkMatt",
+    "graceSku": "GB-CYL-CLR-5ML-SPR-MBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343619809572",
+    "url": "/images/catalog/cylinder/cylinder-5.5ml-clear-13-415-finemist.d0cd1409aec0.png",
+    "alt": "5.5 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8909090909090909,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#c4b9af",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#c4b9af"
+        },
+        {
+          "offset": 0.25,
+          "color": "#c4b9af"
+        },
+        {
+          "offset": 0.5,
+          "color": "#c4b9af"
+        },
+        {
+          "offset": 0.75,
+          "color": "#c4b9af"
+        },
+        {
+          "offset": 1,
+          "color": "#c4b9af"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+    "websiteSku": "GBCylAmb9SpryGl",
+    "graceSku": "GB-CYL-AMB-9ML-SPR-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343624855844",
+    "url": "/images/catalog/cylinder/cylinder-9ml-amber-17-415-finemist.fa4493426e87.png",
+    "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Amber",
+    "framing": {
+      "baselineY": 0.8801213960546282,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#cfbdac",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#cfbdac"
+        },
+        {
+          "offset": 0.25,
+          "color": "#cfbdac"
+        },
+        {
+          "offset": 0.5,
+          "color": "#cfbdac"
+        },
+        {
+          "offset": 0.75,
+          "color": "#cfbdac"
+        },
+        {
+          "offset": 1,
+          "color": "#cfbdac"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+    "websiteSku": "LBCylAmb9LtnGl",
+    "graceSku": "LB-CYL-AMB-9ML-LPM-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343670042916",
+    "url": "/images/catalog/cylinder/cylinder-9ml-amber-17-415-lotionpump.f0d40bfcda41.png",
+    "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Amber",
+    "framing": {
+      "baselineY": 0.8757575757575757,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d2c4b6",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d2c4b6"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d2c4b6"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d2c4b6"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d2c4b6"
+        },
+        {
+          "offset": 1,
+          "color": "#d2c4b6"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+    "websiteSku": "GBCylAmb9MtlRollMattGl",
+    "graceSku": "GB-CYL-AMB-9ML-MRL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343676858660",
+    "url": "/images/catalog/cylinder/cylinder-9ml-amber-17-415-rollon.80ff5eda082c.png",
+    "alt": "9 ml Amber Cylinder Roll-On Bottle",
+    "width": 1195,
+    "height": 1316,
+    "bottleColor": "Amber",
+    "framing": {
+      "baselineY": 0.8895612708018155,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#ccbaa8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#ccbaa8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#ccbaa8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#ccbaa8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#ccbaa8"
+        },
+        {
+          "offset": 1,
+          "color": "#ccbaa8"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415",
+    "websiteSku": "GBTallCyl9GlMattSht",
+    "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194668757284",
+    "url": "/images/catalog/cylinder/cylinder-9ml-clear-13-415.36914017b964.png",
+    "alt": "9 ml Clear Cylinder Bottle with Cap",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9227272727272727,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8cbbf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 1,
+          "color": "#d8cbbf"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+    "websiteSku": "GBTallCyl9SpryGlMatt",
+    "graceSku": "GB-CYL-CLR-9ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343626887460",
+    "url": "/images/catalog/cylinder/cylinder-9ml-clear-13-415-finemist.6afaf04d6a44.png",
+    "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9090909090909091,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d7c9b9",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d7c9b9"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d7c9b9"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d7c9b9"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d7c9b9"
+        },
+        {
+          "offset": 1,
+          "color": "#d7c9b9"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+    "websiteSku": "GBTallCyl9MtlRollGlMatt",
+    "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343682429220",
+    "url": "/images/catalog/cylinder/cylinder-9ml-clear-13-415-rollon.b953e99432fc.png",
+    "alt": "9 ml Clear Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9136363636363637,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8ccc0",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 1,
+          "color": "#d8ccc0"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+    "websiteSku": "GBCyl9SpryGl",
+    "graceSku": "GB-CYL-CLR-9ML-T-22",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343623217444",
+    "url": "/images/catalog/cylinder/cylinder-9ml-clear-17-415-finemist.d181626d720a.png",
+    "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9044006069802731,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8cbbf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 1,
+          "color": "#d8cbbf"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+    "websiteSku": "LBCyl9LtnGl",
+    "graceSku": "LB-CYL-CLR-9ML-T-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343671681316",
+    "url": "/images/catalog/cylinder/cylinder-9ml-clear-17-415-lotionpump.26169809c8d6.png",
+    "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9030303030303031,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d1c5b8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d1c5b8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d1c5b8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d1c5b8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d1c5b8"
+        },
+        {
+          "offset": 1,
+          "color": "#d1c5b8"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+    "websiteSku": "GBCyl9MtlRollMattGl",
+    "graceSku": "GB-CYL-CLR-9ML-T-04",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343680364836",
+    "url": "/images/catalog/cylinder/cylinder-9ml-clear-17-415-rollon.31c59d7a3877.png",
+    "alt": "9 ml Clear Cylinder Roll-On Bottle",
+    "width": 1199,
+    "height": 1312,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.923896499238965,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#dacfc4",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#dacfc4"
+        },
+        {
+          "offset": 0.25,
+          "color": "#dacfc4"
+        },
+        {
+          "offset": 0.5,
+          "color": "#dacfc4"
+        },
+        {
+          "offset": 0.75,
+          "color": "#dacfc4"
+        },
+        {
+          "offset": 1,
+          "color": "#dacfc4"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "websiteSku": "GBCylBlu9SpryMattSl",
+    "graceSku": "GB-CYL-BLU-9ML-SPR-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343625412900",
+    "url": "/images/catalog/cylinder/cylinder-9ml-cobalt-blue-17-415-finemist.3c97482b8b95.png",
+    "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+    "width": 1195,
+    "height": 1316,
+    "bottleColor": "Cobalt Blue",
+    "framing": {
+      "baselineY": 0.8850226928895613,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#c8bbb9",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#c8bbb9"
+        },
+        {
+          "offset": 0.25,
+          "color": "#c8bbb9"
+        },
+        {
+          "offset": 0.5,
+          "color": "#c8bbb9"
+        },
+        {
+          "offset": 0.75,
+          "color": "#c8bbb9"
+        },
+        {
+          "offset": 1,
+          "color": "#c8bbb9"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+    "websiteSku": "LBCylBlu9LtnMattSl",
+    "graceSku": "LB-CYL-BLU-9ML-LPM-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343671943460",
+    "url": "/images/catalog/cylinder/cylinder-9ml-cobalt-blue-17-415-lotionpump.13d2b0d47fc3.png",
+    "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Cobalt Blue",
+    "framing": {
+      "baselineY": 0.8863636363636364,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#c8bdb9",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#c8bdb9"
+        },
+        {
+          "offset": 0.25,
+          "color": "#c8bdb9"
+        },
+        {
+          "offset": 0.5,
+          "color": "#c8bdb9"
+        },
+        {
+          "offset": 0.75,
+          "color": "#c8bdb9"
+        },
+        {
+          "offset": 1,
+          "color": "#c8bdb9"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "websiteSku": "GBCylBlu9MtlRollMattSl",
+    "graceSku": "GB-CYL-BLU-9ML-MRL-MSLV",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343678103844",
+    "url": "/images/catalog/cylinder/cylinder-9ml-cobalt-blue-17-415-rollon.9f43a07856ff.png",
+    "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Cobalt Blue",
+    "framing": {
+      "baselineY": 0.9,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#c1b7b9",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#c1b7b9"
+        },
+        {
+          "offset": 0.25,
+          "color": "#c1b7b9"
+        },
+        {
+          "offset": 0.5,
+          "color": "#c1b7b9"
+        },
+        {
+          "offset": 0.75,
+          "color": "#c1b7b9"
+        },
+        {
+          "offset": 1,
+          "color": "#c1b7b9"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415",
+    "websiteSku": "GBTallCylFrst9GlMattSht",
+    "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194669740324",
+    "url": "/images/catalog/cylinder/cylinder-9ml-frosted-13-415.a195f8542b5f.png",
+    "alt": "9 ml Frosted Cylinder Bottle with Cap",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Frosted",
+    "framing": {
+      "baselineY": 0.9287878787878788,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d7c9bb",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d7c9bb"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d7c9bb"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d7c9bb"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d7c9bb"
+        },
+        {
+          "offset": 1,
+          "color": "#d7c9bb"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+    "websiteSku": "GBTallCylFrst9SpryGlMatt",
+    "graceSku": "GB-CYL-FRS-9ML-05",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343627149604",
+    "url": "/images/catalog/cylinder/cylinder-9ml-frosted-13-415-finemist.7bcd5aa3ac4c.png",
+    "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Frosted",
+    "framing": {
+      "baselineY": 0.8909090909090909,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d9caba",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d9caba"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d9caba"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d9caba"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d9caba"
+        },
+        {
+          "offset": 1,
+          "color": "#d9caba"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+    "websiteSku": "GBTallCylFrst9MtlRollGlMatt",
+    "graceSku": "GB-CYL-FRS-9ML-T-05",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343683379492",
+    "url": "/images/catalog/cylinder/cylinder-9ml-frosted-13-415-rollon.830a23334f1b.png",
+    "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Frosted",
+    "framing": {
+      "baselineY": 0.9015151515151515,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8cbbf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8cbbf"
+        },
+        {
+          "offset": 1,
+          "color": "#d8cbbf"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+    "websiteSku": "GBCylFrst9SpryGl",
+    "graceSku": "GB-CYL-FRS-9ML-SPR-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343626166564",
+    "url": "/images/catalog/cylinder/cylinder-9ml-frosted-17-415-finemist.74e8d58a484c.png",
+    "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Frosted",
+    "framing": {
+      "baselineY": 0.8863636363636364,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d6c9bc",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 1,
+          "color": "#d6c9bc"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+    "websiteSku": "LBCylFrst9LtnGl",
+    "graceSku": "LB-CYL-FRS-9ML-LPM-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343672172836",
+    "url": "/images/catalog/cylinder/cylinder-9ml-frosted-17-415-lotionpump.fb1866db7e07.png",
+    "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Frosted",
+    "framing": {
+      "baselineY": 0.8878787878787879,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d9cdc1",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d9cdc1"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d9cdc1"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d9cdc1"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d9cdc1"
+        },
+        {
+          "offset": 1,
+          "color": "#d9cdc1"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+    "websiteSku": "GBCylFrst9MtlRollMattGl",
+    "graceSku": "GB-CYL-FRS-9ML-MRL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343679250724",
+    "url": "/images/catalog/cylinder/cylinder-9ml-frosted-17-415-rollon.a69762f5ed48.png",
+    "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Frosted",
+    "framing": {
+      "baselineY": 0.8666666666666667,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d6cbc0",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6cbc0"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6cbc0"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6cbc0"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6cbc0"
+        },
+        {
+          "offset": 1,
+          "color": "#d6cbc0"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+    "websiteSku": "GBCylSwrl9SpryGl",
+    "graceSku": "GB-CYL-CLR-9ML-SPR-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343690096932",
+    "url": "/images/catalog/cylinder/cylinder-9ml-swirl-17-415-finemist.fac4e490e7b3.png",
+    "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Swirl",
+    "framing": {
+      "baselineY": 0.8924242424242425,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d2c5b8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d2c5b8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d2c5b8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d2c5b8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d2c5b8"
+        },
+        {
+          "offset": 1,
+          "color": "#d2c5b8"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+    "websiteSku": "LBCylSwrl9LtnGl",
+    "graceSku": "LB-CYL-CLR-9ML-LPM-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343674401060",
+    "url": "/images/catalog/cylinder/cylinder-9ml-swirl-17-415-lotionpump.38dc315028b9.png",
+    "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Swirl",
+    "framing": {
+      "baselineY": 0.9074355083459787,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d6c9be",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6c9be"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6c9be"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6c9be"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6c9be"
+        },
+        {
+          "offset": 1,
+          "color": "#d6c9be"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+    "websiteSku": "GBCylSwrl9MtlRollMattGl",
+    "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-01",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343681347876",
+    "url": "/images/catalog/cylinder/cylinder-9ml-swirl-17-415-rollon.79528afa775e.png",
+    "alt": "9 ml Swirl Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Swirl",
+    "framing": {
+      "baselineY": 0.9,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d5c8ba",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d5c8ba"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d5c8ba"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d5c8ba"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d5c8ba"
+        },
+        {
+          "offset": 1,
+          "color": "#d5c8ba"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-antique",
+    "websiteSku": "GBcyl25AnSpIvyGl",
+    "graceSku": "GBcyl25AnSpIvyGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204037587236",
+    "url": "/images/catalog/cylinder/cylinder-25ml-clear-18-415-antique.45fde489ba25.png",
+    "alt": "25 mL Clear Cylinder Vintage Bulb Sprayer Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9028831562974203,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#ddd0c2",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#ddd0c2"
+        },
+        {
+          "offset": 0.25,
+          "color": "#ddd0c2"
+        },
+        {
+          "offset": 0.5,
+          "color": "#ddd0c2"
+        },
+        {
+          "offset": 0.75,
+          "color": "#ddd0c2"
+        },
+        {
+          "offset": 1,
+          "color": "#ddd0c2"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
+    "websiteSku": "GBcyl25AnSpTslIvyGl",
+    "graceSku": "GBcyl25AnSpTslIvyGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204038013220",
+    "url": "/images/catalog/cylinder/cylinder-25ml-clear-18-415-antiquetassel.cb16949c78a3.png",
+    "alt": "25 mL Clear Cylinder Vintage Bulb Sprayer with Tassel Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8348484848484848,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d1c3b3",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d1c3b3"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d1c3b3"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d1c3b3"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d1c3b3"
+        },
+        {
+          "offset": 1,
+          "color": "#d1c3b3"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-dropper",
+    "websiteSku": "GBCyl25DrpGl",
+    "graceSku": "GBCyl25DrpGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204038144292",
+    "url": "/images/catalog/cylinder/cylinder-25ml-clear-18-415-dropper.ba88e4b0822f.png",
+    "alt": "25 mL Clear Cylinder Dropper Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8939393939393939,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d7cbbf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d7cbbf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d7cbbf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d7cbbf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d7cbbf"
+        },
+        {
+          "offset": 1,
+          "color": "#d7cbbf"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-finemist",
+    "websiteSku": "GBcyl25SpryMtGl",
+    "graceSku": "GBcyl25SpryMtGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204039946532",
+    "url": "/images/catalog/cylinder/cylinder-25ml-clear-18-415-finemist.3674b765c042.png",
+    "alt": "25 ml Clear Cylinder Fine Mist Spray Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8968133535660091,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8ccbf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8ccbf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8ccbf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8ccbf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8ccbf"
+        },
+        {
+          "offset": 1,
+          "color": "#d8ccbf"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+    "websiteSku": "LBCyl25LtnMtGl",
+    "graceSku": "LB-CYL-CLR-25ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343674532132",
+    "url": "/images/catalog/cylinder/cylinder-25ml-clear-18-415-lotionpump.f22e74dd7929.png",
+    "alt": "25 ml Clear Cylinder Lotion Pump Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9104704097116844,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#dacbbb",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#dacbbb"
+        },
+        {
+          "offset": 0.25,
+          "color": "#dacbbb"
+        },
+        {
+          "offset": 0.5,
+          "color": "#dacbbb"
+        },
+        {
+          "offset": 0.75,
+          "color": "#dacbbb"
+        },
+        {
+          "offset": 1,
+          "color": "#dacbbb"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-25ml-clear-18-415-reducer",
+    "websiteSku": "GBCyl25RdcrShnGl",
+    "graceSku": "GBCyl25RdcrShnGl",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56204038897956",
+    "url": "/images/catalog/cylinder/cylinder-25ml-clear-18-415-reducer.6927e80464c1.png",
+    "alt": "25 mL Clear Cylinder Reducer Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9408194233687405,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d5c7ba",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d5c7ba"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d5c7ba"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d5c7ba"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d5c7ba"
+        },
+        {
+          "offset": 1,
+          "color": "#d5c7ba"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-28ml-clear-16mm-rollon",
+    "websiteSku": "GBMtlRoll28Blk",
+    "graceSku": "GB-CYL-CLR-28ML-MRL-01",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343614501156",
+    "url": "/images/catalog/cylinder/cylinder-28ml-clear-16mm-rollon.e4fa015aa781.png",
+    "alt": "28 ml Clear Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9303030303030303,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d3c8bf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d3c8bf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d3c8bf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d3c8bf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d3c8bf"
+        },
+        {
+          "offset": 1,
+          "color": "#d3c8bf"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-30ml-clear-18-415",
+    "websiteSku": "GBSpry1ozGl",
+    "graceSku": "GB-SPR-CLR-30ML-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343638454564",
+    "url": "/images/catalog/cylinder/cylinder-30ml-clear-18-415.98a4dcb1079e.png",
+    "alt": "30 ml Clear Cylinder Bottle with Cap",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8666666666666667,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d6cabe",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6cabe"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6cabe"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6cabe"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6cabe"
+        },
+        {
+          "offset": 1,
+          "color": "#d6cabe"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-50ml-clear-16mm-rollon",
+    "websiteSku": "GBCyl50MtlRollBlk",
+    "graceSku": "GB-CYL-BLK-50ML-MRL-BLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343621382436",
+    "url": "/images/catalog/cylinder/cylinder-50ml-clear-16mm-rollon.f07335bcc287.png",
+    "alt": "50 ml Clear Cylinder Roll-On Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8893939393939394,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#cbc0b5",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#cbc0b5"
+        },
+        {
+          "offset": 0.25,
+          "color": "#cbc0b5"
+        },
+        {
+          "offset": 0.5,
+          "color": "#cbc0b5"
+        },
+        {
+          "offset": 0.75,
+          "color": "#cbc0b5"
+        },
+        {
+          "offset": 1,
+          "color": "#cbc0b5"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-50ml-clear-18-415-antiquespray",
+    "websiteSku": "GBCyl50AnSpIvyGl",
+    "graceSku": "GB-CYL-CLR-50ML-ASP-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343669027108",
+    "url": "/images/catalog/cylinder/cylinder-50ml-clear-18-415-antiquespray.1d5bf0e50c8b.png",
+    "alt": "50 ml Clear Cylinder Vintage Bulb Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d4c6b9",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d4c6b9"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d4c6b9"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d4c6b9"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d4c6b9"
+        },
+        {
+          "offset": 1,
+          "color": "#d4c6b9"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBCyl50AnSpTslIvyGl",
+    "graceSku": "GB-CYL-CLR-50ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343669518628",
+    "url": "/images/catalog/cylinder/cylinder-50ml-clear-18-415-antiquespray-tassel.391136f74987.png",
+    "alt": "50 ml Clear Cylinder Vintage Bulb Spray Bottle with Tassel",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8757575757575757,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8c7b0",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8c7b0"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8c7b0"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8c7b0"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8c7b0"
+        },
+        {
+          "offset": 1,
+          "color": "#d8c7b0"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
+    "websiteSku": "LBCyl50LtnMtGl",
+    "graceSku": "LB-CYL-CLR-50ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343690522916",
+    "url": "/images/catalog/cylinder/cylinder-50ml-clear-18-415-lotionpump.de5c5c519607.png",
+    "alt": "50 ml Clear Cylinder Lotion Pump Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8833333333333333,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d5c5b6",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d5c5b6"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d5c5b6"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d5c5b6"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d5c5b6"
+        },
+        {
+          "offset": 1,
+          "color": "#d5c5b6"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
+    "websiteSku": "GBCyl50SpryMtGl",
+    "graceSku": "GB-CYL-CLR-50ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343633801508",
+    "url": "/images/catalog/cylinder/cylinder-50ml-clear-18-415-perfumespray.5b0432b85800.png",
+    "alt": "50 ml Clear Cylinder Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8863636363636364,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d6c9bc",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6c9bc"
+        },
+        {
+          "offset": 1,
+          "color": "#d6c9bc"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-50ml-clear-18-415-reducer",
+    "websiteSku": "GBCyl50RdcrShnGl",
+    "graceSku": "GB-CYL-CLR-50ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343659032868",
+    "url": "/images/catalog/cylinder/cylinder-50ml-clear-18-415-reducer.a47f8a336293.png",
+    "alt": "50 ml Clear Cylinder Reducer Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9030303030303031,
+      "anchorTopY": null,
+      "targetHeight": null,
+      "background": "#d8cabe",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8cabe"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8cabe"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8cabe"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8cabe"
+        },
+        {
+          "offset": 1,
+          "color": "#d8cabe"
+        }
+      ],
+      "basis": "baseline-only"
+    }
+  },
+  {
+    "groupSlug": "cylinder-100ml-clear-18-415-antiquespray",
+    "websiteSku": "GBCyl100AnSpIvyGl",
+    "graceSku": "GB-CYL-CLR-100ML-ASP-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343677645092",
+    "url": "/images/catalog/cylinder/cylinder-100ml-clear-18-415-antiquespray.d794a4303ae1.png",
+    "alt": "100 ml Clear Cylinder Vintage Bulb Spray Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9318181818181818,
+      "anchorTopY": 0.288,
+      "targetHeight": 0.58,
+      "background": "#d8ccc0",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8ccc0"
+        },
+        {
+          "offset": 1,
+          "color": "#d8ccc0"
+        }
+      ],
+      "basis": "glass-body"
+    }
+  },
+  {
+    "groupSlug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBCyl100AnSpTslIvyGl",
+    "graceSku": "GB-CYL-CLR-100ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343677841700",
+    "url": "/images/catalog/cylinder/cylinder-100ml-clear-18-415-antiquespray-tassel.74546d59bcc3.png",
+    "alt": "100 ml Clear Cylinder Vintage Bulb Spray Bottle with Tassel",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9257575757575758,
+      "anchorTopY": 0.25,
+      "targetHeight": 0.58,
+      "background": "#d8c8b8",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d8c8b8"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d8c8b8"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d8c8b8"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d8c8b8"
+        },
+        {
+          "offset": 1,
+          "color": "#d8c8b8"
+        }
+      ],
+      "basis": "glass-body"
+    }
+  },
+  {
+    "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+    "websiteSku": "LBCyl100LtnMtGl",
+    "graceSku": "LB-CYL-CLR-100ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343610339620",
+    "url": "/images/catalog/cylinder/cylinder-100ml-clear-18-415-lotionpump.8aa9f8ea153a.png",
+    "alt": "100 ml Clear Cylinder Lotion Pump Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8984848484848484,
+      "anchorTopY": 0.282,
+      "targetHeight": 0.58,
+      "background": "#d5c6b6",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d5c6b6"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d5c6b6"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d5c6b6"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d5c6b6"
+        },
+        {
+          "offset": 1,
+          "color": "#d5c6b6"
+        }
+      ],
+      "basis": "glass-body"
+    }
+  },
+  {
+    "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+    "websiteSku": "GBCyl100SpryMtGl",
+    "graceSku": "GB-CYL-CLR-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343648743716",
+    "url": "/images/catalog/cylinder/cylinder-100ml-clear-18-415-perfumespray.db0e6c390fc3.png",
+    "alt": "100 ml Clear Cylinder Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.8998482549317147,
+      "anchorTopY": 0.25,
+      "targetHeight": 0.58,
+      "background": "#d7c7b7",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d7c7b7"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d7c7b7"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d7c7b7"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d7c7b7"
+        },
+        {
+          "offset": 1,
+          "color": "#d7c7b7"
+        }
+      ],
+      "basis": "glass-body"
+    }
+  },
+  {
+    "groupSlug": "cylinder-100ml-clear-18-415-reducer",
+    "websiteSku": "GBCyl100RdcrShnGl",
+    "graceSku": "GB-CYL-CLR-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343623348516",
+    "url": "/images/catalog/cylinder/cylinder-100ml-clear-18-415-reducer.3d422c4aec3c.png",
+    "alt": "100 ml Clear Cylinder Reducer Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9318181818181818,
+      "anchorTopY": 0.212,
+      "targetHeight": 0.58,
+      "background": "#d7c8ba",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d7c8ba"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d7c8ba"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d7c8ba"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d7c8ba"
+        },
+        {
+          "offset": 1,
+          "color": "#d7c8ba"
+        }
+      ],
+      "basis": "glass-body"
+    }
+  },
+  {
+    "groupSlug": "cylinder-118ml-clear",
+    "websiteSku": "PbClear4ozFlpWh",
+    "graceSku": "PB-CYL-CLR-118ML-WFLP",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699796260",
+    "url": "/images/catalog/cylinder/cylinder-118ml-clear.966ca39cfe23.png",
+    "alt": "114 mL Clear Plastic Cylinder Flip-Top Bottle",
+    "width": 1197,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.9044006069802731,
+      "anchorTopY": 0.18816388467374812,
+      "targetHeight": 0.511340206185567,
+      "background": "#d9cabf",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d9cabf"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d9cabf"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d9cabf"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d9cabf"
+        },
+        {
+          "offset": 1,
+          "color": "#d9cabf"
+        }
+      ],
+      "basis": "assembled-height"
+    }
+  },
+  {
+    "groupSlug": "cylinder-227ml-clear",
+    "websiteSku": "PbClear8ozFlpWh",
+    "graceSku": "PB-CYL-227ML-WFLP",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699763492",
+    "url": "/images/catalog/cylinder/cylinder-227ml-clear.19ca54d4bcb0.png",
+    "alt": "227 mL Clear Plastic Cylinder Flip-Top Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Clear",
+    "framing": {
+      "baselineY": 0.896969696969697,
+      "anchorTopY": 0.12878787878787878,
+      "targetHeight": 0.6556701030927835,
+      "background": "#d6c9bb",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#d6c9bb"
+        },
+        {
+          "offset": 0.25,
+          "color": "#d6c9bb"
+        },
+        {
+          "offset": 0.5,
+          "color": "#d6c9bb"
+        },
+        {
+          "offset": 0.75,
+          "color": "#d6c9bb"
+        },
+        {
+          "offset": 1,
+          "color": "#d6c9bb"
+        }
+      ],
+      "basis": "assembled-height"
+    }
+  },
+  {
+    "groupSlug": "cylinder-454ml-clear",
+    "websiteSku": "PbNat16ozFlpWh",
+    "graceSku": "PB-CYL-454ML-WFLP",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343700058404",
+    "url": "/images/catalog/cylinder/cylinder-454ml-clear.bfb64b667fb4.png",
+    "alt": "454 mL Natural Plastic Cylinder Flip-Top Bottle",
+    "width": 1196,
+    "height": 1315,
+    "bottleColor": "Natural",
+    "framing": {
+      "baselineY": 0.9151515151515152,
+      "anchorTopY": 0.15,
+      "targetHeight": 0.8,
+      "background": "#dacec1",
+      "backgroundStops": [
+        {
+          "offset": 0,
+          "color": "#dacec1"
+        },
+        {
+          "offset": 0.25,
+          "color": "#dacec1"
+        },
+        {
+          "offset": 0.5,
+          "color": "#dacec1"
+        },
+        {
+          "offset": 0.75,
+          "color": "#dacec1"
+        },
+        {
+          "offset": 1,
+          "color": "#dacec1"
+        }
+      ],
+      "basis": "assembled-height"
+    }
+  }
+]

@@ -4,6 +4,7 @@ import { isCheckoutReady } from "@/lib/checkout";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getProductCardVariantPreviews } from "@/lib/products/product-card-variant-previews";
 import type { BrowseContext } from "@/lib/products/focused-shopping";
+import { getCylinderCatalogHero, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
 
 type GuidedFinderAvailability = "in-stock" | "confirm-availability";
 
@@ -12,6 +13,7 @@ export type GuidedFinderProduct = {
     groupId: string;
     displayName: string;
     imageUrl: string | null;
+    catalogHero?: CylinderCatalogHero | null;
     family: string;
     capacity: string | null;
     color: string | null;
@@ -108,7 +110,9 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
     const grouped = new Map<string, GuidedFinderProduct[]>();
 
     for (const group of result.items) {
-        const variant = rowsByGroupId.get(group._id)?.variants[0] ?? null;
+        const variants = rowsByGroupId.get(group._id)?.variants ?? [];
+        const catalogHero = getCylinderCatalogHero(group.slug, variants);
+        const variant = variants.find((candidate) => candidate.websiteSku === catalogHero?.websiteSku) ?? variants[0] ?? null;
         const displayName = getCustomerFacingProductName({ group, variant, fallbackName: group.displayName }).displayName;
         const family = group.family ?? group.category;
         const product: GuidedFinderProduct = {
@@ -116,9 +120,10 @@ export function buildGuidedFinderFamilies(result: CatalogSearchResultShape): Gui
             groupId: group._id,
             displayName,
             imageUrl: imageFor(group, variant, displayName),
+            catalogHero,
             family,
             capacity: capacityLabel(group.capacityMl, group.capacity),
-            color: variant?.color ?? group.color,
+            color: catalogHero?.bottleColor ?? variant?.color ?? group.color,
             application: applicationLabel(variant?.applicator, group.applicatorTypes),
             rollerMaterial: rollerMaterial(variant?.applicator, group.applicatorTypes),
             neckFinish: group.neckThreadSize,

@@ -15,6 +15,7 @@ import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
+import { getCylinderCatalogHero, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -277,6 +278,7 @@ function ProductGroupCard({
     thumbnailUrl,
     primaryGraceSku,
     primaryWebsiteSku,
+    catalogHero,
 }: {
     group: CatalogGroup;
     index: number;
@@ -286,9 +288,10 @@ function ProductGroupCard({
     thumbnailUrl?: string | null;
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
+    catalogHero?: CylinderCatalogHero | null;
 }) {
     const href = productGroupHref(group, applicatorParam);
-    const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const customerDisplayName = catalogHero?.alt ?? displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         usableProductImageUrl(group.heroImageUrl) ??
         thumbnailUrl ??
@@ -296,7 +299,7 @@ function ProductGroupCard({
         null;
     const cardSpecs = [
         { label: "Size", value: formatCatalogSpec(group.capacity) },
-        { label: "Color", value: formatCatalogSpec(group.color) },
+        { label: "Color", value: formatCatalogSpec(catalogHero?.bottleColor ?? group.color) },
         { label: "Neck", value: formatCatalogSpec(group.neckThreadSize) },
         { label: "Fitment", value: formatApplicatorLabels(group.applicatorTypes) },
     ];
@@ -315,6 +318,7 @@ function ProductGroupCard({
                     url: defaultImageUrl,
                     alt: customerDisplayName,
                 }}
+                catalogHero={catalogHero}
                 placeholderLabel={group.family ? `${group.family}\nShopify media needed` : "Shopify media needed"}
                 variantPreviews={variantPreviews}
                 productHref={href}
@@ -1536,6 +1540,13 @@ export default function CatalogClient({
     const visibleProducts = filtered;
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
+    const catalogHeroMap = useMemo(() => {
+        const rowsByGroupId = new Map(variantPreviewRows.map((row) => [row.groupId, row.variants]));
+        return new Map(visibleProducts.map((group) => [
+            group._id,
+            getCylinderCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? []),
+        ]));
+    }, [variantPreviewRows, visibleProducts]);
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
         const groupIds = new Set<string>();
@@ -2282,6 +2293,7 @@ export default function CatalogClient({
                                             index={pIndex}
                                             applicatorParam={visualApplicatorParam}
                                             variantPreviews={variantPreviewMap.get(group._id)}
+                                            catalogHero={catalogHeroMap.get(group._id)}
                                             displayName={customerNameMap.get(group._id)}
                                             thumbnailUrl={catalogThumbnailMap.get(group._id)}
                                             primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}
