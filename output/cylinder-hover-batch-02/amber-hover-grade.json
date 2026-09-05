@@ -1,0 +1,15 @@
+{
+  "sku": "GBCylAmb9MtlRollMattGl",
+  "state": "on",
+  "method": "Global amber hue-range brightness reduction, maximum 13 percent; no resampling or spatial masking",
+  "original": "output/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-on-before-amber-grade.png",
+  "output": "public/preview/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-on.png",
+  "dimensions": [
+    2080,
+    2288
+  ],
+  "sha256": "97d17db3fcbfd00525ef1b4b1133066c3d6dd1733ef86f8ce060bdf45b7bdc97",
+  "meanBodyLuminanceBefore": 163.50474603174604,
+  "meanBodyLuminanceAfter": 143.42559365079364,
+  "backgroundPatchUnchanged": true
+}

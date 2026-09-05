@@ -1,0 +1,268 @@
+{
+  "status": "user-approved-local-review-locked",
+  "batch": 2,
+  "date": "2026-09-05",
+  "approvedPreviousCommit": "2c7a853d",
+  "canvas": [
+    2080,
+    2288
+  ],
+  "baseline": 2082,
+  "center": 1040,
+  "background": "#F5F3EF",
+  "reviewUrl": "http://localhost:3000/preview/cylinder-hover-batch-02/index.html",
+  "maxDetectedBaselineErrorPx": 2,
+  "maxMeanBackgroundChannelError": 0.4557571428571521,
+  "checks": {
+    "checks": [
+      "images and no overflow at 390px",
+      "images and no overflow at 768px",
+      "images and no overflow at 1440px",
+      "reduced motion",
+      "all ten hover failures preserve default images"
+    ],
+    "files": 20,
+    "backgroundMeanToleranceRGB": 1
+  },
+  "products": [
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "group": "cylinder-9ml-amber-17-415-lotionpump",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "group": "cylinder-9ml-amber-17-415-rollon",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "group": "cylinder-9ml-clear-13-415",
+      "legacyUrl": "https://www.bestbottles.com/all-bottles/option_details.php?items_count=8&OPTinv_id=4067",
+      "measurements": {
+        "heightWithoutCap": "106 \u00b12 mm",
+        "diameter": "18 \u00b10.5 mm"
+      },
+      "evidenceNote": "Short-cap option page omits dimensions; matching tall bottle and Convex used."
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "group": "cylinder-9ml-clear-13-415-finemist",
+      "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-matte-gold-spray",
+      "measurements": {
+        "heightWithoutCap": "106 \u00b12 mm",
+        "diameter": "18 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "group": "cylinder-9ml-clear-17-415-finemist",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-sprayer-gold-trim-and-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "group": "cylinder-9ml-clear-17-415-lotionpump",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-sprayer-matte-silver-trim-and-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-lotion-pump-matte-silver-trim-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-metal-roller-ball-matte-silver-cap",
+      "measurements": {
+        "heightWithoutCap": "70 \u00b11 mm",
+        "diameter": "20 \u00b10.5 mm"
+      },
+      "evidenceNote": "Exact legacy page and Convex measurements agree."
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "group": "cylinder-9ml-frosted-13-415",
+      "legacyUrl": "https://www.bestbottles.com/all-bottles/option_details.php?items_count=9&OPTinv_id=4073",
+      "measurements": {
+        "heightWithoutCap": "106 \u00b12 mm",
+        "diameter": "18 \u00b10.5 mm"
+      },
+      "evidenceNote": "Short-cap option page omits dimensions; matching tall bottle and Convex used."
+    }
+  ],
+  "files": [
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/LBCylAmb9LtnGl-off.png",
+      "sha256": "f6e597501a06d530249ca6124d8c91ebce7007ca33b8932dcde3eccd21fdf4cb"
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/LBCylAmb9LtnGl-on.png",
+      "sha256": "c3cb916bcdcaaa90a7ed67b5dad9cf07f838ba424dd95fe5fde9b2a09a0024f6"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-off.png",
+      "sha256": "f1fdb80105caccb4c24646780d26dddc7bb98133b717fffa2cc0e14cb5c8cc3b"
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-on.png",
+      "sha256": "97d17db3fcbfd00525ef1b4b1133066c3d6dd1733ef86f8ce060bdf45b7bdc97"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBTallCyl9GlMattSht-off.png",
+      "sha256": "7d106d618c9b406e486cf8fdf89de571832e4bc3d83d29b9a2b16067ad7578ee"
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBTallCyl9GlMattSht-on.png",
+      "sha256": "f1d23acf9915e5d4ec49d0ba622e022f80b5387e3bd7379b9f67e134bcd86280"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBTallCyl9SpryGlMatt-off.png",
+      "sha256": "cca55ddc22b23982d8b3e08cb1f0fd864fc064660feea988c5539fd0c920f71d"
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBTallCyl9SpryGlMatt-on.png",
+      "sha256": "306aede5c0200aabd24d90afe3feca586069dfb7ee8135af85c5e56f498cd9bb"
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBCyl9SpryGl-off.png",
+      "sha256": "79c36d1e796175ffe4239b34eaa9f1d818156bd602443b5d48aa0f161d736539"
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBCyl9SpryGl-on.png",
+      "sha256": "196d74f5ec99e6f65ae14462068f77964a57863e17db2f92b817a387f72e062c"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/LBCyl9LtnGl-off.png",
+      "sha256": "c4d6ad268b9744f3af68a1484e3d66e2e0e65d85912b74b733218c260508b9d5"
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/LBCyl9LtnGl-on.png",
+      "sha256": "8717dca798a8156e82b8809846e6c04af832ad68594872defe73b20cbe0c008b"
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBCylBlu9SpryMattSl-off.png",
+      "sha256": "8f849acd438ae6d53b3325159c8cbfe554a14cc3f92626a08678ff3792bb8583"
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBCylBlu9SpryMattSl-on.png",
+      "sha256": "d2562870f5fd5885e988528d7ba2eb9d621efc19baba8a94c07ad2e5aa36108d"
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/LBCylBlu9LtnMattSl-off.png",
+      "sha256": "73b6ab059f417c6c4dbbe19ac73cd9aa6c26797646e77b43f49dd11e074c30fb"
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/LBCylBlu9LtnMattSl-on.png",
+      "sha256": "19bd13c1ab05cc81eea0e1a2c68d9c9a1a63f17e42526b8d6a8644337302ad4f"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBCylBlu9MtlRollMattSl-off.png",
+      "sha256": "c93dd4ff4405b3a39df622862d692d565293fb07e6c5cf12ef5bbe3e7ad1234a"
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBCylBlu9MtlRollMattSl-on.png",
+      "sha256": "dccde2f2fa214fa94e8228c0133b2fefee99ba4814fcae0e03a2f1229c8228b5"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "state": "off",
+      "path": "public/preview/cylinder-hover-batch-02/GBTallCylFrst9GlMattSht-off.png",
+      "sha256": "590520cea658efe82fd19c0a446c822621057c16b595572e95e57e6768ca0e78"
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "state": "on",
+      "path": "public/preview/cylinder-hover-batch-02/GBTallCylFrst9GlMattSht-on.png",
+      "sha256": "4e0857c97b5532d5658ef3970d8f6cc428d0a49c1d365578b82d10176a98c9a8"
+    }
+  ],
+  "amberHoverRevision": {
+    "sku": "GBCylAmb9MtlRollMattGl",
+    "state": "on",
+    "method": "Global amber hue-range brightness reduction, maximum 13 percent; no resampling or spatial masking",
+    "original": "output/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-on-before-amber-grade.png",
+    "output": "public/preview/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-on.png",
+    "dimensions": [
+      2080,
+      2288
+    ],
+    "sha256": "97d17db3fcbfd00525ef1b4b1133066c3d6dd1733ef86f8ce060bdf45b7bdc97",
+    "meanBodyLuminanceBefore": 163.50474603174604,
+    "meanBodyLuminanceAfter": 143.42559365079364,
+    "backgroundPatchUnchanged": true
+  },
+  "approvedBy": "Jordan Richter",
+  "approvedDate": "2026-09-05"
+}
