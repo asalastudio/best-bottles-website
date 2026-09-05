@@ -1,48 +1,41 @@
 /**
- * Sticky Add to Cart trigger for the mobile PDP (PRD §6–7). A zero-height
- * sentinel sits immediately after the final configurator row and an
- * IntersectionObserver watches it. Every decision here is relative to that
- * element, never to a document scroll coordinate, so the bar appears the
- * moment the last row starts to slide under the top edge and leaves again the
- * moment the configurator is back in view. Pure so it can be unit-tested.
+ * The sticky purchase bar appears as the gap after the final configuration
+ * row enters the visible viewport. Geometry follows Safari's visual viewport,
+ * including browser chrome changes, rather than a fixed scroll distance.
  */
 
-/**
- * How far (px) the sentinel must be above the viewport top before the bar
- * shows. The last configurator row is ~72px tall, so at 64px the row has just
- * begun leaving; the 8px slack stops the bar flickering on scroll jitter.
- */
-export const STICKY_CTA_TRIGGER_OFFSET_PX = 64;
+/** Default bar height: 68 px of content plus its 1 px border. */
+export const STICKY_CTA_TRIGGER_OFFSET_PX = 69;
 
 /** Slide + fade duration; the PRD asks for 150–220 ms with no spring. */
 export const STICKY_CTA_ANIMATION_MS = 180;
 
-/** rootMargin that shrinks the observed viewport by the trigger offset at the top. */
+/** Shrink the observed viewport at the bottom to match the exposed-gap trigger. */
 export function stickyCtaRootMargin(triggerOffset: number = STICKY_CTA_TRIGGER_OFFSET_PX): string {
-    return `-${Math.max(0, Math.round(triggerOffset))}px 0px 0px 0px`;
+    return `0px 0px -${Math.max(0, Math.round(triggerOffset))}px 0px`;
 }
 
 export type StickyCtaInput = {
     /** Sentinel top edge relative to the viewport (boundingClientRect.top). */
     sentinelTop: number;
+    /** visualViewport.offsetTop + height, in the same coordinates as the sentinel. */
+    viewportBottom: number;
     /** A picker sheet or the expanded viewer is open; the bar never competes with those. */
     overlayOpen?: boolean;
     triggerOffset?: number;
 };
 
-/**
- * Show only once the sentinel has passed the trigger band. Short pages never
- * bypass this element-relative trigger because the purchase block carries its
- * own inline Add to Cart action.
- */
+/** Show as soon as the gap fits the bar, without covering the last component. */
 export function stickyCtaVisible({
     sentinelTop,
+    viewportBottom,
     overlayOpen = false,
     triggerOffset = STICKY_CTA_TRIGGER_OFFSET_PX,
 }: StickyCtaInput): boolean {
     if (overlayOpen) return false;
     if (!Number.isFinite(sentinelTop)) return false;
-    return sentinelTop <= triggerOffset;
+    if (!Number.isFinite(viewportBottom) || viewportBottom <= 0) return false;
+    return sentinelTop <= viewportBottom - triggerOffset;
 }
 
 /** Secondary line of the compact bar: "$0.73/ea · 724/case · Qty 12". */

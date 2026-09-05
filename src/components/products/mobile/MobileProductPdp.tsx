@@ -11,9 +11,8 @@
  * Add to Cart). Commerce state lives in exactly one place — the parent.
  */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
-import Link from "next/link";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
-import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
+import { CaretRight, Microphone } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
 import type { PdpCompatibilityComponent, PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 import { analytics } from "@/lib/analytics";
@@ -28,7 +27,7 @@ import {
     type MobileConfigOption,
 } from "@/lib/products/mobile-pdp-config-rows";
 import { initialMobilePickerState, mobilePickerReducer, pickerHasPendingChange, sheetTopFromHero } from "@/lib/products/mobile-pdp-picker";
-import { stickyCtaRootMargin, stickyCtaVisible } from "@/lib/products/mobile-pdp-sticky-cta";
+import { STICKY_CTA_TRIGGER_OFFSET_PX, stickyCtaRootMargin, stickyCtaVisible } from "@/lib/products/mobile-pdp-sticky-cta";
 import {
     coerceMobileViewMode,
     getMobileViewModes,
@@ -161,6 +160,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const [stickyVisible, setStickyVisible] = useState(false);
     const heroRef = useRef<HTMLDivElement>(null);
     const sentinelRef = useRef<HTMLDivElement>(null);
+    const stickyBarRef = useRef<HTMLDivElement>(null);
     const rowRefs = useRef(new Map<MobilePickerType, HTMLButtonElement>());
     const savedScroll = useRef<number | null>(null);
     const lastPickerRef = useRef<MobilePickerType | null>(null);
@@ -428,25 +428,42 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
     /* ── sticky Add to Cart: element-relative, never scroll coordinates ──── */
     // The sentinel sits right after the final configurator row. The observer
-    // is the trigger; the pure helper decides from the sentinel's own rect.
+    // and visual viewport define when the gap below the configuration appears.
     const overlayOpen = Boolean(picker.activePicker) || viewerOpen;
     useEffect(() => {
         const sentinel = sentinelRef.current;
-        if (!sentinel || !isMobile || typeof IntersectionObserver === "undefined") return;
-        const evaluate = (top?: number) => {
-            const sentinelTop = top ?? sentinel.getBoundingClientRect().top;
-            setStickyVisible(stickyCtaVisible({ sentinelTop, overlayOpen }));
+        if (!sentinel || !isMobile) return;
+        const viewport = window.visualViewport;
+        const evaluate = () => {
+            const sentinelTop = sentinel.getBoundingClientRect().top;
+            const viewportBottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+            // Include the rendered safe-area padding so the bar fits below the cap row.
+            const triggerOffset = stickyBarRef.current?.getBoundingClientRect().height || STICKY_CTA_TRIGGER_OFFSET_PX;
+            setStickyVisible(stickyCtaVisible({ sentinelTop, viewportBottom, triggerOffset, overlayOpen }));
         };
-        const observer = new IntersectionObserver((entries) => {
-            const entry = entries[entries.length - 1];
-            evaluate(entry?.boundingClientRect.top);
-        }, { rootMargin: stickyCtaRootMargin(), threshold: 0 });
-        observer.observe(sentinel);
-        const onResize = () => evaluate();
-        window.addEventListener("resize", onResize);
+        let frame = 0;
+        const schedule = () => {
+            if (frame) return;
+            frame = window.requestAnimationFrame(() => { frame = 0; evaluate(); });
+        };
+        const observer = typeof IntersectionObserver === "undefined" ? null : new IntersectionObserver(
+            schedule, { rootMargin: stickyCtaRootMargin(), threshold: 0 },
+        );
+        observer?.observe(sentinel);
+        // Recheck on scroll as well: Safari's visible bottom can differ from
+        // the IntersectionObserver root while its address bar expands/collapses.
+        window.addEventListener("scroll", schedule, { passive: true });
+        window.addEventListener("resize", schedule);
+        viewport?.addEventListener("scroll", schedule, { passive: true });
+        viewport?.addEventListener("resize", schedule);
+        schedule();
         return () => {
-            observer.disconnect();
-            window.removeEventListener("resize", onResize);
+            observer?.disconnect();
+            window.cancelAnimationFrame(frame);
+            window.removeEventListener("scroll", schedule);
+            window.removeEventListener("resize", schedule);
+            viewport?.removeEventListener("scroll", schedule);
+            viewport?.removeEventListener("resize", schedule);
         };
     }, [isMobile, overlayOpen, rows.length]);
 
@@ -508,9 +525,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                     {resolvedSku ? <div className="flex gap-1.5"><dt className="font-semibold uppercase tracking-label text-2xs">SKU</dt><dd className="text-obsidian">{resolvedSku}</dd></div> : null}
                 </dl>
 
-                {/* ── quantity + primary action. Keeping the purchase action
-                    inline makes short pages complete without bypassing the
-                    sentinel; the compact bar follows the configurator later. ── */}
+                {/* Quantity and Grace stay in the page; the sticky bar owns the purchase action. */}
                 <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-champagne/60 pt-4">
                     <span className="text-2xs font-semibold uppercase tracking-label text-slate">Quantity</span>
                     <div className="flex flex-wrap items-stretch justify-end gap-2">
@@ -539,35 +554,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">${(priceEach * qty).toFixed(2)}</span>
                     </p>
                 ) : null}
-                {qty >= 500 || !canAddToCart ? (
-                    <Link
-                        href={quoteHref}
-                        data-testid="mobile-pdp-inline-request-quote"
-                        className="mt-4 flex min-h-12 w-full items-center justify-center rounded-[3px] bg-obsidian px-4 text-sm font-bold uppercase tracking-widest text-white transition-colors hover:bg-muted-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
-                    >
-                        Request Quote
-                    </Link>
-                ) : (
-                    <button
-                        type="button"
-                        disabled={!canAddToCart || addedFlash}
-                        onClick={onAddToCart}
-                        data-testid="mobile-pdp-inline-add-to-cart"
-                        className={`mt-4 flex min-h-12 w-full items-center justify-center gap-2 rounded-[3px] px-4 text-sm font-bold uppercase tracking-widest transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold disabled:cursor-not-allowed ${
-                            addedFlash ? "bg-emerald-600 text-white" : "bg-obsidian text-white hover:bg-muted-gold disabled:opacity-40"
-                        }`}
-                    >
-                        {addedFlash ? (
-                            <><Check className="h-4 w-4" weight="bold" aria-hidden /><span>Added to Cart</span></>
-                        ) : (
-                            <>
-                                <ShoppingBag className="h-4 w-4" aria-hidden />
-                                <span>Add to Cart{priceEach != null ? ` · $${(priceEach * qty).toFixed(2)}` : ""}</span>
-                            </>
-                        )}
-                    </button>
-                )}
-
                 {/* Grace sits at the decision point, not in a floating disc: the
                     questions she answers (fit, bulk pricing) arise right here,
                     and nothing floats over the hero or the picker's confirm. */}
@@ -596,6 +582,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductDetails
                 variant={selectedVariant}
                 sku={resolvedSku}
+                capFinish={selectedVariant ? resolveCapFinish(selectedVariant).swatchName : ""}
                 neckSize={neckSize}
                 family={group.family}
                 description={description ?? null}
@@ -608,7 +595,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* ── sticky Add to Cart: the same variant, price, and qty as above ── */}
             <MobileStickyPurchaseBar
-                visible={stickyVisible}
+                barRef={stickyBarRef}
+                visible={stickyVisible && !overlayOpen}
                 title={displayName}
                 thumbUrl={stickyThumb}
                 priceEach={priceEach}
@@ -644,6 +632,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 top={sheetTop}
                 title={activeRow?.title ?? ""}
                 hint={activeRow?.hint}
+                showScrollHint={activeRow?.layout === "grid"}
                 confirmLabel={activeRow ? confirmLabelFor(activeRow, picker.previewSelectionId) : ""}
                 confirmDisabled={!activeRow}
                 onConfirm={confirmPicker}

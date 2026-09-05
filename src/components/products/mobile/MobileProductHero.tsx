@@ -103,7 +103,7 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 {overlay}
             </div>
             {onViewLarger && hasVisual ? (
-                <div className="flex justify-center px-4 pb-3 pt-1">
+                <div data-mobile-pdp-viewer-entry="" className="flex justify-center px-4 pb-3 pt-1">
                     <button
                         type="button"
                         onClick={onViewLarger}

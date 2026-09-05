@@ -720,7 +720,7 @@ export default function ConfiguratorPdp({
           </span>
         ) : null}
       </div>
-      <div className="flex items-stretch gap-3">
+      <div className="flex flex-wrap items-stretch gap-3">
         <div className="flex items-center border border-champagne rounded-[3px]">
           <button type="button" aria-label="Decrease quantity"
                   onClick={() => onQtyChange?.(Math.max(1, qty - 1))}
@@ -732,7 +732,7 @@ export default function ConfiguratorPdp({
                    const next = Number(event.target.value);
                    onQtyChange?.(Number.isFinite(next) ? Math.max(1, Math.floor(next)) : 1);
                  }}
-                 className="min-w-[3rem] bg-transparent text-center text-md font-semibold text-obsidian tabular-nums outline-none" />
+                 className="w-12 min-w-0 bg-transparent text-center text-md font-semibold text-obsidian tabular-nums outline-none" />
           <button type="button" aria-label="Increase quantity"
                   onClick={() => onQtyChange?.(qty + 1)}
                   className="px-3.5 py-2.5 text-obsidian hover:text-muted-gold
@@ -750,7 +750,7 @@ export default function ConfiguratorPdp({
         ) : null}
         {checkoutReady ? (
           <button type="button" onClick={onAddToCart}
-                  className="flex-1 flex items-center justify-center gap-2 py-2.5
+                  className="flex-1 min-w-32 flex items-center justify-center gap-2 py-2.5
                              border border-obsidian text-obsidian text-md font-semibold
                              rounded-[3px] transition-colors duration-200
                              hover:bg-obsidian hover:text-white

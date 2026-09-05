@@ -42,7 +42,7 @@ function DetailRow({ label, value }: { label: string; value: string | number | n
     );
 }
 
-export function specificationRows(variant: ProductVariant, sku: string | null): Array<{ label: string; value: string | number | null | undefined }> {
+export function specificationRows(variant: ProductVariant, sku: string | null, capFinish: string): Array<{ label: string; value: string | number | null | undefined }> {
     return [
         { label: "SKU", value: sku },
         { label: "Capacity", value: variant.capacity },
@@ -51,7 +51,7 @@ export function specificationRows(variant: ProductVariant, sku: string | null): 
         { label: "Applicator", value: variant.applicator },
         { label: "Ball Material", value: variant.ballMaterial },
         { label: "Cap Style", value: variant.capStyle },
-        { label: "Cap Color", value: variant.capColor },
+        { label: "Cap Color", value: capFinish },
         { label: "Trim Finish", value: variant.trimColor },
         { label: "Cap Height", value: variant.capHeight },
         { label: "Bottle Weight", value: variant.bottleWeightG ? `${variant.bottleWeightG}g` : null },
@@ -110,6 +110,7 @@ export function MobileDetailDisclosures({ heading, sections }: { heading: string
 export type MobileProductDetailsProps = {
     variant: ProductVariant | null;
     sku: string | null;
+    capFinish: string;
     neckSize: string | null;
     family: string | null | undefined;
     description: string | null;
@@ -122,12 +123,12 @@ export type MobileProductDetailsProps = {
 };
 
 export default function MobileProductDetails({
-    variant, sku, neckSize, family, description, relations, initialCompatibility, volumePricing, onAskGrace, onAddComponent,
+    variant, sku, capFinish, neckSize, family, description, relations, initialCompatibility, volumePricing, onAskGrace, onAddComponent,
 }: MobileProductDetailsProps) {
     const compatibility = useDiscoveryCompatibility(initialCompatibility, variant?.websiteSku, variant?.graceSku);
     if (!variant) return null;
 
-    const specs = specificationRows(variant, sku);
+    const specs = specificationRows(variant, sku, capFinish);
     const dims = dimensionRows(variant, neckSize);
     const sizeCount = countPdpSizeOptions(relations);
     const caseQty = variant.caseQuantity && variant.caseQuantity > 1 ? variant.caseQuantity : null;
