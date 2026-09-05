@@ -5,14 +5,16 @@
  * over ProductDetailClient's state — it receives the resolved variant, the
  * option lists the desktop configurator already derives, and the same commit
  * handlers (guided variant resolver → canonical URL; cart via useCart). What it
- * owns is presentation: view mode, the picker, and the preview that drives the
- * hero until the customer confirms.
+ * owns is presentation: the picker and the preview that drives the stage until
+ * the customer confirms, the expanded viewer, and the sticky Add to Cart that
+ * follows the configurator out of the viewport (PRD: Configurator → Sticky
+ * Add to Cart). Commerce state lives in exactly one place — the parent.
  */
-import Link from "next/link";
 import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
-import { CaretRight, Check, Microphone, ShoppingBag } from "@/components/icons";
+import { CaretRight, Microphone } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
+import type { PdpCompatibilityComponent, PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
@@ -25,6 +27,7 @@ import {
     type MobileConfigOption,
 } from "@/lib/products/mobile-pdp-config-rows";
 import { initialMobilePickerState, mobilePickerReducer, pickerHasPendingChange, sheetTopFromHero } from "@/lib/products/mobile-pdp-picker";
+import { STICKY_CTA_TRIGGER_OFFSET_PX, stickyCtaRootMargin, stickyCtaVisible } from "@/lib/products/mobile-pdp-sticky-cta";
 import {
     coerceMobileViewMode,
     getMobileViewModes,
@@ -33,21 +36,23 @@ import {
     type MobileViewCapabilities,
     type ProductViewMode,
 } from "@/lib/products/mobile-pdp-view-modes";
-import { hasRealPdpDimensions } from "@/lib/products/pdp-stage-modes";
+import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { closureBaseFromSlug, useClosureThumbnails } from "@/lib/products/use-closure-thumbnails";
 import { useViewportIsMobile } from "@/lib/products/use-viewport-is-mobile";
+import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
     GRACE_PDP_PLATE_EVENT,
     type GracePdpPlateCommand,
 } from "@/lib/grace/pdpPlateSwap";
 import MobileConfigurationSummary from "./MobileConfigurationSummary";
+import MobileProductDetails from "./MobileProductDetails";
 import MobileProductHero from "./MobileProductHero";
+import MobileProductViewer from "./MobileProductViewer";
+import MobileStickyPurchaseBar from "./MobileStickyPurchaseBar";
 import { PickerOptions } from "./PickerOptions";
 import ProductOptionSheet from "./ProductOptionSheet";
-import ProductViewSelector from "./ProductViewSelector";
 import { useGlassSiblingPreviews } from "./useGlassSiblingPreviews";
 
-const VIEW_MODE_KEY = "bb:mobile-pdp-view";
 const ROLLER_NOTES: Array<[RegExp, string]> = [
     [/metal|steel|stainless/i, "Smooth, cooling glide"],
     [/plastic/i, "Lighter, lower cost"],
@@ -108,7 +113,13 @@ export type MobileProductPdpProps = {
     /** Opens the full Grace overlay. The tab bar (her usual mobile entry) is
         hidden on this route, so the purchase block carries an inline row. */
     onAskGrace?: () => void;
+    /** Secondary information for the disclosures under the configurator. */
+    description?: string | null;
+    relations?: FocusedPdpRelations | null;
+    initialCompatibility?: PdpCompatibilityPayload | null;
+    /** The compact volume tier ladder (quantity stays owned by the parent). */
     volumePricing?: ReactNode;
+    onAddComponent?: (component: PdpCompatibilityComponent) => void;
 };
 
 function plateFor(platesBySku: Record<string, PlateRef>, variant: ProductVariant | null | undefined): PlateRef | null {
@@ -129,7 +140,8 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
-        onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, volumePricing,
+        onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, description, relations, initialCompatibility,
+        volumePricing, onAddComponent,
     } = props;
 
     const isMobile = useViewportIsMobile();
@@ -144,7 +156,12 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     /* ── picker + view state ─────────────────────────────────────────────── */
     const [picker, dispatch] = useReducer(mobilePickerReducer, undefined, () => initialMobilePickerState("assembled"));
     const [sheetTop, setSheetTop] = useState(0);
+    const [viewerOpen, setViewerOpen] = useState(false);
+    const [viewerView, setViewerView] = useState<ProductViewMode>("assembled");
+    const [stickyVisible, setStickyVisible] = useState(false);
     const heroRef = useRef<HTMLDivElement>(null);
+    const sentinelRef = useRef<HTMLDivElement>(null);
+    const stickyBarRef = useRef<HTMLDivElement>(null);
     const rowRefs = useRef(new Map<MobilePickerType, HTMLButtonElement>());
     const savedScroll = useRef<number | null>(null);
     const lastPickerRef = useRef<MobilePickerType | null>(null);
@@ -208,36 +225,43 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         picker.viewMode !== "capOff",
     );
 
-    const dimensions = useMemo(() => ({
-        heightWithCap: shownVariant?.heightWithCap ?? null,
-        heightWithoutCap: shownVariant?.heightWithoutCap ?? null,
-        diameter: shownVariant?.diameter ?? null,
-    }), [shownVariant?.heightWithCap, shownVariant?.heightWithoutCap, shownVariant?.diameter]);
     const viewCaps = useMemo<MobileViewCapabilities>(() => ({
         hasCapOffAsset: Boolean(shownPlate?.imageCapOff) || kitHasRemovableCap(shownKit),
-        hasDimensions: hasRealPdpDimensions(dimensions),
-    }), [shownPlate?.imageCapOff, shownKit, dimensions]);
+    }), [shownPlate?.imageCapOff, shownKit]);
     const viewModes = useMemo(() => getMobileViewModes(viewCaps), [viewCaps]);
+    // The stage always paints the configured bottle; "capOff" here only comes
+    // from the roller picker's preview or a Grace plate command.
     const viewMode = coerceMobileViewMode(picker.viewMode, viewCaps);
 
-    const wantedPlateUrl = viewMode === "capOff" && shownPlate?.imageCapOff ? shownPlate.imageCapOff : shownPlate?.image ?? null;
-    const requestedPlateUrl = wantedPlateUrl && !brokenPlates.has(wantedPlateUrl) ? wantedPlateUrl : null;
-    const decodedPlate = useDecodedPlate(requestedPlateUrl, markPlateBroken);
+    const plateUrlFor = (view: ProductViewMode): string | null => {
+        const wanted = view === "capOff" && shownPlate?.imageCapOff ? shownPlate.imageCapOff : shownPlate?.image ?? null;
+        return wanted && !brokenPlates.has(wanted) ? wanted : null;
+    };
+    const decodedPlate = useDecodedPlate(plateUrlFor(viewMode), markPlateBroken);
     const fallbackImageUrl = shownVariant?.imageUrl ?? group.heroImageUrl ?? null;
 
-    /* ── view persistence (presentation only) ────────────────────────────── */
-    useEffect(() => {
-        try {
-            const saved = window.sessionStorage.getItem(VIEW_MODE_KEY);
-            if (saved === "assembled" || saved === "capOff" || saved === "dimensions") dispatch({ type: "setView", view: saved });
-        } catch {}
-    }, []);
-    const setView = (view: ProductViewMode) => {
-        if (view === viewMode) return;
-        analytics.mobilePdpViewChanged({ slug, sku: currentSku, viewMode: view, previousViewMode: viewMode });
-        dispatch({ type: "setView", view });
-        try { window.sessionStorage.setItem(VIEW_MODE_KEY, view); } catch {}
+    /* ── expanded viewer (same configured bottle, its own cap state) ─────── */
+    const viewerMode = coerceMobileViewMode(viewerView, viewCaps);
+    const viewerPlate = useDecodedPlate(viewerOpen ? plateUrlFor(viewerMode) : null, markPlateBroken);
+    const { parts: viewerKitParts } = useDecodedKitParts(
+        { websiteSku: shownVariant?.websiteSku, graceSku: shownVariant?.graceSku },
+        viewerOpen ? shownKitQuery : undefined,
+        viewerMode !== "capOff",
+    );
+    const openViewer = () => {
+        setViewerView(viewMode);
+        setViewerOpen(true);
+        analytics.mobilePdpViewChanged({ slug, sku: currentSku, viewMode, previousViewMode: viewMode });
     };
+    const closeViewer = () => setViewerOpen(false);
+    const changeViewerView = (view: ProductViewMode) => {
+        if (view === viewerMode) return;
+        analytics.mobilePdpViewChanged({ slug, sku: currentSku, viewMode: view, previousViewMode: viewerMode });
+        setViewerView(view);
+    };
+    const restoreViewerFocus = useCallback(() => {
+        heroRef.current?.querySelector<HTMLElement>('[data-testid="mobile-pdp-view-larger"]')?.focus({ preventScroll: true });
+    }, []);
 
     /* ── configuration rows ──────────────────────────────────────────────── */
     const glassDimension = useMemo<MobileConfigDimension | null>(() => {
@@ -404,14 +428,59 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         else rowRefs.current.delete(type);
     }, []);
 
+    /* ── sticky Add to Cart: element-relative, never scroll coordinates ──── */
+    // The sentinel sits right after the final configurator row. The observer
+    // and visual viewport define when the gap below the configuration appears.
+    const overlayOpen = Boolean(picker.activePicker) || viewerOpen;
+    useEffect(() => {
+        const sentinel = sentinelRef.current;
+        if (!sentinel || !isMobile) return;
+        const viewport = window.visualViewport;
+        const evaluate = () => {
+            const sentinelTop = sentinel.getBoundingClientRect().top;
+            const viewportBottom = viewport ? viewport.offsetTop + viewport.height : window.innerHeight;
+            // Include the rendered safe-area padding so the bar fits below the cap row.
+            const triggerOffset = stickyBarRef.current?.getBoundingClientRect().height || STICKY_CTA_TRIGGER_OFFSET_PX;
+            setStickyVisible(stickyCtaVisible({ sentinelTop, viewportBottom, triggerOffset, overlayOpen }));
+        };
+        let frame = 0;
+        const schedule = () => {
+            if (frame) return;
+            frame = window.requestAnimationFrame(() => { frame = 0; evaluate(); });
+        };
+        const observer = typeof IntersectionObserver === "undefined" ? null : new IntersectionObserver(
+            schedule, { rootMargin: stickyCtaRootMargin(), threshold: 0 },
+        );
+        observer?.observe(sentinel);
+        // Recheck on scroll as well: Safari's visible bottom can differ from
+        // the IntersectionObserver root while its address bar expands/collapses.
+        window.addEventListener("scroll", schedule, { passive: true });
+        window.addEventListener("resize", schedule);
+        viewport?.addEventListener("scroll", schedule, { passive: true });
+        viewport?.addEventListener("resize", schedule);
+        schedule();
+        return () => {
+            observer?.disconnect();
+            window.cancelAnimationFrame(frame);
+            window.removeEventListener("scroll", schedule);
+            window.removeEventListener("resize", schedule);
+            viewport?.removeEventListener("scroll", schedule);
+            viewport?.removeEventListener("resize", schedule);
+        };
+    }, [isMobile, overlayOpen, rows.length]);
+
     /* ── purchase facts ──────────────────────────────────────────────────── */
-    const priceEach = selectedVariant?.webPrice1pc ?? null;
+    const priceEach = selectedVariant
+        ? resolveChargedUnitPrice(qty, selectedVariant)
+        : null;
     const caseQty = selectedVariant?.caseQuantity && selectedVariant.caseQuantity > 1 ? selectedVariant.caseQuantity : null;
     const neckSize = selectedVariant?.neckThreadSize ?? group.neckThreadSize ?? null;
     const resolvedSku = selectedVariant?.websiteSku || selectedVariant?.graceSku || null;
     const previewingLabel = activeRow && pickerHasPendingChange(picker)
         ? activeRow.options.find((option) => option.id === picker.previewSelectionId)?.label ?? null
         : null;
+    const stickyThumb = committedPlate?.thumb ?? committedPlate?.image ?? selectedVariant?.imageUrl ?? null;
+    const eyebrow = [group.category ?? "Glass Bottle", group.family].filter(Boolean).join(" · ");
 
     return (
         <div data-testid="mobile-pdp" className="bg-bone">
@@ -419,32 +488,26 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             <MobileProductHero
                 ref={heroRef}
-                viewMode={viewMode}
                 plateUrl={decodedPlate.url}
-                kitParts={viewMode === "dimensions" ? null : kitPartsWithCap}
+                kitParts={kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
-                dimensions={dimensions}
-                capacity={group.capacity}
-                neckSize={neckSize}
                 backHref={backHref}
                 cartCount={cartCount}
                 onOpenCart={() => window.dispatchEvent(new Event("open-cart-drawer"))}
                 onPlateError={markPlateBroken}
+                onViewLarger={openViewer}
                 overlay={null}
             />
-
-            <ProductViewSelector modes={viewModes} activeMode={viewMode} onModeChange={setView} />
 
             {/* Configure sits under the bottle, before the title, so first-time
                 visitors see that glass / roller / cap are choices — not specs. */}
             <MobileConfigurationSummary rows={rows} facts={facts} onOpen={openPicker} registerRow={registerRow} />
+            <div ref={sentinelRef} data-testid="mobile-pdp-cta-sentinel" aria-hidden className="h-px w-full" />
 
             {/* ── identity + price ─────────────────────────────────────────── */}
-            <section className="px-4 pb-4 pt-5" aria-labelledby="mobile-pdp-title">
-                <p className="text-2xs font-semibold uppercase tracking-label text-muted-gold">
-                    {[group.category ?? "Glass Bottle", group.family].filter(Boolean).join(" · ")}
-                </p>
+            <section ref={cartAnchorRef} className="px-4 pb-4 pt-5" aria-labelledby="mobile-pdp-title" data-testid="mobile-pdp-purchase">
+                <p className="text-2xs font-semibold uppercase tracking-label text-muted-gold">{eyebrow}</p>
                 <h1 id="mobile-pdp-title" className="mt-1 font-serif text-[26px] font-medium leading-[1.15] text-obsidian">{displayName}</h1>
                 <div className="mt-3 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
                     <p className="text-lg font-semibold tabular-nums text-obsidian" data-testid="mobile-pdp-price">
@@ -463,11 +526,9 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                     {caseQty ? <div className="flex gap-1.5"><dt className="font-semibold uppercase tracking-label text-2xs">Case</dt><dd className="text-obsidian">{caseQty.toLocaleString()}</dd></div> : null}
                     {resolvedSku ? <div className="flex gap-1.5"><dt className="font-semibold uppercase tracking-label text-2xs">SKU</dt><dd className="text-obsidian">{resolvedSku}</dd></div> : null}
                 </dl>
-            </section>
 
-            {/* ── quantity + add to cart ───────────────────────────────────── */}
-            <section ref={cartAnchorRef} className="px-4 pb-6 pt-5" data-testid="mobile-pdp-purchase">
-                <div className="flex flex-wrap items-center justify-between gap-3">
+                {/* Quantity and Grace stay in the page; the sticky bar owns the purchase action. */}
+                <div className="mt-4 flex flex-wrap items-center justify-between gap-3 border-t border-champagne/60 pt-4">
                     <span className="text-2xs font-semibold uppercase tracking-label text-slate">Quantity</span>
                     <div className="flex flex-wrap items-stretch justify-end gap-2">
                         <div className="flex items-center rounded-[3px] border border-champagne bg-white">
@@ -495,28 +556,6 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         {qty.toLocaleString()} × {formatEach(priceEach)} = <span className="font-semibold text-obsidian">${(priceEach * qty).toFixed(2)}</span>
                     </p>
                 ) : null}
-
-                <div className="mt-4">
-                    {qty >= 500 ? (
-                        <Link href={quoteHref} data-testid="mobile-pdp-request-quote"
-                              className="flex min-h-12 w-full items-center justify-center rounded-[3px] bg-obsidian text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-muted-gold">
-                            Request Quote
-                        </Link>
-                    ) : canAddToCart ? (
-                        <button type="button" disabled={!canAddToCart || addedFlash} onClick={onAddToCart} data-testid="mobile-pdp-add-to-cart"
-                                className={`flex min-h-12 w-full items-center justify-center gap-2 rounded-[3px] text-xs font-bold uppercase tracking-widest transition-colors disabled:cursor-not-allowed focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold ${
-                                    addedFlash ? "bg-emerald-600 text-white" : "bg-obsidian text-white hover:bg-muted-gold disabled:opacity-40"
-                                }`}>
-                            {addedFlash ? (<><Check className="h-4 w-4" weight="bold" aria-hidden /><span>Added!</span></>)
-                                : (<><ShoppingBag className="h-4 w-4" aria-hidden /><span>{inStock ? "Add to Cart" : "Out of Stock"}</span></>)}
-                        </button>
-                    ) : (
-                        <Link href={quoteHref} data-testid="mobile-pdp-request-quote"
-                              className="flex min-h-12 w-full items-center justify-center rounded-[3px] bg-obsidian text-xs font-bold uppercase tracking-widest text-white transition-colors hover:bg-muted-gold">
-                            Request Quote
-                        </Link>
-                    )}
-                </div>
                 {/* Grace sits at the decision point, not in a floating disc: the
                     questions she answers (fit, bulk pricing) arise right here,
                     and nothing floats over the hero or the picker's confirm. */}
@@ -539,8 +578,55 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         <CaretRight className="h-4 w-4 shrink-0 text-slate" aria-hidden />
                     </button>
                 ) : null}
-                {volumePricing ? <div className="mt-5" data-testid="mobile-pdp-volume-pricing">{volumePricing}</div> : null}
             </section>
+
+            {/* ── secondary information: compact disclosures, sticky bar stays ── */}
+            <MobileProductDetails
+                variant={selectedVariant}
+                sku={resolvedSku}
+                capFinish={selectedVariant ? resolveCapFinish(selectedVariant).swatchName : ""}
+                neckSize={neckSize}
+                family={group.family}
+                description={description ?? null}
+                relations={relations ?? null}
+                initialCompatibility={initialCompatibility ?? null}
+                volumePricing={volumePricing ?? null}
+                onAskGrace={onAskGrace ?? (() => {})}
+                onAddComponent={onAddComponent ?? (() => {})}
+            />
+
+            {/* ── sticky Add to Cart: the same variant, price, and qty as above ── */}
+            <MobileStickyPurchaseBar
+                barRef={stickyBarRef}
+                visible={stickyVisible && !overlayOpen}
+                title={displayName}
+                thumbUrl={stickyThumb}
+                priceEach={priceEach}
+                caseQuantity={caseQty}
+                qty={qty}
+                inStock={inStock}
+                canAddToCart={canAddToCart}
+                addedFlash={addedFlash}
+                quoteHref={quoteHref}
+                onAddToCart={onAddToCart}
+            />
+
+            {/* ── expanded viewer: same configured bottle, Cap On | Cap Off ──── */}
+            <MobileProductViewer
+                open={viewerOpen}
+                onClose={closeViewer}
+                title={displayName}
+                eyebrow={eyebrow}
+                viewMode={viewerMode}
+                viewModes={viewModes}
+                onViewModeChange={changeViewerView}
+                plateUrl={viewerPlate.url}
+                kitParts={viewerKitParts}
+                fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
+                alt={displayName}
+                onPlateError={markPlateBroken}
+                onRestoreFocus={restoreViewerFocus}
+            />
 
             {/* ── the picker ───────────────────────────────────────────────── */}
             <ProductOptionSheet
@@ -548,6 +634,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 top={sheetTop}
                 title={activeRow?.title ?? ""}
                 hint={activeRow?.hint}
+                showScrollHint={activeRow?.layout === "grid"}
                 confirmLabel={activeRow ? confirmLabelFor(activeRow, picker.previewSelectionId) : ""}
                 confirmDisabled={!activeRow}
                 onConfirm={confirmPicker}

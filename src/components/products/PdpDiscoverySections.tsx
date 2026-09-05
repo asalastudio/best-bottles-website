@@ -189,6 +189,113 @@ export function selectDiscoveryCompatibility(
     return refreshedCompatibility === undefined ? initialCompatibility : refreshedCompatibility;
 }
 
+/** Size chips for the same family + dispensing application. Shared by the desktop rail and the mobile disclosures. */
+export function PdpSizeOptions({ relations }: { relations: FocusedPdpRelations | null }) {
+    const sizeOptions = uniqueSameApplicationSizes(relations?.sameApplicationSizes ?? []);
+    return (
+        <div className="flex flex-wrap gap-2" data-testid="pdp-size-options">
+            {sizeOptions.map((relation) => {
+                const label = sizeChipLabel(relation);
+                const className = relation.isCurrent
+                    ? "inline-flex min-h-11 items-center rounded-full border border-obsidian bg-obsidian px-4 text-sm font-semibold text-white"
+                    : "inline-flex min-h-11 items-center rounded-full border border-champagne bg-white px-4 text-sm font-semibold text-obsidian transition-colors hover:border-muted-gold";
+                return relation.isCurrent ? (
+                    <span key={relation.slug} className={className} aria-current="true">{label}</span>
+                ) : (
+                    <Link key={relation.slug} href={`/products/${relation.slug}`} className={className}>{label}</Link>
+                );
+            })}
+        </div>
+    );
+}
+
+/** How many size chips `PdpSizeOptions` would render, so callers can hide an empty or single-size block. */
+export function countPdpSizeOptions(relations: FocusedPdpRelations | null): number {
+    return uniqueSameApplicationSizes(relations?.sameApplicationSizes ?? []).length;
+}
+
+/** The five homepage dispensing entry points for this family. */
+export function PdpDispenseOptions({ family, relations, columns = "sm:grid-cols-2 xl:grid-cols-5" }: { family: string; relations: FocusedPdpRelations | null; columns?: string }) {
+    return (
+        <div className={`grid gap-3 ${columns}`} data-testid="pdp-dispense-options">
+            {APPLICATOR_NAV.map((nav) => {
+                const isCurrent = relations?.currentApplication === nav.value;
+                const className = `flex min-h-[7.5rem] flex-col justify-between rounded-sm border p-4 ${
+                    isCurrent
+                        ? "border-obsidian bg-white"
+                        : "border-champagne/50 bg-white transition-colors hover:border-muted-gold"
+                }`;
+                const body = (
+                    <>
+                        <span>
+                            <span className="block text-[10px] font-bold uppercase tracking-wider text-muted-gold">
+                                {isCurrent ? "Current" : "Also available as"}
+                            </span>
+                            <span className="mt-1 block font-serif text-xl text-obsidian">{nav.label}</span>
+                        </span>
+                        <span className="mt-3 text-xs leading-relaxed text-slate">{nav.subtitle}</span>
+                    </>
+                );
+                return isCurrent ? (
+                    <div key={nav.value} aria-current="true" className={className}>{body}</div>
+                ) : (
+                    <Link key={nav.value} href={catalogHref({ families: [family], applicators: [...nav.buckets] })} className={className}>
+                        {body}
+                    </Link>
+                );
+            })}
+        </div>
+    );
+}
+
+export function groupCompatibleComponents(compatibility: PdpCompatibilityPayload | null): Array<{ typeLabel: string; components: PdpCompatibilityComponent[] }> {
+    const componentTypes = compatibility?.componentTypes?.length
+        ? compatibility.componentTypes
+        : Object.keys(compatibility?.components ?? {});
+    return componentTypes
+        .map((typeLabel) => ({
+            typeLabel,
+            components: compatibility?.components[typeLabel] ?? [],
+        }))
+        .filter((group) => group.components.length > 0);
+}
+
+/** Fitment-resolved parts grouped by closure type, or the honest "unmapped" notice. */
+export function PdpCompatibleComponentList({
+    compatibility,
+    onAskGrace,
+    onAddComponent,
+}: {
+    compatibility: PdpCompatibilityPayload | null;
+    onAskGrace: () => void;
+    onAddComponent: (component: PdpCompatibilityComponent) => void;
+}) {
+    const groupedComponents = groupCompatibleComponents(compatibility);
+    if (groupedComponents.length === 0) {
+        return (
+            <div className="flex flex-col items-start justify-between gap-3 rounded-sm border border-amber-300 bg-amber-50 p-4 sm:flex-row sm:items-center" data-testid="pdp-compatibility-unmapped">
+                <p className="text-sm leading-relaxed text-amber-900">Compatibility is unmapped for this SKU. Do not assume a component fits until the neck and fitment are verified.</p>
+                <button type="button" onClick={onAskGrace} className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-sm border border-amber-700 px-3 py-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:bg-amber-100">
+                    <ChatCircle className="h-4 w-4" />
+                    Ask Grace about fitment
+                </button>
+            </div>
+        );
+    }
+    return (
+        <div className="grid gap-4" data-testid="pdp-compatible-components">
+            {groupedComponents.map((group) => (
+                <ComponentTypeGroup
+                    key={group.typeLabel}
+                    typeLabel={group.typeLabel}
+                    components={group.components}
+                    onAddComponent={onAddComponent}
+                />
+            ))}
+        </div>
+    );
+}
+
 export function PdpDiscoveryContent({
     family,
     relations,
@@ -196,18 +303,6 @@ export function PdpDiscoveryContent({
     onAskGrace,
     onAddComponent,
 }: PdpDiscoveryContentProps) {
-    const sizeOptions = uniqueSameApplicationSizes(relations?.sameApplicationSizes ?? []);
-    const componentTypes = compatibility?.componentTypes?.length
-        ? compatibility.componentTypes
-        : Object.keys(compatibility?.components ?? {});
-    const groupedComponents = componentTypes
-        .map((typeLabel) => ({
-            typeLabel,
-            components: compatibility?.components[typeLabel] ?? [],
-        }))
-        .filter((group) => group.components.length > 0);
-    const hasComponents = groupedComponents.length > 0;
-
     return (
         <div className="border-t border-champagne/50 bg-linen" data-testid="pdp-discovery-sections">
             <div className="mx-auto max-w-[1440px] space-y-10 px-4 py-10 sm:px-6 sm:py-14">
@@ -215,18 +310,8 @@ export function PdpDiscoveryContent({
                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Same bottle intent</p>
                     <h2 id="pdp-sizes-heading" className="mt-1 font-serif text-2xl text-obsidian">Also available in these sizes</h2>
                     <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">Choose another capacity in the same family and dispensing application. Neck finishes stay on the product page — they are not extra size options.</p>
-                    <div className="mt-4 flex flex-wrap gap-2">
-                        {sizeOptions.map((relation) => {
-                            const label = sizeChipLabel(relation);
-                            const className = relation.isCurrent
-                                ? "inline-flex min-h-11 items-center rounded-full border border-obsidian bg-obsidian px-4 text-sm font-semibold text-white"
-                                : "inline-flex min-h-11 items-center rounded-full border border-champagne bg-white px-4 text-sm font-semibold text-obsidian transition-colors hover:border-muted-gold";
-                            return relation.isCurrent ? (
-                                <span key={relation.slug} className={className} aria-current="true">{label}</span>
-                            ) : (
-                                <Link key={relation.slug} href={`/products/${relation.slug}`} className={className}>{label}</Link>
-                            );
-                        })}
+                    <div className="mt-4">
+                        <PdpSizeOptions relations={relations} />
                     </div>
                 </section>
 
@@ -234,33 +319,8 @@ export function PdpDiscoveryContent({
                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Different product intent</p>
                     <h2 id="pdp-applications-heading" className="mt-1 font-serif text-2xl text-obsidian">Other ways to dispense</h2>
                     <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">Also available as one of the main {family} entry points — the same five starting points as the homepage, not every SKU in the family.</p>
-                    <div className="mt-4 grid gap-3 sm:grid-cols-2 xl:grid-cols-5">
-                        {APPLICATOR_NAV.map((nav) => {
-                            const isCurrent = relations?.currentApplication === nav.value;
-                            const className = `flex min-h-[7.5rem] flex-col justify-between rounded-sm border p-4 ${
-                                isCurrent
-                                    ? "border-obsidian bg-white"
-                                    : "border-champagne/50 bg-white transition-colors hover:border-muted-gold"
-                            }`;
-                            const body = (
-                                <>
-                                    <span>
-                                        <span className="block text-[10px] font-bold uppercase tracking-wider text-muted-gold">
-                                            {isCurrent ? "Current" : "Also available as"}
-                                        </span>
-                                        <span className="mt-1 block font-serif text-xl text-obsidian">{nav.label}</span>
-                                    </span>
-                                    <span className="mt-3 text-xs leading-relaxed text-slate">{nav.subtitle}</span>
-                                </>
-                            );
-                            return isCurrent ? (
-                                <div key={nav.value} aria-current="true" className={className}>{body}</div>
-                            ) : (
-                                <Link key={nav.value} href={catalogHref({ families: [family], applicators: [...nav.buckets] })} className={className}>
-                                    {body}
-                                </Link>
-                            );
-                        })}
+                    <div className="mt-4">
+                        <PdpDispenseOptions family={family} relations={relations} />
                     </div>
                 </section>
 
@@ -268,26 +328,9 @@ export function PdpDiscoveryContent({
                     <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-muted-gold">Fitment-resolved parts</p>
                     <h2 id="pdp-components-heading" className="mt-1 font-serif text-2xl text-obsidian">Compatible components</h2>
                     <p className="mt-2 max-w-2xl text-sm leading-relaxed text-slate">These parts are grouped by closure type and resolved from this exact selected SKU’s fitment rules — separate from the size and dispense entry points above.</p>
-                    {hasComponents ? (
-                        <div className="mt-4 grid gap-4">
-                            {groupedComponents.map((group) => (
-                                <ComponentTypeGroup
-                                    key={group.typeLabel}
-                                    typeLabel={group.typeLabel}
-                                    components={group.components}
-                                    onAddComponent={onAddComponent}
-                                />
-                            ))}
-                        </div>
-                    ) : (
-                        <div className="mt-4 flex flex-col items-start justify-between gap-3 rounded-sm border border-amber-300 bg-amber-50 p-4 sm:flex-row sm:items-center">
-                            <p className="text-sm leading-relaxed text-amber-900">Compatibility is unmapped for this SKU. Do not assume a component fits until the neck and fitment are verified.</p>
-                            <button type="button" onClick={onAskGrace} className="inline-flex min-h-11 shrink-0 items-center gap-2 rounded-sm border border-amber-700 px-3 py-2 text-xs font-bold uppercase tracking-wider text-amber-900 hover:bg-amber-100">
-                                <ChatCircle className="h-4 w-4" />
-                                Ask Grace about fitment
-                            </button>
-                        </div>
-                    )}
+                    <div className="mt-4">
+                        <PdpCompatibleComponentList compatibility={compatibility} onAskGrace={onAskGrace} onAddComponent={onAddComponent} />
+                    </div>
                 </section>
             </div>
         </div>
@@ -307,6 +350,23 @@ export function PdpDiscoveryMatrixLink({ family }: { family: string }) {
     );
 }
 
+/** Live compatibility for the selected SKU, holding the server payload until the refresh lands. */
+export function useDiscoveryCompatibility(
+    initialCompatibility: PdpCompatibilityPayload | null,
+    selectedWebsiteSku: string | null | undefined,
+    selectedGraceSku: string | null | undefined,
+): PdpCompatibilityPayload | null {
+    const refreshedCompatibility = useQuery(
+        api.grace.getBottleComponents,
+        selectedWebsiteSku
+            ? { websiteSku: selectedWebsiteSku }
+            : selectedGraceSku
+                ? { graceSku: selectedGraceSku }
+                : "skip",
+    ) as PdpCompatibilityPayload | null | undefined;
+    return selectDiscoveryCompatibility(initialCompatibility, refreshedCompatibility);
+}
+
 export default function PdpDiscoverySections({
     family,
     relations,
@@ -324,15 +384,7 @@ export default function PdpDiscoverySections({
     onAskGrace: () => void;
     onAddComponent: (component: PdpCompatibilityComponent) => void;
 }) {
-    const refreshedCompatibility = useQuery(
-        api.grace.getBottleComponents,
-        selectedWebsiteSku
-            ? { websiteSku: selectedWebsiteSku }
-            : selectedGraceSku
-                ? { graceSku: selectedGraceSku }
-                : "skip",
-    ) as PdpCompatibilityPayload | null | undefined;
-    const compatibility = selectDiscoveryCompatibility(initialCompatibility, refreshedCompatibility);
+    const compatibility = useDiscoveryCompatibility(initialCompatibility, selectedWebsiteSku, selectedGraceSku);
 
     return <PdpDiscoveryContent family={family} relations={relations} compatibility={compatibility} onAskGrace={onAskGrace} onAddComponent={onAddComponent} />;
 }

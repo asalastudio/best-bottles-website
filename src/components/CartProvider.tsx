@@ -59,6 +59,7 @@ export function resolveUnitPrice(
         webPrice1pc?: number | null;
         webPrice10pc?: number | null;
         webPrice12pc?: number | null;
+        priceTiers?: Array<{ minQty: number; unitPrice: number }> | null;
     }
 ): number | null {
     return resolveChargedUnitPrice(quantity, prices);
@@ -153,6 +154,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                         webPrice1pc,
                         webPrice10pc,
                         webPrice12pc,
+                        priceTiers,
                     });
 
                     Object.assign(existing, {
@@ -178,6 +180,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                         webPrice1pc: item.webPrice1pc ?? item.unitPrice,
                         webPrice10pc: item.webPrice10pc ?? null,
                         webPrice12pc: item.webPrice12pc ?? null,
+                        priceTiers: item.priceTiers ?? null,
                     });
                     updated.push({
                         ...item,
@@ -210,6 +213,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                             webPrice1pc: i.webPrice1pc ?? i.unitPrice,
                             webPrice10pc: i.webPrice10pc ?? null,
                             webPrice12pc: i.webPrice12pc ?? null,
+                            priceTiers: i.priceTiers ?? null,
                         });
                         return { ...i, quantity, unitPrice: activePrice };
                     }

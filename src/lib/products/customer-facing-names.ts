@@ -1,3 +1,6 @@
+import { decoratedCapFinish } from "./decorated-cap-finish";
+import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+
 export type CustomerFacingNameConfidence = "high" | "medium" | "fallback";
 
 export type CustomerFacingNameGroupInput = {
@@ -201,6 +204,8 @@ function finishFromGraceSku(sku: string | null | undefined): string | null {
 function finishFromWebsiteSku(sku: string | null | undefined): string | null {
     const value = clean(sku);
     if (!value) return null;
+    const canonical = getFinishFromWebsiteSku(value);
+    if (canonical) return canonical.swatchName;
     for (const [pattern, finish] of WEBSITE_SKU_FINISH_PATTERNS) {
         if (pattern.test(value)) return finish;
     }
@@ -249,6 +254,7 @@ function usableFinish(value: string | null | undefined): string | null {
 function resolveFinish(variant?: CustomerFacingNameVariantInput | null): string | null {
     if (!variant) return null;
     return (
+        decoratedCapFinish(variant) ??
         usableFinish(variant.capColor) ??
         usableFinish(variant.trimColor) ??
         finishFromGraceSku(variant.graceSku) ??
