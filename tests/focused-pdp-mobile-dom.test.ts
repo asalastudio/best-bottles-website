@@ -55,7 +55,7 @@ afterEach(() => {
 });
 
 describe("focused PDP mobile purchase surface", () => {
-    it("keeps the reviewed cap-off photograph after kit decode and retains kit rendering for cap-on", async () => {
+    it("keeps exact cap-on and cap-off photographs after kit decode and reserves kit layers for exploded mode", async () => {
         const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         installInstantImageDecode();
         sessionStorage.removeItem("bb:pdp-stage");
@@ -80,8 +80,22 @@ describe("focused PDP mobile purchase surface", () => {
             await Promise.resolve();
             await Promise.resolve();
         });
-        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/capped.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).toBeNull();
         expect(container.querySelector('img[src="https://example.test/recovered-off.webp"]')).toBeNull();
+        const modeButton = (label: string) => [...container.querySelectorAll<HTMLButtonElement>('[aria-label="Product view"] button')].find(b => b.textContent === label)!;
+        await act(async () => { modeButton("Exploded").click(); });
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/capped.webp"]')).toBeNull();
+        const returnButton = [...container.querySelectorAll<HTMLButtonElement>("button")].find(b => b.textContent === "Back to photo");
+        expect(returnButton).toBeDefined();
+        expect(modeButton("Exploded").getAttribute("aria-pressed")).toBe("true");
+        await act(async () => { returnButton!.click(); });
+        expect(modeButton("Photo").getAttribute("aria-pressed")).toBe("true");
+        expect(modeButton("Exploded").getAttribute("aria-pressed")).toBe("false");
+        expect(container.textContent).not.toContain("Back to photo");
+        expect(container.querySelector('[aria-label="Cap on or off"]')?.getAttribute("aria-pressed")).toBe("true");
+        expect(sessionStorage.getItem("bb:pdp-stage")).toBe("photo");
         await act(async () => { root.unmount(); });
     });
     it("contains option overflow at the real closure rail rather than the 390px page", async () => {
