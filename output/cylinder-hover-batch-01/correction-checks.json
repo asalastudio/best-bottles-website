@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "images and no overflow at 390px",
+    "images and no overflow at 768px",
+    "images and no overflow at 1440px",
+    "reduced motion",
+    "all ten hover failures preserve default images"
+  ],
+  "files": 20,
+  "backgroundMeanToleranceRGB": 1
+}

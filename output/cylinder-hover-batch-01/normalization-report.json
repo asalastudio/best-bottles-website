@@ -1,0 +1,1291 @@
+{
+  "method": "whole-image scale/translation, source-edge extension, global highlight grade; no cutouts, no regeneration",
+  "userAuthorized": true,
+  "canvas": [
+    2080,
+    2288
+  ],
+  "baseline": 2082,
+  "rows": [
+    {
+      "sku": "GBSpry3mlClBlk",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ccc87735-78e2-42ba-a0ee-9f1402fb2976.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBSpry3mlClBlk-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        29,
+        -8
+      ],
+      "bodyWidthPx": 280.0,
+      "bodyHeightPx": 607.2334600760456,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        1.4228515625,
+        3.1127777099609375,
+        1.460479736328125
+      ],
+      "backgroundMeanRGB": [
+        244.57714285714286,
+        242.88721428571426,
+        238.53951428571426
+      ],
+      "backgroundPatchRGB": [
+        [
+          244.8608,
+          243.0619,
+          238.6729
+        ],
+        [
+          244.5625,
+          242.8988,
+          238.605
+        ],
+        [
+          244.4289,
+          242.7513,
+          238.4426
+        ],
+        [
+          244.6207,
+          242.9755,
+          238.5675
+        ],
+        [
+          244.3293,
+          242.6992,
+          238.3532
+        ],
+        [
+          244.7214,
+          242.993,
+          238.5456
+        ],
+        [
+          244.5164,
+          242.8308,
+          238.5898
+        ]
+      ],
+      "sha256": "7c2e9212092b58bc28e63406a4dd5c8cd8d1198d0f25eb6acafc03e120e968f0"
+    },
+    {
+      "sku": "GBSpry3mlClBlk",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-49150453-0bbf-4a79-b967-4b1bf91c23ad.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBSpry3mlClBlk-on.png",
+      "scaleX": 0.9877300613496932,
+      "scaleY": 0.9803370786516854,
+      "translation": [
+        34,
+        11
+      ],
+      "bodyWidthPx": 280.0,
+      "bodyHeightPx": 607.2334600760456,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        4.6295318603515625,
+        7.8351287841796875,
+        6.8329620361328125
+      ],
+      "backgroundMeanRGB": [
+        245.37047142857142,
+        243.16485714285713,
+        239.16704285714286
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.4909,
+          243.1264,
+          239.1696
+        ],
+        [
+          245.4055,
+          242.9916,
+          239.1014
+        ],
+        [
+          245.5831,
+          243.2503,
+          239.5552
+        ],
+        [
+          245.4662,
+          243.28,
+          239.1242
+        ],
+        [
+          245.1068,
+          243.0596,
+          238.8694
+        ],
+        [
+          245.2224,
+          243.169,
+          238.9568
+        ],
+        [
+          245.3184,
+          243.2771,
+          239.3927
+        ]
+      ],
+      "sha256": "340ad546a2bf6d2c5eefef17d2bc6bc6fdeabd37bbbddc854ae92c0150a37bd7"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-bd2e80ef-ae7e-4e22-ba8a-1fa22f0faab3.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBSpry4mlClBlk-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        9,
+        -13
+      ],
+      "bodyWidthPx": 246.95652173913044,
+      "bodyHeightPx": 692.4897338403042,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        2.2631378173828125,
+        4.1575164794921875,
+        3.4371490478515625
+      ],
+      "backgroundMeanRGB": [
+        244.73685714285713,
+        242.84247142857143,
+        238.56285714285715
+      ],
+      "backgroundPatchRGB": [
+        [
+          244.8721,
+          243.0201,
+          238.6793
+        ],
+        [
+          244.6783,
+          242.7214,
+          238.4805
+        ],
+        [
+          244.6727,
+          242.6737,
+          238.4274
+        ],
+        [
+          244.7925,
+          242.9188,
+          238.5807
+        ],
+        [
+          244.7718,
+          242.9676,
+          238.6784
+        ],
+        [
+          244.7164,
+          242.7897,
+          238.4891
+        ],
+        [
+          244.6542,
+          242.806,
+          238.6046
+        ]
+      ],
+      "sha256": "f8b945fcede2853216ce63dccd8c329374f08b86abb4f266de8396f3e9f4c478"
+    },
+    {
+      "sku": "GBSpry4mlClBlk",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-e8c87f95-b2c0-4f27-8fac-da1ca58c920e.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBSpry4mlClBlk-on.png",
+      "scaleX": 1.0364963503649636,
+      "scaleY": 0.995,
+      "translation": [
+        -30,
+        -6
+      ],
+      "bodyWidthPx": 246.95652173913044,
+      "bodyHeightPx": 692.4897338403042,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        4.1773834228515625,
+        7.4003143310546875,
+        7.3352203369140625
+      ],
+      "backgroundMeanRGB": [
+        244.8226,
+        242.5996857142857,
+        238.66477142857138
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.2672,
+          243.0817,
+          239.0845
+        ],
+        [
+          244.5815,
+          242.4169,
+          238.5364
+        ],
+        [
+          244.6772,
+          242.5669,
+          238.6846
+        ],
+        [
+          244.8956,
+          242.717,
+          238.7611
+        ],
+        [
+          244.7442,
+          242.4351,
+          238.4777
+        ],
+        [
+          244.7428,
+          242.4741,
+          238.5545
+        ],
+        [
+          244.8497,
+          242.5061,
+          238.5546
+        ]
+      ],
+      "sha256": "75f064ffc52b4d8c143b0b44e9fea94c7d9b0974ee83c95b418d1d88b1433fdb"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-5de6ac2b-9fdd-48e7-b87f-71a6d70c3508.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5GlMattSht-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        5,
+        -56
+      ],
+      "bodyWidthPx": 330.4347826086957,
+      "bodyHeightPx": 859.5224334600761,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -1.210418701171875,
+        -1.441192626953125,
+        -1.8011627197265625
+      ],
+      "backgroundMeanRGB": [
+        245.2104142857143,
+        243.44121428571427,
+        238.8011857142857
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.2713,
+          243.4925,
+          238.8496
+        ],
+        [
+          245.0092,
+          243.2567,
+          238.6896
+        ],
+        [
+          245.1098,
+          243.3327,
+          238.689
+        ],
+        [
+          245.2825,
+          243.5109,
+          238.8615
+        ],
+        [
+          245.267,
+          243.4986,
+          238.8563
+        ],
+        [
+          245.2842,
+          243.6194,
+          238.8975
+        ],
+        [
+          245.2489,
+          243.3777,
+          238.7648
+        ]
+      ],
+      "sha256": "d4df21b3cf82228d57298848863f345c5203399e5a7fa8b07e4468cae864085a"
+    },
+    {
+      "sku": "GBCyl5GlMattSht",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-15ee0d2c-1e73-4238-8292-d0cc110e20ac.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5GlMattSht-on.png",
+      "scaleX": 1.0326086956521738,
+      "scaleY": 1.0421940928270041,
+      "translation": [
+        -27,
+        -129
+      ],
+      "bodyWidthPx": 330.4347826086957,
+      "bodyHeightPx": 859.5224334600761,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        0.754669189453125,
+        1.353302001953125,
+        -0.3395233154296875
+      ],
+      "backgroundMeanRGB": [
+        245.24532857142853,
+        242.6467,
+        239.33954285714285
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.3339,
+          242.6961,
+          239.3982
+        ],
+        [
+          245.0629,
+          242.4464,
+          239.1071
+        ],
+        [
+          245.2291,
+          242.5601,
+          239.4061
+        ],
+        [
+          245.3388,
+          242.6735,
+          239.3819
+        ],
+        [
+          245.1454,
+          242.6665,
+          239.3301
+        ],
+        [
+          245.3093,
+          242.6902,
+          239.3891
+        ],
+        [
+          245.2979,
+          242.7941,
+          239.3643
+        ]
+      ],
+      "sha256": "bf9c28f208b911898646494ebbaaa0d48ca3256513c7951da7fb04505e07a5fc"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-aded6842-2fec-4769-b691-e715cf0b61f7.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5SpryGlMatt-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        10,
+        -41
+      ],
+      "bodyWidthPx": 328.69565217391306,
+      "bodyHeightPx": 767.306463878327,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -1.989288330078125,
+        -1.366973876953125,
+        -0.9470672607421875
+      ],
+      "backgroundMeanRGB": [
+        244.98930000000001,
+        243.36698571428573,
+        238.9470857142857
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.0371,
+          243.4775,
+          239.0454
+        ],
+        [
+          244.7504,
+          243.1178,
+          238.7102
+        ],
+        [
+          244.9881,
+          243.3446,
+          238.933
+        ],
+        [
+          245.0737,
+          243.5554,
+          239.0716
+        ],
+        [
+          245.0082,
+          243.3905,
+          238.9587
+        ],
+        [
+          245.0616,
+          243.351,
+          238.9058
+        ],
+        [
+          245.006,
+          243.3321,
+          239.0049
+        ]
+      ],
+      "sha256": "c290a260f61f82532791053c6b5b9c9611a8000d17e5563e25b2e907c73c1cad"
+    },
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-c498c585-86e7-4f98-aa40-3e2c7b3bbde8.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5SpryGlMatt-on.png",
+      "scaleX": 1.08,
+      "scaleY": 0.8891129032258065,
+      "translation": [
+        -69,
+        189
+      ],
+      "bodyWidthPx": 328.69565217391306,
+      "bodyHeightPx": 767.306463878327,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -0.149169921875,
+        0.8003692626953125,
+        1.0120391845703125
+      ],
+      "backgroundMeanRGB": [
+        245.14918571428572,
+        243.19964285714283,
+        238.98797142857146
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.2256,
+          243.3265,
+          238.8238
+        ],
+        [
+          244.7663,
+          243.0912,
+          238.5416
+        ],
+        [
+          245.0134,
+          243.1083,
+          238.5956
+        ],
+        [
+          245.2007,
+          243.0912,
+          239.0506
+        ],
+        [
+          245.2106,
+          243.1851,
+          239.2461
+        ],
+        [
+          245.3246,
+          243.3127,
+          239.3258
+        ],
+        [
+          245.3031,
+          243.2825,
+          239.3323
+        ]
+      ],
+      "sha256": "d0b946c1e265833cdb8f996a0ec839340c7128b5e099a3a5da2c8f207a9dad04"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-10d09dbc-8703-4772-859d-4f74bfbcd02f.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5MtlRollGlMatt-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        3,
+        -30
+      ],
+      "bodyWidthPx": 328.69565217391306,
+      "bodyHeightPx": 807.3247148288973,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -1.0833892822265625,
+        -1.5425262451171875,
+        -1.7478485107421875
+      ],
+      "backgroundMeanRGB": [
+        245.08338571428573,
+        242.54254285714288,
+        238.74787142857144
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.3939,
+          242.7279,
+          239.0501
+        ],
+        [
+          245.0455,
+          242.6702,
+          238.8244
+        ],
+        [
+          245.2905,
+          242.6986,
+          238.9943
+        ],
+        [
+          245.3093,
+          242.7237,
+          238.9666
+        ],
+        [
+          245.279,
+          242.7061,
+          238.9862
+        ],
+        [
+          245.3046,
+          242.7289,
+          238.9617
+        ],
+        [
+          243.9609,
+          241.5424,
+          237.4518
+        ]
+      ],
+      "sha256": "5a11381e11ed9f39b526b5273b3d9df378a7d5c5de8559ef00f5307a2d9600c6"
+    },
+    {
+      "sku": "GBCyl5MtlRollGlMatt",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-39817ea9-31c1-4c45-9bee-f7ffb5417934.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5MtlRollGlMatt-on.png",
+      "scaleX": 0.9947368421052631,
+      "scaleY": 0.9747899159663865,
+      "translation": [
+        12,
+        30
+      ],
+      "bodyWidthPx": 328.69565217391306,
+      "bodyHeightPx": 807.3247148288973,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -0.2948455810546875,
+        0.4699554443359375,
+        -0.0560760498046875
+      ],
+      "backgroundMeanRGB": [
+        245.29485714285715,
+        242.53005714285715,
+        239.0560857142857
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.4087,
+          242.6504,
+          239.1432
+        ],
+        [
+          245.0508,
+          242.2313,
+          238.7731
+        ],
+        [
+          245.2966,
+          242.4842,
+          239.0326
+        ],
+        [
+          245.374,
+          242.6343,
+          239.1179
+        ],
+        [
+          245.1585,
+          242.4146,
+          238.9242
+        ],
+        [
+          245.4567,
+          242.7809,
+          239.2065
+        ],
+        [
+          245.3187,
+          242.5147,
+          239.1951
+        ]
+      ],
+      "sha256": "1e187547118ba112d282ce105d3558e143bbe9c96fd25ef4791b8af774f9306b"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a9a887cf-51cc-4e1e-8bf1-75e91267d2b5.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylBlu5SlMattSht-off.png",
+      "scaleX": 0.9698492462311558,
+      "scaleY": 1.101511879049676,
+      "translation": [
+        51,
+        -220
+      ],
+      "bodyWidthPx": 335.6521739130435,
+      "bodyHeightPx": 887.361216730038,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        1.1524200439453125,
+        2.3329925537109375,
+        2.1053619384765625
+      ],
+      "backgroundMeanRGB": [
+        244.8475857142857,
+        242.66702857142857,
+        238.89465714285714
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.0393,
+          242.8406,
+          238.9864
+        ],
+        [
+          244.7298,
+          242.6956,
+          238.9293
+        ],
+        [
+          244.9415,
+          242.7317,
+          239.0018
+        ],
+        [
+          244.9174,
+          242.7423,
+          238.9272
+        ],
+        [
+          244.6257,
+          242.4525,
+          238.6865
+        ],
+        [
+          244.9125,
+          242.6685,
+          238.8412
+        ],
+        [
+          244.7669,
+          242.538,
+          238.8902
+        ]
+      ],
+      "sha256": "9e59e2c15828a15e214ec02bb9618ef8e53d810053045de24c03234fa78f91d8"
+    },
+    {
+      "sku": "GBCylBlu5SlMattSht",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-2e6eb976-73aa-4b7a-9262-0b729af64c10.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylBlu5SlMattSht-on.png",
+      "scaleX": 0.9747474747474747,
+      "scaleY": 1.0897435897435896,
+      "translation": [
+        26,
+        -220
+      ],
+      "bodyWidthPx": 335.6521739130435,
+      "bodyHeightPx": 887.361216730038,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        2.1114654541015625,
+        5.2454833984375,
+        5.0646514892578125
+      ],
+      "backgroundMeanRGB": [
+        244.88854285714282,
+        242.75452857142858,
+        238.93534285714284
+      ],
+      "backgroundPatchRGB": [
+        [
+          244.9941,
+          242.8321,
+          238.9694
+        ],
+        [
+          244.7466,
+          242.7079,
+          238.834
+        ],
+        [
+          245.1436,
+          243.1132,
+          239.2498
+        ],
+        [
+          245.04,
+          242.9391,
+          239.1153
+        ],
+        [
+          244.6163,
+          242.4468,
+          238.6504
+        ],
+        [
+          244.9377,
+          242.7393,
+          238.9482
+        ],
+        [
+          244.7415,
+          242.5033,
+          238.7803
+        ]
+      ],
+      "sha256": "25badc97f2d53f91677373251acf2e9777234aadc7fe44347c18469a9b501439"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-74f1224c-ed9f-4153-bcf8-0db2e7de4e04.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylBlu5SprySlMatt-off.png",
+      "scaleX": 1.0265957446808511,
+      "scaleY": 1.118421052631579,
+      "translation": [
+        -26,
+        -259
+      ],
+      "bodyWidthPx": 335.6521739130435,
+      "bodyHeightPx": 887.361216730038,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -1.3719635009765625,
+        -0.6273956298828125,
+        -1.6667938232421875
+      ],
+      "backgroundMeanRGB": [
+        245.37197142857144,
+        242.6273857142857,
+        238.6668
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.3935,
+          242.6933,
+          238.6967
+        ],
+        [
+          245.3203,
+          242.6801,
+          238.6579
+        ],
+        [
+          245.3935,
+          242.5927,
+          238.6499
+        ],
+        [
+          245.4352,
+          242.7956,
+          238.6996
+        ],
+        [
+          245.2986,
+          242.6499,
+          238.6207
+        ],
+        [
+          245.474,
+          242.5704,
+          238.6615
+        ],
+        [
+          245.2887,
+          242.4097,
+          238.6813
+        ]
+      ],
+      "sha256": "522fdde78e2e85a7be7939024e70067f22f123e3718b879858f53be1a023674c"
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-b2c57d47-63e9-4fd1-a021-acf14ef22227.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylBlu5SprySlMatt-on.png",
+      "scaleX": 1.0052083333333333,
+      "scaleY": 1.0874200426439233,
+      "translation": [
+        -4,
+        -196
+      ],
+      "bodyWidthPx": 335.6521739130435,
+      "bodyHeightPx": 887.361216730038,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        0.6814727783203125,
+        2.2919921875,
+        1.3831787109375
+      ],
+      "backgroundMeanRGB": [
+        245.31852857142854,
+        242.7080142857143,
+        238.61682857142858
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.4188,
+          242.8589,
+          238.7134
+        ],
+        [
+          244.999,
+          242.4999,
+          238.4439
+        ],
+        [
+          245.1972,
+          242.5607,
+          238.4117
+        ],
+        [
+          245.5645,
+          242.941,
+          238.8208
+        ],
+        [
+          245.2304,
+          242.6759,
+          238.5588
+        ],
+        [
+          245.3846,
+          242.6809,
+          238.5857
+        ],
+        [
+          245.4352,
+          242.7388,
+          238.7835
+        ]
+      ],
+      "sha256": "7be38eb8e3e29ef514ebd0fe384aec84ef6aa3301a7a34faff55343996550c39"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-d3b70014-d725-4556-8f8a-82f902d1b8cc.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylBlu5MtlRollSlMatt-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        15,
+        -16
+      ],
+      "bodyWidthPx": 335.6521739130435,
+      "bodyHeightPx": 887.361216730038,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        2.4927215576171875,
+        4.9648895263671875,
+        2.613189697265625
+      ],
+      "backgroundMeanRGB": [
+        244.5072714285714,
+        243.0350857142857,
+        239.38681428571428
+      ],
+      "backgroundPatchRGB": [
+        [
+          244.5829,
+          243.0687,
+          239.4243
+        ],
+        [
+          244.2412,
+          242.8542,
+          239.2296
+        ],
+        [
+          244.3869,
+          243.0407,
+          239.4066
+        ],
+        [
+          244.6903,
+          243.256,
+          239.5135
+        ],
+        [
+          244.6157,
+          243.0506,
+          239.4393
+        ],
+        [
+          244.7313,
+          243.1312,
+          239.4406
+        ],
+        [
+          244.3026,
+          242.8442,
+          239.2538
+        ]
+      ],
+      "sha256": "d8ac8b4798626cea6232b8041fdb80efd3b9375e4fbda10e1496785b89b282a3"
+    },
+    {
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-4b42b30f-12c7-4816-8075-d857f344e360.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylBlu5MtlRollSlMatt-on.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0059171597633136,
+      "translation": [
+        4,
+        -20
+      ],
+      "bodyWidthPx": 335.6521739130435,
+      "bodyHeightPx": 887.361216730038,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        3.601409912109375,
+        7.1712646484375,
+        4.296417236328125
+      ],
+      "backgroundMeanRGB": [
+        245.3986,
+        242.82872857142857,
+        238.70357142857142
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.468,
+          242.9534,
+          238.7719
+        ],
+        [
+          245.157,
+          242.6155,
+          238.4876
+        ],
+        [
+          245.4523,
+          242.8654,
+          238.6985
+        ],
+        [
+          245.4294,
+          242.88,
+          238.7477
+        ],
+        [
+          245.6239,
+          243.0709,
+          239.0003
+        ],
+        [
+          245.3111,
+          242.7057,
+          238.5362
+        ],
+        [
+          245.3485,
+          242.7102,
+          238.6828
+        ]
+      ],
+      "sha256": "c61a0b4187804fcb87ba5a09da86e5ff3f0629d75d470b1755ab203f7412b28b"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-dc14202a-f1dc-48ef-832d-392f980bde3c.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5SpryBlkMatt-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        7,
+        -13
+      ],
+      "bodyWidthPx": 323.47826086956525,
+      "bodyHeightPx": 793.4053231939164,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        -1.626983642578125,
+        -2.242401123046875,
+        -2.6645355224609375
+      ],
+      "backgroundMeanRGB": [
+        244.6269857142857,
+        243.24241428571426,
+        238.66454285714286
+      ],
+      "backgroundPatchRGB": [
+        [
+          244.6174,
+          243.3612,
+          238.7185
+        ],
+        [
+          244.4855,
+          242.9823,
+          238.4865
+        ],
+        [
+          244.6798,
+          243.2334,
+          238.678
+        ],
+        [
+          244.6869,
+          243.3053,
+          238.7179
+        ],
+        [
+          244.6495,
+          243.2875,
+          238.6898
+        ],
+        [
+          244.66,
+          243.257,
+          238.6757
+        ],
+        [
+          244.6098,
+          243.2702,
+          238.6854
+        ]
+      ],
+      "sha256": "d5d566e6f1c8a47e39593d99bb7f262df6eef2301a5049838574a2f653e99721"
+    },
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ec432c57-8571-4129-b78f-164de5cc32bf.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCyl5SpryBlkMatt-on.png",
+      "scaleX": 1.0276243093922652,
+      "scaleY": 0.9661016949152542,
+      "translation": [
+        -22,
+        72
+      ],
+      "bodyWidthPx": 323.47826086956525,
+      "bodyHeightPx": 793.4053231939164,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        0.010162353515625,
+        0.6466064453125,
+        0.066436767578125
+      ],
+      "backgroundMeanRGB": [
+        244.98984285714286,
+        243.3533857142857,
+        238.93355714285715
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.0518,
+          243.404,
+          239.0444
+        ],
+        [
+          244.9065,
+          243.318,
+          238.8591
+        ],
+        [
+          244.9508,
+          243.35,
+          238.9241
+        ],
+        [
+          244.9582,
+          243.3608,
+          238.8497
+        ],
+        [
+          245.0556,
+          243.4412,
+          239.0991
+        ],
+        [
+          244.98,
+          243.2822,
+          238.7979
+        ],
+        [
+          245.026,
+          243.3175,
+          238.9606
+        ]
+      ],
+      "sha256": "59877be21ce5516aa33944ae0a6f3472367bb6c47f09e4ef07af27b1d75a3782"
+    },
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "state": "off",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a14d017f-e997-4e24-9dec-c7cce92947d6.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylAmb9SpryGl-off.png",
+      "scaleX": 1.0,
+      "scaleY": 1.0,
+      "translation": [
+        10,
+        -39
+      ],
+      "bodyWidthPx": 316.5217391304348,
+      "bodyHeightPx": 1045.6942965779467,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        0.7679901123046875,
+        2.0113372802734375,
+        2.4618072509765625
+      ],
+      "backgroundMeanRGB": [
+        245.2320142857143,
+        242.98867142857142,
+        238.5381857142857
+      ],
+      "backgroundPatchRGB": [
+        [
+          246.3447,
+          244.1877,
+          239.727
+        ],
+        [
+          245.9995,
+          243.913,
+          239.6552
+        ],
+        [
+          246.3376,
+          244.0827,
+          239.606
+        ],
+        [
+          246.3826,
+          244.2671,
+          239.9149
+        ],
+        [
+          246.3163,
+          244.114,
+          239.69
+        ],
+        [
+          246.1903,
+          244.0859,
+          239.7285
+        ],
+        [
+          239.0531,
+          236.2703,
+          231.4457
+        ]
+      ],
+      "sha256": "4d8b9e8277b2fa60111fb8a09a956e7aeba341520fe7db5d22b5619e80840b60"
+    },
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "state": "on",
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-70fc39b6-50f3-4c84-937a-9c2af24c0642.png",
+      "output": "output/cylinder-hover-batch-01/normalized/GBCylAmb9SpryGl-on.png",
+      "scaleX": 0.9479166666666666,
+      "scaleY": 0.9804241435562806,
+      "translation": [
+        57,
+        -11
+      ],
+      "bodyWidthPx": 316.5217391304348,
+      "bodyHeightPx": 1045.6942965779467,
+      "baselinePx": 2082,
+      "centerPx": 1040.0,
+      "gradeRGB": [
+        3.9999237060546875,
+        7.4511871337890625,
+        8.861297607421875
+      ],
+      "backgroundMeanRGB": [
+        245.00005714285717,
+        242.5488,
+        239.13871428571426
+      ],
+      "backgroundPatchRGB": [
+        [
+          245.7541,
+          243.4335,
+          240.1246
+        ],
+        [
+          245.5848,
+          243.1922,
+          239.793
+        ],
+        [
+          245.6507,
+          243.1885,
+          239.7267
+        ],
+        [
+          245.8555,
+          243.5287,
+          240.0374
+        ],
+        [
+          245.9482,
+          243.4393,
+          240.1059
+        ],
+        [
+          245.3565,
+          242.8454,
+          239.2975
+        ],
+        [
+          240.8506,
+          238.214,
+          234.8859
+        ]
+      ],
+      "sha256": "9c92a29fd388cb974e9e822600efe72023e6176430186471dd4dc1d7416e44cd"
+    }
+  ]
+}
