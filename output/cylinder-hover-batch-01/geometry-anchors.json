@@ -1,0 +1,242 @@
+[
+  {
+    "sku": "GBSpry3mlClBlk",
+    "group": "cylinder-3.3ml-clear-12mm",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ccc87735-78e2-42ba-a0ee-9f1402fb2976.png",
+      "center": 581.5,
+      "left": 501,
+      "right": 662,
+      "width": 161,
+      "shoulder": 852,
+      "base": 1201,
+      "bodyHeight": 349
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-49150453-0bbf-4a79-b967-4b1bf91c23ad.png",
+      "center": 585.5,
+      "left": 504,
+      "right": 667,
+      "width": 163,
+      "shoulder": 858,
+      "base": 1214,
+      "bodyHeight": 356
+    }
+  },
+  {
+    "sku": "GBSpry4mlClBlk",
+    "group": "cylinder-4ml-clear-12mm",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-bd2e80ef-ae7e-4e22-ba8a-1fa22f0faab3.png",
+      "center": 593.0,
+      "left": 522,
+      "right": 664,
+      "width": 142,
+      "shoulder": 806,
+      "base": 1204,
+      "bodyHeight": 398
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-e8c87f95-b2c0-4f27-8fac-da1ca58c920e.png",
+      "center": 593.5,
+      "left": 525,
+      "right": 662,
+      "width": 137,
+      "shoulder": 806,
+      "base": 1206,
+      "bodyHeight": 400
+    }
+  },
+  {
+    "sku": "GBCyl5GlMattSht",
+    "group": "cylinder-5ml-clear-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-5de6ac2b-9fdd-48e7-b87f-71a6d70c3508.png",
+      "center": 595.0,
+      "left": 500,
+      "right": 690,
+      "width": 190,
+      "shoulder": 735,
+      "base": 1229,
+      "bodyHeight": 494
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-15ee0d2c-1e73-4238-8292-d0cc110e20ac.png",
+      "center": 594.0,
+      "left": 502,
+      "right": 686,
+      "width": 184,
+      "shoulder": 745,
+      "base": 1219,
+      "bodyHeight": 474
+    }
+  },
+  {
+    "sku": "GBCyl5SpryGlMatt",
+    "group": "cylinder-5ml-clear-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-aded6842-2fec-4769-b691-e715cf0b61f7.png",
+      "center": 592.5,
+      "left": 498,
+      "right": 687,
+      "width": 189,
+      "shoulder": 779,
+      "base": 1220,
+      "bodyHeight": 441
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-c498c585-86e7-4f98-aa40-3e2c7b3bbde8.png",
+      "center": 590.5,
+      "left": 503,
+      "right": 678,
+      "width": 175,
+      "shoulder": 728,
+      "base": 1224,
+      "bodyHeight": 496
+    }
+  },
+  {
+    "sku": "GBCyl5MtlRollGlMatt",
+    "group": "cylinder-5ml-clear-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-10d09dbc-8703-4772-859d-4f74bfbcd02f.png",
+      "center": 596.5,
+      "left": 502,
+      "right": 691,
+      "width": 189,
+      "shoulder": 750,
+      "base": 1214,
+      "bodyHeight": 464
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-39817ea9-31c1-4c45-9bee-f7ffb5417934.png",
+      "center": 594.0,
+      "left": 499,
+      "right": 689,
+      "width": 190,
+      "shoulder": 734,
+      "base": 1210,
+      "bodyHeight": 476
+    }
+  },
+  {
+    "sku": "GBCylBlu5SlMattSht",
+    "group": "cylinder-5ml-cobalt-blue-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a9a887cf-51cc-4e1e-8bf1-75e91267d2b5.png",
+      "center": 586.5,
+      "left": 487,
+      "right": 686,
+      "width": 199,
+      "shoulder": 738,
+      "base": 1201,
+      "bodyHeight": 463
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-2e6eb976-73aa-4b7a-9262-0b729af64c10.png",
+      "center": 598.0,
+      "left": 499,
+      "right": 697,
+      "width": 198,
+      "shoulder": 746,
+      "base": 1214,
+      "bodyHeight": 468
+    }
+  },
+  {
+    "sku": "GBCylBlu5SprySlMatt",
+    "group": "cylinder-5ml-cobalt-blue-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-74f1224c-ed9f-4153-bcf8-0db2e7de4e04.png",
+      "center": 597.0,
+      "left": 503,
+      "right": 691,
+      "width": 188,
+      "shoulder": 747,
+      "base": 1203,
+      "bodyHeight": 456
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-b2c57d47-63e9-4fd1-a021-acf14ef22227.png",
+      "center": 597.0,
+      "left": 501,
+      "right": 693,
+      "width": 192,
+      "shoulder": 735,
+      "base": 1204,
+      "bodyHeight": 469
+    }
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "group": "cylinder-5ml-cobalt-blue-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-d3b70014-d725-4556-8f8a-82f902d1b8cc.png",
+      "center": 589.5,
+      "left": 493,
+      "right": 686,
+      "width": 193,
+      "shoulder": 696,
+      "base": 1206,
+      "bodyHeight": 510
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-4b42b30f-12c7-4816-8075-d857f344e360.png",
+      "center": 595.5,
+      "left": 499,
+      "right": 692,
+      "width": 193,
+      "shoulder": 694,
+      "base": 1201,
+      "bodyHeight": 507
+    }
+  },
+  {
+    "sku": "GBCyl5SpryBlkMatt",
+    "group": "cylinder-5.5ml-clear-13-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-dc14202a-f1dc-48ef-832d-392f980bde3c.png",
+      "center": 594.0,
+      "left": 501,
+      "right": 687,
+      "width": 186,
+      "shoulder": 748,
+      "base": 1204,
+      "bodyHeight": 456
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ec432c57-8571-4129-b78f-164de5cc32bf.png",
+      "center": 594.5,
+      "left": 504,
+      "right": 685,
+      "width": 181,
+      "shoulder": 724,
+      "base": 1196,
+      "bodyHeight": 472
+    }
+  },
+  {
+    "sku": "GBCylAmb9SpryGl",
+    "group": "cylinder-9ml-amber-17-415",
+    "off": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a14d017f-e997-4e24-9dec-c7cce92947d6.png",
+      "center": 592.0,
+      "left": 501,
+      "right": 683,
+      "width": 182,
+      "shoulder": 618,
+      "base": 1219,
+      "bodyHeight": 601
+    },
+    "on": {
+      "source": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-70fc39b6-50f3-4c84-937a-9c2af24c0642.png",
+      "center": 596.0,
+      "left": 500,
+      "right": 692,
+      "width": 192,
+      "shoulder": 614,
+      "base": 1227,
+      "bodyHeight": 613
+    }
+  }
+]

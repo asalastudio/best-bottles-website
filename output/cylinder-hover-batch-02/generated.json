@@ -1,0 +1,62 @@
+[
+  {
+    "sku": "LBCylAmb9LtnGl",
+    "group": "cylinder-9ml-amber-17-415-lotionpump",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-f4dcb254-0e5d-4096-99d6-70336f440c15.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-41015c5f-9619-409f-b99d-d3ec2d66e5f1.png"
+  },
+  {
+    "sku": "GBCylAmb9MtlRollMattGl",
+    "group": "cylinder-9ml-amber-17-415-rollon",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-184b23e1-5f28-46dd-b4b2-72853164e2ed.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-3d015d4e-6bf4-4e89-954d-9b265e277497.png"
+  },
+  {
+    "sku": "GBTallCyl9GlMattSht",
+    "group": "cylinder-9ml-clear-13-415",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-f4646ca8-b7a3-4a22-bad2-1bcaba5087e0.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-eb9b194a-945e-42b7-b71d-aa06b05a439c.png"
+  },
+  {
+    "sku": "GBTallCyl9SpryGlMatt",
+    "group": "cylinder-9ml-clear-13-415-finemist",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-256c99f3-27f7-4752-b378-e4812799cbf8.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-3f7900c0-82b5-4b9c-a464-479182912d0c.png"
+  },
+  {
+    "sku": "GBCyl9SpryGl",
+    "group": "cylinder-9ml-clear-17-415-finemist",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-257fbb62-d99e-490e-9df4-082f2c656458.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-d110adab-35cd-4813-b199-bd43817fffad.png"
+  },
+  {
+    "sku": "LBCyl9LtnGl",
+    "group": "cylinder-9ml-clear-17-415-lotionpump",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-1359c060-a9d1-44f8-937a-37d2339afa38.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a3dcadef-3245-400b-b66f-6818690991bc.png"
+  },
+  {
+    "sku": "GBCylBlu9SpryMattSl",
+    "group": "cylinder-9ml-cobalt-blue-17-415-finemist",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-57a54ced-9a84-47f9-a690-18f7eaa29d28.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-2e78ef23-e54d-4afd-8879-d1f9dcf6dec6.png"
+  },
+  {
+    "sku": "LBCylBlu9LtnMattSl",
+    "group": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-e6508cef-97ed-45d1-ab58-a97dc151bfce.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-be784316-09e5-403e-8779-faa4efc2ae9a.png"
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattSl",
+    "group": "cylinder-9ml-cobalt-blue-17-415-rollon",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-912e70b8-72f7-4b60-830a-528f76fe9d79.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-34df4fe8-46fe-4401-88eb-c8a716636990.png"
+  },
+  {
+    "sku": "GBTallCylFrst9GlMattSht",
+    "group": "cylinder-9ml-frosted-13-415",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-9e9a8e97-e551-4ebb-8aa7-f3b3d9fa0392.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-e31da01b-5142-4866-93e9-e30622bf1c7d.png"
+  }
+]

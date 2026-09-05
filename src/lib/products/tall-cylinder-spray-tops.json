@@ -1,0 +1,194 @@
+{
+  "GBTallCylFrst9SpryBlkMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/afa57a7764866ca9f64bffb49b2518248420554f81bb64d5019e2439803a2498.sprayer.webp",
+    "sha256": "afa57a7764866ca9f64bffb49b2518248420554f81bb64d5019e2439803a2498",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 312,
+      "left": 440,
+      "right": 562,
+      "top": 70
+    }
+  },
+  "GBTallCylFrst9SpryBlkSh": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/48b134452e9202f18574645678d3188d3d676c203b13c247a662a03fc5527d3d.sprayer.webp",
+    "sha256": "48b134452e9202f18574645678d3188d3d676c203b13c247a662a03fc5527d3d",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 298,
+      "left": 436,
+      "right": 560,
+      "top": 69
+    }
+  },
+  "GBTallCylFrst9SpryBluMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/f77aae1a29fb918ef6a99c84c5ae43032e8ddaa9650309283c700d5f269f77d8.sprayer.webp",
+    "sha256": "f77aae1a29fb918ef6a99c84c5ae43032e8ddaa9650309283c700d5f269f77d8",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 293,
+      "left": 437,
+      "right": 558,
+      "top": 66
+    }
+  },
+  "GBTallCylFrst9SpryCuMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/335c6c5f869e151648d5be9e5ed16a520b5ea103553d5b3d012f7818310d5d65.sprayer.webp",
+    "sha256": "335c6c5f869e151648d5be9e5ed16a520b5ea103553d5b3d012f7818310d5d65",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 295,
+      "left": 439,
+      "right": 562,
+      "top": 65
+    }
+  },
+  "GBTallCylFrst9SpryGlMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/0f701c1905bf46e8f4a2ca73e1bc8bdb73d048fa8ca0382283602927383582b0.sprayer.webp",
+    "sha256": "0f701c1905bf46e8f4a2ca73e1bc8bdb73d048fa8ca0382283602927383582b0",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 299,
+      "left": 439,
+      "right": 560,
+      "top": 69
+    }
+  },
+  "GBTallCylFrst9SpryGlSh": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/44c1a9e97c72be4303aeaeac755381ed168f672e027b0834367528837a91c0c9.sprayer.webp",
+    "sha256": "44c1a9e97c72be4303aeaeac755381ed168f672e027b0834367528837a91c0c9",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 306,
+      "left": 434,
+      "right": 559,
+      "top": 73
+    }
+  },
+  "GBTallCylFrst9SprySlMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/8d3f582b6139f76de2aadbe4309b9775cf392e8ae6945b946219093632e896f3.sprayer.webp",
+    "sha256": "8d3f582b6139f76de2aadbe4309b9775cf392e8ae6945b946219093632e896f3",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 296,
+      "left": 434,
+      "right": 561,
+      "top": 68
+    }
+  },
+  "GBTallCylFrst9SprySlSh": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/52e910f787ac1a9d1b81f5d8843c4730284ce934d6aa0d4ae7bba87ace23634a.sprayer.webp",
+    "sha256": "52e910f787ac1a9d1b81f5d8843c4730284ce934d6aa0d4ae7bba87ace23634a",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 304,
+      "left": 436,
+      "right": 559,
+      "top": 76
+    }
+  },
+  "GBTallCyl9SpryBlkMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/ce74f88d9326e47a24f998fd2c1b3b004e7d6de1a9d0accbac0aca90d9dabd75.sprayer.webp",
+    "sha256": "ce74f88d9326e47a24f998fd2c1b3b004e7d6de1a9d0accbac0aca90d9dabd75",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 320,
+      "left": 443,
+      "right": 564,
+      "top": 78
+    }
+  },
+  "GBTallCyl9SpryBlkSh": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/491117d893f3e378998b06f65a3001b5dad8a68e501b11955893fa512052a66c.sprayer.webp",
+    "sha256": "491117d893f3e378998b06f65a3001b5dad8a68e501b11955893fa512052a66c",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 309,
+      "left": 439,
+      "right": 561,
+      "top": 83
+    }
+  },
+  "GBTallCyl9SpryBluMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/676aa14889cec77ab378f4b3425be2af0613378fa28b359dbda88b31acf9a854.sprayer.webp",
+    "sha256": "676aa14889cec77ab378f4b3425be2af0613378fa28b359dbda88b31acf9a854",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 302,
+      "left": 440,
+      "right": 560,
+      "top": 76
+    }
+  },
+  "GBTallCyl9SpryCuMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/b12237313b3b4180a21d7b621300f4b304fddcd07dc4736184033447877811bc.sprayer.webp",
+    "sha256": "b12237313b3b4180a21d7b621300f4b304fddcd07dc4736184033447877811bc",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 304,
+      "left": 438,
+      "right": 560,
+      "top": 79
+    }
+  },
+  "GBTallCyl9SpryGlMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/8badb61495d2c8c73b82835aa68ba10d75d6632bdd654a102c049a6c15ba80e9.sprayer.webp",
+    "sha256": "8badb61495d2c8c73b82835aa68ba10d75d6632bdd654a102c049a6c15ba80e9",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 307,
+      "left": 441,
+      "right": 560,
+      "top": 81
+    }
+  },
+  "GBTallCyl9SpryGlSh": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/c3a063c5677aa6b7837bb76d689a85192fa434f20e0e5654124b0cd523e4c5d1.sprayer.webp",
+    "sha256": "c3a063c5677aa6b7837bb76d689a85192fa434f20e0e5654124b0cd523e4c5d1",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 304,
+      "left": 437,
+      "right": 561,
+      "top": 72
+    }
+  },
+  "GBTallCyl9SprySlMatt": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/3875638fe8c8848a244008cc582adc5cb8593eb1a966837e633c3867783dfc97.sprayer.webp",
+    "sha256": "3875638fe8c8848a244008cc582adc5cb8593eb1a966837e633c3867783dfc97",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 304,
+      "left": 438,
+      "right": 564,
+      "top": 77
+    }
+  },
+  "GBTallCyl9SprySlSh": {
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/kits/cylinder-master/79a5a1c56eff9f99e72414ce824db11558a893bdf530af3064ac2d494fac6dba.sprayer.webp",
+    "sha256": "79a5a1c56eff9f99e72414ce824db11558a893bdf530af3064ac2d494fac6dba",
+    "width": 1000,
+    "height": 1100,
+    "bounds": {
+      "bottom": 306,
+      "left": 439,
+      "right": 563,
+      "top": 78
+    }
+  }
+}

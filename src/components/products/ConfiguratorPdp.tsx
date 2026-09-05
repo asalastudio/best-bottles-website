@@ -19,7 +19,7 @@ import dynamic from "next/dynamic";
 import {
   Check, ChatCircle, ShoppingBag,
 } from "@/components/icons";
-import { HandGrabbing,
+import { ArrowLeft, HandGrabbing,
          Copy, Flask as BottleGlyph } from "@phosphor-icons/react";
 import { GLASS_PRESETS, type GlassPresetId } from "@/lib/materials/glassPresets";
 import { familyForSlugOrDerived, glassFromSlug, type ClosureBase }
@@ -31,9 +31,10 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
-import { explodedKitFrame } from "@/lib/products/kit-frame";
+import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
 
 import { useGLTF } from "@react-three/drei";
+import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
 import PdpStageModeDock from "./PdpStageModeDock";
 import {
@@ -249,7 +250,7 @@ export default function ConfiguratorPdp({
   // point of a kit — and only the removable closure leaves.
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
-    const parts = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
+    const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
     return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
   }, [kit, withCap]);
   // What is actually on screen: a fully decoded set owned by the current kit.
@@ -408,6 +409,8 @@ export default function ConfiguratorPdp({
   // the plate for the selected SKU; cap-off plate when the cap is lifted
   const wantedPlate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
+  // Prefer exact assembled photographs; retain layers for exploded or missing states.
+  const showKitLayers = kitReady && (exploded || !plate || (!withCap && !plateImageCapOff));
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -435,7 +438,7 @@ export default function ConfiguratorPdp({
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
               mounted made every colourway change refetch a plate nobody sees. */}
-          {!kitReady && (
+          {!showKitLayers && (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
                  width={1000} height={1100} decoding="async"
@@ -447,7 +450,7 @@ export default function ConfiguratorPdp({
               construction, which is what keeps the bottle still. */}
           <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
                style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
-          {kitParts?.map((part) => (
+          {showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}
                  alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}
@@ -490,7 +493,13 @@ export default function ConfiguratorPdp({
       <div className="absolute top-3.5 left-3.5 right-3.5 z-[40] flex items-center justify-between gap-3 pointer-events-none">
         {/* The plain photograph carries no badge: the mode bar below the stage
             already says so, and the chip read as a label on the product. */}
-        {(!showDimensions && (showLive3d || (exploded && kitReady))) ? (
+        {!showDimensions && exploded && kitReady ? (
+          <button type="button" onClick={() => pickMode("photo")}
+                  className="pointer-events-auto flex min-h-11 items-center gap-2 rounded-[3px] bg-obsidian px-3 py-2 text-xs font-semibold text-white shadow-sm hover:bg-obsidian/90 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold">
+            <ArrowLeft className="h-4 w-4" aria-hidden />
+            <span>Back to photo</span>
+          </button>
+        ) : (!showDimensions && showLive3d) ? (
           <span className="flex items-center gap-1.5 rounded-[3px] px-2.5 py-1.5 backdrop-blur"
                 style={{ background: "rgba(29,29,31,.85)" }}>
             <span className="h-1.5 w-1.5 rounded-full bg-muted-gold" />
@@ -795,6 +804,7 @@ export default function ConfiguratorPdp({
       <div className="grid grid-cols-4 gap-2 lg:grid-cols-[repeat(auto-fill,minmax(56px,72px))]">
         {(glassOptions ?? []).map((g) => {
           const on = g.active;
+          const swatch = glassSwatchImage(g.id) ?? glassSwatchImage(g.label) ?? g.imageUrl;
           return (
             <button key={g.id} type="button" aria-pressed={on}
                onClick={() => {
@@ -804,9 +814,9 @@ export default function ConfiguratorPdp({
                            ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>
               <span className="relative block aspect-square overflow-hidden rounded-t-[2px]"
                     style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
-                {g.imageUrl ? (
+                {swatch ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={g.imageUrl} alt={g.label} className="absolute inset-0 h-full w-full object-cover" />
+                  <img src={swatch} alt={g.label} className="absolute inset-0 h-full w-full object-cover" />
                 ) : (
                   <span className="absolute inset-0 flex items-center justify-center">
                     <BottleGlyph className="h-8 w-8 text-obsidian/25" />

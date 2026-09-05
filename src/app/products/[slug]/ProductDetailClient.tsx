@@ -1,11 +1,13 @@
 "use client";
 
+import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
+import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useQuery } from "convex/react";
+import { useConvex, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
 import {
     ShoppingBag, ArrowLeft, Package,
@@ -53,7 +55,7 @@ import {
 } from "@/lib/volumePricing";
 import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
-import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
+import { resolveGlassSiblingVariant, resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import MobileProductPdp from "@/components/products/mobile/MobileProductPdp";
 import {
@@ -1096,6 +1098,9 @@ export default function ProductDetailClient({
     platesBySku?: Record<string, { image: string; imageCapOff: string | null }>;
 }) {
     const router = useRouter();
+    const convex = useConvex();
+    const glassNavigationRequest = useRef(0);
+    const [glassNavigationError, setGlassNavigationError] = useState<string | null>(null);
     const pathname = usePathname();
     const searchParams = useSearchParams();
     const { openPanel: openGracePanel } = useGrace();
@@ -1137,7 +1142,7 @@ export default function ProductDetailClient({
     const group = data?.group;
     const variants = useMemo(() => {
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
-        return filterVariantsForProductGroup(data?.group, rawVariants);
+        return filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
     }, [data?.group, data?.variants]);
     const isRollonGroup = /roll-?on/.test(activeSlug);
     const variantFromUrl = useMemo(
@@ -1705,20 +1710,35 @@ export default function ProductDetailClient({
         }
     }, [activeApplicator, activeCapColor, activeSlug, canonicalVariantUrl, primaryVariant, rollerTypeOptions, router, variantFromUrl, variants]);
 
-    const handleGuidedProductUrlChange = useCallback((href: string) => {
+    const handleGuidedProductUrlChange = useCallback(async (href: string) => {
         const target = new URL(href, "https://bestbottles.local");
         if (!target.pathname.startsWith("/products/")) return;
+        const request = ++glassNavigationRequest.current;
+        setGlassNavigationError(null);
         if (selectedVariant && !target.searchParams.has("sku")) {
-            const sku = canonicalSku(selectedVariant);
-            if (sku) target.searchParams.set("sku", sku);
-            const finish = resolveVariantCapFinish(selectedVariant);
-            if (finish.swatchName) target.searchParams.set("cap", finish.swatchName);
-            if (selectedVariant.applicator) target.searchParams.set("applicator", selectedVariant.applicator);
+            try {
+                const targetSlug = decodeURIComponent(target.pathname.slice("/products/".length));
+                const sibling = await convex.query(api.products.getProductGroup, { slug: targetSlug });
+                if (request !== glassNavigationRequest.current) return;
+                const candidates = filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]).map(normalizeImportedCapColor);
+                const resolved = resolveGlassSiblingVariant(candidates, {
+                    applicator: selectedVariant.applicator,
+                    capOption: resolveVariantCapFinish(selectedVariant).swatchName,
+                }, GUIDED_VARIANT_DEPS);
+                const sku = resolved ? canonicalSku(resolved) : null;
+                if (!sku) throw new Error("No matching glass variant");
+                target.searchParams.set("sku", sku);
+            } catch {
+                if (request === glassNavigationRequest.current) {
+                    setGlassNavigationError("We couldn't load that glass option. Please try again.");
+                }
+                return;
+            }
         }
         if (safeFrom) target.searchParams.set("from", safeFrom);
         if (qty > 1) target.searchParams.set("qty", String(qty));
         router.replace(`${target.pathname}${target.search}`, { scroll: false });
-    }, [qty, router, safeFrom, selectedVariant]);
+    }, [convex, qty, router, safeFrom, selectedVariant]);
 
     useEffect(() => {
         const onPlate = (event: Event) => {
@@ -2054,6 +2074,7 @@ export default function ProductDetailClient({
         >
             <Navbar hideMobileSearch />
             <div className="pt-[104px] sm:pt-[160px] lg:pt-[120px]" data-mobile-pdp-frame="">
+                {glassNavigationError && <p role="alert" className="mx-4 mb-4 text-sm text-obsidian">{glassNavigationError}</p>}
                 {/* ── Breadcrumb ──────────────────────────────────────────────────── */}
                 <div className={isFocusedPurchasePdp ? "hidden md:block" : undefined}>
                     <Breadcrumbs steps={breadcrumbsSteps} />
@@ -2115,7 +2136,7 @@ export default function ProductDetailClient({
                                 currentSlug={group.slug}
                                 variantImageUrl={usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
-                                plateImageCapOff={selectedPlate?.imageCapOff ?? null}
+                                plateImageCapOff={verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}

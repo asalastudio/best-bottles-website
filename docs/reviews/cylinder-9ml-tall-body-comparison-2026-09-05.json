@@ -1,0 +1,69 @@
+{
+  "status": "Read-only visual measurement; no image or framing edits",
+  "method": "Body silhouette width measured at three middle-body scanlines, 12 RGB-level contrast threshold, then multiplied by current CSS scale. Clear glass highlights and frosted edges limit precision. Height uses existing source baseline and detected mouth edge.",
+  "results": [
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "scaledBodyWidthPx": 256.1,
+      "widthSamplesPx": [
+        255.1,
+        256.1,
+        256.1
+      ],
+      "bothStatesSameFraming": true,
+      "framing": {
+        "scale": 0.977551,
+        "translateXPercent": 1.1225,
+        "translateYPercent": 2.0429
+      },
+      "approxBareHeightPx": 1484.0
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "scaledBodyWidthPx": 263.2,
+      "widthSamplesPx": [
+        265.2,
+        263.2,
+        261.2
+      ],
+      "bothStatesSameFraming": true,
+      "framing": {
+        "scale": 1.00451,
+        "translateXPercent": -0.2255,
+        "translateYPercent": -0.4104
+      }
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "scaledBodyWidthPx": 264.4,
+      "widthSamplesPx": [
+        266.4,
+        264.4,
+        264.4
+      ],
+      "bothStatesSameFraming": true,
+      "framing": {
+        "scale": 1.012914,
+        "translateXPercent": -0.6457,
+        "translateYPercent": -1.1752
+      },
+      "approxBareHeightPx": 1484.0
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "scaledBodyWidthPx": 259.3,
+      "widthSamplesPx": [
+        262.3,
+        259.3,
+        259.3
+      ],
+      "bothStatesSameFraming": true,
+      "framing": {
+        "scale": 0.989855,
+        "translateXPercent": 0.5072,
+        "translateYPercent": 0.9232
+      }
+    }
+  ],
+  "finding": "Cap-only clear and frosted heights match at approximately 1484 image pixels; frosted body is about 3.2 percent wider. Cap-only clear is about 2.7 percent narrower than clear spray; frosted cap-only is about 2 percent wider than frosted spray. These are residual image geometry differences, not different physical bottle dimensions."
+}

@@ -11,6 +11,12 @@ const divaGroup = {
 };
 
 describe("customer-facing product names", () => {
+    it("distinguishes the 9 ml tall body from a regular bottle wearing a tall cap", () => {
+        const group = { family: "Cylinder", capacityMl: 9, color: "Clear", neckThreadSize: "13-415", slug: "cylinder-9ml-clear-13-415-finemist" };
+        expect(getCustomerFacingProductName({ group, variant: { websiteSku: "GBTallCyl9SpryGlMatt", applicator: "Fine Mist Sprayer", capColor: "Matte Gold" } }).displayName).toContain("9 ml Clear Tall Cylinder");
+        expect(getCustomerFacingProductName({ group: { ...group, neckThreadSize: "17-415", slug: "cylinder-9ml-clear-17-415-rollon" }, variant: { websiteSku: "GBCyl9MtlRollMattGl", applicator: "Metal Roller Ball", capStyle: "Tall" } }).displayName).not.toContain("Tall Cylinder");
+        expect(getCustomerFacingProductName({ group: { ...group, slug: "cylinder-9ml-clear-13-415", displayName: "9 ml Clear Cylinder Bottle with Cap" }, fallbackName: "9 ml Clear Cylinder Bottle with Cap" }).displayName).toBe("9 ml Clear Tall Cylinder Bottle with Cap");
+    });
     it("names Diva perfume spray finishes from variant evidence", () => {
         expect(
             getCustomerFacingProductName({

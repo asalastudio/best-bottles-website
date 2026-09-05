@@ -55,6 +55,49 @@ afterEach(() => {
 });
 
 describe("focused PDP mobile purchase surface", () => {
+    it("keeps exact cap-on and cap-off photographs after kit decode and reserves kit layers for exploded mode", async () => {
+        const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
+        installInstantImageDecode();
+        sessionStorage.removeItem("bb:pdp-stage");
+        const container = document.createElement("div");
+        containers.push(container);
+        document.body.append(container);
+        const root = createRoot(container);
+        await act(async () => {
+            root.render(createElement(ConfiguratorPdp, {
+                currentSlug: "cylinder-25ml-clear-18-415-finemist", groupTitle: "Cylinder 25 mL", capacityLabel: "Clear glass",
+                qty: 1, priceEach: 2.5, websiteSku: "WEB-25", selectedGraceSku: "GRACE-25",
+                plateImage: "https://example.test/capped.webp", plateImageCapOff: "https://example.test/recovered-off.webp",
+                kitQuery: kitFor("WEB-25", "https://example.test/old-kit.webp"),
+            }));
+            await Promise.resolve();
+            await Promise.resolve();
+        });
+        expect(container.querySelector('img[src="https://example.test/recovered-off.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).toBeNull();
+        await act(async () => {
+            container.querySelector<HTMLButtonElement>('[aria-label="Cap on or off"]')!.click();
+            await Promise.resolve();
+            await Promise.resolve();
+        });
+        expect(container.querySelector('img[src="https://example.test/capped.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).toBeNull();
+        expect(container.querySelector('img[src="https://example.test/recovered-off.webp"]')).toBeNull();
+        const modeButton = (label: string) => [...container.querySelectorAll<HTMLButtonElement>('[aria-label="Product view"] button')].find(b => b.textContent === label)!;
+        await act(async () => { modeButton("Exploded").click(); });
+        expect(container.querySelector('img[src="https://example.test/old-kit.webp"]')).not.toBeNull();
+        expect(container.querySelector('img[src="https://example.test/capped.webp"]')).toBeNull();
+        const returnButton = [...container.querySelectorAll<HTMLButtonElement>("button")].find(b => b.textContent === "Back to photo");
+        expect(returnButton).toBeDefined();
+        expect(modeButton("Exploded").getAttribute("aria-pressed")).toBe("true");
+        await act(async () => { returnButton!.click(); });
+        expect(modeButton("Photo").getAttribute("aria-pressed")).toBe("true");
+        expect(modeButton("Exploded").getAttribute("aria-pressed")).toBe("false");
+        expect(container.textContent).not.toContain("Back to photo");
+        expect(container.querySelector('[aria-label="Cap on or off"]')?.getAttribute("aria-pressed")).toBe("true");
+        expect(sessionStorage.getItem("bb:pdp-stage")).toBe("photo");
+        await act(async () => { root.unmount(); });
+    });
     it("contains option overflow at the real closure rail rather than the 390px page", async () => {
         const { default: ConfiguratorPdp } = await import("../src/components/products/ConfiguratorPdp");
         const container = document.createElement("div");

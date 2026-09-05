@@ -1,0 +1,134 @@
+{
+  "approvedBy": "Jordan Richter",
+  "status": "locked",
+  "approvedAt": "2026-09-05T17:32:56.601621+00:00",
+  "approval": "User reviewed revised batch4 and said everything looks solid.",
+  "productionPublished": false,
+  "files": [
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl25DrpGl-off.png",
+      "sha256": "8a6c864fc7b4da2e849b7b7da5d7fdefb5cb77173f7547c498c9319b9643c471",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl25DrpGl-on.png",
+      "sha256": "6fb82eaecfe6f27f8d0bb9ffbde26f1b1ec20ee8a1ecd2f3e89d52870b918dc8",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBcyl25SpryMtGl-off-v2.png",
+      "sha256": "2619b0668c177c55eb1807d0f94f65048486c4042ad2f4f460a2f7b0c118a286",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBcyl25SpryMtGl-on-v2.png",
+      "sha256": "014fe856576c5f193e00296ced0cdb07299236b4d755bf77b59c7a37991fc50b",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/LBCyl25LtnMtGl-off-v2.png",
+      "sha256": "f2c7bec55f75adfd8608eaa0f53bf7884ac540aa9c93962d17e6b7e6dea347c1",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/LBCyl25LtnMtGl-on-v2.png",
+      "sha256": "e9c43b1b27ddc8b08cc8644b5d446f446bd1fe28ead9f715e954567b7552292c",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl25RdcrShnGl-off.png",
+      "sha256": "4017295aecaf411f893765e66dd4ab397a775f8c2b121fe6346170b265d675af",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl25RdcrShnGl-on.png",
+      "sha256": "2da7c16796d8cabb99a53d0cb00b17d62a8549bb2a4ebdd493a3ffba4285909b",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBMtlRoll28Blk-off.png",
+      "sha256": "336b9db9b3d1cb8cadd011234eff3f87da8d099ff98424fdfee95754897adcfc",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBMtlRoll28Blk-on.png",
+      "sha256": "12656a0feff8c3c6eb545b94ace19dad587e5a6132e14aee4542275823f5fc83",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBSpry1ozGl-off.png",
+      "sha256": "75e44d5834b5f6f9d88bd36b639812f7572309df929982453f59d3b7d021fef5",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBSpry1ozGl-on.png",
+      "sha256": "c2dab01c680bc4a637d1bcc38adaec81efd7de6f4d6a9e6d49f51d96b4746e09",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl50MtlRollBlk-off.png",
+      "sha256": "99530505c321655b79760ef2881d29b5e7fa232377f1da0d8de377aea85334d9",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl50MtlRollBlk-on-v2.png",
+      "sha256": "91c153f0efd4d5ce68dab319f5a8075b10e494d34bb24f35368870497ef27d52",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpIvyGl-off.png",
+      "sha256": "fe9999d8b67539688f30ae34c8e18c07ae19d770895d1b9683e38b9233339ccc",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpIvyGl-on.png",
+      "sha256": "47ce2dc5b51771c58c3b0d06d586649e078c967da13e1adb244abcd518490d28",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpTslIvyGl-off.png",
+      "sha256": "7efa211057d3df0982c3bd27cda0ca174b5e5e0e3f6738916ccaff492afab30d",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpTslIvyGl-on.png",
+      "sha256": "8e4c4305f8834d12d7fac7866b51286371c4e7f2f4c6b370292692e3c922f4e1",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/LBCyl50LtnMtGl-off.png",
+      "sha256": "42faa398b0610111a583d62b28446d36e9065f402c50feaa4b61f1aaa39b3840",
+      "width": 2080,
+      "height": 2288
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-04/LBCyl50LtnMtGl-on.png",
+      "sha256": "9a37d627ad23b04ea03393170021e5635bb0dcd5a03962af03c43829d39ad472",
+      "width": 2080,
+      "height": 2288
+    }
+  ],
+  "reviewPage": {
+    "path": "public/preview/cylinder-hover-batch-04/index.html",
+    "sha256": "d5b5e1f6611a68e7096fb38a48caedd916a16acf0bd76263b8843d52e0d68917"
+  },
+  "note": "Whole-image CSS registration is part of approved local presentation. Preserve HTML and images together."
+}

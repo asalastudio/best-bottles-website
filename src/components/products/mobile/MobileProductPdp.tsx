@@ -1,5 +1,8 @@
 "use client";
 
+import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
+import { glassSwatchImage } from "@/lib/products/glass-swatches";
+
 /**
  * The mobile PDP: one bottle, one property changed at a time. Presentational
  * over ProductDetailClient's state — it receives the resolved variant, the
@@ -124,7 +127,9 @@ export type MobileProductPdpProps = {
 
 function plateFor(platesBySku: Record<string, PlateRef>, variant: ProductVariant | null | undefined): PlateRef | null {
     if (!variant) return null;
-    return platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined) ?? null;
+    const plate = platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined) ?? null;
+    const capOff = verifiedCapOffPhoto(variant.websiteSku);
+    return capOff && plate ? { ...plate, imageCapOff: capOff } : plate;
 }
 
 function slugFromHref(href: string): string {
@@ -270,7 +275,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             const thumb = option.active
                 ? committedPlate?.thumb ?? committedPlate?.image ?? null
                 : siblingPreviews[slugFromHref(option.href)]?.plate?.thumb ?? null;
-            return { id: option.id, label: option.label, thumbUrl: thumb ?? option.imageUrl ?? null };
+            return { id: option.id, label: option.label, thumbUrl: glassSwatchImage(option.id) ?? glassSwatchImage(option.label) ?? thumb ?? option.imageUrl ?? null };
         });
         return { options, selectedId: glassOptions.find((option) => option.active)?.id ?? null };
     }, [glassOptions, committedPlate, siblingPreviews]);
@@ -489,7 +494,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             <MobileProductHero
                 ref={heroRef}
                 plateUrl={decodedPlate.url}
-                kitParts={kitPartsWithCap}
+                kitParts={decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}
                 alt={`${displayName}${previewingLabel ? ` — previewing ${previewingLabel}` : ""}`}
                 backHref={backHref}
@@ -621,7 +626,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                 viewModes={viewModes}
                 onViewModeChange={changeViewerView}
                 plateUrl={viewerPlate.url}
-                kitParts={viewerKitParts}
+                kitParts={viewerPlate.url && viewerPlate.url === (viewerMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : viewerKitParts}
                 fallbackImageUrl={viewerPlate.url ? null : fallbackImageUrl}
                 alt={displayName}
                 onPlateError={markPlateBroken}

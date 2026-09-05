@@ -40,7 +40,7 @@ function detailLine(product: GuidedFinderProduct): string {
 
 export default function FocusedProductCard({ product, finderUrl, onOpen }: FocusedProductCardProps) {
     const productHref = buildFocusedProductHref(product.href, finderUrl);
-    const productTitle = getCustomerFacingProductName({
+    const productTitle = product.catalogHero?.alt ?? getCustomerFacingProductName({
         group: {
             family: product.family,
             capacity: product.capacity,
@@ -73,6 +73,7 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
             <ProductCardImagePreview
                 productTitle={productTitle}
                 defaultImage={{ url: product.imageUrl, alt: productTitle }}
+                catalogHero={product.catalogHero}
                 placeholderLabel="Product media in preparation"
                 variantPreviews={previews}
                 productHref={productHref}
@@ -81,6 +82,7 @@ export default function FocusedProductCard({ product, finderUrl, onOpen }: Focus
                 auditMeta={{
                     surface: "focused-finder-card",
                     family: product.family,
+                    productGroupSlug: product.catalogHero?.groupSlug,
                     shopifyVariantId: product.shopifyVariantId,
                 }}
             />

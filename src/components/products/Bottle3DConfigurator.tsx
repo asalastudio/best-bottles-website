@@ -1,5 +1,7 @@
 "use client";
 
+import { glassSwatchImage } from "@/lib/products/glass-swatches";
+
 /**
  * Bottle3DConfigurator — the PDP's interactive 3D product surface.
  *
@@ -247,12 +249,12 @@ export default function BottleConfigurator({
                             aria-label={`${GLASS_PRESETS[id].label} glass`}
                             aria-pressed={glass === id}
                             title={GLASS_PRESETS[id].label}
-                            className={`h-7 w-7 rounded-full transition-all duration-200 ${
+                            className={`h-7 w-7 rounded-[2px] transition-all duration-200 ${
                                 glass === id
                                     ? "ring-2 ring-muted-gold ring-offset-2 ring-offset-linen scale-105"
                                     : "ring-1 ring-champagne hover:ring-ash"
                             }`}
-                            style={{ background: GLASS_SWATCH[id] }}
+                            style={{ backgroundColor: GLASS_SWATCH[id], backgroundImage: `url(${glassSwatchImage(id)})`, backgroundSize: "cover" }}
                         />
                     ))}
                 </div>

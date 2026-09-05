@@ -1,0 +1,142 @@
+[
+  {
+    "sku": "GBSpry3mlClBlk",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBSpry3mlClBlk",
+    "state": "on",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBSpry4mlClBlk",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBSpry4mlClBlk",
+    "state": "on",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCyl5GlMattSht",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCyl5GlMattSht",
+    "state": "on",
+    "detectedContact": 2081,
+    "target": 2082,
+    "errorPixels": -1
+  },
+  {
+    "sku": "GBCyl5SpryGlMatt",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCyl5SpryGlMatt",
+    "state": "on",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCyl5MtlRollGlMatt",
+    "state": "off",
+    "detectedContact": 2083,
+    "target": 2082,
+    "errorPixels": 1
+  },
+  {
+    "sku": "GBCyl5MtlRollGlMatt",
+    "state": "on",
+    "detectedContact": 2083,
+    "target": 2082,
+    "errorPixels": 1
+  },
+  {
+    "sku": "GBCylBlu5SlMattSht",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCylBlu5SlMattSht",
+    "state": "on",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCylBlu5SprySlMatt",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCylBlu5SprySlMatt",
+    "state": "on",
+    "detectedContact": 2081,
+    "target": 2082,
+    "errorPixels": -1
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "state": "on",
+    "detectedContact": 2083,
+    "target": 2082,
+    "errorPixels": 1
+  },
+  {
+    "sku": "GBCyl5SpryBlkMatt",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCyl5SpryBlkMatt",
+    "state": "on",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCylAmb9SpryGl",
+    "state": "off",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  },
+  {
+    "sku": "GBCylAmb9SpryGl",
+    "state": "on",
+    "detectedContact": 2082,
+    "target": 2082,
+    "errorPixels": 0
+  }
+]

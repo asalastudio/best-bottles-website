@@ -78,7 +78,7 @@ describe("product card variant previews", () => {
         );
 
         expect(previews[0]?.optionType).toBe("glassColor");
-        expect(previews[0]?.swatchImageUrl).toContain("cdn.sanity.io");
+        expect(previews[0]?.swatchImageUrl).toContain("/assets/glass-swatches/amber-");
     });
 
     it("uses SKU finish evidence when imported cap fields are generic", () => {

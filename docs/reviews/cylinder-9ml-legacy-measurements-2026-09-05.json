@@ -1,0 +1,234 @@
+{
+  "verifiedAt": "2026-09-05",
+  "method": "Firecrawl live exact-SKU legacy pages, maxAge: 0",
+  "rows": [
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "fields": [
+        "**Item Name:** GBCylAmb9MtlRollMattGl",
+        "**Item Height with Cap:** 83 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** LBCylAmb9LtnGl",
+        "**Item Height with Cap:** 96 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-sprayer-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** GBCylAmb9SpryGl",
+        "**Item Height with Cap:** 96 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "url": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-matte-gold-spray",
+      "fields": [
+        "**Item Name:** GBTallCyl9SpryGlMatt",
+        "**Item Height with Cap:** 126 ±2 mm",
+        "**Item Height without Cap:** 106 ±2 mm",
+        "**Item Diameter:** 18 ±0.5 mm",
+        "**Neck Thread Size:** 13-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-sprayer-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** GBCyl9SpryGl",
+        "**Item Height with Cap:** 98 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBTallCyl9MtlRollGlMatt",
+      "url": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "fields": [
+        "**Item Name:** GBTallCyl9MtlRollGlMatt",
+        "**Item Height with Cap:** 118 ±2 mm",
+        "**Item Height without Cap:** 106 ±2 mm",
+        "**Item Diameter:** 18 ±0.5 mm",
+        "**Neck Thread Size:** 13-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** LBCyl9LtnGl",
+        "**Item Height with Cap:** 98 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-sprayer-matte-silver-trim-and-cap",
+      "fields": [
+        "**Item Name:** GBCylBlu9SpryMattSl",
+        "**Item Height with Cap:** 96 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "fields": [
+        "**Item Name:** GBCyl9MtlRollMattGl",
+        "**Item Height with Cap:** 83 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-lotion-pump-matte-silver-trim-cap",
+      "fields": [
+        "**Item Name:** LBCylBlu9LtnMattSl",
+        "**Item Height with Cap:** 96 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-metal-roller-ball-matte-silver-cap",
+      "fields": [
+        "**Item Name:** GBCylBlu9MtlRollMattSl",
+        "**Item Height with Cap:** 85 ±1 mm",
+        "**Item Height without Cap:** 70 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "url": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-matte-gold-spray",
+      "fields": [
+        "**Item Name:** GBTallCylFrst9SpryGlMatt",
+        "**Item Height with Cap:** 126 ±2 mm",
+        "**Item Height without Cap:** 106 ±2 mm",
+        "**Item Diameter:** 18 ±0.5 mm",
+        "**Neck Thread Size:** 13-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollGlMatt",
+      "url": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "fields": [
+        "**Item Name:** GBTallCylFrst9MtlRollGlMatt",
+        "**Item Height with Cap:** 118 ±2 mm",
+        "**Item Height without Cap:** 106 ±2 mm",
+        "**Item Diameter:** 18 ±0.5 mm",
+        "**Neck Thread Size:** 13-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylFrst9SpryGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-sprayer-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** GBCylFrst9SpryGl",
+        "**Item Height with Cap:** 94 ±1 mm",
+        "**Item Height without Cap:** 74 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** LBCylFrst9LtnGl",
+        "**Item Height with Cap:** 94 ±1 mm",
+        "**Item Height without Cap:** 74 ±1 mm",
+        "**Item Diameter:** 20 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "fields": [
+        "**Item Name:** GBCylFrst9MtlRollMattGl",
+        "**Item Height with Cap:** 87 ±1 mm",
+        "**Item Height without Cap:** 74 ±1 mm",
+        "**Item Diameter:** 21 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylSwrl9SpryGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-sprayer-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** GBCylSwrl9SpryGl",
+        "**Item Height with Cap:** 98 ±1 mm",
+        "**Item Height without Cap:** 74 ±1 mm",
+        "**Item Diameter:** 21 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "fields": [
+        "**Item Name:** LBCylSwrl9LtnGl",
+        "**Item Height with Cap:** 87 ±1 mm",
+        "**Item Height without Cap:** 74 ±1 mm",
+        "**Item Diameter:** 21 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "url": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "fields": [
+        "**Item Name:** GBCylSwrl9MtlRollMattGl",
+        "**Item Height with Cap:** 87 ±1 mm",
+        "**Item Height without Cap:** 74 ±1 mm",
+        "**Item Diameter:** 21 ±0.5 mm",
+        "**Neck Thread Size:** 17-415"
+      ],
+      "ok": true
+    }
+  ]
+}

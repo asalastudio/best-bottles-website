@@ -1,0 +1,198 @@
+{
+  "status": "user-approved-local-review-locked",
+  "canvas": [
+    2080,
+    2288
+  ],
+  "export": "Original generated photographs transformed once with Lanczos whole-image scaling and positioning, then global highlight grading. User explicitly authorized this method. No regenerated bottle details or cutout masks.",
+  "checks": "20 desktop/touch hover checks passed; all PNGs2080x2288; no overflow390/768/1440; reduced motion and failed-hover fallback passed; independent baseline edge check within1px; sampled background means within0.5RGB/channel of245,243,239.",
+  "remaining": [
+    "Exact cobalt short-cap catalog measurement discrepancy remains separate from these presentation corrections."
+  ],
+  "rows": [
+    {
+      "group": "cylinder-3.3ml-clear-12mm",
+      "sku": "GBSpry3mlClBlk",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ccc87735-78e2-42ba-a0ee-9f1402fb2976.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-49150453-0bbf-4a79-b967-4b1bf91c23ad.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBSpry3mlClBlk-off.png",
+          "sha256": "7c2e9212092b58bc28e63406a4dd5c8cd8d1198d0f25eb6acafc03e120e968f0"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBSpry3mlClBlk-on.png",
+          "sha256": "340ad546a2bf6d2c5eefef17d2bc6bc6fdeabd37bbbddc854ae92c0150a37bd7"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-4ml-clear-12mm",
+      "sku": "GBSpry4mlClBlk",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-bd2e80ef-ae7e-4e22-ba8a-1fa22f0faab3.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-e8c87f95-b2c0-4f27-8fac-da1ca58c920e.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBSpry4mlClBlk-off.png",
+          "sha256": "f8b945fcede2853216ce63dccd8c329374f08b86abb4f266de8396f3e9f4c478"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBSpry4mlClBlk-on.png",
+          "sha256": "75f064ffc52b4d8c143b0b44e9fea94c7d9b0974ee83c95b418d1d88b1433fdb"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5ml-clear-13-415",
+      "sku": "GBCyl5GlMattSht",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-5de6ac2b-9fdd-48e7-b87f-71a6d70c3508.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-15ee0d2c-1e73-4238-8292-d0cc110e20ac.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5GlMattSht-off.png",
+          "sha256": "d4df21b3cf82228d57298848863f345c5203399e5a7fa8b07e4468cae864085a"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5GlMattSht-on.png",
+          "sha256": "bf9c28f208b911898646494ebbaaa0d48ca3256513c7951da7fb04505e07a5fc"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5ml-clear-13-415",
+      "sku": "GBCyl5SpryGlMatt",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-aded6842-2fec-4769-b691-e715cf0b61f7.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-c498c585-86e7-4f98-aa40-3e2c7b3bbde8.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5SpryGlMatt-off.png",
+          "sha256": "c290a260f61f82532791053c6b5b9c9611a8000d17e5563e25b2e907c73c1cad"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5SpryGlMatt-on.png",
+          "sha256": "d0b946c1e265833cdb8f996a0ec839340c7128b5e099a3a5da2c8f207a9dad04"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5ml-clear-13-415",
+      "sku": "GBCyl5MtlRollGlMatt",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-10d09dbc-8703-4772-859d-4f74bfbcd02f.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-39817ea9-31c1-4c45-9bee-f7ffb5417934.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5MtlRollGlMatt-off.png",
+          "sha256": "5a11381e11ed9f39b526b5273b3d9df378a7d5c5de8559ef00f5307a2d9600c6"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5MtlRollGlMatt-on.png",
+          "sha256": "1e187547118ba112d282ce105d3558e143bbe9c96fd25ef4791b8af774f9306b"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5ml-cobalt-blue-13-415",
+      "sku": "GBCylBlu5SlMattSht",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a9a887cf-51cc-4e1e-8bf1-75e91267d2b5.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-2e6eb976-73aa-4b7a-9262-0b729af64c10.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylBlu5SlMattSht-off.png",
+          "sha256": "9e59e2c15828a15e214ec02bb9618ef8e53d810053045de24c03234fa78f91d8"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylBlu5SlMattSht-on.png",
+          "sha256": "25badc97f2d53f91677373251acf2e9777234aadc7fe44347c18469a9b501439"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5ml-cobalt-blue-13-415",
+      "sku": "GBCylBlu5SprySlMatt",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-74f1224c-ed9f-4153-bcf8-0db2e7de4e04.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-b2c57d47-63e9-4fd1-a021-acf14ef22227.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylBlu5SprySlMatt-off.png",
+          "sha256": "522fdde78e2e85a7be7939024e70067f22f123e3718b879858f53be1a023674c"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylBlu5SprySlMatt-on.png",
+          "sha256": "7be38eb8e3e29ef514ebd0fe384aec84ef6aa3301a7a34faff55343996550c39"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5ml-cobalt-blue-13-415",
+      "sku": "GBCylBlu5MtlRollSlMatt",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-d3b70014-d725-4556-8f8a-82f902d1b8cc.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-4b42b30f-12c7-4816-8075-d857f344e360.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylBlu5MtlRollSlMatt-off.png",
+          "sha256": "d8ac8b4798626cea6232b8041fdb80efd3b9375e4fbda10e1496785b89b282a3"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylBlu5MtlRollSlMatt-on.png",
+          "sha256": "c61a0b4187804fcb87ba5a09da86e5ff3f0629d75d470b1755ab203f7412b28b"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-5.5ml-clear-13-415",
+      "sku": "GBCyl5SpryBlkMatt",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-dc14202a-f1dc-48ef-832d-392f980bde3c.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ec432c57-8571-4129-b78f-164de5cc32bf.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5SpryBlkMatt-off.png",
+          "sha256": "d5d566e6f1c8a47e39593d99bb7f262df6eef2301a5049838574a2f653e99721"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCyl5SpryBlkMatt-on.png",
+          "sha256": "59877be21ce5516aa33944ae0a6f3472367bb6c47f09e4ef07af27b1d75a3782"
+        }
+      ]
+    },
+    {
+      "group": "cylinder-9ml-amber-17-415",
+      "sku": "GBCylAmb9SpryGl",
+      "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a14d017f-e997-4e24-9dec-c7cce92947d6.png",
+      "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-70fc39b6-50f3-4c84-937a-9c2af24c0642.png",
+      "files": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylAmb9SpryGl-off.png",
+          "sha256": "4d8b9e8277b2fa60111fb8a09a956e7aeba341520fe7db5d22b5619e80840b60"
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover-batch-01/GBCylAmb9SpryGl-on.png",
+          "sha256": "9c92a29fd388cb974e9e822600efe72023e6176430186471dd4dc1d7416e44cd"
+        }
+      ]
+    }
+  ],
+  "correctionReport": "output/cylinder-hover-batch-01/normalization-report.json",
+  "approvedBy": "Jordan Richter",
+  "approvedDate": "2026-09-05",
+  "approval": "Great lock it looks good lets secure it and move to next batch"
+}

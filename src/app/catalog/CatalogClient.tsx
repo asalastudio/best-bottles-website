@@ -14,7 +14,9 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
-import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
+import { getCylinderCatalogHero, getCylinderHeroProductHref, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
+import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
+import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import {
@@ -43,7 +45,8 @@ import {
     type CatalogArrayFacet,
 } from "@/lib/catalogRefineModel";
 import {
-    getProductCardVariantPreviews,
+    getCatalogCardVariantPreviews,
+    productCardVariantHref,
     type ProductCardVariantPreview,
     type ProductCardVariantPreviewSource,
 } from "@/lib/products/product-card-variant-previews";
@@ -145,6 +148,8 @@ interface CatalogGroup {
     priceRangeMin: number | null;
     priceRangeMax: number | null;
     heroImageUrl?: string | null;
+    /** Optional paired editorial hover asset, supplied by the hero-image lane. */
+    heroHoverImageUrl?: string | null;
     paperDollFamilyKey?: string | null;
     applicatorTypes?: string[] | null;
 }
@@ -187,17 +192,6 @@ interface Facets {
 function formatPrice(price: number | null): string {
     if (!price) return "—";
     return `$${price.toFixed(2)}`;
-}
-
-function formatCatalogSpec(value: string | number | null | undefined): string {
-    if (value === null || value === undefined || value === "" || value === "0 ml (0 oz)") return "—";
-    return String(value);
-}
-
-function formatApplicatorLabels(applicators: string[] | null | undefined): string {
-    const values = (applicators ?? []).filter((value) => value && value !== "Cap/Closure");
-    if (values.length === 0) return "—";
-    return values.slice(0, 2).join(", ") + (values.length > 2 ? ` +${values.length - 2}` : "");
 }
 
 function clampVisibleLimit(rawLimit: string | null): number {
@@ -273,10 +267,9 @@ function ProductGroupCard({
     index,
     applicatorParam,
     variantPreviews,
-    displayName,
     thumbnailUrl,
-    primaryGraceSku,
-    primaryWebsiteSku,
+    matchSearch = false,
+    catalogHero,
 }: {
     group: CatalogGroup;
     index: number;
@@ -286,20 +279,25 @@ function ProductGroupCard({
     thumbnailUrl?: string | null;
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
+    matchSearch?: boolean;
+    catalogHero?: CylinderCatalogHero | null;
 }) {
-    const href = productGroupHref(group, applicatorParam);
-    const customerDisplayName = displayName ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const selected = matchSearch ? variantPreviews?.[0] : null;
+    const href = catalogHero
+        ? getCylinderHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
+        : productCardVariantHref(productGroupHref(group, applicatorParam), selected);
+    const customerDisplayName = catalogHero?.alt ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         usableProductImageUrl(group.heroImageUrl) ??
         thumbnailUrl ??
         getFirstPreviewImageUrl(variantPreviews) ??
         null;
     const cardSpecs = [
-        { label: "Size", value: formatCatalogSpec(group.capacity) },
-        { label: "Color", value: formatCatalogSpec(group.color) },
-        { label: "Neck", value: formatCatalogSpec(group.neckThreadSize) },
-        { label: "Fitment", value: formatApplicatorLabels(group.applicatorTypes) },
-    ];
+        group.capacityMl != null ? `${group.capacityMl} ml` : group.capacity?.replace(/\s*\([^)]*\)/g, ""),
+        group.neckThreadSize,
+        catalogHero?.bottleColor ?? group.color,
+    ].filter(Boolean).join(" · ");
+
 
     return (
         <motion.article
@@ -309,36 +307,24 @@ function ProductGroupCard({
             transition={{ duration: 0.5, delay: Math.min(index * 0.03, 0.3) }}
             className="group/catalog-card flex h-full flex-col overflow-hidden bg-white focus-within:relative focus-within:z-10 focus-within:outline focus-within:outline-2 focus-within:outline-muted-gold focus-within:outline-offset-[-2px]"
         >
-            <ProductCardImagePreview
-                productTitle={customerDisplayName}
-                defaultImage={{
-                    url: defaultImageUrl,
-                    alt: customerDisplayName,
-                }}
-                placeholderLabel={group.family ? `${group.family}\nShopify media needed` : "Shopify media needed"}
-                variantPreviews={variantPreviews}
-                productHref={href}
-                maxVisibleSwatches={6}
-                auditMeta={{
-                    surface: "catalog-card",
-                    family: group.family,
-                    productGroupSlug: group.slug,
-                    graceSku: primaryGraceSku,
-                    websiteSku: primaryWebsiteSku,
-                }}
+            <CatalogCardPreview
+                title={customerDisplayName}
+                catalogHero={catalogHero}
+                imageUrl={defaultImageUrl}
+                heroHoverImageUrl={group.heroHoverImageUrl}
+                href={href}
+                variants={variantPreviews ?? []}
+                capKind={COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [], variantPreviews)}
+                neck={group.neckThreadSize}
+                family={group.family}
+                slug={group.slug}
             />
-
-            <Link href={href} className="flex flex-1 flex-col p-5">
-                    <h4 className="mb-3 font-serif text-lg font-medium leading-snug text-obsidian">{customerDisplayName}</h4>
-                    <dl data-testid="catalog-card-specs" className="grid grid-cols-2 gap-x-3 gap-y-2 mb-4 text-[11px]">
-                        {cardSpecs.map((spec) => (
-                            <div key={spec.label} className="min-w-0">
-                                <dt className="text-slate/60 uppercase tracking-[0.14em] font-bold">{spec.label}</dt>
-                                <dd className="truncate text-obsidian/80">{spec.value}</dd>
-                            </div>
-                        ))}
-                    </dl>
-                    <span className="font-semibold text-obsidian text-lg mt-auto">from {formatPrice(group.priceRangeMin)}/ea</span>
+            <Link href={href} className="flex flex-1 flex-col px-4 pb-5 pt-4 sm:px-5">
+                <h4 className="text-lg font-medium leading-snug text-obsidian">{customerDisplayName}</h4>
+                <p data-testid="catalog-card-specs" className="mt-2 text-xs leading-relaxed text-slate">{cardSpecs}</p>
+                <span className="mt-auto pt-5 text-lg font-semibold text-obsidian">
+                    {group.priceRangeMin != null ? `from ${formatPrice(group.priceRangeMin)}/ea` : "Request pricing"}
+                </span>
             </Link>
         </motion.article>
     );
@@ -1536,6 +1522,10 @@ export default function CatalogClient({
     const visibleProducts = filtered;
     const visualApplicatorParam = filters.applicators.length === 1 ? filters.applicators[0] : null;
     const variantPreviewRows = activeResult.variantPreviewRows;
+    const catalogHeroMap = useMemo(() => {
+        const rowsByGroupId = new Map(variantPreviewRows.map((row) => [row.groupId, row.variants]));
+        return new Map(visibleProducts.map((group) => [group._id, getCylinderCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
+    }, [variantPreviewRows, visibleProducts]);
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
         const groupIds = new Set<string>();
@@ -1593,7 +1583,10 @@ export default function CatalogClient({
             }).displayName;
             next.set(
                 row.groupId,
-                getProductCardVariantPreviews(row.variants, {
+                getCatalogCardVariantPreviews(row.variants, {
+                    search: filters.search,
+                    rollerMaterials: filters.rollerMaterials,
+                    primarySku: catalogHeroMap.get(group._id)?.websiteSku ?? skuMap.get(group._id),
                     productTitle: customerDisplayName,
                     defaultImageUrl: group.heroImageUrl,
                     groupColor: group.color,
@@ -1603,7 +1596,7 @@ export default function CatalogClient({
         }
 
         return next;
-    }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap]);
+    }, [variantPreviewRows, visibleProducts, visualApplicatorParam, skuMap, catalogHeroMap, filters.search, filters.rollerMaterials]);
     const catalogThumbnailMap = useMemo(() => {
         const groupById = new Map(visibleProducts.map((group) => [group._id, group]));
         const next = new Map<string, string>();
@@ -2277,11 +2270,13 @@ export default function CatalogClient({
                                 <CatalogProductGrid>
                                     {visibleProducts.map((group: CatalogGroup, pIndex: number) => (
                                         <ProductGroupCard
-                                            key={group._id}
+                                            key={`${group._id}:${filters.search}:${filters.rollerMaterials.join(",")}`}
                                             group={group}
                                             index={pIndex}
                                             applicatorParam={visualApplicatorParam}
                                             variantPreviews={variantPreviewMap.get(group._id)}
+                                            catalogHero={catalogHeroMap.get(group._id)}
+                                            matchSearch={Boolean(filters.search.trim())}
                                             displayName={customerNameMap.get(group._id)}
                                             thumbnailUrl={catalogThumbnailMap.get(group._id)}
                                             primaryGraceSku={primarySkuMetaMap.get(group._id)?.graceSku}

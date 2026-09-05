@@ -1,0 +1,1251 @@
+{
+  "status": "Local review, uncommitted; original hero and hover bytes unchanged",
+  "imagePixelsPerMm": 14,
+  "canvas": [
+    2080,
+    2288
+  ],
+  "baselinePercent": 91,
+  "method": "Measured capped-image silhouette height mapped to exact legacy capped height. Cap-off uses the same transform to avoid introducing body-scale changes during hover. Cap-only tall bottles use verified bare height because short-cap assembly height has not been independently established.",
+  "rows": [
+    {
+      "sku": "GBCylAmb9SpryGl",
+      "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 96.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-sprayer-gold-trim-and-cap",
+      "approximateSourceTopPx": 438,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1344.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+        "websiteSku": "GBCylAmb9SpryGl",
+        "graceSku": "GB-CYL-AMB-9ML-SPR-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343624855844",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-finemist-empty.e6f3256c1aed.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-finemist-filled.1cb343ea0f9f.webp",
+        "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Amber",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+        "websiteSku": "GBCylAmb9SpryGl",
+        "graceSku": "GB-CYL-AMB-9ML-SPR-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343624855844",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-finemist-empty.e6f3256c1aed.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-finemist-filled.1cb343ea0f9f.webp",
+        "alt": "9 ml Amber Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Amber",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.817478,
+          "translateXPercent": 9.1261,
+          "translateYPercent": 16.6095
+        },
+        "hoverFraming": {
+          "scale": 0.817478,
+          "translateXPercent": 9.1261,
+          "translateYPercent": 16.6095
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "LBCylAmb9LtnGl",
+      "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 96.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "approximateSourceTopPx": 481,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1344.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+        "websiteSku": "LBCylAmb9LtnGl",
+        "graceSku": "LB-CYL-AMB-9ML-LPM-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343670042916",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-lotionpump-empty.ac06e3a1c77a.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-lotionpump-filled.398d2f9f1202.webp",
+        "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Amber",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+        "websiteSku": "LBCylAmb9LtnGl",
+        "graceSku": "LB-CYL-AMB-9ML-LPM-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343670042916",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-lotionpump-empty.ac06e3a1c77a.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-lotionpump-filled.398d2f9f1202.webp",
+        "alt": "9 ml Amber Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Amber",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.839433,
+          "translateXPercent": 8.0284,
+          "translateYPercent": 14.6116
+        },
+        "hoverFraming": {
+          "scale": 0.839433,
+          "translateXPercent": 8.0284,
+          "translateYPercent": 14.6116
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylAmb9MtlRollMattGl",
+      "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 83.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-amber-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "approximateSourceTopPx": 630,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1162.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+        "websiteSku": "GBCylAmb9MtlRollMattGl",
+        "graceSku": "GB-CYL-AMB-9ML-MRL-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343676858660",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-rollon-empty.b66fc421afd7.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-rollon-filled.3cf459d84bd9.webp",
+        "alt": "9 ml Amber Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Amber",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+        "websiteSku": "GBCylAmb9MtlRollMattGl",
+        "graceSku": "GB-CYL-AMB-9ML-MRL-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343676858660",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-rollon-empty.b66fc421afd7.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-rollon-filled.3cf459d84bd9.webp",
+        "alt": "9 ml Amber Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Amber",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.800231,
+          "translateXPercent": 9.9884,
+          "translateYPercent": 18.179
+        },
+        "hoverFraming": {
+          "scale": 0.800231,
+          "translateXPercent": 9.9884,
+          "translateYPercent": 18.179
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBTallCyl9GlMattSht",
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "measurement": "bare bottle",
+      "legacyHeightMm": 106.0,
+      "legacyUrl": null,
+      "approximateSourceTopPx": 564,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1484.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-clear-13-415",
+        "websiteSku": "GBTallCyl9GlMattSht",
+        "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194668757284",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-empty.299ef09503df.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-filled.65a010e107c7.webp",
+        "alt": "9 ml Clear Cylinder Bottle with Cap",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-clear-13-415",
+        "websiteSku": "GBTallCyl9GlMattSht",
+        "graceSku": "GB-CYL-CLR-9ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194668757284",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-empty.299ef09503df.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-filled.65a010e107c7.webp",
+        "alt": "9 ml Clear Tall Cylinder Bottle with Cap",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.977551,
+          "translateXPercent": 1.1225,
+          "translateYPercent": 2.0429
+        },
+        "hoverFraming": {
+          "scale": 0.977551,
+          "translateXPercent": 1.1225,
+          "translateYPercent": 2.0429
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Short-cap capped height not independently verified; both states calibrated to the verified 106 mm bare body."
+    },
+    {
+      "sku": "GBTallCyl9SpryGlMatt",
+      "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 126.0,
+      "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-matte-gold-spray",
+      "approximateSourceTopPx": 326,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1764.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+        "websiteSku": "GBTallCyl9SpryGlMatt",
+        "graceSku": "GB-CYL-CLR-9ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343626887460",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-empty.8d7a3a1e7804.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-filled.9e9cdd5f692f.webp",
+        "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+        "websiteSku": "GBTallCyl9SpryGlMatt",
+        "graceSku": "GB-CYL-CLR-9ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343626887460",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-empty.8d7a3a1e7804.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-filled.9e9cdd5f692f.webp",
+        "alt": "9 ml Clear Tall Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1.00451,
+          "translateXPercent": -0.2255,
+          "translateYPercent": -0.4104
+        },
+        "hoverFraming": {
+          "scale": 1.00451,
+          "translateXPercent": -0.2255,
+          "translateYPercent": -0.4104
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBTallCyl9MtlRollGlMatt",
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 118.0,
+      "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "approximateSourceTopPx": 425,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1652.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+        "websiteSku": "GBTallCyl9MtlRollGlMatt",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343682429220",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-empty.018ba3fc3afa.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-filled.53e5ab66d2f8.webp",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+        "websiteSku": "GBTallCyl9MtlRollGlMatt",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343682429220",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-empty.018ba3fc3afa.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-filled.53e5ab66d2f8.webp",
+        "alt": "9 ml Clear Tall Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.996934,
+          "translateXPercent": 0.1533,
+          "translateYPercent": 0.279
+        },
+        "hoverFraming": {
+          "scale": 0.996934,
+          "translateXPercent": 0.1533,
+          "translateYPercent": 0.279
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCyl9SpryGl",
+      "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 98.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-sprayer-gold-trim-and-cap",
+      "approximateSourceTopPx": 486,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1372.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+        "websiteSku": "GBCyl9SpryGl",
+        "graceSku": "GB-CYL-CLR-9ML-T-22",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343623217444",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-finemist-empty.6870fe13940f.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-finemist-filled.d5cf27f96714.webp",
+        "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+        "websiteSku": "GBCyl9SpryGl",
+        "graceSku": "GB-CYL-CLR-9ML-T-22",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343623217444",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-finemist-empty.6870fe13940f.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-finemist-filled.d5cf27f96714.webp",
+        "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.859606,
+          "translateXPercent": 7.0197,
+          "translateYPercent": 12.7759
+        },
+        "hoverFraming": {
+          "scale": 0.859606,
+          "translateXPercent": 7.0197,
+          "translateYPercent": 12.7759
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "LBCyl9LtnGl",
+      "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 98.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "approximateSourceTopPx": 487,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1372.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+        "websiteSku": "LBCyl9LtnGl",
+        "graceSku": "LB-CYL-CLR-9ML-T-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343671681316",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-lotionpump-empty.286644c987c2.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-lotionpump-filled.6acc2d145d30.webp",
+        "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+        "websiteSku": "LBCyl9LtnGl",
+        "graceSku": "LB-CYL-CLR-9ML-T-02",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343671681316",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-lotionpump-empty.286644c987c2.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-lotionpump-filled.6acc2d145d30.webp",
+        "alt": "9 ml Clear Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.860145,
+          "translateXPercent": 6.9927,
+          "translateYPercent": 12.7268
+        },
+        "hoverFraming": {
+          "scale": 0.860145,
+          "translateXPercent": 6.9927,
+          "translateYPercent": 12.7268
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 83.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-clear-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "approximateSourceTopPx": 689,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1162.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+        "websiteSku": "GBCyl9MtlRollMattGl",
+        "graceSku": "GB-CYL-CLR-9ML-T-04",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343680364836",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-rollon-empty.08161fbaed69.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-rollon-filled.0c222f1a36fa.webp",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+        "websiteSku": "GBCyl9MtlRollMattGl",
+        "graceSku": "GB-CYL-CLR-9ML-T-04",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343680364836",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-rollon-empty.08161fbaed69.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-rollon-filled.0c222f1a36fa.webp",
+        "alt": "9 ml Clear Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.834123,
+          "translateXPercent": 8.2939,
+          "translateYPercent": 15.0948
+        },
+        "hoverFraming": {
+          "scale": 0.834123,
+          "translateXPercent": 8.2939,
+          "translateYPercent": 15.0948
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylBlu9SpryMattSl",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 96.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-sprayer-matte-silver-trim-and-cap",
+      "approximateSourceTopPx": 434,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1344.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+        "websiteSku": "GBCylBlu9SpryMattSl",
+        "graceSku": "GB-CYL-BLU-9ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343625412900",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-finemist-empty.4e7d0e6c6a32.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-finemist-filled.67bf3a04bae6.webp",
+        "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+        "websiteSku": "GBCylBlu9SpryMattSl",
+        "graceSku": "GB-CYL-BLU-9ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343625412900",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-finemist-empty.4e7d0e6c6a32.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-finemist-filled.67bf3a04bae6.webp",
+        "alt": "9 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.815494,
+          "translateXPercent": 9.2253,
+          "translateYPercent": 16.79
+        },
+        "hoverFraming": {
+          "scale": 0.815494,
+          "translateXPercent": 9.2253,
+          "translateYPercent": 16.79
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "LBCylBlu9LtnMattSl",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 96.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-lotion-pump-matte-silver-trim-cap",
+      "approximateSourceTopPx": 461,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1344.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+        "websiteSku": "LBCylBlu9LtnMattSl",
+        "graceSku": "LB-CYL-BLU-9ML-LPM-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343671943460",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-lotionpump-empty.350f6c98f62d.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-lotionpump-filled.81da33c18f6d.webp",
+        "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+        "websiteSku": "LBCylBlu9LtnMattSl",
+        "graceSku": "LB-CYL-BLU-9ML-LPM-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343671943460",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-lotionpump-empty.350f6c98f62d.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-lotionpump-filled.81da33c18f6d.webp",
+        "alt": "9 ml Cobalt Blue Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.829077,
+          "translateXPercent": 8.5462,
+          "translateYPercent": 15.554
+        },
+        "hoverFraming": {
+          "scale": 0.829077,
+          "translateXPercent": 8.5462,
+          "translateYPercent": 15.554
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylBlu9MtlRollMattSl",
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 85.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-cobalt-blue-glass-bottle-metal-roller-ball-matte-silver-cap",
+      "approximateSourceTopPx": 642,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1190.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+        "websiteSku": "GBCylBlu9MtlRollMattSl",
+        "graceSku": "GB-CYL-BLU-9ML-MRL-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343678103844",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-rollon-empty.0f1e965c1907.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-rollon-filled.281293fddbfd.webp",
+        "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+        "websiteSku": "GBCylBlu9MtlRollMattSl",
+        "graceSku": "GB-CYL-BLU-9ML-MRL-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343678103844",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-rollon-empty.0f1e965c1907.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-rollon-filled.281293fddbfd.webp",
+        "alt": "9 ml Cobalt Blue Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.826343,
+          "translateXPercent": 8.6828,
+          "translateYPercent": 15.8028
+        },
+        "hoverFraming": {
+          "scale": 0.826343,
+          "translateXPercent": 8.6828,
+          "translateYPercent": 15.8028
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBTallCylFrst9GlMattSht",
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "measurement": "bare bottle",
+      "legacyHeightMm": 106.0,
+      "legacyUrl": null,
+      "approximateSourceTopPx": 617,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1484.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-frosted-13-415",
+        "websiteSku": "GBTallCylFrst9GlMattSht",
+        "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194669740324",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-empty.6dff770b14a8.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-filled.71210861c363.webp",
+        "alt": "9 ml Frosted Cylinder Bottle with Cap",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-frosted-13-415",
+        "websiteSku": "GBTallCylFrst9GlMattSht",
+        "graceSku": "GB-CYL-FRS-9ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194669740324",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-empty.6dff770b14a8.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-filled.71210861c363.webp",
+        "alt": "9 ml Frosted Tall Cylinder Bottle with Cap",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1.012914,
+          "translateXPercent": -0.6457,
+          "translateYPercent": -1.1752
+        },
+        "hoverFraming": {
+          "scale": 1.012914,
+          "translateXPercent": -0.6457,
+          "translateYPercent": -1.1752
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Short-cap capped height not independently verified; both states calibrated to the verified 106 mm bare body."
+    },
+    {
+      "sku": "GBTallCylFrst9SpryGlMatt",
+      "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 126.0,
+      "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-matte-gold-spray",
+      "approximateSourceTopPx": 300,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1764.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+        "websiteSku": "GBTallCylFrst9SpryGlMatt",
+        "graceSku": "GB-CYL-FRS-9ML-05",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343627149604",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-empty.3fdb65ca6c5f.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-filled.33450c76f19b.webp",
+        "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+        "websiteSku": "GBTallCylFrst9SpryGlMatt",
+        "graceSku": "GB-CYL-FRS-9ML-05",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343627149604",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-empty.3fdb65ca6c5f.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-filled.33450c76f19b.webp",
+        "alt": "9 ml Frosted Tall Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.989855,
+          "translateXPercent": 0.5072,
+          "translateYPercent": 0.9232
+        },
+        "hoverFraming": {
+          "scale": 0.989855,
+          "translateXPercent": 0.5072,
+          "translateYPercent": 0.9232
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBTallCylFrst9MtlRollGlMatt",
+      "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 118.0,
+      "legacyUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "approximateSourceTopPx": 360,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1652.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+        "websiteSku": "GBTallCylFrst9MtlRollGlMatt",
+        "graceSku": "GB-CYL-FRS-9ML-T-05",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343683379492",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-empty.27a3295a23a3.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-filled.ea7668e22003.webp",
+        "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+        "websiteSku": "GBTallCylFrst9MtlRollGlMatt",
+        "graceSku": "GB-CYL-FRS-9ML-T-05",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343683379492",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-empty.27a3295a23a3.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-filled.ea7668e22003.webp",
+        "alt": "9 ml Frosted Tall Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.959305,
+          "translateXPercent": 2.0348,
+          "translateYPercent": 3.7032
+        },
+        "hoverFraming": {
+          "scale": 0.959305,
+          "translateXPercent": 2.0348,
+          "translateYPercent": 3.7032
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylFrst9SpryGl",
+      "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 94.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-sprayer-gold-trim-and-cap",
+      "approximateSourceTopPx": 415,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1316.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+        "websiteSku": "GBCylFrst9SpryGl",
+        "graceSku": "GB-CYL-FRS-9ML-SPR-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343626166564",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-finemist-empty.0fb45b56d3eb.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-finemist-filled.94f47decdb9c.webp",
+        "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+        "websiteSku": "GBCylFrst9SpryGl",
+        "graceSku": "GB-CYL-FRS-9ML-SPR-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343626166564",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-finemist-empty.0fb45b56d3eb.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-finemist-filled.94f47decdb9c.webp",
+        "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.789404,
+          "translateXPercent": 10.5298,
+          "translateYPercent": 19.1642
+        },
+        "hoverFraming": {
+          "scale": 0.789404,
+          "translateXPercent": 10.5298,
+          "translateYPercent": 19.1642
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "LBCylFrst9LtnGl",
+      "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 94.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "approximateSourceTopPx": 370,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1316.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+        "websiteSku": "LBCylFrst9LtnGl",
+        "graceSku": "LB-CYL-FRS-9ML-LPM-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343672172836",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-lotionpump-empty.d7c7323af5a2.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-lotionpump-filled.44035139178b.webp",
+        "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+        "websiteSku": "LBCylFrst9LtnGl",
+        "graceSku": "LB-CYL-FRS-9ML-LPM-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343672172836",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-lotionpump-empty.d7c7323af5a2.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-lotionpump-filled.44035139178b.webp",
+        "alt": "9 ml Frosted Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.768656,
+          "translateXPercent": 11.5672,
+          "translateYPercent": 21.0523
+        },
+        "hoverFraming": {
+          "scale": 0.768656,
+          "translateXPercent": 11.5672,
+          "translateYPercent": 21.0523
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylFrst9MtlRollMattGl",
+      "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 87.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "approximateSourceTopPx": 576,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1218.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+        "websiteSku": "GBCylFrst9MtlRollMattGl",
+        "graceSku": "GB-CYL-FRS-9ML-MRL-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343679250724",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-rollon-empty.7e5aa9d94e6a.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-rollon-filled.efa78f3f43c7.webp",
+        "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+        "websiteSku": "GBCylFrst9MtlRollMattGl",
+        "graceSku": "GB-CYL-FRS-9ML-MRL-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343679250724",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-rollon-empty.7e5aa9d94e6a.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-rollon-filled.efa78f3f43c7.webp",
+        "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Frosted",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.808722,
+          "translateXPercent": 9.5639,
+          "translateYPercent": 17.4063
+        },
+        "hoverFraming": {
+          "scale": 0.808722,
+          "translateXPercent": 9.5639,
+          "translateYPercent": 17.4063
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylSwrl9SpryGl",
+      "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 98.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-sprayer-gold-trim-and-cap",
+      "approximateSourceTopPx": 352,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1372.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+        "websiteSku": "GBCylSwrl9SpryGl",
+        "graceSku": "GB-CYL-CLR-9ML-SPR-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343690096932",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-finemist-empty.0e9f1e9bf187.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-finemist-filled.8a9a7c747f64.webp",
+        "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Swirl",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+        "websiteSku": "GBCylSwrl9SpryGl",
+        "graceSku": "GB-CYL-CLR-9ML-SPR-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343690096932",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-finemist-empty.0e9f1e9bf187.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-finemist-filled.8a9a7c747f64.webp",
+        "alt": "9 ml Swirl Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Swirl",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.793027,
+          "translateXPercent": 10.3486,
+          "translateYPercent": 18.8345
+        },
+        "hoverFraming": {
+          "scale": 0.793027,
+          "translateXPercent": 10.3486,
+          "translateYPercent": 18.8345
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "LBCylSwrl9LtnGl",
+      "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 87.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "approximateSourceTopPx": 402,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1218.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+        "websiteSku": "LBCylSwrl9LtnGl",
+        "graceSku": "LB-CYL-CLR-9ML-LPM-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343674401060",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-lotionpump-empty.30e2b12798b6.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-lotionpump-filled.9c516965953a.webp",
+        "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Swirl",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+        "websiteSku": "LBCylSwrl9LtnGl",
+        "graceSku": "LB-CYL-CLR-9ML-LPM-GLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343674401060",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-lotionpump-empty.30e2b12798b6.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-lotionpump-filled.9c516965953a.webp",
+        "alt": "9 ml Swirl Cylinder Lotion Pump Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Swirl",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.724965,
+          "translateXPercent": 13.7518,
+          "translateYPercent": 25.0282
+        },
+        "hoverFraming": {
+          "scale": 0.724965,
+          "translateXPercent": 13.7518,
+          "translateYPercent": 25.0282
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    },
+    {
+      "sku": "GBCylSwrl9MtlRollMattGl",
+      "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "measurement": "capped assembly",
+      "legacyHeightMm": 87.0,
+      "legacyUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-swirl-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "approximateSourceTopPx": 565,
+      "sourceBaselinePx": 2082.08,
+      "targetHeightPx": 1218.0,
+      "previous": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+        "websiteSku": "GBCylSwrl9MtlRollMattGl",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-01",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343681347876",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-rollon-empty.bbcd49200462.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-rollon-filled.6e2096a6c9c0.webp",
+        "alt": "9 ml Swirl Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Swirl",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+        "websiteSku": "GBCylSwrl9MtlRollMattGl",
+        "graceSku": "GB-CYL-CLR-9ML-MRL-MGLD-01",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343681347876",
+        "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-rollon-empty.bbcd49200462.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-rollon-filled.6e2096a6c9c0.webp",
+        "alt": "9 ml Swirl Cylinder Roll-On Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Swirl",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.802858,
+          "translateXPercent": 9.8571,
+          "translateYPercent": 17.9399
+        },
+        "hoverFraming": {
+          "scale": 0.802858,
+          "translateXPercent": 9.8571,
+          "translateYPercent": 17.9399
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "limitation": "Whole-image scale corrects overall height; it does not repair any existing hardware-shape discrepancy."
+    }
+  ]
+}

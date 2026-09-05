@@ -1,0 +1,83 @@
+{
+  "approvedBy": "Jordan Richter",
+  "approvedDate": "2026-09-05",
+  "status": "User-approved local review reference; not live catalog publication",
+  "files": [
+    {
+      "sku": "GBCyl9MtlRollMattGl",
+      "images": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover/GBCyl9MtlRollMattGl-off.png",
+          "sha256": "071fabae79f827a0e877c4bff04e6fc6aec485cd0a81ef370ad4c5c707013722",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover/GBCyl9MtlRollMattGl-on.png",
+          "sha256": "27142aea276948ad79c52adeb14c412bc7e216c0201095971f8fb472f490869a",
+          "width": 2080,
+          "height": 2288
+        }
+      ]
+    },
+    {
+      "sku": "GBTallCyl9MtlRollGlMatt",
+      "images": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover/GBTallCyl9MtlRollGlMatt-off.png",
+          "sha256": "18785ee415088984972bdbc6c2eb7f05d67ec0c7f0a4d989dac5691cd01a2b57",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover/GBTallCyl9MtlRollGlMatt-on.png",
+          "sha256": "9835b607d20bfb411571c480b8b784d277baa0feb51457338566de7e710099e2",
+          "width": 2080,
+          "height": 2288
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl50SpryMtGl",
+      "images": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover/GBCyl50SpryMtGl-off.png",
+          "sha256": "5c1c7c56b8c90c2ca14490c612979e2f48db8a801d5fdac9d6567ac76c105e09",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover/GBCyl50SpryMtGl-on.png",
+          "sha256": "06931423ddebe135fbfa1170948c4cab0445026e03a64a1d24c1cd54c1666d5b",
+          "width": 2080,
+          "height": 2288
+        }
+      ]
+    },
+    {
+      "sku": "GBCyl100SpryMtGl",
+      "images": [
+        {
+          "state": "off",
+          "path": "public/preview/cylinder-hover/GBCyl100SpryMtGl-off.png",
+          "sha256": "9096b205bd9a544fbc73d73a8dcdba353dd608304afb7af54ff6eb2c55f5d2a8",
+          "width": 2080,
+          "height": 2288
+        },
+        {
+          "state": "on",
+          "path": "public/preview/cylinder-hover/GBCyl100SpryMtGl-on.png",
+          "sha256": "10cc2b7669b1e7232e6271157ade215b6dff4604a8f9a6f627e4afb0a5cafa3f",
+          "width": 2080,
+          "height": 2288
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+[
+  {
+    "group": "cylinder-3.3ml-clear-12mm",
+    "sku": "GBSpry3mlClBlk",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ccc87735-78e2-42ba-a0ee-9f1402fb2976.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-49150453-0bbf-4a79-b967-4b1bf91c23ad.png"
+  },
+  {
+    "group": "cylinder-4ml-clear-12mm",
+    "sku": "GBSpry4mlClBlk",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-bd2e80ef-ae7e-4e22-ba8a-1fa22f0faab3.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-e8c87f95-b2c0-4f27-8fac-da1ca58c920e.png"
+  },
+  {
+    "group": "cylinder-5ml-clear-13-415",
+    "sku": "GBCyl5GlMattSht",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-5de6ac2b-9fdd-48e7-b87f-71a6d70c3508.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-15ee0d2c-1e73-4238-8292-d0cc110e20ac.png"
+  },
+  {
+    "group": "cylinder-5ml-clear-13-415",
+    "sku": "GBCyl5SpryGlMatt",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-aded6842-2fec-4769-b691-e715cf0b61f7.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-c498c585-86e7-4f98-aa40-3e2c7b3bbde8.png"
+  },
+  {
+    "group": "cylinder-5ml-clear-13-415",
+    "sku": "GBCyl5MtlRollGlMatt",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-10d09dbc-8703-4772-859d-4f74bfbcd02f.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-39817ea9-31c1-4c45-9bee-f7ffb5417934.png"
+  },
+  {
+    "group": "cylinder-5ml-cobalt-blue-13-415",
+    "sku": "GBCylBlu5SlMattSht",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a9a887cf-51cc-4e1e-8bf1-75e91267d2b5.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-2e6eb976-73aa-4b7a-9262-0b729af64c10.png"
+  },
+  {
+    "group": "cylinder-5ml-cobalt-blue-13-415",
+    "sku": "GBCylBlu5SprySlMatt",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-74f1224c-ed9f-4153-bcf8-0db2e7de4e04.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-b2c57d47-63e9-4fd1-a021-acf14ef22227.png"
+  },
+  {
+    "group": "cylinder-5ml-cobalt-blue-13-415",
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-d3b70014-d725-4556-8f8a-82f902d1b8cc.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-4b42b30f-12c7-4816-8075-d857f344e360.png"
+  },
+  {
+    "group": "cylinder-5.5ml-clear-13-415",
+    "sku": "GBCyl5SpryBlkMatt",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-dc14202a-f1dc-48ef-832d-392f980bde3c.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-ec432c57-8571-4129-b78f-164de5cc32bf.png"
+  },
+  {
+    "group": "cylinder-9ml-amber-17-415",
+    "sku": "GBCylAmb9SpryGl",
+    "off": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-a14d017f-e997-4e24-9dec-c7cce92947d6.png",
+    "on": "/Users/jordanrichter/.codex/generated_images/01a06dce-fb7f-7432-ab75-249ce0502f20/exec-70fc39b6-50f3-4c84-937a-9c2af24c0642.png"
+  }
+]
