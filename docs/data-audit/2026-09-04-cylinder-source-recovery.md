@@ -5,6 +5,11 @@ initial 40 `no-psd` matches. A failed exact filename match is not evidence that
 a bottle image is absent. The master inventory contains 6,073 files (5,934 PSDs);
 the original Cylinder pass selected 829 PSDs by scope and naming.
 
+**Source scope clarified by Jordan:** the master folder and legacy Best Bottles
+website together are the complete source set for this work. Reconcile, retrieve
+and extract from those sources; do not turn a filename or layer-matching failure
+into a request for replacement artwork.
+
 No catalog, production media, master originals, or deployed code changed in this
 follow-up. The local accepted-plate count remains 326 of 399; recovering a source
 does not automatically qualify a plate or a kit. The CSV companion lists all
@@ -17,13 +22,20 @@ does not automatically qualify a plate or a kit. The CSV companion lists all
 | 3 | Exact legacy flip-top assets downloaded and visually checked | Add an explicit legacy-source exception and render complete-product plates |
 | 4 | 28 mL roll-on master files found; exact live legacy pages link these alternate image basenames | Review/promote the source crosswalk, verify exposed roller layers, render |
 | 8 | 25 mL assembly candidates found under 30 mL filenames, including a folder named Cylindrical 25ml | Establish identity by direct photograph/measurement comparison; do not infer an alias from the folder |
-| 24 | Short-cap assemblies still lack exact filename matches; existing bottle-family artwork is present | Inspect embedded/alternate cap layers and component sources for the exact short profile and finish |
-| 1 | `GBSpry1ozGl` exact gold assembly source not located by filename | Inspect the metal-decoration sources and their layer alternatives before declaring missing artwork |
+| 24 | Exact legacy short-cap assembly images recovered through SKU-specific option records | Prepare source-backed plates; inspect master layers and downloaded cap references for kit extraction |
+| 1 | `GBSpry1ozGl` exact assembled gold source recovered from its legacy product page | Prepare plate and compare metal-decoration master layers against the complete assembly |
 
-These categories total 40. **There are no confirmed requests for new photography
-yet.** The 25 unresolved exact assembly sources (24 short-cap plus one gold spray)
-still need a broader layer review. Existence of body art does not prove the
-correct cap assembly exists.
+These categories total 40. **All 25 formerly unlocated assembly images have now
+been recovered from legacy.** The download includes 25 exact-SKU assembly images
+and six cap reference images: all 31 returned HTTP 200 and decoded successfully.
+The assembled images were visually reviewed in a labeled contact sheet. The
+25 assembly URLs are distinct and were obtained from exact product/option
+evidence, not guessed from SKU strings. Sources and hashes are recorded in
+`2026-09-04-cylinder-legacy-assembly-sources.json`.
+
+This resolves image location, not kit readiness: a flat assembled photograph
+does not establish separable body, cap or insert layers. The accepted local plate
+count remains 326 until source integration, registration and verification run.
 
 ## Downloaded flip-top originals
 
@@ -100,9 +112,8 @@ This is implementation work, not a request for Jordan to inspect Photoshop.
 6. Validate generated assets and exact-SKU selection on the mobile PDP before
    publishing. Photo-layer kits are not 3D geometry.
 
-Jordan's input is needed only for a specific unresolved product identity or
-missing physical component source after the master layer search. Present that
-case with the candidate image and exact SKU, rather than requesting all 40
-images again. Current priority: integrate the three recovered flip-tops, review
-the four proven filename crosswalks and available view candidates, then resolve
-25/30 mL identity and the short-cap layer sources.
+Any remaining identity conflict should be documented against exact source
+evidence. Continue source matching and extraction within the confirmed source
+set. Current priority: integrate recovered flip-top and short-cap assembly
+sources, review the four proven filename crosswalks and available view candidates,
+then resolve 25/30 mL identity and extract the verified component layers.
