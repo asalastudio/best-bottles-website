@@ -841,7 +841,7 @@ export default function ConfiguratorPdp({
       <div className="mb-2 flex items-center justify-between">
         <span className="text-2xs font-semibold uppercase tracking-label text-slate">Your Configuration</span>
         <span className={`flex items-center gap-1.5 text-spec font-medium ${inStock ? "text-obsidian" : "text-amber-700"}`}>
-          {inStock ? "In stock" : "Confirm availability"}
+          {inStock ? "Available to order" : "Confirm availability"}
           <span className={`inline-block h-[7px] w-[7px] rounded-full ${inStock ? "bg-[#2F7D5B]" : "bg-amber-500"}`} />
         </span>
       </div>

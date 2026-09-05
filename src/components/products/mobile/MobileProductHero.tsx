@@ -9,7 +9,7 @@
  * opening never moves it.
  */
 import Link from "next/link";
-import { forwardRef, useLayoutEffect, useRef, type ReactNode } from "react";
+import { forwardRef, useLayoutEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
 import { ArrowLeft, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
@@ -20,6 +20,9 @@ export type PdpDimensions = {
     heightWithoutCap?: string | null;
     diameter?: string | null;
 };
+
+const subscribeToHydration = () => () => {};
+const serverCartCount = () => 0;
 
 function DimensionRow({ label, value }: { label: string; value: string }) {
     return (
@@ -77,6 +80,9 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
     ref,
 ) {
     const showDimensions = viewMode === "dimensions";
+    // A parent cart can restore storage before this streamed subtree hydrates.
+    // Match the server's empty badge first, then reveal the restored count.
+    const visibleCartCount = useSyncExternalStore(subscribeToHydration, () => cartCount, serverCartCount);
     const hasStack = Boolean(plateUrl || kitParts?.length);
     const toolbarRef = useRef<HTMLDivElement>(null);
     useLayoutEffect(() => {
@@ -113,14 +119,14 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 <button
                     type="button"
                     onClick={onOpenCart}
-                    aria-label={cartCount > 0 ? `Open cart, ${cartCount} ${cartCount === 1 ? "item" : "items"}` : "Open cart"}
+                    aria-label={visibleCartCount > 0 ? `Open cart, ${visibleCartCount} ${visibleCartCount === 1 ? "item" : "items"}` : "Open cart"}
                     data-testid="mobile-pdp-cart"
                     className="relative flex h-11 w-11 items-center justify-center rounded-full bg-bone text-obsidian transition-colors hover:bg-linen focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
                 >
                     <ShoppingBag className="h-5 w-5" weight="regular" aria-hidden />
-                    {cartCount > 0 ? (
+                    {visibleCartCount > 0 ? (
                         <span className="absolute -right-0.5 -top-0.5 flex h-5 min-w-5 items-center justify-center rounded-full bg-obsidian px-1 text-[10px] font-bold text-white">
-                            {cartCount > 99 ? "99+" : cartCount}
+                            {visibleCartCount > 99 ? "99+" : visibleCartCount}
                         </span>
                     ) : null}
                 </button>
