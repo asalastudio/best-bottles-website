@@ -11,6 +11,7 @@
  * Add to Cart). Commerce state lives in exactly one place — the parent.
  */
 import { useCallback, useEffect, useLayoutEffect, useMemo, useReducer, useRef, useState, type CSSProperties, type ReactNode, type RefObject } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import type { ProductVariant } from "@/app/products/[slug]/ProductDetailClient";
 import { CaretRight, Microphone } from "@/components/icons";
 import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryResult } from "@/components/products/PaperDollLayers";
@@ -132,6 +133,24 @@ function slugFromHref(href: string): string {
 
 function formatEach(price: number | null | undefined): string {
     return price == null ? "Price on request" : `$${price.toFixed(2)}`;
+}
+
+function GraceMicrophone() {
+    const reduceMotion = useReducedMotion();
+    return (
+        <motion.span
+            className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-obsidian text-white"
+            aria-hidden
+            initial={false}
+            // Two small breaths on first sight, then still. This is a discovery
+            // cue, not a listening/recording indicator.
+            whileInView={reduceMotion ? undefined : { scale: [1, 1.05, 1, 1, 1.05, 1] }}
+            viewport={{ once: true, amount: 1 }}
+            transition={{ duration: 4, delay: 0.5, ease: "easeInOut" }}
+        >
+            <Microphone className="h-4 w-4" />
+        </motion.span>
+    );
 }
 
 export default function MobileProductPdp(props: MobileProductPdpProps) {
@@ -564,9 +583,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
                         data-testid="mobile-pdp-ask-grace"
                         className="mt-4 flex min-h-[56px] w-full items-center gap-3 rounded-[3px] border border-champagne bg-white px-3 py-2.5 text-left transition-colors hover:border-muted-gold hover:bg-linen/60 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
                     >
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-obsidian text-white" aria-hidden>
-                            <Microphone className="h-4 w-4" />
-                        </span>
+                        <GraceMicrophone />
                         <span className="min-w-0 flex-1">
                             <span className="block text-sm font-medium text-obsidian">Ask Grace about fit and bulk pricing</span>
                             <span className="block text-xs leading-snug text-slate">

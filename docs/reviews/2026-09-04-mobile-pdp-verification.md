@@ -123,3 +123,9 @@ The phone review clarified that the bar should appear when the space below the f
 - Remove the inline mobile Add to Cart / Request Quote block. The existing sticky bar is the sole mobile purchase action; Grace follows the quantity controls and any quantity subtotal directly.
 - Rendered checks at 320×568 and 390×664 confirm no inline cart/quote action, Grace below quantity, no page overflow, a visible sticky action when scrolled to the purchase area, quantity updates reflected in the sticky bar, a successful two-unit cart addition, and the sticky Request Quote action at quantity 500.
 - Forty focused mobile tests, TypeScript, changed-file ESLint, and diff checks pass. Screenshot: `screenshots/mobile-pdp-single-purchase-action.png`.
+
+## Grace microphone discovery cue
+
+The mobile Ask Grace microphone now makes two small 5% scale pulses over four seconds when fully visible for the first time, then remains still. Reduced-motion users get no animation. The button label, click behavior, and placement below quantity are unchanged.
+
+Validation: 40 mobile model tests passed; TypeScript and changed-file ESLint passed. A 390×664 Chrome mobile browser check observed animation with normal motion, no animation with reduced motion, and a settled transform afterward in both cases. No catalog or backend data changed.
