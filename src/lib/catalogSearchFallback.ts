@@ -17,6 +17,7 @@ import {
     capacitySelectionMatches,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
+import { isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 
 // This file mirrors convex/products.ts::searchCatalog for the no-backend
 // fallback. Vocabulary and semantics come from catalogFilters so the two
@@ -138,7 +139,7 @@ export function buildCatalogSearchResult(input: {
     limit: number;
     cursor?: string | null;
 }): CatalogSearchResultShape {
-    const groups = input.groups.filter((group) => !getLegacyProductRouteOverride(group.slug));
+    const groups = input.groups.filter((group) => !getLegacyProductRouteOverride(group.slug) && !isHiddenCatalogGroup(group.slug));
     const skuMap = new Map(input.primarySkus.map((row) => [row.groupId, row.websiteSku ?? row.graceSku ?? ""]));
     const filters = input.filters;
     const matchesApplicatorBucket = (group: CatalogSearchGroup, bucket: string) => {
