@@ -1,4 +1,7 @@
+import { glassSwatchImage } from "./glass-swatches";
+import { getFinishFromWebsiteSku } from "../paper-doll/tokens.generated";
 import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
+import { catalogSearchScore } from "../catalogFilters";
 
 export type ProductCardVariantPreview = {
     id: string;
@@ -12,6 +15,7 @@ export type ProductCardVariantPreview = {
     graceSku?: string;
     websiteSku?: string;
     href?: string;
+    capLabel?: string;
 };
 
 export type ProductCardVariantPreviewSource = {
@@ -37,6 +41,62 @@ export function getProductCardPreviewAccessibleLabel(
 ): string {
     const sku = preview.graceSku ?? preview.websiteSku ?? preview.sku;
     return `Preview ${preview.label} for ${productTitle}${sku ? ` · SKU ${sku}` : ` · option ${index + 1}`}`;
+}
+
+/** Keep cap exploration inside one actual assembly; a roller-material change
+ * belongs in the configurator, not inside an apparently identical cap option. */
+export function getCatalogCardVariantPreviews(
+    variants: ProductCardVariantPreviewSource[],
+    options: ProductCardVariantPreviewOptions & {
+        search?: string;
+        primarySku?: string | null;
+        rollerMaterials?: string[];
+    },
+): ProductCardVariantPreview[] {
+    const material = (variant: ProductCardVariantPreviewSource) =>
+        normalizeKey(variant.ballMaterial) || (/metal/i.test(variant.applicator ?? "") ? "metal" : /plastic/i.test(variant.applicator ?? "") ? "plastic" : "");
+    // Some imports repeat glass color in capColor (all frosted tops become
+    // "Frosted"). Use exact SKU evidence before finish deduplication.
+    const normalized = variants.map((variant) => {
+        const finish = getFinishFromWebsiteSku(variant.websiteSku)?.label;
+        return finish && normalizeKey(variant.capColor) === normalizeKey(variant.color)
+            ? { ...variant, capColor: finish } : variant;
+    });
+    const eligible = normalized.filter((variant) => !options.rollerMaterials?.length
+        || !material(variant) || options.rollerMaterials.includes(material(variant)));
+    const score = (variant: ProductCardVariantPreviewSource) => catalogSearchScore(options.search ?? "", [
+        { value: resolveCapFinish(variant), weight: 3 },
+        { value: variant.websiteSku, weight: 4 },
+        { value: variant.graceSku, weight: 4 },
+        { value: variant.applicator, weight: 1 },
+    ]);
+    const ranked = [...eligible].sort((a, b) => score(b) - score(a)
+        || Number(b.websiteSku === options.primarySku || b.graceSku === options.primarySku)
+        - Number(a.websiteSku === options.primarySku || a.graceSku === options.primarySku));
+    const seed = ranked[0];
+    if (!seed) return [];
+    const scoped = ranked.filter((variant) => normalizeKey(variant.applicator) === normalizeKey(seed.applicator)
+        && material(variant) === material(seed)
+        && normalizeKey(variant.color) === normalizeKey(seed.color));
+    const previews = getProductCardVariantPreviews(scoped, options);
+    return previews.map((preview) => {
+        const source = scoped.find((variant) => (variant.id ?? variant.websiteSku ?? variant.graceSku) === preview.id);
+        const capLabel = source ? resolveCapFinish(source) ?? undefined : undefined;
+        return { ...preview, capLabel, label: capLabel ?? preview.label,
+            href: productCardVariantHref(options.productHref ?? "", preview) };
+    }).sort((a, b) => {
+        const aSource = scoped.find((variant) => (variant.id ?? variant.websiteSku ?? variant.graceSku) === a.id);
+        const bSource = scoped.find((variant) => (variant.id ?? variant.websiteSku ?? variant.graceSku) === b.id);
+        return (bSource ? score(bSource) : 0) - (aSource ? score(aSource) : 0);
+    });
+}
+
+export function productCardVariantHref(href: string, preview?: ProductCardVariantPreview | null): string {
+    const sku = preview?.websiteSku ?? preview?.graceSku ?? preview?.sku;
+    if (!sku || !href) return href;
+    const url = new URL(href, "https://bestbottles.com");
+    url.searchParams.set("sku", sku);
+    return `${url.pathname}${url.search}${url.hash}`;
 }
 
 type ProductCardVariantPreviewOptions = {
@@ -88,13 +148,6 @@ const GLASS_SWATCHES: Record<string, string> = {
     Swirl: "#C8DDEA",
 };
 
-const GLASS_SWATCH_IMAGES: Record<string, string> = {
-    Clear: "https://cdn.sanity.io/images/gh97irjh/production/6bfaeda1884020a1b0dd0a2ad8f5cfc6c9d877df-200x200.png",
-    Frosted: "https://cdn.sanity.io/images/gh97irjh/production/73672075ba7d2697d7acd7918ff28428be2a450d-200x200.png",
-    Amber: "https://cdn.sanity.io/images/gh97irjh/production/11fef500cbb78b56da83c5fdb3f39039440e9105-200x200.png",
-    "Cobalt Blue": "https://cdn.sanity.io/images/gh97irjh/production/a9203cb246e20bd9996c9aa398a002b9d6825f86-200x200.png",
-    Swirl: "https://cdn.sanity.io/images/gh97irjh/production/44297e0289c1a81440c7bef879223dfc4e87acce-200x200.png",
-};
 
 const SKU_FINISH_TOKENS: Record<string, string> = {
     SBLK: "Shiny Black",
@@ -373,7 +426,7 @@ export function getProductCardVariantPreviews(
         const optionType = optionTypeFor(variant, options.groupColor);
         const swatchColor = swatchColorFor(finish, variant.color ?? options.groupColor);
         const glassColor = cleanLabel(variant.color ?? options.groupColor);
-        const swatchImageUrl = optionType === "glassColor" && glassColor ? GLASS_SWATCH_IMAGES[glassColor] : undefined;
+        const swatchImageUrl = optionType === "glassColor" && glassColor ? glassSwatchImage(glassColor) : undefined;
         const sku = cleanString(variant.websiteSku) ?? cleanString(variant.graceSku) ?? undefined;
         const id = cleanString(variant.id) ?? sku ?? `${label}-${previews.length}`;
         const dedupeKey = [

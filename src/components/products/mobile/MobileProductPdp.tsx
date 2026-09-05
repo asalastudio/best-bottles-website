@@ -1,5 +1,7 @@
 "use client";
 
+import { glassSwatchImage } from "@/lib/products/glass-swatches";
+
 /**
  * The mobile PDP: one bottle, one property changed at a time. Presentational
  * over ProductDetailClient's state — it receives the resolved variant, the
@@ -270,7 +272,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
             const thumb = option.active
                 ? committedPlate?.thumb ?? committedPlate?.image ?? null
                 : siblingPreviews[slugFromHref(option.href)]?.plate?.thumb ?? null;
-            return { id: option.id, label: option.label, thumbUrl: thumb ?? option.imageUrl ?? null };
+            return { id: option.id, label: option.label, thumbUrl: glassSwatchImage(option.id) ?? glassSwatchImage(option.label) ?? thumb ?? option.imageUrl ?? null };
         });
         return { options, selectedId: glassOptions.find((option) => option.active)?.id ?? null };
     }, [glassOptions, committedPlate, siblingPreviews]);
