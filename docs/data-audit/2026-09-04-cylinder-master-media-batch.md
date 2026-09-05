@@ -44,9 +44,12 @@ claiming full-family kits or shared component assets.
 The row-level list is `2026-09-04-cylinder-master-media-status.csv`.
 Counts below overlap; do not add them to derive the 73 held products.
 
-- 40 records have no exact or already-approved matching PSD in the master.
-  This includes the three plastic flip-top products and newly confirmed short
-  cap variants. Legacy website images can exist while their master PSD is absent.
+- 40 records initially had no exact or already-approved matching PSD filename.
+  **This is not a count of missing artwork.** Follow-up recovered legacy images
+  for three flip-tops, verified master filename lineage for four 28 mL roll-ons,
+  and located alternate-name candidates for eight 25 mL assemblies. See
+  `2026-09-04-cylinder-source-recovery.md` and its row-level CSV for current
+  evidence and outstanding work. No aliases have been silently promoted.
 - 29 records fail source preflight: 22 different-SKU/alias filenames, three
   filenames with a `copy` suffix, three without an approved capped source,
   and one visual source hold. These are review items, not permission to
@@ -76,7 +79,8 @@ plastic Cylinder products, confirmed by Jordan and the legacy listings:
 
 They require finished plates, not interchangeable component kits or invented
 thread sizes. Their established group routes are preserved as media grouping
-keys. They remain held only for missing exact master PSDs. The 8 oz item's
+keys. Their legacy source images have now been downloaded and inspected under
+the user-approved exception; plate integration is still outstanding. The 8 oz item's
 legacy URL contains “16-oz,” despite its exact SKU/content identifying the
 8 oz product; route wording must not override exact product evidence.
 
@@ -134,8 +138,11 @@ is wired to these candidates.
 
 ## Completion sequence and rollback
 
-1. Supply the missing exact master assets; verify proposed alias/copy sources
-   against exact product records, including roller material.
+1. Complete the broader master source/layer reconciliation before requesting
+   new artwork. Integrate recovered flip-top sources through an explicit source
+   exception; verify proposed alias/copy sources against exact product records,
+   including roller material. Follow the source-recovery report rather than
+   treating failed filename matching as missing artwork.
 2. Approve and reconcile the seven known catalog capacity conflicts separately,
    preserving record IDs, routes, and Shopify references; then refresh the snapshot.
 3. Resolve the photo conflict, uncapped-front source and two failed registrations.
