@@ -9,7 +9,7 @@ import { catalogCapPhotoFrame } from "@/lib/products/catalog-cap-photos";
 
 function CapPhoto({ url, size, onError }: { url: string; size: number; onError: () => void }) {
     const frame = catalogCapPhotoFrame(url);
-    return <span className="relative block shrink-0 overflow-hidden" style={{ width: size, height: size }}>
+    return <span className="relative block shrink-0 overflow-hidden" style={{ width: "100%", maxWidth: size, aspectRatio: "1 / 1" }}>
         <Image src={url} alt="" width={size} height={size} unoptimized onError={onError}
             className={frame ? "absolute max-w-none" : "h-full w-full object-contain"} style={frame} />
     </span>;
@@ -63,14 +63,14 @@ export default function CatalogCapOptions({ title, href, variants, photo, onImag
                 aria-label={`Show all ${variants.length} cap options for ${title}`}
                 className="block w-full text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian">
                 <span className="block text-[10px] font-semibold uppercase leading-4 tracking-[0.14em] text-obsidian">Cap options · {variants.length}</span>
-                <span className="mt-1 flex items-center gap-0.5" aria-hidden="true">
+                <span className="mt-1 grid grid-cols-5 items-center gap-0.5" aria-hidden="true">
                     {visible.map((variant) => {
                         const url = photo(variant)!;
-                        return <span key={variant.id} className="flex h-11 w-11 shrink-0 items-center justify-center">
+                        return <span key={variant.id} className="flex h-10 min-w-0 items-center justify-center">
                             <CapPhoto url={url} size={40} onError={() => onImageError(url)} />
                         </span>;
                     })}
-                    {hiddenCount > 0 && <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-champagne text-xs font-medium text-obsidian">+{hiddenCount}</span>}
+                    {hiddenCount > 0 && <span className="flex aspect-square w-full max-w-10 items-center justify-center rounded-full border border-champagne text-xs font-medium text-obsidian">+{hiddenCount}</span>}
                 </span>
             </button>
         </div>
