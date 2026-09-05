@@ -1,0 +1,146 @@
+[
+  {
+    "environment": "development",
+    "sku": "GBCyl50RdcrMtSlTall",
+    "id": "kd7bgvwpk49qkh5s1974wpa9j581v3q5",
+    "expected": {
+      "capColor": "Matte Silver"
+    },
+    "set": {
+      "capColor": "Tall Matte Silver"
+    },
+    "evidence": {
+      "sku": "GBCyl50RdcrMtSlTall",
+      "label": "Tall Matte Silver",
+      "url": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-reducer-tall-silver-matte-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl50RdcrMtSlTall-legacy.html",
+      "sha256": "1fe4342fdb67d710f41562668f796db0863ae6cf8e2c8d0946cf3fd53fb40d2f"
+    }
+  },
+  {
+    "environment": "development",
+    "sku": "GBCyl50RdcrShnBlkTall",
+    "id": "kd71ez010rag0na88zp5p45tb981tn6b",
+    "expected": {
+      "capColor": "Shiny Black"
+    },
+    "set": {
+      "capColor": "Tall Shiny Black"
+    },
+    "evidence": {
+      "sku": "GBCyl50RdcrShnBlkTall",
+      "label": "Tall Shiny Black",
+      "url": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-reducer-tall-black-shiny-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl50RdcrShnBlkTall-legacy.html",
+      "sha256": "f8c954305ce2f3cf9b815deb4ac713c1c4ae12896ae33ee3bde707572b833c50"
+    }
+  },
+  {
+    "environment": "development",
+    "sku": "GBCyl100RdcrMtSlTall",
+    "id": "kd730sd5t4m3xpe6429q0p3bm981vvj8",
+    "expected": {
+      "capColor": "Matte Silver"
+    },
+    "set": {
+      "capColor": "Tall Matte Silver"
+    },
+    "evidence": {
+      "sku": "GBCyl100RdcrMtSlTall",
+      "label": "Tall Matte Silver",
+      "url": "https://www.bestbottles.com/product/cylinder-design-100-ml-glass-bottle-reducer-tall-silver-matte-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl100RdcrMtSlTall-legacy.html",
+      "sha256": "366bebe50a9fe7c979ff8fb8bd742abdff13a634bcbbcdcd5c1fa75592da8931"
+    }
+  },
+  {
+    "environment": "development",
+    "sku": "GBCyl100RdcrShnBlkTall",
+    "id": "kd79k79qpknckktmyh60fsjkn981txr5",
+    "expected": {
+      "capColor": "Shiny Black"
+    },
+    "set": {
+      "capColor": "Tall Shiny Black"
+    },
+    "evidence": {
+      "sku": "GBCyl100RdcrShnBlkTall",
+      "label": "Tall Shiny Black",
+      "url": "https://www.bestbottles.com/product/cylinder-design-100-ml-glass-bottle-reducer-tall-black-shiny-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl100RdcrShnBlkTall-legacy.html",
+      "sha256": "f84e55ab39e69429b8de97b13cfe678777beac28a8db565f4e51415ca8501c28"
+    }
+  },
+  {
+    "environment": "production",
+    "sku": "GBCyl50RdcrMtSlTall",
+    "id": "kd7bgvwpk49qkh5s1974wpa9j581v3q5",
+    "expected": {
+      "capColor": "Matte Silver"
+    },
+    "set": {
+      "capColor": "Tall Matte Silver"
+    },
+    "evidence": {
+      "sku": "GBCyl50RdcrMtSlTall",
+      "label": "Tall Matte Silver",
+      "url": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-reducer-tall-silver-matte-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl50RdcrMtSlTall-legacy.html",
+      "sha256": "1fe4342fdb67d710f41562668f796db0863ae6cf8e2c8d0946cf3fd53fb40d2f"
+    }
+  },
+  {
+    "environment": "production",
+    "sku": "GBCyl50RdcrShnBlkTall",
+    "id": "kd71ez010rag0na88zp5p45tb981tn6b",
+    "expected": {
+      "capColor": "Shiny Black"
+    },
+    "set": {
+      "capColor": "Tall Shiny Black"
+    },
+    "evidence": {
+      "sku": "GBCyl50RdcrShnBlkTall",
+      "label": "Tall Shiny Black",
+      "url": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-reducer-tall-black-shiny-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl50RdcrShnBlkTall-legacy.html",
+      "sha256": "f8c954305ce2f3cf9b815deb4ac713c1c4ae12896ae33ee3bde707572b833c50"
+    }
+  },
+  {
+    "environment": "production",
+    "sku": "GBCyl100RdcrMtSlTall",
+    "id": "kd730sd5t4m3xpe6429q0p3bm981vvj8",
+    "expected": {
+      "capColor": "Matte Silver"
+    },
+    "set": {
+      "capColor": "Tall Matte Silver"
+    },
+    "evidence": {
+      "sku": "GBCyl100RdcrMtSlTall",
+      "label": "Tall Matte Silver",
+      "url": "https://www.bestbottles.com/product/cylinder-design-100-ml-glass-bottle-reducer-tall-silver-matte-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl100RdcrMtSlTall-legacy.html",
+      "sha256": "366bebe50a9fe7c979ff8fb8bd742abdff13a634bcbbcdcd5c1fa75592da8931"
+    }
+  },
+  {
+    "environment": "production",
+    "sku": "GBCyl100RdcrShnBlkTall",
+    "id": "kd79k79qpknckktmyh60fsjkn981txr5",
+    "expected": {
+      "capColor": "Shiny Black"
+    },
+    "set": {
+      "capColor": "Tall Shiny Black"
+    },
+    "evidence": {
+      "sku": "GBCyl100RdcrShnBlkTall",
+      "label": "Tall Shiny Black",
+      "url": "https://www.bestbottles.com/product/cylinder-design-100-ml-glass-bottle-reducer-tall-black-shiny-cap",
+      "file": "dist/paper-doll/cylinder-release/ui-review/GBCyl100RdcrShnBlkTall-legacy.html",
+      "sha256": "f84e55ab39e69429b8de97b13cfe678777beac28a8db565f4e51415ca8501c28"
+    }
+  }
+]
