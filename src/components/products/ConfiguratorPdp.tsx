@@ -34,6 +34,7 @@ import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
 
 import { useGLTF } from "@react-three/drei";
+import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
 import PdpStageModeDock from "./PdpStageModeDock";
 import {
@@ -797,6 +798,7 @@ export default function ConfiguratorPdp({
       <div className="grid grid-cols-4 gap-2 lg:grid-cols-[repeat(auto-fill,minmax(56px,72px))]">
         {(glassOptions ?? []).map((g) => {
           const on = g.active;
+          const swatch = glassSwatchImage(g.id) ?? glassSwatchImage(g.label) ?? g.imageUrl;
           return (
             <button key={g.id} type="button" aria-pressed={on}
                onClick={() => {
@@ -806,9 +808,9 @@ export default function ConfiguratorPdp({
                            ${on ? "border-[1.5px] border-obsidian" : "border border-champagne hover:border-muted-gold"}`}>
               <span className="relative block aspect-square overflow-hidden rounded-t-[2px]"
                     style={{ background: GLASS_TILE[g.id] ?? "#e9edeb" }}>
-                {g.imageUrl ? (
+                {swatch ? (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={g.imageUrl} alt={g.label} className="absolute inset-0 h-full w-full object-cover" />
+                  <img src={swatch} alt={g.label} className="absolute inset-0 h-full w-full object-cover" />
                 ) : (
                   <span className="absolute inset-0 flex items-center justify-center">
                     <BottleGlyph className="h-8 w-8 text-obsidian/25" />
