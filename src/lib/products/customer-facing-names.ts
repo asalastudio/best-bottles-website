@@ -1,9 +1,12 @@
+import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { decoratedCapFinish } from "./decorated-cap-finish";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 
 export type CustomerFacingNameConfidence = "high" | "medium" | "fallback";
 
 export type CustomerFacingNameGroupInput = {
+    slug?: string | null;
+    neckThreadSize?: string | null;
     displayName?: string | null;
     family?: string | null;
     capacity?: string | null;
@@ -148,7 +151,14 @@ function cleanColor(group?: CustomerFacingNameGroupInput | null, variant?: Custo
 }
 
 function cleanFamily(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): string | null {
-    return clean(variant?.family) ?? clean(group?.family);
+    const family = clean(variant?.family) ?? clean(group?.family);
+    return key(family) === "cylinder" && isTallNineMlCylinder(group, variant) ? "Tall Cylinder" : family;
+}
+
+function isTallNineMlCylinder(group?: CustomerFacingNameGroupInput | null, variant?: CustomerFacingNameVariantInput | null): boolean {
+    return /^GBTallCyl(?:Frst)?9(?=[A-Za-z]|$)/i.test(variant?.websiteSku ?? "")
+        || /^cylinder-9ml-(?:clear|frosted)-13-415(?:-|$)/.test(group?.slug ?? "")
+        || (key(group?.family) === "cylinder" && cleanCapacity(group, variant) === "9 ml" && group?.neckThreadSize === "13-415");
 }
 
 function productEvidence(variant?: CustomerFacingNameVariantInput | null, group?: CustomerFacingNameGroupInput | null): string {
@@ -255,7 +265,7 @@ function resolveFinish(variant?: CustomerFacingNameVariantInput | null): string 
     if (!variant) return null;
     return (
         decoratedCapFinish(variant) ??
-        usableFinish(variant.capColor) ??
+        usableFinish(normalizeImportedCapColor(variant).capColor) ??
         usableFinish(variant.trimColor) ??
         finishFromGraceSku(variant.graceSku) ??
         finishFromWebsiteSku(variant.websiteSku) ??
@@ -294,7 +304,10 @@ function composeBaseName(group?: CustomerFacingNameGroupInput | null, variant?: 
 }
 
 function buildFallback(args: CustomerFacingNameArgs): CustomerFacingProductName {
-    const fallback = clean(args.fallbackName) ?? clean(args.variant?.itemName) ?? clean(args.group?.displayName) ?? "Best Bottles Product";
+    let fallback = clean(args.fallbackName) ?? clean(args.variant?.itemName) ?? clean(args.group?.displayName) ?? "Best Bottles Product";
+    if (isTallNineMlCylinder(args.group, args.variant) && !/\btall cylinder\b/i.test(fallback)) {
+        fallback = fallback.replace(/\bCylinder\b/i, "Tall Cylinder");
+    }
     return {
         displayName: fallback,
         shortName: fallback,

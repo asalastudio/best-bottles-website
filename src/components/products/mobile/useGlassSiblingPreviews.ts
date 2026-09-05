@@ -7,6 +7,7 @@
  * on the mobile viewport, through the same Convex queries the product page and
  * plate loader already use; the images themselves load lazily.
  */
+import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { useMemo } from "react";
 import { useQueries, useQuery } from "convex/react";
 import { api } from "../../../../convex/_generated/api";
@@ -45,7 +46,7 @@ export function useGlassSiblingPreviews(params: {
             const result = groupResults[slug];
             if (result === undefined) { out[slug] = { variant: null, pending: enabled }; continue; }
             if (result === null || result instanceof Error) { out[slug] = { variant: null, pending: false }; continue; }
-            const variants = filterVariantsForProductGroup(result.group, result.variants);
+            const variants = filterVariantsForProductGroup(result.group, result.variants).map(normalizeImportedCapColor);
             out[slug] = { variant: resolveGlassSiblingVariant(variants, selection, deps), pending: false };
         }
         return out;

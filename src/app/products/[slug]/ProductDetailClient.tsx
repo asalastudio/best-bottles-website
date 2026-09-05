@@ -1,5 +1,7 @@
 "use client";
 
+import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
+import { normalizeImportedCapColor } from "@/lib/products/cap-finish-evidence";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import { useState, useEffect, useMemo, useRef, useCallback } from "react";
 import Link from "next/link";
@@ -1140,7 +1142,7 @@ export default function ProductDetailClient({
     const group = data?.group;
     const variants = useMemo(() => {
         const rawVariants = (data?.variants as ProductVariant[] | undefined) ?? [];
-        return filterVariantsForProductGroup(data?.group, rawVariants);
+        return filterVariantsForProductGroup(data?.group, rawVariants).map(normalizeImportedCapColor);
     }, [data?.group, data?.variants]);
     const isRollonGroup = /roll-?on/.test(activeSlug);
     const variantFromUrl = useMemo(
@@ -1718,7 +1720,7 @@ export default function ProductDetailClient({
                 const targetSlug = decodeURIComponent(target.pathname.slice("/products/".length));
                 const sibling = await convex.query(api.products.getProductGroup, { slug: targetSlug });
                 if (request !== glassNavigationRequest.current) return;
-                const candidates = filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]);
+                const candidates = filterVariantsForProductGroup(sibling?.group, (sibling?.variants ?? []) as ProductVariant[]).map(normalizeImportedCapColor);
                 const resolved = resolveGlassSiblingVariant(candidates, {
                     applicator: selectedVariant.applicator,
                     capOption: resolveVariantCapFinish(selectedVariant).swatchName,
@@ -2134,7 +2136,7 @@ export default function ProductDetailClient({
                                 currentSlug={group.slug}
                                 variantImageUrl={usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
-                                plateImageCapOff={selectedPlate?.imageCapOff ?? null}
+                                plateImageCapOff={verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
                                 heightWithoutCap={selectedVariant?.heightWithoutCap ?? null}
                                 diameter={selectedVariant?.diameter ?? null}

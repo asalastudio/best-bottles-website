@@ -1,0 +1,71 @@
+{
+  "status": "Read-only measurement verification; no image or scale changes",
+  "verifiedAt": "2026-09-05",
+  "method": "Exact-SKU Convex lookup compared to live legacy pages fetched through Firecrawl with maxAge 0. Five linked SKU pages agree with stored dimensions.",
+  "verifiedSkus": [
+    {
+      "applicator": "Metal Roller Ball",
+      "diameter": "21 \u00b10.5 mm",
+      "heightWithCap": "87 \u00b11 mm",
+      "heightWithoutCap": "74 \u00b11 mm",
+      "neckThreadSize": "17-415",
+      "productUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-matte-gold-cap",
+      "websiteSku": "GBCylFrst9MtlRollMattGl"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "diameter": "20 \u00b10.5 mm",
+      "heightWithCap": "94 \u00b11 mm",
+      "heightWithoutCap": "74 \u00b11 mm",
+      "neckThreadSize": "17-415",
+      "productUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-sprayer-gold-trim-and-cap",
+      "websiteSku": "GBCylFrst9SpryGl"
+    },
+    {
+      "applicator": "Lotion Pump",
+      "diameter": "20 \u00b10.5 mm",
+      "heightWithCap": "94 \u00b11 mm",
+      "heightWithoutCap": "74 \u00b11 mm",
+      "neckThreadSize": "17-415",
+      "productUrl": "https://www.bestbottles.com/product/cylinder-design-9-ml-frosted-glass-bottle-lotion-pump-gold-trim-and-cap",
+      "websiteSku": "LBCylFrst9LtnGl"
+    },
+    {
+      "applicator": "Metal Roller Ball",
+      "diameter": "18 \u00b10.5 mm",
+      "heightWithCap": "118 \u00b12 mm",
+      "heightWithoutCap": "106 \u00b12 mm",
+      "neckThreadSize": "13-415",
+      "productUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "websiteSku": "GBTallCylFrst9MtlRollGlMatt"
+    },
+    {
+      "applicator": "Fine Mist Sprayer",
+      "diameter": "18 \u00b10.5 mm",
+      "heightWithCap": "126 \u00b12 mm",
+      "heightWithoutCap": "106 \u00b12 mm",
+      "neckThreadSize": "13-415",
+      "productUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-frosted-glass-bottle-matte-gold-spray",
+      "websiteSku": "GBTallCylFrst9SpryGlMatt"
+    }
+  ],
+  "unverifiedLegacySku": [
+    {
+      "applicator": null,
+      "diameter": "18 \u00b10.5 mm",
+      "heightWithCap": "109 \u00b12 mm",
+      "heightWithoutCap": "106 \u00b12 mm",
+      "neckThreadSize": "13-415",
+      "productUrl": null,
+      "websiteSku": "GBTallCylFrst9GlMattSht"
+    }
+  ],
+  "interpretation": [
+    "Compare bare height with bare height and capped assembly with capped assembly.",
+    "Regular frosted spray: 74 mm bare, 94 mm capped. Tall frosted spray: 106 mm bare, 126 mm capped.",
+    "The 70 mm bare-height measurement belongs to the regular clear SKU verified separately, not this frosted SKU.",
+    "Capped-minus-bare height is the added assembled height, not the full physical cap length.",
+    "Legacy regular frosted roller lists diameter 21 mm while regular frosted spray/pump list 20 mm. Do not silently normalize this source discrepancy.",
+    "The tall short-cap 109 mm stored measurement was not independently verified on a legacy product page in this audit."
+  ]
+}

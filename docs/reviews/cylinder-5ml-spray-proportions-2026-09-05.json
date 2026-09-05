@@ -1,0 +1,191 @@
+{
+  "status": "Local visual review; uncommitted, not approved",
+  "capacityMl": 5,
+  "authority": "Exact live legacy SKU photos; 53 mm bare height, 17 mm diameter, 72 mm capped height. Legacy 5.5 wording disregarded per user.",
+  "measurementMethod": "Approximate visible silhouette measurements in source pixels; not physical cap measurements. Uniform UI scale normalizes body width; no independent stretching.",
+  "legacyCap": {
+    "widthPx": 101,
+    "heightPx": 192,
+    "ratio": 1.900990099009901
+  },
+  "assets": [
+    {
+      "sku": "GBCyl5SpryGlMatt",
+      "previous": {
+        "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+        "websiteSku": "GBCyl5SpryGlMatt",
+        "graceSku": "GB-CYL-CLR-5ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343620038948",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-empty.7bcbfa9b0401.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-filled.231c13e55fd9.webp",
+        "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+        "websiteSku": "GBCyl5SpryGlMatt",
+        "graceSku": "GB-CYL-CLR-5ML-SPR-MGLD",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343620038948",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-empty-legacy-v3.0eab0684acb3.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-filled-legacy-v3.1801e5eeed7d.webp",
+        "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.972449,
+          "translateXPercent": 11.4598,
+          "translateYPercent": 7.8797
+        },
+        "hoverFraming": {
+          "scale": 0.87881,
+          "translateXPercent": 6.1696,
+          "translateYPercent": 14.7473
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "measurements": [
+        {
+          "file": "exec-e7fd1e5c-6e0f-443e-abff-5e06adc32839.png",
+          "bodyWidth": 214,
+          "center": 474,
+          "bottom": 1124,
+          "capWidth": 206,
+          "capHeight": 400,
+          "generatedSize": [
+            1196,
+            1315
+          ],
+          "capAspectRatio": 1.941747572815534,
+          "transform": {
+            "scale": 0.972449,
+            "translateXPercent": 11.4598,
+            "translateYPercent": 7.8797
+          }
+        },
+        {
+          "file": "exec-5b614c70-352f-4bee-b3d2-1049fc9335d3.png",
+          "bodyWidth": 237,
+          "center": 597,
+          "bottom": 1141,
+          "capWidth": 225,
+          "capHeight": 432,
+          "generatedSize": [
+            1197,
+            1315
+          ],
+          "capAspectRatio": 1.92,
+          "transform": {
+            "scale": 0.87881,
+            "translateXPercent": 6.1696,
+            "translateYPercent": 14.7473
+          }
+        }
+      ]
+    },
+    {
+      "sku": "GBCylBlu5SprySlMatt",
+      "previous": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+        "websiteSku": "GBCylBlu5SprySlMatt",
+        "graceSku": "GB-CYL-BLU-5ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343670337828",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-empty.d461d6c5f107.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-filled.4c986d5fda83.webp",
+        "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+        "websiteSku": "GBCylBlu5SprySlMatt",
+        "graceSku": "GB-CYL-BLU-5ML-SPR-MSLV",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343670337828",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-empty-legacy-v3.3aa75f0f268d.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-filled-legacy-v3.8452305b5c8d.webp",
+        "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 0.972449,
+          "translateXPercent": 11.4598,
+          "translateYPercent": 7.8797
+        },
+        "hoverFraming": {
+          "scale": 0.871456,
+          "translateXPercent": 6.4636,
+          "translateYPercent": 15.3854
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "measurements": [
+        {
+          "file": "exec-41497478-619e-403b-b3ab-900208fbaa0a.png",
+          "bodyWidth": 214,
+          "center": 474,
+          "bottom": 1124,
+          "capWidth": 206,
+          "capHeight": 401,
+          "generatedSize": [
+            1196,
+            1315
+          ],
+          "capAspectRatio": 1.9466019417475728,
+          "transform": {
+            "scale": 0.972449,
+            "translateXPercent": 11.4598,
+            "translateYPercent": 7.8797
+          }
+        },
+        {
+          "file": "exec-88244a1c-3bba-477f-9655-ae55f37ce591.png",
+          "bodyWidth": 239,
+          "center": 598,
+          "bottom": 1141,
+          "capWidth": 225,
+          "capHeight": 432,
+          "generatedSize": [
+            1197,
+            1315
+          ],
+          "capAspectRatio": 1.92,
+          "transform": {
+            "scale": 0.871456,
+            "translateXPercent": 6.4636,
+            "translateYPercent": 15.3854
+          }
+        }
+      ]
+    }
+  ]
+}

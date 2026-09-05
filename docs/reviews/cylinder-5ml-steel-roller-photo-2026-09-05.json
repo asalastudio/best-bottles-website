@@ -1,0 +1,12 @@
+{
+  "status": "Local photo correction, uncommitted; source kit still requires layer repair",
+  "sku": "GBCylBlu5MtlRollSlMatt",
+  "graceSku": "GB-CYL-BLU-5ML-MRL-MSLV",
+  "source": "https://www.bestbottles.com/images/store/enlarged_pics/GBCylBlu5MtlRollSlMatt.gif",
+  "verified": "2026-09-05",
+  "finding": "Selected exact SKU is metal roller, but two-part body/cap kit shows a plastic-looking insert without the steel ball. Legacy exact-SKU cap-off photograph visibly includes the reflective metal ball.",
+  "replacement": "public/images/products/verified/GBCylBlu5MtlRollSlMatt-cap-off.png",
+  "sha256": "c513697121611ee796aa07eee807c02d66e392ae8d1d52c2b35a340f1824e439",
+  "processing": "GIF to PNG format conversion only; 360x480 legacy photo, no invented ball or generated hardware.",
+  "scope": "Cap-off photo view only. Exploded kit remains the original two-part source and is not repaired by this change."
+}

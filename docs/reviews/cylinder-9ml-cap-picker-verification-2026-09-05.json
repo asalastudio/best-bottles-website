@@ -1,0 +1,22 @@
+{
+  "status": "Local review only; uncommitted",
+  "preview": "http://localhost:3003/catalog?families=Cylinder&capacities=9+ml&limit=48",
+  "cause": "Both cap-only groups have empty applicatorTypes despite ten capColor previews with exact-SKU cap photos.",
+  "fix": "Allow cap-only preview evidence to classify an empty applicator list as plain caps; unknown previews remain excluded. Avoid duplicate or conflicting length prefixes for complete finish labels.",
+  "browserChecks": {
+    "clearCapPhotosLoaded": 10,
+    "frostedCapPhotosLoaded": 10,
+    "eachChooserSkuLinks": 10,
+    "selectedFrostedSku": "GBTallCylFrst9SlMattSht",
+    "selectedPdpTitle": "9 ml Frosted Tall Cylinder Bottle with Cap",
+    "heroAndHoverAssetsLoaded": true,
+    "chooserIndependentOfHero": true
+  },
+  "validation": {
+    "targetedTestsPassed": 83,
+    "typecheck": "passed",
+    "targetedEslint": "passed",
+    "diffCheck": "passed"
+  },
+  "heightFraming": "See cylinder-9ml-height-framing-2026-09-05.json. This adjusts whole-image scale, not existing hardware geometry."
+}

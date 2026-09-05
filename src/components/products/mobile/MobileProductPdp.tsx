@@ -1,5 +1,6 @@
 "use client";
 
+import { verifiedCapOffPhoto } from "@/lib/products/verified-cap-off-photo";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 
 /**
@@ -126,7 +127,9 @@ export type MobileProductPdpProps = {
 
 function plateFor(platesBySku: Record<string, PlateRef>, variant: ProductVariant | null | undefined): PlateRef | null {
     if (!variant) return null;
-    return platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined) ?? null;
+    const plate = platesBySku[variant.graceSku] ?? (variant.websiteSku ? platesBySku[variant.websiteSku] : undefined) ?? null;
+    const capOff = verifiedCapOffPhoto(variant.websiteSku);
+    return capOff && plate ? { ...plate, imageCapOff: capOff } : plate;
 }
 
 function slugFromHref(href: string): string {

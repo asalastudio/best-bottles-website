@@ -314,7 +314,7 @@ function ProductGroupCard({
                 heroHoverImageUrl={group.heroHoverImageUrl}
                 href={href}
                 variants={variantPreviews ?? []}
-                capKind={COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [])}
+                capKind={COMPONENT_CATEGORIES.has(group.category) ? null : catalogCapKind(group.applicatorTypes ?? [], variantPreviews)}
                 neck={group.neckThreadSize}
                 family={group.family}
                 slug={group.slug}

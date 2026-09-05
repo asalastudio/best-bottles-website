@@ -1,5 +1,5 @@
+import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { glassSwatchImage } from "./glass-swatches";
-import { getFinishFromWebsiteSku } from "../paper-doll/tokens.generated";
 import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
 import { catalogSearchScore } from "../catalogFilters";
 
@@ -59,11 +59,7 @@ export function getCatalogCardVariantPreviews(
         normalizeKey(variant.ballMaterial) || (/metal/i.test(variant.applicator ?? "") ? "metal" : /plastic/i.test(variant.applicator ?? "") ? "plastic" : "");
     // Some imports repeat glass color in capColor (all frosted tops become
     // "Frosted"). Use exact SKU evidence before finish deduplication.
-    const normalized = variants.map((variant) => {
-        const finish = getFinishFromWebsiteSku(variant.websiteSku)?.label;
-        return finish && normalizeKey(variant.capColor) === normalizeKey(variant.color)
-            ? { ...variant, capColor: finish } : variant;
-    });
+    const normalized = variants.map(normalizeImportedCapColor);
     const eligible = normalized.filter((variant) => !options.rollerMaterials?.length
         || !material(variant) || options.rollerMaterials.includes(material(variant)));
     const score = (variant: ProductCardVariantPreviewSource) => catalogSearchScore(options.search ?? "", [
@@ -294,6 +290,8 @@ function finishFromName(itemName: string | null | undefined): string | null {
 function resolveCapFinish(variant: ProductCardVariantPreviewSource): string | null {
     const capColor = cleanFinishLabel(variant.capColor);
     const capStyle = cleanFinishLabel(variant.capStyle);
+    // Some legacy finish labels already include length; capStyle may contradict them.
+    if (capColor && /^(?:short|tall)\b/i.test(capColor)) return capColor;
     if (capColor && capStyle && !normalizeKey(capStyle).includes(normalizeKey(capColor))) {
         if (normalizeKey(capStyle).includes("dot") && normalizeKey(capColor).includes("dot")) return capColor;
         return `${capStyle} ${capColor}`;

@@ -79,6 +79,25 @@ describe("catalog top previews", () => {
         expect(catalogCapKind(["Antique Bulb Sprayer with Tassel"])).toBe("antiqueTassel");
         expect(catalogCapKind(["Metal Roller Ball", "Fine Mist Sprayer"])).toBeNull();
     });
+    it("shows cap-only imports with null applicators without treating unknown products as caps", () => {
+        const caps = getCatalogCardVariantPreviews([
+            { websiteSku: "GBTallCyl9GlMattSht", color: "Clear", applicator: null, capColor: "Matte Gold", capStyle: "Short" },
+            { websiteSku: "GBTallCyl9SlMattSht", color: "Clear", applicator: null, capColor: "Matte Silver", capStyle: "Short" },
+        ], { productTitle: "9 ml Clear Tall Cylinder Bottle with Cap", groupColor: "Clear" });
+        expect(catalogCapKind([], caps)).toBe("plain");
+        expect(caps.map(cap => catalogCapPhoto(cap, [], "plain"))).toEqual([
+            expect.stringContaining("reviewed-cap-thumbs"), expect.stringContaining("reviewed-cap-thumbs"),
+        ]);
+        expect(catalogCapKind([])).toBeNull();
+        expect(catalogCapKind([], [{ id: "unknown", label: "Unknown", optionType: "variant" }])).toBeNull();
+    });
+    it("does not prepend duplicate or conflicting lengths to a complete cap label", () => {
+        const caps = getCatalogCardVariantPreviews([
+            { websiteSku: "GBTallCyl9BlkSht", capColor: "Short Ribbed Black", capStyle: "Tall" },
+            { websiteSku: "GBTallCyl9WhtSht", capColor: "Short Ribbed White", capStyle: "Short" },
+        ], options);
+        expect(caps.map(cap => cap.label)).toEqual(["Short Ribbed Black", "Short Ribbed White"]);
+    });
     it("uses the catalog finish for legacy SKUs without a recognized finish token", () => {
         expect(catalogCapPhoto({ id: "red", label: "Red", capLabel: "Red", websiteSku: "GBCylAmb9SpryRd" }, [
             { websiteSku: "Spry17-415Red", thumb: "red-sprayer" },

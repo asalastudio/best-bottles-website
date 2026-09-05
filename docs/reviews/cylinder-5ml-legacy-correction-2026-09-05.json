@@ -1,0 +1,158 @@
+{
+  "status": "Local visual review; not user-approved or committed",
+  "authority": "User-selected legacy screenshots GBCyl5BlkShSht and GBCylBlu5BlkShSht. Both 5 ml; disregard 5.5 ml wording. Same legacy dimensions independently verified with Firecrawl.",
+  "assets": [
+    {
+      "sku": "GBCyl5BlkShSht",
+      "capacityMl": 5,
+      "legacyDimensions": {
+        "heightWithoutCapMm": 53,
+        "diameterMm": 17,
+        "heightWithCapMm": 59
+      },
+      "originalGenerationFiles": [
+        "exec-7f92ee05-a62e-4449-87e0-a6b2da7651d4.png",
+        "exec-4f0dd644-4057-43ea-a4e7-4865fd41a6ec.png"
+      ],
+      "generatedSizes": [
+        [
+          1196,
+          1315
+        ],
+        [
+          1197,
+          1314
+        ]
+      ],
+      "exportSize": [
+        2080,
+        2288
+      ],
+      "export": "WebP resampled from generated originals; no background replacement or compositing",
+      "previous": {
+        "groupSlug": "cylinder-5ml-clear-13-415",
+        "websiteSku": "GBCyl5GlMattSht",
+        "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194667675940",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-empty.d80b058ffbc8.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-filled.0d9dca64dd11.webp",
+        "alt": "5 ml Clear Cylinder Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-5ml-clear-13-415",
+        "websiteSku": "GBCyl5BlkShSht",
+        "graceSku": "GB-CYL-CLR-5ML-SBLK-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194667741476",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-empty-legacy-v2.c720e8c6e824.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-filled-legacy-v2.8fc6dc27d36b.webp",
+        "alt": "5 ml Clear Cylinder Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Clear",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 2.85,
+          "translateYPercent": -2.9924
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 2.85,
+          "translateYPercent": -2.7595
+        },
+        "interaction": "cap-off-to-capped-full"
+      }
+    },
+    {
+      "sku": "GBCylBlu5BlkShSht",
+      "capacityMl": 5,
+      "legacyDimensions": {
+        "heightWithoutCapMm": 53,
+        "diameterMm": 17,
+        "heightWithCapMm": 59
+      },
+      "originalGenerationFiles": [
+        "exec-ff8b228c-8d98-4fb3-a7ae-9b9751999e1d.png",
+        "exec-cde81957-0605-4c2e-9c1a-ae6f6a37dec0.png"
+      ],
+      "generatedSizes": [
+        [
+          1197,
+          1314
+        ],
+        [
+          1197,
+          1314
+        ]
+      ],
+      "exportSize": [
+        2080,
+        2288
+      ],
+      "export": "WebP resampled from generated originals; no background replacement or compositing",
+      "previous": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+        "websiteSku": "GBCylBlu5SlMattSht",
+        "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
+        "shopifyVariantId": "gid://shopify/ProductVariant/56194668101924",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-empty.c343edbe2414.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-filled.e1c81d27da03.webp",
+        "alt": "5 ml Cobalt Blue Cylinder Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 0,
+          "translateYPercent": 0
+        },
+        "interaction": "cap-off-to-capped-full"
+      },
+      "current": {
+        "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+        "websiteSku": "GBCylBlu5BlkShSht",
+        "graceSku": "GB-CYL-BLU-5ML-CAP-SBLK",
+        "shopifyVariantId": "gid://shopify/ProductVariant/53343625314596",
+        "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-empty-legacy-v2.0a65dbb01570.webp",
+        "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-filled-legacy-v2.7b707b649fd0.webp",
+        "alt": "5 ml Cobalt Blue Cylinder Bottle",
+        "width": 2080,
+        "height": 2288,
+        "bottleColor": "Cobalt Blue",
+        "presentation": "approved-pair",
+        "framing": {
+          "scale": 1,
+          "translateXPercent": 2.85,
+          "translateYPercent": -2.8356
+        },
+        "hoverFraming": {
+          "scale": 1,
+          "translateXPercent": 2.85,
+          "translateYPercent": -2.8356
+        },
+        "interaction": "cap-off-to-capped-full"
+      }
+    }
+  ]
+}

@@ -52,7 +52,10 @@ export function catalogCapPhotoFrame(url: string) {
     };
 }
 
-export function catalogCapKind(applicators: readonly string[]): CatalogCapKind | null {
+export function catalogCapKind(applicators: readonly string[], previews: readonly ProductCardVariantPreview[] = []): CatalogCapKind | null {
+    // Cap-only imports can have no applicator at all. Require actual cap
+    // finish previews rather than treating every empty applicator list as caps.
+    if (!applicators.length && previews.length > 0 && previews.every((preview) => preview.optionType === "capColor")) return "plain";
     if (applicators.length && applicators.every((value) => /roller|roll-on/i.test(value))) return "roller";
     if (applicators.length && applicators.every((value) => /^cap\/closure$/i.test(value))) return "plain";
     if (applicators.length && applicators.every((value) => /tassel/i.test(value))) return "antiqueTassel";

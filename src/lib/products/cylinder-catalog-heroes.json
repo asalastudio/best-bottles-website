@@ -49,11 +49,11 @@
   },
   {
     "groupSlug": "cylinder-5ml-clear-13-415",
-    "websiteSku": "GBCyl5GlMattSht",
-    "graceSku": "GB-CYL-CLR-5ML-MGLD-S",
-    "shopifyVariantId": "gid://shopify/ProductVariant/56194667675940",
-    "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-empty.d80b058ffbc8.webp",
-    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-filled.0d9dca64dd11.webp",
+    "websiteSku": "GBCyl5BlkShSht",
+    "graceSku": "GB-CYL-CLR-5ML-SBLK-S",
+    "shopifyVariantId": "gid://shopify/ProductVariant/56194667741476",
+    "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-empty-legacy-v2.c720e8c6e824.webp",
+    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-filled-legacy-v2.8fc6dc27d36b.webp",
     "alt": "5 ml Clear Cylinder Bottle",
     "width": 2080,
     "height": 2288,
@@ -61,13 +61,13 @@
     "presentation": "approved-pair",
     "framing": {
       "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "translateXPercent": 2.85,
+      "translateYPercent": -2.9924
     },
     "hoverFraming": {
       "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "translateXPercent": 2.85,
+      "translateYPercent": -2.7595
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -76,22 +76,22 @@
     "websiteSku": "GBCyl5SpryGlMatt",
     "graceSku": "GB-CYL-CLR-5ML-SPR-MGLD",
     "shopifyVariantId": "gid://shopify/ProductVariant/53343620038948",
-    "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-empty.7bcbfa9b0401.webp",
-    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-filled.231c13e55fd9.webp",
+    "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-empty-legacy-v3.0eab0684acb3.webp",
+    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-filled-legacy-v3.1801e5eeed7d.webp",
     "alt": "5 ml Clear Cylinder Fine Mist Spray Bottle",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.972449,
+      "translateXPercent": 11.4598,
+      "translateYPercent": 7.8797
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.87881,
+      "translateXPercent": 6.1696,
+      "translateYPercent": 14.7473
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -121,11 +121,11 @@
   },
   {
     "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
-    "websiteSku": "GBCylBlu5SlMattSht",
-    "graceSku": "GB-CYL-BLU-5ML-MSLV-S",
-    "shopifyVariantId": "gid://shopify/ProductVariant/56194668101924",
-    "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-empty.c343edbe2414.webp",
-    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-filled.e1c81d27da03.webp",
+    "websiteSku": "GBCylBlu5BlkShSht",
+    "graceSku": "GB-CYL-BLU-5ML-CAP-SBLK",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343625314596",
+    "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-empty-legacy-v2.0a65dbb01570.webp",
+    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-filled-legacy-v2.7b707b649fd0.webp",
     "alt": "5 ml Cobalt Blue Cylinder Bottle",
     "width": 2080,
     "height": 2288,
@@ -133,13 +133,13 @@
     "presentation": "approved-pair",
     "framing": {
       "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "translateXPercent": 2.85,
+      "translateYPercent": -2.8356
     },
     "hoverFraming": {
       "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "translateXPercent": 2.85,
+      "translateYPercent": -2.8356
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -148,22 +148,22 @@
     "websiteSku": "GBCylBlu5SprySlMatt",
     "graceSku": "GB-CYL-BLU-5ML-SPR-MSLV",
     "shopifyVariantId": "gid://shopify/ProductVariant/53343670337828",
-    "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-empty.d461d6c5f107.webp",
-    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-filled.4c986d5fda83.webp",
+    "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-empty-legacy-v3.3aa75f0f268d.webp",
+    "hoverUrl": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-filled-legacy-v3.8452305b5c8d.webp",
     "alt": "5 ml Cobalt Blue Cylinder Fine Mist Spray Bottle",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Cobalt Blue",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.972449,
+      "translateXPercent": 11.4598,
+      "translateYPercent": 7.8797
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.871456,
+      "translateXPercent": 6.4636,
+      "translateYPercent": 15.3854
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -228,14 +228,14 @@
     "bottleColor": "Amber",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.817478,
+      "translateXPercent": 9.1261,
+      "translateYPercent": 16.6095
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.817478,
+      "translateXPercent": 9.1261,
+      "translateYPercent": 16.6095
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -252,14 +252,14 @@
     "bottleColor": "Amber",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.839433,
+      "translateXPercent": 8.0284,
+      "translateYPercent": 14.6116
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.839433,
+      "translateXPercent": 8.0284,
+      "translateYPercent": 14.6116
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -276,14 +276,14 @@
     "bottleColor": "Amber",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.800231,
+      "translateXPercent": 9.9884,
+      "translateYPercent": 18.179
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.800231,
+      "translateXPercent": 9.9884,
+      "translateYPercent": 18.179
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -294,20 +294,20 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/56194668757284",
     "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-empty.299ef09503df.webp",
     "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-filled.65a010e107c7.webp",
-    "alt": "9 ml Clear Cylinder Bottle with Cap",
+    "alt": "9 ml Clear Tall Cylinder Bottle with Cap",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.977551,
+      "translateXPercent": 1.1225,
+      "translateYPercent": 2.0429
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.977551,
+      "translateXPercent": 1.1225,
+      "translateYPercent": 2.0429
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -318,20 +318,20 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/53343626887460",
     "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-empty.8d7a3a1e7804.webp",
     "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-filled.9e9cdd5f692f.webp",
-    "alt": "9 ml Clear Cylinder Fine Mist Spray Bottle",
+    "alt": "9 ml Clear Tall Cylinder Fine Mist Spray Bottle",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 1.00451,
+      "translateXPercent": -0.2255,
+      "translateYPercent": -0.4104
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 1.00451,
+      "translateXPercent": -0.2255,
+      "translateYPercent": -0.4104
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -342,20 +342,20 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/53343682429220",
     "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-empty.018ba3fc3afa.webp",
     "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-filled.53e5ab66d2f8.webp",
-    "alt": "9 ml Clear Cylinder Roll-On Bottle",
+    "alt": "9 ml Clear Tall Cylinder Roll-On Bottle",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.996934,
+      "translateXPercent": 0.1533,
+      "translateYPercent": 0.279
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.996934,
+      "translateXPercent": 0.1533,
+      "translateYPercent": 0.279
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -372,14 +372,14 @@
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.859606,
+      "translateXPercent": 7.0197,
+      "translateYPercent": 12.7759
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.859606,
+      "translateXPercent": 7.0197,
+      "translateYPercent": 12.7759
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -396,14 +396,14 @@
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.860145,
+      "translateXPercent": 6.9927,
+      "translateYPercent": 12.7268
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.860145,
+      "translateXPercent": 6.9927,
+      "translateYPercent": 12.7268
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -420,14 +420,14 @@
     "bottleColor": "Clear",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.834123,
+      "translateXPercent": 8.2939,
+      "translateYPercent": 15.0948
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.834123,
+      "translateXPercent": 8.2939,
+      "translateYPercent": 15.0948
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -444,14 +444,14 @@
     "bottleColor": "Cobalt Blue",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.815494,
+      "translateXPercent": 9.2253,
+      "translateYPercent": 16.79
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.815494,
+      "translateXPercent": 9.2253,
+      "translateYPercent": 16.79
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -468,14 +468,14 @@
     "bottleColor": "Cobalt Blue",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.829077,
+      "translateXPercent": 8.5462,
+      "translateYPercent": 15.554
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.829077,
+      "translateXPercent": 8.5462,
+      "translateYPercent": 15.554
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -492,14 +492,14 @@
     "bottleColor": "Cobalt Blue",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.826343,
+      "translateXPercent": 8.6828,
+      "translateYPercent": 15.8028
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.826343,
+      "translateXPercent": 8.6828,
+      "translateYPercent": 15.8028
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -510,20 +510,20 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/56194669740324",
     "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-empty.6dff770b14a8.webp",
     "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-filled.71210861c363.webp",
-    "alt": "9 ml Frosted Cylinder Bottle with Cap",
+    "alt": "9 ml Frosted Tall Cylinder Bottle with Cap",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Frosted",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 1.012914,
+      "translateXPercent": -0.6457,
+      "translateYPercent": -1.1752
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 1.012914,
+      "translateXPercent": -0.6457,
+      "translateYPercent": -1.1752
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -534,20 +534,20 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/53343627149604",
     "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-empty.3fdb65ca6c5f.webp",
     "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-filled.33450c76f19b.webp",
-    "alt": "9 ml Frosted Cylinder Fine Mist Spray Bottle",
+    "alt": "9 ml Frosted Tall Cylinder Fine Mist Spray Bottle",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Frosted",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.989855,
+      "translateXPercent": 0.5072,
+      "translateYPercent": 0.9232
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.989855,
+      "translateXPercent": 0.5072,
+      "translateYPercent": 0.9232
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -558,20 +558,20 @@
     "shopifyVariantId": "gid://shopify/ProductVariant/53343683379492",
     "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-empty.27a3295a23a3.webp",
     "hoverUrl": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-filled.ea7668e22003.webp",
-    "alt": "9 ml Frosted Cylinder Roll-On Bottle",
+    "alt": "9 ml Frosted Tall Cylinder Roll-On Bottle",
     "width": 2080,
     "height": 2288,
     "bottleColor": "Frosted",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.959305,
+      "translateXPercent": 2.0348,
+      "translateYPercent": 3.7032
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.959305,
+      "translateXPercent": 2.0348,
+      "translateYPercent": 3.7032
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -588,14 +588,14 @@
     "bottleColor": "Frosted",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.789404,
+      "translateXPercent": 10.5298,
+      "translateYPercent": 19.1642
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.789404,
+      "translateXPercent": 10.5298,
+      "translateYPercent": 19.1642
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -612,14 +612,14 @@
     "bottleColor": "Frosted",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.768656,
+      "translateXPercent": 11.5672,
+      "translateYPercent": 21.0523
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.768656,
+      "translateXPercent": 11.5672,
+      "translateYPercent": 21.0523
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -636,14 +636,14 @@
     "bottleColor": "Frosted",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.808722,
+      "translateXPercent": 9.5639,
+      "translateYPercent": 17.4063
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.808722,
+      "translateXPercent": 9.5639,
+      "translateYPercent": 17.4063
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -660,14 +660,14 @@
     "bottleColor": "Swirl",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.793027,
+      "translateXPercent": 10.3486,
+      "translateYPercent": 18.8345
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.793027,
+      "translateXPercent": 10.3486,
+      "translateYPercent": 18.8345
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -684,14 +684,14 @@
     "bottleColor": "Swirl",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.724965,
+      "translateXPercent": 13.7518,
+      "translateYPercent": 25.0282
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.724965,
+      "translateXPercent": 13.7518,
+      "translateYPercent": 25.0282
     },
     "interaction": "cap-off-to-capped-full"
   },
@@ -708,14 +708,14 @@
     "bottleColor": "Swirl",
     "presentation": "approved-pair",
     "framing": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.802858,
+      "translateXPercent": 9.8571,
+      "translateYPercent": 17.9399
     },
     "hoverFraming": {
-      "scale": 1,
-      "translateXPercent": 0,
-      "translateYPercent": 0
+      "scale": 0.802858,
+      "translateXPercent": 9.8571,
+      "translateYPercent": 17.9399
     },
     "interaction": "cap-off-to-capped-full"
   },
