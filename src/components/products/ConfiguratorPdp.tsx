@@ -31,7 +31,7 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
-import { explodedKitFrame } from "@/lib/products/kit-frame";
+import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
 
 import { useGLTF } from "@react-three/drei";
 import FocusedPdpLayout from "./FocusedPdpLayout";
@@ -249,7 +249,7 @@ export default function ConfiguratorPdp({
   // point of a kit — and only the removable closure leaves.
   const targetParts = useMemo(() => {
     if (!kit?.parts?.length) return null;
-    const parts = [...kit.parts].sort((a, b) => a.zOrder - b.zOrder);
+    const parts = orderExplodedOvercap([...kit.parts].sort((a, b) => a.zOrder - b.zOrder));
     return withCap ? parts : parts.filter((p) => !REMOVABLE_SLOTS.has(p.slot));
   }, [kit, withCap]);
   // What is actually on screen: a fully decoded set owned by the current kit.
@@ -408,6 +408,8 @@ export default function ConfiguratorPdp({
   // the plate for the selected SKU; cap-off plate when the cap is lifted
   const wantedPlate = (!withCap && plateImageCapOff) ? plateImageCapOff : plateImage;
   const plate = wantedPlate && !brokenPlates.has(wantedPlate) ? wantedPlate : null;
+  // Prefer the reviewed cap-off photograph; retain layers for exploded views.
+  const showKitLayers = kitReady && !(!withCap && plateImageCapOff && plate && !exploded);
   // A photo-only family (no approved geometry) never shows 3D; otherwise the
   // customer opens it. A plate outranks the catalogue photo: it is the exact
   // configuration, the photo is the group's hero.
@@ -435,7 +437,7 @@ export default function ConfiguratorPdp({
           {/* The flat plate: first paint, and what stays if the kit never arrives.
               Once the stack is up the plate is dropped entirely — leaving it
               mounted made every colourway change refetch a plate nobody sees. */}
-          {!kitReady && (
+          {!showKitLayers && (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={plate!} src={plate!} alt={`${groupTitle} — ${activeMeta?.name ?? ""}`}
                  width={1000} height={1100} decoding="async"
@@ -447,7 +449,7 @@ export default function ConfiguratorPdp({
               construction, which is what keeps the bottle still. */}
           <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
                style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
-          {kitParts?.map((part) => (
+          {showKitLayers && kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}
                  alt={part.slot === "body" ? `${groupTitle} bottle` : `${part.slot} — ${part.variantKey ?? ""}`}

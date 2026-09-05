@@ -11,6 +11,7 @@ export type ProductCardVariantPreview = {
     sku?: string;
     graceSku?: string;
     websiteSku?: string;
+    shopifyVariantId?: string;
     href?: string;
 };
 
@@ -18,6 +19,7 @@ export type ProductCardVariantPreviewSource = {
     id?: string | null;
     itemName?: string | null;
     websiteSku?: string | null;
+    shopifyVariantId?: string | null;
     graceSku?: string | null;
     imageUrl?: string | null;
     imageUrlCapOff?: string | null;
@@ -398,6 +400,7 @@ export function getProductCardVariantPreviews(
             sku,
             graceSku: cleanString(variant.graceSku) ?? undefined,
             websiteSku: cleanString(variant.websiteSku) ?? undefined,
+            shopifyVariantId: cleanString(variant.shopifyVariantId) ?? undefined,
             href: options.productHref,
         });
     }

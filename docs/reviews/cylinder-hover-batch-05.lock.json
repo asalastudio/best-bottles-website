@@ -1,0 +1,185 @@
+{
+  "approvedBy": "Jordan Richter",
+  "status": "locked",
+  "approvedAt": "2026-09-05T18:25:28.975257+00:00",
+  "approval": "Okay this is approved. Let us move into putting these in the UI now for the cylinder family.",
+  "productionPublished": false,
+  "files": [
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl50RdcrShnGl-empty.png",
+      "sha256": "065fb20cc0f8bb2663ef06e64a80641a50538e2377f4f0a14308a4bf6a2bf546",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.97,
+        "translateXPercent": 2.067251461988306,
+        "translateYPercent": 1.9726027397260282
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl50RdcrShnGl-filled.png",
+      "sha256": "5573aa5a71fa405728e49a2152b4a67ce5944a7e3d019a92fb316d446eba5304",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.97,
+        "translateXPercent": 1.9858096828046712,
+        "translateYPercent": 1.904798172124913
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpIvyGl-empty.png",
+      "sha256": "bdcc93d0ce0a6504b66c0d47c4df2b870aecc62af52dd30dace1f1808d4c2644",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.985,
+        "translateXPercent": 1.778613199665827,
+        "translateYPercent": -1.432699619771867
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpIvyGl-filled.png",
+      "sha256": "7305c584b9d141b194be92500fd1f3b6b995641354652ccba5a1d1366aeaaa3d",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.985,
+        "translateXPercent": 1.6963241436925713,
+        "translateYPercent": -1.4280821917808169
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpTslIvyGl-empty.png",
+      "sha256": "776bac87fd08e65665d9a4ee15cd990bf62f26ed68606f19570204586a9268be",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 1,
+        "translateXPercent": -3.383458646616546,
+        "translateYPercent": -0.9330289193302832
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpTslIvyGl-filled.png",
+      "sha256": "be8c5a094927a873b9b5a303873a9fda30bf2219f03ddd20402dcd54a3e25243",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 1,
+        "translateXPercent": -3.1746031746031775,
+        "translateYPercent": -0.9330289193302832
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/LBCyl100LtnMtGl-empty.png",
+      "sha256": "b46cb6c2a0b73b4de788e883fe42516d9ed775ddae6f07132ba3c97539204529",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 1,
+        "translateXPercent": 0.1253132832080226,
+        "translateYPercent": -1.6996197718631123
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/LBCyl100LtnMtGl-filled.png",
+      "sha256": "620afa86cc5520e9b480b0ba43852e20fcfa0af1adbfd24956f969e1414568b6",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 1,
+        "translateXPercent": 0.08354218880534603,
+        "translateYPercent": -1.6940639269406432
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl100RdcrShnGl-empty.png",
+      "sha256": "e3806b5cfd72f90419a9f59ad0dd24bf3776fa453eb939b720787a364dfd1f06",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.964,
+        "translateXPercent": 2.4442773600668346,
+        "translateYPercent": 0.7578707224334664
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/GBCyl100RdcrShnGl-filled.png",
+      "sha256": "abcb11b303b536192a43a07d21459ed75fe388890318ce94b1c0dc6993fd4244",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.964,
+        "translateXPercent": 2.081871345029249,
+        "translateYPercent": -0.19117199391170914
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/PbClear4ozFlpWh-empty.png",
+      "sha256": "6e9dd71ae5eb670c6fccfb7cbdb81e636065ccf4e3e562366ef05ce82231134f",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.730013,
+        "translateXPercent": 13.621425752508358,
+        "translateYPercent": 25.437615741444873
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/PbClear4ozFlpWh-filled.png",
+      "sha256": "35e5d0e81820ef7ad9ffcf8ab9847f3ba52170a0eb23ba3256e5585f6fbd5a2f",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.730013,
+        "translateXPercent": 13.712804093567257,
+        "translateYPercent": 25.332163926940638
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/PbClear8ozFlpWh-empty.png",
+      "sha256": "d5e6d8e8c58e8043ceac7b85e9b2cbe5254ceb7e4600c0c10ee61e8bde0db044",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.812616,
+        "translateXPercent": 9.606807017543858,
+        "translateYPercent": 15.300030418250955
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/PbClear8ozFlpWh-filled.png",
+      "sha256": "cadb724b3543ceed17d10c35795e8034c42c2e41fb6eae0f157ee65fb35501a1",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 0.812616,
+        "translateXPercent": 9.708355258764612,
+        "translateYPercent": 15.122831987814166
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/PbNat16ozFlpWh-empty.png",
+      "sha256": "b0ed6916f726e292cb3d733a81f0e523e4131c9b7aab49d498aa61e3f6df60f8",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 1.1,
+        "translateXPercent": -4.862040133779274,
+        "translateYPercent": -7.790874524714837
+      }
+    },
+    {
+      "path": "public/preview/cylinder-hover-batch-05/PbNat16ozFlpWh-filled.png",
+      "sha256": "19b0170c519513c12fb8ca1069f5f4361a4622305b2d26eb5c8d6cbe10bcfb28",
+      "width": 2080,
+      "height": 2288,
+      "transform": {
+        "scale": 1.1,
+        "translateXPercent": -4.81620718462824,
+        "translateYPercent": -7.790874524714837
+      }
+    }
+  ]
+}

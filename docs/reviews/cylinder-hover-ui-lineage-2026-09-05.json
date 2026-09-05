@@ -1,0 +1,1673 @@
+{
+  "approvedBy": "Jordan Richter",
+  "approvedPairs": 52,
+  "assetCount": 104,
+  "productionPublished": false,
+  "encoding": "Lossless WebP. All decoded RGBA pixels equal approved PNGs. Review transforms preserved.",
+  "rows": [
+    {
+      "groupSlug": "cylinder-3.3ml-clear-12mm-finemist",
+      "websiteSku": "GBSpry3mlClBlk",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-3.3ml-clear-12mm-finemist-empty.a4f6d9434e69.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBSpry3mlClBlk-off.png",
+          "sourceSha256": "7c2e9212092b58bc28e63406a4dd5c8cd8d1198d0f25eb6acafc03e120e968f0",
+          "sha256": "a4f6d9434e69fd0ffd4b107700a67e0ba1d0770ba76f948106aae9c3e77008d0",
+          "pixelSha256": "68b0514b0c639b04611a6c2454cfea3e667d6d403f2d994390e58bd28f980ca3",
+          "bytes": 1025838
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-3.3ml-clear-12mm-finemist-filled.22e82b1a9ac8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBSpry3mlClBlk-on.png",
+          "sourceSha256": "340ad546a2bf6d2c5eefef17d2bc6bc6fdeabd37bbbddc854ae92c0150a37bd7",
+          "sha256": "22e82b1a9ac825655a3ad1c774c2369a74c968934e1b785983194b160dfd3437",
+          "pixelSha256": "9d618a3d0361199ab2a38f73c0e7c181402ae83009628215efadd41c0401e764",
+          "bytes": 1542650
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-4ml-clear-12mm-finemist",
+      "websiteSku": "GBSpry4mlClBlk",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-4ml-clear-12mm-finemist-empty.656a183567df.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBSpry4mlClBlk-off.png",
+          "sourceSha256": "f8b945fcede2853216ce63dccd8c329374f08b86abb4f266de8396f3e9f4c478",
+          "sha256": "656a183567df1c56019e4fe5ea5d3484bc155a647b8fefc192a2c25b42875dd5",
+          "pixelSha256": "6cfba2529748947c598e4607eca51a94d9253206ff4c44d49f941d5eb3f968f5",
+          "bytes": 1021048
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-4ml-clear-12mm-finemist-filled.fe502280c81d.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBSpry4mlClBlk-on.png",
+          "sourceSha256": "75f064ffc52b4d8c143b0b44e9fea94c7d9b0974ee83c95b418d1d88b1433fdb",
+          "sha256": "fe502280c81df87eca3a75e8a39efb1a37cdb106e757ea97189444fe544c4350",
+          "pixelSha256": "5f9df81b632bd50c29eab8d97430eb320e96d91849d800984535a84ea18939fd",
+          "bytes": 2041476
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5ml-clear-13-415",
+      "websiteSku": "GBCyl5GlMattSht",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-empty.d80b058ffbc8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5GlMattSht-off.png",
+          "sourceSha256": "d4df21b3cf82228d57298848863f345c5203399e5a7fa8b07e4468cae864085a",
+          "sha256": "d80b058ffbc8210e117defa3208811508758c2521de3cb8daeac300e4469bb1a",
+          "pixelSha256": "35befa1dfc28a9f9d4676796036e60355079f624f3b5c4be4bfd59f396b46895",
+          "bytes": 977952
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-filled.0d9dca64dd11.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5GlMattSht-on.png",
+          "sourceSha256": "bf9c28f208b911898646494ebbaaa0d48ca3256513c7951da7fb04505e07a5fc",
+          "sha256": "0d9dca64dd113947850f19feb09bc44d4610acf5f17cd0b38a3c3dbd8d6cf3a0",
+          "pixelSha256": "6840ebcf1fbd7a0914b2dd603ee1285bf491459a2a3e01b9355bca56ff646928",
+          "bytes": 881138
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5ml-clear-13-415-finemist",
+      "websiteSku": "GBCyl5SpryGlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-empty.7bcbfa9b0401.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5SpryGlMatt-off.png",
+          "sourceSha256": "c290a260f61f82532791053c6b5b9c9611a8000d17e5563e25b2e907c73c1cad",
+          "sha256": "7bcbfa9b0401051935e01d98fa63eb90f38e840d07c59d5766b6a83d4fe0af06",
+          "pixelSha256": "c409dd8828889ea9fa4180bbbeaf84dcdef5dd99b6a8e7502e9fd64654c959fc",
+          "bytes": 1072692
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-finemist-filled.231c13e55fd9.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5SpryGlMatt-on.png",
+          "sourceSha256": "d0b946c1e265833cdb8f996a0ec839340c7128b5e099a3a5da2c8f207a9dad04",
+          "sha256": "231c13e55fd93450c52d9c08d9b54fef191ba077459df4a7051adca9bc8dbb46",
+          "pixelSha256": "4aecc2a1ddba3453bfb002289b85a6f7d8e1435500d76add1db9034e5b3cb7e2",
+          "bytes": 876536
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5ml-clear-13-415-rollon",
+      "websiteSku": "GBCyl5MtlRollGlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-rollon-empty.1ed375be2309.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5MtlRollGlMatt-off.png",
+          "sourceSha256": "5a11381e11ed9f39b526b5273b3d9df378a7d5c5de8559ef00f5307a2d9600c6",
+          "sha256": "1ed375be230962aac32629915531371157f744fba4f75081311f46aaf5d3303f",
+          "pixelSha256": "6c5e359c7fea3c2e99c220b656d329de0d0aec02549c092a9318421d042b26f2",
+          "bytes": 1106598
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-clear-13-415-rollon-filled.d7759b5259be.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5MtlRollGlMatt-on.png",
+          "sourceSha256": "1e187547118ba112d282ce105d3558e143bbe9c96fd25ef4791b8af774f9306b",
+          "sha256": "d7759b5259be416e354b40653da548c49aaaaecc1d9c3ea54ce857f94fc50cdb",
+          "pixelSha256": "1676958407b3700f03c51999507233ed8e24c51b7bc9804587c95af6afdd3f09",
+          "bytes": 1514462
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415",
+      "websiteSku": "GBCylBlu5SlMattSht",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-empty.c343edbe2414.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylBlu5SlMattSht-off.png",
+          "sourceSha256": "9e59e2c15828a15e214ec02bb9618ef8e53d810053045de24c03234fa78f91d8",
+          "sha256": "c343edbe2414e81bcae11fa681716e2e26fbb823ad87e51f93462a60c5423070",
+          "pixelSha256": "8394a8030967ed58db3bafe5a59e319ae6eabd0b7c2afa76550d8010a8042e9f",
+          "bytes": 1369588
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-filled.e1c81d27da03.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylBlu5SlMattSht-on.png",
+          "sourceSha256": "25badc97f2d53f91677373251acf2e9777234aadc7fe44347c18469a9b501439",
+          "sha256": "e1c81d27da03672f7fed8ce43368c98861abdceabd778e2502513107edb1560a",
+          "pixelSha256": "e22362a01f6354b4fcaafb4e7cf86c40e5f90fc54c0febdba43abb52008e6a27",
+          "bytes": 1895820
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-finemist",
+      "websiteSku": "GBCylBlu5SprySlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-empty.d461d6c5f107.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylBlu5SprySlMatt-off.png",
+          "sourceSha256": "522fdde78e2e85a7be7939024e70067f22f123e3718b879858f53be1a023674c",
+          "sha256": "d461d6c5f107c84e9570afd22dd842afd5217b3e19431f3885edc7560e291007",
+          "pixelSha256": "56cfcc1d06ccda158a6e764a0198f8d9e8fdcb7686c9b157e3566d2dc5d1f658",
+          "bytes": 977472
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-finemist-filled.4c986d5fda83.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylBlu5SprySlMatt-on.png",
+          "sourceSha256": "7be38eb8e3e29ef514ebd0fe384aec84ef6aa3301a7a34faff55343996550c39",
+          "sha256": "4c986d5fda8347b1f3e212aa9bbc8838d4d334da70987d6c93a9d516449ab1ee",
+          "pixelSha256": "afd332b9dfd5db2ed9686d4d27ddf46df06312d7dac65d83a3660b101bba54ee",
+          "bytes": 1568196
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5ml-cobalt-blue-13-415-rollon",
+      "websiteSku": "GBCylBlu5MtlRollSlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-rollon-empty.41b4daeb5f4a.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylBlu5MtlRollSlMatt-off.png",
+          "sourceSha256": "d8ac8b4798626cea6232b8041fdb80efd3b9375e4fbda10e1496785b89b282a3",
+          "sha256": "41b4daeb5f4aad80c20a934fc5616c8d95bb90217926bc35780ff087081c5a06",
+          "pixelSha256": "e706e96a5636d729d0e4ad6c7cfaca76767fbe791178665afed6376bbd4b2e72",
+          "bytes": 1097724
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5ml-cobalt-blue-13-415-rollon-filled.5d8f93073180.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylBlu5MtlRollSlMatt-on.png",
+          "sourceSha256": "c61a0b4187804fcb87ba5a09da86e5ff3f0629d75d470b1755ab203f7412b28b",
+          "sha256": "5d8f93073180527992e3bdff4bee5e7f173c77f0a68df960abc4d6aaebd1803f",
+          "pixelSha256": "df50a70e197023883e82c771f5a724355107a238329531d5661c8f03239e7a0e",
+          "bytes": 1814772
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-5.5ml-clear-13-415-finemist",
+      "websiteSku": "GBCyl5SpryBlkMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5.5ml-clear-13-415-finemist-empty.374765520ed4.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5SpryBlkMatt-off.png",
+          "sourceSha256": "d5d566e6f1c8a47e39593d99bb7f262df6eef2301a5049838574a2f653e99721",
+          "sha256": "374765520ed45faa8cd68859bbe141182c4ba78c002554a9e58dc644925db5cf",
+          "pixelSha256": "38d4e1fde8a5b233ab73dbde58073824c703ce85f75f1de3d8faf4360d033d96",
+          "bytes": 1026236
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-5.5ml-clear-13-415-finemist-filled.8cb0483c8bb7.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCyl5SpryBlkMatt-on.png",
+          "sourceSha256": "59877be21ce5516aa33944ae0a6f3472367bb6c47f09e4ef07af27b1d75a3782",
+          "sha256": "8cb0483c8bb702980cfb1a43a7433a6091a4dee0e8c41b51973326be036c55de",
+          "pixelSha256": "12ce22653202b15d3f48ff9f51e2312e07b622a4685c66bdba600dd76784a957",
+          "bytes": 988800
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-amber-17-415-finemist",
+      "websiteSku": "GBCylAmb9SpryGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-finemist-empty.e6f3256c1aed.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylAmb9SpryGl-off.png",
+          "sourceSha256": "4d8b9e8277b2fa60111fb8a09a956e7aeba341520fe7db5d22b5619e80840b60",
+          "sha256": "e6f3256c1aed5a63b0a36859cc35ddc953264cf3e3fe2a4c165021f74929134d",
+          "pixelSha256": "745fe55f5a62ea5803f337938f09a9263235556230169aa5b3f423209e2675ed",
+          "bytes": 1221098
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-finemist-filled.1cb343ea0f9f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-01/GBCylAmb9SpryGl-on.png",
+          "sourceSha256": "9c92a29fd388cb974e9e822600efe72023e6176430186471dd4dc1d7416e44cd",
+          "sha256": "1cb343ea0f9fd032bdbc3fc45c209ead5e9ac696923ef0e994af834dea166749",
+          "pixelSha256": "dd7e6c3671f4d1a380300b664cc1509146932598ae797427585aca68c39d84a5",
+          "bytes": 1785260
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-amber-17-415-lotionpump",
+      "websiteSku": "LBCylAmb9LtnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-lotionpump-empty.ac06e3a1c77a.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/LBCylAmb9LtnGl-off.png",
+          "sourceSha256": "f6e597501a06d530249ca6124d8c91ebce7007ca33b8932dcde3eccd21fdf4cb",
+          "sha256": "ac06e3a1c77a60e031d1845caff02f13e46effde8035cd35c137bec1a370c3e7",
+          "pixelSha256": "8b72f28d7f1091a359400a557d79575115a993b7345dd744d8c26c78b2327caa",
+          "bytes": 1005466
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-lotionpump-filled.398d2f9f1202.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/LBCylAmb9LtnGl-on.png",
+          "sourceSha256": "c3cb916bcdcaaa90a7ed67b5dad9cf07f838ba424dd95fe5fde9b2a09a0024f6",
+          "sha256": "398d2f9f1202a0a65f05c4608366dbfc1cac06dc4bd2c5f1454b8a0f98c9a67d",
+          "pixelSha256": "9ae3a75ad8e216f55ab4c0c0191c23045c36bf6a14afb70a19f7701843218e42",
+          "bytes": 974142
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-amber-17-415-rollon",
+      "websiteSku": "GBCylAmb9MtlRollMattGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-rollon-empty.b66fc421afd7.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-off.png",
+          "sourceSha256": "f1fdb80105caccb4c24646780d26dddc7bb98133b717fffa2cc0e14cb5c8cc3b",
+          "sha256": "b66fc421afd77c645cb5b6e10e04ac3de22c88c2ba746c90b7d204c79235ea60",
+          "pixelSha256": "5abc159f31618b2c47ffcc1a49fd5b43c61238192e50b4ba880983a911098f0c",
+          "bytes": 1096690
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-amber-17-415-rollon-filled.3cf459d84bd9.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCylAmb9MtlRollMattGl-on.png",
+          "sourceSha256": "97d17db3fcbfd00525ef1b4b1133066c3d6dd1733ef86f8ce060bdf45b7bdc97",
+          "sha256": "3cf459d84bd9b798bd5808e40acfc7a9f1e8f2ec35506995fd4ec89b63e6da40",
+          "pixelSha256": "4689610799e9ae36b1045a805877b0a0faa7c2771d19cb0f6bfd28b3876c4849",
+          "bytes": 1102846
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-clear-13-415",
+      "websiteSku": "GBTallCyl9GlMattSht",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-empty.299ef09503df.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBTallCyl9GlMattSht-off.png",
+          "sourceSha256": "7d106d618c9b406e486cf8fdf89de571832e4bc3d83d29b9a2b16067ad7578ee",
+          "sha256": "299ef09503df163a2edd6e85ea67367705ac9030e06038666f35e19aa6e6cb2f",
+          "pixelSha256": "462bf46aeedd0eefe96a08c09f98936db7505d9e59add34a3a514d95d2c8a69f",
+          "bytes": 1711766
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-filled.65a010e107c7.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBTallCyl9GlMattSht-on.png",
+          "sourceSha256": "f1d23acf9915e5d4ec49d0ba622e022f80b5387e3bd7379b9f67e134bcd86280",
+          "sha256": "65a010e107c780fcf9d5f22e91d719b8355f2fa9707ff764c347b83449060eea",
+          "pixelSha256": "c36e1cafcea0da1945da4d3abedde8d312d18842bd9050ca4a923acd976aba74",
+          "bytes": 1003738
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-clear-13-415-finemist",
+      "websiteSku": "GBTallCyl9SpryGlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-empty.8d7a3a1e7804.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBTallCyl9SpryGlMatt-off.png",
+          "sourceSha256": "cca55ddc22b23982d8b3e08cb1f0fd864fc064660feea988c5539fd0c920f71d",
+          "sha256": "8d7a3a1e78048da01ce0b9df98c2fbc7f1933ed5bd1bd1b3846ed634ededf5fe",
+          "pixelSha256": "79d427b3a1539ce9024ae1d0cfd0bd9994d4cce8f84c657cd3a41bd825d710a5",
+          "bytes": 1121990
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-finemist-filled.9e9cdd5f692f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBTallCyl9SpryGlMatt-on.png",
+          "sourceSha256": "306aede5c0200aabd24d90afe3feca586069dfb7ee8135af85c5e56f498cd9bb",
+          "sha256": "9e9cdd5f692fde357eac17fbdfb782e16ff38827e93b1ea9b56578baf2ad9b72",
+          "pixelSha256": "06cb880be235a41f805c6493e06cafd5936ca6cd4a9c16ec3808d987d8db3bd8",
+          "bytes": 1783552
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-clear-13-415-rollon",
+      "websiteSku": "GBTallCyl9MtlRollGlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-empty.018ba3fc3afa.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBTallCyl9MtlRollGlMatt-off.png",
+          "sourceSha256": "18785ee415088984972bdbc6c2eb7f05d67ec0c7f0a4d989dac5691cd01a2b57",
+          "sha256": "018ba3fc3afaead6d65537e3f66287e61c70414b910407a0a976d06a410d0f6a",
+          "pixelSha256": "bb7c05533de2b66d6d96598e31937aebffad262bbcf0e38af934649cc0c23b8c",
+          "bytes": 955696
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-13-415-rollon-filled.53e5ab66d2f8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBTallCyl9MtlRollGlMatt-on.png",
+          "sourceSha256": "9835b607d20bfb411571c480b8b784d277baa0feb51457338566de7e710099e2",
+          "sha256": "53e5ab66d2f8f7614ec73f5301ce9ad81b79e2ec8cb053f7350e7bcd9fa3d30e",
+          "pixelSha256": "7968987b8dd744b109f1de7fd09f7f5e1eeb6d4b9d49107b2008a901685d15ab",
+          "bytes": 1555764
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-clear-17-415-finemist",
+      "websiteSku": "GBCyl9SpryGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-finemist-empty.6870fe13940f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCyl9SpryGl-off.png",
+          "sourceSha256": "79c36d1e796175ffe4239b34eaa9f1d818156bd602443b5d48aa0f161d736539",
+          "sha256": "6870fe13940ff9d1b33e6e79ee6b179104fbd444dcc9bfd23412db544c1a7bf0",
+          "pixelSha256": "78b27a0e03692d7772f7f3f789ae0c2842870a234321da88ea7bce9cc624092f",
+          "bytes": 968612
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-finemist-filled.d5cf27f96714.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCyl9SpryGl-on.png",
+          "sourceSha256": "196d74f5ec99e6f65ae14462068f77964a57863e17db2f92b817a387f72e062c",
+          "sha256": "d5cf27f96714d54020dc5a2cc97488a939dedee9e535e88ad4a8add20396d609",
+          "pixelSha256": "2ed9424bf2c635088ca4d2bdb4c44a0735817b5ddbf6e24236ee83f1196fecea",
+          "bytes": 1417494
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-clear-17-415-lotionpump",
+      "websiteSku": "LBCyl9LtnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-lotionpump-empty.286644c987c2.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/LBCyl9LtnGl-off.png",
+          "sourceSha256": "c4d6ad268b9744f3af68a1484e3d66e2e0e65d85912b74b733218c260508b9d5",
+          "sha256": "286644c987c20793829caf41a36b0a360f93cab6d3304d751d53c7da2be07f31",
+          "pixelSha256": "b82584573c5c8985c551d01d076f4f9fa5a577e27499b9aa176f29470fe39fdb",
+          "bytes": 1000932
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-lotionpump-filled.6acc2d145d30.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/LBCyl9LtnGl-on.png",
+          "sourceSha256": "8717dca798a8156e82b8809846e6c04af832ad68594872defe73b20cbe0c008b",
+          "sha256": "6acc2d145d3008555917ebe5c7b1dc7c307d93163866d8f5fdd2d398aeb8dff8",
+          "pixelSha256": "b4b471b1e24b1131e55503b1ddfa87bff02b969302aa7787ebb7dbc7088a6508",
+          "bytes": 1642644
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-clear-17-415-rollon",
+      "websiteSku": "GBCyl9MtlRollMattGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-rollon-empty.08161fbaed69.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBCyl9MtlRollMattGl-off.png",
+          "sourceSha256": "071fabae79f827a0e877c4bff04e6fc6aec485cd0a81ef370ad4c5c707013722",
+          "sha256": "08161fbaed69d54883b0eff4cb02e1fb98680e39a48a4800e0d991b7c2899085",
+          "pixelSha256": "98d7c596b6013cd8c3aceb9aa494826d46d4b7081998b3333153c16adc05547d",
+          "bytes": 982072
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-clear-17-415-rollon-filled.0c222f1a36fa.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBCyl9MtlRollMattGl-on.png",
+          "sourceSha256": "27142aea276948ad79c52adeb14c412bc7e216c0201095971f8fb472f490869a",
+          "sha256": "0c222f1a36fab1d52a5c663d6a284e9656b4eff432a31c3cf36e7f5030fd906f",
+          "pixelSha256": "0d4c150b7a86c9cc0a9ffc730e3aeadc92d8dd4bcd3317e51efac3559caea5c5",
+          "bytes": 1734520
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-finemist",
+      "websiteSku": "GBCylBlu9SpryMattSl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-finemist-empty.4e7d0e6c6a32.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCylBlu9SpryMattSl-off.png",
+          "sourceSha256": "8f849acd438ae6d53b3325159c8cbfe554a14cc3f92626a08678ff3792bb8583",
+          "sha256": "4e7d0e6c6a3214fb2e390ba84bf46513e173065449b0e3e55f936f7cc5b4766d",
+          "pixelSha256": "22b2bbfae90208acfae6bfd30ed435f4fce7c648282c128df7c0199fa0e2fc32",
+          "bytes": 1101410
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-finemist-filled.67bf3a04bae6.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCylBlu9SpryMattSl-on.png",
+          "sourceSha256": "d2562870f5fd5885e988528d7ba2eb9d621efc19baba8a94c07ad2e5aa36108d",
+          "sha256": "67bf3a04bae6b28b0e72715d553d79e091c548650e559d1f911f7d64f4028240",
+          "pixelSha256": "ce0517d9fa2e2b960684a85cc01ef4dee229471d7e4a1c744cd4bd8ec9b9b13d",
+          "bytes": 999864
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-lotionpump",
+      "websiteSku": "LBCylBlu9LtnMattSl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-lotionpump-empty.350f6c98f62d.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/LBCylBlu9LtnMattSl-off.png",
+          "sourceSha256": "73b6ab059f417c6c4dbbe19ac73cd9aa6c26797646e77b43f49dd11e074c30fb",
+          "sha256": "350f6c98f62d6fe3c8351106855c1c2bc9b7ab6732471d38dfe50e08fbdc7d1b",
+          "pixelSha256": "5f52910ec0783d7f3ede8833395684fd0a15eda8273dac7515f8b77b7069ee7d",
+          "bytes": 1086060
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-lotionpump-filled.81da33c18f6d.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/LBCylBlu9LtnMattSl-on.png",
+          "sourceSha256": "19bd13c1ab05cc81eea0e1a2c68d9c9a1a63f17e42526b8d6a8644337302ad4f",
+          "sha256": "81da33c18f6dd10a92a6cfd1f9b9e1f0f4559ed9f690702535d4a423701ac18b",
+          "pixelSha256": "f518d3bc123cfa8d10384986d10abee15ec5fb96698c140b59f6dfe23767a3a5",
+          "bytes": 1999302
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-cobalt-blue-17-415-rollon",
+      "websiteSku": "GBCylBlu9MtlRollMattSl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-rollon-empty.0f1e965c1907.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCylBlu9MtlRollMattSl-off.png",
+          "sourceSha256": "c93dd4ff4405b3a39df622862d692d565293fb07e6c5cf12ef5bbe3e7ad1234a",
+          "sha256": "0f1e965c1907443cf116f61ac3b6fa2efd07efc7e16c32cd37c51f4b4a1b56d9",
+          "pixelSha256": "ce24c62bbc1d1e1f7f162a7dbefcb827f957fd7f52930b506ae625cc53e7b0d5",
+          "bytes": 1007740
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-cobalt-blue-17-415-rollon-filled.281293fddbfd.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBCylBlu9MtlRollMattSl-on.png",
+          "sourceSha256": "dccde2f2fa214fa94e8228c0133b2fefee99ba4814fcae0e03a2f1229c8228b5",
+          "sha256": "281293fddbfdf98141355dd4861b045b54bfc8413b28266711366e27289e753f",
+          "pixelSha256": "502801ea3422cd81c07a3783d43b34621cc3b019770c4fefcfd7e855cc26ed19",
+          "bytes": 1352140
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-frosted-13-415",
+      "websiteSku": "GBTallCylFrst9GlMattSht",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-empty.6dff770b14a8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBTallCylFrst9GlMattSht-off.png",
+          "sourceSha256": "590520cea658efe82fd19c0a446c822621057c16b595572e95e57e6768ca0e78",
+          "sha256": "6dff770b14a872b2f882ca90db1f8304422e68a029144ecdb86dd570ee829817",
+          "pixelSha256": "3c210c07ef731f5dfe5d4732b3e1aa99ea70f3543231d1e298bfe16fc8a532b1",
+          "bytes": 1009060
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-filled.71210861c363.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-02/GBTallCylFrst9GlMattSht-on.png",
+          "sourceSha256": "4e0857c97b5532d5658ef3970d8f6cc428d0a49c1d365578b82d10176a98c9a8",
+          "sha256": "71210861c3630521de37102f981d8d94967f59e63ab7524b73af6ccdb9c2e7b2",
+          "pixelSha256": "981605c11b2a6c7c3bfdf5453e9a5965a20e40964cce1085be4d4bd7e442689a",
+          "bytes": 931992
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-frosted-13-415-finemist",
+      "websiteSku": "GBTallCylFrst9SpryGlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-empty.3fdb65ca6c5f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBTallCylFrst9SpryGlMatt-off.png",
+          "sourceSha256": "599ef556efffb83f851cecd036ac0776755dd43a5495c0f6e6c9a8f500f69b90",
+          "sha256": "3fdb65ca6c5f9f002f7b7f3f13ad104ce50c486aa81364b560b5ccbe81edb2f7",
+          "pixelSha256": "88b9ae4903b71907f590c09140ffa5cd5a7d3d39fc049f3e320477c071c6a859",
+          "bytes": 1033460
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-finemist-filled.33450c76f19b.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBTallCylFrst9SpryGlMatt-on.png",
+          "sourceSha256": "5afe5b7aabfa7b61a8964603cdd8601aa450467d721c2a8a07c43104e5b6a057",
+          "sha256": "33450c76f19b5f612338d9d6ff01c212a159054d71b87e58a426f2473eb35f50",
+          "pixelSha256": "44f13c86af953378652ee041c18f69347ca2ef4ff40f58eae582801377bb6504",
+          "bytes": 1567830
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-frosted-13-415-rollon",
+      "websiteSku": "GBTallCylFrst9MtlRollGlMatt",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-empty.27a3295a23a3.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBTallCylFrst9MtlRollGlMatt-off.png",
+          "sourceSha256": "394a0dfeffd8839668ac7d2557cc21f2e83117122e8eb536f9629663cda39520",
+          "sha256": "27a3295a23a37835d58052c618493d27e150e619342d1db6ee167dfdd2c72ef9",
+          "pixelSha256": "afd4a60dd0f9bce4c1887d8eab6b14976ff596555c0b790a6a63faa629c1a398",
+          "bytes": 1016852
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-13-415-rollon-filled.ea7668e22003.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBTallCylFrst9MtlRollGlMatt-on.png",
+          "sourceSha256": "f299ef08fdf5511caa298a4c84861735f5dea900e9246ae6b7257d0b7bdda95c",
+          "sha256": "ea7668e220033936adebee0e89a3f2707a86a3010a5ee8c5d46f8b229309f28e",
+          "pixelSha256": "9ec048050efe0435c960f19a8259b108e161edd954066aeccc6f46412fa7d90c",
+          "bytes": 1067072
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-frosted-17-415-finemist",
+      "websiteSku": "GBCylFrst9SpryGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-finemist-empty.0fb45b56d3eb.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylFrst9SpryGl-off.png",
+          "sourceSha256": "cb4c758b6a10f9f0fb9803fd16de9aa722afb5e625a7666f0b48315a08720d2f",
+          "sha256": "0fb45b56d3eb0a20f7d73d75cd8fee5094ce93bfaf783793aa48579dd4ad554b",
+          "pixelSha256": "be99591800abb4fd08b2deafd3d00b91b064a67986035d843244ed4df621cc65",
+          "bytes": 1313864
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-finemist-filled.94f47decdb9c.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylFrst9SpryGl-on.png",
+          "sourceSha256": "8a87cd3d164bd667ea66b2feaa323320d93987783b6d24f333ad528ce967119b",
+          "sha256": "94f47decdb9ce5853d9b0603b5a6bf833c5fe52de503dbe3de0ca8a6ffa6c991",
+          "pixelSha256": "887fbef41264fa823d136803ffd2d83eba8bf98a206962f0fb7b07f83b1ebebe",
+          "bytes": 1477634
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-frosted-17-415-lotionpump",
+      "websiteSku": "LBCylFrst9LtnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-lotionpump-empty.d7c7323af5a2.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/LBCylFrst9LtnGl-off.png",
+          "sourceSha256": "715e5fb22876d62a20f8e3d6e2f2860d24033309785e17028d2c89cabaa10875",
+          "sha256": "d7c7323af5a2bef1c25dee2da9d240557f50f15f3ee0217b4d2c5f96cf2d14ad",
+          "pixelSha256": "8fdeaef07a47f93b8f1275b735755558bed87bc55dfeb9ed0da858fed75e897b",
+          "bytes": 967726
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-lotionpump-filled.44035139178b.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/LBCylFrst9LtnGl-on.png",
+          "sourceSha256": "b916cdeaa12c827945081067a8f7a20c8b650df75c98ff3f8af4e14528eddcdb",
+          "sha256": "44035139178b5c82eb979940aeb9fe219c16d47515e61b2f35938fa2e00d67be",
+          "pixelSha256": "979017cf1d8c1b3d0578c0079deae789b2c9ee840038db5b108d3211cd0b0104",
+          "bytes": 1320734
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-frosted-17-415-rollon",
+      "websiteSku": "GBCylFrst9MtlRollMattGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-rollon-empty.7e5aa9d94e6a.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylFrst9MtlRollMattGl-off.png",
+          "sourceSha256": "9724a35ed80def2579f9a55593c060b79a5b0affa1ed5306ca2db33185d1245c",
+          "sha256": "7e5aa9d94e6afe5238d38abec4141fbf761acc204c3190eec9082dfcf15853fa",
+          "pixelSha256": "6f948cfcc529a7f7abe36d676e28d5dfe32895a1556d6c9c3827e17ac413cf41",
+          "bytes": 1014674
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-frosted-17-415-rollon-filled.efa78f3f43c7.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylFrst9MtlRollMattGl-on.png",
+          "sourceSha256": "e6bb6ac640bf4157f88e7f91bcc5c2b6eaa2abcf01b829cf7dfdfbdae281bd0b",
+          "sha256": "efa78f3f43c7a1c078807f644abf5acc87f0b40aad04e1c482838681c00c1b48",
+          "pixelSha256": "4ea37c2dab662edbd16dac30fffdcdc85b18a0c5a443dc3fb04c0c97b54585e7",
+          "bytes": 1267322
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-swirl-17-415-finemist",
+      "websiteSku": "GBCylSwrl9SpryGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-finemist-empty.0e9f1e9bf187.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylSwrl9SpryGl-off.png",
+          "sourceSha256": "ae929de740a1177e86493d7625e107ca330526ca3b84db1c1ef8df9d7baa5c3b",
+          "sha256": "0e9f1e9bf187a2dec739e671349151fd953e8a80181a74552e3fd7b8fe6756ac",
+          "pixelSha256": "1006e8f86e7a430584696aa762da4dbcd26ff52f2f1fbbb4fd167a1d92fce996",
+          "bytes": 1060884
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-finemist-filled.8a9a7c747f64.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylSwrl9SpryGl-on.png",
+          "sourceSha256": "3916f6cea83e5e052b7075efb70b5b24c73dbbc1ea9709a3b1f90db716f4a841",
+          "sha256": "8a9a7c747f64807d7ba9e28060dcfc99a27da931b1e8504691cf54c4666c73d2",
+          "pixelSha256": "b428bfca8fb3f29b0b352c8dd18aa0703c73ce7f7e51941cd2e3b24a448ebffb",
+          "bytes": 1722670
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-swirl-17-415-lotionpump",
+      "websiteSku": "LBCylSwrl9LtnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-lotionpump-empty.30e2b12798b6.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/LBCylSwrl9LtnGl-off.png",
+          "sourceSha256": "8202f9875dfd2438dcdd2ca74e5ab3b76716d492d18ab56e6276efbef210c6ed",
+          "sha256": "30e2b12798b607f6bbb89f3febf6be41c58e2784a74353802a0fa18499523083",
+          "pixelSha256": "dfb2b524615ccdc080bbe184edce7cae36a1a4ad709cc9f22cc52c66465bf93e",
+          "bytes": 1149276
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-lotionpump-filled.9c516965953a.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/LBCylSwrl9LtnGl-on.png",
+          "sourceSha256": "a8d55b083060e7d11fd36746025ce7b97519a47377b3cb2e02bf07f4eb17dc65",
+          "sha256": "9c516965953a5d70b8127dd1b71c2cbb6f37c332bfe9efa1b4ab6b8431b55704",
+          "pixelSha256": "700bc91efefeaa624a19dc912db20a8098b394f13fb3187f76928a9b38b1ed99",
+          "bytes": 1133394
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-9ml-swirl-17-415-rollon",
+      "websiteSku": "GBCylSwrl9MtlRollMattGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-rollon-empty.bbcd49200462.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylSwrl9MtlRollMattGl-off.png",
+          "sourceSha256": "8beb327540c3d1372af8460a24848e0cb24e66c895854fb29a24e6350046e6c5",
+          "sha256": "bbcd49200462b48d3bb1024093b8390c7551ca54c71425d42919ec0dc6abad95",
+          "pixelSha256": "7eb8384578c3cf758ff5bea16a7f64699e264c0e513c3b3b77de39f287ea9123",
+          "bytes": 1179768
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-9ml-swirl-17-415-rollon-filled.6e2096a6c9c0.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBCylSwrl9MtlRollMattGl-on.png",
+          "sourceSha256": "da68783a7876c137869f15cc723967deed886fbfd5283fb485d858477da7f026",
+          "sha256": "6e2096a6c9c0301c805986b2190040fffaad6eb5109e17efcc1ffb65794d2542",
+          "pixelSha256": "e388ce5af21eb9e4ff000a2cab4c48445c4cfcbba8f47ad4c11f7ccf28ab6c82",
+          "bytes": 1196582
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-25ml-clear-18-415-antique",
+      "websiteSku": "GBcyl25AnSpIvyGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-antique-empty.8a41d16e53a8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBcyl25AnSpIvyGl-off.png",
+          "sourceSha256": "182b564625fc4f2efe3ee113f69349c798f469ffbab5233d69f16ad4a6107a26",
+          "sha256": "8a41d16e53a82788682792ea4cb6b3df7827d253e6e81a4b5e2189c30d1f48af",
+          "pixelSha256": "7e362c0549d19273de4ba3b5f166062d96b7a284eef0f442b13f87f73aed5b92",
+          "bytes": 1459374
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-antique-filled.2b7a25079afa.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBcyl25AnSpIvyGl-on.png",
+          "sourceSha256": "031d17936f9e81fdb26ea5bc3628db0ae19524260804cc4b861431e1bc4600aa",
+          "sha256": "2b7a25079afa7bc29a4178c9eb2f22a2afef9c2b90b187e63fd7fba354db84d7",
+          "pixelSha256": "fa04bc8536b745c7848126d733dad11a498ff066bf49c953885b4b1e7923390c",
+          "bytes": 1712394
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-25ml-clear-18-415-antiquetassel",
+      "websiteSku": "GBcyl25AnSpTslIvyGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-antiquetassel-empty.500f247ecf3f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBcyl25AnSpTslIvyGl-off.png",
+          "sourceSha256": "bf4a12e8be06e1514aeff6cc4bb8cf7f8fec715a16cf3151cbefac1a43db108e",
+          "sha256": "500f247ecf3f672824185766ac071efa3894c46073f5991b972345bc392deb01",
+          "pixelSha256": "b0d7506abf5186c3d6128b04bfecd339f57887adc60dd8accc214e2dce711168",
+          "bytes": 1815066
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-antiquetassel-filled.67df5ef0ce79.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-03/GBcyl25AnSpTslIvyGl-on.png",
+          "sourceSha256": "3348daf5cc99f9f209ddc504e2dc387b4d805962f0cf25ae88bb875fa57a35f3",
+          "sha256": "67df5ef0ce79fcef2e9472cbc4686a9692171ced655ab311bc7507e4567be23f",
+          "pixelSha256": "9d778bd1cc1f0e4a88454e8286d876d66f231f802e7d77bd306bb11033284b57",
+          "bytes": 1957062
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-25ml-clear-18-415-dropper",
+      "websiteSku": "GBCyl25DrpGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-dropper-empty.eef33b9fa144.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl25DrpGl-off.png",
+          "sourceSha256": "8a6c864fc7b4da2e849b7b7da5d7fdefb5cb77173f7547c498c9319b9643c471",
+          "sha256": "eef33b9fa14462d4cfec0be4b24daa005b96d2e2ad12f18742e2b9b2bdaa6333",
+          "pixelSha256": "c84b86f78c54023fd178f917fc54128ba6c1214ee4ec9abb426d5d0a294f4cd0",
+          "bytes": 1075814
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-dropper-filled.f574c26c5d45.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl25DrpGl-on.png",
+          "sourceSha256": "6fb82eaecfe6f27f8d0bb9ffbde26f1b1ec20ee8a1ecd2f3e89d52870b918dc8",
+          "sha256": "f574c26c5d459bba37b0b8f8a96a645ee2d1681546049d3592bc63c9bf00e3b2",
+          "pixelSha256": "f4e5872ea43494a1777a93fb08662de4ee64a7b3c12a23e5220de386593016da",
+          "bytes": 1752038
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-25ml-clear-18-415-finemist",
+      "websiteSku": "GBcyl25SpryMtGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-finemist-empty.9d42d39a2a07.webp",
+          "transform": {
+            "scale": 1.025,
+            "translateXPercent": 0.22837,
+            "translateYPercent": 1.4882
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBcyl25SpryMtGl-off-v2.png",
+          "sourceSha256": "2619b0668c177c55eb1807d0f94f65048486c4042ad2f4f460a2f7b0c118a286",
+          "sha256": "9d42d39a2a0714cd60ea5f471aec671d7a97d698790aaea1b56c40600cc87271",
+          "pixelSha256": "ba0102bf085e37e0e81b6f70ac365bbb404d5efc7ac4f8848a60e4e6e40e5bdc",
+          "bytes": 1509470
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-finemist-filled.73a4419a0165.webp",
+          "transform": {
+            "scale": 1.0030983,
+            "translateXPercent": 0.71315,
+            "translateYPercent": 2.48009
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBcyl25SpryMtGl-on-v2.png",
+          "sourceSha256": "014fe856576c5f193e00296ced0cdb07299236b4d755bf77b59c7a37991fc50b",
+          "sha256": "73a4419a0165d42cc5cc6fe066e7b777211a400913f835a83241a648defcf480",
+          "pixelSha256": "4213c4c7400847bad0a0cb16a5cb35817c2b011cd7ec7758d0a5fbbebccec8d9",
+          "bytes": 1625258
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-25ml-clear-18-415-lotionpump",
+      "websiteSku": "LBCyl25LtnMtGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-lotionpump-empty.f0ecaac75a65.webp",
+          "transform": {
+            "scale": 1.075,
+            "translateXPercent": -0.64904,
+            "translateYPercent": -3.11298
+          },
+          "source": "public/preview/cylinder-hover-batch-04/LBCyl25LtnMtGl-off-v2.png",
+          "sourceSha256": "f2c7bec55f75adfd8608eaa0f53bf7884ac540aa9c93962d17e6b7e6dea347c1",
+          "sha256": "f0ecaac75a653e3fd907fe44cabe1093cdb8d87985a63ac8bb9560d52d56e272",
+          "pixelSha256": "14aef5efad6b143a4e345c6c4a4c6778791a3d136c02139454f355ea60ee86b6",
+          "bytes": 1454738
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-lotionpump-filled.266b021e2f62.webp",
+          "transform": {
+            "scale": 1.0591133,
+            "translateXPercent": -0.30788,
+            "translateYPercent": -2.648
+          },
+          "source": "public/preview/cylinder-hover-batch-04/LBCyl25LtnMtGl-on-v2.png",
+          "sourceSha256": "e9c43b1b27ddc8b08cc8644b5d446f446bd1fe28ead9f715e954567b7552292c",
+          "sha256": "266b021e2f6273007b0b9407f0661d4eb963754f82501a9e25562fe816fa0bc2",
+          "pixelSha256": "fed9d4b27fcf001a4fd14c19bcd38d4e2b08ff51d6ef38b60b9110d46b47fcfe",
+          "bytes": 1650382
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-25ml-clear-18-415-reducer",
+      "websiteSku": "GBCyl25RdcrShnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-reducer-empty.501c1f6b0944.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl25RdcrShnGl-off.png",
+          "sourceSha256": "4017295aecaf411f893765e66dd4ab397a775f8c2b121fe6346170b265d675af",
+          "sha256": "501c1f6b09447a0b67604746e084aead8120694a51b5c63e8140e890caa25eea",
+          "pixelSha256": "e2465fc53fcb83a0682c46be18b9d23e36f744fa1de514a3240588acb64cb064",
+          "bytes": 925452
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-25ml-clear-18-415-reducer-filled.3a186533e9e2.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl25RdcrShnGl-on.png",
+          "sourceSha256": "2da7c16796d8cabb99a53d0cb00b17d62a8549bb2a4ebdd493a3ffba4285909b",
+          "sha256": "3a186533e9e22b7a6c6dd07022d0515ca139d6bce104a5144bbe908bfa252e9e",
+          "pixelSha256": "713914a17e34a65b667d444ec9a3bc9f08d39fe0e1d8040debe6ac4d86575a68",
+          "bytes": 1176584
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-28ml-clear-16mm-rollon",
+      "websiteSku": "GBMtlRoll28Blk",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-28ml-clear-16mm-rollon-empty.59dedcba2492.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBMtlRoll28Blk-off.png",
+          "sourceSha256": "336b9db9b3d1cb8cadd011234eff3f87da8d099ff98424fdfee95754897adcfc",
+          "sha256": "59dedcba2492ccb5ce7d683caf46754f596be57b8f90e9779fe6d3c6230bab80",
+          "pixelSha256": "b11119f48725810e29cbf14d21b7dd76a578a232aa4cbff41c862061c4a97d6c",
+          "bytes": 1250750
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-28ml-clear-16mm-rollon-filled.0e40017b12f3.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBMtlRoll28Blk-on.png",
+          "sourceSha256": "12656a0feff8c3c6eb545b94ace19dad587e5a6132e14aee4542275823f5fc83",
+          "sha256": "0e40017b12f31cc3ebad8a6398112ff3d82f64c07e1e934553a06824e7863925",
+          "pixelSha256": "c1e615b737330bfbb71b8f9033f29cc520f134f8ffb3b4ff77e815ad36077e4d",
+          "bytes": 1238766
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-30ml-clear-18-415",
+      "websiteSku": "GBSpry1ozGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-30ml-clear-18-415-empty.d60e2f005e20.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBSpry1ozGl-off.png",
+          "sourceSha256": "75e44d5834b5f6f9d88bd36b639812f7572309df929982453f59d3b7d021fef5",
+          "sha256": "d60e2f005e204f70e58e71adcf3d775b68117e5ed3a99d3426e26be5df94995b",
+          "pixelSha256": "385aa86e9866a8f9b36a04ed3a928ac0af2181acf09cfab15a126605c5a395d4",
+          "bytes": 1265864
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-30ml-clear-18-415-filled.3fbb06b182cb.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBSpry1ozGl-on.png",
+          "sourceSha256": "c2dab01c680bc4a637d1bcc38adaec81efd7de6f4d6a9e6d49f51d96b4746e09",
+          "sha256": "3fbb06b182cbbeae7d643616798c8b5765f5d82a91c772e783cd9d18f4a7a58e",
+          "pixelSha256": "0df0e7f6836e136b9c938c77eba1f95eebe1363c59a00a9ac4ab0c5327e6834b",
+          "bytes": 1825998
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-50ml-clear-16mm-rollon",
+      "websiteSku": "GBCyl50MtlRollBlk",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-16mm-rollon-empty.f092398c467d.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl50MtlRollBlk-off.png",
+          "sourceSha256": "99530505c321655b79760ef2881d29b5e7fa232377f1da0d8de377aea85334d9",
+          "sha256": "f092398c467decf12a9a385bca372d8dffec93232968e240264a9e8608493037",
+          "pixelSha256": "b082ae2848d04b50305a04c0aba567aa8d115781660a736af04e0f69070cfdca",
+          "bytes": 1023902
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-16mm-rollon-filled.6492e95740e9.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": -0.04808,
+            "translateYPercent": -0.08741
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl50MtlRollBlk-on-v2.png",
+          "sourceSha256": "91c153f0efd4d5ce68dab319f5a8075b10e494d34bb24f35368870497ef27d52",
+          "sha256": "6492e95740e997061cf0a8cce36cff2295367e66bef0801f0ee74629a586e1a6",
+          "pixelSha256": "2d1664d3ad1b4b4bd12f96f070353059be728c12a60a7e318a7e0e7e5ce41e13",
+          "bytes": 1242302
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-50ml-clear-18-415-antiquespray",
+      "websiteSku": "GBCyl50AnSpIvyGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-antiquespray-empty.bb59f5e634ae.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpIvyGl-off.png",
+          "sourceSha256": "fe9999d8b67539688f30ae34c8e18c07ae19d770895d1b9683e38b9233339ccc",
+          "sha256": "bb59f5e634ae2045a56fe9e6cf556ce579febbc47746fd4d403dd33ca3140393",
+          "pixelSha256": "89440e98246e36875dbde5962049199148a73d7b11eefe5791bc97a478909ea2",
+          "bytes": 1699196
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-antiquespray-filled.efc388700aa8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpIvyGl-on.png",
+          "sourceSha256": "47ce2dc5b51771c58c3b0d06d586649e078c967da13e1adb244abcd518490d28",
+          "sha256": "efc388700aa88a42e37553d62174ee47aa3f1025ed8197120d8f784add1d9caa",
+          "pixelSha256": "639ba897708d4a054dd1c10fa0d5a3630045927aa95875a907b5aa48600c53ff",
+          "bytes": 1784742
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-50ml-clear-18-415-antiquespray-tassel",
+      "websiteSku": "GBCyl50AnSpTslIvyGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-antiquespray-tassel-empty.02fcc5532a5f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpTslIvyGl-off.png",
+          "sourceSha256": "7efa211057d3df0982c3bd27cda0ca174b5e5e0e3f6738916ccaff492afab30d",
+          "sha256": "02fcc5532a5f23a6b01d306a2c961129a439d9a66f7feb85cec582371e414ff3",
+          "pixelSha256": "128a9644f8d24236062be4add66ceff00d487e93f8ef96546763ffcd52343118",
+          "bytes": 1310028
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-antiquespray-tassel-filled.eceed9234a51.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/GBCyl50AnSpTslIvyGl-on.png",
+          "sourceSha256": "8e4c4305f8834d12d7fac7866b51286371c4e7f2f4c6b370292692e3c922f4e1",
+          "sha256": "eceed9234a51bd1ef9ff4f3ad8d3d2374459a92abcd53b16cede9104259732ba",
+          "pixelSha256": "87fe150f86ac6ad5d155f7ab3c751c65830cfb3e970991660e45e31837af4d1d",
+          "bytes": 1936924
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-50ml-clear-18-415-lotionpump",
+      "websiteSku": "LBCyl50LtnMtGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-lotionpump-empty.b82cc4b58f82.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/LBCyl50LtnMtGl-off.png",
+          "sourceSha256": "42faa398b0610111a583d62b28446d36e9065f402c50feaa4b61f1aaa39b3840",
+          "sha256": "b82cc4b58f82d351901c11af101a59ff49d4db1927651cb8d49066dc023a8699",
+          "pixelSha256": "57f42faa68e4400c1c7f3ea31d21da4bd5530ab3023014276aae2c873867aa2a",
+          "bytes": 934022
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-lotionpump-filled.a6a0357c9c3f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover-batch-04/LBCyl50LtnMtGl-on.png",
+          "sourceSha256": "9a37d627ad23b04ea03393170021e5635bb0dcd5a03962af03c43829d39ad472",
+          "sha256": "a6a0357c9c3f0c85b55269e97ff6ae798d5259e30ab030ecbe92ca807a09a6f5",
+          "pixelSha256": "fcb63c02f53baf25c789f4316d27c9b08415f35dbf51d00a62ad4a4e25fa4509",
+          "bytes": 900424
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-50ml-clear-18-415-perfumespray",
+      "websiteSku": "GBCyl50SpryMtGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-perfumespray-empty.0fa94e839ab8.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBCyl50SpryMtGl-off.png",
+          "sourceSha256": "5c1c7c56b8c90c2ca14490c612979e2f48db8a801d5fdac9d6567ac76c105e09",
+          "sha256": "0fa94e839ab8620655c9c98b12f998ea2949aec0c9e4c83e4c294dabe425b995",
+          "pixelSha256": "234d07a0abf9ba0bf99aff8d7ada0f97279c6bd84be1100ab2864a7f577f9ad9",
+          "bytes": 919192
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-perfumespray-filled.cb30360f7a4f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBCyl50SpryMtGl-on.png",
+          "sourceSha256": "06931423ddebe135fbfa1170948c4cab0445026e03a64a1d24c1cd54c1666d5b",
+          "sha256": "cb30360f7a4f541ffcc7966e0cf241ba0406230031ac7de25c0473543ddb4314",
+          "pixelSha256": "a57de8331c006011623cb7b01cca2040e0630ccf49fccaa9b0e2dc7b418598bd",
+          "bytes": 1368180
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-50ml-clear-18-415-reducer",
+      "websiteSku": "GBCyl50RdcrShnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-reducer-empty.246ed47dbc37.webp",
+          "transform": {
+            "scale": 0.97,
+            "translateXPercent": 2.067251461988306,
+            "translateYPercent": 1.9726027397260282
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl50RdcrShnGl-empty.png",
+          "sourceSha256": "065fb20cc0f8bb2663ef06e64a80641a50538e2377f4f0a14308a4bf6a2bf546",
+          "sha256": "246ed47dbc3790c757877839be6a48c2de255acb066b5fc31e715ce6de6b5015",
+          "pixelSha256": "932819d5a5b84d5adc1389950552f8852ef456ecaeeed8f90d6cee97c075cdff",
+          "bytes": 1708058
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-50ml-clear-18-415-reducer-filled.6416dfdad307.webp",
+          "transform": {
+            "scale": 0.97,
+            "translateXPercent": 1.9858096828046712,
+            "translateYPercent": 1.904798172124913
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl50RdcrShnGl-filled.png",
+          "sourceSha256": "5573aa5a71fa405728e49a2152b4a67ce5944a7e3d019a92fb316d446eba5304",
+          "sha256": "6416dfdad3076eefd7dc450bb5ef87cb9444614efba2bd822ff4492c60087547",
+          "pixelSha256": "508471e32af49da43b8dd8c514dd5772d55549fcd158496d37328bae4938c3a3",
+          "bytes": 1749046
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray",
+      "websiteSku": "GBCyl100AnSpIvyGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-antiquespray-empty.1084f163c8ea.webp",
+          "transform": {
+            "scale": 0.985,
+            "translateXPercent": 1.778613199665827,
+            "translateYPercent": -1.432699619771867
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpIvyGl-empty.png",
+          "sourceSha256": "bdcc93d0ce0a6504b66c0d47c4df2b870aecc62af52dd30dace1f1808d4c2644",
+          "sha256": "1084f163c8ea69755143a1d8728d911669098a2323bd0b4d996ca65f69c7c2fc",
+          "pixelSha256": "b8adc7e6a703a9be09ed519d0133c4d2ded50ecd908bb6b59bd1f3ae60371dd2",
+          "bytes": 1560804
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-antiquespray-filled.7646dab3af33.webp",
+          "transform": {
+            "scale": 0.985,
+            "translateXPercent": 1.6963241436925713,
+            "translateYPercent": -1.4280821917808169
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpIvyGl-filled.png",
+          "sourceSha256": "7305c584b9d141b194be92500fd1f3b6b995641354652ccba5a1d1366aeaaa3d",
+          "sha256": "7646dab3af334e365d288443be2d75f2768c1693ad2056c7ade710a899f9a377",
+          "pixelSha256": "b07ba7d39cf8c7b084f596dcf959dec40592aebb0de79a6098a89893adeefb17",
+          "bytes": 1843726
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-100ml-clear-18-415-antiquespray-tassel",
+      "websiteSku": "GBCyl100AnSpTslIvyGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-antiquespray-tassel-empty.1177c5f67e5f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": -3.383458646616546,
+            "translateYPercent": -0.9330289193302832
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpTslIvyGl-empty.png",
+          "sourceSha256": "776bac87fd08e65665d9a4ee15cd990bf62f26ed68606f19570204586a9268be",
+          "sha256": "1177c5f67e5f24b7d4626656c970385e22c0bc9757db9198ad35e1263aa34a70",
+          "pixelSha256": "9d49c4c48f4b6dd27bc2ad3c80cd038a108aa546831f2236b1ff0cbaecc58da9",
+          "bytes": 1547140
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-antiquespray-tassel-filled.2d1184fafcc5.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": -3.1746031746031775,
+            "translateYPercent": -0.9330289193302832
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl100AnSpTslIvyGl-filled.png",
+          "sourceSha256": "be8c5a094927a873b9b5a303873a9fda30bf2219f03ddd20402dcd54a3e25243",
+          "sha256": "2d1184fafcc59749a43bb1b2ccec1dffb70b2173756d59089e3eaf1c657dbf11",
+          "pixelSha256": "a4349d99925efa4c340fbf03137c0f1cf9b336800df68ed1b74cee818eb32d5c",
+          "bytes": 1890746
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-100ml-clear-18-415-lotionpump",
+      "websiteSku": "LBCyl100LtnMtGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-lotionpump-empty.28a6b8b97b3f.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0.1253132832080226,
+            "translateYPercent": -1.6996197718631123
+          },
+          "source": "public/preview/cylinder-hover-batch-05/LBCyl100LtnMtGl-empty.png",
+          "sourceSha256": "b46cb6c2a0b73b4de788e883fe42516d9ed775ddae6f07132ba3c97539204529",
+          "sha256": "28a6b8b97b3f55fd0e0eceab2000816aebdc5ad5f78da58a843e1b5f6b537314",
+          "pixelSha256": "f253546b147e2313673714edfa16f5b1c2f7c8871b62cca17ea8c544afd5d54c",
+          "bytes": 1018308
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-lotionpump-filled.e10bbf5f64d3.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0.08354218880534603,
+            "translateYPercent": -1.6940639269406432
+          },
+          "source": "public/preview/cylinder-hover-batch-05/LBCyl100LtnMtGl-filled.png",
+          "sourceSha256": "620afa86cc5520e9b480b0ba43852e20fcfa0af1adbfd24956f969e1414568b6",
+          "sha256": "e10bbf5f64d3caac0e723bea66590fa1fc19b08a58b32b5405e5311c282278ee",
+          "pixelSha256": "42aa6f8981666650625df460119cde1b0f0b8737a46d2759e07df095a24fb6a5",
+          "bytes": 1624812
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-100ml-clear-18-415-perfumespray",
+      "websiteSku": "GBCyl100SpryMtGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-perfumespray-empty.e4ec8ab9246a.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBCyl100SpryMtGl-off.png",
+          "sourceSha256": "9096b205bd9a544fbc73d73a8dcdba353dd608304afb7af54ff6eb2c55f5d2a8",
+          "sha256": "e4ec8ab9246a64b1b7829284bfe43332b173ea16edded21e23dde32b17ac9aba",
+          "pixelSha256": "521ae2afdda61ff01fdf876f8c73e38c9ddc45833b478050631a717127c7d393",
+          "bytes": 955620
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-perfumespray-filled.1bfe5317f4c1.webp",
+          "transform": {
+            "scale": 1,
+            "translateXPercent": 0,
+            "translateYPercent": 0
+          },
+          "source": "public/preview/cylinder-hover/GBCyl100SpryMtGl-on.png",
+          "sourceSha256": "10cc2b7669b1e7232e6271157ade215b6dff4604a8f9a6f627e4afb0a5cafa3f",
+          "sha256": "1bfe5317f4c1d402bd6ddc038e0779aa2b20edecf93efc8a672a9bfb33191137",
+          "pixelSha256": "ad8c307b4e5bb9c0bf3ecc98bcd84ba817553b807947b0555a9567af28c30134",
+          "bytes": 1607346
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-100ml-clear-18-415-reducer",
+      "websiteSku": "GBCyl100RdcrShnGl",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-reducer-empty.99aaa2aad35a.webp",
+          "transform": {
+            "scale": 0.964,
+            "translateXPercent": 2.4442773600668346,
+            "translateYPercent": 0.7578707224334664
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl100RdcrShnGl-empty.png",
+          "sourceSha256": "e3806b5cfd72f90419a9f59ad0dd24bf3776fa453eb939b720787a364dfd1f06",
+          "sha256": "99aaa2aad35af3619c50ec90c75e7d4eeaebc0861d2db1bcabe8b6218308f179",
+          "pixelSha256": "8eb9c043daf16b3c63ccfdd9df7b371b57e6d09cca5f2fdad500a3d013a6fe97",
+          "bytes": 1824360
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-100ml-clear-18-415-reducer-filled.6e0d2e179b35.webp",
+          "transform": {
+            "scale": 0.964,
+            "translateXPercent": 2.081871345029249,
+            "translateYPercent": -0.19117199391170914
+          },
+          "source": "public/preview/cylinder-hover-batch-05/GBCyl100RdcrShnGl-filled.png",
+          "sourceSha256": "abcb11b303b536192a43a07d21459ed75fe388890318ce94b1c0dc6993fd4244",
+          "sha256": "6e0d2e179b351ce69c85cee0317e5cb2643ac155a063b70699ad2f82552ca712",
+          "pixelSha256": "3a6a46b98692117af5ecc1dd57fb2524d3ac6a3e08824d8890134fa07368040d",
+          "bytes": 1718608
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-118ml-clear",
+      "websiteSku": "PbClear4ozFlpWh",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-118ml-clear-empty.1517482bfe17.webp",
+          "transform": {
+            "scale": 0.730013,
+            "translateXPercent": 13.621425752508358,
+            "translateYPercent": 25.437615741444873
+          },
+          "source": "public/preview/cylinder-hover-batch-05/PbClear4ozFlpWh-empty.png",
+          "sourceSha256": "6e9dd71ae5eb670c6fccfb7cbdb81e636065ccf4e3e562366ef05ce82231134f",
+          "sha256": "1517482bfe1724ed4aac4e201e6b9506fa996b47fd95578077a1e98a3fdd5223",
+          "pixelSha256": "0ef884d53f856e31f581660667539386767f59805b06983e3376d8c61e18d972",
+          "bytes": 1035934
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-118ml-clear-filled.018d4dc0c1a9.webp",
+          "transform": {
+            "scale": 0.730013,
+            "translateXPercent": 13.712804093567257,
+            "translateYPercent": 25.332163926940638
+          },
+          "source": "public/preview/cylinder-hover-batch-05/PbClear4ozFlpWh-filled.png",
+          "sourceSha256": "35e5d0e81820ef7ad9ffcf8ab9847f3ba52170a0eb23ba3256e5585f6fbd5a2f",
+          "sha256": "018d4dc0c1a97b5426975faaf20ac16c2b2825300f8a02af3d56869b27c50ef1",
+          "pixelSha256": "1f2af30850a322167c66d53d6ef6b310a0a6b2bb0ee8cf23219f7a66aaf579ac",
+          "bytes": 1578682
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-227ml-clear",
+      "websiteSku": "PbClear8ozFlpWh",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-227ml-clear-empty.4d3b7ee35138.webp",
+          "transform": {
+            "scale": 0.812616,
+            "translateXPercent": 9.606807017543858,
+            "translateYPercent": 15.300030418250955
+          },
+          "source": "public/preview/cylinder-hover-batch-05/PbClear8ozFlpWh-empty.png",
+          "sourceSha256": "d5e6d8e8c58e8043ceac7b85e9b2cbe5254ceb7e4600c0c10ee61e8bde0db044",
+          "sha256": "4d3b7ee35138ce92737eab07a33f73628efee0e376d3308bf1d6dfd5b926a73b",
+          "pixelSha256": "fa1d37b3db441f9eadbbfe42032a4588052096e05db01239e913968273cb5b0f",
+          "bytes": 1070076
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-227ml-clear-filled.3b155f1ff547.webp",
+          "transform": {
+            "scale": 0.812616,
+            "translateXPercent": 9.708355258764612,
+            "translateYPercent": 15.122831987814166
+          },
+          "source": "public/preview/cylinder-hover-batch-05/PbClear8ozFlpWh-filled.png",
+          "sourceSha256": "cadb724b3543ceed17d10c35795e8034c42c2e41fb6eae0f157ee65fb35501a1",
+          "sha256": "3b155f1ff547ec1737393f3e592d243c6759a085be212ba29d3003e62735351f",
+          "pixelSha256": "3ac57e9c7a4316defe401023e5954b27c1addcee8234a866ebf80cdea5a4e510",
+          "bytes": 1914026
+        }
+      ]
+    },
+    {
+      "groupSlug": "cylinder-454ml-clear",
+      "websiteSku": "PbNat16ozFlpWh",
+      "states": [
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-454ml-clear-empty.9857bd7542b9.webp",
+          "transform": {
+            "scale": 1.1,
+            "translateXPercent": -4.862040133779274,
+            "translateYPercent": -7.790874524714837
+          },
+          "source": "public/preview/cylinder-hover-batch-05/PbNat16ozFlpWh-empty.png",
+          "sourceSha256": "b0ed6916f726e292cb3d733a81f0e523e4131c9b7aab49d498aa61e3f6df60f8",
+          "sha256": "9857bd7542b934ad82e4edb85b19dc4fc494fee2415ec2a8159261662d25a4a5",
+          "pixelSha256": "65b871f2220feb8d759e6444298846abccf8eee27342c0f530332478283824bf",
+          "bytes": 949286
+        },
+        {
+          "url": "/images/catalog/cylinder-hover/cylinder-454ml-clear-filled.c81cd8a5f9ca.webp",
+          "transform": {
+            "scale": 1.1,
+            "translateXPercent": -4.81620718462824,
+            "translateYPercent": -7.790874524714837
+          },
+          "source": "public/preview/cylinder-hover-batch-05/PbNat16ozFlpWh-filled.png",
+          "sourceSha256": "19b0170c519513c12fb8ca1069f5f4361a4622305b2d26eb5c8d6cbe10bcfb28",
+          "sha256": "c81cd8a5f9cad1e3fc1316d1667fad0eadc840afb99829c121b04d0ee7ce6d52",
+          "pixelSha256": "0284192a802621759e977ad552f9825d1ebfba41f3aee17f2300b9edd14bdcf0",
+          "bytes": 1618062
+        }
+      ]
+    }
+  ]
+}
