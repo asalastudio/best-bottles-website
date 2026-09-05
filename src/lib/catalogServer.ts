@@ -15,6 +15,7 @@ import {
     type ViewMode,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
+import { isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
 
 export type CatalogSearchArgs = {
     filters: Partial<CatalogFilters>;
@@ -34,7 +35,7 @@ export function getCatalogConvexClient() {
 }
 
 export function sanitizeCatalogResult(result: CatalogSearchResultShape): CatalogSearchResultShape {
-    const items = result.items.filter((group) => !getLegacyProductRouteOverride(group.slug));
+    const items = result.items.filter((group) => !getLegacyProductRouteOverride(group.slug) && !isHiddenCatalogGroup(group.slug));
     if (items.length === result.items.length) return result;
 
     const visibleIds = new Set(items.map((group) => group._id));
