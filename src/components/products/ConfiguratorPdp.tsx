@@ -127,7 +127,7 @@ export default function ConfiguratorPdp({
   displayName, categoryLabel, inStock = true, caseQty,
   neckSize, capacityText, skuLabel, websiteSku,
   quoteHref, checkoutReady = true, qty = 1, onQtyChange, volumePricing, ctaAnchorRef,
-  capOptions, capOptionPhotoKeys, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
+  capOptions, capOptionPhotoKeys, capOptionThumbnails, activeCapOption, onCapOptionChange, capSwatchStyle, glassOptions,
   rollerVariant: rollerVariantProp, rollerVariantsAvailable, onRollerVariantChange, onVariantSelectionChange,
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
@@ -194,6 +194,7 @@ export default function ConfiguratorPdp({
    *  component families are keyed by token ("Pink"), the pills by catalogue
    *  colourway ("Pink with Dots"); see src/lib/products/closure-swatch-keys.ts */
   capOptionPhotoKeys?: Record<string, string[]>;
+  capOptionThumbnails?: Record<string, string>;
   activeCapOption?: string | null;
   onCapOptionChange?: (name: string) => void;
   capSwatchStyle?: (name: string) => React.CSSProperties;
@@ -581,7 +582,7 @@ export default function ConfiguratorPdp({
           </p>
           <div data-testid="pdp-closure-rail" className="mt-2.5 flex max-w-full items-center gap-3 overflow-x-auto pb-1">
             {capOptions.map((name) => {
-              const photo = resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
+              const photo = capOptionThumbnails?.[name] ?? resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys);
               return (
                 // A photographed closure is a tall, narrow thing: in a 32 px circle it
                 // read as a stripe (the cap fills a third of its square thumb). So a

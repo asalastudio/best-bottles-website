@@ -1,0 +1,3973 @@
+[
+  {
+    "sku": "GBCyl1ozRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/087821cd73c2c79e797c764d26de22a6a13242bce63433ba6629af67b3cd1b26.webp",
+    "sha256": "087821cd73c2c79e797c764d26de22a6a13242bce63433ba6629af67b3cd1b26",
+    "bytes": 6332,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5c70e300812481ebee4f49ac7a96d91626c446b792b25ec6086266fc482d7da9.cap.webp",
+    "sourceSha256": "5c70e300812481ebee4f49ac7a96d91626c446b792b25ec6086266fc482d7da9",
+    "crop": [
+      315,
+      39,
+      643,
+      380
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/087821cd73c2c79e797c764d26de22a6a13242bce63433ba6629af67b3cd1b26.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/087821cd73c2c79e797c764d26de22a6a13242bce63433ba6629af67b3cd1b26.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBMtlRoll28Blk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/96a16b65c1587151e244a5a32c92bac57cc4a2ae61cec777babc6f117f4accad.webp",
+    "sha256": "96a16b65c1587151e244a5a32c92bac57cc4a2ae61cec777babc6f117f4accad",
+    "bytes": 13930,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c56dc96fdb6a446d108f264df7aea031d6258be5f386ca8819903c8a8b55a0a9.cap.webp",
+    "sourceSha256": "c56dc96fdb6a446d108f264df7aea031d6258be5f386ca8819903c8a8b55a0a9",
+    "crop": [
+      358,
+      40,
+      644,
+      377
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/96a16b65c1587151e244a5a32c92bac57cc4a2ae61cec777babc6f117f4accad.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/96a16b65c1587151e244a5a32c92bac57cc4a2ae61cec777babc6f117f4accad.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBMtlRoll28Wht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ec4caac0fa1ec7ff2ee16bebb4a814e88541bbb914d24b67915fa4ff57181611.webp",
+    "sha256": "ec4caac0fa1ec7ff2ee16bebb4a814e88541bbb914d24b67915fa4ff57181611",
+    "bytes": 6616,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6d3aa2538e120b22cabbd87ef2315bae8c6943fdc29135cb772b0296f0df668d.cap.webp",
+    "sourceSha256": "6d3aa2538e120b22cabbd87ef2315bae8c6943fdc29135cb772b0296f0df668d",
+    "crop": [
+      317,
+      38,
+      645,
+      379
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ec4caac0fa1ec7ff2ee16bebb4a814e88541bbb914d24b67915fa4ff57181611.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ec4caac0fa1ec7ff2ee16bebb4a814e88541bbb914d24b67915fa4ff57181611.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBRoll28Blk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/aa9d8b167e68149c718871d48155d2e0163f4ccbfc9240944e8677a6f354e833.webp",
+    "sha256": "aa9d8b167e68149c718871d48155d2e0163f4ccbfc9240944e8677a6f354e833",
+    "bytes": 14186,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/aaa02d3b93d654961ef8200651e26f87926983b3713e46c5670c11a428eef3ab.cap.webp",
+    "sourceSha256": "aaa02d3b93d654961ef8200651e26f87926983b3713e46c5670c11a428eef3ab",
+    "crop": [
+      352,
+      38,
+      638,
+      375
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/aa9d8b167e68149c718871d48155d2e0163f4ccbfc9240944e8677a6f354e833.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/aa9d8b167e68149c718871d48155d2e0163f4ccbfc9240944e8677a6f354e833.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl50MtlRollBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/79707873b795ef4e12d5225f6de62b8a35cd32d7a182a21acdc60841c2001f40.webp",
+    "sha256": "79707873b795ef4e12d5225f6de62b8a35cd32d7a182a21acdc60841c2001f40",
+    "bytes": 13476,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2f5a0cbcb8029f3b668d8682c33e94e2e0c619d8be70b8ad0bead88161a3fb7f.cap.webp",
+    "sourceSha256": "2f5a0cbcb8029f3b668d8682c33e94e2e0c619d8be70b8ad0bead88161a3fb7f",
+    "crop": [
+      369,
+      40,
+      638,
+      353
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/79707873b795ef4e12d5225f6de62b8a35cd32d7a182a21acdc60841c2001f40.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/79707873b795ef4e12d5225f6de62b8a35cd32d7a182a21acdc60841c2001f40.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl50MtlRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3a5eb6378782455b91e14bc9386b9c1e0de97978dba3d2ad0168b3c158fb58ce.webp",
+    "sha256": "3a5eb6378782455b91e14bc9386b9c1e0de97978dba3d2ad0168b3c158fb58ce",
+    "bytes": 6368,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e6956273989f6c417da47833fcb00975a09fa0b5cfb14834705ec4e3c96829c4.cap.webp",
+    "sourceSha256": "e6956273989f6c417da47833fcb00975a09fa0b5cfb14834705ec4e3c96829c4",
+    "crop": [
+      335,
+      40,
+      639,
+      356
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3a5eb6378782455b91e14bc9386b9c1e0de97978dba3d2ad0168b3c158fb58ce.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3a5eb6378782455b91e14bc9386b9c1e0de97978dba3d2ad0168b3c158fb58ce.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl50RollBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/05b278686f020ae66d7f0ba5e00b0e4ff0b3147a3f29a9832cb8d8adf70a53b0.webp",
+    "sha256": "05b278686f020ae66d7f0ba5e00b0e4ff0b3147a3f29a9832cb8d8adf70a53b0",
+    "bytes": 13606,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8310b7eccc7c1ae85c29732a7a78ad2d8d520dccaec2aee2c4a48ae5e939cdfa.cap.webp",
+    "sourceSha256": "8310b7eccc7c1ae85c29732a7a78ad2d8d520dccaec2aee2c4a48ae5e939cdfa",
+    "crop": [
+      368,
+      38,
+      638,
+      351
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/05b278686f020ae66d7f0ba5e00b0e4ff0b3147a3f29a9832cb8d8adf70a53b0.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/05b278686f020ae66d7f0ba5e00b0e4ff0b3147a3f29a9832cb8d8adf70a53b0.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl50RollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/b1d1606eedc60aecd852d52eb63769038a7263dd8dbb0f8636a1a59550b737f3.webp",
+    "sha256": "b1d1606eedc60aecd852d52eb63769038a7263dd8dbb0f8636a1a59550b737f3",
+    "bytes": 6364,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3aaf8c4e5bd4ce0c89784a3f7aa120315fe31b00cd7ef35b3b067d82aa9ea06d.cap.webp",
+    "sourceSha256": "3aaf8c4e5bd4ce0c89784a3f7aa120315fe31b00cd7ef35b3b067d82aa9ea06d",
+    "crop": [
+      335,
+      37,
+      639,
+      353
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/b1d1606eedc60aecd852d52eb63769038a7263dd8dbb0f8636a1a59550b737f3.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/b1d1606eedc60aecd852d52eb63769038a7263dd8dbb0f8636a1a59550b737f3.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5BlkShSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7de4faa7acf350a777a2e8f56b487b0055e1ffe8a608d6b188c476d256ee3cf9.webp",
+    "sha256": "7de4faa7acf350a777a2e8f56b487b0055e1ffe8a608d6b188c476d256ee3cf9",
+    "bytes": 11496,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b46eab613cb89224d80e20edc95041df480cf506d518ea74f93dcf830ac01ba3.cap.webp",
+    "sourceSha256": "b46eab613cb89224d80e20edc95041df480cf506d518ea74f93dcf830ac01ba3",
+    "crop": [
+      385,
+      243,
+      615,
+      481
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7de4faa7acf350a777a2e8f56b487b0055e1ffe8a608d6b188c476d256ee3cf9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7de4faa7acf350a777a2e8f56b487b0055e1ffe8a608d6b188c476d256ee3cf9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5BlkSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/159e74ad8671637f6800b69a391269f30f3014986b751759d422941f61107178.webp",
+    "sha256": "159e74ad8671637f6800b69a391269f30f3014986b751759d422941f61107178",
+    "bytes": 13648,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/d866ccb47f853f0e188b713e996f2faa60a1a707ad94d6687b2995b628a3898b.cap.webp",
+    "sourceSha256": "d866ccb47f853f0e188b713e996f2faa60a1a707ad94d6687b2995b628a3898b",
+    "crop": [
+      387,
+      292,
+      610,
+      437
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/159e74ad8671637f6800b69a391269f30f3014986b751759d422941f61107178.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/159e74ad8671637f6800b69a391269f30f3014986b751759d422941f61107178.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5CuSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7c8819a34218044f5608d6274d63c3f9171e6c2ce78fcaf812283dc10d71ac00.webp",
+    "sha256": "7c8819a34218044f5608d6274d63c3f9171e6c2ce78fcaf812283dc10d71ac00",
+    "bytes": 31632,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/93c68b547aab97066435383145cfe63296911fc19e454ccb10df46c821ebd448.cap.webp",
+    "sourceSha256": "93c68b547aab97066435383145cfe63296911fc19e454ccb10df46c821ebd448",
+    "crop": [
+      383,
+      250,
+      611,
+      485
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7c8819a34218044f5608d6274d63c3f9171e6c2ce78fcaf812283dc10d71ac00.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7c8819a34218044f5608d6274d63c3f9171e6c2ce78fcaf812283dc10d71ac00.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5Gl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/5ae4fd4cc412fc5bad03ba8738b998d74b9c78fb1a0235f9577c05d6276e710d.webp",
+    "sha256": "5ae4fd4cc412fc5bad03ba8738b998d74b9c78fb1a0235f9577c05d6276e710d",
+    "bytes": 22284,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b952682f7752e458f868565097cbdad7539358aa8d5687298e767f515a908978.cap.webp",
+    "sourceSha256": "b952682f7752e458f868565097cbdad7539358aa8d5687298e767f515a908978",
+    "crop": [
+      386,
+      137,
+      615,
+      493
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/5ae4fd4cc412fc5bad03ba8738b998d74b9c78fb1a0235f9577c05d6276e710d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/5ae4fd4cc412fc5bad03ba8738b998d74b9c78fb1a0235f9577c05d6276e710d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5GlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d9ded34a4a221a674f9248f1b3c4531a439d4ad25d0b36868892d7f228903ddd.webp",
+    "sha256": "d9ded34a4a221a674f9248f1b3c4531a439d4ad25d0b36868892d7f228903ddd",
+    "bytes": 25972,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/702ebb0ec5ce0e9adbabb562e6c30d3b41d5f47744129cb91e921e04b35be664.cap.webp",
+    "sourceSha256": "702ebb0ec5ce0e9adbabb562e6c30d3b41d5f47744129cb91e921e04b35be664",
+    "crop": [
+      385,
+      250,
+      617,
+      485
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d9ded34a4a221a674f9248f1b3c4531a439d4ad25d0b36868892d7f228903ddd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d9ded34a4a221a674f9248f1b3c4531a439d4ad25d0b36868892d7f228903ddd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5GlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3d0bda8bd6df04121057c7f0a525bd588531d15b2f7ce3d63f4cf1f566319061.webp",
+    "sha256": "3d0bda8bd6df04121057c7f0a525bd588531d15b2f7ce3d63f4cf1f566319061",
+    "bytes": 27806,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/67e83bb422334688a8ff9161ee5bf9dc7c38708850b2518cfd3bb6d868f611ee.cap.webp",
+    "sourceSha256": "67e83bb422334688a8ff9161ee5bf9dc7c38708850b2518cfd3bb6d868f611ee",
+    "crop": [
+      385,
+      250,
+      617,
+      485
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3d0bda8bd6df04121057c7f0a525bd588531d15b2f7ce3d63f4cf1f566319061.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3d0bda8bd6df04121057c7f0a525bd588531d15b2f7ce3d63f4cf1f566319061.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392.webp",
+    "sha256": "87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392",
+    "bytes": 12012,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e385483676f29fa57c7b22842a73e64ba6df9c3f09b40db9a87e092fbddb998c.cap.webp",
+    "sourceSha256": "e385483676f29fa57c7b22842a73e64ba6df9c3f09b40db9a87e092fbddb998c",
+    "crop": [
+      382,
+      133,
+      620,
+      494
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/dbe9a0e9ef9f00c1ad623cec73ee68c69f02bd5b861dd5e0fa867e0f6e829b60.webp",
+    "sha256": "dbe9a0e9ef9f00c1ad623cec73ee68c69f02bd5b861dd5e0fa867e0f6e829b60",
+    "bytes": 8168,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2c6f9069e9090b7e21f42d5974224c843d64af4383503440a6eb61197b1667a4.cap.webp",
+    "sourceSha256": "2c6f9069e9090b7e21f42d5974224c843d64af4383503440a6eb61197b1667a4",
+    "crop": [
+      384,
+      143,
+      618,
+      498
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/dbe9a0e9ef9f00c1ad623cec73ee68c69f02bd5b861dd5e0fa867e0f6e829b60.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/dbe9a0e9ef9f00c1ad623cec73ee68c69f02bd5b861dd5e0fa867e0f6e829b60.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/881db8fe92bda22c2ec19e20a4cdf74ad7a01c0b5838573e9ffdac7cd900ba20.webp",
+    "sha256": "881db8fe92bda22c2ec19e20a4cdf74ad7a01c0b5838573e9ffdac7cd900ba20",
+    "bytes": 25694,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/11f4506a9f8fb499f654c2f241f7140cc45cc73bb39f6c1269cc03d7a553fee2.cap.webp",
+    "sourceSha256": "11f4506a9f8fb499f654c2f241f7140cc45cc73bb39f6c1269cc03d7a553fee2",
+    "crop": [
+      383,
+      140,
+      619,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/881db8fe92bda22c2ec19e20a4cdf74ad7a01c0b5838573e9ffdac7cd900ba20.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/881db8fe92bda22c2ec19e20a4cdf74ad7a01c0b5838573e9ffdac7cd900ba20.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3683e88bcfdd960ebe226677632eb08d2e15e62fcd3bb23360b5613f1ba71e64.webp",
+    "sha256": "3683e88bcfdd960ebe226677632eb08d2e15e62fcd3bb23360b5613f1ba71e64",
+    "bytes": 19928,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/96edca4b16224293f7ca7e08976ff529ab2f4c4edad259ffdb08c3a0329ecc55.cap.webp",
+    "sourceSha256": "96edca4b16224293f7ca7e08976ff529ab2f4c4edad259ffdb08c3a0329ecc55",
+    "crop": [
+      386,
+      147,
+      616,
+      494
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3683e88bcfdd960ebe226677632eb08d2e15e62fcd3bb23360b5613f1ba71e64.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3683e88bcfdd960ebe226677632eb08d2e15e62fcd3bb23360b5613f1ba71e64.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ac04b04fbf9eee6261322f519a2387e0a23a8b5fc7dc042355b7978f13c2e903.webp",
+    "sha256": "ac04b04fbf9eee6261322f519a2387e0a23a8b5fc7dc042355b7978f13c2e903",
+    "bytes": 22360,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f6e46f6e1ff05a23203c5fd340f150e13ea675598d1c1631219d1e0ef24a09bf.cap.webp",
+    "sourceSha256": "f6e46f6e1ff05a23203c5fd340f150e13ea675598d1c1631219d1e0ef24a09bf",
+    "crop": [
+      386,
+      135,
+      615,
+      492
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ac04b04fbf9eee6261322f519a2387e0a23a8b5fc7dc042355b7978f13c2e903.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ac04b04fbf9eee6261322f519a2387e0a23a8b5fc7dc042355b7978f13c2e903.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/cd600c85854f6f9825e2992cf650027b72865d398077b49afa3247f20160e678.webp",
+    "sha256": "cd600c85854f6f9825e2992cf650027b72865d398077b49afa3247f20160e678",
+    "bytes": 22430,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c82d377d75ead7c5868f420aea8d784080abc53ce5d1d344fb3ed9d14d87434c.cap.webp",
+    "sourceSha256": "c82d377d75ead7c5868f420aea8d784080abc53ce5d1d344fb3ed9d14d87434c",
+    "crop": [
+      386,
+      154,
+      615,
+      491
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/cd600c85854f6f9825e2992cf650027b72865d398077b49afa3247f20160e678.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/cd600c85854f6f9825e2992cf650027b72865d398077b49afa3247f20160e678.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/0caedf720a8912a3f1444b74a5fca384d2e4c5cd45be0c9dd325219b252aa5a1.webp",
+    "sha256": "0caedf720a8912a3f1444b74a5fca384d2e4c5cd45be0c9dd325219b252aa5a1",
+    "bytes": 10570,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1c689c8b3584a1f4ff5a8b8e3afd577192b40437e933f70094a3c92e9ff80687.cap.webp",
+    "sourceSha256": "1c689c8b3584a1f4ff5a8b8e3afd577192b40437e933f70094a3c92e9ff80687",
+    "crop": [
+      385,
+      154,
+      616,
+      494
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/0caedf720a8912a3f1444b74a5fca384d2e4c5cd45be0c9dd325219b252aa5a1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/0caedf720a8912a3f1444b74a5fca384d2e4c5cd45be0c9dd325219b252aa5a1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/fa212b74d2233a2156c2449c2ba1b3cf14ac9a1dc2f4d98a518e1c6a5edf78c1.webp",
+    "sha256": "fa212b74d2233a2156c2449c2ba1b3cf14ac9a1dc2f4d98a518e1c6a5edf78c1",
+    "bytes": 11006,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4995605fd9768bc1963ea18dbab88113396300a9614d06a9456288da4f48c940.cap.webp",
+    "sourceSha256": "4995605fd9768bc1963ea18dbab88113396300a9614d06a9456288da4f48c940",
+    "crop": [
+      384,
+      153,
+      616,
+      495
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/fa212b74d2233a2156c2449c2ba1b3cf14ac9a1dc2f4d98a518e1c6a5edf78c1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/fa212b74d2233a2156c2449c2ba1b3cf14ac9a1dc2f4d98a518e1c6a5edf78c1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5MtlRollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037.webp",
+    "sha256": "2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037",
+    "bytes": 12398,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/09a098c3d8a5a4d5eb560bcac4572d0e0fc9315d223ee6c79b2ba7789f8607f3.cap.webp",
+    "sourceSha256": "09a098c3d8a5a4d5eb560bcac4572d0e0fc9315d223ee6c79b2ba7789f8607f3",
+    "crop": [
+      387,
+      139,
+      614,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392.webp",
+    "sha256": "87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392",
+    "bytes": 12012,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e385483676f29fa57c7b22842a73e64ba6df9c3f09b40db9a87e092fbddb998c.cap.webp",
+    "sourceSha256": "e385483676f29fa57c7b22842a73e64ba6df9c3f09b40db9a87e092fbddb998c",
+    "crop": [
+      382,
+      133,
+      620,
+      494
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/87a20f49581cd430cad4f1ec0d6442b0a534e5a379e51bbefe8e074936c3d392.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9800f2555fbf0a62ec8ca936546239136ed9a83f2e9de77f8416806544e95a89.webp",
+    "sha256": "9800f2555fbf0a62ec8ca936546239136ed9a83f2e9de77f8416806544e95a89",
+    "bytes": 8190,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b22d0bfbe1ae28941fe5db4b2e5217182a128d80cf0c573d254e880933f11f0c.cap.webp",
+    "sourceSha256": "b22d0bfbe1ae28941fe5db4b2e5217182a128d80cf0c573d254e880933f11f0c",
+    "crop": [
+      385,
+      139,
+      620,
+      495
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9800f2555fbf0a62ec8ca936546239136ed9a83f2e9de77f8416806544e95a89.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9800f2555fbf0a62ec8ca936546239136ed9a83f2e9de77f8416806544e95a89.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/0aa8b065aaab9e734e3448f3112e93f3ec4da6469bc39a888dc6cb344af65499.webp",
+    "sha256": "0aa8b065aaab9e734e3448f3112e93f3ec4da6469bc39a888dc6cb344af65499",
+    "bytes": 25970,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2c6bab463ee6102a0fed91b53483ee4c97b520f1681bef050f2c5a2793f6215a.cap.webp",
+    "sourceSha256": "2c6bab463ee6102a0fed91b53483ee4c97b520f1681bef050f2c5a2793f6215a",
+    "crop": [
+      383,
+      139,
+      620,
+      488
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/0aa8b065aaab9e734e3448f3112e93f3ec4da6469bc39a888dc6cb344af65499.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/0aa8b065aaab9e734e3448f3112e93f3ec4da6469bc39a888dc6cb344af65499.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f4290817acc8b9cb05ef901018bde15a015a33122c3a9c390a434e50ab4ecbe5.webp",
+    "sha256": "f4290817acc8b9cb05ef901018bde15a015a33122c3a9c390a434e50ab4ecbe5",
+    "bytes": 21118,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c21fb712c47444d52a02e13ab10ea65959f791efb745a237236eb35bff09ab2d.cap.webp",
+    "sourceSha256": "c21fb712c47444d52a02e13ab10ea65959f791efb745a237236eb35bff09ab2d",
+    "crop": [
+      385,
+      142,
+      616,
+      491
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f4290817acc8b9cb05ef901018bde15a015a33122c3a9c390a434e50ab4ecbe5.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f4290817acc8b9cb05ef901018bde15a015a33122c3a9c390a434e50ab4ecbe5.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3395f65c609cb31caf1c1ab365b089f9a8cea23134043559d213d49c3896dfc6.webp",
+    "sha256": "3395f65c609cb31caf1c1ab365b089f9a8cea23134043559d213d49c3896dfc6",
+    "bytes": 22884,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4d04edbd403cc8ea08366936e7b8ed2cc6eb6919a19638db8a58ed0d6b0cc514.cap.webp",
+    "sourceSha256": "4d04edbd403cc8ea08366936e7b8ed2cc6eb6919a19638db8a58ed0d6b0cc514",
+    "crop": [
+      385,
+      130,
+      615,
+      489
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3395f65c609cb31caf1c1ab365b089f9a8cea23134043559d213d49c3896dfc6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3395f65c609cb31caf1c1ab365b089f9a8cea23134043559d213d49c3896dfc6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c6d7d15c141e191be321108c98066484feeea8cfec2f1ccf91ee523f8860aeec.webp",
+    "sha256": "c6d7d15c141e191be321108c98066484feeea8cfec2f1ccf91ee523f8860aeec",
+    "bytes": 22720,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/88e907fff8b0c17b9efb7d90aec1fc4418d1f3031e6f25a86800a167f532d0f0.cap.webp",
+    "sourceSha256": "88e907fff8b0c17b9efb7d90aec1fc4418d1f3031e6f25a86800a167f532d0f0",
+    "crop": [
+      386,
+      149,
+      617,
+      489
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c6d7d15c141e191be321108c98066484feeea8cfec2f1ccf91ee523f8860aeec.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c6d7d15c141e191be321108c98066484feeea8cfec2f1ccf91ee523f8860aeec.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/46890e309688de23bf28c5deac6695b9e7c50d32f3f0063c3df70a7d965bf70c.webp",
+    "sha256": "46890e309688de23bf28c5deac6695b9e7c50d32f3f0063c3df70a7d965bf70c",
+    "bytes": 10542,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0308300694c0bc33b82be798d89525092afcfa9f1d1b1b928873ca7880483b37.cap.webp",
+    "sourceSha256": "0308300694c0bc33b82be798d89525092afcfa9f1d1b1b928873ca7880483b37",
+    "crop": [
+      385,
+      154,
+      616,
+      494
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/46890e309688de23bf28c5deac6695b9e7c50d32f3f0063c3df70a7d965bf70c.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/46890e309688de23bf28c5deac6695b9e7c50d32f3f0063c3df70a7d965bf70c.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/073930cbf78403ffb8423bf3eec040862d650f2e03d49e1c8abfcb053fafd9b7.webp",
+    "sha256": "073930cbf78403ffb8423bf3eec040862d650f2e03d49e1c8abfcb053fafd9b7",
+    "bytes": 10438,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0be04416cf8c70af3a7e3f8f1e9834dff102ff67db9c3852a85d5e31330e15d6.cap.webp",
+    "sourceSha256": "0be04416cf8c70af3a7e3f8f1e9834dff102ff67db9c3852a85d5e31330e15d6",
+    "crop": [
+      382,
+      146,
+      615,
+      491
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/073930cbf78403ffb8423bf3eec040862d650f2e03d49e1c8abfcb053fafd9b7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/073930cbf78403ffb8423bf3eec040862d650f2e03d49e1c8abfcb053fafd9b7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5RollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9153c64dfb53dfd3467d66fe629419777ead5e995a979d437a76f907331144d1.webp",
+    "sha256": "9153c64dfb53dfd3467d66fe629419777ead5e995a979d437a76f907331144d1",
+    "bytes": 11898,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3d8d65c529fe06edd583e773c5affbb6c97043eee871b52ce158925218c920f1.cap.webp",
+    "sourceSha256": "3d8d65c529fe06edd583e773c5affbb6c97043eee871b52ce158925218c920f1",
+    "crop": [
+      387,
+      138,
+      615,
+      489
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9153c64dfb53dfd3467d66fe629419777ead5e995a979d437a76f907331144d1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9153c64dfb53dfd3467d66fe629419777ead5e995a979d437a76f907331144d1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5Sl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037.webp",
+    "sha256": "2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037",
+    "bytes": 12398,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/09a098c3d8a5a4d5eb560bcac4572d0e0fc9315d223ee6c79b2ba7789f8607f3.cap.webp",
+    "sourceSha256": "09a098c3d8a5a4d5eb560bcac4572d0e0fc9315d223ee6c79b2ba7789f8607f3",
+    "crop": [
+      387,
+      139,
+      614,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/2b404ef196d720ac43bd8df09975931d56daed67ca05448447980c7f6a0b5037.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5SlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3b81b5ef44311b28ee27a733761798c885eaf32138731770287053eeffb367cb.webp",
+    "sha256": "3b81b5ef44311b28ee27a733761798c885eaf32138731770287053eeffb367cb",
+    "bytes": 15134,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6a99b71d101b83bfd2979bf602bd54ce05164983da7e048fc3d82a904a553f21.cap.webp",
+    "sourceSha256": "6a99b71d101b83bfd2979bf602bd54ce05164983da7e048fc3d82a904a553f21",
+    "crop": [
+      383,
+      257,
+      615,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3b81b5ef44311b28ee27a733761798c885eaf32138731770287053eeffb367cb.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3b81b5ef44311b28ee27a733761798c885eaf32138731770287053eeffb367cb.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5SlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9c6a1d0c6129477f096efcdd0cb13820480ae797486a5a5ba7401dc3feb1abaf.webp",
+    "sha256": "9c6a1d0c6129477f096efcdd0cb13820480ae797486a5a5ba7401dc3feb1abaf",
+    "bytes": 10452,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1eb8ce4d11e1cefb7ada903bb8b7cff9a3b3c657f37469ab8bf430e7be72a4a5.cap.webp",
+    "sourceSha256": "1eb8ce4d11e1cefb7ada903bb8b7cff9a3b3c657f37469ab8bf430e7be72a4a5",
+    "crop": [
+      385,
+      250,
+      617,
+      485
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9c6a1d0c6129477f096efcdd0cb13820480ae797486a5a5ba7401dc3feb1abaf.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9c6a1d0c6129477f096efcdd0cb13820480ae797486a5a5ba7401dc3feb1abaf.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl5WhtSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/33df1ae4607052de00470d3361fc4d0743f6542873797e5ab1bbce6457e3cfa0.webp",
+    "sha256": "33df1ae4607052de00470d3361fc4d0743f6542873797e5ab1bbce6457e3cfa0",
+    "bytes": 7824,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/099aaa6080f0660263232e4e63d86eb5464353c461fd3d7a503055c4f049d401.cap.webp",
+    "sourceSha256": "099aaa6080f0660263232e4e63d86eb5464353c461fd3d7a503055c4f049d401",
+    "crop": [
+      390,
+      283,
+      613,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/33df1ae4607052de00470d3361fc4d0743f6542873797e5ab1bbce6457e3cfa0.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/33df1ae4607052de00470d3361fc4d0743f6542873797e5ab1bbce6457e3cfa0.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5BlkShSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/47b71340851dbd817b229f33515129b31336a31a0ed3038733d8ad76688a7e83.webp",
+    "sha256": "47b71340851dbd817b229f33515129b31336a31a0ed3038733d8ad76688a7e83",
+    "bytes": 11758,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f8d7030f78ff9ca327e77b911b1c45e07ac48038c4ffbdfda56399a9ea944323.cap.webp",
+    "sourceSha256": "f8d7030f78ff9ca327e77b911b1c45e07ac48038c4ffbdfda56399a9ea944323",
+    "crop": [
+      388,
+      254,
+      616,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/47b71340851dbd817b229f33515129b31336a31a0ed3038733d8ad76688a7e83.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/47b71340851dbd817b229f33515129b31336a31a0ed3038733d8ad76688a7e83.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5BlkSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/6e40af479f511bfc5f1cc701420c192718f9b93a70fc102f7a7187460adc5955.webp",
+    "sha256": "6e40af479f511bfc5f1cc701420c192718f9b93a70fc102f7a7187460adc5955",
+    "bytes": 13144,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/22663218c33794677a41162d60e047ffa221a69d7ef8dec9b33a5f18081a4f80.cap.webp",
+    "sourceSha256": "22663218c33794677a41162d60e047ffa221a69d7ef8dec9b33a5f18081a4f80",
+    "crop": [
+      388,
+      288,
+      610,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/6e40af479f511bfc5f1cc701420c192718f9b93a70fc102f7a7187460adc5955.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/6e40af479f511bfc5f1cc701420c192718f9b93a70fc102f7a7187460adc5955.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5CuSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/41660013803c4a7cae700acd99294f2a28e41c5938ba43dbdad40ce106e263b5.webp",
+    "sha256": "41660013803c4a7cae700acd99294f2a28e41c5938ba43dbdad40ce106e263b5",
+    "bytes": 31208,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5863301bb650c2a076f4b8a799e8d869f7adf1b0075a92003bbb5c854541e9f3.cap.webp",
+    "sourceSha256": "5863301bb650c2a076f4b8a799e8d869f7adf1b0075a92003bbb5c854541e9f3",
+    "crop": [
+      388,
+      254,
+      614,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/41660013803c4a7cae700acd99294f2a28e41c5938ba43dbdad40ce106e263b5.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/41660013803c4a7cae700acd99294f2a28e41c5938ba43dbdad40ce106e263b5.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5Gl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56.webp",
+    "sha256": "3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56",
+    "bytes": 22102,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8e90435d21ed0afebe8852358ed84763045af243565471ccd3857bbddd43485b.cap.webp",
+    "sourceSha256": "8e90435d21ed0afebe8852358ed84763045af243565471ccd3857bbddd43485b",
+    "crop": [
+      387,
+      137,
+      614,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5GlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/fc274fa8a5563b4b82578e29b8a63e4204d19eeede75add9654c5c0778cf05e6.webp",
+    "sha256": "fc274fa8a5563b4b82578e29b8a63e4204d19eeede75add9654c5c0778cf05e6",
+    "bytes": 22724,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/76567f149d2e5025a1b45e19004e2791929fb09455202d57ec55565d9d1a3708.cap.webp",
+    "sourceSha256": "76567f149d2e5025a1b45e19004e2791929fb09455202d57ec55565d9d1a3708",
+    "crop": [
+      386,
+      248,
+      616,
+      481
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/fc274fa8a5563b4b82578e29b8a63e4204d19eeede75add9654c5c0778cf05e6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/fc274fa8a5563b4b82578e29b8a63e4204d19eeede75add9654c5c0778cf05e6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5GlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3c0567db090292f76e7ce461352baab3d2537aa6101f1d27131d1c203ad24d00.webp",
+    "sha256": "3c0567db090292f76e7ce461352baab3d2537aa6101f1d27131d1c203ad24d00",
+    "bytes": 28406,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2c84f84dfa4392fc48890d23114762e0bfb45562622f5f244f63c3a33c3363bf.cap.webp",
+    "sourceSha256": "2c84f84dfa4392fc48890d23114762e0bfb45562622f5f244f63c3a33c3363bf",
+    "crop": [
+      388,
+      254,
+      616,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3c0567db090292f76e7ce461352baab3d2537aa6101f1d27131d1c203ad24d00.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3c0567db090292f76e7ce461352baab3d2537aa6101f1d27131d1c203ad24d00.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ec8d478710d6be5557a2a3d4f797e88c0233065deb78d278849bee65f3d7c6fe.webp",
+    "sha256": "ec8d478710d6be5557a2a3d4f797e88c0233065deb78d278849bee65f3d7c6fe",
+    "bytes": 12098,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/19593dc6f0aec28cffb46246715ea909f99141844ea5f5fbbe59bf33c528f118.cap.webp",
+    "sourceSha256": "19593dc6f0aec28cffb46246715ea909f99141844ea5f5fbbe59bf33c528f118",
+    "crop": [
+      384,
+      132,
+      618,
+      491
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ec8d478710d6be5557a2a3d4f797e88c0233065deb78d278849bee65f3d7c6fe.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ec8d478710d6be5557a2a3d4f797e88c0233065deb78d278849bee65f3d7c6fe.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/95d1b43b3ad662179c5b1fecd011aecf41386451c85f624c7c5484e2bf40c3be.webp",
+    "sha256": "95d1b43b3ad662179c5b1fecd011aecf41386451c85f624c7c5484e2bf40c3be",
+    "bytes": 8168,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f11d4363536efa33932c1f1d576ee8abf4c54c0484646fd8bfeff0d2112000b7.cap.webp",
+    "sourceSha256": "f11d4363536efa33932c1f1d576ee8abf4c54c0484646fd8bfeff0d2112000b7",
+    "crop": [
+      386,
+      140,
+      617,
+      491
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/95d1b43b3ad662179c5b1fecd011aecf41386451c85f624c7c5484e2bf40c3be.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/95d1b43b3ad662179c5b1fecd011aecf41386451c85f624c7c5484e2bf40c3be.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c1e9a98f0508a216f48ebaf29389863e6db024aebe2fde5cb7b248c8b04486a9.webp",
+    "sha256": "c1e9a98f0508a216f48ebaf29389863e6db024aebe2fde5cb7b248c8b04486a9",
+    "bytes": 25416,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/9cae92a9f90ecb3ed6ee19ce9b7b0c4e16ac91ff4916028d500d1a149dc4120b.cap.webp",
+    "sourceSha256": "9cae92a9f90ecb3ed6ee19ce9b7b0c4e16ac91ff4916028d500d1a149dc4120b",
+    "crop": [
+      384,
+      143,
+      618,
+      489
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c1e9a98f0508a216f48ebaf29389863e6db024aebe2fde5cb7b248c8b04486a9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c1e9a98f0508a216f48ebaf29389863e6db024aebe2fde5cb7b248c8b04486a9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/85ad8c742e996170c8ca76f5b0a034a1efdf3baedeb7b621c0707833c962fb3f.webp",
+    "sha256": "85ad8c742e996170c8ca76f5b0a034a1efdf3baedeb7b621c0707833c962fb3f",
+    "bytes": 19874,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/67dff589730a940d193be7a1f954449b2927d4d1cd384e4338396fa178c45574.cap.webp",
+    "sourceSha256": "67dff589730a940d193be7a1f954449b2927d4d1cd384e4338396fa178c45574",
+    "crop": [
+      387,
+      145,
+      614,
+      489
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/85ad8c742e996170c8ca76f5b0a034a1efdf3baedeb7b621c0707833c962fb3f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/85ad8c742e996170c8ca76f5b0a034a1efdf3baedeb7b621c0707833c962fb3f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56.webp",
+    "sha256": "3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56",
+    "bytes": 22102,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8e90435d21ed0afebe8852358ed84763045af243565471ccd3857bbddd43485b.cap.webp",
+    "sourceSha256": "8e90435d21ed0afebe8852358ed84763045af243565471ccd3857bbddd43485b",
+    "crop": [
+      387,
+      137,
+      614,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3bd20d1b94075a693965a8714e9fd2407c2112ef4a8f1c4b9ccdcd597b33ee56.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/20c1fd5f367d3465980497e7921d00f7e18f2957ba91ba62b5eeb9eca1bd3034.webp",
+    "sha256": "20c1fd5f367d3465980497e7921d00f7e18f2957ba91ba62b5eeb9eca1bd3034",
+    "bytes": 21744,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/25f2bc97c99f435101bc4f70a35938794eb3b5640d699f3955e3c0b0a479048e.cap.webp",
+    "sourceSha256": "25f2bc97c99f435101bc4f70a35938794eb3b5640d699f3955e3c0b0a479048e",
+    "crop": [
+      386,
+      152,
+      614,
+      487
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/20c1fd5f367d3465980497e7921d00f7e18f2957ba91ba62b5eeb9eca1bd3034.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/20c1fd5f367d3465980497e7921d00f7e18f2957ba91ba62b5eeb9eca1bd3034.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/388d5dcbff2db447cabd32e01755e1c50c8eba54880d417f3b48ab43302c074f.webp",
+    "sha256": "388d5dcbff2db447cabd32e01755e1c50c8eba54880d417f3b48ab43302c074f",
+    "bytes": 10506,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/d842c99d7d0a4d47578cdaa5eefabed5bd036950d69acbbbb0c95e1d9272234c.cap.webp",
+    "sourceSha256": "d842c99d7d0a4d47578cdaa5eefabed5bd036950d69acbbbb0c95e1d9272234c",
+    "crop": [
+      386,
+      151,
+      615,
+      487
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/388d5dcbff2db447cabd32e01755e1c50c8eba54880d417f3b48ab43302c074f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/388d5dcbff2db447cabd32e01755e1c50c8eba54880d417f3b48ab43302c074f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/55b6fb2d79d27cbb6f7d2d8508aefe77e87ef9877f3ebc8f9e9ae7bd095f1473.webp",
+    "sha256": "55b6fb2d79d27cbb6f7d2d8508aefe77e87ef9877f3ebc8f9e9ae7bd095f1473",
+    "bytes": 10360,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f934980e11f55590ede392883e4ab1b6cc9d5fcd66c8ade024a6e7fe681ae510.cap.webp",
+    "sourceSha256": "f934980e11f55590ede392883e4ab1b6cc9d5fcd66c8ade024a6e7fe681ae510",
+    "crop": [
+      386,
+      153,
+      615,
+      492
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/55b6fb2d79d27cbb6f7d2d8508aefe77e87ef9877f3ebc8f9e9ae7bd095f1473.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/55b6fb2d79d27cbb6f7d2d8508aefe77e87ef9877f3ebc8f9e9ae7bd095f1473.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/dc36b2de33864d845ffcecf7bc813c941b6bee4b8eaa4c57a615697e15b6b5fe.webp",
+    "sha256": "dc36b2de33864d845ffcecf7bc813c941b6bee4b8eaa4c57a615697e15b6b5fe",
+    "bytes": 11884,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/dde3dae4e6975bba6031e17f3349b61e16e34ee695ea229355824ed410dc09a8.cap.webp",
+    "sourceSha256": "dde3dae4e6975bba6031e17f3349b61e16e34ee695ea229355824ed410dc09a8",
+    "crop": [
+      388,
+      140,
+      613,
+      488
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/dc36b2de33864d845ffcecf7bc813c941b6bee4b8eaa4c57a615697e15b6b5fe.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/dc36b2de33864d845ffcecf7bc813c941b6bee4b8eaa4c57a615697e15b6b5fe.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/5732784db4b5a742307237cc90a605e2f12f7d149367bcb1763d236c382f8fdd.webp",
+    "sha256": "5732784db4b5a742307237cc90a605e2f12f7d149367bcb1763d236c382f8fdd",
+    "bytes": 11970,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/dbf08cba1d27ebf684cabcd7a27039089f07c9b014d64a4a0da9d1f8ef299290.cap.webp",
+    "sourceSha256": "dbf08cba1d27ebf684cabcd7a27039089f07c9b014d64a4a0da9d1f8ef299290",
+    "crop": [
+      382,
+      133,
+      617,
+      492
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/5732784db4b5a742307237cc90a605e2f12f7d149367bcb1763d236c382f8fdd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/5732784db4b5a742307237cc90a605e2f12f7d149367bcb1763d236c382f8fdd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/bd48dabb917fc002557b49469dca533ede65359e292a4650fe0444f0b6ab9c19.webp",
+    "sha256": "bd48dabb917fc002557b49469dca533ede65359e292a4650fe0444f0b6ab9c19",
+    "bytes": 8174,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2e5997816463e82fd349324ccf00fcedce5db98099e74b014887f126b1e535e1.cap.webp",
+    "sourceSha256": "2e5997816463e82fd349324ccf00fcedce5db98099e74b014887f126b1e535e1",
+    "crop": [
+      386,
+      142,
+      617,
+      492
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/bd48dabb917fc002557b49469dca533ede65359e292a4650fe0444f0b6ab9c19.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/bd48dabb917fc002557b49469dca533ede65359e292a4650fe0444f0b6ab9c19.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/18827782efc6906c7949a7959337dff0b7e7d8eebd99daa0c5be35038d150abd.webp",
+    "sha256": "18827782efc6906c7949a7959337dff0b7e7d8eebd99daa0c5be35038d150abd",
+    "bytes": 25930,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e419eb888a78ae3b64d0230fa0786d7a045964e830cdbf892a4fe25b6c79a222.cap.webp",
+    "sourceSha256": "e419eb888a78ae3b64d0230fa0786d7a045964e830cdbf892a4fe25b6c79a222",
+    "crop": [
+      383,
+      140,
+      618,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/18827782efc6906c7949a7959337dff0b7e7d8eebd99daa0c5be35038d150abd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/18827782efc6906c7949a7959337dff0b7e7d8eebd99daa0c5be35038d150abd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1833a59171b101f1f4e895412bbd2109c2ee4dd4598fa312413fc496fc087a30.webp",
+    "sha256": "1833a59171b101f1f4e895412bbd2109c2ee4dd4598fa312413fc496fc087a30",
+    "bytes": 19700,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/cbcc180d23d3e627f766478ade526f7cc200c9efcb5b983b3b66e9b698609521.cap.webp",
+    "sourceSha256": "cbcc180d23d3e627f766478ade526f7cc200c9efcb5b983b3b66e9b698609521",
+    "crop": [
+      386,
+      146,
+      614,
+      490
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1833a59171b101f1f4e895412bbd2109c2ee4dd4598fa312413fc496fc087a30.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1833a59171b101f1f4e895412bbd2109c2ee4dd4598fa312413fc496fc087a30.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/8ee471dfc992d5f4c2b08576f350d5dd2a684eba00fc55274ce685421a74c84e.webp",
+    "sha256": "8ee471dfc992d5f4c2b08576f350d5dd2a684eba00fc55274ce685421a74c84e",
+    "bytes": 22776,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4c3e2e4cfdcf9b9da538d2ed5d2c0ae1dffbb4a7e4bfce16112b061576400361.cap.webp",
+    "sourceSha256": "4c3e2e4cfdcf9b9da538d2ed5d2c0ae1dffbb4a7e4bfce16112b061576400361",
+    "crop": [
+      388,
+      134,
+      616,
+      488
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/8ee471dfc992d5f4c2b08576f350d5dd2a684eba00fc55274ce685421a74c84e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/8ee471dfc992d5f4c2b08576f350d5dd2a684eba00fc55274ce685421a74c84e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d65c8dd281ea048d9a169e94cef4b39fa8248050798a05aac37563b668f1f916.webp",
+    "sha256": "d65c8dd281ea048d9a169e94cef4b39fa8248050798a05aac37563b668f1f916",
+    "bytes": 21934,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/d3b0430abd22a7c473b59450f575087f1a30d461b9edb1bd85e57d387f8cd383.cap.webp",
+    "sourceSha256": "d3b0430abd22a7c473b59450f575087f1a30d461b9edb1bd85e57d387f8cd383",
+    "crop": [
+      385,
+      153,
+      613,
+      488
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d65c8dd281ea048d9a169e94cef4b39fa8248050798a05aac37563b668f1f916.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d65c8dd281ea048d9a169e94cef4b39fa8248050798a05aac37563b668f1f916.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3de8b35fc4df3952c7f4f3e5642ae291263db81ea3bf760c6c6dd00cdd3bce5f.webp",
+    "sha256": "3de8b35fc4df3952c7f4f3e5642ae291263db81ea3bf760c6c6dd00cdd3bce5f",
+    "bytes": 10816,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/149f80686ea9fe3660e8159f826affba16ecaf3324bd5b9a5e3f374643737d5c.cap.webp",
+    "sourceSha256": "149f80686ea9fe3660e8159f826affba16ecaf3324bd5b9a5e3f374643737d5c",
+    "crop": [
+      388,
+      148,
+      618,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3de8b35fc4df3952c7f4f3e5642ae291263db81ea3bf760c6c6dd00cdd3bce5f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3de8b35fc4df3952c7f4f3e5642ae291263db81ea3bf760c6c6dd00cdd3bce5f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/eee0c04ebfc9b2410cd9aad581815040bd3c7829a06b65168bcb858b0119e8cc.webp",
+    "sha256": "eee0c04ebfc9b2410cd9aad581815040bd3c7829a06b65168bcb858b0119e8cc",
+    "bytes": 10322,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/bca3b009243917a8bb399d563017c53a5afb22c5747743dfacff454e8b95a7d2.cap.webp",
+    "sourceSha256": "bca3b009243917a8bb399d563017c53a5afb22c5747743dfacff454e8b95a7d2",
+    "crop": [
+      386,
+      155,
+      616,
+      493
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/eee0c04ebfc9b2410cd9aad581815040bd3c7829a06b65168bcb858b0119e8cc.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/eee0c04ebfc9b2410cd9aad581815040bd3c7829a06b65168bcb858b0119e8cc.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5RollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/733dda3b7ab99736c512f6bdd83443cf40bf6f59e78f91d9372705f36c192fdf.webp",
+    "sha256": "733dda3b7ab99736c512f6bdd83443cf40bf6f59e78f91d9372705f36c192fdf",
+    "bytes": 11938,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b03cdf602dfa74ef4263e7fe382f0021bda0a2354d50e6eb368f6f9fbc199c41.cap.webp",
+    "sourceSha256": "b03cdf602dfa74ef4263e7fe382f0021bda0a2354d50e6eb368f6f9fbc199c41",
+    "crop": [
+      386,
+      137,
+      612,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/733dda3b7ab99736c512f6bdd83443cf40bf6f59e78f91d9372705f36c192fdf.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/733dda3b7ab99736c512f6bdd83443cf40bf6f59e78f91d9372705f36c192fdf.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5Sl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a35e8bb59204280e1e457a97cd692fa2a9ca8cc94968654df64866b6d85749d2.webp",
+    "sha256": "a35e8bb59204280e1e457a97cd692fa2a9ca8cc94968654df64866b6d85749d2",
+    "bytes": 12186,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/ff0dc88c0d857ce8654a175c0d783ad68cca6e6038bedf6c0f20f475d27b9a1e.cap.webp",
+    "sourceSha256": "ff0dc88c0d857ce8654a175c0d783ad68cca6e6038bedf6c0f20f475d27b9a1e",
+    "crop": [
+      388,
+      139,
+      613,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a35e8bb59204280e1e457a97cd692fa2a9ca8cc94968654df64866b6d85749d2.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a35e8bb59204280e1e457a97cd692fa2a9ca8cc94968654df64866b6d85749d2.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5SlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/4c8c1d84d917a8abb157ea55e3a1738c9d366d5992b2f5db6d141cb18f0734ee.webp",
+    "sha256": "4c8c1d84d917a8abb157ea55e3a1738c9d366d5992b2f5db6d141cb18f0734ee",
+    "bytes": 11728,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/37ac9ae86b303a20720796c163c761c22de04b1ae8f7cc3e5254cfcaa6e277b7.cap.webp",
+    "sourceSha256": "37ac9ae86b303a20720796c163c761c22de04b1ae8f7cc3e5254cfcaa6e277b7",
+    "crop": [
+      388,
+      254,
+      616,
+      486
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/4c8c1d84d917a8abb157ea55e3a1738c9d366d5992b2f5db6d141cb18f0734ee.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/4c8c1d84d917a8abb157ea55e3a1738c9d366d5992b2f5db6d141cb18f0734ee.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5SlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/8913676181757f4f577052814bfc9b1e1767da31ca68033adfed1f6febe2e4b1.webp",
+    "sha256": "8913676181757f4f577052814bfc9b1e1767da31ca68033adfed1f6febe2e4b1",
+    "bytes": 11326,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1c0e2bc67106caed7f91253dd93ec18fc66df2dc5600c35990133e7988c717e0.cap.webp",
+    "sourceSha256": "1c0e2bc67106caed7f91253dd93ec18fc66df2dc5600c35990133e7988c717e0",
+    "crop": [
+      390,
+      248,
+      618,
+      481
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/8913676181757f4f577052814bfc9b1e1767da31ca68033adfed1f6febe2e4b1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/8913676181757f4f577052814bfc9b1e1767da31ca68033adfed1f6febe2e4b1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu5WhtSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9703cf1c804d7c14ac0740e5bf3cb8c376c7c450472282bc48ade95189596a2e.webp",
+    "sha256": "9703cf1c804d7c14ac0740e5bf3cb8c376c7c450472282bc48ade95189596a2e",
+    "bytes": 8132,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e4111f8c0c7dc155f12dd4184a69db8b72ac0e9cb2f4dd9d061b925c6d2a0b2f.cap.webp",
+    "sourceSha256": "e4111f8c0c7dc155f12dd4184a69db8b72ac0e9cb2f4dd9d061b925c6d2a0b2f",
+    "crop": [
+      390,
+      286,
+      611,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9703cf1c804d7c14ac0740e5bf3cb8c376c7c450472282bc48ade95189596a2e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9703cf1c804d7c14ac0740e5bf3cb8c376c7c450472282bc48ade95189596a2e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/2cb226aee152fca71b24f91a07172439ab1c61c4b5764fbd021614e5e61b0d46.webp",
+    "sha256": "2cb226aee152fca71b24f91a07172439ab1c61c4b5764fbd021614e5e61b0d46",
+    "bytes": 12326,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6adb1001aed5567084674ad44b9cbd55ed3a3839c0e97bc04e7cd7fb0f83d1ea.cap.webp",
+    "sourceSha256": "6adb1001aed5567084674ad44b9cbd55ed3a3839c0e97bc04e7cd7fb0f83d1ea",
+    "crop": [
+      401,
+      153,
+      603,
+      434
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/2cb226aee152fca71b24f91a07172439ab1c61c4b5764fbd021614e5e61b0d46.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/2cb226aee152fca71b24f91a07172439ab1c61c4b5764fbd021614e5e61b0d46.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f5121b385dd32b996cc633fb3230ed731da25c1fdae8eb698034eb474ba6e077.webp",
+    "sha256": "f5121b385dd32b996cc633fb3230ed731da25c1fdae8eb698034eb474ba6e077",
+    "bytes": 25324,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/56c289492232aeb39362b3d804928e185d25f207ac034480afffeead205df799.cap.webp",
+    "sourceSha256": "56c289492232aeb39362b3d804928e185d25f207ac034480afffeead205df799",
+    "crop": [
+      404,
+      155,
+      597,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f5121b385dd32b996cc633fb3230ed731da25c1fdae8eb698034eb474ba6e077.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f5121b385dd32b996cc633fb3230ed731da25c1fdae8eb698034eb474ba6e077.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/b43969471b924ac8a231a32620be198c9dc39baa3e499dc6765244807586d674.webp",
+    "sha256": "b43969471b924ac8a231a32620be198c9dc39baa3e499dc6765244807586d674",
+    "bytes": 18732,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3cf04747eed1922b6144bbb84eed734ba3f903b76cc13d0d25eafdcc7271dc87.cap.webp",
+    "sourceSha256": "3cf04747eed1922b6144bbb84eed734ba3f903b76cc13d0d25eafdcc7271dc87",
+    "crop": [
+      405,
+      155,
+      599,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/b43969471b924ac8a231a32620be198c9dc39baa3e499dc6765244807586d674.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/b43969471b924ac8a231a32620be198c9dc39baa3e499dc6765244807586d674.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9a3523c4d8062d6652571e0339068700664b214386e57d7f19266e7c337d6f9a.webp",
+    "sha256": "9a3523c4d8062d6652571e0339068700664b214386e57d7f19266e7c337d6f9a",
+    "bytes": 9786,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/96c93c206765567695658edcc71cc0dd9d8974def8b0da500a85e4bdd419274a.cap.webp",
+    "sourceSha256": "96c93c206765567695658edcc71cc0dd9d8974def8b0da500a85e4bdd419274a",
+    "crop": [
+      405,
+      155,
+      595,
+      430
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9a3523c4d8062d6652571e0339068700664b214386e57d7f19266e7c337d6f9a.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9a3523c4d8062d6652571e0339068700664b214386e57d7f19266e7c337d6f9a.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3deeedd565a30724f40a73d665b8367d9713a04e52fad17db6fb31410bff093c.webp",
+    "sha256": "3deeedd565a30724f40a73d665b8367d9713a04e52fad17db6fb31410bff093c",
+    "bytes": 22322,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/40829e89dc50748ff9180b81ef3a930da907c7aa4c8f2233639134cfc242a439.cap.webp",
+    "sourceSha256": "40829e89dc50748ff9180b81ef3a930da907c7aa4c8f2233639134cfc242a439",
+    "crop": [
+      402,
+      148,
+      600,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3deeedd565a30724f40a73d665b8367d9713a04e52fad17db6fb31410bff093c.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3deeedd565a30724f40a73d665b8367d9713a04e52fad17db6fb31410bff093c.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1abd0bd858b5a0cab8ec88ce6d29a2bcc2e5565bf5d7c0575163439d687e14b7.webp",
+    "sha256": "1abd0bd858b5a0cab8ec88ce6d29a2bcc2e5565bf5d7c0575163439d687e14b7",
+    "bytes": 8346,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/aa9ac29199a153232d9bad037240449bf0eb269a9557c8d33975fad364c1c1e9.cap.webp",
+    "sourceSha256": "aa9ac29199a153232d9bad037240449bf0eb269a9557c8d33975fad364c1c1e9",
+    "crop": [
+      404,
+      155,
+      600,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1abd0bd858b5a0cab8ec88ce6d29a2bcc2e5565bf5d7c0575163439d687e14b7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1abd0bd858b5a0cab8ec88ce6d29a2bcc2e5565bf5d7c0575163439d687e14b7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/af4db8e53bd7eabda3e3b34ab1d7c7d32777c146f3599a8f45569bc3f462956f.webp",
+    "sha256": "af4db8e53bd7eabda3e3b34ab1d7c7d32777c146f3599a8f45569bc3f462956f",
+    "bytes": 21962,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c3dff119d420d7bb61f6690974c1adab0bbc6463af183b03fabfc64636d0716f.cap.webp",
+    "sourceSha256": "c3dff119d420d7bb61f6690974c1adab0bbc6463af183b03fabfc64636d0716f",
+    "crop": [
+      403,
+      151,
+      599,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/af4db8e53bd7eabda3e3b34ab1d7c7d32777c146f3599a8f45569bc3f462956f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/af4db8e53bd7eabda3e3b34ab1d7c7d32777c146f3599a8f45569bc3f462956f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/4b8df1e1d2d5d43fa3e9930e597da1098576d50173827b1a7b1bbd6186ed2c0c.webp",
+    "sha256": "4b8df1e1d2d5d43fa3e9930e597da1098576d50173827b1a7b1bbd6186ed2c0c",
+    "bytes": 11670,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/d1e8d6ef117648422067fb4e71472699b375dbabeb6df4c5c08383c6b056944e.cap.webp",
+    "sourceSha256": "d1e8d6ef117648422067fb4e71472699b375dbabeb6df4c5c08383c6b056944e",
+    "crop": [
+      404,
+      155,
+      597,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/4b8df1e1d2d5d43fa3e9930e597da1098576d50173827b1a7b1bbd6186ed2c0c.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/4b8df1e1d2d5d43fa3e9930e597da1098576d50173827b1a7b1bbd6186ed2c0c.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/b6a6b782116ae7586499afeceaedcd6b7327770bfd4d4c0ae656d03e4738872f.webp",
+    "sha256": "b6a6b782116ae7586499afeceaedcd6b7327770bfd4d4c0ae656d03e4738872f",
+    "bytes": 10616,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/a998225b2ab9e06a985e4df915d0510b403e3d19b861e4557f528f66c3fa7364.cap.webp",
+    "sourceSha256": "a998225b2ab9e06a985e4df915d0510b403e3d19b861e4557f528f66c3fa7364",
+    "crop": [
+      400,
+      148,
+      600,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/b6a6b782116ae7586499afeceaedcd6b7327770bfd4d4c0ae656d03e4738872f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/b6a6b782116ae7586499afeceaedcd6b7327770bfd4d4c0ae656d03e4738872f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9MtlRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/6cecba862d8f5546c4f2456880e5e852a49aad23fe30ded99472559d49c41d6a.webp",
+    "sha256": "6cecba862d8f5546c4f2456880e5e852a49aad23fe30ded99472559d49c41d6a",
+    "bytes": 5956,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7a6026b7c3c479fc84c5254064a7c1fe46c7e94c4e95ad019cd9f5d3d48d3804.cap.webp",
+    "sourceSha256": "7a6026b7c3c479fc84c5254064a7c1fe46c7e94c4e95ad019cd9f5d3d48d3804",
+    "crop": [
+      401,
+      136,
+      598,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/6cecba862d8f5546c4f2456880e5e852a49aad23fe30ded99472559d49c41d6a.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/6cecba862d8f5546c4f2456880e5e852a49aad23fe30ded99472559d49c41d6a.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/778dfe12ab748130b891c32305e071e7754ea3a19c6cd6019d0805b0d8000a62.webp",
+    "sha256": "778dfe12ab748130b891c32305e071e7754ea3a19c6cd6019d0805b0d8000a62",
+    "bytes": 12456,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b21a76f3ebaddee980ef579c821f2ffad8ebb217fd07ef0a5e67e076bdb5b285.cap.webp",
+    "sourceSha256": "b21a76f3ebaddee980ef579c821f2ffad8ebb217fd07ef0a5e67e076bdb5b285",
+    "crop": [
+      400,
+      154,
+      605,
+      437
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/778dfe12ab748130b891c32305e071e7754ea3a19c6cd6019d0805b0d8000a62.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/778dfe12ab748130b891c32305e071e7754ea3a19c6cd6019d0805b0d8000a62.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/0e538b9296f498da7c38c8ded6b237af96c79ac06b5df8738f34893b847e67f1.webp",
+    "sha256": "0e538b9296f498da7c38c8ded6b237af96c79ac06b5df8738f34893b847e67f1",
+    "bytes": 25088,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/06e8056e4996ff6a14d6dc5c05b8137946c40d54cb5a81f825ebaa0614ef87a9.cap.webp",
+    "sourceSha256": "06e8056e4996ff6a14d6dc5c05b8137946c40d54cb5a81f825ebaa0614ef87a9",
+    "crop": [
+      405,
+      154,
+      599,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/0e538b9296f498da7c38c8ded6b237af96c79ac06b5df8738f34893b847e67f1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/0e538b9296f498da7c38c8ded6b237af96c79ac06b5df8738f34893b847e67f1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7de5850363ae2d9ec5a70425cc70213397f603d9ff94c4c718fb93b8be9c185e.webp",
+    "sha256": "7de5850363ae2d9ec5a70425cc70213397f603d9ff94c4c718fb93b8be9c185e",
+    "bytes": 19080,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f90963122eba0b66703e2e01b2fde18eea385c4c0012cd40090b97744bc6e23b.cap.webp",
+    "sourceSha256": "f90963122eba0b66703e2e01b2fde18eea385c4c0012cd40090b97744bc6e23b",
+    "crop": [
+      404,
+      153,
+      600,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7de5850363ae2d9ec5a70425cc70213397f603d9ff94c4c718fb93b8be9c185e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7de5850363ae2d9ec5a70425cc70213397f603d9ff94c4c718fb93b8be9c185e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c40247d43b74e36ce582af8d87954e2deb20833631cb353fff7a5769925dac1f.webp",
+    "sha256": "c40247d43b74e36ce582af8d87954e2deb20833631cb353fff7a5769925dac1f",
+    "bytes": 10152,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/74fc08c510d434ac558a3110b7a5048d39892ec9e7999afc70550068af60b191.cap.webp",
+    "sourceSha256": "74fc08c510d434ac558a3110b7a5048d39892ec9e7999afc70550068af60b191",
+    "crop": [
+      405,
+      157,
+      596,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c40247d43b74e36ce582af8d87954e2deb20833631cb353fff7a5769925dac1f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c40247d43b74e36ce582af8d87954e2deb20833631cb353fff7a5769925dac1f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/37e13ad11b0fd59a8135b653f0a1db1729217c64339f022cbdc0283e825c3a77.webp",
+    "sha256": "37e13ad11b0fd59a8135b653f0a1db1729217c64339f022cbdc0283e825c3a77",
+    "bytes": 21994,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e7452fdfe2e2d58f89504e6e65bf2549bad4c64253dde85a6d3aaf156d8dcd47.cap.webp",
+    "sourceSha256": "e7452fdfe2e2d58f89504e6e65bf2549bad4c64253dde85a6d3aaf156d8dcd47",
+    "crop": [
+      402,
+      147,
+      600,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/37e13ad11b0fd59a8135b653f0a1db1729217c64339f022cbdc0283e825c3a77.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/37e13ad11b0fd59a8135b653f0a1db1729217c64339f022cbdc0283e825c3a77.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d3b2b29096f557a691150dd09057bc062ebb73288764175d71a19c5a31902425.webp",
+    "sha256": "d3b2b29096f557a691150dd09057bc062ebb73288764175d71a19c5a31902425",
+    "bytes": 8428,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0fef418a34e475991f27e62a268d0d3ec02eee4f0be8d4ebfe5ed8631868155e.cap.webp",
+    "sourceSha256": "0fef418a34e475991f27e62a268d0d3ec02eee4f0be8d4ebfe5ed8631868155e",
+    "crop": [
+      404,
+      157,
+      601,
+      434
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d3b2b29096f557a691150dd09057bc062ebb73288764175d71a19c5a31902425.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d3b2b29096f557a691150dd09057bc062ebb73288764175d71a19c5a31902425.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a9b512a92f98523bf3ddce184549c7abd6de34dfba0aed340439c62a49839184.webp",
+    "sha256": "a9b512a92f98523bf3ddce184549c7abd6de34dfba0aed340439c62a49839184",
+    "bytes": 22062,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/9e7c0a516d39faf38252b29849a5720ead4b4299aa0ccabb629e07dc004c6692.cap.webp",
+    "sourceSha256": "9e7c0a516d39faf38252b29849a5720ead4b4299aa0ccabb629e07dc004c6692",
+    "crop": [
+      403,
+      153,
+      599,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a9b512a92f98523bf3ddce184549c7abd6de34dfba0aed340439c62a49839184.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a9b512a92f98523bf3ddce184549c7abd6de34dfba0aed340439c62a49839184.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7dbd930dffb5a403444fc6446ab13797cd51d8f391c4c006d215e069c0660c39.webp",
+    "sha256": "7dbd930dffb5a403444fc6446ab13797cd51d8f391c4c006d215e069c0660c39",
+    "bytes": 12742,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/d3ab7e5a06fffbf337926d4b4c04ea7b7b59f083856a8690ce5fefd7df84ee63.cap.webp",
+    "sourceSha256": "d3ab7e5a06fffbf337926d4b4c04ea7b7b59f083856a8690ce5fefd7df84ee63",
+    "crop": [
+      404,
+      153,
+      597,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7dbd930dffb5a403444fc6446ab13797cd51d8f391c4c006d215e069c0660c39.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7dbd930dffb5a403444fc6446ab13797cd51d8f391c4c006d215e069c0660c39.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/626f36220a58b562ded9465931aa3f170e765bfdcae7a75fd92ed1df01474526.webp",
+    "sha256": "626f36220a58b562ded9465931aa3f170e765bfdcae7a75fd92ed1df01474526",
+    "bytes": 10406,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/220533181bb5726214a67dc2c4f2c5991a1e2c678c370f76d01d2572ef961e19.cap.webp",
+    "sourceSha256": "220533181bb5726214a67dc2c4f2c5991a1e2c678c370f76d01d2572ef961e19",
+    "crop": [
+      400,
+      148,
+      600,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/626f36220a58b562ded9465931aa3f170e765bfdcae7a75fd92ed1df01474526.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/626f36220a58b562ded9465931aa3f170e765bfdcae7a75fd92ed1df01474526.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylAmb9RollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f84ce9092cef8be480331742d697379b422ed5ee9dbb3767c419f013288f140e.webp",
+    "sha256": "f84ce9092cef8be480331742d697379b422ed5ee9dbb3767c419f013288f140e",
+    "bytes": 5882,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/445af64da4d546206362adfc5bcea8ae4b2ca765951cec1b5bba2639c9af6e0e.cap.webp",
+    "sourceSha256": "445af64da4d546206362adfc5bcea8ae4b2ca765951cec1b5bba2639c9af6e0e",
+    "crop": [
+      398,
+      139,
+      601,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f84ce9092cef8be480331742d697379b422ed5ee9dbb3767c419f013288f140e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f84ce9092cef8be480331742d697379b422ed5ee9dbb3767c419f013288f140e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9BlkShSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/830bee2175fa149bf84583bf5055440cdeafdb1f47cf911f8e6078aa126682ec.webp",
+    "sha256": "830bee2175fa149bf84583bf5055440cdeafdb1f47cf911f8e6078aa126682ec",
+    "bytes": 5070,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/32b2dcb9919c50035ca9107be7ff4b827cf578fc8bd934270d69a6ce1718c420.cap.webp",
+    "sourceSha256": "32b2dcb9919c50035ca9107be7ff4b827cf578fc8bd934270d69a6ce1718c420",
+    "crop": [
+      432,
+      166,
+      565,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/830bee2175fa149bf84583bf5055440cdeafdb1f47cf911f8e6078aa126682ec.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/830bee2175fa149bf84583bf5055440cdeafdb1f47cf911f8e6078aa126682ec.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9BlkSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d6c4d0b3d5a3c6772538ed10cf4296a69772edc5c4f5edc3faccdba60187f8c7.webp",
+    "sha256": "d6c4d0b3d5a3c6772538ed10cf4296a69772edc5c4f5edc3faccdba60187f8c7",
+    "bytes": 8230,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4e72f57647bb2afd644fe9b81f03a4a45d81e2c36bddd1f3c914d988147b0a89.cap.webp",
+    "sourceSha256": "4e72f57647bb2afd644fe9b81f03a4a45d81e2c36bddd1f3c914d988147b0a89",
+    "crop": [
+      436,
+      201,
+      567,
+      290
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d6c4d0b3d5a3c6772538ed10cf4296a69772edc5c4f5edc3faccdba60187f8c7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d6c4d0b3d5a3c6772538ed10cf4296a69772edc5c4f5edc3faccdba60187f8c7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9CuSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/6db0acad5db16a1915dd8f6b9961dc1d71e86c50fc48102858fedf27f9b4ab77.webp",
+    "sha256": "6db0acad5db16a1915dd8f6b9961dc1d71e86c50fc48102858fedf27f9b4ab77",
+    "bytes": 9388,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8356f4d8b6575520b441bd36d3db02aec70a3c7a24c177d09c8a9937579974ee.cap.webp",
+    "sourceSha256": "8356f4d8b6575520b441bd36d3db02aec70a3c7a24c177d09c8a9937579974ee",
+    "crop": [
+      430,
+      166,
+      565,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/6db0acad5db16a1915dd8f6b9961dc1d71e86c50fc48102858fedf27f9b4ab77.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/6db0acad5db16a1915dd8f6b9961dc1d71e86c50fc48102858fedf27f9b4ab77.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9Gl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/52e6f130130344f0e2f573f3861443f3732eff9700da1e5375ab17b632122a42.webp",
+    "sha256": "52e6f130130344f0e2f573f3861443f3732eff9700da1e5375ab17b632122a42",
+    "bytes": 14122,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/087c773e790c202a67dde01d0e4f0c3775245893632b1139031363533ba3da44.cap.webp",
+    "sourceSha256": "087c773e790c202a67dde01d0e4f0c3775245893632b1139031363533ba3da44",
+    "crop": [
+      432,
+      96,
+      569,
+      301
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/52e6f130130344f0e2f573f3861443f3732eff9700da1e5375ab17b632122a42.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/52e6f130130344f0e2f573f3861443f3732eff9700da1e5375ab17b632122a42.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9GlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/df26b312535866955317854b2a993103c1250d8bc5251a37e4aace698d4dc31e.webp",
+    "sha256": "df26b312535866955317854b2a993103c1250d8bc5251a37e4aace698d4dc31e",
+    "bytes": 8994,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/52992f6fca1611528002e66cb5785788cf0739cde21004eb75f8e56e1572029f.cap.webp",
+    "sourceSha256": "52992f6fca1611528002e66cb5785788cf0739cde21004eb75f8e56e1572029f",
+    "crop": [
+      430,
+      166,
+      567,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/df26b312535866955317854b2a993103c1250d8bc5251a37e4aace698d4dc31e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/df26b312535866955317854b2a993103c1250d8bc5251a37e4aace698d4dc31e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9GlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/96ac00771870f1cbe56f423a608d76d38c05f2b2323bbd7b1fa2af573b8316aa.webp",
+    "sha256": "96ac00771870f1cbe56f423a608d76d38c05f2b2323bbd7b1fa2af573b8316aa",
+    "bytes": 11154,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/103c51524e21b1b204693f500470ea88c889e0cd85bba55d16b26e5b2a7e5604.cap.webp",
+    "sourceSha256": "103c51524e21b1b204693f500470ea88c889e0cd85bba55d16b26e5b2a7e5604",
+    "crop": [
+      432,
+      166,
+      567,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/96ac00771870f1cbe56f423a608d76d38c05f2b2323bbd7b1fa2af573b8316aa.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/96ac00771870f1cbe56f423a608d76d38c05f2b2323bbd7b1fa2af573b8316aa.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/bc177baf6f35cf317ec0a8d3058cab41d92234500463410d58ac2e7b0de7ffe1.webp",
+    "sha256": "bc177baf6f35cf317ec0a8d3058cab41d92234500463410d58ac2e7b0de7ffe1",
+    "bytes": 8882,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c24e6a64c18a9a887827ab8b15f8fb9ad1a224b39f511647d5482df29ea8c0c9.cap.webp",
+    "sourceSha256": "c24e6a64c18a9a887827ab8b15f8fb9ad1a224b39f511647d5482df29ea8c0c9",
+    "crop": [
+      429,
+      96,
+      567,
+      300
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/bc177baf6f35cf317ec0a8d3058cab41d92234500463410d58ac2e7b0de7ffe1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/bc177baf6f35cf317ec0a8d3058cab41d92234500463410d58ac2e7b0de7ffe1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/45baeafc19db045cd6ed851e5efd34f953033aa8fd698860ccba605576444d01.webp",
+    "sha256": "45baeafc19db045cd6ed851e5efd34f953033aa8fd698860ccba605576444d01",
+    "bytes": 8574,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/300cb4b4be1527fa77fbb1f07ea2889968a361331ffb85d70f93004b0a11ff1a.cap.webp",
+    "sourceSha256": "300cb4b4be1527fa77fbb1f07ea2889968a361331ffb85d70f93004b0a11ff1a",
+    "crop": [
+      433,
+      104,
+      568,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/45baeafc19db045cd6ed851e5efd34f953033aa8fd698860ccba605576444d01.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/45baeafc19db045cd6ed851e5efd34f953033aa8fd698860ccba605576444d01.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/55809372c4f071710eaf4c13d929312e259ef0572124f020c549c04239cbaca9.webp",
+    "sha256": "55809372c4f071710eaf4c13d929312e259ef0572124f020c549c04239cbaca9",
+    "bytes": 15612,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6e110fd3b7c73d9109c4895f84b570f17589759b721a4a4a1ad894c89862ac88.cap.webp",
+    "sourceSha256": "6e110fd3b7c73d9109c4895f84b570f17589759b721a4a4a1ad894c89862ac88",
+    "crop": [
+      432,
+      100,
+      568,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/55809372c4f071710eaf4c13d929312e259ef0572124f020c549c04239cbaca9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/55809372c4f071710eaf4c13d929312e259ef0572124f020c549c04239cbaca9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/525b26094bc17e5c479b5c57a07c4e3158cc0da96363447a0d26a718162820f1.webp",
+    "sha256": "525b26094bc17e5c479b5c57a07c4e3158cc0da96363447a0d26a718162820f1",
+    "bytes": 10926,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0fddead009af00296feb85331eeaf6707ddca405e837c28d11f72ef2a284cf13.cap.webp",
+    "sourceSha256": "0fddead009af00296feb85331eeaf6707ddca405e837c28d11f72ef2a284cf13",
+    "crop": [
+      432,
+      100,
+      569,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/525b26094bc17e5c479b5c57a07c4e3158cc0da96363447a0d26a718162820f1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/525b26094bc17e5c479b5c57a07c4e3158cc0da96363447a0d26a718162820f1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/8b11e4bd49919bfe605e4ed9d20e26688d36d73e7dc267f01f95e79548b231ea.webp",
+    "sha256": "8b11e4bd49919bfe605e4ed9d20e26688d36d73e7dc267f01f95e79548b231ea",
+    "bytes": 14362,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2b163a8221ae3c77858a3ab305dc16d2878e4e3a0c0b38bcf9c5ef40f2799eb9.cap.webp",
+    "sourceSha256": "2b163a8221ae3c77858a3ab305dc16d2878e4e3a0c0b38bcf9c5ef40f2799eb9",
+    "crop": [
+      432,
+      97,
+      570,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/8b11e4bd49919bfe605e4ed9d20e26688d36d73e7dc267f01f95e79548b231ea.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/8b11e4bd49919bfe605e4ed9d20e26688d36d73e7dc267f01f95e79548b231ea.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a.webp",
+    "sha256": "f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a",
+    "bytes": 12978,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/dcf3ae302d0d367c21d535ef59749b81e8ffdeed1c3fdfcd780b9376ce2dcbf3.cap.webp",
+    "sourceSha256": "dcf3ae302d0d367c21d535ef59749b81e8ffdeed1c3fdfcd780b9376ce2dcbf3",
+    "crop": [
+      434,
+      108,
+      567,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6.webp",
+    "sha256": "06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6",
+    "bytes": 7162,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4369fca38d8f0f0fd75006c611173bc8a1f0bfab0a96e1ece29111aed1768dcf.cap.webp",
+    "sourceSha256": "4369fca38d8f0f0fd75006c611173bc8a1f0bfab0a96e1ece29111aed1768dcf",
+    "crop": [
+      434,
+      106,
+      568,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9243d401fd976baf7ad540dc305834458a2c1abdc87ef5f9d200f51a85529125.webp",
+    "sha256": "9243d401fd976baf7ad540dc305834458a2c1abdc87ef5f9d200f51a85529125",
+    "bytes": 6326,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/eac2e341166a28dd817b128a26903afc31ea7b3e06960a4e37e26bffa5b06433.cap.webp",
+    "sourceSha256": "eac2e341166a28dd817b128a26903afc31ea7b3e06960a4e37e26bffa5b06433",
+    "crop": [
+      432,
+      106,
+      569,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9243d401fd976baf7ad540dc305834458a2c1abdc87ef5f9d200f51a85529125.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9243d401fd976baf7ad540dc305834458a2c1abdc87ef5f9d200f51a85529125.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9MtlRollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a2e3b0b53cfbc721206831665b1b78c87b59dad254125a3fc15e87783e46a668.webp",
+    "sha256": "a2e3b0b53cfbc721206831665b1b78c87b59dad254125a3fc15e87783e46a668",
+    "bytes": 8004,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5f6667f4a227c13e030282dfbfc86d96fb7f46b869a4b42594c5d2648a27b4c5.cap.webp",
+    "sourceSha256": "5f6667f4a227c13e030282dfbfc86d96fb7f46b869a4b42594c5d2648a27b4c5",
+    "crop": [
+      432,
+      95,
+      570,
+      301
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a2e3b0b53cfbc721206831665b1b78c87b59dad254125a3fc15e87783e46a668.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a2e3b0b53cfbc721206831665b1b78c87b59dad254125a3fc15e87783e46a668.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/4eb0607d6e8caf23c182a818cc3b4b123a0b2efac9b2b0f49828d3675076d57c.webp",
+    "sha256": "4eb0607d6e8caf23c182a818cc3b4b123a0b2efac9b2b0f49828d3675076d57c",
+    "bytes": 8366,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6146e71eb4d881aa43d21a119c6e268eae590fa7730cb5ec0b7f4abcf4d28ddb.cap.webp",
+    "sourceSha256": "6146e71eb4d881aa43d21a119c6e268eae590fa7730cb5ec0b7f4abcf4d28ddb",
+    "crop": [
+      433,
+      101,
+      568,
+      299
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/4eb0607d6e8caf23c182a818cc3b4b123a0b2efac9b2b0f49828d3675076d57c.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/4eb0607d6e8caf23c182a818cc3b4b123a0b2efac9b2b0f49828d3675076d57c.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e11066849b4193f5aa443ba9d1709e2973d0b3fa56e188ca4b40bb3682146457.webp",
+    "sha256": "e11066849b4193f5aa443ba9d1709e2973d0b3fa56e188ca4b40bb3682146457",
+    "bytes": 7964,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/784a62715ed95a47153548f1d0a99b7a38af363bb4af7629aff3bce156ee8c5b.cap.webp",
+    "sourceSha256": "784a62715ed95a47153548f1d0a99b7a38af363bb4af7629aff3bce156ee8c5b",
+    "crop": [
+      430,
+      103,
+      565,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e11066849b4193f5aa443ba9d1709e2973d0b3fa56e188ca4b40bb3682146457.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e11066849b4193f5aa443ba9d1709e2973d0b3fa56e188ca4b40bb3682146457.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/86a70be426376a55b8293ac2cdac92f8dfaf8bd9d8ce9bc368c51e59b8ebe67b.webp",
+    "sha256": "86a70be426376a55b8293ac2cdac92f8dfaf8bd9d8ce9bc368c51e59b8ebe67b",
+    "bytes": 16308,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/352b7e9d6a7060ca08e2a8a921d22d2c000577a349bd4f82edb2edd792cd60a4.cap.webp",
+    "sourceSha256": "352b7e9d6a7060ca08e2a8a921d22d2c000577a349bd4f82edb2edd792cd60a4",
+    "crop": [
+      429,
+      101,
+      566,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/86a70be426376a55b8293ac2cdac92f8dfaf8bd9d8ce9bc368c51e59b8ebe67b.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/86a70be426376a55b8293ac2cdac92f8dfaf8bd9d8ce9bc368c51e59b8ebe67b.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/69764de0d83c59795d7f7b3d515a639bf60b2e5877bf8fcd47bad2dec5b07240.webp",
+    "sha256": "69764de0d83c59795d7f7b3d515a639bf60b2e5877bf8fcd47bad2dec5b07240",
+    "bytes": 11038,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/9a1d8e97e5e5cd2480cebce4bc62daa2ff8fac80782f5df6cdd3bb97ea0a787e.cap.webp",
+    "sourceSha256": "9a1d8e97e5e5cd2480cebce4bc62daa2ff8fac80782f5df6cdd3bb97ea0a787e",
+    "crop": [
+      431,
+      107,
+      568,
+      306
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/69764de0d83c59795d7f7b3d515a639bf60b2e5877bf8fcd47bad2dec5b07240.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/69764de0d83c59795d7f7b3d515a639bf60b2e5877bf8fcd47bad2dec5b07240.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9ab89fdb0bc223e5b52c82ef2baa892423c0e934bf145cc5209a3b61913daf14.webp",
+    "sha256": "9ab89fdb0bc223e5b52c82ef2baa892423c0e934bf145cc5209a3b61913daf14",
+    "bytes": 14666,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/362546a64c5d715edddef7c68d87fc84334e59c1eef32c87e7467ac246ae3301.cap.webp",
+    "sourceSha256": "362546a64c5d715edddef7c68d87fc84334e59c1eef32c87e7467ac246ae3301",
+    "crop": [
+      431,
+      98,
+      568,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9ab89fdb0bc223e5b52c82ef2baa892423c0e934bf145cc5209a3b61913daf14.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9ab89fdb0bc223e5b52c82ef2baa892423c0e934bf145cc5209a3b61913daf14.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a.webp",
+    "sha256": "f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a",
+    "bytes": 12978,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/dcf3ae302d0d367c21d535ef59749b81e8ffdeed1c3fdfcd780b9376ce2dcbf3.cap.webp",
+    "sourceSha256": "dcf3ae302d0d367c21d535ef59749b81e8ffdeed1c3fdfcd780b9376ce2dcbf3",
+    "crop": [
+      434,
+      108,
+      567,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f1391ded7aeb402f0354b4cbd5c2edd913d73ffc474f9a2006e40b771e0cdf0a.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6.webp",
+    "sha256": "06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6",
+    "bytes": 7162,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4369fca38d8f0f0fd75006c611173bc8a1f0bfab0a96e1ece29111aed1768dcf.cap.webp",
+    "sourceSha256": "4369fca38d8f0f0fd75006c611173bc8a1f0bfab0a96e1ece29111aed1768dcf",
+    "crop": [
+      434,
+      106,
+      568,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/06ece8452a09462f2c4f6d09c89ddedbf4ffb271f725e19e0fbf44c9fcf686f6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/22b32c1f5cbf0699920b10fc3e945101af0baf6680353d59ecb25d14e5b51212.webp",
+    "sha256": "22b32c1f5cbf0699920b10fc3e945101af0baf6680353d59ecb25d14e5b51212",
+    "bytes": 6342,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/04bf5e0df8c4326bd3119e78c0c47a7fa37b7473ff4660c4303d7df549fd114f.cap.webp",
+    "sourceSha256": "04bf5e0df8c4326bd3119e78c0c47a7fa37b7473ff4660c4303d7df549fd114f",
+    "crop": [
+      431,
+      106,
+      568,
+      305
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/22b32c1f5cbf0699920b10fc3e945101af0baf6680353d59ecb25d14e5b51212.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/22b32c1f5cbf0699920b10fc3e945101af0baf6680353d59ecb25d14e5b51212.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9RollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f3ea93bc83b67031ea2536e311c3f6060d044b64db45a14f5e79512f39950152.webp",
+    "sha256": "f3ea93bc83b67031ea2536e311c3f6060d044b64db45a14f5e79512f39950152",
+    "bytes": 10508,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/9c3a940420e0c7f426ce1d6148a06495114cebfa068cfc43f47b24fb30d22b75.cap.webp",
+    "sourceSha256": "9c3a940420e0c7f426ce1d6148a06495114cebfa068cfc43f47b24fb30d22b75",
+    "crop": [
+      430,
+      96,
+      569,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f3ea93bc83b67031ea2536e311c3f6060d044b64db45a14f5e79512f39950152.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f3ea93bc83b67031ea2536e311c3f6060d044b64db45a14f5e79512f39950152.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9Sl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/392f29cc7500f07616f9b2391c3c6e13262a5009b10e5b2be9b519da6a723330.webp",
+    "sha256": "392f29cc7500f07616f9b2391c3c6e13262a5009b10e5b2be9b519da6a723330",
+    "bytes": 8718,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1309f55b2371770b1aef1fbefef98716f02f4b64db3040884639134067d3c915.cap.webp",
+    "sourceSha256": "1309f55b2371770b1aef1fbefef98716f02f4b64db3040884639134067d3c915",
+    "crop": [
+      431,
+      100,
+      570,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/392f29cc7500f07616f9b2391c3c6e13262a5009b10e5b2be9b519da6a723330.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/392f29cc7500f07616f9b2391c3c6e13262a5009b10e5b2be9b519da6a723330.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9SlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f5dbacb3ba5867b7c3f85605827cc358e14b22cf6e8c4a8b09047822b0481a08.webp",
+    "sha256": "f5dbacb3ba5867b7c3f85605827cc358e14b22cf6e8c4a8b09047822b0481a08",
+    "bytes": 5260,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6b4e7a3699bcef476d2ea46f68823032e791ce0fdb208829fb2be38607f2a009.cap.webp",
+    "sourceSha256": "6b4e7a3699bcef476d2ea46f68823032e791ce0fdb208829fb2be38607f2a009",
+    "crop": [
+      430,
+      166,
+      570,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f5dbacb3ba5867b7c3f85605827cc358e14b22cf6e8c4a8b09047822b0481a08.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f5dbacb3ba5867b7c3f85605827cc358e14b22cf6e8c4a8b09047822b0481a08.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9SlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/059f0ad5bb16c905902245824d1fc3cc8185243c0bb0dcfc4a6f4c40676dded0.webp",
+    "sha256": "059f0ad5bb16c905902245824d1fc3cc8185243c0bb0dcfc4a6f4c40676dded0",
+    "bytes": 5758,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/33436898203f95a2cec2742fcc71931a597977a74967325c3f9912ac5e04e28e.cap.webp",
+    "sourceSha256": "33436898203f95a2cec2742fcc71931a597977a74967325c3f9912ac5e04e28e",
+    "crop": [
+      430,
+      166,
+      567,
+      303
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/059f0ad5bb16c905902245824d1fc3cc8185243c0bb0dcfc4a6f4c40676dded0.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/059f0ad5bb16c905902245824d1fc3cc8185243c0bb0dcfc4a6f4c40676dded0.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCyl9WhtSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/953bf5338fbb305fc4b02305686967f7aca9f30da34858ee414a8fc4565c53e7.webp",
+    "sha256": "953bf5338fbb305fc4b02305686967f7aca9f30da34858ee414a8fc4565c53e7",
+    "bytes": 4238,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7adb5d50f56bddbfc681aada8fdcf141ea421fa456b8bc95954e7b49d3284e73.cap.webp",
+    "sourceSha256": "7adb5d50f56bddbfc681aada8fdcf141ea421fa456b8bc95954e7b49d3284e73",
+    "crop": [
+      437,
+      201,
+      565,
+      286
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/953bf5338fbb305fc4b02305686967f7aca9f30da34858ee414a8fc4565c53e7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/953bf5338fbb305fc4b02305686967f7aca9f30da34858ee414a8fc4565c53e7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a45d6c6d081018da0915757d4c0e951ac35a4ee0a4e9b007003cbee0ea5ab194.webp",
+    "sha256": "a45d6c6d081018da0915757d4c0e951ac35a4ee0a4e9b007003cbee0ea5ab194",
+    "bytes": 12270,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/abe85236887f1724ac034d582feefcd3336d7c9a1c17fac19197f175ae3acdee.cap.webp",
+    "sourceSha256": "abe85236887f1724ac034d582feefcd3336d7c9a1c17fac19197f175ae3acdee",
+    "crop": [
+      401,
+      148,
+      604,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a45d6c6d081018da0915757d4c0e951ac35a4ee0a4e9b007003cbee0ea5ab194.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a45d6c6d081018da0915757d4c0e951ac35a4ee0a4e9b007003cbee0ea5ab194.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a6b83e4a095a4d8cb29ade0379281892dd3c43b45a397760daea7be52fc58d0d.webp",
+    "sha256": "a6b83e4a095a4d8cb29ade0379281892dd3c43b45a397760daea7be52fc58d0d",
+    "bytes": 24558,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/366265c0f0cdcfc9ba9b58bba82546818476929a627af5b9d52c15530b8416c3.cap.webp",
+    "sourceSha256": "366265c0f0cdcfc9ba9b58bba82546818476929a627af5b9d52c15530b8416c3",
+    "crop": [
+      405,
+      152,
+      596,
+      430
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a6b83e4a095a4d8cb29ade0379281892dd3c43b45a397760daea7be52fc58d0d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a6b83e4a095a4d8cb29ade0379281892dd3c43b45a397760daea7be52fc58d0d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7183a715114b02af8c1b5d12b68f78210f0b73d29dfe01522da1da2af1c33580.webp",
+    "sha256": "7183a715114b02af8c1b5d12b68f78210f0b73d29dfe01522da1da2af1c33580",
+    "bytes": 18496,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/352a902a539c4f30266f6cc4fb76de0b9a80fb030530adc09041c9c21b716459.cap.webp",
+    "sourceSha256": "352a902a539c4f30266f6cc4fb76de0b9a80fb030530adc09041c9c21b716459",
+    "crop": [
+      405,
+      152,
+      599,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7183a715114b02af8c1b5d12b68f78210f0b73d29dfe01522da1da2af1c33580.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7183a715114b02af8c1b5d12b68f78210f0b73d29dfe01522da1da2af1c33580.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/5889308b6fd82419d3f5e24c47e3129412daa640b7c9a2639dcb87808ca41984.webp",
+    "sha256": "5889308b6fd82419d3f5e24c47e3129412daa640b7c9a2639dcb87808ca41984",
+    "bytes": 10250,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5f3ba42cd13365e38db6d1622ac2fbc77f41fb40af8f5fee01c43697a227040f.cap.webp",
+    "sourceSha256": "5f3ba42cd13365e38db6d1622ac2fbc77f41fb40af8f5fee01c43697a227040f",
+    "crop": [
+      403,
+      154,
+      598,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/5889308b6fd82419d3f5e24c47e3129412daa640b7c9a2639dcb87808ca41984.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/5889308b6fd82419d3f5e24c47e3129412daa640b7c9a2639dcb87808ca41984.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e4ed77dc82cb76315b9fd7376fdf6d6917bbb1ccad7ac469e87036967fa68ebb.webp",
+    "sha256": "e4ed77dc82cb76315b9fd7376fdf6d6917bbb1ccad7ac469e87036967fa68ebb",
+    "bytes": 22694,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c7baabac97926027b07426c65aef7a7a7644379a4cf6ea7a38773c09ba326dc8.cap.webp",
+    "sourceSha256": "c7baabac97926027b07426c65aef7a7a7644379a4cf6ea7a38773c09ba326dc8",
+    "crop": [
+      403,
+      151,
+      600,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e4ed77dc82cb76315b9fd7376fdf6d6917bbb1ccad7ac469e87036967fa68ebb.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e4ed77dc82cb76315b9fd7376fdf6d6917bbb1ccad7ac469e87036967fa68ebb.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/4db77c84359742f5b8a430e29e258bba3147540186ca75ddda064cc93ac81264.webp",
+    "sha256": "4db77c84359742f5b8a430e29e258bba3147540186ca75ddda064cc93ac81264",
+    "bytes": 8030,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8a723355851da04cccf8309bea46273745047097bc9cdcccb69fa0b1843a8b87.cap.webp",
+    "sourceSha256": "8a723355851da04cccf8309bea46273745047097bc9cdcccb69fa0b1843a8b87",
+    "crop": [
+      404,
+      153,
+      600,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/4db77c84359742f5b8a430e29e258bba3147540186ca75ddda064cc93ac81264.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/4db77c84359742f5b8a430e29e258bba3147540186ca75ddda064cc93ac81264.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c6b21984f0761262dbcddc574ea203a7f0f2246ebba54fc949850cbbe338b0de.webp",
+    "sha256": "c6b21984f0761262dbcddc574ea203a7f0f2246ebba54fc949850cbbe338b0de",
+    "bytes": 21450,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/a4b3c9f4a1f39a2c7a50dda8989867400ec4bb491da91e05a2c0b7ae6d5ddd5b.cap.webp",
+    "sourceSha256": "a4b3c9f4a1f39a2c7a50dda8989867400ec4bb491da91e05a2c0b7ae6d5ddd5b",
+    "crop": [
+      403,
+      147,
+      598,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c6b21984f0761262dbcddc574ea203a7f0f2246ebba54fc949850cbbe338b0de.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c6b21984f0761262dbcddc574ea203a7f0f2246ebba54fc949850cbbe338b0de.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/de8dc7827c9d8c477252330e99927d1d0323a83088554de12be22309c72b4499.webp",
+    "sha256": "de8dc7827c9d8c477252330e99927d1d0323a83088554de12be22309c72b4499",
+    "bytes": 11472,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/778b8d2f356e66f7da96d92bfc07c8dd7027df2084edfdf08e413f055c7accf0.cap.webp",
+    "sourceSha256": "778b8d2f356e66f7da96d92bfc07c8dd7027df2084edfdf08e413f055c7accf0",
+    "crop": [
+      404,
+      152,
+      597,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/de8dc7827c9d8c477252330e99927d1d0323a83088554de12be22309c72b4499.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/de8dc7827c9d8c477252330e99927d1d0323a83088554de12be22309c72b4499.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/073ead8988ba84703ba73d44d94e72a904c2ae342913573fb57ae6e55b592dc7.webp",
+    "sha256": "073ead8988ba84703ba73d44d94e72a904c2ae342913573fb57ae6e55b592dc7",
+    "bytes": 11030,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/69f6c7a39c64943d70aa3b7735fcc24bdd52fa23c2bebd6a665009707a962f48.cap.webp",
+    "sourceSha256": "69f6c7a39c64943d70aa3b7735fcc24bdd52fa23c2bebd6a665009707a962f48",
+    "crop": [
+      401,
+      146,
+      600,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/073ead8988ba84703ba73d44d94e72a904c2ae342913573fb57ae6e55b592dc7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/073ead8988ba84703ba73d44d94e72a904c2ae342913573fb57ae6e55b592dc7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9MtlRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a782f7d67b98325667713f65c9605aecb8899c85524cf7dab9e969142381b9ac.webp",
+    "sha256": "a782f7d67b98325667713f65c9605aecb8899c85524cf7dab9e969142381b9ac",
+    "bytes": 6556,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/366c8b01756adbc3b00669378042a299d98672f50c500613edc735a8d0420453.cap.webp",
+    "sourceSha256": "366c8b01756adbc3b00669378042a299d98672f50c500613edc735a8d0420453",
+    "crop": [
+      401,
+      140,
+      603,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a782f7d67b98325667713f65c9605aecb8899c85524cf7dab9e969142381b9ac.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a782f7d67b98325667713f65c9605aecb8899c85524cf7dab9e969142381b9ac.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/4b323caa5733563c089a97ca40e9da4938b0bfe6a072a1582894aaf2d285fe3d.webp",
+    "sha256": "4b323caa5733563c089a97ca40e9da4938b0bfe6a072a1582894aaf2d285fe3d",
+    "bytes": 25146,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0c5c9d7b65231ea61b3eedfe32c565653915cc7d31898d6dd5710e1c058725b5.cap.webp",
+    "sourceSha256": "0c5c9d7b65231ea61b3eedfe32c565653915cc7d31898d6dd5710e1c058725b5",
+    "crop": [
+      405,
+      153,
+      598,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/4b323caa5733563c089a97ca40e9da4938b0bfe6a072a1582894aaf2d285fe3d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/4b323caa5733563c089a97ca40e9da4938b0bfe6a072a1582894aaf2d285fe3d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/6de2f9baf9b420d5c7ccb17c18de10426d7c212851c0aa2ad3e9d9df976cd535.webp",
+    "sha256": "6de2f9baf9b420d5c7ccb17c18de10426d7c212851c0aa2ad3e9d9df976cd535",
+    "bytes": 18436,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f3e3e96c0617179d55ef71b2b19411450e2374ba7f02728b4c2267a69312cd3b.cap.webp",
+    "sourceSha256": "f3e3e96c0617179d55ef71b2b19411450e2374ba7f02728b4c2267a69312cd3b",
+    "crop": [
+      405,
+      151,
+      600,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/6de2f9baf9b420d5c7ccb17c18de10426d7c212851c0aa2ad3e9d9df976cd535.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/6de2f9baf9b420d5c7ccb17c18de10426d7c212851c0aa2ad3e9d9df976cd535.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/8483c2da26ce711031b90f780ec77e89f7446c088e76b0e84163a0c28089a548.webp",
+    "sha256": "8483c2da26ce711031b90f780ec77e89f7446c088e76b0e84163a0c28089a548",
+    "bytes": 10922,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7eed45c2f67aa16e5e56c0b940d33963b1d1cd9b7a16ba481d84bffa81e0d82f.cap.webp",
+    "sourceSha256": "7eed45c2f67aa16e5e56c0b940d33963b1d1cd9b7a16ba481d84bffa81e0d82f",
+    "crop": [
+      401,
+      156,
+      600,
+      430
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/8483c2da26ce711031b90f780ec77e89f7446c088e76b0e84163a0c28089a548.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/8483c2da26ce711031b90f780ec77e89f7446c088e76b0e84163a0c28089a548.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/495bbb25ca63884df48ebcd7043bcd818484c153bf5594d50878bd1f36cc36c0.webp",
+    "sha256": "495bbb25ca63884df48ebcd7043bcd818484c153bf5594d50878bd1f36cc36c0",
+    "bytes": 7942,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7986b14ce22a467f26575fc7c998bbff21438367ffee9cd1452e5e49d5171e73.cap.webp",
+    "sourceSha256": "7986b14ce22a467f26575fc7c998bbff21438367ffee9cd1452e5e49d5171e73",
+    "crop": [
+      405,
+      153,
+      600,
+      430
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/495bbb25ca63884df48ebcd7043bcd818484c153bf5594d50878bd1f36cc36c0.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/495bbb25ca63884df48ebcd7043bcd818484c153bf5594d50878bd1f36cc36c0.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/49c3c662dae92107910d54a752316f40d9f59f0ed1d3c031fee8139683d1b1ed.webp",
+    "sha256": "49c3c662dae92107910d54a752316f40d9f59f0ed1d3c031fee8139683d1b1ed",
+    "bytes": 21846,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b683a438dcbed53a431e545cdace893514aa3b34527e1f93a9975764811ef03e.cap.webp",
+    "sourceSha256": "b683a438dcbed53a431e545cdace893514aa3b34527e1f93a9975764811ef03e",
+    "crop": [
+      404,
+      149,
+      598,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/49c3c662dae92107910d54a752316f40d9f59f0ed1d3c031fee8139683d1b1ed.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/49c3c662dae92107910d54a752316f40d9f59f0ed1d3c031fee8139683d1b1ed.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ccfa24e90334a64fcac7f589e6566a8356b8352b68eee24d4135bcd00215477d.webp",
+    "sha256": "ccfa24e90334a64fcac7f589e6566a8356b8352b68eee24d4135bcd00215477d",
+    "bytes": 12036,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/37258be0f8a25189b9600acf9ae4721db94928147a1263e575e7a6ec0d736093.cap.webp",
+    "sourceSha256": "37258be0f8a25189b9600acf9ae4721db94928147a1263e575e7a6ec0d736093",
+    "crop": [
+      404,
+      149,
+      597,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ccfa24e90334a64fcac7f589e6566a8356b8352b68eee24d4135bcd00215477d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ccfa24e90334a64fcac7f589e6566a8356b8352b68eee24d4135bcd00215477d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/61d57ff284e5de7b766987d79ca39d39c9dc3fc538ede5f63e867604f0db25b4.webp",
+    "sha256": "61d57ff284e5de7b766987d79ca39d39c9dc3fc538ede5f63e867604f0db25b4",
+    "bytes": 10696,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/74098d712adfc9e214fb8a08c1084a7982d5aafdd2969b652704e977752dfc7a.cap.webp",
+    "sourceSha256": "74098d712adfc9e214fb8a08c1084a7982d5aafdd2969b652704e977752dfc7a",
+    "crop": [
+      401,
+      146,
+      600,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/61d57ff284e5de7b766987d79ca39d39c9dc3fc538ede5f63e867604f0db25b4.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/61d57ff284e5de7b766987d79ca39d39c9dc3fc538ede5f63e867604f0db25b4.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCyl9RollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e03e6ba3fa8ce24cd7c52b7021691950397da02c51aded3800e691fafd0c8060.webp",
+    "sha256": "e03e6ba3fa8ce24cd7c52b7021691950397da02c51aded3800e691fafd0c8060",
+    "bytes": 5938,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/a6d097238ffbdd450153e55fb029f770d975502bcc722258f9bdf46ccc472a11.cap.webp",
+    "sourceSha256": "a6d097238ffbdd450153e55fb029f770d975502bcc722258f9bdf46ccc472a11",
+    "crop": [
+      400,
+      137,
+      603,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e03e6ba3fa8ce24cd7c52b7021691950397da02c51aded3800e691fafd0c8060.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e03e6ba3fa8ce24cd7c52b7021691950397da02c51aded3800e691fafd0c8060.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/4408ea45069f55b38e8f3307f5904d131c2ede2a586f242235398e16e20bde79.webp",
+    "sha256": "4408ea45069f55b38e8f3307f5904d131c2ede2a586f242235398e16e20bde79",
+    "bytes": 12394,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/afba1cc5f7d481c4c520b57f9d0d436f7e26695d9ac9e2047d2997d022f5cb17.cap.webp",
+    "sourceSha256": "afba1cc5f7d481c4c520b57f9d0d436f7e26695d9ac9e2047d2997d022f5cb17",
+    "crop": [
+      400,
+      144,
+      604,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/4408ea45069f55b38e8f3307f5904d131c2ede2a586f242235398e16e20bde79.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/4408ea45069f55b38e8f3307f5904d131c2ede2a586f242235398e16e20bde79.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/dffd1a1a497210fa2c19a6916a187a1f283ca59aecb35bce46d6e4302dafa762.webp",
+    "sha256": "dffd1a1a497210fa2c19a6916a187a1f283ca59aecb35bce46d6e4302dafa762",
+    "bytes": 25250,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b497dbe201620edf54185c0f7e8b0fd84fda794aa41388b7163bbb8d60c5d2a7.cap.webp",
+    "sourceSha256": "b497dbe201620edf54185c0f7e8b0fd84fda794aa41388b7163bbb8d60c5d2a7",
+    "crop": [
+      403,
+      147,
+      597,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/dffd1a1a497210fa2c19a6916a187a1f283ca59aecb35bce46d6e4302dafa762.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/dffd1a1a497210fa2c19a6916a187a1f283ca59aecb35bce46d6e4302dafa762.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d6f4eda9a86f1228efbe3faccea48a1a5b68dedcf864d42fc191799c99c56057.webp",
+    "sha256": "d6f4eda9a86f1228efbe3faccea48a1a5b68dedcf864d42fc191799c99c56057",
+    "bytes": 18778,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0df63d538a5db9f55d4c4e673103e4146f8619ae2c92f934acdc2b21b8aa064f.cap.webp",
+    "sourceSha256": "0df63d538a5db9f55d4c4e673103e4146f8619ae2c92f934acdc2b21b8aa064f",
+    "crop": [
+      403,
+      147,
+      600,
+      425
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d6f4eda9a86f1228efbe3faccea48a1a5b68dedcf864d42fc191799c99c56057.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d6f4eda9a86f1228efbe3faccea48a1a5b68dedcf864d42fc191799c99c56057.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e0ef578432f8b1b2a646a1a390669ec16baf9a5c12e52350a169327bec232356.webp",
+    "sha256": "e0ef578432f8b1b2a646a1a390669ec16baf9a5c12e52350a169327bec232356",
+    "bytes": 9844,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/586d24244d397a399568c34cfb1330320efd7937c56f01c853519b49785dd25f.cap.webp",
+    "sourceSha256": "586d24244d397a399568c34cfb1330320efd7937c56f01c853519b49785dd25f",
+    "crop": [
+      404,
+      147,
+      596,
+      424
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e0ef578432f8b1b2a646a1a390669ec16baf9a5c12e52350a169327bec232356.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e0ef578432f8b1b2a646a1a390669ec16baf9a5c12e52350a169327bec232356.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1c716635021848843b03dc8c3536c397dda73201755252990d24253dd7e8afee.webp",
+    "sha256": "1c716635021848843b03dc8c3536c397dda73201755252990d24253dd7e8afee",
+    "bytes": 22680,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/44fb1509cc29357e753d2feb5870bcae97d7d5f8db40e690d0b58c1e12ef97cb.cap.webp",
+    "sourceSha256": "44fb1509cc29357e753d2feb5870bcae97d7d5f8db40e690d0b58c1e12ef97cb",
+    "crop": [
+      401,
+      140,
+      601,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1c716635021848843b03dc8c3536c397dda73201755252990d24253dd7e8afee.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1c716635021848843b03dc8c3536c397dda73201755252990d24253dd7e8afee.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ccd770c06850effade0792e6850a5cb01324cfa11185eae5b39d20397ea14dcf.webp",
+    "sha256": "ccd770c06850effade0792e6850a5cb01324cfa11185eae5b39d20397ea14dcf",
+    "bytes": 8288,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/116aa9923f541bc8c6cdbdf5001338d49ce18eb0213e23cc7e9a1eac08a2d3de.cap.webp",
+    "sourceSha256": "116aa9923f541bc8c6cdbdf5001338d49ce18eb0213e23cc7e9a1eac08a2d3de",
+    "crop": [
+      403,
+      147,
+      600,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ccd770c06850effade0792e6850a5cb01324cfa11185eae5b39d20397ea14dcf.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ccd770c06850effade0792e6850a5cb01324cfa11185eae5b39d20397ea14dcf.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc.webp",
+    "sha256": "eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc",
+    "bytes": 21852,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/307c8c3bb2af59defb2abf20bf919ed8cd7ccbd5378f13e12971e5f41718a04e.cap.webp",
+    "sourceSha256": "307c8c3bb2af59defb2abf20bf919ed8cd7ccbd5378f13e12971e5f41718a04e",
+    "crop": [
+      403,
+      142,
+      600,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8.webp",
+    "sha256": "e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8",
+    "bytes": 11734,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8b97316e01206a2a9256aaea111715414255a8c7343c93a50378eaf09454b2c7.cap.webp",
+    "sourceSha256": "8b97316e01206a2a9256aaea111715414255a8c7343c93a50378eaf09454b2c7",
+    "crop": [
+      403,
+      147,
+      598,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a2a7649e4956c15e7182baf0c61bd15eb6fda6f93635e593d942f3b87cf12bfe.webp",
+    "sha256": "a2a7649e4956c15e7182baf0c61bd15eb6fda6f93635e593d942f3b87cf12bfe",
+    "bytes": 10538,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c72d66da4c9568955d3d9e19db5dd0081ab61657e25970da2ab661f685ee15df.cap.webp",
+    "sourceSha256": "c72d66da4c9568955d3d9e19db5dd0081ab61657e25970da2ab661f685ee15df",
+    "crop": [
+      400,
+      140,
+      601,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a2a7649e4956c15e7182baf0c61bd15eb6fda6f93635e593d942f3b87cf12bfe.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a2a7649e4956c15e7182baf0c61bd15eb6fda6f93635e593d942f3b87cf12bfe.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9MtlRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7915188489cf7b5814a7ffe8a49302bb32bb753344255da3a47881de69590623.webp",
+    "sha256": "7915188489cf7b5814a7ffe8a49302bb32bb753344255da3a47881de69590623",
+    "bytes": 5908,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/aa7d15592efb6b1d5a0cba77f2e2bf4c3b00b61f5c5609cc16e7bba4c0b20413.cap.webp",
+    "sourceSha256": "aa7d15592efb6b1d5a0cba77f2e2bf4c3b00b61f5c5609cc16e7bba4c0b20413",
+    "crop": [
+      400,
+      129,
+      598,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7915188489cf7b5814a7ffe8a49302bb32bb753344255da3a47881de69590623.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7915188489cf7b5814a7ffe8a49302bb32bb753344255da3a47881de69590623.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1cc2211d0979716bf6b37eac3a06320d62eca61c0096455de4c8860a33c9a3c7.webp",
+    "sha256": "1cc2211d0979716bf6b37eac3a06320d62eca61c0096455de4c8860a33c9a3c7",
+    "bytes": 12096,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3e88b23f7dc339cf41ad89a63da3ffe5c88ad2ce59f6412fa5b10da08e77353a.cap.webp",
+    "sourceSha256": "3e88b23f7dc339cf41ad89a63da3ffe5c88ad2ce59f6412fa5b10da08e77353a",
+    "crop": [
+      400,
+      146,
+      606,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1cc2211d0979716bf6b37eac3a06320d62eca61c0096455de4c8860a33c9a3c7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1cc2211d0979716bf6b37eac3a06320d62eca61c0096455de4c8860a33c9a3c7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/05085f8c54b9a1c290013f970ac4d6abb4087bcc8e737a5b6ef51ba389b64d42.webp",
+    "sha256": "05085f8c54b9a1c290013f970ac4d6abb4087bcc8e737a5b6ef51ba389b64d42",
+    "bytes": 25130,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/eb10829984113a24c21782fa835e01fb4db130e37e2b62f6f96a1682df51c04b.cap.webp",
+    "sourceSha256": "eb10829984113a24c21782fa835e01fb4db130e37e2b62f6f96a1682df51c04b",
+    "crop": [
+      404,
+      144,
+      600,
+      424
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/05085f8c54b9a1c290013f970ac4d6abb4087bcc8e737a5b6ef51ba389b64d42.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/05085f8c54b9a1c290013f970ac4d6abb4087bcc8e737a5b6ef51ba389b64d42.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287.webp",
+    "sha256": "aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287",
+    "bytes": 18310,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5e326dc9c6a81f510a194238fc49efdc849a4615cd3aed07f44c32789c12d885.cap.webp",
+    "sourceSha256": "5e326dc9c6a81f510a194238fc49efdc849a4615cd3aed07f44c32789c12d885",
+    "crop": [
+      403,
+      144,
+      601,
+      425
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/61fbe18fb702b253e5d94dacbc0e735898eea911153e27e288602caaece5a171.webp",
+    "sha256": "61fbe18fb702b253e5d94dacbc0e735898eea911153e27e288602caaece5a171",
+    "bytes": 10056,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/9668ab3852319de6e7deb61cd932f6a551311ff1a6f45b7c1b09c255381a1414.cap.webp",
+    "sourceSha256": "9668ab3852319de6e7deb61cd932f6a551311ff1a6f45b7c1b09c255381a1414",
+    "crop": [
+      404,
+      149,
+      597,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/61fbe18fb702b253e5d94dacbc0e735898eea911153e27e288602caaece5a171.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/61fbe18fb702b253e5d94dacbc0e735898eea911153e27e288602caaece5a171.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87.webp",
+    "sha256": "a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87",
+    "bytes": 8340,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2f7f239b7a858ae3a236abeeb086098e85c54278abfd8e6bc722a301ca738b77.cap.webp",
+    "sourceSha256": "2f7f239b7a858ae3a236abeeb086098e85c54278abfd8e6bc722a301ca738b77",
+    "crop": [
+      403,
+      149,
+      601,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668.webp",
+    "sha256": "63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668",
+    "bytes": 21462,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1e4dd8ada0f856eecd085e373fab6d7b61081c0e203508a4f4e63db501c50454.cap.webp",
+    "sourceSha256": "1e4dd8ada0f856eecd085e373fab6d7b61081c0e203508a4f4e63db501c50454",
+    "crop": [
+      403,
+      144,
+      600,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/910b3748dfe5badc190263e927dbf0ce5dc7dd1b673e53b613cb7e757d59bb6f.webp",
+    "sha256": "910b3748dfe5badc190263e927dbf0ce5dc7dd1b673e53b613cb7e757d59bb6f",
+    "bytes": 11786,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/cb9ba1a0488969954e2b164670bfeb962039f674222880e4bfe36bfdbddd6e66.cap.webp",
+    "sourceSha256": "cb9ba1a0488969954e2b164670bfeb962039f674222880e4bfe36bfdbddd6e66",
+    "crop": [
+      404,
+      144,
+      597,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/910b3748dfe5badc190263e927dbf0ce5dc7dd1b673e53b613cb7e757d59bb6f.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/910b3748dfe5badc190263e927dbf0ce5dc7dd1b673e53b613cb7e757d59bb6f.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylBlu9RollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ca18c712ce0f61ad9736eaf9e0ad595e29ebb90b53f0bbea7083c1c1f5434eb9.webp",
+    "sha256": "ca18c712ce0f61ad9736eaf9e0ad595e29ebb90b53f0bbea7083c1c1f5434eb9",
+    "bytes": 5640,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8480a93d7c8a1255d9b6dad06ec594080de2fdc11cc3f242c5e8d56fb6b355a1.cap.webp",
+    "sourceSha256": "8480a93d7c8a1255d9b6dad06ec594080de2fdc11cc3f242c5e8d56fb6b355a1",
+    "crop": [
+      397,
+      130,
+      602,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ca18c712ce0f61ad9736eaf9e0ad595e29ebb90b53f0bbea7083c1c1f5434eb9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ca18c712ce0f61ad9736eaf9e0ad595e29ebb90b53f0bbea7083c1c1f5434eb9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9BlkShSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/406b06566d72ef7a8c536b0cf61994ee53319ad8443b836fa7c5482770889594.webp",
+    "sha256": "406b06566d72ef7a8c536b0cf61994ee53319ad8443b836fa7c5482770889594",
+    "bytes": 5364,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7f74c92f8649e71bd0bf08693df8e9af4dffb20f48c3ca633fefdf502a46b5f7.cap.webp",
+    "sourceSha256": "7f74c92f8649e71bd0bf08693df8e9af4dffb20f48c3ca633fefdf502a46b5f7",
+    "crop": [
+      435,
+      185,
+      563,
+      320
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/406b06566d72ef7a8c536b0cf61994ee53319ad8443b836fa7c5482770889594.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/406b06566d72ef7a8c536b0cf61994ee53319ad8443b836fa7c5482770889594.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9BlkSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e4c8d30eef8dd0b82e2013215f595bd0b0c0c9c25183663c98335931ca42a766.webp",
+    "sha256": "e4c8d30eef8dd0b82e2013215f595bd0b0c0c9c25183663c98335931ca42a766",
+    "bytes": 8518,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b17886e02865585a5f86543a8f83cca91131654d7599a78a5445e3b845fa604e.cap.webp",
+    "sourceSha256": "b17886e02865585a5f86543a8f83cca91131654d7599a78a5445e3b845fa604e",
+    "crop": [
+      435,
+      200,
+      567,
+      289
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e4c8d30eef8dd0b82e2013215f595bd0b0c0c9c25183663c98335931ca42a766.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e4c8d30eef8dd0b82e2013215f595bd0b0c0c9c25183663c98335931ca42a766.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9CuSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/54a298d94c5a732527a7923b98e35611a3964ad344936f7988c8ac9d03737381.webp",
+    "sha256": "54a298d94c5a732527a7923b98e35611a3964ad344936f7988c8ac9d03737381",
+    "bytes": 9228,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b39cf6a62eb7ee1feba0f28fd1b0f6998d40c3349118765e339ace5a381f307e.cap.webp",
+    "sourceSha256": "b39cf6a62eb7ee1feba0f28fd1b0f6998d40c3349118765e339ace5a381f307e",
+    "crop": [
+      430,
+      171,
+      565,
+      308
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/54a298d94c5a732527a7923b98e35611a3964ad344936f7988c8ac9d03737381.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/54a298d94c5a732527a7923b98e35611a3964ad344936f7988c8ac9d03737381.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9Gl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/acb0bd9efab5a8b8f14ffe7c565af2e20dd403fe13ffadb7f9a499799e8841b9.webp",
+    "sha256": "acb0bd9efab5a8b8f14ffe7c565af2e20dd403fe13ffadb7f9a499799e8841b9",
+    "bytes": 14012,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7f27c92b70078404c4175ab2767884ad784e288ee5810122a2ca263fdfb2b839.cap.webp",
+    "sourceSha256": "7f27c92b70078404c4175ab2767884ad784e288ee5810122a2ca263fdfb2b839",
+    "crop": [
+      432,
+      96,
+      569,
+      301
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/acb0bd9efab5a8b8f14ffe7c565af2e20dd403fe13ffadb7f9a499799e8841b9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/acb0bd9efab5a8b8f14ffe7c565af2e20dd403fe13ffadb7f9a499799e8841b9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9GlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/ccf51e1bb503d06aa84b8ed3c741afcad196b5d26361d97ffff07b5a4157110e.webp",
+    "sha256": "ccf51e1bb503d06aa84b8ed3c741afcad196b5d26361d97ffff07b5a4157110e",
+    "bytes": 9058,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/94253a7fdd4dada03ece48f4de4c20a8ca7fd857393dab66379c95008f94a7ea.cap.webp",
+    "sourceSha256": "94253a7fdd4dada03ece48f4de4c20a8ca7fd857393dab66379c95008f94a7ea",
+    "crop": [
+      430,
+      169,
+      567,
+      305
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/ccf51e1bb503d06aa84b8ed3c741afcad196b5d26361d97ffff07b5a4157110e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/ccf51e1bb503d06aa84b8ed3c741afcad196b5d26361d97ffff07b5a4157110e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9GlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/cf523ac41322dd4a1d695bd9fdde2e3b587bf8d8d7555e299f3b1a4ce088fad9.webp",
+    "sha256": "cf523ac41322dd4a1d695bd9fdde2e3b587bf8d8d7555e299f3b1a4ce088fad9",
+    "bytes": 10680,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1e9d61053bfa7aadcbabbfb8e8ff8305b5bf2a3c7c91fef10dc1ac773f310daa.cap.webp",
+    "sourceSha256": "1e9d61053bfa7aadcbabbfb8e8ff8305b5bf2a3c7c91fef10dc1ac773f310daa",
+    "crop": [
+      432,
+      169,
+      567,
+      305
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/cf523ac41322dd4a1d695bd9fdde2e3b587bf8d8d7555e299f3b1a4ce088fad9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/cf523ac41322dd4a1d695bd9fdde2e3b587bf8d8d7555e299f3b1a4ce088fad9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/209707eac097f2cbc9cd6a18fcd3c2f0372a1e934c816b77b624f5fc385f5f5a.webp",
+    "sha256": "209707eac097f2cbc9cd6a18fcd3c2f0372a1e934c816b77b624f5fc385f5f5a",
+    "bytes": 9106,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/65e6cb959e911c9abcee5dc26bed14ecea3d7c283556b4a5182a9bf9c8f9fadc.cap.webp",
+    "sourceSha256": "65e6cb959e911c9abcee5dc26bed14ecea3d7c283556b4a5182a9bf9c8f9fadc",
+    "crop": [
+      430,
+      92,
+      568,
+      296
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/209707eac097f2cbc9cd6a18fcd3c2f0372a1e934c816b77b624f5fc385f5f5a.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/209707eac097f2cbc9cd6a18fcd3c2f0372a1e934c816b77b624f5fc385f5f5a.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44.webp",
+    "sha256": "225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44",
+    "bytes": 8348,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e9b7e46b5380895fe54ab6f88ef0049279d1a8c73e1f0b1ea98527722a3bb168.cap.webp",
+    "sourceSha256": "e9b7e46b5380895fe54ab6f88ef0049279d1a8c73e1f0b1ea98527722a3bb168",
+    "crop": [
+      433,
+      104,
+      568,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6.webp",
+    "sha256": "574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6",
+    "bytes": 15758,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3306a41fab8430f57fabe96bb45b13c549069b8b8cf74a6e2d2ef169f674298f.cap.webp",
+    "sourceSha256": "3306a41fab8430f57fabe96bb45b13c549069b8b8cf74a6e2d2ef169f674298f",
+    "crop": [
+      432,
+      100,
+      568,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7.webp",
+    "sha256": "a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7",
+    "bytes": 10896,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/ef3daee10d8770eee49ba7c102fb1e7d02e11ef450a3b1000441a933e6b72e48.cap.webp",
+    "sourceSha256": "ef3daee10d8770eee49ba7c102fb1e7d02e11ef450a3b1000441a933e6b72e48",
+    "crop": [
+      432,
+      100,
+      569,
+      300
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef.webp",
+    "sha256": "54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef",
+    "bytes": 13992,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c7ea36b535ccd574e5e2818a5e207d903766cdeddc5437960ba20f18ac6a4e5d.cap.webp",
+    "sourceSha256": "c7ea36b535ccd574e5e2818a5e207d903766cdeddc5437960ba20f18ac6a4e5d",
+    "crop": [
+      432,
+      97,
+      569,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5.webp",
+    "sha256": "070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5",
+    "bytes": 13628,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4d00aefd9044843993202d0bc0d3f82c66f57a4c300bb1b13d023881a95aff11.cap.webp",
+    "sourceSha256": "4d00aefd9044843993202d0bc0d3f82c66f57a4c300bb1b13d023881a95aff11",
+    "crop": [
+      434,
+      108,
+      567,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd.webp",
+    "sha256": "e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd",
+    "bytes": 7404,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7ee8c4d917db6990797603011a783cd0a91a0ff63da0d934a1307239dfdb8c50.cap.webp",
+    "sourceSha256": "7ee8c4d917db6990797603011a783cd0a91a0ff63da0d934a1307239dfdb8c50",
+    "crop": [
+      434,
+      106,
+      568,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b.webp",
+    "sha256": "34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b",
+    "bytes": 6318,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b5cfa5b839c5fc197c373a840162c575532439fd60a72780f59b8f8718bd0937.cap.webp",
+    "sourceSha256": "b5cfa5b839c5fc197c373a840162c575532439fd60a72780f59b8f8718bd0937",
+    "crop": [
+      432,
+      106,
+      569,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102.webp",
+    "sha256": "c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102",
+    "bytes": 7922,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b835e3dc4184bca4980295407b72a187767722eafd0f02cea703384a120e630a.cap.webp",
+    "sourceSha256": "b835e3dc4184bca4980295407b72a187767722eafd0f02cea703384a120e630a",
+    "crop": [
+      432,
+      95,
+      570,
+      301
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/de4059f3f881a3c0fc29f0da340a9f93e54ede8cc60d56b726a4065d05af7ba6.webp",
+    "sha256": "de4059f3f881a3c0fc29f0da340a9f93e54ede8cc60d56b726a4065d05af7ba6",
+    "bytes": 8226,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6ebaeea048268d6ff287cc8c769bf159dbb9316a064a65872a1243f9663f2b66.cap.webp",
+    "sourceSha256": "6ebaeea048268d6ff287cc8c769bf159dbb9316a064a65872a1243f9663f2b66",
+    "crop": [
+      433,
+      101,
+      568,
+      299
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/de4059f3f881a3c0fc29f0da340a9f93e54ede8cc60d56b726a4065d05af7ba6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/de4059f3f881a3c0fc29f0da340a9f93e54ede8cc60d56b726a4065d05af7ba6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollBlkSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44.webp",
+    "sha256": "225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44",
+    "bytes": 8348,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/e9b7e46b5380895fe54ab6f88ef0049279d1a8c73e1f0b1ea98527722a3bb168.cap.webp",
+    "sourceSha256": "e9b7e46b5380895fe54ab6f88ef0049279d1a8c73e1f0b1ea98527722a3bb168",
+    "crop": [
+      433,
+      104,
+      568,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/225603bdd828e64b3ece3dddf27c7ab8b09923d815e4d16a2477e5ef757bfa44.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollCuMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6.webp",
+    "sha256": "574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6",
+    "bytes": 15758,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3306a41fab8430f57fabe96bb45b13c549069b8b8cf74a6e2d2ef169f674298f.cap.webp",
+    "sourceSha256": "3306a41fab8430f57fabe96bb45b13c549069b8b8cf74a6e2d2ef169f674298f",
+    "crop": [
+      432,
+      100,
+      568,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/574024854885808879bc3c92d6b8bd448ec0b636b8245a65f30288681bdf86b6.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollGlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7.webp",
+    "sha256": "a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7",
+    "bytes": 10896,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/ef3daee10d8770eee49ba7c102fb1e7d02e11ef450a3b1000441a933e6b72e48.cap.webp",
+    "sourceSha256": "ef3daee10d8770eee49ba7c102fb1e7d02e11ef450a3b1000441a933e6b72e48",
+    "crop": [
+      432,
+      100,
+      569,
+      300
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a46fe9c59bced8544d8f1f655dbd3ebaca1c2150f3b581946712a420e7cb2cf7.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollGlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef.webp",
+    "sha256": "54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef",
+    "bytes": 13992,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c7ea36b535ccd574e5e2818a5e207d903766cdeddc5437960ba20f18ac6a4e5d.cap.webp",
+    "sourceSha256": "c7ea36b535ccd574e5e2818a5e207d903766cdeddc5437960ba20f18ac6a4e5d",
+    "crop": [
+      432,
+      97,
+      569,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/54573df3329af0d2b6c7dc80aaf3cce51c017939c4ac1125d6c08eca33156bef.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollPinkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5.webp",
+    "sha256": "070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5",
+    "bytes": 13628,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4d00aefd9044843993202d0bc0d3f82c66f57a4c300bb1b13d023881a95aff11.cap.webp",
+    "sourceSha256": "4d00aefd9044843993202d0bc0d3f82c66f57a4c300bb1b13d023881a95aff11",
+    "crop": [
+      434,
+      108,
+      567,
+      302
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/070df510c07f983f2b1b64b9b0594d0b40a0d733d6580f17d544e1f355464fd5.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd.webp",
+    "sha256": "e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd",
+    "bytes": 7404,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7ee8c4d917db6990797603011a783cd0a91a0ff63da0d934a1307239dfdb8c50.cap.webp",
+    "sourceSha256": "7ee8c4d917db6990797603011a783cd0a91a0ff63da0d934a1307239dfdb8c50",
+    "crop": [
+      434,
+      106,
+      568,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e88d5a99ef19cdbbdccf75bd58e7b9720e1f7be16de723a80bd9e3b1f27188fd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollSlMatt",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b.webp",
+    "sha256": "34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b",
+    "bytes": 6318,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b5cfa5b839c5fc197c373a840162c575532439fd60a72780f59b8f8718bd0937.cap.webp",
+    "sourceSha256": "b5cfa5b839c5fc197c373a840162c575532439fd60a72780f59b8f8718bd0937",
+    "crop": [
+      432,
+      106,
+      569,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/34e385218e07a0dcc2039627f0ce7e20117efc3534ff3aa8b7befd3b13e97c4b.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9RollSlSh",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102.webp",
+    "sha256": "c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102",
+    "bytes": 7922,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b835e3dc4184bca4980295407b72a187767722eafd0f02cea703384a120e630a.cap.webp",
+    "sourceSha256": "b835e3dc4184bca4980295407b72a187767722eafd0f02cea703384a120e630a",
+    "crop": [
+      432,
+      95,
+      570,
+      301
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c246100ba210cca63e14215ef9365ad6cafa429b88fa3c717147d9c517a7d102.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9Sl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/5fed7a7c426d6ddbc759a423110152daf8958d645d3e23c55d22845e8c1464fd.webp",
+    "sha256": "5fed7a7c426d6ddbc759a423110152daf8958d645d3e23c55d22845e8c1464fd",
+    "bytes": 8558,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/65a2f3316ab3ab75f80bf650d5dbe6ad41f9df591c97a4153d7985bc0b11ee3a.cap.webp",
+    "sourceSha256": "65a2f3316ab3ab75f80bf650d5dbe6ad41f9df591c97a4153d7985bc0b11ee3a",
+    "crop": [
+      431,
+      100,
+      570,
+      304
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/5fed7a7c426d6ddbc759a423110152daf8958d645d3e23c55d22845e8c1464fd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/5fed7a7c426d6ddbc759a423110152daf8958d645d3e23c55d22845e8c1464fd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9SlMattSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a4cc448731650267433138c4cb66c076e2eb5e3274c29e3fe161355d667b6b5d.webp",
+    "sha256": "a4cc448731650267433138c4cb66c076e2eb5e3274c29e3fe161355d667b6b5d",
+    "bytes": 5792,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/98cfa27a26d4882983b4ea12cd815dabfc1ca23089a6709e8d074d895fb3781a.cap.webp",
+    "sourceSha256": "98cfa27a26d4882983b4ea12cd815dabfc1ca23089a6709e8d074d895fb3781a",
+    "crop": [
+      432,
+      171,
+      570,
+      308
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a4cc448731650267433138c4cb66c076e2eb5e3274c29e3fe161355d667b6b5d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a4cc448731650267433138c4cb66c076e2eb5e3274c29e3fe161355d667b6b5d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9SlSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/92b0b1721fcaa0dbf5c3b8cda5cd9e6fc8103ebf40fc5f85f6f762311312c90d.webp",
+    "sha256": "92b0b1721fcaa0dbf5c3b8cda5cd9e6fc8103ebf40fc5f85f6f762311312c90d",
+    "bytes": 5948,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c6abf649ceb0d26bdf369ff21298120e201ef9577dbf32c0f3f76eb90dfcf8eb.cap.webp",
+    "sourceSha256": "c6abf649ceb0d26bdf369ff21298120e201ef9577dbf32c0f3f76eb90dfcf8eb",
+    "crop": [
+      433,
+      183,
+      568,
+      317
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/92b0b1721fcaa0dbf5c3b8cda5cd9e6fc8103ebf40fc5f85f6f762311312c90d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/92b0b1721fcaa0dbf5c3b8cda5cd9e6fc8103ebf40fc5f85f6f762311312c90d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBTallCylFrst9WhtSht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1a681f1d61555f287e439a577d113131e36550bfabf4fa1f71d8e26b3e64cf96.webp",
+    "sha256": "1a681f1d61555f287e439a577d113131e36550bfabf4fa1f71d8e26b3e64cf96",
+    "bytes": 4338,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/571f64d1994c5b53ba6cf74fb8f2b9f8aee3c387337dfd836df33b38fe155764.cap.webp",
+    "sourceSha256": "571f64d1994c5b53ba6cf74fb8f2b9f8aee3c387337dfd836df33b38fe155764",
+    "crop": [
+      436,
+      200,
+      563,
+      284
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1a681f1d61555f287e439a577d113131e36550bfabf4fa1f71d8e26b3e64cf96.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1a681f1d61555f287e439a577d113131e36550bfabf4fa1f71d8e26b3e64cf96.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/0b5796464514c80dd804827b021a5003b5084370c5c955d9c2024217bd36d01b.webp",
+    "sha256": "0b5796464514c80dd804827b021a5003b5084370c5c955d9c2024217bd36d01b",
+    "bytes": 12452,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/c7a0ecdb0c353344eaf7eb22565102bf86848fe2bddbad40bd3308632b4c77b3.cap.webp",
+    "sourceSha256": "c7a0ecdb0c353344eaf7eb22565102bf86848fe2bddbad40bd3308632b4c77b3",
+    "crop": [
+      400,
+      144,
+      604,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/0b5796464514c80dd804827b021a5003b5084370c5c955d9c2024217bd36d01b.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/0b5796464514c80dd804827b021a5003b5084370c5c955d9c2024217bd36d01b.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c80cc442a6e2961fce2f4322c1fb5e9cad8808a01abb900b1e2d775b9cb2c539.webp",
+    "sha256": "c80cc442a6e2961fce2f4322c1fb5e9cad8808a01abb900b1e2d775b9cb2c539",
+    "bytes": 25712,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/bf09198d98a1c1611f4f64cc09f29720db0b99de1819814d3c71a42c082592a2.cap.webp",
+    "sourceSha256": "bf09198d98a1c1611f4f64cc09f29720db0b99de1819814d3c71a42c082592a2",
+    "crop": [
+      403,
+      146,
+      597,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c80cc442a6e2961fce2f4322c1fb5e9cad8808a01abb900b1e2d775b9cb2c539.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c80cc442a6e2961fce2f4322c1fb5e9cad8808a01abb900b1e2d775b9cb2c539.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/514e330173efff22dd3b151daa235d19aa179cbf78f6e3da55dc40056320cb13.webp",
+    "sha256": "514e330173efff22dd3b151daa235d19aa179cbf78f6e3da55dc40056320cb13",
+    "bytes": 18602,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/808bd2636e1fcead5e2f01bf07ecd5682f0998db0a44ded68475236ad512f4ce.cap.webp",
+    "sourceSha256": "808bd2636e1fcead5e2f01bf07ecd5682f0998db0a44ded68475236ad512f4ce",
+    "crop": [
+      403,
+      147,
+      600,
+      425
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/514e330173efff22dd3b151daa235d19aa179cbf78f6e3da55dc40056320cb13.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/514e330173efff22dd3b151daa235d19aa179cbf78f6e3da55dc40056320cb13.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e4ddc808028b09ae7ba384108d8ad7f1fe4986289f11dca680c9219892f9d004.webp",
+    "sha256": "e4ddc808028b09ae7ba384108d8ad7f1fe4986289f11dca680c9219892f9d004",
+    "bytes": 9918,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/ab9952463c3e88219213bc273d7c447010a38c9cdd1fb46b829f0d842b781a30.cap.webp",
+    "sourceSha256": "ab9952463c3e88219213bc273d7c447010a38c9cdd1fb46b829f0d842b781a30",
+    "crop": [
+      404,
+      149,
+      597,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e4ddc808028b09ae7ba384108d8ad7f1fe4986289f11dca680c9219892f9d004.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e4ddc808028b09ae7ba384108d8ad7f1fe4986289f11dca680c9219892f9d004.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/18683a5e8bf90c14f3445e8facc595d297dd118b93cb0ccd4dc55a995d407b5d.webp",
+    "sha256": "18683a5e8bf90c14f3445e8facc595d297dd118b93cb0ccd4dc55a995d407b5d",
+    "bytes": 22340,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/67843f8231ce9c97c2752ab663b7ff79878fda0151f622c2f67621ed89c8b3af.cap.webp",
+    "sourceSha256": "67843f8231ce9c97c2752ab663b7ff79878fda0151f622c2f67621ed89c8b3af",
+    "crop": [
+      402,
+      146,
+      602,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/18683a5e8bf90c14f3445e8facc595d297dd118b93cb0ccd4dc55a995d407b5d.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/18683a5e8bf90c14f3445e8facc595d297dd118b93cb0ccd4dc55a995d407b5d.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/c1eb60b87eeeec29814c2c716bb23fa440b8d03d35235d49dc5d5886563d7a6a.webp",
+    "sha256": "c1eb60b87eeeec29814c2c716bb23fa440b8d03d35235d49dc5d5886563d7a6a",
+    "bytes": 8356,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7122884003f911df369333f7ef0fcb6d25ef0bb11f676611936ff49fe7735924.cap.webp",
+    "sourceSha256": "7122884003f911df369333f7ef0fcb6d25ef0bb11f676611936ff49fe7735924",
+    "crop": [
+      403,
+      146,
+      601,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/c1eb60b87eeeec29814c2c716bb23fa440b8d03d35235d49dc5d5886563d7a6a.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/c1eb60b87eeeec29814c2c716bb23fa440b8d03d35235d49dc5d5886563d7a6a.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc.webp",
+    "sha256": "eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc",
+    "bytes": 21852,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/307c8c3bb2af59defb2abf20bf919ed8cd7ccbd5378f13e12971e5f41718a04e.cap.webp",
+    "sourceSha256": "307c8c3bb2af59defb2abf20bf919ed8cd7ccbd5378f13e12971e5f41718a04e",
+    "crop": [
+      403,
+      142,
+      600,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/eb57750d333792ed870506715599e6eccf1cf313c568c11e11579fdb94a22dcc.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8.webp",
+    "sha256": "e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8",
+    "bytes": 11734,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8b97316e01206a2a9256aaea111715414255a8c7343c93a50378eaf09454b2c7.cap.webp",
+    "sourceSha256": "8b97316e01206a2a9256aaea111715414255a8c7343c93a50378eaf09454b2c7",
+    "crop": [
+      403,
+      147,
+      598,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e016443a60754dead5a643e42eebc7d0cdfc8e5fb414c0a62b5284710ab3a1c8.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/5e8dbad432d9a80f0c4687b190bbfc78bd7907ffbacad3aa5a475bde7f5e4a26.webp",
+    "sha256": "5e8dbad432d9a80f0c4687b190bbfc78bd7907ffbacad3aa5a475bde7f5e4a26",
+    "bytes": 10600,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5b1fa4068fe885bae56c7963f77ca2266d825851b88caca8c73caab278cad891.cap.webp",
+    "sourceSha256": "5b1fa4068fe885bae56c7963f77ca2266d825851b88caca8c73caab278cad891",
+    "crop": [
+      400,
+      142,
+      601,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/5e8dbad432d9a80f0c4687b190bbfc78bd7907ffbacad3aa5a475bde7f5e4a26.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/5e8dbad432d9a80f0c4687b190bbfc78bd7907ffbacad3aa5a475bde7f5e4a26.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9MtlRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/671447d542af8b1ab89e03f6ded8f3b1c2cb263b4f31de68d7a69f75e2a5587e.webp",
+    "sha256": "671447d542af8b1ab89e03f6ded8f3b1c2cb263b4f31de68d7a69f75e2a5587e",
+    "bytes": 5766,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6ef32fd59f9b37c7ff447bad270fc22d0751bcb4f1b69094a417e7ad6bb3e277.cap.webp",
+    "sourceSha256": "6ef32fd59f9b37c7ff447bad270fc22d0751bcb4f1b69094a417e7ad6bb3e277",
+    "crop": [
+      404,
+      135,
+      599,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/671447d542af8b1ab89e03f6ded8f3b1c2cb263b4f31de68d7a69f75e2a5587e.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/671447d542af8b1ab89e03f6ded8f3b1c2cb263b4f31de68d7a69f75e2a5587e.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/50ca24d030510702f12178533acb59d50908411ae7b46b750f9851213163f9c8.webp",
+    "sha256": "50ca24d030510702f12178533acb59d50908411ae7b46b750f9851213163f9c8",
+    "bytes": 11984,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/0c5d45a7d5ad5f1d19198139400ea3b6e14cc893c54affe4d81165109f95fb13.cap.webp",
+    "sourceSha256": "0c5d45a7d5ad5f1d19198139400ea3b6e14cc893c54affe4d81165109f95fb13",
+    "crop": [
+      400,
+      146,
+      606,
+      431
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/50ca24d030510702f12178533acb59d50908411ae7b46b750f9851213163f9c8.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/50ca24d030510702f12178533acb59d50908411ae7b46b750f9851213163f9c8.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1959ccc377f67906f9d0d013d26773054f79325abe2660882f43f2c33c0292dd.webp",
+    "sha256": "1959ccc377f67906f9d0d013d26773054f79325abe2660882f43f2c33c0292dd",
+    "bytes": 25566,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/391877296518758b9a0add3812a3b9cf0669f1f6e54fc605f7a0532c58dc9a77.cap.webp",
+    "sourceSha256": "391877296518758b9a0add3812a3b9cf0669f1f6e54fc605f7a0532c58dc9a77",
+    "crop": [
+      404,
+      146,
+      600,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1959ccc377f67906f9d0d013d26773054f79325abe2660882f43f2c33c0292dd.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1959ccc377f67906f9d0d013d26773054f79325abe2660882f43f2c33c0292dd.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287.webp",
+    "sha256": "aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287",
+    "bytes": 18310,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5e326dc9c6a81f510a194238fc49efdc849a4615cd3aed07f44c32789c12d885.cap.webp",
+    "sourceSha256": "5e326dc9c6a81f510a194238fc49efdc849a4615cd3aed07f44c32789c12d885",
+    "crop": [
+      403,
+      144,
+      601,
+      425
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/aa63fe2605c746b3f38f1ad43668083d1ab3c37ee4f3369c0625dff0467e5287.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/30116d2267a1cd716cb26a294550439f5643edc006188c14282af6aac27b878c.webp",
+    "sha256": "30116d2267a1cd716cb26a294550439f5643edc006188c14282af6aac27b878c",
+    "bytes": 10140,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/55bc1eb564f72bf197b2f658b5db12dc6e5d8873d9f08a0674af882651f0f790.cap.webp",
+    "sourceSha256": "55bc1eb564f72bf197b2f658b5db12dc6e5d8873d9f08a0674af882651f0f790",
+    "crop": [
+      404,
+      151,
+      597,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/30116d2267a1cd716cb26a294550439f5643edc006188c14282af6aac27b878c.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/30116d2267a1cd716cb26a294550439f5643edc006188c14282af6aac27b878c.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/21084c35831316f489c651c130ae2f49e48c5e529c2ac17633b135dbef199be2.webp",
+    "sha256": "21084c35831316f489c651c130ae2f49e48c5e529c2ac17633b135dbef199be2",
+    "bytes": 21826,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/f7366c0b328bb544ac5f2cfc89463bc3d8349355a77df67602f25efe1b5b6c55.cap.webp",
+    "sourceSha256": "f7366c0b328bb544ac5f2cfc89463bc3d8349355a77df67602f25efe1b5b6c55",
+    "crop": [
+      401,
+      141,
+      600,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/21084c35831316f489c651c130ae2f49e48c5e529c2ac17633b135dbef199be2.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/21084c35831316f489c651c130ae2f49e48c5e529c2ac17633b135dbef199be2.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87.webp",
+    "sha256": "a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87",
+    "bytes": 8340,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/2f7f239b7a858ae3a236abeeb086098e85c54278abfd8e6bc722a301ca738b77.cap.webp",
+    "sourceSha256": "2f7f239b7a858ae3a236abeeb086098e85c54278abfd8e6bc722a301ca738b77",
+    "crop": [
+      403,
+      149,
+      601,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/a18dbee73f72ac16cef3cade1ed628c009654f3ad4093414a01c7f7ceea66e87.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668.webp",
+    "sha256": "63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668",
+    "bytes": 21462,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/1e4dd8ada0f856eecd085e373fab6d7b61081c0e203508a4f4e63db501c50454.cap.webp",
+    "sourceSha256": "1e4dd8ada0f856eecd085e373fab6d7b61081c0e203508a4f4e63db501c50454",
+    "crop": [
+      403,
+      144,
+      600,
+      428
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/63c04e4de2819733d8ccf5d05515b24b879ba2d365b706cfcb8f0f60cff84668.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/5cf54331dd5bb61540124461194070bc76597fcf82cc72bf85870414c35751b0.webp",
+    "sha256": "5cf54331dd5bb61540124461194070bc76597fcf82cc72bf85870414c35751b0",
+    "bytes": 12574,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/b4e958a55cde96cbaeea93b684a8bfb9deb68f24c13a69c49a25f3ec3a1957d3.cap.webp",
+    "sourceSha256": "b4e958a55cde96cbaeea93b684a8bfb9deb68f24c13a69c49a25f3ec3a1957d3",
+    "crop": [
+      403,
+      144,
+      597,
+      426
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/5cf54331dd5bb61540124461194070bc76597fcf82cc72bf85870414c35751b0.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/5cf54331dd5bb61540124461194070bc76597fcf82cc72bf85870414c35751b0.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/1b411283e1e68588e7dc5de71eeb96fb14855e9787678e1c26a1f9b4a04a2997.webp",
+    "sha256": "1b411283e1e68588e7dc5de71eeb96fb14855e9787678e1c26a1f9b4a04a2997",
+    "bytes": 10396,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/92e82e1a1200db24310b09f4e2868c3105f6745308fd19474f9aa40df0451c6e.cap.webp",
+    "sourceSha256": "92e82e1a1200db24310b09f4e2868c3105f6745308fd19474f9aa40df0451c6e",
+    "crop": [
+      400,
+      142,
+      601,
+      427
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/1b411283e1e68588e7dc5de71eeb96fb14855e9787678e1c26a1f9b4a04a2997.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/1b411283e1e68588e7dc5de71eeb96fb14855e9787678e1c26a1f9b4a04a2997.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylFrst9RollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/8bfb68270f6472191b1bf01771d79e24da3efb4ae638d879462589edb29e12c1.webp",
+    "sha256": "8bfb68270f6472191b1bf01771d79e24da3efb4ae638d879462589edb29e12c1",
+    "bytes": 5760,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/9485c62c9ee0de5f1789897c30cdf04a685cc19e0f05db861faa983c38855a33.cap.webp",
+    "sourceSha256": "9485c62c9ee0de5f1789897c30cdf04a685cc19e0f05db861faa983c38855a33",
+    "crop": [
+      399,
+      133,
+      605,
+      429
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/8bfb68270f6472191b1bf01771d79e24da3efb4ae638d879462589edb29e12c1.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/8bfb68270f6472191b1bf01771d79e24da3efb4ae638d879462589edb29e12c1.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e311dd4cfc512e9e056d69fd6d808ba899126dd288debaf438dc18dad95a6101.webp",
+    "sha256": "e311dd4cfc512e9e056d69fd6d808ba899126dd288debaf438dc18dad95a6101",
+    "bytes": 12582,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/3c3b884cd9af2e00141098844c87199ebfb3e06f4fd100920d502e37cf8ea3dd.cap.webp",
+    "sourceSha256": "3c3b884cd9af2e00141098844c87199ebfb3e06f4fd100920d502e37cf8ea3dd",
+    "crop": [
+      401,
+      154,
+      603,
+      435
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e311dd4cfc512e9e056d69fd6d808ba899126dd288debaf438dc18dad95a6101.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e311dd4cfc512e9e056d69fd6d808ba899126dd288debaf438dc18dad95a6101.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollMattCu",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d530f00e8985ea6ba7203e0e42c8b33914494d50f91d6327033fb8a374695860.webp",
+    "sha256": "d530f00e8985ea6ba7203e0e42c8b33914494d50f91d6327033fb8a374695860",
+    "bytes": 25008,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6cc925966a0e42a81f3b114bf3348a4a42df0eceeb98aa99177eae878f9c33f1.cap.webp",
+    "sourceSha256": "6cc925966a0e42a81f3b114bf3348a4a42df0eceeb98aa99177eae878f9c33f1",
+    "crop": [
+      404,
+      157,
+      596,
+      434
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d530f00e8985ea6ba7203e0e42c8b33914494d50f91d6327033fb8a374695860.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d530f00e8985ea6ba7203e0e42c8b33914494d50f91d6327033fb8a374695860.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollMattGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/11e3b0d5627403780d46d457dea95e0696a381a083dd803aef92b233d70f5180.webp",
+    "sha256": "11e3b0d5627403780d46d457dea95e0696a381a083dd803aef92b233d70f5180",
+    "bytes": 18110,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/a79eaf9e6e85efe6d3e5bb5396ace95e97b3a20440d62734de669630fc4f5011.cap.webp",
+    "sourceSha256": "a79eaf9e6e85efe6d3e5bb5396ace95e97b3a20440d62734de669630fc4f5011",
+    "crop": [
+      405,
+      158,
+      599,
+      435
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/11e3b0d5627403780d46d457dea95e0696a381a083dd803aef92b233d70f5180.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/11e3b0d5627403780d46d457dea95e0696a381a083dd803aef92b233d70f5180.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollMattSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f4a9557bb2db326cff8604485a4cdd9da993c44d4fb6eb02f028189e1d8e7a13.webp",
+    "sha256": "f4a9557bb2db326cff8604485a4cdd9da993c44d4fb6eb02f028189e1d8e7a13",
+    "bytes": 9898,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8695126c37cec69cd3a8f8f10053844ecf0fcc1308951528d9bdb0e08db5cff9.cap.webp",
+    "sourceSha256": "8695126c37cec69cd3a8f8f10053844ecf0fcc1308951528d9bdb0e08db5cff9",
+    "crop": [
+      405,
+      161,
+      596,
+      435
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f4a9557bb2db326cff8604485a4cdd9da993c44d4fb6eb02f028189e1d8e7a13.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f4a9557bb2db326cff8604485a4cdd9da993c44d4fb6eb02f028189e1d8e7a13.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/9e002bd518879f5b8d7c4cd6ed209dfe15f8b9be7a9bf7ef9fb6b2679291dd56.webp",
+    "sha256": "9e002bd518879f5b8d7c4cd6ed209dfe15f8b9be7a9bf7ef9fb6b2679291dd56",
+    "bytes": 22296,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/4fd1c96f16e59ada39192a44166acb5d886c87da2d27e78ea3241019fa3861ce.cap.webp",
+    "sourceSha256": "4fd1c96f16e59ada39192a44166acb5d886c87da2d27e78ea3241019fa3861ce",
+    "crop": [
+      403,
+      156,
+      601,
+      439
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/9e002bd518879f5b8d7c4cd6ed209dfe15f8b9be7a9bf7ef9fb6b2679291dd56.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/9e002bd518879f5b8d7c4cd6ed209dfe15f8b9be7a9bf7ef9fb6b2679291dd56.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollShBlk",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/3821cba95ad3a67641c9bb0c0d8c63db0b5edf9e8a8888a43e473ff199d5c22c.webp",
+    "sha256": "3821cba95ad3a67641c9bb0c0d8c63db0b5edf9e8a8888a43e473ff199d5c22c",
+    "bytes": 8090,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/7622a38345e07e77251bf6fd1f217ca9b8b3520dd8669b9da6d4f214169b6b6a.cap.webp",
+    "sourceSha256": "7622a38345e07e77251bf6fd1f217ca9b8b3520dd8669b9da6d4f214169b6b6a",
+    "crop": [
+      404,
+      155,
+      600,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/3821cba95ad3a67641c9bb0c0d8c63db0b5edf9e8a8888a43e473ff199d5c22c.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/3821cba95ad3a67641c9bb0c0d8c63db0b5edf9e8a8888a43e473ff199d5c22c.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollShnGl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/f076d346f76b280f95bfb85d2174516c8c76629de3485a6d06d6e2ea30133985.webp",
+    "sha256": "f076d346f76b280f95bfb85d2174516c8c76629de3485a6d06d6e2ea30133985",
+    "bytes": 20868,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/657e6c53ea20d321193f504aef962f1a1f9f6b237938461d14eef0d8cd61025b.cap.webp",
+    "sourceSha256": "657e6c53ea20d321193f504aef962f1a1f9f6b237938461d14eef0d8cd61025b",
+    "crop": [
+      404,
+      155,
+      599,
+      436
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/f076d346f76b280f95bfb85d2174516c8c76629de3485a6d06d6e2ea30133985.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/f076d346f76b280f95bfb85d2174516c8c76629de3485a6d06d6e2ea30133985.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollShnSl",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/7a2382d61e6479ad3b69d086755c540729d030c6dae0c819eb642ee15f786b59.webp",
+    "sha256": "7a2382d61e6479ad3b69d086755c540729d030c6dae0c819eb642ee15f786b59",
+    "bytes": 11860,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/5ddc72d66b9427ba5a6f100bc207e18c9229e8f97fdfcc3c35140f1b32fe7723.cap.webp",
+    "sourceSha256": "5ddc72d66b9427ba5a6f100bc207e18c9229e8f97fdfcc3c35140f1b32fe7723",
+    "crop": [
+      404,
+      157,
+      598,
+      434
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/7a2382d61e6479ad3b69d086755c540729d030c6dae0c819eb642ee15f786b59.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/7a2382d61e6479ad3b69d086755c540729d030c6dae0c819eb642ee15f786b59.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/e4e7d0f7d11d0c355fab9440acd6e5a556fcfe00224f35188550bdb15b9bde13.webp",
+    "sha256": "e4e7d0f7d11d0c355fab9440acd6e5a556fcfe00224f35188550bdb15b9bde13",
+    "bytes": 10996,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/8e60575706ae9b4b10b228b9fa4f8c040566516ae3f9b8ea9c9559dac794bc86.cap.webp",
+    "sourceSha256": "8e60575706ae9b4b10b228b9fa4f8c040566516ae3f9b8ea9c9559dac794bc86",
+    "crop": [
+      401,
+      152,
+      600,
+      434
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/e4e7d0f7d11d0c355fab9440acd6e5a556fcfe00224f35188550bdb15b9bde13.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/e4e7d0f7d11d0c355fab9440acd6e5a556fcfe00224f35188550bdb15b9bde13.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9MtlRollWht",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/17a12d5e28001946318b08420dfd9e30d5d42058e0e9e21476ff43e1a30982d9.webp",
+    "sha256": "17a12d5e28001946318b08420dfd9e30d5d42058e0e9e21476ff43e1a30982d9",
+    "bytes": 5974,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/321e96abd527aed8ebe47acca64a60b7afa4a16710e01e0287dc5acbf77507a0.cap.webp",
+    "sourceSha256": "321e96abd527aed8ebe47acca64a60b7afa4a16710e01e0287dc5acbf77507a0",
+    "crop": [
+      398,
+      146,
+      604,
+      432
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/17a12d5e28001946318b08420dfd9e30d5d42058e0e9e21476ff43e1a30982d9.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/17a12d5e28001946318b08420dfd9e30d5d42058e0e9e21476ff43e1a30982d9.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9RollBlkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/69be9cb3c98499a5ffe68384a73bd4bc6e9325c74c138f40cf3ba46a66b830c4.webp",
+    "sha256": "69be9cb3c98499a5ffe68384a73bd4bc6e9325c74c138f40cf3ba46a66b830c4",
+    "bytes": 11908,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/33ba232f515cd79fa8d898b33ff8128193f97066ef1701856d61f62504b1f2a8.cap.webp",
+    "sourceSha256": "33ba232f515cd79fa8d898b33ff8128193f97066ef1701856d61f62504b1f2a8",
+    "crop": [
+      401,
+      156,
+      604,
+      438
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/69be9cb3c98499a5ffe68384a73bd4bc6e9325c74c138f40cf3ba46a66b830c4.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/69be9cb3c98499a5ffe68384a73bd4bc6e9325c74c138f40cf3ba46a66b830c4.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9RollPnkDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/d13a4a3ed877880a082532d3c80cb2202dcb1d4a8f409b613c51b7333ebab2e5.webp",
+    "sha256": "d13a4a3ed877880a082532d3c80cb2202dcb1d4a8f409b613c51b7333ebab2e5",
+    "bytes": 21688,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/35abed24954d0664a432bb33e32b22616df598ec4c9677fd86b62690a05cf374.cap.webp",
+    "sourceSha256": "35abed24954d0664a432bb33e32b22616df598ec4c9677fd86b62690a05cf374",
+    "crop": [
+      402,
+      151,
+      599,
+      433
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/d13a4a3ed877880a082532d3c80cb2202dcb1d4a8f409b613c51b7333ebab2e5.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/d13a4a3ed877880a082532d3c80cb2202dcb1d4a8f409b613c51b7333ebab2e5.webp",
+    "reviewed": true
+  },
+  {
+    "sku": "GBCylSwrl9RollSlDot",
+    "file": "dist/paper-doll/cylinder-release/cap-thumbnails/0ebd20c16ed45a2cba9e9625dd119ce0b3d145e952227a559fd7472320aa0779.webp",
+    "sha256": "0ebd20c16ed45a2cba9e9625dd119ce0b3d145e952227a559fd7472320aa0779",
+    "bytes": 10536,
+    "width": 256,
+    "height": 256,
+    "sourcePart": "dist/paper-doll/cylinder-release/kits/parts/6c733cb89470a258a02788f26b50b8a51db3427a71678d4fa1b8b75bf2611a3f.cap.webp",
+    "sourceSha256": "6c733cb89470a258a02788f26b50b8a51db3427a71678d4fa1b8b75bf2611a3f",
+    "crop": [
+      401,
+      152,
+      600,
+      434
+    ],
+    "storeKey": "paper-doll/reviewed-cap-thumbs/0ebd20c16ed45a2cba9e9625dd119ce0b3d145e952227a559fd7472320aa0779.webp",
+    "url": "https://yzy7l20k4yt6znzz.public.blob.vercel-storage.com/paper-doll/reviewed-cap-thumbs/0ebd20c16ed45a2cba9e9625dd119ce0b3d145e952227a559fd7472320aa0779.webp",
+    "reviewed": true
+  }
+]

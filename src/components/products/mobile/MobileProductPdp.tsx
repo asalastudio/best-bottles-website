@@ -99,6 +99,7 @@ export type MobileProductPdpProps = {
     capOptions: string[];
     activeCapOption: string | null;
     capOptionPhotoKeys: Record<string, string[]>;
+    capOptionThumbnails?: Record<string, string>;
     resolveCapFinish: (variant: ProductVariant) => { label: string; swatchName: string };
     variantSku: (variant: ProductVariant) => string | null;
     onCommitVariant: (selection: { rollerVariant?: "metal" | "plastic"; capOption?: string; applicator?: string }) => void;
@@ -127,7 +128,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const {
         slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
-        rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, resolveCapFinish, variantSku,
+        rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
         onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, volumePricing,
     } = props;
 
@@ -267,20 +268,15 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
     const capDimension = useMemo<MobileConfigDimension | null>(() => {
         if (capOptions.length === 0) return null;
-        const options: MobileConfigOption[] = capOptions.map((name) => {
-            const variant = resolveGuidedVariant(variants, { applicator: activeApplicator, capOption: name }, deps);
-            const plate = plateFor(platesBySku, variant);
-            return {
-                id: name,
-                label: name,
-                // A newly reconciled finish may have no standalone cap thumbnail.
-                // Its exact assembled photograph is still an honest visual choice.
-                thumbUrl: resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys) ?? plate?.thumb ?? variant?.imageUrl ?? null,
-                swatchStyle: getMaterialSwatchStyle(name, {}) as CSSProperties,
-            };
-        });
+        const options: MobileConfigOption[] = capOptions.map((name) => ({
+            id: name,
+            label: name,
+            // The picker represents the cap alone; never substitute a bottle plate.
+            thumbUrl: capOptionThumbnails?.[name] ?? resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys) ?? null,
+            swatchStyle: getMaterialSwatchStyle(name, {}) as CSSProperties,
+        }));
         return { options, selectedId: activeCapOption };
-    }, [capOptions, thumbBySwatch, capOptionPhotoKeys, activeCapOption, variants, activeApplicator, deps, platesBySku]);
+    }, [capOptions, thumbBySwatch, capOptionPhotoKeys, capOptionThumbnails, activeCapOption]);
 
     const { rows, facts } = useMemo(
         () => buildMobileConfigRows({ closureBase, glass: glassDimension, roller: rollerDimension, capFinish: capDimension }),

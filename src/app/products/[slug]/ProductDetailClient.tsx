@@ -38,6 +38,7 @@ import { GLASS_PRESETS } from "@/lib/materials/glassPresets";
 import { analytics } from "@/lib/analytics";
 import { chooseCanonicalProductDescription } from "@/lib/canonicalProduct";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import cylinderCapThumbnails from "@/lib/products/cylinder-cap-thumbnails.generated.json";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
 import { filterVariantsForProductGroup, isLegacyBestBottlesImageUrl } from "@/lib/productVariantIntegrity";
@@ -1272,6 +1273,13 @@ export default function ProductDetailClient({
         ),
         [capColorOptions, variants, activeApplicator],
     );
+    const capOptionThumbnails = useMemo(() => {
+        const exactPhotos: Record<string, string> = cylinderCapThumbnails;
+        return Object.fromEntries(variantsForApplicator.flatMap((variant) => {
+            const photo = variant.websiteSku ? exactPhotos[variant.websiteSku] : undefined;
+            return photo ? [[resolveVariantCapFinish(variant).swatchName, photo]] : [];
+        }));
+    }, [variantsForApplicator]);
 
     const primaryCapColor = primaryVariant && (primaryVariant.applicator ?? null) === (activeApplicator ?? null)
         ? resolveVariantCapFinish(primaryVariant).swatchName
@@ -2072,6 +2080,7 @@ export default function ProductDetailClient({
                             capOptions={capColorOptions}
                             activeCapOption={activeCapColor}
                             capOptionPhotoKeys={capOptionPhotoKeys}
+                            capOptionThumbnails={capOptionThumbnails}
                             resolveCapFinish={resolveVariantCapFinish}
                             variantSku={canonicalSku}
                             onCommitVariant={handleGuidedVariantSelection}
@@ -2122,6 +2131,7 @@ export default function ProductDetailClient({
                                 onProductUrlChange={handleGuidedProductUrlChange}
                                 capOptions={capColorOptions}
                                 capOptionPhotoKeys={capOptionPhotoKeys}
+                                capOptionThumbnails={capOptionThumbnails}
                                 activeCapOption={activeCapColor}
                                 onCapOptionChange={(name) => {
                                     setSelectedVariantId(null);
