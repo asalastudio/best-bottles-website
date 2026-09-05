@@ -31,6 +31,7 @@ import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
 import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import { explodedKitFrame } from "@/lib/products/kit-frame";
 
 import { useGLTF } from "@react-three/drei";
 import FocusedPdpLayout from "./FocusedPdpLayout";
@@ -271,6 +272,7 @@ export default function ConfiguratorPdp({
   const releasedKitAvailable = Boolean(kit?.parts?.length);
   const kitReady = Boolean(kit?.sku && shownKit?.sku === kit.sku && shownKit.parts.length);
   const kitParts = kitReady ? shownKit!.parts : null;
+  const explodedFrame = explodedKitFrame(kitParts ?? []);
   const markPlateBroken = (url: string) => {
     console.error("[plates] image failed to load", url);
     setBrokenPlates((prev) => (prev.has(url) ? prev : new Set(prev).add(url)));
@@ -442,6 +444,8 @@ export default function ConfiguratorPdp({
           {/* the kit, stacked in z-order. Every part was written on the plate's
               own canvas, so they need no positioning here -- they line up by
               construction, which is what keeps the bottle still. */}
+          <div className="absolute inset-0 transition-transform duration-500 motion-reduce:transition-none"
+               style={{ transformOrigin: "0 0", transform: exploded ? `translate(${explodedFrame.x}%, ${explodedFrame.y}%) scale(${explodedFrame.scale})` : "none" }}>
           {kitParts?.map((part) => (
             // eslint-disable-next-line @next/next/no-img-element
             <img key={part.slot} src={part.image.url}
@@ -459,6 +463,7 @@ export default function ConfiguratorPdp({
                             duration-500 ease-[cubic-bezier(.4,0,.2,1)]
                             motion-reduce:transition-none motion-reduce:duration-0" />
           ))}
+          </div>
         </div>
       ) : showPhoto ? (
         // eslint-disable-next-line @next/next/no-img-element

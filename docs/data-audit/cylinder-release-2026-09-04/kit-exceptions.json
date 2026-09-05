@@ -1,0 +1,114 @@
+[
+  {
+    "sku": "PbClear4ozFlpWh",
+    "websiteSku": "PbClear4ozFlpWh",
+    "publishable": false,
+    "status": "notApplicable",
+    "reason": "Standalone plastic flip-top product"
+  },
+  {
+    "sku": "PbClear8ozFlpWh",
+    "websiteSku": "PbClear8ozFlpWh",
+    "publishable": false,
+    "status": "notApplicable",
+    "reason": "Standalone plastic flip-top product"
+  },
+  {
+    "sku": "GBSpry3mlClBlk",
+    "websiteSku": "GBSpry3mlClBlk",
+    "publishable": false,
+    "status": "held",
+    "reason": "Master merged preview and physical layers disagree; retain verified plate."
+  },
+  {
+    "sku": "PbNat16ozFlpWh",
+    "websiteSku": "PbNat16ozFlpWh",
+    "publishable": false,
+    "status": "notApplicable",
+    "reason": "Standalone plastic flip-top product"
+  },
+  {
+    "sku": "GBCyl9RollBlkDot",
+    "websiteSku": "GBCyl9RollBlkDot",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCyl9RollPnkDot",
+    "websiteSku": "GBCyl9RollPnkDot",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCyl9SpryShSl",
+    "websiteSku": "GBCyl9SpryShSl",
+    "publishable": false,
+    "status": "held",
+    "reason": "Photoshop adjustment layers do not reconstruct reliably; retain verified plate."
+  },
+  {
+    "sku": "GBCylBlu9RollPnkDot",
+    "websiteSku": "GBCylBlu9RollPnkDot",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylBlu9RollSlDot",
+    "websiteSku": "GBCylBlu9RollSlDot",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollMattCu",
+    "websiteSku": "GBCylSwrl9RollMattCu",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollMattGl",
+    "websiteSku": "GBCylSwrl9RollMattGl",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollMattSl",
+    "websiteSku": "GBCylSwrl9RollMattSl",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollShBlk",
+    "websiteSku": "GBCylSwrl9RollShBlk",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollShnGl",
+    "websiteSku": "GBCylSwrl9RollShnGl",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollShnSl",
+    "websiteSku": "GBCylSwrl9RollShnSl",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  },
+  {
+    "sku": "GBCylSwrl9RollWht",
+    "websiteSku": "GBCylSwrl9RollWht",
+    "publishable": false,
+    "status": "held",
+    "reason": "Plastic roller source includes visible white neck retouch; retain correct assembled plate."
+  }
+]

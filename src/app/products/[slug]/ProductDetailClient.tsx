@@ -546,6 +546,7 @@ export interface ProductVariant {
     capColor: string | null;
     trimColor: string | null;
     capHeight?: string | null;
+    componentProfile?: string | null;
     ballMaterial?: string | null;
     assemblyType?: string | null;
     componentGroup?: string | null;
@@ -3023,7 +3024,7 @@ export default function ProductDetailClient({
                             </div>
                             <div className="py-10 max-w-2xl">
                                 <dl>
-                                    <SpecRow label="SKU" value={canonicalSku(selectedVariant)} />
+                                    <SpecRow label="SKU" value={selectedVariant.websiteSku || canonicalSku(selectedVariant)} />
                                     <SpecRow label="Height (with cap)" value={selectedVariant.heightWithCap} />
                                     <SpecRow label="Height (without cap)" value={selectedVariant.heightWithoutCap} />
                                     <SpecRow label="Diameter" value={selectedVariant.diameter} />
@@ -3035,7 +3036,7 @@ export default function ProductDetailClient({
                                     <SpecRow label="Applicator" value={selectedVariant.applicator} />
                                     <SpecRow label="Ball Material" value={selectedVariant.ballMaterial} />
                                     <SpecRow label="Cap Style" value={selectedVariant.capStyle} />
-                                    <SpecRow label="Cap Height" value={selectedVariant.capHeight} />
+                                    <SpecRow label="Cap Profile" value={selectedVariant.componentProfile || selectedVariant.capHeight} />
                                     <SpecRow label="Trim Finish" value={selectedVariant.trimColor} />
                                     <SpecRow label="Cap Color" value={selectedVariant.capColor} />
                                     <SpecRow label="Shape" value={selectedVariant.shape} />
