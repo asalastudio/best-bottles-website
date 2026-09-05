@@ -9,7 +9,7 @@ const allowedProductFields = new Set([
     "heightWithCap", "heightWithoutCap", "diameter", "measurementSource", "itemName",
     "itemDescription", "imageUrl", "productUrl", "dataGrade", "bottleCollection",
     "fitmentStatus", "assemblyType", "productGroupId", "webPrice1pc", "webPrice12pc",
-    "priceTiers", "priceTiersSyncedAt", "shopifySellableReason",
+    "priceTiers", "priceTiersSyncedAt", "shopifySellableReason", "stockStatus",
 ]);
 const allowedGroupFields = new Set([
     "slug", "displayName", "category", "capacity", "capacityMl", "color", "neckThreadSize",

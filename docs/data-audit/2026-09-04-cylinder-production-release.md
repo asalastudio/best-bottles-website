@@ -17,6 +17,7 @@ These are photographic layers, not 3D geometry. Some closures remain whole photo
 - Both environments: 48 further cap-label corrections backed by exact legacy descriptions and reviewed cap photographs. Bottle-color values such as Clear and Frosted no longer masquerade as cap colors on these records. Where descriptions omit dots or ribbing, the exact photo evidence is recorded.
 - The 20 clear/cobalt 5 mL capped SKUs retain their existing production identities and now use the same ten approved choices, with Short/Regular, Shiny/Matte, and Ribbed distinctions preserved. The clear capped family is grouped as 5 mL; necessary old routes redirect.
 - Corrected the three confirmed image references, the plastic flip-top classification and 114 mL legacy measurement, exact-SKU measurement discrepancies, and the verified red 25 mL tassel description conflict. Measurements were applied only to the exact SKU supported by the recorded source.
+- Both environments: 38 verified 25 mL assemblies are marked “Available to order” after matching public Shopify variant IDs, website/Grace identities, and prices. No inventory quantity is inferred. This resolves the empty-status quote-only gate.
 - Created five Shopify products containing 38 verified 25 mL variants (37 newly added assemblies and the previously unlinked black spray). Published to the Online Store using the existing authorized `write_products` scope. All 38 public product variants returned available with the verified unit prices before linking them to Convex.
 
 The committed JSON plans preserve before-values, proposed values, source evidence, and insertion payloads. Existing record IDs and valid Shopify links are guarded against reassignment. No original master files or legacy assets were modified.
@@ -34,7 +35,8 @@ The standard assembled parity threshold remains unchanged. A separately recorded
 - Production frontend compiled and built successfully with webpack. Turbopack's local worker was blocked by the sandbox; this was a build-environment issue.
 - Full unit suite: **934 passed, seven skipped** (134 passing test files, two skipped).
 - Repository lint excluding ignored local `tmp/` review scripts: **zero errors**; 49 existing warnings. Unfiltered local lint sees the earlier temporary browser scripts; they are not shipped.
-- Local mobile production-build page returned 200 with no browser runtime errors. Detailed post-publication selector, kit, cart, and source checks are recorded in the release verification artifacts.
+- Local mobile production-build pages returned 200 with no browser runtime errors. Metal-roller cap-off, 25 mL sprayer layers, held-kit photo fallbacks, standalone flip-top behavior, and desktop exploded rendering passed. Detailed post-publication selector, kit, cart, and source checks are recorded in the release verification artifacts.
+- All 436 exact SKU routes passed in each environment; all existing IDs and valid Shopify links were preserved. The publisher verified 1,416 plate assets and 1,105 kit assets.
 - The publisher checks the delivered public bytes against each SHA-256, along with status, content type, length, CORS, and cache headers before indexing.
 
 Deployment and final hosted-kit results are recorded separately in `release-summary.json`; a successful local build alone does not establish a deployed release.

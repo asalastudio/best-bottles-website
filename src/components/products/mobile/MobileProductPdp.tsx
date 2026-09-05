@@ -267,14 +267,20 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
     const capDimension = useMemo<MobileConfigDimension | null>(() => {
         if (capOptions.length === 0) return null;
-        const options: MobileConfigOption[] = capOptions.map((name) => ({
-            id: name,
-            label: name,
-            thumbUrl: resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys) ?? null,
-            swatchStyle: getMaterialSwatchStyle(name, {}) as CSSProperties,
-        }));
+        const options: MobileConfigOption[] = capOptions.map((name) => {
+            const variant = resolveGuidedVariant(variants, { applicator: activeApplicator, capOption: name }, deps);
+            const plate = plateFor(platesBySku, variant);
+            return {
+                id: name,
+                label: name,
+                // A newly reconciled finish may have no standalone cap thumbnail.
+                // Its exact assembled photograph is still an honest visual choice.
+                thumbUrl: resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys) ?? plate?.thumb ?? variant?.imageUrl ?? null,
+                swatchStyle: getMaterialSwatchStyle(name, {}) as CSSProperties,
+            };
+        });
         return { options, selectedId: activeCapOption };
-    }, [capOptions, thumbBySwatch, capOptionPhotoKeys, activeCapOption]);
+    }, [capOptions, thumbBySwatch, capOptionPhotoKeys, activeCapOption, variants, activeApplicator, deps, platesBySku]);
 
     const { rows, facts } = useMemo(
         () => buildMobileConfigRows({ closureBase, glass: glassDimension, roller: rollerDimension, capFinish: capDimension }),

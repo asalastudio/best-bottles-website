@@ -1952,7 +1952,7 @@ export default function ProductDetailClient({
         );
     }
 
-    const inStock = selectedVariant?.stockStatus === "In Stock";
+    const inStock = selectedVariant?.stockStatus === "In Stock" || selectedVariant?.stockStatus === "Available to order";
     // A variant ID alone does not mean Shopify will sell it — a DRAFT or
     // unpublished parent product 410s at the /cart permalink. Respect the
     // synced sellability flag so these fall back to the quote path.
