@@ -21,9 +21,18 @@ describe("catalog top previews", () => {
         expect(result.every(v => !v.label.includes("Frosted"))).toBe(true);
     });
     it("recognizes the 13-415 sprayer component SKU format", () => {
-        expect(catalogCapPhoto({ id: "black", label: "Matte Black", websiteSku: "GBTallCyl9SpryBlkMatt" }, [
+        expect(catalogCapPhoto({ id: "black", label: "Matte Black", websiteSku: "TestTallSpryBlkMatt" }, [
             { websiteSku: "CP13-415SpryBlkMt", thumb: "13-415-sprayer" },
         ], "sprayer")).toBe("13-415-sprayer");
+    });
+    it("uses a complete spray-top set and never substitutes mixed overcaps on failure", () => {
+        for (const glass of ["", "Frst"]) for (const finish of ["BlkMatt", "BlkSh", "BluMatt", "CuMatt", "GlMatt", "GlSh", "SlMatt", "SlSh"]) {
+            const preview = { id: finish, label: finish, websiteSku: `GBTallCyl${glass}9Spry${finish}` };
+            const rows = [{ websiteSku: "CP13-415SpryBlkMt", thumb: "mixed-overcap" }];
+            const url = catalogCapPhoto(preview, rows, "sprayer");
+            expect(url).toContain(".sprayer.webp");
+            expect(catalogCapPhoto(preview, rows, "sprayer", new Set([url!]))).toBeUndefined();
+        }
     });
     it("shows cap finishes within one roller assembly, without doubling the count", () => {
         expect(getCatalogCardVariantPreviews(variants, options).map(v => v.id)).toEqual(["metal-black", "metal-gold"]);

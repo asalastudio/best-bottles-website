@@ -5,6 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, X } from "@/components/icons";
 import { productCardVariantHref, type ProductCardVariantPreview } from "@/lib/products/product-card-variant-previews";
+import { catalogCapPhotoFrame } from "@/lib/products/catalog-cap-photos";
+
+function CapPhoto({ url, size, onError }: { url: string; size: number; onError: () => void }) {
+    const frame = catalogCapPhotoFrame(url);
+    return <span className="relative block shrink-0 overflow-hidden" style={{ width: size, height: size }}>
+        <Image src={url} alt="" width={size} height={size} unoptimized onError={onError}
+            className={frame ? "absolute max-w-none" : "h-full w-full object-contain"} style={frame} />
+    </span>;
+}
 
 type Props = {
     title: string;
@@ -58,7 +67,7 @@ export default function CatalogCapOptions({ title, href, variants, photo, onImag
                     {visible.map((variant) => {
                         const url = photo(variant)!;
                         return <span key={variant.id} className="flex h-11 w-11 shrink-0 items-center justify-center">
-                            <Image src={url} alt="" width={40} height={40} unoptimized className="h-10 w-10 object-contain" onError={() => onImageError(url)} />
+                            <CapPhoto url={url} size={40} onError={() => onImageError(url)} />
                         </span>;
                     })}
                     {hiddenCount > 0 && <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-champagne text-xs font-medium text-obsidian">+{hiddenCount}</span>}
@@ -78,7 +87,7 @@ export default function CatalogCapOptions({ title, href, variants, photo, onImag
                 return <Link key={variant.id} href={productCardVariantHref(href, variant)} prefetch={false}
                     aria-label={`View ${title} with ${variant.label}`}
                     className="flex min-h-20 min-w-0 flex-col items-center gap-2 rounded-sm border border-transparent p-1.5 text-center hover:border-champagne hover:bg-bone/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-obsidian">
-                    {url ? <Image src={url} alt="" width={48} height={48} unoptimized className="h-12 w-12 object-contain" onError={() => onImageError(url)} />
+                    {url ? <CapPhoto url={url} size={48} onError={() => onImageError(url)} />
                         : <span className="flex h-12 items-center text-[9px] text-slate">Photo unavailable</span>}
                     <span className="text-[11px] leading-tight text-obsidian">{variant.label}</span>
                 </Link>;
