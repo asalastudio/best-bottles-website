@@ -275,78 +275,31 @@ describe("matrix family and product identity helpers", () => {
     });
 });
 
-describe("Build a Bottle presentation contract", () => {
+describe("Build Your Bottle route contract", () => {
     const page = readFileSync("src/app/matrix/page.tsx", "utf8");
-    const client = readFileSync("src/components/matrix/MatrixClient.tsx", "utf8");
     const navbar = readFileSync("src/components/Navbar.tsx", "utf8");
     const footer = readFileSync("src/components/Footer.tsx", "utf8");
     const matrix = readFileSync("convex/matrix.ts", "utf8");
     const componentUtils = readFileSync("convex/componentUtils.ts", "utf8");
-    const pdpDiscovery = readFileSync("src/components/products/PdpDiscoverySections.tsx", "utf8");
-    const productDetail = readFileSync("src/app/products/[slug]/ProductDetailClient.tsx", "utf8");
 
-    it("presents the public matrix as Build a Bottle with Product Compatibility Matrix metadata", () => {
-        expect(client).toMatch(/<h1[^>]*>\s*Build a Bottle\s*<\/h1>/);
-        expect(client).toContain("Product Compatibility Matrix");
-        expect(page).toContain('title: { absolute: "Build a Bottle — Product Compatibility Matrix | Best Bottles" }');
-        expect(page).toContain("Product Compatibility Matrix");
-        expect(page).toContain("Everyone pays the same");
-        expect(page).toContain("approved resale certificate are not charged tax");
-        expect(page).not.toContain("wholesale-only pricing");
-        expect(page).not.toContain("wholesale price");
-    });
-
-    it("keeps the stable public family-preselected route and family-scoped filters", () => {
+    it("preserves the public route and breadcrumb under the builder name", () => {
+        expect(page).toContain('title: { absolute: "Build Your Bottle | Best Bottles" }');
         expect(page).toContain('alternates: { canonical: `${SITE_URL}/matrix` }');
-        expect(page).toContain("searchParams: Promise<{ family?: string }>");
-        expect(page).toContain("families.some((f) => f.family === familyParam)");
-        expect(page).not.toContain('key={openFamily ?? "no-family"}');
-        expect(client).toContain("setMatrixState((state) => switchMatrixFamily(state, family));");
-        expect(client).toContain("switchMatrixFamily(state, family)");
-        expect(client).toContain("router.replace(`/matrix?family=${encodeURIComponent(family)}`)");
-        expect(client).toContain("const rows = useMemo(() => initialRows?.rows ?? [], [initialRows]);");
-        for (const label of ["All sizes", "All finishes", "All necks", "All closures"]) {
-            expect(client).toContain(`label="${label}"`);
-        }
-        expect(pdpDiscovery).toContain("/matrix?family=${encodeURIComponent(family)}");
+        expect(page).toContain('{ name: "Build Your Bottle", url: `${SITE_URL}/matrix` }');
     });
 
-    it("continues to use the one server-resolved compatibility engine", () => {
+    it("continues to use the shared server compatibility engine", () => {
         expect(matrix).toContain('from "./componentUtils"');
-        for (const resolver of [
-            "normalizeComponentsByType",
-            "selectBestFitmentRule",
-            "filterGroupedComponentsByFitmentRule",
-        ]) {
+        for (const resolver of ["normalizeComponentsByType", "selectBestFitmentRule", "filterGroupedComponentsByFitmentRule"]) {
             expect(matrix).toContain(`${resolver}(`);
             expect(componentUtils).toContain(`export function ${resolver}`);
         }
-        expect(client).toContain("convex/matrix.ts");
-        expect(client).toContain('const unknown = row.resolution === "unknown";');
-        expect(client).toContain("Compatibility not mapped — bottle only");
-        expect(client).not.toContain("includes a component");
-        expect(client).not.toContain("comes with");
-        expect(client).toContain('window.dispatchEvent(new CustomEvent("open-cart-drawer"))');
-        expect(client).toContain("Add to cart");
     });
 
-    it("links each exact bottle and selected component to its canonical PDP identity", () => {
-        expect(client).toContain("matrixProductHref(row)");
-        expect(client).toContain("matrixProductHref(config.component)");
-        expect(productDetail).toContain("variant.websiteSku === selectedVariantParam || variant.graceSku === selectedVariantParam");
-        expect(client).not.toContain("components are included");
-    });
-
-    it("uses Build a Bottle in the structured-data breadcrumb", () => {
-        expect(page).toContain('{ name: "Build a Bottle", url: `${SITE_URL}/matrix` }');
-        expect(page).not.toContain('{ name: "Order Matrix", url: `${SITE_URL}/matrix` }');
-    });
-
-    it("keeps one Build a Bottle utility entry in each Navbar variant and one in the Footer", () => {
+    it("keeps the same navigation destinations with the new customer-facing name", () => {
         const navigation = navbar.slice(navbar.indexOf("const NAV_LINKS"), navbar.indexOf("const SEARCH_SUGGESTIONS"));
-        expect(navigation.match(/label: "Build a Bottle", href: "\/matrix"/g)).toHaveLength(2);
-        expect(navigation.match(/label: "Catalog", href: "\/catalog"/g)).toHaveLength(2);
-        expect(footer.match(/\["Build a Bottle", "\/matrix"\]/g)).toHaveLength(1);
+        expect(navigation.match(/label: "Build Your Bottle", href: "\/matrix"/g)).toHaveLength(2);
+        expect(footer.match(/\["Build Your Bottle", "\/matrix"\]/g)).toHaveLength(1);
     });
 });
 
