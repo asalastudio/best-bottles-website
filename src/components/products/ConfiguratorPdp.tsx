@@ -33,7 +33,6 @@ import { api } from "../../../convex/_generated/api";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
 import { explodedKitFrame, orderExplodedOvercap } from "@/lib/products/kit-frame";
 
-import { getProductHero, getCatalogHeroStyle } from "@/lib/products/catalog-heroes";
 import { useGLTF } from "@react-three/drei";
 import { glassSwatchImage } from "@/lib/products/glass-swatches";
 import FocusedPdpLayout from "./FocusedPdpLayout";
@@ -344,7 +343,6 @@ export default function ConfiguratorPdp({
   }, [fam]);
 
   const activeMeta = activeBase === "none" ? null : CLOSURE_META[activeBase] ?? null;
-  const studioHero = getProductHero(websiteSku);
   // bulb has no live 3D (parked): the stage shows the product photo
   // Without a plate the stage shows a photograph, never nothing: the SKU's
   // own catalogue image first, then the group's hero.
@@ -419,10 +417,9 @@ export default function ConfiguratorPdp({
   const has3d = hasApproved3d && Boolean(fam) && !fam?.photoOnly;
   const dimensions = { heightWithCap, heightWithoutCap, diameter };
   const showDimensions = requestedStageMode === "dimensions" && hasRealPdpDimensions(dimensions);
-  const showStudioHero = requestedStageMode === "photo" && studioHero && !brokenPlates.has(studioHero.url);
   const showPlate = !(show3d && has3d) && Boolean(plate);
   const showPhoto = !showPlate && !(show3d && has3d) && Boolean(photoFallback);
-  const showLive3d = !showStudioHero && !showPlate && !showPhoto && has3d;
+  const showLive3d = !showPlate && !showPhoto && has3d;
   const stage = (
     <div className="relative h-full w-full overflow-hidden">
       {showDimensions ? (
@@ -435,14 +432,6 @@ export default function ConfiguratorPdp({
               {diameter?.trim() ? <DimensionRow label="Diameter" value={diameter} /> : null}
             </dl>
           </div>
-        </div>
-      ) : showStudioHero ? (
-        <div className="absolute inset-0 overflow-hidden bg-[#f5f3ef]" data-bb-studio-hero="true" data-bb-website-sku={studioHero.websiteSku}>
-          {/* Static scene; cap-state controls remain in the technical views. */}
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={studioHero.url} alt={studioHero.alt} width={studioHero.width} height={studioHero.height}
-               className="absolute inset-0 h-full w-full object-contain" style={getCatalogHeroStyle(studioHero)}
-               data-bb-hero-state="empty" onError={() => markPlateBroken(studioHero.url)} />
         </div>
       ) : showPlate ? (
         <div className="relative h-full w-full bg-white">
@@ -519,7 +508,7 @@ export default function ConfiguratorPdp({
             </span>
           </span>
         ) : <span />}
-        {canCap && !showStudioHero && (
+        {canCap && (
           <button type="button" onClick={() => setWithCap((v) => !v)}
                   aria-pressed={withCap} aria-label="Cap on or off"
                   disabled={!capToggleLive}
@@ -561,7 +550,7 @@ export default function ConfiguratorPdp({
   // rendered, and a closure click that landed on a sibling with a plate then
   // flipped it back (Jordan, 2 Sep, the 100 ml reducer mid-publish).
   const modes = getPdpStageModes({
-    hasApprovedImageOrPlate: Boolean(studioHero || plate || photoFallback),
+    hasApprovedImageOrPlate: Boolean(plate || photoFallback),
     hasApprovedGeometry: has3d,
     hasReleasedExplodedKit: releasedKitAvailable,
     dimensions,

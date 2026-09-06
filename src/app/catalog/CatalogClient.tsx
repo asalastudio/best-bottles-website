@@ -14,7 +14,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
-import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
+import { getCylinderCatalogHero, getCylinderHeroProductHref, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -280,13 +280,13 @@ function ProductGroupCard({
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
     matchSearch?: boolean;
-    catalogHero?: CatalogHero | null;
+    catalogHero?: CylinderCatalogHero | null;
 }) {
     const selected = matchSearch ? variantPreviews?.[0] : null;
     const href = catalogHero
-        ? getCatalogHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
+        ? getCylinderHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
         : productCardVariantHref(productGroupHref(group, applicatorParam), selected);
-    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const customerDisplayName = catalogHero?.alt ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         usableProductImageUrl(group.heroImageUrl) ??
         thumbnailUrl ??
@@ -1524,7 +1524,7 @@ export default function CatalogClient({
     const variantPreviewRows = activeResult.variantPreviewRows;
     const catalogHeroMap = useMemo(() => {
         const rowsByGroupId = new Map(variantPreviewRows.map((row) => [row.groupId, row.variants]));
-        return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
+        return new Map(visibleProducts.map((group) => [group._id, getCylinderCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
     }, [variantPreviewRows, visibleProducts]);
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();
