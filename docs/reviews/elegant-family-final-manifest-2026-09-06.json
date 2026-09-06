@@ -1,0 +1,803 @@
+{
+  "createdAt": "2026-09-06T18:41:52.649Z",
+  "scope": "Complete 33-image Elegant catalog hero family; user-approved final local artwork and sizing.",
+  "productionPublished": false,
+  "sizingApproved": true,
+  "approvedSprays": 8,
+  "earlierApprovedReferences": 6,
+  "remainingVisualReview": 0,
+  "qa": {
+    "testsPassed": 367,
+    "perimeterPassCount": 33,
+    "total": 33,
+    "decodedImageDimensions": [
+      1560,
+      1716
+    ],
+    "background": [
+      245,
+      243,
+      239
+    ],
+    "clearProtectedProductRegionsIdentical": 17,
+    "deliveredBytesMatchLocal": true,
+    "catalogHttpStatus": 200,
+    "desktop": {
+      "width": 1377,
+      "columns": 4,
+      "cardWidth": 246.75,
+      "imagesLoaded": 33,
+      "horizontalOverflow": false
+    },
+    "mobile": {
+      "width": 390,
+      "cardWidth": 356,
+      "horizontalOverflow": false
+    },
+    "browserImageDelivery": "All 33 direct PNGs without srcset re-encoding",
+    "pdpMediaIsolation": "Existing dedicated tests passed; hero changes remain catalog-only"
+  },
+  "catalogUrl": "http://localhost:3003/catalog?search=Elegant&sort=best-match&limit=33",
+  "remainingReviewUrl": "http://localhost:3003/preview/elegant-family/index.html?view=remaining",
+  "rows": [
+    {
+      "sku": "GBElgFrst15MtlRollGlSh",
+      "groupSlug": "elegant-15ml-frosted-13-415-rollon",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.732dca1b149d.png",
+      "assetSha256": "732dca1b149d8e4f090f755e437eefd3d1c73b299f2b412e3b68d47cc245eb15",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0170849056603775,
+        "translateXPercent": -0.5152169811320777,
+        "translateYPercent": 1.92801886792452
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-reference"
+    },
+    {
+      "sku": "GBElg15Gl",
+      "groupSlug": "elegant-15ml-clear-13-415",
+      "capacityMl": 15,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg15Gl.d1e93ae6da16.png",
+      "assetSha256": "d1e93ae6da16b30974bbbf35bcee4deebd6e9909c99bf472106c78c8c210c21e",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0103043396226417,
+        "translateXPercent": -0.3468329245283049,
+        "translateYPercent": 3.746443396226413
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg15Gl.38cc81419246.webp",
+          "inputSha256": "e5907b60626f46d4c8fe1531ff28a33890f7245ce062a0c26b45932b970cf767",
+          "url": "/images/catalog/bone-review/GBElg15Gl.d1e93ae6da16.png",
+          "assetSha256": "d1e93ae6da16b30974bbbf35bcee4deebd6e9909c99bf472106c78c8c210c21e",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg15MinarCu",
+      "groupSlug": "elegant-15ml-clear-13-415-capclosure",
+      "capacityMl": 15,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg15MinarCu.f961d5f6f03c.png",
+      "assetSha256": "f961d5f6f03c3760179deacf66650162d89a3a94fbc50d0bb1f6b258ed444d43",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.7934327274523364,
+        "translateXPercent": 10.460602415291902,
+        "translateYPercent": 17.18671293094932
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg15MinarCu.acfc796c3396.webp",
+          "inputSha256": "a1cc2e3e563af65f217c95ea043ece86e27d88c2e6526ea6f268db31b84bc66d",
+          "url": "/images/catalog/bone-review/GBElg15MinarCu.f961d5f6f03c.png",
+          "assetSha256": "f961d5f6f03c3760179deacf66650162d89a3a94fbc50d0bb1f6b258ed444d43",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg15SpryGlMatt",
+      "groupSlug": "elegant-15ml-clear-13-415-finemist",
+      "capacityMl": 15,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg15SpryGlMatt.76740d442960.png",
+      "assetSha256": "76740d442960f6463280369c9b8162dd5f0a11b48a49978387b77ec0493c6ad1",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9714464804063863,
+        "translateXPercent": -1.0009402213352796,
+        "translateYPercent": 5.041705370101578
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg15SpryGlMatt.4ab510fa93da.webp",
+          "inputSha256": "9de694e90ce7346631df4707b14853d4c1733d3b3de85e9000b2fd7184b3bede",
+          "url": "/images/catalog/bone-review/GBElg15SpryGlMatt.76740d442960.png",
+          "assetSha256": "76740d442960f6463280369c9b8162dd5f0a11b48a49978387b77ec0493c6ad1",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElg15MtlRollGlMatt",
+      "groupSlug": "elegant-15ml-clear-13-415-rollon",
+      "capacityMl": 15,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg15MtlRollGlMatt.92981d5c1ff8.png",
+      "assetSha256": "92981d5c1ff852ad119b1a774365c98f3333ddeba6b5dd5af5519c6b8ac0d763",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9714464804063863,
+        "translateXPercent": 0.9419527394774908,
+        "translateYPercent": 5.336083091436859
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg15MtlRollGlMatt.98b4f30ced3c.webp",
+          "inputSha256": "adcb0054a9d20b1a8875a4e1571ef746df6e82f26cbab2cf382fd13e0c7fe50f",
+          "url": "/images/catalog/bone-review/GBElg15MtlRollGlMatt.92981d5c1ff8.png",
+          "assetSha256": "92981d5c1ff852ad119b1a774365c98f3333ddeba6b5dd5af5519c6b8ac0d763",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElgFrst15Gl",
+      "groupSlug": "elegant-15ml-frosted-13-415",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst15Gl.fdcf2781a005.png",
+      "assetSha256": "fdcf2781a005f197f931ca084fbbde16a405a27bf0c79a0e56561a6f51834ce4",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9297279198981365,
+        "translateXPercent": 2.7388307385113912,
+        "translateYPercent": 10.141844542192379
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElgFrst15SpryGlSh",
+      "groupSlug": "elegant-15ml-frosted-13-415-finemist",
+      "capacityMl": 15,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst15SpryGlSh.1f7c6da3946e.png",
+      "assetSha256": "1f7c6da3946eaf860f7e0b0e66d391e444cf814cc5f1a4b3be952e95ece119b1",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9970108614697122,
+        "translateXPercent": -0.016711550397227864,
+        "translateYPercent": 6.405139026812312
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElg30GlCap",
+      "groupSlug": "elegant-30ml-clear-15-415",
+      "capacityMl": 30,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg30GlCap.910d81f5b19b.png",
+      "assetSha256": "910d81f5b19ba5113bb2b2534d21ece9d27a14401705fc7324ba290d671d99d1",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9539090676457476,
+        "translateXPercent": 2.781501151535499,
+        "translateYPercent": 6.01537397337886
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg30GlCap.91fde7fd3e74.webp",
+          "inputSha256": "002278f293c919498a5f50d4e59d0e3ce7f7757e18a00da21df904adb5f1cc20",
+          "url": "/images/catalog/bone-review/GBElg30GlCap.910d81f5b19b.png",
+          "assetSha256": "910d81f5b19ba5113bb2b2534d21ece9d27a14401705fc7324ba290d671d99d1",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg30SpryMattGl",
+      "groupSlug": "elegant-30ml-clear-15-415-perfumespray",
+      "capacityMl": 30,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg30SpryMattGl.0033ecf8cbd8.png",
+      "assetSha256": "0033ecf8cbd87de10c08ce59120added41348ad8f460f68f24041aeac59427f7",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0996951704368902,
+        "translateXPercent": -6.0844536922814045,
+        "translateYPercent": -4.9733966926740525
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg30SpryMattGl.2056c01b5f76.webp",
+          "inputSha256": "2884819225d84409f185f674aa9a470a253e74c6da8d88980b10b654227fe07a",
+          "url": "/images/catalog/bone-review/GBElg30SpryMattGl.cf75d0ae58f3.png",
+          "assetSha256": "cf75d0ae58f3cdc5276ef835d076c741583db0ca5491bb0f649a8d93d1f5d7e9",
+          "method": "Connected dark insert mask in reviewed nozzle ROI; map existing luminance to warm white plastic, without changing silhouette, aperture location, or surrounding gold. Lossless PNG."
+        },
+        {
+          "inputUrl": "/images/catalog/bone-review/GBElg30SpryMattGl.cf75d0ae58f3.png",
+          "inputSha256": "cf75d0ae58f3cdc5276ef835d076c741583db0ca5491bb0f649a8d93d1f5d7e9",
+          "url": "/images/catalog/bone-review/GBElg30SpryMattGl.0033ecf8cbd8.png",
+          "assetSha256": "0033ecf8cbd87de10c08ce59120added41348ad8f460f68f24041aeac59427f7",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElgFrst30GlCap",
+      "groupSlug": "elegant-30ml-frosted-15-415",
+      "capacityMl": 30,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst30GlCap.27216e5cab5e.png",
+      "assetSha256": "27216e5cab5e7fcf220f9d6ff4ca201fa61e0760f9aa361fa48d01c35aa4550e",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9244067253474255,
+        "translateXPercent": 2.5471214321654947,
+        "translateYPercent": 6.402778468205314
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-reference"
+    },
+    {
+      "sku": "GBElgFrst30SpryMattGl",
+      "groupSlug": "elegant-30ml-frosted-15-415-perfumespray",
+      "capacityMl": 30,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.3e2e913f861c.png",
+      "assetSha256": "3e2e913f861c235600d91a060250ed267f320920e48a1d76146831163881146a",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0470151622722488,
+        "translateXPercent": -3.3977732758846835,
+        "translateYPercent": -2.279532638800347
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.94ee9a8f5f66.png",
+          "inputSha256": "94ee9a8f5f666dfb277549241f33b38145b067afb545420c0b2830d6f0766206",
+          "url": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.3e2e913f861c.png",
+          "assetSha256": "3e2e913f861c235600d91a060250ed267f320920e48a1d76146831163881146a",
+          "method": "Connected dark insert mask in reviewed nozzle ROI; map existing luminance to warm white plastic, without changing silhouette, aperture location, or surrounding gold. Lossless PNG."
+        }
+      ],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElg60AnSpGl",
+      "groupSlug": "elegant-60ml-clear-18-415-antiquespray",
+      "capacityMl": 60,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg60AnSpGl.6e9b2869631f.png",
+      "assetSha256": "6e9b2869631f92b0a2ad953945b8f0805604df6c88e845087ceb7e5ddea18726",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.075,
+        "translateXPercent": 1.8041666666666647,
+        "translateYPercent": -6.401515151515152
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg60AnSpGl.a28d1e061fbd.webp",
+          "inputSha256": "aae5d36d4688a55b354e87405a9ccc9428568f3103c5da99b07305dd725b9900",
+          "url": "/images/catalog/bone-review/GBElg60AnSpGl.6e9b2869631f.png",
+          "assetSha256": "6e9b2869631f92b0a2ad953945b8f0805604df6c88e845087ceb7e5ddea18726",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg60AnSpTslIvyGl",
+      "groupSlug": "elegant-60ml-clear-18-415-antiquespray-tassel",
+      "capacityMl": 60,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg60AnSpTslIvyGl.e70e54e718e2.png",
+      "assetSha256": "e70e54e718e265534412dbff633b1d5f5c01be33850d31a74896255ca739831e",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.1390728476821192,
+        "translateXPercent": -5.434878587196475,
+        "translateYPercent": -8.4099939795304
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg60AnSpTslIvyGl.c7486aa19881.webp",
+          "inputSha256": "018dc6aad0251bb01d15f976519f7157ef74b8da68269337dfb695483c15edda",
+          "url": "/images/catalog/bone-review/GBElg60AnSpTslIvyGl.e70e54e718e2.png",
+          "assetSha256": "e70e54e718e265534412dbff633b1d5f5c01be33850d31a74896255ca739831e",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg60DrpGl",
+      "groupSlug": "elegant-60ml-clear-18-415-dropper",
+      "capacityMl": 60,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg60DrpGl.1047ee299697.png",
+      "assetSha256": "1047ee299697de667fcae57cbb30374d2c82f98e83e4ea6a50b73bba422bc358",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0368965517241377,
+        "translateXPercent": -3.054540229885049,
+        "translateYPercent": -2.634900731452438
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg60DrpGl.0d70cd242680.webp",
+          "inputSha256": "9ea0e0516e6ec7eba7b42291ac624f275b548d83c35b58daac535bee95d6bc24",
+          "url": "/images/catalog/bone-review/GBElg60DrpGl.1047ee299697.png",
+          "assetSha256": "1047ee299697de667fcae57cbb30374d2c82f98e83e4ea6a50b73bba422bc358",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "LBElg60LtnMtGl",
+      "groupSlug": "elegant-60ml-clear-18-415-lotionpump",
+      "capacityMl": 60,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/LBElg60LtnMtGl.b5928974d71b.png",
+      "assetSha256": "b5928974d71b309b71df68158fa6085c01f7d77808f94289644a4e6a9f2063d8",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0135955056179775,
+        "translateXPercent": -2.8758988764044964,
+        "translateYPercent": -0.8378958120531169
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/LBElg60LtnMtGl.9f73b38a76d0.webp",
+          "inputSha256": "65ddfeba8c4b2863c603deed13bfccb3397c98873c683c431ab334716ded0a63",
+          "url": "/images/catalog/bone-review/LBElg60LtnMtGl.b5928974d71b.png",
+          "assetSha256": "b5928974d71b309b71df68158fa6085c01f7d77808f94289644a4e6a9f2063d8",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg60SpryMtGl",
+      "groupSlug": "elegant-60ml-clear-18-415-perfumespray",
+      "capacityMl": 60,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg60SpryMtGl.1e06f28a2917.png",
+      "assetSha256": "1e06f28a2917d68dadc243d7e98d3fc77f01f5942c1f305a23122316c839a441",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0428901734104046,
+        "translateXPercent": -3.708843930635832,
+        "translateYPercent": -1.9120336311087702
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg60SpryMtGl.60f5b9f1cd2d.webp",
+          "inputSha256": "cea64dc7737555ee04afb68863859939fe33b5553d7be7b6a3b66c9276b60338",
+          "url": "/images/catalog/bone-review/GBElg60SpryMtGl.1e06f28a2917.png",
+          "assetSha256": "1e06f28a2917d68dadc243d7e98d3fc77f01f5942c1f305a23122316c839a441",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElg60RdcrShnGl",
+      "groupSlug": "elegant-60ml-clear-18-415-reducer",
+      "capacityMl": 60,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg60RdcrShnGl.52334a32c416.png",
+      "assetSha256": "52334a32c4160bece0c4ebe97cfded659d21d9ffd7392cedc3fe23d6aced7f85",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9596808510638297,
+        "translateXPercent": 1.3761702127659607,
+        "translateYPercent": 7.536847195357836
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg60RdcrShnGl.c3c582c4f492.webp",
+          "inputSha256": "64b830ea5bb919e925eca069ea6b1a5023db781e9b6b9fa54c5861e631dc22ef",
+          "url": "/images/catalog/bone-review/GBElg60RdcrShnGl.52334a32c416.png",
+          "assetSha256": "52334a32c4160bece0c4ebe97cfded659d21d9ffd7392cedc3fe23d6aced7f85",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElgFrst60AnSpGl",
+      "groupSlug": "elegant-60ml-frosted-18-415-antiquespray",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst60AnSpGl.4c33d203bdfc.png",
+      "assetSha256": "4c33d203bdfc6d09c526f49031f74f62bd89525fdffebec2b456e259352c1b10",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.1247600000000002,
+        "translateXPercent": -6.238000000000006,
+        "translateYPercent": -11.356358974358985
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-reference"
+    },
+    {
+      "sku": "GBElgFrst60AnSpTslGl",
+      "groupSlug": "elegant-60ml-frosted-18-415-antiquespray-tassel",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst60AnSpTslGl.b147f12fc5dd.png",
+      "assetSha256": "b147f12fc5dd49afce8e82283e743a47317e83187521b91648ad3b22cfcdbb21",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.1247600000000002,
+        "translateXPercent": -6.238000000000006,
+        "translateYPercent": -11.356358974358985
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-reference"
+    },
+    {
+      "sku": "GBElgFrst60DrpGl",
+      "groupSlug": "elegant-60ml-frosted-18-415-dropper",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst60DrpGl.7926e95f57c6.png",
+      "assetSha256": "7926e95f57c6195411b9b55b8095a7e2cfc02c078657167ee96f4da78bd222eb",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0803592814371257,
+        "translateXPercent": -9.599820359281429,
+        "translateYPercent": -5.5775721284703135
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "LBElgFrst60LtnMtGl",
+      "groupSlug": "elegant-60ml-frosted-18-415-lotionpump",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/LBElgFrst60LtnMtGl.39fe92012388.png",
+      "assetSha256": "39fe920123886d5a3d4dec7d0176d89abbed5fe94031c8d0c42f0c0055cac0d2",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.086867469879518,
+        "translateXPercent": -7.241686746987948,
+        "translateYPercent": -4.512595837897028
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElgFrst60SpryMtGl",
+      "groupSlug": "elegant-60ml-frosted-18-415-perfumespray",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst60SpryMtGl.2d19706db9b3.png",
+      "assetSha256": "2d19706db9b322fda7f6c39d788d974fe10cee94312fe98ad9ae16866c6d8977",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0309714285714284,
+        "translateXPercent": -1.7203999999999933,
+        "translateYPercent": -3.974337662337651
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnGl",
+      "groupSlug": "elegant-60ml-frosted-18-415-reducer",
+      "capacityMl": 60,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst60RdcrShnGl.93bd088c5609.png",
+      "assetSha256": "93bd088c56091f939e2e5249c4c5bdbe6b663b07ad257998e82c124563d5eef4",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.949578947368421,
+        "translateXPercent": -0.48594736842105135,
+        "translateYPercent": 7.839904306220099
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg100AnSpGl",
+      "groupSlug": "elegant-100ml-clear-18-415-antiquespray",
+      "capacityMl": 100,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg100AnSpGl.d9c06609d87f.png",
+      "assetSha256": "d9c06609d87f239704d58ce451a194bea88721a8ae6bca7791df3cbfcb936c5c",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.013157894736842,
+        "translateXPercent": 6.603070175438603,
+        "translateYPercent": -3.5614035087719182
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg100AnSpGl.4aa027fa0db4.webp",
+          "inputSha256": "a30968e354b54aa50e11760c8284123d97a5f38dd0e6499c6f6ec505551b497b",
+          "url": "/images/catalog/bone-review/GBElg100AnSpGl.d9c06609d87f.png",
+          "assetSha256": "d9c06609d87f239704d58ce451a194bea88721a8ae6bca7791df3cbfcb936c5c",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg100AnSpTslIvyGl",
+      "groupSlug": "elegant-100ml-clear-18-415-antiquespray-tassel",
+      "capacityMl": 100,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg100AnSpTslIvyGl.cf5378c6bbd2.png",
+      "assetSha256": "cf5378c6bbd2707b275462284f9779004bf00af79d02031eed658a8107d510da",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.3095238095238095,
+        "translateXPercent": -5.654761904761908,
+        "translateYPercent": -15.34920634920635
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg100AnSpTslIvyGl.273015ae6852.webp",
+          "inputSha256": "10cc8676d0fd946734cb927195ef84da8f3d77a933513a972a8d9d94a0b02c2c",
+          "url": "/images/catalog/bone-review/GBElg100AnSpTslIvyGl.cf5378c6bbd2.png",
+          "assetSha256": "cf5378c6bbd2707b275462284f9779004bf00af79d02031eed658a8107d510da",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "LBElg100LtnMtGl",
+      "groupSlug": "elegant-100ml-clear-18-415-lotionpump",
+      "capacityMl": 100,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/LBElg100LtnMtGl.c590ba70cd2a.png",
+      "assetSha256": "c590ba70cd2ab621c6befc882aa460c8c7cf2ddf64e7c3b224bbd08c127e3b34",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0203045685279188,
+        "translateXPercent": -4.416243654822343,
+        "translateYPercent": -3.3008767881864287
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/LBElg100LtnMtGl.bb11ffcc72a0.webp",
+          "inputSha256": "218a4647b6d902e5cdc023fd11a6ac4aa2f7be8e2e57aa09e6ae44a46ffeeee8",
+          "url": "/images/catalog/bone-review/LBElg100LtnMtGl.c590ba70cd2a.png",
+          "assetSha256": "c590ba70cd2ab621c6befc882aa460c8c7cf2ddf64e7c3b224bbd08c127e3b34",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElg100SpryMtGl",
+      "groupSlug": "elegant-100ml-clear-18-415-perfumespray",
+      "capacityMl": 100,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg100SpryMtGl.e440498f470d.png",
+      "assetSha256": "e440498f470dd469a62dabf4d7ea9569c6a3d2120a794a72b0870da28b25cee7",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0414507772020725,
+        "translateXPercent": -2.246113989637299,
+        "translateYPercent": -3.9929345266132676
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg100SpryMtGl.68cb9a5e5595.webp",
+          "inputSha256": "c35cb8679d222ec8f40511f656e02e758a2644a17b8d782ca7276ba82f055984",
+          "url": "/images/catalog/bone-review/GBElg100SpryMtGl.e440498f470d.png",
+          "assetSha256": "e440498f470dd469a62dabf4d7ea9569c6a3d2120a794a72b0870da28b25cee7",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElg100RdcrShnGl",
+      "groupSlug": "elegant-100ml-clear-18-415-reducer",
+      "capacityMl": 100,
+      "color": "Clear",
+      "url": "/images/catalog/bone-review/GBElg100RdcrShnGl.9dcfb2348294.png",
+      "assetSha256": "9dcfb2348294ba08c67d881244182162ef1b445689562d438a51366824a9eb28",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 0.9901477832512315,
+        "translateXPercent": -1.9827586206896513,
+        "translateYPercent": 3.9870129870129833
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [
+        {
+          "inputUrl": "/images/catalog/empty-heroes/GBElg100RdcrShnGl.3186f1365c7f.webp",
+          "inputSha256": "94972b87dd10c2455bc5876121c2bca3be4fe5b05352a8abbe41a6f41ed8ee2e",
+          "url": "/images/catalog/bone-review/GBElg100RdcrShnGl.9dcfb2348294.png",
+          "assetSha256": "9dcfb2348294ba08c67d881244182162ef1b445689562d438a51366824a9eb28",
+          "method": "Background-only smooth blend outside a generous full-scene protected rectangle. All decoded pixels inside the protected scene are identical. Exact bone exposed perimeter; original geometry, nozzle, framing and near-contact shadows retained."
+        }
+      ],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElgFrst100AnSpGl",
+      "groupSlug": "elegant-100ml-frosted-18-415-antiquespray",
+      "capacityMl": 100,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst100AnSpGl.cb6986a3907b.png",
+      "assetSha256": "cb6986a3907be4bdef771e8f7c7341f6d167c9cde07f7f675064a1b2c4883051",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-reference"
+    },
+    {
+      "sku": "GBElgFrst100AnSpTslGl",
+      "groupSlug": "elegant-100ml-frosted-18-415-antiquespray-tassel",
+      "capacityMl": 100,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst100AnSpTslGl.46f1bd0f1804.png",
+      "assetSha256": "46f1bd0f1804e53b73711dd1ef2015b23a56732ce737dbe41981df37dc4e1af7",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-reference"
+    },
+    {
+      "sku": "LBElgFrst100LtnMtGl",
+      "groupSlug": "elegant-100ml-frosted-18-415-lotionpump",
+      "capacityMl": 100,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/LBElgFrst100LtnMtGl.63d4f80fa9cf.png",
+      "assetSha256": "63d4f80fa9cf7e96a1ebe4233495198b992b52fd20618bdfb9827524987d66b7",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.1893491124260356,
+        "translateXPercent": -9.863905325443795,
+        "translateYPercent": -13.878967186659498
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    },
+    {
+      "sku": "GBElgFrst100SpryMtGl",
+      "groupSlug": "elegant-100ml-frosted-18-415-perfumespray",
+      "capacityMl": 100,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst100SpryMtGl.6d10b6f53ae5.png",
+      "assetSha256": "6d10b6f53ae57a5b609eb46e6c69b95d887b3a8b22f2337c94e72bc2b1d04021",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.1893491124260356,
+        "translateXPercent": -14.423076923076925,
+        "translateYPercent": -8.472834857450243
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "user-approved-spray"
+    },
+    {
+      "sku": "GBElgFrst100RdcrShnGl",
+      "groupSlug": "elegant-100ml-frosted-18-415-reducer",
+      "capacityMl": 100,
+      "color": "Frosted",
+      "url": "/images/catalog/bone-review/GBElgFrst100RdcrShnGl.a6c8aab37cc0.png",
+      "assetSha256": "a6c8aab37cc0e273921ec8d187ba4661d02a0536adb996955b3ea9c16466c6ce",
+      "width": 1560,
+      "height": 1716,
+      "framing": {
+        "scale": 1.0203045685279188,
+        "translateXPercent": -5.9467005076142145,
+        "translateYPercent": -0.8274111675126851
+      },
+      "subjectApproval": "user-approved-family",
+      "correctionSteps": [],
+      "previousSubjectApproval": "remaining-family-visual-review"
+    }
+  ],
+  "familyVisualApproved": true,
+  "familyApprovedAt": "2026-09-06T18:44:55.963Z",
+  "familyApproval": "User: Everything looks great from my side. Can you just do a quick proofread and confirm? Everything looks good",
+  "finalProofread": {
+    "date": "2026-09-06T18:44:56.002Z",
+    "checked": [
+      "33 current asset hashes and URLs match final manifest and integration lineage",
+      "Current framing matches approved sizing for all variants",
+      "Capacity, color and Elegant naming match registered hero assignments",
+      "Actual catalog renders 33 hero images with no broken hero images and no horizontal page overflow"
+    ],
+    "issuesFound": [],
+    "scope": "Hero images and catalog card labels; not a new product-specification or pricing audit"
+  }
+}

@@ -1,0 +1,1237 @@
+[
+  {
+    "groupSlug": "elegant-15ml-frosted-13-415-rollon",
+    "websiteSku": "GBElgFrst15MtlRollGlSh",
+    "graceSku": "GB-ELG-FRS-15ML-MRL-SGLD-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343619350820",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.732dca1b149d.png",
+    "alt": "15 ml Frosted Elegant Roll-On Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0170849056603775,
+      "translateXPercent": -0.5152169811320777,
+      "translateYPercent": 1.92801886792452
+    }
+  },
+  {
+    "groupSlug": "elegant-15ml-clear-13-415",
+    "websiteSku": "GBElg15Gl",
+    "graceSku": "GB-ELG-CLR-15ML-GLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343644942628",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg15Gl.d1e93ae6da16.png",
+    "alt": "15 ml Clear Elegant Bottle with Cap — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0103043396226417,
+      "translateXPercent": -0.3468329245283049,
+      "translateYPercent": 3.746443396226413
+    }
+  },
+  {
+    "groupSlug": "elegant-15ml-clear-13-415-capclosure",
+    "websiteSku": "GBElg15MinarCu",
+    "graceSku": "GB-ELG-CLR-15ML-MNR-MCPR",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343699370276",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg15MinarCu.f961d5f6f03c.png",
+    "alt": "15 ml Clear Elegant Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 0.7934327274523364,
+      "translateXPercent": 10.460602415291902,
+      "translateYPercent": 17.18671293094932
+    }
+  },
+  {
+    "groupSlug": "elegant-15ml-clear-13-415-finemist",
+    "websiteSku": "GBElg15SpryGlMatt",
+    "graceSku": "GB-ELG-CLR-15ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343633539364",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg15SpryGlMatt.76740d442960.png",
+    "alt": "15 ml Clear Elegant Fine Mist Spray Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9714464804063863,
+      "translateXPercent": -1.0009402213352796,
+      "translateYPercent": 5.041705370101578
+    }
+  },
+  {
+    "groupSlug": "elegant-15ml-clear-13-415-rollon",
+    "websiteSku": "GBElg15MtlRollGlMatt",
+    "graceSku": "GB-ELG-CLR-15ML-MRL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343615516964",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg15MtlRollGlMatt.92981d5c1ff8.png",
+    "alt": "15 ml Clear Elegant Roll-On Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9714464804063863,
+      "translateXPercent": 0.9419527394774908,
+      "translateYPercent": 5.336083091436859
+    }
+  },
+  {
+    "groupSlug": "elegant-15ml-frosted-13-415",
+    "websiteSku": "GBElgFrst15Gl",
+    "graceSku": "GB-ELG-FRS-15ML-SGLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343645663524",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst15Gl.fdcf2781a005.png",
+    "alt": "15 ml Frosted Elegant Bottle with Cap — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9297279198981365,
+      "translateXPercent": 2.7388307385113912,
+      "translateYPercent": 10.141844542192379
+    }
+  },
+  {
+    "groupSlug": "elegant-15ml-frosted-13-415-finemist",
+    "websiteSku": "GBElgFrst15SpryGlSh",
+    "graceSku": "GB-ELG-FRS-15ML-SPR-SGLD-02",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343634391332",
+    "family": "Elegant",
+    "capacityMl": 15,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst15SpryGlSh.1f7c6da3946e.png",
+    "alt": "15 ml Frosted Elegant Fine Mist Spray Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9970108614697122,
+      "translateXPercent": -0.016711550397227864,
+      "translateYPercent": 6.405139026812312
+    }
+  },
+  {
+    "groupSlug": "elegant-30ml-clear-15-415",
+    "websiteSku": "GBElg30GlCap",
+    "graceSku": "GB-ELG-CLR-30ML-SGLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343650939172",
+    "family": "Elegant",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg30GlCap.910d81f5b19b.png",
+    "alt": "30 ml Clear Elegant Bottle with Cap — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9539090676457476,
+      "translateXPercent": 2.781501151535499,
+      "translateYPercent": 6.01537397337886
+    }
+  },
+  {
+    "groupSlug": "elegant-30ml-clear-15-415-perfumespray",
+    "websiteSku": "GBElg30SpryMattGl",
+    "graceSku": "GB-ELG-CLR-30ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343612371236",
+    "family": "Elegant",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg30SpryMattGl.0033ecf8cbd8.png",
+    "alt": "30 ml Clear Elegant Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0996951704368902,
+      "translateXPercent": -6.0844536922814045,
+      "translateYPercent": -4.9733966926740525
+    }
+  },
+  {
+    "groupSlug": "elegant-30ml-frosted-15-415",
+    "websiteSku": "GBElgFrst30GlCap",
+    "graceSku": "GB-ELG-FRS-30ML-GLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343651430692",
+    "family": "Elegant",
+    "capacityMl": 30,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst30GlCap.27216e5cab5e.png",
+    "alt": "30 ml Frosted Elegant Bottle with Cap — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9244067253474255,
+      "translateXPercent": 2.5471214321654947,
+      "translateYPercent": 6.402778468205314
+    }
+  },
+  {
+    "groupSlug": "elegant-30ml-frosted-15-415-perfumespray",
+    "websiteSku": "GBElgFrst30SpryMattGl",
+    "graceSku": "GB-ELG-FRS-30ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343614009636",
+    "family": "Elegant",
+    "capacityMl": 30,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.3e2e913f861c.png",
+    "alt": "30 ml Frosted Elegant Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0470151622722488,
+      "translateXPercent": -3.3977732758846835,
+      "translateYPercent": -2.279532638800347
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-clear-18-415-antiquespray",
+    "websiteSku": "GBElg60AnSpGl",
+    "graceSku": "GB-ELG-CLR-60ML-ASP-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343642845476",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg60AnSpGl.6e9b2869631f.png",
+    "alt": "60 ml Clear Elegant Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.075,
+      "translateXPercent": 1.8041666666666647,
+      "translateYPercent": -6.401515151515152
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBElg60AnSpTslIvyGl",
+    "graceSku": "GB-ELG-CLR-60ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343645237540",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg60AnSpTslIvyGl.e70e54e718e2.png",
+    "alt": "60 ml Clear Elegant Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.1390728476821192,
+      "translateXPercent": -5.434878587196475,
+      "translateYPercent": -8.4099939795304
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-clear-18-415-dropper",
+    "websiteSku": "GBElg60DrpGl",
+    "graceSku": "GB-ELG-CLR-60ML-DRP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343652315428",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg60DrpGl.1047ee299697.png",
+    "alt": "60 ml Clear Elegant Dropper Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.0368965517241377,
+      "translateXPercent": -3.054540229885049,
+      "translateYPercent": -2.634900731452438
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-clear-18-415-lotionpump",
+    "websiteSku": "LBElg60LtnMtGl",
+    "graceSku": "LB-ELG-CLR-60ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343693340964",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/LBElg60LtnMtGl.b5928974d71b.png",
+    "alt": "60 ml Clear Elegant Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0135955056179775,
+      "translateXPercent": -2.8758988764044964,
+      "translateYPercent": -0.8378958120531169
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-clear-18-415-perfumespray",
+    "websiteSku": "GBElg60SpryMtGl",
+    "graceSku": "GB-ELG-CLR-60ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343644647716",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg60SpryMtGl.1e06f28a2917.png",
+    "alt": "60 ml Clear Elegant Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0428901734104046,
+      "translateXPercent": -3.708843930635832,
+      "translateYPercent": -1.9120336311087702
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-clear-18-415-reducer",
+    "websiteSku": "GBElg60RdcrShnGl",
+    "graceSku": "GB-ELG-CLR-60ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343664308516",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg60RdcrShnGl.52334a32c416.png",
+    "alt": "60 ml Clear Elegant Reducer Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9596808510638297,
+      "translateXPercent": 1.3761702127659607,
+      "translateYPercent": 7.536847195357836
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-frosted-18-415-antiquespray",
+    "websiteSku": "GBElgFrst60AnSpGl",
+    "graceSku": "GB-ELG-FRS-60ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343649497380",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst60AnSpGl.4c33d203bdfc.png",
+    "alt": "60 ml Frosted Elegant Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.1247600000000002,
+      "translateXPercent": -6.238000000000006,
+      "translateYPercent": -11.356358974358985
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-frosted-18-415-antiquespray-tassel",
+    "websiteSku": "GBElgFrst60AnSpTslGl",
+    "graceSku": "GB-ELG-FRS-60ML-AST-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343653953828",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst60AnSpTslGl.b147f12fc5dd.png",
+    "alt": "60 ml Frosted Elegant Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.1247600000000002,
+      "translateXPercent": -6.238000000000006,
+      "translateYPercent": -11.356358974358985
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-frosted-18-415-dropper",
+    "websiteSku": "GBElgFrst60DrpGl",
+    "graceSku": "GB-ELG-FRS-60ML-DRP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343653888292",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst60DrpGl.7926e95f57c6.png",
+    "alt": "60 ml Frosted Elegant Dropper Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.0803592814371257,
+      "translateXPercent": -9.599820359281429,
+      "translateYPercent": -5.5775721284703135
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-frosted-18-415-lotionpump",
+    "websiteSku": "LBElgFrst60LtnMtGl",
+    "graceSku": "LB-ELG-FRS-60ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343693635876",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/LBElgFrst60LtnMtGl.39fe92012388.png",
+    "alt": "60 ml Frosted Elegant Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.086867469879518,
+      "translateXPercent": -7.241686746987948,
+      "translateYPercent": -4.512595837897028
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-frosted-18-415-perfumespray",
+    "websiteSku": "GBElgFrst60SpryMtGl",
+    "graceSku": "GB-ELG-FRS-60ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343645532452",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst60SpryMtGl.2d19706db9b3.png",
+    "alt": "60 ml Frosted Elegant Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0309714285714284,
+      "translateXPercent": -1.7203999999999933,
+      "translateYPercent": -3.974337662337651
+    }
+  },
+  {
+    "groupSlug": "elegant-60ml-frosted-18-415-reducer",
+    "websiteSku": "GBElgFrst60RdcrShnGl",
+    "graceSku": "GB-ELG-FRS-60ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343664603428",
+    "family": "Elegant",
+    "capacityMl": 60,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst60RdcrShnGl.93bd088c5609.png",
+    "alt": "60 ml Frosted Elegant Reducer Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.949578947368421,
+      "translateXPercent": -0.48594736842105135,
+      "translateYPercent": 7.839904306220099
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-clear-18-415-antiquespray",
+    "websiteSku": "GBElg100AnSpGl",
+    "graceSku": "GB-ELG-CLR-100ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343681052964",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg100AnSpGl.d9c06609d87f.png",
+    "alt": "100 ml Clear Elegant Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.013157894736842,
+      "translateXPercent": 6.603070175438603,
+      "translateYPercent": -3.5614035087719182
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBElg100AnSpTslIvyGl",
+    "graceSku": "GB-ELG-CLR-100ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343682068772",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg100AnSpTslIvyGl.cf5378c6bbd2.png",
+    "alt": "100 ml Clear Elegant Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1.3095238095238095,
+      "translateXPercent": -5.654761904761908,
+      "translateYPercent": -15.34920634920635
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-clear-18-415-lotionpump",
+    "websiteSku": "LBElg100LtnMtGl",
+    "graceSku": "LB-ELG-CLR-100ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343612043556",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/LBElg100LtnMtGl.c590ba70cd2a.png",
+    "alt": "100 ml Clear Elegant Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0203045685279188,
+      "translateXPercent": -4.416243654822343,
+      "translateYPercent": -3.3008767881864287
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-clear-18-415-perfumespray",
+    "websiteSku": "GBElg100SpryMtGl",
+    "graceSku": "GB-ELG-CLR-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343650480420",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg100SpryMtGl.e440498f470d.png",
+    "alt": "100 ml Clear Elegant Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0414507772020725,
+      "translateXPercent": -2.246113989637299,
+      "translateYPercent": -3.9929345266132676
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-clear-18-415-reducer",
+    "websiteSku": "GBElg100RdcrShnGl",
+    "graceSku": "GB-ELG-CLR-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343636226340",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBElg100RdcrShnGl.9dcfb2348294.png",
+    "alt": "100 ml Clear Elegant Reducer Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.9901477832512315,
+      "translateXPercent": -1.9827586206896513,
+      "translateYPercent": 3.9870129870129833
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-frosted-18-415-antiquespray",
+    "websiteSku": "GBElgFrst100AnSpGl",
+    "graceSku": "GB-ELG-FRS-100ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343683084580",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst100AnSpGl.cb6986a3907b.png",
+    "alt": "100 ml Frosted Elegant Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-frosted-18-415-antiquespray-tassel",
+    "websiteSku": "GBElgFrst100AnSpTslGl",
+    "graceSku": "GB-ELG-FRS-100ML-AST-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343683838244",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst100AnSpTslGl.46f1bd0f1804.png",
+    "alt": "100 ml Frosted Elegant Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": 0
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-frosted-18-415-lotionpump",
+    "websiteSku": "LBElgFrst100LtnMtGl",
+    "graceSku": "LB-ELG-FRS-100ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343609094436",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/LBElgFrst100LtnMtGl.63d4f80fa9cf.png",
+    "alt": "100 ml Frosted Elegant Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.1893491124260356,
+      "translateXPercent": -9.863905325443795,
+      "translateYPercent": -13.878967186659498
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-frosted-18-415-perfumespray",
+    "websiteSku": "GBElgFrst100SpryMtGl",
+    "graceSku": "GB-ELG-FRS-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343650906404",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst100SpryMtGl.6d10b6f53ae5.png",
+    "alt": "100 ml Frosted Elegant Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.1893491124260356,
+      "translateXPercent": -14.423076923076925,
+      "translateYPercent": -8.472834857450243
+    }
+  },
+  {
+    "groupSlug": "elegant-100ml-frosted-18-415-reducer",
+    "websiteSku": "GBElgFrst100RdcrShnGl",
+    "graceSku": "GB-ELG-FRS-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343640879396",
+    "family": "Elegant",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBElgFrst100RdcrShnGl.a6c8aab37cc0.png",
+    "alt": "100 ml Frosted Elegant Reducer Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1.0203045685279188,
+      "translateXPercent": -5.9467005076142145,
+      "translateYPercent": -0.8274111675126851
+    }
+  },
+  {
+    "groupSlug": "circle-15ml-clear-13-415",
+    "websiteSku": "GBCrcl15Gl",
+    "graceSku": "GB-CIR-CLR-15ML-GLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343644451108",
+    "family": "Circle",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
+    "alt": "15 ml Clear Circle Bottle with Cap — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.7751677852348994,
+      "translateXPercent": 9.562080536912745,
+      "translateYPercent": 26.402684563758385
+    }
+  },
+  {
+    "groupSlug": "circle-15ml-clear-13-415-finemist",
+    "websiteSku": "GBCrcl15SpryGlMatt",
+    "graceSku": "GB-CIR-CLR-15ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343633178916",
+    "family": "Circle",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
+    "alt": "15 ml Clear Circle Fine Mist Spray Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.77,
+      "translateXPercent": 10.601666666666667,
+      "translateYPercent": 23.333333333333343
+    }
+  },
+  {
+    "groupSlug": "circle-15ml-clear-13-415-rollon",
+    "websiteSku": "GBCrcl15MtlRollGlMatt",
+    "graceSku": "GB-CIR-CLR-15ML-MRL-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343611060516",
+    "family": "Circle",
+    "capacityMl": 15,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
+    "alt": "15 ml Clear Circle Roll-On Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 0.8076923076923078,
+      "translateXPercent": 7.865384615384613,
+      "translateYPercent": 20.75524475524476
+    }
+  },
+  {
+    "groupSlug": "circle-30ml-clear-15-415",
+    "websiteSku": "GBCrcl30GlCap",
+    "graceSku": "GB-CIR-CLR-30ML-GLD-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343648645412",
+    "family": "Circle",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl30GlCap.bec08b247ea0.png",
+    "alt": "30 ml Clear Circle Bottle with Cap — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-30ml-clear-15-415-perfumespray",
+    "websiteSku": "GBCrcl30SpryMattGl",
+    "graceSku": "GB-CIR-CLR-30ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343640355108",
+    "family": "Circle",
+    "capacityMl": 30,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.64b69135e487.png",
+    "alt": "30 ml Clear Circle Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-clear-18-415-antiquespray",
+    "websiteSku": "GBCrcl50AnSpGl",
+    "graceSku": "GB-CIR-CLR-50ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343666471204",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.5e3b4ed13bef.png",
+    "alt": "50 ml Clear Circle Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBCrcl50AnSpTslIvyGl",
+    "graceSku": "GB-CIR-CLR-50ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343667159332",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.2a48a28d4e3c.png",
+    "alt": "50 ml Clear Circle Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-clear-18-415-dropper",
+    "websiteSku": "GBCrcl50DrpGl",
+    "graceSku": "GB-CIR-CLR-50ML-DRP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343643435300",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1671b9d14401.png",
+    "alt": "50 ml Clear Circle Dropper Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-clear-18-415-lotionpump",
+    "websiteSku": "LBCrcl50LtnMtGl",
+    "graceSku": "LB-CIR-CLR-50ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343689867556",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.6389afea63f2.png",
+    "alt": "50 ml Clear Circle Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-clear-18-415-perfumespray",
+    "websiteSku": "GBCrcl50SpryMtGl",
+    "graceSku": "GB-CIR-CLR-50ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343626559780",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.3b4f2e7f3575.png",
+    "alt": "50 ml Clear Circle Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-clear-18-415-reducer",
+    "websiteSku": "GBCrcl50RdcrShnGl",
+    "graceSku": "GB-CIR-CLR-50ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343655199012",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.1c8ebbb7f8c2.png",
+    "alt": "50 ml Clear Circle Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-frosted-18-400-reducer",
+    "websiteSku": "GBCrclFrst50RdcrIvyLthr",
+    "graceSku": "GB-CIR-FRS-50ML-RDC-IVR",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343691473188",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.fabd4d918ae6.png",
+    "alt": "50 ml Frosted Circle Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-frosted-18-415-antiquespray",
+    "websiteSku": "GBCrclFrst50AnSpGl",
+    "graceSku": "GB-CIR-FRS-50ML-ASP-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343667552548",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
+    "alt": "50 ml Frosted Circle Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-frosted-18-415-dropper",
+    "websiteSku": "GBCrclFrst50DrpGl",
+    "graceSku": "GB-CIR-FRS-50ML-DRP-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343644090660",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst50DrpGl.c3efc5033ad5.png",
+    "alt": "50 ml Frosted Circle Dropper Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-frosted-18-415-lotionpump",
+    "websiteSku": "LBCrclFrst50LtnMtGl",
+    "graceSku": "LB-CIR-FRS-50ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343690293540",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.f31e21488965.png",
+    "alt": "50 ml Frosted Circle Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-frosted-18-415-perfumespray",
+    "websiteSku": "GBCrclFrst50SpryMtGl",
+    "graceSku": "GB-CIR-FRS-50ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343628624164",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.d9557a8a06fb.png",
+    "alt": "50 ml Frosted Circle Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-50ml-frosted-18-415-reducer",
+    "websiteSku": "GBCrclFrst50RdcrShnGl",
+    "graceSku": "GB-CIR-FRS-50ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343658377508",
+    "family": "Circle",
+    "capacityMl": 50,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.617a4baaf53b.png",
+    "alt": "50 ml Frosted Circle Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-clear-18-415-antiquespray",
+    "websiteSku": "GBCrcl100AnSpGl",
+    "graceSku": "GB-CIR-CLR-100ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343674794276",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.dd8fc0f62a83.png",
+    "alt": "100 ml Clear Circle Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBCrcl100AnSpTslGl",
+    "graceSku": "GB-CIR-CLR-100ML-AST-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343675089188",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.a045b0fe5c0e.png",
+    "alt": "100 ml Clear Circle Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-clear-18-415-lotionpump",
+    "websiteSku": "LBCrcl100LtnMtGl",
+    "graceSku": "LB-CIR-CLR-100ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343605883172",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.318b80039e44.png",
+    "alt": "100 ml Clear Circle Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-clear-18-415-perfumespray",
+    "websiteSku": "GBCrcl100SpryMtGl",
+    "graceSku": "GB-CIR-CLR-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343647531300",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.d7d11d3a4db4.png",
+    "alt": "100 ml Clear Circle Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-clear-18-415-reducer",
+    "websiteSku": "GBCrcl100RdcrShnGl",
+    "graceSku": "GB-CIR-CLR-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343612928292",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.01fcf261dd38.png",
+    "alt": "100 ml Clear Circle Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-frosted-18-415-antiquespray",
+    "websiteSku": "GBCrclFrst100AnSpGl",
+    "graceSku": "GB-CIR-FRS-100ML-ASP-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343675515172",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
+    "alt": "100 ml Frosted Circle Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-frosted-18-415-antiquespray-tassel",
+    "websiteSku": "GBCrclFrst100AnSpTslIvyGl",
+    "graceSku": "GB-CIR-FRS-100ML-AST-IVGD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343688392996",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.07288e4ba905.png",
+    "alt": "100 ml Frosted Circle Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-frosted-18-415-lotionpump",
+    "websiteSku": "LBCrclFrst100LtnMtGl",
+    "graceSku": "LB-CIR-FRS-100ML-LPM-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343609389348",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.f8a3bd634987.png",
+    "alt": "100 ml Frosted Circle Lotion Pump Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-frosted-18-415-perfumespray",
+    "websiteSku": "GBCrclFrst100SpryMtGl",
+    "graceSku": "GB-CIR-FRS-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343647858980",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
+    "alt": "100 ml Frosted Circle Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "circle-100ml-frosted-18-415-reducer",
+    "websiteSku": "GBCrclFrst100RdcrShnGl",
+    "graceSku": "GB-CIR-FRS-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343617286436",
+    "family": "Circle",
+    "capacityMl": 100,
+    "bottleColor": "Frosted",
+    "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
+    "alt": "100 ml Frosted Circle Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-100ml-clear-18-415-antiquespray",
+    "websiteSku": "GBEmp100AnSpGl",
+    "graceSku": "GB-EMP-CLR-100ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343684329764",
+    "family": "Empire",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp100AnSpGl.9bd7af0c9dc7.png",
+    "alt": "100 ml Clear Empire Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-100ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBEmp100AnSpTslGl",
+    "graceSku": "GB-EMP-CLR-100ML-AST-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343684526372",
+    "family": "Empire",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp100AnSpTslGl.3212b05eabbc.png",
+    "alt": "100 ml Clear Empire Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-100ml-clear-18-415-lotionpump",
+    "websiteSku": "LBEmp100WhtClOvrCp",
+    "graceSku": "LB-EMP-CLR-100ML-LPM-OVCP-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343612633380",
+    "family": "Empire",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/LBEmp100WhtClOvrCp.48ccc5df1efe.png",
+    "alt": "100 ml Clear Empire Lotion Pump Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-100ml-clear-18-415-perfumespray",
+    "websiteSku": "GBEmp100SpryMtGl",
+    "graceSku": "GB-EMP-CLR-100ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343651037476",
+    "family": "Empire",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp100SpryMtGl.08bb78aa3e9c.png",
+    "alt": "100 ml Clear Empire Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-100ml-clear-18-415-reducer",
+    "websiteSku": "GBEmp100RdcrShnGl",
+    "graceSku": "GB-EMP-CLR-100ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343643566372",
+    "family": "Empire",
+    "capacityMl": 100,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp100RdcrShnGl.8ce6d101fb1a.png",
+    "alt": "100 ml Clear Empire Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  }
+]

@@ -1,7 +1,7 @@
 "use client";
 
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
-import type { CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
+import type { CatalogHero } from "@/lib/products/catalog-heroes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,7 +15,7 @@ import type { ProductCardVariantPreview } from "@/lib/products/product-card-vari
 
 type Props = {
     title: string;
-    catalogHero?: CylinderCatalogHero | null;
+    catalogHero?: CatalogHero | null;
     imageUrl: string | null;
     heroHoverImageUrl?: string | null;
     href: string;
@@ -70,11 +70,14 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
         return () => { images.forEach((image) => { image.onload = null; }); };
     }, [preloadUrls]);
 
+    const approvedHero = catalogHero && !("hoverUrl" in catalogHero);
+    const exactVariant = variants.find(variant => variant.websiteSku === catalogHero?.websiteSku);
+
     return <div>
         {catalogHero ? <ProductCardImagePreview
-            productTitle={title} defaultImage={{ url: imageUrl, alt: title }} catalogHero={catalogHero}
+            productTitle={title} defaultImage={{ url: approvedHero ? exactVariant?.imageUrl ?? null : imageUrl, alt: title }} catalogHero={catalogHero}
             productHref={href} variantPreviews={[]}
-            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug }}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: approvedHero ? exactVariant?.websiteSku : undefined }}
         /> : <Link href={href} aria-label={`View ${title}`} className="relative block aspect-[4/3] w-full overflow-hidden bg-[#f0ebe3] sm:aspect-[10/11]"
             onPointerEnter={(event) => { if (event.pointerType === "mouse") setHeroHovered(true); }}
             onPointerLeave={() => setHeroHovered(false)} data-visual-mode={visual.mode}
