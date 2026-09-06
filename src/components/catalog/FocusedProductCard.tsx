@@ -40,7 +40,7 @@ function detailLine(product: GuidedFinderProduct): string {
 
 export default function FocusedProductCard({ product, finderUrl, onOpen }: FocusedProductCardProps) {
     const productHref = buildFocusedProductHref(product.href, finderUrl);
-    const productTitle = product.catalogHero?.alt ?? getCustomerFacingProductName({
+    const productTitle = getCustomerFacingProductName({
         group: {
             family: product.family,
             capacity: product.capacity,
