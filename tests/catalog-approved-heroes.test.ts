@@ -8,10 +8,11 @@ import { getCatalogHero, getProductHero, getCatalogHeroProductHref } from '../sr
 import elegant from '../docs/reviews/elegant-family-final-manifest-2026-09-06.json';
 import circle from '../docs/reviews/circle-family-final-manifest-2026-09-06.json';
 import empire from '../docs/reviews/empire-100ml-final-manifest-2026-09-06.json';
-const approved=[...elegant.rows,...circle.rows,...empire.rows];
+import diva from '../docs/reviews/diva-family-final-manifest-2026-09-06.json';
+const approved=[...elegant.rows,...circle.rows,...empire.rows,...diva.rows];
 describe('approved catalog hero release',()=>{
- it('contains only the 65 explicitly approved registrations',()=>{
-  expect(heroes).toHaveLength(65);
+ it('contains only the 86 explicitly approved registrations',()=>{
+  expect(heroes).toHaveLength(86);
   expect(new Set(heroes.map(h=>h.websiteSku))).toEqual(new Set(approved.map(h=>h.sku)));
   expect(getProductHero('GBEmp50SpryMtGl')).toBeNull();
   expect(getCatalogHero('atomizer-10ml', [{websiteSku:'GBAtom10Gl'}])).toBeNull();

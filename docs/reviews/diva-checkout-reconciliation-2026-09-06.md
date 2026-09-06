@@ -31,7 +31,7 @@ The resolver now checks that a saved ID matches the requested Grace or website S
 - Actual Shopify checkout displays six distinct SKU lines with correct photos: three at $2.40, three at $2.90, subtotal $15.90. No contact/payment information was entered and no order was placed.
 - All 21 approved Diva hero files remain unchanged; they retain their source and framing lock.
 
-The Shopify/Convex correction is applied. The saved-cart safeguard still needs review, merge, deployment and a deployed stale-ID smoke check **before releasing the Diva heroes**. This PR does not publish those heroes or deploy Convex.
+The Shopify/Convex correction is applied. The user subsequently authorized publishing all 21 approved Diva heroes. PR #104 now bundles the exact approved image files and registry entries with the saved-cart safeguard. Verify both on the PR preview before merge, then verify the production deployment. No Convex deployment is required.
 
 ## Recovery notes
 

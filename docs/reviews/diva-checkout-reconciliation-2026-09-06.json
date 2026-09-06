@@ -1,8 +1,8 @@
 {
   "at": "2026-09-06T21:19:42.874708+00:00",
   "dataStatus": "reconciled-and-live-verified",
-  "codeStatus": "saved-cart-identity-guard-pending-PR-deployment",
-  "heroReleaseStatus": "held-until-guard-deployed",
+  "codeStatus": "saved-cart-identity-guard-in-Diva-release-PR",
+  "heroReleaseStatus": "21-approved-heroes-bundled-pending-preview-and-CI",
   "environment": "https://helpful-elephant-638.convex.cloud",
   "shopifyDomain": "bestbottles-1580.myshopify.com",
   "recordsPreserved": 6,
