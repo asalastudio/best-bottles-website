@@ -1233,5 +1233,119 @@
       "translateXPercent": 0,
       "translateYPercent": -0.02564102564102882
     }
+  },
+  {
+    "groupSlug": "empire-50ml-clear-18-415-antiquespray",
+    "websiteSku": "GBEmp50AnSpGl",
+    "graceSku": "GB-EMP-CLR-50ML-ASP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343669780772",
+    "family": "Empire",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp50AnSpGl.e441205f0179.png",
+    "alt": "50 ml Clear Empire Vintage Bulb Spray Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-50ml-clear-18-415-antiquespray-tassel",
+    "websiteSku": "GBEmp50AnSpTslGl",
+    "graceSku": "GB-EMP-CLR-50ML-AST-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343606636836",
+    "family": "Empire",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp50AnSpTslGl.02fd6b63e562.png",
+    "alt": "50 ml Clear Empire Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-50ml-clear-18-415-dropper",
+    "websiteSku": "GBEmp50DrpGl",
+    "graceSku": "GB-EMP-CLR-50ML-DRP-GLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343644811556",
+    "family": "Empire",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp50DrpGl.7d886a6cdf1e.png",
+    "alt": "50 ml Clear Empire Dropper Bottle — Empty · assembled",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · assembled",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-50ml-clear-18-415-perfumespray",
+    "websiteSku": "GBEmp50SpryMtGl",
+    "graceSku": "GB-EMP-CLR-50ML-SPR-MGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343635865892",
+    "family": "Empire",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp50SpryMtGl.9fe529e763bc.png",
+    "alt": "50 ml Clear Empire Bottle — Empty · cap beside",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · cap beside",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-50ml-clear-18-415-reducer",
+    "websiteSku": "GBEmp50RdcrShnGl",
+    "graceSku": "GB-EMP-CLR-50ML-RDC-SGLD",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343659589924",
+    "family": "Empire",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/GBEmp50RdcrShnGl.9215b4d6a062.png",
+    "alt": "50 ml Clear Empire Reducer Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
+  },
+  {
+    "groupSlug": "empire-50ml-clear-18-415-lotionpump",
+    "websiteSku": "LBEmp50WhtClOvrCp",
+    "graceSku": "LB-EMP-CLR-50ML-LPM-OVCP-T",
+    "shopifyVariantId": "gid://shopify/ProductVariant/53343690916132",
+    "family": "Empire",
+    "capacityMl": 50,
+    "bottleColor": "Clear",
+    "url": "/images/catalog/bone-review/LBEmp50WhtClOvrCp.49a6f2e62f03.png",
+    "alt": "50 ml Clear Empire Lotion Pump Bottle — Empty · capped",
+    "width": 1560,
+    "height": 1716,
+    "presentation": "Empty · capped",
+    "framing": {
+      "scale": 1,
+      "translateXPercent": 0,
+      "translateYPercent": -0.02564102564102882
+    }
   }
 ]
