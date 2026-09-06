@@ -13,15 +13,17 @@
  * viewer and the details disclosures respectively.
  */
 import Link from "next/link";
-import { forwardRef, useLayoutEffect, useRef, useSyncExternalStore, type ReactNode } from "react";
+import { forwardRef, useLayoutEffect, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { ArrowLeft, ArrowsOutSimple, ShoppingBag } from "@/components/icons";
 import PaperDollLayers, { type KitPart } from "@/components/products/PaperDollLayers";
 import { mobilePdpToolbarPaddingTop } from "@/lib/products/mobile-pdp-chrome";
+import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 
 const subscribeToHydration = () => () => {};
 const serverCartCount = () => 0;
 
 type MobileProductHeroProps = {
+    catalogHero?: CatalogHero | null;
     plateUrl: string | null;
     kitParts: KitPart[] | null;
     /** Catalogue photograph shown only when no plate can be painted. */
@@ -38,13 +40,15 @@ type MobileProductHeroProps = {
 };
 
 const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(function MobileProductHero(
-    { plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay },
+    { catalogHero, plateUrl, kitParts, fallbackImageUrl, alt, backHref, cartCount, onOpenCart, onPlateError, onViewLarger, overlay },
     ref,
 ) {
     // Match the empty server badge before showing a restored cart during hydration.
     const visibleCartCount = useSyncExternalStore(subscribeToHydration, () => cartCount, serverCartCount);
     const hasStack = Boolean(plateUrl || kitParts?.length);
-    const hasVisual = hasStack || Boolean(fallbackImageUrl);
+    const [failedHeroes, setFailedHeroes] = useState<Set<string>>(() => new Set());
+    const studioHero = catalogHero && !failedHeroes.has(catalogHero.url) ? catalogHero : null;
+    const hasVisual = Boolean(studioHero) || hasStack || Boolean(fallbackImageUrl);
     const toolbarRef = useRef<HTMLDivElement>(null);
     useLayoutEffect(() => {
         const el = toolbarRef.current;
@@ -97,7 +101,14 @@ const MobileProductHero = forwardRef<HTMLDivElement, MobileProductHeroProps>(fun
                 className="relative mx-auto overflow-hidden"
                 style={{ aspectRatio: "10 / 11", width: "min(100%, calc(42svh * 10 / 11))" }}
             >
-                {hasStack ? (
+                {studioHero ? (
+                    <div className="absolute inset-0 overflow-hidden bg-[#f5f3ef]" data-bb-studio-hero="true" data-bb-website-sku={studioHero.websiteSku}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={studioHero.url} alt={alt} className="absolute inset-0 h-full w-full object-contain"
+                            style={getCatalogHeroStyle(studioHero)} data-bb-hero-state="empty"
+                            onError={() => setFailedHeroes(current => new Set(current).add(studioHero.url))} />
+                    </div>
+                ) : hasStack ? (
                     <PaperDollLayers plateUrl={plateUrl} kitParts={kitParts} alt={alt} onPlateError={onPlateError} />
                 ) : fallbackImageUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element

@@ -20,6 +20,7 @@ import { kitHasRemovableCap, useDecodedKitParts, useDecodedPlate, type KitQueryR
 import type { PdpCompatibilityComponent, PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
 import { analytics } from "@/lib/analytics";
 import type { PlateRef } from "@/lib/paper-doll/plates";
+import { getProductHero } from "@/lib/products/catalog-heroes";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
@@ -484,7 +485,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     const previewingLabel = activeRow && pickerHasPendingChange(picker)
         ? activeRow.options.find((option) => option.id === picker.previewSelectionId)?.label ?? null
         : null;
-    const stickyThumb = committedPlate?.thumb ?? committedPlate?.image ?? selectedVariant?.imageUrl ?? null;
+    const stickyThumb = getProductHero(selectedVariant?.websiteSku)?.url ?? committedPlate?.thumb ?? committedPlate?.image ?? selectedVariant?.imageUrl ?? null;
     const eyebrow = [group.category ?? "Glass Bottle", group.family].filter(Boolean).join(" · ");
 
     return (
@@ -493,6 +494,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             <MobileProductHero
                 ref={heroRef}
+                catalogHero={viewMode === "capOff" ? null : getProductHero(shownVariant?.websiteSku)}
                 plateUrl={decodedPlate.url}
                 kitParts={decodedPlate.url && decodedPlate.url === (viewMode === "capOff" ? shownPlate?.imageCapOff : shownPlate?.image) ? null : kitPartsWithCap}
                 fallbackImageUrl={decodedPlate.url ? null : fallbackImageUrl}

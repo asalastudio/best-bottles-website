@@ -1,8 +1,8 @@
 "use client";
 
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
-import type { CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
-import { useEffect, useState } from "react";
+import type { CatalogHero } from "@/lib/products/catalog-heroes";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useQuery } from "convex/react";
@@ -15,7 +15,7 @@ import type { ProductCardVariantPreview } from "@/lib/products/product-card-vari
 
 type Props = {
     title: string;
-    catalogHero?: CylinderCatalogHero | null;
+    catalogHero?: CatalogHero | null;
     imageUrl: string | null;
     heroHoverImageUrl?: string | null;
     href: string;
@@ -26,8 +26,7 @@ type Props = {
     slug: string;
 };
 
-export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroHoverImageUrl, href, variants, capKind, neck, family, slug }: Props) {
-    const [heroHovered, setHeroHovered] = useState(false);
+export default function CatalogCardPreview({ title, catalogHero, imageUrl, href, variants, capKind, neck, family, slug }: Props) {
     const [failed, setFailed] = useState<Set<string>>(() => new Set());
     const canHaveCaps = Boolean(capKind && neck && variants.length > 1);
     const capPlates = useQuery(api.productPlates.byFamily, canHaveCaps
@@ -52,32 +51,22 @@ export default function CatalogCardPreview({ title, catalogHero, imageUrl, heroH
     const showRail = canHaveCaps && photographed.length > 1;
     const visual = resolveCatalogCardVisual({
         heroImageUrl: imageUrl && !failed.has(imageUrl) ? imageUrl : null,
-        heroHoverImageUrl: heroHoverImageUrl && !failed.has(heroHoverImageUrl) ? heroHoverImageUrl : null,
-        heroHovered,
+        heroHoverImageUrl: null,
+        heroHovered: false,
         fallbackImageUrl: variants[0] ? assembly(variants[0]) : null,
     });
     const displayImage = visual.url;
     const fail = (url: string) => setFailed((current) => new Set(current).add(url));
 
-    const preloadUrls = heroHoverImageUrl ?? "";
-    useEffect(() => {
-        if (!preloadUrls) return;
-        const images = preloadUrls.split("\n").map((url) => {
-            const image = new window.Image();
-            image.src = url;
-            return image;
-        });
-        return () => { images.forEach((image) => { image.onload = null; }); };
-    }, [preloadUrls]);
+    const heroFallbackVariant = variants.find(variant => variant.websiteSku === catalogHero?.websiteSku);
 
     return <div>
         {catalogHero ? <ProductCardImagePreview
-            productTitle={title} defaultImage={{ url: imageUrl, alt: title }} catalogHero={catalogHero}
+            productTitle={title} defaultImage={{ url: heroFallbackVariant?.imageUrl ?? null, alt: title }} catalogHero={catalogHero}
             productHref={href} variantPreviews={[]}
-            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug }}
+            auditMeta={{ surface: "catalog-card", family, productGroupSlug: slug, websiteSku: heroFallbackVariant?.websiteSku }}
         /> : <Link href={href} aria-label={`View ${title}`} className="relative block aspect-[4/3] w-full overflow-hidden bg-[#f0ebe3] sm:aspect-[10/11]"
-            onPointerEnter={(event) => { if (event.pointerType === "mouse") setHeroHovered(true); }}
-            onPointerLeave={() => setHeroHovered(false)} data-visual-mode={visual.mode}
+            data-visual-mode={visual.mode}
             data-bb-image-audit="catalog-card" data-bb-family={family ?? undefined} data-bb-product-group-slug={slug}
             data-bb-website-sku={variants[0]?.websiteSku}>
             {displayImage ? <Image src={displayImage} alt={title} fill
