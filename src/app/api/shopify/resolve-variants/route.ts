@@ -47,8 +47,6 @@ export async function POST(req: NextRequest) {
 
     try {
         const directItems = requestedItems.filter((item) => item.shopifyVariantId);
-        const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId);
-        const fallbackSkus = fallbackItems.map((i) => i.sku);
 
         const token = process.env.SHOPIFY_ADMIN_TOKEN;
         if (!token) {
@@ -69,7 +67,16 @@ export async function POST(req: NextRequest) {
         const directStateById = new Map(
             directVariantStates.map((state) => [state.variantId, state]),
         );
-        const directCheckoutItems = directItems.flatMap((item) => {
+        // A saved ID can now belong to a different SKU after catalog repair.
+        // Resolve stale or mismatched IDs again from the requested identity.
+        const matchingDirectItems = directItems.filter((item) => {
+            const state = directStateById.get(item.shopifyVariantId as string);
+            return Boolean(state && (state.sku === item.sku
+                || (item.websiteSku && state.sku === item.websiteSku)));
+        });
+        const fallbackItems = requestedItems.filter((item) => !matchingDirectItems.includes(item));
+        const fallbackSkus = [...new Set(fallbackItems.map((item) => item.sku))];
+        const directCheckoutItems = matchingDirectItems.flatMap((item) => {
             const state = directStateById.get(item.shopifyVariantId as string);
             if (!state?.available) return [];
             return [{
@@ -82,7 +89,7 @@ export async function POST(req: NextRequest) {
             ? await resolveVariantsBySkus(fallbackSkus)
             : [];
         const unavailableSkus = [
-            ...directItems
+            ...matchingDirectItems
                 .filter((item) => directStateById.get(item.shopifyVariantId as string)?.available === false)
                 .map((item) => item.sku),
             ...variants.filter((v) => !v.available).map((v) => v.sku),
@@ -110,9 +117,6 @@ export async function POST(req: NextRequest) {
             ?? (checkoutItems.length > 0 ? buildCheckoutUrl(checkoutItems) : null);
         const checkoutMode = wholesale?.checkoutUrl ? "wholesale" : "anonymous";
         const unmatchedSkus = [
-            ...directItems
-                .filter((item) => !directStateById.has(item.shopifyVariantId as string))
-                .map((item) => item.sku),
             ...fallbackSkus.filter((s) => !variants.some((v) => v.sku === s)),
         ];
 

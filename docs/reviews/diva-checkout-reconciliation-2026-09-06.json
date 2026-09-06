@@ -1,0 +1,124 @@
+{
+  "at": "2026-09-06T21:19:42.874708+00:00",
+  "dataStatus": "reconciled-and-live-verified",
+  "codeStatus": "saved-cart-identity-guard-pending-PR-deployment",
+  "heroReleaseStatus": "held-until-guard-deployed",
+  "environment": "https://helpful-elephant-638.convex.cloud",
+  "shopifyDomain": "bestbottles-1580.myshopify.com",
+  "recordsPreserved": 6,
+  "existingShopifyProductsPreserved": 2,
+  "existingShopifyVariantsPreserved": 3,
+  "newShopifyVariants": 3,
+  "deletedRecords": 0,
+  "rows": [
+    {
+      "websiteSku": "GBDiva46DrpSl",
+      "graceSku": "GB-DVA-CLR-46ML-DRP-SLV",
+      "convexRecordId": "kd7aq6fqt1h59mv3d8438t3pzs81vkrh",
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "shopifyProductId": "gid://shopify/Product/10433894973732",
+      "priorShopifyVariantId": "gid://shopify/ProductVariant/53343642485028",
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700491044",
+      "shopifyInventoryItemId": "gid://shopify/InventoryItem/58246738051364",
+      "price": "2.40",
+      "shopifySellable": true,
+      "checkoutImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDiva46DrpSl_5515ff28-4189-40ad-b28b-5748327e2645.png?v=1788729385",
+      "checkoutImageAlt": "GBDiva46DrpSl"
+    },
+    {
+      "websiteSku": "GBDiva46DrpGl",
+      "graceSku": "GB-DVA-CLR-46ML-DRP-GLD",
+      "convexRecordId": "kd7basnxbba3mdc7se6kwcd8mn81tskd",
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "shopifyProductId": "gid://shopify/Product/10433894973732",
+      "priorShopifyVariantId": "gid://shopify/ProductVariant/53343643205924",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343643205924",
+      "shopifyInventoryItemId": "gid://shopify/InventoryItem/55366033768740",
+      "price": "2.40",
+      "shopifySellable": true,
+      "checkoutImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDiva46DrpGl_6176e25d-45c5-4778-b827-d2b99f5c5db1.png?v=1788729385",
+      "checkoutImageAlt": "GBDiva46DrpGl"
+    },
+    {
+      "websiteSku": "GBDiva46DrpCu",
+      "graceSku": "GB-DVA-CLR-46ML-DRP-CPR",
+      "convexRecordId": "kd7c2hx8g0xcj9vx3bvxg9h6w981th4x",
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "shopifyProductId": "gid://shopify/Product/10433894973732",
+      "priorShopifyVariantId": "gid://shopify/ProductVariant/53343643238692",
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343643238692",
+      "shopifyInventoryItemId": "gid://shopify/InventoryItem/55366033801508",
+      "price": "2.40",
+      "shopifySellable": true,
+      "checkoutImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDiva46DrpCu_e636fa6c-2a95-408b-acd1-ba36fe085834.png?v=1788729385",
+      "checkoutImageAlt": "GBDiva46DrpCu"
+    },
+    {
+      "websiteSku": "GBDivaFrst46DrpCu",
+      "graceSku": "GB-DVA-FRS-46ML-DRP-CPR",
+      "convexRecordId": "kd74cpt4pzcpmm2fr4gx01d2sh8dndnv",
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "shopifyProductId": "gid://shopify/Product/10433894842660",
+      "priorShopifyVariantId": null,
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700556580",
+      "shopifyInventoryItemId": "gid://shopify/InventoryItem/58246738116900",
+      "price": "2.90",
+      "shopifySellable": true,
+      "checkoutImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDivaFrst46DrpCu.png?v=1788729385",
+      "checkoutImageAlt": "GBDivaFrst46DrpCu"
+    },
+    {
+      "websiteSku": "GBDivaFrst46DrpGl",
+      "graceSku": "GB-DVA-FRS-46ML-DRP-GLD",
+      "convexRecordId": "kd7axrr6xynh39kgdhcef9t8058dm1qn",
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "shopifyProductId": "gid://shopify/Product/10433894842660",
+      "priorShopifyVariantId": null,
+      "shopifyVariantId": "gid://shopify/ProductVariant/56214700523812",
+      "shopifyInventoryItemId": "gid://shopify/InventoryItem/58246738084132",
+      "price": "2.90",
+      "shopifySellable": true,
+      "checkoutImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDivaFrst46DrpGl.png?v=1788729385",
+      "checkoutImageAlt": "GBDivaFrst46DrpGl"
+    },
+    {
+      "websiteSku": "GBDivaFrst46DrpSl",
+      "graceSku": "GB-DVA-FRS-46ML-DRP-SLV",
+      "convexRecordId": "kd7a819vr886sds9w667gwhfxh8dn1we",
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "shopifyProductId": "gid://shopify/Product/10433894842660",
+      "priorShopifyVariantId": null,
+      "shopifyVariantId": "gid://shopify/ProductVariant/53343642485028",
+      "shopifyInventoryItemId": "gid://shopify/InventoryItem/55366033047844",
+      "price": "2.90",
+      "shopifySellable": true,
+      "checkoutImageUrl": "https://cdn.shopify.com/s/files/1/0739/9420/7524/files/GBDivaFrst46DrpSl.png?v=1788729385",
+      "checkoutImageAlt": "GBDivaFrst46DrpSl"
+    }
+  ],
+  "validation": {
+    "deployedResolver": {
+      "directIds": 6,
+      "skuFallback": 6,
+      "status": 200
+    },
+    "shopifyCheckout": {
+      "distinctLines": 6,
+      "quantityEach": 1,
+      "clearPrice": "2.40",
+      "frostedPrice": "2.90",
+      "subtotal": "15.90",
+      "correctPhotosAndSkuLabels": true,
+      "orderPlaced": false
+    },
+    "approvedHeroAssetsChanged": 0
+  },
+  "sourceOptions": {
+    "GBDiva46DrpSl": 2802,
+    "GBDiva46DrpGl": 2803,
+    "GBDiva46DrpCu": 2804,
+    "GBDivaFrst46DrpCu": 3287,
+    "GBDivaFrst46DrpGl": 3288,
+    "GBDivaFrst46DrpSl": 3289
+  }
+}
