@@ -66,3 +66,13 @@ bulk Convex read can remove this cost after a separately reviewed backend deploy
   separated assets remain excluded; this is not a full-catalog media certification.
 - This acceptance covers the local frontend and cart preflight. No production or
   backend deployment, Shopify checkout submission, or image publication was performed.
+
+## PR build corrections
+
+The first CI run caught a finder-navigation assertion still expecting the previous
+Build a Bottle label. It now verifies a single `/matrix` link labeled Build Your Bottle.
+Vercel compiled successfully but was killed with exit 137 during TypeScript checking;
+its build report explicitly recorded an out-of-memory event. The Sentry Webpack hook
+disables Next's default build worker, so the configuration now enables that worker
+explicitly to release compilation memory before type checking. TypeScript build
+validation remains enabled. The full local suite passes 1,071 tests with 7 skipped.
