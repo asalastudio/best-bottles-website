@@ -814,7 +814,7 @@ function SampleTestersFeature() {
                 <FadeUp>
                     <Link
                         href={HOME_SAMPLE_FEATURE.href}
-                        className="group grid overflow-hidden border border-champagne/60 bg-warm-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold md:grid-cols-[0.82fr_1.18fr]"
+                        className="group grid overflow-hidden border border-champagne/60 bg-warm-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-muted-gold lg:grid-cols-[0.82fr_1.18fr]"
                     >
                         <div className="flex flex-col justify-center p-7 sm:p-9 lg:p-12">
                             <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">{HOME_SAMPLE_FEATURE.eyebrow}</p>
@@ -824,13 +824,13 @@ function SampleTestersFeature() {
                                 Explore Small Formats <ArrowRight size={14} className="transition-transform group-hover:translate-x-1" />
                             </span>
                         </div>
-                        <div className="relative min-h-[270px] overflow-hidden sm:min-h-[330px] md:min-h-[380px]" style={{ backgroundColor: HOME_SAMPLE_FEATURE.matte }}>
+                        <div className="relative aspect-[3/2] self-stretch overflow-hidden" style={{ backgroundColor: HOME_SAMPLE_FEATURE.matte }}>
                             <Image
                                 src={HOME_SAMPLE_FEATURE.image}
                                 alt={HOME_SAMPLE_FEATURE.imageAlt}
                                 fill
-                                sizes="(min-width: 768px) 58vw, 100vw"
-                                className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                                sizes="(min-width: 1024px) 58vw, 100vw"
+                                className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                             />
                         </div>
                     </Link>
@@ -858,7 +858,7 @@ function EditorialStories() {
                                 <article className="grid overflow-hidden border border-champagne/55 bg-linen lg:grid-cols-12">
                                     <Link
                                         href={story.href}
-                                        className={`${imageOnRight ? "lg:order-2" : ""} group relative aspect-[4/3] overflow-hidden sm:aspect-[16/9] lg:col-span-7 lg:aspect-auto lg:min-h-[410px] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold`}
+                                        className={`${imageOnRight ? "lg:order-2" : ""} group relative aspect-[3/2] self-stretch overflow-hidden lg:col-span-7 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold`}
                                         style={{ backgroundColor: story.matte }}
                                     >
                                         <Image
@@ -866,7 +866,7 @@ function EditorialStories() {
                                             alt={story.imageAlt}
                                             fill
                                             sizes="(min-width: 1024px) 58vw, 100vw"
-                                            className="object-contain transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                                            className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                                             style={{ objectPosition: story.imagePosition }}
                                         />
                                     </Link>
@@ -892,18 +892,18 @@ function PackagingAccessoriesStory() {
     return (
         <section className="bg-linen pb-14 lg:pb-20">
             <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
-                <FadeUp className="grid overflow-hidden border border-champagne/60 bg-warm-white md:grid-cols-[1.08fr_0.92fr]">
+                <FadeUp className="grid overflow-hidden border border-champagne/60 bg-warm-white lg:grid-cols-[1.08fr_0.92fr]">
                     <Link
                         href={HOME_ACCESSORY_STORY.href}
-                        className="group relative min-h-[290px] overflow-hidden sm:min-h-[350px] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
+                        className="group relative aspect-[3/2] self-stretch overflow-hidden focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold"
                         style={{ backgroundColor: HOME_ACCESSORY_STORY.matte }}
                     >
                         <Image
                             src={HOME_ACCESSORY_STORY.image}
                             alt={HOME_ACCESSORY_STORY.imageAlt}
                             fill
-                            sizes="(min-width: 768px) 54vw, 100vw"
-                            className="object-contain object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+                            sizes="(min-width: 1024px) 54vw, 100vw"
+                            className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.01]"
                         />
                     </Link>
                     <div className="flex flex-col justify-center p-7 sm:p-10 lg:p-12">
