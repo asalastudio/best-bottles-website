@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
-import { ConvexHttpClient } from "convex/browser";
-import { api } from "../../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import MatrixClient from "@/components/matrix/MatrixClient";
-import { loadBuilderBodies } from "@/lib/bottle-builder/server";
+import { loadBuilderFamilies, loadBuilderFamily } from "@/lib/bottle-builder/server";
 import { SITE_URL, buildBreadcrumbJsonLd } from "@/lib/seo";
 
 export const dynamic = "force-dynamic";
@@ -33,15 +31,10 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
 }
 
 async function Builder({ familyParam }: { familyParam?: string }) {
-    const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
-    const allFamilies = await convex.query(api.matrix.listFamilies, {});
-    // The family registry also contains components and packaging. Those are
-    // not bottle bodies and are outside this shopping flow.
-    const families = allFamilies.filter(f => !/cap|closure|sprayer|pump|dropper|gift|packaging|tool|jar|unknown/i.test(f.family));
+    const families = await loadBuilderFamilies();
     const openFamily = familyParam && families.some((f) => f.family === familyParam) ? familyParam
         : families.find(f => f.family === "Cylinder")?.family ?? families[0]?.family ?? "Cylinder";
-    const data = await convex.query(api.matrix.getFamilyRows, { family: openFamily });
-    const bodies = await loadBuilderBodies(data.rows);
+    const bodies = await loadBuilderFamily(openFamily);
     return <MatrixClient key={openFamily} families={families} openFamily={openFamily} bodies={bodies} />;
 }
 

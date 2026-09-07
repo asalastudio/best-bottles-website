@@ -1,0 +1,1667 @@
+{
+  "sources": [
+    {
+      "sku": "GBCrcl15RollBlkSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/25. GBCrcl15RollBlkSh.psd",
+      "sourceSha256": "2b8122ae959e5280c8ee0fa5a62965a9507daee783db000db9749b3eccb63bdf",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollBlkSh.webp",
+        "width": 593,
+        "height": 877,
+        "sha256": "beb3f96ed5d24a03c45cc1bcfd217aa734f28f7bcd111457a80065c24256a8ae"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollCuMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/23. GBCrcl15RollCuMatt.psd",
+      "sourceSha256": "0fff146b936eef73a5ccc622d95ad0e5023656e33cb557693d76a18620235f39",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollCuMatt.webp",
+        "width": 593,
+        "height": 879,
+        "sha256": "30447db2cda9c6deea881590ebcb34992aaf792558ae316e6a92bb55a97487c8"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrPnkLthr",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/51. GBCrcl100RdcrPnkLthr.psd",
+      "sourceSha256": "2334905fdc34e6ee381745c49cd70dbdd3b16f96ea45173768765998ee10a19b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrPnkLthr.webp",
+        "width": 904,
+        "height": 1200,
+        "sha256": "3783f404760b6ba5e216487f3e228e10b93d6780867c17e38018dfa8d8142376"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollGlMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/17. GBCrcl15RollGlMatt.psd",
+      "sourceSha256": "9ea9bdd79e5f5af86a7220a7638e9d240b2c4145c6ae70ff5f59d72bf99b47c4",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollGlMatt.webp",
+        "width": 593,
+        "height": 878,
+        "sha256": "5f92d258054fd511b84d9468eb9baf272f68c8e10c916e880f916e39822a5a07"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+      "sourceSha256": "db84b0c32a00aac4b0d0e6d8dd487e6aad88991d75b398d869e29153ac4f1dec",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrShnGl.webp",
+        "width": 913,
+        "height": 1200,
+        "sha256": "fcc56d44507e265756fca849d401c013ae3087567b53e9fb4d394fbe98cec31f"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollGlSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/19. GBCrcl15RollGlSh.psd",
+      "sourceSha256": "860b7022ba45db63e80464e180510958c66791f21fcc10a60e10f6cf03f69286",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollGlSh.webp",
+        "width": 593,
+        "height": 884,
+        "sha256": "214ce37f7e543ef467d4bc782c9513abf508fafe0b195d03cdd9713d4ff77450"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrShnBlkTall",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/2. GBCrcl100RdcrShnBlkTall.psd",
+      "sourceSha256": "0c9a60e35fca1b932140e9deaa7683f639ac2fbc28654d284cdae2ed9574af37",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrShnBlkTall.webp",
+        "width": 933,
+        "height": 1200,
+        "sha256": "6696ed3ef0723e0ded94d1b1c9f5af05fbc42797819bb9d4c145312d54188c5a"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollPinkDot",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/13. GBCrcl15RollPinkDot.psd",
+      "sourceSha256": "f3ce65180f8b04ae681f2ef0b231a0cb89e500b984123edbf438170ec706c95a",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollPinkDot.webp",
+        "width": 593,
+        "height": 863,
+        "sha256": "43b70f7334e58f1dbbe939f135fd004d6e4a1d78d2e561a5a7d452966e3805ab"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollSlDot",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/11. GBCrcl15RollSlDot.psd",
+      "sourceSha256": "0026b29a62b37383a99c42014eea69f0ba64be7dcf12f7872022ed6cc9dbf2fb",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollSlDot.webp",
+        "width": 593,
+        "height": 866,
+        "sha256": "baea5afa7cc31fbfe5b14bb96833d97d16c7be1e41c55c6125e8ea4806fa51f3"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrBrwnLthr",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/5. GBCrcl100RdcrBrwnLthr.psd",
+      "sourceSha256": "29ed499e162335960398b775a9dd54daf7336940d488351539708d330beafcc2",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrBrwnLthr.webp",
+        "width": 901,
+        "height": 1200,
+        "sha256": "88c4b5f4a5a0fc91d4064f71daa4e768e39a1e28e829e593234f8bc33444a4cb"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollSlMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/15. GBCrcl15RollSlMatt.psd",
+      "sourceSha256": "b7cf85ff5622b7a9e03528629bdd1e62b5b4ef9f77b10a9d45bea8c3acc099f4",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollSlMatt.webp",
+        "width": 593,
+        "height": 870,
+        "sha256": "a520e5db91b645752dde8637a81e93ecc3879651ffd14c51198e7f4abcf1e10b"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollSlSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/21. GBCrcl15RollSlSh.psd",
+      "sourceSha256": "9c006426be3530e2c301d1d4a205ebedbe71ee8302998788f856a671ce25099f",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollSlSh.webp",
+        "width": 593,
+        "height": 884,
+        "sha256": "e890bda21b1297dc32cd1a0777e7cb9f7d1e2ed7d2b4f8f001535346a3d50965"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrLBrwnLthr",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/6. GBCrcl100RdcrLBrwnLthr.psd",
+      "sourceSha256": "960d869ac1e93f23e24574ec4fcc014b7070c4c89842eb0682652ed59d16f721",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrLBrwnLthr.webp",
+        "width": 902,
+        "height": 1200,
+        "sha256": "03210db3340b2b7c70bf4bdcb144f0015ec23a57128a68c2aca47cf55f1606ac"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrShnSl",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/7. GBCrcl100RdcrShnSl.psd",
+      "sourceSha256": "351c08881db7119f657ea696907a946d475d1a27f2baa9821d5e1d41a4b2e318",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrShnSl.webp",
+        "width": 991,
+        "height": 1200,
+        "sha256": "01a166620ce4282f9e0036b6b640bcfb9683a73767959389756e227a54fe1552"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrMtSlTall",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/8. GBCrcl100RdcrMtSlTall.psd",
+      "sourceSha256": "09f384828105696c61f73a057ca23f36d5eb7c7adcccd1ef6f3feeaf7db114af",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrMtSlTall.webp",
+        "width": 938,
+        "height": 1200,
+        "sha256": "6fe9b76c3c987a93ac2c5321fd80a031a40e8da105f0d231f7f58cf69bc5a0d1"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrMtSl",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/9. GBCrcl100RdcrMtSl.psd",
+      "sourceSha256": "822b56b44ebbdd6e3d8854563c9d624918d2081a07f40dc1ef1a41c6903a4036",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrMtSl.webp",
+        "width": 991,
+        "height": 1200,
+        "sha256": "5f552121f3742b1fb3c944f40c050544d68fa546e815a4fa866e66e52b512eaf"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrWht",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/10. GBCrcl100RdcrWht.psd",
+      "sourceSha256": "16829f96099a17807d86ee32e63e40ce89d5495c4c2fb2510d96d0e71fe13dac",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrWht.webp",
+        "width": 927,
+        "height": 1200,
+        "sha256": "618c8cc3d30caf1e646f214652f170c7bbffeacfc9083057a60f5b32135fbbed"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrIvyLthr",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/52. GBCrcl100RdcrIvyLthr.psd",
+      "sourceSha256": "83c2ab5907b7cb2fbe6a1cdb5ecb418a82e7bd066d7de8b1d8992f6ea9de0c86",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrIvyLthr.webp",
+        "width": 908,
+        "height": 1200,
+        "sha256": "7cf94a9645183d5c3ccb92be742086e1140882b2901e078ca6e2ce55cea6bb16"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnSl",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/7. GBCrclFrst100RdcrShnSl.psd",
+      "sourceSha256": "b7e8f77d5df582476020970bd3a8dbb747daca1b4a18aaa83e2857658a960399",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrShnSl.webp",
+        "width": 982,
+        "height": 1200,
+        "sha256": "9d6897816cf8806c0d30c8f52c71f8cca42dd9450a940d70b22f324ea0faf78f"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/1. GBCrclFrst100RdcrShnGl.psd",
+      "sourceSha256": "5eea5af69af5b5320c928631e21f3cc247d9eb370f100b2b613088be225fe342",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrShnGl.webp",
+        "width": 907,
+        "height": 1200,
+        "sha256": "beaf2cb832c95ac50720ce1173a93352ffdbef33d35e9e76ba475585f32cb6a0"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrIvyLthr",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/52. GBCrclFrst100RdcrIvyLthr.psd",
+      "sourceSha256": "f8c51ed92e518b5b4310b56290644eacef9e4cc334e6882062d80ae4bd88578f",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrIvyLthr.webp",
+        "width": 905,
+        "height": 1200,
+        "sha256": "cedfbbb0197cd7acd9ad03422e01387dea9c988b6e95086bd462a93dd5bb87bd"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrPnkLthr",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/51. GBCrclFrst100RdcrPnkLthr.psd",
+      "sourceSha256": "e5fafdb5376d8268bbdb6b936c09f932c44754d5490c356b9a6bec2b265322f3",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrPnkLthr.webp",
+        "width": 903,
+        "height": 1200,
+        "sha256": "4fc415e157cf46722ba8a4d50c5a75f0a75b2b184bf4f941601cd3a27a670b6e"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnBlkTall",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/2. GBCrclFrst100RdcrShnBlkTall.psd",
+      "sourceSha256": "19f364453fbdd117b351107659913ed2bc80e919507612b3943d1f963e3c03e7",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrShnBlkTall.webp",
+        "width": 925,
+        "height": 1200,
+        "sha256": "ad03f20c620023846df9a6902fb7c152f52d2dd36849ed46e913397e5e63fdce"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrBrwnLthr",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/5. GBCrclFrst100RdcrBrwnLthr.psd",
+      "sourceSha256": "57bc986a533142e1a5cea30a3b9a1c7bdd02fb1d2af8d90b53be3983505c03b2",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrBrwnLthr.webp",
+        "width": 904,
+        "height": 1200,
+        "sha256": "f3a018a349bfeaab74b14b7c9907d4a1406b7f2ded146943e875b83203639821"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrLBrwnLthr",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/6. GBCrclFrst100RdcrLBrwnLthr.psd",
+      "sourceSha256": "5905d399a9d80e77f4fc80de658c173cb53319d79901c4246d525790ab38aa7a",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrLBrwnLthr.webp",
+        "width": 903,
+        "height": 1200,
+        "sha256": "cec491efea936f51ee303572109d794e03b6ec1544250da23c0915cbfe4d648b"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrMtSlTall",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/8. GBCrclFrst100RdcrMtSlTall.psd",
+      "sourceSha256": "5bae10bdab7b15da83a0f8da04ac37c99001665087babd7daf5e3f541c23b507",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrMtSlTall.webp",
+        "width": 932,
+        "height": 1200,
+        "sha256": "2bfb973cfe345f4b64c2fc9080d81d9dde2b099590bfc0428ed165d08fc95cc7"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrMtSl",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/9. GBCrclFrst100RdcrMtSl.psd",
+      "sourceSha256": "34cd96c990b4a87ffef33adcbe96927f8ab856b457ff3e08d87d6ca977f61b3c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrMtSl.webp",
+        "width": 984,
+        "height": 1200,
+        "sha256": "f9e04185541f403001dfe6eebfd258c23a9ccd8127ab375d6de1f664091da4eb"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrWht",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/10. GBCrclFrst100RdcrWht.psd",
+      "sourceSha256": "ccbc79d82078ec69d308572319c40f0faf7677f7e6306273af8c03e5cb77ba7c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrWht.webp",
+        "width": 936,
+        "height": 1200,
+        "sha256": "fcbdedc696933cca5f6369bbc6c87c9860e31063d41553b6deafe4f800ad75b7"
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryMtSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/24. GBCrcl50SpryMtSl.psd",
+      "sourceSha256": "a88a14ef47afd87d3cb02de7f6aadaa747ea5142f05c9151e84369ee11be40e3",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50SpryMtSl.webp",
+        "width": 790,
+        "height": 1200,
+        "sha256": "7d30bbabd387c5f88f06776db4aa6244b2c7619a82148e6dcf8575b47c7615d6"
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/11. GBCrcl50SpryMtGl.psd",
+      "sourceSha256": "9b5ed6da1ee227f8c4295c478e4fced35dda65d3930aba122291e8649058ed55",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50SpryMtGl.webp",
+        "width": 783,
+        "height": 1200,
+        "sha256": "379a62517e728085d67130be90c3a8247293b26aa785d79f7fc6055bbe9a10dd"
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryShnGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/17. GBCrcl50SpryShnGl.psd",
+      "sourceSha256": "d219b33af0ec906a19f7af8634627198d51633de5fea4b19fc4a5893c08a20e9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50SpryShnGl.webp",
+        "width": 787,
+        "height": 1200,
+        "sha256": "58bf1b41367ce83d56afacf88ab95a96db83dd9b2e58c442a7f1cb90d8e4f264"
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryShnBlk",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/21. GBCrcl50SpryShnBlk.psd",
+      "sourceSha256": "9be05172ad3dfe64b6804abeb6b24640b315b080b24eedf36819f1fabf4129db",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50SpryShnBlk.webp",
+        "width": 789,
+        "height": 1200,
+        "sha256": "8d241be096a5fd9de4f8dc6da6085fd722e9cc8eb33536b0f5d798f1f94cb2ea"
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryShnSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/30. GBCrcl50SpryShnSl.psd",
+      "sourceSha256": "a62c5ef473597007a6835d18339329d81bc85a2c0576e5d8f2e0dc5e5a6c6874",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50SpryShnSl.webp",
+        "width": 789,
+        "height": 1200,
+        "sha256": "8ec70c2e5463224c39534c9213da6bb441bb3fb1e302d514170be0024a986233"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/11. GBCrclFrst50SpryMtGl.psd",
+      "sourceSha256": "45bc177ddb2b41eca68ffc27993cf2c549cb0fe7d0e443aac185a89830f25939",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50SpryMtGl.webp",
+        "width": 774,
+        "height": 1200,
+        "sha256": "d7319de8d2d3da96b103c38331ff3cb69ea8a93b08514437d936e270eb6eeca2"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnGl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/17. GBCrclFrst50SpryShnGl.psd",
+      "sourceSha256": "caa31bc270d2b8d196456e8ca5255167103ce49e45340a181720c57e69ef9cd8",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50SpryShnGl.webp",
+        "width": 778,
+        "height": 1200,
+        "sha256": "df761739b8d8a67761f06f3336a040c0a99147606bc7728e381c6ef8d151ad33"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnBlk",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/21. GBCrclFrst50SpryShnBlk.psd",
+      "sourceSha256": "3a85706f520304647b4813d1fe5493d08ac17d4f5a5efd589a4ab28643d88f07",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50SpryShnBlk.webp",
+        "width": 778,
+        "height": 1200,
+        "sha256": "bad998e995cf2a5a4600ebc43921d6c38235ff81fbb61339a9d9ddd2e357c072"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtSl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/24. GBCrclFrst50SpryMtSl.psd",
+      "sourceSha256": "10ccb80838056fd4505e4bb49b5fbdfa27a101324c09b36b73301060dfed48b7",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50SpryMtSl.webp",
+        "width": 780,
+        "height": 1200,
+        "sha256": "083c7aab22a183fc14e4d8d7690359a78442c5452c7444d0ff2ea591fe534856"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryShnSl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/30. GBCrclFrst50SpryShnSl.psd",
+      "sourceSha256": "7b760ffa5f5d66be8933ac2cf97923babe3d02983d3cd3d7778433fb4483c90e",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50SpryShnSl.webp",
+        "width": 775,
+        "height": 1200,
+        "sha256": "d85e3d54d006343311721fff258097426aa241919f3897d41e0b35c91d86a960"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryBlk",
+      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
+      "sourceSha256": "907fdb27226af4fec3b8f122df7bc65a86111ecfe90ea0432e6011dbb9280355",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl30SpryBlk.webp",
+        "width": 704,
+        "height": 1200,
+        "sha256": "9fc8f3d348d9fcc669aa7d03a205878ef58ea8fe92a33b0749bfc52f0c2eb871"
+      }
+    },
+    {
+      "sku": "GBCrcl50SpryCu",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/56. GBCrcl50SpryCu.psd",
+      "sourceSha256": "5616c1b00976716d55c0cf226b0ca4b99ebf1fe525c985c5cf44f5dad147effb",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50SpryCu.webp",
+        "width": 749,
+        "height": 1200,
+        "sha256": "aea9b95815b7b2f60b82a58f0ba14eb507c44007da8cbee6aace13f2a581d657"
+      }
+    },
+    {
+      "sku": "GBCrcl50DrpSl",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/51. GBCrcl50DrpSl.psd",
+      "sourceSha256": "f3db044f5f378ee6ae09eeeda9af27721dffde62a58231561ef974bfaa6c012f",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50DrpSl.webp",
+        "width": 806,
+        "height": 1200,
+        "sha256": "3bdea55d5bfa8226fad6a0267280d77163c27214e621d0eb16ba0c59e5803ad0"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50SpryCu",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/56. GBCrclFrst50SpryCu.psd",
+      "sourceSha256": "ad1a22165b3b7a477f25ad3977904049283cb50851b1c71f3e383d80fdafbe53",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50SpryCu.webp",
+        "width": 739,
+        "height": 1200,
+        "sha256": "be499f21e957061fa898a252f3aadb7b750f0301685350d0c66cfecc4def2600"
+      }
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/52. GBCrcl50DrpGl.psd",
+      "sourceSha256": "647a663cf4ca35a6996315b2565a7b933964869273807f381475d9fedbfab316",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50DrpGl.webp",
+        "width": 804,
+        "height": 1200,
+        "sha256": "f10cf5336705cefd56af937e8f67e4f403b0f64a93185d57133320daa3eba066"
+      }
+    },
+    {
+      "sku": "GBCrcl15Gl",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/28. GBCrcl15Gl.psd",
+      "sourceSha256": "b6f781d12fdbbaef26dc61645a48b9887ee2a94072e0268ac0409f8ff421b010",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15Gl.webp",
+        "width": 593,
+        "height": 886,
+        "sha256": "7fd2e0e4802057a51f81d381da8e5ca641d44c57895cd30c3451c7bc74fd0d4b"
+      }
+    },
+    {
+      "sku": "GBCrcl15Sl",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/29. GBCrcl15Sl.psd",
+      "sourceSha256": "b211e5f0311b9755c395ddf49dd9de41a456bdb5ca09c5fb411d2a09446acbab",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15Sl.webp",
+        "width": 593,
+        "height": 883,
+        "sha256": "ef6f41d539e47470b21b429996db544724159882aeb1a0fcbaa3ef94be6cc1a2"
+      }
+    },
+    {
+      "sku": "GBCrcl15WhtSht",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/2. GBCrcl15WhtSht.psd",
+      "sourceSha256": "5080784f1217212a3eb33102e1143ff83afd52e6b5fd5aa48ade873fefa5a839",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15WhtSht.webp",
+        "width": 593,
+        "height": 743,
+        "sha256": "d517d67478760f2d2e927bac841c847a76169aca0bb032c8d7d81176ef15c294"
+      }
+    },
+    {
+      "sku": "GBCrcl15BlkSht",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/1. GBCrcl15BlkSht.psd",
+      "sourceSha256": "d11ad08900c2fd50ceea0ec00c2e9d7fc55e6c1811aaf75a06e46fbdf4ef8505",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15BlkSht.webp",
+        "width": 593,
+        "height": 746,
+        "sha256": "0ae322d6575411f5fb3701f823b1c695a51ead9cebbf76703a27aa6d438eca3a"
+      }
+    },
+    {
+      "sku": "GBCrcl100SpryCu",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/53. GBCrcl100SpryCu.psd",
+      "sourceSha256": "6ee81a7bb3ed89404408ab1133e5fe53571a9901d1c53678a7eb674f66cb6d4c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100SpryCu.webp",
+        "width": 798,
+        "height": 1200,
+        "sha256": "0079dbf49677b4207f03f778a6529bb3760f3799817c26f65b4cb2053781a431"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryCu",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/53. GBCrclFrst100SpryCu.psd",
+      "sourceSha256": "1489a6616d86d749c0fdeedc9fe336a4fa37f6cd89bca53c294c52671b181715",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100SpryCu.webp",
+        "width": 497,
+        "height": 771,
+        "sha256": "a66b62b21dedc690dfad138bf5270a1509ffc94bee836abb12c86d6f1a1f7078"
+      }
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/11. GBCrcl100SpryMtGl.psd",
+      "sourceSha256": "eb6d0041e04e3c18346df4b409e14d82851af9b372466cf141c7d22f9a30b7bf",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100SpryMtGl.webp",
+        "width": 824,
+        "height": 1200,
+        "sha256": "1062400272ed9d1dedf6d01797418b02eafa37db4a6e0c28a6d66f3911c19cc5"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrBlkLthr",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/4. GBCrcl50RdcrBlkLthr.psd",
+      "sourceSha256": "316e22a25e2a351e124e225e96bed6cf778ae1ae90fc179fc327af897f621712",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrBlkLthr.webp",
+        "width": 877,
+        "height": 1200,
+        "sha256": "2db1aa9edfd7882fda64185c45834944edd1286ff0bd3ef0d705cab8fc9f4479"
+      }
+    },
+    {
+      "sku": "GBCrcl100SpryShnGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/17. GBCrcl100SpryShnGl.psd",
+      "sourceSha256": "a1b6b743848fb7ed6696ad305bc072e1f6f71a8a6933ccdb027a1b9f10701ce6",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100SpryShnGl.webp",
+        "width": 823,
+        "height": 1200,
+        "sha256": "5ffd3ce79fc7627aae697f4c6c3fca0f9644a6b51ed0510bb2f86c045b103971"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrBlkLthr",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/4. GBCrclFrst50RdcrBlkLthr.psd",
+      "sourceSha256": "324c6279e14c859b02ac29e7a9c8db93b6cd104981b365b6ed2ca58f05f3da51",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrBlkLthr.webp",
+        "width": 870,
+        "height": 1200,
+        "sha256": "db60f593d8f09fb9ffa72be6a1d4d1539dee4926a7e797bd95e3e9600943eda9"
+      }
+    },
+    {
+      "sku": "GBCrcl100SpryShnBlk",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/21. GBCrcl100SpryShnBlk.psd",
+      "sourceSha256": "49b32b06f3432d33d62afe379b4f5f03f18c2c238c1192551b286d3ab9aeb77d",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100SpryShnBlk.webp",
+        "width": 826,
+        "height": 1200,
+        "sha256": "c74507fcac67c9042ba6a11747b834886b627c5763528f78db3615b9f93b7563"
+      }
+    },
+    {
+      "sku": "GBCrcl100SpryMtSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/24. GBCrcl100SpryMtSl.psd",
+      "sourceSha256": "eb66b8a3b6d5ff649b8fddc11b0de54d4c92ca2601da86ad8ce1f0fa54c4a626",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100SpryMtSl.webp",
+        "width": 825,
+        "height": 1200,
+        "sha256": "546eec478253ddc8ff107bb89fd945820ee12a3b3e30eaac5feddf68f76fdb34"
+      }
+    },
+    {
+      "sku": "GBCrcl100SpryShnSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/30. GBCrcl100SpryShnSl.psd",
+      "sourceSha256": "2256f05ac60e3fc9c22234995dfac21d03ace7999b21db4063b66f809381f626",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100SpryShnSl.webp",
+        "width": 825,
+        "height": 1200,
+        "sha256": "cc30d6ac5a2326615c67808f71b470e11bbc41ef4d43f7a9b78a4bc537eed226"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/11. GBCrclFrst100SpryMtGl.psd",
+      "sourceSha256": "897b22ee8021c47b429fadb4e39a47a68069faaad64813e22f0dd068bbb2d766",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100SpryMtGl.webp",
+        "width": 828,
+        "height": 1200,
+        "sha256": "4e0ba5939822d79324643aeb95074d891d360316decd73e4d538da67e84c7000"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryShnGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/17. GBCrclFrst100SpryShnGl.psd",
+      "sourceSha256": "7098c314ec3df100d8032f48674b83b8954f177b5d4cc4296cca5ace77c331c3",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100SpryShnGl.webp",
+        "width": 829,
+        "height": 1200,
+        "sha256": "33940f08f62ac2759bb031bdddbc3892ae05472ad251ba2fa2b46083dbad452a"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryShnBlk",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/21. GBCrclFrst100SpryShnBlk.psd",
+      "sourceSha256": "b5f55670a47fac00d55ed9af00d68865ba0b52f8a95ad7362c4c6b67ba2a655c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100SpryShnBlk.webp",
+        "width": 826,
+        "height": 1200,
+        "sha256": "b6446c27a492b9eea32b4d5f3cee9abc19cfd68979dfdcc8cdb344ca77ff933e"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/24. GBCrclFrst100SpryMtSl.psd",
+      "sourceSha256": "4ffce7b3efea27f23f6ea95b35ac386b1e7bff01b276371f61756bfccdf2e172",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100SpryMtSl.webp",
+        "width": 827,
+        "height": 1200,
+        "sha256": "50e12f716befe04fde41ca92f0041a27f89ad1aa340f83d69381bc9521406f87"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100SpryShnSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/30. GBCrclFrst100SpryShnSl.psd",
+      "sourceSha256": "1d5123b5207cca62474ab0bc7b5b22a38f6de948d8b57f435ec9cedf9558436b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100SpryShnSl.webp",
+        "width": 497,
+        "height": 734,
+        "sha256": "2397805dfbb40d0ee6afdc92f585839c8dc22f0ea796d98bbe613c5413b61949"
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpBlk",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/39. GBCrcl50AnSpBlk.psd",
+      "sourceSha256": "76e549e0021067837c0647179a1388f5f5e2bfc886de7ce9c57cad94306e1fb6",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50AnSpBlk.webp",
+        "width": 971,
+        "height": 1200,
+        "sha256": "139591a4ed636cb89fb7dd4c57ad19d0f4a20d32263f88982933d18ff5c3840d"
+      }
+    },
+    {
+      "sku": "GBCrcl100RdcrBlkLthr",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/4. GBCrcl100RdcrBlkLthr.psd",
+      "sourceSha256": "aadf19c8817279bf413efc8ae88dc4efb6ebf58cf4c0a490c2617e96f770bd79",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100RdcrBlkLthr.webp",
+        "width": 904,
+        "height": 1200,
+        "sha256": "c2b288e845c478dcabb7436ab092cac78c8d070f38173a07141c78c70d01fa87"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100RdcrBlkLthr",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/4. GBCrclFrst100RdcrBlkLthr.psd",
+      "sourceSha256": "faa6d19bea2569f9affcacec919d3a868124e1472c754d10890f0972664867fa",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100RdcrBlkLthr.webp",
+        "width": 903,
+        "height": 1200,
+        "sha256": "54c5a5ae50e50d78740a371c7f16c376a1757f4f45e5bcba103817bf2b1bce0f"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpBlk",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/39. GBCrclFrst50AnSpBlk.psd",
+      "sourceSha256": "325784657c493b2c07df0fd8fbe85831257503db3515e2cb4eead5aaf252b417",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50AnSpBlk.webp",
+        "width": 964,
+        "height": 1200,
+        "sha256": "2c75e9c974565ee5368705e423c3b8cad28ba85d0492204e86edb3a5da8939e1"
+      }
+    },
+    {
+      "sku": "GBCrcl100AnSpBlk",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/39. GBCrcl100AnSpBlk.psd",
+      "sourceSha256": "fc3fddb79b38c7a9dfcda52010933cfe50be7a7bc149e4442aabe3ff640ac29e",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100AnSpBlk.webp",
+        "width": 912,
+        "height": 1200,
+        "sha256": "1fff333a2688d5a4308be25d563dc588bdfef3c514ff93487c9e8ba965e66f44"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpBlk",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/39. GBCrclFrst100AnSpBlk.psd",
+      "sourceSha256": "6e9be984864fc42c406c948b2a17a26c10ba838388c9f4680b8c1d5fd183945a",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100AnSpBlk.webp",
+        "width": 568,
+        "height": 748,
+        "sha256": "37d50b4ab648d48be5ee117fab3fa6ca5378d70194a9811eab11d924ba30bc70"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslBlk",
+      "path": "21. Tassels/Updated Tassels/48. GBCrclFrst100AnSpTslBlk.psd",
+      "sourceSha256": "2c720e28d81bb892b666301a10eaf449d3e03e21098c87e23db915b6b1346d82",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100AnSpTslBlk.webp",
+        "width": 846,
+        "height": 776,
+        "sha256": "73fb6cef73dd5f4af4b497fee72a49591e987f1fc1ffbef409f7addcdcb0f642"
+      }
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/37. GBCrcl100AnSpGl.psd",
+      "sourceSha256": "7a6baf612f6e6d30f1251430e9a8fa2795d7ecda407078652392ce4ff88fa675",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100AnSpGl.webp",
+        "width": 908,
+        "height": 1200,
+        "sha256": "027fdaf0ca7d07bb53c35dd0b3bfbd9446c42069a8911c28422c75d32f338670"
+      }
+    },
+    {
+      "sku": "GBCrcl100AnSpPnk",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/34. GBCrcl100AnSpPnk.psd",
+      "sourceSha256": "219255b2cc836409da5fc13a6057bc84c7fa013c4e2c412cf99b69a27216c2b9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100AnSpPnk.webp",
+        "width": 895,
+        "height": 1200,
+        "sha256": "6737db5e874574a2cc8c26e043561bc50f2958f5b1e8c8164f4cd4d2da79ffe1"
+      }
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "path": "21. Tassels/Updated Tassels/50. GBCrcl100AnSpTslGl.psd",
+      "sourceSha256": "a67209e5142255cd0dde640e2f897f6a93ab87ba5cfc02613470a90c3f4e4637",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl100AnSpTslGl.webp",
+        "width": 1000,
+        "height": 944,
+        "sha256": "1b9f579d521fff3afda2bb5a2e59d7e5082118a1bf4fc18d1896ad772ab0c634"
+      }
+    },
+    {
+      "sku": "GBCrcl15RollBlkDot",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/27. GBCrcl15RollBlkDot.psd",
+      "sourceSha256": "ff1feb33735a659b5e5af4551b24da3a38589a1b84198eee1fbaf03d2cfd7e58",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Cap island retained at original position; disconnected white retouch patches excluded",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15RollBlkDot.webp",
+        "width": 593,
+        "height": 887,
+        "sha256": "b328b760db675f860c78f72f2ae9b65732064651684d8f49c8134c8f5874b624"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/37. GBCrclFrst100AnSpGl.psd",
+      "sourceSha256": "c0fe9bd28f0308975b9c260e805fee533537001102c56e31fb5c293391af16f4",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100AnSpGl.webp",
+        "width": 559,
+        "height": 742,
+        "sha256": "7d6eb43ad22f498d71f56eb55f77874d2d43975a808b068ae076d3f9317cf198"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpPnk",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/34.  GBCrclFrst100AnSpPnk.psd",
+      "sourceSha256": "f4e99ce9bf40b6c29444955d7038c18cbd42930e76c95eeb96d83e4a3d2df85f",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100AnSpPnk.webp",
+        "width": 552,
+        "height": 742,
+        "sha256": "ce8aa82c090316adbc8a9b3401c21d321517e8497b508e7b9113a5180e56d618"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslGl",
+      "path": "21. Tassels/Updated Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+      "sourceSha256": "bcd627aa8f443039d9f8e0036d90e21fd7861fce454b5ab4c3aac67ff329d338",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100AnSpTslGl.webp",
+        "width": 764,
+        "height": 757,
+        "sha256": "a86b7de80869bdf633363f915496a2eec99fd927f79ecbf726885db1094f749e"
+      }
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslPnk",
+      "path": "21. Tassels/Updated Tassels/46. GBCrclFrst100AnSpTslPnk.psd",
+      "sourceSha256": "f5aed205ad77fc3d5ab91aeb0d148e208699ed142dc83b5120997dde2c304e6b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst100AnSpTslPnk.webp",
+        "width": 777,
+        "height": 759,
+        "sha256": "37b62849d3c8b436108bfb1c889259e19b17e24133344e0adc97d4ba78da89c8"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrShnSl",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/7. GBCrcl50RdcrShnSl.psd",
+      "sourceSha256": "5731381680b4a87a8c559506750840f474e9996c29e3a55f4f97f625837b2eb8",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrShnSl.webp",
+        "width": 977,
+        "height": 1200,
+        "sha256": "5a6d6aa6288c7c2327f75968baa591bc785d752d99b0403725ebc111627eb081"
+      }
+    },
+    {
+      "sku": "LBCrcl50LtnShnGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/18. LBCrcl50LtnShnGl.psd",
+      "sourceSha256": "04d7ef785dbf1e5664766d5b9a1e59668adc108259dbc2682b5ae4dd5070b3e9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl50LtnShnGl.webp",
+        "width": 786,
+        "height": 1200,
+        "sha256": "7af735265ca52395a552a6b53f62c7f970b134696257899148ec54445cfc578d"
+      }
+    },
+    {
+      "sku": "LBCrcl50LtnShnBlk",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/22. LBCrcl50LtnShnBlk.psd",
+      "sourceSha256": "23dea603b7922c26294f18844ecd60a7bc07b984b7eda8b3837777bb03864e0c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl50LtnShnBlk.webp",
+        "width": 789,
+        "height": 1200,
+        "sha256": "259fd92f4c94ca516c03f124281fde9e87bea1fa645341918f8ef2e2a034943c"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/1. GBCrcl50RdcrShnGl.psd",
+      "sourceSha256": "a46371642c100090b5f2eec9cb021696b84154c915668ffa743d18f1c6b0aed4",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrShnGl.webp",
+        "width": 891,
+        "height": 1200,
+        "sha256": "9c41f979d42cf325290bec907246d677d0438fddec6b65abbc771d0969fb18c7"
+      }
+    },
+    {
+      "sku": "LBCrcl50LtnMtSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/26. LBCrcl50LtnMtSl.psd",
+      "sourceSha256": "ae00a9a2cd0caee9ae195cd399d27a117da64c0ea17a1fac47deb92db16e2c67",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl50LtnMtSl.webp",
+        "width": 790,
+        "height": 1200,
+        "sha256": "6d197a927364583aecb56158e1e36da294e2228285c02425ca358c5d688b1b80"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrIvyLthr",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/55. GBCrcl50RdcrIvyLthr.psd",
+      "sourceSha256": "db48f6faa374ed83fcb2ac86e0e053e70793a7050d2aaeccbfb6e99b43b2d55a",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrIvyLthr.webp",
+        "width": 879,
+        "height": 1200,
+        "sha256": "533ff77442a26d4874407aac311f8f0dfc9790f2ffd5f9c270e1f0f79a036d6e"
+      }
+    },
+    {
+      "sku": "LBCrcl50LtnShnSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/4.  50ml Circle, Ltn & Spr, Capped/32. LBCrcl50LtnShnSl.psd",
+      "sourceSha256": "23f58dcb885042a6996345d5b111946785262d8628083f8945ba7a579005f18d",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl50LtnShnSl.webp",
+        "width": 778,
+        "height": 1200,
+        "sha256": "9a226be6cf8a4078c46dd8ca0ba0c492b7c0e3e5e9bd9af64a403971cc153ed1"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrPnkLthr",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/54. GBCrcl50RdcrPnkLthr.psd",
+      "sourceSha256": "44de9ef15433be42bb481064eae9c4c390c0b8514a08dd77139a0a29b1bfb3bd",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrPnkLthr.webp",
+        "width": 880,
+        "height": 1200,
+        "sha256": "96a0408d37cede10b954e4d0092f94f8dfa081cc2e5cc0356264a3b6ff768b6b"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrShnBlkTall",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/2. GBCrcl50RdcrShnBlkTall.psd",
+      "sourceSha256": "31a7a571fded2ae9c0e71cea96babb901e468fc8a22bb78ea9284cd5e55f1ef9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrShnBlkTall.webp",
+        "width": 905,
+        "height": 1200,
+        "sha256": "cc607aca5a80774893d3ea83db77cb9bf51d345ae92ddc970b304fc6b9e5e56d"
+      }
+    },
+    {
+      "sku": "LBCrclFrst50LtnShnGl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/18. LBCrclFrst50LtnShnGl.psd",
+      "sourceSha256": "dd50dfe761353c4fd1a83b16e1fb42df35594edbae22f78888561e35a8e951fb",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst50LtnShnGl.webp",
+        "width": 777,
+        "height": 1200,
+        "sha256": "0055d5869882c11fdb91deddd483e20b48c24b9f3002ce20258cdee97b1eb99b"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrBrwnLthr",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/5. GBCrcl50RdcrBrwnLthr.psd",
+      "sourceSha256": "950f0e2ca629a53f592c93b2b99880cb2f220ec41bab2240457bf4210a855e75",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrBrwnLthr.webp",
+        "width": 873,
+        "height": 1200,
+        "sha256": "c92b886f486ec3cfbb711ce3efa1807d4935c36ee306a155a42d85669f7c06ae"
+      }
+    },
+    {
+      "sku": "LBCrclFrst50LtnShnBlk",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/22. LBCrclFrst50LtnShnBlk.psd",
+      "sourceSha256": "a8c10c5219f25fe7c6bf65b8ad6081dadd6e0926d3bf766779e421d0442c8a44",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst50LtnShnBlk.webp",
+        "width": 779,
+        "height": 1200,
+        "sha256": "3ff01a3b4c0b605f3ba5427478351f6f77c2c992373705443f78493238267455"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrLBrwnLthr",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/6. GBCrcl50RdcrLBrwnLthr.psd",
+      "sourceSha256": "817bd5162f6e6c88728b1872797e1b5a53858504a349e350eb0da6df4f2ae8a9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrLBrwnLthr.webp",
+        "width": 873,
+        "height": 1200,
+        "sha256": "4e59b3a49a85608f165b5fef3d48819569172778f3e881e6f4d9ee4198c93057"
+      }
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtSl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/26. LBCrclFrst50LtnMtSl.psd",
+      "sourceSha256": "e39add1d26f01ebe9f56de7ca180c27a75e79402e6284bd2d23ab22d4fb4df65",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst50LtnMtSl.webp",
+        "width": 779,
+        "height": 1200,
+        "sha256": "5bfae1e1f17c3410f8aba153d1963b90218b84ba0cb0c848fc8de16db07e1644"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrMtSlTall",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/8. GBCrcl50RdcrMtSlTall.psd",
+      "sourceSha256": "2f5b24281b2b7e3c4e2e939b6fba0c9bbb59e4a53546f85bd051b1babf74978b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrMtSlTall.webp",
+        "width": 916,
+        "height": 1200,
+        "sha256": "c2e829031831b6d061b43152646de5caa1b8bc08543aa6450e85a43467f97713"
+      }
+    },
+    {
+      "sku": "LBCrclFrst50LtnShnSl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/32. LBCrclFrst50LtnShnSl.psd",
+      "sourceSha256": "f36aa7dc8a6f204fe60a10c773cf59b8790ba79aebef9b3d20d425ac18336aee",
+      "excludedBackground": "Background",
+      "reviewNote": "Original foreground; visually reviewed as a single assembled bottle",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst50LtnShnSl.webp",
+        "width": 766,
+        "height": 1200,
+        "sha256": "18566871c7b05d895191bd93802a88bddc12cdb3e55f0007228b586005f4f54d"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrWht",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/10. GBCrcl50RdcrWht.psd",
+      "sourceSha256": "0fd8f56131ff440d3628555dce053722baf579bbf8848a7f024e9667f3a387b7",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrWht.webp",
+        "width": 907,
+        "height": 1200,
+        "sha256": "e1864b22b87d2c46fae9939ae01522a29c121abe9e486477474e2f4d4c2a5ae5"
+      }
+    },
+    {
+      "sku": "GBCrcl50RdcrMtSl",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/9. GBCrcl50RdcrMtSl.psd",
+      "sourceSha256": "5aea4b348fd6a8dc367b4dfc136e550bc00ede3cceefecba217fb986390e41b9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50RdcrMtSl.webp",
+        "width": 976,
+        "height": 1200,
+        "sha256": "c2cbd66fbcce52d9834f56e40b812d06bc1bcd76b709051ba2f957bce39799d1"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/1. GBCrclFrst50RdcrShnGl.psd",
+      "sourceSha256": "bc459d3eb13cc8e5e80b2d6cbda7017129c409444000d0f411b8e246297becc0",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrShnGl.webp",
+        "width": 885,
+        "height": 1200,
+        "sha256": "7f6fe34068c8fea631925e7dafb94ddabad54da72ad4c60a2ee7cede54e43851"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollBlkDot",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/26. GBCrcl15MtlRollBlkDot.psd",
+      "sourceSha256": "ff1feb33735a659b5e5af4551b24da3a38589a1b84198eee1fbaf03d2cfd7e58",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Cap island retained at original position; disconnected white retouch patches excluded",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollBlkDot.webp",
+        "width": 593,
+        "height": 887,
+        "sha256": "b328b760db675f860c78f72f2ae9b65732064651684d8f49c8134c8f5874b624"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnBlkTall",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/2. GBCrclFrst50RdcrShnBlkTall.psd",
+      "sourceSha256": "fa8ce39060e92ccecba5a52c89119d2c0c77a8d6710c532d51eafede7b0b8eb1",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrShnBlkTall.webp",
+        "width": 898,
+        "height": 1200,
+        "sha256": "a3ccec6296813b1bcedbfceb333b22d98d06bdf3c4de4b1d83537831de177b30"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrBrwnLthr",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/5. GBCrclFrst50RdcrBrwnLthr.psd",
+      "sourceSha256": "b60e6f353cdff3ffa2da1b225b797d36e9fe5f32543658fe4fb4da73cd5e5d9c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrBrwnLthr.webp",
+        "width": 865,
+        "height": 1200,
+        "sha256": "e365e34a10061d15d7014c2473d7c20b049329f7f4d4c2ee379ae4026c225ee1"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrLBrwnLthr",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/6. GBCrclFrst50RdcrLBrwnLthr.psd",
+      "sourceSha256": "4454682324c2b03fb402a1c8840211086638c92412cfe8bf8106f14f4ed8af79",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrLBrwnLthr.webp",
+        "width": 865,
+        "height": 1200,
+        "sha256": "00dca911a6061650fd2f399d5d622138d7f6781d9977497e861f6a44b179439b"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnSl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/7. GBCrclFrst50RdcrShnSl.psd",
+      "sourceSha256": "c8896e70f3c5fafec88d422aa6c5628265cdd359b5a6e4adb79db0a44e639ad2",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrShnSl.webp",
+        "width": 969,
+        "height": 1200,
+        "sha256": "3f2097afb96c34e669a0a5364187386c7b7fddb9fe6d80c900be18e0c912b4b9"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrMtSl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/9. GBCrclFrst50RdcrMtSl.psd",
+      "sourceSha256": "8080e5f582f6812e1f06687f2d0f68093e41b8bc64c6fa7e38ab3e8dcc2ad5dd",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrMtSl.webp",
+        "width": 965,
+        "height": 1200,
+        "sha256": "6cc1a0a1992fc4f926d7698a3b9d14dccaf9daf2387b7f52edcd84d25fd454ec"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrWht",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/10. GBCrclFrst50RdcrWht.psd",
+      "sourceSha256": "4230d3dc19e8623c7ff7b323e0974a8be719753a31a9f0e5792575ae14c8156b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrWht.webp",
+        "width": 898,
+        "height": 1200,
+        "sha256": "1b84ed5e10c9f2ccc9a188e3643a0361c869071c6779b86cb076b67e7d2521af"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50RdcrPnkLthr",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/54. GBCrclFrst50RdcrPnkLthr.psd",
+      "sourceSha256": "3bddefc82d7374c71d2a5327c2eea4e38e2c16fb58a603a7a9f7ae87b963da1f",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50RdcrPnkLthr.webp",
+        "width": 872,
+        "height": 1200,
+        "sha256": "9e136cf34abf48ad4ddc3741a78e7439f272f9ed65455c170df9d371ac5e99ed"
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpPnk",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/34. GBCrcl50AnSpPnk.psd",
+      "sourceSha256": "21708666e32811623d520d1d228483858a1dbfd0782f05d4accee51b6219dfdd",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50AnSpPnk.webp",
+        "width": 965,
+        "height": 1200,
+        "sha256": "48298a6ac47e17588bb1963c83d2866a325a1a63aeb9e113f2b3e335445c5ef3"
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/37. GBCrcl50AnSpGl.psd",
+      "sourceSha256": "f4d54d71045f11ba2ddad1d3fa73e9733b77040436e4adf1a05beeaee88eacc8",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50AnSpGl.webp",
+        "width": 972,
+        "height": 1200,
+        "sha256": "59af4a16c3b57213bbaaf0329da04eceb645a6b8df8a389672e02dc68063bba3"
+      }
+    },
+    {
+      "sku": "LBCrcl100LtnShnGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/18. LBCrcl100LtnShnGl.psd",
+      "sourceSha256": "8e92b127c9a130d154b8e1accaa9ae5c2952190cebb5e335ef2d5db86e3b6bc4",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl100LtnShnGl.webp",
+        "width": 823,
+        "height": 1200,
+        "sha256": "c328c0d20d2888139dd84e79772cda89d6c1ab97513ec28742e398afb18f4b10"
+      }
+    },
+    {
+      "sku": "LBCrcl100LtnShnBlk",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/22. LBCrcl100LtnShnBlk.psd",
+      "sourceSha256": "23e42086c53fba317a1ef5ba139528beb581a834bfdb2271cb0a1639b0baaa5c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl100LtnShnBlk.webp",
+        "width": 826,
+        "height": 1200,
+        "sha256": "50c1d17041fefa8a2fe75427a4e5e1e6d47b9fd5567c502b23cb092b616b45a7"
+      }
+    },
+    {
+      "sku": "LBCrcl100LtnMtSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/26. LBCrcl100LtnMtSl.psd",
+      "sourceSha256": "0be6d6c453190619e92babe81f762b9e89d9b5c50cb28b8b269e56fd4ac5e02a",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl100LtnMtSl.webp",
+        "width": 825,
+        "height": 1200,
+        "sha256": "643f81c85b28569c41496c4acd40fd4e37db036d8a3b8d798b1801a4e15b9946"
+      }
+    },
+    {
+      "sku": "GBCrcl50DrpCu",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/53. GBCrcl50DrpCu.psd",
+      "sourceSha256": "3d1e17e70c2908f509dfafca59799a18506663a525f0ab462ef647f3d42e6fd9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50DrpCu.webp",
+        "width": 806,
+        "height": 1200,
+        "sha256": "c3e7b77ff2a4730de7171514fe3f91476a3f9aac41e33798a1189e5a864f0723"
+      }
+    },
+    {
+      "sku": "LBCrcl100LtnShnSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/5.  100ml Circle, Ltn & Spry, capped/32. LBCrcl100LtnShnSl.psd",
+      "sourceSha256": "6276d6b2c25130ea3b431808630ee88b80460966fc6570e2d267ce5866934960",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrcl100LtnShnSl.webp",
+        "width": 825,
+        "height": 1200,
+        "sha256": "58e6945843fa9c975d9c0af4d68f432afeb6c9c0b743a61833e2ea1c66d4e6ba"
+      }
+    },
+    {
+      "sku": "GBCrcl50AnSpTslGl",
+      "path": "21. Tassels/Updated Tassels/50. GBCrcl50AnSpTslGl.psd",
+      "sourceSha256": "40f4afe8fbb37c75d46fd5806eba8820a6338b9bb8b63bc054069f87a302240a",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl50AnSpTslGl.webp",
+        "width": 1000,
+        "height": 927,
+        "sha256": "efcbf7d58b9124d0425efb0c0c588d16e15517af279515be36d0a4713eb2d384"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpPnk",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/34. GBCrclFrst50AnSpPnk.psd",
+      "sourceSha256": "e65f07469e1b914d602b57c00fbc9630f322fcea69b44f552e2a24f2d8d93380",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50AnSpPnk.webp",
+        "width": 958,
+        "height": 1200,
+        "sha256": "91e6a70097a9e7cafa7efe779616af01163391a91828f9fd441da285e1f20efa"
+      }
+    },
+    {
+      "sku": "LBCrclFrst100LtnShnGl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/18. LBCrclFrst100LtnShnGl.psd",
+      "sourceSha256": "7098c314ec3df100d8032f48674b83b8954f177b5d4cc4296cca5ace77c331c3",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst100LtnShnGl.webp",
+        "width": 829,
+        "height": 1200,
+        "sha256": "33940f08f62ac2759bb031bdddbc3892ae05472ad251ba2fa2b46083dbad452a"
+      }
+    },
+    {
+      "sku": "LBCrclFrst100LtnShnBlk",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/22. LBCrclFrst100LtnShnBlk.psd",
+      "sourceSha256": "b5f55670a47fac00d55ed9af00d68865ba0b52f8a95ad7362c4c6b67ba2a655c",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst100LtnShnBlk.webp",
+        "width": 826,
+        "height": 1200,
+        "sha256": "b6446c27a492b9eea32b4d5f3cee9abc19cfd68979dfdcc8cdb344ca77ff933e"
+      }
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/26. LBCrclFrst100LtnMtSl.psd",
+      "sourceSha256": "4ffce7b3efea27f23f6ea95b35ac386b1e7bff01b276371f61756bfccdf2e172",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst100LtnMtSl.webp",
+        "width": 827,
+        "height": 1200,
+        "sha256": "50e12f716befe04fde41ca92f0041a27f89ad1aa340f83d69381bc9521406f87"
+      }
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/37. GBCrclFrst50AnSpGl.psd",
+      "sourceSha256": "7bcf1865c5fdcddd64c8a8b4df716b3d5fb17fda2c8e7e6e561170f56d6c9529",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrclFrst50AnSpGl.webp",
+        "width": 964,
+        "height": 1200,
+        "sha256": "130429bcf499344d0058687b3ec399f560fd88cb8464a41a905b85c8436950a9"
+      }
+    },
+    {
+      "sku": "LBCrclFrst100LtnShnSl",
+      "path": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/32. LBCrclFrst100LtnShnSl.psd",
+      "sourceSha256": "1d5123b5207cca62474ab0bc7b5b22a38f6de948d8b57f435ec9cedf9558436b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/LBCrclFrst100LtnShnSl.webp",
+        "width": 497,
+        "height": 734,
+        "sha256": "2397805dfbb40d0ee6afdc92f585839c8dc22f0ea796d98bbe613c5413b61949"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollBlkSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/24. GBCrcl15MtlRollBlkSh.psd",
+      "sourceSha256": "2b8122ae959e5280c8ee0fa5a62965a9507daee783db000db9749b3eccb63bdf",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollBlkSh.webp",
+        "width": 593,
+        "height": 877,
+        "sha256": "beb3f96ed5d24a03c45cc1bcfd217aa734f28f7bcd111457a80065c24256a8ae"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollCuMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/22. GBCrcl15MtlRollCuMatt.psd",
+      "sourceSha256": "0fff146b936eef73a5ccc622d95ad0e5023656e33cb557693d76a18620235f39",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollCuMatt.webp",
+        "width": 593,
+        "height": 879,
+        "sha256": "30447db2cda9c6deea881590ebcb34992aaf792558ae316e6a92bb55a97487c8"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/16. GBCrcl15MtlRollGlMatt.psd",
+      "sourceSha256": "9ea9bdd79e5f5af86a7220a7638e9d240b2c4145c6ae70ff5f59d72bf99b47c4",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollGlMatt.webp",
+        "width": 593,
+        "height": 878,
+        "sha256": "5f92d258054fd511b84d9468eb9baf272f68c8e10c916e880f916e39822a5a07"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/18. GBCrcl15MtlRollGlSh.psd",
+      "sourceSha256": "860b7022ba45db63e80464e180510958c66791f21fcc10a60e10f6cf03f69286",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollGlSh.webp",
+        "width": 593,
+        "height": 884,
+        "sha256": "214ce37f7e543ef467d4bc782c9513abf508fafe0b195d03cdd9713d4ff77450"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollPinkDot",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/12. GBCrcl15MtlRollPinkDot.psd",
+      "sourceSha256": "f3ce65180f8b04ae681f2ef0b231a0cb89e500b984123edbf438170ec706c95a",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollPinkDot.webp",
+        "width": 593,
+        "height": 863,
+        "sha256": "43b70f7334e58f1dbbe939f135fd004d6e4a1d78d2e561a5a7d452966e3805ab"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollSlDot",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/10. GBCrcl15MtlRollSlDot.psd",
+      "sourceSha256": "0026b29a62b37383a99c42014eea69f0ba64be7dcf12f7872022ed6cc9dbf2fb",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollSlDot.webp",
+        "width": 593,
+        "height": 866,
+        "sha256": "baea5afa7cc31fbfe5b14bb96833d97d16c7be1e41c55c6125e8ea4806fa51f3"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollSlMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/14. GBCrcl15MtlRollSlMatt.psd",
+      "sourceSha256": "b7cf85ff5622b7a9e03528629bdd1e62b5b4ef9f77b10a9d45bea8c3acc099f4",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollSlMatt.webp",
+        "width": 593,
+        "height": 870,
+        "sha256": "a520e5db91b645752dde8637a81e93ecc3879651ffd14c51198e7f4abcf1e10b"
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollSlSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/20. GBCrcl15MtlRollSlSh.psd",
+      "sourceSha256": "9c006426be3530e2c301d1d4a205ebedbe71ee8302998788f856a671ce25099f",
+      "excludedBackground": "Layer 0",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15MtlRollSlSh.webp",
+        "width": 593,
+        "height": 884,
+        "sha256": "e890bda21b1297dc32cd1a0777e7cb9f7d1e2ed7d2b4f8f001535346a3d50965"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryShSl",
+      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/3. GBCrcl30SpryShSl.psd",
+      "sourceSha256": "3a0f17760e67b1edba8dc00b5aaab5c4178c8f1a5f0cce5656b612969c90c61b",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl30SpryShSl.webp",
+        "width": 708,
+        "height": 1200,
+        "sha256": "5372152d89001355efbba1816dcaf3cf61860c7d734e5f3dcefa7bf49d17225f"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryShnGl",
+      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/2. GBCrcl30SpryShnGl.psd",
+      "sourceSha256": "86a8d78fd53d12c8266eae6de72c1d3a31947208efe8b8ebffca8ff695d354b9",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl30SpryShnGl.webp",
+        "width": 709,
+        "height": 1200,
+        "sha256": "c0a1bbe966bcbcd845ac621633107e384ab3b34ac51357c4145f2ea3bc31750e"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryMattSl",
+      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/4. GBCrcl30SpryMattSl.psd",
+      "sourceSha256": "cbba3397a8021ad3dd7e043be51ca564bc3f9362f4e78670ad6e90b356b1b1f1",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl30SpryMattSl.webp",
+        "width": 706,
+        "height": 1200,
+        "sha256": "604415ece7442685f195db53feef712d63c5bce5588b8d690c21eea9461e75e5"
+      }
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/5. GBCrcl30SpryMattGl.psd",
+      "sourceSha256": "07fea1c7d6e88f6fe14e9cdb13239c2754dbe405cf5d7564894ed433a0138809",
+      "excludedBackground": "Background",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl30SpryMattGl.webp",
+        "width": 707,
+        "height": 1200,
+        "sha256": "84c2e71d3632cdb2cc98d258f1b04d77ee0baf5fd90f33fce1097b8db4aba839"
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/3. GBCrcl15SpryBlkMatt.psd",
+      "sourceSha256": "0169dcf5bf249c84a9a57f0ef0af511a20da99c384c23aa61676653396e826d2",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SpryBlkMatt.webp",
+        "width": 593,
+        "height": 965,
+        "sha256": "f00b8e596fbbd686479c8b430cb8d04db688d9d98d2148e2169200639a268deb"
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryBlkSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/4. GBCrcl15SpryBlkSh.psd",
+      "sourceSha256": "786cb28e5a115a437bb5fa8397c745bd70875d48be32d67c015e29bcb478b920",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SpryBlkSh.webp",
+        "width": 593,
+        "height": 968,
+        "sha256": "ba55aa6cc64df6b170275c2d635b2f393bdc29c3ff6181ead318e00eeb0b8ce5"
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryBluMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/5. GBCrcl15SpryBluMatt.psd",
+      "sourceSha256": "71299e6a6444e4181c62aed1a149e0efbb28908a4b3186943f86e79a88f56cd2",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SpryBluMatt.webp",
+        "width": 593,
+        "height": 969,
+        "sha256": "a82e7b58c43f2c72ddd81fca0497e62d1d3984a48b15bfc70c6539a8c3836884"
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryCuMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/30. GBCrcl15SpryCuMatt.psd",
+      "sourceSha256": "fb96da8a8eeadb668a979024d4fd40466fa9511b0eedefadf280dd9db920b236",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only; external white retouch patch excluded from copper layer",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SpryCuMatt.webp",
+        "width": 593,
+        "height": 963,
+        "sha256": "92cede20d78ceee3308a0c8a3b14f6e5111330fc0dc3a687a2f58673299c95ad"
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/7. GBCrcl15SpryGlMatt.psd",
+      "sourceSha256": "e81ef96379e5a7325b143e8e588d993d6595f1f88fb86317f824f6c8ba8f0356",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SpryGlMatt.webp",
+        "width": 593,
+        "height": 965,
+        "sha256": "e88a9938aa7ff064ea13150709ca63d1ce7fb35d3ffaf09c81c83e34f0f686ca"
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryGlSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/6. GBCrcl15SpryGlSh.psd",
+      "sourceSha256": "f5135bd4d78a7379628da19e2f8ff8d8e7c6320ec910a7d16d6998ba60a504db",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SpryGlSh.webp",
+        "width": 593,
+        "height": 965,
+        "sha256": "0b68c1b74b24dcd4c31b7eb3dd61ea6ed381d73f59ff263976f1b31513f3c0a6"
+      }
+    },
+    {
+      "sku": "GBCrcl15SprySlMatt",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/8. GBCrcl15SprySlMatt.psd",
+      "sourceSha256": "6964641a47c6a5841ece281dbbdf7eab3b8184a9e90258ce23d00cf40822d9ea",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SprySlMatt.webp",
+        "width": 593,
+        "height": 968,
+        "sha256": "4f72a9baa733e9082fe83898b3c7cce634f504c3f1eb5202af6fbeb4d0d96d64"
+      }
+    },
+    {
+      "sku": "GBCrcl15SprySlSh",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/9. GBCrcl15SprySlSh copy.psd",
+      "sourceSha256": "e2a3ce1f7793ccf9361e224c62347d2d6d4fb8260508c214c28ac609c92b8fa5",
+      "excludedBackground": "Layer 0",
+      "reviewNote": "Reviewed glass/dip-tube group plus original capped sprayer; native registration, uniform scale only",
+      "asset": {
+        "url": "/images/bottle-builder/circle/GBCrcl15SprySlSh.webp",
+        "width": 593,
+        "height": 964,
+        "sha256": "d5f5395eed469994ee989499aa1c5974661c401783364415ba369e8b70f0d5ca"
+      }
+    }
+  ],
+  "skipped": []
+}

@@ -1,0 +1,119 @@
+{
+  "review": "Bare threaded bodies visually verified on bone; no caps, tubes, or mechanisms. Uniform scaling only.",
+  "sources": [
+    {
+      "body": "Circle|15|Clear|13-415",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/1. GBCrcl15BlkSht.psd",
+      "sourceSha256": "d11ad08900c2fd50ceea0ec00c2e9d7fc55e6c1811aaf75a06e46fbdf4ef8505",
+      "layerIndex": 1,
+      "layerName": "Layer 7",
+      "bounds": [
+        53,
+        261,
+        646,
+        994
+      ],
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-15-clear-13-415.webp",
+        "width": 593,
+        "height": 733,
+        "sha256": "84a561beb99b7c789ad46f71807797b3b27b0a1f72ac857698b8e19958f4a677"
+      }
+    },
+    {
+      "body": "Circle|30|Clear|15-415",
+      "path": "4.  15-415 Bottles/1. Circle Clear 30ml - Capped/Circle 30ml/2. GBCrcl30SpryShnGl.psd",
+      "sourceSha256": "86a8d78fd53d12c8266eae6de72c1d3a31947208efe8b8ebffca8ff695d354b9",
+      "layerIndex": 2,
+      "layerName": "Layer 8",
+      "bounds": [
+        234,
+        311,
+        947,
+        1251
+      ],
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-30-clear-15-415.webp",
+        "width": 713,
+        "height": 940,
+        "sha256": "57e98fe6ca812fa1608c06f4be99e12a5919dd5c8b66ac711eaf3c23671dee97"
+      }
+    },
+    {
+      "body": "Circle|50|Clear|18-415",
+      "path": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/1. GBCrcl50RdcrShnGl.psd",
+      "sourceSha256": "a46371642c100090b5f2eec9cb021696b84154c915668ffa743d18f1c6b0aed4",
+      "layerIndex": 1,
+      "layerName": "Layer 7",
+      "bounds": [
+        186,
+        133,
+        1194,
+        1368
+      ],
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-50-clear-18-415.webp",
+        "width": 979,
+        "height": 1200,
+        "sha256": "a4781ea8dd9b59498af8361a1b75926cfeaab2ab4ddc5f1dc023d9f066d81f61"
+      }
+    },
+    {
+      "body": "Circle|50|Frosted|18-415",
+      "path": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/1. GBCrclFrst50RdcrShnGl.psd",
+      "sourceSha256": "bc459d3eb13cc8e5e80b2d6cbda7017129c409444000d0f411b8e246297becc0",
+      "layerIndex": 1,
+      "layerName": "Layer 8",
+      "bounds": [
+        186,
+        188,
+        1187,
+        1368
+      ],
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-50-frosted-18-415.webp",
+        "width": 1000,
+        "height": 1179,
+        "sha256": "36eb895cb6c3ce910de7781d4a1df5ba1d5f54baf74d5ac17af5914588150102"
+      }
+    },
+    {
+      "body": "Circle|100|Clear|18-415",
+      "path": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+      "sourceSha256": "db84b0c32a00aac4b0d0e6d8dd487e6aad88991d75b398d869e29153ac4f1dec",
+      "layerIndex": 1,
+      "layerName": "Layer 14",
+      "bounds": [
+        191,
+        211,
+        1433,
+        1672
+      ],
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-100-clear-18-415.webp",
+        "width": 1000,
+        "height": 1176,
+        "sha256": "04d4906352885e42e7c47a926f7440b65ff2e385ef1a00054b0f16d4d21d5fec"
+      }
+    },
+    {
+      "body": "Circle|100|Frosted|18-415",
+      "path": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/1. GBCrclFrst100RdcrShnGl.psd",
+      "sourceSha256": "5eea5af69af5b5320c928631e21f3cc247d9eb370f100b2b613088be225fe342",
+      "layerIndex": 1,
+      "layerName": "Layer 4",
+      "bounds": [
+        131,
+        164,
+        1198,
+        1447
+      ],
+      "asset": {
+        "url": "/images/bottle-builder/circle/circle-100-frosted-18-415.webp",
+        "width": 998,
+        "height": 1200,
+        "sha256": "0cc791ff4a4dadc23aeaf258477299f9da44232a4386c41124915a205844ff27"
+      }
+    }
+  ]
+}

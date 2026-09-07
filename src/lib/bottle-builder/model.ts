@@ -2,6 +2,10 @@ import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
 import type { CartItem } from "@/components/CartProvider";
 import { getCustomerFacingProductName } from "@/lib/products/customer-facing-names";
+import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import bodyMedia from "./circle-bodies.generated.json";
+import assemblyMedia from "./circle-assemblies.generated.json";
+import fitmentMedia from "./fitments.generated.json";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 
 export type CatalogRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
@@ -16,12 +20,17 @@ export type BuilderConfiguration = {
     color: string;
     fitment: string;
     closure: string;
-    kit: BuilderKit;
+    kit: BuilderKit | null;
+    photoUrl: string | null;
+    bodyImage: { url: string; width: number; height: number } | null;
+    finishComponent: { websiteSku: string; imageUrl: string | null; name: string };
+    profileLabel: string;
     product: CartItem;
     caseQuantity: number | null;
 };
 export type BuilderBody = {
     id: string;
+    profileLabel: string;
     family: string;
     capacityMl: number;
     neck: string;
@@ -41,13 +50,55 @@ const slug = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "-");
 const closureSlots = new Set(["cap", "overcap"]);
 export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
 
+/** Join the selected assembly to a real, active component returned by matrix.
+ * Neck equality and another finish on a complete SKU are not sufficient. */
+export function compatibleFinishComponent(row: CatalogRow) {
+    const app = row.applicator ?? "";
+    const kind = /roller/i.test(app) ? "Roll-On Cap" : /pump/i.test(app) && !/spray/i.test(app) ? "Lotion Pump"
+        : /spray/i.test(app) ? "Sprayer" : /dropper/i.test(app) ? "Dropper" : "Cap";
+    const skuPattern = kind === "Sprayer"
+        ? /tassel/i.test(app) ? /^(AnSpTsl|CP\d+-\d+AnSpTsl)/i
+        : /vintage|bulb/i.test(app) ? /^(AnSp(?!Tsl)|CP\d+-\d+AnSp(?!Tsl))/i
+        : /^(Spry|CP\d+-\d+Spry)/i
+        : kind === "Roll-On Cap" ? /^CPRoll/i : kind === "Lotion Pump" ? /^Ltn/i
+        : kind === "Dropper" ? /^Drp/i : /^CP(?!Roll|.*(?:Spry|AnSp))/i;
+    const finish = getFinishFromWebsiteSku(row.websiteSku)?.label ?? row.capColor?.trim();
+    if (!finish) return null;
+    const matches = (row.components[kind] ?? []).filter(part => part.websiteSku && part.graceSku
+        && !/__RETIRED__/i.test(part.websiteSku) && part.shopifySellable !== false
+        && !/out of stock|discontinued|unavailable/i.test(part.stockStatus ?? "")
+        && skuPattern.test(part.websiteSku) && part.websiteSku.includes(row.neckThreadSize ?? "invalid")
+        && getFinishFromWebsiteSku(part.websiteSku)?.label === finish);
+    if (matches.length !== 1) return null;
+    const part = matches[0];
+    return { websiteSku: part.websiteSku!, imageUrl: part.imageUrl ?? null, name: part.itemName ?? kind };
+}
+
+export function reviewedBodyImage(row: CatalogRow) {
+    const key = `${row.family}|${row.capacityMl}|${row.color}|${row.neckThreadSize}`;
+    return (bodyMedia as Record<string, { url: string; width: number; height: number }>)[key] ?? null;
+}
+
+export function reviewedFitmentImage(config: BuilderConfiguration) {
+    return (fitmentMedia as Record<string, { url: string; width: number; height: number }>)[`${config.family}|${config.capacityMl}|${config.neck}|${config.fitment}`] ?? null;
+}
+
+/** Distinguish data/compatibility failures from missing reviewed imagery. */
+export function assessBuilderConfiguration(row: CatalogRow, kit: BuilderKit | null = null) {
+    const configuration = configurationFromRow(row, kit) ?? catalogConfigurationFromRow(row);
+    const issue = configuration ? null : row.resolution === "unknown" || !compatibleFinishComponent(row)
+        ? "compatibility_unresolved" : !isBuilderCandidate(row) ? "catalog_unavailable" : "media_unavailable";
+    return { configuration, issue };
+}
+
 /** Uses the already resolved compatibility result from convex/matrix.ts.
  * A complete, orderable assembly is the purchase unit: never charge a second
  * loose component on top of an assembly that already includes that component.
  */
 export function isBuilderCandidate(row: CatalogRow): boolean {
     return row.resolution !== "unknown"
-        && Object.values(row.components).some(parts => parts.length > 0)
+        && !/__RETIRED__/i.test(row.websiteSku ?? "")
+        && Boolean(compatibleFinishComponent(row))
         && Boolean(row.graceSku && row.websiteSku && row.itemName && row.family && row.color && row.neckThreadSize)
         && /bottle|vial/i.test(row.category ?? "")
         && Boolean(row.capacityMl && row.capacityMl > 0)
@@ -83,12 +134,38 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null): B
     if (!fitment || fitment === "N/A") return null;
     const mechanism = kit.parts.filter(part => part.slot !== "body" && !isClosurePart(part));
     if (!capOnly && mechanism.length === 0) return null;
+    return catalogConfigurationFromRow(row, kit);
+}
+
+/** A published separated kit or a reviewed source body is required. A complete
+ * product photograph must never stand in for an unassembled bottle. */
+export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | null = null): BuilderConfiguration | null {
+    const bodyImage = reviewedBodyImage(row);
+    const assembly = (assemblyMedia as Record<string, { url: string }>)[row.websiteSku ?? ""];
+    if (!isBuilderCandidate(row) || (!kit && (!bodyImage || !assembly)) || (row.family === "Cylinder" && row.capacityMl === 5.5)) return null;
+    const { family, color, capacityMl, neckThreadSize: neck } = row;
+    const app = row.applicator?.trim();
+    const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
+    const fitment = capOnly ? /tear[ -]off/i.test(row.itemName ?? "") ? "Tear-off Cap" : "Screw Cap" : app === "Metal Roller Ball" ? "Metal Roller"
+        : app === "Plastic Roller Ball" ? "Plastic Roller" : app === "Perfume Spray Pump" ? "Perfume Sprayer"
+        : app && app !== "N/A" ? app : /\bapplicator\b/i.test(row.itemName ?? "") ? "Applicator" : null;
+    if (!fitment) return null;
     const name = getCustomerFacingProductName({ variant: row });
-    const closure = name.variantLabel;
-    if (!closure) return null;
+    let closure = name.variantLabel ?? row.capColor?.trim() ?? "Standard finish";
+    if (row.capStyle === "Tall" && /Cap/.test(closure) && !/Tall/i.test(closure)) closure = `Tall ${closure}`;
+    // The group prefix preserves distinct molds with equal capacity and neck,
+    // such as Footed Rectangle and Tall Rectangle, across colors and tops.
+    const capacityMarker = `-${capacityMl}ml-`;
+    const profileName = row.productGroupSlug?.includes(capacityMarker)
+        ? row.productGroupSlug.split(capacityMarker)[0] : slug(family!);
+    const profile = `${profileName}-${capacityMl}ml`;
+    const distinctShape = row.shape && !["standard", slug(family!), slug(color!)].includes(slug(row.shape)) ? slug(row.shape) : null;
+    const profileLabel = (distinctShape ? `${distinctShape}-${profileName}` : profileName).split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
     return {
-        id: row.websiteSku!, bodyId: `${kit.familyId.slice(0, -suffix.length)}|${neck}|${row.category}`,
-        family: family!, capacityMl: capacityMl!, neck: neck!, color: color!, fitment, closure, kit,
+        id: row.websiteSku!, bodyId: `${profile}|${neck}|${row.category}${distinctShape ? `|${distinctShape}` : ""}`,
+        family: family!, capacityMl: capacityMl!, neck: neck!, color: color!, fitment, closure, kit, profileLabel,
+        bodyImage, finishComponent: compatibleFinishComponent(row)!,
+        photoUrl: assembly?.url ?? null,
         caseQuantity: row.caseQuantity && row.caseQuantity > 0 ? row.caseQuantity : null,
         product: {
             graceSku: row.graceSku!, websiteSku: row.websiteSku, itemName: name.displayName,
@@ -115,14 +192,14 @@ export function groupBuilderBodies(configurations: BuilderConfiguration[]): Buil
         if (unique.length !== 1) continue;
         const config = unique[0];
         const group = groups.get(config.bodyId) ?? {
-            id: config.bodyId, family: config.family, capacityMl: config.capacityMl, neck: config.neck, configurations: [],
+            id: config.bodyId, profileLabel: config.profileLabel, family: config.family, capacityMl: config.capacityMl, neck: config.neck, configurations: [],
         };
         group.configurations.push(config);
         groups.set(group.id, group);
     }
     for (const body of groups.values()) body.configurations.sort((a, b) =>
         (a.color === b.color ? 0 : a.color === "Clear" ? -1 : b.color === "Clear" ? 1 : a.color.localeCompare(b.color))
-        || a.fitment.localeCompare(b.fitment) || a.closure.localeCompare(b.closure));
+        || Number(Boolean(b.kit)) - Number(Boolean(a.kit)) || a.fitment.localeCompare(b.fitment) || a.closure.localeCompare(b.closure));
     return [...groups.values()].sort((a, b) => a.capacityMl - b.capacityMl || a.neck.localeCompare(b.neck));
 }
 
@@ -157,8 +234,13 @@ export function reconcileSelection(bodies: BuilderBody[], state: BuilderSelectio
     return next;
 }
 
+/** Choosing a body starts a new physical build, without carrying over a top. */
+export function selectBuilderBody(bodies: BuilderBody[], state: BuilderSelection, bodyId: string): BuilderSelection {
+    return reconcileSelection(bodies, { ...state, bodyId, color: null, fitment: null, closure: null });
+}
+
 export function previewParts(config: BuilderConfiguration, stage: "body" | "fitment" | "complete"): BuilderPart[] {
-    return [...config.kit.parts].filter(part => stage === "complete" || part.slot === "body"
+    return [...(config.kit?.parts ?? [])].filter(part => stage === "complete" || part.slot === "body"
         || (stage === "fitment" && !isClosurePart(part))).sort((a, b) => a.zOrder - b.zOrder);
 }
 

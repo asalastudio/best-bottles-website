@@ -42,20 +42,23 @@
 .option small { font-size: 9px; color: var(--quiet); margin-top: 4px; }
 .selectionCheck { position: absolute; top: 6px; right: 6px; width: 19px; height: 19px; background: var(--gold); color: #fff; border-radius: 50%; display: grid; place-items: center; }
 .bottleThumb { width: 100%; height: 125px; margin: 0 0 6px; }
-.colorThumb { width: 100%; height: 142px; }
-.componentThumb { width: 100%; height: 83px; padding: 8px; }
-.closureThumb { width: 100%; height: 77px; padding: 6px; }
+.colorThumb { width: 100%; height: 142px; background: #eeebe5; border-radius: 3px; margin-bottom: 10px; }
+.componentThumb { position: relative; width: 100%; height: 110px; padding: 8px; overflow: hidden; }
+.fitmentGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.componentThumb > img { mix-blend-mode: multiply; }
+.closureThumb { position: relative; width: 100%; height: 106px; padding: 8px; overflow: hidden; display: grid; place-items: center; font-size: 10px; color: var(--quiet); }
 .closureGrid .option strong { font-size: 10px; }
 .closureSection { border-top: 1px solid var(--line); padding-top: 23px; margin-top: 25px; }
 .closureSection h3 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 24px; letter-spacing: -.025em; }
 .closureSection > p { margin: 5px 0 16px; }
 .previous { display: inline-flex; align-items: center; gap: 7px; font-size: 11px; color: var(--quiet); margin-top: 26px; min-height: 36px; }
-.preview { position: sticky; top: 126px; border: 1px solid var(--line); border-radius: 6px; background: #eeebe5; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; }
+.preview { position: sticky; top: 126px; border: 1px solid var(--line); border-radius: 6px; background: #eeebe5; min-height: 570px; overflow: hidden; display: flex; flex-direction: column; isolation: isolate; }
 .previewHeader { display: flex; justify-content: space-between; align-items: center; padding: 23px 22px 0; gap: 12px; }
 .previewHeader > span:first-child { font-size: 8px; letter-spacing: .15em; color: #79746b; }
 .liveDot { display: flex; align-items: center; gap: 5px; font-size: 9px; color: #69695f; white-space: nowrap; }
 .liveDot::before { content: ''; height: 4px; width: 4px; border-radius: 100%; background: #79836a; }
 .previewImage { width: 100%; height: 450px; padding: 8px 20px 0; }
+
 .previewCaption { text-align: center; padding: 0 16px 25px; }
 .previewCaption h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 28px; line-height: 1.1; letter-spacing: -.025em; }
 .previewCaption p { color: var(--quiet); font-size: 11px; margin-top: 9px; }
@@ -121,7 +124,7 @@
 .addedNotice h2 { font-family: var(--font-eb-garamond), Georgia, serif; font-size: 26px; line-height: 1.2; }
 .addedNotice p { font-size: 11px; color: var(--quiet); line-height: 1.7; margin-top: 5px; }
 .addedActions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; align-items: center; }
-.addedActions > a:last-child { grid-column: 1 / -1; text-align: center; }
+
 .empty a { display: flex; justify-content: center; align-items: center; gap: 8px; font-size: 11px; color: #806336; min-height: 30px; }
 @keyframes confirmationIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
 .error { color: #963f2e; font-size: 11px; line-height: 1.6; margin: 10px 0; }
@@ -203,3 +206,20 @@
     .review { padding-bottom: 8px; }
 }
 @media (prefers-reduced-motion: reduce) { .builder * { animation: none !important; transition: none !important; scroll-behavior: auto !important; } }
+
+/* Keep the current decision and its next action together. */
+.optionAction { margin-top: 24px; }
+.optionDescription { margin-top: 8px; font-size: 11px; line-height: 1.5; color: var(--quiet); }
+.selectedFitment { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 14px; border: 1px solid var(--line); border-radius: 4px; background: #fcfaf6; }
+.selectedFitment span, .selectedFitment small { display: block; font-size: 11px; color: var(--quiet); line-height: 1.6; }
+.selectedFitment strong { display: block; font-size: 14px; font-weight: 600; margin: 3px 0; }
+.selectedFitment .textButton { flex-shrink: 0; }
+.selectedFitment + .closureSection { border-top: 0; margin-top: 12px; padding-top: 0; }
+.purchaseHint { font-size: 12px; line-height: 1.7; color: var(--quiet); }
+.purchaseHint small { display: block; margin-top: 12px; font-size: 11px; }
+.quantity, .textButton, .summaryLine > button, .minimum button { min-height: 44px; }
+.quantity button { width: 44px; }
+.option strong { font-size: 12px; }
+.option small { font-size: 10px; }
+.closureGrid .option strong { font-size: 12px; }
+@media (max-width: 1099px) { .optionAction { display: none; } }

@@ -5,16 +5,25 @@ import type { BuilderConfiguration, BuilderPart } from "@/lib/bottle-builder/mod
 
 /** These are the existing alpha layers on their registered canvas, never
  * independently resized parts. Only the viewport changes for thumbnails. */
-export default function BuilderImage({ config, parts, label, thumbnail = false, scale = 1 }: {
+export default function BuilderImage({ config, parts, label, thumbnail = false, scale = 1, stage = "body" }: {
     config: BuilderConfiguration;
     parts: BuilderPart[];
     label: string;
     thumbnail?: boolean;
+    stage?: "body" | "fitment" | "complete";
     /** Relative chooser size; preserves all layer registration and the baseline. */
     scale?: number;
 }) {
     const titleId = useId();
     const [failedUrl, setFailedUrl] = useState<string | null>(null);
+    if (!config.kit) {
+        const url = stage === "complete" && config.photoUrl ? config.photoUrl : config.bodyImage?.url;
+        if (!url || failedUrl === url) return <span role="img" aria-label={label}>Image unavailable</span>;
+        // Reviewed original body layer until a complete finish is selected.
+        // eslint-disable-next-line @next/next/no-img-element
+        return <img src={url} alt={label} loading="lazy" data-builder-layer={stage === "complete" ? "assembly" : "body"}
+            onError={() => setFailedUrl(url)} style={{ width: "100%", height: "100%", objectFit: "contain", transform: `scale(${scale * .88})`, transformOrigin: "bottom center" }} />;
+    }
     const failed = parts.some(part => part.image.url === failedUrl);
     if (!parts.length || failed) return <span role="img" aria-label={label}>Image unavailable</span>;
     const { axisX, seatY, baselineY } = config.kit.anchors;

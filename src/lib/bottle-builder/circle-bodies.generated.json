@@ -1,0 +1,38 @@
+{
+  "Circle|15|Clear|13-415": {
+    "url": "/images/bottle-builder/circle/circle-15-clear-13-415.webp",
+    "width": 593,
+    "height": 733,
+    "sha256": "84a561beb99b7c789ad46f71807797b3b27b0a1f72ac857698b8e19958f4a677"
+  },
+  "Circle|30|Clear|15-415": {
+    "url": "/images/bottle-builder/circle/circle-30-clear-15-415.webp",
+    "width": 713,
+    "height": 940,
+    "sha256": "57e98fe6ca812fa1608c06f4be99e12a5919dd5c8b66ac711eaf3c23671dee97"
+  },
+  "Circle|50|Clear|18-415": {
+    "url": "/images/bottle-builder/circle/circle-50-clear-18-415.webp",
+    "width": 979,
+    "height": 1200,
+    "sha256": "a4781ea8dd9b59498af8361a1b75926cfeaab2ab4ddc5f1dc023d9f066d81f61"
+  },
+  "Circle|50|Frosted|18-415": {
+    "url": "/images/bottle-builder/circle/circle-50-frosted-18-415.webp",
+    "width": 1000,
+    "height": 1179,
+    "sha256": "36eb895cb6c3ce910de7781d4a1df5ba1d5f54baf74d5ac17af5914588150102"
+  },
+  "Circle|100|Clear|18-415": {
+    "url": "/images/bottle-builder/circle/circle-100-clear-18-415.webp",
+    "width": 1000,
+    "height": 1176,
+    "sha256": "04d4906352885e42e7c47a926f7440b65ff2e385ef1a00054b0f16d4d21d5fec"
+  },
+  "Circle|100|Frosted|18-415": {
+    "url": "/images/bottle-builder/circle/circle-100-frosted-18-415.webp",
+    "width": 998,
+    "height": 1200,
+    "sha256": "0cc791ff4a4dadc23aeaf258477299f9da44232a4386c41124915a205844ff27"
+  }
+}
