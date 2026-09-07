@@ -754,7 +754,7 @@ function FilterSidebarContent({
                                     disabled={isDead}
                                     className={`flex min-h-11 flex-1 items-center justify-between py-2 text-left text-[13px] transition-colors ${isSelected ? "font-semibold text-muted-gold" : isDead ? "cursor-not-allowed text-slate/40" : "text-obsidian/70 hover:text-muted-gold"}`}
                                 >
-                                    <span>{group.label}</span>
+                                    <span className="text-sm font-medium">{group.label}</span>
                                     <span className="text-[11px] text-slate/60">{group.count}</span>
                                 </button>
                                 {group.collections.length > 0 && (
@@ -779,7 +779,7 @@ function FilterSidebarContent({
                                         className="overflow-hidden"
                                     >
                                         <div className="mb-2 ml-2 space-y-0.5 border-l border-champagne pl-4">
-                                            <p className="pb-1 pt-2 text-[10px] font-semibold uppercase tracking-[0.14em] text-slate">{group.familyLabel}</p>
+                                            <p className="pb-2 pt-3 text-[11px] font-medium uppercase tracking-[0.12em] text-slate">{group.familyLabel}</p>
                                             {group.collections.map((col) => {
                                                 const colSelected = filters.collection === col.name;
                                                 const colDead = col.count === 0 && !colSelected;
@@ -1849,7 +1849,7 @@ export default function CatalogClient({
                     <div>
                         <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-obsidian font-medium leading-[1.1] mb-1 sm:mb-2">Master Catalog</h1>
                         <p className="text-slate text-xs sm:text-sm max-w-xl">
-                            {isLoading ? "Loading catalog..." : `${totalCount.toLocaleString()} product group${totalCount === 1 ? "" : "s"} currently visible.`}
+                            {isLoading ? "Loading catalog..." : `${totalCount.toLocaleString()} product${totalCount === 1 ? "" : "s"} currently visible.`}
                             <span>{" "}Need help? Talk with Grace, your AI Bottling Specialist.</span>
                         </p>
                     </div>
