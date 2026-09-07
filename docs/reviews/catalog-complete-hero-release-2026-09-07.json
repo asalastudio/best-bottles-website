@@ -392,9 +392,9 @@
       "url": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
       "sha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
       "framing": {
-        "scale": 0.7751677852348994,
-        "translateXPercent": 9.562080536912745,
-        "translateYPercent": 26.402684563758385
+        "scale": 0.8140000000000002,
+        "translateXPercent": 7.536333333333316,
+        "translateYPercent": 23.166666666666664
       }
     },
     {
@@ -403,9 +403,9 @@
       "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
       "sha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
       "framing": {
-        "scale": 0.77,
-        "translateXPercent": 10.601666666666667,
-        "translateYPercent": 23.333333333333343
+        "scale": 0.8354210526315792,
+        "translateXPercent": 7.254289473684198,
+        "translateYPercent": 17.58421052631578
       }
     },
     {
@@ -414,97 +414,97 @@
       "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
       "sha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
       "framing": {
-        "scale": 0.8076923076923078,
-        "translateXPercent": 7.865384615384613,
-        "translateYPercent": 20.75524475524476
+        "scale": 0.8220093215950288,
+        "translateXPercent": 7.11851372345933,
+        "translateYPercent": 19.51009839461417
       }
     },
     {
       "websiteSku": "GBCrcl30GlCap",
       "groupSlug": "circle-30ml-clear-15-415",
-      "url": "/images/catalog/bone-review/GBCrcl30GlCap.bec08b247ea0.png",
-      "sha256": "bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605",
+      "url": "/images/catalog/bone-review/GBCrcl30GlCap.01eecbbe4d85.png",
+      "sha256": "01eecbbe4d8503c6e1fe97e9e4200eed8a11383244b6d3363c5a10b8b07227c1",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.090815973273477,
+        "translateXPercent": -4.540798663673849,
+        "translateYPercent": -8.292223208226755
       }
     },
     {
       "websiteSku": "GBCrcl30SpryMattGl",
       "groupSlug": "circle-30ml-clear-15-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.64b69135e487.png",
-      "sha256": "64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8",
+      "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.60279e0b076c.png",
+      "sha256": "60279e0b076c61f560513118f82b867f5451bb20efcf6559347b398e488a0fba",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0920397274685638,
+        "translateXPercent": -4.601986373428192,
+        "translateYPercent": -8.403616218292349
       }
     },
     {
       "websiteSku": "GBCrcl50AnSpGl",
       "groupSlug": "circle-50ml-clear-18-415-antiquespray",
-      "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.5e3b4ed13bef.png",
-      "sha256": "5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8",
+      "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.f8607e109e90.png",
+      "sha256": "f8607e109e90239aaad431b8feee8be2b9884df44625fe0ddb80387c2d01528e",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
       }
     },
     {
       "websiteSku": "GBCrcl50AnSpTslIvyGl",
       "groupSlug": "circle-50ml-clear-18-415-antiquespray-tassel",
-      "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.2a48a28d4e3c.png",
-      "sha256": "2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d",
+      "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.b3cd7abc53c1.png",
+      "sha256": "b3cd7abc53c1b2120bc67b916277c3abf0b191ac047a9610f2388e9d7b37c418",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.216195979990248,
+        "translateXPercent": -10.809798999512402,
+        "translateYPercent": -19.70501869142001
       }
     },
     {
       "websiteSku": "GBCrcl50DrpGl",
       "groupSlug": "circle-50ml-clear-18-415-dropper",
-      "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1671b9d14401.png",
-      "sha256": "1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586",
+      "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1c4ffae8961f.png",
+      "sha256": "1c4ffae8961f61ce9a017b6136b698dcf4dd85c02215e58e8bf4c02eb82a3ada",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
       }
     },
     {
       "websiteSku": "LBCrcl50LtnMtGl",
       "groupSlug": "circle-50ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.6389afea63f2.png",
-      "sha256": "6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c",
+      "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.f2d59ea6b8ff.png",
+      "sha256": "f2d59ea6b8ffb391a9be268f2fda23d7bf22fa7560b471a3a5e864de40517899",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
       }
     },
     {
       "websiteSku": "GBCrcl50SpryMtGl",
       "groupSlug": "circle-50ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.3b4f2e7f3575.png",
-      "sha256": "3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a",
+      "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.26b991568b84.png",
+      "sha256": "26b991568b84ddd15fcc8f00c6c4a9599af7b3cb56b59774904a9542de2fbc2f",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
       }
     },
     {
       "websiteSku": "GBCrcl50RdcrShnGl",
       "groupSlug": "circle-50ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.1c8ebbb7f8c2.png",
-      "sha256": "1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a",
+      "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.19d05867b478.png",
+      "sha256": "19d05867b478b5d7637cfb0b6937d3110a28cf668b1043380e41e9071bd39f3e",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0718257561891726,
+        "translateXPercent": -3.5912878094586342,
+        "translateYPercent": -6.56362652491187
       }
     },
     {
@@ -513,9 +513,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.fabd4d918ae6.png",
       "sha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0730573753822965,
+        "translateXPercent": -3.6528687691148245,
+        "translateYPercent": -6.675735451465453
       }
     },
     {
@@ -524,9 +524,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
       "sha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0753012755880131,
+        "translateXPercent": -3.7650637794006605,
+        "translateYPercent": -6.879987906088384
       }
     },
     {
@@ -535,9 +535,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst50DrpGl.c3efc5033ad5.png",
       "sha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0741781536398183,
+        "translateXPercent": -3.7089076819909117,
+        "translateYPercent": -6.777755010803978
       }
     },
     {
@@ -546,9 +546,9 @@
       "url": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.f31e21488965.png",
       "sha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0743739944293549,
+        "translateXPercent": -3.7186997214677415,
+        "translateYPercent": -6.795581544210509
       }
     },
     {
@@ -557,9 +557,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.d9557a8a06fb.png",
       "sha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0743739944293549,
+        "translateXPercent": -3.7186997214677415,
+        "translateYPercent": -6.795581544210509
       }
     },
     {
@@ -568,64 +568,64 @@
       "url": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.617a4baaf53b.png",
       "sha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0754975261571909,
+        "translateXPercent": -3.7748763078595404,
+        "translateYPercent": -6.897851739949433
       }
     },
     {
       "websiteSku": "GBCrcl100AnSpGl",
       "groupSlug": "circle-100ml-clear-18-415-antiquespray",
-      "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.dd8fc0f62a83.png",
-      "sha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+      "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.7643993ab799.png",
+      "sha256": "7643993ab7998fb2fa35e453e4524e4c47ea9a7e037ca55bf28fb06595d0e643",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0254576508840663,
+        "translateXPercent": -1.2728825442033116,
+        "translateYPercent": -2.342940016370133
       }
     },
     {
       "websiteSku": "GBCrcl100AnSpTslGl",
       "groupSlug": "circle-100ml-clear-18-415-antiquespray-tassel",
-      "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.a045b0fe5c0e.png",
-      "sha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+      "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.b6d92daf8fea.png",
+      "sha256": "b6d92daf8fea976609858131ed63ae2a1068ce42bf3ba209d61768090c981fee",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0265937214033214,
+        "translateXPercent": -1.3296860701660689,
+        "translateYPercent": -2.4463515636356634
       }
     },
     {
       "websiteSku": "LBCrcl100LtnMtGl",
       "groupSlug": "circle-100ml-clear-18-415-lotionpump",
-      "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.318b80039e44.png",
-      "sha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+      "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.986f220e426c.png",
+      "sha256": "986f220e426c256b80981e0eb6ffb8d6c140b436e1851574bfc8f62b131768bd",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0265937214033214,
+        "translateXPercent": -1.3296860701660689,
+        "translateYPercent": -2.4463515636356634
       }
     },
     {
       "websiteSku": "GBCrcl100SpryMtGl",
       "groupSlug": "circle-100ml-clear-18-415-perfumespray",
-      "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.d7d11d3a4db4.png",
-      "sha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+      "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.9f1a45956a0b.png",
+      "sha256": "9f1a45956a0b07e684dddfa34cfda68e750f9090700e7efcd43aefc698a336dc",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0265937214033214,
+        "translateXPercent": -1.3296860701660689,
+        "translateYPercent": -2.4463515636356634
       }
     },
     {
       "websiteSku": "GBCrcl100RdcrShnGl",
       "groupSlug": "circle-100ml-clear-18-415-reducer",
-      "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.01fcf261dd38.png",
-      "sha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+      "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.1559dfd93201.png",
+      "sha256": "1559dfd932016e2efd40abf36ddecca3e90d75a916e8856a95903fe793f44892",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0282820768589154,
+        "translateXPercent": -1.4141038429457717,
+        "translateYPercent": -2.6000352012602512
       }
     },
     {
@@ -634,9 +634,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
       "sha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0217751585747115,
+        "translateXPercent": -1.0887579287355738,
+        "translateYPercent": -2.007738793339118
       }
     },
     {
@@ -645,9 +645,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.07288e4ba905.png",
       "sha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0209447069522137,
+        "translateXPercent": -1.0472353476106886,
+        "translateYPercent": -1.9321464020604806
       }
     },
     {
@@ -656,9 +656,9 @@
       "url": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.f8a3bd634987.png",
       "sha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0329028578490431,
+        "translateXPercent": -1.6451428924521596,
+        "translateYPercent": -3.0206447529257203
       }
     },
     {
@@ -667,9 +667,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
       "sha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0329028578490431,
+        "translateXPercent": -1.6451428924521596,
+        "translateYPercent": -3.0206447529257203
       }
     },
     {
@@ -678,9 +678,9 @@
       "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
       "sha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
       "framing": {
-        "scale": 1,
-        "translateXPercent": 0,
-        "translateYPercent": -0.02564102564102882
+        "scale": 1.0329028578490431,
+        "translateXPercent": -1.6451428924521596,
+        "translateYPercent": -3.0206447529257203
       }
     },
     {
@@ -4317,5 +4317,10 @@
   "supersededLocalAlternateSkus": 10,
   "laterApprovals": [
     "elegant-shoulder-alignment-2026-09-07.json"
-  ]
+  ],
+  "circleRevision": {
+    "report": "docs/reviews/circle-recovery/alignment-and-matte-report.json",
+    "scope": "27 saved shoulder targets and 13 clear matte corrections visually approved and integrated locally",
+    "visualApproved": true
+  }
 }

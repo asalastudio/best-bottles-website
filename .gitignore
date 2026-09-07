@@ -194,3 +194,7 @@ data/paper-doll/plates-snapshot.json
 
 # Local review assets and feedback stay local; tooling is versioned.
 /hero-reviews/
+
+# Local PSD inspection runtime and review contact sheets.
+/.hero-tools-venv/
+/docs/reviews/circle-recovery/*.png

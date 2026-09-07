@@ -3,3 +3,5 @@
 /* Keep review controls inside narrow phone viewports. */
 .tools label{min-width:0;max-width:100%}.tools select{min-width:0;max-width:100%}
 .locked-photo{overflow:hidden}.baseline .locked-photo:after{content:'';position:absolute;left:0;right:0;top:91%;border-top:1px dashed #9a6035;pointer-events:none}
+
+.photo{overflow:hidden}

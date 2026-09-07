@@ -1,0 +1,139 @@
+{
+  "date": "2026-09-07",
+  "registryTotal": 391,
+  "bottleImages": 334,
+  "documentedCurrentShoulderReview": [
+    {
+      "family": "Cylinder",
+      "count": 52
+    },
+    {
+      "family": "Elegant",
+      "count": 33
+    },
+    {
+      "family": "Circle",
+      "count": 27
+    }
+  ],
+  "remainingBottleVerification": [
+    {
+      "family": "Sleek",
+      "count": 21,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Diva",
+      "count": 21,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Empire",
+      "count": 11,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Round",
+      "count": 21,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Aluminum Bottle",
+      "count": 7,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Apothecary",
+      "count": 5,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Atomizer",
+      "count": 23,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Bell",
+      "count": 3,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Boston Round",
+      "count": 23,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Decorative",
+      "count": 12,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Diamond",
+      "count": 5,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Flair",
+      "count": 3,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Grace",
+      "count": 5,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Lotion Bottle",
+      "count": 3,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Pillar",
+      "count": 2,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Plastic Bottle",
+      "count": 2,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Rectangle",
+      "count": 7,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Royal",
+      "count": 4,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Slim",
+      "count": 15,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Square",
+      "count": 3,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Teardrop",
+      "count": 3,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Tulip",
+      "count": 6,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    },
+    {
+      "family": "Vial",
+      "count": 17,
+      "status": "Existing replacement in catalog; latest shoulder/color combined verification not established by surviving records. Do not assume regeneration required."
+    }
+  ],
+  "ancillaryImages": 57,
+  "missingSourcesSeparate": 25,
+  "confirmedRemainingCorrectionCount": null
+}

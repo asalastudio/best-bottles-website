@@ -1,0 +1,1371 @@
+{
+  "baselinePercent": 91,
+  "rows": [
+    {
+      "sku": "GBCrcl15Gl",
+      "target": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
+      "originalAssetSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+      "url": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
+      "assetSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+      "originalFraming": {
+        "scale": 0.7751677852348994,
+        "translateXPercent": 9.562080536912745,
+        "translateYPercent": 26.402684563758385
+      },
+      "framing": {
+        "scale": 0.8140000000000002,
+        "translateXPercent": 7.536333333333316,
+        "translateYPercent": 23.166666666666664
+      },
+      "landmark": {
+        "sku": "GBCrcl15Gl",
+        "baseY": 1429.9999999999998,
+        "shoulderY": 650,
+        "definition": "Visually measured original pixels at body-to-neck transition; base recovered from the prior approved baseline transform."
+      },
+      "originalBaseY": 1429.9999999999998,
+      "measuredShoulderPercent": 37,
+      "renderedSignificantArtworkBounds": [
+        319.4387999999998,
+        769.538,
+        1275.8888000000002,
+        1568.8860000000002
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "target": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
+      "originalAssetSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+      "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
+      "assetSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+      "originalFraming": {
+        "scale": 0.77,
+        "translateXPercent": 10.601666666666667,
+        "translateYPercent": 23.333333333333343
+      },
+      "framing": {
+        "scale": 0.8354210526315792,
+        "translateXPercent": 7.254289473684198,
+        "translateYPercent": 17.58421052631578
+      },
+      "landmark": {
+        "sku": "GBCrcl15SpryGlMatt",
+        "baseY": 1507.9999999999998,
+        "shoulderY": 748,
+        "definition": "Visually measured original pixels at body-to-neck transition; base recovered from the prior approved baseline transform."
+      },
+      "originalBaseY": 1507.9999999999998,
+      "measuredShoulderPercent": 37,
+      "renderedSignificantArtworkBounds": [
+        289.4407578947367,
+        574.0923157894736,
+        1286.9334947368422,
+        1564.9016842105266
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "target": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
+      "originalAssetSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+      "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
+      "assetSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+      "originalFraming": {
+        "scale": 0.8076923076923078,
+        "translateXPercent": 7.865384615384613,
+        "translateYPercent": 20.75524475524476
+      },
+      "framing": {
+        "scale": 0.8220093215950288,
+        "translateXPercent": 7.11851372345933,
+        "translateYPercent": 19.51009839461417
+      },
+      "landmark": {
+        "sku": "GBCrcl15MtlRollGlMatt",
+        "baseY": 1492.3999999999996,
+        "shoulderY": 720,
+        "definition": "Visually measured original pixels at body-to-neck transition; base recovered from the prior approved baseline transform."
+      },
+      "originalBaseY": 1492.3999999999996,
+      "measuredShoulderPercent": 37,
+      "renderedSignificantArtworkBounds": [
+        306.68703262558245,
+        670.995100983946,
+        1262.6838736406007,
+        1569.4512894873126
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "target": {
+        "heightPercent": 43,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl30GlCap.bec08b247ea0.png",
+      "originalAssetSha256": "bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605",
+      "url": "/images/catalog/bone-review/GBCrcl30GlCap.01eecbbe4d85.png",
+      "assetSha256": "01eecbbe4d8503c6e1fe97e9e4200eed8a11383244b6d3363c5a10b8b07227c1",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.090815973273477,
+        "translateXPercent": -4.540798663673849,
+        "translateYPercent": -8.292223208226755
+      },
+      "landmark": {
+        "sku": "GBCrcl30GlCap",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/7. GBCrcl30GlCap.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          708,
+          927
+        ],
+        "sourceShoulderY": 193,
+        "sourceScale": 0.9251412429378532,
+        "bodyLeft": 311,
+        "bodyTop": 707,
+        "bodyWidth": 655,
+        "bodyHeight": 857,
+        "baseY": 1564,
+        "shoulderY": 885.5522598870057,
+        "registrationError": 260.8285714285714,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 43,
+      "renderedSignificantArtworkBounds": [
+        268.40730853473934,
+        631.0939747977241,
+        1289.4110595187137,
+        1559.378368053453
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "target": {
+        "heightPercent": 43,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl30SpryMattGl.64b69135e487.png",
+      "originalAssetSha256": "64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8",
+      "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.60279e0b076c.png",
+      "assetSha256": "60279e0b076c61f560513118f82b867f5451bb20efcf6559347b398e488a0fba",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0920397274685638,
+        "translateXPercent": -4.601986373428192,
+        "translateYPercent": -8.403616218292349
+      },
+      "landmark": {
+        "sku": "GBCrcl30SpryMattGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/5. GBCrcl30SpryMattGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          709,
+          940
+        ],
+        "sourceShoulderY": 206,
+        "sourceScale": 0.923836389280677,
+        "bodyLeft": 319,
+        "bodyTop": 696,
+        "bodyWidth": 655,
+        "bodyHeight": 867,
+        "baseY": 1563,
+        "shoulderY": 886.3102961918195,
+        "registrationError": 381.3442857142857,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 43,
+      "renderedSignificantArtworkBounds": [
+        276.56968563699206,
+        383.24913406141957,
+        1283.4303143630077,
+        1565.9281589098741
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl50AnSpGl.5e3b4ed13bef.png",
+      "originalAssetSha256": "5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8",
+      "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.f8607e109e90.png",
+      "assetSha256": "f8607e109e90239aaad431b8feee8be2b9884df44625fe0ddb80387c2d01528e",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
+      },
+      "landmark": {
+        "sku": "GBCrcl50AnSpGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/37. GBCrcl50AnSpGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1002,
+          1227
+        ],
+        "sourceShoulderY": 270,
+        "sourceScale": 0.783433133732535,
+        "bodyLeft": 484,
+        "bodyTop": 603,
+        "bodyWidth": 785,
+        "bodyHeight": 960,
+        "baseY": 1563,
+        "shoulderY": 814.5269461077844,
+        "registrationError": 429.2314285714286,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        252.37124074726825,
+        253.8175537539655,
+        1306.549763835037,
+        1559.4020091646105
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.2a48a28d4e3c.png",
+      "originalAssetSha256": "2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d",
+      "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.b3cd7abc53c1.png",
+      "assetSha256": "b3cd7abc53c1b2120bc67b916277c3abf0b191ac047a9610f2388e9d7b37c418",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.216195979990248,
+        "translateXPercent": -10.809798999512402,
+        "translateYPercent": -19.70501869142001
+      },
+      "landmark": {
+        "sku": "GBCrcl50AnSpTslIvyGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCrcl50AnSpTslIvyGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          2,
+          1002,
+          1228
+        ],
+        "sourceShoulderY": 269,
+        "sourceScale": 0.6946107784431138,
+        "bodyLeft": 674,
+        "bodyTop": 712,
+        "bodyWidth": 696,
+        "bodyHeight": 852,
+        "baseY": 1564,
+        "shoulderY": 898.8502994011976,
+        "registrationError": 299.235,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        63.66056778574389,
+        321.04010040994706,
+        1496.339432214256,
+        1700.2063417188883
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl50DrpGl.1671b9d14401.png",
+      "originalAssetSha256": "1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586",
+      "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1c4ffae8961f.png",
+      "assetSha256": "1c4ffae8961f61ce9a017b6136b698dcf4dd85c02215e58e8bf4c02eb82a3ada",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
+      },
+      "landmark": {
+        "sku": "GBCrcl50DrpGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/52. GBCrcl50DrpGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1002,
+          1227
+        ],
+        "sourceShoulderY": 270,
+        "sourceScale": 0.783433133732535,
+        "bodyLeft": 388,
+        "bodyTop": 603,
+        "bodyWidth": 785,
+        "bodyHeight": 960,
+        "baseY": 1563,
+        "shoulderY": 814.5269461077844,
+        "registrationError": 458.95142857142855,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        355.9548008459641,
+        316.3992879802609,
+        1201.8872083186466,
+        1558.3230137469156
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/LBCrcl50LtnMtGl.6389afea63f2.png",
+      "originalAssetSha256": "6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c",
+      "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.f2d59ea6b8ff.png",
+      "assetSha256": "f2d59ea6b8ffb391a9be268f2fda23d7bf22fa7560b471a3a5e864de40517899",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
+      },
+      "landmark": {
+        "sku": "LBCrcl50LtnMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/14. LBCrcl50LtnMtGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1002,
+          1227
+        ],
+        "sourceShoulderY": 270,
+        "sourceScale": 0.783433133732535,
+        "bodyLeft": 250,
+        "bodyTop": 603,
+        "bodyWidth": 785,
+        "bodyHeight": 960,
+        "baseY": 1563,
+        "shoulderY": 814.5269461077844,
+        "registrationError": 412.11,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        209.21142403947835,
+        305.6093338033134,
+        1349.7095805428266,
+        1559.4020091646105
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl50SpryMtGl.3b4f2e7f3575.png",
+      "originalAssetSha256": "3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a",
+      "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.26b991568b84.png",
+      "assetSha256": "26b991568b84ddd15fcc8f00c6c4a9599af7b3cb56b59774904a9542de2fbc2f",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0789954176947478,
+        "translateXPercent": -3.949770884737394,
+        "translateYPercent": -7.216249559393718
+      },
+      "landmark": {
+        "sku": "GBCrcl50SpryMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/13. GBCrcl50SpryMtGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1002,
+          1227
+        ],
+        "sourceShoulderY": 270,
+        "sourceScale": 0.783433133732535,
+        "bodyLeft": 250,
+        "bodyTop": 603,
+        "bodyWidth": 785,
+        "bodyHeight": 960,
+        "baseY": 1563,
+        "shoulderY": 814.5269461077844,
+        "registrationError": 410.6142857142857,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        209.21142403947835,
+        305.6093338033134,
+        1349.7095805428266,
+        1559.4020091646105
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.1c8ebbb7f8c2.png",
+      "originalAssetSha256": "1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a",
+      "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.19d05867b478.png",
+      "assetSha256": "19d05867b478b5d7637cfb0b6937d3110a28cf668b1043380e41e9071bd39f3e",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0718257561891726,
+        "translateXPercent": -3.5912878094586342,
+        "translateYPercent": -6.56362652491187
+      },
+      "landmark": {
+        "sku": "GBCrcl50RdcrShnGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/1. GBCrcl50RdcrShnGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          2,
+          1002,
+          1235
+        ],
+        "sourceShoulderY": 270,
+        "sourceScale": 0.783433133732535,
+        "bodyLeft": 387,
+        "bodyTop": 598,
+        "bodyWidth": 785,
+        "bodyHeight": 966,
+        "baseY": 1564,
+        "shoulderY": 809.5269461077844,
+        "registrationError": 433.7457142857143,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        358.7724778176551,
+        527.2481452774484,
+        1198.0120449137773,
+        1559.4163484876217
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.fabd4d918ae6.png",
+      "originalAssetSha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
+      "url": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.fabd4d918ae6.png",
+      "assetSha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0730573753822965,
+        "translateXPercent": -3.6528687691148245,
+        "translateYPercent": -6.675735451465453
+      },
+      "landmark": {
+        "sku": "GBCrclFrst50RdcrIvyLthr",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/55. GBCrclFrst50RdcrIvyLthr.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          1001,
+          1180
+        ],
+        "sourceShoulderY": 216,
+        "sourceScale": 0.7842157842157842,
+        "bodyLeft": 386,
+        "bodyTop": 641,
+        "bodyWidth": 785,
+        "bodyHeight": 925,
+        "baseY": 1566,
+        "shoulderY": 810.3906093906094,
+        "registrationError": 7.06,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        606.164705188068,
+        408.02332146403126,
+        923.7896883012278,
+        751.4016815863661
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
+      "originalAssetSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+      "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
+      "assetSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0753012755880131,
+        "translateXPercent": -3.7650637794006605,
+        "translateYPercent": -6.879987906088384
+      },
+      "landmark": {
+        "sku": "GBCrclFrst50AnSpGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/37. GBCrclFrst50AnSpGl.psd",
+        "sourceLayer": 2,
+        "alphaCrop": [
+          0,
+          0,
+          1001,
+          1180
+        ],
+        "sourceShoulderY": 218,
+        "sourceScale": 0.7842157842157842,
+        "bodyLeft": 485,
+        "bodyTop": 641,
+        "bodyWidth": 785,
+        "bodyHeight": 925,
+        "baseY": 1566,
+        "shoulderY": 811.959040959041,
+        "registrationError": 8.295714285714286,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        253.10237496187352,
+        253.99364888497587,
+        1003.6626653223066,
+        747.556934379874
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst50DrpGl.c3efc5033ad5.png",
+      "originalAssetSha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
+      "url": "/images/catalog/bone-review/GBCrclFrst50DrpGl.c3efc5033ad5.png",
+      "assetSha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0741781536398183,
+        "translateXPercent": -3.7089076819909117,
+        "translateYPercent": -6.777755010803978
+      },
+      "landmark": {
+        "sku": "GBCrclFrst50DrpGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/52. GBCrclFrst50DrpGl.psd",
+        "sourceLayer": 2,
+        "alphaCrop": [
+          0,
+          0,
+          1001,
+          1180
+        ],
+        "sourceShoulderY": 217,
+        "sourceScale": 0.7842157842157842,
+        "bodyLeft": 387,
+        "bodyTop": 641,
+        "bodyWidth": 785,
+        "bodyHeight": 925,
+        "baseY": 1566,
+        "shoulderY": 811.1748251748252,
+        "registrationError": 6.378571428571429,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        637.1343055659042,
+        315.5133417778107,
+        913.1980910513375,
+        749.4813158482973
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.f31e21488965.png",
+      "originalAssetSha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
+      "url": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.f31e21488965.png",
+      "assetSha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0743739944293549,
+        "translateXPercent": -3.7186997214677415,
+        "translateYPercent": -6.795581544210509
+      },
+      "landmark": {
+        "sku": "LBCrclFrst50LtnMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/14. LBCrclFrst50LtnMtGl.psd",
+        "sourceLayer": 2,
+        "alphaCrop": [
+          0,
+          0,
+          1001,
+          1180
+        ],
+        "sourceShoulderY": 221,
+        "sourceScale": 0.7842157842157842,
+        "bodyLeft": 249,
+        "bodyTop": 638,
+        "bodyWidth": 785,
+        "bodyHeight": 925,
+        "baseY": 1563,
+        "shoulderY": 811.3116883116883,
+        "registrationError": 5.827142857142857,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        498.5140134595091,
+        305.6168005120841,
+        1347.2694690586993,
+        1551.8906340501358
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.d9557a8a06fb.png",
+      "originalAssetSha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
+      "url": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.d9557a8a06fb.png",
+      "assetSha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0743739944293549,
+        "translateXPercent": -3.7186997214677415,
+        "translateYPercent": -6.795581544210509
+      },
+      "landmark": {
+        "sku": "GBCrclFrst50SpryMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/13. GBCrclFrst50SpryMtGl.psd",
+        "sourceLayer": 2,
+        "alphaCrop": [
+          0,
+          0,
+          1001,
+          1180
+        ],
+        "sourceShoulderY": 221,
+        "sourceScale": 0.7842157842157842,
+        "bodyLeft": 249,
+        "bodyTop": 638,
+        "bodyWidth": 785,
+        "bodyHeight": 925,
+        "baseY": 1563,
+        "shoulderY": 811.3116883116883,
+        "registrationError": 5.84,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        498.5140134595091,
+        305.6168005120841,
+        1347.2694690586993,
+        1551.8906340501358
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "target": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.617a4baaf53b.png",
+      "originalAssetSha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
+      "url": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.617a4baaf53b.png",
+      "assetSha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0754975261571909,
+        "translateXPercent": -3.7748763078595404,
+        "translateYPercent": -6.897851739949433
+      },
+      "landmark": {
+        "sku": "GBCrclFrst50RdcrShnGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/1. GBCrclFrst50RdcrShnGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          1001,
+          1180
+        ],
+        "sourceShoulderY": 222,
+        "sourceScale": 0.7842157842157842,
+        "bodyLeft": 387,
+        "bodyTop": 638,
+        "bodyWidth": 785,
+        "bodyHeight": 925,
+        "baseY": 1563,
+        "shoulderY": 812.0959040959041,
+        "registrationError": 4.972857142857142,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 47,
+      "renderedSignificantArtworkBounds": [
+        654.1667894396087,
+        523.7048872583107,
+        899.3802254034482,
+        746.3328751728492
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl100AnSpGl.dd8fc0f62a83.png",
+      "originalAssetSha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+      "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.7643993ab799.png",
+      "assetSha256": "7643993ab7998fb2fa35e453e4524e4c47ea9a7e037ca55bf28fb06595d0e643",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0254576508840663,
+        "translateXPercent": -1.2728825442033116,
+        "translateYPercent": -2.342940016370133
+      },
+      "landmark": {
+        "sku": "GBCrcl100AnSpGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/37. GBCrcl100AnSpGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1242,
+          1461
+        ],
+        "sourceShoulderY": 238,
+        "sourceScale": 0.7410270531400966,
+        "bodyLeft": 370,
+        "bodyTop": 482,
+        "bodyWidth": 920,
+        "bodyHeight": 1082,
+        "baseY": 1564,
+        "shoulderY": 658.364438647343,
+        "registrationError": 214.93285714285713,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        258.0420557000103,
+        180.26854425916278,
+        1298.8815713473377,
+        1557.4581693964637
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.a045b0fe5c0e.png",
+      "originalAssetSha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+      "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.b6d92daf8fea.png",
+      "assetSha256": "b6d92daf8fea976609858131ed63ae2a1068ce42bf3ba209d61768090c981fee",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0265937214033214,
+        "translateXPercent": -1.3296860701660689,
+        "translateYPercent": -2.4463515636356634
+      },
+      "landmark": {
+        "sku": "GBCrcl100AnSpTslGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/50. GBCrcl100AnSpTslGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1242,
+          1461
+        ],
+        "sourceShoulderY": 238,
+        "sourceScale": 0.7410270531400966,
+        "bodyLeft": 551,
+        "bodyTop": 483,
+        "bodyWidth": 920,
+        "bodyHeight": 1082,
+        "baseY": 1565,
+        "shoulderY": 659.364438647343,
+        "registrationError": 182.25857142857143,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        71.65033223170825,
+        223.90838101147227,
+        1484.2432928826784,
+        1556.4270313929835
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/LBCrcl100LtnMtGl.318b80039e44.png",
+      "originalAssetSha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+      "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.986f220e426c.png",
+      "assetSha256": "986f220e426c256b80981e0eb6ffb8d6c140b436e1851574bfc8f62b131768bd",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0265937214033214,
+        "translateXPercent": -1.3296860701660689,
+        "translateYPercent": -2.4463515636356634
+      },
+      "landmark": {
+        "sku": "LBCrcl100LtnMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/14. LBCrcl100LtnMtGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1242,
+          1461
+        ],
+        "sourceShoulderY": 238,
+        "sourceScale": 0.7410270531400966,
+        "bodyLeft": 187,
+        "bodyTop": 483,
+        "bodyWidth": 920,
+        "bodyHeight": 1082,
+        "baseY": 1565,
+        "shoulderY": 659.364438647343,
+        "registrationError": 278.56,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        169.17673576502378,
+        217.74881868305232,
+        1390.8232642349763,
+        1558.48021883579
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl100SpryMtGl.d7d11d3a4db4.png",
+      "originalAssetSha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+      "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.9f1a45956a0b.png",
+      "assetSha256": "9f1a45956a0b07e684dddfa34cfda68e750f9090700e7efcd43aefc698a336dc",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0265937214033214,
+        "translateXPercent": -1.3296860701660689,
+        "translateYPercent": -2.4463515636356634
+      },
+      "landmark": {
+        "sku": "GBCrcl100SpryMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/13. GBCrcl100SpryMtGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          1,
+          1242,
+          1461
+        ],
+        "sourceShoulderY": 238,
+        "sourceScale": 0.7410270531400966,
+        "bodyLeft": 194,
+        "bodyTop": 483,
+        "bodyWidth": 920,
+        "bodyHeight": 1082,
+        "baseY": 1565,
+        "shoulderY": 659.364438647343,
+        "registrationError": 229.57285714285715,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        177.38948553625036,
+        222.88178729006893,
+        1382.6105144637495,
+        1558.48021883579
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.01fcf261dd38.png",
+      "originalAssetSha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+      "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.1559dfd93201.png",
+      "assetSha256": "1559dfd932016e2efd40abf36ddecca3e90d75a916e8856a95903fe793f44892",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0282820768589154,
+        "translateXPercent": -1.4141038429457717,
+        "translateYPercent": -2.6000352012602512
+      },
+      "landmark": {
+        "sku": "GBCrcl100RdcrShnGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          1242,
+          1461
+        ],
+        "sourceShoulderY": 240,
+        "sourceScale": 0.7410270531400966,
+        "bodyLeft": 321,
+        "bodyTop": 483,
+        "bodyWidth": 920,
+        "bodyHeight": 1083,
+        "baseY": 1566,
+        "shoulderY": 660.8464927536231,
+        "registrationError": 178.1642857142857,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        308.0185267217578,
+        422.22345884032165,
+        1248.8966270476653,
+        1560.531717923141
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
+      "originalAssetSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+      "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
+      "assetSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0217751585747115,
+        "translateXPercent": -1.0887579287355738,
+        "translateYPercent": -2.007738793339118
+      },
+      "landmark": {
+        "sku": "GBCrclFrst100AnSpGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/37. GBCrclFrst100AnSpGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          497,
+          606
+        ],
+        "sourceShoulderY": 114,
+        "sourceScale": 1.8518221327967805,
+        "bodyLeft": 375,
+        "bodyTop": 444,
+        "bodyWidth": 920,
+        "bodyHeight": 1122,
+        "baseY": 1566,
+        "shoulderY": 655.107723138833,
+        "registrationError": 2.8528571428571428,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        253.7857933340236,
+        164.79335822836947,
+        942.4622502133791,
+        621.5268541112655
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.07288e4ba905.png",
+      "originalAssetSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+      "url": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.07288e4ba905.png",
+      "assetSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0209447069522137,
+        "translateXPercent": -1.0472353476106886,
+        "translateYPercent": -1.9321464020604806
+      },
+      "landmark": {
+        "sku": "GBCrclFrst100AnSpTslIvyGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCrclFrst100AnSpTslIvyGl.psd",
+        "sourceLayer": 2,
+        "alphaCrop": [
+          0,
+          0,
+          497,
+          503
+        ],
+        "sourceShoulderY": 11,
+        "sourceScale": 1.8518221327967805,
+        "bodyLeft": 578,
+        "bodyTop": 634,
+        "bodyWidth": 920,
+        "bodyHeight": 931,
+        "baseY": 1565,
+        "shoulderY": 654.3700434607646,
+        "registrationError": 5.078571428571428,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        54.108313356976,
+        213.9129868230779,
+        1158.7704862792712,
+        1628.9423506588462
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.f8a3bd634987.png",
+      "originalAssetSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+      "url": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.f8a3bd634987.png",
+      "assetSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0329028578490431,
+        "translateXPercent": -1.6451428924521596,
+        "translateYPercent": -3.0206447529257203
+      },
+      "landmark": {
+        "sku": "LBCrclFrst100LtnMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/14. LBCrclFrst100LtnMtGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          1067,
+          1283
+        ],
+        "sourceShoulderY": 241,
+        "sourceScale": 0.8625638238050609,
+        "bodyLeft": 192,
+        "bodyTop": 457,
+        "bodyWidth": 920,
+        "bodyHeight": 1107,
+        "baseY": 1564,
+        "shoulderY": 664.8778815370197,
+        "registrationError": 5.355714285714286,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        535.2020226897768,
+        223.95079908548917,
+        1387.3468804152371,
+        1565.6916114313963
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
+      "originalAssetSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+      "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
+      "assetSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0329028578490431,
+        "translateXPercent": -1.6451428924521596,
+        "translateYPercent": -3.0206447529257203
+      },
+      "landmark": {
+        "sku": "GBCrclFrst100SpryMtGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/13. GBCrclFrst100SpryMtGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          1067,
+          1283
+        ],
+        "sourceShoulderY": 241,
+        "sourceScale": 0.8625638238050609,
+        "bodyLeft": 192,
+        "bodyTop": 457,
+        "bodyWidth": 920,
+        "bodyHeight": 1107,
+        "baseY": 1564,
+        "shoulderY": 664.8778815370197,
+        "registrationError": 5.73,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        202.60730246238484,
+        223.95079908548917,
+        1387.3468804152371,
+        1557.4283885686039
+      ],
+      "visualApproved": true
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "target": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "originalUrl": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
+      "originalAssetSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+      "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
+      "assetSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+      "originalFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "framing": {
+        "scale": 1.0329028578490431,
+        "translateXPercent": -1.6451428924521596,
+        "translateYPercent": -3.0206447529257203
+      },
+      "landmark": {
+        "sku": "GBCrclFrst100RdcrShnGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/1. GBCrclFrst100RdcrShnGl.psd",
+        "sourceLayer": 1,
+        "alphaCrop": [
+          0,
+          0,
+          1067,
+          1283
+        ],
+        "sourceShoulderY": 241,
+        "sourceScale": 0.8625638238050609,
+        "bodyLeft": 319,
+        "bodyTop": 457,
+        "bodyWidth": 920,
+        "bodyHeight": 1107,
+        "baseY": 1564,
+        "shoulderY": 664.8778815370197,
+        "registrationError": 4.244285714285715,
+        "definition": "First sustained body alpha span above 32% of maximum width, at the rounded body-to-neck transition; visually checked overlay."
+      },
+      "originalBaseY": 1562,
+      "measuredShoulderPercent": 54,
+      "renderedSignificantArtworkBounds": [
+        664.3148799209072,
+        406.7746049247698,
+        885.3560915006024,
+        616.4538850681255
+      ],
+      "visualApproved": true
+    }
+  ],
+  "visualApproved": true,
+  "published": false,
+  "approval": {
+    "userStatement": "These circles look good. Let’s implement — let’s push them into the UI and let’s see how they look.",
+    "recordedAt": "2026-09-07T23:51:03.317Z",
+    "scope": "27 Circle shoulder revisions and 13 clear white-matte corrections; local catalog integration authorized. Production publication remains separate."
+  }
+}

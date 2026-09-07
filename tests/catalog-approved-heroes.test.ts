@@ -10,6 +10,7 @@ import circle from '../docs/reviews/circle-family-final-manifest-2026-09-06.json
 import empire from '../docs/reviews/empire-100ml-final-manifest-2026-09-06.json';
 import diva from '../docs/reviews/diva-family-final-manifest-2026-09-06.json';
 import shoulderApproval from '../docs/reviews/elegant-shoulder-alignment-2026-09-07.json';
+import circleRevision from '../docs/reviews/circle-recovery/alignment-and-matte-report.json';
 const approved=[...elegant.rows,...circle.rows,...empire.rows,...diva.rows];
 describe('approved catalog hero release',()=>{
  it('includes the expanded release and preserves every prior approved registration',()=>{
@@ -17,10 +18,23 @@ describe('approved catalog hero release',()=>{
   expect(new Set(heroes.map(h=>h.websiteSku)).size).toBe(391);
   for(const a of approved) {
    const h=getProductHero(a.sku)!;
-   expect(h.framing).toEqual(shoulderApproval.rows.find(row=>row.sku===a.sku)?.framing ?? a.framing);
-   expect(createHash('sha256').update(readFileSync(`public${h.url}`)).digest('hex')).toBe(a.assetSha256);
+   expect(h.framing).toEqual(circleRevision.rows.find(row=>row.sku===a.sku)?.framing ?? shoulderApproval.rows.find(row=>row.sku===a.sku)?.framing ?? a.framing);
+   expect(createHash('sha256').update(readFileSync(`public${h.url}`)).digest('hex')).toBe(circleRevision.rows.find(row=>row.sku===a.sku)?.assetSha256 ?? a.assetSha256);
   }
   expect(heroes.filter(h=>h.family==='Cylinder')).toHaveLength(52);
+ });
+ it('applies the saved Circle shoulder targets with the shared contact baseline',()=>{
+  expect(circleRevision.rows).toHaveLength(27);
+  for(const row of circleRevision.rows) {
+   const h=getProductHero(row.sku)!;
+   const target=({15:37,30:43,50:47,100:54} as Record<number,number>)[h.capacityMl!];
+   const f=h.framing;
+   expect((row.originalBaseY-row.landmark.shoulderY)*f.scale/1716*100).toBeCloseTo(target,8);
+   expect(row.originalBaseY*f.scale/1716*100+f.translateYPercent).toBeCloseTo(91,8);
+   const [left,top,right,bottom]=row.renderedSignificantArtworkBounds;
+   expect(left).toBeGreaterThan(0);expect(top).toBeGreaterThan(0);
+   expect(right).toBeLessThan(1560);expect(bottom).toBeLessThan(1716);
+  }
  });
  it('locks all Elegant shoulders while preserving the approved vintage exceptions',()=>{
   expect(shoulderApproval.rows).toHaveLength(33);
