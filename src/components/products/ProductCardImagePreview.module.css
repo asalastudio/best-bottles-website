@@ -1,21 +1,3 @@
 .heroFrame {
     background: #f5f3ef;
 }
-
-.filled {
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 350ms ease;
-}
-
-@media (hover: hover) and (pointer: fine) {
-    .heroFrame[data-hover-ready="true"]:hover .filled {
-        opacity: 1;
-    }
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .filled {
-        transition: none;
-    }
-}

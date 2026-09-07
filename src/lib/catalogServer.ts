@@ -15,7 +15,7 @@ import {
     type ViewMode,
 } from "@/lib/catalogFilters";
 import { getLegacyProductRouteOverride } from "@/lib/products/legacy-product-route-overrides";
-import { isHiddenCatalogGroup } from "@/lib/products/catalog-listing-visibility";
+import { isVisibleCatalogGroup, isMissingHeroSource } from "@/lib/products/catalog-listing-visibility";
 
 export type CatalogSearchArgs = {
     filters: Partial<CatalogFilters>;
@@ -35,8 +35,8 @@ export function getCatalogConvexClient() {
 }
 
 export function sanitizeCatalogResult(result: CatalogSearchResultShape): CatalogSearchResultShape {
-    const items = result.items.filter((group) => !getLegacyProductRouteOverride(group.slug) && !isHiddenCatalogGroup(group.slug));
-    if (items.length === result.items.length) return result;
+    const items = result.items.filter((group) => !getLegacyProductRouteOverride(group.slug) && isVisibleCatalogGroup(group, result.variantPreviewRows.find(row => row.groupId === group._id)?.variants));
+
 
     const visibleIds = new Set(items.map((group) => group._id));
     return {
@@ -46,8 +46,12 @@ export function sanitizeCatalogResult(result: CatalogSearchResultShape): Catalog
         // Rebuilding them from `items` collapses Refine to the first 24 cards.
         facets: result.facets,
         totalCount: Math.max(0, result.totalCount - (result.items.length - items.length)),
-        primarySkus: result.primarySkus.filter((row) => visibleIds.has(row.groupId)),
-        variantPreviewRows: result.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)),
+        primarySkus: items.map(group => {
+            const primary = result.primarySkus.find(row => row.groupId === group._id && !isMissingHeroSource(row));
+            const variant = result.variantPreviewRows.find(row => row.groupId === group._id)?.variants.find(row => !isMissingHeroSource(row));
+            return primary ?? { groupId: group._id, websiteSku: variant?.websiteSku ?? null, graceSku: variant?.graceSku ?? null };
+        }),
+        variantPreviewRows: result.variantPreviewRows.filter((row) => visibleIds.has(row.groupId)).map(row => ({ ...row, variants: row.variants.filter(variant => !isMissingHeroSource(variant)) })),
     };
 }
 

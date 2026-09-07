@@ -286,7 +286,7 @@ function ProductGroupCard({
     const href = catalogHero
         ? getCatalogHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
         : productCardVariantHref(productGroupHref(group, applicatorParam), selected);
-    const customerDisplayName = catalogHero?.alt ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         usableProductImageUrl(group.heroImageUrl) ??
         thumbnailUrl ??

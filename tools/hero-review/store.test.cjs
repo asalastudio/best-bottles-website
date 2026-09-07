@@ -1,0 +1,43 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),os=require('node:os'),path=require('node:path');
+const {read,save}=require('./store.cjs');
+test('decisions survive reload, preserve other images and reject stale updates',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'hero-review-test-')),file=path.join(dir,'decisions.json');
+ const rows=[{sku:'test-a',assetSha256:'a'.repeat(64)},{sku:'test-b',assetSha256:'b'.repeat(64)}];
+ const input={...rows[0],status:'rejected',notes:'Wrong fitment',revision:0};
+ save(file,rows,input);save(file,rows,{...rows[1],status:'changes_requested',notes:'Too small',revision:0});
+ assert.equal(read(file).decisions['test-a:'+rows[0].assetSha256].notes,'Wrong fitment');
+ assert.equal(Object.keys(read(file).decisions).length,2);
+ assert.throws(()=>save(file,rows,input),/another tab/);
+ assert.throws(()=>save(file,rows,{...input,assetSha256:'c'.repeat(64)}),/image has changed/);
+ assert.throws(()=>save(file,rows,{...input,sku:'unknown'}),/Unknown/);
+ assert.throws(()=>save(file,rows,{...input,status:'publish'}),/Invalid/);
+ save(file,rows,{...input,status:'approved',revision:1});
+ assert.equal(read(file).history.length,3);
+ const changed=[{...rows[0],assetSha256:'d'.repeat(64)}];
+ assert.equal(read(file).decisions['test-a:'+changed[0].assetSha256],undefined);
+ save(file,changed,{...input,...changed[0],status:'pending',revision:0});
+ assert.equal(read(file).decisions['test-a:'+rows[0].assetSha256].status,'approved');
+ assert.equal(read(file).decisions['test-a:'+changed[0].assetSha256].status,'pending');
+ fs.rmSync(dir,{recursive:true});
+});
+test('height targets persist by image version, validate bounds and preserve older clients',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'hero-height-test-')),file=path.join(dir,'decisions.json');
+ const rows=[{sku:'height-test',assetSha256:'a'.repeat(64)}],input={...rows[0],status:'changes_requested',notes:'Keep the cap intact',revision:0,targetHeight:{heightPercent:80,measurement:'bottle_with_fitment',baselinePercent:91}};
+ assert.equal(save(file,rows,input).targetHeight.heightPercent,80);
+ const older={...input,revision:1};delete older.targetHeight;
+ assert.equal(save(file,rows,older).targetHeight.heightPercent,80);
+ for(const targetHeight of [{...input.targetHeight,heightPercent:95},{...input.targetHeight,heightPercent:0},{...input.targetHeight,baselinePercent:97},{...input.targetHeight,measurement:'unknown'}])assert.throws(()=>save(file,rows,{...input,revision:2,targetHeight}),/target height/);
+ assert.equal(save(file,rows,{...input,revision:2,targetHeight:null}).targetHeight,null);
+ assert.equal(read(file).history[0].targetHeight.heightPercent,80);
+ const shoulder={heightPercent:43.5,measurement:'glass_shoulder',baselinePercent:91};
+ assert.deepEqual(save(file,rows,{...input,revision:3,targetHeight:shoulder}).targetHeight,shoulder);
+ assert.equal(read(file).history[0].targetHeight.measurement,'bottle_with_fitment');
+ assert.equal(read(file).decisions['height-test:'+rows[0].assetSha256].targetHeight.measurement,'glass_shoulder');
+ fs.rmSync(dir,{recursive:true});
+});
+test('locked images reject feedback writes without creating a store',()=>{
+ const dir=fs.mkdtempSync(path.join(os.tmpdir(),'hero-lock-test-')),file=path.join(dir,'feedback.json');
+ const row={sku:'locked',assetSha256:'f'.repeat(64),sizingLocked:true};
+ assert.throws(()=>save(file,[row],{...row,status:'rejected',notes:'change',revision:0}),/locked/);
+ assert.equal(fs.existsSync(file),false);fs.rmSync(dir,{recursive:true});
+});

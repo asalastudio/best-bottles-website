@@ -1,3 +1,4 @@
+import { isMissingHeroSource } from "./catalog-listing-visibility";
 import { normalizeImportedCapColor } from "./cap-finish-evidence";
 import { glassSwatchImage } from "./glass-swatches";
 import { isLegacyBestBottlesImageUrl } from "../productVariantIntegrity";
@@ -59,7 +60,7 @@ export function getCatalogCardVariantPreviews(
         normalizeKey(variant.ballMaterial) || (/metal/i.test(variant.applicator ?? "") ? "metal" : /plastic/i.test(variant.applicator ?? "") ? "plastic" : "");
     // Some imports repeat glass color in capColor (all frosted tops become
     // "Frosted"). Use exact SKU evidence before finish deduplication.
-    const normalized = variants.map(normalizeImportedCapColor);
+    const normalized = variants.filter(variant => !isMissingHeroSource(variant)).map(normalizeImportedCapColor);
     const eligible = normalized.filter((variant) => !options.rollerMaterials?.length
         || !material(variant) || options.rollerMaterials.includes(material(variant)));
     const score = (variant: ProductCardVariantPreviewSource) => catalogSearchScore(options.search ?? "", [
@@ -416,6 +417,7 @@ export function getProductCardVariantPreviews(
     const seen = new Set<string>();
 
     for (const variant of variants) {
+        if (isMissingHeroSource(variant)) continue;
         if (!hasVisualSignal(variant, options.groupColor)) continue;
 
         const label = previewLabel(variant, options.groupColor);

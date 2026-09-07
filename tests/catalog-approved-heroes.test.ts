@@ -3,7 +3,7 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import heroes from '../src/lib/products/catalog-heroes.json';
-import cylinderHeroes from '../src/lib/products/cylinder-catalog-heroes.json';
+import release from '../docs/reviews/catalog-complete-hero-release-2026-09-07.json';
 import { getCatalogHero, getProductHero, getCatalogHeroProductHref } from '../src/lib/products/catalog-heroes';
 import elegant from '../docs/reviews/elegant-family-final-manifest-2026-09-06.json';
 import circle from '../docs/reviews/circle-family-final-manifest-2026-09-06.json';
@@ -11,19 +11,20 @@ import empire from '../docs/reviews/empire-100ml-final-manifest-2026-09-06.json'
 import diva from '../docs/reviews/diva-family-final-manifest-2026-09-06.json';
 const approved=[...elegant.rows,...circle.rows,...empire.rows,...diva.rows];
 describe('approved catalog hero release',()=>{
- it('contains only the 86 explicitly approved registrations',()=>{
-  expect(heroes).toHaveLength(86);
-  expect(new Set(heroes.map(h=>h.websiteSku))).toEqual(new Set(approved.map(h=>h.sku)));
-  expect(getProductHero('GBEmp50SpryMtGl')).toBeNull();
-  expect(getCatalogHero('atomizer-10ml', [{websiteSku:'GBAtom10Gl'}])).toBeNull();
- });
- it('preserves existing Cylinder selection and hover artwork',()=>{
-  for(const h of cylinderHeroes) expect(getCatalogHero(h.groupSlug,[{websiteSku:h.websiteSku}])).toEqual(h);
+ it('includes the expanded release and preserves every prior approved registration',()=>{
+  expect(heroes).toHaveLength(391);
+  expect(new Set(heroes.map(h=>h.websiteSku)).size).toBe(391);
+  for(const a of approved) {
+   const h=getProductHero(a.sku)!;
+   expect(h.framing).toEqual(a.framing);
+   expect(createHash('sha256').update(readFileSync(`public${h.url}`)).digest('hex')).toBe(a.assetSha256);
+  }
+  expect(heroes.filter(h=>h.family==='Cylinder')).toHaveLength(52);
  });
  for(const h of heroes) it(`${h.websiteSku} preserves approved bytes, framing, bone and exact SKU filtering`,async()=>{
-  const a=approved.find(a=>a.sku===h.websiteSku)!;
+  const a=release.rows.find(a=>a.websiteSku===h.websiteSku)!;
   const b=readFileSync(`public${h.url}`);
-  expect(createHash('sha256').update(b).digest('hex')).toBe(a.assetSha256);
+  expect(createHash('sha256').update(b).digest('hex')).toBe(a.sha256);
   expect(h.framing).toEqual(a.framing);
   const {data,info}=await sharp(b).removeAlpha().raw().toBuffer({resolveWithObject:true});
   expect([info.width,info.height]).toEqual([1560,1716]);

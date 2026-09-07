@@ -191,3 +191,6 @@ dist/
 data/paper-doll/convex-snapshot.json
 data/paper-doll/component-snapshot.json
 data/paper-doll/plates-snapshot.json
+
+# Local review assets and feedback stay local; tooling is versioned.
+/hero-reviews/

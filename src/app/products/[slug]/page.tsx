@@ -1,3 +1,5 @@
+import { hasCatalogSourceHold } from "@/lib/products/catalog-listing-visibility";
+import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { ConvexHttpClient } from "convex/browser";
@@ -184,6 +186,7 @@ export default async function ProductPage({
     const legacyRouteOverride = getLegacyProductRouteOverride(slug);
 
     const activeSlug = legacyRouteOverride ?? slug;
+    if (hasCatalogSourceHold(activeSlug)) notFound();
     const data = await getProductData(activeSlug);
     const primaryVariant = getPrimaryVariant(data);
     const [siblingGroups, pdpBlocks, platesBySku, relations, compatibility] = await Promise.all([
