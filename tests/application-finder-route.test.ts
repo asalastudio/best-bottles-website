@@ -405,7 +405,7 @@ describe("finder entry links", () => {
         ]);
     });
 
-    it("keeps Catalog general and exposes one secondary Build a Bottle route", () => {
+    it("keeps Catalog general and exposes one secondary Build Your Bottle route", () => {
         const html = renderToStaticMarkup(createElement(Navbar, { variant: "home" }));
         const parsed = new DOMParser().parseFromString(html, "text/html");
         const desktopNav = parsed.querySelector("nav");
@@ -413,7 +413,8 @@ describe("finder entry links", () => {
 
         expect(links.find((link) => link.textContent?.trim() === "Catalog")?.getAttribute("href"))
             .toBe("/catalog");
-        expect(links.find((link) => link.textContent?.trim() === "Build a Bottle")?.getAttribute("href"))
-            .toBe("/matrix");
+        const builderLinks = links.filter((link) => link.getAttribute("href") === "/matrix");
+        expect(builderLinks).toHaveLength(1);
+        expect(builderLinks[0].textContent?.trim()).toBe("Build Your Bottle");
     });
 });

@@ -1,0 +1,77 @@
+{
+  "sources": [
+    {
+      "fitment": "Metal Roller",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /26. GBCrcl15MtlRollBlkDot.psd",
+      "sourceSha256": "28fc7e348f2b579b5f1aef6b708dbc569d7fcc5797241f7f4083272ceb23bf84",
+      "layerIndex": 1,
+      "layerName": "Layer 33",
+      "layerBounds": [
+        216,
+        158,
+        429,
+        467
+      ],
+      "crop": [
+        0,
+        0,
+        213,
+        116
+      ],
+      "reviewNote": "Mechanism only; metal white retouch polygon or plastic near-transparent paint residue below plug excluded. Original product pixels and proportions retained.",
+      "asset": {
+        "url": "/images/bottle-builder/circle/fitment-metal-roller.webp",
+        "width": 141,
+        "height": 116,
+        "sha256": "a812ea571e2378a3f0a395c1e8a4281c7fb18d8b18f427857cdac114a7b0a32e"
+      }
+    },
+    {
+      "fitment": "Plastic Roller",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /27. GBCrcl15RollBlkDot.psd",
+      "sourceSha256": "5a86e790f24457da655d87a8f43083c3a9d1bb77b59891bc3ca3e7a754605cc3",
+      "layerIndex": 1,
+      "layerName": "Layer 33",
+      "layerBounds": [
+        236,
+        161,
+        381,
+        406
+      ],
+      "crop": [
+        0,
+        0,
+        145,
+        112
+      ],
+      "reviewNote": "Mechanism only; metal white retouch polygon or plastic near-transparent paint residue below plug excluded. Original product pixels and proportions retained.",
+      "asset": {
+        "url": "/images/bottle-builder/circle/fitment-plastic-roller.webp",
+        "width": 129,
+        "height": 112,
+        "sha256": "965ef67f18006ed844caf69332de7c27902b5c1502923460b50322eda2ffe87d"
+      }
+    },
+    {
+      "fitment": "Fine Mist Sprayer",
+      "path": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /3. GBCrcl15SpryBlkMatt.psd",
+      "sourceSha256": "070d8d1074a53dca2da3f97a3740e26ff20fb0db919e9f06ba822496cc447e3f",
+      "layerIndex": 3,
+      "layerName": "Layer 9",
+      "layerBounds": [
+        247,
+        60,
+        428,
+        418
+      ],
+      "crop": null,
+      "reviewNote": "Mechanism only; metal white retouch polygon or plastic near-transparent paint residue below plug excluded. Original product pixels and proportions retained.",
+      "asset": {
+        "url": "/images/bottle-builder/circle/fitment-fine-mist-sprayer.webp",
+        "width": 181,
+        "height": 358,
+        "sha256": "7d08776dab1413aa557c097a0240abab3b9923d81a0876b7787f849acf38074c"
+      }
+    }
+  ]
+}
