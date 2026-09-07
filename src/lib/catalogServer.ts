@@ -3,6 +3,7 @@ import { api } from "../../convex/_generated/api";
 import {
     buildCatalogSearchResult,
     type CatalogSearchResultShape,
+    type CatalogSearchGroup,
 } from "@/lib/catalogSearchFallback";
 import {
     EMPTY_FILTERS,
@@ -85,6 +86,43 @@ async function withCatalogMediaPreviewRows(
     };
 }
 
+type CatalogVisibilitySnapshot = {
+    groups: CatalogSearchGroup[];
+    primarySkus: CatalogSearchResultShape["primarySkus"];
+    variantPreviewRows: CatalogSearchResultShape["variantPreviewRows"];
+};
+let visibilitySnapshot: { expiresAt: number; promise: Promise<CatalogVisibilitySnapshot> } | null = null;
+
+// The backend paginates before the storefront's source holds. Read lightweight
+// global metadata so counts and facets include holds outside the current page.
+async function getCatalogVisibilitySnapshot(convex: ConvexHttpClient): Promise<CatalogVisibilitySnapshot> {
+    if (visibilitySnapshot && visibilitySnapshot.expiresAt > Date.now()) return visibilitySnapshot.promise;
+    const promise = (async () => {
+        const [groups, primarySkus] = await Promise.all([
+            convex.query(api.products.getAllCatalogGroups, {}),
+            convex.query(api.products.getCatalogGroupPrimarySkus, {}),
+        ]);
+        const affectedIds = groups.filter(group => group.slug === "lotion-bottle-30ml-clear"
+            || primarySkus.some(row => row.groupId === group._id && isMissingHeroSource(row))).map(group => group._id);
+        const variantPreviewRows = affectedIds.length ? await convex.query(api.products.getCatalogGroupVariantPreviewData, { groupIds: affectedIds }) : [];
+        return { groups, primarySkus, variantPreviewRows } as CatalogVisibilitySnapshot;
+    })();
+    visibilitySnapshot = { expiresAt: Date.now() + 30_000, promise };
+    try { return await promise; } catch (error) {
+        if (visibilitySnapshot?.promise === promise) visibilitySnapshot = null;
+        throw error;
+    }
+}
+
+export function applyVisibleCatalogSummary(
+    result: CatalogSearchResultShape,
+    snapshot: CatalogVisibilitySnapshot,
+    args: CatalogSearchArgs & { filters: CatalogFilters },
+): CatalogSearchResultShape {
+    const summary = buildCatalogSearchResult({ ...snapshot, ...args, limit: 1, cursor: null });
+    return { ...result, totalCount: summary.totalCount, facets: summary.facets };
+}
+
 function asStringArray(value: unknown): string[] {
     return Array.isArray(value) ? value.filter((item): item is string => typeof item === "string" && item.trim().length > 0) : [];
 }
@@ -129,29 +167,19 @@ export async function searchCatalogServer(args: CatalogSearchArgs): Promise<Cata
     };
     try {
         const result = await convex.query(api.products.searchCatalog, convexArgs) as CatalogSearchResultShape;
-        return sanitizeCatalogResult(await withCatalogMediaPreviewRows(convex, result));
+        const [enriched, snapshot] = await Promise.all([withCatalogMediaPreviewRows(convex, result), getCatalogVisibilitySnapshot(convex)]);
+        return applyVisibleCatalogSummary(sanitizeCatalogResult(enriched), snapshot, normalizedArgs);
     } catch (error) {
         const message = error instanceof Error ? error.message : "";
         if (!message.includes("products:searchCatalog")) throw error;
     }
 
-    const [groups, primarySkus] = await Promise.all([
-        convex.query(api.products.getAllCatalogGroups, {}),
-        convex.query(api.products.getCatalogGroupPrimarySkus, {}),
-    ]);
-    const preliminary = buildCatalogSearchResult({
-        groups: groups as never,
-        primarySkus: primarySkus as never,
-        variantPreviewRows: [],
-        ...normalizedArgs,
+    const snapshot = await getCatalogVisibilitySnapshot(convex);
+    const preliminary = buildCatalogSearchResult({ ...snapshot, ...normalizedArgs });
+    const rows = await convex.query(api.products.getCatalogGroupVariantPreviewData, {
+        groupIds: preliminary.items.map(group => group._id),
     });
-    const variantPreviewRows = await convex.query(api.products.getCatalogGroupVariantPreviewData, {
-        groupIds: preliminary.items.map((group) => group._id),
+    return buildCatalogSearchResult({ ...snapshot, ...normalizedArgs,
+        variantPreviewRows: [...snapshot.variantPreviewRows.filter(row => !rows.some(next => next.groupId === row.groupId)), ...rows],
     });
-    return sanitizeCatalogResult(buildCatalogSearchResult({
-        groups: groups as never,
-        primarySkus: primarySkus as never,
-        variantPreviewRows: variantPreviewRows as never,
-        ...normalizedArgs,
-    }));
 }

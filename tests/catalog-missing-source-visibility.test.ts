@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { isMissingHeroSource, isVisibleCatalogGroup } from '../src/lib/products/catalog-listing-visibility';
 import { filterVariantsForProductGroup } from '../src/lib/productVariantIntegrity';
 import { getCatalogCardVariantPreviews } from '../src/lib/products/product-card-variant-previews';
-import { sanitizeCatalogResult } from '../src/lib/catalogServer';
+import { sanitizeCatalogResult, applyVisibleCatalogSummary } from '../src/lib/catalogServer';
 import { buildCatalogSearchResult, type CatalogSearchResultShape } from '../src/lib/catalogSearchFallback';
 import { EMPTY_FILTERS } from '../src/lib/catalogFilters';
 import missing from '../src/lib/products/missing-hero-sources.json';
@@ -36,6 +36,15 @@ describe('missing source publication hold',()=>{
   expect(result.variantPreviewRows[0].variants).toEqual([good]);
   expect(result.primarySkus[0].websiteSku).toBe('GOOD');
   expect(result.facets.categories.Component).toBe(4);
+ });
+ it('counts source holds outside the current page and retains the backend cursor',()=>{
+  const f=fixture();
+  const page={...f,items:[f.items[0]],nextCursor:'1'};
+  const result=applyVisibleCatalogSummary(sanitizeCatalogResult(page),{groups:f.items,primarySkus:f.primarySkus,variantPreviewRows:f.variantPreviewRows},{filters:EMPTY_FILTERS,sort:'featured',view:'visual',limit:1,cursor:null});
+  expect(result.items).toHaveLength(1);
+  expect(result.totalCount).toBe(2);
+  expect(result.facets.categories.Component).toBe(2);
+  expect(result.nextCursor).toBe('1');
  });
  it('applies the same hold before fallback facets and pagination',()=>{
   const f=fixture(),result=buildCatalogSearchResult({groups:f.items,primarySkus:f.primarySkus,variantPreviewRows:f.variantPreviewRows,filters:EMPTY_FILTERS,sort:'featured',view:'visual',limit:24});
