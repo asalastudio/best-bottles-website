@@ -86,12 +86,13 @@ describe("family-first homepage merchandising", () => {
         expect(home.indexOf("<PackagingAccessoriesStory")).toBeLessThan(home.indexOf("<PathChooser"));
     });
 
-    it("moves mobile search below the current hero while desktop search stays in the navbar", () => {
+    it("puts mobile search before browsing and preserves the desktop-only hero", () => {
         const home = readFileSync("src/components/HomePage.tsx", "utf8");
 
-        expect(home).toContain('<Navbar variant="home" hideMobileSearch />');
+        expect(home).toContain('<Navbar variant="home" hideMobileSearch headerClassName={homeStyles.homeHeader} />');
+        expect(home).toContain('mobileHeroMode="categories"');
         expect(home).toContain('id="mobile-home-search"');
         expect(home.indexOf("<Hero ")).toBeLessThan(home.indexOf("<MobilePostHeroSearch"));
-        expect(home.indexOf("<MobilePostHeroSearch")).toBeLessThan(home.indexOf("<DesignFamilies"));
+        expect(home.indexOf("<MobilePostHeroSearch")).toBeLessThan(home.indexOf("<HomeCatalogBrowser"));
     });
 });
