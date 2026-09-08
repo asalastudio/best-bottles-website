@@ -1,5 +1,6 @@
 "use client";
 
+import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
@@ -244,12 +245,12 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                         const availableCount = current.colored.filter(c => c.fitment === f).length;
                         const unavailableCount = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === f).length ?? 0;
                         const count = availableCount + unavailableCount;
-                        return <Option key={f} label={f} description={fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
+                        return <Option key={f} label={f} description={fitmentChoiceHints[f] ?? fitmentDescriptions[f]} selected={fitment === f} onClick={() => { update({ fitment: f, closure: null }); setShowCover(false); goTo(2); }}>
                             <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div>
                             <strong>{f}</strong><small>{count} {/Roller/.test(f) ? (count === 1 ? "cap option" : "cap options") : (count === 1 ? "finish" : "finishes")}{unavailableCount > 0 ? ` · ${availableCount} available` : ""}</small>
                         </Option>;
                     })}</div> : <>
-                        <div className={styles.selectedFitment}><div><span>Selected fitment</span><strong>{fitment}</strong><small>{fitmentDescriptions[fitment!]}</small></div>
+                        <div className={styles.selectedFitment}><div><span>Selected fitment</span><strong>{fitment}</strong><small>{fitmentChoiceHints[fitment!] ?? fitmentDescriptions[fitment!]}</small></div>
                             <button className={styles.textButton} onClick={() => goTo(1)}>Change fitment</button></div>
                         <div className={styles.closureSection}>
                             <p>{current.closures.length === 1 ? `This ${finishLabel.toLowerCase()} is included with your bottle.` : `Select your ${finishLabel.toLowerCase()} to see the complete bottle.`}</p>
@@ -269,7 +270,7 @@ export default function MatrixClient({ families: initialFamilies, openFamily, bo
                     </>}
                 </>}
                 {step === 3 && <div className={styles.review}>
-                    <ShieldCheck size={30} weight="light" /><h3>Everything fits.</h3><p>Your bottle, {fitment?.toLowerCase()}, and selected finish are included in one complete combination.</p>{hasIncludedCover && <p>Matching protective overcap included.</p>}
+                    <ShieldCheck size={30} weight="light" /><h3>Everything fits.</h3><p>{fitmentContents(fitment)}</p>{hasIncludedCover && <p>Matching protective overcap included.</p>}
                             <dl><div><dt>Bottle</dt><dd>{body?.capacityMl} ml {body?.family}</dd></div><div><dt>Glass</dt><dd>{color}</dd></div><div><dt>Fitment</dt><dd>{fitment}</dd></div><div><dt>{finishLabel}</dt><dd>{closure}</dd></div><div><dt>Neck</dt><dd>{body?.neck}</dd></div></dl>
                             <p className={styles.small}>Set your quantity in Your Build. We’ll check current availability before adding.</p>
                 </div>}

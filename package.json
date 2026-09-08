@@ -4,6 +4,7 @@
   "private": true,
   "packageManager": "npm@10.9.8",
   "scripts": {
+    "audit:builder-readiness": "tsx scripts/audit_builder_readiness.ts",
     "dev": "next dev",
     "build": "next build",
     "postbuild": "next-sitemap",

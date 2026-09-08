@@ -1,5 +1,6 @@
 "use client";
 
+import { fitmentChoiceHints, fitmentContents } from "@/lib/bottle-builder/fitment-copy";
 import { useEffect, useId, useRef, useState, type CSSProperties, type ReactNode } from "react";
 import Link from "next/link";
 import { ArrowLeft, ArrowRight, Check, Minus, Plus, SlidersHorizontal, X, ArrowsOutSimple } from "@/components/icons";
@@ -159,7 +160,7 @@ export default function MobileBuilder(p: Props) {
                     <div className={styles.glassThumb}><BuilderImage config={example} parts={previewParts(example, "body")} label={`${c} bottle`} /></div><strong>{c}</strong>
                 </Choice>; })}</div>}
                 {stage === 2 && <div className={styles.fitmentGrid}>{p.current.fitments.map(f => { return <Choice key={f} name={`${id}-fitment`} value={f} selected={fitment === f} label={f} onSelect={() => choose({ fitment: f })}>
-                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{f}</strong>
+                    <div className={styles.componentThumb}><FitmentIllustration fitment={f} /></div><strong>{f}</strong>{fitmentChoiceHints[f] && <span>{fitmentChoiceHints[f]}</span>}
                 </Choice>; })}</div>}
                 {stage === 3 && <div className={styles.finishGrid}>{p.current.fitted.map(c => <Choice key={c.id} name={`${id}-finish`} value={c.closure} selected={closure === c.closure} label={c.closure} onSelect={() => choose({ closure: c.closure })}>
                     <div className={styles.finishThumb}><BuilderFinishImage config={c} /></div><strong>{c.closure}</strong>
@@ -174,6 +175,7 @@ export default function MobileBuilder(p: Props) {
             <dl className={styles.summary}>{[["Bottle", `${body?.capacityMl} ml ${body?.profileLabel}`, 0], ["Glass", color, 1], ["Fitment", fitment, 2], [finishLabel, closure, 3]].map(([label, value, to]) => <div key={label}>
                 <dt>{label}</dt><dd>{value}{to === 0 && <small>{body?.neck} neck</small>}</dd><dd className={styles.summaryEdit}><button aria-label={`Edit ${label?.toString().toLowerCase()}`} disabled={busy} onClick={() => go(Number(to))}>Edit</button></dd>
             </div>)}</dl>
+            <p className={styles.included}>{fitmentContents(fitment)}</p>
             {p.hasIncludedCover && <p className={styles.included}>Matching protective overcap included.</p>}
             <div className={styles.quantityRow}><label htmlFor={`${id}-quantity`}>Quantity</label><div className={styles.quantity}>
                 <button aria-label="Decrease quantity" disabled={busy || p.selection.quantity <= 1} onClick={() => p.onUpdate({ quantity: Math.max(1, p.selection.quantity - 1) })}><Minus size={18} /></button>

@@ -1,13 +1,38 @@
 import type { CatalogRow } from "./model";
 import { getFinishFromWebsiteSku } from "../paper-doll/tokens.generated";
 import componentCutouts from "./component-cutouts.generated.json";
+import { sourceComponentLink } from "./source-component-links";
 
 type ListedComponent = CatalogRow["components"][string][number];
 export type ActiveComponent = {
     websiteSku?: string | null; graceSku?: string | null; neckThreadSize?: string | null;
     shopifySellable?: boolean | null; shopifyVariantId?: string | null; stockStatus?: string | null;
     itemName?: string | null; imageUrl?: string | null;
+    productUrl?: string | null; category?: string | null;
 };
+
+/** Supplement only an absent relationship with reviewed exact-assembly evidence.
+ * Current matrix relationships take precedence. No catalog records are modified. */
+function restoreSourceLink(row: CatalogRow, products: Map<string, ActiveComponent | null>): CatalogRow {
+    const link = sourceComponentLink(row);
+    if (!link || Object.values(row.components).flat().some(part => part.graceSku === link.componentGraceSku
+        || part.websiteSku === link.componentSku)) return row;
+    const active = products.get(link.componentGraceSku);
+    if (!active || active.graceSku !== link.componentGraceSku || active.category !== "Component"
+        || active.neckThreadSize !== link.neck || !active.shopifyVariantId
+        || /out of stock|discontinued|unavailable/i.test(active.stockStatus ?? "")) return row;
+    // Only this source-identified blank-SKU record may use its canonical website SKU.
+    const blankSourceMatch = !active.websiteSku && active.productUrl === link.componentSourceUrl
+        && active.itemName === link.componentName;
+    if (active.websiteSku !== link.componentSku && !blankSourceMatch) return row;
+    return { ...row, resolution: row.resolution === "unknown" ? "source_verified" : row.resolution,
+        compatibilitySources: [link.assemblySourceUrl, link.componentSourceUrl],
+        components: { ...row.components, Cap: [...(row.components.Cap ?? []), { websiteSku: link.componentSku, graceSku: active.graceSku,
+            itemName: active.itemName ?? link.componentName, imageUrl: active.imageUrl ?? null,
+            shopifyVariantId: active.shopifyVariantId, shopifySellable: active.shopifySellable ?? null,
+            stockStatus: active.stockStatus ?? null, capColor: link.finish, productGroupSlug: null,
+            webPrice1pc: null, webPrice12pc: null }] } };
+}
 
 /** Display-only evidence. These records never enter selectable configurations. */
 export function unavailableVintageFinishes(row: CatalogRow, activeBySku: Map<string, ActiveComponent | null>) {
@@ -42,8 +67,10 @@ export function restoreListedComponent(part: ListedComponent, active: ActiveComp
     const exactSku = listedReplacementSku(part);
     if (!exactSku || !active || active.websiteSku !== exactSku || !active.graceSku
         || active.graceSku === part.graceSku || active.neckThreadSize !== neck
-        || /__RETIRED__/i.test(active.websiteSku) || active.shopifySellable === false
+        || /__RETIRED__/i.test(active.websiteSku)
         || !active.shopifyVariantId || /out of stock|discontinued|unavailable/i.test(active.stockStatus ?? "")) return part;
+    // This is an included part of an exact assembly, not a separate cart line.
+    // Preserve its standalone publication state; assembly sale checks happen later.
     return { ...part, websiteSku: active.websiteSku, graceSku: active.graceSku,
         shopifySellable: active.shopifySellable ?? null, shopifyVariantId: active.shopifyVariantId,
         stockStatus: active.stockStatus ?? null, itemName: active.itemName ?? part.itemName,
@@ -51,13 +78,15 @@ export function restoreListedComponent(part: ListedComponent, active: ActiveComp
 }
 
 export async function resolveListedComponents(rows: CatalogRow[], lookup: (sku: string) => Promise<ActiveComponent | null>): Promise<CatalogRow[]> {
-    const skus = [...new Set(rows.flatMap(row => Object.values(row.components).flatMap(parts =>
-        parts.map(listedReplacementSku).filter((sku): sku is string => Boolean(sku)))))];
+    const skus = [...new Set(rows.flatMap(row => [
+        ...Object.values(row.components).flatMap(parts => parts.map(listedReplacementSku)),
+        sourceComponentLink(row)?.componentGraceSku,
+    ]).filter((sku): sku is string => Boolean(sku)))];
     const products = new Map<string, ActiveComponent | null>();
     let cursor = 0;
     await Promise.all(Array.from({ length: Math.min(8, skus.length) }, async () => {
         while (cursor < skus.length) { const sku = skus[cursor++]; products.set(sku, await lookup(sku)); }
     }));
-    return rows.map(row => ({ ...row, components: Object.fromEntries(Object.entries(row.components).map(([kind, parts]) =>
-        [kind, parts.map(part => restoreListedComponent(part, products.get(listedReplacementSku(part) ?? "") ?? null, row.neckThreadSize))])) }));
+    return rows.map(row => restoreSourceLink({ ...row, components: Object.fromEntries(Object.entries(row.components).map(([kind, parts]) =>
+        [kind, parts.map(part => restoreListedComponent(part, products.get(listedReplacementSku(part) ?? "") ?? null, row.neckThreadSize))])) }, products));
 }
