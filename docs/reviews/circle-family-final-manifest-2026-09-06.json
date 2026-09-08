@@ -1,0 +1,336 @@
+{
+  "approval": {
+    "userStatement": "Yeah it’s approved. Let’s keep moving. I approve the Circle family.",
+    "recordedAt": "2026-09-06T19:48:54.673Z",
+    "scope": "All 27 Circle heroes, including five capped reducers and the 6.5 percent whole-assembly tassel clearance adjustment.",
+    "productionPublished": false
+  },
+  "visualApproved": true,
+  "productionPublished": false,
+  "canvas": [
+    1560,
+    1716
+  ],
+  "bone": "#F5F3EF",
+  "baselinePercent": 91,
+  "psdVerified": 24,
+  "preserved15ml": 3,
+  "rows": [
+    {
+      "sku": "GBCrcl15Gl",
+      "url": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png",
+      "assetSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+      "framing": {
+        "scale": 0.7751677852348994,
+        "translateXPercent": 9.562080536912745,
+        "translateYPercent": 26.402684563758385
+      }
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "url": "/images/catalog/bone-review/GBCrcl15SpryGlMatt.892101b98163.png",
+      "assetSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+      "framing": {
+        "scale": 0.77,
+        "translateXPercent": 10.601666666666667,
+        "translateYPercent": 23.333333333333343
+      }
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "url": "/images/catalog/bone-review/GBCrcl15MtlRollGlMatt.6047bfebd74f.png",
+      "assetSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+      "framing": {
+        "scale": 0.8076923076923078,
+        "translateXPercent": 7.865384615384613,
+        "translateYPercent": 20.75524475524476
+      }
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "url": "/images/catalog/bone-review/GBCrcl30GlCap.bec08b247ea0.png",
+      "assetSha256": "bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/7. GBCrcl30GlCap.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.64b69135e487.png",
+      "assetSha256": "64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/5. GBCrcl30SpryMattGl.psd"
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.5e3b4ed13bef.png",
+      "assetSha256": "5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/37. GBCrcl50AnSpGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.2a48a28d4e3c.png",
+      "assetSha256": "2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCrcl50AnSpTslIvyGl.psd",
+      "scaleException": {
+        "wholeAssemblyScaleMultiplier": 0.935,
+        "reason": "Original tassel extends below glass base; 6.5 percent uniform reduction preserves bottom clearance. Body remains wider than 30 mL; body height may be slightly lower."
+      }
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1671b9d14401.png",
+      "assetSha256": "1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/52. GBCrcl50DrpGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.6389afea63f2.png",
+      "assetSha256": "6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/14. LBCrcl50LtnMtGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.3b4f2e7f3575.png",
+      "assetSha256": "3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/13. GBCrcl50SpryMtGl.psd"
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.1c8ebbb7f8c2.png",
+      "assetSha256": "1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/1. GBCrcl50RdcrShnGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "url": "/images/catalog/bone-review/GBCrclFrst50RdcrIvyLthr.fabd4d918ae6.png",
+      "assetSha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/55. GBCrclFrst50RdcrIvyLthr.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst50AnSpGl.a73dadbb94f0.png",
+      "assetSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/37. GBCrclFrst50AnSpGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst50DrpGl.c3efc5033ad5.png",
+      "assetSha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/52. GBCrclFrst50DrpGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "url": "/images/catalog/bone-review/LBCrclFrst50LtnMtGl.f31e21488965.png",
+      "assetSha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/14. LBCrclFrst50LtnMtGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst50SpryMtGl.d9557a8a06fb.png",
+      "assetSha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/13. GBCrclFrst50SpryMtGl.psd"
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst50RdcrShnGl.617a4baaf53b.png",
+      "assetSha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/1. GBCrclFrst50RdcrShnGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.dd8fc0f62a83.png",
+      "assetSha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/37. GBCrcl100AnSpGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.a045b0fe5c0e.png",
+      "assetSha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/50. GBCrcl100AnSpTslGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.318b80039e44.png",
+      "assetSha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/14. LBCrcl100LtnMtGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.d7d11d3a4db4.png",
+      "assetSha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/13. GBCrcl100SpryMtGl.psd"
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.01fcf261dd38.png",
+      "assetSha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/1. GBCrcl100RdcrShnGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst100AnSpGl.d3221edf5374.png",
+      "assetSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/37. GBCrclFrst100AnSpGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst100AnSpTslIvyGl.07288e4ba905.png",
+      "assetSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/21. Tassels/Updated Tassels/43. GBCrclFrst100AnSpTslIvyGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "url": "/images/catalog/bone-review/LBCrclFrst100LtnMtGl.f8a3bd634987.png",
+      "assetSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/14. LBCrclFrst100LtnMtGl.psd",
+      "scaleException": null
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst100SpryMtGl.309d2da00f87.png",
+      "assetSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/13. GBCrclFrst100SpryMtGl.psd"
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBCrclFrst100RdcrShnGl.b6f7d42ff8f7.png",
+      "assetSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/1. GBCrclFrst100RdcrShnGl.psd",
+      "scaleException": null
+    }
+  ]
+}

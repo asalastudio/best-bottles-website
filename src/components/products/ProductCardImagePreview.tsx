@@ -10,7 +10,8 @@ import {
 } from "@/lib/products/product-card-variant-previews";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
 import { resolveImageWithFallback } from "@/lib/products/image-fallback";
-import { getCylinderHeroStyle, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
+import { getCylinderHeroStyle } from "@/lib/products/cylinder-catalog-heroes";
+import { getCatalogHeroStyle, type CatalogHero } from "@/lib/products/catalog-heroes";
 
 import styles from "./ProductCardImagePreview.module.css";
 
@@ -21,7 +22,7 @@ type ProductCardImagePreviewProps = {
         alt?: string | null;
     };
     placeholderLabel?: string | null;
-    catalogHero?: CylinderCatalogHero | null;
+    catalogHero?: CatalogHero | null;
     variantPreviews?: ProductCardVariantPreview[];
     productHref: string;
     onOpen?: () => void;
@@ -195,6 +196,7 @@ export default function ProductCardImagePreview({
         [previews],
     );
     const fixedHero = Boolean(catalogHero);
+    const cylinderHero = catalogHero && "hoverUrl" in catalogHero ? catalogHero : null;
     const [loadedHoverUrl, setLoadedHoverUrl] = useState<string | null>(null);
     const [selection, setSelection] = useState<{ productHref: string; id: string } | null>(null);
     const [failedImages, setFailedImages] = useState<Set<string>>(() => new Set());
@@ -221,7 +223,12 @@ export default function ProductCardImagePreview({
             shopifyVariantId: activePreview.shopifyVariantId ?? null,
         }
         : defaultPhoto;
-    const fallbackPhoto = fixedHero ? defaultPhoto : [defaultPhoto, legacyImage].find((photo) =>
+    const exactPreview = catalogHero ? previewablePreviews.find(preview => preview.websiteSku === catalogHero.websiteSku) : null;
+    const approvedFallback = {
+        ...defaultPhoto,
+        url: exactPreview?.imageUrl ?? (auditMeta?.websiteSku === catalogHero?.websiteSku ? legacyImage.url : null),
+    };
+    const fallbackPhoto = fixedHero ? (cylinderHero ? defaultPhoto : approvedFallback) : [defaultPhoto, legacyImage].find((photo) =>
         photo.url && photo.url !== displayImage.url && !failedImages.has(photo.url),
     ) ?? legacyImage;
     const fallbackImageUrl = fallbackPhoto.url !== displayImage.url ? fallbackPhoto.url : null;
@@ -229,7 +236,7 @@ export default function ProductCardImagePreview({
     const resolvedPhoto = resolvedImageUrl === displayImage.url ? displayImage : fallbackPhoto;
     const resolvedImageAlt = resolvedPhoto.alt;
     const isStudioHero = Boolean(catalogHero && resolvedImageUrl === catalogHero.url);
-    const hoverReady = Boolean(isStudioHero && catalogHero && loadedHoverUrl === catalogHero.hoverUrl && !failedImages.has(catalogHero.hoverUrl));
+    const hoverReady = Boolean(isStudioHero && catalogHero && cylinderHero && loadedHoverUrl === cylinderHero.hoverUrl && !failedImages.has(cylinderHero.hoverUrl));
 
     const markImageFailed = (url: string) => {
         setFailedImages((current) => {
@@ -274,6 +281,7 @@ export default function ProductCardImagePreview({
                         src={resolvedImageUrl}
                         alt={resolvedImageAlt ?? productTitle}
                         fill
+                        unoptimized={isStudioHero && resolvedImageUrl.endsWith(".png")}
                         data-bb-image-audit={auditMeta?.surface}
                         data-bb-family={auditMeta?.family ?? undefined}
                         data-bb-product-group-slug={auditMeta?.productGroupSlug ?? undefined}
@@ -281,7 +289,7 @@ export default function ProductCardImagePreview({
                         data-bb-website-sku={resolvedPhoto.websiteSku ?? undefined}
                         data-bb-shopify-variant-id={resolvedPhoto.shopifyVariantId ?? undefined}
                         className={isStudioHero ? "object-contain" : "object-contain transition duration-500 ease-out group-hover/catalog-card:scale-[1.03]"}
-                        style={isStudioHero && catalogHero ? getCylinderHeroStyle(catalogHero) : undefined}
+                        style={isStudioHero && catalogHero ? getCatalogHeroStyle(catalogHero) : undefined}
                         data-bb-hero-state={isStudioHero ? "empty" : undefined}
                         sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 320px"
                         onError={() => markImageFailed(resolvedImageUrl)}
@@ -295,19 +303,19 @@ export default function ProductCardImagePreview({
                     </div>
                 )}
 
-                {isStudioHero && catalogHero && !failedImages.has(catalogHero.hoverUrl) && (
+                {isStudioHero && cylinderHero && !failedImages.has(cylinderHero.hoverUrl) && (
                     <Image
-                        key={catalogHero.hoverUrl}
-                        src={catalogHero.hoverUrl}
+                        key={cylinderHero.hoverUrl}
+                        src={cylinderHero.hoverUrl}
                         alt=""
                         aria-hidden="true"
                         fill
                         className={`object-contain ${styles.filled}`}
-                        style={getCylinderHeroStyle(catalogHero, "filled")}
+                        style={getCylinderHeroStyle(cylinderHero, "filled")}
                         data-bb-hero-state="filled"
                         sizes="(max-width: 639px) calc(100vw - 32px), (max-width: 1023px) 50vw, (max-width: 1279px) 33vw, 320px"
-                        onLoad={() => setLoadedHoverUrl(catalogHero.hoverUrl)}
-                        onError={() => markImageFailed(catalogHero.hoverUrl)}
+                        onLoad={() => setLoadedHoverUrl(cylinderHero.hoverUrl)}
+                        onError={() => markImageFailed(cylinderHero.hoverUrl)}
                     />
                 )}
 

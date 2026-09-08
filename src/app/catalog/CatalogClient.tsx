@@ -14,7 +14,7 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import RefineSection from "@/components/catalog/RefineSection";
 import CatalogProductGrid from "@/components/catalog/CatalogProductGrid";
 import { useGrace } from "@/components/useGrace";
-import { getCylinderCatalogHero, getCylinderHeroProductHref, type CylinderCatalogHero } from "@/lib/products/cylinder-catalog-heroes";
+import { getCatalogHero, getCatalogHeroProductHref, type CatalogHero } from "@/lib/products/catalog-heroes";
 import CatalogCardPreview from "@/components/catalog/CatalogCardPreview";
 import { catalogCapKind } from "@/lib/products/catalog-cap-photos";
 import { client, isSanityConfigured } from "@/sanity/lib/client";
@@ -280,11 +280,11 @@ function ProductGroupCard({
     primaryGraceSku?: string | null;
     primaryWebsiteSku?: string | null;
     matchSearch?: boolean;
-    catalogHero?: CylinderCatalogHero | null;
+    catalogHero?: CatalogHero | null;
 }) {
     const selected = matchSearch ? variantPreviews?.[0] : null;
     const href = catalogHero
-        ? getCylinderHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
+        ? getCatalogHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
         : productCardVariantHref(productGroupHref(group, applicatorParam), selected);
     const customerDisplayName = catalogHero?.alt ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
@@ -1524,7 +1524,7 @@ export default function CatalogClient({
     const variantPreviewRows = activeResult.variantPreviewRows;
     const catalogHeroMap = useMemo(() => {
         const rowsByGroupId = new Map(variantPreviewRows.map((row) => [row.groupId, row.variants]));
-        return new Map(visibleProducts.map((group) => [group._id, getCylinderCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
+        return new Map(visibleProducts.map((group) => [group._id, getCatalogHero(group.slug, rowsByGroupId.get(group._id) ?? [])]));
     }, [variantPreviewRows, visibleProducts]);
     const skuMap = useMemo(() => {
         const next = new Map<string, string>();

@@ -105,8 +105,8 @@ describe("checkout buying-path guardrails", () => {
         expect(cartProvider).toContain("shopifySellable === false");
         expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
         expect(route).toContain("resolveCheckoutVariantsByIds");
-        expect(route).toContain("const directCheckoutItems = directItems.flatMap");
-        expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId)");
+        expect(route).toContain("const directCheckoutItems = matchingDirectItems.flatMap");
+        expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !matchingDirectItems.includes(item))");
         expect(route).toContain("const checkoutItems = [...directCheckoutItems, ...resolvedCheckoutItems]");
     });
 });

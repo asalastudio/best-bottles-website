@@ -83,7 +83,7 @@ describe("Shopify sync foundation contract", () => {
         expect(cart).toContain("shopifyVariantId: i.shopifyVariantId");
         expect(route).toContain("normalizeShopifyVariantId(item.shopifyVariantId)");
         expect(route).toContain("resolveCheckoutVariantsByIds");
-        expect(route).toContain("const directCheckoutItems = directItems.flatMap");
-        expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !item.shopifyVariantId)");
+        expect(route).toContain("const directCheckoutItems = matchingDirectItems.flatMap");
+        expect(route).toContain("const fallbackItems = requestedItems.filter((item) => !matchingDirectItems.includes(item))");
     });
 });

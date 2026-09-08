@@ -1,0 +1,2595 @@
+{
+  "productionPublished": false,
+  "integrated": true,
+  "canvas": [
+    1560,
+    1716
+  ],
+  "bone": "#F5F3EF",
+  "rows": [
+    {
+      "sku": "GBDiva30AnSpGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva30AnSpGl.60a66d5847ba.png",
+      "assetSha256": "60a66d5847ba99a3dea79d3c00bb65492d4cae41ee172faf1c945c427a73a7d3",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva30AnSpGl.6af75001adcd.webp",
+      "priorFraming": {
+        "scale": 0.5048020833333334,
+        "translateXPercent": 22.40415277777777,
+        "translateYPercent": 47.86236742424242
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /37. GBDiva30AnSpGl.psd",
+      "sourcePsdSha256": "ac3369224a7aca34552690080c39ff19aa189fea720270611098296f84bf21fe",
+      "sourceAssemblySha256": "6057a6e48c9ebee31713b59b9563b9f18fc58898cfd4e26c5afdb8b640d44d21",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 592,
+          "height": 1165,
+          "left": 527,
+          "top": 368,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/0-layer-2.png",
+          "sha256": "7cc65df9d717222dabc7bc177a63b50afc1d36acdca3ae3475114deeef63e9cb"
+        },
+        {
+          "index": 3,
+          "width": 891,
+          "height": 596,
+          "left": 83,
+          "top": 58,
+          "name": "Layer 27",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/0-layer-3.png",
+          "sha256": "f703da41b3f6817681ce66938d4b85ea88a5a1fb86035be2aae75af352e9fcd8"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0031218442932728647,
+        "maxChannelError": 2,
+        "changedChannels": 20407
+      },
+      "transform": {
+        "uniformScale": 0.74,
+        "resizeWidth": 1036,
+        "resizeHeight": 1166,
+        "crop": {
+          "left": 61,
+          "top": 44,
+          "width": 768,
+          "height": 1092
+        },
+        "left": 396,
+        "top": 475
+      },
+      "body": {
+        "sourceTop": 377,
+        "sourceHeight": 1153,
+        "sourceWidth": 581,
+        "sourceBase": 1529,
+        "sourceLeft": 534,
+        "sourceRight": 1115,
+        "outputWidth": 429.94,
+        "outputBase": 1562,
+        "cx": 944.76,
+        "sourceShoulder": 690,
+        "outputShoulder": 941.5999999999999,
+        "outputHeight": 620.4000000000001
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 944.76,
+          "cy": 1569,
+          "sx": 86,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2253330,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 30,
+      "bodyWidthMm": 43,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-30ml-clear-18-415-antiquespray",
+      "alt": "30 ml Clear Diva Vintage Bulb Spray Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-30-ml-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 396,
+          "right": 1162,
+          "top": 475,
+          "bottom": 1566
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "LBDiva30LtnMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/LBDiva30LtnMtGl.b910a809c317.png",
+      "assetSha256": "b910a809c317f0a66b8bfee6eb08c194c6f61ede12854c902171fbbc1a64afeb",
+      "priorUrl": "/images/catalog/empty-heroes/LBDiva30LtnMtGl.48ce9c26c017.webp",
+      "priorFraming": {
+        "scale": 0.44108919902912624,
+        "translateXPercent": 33.606184769417474,
+        "translateYPercent": 52.772269417475734
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /14. LBDiva30LtnMtGl.psd",
+      "sourcePsdSha256": "e0b9d2a804798af3b58eb7b0656f821c35b6c3cc68ce92047c5bf75ba1da081a",
+      "sourceAssemblySha256": "7f2932588a2deb039a7a52c0c27cf321f5b1ba8a3ceafaf49233bbfb660a8573",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 592,
+          "height": 1165,
+          "left": 151,
+          "top": 368,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/1-layer-2.png",
+          "sha256": "2e110ec9b7bedcf57cf57219fc04c8cc08c9ba08247cb0296df80175ed86bfbb"
+        },
+        {
+          "index": 3,
+          "width": 312,
+          "height": 540,
+          "left": 289,
+          "top": 124,
+          "name": "Layer 12",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/1-layer-3.png",
+          "sha256": "8e50a396157bb1bc0fa515ed2c14116c175a31f9726a245b24a8f3fad0ec585f"
+        },
+        {
+          "index": 4,
+          "width": 333,
+          "height": 588,
+          "left": 777,
+          "top": 945,
+          "name": "Layer 13",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/1-layer-4.png",
+          "sha256": "978a9d1ff20b7285b8a3cb172ab2869162cc140c5a506d219a91f90756a5d00c"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0030312061332469498,
+        "maxChannelError": 2,
+        "changedChannels": 17333
+      },
+      "transform": {
+        "uniformScale": 0.7404081632653061,
+        "resizeWidth": 907,
+        "resizeHeight": 1166,
+        "crop": {
+          "left": 113,
+          "top": 91,
+          "width": 710,
+          "height": 1046
+        },
+        "left": 425,
+        "top": 521
+      },
+      "body": {
+        "sourceTop": 377,
+        "sourceHeight": 1153,
+        "sourceWidth": 581,
+        "sourceBase": 1529,
+        "sourceLeft": 158,
+        "sourceRight": 739,
+        "outputWidth": 430.1771428571429,
+        "outputBase": 1562,
+        "cx": 643.7028571428572,
+        "sourceShoulder": 690,
+        "outputShoulder": 940.8816326530612,
+        "outputHeight": 621.1183673469388
+      },
+      "cap": {
+        "cx": 1012.055918367347,
+        "base": 1559.778775510204
+      },
+      "shadows": [
+        {
+          "cx": 643.7028571428572,
+          "cy": 1569,
+          "sx": 86,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1012.055918367347,
+          "cy": 1565.778775510204,
+          "sx": 71.07918367346939,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2248391,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 30,
+      "bodyWidthMm": 43,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-30ml-clear-18-415-lotionpump",
+      "alt": "30 ml Clear Diva Lotion Pump Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-30-ml-glass-bottle-matte-gold-lotion-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 425,
+          "right": 1133,
+          "top": 522,
+          "bottom": 1565
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva30SpryMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva30SpryMtGl.86cb1f0ded93.png",
+      "assetSha256": "86cb1f0ded93e5d0e3486e19c7a984d38a2711b3ea1d3774d691e152674afc7a",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva30SpryMtGl.0e26e13bf029.webp",
+      "priorFraming": {
+        "scale": 0.41680905963302756,
+        "translateXPercent": 34.78646932339449,
+        "translateYPercent": 52.476738427856546
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /13. GBDiva30SpryMtGl.psd",
+      "sourcePsdSha256": "cfeef7a50c875ec199e09006eff498c04a22e13fecc5622195bc05a97c37508a",
+      "sourceAssemblySha256": "ea3f7246eafa25b1f20effa78a837cca216f30c08eedf51da703bfc74685fdaa",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 592,
+          "height": 1165,
+          "left": 107,
+          "top": 368,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/4-layer-2.png",
+          "sha256": "a9771205f91f8e42a0117ddc030bf097fb54d4892a7db7006ff85735397ee7c0"
+        },
+        {
+          "index": 3,
+          "width": 312,
+          "height": 540,
+          "left": 246,
+          "top": 122,
+          "name": "Layer 13",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/4-layer-3.png",
+          "sha256": "dd0bcdca1cfa6f8c8b0518bd47a91b38732310682938e32e1a93846071bbae87"
+        },
+        {
+          "index": 4,
+          "width": 333,
+          "height": 588,
+          "left": 777,
+          "top": 945,
+          "name": "Layer 14",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/4-layer-4.png",
+          "sha256": "569ba820d946d8f9fa1818a49619caf00337ef87bbfc086b88c28e49e366a900"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.003035698088759313,
+        "maxChannelError": 2,
+        "changedChannels": 17354
+      },
+      "transform": {
+        "uniformScale": 0.7404081632653061,
+        "resizeWidth": 907,
+        "resizeHeight": 1166,
+        "crop": {
+          "left": 80,
+          "top": 90,
+          "width": 743,
+          "height": 1047
+        },
+        "left": 409,
+        "top": 520
+      },
+      "body": {
+        "sourceTop": 377,
+        "sourceHeight": 1153,
+        "sourceWidth": 581,
+        "sourceBase": 1529,
+        "sourceLeft": 114,
+        "sourceRight": 695,
+        "outputWidth": 430.1771428571429,
+        "outputBase": 1562,
+        "cx": 628.1248979591837,
+        "sourceShoulder": 690,
+        "outputShoulder": 940.8816326530612,
+        "outputHeight": 621.1183673469388
+      },
+      "cap": {
+        "cx": 1029.055918367347,
+        "base": 1559.778775510204
+      },
+      "shadows": [
+        {
+          "cx": 628.1248979591837,
+          "cy": 1569,
+          "sx": 86,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1029.055918367347,
+          "cy": 1565.778775510204,
+          "sx": 71.07918367346939,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2247256,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 30,
+      "bodyWidthMm": 43,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-30ml-clear-18-415-perfumespray",
+      "alt": "30 ml Clear Diva Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-30-ml-glass-bottle-matte-gold-spray-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 409,
+          "right": 1150,
+          "top": 520,
+          "bottom": 1565
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva30RdcrShnGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva30RdcrShnGl.ad273685647c.png",
+      "assetSha256": "ad273685647c50df9a64d5b0bac14ebd2ae005a0fe1a1cfe77dade11646a642b",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva30RdcrShnGl.641ba29c8319.webp",
+      "priorFraming": {
+        "scale": 0.4092989864864865,
+        "translateXPercent": 34.924153997747744,
+        "translateYPercent": 54.53518120393121
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /23. Diva Clear 30ml/1. Diva 30ml PSD /1. GBDiva30RdcrShnGl.psd",
+      "sourcePsdSha256": "69477579084b409f52540db42163febcccaba09722cdb7791c4806d1bd9c8613",
+      "sourceAssemblySha256": "88555a979d0f9b1118ac46e4757ca04e3de17f6933d22a2a1d2226f8c61d5c14",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 592,
+          "height": 1165,
+          "left": 328,
+          "top": 270,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/5-layer-2.png",
+          "sha256": "6f76f202668497e9dfbe69df07d24070e454f3783b67dd8b0a24d7136b3f3e15"
+        },
+        {
+          "index": 3,
+          "width": 293,
+          "height": 398,
+          "left": 479,
+          "top": 136,
+          "name": "Layer 7",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/5-layer-3.png",
+          "sha256": "1c0ec10641fcb19c3061ea2b86d5435f0071ca733e01058838fed24e9ce59bbd"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.001879710614404492,
+        "maxChannelError": 2,
+        "changedChannels": 10741
+      },
+      "transform": {
+        "uniformScale": 0.7404081632653061,
+        "resizeWidth": 907,
+        "resizeHeight": 1166,
+        "crop": {
+          "left": 244,
+          "top": 194,
+          "width": 438,
+          "height": 871
+        },
+        "left": 561,
+        "top": 696
+      },
+      "body": {
+        "sourceTop": 279,
+        "sourceHeight": 1153,
+        "sourceWidth": 581,
+        "sourceBase": 1431,
+        "sourceLeft": 335,
+        "sourceRight": 916,
+        "outputWidth": 430.1771428571429,
+        "outputBase": 1562,
+        "cx": 779.7551020408164,
+        "sourceShoulder": 592,
+        "outputShoulder": 940.3216326530612,
+        "outputHeight": 621.6783673469388
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 779.7551020408164,
+          "cy": 1569,
+          "sx": 86,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2389023,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 30,
+      "bodyWidthMm": 43,
+      "displayPixelsPerMm": 10,
+      "pose": "capped",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-30ml-clear-18-415-reducer",
+      "alt": "30 ml Clear Diva Reducer Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-30-ml-glass-bottle-reducer-shiny-gold-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 561,
+          "right": 997,
+          "top": 697,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva46AnSpGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva46AnSpGl.85659b447e43.png",
+      "assetSha256": "85659b447e43d23965d57e42de820ff14029f82624d41fd55065c6cec76a1a6f",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva46AnSpGl.dd63c1a98731.webp",
+      "priorFraming": {
+        "scale": 0.5090340527127492,
+        "translateXPercent": 22.597000162297004,
+        "translateYPercent": 44.72417702611372
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/38. GBDiva46AnSpGl.psd",
+      "sourcePsdSha256": "59c5547e57088485b6b76353f31a7160e93362c352fc75e6e63bd54cb4ab8e8d",
+      "sourceAssemblySha256": "0810a889d101272d25be10a4579c9f5087432b4c4b99fc52a5493eef9dc8a93c",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 659,
+          "height": 1265,
+          "left": 459,
+          "top": 428,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/6-layer-2.png",
+          "sha256": "6a4b173f1b68ea5fcac1ebee7b1403a8c00fe9f6a74da7d5b78d291012b68aca"
+        },
+        {
+          "index": 3,
+          "width": 893,
+          "height": 597,
+          "left": 34,
+          "top": 115,
+          "name": "Layer 32",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/6-layer-3.png",
+          "sha256": "299c7a43296e5559a849581538cf3879f547199ca7d73c554715d4ce9e943fd9"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.003726530612244898,
+        "maxChannelError": 2,
+        "changedChannels": 27073
+      },
+      "transform": {
+        "uniformScale": 0.7564285714285715,
+        "resizeWidth": 1059,
+        "resizeHeight": 1324,
+        "crop": {
+          "left": 25,
+          "top": 90,
+          "width": 822,
+          "height": 1194
+        },
+        "left": 369,
+        "top": 373
+      },
+      "body": {
+        "sourceTop": 437,
+        "sourceHeight": 1255,
+        "sourceWidth": 648,
+        "sourceBase": 1691,
+        "sourceLeft": 466,
+        "sourceRight": 1114,
+        "outputWidth": 490.1657142857143,
+        "outputBase": 1562,
+        "cx": 941.2003571428571,
+        "sourceShoulder": 752,
+        "outputShoulder": 851.8342857142858,
+        "outputHeight": 710.1657142857142
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 941.2003571428571,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2178010,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-clear-18-415-antiquespray",
+      "alt": "46 ml Clear Diva Vintage Bulb Spray Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-ivory-vintage-style-bulb-sprayer-shiny-gold-collar-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 369,
+          "right": 1189,
+          "top": 373,
+          "bottom": 1565
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva46AnSpTslIvyGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva46AnSpTslIvyGl.129b47c8513d.png",
+      "assetSha256": "129b47c8513de24c5e6d1c3abd21558e718784562339224203e59616dd2d2b9e",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva46AnSpTslIvyGl.7219072b9cd7.webp",
+      "priorFraming": {
+        "scale": 0.5485706781661666,
+        "translateXPercent": 15.165761936448424,
+        "translateYPercent": 43.95590850878027
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/43. GBDiva46AnSpTslIvyGl.psd",
+      "sourcePsdSha256": "e725964ea3e0fce6417ef93e5835b5e91061d1e65139c8819b66027b7ee1561e",
+      "sourceAssemblySha256": "735df9a314be6b33bdf61234f1af5b916184ba9ce9892f73b06a204b3cd6eb93",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 659,
+          "height": 1230,
+          "left": 928,
+          "top": 472,
+          "name": "Layer 39",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/7-layer-2.png",
+          "sha256": "920891589311b70468d3775e8cda06eedb622fa9208da5f4f35390a95f8be5c0"
+        },
+        {
+          "index": 3,
+          "width": 1187,
+          "height": 1423,
+          "left": 69,
+          "top": 311,
+          "name": "Layer 40",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/7-layer-3.png",
+          "sha256": "59dd493e90fdc4fb77428ecf996fb63c2603945827905013b7b19b569481df67"
+        },
+        {
+          "index": 4,
+          "width": 333,
+          "height": 505,
+          "left": 1066,
+          "top": 216,
+          "name": "Layer 41",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/7-layer-4.png",
+          "sha256": "778bbdf063aaeaef8890fdac29272bbad9026160b745944cf1d7655a543b3d1a"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.005169850340136054,
+        "maxChannelError": 2,
+        "changedChannels": 46987
+      },
+      "transform": {
+        "uniformScale": 0.756,
+        "resizeWidth": 1323,
+        "resizeHeight": 1323,
+        "crop": {
+          "left": 49,
+          "top": 160,
+          "width": 1151,
+          "height": 1152
+        },
+        "left": 205,
+        "top": 437
+      },
+      "body": {
+        "sourceTop": 472,
+        "sourceHeight": 1229,
+        "sourceWidth": 648,
+        "sourceBase": 1700,
+        "sourceLeft": 934,
+        "sourceRight": 1582,
+        "outputWidth": 489.888,
+        "outputBase": 1562,
+        "cx": 1106.67,
+        "sourceShoulder": 761,
+        "outputShoulder": 852.316,
+        "outputHeight": 709.684
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 1106.67,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2076945,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-clear-18-415-antiquespray-tassel",
+      "alt": "46 ml Clear Diva Vintage Bulb Spray Bottle with Tassel",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 207,
+          "right": 1355,
+          "top": 439,
+          "bottom": 1587
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva46DrpGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva46DrpGl.adc5d5f7255c.png",
+      "assetSha256": "adc5d5f7255c52aebf59988b0df57b6417f55375603661aca4e95c21836d7bda",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva46DrpGl.cae457d201a8.webp",
+      "priorFraming": {
+        "scale": 0.5000246004523465,
+        "translateXPercent": 25.082107410791398,
+        "translateYPercent": 46.14930856548649
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/52. GBDiva46DrpGl.psd",
+      "sourcePsdSha256": "876270aacd8374b7dfdc5cccaeb73e2a694bb0cfeda2ea192c1f52d2ec8c3729",
+      "sourceAssemblySha256": "9afc4ea7dac7e22f969ee654fed783f8f84055181c46bde29f09888eee8ce068",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 659,
+          "height": 1265,
+          "left": 194,
+          "top": 428,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/8-layer-2.png",
+          "sha256": "c180f7fbcdc4daedc6b008945623c28194b7190c84585fe09e7e1a337f2ff5a9"
+        },
+        {
+          "index": 3,
+          "width": 338,
+          "height": 551,
+          "left": 349,
+          "top": 164,
+          "name": "Layer 27",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/8-layer-3.png",
+          "sha256": "ebdefbcd08999ae2dab4f914377886bb7cb72dc380fb92aad501963386c5915d"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0033538321995464854,
+        "maxChannelError": 2,
+        "changedChannels": 18288
+      },
+      "transform": {
+        "uniformScale": 0.7561904761904762,
+        "resizeWidth": 794,
+        "resizeHeight": 1323,
+        "crop": {
+          "left": 148,
+          "top": 127,
+          "width": 498,
+          "height": 1157
+        },
+        "left": 531,
+        "top": 410
+      },
+      "body": {
+        "sourceTop": 437,
+        "sourceHeight": 1255,
+        "sourceWidth": 648,
+        "sourceBase": 1691,
+        "sourceLeft": 201,
+        "sourceRight": 849,
+        "outputWidth": 490.01142857142855,
+        "outputBase": 1562,
+        "cx": 779.6219047619047,
+        "sourceShoulder": 752,
+        "outputShoulder": 851.6552380952381,
+        "outputHeight": 710.3447619047619
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 779.6219047619047,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2294349,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-clear-18-415-dropper",
+      "alt": "46 ml Clear Diva Dropper Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-white-dropper-shiny-gold-collar-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 531,
+          "right": 1027,
+          "top": 410,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "LBDiva46LtnMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/LBDiva46LtnMtGl.6a51261211b2.png",
+      "assetSha256": "6a51261211b26b96c532797efa538f03c3f5ad964282cc9d204a4bb7a824e3cd",
+      "priorUrl": "/images/catalog/empty-heroes/LBDiva46LtnMtGl.be41a0a54512.webp",
+      "priorFraming": {
+        "scale": 0.5231738875103256,
+        "translateXPercent": 28.724261907913426,
+        "translateYPercent": 44.0728876657405
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/12. LBDiva46LtnMtGl.psd",
+      "sourcePsdSha256": "329c69a1cbc3f3ef6213bbabca0c67d3e992b995e6dbc60b6cf0f063aeb1623d",
+      "sourceAssemblySha256": "6b0fe7d47cc689a05ccbe165e1db7cf3878b56edd9d3ce141ef7704462914c84",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 659,
+          "height": 1265,
+          "left": 39,
+          "top": 432,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/10-layer-2.png",
+          "sha256": "62a9d8189b995d364faff94ce0c675fe9438f5eb8293929d19547f0825716ab5"
+        },
+        {
+          "index": 3,
+          "width": 310,
+          "height": 540,
+          "left": 209,
+          "top": 185,
+          "name": "Layer 3",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/10-layer-3.png",
+          "sha256": "d2322db7f47fb8d801daca901a99c3ba9e550254f2e243465abeb35f844d0740"
+        },
+        {
+          "index": 4,
+          "width": 331,
+          "height": 590,
+          "left": 681,
+          "top": 1103,
+          "name": "Layer 4",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/10-layer-4.png",
+          "sha256": "cf4a242634023a60f0975a12975c96bd0ff6afd800a9cf7ac9853aa81e2f2eca"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.003975335509611897,
+        "maxChannelError": 2,
+        "changedChannels": 22766
+      },
+      "transform": {
+        "uniformScale": 0.7561904761904762,
+        "resizeWidth": 794,
+        "resizeHeight": 1390,
+        "crop": {
+          "left": 31,
+          "top": 141,
+          "width": 736,
+          "height": 1146
+        },
+        "left": 412,
+        "top": 421
+      },
+      "body": {
+        "sourceTop": 441,
+        "sourceHeight": 1255,
+        "sourceWidth": 648,
+        "sourceBase": 1695,
+        "sourceLeft": 46,
+        "sourceRight": 694,
+        "outputWidth": 490.01142857142855,
+        "outputBase": 1562,
+        "cx": 660.412380952381,
+        "sourceShoulder": 756,
+        "outputShoulder": 851.68,
+        "outputHeight": 710.32
+      },
+      "cap": {
+        "cx": 1022.2495238095238,
+        "base": 1555.9504761904761
+      },
+      "shadows": [
+        {
+          "cx": 660.412380952381,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1022.2495238095238,
+          "cy": 1561.9504761904761,
+          "sx": 72.82114285714286,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2174984,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-clear-18-415-lotionpump",
+      "alt": "46 ml Clear Diva Lotion Pump Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-matte-gold-lotion-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 412,
+          "right": 1146,
+          "top": 421,
+          "bottom": 1565
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva46SpryMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva46SpryMtGl.81cb5670ab64.png",
+      "assetSha256": "81cb5670ab647c47d02dc3f7226cc054452e7cad21d3ea1afb35016237f79d79",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva46SpryMtGl.4399d8858ae1.webp",
+      "priorFraming": {
+        "scale": 0.4956384197466242,
+        "translateXPercent": 30.835314436463864,
+        "translateYPercent": 45.0408010780403
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/11. GBDiva46SpryMtGl.psd",
+      "sourcePsdSha256": "8447fac0d94c86b0c163003d98acda896497451405e2abfb9e8e68b6127bb02a",
+      "sourceAssemblySha256": "0bb5eadc8c5ef489c012f3dea0c6b4fc9496068a91d421e87d15f2e225bf96f0",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 659,
+          "height": 1265,
+          "left": 22,
+          "top": 428,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/11-layer-2.png",
+          "sha256": "68d5752cce79d7f250677780806384efd4724cf6c5fae878dc5a66c9629d15c9"
+        },
+        {
+          "index": 3,
+          "width": 310,
+          "height": 540,
+          "left": 195,
+          "top": 175,
+          "name": "Layer 14",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/11-layer-3.png",
+          "sha256": "79da0b888bed69ad5e91e15ea9e38d613d94e24904687cd79fa759ff42073edf"
+        },
+        {
+          "index": 4,
+          "width": 331,
+          "height": 590,
+          "left": 681,
+          "top": 1103,
+          "name": "Layer 15",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/11-layer-4.png",
+          "sha256": "fcfa652540a10abec74f087a65f7ac13f0f564a7e8c20cc566683472fc847ce6"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004193015873015873,
+        "maxChannelError": 2,
+        "changedChannels": 22853
+      },
+      "transform": {
+        "uniformScale": 0.7561904761904762,
+        "resizeWidth": 794,
+        "resizeHeight": 1323,
+        "crop": {
+          "left": 18,
+          "top": 133,
+          "width": 749,
+          "height": 1151
+        },
+        "left": 406,
+        "top": 416
+      },
+      "body": {
+        "sourceTop": 437,
+        "sourceHeight": 1255,
+        "sourceWidth": 648,
+        "sourceBase": 1691,
+        "sourceLeft": 29,
+        "sourceRight": 677,
+        "outputWidth": 490.01142857142855,
+        "outputBase": 1562,
+        "cx": 654.5571428571429,
+        "sourceShoulder": 752,
+        "outputShoulder": 851.6552380952381,
+        "outputHeight": 710.3447619047619
+      },
+      "cap": {
+        "cx": 1029.249523809524,
+        "base": 1558.9752380952382
+      },
+      "shadows": [
+        {
+          "cx": 654.5571428571429,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1029.249523809524,
+          "cy": 1564.9752380952382,
+          "sx": 72.82114285714286,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2173576,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-clear-18-415-perfumespray",
+      "alt": "46 ml Clear Diva Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-matte-gold-spray-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 406,
+          "right": 1153,
+          "top": 416,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva46RdcrShnGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva46RdcrShnGl.abb7ea690f9d.png",
+      "assetSha256": "abb7ea690f9db478ee87110f76cfaee41048c10363c505264fe30cad8d268908",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva46RdcrShnGl.85f9b7b846b4.webp",
+      "priorFraming": {
+        "scale": 0.4520222388089213,
+        "translateXPercent": 32.597143805856525,
+        "translateYPercent": 50.5919513792025
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /25. Diva (Clear) 46 ml./1. Diva (Clear) 46ml PSD/1. GBDiva46RdcrShnGl.psd",
+      "sourcePsdSha256": "3522d32082bd540f774f7e5f31aaf7b0a016e73c9dae99d8ac1c6bd04620b92e",
+      "sourceAssemblySha256": "f61838207b596e089bed51a423241789d3923d624b2adf701123fad5b5b2ad7b",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 659,
+          "height": 1265,
+          "left": 204,
+          "top": 195,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/13-layer-2.png",
+          "sha256": "5c8ac3d5e7153a820d0461ac1aaa672a90c1eb63df335179a3b20b665a6868dc"
+        },
+        {
+          "index": 3,
+          "width": 290,
+          "height": 402,
+          "left": 384,
+          "top": 49,
+          "name": "Layer 6",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/13-layer-3.png",
+          "sha256": "af0fde9da34064c24ed5ebbdc0e61faacc18a9787af4a65631171f2567d8ee6f"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0034348864994026285,
+        "maxChannelError": 2,
+        "changedChannels": 15909
+      },
+      "transform": {
+        "uniformScale": 0.7561904761904762,
+        "resizeWidth": 794,
+        "resizeHeight": 1125,
+        "crop": {
+          "left": 156,
+          "top": 133,
+          "width": 498,
+          "height": 975
+        },
+        "left": 531,
+        "top": 592
+      },
+      "body": {
+        "sourceTop": 204,
+        "sourceHeight": 1255,
+        "sourceWidth": 648,
+        "sourceBase": 1458,
+        "sourceLeft": 211,
+        "sourceRight": 859,
+        "outputWidth": 490.01142857142855,
+        "outputBase": 1562,
+        "cx": 779.1838095238095,
+        "sourceShoulder": 519,
+        "outputShoulder": 851.4628571428572,
+        "outputHeight": 710.5371428571428
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 779.1838095238095,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2319299,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "capped",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-clear-18-415-reducer",
+      "alt": "46 ml Clear Diva Reducer Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-glass-bottle-reducer-shiny-gold-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 531,
+          "right": 1027,
+          "top": 593,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDivaFrst46AnSpGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDivaFrst46AnSpGl.6f50fafb6c16.png",
+      "assetSha256": "6f50fafb6c167a8757c01e00e4b25ecb8998a0e301e92467335e237075b88bf4",
+      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46AnSpGl.dcae376a7025.webp",
+      "priorFraming": {
+        "scale": 0.5485706781661666,
+        "translateXPercent": 19.920041147221866,
+        "translateYPercent": 42.958507275750875
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/37. GBDivaFrst46AnSpGl.psd",
+      "sourcePsdSha256": "7f67775a293c11a1fff5626ed5d724a0ee1e0d35fa96e89ce3ee381a97f7f544",
+      "sourceAssemblySha256": "6d5321733cfbf2f1731909f93114274e458022afaaa7ad1d35c15c6bf07349a7",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 660,
+          "height": 1092,
+          "left": 460,
+          "top": 605,
+          "name": "Layer 3",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/14-layer-2.png",
+          "sha256": "5675b93df9f4ea09ff0f982b0b4db9b1d53d460000b68028f18ee2b66d5f9c11"
+        },
+        {
+          "index": 3,
+          "width": 893,
+          "height": 597,
+          "left": 37,
+          "top": 115,
+          "name": "Layer 20",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/14-layer-3.png",
+          "sha256": "ad8b51f380f5c310072763b9e48fdb81c07a82017745c49db24ba903fd93fe23"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0032106441899695435,
+        "maxChannelError": 2,
+        "changedChannels": 27609
+      },
+      "transform": {
+        "uniformScale": 0.7523809523809524,
+        "resizeWidth": 1185,
+        "resizeHeight": 1383,
+        "crop": {
+          "left": 27,
+          "top": 89,
+          "width": 817,
+          "height": 1191
+        },
+        "left": 372,
+        "top": 375
+      },
+      "body": {
+        "sourceTop": 605,
+        "sourceHeight": 1092,
+        "sourceWidth": 651,
+        "sourceBase": 1696,
+        "sourceLeft": 465,
+        "sourceRight": 1116,
+        "outputWidth": 489.8,
+        "outputBase": 1562,
+        "cx": 939.3809523809524,
+        "sourceShoulder": 755,
+        "outputShoulder": 854.047619047619,
+        "outputHeight": 707.952380952381
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 939.3809523809524,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2179236,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-frosted-18-415-antiquespray",
+      "alt": "46 ml Frosted Diva Vintage Bulb Spray Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 373,
+          "right": 1187,
+          "top": 375,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDivaFrst46AnSpTslIvyGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDivaFrst46AnSpTslIvyGl.23cb7e15e7fd.png",
+      "assetSha256": "23cb7e15e7fd828b26d6a41a6abd2935d545e132250259ac6efaa6f7a27b95b5",
+      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46AnSpTslIvyGl.d1ac9015165d.webp",
+      "priorFraming": {
+        "scale": 0.5885706234491163,
+        "translateXPercent": 10.958148644541955,
+        "translateYPercent": 42.30915751466402
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/43. GBDivaFrst46AnSpTslIvyGl.psd",
+      "sourcePsdSha256": "1fa1042347c6a58e4e4346bf2e0f764f80108f19abfa6a9a6104f51965b61b43",
+      "sourceAssemblySha256": "f8aed04d1099b89728c716584be9983b778a117feb9c5c47efc246ee7f8cc1a5",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 660,
+          "height": 1056,
+          "left": 927,
+          "top": 656,
+          "name": "Layer 39",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/15-layer-2.png",
+          "sha256": "6db200be47fab4a1a8873c8fe2bbd87c7654207c8ece384cfc713215e05ebb9c"
+        },
+        {
+          "index": 3,
+          "width": 1187,
+          "height": 1423,
+          "left": 68,
+          "top": 309,
+          "name": "Layer 40",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/15-layer-3.png",
+          "sha256": "ef2eb04998245c6020b73d86b02230af2148e8f3edc9583181f19696a8a2b34b"
+        },
+        {
+          "index": 4,
+          "width": 333,
+          "height": 505,
+          "left": 1065,
+          "top": 214,
+          "name": "Layer 41",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/15-layer-4.png",
+          "sha256": "ba3b41f31924a10353f6c951cb101dc48eb454ffefb8ef8a96c81a0effab482d"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.00524647619047619,
+        "maxChannelError": 2,
+        "changedChannels": 47711
+      },
+      "transform": {
+        "uniformScale": 0.7525714285714286,
+        "resizeWidth": 1317,
+        "resizeHeight": 1317,
+        "crop": {
+          "left": 48,
+          "top": 158,
+          "width": 1147,
+          "height": 1147
+        },
+        "left": 207,
+        "top": 432
+      },
+      "body": {
+        "sourceTop": 657,
+        "sourceHeight": 1055,
+        "sourceWidth": 651,
+        "sourceBase": 1711,
+        "sourceLeft": 931,
+        "sourceRight": 1582,
+        "outputWidth": 489.924,
+        "outputBase": 1562,
+        "cx": 1104.2297142857142,
+        "sourceShoulder": 769,
+        "outputShoulder": 852.7274285714285,
+        "outputHeight": 709.2725714285715
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 1104.2297142857142,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2076563,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-frosted-18-415-antiquespray-tassel",
+      "alt": "46 ml Frosted Diva Vintage Bulb Spray Bottle with Tassel",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 209,
+          "right": 1353,
+          "top": 433,
+          "bottom": 1577
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDivaFrst46DrpGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDivaFrst46DrpGl.6edd340655a5.png",
+      "assetSha256": "6edd340655a5fe724d7fede210681c0a4db232230f92db6e61513a10795ea8a0",
+      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46DrpGl.fa51411800db.webp",
+      "priorFraming": {
+        "scale": 0.4870929297509927,
+        "translateXPercent": 25.807717822367362,
+        "translateYPercent": 45.24278538702796
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/52. GBDivaFrst46DrpGl.psd",
+      "sourcePsdSha256": "e0288bda07c634e4ce823bf816ff09124252cd7944c1ece5733c5d670df9acba",
+      "sourceAssemblySha256": "00c058b91d4699e23b0da9cae9ca7a4f9ff79d63f2cd0ed67c2c4dec8044ff62",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 660,
+          "height": 1301,
+          "left": 198,
+          "top": 396,
+          "name": "Layer 3",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/16-layer-2.png",
+          "sha256": "625a01cfb43ebdda963b15712eb4e42dbb51c462a83832a15ba3912617a8d907"
+        },
+        {
+          "index": 3,
+          "width": 338,
+          "height": 551,
+          "left": 355,
+          "top": 164,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/16-layer-3.png",
+          "sha256": "76176feb81873e8fd637ade06ab4f12dd4c56ceb7b3531dbbade141214f07207"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.0032863533516417085,
+        "maxChannelError": 2,
+        "changedChannels": 18861
+      },
+      "transform": {
+        "uniformScale": 0.7523809523809524,
+        "resizeWidth": 790,
+        "resizeHeight": 1383,
+        "crop": {
+          "left": 148,
+          "top": 126,
+          "width": 499,
+          "height": 1154
+        },
+        "left": 531,
+        "top": 412
+      },
+      "body": {
+        "sourceTop": 404,
+        "sourceHeight": 1293,
+        "sourceWidth": 651,
+        "sourceBase": 1696,
+        "sourceLeft": 203,
+        "sourceRight": 854,
+        "outputWidth": 489.8,
+        "outputBase": 1562,
+        "cx": 780.2571428571429,
+        "sourceShoulder": 755,
+        "outputShoulder": 854.047619047619,
+        "outputHeight": 707.952380952381
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 780.2571428571429,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2294368,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-frosted-18-415-dropper",
+      "alt": "46 ml Frosted Diva Dropper Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/all-bottles/option_details.php?items_count=16&OPTinv_id=3288",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 532,
+          "right": 1028,
+          "top": 412,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "LBDivaFrst46LtnMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/LBDivaFrst46LtnMtGl.eae338137280.png",
+      "assetSha256": "eae338137280ddcf994ab3ad6d910a41c2dbe498ed17c5f125fd4c891a160c8c",
+      "priorUrl": "/images/catalog/empty-heroes/LBDivaFrst46LtnMtGl.18708a0bf6f5.webp",
+      "priorFraming": {
+        "scale": 0.463137539763239,
+        "translateXPercent": 31.62887758939152,
+        "translateYPercent": 47.91417433111687
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/14. LBDivaFrst46LtnMtGl.psd",
+      "sourcePsdSha256": "646386bba33e11e8fd20d9d310f120df4b24f577396711789f725cc99459d74d",
+      "sourceAssemblySha256": "769be5e4177e4ad56044ead385d4a9913aff119748e0a68353a33bd723eefc02",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 660,
+          "height": 1301,
+          "left": 28,
+          "top": 396,
+          "name": "Layer 3",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/17-layer-2.png",
+          "sha256": "a3c97e2ae6fb9cff55bf2d6ece09d2887ea20400ea4c5a209eb0c652c520d9a7"
+        },
+        {
+          "index": 3,
+          "width": 310,
+          "height": 540,
+          "left": 204,
+          "top": 175,
+          "name": "Layer 4",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/17-layer-3.png",
+          "sha256": "f8a70888fe85ad4f50a8abcba8a4a57e956a210a5daca0f4d90759e723d4a5d4"
+        },
+        {
+          "index": 4,
+          "width": 331,
+          "height": 590,
+          "left": 680,
+          "top": 1107,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/17-layer-4.png",
+          "sha256": "0f6694f99be7ee8b8c013eb5663f54094eb7f44d999d9e92d0466bfc258ceb25"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004096412594780386,
+        "maxChannelError": 2,
+        "changedChannels": 23497
+      },
+      "transform": {
+        "uniformScale": 0.7523809523809524,
+        "resizeWidth": 790,
+        "resizeHeight": 1383,
+        "crop": {
+          "left": 21,
+          "top": 133,
+          "width": 742,
+          "height": 1147
+        },
+        "left": 409,
+        "top": 419
+      },
+      "body": {
+        "sourceTop": 404,
+        "sourceHeight": 1293,
+        "sourceWidth": 651,
+        "sourceBase": 1696,
+        "sourceLeft": 33,
+        "sourceRight": 684,
+        "outputWidth": 489.8,
+        "outputBase": 1562,
+        "cx": 657.3523809523809,
+        "sourceShoulder": 755,
+        "outputShoulder": 854.047619047619,
+        "outputHeight": 707.952380952381
+      },
+      "cap": {
+        "cx": 1025.2666666666667,
+        "base": 1558.2380952380952
+      },
+      "shadows": [
+        {
+          "cx": 657.3523809523809,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1025.2666666666667,
+          "cy": 1564.2380952380952,
+          "sx": 72.4542857142857,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2174751,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-frosted-18-415-lotionpump",
+      "alt": "46 ml Frosted Diva Lotion Pump Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-matte-gold-lotion-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 409,
+          "right": 1148,
+          "top": 419,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDivaFrst46SpryMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDivaFrst46SpryMtGl.d776e654fbe4.png",
+      "assetSha256": "d776e654fbe46b9339872317f0cc36f65094b5a1ed407abff3845842e48ad426",
+      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46SpryMtGl.c899d330bac9.webp",
+      "priorFraming": {
+        "scale": 0.5136616350101377,
+        "translateXPercent": 30.480857869614766,
+        "translateYPercent": 44.14783268543896
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/13. GBDivaFrst46SpryMtGl.psd",
+      "sourcePsdSha256": "5201f33cc353716de08fadc0918e3a3a2405999cb0adb123999529b30c44d9c7",
+      "sourceAssemblySha256": "61e13359f8064891f9c2a8567b723679160862d1f550ad5a5c1a3e6d6953c793",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 660,
+          "height": 1301,
+          "left": 20,
+          "top": 396,
+          "name": "Layer 3",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/19-layer-2.png",
+          "sha256": "d352053e3f6e003b68c09b13a92b48c81d4a7afee3ca54995752c6e79f6a8730"
+        },
+        {
+          "index": 3,
+          "width": 310,
+          "height": 540,
+          "left": 189,
+          "top": 175,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/19-layer-3.png",
+          "sha256": "b37b51ed3bafb2f024bb4ecb0b6649157a9491046a961898cd7132807e39c6cf"
+        },
+        {
+          "index": 4,
+          "width": 331,
+          "height": 590,
+          "left": 680,
+          "top": 1107,
+          "name": "Layer 6",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/19-layer-4.png",
+          "sha256": "b87c87fcf295153478f220a930d7bf3874ae5e6eb172dde7037255a11321b2d4"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004088467450817832,
+        "maxChannelError": 2,
+        "changedChannels": 23447
+      },
+      "transform": {
+        "uniformScale": 0.7523809523809524,
+        "resizeWidth": 790,
+        "resizeHeight": 1383,
+        "crop": {
+          "left": 15,
+          "top": 133,
+          "width": 748,
+          "height": 1147
+        },
+        "left": 406,
+        "top": 419
+      },
+      "body": {
+        "sourceTop": 404,
+        "sourceHeight": 1293,
+        "sourceWidth": 651,
+        "sourceBase": 1696,
+        "sourceLeft": 25,
+        "sourceRight": 676,
+        "outputWidth": 489.8,
+        "outputBase": 1562,
+        "cx": 654.3333333333333,
+        "sourceShoulder": 755,
+        "outputShoulder": 854.047619047619,
+        "outputHeight": 707.952380952381
+      },
+      "cap": {
+        "cx": 1028.2666666666667,
+        "base": 1558.2380952380952
+      },
+      "shadows": [
+        {
+          "cx": 654.3333333333333,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1028.2666666666667,
+          "cy": 1564.2380952380952,
+          "sx": 72.4542857142857,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2174540,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-frosted-18-415-perfumespray",
+      "alt": "46 ml Frosted Diva Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-matte-gold-spray-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 406,
+          "right": 1151,
+          "top": 419,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDivaFrst46RdcrShnGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDivaFrst46RdcrShnGl.62fa5072dc09.png",
+      "assetSha256": "62fa5072dc099609ed1ec83fcf9689abcdd515fd02506a7c47a4165b19b0870c",
+      "priorUrl": "/images/catalog/empty-heroes/GBDivaFrst46RdcrShnGl.5582979e80fb.webp",
+      "priorFraming": {
+        "scale": 0.5044891058135282,
+        "translateXPercent": 30.829413979085928,
+        "translateYPercent": 46.81898436966375
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /26. Diva 46ml frosted/1. Diva Frst 46ml PSD/1. GBDivaFrst46RdcrShnGl.psd",
+      "sourcePsdSha256": "c2c550d0164d27bd1886d00f3382d54bc7f3708b8316c475ee6b0b898f6249ae",
+      "sourceAssemblySha256": "f0c605817a18637b6e8ee90836bc56f4557954df44a0f147588f89757dc72864",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 660,
+          "height": 1103,
+          "left": 198,
+          "top": 368,
+          "name": "Layer 3",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/21-layer-2.png",
+          "sha256": "cc46872110d5946ca7ccd285e36b02d8236f907878c907c2725cab3eb0443c2e"
+        },
+        {
+          "index": 3,
+          "width": 290,
+          "height": 402,
+          "left": 375,
+          "top": 61,
+          "name": "Layer 5",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/21-layer-3.png",
+          "sha256": "659c741e620218fe40a24254b4e4dd4778c57c1907aea18588b0fdbd5abfb7fe"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.003534732889571599,
+        "maxChannelError": 2,
+        "changedChannels": 16421
+      },
+      "transform": {
+        "uniformScale": 0.7523809523809524,
+        "resizeWidth": 790,
+        "resizeHeight": 1120,
+        "crop": {
+          "left": 148,
+          "top": 141,
+          "width": 499,
+          "height": 969
+        },
+        "left": 531,
+        "top": 597
+      },
+      "body": {
+        "sourceTop": 368,
+        "sourceHeight": 1103,
+        "sourceWidth": 651,
+        "sourceBase": 1470,
+        "sourceLeft": 203,
+        "sourceRight": 854,
+        "outputWidth": 489.8,
+        "outputBase": 1562,
+        "cx": 780.2571428571429,
+        "sourceShoulder": 529,
+        "outputShoulder": 854.0095238095238,
+        "outputHeight": 707.9904761904762
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 780.2571428571429,
+          "cy": 1569,
+          "sx": 98,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2319674,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 46,
+      "bodyWidthMm": 49,
+      "displayPixelsPerMm": 10,
+      "pose": "capped",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-46ml-frosted-18-415-reducer",
+      "alt": "46 ml Frosted Diva Reducer Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-46-ml-frosted-glass-bottle-reducer-shiny-gold-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 532,
+          "right": 1028,
+          "top": 598,
+          "bottom": 1564
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva100AnSpGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva100AnSpGl.f4bddea9bca1.png",
+      "assetSha256": "f4bddea9bca1b59c8507ee8d205bc6c5a91e86b8b210d6aa361a8b45184c6b8f",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva100AnSpGl.0bf62fc01418.webp",
+      "priorFraming": {
+        "scale": 0.5682352941176471,
+        "translateXPercent": 20.735882352941175,
+        "translateYPercent": 38.481283422459896
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/37. GBDiva100AnSpGl.psd",
+      "sourcePsdSha256": "7e0243949f9fefa92b86467cf2440560d779493ba5d8d7aa2d1d5089edff2283",
+      "sourceAssemblySha256": "4fc015fe76cde220e101b2963507a53bde4c149c3455518dd12deb55226d29bb",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 852,
+          "height": 1731,
+          "left": 364,
+          "top": 315,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/22-layer-2.png",
+          "sha256": "6a46e4baac0e6d384f7eac3b8baf73b40ab83f3cf7526b874c75486a8312f8d3"
+        },
+        {
+          "index": 3,
+          "width": 891,
+          "height": 596,
+          "left": 47,
+          "top": 159,
+          "name": "Layer 7",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/22-layer-3.png",
+          "sha256": "599a98f03ab49f4101862557e665bea7c3c9a279c291bca7e5c1e24d03d3ae34"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004386734693877551,
+        "maxChannelError": 2,
+        "changedChannels": 38252
+      },
+      "transform": {
+        "uniformScale": 0.7607142857142857,
+        "resizeWidth": 1065,
+        "resizeHeight": 1597,
+        "crop": {
+          "left": 35,
+          "top": 122,
+          "width": 892,
+          "height": 1435
+        },
+        "left": 334,
+        "top": 132
+      },
+      "body": {
+        "sourceTop": 339,
+        "sourceHeight": 1702,
+        "sourceWidth": 841,
+        "sourceBase": 2040,
+        "sourceLeft": 373,
+        "sourceRight": 1214,
+        "outputWidth": 639.7607142857142,
+        "outputBase": 1562,
+        "cx": 902.2464285714285,
+        "sourceShoulder": 817,
+        "outputShoulder": 631.5035714285714,
+        "outputHeight": 930.4964285714286
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 902.2464285714285,
+          "cy": 1569,
+          "sx": 128,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 1957116,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 100,
+      "bodyWidthMm": 64,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-100ml-clear-18-415-antiquespray",
+      "alt": "100 ml Clear Diva Vintage Bulb Spray Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-100-ml-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 335,
+          "right": 1224,
+          "top": 132,
+          "bottom": 1565
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva100AnSpTslGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva100AnSpTslGl.a82d585d7e11.png",
+      "assetSha256": "a82d585d7e11a9ef323033f2e6818d2f1bf2aaf84b0ac32ec500198c89584b02",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva100AnSpTslGl.c7b416669d0e.webp",
+      "priorFraming": {
+        "scale": 0.69,
+        "translateXPercent": 4,
+        "translateYPercent": 33.290909090909096
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/50. GBDiva100AnSpTslGl.psd",
+      "sourcePsdSha256": "a614e3009ba157ebeb1f7d95a95fdbf04f4e924548f81ebc38a3b14459709a8a",
+      "sourceAssemblySha256": "7c0a564de3528f1365e4139621d4adf56508c4041a719c4a0cdd466f3dc35884",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 852,
+          "height": 1731,
+          "left": 1067,
+          "top": 315,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/23-layer-2.png",
+          "sha256": "9c8b5b3f433666d6b8bede918a22369a73c2805585e1d0e8ddc313a9a7a0934f"
+        },
+        {
+          "index": 3,
+          "width": 1378,
+          "height": 1629,
+          "left": 42,
+          "top": 323,
+          "name": "Layer 22",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/23-layer-3.png",
+          "sha256": "6750c7bf4a15c108309e6c711f57a8eb7cbef12b222077fc44927e7ab32c1671"
+        },
+        {
+          "index": 4,
+          "width": 363,
+          "height": 544,
+          "left": 1288,
+          "top": 211,
+          "name": "Layer 23",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/23-layer-4.png",
+          "sha256": "f90eff2d25deb9bf695072ab304a455d727b24640b83f1cb4c7b2bc8ab032eb7"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.006287388362860061,
+        "maxChannelError": 2,
+        "changedChannels": 80972
+      },
+      "transform": {
+        "uniformScale": 0.7610062893081762,
+        "resizeWidth": 1573,
+        "resizeHeight": 1598,
+        "crop": {
+          "left": 29,
+          "top": 157,
+          "width": 1433,
+          "height": 1400
+        },
+        "left": 64,
+        "top": 167
+      },
+      "body": {
+        "sourceTop": 339,
+        "sourceHeight": 1702,
+        "sourceWidth": 841,
+        "sourceBase": 2040,
+        "sourceLeft": 1076,
+        "sourceRight": 1917,
+        "outputWidth": 640.0062893081762,
+        "outputBase": 1562,
+        "cx": 1173.4654088050315,
+        "sourceShoulder": 817,
+        "outputShoulder": 631.7421383647799,
+        "outputHeight": 930.2578616352201
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 1173.4654088050315,
+          "cy": 1569,
+          "sx": 91.38364779874212,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 1782799,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 100,
+      "bodyWidthMm": 64,
+      "displayPixelsPerMm": 10,
+      "pose": "assembled",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-100ml-clear-18-415-antiquespray-tassel",
+      "alt": "100 ml Clear Diva Vintage Bulb Spray Bottle with Tassel",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-100-ml-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 67,
+          "right": 1495,
+          "top": 168,
+          "bottom": 1566
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "LBDiva100LtnMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/LBDiva100LtnMtGl.9d7aa085ae09.png",
+      "assetSha256": "9d7aa085ae0932de64aa1a6d85cb0cf4b93bb1cb7f02fa21daeb5e3506d274e9",
+      "priorUrl": "/images/catalog/empty-heroes/LBDiva100LtnMtGl.cd3bbeb66d2f.webp",
+      "priorFraming": {
+        "scale": 0.5497560975609757,
+        "translateXPercent": 26.81861788617886,
+        "translateYPercent": 40.52239467849224
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/14. LBDiva100LtnMtGl.psd",
+      "sourcePsdSha256": "5a70f9f17551eadc9e3e3aaa9f5857be4b14cd426aa79ce2ff2d82df54a61730",
+      "sourceAssemblySha256": "06d85c1659d915029dad28345a5b38df51598814f0c691701ec2290de06973ce",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 852,
+          "height": 1731,
+          "left": 46,
+          "top": 235,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/25-layer-2.png",
+          "sha256": "5b65ada3c5d3dcbb59641bd6184c7a48e887968ac5bfe680840182284c0562af"
+        },
+        {
+          "index": 3,
+          "width": 311,
+          "height": 541,
+          "left": 315,
+          "top": 138,
+          "name": "Layer 14",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/25-layer-3.png",
+          "sha256": "a689fabc21589b7edb95b54859f77f22eaa228df9582883c058853e79d22f40a"
+        },
+        {
+          "index": 4,
+          "width": 331,
+          "height": 590,
+          "left": 924,
+          "top": 1343,
+          "name": "Layer 15",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/25-layer-4.png",
+          "sha256": "6cacd918d418e13f0ae3c935570e9f4cb3d6285e572ab4aa11f237b3554ec838"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004232763935734233,
+        "maxChannelError": 2,
+        "changedChannels": 34665
+      },
+      "transform": {
+        "uniformScale": 0.7608530083777608,
+        "resizeWidth": 999,
+        "resizeHeight": 1598,
+        "crop": {
+          "left": 38,
+          "top": 105,
+          "width": 920,
+          "height": 1391
+        },
+        "left": 320,
+        "top": 176
+      },
+      "body": {
+        "sourceTop": 259,
+        "sourceHeight": 1702,
+        "sourceWidth": 841,
+        "sourceBase": 1960,
+        "sourceLeft": 55,
+        "sourceRight": 896,
+        "outputWidth": 639.8773800456969,
+        "outputBase": 1562,
+        "cx": 643.4051789794364,
+        "sourceShoulder": 737,
+        "outputShoulder": 631.7486671744098,
+        "outputHeight": 930.2513328255902
+      },
+      "cap": {
+        "cx": 1112.0906321401371,
+        "base": 1536.891850723534
+      },
+      "shadows": [
+        {
+          "cx": 643.4051789794364,
+          "cy": 1569,
+          "sx": 128,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1112.0906321401371,
+          "cy": 1542.891850723534,
+          "sx": 73.72665651180502,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 1951382,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 100,
+      "bodyWidthMm": 64,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-100ml-clear-18-415-lotionpump",
+      "alt": "100 ml Clear Diva Lotion Pump Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-100-ml-glass-bottle-matte-gold-lotion-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 321,
+          "right": 1237,
+          "top": 176,
+          "bottom": 1566
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva100SpryMtGl",
+      "backgroundRemnantCorrection": null,
+      "url": "/images/catalog/bone-review/GBDiva100SpryMtGl.4e08bd8241f6.png",
+      "assetSha256": "4e08bd8241f6627741d2d1b6d9435f4d2804352c92bcc77ed56c9aebe93559a9",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva100SpryMtGl.13d58791745c.webp",
+      "priorFraming": {
+        "scale": 0.5542622950819672,
+        "translateXPercent": 28.014262295081966,
+        "translateYPercent": 40.78047690014904
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/13. GBDiva100SpryMtGl.psd",
+      "sourcePsdSha256": "af23b9e289ce3428a314fd21060836bd57f856b4fc6cec06584040fde8f1c922",
+      "sourceAssemblySha256": "21c177096b9a4f0a2cc67f34766dc421c685695e355e1e3b5e3575f4852b0ea3",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 852,
+          "height": 1731,
+          "left": 52,
+          "top": 235,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/27-layer-2.png",
+          "sha256": "d047056396b83c045d56a760a6215237c75b257347fad7d08b50b65b66439f29"
+        },
+        {
+          "index": 3,
+          "width": 311,
+          "height": 541,
+          "left": 325,
+          "top": 142,
+          "name": "Layer 13",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/27-layer-3.png",
+          "sha256": "46fb92e484f10c7a125cb35f690ea5f363198239c21a158b6a53846cee995b5c"
+        },
+        {
+          "index": 4,
+          "width": 331,
+          "height": 590,
+          "left": 924,
+          "top": 1343,
+          "name": "Layer 14",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/27-layer-4.png",
+          "sha256": "50fff54b0bf318cfc52d20c2a5cccde365bb691a6712952a65c72e1ebe80f43a"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004211487082774212,
+        "maxChannelError": 2,
+        "changedChannels": 34474
+      },
+      "transform": {
+        "uniformScale": 0.7608530083777608,
+        "resizeWidth": 999,
+        "resizeHeight": 1598,
+        "crop": {
+          "left": 42,
+          "top": 108,
+          "width": 916,
+          "height": 1388
+        },
+        "left": 322,
+        "top": 179
+      },
+      "body": {
+        "sourceTop": 259,
+        "sourceHeight": 1702,
+        "sourceWidth": 841,
+        "sourceBase": 1960,
+        "sourceLeft": 61,
+        "sourceRight": 902,
+        "outputWidth": 639.8773800456969,
+        "outputBase": 1562,
+        "cx": 645.970297029703,
+        "sourceShoulder": 737,
+        "outputShoulder": 631.7486671744098,
+        "outputHeight": 930.2513328255902
+      },
+      "cap": {
+        "cx": 1110.0906321401371,
+        "base": 1536.891850723534
+      },
+      "shadows": [
+        {
+          "cx": 645.970297029703,
+          "cy": 1569,
+          "sx": 128,
+          "sy": 12,
+          "strength": 0.11
+        },
+        {
+          "cx": 1110.0906321401371,
+          "cy": 1542.891850723534,
+          "sx": 73.72665651180502,
+          "sy": 10,
+          "strength": 0.1
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 1951843,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 100,
+      "bodyWidthMm": 64,
+      "displayPixelsPerMm": 10,
+      "pose": "cap beside",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-100ml-clear-18-415-perfumespray",
+      "alt": "100 ml Clear Diva Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-100-ml-glass-bottle-matte-gold-spray-pump-and-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 322,
+          "right": 1235,
+          "top": 179,
+          "bottom": 1566
+        }
+      },
+      "integrated": true
+    },
+    {
+      "sku": "GBDiva100RdcrShnGl",
+      "backgroundRemnantCorrection": {
+        "sku": "GBDiva100RdcrShnGl",
+        "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/1. GBDiva100RdcrShnGl.psd",
+        "sourcePsdSha256": "11679a409b0e719bac4915878d176c5541a88490972b3e88bf9f1672f2f95e39",
+        "originalAssemblySha256": "96584754048f5f2d915767b5e0b699297898e28fa04550e35af026ea06015f04",
+        "correctedAssemblySha256": "387887d677deda64aa037ff1f5f690ac692fe24e052fac990fe868ddfa439db6",
+        "capLayerSha256": "ce30c8c012a881ba07e33e3d58983ce256e3a24c1c8d6acf7506d30cb4d62a5d",
+        "sourceRoi": {
+          "left": 0,
+          "top": 0,
+          "right": 1313,
+          "bottom": 190
+        },
+        "removedBackgroundAlphaPixels": 25579,
+        "protectedBottlePixelsChanged": 0,
+        "method": "Cleared stray background alpha in the bottle layer above source y=190. Re-composited the complete original cap layer at its original offset. No bottle or cap scaling, warping or repainting.",
+        "legacyReference": "https://www.bestbottles.com/images/store/capped/GBDiva100RdcrShnGl.gif",
+        "legacyReferenceSha256": "469cb28893e9f325cf278014d04f7e463eb9461e6b1fc9cbfcc7b4e2601c4508",
+        "output": "output/catalog-hero-refresh-2026-09-06/diva-family/identity-audit/GBDiva100RdcrShnGl-corrected-assembly.png"
+      },
+      "url": "/images/catalog/bone-review/GBDiva100RdcrShnGl.a484a278a8e4.png",
+      "assetSha256": "a484a278a8e48fa68edb81f9f3d1d031c17f5e01c37b0d1c47bab3e64a496363",
+      "priorUrl": "/images/catalog/empty-heroes/GBDiva100RdcrShnGl.a2cb5dbde8b7.webp",
+      "priorFraming": {
+        "scale": 0.4795744680851064,
+        "translateXPercent": 31.85609929078014,
+        "translateYPercent": 46.53036750483559
+      },
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": -0.02564102564102882
+      },
+      "sourcePsd": "/Users/jordanrichter/Projects/Clients/Nemat-International/BB-PSD-Files-Master/2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/1. GBDiva100RdcrShnGl.psd",
+      "sourcePsdSha256": "11679a409b0e719bac4915878d176c5541a88490972b3e88bf9f1672f2f95e39",
+      "sourceAssemblySha256": "387887d677deda64aa037ff1f5f690ac692fe24e052fac990fe868ddfa439db6",
+      "originalAssembliesManifest": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/original-assemblies.json",
+      "sourceLayers": [
+        {
+          "index": 2,
+          "width": 852,
+          "height": 1731,
+          "left": 231,
+          "top": 0,
+          "name": "Layer 1",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/28-layer-2.png",
+          "sha256": "5fcb27c2a2e55e4ebf46dbdfa64a3d908f0886ae522ac6662d4cd4b97dbfe5b0"
+        },
+        {
+          "index": 3,
+          "width": 295,
+          "height": 403,
+          "left": 509,
+          "top": 32,
+          "name": "Layer 4",
+          "file": "output/catalog-hero-refresh-2026-09-06/diva-family/psd-audit/28-layer-3.png",
+          "sha256": "ce30c8c012a881ba07e33e3d58983ce256e3a24c1c8d6acf7506d30cb4d62a5d"
+        }
+      ],
+      "reconstruction": {
+        "meanChannelError": 0.004205998621840206,
+        "maxChannelError": 2,
+        "changedChannels": 28657
+      },
+      "transform": {
+        "uniformScale": 0.7608530083777608,
+        "resizeWidth": 999,
+        "resizeHeight": 1331,
+        "crop": {
+          "left": 178,
+          "top": 122,
+          "width": 648,
+          "height": 1195
+        },
+        "left": 456,
+        "top": 372
+      },
+      "body": {
+        "sourceTop": 24,
+        "sourceHeight": 1702,
+        "sourceWidth": 841,
+        "sourceBase": 1725,
+        "sourceLeft": 240,
+        "sourceRight": 1081,
+        "outputWidth": 639.8773800456969,
+        "outputBase": 1562,
+        "cx": 780.1629855293222,
+        "sourceShoulder": 502,
+        "outputShoulder": 631.9482102056359,
+        "outputHeight": 930.0517897943641
+      },
+      "cap": {
+        "cx": null,
+        "base": null
+      },
+      "shadows": [
+        {
+          "cx": 780.1629855293222,
+          "cy": 1569,
+          "sx": 128,
+          "sy": 12,
+          "strength": 0.11
+        }
+      ],
+      "nozzleCorrection": null,
+      "backgroundPixels": 2109502,
+      "backgroundFailures": 0,
+      "method": "Exact PSD product layers at original offsets, uniformly scaled as a complete assembly onto one exact bone canvas. Separate compact Gaussian contact shadows. No generated scene rectangles or threshold product masks.",
+      "capacityMl": 100,
+      "bodyWidthMm": 64,
+      "displayPixelsPerMm": 10,
+      "pose": "capped",
+      "scaleException": null,
+      "status": "PSD-verified-visually-approved",
+      "hold": null,
+      "groupSlug": "diva-100ml-clear-18-415-reducer",
+      "alt": "100 ml Clear Diva Reducer Bottle",
+      "liveProductUrl": "https://www.bestbottles.com/product/diva-design-100-ml-glass-bottle-reducer-shiny-gold-cap",
+      "liveIdentityVerified": true,
+      "sourcePsdVerified": true,
+      "qa": {
+        "bounds": {
+          "left": 456,
+          "right": 1102,
+          "top": 373,
+          "bottom": 1566
+        }
+      },
+      "integrated": true
+    }
+  ],
+  "integratedCount": 21,
+  "holdCount": 0,
+  "visualApproved": true,
+  "visualApprovalPending": false,
+  "scaleRule": {
+    "bodyPixelsPerPublishedWidthMm": 10,
+    "widthTargets": {
+      "30": 430,
+      "46": 490,
+      "100": 640
+    },
+    "qualification": "Common visual width scale using live published widths, not calibrated physical image measurement. Complete original assemblies preserved."
+  },
+  "commerceReview": {
+    "status": "data-reconciled-guard-deployment-pending",
+    "report": "docs/reviews/diva-checkout-reconciliation-2026-09-06.json",
+    "qualification": "All six exact checkout mappings and original photos verified in Shopify checkout. This release includes the saved-cart identity guard; validate it on preview and after deployment."
+  },
+  "approvedAt": "2026-09-06T21:05:47.845648+00:00",
+  "approvalEvidence": "Jordan: I approve all Diva looks good",
+  "localCatalogIntegrated": true,
+  "family": "Diva",
+  "baselinePercent": 91,
+  "sourceRevisionApprovalPending": 0,
+  "checkoutSafeguardPr": "https://github.com/asalastudio/best-bottles-website/pull/104",
+  "releasePr": "https://github.com/asalastudio/best-bottles-website/pull/104"
+}
