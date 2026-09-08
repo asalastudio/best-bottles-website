@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import MobileFamilyCatalog from "@/components/catalog/MobileFamilyCatalog";
+import mobileStyles from "@/components/catalog/MobileFamilyCatalog.module.css";
 import Navbar from "@/components/Navbar";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FinderNavigationMemory from "@/components/catalog/FinderNavigationMemory";
@@ -385,8 +387,16 @@ export default function FamilyPageClient({
 
     return (
         <>
-            <Navbar variant="catalog" />
-            <main className="min-h-screen bg-warm-white pb-20 pt-[112px] text-obsidian xl:pt-[120px]">
+            <Navbar variant="catalog" headerClassName={mobileStyles.mobileHeader} />
+            <main className={`${mobileStyles.page} min-h-screen bg-warm-white pb-20 pt-[112px] text-obsidian xl:pt-[120px]`}>
+                <MobileFamilyCatalog
+                    family={family} families={families} count={activeResult.totalCount}
+                    finderUrl={exactFinderUrl} filters={filters} facets={baseCatalog.facets}
+                    onFilters={navigateWithFilters} onProductOpen={openFinderResult}
+                    updating={isUpdating} error={requestError} story={story}
+                    hero={heroImageUrl} heroAlt={heroAlt} onHelp={openGraceFromFinder}
+                />
+                <div className={mobileStyles.desktop} data-desktop-family-catalog>
                 <Breadcrumbs steps={[{ label: "Catalog", href: "/catalog" }, { label: family }]} />
                 <section className="mx-auto max-w-[1440px] px-5 pb-10 sm:px-6 lg:px-10 lg:pb-14">
                     <div className="grid border-y border-champagne/70 bg-bone lg:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)]">
@@ -474,6 +484,7 @@ export default function FamilyPageClient({
                             />
                         )}
                     />
+                </div>
                 </div>
             </main>
             <FinderNavigationMemory

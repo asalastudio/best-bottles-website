@@ -142,7 +142,7 @@ const rollOnResult = result({
 });
 
 function buttonWithText(container: HTMLElement, text: string): HTMLButtonElement {
-    const button = [...container.querySelectorAll("button")]
+    const button = [...container.querySelectorAll("[data-desktop-family-catalog] button")]
         .find((candidate) => candidate.textContent?.trim().startsWith(text));
     if (!(button instanceof HTMLButtonElement)) throw new Error(`Missing button: ${text}`);
     return button;
@@ -366,7 +366,7 @@ describe("Cylinder family-first client", () => {
             editorial: null,
         }));
         const parsed = new DOMParser().parseFromString(html, "text/html");
-        const buildLink = [...parsed.querySelectorAll("main a")]
+        const buildLink = [...parsed.querySelectorAll("[data-desktop-family-catalog] a")]
             .find((link) => link.textContent?.trim() === "Build a Bottle");
 
         expect(buildLink?.getAttribute("href")).toBe("/matrix?family=Cylinder&from=finder");

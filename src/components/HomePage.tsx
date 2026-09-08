@@ -740,12 +740,12 @@ function DesignFamilies({ designFamilyCards }: { designFamilyCards?: HomepageDat
                                     </h3>
                                     {family.layout === "feature" && (
                                         <>
-                                            <p className="mt-3 max-w-[310px] text-sm leading-relaxed text-white/86">{family.description}</p>
-                                            <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75">
+                                            <p className="hidden lg:block mt-3 max-w-[310px] text-sm leading-relaxed text-white/86">{family.description}</p>
+                                            <p className="hidden lg:block mt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75">
                                                 {family.applications?.join(" · ")}
                                             </p>
                                             <span className="mt-5 inline-flex items-center gap-2 border border-white/65 bg-obsidian px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-colors group-hover:bg-white group-hover:text-obsidian">
-                                                Explore Cylinder <ArrowRight size={13} />
+                                                <span className="lg:hidden">Shop {family.title}</span><span className="hidden lg:inline">Explore Cylinder</span> <ArrowRight size={13} />
                                             </span>
                                         </>
                                     )}

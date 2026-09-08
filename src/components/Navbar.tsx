@@ -19,6 +19,7 @@ interface NavbarProps {
     initialSearchValue?: string;
     hideMobileSearch?: boolean;
     builderMobile?: boolean;
+    headerClassName?: string;
     /** @deprecated cart is now managed internally */
     onCartOpen?: () => void;
 }
@@ -97,7 +98,7 @@ const SEARCH_SUGGESTIONS = [
     { label: "Cream Jar", helper: "Category", query: "cream jar" },
 ];
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
     const router = useRouter();
     // Grace trigger moved to the floating launcher; useGrace no longer needed here.
     const { itemCount, isCartHydrated } = useCart();
@@ -338,7 +339,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
             <header
                 data-site-header=""
                 data-builder-header={builderMobile || undefined}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
+                className={`${headerClassName} fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
                     } ${variant === "catalog" ? "border-b border-champagne" : ""}`}
                 style={{ right: "var(--grace-content-inset, 0px)" }}
             >
@@ -508,7 +509,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
 
                     {/* Row 2: full-width search bar (mobile only) */}
                     {!hideMobileSearch && (
-                    <div className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
+                    <div data-mobile-search="" className="flex xl:hidden pb-3 border-t border-champagne/40 pt-2">
                         <form
                             onSubmit={handleSearchSubmit}
                             className="group/search relative flex flex-1 items-center border border-champagne rounded-xl px-3 py-2 bg-white/60 focus-within:border-muted-gold focus-within:ring-2 focus-within:ring-muted-gold/15 transition-all duration-200 space-x-2"

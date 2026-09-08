@@ -35,7 +35,8 @@ jobs:
         run: npx vitest run
 
       - name: Production build
-        run: npm run build
+        # Match the Webpack compiler used by scripts/vercel-build.sh.
+        run: npm run build -- --webpack
         env:
           # Build with placeholder public config so no live service is required.
           # Not VERCEL_ENV=production, so src/lib/seo.ts does not throw on the
