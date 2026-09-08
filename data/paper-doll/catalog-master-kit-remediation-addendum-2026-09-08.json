@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T20:58:55.992583+00:00",
+  "generatedAt": "2026-09-08T21:08:41.532488+00:00",
   "publicationStatus": "held for reconciliation; no publication performed",
   "rows": [
     {
@@ -1831,6 +1831,196 @@
       "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/30. GBTulipAmb5SpryCuMatt.psd",
       "sourceSha256": "5834ef97fbb1d34fb5e16d57de88b84e3dfa39e2e3bf7e85ca4549e58d780591",
       "plateSha256": "3202d114928cf796cee5814199e150eca700365194240b8e0f98aa455e0bf058"
+    },
+    {
+      "websiteSku": "GBFlair15BlkSht",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 9.5737, 'tailOver40': 0.054354}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/1. GBFlair15BlkSht.psd",
+      "sourceSha256": "31fa82107b8d489de66a86c39d465109b9ad0f9216bb713bf70b7885a71f1a12",
+      "plateSha256": "4c7253ca2038b3a5a014ae07ebdd6305ba83afc7e162401efb269a363ce22d07"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollBlkSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 24.2919, 'tailOver40': 0.108732}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/24. GBFlair15MtlRollBlkSh.psd",
+      "sourceSha256": "5afb4d2b7b40cde32384425179d7d6a81a6e74db88a45b935f53537cc7d35dad",
+      "plateSha256": "a19775e325eeacff547bf9f585e47bc77636234ea0952bbb7585fc1ba72d13ab"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollCuMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "roller is not independently recoverable",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/22. GBFlair15MtlRollCuMatt.psd",
+      "sourceSha256": "dc654042262eb3f75dcdb5d5a928104ec1eb6eededb30730075094f56a5802e9",
+      "plateSha256": "3dfb631e2dc2a26408e8943dc1a37af7a07fe0244edd34817d905ae4282fb799"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollGlMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 13.2537, 'tailOver40': 0.132775}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/16. GBFlair15MtlRollGlMatt.psd",
+      "sourceSha256": "40fbd0563be6417be9829f2b08db7fbd8a27149a2265ca79a6f82168fc06ccff",
+      "plateSha256": "ec2fc861c5a68bf6a2d4aff8929cf04aac27e7da379bc28878a179492d41e24a"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollGlSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 16.7039, 'tailOver40': 0.127862}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/18. GBFlair15MtlRollGlSh.psd",
+      "sourceSha256": "93a14437c4de153ecbfb85f35529ef41b15bf85493acdaeb39b9d7dc1625263b",
+      "plateSha256": "f423f25cbe1c62af9d7de95189df288d73ade1481c20bdf332d95a319f28e0a0"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollPinkDot",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 8.2317, 'tailOver40': 0.068023}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/12. GBFlair15MtlRollPinkDot.psd",
+      "sourceSha256": "c07446f312c058b5c02956977677a10ccb67d5e100e90662c1f41316071663d3",
+      "plateSha256": "834ff72177c23ce762bdac23cefb6f07788ace419a3b79d8975d09f2950bfba0"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollSlDot",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 7.5392, 'tailOver40': 0.055944}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/10. GBFlair15MtlRollSlDot.psd",
+      "sourceSha256": "c44c0ca4e37985a656def07c99997e6c421206a804226f79d29c66897fe93cce",
+      "plateSha256": "a479156efe10db99dcdd909f31307a43dd567403c327b6a972bb407181bb6600"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollSlMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 8.0972, 'tailOver40': 0.082239}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/14. GBFlair15MtlRollSlMatt.psd",
+      "sourceSha256": "6e195909acb43e85c4f9abf3e76faf0242760ee99c6024a1bc836184a2ea7666",
+      "plateSha256": "e333a47658d7aed12f6802f5ec6270c876cc0ad8f688a8f875744d91284b61f3"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollSlSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 15.0616, 'tailOver40': 0.060489}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/20. GBFlair15MtlRollSlSh.psd",
+      "sourceSha256": "bbaddec97a93dfec0c5fb2901c0d5adbcb902cb63b6b8699c11d747cffbc26a1",
+      "plateSha256": "9d130f6348c0e8f559e61b6cfc8cb55281219634629ed38a4e9c3784400e991d"
+    },
+    {
+      "websiteSku": "GBFlair15SpryBluMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 15.8708, 'tailOver40': 0.164424}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/5. GBFlair15SpryBluMatt.psd",
+      "sourceSha256": "ba30d7e91f39155fecb4b516db1df55dd83d842a16f2863714403a798203a65d",
+      "plateSha256": "392b19daedebe09b3384e690739270626c558421613a137b823043b3a3696d1e"
+    },
+    {
+      "websiteSku": "GBFlair15SpryCuMatt",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.9425, 'semiTransparentPixels': 3007, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/30. GBFlair15SpryCuMatt.psd",
+      "sourceSha256": "04aacd28df263e59dfd9d1f4f2382f6db63873e5276260350c37b00c8a02205a",
+      "plateSha256": "36f74e6647cf9e3dc62ba66f1a48c425c6d56d601e92f6be42c6abba34d56a75"
+    },
+    {
+      "websiteSku": "GBFlair15SprySlSh",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 17.4651, 'tailOver40': 0.074924}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/9. GBFlair15SprySlSh.psd",
+      "sourceSha256": "69360d1c97ce594586f06f90c1abc24481529816e4b3aa1f8dfa5180c8979a03",
+      "plateSha256": "e512421d72ad526a3e2222390007a53015f64c16a38b6b9bfc82f0371bed295e"
+    },
+    {
+      "websiteSku": "GBFlair15WhtSht",
+      "family": "Flair",
+      "familyId": "flair-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 4.2659, 'tailOver40': 0.027778}",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/2. GBFlair15WhtSht.psd",
+      "sourceSha256": "c9211e1bed373e48e08254512ca95db3dcc5289af2328bdfb78488e07323e69c",
+      "plateSha256": "6d8beca8abf2a803b93ed9d616dd5cecfa3a9f12b63dbd117f6a64ca9d8799ea"
+    },
+    {
+      "websiteSku": "GBMtlCylGl",
+      "family": "Royal",
+      "familyId": "royal-14ml-clear-11mm",
+      "status": "held_with_reason",
+      "reason": "assembled source exposes no independent component layer",
+      "sourcePath": "18. Perfume Glass Bottles with Metal Decoration/GBMtlCylGl.psd",
+      "sourceSha256": "1a851fa33d3f5d4962e243ecbaa9a3e7e6e3c42f101cf4c81144a526c8f01e58",
+      "plateSha256": "9c778b130b212cf2e3fe2d818eea909506272028faf6d89a822450597cb0c263"
+    },
+    {
+      "websiteSku": "GBRoyal13BlkSht",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 22.4809, 'tailOver40': 0.12949}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/1. GBRoyal13BlkSht.psd",
+      "sourceSha256": "4d9cfb9c1fa2395d53229f2d177aae0f12211e284f5df888bcb1940c9a67539a",
+      "plateSha256": "4e16c918751b9af64d617a4086ea2f3fb20e857a371d838db95138cb50f1b830"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollBlkDot",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: roller alpha gate failed: {'transparentFraction': 0.975, 'semiTransparentPixels': 1386, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/26. GBRoyal13MtlRollBlkDot.psd",
+      "sourceSha256": "ebe69107d038a0d24b40e11042fbbbe06be64e2fda6715ceb2b86b678be235aa",
+      "plateSha256": "7a3d64974958f5bf5beddb264e16af3218af497a18923e9087e759f81bf10ca5"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollSlSh",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 2.8796, 'tailOver40': 0.013249}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/20. GBRoyal13MtlRollSlSh.psd",
+      "sourceSha256": "25bfb96f4b4dbe9af9544edacb04db9e36bca5b7c42e396958dcb97ee6d70b0c",
+      "plateSha256": "85df0c50c4a75b1ced082afaa783cc4e0b919618db969e96ac8609cee4437354"
+    },
+    {
+      "websiteSku": "GBRoyal13SpryBlkSh",
+      "family": "Royal",
+      "familyId": "royal-13ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 22.5608, 'tailOver40': 0.130617}",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/4. GBRoyal13SpryBlkSh.psd",
+      "sourceSha256": "fc8ed67e62f1a131cb65d6fc2807cadcb00ac9e4c0cd5d4f7b668526014a459f",
+      "plateSha256": "d384a38ffba2f6f9159232edf06ad5f400ceae9e214a4fe08667529a7d53840d"
+    },
+    {
+      "websiteSku": "GBSqr15WhtSht",
+      "family": "Square",
+      "familyId": "square-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 4.8479, 'tailOver40': 0.028527}",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/2. GBSqr15WhtSht.psd",
+      "sourceSha256": "6b91e8254dd01a88456988521beadb9df48d45e7e4052166c42a93ccfc1a63bb",
+      "plateSha256": "f1c0d18e3a74c902d3a03d47dd1b98b391614b56a11f8f11587751db6791ecaa"
     }
   ]
 }

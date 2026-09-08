@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T20:58:55.992583+00:00",
+  "generatedAt": "2026-09-08T21:08:41.532488+00:00",
   "publicationStatus": "visual approval required; no publication performed",
   "rows": [
     {
@@ -4902,6 +4902,1834 @@
           "ok": true,
           "mean": 1.2024,
           "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15Gl",
+      "status": "candidate",
+      "plateSha256": "2dfe281a57941f230ac916fb062227e9406cdff60ca5150806dfd05044deba80",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/28. GBFlair15Gl.psd",
+      "sourceSha256": "5ba95b90d7d19c4afde3638a604cb66977d31ca6c6e29c81bd3054d2b8966f60",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7459,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9561,
+            "semiTransparentPixels": 1650,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.023,
+          "tailOver40": 7e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15MtlRollBlkDot",
+      "status": "candidate",
+      "plateSha256": "cda40b3d0bdc7af4187e2d9b246d9239cfe66e4c6d4bcc459482113555817457",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/26. GBFlair15MtlRollBlkDot.psd",
+      "sourceSha256": "e5520074f5b48296450a2647d30a36c437f8c6384685325c80062e7605810e91",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7494,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9892,
+            "semiTransparentPixels": 1408,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.6644,
+            "semiTransparentPixels": 6930,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9093,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15Sl",
+      "status": "candidate",
+      "plateSha256": "fa7ca60d469c19e5e44b683d20d8a59041c8ba6736b4539e5c66f6e2a47c347e",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/29. GBFlair15Sl.psd",
+      "sourceSha256": "3095a6be1249f240e159ed74ad2eca1fc0782a353aca13d06770119cc19368be",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7494,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.956,
+            "semiTransparentPixels": 1820,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9472,
+          "tailOver40": 3e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15SpryBlkMatt",
+      "status": "candidate",
+      "plateSha256": "e8be56611ef516d2c980e2816ea9a460570a6a9cab87047fd1fb43c586c53006",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/3. GBFlair15SpryBlkMatt.psd",
+      "sourceSha256": "5ca2d92c35bf9376dd7b0ff78ce0964a5d5488526bc617a33c8df543076646df",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7481,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9875,
+            "semiTransparentPixels": 3973,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9434,
+            "semiTransparentPixels": 2989,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9551,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15SpryBlkSh",
+      "status": "candidate",
+      "plateSha256": "72afc2df810c133cbbc6d60bd8ed11db4f528be5a898c61e5ac7fed355101952",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/4. GBFlair15SpryBlkSh.psd",
+      "sourceSha256": "7242226c51f681d7e7858a41f00e63f20bb82f645ed326967bbbe07633efa909",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7465,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9876,
+            "semiTransparentPixels": 3912,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9431,
+            "semiTransparentPixels": 3921,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9295,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "f8a0cce8d01fc4894d0cda8018cc8fd70207c93e4c0a57045598eda405895354",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/7. GBFlair15SpryGlMatt.psd",
+      "sourceSha256": "abea0fc9558a2b035c8db5551f666dba87edc80ea1baeada55334565b3d9b055",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7478,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9877,
+            "semiTransparentPixels": 3938,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9443,
+            "semiTransparentPixels": 1677,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0412,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "19c9102aa9d7e17fd4ce189c5ae4932f7623a2844a3468fb2646d855efc6fec2",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/6. GBFlair15SpryGlSh.psd",
+      "sourceSha256": "e4ed6835c61319609497e71f90c185d1088a04316cec8b9cbc3eeb66df733d0f",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7465,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9876,
+            "semiTransparentPixels": 3912,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9441,
+            "semiTransparentPixels": 1728,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0817,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBFlair15SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "87554b02da3a444e8d63e49d2aa9b05c0c727617d169cf09e1376694038908fb",
+      "family": "Flair",
+      "sourcePath": "5.  13-415 Bottles/11. Flair 15ml/2. Flair 15ml (capped) PSD/8. GBFlair15SprySlMatt.psd",
+      "sourceSha256": "8fdedaf1c48256b09f96964262260f0eb41e47ec204f3e1318d48a240b3385f9",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7278,
+            "semiTransparentPixels": 7478,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9877,
+            "semiTransparentPixels": 3938,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9444,
+            "semiTransparentPixels": 2285,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9178,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13Gl",
+      "status": "candidate",
+      "plateSha256": "67998fac9f4b498915a1a72b173050ad7a6a06a6653bbb5f6338fa6fd089460a",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/28. GBRoyal13Gl.psd",
+      "sourceSha256": "4556300ee86d0afe81bc1ef62c1c71be0d9383736d76fe602399d0831f47e782",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 7993,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9442,
+            "semiTransparentPixels": 2069,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.38,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollBlkSh",
+      "status": "candidate",
+      "plateSha256": "202adbe85a12366f1a327eb903256b9688b425e9c550c28934e114fb990bd8c6",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/24. GBRoyal13MtlRollBlkSh.psd",
+      "sourceSha256": "788895b2c78bbffdef6f33d4f1cbc7812ca0af856ba12bd0e7275683771fe4f7",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6784,
+            "semiTransparentPixels": 9160,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 2034,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9468,
+            "semiTransparentPixels": 2398,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.163,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollCuMatt",
+      "status": "candidate",
+      "plateSha256": "c5a8e17f6d9f247bda6b00ca247736afa51282447ad0d9550fe15aa18dfc5c67",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/22. GBRoyal13MtlRollCuMatt.psd",
+      "sourceSha256": "d5fab6a1ee3282bce2fa45fb215fd26192a6fed832e40c0c25529b4c5d6099a1",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 7993,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 1999,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9447,
+            "semiTransparentPixels": 3739,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3953,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollGlMatt",
+      "status": "candidate",
+      "plateSha256": "1dfa93dd0944270e35da3da51f881fbc89711b01976bb9fa1a36935c8e2cfc77",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/16. GBRoyal13MtlRollGlMatt.psd",
+      "sourceSha256": "6fc7cca557c2f08d0c48b38054c7f529d0ac9c8a02c4283381c89596308fe081",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 7995,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 2040,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9435,
+            "semiTransparentPixels": 2721,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.299,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollGlSh",
+      "status": "candidate",
+      "plateSha256": "a70c4efbc8d88194f977541334f5213f369e470cb9ac96e8db05992747935cb6",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/18. GBRoyal13MtlRollGlSh.psd",
+      "sourceSha256": "ad93942e07684a92c3c072e2ede83519965ed9a24e3c7ec205fbe787090d1204",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 8069,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 1990,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9441,
+            "semiTransparentPixels": 2199,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3471,
+          "tailOver40": 6e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollPinkDot",
+      "status": "candidate",
+      "plateSha256": "59c2ec325f0cd8bdc3c5b55b133554d63253cab4b3104b167fbca56eab4fd339",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/12. GBRoyal13MtlRollPinkDot.psd",
+      "sourceSha256": "f74bde2dc0b77b063152d694b9c2216e7482ea8bfb608eef5be09afc1af6ef49",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6784,
+            "semiTransparentPixels": 8949,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 2038,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9475,
+            "semiTransparentPixels": 2341,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2762,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollSlDot",
+      "status": "candidate",
+      "plateSha256": "5c098444e71fa17454c1b4658334a100083d2c63c5afff35d50e1fdc49935dad",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/10. GBRoyal13MtlRollSlDot.psd",
+      "sourceSha256": "4fe649dbffb332fcf11a06ad5e20029f53ad8b0e6873baee7872dbdbfb9cec48",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 7987,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 1999,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9472,
+            "semiTransparentPixels": 3887,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0749,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13MtlRollSlMatt",
+      "status": "candidate",
+      "plateSha256": "76351c972c51646c2545a640c1974f13f66bc4193f6a6d574bee57cdbbc6eeb4",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/14. GBRoyal13MtlRollSlMatt.psd",
+      "sourceSha256": "7fc1c710e8a46499f78bd05769c810685b5673272b4ac0a0a5f799f876b1ab29",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6785,
+            "semiTransparentPixels": 9228,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9844,
+            "semiTransparentPixels": 2030,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9446,
+            "semiTransparentPixels": 2859,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1681,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13Sl",
+      "status": "candidate",
+      "plateSha256": "5a69bea3dc6a8d30e737ea114fcaf7f6fd0c0941f61579a5cc18adebdf61362f",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/29. GBRoyal13Sl.psd",
+      "sourceSha256": "079cf6634b8504b5b646b63060439392b6d19e060f587cb87bdfc586e2978670",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6784,
+            "semiTransparentPixels": 8922,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.944,
+            "semiTransparentPixels": 2597,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3539,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13SpryBluMatt",
+      "status": "candidate",
+      "plateSha256": "f1cb91e6a722a163a4a971d94f00f292774ff25b99dc474708099fb09beaf148",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/5. GBRoyal13SpryBluMatt.psd",
+      "sourceSha256": "8f2c030f83624d6473222d164dce85f755fa1da222d10d08fa1ebef1313f9223",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 8094,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9881,
+            "semiTransparentPixels": 3833,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9286,
+            "semiTransparentPixels": 3690,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4032,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13SpryCuMatt",
+      "status": "candidate",
+      "plateSha256": "6fad847a73f78c821b54c6adb8f5ef7863e3a90e48eec5678e723dc4cea72495",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/30. GBRoyal13SpryCuMatt.psd",
+      "sourceSha256": "ec7ec773bc6f6780c8cb4741d1d834062f319c98bf6334ea36fe7f685a32f719",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6785,
+            "semiTransparentPixels": 9104,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9881,
+            "semiTransparentPixels": 3792,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9279,
+            "semiTransparentPixels": 3599,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2981,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "665531dfb62106db5c723767ad95640468e1e30be26b200c49f3475f4472646d",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/7. GBRoyal13SpryGlMatt.psd",
+      "sourceSha256": "d8460f5cc848cb1dad38b6289fff2fd6e91adc558c0d5c6f17a74f89737df5c0",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 7977,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9882,
+            "semiTransparentPixels": 3902,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.929,
+            "semiTransparentPixels": 3254,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4388,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "c22910054da4e7b38893d80356e4e919088ca270e99783072c8643cf656bf3ab",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/6. GBRoyal13SpryGlSh.psd",
+      "sourceSha256": "56eb0e900bda2d0e6bc8bd8bd3ff1d4e330dfb60977b7dae6e92eeb0ae85c949",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6785,
+            "semiTransparentPixels": 9228,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9881,
+            "semiTransparentPixels": 3730,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9291,
+            "semiTransparentPixels": 2836,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4593,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "7d5b2472b71368b63eb4c77b224c1bded296eafe5dbd7551cd4b1f7169e2b638",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/8. GBRoyal13SprySlMatt.psd",
+      "sourceSha256": "0b62caed90156ecbc0307e080cfd450381e87f46a89294a0726e2c03a6064fe4",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.679,
+            "semiTransparentPixels": 7977,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9882,
+            "semiTransparentPixels": 3902,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9291,
+            "semiTransparentPixels": 3174,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1741,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13SprySlSh",
+      "status": "candidate",
+      "plateSha256": "3d1dff50f28ad343fbdc43baa6e26ce22135ff7c845ee2651194129e4accf970",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/9. GBRoyal13SprySlSh.psd",
+      "sourceSha256": "3e4cd63465c7490004459381b430f06a7b8912bc56b6ea5c9d7619dd019202a4",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6785,
+            "semiTransparentPixels": 9103,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9881,
+            "semiTransparentPixels": 3764,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9306,
+            "semiTransparentPixels": 2939,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3595,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRoyal13WhtSht",
+      "status": "candidate",
+      "plateSha256": "f403f4e880747c038f66723f5b8149a878fc28089dd3252a44a50cf33ea572c1",
+      "family": "Royal",
+      "sourcePath": "5.  13-415 Bottles/10. Royal 13ml/2. Royal 13ml (Capped) PSD/2. GBRoyal13WhtSht.psd",
+      "sourceSha256": "044457219afa7e63acc0004744fbc90380ff7f57f67c6c1fa0331fb58c9f2632",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6765,
+            "semiTransparentPixels": 9672,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9708,
+            "semiTransparentPixels": 1954,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3534,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15BlkSht",
+      "status": "candidate",
+      "plateSha256": "e4b42d3dcbff134519ae69f0e74a79d5417854a2dd40a980398d40533dd46bdf",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/1. GBSqr15BlkSht..psd",
+      "sourceSha256": "7d6012835d1b7ec565a07355d5409cf0978cc0d1923ff6cd7d3d41f815ad6011",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7818,
+            "semiTransparentPixels": 7746,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9708,
+            "semiTransparentPixels": 2164,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.916,
+          "tailOver40": 1.4e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15Gl",
+      "status": "candidate",
+      "plateSha256": "e2a8abac8a2d6ca6f26040df7a63165eb14e92e5d93b7d91e8180485be771aff",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/28. GBSqr15Gl.psd",
+      "sourceSha256": "0c122ac34b196a15c67199508f754b81d9af45917c0463e41c4cc64bf5bfb7f5",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7819,
+            "semiTransparentPixels": 7420,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9183,
+            "semiTransparentPixels": 3194,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1864,
+          "tailOver40": 0.001882
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollBlkDot",
+      "status": "candidate",
+      "plateSha256": "d3bbab28f33358de2fd6a73a5e9706c56442c5179a28ec7621e5588ed3dec4e7",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/26. GBSqr15MtlRollBlkDot.psd",
+      "sourceSha256": "6602843c9cfb39733252a8945842409bdc209effcb2741cef637770a6e0fbaeb",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7815,
+            "semiTransparentPixels": 7998,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3147,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9308,
+            "semiTransparentPixels": 5117,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0239,
+          "tailOver40": 0.002002
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollBlkSh",
+      "status": "candidate",
+      "plateSha256": "03d6b17a24705e1da203fb051a534d53504f375d2b86afc374f995585c7bd303",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/24. GBSqr15MtlRollBlkSh.psd",
+      "sourceSha256": "c4121ec9778b9e4676a8f6d077ac5fcd5324bb095ca2627308834a59ec0e0daa",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7815,
+            "semiTransparentPixels": 7998,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3147,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9292,
+            "semiTransparentPixels": 3501,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9951,
+          "tailOver40": 0.001928
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollCuMatt",
+      "status": "candidate",
+      "plateSha256": "060b31cf397dfacfa007b9fbbefe89bf3f25a967358f18f63d38b99ff611a27b",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/22. GBSqr15MtlRollCuMatt.psd",
+      "sourceSha256": "5da7ac0d3d7cb41fc5e62d87f5c36ec45f7b8c2e69eed2cfc4abdb98fc80f630",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7818,
+            "semiTransparentPixels": 7704,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3219,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9265,
+            "semiTransparentPixels": 4506,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1089,
+          "tailOver40": 0.001298
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollGlMatt",
+      "status": "candidate",
+      "plateSha256": "4da0ea43ec682e88e0c4ebae906c17f94235c7df06d0adb7fabfa739816fcd84",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/16. GBSqr15MtlRollGlMatt.psd",
+      "sourceSha256": "c8bb8525a16fb6b28203c9763d4c8d657bd22da4ce499f5dd8b7054ee16cba29",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7815,
+            "semiTransparentPixels": 7990,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3141,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9249,
+            "semiTransparentPixels": 3773,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0215,
+          "tailOver40": 0.00077
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollGlSh",
+      "status": "candidate",
+      "plateSha256": "9d1dee2de06f1ecef8aac249a161dd05b65cab41293313ec53b3eac3cd84aede",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/18. GBSqr15MtlRollGlSh.psd",
+      "sourceSha256": "a4bb831595e95c82ff31be29f6a6bfd8c5024f2b896e99130eccd70a8c276b3f",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7817,
+            "semiTransparentPixels": 7781,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3163,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9261,
+            "semiTransparentPixels": 2536,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.177,
+          "tailOver40": 0.001959
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollPinkDot",
+      "status": "candidate",
+      "plateSha256": "1b3a9d6ef12d7c343f3f76b2123423db7b817a343ec565b2e5980f466e1a7123",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/12. GBSqr15MtlRollPinkDot.psd",
+      "sourceSha256": "2a3b5329f5a9dd8bee85ab3d6db6838af0ec873d27dd061be6c661bb6afe6b0d",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7819,
+            "semiTransparentPixels": 7584,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9478,
+            "semiTransparentPixels": 3275,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9304,
+            "semiTransparentPixels": 3117,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0836,
+          "tailOver40": 0.001792
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollSlDot",
+      "status": "candidate",
+      "plateSha256": "c6ac32f4e69f61d36140b3d2733ce899a3bd76499b3f9805b41972b6857779dd",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/10. GBSqr15MtlRollSlDot.psd",
+      "sourceSha256": "c7708e9a66b09b364acd24cad1de6822aad8ab1e01cb4ce51f7f6e53d5a29c11",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7818,
+            "semiTransparentPixels": 7651,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3280,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9297,
+            "semiTransparentPixels": 4466,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9524,
+          "tailOver40": 0.001477
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollSlMatt",
+      "status": "candidate",
+      "plateSha256": "182573dd76b359223dedc05fc85ba61225dc4c0affb812e01ef492c2aa9b9671",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/14. GBSqr15MtlRollSlMatt.psd",
+      "sourceSha256": "64f290aeb3908f871ada557d79eae09c6ee3a9c07bcfbfbb0416bb3dfb799897",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7815,
+            "semiTransparentPixels": 7998,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3147,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9266,
+            "semiTransparentPixels": 3975,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8884,
+          "tailOver40": 0.000548
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15MtlRollSlSh",
+      "status": "candidate",
+      "plateSha256": "0d09e981ec7069d6bd28bcad380836a151a43205ebc5d4b26c041e1c0eb8416b",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/20. GBSqr15MtlRollSlSh.psd",
+      "sourceSha256": "d510e609163487e706d044d12ac19267f8bab916ad885a3bea6256b7dcea2ee9",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.782,
+            "semiTransparentPixels": 7458,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9479,
+            "semiTransparentPixels": 3202,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9252,
+            "semiTransparentPixels": 3567,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1078,
+          "tailOver40": 0.002308
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15Sl",
+      "status": "candidate",
+      "plateSha256": "2dc06d8400fc0d5841a623180f8ab64ce3f990b4d2de9f606d197769d1cc295c",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/29. GBSqr15Sl.psd",
+      "sourceSha256": "5033de1b98b8c2eaaf5abe83c97cee8c3888b3951148bbde337a86314072f220",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.782,
+            "semiTransparentPixels": 7508,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9253,
+            "semiTransparentPixels": 3398,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8221,
+          "tailOver40": 1.8e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SpryBlkSh",
+      "status": "candidate",
+      "plateSha256": "fefb31c6267fde6bac74ab60eef15d1c7d9602a6200109537da80075dd9188f5",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/4. GBSqr15SpryBlkSh.psd",
+      "sourceSha256": "f62a0010a5d875fe9b6e44a315e378306a0faff7edf788eddea72aef3d2b2de6",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7819,
+            "semiTransparentPixels": 7585,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9859,
+            "semiTransparentPixels": 4322,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9043,
+            "semiTransparentPixels": 6430,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7772,
+          "tailOver40": 1.8e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SpryBluMatt",
+      "status": "candidate",
+      "plateSha256": "6fd3d09faa183029dd1fe83a2e063f4029d603a45108617b3bf2b9ea0ab3a0c9",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/5. GBSqr15SpryBluMatt.psd",
+      "sourceSha256": "0fbc65e3489a4f2550b501819fdfdae67a3a8e39ae464f2cb202a399a2a9f037",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7819,
+            "semiTransparentPixels": 7416,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9858,
+            "semiTransparentPixels": 4463,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9058,
+            "semiTransparentPixels": 2618,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0322,
+          "tailOver40": 7e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SpryCuMatt",
+      "status": "candidate",
+      "plateSha256": "a1a04dac48c7f0c029902224109ba8aaa8254d0f19a12731048ef663ebc46135",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/30. GBSqr15SpryCuMatt.psd",
+      "sourceSha256": "910172c48c9cddd3dc5905c6ba41ad256127b2982131684b95cb39cc4455e1e9",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7819,
+            "semiTransparentPixels": 7495,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9859,
+            "semiTransparentPixels": 4521,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9044,
+            "semiTransparentPixels": 4618,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.988,
+          "tailOver40": 1.1e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "159cf06fa3c4ef2ef921c47244a7ce054d0e0a6e8b7f6e3117eea2407c1dccf1",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/7. GBSqr15SpryGlMatt.psd",
+      "sourceSha256": "fda7fe6dda88d03f5c226e4c02de36bdd82f12421a96b832ba7682d7747ff3bf",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7819,
+            "semiTransparentPixels": 7419,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9858,
+            "semiTransparentPixels": 4463,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9057,
+            "semiTransparentPixels": 3203,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0205,
+          "tailOver40": 1.1e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "598161b67d404d2e4d2a0f7360318c63f8b3add128b6955aca76b5f3f806b690",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/6. GBSqr15SpryGlSh.psd",
+      "sourceSha256": "193614aa7f6fb71303afb5221913b3f1fad551f2f19c0c457573d3788ba41f0c",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7818,
+            "semiTransparentPixels": 7644,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9859,
+            "semiTransparentPixels": 4451,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9057,
+            "semiTransparentPixels": 3560,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0532,
+          "tailOver40": 1.8e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "aa3bd325d7f65ee144b73042eae3eaabc655a458a8b297a480f319b010f1df01",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/8. GBSqr15SprySlMatt.psd",
+      "sourceSha256": "cf13db86bca850c9a859530b02aa033948eb87a77b99b8a8cd7fe47df9c1b8d9",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.782,
+            "semiTransparentPixels": 7465,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9859,
+            "semiTransparentPixels": 4399,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9062,
+            "semiTransparentPixels": 3558,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7876,
+          "tailOver40": 2e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSqr15SprySlSh",
+      "status": "candidate",
+      "plateSha256": "23fbda4a04b07d11be252c1f8ba8b18372982413164e91b3f3728a8b86365c82",
+      "family": "Square",
+      "sourcePath": "5.  13-415 Bottles/12. Square 15ml/2. Square 15ml (Capped) PSD/9. GBSqr15SprySlSh.psd",
+      "sourceSha256": "d1102a9f3dc32e2128040d7c3ef118b28a11d01283e4f17b962f10af2abce81f",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7818,
+            "semiTransparentPixels": 7643,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9859,
+            "semiTransparentPixels": 4493,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9078,
+            "semiTransparentPixels": 3972,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9655,
+          "tailOver40": 1.3e-05
         }
       },
       "origin": "paired-psd-recovery-2026-09-08"
