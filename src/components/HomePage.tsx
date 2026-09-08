@@ -262,7 +262,6 @@ function MobilePostHeroSearch() {
 
     return (
         <section id="mobile-home-search" className={homeStyles.search}>
-            <p>Wholesale bottles &amp; packaging.</p>
             <form role="search" onSubmit={handleSubmit} className="mx-auto flex max-w-xl items-center border border-champagne bg-white focus-within:border-muted-gold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-muted-gold/25">
                 <MagnifyingGlass className="ml-4 shrink-0 text-slate" size={17} />
                 <input
