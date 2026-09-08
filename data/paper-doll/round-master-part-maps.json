@@ -1,0 +1,316 @@
+{
+  "GBRnd128SpryCu": {
+    "sourceSha256": "ddcefa59429275ad47f9491b7e331db7bf6e74cad02f6d73ba25f11d17a93443",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "GBRnd128SpryMtGl": {
+    "sourceSha256": "656233baa5621e55908a45a2307f3baa81bf2e7f7ea6c14e4e081b35ccecd453",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRnd128SpryMtSl": {
+    "sourceSha256": "78a9a11248ec87e83356ed65c0508cdecf93d9f0af9fadc1e2df6d1b072df3b7",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRnd128SpryShnBlk": {
+    "sourceSha256": "8b8e843dd96720f7fe0fcdbe3682627f1cd8a378b17f3c96990367d35353acda",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRnd128SpryShnGl": {
+    "sourceSha256": "98bad51e14d23d3022344167218caecd65512649ead43d78ec7d5a647982abe9",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRnd128SpryShnSl": {
+    "sourceSha256": "a9635f4c5e845617b713952da0737ed5042652f5d29ac3f7e5743c5f8dcda927",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBRnd128LtnClOvrCap": {
+    "sourceSha256": "6f02d7e218d7cd3cd420380851e6b8869fabc5b6e7e6c162c249631d12ff41b7",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBRnd128LtnCu": {
+    "sourceSha256": "a2132f1eeb22e884057c80d6f4a56feaa3c4936724d564502623bb0a39f0437c",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "LBRnd128LtnMtGl": {
+    "sourceSha256": "97333b2a43640f070253288a798f995be23926bb36b109177f8804d56976fa66",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBRnd128LtnMtSl": {
+    "sourceSha256": "2b46b7a81e052ce0a5e16dc45ab4cace9b9e3064cbdbf2bad999d734bbb4b760",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBRnd128LtnShnBlk": {
+    "sourceSha256": "052c3a6fddeae59e021e3c660a60bd70121fbf486a80315fa8ed6e9d76fccf86",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBRnd128LtnShnGl": {
+    "sourceSha256": "b10136d31405f0535db09fcd4ec6af673ab26607f493247114e7d5a22ccf21da",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBRnd128LtnShnSl": {
+    "sourceSha256": "a7c8ab28720e1ecbb4c19e0c89b9b36be729bfc59852b54662bb03752cc236a7",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRnd78AnSpTslLvn": {
+    "sourceSha256": "1198b9e8fe823ee7665635c3434bb7b61bce42928756abd9f6fd3303dffab5e4",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "GBRnd78SpryCu": {
+    "sourceSha256": "cf41faee06d728825a6ec50d32e5671e3ec223f5b60d7d8cd8712754083bc656",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslGl": {
+    "sourceSha256": "2c5a3bee4cc072451f7eb0372ed4e4d167e417023f8869163f0ed99903c9d38c",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-02.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslIvyGl": {
+    "sourceSha256": "22d564f27356c577e33d27443f00112fbdeaed3fb79c772b858d8ee692f7b79b",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslIvySl": {
+    "sourceSha256": "0c96ec065bd40c7381eacf5ecbb35dbd61607c6d4c8b5a2e1068f88995d64b42",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-03.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslLvn": {
+    "sourceSha256": "58fcda761c05094fac7c665aeee0b812f4d223a6ab239e86c2bcf2696c82e77f",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslMtSl": {
+    "sourceSha256": "bea32dcf6bf246debed8e38dc5035ac52075b61e8d6f4017e82b89b3d8ea555d",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslPnk": {
+    "sourceSha256": "98b37fd5247122fb2dfd7c06ffa3ae0222194e4eb94649111dda12eb01a19a66",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBRndFrst78AnSpTslWht": {
+    "sourceSha256": "5869c3c553120f1e28b203d46941cc65b7303ff32905de0420ba7a2e81e165d4",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/round-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  }
+}

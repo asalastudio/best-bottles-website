@@ -1,0 +1,3006 @@
+{
+  "generatedAt": "2026-09-08T20:13:35.319Z",
+  "publicationStatus": "visual-review-only",
+  "rows": [
+    {
+      "websiteSku": "GBCrcl100AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "aa771420fccb878acbc381be7bb967428ded3cc9cd7e219fe08bbe7420fcbb7a",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBCrcl100AnSpTslGl.psd",
+      "sourceSha256": "a67209e5142255cd0dde640e2f897f6a93ab87ba5cfc02613470a90c3f4e4637",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7755,
+            "semiTransparentPixels": 4488,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8882,
+            "semiTransparentPixels": 9599,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.8124,
+          "tailOver40": 0.000006
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "443f7d9b47f4db585e4331b26f6c3a846a92ea5a820f0dc31cbffe2a0f59b6a1",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBCrcl100AnSpTslIvyGl.psd",
+      "sourceSha256": "de9afeadb392640c7b45d9396c3c58048fe0250574d123872df1b031bc2aedb9",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7755,
+            "semiTransparentPixels": 4492,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8904,
+            "semiTransparentPixels": 9983,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.6149,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "c9cd11c31fc3d8adb7c87b62ba1515609ea0f4982ea8796d029beb37929611b6",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBCrcl100AnSpTslLvn.psd",
+      "sourceSha256": "bb131b3fdc1b6691293cab04dad730190c6d0bc3ac496aca9a2b194e10a1a6d3",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7754,
+            "semiTransparentPixels": 4495,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8908,
+            "semiTransparentPixels": 74185,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.7305,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "746e00d3ec3efd6550e7886d078dcc095e08b54175ab7ee5f48889db011b3af8",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBCrcl100AnSpTslPnk.psd",
+      "sourceSha256": "75eef3d937715b8950b36c4b70e20152ecf55a5961dc6e1e8e2c004879eec7cf",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7754,
+            "semiTransparentPixels": 4512,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8927,
+            "semiTransparentPixels": 9187,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.6207,
+          "tailOver40": 0.000019
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15BlkSht",
+      "status": "candidate",
+      "plateSha256": "82c4a549c364c4732be3e9a5c895d52fb3d22286e10e3a2615eeffb53f111c2b",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/1. GBCrcl15BlkSht.psd",
+      "sourceSha256": "d11ad08900c2fd50ceea0ec00c2e9d7fc55e6c1811aaf75a06e46fbdf4ef8505",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8376,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9787,
+            "semiTransparentPixels": 1239,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6903,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15Gl",
+      "status": "candidate",
+      "plateSha256": "6672fa591f4a3d0795b236292bf75152c83a46aec7663d168f8873bcbb629c39",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/28. GBCrcl15Gl.psd",
+      "sourceSha256": "b6f781d12fdbbaef26dc61645a48b9887ee2a94072e0268ac0409f8ff421b010",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8332,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9423,
+            "semiTransparentPixels": 1907,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.741,
+          "tailOver40": 0.000006
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollBlkSh",
+      "status": "candidate",
+      "plateSha256": "2c76fca9151e01a3ef3f3eccd1043a6375ab0d3c1915479e17e74ce99b3f0b30",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/24. GBCrcl15MtlRollBlkSh.psd",
+      "sourceSha256": "2b8122ae959e5280c8ee0fa5a62965a9507daee783db000db9749b3eccb63bdf",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8575,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9439,
+            "semiTransparentPixels": 3007,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6049,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollCuMatt",
+      "status": "candidate",
+      "plateSha256": "c0f69382501decfd9b681d6227f2fd19eef578ad9a34b5abd4ac41c5cd03e327",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/22. GBCrcl15MtlRollCuMatt.psd",
+      "sourceSha256": "0fff146b936eef73a5ccc622d95ad0e5023656e33cb557693d76a18620235f39",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8563,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9418,
+            "semiTransparentPixels": 3886,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7152,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollGlMatt",
+      "status": "candidate",
+      "plateSha256": "06635996189a99b6742dd03bc373838cf778505da7f4923974838376eb83a8bd",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/16. GBCrcl15MtlRollGlMatt.psd",
+      "sourceSha256": "9ea9bdd79e5f5af86a7220a7638e9d240b2c4145c6ae70ff5f59d72bf99b47c4",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8274,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9415,
+            "semiTransparentPixels": 2548,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7355,
+          "tailOver40": 0.000118
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollGlSh",
+      "status": "candidate",
+      "plateSha256": "4632c568bed6441f0541fd6b3f21da61b64a44ea9252f93f43277871c9bf5b66",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/18. GBCrcl15MtlRollGlSh.psd",
+      "sourceSha256": "860b7022ba45db63e80464e180510958c66791f21fcc10a60e10f6cf03f69286",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8252,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9421,
+            "semiTransparentPixels": 2208,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7334,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollPinkDot",
+      "status": "candidate",
+      "plateSha256": "7e6063017055b48b4c1bdc50c9c61f78312909c3e52cf73b5575215350d7a085",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/12. GBCrcl15MtlRollPinkDot.psd",
+      "sourceSha256": "f3ce65180f8b04ae681f2ef0b231a0cb89e500b984123edbf438170ec706c95a",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8252,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.945,
+            "semiTransparentPixels": 2869,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6872,
+          "tailOver40": 0.000025
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollSlDot",
+      "status": "candidate",
+      "plateSha256": "c1b84e91478581c18a8943e8a63cb12cf8af0393618f814fee4a06e13f503b22",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/10. GBCrcl15MtlRollSlDot.psd",
+      "sourceSha256": "0026b29a62b37383a99c42014eea69f0ba64be7dcf12f7872022ed6cc9dbf2fb",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8298,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9445,
+            "semiTransparentPixels": 3731,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6227,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollSlMatt",
+      "status": "candidate",
+      "plateSha256": "f74a41552bb951991394d6075604f324f8f9521c0a29f3878e82295d7426f3b7",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/14. GBCrcl15MtlRollSlMatt.psd",
+      "sourceSha256": "b7cf85ff5622b7a9e03528629bdd1e62b5b4ef9f77b10a9d45bea8c3acc099f4",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8232,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9427,
+            "semiTransparentPixels": 2416,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.635,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollSlSh",
+      "status": "candidate",
+      "plateSha256": "b5941c01dbd323e3b85bb8ce94b653da205614f2783a2e66a058bbb224edbdbb",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/20. GBCrcl15MtlRollSlSh.psd",
+      "sourceSha256": "9c006426be3530e2c301d1d4a205ebedbe71ee8302998788f856a671ce25099f",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8298,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9412,
+            "semiTransparentPixels": 2520,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6404,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15Sl",
+      "status": "candidate",
+      "plateSha256": "5a707b4d37d98a01c33a07de50a4e6a4b8a21ba9d5b28d9a180c2c9db4b98f43",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/29. GBCrcl15Sl.psd",
+      "sourceSha256": "b211e5f0311b9755c395ddf49dd9de41a456bdb5ca09c5fb411d2a09446acbab",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8575,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9417,
+            "semiTransparentPixels": 2630,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6343,
+          "tailOver40": 0.000013
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryBlkMatt",
+      "status": "candidate",
+      "plateSha256": "d2c7db35e01b91a4d0aab4fd29752717c434d28ff10d8896e6f10fa1718c524e",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/3. GBCrcl15SpryBlkMatt.psd",
+      "sourceSha256": "0169dcf5bf249c84a9a57f0ef0af511a20da99c384c23aa61676653396e826d2",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8252,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9119,
+            "semiTransparentPixels": 7452,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6585,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryBlkSh",
+      "status": "candidate",
+      "plateSha256": "6e24c10e6102e3166ee828508f4e4ddc92a904d214de1cd2578dcfdb8af1801b",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/4. GBCrcl15SpryBlkSh.psd",
+      "sourceSha256": "786cb28e5a115a437bb5fa8397c745bd70875d48be32d67c015e29bcb478b920",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8333,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9121,
+            "semiTransparentPixels": 8118,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6604,
+          "tailOver40": 0.000003
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryBluMatt",
+      "status": "candidate",
+      "plateSha256": "6556ea68b113e2c7e8aa4e87f4335354ca89fb24425397399b6f95177141b374",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/5. GBCrcl15SpryBluMatt.psd",
+      "sourceSha256": "71299e6a6444e4181c62aed1a149e0efbb28908a4b3186943f86e79a88f56cd2",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8299,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9127,
+            "semiTransparentPixels": 6679,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8196,
+          "tailOver40": 0.000003
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryCuMatt",
+      "status": "candidate",
+      "plateSha256": "f9f680cf8248a66cce3dadd84bb7283aed7d6abe03076b2decffbb8890e59e88",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/30. GBCrcl15SpryCuMatt.psd",
+      "sourceSha256": "fb96da8a8eeadb668a979024d4fd40466fa9511b0eedefadf280dd9db920b236",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8404,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9114,
+            "semiTransparentPixels": 7943,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7746,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "8c5afc6985644f76b1e869e768740c1f8783ca18b28db9902b7920c43f5c1360",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/7. GBCrcl15SpryGlMatt.psd",
+      "sourceSha256": "e81ef96379e5a7325b143e8e588d993d6595f1f88fb86317f824f6c8ba8f0356",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8288,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9116,
+            "semiTransparentPixels": 8256,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7411,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "8d9421de88f7ac317e87c8eb26004ade34a52e86b5d7e8d2400eba1e7695e094",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/6. GBCrcl15SpryGlSh.psd",
+      "sourceSha256": "f5135bd4d78a7379628da19e2f8ff8d8e7c6320ec910a7d16d6998ba60a504db",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8386,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9119,
+            "semiTransparentPixels": 8128,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.7996,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "428420d9ae30381c0494fbaf9fabceabf00ef016839eb8051a979c7b0a27ab51",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/8. GBCrcl15SprySlMatt.psd",
+      "sourceSha256": "6964641a47c6a5841ece281dbbdf7eab3b8184a9e90258ce23d00cf40822d9ea",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.697,
+            "semiTransparentPixels": 8279,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9132,
+            "semiTransparentPixels": 7153,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6458,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl15WhtSht",
+      "status": "candidate",
+      "plateSha256": "cfdbf9b6d57dc638f0c7cfbfef0065806c8ad520143a8af507bf1e50fe274a05",
+      "family": "Circle",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/2. GBCrcl15WhtSht.psd",
+      "sourceSha256": "5080784f1217212a3eb33102e1143ff83afd52e6b5fd5aa48ade873fefa5a839",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6969,
+            "semiTransparentPixels": 8335,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9782,
+            "semiTransparentPixels": 1310,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.6362,
+          "tailOver40": 0.000007
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "e16e2b329e137899054319086d70b14c88f07838b595ab645c8b010d6f157647",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBCrcl50AnSpTslBlk.psd",
+      "sourceSha256": "41b8661e3c770bb1b9d5e27f2dbd6e45f6f35aee2ee1a927336d24d946d34985",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3067,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9206,
+            "semiTransparentPixels": 9184,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.6304,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "60bb5fb818578b4d603454f5fb11b3cd03e35bb2fce6781dd7c69168c99199ac",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBCrcl50AnSpTslGl.psd",
+      "sourceSha256": "40f4afe8fbb37c75d46fd5806eba8820a6338b9bb8b63bc054069f87a302240a",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8881,
+            "semiTransparentPixels": 2361,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9206,
+            "semiTransparentPixels": 10798,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 3.1723,
+          "tailOver40": 0.000022
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "6127243056675bbb38d893a35ff495f1aa7a2e1342f3ab41032e969895d4ac2d",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBCrcl50AnSpTslIvyGl.psd",
+      "sourceSha256": "4828cf120312b43acbdb515d87e00be48f56920182f553350c30fc72cf2c6271",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3022,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9188,
+            "semiTransparentPixels": 6462,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 3.0158,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslIvySl",
+      "status": "candidate",
+      "plateSha256": "427db55d3a79110b9ef8550785ca67d54f938e7ea520667b4cc1db7504f2bdc5",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrcl50AnSpTslIvySl.psd",
+      "sourceSha256": "139458833e43140ecb38302171c75eacb6ed27b14be904700346756c8e28d944",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3074,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9196,
+            "semiTransparentPixels": 6403,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 3.0771,
+          "tailOver40": 0.000011
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "13b2c1d87b801faedc59e7e7d16826dafa74c77cb9cd8fa63b4db7c678e9caf9",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBCrcl50AnSpTslLvn.psd",
+      "sourceSha256": "769055bf0eacb9754a537c97c660b8fea7ff7e9762542ef32e3197e4a280cb19",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3036,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.922,
+            "semiTransparentPixels": 46759,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 3.0295,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslMtSl",
+      "status": "candidate",
+      "plateSha256": "4c167cdd382574aae1fd7ff88f153266f20800e1b351b8738c0f0f26d406acf4",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrcl50AnSpTslMtSl.psd",
+      "sourceSha256": "41d23499ffbdd425a64371a5cab4c7687e36be3d2c971936979daea9e069620c",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8881,
+            "semiTransparentPixels": 2410,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9292,
+            "semiTransparentPixels": 6315,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.6542,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "9d81d0d69b105ef189c04d24a9652e3499b5e58e20f926dc6040f0894e7a37b5",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBCrcl50AnSpTslPnk.psd",
+      "sourceSha256": "31e8d43238a11f0e45993dc44c5d14d5dca406a20eb60284c4bbee2201577f00",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3094,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9235,
+            "semiTransparentPixels": 6346,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.9245,
+          "tailOver40": 0.000021
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslRed",
+      "status": "candidate",
+      "plateSha256": "04e9a8322f443dcf39e9cd77c7e99ee8d2bf8afdfab39fd464b7de038edb70d6",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBCrcl50AnSpTslRed.psd",
+      "sourceSha256": "aec2926aa2e7add39779d325d7ac4d8b79fe40ba7674426ddbdd7556a6732c5f",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3056,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9271,
+            "semiTransparentPixels": 6314,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 3.0124,
+          "tailOver40": 0.000119
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrcl50AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "d9cc86c6cb87b0a21b469b8511af9db147e52e8648b48561bf42e071ec86d2c5",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBCrcl50AnSpTslWht.psd",
+      "sourceSha256": "e23e9b370cfa2d43c28eb51d376e4a3a1a48d23ed37c0fef305e0f65440919a4",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8849,
+            "semiTransparentPixels": 3095,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9197,
+            "semiTransparentPixels": 6773,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.5112,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "dd1e16aa5aedec741e6df64413bf0a20373dc0e7690e7e1907850f6b838b9f5e",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBCrclFrst100AnSpTslBlk.psd",
+      "sourceSha256": "2c720e28d81bb892b666301a10eaf449d3e03e21098c87e23db915b6b1346d82",
+      "parts": [
+        "sprayer",
+        "body"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9624,
+            "semiTransparentPixels": 3915,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.931,
+            "semiTransparentPixels": 75904,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.574,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "414cdce5f6a5985a8d3ce7194836473f0175a618878987aef09056291f70e6f5",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBCrclFrst100AnSpTslPnk.psd",
+      "sourceSha256": "f5aed205ad77fc3d5ab91aeb0d148e208699ed142dc83b5120997dde2c304e6b",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.931,
+            "semiTransparentPixels": 75905,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9618,
+            "semiTransparentPixels": 3809,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.795,
+          "tailOver40": 0.000037
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslRed",
+      "status": "candidate",
+      "plateSha256": "7fdb754b0b89ae725f1f0ecb47d56fa285aab5e96ec95442dbacbaae35825381",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBCrclFrst100AnSpTslRed.psd",
+      "sourceSha256": "5aaa92b0edea34efdd58d4ac105759adb3856767ae9d4236ce9aeebc0dc9bef7",
+      "parts": [
+        "sprayer",
+        "body"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9644,
+            "semiTransparentPixels": 3780,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.931,
+            "semiTransparentPixels": 75942,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.7625,
+          "tailOver40": 0.000119
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "c7361865ecbab27ea40d55a75fe681bada39b46489ce416c27e8c087b56d15a7",
+      "family": "Circle",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBCrclFrst100AnSpTslWht.psd",
+      "sourceSha256": "20e315ecc06629ceef2c44df2a8c827a17b9ceda2ba1d1487c37d4330bef4ff1",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8366,
+            "semiTransparentPixels": 179696,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9036,
+            "semiTransparentPixels": 9447,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4685,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "LBCrclFrst100LtnClOvrCap",
+      "status": "candidate",
+      "plateSha256": "81f6006c6633552dfd04f6fc3439583cd98063b7e97fe2250e1c1462cc540cc5",
+      "family": "Circle",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/6. 100ml Circle Frst, Ltn & Frst, capped/28. LBCrclFrst100LtnClOvrCap.psd",
+      "sourceSha256": "e2a79e10fb3ce9d593e82aa628a16672eea46e44aa68f9fbbbbef672d99cd1a3",
+      "parts": [
+        "body",
+        "pump"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8327,
+            "semiTransparentPixels": 184070,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "pump",
+            "ok": true,
+            "transparentFraction": 0.9776,
+            "semiTransparentPixels": 831,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9033,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "LBDiva100LtnCu",
+      "status": "candidate",
+      "plateSha256": "efa60bf6016933360b215bc299999f2a93f1c7d20a7917b956d65f443b091a94",
+      "family": "Diva",
+      "sourcePath": "2.  18-415 Bottles /27. Diva (clear) 100ml/1. Diva (Clear) 100ml PSD/55. LBDiva100LtnCu.psd",
+      "origin": "diva-master-mapping"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "4335a3eb2cbbed0c376711c9af0331141dad9d3631486958cdf8ce9313e046bf",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBElg100AnSpTslBlk.psd",
+      "sourceSha256": "069a00b8c1d1e2473d780b5448e4dae551c9f88f64ca63cc72d0b41b85490af8",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3980,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9076,
+            "semiTransparentPixels": 7028,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.3402,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "985d74ece7e10c2020fdba462f62434200c37f74fb457aa6b9e6d0068b8f3008",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBElg100AnSpTslGl.psd",
+      "sourceSha256": "1443ff43b07b528598333a578d051edd079bf2591a02c84f440a81a439f0ef17",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3930,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8943,
+            "semiTransparentPixels": 6902,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.7961,
+          "tailOver40": 0.000014
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "8cfbbc49c144346e48728f33af6622c7e60d9badfc616292432d41769dc3aafe",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBElg100AnSpTslIvyGl.psd",
+      "sourceSha256": "e5cb0a72dacab75aedda217aa8d5eefecd3302556aa418854e4b2ce1de6ac1b1",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3839,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8979,
+            "semiTransparentPixels": 6834,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.7721,
+          "tailOver40": 0.000007
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslIvySl",
+      "status": "candidate",
+      "plateSha256": "8f0291c825c1544bceb6c3448428c94a870ae583e80bd8102844a1b96357f599",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBElg100AnSpTslIvySl.psd",
+      "sourceSha256": "ce2d42f9e2951d1bcc6852851cb983150943b0e86b06d6f2a6e37fbcd5eaa4ba",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3934,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8979,
+            "semiTransparentPixels": 6681,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.7577,
+          "tailOver40": 0.000007
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "dde6b79327f117e8f54903b44a9da523fbdd0b9da7cc84b74a3e91b43ab4c040",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBElg100AnSpTslLvn.psd",
+      "sourceSha256": "9d4b45aab7fa782f2df42f327bba3d8bbab87f6e9fa4a1b3d79a3147046a5297",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3971,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8897,
+            "semiTransparentPixels": 68321,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.7791,
+          "tailOver40": 0.000007
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslMtSl",
+      "status": "candidate",
+      "plateSha256": "3cddcfef3117ed4429c23e7d0078a937e2124930155e0936be32148ea8126ff9",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBElg100AnSpTslMtSl.psd",
+      "sourceSha256": "7c38f77c5cd54a115924162113c25d24978b9b87cce2cff95bd4465811a52b42",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 4007,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9124,
+            "semiTransparentPixels": 7311,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.3191,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "e9333663700d7a3af2bbad4f187d7fd392d678bacb5721452f733de6e3d41ece",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBElg100AnSpTslPnk.psd",
+      "sourceSha256": "63cb80bcac35d265fe1d0698298719dc764513ab4f8989dc5f5898d2a0a688ee",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3853,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8987,
+            "semiTransparentPixels": 6683,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.6664,
+          "tailOver40": 0.000043
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslRed",
+      "status": "candidate",
+      "plateSha256": "04fabb63115f1d715551fd61e2a2c252a416e4a23deacb2076ceb36545b75b44",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBElg100AnSpTslRed.psd",
+      "sourceSha256": "53b194d81808d434e66b035960064cbcdef63623ae74be45b32a1a85b44867f0",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 3991,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9036,
+            "semiTransparentPixels": 7443,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.6354,
+          "tailOver40": 0.000008
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElg100AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "75e69de74f2d10a2fc2b85400aaf680671e947b01cca764698ed151cf85ecbc0",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBElg100AnSpTslWht.psd",
+      "sourceSha256": "79aba03f386b0221b52d9de18a2a4e74c5b720645d84e51ce3c3860a86d8d2c3",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8235,
+            "semiTransparentPixels": 4010,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8956,
+            "semiTransparentPixels": 6982,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.4281,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "3fd763aa66d1b1ff9f3eb9aa7a7d95958d17304f51bfc631818cdff492a79fc6",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBElgFrst100AnSpTslBlk.psd",
+      "sourceSha256": "16afc1c82d9bf04378a9e5a605294eb18fe1f2cd3b16dccb0a9af13159800842",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8227,
+            "semiTransparentPixels": 2452,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9165,
+            "semiTransparentPixels": 5619,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3359,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "e3da51be38713ca1d305a5232f51a110df2dd9190629f335a4b314317e340bf0",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBElgFrst100AnSpTslGl.psd",
+      "sourceSha256": "41b1029ebe823204d3f7bce6bdc587e71acc2080d0e7f92ff9fc9efb32469a61",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8227,
+            "semiTransparentPixels": 2457,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9032,
+            "semiTransparentPixels": 5379,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.7577,
+          "tailOver40": 0.000009
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "24d31091add09d531cbafe2f3d316b650a4c27888a87a4e0c69c07b1c7a3eedc",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBElgFrst100AnSpTslIvyGl.psd",
+      "sourceSha256": "94b8ea0c72edd688e169adec697dc8a58914ed6145f4689bad0a6c1e85152a1c",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8227,
+            "semiTransparentPixels": 2538,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9068,
+            "semiTransparentPixels": 5371,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6706,
+          "tailOver40": 0.000004
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslIvySl",
+      "status": "candidate",
+      "plateSha256": "442467dc94fc2188200f0f61331b30301a840c333815ff9455d3a55d9e2fa204",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBElgFrst100AnSpTslIvySl.psd",
+      "sourceSha256": "bc13a64e570d337e2bf1fc72d6ad241f5332a0f5de70b5d9e498114c1be5ba14",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8226,
+            "semiTransparentPixels": 2617,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9068,
+            "semiTransparentPixels": 5329,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6149,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "1fda363bedb47db2e0797144cd5f1eb4c74b44c53553d2d974accf3bc0442e83",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBElgFrst100AnSpTslLvn.psd",
+      "sourceSha256": "6de5c028c9bb40fa252ed39f0ff5e6b842cb33f7f448e11eecb0f86098ea6d8d",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8227,
+            "semiTransparentPixels": 2465,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.8986,
+            "semiTransparentPixels": 66861,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.702,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslMtSl",
+      "status": "candidate",
+      "plateSha256": "f665858093fd8dab95f08efe7b17c5166768f5f0aa8fd4c217b0299e8a4d20c7",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBElgFrst100AnSpTslMtSl.psd",
+      "sourceSha256": "4f0c3301939056a8b9e07a399b84d4f03793b5a9959b4f63336216e7ca721e3d",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8227,
+            "semiTransparentPixels": 2542,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9213,
+            "semiTransparentPixels": 5914,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3091,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "79e93c2bc34692fe642b9db2fe4ccad27ea63e42c7ed8f2c85a9d830d63f6a06",
+      "family": "Elegant",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBElgFrst100AnSpTslWht.psd",
+      "sourceSha256": "2a2753c0d901898d35c3891e0d6ee1aadf81639e5e14d91b2f84781eed702048",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8227,
+            "semiTransparentPixels": 2498,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9045,
+            "semiTransparentPixels": 5502,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3129,
+          "tailOver40": 0.000009
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "6077948dacf3301b18f8e49ebb90fee2721efda7d5eda4a43b2db85095f767bb",
+      "family": "Empire",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBEmp100AnSpTslGl.psd",
+      "origin": "empire-master-mapping"
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "3872d6054c7b1aba1cfdab2f71d7b2e007436d39ba435a0d6c3a55df5392e651",
+      "family": "Empire",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBEmp100AnSpTslWht.psd",
+      "origin": "empire-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpBlk",
+      "status": "candidate",
+      "plateSha256": "1af39978ead8d390c234269f62f0994abc751b727c14ebf525d712399011bd5d",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/39. GBGrce55AnSpBlk.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpGl",
+      "status": "candidate",
+      "plateSha256": "1d3871cd9f9e09a5c29db0a3f9d9f53056ce70cfcdd54f0f95efc5dda730d698",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/37. GBGrce55AnSpGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpPnk",
+      "status": "candidate",
+      "plateSha256": "96079f5c47e5077305d94dea6041983ede0aaad1d7e1cb4769267d0be500df46",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/34. GBGrce55AnSpPnk.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpRed",
+      "status": "candidate",
+      "plateSha256": "cb11bf1bf83a37ec9e69dd49003b97beee625e77588e7bb47ae006e74b61e1e9",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/41. GBGrce55AnSpRed.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "ac908fc76c6c7fc89fa87a8aa15e19fed4843040454cc7f879c848bc6c1e6b60",
+      "family": "Grace",
+      "sourcePath": "21. Tassels/Original Tassels/48. GBGrce55AnSpTslBlk.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "27b55a1ff3beda08b44827215b2e33b7e35b495cecb4c69e0dac417d85b740fe",
+      "family": "Grace",
+      "sourcePath": "21. Tassels/Original Tassels/50. GBGrce55AnSpTslGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "28071628240a010d5c07360e079364180d2edd3f45ba2c68e83038db193d7454",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/43. GBGrce55AnSpTslIvyGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "3ea925f5a6305f8eea4439614ca400834b9c9a8ba03fbc007db51ba4aa8182da",
+      "family": "Grace",
+      "sourcePath": "21. Tassels/Original Tassels/45. GBGrce55AnSpTslWht.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrBlkLthr",
+      "status": "candidate",
+      "plateSha256": "bb344dd041d458e8ecd47b153ed66980073d9150d72e3f7902cc18849dd412f1",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/4. GBGrce55RdcrBlkLthr.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrBrwnLthr",
+      "status": "candidate",
+      "plateSha256": "13e72cc6f632ffbe26c0563da60329731fdd606ca89a13f31377902cf817d757",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/5. GBGrce55RdcrBrwnLthr.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrIvyLthr",
+      "status": "candidate",
+      "plateSha256": "d33c602b2c5f67ccbbd2abe17c886f44e94a7bd6677f5aa5ba960c5f445de84b",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/52. GBGrce55RdcrIvyLthr.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrLBrwnLthr",
+      "status": "candidate",
+      "plateSha256": "dd60c2101090eef159b903bb444eb563710c18d9188a083ec1232caa35e4e112",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/6. GBGrce55RdcrLBrwnLthr.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrMtSl",
+      "status": "candidate",
+      "plateSha256": "b513f1d33d51aeda2d7d6627831ee2202931d1b9f10db1eb477fc20aeec644d5",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/9. GBGrce55RdcrMtSl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrMtSlTall",
+      "status": "candidate",
+      "plateSha256": "ba15942ad60e15af67693afef0ddf7c64255391919aaf0c011548683b3c890ba",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/8. GBGrce55RdcrMtSlTall.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrPnkLthr",
+      "status": "candidate",
+      "plateSha256": "66da3980f87a588f2d62402f85d7cfc69df3e5bd1ca6f6b6bf1a89eef67d7d30",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/51. GBGrce55RdcrPnkLthr.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrShnBlk",
+      "status": "candidate",
+      "plateSha256": "7c5df3cd41fbbfec7520c6d4b0e8fdbe6a439024276412279233c405dc93c799",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/3. GBGrce55RdcrShnBlk.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrShnSl",
+      "status": "candidate",
+      "plateSha256": "869d8410ef4984e0f7bf70c29e6d38356b4216c80dc750f92bf52a8a6edeb1c6",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/7. GBGrce55RdcrShnSl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55SpryCu",
+      "status": "candidate",
+      "plateSha256": "78a10ad53d8707a2187cb1d9b73a318df5d416b2e931785e488fc8d379651a82",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/53. GBGrce55SpryCu.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55SpryMtGl",
+      "status": "candidate",
+      "plateSha256": "b865ed4ae2c1e801ee093e488db1325822e73089222ac119ed9bda5b715674fc",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/11. GBGrce55SpryMtGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55SpryMtSl",
+      "status": "candidate",
+      "plateSha256": "03329b6ce7bb8b9453b3fdcc6952324147b76b8ea0b6da3fba7a59fc9f511c44",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/24. GBGrce55SpryMtSl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBGrce55SpryShnGl",
+      "status": "candidate",
+      "plateSha256": "074d5c0fa403d4b331efeb2141bdb91747750283396d159c1dd59f58fbcbddf0",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/17. GBGrce55SpryShnGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "LBGrce55LtnCu",
+      "status": "candidate",
+      "plateSha256": "84f7e30f55073d73fb701a0819b755874444008a34bdbaee83be9d5468499285",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/55. LBGrce55LtnCu.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "LBGrce55LtnMtGl",
+      "status": "candidate",
+      "plateSha256": "8b47320083ef571ef361708bd1099c39742a365f8c8cefd7a235d2f62b7551d0",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/12. LBGrce55LtnMtGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "LBGrce55LtnShnGl",
+      "status": "candidate",
+      "plateSha256": "ffcd22819d69729148e964310d707f00bdde46ba1c64bef4857dd3e7465e236a",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/18. LBGrce55LtnShnGl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "LBGrce55LtnShnSl",
+      "status": "candidate",
+      "plateSha256": "cae787de61a8f81958b0002293fe0adae2b45137ac8616be78d4a9609b144c53",
+      "family": "Grace",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/29.  55ml Grace (Clear) Ltn & Spry, capped/32. LBGrce55LtnShnSl.psd",
+      "origin": "grace-master-mapping"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "752cd6032eac7371bd45a7a04d62323b17034d08e99e79e12d04b69bac1a8f6e",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBRnd78AnSpTslLvn.psd",
+      "sourceSha256": "1198b9e8fe823ee7665635c3434bb7b61bce42928756abd9f6fd3303dffab5e4",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8397,
+            "semiTransparentPixels": 8333,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.869,
+            "semiTransparentPixels": 84621,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.8286,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRnd78SpryCu",
+      "status": "candidate",
+      "plateSha256": "5d8b07e06b5cd02db9eecaeb0bfc6dc3e6cde4a95e3823e1eee383e82400a4ee",
+      "family": "Round",
+      "sourcePath": "2.  18-415 Bottles /9. Round 78ml/1. Round 78ml PSD/56. GBRnd78SpryCu.psd",
+      "sourceSha256": "cf41faee06d728825a6ec50d32e5671e3ec223f5b60d7d8cd8712754083bc656",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8394,
+            "semiTransparentPixels": 8673,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9323,
+            "semiTransparentPixels": 8495,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.407,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "d4b8bbd2a53b3a9b6403a3efcd23c2090cebd6cd5bfabae046fa352988a4b2fa",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBRndFrst78AnSpTslGl.psd",
+      "sourceSha256": "2c5a3bee4cc072451f7eb0372ed4e4d167e417023f8869163f0ed99903c9d38c",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8641,
+            "semiTransparentPixels": 3107,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9051,
+            "semiTransparentPixels": 8153,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.005,
+          "tailOver40": 0.000005
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "7784f0e4c86545486d689e4c89d15e018e3ef6b60cd6eedd63029b05ae9a4528",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBRndFrst78AnSpTslIvyGl.psd",
+      "sourceSha256": "22d564f27356c577e33d27443f00112fbdeaed3fb79c772b858d8ee692f7b79b",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8641,
+            "semiTransparentPixels": 2937,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9052,
+            "semiTransparentPixels": 7507,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.8701,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslIvySl",
+      "status": "candidate",
+      "plateSha256": "ec6126248ae9dde90080662d2129d497d0b1031c2f1b9c03cc736bafc9436840",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBRndFrst78AnSpTslIvySl.psd",
+      "sourceSha256": "0c96ec065bd40c7381eacf5ecbb35dbd61607c6d4c8b5a2e1068f88995d64b42",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8641,
+            "semiTransparentPixels": 2989,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.906,
+            "semiTransparentPixels": 6843,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.8575,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "67bcf3be8ba2b39771627d615e1697d54629b352fc02f9dd735a52cacb2575a9",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBRndFrst78AnSpTslLvn.psd",
+      "sourceSha256": "58fcda761c05094fac7c665aeee0b812f4d223a6ab239e86c2bcf2696c82e77f",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.897,
+            "semiTransparentPixels": 2244,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9182,
+            "semiTransparentPixels": 55668,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.1792,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslMtSl",
+      "status": "candidate",
+      "plateSha256": "169f26d03f1f38542b83a84ee3e9754bfd4a094370ab6c55019edc59bbe55d1d",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBRndFrst78AnSpTslMtSl.psd",
+      "sourceSha256": "bea32dcf6bf246debed8e38dc5035ac52075b61e8d6f4017e82b89b3d8ea555d",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8642,
+            "semiTransparentPixels": 2880,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9025,
+            "semiTransparentPixels": 8366,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.6189,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "ebb4202bc19d5041961567e973ccf1af3094146c172a39fb7e17bdd5cbaf601e",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBRndFrst78AnSpTslPnk.psd",
+      "sourceSha256": "98b37fd5247122fb2dfd7c06ffa3ae0222194e4eb94649111dda12eb01a19a66",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.9139,
+            "semiTransparentPixels": 2411,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9381,
+            "semiTransparentPixels": 4522,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 2.028,
+          "tailOver40": 0.000042
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "79bb837c98a0583a0dea0f79206540314f6656620b4841bd5a61fc4f5d0541cd",
+      "family": "Round",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBRndFrst78AnSpTslWht.psd",
+      "sourceSha256": "5869c3c553120f1e28b203d46941cc65b7303ff32905de0420ba7a2e81e165d4",
+      "parts": [
+        "body",
+        "sprayer"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8642,
+            "semiTransparentPixels": 2931,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.904,
+            "semiTransparentPixels": 6442,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5153,
+          "tailOver40": 0
+        }
+      },
+      "origin": "catalog-master-mapping-2026-09-08"
+    },
+    {
+      "websiteSku": "GBSleek8Gl",
+      "status": "candidate",
+      "plateSha256": "7e6f2890944943eca528297f5b3828d638099703f54d371f18b8cfe1c20b9909",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/28. GBSleek8Gl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollBlkDot",
+      "status": "candidate",
+      "plateSha256": "5c0fa126fa09ebbfdcbd0b488a49d0849494bd1056000190d314f5da09250edc",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/26. GBSleek8MtlRollBlkDot.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollBlkSh",
+      "status": "candidate",
+      "plateSha256": "c65d0c076b183ba2b3081137b7fbd3062368d5c3cf92ec875cb8c9e703d5eff9",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/24. GBSleek8MtlRollBlkSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollCuMatt",
+      "status": "candidate",
+      "plateSha256": "68b36fc6760a6a61b7dee40941609e69f8862b0455705b7cdef88953f8294f4e",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/22. GBSleek8MtlRollCuMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollGlMatt",
+      "status": "candidate",
+      "plateSha256": "05a8c83a922013c02c175f21024e7e876948b25ffee35f2174eb9b329a8bfd31",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/16. GBSleek8MtlRollGlMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollGlSh",
+      "status": "candidate",
+      "plateSha256": "9faaa67032c4c0bc1dc2c1ae91f5009f26348de4837e6e038576837a9f360b42",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/18. GBSleek8MtlRollGlSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollPinkDot",
+      "status": "candidate",
+      "plateSha256": "65133d82966ac3615c60f5126b59b07492a6fe222a5c3ea8ab730ca5c011b81f",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/12. GBSleek8MtlRollPinkDot.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollSlDot",
+      "status": "candidate",
+      "plateSha256": "81d7ec03505607b7007fc76a25545230dc9257609fc8018b1c5d84c5f789bcce",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/10. GBSleek8MtlRollSlDot.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollSlMatt",
+      "status": "candidate",
+      "plateSha256": "b115a4f99eedaf66c6ad6d187f58fe761734a61af5198ed0b7cd42a5299d58ba",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/14. GBSleek8MtlRollSlMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8MtlRollSlSh",
+      "status": "candidate",
+      "plateSha256": "3116628eccab7ae3c8a800ad51c7cb5faa0c36ae100edb219a5ec4646949d3a9",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/20. GBSleek8MtlRollSlSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8RollBlkDot",
+      "status": "candidate",
+      "plateSha256": "5c0fa126fa09ebbfdcbd0b488a49d0849494bd1056000190d314f5da09250edc",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/27. GBSleek8RollBlkDot.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8RollSlSh",
+      "status": "candidate",
+      "plateSha256": "eba4aeaf23c4f5473f952f3e5b990ba0da2c9374ecac78ad8ca6253a087b1e4f",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/21. GBSleek8RollSlSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8Sl",
+      "status": "candidate",
+      "plateSha256": "e706503bd881f21a3ed9c2936e813ee028805bfc05228ce5440c6d9056c066d3",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/29. GBSleek8Sl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SpryBlkMatt",
+      "status": "candidate",
+      "plateSha256": "e5a99760e9355be2fa2d83420c0814ae2a6cda9d375b8be54ff9c5b2e82c84eb",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/3. GBSleek8SpryBlkMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SpryBlkSh",
+      "status": "candidate",
+      "plateSha256": "5d76ce1fc6172e3ce7113b7f45c60c87fd20b728085b3748031a6cd6a86bb114",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/4. GBSleek8SpryBlkSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SpryBluMatt",
+      "status": "candidate",
+      "plateSha256": "969043386cc7e651de5f6e101e9856266193fa15f18eef852daa62296223711d",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/5. GBSleek8SpryBluMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "797fca2941bcfa28a50df05f4fdf21cfe57b1448f0b921d93d64402583902c39",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/7. GBSleek8SpryGlMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "fe4eca5c3560a10f1ac88814550ea042779fda7fe3c7fe7aae11691f8dfa8087",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/6. GBSleek8SpryGlSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "be40fb610c77f036b62e9a167ba66be63a08500a1672fdcd46ed26f55800a20e",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/8. GBSleek8SprySlMatt.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8SprySlSh",
+      "status": "candidate",
+      "plateSha256": "e4624b95e211f27c36c649ab113b5ebec4bea9c3d9ea7b94e1b176ddeaf7076c",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/9. GBSleek8SprySlSh.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSleek8WhtSht",
+      "status": "candidate",
+      "plateSha256": "7e1baa7913a1e21d5e97dffd07bd79ef5f18f306e4dbc565ddcf788e9a2256ef",
+      "family": "Sleek",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Sleek 8ml (Capped) PSD/2. GBSleek8WhtSht.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "ab25c9b33f4d077ba06ab0b769faba3b7eb2dfa1c56711ee6b1e9736fc722634",
+      "family": "Sleek",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBSlk100AnSpTslBlk.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "78ad7d23361f496efa26c07a97e4881568e0dc4f9e5fb8c992f5565c9a5ffc08",
+      "family": "Sleek",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBSlk100AnSpTslGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "2425c7c8d6760e8e06eb0ef5087fff52c9c1ffd1124ea6738cedb4972bbd9ef7",
+      "family": "Sleek",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBSlk100AnSpTslIvyGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "8de1cb99ff40a07be45c5f2b7bb29edca76a4115529002929cebf1ce2311254b",
+      "family": "Sleek",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBSlk100AnSpTslLvn.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "068f365960d3403ba9a3d776d7c289be272db33aa0e890798fb5529ca23e43a3",
+      "family": "Sleek",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBSlk100AnSpTslPnk.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100AnSpTslRed",
+      "status": "candidate",
+      "plateSha256": "9c5a68a88e86431758ce2398132518fa4fdf1222d34a3b5a9a8e14b5fcc9ed65",
+      "family": "Sleek",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBSlk100AnSpTslRed.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100SpryCu",
+      "status": "candidate",
+      "plateSha256": "a68a2ae80fe69b8f81dc9b5688adbbaf0aa1bb8674355785a66d56426f174701",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/56. GBSlk100SpryCu.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100SpryMtGl",
+      "status": "candidate",
+      "plateSha256": "67a8468358359739d0e3ae4ce65ec0d5afc3a35b79bee17dbb6b514c4e015009",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/11. GBSlk100SpryMtGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100SpryMtSl",
+      "status": "candidate",
+      "plateSha256": "bb1c9a9c2aea36570ec5c084349379c3b775ae77e537dcb8f493c2abbcc6b83f",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/24. GBSlk100SpryMtSl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100SpryShnGl",
+      "status": "candidate",
+      "plateSha256": "a0a4b308f86b2763ca4db95a5b1970f31f1b11d207a6c1578674484f25e6fe53",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/17. GBSlk100SpryShnGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk100SpryShnSl",
+      "status": "candidate",
+      "plateSha256": "50a11e4fee73d35a65a7f5f34098b4b6beac77a425357806ae45598b86a74886",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/30. GBSlk100SpryShnSl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk50SpryCu",
+      "status": "candidate",
+      "plateSha256": "326aead0ce3ba4b10edf88b538cd43e6ba42f18fda12653ebe4d8a5d4781cebb",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/56. GBSlk50SpryCu.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk50SpryMtGl",
+      "status": "candidate",
+      "plateSha256": "1fb27e98b0a9cc4d2561ee26802a193af071931e5fd4afdff14e74bf4ec65912",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/11. GBSlk50SpryMtGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk50SpryMtSl",
+      "status": "candidate",
+      "plateSha256": "62b4754c79a800aa616cbf9de1a23f629db4a09a8f2bbfc7932bacf279dc26de",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/24. GBSlk50SpryMtSl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk50SpryShnBlk",
+      "status": "candidate",
+      "plateSha256": "f2cb29f52ba37208dfe4378f680d556f939e7501f00957a898d066edef32787b",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/21. GBSlk50SpryShnBlk.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlk50SpryShnGl",
+      "status": "candidate",
+      "plateSha256": "f10d3de5ce8e6d96e9b1793dd827d469806fee7d5f709cdcac13ca62c4695edc",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/17. GBSlk50SpryShnGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100LtnClOvrCap",
+      "status": "candidate",
+      "plateSha256": "239057425508091f997730d1df2ee2559fd7f25fcb2f84a746b9238f37eee3eb",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/28. LBSlk100LtnClOvrCap.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100LtnCu",
+      "status": "candidate",
+      "plateSha256": "da6c248caa72255175230121d1469d51f4e200d23a7ca649e0951a506d731be4",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/58. LBSlk100LtnCu.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100LtnMtGl",
+      "status": "candidate",
+      "plateSha256": "a6e5394d16069f6f3b22c355c829dae68370847eed3a3ae6d7634e02b9186342",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/12. LBSlk100LtnMtGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100LtnMtSl",
+      "status": "candidate",
+      "plateSha256": "4d71c7d81f87b60f697b0a6f096bd8ead8b0b190b374628554f09cee22708b98",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/26. LBSlk100LtnMtSl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100LtnShnGl",
+      "status": "candidate",
+      "plateSha256": "1d27199af217bcfeb27d350dd9d4eb6d23537a5014db2a370a9ba8302cad3d35",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/18. LBSlk100LtnShnGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100LtnShnSl",
+      "status": "candidate",
+      "plateSha256": "e7cc5f1972d0d5fe24e26f34d6c5e170debf20edae9e60732231de7d7e038c9a",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/32. LBSlk100LtnShnSl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk100WhtRectClOverCap",
+      "status": "candidate",
+      "plateSha256": "d28055e3584d932ca57d87dfb7c1bc38d69e0e28e15f357679fa747a31cda279",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /13. Sleek 100ml/1. Sleek 100ml PSD/51. LBSlk100WhtRectClOverCap.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk50LtnClOvrCap",
+      "status": "candidate",
+      "plateSha256": "489b7ce6b6e4180406f272b1bce701d6555b04d2d1a9ab9a7820a869552313ae",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/28. LBSlk50LtnClOvrCap.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk50LtnCu",
+      "status": "candidate",
+      "plateSha256": "161431645d56524db896dcb711a8ed03194cf7c34b3dcd84d384bc33eb3ade49",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/58. LBSlk50LtnCu.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk50LtnMtGl",
+      "status": "candidate",
+      "plateSha256": "35b079d7acaaefb575e018978c2563f7fe5c23afb3202b54f404eea39d135394",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/12. LBSlk50LtnMtGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk50LtnShnBlk",
+      "status": "candidate",
+      "plateSha256": "12c4b60b9ddce9abbe4cbae3cc6275f8f74b2c715d74ad3c181cda967cef7378",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/22. LBSlk50LtnShnBlk.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk50LtnShnGl",
+      "status": "candidate",
+      "plateSha256": "6ebf0ded51c5e18b1f862ccbf314f5caaa73f6ce1dea6ea7641c267cb11d38cf",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/18. LBSlk50LtnShnGl.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "LBSlk50WhtRectClOverCap",
+      "status": "candidate",
+      "plateSha256": "05c98c03af93250437f2ddab6338b86cf0f72fedcd60dc305429014c25b86ef9",
+      "family": "Sleek",
+      "sourcePath": "2.  18-415 Bottles /12. Sleek 50ml/1. Sleek 50ml PSD/51. LBSlk50WhtRectClOverCap.psd",
+      "origin": "sleek-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "3892bbdd88115656bf7abbcd012524aaa11a7eb5d54f188dccfd7625bd4f9df9",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBSlm100AnSpTslBlk.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "4384c4195457210210274666e57781de2c1fa5781f0de82f7147e4b33c44fe5f",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBSlm100AnSpTslGl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "1d645615c3a87d644b4847af45da4a485e4567f2aa788bec1277bfa90b4cd782",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBSlm100AnSpTslIvyGl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslIvySl",
+      "status": "candidate",
+      "plateSha256": "2085fcf1802bbdcda3d0255d13bfe2fc3c1dae79dbd32cef51c1ba1983186f5a",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBSlm100AnSpTslIvySl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslMtSl",
+      "status": "candidate",
+      "plateSha256": "4f7b940c798d2cd6154c8ddcc95b7a2b2a59669ace658e35fe342286f2f6c35a",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBSlm100AnSpTslMtSl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "afe6b81ee6ef06672eb4c351161edb5273f416a002268687564d10daebfb2da5",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBSlm100AnSpTslPnk.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslRed",
+      "status": "candidate",
+      "plateSha256": "d9ee349936d085b9c6f5d3a8ee218cea9bdd3d2250c51257bb3635f7213e9a4d",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBSlm100AnSpTslRed.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "1967788e51d6bbe5b2e2bb6bbbee22a9a433610c2e75a15e20ea12a355c48d20",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBSlm100AnSpTslWht.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm30DrpCu",
+      "status": "candidate",
+      "plateSha256": "51f6499f2cc94d2b69d0337e606084c880ea9d683d1086a98e04c53819f8804d",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /14. Slim 30ml/1. Slim 30ml PSD/44. GBSlm30DrpCu.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslBlk",
+      "status": "candidate",
+      "plateSha256": "91f0455fb85093aab1772120add8f8444b9d1566096368835064f93b6a96b487",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBSlm50AnSpTslBlk.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslGl",
+      "status": "candidate",
+      "plateSha256": "382ed811df2525237fcbb52910f020dd0f9c8874f12912840ac4a5c0371209f9",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/50. GBSlm50AnSpTslGl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslIvyGl",
+      "status": "candidate",
+      "plateSha256": "a862883572f1f986b5d38df8db36640986d44c8c83932247838e96897744f357",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/43. GBSlm50AnSpTslIvyGl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslIvySl",
+      "status": "candidate",
+      "plateSha256": "1b358d5d38f55b3e897299cfbed3a44188b1abbd4e3ef9acdef2b89b433ab829",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/44. GBSlm50AnSpTslIvySl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslLvn",
+      "status": "candidate",
+      "plateSha256": "ebf9e22082b605d5b42c8b271ecd1631728add0dcb9650ea7259078d5d5f3ae0",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/42. GBSlm50AnSpTslLvn.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslMtSl",
+      "status": "candidate",
+      "plateSha256": "0afa9eff1f7f67904ad8ecfe13cd4684c48f9af9dc1f5c5421cfb72dce4954b3",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/49. GBSlm50AnSpTslMtSl.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslPnk",
+      "status": "candidate",
+      "plateSha256": "00d9977e8aceaa7d5535d0fae70b56b5724c5defbd797e753b3bdb8ed8336e0f",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/46. GBSlm50AnSpTslPnk.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslRed",
+      "status": "candidate",
+      "plateSha256": "5f7b4f946f6a363f2a8547e6419fec7e9f2e9f0a8af0f14bf8e5e8c89ce86eee",
+      "family": "Slim",
+      "sourcePath": "2.  18-415 Bottles /15. Slim 50ml/1. Slim 50ml PSD/47. GBSlm50AnSpTslRed.psd",
+      "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBSlm50AnSpTslWht",
+      "status": "candidate",
+      "plateSha256": "1388d59abd5802827c53127e1fcb9e2b5a4a4242928e6a4ca2b8a2ba969ac971",
+      "family": "Slim",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBSlm50AnSpTslWht.psd",
+      "origin": "slim-master-mapping"
+    }
+  ]
+}

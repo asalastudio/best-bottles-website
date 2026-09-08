@@ -1,0 +1,286 @@
+{
+  "GBSlm100AnSpTslBlk": {
+    "sourceSha256": "0bd89f7a5b0339e198cfa487e9459c8dcceb5de9f820e592826724b8b0e8989c",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslGl": {
+    "sourceSha256": "0b37ff623ef30e65d5fb79c6aeeb2f80c67474074b4a698f84fb541053f679c0",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslIvyGl": {
+    "sourceSha256": "529b03131c427a9e2c547ef01dcf8f092b3442dbad8391ff8b46f7e17790f8c0",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslIvySl": {
+    "sourceSha256": "6dcce2b632bd8ba04103be04b9471aa8180186c09b2d68f6a15e7ae4c5cf97af",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslMtSl": {
+    "sourceSha256": "93b0dc3a6cd6eb57a6583443d069f11eeae3b2704c79c73d50dbd6f7841c5ee2",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        4,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslPnk": {
+    "sourceSha256": "9aacbfb27bdde2de03f999e29913ff4a487cd3c806904c7ed838750dcb9bbb21",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslRed": {
+    "sourceSha256": "9db001510251a9e9a3fef5a95f6330db161c9cf7d5120ffdd5096e49a82688be",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm100AnSpTslWht": {
+    "sourceSha256": "b831fcafbb3c73d8db41683baec506be829f7e0e4772ad8968270ad0af89edeb",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1,
+        2
+      ],
+      "sprayer": [
+        3,
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBSlm50AnSpTslBlk": {
+    "sourceSha256": "c7f6366f8bfa34b5aa9e181bf5db997f336b4d595a9848ead06814264b73c076",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        4
+      ]
+    }
+  },
+  "GBSlm50AnSpTslGl": {
+    "sourceSha256": "497ec24a142249c190cd5cb1dc3c74ee58bb28f7b143208385b453fefc8a47be",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslIvyGl": {
+    "sourceSha256": "f259690576f2039f9cf4d7291f49a8822ecc04483d22b7bd11cc4859edd5b086",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslIvySl": {
+    "sourceSha256": "aadd6dda5176f4953ade7f380268beacf886fd300f83a9bbdc90490fbc8fd161",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslLvn": {
+    "sourceSha256": "b954eb278d4a55b0349c9e985b0c8b50f6ae7100c2971ddee7f8ae1e45e500b4",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslMtSl": {
+    "sourceSha256": "68d8c95df971ca8454203d369560f3408f1d5e4699ee6f940fbc5c2dcfa5c56e",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslPnk": {
+    "sourceSha256": "7222c1ed19b63b801b37aa7dcae393b65746ec9234cd52305237a1bccb67a5ce",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslRed": {
+    "sourceSha256": "e01138aa653767113823c537d4dd0807369de40220b7340a907c4cf009d93f01",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm50AnSpTslWht": {
+    "sourceSha256": "0af787a39d116e639455f19a5562cb07a5953f762c07e1c1453409da3d9fe741",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBSlm30DrpCu": {
+    "sourceSha256": "b1b2e3921887737cf1219de735b081ae550f2698f8b151d4fbb6c66f4636721f",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/slim-layers-01.jpg through slim-layers-03.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "fitment": [
+        2,
+        3
+      ]
+    }
+  }
+}

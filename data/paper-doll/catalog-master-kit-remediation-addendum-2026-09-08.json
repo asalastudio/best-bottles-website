@@ -1,0 +1,626 @@
+{
+  "generatedAt": "2026-09-08T20:14:04.438Z",
+  "publicationStatus": "visual-review-only",
+  "rows": [
+    {
+      "websiteSku": "GBCrcl100AnSpTslBlk",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBCrcl100AnSpTslBlk.psd",
+      "sourceSha256": "891ae9611a4111f6102b0564c26fae2a74265e28ab99db83022da50d9aff8ba1",
+      "plateSha256": "fe956ebfa0bde38811112b5054482c634c76f4b7d0acfd813825f3ca41b13f07"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslIvySl",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrcl100AnSpTslIvySl.psd",
+      "sourceSha256": "bb6b9cb5e63806ce8cbb7846a98f876309e59adf5bcfb226a687d4ef6a99a959",
+      "plateSha256": "b805393388cffa23ba460a29bdf854d5b52172abe5a048e0084af94c617f7914"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslMtSl",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrcl100AnSpTslMtSl.psd",
+      "sourceSha256": "6b8a70720778a4e47b8d32d6d8f200b3afaffb05d4dc262243012f0ed4172b9f",
+      "plateSha256": "622fef0e49491f34285f1dea71acdf742ed90103793264ed5911d4ce413a6ae6"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslRed",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBCrcl100AnSpTslRed.psd",
+      "sourceSha256": "52264318f449c8b76c4de221733d9fb4c107f2c81a43a2558c79453dc0d7ceaa",
+      "plateSha256": "55f2423e01abd37df3c88bcf1f0daeab07ef2a438706e446db42e08fe95a918d"
+    },
+    {
+      "websiteSku": "GBCrcl100AnSpTslWht",
+      "family": "Circle",
+      "familyId": "circle-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBCrcl100AnSpTslWht.psd",
+      "sourceSha256": "3f3ee866adda04627481f7ef6b2d4c84e07cd03a17a05fdbb1f54d82acd2bf36",
+      "plateSha256": "06b42b807b325905e7aed01163be87b499c0428236998f5e1039a6bc5f472c1d"
+    },
+    {
+      "websiteSku": "GBCrcl15MtlRollBlkDot",
+      "family": "Circle",
+      "familyId": "circle-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.9138, 'semiTransparentPixels': 5257, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/17. Circle 15ml/2. Circle 15ml (Capped) PSD/26. GBCrcl15MtlRollBlkDot.psd",
+      "sourceSha256": "ff1feb33735a659b5e5af4551b24da3a38589a1b84198eee1fbaf03d2cfd7e58",
+      "plateSha256": "efca7efe094778e339b9dff36f98302eb001fada58458fedcab34648a1881682"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslGl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBCrclFrst100AnSpTslGl.psd",
+      "sourceSha256": "bcd627aa8f443039d9f8e0036d90e21fd7861fce454b5ab4c3aac67ff329d338",
+      "plateSha256": "240b148a750ea4d387bdb223d8d3bc177d81aa469673a8bd71606a27748341a0"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslIvyGl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBCrclFrst100AnSpTslIvyGl.psd",
+      "sourceSha256": "a0aa951a9a0ed901d8611dbd9211a0022a454c8725eb8ee06b7290fd6243075b",
+      "plateSha256": "dc2ebfd397071acd5499af7134925de2755bee3b32dd920b4ffe25fe4b2d8365"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslIvySl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrclFrst100AnSpTslIvySl.psd",
+      "sourceSha256": "ef157908a40c6781aa6c8b72a3cb6bff3870d0e7f0b3f00e60180440d4864e51",
+      "plateSha256": "a24cf3266c346c98807a3fef6d8171a93524c3e48d59d678388da786b786e044"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslLvn",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBCrclFrst100AnSpTslLvn.psd",
+      "sourceSha256": "72ba154b0459a1768b3e98f3b720d9e951d20cffbb3ca4b82813ea3b6b8b2a41",
+      "plateSha256": "11ae9c129d16bdaf970060179d78a49bc808b2152eca789ffeed9176b6bc0649"
+    },
+    {
+      "websiteSku": "GBCrclFrst100AnSpTslMtSl",
+      "family": "Circle",
+      "familyId": "circle-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrclFrst100AnSpTslMtSl.psd",
+      "sourceSha256": "0605caa119f517f364878945865e1fb71e4ee24aaaf2c5292736688f6b11ddd7",
+      "plateSha256": "f99e97e06433e1b845c56f6113aecfbfcb687c23705a3272f46b82045890aa66"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslBlk",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBCrclFrst50AnSpTslBlk.psd",
+      "sourceSha256": "c18c94bd54f708a1797cf91ca6f837fc3ba6bad3e1eabb0f088be46ccae43512",
+      "plateSha256": "93f7be45cafef23d8ffecf2eed4e5bacfd615611903afb3472fa2441c697cb2c"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvyGl",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd",
+      "sourceSha256": "cb3ea82c3146b8ef8ecf3b901768c5c321fcc3015527b9c89352bc53cd1b8b3d",
+      "plateSha256": "c333d50f94a7d254fa3d35ec0271d5f065493d2fb59d5e5517b72dcb5de310ee"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvySl",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBCrclFrst50AnSpTslIvySl.psd",
+      "sourceSha256": "519780b9347e558e52380c5e45b95cd964cd245e65fb81808f5bc67b8d0f3f8a",
+      "plateSha256": "4a4c6ef35aad6cbfffeaf4834e71ab1b3e539f30365ad8df2815d3fb35403b9c"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslLvn",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBCrclFrst50AnSpTslLvn.psd",
+      "sourceSha256": "4c72f9041fa29a66ce6ff964b942c7f7c5f007a9ae243a5c14c6f509b206fe38",
+      "plateSha256": "94f59734cd4f9d433887bbbb433313a984dfbd623b21f6106c6df1c211617c8e"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslMtSl",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBCrclFrst50AnSpTslMtSl.psd",
+      "sourceSha256": "d8b294b5844a6aaf173605602e8fa039fd579069c1eb055a38145132e587002f",
+      "plateSha256": "66714d327a30acfc9ac87fe62f15dd51f1926849698b98a4073edb6de4e5b99b"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslPnk",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBCrclFrst50AnSpTslPnk.psd",
+      "sourceSha256": "31f05b46b1ee42d78bb39d96ee2fd6b98207318af25f5ea93e071f6786814dd9",
+      "plateSha256": "aa5b521f7aada4d4d8280163fa39b538f9df5efe4a95ca50aeea803a246fba09"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslRed",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "interleaved physical-part layers need review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBCrclFrst50AnSpTslRed.psd",
+      "sourceSha256": "7ec1f44a0357dea44eaaa61d9ffef052d537791f98b4644ce6385b6d33bc9790",
+      "plateSha256": "2eb41b39b097c29ded105fe452a256f13838b9e2c0c422b5e70564e00f8503f3"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslWht",
+      "family": "Circle",
+      "familyId": "circle-50ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBCrclFrst50AnSpTslWht.psd",
+      "sourceSha256": "9ab4e7feaff92c844bfe857631c95c2ab98c2c27dc02772862c6f66e7c6122cb",
+      "plateSha256": "1dcfc1f2e0d67b8d87089826f500bb011c7af2634ea15081bf4c9a2efd1a053b"
+    },
+    {
+      "websiteSku": "GBElg15MtlRollBlkDot",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.7233, 'semiTransparentPixels': 8124, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/26. GBElg15MtlRollBlkDot.psd",
+      "sourceSha256": "220abf36082e3950d74e88887f1c223487e659a6d12f085a463a6141a7eb0a56",
+      "plateSha256": "3db9750d16b930742df760dbc29cc46d87479c1ff9e64d30fcb3f9bfc1d6bed4"
+    },
+    {
+      "websiteSku": "GBElg15SpryCuMatt",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-clear-13-415",
+      "status": "held_with_reason",
+      "reason": "sprayer alpha gate failed: {'transparentFraction': 0.911, 'semiTransparentPixels': 7325, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Elegant 15ml (Capped) PSD/30. GBElg15SpryCuMatt.psd",
+      "sourceSha256": "0831b5e71fd7385fca09f01662313acb9f63eba901c36ada9e16a64d3fcd669c",
+      "plateSha256": "a40cd91f1f9aee5f8bae54d13d6e8aa2d11f2c807bd6ecb10ce5f1c83a52573b"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslPnk",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBElgFrst100AnSpTslPnk.psd",
+      "sourceSha256": "c354a9206856e39cb979d50d0e4f315bc179b35220f8752017bfccb49ebd0880",
+      "plateSha256": "616a7c617ca16759252216e48d7cc2d18d60aef0641c83d66d2278e0d5ef7fdb"
+    },
+    {
+      "websiteSku": "GBElgFrst100AnSpTslRed",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 2 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBElgFrst100AnSpTslRed.psd",
+      "sourceSha256": "18b254ac4620ac633670dc83276809d55152aae65b6eca420ed9d32a8ada35a0",
+      "plateSha256": "1c5a17ac2b954c365c63acbecb6ef33c2ec5f376a7b5710a90471855b71d6df5"
+    },
+    {
+      "websiteSku": "GBElgFrst100SpryShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/30. GBElgFrst100SpryShnSl.psd",
+      "sourceSha256": "c87b87599ba4d8cf427dcb060e5f6ce9f337396b90884f2e5980f1ba17d11ca1",
+      "plateSha256": "5d9e09fcfd590962d8c2e243aa031792eaf41428d4ae835ca2fa0ed4a3bf59db"
+    },
+    {
+      "websiteSku": "GBElgFrst15MtlRollBlkDot",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.725, 'semiTransparentPixels': 7263, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/26. GBElgFrst15MtlRollBlkDot.psd",
+      "sourceSha256": "3f0422f9686bf9c9036bd607c7353195fff904952df56f34a47c65e367c0cbd1",
+      "plateSha256": "56f7e3e31f8206501389004e9fa54cfa1e5963e5c6a1d1dd6148de1fb8f0b3c0"
+    },
+    {
+      "websiteSku": "GBElgFrst15RollBlkDot",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "status": "held_with_reason",
+      "reason": "cap alpha gate failed: {'transparentFraction': 0.725, 'semiTransparentPixels': 7263, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/27. GBElgFrst15RollBlkDot.psd",
+      "sourceSha256": "20b365b49385925e63f7680cc1eedab2b19b9a5f039ee3548b37046e619d4482",
+      "plateSha256": "56f7e3e31f8206501389004e9fa54cfa1e5963e5c6a1d1dd6148de1fb8f0b3c0"
+    },
+    {
+      "websiteSku": "GBElgFrst15SpryCuMatt",
+      "family": "Elegant",
+      "familyId": "elegant-15ml-frosted-13-415",
+      "status": "held_with_reason",
+      "reason": "sprayer alpha gate failed: {'transparentFraction': 0.9218, 'semiTransparentPixels': 3641, 'touchesOwnEdge': True}",
+      "sourcePath": "5.  13-415 Bottles/26. Frosted Elegant 15ml /2. Frosted Elegant 15ml (Capped) PSD/30. GBElgFrst15SpryCuMatt.psd",
+      "sourceSha256": "d7ee87d298ac87ce29709ce7b552bf27299d2cf0e680e3dbacd121fb9bdd3bbc",
+      "plateSha256": "21decdbb90d91ba343e4162f98f5cbbbab9614a965018380223a69e073f5e15e"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryMtGl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/11. GBElgFrst60SpryMtGl.psd",
+      "sourceSha256": "a3409013c720d6f489d5a296c8a4b671131a9ea07721d0ec21023262a916a018",
+      "plateSha256": "a3c252b0af26a219f70f3759445529142d90245a494b73214a449f4bbe10136b"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryMtSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/24. GBElgFrst60SpryMtSl.psd",
+      "sourceSha256": "ec3ab02711bbf8758ddc9238f9ba334c7cf68c0c5edb8767bcb82ea3d20af765",
+      "plateSha256": "d07eb6226e93dbfa5e0e585493aeb40007c3d59e9d1c933d2e87b7162a80cce4"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryShnBlk",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/21. GBElgFrst60SpryShnBlk.psd",
+      "sourceSha256": "fdb1c8a2dac67bcf5bd7dc1b8d7b4264d5261449ca3d73f5d5a1ac52c9fd482d",
+      "plateSha256": "04045c5f7391d623a2066d5d216ad6890677ba664e1b1c3e35689fae40bfa14e"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryShnGl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/17. GBElgFrst60SpryShnGl.psd",
+      "sourceSha256": "58327669a58c0b054cdacde14e3c0d3923be13b8c9ed40ad71b07b9b4123651e",
+      "plateSha256": "6088fefece9bd75fb3a9263a8c5294036fa7a7f3bcdd0fe75b216e104a069139"
+    },
+    {
+      "websiteSku": "GBElgFrst60SpryShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/30. GBElgFrst60SpryShnSl.psd",
+      "sourceSha256": "a1fb46ad8b715006db0cd7a39938992195bda26abc9a00b0a33a2a5c1c54b0b0",
+      "plateSha256": "5554248bddae05ad4cccc55f57c7dc615539ec0b90df01cebcdb126ed2d9f6e3"
+    },
+    {
+      "websiteSku": "LBElgFrst100LtnClOvrCap",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/28. LBElgFrst100LtnClOvrCap.psd",
+      "sourceSha256": "f8404a62793c7b8567312a74505400d4ca024971e2ce5019403595a1e756db53",
+      "plateSha256": "775501c3a9993f2f95e98e87b3185ee54ede4a3b60524773028027547dc97d16"
+    },
+    {
+      "websiteSku": "LBElgFrst100WhtClOvrCp",
+      "family": "Elegant",
+      "familyId": "elegant-100ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "2.  18-415 Bottles /20. Elegant Frosted 100ml/1. Elegant Frst 100ml PSD/53. LBElgFrst100WhtClOvrCp.psd",
+      "sourceSha256": "a8a8eeeb39697abb37c8ef6c79a5857ce8a6111e274868ef14c9c6ab20ab99e8",
+      "plateSha256": "fa348627a1d06f62b621a141b8128bdf8bf6e918a2582362526d478438de6564"
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnClOvrCap",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/28. LBElgFrst60LtnClOvrCap.psd",
+      "sourceSha256": "e7fb9b28afb65ac8a545d4abb9a7886bf1ba875376beb21315cd8032222fbad1",
+      "plateSha256": "e0786e8e17407fc66673b60965ff299ccc60f042247b67d2dc8b1b08d8b89b4b"
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnMtSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/26. LBElgFrst60LtnMtSl.psd",
+      "sourceSha256": "5385df79c9dba99ba25448bab55c106d309c07546314c37079e6a8ba97322b46",
+      "plateSha256": "d07eb6226e93dbfa5e0e585493aeb40007c3d59e9d1c933d2e87b7162a80cce4"
+    },
+    {
+      "websiteSku": "LBElgFrst60LtnShnSl",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/32. LBElgFrst60LtnShnSl.psd",
+      "sourceSha256": "62268d8fee6ee694b62600b10c201addcee78f632213b164943838b27d1bfe4d",
+      "plateSha256": "5554248bddae05ad4cccc55f57c7dc615539ec0b90df01cebcdb126ed2d9f6e3"
+    },
+    {
+      "websiteSku": "LBElgFrst60WhtClOvrCp",
+      "family": "Elegant",
+      "familyId": "elegant-60ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 1 requires source review",
+      "sourcePath": "2.  18-415 Bottles /19. Elegant Frosted 60ml/1. Elegant Frst 60ml PSD/55. LBElgFrst60WhtClOvrCp.psd",
+      "sourceSha256": "2ee20a18170d53bc166edd46f7c489097f1281d0455fff0a2800a89bb27e5f80",
+      "plateSha256": "1319c9b0fa0c1c2f26bf8e50c45b0ffe2a480943f3c10ee77707138ef8ea23f1"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslBlk",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/48. GBEmp50AnSpTslBlk.psd",
+      "sourceSha256": "55ed017ddbdfe6b9b3bdce0971ee0a042d4765cc618484c6c7adbdc04fcb4920",
+      "plateSha256": "b89a4efa4350ab59e8c89c3133ba927d9b6556da933d5c5858278789206c1707"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslGl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/50. GBEmp50AnSpTslGl.psd",
+      "sourceSha256": "add0c3afdf3cc58c6c05e46154ea712e9feb814f58adee5fb93f344dbf5f6b2e",
+      "plateSha256": "fbff546c6d38c1fa13ca5ec8f618ad82a77b01a12d7785e8763282d490199ef7"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslIvySl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/44. GBEmp50AnSpTslIvySl.psd",
+      "sourceSha256": "a94eb861305a7a03ba5b646afdd96ad73ff0e9e3217e82c34cc0072769e718ba",
+      "plateSha256": "48dd8b19351a514d225b45184048f99008688ee2631f5dfea9149d3b40aa3323"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslMtSl",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/49. GBEmp50AnSpTslMtSl.psd",
+      "sourceSha256": "be2b5042af70ac968efc1db2e1a577c9ec0f1aa22f5943f3aa5aa895561ff500",
+      "plateSha256": "7eed9858ac6c60aff26ffb3f993b807bf524475c7f68c61282ebafbaa8b952c5"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslPnk",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/46. GBEmp50AnSpTslPnk.psd",
+      "sourceSha256": "a3371a25c3ffc484729d7ff49d209857a39e98dfde34ed2390e1b94e6ae54966",
+      "plateSha256": "dd489cbe441c996115aa0e09684286c9da82c1413d62f3eb0f92e44ae6eaa773"
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslRed",
+      "family": "Empire",
+      "familyId": "empire-50ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /21. Empire 50ml/1. Empire 50ml PSD/47. GBEmp50AnSpTslRed.psd",
+      "sourceSha256": "b6f7a2ca457c582126f7fa3ee85c929f1f01b6a786ea92b941a308ddd6401dd1",
+      "plateSha256": "6b2edfe1564e97661129080c3c4849a316980604c9f965afcf92da0080dab08b"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslIvySl",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "21. Tassels/Original Tassels/44. GBGrce55AnSpTslIvySl.psd",
+      "sourceSha256": "0ddce28512feb5ebe0cebf2c7a2a06cc45ac0b3919253df53299787dc5f81601",
+      "plateSha256": "a61da535be9107cbfbd5ddc4a9f0e0583dca3caac6488919bdef3a70fa966b4c"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslLvn",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/42. GBGrce55AnSpTslLvn.psd",
+      "sourceSha256": "39334fdf60fb7f5995a53d953c478c449fb46ca6a29aec53cc3776410627f910",
+      "plateSha256": "2a8b1132e9e64ac885598e8946486bf8ec8a60c3e452269d658f8216be7bf2ab"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslMtSl",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/49. GBGrce55AnSpTslMtSl.psd",
+      "sourceSha256": "7638668ccb4b68105c341a4a4e4a1d8c69b3e3283dfffb27a2639145d3040f19",
+      "plateSha256": "ef44f8f39f9c5aef88f74e5978f3903c5bd08e6dca92de98e02fb3b5e87b4352"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslPnk",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/46. GBGrce55AnSpTslPnk.psd",
+      "sourceSha256": "b269995e9ec6da600f1a176a87dfea21fac3a668edcf0f0e96ff7657f4c59080",
+      "plateSha256": "ac846773963520d5b58d3b95ac2006c62c693c666e555f7f320cd8c80ff5f4ab"
+    },
+    {
+      "websiteSku": "GBGrce55AnSpTslRed",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/47. GBGrce55AnSpTslRed.psd",
+      "sourceSha256": "428a4b5e766087148e6dd347a96fe2f82df148e005fd13f595369b7d465cb833",
+      "plateSha256": "9a3535d88a6d8aa0adaae8caa38a7a75cb9a40401c6fe359050546d547a24b53"
+    },
+    {
+      "websiteSku": "GBGrce55RdcrShnBlkTall",
+      "family": "Grace",
+      "familyId": "grace-55ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 2 requires source review",
+      "sourcePath": "2.  18-415 Bottles /29. Grace 55 ml/1. Grace 55ml PSD/2. GBGrce55RdcrShnBlkTall.psd",
+      "sourceSha256": "608046568827df30a048968ff8964aa77c1f0c1c9d99b2df2f5cea1360ace91e",
+      "plateSha256": "7649ff09ba61d5df86d7e4459ca29e317008fd30642963c4ba9d5b2b3f65dfe3"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslBlk",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBRnd78AnSpTslBlk.psd",
+      "sourceSha256": "36651c2713adfa003fdc7cba669fbfcd4bdd21489173eb1f3241e15313caadc9",
+      "plateSha256": "9f8e07cda38afa22452c06d6d893cb15f2a6a3104d8508f9ab46a45e7dd5f248"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/50. GBRnd78AnSpTslGl.psd",
+      "sourceSha256": "58bdd70bce845cd78fce355655f1d93a1db29341cd7f5ba974729f873869cc8a",
+      "plateSha256": "fdcc8cacb4559045799ca1fab56ad7ac55bd6e0270778daed843c0795e10bd90"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslIvyGl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 4 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/43. GBRnd78AnSpTslIvyGl.psd",
+      "sourceSha256": "f3e81c4eb2253bb686a91d4149fa9ed0f4f095bf2a057150bcbb6780311cbe0a",
+      "plateSha256": "7f9f0246ac06040b3b19bc522010a921f570476377bb75af173b3c1a7a5e3ca2"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslIvySl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 4 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/44. GBRnd78AnSpTslIvySl.psd",
+      "sourceSha256": "833ab013ce98e56d1f29f77d36f044768a936374c1f1f877e5aef5aa47e9249b",
+      "plateSha256": "5a1ecf84994cf3bd7ae3f4d4168c175df2ef6dad9b11e46c8e1748ddfdbec49f"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslMtSl",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/49. GBRnd78AnSpTslMtSl.psd",
+      "sourceSha256": "2d2ccd2e4e8c6351f068eaf325b947798cc91d02a11d7aed2a4f0b0e193fa54e",
+      "plateSha256": "cacbba764a0ee9c0af2fe606c2077d1f8ab58af91b09a533085a290d16214e6b"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslPnk",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "hidden layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/46. GBRnd78AnSpTslPnk.psd",
+      "sourceSha256": "2facd8ec81577c4d49d765beb8cc7d428de2a1582f87c4336d942319a239cea9",
+      "plateSha256": "54f85a6a89c610e4b255c3a01c9682a23cd0dde32cdc7e3b0015aaecd9301c8f"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslRed",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBRnd78AnSpTslRed.psd",
+      "sourceSha256": "3590c5e9ae68ae9f04b53fc6aa9ba22f2e1902a9e2e129ad2e7c0776a59b294f",
+      "plateSha256": "c4e8d8997a0f17b73b0f5ddffb050370c581e6c7dbe50352c6f87e548e58ba5a"
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslWht",
+      "family": "Round",
+      "familyId": "round-78ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "non-pixel layer 3 requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/45. GBRnd78AnSpTslWht.psd",
+      "sourceSha256": "95f785070a5d3004f4418ea8dc6972490d3e39b5baed8e2f1eb7315e3ad3c337",
+      "plateSha256": "1faeb0f570f0537f17ce8037551d7379da5cf3a660e1e737292228a70aba8924"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslBlk",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "layer 2 blending/opacity requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/48. GBRndFrst78AnSpTslBlk.psd",
+      "sourceSha256": "53858021e8f6be9041f625758d68ccc73dcd63870b7c69008d83a8c61277215e",
+      "plateSha256": "9d0b088009c469daebaa8198de60ee8cb2b4a89aa9f5b82d98987238e112b63b"
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslRed",
+      "family": "Round",
+      "familyId": "round-78ml-frosted-18-415",
+      "status": "held_with_reason",
+      "reason": "layer 1 blending/opacity requires source review",
+      "sourcePath": "21. Tassels/Updated Tassels/47. GBRndFrst78AnSpTslRed.psd",
+      "sourceSha256": "4a0d06259c5c6eb86cf23863133efaeda756ed9164b55a96f7ad69981dbd7060",
+      "plateSha256": "54c1287de7a823f9f84d56a4bd9cad8ec78d5f70928e6d768deec3c525f80916"
+    },
+    {
+      "websiteSku": "LBRnd128LtnClOvrCap",
+      "family": "Round",
+      "familyId": "round-128ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "pump alpha gate failed: {'transparentFraction': 0.9155, 'semiTransparentPixels': 5770, 'touchesOwnEdge': True}",
+      "sourcePath": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/7.  128ml Round, Ltn & Spry, capped/28. LBRnd128LtnClOvrCap.psd",
+      "sourceSha256": "6f02d7e218d7cd3cd420380851e6b8869fabc5b6e7e6c162c249631d12ff41b7",
+      "plateSha256": "1d86ebcfd2cdd3e8f42936253e24d6244b203ce6ed5db61330b3c2ddad18c664"
+    },
+    {
+      "websiteSku": "GBSlm100AnSpTslLvn",
+      "family": "Slim",
+      "familyId": "slim-100ml-clear-18-415",
+      "status": "held_with_reason",
+      "reason": "explicit component-layer mapping required",
+      "sourcePath": "21. Tassels/Updated Tassels/42. GBSlm100AnSpTslLvn.psd",
+      "sourceSha256": "4bb09acfece574e959b146eeb7c7f4c5bf4a2ab2bf24a9979942d14219ba0c07",
+      "plateSha256": "8f4ec577a1e0a5f282f0ee1ab556607b605c19ec56a77340264245533ff88ccb"
+    }
+  ]
+}

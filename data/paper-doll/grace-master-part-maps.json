@@ -1,0 +1,354 @@
+{
+  "GBGrce55AnSpBlk": {
+    "sourceSha256": "3098e9cb193e41b9e80884ab89d720c7d0933dedf2e2ee711fb8f9b00d411ba0",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBGrce55AnSpGl": {
+    "sourceSha256": "97d104b1cfbccdbf980f268b1e12c2aa6d904d0b9bd897671f8c946b61511517",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBGrce55AnSpPnk": {
+    "sourceSha256": "c6fecb47160007b13090a0c7f9609aa67c4c130f59ce2e4d92801e3852548d9b",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBGrce55AnSpRed": {
+    "sourceSha256": "ad29ec8ebb7dacb6137be22867f3374adede43af6bd00e7ea7ac0aadfc7a24a0",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBGrce55AnSpTslBlk": {
+    "sourceSha256": "a359fb1d39fb7b53fc3c6c1b3c2e32d8fbb6f1236e0c0fee6f4e5223825d4db0",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "GBGrce55AnSpTslGl": {
+    "sourceSha256": "4d9f4bdf4b1f9733f3f5748dcaa7122694a13a0323304006a129d405b0fe74e1",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "GBGrce55AnSpTslIvyGl": {
+    "sourceSha256": "297b2588d327a3ffaccbb5f3a55b5f96cc1554d325dc19f3a0a53d381b68e29c",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4,
+        5
+      ]
+    }
+  },
+  "GBGrce55AnSpTslWht": {
+    "sourceSha256": "5562ac7ceeb269f92fbf5c537d423dd6a6ab242095e4903935666a00864eb71c",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        4
+      ]
+    }
+  },
+  "GBGrce55RdcrBlkLthr": {
+    "sourceSha256": "c7d5ae0aeb7ae93d5ce836bc8a0f1ad10afd43147d318a85d3e42bd54b5e9b89",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrBrwnLthr": {
+    "sourceSha256": "3a4c3100d0f25e3ac0b4b3fdad7fb89725c4fe10f0ccad151b2b7df1c61b1c5c",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrIvyLthr": {
+    "sourceSha256": "9c6c631721a5af2b4b5f73ac19df1d45b9f00456d9ecead1aa084e29ec4e6c54",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrLBrwnLthr": {
+    "sourceSha256": "ea0d7549a774769727067a5e65fcdfe4c47bc1db9dab714e3ee9d255b55d13bd",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrMtSl": {
+    "sourceSha256": "1b181c8acde94aa7dca5963aed9e30f723a8554fbb206df7efdf55da28b77c57",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrMtSlTall": {
+    "sourceSha256": "02e6a6fc7c4e30099e49e022667872a7ea2b6a95b07b6866583d62ddd42658c0",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrPnkLthr": {
+    "sourceSha256": "8dbe1f333530468c1219733c7ffd81129b9a2797d4ec5e222491a5c7c0340f0d",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrShnBlk": {
+    "sourceSha256": "d25cc480a84cf6eeae99853ce7062deed5888daf3ae662462376d72584996d93",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55RdcrShnSl": {
+    "sourceSha256": "12e497cc94330ddbb88458ca7a86f703b3a6ddb8fcf8c4fd6f347ff40393932a",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "reducer": [
+        2
+      ]
+    }
+  },
+  "GBGrce55SpryCu": {
+    "sourceSha256": "68e0a26e7bb94842629926410cc2ef966ae84fac400797b0c3be2bda28295391",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ],
+      "overcap": [
+        4
+      ]
+    }
+  },
+  "GBGrce55SpryMtGl": {
+    "sourceSha256": "8d40bd4802a2aa19e13724a00ed441559e3aef05e3dead7e8312ab39460286b5",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBGrce55SpryMtSl": {
+    "sourceSha256": "186ccf0b0b184c724466cdf5c83e313a47c25c6d952bef2324f92d40d1b90aed",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBGrce55SpryShnGl": {
+    "sourceSha256": "8f724af213cf5007ba3d2e899255a6026e855a679c5786ac7c5086c4d41ccd23",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBGrce55LtnCu": {
+    "sourceSha256": "3c1d333ec329f6d093862fbfe476ee9bc7e40b40b29ca71a943e1a6de03a5c9b",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ],
+      "overcap": [
+        4
+      ]
+    }
+  },
+  "LBGrce55LtnMtGl": {
+    "sourceSha256": "3df51f0008926d67cd92830acddc0227193f2d72d3c339f0d5a43892de3c2d2b",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBGrce55LtnShnGl": {
+    "sourceSha256": "c8a0e30cbc64833358e0b18282cca9123fdab10d08edbd2b1f94e1f8b04dc766",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  },
+  "LBGrce55LtnShnSl": {
+    "sourceSha256": "dcf412e18a6930e90539fe5053fb4578b4297b7c39059126257c61a5c09c901d",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/grace-layers-01.jpg through grace-layers-04.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "pump": [
+        2,
+        3
+      ]
+    }
+  }
+}

@@ -31,11 +31,19 @@ class MasterKitTests(unittest.TestCase):
         self.assertEqual(parts[1]["exploded"]["dy"], 0)
         self.assertEqual(parts[1]["bounds"]["bottom"] + parts[1]["exploded"]["dy"], 425)
 
-    def test_exploded_part_that_would_clip_is_rejected(self):
+    def test_wide_exploded_part_stacks_above_for_shared_autofit(self):
         parts = [{"slot": "body", "bounds": {"left": 100, "top": 100, "right": 900, "bottom": 1060}, "explodeIndex": 0},
                  {"slot": "cap", "bounds": {"left": 20, "top": 20, "right": 800, "bottom": 200}, "explodeIndex": 1}]
-        with self.assertRaises(ValueError):
-            place_exploded(parts)
+        place_exploded(parts)
+        self.assertEqual(parts[1]["exploded"], {"dx": 0, "dy": -124})
+
+    def test_multiple_exploded_parts_line_up_beside_body_at_source_height(self):
+        parts = [{"slot": "body", "bounds": {"left": 350, "top": 250, "right": 650, "bottom": 1060}, "explodeIndex": 0},
+                 {"slot": "sprayer", "bounds": {"left": 430, "top": 80, "right": 570, "bottom": 500}, "explodeIndex": 1},
+                 {"slot": "overcap", "bounds": {"left": 420, "top": 100, "right": 580, "bottom": 430}, "explodeIndex": 2}]
+        place_exploded(parts)
+        self.assertEqual(parts[1]["exploded"], {"dx": 244, "dy": 0})
+        self.assertEqual(parts[2]["exploded"], {"dx": 418, "dy": 0})
 
     def test_render_exploded_applies_horizontal_and_vertical_offsets(self):
         from pathlib import Path
@@ -48,9 +56,24 @@ class MasterKitTests(unittest.TestCase):
             layer=Image.new('RGBA',(1000,1100),(0,0,0,0))
             layer.putpixel((10,20),(255,0,0,255))
             layer.save(root/'parts/part.png')
-            parts=[{'image':'parts/part.png','exploded':{'dx':30,'dy':40}}]
+            parts=[{'image':'parts/part.png','bounds':{'left':10,'top':20,'right':11,'bottom':21},'exploded':{'dx':30,'dy':40}}]
             rendered=render_exploded(parts,root)
-            self.assertEqual(rendered.getpixel((40,60)),(255,0,0,255))
+            self.assertEqual(rendered.getpixel((500,550)),(255,0,0,255))
+
+    def test_render_exploded_autofits_negative_vertical_union(self):
+        from tempfile import TemporaryDirectory
+
+        with TemporaryDirectory() as td:
+            root=Path(td)
+            (root/'parts').mkdir()
+            layer=Image.new('RGBA',(1000,1100),(0,0,0,0))
+            for y in range(100,1000):
+                layer.putpixel((500,y),(255,0,0,255))
+            layer.save(root/'parts/part.png')
+            parts=[{'image':'parts/part.png','bounds':{'left':500,'top':100,'right':501,'bottom':1000},'exploded':{'dx':0,'dy':-600}}]
+            rendered=render_exploded(parts,root)
+            self.assertEqual(rendered.size,(1000,1100))
+            self.assertIsNotNone(rendered.getbbox())
 
     def setUp(self):
         self.foreground = [{"index": 1}, {"index": 2}, {"index": 3}]

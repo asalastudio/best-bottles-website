@@ -1,0 +1,121 @@
+{
+  "GBEmp50AnSpTslBlk": {
+    "sourceSha256": "55ed017ddbdfe6b9b3bdce0971ee0a042d4765cc618484c6c7adbdc04fcb4920",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        5,
+        6,
+        7,
+        8
+      ]
+    }
+  },
+  "GBEmp50AnSpTslGl": {
+    "sourceSha256": "add0c3afdf3cc58c6c05e46154ea712e9feb814f58adee5fb93f344dbf5f6b2e",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "GBEmp50AnSpTslIvySl": {
+    "sourceSha256": "a94eb861305a7a03ba5b646afdd96ad73ff0e9e3217e82c34cc0072769e718ba",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3,
+        7
+      ]
+    }
+  },
+  "GBEmp50AnSpTslMtSl": {
+    "sourceSha256": "be2b5042af70ac968efc1db2e1a577c9ec0f1aa22f5943f3aa5aa895561ff500",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "GBEmp50AnSpTslPnk": {
+    "sourceSha256": "a3371a25c3ffc484729d7ff49d209857a39e98dfde34ed2390e1b94e6ae54966",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "GBEmp50AnSpTslRed": {
+    "sourceSha256": "b6f7a2ca457c582126f7fa3ee85c929f1f01b6a786ea92b941a308ddd6401dd1",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        5,
+        6,
+        7
+      ]
+    }
+  },
+  "GBEmp100AnSpTslGl": {
+    "sourceSha256": "5a197f8b302cdfaa5503acf1b88a181dce4edb7d5dce3e93f6ff3d0d2f340299",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  },
+  "GBEmp100AnSpTslWht": {
+    "sourceSha256": "0c040b351ada9df6c185fe74f2885cd651ba02feffe0d1c23e19f67082f8618c",
+    "reviewedBy": "Codex visual layer review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/empire-new-layers-01.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "sprayer": [
+        2,
+        3
+      ]
+    }
+  }
+}

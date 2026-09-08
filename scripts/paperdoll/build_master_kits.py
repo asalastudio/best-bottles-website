@@ -101,7 +101,17 @@ def place_exploded(parts):
         # heights cannot fit vertically. For a single removable part, place it
         # beside the bottle on the shared baseline, as in the catalog heroes.
         if len(movable)!=1:
-            raise ValueError(f"{part['slot']} exploded bounds would leave the frame; explicit spacing review required")
+            # A photographed spray or lotion assembly can expose both its
+            # fitment and removable overcap as independent layers. Keep each
+            # part at its true assembled Y registration and arrange the full
+            # set beside the bottle. render_exploded() then fits the union into
+            # the shared review frame without changing assembled coordinates.
+            cursor=body['bounds']['right']+24
+            for item in movable:
+                dx=cursor-item['bounds']['left']
+                item['exploded']={'dx':dx,'dy':0}
+                cursor=item['bounds']['right']+dx+24
+            return
         # Preserve the source assembly's vertical registration. The exploded
         # view moves hardware sideways only, so a cap's lower edge continues
         # to show its true shoulder/seat height and does not imply a lower swap
@@ -114,19 +124,35 @@ def place_exploded(parts):
         elif part['bounds']['left']+left_dx>=8:
             dx=left_dx
         else:
-            raise ValueError(f"{part['slot']} exploded bounds would leave the frame; explicit spacing review required")
+            # Wide bodies such as Round leave no horizontal room. Keep the
+            # assembly registration intact and stack the part above the body;
+            # the shared exploded-frame transform fits the complete union.
+            dy=ceiling-part['bounds']['bottom']-24
+            part['exploded']={'dx':0,'dy':dy}
+            ceiling=part['bounds']['top']+dy
+            continue
         if part['bounds']['top']+baseline_dy<8 or part['bounds']['bottom']+baseline_dy>1092:
             raise ValueError(f"{part['slot']} exploded bounds would leave the frame; explicit spacing review required")
         part['exploded']={'dx':dx,'dy':baseline_dy}
 
 def render_exploded(parts, output):
-    """Render the exact exploded offsets recorded for browser review."""
+    """Render the exact exploded offsets, fitting their complete union."""
+    left=min(p['bounds']['left']+p['exploded']['dx'] for p in parts)
+    right=max(p['bounds']['right']+p['exploded']['dx'] for p in parts)
+    top=min(p['bounds']['top']+p['exploded']['dy'] for p in parts)
+    bottom=max(p['bounds']['bottom']+p['exploded']['dy'] for p in parts)
+    scale=min(952/max(1,right-left),1052/max(1,bottom-top),1.0)
+    frame_x=round((1000-(right-left)*scale)/2-left*scale)
+    frame_y=round((1100-(bottom-top)*scale)/2-top*scale)
     exploded=Image.new('RGBA',(1000,1100),'white')
     for part in parts:
         offset=part['exploded']
+        layer=Image.open(output/part['image']).convert('RGBA')
+        if scale != 1.0:
+            layer=layer.resize((round(layer.width*scale),round(layer.height*scale)),Image.Resampling.LANCZOS)
         exploded.alpha_composite(
-            Image.open(output/part['image']).convert('RGBA'),
-            (offset['dx'],offset['dy']),
+            layer,
+            (round(frame_x+offset['dx']*scale),round(frame_y+offset['dy']*scale)),
         )
     return exploded
 
