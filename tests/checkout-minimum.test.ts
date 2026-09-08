@@ -25,7 +25,7 @@ describe("checkout server minimum", () => {
     afterEach(() => vi.unstubAllEnvs());
     beforeEach(() => {
         vi.clearAllMocks(); vi.stubEnv("SHOPIFY_ADMIN_TOKEN", "test");
-        mocks.direct.mockResolvedValue([{ variantId: "1", available: true, price: "20.00" }]);
+        mocks.direct.mockResolvedValue([{ variantId: "1", sku: "A", available: true, price: "20.00" }]);
         mocks.fallback.mockResolvedValue([]); mocks.wholesale.mockResolvedValue(null); mocks.url.mockReturnValue("https://example.com/cart");
     });
     const request = (items: unknown[]) => POST(new NextRequest("http://localhost/api/shopify/resolve-variants", { method: "POST", body: JSON.stringify({ items }) }));
@@ -41,7 +41,7 @@ describe("checkout server minimum", () => {
         expect(response.status).toBe(200); expect(mocks.url).toHaveBeenCalled();
     });
     it("rechecks the minimum after an unavailable line is removed", async () => {
-        mocks.direct.mockResolvedValue([{ variantId: "1", available: true, price: "20" }, { variantId: "2", available: false, price: "40" }]);
+        mocks.direct.mockResolvedValue([{ variantId: "1", sku: "A", available: true, price: "20" }, { variantId: "2", sku: "B", available: false, price: "40" }]);
         expect((await request([{ sku: "A", shopifyVariantId: "1", quantity: 1 }, { sku: "B", shopifyVariantId: "2", quantity: 1 }])).status).toBe(422);
     });
 });
