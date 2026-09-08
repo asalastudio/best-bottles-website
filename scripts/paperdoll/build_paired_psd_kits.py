@@ -124,6 +124,48 @@ def _load_json(path):
     return json.loads(Path(path).read_text())
 
 
+def is_rendered_source_layer(layer):
+    """Return whether a PSD descendant contributes pixels to the rendered source.
+
+    Hidden alternates are common in the master PSDs and do not affect the
+    published composite. They are deliberately ignored; a visible non-pixel
+    layer still requires manual review because it may change compositing.
+    """
+    if layer.is_group() or not layer.is_visible():
+        return False
+    if layer.kind != "pixel":
+        raise ValueError("visible non-pixel layer requires source review")
+    return True
+
+
+def paired_layer_inventory(psd):
+    import numpy as np
+
+    rows = []
+    for index, layer in enumerate(psd.descendants()):
+        if not is_rendered_source_layer(layer):
+            continue
+        if layer.opacity != 255 or str(layer.blend_mode.value) not in ("b'norm'", "norm"):
+            raise ValueError(f"layer {index} blending/opacity requires source review")
+        image = layer.topil()
+        if image is None:
+            continue
+        rgba = image.convert("RGBA")
+        alpha = np.asarray(rgba.getchannel("A"))
+        fraction = image.width * image.height / (psd.width * psd.height)
+        background = fraction >= 0.98 and float((alpha >= 250).mean()) >= 0.98
+        pixel_hash = hashlib.sha256(str((image.size, image.mode)).encode() + image.tobytes()).hexdigest()
+        rows.append({
+            "index": index,
+            "name": layer.name,
+            "bounds": list(layer.bbox),
+            "background": background,
+            "pixelHash": pixel_hash,
+            "size": list(image.size),
+        })
+    return rows
+
+
 def _render_part(psds, spec, translation, out_size, transform):
     from PIL import Image
 
@@ -156,7 +198,7 @@ def build(args):
     here = Path(__file__).resolve().parent
     sys.path.insert(0, str(here))
     from build_cyl9_kits import alpha_gate, save_part
-    from build_master_kits import layer_inventory, parity
+    from build_master_kits import parity
     from family_batch import MASTER, checked_source
 
     batch = args.batch.resolve()
@@ -204,8 +246,8 @@ def build(args):
                     raise ValueError("uncapped source hash drift")
                 psds["off"] = PSDImage.open(off_path)
 
-            on_layers = layer_inventory(psds["on"])
-            off_layers = layer_inventory(psds["off"]) if "off" in psds else []
+            on_layers = paired_layer_inventory(psds["on"])
+            off_layers = paired_layer_inventory(psds["off"]) if "off" in psds else []
             on_body = next(layer for layer in on_layers if layer["index"] == recipe["onBodyLayer"])
             translation = (0, 0)
             if "off" in psds:

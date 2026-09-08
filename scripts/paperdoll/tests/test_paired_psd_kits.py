@@ -103,6 +103,27 @@ class PairedPsdKitTests(unittest.TestCase):
         self.assertLessEqual(frame["right"], 976)
         self.assertLessEqual(frame["bottom"], 1076)
 
+    def test_hidden_psd_layers_are_ignored_but_visible_non_pixel_layers_are_rejected(self):
+        module = self.load_module()
+
+        class Layer:
+            def __init__(self, *, group=False, kind="pixel", visible=True):
+                self._group = group
+                self.kind = kind
+                self._visible = visible
+
+            def is_group(self):
+                return self._group
+
+            def is_visible(self):
+                return self._visible
+
+        self.assertFalse(module.is_rendered_source_layer(Layer(visible=False)))
+        self.assertFalse(module.is_rendered_source_layer(Layer(group=True)))
+        self.assertTrue(module.is_rendered_source_layer(Layer()))
+        with self.assertRaisesRegex(ValueError, "visible non-pixel layer"):
+            module.is_rendered_source_layer(Layer(kind="shape"))
+
 
 if __name__ == "__main__":
     unittest.main()

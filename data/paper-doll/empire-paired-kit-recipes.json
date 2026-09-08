@@ -1,0 +1,843 @@
+{
+  "family": "Empire",
+  "cohort": "Exact-current Empire PSD kits with fused atomizer assemblies",
+  "reviewedAt": "2026-09-08",
+  "rows": [
+    {
+      "websiteSku": "GBEmp50AnSpTslIvySl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "a94eb861305a7a03ba5b646afdd96ad73ff0e9e3217e82c34cc0072769e718ba",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslPnk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "a3371a25c3ffc484729d7ff49d209857a39e98dfde34ed2390e1b94e6ae54966",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            },
+            {
+              "source": "on",
+              "index": 6
+            },
+            {
+              "source": "on",
+              "index": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslLvn",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "49d70036b3fa9ceeaba52bc0664bc8c64248db49df280915151bf3bec962cf2b",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslIvyGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "80d5fb6d33f8f1236db2fd547c3885b28c30a78c7de28b2704444bc443336854",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            },
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "add0c3afdf3cc58c6c05e46154ea712e9feb814f58adee5fb93f344dbf5f6b2e",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            },
+            {
+              "source": "on",
+              "index": 6
+            },
+            {
+              "source": "on",
+              "index": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "6e2eb33222d913f51089e7dda7cd76af279aa4673423e8ac483a8e57760bc26d",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpRed",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "fcf211b999916d331180ba282c49869596dbfd00e45ba52704380c5a568c05aa",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpIvySl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "7da30728fc4dbf7510f4a2a0361965a553615217871ce68e95ad61bbdbf684e1",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpIvyGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "fa502e31cf69bb4163b9e17f5b68d2fb332fe13574e114670342ac99956adfa7",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpPnk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "34a9e37a77eb3c34806f24e3713891b50a4e57f9ae8a3a778d7b0192cec1c188",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpLvn",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "8dfe2c5a964748f8e059c2aab574cc721d6f5f01e42811a18cbceaf6e22f8988",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "73ebced4a2614f55d066f2466197e8fa9d07563f31319d57eb8e60e949beaed3",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBEmp100WhtClOvrCp",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "6ae9f354dcfc959c01f08e07894a06e7fa754c0ff590aaa0b81e91c184587f01",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslRed",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "b797a1155888e2e2a9c12f6f0c5d1dfac269c5359865e97c55518e0db49a17a7",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslPnk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "2717c20ccae2dc9f13c255e55f28c2714c66cd207b31f483651e3539fe54c1ae",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslLvn",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "2530a6099a76324775db5d0ce383286277dc85cd9747e64161064f9d191e371e",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslIvyGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "dcbd4b2b627da924d9624615180f4c634565af2243c55ba5960d969ef24eb8a0",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "30baf60eca77fae0f91cabff2a3f838dad39886857ba100fe54b4102a3f10b9c",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslIvySl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "05562c6e5af6a31365285cc4c1b9bd6f723f3e06eaa9e2bd393a027e496a494e",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBEmp50WhtClOvrCp",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "e49b8f711a5f9e20a9ad4290d141765b50cea862b95443c96a463b1780152cdc",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp100AnSpTslBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "4cdf76255da2190fe32d22553a4e6cf71a2aa2e41e43986bcc7c695a4c744eb8",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "55ed017ddbdfe6b9b3bdce0971ee0a042d4765cc618484c6c7adbdc04fcb4920",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            },
+            {
+              "source": "on",
+              "index": 6
+            },
+            {
+              "source": "on",
+              "index": 7
+            },
+            {
+              "source": "on",
+              "index": 8
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "5f21e1dd171143a092bbc514d75d7a564f79aac1b46d945ae7fa0ede428144e1",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "be2b5042af70ac968efc1db2e1a577c9ec0f1aa22f5943f3aa5aa895561ff500",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            },
+            {
+              "source": "on",
+              "index": 6
+            },
+            {
+              "source": "on",
+              "index": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "GBEmp50AnSpTslRed",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-08 Empire PSD layer contact-sheet review; atomizer sprayer, bulb, hose, and tassel pixels are fused in the master artwork and retained as one exact fitment assembly; current published front hash is the immutable plate authority.",
+      "onSourceSha256": "b6f7a2ca457c582126f7fa3ee85c929f1f01b6a786ea92b941a308ddd6401dd1",
+      "onBodyLayer": 1,
+      "completeness": "fusedFitment",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "fitment",
+          "layers": [
+            {
+              "source": "on",
+              "index": 5
+            },
+            {
+              "source": "on",
+              "index": 6
+            },
+            {
+              "source": "on",
+              "index": 7
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

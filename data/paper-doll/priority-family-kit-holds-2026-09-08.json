@@ -1,0 +1,209 @@
+{
+  "generatedAt": "2026-09-08",
+  "environment": "Convex development helpful-elephant-638",
+  "publicationStatus": "local-review-only",
+  "counts": {
+    "build-gate": 13,
+    "current-plate-hash": 20
+  },
+  "rows": [
+    {
+      "family": "Elegant",
+      "websiteSku": "GBElgFrst15SpryCuMatt",
+      "holdType": "build-gate",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.9218, 'semiTransparentPixels': 3641, 'touchesOwnEdge': True}"
+    },
+    {
+      "family": "Elegant",
+      "websiteSku": "GBElg15SpryCuMatt",
+      "holdType": "build-gate",
+      "reason": "ValueError: overcap alpha gate failed: {'transparentFraction': 0.9207, 'semiTransparentPixels': 4501, 'touchesOwnEdge': True}"
+    },
+    {
+      "family": "Elegant",
+      "websiteSku": "GBElgFrst15MtlRollBlkDot",
+      "holdType": "build-gate",
+      "reason": "ValueError: paired body bounds have different dimensions"
+    },
+    {
+      "family": "Elegant",
+      "websiteSku": "GBElg15MtlRollBlkDot",
+      "holdType": "build-gate",
+      "reason": "ValueError: paired body bounds have different dimensions"
+    },
+    {
+      "family": "Elegant",
+      "websiteSku": "GBElgFrst15RollBlkDot",
+      "holdType": "build-gate",
+      "reason": "ValueError: paired body bounds have different dimensions"
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "LBCrclFrst100LtnClOvrCap",
+      "holdType": "build-gate",
+      "reason": "ValueError: plate parity failed: {'ok': False, 'mean': 3.8418, 'tailOver40': 0.015351}"
+    },
+    {
+      "family": "Diva",
+      "websiteSku": "LBDiva100LtnCu",
+      "holdType": "build-gate",
+      "reason": "ValueError: paired body bounds have different dimensions"
+    },
+    {
+      "family": "Empire",
+      "websiteSku": "GBEmp50AnSpTslIvySl",
+      "holdType": "build-gate",
+      "reason": "ValueError: visible non-pixel layer requires source review"
+    },
+    {
+      "family": "Empire",
+      "websiteSku": "GBEmp50AnSpTslPnk",
+      "holdType": "build-gate",
+      "reason": "ValueError: visible non-pixel layer requires source review"
+    },
+    {
+      "family": "Empire",
+      "websiteSku": "GBEmp50AnSpTslGl",
+      "holdType": "build-gate",
+      "reason": "ValueError: visible non-pixel layer requires source review"
+    },
+    {
+      "family": "Empire",
+      "websiteSku": "GBEmp50AnSpTslBlk",
+      "holdType": "build-gate",
+      "reason": "ValueError: visible non-pixel layer requires source review"
+    },
+    {
+      "family": "Empire",
+      "websiteSku": "GBEmp50AnSpTslMtSl",
+      "holdType": "build-gate",
+      "reason": "ValueError: visible non-pixel layer requires source review"
+    },
+    {
+      "family": "Empire",
+      "websiteSku": "GBEmp50AnSpTslRed",
+      "holdType": "build-gate",
+      "reason": "ValueError: visible non-pixel layer requires source review"
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollSlSh",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollSlMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollSlDot",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollPinkDot",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollGlSh",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollGlMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollCuMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollBlkSh",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SprySlMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SpryGlSh",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SpryGlMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SpryCuMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SpryBluMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SpryBlkSh",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15MtlRollBlkDot",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15BlkSht",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15WhtSht",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15Sl",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15Gl",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    },
+    {
+      "family": "Circle",
+      "websiteSku": "GBCrcl15SpryBlkMatt",
+      "holdType": "current-plate-hash",
+      "reason": "Recovery plate does not match the current shoulder/color-corrected development front plate."
+    }
+  ]
+}
