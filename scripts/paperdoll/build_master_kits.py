@@ -102,7 +102,11 @@ def place_exploded(parts):
         # beside the bottle on the shared baseline, as in the catalog heroes.
         if len(movable)!=1:
             raise ValueError(f"{part['slot']} exploded bounds would leave the frame; explicit spacing review required")
-        baseline_dy=body['bounds']['bottom']-part['bounds']['bottom']
+        # Preserve the source assembly's vertical registration. The exploded
+        # view moves hardware sideways only, so a cap's lower edge continues
+        # to show its true shoulder/seat height and does not imply a lower swap
+        # position.
+        baseline_dy=0
         right_dx=body['bounds']['right']+24-part['bounds']['left']
         left_dx=body['bounds']['left']-24-part['bounds']['right']
         if part['bounds']['right']+right_dx<=992:

@@ -28,7 +28,8 @@ class MasterKitTests(unittest.TestCase):
                  {"slot": "cap", "bounds": {"left": 399, "top": 122, "right": 602, "bottom": 425}, "explodeIndex": 1}]
         place_exploded(parts)
         self.assertEqual(parts[1]["bounds"]["left"] + parts[1]["exploded"]["dx"], 634)
-        self.assertEqual(parts[1]["bounds"]["bottom"] + parts[1]["exploded"]["dy"], 1061)
+        self.assertEqual(parts[1]["exploded"]["dy"], 0)
+        self.assertEqual(parts[1]["bounds"]["bottom"] + parts[1]["exploded"]["dy"], 425)
 
     def test_exploded_part_that_would_clip_is_rejected(self):
         parts = [{"slot": "body", "bounds": {"left": 100, "top": 100, "right": 900, "bottom": 1060}, "explodeIndex": 0},
