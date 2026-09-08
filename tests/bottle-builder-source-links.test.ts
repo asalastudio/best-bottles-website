@@ -57,8 +57,12 @@ describe("source-reviewed missing short-cap links", () => {
     });
     it("supplements a missing exact cap without changing the original matrix evidence", async () => {
         const { row, component } = fixture(1);
-        const other = { websiteSku: "CP13-415GlSh", graceSku: "other-cap" };
-        const input = { ...row, resolution: "fitment_rule", components: { Cap: [other] } } as CatalogRow;
+        const other: CatalogRow["components"][string][number] = {
+            websiteSku: "CP13-415GlSh", graceSku: "other-cap", itemName: "Shiny gold cap",
+            productGroupSlug: null, shopifyVariantId: null, shopifySellable: null,
+            imageUrl: null, webPrice1pc: null, webPrice12pc: null, capColor: "Shiny Gold", stockStatus: null,
+        };
+        const input: CatalogRow = { ...row, resolution: "fitment_rule", components: { Cap: [other] } };
         const [resolved] = await resolveListedComponents([input], async () => component);
         expect(resolved.resolution).toBe("fitment_rule");
         expect(resolved.components.Cap[0]).toEqual(other);
