@@ -39,6 +39,7 @@ dist/ or legacy manifests ──publish.mjs──▶ Blob objects + productPlate
 | 3b cross-reference | `python3 scripts/paperdoll/xref.py` → `xref.json`, `alias-candidates.json` | |
 | 3c tokens | `python3 scripts/paperdoll/build_tokens.py` → `tokens.json` (Jordan sets `reviewedAt`) | |
 | 3d kit audit | `python3 scripts/paperdoll/kit_audit.py [--family <id>] [--limit N]` → `kit-audit.json` | |
+| paired PSD kits | `python3 scripts/paperdoll/build_paired_psd_kits.py --batch BATCH --published-plates SNAPSHOT --catalog CATALOG --recipes RECIPES --output OUT` | reviewed capped/uncapped layer recipe; review-only output |
 | 4 render | `python3 scripts/paperdoll/build_plates.py [--sku <websiteSku>]* [--family <id>]* [--neck 18-415] [--limit N] [--plan]` → `dist/paper-doll/<familyId>/…`, `dist/paper-doll/manifest.json` | scipy |
 | publish (dry run) | `node scripts/paperdoll/publish.mjs --dist dist/paper-doll/manifest.json [--family <familyId>]` (legacy families: `--from dist/paper-doll/legacy`) | `NEXT_PUBLIC_CONVEX_URL` |
 | publish (write) | `… --apply` | + `BLOB_READ_WRITE_TOKEN`, `BEST_BOTTLES_CONVEX_WRITE_TOKEN` |

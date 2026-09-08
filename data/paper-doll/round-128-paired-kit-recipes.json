@@ -1,0 +1,581 @@
+{
+  "family": "Round",
+  "cohort": "128 mL clear exact-current paired PSD kits",
+  "reviewedAt": "2026-09-07",
+  "rows": [
+    {
+      "websiteSku": "GBRnd128SpryShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "a9635f4c5e845617b713952da0737ed5042652f5d29ac3f7e5743c5f8dcda927",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/29. GBRnd128SpryShnSl.psd",
+      "offSourceSha256": "e5810acc7b0b85dc6fed22a01216f0bcd7a2bc169621f91975b8af831b7c5009",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "GBRnd128SpryMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "78a9a11248ec87e83356ed65c0508cdecf93d9f0af9fadc1e2df6d1b072df3b7",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/23. GBRnd128SpryMtSl..psd",
+      "offSourceSha256": "76797cc625d0f4183248b99c002ddc1f12028345091cf8ede0bb41ee2f2c5dc1",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "GBRnd128SpryShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "8b8e843dd96720f7fe0fcdbe3682627f1cd8a378b17f3c96990367d35353acda",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/19. GBRnd128SpryShnBlk.psd",
+      "offSourceSha256": "1a475046289b7823f15315fca570062411e1b374a53075db4716850947c86ef8",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "GBRnd128SpryShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "98bad51e14d23d3022344167218caecd65512649ead43d78ec7d5a647982abe9",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/15. GBRnd128SpryShnGl.psd",
+      "offSourceSha256": "752f7e58bd79884a668070017903337bc1743f7b2a02e6847d5afa75d926e8c4",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "GBRnd128SpryMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "656233baa5621e55908a45a2307f3baa81bf2e7f7ea6c14e4e081b35ccecd453",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/13. GBRnd128SpryMtGl.psd",
+      "offSourceSha256": "f67d37bd9861a30d33063ea02b10479770b9ec89b2913e8518ff3170f8bb696f",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "GBRnd128SpryCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "ddcefa59429275ad47f9491b7e331db7bf6e74cad02f6d73ba25f11d17a93443",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "sprayer",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBRnd128LtnShnSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "a7c8ab28720e1ecbb4c19e0c89b9b36be729bfc59852b54662bb03752cc236a7",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/31. LBRnd128LtnShnSl.psd",
+      "offSourceSha256": "e424a161334f649ccd321f4137df01c4c671b068ab5c2f4f991539bf120a470e",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "LBRnd128LtnShnBlk",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "052c3a6fddeae59e021e3c660a60bd70121fbf486a80315fa8ed6e9d76fccf86",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/20. LBRnd128LtnShnBlk.psd",
+      "offSourceSha256": "de7021140f65f78c203f207f5dffd353f755e736c35eea4ffab24b573fbc234d",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "LBRnd128LtnMtGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "97333b2a43640f070253288a798f995be23926bb36b109177f8804d56976fa66",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/14. LBRnd128LtnMtGl.psd",
+      "offSourceSha256": "2b08c46848c5328116b6e44f8625e063c085e867b6db976ddfd5f93223ad8fb7",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "LBRnd128LtnMtSl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "2b46b7a81e052ce0a5e16dc45ab4cace9b9e3064cbdbf2bad999d734bbb4b760",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 4,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/25. LBRnd128LtnMtSl.psd",
+      "offSourceSha256": "6d1a90810591bf21a29ef284a83869aa35a00b9aa7f9872aa34b50cb88566418",
+      "offBodyLayer": 2,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "LBRnd128LtnShnGl",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "b10136d31405f0535db09fcd4ec6af673ab26607f493247114e7d5a22ccf21da",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "off",
+              "index": 3,
+              "alignToOnBody": true
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ],
+      "offSourcePath": "2.  18-415 Bottles /7. Round (clear) 128ml /1. Round (clear) 128ml  Psd/16. LBRnd128LtnShnGl.psd",
+      "offSourceSha256": "eb98814cdc036771ab911d642f19f190ce030fe2a3ebe454b99aaad20920358c",
+      "offBodyLayer": 1,
+      "allowBodyRetouchDifference": true
+    },
+    {
+      "websiteSku": "LBRnd128LtnCu",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "a2132f1eeb22e884057c80d6f4a56feaa3c4936724d564502623bb0a39f0437c",
+      "onBodyLayer": 1,
+      "completeness": "full",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        },
+        {
+          "slot": "overcap",
+          "layers": [
+            {
+              "source": "on",
+              "index": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "websiteSku": "LBRnd128LtnClOvrCap",
+      "reviewedBy": "Jordan Richter and Codex",
+      "evidence": "2026-09-07 paired PSD layer contact-sheet review; identical body pixel hash confirms on/off registration; capped PSD is the published plate authority.",
+      "onSourceSha256": "6f02d7e218d7cd3cd420380851e6b8869fabc5b6e7e6c162c249631d12ff41b7",
+      "onBodyLayer": 1,
+      "completeness": "capSplit",
+      "parts": [
+        {
+          "slot": "body",
+          "layers": [
+            {
+              "source": "on",
+              "index": 1
+            }
+          ]
+        },
+        {
+          "slot": "pump",
+          "layers": [
+            {
+              "source": "on",
+              "index": 2
+            },
+            {
+              "source": "on",
+              "index": 3
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
