@@ -61,6 +61,14 @@ describe('approved catalog hero release',()=>{
   expect(getCatalogHero(h.groupSlug,[{websiteSku:'unapproved-other-finish'}])).toBeNull();
   expect(getCatalogHeroProductHref(h,'/products/example?applicator=spray')).toContain(`sku=${h.websiteSku}`);
  });
+
+ it('resolves the verified production slug for the 30 ml Cylinder spray hero',()=>{
+  const hero=getCatalogHero('cylinder-30ml-clear-18-415',[{websiteSku:'GBSpry1ozGl'}]);
+  expect(hero?.websiteSku).toBe('GBSpry1ozGl');
+  expect(hero?.groupSlug).toBe('cylinder-30ml-clear-18-415');
+  expect(hero?.url).toBe('/images/catalog/bone-review/GBSpry1ozGl.fb9ac058faf2.png');
+  expect(getCatalogHero('cylinder-30ml-clear-18-415',[{websiteSku:'GBSpry1ozSl'}])).toBeNull();
+ });
  it('keeps catalog media out of product detail implementations',()=>{
   for(const p of ['ConfiguratorPdp.tsx','mobile/MobileProductHero.tsx','mobile/MobileProductPdp.tsx']) expect(readFileSync(`src/components/products/${p}`,'utf8')).not.toContain('catalog-heroes');
  });
