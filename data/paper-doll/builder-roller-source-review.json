@@ -1,0 +1,236 @@
+[
+  {
+    "sku": "GBTallCyl9MtlRollSlDot",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/10. GBTallCyl9MtlRollSlDot.psd",
+    "sourceSha256": "628ac2467f2810ca3cf13830b98eecbc9a38b18402262daab77b0e17c6a0cb6d",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      336.3409090909091,
+      23.954545454545496
+    ],
+    "outputSha256": "33b5d5b3f945ce13189a8cc1483105995215a135e45ef2825c37919c1ac58733"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollPinkDot",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/12. GBTallCyl9MtlRollPinkDot.psd",
+    "sourceSha256": "6658af6a9f0b29ca6d5ff43ca6c0a5929ca226852e369905776585d93167fb84",
+    "layer": 1,
+    "bodyLayer": 3,
+    "scale": 0.6818181818181818,
+    "offset": [
+      321.8409090909091,
+      24.63636363636374
+    ],
+    "outputSha256": "2b9164d5f9363e3a59fc9f9c856334da4c431f44f1aa9c8aa4657c48231dbd03"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollSlMatt",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/14. GBTallCyl9MtlRollSlMatt.psd",
+    "sourceSha256": "f0ce51a4dec24dd839668792d0e87403aa3ef4119aca1f8d8d46a11ee35f1526",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      314.7045454545455,
+      24.63636363636374
+    ],
+    "outputSha256": "63f11cb2e68afaac162d9813b773dfc26d7cb66ed3786cbdf1bd8b106637fe08"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollGlMatt",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/16. GBTallCyl9MtlRollGlMatt.psd",
+    "sourceSha256": "1ead09e88c42c580eb81e40abdc980e985aed72cfedcfe447fe19ec2a7c8b75c",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      329.3409090909091,
+      24.63636363636374
+    ],
+    "outputSha256": "eb8660aa21f3d29e00f5005854226b111f32abb06e55031591d565b38bb15c26"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollGlSh",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/18. GBTallCyl9MtlRollGlSh.psd",
+    "sourceSha256": "28daf9390f088ca8a904db13f182954ff58866456aacb883fcf8221d9b2d418b",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      336.15909090909093,
+      24.63636363636374
+    ],
+    "outputSha256": "eb8660aa21f3d29e00f5005854226b111f32abb06e55031591d565b38bb15c26"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollSlSh",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/20. GBTallCyl9MtlRollSlSh.psd",
+    "sourceSha256": "ce239a9fc88fbb0483fa7b95ea75237e47dc6980562a3601b07f6d6b2853521d",
+    "layer": 1,
+    "bodyLayer": 3,
+    "scale": 0.6818181818181818,
+    "offset": [
+      335.15909090909093,
+      24.63636363636374
+    ],
+    "outputSha256": "b61fa486767e64538c6abb20063dcc9cdde6f80ba7a64bcfe68919f7475d5eae"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollCuMatt",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/22. GBTallCyl9MtlRollCuMatt.psd",
+    "sourceSha256": "a4f88bcf6e5d0e2fdb355bc5d3bfe250137b5d447fcc1613f7a14a25cd40df9e",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      335.79545454545456,
+      24.63636363636374
+    ],
+    "outputSha256": "6e590fd91a277189694913684d0f3520e47fab56f84a477d8fc08308bcce8b19"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkSh",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/24. GBTallCyl9MtlRollBlkSh.psd",
+    "sourceSha256": "82468a83950e8f9bbef6f0866f82c5d34c7283e7b5eb65a616966ba6e871e7ef",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      335.79545454545456,
+      25.318181818181984
+    ],
+    "outputSha256": "dd84fb6558c1f9f44638c41c8accf0230a665550c7917efc03d650c74017682b"
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "source": "5.  13-415 Bottles/13. Tall Cylinder 9ml/1. Tall Cyl 9ml  (uncapped) PSD/26. GBTallCyl9MtlRollBlkDot.psd",
+    "sourceSha256": "c3907748833354c4f820ecb0c47aabb6e03521d89c151a81191998507c67ff28",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6818181818181818,
+    "offset": [
+      333.97727272727275,
+      26.0
+    ],
+    "outputSha256": "f34941ef658d8b48ca427bb8287c77b606a1857344b23087c6da73433127856b"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollSlDot",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/10. GBTallCylFrst9MtlRollSlDot.psd",
+    "sourceSha256": "7bfb9eb7f2e2c448b0818e60a220feebf023bf8ff5cedcb083afa6f85da62897",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6794258373205742,
+    "offset": [
+      335.32296650717706,
+      26.631578947368325
+    ],
+    "outputSha256": "dc1a7abacbcd14b10ab0e1ed69af3e0dfdfec5f90d26017d75563f61418cdb69"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollPinkDot",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/12. GBTallCylFrst9MtlRollPinkDot.psd",
+    "sourceSha256": "1de39c638c24b620bcdc08acb37ab379081853fd28601151f173d8097fbc405c",
+    "layer": 1,
+    "bodyLayer": 3,
+    "scale": 0.6794258373205742,
+    "offset": [
+      324.27272727272725,
+      25.272727272727252
+    ],
+    "outputSha256": "217fc03a173889949a7c8bd9a653c56da31ec81144c30a9b37771bcc0a65b17e"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollSlMatt",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/14. GBTallCylFrst9MtlRollSlMatt.psd",
+    "sourceSha256": "8314feda624fa81a49986b6d766a0a6a553f1d46363a44c2abecf5650bc42005",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6794258373205742,
+    "offset": [
+      318.1578947368421,
+      25.272727272727252
+    ],
+    "outputSha256": "217fc03a173889949a7c8bd9a653c56da31ec81144c30a9b37771bcc0a65b17e"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollGlMatt",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/16. GBTallCylFrst9MtlRollGlMatt.psd",
+    "sourceSha256": "edde29bf634f9224ccb78afd34c98071cf35eda83f6dbef47344a8c403106896",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6794258373205742,
+    "offset": [
+      332.42583732057415,
+      25.272727272727252
+    ],
+    "outputSha256": "217fc03a173889949a7c8bd9a653c56da31ec81144c30a9b37771bcc0a65b17e"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollGlSh",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/18. GBTallCylFrst9MtlRollGlSh.psd",
+    "sourceSha256": "d6d393f04af09c7e02de15bdd7054050d6cac185bcb0921248930b7da0bb5458",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6794258373205742,
+    "offset": [
+      338.5406698564593,
+      25.272727272727252
+    ],
+    "outputSha256": "f8a1b1d7c57a6d17a59f615d1d06d46ae9eb04a093f6ae78e7b4eb77c937fe6f"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollSlSh",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/20. GBTallCylFrst9MtlRollSlSh.psd",
+    "sourceSha256": "8b28a5fda799170655af9a7979ec4d9419f3d1fd565a945f294f2790540e8a78",
+    "layer": 1,
+    "bodyLayer": 3,
+    "scale": 0.6794258373205742,
+    "offset": [
+      337.5406698564593,
+      25.272727272727252
+    ],
+    "outputSha256": "78b61ad159080428bc87ed0e7475b2cd3beff8c7e8cb95236a05ba1ed9040e5d"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollCuMatt",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/22. GBTallCylFrst9MtlRollCuMatt.psd",
+    "sourceSha256": "b2c03013eac6babf640cbec5dbd0fa49b5ffec2bc7cfd29244988b7dd249d91f",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6794258373205742,
+    "offset": [
+      339.5406698564593,
+      25.272727272727252
+    ],
+    "outputSha256": "d773f5c9c657ee5ba84ec969cdb2a4795731d0e7493aa6a8dbec0e99a1f8e7f7"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkSh",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/24. GBTallCylFrst9MtlRollBlkSh.psd",
+    "sourceSha256": "3965b6a9b0338e1133cc3f8961c0d1d437cfb685b10625211c5950893449069f",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.6794258373205742,
+    "offset": [
+      339.5406698564593,
+      25.272727272727252
+    ],
+    "outputSha256": "d773f5c9c657ee5ba84ec969cdb2a4795731d0e7493aa6a8dbec0e99a1f8e7f7"
+  },
+  {
+    "sku": "GBTallCylFrst9MtlRollBlkDot",
+    "source": "5.  13-415 Bottles/23. Frosted Tall Cylinder 9ml /1. Frosted Tall Cyl 9ml  (uncapped) PSD/26. GBTallCylFrst9MtlRollBlkDot.psd",
+    "sourceSha256": "97770771eb7a2e57aedef67f0ef298b94c31d41c5fa7bc28be97bdeedf17668d",
+    "layer": 1,
+    "bodyLayer": 2,
+    "scale": 0.682615629984051,
+    "offset": [
+      337.2591706539075,
+      20.424242424242493
+    ],
+    "outputSha256": "6f2c0fd1605671bdcdfd4fef881cd9d4f119256a72df26542e9d836fc853cd9d"
+  }
+]

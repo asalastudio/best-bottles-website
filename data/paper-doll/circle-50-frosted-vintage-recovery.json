@@ -1,0 +1,231 @@
+{
+  "scope": "50 ml Frosted Circle, nine bulb and nine tassel finishes",
+  "checkedAt": "2026-09-07",
+  "productionChanges": false,
+  "rows": [
+    {
+      "websiteSku": "GBCrclFrst50AnSpBlk",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "available",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-black-vintage-style-bulb-sprayer-shiny-silver-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/39. GBCrclFrst50AnSpBlk.psd"
+      ],
+      "componentSku": "AnSp18-415Blk",
+      "nextAction": "Recheck exact cart preflight"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpLvn",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "compatibility_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-lavender-vintage-style-bulb-sprayer-shiny-silver-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/33. GBCrclFrst50AnSpLvn.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Resolve exact active listed component"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpPnk",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "available",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-copper-spray-and-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/34. GBCrclFrst50AnSpPnk.psd"
+      ],
+      "componentSku": "CP18-415AnSpPnk",
+      "nextAction": "Recheck exact cart preflight"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpMtSl",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "media_unavailable",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-matte-silver-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/35. GBCrclFrst50AnSpMtSl.psd"
+      ],
+      "componentSku": "AnSp18-415MtSl",
+      "nextAction": "Review and register exact assembly artwork"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpIvySl",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "media_unavailable",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-bulb-sprayer-shiny-silver-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/36. GBCrclFrst50AnSpIvySl.psd"
+      ],
+      "componentSku": "AnSp18-415IvySl",
+      "nextAction": "Review and register exact assembly artwork"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpGl",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "available",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-shiny-gold-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/37. GBCrclFrst50AnSpGl.psd"
+      ],
+      "componentSku": "AnSp18-415Gl",
+      "nextAction": "Recheck exact cart preflight"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpIvyGl",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "compatibility_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-bulb-sprayer-shiny-gold-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/38. GBCrclFrst50AnSpIvyGl.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Resolve exact active listed component"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpWht",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "media_unavailable",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-copper-spray-and-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/40. GBCrclFrst50AnSpWht.psd"
+      ],
+      "componentSku": "AnSp18-415Wht",
+      "nextAction": "Review and register exact assembly artwork"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpRed",
+      "fitment": "Vintage bulb sprayer",
+      "builderStatus": "compatibility_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-red-vintage-style-bulb-sprayer-shiny-silver-collar-cap",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/41. GBCrclFrst50AnSpRed.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Resolve exact active listed component"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslBlk",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-black-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/48. GBCrclFrst50AnSpTslBlk.psd",
+        "21. Tassels/Updated Tassels/48. GBCrclFrst50AnSpTslBlk.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslLvn",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-lavender-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/42. GBCrclFrst50AnSpTslLvn.psd",
+        "21. Tassels/Updated Tassels/42. GBCrclFrst50AnSpTslLvn.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslPnk",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-pink-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/46. GBCrclFrst50AnSpTslPnk.psd",
+        "21. Tassels/Updated Tassels/46. GBCrclFrst50AnSpTslPnk.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslMtSl",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-matte-silver-vintage-style-sprayer-with-tassel-matte-silver-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/49. GBCrclFrst50AnSpTslMtSl.psd",
+        "21. Tassels/Updated Tassels/49. GBCrclFrst50AnSpTslMtSl.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvySl",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/44. GBCrclFrst50AnSpTslIvySl.psd",
+        "21. Tassels/Updated Tassels/44. GBCrclFrst50AnSpTslIvySl.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslGl",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-gold-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/50. GBCrclFrst50AnSpTslGl.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslIvyGl",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-ivory-vintage-style-sprayer-with-tassel-shiny-gold-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/43. GBCrclFrst50AnSpTslIvyGl.psd",
+        "21. Tassels/Updated Tassels/43. GBCrclFrst50AnSpTslIvyGl.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslWht",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-white-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/45. GBCrclFrst50AnSpTslWht.psd",
+        "21. Tassels/Updated Tassels/45. GBCrclFrst50AnSpTslWht.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    },
+    {
+      "websiteSku": "GBCrclFrst50AnSpTslRed",
+      "fitment": "Vintage bulb sprayer with tassel",
+      "builderStatus": "exact_catalog_record_unresolved",
+      "legacyExportUrl": "https://www.bestbottles.com/product/circle-design-50-ml-frosted-glass-bottle-red-vintage-style-sprayer-with-tassel-shiny-silver-collar",
+      "legacyEvidence": "Local historical export; live fetch not verified",
+      "masterSources": [
+        "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/47. GBCrclFrst50AnSpTslRed.psd",
+        "21. Tassels/Updated Tassels/47. GBCrclFrst50AnSpTslRed.psd"
+      ],
+      "componentSku": null,
+      "nextAction": "Restore exact catalog assembly and verify Shopify variant before enabling"
+    }
+  ]
+}

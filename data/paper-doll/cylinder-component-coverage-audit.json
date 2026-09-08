@@ -1,0 +1,326 @@
+{
+  "checkedAt": "2026-09-07",
+  "scope": "Current Cylinder catalog; separate media exclusions from compatibility gaps",
+  "eligibleMediaAudit": {
+    "media_unavailable": 103,
+    "available": 237
+  },
+  "selectedBottle": "25 ml Clear Cylinder, 18-415",
+  "rows": [
+    {
+      "websiteSku": "LBCyl25LtnMtGl",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "LBCyl25LtnShnGl",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "LBCyl25LtnShnBlk",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "LBCyl25LtnMtSl",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "LBCyl25LtnShnSl",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "LBCyl25LtnCu",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "LBcyl25LtnClOvrCap",
+      "applicator": "Lotion Pump",
+      "resolution": "fitment_rule",
+      "listedComponentCount": 45,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25AnSpBlk",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25AnSpGl",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25AnSpTslIvySl",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25AnSpTslMtSl",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25AnSpTslRed",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25AnSpTslWht",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25DrpCu",
+      "applicator": "Dropper",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25DrpGl",
+      "applicator": "Dropper",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25DrpSl",
+      "applicator": "Dropper",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25RdcrIvyLthr",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBCyl25RdcrShnGl",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpIvyGl",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpIvySl",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpLvn",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpMtSl",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpPnk",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpRed",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpTslBlk",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpTslGl",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpTslIvyGl",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpTslLvn",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpTslPnk",
+      "applicator": "Vintage Bulb Sprayer with Tassel",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25AnSpWht",
+      "applicator": "Vintage Bulb Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrBlkLthr",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrBrwnLthr",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrLBrwnLthr",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrMtSl",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrMtSlTall",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrPnkLthr",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrShnBlk",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrShnBlkTall",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrShnSl",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25RdcrWht",
+      "applicator": "Reducer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25SpryCu",
+      "applicator": "Fine Mist Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25SpryMtGl",
+      "applicator": "Fine Mist Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25SpryShnBlk",
+      "applicator": "Fine Mist Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25SpryShnGl",
+      "applicator": "Fine Mist Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    },
+    {
+      "websiteSku": "GBcyl25SpryShnSl",
+      "applicator": "Fine Mist Sprayer",
+      "resolution": "unknown",
+      "listedComponentCount": 0,
+      "hasShopifyVariant": true
+    }
+  ]
+}

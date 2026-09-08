@@ -1,4 +1,6 @@
 import type { CatalogRow } from "./model";
+import { getFinishFromWebsiteSku } from "../paper-doll/tokens.generated";
+import componentCutouts from "./component-cutouts.generated.json";
 
 type ListedComponent = CatalogRow["components"][string][number];
 export type ActiveComponent = {
@@ -6,6 +8,27 @@ export type ActiveComponent = {
     shopifySellable?: boolean | null; shopifyVariantId?: string | null; stockStatus?: string | null;
     itemName?: string | null; imageUrl?: string | null;
 };
+
+/** Display-only evidence. These records never enter selectable configurations. */
+export function unavailableVintageFinishes(row: CatalogRow, activeBySku: Map<string, ActiveComponent | null>) {
+    if (row.resolution === "unknown" || !row.websiteSku || /__RETIRED__/i.test(row.websiteSku)
+        || !row.color || !row.family || !row.capacityMl || !row.neckThreadSize
+        || !/bottle/i.test(row.category ?? "") || !/^Vintage Bulb Sprayer(?: with Tassel)?$/.test(row.applicator ?? "")
+        || /AnSpTsl/i.test(row.websiteSku) !== /Tassel/.test(row.applicator ?? "")) return [];
+    const finish = getFinishFromWebsiteSku(row.websiteSku)?.label;
+    const prefix = /Tassel/.test(row.applicator!) ? /^AnSpTsl/i : /^AnSp(?!Tsl)/i;
+    const matches = (row.components.Sprayer ?? []).flatMap(part => {
+        const sku = listedReplacementSku(part);
+        const active = sku ? activeBySku.get(sku) : null;
+        if (!sku || !prefix.test(sku) || !active || active.websiteSku !== sku
+            || !active.graceSku || active.graceSku === part.graceSku || /__RETIRED__/i.test(active.websiteSku)
+            || active.neckThreadSize !== row.neckThreadSize || !/^out of stock$/i.test(active.stockStatus ?? "")
+            || !active.imageUrl || !finish || getFinishFromWebsiteSku(sku)?.label !== finish) return [];
+        const imageUrl = (componentCutouts as Record<string, { url: string }>)[sku]?.url ?? active.imageUrl;
+        return [{ id: row.websiteSku!, color: row.color!, fitment: row.applicator!, closure: finish, imageUrl }];
+    });
+    return matches.length === 1 ? matches : [];
+}
 
 /** Only a retired, already-listed identity can request an exact replacement.
  * This is not a thread-based compatibility search. */

@@ -114,6 +114,7 @@ export interface CheckoutVariantState {
     variantId: string;
     sku: string;
     available: boolean;
+    price: string;
 }
 
 /**
@@ -138,6 +139,7 @@ export async function resolveCheckoutVariantsByIds(
             id: string;
             sku: string;
             availableForSale: boolean;
+            price: string;
             product: {
                 status: string;
                 publishedAt: string | null;
@@ -150,6 +152,7 @@ export async function resolveCheckoutVariantsByIds(
                     id
                     sku
                     availableForSale
+                    price
                     product { status publishedAt }
                 }
             }
@@ -164,6 +167,7 @@ export async function resolveCheckoutVariantsByIds(
         return [{
             variantId: numericId(node.id),
             sku: node.sku,
+            price: node.price,
             available:
                 node.availableForSale === true
                 && node.product.status === "ACTIVE"

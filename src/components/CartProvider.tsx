@@ -6,12 +6,15 @@ import {
     useState,
     useCallback,
     useEffect,
+    useSyncExternalStore,
     type ReactNode,
 } from "react";
 import { analytics } from "@/lib/analytics";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 import {
     checkoutUnavailableMessage,
+    checkoutMinimum,
+    checkoutMinimumMessage,
     quoteOnlyCartMessage,
     redirectToCheckout,
     splitCheckoutItems,
@@ -81,12 +84,20 @@ interface CartContextValue {
 
 const CartContext = createContext<CartContextValue | null>(null);
 
+const subscribeToHydration = () => () => {};
+const clientHydrationSnapshot = () => true;
+const serverHydrationSnapshot = () => false;
+const emptyCart: CartItem[] = [];
+
 export function useCart(): CartContextValue {
     const ctx = useContext(CartContext);
+    // A streamed route may hydrate after the provider has restored storage.
+    // Give each consumer the same empty snapshot as its server render first.
+    const consumerHydrated = useSyncExternalStore(subscribeToHydration, clientHydrationSnapshot, serverHydrationSnapshot);
     if (!ctx) {
         throw new Error("useCart must be used within CartProvider");
     }
-    return ctx;
+    return consumerHydrated ? ctx : { ...ctx, items: emptyCart, itemCount: 0, isCartHydrated: false };
 }
 
 // ─── localStorage helpers ─────────────────────────────────────────────────────
@@ -244,6 +255,12 @@ export function CartProvider({ children }: { children: ReactNode }) {
         try {
             if (checkoutReadyItems.length === 0) {
                 setCheckoutError(quoteOnlyCartMessage(quoteOnlyItems.map((i) => i.graceSku)));
+                return;
+            }
+
+            const minimum = checkoutMinimum(checkoutReadyItems);
+            if (!minimum.met) {
+                setCheckoutError(checkoutMinimumMessage(minimum));
                 return;
             }
 

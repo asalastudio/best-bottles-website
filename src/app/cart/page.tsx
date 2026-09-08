@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useCart } from "@/components/CartProvider";
 import { ArrowRight, Minus, Plus, ShoppingBag, Trash, WarningCircle } from "@/components/icons";
-import { isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
+import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 export default function CartPage() {
     const {
@@ -20,6 +20,7 @@ export default function CartPage() {
     } = useCart();
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
+    const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
 
     return (
@@ -143,9 +144,11 @@ export default function CartPage() {
                                     <p>{checkoutError}</p>
                                 </div>
                             )}
+                            <p className="mt-4 text-sm text-slate" role="status">{checkoutMinimumMessage(minimum)}</p>
+                            {!minimum.met && <Link href="/matrix" className="mt-3 flex min-h-11 items-center justify-center rounded-sm bg-muted-gold px-5 py-3 font-semibold text-white">Continue building</Link>}
                             <button
                                 onClick={checkout}
-                                disabled={isCheckingOut}
+                                disabled={isCheckingOut || !minimum.met}
                                 data-testid="cart-page-checkout-button"
                                 className="mt-5 flex w-full items-center justify-center gap-2 bg-obsidian px-5 py-4 text-sm font-semibold text-bone hover:bg-muted-gold disabled:cursor-not-allowed disabled:opacity-50"
                             >

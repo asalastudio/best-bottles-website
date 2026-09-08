@@ -1,3 +1,4 @@
+import { checkoutMinimum, checkoutMinimumMessage } from "@/lib/checkout";
 import { NextRequest } from "next/server";
 import {
     buildCheckoutUrl,
@@ -99,6 +100,16 @@ export async function POST(req: NextRequest) {
                 quantity: skuToQuantity[v.sku] ?? 1,
             }));
         const checkoutItems = [...directCheckoutItems, ...resolvedCheckoutItems];
+
+        // Enforce against fresh Shopify prices after unavailable lines are excluded.
+        const prices = new Map([...directVariantStates, ...variants].map(v => [v.variantId, Number(v.price)]));
+        const minimum = checkoutMinimum(checkoutItems.map(item => ({
+            graceSku: item.variantId, shopifyVariantId: item.variantId,
+            quantity: item.quantity, unitPrice: prices.get(item.variantId) ?? null,
+        })));
+        if (checkoutItems.length > 0 && !minimum.met) {
+            return Response.json({ error: checkoutMinimumMessage(minimum), code: "ORDER_MINIMUM", ...minimum }, { status: 422 });
+        }
 
         // A signed-in wholesale account checks out through a draft order so the
         // Shopify CUSTOMER is attached and an approved resale certificate can

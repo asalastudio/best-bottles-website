@@ -1,8 +1,9 @@
 import { describe, expect, it } from "vitest";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
+import restoredRollers from "@/lib/bottle-builder/rollers.generated.json";
 import {
     builderCartItem, builderOrder, catalogConfigurationFromRow, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
-    groupBuilderBodies, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
+    groupBuilderBodies, resolveBuilderConfigurations, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
 } from "@/lib/bottle-builder/model";
 
 function fixture(overrides: Partial<CatalogRow> = {}, slots = ["body", "roller", "cap"]): { row: CatalogRow; kit: BuilderKit } {
@@ -43,6 +44,23 @@ function configuration(overrides: Partial<CatalogRow> = {}): BuilderConfiguratio
 }
 
 describe("builder catalog boundary", () => {
+    it("restores every reviewed tall metal roller only on its exact registered body", () => {
+        expect(Object.keys(restoredRollers)).toHaveLength(18);
+        for (const [sku, restored] of Object.entries(restoredRollers)) {
+            const base = configuration();
+            const kit = structuredClone(base.kit!);
+            kit.parts = kit.parts.filter(p => p.slot !== "roller");
+            kit.parts[0].image.sha256 = restored.bodySha256;
+            const config = { ...base, id: sku, kit };
+            expect(previewParts(config, "body").some(p => p.slot === "roller")).toBe(false);
+            expect(previewParts(config, "fitment").find(p => p.slot === "roller")?.image.url).toBe(restored.part.image.url);
+            expect(previewParts(config, "complete").filter(p => p.slot === "roller")).toHaveLength(1);
+            expect(previewParts({ ...config, fitment: "Plastic Roller" }, "fitment").some(p => p.slot === "roller")).toBe(false);
+            expect(previewParts({ ...config, id: "UnreviewedSku" }, "fitment").some(p => p.slot === "roller")).toBe(false);
+            kit.parts[0].image.sha256 = "changed-body";
+            expect(previewParts(config, "fitment").some(p => p.slot === "roller")).toBe(false);
+        }
+    });
     it("never admits an assembled photo without a verified bare body", () => {
         const { row } = fixture({ family: "Bell", capacityMl: 10, imageUrl: "https://example.com/assembly.jpg" });
         expect(catalogConfigurationFromRow(row)).toBeNull();
@@ -103,6 +121,33 @@ describe("builder catalog boundary", () => {
         const { row, kit } = fixture({ applicator: "Cap/Closure", itemName: "9 ml clear Cylinder bottle with black cap" }, ["body", "cap"]);
         expect(configurationFromRow(row, { ...kit, completeness: "capSplit" })?.fitment).toBe("Screw Cap");
     });
+    it("uses the matching separated roller preview without replacing a split assembly's SKU or layers", () => {
+        const donor = fixture();
+        const split = fixture({ websiteSku: "OtherMetalBlack", graceSku: "OTHER" }, ["body", "cap"]);
+        split.kit.completeness = "capSplit";
+        const configs = resolveBuilderConfigurations([donor.row, split.row], [donor.kit, split.kit]);
+        const restored = configs[1]!;
+        expect(restored.id).toBe("OtherMetalBlack");
+        expect(restored.kit).toBe(split.kit);
+        expect(restored.previewKit).toBe(donor.kit);
+        expect(previewParts(restored, "body").map(p => p.slot)).toEqual(["body"]);
+        expect(previewParts(restored, "fitment")).toEqual(split.kit.parts.filter(p => p.slot !== "cap"));
+        expect(previewParts(restored, "complete")).toEqual([...split.kit.parts].sort((a,b) => a.zOrder-b.zOrder));
+        expect(resolveBuilderConfigurations([split.row], [split.kit])[0]).toBeNull();
+        const plastic = fixture({ applicator: "Plastic Roller Ball" });
+        const withPlasticBody = resolveBuilderConfigurations([plastic.row, split.row], [plastic.kit, split.kit])[1]!;
+        // Only bare glass can be reused: the metal assembly supplies its own roller preview.
+        expect(previewParts(withPlasticBody, "fitment")).toEqual(split.kit.parts.filter(p => p.slot !== "cap"));
+        const circle = fixture({ family: "Circle", productGroupSlug: "circle-9ml-clear-17-415" });
+        const circleSplit = fixture({ family: "Circle", websiteSku: "CircleOtherBlack", productGroupSlug: "circle-9ml-clear-17-415" }, ["body", "cap"]);
+        circleSplit.kit.completeness = "capSplit";
+        expect(resolveBuilderConfigurations([circle.row, circleSplit.row], [circle.kit, circleSplit.kit])[1]?.id).toBe("CircleOtherBlack");
+        for (const patch of [{ color: "Amber" }, { neckThreadSize: "13-415" }, { productGroupSlug: "other-mold-9ml-clear-17-415" }]) {
+            const other = fixture(patch as Partial<CatalogRow>);
+            expect(resolveBuilderConfigurations([other.row, split.row], [other.kit, split.kit])[1]).toBeNull();
+        }
+        expect(resolveBuilderConfigurations([donor.row, { ...split.row, components: {} }], [donor.kit, split.kit])[1]).toBeNull();
+    });
     it("collapses SKU assemblies and colors into bottle bodies while keeping necks distinct", () => {
         const bodies = groupBuilderBodies([configuration(), configuration({ websiteSku: "Amber", graceSku: "AMBER", color: "Amber" }), configuration({ websiteSku: "TALL", graceSku: "TALL", neckThreadSize: "13-415" })]);
         expect(bodies).toHaveLength(2);
@@ -122,7 +167,7 @@ describe("selection transitions and preview", () => {
         const next = selectBuilderBody(bodies, selected, clear.bodyId);
         expect(next).toEqual({ bodyId: clear.bodyId, color: null, fitment: null, closure: null, quantity: 68 });
         const onlyClear = selectBuilderBody(groupBuilderBodies([clear]), selected, clear.bodyId);
-        expect(onlyClear.color).toBe("Clear");
+        expect(onlyClear.color).toBeNull();
         expect(onlyClear.fitment).toBeNull();
         expect(onlyClear.closure).toBeNull();
     });
@@ -132,9 +177,9 @@ describe("selection transitions and preview", () => {
         expect(deriveBuilder(bodies, state).configuration).toBeNull();
         expect(previewParts(clear, "body").map(p => p.slot)).toEqual(["body"]);
     });
-    it("preselects a sole color but never invents a fitment", () => {
+    it("requires explicit glass selection even when clear is the only option", () => {
         const state = reconcileSelection(groupBuilderBodies([clear]), { ...emptySelection(), bodyId: clear.bodyId });
-        expect(state.color).toBe("Clear");
+        expect(state.color).toBeNull();
         expect(state.fitment).toBeNull();
     });
     it("changing color removes incompatible fitment and cap", () => {
@@ -159,17 +204,17 @@ describe("configured purchasing", () => {
         const item = builderCartItem(config, 100);
         expect(item).toMatchObject({ graceSku: config.product.graceSku, websiteSku: config.id, quantity: 100, shopifyVariantId: config.product.shopifyVariantId, unitPrice: .53 });
     });
-    it("calculates the $50 order minimum in units without imposing the case pack", () => {
+    it("allows a valid build below $50 without imposing a case pack", () => {
         const below = builderOrder(config, 50, []);
-        expect(below).toMatchObject({ total: 26.5, minimumQuantity: 95, remainingUnits: 45, canAdd: false });
-        expect(builderOrder(config, 95, [])).toMatchObject({ total: 50.35, remainingUnits: 0, canAdd: true });
+        expect(below).toMatchObject({ total: 26.5, canAdd: true });
+        expect(builderOrder(config, 95, [])).toMatchObject({ total: 50.35, canAdd: true });
     });
     it("counts existing checkout-ready cart items and merges the same SKU", () => {
         const other = { ...builderCartItem(config, 50), graceSku: "OTHER" };
         expect(builderOrder(config, 45, [other]).canAdd).toBe(true);
         expect(builderOrder(config, 45, [builderCartItem(config, 50)]).canAdd).toBe(true);
-        expect(builderOrder(config, 45, [{ ...other, shopifySellable: false }]).canAdd).toBe(false);
-        expect(builderOrder(config, 45, [{ ...other, shopifyVariantId: null }]).canAdd).toBe(false);
+        expect(builderOrder(config, 45, [{ ...other, shopifySellable: false }]).canAdd).toBe(true);
+        expect(builderOrder(config, 45, [{ ...other, shopifyVariantId: null }]).canAdd).toBe(true);
     });
     it("rejects fractional, empty, negative, and excessive quantities", () => {
         for (const qty of [NaN, 0, -1, 1.5, Infinity, 1_000_001]) {

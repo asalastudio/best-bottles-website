@@ -6,6 +6,7 @@ import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
 import bodyMedia from "./circle-bodies.generated.json";
 import assemblyMedia from "./circle-assemblies.generated.json";
 import fitmentMedia from "./fitments.generated.json";
+import rollerMedia from "./rollers.generated.json";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 
 export type CatalogRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
@@ -21,6 +22,7 @@ export type BuilderConfiguration = {
     fitment: string;
     closure: string;
     kit: BuilderKit | null;
+    previewKit?: BuilderKit;
     photoUrl: string | null;
     bodyImage: { url: string; width: number; height: number } | null;
     finishComponent: { websiteSku: string; imageUrl: string | null; name: string };
@@ -35,6 +37,7 @@ export type BuilderBody = {
     capacityMl: number;
     neck: string;
     configurations: BuilderConfiguration[];
+    unavailableFinishes?: { id: string; color: string; fitment: string; closure: string; imageUrl: string }[];
 };
 export type BuilderSelection = {
     bodyId: string | null;
@@ -43,7 +46,7 @@ export type BuilderSelection = {
     closure: string | null;
     quantity: number;
 };
-export const ORDER_MINIMUM = 50;
+export { ORDER_MINIMUM } from "@/lib/checkout";
 export const MAX_QUANTITY = 1_000_000;
 export const emptySelection = (): BuilderSelection => ({ bodyId: null, color: null, fitment: null, closure: null, quantity: 12 });
 const slug = (s: string) => s.trim().toLowerCase().replace(/\s+/g, "-");
@@ -107,14 +110,19 @@ export function isBuilderCandidate(row: CatalogRow): boolean {
         && typeof row.webPrice1pc === "number" && Number.isFinite(row.webPrice1pc) && row.webPrice1pc > 0;
 }
 
-/** A capSplit body may contain its roller/pump. Only a cap-only assembly's
- * split is a bare bottle; other mechanisms require a full separated kit. */
-export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null): BuilderConfiguration | null {
+/** A capSplit body may include its mechanism. Reuse a validated identical bare
+ * bottle only for the body stage; retain the exact kit for fitment and completion. */
+export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null, preview?: BuilderConfiguration): BuilderConfiguration | null {
     if (!isBuilderCandidate(row) || !kit || kit.conflicts.length
         || (kit.sku !== row.websiteSku && kit.sku !== row.graceSku)) return null;
     const app = row.applicator?.trim();
     const capOnly = app === "Cap/Closure" || ((!app || app === "N/A") && /\bcap\b/i.test(row.itemName ?? ""));
-    if (kit.completeness !== "full" && !(capOnly && kit.completeness === "capSplit")) return null;
+    const assemblySplit = kit.completeness === "capSplit" && !capOnly && Boolean(app && app !== "N/A")
+        && preview?.kit?.completeness === "full" && preview.kit.familyId === kit.familyId
+        && preview.family === row.family && preview.capacityMl === row.capacityMl && preview.color === row.color
+        && preview.neck === row.neckThreadSize
+        && kit.parts.some(isClosurePart);
+    if (kit.completeness !== "full" && !(capOnly && kit.completeness === "capSplit") && !assemblySplit) return null;
     const body = kit.parts.find(part => part.slot === "body");
     if (!body || !kit.parts.some(part => part.slot !== "body")) return null;
     if (body.derivation !== "psd-layer" && body.derivation !== "madison") return null;
@@ -133,8 +141,13 @@ export function configurationFromRow(row: CatalogRow, kit: BuilderKit | null): B
         : app === "Plastic Roller Ball" ? "Plastic Roller" : app === "Perfume Spray Pump" ? "Perfume Sprayer" : app;
     if (!fitment || fitment === "N/A") return null;
     const mechanism = kit.parts.filter(part => part.slot !== "body" && !isClosurePart(part));
-    if (!capOnly && mechanism.length === 0) return null;
-    return catalogConfigurationFromRow(row, kit);
+    if (!capOnly && !assemblySplit && mechanism.length === 0) return null;
+    const config = catalogConfigurationFromRow(row, kit);
+    if (assemblySplit) {
+        if (!config || config.bodyId !== preview!.bodyId) return null;
+        return { ...config, previewKit: preview!.kit! };
+    }
+    return config;
 }
 
 /** A published separated kit or a reviewed source body is required. A complete
@@ -155,14 +168,9 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
     if (row.capStyle === "Tall" && /Cap/.test(closure) && !/Tall/i.test(closure)) closure = `Tall ${closure}`;
     // The group prefix preserves distinct molds with equal capacity and neck,
     // such as Footed Rectangle and Tall Rectangle, across colors and tops.
-    const capacityMarker = `-${capacityMl}ml-`;
-    const profileName = row.productGroupSlug?.includes(capacityMarker)
-        ? row.productGroupSlug.split(capacityMarker)[0] : slug(family!);
-    const profile = `${profileName}-${capacityMl}ml`;
-    const distinctShape = row.shape && !["standard", slug(family!), slug(color!)].includes(slug(row.shape)) ? slug(row.shape) : null;
-    const profileLabel = (distinctShape ? `${distinctShape}-${profileName}` : profileName).split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+    const { bodyId, profileLabel } = builderBodyIdentity(row);
     return {
-        id: row.websiteSku!, bodyId: `${profile}|${neck}|${row.category}${distinctShape ? `|${distinctShape}` : ""}`,
+        id: row.websiteSku!, bodyId,
         family: family!, capacityMl: capacityMl!, neck: neck!, color: color!, fitment, closure, kit, profileLabel,
         bodyImage, finishComponent: compatibleFinishComponent(row)!,
         photoUrl: assembly?.url ?? null,
@@ -177,6 +185,26 @@ export function catalogConfigurationFromRow(row: CatalogRow, kit: BuilderKit | n
             capColor: row.capColor, category: row.category, neckThreadSize: neck,
         },
     };
+}
+
+export function builderBodyIdentity(row: CatalogRow) {
+    const { family, color, capacityMl, neckThreadSize: neck } = row;
+    const capacityMarker = `-${capacityMl}ml-`;
+    const profileName = row.productGroupSlug?.includes(capacityMarker)
+        ? row.productGroupSlug.split(capacityMarker)[0] : slug(family!);
+    const profile = `${profileName}-${capacityMl}ml`;
+    const distinctShape = row.shape && !["standard", slug(family!), slug(color!)].includes(slug(row.shape)) ? slug(row.shape) : null;
+    const profileLabel = (distinctShape ? `${distinctShape}-${profileName}` : profileName).split("-").map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ");
+    return { bodyId: `${profile}|${neck}|${row.category}${distinctShape ? `|${distinctShape}` : ""}`, profileLabel };
+}
+
+/** Reuse only a validated identical bare bottle/glass for the bottle-selection preview.
+ * The selected SKU keeps its own complete assembly; canvases are never mixed. */
+export function resolveBuilderConfigurations(rows: CatalogRow[], kits: (BuilderKit | null)[]) {
+    const full = rows.map((row, i) => configurationFromRow(row, kits[i]));
+    return rows.map((row, i) => full[i] ?? full.reduce<BuilderConfiguration | null>((found, preview) =>
+        found ?? (preview ? configurationFromRow(row, kits[i], preview) : null), null)
+        ?? catalogConfigurationFromRow(row));
 }
 
 export function groupBuilderBodies(configurations: BuilderConfiguration[]): BuilderBody[] {
@@ -225,7 +253,7 @@ export function reconcileSelection(bodies: BuilderBody[], state: BuilderSelectio
     const next = { ...state };
     let derived = deriveBuilder(bodies, next);
     if (!derived.body) return { ...emptySelection(), quantity: state.quantity };
-    next.color = derived.color ?? (derived.colors.length === 1 ? derived.colors[0] : null);
+    next.color = derived.color;
     derived = deriveBuilder(bodies, next);
     next.fitment = derived.fitment;
     next.closure = deriveBuilder(bodies, next).closure;
@@ -240,7 +268,16 @@ export function selectBuilderBody(bodies: BuilderBody[], state: BuilderSelection
 }
 
 export function previewParts(config: BuilderConfiguration, stage: "body" | "fitment" | "complete"): BuilderPart[] {
-    return [...(config.kit?.parts ?? [])].filter(part => stage === "complete" || part.slot === "body"
+    const parts = [...((stage === "body" ? config.previewKit ?? config.kit : config.kit)?.parts ?? [])];
+    const restored = (rollerMedia as Record<string, { bodySha256: string; part: BuilderPart }>)[config.id];
+    // Exact source registration only. Never put a roller on a changed body asset,
+    // a different fitment, or the bare-bottle stage.
+    if (stage !== "body" && config.fitment === "Metal Roller" && restored
+        && !parts.some(part => part.slot === "roller")
+        && parts.some(part => part.slot === "body" && part.image.sha256 === restored.bodySha256)) {
+        parts.push(restored.part);
+    }
+    return parts.filter(part => stage === "complete" || part.slot === "body"
         || (stage === "fitment" && !isClosurePart(part))).sort((a, b) => a.zOrder - b.zOrder);
 }
 
@@ -255,30 +292,12 @@ export function builderCartItem(config: BuilderConfiguration, quantity: number):
 /** Match the cart's merged-SKU pricing, in cents, including any tier change. */
 export function builderOrder(config: BuilderConfiguration | null, quantity: number, cart: CartItem[]) {
     const validQuantity = Number.isSafeInteger(quantity) && quantity >= 1 && quantity <= MAX_QUANTITY;
-    const otherCents = cart.filter(item => item.graceSku !== config?.product.graceSku && item.checkoutEligible !== false
-        && item.shopifySellable !== false && Boolean(item.shopifyVariantId))
-        .reduce((sum, item) => sum + Math.round((resolveChargedUnitPrice(item.quantity, {
-            ...item, webPrice1pc: item.webPrice1pc ?? item.unitPrice,
-        }) ?? 0) * 100) * item.quantity, 0);
     const existingQuantity = cart.find(item => item.graceSku === config?.product.graceSku)?.quantity ?? 0;
     const priceAt = (qty: number) => config ? resolveChargedUnitPrice(qty + existingQuantity, config.product) : null;
-    const totalAt = (qty: number) => otherCents + Math.round((priceAt(qty) ?? 0) * 100) * (qty + existingQuantity);
     const unitPrice = validQuantity ? priceAt(quantity) : null;
     const total = unitPrice == null ? null : Math.round(unitPrice * 100) * quantity / 100;
-    // Search pricing intervals, including lower rates at quantity breaks.
-    const breaks = [1, 10, 12, ...(config?.product.priceTiers ?? []).map(t => t.minQty)]
-        .map(q => Math.max(1, q - existingQuantity));
-    let minimumQuantity: number | null = null;
-    if (config) for (const start of [...new Set(breaks)].sort((a, b) => a - b)) {
-        const cents = Math.round((priceAt(start) ?? 0) * 100);
-        if (cents <= 0) continue;
-        const required = Math.max(start, Math.ceil((ORDER_MINIMUM * 100 - otherCents) / cents) - existingQuantity, 1);
-        if (required <= MAX_QUANTITY && totalAt(required) >= ORDER_MINIMUM * 100
-            && (minimumQuantity === null || required < minimumQuantity)) minimumQuantity = required;
-    }
-    return { unitPrice, total, minimumQuantity, validQuantity,
-        remainingUnits: minimumQuantity === null ? null : Math.max(0, minimumQuantity - (validQuantity ? quantity : 0)),
-        canAdd: Boolean(config && validQuantity && unitPrice && totalAt(quantity) >= ORDER_MINIMUM * 100),
-        cartCredit: otherCents / 100 + (config ? Math.round((priceAt(0) ?? 0) * 100) * existingQuantity / 100 : 0),
+    return { unitPrice, total, validQuantity,
+        canAdd: Boolean(config && validQuantity && unitPrice && Number.isFinite(unitPrice) && unitPrice > 0
+            && config.product.shopifyVariantId && config.product.shopifySellable !== false),
     };
 }

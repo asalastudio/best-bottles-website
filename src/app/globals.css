@@ -631,3 +631,10 @@ body {
     from { opacity: 0; }
     to   { opacity: 1; }
 }
+
+/* The builder has its own persistent next-step action and back/catalog links. */
+@media (max-width: 1099px) {
+  body:has(main[data-builder-page]) [data-mobile-tab-bar] { display: none; }
+  main[data-builder-page] { padding-bottom: env(safe-area-inset-bottom, 0px); }
+  body:has(main[data-builder-page]) { --mobile-tab-bar-clearance: env(safe-area-inset-bottom, 0px); }
+}

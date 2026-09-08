@@ -2,8 +2,8 @@ import "server-only";
 import { unstable_cache } from "next/cache";
 import { ConvexHttpClient } from "convex/browser";
 import { api } from "../../../convex/_generated/api";
-import { assessBuilderConfiguration, configurationFromRow, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
-import { resolveListedComponents } from "./components";
+import { builderBodyIdentity, resolveBuilderConfigurations, type BuilderKit, groupBuilderBodies, isBuilderCandidate, type CatalogRow } from "./model";
+import { resolveListedComponents, unavailableVintageFinishes, type ActiveComponent } from "./components";
 
 const client = () => new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
 
@@ -41,29 +41,47 @@ export async function loadBuilderFamily(family: string) {
 
 export async function loadBuilderBodies(rows: CatalogRow[]) {
     const convex = client();
-    const resolved = await resolveListedComponents(rows, async sku => (await convex.query(api.products.lookupSku, { sku }))?.product ?? null);
+    const activeBySku = new Map<string, ActiveComponent | null>();
+    const resolved = await resolveListedComponents(rows, async sku => {
+        const product = (await convex.query(api.products.lookupSku, { sku }))?.product ?? null;
+        activeBySku.set(sku, product);
+        return product;
+    });
     const candidates = resolved.filter(isBuilderCandidate);
-    const configurations = new Array<ReturnType<typeof configurationFromRow>>(candidates.length);
+    const configurations = new Array<BuilderKit | null>(candidates.length);
     let cursor = 0;
     await Promise.all(Array.from({ length: Math.min(24, candidates.length) }, async () => {
         while (cursor < candidates.length) {
             const index = cursor++;
             const row = candidates[index];
             const kit = await cachedKit(row.websiteSku!, row.graceSku!);
-            configurations[index] = assessBuilderConfiguration(row, kit).configuration;
+            configurations[index] = kit;
         }
     }));
-    return groupBuilderBodies(configurations.filter(config => config !== null));
+    const bodies = groupBuilderBodies(resolveBuilderConfigurations(candidates, configurations).filter(config => config !== null));
+    for (const row of rows) {
+        const unavailable = unavailableVintageFinishes(row, activeBySku);
+        if (!unavailable.length) continue;
+        const body = bodies.find(body => body.id === builderBodyIdentity(row).bodyId);
+        if (!body) continue;
+        body.unavailableFinishes ??= [];
+        for (const finish of unavailable) {
+            if (!body.unavailableFinishes.some(other => other.color === finish.color && other.fitment === finish.fitment && other.closure === finish.closure)
+                && !body.configurations.some(other => other.color === finish.color && other.fitment === finish.fitment && other.closure === finish.closure)) body.unavailableFinishes.push(finish);
+        }
+    }
+    return bodies;
 }
 
 export async function freshConfiguration(family: string, sku: string) {
     const convex = client();
     const data = await convex.query(api.matrix.getFamilyRows, { family });
     if (data.truncated) return null;
-    const rows = data.rows.filter(row => row.websiteSku === sku);
-    if (rows.length !== 1) return null;
-    const [row] = await resolveListedComponents(rows, async sku => (await convex.query(api.products.lookupSku, { sku }))?.product ?? null);
-    if (!isBuilderCandidate(row)) return null;
-    const kit = await convex.query(api.productKits.forSku, { websiteSku: row.websiteSku ?? null, graceSku: row.graceSku ?? null });
-    return assessBuilderConfiguration(row, kit).configuration;
+    const target = data.rows.filter(row => row.websiteSku === sku);
+    if (target.length !== 1) return null;
+    const rows = await resolveListedComponents(data.rows.filter(row => row.capacityMl === target[0].capacityMl
+        && row.color === target[0].color && row.neckThreadSize === target[0].neckThreadSize), async sku => (await convex.query(api.products.lookupSku, { sku }))?.product ?? null);
+    const kits = await Promise.all(rows.map(row => convex.query(api.productKits.forSku,
+        { websiteSku: row.websiteSku ?? null, graceSku: row.graceSku ?? null })));
+    return resolveBuilderConfigurations(rows, kits).find(config => config?.id === sku) ?? null;
 }

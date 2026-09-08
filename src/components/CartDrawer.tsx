@@ -6,7 +6,7 @@ import { X, ShoppingBag, Plus, Minus, Trash, ArrowRight, WarningCircle } from "@
 import { motion, AnimatePresence } from "framer-motion";
 import { useCart } from "@/components/CartProvider";
 import { useGrace } from "@/components/useGrace";
-import { isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
+import { checkoutMinimum, checkoutMinimumMessage, isCheckoutReady, splitCheckoutItems } from "@/lib/checkout";
 
 const FREE_SHIPPING_THRESHOLD = 99;
 
@@ -88,6 +88,7 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
     }, [isOpen]);
 
     const subtotal = items.reduce((sum, item) => sum + (item.unitPrice ?? 0) * item.quantity, 0);
+    const minimum = checkoutMinimum(items);
     const { checkoutReadyItems, quoteOnlyItems } = splitCheckoutItems(items);
     const progressPercent = Math.min((subtotal / FREE_SHIPPING_THRESHOLD) * 100, 100);
     const amountToFreeShipping = Math.max(FREE_SHIPPING_THRESHOLD - subtotal, 0);
@@ -356,9 +357,11 @@ export default function CartDrawer({ isOpen, onClose }: CartDrawerProps) {
                                     <span className="font-serif text-2xl font-medium text-obsidian">${subtotal.toFixed(2)}</span>
                                 </div>
 
+                            <p className="mt-4 text-sm text-slate" role="status">{checkoutMinimumMessage(minimum)}</p>
+                            {!minimum.met && <Link href="/matrix" onClick={onClose} className="mt-3 flex min-h-11 items-center justify-center rounded-sm bg-muted-gold px-5 py-3 font-semibold text-white">Continue building</Link>}
                                 <button
                                     onClick={checkout}
-                                    disabled={isCheckingOut}
+                                    disabled={isCheckingOut || !minimum.met}
                                     data-testid="checkout-start-button"
                                     className="group w-full flex items-center justify-center gap-2.5 py-4 rounded-xl font-medium text-[14px] tracking-wide transition-all duration-300 cursor-pointer relative overflow-hidden bg-obsidian text-bone hover:bg-obsidian/90 disabled:opacity-50"
                                     style={{ boxShadow: "0 4px 20px rgba(29,29,31,0.15)" }}

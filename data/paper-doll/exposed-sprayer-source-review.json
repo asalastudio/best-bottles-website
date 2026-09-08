@@ -1,0 +1,481 @@
+[
+  {
+    "sku": "GBCrcl50SpryMtSl",
+    "source": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/23. GBCrcl50SpryMtSl.psd",
+    "sourceSha256": "8cdc48afb42ca9625044a5ab2d7b0cb350f6fa2f8945f98712b73b9245f58312",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "6d08a27e9049fc6dd2130dfa6a82410d81235cf8a9c2c5cd870fa3794f04be05"
+  },
+  {
+    "sku": "GBCrcl50SpryMtGl",
+    "source": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/13. GBCrcl50SpryMtGl.psd",
+    "sourceSha256": "b44413c01b22976c92c2094b849671623f7333f55cc3e6b7cce2be7ade1db519",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "c1de9ccd6739b620b11335fb481d11321657ad98929d77f98431775a99f887b7"
+  },
+  {
+    "sku": "GBCrcl50SpryShnGl",
+    "source": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/15. GBCrcl50SpryShnGl.psd",
+    "sourceSha256": "f4be6337928cdc28ebf6fca846fd0d55966859140de91688a3d3436072741098",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "cd1b7ef99d4e1d36d5f3f8ecf5dda3fb49243036558b4d408d9ba3b0b47f357b"
+  },
+  {
+    "sku": "GBCrcl50SpryShnBlk",
+    "source": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/19. GBCrcl50SpryShnBlk.psd",
+    "sourceSha256": "1596976634391082ef17f123c392f2a0b43ac18be602492a01516bdbe1f50c3f",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "c5f181f748f6daf132f0ee4506d037a776585d26cce0aaff39f3bae0cf6eeccb"
+  },
+  {
+    "sku": "GBCrcl50SpryShnSl",
+    "source": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/29. GBCrcl50SpryShnSl.psd",
+    "sourceSha256": "b868b71fc36b28ef2028109855a9b727a54c9f629ad05f1b5927a864cfb1885e",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "56620b02c6146b1da28e06667e1e5b38f9555eb8a4cb1bd0f0a15de9c3c591ef"
+  },
+  {
+    "sku": "GBCrclFrst50SpryMtGl",
+    "source": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/13. GBCrclFrst50SpryMtGl.psd",
+    "sourceSha256": "25f8a45a411d0da265aa79582895111289a07acc5fc2049410c2bad8a36153f7",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "1e9b812533d097367e0e059f58d96426b69a8ff54d73eb23c3b3190740a2ef47"
+  },
+  {
+    "sku": "GBCrclFrst50SpryShnGl",
+    "source": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/15. GBCrclFrst50SpryShnGl.psd",
+    "sourceSha256": "4dff9b4cf71f47060be7d11743362c73948b8c79e51753900c4a8171c1175742",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "e5f430c89dd6a4eec92ec11bc1c6c77e94d5f4fdece8415f5857fe0e240ebd5b"
+  },
+  {
+    "sku": "GBCrclFrst50SpryShnBlk",
+    "source": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/19. GBCrclFrst50SpryShnBlk.psd",
+    "sourceSha256": "499090e6e16d9202251085c1b92d08512a0ff62499e02c35e75f11ef9ce097f7",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "1eb7c2ab123ea49bdc2f6c744de2d276cefc1f743e769a9bb2b7115ac2617b79"
+  },
+  {
+    "sku": "GBCrclFrst50SpryMtSl",
+    "source": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/23. GBCrclFrst50SpryMtSl.psd",
+    "sourceSha256": "ad8d7cc4600c17d94c5e08c609feb3170453f3f38f53f2c7e53f2fef0d3b3558",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "d3df594db301f1a611fcb620ef4043a6ecf42a42eb929b1793e84ef754f50af7"
+  },
+  {
+    "sku": "GBCrclFrst50SpryShnSl",
+    "source": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/29. GBCrclFrst50SpryShnSl.psd",
+    "sourceSha256": "5376647bbb783d9e32e8d9ff8e4a9ec9f38aec07ae789600c8c45bd4f2a4d867",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "a54d81b77f4b41f7a5ee340c7dd604c2af060f1e9a289dd7a8d1d0c2356fe037"
+  },
+  {
+    "sku": "GBCrcl30SpryBlk",
+    "source": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/1. GBCrcl30SpryBlk.psd",
+    "sourceSha256": "be3c467f8b3258bf5babb0babd76e30cc8e9b59578ac45a2e38a793bd75cc9d6",
+    "assemblyLayers": [
+      1,
+      2,
+      4
+    ],
+    "sprayerLayer": 4,
+    "excludedCoverLayer": 3,
+    "outputSha256": "a35a0e9664afb6b2f2dc2e4e3a4809be11802ff82327e10451def97fba623c04"
+  },
+  {
+    "sku": "GBCrcl50SpryCu",
+    "source": "2.  18-415 Bottles /4. Circle Glass 50ml/1. Circle Glass 50ml PSD/57. GBCrcl50SpryCu.psd",
+    "sourceSha256": "2c27ddf6edc2661e6fe059694c4788a483872e0fbce76b101b9e18a6e7d1dcb4",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "4e3f96acc77fd33388f3686823b2139edbc52b1590aff4db8ba36208977d66f8"
+  },
+  {
+    "sku": "GBCrclFrst50SpryCu",
+    "source": "2.  18-415 Bottles /30. Circle (Frosted) Glass 50ml/1. Circle (Frosted) Glass 50ml/57. GBCrclFrst50SpryCu.psd",
+    "sourceSha256": "dd097b58a1f5b83386be9e45c70101194e140a3964d49487a6f1388df0408800",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "d0ebc58ef2cb2460ceff444d0f6c153cc2906921d76906e478ba0030a4f107bd"
+  },
+  {
+    "sku": "GBCrcl100SpryCu",
+    "source": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/54. GBCrcl100SpryCu.psd",
+    "sourceSha256": "b5d209af968b7cda89c98c6350231a7b49a306e754ad4f52185ebe0c10d89cd6",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "bebe73443a3f15494dbde8ea1b49b5e31fc30572aabd25b1c92a122910adc214"
+  },
+  {
+    "sku": "GBCrclFrst100SpryCu",
+    "source": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/54. GBCrclFrst100SpryCu.psd",
+    "sourceSha256": "928b703973ccc868099d61c0706a2aeaf3afdd7638709beac173b5224aed6a23",
+    "assemblyLayers": [
+      1,
+      2
+    ],
+    "sprayerLayer": 2,
+    "excludedCoverLayer": 3,
+    "outputSha256": "401665a85b931e56edbe57e0dabf735cd44212ad9ad8d04f8e3b7235d92d4030"
+  },
+  {
+    "sku": "GBCrcl100SpryMtGl",
+    "source": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/13. GBCrcl100SpryMtGl.psd",
+    "sourceSha256": "81c1c206b874206fdca21c9e5974e89b830b39c815b5ed1ad838f551162fff71",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "1b91f7dc3bf6bc2b13051ea8e3a8c7b9af21669817d733d403693d0193434954"
+  },
+  {
+    "sku": "GBCrcl100SpryShnGl",
+    "source": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/15. GBCrcl100SpryShnGl.psd",
+    "sourceSha256": "c194c86e5014e41f3fc0b606c916841636a6991f492db344772d83f61143a425",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "eed28c476bd7165c6a670af1993090db6eccab8481f38c31d3a40c542137c67a"
+  },
+  {
+    "sku": "GBCrcl100SpryShnBlk",
+    "source": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/19. GBCrcl100SpryShnBlk.psd",
+    "sourceSha256": "c29a8d1c4f1c414572c7285449e7663ebf1c4a8dc0adeb649cd1575c547e8a29",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "76acc201a47c1e20fc24f389be5724761e6bfda1579c110350cfb58306387cea"
+  },
+  {
+    "sku": "GBCrcl100SpryMtSl",
+    "source": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/23. GBCrcl100SpryMtSl.psd",
+    "sourceSha256": "35c3282c8e29edd7a30c8778db4e38b60f38aeb877e3de46a459fed582c799de",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "1381f961fee1cbd16730660831fcb9d593da716a1fb0540610b1219ec11886ac"
+  },
+  {
+    "sku": "GBCrcl100SpryShnSl",
+    "source": "2.  18-415 Bottles /5. Circle Glass Bottle 100ml (clear)/1. Circle Glass 100ml PSD/29. GBCrcl100SpryShnSl.psd",
+    "sourceSha256": "4f9eab57f0dc196057a1a86151015461a4de2fcd333b5f9a70ddd6913beaa937",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "61cec02dd30a18aad7d95bf7d416512666ec6e02b6c44db766dd63328f5001d3"
+  },
+  {
+    "sku": "GBCrclFrst100SpryMtGl",
+    "source": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/13. GBCrclFrst100SpryMtGl.psd",
+    "sourceSha256": "cbdcd819f264579fb7fda0560f6d58f23bd3cb373907c92e0d16384b85f84aef",
+    "assemblyLayers": [
+      1,
+      2
+    ],
+    "sprayerLayer": 2,
+    "excludedCoverLayer": 3,
+    "outputSha256": "4809d48ff02608122a419e86b2d1c0c1e2de9278d80ac835d540b141dd65fa2d"
+  },
+  {
+    "sku": "GBCrclFrst100SpryShnGl",
+    "source": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/15. GBCrclFrst100SpryShnGl.psd",
+    "sourceSha256": "6814156fe478968c37e7fb44f7512dd152619bbde1a95c2dd01b895d89070437",
+    "assemblyLayers": [
+      1,
+      2
+    ],
+    "sprayerLayer": 2,
+    "excludedCoverLayer": 3,
+    "outputSha256": "7ee5e3e8ff7ad6dc6af128f774996f76bc4572a607b9032f4bf69fd9b8dfb94c"
+  },
+  {
+    "sku": "GBCrclFrst100SpryShnBlk",
+    "source": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/19. GBCrclFrst100SpryShnBlk.psd",
+    "sourceSha256": "abd3f25375fbfb0e59f80610ae4835bc35067b1a40119ead4b0f69ffd2b9e7ee",
+    "assemblyLayers": [
+      1,
+      2
+    ],
+    "sprayerLayer": 2,
+    "excludedCoverLayer": 3,
+    "outputSha256": "3638119bd41ea6be365274ea54d89c63494a3eb6659713e0375e4bea1a0575eb"
+  },
+  {
+    "sku": "GBCrclFrst100SpryMtSl",
+    "source": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/23. GBCrclFrst100SpryMtSl.psd",
+    "sourceSha256": "e232ca513b9f76016c2cf486849e869c09aa811becd109180663183b5e4cb633",
+    "assemblyLayers": [
+      1,
+      2
+    ],
+    "sprayerLayer": 2,
+    "excludedCoverLayer": 3,
+    "outputSha256": "86230225be26dac682e509591e1955b4716584f688b65f9bb0b75fe3b19c35f2"
+  },
+  {
+    "sku": "GBCrclFrst100SpryShnSl",
+    "source": "2.  18-415 Bottles /6. Circle (frosted) 100ml/1. Circle Frst 100ml PSD/29. GBCrclFrst100SpryShnSl.psd",
+    "sourceSha256": "fc4b5e873da094592dec7a66572433c644d872087d48622be163c5829f1828fe",
+    "assemblyLayers": [
+      1,
+      2
+    ],
+    "sprayerLayer": 2,
+    "excludedCoverLayer": 3,
+    "outputSha256": "0cc593a7447c9c631bd1d38b76680929011250c8d1ef2fc98563f45f5e965523"
+  },
+  {
+    "sku": "GBCrcl30SpryShSl",
+    "source": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/3. GBCrcl30SpryShSl.psd",
+    "sourceSha256": "7c303290d1d68efbbd1234c8f534d687e45f118f1371fe8199525c4970e0b6b0",
+    "assemblyLayers": [
+      1,
+      2,
+      4
+    ],
+    "sprayerLayer": 4,
+    "excludedCoverLayer": 3,
+    "outputSha256": "ff2dc6ab231069cef6fd6891a812d9774ac1539c291ae86894afbd810024cc80"
+  },
+  {
+    "sku": "GBCrcl30SpryShnGl",
+    "source": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/2. GBCrcl30SpryShnGl.psd",
+    "sourceSha256": "4156ee780630103031bc7dd7faec15389a4b7cd6932bd416bddf60638defb25f",
+    "assemblyLayers": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "sprayerLayer": 4,
+    "excludedCoverLayer": 6,
+    "outputSha256": "9e8763639d451e5715fcdeeb8b219fb95b50992795a7f1c7f109d57d7894d560"
+  },
+  {
+    "sku": "GBCrcl30SpryMattSl",
+    "source": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/4. GBCrcl30SpryMattSl.psd",
+    "sourceSha256": "eaa75545dfea8e8b0e7c4528a81dc8e74754cf27dcf69f681d5e645df8ef21a2",
+    "assemblyLayers": [
+      1,
+      3,
+      4,
+      5
+    ],
+    "sprayerLayer": 4,
+    "excludedCoverLayer": 2,
+    "outputSha256": "4fe717aa67cb5bdd6f6715951ea6a014e16d738437e73e6e818fa99b94cfad5d"
+  },
+  {
+    "sku": "GBCrcl30SpryMattGl",
+    "source": "4.  15-415 Bottles/2. Circle Clear 30ml - Uncapped/Circle 30ml/5. GBCrcl30SpryMattGl.psd",
+    "sourceSha256": "5cc5639e2015134814ed7407548446417b6e77843169325c8cfee290af770eaa",
+    "assemblyLayers": [
+      1,
+      2,
+      4,
+      5
+    ],
+    "sprayerLayer": 5,
+    "excludedCoverLayer": 3,
+    "outputSha256": "e2254210b5584fbd05566158b1d3adac2b7fac3f8a363e74db18dde822f6045b"
+  },
+  {
+    "sku": "GBCrcl15SpryBlkMatt",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /3. GBCrcl15SpryBlkMatt.psd",
+    "sourceSha256": "070d8d1074a53dca2da3f97a3740e26ff20fb0db919e9f06ba822496cc447e3f",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "914a79717b948e4408a3b5df5f346cd27c971a32facad4c09be3fd1767b40002"
+  },
+  {
+    "sku": "GBCrcl15SpryBlkSh",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /4. GBCrcl15SpryBlkSh.psd",
+    "sourceSha256": "e075812b66fb5eb33f6574b30374c687ed9223bece627b066d0f6651375a2e34",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "96ead65a73c710333acb363cd53aee974dbf2bb26a8dfcc4cef2cf3131582766"
+  },
+  {
+    "sku": "GBCrcl15SpryBluMatt",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /5. GBCrcl15SpryBluMatt.psd",
+    "sourceSha256": "ed20e9b2fa409ad4e7be7cd3f995194deae8fad9ddc11ffa2f89cfb60889fff7",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "5c2e940665aeb5f6f2509fcde2eca4a29b1233568bab4e94722429acd6c2420b"
+  },
+  {
+    "sku": "GBCrcl15SpryCuMatt",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /30. GBCrcl15SpryCuMatt.psd",
+    "sourceSha256": "c5d641fc594ece035eb2400401a82c86c34999210856311a2121bf1bc5c1cb91",
+    "assemblyLayers": [
+      1,
+      2,
+      4
+    ],
+    "sprayerLayer": 4,
+    "excludedCoverLayer": 3,
+    "outputSha256": "8bc07abce4aab83a7adb266ff2fba51fcf07378612488c88e2b0311c3de014a7"
+  },
+  {
+    "sku": "GBCrcl15SpryGlMatt",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /7. GBCrcl15SpryGlMatt.psd",
+    "sourceSha256": "041037558d58fd58177483dc66ca736b0b9fe77c966381d4780832bb62a7f4b9",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "96268fb47bb590cdcf32db676e81394c13b68091f31b247d55c52d83fbd52781"
+  },
+  {
+    "sku": "GBCrcl15SpryGlSh",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /6. GBCrcl15SpryGlSh.psd",
+    "sourceSha256": "510efbec08a9d6e81215b20974cc18db67ead1cc5460b0bc2423738cfa5a5371",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "c2a5a56caede7f54d1f94f95380cea3433a397a91e36a5b45aa084599842b1da"
+  },
+  {
+    "sku": "GBCrcl15SprySlMatt",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /8. GBCrcl15SprySlMatt.psd",
+    "sourceSha256": "0c703539753aec686f14e0688013fa6e8e081f5d2a7e0c561a63a12ef13bcd47",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "c50c051bd6f0009cabe2892b233047be951602feb67248dcd42d979259e0537e"
+  },
+  {
+    "sku": "GBCrcl15SprySlSh",
+    "source": "5.  13-415 Bottles/17. Circle 15ml/1. Circle 15ml (Uncapped) PSD /9. GBCrcl15SprySlSh copy.psd",
+    "sourceSha256": "175387ef15a4703e9a495fa2145251dbdd9d472cc6f8fd2818a999834fdd8b23",
+    "assemblyLayers": [
+      1,
+      2,
+      3
+    ],
+    "sprayerLayer": 3,
+    "excludedCoverLayer": 4,
+    "outputSha256": "944c15349850d94afa3810dcbf527f60341f491477081b2a7aa68df21716fae8"
+  }
+]

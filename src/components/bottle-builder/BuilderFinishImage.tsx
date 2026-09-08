@@ -6,15 +6,22 @@ import { api } from "../../../convex/_generated/api";
 import { CATALOG_CAP_FAMILY, catalogCapKind, catalogCapPhoto, catalogCapPhotoFrame } from "@/lib/products/catalog-cap-photos";
 import { isClosurePart, type BuilderConfiguration } from "@/lib/bottle-builder/model";
 import BuilderImage from "./BuilderImage";
+import exposedSprayers from "@/lib/bottle-builder/exposed-sprayers.generated.json";
+import componentCutouts from "@/lib/bottle-builder/component-cutouts.generated.json";
 
 /** Show the actual photographed finish, never a whole bottle in a cap tile. */
 export default function BuilderFinishImage({ config }: { config: BuilderConfiguration }) {
     const [failed, setFailed] = useState<ReadonlySet<string>>(new Set());
-    const parts = (config.kit?.parts ?? []).filter(isClosurePart);
+    const mechanismFinish = /Sprayer|Pump/.test(config.fitment);
+    const parts = (config.kit?.parts ?? []).filter(part => mechanismFinish
+        ? part.slot !== "body" && part.slot !== "diptube" && !isClosurePart(part)
+        : isClosurePart(part));
     const kind = config.fitment === "Screw Cap" || config.fitment === "Reducer" ? "plain"
         : catalogCapKind([config.fitment]);
     const preview = { id: config.id, websiteSku: config.id, label: config.closure };
-    const exact = kind ? catalogCapPhoto(preview, [], kind, failed) : undefined;
+    const exposed = (exposedSprayers as Record<string, { mechanismUrl: string }>)[config.id]?.mechanismUrl;
+    const cutout = exposed ?? (componentCutouts as Record<string, { url: string }>)[config.finishComponent.websiteSku]?.url;
+    const exact = cutout && !failed.has(cutout) ? cutout : kind ? catalogCapPhoto(preview, [], kind, failed) : undefined;
     const needsComponentPhoto = !parts.length && !exact && kind !== null;
     const photos = useQuery(api.productPlates.byFamily, needsComponentPhoto
         ? { familyId: `${CATALOG_CAP_FAMILY[kind]}-${config.neck}`, limit: 200 } : "skip");

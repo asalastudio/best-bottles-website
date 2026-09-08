@@ -1,0 +1,78 @@
+[
+  {
+    "cell": 0,
+    "source": "20. Caps/18. 13-415 Sprayers/3. Spry13-415BlkSh.psd",
+    "sourceSha256": "ce50f51841b5ba993d2ff93572e033ce11966f6f813450ee515c670d7a2d2444",
+    "layers": [
+      1
+    ],
+    "url": "/images/bottle-builder/mechanism-references/0.png"
+  },
+  {
+    "cell": 1,
+    "source": "20. Caps/25. 13-415  Metal Roll on/1. 13-415MtlRollon.psd",
+    "sourceSha256": "8f3726f82f270a5daae3a114f0abd52266f2c67a6edb351ffbc31c73427771db",
+    "layers": [
+      1,
+      2
+    ],
+    "url": "/images/bottle-builder/mechanism-references/1.png"
+  },
+  {
+    "cell": 2,
+    "source": "20. Caps/24. 13-415 Roll on/2. 13-415PlsticRollon.psd",
+    "sourceSha256": "904964edb67b8b97994ffffccfa0003d336de86694c8102d11d96f0e303326eb",
+    "layers": [
+      1,
+      2
+    ],
+    "url": "/images/bottle-builder/mechanism-references/2.png"
+  },
+  {
+    "cell": 3,
+    "source": "20. Caps/17. 13-415 Caps /3. CP13-415Sl.psd",
+    "sourceSha256": "41e2d88ec967b9df7136231679a9ae05683084b2ada9d43454744c42a5dcf9ed",
+    "layers": [
+      1,
+      2
+    ],
+    "url": "/images/bottle-builder/mechanism-references/3.png"
+  },
+  {
+    "cell": 4,
+    "source": "20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+    "sourceSha256": "8ac632f6ac78b0f4e26071a500a1865c6c2e1751966f75e15ba6c095ab608abf",
+    "layers": [
+      1
+    ],
+    "url": "/images/bottle-builder/mechanism-references/4.png"
+  },
+  {
+    "cell": 5,
+    "source": "20. Caps/9. 18-415 Ansp /29. Ansp18-415Blk.psd",
+    "sourceSha256": "472208622aeda6f1c0767437d652e1b0b48c3ec8cffbcf3dd2f588cb2a32d012",
+    "layers": [
+      2
+    ],
+    "url": "/images/bottle-builder/mechanism-references/5.png"
+  },
+  {
+    "cell": 6,
+    "source": "20. Caps/10. 18-415 Ansp Tsl/41. AnspTsl18-415Blk.psd",
+    "sourceSha256": "b855f6b543c5e8188d8e5b86d9c233f7d1ea068c49490b9c1adc07f26aa1dc99",
+    "layers": [
+      2
+    ],
+    "url": "/images/bottle-builder/mechanism-references/6.png"
+  },
+  {
+    "cell": 7,
+    "source": "20. Caps/29. 18-415 Droppers/Drp18-415Sl.psd",
+    "sourceSha256": "79622c36f8cc5e2e7e2680250bf6a118dd306dcad8648a06bb5a0496d71656b8",
+    "layers": [
+      1,
+      2
+    ],
+    "url": "/images/bottle-builder/mechanism-references/7.png"
+  }
+]
