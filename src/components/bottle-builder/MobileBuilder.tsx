@@ -15,6 +15,7 @@ const titles = ["Choose your bottle", "Choose your glass", "Choose your fitment"
 const money = (n: number | null) => n == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(n);
 
 type Props = {
+    familyNotice?: import("react").ReactNode;
     families: { family: string; groups: number }[]; family: string; bodies: BuilderBody[];
     selection: BuilderSelection; current: ReturnType<typeof deriveBuilder>; order: ReturnType<typeof builderOrder>;
     stage: number; onStage: (stage: number) => void; onUpdate: (patch: Partial<BuilderSelection>) => void;
@@ -138,6 +139,7 @@ export default function MobileBuilder(p: Props) {
         </section>}
         {stage < 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage === 0 && <>
+            {p.familyNotice}
             <div className={styles.filters}><label><span className={styles.srOnly}>Bottle family</span><select aria-label="Bottle family" value={p.family} disabled={busy} onChange={e => p.onFamily(e.target.value)}>{p.families.map(f => <option key={f.family}>{f.family}</option>)}</select></label>
                 <button ref={filterTrigger} aria-haspopup="dialog" aria-expanded={filterOpen} onClick={() => { setFilterOpen(true); filters.current?.showModal(); }}><SlidersHorizontal size={20} /> Filters{activeFilters && <span aria-label="active">●</span>}</button>
             </div><p className={styles.count}>{visible.length} bottle {visible.length === 1 ? "option" : "options"}</p>

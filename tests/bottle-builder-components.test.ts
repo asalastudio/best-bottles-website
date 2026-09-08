@@ -1,6 +1,6 @@
 import { describe, expect, it, vi } from "vitest";
 import { listedReplacementSku, resolveListedComponents, restoreListedComponent, unavailableVintageFinishes, type ActiveComponent } from "@/lib/bottle-builder/components";
-import { assessBuilderConfiguration, reviewedFitmentImage, type BuilderConfiguration, type CatalogRow } from "@/lib/bottle-builder/model";
+import { assessBuilderConfiguration, compatibleFinishComponent, reviewedFitmentImage, type BuilderConfiguration, type CatalogRow } from "@/lib/bottle-builder/model";
 const sku = "CP13-415SpryBlkMt";
 const part = { websiteSku: `${sku}__RETIRED__OLD__document`, graceSku: "OLD", shopifySellable: false, itemName: "Matte black sprayer", imageUrl: null, stockStatus: null, capColor: null, webPrice1pc: .65, webPrice12pc: .62, productGroupSlug: null, shopifyVariantId: "old" };
 const active: ActiveComponent = { websiteSku: sku, graceSku: "CURRENT", neckThreadSize: "13-415", shopifyVariantId: "current", shopifySellable: true };
@@ -66,5 +66,29 @@ describe("builder listed component replacement", () => {
         expect(metal?.url).toContain("fitment-metal-roller");
         expect(plastic?.url).toContain("fitment-plastic-roller");
         expect(reviewedFitmentImage({ ...config, neck: "18-415", fitment: "Metal Roller" })).toBeNull();
+    });
+});
+
+
+describe("source-backed exact component matches", () => {
+    const component = (websiteSku: string) => ({ ...part, websiteSku, graceSku: websiteSku, shopifySellable: true });
+    const pump: CatalogRow = { ...row, family: "Cylinder", capacityMl: 50, neckThreadSize: "18-415", websiteSku: "LBCyl50LtnMtSl", applicator: "Lotion Pump", capColor: "Matte Silver", components: { "Lotion Pump": [component("Ltn18-415MtSl"), component("Ltn18-415MtSlCl")] } };
+    it("distinguishes the standard matte silver pump from the clear-overcap assembly", () => {
+        expect(compatibleFinishComponent(pump)?.websiteSku).toBe("Ltn18-415MtSl");
+        expect(compatibleFinishComponent({ ...pump, websiteSku: "UnverifiedLtnMtSl" })).toBeNull();
+        expect(compatibleFinishComponent({ ...pump, capacityMl: 100 })).toBeNull();
+    });
+    it("matches the two documented Circle 30 ml caps without globally treating gold as shiny gold", () => {
+        const cap: CatalogRow = { ...row, capacityMl: 30, neckThreadSize: "15-415", applicator: null, capColor: "Gold", websiteSku: "GBCrcl30GlCap", components: { Cap: [component("CP15-415ShnGl"), component("CP15-415ShnSl")] } };
+        expect(compatibleFinishComponent(cap)?.websiteSku).toBe("CP15-415ShnGl");
+        expect(compatibleFinishComponent({ ...cap, websiteSku: "GBCrcl30SlCap", capColor: "Silver" })?.websiteSku).toBe("CP15-415ShnSl");
+        expect(compatibleFinishComponent({ ...cap, websiteSku: "UnverifiedGlCap" })).toBeNull();
+    });
+    it("never bypasses availability, retirement, exact identity, or listed compatibility", () => {
+        expect(compatibleFinishComponent({ ...pump, components: {} })).toBeNull();
+        expect(compatibleFinishComponent({ ...pump, components: { "Lotion Pump": [component("Ltn18-415MtSlCl")] } })).toBeNull();
+        for (const change of [{ shopifySellable: false }, { stockStatus: "Out of Stock" }, { websiteSku: "Ltn18-415MtSl__RETIRED__OLD__record" }]) {
+            expect(compatibleFinishComponent({ ...pump, components: { "Lotion Pump": [{ ...component("Ltn18-415MtSl"), ...change }] } })).toBeNull();
+        }
     });
 });

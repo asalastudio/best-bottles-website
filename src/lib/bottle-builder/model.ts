@@ -1,3 +1,4 @@
+import { exactComponentMatches } from "./component-matches";
 import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
 import type { CartItem } from "@/components/CartProvider";
@@ -56,6 +57,9 @@ export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
 /** Join the selected assembly to a real, active component returned by matrix.
  * Neck equality and another finish on a complete SKU are not sufficient. */
 export function compatibleFinishComponent(row: CatalogRow) {
+    const exact = exactComponentMatches[row.websiteSku ?? ""];
+    if (exact && (row.family !== exact.family || row.capacityMl !== exact.capacityMl || row.color !== exact.color
+        || row.neckThreadSize !== exact.neck || (row.applicator ?? null) !== exact.applicator)) return null;
     const app = row.applicator ?? "";
     const kind = /roller/i.test(app) ? "Roll-On Cap" : /pump/i.test(app) && !/spray/i.test(app) ? "Lotion Pump"
         : /spray/i.test(app) ? "Sprayer" : /dropper/i.test(app) ? "Dropper" : "Cap";
@@ -66,12 +70,12 @@ export function compatibleFinishComponent(row: CatalogRow) {
         : kind === "Roll-On Cap" ? /^CPRoll/i : kind === "Lotion Pump" ? /^Ltn/i
         : kind === "Dropper" ? /^Drp/i : /^CP(?!Roll|.*(?:Spry|AnSp))/i;
     const finish = getFinishFromWebsiteSku(row.websiteSku)?.label ?? row.capColor?.trim();
-    if (!finish) return null;
+    if (!finish && !exact) return null;
     const matches = (row.components[kind] ?? []).filter(part => part.websiteSku && part.graceSku
         && !/__RETIRED__/i.test(part.websiteSku) && part.shopifySellable !== false
         && !/out of stock|discontinued|unavailable/i.test(part.stockStatus ?? "")
         && skuPattern.test(part.websiteSku) && part.websiteSku.includes(row.neckThreadSize ?? "invalid")
-        && getFinishFromWebsiteSku(part.websiteSku)?.label === finish);
+        && (exact ? part.websiteSku === exact.componentSku : getFinishFromWebsiteSku(part.websiteSku)?.label === finish));
     if (matches.length !== 1) return null;
     const part = matches[0];
     return { websiteSku: part.websiteSku!, imageUrl: part.imageUrl ?? null, name: part.itemName ?? kind };

@@ -1,0 +1,26 @@
+[
+  {
+    "sku": "GBCrcl30GlCap",
+    "component": "CP15-415ShnGl",
+    "remainingIssue": "media_unavailable"
+  },
+  {
+    "sku": "GBCrcl30SlCap",
+    "component": "CP15-415ShnSl",
+    "remainingIssue": "media_unavailable"
+  },
+  {
+    "sku": "LBCyl50LtnMtSl",
+    "component": "Ltn18-415MtSl",
+    "remainingIssue": null,
+    "preflightStatus": 200,
+    "returnedSku": "LBCyl50LtnMtSl"
+  },
+  {
+    "sku": "LBCyl100LtnMtSl",
+    "component": "Ltn18-415MtSl",
+    "remainingIssue": null,
+    "preflightStatus": 200,
+    "returnedSku": "LBCyl100LtnMtSl"
+  }
+]
