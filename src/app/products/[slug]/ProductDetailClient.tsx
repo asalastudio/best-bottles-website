@@ -57,6 +57,7 @@ import type { FocusedPdpRelations } from "@/lib/products/pdp-relations";
 import { resolveFocusedPdpCapabilities } from "@/lib/products/focused-pdp-rollout";
 import { resolveGlassSiblingVariant, resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { resolveSelectedSkuKit } from "@/lib/products/pdp-selected-kit";
+import { getPdpSkuFallbackImage, getPdpSkuImageFallbacks } from "@/lib/products/pdp-sku-image-fallback";
 import MobileProductPdp from "@/components/products/mobile/MobileProductPdp";
 import {
     createPendingPdpAnalyticsNavigation,
@@ -73,6 +74,8 @@ import {
 } from "@/lib/grace/pdpPlateSwap";
 
 export type { PdpCompatibilityPayload } from "@/components/products/PdpDiscoverySections";
+
+const pdpSkuImageFallbacks = getPdpSkuImageFallbacks();
 
 function analyticsApplicationForApplicator(applicator: string | null | undefined): ApplicatorNavValue | null {
     if (!applicator) return null;
@@ -2093,6 +2096,7 @@ export default function ProductDetailClient({
                             selectedVariant={selectedVariant ?? null}
                             platesBySku={platesBySku}
                             selectedKitQuery={selectedKitQuery}
+                            skuImageFallbacks={pdpSkuImageFallbacks}
                             displayName={customerDisplayName}
                             inStock={inStock}
                             canAddToCart={canAddToCart}
@@ -2134,7 +2138,7 @@ export default function ProductDetailClient({
                         <div className="mb-8 lg:mb-14">
                             <ConfiguratorPdp
                                 currentSlug={group.slug}
-                                variantImageUrl={usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
+                                variantImageUrl={getPdpSkuFallbackImage(selectedVariant?.websiteSku) ?? usableProductImageUrl(selectedVariant?.imageUrl) ?? null}
                                 plateImage={selectedPlate?.image ?? null}
                                 plateImageCapOff={verifiedCapOffPhoto(selectedVariant?.websiteSku) ?? selectedPlate?.imageCapOff ?? null}
                                 heightWithCap={selectedVariant?.heightWithCap ?? null}
