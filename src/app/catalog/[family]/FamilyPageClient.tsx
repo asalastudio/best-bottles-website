@@ -387,7 +387,7 @@ export default function FamilyPageClient({
 
     return (
         <>
-            <Navbar variant="catalog" familyCatalogMobile />
+            <Navbar variant="catalog" headerClassName={mobileStyles.mobileHeader} />
             <main className={`${mobileStyles.page} min-h-screen bg-warm-white pb-20 pt-[112px] text-obsidian xl:pt-[120px]`}>
                 <MobileFamilyCatalog
                     family={family} families={families} count={activeResult.totalCount}

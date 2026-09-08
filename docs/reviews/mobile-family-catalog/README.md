@@ -24,8 +24,8 @@ Desktop retains its existing introduction, application choices, result expansion
 - Size + glass + roller filters, reload, individual chip removal, empty-result recovery, Circle product loading, and family-preserving builder links passed.
 - Filter dialog closes with Escape and restores trigger focus. Automated axe WCAG A/AA checks found no violations in the changed catalog or filter dialog.
 - No horizontal page overflow at those widths, in 844 × 390 landscape, or with an enlarged root font at 320px. No browser exceptions in the checked flow.
-- 1,523 unit tests passed; 7 existing tests skipped. Includes five new filter-state regressions. Desktop tests explicitly target desktop controls now that both responsive presentations exist.
-- Production build passed. The local Cylinder route returned HTTP 200 after verification.
+- 1,524 unit tests passed; 7 existing tests skipped. Includes five new filter-state regressions and a Webpack CSS-module compilation regression. Desktop tests explicitly target desktop controls now that both responsive presentations exist.
+- Production build passed using Vercel's Webpack build command with backend deployment explicitly disabled. The local Cylinder route returned HTTP 200 after verification.
 - TypeScript passed. Repository lint passed with 50 existing warnings and no errors.
 
 The reproducible browser script and measurements are [verify-mobile.mjs](verify-mobile.mjs) and [verification.json](verification.json). Run from the repository root with `node docs/reviews/mobile-family-catalog/verify-mobile.mjs`; optionally set `PREVIEW_URL` and `CHROME_PATH`.
@@ -33,3 +33,7 @@ The reproducible browser script and measurements are [verify-mobile.mjs](verify-
 ## Limits
 
 Browser checks used desktop Chrome's mobile viewport emulation, not physical Safari/Chrome devices or VoiceOver. Enlarged-root-font reflow is a useful check, not a replacement for physical-device text resizing. Purchasing and cart services were reused without modification; no checkout/order was submitted. No production deployment is included.
+
+## PR #109 deployment repair
+
+The initial Vercel Preview failed because Webpack rejects global-only selectors in CSS modules. The earlier local and CI builds used Turbopack and did not enforce that check. Mobile header styles now attach through a local CSS-module class. A regression test uses Next's bundled CSS-module purity plugin; it reproduced the original error before the fix and passes after it. CI now uses `npm run build -- --webpack`, matching Vercel's compiler. No backend or environment configuration was changed.

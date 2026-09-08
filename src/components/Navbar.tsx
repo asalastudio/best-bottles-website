@@ -19,7 +19,7 @@ interface NavbarProps {
     initialSearchValue?: string;
     hideMobileSearch?: boolean;
     builderMobile?: boolean;
-    familyCatalogMobile?: boolean;
+    headerClassName?: string;
     /** @deprecated cart is now managed internally */
     onCartOpen?: () => void;
 }
@@ -98,7 +98,7 @@ const SEARCH_SUGGESTIONS = [
     { label: "Cream Jar", helper: "Category", query: "cream jar" },
 ];
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false, familyCatalogMobile = false }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false, headerClassName = "" }: NavbarProps) {
     const router = useRouter();
     // Grace trigger moved to the floating launcher; useGrace no longer needed here.
     const { itemCount, isCartHydrated } = useCart();
@@ -338,9 +338,8 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
         <>
             <header
                 data-site-header=""
-                data-family-catalog-header={familyCatalogMobile || undefined}
                 data-builder-header={builderMobile || undefined}
-                className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
+                className={`${headerClassName} fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
                     } ${variant === "catalog" ? "border-b border-champagne" : ""}`}
                 style={{ right: "var(--grace-content-inset, 0px)" }}
             >

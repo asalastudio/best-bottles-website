@@ -212,21 +212,21 @@
     background: #242424;
     border-radius: 4px;
   }
-  :global([data-family-catalog-header]) {
+  .mobileHeader {
     position: relative;
   }
-  :global([data-family-catalog-header] [data-mobile-search]) {
+  .mobileHeader [data-mobile-search] {
     padding-top: 4px;
     padding-bottom: 8px;
   }
-  :global([data-family-catalog-header] [data-mobile-search] form) {
+  .mobileHeader [data-mobile-search] form {
     padding-top: 0;
     padding-bottom: 0;
   }
-  :global([data-family-catalog-header] input) {
+  .mobileHeader input {
     font-size: 16px;
   }
-  :global([data-family-catalog-header] button) {
+  .mobileHeader button {
     min-width: 44px;
     min-height: 44px;
   }
