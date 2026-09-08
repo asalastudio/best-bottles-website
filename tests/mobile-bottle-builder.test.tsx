@@ -13,6 +13,7 @@ const bodies: BuilderBody[] = [
  {id:'b',family:'Cylinder',capacityMl:9,neck:'17-415',profileLabel:'Cylinder',configurations:[config('b','Clear','Pump','White')]},
 ];
 let root: Root, container: HTMLDivElement;
+let viewport: EventTarget & { height: number; scale: number };
 const add = vi.fn();
 function Harness() {
  const [selection,setSelection]=useState(emptySelection());const [stage,setStage]=useState(0);
@@ -22,10 +23,38 @@ const click = (el: Element | null) => act(()=>{ if(!el)throw Error('Missing cont
 const choose=(label:string)=>click(container.querySelector(`input[aria-label="${label}"]`));
 const button=(text:string)=>click([...container.querySelectorAll('button')].find(b=>b.textContent?.trim()===text)??null);
 const stage=()=>container.querySelector('[data-stage]')?.getAttribute('data-stage');
-beforeEach(async()=>{vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT',true);vi.stubGlobal('ResizeObserver',class{observe(){}disconnect(){}});vi.stubGlobal('requestAnimationFrame',(cb:()=>void)=>{cb();return 0});window.scrollTo=vi.fn();add.mockReset();container=document.createElement('div');document.body.append(container);root=createRoot(container);await act(async()=>root.render(<Harness/>));});
+beforeEach(async()=>{viewport=Object.assign(new EventTarget(),{height:window.innerHeight,scale:1});vi.stubGlobal('visualViewport',viewport);vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT',true);vi.stubGlobal('ResizeObserver',class{observe(){}disconnect(){}});vi.stubGlobal('requestAnimationFrame',(cb:()=>void)=>{cb();return 0});window.scrollTo=vi.fn();add.mockReset();container=document.createElement('div');document.body.append(container);root=createRoot(container);await act(async()=>root.render(<Harness/>));});
 afterEach(()=>{act(()=>root.unmount());container.remove();vi.unstubAllGlobals()});
 function toFinish(){choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');button('Continue to fitment');choose('Metal Roller');button('Continue to finish');}
 describe('mobile presentation over shared configuration',()=>{
+ it('does not move Continue into keyboard layout when zoom or browser chrome shrinks the viewport',()=>{
+  choose('9 ml, 13-415 neck');button('Continue to glass');
+  act(()=>{viewport.height=window.innerHeight/1.5;viewport.scale=1.5;viewport.dispatchEvent(new Event('resize'));});
+  expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
+  act(()=>{viewport.scale=1;viewport.dispatchEvent(new Event('resize'));});
+  expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
+  choose('Clear');button('Continue to fitment');expect(stage()).toBe('2');
+ });
+ it('uses keyboard layout only for a focused quantity editor and clears it on blur without a resize',()=>{
+  toFinish();choose('Gold');button('Review bottle');
+  const quantity=container.querySelector<HTMLInputElement>('input[type=number]')!;
+  act(()=>{quantity.focus();viewport.height=window.innerHeight/2;viewport.dispatchEvent(new Event('resize'));});
+  expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('true');
+  act(()=>quantity.blur());
+  expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
+ });
+
+ it('keeps the action bar stable while a tap dismisses the keyboard, then releases layout after click',()=>{
+  toFinish();choose('Gold');button('Review bottle');
+  const quantity=container.querySelector<HTMLInputElement>('input[type=number]')!;
+  const action=[...container.querySelectorAll('button')].find(b=>b.textContent?.includes('Add to cart'))!;
+  act(()=>{quantity.focus();viewport.height=window.innerHeight/2;viewport.dispatchEvent(new Event('resize'));});
+  act(()=>{action.dispatchEvent(new Event('pointerdown',{bubbles:true}));quantity.blur();viewport.height=window.innerHeight;viewport.dispatchEvent(new Event('resize'));});
+  expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('true');
+  click(action);
+  expect(add).toHaveBeenCalledOnce();
+  expect(container.querySelector('[data-mobile-builder]')?.getAttribute('data-keyboard')).toBe('false');
+ });
  it('uses native preview dismissal and returns focus without losing the reviewed build',()=>{
   toFinish();choose('Gold');button('Review bottle');button('Use case quantity');
   const trigger=container.querySelector<HTMLButtonElement>('button[aria-label="Expand bottle preview"]')!;
