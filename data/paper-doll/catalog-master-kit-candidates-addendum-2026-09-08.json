@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-08T20:13:35.319Z",
-  "publicationStatus": "visual-review-only",
+  "generatedAt": "2026-09-08T20:58:55.992583+00:00",
+  "publicationStatus": "visual approval required; no publication performed",
   "rows": [
     {
       "websiteSku": "GBCrcl100AnSpTslGl",
@@ -33,7 +33,7 @@
         "parity": {
           "ok": true,
           "mean": 2.8124,
-          "tailOver40": 0.000006
+          "tailOver40": 6e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -141,7 +141,7 @@
         "parity": {
           "ok": true,
           "mean": 2.6207,
-          "tailOver40": 0.000019
+          "tailOver40": 1.9e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -213,7 +213,7 @@
         "parity": {
           "ok": true,
           "mean": 0.741,
-          "tailOver40": 0.000006
+          "tailOver40": 6e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -393,7 +393,7 @@
         "parity": {
           "ok": true,
           "mean": 0.6872,
-          "tailOver40": 0.000025
+          "tailOver40": 2.5e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -537,7 +537,7 @@
         "parity": {
           "ok": true,
           "mean": 0.6343,
-          "tailOver40": 0.000013
+          "tailOver40": 1.3e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -609,7 +609,7 @@
         "parity": {
           "ok": true,
           "mean": 0.6604,
-          "tailOver40": 0.000003
+          "tailOver40": 3e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -645,7 +645,7 @@
         "parity": {
           "ok": true,
           "mean": 0.8196,
-          "tailOver40": 0.000003
+          "tailOver40": 3e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -825,7 +825,7 @@
         "parity": {
           "ok": true,
           "mean": 0.6362,
-          "tailOver40": 0.000007
+          "tailOver40": 7e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -897,7 +897,7 @@
         "parity": {
           "ok": true,
           "mean": 3.1723,
-          "tailOver40": 0.000022
+          "tailOver40": 2.2e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -969,7 +969,7 @@
         "parity": {
           "ok": true,
           "mean": 3.0771,
-          "tailOver40": 0.000011
+          "tailOver40": 1.1e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1077,7 +1077,7 @@
         "parity": {
           "ok": true,
           "mean": 2.9245,
-          "tailOver40": 0.000021
+          "tailOver40": 2.1e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1221,7 +1221,7 @@
         "parity": {
           "ok": true,
           "mean": 1.795,
-          "tailOver40": 0.000037
+          "tailOver40": 3.7e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1409,7 +1409,7 @@
         "parity": {
           "ok": true,
           "mean": 2.7961,
-          "tailOver40": 0.000014
+          "tailOver40": 1.4e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1445,7 +1445,7 @@
         "parity": {
           "ok": true,
           "mean": 2.7721,
-          "tailOver40": 0.000007
+          "tailOver40": 7e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1481,7 +1481,7 @@
         "parity": {
           "ok": true,
           "mean": 2.7577,
-          "tailOver40": 0.000007
+          "tailOver40": 7e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1517,7 +1517,7 @@
         "parity": {
           "ok": true,
           "mean": 2.7791,
-          "tailOver40": 0.000007
+          "tailOver40": 7e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1589,7 +1589,7 @@
         "parity": {
           "ok": true,
           "mean": 2.6664,
-          "tailOver40": 0.000043
+          "tailOver40": 4.3e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1625,7 +1625,7 @@
         "parity": {
           "ok": true,
           "mean": 2.6354,
-          "tailOver40": 0.000008
+          "tailOver40": 8e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1733,7 +1733,7 @@
         "parity": {
           "ok": true,
           "mean": 1.7577,
-          "tailOver40": 0.000009
+          "tailOver40": 9e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1769,7 +1769,7 @@
         "parity": {
           "ok": true,
           "mean": 1.6706,
-          "tailOver40": 0.000004
+          "tailOver40": 4e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -1913,7 +1913,7 @@
         "parity": {
           "ok": true,
           "mean": 1.3129,
-          "tailOver40": 0.000009
+          "tailOver40": 9e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -2237,7 +2237,7 @@
         "parity": {
           "ok": true,
           "mean": 2.005,
-          "tailOver40": 0.000005
+          "tailOver40": 5e-06
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -2417,7 +2417,7 @@
         "parity": {
           "ok": true,
           "mean": 2.028,
-          "tailOver40": 0.000042
+          "tailOver40": 4.2e-05
         }
       },
       "origin": "catalog-master-mapping-2026-09-08"
@@ -3001,6 +3001,1910 @@
       "family": "Slim",
       "sourcePath": "21. Tassels/Updated Tassels/45. GBSlm50AnSpTslWht.psd",
       "origin": "slim-master-mapping"
+    },
+    {
+      "websiteSku": "GBBstn15BlkCapSht",
+      "status": "candidate",
+      "plateSha256": "cb11490cbe2104d37535b896d8d685f9958eddd92041e62254a27e8554de4236",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/3. Clear Bottle (.5ounce:15ml) (capped)/Clear Dropper Bottler 1.5 ounce Alternating Caps (capped)/1. GBBstn15BlkCapSht.psd",
+      "sourceSha256": "1c994a66c9d0eb524d3aff308514532efe560d0659f2df9c99860e4e4891fa71",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.8143,
+            "semiTransparentPixels": 6226,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9714,
+            "semiTransparentPixels": 1741,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5405,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstn1ozBlkCapSht",
+      "status": "candidate",
+      "plateSha256": "85d25d540709059c89bddb9ab2e820ad7cc895e52579abc9bc8924ead0f1d267",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/3. Clear Bottle (1oz) (capped)/Clear - Alternating Caps (capped)/17. GBBstn1ozBlkCapSht.psd",
+      "sourceSha256": "8f3adeb586877cc3a1ca8b58901f43022fe388187aa2c5b8d11bfa8edc4f6f1e",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.785,
+            "semiTransparentPixels": 6280,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9744,
+            "semiTransparentPixels": 1560,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.5199,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstn2ozBlkCapSht",
+      "status": "candidate",
+      "plateSha256": "ada43cc85a767d0851e1fefc4f91daa838deec4ac48cc21a29a1a0b080e4f7b5",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/3. Clear Bottle (2 ounce:60 ml) (capped)/Clear - Alternating Caps (capped)/17. GBBstn2ozBlkCapSht.psd",
+      "sourceSha256": "82dacf0eeb9397d6ead784ff4dad5144d7882f6e843b12e511505ee16f87cdf0",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6717,
+            "semiTransparentPixels": 7797,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9732,
+            "semiTransparentPixels": 1775,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.4228,
+          "tailOver40": 5e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlBlkDropper",
+      "status": "candidate",
+      "plateSha256": "8bb5c40482dfd8c65ec250f05482ca5a15131bfe04ba2e9b89b05966433e8c13",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/5. GBBstnAmb15mlBlkDropper.psd",
+      "sourceSha256": "1b11102a8e4308c7b498fd3ea1188e9cd78060fa5cc3f3daded0f9bc71139c97",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7935,
+            "semiTransparentPixels": 13601,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9513,
+            "semiTransparentPixels": 2231,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1649,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlBlkDropperGlTrim",
+      "status": "candidate",
+      "plateSha256": "d758a0411c4623b9ed88ddda94bd539168c041c65210164e5e0857ef6b18578f",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/7. GBBstnAmb15mlBlkDropperGlTrim.psd",
+      "sourceSha256": "b2b52c85a1784af992b1958e7c64ce7db8c21af30db6a516edcbe5d2d5ee524e",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7936,
+            "semiTransparentPixels": 13570,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9488,
+            "semiTransparentPixels": 3180,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.253,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlBlkDropperSlTrim",
+      "status": "candidate",
+      "plateSha256": "08a35a73905a0a3f1c8e8148070b5f05dac3c8354dedcec6fedc18950bca5ec6",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/2. GBBstnAmb15mlBlkDropperSlTrim.psd",
+      "sourceSha256": "e07dbdba792fbf30ebeabb532e7f0779c44be1174893009581d0c60dcfa1bc80",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7936,
+            "semiTransparentPixels": 13547,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9476,
+            "semiTransparentPixels": 3095,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1779,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlWhtDropper",
+      "status": "candidate",
+      "plateSha256": "b4b6d06794c43f95d7c225b6f38459ff2571e4586daa5e5fd1a628da7b02ce0f",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/6. GBBstnAmb15mlWhtDropper.psd",
+      "sourceSha256": "eb5e161f1f1581b6f41f08dbcdca7950ecc841f7fd4571f35df6af1c661be8e1",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7948,
+            "semiTransparentPixels": 13707,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9438,
+            "semiTransparentPixels": 3695,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2598,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlWhtDropperGlTrim",
+      "status": "candidate",
+      "plateSha256": "05a83d94f12996e1a0d4c1012a837087d418ae44224b4adf10192efdfba399b8",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/4. GBBstnAmb15mlWhtDropperGlTrim.psd",
+      "sourceSha256": "818aeca0fc4b78a459781384726469dfe74e7a4ef8620a3a33791736d7d81193",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7949,
+            "semiTransparentPixels": 13611,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9491,
+            "semiTransparentPixels": 3096,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2249,
+          "tailOver40": 1.3e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb15mlWhtDropperSlTrim",
+      "status": "candidate",
+      "plateSha256": "a96b9754fba89803b3ac02ebd6eea40aee0576b99f934f4bd6a334b5c04e3ae8",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/1. Amber Bottle (.5ounce:15ml) (capped)/Amber Bottle (1.5 ounce) Alternating Caps (capped)/3. GBBstnAmb15mlWhtDropperSlTrim.psd",
+      "sourceSha256": "968b57b3b9ec4eb169506c51d8d07f8a88c98eabeeebe62923ebf31a0a08cb95",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7949,
+            "semiTransparentPixels": 13532,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9483,
+            "semiTransparentPixels": 3290,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2057,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozBlkDropper",
+      "status": "candidate",
+      "plateSha256": "a84c7770ef8417f567812a883ffb4b03daeae707e026974a786ac720ef845bd4",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/16. GBBstnAmb1ozBlkDropper.psd",
+      "sourceSha256": "4f2ef5e45614acebdf51d947d0048f14dd008b4c69626ab531f50a6e664d2372",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5869,
+            "semiTransparentPixels": 6679,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9518,
+            "semiTransparentPixels": 19824,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2441,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattBlk",
+      "status": "candidate",
+      "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/3. GBBstnAmb1ozMtlRollonMattBlk.psd",
+      "sourceSha256": "987864a06140f0a1c8638d278dbdd66fa2a0e90d1db2f3c376a772e75db08bb1",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.406,
+            "semiTransparentPixels": 7562,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2433,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9096,
+            "semiTransparentPixels": 3415,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8742,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonMattSl",
+      "status": "candidate",
+      "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/1. GBBstnAmb1ozMtlRollonMattSl.psd",
+      "sourceSha256": "3ca84fa59dffed11eb26323d63a6b8b7b74dc54ea6a1b06a4b7ce39e8f26c84f",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.4108,
+            "semiTransparentPixels": 6494,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2454,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 2640,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9645,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozMtlRollonShnSl",
+      "status": "candidate",
+      "plateSha256": "34d0177d3ffc48dcc74a840d44ad76ede6c8f1a8515d00bca08827a8485162ec",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/2. GBBstnAmb1ozMtlRollonShnSl.psd",
+      "sourceSha256": "ee7e9381873be932835946e1dac8a2b9875d0e5e6d2a8f4f92d3763e6def51e7",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.4098,
+            "semiTransparentPixels": 7629,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2388,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.917,
+            "semiTransparentPixels": 4905,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0611,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozRollonMattBlk",
+      "status": "candidate",
+      "plateSha256": "3c0ca7e4cee9abb42876b60c2998c2bad05734d0a51b4fe4b8908ead359c05c0",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/8. GBBstnAmb1ozRollonMattBlk.psd",
+      "sourceSha256": "db8aa09ebb4d60407aeaff1bad20da32f7fd01bd071d72bc57420ca1ba85ebd9",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.406,
+            "semiTransparentPixels": 7562,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2433,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9096,
+            "semiTransparentPixels": 3415,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8742,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozRollonMattSl",
+      "status": "candidate",
+      "plateSha256": "1c1bde3986c1e513506d7ec7008502514588dc10a8f3cf212a3ede5b29a68f68",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/6. GBBstnAmb1ozRollonMattSl.psd",
+      "sourceSha256": "7eabadd67036eb3e1edb72415913f98b487612974de3fdf27194af86b2e139eb",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.4108,
+            "semiTransparentPixels": 6494,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9695,
+            "semiTransparentPixels": 2454,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9186,
+            "semiTransparentPixels": 2640,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9645,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozWhtDropper",
+      "status": "candidate",
+      "plateSha256": "f3988ef6c611fe928353d5d6b6e56706aae1f89bd844185ddadf7e05fce0ccd2",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/11. GBBstnAmb1ozWhtDropper.psd",
+      "sourceSha256": "d78cb22c182b16eff4c338fa3ec34d937fde529b1dc08b15ca0b2fbe403297c3",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5869,
+            "semiTransparentPixels": 6644,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9545,
+            "semiTransparentPixels": 2654,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1003,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb1ozWhtDropperShnGlTrim",
+      "status": "candidate",
+      "plateSha256": "670125261174a6335c63e692493c21112b487645a2c33a409c1da30c82c55f03",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/1. Amber Bottle (1oz) (capped)/Amber - Alternating Caps (capped)/13. GBBstnAmb1ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "e21d4abb5bc5a513004a8778f69f8de8a4f23cddd271f2ee7da8cf33e9185046",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5869,
+            "semiTransparentPixels": 6702,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9588,
+            "semiTransparentPixels": 2276,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1388,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozWhtDropperShnGlTrim",
+      "status": "candidate",
+      "plateSha256": "2a4b2637b9e37c1655a73cadbde813137a197ab2a18b37902078a32eb6b2ecf6",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/13. GBBstnAmb2ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "b71d5adf2d7e17c8b9de829e920a8dd75aaad1e8b5894892d8467cb15d8b8318",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6287,
+            "semiTransparentPixels": 5254,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9633,
+            "semiTransparentPixels": 1571,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1695,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnAmb2ozWhtDropperShnSlTrim",
+      "status": "candidate",
+      "plateSha256": "bfc2730c9b553ff63a6fb131a45f4ddb2e3b95985058ca52f841115ebdf01079",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/2. (2 ounce:60 ml) Boston Round (Capped)/1. Amber Bottle (2 ounce:60 ml) (capped)/Amber - Alternating Caps (capped)/14. GBBstnAmb2ozWhtDropperShnSlTrim.psd",
+      "sourceSha256": "5c9a5008294957db16d2e47687a921d0e788b6f4bf9b7ce2c9cf40e7702c81aa",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.6278,
+            "semiTransparentPixels": 5247,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9641,
+            "semiTransparentPixels": 1707,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1582,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnBlu15mlBlkDropperSlTrim",
+      "status": "candidate",
+      "plateSha256": "5062fa1ffc152d60569e6244d4c701636b1973e6e5aaf6dbb57c8450cc661f6c",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/5.  (.5 ounce:15ml) Boston Round (Capped)/2. Cobalt Blue Bottle (.5ounce:15ml) (capped)/2. GBBstnBlu15mlBlkDropperSlTrim.psd",
+      "sourceSha256": "54f455b539a529b31b984cec83e41cc430ce82de334967b234d33e179cff0742",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 13648,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9469,
+            "semiTransparentPixels": 3268,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2906,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozBlkDropper",
+      "status": "candidate",
+      "plateSha256": "a19ab57869f6462802540cc0f080dc2fcf46e80195c94fc89dcef0555a78ea2d",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/16. GBBstnBlu1ozBlkDropper.psd",
+      "sourceSha256": "79bc6518e047a45f8ba8d015bfdd20926f502cc47409f2ca13d1f1dc255ccbea",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5968,
+            "semiTransparentPixels": 6196,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9524,
+            "semiTransparentPixels": 19802,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.3822,
+          "tailOver40": 4e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozBlkDropperShnGlTrim",
+      "status": "candidate",
+      "plateSha256": "9a9e152e8d1527ba2749a6776d9e595d256488637fb1516de7b16683edf4c4ea",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/12. GBBstnBlu1ozBlkDropperShnGlTrim.psd",
+      "sourceSha256": "aea9ad03ed77e7aea60f9e9814cc78488d26340ff8724ec781a6647f959f7e59",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5959,
+            "semiTransparentPixels": 6244,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9603,
+            "semiTransparentPixels": 2763,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2837,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozWhtDropper",
+      "status": "candidate",
+      "plateSha256": "0949b3812b026b85b1f5b92a984acc268ebfa7ac39c7b5b5748f3e6e8f243d1d",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/11. GBBstnBlu1ozWhtDropper.psd",
+      "sourceSha256": "8f6e134c62b41c1055e0189ee75cc83c5cf3c5229d279dad8e49e17829eccd45",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5899,
+            "semiTransparentPixels": 5752,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9542,
+            "semiTransparentPixels": 2499,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2357,
+          "tailOver40": 4e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozWhtDropperShnGlTrim",
+      "status": "candidate",
+      "plateSha256": "d64484a81219160a05df35267a0a7ecc14171de2c4ee993f1f1d0787a199a3b1",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/13. GBBstnBlu1ozWhtDropperShnGlTrim.psd",
+      "sourceSha256": "714159bd99d69a90561e67e2a823939f39b4c0cffa716cebff99f1e8136ff70c",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.589,
+            "semiTransparentPixels": 6688,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9584,
+            "semiTransparentPixels": 2289,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2663,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBBstnBlu1ozWhtDropperShnSlTrim",
+      "status": "candidate",
+      "plateSha256": "83117b4269800cf2e27f78ed2334aad2905ae40b75f3084f5ceb27e59eb9dd46",
+      "family": "Boston Round",
+      "sourcePath": "1.  20-400 (1 oz & 2 oz) the 15ml 18-400 Boston Round/1. Boston Round  Dropper Bottles/4. (1ounce:30ml) Boston Round  (Capped)/2. Cobalt Blue Bottle (1oz) (capped)/Cobalt Blue - Alternating Caps (capped)/14. GBBstnBlu1ozWhtDropperShnSlTrim.psd",
+      "sourceSha256": "58bef541605f043890b700b2de976e4c3ccfc9c299884688699db4f0f158e7d6",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.5899,
+            "semiTransparentPixels": 6781,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9595,
+            "semiTransparentPixels": 2208,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2384,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10Gl",
+      "status": "candidate",
+      "plateSha256": "692bc399a03bfe0c103867fae11385d122bdf5b4c67bf04ca7f3edf6bea49fcb",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/28. GBRect10Gl.psd",
+      "sourceSha256": "f2c4715e840e2b15939b731dbf6f9d448d004ccccb58f5224de9f4f29ddf4652",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7674,
+            "semiTransparentPixels": 9508,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9262,
+            "semiTransparentPixels": 3104,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1924,
+          "tailOver40": 1.4e-05
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10Sl",
+      "status": "candidate",
+      "plateSha256": "1b9d53935b2890ff8e7dd87ee5b6b29f881b8b2999191c2a120f0426f70d6892",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/29. GBRect10Sl.psd",
+      "sourceSha256": "0959011413cf8bdd559b3cdd1b00a6277e8bcf751eb6092c91c92da29aa60c49",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7676,
+            "semiTransparentPixels": 9523,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9259,
+            "semiTransparentPixels": 3035,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.07,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10SpryBlkMatt",
+      "status": "candidate",
+      "plateSha256": "b0d4f1e7c68d26c1e1b36f382b91929c47eb3aebd454c8730353791084886252",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/3. GBRect10SpryBlkMatt.psd",
+      "sourceSha256": "0933cf63a279503291a6c5c62ba8c88d05625adb23d2a413b1e438d1e2c8fa11",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7677,
+            "semiTransparentPixels": 9484,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9851,
+            "semiTransparentPixels": 4215,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9038,
+            "semiTransparentPixels": 5885,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8771,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10SpryBlkSh",
+      "status": "candidate",
+      "plateSha256": "9b7abfcfdc662ecbacb9d166bc12798ea8938c017f560e8e572b34ff890ce570",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/4. GBRect10SpryBlkSh.psd",
+      "sourceSha256": "2cf5c138c456fcaefd15a7ef8f00600f3d288172e31dd83f73c7f69641ccd42a",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7676,
+            "semiTransparentPixels": 9523,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9851,
+            "semiTransparentPixels": 4113,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9046,
+            "semiTransparentPixels": 5545,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.892,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10SpryBluMatt",
+      "status": "candidate",
+      "plateSha256": "176878ef0229798ec12992876c3d147d4d86aa8bfb823bb18b7ce3258aa1ca9f",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/5. GBRect10SpryBluMatt.psd",
+      "sourceSha256": "677a39072e8dad7adbee7ffa2d2f71aca000f0a7d327726e0f0b44b83a5d4c27",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7674,
+            "semiTransparentPixels": 9559,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9849,
+            "semiTransparentPixels": 4273,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9052,
+            "semiTransparentPixels": 3921,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2658,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "bf8d9188734596175df8ed4642438dc0bad3a0869f2b93d48d44e12360f5b616",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/7. GBRect10SpryGlMatt.psd",
+      "sourceSha256": "a5801ec0065916003ab2a6d69278b2fb0f5d29e331cbdcf49aa8ca0f367a0bca",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7677,
+            "semiTransparentPixels": 9471,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9851,
+            "semiTransparentPixels": 4172,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9041,
+            "semiTransparentPixels": 5048,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1595,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "21bc3ddc3ee452180146c5b2418386d5b3e3ad6e7b05a1f6651459b27f9a7c13",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/6. GBRect10SpryGlSh.psd",
+      "sourceSha256": "90e6dcad2f2b158636713a9f390dd305a164784a3e817c71b5a09501f8728d84",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7677,
+            "semiTransparentPixels": 9289,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9851,
+            "semiTransparentPixels": 4177,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9046,
+            "semiTransparentPixels": 4700,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2854,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "ddf7b1259fbb3c42fb2f3c7302bbe90a67029f907919e04d9c2ac6b154a477cf",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/8. GBRect10SprySlMatt.psd",
+      "sourceSha256": "834427d5c62d9da582488374421fe1730bbeed061634ceb9ef0081abfa2b2cdb",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7677,
+            "semiTransparentPixels": 9484,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9851,
+            "semiTransparentPixels": 4215,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.9057,
+            "semiTransparentPixels": 4805,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.8964,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBRect10WhtSht",
+      "status": "candidate",
+      "plateSha256": "d4ab3e368ee118bc6cae204cec4a34ce0224ee4a77a478b72278dceef5b87835",
+      "family": "Rectangle",
+      "sourcePath": "5.  13-415 Bottles/18. Footed Rectangluar 10ml/2. Footed Rect (Capped)10ml PSD/2. GBRect10WhtSht.psd",
+      "sourceSha256": "c7dd5b097100180357149cdb761d2d470d1bdccb2f74f6d44afc4c5ff5600bc6",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7675,
+            "semiTransparentPixels": 9466,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9724,
+            "semiTransparentPixels": 1651,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1712,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5BlkSht",
+      "status": "candidate",
+      "plateSha256": "8762394e8405c31691311386dddfd24330c2c1f89f5ed38f56162e29c86c90b7",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/1. GBTulipAmb5BlkSht.psd",
+      "sourceSha256": "3201a38b9e88069133adf812f27477dcce616a7c4bbbad223368a49daf178854",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7923,
+            "semiTransparentPixels": 7086,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9658,
+            "semiTransparentPixels": 2171,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2414,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollPinkDot",
+      "status": "candidate",
+      "plateSha256": "df7506e30c94468d226cfeb2e9bb2aa590976272e11ff57798dbd67a1ea2908c",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/12. GBTulipAmb5MtlRollPinkDot.psd",
+      "sourceSha256": "621f72ca695f770ecd13da9f404ca06f135ab5659b39e5f03ca093fd44652651",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7924,
+            "semiTransparentPixels": 7436,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9805,
+            "semiTransparentPixels": 2689,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9116,
+            "semiTransparentPixels": 3710,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0884,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlDot",
+      "status": "candidate",
+      "plateSha256": "ec2ba0cde9dd8a01b14ec5f479bc533ca077ccbbf436c6575d084d9fc0ae0c5f",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/10. GBTulipAmb5MtlRollSlDot.psd",
+      "sourceSha256": "9ae39c01a1d6a80873f5dfd7f42fa5a345055690ba96f1031cdbf6d720091c08",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7923,
+            "semiTransparentPixels": 7086,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9805,
+            "semiTransparentPixels": 2707,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9116,
+            "semiTransparentPixels": 4948,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0139,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlMatt",
+      "status": "candidate",
+      "plateSha256": "63c4d7b7b297575d8d085824ce758e7f00b426c865fb8af35ab7b0a26b6d11c3",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/14. GBTulipAmb5MtlRollSlMatt.psd",
+      "sourceSha256": "78c04181763b207a0ab6016f795f202850789694043dc3b90d39680d632b1458",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7924,
+            "semiTransparentPixels": 7436,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9805,
+            "semiTransparentPixels": 2662,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9069,
+            "semiTransparentPixels": 4568,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9922,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5MtlRollSlSh",
+      "status": "candidate",
+      "plateSha256": "0780b7fb715058fa1b7cade9e96ba257748401c5150eb49387e5b3f6b69b4d8e",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/20. GBTulipAmb5MtlRollSlSh.psd",
+      "sourceSha256": "b6b8220a04e4ded6956e9da5d58be6a68055d0ec76c1fe714bf8d1dca990b5f9",
+      "parts": [
+        "body",
+        "roller",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 7250,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "roller",
+            "ok": true,
+            "transparentFraction": 0.9805,
+            "semiTransparentPixels": 2635,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9056,
+            "semiTransparentPixels": 3816,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0889,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5Sl",
+      "status": "candidate",
+      "plateSha256": "58d90f1adb1e5142132ac0411144857ac9f1c2eb1bc7e1ba5368adc8e430cee9",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/29. GBTulipAmb5Sl.psd",
+      "sourceSha256": "8c983d2c0c0cd77e136f5beee493d7c3282b0be90992bf2f1b10714affeb4c5b",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 7250,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9055,
+            "semiTransparentPixels": 3858,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.0884,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBlkMatt",
+      "status": "candidate",
+      "plateSha256": "037612372b3dff22ed263fe418a476845d63351b4801a1edcb6f0c90b2f4ecf1",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/3. GBTulipAmb5SpryBlkMatt.psd",
+      "sourceSha256": "63fe56482c6215d4cc8cacbbe8dd1fc0dce3fb8a7cbff575f6bd1418a210b6b8",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7923,
+            "semiTransparentPixels": 7086,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9174,
+            "semiTransparentPixels": 4725,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8784,
+            "semiTransparentPixels": 6209,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9546,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBlkSh",
+      "status": "candidate",
+      "plateSha256": "90ad012bfb5ba6d3118ffc4d1e4c552341424c263c0ec34e02e40847515df83d",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/4. GBTulipAmb5SpryBlkSh.psd",
+      "sourceSha256": "d84dc61300c16061f6cc00676da00ba49cdbc4f9b8ccefcb72a1886c0957f1ef",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 7250,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9175,
+            "semiTransparentPixels": 4700,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8785,
+            "semiTransparentPixels": 8347,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9357,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryBluMatt",
+      "status": "candidate",
+      "plateSha256": "0dab359e0363a5f82d111692e7decfe26cdcb7c4321a4aa93745d6b372e6cd26",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/5. GBTulipAmb5SpryBluMatt.psd",
+      "sourceSha256": "2e8d9a069001866120bbd2deec2ad9c36181b2090c2648244c0bbec2c9dcc3ea",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7923,
+            "semiTransparentPixels": 7086,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9194,
+            "semiTransparentPixels": 4880,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8801,
+            "semiTransparentPixels": 3641,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.1879,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryGlMatt",
+      "status": "candidate",
+      "plateSha256": "747c899abfb34929f58bfebe6e5cf620801ef27ff914e205edac550778457d87",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/7. GBTulipAmb5SpryGlMatt.psd",
+      "sourceSha256": "b068bbf7eb5723298acb7831a1ff3478b52583019b2c347a9d9186fc9e96299e",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7924,
+            "semiTransparentPixels": 7436,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9208,
+            "semiTransparentPixels": 4037,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8802,
+            "semiTransparentPixels": 4556,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2086,
+          "tailOver40": 3e-06
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SpryGlSh",
+      "status": "candidate",
+      "plateSha256": "0828877fd0eadea1f1088ebee2585450e60f123a6e78c23cabd9293fe707a671",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/6. GBTulipAmb5SpryGlSh.psd",
+      "sourceSha256": "74068f20e699fbfbb1a910eec16d14a50a053e789d686b3f0dcb16033b4fa895",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7923,
+            "semiTransparentPixels": 7086,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9182,
+            "semiTransparentPixels": 62387,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8806,
+            "semiTransparentPixels": 3713,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2139,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SprySlMatt",
+      "status": "candidate",
+      "plateSha256": "251a5980c7fd4b109f40ed5c7f59a503ee9a20a1c10f43030f7f30c96326282b",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/8. GBTulipAmb5SprySlMatt.psd",
+      "sourceSha256": "5efff4b0809716540f930427ca3a20fef62721c991b132ac335228fcfd7b79bb",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7924,
+            "semiTransparentPixels": 7436,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9162,
+            "semiTransparentPixels": 4435,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8806,
+            "semiTransparentPixels": 5332,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 0.9778,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5SprySlSh",
+      "status": "candidate",
+      "plateSha256": "e1788931d318935484e48542688c9a3573d876127247b94ac4ffb0fdcf47cf7b",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/9. GBTulipAmb5SprySlSh.psd",
+      "sourceSha256": "41dd7f7abfbce1ed5b72b95121e7f888db2b956d78afeb2157bed2b679b31fb7",
+      "parts": [
+        "body",
+        "sprayer",
+        "overcap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 7250,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "sprayer",
+            "ok": true,
+            "transparentFraction": 0.9188,
+            "semiTransparentPixels": 57699,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "overcap",
+            "ok": true,
+            "transparentFraction": 0.8826,
+            "semiTransparentPixels": 5004,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2007,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
+    },
+    {
+      "websiteSku": "GBTulipAmb5WhtSht",
+      "status": "candidate",
+      "plateSha256": "62e7da7b19b019b8bb06badad6c29cd7595e9db1c6167bc76a031b19afe0efa1",
+      "family": "Tulip",
+      "sourcePath": "5.  13-415 Bottles/24. 13-415 Bottles Capped Images/2. Tulip 5 Amber (Capped) PSD/2. GBTulipAmb5WhtSht.psd",
+      "sourceSha256": "6f9d4a3cdfc55e6a9c122872b549726dc9eaf309c070690cc8c1f8b6c6c5995a",
+      "parts": [
+        "body",
+        "cap"
+      ],
+      "gates": {
+        "alpha": [
+          {
+            "slot": "body",
+            "ok": true,
+            "transparentFraction": 0.7922,
+            "semiTransparentPixels": 7250,
+            "touchesOwnEdge": false
+          },
+          {
+            "slot": "cap",
+            "ok": true,
+            "transparentFraction": 0.9651,
+            "semiTransparentPixels": 2047,
+            "touchesOwnEdge": false
+          }
+        ],
+        "parity": {
+          "ok": true,
+          "mean": 1.2024,
+          "tailOver40": 0.0
+        }
+      },
+      "origin": "paired-psd-recovery-2026-09-08"
     }
   ]
 }
