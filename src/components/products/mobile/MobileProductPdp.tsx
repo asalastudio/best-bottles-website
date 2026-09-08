@@ -23,6 +23,7 @@ import type { PlateRef } from "@/lib/paper-doll/plates";
 import { resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { resolveGuidedVariant, type GuidedVariantDeps } from "@/lib/products/guided-variant-resolver";
 import { getMaterialSwatchStyle } from "@/lib/products/material-swatches";
+import { focusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import {
     buildMobileConfigRows,
     confirmLabelFor,
@@ -152,7 +153,15 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
     } = props;
 
     const isMobile = useViewportIsMobile();
-    const closureBase = useMemo(() => closureBaseFromSlug(slug), [slug]);
+    const productPresentation = useMemo(
+        () => focusedProductPresentation(group.category, group.family),
+        [group.category, group.family],
+    );
+    const isBottle = productPresentation.kind === "bottle";
+    const closureBase = useMemo(
+        () => isBottle ? closureBaseFromSlug(slug) : "none",
+        [isBottle, slug],
+    );
     const thumbBySwatch = useClosureThumbnails(closureBase, group.neckThreadSize);
     const deps = useMemo<GuidedVariantDeps<ProductVariant>>(() => ({
         sku: variantSku,
@@ -299,19 +308,34 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
     const capDimension = useMemo<MobileConfigDimension | null>(() => {
         if (capOptions.length === 0) return null;
-        const options: MobileConfigOption[] = capOptions.map((name) => ({
-            id: name,
-            label: name,
-            // The picker represents the cap alone; never substitute a bottle plate.
-            thumbUrl: capOptionThumbnails?.[name] ?? resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys) ?? null,
-            swatchStyle: getMaterialSwatchStyle(name, {}) as CSSProperties,
-        }));
+        const options: MobileConfigOption[] = capOptions.map((name) => {
+            const productVariant = !isBottle
+                ? variants.find((variant) => resolveCapFinish(variant).swatchName === name)
+                : null;
+            const productPlate = productVariant ? plateFor(platesBySku, productVariant) : null;
+            return {
+                id: name,
+                label: name,
+                // Bottle pickers represent the cap alone. A bag/box/accessory
+                // picker represents the whole product variant and should show it.
+                thumbUrl: isBottle
+                    ? capOptionThumbnails?.[name] ?? resolveCapOptionPhoto(name, thumbBySwatch, capOptionPhotoKeys) ?? null
+                    : productPlate?.thumb ?? productPlate?.image ?? productVariant?.imageUrl ?? null,
+                swatchStyle: getMaterialSwatchStyle(name, {}) as CSSProperties,
+            };
+        });
         return { options, selectedId: activeCapOption };
-    }, [capOptions, thumbBySwatch, capOptionPhotoKeys, capOptionThumbnails, activeCapOption]);
+    }, [activeCapOption, capOptionPhotoKeys, capOptionThumbnails, capOptions, isBottle, platesBySku, resolveCapFinish, thumbBySwatch, variants]);
 
     const { rows, facts } = useMemo(
-        () => buildMobileConfigRows({ closureBase, glass: glassDimension, roller: rollerDimension, capFinish: capDimension }),
-        [closureBase, glassDimension, rollerDimension, capDimension],
+        () => buildMobileConfigRows({
+            closureBase,
+            productKind: productPresentation.kind,
+            glass: isBottle ? glassDimension : null,
+            roller: isBottle ? rollerDimension : null,
+            capFinish: capDimension,
+        }),
+        [closureBase, productPresentation.kind, isBottle, glassDimension, rollerDimension, capDimension],
     );
     const activeRow = picker.activePicker ? rows.find((row) => row.picker === picker.activePicker) ?? null : null;
 
@@ -481,7 +505,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         ? resolveChargedUnitPrice(qty, selectedVariant)
         : null;
     const caseQty = selectedVariant?.caseQuantity && selectedVariant.caseQuantity > 1 ? selectedVariant.caseQuantity : null;
-    const neckSize = selectedVariant?.neckThreadSize ?? group.neckThreadSize ?? null;
+    const neckSize = isBottle ? selectedVariant?.neckThreadSize ?? group.neckThreadSize ?? null : null;
     const resolvedSku = selectedVariant?.websiteSku || selectedVariant?.graceSku || null;
     const previewingLabel = activeRow && pickerHasPendingChange(picker)
         ? activeRow.options.find((option) => option.id === picker.previewSelectionId)?.label ?? null
@@ -509,7 +533,14 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
 
             {/* Configure sits under the bottle, before the title, so first-time
                 visitors see that glass / roller / cap are choices — not specs. */}
-            <MobileConfigurationSummary rows={rows} facts={facts} onOpen={openPicker} registerRow={registerRow} />
+            <MobileConfigurationSummary
+                rows={rows}
+                facts={facts}
+                onOpen={openPicker}
+                registerRow={registerRow}
+                heading={productPresentation.configureHeading}
+                hint={productPresentation.configureHint}
+            />
             <div ref={sentinelRef} data-testid="mobile-pdp-cta-sentinel" aria-hidden className="h-px w-full" />
 
             {/* ── identity + price ─────────────────────────────────────────── */}

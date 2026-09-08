@@ -7,6 +7,7 @@
  */
 import type { CSSProperties } from "react";
 import type { ClosureBase } from "@/lib/configurator/families";
+import type { FocusedProductKind } from "./focused-product-presentation";
 import type { MobilePickerType } from "./mobile-pdp-view-modes";
 
 export type MobileConfigOption = {
@@ -43,6 +44,7 @@ export type MobileConfigDimension = {
 
 export type MobileConfigInput = {
     closureBase: ClosureBase;
+    productKind?: FocusedProductKind;
     glass?: MobileConfigDimension | null;
     roller?: MobileConfigDimension | null;
     capFinish?: MobileConfigDimension | null;
@@ -98,27 +100,42 @@ export function buildMobileConfigRows(input: MobileConfigInput): { rows: MobileC
         });
     };
 
+    const isBottle = (input.productKind ?? "bottle") === "bottle";
+
     // Physical order: the bottle, what touches the product, what closes it (PRD §90).
-    place(input.glass, {
-        picker: "glass",
-        label: "Glass Finish",
-        title: "Select Glass",
-        hint: "Bottle updates above in real time.",
-        layout: "list",
-    });
-    place(input.roller, {
-        picker: "roller",
-        label: "Roller",
-        title: "Select Roller",
-        hint: "Choose the roller material. Bottle updates above in real time.",
-        layout: "cards",
-    });
+    // Packaging uses the same exact-variant resolver, but it must never inherit
+    // bottle-only glass, roller, or closure language.
+    if (isBottle) {
+        place(input.glass, {
+            picker: "glass",
+            label: "Glass Finish",
+            title: "Select Glass",
+            hint: "Bottle updates above in real time.",
+            layout: "list",
+        });
+        place(input.roller, {
+            picker: "roller",
+            label: "Roller",
+            title: "Select Roller",
+            hint: "Choose the roller material. Bottle updates above in real time.",
+            layout: "cards",
+        });
+    }
     const finish = closureFinishLabels(input.closureBase);
+    const productFinish = input.productKind === "giftBag"
+        ? { label: "Bag Color", title: "Select Bag Color", hint: "Bag updates above in real time." }
+        : input.productKind === "giftBox"
+            ? { label: "Box Option", title: "Select Box Option", hint: "Box updates above in real time." }
+            : input.productKind === "funnel"
+                ? { label: "Funnel Material", title: "Select Funnel Material", hint: "Funnel updates above in real time." }
+            : input.productKind === "accessory"
+                ? { label: "Product Option", title: "Select Product Option", hint: "Product updates above in real time." }
+                : { ...finish, hint: "Bottle updates above in real time." };
     place(input.capFinish, {
         picker: "capFinish",
-        label: finish.label,
-        title: finish.title,
-        hint: "Bottle updates above in real time.",
+        label: productFinish.label,
+        title: productFinish.title,
+        hint: productFinish.hint,
         layout: (input.capFinish?.options.length ?? 0) >= CLOSURE_GRID_MIN_OPTIONS ? "grid" : "list",
     });
 

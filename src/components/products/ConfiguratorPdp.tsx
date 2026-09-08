@@ -26,6 +26,7 @@ import { familyForSlugOrDerived, glassFromSlug, type ClosureBase }
   from "@/lib/configurator/families";
 import { CLOSURE_META } from "@/lib/configurator/useCases";
 import { swatchFor, type SwatchableMaterial } from "@/lib/materials/materialSwatch";
+import type { FocusedProductPresentation } from "@/lib/products/focused-product-presentation";
 import { componentPhotoSkuBelongsToBase, photoKeysForVariant, resolveCapOptionPhoto } from "@/lib/products/closure-swatch-keys";
 import { useQuery } from "convex/react";
 import type { FunctionReturnType } from "convex/server";
@@ -133,6 +134,7 @@ export default function ConfiguratorPdp({
   onProductUrlChange,
   plateImage = null, plateImageCapOff = null, variantImageUrl = null,
   heightWithCap = null, heightWithoutCap = null, diameter = null, hasApproved3d = false, kitQuery, selectedGraceSku,
+  productPresentation,
 }: {
   currentSlug: string;
   /** paper-doll plate for the SELECTED SKU (productPlates index, served from Vercel Blob): the
@@ -150,6 +152,7 @@ export default function ConfiguratorPdp({
   /** Exact selected-SKU kit truth supplied by the focused PDP boundary. */
   kitQuery?: FunctionReturnType<typeof api.productKits.forSku>;
   selectedGraceSku?: string | null;
+  productPresentation?: FocusedProductPresentation;
   groupTitle: string;          // "Elegant 60 ml"
   capacityLabel: string;       // "Clear glass"
   priceEach: number | null;    // committed group's unit price
@@ -207,7 +210,8 @@ export default function ConfiguratorPdp({
   /** One-line volume teaser under Add to Cart; the full table is below the fold. */
   volumePricing?: ReactNode;
 }) {
-  const fam = familyForSlugOrDerived(currentSlug);
+  const isBottle = (productPresentation?.kind ?? "bottle") === "bottle";
+  const fam = isBottle ? familyForSlugOrDerived(currentSlug) : null;
   const slugGlass: GlassPresetId = fam ? glassFromSlug(fam, currentSlug) : "clear";
   const [rollerLocal, setRollerLocal] = useState<"metal" | "plastic">("metal");
   const rollerVariant = rollerVariantProp ?? rollerLocal;
@@ -298,7 +302,7 @@ export default function ConfiguratorPdp({
   const committedToken = currentSlug.split("-").pop() ?? "";
   const committedBase: ClosureBase =
     fam?.closureFromSlug[committedToken]
-    ?? (/roll-?on/.test(currentSlug) ? "roller" : fam?.derived ? "none" : "sprayer");
+    ?? (!isBottle ? "none" : /roll-?on/.test(currentSlug) ? "roller" : fam?.derived ? "none" : "sprayer");
 
   const [capMatLocal, setCapMat] = useState("ANSP_BLACK");
   const [trimMatLocal, setTrimMat] = useState(
@@ -795,7 +799,7 @@ export default function ConfiguratorPdp({
   };
 
   /* 1. Glass Finish — the colourways this family sells, as cards */
-  const glassStep = (glassOptions?.length ?? 0) > 0 ? (
+  const glassStep = isBottle && (glassOptions?.length ?? 0) > 0 ? (
     <div>
       <p className="mb-3 flex items-center gap-1.5 text-2xs font-semibold uppercase tracking-label text-slate">
         1. Glass Finish
@@ -839,14 +843,17 @@ export default function ConfiguratorPdp({
   ) : null;
 
   /* Your Configuration — the spec card with the resolved SKU */
-  const configRows: Array<[string, string]> = [
-    ["Family", groupTitle],
-    ["Glass Finish", glassLabel],
-    ...(neckSize ? [["Neck Finish", neckSize] as [string, string]] : []),
-    ["Closure", activeMeta?.name ?? "Bottle only"],
-    ...(finishLabel ? [["Closure Finish", finishLabel] as [string, string]] : []),
-    ...(canCap ? [["View", withCap ? "Cap on" : "Cap off"] as [string, string]] : []),
-  ];
+  const configRows: Array<[string, string]> = isBottle ? [
+      ["Family", groupTitle],
+      ["Glass Finish", glassLabel],
+      ...(neckSize ? [["Neck Finish", neckSize] as [string, string]] : []),
+      ["Closure", activeMeta?.name ?? "Bottle only"],
+      ...(finishLabel ? [["Closure Finish", finishLabel] as [string, string]] : []),
+      ...(canCap ? [["View", withCap ? "Cap on" : "Cap off"] as [string, string]] : []),
+    ] : [
+      ["Product Type", groupTitle],
+      ...(finishLabel ? [[productPresentation?.optionLabel ?? "Product Option", finishLabel] as [string, string]] : []),
+    ];
   const configCard = (
     <div className="border border-champagne/50 bg-linen p-3">
       <div className="mb-2 flex items-center justify-between">
@@ -914,7 +921,9 @@ export default function ConfiguratorPdp({
       {priceBlock}
       {glassStep ? <div className="mt-5">{glassStep}</div> : null}
       {rollerStep}
-      <div className="mt-5 pt-4 border-t border-champagne/50">{finishRow()}</div>
+      <div className="mt-5 pt-4 border-t border-champagne/50">
+        {finishRow(false, isBottle ? "3. Closure Finish" : productPresentation?.optionLabel ?? "Product Option")}
+      </div>
       <div className="focused-pdp-cta-cluster mt-5" data-pdp-cta-cluster="above-fold">
         {ctaStack}
       </div>

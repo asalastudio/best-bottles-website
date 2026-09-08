@@ -32,11 +32,15 @@ export default function MobileConfigurationSummary({
     facts,
     onOpen,
     registerRow,
+    heading = "Configure this bottle",
+    hint = "Tap a row to change an option. The bottle updates above.",
 }: {
     rows: MobileConfigRow[];
     facts: MobileConfigFact[];
     onOpen: (picker: MobilePickerType) => void;
     registerRow: (picker: MobilePickerType, el: HTMLButtonElement | null) => void;
+    heading?: string;
+    hint?: string;
 }) {
     if (rows.length === 0 && facts.length === 0) return null;
     return (
@@ -48,10 +52,10 @@ export default function MobileConfigurationSummary({
             {rows.length > 0 ? (
                 <header className="px-4 pb-2 pt-4">
                     <h2 id="mobile-pdp-configure-heading" className="font-serif text-[22px] font-medium leading-tight text-obsidian">
-                        Configure this bottle
+                        {heading}
                     </h2>
                     <p className="mt-1 text-xs leading-snug text-slate">
-                        Tap a row to change an option. The bottle updates above.
+                        {hint}
                     </p>
                 </header>
             ) : null}

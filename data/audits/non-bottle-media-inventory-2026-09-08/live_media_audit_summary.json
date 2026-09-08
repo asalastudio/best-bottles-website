@@ -1,0 +1,317 @@
+{
+  "inputs": {
+    "root": "/Users/jordanrichter/Projects/Clients/Nemat-International/Best-Bottles-Website-02-20-2026",
+    "outDir": "/tmp/bestbottles-media-gap-audit-nonbottle-2026-09-08",
+    "family": "ALL",
+    "convexUrl": "https://helpful-elephant-638.convex.cloud",
+    "productEvidenceAt": "2026-09-08T22:14:49.285Z",
+    "plateEvidenceAt": "2026-09-08T22:14:49.285Z",
+    "xrefPath": null,
+    "xrefGeneratedAt": null,
+    "urlChecks": true,
+    "remoteUrlsChecked": 4917,
+    "shopifyWarning": null,
+    "branch": "feat/bottle-bodies-3d",
+    "commit": "c617cf352d791c1ee7f160dc68d682d5e94dafdc"
+  },
+  "summary": {
+    "products": 2540,
+    "exactCoverage": 1880,
+    "remoteOnly": 398,
+    "needsRecovery": 262,
+    "unresolved": 0,
+    "byStatus": {
+      "no_verified_source": 262,
+      "remote_only_healthy": 398,
+      "covered_exact_plate": 1880
+    },
+    "byShopifyState": {
+      "missing_variant_image": 1489,
+      "sku_not_found": 7,
+      "assigned": 1041,
+      "duplicate_sku": 3
+    },
+    "byFamily": {
+      "Aluminum Bottle": {
+        "total": 8,
+        "exact": 5,
+        "remoteOnly": 1,
+        "needsRecovery": 2,
+        "unresolved": 0
+      },
+      "Bell": {
+        "total": 6,
+        "exact": 0,
+        "remoteOnly": 1,
+        "needsRecovery": 5,
+        "unresolved": 0
+      },
+      "Boston Round": {
+        "total": 123,
+        "exact": 90,
+        "remoteOnly": 0,
+        "needsRecovery": 33,
+        "unresolved": 0
+      },
+      "Cap/Closure": {
+        "total": 39,
+        "exact": 18,
+        "remoteOnly": 9,
+        "needsRecovery": 12,
+        "unresolved": 0
+      },
+      "Cap/Component": {
+        "total": 2,
+        "exact": 0,
+        "remoteOnly": 0,
+        "needsRecovery": 2,
+        "unresolved": 0
+      },
+      "Circle": {
+        "total": 209,
+        "exact": 192,
+        "remoteOnly": 2,
+        "needsRecovery": 15,
+        "unresolved": 0
+      },
+      "Cream Jar": {
+        "total": 19,
+        "exact": 14,
+        "remoteOnly": 1,
+        "needsRecovery": 4,
+        "unresolved": 0
+      },
+      "Decorative": {
+        "total": 12,
+        "exact": 9,
+        "remoteOnly": 2,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Diamond": {
+        "total": 45,
+        "exact": 30,
+        "remoteOnly": 0,
+        "needsRecovery": 15,
+        "unresolved": 0
+      },
+      "Diva": {
+        "total": 228,
+        "exact": 120,
+        "remoteOnly": 69,
+        "needsRecovery": 39,
+        "unresolved": 0
+      },
+      "Dropper": {
+        "total": 22,
+        "exact": 21,
+        "remoteOnly": 0,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Elegant": {
+        "total": 290,
+        "exact": 224,
+        "remoteOnly": 36,
+        "needsRecovery": 30,
+        "unresolved": 0
+      },
+      "Empire": {
+        "total": 95,
+        "exact": 65,
+        "remoteOnly": 1,
+        "needsRecovery": 29,
+        "unresolved": 0
+      },
+      "Gift Box": {
+        "total": 15,
+        "exact": 0,
+        "remoteOnly": 14,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Grace": {
+        "total": 45,
+        "exact": 38,
+        "remoteOnly": 0,
+        "needsRecovery": 7,
+        "unresolved": 0
+      },
+      "Packaging Supply": {
+        "total": 12,
+        "exact": 0,
+        "remoteOnly": 11,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Plug/Applicator": {
+        "total": 2,
+        "exact": 0,
+        "remoteOnly": 0,
+        "needsRecovery": 2,
+        "unresolved": 0
+      },
+      "Roll-On Cap": {
+        "total": 35,
+        "exact": 34,
+        "remoteOnly": 0,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Round": {
+        "total": 186,
+        "exact": 141,
+        "remoteOnly": 9,
+        "needsRecovery": 36,
+        "unresolved": 0
+      },
+      "Sleek": {
+        "total": 192,
+        "exact": 113,
+        "remoteOnly": 74,
+        "needsRecovery": 5,
+        "unresolved": 0
+      },
+      "Slim": {
+        "total": 129,
+        "exact": 27,
+        "remoteOnly": 97,
+        "needsRecovery": 5,
+        "unresolved": 0
+      },
+      "Sprayer": {
+        "total": 64,
+        "exact": 35,
+        "remoteOnly": 23,
+        "needsRecovery": 6,
+        "unresolved": 0
+      },
+      "Tool": {
+        "total": 3,
+        "exact": 0,
+        "remoteOnly": 2,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Unknown": {
+        "total": 1,
+        "exact": 0,
+        "remoteOnly": 0,
+        "needsRecovery": 1,
+        "unresolved": 0
+      },
+      "Vial": {
+        "total": 26,
+        "exact": 19,
+        "remoteOnly": 5,
+        "needsRecovery": 2,
+        "unresolved": 0
+      },
+      "Apothecary": {
+        "total": 5,
+        "exact": 4,
+        "remoteOnly": 1,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Atomizer": {
+        "total": 25,
+        "exact": 21,
+        "remoteOnly": 2,
+        "needsRecovery": 2,
+        "unresolved": 0
+      },
+      "Cylinder": {
+        "total": 443,
+        "exact": 439,
+        "remoteOnly": 0,
+        "needsRecovery": 4,
+        "unresolved": 0
+      },
+      "Gift Bag": {
+        "total": 21,
+        "exact": 0,
+        "remoteOnly": 21,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Lotion Bottle": {
+        "total": 4,
+        "exact": 2,
+        "remoteOnly": 2,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Lotion Pump": {
+        "total": 10,
+        "exact": 7,
+        "remoteOnly": 3,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Pillar": {
+        "total": 4,
+        "exact": 0,
+        "remoteOnly": 4,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Plastic Bottle": {
+        "total": 4,
+        "exact": 2,
+        "remoteOnly": 2,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Rectangle": {
+        "total": 63,
+        "exact": 60,
+        "remoteOnly": 3,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Royal": {
+        "total": 30,
+        "exact": 29,
+        "remoteOnly": 1,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Teardrop": {
+        "total": 3,
+        "exact": 2,
+        "remoteOnly": 1,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Tulip": {
+        "total": 60,
+        "exact": 59,
+        "remoteOnly": 1,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Flair": {
+        "total": 30,
+        "exact": 30,
+        "remoteOnly": 0,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Square": {
+        "total": 29,
+        "exact": 29,
+        "remoteOnly": 0,
+        "needsRecovery": 0,
+        "unresolved": 0
+      },
+      "Tall Cylinder": {
+        "total": 1,
+        "exact": 1,
+        "remoteOnly": 0,
+        "needsRecovery": 0,
+        "unresolved": 0
+      }
+    }
+  }
+}

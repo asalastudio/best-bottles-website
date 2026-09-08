@@ -1,0 +1,242 @@
+{
+  "generatedAt": "2026-09-08",
+  "status": "migration_ready_not_applied",
+  "safety": "Do not use the generic productGroups rebuild. Apply only through a targeted reviewed migration after preview verification.",
+  "groups": [
+    {
+      "proposedSlug": "gift-bag-0ml-mixed",
+      "displayName": "Organza Gift Bags",
+      "category": "Packaging",
+      "family": "Gift Bag",
+      "productKind": "organza",
+      "defaultWebsiteSku": "OBagPink4x6",
+      "defaultLabel": "Pink",
+      "optionDimensions": [
+        "Size",
+        "Color"
+      ],
+      "members": [
+        {
+          "productId": "BB-PK-000-0015",
+          "graceSku": "ACC-ORG-BLK-4X6",
+          "websiteSku": "OBagBlack4x6",
+          "sourceName": "Black Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Black",
+          "size": "4 x 6"
+        },
+        {
+          "productId": "BB-PK-000-0016",
+          "graceSku": "ACC-ORG-BLK-5X8",
+          "websiteSku": "OBagBlack5x8",
+          "sourceName": "Black Organza / sheer gusseted gift bag. Size : 5 inches x 8 inches",
+          "color": "Black",
+          "size": "5 x 8"
+        },
+        {
+          "productId": "BB-PK-000-0018",
+          "graceSku": "ACC-ORG-CHGN-5X8",
+          "websiteSku": "OBagChGreen5x8",
+          "sourceName": "Christmas green Organza / sheer gusseted gift bag. Size : 8 inches x 5.5 inches",
+          "color": "Christmas green",
+          "size": "8 x 5.5"
+        },
+        {
+          "productId": "BB-PK-000-0019",
+          "graceSku": "ACC-ORG-GLD-4X6",
+          "websiteSku": "OBagGold4x6",
+          "sourceName": "Golden Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Golden",
+          "size": "4 x 6"
+        },
+        {
+          "productId": "BB-PK-000-0020",
+          "graceSku": "ACC-ORG-GLD-5X8",
+          "websiteSku": "OBagGold5x8",
+          "sourceName": "Golden Organza / sheer gusseted gift bag. Size : 5 inches x 8 inches",
+          "color": "Golden",
+          "size": "5 x 8"
+        },
+        {
+          "productId": "BB-PK-000-0017",
+          "graceSku": "ACC-ORG-CHGN-4X6",
+          "websiteSku": "OBagChGreen4x6",
+          "sourceName": "Christmas green Organza / sheer gusseted gift bag. Size : 4\" x 6\"",
+          "color": "Christmas green",
+          "size": "4 x 6",
+          "mediaHold": "Current catalog points to the 5x8 image; exact 4x6 identity must be recovered before publication."
+        },
+        {
+          "productId": "BB-PK-000-0021",
+          "graceSku": "ACC-ORG-IVY-4X6",
+          "websiteSku": "OBagIvory4x6",
+          "sourceName": "Ivory Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Ivory",
+          "size": "4 x 6"
+        },
+        {
+          "productId": "BB-PK-000-0022",
+          "graceSku": "ACC-ORG-LVN-5X8",
+          "websiteSku": "OBagLavender5x8",
+          "sourceName": "Lavender Organza / sheer gusseted gift bag. Size : 5 inches x 8 inches",
+          "color": "Lavender",
+          "size": "5 x 8"
+        },
+        {
+          "productId": "BB-PK-000-0023",
+          "graceSku": "ACC-ORG-LTPR-5X8",
+          "websiteSku": "OBagLightPurple5x8",
+          "sourceName": "Purple Organza / sheer gusseted gift bag. Size : 5 inches x 8 inches",
+          "color": "Purple",
+          "size": "5 x 8"
+        },
+        {
+          "productId": "BB-PK-000-0024",
+          "graceSku": "ACC-ORG-PNK-4X6",
+          "websiteSku": "OBagPink4x6",
+          "sourceName": "Pink Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Pink",
+          "size": "4 x 6"
+        },
+        {
+          "productId": "BB-PK-000-0025",
+          "graceSku": "ACC-ORG-PRP-4X6",
+          "websiteSku": "OBagPurple4x6",
+          "sourceName": "Purple Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Purple",
+          "size": "4 x 6"
+        },
+        {
+          "productId": "BB-PK-000-0026",
+          "graceSku": "ACC-ORG-RED-4X6",
+          "websiteSku": "OBagRed4x6",
+          "sourceName": "Red Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Red",
+          "size": "4 x 6"
+        },
+        {
+          "productId": "BB-PK-000-0027",
+          "graceSku": "ACC-ORG-RED-5X8",
+          "websiteSku": "OBagRed5x8",
+          "sourceName": "Red Organza / sheer gusseted gift bag. Size : 5 inches x 8 inches",
+          "color": "Red",
+          "size": "5 x 8"
+        },
+        {
+          "productId": "BB-PK-000-0028",
+          "graceSku": "ACC-ORG-SLV-4X6-02",
+          "websiteSku": "OBagSilver4x6",
+          "sourceName": "Silver Gray Organza / sheer gusseted gift bag. Size : 4 inches x 6 inches",
+          "color": "Silver Gray",
+          "size": "4 x 6"
+        }
+      ]
+    },
+    {
+      "proposedSlug": "velvet-gift-bags",
+      "displayName": "Velvet Gift Bags",
+      "category": "Packaging",
+      "family": "Gift Bag",
+      "productKind": "velvet",
+      "defaultWebsiteSku": "VBagBlack4x3",
+      "defaultLabel": "Black",
+      "optionDimensions": [
+        "Size",
+        "Color"
+      ],
+      "members": [
+        {
+          "productId": "BB-PK-000-0041",
+          "graceSku": "ACC-VLV-BLK-4X3",
+          "websiteSku": "VBagBlack4x3",
+          "sourceName": "Black velveteen gift bag / pouch. Size : 4\\ tall x 3\"wide.\"\"\"",
+          "color": "Black",
+          "size": "4 x 3"
+        },
+        {
+          "productId": "BB-PK-000-0042",
+          "graceSku": "ACC-VLV-BLK-4X5",
+          "websiteSku": "VBagBlack4x5",
+          "sourceName": "Black velveteen gift bag / pouch. Size : 5.5\" tall x 4\" wide.",
+          "color": "Black",
+          "size": "5.5 x 4"
+        },
+        {
+          "productId": "BB-PK-000-0043",
+          "graceSku": "ACC-VLV-BLU-4X3",
+          "websiteSku": "VBagBlue4x3",
+          "sourceName": "Blue velveteen gift bag / pouch. Size : 4\\ tall x 3\"wide.\"\"\"",
+          "color": "Blue",
+          "size": "4 x 3"
+        },
+        {
+          "productId": "BB-PK-000-0044",
+          "graceSku": "ACC-VLV-GRN-4X3",
+          "websiteSku": "VBagGreen4x3",
+          "sourceName": "Green velveteen gift bag / pouch. Size : 4\\ tall x 3\"wide.\"\"\"",
+          "color": "Green",
+          "size": "4 x 3"
+        },
+        {
+          "productId": "BB-PK-000-0045",
+          "graceSku": "ACC-VLV-GRN-4X5",
+          "websiteSku": "VBagGreen4x5",
+          "sourceName": "Green velveteen gift bag / pouch. Size : 5.5\\ tall x 4\"wide.\"\"\"",
+          "color": "Green",
+          "size": "5.5 x 4"
+        },
+        {
+          "productId": "BB-PK-000-0046",
+          "graceSku": "ACC-VLV-RED-4X3",
+          "websiteSku": "VBagRed4x3",
+          "sourceName": "Red Velveteen Bag 4 inches x 3 inches.",
+          "color": "Red",
+          "size": "4 x 3"
+        },
+        {
+          "productId": "BB-PK-000-0047",
+          "graceSku": "ACC-VLV-RED-4X5",
+          "websiteSku": "VBagRed4x5",
+          "sourceName": "Velveteen bag, gift bag, gift packing.",
+          "color": "Red",
+          "size": "4 × 5"
+        }
+      ]
+    },
+    {
+      "proposedSlug": "tool-0ml-mixed",
+      "displayName": "Funnels",
+      "category": "Accessory",
+      "family": "Tool",
+      "productKind": "funnel",
+      "defaultWebsiteSku": "FunnelMetalGl",
+      "defaultLabel": "Brass",
+      "sourceIdentityNote": "The canonical source calls this Gold Metal. The customer-facing option label is Brass by user direction.",
+      "optionDimensions": [
+        "Material"
+      ],
+      "members": [
+        {
+          "productId": "BB-AC-000-0026",
+          "graceSku": "ACC-FNL-GLD",
+          "websiteSku": "FunnelMetalGl",
+          "sourceName": "Small Gold Metal Funnel.",
+          "optionLabel": "Brass"
+        },
+        {
+          "productId": "BB-AC-000-0027",
+          "graceSku": "ACC-FNL-SLV",
+          "websiteSku": "FunnelMetalSl",
+          "sourceName": "Small Silver Metal Funnel.",
+          "optionLabel": "Silver Metal"
+        },
+        {
+          "productId": "BB-AC-000-0028",
+          "graceSku": "ACC-FNL-02",
+          "websiteSku": "Plastic",
+          "sourceName": "Small plastic funnel.",
+          "optionLabel": "Plastic"
+        }
+      ]
+    }
+  ]
+}
