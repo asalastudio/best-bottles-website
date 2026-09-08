@@ -1,0 +1,52 @@
+{
+  "collection": "round-premium-family-2026-09-07-v3",
+  "status": "masters-approved",
+  "approvedAt": "2026-09-07",
+  "rules": {
+    "geometrySource": "Each SKU's current Photoshop-derived assembly",
+    "qualitySource": "The approved 78 mL or 128 mL Round master",
+    "background": "#F5F3EF",
+    "baselinePercent": 91,
+    "shoulderTargets": {
+      "78mlPercent": 49,
+      "128mlPercent": 54.5
+    },
+    "fitmentRule": "Preserve the exact SKU fitment. Standard perfume sprayers are one-step; matte-silver lotion pumps retain their separate two-step geometry.",
+    "materialRule": "Clear and frosted glass retain their actual material identity while adopting the approved premium edge refraction, optical base, and tight grounded contact shadow.",
+    "integrationRule": "Candidate review is required before catalog replacement. Final placement uses deterministic scale and position only."
+  },
+  "masters": [
+    {
+      "websiteSku": "GBRnd78SpryCu",
+      "capacityMl": 78,
+      "path": "/images/catalog/round-enhancement/GBRnd78SpryCu.premium-approved-v2.png",
+      "sha256": "e86864c64a349d80b81463f2b2a79086dd91a9d7c681bfcb4ca4a87cb3916019",
+      "approval": "locked",
+      "notes": "Preferred first 78 mL render; approved glass fidelity and accurate one-step copper spray fitment."
+    },
+    {
+      "websiteSku": "GBRnd128SpryMtGl",
+      "capacityMl": 128,
+      "path": "/images/catalog/round-enhancement/GBRnd128SpryMtGl.premium-approved-v1.png",
+      "sha256": "31e48f8be6831b783ebd914535684d749d6e8cc8d23a0cf819718c0b9e174edc",
+      "approval": "locked",
+      "notes": "Approved 128 mL render; approximately 14 percent greater visual body presence and accurate one-step matte-gold spray fitment."
+    }
+  ],
+  "alignedCollection": {
+    "candidateCount": 21,
+    "assetDirectory": "/images/catalog/round-enhancement/aligned/",
+    "method": "Uniform scale and translation of the complete raster assembly; glass body radius sets scale and the glass base sets the 91 percent baseline.",
+    "version": "premium-aligned-v2",
+    "backgroundNormalization": "Only the matte connected to the canvas edge is normalized to exact #F5F3EF; bottle, fitment, refraction, and contact-shadow pixels remain protected.",
+    "status": "awaiting-family-review"
+  },
+  "superseded": [
+    {
+      "websiteSku": "GBRnd78SpryCu",
+      "path": "/images/catalog/round-enhancement/GBRnd78SpryCu.premium-approved-v1.png",
+      "sha256": "0ee6f0e37095db2b09f187bab24528277f1e1de369a32dacb215ca3274bec412",
+      "reason": "The later actuator edit was less faithful than the selected first 78 mL render."
+    }
+  ]
+}

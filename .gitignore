@@ -198,3 +198,6 @@ data/paper-doll/plates-snapshot.json
 # Local PSD inspection runtime and review contact sheets.
 /.hero-tools-venv/
 /docs/reviews/circle-recovery/*.png
+
+# Immutable local Round review v1 exports; the catalog ships the normalized v2 set.
+/public/images/catalog/round-enhancement/aligned/*.premium-aligned-v1.png
