@@ -1,4 +1,7 @@
-const p=require(process.cwd()+'/node_modules/puppeteer-core');const assert=require('node:assert/strict');const fs=require('node:fs');
+import p from "puppeteer-core";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+
 (async()=>{const browser=await p.launch({executablePath:process.env.CHROME_PATH||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});const results=[];try{
 for(const [body,fitment,finish] of [['5 ml, 13-415 neck','Metal Roller','Matte Gold Cap'],['9 ml, 17-415 neck','Fine Mist Sprayer',null],['50 ml, 18-415 neck','Lotion Pump','Copper'],['50 ml, 18-415 neck','Vintage Bulb Sprayer',null]]){
  console.log("branch",body,fitment);let chosenFinish=finish;let baseline;

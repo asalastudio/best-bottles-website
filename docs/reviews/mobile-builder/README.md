@@ -65,10 +65,10 @@ From the repository root, with `npm run dev -- --port 3001` running:
 
 ```sh
 npx vitest run tests/mobile-bottle-builder.test.tsx
-node docs/reviews/mobile-builder/checks/responsive.cjs
-node docs/reviews/mobile-builder/checks/accessibility.cjs
-node docs/reviews/mobile-builder/checks/purchase-parity.cjs
-node docs/reviews/mobile-builder/checks/filters-and-families.cjs
+node docs/reviews/mobile-builder/checks/responsive.mjs
+node docs/reviews/mobile-builder/checks/accessibility.mjs
+node docs/reviews/mobile-builder/checks/purchase-parity.mjs
+node docs/reviews/mobile-builder/checks/filters-and-families.mjs
 ```
 
 Browser checks require the existing `puppeteer-core` and Chrome (`CHROME_PATH` may override the macOS path). Accessibility checks also require `axe-core`, available in the local dependency tree. The accessibility check creates an isolated one-unit browser cart only; it never checks out. See [baseline inventory](inventory.md).

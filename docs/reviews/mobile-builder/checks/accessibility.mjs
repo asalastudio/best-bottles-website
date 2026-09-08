@@ -1,4 +1,7 @@
-const p=require(process.cwd()+'/node_modules/puppeteer-core');const assert=require('node:assert/strict');const fs=require('node:fs');
+import p from "puppeteer-core";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+
 (async()=>{const browser=await p.launch({executablePath:process.env.CHROME_PATH||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});try{const page=await browser.newPage();page.setDefaultTimeout(30000);await page.setViewport({width:390,height:844,isMobile:true,hasTouch:true});await page.goto('http://localhost:3001/matrix?family=Cylinder',{waitUntil:'networkidle2',timeout:120000});await page.waitForSelector('[data-mobile-builder]');await page.addScriptTag({path:process.cwd()+'/node_modules/axe-core/axe.min.js'});let requests=0;page.on('request',r=>{if(r.url().includes('/api/bottle-builder/validate'))requests++});const results={axe:[],controls:[],cart:null};
 const audit=async stage=>{const r=await page.evaluate(async()=>await axe.run({include:['[data-mobile-builder]','[data-builder-header]']},{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}}));results.axe.push({stage,violations:r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>({target:n.target,summary:n.failureSummary}))}))});};
 const button=async text=>page.evaluate(t=>{const b=[...document.querySelectorAll('[data-mobile-builder] button')].find(b=>b.textContent.trim()===t);if(!b)throw Error(t);b.click()},text);

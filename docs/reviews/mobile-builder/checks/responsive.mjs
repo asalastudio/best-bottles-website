@@ -1,4 +1,7 @@
-const puppeteer=require(process.cwd()+'/node_modules/puppeteer-core');const assert=require('node:assert/strict');const fs=require('node:fs');
+import puppeteer from "puppeteer-core";
+import assert from "node:assert/strict";
+import fs from "node:fs";
+
 (async()=>{const browser=await puppeteer.launch({executablePath:process.env.CHROME_PATH||'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true});try{const page=await browser.newPage();await page.setViewport({width:390,height:844,isMobile:true,hasTouch:true});const errors=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('http://localhost:3001/matrix?family=Cylinder',{waitUntil:'domcontentloaded',timeout:120000});await page.waitForSelector('[data-mobile-builder] input[aria-label="9 ml, 17-415 neck"]',{timeout:120000});await page.waitForNetworkIdle({timeout:15000}).catch(()=>{});
 await page.addStyleTag({content:'nextjs-portal { display: none !important; }'});const stage=async()=>Number(await page.$eval('[data-mobile-builder]',e=>e.dataset.stage));
 const choose=async(label)=>{await page.locator('input[type=radio][aria-label="'+label+'"]').click();await page.waitForNetworkIdle({timeout:5000}).catch(()=>{})};
