@@ -45,7 +45,10 @@
  .homeHeader { position:relative !important; top:auto !important; box-shadow:none !important; }
  .homeHeader > div:first-child { padding-block:4px; }
  .homeHeader > div:first-child p { font-size:10px; letter-spacing:.08em; }
- .browser { padding:18px 16px 20px; }
+ .homeHeader > div:nth-child(2) > div:first-child { height:48px; }
+ .homeHeader button[aria-label="Open menu"] { min-width:44px; min-height:44px; }
+ .search { padding:0 16px; }
+ .browser { padding:10px 16px 20px; }
  .heading { margin-bottom:10px; gap:8px; }
  .heading h2 { font-size:28px; scroll-margin-top:12px; }
  .popularTrack { grid-auto-columns:84%; gap:10px; }
