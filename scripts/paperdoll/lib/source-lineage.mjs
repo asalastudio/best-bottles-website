@@ -26,6 +26,27 @@ export function validatePlateSource(row, { masterRoot = PSD_MASTER_ROOT } = {}) 
         return [{ issue: "source_path_missing", detail: "front plate has no PSD source path" }];
     }
 
+    // Exact assembled legacy images are an approved complementary source to the
+    // PSD master. Their identity is encoded in the image basename and was
+    // verified against the exact legacy product page before publication.
+    if (/^https?:\/\//i.test(sourcePath)) {
+        let sourceUrl;
+        try {
+            sourceUrl = new URL(sourcePath);
+        } catch {
+            return [{ issue: "legacy_source_url_invalid", detail: sourcePath }];
+        }
+        const approvedHost = sourceUrl.protocol === "https:" && ["bestbottles.com", "www.bestbottles.com"].includes(sourceUrl.hostname);
+        const approvedPath = sourceUrl.pathname.startsWith("/images/store/enlarged_pics/");
+        if (!approvedHost || !approvedPath) {
+            return [{ issue: "legacy_source_url_unapproved", detail: sourceUrl.href }];
+        }
+        const basenameSku = sourceSku(decodeURIComponent(sourceUrl.pathname));
+        return skuKey(basenameSku) === skuKey(row.sku)
+            ? []
+            : [{ issue: "front_source_sku_mismatch", detail: `${basenameSku} does not match ${row.sku}` }];
+    }
+
     const lexicalRoot = resolve(masterRoot);
     if (!existsSync(lexicalRoot)) {
         return [{ issue: "master_root_missing", detail: "configured PSD master root does not exist" }];
