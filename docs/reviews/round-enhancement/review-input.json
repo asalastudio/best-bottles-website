@@ -1,0 +1,760 @@
+{
+  "rows": [
+    {
+      "sku": "GBRnd78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Clear Round Vintage Bulb Spray Bottle — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpGl.premium-aligned-v2.png",
+      "assetSha256": "a0bb3dcbca1058237f5cca695d80237644c6d5dd38178da0311fdedb4d70e8f8",
+      "priorUrl": "/images/catalog/bone-review/GBRnd78AnSpGl.a50b17774551.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd78AnSpGl.a50b17774551.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd78AnSpTslGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Clear Round Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpTslGl.premium-aligned-v2.png",
+      "assetSha256": "b38af17ecd8f1998c7a42027c6bb1862a29d19baa93152ff36a8f212eb636396",
+      "priorUrl": "/images/catalog/bone-review/GBRnd78AnSpTslGl.47974989e94b.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd78AnSpTslGl.47974989e94b.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "LBRnd78LtnCu",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Clear Round Lotion Pump Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/LBRnd78LtnCu.premium-aligned-v2.png",
+      "assetSha256": "716428e6c943ed355823b0dbd53bcebf5372b8388930b60b46f43d3215115f4a",
+      "priorUrl": "/images/catalog/bone-review/LBRnd78LtnCu.ed9c70014114.png",
+      "sourcePreview": "/images/catalog/bone-review/LBRnd78LtnCu.ed9c70014114.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd78SpryCu",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Clear Round Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd78SpryCu.premium-aligned-v2.png",
+      "assetSha256": "8487c5b3b22ac17572756bda69f5084c955d0a33041bfe5b8130b6feedf90610",
+      "priorUrl": "/images/catalog/bone-review/GBRnd78SpryCu.ac70170c366e.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd78SpryCu.ac70170c366e.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd78RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Clear Round Reducer Bottle — Empty · capped",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd78RdcrShnGl.premium-aligned-v2.png",
+      "assetSha256": "28288e0b0309e5e79823f36e8b4be0c8314e462b2c00dcba7c0029dbd4149876",
+      "priorUrl": "/images/catalog/bone-review/GBRnd78RdcrShnGl.00f8e8d25630.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd78RdcrShnGl.00f8e8d25630.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst78AnSpGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Frosted Round Vintage Bulb Spray Bottle — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78AnSpGl.premium-aligned-v2.png",
+      "assetSha256": "13397bf40a375f8df7a9da944a4e188f08888a1e8aaef1dfe64063518b0c77fc",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst78AnSpGl.6394da72e8cf.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst78AnSpGl.6394da72e8cf.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst78AnSpTslGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Frosted Round Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78AnSpTslGl.premium-aligned-v2.png",
+      "assetSha256": "bd1158fe75e90123c8ee55588c0e15562f0218ef94df3cd486a2c7d40f7a35fa",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst78AnSpTslGl.23c3f18cbd48.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst78AnSpTslGl.23c3f18cbd48.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "LBRndFrst78LtnMtGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Frosted Round Lotion Pump Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/LBRndFrst78LtnMtGl.premium-aligned-v2.png",
+      "assetSha256": "726e8878278604af0e684eb240f7f660f919b11602772aca126ff13f27a2cc6b",
+      "priorUrl": "/images/catalog/bone-review/LBRndFrst78LtnMtGl.c4f6467f0e12.png",
+      "sourcePreview": "/images/catalog/bone-review/LBRndFrst78LtnMtGl.c4f6467f0e12.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst78SpryMtGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Frosted Round Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78SpryMtGl.premium-aligned-v2.png",
+      "assetSha256": "80a935b482abe08e1fb5b6905816368f0dd9e76b8717d69e1462764bf1910d2f",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst78SpryMtGl.631e4ca8b2df.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst78SpryMtGl.631e4ca8b2df.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst78RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 78,
+      "title": "78 ml Frosted Round Reducer Bottle — Empty · capped",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78RdcrShnGl.premium-aligned-v2.png",
+      "assetSha256": "13fd816dbf6beddd60f3dd8625f7cb28fd5b96b3c237ab5dd4ae4c063fbdde5c",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst78RdcrShnGl.9719e5552f91.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst78RdcrShnGl.9719e5552f91.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 49,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 49,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 49,
+        "baselinePercent": 91,
+        "capacityGroupMl": 78
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd128AnSpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Clear Round Vintage Bulb Spray Bottle — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd128AnSpGl.premium-aligned-v2.png",
+      "assetSha256": "2dc36838c9a4aee47661f42ed9a1a7a45d52fccf6b31bc4b397274b2e10bbdf7",
+      "priorUrl": "/images/catalog/bone-review/GBRnd128AnSpGl.d9cd6a52d36d.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd128AnSpGl.d9cd6a52d36d.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd128AnSpTslIvyGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Clear Round Vintage Bulb Spray Bottle with Tassel — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd128AnSpTslIvyGl.premium-aligned-v2.png",
+      "assetSha256": "f0b7526447eec65de5293ec0124b643f61cec475149e818d824c5f2b8e23f669",
+      "priorUrl": "/images/catalog/bone-review/GBRnd128AnSpTslIvyGl.6f231752acf4.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd128AnSpTslIvyGl.6f231752acf4.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd128DrpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Clear Round Dropper Bottle — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd128DrpGl.premium-aligned-v2.png",
+      "assetSha256": "75d3dcf831af2c1e73d5652ca4ff096352fb6832c0ca6c5db6b7268eb3c881b1",
+      "priorUrl": "/images/catalog/bone-review/GBRnd128DrpGl.1a281ce29ae0.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd128DrpGl.1a281ce29ae0.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "LBRnd128LtnMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Clear Round Lotion Pump Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/LBRnd128LtnMtGl.premium-aligned-v2.png",
+      "assetSha256": "cd4b50ccbf6ba0f0cc103088091da5a6cd885d915fab611e345fe78e286d6538",
+      "priorUrl": "/images/catalog/bone-review/LBRnd128LtnMtGl.7dd77b790a06.png",
+      "sourcePreview": "/images/catalog/bone-review/LBRnd128LtnMtGl.7dd77b790a06.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd128SpryMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Clear Round Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd128SpryMtGl.premium-aligned-v2.png",
+      "assetSha256": "7777d929b4f74d842c6e48935fc4675445e57c3f2a23d213c6d1338df69d45e6",
+      "priorUrl": "/images/catalog/bone-review/GBRnd128SpryMtGl.d75f7d38699d.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd128SpryMtGl.d75f7d38699d.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRnd128RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Clear Round Reducer Bottle — Empty · capped",
+      "url": "/images/catalog/round-enhancement/aligned/GBRnd128RdcrShnGl.premium-aligned-v2.png",
+      "assetSha256": "e83bb690f7a13be79263f328ea22f4a127f4df8ae1d3b2c4e523586a0c673e80",
+      "priorUrl": "/images/catalog/bone-review/GBRnd128RdcrShnGl.be10ee308be7.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRnd128RdcrShnGl.be10ee308be7.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst128AnSpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Frosted Round Vintage Bulb Spray Bottle — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128AnSpGl.premium-aligned-v2.png",
+      "assetSha256": "6da18fd1b1fd5e20addd3849328b27037d98f99e59663bcd3d0f5687dfef554d",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst128AnSpGl.6b32ecf0c78a.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst128AnSpGl.6b32ecf0c78a.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst128DrpGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Frosted Round Dropper Bottle — Empty · assembled",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128DrpGl.premium-aligned-v2.png",
+      "assetSha256": "fe916282f3cb5101bac33fc4861d35292919c7f2ef77da671390bca7cb8945a1",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst128DrpGl.8432eb69dec4.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst128DrpGl.8432eb69dec4.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "LBRndFrst128LtnMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Frosted Round Lotion Pump Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/LBRndFrst128LtnMtGl.premium-aligned-v2.png",
+      "assetSha256": "46aca6399410f07318ae226f2b75abab9640c7829f6af1f16d6e69c13ca813d9",
+      "priorUrl": "/images/catalog/bone-review/LBRndFrst128LtnMtGl.278ba62f3e22.png",
+      "sourcePreview": "/images/catalog/bone-review/LBRndFrst128LtnMtGl.278ba62f3e22.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst128SpryMtGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Frosted Round Bottle — Empty · cap beside",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128SpryMtGl.premium-aligned-v2.png",
+      "assetSha256": "6b2267387e6327b13ca650e20b3aefc90a86e6d5ea187ceb4f257fa082a58e1c",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst128SpryMtGl.a327895718fc.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst128SpryMtGl.a327895718fc.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    },
+    {
+      "sku": "GBRndFrst128RdcrShnGl",
+      "family": "Round",
+      "capacityMl": 128,
+      "title": "128 ml Frosted Round Reducer Bottle — Empty · capped",
+      "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128RdcrShnGl.premium-aligned-v2.png",
+      "assetSha256": "3ff8604b4f8d7c7efe75a65aec5fb75b8dc97a366bef7c6a27d0c0129449a2e3",
+      "priorUrl": "/images/catalog/bone-review/GBRndFrst128RdcrShnGl.ea2cac93f6d8.png",
+      "sourcePreview": "/images/catalog/bone-review/GBRndFrst128RdcrShnGl.ea2cac93f6d8.png",
+      "sourceKind": "Photoshop-derived current SKU assembly",
+      "stage": "rework",
+      "targetHeightRequest": {
+        "heightPercent": 54.5,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "measurement": {
+        "totalHeightPercent": 54.5,
+        "basis": "glass base to shoulder"
+      },
+      "shoulderSizing": {
+        "measuredPercent": 54.5,
+        "baselinePercent": 91,
+        "capacityGroupMl": 128
+      },
+      "reviewNotes": [
+        "Bottle body scale is derived from the glass radius; closure and accessory height do not affect scale.",
+        "The complete assembly was moved only by uniform scale and translation to the 91% baseline.",
+        "Verify the exact SKU fitment against the source comparison before release."
+      ],
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      }
+    }
+  ]
+}

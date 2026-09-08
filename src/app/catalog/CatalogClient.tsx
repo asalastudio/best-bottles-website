@@ -286,7 +286,7 @@ function ProductGroupCard({
     const href = catalogHero
         ? getCatalogHeroProductHref(catalogHero, productGroupHref(group, applicatorParam))
         : productCardVariantHref(productGroupHref(group, applicatorParam), selected);
-    const customerDisplayName = catalogHero?.alt ?? getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
+    const customerDisplayName = getCustomerFacingProductName({ group, fallbackName: group.displayName }).displayName;
     const defaultImageUrl =
         usableProductImageUrl(group.heroImageUrl) ??
         thumbnailUrl ??
@@ -548,6 +548,8 @@ function FilterSidebarContent({
         });
         return ordered.map((category) => ({
             category,
+            label: ({ "Glass Bottle": "Glass bottles", "Glass Jar": "Glass jars", "Aluminum Bottle": "Aluminum bottles", "Plastic Bottle": "Plastic bottles", "Metal Atomizer": "Metal atomizers", Component: "Components", Accessory: "Accessories" } as Record<string, string>)[category] ?? category,
+            familyLabel: /Bottle|Atomizer/.test(category) ? "Bottle families" : "Collections",
             count: categoryCounts[category] ?? 0,
             collections: Object.keys(structure[category] ?? {})
                 .map((name) => ({ name, count: collectionCounts[name] ?? 0 }))
@@ -636,7 +638,7 @@ function FilterSidebarContent({
     };
 
     const applicatorSection = Object.keys(facets?.applicators ?? {}).length > 0 ? (
-        <RefineSection title="Product Type" defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
+        <RefineSection title="Closure & applicator" defaultOpen={openByDefault("applicators")} hasActiveFilters={filters.applicators.length > 0}>
             <div className="space-y-0.5">
                 {APPLICATOR_BUCKETS.filter((b) => (facets?.applicators?.[b.value] ?? 0) > 0 || filters.applicators.includes(b.value)).map((bucket) => (
                     <CheckboxItem
@@ -733,7 +735,7 @@ function FilterSidebarContent({
     ) : null;
 
     const categorySection = sidebarCategories.length > 0 ? (
-        <RefineSection title="Categories" defaultOpen={openByDefault("category")} hasActiveFilters={!!(filters.category || filters.collection)}>
+        <RefineSection title="Product type" defaultOpen={openByDefault("category")} hasActiveFilters={!!(filters.category || filters.collection)}>
             <div className="space-y-0.5">
                 {sidebarCategories.map((group) => {
                     const isSelected = filters.category === group.category && !filters.collection;
@@ -752,7 +754,7 @@ function FilterSidebarContent({
                                     disabled={isDead}
                                     className={`flex min-h-11 flex-1 items-center justify-between py-2 text-left text-[13px] transition-colors ${isSelected ? "font-semibold text-muted-gold" : isDead ? "cursor-not-allowed text-slate/40" : "text-obsidian/70 hover:text-muted-gold"}`}
                                 >
-                                    <span>{group.category}</span>
+                                    <span className="text-sm font-medium">{group.label}</span>
                                     <span className="text-[11px] text-slate/60">{group.count}</span>
                                 </button>
                                 {group.collections.length > 0 && (
@@ -760,7 +762,7 @@ function FilterSidebarContent({
                                         type="button"
                                         onClick={() => toggleCategory(group.category)}
                                         aria-expanded={isExpanded}
-                                        aria-label={`${isExpanded ? "Hide" : "Show"} ${group.category} collections`}
+                                        aria-label={`${isExpanded ? "Hide" : "Show"} ${group.label} ${group.familyLabel.toLowerCase()}`}
                                         className="flex min-h-11 min-w-9 items-center justify-center text-slate transition-colors hover:text-obsidian"
                                     >
                                         <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isExpanded ? "rotate-0" : "-rotate-90"}`} />
@@ -777,6 +779,7 @@ function FilterSidebarContent({
                                         className="overflow-hidden"
                                     >
                                         <div className="mb-2 ml-2 space-y-0.5 border-l border-champagne pl-4">
+                                            <p className="pb-2 pt-3 text-[11px] font-medium uppercase tracking-[0.12em] text-slate">{group.familyLabel}</p>
                                             {group.collections.map((col) => {
                                                 const colSelected = filters.collection === col.name;
                                                 const colDead = col.count === 0 && !colSelected;
@@ -1846,7 +1849,7 @@ export default function CatalogClient({
                     <div>
                         <h1 className="font-serif text-2xl sm:text-4xl lg:text-5xl text-obsidian font-medium leading-[1.1] mb-1 sm:mb-2">Master Catalog</h1>
                         <p className="text-slate text-xs sm:text-sm max-w-xl">
-                            {isLoading ? "Loading catalog..." : `${totalCount.toLocaleString()} product group${totalCount === 1 ? "" : "s"} currently visible.`}
+                            {isLoading ? "Loading catalog..." : `${totalCount.toLocaleString()} product${totalCount === 1 ? "" : "s"} currently visible.`}
                             <span>{" "}Need help? Talk with Grace, your AI Bottling Specialist.</span>
                         </p>
                     </div>

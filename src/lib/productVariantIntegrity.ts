@@ -1,8 +1,11 @@
+import { isMissingHeroSource } from "./products/catalog-listing-visibility";
+
 type ProductGroupLike = {
     color?: string | null;
 };
 
 type ProductVariantLike = {
+    graceSku?: string | null;
     websiteSku?: string | null;
     itemName?: string | null;
     itemDescription?: string | null;
@@ -48,7 +51,7 @@ export function filterVariantsForProductGroup<T extends ProductVariantLike>(
     group: ProductGroupLike | null | undefined,
     variants: T[],
 ): T[] {
-    return variants.filter((variant) => !variantContradictsProductGroupColor(group, variant));
+    return variants.filter((variant) => !isMissingHeroSource(variant) && !variantContradictsProductGroupColor(group, variant));
 }
 
 export function isLegacyBestBottlesImageUrl(value: string | null | undefined): boolean {

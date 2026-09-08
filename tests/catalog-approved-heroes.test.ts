@@ -3,27 +3,56 @@ import { readFileSync } from 'node:fs';
 import { createHash } from 'node:crypto';
 import sharp from 'sharp';
 import heroes from '../src/lib/products/catalog-heroes.json';
-import cylinderHeroes from '../src/lib/products/cylinder-catalog-heroes.json';
+import release from '../docs/reviews/catalog-complete-hero-release-2026-09-07.json';
 import { getCatalogHero, getProductHero, getCatalogHeroProductHref } from '../src/lib/products/catalog-heroes';
 import elegant from '../docs/reviews/elegant-family-final-manifest-2026-09-06.json';
 import circle from '../docs/reviews/circle-family-final-manifest-2026-09-06.json';
 import empire from '../docs/reviews/empire-100ml-final-manifest-2026-09-06.json';
 import diva from '../docs/reviews/diva-family-final-manifest-2026-09-06.json';
+import shoulderApproval from '../docs/reviews/elegant-shoulder-alignment-2026-09-07.json';
+import circleRevision from '../docs/reviews/circle-recovery/alignment-and-matte-report.json';
 const approved=[...elegant.rows,...circle.rows,...empire.rows,...diva.rows];
 describe('approved catalog hero release',()=>{
- it('contains only the 86 explicitly approved registrations',()=>{
-  expect(heroes).toHaveLength(86);
-  expect(new Set(heroes.map(h=>h.websiteSku))).toEqual(new Set(approved.map(h=>h.sku)));
-  expect(getProductHero('GBEmp50SpryMtGl')).toBeNull();
-  expect(getCatalogHero('atomizer-10ml', [{websiteSku:'GBAtom10Gl'}])).toBeNull();
+ it('includes the expanded release and preserves every prior approved registration',()=>{
+  expect(heroes).toHaveLength(391);
+  expect(new Set(heroes.map(h=>h.websiteSku)).size).toBe(391);
+  for(const a of approved) {
+   const h=getProductHero(a.sku)!;
+   expect(h.framing).toEqual(circleRevision.rows.find(row=>row.sku===a.sku)?.framing ?? shoulderApproval.rows.find(row=>row.sku===a.sku)?.framing ?? a.framing);
+   expect(createHash('sha256').update(readFileSync(`public${h.url}`)).digest('hex')).toBe(circleRevision.rows.find(row=>row.sku===a.sku)?.assetSha256 ?? a.assetSha256);
+  }
+  expect(heroes.filter(h=>h.family==='Cylinder')).toHaveLength(52);
  });
- it('preserves existing Cylinder selection and hover artwork',()=>{
-  for(const h of cylinderHeroes) expect(getCatalogHero(h.groupSlug,[{websiteSku:h.websiteSku}])).toEqual(h);
+ it('applies the saved Circle shoulder targets with the shared contact baseline',()=>{
+  expect(circleRevision.rows).toHaveLength(27);
+  for(const row of circleRevision.rows) {
+   const h=getProductHero(row.sku)!;
+   const target=({15:37,30:43,50:47,100:54} as Record<number,number>)[h.capacityMl!];
+   const f=h.framing;
+   expect((row.originalBaseY-row.landmark.shoulderY)*f.scale/1716*100).toBeCloseTo(target,8);
+   expect(row.originalBaseY*f.scale/1716*100+f.translateYPercent).toBeCloseTo(91,8);
+   const [left,top,right,bottom]=row.renderedSignificantArtworkBounds;
+   expect(left).toBeGreaterThan(0);expect(top).toBeGreaterThan(0);
+   expect(right).toBeLessThan(1560);expect(bottom).toBeLessThan(1716);
+  }
+ });
+ it('locks all Elegant shoulders while preserving the approved vintage exceptions',()=>{
+  expect(shoulderApproval.rows).toHaveLength(33);
+  expect(shoulderApproval.rows.filter(row=>row.vintageException)).toHaveLength(8);
+  for(const row of shoulderApproval.rows) {
+   expect(getProductHero(row.sku)?.framing).toEqual(row.framing);
+   if(row.vintageException) { expect(row.framing).toEqual(row.beforeFraming); continue; }
+   const shoulder=row.landmarks!.shoulder*row.framing.scale/3.3+row.framing.translateYPercent;
+   const baseline=row.bodyBase!*row.framing.scale/3.3+row.framing.translateYPercent;
+   expect(shoulder).toBeCloseTo(row.shoulderYPercent!,8);
+   expect(baseline).toBeCloseTo(91,8);
+   for(const value of Object.values(row.sceneBounds!)) { expect(value).toBeGreaterThanOrEqual(0); expect(value).toBeLessThanOrEqual(100); }
+  }
  });
  for(const h of heroes) it(`${h.websiteSku} preserves approved bytes, framing, bone and exact SKU filtering`,async()=>{
-  const a=approved.find(a=>a.sku===h.websiteSku)!;
+  const a=release.rows.find(a=>a.websiteSku===h.websiteSku)!;
   const b=readFileSync(`public${h.url}`);
-  expect(createHash('sha256').update(b).digest('hex')).toBe(a.assetSha256);
+  expect(createHash('sha256').update(b).digest('hex')).toBe(a.sha256);
   expect(h.framing).toEqual(a.framing);
   const {data,info}=await sharp(b).removeAlpha().raw().toBuffer({resolveWithObject:true});
   expect([info.width,info.height]).toEqual([1560,1716]);

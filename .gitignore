@@ -191,3 +191,13 @@ dist/
 data/paper-doll/convex-snapshot.json
 data/paper-doll/component-snapshot.json
 data/paper-doll/plates-snapshot.json
+
+# Local review assets and feedback stay local; tooling is versioned.
+/hero-reviews/
+
+# Local PSD inspection runtime and review contact sheets.
+/.hero-tools-venv/
+/docs/reviews/circle-recovery/*.png
+
+# Immutable local Round review v1 exports; the catalog ships the normalized v2 set.
+/public/images/catalog/round-enhancement/aligned/*.premium-aligned-v1.png

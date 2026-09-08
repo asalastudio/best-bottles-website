@@ -1,0 +1,223 @@
+[
+  {
+    "sku": "GBCrcl30GlCap",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl30GlCap.bec08b247ea0.png",
+    "inputSha256": "bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605",
+    "url": "/images/catalog/bone-review/GBCrcl30GlCap.01eecbbe4d85.png",
+    "assetSha256": "01eecbbe4d8503c6e1fe97e9e4200eed8a11383244b6d3363c5a10b8b07227c1",
+    "changedPixels": 326260,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      303,
+      855.5522598870057,
+      974,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl30SpryMattGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl30SpryMattGl.64b69135e487.png",
+    "inputSha256": "64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8",
+    "url": "/images/catalog/bone-review/GBCrcl30SpryMattGl.60279e0b076c.png",
+    "assetSha256": "60279e0b076c61f560513118f82b867f5451bb20efcf6559347b398e488a0fba",
+    "changedPixels": 325078,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      311,
+      856.3102961918195,
+      982,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl50AnSpGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl50AnSpGl.5e3b4ed13bef.png",
+    "inputSha256": "5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8",
+    "url": "/images/catalog/bone-review/GBCrcl50AnSpGl.f8607e109e90.png",
+    "assetSha256": "f8607e109e90239aaad431b8feee8be2b9884df44625fe0ddb80387c2d01528e",
+    "changedPixels": 431646,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      476,
+      784.5269461077844,
+      1277,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl50AnSpTslIvyGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.2a48a28d4e3c.png",
+    "inputSha256": "2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d",
+    "url": "/images/catalog/bone-review/GBCrcl50AnSpTslIvyGl.b3cd7abc53c1.png",
+    "assetSha256": "b3cd7abc53c1b2120bc67b916277c3abf0b191ac047a9610f2388e9d7b37c418",
+    "changedPixels": 338808,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      666,
+      868.8502994011976,
+      1378,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl50DrpGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl50DrpGl.1671b9d14401.png",
+    "inputSha256": "1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586",
+    "url": "/images/catalog/bone-review/GBCrcl50DrpGl.1c4ffae8961f.png",
+    "assetSha256": "1c4ffae8961f61ce9a017b6136b698dcf4dd85c02215e58e8bf4c02eb82a3ada",
+    "changedPixels": 414898,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      380,
+      784.5269461077844,
+      1181,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "LBCrcl50LtnMtGl",
+    "inputUrl": "/images/catalog/bone-review/LBCrcl50LtnMtGl.6389afea63f2.png",
+    "inputSha256": "6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c",
+    "url": "/images/catalog/bone-review/LBCrcl50LtnMtGl.f2d59ea6b8ff.png",
+    "assetSha256": "f2d59ea6b8ffb391a9be268f2fda23d7bf22fa7560b471a3a5e864de40517899",
+    "changedPixels": 424768,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      242,
+      784.5269461077844,
+      1043,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl50SpryMtGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl50SpryMtGl.3b4f2e7f3575.png",
+    "inputSha256": "3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a",
+    "url": "/images/catalog/bone-review/GBCrcl50SpryMtGl.26b991568b84.png",
+    "assetSha256": "26b991568b84ddd15fcc8f00c6c4a9599af7b3cb56b59774904a9542de2fbc2f",
+    "changedPixels": 431495,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      242,
+      784.5269461077844,
+      1043,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl50RdcrShnGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.1c8ebbb7f8c2.png",
+    "inputSha256": "1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a",
+    "url": "/images/catalog/bone-review/GBCrcl50RdcrShnGl.19d05867b478.png",
+    "assetSha256": "19d05867b478b5d7637cfb0b6937d3110a28cf668b1043380e41e9071bd39f3e",
+    "changedPixels": 434457,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      379,
+      779.5269461077844,
+      1180,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl100AnSpGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl100AnSpGl.dd8fc0f62a83.png",
+    "inputSha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+    "url": "/images/catalog/bone-review/GBCrcl100AnSpGl.7643993ab799.png",
+    "assetSha256": "7643993ab7998fb2fa35e453e4524e4c47ea9a7e037ca55bf28fb06595d0e643",
+    "changedPixels": 610698,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      362,
+      628.364438647343,
+      1298,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl100AnSpTslGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.a045b0fe5c0e.png",
+    "inputSha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+    "url": "/images/catalog/bone-review/GBCrcl100AnSpTslGl.b6d92daf8fea.png",
+    "assetSha256": "b6d92daf8fea976609858131ed63ae2a1068ce42bf3ba209d61768090c981fee",
+    "changedPixels": 609926,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      543,
+      629.364438647343,
+      1479,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "LBCrcl100LtnMtGl",
+    "inputUrl": "/images/catalog/bone-review/LBCrcl100LtnMtGl.318b80039e44.png",
+    "inputSha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+    "url": "/images/catalog/bone-review/LBCrcl100LtnMtGl.986f220e426c.png",
+    "assetSha256": "986f220e426c256b80981e0eb6ffb8d6c140b436e1851574bfc8f62b131768bd",
+    "changedPixels": 605061,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      179,
+      629.364438647343,
+      1115,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl100SpryMtGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl100SpryMtGl.d7d11d3a4db4.png",
+    "inputSha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+    "url": "/images/catalog/bone-review/GBCrcl100SpryMtGl.9f1a45956a0b.png",
+    "assetSha256": "9f1a45956a0b07e684dddfa34cfda68e750f9090700e7efcd43aefc698a336dc",
+    "changedPixels": 610705,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      186,
+      629.364438647343,
+      1122,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  },
+  {
+    "sku": "GBCrcl100RdcrShnGl",
+    "inputUrl": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.01fcf261dd38.png",
+    "inputSha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+    "url": "/images/catalog/bone-review/GBCrcl100RdcrShnGl.1559dfd93201.png",
+    "assetSha256": "1559dfd932016e2efd40abf36ddecca3e90d75a916e8856a95903fe793f44892",
+    "changedPixels": 610095,
+    "protectedOutsideRegionIdentical": true,
+    "region": [
+      313,
+      630.8464927536231,
+      1249,
+      1563
+    ],
+    "algorithm": "neutral white matte adaptation v2; complete glass-region mask, no ellipse feather boundary; original highlights and outlines retained as source luminance",
+    "visualApproved": true
+  }
+]

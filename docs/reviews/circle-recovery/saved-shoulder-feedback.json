@@ -1,0 +1,903 @@
+{
+  "schemaVersion": 1,
+  "decisions": {
+    "GBCrcl50DrpGl:1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586": {
+      "sku": "GBCrcl50DrpGl",
+      "assetSha256": "1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:43.854Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl50AnSpTslIvyGl:2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d": {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "assetSha256": "2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:44.609Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl50AnSpGl:5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8": {
+      "sku": "GBCrcl50AnSpGl",
+      "assetSha256": "5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:45.306Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl30SpryMattGl:64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8": {
+      "sku": "GBCrcl30SpryMattGl",
+      "assetSha256": "64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 43,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:45.957Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl15Gl:5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3": {
+      "sku": "GBCrcl15Gl",
+      "assetSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:49.598Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl15SpryGlMatt:892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758": {
+      "sku": "GBCrcl15SpryGlMatt",
+      "assetSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:50.338Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl15MtlRollGlMatt:6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5": {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "assetSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:51.038Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl30GlCap:bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605": {
+      "sku": "GBCrcl30GlCap",
+      "assetSha256": "bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 43,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:51.590Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst50RdcrIvyLthr:fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e": {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "assetSha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:10.383Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl50RdcrShnGl:1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a": {
+      "sku": "GBCrcl50RdcrShnGl",
+      "assetSha256": "1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:11.040Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl50SpryMtGl:3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a": {
+      "sku": "GBCrcl50SpryMtGl",
+      "assetSha256": "3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:11.621Z",
+      "scope": "visual-feedback-only"
+    },
+    "LBCrcl50LtnMtGl:6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c": {
+      "sku": "LBCrcl50LtnMtGl",
+      "assetSha256": "6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:12.300Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst50SpryMtGl:d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43": {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "assetSha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:29.995Z",
+      "scope": "visual-feedback-only"
+    },
+    "LBCrclFrst50LtnMtGl:f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29": {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "assetSha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:31.004Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst50DrpGl:c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501": {
+      "sku": "GBCrclFrst50DrpGl",
+      "assetSha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:31.545Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst50AnSpGl:a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5": {
+      "sku": "GBCrclFrst50AnSpGl",
+      "assetSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:32.345Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst50RdcrShnGl:617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946": {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "assetSha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:37.796Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl100AnSpGl:dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873": {
+      "sku": "GBCrcl100AnSpGl",
+      "assetSha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:17.053Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl100AnSpTslGl:a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173": {
+      "sku": "GBCrcl100AnSpTslGl",
+      "assetSha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:16.484Z",
+      "scope": "visual-feedback-only"
+    },
+    "LBCrcl100LtnMtGl:318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162": {
+      "sku": "LBCrcl100LtnMtGl",
+      "assetSha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:15.699Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst100AnSpTslIvyGl:07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527": {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "assetSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:33.145Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst100AnSpGl:d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2": {
+      "sku": "GBCrclFrst100AnSpGl",
+      "assetSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:30.494Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl100RdcrShnGl:01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3": {
+      "sku": "GBCrcl100RdcrShnGl",
+      "assetSha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+      "status": "approved",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:26.627Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrcl100SpryMtGl:d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23": {
+      "sku": "GBCrcl100SpryMtGl",
+      "assetSha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+      "status": "approved",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:23.847Z",
+      "scope": "visual-feedback-only"
+    },
+    "LBCrclFrst100LtnMtGl:f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459": {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "assetSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:38.286Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst100SpryMtGl:309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9": {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "assetSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:40.997Z",
+      "scope": "visual-feedback-only"
+    },
+    "GBCrclFrst100RdcrShnGl:b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f": {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "assetSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:43.498Z",
+      "scope": "visual-feedback-only"
+    }
+  },
+  "history": [
+    {
+      "sku": "GBCrcl50DrpGl",
+      "assetSha256": "1671b9d14401438ee16c4a1367a0db96e5a37681c4d4258b06ef00567cc5b586",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:43.854Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "assetSha256": "2a48a28d4e3c7483cbaab0b4223642ec26e4440ae337fe3779c7be665f8f6c5d",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:44.609Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "assetSha256": "5e3b4ed13befc7c6d3c703f61f64f907220e46a81cf15b6770bff937e0b422e8",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:45.306Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "assetSha256": "64b69135e487545202278e81ba7386026d60726177f58f892a39d1cdbc65ede8",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 43,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:45.957Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl15Gl",
+      "assetSha256": "5df997af94d302f0a4e3a2d91083184d9a181a77b24ca780bed6fd66fe1205b3",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:49.598Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "assetSha256": "892101b98163c86b373062f193f590aaa5fa8b9d3ad11c5a64025fafbdfef758",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:50.338Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl15MtlRollGlMatt",
+      "assetSha256": "6047bfebd74f9558b380822315b88fc5d5154fb467af5343536d9766ea2886e5",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 37,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:51.038Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl30GlCap",
+      "assetSha256": "bec08b247ea0af9b96592e8f77a68920685feee5109d992758736f0341138605",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 43,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:29:51.590Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst50RdcrIvyLthr",
+      "assetSha256": "fabd4d918ae6e03dfcdff96cb73209e90facd8216dba4f623377818fde25508e",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:10.383Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "assetSha256": "1c8ebbb7f8c23e1b30bb922654d3c99b3cd74c61a8b02b3e862d2ae26767314a",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:11.040Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "assetSha256": "3b4f2e7f3575c9cccdeb54d7039083435f036032142fbde9665447b68eeb3d1a",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:11.621Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "assetSha256": "6389afea63f23dbd739e6dcca53168b5932b2557459d9c2d0509cc3b02941a1c",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:12.300Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst50SpryMtGl",
+      "assetSha256": "d9557a8a06fb2aaa526dfd3ea5fecc48aff6fdf7b07f02e7d375dc7f63113a43",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:29.995Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "LBCrclFrst50LtnMtGl",
+      "assetSha256": "f31e214889656bd465f983adc70b9905a844f5434954ea83acbede014a15ef29",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:31.004Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst50DrpGl",
+      "assetSha256": "c3efc5033ad5f6a851d60096bd7471611c29124772a9664bc3f28af8e83d1501",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:31.545Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst50AnSpGl",
+      "assetSha256": "a73dadbb94f0f6feb10666994d62c0946058eaa0597c119049fb8ac10b0a14c5",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:32.345Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst50RdcrShnGl",
+      "assetSha256": "617a4baaf53ba8e7e01cc264965c498eab3cc1551bd70cd16410aa86816e4946",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 47,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:37.796Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "assetSha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:42.696Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "assetSha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:45.546Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "assetSha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:49.781Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "assetSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:54.972Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "assetSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:57.318Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "assetSha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:30:59.703Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "assetSha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:31:01.831Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "assetSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:31:06.480Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "assetSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:31:08.842Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "assetSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 52,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 1,
+      "updatedAt": "2026-09-07T23:31:11.271Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "assetSha256": "318b80039e442c830dadc615852de90e0533a6f0671e46754b169e99b66c4162",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:15.699Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "assetSha256": "a045b0fe5c0e40840bc28311a500c0e3dfdad934b1ebd7725cc7afa7de4dd173",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:16.484Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "assetSha256": "dd8fc0f62a838195e456bcc50f0f9789a3c9e5a3fb21350f77820a1a78701873",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:17.053Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "assetSha256": "d7d11d3a4db420976d173e4632ac85ca1eef46848e7a796cc036c2b072097c23",
+      "status": "approved",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:23.847Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "assetSha256": "01fcf261dd38735ac6e23d504f727cb7e4a63ac475343ad98897a6da61ae5bd3",
+      "status": "approved",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:26.627Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100AnSpGl",
+      "assetSha256": "d3221edf537433259d51d3273887a4f126a8b97c538433df4af4be37238fa3e2",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:30.494Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100AnSpTslIvyGl",
+      "assetSha256": "07288e4ba9055bf0d99220d1979182a79f02272ec8a8b24cdf20b9d91f30f527",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:33.145Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "LBCrclFrst100LtnMtGl",
+      "assetSha256": "f8a3bd634987c38cfdffdcfb4ca672845c3f6f0165323d9f3406e874cb29c459",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:38.286Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100SpryMtGl",
+      "assetSha256": "309d2da00f87878f55a7ac95ad81bac79e26101cc6089d0b4560491c73526ca9",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:40.997Z",
+      "scope": "visual-feedback-only"
+    },
+    {
+      "sku": "GBCrclFrst100RdcrShnGl",
+      "assetSha256": "b6f7d42ff8f7ceec6986adfaa6aa36659716142eb18edf3f0b7a136c60a3d61f",
+      "status": "changes_requested",
+      "notes": "",
+      "targetHeight": {
+        "heightPercent": 54,
+        "measurement": "glass_shoulder",
+        "baselinePercent": 91
+      },
+      "revision": 2,
+      "updatedAt": "2026-09-07T23:32:43.498Z",
+      "scope": "visual-feedback-only"
+    }
+  ]
+}

@@ -1,0 +1,127 @@
+[
+  {
+    "websiteSku": null,
+    "graceSku": "CMP-CAP-SBLK-13-415",
+    "groupSlug": "cap-closure-13-415"
+  },
+  {
+    "websiteSku": "GBATom5RedBurg",
+    "graceSku": "CMP-SPR-RED-02",
+    "groupSlug": "fine-mist-sprayer-13-415"
+  },
+  {
+    "websiteSku": "13-415CAP4SpryCuMt",
+    "graceSku": "CMP-SPR-MTCP-13-415-01",
+    "groupSlug": "fine-mist-sprayer-13-415"
+  },
+  {
+    "websiteSku": "13-415CAP4SprySlMt",
+    "graceSku": "CMP-SPR-MTSL-13-415-01",
+    "groupSlug": "fine-mist-sprayer-13-415"
+  },
+  {
+    "websiteSku": "13-415CAP4SpryGlSh",
+    "graceSku": "CMP-SPR-SHGD-13-415-01",
+    "groupSlug": "fine-mist-sprayer-13-415"
+  },
+  {
+    "websiteSku": null,
+    "graceSku": "CMP-CAP-BDOT-17-415",
+    "groupSlug": "roll-on-fitment-17-415"
+  },
+  {
+    "websiteSku": "18-415CAP4SpryMtGl",
+    "graceSku": "CMP-SPR-MTGD-18-415-01",
+    "groupSlug": "fine-mist-sprayer-18-415"
+  },
+  {
+    "websiteSku": "18-415CAP4SpryShnBlk",
+    "graceSku": "CMP-SPR-SHBK-18-415-01",
+    "groupSlug": "fine-mist-sprayer-18-415"
+  },
+  {
+    "websiteSku": null,
+    "graceSku": "PKG-BOX-WHT-WINDOW-SM",
+    "groupSlug": "gift-box-0ml-clear"
+  },
+  {
+    "websiteSku": "RecloseableBags9x12",
+    "graceSku": "ACC-RCB-9X12",
+    "groupSlug": "packaging-supply-0ml-mixed"
+  },
+  {
+    "websiteSku": null,
+    "graceSku": "PKG-BOX-BRN-4X4X4",
+    "groupSlug": "unknown-0ml-clear"
+  },
+  {
+    "websiteSku": "CP13-425Blk",
+    "graceSku": "CMP-CLS-BLK-13-425",
+    "groupSlug": "cap-closure-13-425"
+  },
+  {
+    "websiteSku": "CP13-425Wht",
+    "graceSku": "CMP-CLS-WHT-13-425",
+    "groupSlug": "cap-closure-13-425"
+  },
+  {
+    "websiteSku": "CapBlackPoly22mm-400",
+    "graceSku": "CMP-CLS-BLK-03",
+    "groupSlug": "cap-closure-22-400"
+  },
+  {
+    "websiteSku": "CP24-400BlkPls",
+    "graceSku": "CMP-CAP-PHN-24400-BLK",
+    "groupSlug": "cap-closure-24-400"
+  },
+  {
+    "websiteSku": "CJ30BlkCap",
+    "graceSku": "CMP-CLS-BLK-06",
+    "groupSlug": "cap-closure-Press-Fit"
+  },
+  {
+    "websiteSku": "CJ30SlCap",
+    "graceSku": "CMP-CLS-SLV-02",
+    "groupSlug": "cap-closure-Press-Fit"
+  },
+  {
+    "websiteSku": "CJ40BlkCap",
+    "graceSku": "CMP-CLS-BLK-07",
+    "groupSlug": "cap-closure-Press-Fit"
+  },
+  {
+    "websiteSku": "CJ40SlCap",
+    "graceSku": "CMP-CLS-SLV-03",
+    "groupSlug": "cap-closure-Press-Fit"
+  },
+  {
+    "websiteSku": "CJ5BlkCap",
+    "graceSku": "CMP-CLS-BLK-08",
+    "groupSlug": "cap-closure-Press-Fit"
+  },
+  {
+    "websiteSku": "CJ5SlCap",
+    "graceSku": "CMP-CLS-SLV-04",
+    "groupSlug": "cap-closure-Press-Fit"
+  },
+  {
+    "websiteSku": "CPKeyChnGld",
+    "graceSku": "CMP-CLS-GLD-02",
+    "groupSlug": "cap-closure-Specialty"
+  },
+  {
+    "websiteSku": "CPTslRed",
+    "graceSku": "CMP-CLS-GDRD",
+    "groupSlug": "cap-closure-Specialty"
+  },
+  {
+    "websiteSku": "Droppers1ozElg",
+    "graceSku": "CMP-DRP-AMB",
+    "groupSlug": "dropper-17-415"
+  },
+  {
+    "websiteSku": "CPWhite1Oz",
+    "graceSku": "CMP-ROC-WHT-03",
+    "groupSlug": "roll-on-fitment"
+  }
+]

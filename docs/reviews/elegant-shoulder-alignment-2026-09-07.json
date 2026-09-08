@@ -1,0 +1,1098 @@
+{
+  "approvedAt": "2026-09-07",
+  "approval": "User approved 15, 30, 60 and 100 mL Elegant shoulder candidates, explicitly including the 60 mL bulb versions.",
+  "scope": "All 33 Elegant heroes: 25 standard complete-assembly transforms; eight previously approved vintage exceptions retained unchanged. Original image bytes and source geometry unchanged.",
+  "baselinePercent": 91,
+  "targetHeights": {
+    "15": 45.71027166990777,
+    "30": 53.36673890929215,
+    "60": 54.51619762912662,
+    "100": 60.67735596435324
+  },
+  "rows": [
+    {
+      "sku": "GBElgFrst15MtlRollGlSh",
+      "url": "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.732dca1b149d.png",
+      "assetSha256": "732dca1b149d8e4f090f755e437eefd3d1c73b299f2b412e3b68d47cc245eb15",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 1.0170849056603775,
+        "translateXPercent": -0.5152169811320777,
+        "translateYPercent": 1.92801886792452
+      },
+      "landmarks": {
+        "left": 54,
+        "right": 161,
+        "shoulder": 141,
+        "base": 290,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 289,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0192155169641597,
+        "translateXPercent": -0.621037342553258,
+        "translateYPercent": 1.7414289688963152
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 17.724841962801616,
+        "right": 82.2751580371984,
+        "top": 25.523124364726712,
+        "bottom": 91.30885318695883
+      }
+    },
+    {
+      "sku": "GBElg15Gl",
+      "url": "/images/catalog/bone-review/GBElg15Gl.d1e93ae6da16.png",
+      "assetSha256": "d1e93ae6da16b30974bbbf35bcee4deebd6e9909c99bf472106c78c8c210c21e",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 1.0103043396226417,
+        "translateXPercent": -0.3468329245283049,
+        "translateYPercent": 3.746443396226413
+      },
+      "landmarks": {
+        "left": 53,
+        "right": 165,
+        "shoulder": 135,
+        "base": 285,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 285,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.005625976737971,
+        "translateXPercent": -0.11369450744221865,
+        "translateYPercent": 4.150483827175236
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 17.652364414928602,
+        "right": 82.3476355850714,
+        "top": 32.490852262518054,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg15MinarCu",
+      "url": "/images/catalog/bone-review/GBElg15MinarCu.f961d5f6f03c.png",
+      "assetSha256": "f961d5f6f03c3760179deacf66650162d89a3a94fbc50d0bb1f6b258ed444d43",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 0.7934327274523364,
+        "translateXPercent": 10.460602415291902,
+        "translateYPercent": 17.18671293094932
+      },
+      "landmarks": {
+        "left": 84,
+        "right": 214,
+        "shoulder": 116,
+        "base": 307,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 307,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.7897586204748462,
+        "translateXPercent": 10.643695413003492,
+        "translateYPercent": 17.528516216430972
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 32.756936786299185,
+        "right": 67.24306321370081,
+        "top": 23.03289448034657,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg15SpryGlMatt",
+      "url": "/images/catalog/bone-review/GBElg15SpryGlMatt.76740d442960.png",
+      "assetSha256": "76740d442960f6463280369c9b8162dd5f0a11b48a49978387b77ec0493c6ad1",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 0.9714464804063863,
+        "translateXPercent": -1.0009402213352796,
+        "translateYPercent": 5.041705370101578
+      },
+      "landmarks": {
+        "left": 57,
+        "right": 171,
+        "shoulder": 136,
+        "base": 292,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 292,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9669480545557412,
+        "translateXPercent": -0.7647728641764076,
+        "translateYPercent": 5.439747899916227
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 17.607240172382674,
+        "right": 82.39275982761734,
+        "top": 18.918417751299287,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg15MtlRollGlMatt",
+      "url": "/images/catalog/bone-review/GBElg15MtlRollGlMatt.92981d5c1ff8.png",
+      "assetSha256": "92981d5c1ff852ad119b1a774365c98f3333ddeba6b5dd5af5519c6b8ac0d763",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 0.9714464804063863,
+        "translateXPercent": 0.9419527394774908,
+        "translateYPercent": 5.336083091436859
+      },
+      "landmarks": {
+        "left": 48,
+        "right": 160,
+        "shoulder": 136,
+        "base": 292,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 291,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9731864291012621,
+        "translateXPercent": 0.854085330386269,
+        "translateYPercent": 5.182651251979607
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 16.100672719639377,
+        "right": 83.89932728036064,
+        "top": 23.761664898458246,
+        "bottom": 91.29490497851553
+      }
+    },
+    {
+      "sku": "GBElgFrst15Gl",
+      "url": "/images/catalog/bone-review/GBElgFrst15Gl.fdcf2781a005.png",
+      "assetSha256": "fdcf2781a005f197f931ca084fbbde16a405a27bf0c79a0e56561a6f51834ce4",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 0.9297279198981365,
+        "translateXPercent": 2.7388307385113912,
+        "translateYPercent": 10.141844542192379
+      },
+      "landmarks": {
+        "left": 47,
+        "right": 165,
+        "shoulder": 125,
+        "base": 288,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 287,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9311351636462694,
+        "translateXPercent": 2.6672958479813005,
+        "translateYPercent": 10.019456979854752
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 17.25508007843952,
+        "right": 82.74491992156047,
+        "top": 33.72107932721434,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElgFrst15SpryGlSh",
+      "url": "/images/catalog/bone-review/GBElgFrst15SpryGlSh.1f7c6da3946e.png",
+      "assetSha256": "1f7c6da3946eaf860f7e0b0e66d391e444cf814cc5f1a4b3be952e95ece119b1",
+      "capacityMl": 15,
+      "beforeFraming": {
+        "scale": 0.9970108614697122,
+        "translateXPercent": -0.016711550397227864,
+        "translateYPercent": 6.405139026812312
+      },
+      "landmarks": {
+        "left": 54,
+        "right": 163,
+        "shoulder": 130,
+        "base": 282,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 280,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.005625976737971,
+        "translateXPercent": -0.44890316635486727,
+        "translateYPercent": 5.6741595495054895
+      },
+      "shoulderYPercent": 45.28972833009223,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 17.987573073841265,
+        "right": 82.3476355850714,
+        "top": 18.168300472613616,
+        "bottom": 91.30473514446606
+      }
+    },
+    {
+      "sku": "GBElg30GlCap",
+      "url": "/images/catalog/bone-review/GBElg30GlCap.910d81f5b19b.png",
+      "assetSha256": "910d81f5b19ba5113bb2b2534d21ece9d27a14401705fc7324ba290d671d99d1",
+      "capacityMl": 30,
+      "beforeFraming": {
+        "scale": 0.9539090676457476,
+        "translateXPercent": 2.781501151535499,
+        "translateYPercent": 6.01537397337886
+      },
+      "landmarks": {
+        "left": 47,
+        "right": 173,
+        "shoulder": 108,
+        "base": 296,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 294,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9468292387132478,
+        "translateXPercent": 3.1319526836942444,
+        "translateYPercent": 6.646122369183388
+      },
+      "shoulderYPercent": 37.63326109070785,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 17.65000101063071,
+        "right": 82.34999898936931,
+        "top": 27.304214850199703,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg30SpryMattGl",
+      "url": "/images/catalog/bone-review/GBElg30SpryMattGl.0033ecf8cbd8.png",
+      "assetSha256": "0033ecf8cbd87de10c08ce59120added41348ad8f460f68f24041aeac59427f7",
+      "capacityMl": 30,
+      "beforeFraming": {
+        "scale": 1.0996951704368902,
+        "translateXPercent": -6.0844536922814045,
+        "translateYPercent": -4.9733966926740525
+      },
+      "landmarks": {
+        "left": 55,
+        "right": 168,
+        "shoulder": 130,
+        "base": 289,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 288,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.1146217620295196,
+        "translateXPercent": -6.845709863505498,
+        "translateYPercent": -6.276081049848983
+      },
+      "shoulderYPercent": 37.63326109070785,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 13.589022440369028,
+        "right": 86.410977559631,
+        "top": 6.558957422006092,
+        "bottom": 91.33776417031198
+      }
+    },
+    {
+      "sku": "GBElgFrst30GlCap",
+      "url": "/images/catalog/bone-review/GBElgFrst30GlCap.27216e5cab5e.png",
+      "assetSha256": "27216e5cab5e7fcf220f9d6ff4ca201fa61e0760f9aa361fa48d01c35aa4550e",
+      "capacityMl": 30,
+      "beforeFraming": {
+        "scale": 0.9244067253474255,
+        "translateXPercent": 2.5471214321654947,
+        "translateYPercent": 6.402778468205314
+      },
+      "landmarks": {
+        "left": 47,
+        "right": 181,
+        "shoulder": 108,
+        "base": 302,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 301,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9124882818687259,
+        "translateXPercent": 3.15893486407208,
+        "translateYPercent": 7.770008229549546
+      },
+      "shoulderYPercent": 37.63326109070785,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 18.67123565584042,
+        "right": 83.15374090789705,
+        "top": 28.50837827202059,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElgFrst30SpryMattGl",
+      "url": "/images/catalog/bone-review/GBElgFrst30SpryMattGl.3e2e913f861c.png",
+      "assetSha256": "3e2e913f861c235600d91a060250ed267f320920e48a1d76146831163881146a",
+      "capacityMl": 30,
+      "beforeFraming": {
+        "scale": 1.0470151622722488,
+        "translateXPercent": -3.3977732758846835,
+        "translateYPercent": -2.279532638800347
+      },
+      "landmarks": {
+        "left": 52,
+        "right": 169,
+        "shoulder": 127,
+        "base": 294,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 294,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0545523257524796,
+        "translateXPercent": -3.7821686133764487,
+        "translateYPercent": -2.951025385220916
+      },
+      "shoulderYPercent": 37.63326109070785,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 16.254325575920664,
+        "right": 85.50326163366682,
+        "top": 9.831427048142473,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg60AnSpGl",
+      "url": "/images/catalog/bone-review/GBElg60AnSpGl.6e9b2869631f.png",
+      "assetSha256": "6e9b2869631f92b0a2ad953945b8f0805604df6c88e845087ceb7e5ddea18726",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.075,
+        "translateXPercent": 1.8041666666666647,
+        "translateYPercent": -6.401515151515152
+      },
+      "landmarks": {
+        "left": 99,
+        "right": 228,
+        "shoulder": 139,
+        "base": 299,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 299,
+      "vintageException": true,
+      "framing": {
+        "scale": 1.075,
+        "translateXPercent": 1.8041666666666647,
+        "translateYPercent": -6.401515151515152
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "GBElg60AnSpTslIvyGl",
+      "url": "/images/catalog/bone-review/GBElg60AnSpTslIvyGl.e70e54e718e2.png",
+      "assetSha256": "e70e54e718e265534412dbff633b1d5f5c01be33850d31a74896255ca739831e",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.1390728476821192,
+        "translateXPercent": -5.434878587196475,
+        "translateYPercent": -8.4099939795304
+      },
+      "landmarks": {
+        "left": 145,
+        "right": 261,
+        "shoulder": 138,
+        "base": 289,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 288,
+      "vintageException": true,
+      "framing": {
+        "scale": 1.1390728476821192,
+        "translateXPercent": -5.434878587196475,
+        "translateYPercent": -8.4099939795304
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "GBElg60DrpGl",
+      "url": "/images/catalog/bone-review/GBElg60DrpGl.1047ee299697.png",
+      "assetSha256": "1047ee299697de667fcae57cbb30374d2c82f98e83e4ea6a50b73bba422bc358",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.0368965517241377,
+        "translateXPercent": -3.054540229885049,
+        "translateYPercent": -2.634900731452438
+      },
+      "landmarks": {
+        "left": 84,
+        "right": 212,
+        "shoulder": 124,
+        "base": 298,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 298,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0339278860696428,
+        "translateXPercent": -2.9026435038967193,
+        "translateYPercent": -2.366821226895027
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 25.7026946773634,
+        "right": 74.29730532263662,
+        "top": 9.539015036937226,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "LBElg60LtnMtGl",
+      "url": "/images/catalog/bone-review/LBElg60LtnMtGl.b5928974d71b.png",
+      "assetSha256": "b5928974d71b309b71df68158fa6085c01f7d77808f94289644a4e6a9f2063d8",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.0135955056179775,
+        "translateXPercent": -2.8758988764044964,
+        "translateYPercent": -0.8378958120531169
+      },
+      "landmarks": {
+        "left": 51,
+        "right": 188,
+        "shoulder": 121,
+        "base": 299,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 299,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0106935515512239,
+        "translateXPercent": -2.7245136059221835,
+        "translateYPercent": -0.5749611860048276
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 14.120378919931547,
+        "right": 85.87962108006845,
+        "top": 8.61316200991539,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg60SpryMtGl",
+      "url": "/images/catalog/bone-review/GBElg60SpryMtGl.1e06f28a2917.png",
+      "assetSha256": "1e06f28a2917d68dadc243d7e98d3fc77f01f5942c1f305a23122316c839a441",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.0428901734104046,
+        "translateXPercent": -3.708843930635832,
+        "translateYPercent": -1.9120336311087702
+      },
+      "landmarks": {
+        "left": 42,
+        "right": 184,
+        "shoulder": 121,
+        "base": 294,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel.",
+        "original": "/Users/jordanrichter/.codex/generated_images/01a07291-c97f-7790-9a9e-7a9a30791583/exec-d6d53b6b-c20f-4397-bf51-0a923c6e70cc.png"
+      },
+      "bodyBase": 294,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0399043478388315,
+        "translateXPercent": -3.5550739136998146,
+        "translateYPercent": -1.6460237165504452
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 11.003586956043826,
+        "right": 88.99641304395618,
+        "top": 7.807652172893478,
+        "bottom": 91.31512252964814
+      }
+    },
+    {
+      "sku": "GBElg60RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBElg60RdcrShnGl.52334a32c416.png",
+      "assetSha256": "52334a32c4160bece0c4ebe97cfded659d21d9ffd7392cedc3fe23d6aced7f85",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 0.9596808510638297,
+        "translateXPercent": 1.3761702127659607,
+        "translateYPercent": 7.536847195357836
+      },
+      "landmarks": {
+        "left": 46,
+        "right": 186,
+        "shoulder": 100,
+        "base": 288,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 287,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9620505463963521,
+        "translateXPercent": 1.2561056492515021,
+        "translateYPercent": 7.330755510377855
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 16.007547360662237,
+        "right": 83.99245263933778,
+        "top": 25.40564456388508,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElgFrst60AnSpGl",
+      "url": "/images/catalog/bone-review/GBElgFrst60AnSpGl.4c33d203bdfc.png",
+      "assetSha256": "4c33d203bdfc6d09c526f49031f74f62bd89525fdffebec2b456e259352c1b10",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.1247600000000002,
+        "translateXPercent": -6.238000000000006,
+        "translateYPercent": -11.356358974358985
+      },
+      "landmarks": null,
+      "bodyBase": null,
+      "vintageException": true,
+      "framing": {
+        "scale": 1.1247600000000002,
+        "translateXPercent": -6.238000000000006,
+        "translateYPercent": -11.356358974358985
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "GBElgFrst60AnSpTslGl",
+      "url": "/images/catalog/bone-review/GBElgFrst60AnSpTslGl.b147f12fc5dd.png",
+      "assetSha256": "b147f12fc5dd49afce8e82283e743a47317e83187521b91648ad3b22cfcdbb21",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.1247600000000002,
+        "translateXPercent": -6.238000000000006,
+        "translateYPercent": -11.356358974358985
+      },
+      "landmarks": null,
+      "bodyBase": null,
+      "vintageException": true,
+      "framing": {
+        "scale": 1.1247600000000002,
+        "translateXPercent": -6.238000000000006,
+        "translateYPercent": -11.356358974358985
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "GBElgFrst60DrpGl",
+      "url": "/images/catalog/bone-review/GBElgFrst60DrpGl.7926e95f57c6.png",
+      "assetSha256": "7926e95f57c6195411b9b55b8095a7e2cfc02c078657167ee96f4da78bd222eb",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.0803592814371257,
+        "translateXPercent": -9.599820359281429,
+        "translateYPercent": -5.5775721284703135
+      },
+      "landmarks": {
+        "left": 87,
+        "right": 214,
+        "shoulder": 129,
+        "base": 296,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 295,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.08375573600071,
+        "translateXPercent": -9.787191436039166,
+        "translateYPercent": -5.881194581881658
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 28.50551123598592,
+        "right": 78.35827509201857,
+        "top": 7.912060239945559,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "LBElgFrst60LtnMtGl",
+      "url": "/images/catalog/bone-review/LBElgFrst60LtnMtGl.39fe92012388.png",
+      "assetSha256": "39fe920123886d5a3d4dec7d0176d89abbed5fe94031c8d0c42f0c0055cac0d2",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.086867469879518,
+        "translateXPercent": -7.241686746987948,
+        "translateYPercent": -4.512595837897028
+      },
+      "landmarks": {
+        "left": 60,
+        "right": 183,
+        "shoulder": 126,
+        "base": 292,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 290,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0969722693665722,
+        "translateXPercent": -7.7738728533061305,
+        "translateYPercent": -5.400593368577574
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 14.165572534025316,
+        "right": 85.8344274659747,
+        "top": 7.896040199502091,
+        "bottom": 91.33241583920199
+      }
+    },
+    {
+      "sku": "GBElgFrst60SpryMtGl",
+      "url": "/images/catalog/bone-review/GBElgFrst60SpryMtGl.2d19706db9b3.png",
+      "assetSha256": "2d19706db9b322fda7f6c39d788d974fe10cee94312fe98ad9ae16866c6d8977",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 1.0309714285714284,
+        "translateXPercent": -1.7203999999999933,
+        "translateYPercent": -3.974337662337651
+      },
+      "landmarks": {
+        "left": 60,
+        "right": 184,
+        "shoulder": 128,
+        "base": 303,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 304,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.022178705546124,
+        "translateXPercent": -1.2792983948972179,
+        "translateYPercent": -3.1643413594005096
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 18.823549480843223,
+        "right": 81.17645051915679,
+        "top": 10.15495692498838,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElgFrst60RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBElgFrst60RdcrShnGl.93bd088c5609.png",
+      "assetSha256": "93bd088c56091f939e2e5249c4c5bdbe6b663b07ad257998e82c124563d5eef4",
+      "capacityMl": 60,
+      "beforeFraming": {
+        "scale": 0.949578947368421,
+        "translateXPercent": -0.48594736842105135,
+        "translateYPercent": 7.839904306220099
+      },
+      "landmarks": {
+        "left": 53,
+        "right": 192,
+        "shoulder": 100,
+        "base": 290,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 289,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9518701173339568,
+        "translateXPercent": -0.607761238255371,
+        "translateYPercent": 7.639253360753472
+      },
+      "shoulderYPercent": 36.48380237087338,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 16.52590087375585,
+        "right": 83.79138916535547,
+        "top": 22.34997335591462,
+        "bottom": 91.57689098020239
+      }
+    },
+    {
+      "sku": "GBElg100AnSpGl",
+      "url": "/images/catalog/bone-review/GBElg100AnSpGl.d9c06609d87f.png",
+      "assetSha256": "d9c06609d87f239704d58ce451a194bea88721a8ae6bca7791df3cbfcb936c5c",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.013157894736842,
+        "translateXPercent": 6.603070175438603,
+        "translateYPercent": -3.5614035087719182
+      },
+      "landmarks": {
+        "left": 90,
+        "right": 213,
+        "shoulder": 117,
+        "base": 307,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 308,
+      "vintageException": true,
+      "framing": {
+        "scale": 1.013157894736842,
+        "translateXPercent": 6.603070175438603,
+        "translateYPercent": -3.5614035087719182
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "GBElg100AnSpTslIvyGl",
+      "url": "/images/catalog/bone-review/GBElg100AnSpTslIvyGl.cf5378c6bbd2.png",
+      "assetSha256": "cf5378c6bbd2707b275462284f9779004bf00af79d02031eed658a8107d510da",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.3095238095238095,
+        "translateXPercent": -5.654761904761908,
+        "translateYPercent": -15.34920634920635
+      },
+      "landmarks": {
+        "left": 127,
+        "right": 220,
+        "shoulder": 122,
+        "base": 269,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 268,
+      "vintageException": true,
+      "framing": {
+        "scale": 1.3095238095238095,
+        "translateXPercent": -5.654761904761908,
+        "translateYPercent": -15.34920634920635
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "LBElg100LtnMtGl",
+      "url": "/images/catalog/bone-review/LBElg100LtnMtGl.c590ba70cd2a.png",
+      "assetSha256": "c590ba70cd2ab621c6befc882aa460c8c7cf2ddf64e7c3b224bbd08c127e3b34",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.0203045685279188,
+        "translateXPercent": -4.416243654822343,
+        "translateYPercent": -3.3008767881864287
+      },
+      "landmarks": {
+        "left": 53,
+        "right": 183,
+        "shoulder": 108,
+        "base": 305,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 305,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.0164227141236837,
+        "translateXPercent": -4.209211419929801,
+        "translateYPercent": -2.9420993356738023
+      },
+      "shoulderYPercent": 30.32264403564676,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 13.747589862921945,
+        "right": 86.25241013707804,
+        "top": 4.450065857952988,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg100SpryMtGl",
+      "url": "/images/catalog/bone-review/GBElg100SpryMtGl.e440498f470d.png",
+      "assetSha256": "e440498f470dd469a62dabf4d7ea9569c6a3d2120a794a72b0870da28b25cee7",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.0414507772020725,
+        "translateXPercent": -2.246113989637299,
+        "translateYPercent": -3.9929345266132676
+      },
+      "landmarks": {
+        "left": 54,
+        "right": 177,
+        "shoulder": 108,
+        "base": 301,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 301,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.037488469856817,
+        "translateXPercent": -2.04733823781698,
+        "translateYPercent": -3.6315240687581536
+      },
+      "shoulderYPercent": 30.32264403564676,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 16.627454219605728,
+        "right": 83.37254578039429,
+        "top": 4.228237066520763,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElg100RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBElg100RdcrShnGl.9dcfb2348294.png",
+      "assetSha256": "9dcfb2348294ba08c67d881244182162ef1b445689562d438a51366824a9eb28",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 0.9901477832512315,
+        "translateXPercent": -1.9827586206896513,
+        "translateYPercent": 3.9870129870129833
+      },
+      "landmarks": {
+        "left": 52,
+        "right": 183,
+        "shoulder": 87,
+        "base": 290,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 290,
+      "vintageException": false,
+      "framing": {
+        "scale": 0.9863806634599295,
+        "translateXPercent": -1.784984831646291,
+        "translateYPercent": 4.318062908066807
+      },
+      "shoulderYPercent": 30.32264403564676,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 15.312280001659154,
+        "right": 84.68771999834087,
+        "top": 17.76870831888403,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElgFrst100AnSpGl",
+      "url": "/images/catalog/bone-review/GBElgFrst100AnSpGl.cb6986a3907b.png",
+      "assetSha256": "cb6986a3907be4bdef771e8f7c7341f6d167c9cde07f7f675064a1b2c4883051",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "landmarks": null,
+      "bodyBase": null,
+      "vintageException": true,
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "GBElgFrst100AnSpTslGl",
+      "url": "/images/catalog/bone-review/GBElgFrst100AnSpTslGl.46f1bd0f1804.png",
+      "assetSha256": "46f1bd0f1804e53b73711dd1ef2015b23a56732ce737dbe41981df37dc4e1af7",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "landmarks": null,
+      "bodyBase": null,
+      "vintageException": true,
+      "framing": {
+        "scale": 1,
+        "translateXPercent": 0,
+        "translateYPercent": 0
+      },
+      "shoulderYPercent": null,
+      "baselineYPercent": null,
+      "sceneBounds": null
+    },
+    {
+      "sku": "LBElgFrst100LtnMtGl",
+      "url": "/images/catalog/bone-review/LBElgFrst100LtnMtGl.63d4f80fa9cf.png",
+      "assetSha256": "63d4f80fa9cf7e96a1ebe4233495198b992b52fd20618bdfb9827524987d66b7",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.1893491124260356,
+        "translateXPercent": -9.863905325443795,
+        "translateYPercent": -13.878967186659498
+      },
+      "landmarks": {
+        "left": 77,
+        "right": 177,
+        "shoulder": 124,
+        "base": 293,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 291,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.199013620852489,
+        "translateXPercent": -10.350352249575295,
+        "translateYPercent": -14.731201111537686
+      },
+      "shoulderYPercent": 30.32264403564676,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 20.42433068563859,
+        "right": 79.57566931436138,
+        "top": 6.705709079461364,
+        "bottom": 91.36333746086439
+      }
+    },
+    {
+      "sku": "GBElgFrst100SpryMtGl",
+      "url": "/images/catalog/bone-review/GBElgFrst100SpryMtGl.6d10b6f53ae5.png",
+      "assetSha256": "6d10b6f53ae57a5b609eb46e6c69b95d887b3a8b22f2337c94e72bc2b1d04021",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.1893491124260356,
+        "translateXPercent": -14.423076923076925,
+        "translateYPercent": -8.472834857450243
+      },
+      "landmarks": {
+        "left": 75,
+        "right": 179,
+        "shoulder": 108,
+        "base": 277,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 276,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.1918766350140815,
+        "translateXPercent": -14.559984396596079,
+        "translateYPercent": -8.684227655723191
+      },
+      "shoulderYPercent": 30.32264403564676,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 16.428808113770042,
+        "right": 84.76306852124405,
+        "top": 7.568635549014285,
+        "bottom": 91.0
+      }
+    },
+    {
+      "sku": "GBElgFrst100RdcrShnGl",
+      "url": "/images/catalog/bone-review/GBElgFrst100RdcrShnGl.a6c8aab37cc0.png",
+      "assetSha256": "a6c8aab37cc0e273921ec8d187ba4661d02a0536adb996955b3ea9c16466c6ce",
+      "capacityMl": 100,
+      "beforeFraming": {
+        "scale": 1.0203045685279188,
+        "translateXPercent": -5.9467005076142145,
+        "translateYPercent": -0.8274111675126851
+      },
+      "landmarks": {
+        "left": 55,
+        "right": 184,
+        "shoulder": 101,
+        "base": 298,
+        "coordinateWidth": 300,
+        "coordinateHeight": 330,
+        "method": "Visually measured bottle body on generated scene contact sheet; excludes cap, pump, bulb, and tassel."
+      },
+      "bodyBase": 297,
+      "vintageException": false,
+      "framing": {
+        "scale": 1.021608544297784,
+        "translateXPercent": -6.018201845661828,
+        "translateYPercent": -0.944768986800554
+      },
+      "shoulderYPercent": 30.32264403564676,
+      "baselineYPercent": 91,
+      "sceneBounds": {
+        "left": 15.435577584591638,
+        "right": 87.28871186686911,
+        "top": 18.24908851212751,
+        "bottom": 91.30957834675692
+      }
+    }
+  ]
+}

@@ -1,18 +1,18 @@
 import heroRows from "./catalog-heroes.json";
-import { getCylinderCatalogHero, type CylinderCatalogHero } from "./cylinder-catalog-heroes";
 
-export type ApprovedCatalogHero = (typeof heroRows)[number];
-export type CatalogHero = ApprovedCatalogHero | CylinderCatalogHero;
+export type CatalogHero = (typeof heroRows)[number];
 const bySku = new Map(heroRows.map(hero => [hero.websiteSku, hero]));
+const byGroup = new Map<string, CatalogHero[]>();
+for (const hero of heroRows) byGroup.set(hero.groupSlug, [...(byGroup.get(hero.groupSlug) ?? []), hero]);
 
-/** Approved exact-SKU artwork only; other families keep their existing media. */
-export function getProductHero(websiteSku?: string | null): ApprovedCatalogHero | null {
+/** Exact SKU lookup only: never borrow another finish or applicator's photo. */
+export function getProductHero(websiteSku?: string | null): CatalogHero | null {
     return websiteSku ? bySku.get(websiteSku) ?? null : null;
 }
 
+/** Only select an assembly still present in the filtered catalog result. */
 export function getCatalogHero(groupSlug: string, variants: readonly { websiteSku?: string | null }[]): CatalogHero | null {
-    return heroRows.find(hero => hero.groupSlug === groupSlug && variants.some(variant => variant.websiteSku === hero.websiteSku))
-        ?? getCylinderCatalogHero(groupSlug, variants);
+    return byGroup.get(groupSlug)?.find(hero => variants.some(variant => variant.websiteSku === hero.websiteSku)) ?? null;
 }
 
 export function getCatalogHeroStyle(hero: CatalogHero) {

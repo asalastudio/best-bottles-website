@@ -3,8 +3,9 @@ import { act, createElement, type ImgHTMLAttributes } from "react";
 import { createRoot, type Root } from "react-dom/client";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import ProductCardImagePreview from "@/components/products/ProductCardImagePreview";
-import heroes from "@/lib/products/cylinder-catalog-heroes.json";
-import { getCylinderHeroStyle } from "@/lib/products/cylinder-catalog-heroes";
+import allHeroes from "@/lib/products/catalog-heroes.json";
+const heroes = allHeroes.filter(hero => hero.family === "Cylinder");
+import { getCatalogHeroStyle } from "@/lib/products/catalog-heroes";
 
 vi.mock("next/image", () => ({ default: (props: ImgHTMLAttributes<HTMLImageElement> & { fill?: boolean }) => {
     const p = { ...props }; delete p.fill; return createElement("img", p);
@@ -25,30 +26,26 @@ const props = {
 function mount(overrides={}) { container=document.createElement("div");document.body.append(container);root=createRoot(container);act(()=>root.render(createElement(ProductCardImagePreview,{...props,...overrides}))); }
 const empty=()=>container.querySelector<HTMLImageElement>('[data-bb-hero-state="empty"]')!;
 const filled=()=>container.querySelector<HTMLImageElement>('[data-bb-hero-state="filled"]')!;
-const ready=()=>container.querySelector('[data-hover-ready]')?.getAttribute('data-hover-ready');
+
 afterEach(()=>{act(()=>root?.unmount());document.body.replaceChildren();});
-describe("Cylinder card pair",()=>{
-    it("starts empty, preserves reviewed framing and exposes hover only after successful load",()=>{
-        mount();expect(empty().getAttribute('src')).toBe(hero.url);expect(ready()).toBe('false');
-        expect(empty().style.transform).toBe(getCylinderHeroStyle(hero).transform);
+describe("Cylinder static catalog hero",()=>{
+    it("preserves reviewed empty framing without requesting a filled hover",()=>{
+        mount();expect(empty().getAttribute('src')).toBe(hero.url);
+        expect(empty().style.transform).toBe(getCatalogHeroStyle(hero).transform);
         expect(empty().style.maskImage).toBe('');expect(empty().className).not.toContain('group-hover');
-        expect(filled().getAttribute('alt')).toBe('');expect(filled().getAttribute('aria-hidden')).toBe('true');
+        expect(filled()).toBeNull();
         expect(container.querySelector('a')?.getAttribute('href')).toBe(props.productHref);
         expect(empty().getAttribute('data-bb-website-sku')).toBe(hero.websiteSku);
         expect(container.querySelector('button')).toBeNull();
-        act(()=>filled().dispatchEvent(new Event('load')));expect(ready()).toBe('true');
-    });
-    it("leaves the approved empty image visible if the hover request fails",()=>{
-        mount();act(()=>filled().dispatchEvent(new Event('error')));
-        expect(filled()).toBeNull();expect(ready()).toBe('false');expect(empty().getAttribute('src')).toBe(hero.url);
+
     });
     it("uses a placeholder if the approved default fails instead of exposing the filled image",()=>{
-        mount();act(()=>empty().dispatchEvent(new Event('error')));expect(container.querySelector('img')).toBeNull();expect(ready()).toBe('false');
+        mount();act(()=>empty().dispatchEvent(new Event('error')));expect(container.querySelector('img')).toBeNull();
     });
-    it("does not carry hover readiness to a newly filtered group",()=>{
-        mount();act(()=>filled().dispatchEvent(new Event('load')));expect(ready()).toBe('true');
+    it("uses the newly filtered group without reviving retired hover artwork",()=>{
+        mount();
         act(()=>root.render(createElement(ProductCardImagePreview,{...props,catalogHero:heroes[1],productHref:'/products/next'})));
-        expect(ready()).toBe('false');expect(empty().getAttribute('src')).toBe(heroes[1].url);
+        expect(empty().getAttribute('src')).toBe(heroes[1].url);
     });
     it("preserves variant previews and fallback behavior outside the approved Cylinder mapping",()=>{
         mount({catalogHero:null});expect(container.querySelector('img')?.getAttribute('src')).toBe('/white.png');

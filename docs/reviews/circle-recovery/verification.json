@@ -1,0 +1,98 @@
+{
+  "shoulderAndBaselineChecks": 27,
+  "mattePixelChecks": [
+    {
+      "sku": "GBCrcl30GlCap",
+      "changedPixels": 326260,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl30SpryMattGl",
+      "changedPixels": 325078,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl50AnSpGl",
+      "changedPixels": 431646,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl50AnSpTslIvyGl",
+      "changedPixels": 338808,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl50DrpGl",
+      "changedPixels": 414898,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "LBCrcl50LtnMtGl",
+      "changedPixels": 424768,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl50SpryMtGl",
+      "changedPixels": 431495,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl50RdcrShnGl",
+      "changedPixels": 434457,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl100AnSpGl",
+      "changedPixels": 610698,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl100AnSpTslGl",
+      "changedPixels": 609926,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "LBCrcl100LtnMtGl",
+      "changedPixels": 605061,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl100SpryMtGl",
+      "changedPixels": 610705,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    },
+    {
+      "sku": "GBCrcl100RdcrShnGl",
+      "changedPixels": 610095,
+      "outsideGlassRegionIdentical": true,
+      "darkEdgesAndColoredHardwareIdentical": true,
+      "originalBonePixelsIdentical": true
+    }
+  ],
+  "visualApproval": "approved",
+  "publication": "not published"
+}
