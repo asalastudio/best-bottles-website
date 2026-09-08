@@ -1,0 +1,432 @@
+{
+  "purpose": "Exact-SKU PDP fallback for Round spray variants with unavailable remote media",
+  "background": "#F5F3EF",
+  "baselinePercent": 91,
+  "rows": [
+    {
+      "websiteSku": "GBRnd78SpryMtGl",
+      "url": "/images/pdp/round/GBRnd78SpryMtGl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/11. GBRnd78SpryMtGl.psd",
+      "sourceSha256": "f9376e9237be26cdfa47bae42559efebf3066b643c62a43de491e146e0499ea6",
+      "assetSha256": "390c17068a0ec476be91e3985dd5607ffa7b9aec6c40cbd0859ddd88886189aa",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        116,
+        71,
+        948,
+        1423
+      ],
+      "renderedBounds": [
+        204,
+        40,
+        795,
+        1001
+      ],
+      "scale": 0.7107988165680473
+    },
+    {
+      "websiteSku": "GBRnd78SpryMtSl",
+      "url": "/images/pdp/round/GBRnd78SpryMtSl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/24. GBRnd78SpryMtSl.psd",
+      "sourceSha256": "160f2663116d3895cb09334b73a18c1955558c14cb402f88377c54c54b8d75e3",
+      "assetSha256": "89b143653a35d0cfbd395df37de0e1b6bd5ca5a076cd447d1885db80347ada21",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        116,
+        63,
+        948,
+        1423
+      ],
+      "renderedBounds": [
+        206,
+        40,
+        794,
+        1001
+      ],
+      "scale": 0.7066176470588236
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnGl",
+      "url": "/images/pdp/round/GBRnd78SpryShnGl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/17. GBRnd78SpryShnGl.psd",
+      "sourceSha256": "64c61a4db6f210e61e7010a677b21d6ec1599ac4112008b255cecf7f4c54f673",
+      "assetSha256": "b37e49e3939169c19a2918d1233f15da013db947d1558fc361740e6c21c80b78",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        126,
+        59,
+        958,
+        1415
+      ],
+      "renderedBounds": [
+        205,
+        40,
+        795,
+        1001
+      ],
+      "scale": 0.7087020648967551
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnBlk",
+      "url": "/images/pdp/round/GBRnd78SpryShnBlk.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/21. GBRnd78SpryShnBlk.psd",
+      "sourceSha256": "afcba63430cffdb092b70aee321ec4a5cc000630eba97ab8d07bb15f90674a96",
+      "assetSha256": "31ef32910766e2d9f4744c41db98e4ace87f667fe3060c40b5d48c53b9fe3cb9",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        123,
+        62,
+        955,
+        1423
+      ],
+      "renderedBounds": [
+        206,
+        40,
+        793,
+        1001
+      ],
+      "scale": 0.7060984570168993
+    },
+    {
+      "websiteSku": "GBRnd78SpryShnSl",
+      "url": "/images/pdp/round/GBRnd78SpryShnSl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/9.  78ml Round, Ltn & Spry, capped/30. GBRnd78SpryShnSl.psd",
+      "sourceSha256": "14feb1b135f5c9b482cb14190280c39ca0d1ac6ef1d59a12b518e0bbc78748b5",
+      "assetSha256": "5d2a857663bc8270c863d2e9c639a185910bc9825058d45dd06d7e514213aa2b",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        127,
+        60,
+        959,
+        1423
+      ],
+      "renderedBounds": [
+        206,
+        40,
+        793,
+        1001
+      ],
+      "scale": 0.7050623624358033
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryCu",
+      "url": "/images/pdp/round/GBRndFrst78SpryCu.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/54. GBRndFrst78SpryCu.psd",
+      "sourceSha256": "0100581a8f069c2d9a6cde0e3732f3a619a539b2a258a33660e57b9a95b2b84c",
+      "assetSha256": "a301cd364a94508863691aea35c1519b80c8fadb40e80cc0c74c690ea91d4ddf",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        240,
+        36,
+        1182,
+        1503
+      ],
+      "renderedBounds": [
+        191,
+        40,
+        808,
+        1001
+      ],
+      "scale": 0.6550783912747103
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtGl",
+      "url": "/images/pdp/round/GBRndFrst78SpryMtGl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/11. GBRndFrst78SpryMtGl.psd",
+      "sourceSha256": "3098d4cc52aa945612e2e40353e53ecd0ad690738bb448e823344d978cba8539",
+      "assetSha256": "4af2cb540fbd29b0ab6390fd06ac68b36401b58e4820dda13582b2cb6fb407ab",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        246,
+        36,
+        1195,
+        1517
+      ],
+      "renderedBounds": [
+        192,
+        40,
+        808,
+        1001
+      ],
+      "scale": 0.6488858879135719
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtSl",
+      "url": "/images/pdp/round/GBRndFrst78SpryMtSl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/24. GBRndFrst78SpryMtSl.psd",
+      "sourceSha256": "b0a7976df663c7aecea424e87444b88d7c0b763049fb4ed5a87ed5524f4e265e",
+      "assetSha256": "b07b8dde43d9735bbac474d8deea839ce01ed1ac1a193a6d84ae5019e9b8deed",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        235,
+        43,
+        1184,
+        1524
+      ],
+      "renderedBounds": [
+        192,
+        40,
+        808,
+        1001
+      ],
+      "scale": 0.6488858879135719
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnGl",
+      "url": "/images/pdp/round/GBRndFrst78SpryShnGl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/17. GBRndFrst78SpryShnGl.psd",
+      "sourceSha256": "3201c11a861a22f146498148e7bcc993192a0af59a866f57c1b8b2cc5fee6acd",
+      "assetSha256": "93c3379866079b35f2897fdff9731252daa4f49c9e7902985ea9daf37fbb0852",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        246,
+        37,
+        1195,
+        1518
+      ],
+      "renderedBounds": [
+        192,
+        40,
+        808,
+        1001
+      ],
+      "scale": 0.6488858879135719
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnBlk",
+      "url": "/images/pdp/round/GBRndFrst78SpryShnBlk.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/21. GBRndFrst78SpryShnBlk.psd",
+      "sourceSha256": "9cd4f401870790016706312ecaeb68cdbba7cc211a5a13560815c855b8ddd4e9",
+      "assetSha256": "a149abce4e3d0dde77fa4dc45667a3306d7064d9aeb77cd4b06a825825a9d275",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        235,
+        43,
+        1184,
+        1532
+      ],
+      "renderedBounds": [
+        194,
+        40,
+        806,
+        1001
+      ],
+      "scale": 0.6453995970449966
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryShnSl",
+      "url": "/images/pdp/round/GBRndFrst78SpryShnSl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/8.  78 Round Frosted, Spry & Ltn, capped/30. GBRndFrst78SpryShnSl.psd",
+      "sourceSha256": "c66cb2c58daca4ed13b02891c5ba69532f03fcd929ac30a6d31d5acd4626aa83",
+      "assetSha256": "fed35678fdcbce6e54c151eda87d9e72758c7a5ab1597d48fc480fe4b629ff5e",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        246,
+        42,
+        1188,
+        1505
+      ],
+      "renderedBounds": [
+        190,
+        40,
+        809,
+        1001
+      ],
+      "scale": 0.6568694463431306
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryCu",
+      "url": "/images/pdp/round/GBRndFrst128SpryCu.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/57. GBRndFrst128SpryCu.psd",
+      "sourceSha256": "6b50684e373d4c12a672eab9746b56f228d6301b7ed19c56a51a66bd706ce0f9",
+      "assetSha256": "b28c81024e00473788d5970a244c79b7f5e978278a5167d73bb9d45a0f4f3c09",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        174,
+        3,
+        1112,
+        1483
+      ],
+      "renderedBounds": [
+        195,
+        40,
+        804,
+        1001
+      ],
+      "scale": 0.6493243243243243
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryMtGl",
+      "url": "/images/pdp/round/GBRndFrst128SpryMtGl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/11. GBRndFrst128SpryMtGl.psd",
+      "sourceSha256": "e649abd1001fccb728eecb559cd29924fb14ec8b357b26919ee157008b617110",
+      "assetSha256": "db7d777dc45c7d7b54195e54b1dd5faa76147bfbea8e0a0395ac40c82ad4d57d",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        80,
+        2,
+        1018,
+        1483
+      ],
+      "renderedBounds": [
+        195,
+        40,
+        804,
+        1001
+      ],
+      "scale": 0.6488858879135719
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryMtSl",
+      "url": "/images/pdp/round/GBRndFrst128SpryMtSl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/23. GBRndFrst128SpryMtSl.psd",
+      "sourceSha256": "fa80b03b4ac15257a9aa81f0afe12b2d63b7229da0c74cf6a38aaabea88772bf",
+      "assetSha256": "a280fd9d0bfa51977ed75a7c13f1fd830ccf5f88da096c1f222f4ad04c3fc0f7",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        80,
+        0,
+        1018,
+        1483
+      ],
+      "renderedBounds": [
+        196,
+        40,
+        804,
+        1001
+      ],
+      "scale": 0.6480107889413351
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryShnGl",
+      "url": "/images/pdp/round/GBRndFrst128SpryShnGl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/17. GBRndFrst128SpryShnGl.psd",
+      "sourceSha256": "cf569f69c70fcff88f150beec2e8e948a2471ac435ae52f0e282f9abe1088eea",
+      "assetSha256": "ec0ed1db23ca1afb4d3a73a5045b059909e5b5025573b203ca0152b645d19209",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        80,
+        5,
+        1018,
+        1483
+      ],
+      "renderedBounds": [
+        195,
+        40,
+        805,
+        1001
+      ],
+      "scale": 0.6502029769959404
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryShnBlk",
+      "url": "/images/pdp/round/GBRndFrst128SpryShnBlk.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/21. GBRndFrst128SpryShnBlk.psd",
+      "sourceSha256": "a4dd15d80d602ca39b459fca1c4f2abc0e7989850d8de239c08632d100c71879",
+      "assetSha256": "43aebcc949c7be753bfab33079fdf0a0d603785caa029f2b0505a1cedebccc7b",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        80,
+        0,
+        1018,
+        1483
+      ],
+      "renderedBounds": [
+        196,
+        40,
+        804,
+        1001
+      ],
+      "scale": 0.6480107889413351
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryShnSl",
+      "url": "/images/pdp/round/GBRndFrst128SpryShnSl.png",
+      "source": "2.  18-415 Bottles /31. Capped & Uncapped, 18-415 Lotion and Sprayers/Capped/10. 128ml Round Frst, Ltn & Spry capped/30. GBRndFrst128SpSlShn.psd",
+      "sourceSha256": "f2efd3ff48496aa085aa84c60b4cb17cb4374c38cbb2e0bd5be0e636d55e845b",
+      "assetSha256": "e0a8d4312e949c6c1aa64c3a465f162aafb40ae02711d0265676fb295d302733",
+      "canvas": [
+        1000,
+        1100
+      ],
+      "baselineY": 1001,
+      "sourceSubjectBounds": [
+        80,
+        1,
+        1018,
+        1483
+      ],
+      "renderedBounds": [
+        196,
+        40,
+        804,
+        1001
+      ],
+      "scale": 0.6484480431848852
+    }
+  ]
+}

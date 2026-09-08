@@ -89,6 +89,8 @@ export type MobileProductPdpProps = {
     selectedVariant: ProductVariant | null;
     platesBySku: Record<string, PlateRef>;
     selectedKitQuery: KitQueryResult;
+    /** Shipped exact-SKU photos used when a plate or remote product image is unavailable. */
+    skuImageFallbacks: Readonly<Record<string, string>>;
     displayName: string;
     inStock: boolean;
     canAddToCart: boolean;
@@ -142,7 +144,7 @@ function formatEach(price: number | null | undefined): string {
 
 export default function MobileProductPdp(props: MobileProductPdpProps) {
     const {
-        slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, displayName, inStock, canAddToCart,
+        slug, group, variants, selectedVariant, platesBySku, selectedKitQuery, skuImageFallbacks, displayName, inStock, canAddToCart,
         addedFlash, onAddToCart, quoteHref, qty, onQtyChange, cartCount, backHref, cartAnchorRef, glassOptions,
         rollerOptions, activeApplicator, capOptions, activeCapOption, capOptionPhotoKeys, capOptionThumbnails, resolveCapFinish, variantSku,
         onCommitVariant, onCommitGlass, onPickerOpenChange, onAskGrace, description, relations, initialCompatibility,
@@ -243,7 +245,7 @@ export default function MobileProductPdp(props: MobileProductPdpProps) {
         return wanted && !brokenPlates.has(wanted) ? wanted : null;
     };
     const decodedPlate = useDecodedPlate(plateUrlFor(viewMode), markPlateBroken);
-    const fallbackImageUrl = shownVariant?.imageUrl ?? group.heroImageUrl ?? null;
+    const fallbackImageUrl = skuImageFallbacks[shownVariant?.websiteSku ?? ""] ?? shownVariant?.imageUrl ?? group.heroImageUrl ?? null;
 
     /* ── expanded viewer (same configured bottle, its own cap state) ─────── */
     const viewerMode = coerceMobileViewMode(viewerView, viewCaps);
