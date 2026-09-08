@@ -1,0 +1,98 @@
+[
+  {
+    "check": "Homepage arrival and exact desktop/mobile product-link parity",
+    "products": 51
+  },
+  {
+    "check": "Arrival",
+    "width": 320,
+    "viewport": 320,
+    "images": [
+      {
+        "top": 316.390625,
+        "bottom": 469.28125
+      },
+      {
+        "top": 316.390625,
+        "bottom": 469.28125
+      }
+    ]
+  },
+  {
+    "check": "Arrival",
+    "width": 375,
+    "viewport": 375,
+    "images": [
+      {
+        "top": 300.390625,
+        "bottom": 483.53125
+      },
+      {
+        "top": 300.390625,
+        "bottom": 483.53125
+      }
+    ]
+  },
+  {
+    "check": "Arrival",
+    "width": 390,
+    "viewport": 390,
+    "images": [
+      {
+        "top": 300.390625,
+        "bottom": 491.78125
+      },
+      {
+        "top": 300.390625,
+        "bottom": 491.78125
+      }
+    ]
+  },
+  {
+    "check": "Arrival",
+    "width": 430,
+    "viewport": 430,
+    "images": [
+      {
+        "top": 300.390625,
+        "bottom": 513.78125
+      },
+      {
+        "top": 300.390625,
+        "bottom": 513.78125
+      }
+    ]
+  },
+  {
+    "check": "Catalog accessibility",
+    "violations": []
+  },
+  {
+    "check": "Size, glass and metal roller applied together",
+    "url": "http://localhost:3001/catalog/cylinder?applicators=rollon&roller=metal&colors=Frosted&capacities=9+ml"
+  },
+  {
+    "check": "Refresh and individual chip removal retain other filters",
+    "url": "http://localhost:3001/catalog/cylinder?applicators=rollon&roller=metal&capacities=9+ml"
+  },
+  {
+    "check": "Empty-result recovery",
+    "passed": true
+  },
+  {
+    "check": "Landscape and enlarged root text at 320 px reflow",
+    "passed": true
+  },
+  {
+    "check": "Circle listings and family-preserving builder link",
+    "passed": true
+  },
+  {
+    "check": "Desktop original introduction and finder preserved",
+    "passed": true
+  },
+  {
+    "check": "Browser errors",
+    "errors": []
+  }
+]

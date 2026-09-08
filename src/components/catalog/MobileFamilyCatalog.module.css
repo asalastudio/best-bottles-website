@@ -1,0 +1,233 @@
+.mobile {
+  display: none;
+}
+@media (max-width: 1023px) {
+  .page {
+    padding-top: 0;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+    padding: 20px 16px 32px;
+  }
+  .mobile button,
+  .mobile select,
+  .toolbar a {
+    min-height: 44px;
+  }
+  .mobile :is(button, a, input, select, summary):focus-visible {
+    outline: 2px solid var(--color-obsidian, #242424);
+    outline-offset: 3px;
+  }
+  .heading h1 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 34px;
+    line-height: 1.1;
+  }
+  .heading p {
+    font-size: 14px;
+    color: #55534f;
+    margin-top: 6px;
+  }
+  .toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin: 12px 0 16px;
+  }
+  .toolbar button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 16px;
+    border: 1px solid #bcb5aa;
+    border-radius: 4px;
+  }
+  .toolbar a {
+    display: inline-flex;
+    align-items: center;
+    font-size: 14px;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px 10px;
+  }
+  .grid article {
+    min-width: 0;
+  }
+  .grid article > a {
+    padding: 12px 10px;
+  }
+  .grid article h3 {
+    font-size: 20px;
+    overflow-wrap: anywhere;
+  }
+  .grid article dl {
+    flex-wrap: wrap;
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .chips button {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    border: 1px solid #bcb5aa;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .error {
+    padding: 12px;
+    background: #fff1ef;
+    color: #842817;
+    margin-bottom: 16px;
+  }
+  .error button,
+  .empty button,
+  .about button {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .empty {
+    padding: 24px 0;
+  }
+  .empty button {
+    margin-right: 16px;
+  }
+  .about {
+    border-top: 1px solid #d8d1c5;
+    margin-top: 32px;
+    padding-top: 8px;
+  }
+  .about summary {
+    padding: 14px 0;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .about p {
+    margin: 8px 0 20px;
+    line-height: 1.6;
+  }
+  .about img {
+    width: 100%;
+    height: auto;
+  }
+  .dialog {
+    width: min(100% - 24px, 520px);
+    max-height: calc(100dvh - 32px);
+    margin: auto;
+    padding: 20px 20px max(20px, env(safe-area-inset-bottom));
+    border: 1px solid #d8d1c5;
+    border-radius: 8px;
+    background: var(--color-bone, #f5f3ef);
+    color: #242424;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
+  .dialog::backdrop {
+    background: #0007;
+  }
+  .dialogHeading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .dialogHeading h2 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    font-size: 28px;
+    line-height: 1.1;
+  }
+  .dialogHeading button {
+    min-width: 44px;
+    display: grid;
+    place-items: center;
+  }
+  .field {
+    display: grid;
+    gap: 8px;
+    margin: 20px 0;
+    font-weight: 500;
+  }
+  .field select {
+    width: 100%;
+    min-width: 0;
+    padding: 8px;
+    border: 1px solid #aaa399;
+    border-radius: 4px;
+    font: inherit;
+    font-size: 16px;
+    background: white;
+  }
+  .dialog fieldset {
+    margin: 20px 0;
+  }
+  .dialog legend {
+    font-weight: 500;
+  }
+  .glass {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 16px;
+    margin-top: 8px;
+  }
+  .glass label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    gap: 8px;
+  }
+  .glass input {
+    width: 20px;
+    height: 20px;
+    accent-color: #242424;
+  }
+  .hint {
+    font-size: 14px;
+    color: #55534f;
+    margin-top: 8px;
+  }
+  .dialogActions {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 24px;
+  }
+  .dialogActions button {
+    padding: 8px 12px;
+  }
+  .apply {
+    color: white;
+    background: #242424;
+    border-radius: 4px;
+  }
+  :global([data-family-catalog-header]) {
+    position: relative;
+  }
+  :global([data-family-catalog-header] [data-mobile-search]) {
+    padding-top: 4px;
+    padding-bottom: 8px;
+  }
+  :global([data-family-catalog-header] [data-mobile-search] form) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  :global([data-family-catalog-header] input) {
+    font-size: 16px;
+  }
+  :global([data-family-catalog-header] button) {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}
