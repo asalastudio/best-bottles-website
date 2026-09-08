@@ -1,0 +1,465 @@
+{
+  "GBSleek8Gl": {
+    "sourceSha256": "3a5c47b7b3efd87f657782ce40c6c5a39586e13f57f6cdab0681f7e178297272",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollBlkDot": {
+    "sourceSha256": "90298cd3198575aa28d9061bcc3eceaa321712f5503e819c3c110236e4859d91",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollBlkSh": {
+    "sourceSha256": "98cb534c5225c443cf7e209289f09c337656b6040be7138ae51d68f3e45ef84f",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollCuMatt": {
+    "sourceSha256": "c36d7a4218d5412a297224461e1d2ef2085d690a981770d304819612578e2fb3",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollGlMatt": {
+    "sourceSha256": "914e6c8817b9004c5f0a3dec487303bb2141474d869ff6ad4a272d987bbd4ec4",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollGlSh": {
+    "sourceSha256": "ff7ba35336e3d7e8044d0ab45331731672158de9030c9275b8d22bdd9e6697db",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollPinkDot": {
+    "sourceSha256": "ad135e59a5a189d293a6ce74391bc0c40e87de37a6aec3a40c599be8420e1e84",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollSlDot": {
+    "sourceSha256": "46d8aafaa19facdfae1607247292fc539f6b10532692012c1c57d0be5cb56bb0",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-001.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollSlMatt": {
+    "sourceSha256": "91558b1205bb700b4612f0f5fb767447b79aae4a5f6db6f4786dac49fd10c3aa",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8MtlRollSlSh": {
+    "sourceSha256": "28807751c0255eccc93cfb57fd7b4114be13c2f2a265065cbf1229ad306f04af",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8RollBlkDot": {
+    "sourceSha256": "84f63d9199092e27d7686e22ac4753e80b6c10c4b394b4c1ce03750c7dda26a4",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8RollSlSh": {
+    "sourceSha256": "52ac4168a08d73893d3aa4bbdc2a6e837874ae43989571d7b3688f6be387590b",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8Sl": {
+    "sourceSha256": "c315cec584e65a5d7eb901926e39e627d1322ea110e62f17aa3a0fa290e70c4b",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek8WhtSht": {
+    "sourceSha256": "2eef602326a3ab4f7eecdbcd8532a60eafaeb0e1c88fd00ba4a9ab8b67f544fe",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "cap": [
+        2
+      ]
+    }
+  },
+  "GBSleek5BlkSht": {
+    "sourceSha256": "2f34a3bf2f03b5b7ee8b8d1318aaa43982c8dea38583665f7a93cdfacec7c38f",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "cap": [
+        2
+      ]
+    }
+  },
+  "GBSleek5Gl": {
+    "sourceSha256": "c4c9b79a13543038c0618275a9c3cd39e813818015b5fb9edf0acb65d26065ee",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-002.jpg",
+    "parts": {
+      "body": [
+        3
+      ],
+      "cap": [
+        4
+      ]
+    }
+  },
+  "GBSleek5MtlRollBlkDot": {
+    "sourceSha256": "bc190d6498ef56635b64a7dd02e53e1b470d31ed36207f0f2d9ca0649b24adeb",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek5MtlRollBlkSh": {
+    "sourceSha256": "0f54e32875099d4faf41eb7a6abb34c994834184863536c1a136cb802f868d95",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        3
+      ],
+      "cap": [
+        4
+      ]
+    }
+  },
+  "GBSleek5MtlRollCuMatt": {
+    "sourceSha256": "11815113b0fc21875884de2d1065eece113630e18db3e384daabdbca58a6edc2",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        3
+      ],
+      "cap": [
+        4
+      ]
+    }
+  },
+  "GBSleek5MtlRollGlMatt": {
+    "sourceSha256": "a253189335766b2b6af24a51555f17ff69281b711be1feed41317cd9cf3e55a1",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek5MtlRollGlSh": {
+    "sourceSha256": "3ac0b66736b23086b37d223ee0380fa86791d53e4c8317cf70b9f3564364e039",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        3
+      ],
+      "cap": [
+        4
+      ]
+    }
+  },
+  "GBSleek5MtlRollPinkDot": {
+    "sourceSha256": "2ba46139f16ea3e6671db89d4c30456d092ca6b9012cd9298fa28d2d943dccea",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek5MtlRollSlDot": {
+    "sourceSha256": "51256f8b60816f47823b6bf3940072e220b31e2b6710cef5b8af40ad0985f716",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek5MtlRollSlMatt": {
+    "sourceSha256": "99d034c5e5c649f4629deaf54145f15a9ad5647365a42e4b8a1b7b6397b6ce92",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-003.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek5MtlRollSlSh": {
+    "sourceSha256": "693cee29d1ff3dbce99793af3f9cc7ec660f45c27da688fa118d36a709911f78",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-004.jpg",
+    "parts": {
+      "body": [
+        2
+      ],
+      "cap": [
+        3
+      ]
+    }
+  },
+  "GBSleek5Sl": {
+    "sourceSha256": "c25d595218afd96944beb4d989a23d1f2371ecd4d137e40395b93686626e37f6",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-004.jpg",
+    "parts": {
+      "body": [
+        3
+      ],
+      "cap": [
+        4
+      ]
+    }
+  },
+  "GBSleek5WhtSht": {
+    "sourceSha256": "7ff02fb77f3da9d515a038494eabcb14c6fb67a2f21c389b38963b59e3649121",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-simple-004.jpg",
+    "parts": {
+      "body": [
+        1
+      ],
+      "cap": [
+        2
+      ]
+    }
+  },
+  "GBSleek8SpryBlkMatt": {
+    "sourceSha256": "1af10cddc61fb29c4b6e35d6215404f01e90ed5073795e48c9c64c5b90ae7231",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SpryBlkSh": {
+    "sourceSha256": "59242424ef0bc08a11398541e751340610af137af0afad4d032b7d54cb0b5363",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SpryBluMatt": {
+    "sourceSha256": "198740ee6ea72cf49b11d682e7829c54e2cf30b8d80a1a495ea1959c7b68cae3",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SpryCuMatt": {
+    "sourceSha256": "2dc324cc94b180556a9b619e0169842269c87d73c8ccea6d2c8afbc26fb87c5c",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SpryGlMatt": {
+    "sourceSha256": "98520f75a0913b677b6edeb5f6d2066fb5ab038bd853134b3a1c77b5bef75889",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SpryGlSh": {
+    "sourceSha256": "cc466c235611ec787e0735859e7f51b41fff59331c93e7615929fafe666aaf3b",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SprySlMatt": {
+    "sourceSha256": "785ac0de115df0179de1da692ea8d132a9bced926aab5cd2d4eda78c8c4cffcb",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  },
+  "GBSleek8SprySlSh": {
+    "sourceSha256": "3e7285360dd9a8d16f98c1a28360394a9625406662e0f3112a05377149805fbc",
+    "reviewedBy": "Codex visual review",
+    "evidence": "docs/reviews/catalog-layer-mapping-2026-09-08/sleek-three-layer-001.jpg; dip tube and capped spray hardware retained as one photographed fitment assembly",
+    "parts": {
+      "body": [
+        2
+      ],
+      "sprayer": [
+        3,
+        4
+      ]
+    }
+  }
+}
