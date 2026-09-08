@@ -37,6 +37,24 @@ test("accepts a numbered PSD basename that matches the row SKU inside the master
     }, { masterRoot }), []);
 });
 
+test("accepts an exact legacy assembled image URL whose basename matches the row SKU", () => {
+    assert.deepEqual(validatePlateSource({
+        sku: "GBRnd78SpryCu",
+        sourcePath: "https://www.bestbottles.com/images/store/enlarged_pics/GBRnd78SpryCu.gif",
+    }, { masterRoot }), []);
+});
+
+test("rejects an unapproved remote source and an exact-legacy SKU mismatch", () => {
+    assert.deepEqual(
+        validatePlateSource({ sku: "GBRnd78SpryCu", sourcePath: "https://example.com/images/store/enlarged_pics/GBRnd78SpryCu.gif" }, { masterRoot }).map((issue) => issue.issue),
+        ["legacy_source_url_unapproved"],
+    );
+    assert.deepEqual(
+        validatePlateSource({ sku: "GBRnd78SpryCu", sourcePath: "https://www.bestbottles.com/images/store/enlarged_pics/GBRnd128SpryCu.gif" }, { masterRoot }).map((issue) => issue.issue),
+        ["front_source_sku_mismatch"],
+    );
+});
+
 test("rejects an absolute source outside the master without following it", () => {
     const outside = join(scratch, "legacy", "GBCrcl15MtlRollBlkDot.psd");
     mkdirSync(dirname(outside), { recursive: true });

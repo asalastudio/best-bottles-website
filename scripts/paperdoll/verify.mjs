@@ -71,7 +71,7 @@ async function main() {
             cursor = result.continueCursor;
         }
     }
-    console.log(`sources: ${sourceRows} rows, ${sourceIssues.length} lineage issue(s) against ${sourceRoot}`);
+    console.log(`sources: ${sourceRows} rows, ${sourceIssues.length} lineage issue(s) against approved master and exact-legacy rules`);
     for (const issue of sourceIssues.slice(0, 60)) console.log(`   !! ${issue.sku}: ${issue.issue} ${issue.detail}`);
     const picked = allUrls ? urls : shuffle(urls).slice(0, sampleSize);
     let urlFailures = 0;
