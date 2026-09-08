@@ -89,6 +89,9 @@ function familyHeadlineNoun(family: string): string {
 }
 
 function defaultFamilyStory(family: string): string {
+    if (family === "Atomizer") {
+        return "Travel-size atomizers pair a protective aluminum outer shell with a refillable glass inner core. Compare 5 ml and 10 ml styles, finishes, and spray details.";
+    }
     if (family === "Cylinder") {
         return "A clean glass profile offered across dispensing systems and capacities. Start with the application your formula needs, then compare exact wholesale products.";
     }
