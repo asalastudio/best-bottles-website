@@ -1,0 +1,308 @@
+{
+  "GBCylBlu5MtlRollBlkDot": {
+    "bodySha256": "ae143cc7e3a16b335c552883591e4a6eb7cb5ec62ceaabffae4e98efdbe83ae3",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 425,
+        "top": 193,
+        "right": 585,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollBlkDot.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollBlkDot.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "b9f20c2eb3c4493c76733ce58e6bf944d4b9fb14e4fca43eb73b620f5c1c46de",
+        "bytes": 8826
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollCuMatt": {
+    "bodySha256": "90206a452b3ccea2614eec1884a3d25ed87c5f0fccab82bfd0da8b8fa0b2a12b",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 424,
+        "top": 193,
+        "right": 584,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollCuMatt.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollCuMatt.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "db7d447627268026893d5d4473a9d3e8b107d9cf84459fe58b3a68a2e5ec1538",
+        "bytes": 8840
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollGlMatt": {
+    "bodySha256": "7c48a2cd541e8c22128f3066643441a357bb4bf813c5645b04b14cbcc4534961",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 425,
+        "top": 193,
+        "right": 585,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollGlMatt.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollGlMatt.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "b9f20c2eb3c4493c76733ce58e6bf944d4b9fb14e4fca43eb73b620f5c1c46de",
+        "bytes": 8826
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollSlMatt": {
+    "bodySha256": "e888373231c169c058c20d8047fabeffa46cf2fa586d630484cf407c6fe9961f",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 424,
+        "top": 193,
+        "right": 584,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollSlMatt.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollSlMatt.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "db7d447627268026893d5d4473a9d3e8b107d9cf84459fe58b3a68a2e5ec1538",
+        "bytes": 8840
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollPinkDot": {
+    "bodySha256": "5240f760d7e22aa0b927a5fd5783f0e4bde01c6d4e41a9d4f95b8c3cc7f5b61b",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 425,
+        "top": 193,
+        "right": 585,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollPinkDot.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollPinkDot.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "b9f20c2eb3c4493c76733ce58e6bf944d4b9fb14e4fca43eb73b620f5c1c46de",
+        "bytes": 8826
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollBlkSh": {
+    "bodySha256": "4143706335e819237bf03abaddbbc662387d6e9beb766bded42c552a01f9a1dd",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 424,
+        "top": 193,
+        "right": 584,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollBlkSh.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollBlkSh.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "db7d447627268026893d5d4473a9d3e8b107d9cf84459fe58b3a68a2e5ec1538",
+        "bytes": 8840
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollGlSh": {
+    "bodySha256": "ea5a70cd75ff9516e63b3e092a430bfda5964c172114ede09aa1c89f750757f0",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 424,
+        "top": 193,
+        "right": 584,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollGlSh.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollGlSh.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "db7d447627268026893d5d4473a9d3e8b107d9cf84459fe58b3a68a2e5ec1538",
+        "bytes": 8840
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollSlSh": {
+    "bodySha256": "a858e254eec230e545b94007ebc197bf15e76acb3fa7322a80b16509a9ddb96a",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 425,
+        "top": 193,
+        "right": 585,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollSlSh.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollSlSh.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "b9f20c2eb3c4493c76733ce58e6bf944d4b9fb14e4fca43eb73b620f5c1c46de",
+        "bytes": 8826
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  },
+  "GBCylBlu5MtlRollSlDot": {
+    "bodySha256": "2ade1930081314df14ca67ea9b0bd5ccfec23d02c9f1b002a8accd4e1f0d98f2",
+    "part": {
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5,
+      "explodeIndex": 0,
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "bounds": {
+        "left": 420,
+        "top": 193,
+        "right": 580,
+        "bottom": 326
+      },
+      "image": {
+        "url": "/images/bottle-builder/rollers/GBCylBlu5MtlRollSlDot.webp",
+        "key": "builder/rollers/GBCylBlu5MtlRollSlDot.webp",
+        "width": 1000,
+        "height": 1100,
+        "sha256": "a85ce18ee7dbecbec0452044632e6a5de691f6de1c08405a2c29d4727d261a50",
+        "bytes": 8914
+      },
+      "image2x": null,
+      "mask": null,
+      "derivation": "psd-layer"
+    }
+  }
+}

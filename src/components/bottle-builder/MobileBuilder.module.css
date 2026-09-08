@@ -82,7 +82,7 @@
 .filterField { display: grid; gap: 8px; margin: 16px 0; }
 .dialog > .primary { width: 100%; margin-top: 16px; }
 .previewControls { position: sticky; top: 0; z-index: 1; background: var(--bone); }
-.expandedImage { height: min(65dvh,560px); overflow: hidden; isolation: isolate; }
+.expandedImage { height: min(560px,calc(85dvh - 100px)); overflow: hidden; isolation: isolate; }
 .mobile .closePreview { display: flex; align-items: center; gap: 8px; margin-left: auto; min-height: 48px; padding: 10px 12px; }
 .empty { display: grid; gap: 12px; padding: 20px 0; }
 .empty button, .empty a { text-decoration: underline; padding: 10px; }

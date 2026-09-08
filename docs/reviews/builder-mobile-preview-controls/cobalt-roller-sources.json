@@ -1,0 +1,101 @@
+[
+  {
+    "sku": "GBCylBlu5MtlRollBlkDot",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/26. GBCylBlu5MtlRollBlkDot.psd",
+    "sourceSha256": "450c3ca150957258acca6eed1fdc7df62427a52d5e39a7f3b1cedccc5fd4c309",
+    "rollerLayer": "Layer 14",
+    "bodyLayer": "Layer 15",
+    "bodySha256": "ae143cc7e3a16b335c552883591e4a6eb7cb5ec62ceaabffae4e98efdbe83ae3",
+    "scale": 1.1699029126213591,
+    "ox": 283.55825242718447,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollCuMatt",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/22. GBCylBlu5MtlRollCuMatt.psd",
+    "sourceSha256": "34f0b678335202bcc55be1b733c589ebc9bd906fa1fe3a0ef7370b3d319f2ee0",
+    "rollerLayer": "Layer 13",
+    "bodyLayer": "Layer 14",
+    "bodySha256": "90206a452b3ccea2614eec1884a3d25ed87c5f0fccab82bfd0da8b8fa0b2a12b",
+    "scale": 1.1699029126213591,
+    "ox": 290.747572815534,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollGlMatt",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/16. GBCylBlu5MtlRollGlMatt.psd",
+    "sourceSha256": "52225ce269d71f06c364664759e3f1a4dea6496ffacbd6057fb71a52ce48dab9",
+    "rollerLayer": "Layer 10",
+    "bodyLayer": "Layer 11",
+    "bodySha256": "7c48a2cd541e8c22128f3066643441a357bb4bf813c5645b04b14cbcc4534961",
+    "scale": 1.1699029126213591,
+    "ox": 290.57766990291265,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlMatt",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/14. GBCylBlu5MtlRollSlMatt.psd",
+    "sourceSha256": "8f3908f1294ebb5bb8c258341c5fe065ef86cac9334785b687d230c68bb10b4f",
+    "rollerLayer": "Layer 8",
+    "bodyLayer": "Layer 9",
+    "bodySha256": "e888373231c169c058c20d8047fabeffa46cf2fa586d630484cf407c6fe9961f",
+    "scale": 1.1699029126213591,
+    "ox": 286.0679611650486,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollPinkDot",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/12. GBCylBlu5MtlRollPinkDot.psd",
+    "sourceSha256": "bf63f0275cecfb79887e7b937c74fdae848726779491937baafab5beb3510aed",
+    "rollerLayer": "Layer 9",
+    "bodyLayer": "Layer 10",
+    "bodySha256": "5240f760d7e22aa0b927a5fd5783f0e4bde01c6d4e41a9d4f95b8c3cc7f5b61b",
+    "scale": 1.1699029126213591,
+    "ox": 287.0679611650486,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollBlkSh",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/24. GBCylBlu5MtlRollBlkSh.psd",
+    "sourceSha256": "8bfe2649e6695ccd584c7e35b32825261a1c12cc6b67177daad2f77671fd7bc8",
+    "rollerLayer": "Layer 14",
+    "bodyLayer": "Layer 15",
+    "bodySha256": "4143706335e819237bf03abaddbbc662387d6e9beb766bded42c552a01f9a1dd",
+    "scale": 1.1699029126213591,
+    "ox": 282.55825242718447,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollGlSh",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/18. GBCylBlu5MtlRollGlSh.psd",
+    "sourceSha256": "d80f9b3909f92aa76030008aa07e33585e778b6edd4cb8538159be3bca4ab795",
+    "rollerLayer": "Layer 11",
+    "bodyLayer": "Layer 12",
+    "bodySha256": "ea5a70cd75ff9516e63b3e092a430bfda5964c172114ede09aa1c89f750757f0",
+    "scale": 1.1699029126213591,
+    "ox": 281.3883495145631,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlSh",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/20. GBCylBlu5MtlRollSlSh.psd",
+    "sourceSha256": "5259ec054a4644d2fd2eecca5c0d3caea183c4939c1282bb8710266faae976e2",
+    "rollerLayer": "Layer 14",
+    "bodyLayer": "Layer 15",
+    "bodySha256": "a858e254eec230e545b94007ebc197bf15e76acb3fa7322a80b16509a9ddb96a",
+    "scale": 1.1699029126213591,
+    "ox": 290.57766990291265,
+    "oy": -46.36893203883483
+  },
+  {
+    "sku": "GBCylBlu5MtlRollSlDot",
+    "source": "5.  13-415 Bottles/3. Blue 5ml Cylinder/1. Blue 5ml Cyl (Uncapped) PSD/10. GBCylBlu5MtlRollSlDot.psd",
+    "sourceSha256": "284d2c1e6f06e8d736f07f14f7d91c455ef1a552569791f000058a7759068dbb",
+    "rollerLayer": "Layer 19",
+    "bodyLayer": "Layer 20",
+    "bodySha256": "2ade1930081314df14ca67ea9b0bd5ccfec23d02c9f1b002a8accd4e1f0d98f2",
+    "scale": 1.1699029126213591,
+    "ox": 302.61650485436894,
+    "oy": -46.36893203883483
+  }
+]

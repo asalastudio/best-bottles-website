@@ -30,7 +30,9 @@ export function registerVintagePreview(
     return {
         anchors: { ...referenceKit.anchors, axisX: (target.left + target.right) / 2 },
         layers: parts.map(part => part.slot === "body"
-            ? { part: fixedBody, transform: undefined }
-            : { part, transform: `translate(${x} ${y}) scale(${scale})` }),
+            ? { part: fixedBody, bounds: fixedBody.bounds, transform: undefined }
+            : { part, bounds: { left: part.bounds.left * scale + x, top: part.bounds.top * scale + y,
+                right: part.bounds.right * scale + x, bottom: part.bounds.bottom * scale + y },
+                transform: `translate(${x} ${y}) scale(${scale})` }),
     };
 }

@@ -9,6 +9,7 @@ import bodyMedia from "./circle-bodies.generated.json";
 import assemblyMedia from "./circle-assemblies.generated.json";
 import fitmentMedia from "./fitments.generated.json";
 import rollerMedia from "./rollers.generated.json";
+import cobaltRollerMedia from "./rollers-cobalt.generated.json";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 
 type MatrixRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
@@ -282,7 +283,7 @@ export function selectBuilderBody(bodies: BuilderBody[], state: BuilderSelection
 
 export function previewParts(config: BuilderConfiguration, stage: "body" | "fitment" | "complete"): BuilderPart[] {
     const parts = [...((stage === "body" ? config.previewKit ?? config.kit : config.kit)?.parts ?? [])];
-    const restored = (rollerMedia as Record<string, { bodySha256: string; part: BuilderPart }>)[config.id];
+    const restored = ({ ...rollerMedia, ...cobaltRollerMedia } as Record<string, { bodySha256: string; part: BuilderPart }>)[config.id];
     // Exact source registration only. Never put a roller on a changed body asset,
     // a different fitment, or the bare-bottle stage.
     if (stage !== "body" && config.fitment === "Metal Roller" && restored
@@ -291,7 +292,8 @@ export function previewParts(config: BuilderConfiguration, stage: "body" | "fitm
         parts.push(restored.part);
     }
     return parts.filter(part => stage === "complete" || part.slot === "body"
-        || (stage === "fitment" && !isClosurePart(part))).sort((a, b) => a.zOrder - b.zOrder);
+        || (stage === "fitment" && (!isClosurePart(part) || /^(Screw|Tear-off) Cap$/.test(config.fitment))))
+        .sort((a, b) => a.zOrder - b.zOrder);
 }
 
 export function builderCartItem(config: BuilderConfiguration, quantity: number): CartItem {

@@ -1,10 +1,13 @@
 import { describe, expect, it } from "vitest";
 import { getFinishFromWebsiteSku } from "@/lib/paper-doll/tokens.generated";
-import restoredRollers from "@/lib/bottle-builder/rollers.generated.json";
+import tallRollers from "@/lib/bottle-builder/rollers.generated.json";
+import cobaltRollers from "@/lib/bottle-builder/rollers-cobalt.generated.json";
 import {
     builderCartItem, builderOrder, catalogConfigurationFromRow, compatibleFinishComponent, configurationFromRow, deriveBuilder, emptySelection,
     groupBuilderBodies, resolveBuilderConfigurations, previewParts, reconcileSelection, selectBuilderBody, type BuilderConfiguration, type BuilderKit, type CatalogRow,
 } from "@/lib/bottle-builder/model";
+
+const restoredRollers = { ...tallRollers, ...cobaltRollers };
 
 function fixture(overrides: Partial<CatalogRow> = {}, slots = ["body", "roller", "cap"]): { row: CatalogRow; kit: BuilderKit } {
     const row = {
@@ -44,8 +47,8 @@ function configuration(overrides: Partial<CatalogRow> = {}): BuilderConfiguratio
 }
 
 describe("builder catalog boundary", () => {
-    it("restores every reviewed tall metal roller only on its exact registered body", () => {
-        expect(Object.keys(restoredRollers)).toHaveLength(18);
+    it("restores every reviewed metal roller only on its exact registered body", () => {
+        expect(Object.keys(restoredRollers)).toHaveLength(27);
         for (const [sku, restored] of Object.entries(restoredRollers)) {
             const base = configuration();
             const kit = structuredClone(base.kit!);
@@ -60,6 +63,13 @@ describe("builder catalog boundary", () => {
             kit.parts[0].image.sha256 = "changed-body";
             expect(previewParts(config, "fitment").some(p => p.slot === "roller")).toBe(false);
         }
+    });
+    it("shows a selected screw cap at fitment, without adding a roller", () => {
+        const { row, kit } = fixture({ applicator: "Cap/Closure" }, ["body", "cap"]);
+        const config = configurationFromRow(row, kit)!;
+        expect(previewParts(config, "body").map(p => p.slot)).toEqual(["body"]);
+        expect(previewParts(config, "fitment").map(p => p.slot)).toEqual(["body", "cap"]);
+        expect(previewParts(config, "complete").some(p => p.slot === "roller")).toBe(false);
     });
     it("never admits an assembled photo without a verified bare body", () => {
         const { row } = fixture({ family: "Bell", capacityMl: 10, imageUrl: "https://example.com/assembly.jpg" });

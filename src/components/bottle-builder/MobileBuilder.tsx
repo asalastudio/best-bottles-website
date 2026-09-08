@@ -56,7 +56,7 @@ export default function MobileBuilder(p: Props) {
         : !p.hydrated ? "Loading your cart…" : "This combination is unavailable. Edit your choices to continue.";
     const finishLabel = /Roller/.test(fitment ?? "") ? "Roller cap" : /Pump/.test(fitment ?? "") ? "Pump finish" : /Sprayer/.test(fitment ?? "") ? "Sprayer finish" : "Cap finish";
     const preview = configuration ?? p.current.fitted[0] ?? p.current.colored[0] ?? body?.configurations[0];
-    const previewStage = stage < 2 ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
+    const previewStage = stage < 2 || !fitment ? "body" : stage === 2 ? "fitment" : configuration ? "complete" : "fitment";
     const parts = preview ? previewParts(preview, previewStage).filter(part => !(p.hasIncludedCover && !p.showCover && part.slot === "overcap")) : [];
     const bodyReference = p.current.colored.find(c => c.fitment === "Vintage Bulb Sprayer" && c.kit?.completeness === "full") ?? p.current.colored[0] ?? body?.configurations[0];
     const unavailable = body?.unavailableFinishes?.filter(c => c.color === color && c.fitment === fitment) ?? [];
@@ -114,7 +114,7 @@ export default function MobileBuilder(p: Props) {
     }
     function closeFilters() { filters.current?.close(); setFilterOpen(false); filterTrigger.current?.focus(); }
     const clearFilters = () => { p.onFilter("size", ""); p.onFilter("neck", ""); p.onFilter("application", ""); };
-    const previewImage = preview && <BuilderImage config={preview} parts={parts} stage={previewStage} scale={/Vintage|Tassel/.test(fitment ?? "") ? 1 : 1.18} showCover={p.showCover} bodyReference={bodyReference}
+    const previewImage = (expanded = false) => preview && <BuilderImage config={preview} parts={parts} stage={previewStage} expanded={expanded} scale={/Vintage|Tassel/.test(fitment ?? "") ? 1 : 1.18} showCover={p.showCover} bodyReference={bodyReference}
         label={`${body?.capacityMl} ml ${stage < 2 ? preview.color : color} ${body?.profileLabel}${stage >= 2 && fitment ? ` with ${fitment}` : " bottle"}${stage >= 3 && closure ? `, ${closure}` : ""}`} />;
 
     return <div ref={root} className={styles.mobile} data-mobile-builder data-stage={stage} data-keyboard={keyboardOpen} data-large-text={largeText} aria-busy={busy}
@@ -134,7 +134,7 @@ export default function MobileBuilder(p: Props) {
         </div>}
         {stage === 4 && <h1 ref={heading} tabIndex={-1} className={styles.title}>{titles[stage]}</h1>}
         {stage > 0 && preview && <section className={styles.preview} aria-label="Live bottle preview">
-            <div className={styles.previewImage}>{previewImage}</div>
+            <div className={styles.previewImage}>{previewImage()}</div>
             <button ref={expandTrigger} className={styles.expand} aria-label="Expand bottle preview" onClick={() => expanded.current?.showModal()}><ArrowsOutSimple size={20} /></button>
             {stage >= 3 && p.hasIncludedCover && <button className={styles.coverToggle} aria-pressed={p.showCover} onClick={p.onCover}>{p.showCover ? "Hide overcap" : "Show included overcap"}</button>}
         </section>}
@@ -206,7 +206,7 @@ export default function MobileBuilder(p: Props) {
             <form method="dialog" className={styles.previewControls}>
                 <button type="submit" className={styles.closePreview} aria-label="Close preview"><X size={22} /> Close</button>
             </form>
-            <div className={styles.expandedImage}>{previewImage}</div>
+            <div className={styles.expandedImage}>{previewImage(true)}</div>
         </dialog>
     </div>;
 }
