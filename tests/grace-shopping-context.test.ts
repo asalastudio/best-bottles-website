@@ -102,7 +102,7 @@ describe("Grace shopping context", () => {
         const provider = readFileSync("src/components/grace/GraceProvider.tsx", "utf8");
 
         expect(productClient).toContain("pageUrl: change.pageUrl");
-        expect(productClient).toContain("[group?.color, selectedPdpPageUrl, selectedVariant]");
+        expect(productClient).toContain("[group?.color, selectedPdpPageUrl, selectedVariant, resolvePresentedVariantOption]");
         expect(productClient).toContain("lastGracePdpContextSignature.current = null");
         expect(provider).toContain("const pageUrlRef = useRef(pageUrl);\n    pageUrlRef.current = pageUrl;");
         expect(provider).toContain("pdpContextUrlsAlign(pageUrl, current.pageUrl)");
