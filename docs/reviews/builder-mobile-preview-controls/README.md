@@ -9,7 +9,9 @@
 
 ## Button investigation
 
-The reported intermittent Continue stall has NOT been reproduced or declared fixed. Traced enabled/pending state, event hit targets, click handling, stage updates and focus/scroll behavior. No speculative pointer-up or duplicate click handler was added.
+Follow-up investigation reproduced viewport-driven action-bar failures: pinch zoom was treated as an open keyboard with no editor focused, keyboard state remained stale after blur, and changing the footer position during a press retargeted the click to a surrounding DIV instead of the button. The corrected detection requires a focused quantity editor, normalizes viewport height for zoom, observes focus changes, and defers keyboard layout changes while a button press is in progress. Normal click navigation/submission remains unchanged; pointer events only hold/release layout.
+
+`verify-builder-viewport-controls.mjs` verifies zoom in Chromium and simulates keyboard geometry changing during a raw touchscreen press in WebKit and Chromium. The intercepted click reaches the action exactly once, without submitting a cart. This is reproducible browser evidence, not physical iOS keyboard verification. The exact originally reported iPhone stall has not been independently confirmed.
 
 `node scripts/verify-builder-mobile-controls.mjs` runs 48 mobile paths across WebKit and Chrome, 320/390 px portrait and 844 px landscape, Clear/Cobalt, metal/plastic rollers, screw cap and sprayer. It uses raw touch taps on text, SVG arrows and lower-right edges after scrolling, verifies selected preview layers, opens/closes previews, continues through Finish/Review and edits fitment. Captures and pointer/stage traces go to BB_PROOF_DIR. It does not submit a cart or mutate products.
 
@@ -21,6 +23,6 @@ Use BB_PLAYWRIGHT_MODULE for an installed Playwright module, BB_CHROME_PATH for 
 
 ## Verification boundary
 
-Full Vitest suite: 1,551 passed, seven skipped. Targeted lint and standalone TypeScript passed. Production Webpack build passed. All 48 production-browser paths and 10 additional modal-dismissal checks passed with zero browser runtime errors. Local production server: http://localhost:3001/matrix?family=Cylinder. Saved screenshots show the exact Cobalt metal roller, screw cap and uncropped sprayer.
+Full Vitest suite: 1,554 passed, seven skipped. Targeted lint and standalone TypeScript passed. Production Webpack build passed. All 48 production-browser paths passed again after the viewport repair with zero browser runtime errors. The new zoom/keyboard-dismissal regression passed in Chromium/WebKit. Ten additional modal-dismissal checks passed on the earlier preview repair. Local production server: http://localhost:3001/matrix?family=Cylinder. Saved screenshots show the exact Cobalt metal roller, screw cap and uncropped sprayer.
 
-Physical iPhone Safari toolbar/touch behavior remains unverified. Browser-engine emulation does not reproduce the iOS browser chrome. No production deployment is included. The intermittent stall remains open pending a reproducible case.
+Physical iPhone Safari toolbar/touch behavior remains unverified. Browser-engine emulation does not reproduce the iOS browser chrome. No production deployment is included. The reproduced viewport and tap-retargeting failures are repaired. Confirming the original reported stall on the affected iPhone remains a release-verification limitation.

@@ -73,8 +73,43 @@ export default function MobileBuilder(p: Props) {
     }, [showBar]);
     useEffect(() => {
         const viewport = window.visualViewport;
-        const update = () => setKeyboardOpen(Boolean(viewport && viewport.height < window.innerHeight * .75));
-        viewport?.addEventListener("resize", update); return () => viewport?.removeEventListener("resize", update);
+        let pressingButton = false;
+        const update = (active: EventTarget | null = document.activeElement) => {
+            // Never relocate the action bar between pointerdown and click:
+            // keyboard dismissal can otherwise retarget the tap to the page.
+            if (pressingButton) return;
+            // Zoom and Safari chrome also resize the visual viewport. Only a
+            // focused editor can open the keyboard; compare heights at 1x scale.
+            const editing = active instanceof HTMLElement && root.current?.contains(active)
+                && active.matches('input[type="number"], textarea, [contenteditable="true"]');
+            setKeyboardOpen(Boolean(editing && viewport && viewport.height * viewport.scale < window.innerHeight * .75));
+        };
+        const press = (event: PointerEvent) => {
+            pressingButton = event.target instanceof Element && Boolean(root.current?.contains(event.target))
+                && Boolean(event.target.closest("button"));
+        };
+        const release = () => { pressingButton = false; update(); };
+        const resize = () => update();
+        const focusIn = (event: FocusEvent) => update(event.target);
+        // relatedTarget avoids reading the old focused input during focusout.
+        const focusOut = (event: FocusEvent) => update(event.relatedTarget);
+        document.addEventListener("pointerdown", press, true);
+        document.addEventListener("click", release, true);
+        document.addEventListener("pointercancel", release, true);
+        window.addEventListener("blur", release);
+        viewport?.addEventListener("resize", resize);
+        document.addEventListener("focusin", focusIn);
+        document.addEventListener("focusout", focusOut);
+        update();
+        return () => {
+            document.removeEventListener("pointerdown", press, true);
+            document.removeEventListener("click", release, true);
+            document.removeEventListener("pointercancel", release, true);
+            window.removeEventListener("blur", release);
+            viewport?.removeEventListener("resize", resize);
+            document.removeEventListener("focusin", focusIn);
+            document.removeEventListener("focusout", focusOut);
+        };
     }, []);
     useEffect(() => {
         if (!heading.current) return;
