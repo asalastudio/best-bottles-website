@@ -1,0 +1,86 @@
+{
+  "errors": [],
+  "widths": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "count": 10
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "count": 10
+    },
+    {
+      "width": 390,
+      "scroll": 390,
+      "count": 10
+    },
+    {
+      "width": 430,
+      "scroll": 430,
+      "count": 10
+    }
+  ],
+  "firstRow": [
+    {
+      "bottom": 497.375
+    },
+    {
+      "bottom": 497.375
+    }
+  ],
+  "cartRequest": {
+    "family": "Cylinder",
+    "sku": "GBCylFrst9MtlRollMattGl",
+    "selection": {
+      "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+      "color": "Frosted",
+      "fitment": "Metal Roller",
+      "closure": "Matte Gold Cap",
+      "quantity": 1
+    }
+  },
+  "finishesAfterGlassChange": [
+    {
+      "label": "Matte Silver Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Black with Dots Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Matte Copper Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Matte Gold Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Pink with Dots Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Shiny Black Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Shiny Gold Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Shiny Silver Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall Silver with Dots Cap",
+      "checked": false
+    },
+    {
+      "label": "Tall White Cap",
+      "checked": false
+    }
+  ]
+}

@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useId, useMemo, useRef, useState, useTransition, type ReactNode } from "react";
+import { useEffect, useId, useMemo, useRef, useState, useTransition, useSyncExternalStore, type ReactNode } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
+import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
 import BuilderFinishImage from "@/components/bottle-builder/BuilderFinishImage";
@@ -18,6 +19,9 @@ import hasIncludedCovers from "@/lib/bottle-builder/exposed-sprayers.generated.j
 import styles from "@/components/bottle-builder/Builder.module.css";
 
 const money = (value: number | null) => value == null ? "—" : new Intl.NumberFormat("en-US", { style: "currency", currency: "USD" }).format(value);
+const subscribeMobile = (callback: () => void) => { const query = window.matchMedia("(max-width: 1099px)"); query.addEventListener("change", callback); return () => query.removeEventListener("change", callback); };
+const mobileSnapshot = () => window.matchMedia("(max-width: 1099px)").matches;
+const serverMobileSnapshot = () => false;
 const steps = ["Bottle", "Fitment", "Appearance", "Review"];
 const fitmentDescriptions: Record<string, string> = {
     "Screw Cap": "Close and reopen your bottle.",
@@ -55,6 +59,8 @@ export default function MatrixClient({ families, openFamily, bodies }: {
     const { items, addItems, isCartHydrated } = useCart();
     const [selection, setSelection] = useState<BuilderSelection>(emptySelection);
     const [step, setStep] = useState(0);
+    const [mobileStage, setMobileStage] = useState(0);
+    const isMobile = useSyncExternalStore(subscribeMobile, mobileSnapshot, serverMobileSnapshot);
     const [previewExpanded, setPreviewExpanded] = useState(false);
     const reviewHeading = useRef<HTMLHeadingElement>(null);
     const previewId = useId();
@@ -116,7 +122,7 @@ export default function MatrixClient({ families, openFamily, bodies }: {
     ];
     function goTo(next: number) {
         if (adding) return;
-        setStep(next); setPreviewExpanded(false); setLastAdded(null); setError("");
+        setStep(next); setMobileStage(next === 0 ? 0 : next + 1); setPreviewExpanded(false); setLastAdded(null); setError("");
         requestAnimationFrame(() => {
             const heading = next === 3 && window.matchMedia("(max-width: 639px)").matches ? reviewHeading.current : optionHeading.current;
             heading?.focus({ preventScroll: true });
@@ -128,7 +134,7 @@ export default function MatrixClient({ families, openFamily, bodies }: {
         setLastAdded(null); setError("");
     }
     function reset() {
-        setSelection(emptySelection()); setShowCover(false); setLastAdded(null); setError(""); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setPreviewExpanded(false); goTo(0);
+        setMobileStage(0); setSelection(emptySelection()); setShowCover(false); setLastAdded(null); setError(""); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setPreviewExpanded(false); goTo(0);
     }
     function chooseBottle(selected: BuilderBody) {
         const next = selectBuilderBody(bodies, selection, selected.id);
@@ -153,7 +159,7 @@ export default function MatrixClient({ families, openFamily, bodies }: {
             if (freshOrder.unitPrice !== order.unitPrice) throw new Error("The price has changed. Refresh the builder before adding this bottle.");
             addItems([{ ...fresh.product, quantity: selection.quantity, unitPrice: freshOrder.unitPrice }]);
             // Recycle the builder only after the exact configuration is in the cart.
-            setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
+            setMobileStage(0); setSelection(emptySelection()); setShowCover(false); setSize(""); setNeck(""); setApplication(""); setMoreFilters(false); setStep(0);
             setLastAdded({ name: fresh.product.itemName, quantity: selection.quantity });
             requestAnimationFrame(() => {
                 confirmation.current?.focus({ preventScroll: true });
@@ -169,6 +175,13 @@ export default function MatrixClient({ families, openFamily, bodies }: {
         </button> : <button className={styles.primary} disabled={!order.canAdd || adding || !isCartHydrated} onClick={addToCart}>
             {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
         </button>;
+
+    if (isMobile) return <MobileBuilder families={families} family={openFamily} bodies={bodies}
+        selection={selection} current={current} order={order} stage={mobileStage} onStage={next => { setMobileStage(next); setStep(next < 2 ? 0 : next - 1); setError(""); }}
+        onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}`)); }} onAdd={addToCart}
+        size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
+        pending={pending} adding={adding} hydrated={isCartHydrated} error={error} lastAdded={lastAdded} cartProgress={cartProgress}
+        hasIncludedCover={hasIncludedCover} showCover={showCover} onCover={() => setShowCover(value => !value)} chooserScale={chooserScale} />;
 
     return <div className={styles.builder} data-bottle-builder data-current-step={step} data-has-bottle={Boolean(body)} aria-busy={pending || adding}>
         <header className={styles.header}>

@@ -638,3 +638,23 @@ body {
   main[data-builder-page] { padding-bottom: env(safe-area-inset-bottom, 0px); }
   body:has(main[data-builder-page]) { --mobile-tab-bar-clearance: env(safe-area-inset-bottom, 0px); }
 }
+
+.builder-mobile-brand { display: none; }
+@media (max-width: 1099px) {
+  [data-builder-header] { position: relative !important; }
+  [data-builder-header] > div:not(.builder-mobile-brand) { display: none; }
+  [data-builder-header] .builder-mobile-brand { display: grid; grid-template-columns: 44px minmax(0,1fr) 44px 44px; align-items: center; gap: 0; padding: 6px 12px; min-height: 56px; }
+  .builder-mobile-brand > :is(a,button) { display: flex; align-items: center; justify-content: center; min-height: 44px; min-width: 44px; position: relative; }
+  .builder-mobile-brand > a:nth-child(2) { font-size: 1.375rem; }
+  .builder-mobile-brand button span { position: absolute; right: 0; top: 0; padding: 0 3px; min-width: 16px; background: #80602e; color: white; border-radius: 10px; font-size: 10px; }
+  .builder-mobile-brand :focus-visible { outline: 3px solid #80602e; outline-offset: 2px; }
+  main[data-builder-page] { padding-top: 0; }
+  main[data-builder-page] [data-bottle-builder] { visibility: hidden; }
+  body:has([data-mobile-builder]) { scroll-padding-bottom: 150px; }
+}
+
+@media (max-width: 1099px) {
+  /* The shared footer must also reflow when builder customers enlarge text. */
+  body:has([data-mobile-builder]) footer .grid > * { min-width: 0; overflow-wrap: anywhere; }
+  .builder-mobile-brand > a:nth-child(2) { text-align: center; line-height: 1.15; }
+}

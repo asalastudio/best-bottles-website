@@ -1,0 +1,26 @@
+{
+  "axe": [
+    {
+      "stage": "bottle",
+      "violations": []
+    },
+    {
+      "stage": "glass",
+      "violations": []
+    },
+    {
+      "stage": "fitment",
+      "violations": []
+    },
+    {
+      "stage": "finish",
+      "violations": []
+    },
+    {
+      "stage": "review",
+      "violations": []
+    }
+  ],
+  "controls": [],
+  "cart": "Bottle\nGlass\nFitment\nFinish\nYour bottle has been added.\n\n1 × 5 ml Clear Cylinder Roll-On Bottle - Matte Gold Cap\n\nYour cart is $0.61. Add $49.39 more to check out.\n\nBuild another bottle\nView cart\nChoose your bottle\nBottle family\nCircle\nCylinder\nFilters\n\n6 bottle options\n\nBottle\n5 ml\nNeck: 13-415\n9 ml\nNeck: 13-415\n9 ml\nNeck: 17-415\n25 ml\nNeck: 18-415\n50 ml\nNeck: 18-415\n100 ml\nNeck: 18-415\n\nSelect a bottle to choose its glass."
+}

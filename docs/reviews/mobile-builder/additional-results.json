@@ -1,0 +1,52 @@
+{
+  "vintage": [
+    {
+      "name": "Black",
+      "disabled": false
+    },
+    {
+      "name": "Gold",
+      "disabled": false
+    },
+    {
+      "name": "Ivory",
+      "disabled": false
+    },
+    {
+      "name": "Matte Silver",
+      "disabled": false
+    },
+    {
+      "name": "Pink",
+      "disabled": false
+    },
+    {
+      "name": "White",
+      "disabled": false
+    },
+    {
+      "name": "Lavender — Out of stock",
+      "disabled": true
+    },
+    {
+      "name": "Ivory + Gold — Out of stock",
+      "disabled": true
+    },
+    {
+      "name": "Red — Out of stock",
+      "disabled": true
+    }
+  ],
+  "circle": [
+    "15 ml, 13-415 neck",
+    "30 ml, 15-415 neck",
+    "50 ml, 18-415 neck",
+    "100 ml, 18-415 neck"
+  ],
+  "lastOptionBounds": {
+    "last": 458.359375,
+    "bar": 748.40625
+  },
+  "filters": "pass",
+  "familyRefresh": "pass"
+}
