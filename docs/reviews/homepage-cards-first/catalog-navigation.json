@@ -1,0 +1,237 @@
+{
+  "families": [
+    {
+      "id": "Cylinder",
+      "label": "Cylinder",
+      "href": "/catalog/cylinder",
+      "image": "/images/catalog/bone-review/LBCylFrst9LtnMtSl.cc4cec10be9f.png"
+    },
+    {
+      "id": "Elegant",
+      "label": "Elegant",
+      "href": "/catalog/elegant",
+      "image": "/images/catalog/bone-review/GBElgFrst15MtlRollGlSh.732dca1b149d.png"
+    },
+    {
+      "id": "Circle",
+      "label": "Circle",
+      "href": "/catalog/circle",
+      "image": "/images/catalog/bone-review/GBCrcl15Gl.5df997af94d3.png"
+    },
+    {
+      "id": "Sleek",
+      "label": "Sleek",
+      "href": "/catalog/sleek",
+      "image": "/images/catalog/bone-review/GBSleek5Gl.fa8b27135f4c.png"
+    },
+    {
+      "id": "Diva",
+      "label": "Diva",
+      "href": "/catalog/diva",
+      "image": "/images/catalog/bone-review/GBDiva30AnSpGl.60a66d5847ba.png"
+    },
+    {
+      "id": "Empire",
+      "label": "Empire",
+      "href": "/catalog/empire",
+      "image": "/images/catalog/bone-review/GBEmp50AnSpGl.e441205f0179.png"
+    },
+    {
+      "id": "Boston Round",
+      "label": "Boston Round",
+      "href": "/catalog/boston-round",
+      "image": "/images/catalog/bone-review/GBBstn15BlkCapSht.8fd000761aa3.png"
+    },
+    {
+      "id": "Slim",
+      "label": "Slim",
+      "href": "/catalog/slim",
+      "image": "/images/catalog/bone-review/GBSlm30AnSpGl.72aafacc8e3a.png"
+    },
+    {
+      "id": "Diamond",
+      "label": "Diamond",
+      "href": "/catalog/diamond",
+      "image": "/images/catalog/bone-review/GBDmnd2ozAnSpMtSl.c71454361f64.png"
+    },
+    {
+      "id": "Royal",
+      "label": "Royal",
+      "href": "/catalog/royal",
+      "image": "/images/catalog/bone-review/GBRoyal13Gl.8f8caa2cbe83.png"
+    },
+    {
+      "id": "Round",
+      "label": "Round",
+      "href": "/catalog/round",
+      "image": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpGl.premium-aligned-v2.png"
+    },
+    {
+      "id": "Square",
+      "label": "Square",
+      "href": "/catalog/square",
+      "image": "/images/catalog/bone-review/GBSqr15Gl.510e01cc0eb0.png"
+    },
+    {
+      "id": "Rectangle",
+      "label": "Rectangle",
+      "href": "/catalog/rectangle",
+      "image": "/images/catalog/bone-review/GBSQSTClear.146073d66cc0.png"
+    },
+    {
+      "id": "Flair",
+      "label": "Flair",
+      "href": "/catalog/flair",
+      "image": "/images/catalog/bone-review/GBFlair15Gl.fcc7b3746445.png"
+    },
+    {
+      "id": "Tulip",
+      "label": "Tulip",
+      "href": "/catalog/tulip",
+      "image": "/images/catalog/bone-review/GBTulipAmb5Gl.0b796e17ec1e.png"
+    },
+    {
+      "id": "Bell",
+      "label": "Bell",
+      "href": "/catalog/bell",
+      "image": "/images/catalog/bone-review/GBBell10BlkShSht.9ed2c6ec12a5.png"
+    },
+    {
+      "id": "Grace",
+      "label": "Grace",
+      "href": "/catalog/grace",
+      "image": "/images/catalog/bone-review/GBGrce55AnSpMtSl.f8519eff0ac9.png"
+    },
+    {
+      "id": "Vial",
+      "label": "Vial",
+      "href": "/catalog/vial",
+      "image": "/images/catalog/bone-review/GB1mlAmbVialWht.4f24001e1354.png"
+    },
+    {
+      "id": "Apothecary",
+      "label": "Apothecary",
+      "href": "/catalog/apothecary",
+      "image": "/images/catalog/bone-review/GB15ApthBlue.39d30e5fc224.png"
+    },
+    {
+      "id": "Decorative",
+      "label": "Decorative",
+      "href": "/catalog/decorative",
+      "image": "/images/catalog/bone-review/GB3TPlGl.c2523f1e9953.png"
+    },
+    {
+      "id": "Teardrop",
+      "label": "Teardrop",
+      "href": "/catalog/teardrop",
+      "image": "/images/catalog/bone-review/GBTrdpBlue.a3f1643212e2.png"
+    },
+    {
+      "id": "Pillar",
+      "label": "Pillar",
+      "href": "/catalog/pillar",
+      "image": "/images/catalog/bone-review/GBPillar9MtlRollBlkdot.42577015470a.png"
+    },
+    {
+      "id": "Atomizer",
+      "label": "Atomizer",
+      "href": "/catalog/atomizer",
+      "image": "/images/catalog/bone-review/GBAtom5Blk.b1e8cffeadfc.png"
+    },
+    {
+      "id": "Aluminum Bottle",
+      "label": "Aluminum Bottle",
+      "href": "/catalog/aluminum-bottle",
+      "image": "/images/catalog/bone-review/Alu250mlSprayBlack.aaf5dbbee119.png"
+    },
+    {
+      "id": "Cream Jar",
+      "label": "Cream Jar",
+      "href": "/catalog/cream-jar",
+      "image": "/images/catalog/bone-review/CJAmb5mlBlkCap.94819fd7f64b.png"
+    },
+    {
+      "id": "Lotion Bottle",
+      "label": "Lotion Bottle",
+      "href": "/catalog/lotion-bottle",
+      "image": "/images/catalog/bone-review/LB1ozGl.ca3bf5b43522.png"
+    },
+    {
+      "id": "Plastic Bottle",
+      "label": "Plastic Bottle",
+      "href": "/catalog/plastic-bottle",
+      "image": null
+    }
+  ],
+  "glassFamilyCount": 23,
+  "applicators": [
+    {
+      "id": "rollon",
+      "label": "Roll-On",
+      "href": "/catalog/application/roll-on",
+      "image": "/assets/applicator-sketches/roll-on-pencil.webp"
+    },
+    {
+      "id": "spray",
+      "label": "Fine Mist Sprayer",
+      "href": "/catalog/application/spray",
+      "image": "/assets/applicator-sketches/fine-mist-pencil.webp"
+    },
+    {
+      "id": "lotionpump",
+      "label": "Lotion Pump",
+      "href": "/catalog/application/lotion-pump",
+      "image": "/assets/applicator-sketches/lotion-pump-treatment-pencil.webp"
+    },
+    {
+      "id": "dropper",
+      "label": "Dropper",
+      "href": "/catalog/application/dropper",
+      "image": "/assets/applicator-sketches/dropper-pencil.webp"
+    },
+    {
+      "id": "reducer",
+      "label": "Reducer",
+      "href": "/catalog/application/reducer",
+      "image": "/assets/applicator-sketches/reducer-pencil.webp"
+    }
+  ],
+  "collections": [
+    {
+      "id": "samples",
+      "label": "Samples & Testers",
+      "href": "/catalog?families=Vial&capacities=1+ml%2C1.5+ml%2C2+ml%2C4+ml&sort=best-match",
+      "image": "/images/catalog/bone-review/GB1mlAmbVialWht.4f24001e1354.png"
+    },
+    {
+      "id": "cream-jars",
+      "label": "Cream Jars",
+      "href": "/catalog?category=Cream+Jar&sort=best-match",
+      "image": "/images/catalog/bone-review/CJAmb5mlBlkCap.94819fd7f64b.png"
+    },
+    {
+      "id": "gift-bottles",
+      "label": "Gift Bottles",
+      "href": "/catalog?families=Decorative&sort=best-match",
+      "image": "/images/catalog/bone-review/GB3TPlGl.c2523f1e9953.png"
+    },
+    {
+      "id": "bags",
+      "label": "Bags & Pouches",
+      "href": "/catalog?families=Gift+Bag&sort=best-match",
+      "image": "/images/catalog/bone-review/VBagRed4x5.45966b3f76b9.png"
+    },
+    {
+      "id": "Gift Boxes",
+      "label": "Gift Boxes",
+      "href": "/catalog?families=Gift+Box&sort=best-match",
+      "image": "/images/catalog/bone-review/BoxBWndwEarthBrush.2f69207043b9.png"
+    },
+    {
+      "id": "Filling Tools",
+      "label": "Filling Tools",
+      "href": "/catalog?families=Tool&sort=best-match",
+      "image": "/images/catalog/bone-review/Plastic.88dc2d2aadc7.png"
+    }
+  ]
+}

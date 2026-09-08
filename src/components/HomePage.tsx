@@ -13,6 +13,9 @@ import { useQuery } from "convex/react";
 import { api } from "../../convex/_generated/api";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HomeCatalogBrowser from "@/components/home/HomeCatalogBrowser";
+import homeStyles from "@/components/home/HomeCatalogBrowser.module.css";
+import type { HomeBrowseData } from "@/lib/homepageBrowse";
 import { useGrace } from "@/components/useGrace";
 import { urlFor } from "@/sanity/lib/image";
 import type { HomepageData } from "@/sanity/lib/queries";
@@ -23,9 +26,7 @@ import {
     HOME_ACCESSORY_STORY,
     HOME_APPLICATION_LINKS,
     HOME_EDITORIAL_STORIES,
-    HOME_FAMILY_MOSAIC,
     HOME_SAMPLE_FEATURE,
-    homepageFamilyHref,
 } from "@/lib/homepageMerchandising";
 
 const FadeUp = ({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) => (
@@ -260,8 +261,9 @@ function MobilePostHeroSearch() {
     }, [router, searchValue]);
 
     return (
-        <section id="mobile-home-search" className="border-b border-champagne/55 bg-warm-white px-5 py-5 xl:hidden">
-            <form onSubmit={handleSubmit} className="mx-auto flex max-w-xl items-center border border-champagne bg-white focus-within:border-muted-gold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-muted-gold/25">
+        <section id="mobile-home-search" className={homeStyles.search}>
+            <p>Wholesale bottles &amp; packaging.</p>
+            <form role="search" onSubmit={handleSubmit} className="mx-auto flex max-w-xl items-center border border-champagne bg-white focus-within:border-muted-gold focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-muted-gold/25">
                 <MagnifyingGlass className="ml-4 shrink-0 text-slate" size={17} />
                 <input
                     type="search"
@@ -270,7 +272,7 @@ function MobilePostHeroSearch() {
                     enterKeyHint="search"
                     value={searchValue}
                     onChange={(event) => setSearchValue(event.target.value)}
-                    placeholder="Search bottles, closures, families…"
+                    placeholder="Search by bottle, size or SKU"
                     aria-label="Search products"
                     className="min-w-0 flex-1 bg-transparent px-3 py-3.5 text-sm text-obsidian placeholder:text-slate/55 focus:outline-none"
                 />
@@ -278,69 +280,6 @@ function MobilePostHeroSearch() {
                     <ArrowRight size={16} />
                 </button>
             </form>
-        </section>
-    );
-}
-
-/* ─── Mobile Category Grid: replaces Hero on mobile ─── */
-
-const DEFAULT_MOBILE_CATEGORIES = [
-    { label: "Roll-On Bottles", href: applicationFinderHref("rollon"), img: "/assets/vintage-spray.png" },
-    { label: "Spray Bottles", href: applicationFinderHref("spray"), img: "/assets/Cylinder-BB.png" },
-    { label: "Dropper Bottles", href: applicationFinderHref("dropper"), img: "/assets/collection_amber.png" },
-    { label: "Lotion Pumps", href: applicationFinderHref("lotionpump"), img: "/assets/collection_amber.png" },
-    { label: "Reducer Bottles", href: applicationFinderHref("reducer"), img: "/references/9ml/clear.jpg" },
-    { label: "Shop All 2,300+", href: "/catalog", img: "/assets/Hero-BB.png" },
-];
-
-function MobileCategoryGrid({ data }: { data?: HomepageData | null }) {
-    // Only show category grid when Sanity explicitly sets "categories"; otherwise hero shows on mobile
-    if (data?.mobileHeroMode !== "categories") return null;
-
-    const tagline = data?.mobileTagline ?? "Premium glass packaging for beauty & wellness brands.";
-    const sectionLabel = data?.mobileSectionLabel ?? "Shop by Application";
-
-    const cards = data?.mobileCategoryCards?.length
-        ? data.mobileCategoryCards.map((c) => ({
-            label: c.label,
-            href: c.href,
-            img: c.image ? urlFor(c.image) : "",
-        }))
-        : DEFAULT_MOBILE_CATEGORIES;
-
-    return (
-        <section className="lg:hidden bg-bone">
-            {/* Tagline */}
-            <div className="px-5 pt-4 pb-3 text-center">
-                <p className="font-serif text-sm text-slate leading-relaxed">{tagline}</p>
-            </div>
-
-            {/* Section label */}
-            <div className="px-5 pb-3">
-                <p className="text-[10px] uppercase tracking-[0.2em] text-muted-gold font-bold">{sectionLabel}</p>
-            </div>
-
-            {/* 2-column grid */}
-            <div className="grid grid-cols-2 gap-3 px-4 pb-5">
-                {cards.map((card, i) => {
-                    const imgSrc = card.img || DEFAULT_MOBILE_CATEGORIES[i % DEFAULT_MOBILE_CATEGORIES.length]?.img || "/assets/Hero-BB.png";
-                    return (
-                        <Link key={card.label + i} href={card.href} className="group relative aspect-[4/5] overflow-hidden rounded-sm bg-travertine">
-                            <Image
-                                src={imgSrc}
-                                alt={card.label}
-                                fill
-                                className="object-cover object-center group-active:scale-105 transition-transform duration-300"
-                                unoptimized={imgSrc.startsWith("http")}
-                            />
-                            <div className="absolute inset-0 bg-gradient-to-t from-obsidian/60 via-obsidian/15 to-transparent" />
-                            <div className="absolute bottom-0 left-0 right-0 p-3">
-                                <h3 className="font-serif text-[15px] text-white leading-tight">{card.label}</h3>
-                            </div>
-                        </Link>
-                    );
-                })}
-            </div>
         </section>
     );
 }
@@ -623,7 +562,7 @@ function PathChooser() {
     return (
         <section id="find-your-bottle" className="bg-linen py-14 lg:py-20">
             <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
-                <FadeUp className="grid border border-champagne/60 bg-warm-white lg:grid-cols-2">
+                <FadeUp className="grid grid-cols-[minmax(0,1fr)] border border-champagne/60 bg-warm-white lg:grid-cols-2">
                     <div className="border-b border-champagne/60 p-7 sm:p-10 lg:border-b-0 lg:border-r lg:p-12">
                         <p className="mb-3 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Know What You Need?</p>
                         <h2 className="font-display text-[34px] font-medium leading-none text-obsidian lg:text-[42px]">Search the catalog</h2>
@@ -652,7 +591,7 @@ function PathChooser() {
                         <button
                             type="button"
                             onClick={() => setShowGuided(true)}
-                            className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 border-b border-champagne/60 p-7 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
+                            className="group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 sm:gap-5 border-b border-champagne/60 p-4 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
                         >
                             <span className="flex h-11 w-11 items-center justify-center rounded-full border border-champagne text-slate group-hover:border-muted-gold group-hover:text-obsidian">
                                 <Compass size={20} />
@@ -667,7 +606,7 @@ function PathChooser() {
                         <button
                             type="button"
                             onClick={() => openGrace()}
-                            className="group grid grid-cols-[auto_1fr_auto] items-center gap-5 p-7 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
+                            className="group grid grid-cols-[auto_minmax(0,1fr)_auto] items-center gap-3 sm:gap-5 p-4 text-left transition-colors hover:bg-white focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-muted-gold sm:p-9 lg:p-10"
                         >
                             <span className="flex h-11 w-11 items-center justify-center rounded-full border border-champagne text-slate group-hover:border-muted-gold group-hover:text-obsidian">
                                 <ChatCircle size={20} />
@@ -680,84 +619,6 @@ function PathChooser() {
                         </button>
                     </div>
                 </FadeUp>
-            </div>
-        </section>
-    );
-}
-
-function DesignFamilies({ designFamilyCards }: { designFamilyCards?: HomepageData["designFamilyCards"] }) {
-    const sanityFamilies = new Map(
-        designFamilyCards?.map((family) => [family.family, family]) ?? [],
-    );
-    const families = HOME_FAMILY_MOSAIC.map((family) => {
-        const sanity = sanityFamilies.get(family.family);
-        return {
-            ...family,
-            title: sanity?.title || family.title,
-            image: sanity?.image ? urlFor(sanity.image) : family.image,
-        };
-    });
-
-    const layoutClass: Record<(typeof families)[number]["layout"], string> = {
-        feature: "col-span-2 lg:col-span-6 lg:row-span-2 min-h-[440px] lg:min-h-0",
-        standard: "col-span-1 lg:col-span-3 min-h-[220px] lg:min-h-0",
-        wide: "col-span-2 lg:col-span-6 min-h-[230px] lg:min-h-0",
-    };
-
-    return (
-        <section id="families" className="bg-warm-white py-14 lg:py-20">
-            <div className="mx-auto max-w-[1440px] px-5 sm:px-6 lg:px-10">
-                <FadeUp className="mb-7 flex items-end justify-between gap-6 lg:mb-9">
-                    <div>
-                        <p className="mb-2 text-[10px] font-semibold uppercase tracking-[0.24em] text-slate">Find Your Shape</p>
-                        <h2 className="text-balance font-display text-[34px] font-medium leading-none text-obsidian lg:text-[46px]">Shop by bottle family</h2>
-                        <p className="mt-3 max-w-xl text-sm leading-relaxed text-slate">Start with the silhouette that fits your brand, then choose how it dispenses.</p>
-                    </div>
-                    <Link href="/catalog?category=Glass+Bottle" className="hidden shrink-0 items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold transition-colors hover:text-obsidian sm:inline-flex">
-                        View All Families <ArrowRight size={15} />
-                    </Link>
-                </FadeUp>
-
-                <div className="grid grid-cols-2 gap-2.5 lg:h-[650px] lg:grid-cols-12 lg:grid-rows-2 lg:gap-3">
-                    {families.map((family, index) => (
-                        <FadeUp key={family.family} delay={index * 0.06} className={layoutClass[family.layout]}>
-                            <Link
-                                href={homepageFamilyHref(family.family)}
-                                className="group relative block h-full overflow-hidden bg-travertine focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-muted-gold"
-                            >
-                                <Image
-                                    src={family.image}
-                                    alt={`${family.title} bottle family`}
-                                    fill
-                                    sizes={family.layout === "feature" ? "(min-width: 1024px) 48vw, 100vw" : "(min-width: 1024px) 24vw, 50vw"}
-                                    className="object-cover object-center transition-transform duration-700 ease-out group-hover:scale-[1.025]"
-                                    unoptimized={family.image.startsWith("http")}
-                                />
-                                <div className="absolute inset-0 bg-gradient-to-t from-obsidian/72 via-obsidian/10 to-transparent" />
-                                <div className={`absolute inset-x-0 bottom-0 ${family.layout === "feature" ? "p-6 lg:p-8" : "p-4 lg:p-5"}`}>
-                                    <h3 className={`font-display font-medium leading-none text-white ${family.layout === "feature" ? "text-4xl lg:text-5xl" : "text-2xl lg:text-3xl"}`}>
-                                        {family.title}
-                                    </h3>
-                                    {family.layout === "feature" && (
-                                        <>
-                                            <p className="hidden lg:block mt-3 max-w-[310px] text-sm leading-relaxed text-white/86">{family.description}</p>
-                                            <p className="hidden lg:block mt-4 text-[10px] font-semibold uppercase tracking-[0.16em] text-white/75">
-                                                {family.applications?.join(" · ")}
-                                            </p>
-                                            <span className="mt-5 inline-flex items-center gap-2 border border-white/65 bg-obsidian px-4 py-3 text-[10px] font-semibold uppercase tracking-[0.16em] text-white transition-colors group-hover:bg-white group-hover:text-obsidian">
-                                                <span className="lg:hidden">Shop {family.title}</span><span className="hidden lg:inline">Explore Cylinder</span> <ArrowRight size={13} />
-                                            </span>
-                                        </>
-                                    )}
-                                </div>
-                            </Link>
-                        </FadeUp>
-                    ))}
-                </div>
-
-                <Link href="/catalog?category=Glass+Bottle" className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-muted-gold sm:hidden">
-                    View All Families <ArrowRight size={15} />
-                </Link>
             </div>
         </section>
     );
@@ -1014,14 +875,13 @@ function EducationPreview({ educationPreview: edu }: { educationPreview?: Homepa
     );
 }
 
-export default function HomePage({ homepageData }: { homepageData: HomepageData | null }) {
+export default function HomePage({ homepageData, browseData }: { homepageData: HomepageData | null; browseData: HomeBrowseData | null }) {
     return (
         <main className="min-h-screen">
-            <Navbar variant="home" hideMobileSearch />
-            <Hero heroSlides={homepageData?.heroSlides} mobileHeroMode={homepageData?.mobileHeroMode} />
-            <MobileCategoryGrid data={homepageData} />
+            <Navbar variant="home" hideMobileSearch headerClassName={homeStyles.homeHeader} />
+            <Hero heroSlides={homepageData?.heroSlides} mobileHeroMode="categories" />
             <MobilePostHeroSearch />
-            <DesignFamilies designFamilyCards={homepageData?.designFamilyCards} />
+            <HomeCatalogBrowser data={browseData} designFamilyCards={homepageData?.designFamilyCards} />
             <TrustBar />
             <SampleTestersFeature />
             <ApplicationShowcase />

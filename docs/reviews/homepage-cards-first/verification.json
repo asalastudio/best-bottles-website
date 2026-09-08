@@ -1,0 +1,66 @@
+{
+  "date": "2026-09-08",
+  "status": "local production build verified; not deployed",
+  "browsers": {
+    "Chromium": [
+      320,
+      390,
+      430,
+      768,
+      1440
+    ],
+    "WebKit": [
+      320,
+      390,
+      430,
+      768,
+      1440
+    ]
+  },
+  "checks": [
+    "initial mobile card visible",
+    "hero hidden only below 1024",
+    "desktop hero unchanged",
+    "all carousel items reachable by arrows",
+    "View all and Show less",
+    "keyboard tabs",
+    "Back retains tab and scroll",
+    "search query routing",
+    "page overflow",
+    "no browser runtime errors"
+  ],
+  "unitTests": {
+    "passed": 1558,
+    "skipped": 7,
+    "finalTargetedPassed": 11
+  },
+  "webpackBuild": "passed",
+  "typecheck": "passed",
+  "lint": "passed",
+  "httpStatus": 200,
+  "heroBeforeAfter": {
+    "identical": true,
+    "metadata": {
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1000,
+        "top": 0,
+        "right": 1440,
+        "bottom": 1000,
+        "left": 0
+      },
+      "text": "A Division OFNemat InternationalBeautifullyContainedPremium Glass BottlesPackaging for Brands Ready to ScaleSHOP NOW",
+      "img": "https://cdn.sanity.io/images/gh97irjh/production/9fc4c59cf9e710ddcc7ee61c01ec2e4653503020-2560x1289.png",
+      "style": "object-cover object-[80%_78%] md:object-[70%_center]",
+      "cta": "/catalog"
+    }
+  },
+  "limitations": [
+    "Physical iOS Safari toolbar and VoiceOver not tested",
+    "Plastic Bottle has no approved image",
+    "23 glass family labels; 27 broader bottle and jar groups",
+    "Bell Collection absent in current queried dataset"
+  ]
+}

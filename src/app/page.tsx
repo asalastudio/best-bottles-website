@@ -3,6 +3,7 @@ import { HOMEPAGE_QUERY, type HomepageData } from "@/sanity/lib/queries";
 import { sanityFetch } from "@/sanity/lib/live";
 import { isSanityConfigured } from "@/sanity/lib/client";
 import HomePage from "@/components/HomePage";
+import { getHomepageBrowse } from "@/lib/homepageBrowse.server";
 import SanityLiveVisualEditing from "@/components/SanityLiveVisualEditing";
 import { SITE_URL } from "@/lib/seo";
 
@@ -16,6 +17,7 @@ export const metadata: Metadata = {
 export default async function Page() {
     // Live, draft-aware fetch: published content for visitors, draft content with
     // click-to-edit overlays inside the Studio's Presentation tool.
+    const browsePromise = getHomepageBrowse().catch(() => null);
     let homepageData: HomepageData | null = null;
     if (isSanityConfigured) {
         try {
@@ -28,7 +30,7 @@ export default async function Page() {
 
     return (
         <>
-            <HomePage homepageData={homepageData} />
+            <HomePage homepageData={homepageData} browseData={await browsePromise} />
             <SanityLiveVisualEditing />
         </>
     );
