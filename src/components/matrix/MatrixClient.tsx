@@ -5,6 +5,8 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { ArrowLeft, ArrowRight, Check, CheckCircle, Minus, Plus, ShieldCheck, SlidersHorizontal, ShoppingBag } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
+import { useBuilderFamilies } from "@/components/bottle-builder/useBuilderFamilies";
+import FamilyLoadingStatus from "@/components/bottle-builder/FamilyLoadingStatus";
 import MobileBuilder from "@/components/bottle-builder/MobileBuilder";
 import BuilderImage from "@/components/bottle-builder/BuilderImage";
 import FitmentIllustration from "@/components/bottle-builder/FitmentIllustration";
@@ -49,11 +51,13 @@ function chooserScale(body: BuilderBody) {
     return 1;
 }
 
-export default function MatrixClient({ families, openFamily, bodies }: {
+export default function MatrixClient({ families: initialFamilies, openFamily, bodies }: {
     families: { family: string; groups: number }[];
     openFamily: string;
     bodies: BuilderBody[];
 }) {
+    const { families, status: familyStatus, retry: retryFamilies } = useBuilderFamilies(initialFamilies);
+    const familyNotice = <FamilyLoadingStatus status={familyStatus} onRetry={retryFamilies} />;
     const router = useRouter();
     const searchParams = useSearchParams();
     const { items, addItems, isCartHydrated } = useCart();
@@ -176,7 +180,7 @@ export default function MatrixClient({ families, openFamily, bodies }: {
             {adding ? "Checking your bottle…" : "Add to Cart"} {!adding && <ShoppingBag size={17} />}
         </button>;
 
-    if (isMobile) return <MobileBuilder families={families} family={openFamily} bodies={bodies}
+    if (isMobile) return <MobileBuilder familyNotice={familyNotice} families={families} family={openFamily} bodies={bodies}
         selection={selection} current={current} order={order} stage={mobileStage} onStage={next => { setMobileStage(next); setStep(next < 2 ? 0 : next - 1); setError(""); }}
         onUpdate={patch => { update(patch); if (patch.bodyId || patch.color || patch.fitment) setShowCover(false); }} onReset={reset} onFamily={family => { reset(); startTransition(() => router.push(`/matrix?family=${encodeURIComponent(family)}`)); }} onAdd={addToCart}
         size={size} neck={neck} application={application} onFilter={(filter, value) => { if (filter === "size") setSize(value); else if (filter === "neck") setNeck(value); else setApplication(value); }}
@@ -202,6 +206,7 @@ export default function MatrixClient({ families, openFamily, bodies }: {
                 <Link href="/cart" className={styles.secondary}>View Cart <ArrowRight size={16} /></Link>
 </div>
         </div>}
+        {step === 0 && familyNotice}
         {step === 0 && <div className={styles.filters}>
             <label>Bottle family<select aria-label="Bottle family" value={openFamily} disabled={adding || pending} onChange={e => {
                 const family = e.target.value;

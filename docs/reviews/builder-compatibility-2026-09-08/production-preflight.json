@@ -1,0 +1,26 @@
+[
+  {
+    "sku": "LBCyl50LtnMtGl",
+    "status": 409,
+    "returnedSku": null,
+    "error": "This combination is no longer available. Refresh the builder to see current options."
+  },
+  {
+    "sku": "GBCyl50SpryMtGl",
+    "status": 409,
+    "returnedSku": null,
+    "error": "This combination is no longer available. Refresh the builder to see current options."
+  },
+  {
+    "sku": "LBCyl100LtnMtGl",
+    "status": 409,
+    "returnedSku": null,
+    "error": "This combination is no longer available. Refresh the builder to see current options."
+  },
+  {
+    "sku": "GBCyl100SpryMtGl",
+    "status": 409,
+    "returnedSku": null,
+    "error": "This combination is no longer available. Refresh the builder to see current options."
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "sku": "Spry18-415MtGl",
+    "sourceUrl": "https://www.bestbottles.com/product/spray-top-matte-gold-color-18-415",
+    "sellable": false,
+    "sellableReason": "STATUS_DRAFT+NOT_PUBLISHED",
+    "sellableCheckedAt": 1788396174116,
+    "kitCompleteness": null,
+    "kitSlots": []
+  },
+  {
+    "sku": "Ltn18-415MtGl",
+    "sourceUrl": "https://www.bestbottles.com/product/lotion-top-matte-gold-color-18-415",
+    "sellable": false,
+    "sellableReason": "STATUS_DRAFT+NOT_PUBLISHED",
+    "sellableCheckedAt": 1788396174116,
+    "kitCompleteness": null,
+    "kitSlots": []
+  },
+  {
+    "sku": "CP13-415SpryBlkSh",
+    "sourceUrl": "https://www.bestbottles.com/product/spray-top-shiny-black-13-415",
+    "sellable": false,
+    "sellableReason": "STATUS_DRAFT+NOT_PUBLISHED",
+    "sellableCheckedAt": 1788396171290,
+    "kitCompleteness": null,
+    "kitSlots": []
+  },
+  {
+    "sku": "GBCyl50SpryMtGl",
+    "sourceUrl": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-matte-gold-spray-pump-and-cap",
+    "sellable": true,
+    "sellableReason": null,
+    "sellableCheckedAt": 1788396171290,
+    "kitCompleteness": "full",
+    "kitSlots": [
+      "body",
+      "diptube",
+      "sprayer",
+      "overcap"
+    ]
+  },
+  {
+    "sku": "LBCyl50LtnMtGl",
+    "sourceUrl": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-matte-gold-lotion-pump-and-cap",
+    "sellable": true,
+    "sellableReason": null,
+    "sellableCheckedAt": 1788396178159,
+    "kitCompleteness": "full",
+    "kitSlots": [
+      "body",
+      "diptube",
+      "pump",
+      "overcap"
+    ]
+  },
+  {
+    "sku": "GBCyl50RdcrShnGl",
+    "sourceUrl": "https://www.bestbottles.com/product/cylinder-design-50-ml-glass-bottle-reducer-shiny-gold-cap",
+    "sellable": false,
+    "sellableReason": "STATUS_DRAFT+NOT_PUBLISHED",
+    "sellableCheckedAt": 1788396179676,
+    "kitCompleteness": "capSplit",
+    "kitSlots": [
+      "body",
+      "fitment"
+    ]
+  },
+  {
+    "sku": "GBCyl100RdcrShnGl",
+    "sourceUrl": "https://www.bestbottles.com/product/cylinder-design-100-ml-glass-bottle-reducer-shiny-gold-cap",
+    "sellable": false,
+    "sellableReason": "STATUS_DRAFT+NOT_PUBLISHED",
+    "sellableCheckedAt": 1788396171290,
+    "kitCompleteness": "capSplit",
+    "kitSlots": [
+      "body",
+      "fitment"
+    ]
+  },
+  {
+    "sku": "GBTallCyl9MtlRollBlkDot",
+    "sourceUrl": "https://www.bestbottles.com/product/tall-cylinder-design-9-ml-glass-bottle-metal-roller-ball-plug-black-shiny-cap-with-dots",
+    "sellable": true,
+    "sellableReason": null,
+    "sellableCheckedAt": 1788396178159,
+    "kitCompleteness": "capSplit",
+    "kitSlots": [
+      "body",
+      "cap"
+    ]
+  },
+  {
+    "sku": "GBCrcl30GlCap",
+    "sourceUrl": "https://www.bestbottles.com/product/circle-design-30-ml-clear-glass-bottle-shiny-gold-cap",
+    "sellable": true,
+    "sellableReason": null,
+    "sellableCheckedAt": 1788396174116,
+    "kitCompleteness": null,
+    "kitSlots": []
+  }
+]

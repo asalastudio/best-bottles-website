@@ -1,0 +1,13 @@
+.workspace { max-width: 1040px; margin: 0 auto; padding: 36px 24px 64px; }
+.status { text-align: center; color: #34312d; padding: 24px 0 32px; }
+.bottle { width: 72px; height: 122px; margin: 0 auto 20px; stroke: #947236; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; animation: breathe 2.4s ease-in-out infinite; }
+.status h1 { font-family: var(--font-serif, Georgia, serif); font-size: clamp(24px, 4vw, 34px); line-height: 1.2; }
+.status p { font-size: 14px; line-height: 1.6; margin: 12px auto 20px; max-width: 320px; }
+.track { display: block; width: 104px; height: 2px; margin: auto; overflow: hidden; background: #dfd9cf; }
+.track span { display: block; width: 42%; height: 100%; background: #947236; animation: travel 2.4s ease-in-out infinite; }
+.skeleton { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.skeleton span { display: block; height: 170px; border-radius: 4px; background: #eae6df; opacity: .55; }
+@keyframes breathe { 50% { opacity: .45; } }
+@keyframes travel { 0%, 100% { transform: translateX(-110%); } 50% { transform: translateX(250%); } }
+@media (max-width: 1099px) { .workspace { padding: 16px 16px 48px; } .skeleton { grid-template-columns: repeat(2, 1fr); } .skeleton span { height: 130px; } }
+@media (prefers-reduced-motion: reduce) { .bottle, .track span { animation: none; } .track span { margin: auto; } }
