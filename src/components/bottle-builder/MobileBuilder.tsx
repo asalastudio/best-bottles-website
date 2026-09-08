@@ -199,8 +199,12 @@ export default function MobileBuilder(p: Props) {
             {([['size', 'Size', [...new Set(p.bodies.map(b => b.capacityMl))].sort((a,b) => a-b).map(n => [String(n), `${n} ml`])], ['neck', 'Neck size', [...new Set(p.bodies.map(b => b.neck))].map(n => [n,n])], ['application', 'Application', [...new Set(p.bodies.flatMap(b => b.configurations.map(c => c.fitment)))].map(n => [n,n])]] as ["size" | "neck" | "application", string, string[][]][]).map(([key,label,values]) => <label className={styles.filterField} key={key}>{label}<select aria-label={label} value={p[key]} onChange={e => p.onFilter(key,e.target.value)}><option value="">All {label.toLowerCase()}{key === "size" ? "s" : " options"}</option>{values.map(([value,text]) => <option value={value} key={value}>{text}</option>)}</select></label>)}
             <button onClick={clearFilters}>Clear filters</button><button className={styles.primary} onClick={closeFilters}>Show {visible.length} {visible.length === 1 ? "bottle" : "bottles"}</button>
         </dialog>
-        <dialog ref={expanded} className={`${styles.dialog} ${styles.largePreview}`} aria-label="Expanded bottle preview" onClose={() => expandTrigger.current?.focus()}>
-            <button className={styles.closePreview} aria-label="Close preview" onClick={() => expanded.current?.close()}><X size={22} /> Close</button><div>{previewImage}</div>
+        <dialog ref={expanded} className={styles.dialog} aria-label="Expanded bottle preview" onClose={() => expandTrigger.current?.focus({ preventScroll: true })}>
+            {/* Native dialog submission dismisses without relying on a delegated React click. */}
+            <form method="dialog" className={styles.previewControls}>
+                <button type="submit" className={styles.closePreview} aria-label="Close preview"><X size={22} /> Close</button>
+            </form>
+            <div className={styles.expandedImage}>{previewImage}</div>
         </dialog>
     </div>;
 }

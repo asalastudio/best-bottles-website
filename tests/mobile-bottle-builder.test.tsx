@@ -26,6 +26,25 @@ beforeEach(async()=>{vi.stubGlobal('IS_REACT_ACT_ENVIRONMENT',true);vi.stubGloba
 afterEach(()=>{act(()=>root.unmount());container.remove();vi.unstubAllGlobals()});
 function toFinish(){choose('9 ml, 13-415 neck');button('Continue to glass');choose('Clear');button('Continue to fitment');choose('Metal Roller');button('Continue to finish');}
 describe('mobile presentation over shared configuration',()=>{
+ it('uses native preview dismissal and returns focus without losing the reviewed build',()=>{
+  toFinish();choose('Gold');button('Review bottle');button('Use case quantity');
+  const trigger=container.querySelector<HTMLButtonElement>('button[aria-label="Expand bottle preview"]')!;
+  const dialog=container.querySelector<HTMLDialogElement>('dialog[aria-label="Expanded bottle preview"]')!;
+  // jsdom does not implement the dialog API; actual touch/default-action coverage
+  // lives in scripts/verify-builder-preview-close.mjs.
+  dialog.showModal=()=>{dialog.open=true;};
+  const focus=vi.spyOn(trigger,'focus');
+  for(let attempt=0;attempt<2;attempt++){
+   click(trigger);expect(dialog.open).toBe(true);
+   const close=dialog.querySelector<HTMLButtonElement>('button[aria-label="Close preview"]')!;
+   expect(close.type).toBe('submit');expect(close.form?.getAttribute('method')).toBe('dialog');
+   act(()=>{dialog.open=false;dialog.dispatchEvent(new Event('close'));});
+   expect(focus).toHaveBeenLastCalledWith({preventScroll:true});
+   expect(stage()).toBe('4');expect(container.textContent).toContain('Gold');
+   expect((container.querySelector('input[type=number]') as HTMLInputElement).value).toBe('24');
+  }
+  expect(add).not.toHaveBeenCalled();
+ });
  it('requires explicit advancement and does not render an empty action bar',()=>{
   expect(container.textContent).not.toContain('Continue to glass');choose('9 ml, 13-415 neck');expect(stage()).toBe('0');button('Continue to glass');expect(stage()).toBe('1');choose('Clear');expect(stage()).toBe('1');button('Continue to fitment');expect(stage()).toBe('2');choose('Metal Roller');expect(stage()).toBe('2');button('Continue to finish');expect(stage()).toBe('3');choose('Gold');expect(stage()).toBe('3');button('Review bottle');expect(stage()).toBe('4');
  });
