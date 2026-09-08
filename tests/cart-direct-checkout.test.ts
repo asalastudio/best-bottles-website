@@ -43,6 +43,7 @@ import CartPage from "../src/app/cart/page";
 
 describe("standard cart checkout actions", () => {
     beforeEach(() => {
+        cartState.items[0].quantity = 20;
         cartState.isCheckingOut = false;
         cartState.checkoutError = "";
     });
@@ -57,6 +58,15 @@ describe("standard cart checkout actions", () => {
             expect(markup).toContain("Proceed to Checkout");
             expect(markup).not.toContain("/request-quote");
             expect(markup).not.toContain("Request Quote for This");
+        }
+    });
+
+    it("blocks checkout below the combined minimum and offers another build", () => {
+        cartState.items[0].quantity = 1;
+        for (const markup of [renderToStaticMarkup(React.createElement(CartDrawer, { isOpen: true, onClose: vi.fn() })), renderToStaticMarkup(React.createElement(CartPage))]) {
+            expect(markup).toContain("Add $47.50 more to check out.");
+            expect(markup).toContain("Continue building");
+            expect(markup).toMatch(/disabled=""[^>]*data-testid="(?:checkout-start-button|cart-page-checkout-button)"/);
         }
     });
 

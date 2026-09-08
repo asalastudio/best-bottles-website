@@ -1,0 +1,59 @@
+{
+  "Ltn18-415ShnGl": {
+    "url": "/images/bottle-builder/components/Ltn18-415ShnGl.png",
+    "width": 227,
+    "height": 399,
+    "source": "20. Caps/8. 18-415 Lotion/17. Ltn18-415ShnGl.psd",
+    "sourceSha256": "a6e00dc736d437b4a0433ba694ae2e0187432407304f1326c84db7e336feb586",
+    "layer": "Layer 1 copy",
+    "sha256": "c912bac1f0e69e6e59463652904e23a158545e562cfdcbb508010325535c3354"
+  },
+  "Ltn18-415ShnSl": {
+    "url": "/images/bottle-builder/components/Ltn18-415ShnSl.png",
+    "width": 219,
+    "height": 395,
+    "source": "20. Caps/8. 18-415 Lotion/21. Ltn18-415ShnSl.psd",
+    "sourceSha256": "8ac632f6ac78b0f4e26071a500a1865c6c2e1751966f75e15ba6c095ab608abf",
+    "layer": "Layer 2 copy",
+    "sha256": "b25b771c36aad798797849a6ed5077fd433bc05d631183d92265671e075079c4"
+  },
+  "Ltn18-415ShnBlk": {
+    "url": "/images/bottle-builder/components/Ltn18-415ShnBlk.png",
+    "width": 221,
+    "height": 400,
+    "source": "20. Caps/8. 18-415 Lotion/18. Ltn18-415ShnBlk.psd",
+    "sourceSha256": "dba14a39d73f8bc8f10b9226f80a15cb8c7f07ffe2e5fd176cc2a120b334bf49",
+    "layer": "Layer 1 copy",
+    "sha256": "443ab69bd733be2a50e02d64268518c4bf0c74fa66a619d1ad52586d57369d91"
+  },
+  "AnSp18-415Lvn": {
+    "url": "/images/bottle-builder/components/AnSp18-415Lvn.png",
+    "width": 500,
+    "height": 341,
+    "source": "20. Caps/9. 18-415 Ansp /23. Ansp18-415Lvn.psd",
+    "sourceSha256": "a7236b36386b67254e9365f1a6f2dfcc1a4fac01d3562e15a36961127a151e9a",
+    "layer": "Layer 2 copy",
+    "layerIndex": 2,
+    "sha256": "1e8470723b44ed22eec1836609fcb8884935d5afaad1b035195ae5271e65d353"
+  },
+  "AnSp18-415IvyGl": {
+    "url": "/images/bottle-builder/components/AnSp18-415IvyGl.png",
+    "width": 500,
+    "height": 335,
+    "source": "20. Caps/9. 18-415 Ansp /28. Ansp18-415IvyGl.psd",
+    "sourceSha256": "af53ada164683311712e417ee5cf63418042a6f78dd9620d0b2a981bf8d63733",
+    "layer": "Layer 1",
+    "layerIndex": 2,
+    "sha256": "4793099c0623a8b97ea95519b48a9d67088447f35e1cfc53349d7420c444836d"
+  },
+  "AnSp18-415Red": {
+    "url": "/images/bottle-builder/components/AnSp18-415Red.png",
+    "width": 500,
+    "height": 336,
+    "source": "20. Caps/9. 18-415 Ansp /31. Ansp18-415Red.psd",
+    "sourceSha256": "decd8b17d6daff73ec7ad322698c2a0b45d70158f6a7aa6657d762420ab64867",
+    "layer": "Layer 2",
+    "layerIndex": 2,
+    "sha256": "9d6a8060f9a726664bc2805f8d77d899bf27fb1a94742a41af15de56ba00e82d"
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "checkedAt": "2026-09-06T21:44:14.721Z",
+  "results": [
+    {
+      "sku": "GBCrcl15SpryBlkMatt",
+      "finish": "Matte Black",
+      "component": "CP13-415SpryBlkMt",
+      "variant": "gid://shopify/ProductVariant/53343633047844",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SpryBlkMatt.webp"
+    },
+    {
+      "sku": "GBCrcl15SpryBlkSh",
+      "finish": "Shiny Black",
+      "component": "CP13-415SpryBlkSh",
+      "variant": "gid://shopify/ProductVariant/53343633080612",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SpryBlkSh.webp"
+    },
+    {
+      "sku": "GBCrcl15SpryBluMatt",
+      "finish": "Matte Blue",
+      "component": "CP13-415SpryBluMt",
+      "variant": "gid://shopify/ProductVariant/53343633113380",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SpryBluMatt.webp"
+    },
+    {
+      "sku": "GBCrcl15SpryCuMatt",
+      "finish": "Matte Copper",
+      "component": "CP13-415SpryCuMt",
+      "variant": "gid://shopify/ProductVariant/53343633146148",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SpryCuMatt.webp"
+    },
+    {
+      "sku": "GBCrcl15SpryGlMatt",
+      "finish": "Matte Gold",
+      "component": "CP13-415SpryGlMt",
+      "variant": "gid://shopify/ProductVariant/53343633178916",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SpryGlMatt.webp"
+    },
+    {
+      "sku": "GBCrcl15SpryGlSh",
+      "finish": "Shiny Gold",
+      "component": "CP13-415SpryGlSh",
+      "variant": "gid://shopify/ProductVariant/53343633211684",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SpryGlSh.webp"
+    },
+    {
+      "sku": "GBCrcl15SprySlMatt",
+      "finish": "Matte Silver",
+      "component": "CP13-415SprySlMt",
+      "variant": "gid://shopify/ProductVariant/53343633244452",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SprySlMatt.webp"
+    },
+    {
+      "sku": "GBCrcl15SprySlSh",
+      "finish": "Shiny Silver",
+      "component": "CP13-415SprySlSh",
+      "variant": "gid://shopify/ProductVariant/53343633277220",
+      "status": 200,
+      "photo": "/images/bottle-builder/circle/GBCrcl15SprySlSh.webp"
+    }
+  ]
+}

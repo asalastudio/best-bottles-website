@@ -10,19 +10,26 @@ async function request(items:unknown[]){return POST(new NextRequest('http://loca
 describe('checkout SKU identity',()=>{
  beforeEach(()=>{vi.clearAllMocks();vi.stubEnv('SHOPIFY_ADMIN_TOKEN','test-only');mocks.skus.mockResolvedValue([]);mocks.checkout.mockImplementation(items=>'/cart/'+items.map((i:any)=>`${i.variantId}:${i.quantity}`).join(','));});
  it('re-resolves a saved clear-silver ID that now identifies frosted silver',async()=>{
-  mocks.ids.mockResolvedValue([{variantId:'old',sku:frosted,available:true}]);
-  mocks.skus.mockResolvedValue([{sku:clear,variantId:'new-clear',available:true}]);
+  mocks.ids.mockResolvedValue([{variantId:'old',sku:frosted,available:true,price:'25.00'}]);
+  mocks.skus.mockResolvedValue([{sku:clear,variantId:'new-clear',available:true,price:'25.00'}]);
   const response=await request([{sku:clear,shopifyVariantId:'old',quantity:12},{sku:frosted,shopifyVariantId:'old',quantity:1}]);
   expect(response.status).toBe(200);expect(mocks.skus).toHaveBeenCalledWith([clear]);
   expect(mocks.checkout).toHaveBeenCalledWith([{variantId:'old',quantity:1},{variantId:'new-clear',quantity:12}]);
  });
+ it('enforces the cart minimum using the corrected SKU price',async()=>{
+  mocks.ids.mockResolvedValue([{variantId:'old',sku:frosted,available:true,price:'100.00'}]);
+  mocks.skus.mockResolvedValue([{sku:clear,variantId:'new-clear',available:true,price:'20.00'}]);
+  const response=await request([{sku:clear,shopifyVariantId:'old',quantity:1}]);
+  expect(response.status).toBe(422);expect(mocks.checkout).not.toHaveBeenCalled();
+  expect(await response.json()).toMatchObject({code:'ORDER_MINIMUM',subtotal:20,remaining:30});
+ });
  it('does not send an unrelated available variant to checkout when the requested SKU cannot resolve',async()=>{
-  mocks.ids.mockResolvedValue([{variantId:'old',sku:frosted,available:true}]);
+  mocks.ids.mockResolvedValue([{variantId:'old',sku:frosted,available:true,price:'25.00'}]);
   const response=await request([{sku:clear,shopifyVariantId:'old',quantity:1}]);
   expect(response.status).toBe(409);expect(mocks.checkout).not.toHaveBeenCalled();expect((await response.json()).unmatchedSkus).toEqual([clear]);
  });
  it('retains a correct direct mapping without a SKU lookup',async()=>{
-  mocks.ids.mockResolvedValue([{variantId:'right',sku:clear,available:true}]);
+  mocks.ids.mockResolvedValue([{variantId:'right',sku:clear,available:true,price:'25.00'}]);
   const response=await request([{sku:clear,shopifyVariantId:'right',quantity:2}]);
   expect(response.status).toBe(200);expect(mocks.skus).not.toHaveBeenCalled();expect(mocks.checkout).toHaveBeenCalledWith([{variantId:'right',quantity:2}]);
  });

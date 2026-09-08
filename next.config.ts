@@ -20,6 +20,11 @@ for (const key of requiredEnvVars) {
 const nextConfig: NextConfig = {
     reactStrictMode: false,
     outputFileTracingRoot: projectRoot,
+    experimental: {
+        // Sentry adds a custom Webpack hook, disabling Next's default worker.
+        // Isolate compilation so its memory is released before TypeScript runs.
+        webpackBuildWorker: true,
+    },
     turbopack: {
         root: projectRoot,
     },

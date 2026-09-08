@@ -1,0 +1,614 @@
+{
+  "GBTallCyl9MtlRollSlDot": {
+    "bodySha256": "7755deb9bfaeb03c5519c1c0bb2d5d0ab758b2137539cba45c051c671a7f7e1e",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 377,
+        "top": 132,
+        "right": 576,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 6006,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollSlDot.webp",
+        "sha256": "33b5d5b3f945ce13189a8cc1483105995215a135e45ef2825c37919c1ac58733",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollSlDot.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollPinkDot": {
+    "bodySha256": "031c42c32e49a8b9313bd9d72b74231b142addbadd7c49dd5a6853e14415fe6b",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 377,
+        "top": 133,
+        "right": 576,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 6036,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollPinkDot.webp",
+        "sha256": "2b9164d5f9363e3a59fc9f9c856334da4c431f44f1aa9c8aa4657c48231dbd03",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollPinkDot.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollSlMatt": {
+    "bodySha256": "7d0e2206d9d0e3b19568f3a6b4a4a83b2c801b91c3822c8299782debad992f81",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 376,
+        "top": 133,
+        "right": 575,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 6050,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollSlMatt.webp",
+        "sha256": "63f11cb2e68afaac162d9813b773dfc26d7cb66ed3786cbdf1bd8b106637fe08",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollSlMatt.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollGlMatt": {
+    "bodySha256": "1203dec0e71c5abfd5cb4e35fa4b967911d03d08ba400c7506c22ee8146e1dcf",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 377,
+        "top": 133,
+        "right": 576,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5978,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollGlMatt.webp",
+        "sha256": "eb8660aa21f3d29e00f5005854226b111f32abb06e55031591d565b38bb15c26",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollGlMatt.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollGlSh": {
+    "bodySha256": "1203dec0e71c5abfd5cb4e35fa4b967911d03d08ba400c7506c22ee8146e1dcf",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 377,
+        "top": 133,
+        "right": 576,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5978,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollGlSh.webp",
+        "sha256": "eb8660aa21f3d29e00f5005854226b111f32abb06e55031591d565b38bb15c26",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollGlSh.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollSlSh": {
+    "bodySha256": "7d0e2206d9d0e3b19568f3a6b4a4a83b2c801b91c3822c8299782debad992f81",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 376,
+        "top": 133,
+        "right": 575,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5982,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollSlSh.webp",
+        "sha256": "b61fa486767e64538c6abb20063dcc9cdde6f80ba7a64bcfe68919f7475d5eae",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollSlSh.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollCuMatt": {
+    "bodySha256": "dc3735eb12a0cc7e7ef0f555f447c76d9c502223a43af00c9ee9f5f02569a978",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 376,
+        "top": 133,
+        "right": 575,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 6044,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollCuMatt.webp",
+        "sha256": "6e590fd91a277189694913684d0f3520e47fab56f84a477d8fc08308bcce8b19",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollCuMatt.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollBlkSh": {
+    "bodySha256": "dc3735eb12a0cc7e7ef0f555f447c76d9c502223a43af00c9ee9f5f02569a978",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 376,
+        "top": 134,
+        "right": 575,
+        "bottom": 313
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5994,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollBlkSh.webp",
+        "sha256": "dd84fb6558c1f9f44638c41c8accf0230a665550c7917efc03d650c74017682b",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollBlkSh.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCyl9MtlRollBlkDot": {
+    "bodySha256": "d6dfea00d88114f93789bb9a1457d021deaaf47cec360cd83e1db0bc538f1e1d",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 375,
+        "top": 134,
+        "right": 574,
+        "bottom": 314
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5916,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCyl9MtlRollBlkDot.webp",
+        "sha256": "f34941ef658d8b48ca427bb8287c77b606a1857344b23087c6da73433127856b",
+        "url": "/images/bottle-builder/rollers/GBTallCyl9MtlRollBlkDot.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollSlDot": {
+    "bodySha256": "0e183c8c17babeeefc67b0634fa017506b4faef2c2ff247b3b0aebcea541ae3f",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 375,
+        "top": 135,
+        "right": 574,
+        "bottom": 314
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5916,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollSlDot.webp",
+        "sha256": "dc1a7abacbcd14b10ab0e1ed69af3e0dfdfec5f90d26017d75563f61418cdb69",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollSlDot.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollPinkDot": {
+    "bodySha256": "ac071363b17c3d5325707f8c5c9250c06f68d428d427207914f1b83a898eb00c",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 380,
+        "top": 133,
+        "right": 578,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5954,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollPinkDot.webp",
+        "sha256": "217fc03a173889949a7c8bd9a653c56da31ec81144c30a9b37771bcc0a65b17e",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollPinkDot.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollSlMatt": {
+    "bodySha256": "ac071363b17c3d5325707f8c5c9250c06f68d428d427207914f1b83a898eb00c",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 380,
+        "top": 133,
+        "right": 578,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5954,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollSlMatt.webp",
+        "sha256": "217fc03a173889949a7c8bd9a653c56da31ec81144c30a9b37771bcc0a65b17e",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollSlMatt.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollGlMatt": {
+    "bodySha256": "7eee9736a9e2295e5b0d054aa6086c512f64489d40d51784d9cb2a40e94194db",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 380,
+        "top": 133,
+        "right": 578,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5954,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollGlMatt.webp",
+        "sha256": "217fc03a173889949a7c8bd9a653c56da31ec81144c30a9b37771bcc0a65b17e",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollGlMatt.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollGlSh": {
+    "bodySha256": "7eee9736a9e2295e5b0d054aa6086c512f64489d40d51784d9cb2a40e94194db",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 379,
+        "top": 133,
+        "right": 577,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5930,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollGlSh.webp",
+        "sha256": "f8a1b1d7c57a6d17a59f615d1d06d46ae9eb04a093f6ae78e7b4eb77c937fe6f",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollGlSh.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollSlSh": {
+    "bodySha256": "ead30ecc7f79c50b8c80e1f12d429962025ad02b6d411abd91d4dd9251c3f7bc",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 378,
+        "top": 133,
+        "right": 576,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5938,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollSlSh.webp",
+        "sha256": "78b61ad159080428bc87ed0e7475b2cd3beff8c7e8cb95236a05ba1ed9040e5d",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollSlSh.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollCuMatt": {
+    "bodySha256": "a8ae5a3ab9e99e5ba4d78e8e4740293449ae82bfb145a2ccc50b7c8be9b2ff03",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 380,
+        "top": 133,
+        "right": 578,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5918,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollCuMatt.webp",
+        "sha256": "d773f5c9c657ee5ba84ec969cdb2a4795731d0e7493aa6a8dbec0e99a1f8e7f7",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollCuMatt.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollBlkSh": {
+    "bodySha256": "a8ae5a3ab9e99e5ba4d78e8e4740293449ae82bfb145a2ccc50b7c8be9b2ff03",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 380,
+        "top": 133,
+        "right": 578,
+        "bottom": 312
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 5918,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollBlkSh.webp",
+        "sha256": "d773f5c9c657ee5ba84ec969cdb2a4795731d0e7493aa6a8dbec0e99a1f8e7f7",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollBlkSh.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  },
+  "GBTallCylFrst9MtlRollBlkDot": {
+    "bodySha256": "1fb27a3ef757bc1f1cac3407caf8a019306a4c285fe1345a28fdc797db6dd51d",
+    "part": {
+      "assembled": {
+        "x": 0,
+        "y": 0
+      },
+      "bounds": {
+        "left": 377,
+        "top": 129,
+        "right": 577,
+        "bottom": 309
+      },
+      "derivation": "psd-layer",
+      "explodeIndex": 0,
+      "exploded": {
+        "dx": 0,
+        "dy": 0
+      },
+      "image": {
+        "bytes": 6042,
+        "height": 1100,
+        "key": "builder/rollers/GBTallCylFrst9MtlRollBlkDot.webp",
+        "sha256": "6f2c0fd1605671bdcdfd4fef881cd9d4f119256a72df26542e9d836fc853cd9d",
+        "url": "/images/bottle-builder/rollers/GBTallCylFrst9MtlRollBlkDot.webp",
+        "width": 1000
+      },
+      "image2x": null,
+      "mask": null,
+      "slot": "roller",
+      "variantKey": null,
+      "zOrder": -0.5
+    }
+  }
+}

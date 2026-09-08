@@ -1,0 +1,20 @@
+{
+  "Circle|15|13-415|Metal Roller": {
+    "url": "/images/bottle-builder/circle/fitment-metal-roller.webp",
+    "width": 141,
+    "height": 116,
+    "sha256": "a812ea571e2378a3f0a395c1e8a4281c7fb18d8b18f427857cdac114a7b0a32e"
+  },
+  "Circle|15|13-415|Plastic Roller": {
+    "url": "/images/bottle-builder/circle/fitment-plastic-roller.webp",
+    "width": 129,
+    "height": 112,
+    "sha256": "965ef67f18006ed844caf69332de7c27902b5c1502923460b50322eda2ffe87d"
+  },
+  "Circle|15|13-415|Fine Mist Sprayer": {
+    "url": "/images/bottle-builder/circle/fitment-fine-mist-sprayer.webp",
+    "width": 181,
+    "height": 358,
+    "sha256": "7d08776dab1413aa557c097a0240abab3b9923d81a0876b7787f849acf38074c"
+  }
+}

@@ -91,3 +91,21 @@ export function redirectToCheckout({
         throw error;
     }
 }
+
+export const ORDER_MINIMUM = 50;
+
+/** Only purchasable, priced lines count toward the merchandise minimum. */
+export function checkoutMinimum(items: (CheckoutCandidate & { quantity: number; unitPrice: number | null })[]) {
+    const cents = items.filter(isCheckoutReady).reduce((sum, item) =>
+        Number.isSafeInteger(item.quantity) && item.quantity > 0 && item.unitPrice != null
+        && Number.isFinite(item.unitPrice) && item.unitPrice > 0
+            ? sum + Math.round(item.unitPrice * 100) * item.quantity : sum, 0);
+    const remaining = Math.max(0, ORDER_MINIMUM * 100 - cents) / 100;
+    return { subtotal: cents / 100, remaining, met: remaining === 0 };
+}
+
+export function checkoutMinimumMessage(progress: ReturnType<typeof checkoutMinimum>) {
+    return progress.met
+        ? `Your cart is $${progress.subtotal.toFixed(2)}. Your $50 order minimum is met.`
+        : `Your cart is $${progress.subtotal.toFixed(2)}. Add $${progress.remaining.toFixed(2)} more to check out.`;
+}
