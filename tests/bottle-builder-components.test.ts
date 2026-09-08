@@ -7,6 +7,15 @@ const active: ActiveComponent = { websiteSku: sku, graceSku: "CURRENT", neckThre
 const row = { family: "Circle", capacityMl: 15, category: "Glass Bottle", color: "Clear", neckThreadSize: "13-415", websiteSku: "GBCrcl15SpryBlkMatt", graceSku: "BOTTLE", itemName: "Circle 15 ml spray", applicator: "Fine Mist Sprayer", capColor: "Matte Black", webPrice1pc: 1, shopifyVariantId: "bottle-variant", shopifySellable: true, resolution: "bottle_listed", productGroupSlug: "circle-15ml-clear-13-415-finemist", components: { Sprayer: [part] } } as unknown as CatalogRow;
 
 describe("builder listed component replacement", () => {
+    it("restores an active exact alias for an assembly without publishing the loose part", async () => {
+        const unpublished = { ...active, shopifySellable: false };
+        const restored = restoreListedComponent(part, unpublished, "13-415");
+        expect(restored.websiteSku).toBe(sku);
+        expect(restored.shopifySellable).toBe(false);
+        const [resolved] = await resolveListedComponents([row], async () => unpublished);
+        expect(assessBuilderConfiguration(resolved).configuration?.product.websiteSku).toBe(row.websiteSku);
+        expect(assessBuilderConfiguration({ ...resolved, shopifySellable: false }).configuration).toBeNull();
+    });
     it("shows an exact out-of-stock vintage replacement without making it purchasable", () => {
         const retired = { ...part, websiteSku: "AnSp18-415Lvn__RETIRED__OLD__document" };
         const vintage: CatalogRow = { ...row, capacityMl: 50, neckThreadSize: "18-415", websiteSku: "GBCrcl50AnSpLvn", applicator: "Vintage Bulb Sprayer", components: { Sprayer: [retired] } };
@@ -41,7 +50,7 @@ describe("builder listed component replacement", () => {
     });
     it.each([
         null, { ...active, websiteSku: "CP13-415SpryGlSh" }, { ...active, neckThreadSize: "18-415" },
-        { ...active, shopifySellable: false }, { ...active, shopifyVariantId: null },
+        { ...active, shopifyVariantId: null },
         { ...active, stockStatus: "Out of Stock" }, { ...active, graceSku: "OLD" },
     ])("retains rejection when the replacement is absent, mismatched or unavailable: %j", replacement => {
         expect(restoreListedComponent(part, replacement, "13-415")).toBe(part);
@@ -87,8 +96,13 @@ describe("source-backed exact component matches", () => {
     it("never bypasses availability, retirement, exact identity, or listed compatibility", () => {
         expect(compatibleFinishComponent({ ...pump, components: {} })).toBeNull();
         expect(compatibleFinishComponent({ ...pump, components: { "Lotion Pump": [component("Ltn18-415MtSlCl")] } })).toBeNull();
-        for (const change of [{ shopifySellable: false }, { stockStatus: "Out of Stock" }, { websiteSku: "Ltn18-415MtSl__RETIRED__OLD__record" }]) {
+        for (const change of [{ stockStatus: "Out of Stock" }, { websiteSku: "Ltn18-415MtSl__RETIRED__OLD__record" }]) {
             expect(compatibleFinishComponent({ ...pump, components: { "Lotion Pump": [{ ...component("Ltn18-415MtSl"), ...change }] } })).toBeNull();
         }
+    });
+    it("allows an exact included pump when its separate loose product is unpublished", () => {
+        const unpublished = { ...component("Ltn18-415MtSl"), shopifySellable: false };
+        expect(compatibleFinishComponent({ ...pump, components: { "Lotion Pump": [unpublished] } })?.websiteSku).toBe("Ltn18-415MtSl");
+        expect(unpublished.shopifySellable).toBe(false);
     });
 });

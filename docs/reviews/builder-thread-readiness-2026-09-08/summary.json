@@ -1,0 +1,846 @@
+{
+  "checkedAt": "2026-09-08T16:44:17.593Z",
+  "endpoint": "https://precise-raccoon-123.convex.cloud",
+  "threads": [
+    "13-415",
+    "17-415",
+    "18-415"
+  ],
+  "families": [
+    "Bell",
+    "Circle",
+    "Cylinder",
+    "Diamond",
+    "Diva",
+    "Elegant",
+    "Empire",
+    "Flair",
+    "Grace",
+    "Pillar",
+    "Plastic Bottle",
+    "Rectangle",
+    "Round",
+    "Royal",
+    "Sleek",
+    "Slim",
+    "Square",
+    "Tulip"
+  ],
+  "inventoryCount": 2481,
+  "totals": [
+    {
+      "neck": "13-415",
+      "assemblies": 591,
+      "visible": 56,
+      "visibleIfStandalonePublicationIgnored": 148,
+      "families": 12
+    },
+    {
+      "neck": "17-415",
+      "assemblies": 146,
+      "visible": 132,
+      "visibleIfStandalonePublicationIgnored": 132,
+      "families": 2
+    },
+    {
+      "neck": "18-415",
+      "assemblies": 1270,
+      "visible": 61,
+      "visibleIfStandalonePublicationIgnored": 126,
+      "families": 10
+    }
+  ],
+  "missingMatrix": [],
+  "sourceOnly": [
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-black-cap",
+      "sku": "GBBell12BlkSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "a61684e1a24b48a90ed68e3d77672aec2734a5d00bafcffe0ebc682455581850",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-shiny-gold-cap",
+      "sku": "GBBell10Gl",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "9f40e5a2bb41ae380b66c1879c932082c43351cc21418cedbbb8baa0b901b3c1",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-shiny-silver-cap",
+      "sku": "GBBell10Sl",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "6381a40b6b16de97f273b141b8c726fb00e1940d1817ec303e570aa2f5e059d3",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-white-cap",
+      "sku": "GBBell10WhtSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "85c26ecb6af2dc40999af78f2334da0b520fb7346d2a5e5069e2d7ad447df86c",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-matte-copper-cap",
+      "sku": "GBBell10CuSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "b4ddb07f92c9f02fe02ef5d307ca7154b06a108999a83bd60210ebbaab862382",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-matte-gold-cap",
+      "sku": "GBBell10GlMattSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "c544f3dd663f2af17ce1bd68ae81321b60b0d650eb3b8eefcfa16d4040f0045d",
+      "hasPurchase": true,
+      "stockUnavailable": true
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-shiny-gold-cap",
+      "sku": "GBBell10GlSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "ff473a6bf97679db834d8aa0f4c17d3210d1b9f13b3aecad808bc081924ea5b2",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-matte-silver-cap",
+      "sku": "GBBell10SlMattSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "3fed9cd6db7f59f337bf06a14e351ab6810116952d66f823e9522924031752c6",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-short-shiny-silver-cap",
+      "sku": "GBBell10SlSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "7314f57845fbf8bd76d27996b0612acbbb357eda5448ab2fde8ffb12346ed631",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-black-shiny-cap",
+      "sku": "GBBell10RollBlkSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "9c0bd96a542bc1911355380acec0ec564c6390055c5b5842396fa2ec7a18ac68",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-shiny-gold-cap",
+      "sku": "GBBell10RollGlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "ffc52e88ad07e7dd2c2919d3f977398879b55e73ae97518c62826ebb736c64c6",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-shiny-silver-cap",
+      "sku": "GBBell10RollSlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "17d7b46fa23ed7951cf8c6603370b16a03b2f363e1b5a7f895e5eab886887d96",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-pink-cap-with-dots",
+      "sku": "GBBell10RollPinkDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "5f4b1bbc5045cd8fa6adc5fd4d638d197742339b480b7c0b23bc115713e34e0d",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-silver-cap-with-dots",
+      "sku": "GBBell10RollSlDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "d4d140c6c0ed79bd6ea73a0135584097d6c20e21ff7f4b44c3290af6d9884b85",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-matte-copper-cap",
+      "sku": "GBBell10RollCuMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "75fbc8f2937d6f3fb27376184d740585b4aa19d91c441a55e77f25fecb3a9f29",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-matte-gold-cap",
+      "sku": "GBBell10RollGlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "c8e2b7c41d47d8a5cdb6689e4f025e209f7a8bed914a8592a38932d22df411dd",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-plastic-roller-ball-plug-matte-silver-cap",
+      "sku": "GBBell10RollSlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "1ed88f09a18980b9753f5614473ca9ad33c20e6b751a86317134e8249228444f",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-black-shiny-cap",
+      "sku": "GBBell10MtlRollBlkSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "84d2a0cbeef16a58eead215dd5d83f881c2ab0360289f423871b4afb045c7ee6",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-matte-copper-cap",
+      "sku": "GBBell10MtlRollCuMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "2f8a00e8e585912bff798140483922936bf759b30a9113728dc936a50ff215dd",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "sku": "GBBell10MtlRollGlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "2ecb577da85e5ec5a5a6929aafdc29e342e8394e1d9879c2d98126c54ecda46f",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-shiny-gold-cap",
+      "sku": "GBBell10MtlRollGlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "d654bc1b0011879527b9ade4daf09639d71b6ceb167c2b3f05e7b0678d30c196",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-pink-cap-with-dots",
+      "sku": "GBBell10MtlRollPinkDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "db3b9d977c3c262460e95da1b000afc4ba9f4dd889c7aaebb86afd2576882d67",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-silver-cap-with-dots",
+      "sku": "GBBell10MtlRollSlDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "e4c77d195e312cae774d22dd64586ed25c15f513f22cfbea2146708906d304d2",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-matte-silver-cap",
+      "sku": "GBBell10MtlRollSlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "b8dcd5639dbf803fa37dc61546e8a7c1339e0e93a1a96d59b90c5886486b9304",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-glass-bottle-metal-roller-ball-plug-shiny-silver-cap",
+      "sku": "GBBell10MtlRollSlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 10,
+      "sha256": "3902ac5d8a0dae346c8c87579fc372c6b85e9a326b81e9324c40eaeb766be3cf",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-silver-cap-with-dots",
+      "sku": "GBPillar9MtlRollSlDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "b5d4b125c197584cb09e3f8572db23f9eee0f433b4c38ba820b7c94bad17608a",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-pink-cap-with-dots",
+      "sku": "GBPillar9MtlRollPinkDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "06f5bdb2f90c1b3e55c37d7aab6e791005bdd3de0fb642103f19936b8c068081",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-matte-silver-cap",
+      "sku": "GBPillar9MtlRollSlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "2fc9645edaee859b5a188505cd40cb0bbaf6f95bf11c8a653189618b6ae81d27",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "sku": "GBPillar9MtlRollGlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "930e48e0787aad264ababea0d1561f0f13db010855da5cc59afb2ecd8704314a",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-shiny-gold-cap",
+      "sku": "GBPillar9MtlRollGlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "9f73835c4a3a852287333eb2ad01c4fa486c184b1139169b7c95ae7b5658e717",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-shiny-silver-cap",
+      "sku": "GBPillar9MtlRollSlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "03f0030b7fa610fa60d60173ed8a6ace9e1035c265ea5ce311dad4737b2ab56d",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-matte-copper-cap",
+      "sku": "GBPillar9MtlRollCuMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "9262da711108e6903ca98c478fc182ba71f043c90d0a18d88be969dee728235b",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-metal-roller-ball-plug-shiny-black-cap",
+      "sku": "GBPillar9MtlRollBlkSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "13efef3991e9433b83396fdfa2b9f8b1be52d245b6f32c3922b8c4e67e1f1e04",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-plastic-roller-ball-plug-silver-cap-with-dots",
+      "sku": "GBPillar9RollSlDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "4d7adde5616401ca95af9b0a94443c8cbc6fe945bca036e9ec8a9fd98b7346b8",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-pink-cap-with-dots",
+      "sku": "GBPillar9RollPinkDot",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "e02807a23839fd2c7db7e72726b306d78996d1179804469669b0f5bddfef4d11",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-matte-silver-cap",
+      "sku": "GBPillar9RollSlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "64b35c423e4a01b53678be569a870ab4a8543b529c4fd8cc7849ae3f59de55e2",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-matte-gold-cap",
+      "sku": "GBPillar9RollGlMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "0b6ca4da3e13d362ff4c85a11a3fa462ee19b0e5c14b5d8205974b77b9fe757e",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-shiny-gold-cap",
+      "sku": "GBPillar9RollGlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "5da11bc8847b009612d505038282be746b0f75a1c1b4968451faba2ec538e21d",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-matte-copper-cap",
+      "sku": "GBPillar9RollCuMatt",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "bfb8764438a17b497d64cb86dbeade7b0104d29563c6216784da507ea9c82b7a",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-shiny-silver-cap",
+      "sku": "GBPillar9RollSlSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "8582618d3976cbedad6644d991ad145095f3606f863494c2c197cef4b16c52fb",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-5-ml-glass-bottle-roller-ball-plug-shiny-black-cap",
+      "sku": "GBPillar9RollBlkSh",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "70fcb1e8b6a19baba6fea8ff80dab6cb45596ad27d80583d27660659518d32f1",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-short-black-cap",
+      "sku": "GBPillar9BlkSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "5ae9d3b862f709c89537bbebad620b346ca0a55dcd385278fba38cac63e26200",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-short-white-cap",
+      "sku": "GBPillar9WhtSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "3556a310e6599a7ac5aa1a1b0797af82865b3a736fb8b57895e9aa13ed2fc5c0",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-matte-gold-short-cap",
+      "sku": "GBPillar9GlMattSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "84d8d1874eb90f2b388cbaaa8cf8b8fbeda39d0293df39525509e6eedf2d5a79",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-gold-short-cap",
+      "sku": "GBPillar9GlSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "02a334d2c327cea32a09bb5b618549f9adde91da132c8ae348ae91248301364e",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-silver-short-cap",
+      "sku": "GBPillar9SlSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "5540e11b75a346ac61f5d9ed8c6b25e09ae5636266c7707a8c6f79c21742b876",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-matte-silver-short-cap",
+      "sku": "GBPillar9SlMattSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "c30a44af49a985c71eb0892894142ddd99cba19b1f6ab660db0e5aa5a7f96d35",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-silver-cap",
+      "sku": "GBPillar9Sl",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "816b06dae73540471fcb92b4410ca4122ceecf8b605aa0e3ad59a5ddf359a8c7",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-gold-cap",
+      "sku": "GBPillar9Gl",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "cce64fc28dffddfb5ec27681856cc23da3ccaa77cfd1e37cf3bdd1ecc3c3c2e9",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    },
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-glass-bottle-matte-copper-short-cap",
+      "sku": "GBPillar9CuSht",
+      "neck": "13-415",
+      "glass": "Clear",
+      "capacityMl": 9,
+      "sha256": "b51b6cd0a12947875344b49bb91c5ab3ef1608dde3fa88c6c410383e04f72d49",
+      "hasPurchase": true,
+      "stockUnavailable": false
+    }
+  ],
+  "sourceMismatches": [
+    {
+      "sku": "GBCyl5SpryBlkMatt",
+      "field": "capacityMl",
+      "source": 5,
+      "catalog": 5.5,
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-glass-bottle-matte-black-spray"
+    },
+    {
+      "sku": "GBRect10MinarSl",
+      "field": "neck",
+      "source": "13/415",
+      "catalog": "13-415",
+      "url": "https://www.bestbottles.com/product/footed-rectangular-design-10-ml-glass-bottle-shiny-silver-minaret-cap"
+    }
+  ],
+  "sourceScope": "Catalog source URLs plus recursively linked variant selectors; not a complete independent legacy category census",
+  "reusedSourceSnapshotAt": "2026-09-08T16:42:26.794Z",
+  "sourceErrors": [
+    {
+      "url": "https://www.bestbottles.com/product/pillar-design-9-ml-clear-glass-bottle-matte-black-spray",
+      "glass": "Clear",
+      "sha256": "6013cbca606ff130f387a7f04162af1dce51a65fd8736764cfdae7f64c61e545",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/bell-design-10-ml-clear-glass-bottle-shiny-black-spray",
+      "glass": "Clear",
+      "sha256": "6013cbca606ff130f387a7f04162af1dce51a65fd8736764cfdae7f64c61e545",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-plastic-roller-ball-plug-matte-gold-cap",
+      "glass": "Frosted",
+      "sha256": "0cb85bf6439c2efa0b925e669e94fb42debe1f57cd911691eee9145c3b3bbfee",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/cylinder-design-5-ml-blue-glass-bottle-matte-black-spray",
+      "family": "Cylinder",
+      "glass": "Cobalt Blue",
+      "sha256": "29defb3ebb1ff51f77e405d53c23e3f21d9d4cf453662a13233d1c3ba99946c4",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/tulip-design-6ml-bottle-matte-black-spray",
+      "sha256": "5a01130c17b49941fe4e91178f242a06e9cbdd6ab2327dac8958ab571adb0043",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/elegant-design-15-ml-frosted-glass-bottle-metal-roller-ball-plug-matte-gold-cap",
+      "glass": "Frosted",
+      "sha256": "7fd9c265f92af325171a578c14bebc5630e135ba14b79cfb4aa189d960714aec",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/royal-design-13-ml-glass-bottle-matte-black-spray",
+      "sha256": "c9a1edfbd4e5cb1be55a259bb32457728255f18df493687cd3107d77e3ec05e5",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/square-design-15-ml-glass-bottle-matte-black-spray",
+      "sha256": "2a2e09c14425cef7b011efa0bf0b90c4eba5f76929c0fedbd62b2192c49dd809",
+      "hasPurchase": false,
+      "stockUnavailable": false,
+      "error": "Product Item Name missing; source unresolved"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/elegant-design-105-ml-frosted-glass-bottle-reducer-short%20silver-matte-cap",
+      "error": "Error: HTTP 404"
+    },
+    {
+      "url": "https://www.bestbottles.com/product/",
+      "error": "Error: HTTP 404"
+    }
+  ],
+  "familyTotals": [
+    {
+      "family": "Bell",
+      "records": 6,
+      "visible": 0,
+      "blockers": {
+        "standalone_component_unpublished": 1,
+        "exact_component_unresolved": 3,
+        "media_or_configuration_invalid": 2,
+        "retired_assembly": 2,
+        "missing_bottle_component_links": 2,
+        "assembly_unpublished_or_unsellable": 2,
+        "assembly_stock_unavailable": 2
+      }
+    },
+    {
+      "family": "Circle",
+      "records": 212,
+      "visible": 47,
+      "blockers": {
+        "exact_component_unresolved": 30,
+        "assembly_unpublished_or_unsellable": 34,
+        "ambiguous_selection_identity": 6,
+        "standalone_component_unpublished": 52,
+        "media_or_configuration_invalid": 46,
+        "missing_bottle_component_links": 9
+      }
+    },
+    {
+      "family": "Cylinder",
+      "records": 421,
+      "visible": 202,
+      "blockers": {
+        "exact_component_unresolved": 71,
+        "standalone_component_unpublished": 60,
+        "assembly_unpublished_or_unsellable": 24,
+        "bare_preview_depends_on_blocked_sibling": 54,
+        "media_or_configuration_invalid": 12,
+        "missing_bottle_component_links": 39
+      }
+    },
+    {
+      "family": "Diamond",
+      "records": 43,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 18,
+        "standalone_component_unpublished": 11,
+        "assembly_unpublished_or_unsellable": 12,
+        "exact_component_unresolved": 3
+      }
+    },
+    {
+      "family": "Diva",
+      "records": 176,
+      "visible": 0,
+      "blockers": {
+        "exact_component_unresolved": 12,
+        "standalone_component_unpublished": 44,
+        "assembly_unpublished_or_unsellable": 43,
+        "media_or_configuration_invalid": 87
+      }
+    },
+    {
+      "family": "Elegant",
+      "records": 255,
+      "visible": 0,
+      "blockers": {
+        "standalone_component_unpublished": 60,
+        "exact_component_unresolved": 37,
+        "assembly_unpublished_or_unsellable": 84,
+        "media_or_configuration_invalid": 93,
+        "missing_bottle_component_links": 3
+      }
+    },
+    {
+      "family": "Empire",
+      "records": 91,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 39,
+        "exact_component_unresolved": 8,
+        "standalone_component_unpublished": 22,
+        "assembly_unpublished_or_unsellable": 24
+      }
+    },
+    {
+      "family": "Flair",
+      "records": 38,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 23,
+        "standalone_component_unpublished": 8,
+        "exact_component_unresolved": 7
+      }
+    },
+    {
+      "family": "Grace",
+      "records": 43,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 18,
+        "standalone_component_unpublished": 11,
+        "assembly_unpublished_or_unsellable": 12,
+        "exact_component_unresolved": 3
+      }
+    },
+    {
+      "family": "Pillar",
+      "records": 4,
+      "visible": 0,
+      "blockers": {
+        "exact_component_unresolved": 4,
+        "missing_bottle_component_links": 3
+      }
+    },
+    {
+      "family": "Plastic Bottle",
+      "records": 3,
+      "visible": 0,
+      "blockers": {
+        "exact_component_unresolved": 3,
+        "missing_bottle_component_links": 2
+      }
+    },
+    {
+      "family": "Rectangle",
+      "records": 74,
+      "visible": 0,
+      "blockers": {
+        "standalone_component_unpublished": 17,
+        "media_or_configuration_invalid": 43,
+        "exact_component_unresolved": 14
+      }
+    },
+    {
+      "family": "Round",
+      "records": 178,
+      "visible": 0,
+      "blockers": {
+        "assembly_unpublished_or_unsellable": 48,
+        "media_or_configuration_invalid": 72,
+        "standalone_component_unpublished": 44,
+        "exact_component_unresolved": 18
+      }
+    },
+    {
+      "family": "Royal",
+      "records": 37,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 23,
+        "standalone_component_unpublished": 7,
+        "exact_component_unresolved": 7
+      }
+    },
+    {
+      "family": "Sleek",
+      "records": 198,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 89,
+        "exact_component_unresolved": 27,
+        "standalone_component_unpublished": 49,
+        "assembly_unpublished_or_unsellable": 36
+      }
+    },
+    {
+      "family": "Slim",
+      "records": 123,
+      "visible": 0,
+      "blockers": {
+        "standalone_component_unpublished": 33,
+        "media_or_configuration_invalid": 48,
+        "assembly_unpublished_or_unsellable": 36,
+        "exact_component_unresolved": 9
+      }
+    },
+    {
+      "family": "Square",
+      "records": 34,
+      "visible": 0,
+      "blockers": {
+        "media_or_configuration_invalid": 22,
+        "standalone_component_unpublished": 7,
+        "exact_component_unresolved": 5
+      }
+    },
+    {
+      "family": "Tulip",
+      "records": 71,
+      "visible": 0,
+      "blockers": {
+        "standalone_component_unpublished": 15,
+        "media_or_configuration_invalid": 44,
+        "missing_bottle_component_links": 1,
+        "exact_component_unresolved": 12
+      }
+    }
+  ]
+}

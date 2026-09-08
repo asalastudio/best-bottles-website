@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-09-08T17:03:37.444Z",
+  "results": [
+    {
+      "sku": "GBCylBlu5Gl",
+      "requestedFitment": "Screw Cap",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5Gl",
+      "requestedFitment": "Metal Roller",
+      "status": 409
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "requestedFitment": "Screw Cap",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5Sl",
+      "requestedFitment": "Metal Roller",
+      "status": 409
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "requestedFitment": "Screw Cap",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5BlkSht",
+      "requestedFitment": "Metal Roller",
+      "status": 409
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "requestedFitment": "Screw Cap",
+      "status": 200
+    },
+    {
+      "sku": "GBCylBlu5WhtSht",
+      "requestedFitment": "Metal Roller",
+      "status": 409
+    }
+  ]
+}

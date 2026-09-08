@@ -1,4 +1,5 @@
 import { exactComponentMatches } from "./component-matches";
+import { sourceComponentLink, sourceComponentLinks } from "./source-component-links";
 import type { FunctionReturnType } from "convex/server";
 import type { api } from "../../../convex/_generated/api";
 import type { CartItem } from "@/components/CartProvider";
@@ -10,7 +11,11 @@ import fitmentMedia from "./fitments.generated.json";
 import rollerMedia from "./rollers.generated.json";
 import { resolveChargedUnitPrice } from "@/lib/volumePricing";
 
-export type CatalogRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
+type MatrixRow = FunctionReturnType<typeof api.matrix.getFamilyRows>["rows"][number];
+export type CatalogRow = Omit<MatrixRow, "resolution"> & {
+    resolution: MatrixRow["resolution"] | "source_verified";
+    compatibilitySources?: string[];
+};
 export type BuilderKit = NonNullable<FunctionReturnType<typeof api.productKits.forSku>>;
 export type BuilderPart = BuilderKit["parts"][number];
 export type BuilderConfiguration = {
@@ -55,9 +60,13 @@ const closureSlots = new Set(["cap", "overcap"]);
 export const isClosurePart = (part: BuilderPart) => closureSlots.has(part.slot);
 
 /** Join the selected assembly to a real, active component returned by matrix.
- * Neck equality and another finish on a complete SKU are not sufficient. */
+ * Neck equality and another finish on a complete SKU are not sufficient.
+ * Standalone component publication is independent of the complete assembly's
+ * eligibility, checked by isBuilderCandidate and again at cart preflight. */
 export function compatibleFinishComponent(row: CatalogRow) {
-    const exact = exactComponentMatches[row.websiteSku ?? ""];
+    const source = sourceComponentLink(row);
+    if (!source && sourceComponentLinks.some(link => link.assemblySku === row.websiteSku)) return null;
+    const exact = exactComponentMatches[row.websiteSku ?? ""] ?? source;
     if (exact && (row.family !== exact.family || row.capacityMl !== exact.capacityMl || row.color !== exact.color
         || row.neckThreadSize !== exact.neck || (row.applicator ?? null) !== exact.applicator)) return null;
     const app = row.applicator ?? "";
@@ -72,7 +81,7 @@ export function compatibleFinishComponent(row: CatalogRow) {
     const finish = getFinishFromWebsiteSku(row.websiteSku)?.label ?? row.capColor?.trim();
     if (!finish && !exact) return null;
     const matches = (row.components[kind] ?? []).filter(part => part.websiteSku && part.graceSku
-        && !/__RETIRED__/i.test(part.websiteSku) && part.shopifySellable !== false
+        && !/__RETIRED__/i.test(part.websiteSku)
         && !/out of stock|discontinued|unavailable/i.test(part.stockStatus ?? "")
         && skuPattern.test(part.websiteSku) && part.websiteSku.includes(row.neckThreadSize ?? "invalid")
         && (exact ? part.websiteSku === exact.componentSku : getFinishFromWebsiteSku(part.websiteSku)?.label === finish));
