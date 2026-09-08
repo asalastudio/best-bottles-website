@@ -1,0 +1,98 @@
+[
+  {
+    "body": "5 ml, 13-415 neck",
+    "fitment": "Metal Roller",
+    "finish": "Matte Gold Cap",
+    "request": {
+      "family": "Cylinder",
+      "sku": "GBCyl5MtlRollGlMatt",
+      "selection": {
+        "bodyId": "cylinder-5ml|13-415|Glass Bottle",
+        "color": "Clear",
+        "fitment": "Metal Roller",
+        "closure": "Matte Gold Cap",
+        "quantity": 12
+      }
+    },
+    "baselinePrice": {
+      "unit": "$0.61",
+      "total": "$7.32"
+    },
+    "mobilePrice": {
+      "unit": "$0.61",
+      "total": "$7.32"
+    }
+  },
+  {
+    "body": "9 ml, 17-415 neck",
+    "fitment": "Fine Mist Sprayer",
+    "finish": "Black",
+    "request": {
+      "family": "Cylinder",
+      "sku": "GBCyl9SpryBlk",
+      "selection": {
+        "bodyId": "cylinder-9ml|17-415|Glass Bottle",
+        "color": "Clear",
+        "fitment": "Fine Mist Sprayer",
+        "closure": "Black",
+        "quantity": 12
+      }
+    },
+    "baselinePrice": {
+      "unit": "$0.88",
+      "total": "$10.56"
+    },
+    "mobilePrice": {
+      "unit": "$0.88",
+      "total": "$10.56"
+    }
+  },
+  {
+    "body": "50 ml, 18-415 neck",
+    "fitment": "Lotion Pump",
+    "finish": "Copper",
+    "request": {
+      "family": "Cylinder",
+      "sku": "LBCyl50LtnCu",
+      "selection": {
+        "bodyId": "cylinder-50ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "fitment": "Lotion Pump",
+        "closure": "Copper",
+        "quantity": 12
+      }
+    },
+    "baselinePrice": {
+      "unit": "$2.70",
+      "total": "$32.40"
+    },
+    "mobilePrice": {
+      "unit": "$2.70",
+      "total": "$32.40"
+    }
+  },
+  {
+    "body": "50 ml, 18-415 neck",
+    "fitment": "Vintage Bulb Sprayer",
+    "finish": "Black",
+    "request": {
+      "family": "Cylinder",
+      "sku": "GBCyl50AnSpBlk",
+      "selection": {
+        "bodyId": "cylinder-50ml|18-415|Glass Bottle",
+        "color": "Clear",
+        "fitment": "Vintage Bulb Sprayer",
+        "closure": "Black",
+        "quantity": 12
+      }
+    },
+    "baselinePrice": {
+      "unit": "$5.55",
+      "total": "$66.60"
+    },
+    "mobilePrice": {
+      "unit": "$5.55",
+      "total": "$66.60"
+    }
+  }
+]

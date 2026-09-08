@@ -28,3 +28,11 @@ Local screenshot evidence: /tmp/catalog-caps-desktop-final.png, /tmp/catalog-cap
 Current source hero images have inconsistent framing/backgrounds. The frosted 13-415 bottle now loads its existing assembly plate independently of cap eligibility. Both 13-415 cards expose eight choices. All eight finishes now use exact-SKU spray-top kit layers consistently; the mixed standalone top/overcap index is bypassed for these sixteen clear/Frosted SKUs. All sixteen source URLs returned 200 and their SHA-256 hashes matched. Transparent layers are framed using their recorded bounds, without changing source pixels. Desktop visual inspection confirms a complete eight-top Frosted chooser. These are not final premium imagery. Final visual signoff requires the finished hover-task integration. The standalone index gaps no longer affect these two rails. No catalog truth repairs, backend writes, cart mutations or production publication were performed.
 
 Production build passed before the final spray-top presentation change. The final change passed 15 targeted regression tests, TypeScript and targeted ESLint. Source lineage for the exact published sprayer layers is recorded in `src/lib/products/tall-cylinder-spray-tops.json` (URLs, hashes, dimensions and bounds). Screenshot: /tmp/catalog-frosted-eight-spray-tops.png. No overcap fallback is allowed for this complete set if an individual URL fails.
+
+---
+
+# Mobile bottle builder — September 8, 2026
+
+final result: passed (local visual and automated interaction QA)
+
+The prior catalog/hero review above is preserved. The scoped mobile review, comparison boards, corrected findings and native-device limitations are recorded in [Mobile builder design QA](docs/reviews/mobile-builder/design-qa.md). Native iOS Safari and VoiceOver signoff remains pending; this is not production release approval.

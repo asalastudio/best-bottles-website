@@ -22,7 +22,7 @@ export default async function MatrixPage({ searchParams }: { searchParams: Promi
     ]);
     return <>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumb) }} />
-        <Navbar hideMobileSearch />
+        <Navbar hideMobileSearch builderMobile />
         <main className="min-h-screen bg-bone pt-[104px] sm:pt-[120px]" data-builder-page>
             <Suspense fallback={<BuilderLoading />}><Builder familyParam={familyParam} /></Suspense>
         </main>

@@ -6,7 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
     MagnifyingGlass, User, ShoppingBag, CaretDown, List, X,
-    Flask, Diamond, ArrowRight, SprayBottle,
+    Flask, Diamond, ArrowRight, ArrowLeft, SprayBottle,
 } from "@/components/icons";
 import { useCart } from "@/components/CartProvider";
 import CartDrawer from "./CartDrawer";
@@ -18,6 +18,7 @@ interface NavbarProps {
     variant?: "home" | "catalog";
     initialSearchValue?: string;
     hideMobileSearch?: boolean;
+    builderMobile?: boolean;
     /** @deprecated cart is now managed internally */
     onCartOpen?: () => void;
 }
@@ -96,7 +97,7 @@ const SEARCH_SUGGESTIONS = [
     { label: "Cream Jar", helper: "Category", query: "cream jar" },
 ];
 
-export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false }: NavbarProps) {
+export default function Navbar({ variant = "home", initialSearchValue, hideMobileSearch = false, builderMobile = false }: NavbarProps) {
     const router = useRouter();
     // Grace trigger moved to the floating launcher; useGrace no longer needed here.
     const { itemCount, isCartHydrated } = useCart();
@@ -336,6 +337,7 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
         <>
             <header
                 data-site-header=""
+                data-builder-header={builderMobile || undefined}
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-bone/95 shadow-sm backdrop-blur-md" : "bg-bone"
                     } ${variant === "catalog" ? "border-b border-champagne" : ""}`}
                 style={{ right: "var(--grace-content-inset, 0px)" }}
@@ -347,6 +349,12 @@ export default function Navbar({ variant = "home", initialSearchValue, hideMobil
                     </p>
                 </div>
 
+                {builderMobile && <div className="builder-mobile-brand">
+                    <Link href="/catalog" aria-label="Back to bottles"><ArrowLeft size={22} /></Link>
+                    <Link href="/" className="font-cormorant">BEST BOTTLES</Link>
+                    <button aria-label={`Cart${mounted && isCartHydrated ? `, ${itemCount} items` : ""}`} onClick={() => setCartOpen(true)}><ShoppingBag size={24} />{mounted && isCartHydrated && itemCount > 0 && <span>{itemCount > 99 ? "99+" : itemCount}</span>}</button>
+                    <button aria-label="Open menu" onClick={() => setMobileMenuOpen(true)}><List size={20} /></button>
+                </div>}
                 <div className="max-w-[1440px] mx-auto px-4 sm:px-6">
                     {/* Row 1: desktop = logo | nav | search | actions. mobile = hamburger | actions */}
                     <div className="relative flex h-[56px] items-center gap-2 sm:gap-4 xl:h-[72px] xl:gap-4 2xl:gap-6">
