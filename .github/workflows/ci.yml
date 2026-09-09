@@ -31,6 +31,24 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Material lock — the approved look must not drift
+        # The 3D configurator's look lives in data (materials.json, the glass
+        # presets, the studio emitters) and any of it can be edited without
+        # breaking a type or a test. On 2026-09-01 five glass finishes
+        # regressed at once because three GLOBAL knobs — tone mapping,
+        # exposure and the lights — were changed while judging a single amber
+        # bottle, and the lock sat red for a whole session with nobody running
+        # it. A guard nobody runs is not a guard.
+        #
+        # This makes drift impossible to merge silently. It does NOT forbid
+        # changing the look: it forbids changing it WITHOUT re-approving.
+        # When this step fails, either the change was unintended (fix it), or
+        # it was intended and approved — then run `npm run look:lock` and
+        # commit the updated materials.lock.json in the same PR.
+        #
+        # Needs no pip install: material_lock.py imports stdlib only.
+        run: npm run look:verify
+
       - name: Unit tests
         run: npx vitest run
 
