@@ -1,0 +1,259 @@
+{
+  "writtenAt": "2026-09-09T13:19:45.678Z",
+  "registry": "src/lib/products/catalog-heroes.json",
+  "note": "Restore each `from` to undo the Round premium repoint.",
+  "rows": [
+    {
+      "websiteSku": "GBRnd78AnSpGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpGl.premium-aligned-v4.png",
+        "sha256": "392576d442ed93c3ba570eeb0f27ba231eb147ee9253591b35b74b2a3736142e"
+      },
+      "shoulderPercent": 42.25,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRnd78AnSpTslGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd78AnSpTslGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78AnSpTslGl.premium-aligned-v4.png",
+        "sha256": "22349e1705d7a988a75c44bc988192990c2ac74cadd7ddca21506510ead7eb14"
+      },
+      "shoulderPercent": 41.78,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "LBRnd78LtnCu",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/LBRnd78LtnCu.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRnd78LtnCu.premium-aligned-v4.png",
+        "sha256": "cb47f93f4e7da88161ce975bc7d996940f2b83c7116d05b4251735cbfb42da07"
+      },
+      "shoulderPercent": 42.02,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRnd78SpryCu",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd78SpryCu.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78SpryCu.premium-aligned-v4.png",
+        "sha256": "25a105686caf7404a5267f2f6e030c6f171ce38b8c439c051fa5f79095fce466"
+      },
+      "shoulderPercent": 41.96,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRnd78RdcrShnGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd78RdcrShnGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd78RdcrShnGl.premium-aligned-v4.png",
+        "sha256": "69459c58b057d2b0c41ee80b28a15ee72fbf8b551aa771d4ef941f57c79fbb02"
+      },
+      "shoulderPercent": 41.61,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78AnSpGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpGl.premium-aligned-v4.png",
+        "sha256": "18fa3af6e86540071cc5a0b34c33c53ca1df7db58aabe2fbab302438a9386cda"
+      },
+      "shoulderPercent": 41.78,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRndFrst78AnSpTslGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78AnSpTslGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78AnSpTslGl.premium-aligned-v4.png",
+        "sha256": "ed278d3368644f33c971ddc59a627791be3c8a4540a44929b8ba47b0d8426aff"
+      },
+      "shoulderPercent": 42.02,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "LBRndFrst78LtnMtGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/LBRndFrst78LtnMtGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRndFrst78LtnMtGl.premium-aligned-v4.png",
+        "sha256": "a4f98fb38c9c6df6bb2db29676c7f2027fc9242b88d1be382a6ad175bc82967d"
+      },
+      "shoulderPercent": 41.96,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRndFrst78SpryMtGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78SpryMtGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78SpryMtGl.premium-aligned-v4.png",
+        "sha256": "60a46193b2bca04ecc9679db2b8803b1e4ae58e96167aa81d64dbe47942783a4"
+      },
+      "shoulderPercent": 42.02,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRndFrst78RdcrShnGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst78RdcrShnGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst78RdcrShnGl.premium-aligned-v4.png",
+        "sha256": "496a1ad3f57dcd39d477e084b366009eb2a992eab555d105260b659b2b94fa6c"
+      },
+      "shoulderPercent": 42.19,
+      "targetShoulderPercent": 42
+    },
+    {
+      "websiteSku": "GBRnd128AnSpGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd128AnSpGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpGl.premium-aligned-v4.png",
+        "sha256": "a4f0225c54bff8e8ad8ccd886ecd866123ae36da35127989ac32d0dab965d4b7"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRnd128AnSpTslIvyGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd128AnSpTslIvyGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128AnSpTslIvyGl.premium-aligned-v4.png",
+        "sha256": "be1038c43fe3a434106bd29cc5c3a98fcf1f3266ea54daf5e6f4b36bbaaf44d9"
+      },
+      "shoulderPercent": 48.78,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRnd128DrpGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd128DrpGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128DrpGl.premium-aligned-v4.png",
+        "sha256": "2deae72d9a69c288311ddabec544f3e3c15fcc3454be2a336ccbd987760634ee"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "LBRnd128LtnMtGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/LBRnd128LtnMtGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRnd128LtnMtGl.premium-aligned-v4.png",
+        "sha256": "9938c0e16d437cafe47eee9b0c78ae0d668d6de81a8dc4fa178719ab69a4b321"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRnd128SpryMtGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd128SpryMtGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128SpryMtGl.premium-aligned-v4.png",
+        "sha256": "ef7de4b520ecead6018c9d6b46784718aa2b2e64ecba8c3afc2bcb8a0a9c7151"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRnd128RdcrShnGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRnd128RdcrShnGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRnd128RdcrShnGl.premium-aligned-v4.png",
+        "sha256": "1c8efc76ab8168fb86ae2fa819672886af5083d432b9ac83d045a22cb8f6f44c"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRndFrst128AnSpGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128AnSpGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128AnSpGl.premium-aligned-v4.png",
+        "sha256": "a4ff3271d15ab43bf469eef85bb671b05d7f0b838f33732e54eb9891ea54acba"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRndFrst128DrpGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128DrpGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128DrpGl.premium-aligned-v4.png",
+        "sha256": "ca3f28ed8038f9fa01ad9dfaf48abf50b33fbf8d4cfa41e5393d1c726d849f28"
+      },
+      "shoulderPercent": 48.95,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "LBRndFrst128LtnMtGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/LBRndFrst128LtnMtGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/LBRndFrst128LtnMtGl.premium-aligned-v4.png",
+        "sha256": "5fd38ec3e9c6958c9186492dc87ce48d4a5c54f3d3b0ab37a7dede7293cea2f5"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRndFrst128SpryMtGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128SpryMtGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128SpryMtGl.premium-aligned-v4.png",
+        "sha256": "2feeb760c0b3c2723dfc93b6c1fda0d0e6a919fac616b85b1b2da8a38985aa10"
+      },
+      "shoulderPercent": 48.95,
+      "targetShoulderPercent": 49
+    },
+    {
+      "websiteSku": "GBRndFrst128RdcrShnGl",
+      "from": {
+        "url": "/images/catalog/round-enhancement/aligned/GBRndFrst128RdcrShnGl.premium-aligned-v2.png"
+      },
+      "to": {
+        "url": "/images/catalog/round-enhancement/aligned-v4/GBRndFrst128RdcrShnGl.premium-aligned-v4.png",
+        "sha256": "10424f63f52e13edba9ed6c71af2b6dbbab62c615f92b44263dbdd0827f61f00"
+      },
+      "shoulderPercent": 49.01,
+      "targetShoulderPercent": 49
+    }
+  ]
+}
